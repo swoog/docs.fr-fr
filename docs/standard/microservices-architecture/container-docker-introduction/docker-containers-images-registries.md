@@ -1,6 +1,6 @@
 ---
-title: Registres, des images et des conteneurs docker
-description: Architecture de Microservices .NET pour les Applications .NET en conteneur | Registres, des images et des conteneurs docker
+title: Conteneurs, images et registres Docker
+description: Architecture des microservices .NET pour les applications .NET en conteneur | Conteneurs, images et registres Docker
 keywords: Docker, microservices, ASP.NET, conteneur
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -8,33 +8,36 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 224fed34f06d10760b14aa9ecbae6c0e912915cf
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 79dccadfba066c673e8ef7ea5eaf1051a434ff3a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="docker-containers-images-and-registries"></a>Registres, des images et des conteneurs docker
+# <a name="docker-containers-images-and-registries"></a>Conteneurs, images et registres Docker
 
-Lorsque vous utilisez Docker, un développeur crée une application ou de service et de packages, il et ses dépendances dans une image de conteneur. Une image est une représentation statique de l’application ou service de configuration et ses dépendances.
+Quand un développeur utilise Docker, il crée une application ou un service, qu’il empaquette ensuite avec les dépendances associées dans une image conteneur. Une image est une représentation statique de l’application ou du service, de leur configuration et de leurs dépendances.
 
-Pour exécuter l’application ou le service, l’image de l’application est instancié pour créer un conteneur, qui est exécuté sur l’hôte Docker. Les conteneurs sont initialement testées dans un environnement de développement ou un PC.
+Pour exécuter l’application ou le service, l’image de l’application est instanciée, créant ainsi un conteneur à exécuter sur l’hôte Docker. Les conteneurs sont initialement testés sur une machine ou un environnement de développement.
 
-Les développeurs doivent stocker des images dans un Registre, qui agit comme une bibliothèque d’images et est nécessaire lors du déploiement vers orchestrators de production. Docker conserve un registre public via [Hub d’ancrage](https://hub.docker.com/); autres éditeurs proposent des registres pour les différentes collections d’images. Également, les entreprises peuvent avoir un Registre privé local pour leurs propres images Docker.
+Les développeurs doivent stocker les images dans un registre, comparable à une bibliothèque d’images, qui est utilisé pour le déploiement sur des orchestrateurs de production. Docker gère un registre public via [Docker Hub](https://hub.docker.com/). D’autres fournisseurs proposent des registres pour différentes collections d’images. Les entreprises peuvent également gérer un registre privé local pour stocker leurs propres images Docker.
 
-Figure 2-4 indique comment les images et les registres dans Docker se rapportent à d’autres composants. Il montre également les offres de Registre plusieurs provenant de fournisseurs.
+La figure 2-4 montre les liens entre les images et registres Docker et les autres composants. Elle montre également les divers registres des autres fournisseurs.
 
 ![](./media/image5.PNG)
 
-**Figure 2-4**. Taxonomie de Docker termes et concepts
+**Figure 2-4**. Taxonomie des termes et concepts Docker
 
-Placer des images dans un Registre vous permet de stocker les bits d’application statique et immuable, y compris toutes leurs dépendances au niveau de l’infrastructure. Ces images peuvent ensuite être créée et déployée dans plusieurs environnements et par conséquent fournissent une unité de déploiement cohérent.
+Placer des images dans un registre vous permet de stocker les bits d’application statiques et immuables, y compris toutes les dépendances au niveau du framework. Ces images peuvent ensuite être versionnées et déployées dans différents environnements, offrant ainsi une unité de déploiement cohérente.
 
-Les registres de l’image privée, soit hébergé localement ou dans le cloud, sont recommandé lorsque :
+L’utilisation de registres d’images privés, hébergés localement ou dans le cloud, est recommandée dans les situations suivantes :
 
--   Vos images ne doivent pas être partagés publiquement en raison de la confidentialité.
+-   Vous ne voulez pas partager vos images publiquement pour des raisons de confidentialité.
 
--   Vous souhaitez avoir une latence réseau minimum entre vos images et votre environnement de déploiement choisi. Par exemple, si votre environnement de production est cloud Azure, vous souhaiterez probablement stocker vos images dans le Registre de conteneur Azure afin que la latence du réseau sera minime. De la même façon, si votre environnement de production sur site, vous souhaiterez ont un local Docker Trusted Registre disponibles dans le même réseau local.
+-   Vous souhaitez limiter la latence du réseau entre vos images et l’environnement de déploiement choisi. Par exemple, si votre environnement de production est le cloud Azure, vous souhaiterez probablement stocker vos images dans Azure Container Registry pour réduire au maximum la latence du réseau. De la même manière, si votre environnement de production est local, vous souhaiterez peut-être disposer d’un service Docker Trusted Registry local dans le même réseau local.
 
 >[!div class="step-by-step"]
-[Précédente] (docker-terminology.md) [suivant] (.. /NET-Core-NET-Framework-Containers/index.MD)
+[Previous] (docker-terminology.md) [Next] (../net-core-net-framework-containers/index.md)

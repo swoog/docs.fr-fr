@@ -1,6 +1,6 @@
 ---
 title: "Validation côté client (validation dans les couches de présentation)"
-description: "Architecture de Microservices .NET pour les Applications .NET en conteneur | Validation côté client (validation dans les couches de présentation)"
+description: "Architecture des microservices .NET pour les applications .NET en conteneur | Validation côté client (validation dans les couches de présentation)"
 keywords: Docker, microservices, ASP.NET, conteneur
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -8,64 +8,67 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: db88a3b5c95afdc8d5a20094105f1f5991483ed6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 273aa0a8ceb7f683999f1074faae0a6aa303f9be
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="client-side-validation-validation-in-the-presentation-layers"></a>Validation côté client (validation dans les couches de présentation)
 
-Même lorsque la source de vérité est le modèle de domaine, et enfin, vous devez avoir validation au niveau du modèle de domaine, la validation peut toujours être gérée au niveau du modèle de domaine (côté serveur) et le côté client.
+Même quand la source fiable est le modèle de domaine et que vous devez obtenir au final une validation à ce niveau, la validation peut toujours être gérée au niveau du modèle de domaine (côté serveur) et côté client.
 
-La validation côté client est très pratique pour les utilisateurs. Il enregistre à temps serait sinon attend un aller-retour sur le serveur qui peut-être retourner des erreurs de validation. En termes de l’entreprise, même quelques fractions de secondes multipliés des centaines de fois par jour additionne une grande quantité de temps, des frais et frustration. Validation simple et immédiate permet aux utilisateurs de travailler plus efficacement et de produire une meilleure qualité d’entrée et sortie.
+La validation côté client est très pratique pour les utilisateurs. Elle leur épargne le temps d’attente nécessaire à un aller-retour avec le serveur qui pourrait retourner des erreurs de validation. En termes d’activité de l’entreprise, même quelques fractions de secondes multipliées des centaines de fois par jour finissent par représenter un temps considérable, auquel s’ajoutent un coût et de la frustration. Une validation directe et immédiate permet aux utilisateurs de travailler plus efficacement, et de produire une meilleure qualité des entrées et des sorties.
 
-Tout comme le modèle d’affichage et le modèle de domaine sont différents, validation de modèle d’affichage et validation de modèle de domaine peuvent être semblable, mais servent un objectif différent. Si vous êtes concerné sur sec (ne pas se répéter principe), envisagez de réutilisation du code dans ce cas peut également signifier que couplage que dans les applications d’entreprise, il est plus important de ne pas associer le côté serveur vers le côté client que pour suivez le principe sec.
+Alors que le modèle d’affichage et le modèle de domaine sont différents, leur validation peut être semblable, mais avec un objectif différent. Si vous vous souciez du principe DRY (Don’t Repeat Yourself), considérez que dans ce cas la réutilisation du code peut également impliquer un couplage et, dans les applications d’entreprise, il est plus important de ne pas associer le côté serveur au côté client que de respecter le principe DRY.
 
-Même lorsque vous utilisez la validation côté client, vous devez toujours valider vos commandes ou d’entrée DTO dans le code serveur, car les API du serveur sont un vecteur d’attaque possibles. En règle générale, cela est la meilleure solution, car si vous avez une application cliente, du point de vue de l’expérience utilisateur, il est recommandé d’être proactive et n’autorise pas l’utilisateur à entrer des informations non valides.
+Même quand vous utilisez la validation côté client, vous devez toujours valider vos commandes ou DTO d’entrée dans le code serveur, car les API serveur représentent un vecteur d’attaque possible. En règle générale, il vaut mieux effectuer les deux opérations car, si vous avez une application cliente, il est recommandé du point de vue de l’expérience utilisateur d’être proactif et de ne pas autoriser l’utilisateur à entrer des informations non valides.
 
-Par conséquent, dans le code côté client il vous généralement de valider les ViewModel. Vous pourriez valider également le client DTO ou des commandes de sortie avant de les envoyer aux services.
+Par conséquent, dans le code côté client, vous validez généralement les ViewModels. Vous pouvez également valider les commandes ou DTO de sortie clients avant de les envoyer aux services.
 
-L’implémentation de la validation côté client dépend de quel type d’application cliente que vous créez. Il sera différente si vous validez des données dans une application web MVC web avec la plupart du code dans .NET, une application web SPA avec cette validation qui est codée en JavaScript ou TypeScript, ou une application mobile codé avec Xamarin et C\#.
+L’implémentation de la validation côté client dépend du type d’application cliente que vous créez. Elle sera différente si vous validez des données dans une application web MVC avec la plupart du code en .NET, une application web SPA avec cette validation codée en JavaScript ou TypeScript, ou une application mobile codée avec Xamarin et C\#.
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
 ### <a name="validation-in-xamarin-mobile-apps"></a>Validation dans les applications mobiles Xamarin
 
--   **Valider le texte d’entrée et afficher les erreurs**
-    [*https://developer.xamarin.com/recipes/ios/standard\_contrôles/texte\_/valider le champ\_d’entrée /*](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
+-   **Valider l’entrée de texte et afficher les erreurs**
+    [*https://developer.xamarin.com/recipes/ios/standard\_controls/text\_field/validate\_input/*](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
 
 -   **Rappel de validation**
     [*https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/*](https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/)
 
 ### <a name="validation-in-aspnet-core-apps"></a>Validation dans les applications ASP.NET Core
 
--   **Rick Anderson. Ajout d’une validation**
+-   **Rick Anderson. Ajout de la validation**
     [*https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation*](https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation)
 
-### <a name="validation-in-spa-web-apps-angular-2-typescript-javascript"></a>Validation de SPA Web Applications (2 angulaire, TypeScript, JavaScript)
+### <a name="validation-in-spa-web-apps-angular-2-typescript-javascript"></a>Validation dans les applications web SPA (Angular 2, TypeScript, JavaScript)
 
--   **ADO Kukic. La Validation du formulaire 2 angulaire** **
-     ** [ *https://scotch.io/tutorials/angular-2-form-validation*](https://scotch.io/tutorials/angular-2-form-validation)
+-   **Ado Kukic. Validation des formulaires Angular 2** **
+    **[*https://scotch.io/tutorials/angular-2-form-validation*](https://scotch.io/tutorials/angular-2-form-validation)
 
--   **La Validation du formulaire**
+-   **Validation des formulaires**
     [*https://angular.io/docs/ts/latest/cookbook/form-validation.html*](https://angular.io/docs/ts/latest/cookbook/form-validation.html)
 
--   **Validation.** Documentation est très simple.
-    [*http://Breeze.github.IO/doc-js/validation.HTML*](http://breeze.github.io/doc-js/validation.html)
+-   **Validation.** Documentation Breeze.
+    [*http://breeze.github.io/doc-js/validation.html*](http://breeze.github.io/doc-js/validation.html)
 
-En résumé, il s’agit des concepts les plus importants en ce qui concerne la validation :
+En résumé, voici les concepts les plus importants en ce qui concerne la validation :
 
--   Entités et des agrégats doivent appliquer leur propre cohérence et être « toujours valide ». Racines d’agrégat sont responsables de la cohérence de plusieurs entitée dans le même regroupement.
+-   Les entités et les agrégats doivent appliquer leur propre cohérence et être « toujours valides ». Les racines d’agrégat sont responsables de la cohérence de plusieurs entités dans le même agrégat.
 
--   Si vous pensez qu’une entité doit entrer dans un état non valide, envisagez d’utiliser un modèle d’objet différent, par exemple, à l’aide de DTO temporaire jusqu'à ce que vous créez l’entité de domaine final.
+-   Si vous pensez qu’une entité doit entrer dans un état non valide, envisagez d’utiliser un modèle d’objet différent, par exemple un DTO temporaire jusqu’à ce que l’entité de domaine finale soit créée.
 
--   Si vous devez créer plusieurs objets connexes, comme un agrégat, et ils sont uniquement valides une fois que tous les ont été créés, envisagez d’utiliser le modèle de fabrique.
+-   Si vous devez créer plusieurs objets associés, comme un agrégat, et qu’ils ne sont valides qu’une fois que tous ont été créés, envisagez d’utiliser le modèle de fabrique.
 
--   Infrastructures de validation sont préférable d’utiliser dans des couches spécifiques, telles que la couche de présentation ou de la couche de service ou application, mais généralement pas dans la couche de modèle de domaine, car vous devez prendre une dépendance fort sur une infrastructure de l’infrastructure.
+-   Les frameworks de validation sont utilisés de façon optimale dans des couches spécifiques, telles que la couche de présentation ou la couche de service/d’application, mais généralement pas dans la couche de modèle de domaine, car cela implique une dépendance forte sur un framework d’infrastructure.
 
--   Dans la plupart des cas, un redondant validation côté client n’est correct, car l’application peut être proactive.
+-   Dans la plupart des cas, une validation redondante côté client est appropriée, car l’application peut être proactive.
 
 
 >[!div class="step-by-step"]
-[Précédente] (domaine-modèle-layer-validations.md) [suivant] (domaine-événements-design-implementation.md)
+[Précédent] (domain-model-layer-validations.md) [Suivant] (domain-events-design-implementation.md)

@@ -1,6 +1,6 @@
 ---
-title: "Microservices adressabilité et le Registre de service"
-description: "Architecture de Microservices .NET pour les Applications .NET en conteneur | Microservices adressabilité et le Registre de service"
+title: "Adressabilité des microservices et registre des services"
+description: "Architecture en microservices .NET pour les applications .NET en conteneur | Adressabilité des microservices et registre des services"
 keywords: Docker, microservices, ASP.NET, conteneur
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -8,33 +8,36 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 19a0200dadfb90a455de690d880f4eeae4772ed7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: cc26b22d18d460fe6870da7360d73368e20f71d2
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="microservices-addressability-and-the-service-registry"></a>Microservices adressabilité et le Registre de service
+# <a name="microservices-addressability-and-the-service-registry"></a>Adressabilité des microservices et registre des services
 
-Chaque microservice possède un nom unique (URL) qui est utilisé pour résoudre son emplacement. Votre microservice doit être adressable partout où il est en cours d’exécution. Si vous devez penser à propos de l’ordinateur sur lequel s’exécute un microservice particulier, choses peuvent devenir rapidement. De la même façon que le DNS résout une URL vers un ordinateur spécifique, votre microservice doit avoir un nom unique afin que son emplacement actuel est détectable. Microservices nécessitent un nom adressable qui les rendre indépendantes de l’infrastructure qui s’exécutent sur. Cela implique qu’il existe une interaction entre la façon dont votre service est déployé et comment il est découvert, car il doit exister un [Registre du service](http://microservices.io/patterns/service-registry.html). De la même façon, lorsqu’un ordinateur tombe en panne, le service de Registre doit être en mesure d’indiquer où le service est en cours d’exécution.
+Chaque microservice a un nom unique (URL) qui est utilisé pour résoudre son emplacement. Votre microservice doit être adressable partout où il est exécuté. Si vous devez commencer à réfléchir pour savoir quel ordinateur exécute quel microservice, les choses peuvent devenir rapidement ingérables. De la même façon que le DNS résout une URL vers un ordinateur spécifique, votre microservice doit avoir un nom unique de sorte que son emplacement actuel puisse être découvert. Les microservices nécessitent des noms adressables qui les rendent indépendants de l’infrastructure sur laquelle ils s’exécutent. Ceci implique une interaction entre la façon dont votre service est déployé et celle dont il est découvert, car il doit exister un [registre des services](http://microservices.io/patterns/service-registry.html). De la même façon, quand un ordinateur connaît une défaillance, le registre des services doit être en mesure d’indiquer où le service s’exécute désormais.
 
-Le [modèle de service du Registre](http://microservices.io/patterns/service-registry.html) est une partie essentielle de découverte de service. Le Registre est une base de données qui contient les emplacements réseau des instances de service. Un Registre de service doit être hautement disponible et à jour. Les clients peut mettre en cache les emplacements réseau obtenus à partir du Registre de service. Toutefois, ces informations vont finalement obsolètes et les clients ne peuvent plus détecter les instances de service. Par conséquent, un Registre de service se compose d’un cluster de serveurs qui utilisent un protocole de réplication pour maintenir la cohérence.
+Le [modèle de registre des services](http://microservices.io/patterns/service-registry.html) est une partie essentielle dans la découverte des services. Le registre est une base de données qui contient les emplacements réseau des instances de service. Un registre des services doit être hautement disponible et à jour. Les clients peuvent mettre en cache les emplacements réseau obtenus auprès du registre des services. Cependant, ces informations finissent par être obsolètes et les clients ne peuvent alors plus découvrir les instances des services. Par conséquent, un registre des services est constitué d’un cluster de serveurs qui utilisent un protocole de réplication pour maintenir la cohérence.
 
-Dans certains environnements de déploiement de microservice (appelés clusters, pour être traitées dans une section ultérieure), découverte de service est intégrée. Par exemple, dans un environnement de Service de conteneur Azure, Kubernetes et le contrôleur de domaine/système d’exploitation avec Marathon peuvent gérer l’enregistrement d’instance de service et la désinscription. Elles sont également exécutées un proxy sur chaque hôte de cluster qui joue le rôle de routeur de découverte côté serveur. Un autre exemple est Azure Service Fabric, qui fournit également un Registre de service via son Service d’affectation de noms de l’emploi.
+Dans certains environnements de déploiement de microservices (appelés clusters, que nous traitons dans une section ultérieure), la découverte des services est intégrée. Par exemple, dans un environnement Azure Container Service, Kubernetes et DC/OS avec Marathon peuvent gérer l’inscription et la désinscription des instances des services. Ils exécutent également un proxy sur chaque hôte de cluster, qui joue le rôle de routeur de découverte côté serveur. Azure Service Fabric est un autre exemple, qui fournit également un registre des services via son service de nommage intégré.
 
-Notez qu’il existe certain chevauchement entre le Registre de service et le modèle de passerelle API, qui vous aide à résoudre ce problème. Par exemple, le [Service Fabric Reverse Proxy](https://docs.microsoft.com/azure/service-fabric/service-fabric-reverseproxy) est un type d’implémentation d’une passerelle API qui est basé sur le Service d’affectation de noms de Service Fabrice et qui permet de résoudre la résolution d’adresse pour les services internes.
+Notez qu’il existe certaines similitudes entre le modèle de registre des services et le modèle de passerelle d’API, qui permet aussi de résoudre ce problème. Par exemple, le [proxy inverse de Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-reverseproxy) est un type d’implémentation d’une passerelle API qui est basée sur le service de nommage de Service Fabric et qui permet de résoudre les adresses pour les services internes.
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
--   **Chris Richardson. Modèle : Registre de Service**
+-   **Chris Richardson. Pattern: Service registry**
     *http://microservices.io/patterns/service-registry.html*
 
--   **Auth0. Le Registre de Service**
+-   **Auth0. The Service Registry**
     [*https://auth0.com/blog/an-introduction-to-microservices-part-3-the-service-registry/*](https://auth0.com/blog/an-introduction-to-microservices-part-3-the-service-registry/)
 
--   **Gabriel Schenker. Détection du service**
+-   **Gabriel Schenker. Service discovery**
     [*https://lostechies.com/gabrielschenker/2016/01/27/service-discovery/*](https://lostechies.com/gabrielschenker/2016/01/27/service-discovery/)
 
 
 >[!div class="step-by-step"]
-[Précédente] (mettre à jour-microservice-apis.md) [suivant] (microservice-based-composite-ui-shape-layout.md)
+[Précédent] (maintain-microservice-apis.md) [Suivant] (microservice-based-composite-ui-shape-layout.md)

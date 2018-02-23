@@ -1,6 +1,6 @@
 ---
-title: "Conseils généraux"
-description: "Architecture de Microservices .NET pour les Applications .NET en conteneur | Conseils généraux"
+title: "Recommandations générales"
+description: "Architecture de microservices .NET pour les applications .NET en conteneur | Recommandations générales"
 keywords: Docker, microservices, ASP.NET, conteneur
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -8,46 +8,49 @@ ms.date: 10/18/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 22dea926e77079e4f543934613ced13a28b2dae6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: fa58d1d81b2d1523baf123d4963db2ca00fee15d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="general-guidance"></a>Conseils généraux
+# <a name="general-guidance"></a>Recommandations générales
 
-Cette section fournit un résumé des choix .NET Core ou .NET Framework. Nous fournir plus de détails sur ces options dans les sections qui suivent.
+Cette section indique brièvement dans quels cas choisir .NET Core ou .NET Framework. Vous trouverez des détails complémentaires sur ces choix dans les sections suivantes.
 
-Vous devez utiliser .NET Core, avec les conteneurs Windows ou Linux pour votre application de serveur Docker en conteneur lorsque :
+Vous avez tout intérêt à utiliser .NET Core, avec des conteneurs Windows ou Linux, pour votre application serveur Docker en conteneur dans les cas suivants :
 
--   vous avez des besoins multiplateformes ; Par exemple, vous souhaitez utiliser les conteneurs Linux et Windows.
+-   Vous avez des besoins multiplateformes. Par exemple, vous souhaitez utiliser à la fois des conteneurs Linux et Windows.
 
--   Architecture de votre application repose sur microservices.
+-   L’architecture de votre application est basée sur des microservices.
 
--   Vous devez démarrer rapide des conteneurs et un faible encombrement mémoire par atteindre une meilleure densité ou les conteneurs plus par unité de matériel afin de réduire les coûts.
+-   Vous avez besoin de démarrer les conteneurs rapidement et souhaitez un faible encombrement par conteneur pour profiter d’une meilleure densité ou davantage de conteneurs par unité matérielle afin de réduire les coûts.
 
-En bref, lorsque vous créez des applications .NET en conteneur, vous devez considérer .NET Core comme l’option par défaut. Il présente de nombreux avantages et répond le mieux à la philosophie de conteneurs et le style de travail.
+En somme, quand il s’agit de créer des applications .NET en conteneur, vous devez envisager .NET Core comme le choix par défaut. Il offre de nombreux avantages et correspond le mieux à la philosophie et au type de fonctionnement des conteneurs.
 
-Un autre avantage de l’utilisation de .NET Core est que vous pouvez exécuter des versions côte à côte du .NET pour les applications dans le même ordinateur. Cet avantage est plus important pour les serveurs ou ordinateurs virtuels qui n’utilisent pas de conteneurs, étant donné que les conteneurs d’isoler les versions de .NET dont l’application a besoin. (Tant qu’ils sont compatibles avec le système d’exploitation sous-jacent.)
+L’autre avantage de .NET Core est lié au fait que vous pouvez exécuter différentes versions de .NET côte à côte pour les applications présentes sur une même machine. Cet avantage est plus important pour les serveurs ou les machines virtuelles qui n’utilisent pas de conteneurs, car les conteneurs isolent les versions de .NET dont l’application a besoin. (Du moment qu’elles sont compatibles avec le système d’exploitation sous-jacent.)
 
-Vous devez utiliser .NET Framework, les conteneurs Windows pour votre application de serveur Docker en conteneur lorsque :
+Vous avez tout intérêt à utiliser le .NET Framework avec des conteneurs Windows pour votre application serveur Docker en conteneur dans les cas suivants :
 
--   Actuellement, votre application utilise le .NET Framework et a des dépendances fortes sur Windows.
+-   Votre application utilise actuellement le .NET Framework et présente de fortes dépendances vis-à-vis de Windows.
 
--   Vous devez utiliser les API Windows qui ne sont pas pris en charge par .NET Core.
+-   Vous avez besoin d’utiliser des API Windows qui ne sont pas prises en charge par .NET Core.
 
--   Vous devez utiliser les bibliothèques .NET de tiers ou les packages NuGet qui ne sont pas disponibles pour .NET Core.
+-   Vous avez besoin d’utiliser des bibliothèques .NET ou des packages NuGet tiers qui ne sont pas disponibles pour .NET Core.
 
-À l’aide de .NET Framework sur Docker peut améliorer votre expérience de déploiement en réduisant les problèmes de déploiement. Cela [ *scénario « de courbes d’élévation et MAJ »* ](https://aka.ms/liftandshiftwithcontainersebook) est important pour containerizing les applications héritées qui ont été développées à l’origine avec le .NET Framework classiques, telles que ASP.NET WebForms, MVC web apps ou WCF ( Services Windows Communication Foundation).
+Le fait d’utiliser le .NET Framework sur Docker peut améliorer vos expériences de déploiement en limitant les problèmes de déploiement. Ce [*scénario « lift-and-shift »* ](https://aka.ms/liftandshiftwithcontainersebook) est important pour la mise en conteneur d’applications existantes qui ont été développées à l’origine avec le .NET Framework classique, comme les applications Web Forms ASP.NET, les applications web MVC ou les services WCF (Windows Communication Foundation).
 
 ### <a name="additional-resources"></a>Ressources supplémentaires
 
--   **livres : moderniser des applications .NET Framework existantes avec Azure et les conteneurs Windows**
+-   **Livre électronique : Modernize existing .NET Framework applications with Azure and Windows Containers**
     [*https://aka.ms/liftandshiftwithcontainersebook*](https://aka.ms/liftandshiftwithcontainersebook)
 
--   **Exemples d’applications : modernisation des applications web ASP.NET héritées à l’aide de conteneurs Windows**
+-   **Exemples d’applications : Modernization of legacy ASP.NET web apps by using Windows Containers**
     [*https://aka.ms/eshopmodernizing*](https://aka.ms/eshopmodernizing)
 
 
 >[!div class="step-by-step"]
-[Précédente] (index.md) [suivant] (net-core-conteneur-scenarios.md)
+[Précédent] (index.md) [Suivant] (net-core-container-scenarios.md)

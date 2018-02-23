@@ -1,52 +1,55 @@
 ---
-title: "Conception de la couche de persistance d’infrastructure"
-description: "Architecture de Microservices .NET pour les Applications .NET en conteneur | Conception de la couche de persistance d’infrastructure"
+title: "Conception de la couche de persistance de l’infrastructure"
+description: "Architecture des microservices .NET pour les applications .NET en conteneur | Conception de la couche de persistance de l’infrastructure"
 keywords: Docker, microservices, ASP.NET, conteneur
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 11/08/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: ce0f1d608eed909a7707f3c580afc5253f3eef06
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 76db5388c75d4eb3b5cc23c1e57cc391a15f2934
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="designing-the-infrastructure-persistence-layer"></a>Conception de la couche de persistance d’infrastructure
+# <a name="designing-the-infrastructure-persistence-layer"></a>Conception de la couche de persistance de l’infrastructure
 
-Composants de persistance de données fournissent un accès aux données hébergées dans les limites d’un microservice (autrement dit, base de données d’un microservice). Ils contiennent l’implémentation réelle de composants tels que les référentiels et [unité de travail](http://martinfowler.com/eaaCatalog/unitOfWork.html) les classes, comme les DBContexts EF personnalisé.
+Les composants de persistance des données fournissent l’accès aux données hébergées dans les limites d’un microservice (autrement dit, la base de données d’un microservice). Ils contiennent l’implémentation réelle des composants tels que les dépôts et les classes d’[unité de travail](http://martinfowler.com/eaaCatalog/unitOfWork.html), comme les DBContexts EF personnalisés.
 
-## <a name="the-repository-pattern"></a>Le modèle de référentiel
+## <a name="the-repository-pattern"></a>Le modèle Dépôt
 
-Référentiels sont des classes ou des composants qui encapsulent la logique nécessaire pour accéder aux sources de données. Ils centralisent les données access des fonctionnalités communes, en fournissant une meilleure facilité de maintenance et le découplage de l’infrastructure ou la technologie utilisée pour accéder aux bases de données à partir de la couche de modèle de domaine. Si vous utilisez un ORM comme Entity Framework, le code qui doit être implémenté est simplifié grâce à LINQ et un typage fort. Cela vous permet de vous concentrer sur la logique de persistance des données plutôt que sur les données d’accès plomberie.
+Les dépôts sont des classes ou composants qui encapsulent la logique nécessaire pour accéder aux sources de données. Ils centralisent les fonctionnalités d’accès aux données communes, en fournissant une meilleure maintenabilité et en découplant l’infrastructure ou la technologie utilisée pour accéder aux bases de données à partir de la couche du modèle de domaine. Si vous utilisez un ORM comme Entity Framework, le code à implémenter est simplifié grâce à LINQ et à un typage fort. Ainsi, vous pouvez vous concentrer sur la logique de persistance des données plutôt que sur le raccordement de l’accès aux données.
 
-Le modèle de référentiel est une façon bien documentée de l’utilisation de la source de données. Dans le carnet de [modèles d’Architecture d’Application Enterprise](https://www.amazon.com/Patterns-Enterprise-Application-Architecture-Martin/dp/0321127420/), Martin Fowler décrit un référentiel comme suit :
+Le modèle Dépôt est une façon bien décrite d’utiliser une source de données. Dans l’ouvrage [Patterns of Enterprise Application Architecture](https://www.amazon.com/Patterns-Enterprise-Application-Architecture-Martin/dp/0321127420/), Martin Fowler décrit un dépôt comme suit :
 
-Un référentiel effectue les tâches d’intermédiaire entre les couches de modèle de domaine et le mappage de données, qui agit de manière similaire à un ensemble d’objets de domaine dans la mémoire. Les objets de client générer des requêtes de façon déclarative et les envoyer vers les référentiels pour obtenir des réponses. Point de vue conceptuel, un référentiel encapsule un ensemble d’objets stockés dans la base de données et les opérations qui peuvent être effectuées sur ces derniers, en fournissant un moyen plus proche de la couche de persistance. Référentiels, également, prend en charge que l’objectif de séparation, clairement et dans un sens, la dépendance entre le domaine de travail et l’allocation de données ou d’un mappage.
+Un dépôt effectue les tâches d’un intermédiaire entre les couches du modèle de domaine et le mappage de données, en agissant d’une manière similaire à un ensemble d’objets de domaine dans la mémoire. Les objets clients génèrent des requêtes de façon déclarative et les envoient aux dépôts pour obtenir des réponses. D’un point de vue conceptuel, un dépôt encapsule un ensemble d’objets stockés dans la base de données et les opérations pouvant être effectuées sur ces derniers, en fournissant un moyen plus proche de la couche de persistance. Les dépôts, par ailleurs, prennent en charge l’objectif de séparation, claire et dans un seul sens, de la dépendance entre le domaine de travail et l’allocation ou le mappage de données.
 
-### <a name="define-one-repository-per-aggregate"></a>Définir un référentiel par l’agrégat
+### <a name="define-one-repository-per-aggregate"></a>Définir un seul dépôt par agrégat
 
-Pour chaque racine d’agrégation ou d’agrégation, vous devez créer une classe de référentiel. Dans un microservice basée sur des modèles de conception domaine, le canal uniquement, que vous devez utiliser pour mettre à jour la base de données doit être les référentiels. Il s’agit, car ils ont une relation avec la racine d’agrégation, qui contrôle la cohérence transactionnelle et les invariants de l’agrégat. Il est OK interroger la base de données à travers les autres canaux (comme vous pouvez le faire suivant une approche CQRS), car elles ne changent pas l’état de la base de données. Toutefois, la zone transactionnelle, les mises à jour, doivent toujours être contrôlés par les référentiels et les racines d’agrégat.
+Pour chaque agrégat ou racine d’agrégat, vous devez créer une seule classe de dépôt. Dans un microservice basé sur des modèles de conception pilotée par le domaine (DDD, Domain-Driver Design), le seul canal que vous devez utiliser pour mettre à jour la base de données doit être les dépôts. En effet, ils ont une relation un-à-un avec la racine d’agrégat, qui contrôle les invariants et la cohérence transactionnelle de l’agrégat. Il est possible d’interroger la base de données par le biais d’autres canaux (selon une approche CQRS par exemple), car les requêtes ne changent pas l’état de la base de données. Toutefois, la zone transactionnelle (les mises à jour) doit toujours être contrôlée par les dépôts et les racines d’agrégat.
 
-En fait, un référentiel vous permet de remplir les données dans la mémoire provenant de la base de données sous la forme d’entités de domaine. Une fois les entités en mémoire, elles peuvent être modifiées et puis persistantes dans la base de données à des transactions.
+En bref, un dépôt vous permet de renseigner les données en mémoire provenant de la base de données sous la forme d’entités de domaine. Une fois que les entités sont en mémoire, elles peuvent être modifiées et de nouveau rendues persistantes dans la base de données par le biais de transactions.
 
-Comme indiqué précédemment, si vous utilisez le modèle architectural CQS/CQRS, les requêtes initiales seront effectuées par les requêtes côté hors du modèle de domaine, effectuées par des instructions SQL simples à l’aide de Dapper. Cette approche est beaucoup plus souple que référentiels, car vous pouvez interroger et joindre des tables que vous devez, et ces requêtes ne sont pas limitées par les règles à partir d’agrégats. Ces données passera à l’application de client ou de la couche présentation.
+Comme indiqué précédemment, si vous utilisez le modèle architectural CQS/CQRS, les requêtes initiales sont effectuées par des requêtes latérales en dehors du modèle de domaine, effectuées par de simples instructions SQL à l’aide de Dapper. Cette approche est beaucoup plus souple que les dépôts, car vous pouvez interroger et joindre les tables dont vous avez besoin, et ces requêtes ne sont pas limitées par des règles issues des agrégats. Ces données accèdent à la couche présentation ou à l’application cliente.
 
-Si l’utilisateur apporte des modifications, les données à mettre à jour proviendront de la couche d’application ou une présentation de client à la couche application (par exemple, un service Web API). Lorsque vous recevez une commande (avec des données) dans un gestionnaire de commandes, vous utilisez des référentiels pour obtenir les données que vous souhaitez mettre à jour à partir de la base de données. Vous mettre à jour en mémoire avec les informations passées avec les commandes, et vous pouvez ensuite ajouter ou de mettre à jour les données (entités de domaine) dans la base de données via une transaction.
+Si l’utilisateur apporte des modifications, les données à mettre à jour passent de l’application cliente ou de la couche présentation à la couche Application (comme un service API web). Quand vous recevez une commande (avec des données) dans un gestionnaire de commandes, vous utilisez des dépôts pour obtenir les données à mettre à jour à partir de la base de données. Vous les mettez à jour dans la mémoire avec les informations passées avec les commandes, puis vous ajoutez ou mettez à jour les données (entités de domaine) dans la base de données par le biais d’une transaction.
 
-Nous devons mettre en évidence à nouveau que seul référentiel doit être défini pour chaque racine d’agrégat, comme indiqué dans la Figure 9-17. Pour atteindre l’objectif de la racine d’agrégation pour maintenir la cohérence transactionnelle entre tous les objets au sein de l’agrégat, vous ne devez jamais créer un référentiel pour chaque table dans la base de données.
+N’oubliez pas qu’un seul dépôt doit être défini pour chaque racine d’agrégat, comme l’illustre la figure 9-17. Pour atteindre l’objectif de la racine d’agrégat visant à maintenir la cohérence transactionnelle entre tous les objets au sein de l’agrégat, vous ne devez jamais créer un dépôt pour chaque table dans la base de données.
 
 ![](./media/image18.png)
 
-**Figure 9-17**. La relation entre les référentiels, les agrégats et les tables de base de données
+**Figure 9-17**. Relation entre les dépôts, les agrégats et les tables de base de données
 
-### <a name="enforcing-one-aggregate-root-per-repository"></a>En appliquant une racine d’agrégation par référentiel
+### <a name="enforcing-one-aggregate-root-per-repository"></a>Appliquer une seule racine d’agrégat par dépôt
 
-Il peut être utile pour implémenter la conception de votre référentiel de sorte qu’il applique la règle que seules les racines d’agrégation doivent avoir des référentiels. Vous pouvez créer un type générique ou de base de référentiel qui limite le type d’entité associé pour vous assurer qu’ils ont l’interface de marqueur IAggregateRoot.
+Il peut s’avérer très utile d’implémenter votre conception de dépôt de sorte à faire respecter la règle stipulant que seules les racines d’agrégat doivent avoir des dépôts. Vous pouvez créer un type de dépôt générique ou basique qui limite le type des entités utilisées pour veiller à ce qu’elles aient l’interface de marqueur IAggregateRoot.
 
-Par conséquent, chaque classe de référentiel implémenté au niveau de la couche d’infrastructure implémente son propre contrat ou une interface, comme indiqué dans le code suivant :
+Ainsi, chaque classe de dépôt implémentée au niveau de la couche d’infrastructure implémente son propre contrat ou sa propre interface, comme le montre le code suivant :
 
 ```csharp
 namespace Microsoft.eShopOnContainers.Services.Ordering.Infrastructure.Repositories
@@ -55,7 +58,7 @@ namespace Microsoft.eShopOnContainers.Services.Ordering.Infrastructure.Repositor
     {
 ```
 
-Chaque interface du référentiel spécifique implémente l’interface IRepository générique :
+Chaque interface de dépôt spécifique implémente l’interface IRepository générique :
 
 ```csharp
 public interface IOrderRepository : IRepository<Order>
@@ -65,67 +68,106 @@ public interface IOrderRepository : IRepository<Order>
 }
 ```
 
-Toutefois, pour que le code d’appliquer la convention d’assurer un meilleur que chaque référentiel doit être lié à un agrégat unique serait d’implémenter un type de référentiel générique afin qu’il soit explicite que vous utilisez un référentiel pour cibler un regroupement spécifique. Cela peut se faire facilement en implémentant ce générique dans l’interface de base IRepository, comme dans le code suivant :
+Toutefois, un meilleur moyen d’obliger le code à appliquer la convention selon laquelle chaque dépôt doit être lié à un seul agrégat consiste à implémenter un type de dépôt générique pour qu’il soit explicite que vous utilisez un dépôt pour cibler un agrégat spécifique. Vous pouvez le faire facilement en implémentant ce type générique dans l’interface de base IRepository, comme dans le code suivant :
 
 ```csharp
   public interface IRepository<T> where T : IAggregateRoot
 ```
 
-### <a name="the-repository-pattern-makes-it-easier-to-test-your-application-logic"></a>Le modèle de référentiel rend plus faciles à tester votre logique d’application
+### <a name="the-repository-pattern-makes-it-easier-to-test-your-application-logic"></a>Le modèle Dépôt facilite le test de votre logique d’application
 
-Le modèle de référentiel vous permet de tester facilement votre application avec des tests unitaires. N’oubliez pas que les tests unitaires uniquement tester votre code, l’infrastructure pas sorte que les abstractions de référentiel plus faciles à atteindre cet objectif.
+Le modèle Dépôt vous permet de tester facilement votre application avec des tests unitaires. N’oubliez pas que les tests unitaires testent uniquement votre code, pas l’infrastructure, si bien que les abstractions de dépôt facilitent la réalisation de cet objectif.
 
-Comme indiqué dans la section précédente, il est recommandé que vous définissez et placez les interfaces de référentiel dans la couche de modèle de domaine afin que la couche d’application (par exemple, votre microservice API Web) ne dépend pas directement de la couche d’infrastructure, dans laquelle vous avez mis en œuvre les classes du référentiel réel. Par cette opération et à l’aide de l’Injection de dépendances dans les contrôleurs de votre API Web, vous pouvez implémenter des référentiels fictives qui retournent des données fictives au lieu des données à partir de la base de données. Qu’approche découplée vous permet de créer et de tests unitaires d’exécution qui peuvent tester uniquement la logique de votre application sans nécessiter de connectivité à la base de données.
+Comme indiqué dans une section précédente, il est recommandé de définir et placer les interfaces de dépôt dans la couche du modèle de domaine pour que la couche Application (par exemple, votre microservice d’API web) ne dépende pas directement de la couche d’infrastructure, dans laquelle vous avez implémenté les classes de dépôt réelles. Ce faisant et à l’aide de l’injection de dépendances dans les contrôleurs de votre API web, vous pouvez implémenter des dépôts fictifs qui retournent de fausses données au lieu des données de la base de données. Cette approche découplée vous permet de créer et d’exécuter des tests unitaires permettant de tester seulement la logique de votre application sans nécessiter de connectivité à la base de données.
 
-Connexions aux bases de données peuvent échouer et, plus important, des centaines de tests en cours d’exécution par rapport à une base de données est incorrect pour deux raisons. Tout d’abord, il peut prendre beaucoup de temps en raison du grand nombre de tests. En second lieu, les enregistrements de base de données peuvent modifier et affecter les résultats de vos tests, afin qu’ils ne peuvent pas être cohérents. Test par rapport à la base de données n’est pas une unité de tests, mais que des tests d’une intégration. Vous devez disposer de nombreux tests unitaires en cours d’exécution rapide, mais moins d’intégration des tests sur les bases de données.
+Les connexions aux bases de données peuvent échouer et, ce qui est plus important, l’exécution de centaines de tests sur une base de données est mauvaise pour deux raisons. Tout d’abord, elle peut s’avérer très chronophage en raison du grand nombre de tests. Ensuite, les enregistrements de base de données peuvent changer et affecter les résultats de vos tests, qui peuvent ne pas être cohérents. Un test sur une base de données n’est pas un test unitaire, mais un test d’intégration. Vous devez effectuer de nombreux tests unitaires qui s’exécutent rapidement, mais un nombre moindre de tests d’intégration sur les bases de données.
 
-En termes de séparation des problèmes pour les tests unitaires, votre logique s’exécute sur les entités de domaine dans la mémoire. Il suppose que la classe du référentiel a livré les. Une fois que votre logique modifie les entités de domaine, il suppose que la classe de référentiel stockera les correctement. Le point important ici consiste à créer des tests unitaires sur votre modèle de domaine et de sa logique de domaine. Racines d’agrégat sont les limites de cohérence principal dans DDD.
+En termes de séparation des responsabilités pour les tests unitaires, votre logique s’exécute sur des entités de domaine dans la mémoire. Elle suppose que la classe de dépôt les a remises. Une fois que votre logique modifie les entités de domaine, elle suppose que la classe de dépôt les stocke correctement. Il est important de créer des tests unitaires sur votre modèle de domaine et sa logique de domaine. Les racines d’agrégat correspondent aux limites de cohérence principales dans la conception DDD.
 
-### <a name="the-difference-between-the-repository-pattern-and-the-legacy-data-access-class-dal-class-pattern"></a>La différence entre le modèle de référentiel et le modèle de classe (classe de la couche DAL) accès aux données hérité
+### <a name="the-difference-between-the-repository-pattern-and-the-legacy-data-access-class-dal-class-pattern"></a>La différence entre le modèle Dépôt et le modèle de la classe d’accès aux données héritée (classe DAL)
 
-Un objet d’accès aux données exécute directement des opérations d’accès et la persistance des données sur le stockage. Marques de référentiel les données avec les opérations que vous souhaitez effectuer dans la mémoire d’une unité de l’objet de travail (par exemple, EF lorsque vous utilisez le DbContext), mais ces mises à jour ne seront pas effectuées immédiatement.
+Un objet d’accès aux données exécute directement des opérations d’accès aux données et de persistance des données dans le stockage. Un dépôt marque les données avec les opérations à effectuer dans la mémoire d’une unité d’objet de travail (comme dans EF lorsque vous utilisez DbContext), mais ces mises à jour ne sont pas effectuées immédiatement.
 
-Une unité de travail est appelée comme une unique transaction qui implique plusieurs insert, update ou delete operations. En termes simples, cela signifie que, pour une action utilisateur spécifique (par exemple, l’inscription sur un site Web), tous les insert, update et delete transactions sont gérées dans une transaction unique. Cela est plus efficace que la gestion des transactions de base de données multiples d’une manière chattier.
+Une unité de travail est définie comme une transaction unique qui implique plusieurs opérations d’insertion, de mise à jour ou de suppression. En termes simples, cela signifie que, pour une action utilisateur spécifique (par exemple, une inscription sur un site web), toutes les transactions d’insertion, de mise à jour et de suppression sont gérées dans une transaction unique. Une telle gestion est plus efficace que de gérer plusieurs transactions de base de données d’une manière plus bavarde.
 
-Ces opérations de persistance plusieurs seront effectuées ultérieurement en une seule action lorsque votre code à partir de la couche application commandes il. La décision relative à l’application des modifications en mémoire pour le stockage de base de données est généralement basée sur le [modèle d’unité de travail](http://martinfowler.com/eaaCatalog/unitOfWork.html). Dans EF, le modèle de l’unité de travail est implémenté en tant que le DBContext.
+Ces multiples opérations de persistance sont effectuées ultérieurement en une seule action quand votre code de la couche Application la commande. La décision d’appliquer les modifications en mémoire au stockage réel de la base de données se base généralement sur le [modèle Unité de travail](http://martinfowler.com/eaaCatalog/unitOfWork.html). Dans EF, le modèle Unité de travail est implémenté en tant que DBContext.
 
-Dans de nombreux cas, ce modèle ou la façon d’appliquer des opérations sur le stockage peut augmenter les performances de l’application et réduire le risque d’incohérences. En outre, elle réduit le blocage dans les tables de base de données, de transaction, car toutes les opérations prévues sont validées dans le cadre d’une transaction. C’est plus efficace, par opposition à l’exécution de nombreuses opérations isolées par rapport à la base de données. Par conséquent, le ORM sélectionné sera optimiser l’exécution par rapport à la base de données en regroupant plusieurs actions de mise à jour dans la même transaction, au lieu de plusieurs exécutions de transaction distincts et de petite taille.
+Dans de nombreux cas, ce modèle ou cette façon d’appliquer des opérations dans le stockage peut augmenter les performances de l’application et réduire le risque d’incohérences. De plus, cela réduit le blocage des transactions dans les tables de base de données, car toutes les opérations prévues sont validées dans le cadre d’une seule transaction. Ce modèle est plus efficace que l’exécution de nombreuses opérations isolées sur la base de données. Par conséquent, l’ORM sélectionné est en mesure d’optimiser l’exécution sur la base de données en regroupant plusieurs actions de mise à jour au sein de la même transaction, au lieu d’exécuter de nombreuses transactions distinctes de petite taille.
 
-### <a name="repositories-should-not-be-mandatory"></a>Référentiels ne doivent pas être obligatoires
+### <a name="repositories-should-not-be-mandatory"></a>Les dépôts ne doivent pas être obligatoires
 
-Les dépôts personnalisés sont utiles pour les raisons cités précédemment, et qui est l’approche pour le tri microservice dans eShopOnContainers. Toutefois, il n’est pas un modèle essentiel à implémenter dans une conception orientée ou même en général de développement dans .NET.
+Les dépôts personnalisés sont utiles pour les raisons citées précédemment. C’est l’approche utilisée pour le microservice de passation de commandes dans eShopOnContainers. Toutefois, il ne s’agit pas d’un modèle essentiel à implémenter dans une conception DDD voire même dans le cadre du développement général dans .NET.
 
-Par exemple, Jimmy Bogard, lorsque vous fournissez des commentaires directement dans ce guide, on dit que les éléments suivants :
+Par exemple, Jimmy Bogard, en commentant directement le présent guide, a tenu les propos suivants :
 
-Cela serez probablement mes commentaires plus grands. Je ne suis vraiment pas un ventilateur de référentiels, principalement car ils masquent les détails importants du mécanisme de persistance sous-jacentes. Son pourquoi passer pour MediatR pour les commandes, trop. Je peux utiliser toute la puissance de la couche de persistance et transmettre des tout comportement de ce domaine à mes racines d’agrégat. Je ne souhaite généralement simuler mes dépôts : j’ai encore besoin d’avoir que l’intégration test avec la réalité. Va CQRS signifiait que nous n’a pas vraiment avez besoin pour les référentiels plus.
+Ces commentaires seront probablement mes plus longs. Je ne suis vraiment pas fan des dépôts, principalement parce qu’ils cachent les détails importants du mécanisme de persistance sous-jacent. C’est pour cela que je préfère MediatR pour les commandes, aussi. Je peux utiliser toute la puissance de la couche de persistance et transmettre tout ce comportement de domaine à mes racines d’agrégat. En général, je ne veux pas simuler mes dépôts. J’ai quand même besoin de confronter ce test d’intégration avec la réalité. L’adoption de CQRS signifie que nous n’avons plus vraiment besoin des dépôts.
 
-Nous trouver référentiels utile, mais nous reconnaissez qu’ils ne sont pas critiques pour votre DDD, dans la façon dont le modèle d’agrégation et le modèle de domaine complet. Par conséquent, utilisez le modèle de référentiel ou non, comme vous le voir s’ajuster.
+Nous les trouvons utiles, mais nous reconnaissons qu’ils ne sont pas essentiels pour votre DDD, comme le sont le modèle Agrégat et le modèle de domaine riche. Par conséquent, utilisez le modèle Dépôt ou ne l’utilisez pas, en fonction de vos besoins.
 
-#### <a name="additional-resources"></a>Ressources supplémentaires
+## <a name="the-specification-pattern"></a>Le modèle Spécification
 
-##### <a name="the-repository-pattern"></a>Le modèle de référentiel
+Le modèle Spécification (son nom complet est modèle Spécification de requêtes) est un modèle de conception pilotée par le domaine (DDD, Domain-Driven Design) conçu comme l’emplacement où vous pouvez placer la définition d’une requête avec une éventuelle logique de tri et de pagination.
 
--   **Edward Hieatt et Rob me. Modèle de référentiel. ** 
-     [ *http://martinfowler.com/eaaCatalog/repository.html*](http://martinfowler.com/eaaCatalog/repository.html)
+Le modèle Spécification définit une requête dans un objet. Par exemple, pour encapsuler une requête paginée qui recherche certains produits, vous pouvez créer une spécification PagedProduct qui accepte les paramètres d’entrée nécessaires (pageNumber, pageSize, filtre, etc.). Ensuite, au sein de toute méthode de dépôt (généralement une surcharge List()), elle peut accepter une ISpecification et exécuter la requête prévue en fonction de cette spécification.
 
--   **Le modèle de référentiel**
-    [*https://msdn.microsoft.com/en-us/library/ff649690.aspx*](https://msdn.microsoft.com/en-us/library/ff649690.aspx)
+Il existe plusieurs avantages à cette approche :
 
--   **Modèle de référentiel : Une persistance abstraction de données**
+* La spécification porte un nom (par opposition à une simple série d’expressions LINQ) dont vous pouvez discuter.
+
+* La spécification peut faire l’objet d’un test unitaire de manière isolée pour vérifier qu’elle est correcte. Elle peut aussi être réutilisée facilement si vous avez besoin d’un comportement similaire. Par exemple, sur une action de vue MVC et une action d’API web, ainsi que dans divers services.
+
+* Une spécification peut également servir à décrire la forme des données à retourner, afin que les requêtes puissent retourner uniquement les données requises. Le besoin de chargement différé est ainsi éliminé dans les applications web (ce qui n’est généralement pas une bonne idée) et les implémentations de dépôt ne s’encombrent pas avec ces détails.
+
+Le code suivant issu d’[eShopOnweb](https://github.com/dotnet-architecture/eShopOnWeb ) est un exemple d’interface Spécification générique.
+
+```csharp
+// https://github.com/dotnet-architecture/eShopOnWeb 
+public interface ISpecification<T>
+{
+    Expression<Func<T, bool>> Criteria { get; }
+    List<Expression<Func<T, object>>> Includes { get; }
+    List<string> IncludeStrings { get; }
+}
+```
+
+Dans les sections ci-après, la manière d’implémenter le modèle Spécification avec Entity Framework Core 2.0 et la manière de l’utiliser à partir d’une classe de dépôt sont expliquées.
+
+**Remarque importante :** Le modèle Spécification est un ancien modèle qui peut être implémenté de différentes façons, comme dans les ressources supplémentaires suivantes. En tant que modèle/idée, les approches plus anciennes sont bonnes à savoir, mais méfiez-vous des implémentations plus anciennes qui n’exploitent pas les fonctionnalités des langages modernes comme Linq et les expressions.
+
+## <a name="additional-resources"></a>Ressources supplémentaires
+
+### <a name="the-repository-pattern"></a>Le modèle Dépôt
+
+-   **Edward Hieatt et Rob Mee. Repository pattern.**
+    [*http://martinfowler.com/eaaCatalog/repository.html*](http://martinfowler.com/eaaCatalog/repository.html)
+
+-   **The Repository pattern**
+    [*https://msdn.microsoft.com/library/ff649690.aspx*](https://msdn.microsoft.com/library/ff649690.aspx)
+
+-   **Repository Pattern: A data persistence abstraction**
     [*http://deviq.com/repository-pattern/*](http://deviq.com/repository-pattern/)
 
--   **Eric Evans. Conception domaine : Tackling Complexity in the Heart of Software.** (Livre et en savoir plus sur le modèle de référentiel) [ *https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+-   **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software.** (Livre qui inclut une description du modèle Dépôt)[*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
-##### <a name="unit-of-work-pattern"></a>Unité de modèle de travail
+### <a name="unit-of-work-pattern"></a>Modèle Unité de travail
 
--   **Martin Fowler. Unité de modèle de travail. ** 
-     [ *http://martinfowler.com/eaaCatalog/unitOfWork.html*](http://martinfowler.com/eaaCatalog/unitOfWork.html)
+-   **Martin Fowler. Unit of Work pattern.**
+    [*http://martinfowler.com/eaaCatalog/unitOfWork.html*](http://martinfowler.com/eaaCatalog/unitOfWork.html)
 
 <!-- -->
 
--   **Implémentation du référentiel et une unité de travail des modèles dans une Application ASP.NET MVC**
-    [*https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/ Implementing-the-Repository-and-Unit-of-Work-Patterns-in-an-ASP-NET-MVC-application*](https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
+-   **Implémentation des modèles Dépôt et Unité de travail dans une application MVC ASP.NET**
+    [*https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application*](https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
 
+### <a name="the-specification-pattern"></a>Le modèle Spécification
+
+-   **The Specification pattern.**
+    [*http://deviq.com/specification-pattern/*](http://deviq.com/specification-pattern/)
+
+-   **Evans, Eric (2004). Domain Driven Design. Addison-Wesley. p. 224.**
+
+-   **Specifications. Martin Fowler**
+    [*https://www.martinfowler.com/apsupp/spec.pdf/*](https://www.martinfowler.com/apsupp/spec.pdf)
 
 >[!div class="step-by-step"]
-[Précédente] (domaine-événements-design-implementation.md) [suivant] (infrastructure-persistence-layer-implemenation-entity-framework-core.md)
+[Précédent] (domain-events-design-implementation.md) [Suivant] (infrastructure-persistence-layer-implemenation-entity-framework-core.md)

@@ -1,6 +1,6 @@
 ---
-title: "Le stockage des secrets de l’application en toute sécurité pendant le développement"
-description: "Architecture de Microservices .NET pour les Applications .NET en conteneur | Le stockage des secrets de l’application en toute sécurité pendant le développement"
+title: "Stockage sécurisé des secrets d’application en phase de développement"
+description: "Architecture de microservices .NET pour les applications .NET en conteneur | Stockage sécurisé des secrets d’application en phase de développement"
 keywords: Docker, microservices, ASP.NET, conteneur
 author: mjrousos
 ms.author: wiwagn
@@ -8,23 +8,26 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: f1b8b257a3e677c7e665e1d394a8adf7e651bec2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f70f7c741da9653745e4f542125986c701b5d22d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="storing-application-secrets-safely-during-development"></a>Le stockage des secrets de l’application en toute sécurité pendant le développement
+# <a name="storing-application-secrets-safely-during-development"></a>Stockage sécurisé des secrets d’application en phase de développement
 
-Pour vous connecter avec d’autres services et ressources protégées, les applications ASP.NET Core devront généralement utiliser des chaînes de connexion, les mots de passe ou autres informations d’identification qui contiennent des informations sensibles. Ces informations sensibles sont appelées *secrets*. Il est recommandé de ne pas inclure de secrets dans le code source et certainement ne pas pour stocker des secrets dans le contrôle de code source. Au lieu de cela, vous devez utiliser le modèle de configuration ASP.NET Core pour lire les clés secrètes à partir des emplacements plus sécurisés.
+Pour se connecter à des ressources protégées et à d’autres services, les applications ASP.NET Core doivent généralement utiliser des chaînes de connexion, des mots de passe ou d’autres informations d’identification qui contiennent des informations sensibles. Ces informations sensibles sont appelées *secrets*. La bonne pratique consiste à ne pas inclure les secrets dans le code source et certainement pas de les stocker dans le contrôle de code source. Au lieu de cela, vous devez utiliser le modèle de configuration ASP.NET Core pour lire les secrets à partir d’emplacements plus sécurisés.
 
-Vous devez séparer les secrets pour l’accès de développement et de mise en lots des ressources à partir de celles utilisées pour accéder aux ressources de production, étant donné que différents utilisateurs devront accéder à ces différents jeux de clés secrètes. Pour stocker les secrets utilisés pendant le développement, les approches courantes sont soit stocker des clés secrètes dans les variables d’environnement ou à l’aide de l’outil Gestionnaire de Secret principal ASP.NET. Pour le stockage le plus sécurisé dans les environnements de production, microservices peut stocker des secrets dans un coffre de clés Azure.
+Vous devez distinguer les secrets destinés à accéder aux ressources de développement et de préproduction de ceux utilisés pour accéder aux ressources de production, car ce ne sont pas les mêmes personnes qui ont besoin d’accéder à ces différents jeux de secrets. Dans la pratique, les secrets utilisés en phase de développement sont généralement stockés dans des variables d’environnement ou avec l’outil Secret Manager d’ASP.NET Core. Pour un stockage plus sécurisé dans les environnements de production, les microservices peuvent stocker les secrets dans Azure Key Vault.
 
-## <a name="storing-secrets-in-environment-variables"></a>Le stockage de secrets dans des variables d’environnement
+## <a name="storing-secrets-in-environment-variables"></a>Stockage des secrets dans des variables d’environnement
 
-Un moyen de maintenir les secrets de code source est destiné aux développeurs définir la chaîne en fonction des secrets en tant que [variables d’environnement](https://docs.microsoft.com/aspnet/core/security/app-secrets#environment-variables) sur leurs ordinateurs de développement. Lorsque vous utilisez des variables d’environnement pour stocker des clés secrètes avec des noms hiérarchiques (ceux imbriqués dans les sections de configuration), créez un nom pour les variables d’environnement qui inclut la hiérarchie complète du nom de la clé secrète, délimité par des deux-points ( :).
+Pour les développeurs, l’un des moyens de maintenir les secrets en dehors du code source est de définir des secrets basés sur des chaînes prenant la forme de [variables d’environnement](https://docs.microsoft.com/aspnet/core/security/app-secrets#environment-variables) sur leurs machines de développement. Quand vous utilisez des variables d’environnement pour stocker les secrets avec des noms hiérarchisés (ceux imbriqués dans les sections de configuration), attribuez un nom aux variables d’environnement qui inclut la hiérarchie complète du nom du secret en les séparant de deux-points (:).
 
-Par exemple, définissant une variable d’environnement LogLevel:Default : l’enregistrement de débogage est équivalente à une valeur de configuration à partir du fichier JSON suivant :
+Par exemple, le fait de définir une variable d’environnement Logging:LogLevel:Default sur Debug équivaudrait à une valeur de configuration du fichier JSON suivant :
 
 ```json
 {
@@ -36,15 +39,15 @@ Par exemple, définissant une variable d’environnement LogLevel:Default : l�
 }
 ```
 
-Pour accéder à ces valeurs à partir de variables d’environnement, l’application doit simplement appeler AddEnvironmentVariables sur son ConfigurationBuilder lors de la construction d’un objet IConfigurationRoot.
+Pour accéder à ces valeurs de variables d’environnement, l’application doit simplement appeler AddEnvironmentVariables sur son ConfigurationBuilder pendant la construction d’un objet IConfigurationRoot.
 
-Notez que les variables d’environnement sont généralement stockés en texte brut, donc, si l’ordinateur ou un processus avec les variables d’environnement est compromise, les valeurs de variable d’environnement seront visibles.
+Notez que les variables d’environnement sont généralement stockées en texte clair. Par conséquent, si la machine ou le processus comprenant les variables d’environnement est compromis, les valeurs des variables d’environnement sont visibles.
 
-## <a name="storing-secrets-using-the-aspnet-core-secret-manager"></a>Le stockage de secrets à l’aide du Gestionnaire de Secret principal ASP.NET
+## <a name="storing-secrets-using-the-aspnet-core-secret-manager"></a>Stockage des secrets à l’aide de l’outil Secret Manager d’ASP.NET Core
 
-Le cœur d’ASP.NET [Secret Manager](https://docs.microsoft.com/aspnet/core/security/app-secrets#secret-manager) outil fournit une autre méthode de conservation des secrets de code source. Pour utiliser l’outil Gestionnaire de clé secrète, inclure une référence d’outils (DotNetCliToolReference) au package Microsoft.Extensions.SecretManager.Tools dans votre fichier projet. Une fois cette dépendance n’est présente et a été restaurée, la commande de clés secrètes de l’utilisateur dotnet peut être utilisée pour définir la valeur de secrets à partir de la ligne de commande. Ces clés secrètes sont stockées dans un fichier JSON dans le répertoire du profil utilisateur (les détails varient par système d’exploitation), en s’éloignant de code source.
+L’outil [Secret Manager](https://docs.microsoft.com/aspnet/core/security/app-secrets#secret-manager) d’ASP.NET Core offre un autre moyen de maintenir les secrets en dehors du code source. Pour utiliser l’outil Secret Manager, incluez une référence de l’outil (DotNetCliToolReference) au package Microsoft.Extensions.SecretManager.Tools de votre fichier projet. Une fois cette dépendance présente et restaurée, la commande dotnet user-secrets peut être utilisée pour définir la valeur des secrets à partir de la ligne de commande. Ces secrets sont alors stockés dans un fichier JSON dans le répertoire du profil de l’utilisateur (les détails varient selon le système d’exploitation), à l’écart du code source.
 
-Secrets définies par l’outil Gestionnaire de clé secrète sont organisés par la propriété UserSecretsId du projet qui utilise les clés secrètes. Par conséquent, veillez à définir la propriété UserSecretsId dans votre fichier projet (comme indiqué dans l’extrait de code ci-dessous). La chaîne réelle utilisée comme l’ID n’est pas importante, tant qu’il est unique dans le projet.
+Les secrets définis par l’outil Secret Manager sont organisés par la propriété UserSecretsId du projet qui utilise les secrets. Par conséquent, veillez à définir la propriété UserSecretsId dans votre fichier projet (comme indiqué dans l’extrait de code ci-dessous). Vous pouvez utiliser n’importe quelle chaîne en guise d’ID du moment qu’elle est unique dans le projet.
 
 ```xml
 <PropertyGroup>
@@ -52,8 +55,8 @@ Secrets définies par l’outil Gestionnaire de clé secrète sont organisés pa
 </PropertyGroup>
 ```
 
-À l’aide de clés secrètes stockées avec le Gestionnaire de secret principal dans une application s’effectue en appelant AddUserSecrets&lt;T&gt; sur l’instance ConfigurationBuilder pour inclure des secrets de l’application dans sa configuration. Le paramètre générique T doit être un type à partir de l’assembly qui le UserSecretId a été appliqué à. Habituellement à l’aide de AddUserSecrets&lt;démarrage&gt; est correct.
+Pour utiliser les secrets stockés avec Secret Manager dans une application, AddUserSecrets&lt;T&gt; est appelé au niveau de l’instance ConfigurationBuilder. Les secrets de l’application sont alors inclus dans sa configuration. Le paramètre générique T doit être un type de l’assembly auquel UserSecretId a été appliqué. En règle générale, l’utilisation d’AddUserSecrets&lt;Startup&gt; convient.
 
 
 >[!div class="step-by-step"]
-[Précédente] (autorisation-net-microservices-web-applications.md) [suivant] (azure-key-coffre-protège-secrets.md)
+[Précédent] (authorization-net-microservices-web-applications.md) [Suivant] (azure-key-vault-protects-secrets.md)

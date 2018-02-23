@@ -1,65 +1,68 @@
 ---
-title: "État et les données dans les applications de Docker"
-description: "Architecture de Microservices .NET pour les Applications .NET en conteneur | État et les données dans les applications de Docker"
-keywords: Docker, Microservices, ASP.NET, conteneur, SQL, CosmosDB, Docker
+title: "État et données dans les applications Docker"
+description: "Architecture de microservices .NET pour les applications .NET en conteneur | État et données dans les applications Docker"
+keywords: Docker, Microservices, ASP.NET, Conteneur, SQL, Cosmos DB, Docker
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 36d0fb9f27ef56b36c380e2fc972c79cff77003e
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ef11d89c39ee02d52dab29f949d1ac6be981d87f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="state-and-data-in-docker-applications"></a>État et les données dans les applications de Docker
+# <a name="state-and-data-in-docker-applications"></a>État et données dans les applications Docker
 
-Dans la plupart des cas, vous pouvez considérer un conteneur sous la forme d’une instance d’un processus. Un processus ne conserve pas l’état persistant. Même si un conteneur peut écrire dans un stockage local, en supposant qu’une instance sera autour indéfiniment serait en supposant qu’un seul emplacement dans la mémoire sera durable. Les images de conteneur, telles que des processus, doivent être évalués à plusieurs instances ou qu’ils seront finalement supprimées ; s’ils sont gérés par un orchestrateur de conteneur, il doit être supposé qu’ils peuvent obtenir déplacés à partir d’un nœud ou une machine virtuelle à un autre.
+Dans la plupart des cas, vous pouvez considérer qu’un conteneur est une instance d’un processus. Un processus ne conserve pas un état persistant. Si un conteneur peut écrire dans son stockage local, supposer qu’une instance sera présente indéfiniment revient à supposer qu’un seul emplacement en mémoire pourra perdurer. Il convient de supposer que les images de conteneur, comme les processus, peuvent avoir plusieurs instances ou qu’ils seront finalement supprimés ; s’ils sont gérés avec un orchestrateur de conteneurs, il faut supposer qu’ils peuvent être déplacés d’un nœud ou d’une machine virtuelle à l’autre.
 
-Docker fournit une fonctionnalité nommée la *superposition de système de fichiers*. Il implémente une tâche de copie sur écriture que magasins mis à jour les informations au système de fichiers racine du conteneur. Ces informations sont en outre à l’image d’origine sur laquelle repose le conteneur. Si le conteneur est supprimé du système, ces modifications sont perdues. Par conséquent, bien qu’il soit possible d’enregistrer l’état d’un conteneur dans son emplacement de stockage local, vous concevez un système de contourner ce problème serait en conflit avec le principe de conception de conteneur, qui est sans état par défaut.
+Docker fournit une fonctionnalité appelée *système de fichiers par superposition*. Elle implémente une tâche de copie sur écriture qui stocke les informations mises à jour dans le système de fichiers racine du conteneur. Ces informations s’ajoutent à l’image d’origine sur laquelle le conteneur est basé. Si le conteneur est supprimé du système, ces modifications sont perdues. Par conséquent, bien qu’il soit possible d’enregistrer l’état d’un conteneur dans son stockage local, la conception d’un système sur cette base serait en conflit avec le principe de la conception des conteneurs, qui sont par défaut sans état.
 
-Les solutions suivantes permettent de gérer les données persistantes dans les applications de Docker :
+Les solutions suivantes sont utilisées pour gérer les données persistantes dans les applications Docker :
 
--   [Volumes de données](https://docs.docker.com/engine/tutorials/dockervolumes/) qui monter sur l’ordinateur hôte.
+-   Les [volumes de données](https://docs.docker.com/engine/tutorials/dockervolumes/) qui se montent sur l’hôte.
 
--   [Conteneurs de volumes de données](https://docs.docker.com/engine/tutorials/dockervolumes/#creating-and-mounting-a-data-volume-container) qui fournissent un stockage partagé entre les conteneurs à l’aide d’un conteneur externe.
+-   Les [conteneurs de volumes de données](https://docs.docker.com/engine/tutorials/dockervolumes/#creating-and-mounting-a-data-volume-container) qui fournissent un stockage partagé entre les conteneurs en utilisant un conteneur externe.
 
--   [Plug-ins de volume](https://docs.docker.com/engine/tutorials/dockervolumes/) qui monter des volumes services à distance, en fournissant la persistance à long terme.
+-   Les [plug-ins de volume](https://docs.docker.com/engine/tutorials/dockervolumes/) qui montent des volumes sur des services distants, en fournissant une persistance à long terme.
 
--   [Le stockage Azure](https://docs.microsoft.com/azure/storage/), qui fournit un stockage géo-distribuable, en fournissant une bonne solution de persistance à long terme pour les conteneurs.
+-   Le service [Stockage Azure](https://docs.microsoft.com/azure/storage/), qui fournit un stockage géographiquement distribuable, offrant une bonne solution de persistance à long terme pour les conteneurs.
 
--   Comme les bases de données relationnelles [base de données SQL Azure](https://azure.microsoft.com/services/sql-database/) ou bases de données NoSQL comme [base de données Azure Cosmos](https://docs.microsoft.com/azure/cosmos-db/introduction), ou de mettre en cache des services tels que [Redis](https://redis.io/).
+-   Des bases de données relationnelles distantes, comme [Azure SQL Database](https://azure.microsoft.com/services/sql-database/), ou des bases de données NoSQL, comme [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/introduction), ou des services de cache, comme [Redis](https://redis.io/).
 
-Les éléments suivants fournissent plus de détails sur ces options.
+Ces options sont détaillées ci-dessous.
 
-**Volumes de données** sont mappées à partir de l’hôte du système d’exploitation vers des répertoires dans les conteneurs de répertoires. Lorsque le code dans le conteneur a accès au répertoire que l’accès est en fait un répertoire sur le système d’exploitation hôte. Ce répertoire n’est pas lié à la durée de vie du conteneur lui-même et le répertoire est accessible à partir de code qui s’exécute directement sur le système d’exploitation hôte ou par un autre conteneur qui mappe le même répertoire hôte vers lui-même. Par conséquent, les volumes de données sont conçus pour rendre persistantes des données indépendamment de la durée de vie du conteneur. Si vous supprimez un conteneur ou d’une image à partir de l’hôte Docker, les données rendues persistantes dans le volume de données n’est pas supprimé. Les données d’un volume est accessible à partir de l’hôte du système d’exploitation.
+Les **volumes de données** sont des répertoires mappés du système d’exploitation hôte à des répertoires dans les conteneurs. Quand le code du conteneur a accès au répertoire, cet accès se fait en réalité à un répertoire sur le système d’exploitation hôte. Ce répertoire n’est pas lié à la durée de vie du conteneur lui-même, et le répertoire est accessible à partir du code qui s’exécute directement sur le système d’exploitation hôte ou par un autre conteneur qui mappe le même répertoire de l’hôte à lui-même. Ainsi, les volumes de données sont conçus pour rendre des données persistantes indépendamment de la durée de vie du conteneur. Si vous supprimez un conteneur ou une image de l’hôte Docker, les données rendues persistantes dans le volume de données ne sont pas supprimées. Les données d’un volume sont également accessibles depuis le système d’exploitation hôte.
 
-**Conteneurs de volumes de données** sont une évolution des volumes de données standard. Un conteneur de volume de données est un conteneur simple qui a un ou plusieurs volumes de données qu’il contient. Le conteneur de volume de données fournit l’accès aux conteneurs à partir d’un point de montage centrale. Cette méthode d’accès aux données est pratique, car il permet de supprimer l’emplacement des données d’origine. Reste, son comportement est semblable à celle d’un volume de données classiques, donc les données sont rendues persistantes dans ce conteneur dédié indépendamment du cycle de vie des conteneurs de l’application.
+Les **conteneurs de volumes de données** sont une évolution des volumes de données standard. Un conteneur de volumes de données est un conteneur simple contenant un ou plusieurs volumes de données. Le conteneur de volumes de données fournit un accès aux conteneurs à partir d’un point de montage central. Cette méthode d’accès aux données est pratique, car elle permet de faire abstraction de l’emplacement des données d’origine. Pour le reste, son comportement est similaire à celui d’un volume de données standard : les données sont donc rendues persistantes dans ce conteneur dédié indépendamment du cycle de vie des conteneurs de l’application.
 
-Comme indiqué dans la Figure 4-5, les volumes Docker standard peuvent être stockées en dehors de conteneurs eux-mêmes, mais dans les limites physiques de la machine virtuelle ou le serveur hôte. Toutefois, les conteneurs Docker ne peut pas accéder à un volume à partir d’un ordinateur hôte serveur ou machine virtuelle à un autre. En d’autres termes, avec ces volumes, il n’est pas possible de gérer les données partagées entre les conteneurs qui s’exécutent sur différents hôtes Docker
+Comme le montre la figure 4-5, les volumes Docker standard peuvent être stockés en dehors des conteneurs eux-mêmes, mais dans les limites physiques du serveur ou de la machine virtuelle hôte. Les conteneurs Docker ne peuvent cependant pas accéder à un volume depuis un serveur ou une machine virtuelle hôte à un autre. En d’autres termes, avec ces volumes, il n’est pas possible de gérer des données partagées entre des conteneurs qui s’exécutent sur des hôtes Docker différents.
 
 ![](./media/image5.png)
 
-**Figure 4-5**. Volumes de données et sources de données externes pour les applications conteneur
+**Figure 4-5**. Volumes de données et sources de données externes pour des applications basées sur des conteneurs
 
-En outre, lorsque les conteneurs Docker sont gérés par un orchestrateur, conteneurs peuvent « déplacer » entre les hôtes, selon les optimisations effectuées par le cluster. Par conséquent, il n’est pas recommandé d’utiliser des volumes de données pour les données d’entreprise. Mais ils sont un bon mécanisme pour travailler avec des fichiers de trace, les fichiers temporelle, ou similaire qui n’affecteront pas la cohérence des données métier.
+De plus, quand des conteneurs Docker sont gérés par un orchestrateur, les conteneurs peuvent être « déplacés » entre les hôtes, en fonction des optimisations effectuées par le cluster. Par conséquent, il n’est pas recommandé d’utiliser des volumes de données pour les données métier. Ils constituent néanmoins un bon mécanisme pour travailler avec des fichiers de trace, des fichiers temporels ou des fichiers similaires qui n’ont pas d’impact sur la cohérence des données métier.
 
-**Plug-ins de volume** comme [Flocker](https://clusterhq.com/flocker/) fournir l’accès aux données sur tous les hôtes dans un cluster. Pas de tous les plug-ins de volume sont créés de manière égale, plug-ins de volume généralement fournir externalisés le stockage persistant fiable à partir des conteneurs immuables.
+Les **plug-ins de volume** comme [Flocker](https://clusterhq.com/flocker/) fournissent un accès aux données sur tous les hôtes d’un cluster. Tous les plug-ins de volume ne sont pas créés de la même façon, mais ils offrent généralement un stockage persistant externalisé fiable à partir de conteneurs immuables.
 
-**Sources de données distantes et cache** des outils tels que la base de données SQL Azure, base de données Azure Cosmos ou un cache à distance comme Redis peut être utilisé dans placées dans des conteneurs applications la même façon qu’ils sont utilisés lors du développement sans conteneurs. Il s’agit d’un moyen éprouvé pour stocker les données d’application métier.
+Des **sources de données distantes et des outils de mise en cache**, comme Azure SQL Database, Azure Cosmos DB ou un cache à distance comme Redis, peuvent être utilisés dans des applications en conteneur de la même façon qu’ils sont utilisés dans des développements sans conteneurs. Il s’agit d’un moyen éprouvé pour stocker des données d’application métier.
 
-**Stockage Azure.** Données d’entreprise doit généralement être placée à des ressources externes ou des bases de données, comme le stockage Azure. Le stockage Azure, dans concrète, fournit les services suivants dans le cloud :
+**Stockage Azure** Les données métier doivent généralement être placées dans des ressources ou des bases de données externes, comme le service Stockage Azure. Concrètement, Stockage Azure fournit les services suivants dans le cloud :
 
--   Stockage d’objets BLOB stocke des données d’objet non structurées. Un objet blob peut être n’importe quel type de données texte ou binaire, tels que les fichiers de document ou un support (images, fichiers audio et vidéo). Stockage d’objets BLOB est également appelé stockage d’objets.
+-   Stockage Blob stocke les données des objets non structurés. Un objet blob peut être n’importe quel type de données texte ou binaires, comme des fichiers de document ou multimédias (fichiers image, audio et vidéo). Stockage Blob est également appelé Stockage d’objets.
 
--   Stockage de fichiers offre un stockage partagé pour les applications héritées à l’aide du protocole SMB standard. Machines virtuelles et services de cloud computing peuvent partager des données de fichier entre les composants d’application via des partages montés. Applications locales peuvent accéder aux fichiers dans un partage via l’API REST du service de fichiers.
+-   Stockage Fichier offre un stockage partagé pour les applications héritées avec le protocole SMB standard. Les machines virtuelles et les services cloud Azure peuvent partager des données de fichiers entre des composants d’application via des partages montés. Les applications locales peuvent accéder aux données des fichiers d’un partage via l’API REST du service Fichier.
 
--   Le stockage table stocke les jeux de données structurées. Stockage de table est un magasin de données d’attribut de clé NoSQL, qui permet le développement rapide et un accès rapide à de grandes quantités de données.
+-   Stockage Table stocke les jeux de données structurés. Stockage Table est un magasin de données clé-attribut NoSQL, qui permet le développement rapide et un accès rapide à de grandes quantités de données.
 
-**Bases de données relationnelles et les bases de données NoSQL.** Il existe de nombreuses options pour les bases de données externes à partir de bases de données relationnelles telles que les bases de données SQL Server, PostgreSQL, Oracle ou NoSQL comme base de données Azure Cosmos, MongoDB, etc.. Ces bases de données ne vont pas être expliqués dans le cadre de ce guide, car elles sont dans un objet totalement différent.
+**Bases de données relationnelles et bases de données NoSQL.** De nombreux choix sont disponibles pour les bases de données externes, qui vont des bases de données relationnelles, comme SQL Server, PostgreSQL ou Oracle, aux bases de données NoSQL, comme Azure Cosmos DB, MongoDB, etc. Ces bases de données ne sont pas présentées dans ce guide, car il s’agit d’un tout autre sujet.
 
 
 >[!div class="step-by-step"]
-[Précédente] (mettez en conteneur-monolithique-applications.md) [suivant] (service-oriented-architecture.md)
+[Précédent] (containerize-monolithic-applications.md) [Suivant] (service-oriented-architecture.md)

@@ -1,6 +1,6 @@
 ---
-title: "Implémentation de connexions d’Entity Framework Core SQL résilientes"
-description: "Architecture de Microservices .NET pour les Applications .NET en conteneur | Implémentation de connexions d’Entity Framework Core SQL résilientes"
+title: "Implémentation de connexions SQL à Entity Framework Core résilientes"
+description: "Architecture des microservices .NET pour les applications .NET en conteneur | Implémentation de connexions SQL à Entity Framework Core résilientes"
 keywords: Docker, microservices, ASP.NET, conteneur
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -8,17 +8,20 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 8600625c2022d69ebaa2645c2a8159a848b12ff0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b37d2c5683aff44165d0330c8d42fc881effbb76
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="implementing-resilient-entity-framework-core-sql-connections"></a>Implémentation de connexions d’Entity Framework Core SQL résilientes
+# <a name="implementing-resilient-entity-framework-core-sql-connections"></a>Implémentation de connexions SQL à Entity Framework Core résilientes
 
-Pour la base de données SQL Azure, Entity Framework Core fournit déjà la logique de résilience et de nouvelle tentative de connexion de base de données interne. Mais vous devez activer la stratégie de l’exécution d’Entity Framework pour chaque connexion DbContext si vous souhaitez avoir [des connexions EF Core résilientes](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency).
+Pour Azure SQL DB, Entity Framework Core fournit déjà la logique de résilience et de nouvelle tentative de connexion de base de données interne. Par contre, vous devez autoriser la stratégie d’exécution d’Entity Framework pour chaque connexion DbContext si vous voulez avoir des [connexions EF Core résilientes](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency).
 
-Par exemple, le code suivant au niveau de la connexion EF Core permet des connexions SQL résilientes qui sont retentées si la connexion échoue.
+Par exemple, le code suivant au niveau des connexions EF Core autorise les connexions SQL résilientes qui sont retentées si elles échouent.
 
 ```csharp
 // Startup.cs from any ASP.NET Core Web API
@@ -44,15 +47,15 @@ public class Startup
 }
 ```
 
-## <a name="execution-strategies-and-explicit-transactions-using-begintransaction-and-multiple-dbcontexts"></a>Stratégies d’exécution et les transactions explicites à l’aide de BeginTransaction et plusieurs DbContexts
+## <a name="execution-strategies-and-explicit-transactions-using-begintransaction-and-multiple-dbcontexts"></a>Stratégies d’exécution et transactions explicites utilisant BeginTransaction et plusieurs DbContexts
 
-Lorsque de nouvelles tentatives sont activées dans les connexions EF Core, chaque opération que vous effectuez à l’aide de EF Core devient son propre opération reproductible. Chaque requête et chaque appel à SaveChanges va être retentées en tant qu’unité si une défaillance temporaire se produit.
+Quand les nouvelles tentatives sont activées dans les connexions EF Core, chaque opération que vous effectuez avec EF Core devient sa propre opération de nouvelle tentative. Chaque requête et chaque appel à SaveChanges sont retentés ensemble si une défaillance passagère se produit.
 
-Toutefois, si votre code initie une transaction à l’aide de BeginTransaction, vous définissez votre propre groupe d’opérations qui doivent être traités en tant qu’unité, tous les éléments à l’intérieur de la transaction est restaurée si une défaillance se produit. Une exception à ce qui suit s’affiche si vous tentez d’exécuter cette transaction lors de l’utilisation d’une stratégie d’exécution EF (stratégie de nouvelle tentative) et que vous incluez plusieurs appels SaveChanges à partir de plusieurs DbContexts dans la transaction.
+Toutefois, si votre code lance une transaction à l’aide de BeginTransaction, définissez votre propre groupe d’opérations à traiter ensemble : tout le contenu de la transaction doit être restauré si une défaillance se produit. Une exception semblable à la suivante s’affiche si vous tentez d’exécuter cette transaction quand vous utilisez une stratégie d’exécution EF (stratégie de nouvelle tentative) et que vous incluez plusieurs appels à SaveChanges de plusieurs DbContexts dans la transaction.
 
-> System.InvalidOperationException : La stratégie d’exécution configurée 'SqlServerRetryingExecutionStrategy' ne prend pas en charge les transactions démarrées par l’utilisateur. Utilisez la stratégie d’exécution retournée par 'DbContext.Database.CreateExecutionStrategy()' pour exécuter toutes les opérations dans la transaction comme une unité reproductible.
+> System.InvalidOperationException : La stratégie d’exécution configurée « SqlServerRetryingExecutionStrategy » ne prend pas en charge les transactions lancées par l’utilisateur. Utilisez la stratégie d’exécution retournée par « DbContext.Database.CreateExecutionStrategy() » pour exécuter toutes les opérations de la transaction en tant qu’ensemble pouvant être retenté.
 
-La solution consiste à appeler manuellement la stratégie d’exécution EF avec un délégué qui représente tous les éléments qui doit être exécutée. Si une défaillance temporaire se produit, la stratégie d’exécution appelle le délégué à nouveau. Par exemple, le code suivant montre comment il est implémenté dans eShopOnContainers avec deux DbContexts plusieurs (\_catalogContext et le IntegrationEventLogContext) lors de la mise à jour d’un produit et l’enregistrement puis le Objet ProductPriceChangedIntegrationEvent qui a besoin d’utiliser un autre DbContext.
+La solution consiste à appeler manuellement la stratégie d’exécution EF avec un délégué représentant tout ce qui doit être exécuté. Si une défaillance passagère se produit, la stratégie d’exécution appelle à nouveau le délégué. Par exemple, le code suivant montre comment elle est implémentée dans eShopOnContainers avec plusieurs DbContexts (\_catalogContext et IntegrationEventLogContext) quand un produit est mis à jour puis que l’objet ProductPriceChangedIntegrationEvent est enregistré, ce qui nécessite d’utiliser un autre DbContext.
 
 ```csharp
 public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem
@@ -84,16 +87,16 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem
 }
 ```
 
-Le premier DbContext est \_catalogContext et le second DbContext se trouve dans le \_integrationEventLogService objet. L’action de validation est effectuée entre plusieurs DbContexts à l’aide d’une stratégie d’exécution EF.
+Le premier DbContext est \_catalogContext et le second DbContext se trouve dans l’objet \_integrationEventLogService. L’action de validation est effectuée entre plusieurs DbContexts utilisant une stratégie d’exécution EF.
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
--   **Résilience des connexions et l’Interception de commande avec Entity Framework**
+-   **Résilience des connexions et interception des commandes avec Entity Framework**
     [*https://docs.microsoft.com/azure/architecture/patterns/category/resiliency*](https://docs.microsoft.com/azure/architecture/patterns/category/resiliency)
 
--   **Cesar de la Torre. À l’aide de résilient Entity Framework Core Sql connexions et Transactions**
+-   **Cesar de la Torre. Using Resilient Entity Framework Core Sql Connections and Transactions**
     <https://blogs.msdn.microsoft.com/cesardelatorre/2017/03/26/using-resilient-entity-framework-core-sql-connections-and-transactions-retries-with-exponential-backoff/>
 
 
 >[!div class="step-by-step"]
-[Précédente] (mettre en œuvre-tentatives-exponentielle-backoff.md) [suivant] (implement-custom-http-call-retries-exponential-backoff.md)
+[Précédent] (implement-retries-exponential-backoff.md) [Suivant] (implement-custom-http-call-retries-exponential-backoff.md)

@@ -1,6 +1,6 @@
 ---
-title: "Stratégies de gestion des défaillances partielles"
-description: "Architecture de Microservices .NET pour les Applications .NET en conteneur | Stratégies de gestion des défaillances partielles"
+title: "Stratégies pour la gestion d’une défaillance partielle"
+description: "Architecture des microservices .NET pour les applications .NET en conteneur | Stratégies pour la gestion d’une défaillance partielle"
 keywords: Docker, microservices, ASP.NET, conteneur
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -8,27 +8,30 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: ff3bed530b13a9b1822c7cccf5a4d47df6fc6239
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: baeeb47dde77ceaa461214f55482d2312d67ccec
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="strategies-for-handling-partial-failure"></a>Stratégies de gestion des défaillances partielles
+# <a name="strategies-for-handling-partial-failure"></a>Stratégies pour la gestion d’une défaillance partielle
 
-Stratégies pour gérer les défaillances partielles sont les suivantes.
+Les stratégies pour la gestion des défaillances partielles sont les suivantes.
 
-**Utiliser la communication asynchrone (par exemple, la communication basée sur message) sur microservices interne**. Il est vivement conseillé ne pas de créer des longues chaînes d’appels HTTP synchrones entre la microservices interne, car cette conception incorrecte cesser la cause principale des pannes incorrects. Au contraire, à l’exception des communications entre les applications clientes et de premier niveau de microservices ou des passerelles API affinée frontales, il est recommandé d’utiliser uniquement (basée sur le message) communication asynchrone qu’une seule fois après la demande initiale / cycle de réponse, entre le microservices interne. Cohérence éventuelle et les architectures de pilotée par événements permettent de réduire les répercussions. Ces approches appliquent un niveau plus élevé d’autonomie de microservice et par conséquent éviter le problème indiqué ici.
+**Utilisez la communication asynchrone (par exemple, la communication basée sur les messages) sur les microservices internes**. Il est vivement conseillé de ne pas créer de longues chaînes d’appels HTTP synchrones entre les microservices internes, car cette conception incorrecte peut devenir la cause principale de graves pannes. Au contraire, à l’exception des communications frontend entre les applications clientes et le premier niveau des microservices ou les passerelles d’API affinées, il est recommandé d’utiliser une communication asynchrone (basée sur les messages) uniquement après le premier cycle de demande/réponse, entre les microservices internes. La cohérence à terme et les architectures basées sur les événements permettent de réduire les effets en chaîne. Ces approches appliquent un plus haut niveau d’autonomie des microservices, c’est pourquoi elles préviennent le problème indiqué ici.
 
-**Utiliser les nouvelles tentatives avec interruption exponentielle**. Cette technique permet d’éviter un court et échecs intermittents en effectuant l’appel de tentatives d’un certain nombre de fois, au cas où le service n’était pas disponible uniquement pour une courte période. Cela peut se produire en raison de problèmes réseau intermittents ou lorsqu’un microservice/conteneur est déplacé vers un autre nœud dans un cluster. Toutefois, si ces nouvelles tentatives ne sont pas conçus correctement avec les disjoncteurs, il peut aggraver les effets ripple, finalement même entraînant un [par déni de Service (DoS)](https://en.wikipedia.org/wiki/Denial-of-service_attack).
+**Utilisez les nouvelles tentatives avec interruption exponentielle**. Cette technique permet d’éviter les défaillances brèves et intermittentes en effectuant de nouvelles tentatives d’appel un certain nombre de fois, dans le cas où le service ne serait pas disponible pendant seulement une courte période. Cela peut se produire lors de problèmes réseau intermittents ou quand un microservice/conteneur est déplacé vers un autre nœud d’un cluster. Toutefois, si ces nouvelles tentatives ne sont pas correctement conçues avec des disjoncteurs, les effets en chaîne peuvent s’aggraver, entraînant même, à terme, un [déni de service](https://en.wikipedia.org/wiki/Denial-of-service_attack).
 
-**Pour contourner les délais d’attente réseau**. En règle générale, les clients doivent être conçus pour ne pas se bloquer indéfiniment et à toujours utiliser des délais d’attente pendant l’attente d’une réponse. À l’aide de délais d’attente garantit que ressources sont jamais liés indéfiniment.
+**Contournez les délais d’attente réseau**. En général, les clients doivent être conçus pour ne pas se bloquer indéfiniment et pour toujours utiliser des délais d’expiration lors de l’attente d’une réponse. L’utilisation de délais d’expiration garantit que les ressources ne sont jamais bloquées indéfiniment.
 
-**Utilisez le modèle de disjoncteur**. Dans cette approche, le processus client suit le nombre de demandes ayant échoué. Si le taux d’erreur dépasse la limite configurée, un aller-retour « disjoncteur » afin que d’autres tentatives échouent immédiatement. (Si un grand nombre de demandes échouent, qui propose le service n’est pas disponible et qu’il est inutile d’envoyer des requêtes.) Après une période de délai d’attente, le client doit réessayer et, si les nouvelles requêtes réussissent, fermez le disjoncteur.
+**Utilisez le modèle Disjoncteur**. Dans cette approche, le processus client suit le nombre de requêtes ayant échoué. Si le taux d’erreurs dépasse une limite configurée, un « disjoncteur » est déclenché de sorte que les autres tentatives échouent immédiatement. (L’échec d’un grand nombre de requêtes est le signe que le service n’est pas disponible et qu’il est inutile d’envoyer des requêtes.) Après un délai d’expiration, le client doit réessayer. Si les nouvelles requêtes réussissent, fermez le disjoncteur.
 
-**Fournir de secours**. Dans cette approche, le processus client exécute la logique de secours en cas d’échec d’une demande, comme le retour de données mises en cache ou une valeur par défaut. Est une approche appropriée pour les requêtes, il est plus complexe pour les mises à jour ou de commandes.
+**Fournissez des solutions de secours**. Dans cette approche, le processus client exécute la logique de secours en cas d’échec d’une requête, comme le retour de données mises en cache ou d’une valeur par défaut. Il s’agit d’une approche appropriée pour les requêtes, mais qui est plus complexe pour les mises à jour ou les commandes.
 
-**Limiter le nombre de demandes en file d’attente**. Les clients doivent également imposer une limite supérieure du nombre de demandes en suspens qui un microservice client peut envoyer à un service particulier. Si la limite est atteinte, il est probablement inutile de faire des demandes supplémentaires, et ces tentatives doivent échouer immédiatement. En termes d’implémentation, la Polly [cloisonnement Isolation](https://github.com/App-vNext/Polly/wiki/Bulkhead) stratégie peut être utilisée pour satisfaire à cette exigence. Cette approche est essentiellement une limitation de la parallélisation avec [SemaphoreSlim](https://docs.microsoft.com/dotnet/api/system.threading.semaphoreslim?view=netcore-1.1) comme implémentation. Il permet également à un « queue » à l’extérieur du cloisonnement. Vous pouvez proactive ont une charge excessive même avant l’exécution (par exemple, étant donné que la capacité est considéré comme complet). Cela rend plus rapidement qu’un disjoncteur serait, étant donné que le disjoncteur attend que les échecs de sa réponse à certains scénarios d’échec. L’objet BulkheadPolicy dans Polly expose quelle le cloisonnement sont de la file d’attente et offre des événements de dépassement de capacité par conséquent, peuvent également servir pour piloter la mise à l’échelle horizontale automatisée.
+**Limitez le nombre de requêtes placées en file d’attente**. Les clients doivent également imposer une limite plus grande du nombre de requêtes en attente qu’un microservice client peut envoyer à un service particulier. Si la limite est atteinte, il est probablement inutile d’effectuer d’autres requêtes, et ces tentatives devraient échouer immédiatement. En termes d’implémentation, la stratégie d’[isolation par cloisonnement](https://github.com/App-vNext/Polly/wiki/Bulkhead) de Polly peut être utilisée pour satisfaire cette exigence. Cette approche est essentiellement une limitation de parallélisation avec [SemaphoreSlim](https://docs.microsoft.com/dotnet/api/system.threading.semaphoreslim?view=netcore-1.1) comme implémentation. Elle autorise également une « file d’attente » à l’extérieur du cloisonnement. Vous pouvez vous protéger de manière proactive contre une charge excessive , même avant l’exécution (par exemple, parce que la capacité maximale est considérée comme atteinte). Ainsi, sa réponse à certains scénarios de défaillance est plus rapide que celle d’un disjoncteur, puisque le disjoncteur attend la défaillance. Dans Polly, l’objet BulkheadPolicy expose le niveau de remplissage du cloisonnement et de la file d’attente. De plus, en cas de dépassement, il propose des événements qui peuvent également être utilisés pour gérer la mise à l’échelle horizontale automatisée.
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
@@ -36,17 +39,17 @@ Stratégies pour gérer les défaillances partielles sont les suivantes.
     [*https://docs.microsoft.com/azure/architecture/patterns/category/resiliency*](https://docs.microsoft.com/azure/architecture/patterns/category/resiliency)
 
 -   **Ajout de résilience et optimisation des performances**
-    [*https://msdn.microsoft.com/en-us/library/jj591574.aspx*](https://msdn.microsoft.com/en-us/library/jj591574.aspx)
+    [*https://msdn.microsoft.com/library/jj591574.aspx*](https://msdn.microsoft.com/library/jj591574.aspx)
 
--   **Cloisonnement.** Référentiel GitHub. Implémentation de la stratégie de Polly. \
-    [*https://github.com/app-vNext/Polly/Wiki/Bulkhead*](https://github.com/App-vNext/Polly/wiki/Bulkhead)
+-   **Cloisonnement.** Dépôt GitHub. Implémentation de la stratégie de Polly.
+    [*https://github.com/App-vNext/Polly/wiki/Bulkhead*](https://github.com/App-vNext/Polly/wiki/Bulkhead)
 
--   **Conception d’applications résilientes Azure**
+-   **Conception d’applications résilientes pour Azure**
     [*https://docs.microsoft.com/azure/architecture/resiliency/*](https://docs.microsoft.com/azure/architecture/resiliency/)
 
--   **Gestion d’erreurs transitoires**
+-   **Gestion des erreurs temporaires**
     <https://docs.microsoft.com/azure/architecture/best-practices/transient-faults>
 
 
 >[!div class="step-by-step"]
-[Précédente] (handle-partielle-failure.md) [suivant] (implémentez-tentatives-exponentielle-backoff.md)
+[Précédent] (handle-partial-failure.md) [Suivant] (implement-retries-exponential-backoff.md)

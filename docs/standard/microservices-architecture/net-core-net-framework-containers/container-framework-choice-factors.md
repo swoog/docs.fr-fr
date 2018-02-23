@@ -1,6 +1,6 @@
 ---
-title: "Table de décision. .NET Framework à utiliser pour Docker"
-description: "Architecture de Microservices .NET pour les Applications .NET en conteneur | Table de décision, .NET Framework à utiliser pour Docker"
+title: "Table de décision : versions de .NET Framework à utiliser pour Docker"
+description: "Architecture de microservices .NET pour les applications .NET en conteneur | Table de décision, versions de .NET Framework à utiliser pour Docker"
 keywords: Docker, microservices, ASP.NET, conteneur
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -8,57 +8,60 @@ ms.date: 10/18/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 4889662c4d887bebd320389e3ced6aae1c93133b
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 40e6a14e7e3515194185e1f4558c91ac29429108
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="decision-table-net-frameworks-to-use-for-docker"></a>Table de décision : .NET Framework à utiliser pour Docker
+# <a name="decision-table-net-frameworks-to-use-for-docker"></a>Table de décision : versions de .NET Framework à utiliser pour Docker
 
-Voici un résumé s’il faut utiliser des conteneurs de .NET Framework ou .NET Core et Windows ou Linux. N’oubliez pas que pour les conteneurs Linux, vous devez les hôtes basés sur Linux de Docker (machines virtuelles ou serveurs) que pour les conteneurs Windows, vous devez Windows Server en fonction des hôtes Docker (machines virtuelles ou serveurs).
+Le récapitulatif ci-dessous vous indique s’il convient d’utiliser .NET Framework ou .NET Core, des conteneurs Windows ou des conteneurs Linux. N’oubliez pas que pour les conteneurs Linux, vous avez besoin d’hôtes Docker basés sur Linux (machines virtuelles ou serveurs) et que pour les conteneurs Windows, vous avez besoin d’hôtes Docker basés sur Windows Server (machines virtuelles ou serveurs).
 
-Il existe plusieurs fonctionnalités qui affectent votre décision de votre application. Vous devez peser l’importance de ces fonctionnalités lors de votre décision.
+Votre application contient plusieurs fonctionnalités qui vont peser dans votre décision. Vous devez évaluer l’importance de ces fonctionnalités au moment de prendre votre décision.
 
 > [!IMPORTANT]
-> Vos ordinateurs de développement seront exécute à un hôte Docker, Linux ou Windows. Microservices connexes que vous souhaitez exécuter et tester ensemble dans une solution devrez toutes exécutées sur la même plateforme de conteneur.
+> Vos machines de développement exécuteront un hôte Docker, Linux ou Windows. Les microservices connexes que vous souhaitez exécuter et tester ensemble dans une solution devront tous s’exécuter sur la même plateforme de conteneur.
 
-* Choix d’architecture de votre application est **Microservices sur les conteneurs**.
-    - Votre choix d’implémentation .NET doit être *.NET Core*.
-    - Votre choix de la plateforme conteneur peut être *les conteneurs Linux* ou *les conteneurs Windows*.
-* Choix d’architecture de votre application est un **application monolithique**.
-    - Votre choix d’implémentation .NET peut être *.NET Core* ou *.NET Framework*.
-    - Si vous avez choisi *.NET Core*, votre choix de la plateforme conteneur peut être *les conteneurs Linux* ou *les conteneurs Windows*.
-    - Si vous avez choisi *.NET Framework*, votre choix de la plateforme conteneur doit être *les conteneurs Windows*.
-* Votre application est un **nouveau développement basé sur le conteneur (« vert-field »)**.
-    - Votre choix d’implémentation .NET doit être *.NET Core*.
-    - Votre choix de la plateforme conteneur peut être *les conteneurs Linux* ou *les conteneurs Windows*.
-* Votre application est un **migration d’application hérité (« brown-field ») de Windows Server aux conteneurs**
-    - Votre choix d’implémentation .NET est *.NET Framework* selon la dépendance d’infrastructure.
-    - Choix de la plateforme de conteneur doit être *les conteneurs Windows* en raison de la dépendance de .NET Framework.
-* Objectif de conception de votre application est **pair meilleures performances et évolutivité**.
-    - Votre choix d’implémentation .NET doit être *.NET Core*.
-    - Votre choix de la plateforme conteneur peut être *les conteneurs Linux* ou *les conteneurs Windows*.
-* Vous avez créé votre application à l’aide de **ASP.NET Core**.
-    - Votre choix d’implémentation .NET doit être *.NET Core*.
-    - Vous pouvez utiliser la *.NET Framework* implémentation, si vous avez d’autres dépendances d’infrastructure.
-    - Si vous avez choisi *.NET Core*, votre choix de la plateforme conteneur peut être *les conteneurs Linux* ou *les conteneurs Windows*.
-    - Si vous avez choisi *.NET Framework*, votre choix de la plateforme conteneur doit être *les conteneurs Windows*.
-* Vous avez créé votre application à l’aide de **4 d’ASP.NET (MVC 5, API Web 2 et Web Forms)**.
-    - Votre choix d’implémentation .NET est *.NET Framework* selon la dépendance d’infrastructure.
-    - Choix de la plateforme de conteneur doit être *les conteneurs Windows* en raison de la dépendance de .NET Framework.
-* Votre application utilise **les services SignalR**.
-    - Votre choix d’implémentation .NET peut être *.NET Framework*, ou *.NET Core 2.1 (lorsqu’il est publié) ou version ultérieure*.
-    - Choix de la plateforme de conteneur doit être *les conteneurs Windows* si vous avez choisi l’implémentation SignalR dans .NET Framework.
-    - Votre choix de la plateforme conteneur peut être Linux conteneurs ou les conteneurs Windows si vous avez choisi l’implémentation SignalR dans .NET Core 2.1 ou version ultérieure (quand il est publié).  
-    - Lorsque **les services SignalR** s’exécutent sur *.NET Core*, vous pouvez utiliser *Linux conteneurs ou conteneurs Windows*.
-* Votre application utilise **WCF, WF et autres infrastructures existantes**.
-    - Votre choix d’implémentation .NET est *.NET Framework*, ou *.NET Core (dans la feuille de route pour une version ultérieure)*.
-    - Choix de la plateforme de conteneur doit être *les conteneurs Windows* en raison de la dépendance de .NET Framework.
-* Votre application implique **les services de la consommation de Azure**.
-    - Votre choix d’implémentation .NET est *.NET Framework*, ou *.NET Core (services finalement tout Azure fournira client SDK pour .NET Core)*.
-    - Choix de la plateforme de conteneur doit être *les conteneurs Windows* si vous utilisez des API clientes .NET Framework.
-    - Si vous utilisez le client API disponibles pour *.NET Core*, vous pouvez également choisir entre *Linux conteneurs et les conteneurs Windows*.
+* Vous choisissez **Microservices dans conteneurs** comme architecture d’application.
+    - Vous devez choisir *.NET Core* comme implémentation .NET.
+    - Vous pouvez choisir *Conteneurs Linux* ou *Conteneurs Windows* comme plateforme de conteneur.
+* Vous choisissez **Application monolithique** comme architecture d’application.
+    - Vous pouvez choisir *.NET Core* ou *.NET Framework* comme implémentation .NET.
+    - Si vous avez choisi *.NET Core*, vous pouvez choisir *Conteneurs Linux* ou *Conteneurs Windows* comme plateforme de conteneur.
+    - Si vous avez choisi *.NET Framework*, vous devez choisir *Conteneurs Windows* comme plateforme de conteneur.
+* Votre application correspond à un **Développement basé sur un nouveau conteneur (« green-field »)**.
+    - Vous devez choisir *.NET Core* comme implémentation .NET.
+    - Vous pouvez choisir *Conteneurs Linux* ou *Conteneurs Windows* comme plateforme de conteneur.
+* Votre application correspond à une **Migration d’application existante Windows Server (« brown-field ») vers des conteneurs**
+    - L’implémentation .NET que vous choisissez est *.NET Framework* compte tenu de la dépendance du framework.
+    - Vous devez choisir *Conteneurs Windows* comme plateforme de conteneur du fait de la dépendance de .NET Framework.
+* L’objectif de conception de votre application est **Performances et scalabilité optimales**.
+    - Vous devez choisir *.NET Core* comme implémentation .NET.
+    - Vous pouvez choisir *Conteneurs Linux* ou *Conteneurs Windows* comme plateforme de conteneur.
+* Vous avez créé votre application en utilisant **ASP.NET Core**.
+    - Vous devez choisir *.NET Core* comme implémentation .NET.
+    - Vous pouvez utiliser l’implémentation *.NET Framework* si vous avez d’autres dépendances de framework.
+    - Si vous avez choisi *.NET Core*, vous pouvez choisir *Conteneurs Linux* ou *Conteneurs Windows* comme plateforme de conteneur.
+    - Si vous avez choisi *.NET Framework*, vous devez choisir *Conteneurs Windows* comme plateforme de conteneur.
+* Vous avez créé votre application en utilisant **ASP.NET 4 (MVC 5, l’API Web 2 et Web Forms)**.
+    - L’implémentation .NET que vous choisissez est *.NET Framework* compte tenu de la dépendance du framework.
+    - Vous devez choisir *Conteneurs Windows* comme plateforme de conteneur du fait de la dépendance de .NET Framework.
+* Votre application utilise les **services SignalR**.
+    - Vous pouvez choisir *.NET Framework* ou *.NET Core version 2.1 (quand elle sera lancée) ou ultérieure*.
+    - Vous devez choisir *Conteneurs Windows* comme plateforme de conteneur si vous avez choisi l’implémentation SignalR dans .NET Framework.
+    - Vous pouvez choisir Conteneurs Linux ou Conteneurs Windows comme plateforme de conteneur si vous avez choisi l’implémentation SignalR dans .NET Core version 2.1 ou ultérieure (quand elle sera lancée).  
+    - Quand les **services SignalR** s’exécutent sur *.NET Core*, vous pouvez utiliser des *conteneurs Linux ou des conteneurs Windows*.
+* Votre application utilise **WCF, WF et d’autres frameworks existants**.
+    - Choisissez *.NET Framework* ou *.NET Core (dans la feuille de route d’une future une version)* comme implémentation .NET.
+    - Vous devez choisir *Conteneurs Windows* comme plateforme de conteneur du fait de la dépendance de .NET Framework.
+* Votre application implique une **consommation de services Azure**.
+    - Choisissez *.NET Framework* ou *.NET Core (tous les services Azure sont appelés à proposer un SDK client pour .NET Core)*.
+    - Vous devez choisir *Conteneurs Windows* comme plateforme de conteneur si vous utilisez des API clientes .NET Framework.
+    - Si vous utilisez les API clientes disponibles pour *.NET Core*, vous avez aussi le choix entre les *conteneurs Linux et les conteneurs Windows*.
 
 >[!div class="step-by-step"]
-[Précédente] (net-framework-conteneur-scenarios.md) [suivant] (net-conteneur-os-targets.md)
+[Précédent] (net-framework-container-scenarios.md) [Suivant] (net-container-os-targets.md)

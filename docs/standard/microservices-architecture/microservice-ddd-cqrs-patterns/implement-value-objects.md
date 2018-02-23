@@ -1,48 +1,51 @@
 ---
 title: "Implémentation d’objets de valeur"
-description: "Architecture de Microservices .NET pour les Applications .NET en conteneur | Implémentation d’objets de valeur"
+description: "Architecture en microservices .NET pour les applications .NET en conteneur | Implémentation d’objets de valeur"
 keywords: Docker, microservices, ASP.NET, conteneur
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 12/12/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: c20bc80d2ddb864a3a0172beb211974426a278a8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2b7b85d2aa3c563fbd4c7cf89336827d25f22c0e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="implementing-value-objects"></a>Implémentation d’objets de valeur
 
-Comme indiqué dans les sections précédentes sur les entités et les agrégats, l’identité est fondamentale pour les entités. Toutefois, il existe plusieurs objets et les éléments de données dans un système qui ne nécessitent pas une identité et l’identité de suivi, tels que les objets de valeur.
+Comme indiqué dans les sections précédentes sur les entités et les agrégats, l’identité est fondamentale pour les entités. Toutefois, un système comprend de nombreux objets et éléments de données qui ne nécessitent aucune identité et aucun suivi d’identité. C’est le cas notamment des objets de valeur.
 
-Autres entités permettre faire référence à un objet de valeur. Par exemple, dans une application qui génère un itinéraire qui explique comment obtenir à partir d’un point à un autre, cet itinéraire est un objet de valeur. Il serait un instantané des points sur un itinéraire spécifique, mais cet itinéraire suggéré n’aurait pas une identité, même si en interne, il peut faire référence à des entités telles que la ville, route, etc..
+Un objet de valeur peut faire référence à d’autres entités. Par exemple, dans une application qui génère un itinéraire entre un point A et un point B, cet itinéraire est un objet de valeur. Il s’agit d’un instantané de points sur un itinéraire spécifique, mais cet itinéraire suggéré n’a pas d’identité, même s’il peut faire référence en interne à des entités comme City, Road, etc.
 
-Figure 9-13 illustre l’objet de valeur d’adresse dans l’agrégat de la commande.
+La Figure 9-13 illustre l’objet de valeur Address dans l’agrégat Order.
 
 ![](./media/image14.png)
 
-**Figure 9-13**. Objet de valeur dans l’agrégat d’ordre d’adresses
+**Figure 9-13**. Objet de valeur Address dans l’agrégat Order
 
-Comme indiqué dans la Figure 9 à 13, une entité est généralement constituée de plusieurs attributs. Par exemple, ordre peut être modélisé en tant qu’entité avec une identité et composé en interne d’un ensemble d’attributs tels que OrderId, OrderDate, OrderItems, etc.. Mais l’adresse, ce qui est simplement une valeur complexe composé de pays, rue, ville, etc. doivent être modélisés et traité comme un objet de valeur.
+Comme le montre la Figure 9-13, une entité est généralement composée de plusieurs attributs. Par exemple, l’entité `Order` peut être modélisée comme entité avec une identité et composée en interne d’un ensemble d’attributs comme OrderId, OrderDate, OrderItems, etc. Mais l’adresse, qui est simplement une valeur complexe comprenant un pays, une rue, une ville, etc. et qui n’a pas d’identité dans ce domaine, doit être modélisée et traitée comme objet de valeur.
 
 ## <a name="important-characteristics-of-value-objects"></a>Caractéristiques importantes des objets de valeur
 
-Il existe deux principales caractéristiques des objets de valeur :
+Voici les deux principales caractéristiques des objets de valeur :
 
--   Ils auront pas d’identité.
+-   Ils n’ont pas d’identité.
 
 -   Ils sont immuables.
 
-La première caractéristique a été présentée précédemment. Immuabilité est une exigence importante. Une fois que l’objet est créé, les valeurs d’un objet de valeur doivent être immuables. Par conséquent, lorsque l’objet est construit, vous devez fournir les valeurs requises, mais vous ne devez pas autoriser les changer au cours de la durée de vie de l’objet.
+Nous avons déjà évoqué la première caractéristique. L’immuabilité est une exigence importante. Une fois l’objet de valeur créé, ses valeurs doivent être immuables. Vous devez donc fournir les valeurs demandées au moment de la construction de l’objet, mais vous devez interdire tout changement de ces valeurs pendant la durée de vie de l’objet.
 
-Les objets de valeur permettent d’effectuer certaines astuces pour les performances, leur nature immuable. Cela est particulièrement vrai dans les systèmes où il peuvent y avoir des milliers de valeur des instances d’objet, qui ont les mêmes valeurs. Leur nature immuable leur permet de réutiliser ; ils peuvent être des objets interchangeables, étant donné que leurs valeurs sont identiques et qu’ils auront pas d’identité. Ce type d’optimisation peut parfois faire la différence entre les logiciels qui s’exécute lentement et avec de bonnes performances. Bien entendu, tous ces cas dépendent de l’environnement d’application et le contexte de déploiement.
+De par la nature immuable des objets de valeur, vous pouvez recourir à certains stratagèmes pour améliorer les performances. Cela vaut particulièrement pour les systèmes comprenant des milliers d’instances d’objet de valeur, bon nombre d’entre elles ayant les mêmes valeurs. Du fait que ces objets sont immuables, vous pouvez les réutiliser. Il sont aussi interchangeables puisque leurs valeurs sont identiques et qu’ils n’ont pas d’identité. C’est ce type d’optimisation qui fait parfois la différence entre un logiciel qui fonctionne lentement et un autre qui offre de bonnes performances. Bien entendu, tous ces cas dépendent de l’environnement de l’application et du contexte de déploiement.
 
-## <a name="value-object-implementation-in-c"></a>Implémentation d’objet de valeur en C\#
+## <a name="value-object-implementation-in-c"></a>Implémentation d’objets de valeur en C\#
 
-En termes d’implémentation, vous pouvez avoir une classe de base de l’objet de valeur dont les méthodes d’utilitaire de base comme l’égalité en fonction de comparaison entre tous les attributs (depuis un objet de valeur ne doit pas être basé sur l’identité) et d’autres caractéristiques fondamentales. L’exemple suivant montre la valeur objet classe de base utilisée dans l’ordre de tri microservice d’eShopOnContainers.
+En termes d’implémentation, vous pouvez avoir une classe de base d’objet de valeur comprenant des méthodes utilitaires simples, par exemple une méthode d’égalité basée sur la comparaison de tous les attributs (puisqu’un objet de valeur ne doit pas être basé sur l’identité), et d’autres caractéristiques fondamentales. L’exemple suivant montre une classe de base d’objet de valeur utilisée dans le microservice de commande d’eShopOnContainers.
 
 ```csharp
 public abstract class ValueObject
@@ -93,7 +96,7 @@ public abstract class ValueObject
 }
 ```
 
-Vous pouvez utiliser cette classe lors de l’implémentation de votre objet de valeur réelle, comme avec l’objet de valeur d’adresse indiqué dans l’exemple suivant :
+Vous pouvez utiliser cette classe quand vous implémentez votre objet de valeur réel, comme avec l’objet de valeur Address dans l’exemple suivant :
 
 ```csharp
 public class Address : ValueObject
@@ -104,8 +107,9 @@ public class Address : ValueObject
     public String Country { get; private set; }
     public String ZipCode { get; private set; }
 
-    public Address(string street, string city, string state,
-        string country, string zipcode)
+    private Address() { }
+
+    public Address(string street, string city, string state, string country, string zipcode)
     {
         Street = street;
         City = city;
@@ -116,6 +120,7 @@ public class Address : ValueObject
 
     protected override IEnumerable<object> GetAtomicValues()
     {
+        // Using a yield return statement to return each element one at a time
         yield return Street;
         yield return City;
         yield return State;
@@ -125,46 +130,199 @@ public class Address : ValueObject
 }
 ```
 
-## <a name="hiding-the-identity-characteristic-when-using-ef-core-to-persist-value-objects"></a>Le masquage de la caractéristique d’identité lors de l’utilisation d’EF Core pour conserver des objets de valeur
+## <a name="how-to-persist-value-objects-in-the-database-with-ef-core-20"></a>Comment rendre des objets de valeur persistants dans la base de données avec EF Core 2.0
 
-Une limitation lorsque utilisant EF Core est dans son état actuel (1.1 de noyaux EF) ne peut pas utiliser [types complexes](https://docs.microsoft.com/de-de/dotnet/api/system.componentmodel.dataannotations.schema.complextypeattribute?view=netframework-4.7) tel que défini dans EF 6.x. Par conséquent, vous devez stocker votre objet de valeur comme une entité EF. Toutefois, vous pouvez masquer son ID afin de vous indiquer clairement que l’identité n’est pas importante dans le modèle faisant partie de l’objet de valeur. Vous masquez l’ID est à l’aide de l’ID en tant qu’une propriété de clichés instantanés. Étant donné que cette configuration pour masquer l’ID dans le modèle est configurée dans le niveau de l’infrastructure, il est transparent pour votre modèle de domaine et son implémentation de l’infrastructure peut changer à l’avenir.
+Vous venez de voir comment définir un objet de valeur dans votre modèle de domaine. Mais comment faire pour le rendre persistant dans la base de données au moyen d’Entity Framework (EF) Core, qui cible généralement les entités avec l’identité ?
 
-Dans eShopOnContainers, l’ID masqué requis par l’infrastructure de base d’EF est implémenté de la manière suivante dans le niveau de DbContext, à l’aide des API Fluent du projet d’infrastructure.
+### <a name="background-and-older-approaches-using-ef-core-11"></a>Informations générales et anciennes approches avec EF Core 1.1
+
+L’utilisation d’EF Core 1.0 et 1.1 présente des limitations, en ce sens que vous ne pouvez pas recourir à des [types complexes](https://docs.microsoft.com/dotnet/api/system.componentmodel.dataannotations.schema.complextypeattribute?view=netframework-4.7) tels que définis dans EF 6.x dans le .NET Framework traditionnel. Si vous utilisez EF Core 1.0 ou 1.1, vous devez donc stocker votre objet de valeur sous la forme d’une entité EF avec un champ ID. Ensuite, pour qu’il ressemble plus à un objet de valeur sans identité, vous pouvez masquer son ID pour indiquer clairement que l’identité d’un objet de valeur n’est pas importante dans le modèle de domaine. Vous pouvez masquer cet ID en l’utilisant comme [propriété cachée](https://docs.microsoft.com/ef/core/modeling/shadow-properties ). Cette configuration consistant à masquer l’ID dans le modèle étant configurée dans le niveau d’infrastructure EF, elle est en quelque sorte transparente pour votre modèle de domaine.
+
+Dans la version initiale d’eShopOnContainers (.NET Core 1.1), l’ID masqué exigé par l’infrastructure EF Core est implémenté de la manière suivante dans le niveau DbContext, à l’aide de l’API Fluent au niveau du projet d’infrastructure. L’ID est donc masqué du point de vue du modèle de domaine, mais il est toujours présent dans l’infrastructure.
 
 ```csharp
-// Fluent API within the OrderingContext:DbContext in the
-// Ordering.Infrastructure project
-
-void ConfigureAddress(EntityTypeBuilder<Address> addressConfiguration)
+// Old approach with EF Core 1.1
+// Fluent API within the OrderingContext:DbContext in the Infrastructure project
+void ConfigureAddress(EntityTypeBuilder<Address> addressConfiguration) 
 {
-    addressConfiguration.ToTable("address", DEFAULT_SCHEMA);
-    addressConfiguration.Property<int>("Id").IsRequired();
-    addressConfiguration.HasKey("Id");
+    addressConfiguration.ToTable("address", DEFAULT_SCHEMA); 
+
+    addressConfiguration.Property<int>("Id")  // Id is a shadow property
+        .IsRequired();
+    addressConfiguration.HasKey("Id");   // Id is a shadow property
 }
 ```
 
-Par conséquent, l’ID est masqué à partir du modèle de domaine point de vue et à l’avenir, l’infrastructure d’objet de valeur peut également être implémentée comme un type complexe ou d’une autre façon.
+Toutefois, la persistance de cet objet de valeur dans la base de données s’apparente à une entité normale dans une autre table.
+
+EF Core 2.0 offre de nouveaux moyens plus efficaces de rendre les objets de valeur persistants.
+
+## <a name="persist-value-objects-as-owned-entity-types-in-ef-core-20"></a>Rendre les objets de valeur persistants en tant que types d’entité détenus dans EF Core 2.0
+
+Même si des écarts existent entre le modèle d’objet de valeur canonique dans DDD et le type d’entité détenu dans EF Core, il s’agit actuellement de la meilleure façon de rendre les objets de valeur persistants avec EF Core 2.0. Les limitations sont présentées à la fin de cette section.
+
+La fonctionnalité des types d’entité détenus est proposée dans EF Core depuis la version 2.0.
+
+Un type d’entité détenu vous permet de mapper les types dont l’identité n’est pas explicitement définie dans le modèle de domaine et qui sont utilisés en tant que propriétés, par exemple un objet de valeur, dans l’une de vos entités. Un type d’entité détenu partage le même type CLR avec un autre type d’entité. L’entité contenant la navigation de définition est l’entité du propriétaire. Quand le propriétaire fait l’objet d’une interrogation, les types détenus sont inclus par défaut.
+
+Un simple coup d’œil au modèle de domaine suffit pour constater qu’un type détenu n’a apparemment pas d’identité.
+Les types détenus ont toutefois une identité, mais la propriété de navigation du propriétaire fait partie de cette identité.
+
+L’identité des instances de types détenus ne leur appartient pas entièrement. Elle est formée de trois composants : 
+
+- l’identité du propriétaire ;
+
+- la propriété de navigation pointant vers les types ;
+
+- dans le cas de collections de types détenus, un composant indépendant (pas encore pris en charge dans EF Core 2.0).
+
+Par exemple, dans le modèle de domaine Ordering d’eShopOnContainers, dans le cadre de l’entité Order, l’objet de valeur Address est implémenté comme type d’entité détenu au sein de l’entité du propriétaire, qui est l’entité Order. Address est un type dont la propriété d’identité n’est pas définie dans le modèle de domaine. Il est utilisé comme propriété du type Order pour spécifier l’adresse d’expédition d’une commande particulière.
+
+Par convention, une clé primaire cachée est créée pour le type détenu et est mappée à la même table que le propriétaire à l’aide du fractionnement de table. Cela permet d’utiliser des types détenus à l’image des types complexes dans EF6 dans le .NET Framework traditionnel.
+
+Il est important de noter que les types détenus ne sont jamais découverts par convention dans EF Core. Vous devez donc les déclarer explicitement.
+
+Dans eShopOnContainers, au niveau d’OrderingContext.cs, dans la méthode OnModelCreating(), plusieurs configurations d’infrastructure sont appliquées. L’une d’entre elles est liée à l’entité Order.
+
+```csharp
+// Part of the OrderingContext.cs class at the Ordering.Infrastructure project
+// 
+protected override void OnModelCreating(ModelBuilder modelBuilder)
+{
+    modelBuilder.ApplyConfiguration(new ClientRequestEntityTypeConfiguration());
+    modelBuilder.ApplyConfiguration(new PaymentMethodEntityTypeConfiguration());
+    modelBuilder.ApplyConfiguration(new OrderEntityTypeConfiguration());
+    modelBuilder.ApplyConfiguration(new OrderItemEntityTypeConfiguration());
+    //...Additional type configurations
+}
+```
+
+Dans le code suivant, l’infrastructure de persistance est définie pour l’entité Order :
+
+```csharp
+// Part of the OrderEntityTypeConfiguration.cs class 
+// 
+public void Configure(EntityTypeBuilder<Order> orderConfiguration)
+{
+    orderConfiguration.ToTable("orders", OrderingContext.DEFAULT_SCHEMA);
+    orderConfiguration.HasKey(o => o.Id);
+    orderConfiguration.Ignore(b => b.DomainEvents);
+    orderConfiguration.Property(o => o.Id)
+        .ForSqlServerUseSequenceHiLo("orderseq", OrderingContext.DEFAULT_SCHEMA);
+
+    //Address value object persisted as owned entity in EF Core 2.0
+    orderConfiguration.OwnsOne(o => o.Address);
+
+    orderConfiguration.Property<DateTime>("OrderDate").IsRequired();
+    
+    //...Additional validations, constraints and code...
+    //...
+}
+```
+
+Dans le code précédent, la méthode `orderConfiguration.OwnsOne(o => o.Address)` spécifie que la propriété `Address` est une entité détenue de type `Order`.
+
+Par défaut, les conventions EF Core nomment les colonnes de base de données pour les propriétés du type d’entité détenu comme suit : `EntityProperty_OwnedEntityProperty`. Les propriétés internes liées à `Address` apparaissent donc dans la table `Orders` avec les noms `Address_Street`, `Address_City` (et ainsi de suite pour `State`, `Country` et `ZipCode`).
+
+Vous pouvez ajouter la méthode fluent `Property().HasColumnName()` pour renommer ces colonnes. Si `Address` est une propriété publique, les mappages ressemblent aux suivants :
+
+```csharp
+orderConfiguration.OwnsOne(p => p.Address)
+                            .Property(p=>p.Street).HasColumnName("ShippingStreet");
+
+orderConfiguration.OwnsOne(p => p.Address)
+                            .Property(p=>p.City).HasColumnName("ShippingCity");
+```
+
+Il est possible de chaîner la méthode `OwnsOne` dans un mappage fluent. Dans l’exemple hypothétique suivant, `OrderDetails` détient `BillingAddress` et `ShippingAddress`, qui sont tous deux des types `Address`. `OrderDetails` est alors détenu par le type `Order`.
+
+```csharp
+orderConfiguration.OwnsOne(p => p.OrderDetails, cb =>
+    {
+        cb.OwnsOne(c => c.BillingAddress);
+        cb.OwnsOne(c => c.ShippingAddress);
+    });
+//...
+//...
+public class Order
+{
+    public int Id { get; set; }
+    public OrderDetails OrderDetails { get; set; }
+}
+
+public class OrderDetails
+{
+    public StreetAddress BillingAddress { get; set; }
+    public StreetAddress ShippingAddress { get; set; }
+}
+
+public class Address
+{
+    public string Street { get; set; }
+    public string City { get; set; }
+}
+```
+
+### <a name="additional-details-on-owned-entity-types"></a>Détails supplémentaires sur les types d’entité détenus
+
+•   Les types détenus sont définis quand vous configurez une propriété de navigation en type particulier à l’aide de l’API fluent OwnsOne.
+
+•   La définition d’un type détenu dans notre modèle de métadonnées est un composite du type du propriétaire, de la propriété de navigation et du type CLR du type détenu.
+
+•   L’identité (clé) d’une instance de type détenu dans notre pile est un composite de l’identité du type du propriétaire et de la définition du type détenu.
+
+#### <a name="owned-entities-capabilities"></a>Fonctionnalités des entités détenues :
+
+•   Un type détenu peut référencer d’autres entités, qu’elles soient détenues (types détenus imbriqués) ou non (propriétés de navigation de référence régulières à d’autres entités).
+
+•   Vous pouvez mapper le même type CLR en tant que types détenus différents dans la même entité du propriétaire par le biais de propriétés de navigation distinctes.
+
+•   Le fractionnement de table est configuré par convention, mais vous pouvez le refuser en mappant le type détenu à une autre table à l’aide de ToTable.
+
+•   Un chargement hâtif est effectué automatiquement sur les types détenus. Il est donc inutile d’appeler Include() sur la requête.
+
+#### <a name="owned-entities-limitations"></a>Limitations des entités détenues :
+
+•   Vous ne pouvez pas créer un DbSet<T> d’un type détenu (par conception).
+
+•   Vous ne pouvez pas appeler ModelBuilder.Entity<T>() sur des types détenus (actuellement par conception).
+
+•   Il n’y a pas de collections de types détenus pour l’instant (mais elles seront prises en charge dans les versions postérieures à EF Core 2.0).
+
+•   La configuration par le biais d’un attribut n’est pas prise en charge.
+
+•   Les types détenus facultatifs (c.-à-d. acceptant la valeur null) qui sont mappés avec le propriétaire dans la même table (c.-à-d. à l’aide du fractionnement de table) ne sont pas pris en charge. Cela vient du fait que nous n’avons pas de sentinelle distincte pour la valeur null.
+
+•   Le mappage d’héritage pour les types détenus n’est pas pris en charge, mais vous devriez pouvoir mapper deux types feuilles des mêmes hiérarchies d’héritage en tant que types détenus différents. EF Core ne réalise pas qu’ils font partie de la même hiérarchie.
+
+#### <a name="main-differences-with-ef6s-complex-types"></a>Principales différences avec les types complexes d’EF6
+
+•   Le fractionnement de table est facultatif, c.-à-d. qu’ils peuvent être mappés à une table distincte tout en restant des types détenus.
+
+•   Ils peuvent référencer d’autres entités (c.-à-d. qu’ils peuvent constituer la partie dépendante des relations à d’autres types non détenus).
+
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
--   **Martin Fowler. Modèle de ValueObject**
+-   **Martin Fowler. ValueObject pattern**
     [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)
 
--   **Eric Evans. Conception domaine : Tackling Complexity in the Heart of Software.** (Livre et en savoir plus sur les objets de valeur) [ *https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+-   **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software.** (Livre comprenant une description des objets de valeur) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
--   **Vaughn Vernon. Mise en œuvre de la conception pilotée par domaine.** (Livre et en savoir plus sur les objets de valeur) [ *https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/*](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/)
+-   **Vaughn Vernon. Implementing Domain-Driven Design.** (Livre comprenant une description des objets de valeur) [*https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/*](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/)
 
--   **Propriétés de clichés instantanés**
+-   **Propriétés cachées**
     [*https://docs.microsoft.com/ef/core/modeling/shadow-properties*](https://docs.microsoft.com/ef/core/modeling/shadow-properties)
 
--   **Les types complexes ou des objets de la valeur**. Discussion dans le référentiel GitHub de noyaux EF (onglet problèmes) [ *https://github.com/aspnet/EntityFramework/issues/246*](https://github.com/aspnet/EntityFramework/issues/246)
+-   **Types complexes et/ou objets de valeur**. Discussion dans le dépôt GitHub EF Core (onglet Problèmes) [*https://github.com/aspnet/EntityFramework/issues/246*](https://github.com/aspnet/EntityFramework/issues/246)
 
 -   **ValueObject.cs.** Classe d’objet de valeur de base dans eShopOnContainers.
-    [*https://github.com/dotnet/eShopOnContainers/BLOB/Master/src/services/Ordering/Ordering.Domain/SeedWork/ValueObject.cs*](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/ValueObject.cs)
+    [*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/ValueObject.cs*](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/ValueObject.cs)
 
--   **Classe d’adresse.** Classe d’objet valeur exemple eShopOnContainers.
-    [*https://github.com/dotnet/eShopOnContainers/BLOB/Master/src/services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs*](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs)
+-   **Classe d’adresses.** Exemple de classe d’objet de valeur dans eShopOnContainers.
+    [*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs*](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs)
+
 
 
 >[!div class="step-by-step"]
-[Précédente] (seedwork-domain-model-base-classes-interfaces.md) [suivant] (énumération-classes-over-enum-types.md)
+[Précédent] (seedwork-domain-model-base-classes-interfaces.md) [Suivant] (enumeration-classes-over-enum-types.md)

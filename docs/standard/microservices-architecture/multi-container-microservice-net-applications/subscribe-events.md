@@ -1,38 +1,48 @@
 ---
-title: "S’abonner aux événements"
-description: "Architecture de Microservices .NET pour les Applications .NET en conteneur | S’abonner aux événements"
+title: "S’abonner à des événements"
+description: "Architecture des microservices .NET pour les applications .NET en conteneur | S’abonner à des événements"
 keywords: Docker, microservices, ASP.NET, conteneur
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 12/11/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: fe17b53a39ff2964cd60183e291e2936d3ba28df
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 7538c760d396349fe9b1e93a21839e3e59d7f046
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="subscribing-to-events"></a>S’abonner aux événements
+# <a name="subscribing-to-events"></a>S’abonner à des événements
 
-Pour le bus d’événements à l’aide de la première étape consiste à s’abonner le microservices aux événements qu’ils veulent recevoir. Qui doit être effectuée dans le récepteur microservices.
+Pour utiliser Service Bus, vous devez d’abord abonner les microservices aux événements souhaités. Cette étape doit être effectuée dans les microservices récepteurs.
 
-L’exemple de code suivant montre ce que chaque microservice récepteur doit implémenter au démarrage du service (autrement dit, lors du démarrage de classe) afin qu’il s’abonne aux événements qu’il a besoin. Par exemple, le microservice basket.api doit s’abonner aux messages de ProductPriceChangedIntegrationEvent. Cela rend la microservice prenant en charge de toutes les modifications pour le prix du produit et que vous lui permet d’avertir l’utilisateur sur la modification si ce produit est dans le panier de l’utilisateur.
+L’exemple de code suivant montre ce que chaque microservice récepteur doit implémenter au démarrage du service (dans la classe `Startup`) pour s’abonner aux événements dont il a besoin. Dans ce cas, le microservice `basket.api` doit s’abonner à `ProductPriceChangedIntegrationEvent` et aux messages `OrderStartedIntegrationEvent`. 
+
+Par exemple, lorsqu’il s’abonne à l’événement `ProductPriceChangedIntegrationEvent`, le microservice de panier d’achat est informé du changement de prix d’un produit et avertit l’utilisateur de ce changement si ce produit se trouve dans son panier.
 
 ```csharp
 var eventBus = app.ApplicationServices.GetRequiredService<IEventBus>();
-eventBus.Subscribe<ProductPriceChangedIntegrationEvent>(
-    ProductPriceChangedIntegrationEventHandler);
+
+eventBus.Subscribe<ProductPriceChangedIntegrationEvent, 
+                   ProductPriceChangedIntegrationEventHandler>();
+
+eventBus.Subscribe<OrderStartedIntegrationEvent, 
+                   OrderStartedIntegrationEventHandler>();
+
 ```
 
-Une fois ce code s’exécute, l’abonné microservice est à l’écoute via les canaux RabbitMQ. Quand un message de type ProductPriceChangedIntegrationEvent arrive, le code appelle le Gestionnaire d’événements qui est passé et qu’elle traite l’événement.
+Lorsque ce code est exécuté, le microservice abonné écoute via les canaux RabbitMQ. Quand un message de type ProductPriceChangedIntegrationEvent est reçu, le code appelle le gestionnaire d’événements qui lui est passé et traite l’événement.
 
-## <a name="publishing-events-through-the-event-bus"></a>Publier des événements via le bus d’événements
+## <a name="publishing-events-through-the-event-bus"></a>Publication d’événements via le bus d’événements
 
-Enfin, l’expéditeur du message (origine microservice) publie les événements de l’intégration avec un code similaire à l’exemple suivant. (Il s’agit d’un exemple simplifié qui n’accepte pas l’atomicité en compte.) Vous implémente un code similaire chaque fois qu’un événement doit être propagé sur plusieurs microservices, généralement juste après la validation de données ou transactions à partir de l’origine de microservice.
+Enfin, l’expéditeur du message (le microservice d’origine) publie les événements d’intégration avec du code similaire à celui de l’exemple suivant. Il s’agit d’un exemple simplifié qui ne prend pas en compte l’atomicité. Vous devez implémenter un code similaire à celui-ci chaque fois qu’un événement doit être propagé sur plusieurs microservices, en général, juste après la validation de données ou de transactions du microservice d’origine.
 
-Tout d’abord, l’objet d’implémentation du bus événement (en fonction de RabbitMQ ou sur un bus de service) serait injecté dans le constructeur du contrôleur, comme dans le code suivant :
+Tout d’abord, l’objet d’implémentation du bus d’événements (basé sur RabbitMQ ou sur un bus de services) est injecté dans le constructeur du contrôleur, comme dans le code suivant :
 
 ```csharp
 [Route("api/v1/[controller]")]
@@ -54,7 +64,7 @@ public class CatalogController : ControllerBase
 }
 ```
 
-Puis vous utilisez les méthodes de votre contrôleur, comme dans la méthode UpdateProduct :
+Ensuite, utilisez-le à partir des méthodes de votre contrôleur, comme dans la méthode UpdateProduct :
 
 ```csharp
 [Route("update")]
@@ -83,137 +93,143 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem product)
 }
 ```
 
-Dans ce cas, l’origine microservice étant un microservice CRUD simple, ce code est placé à droite dans le contrôleur d’API Web. Dans microservices plus avancées, il pourrait être implémenté dans la classe CommandHandler, droite après que les données d’origine seront validées.
+Dans ce cas, le microservice d’origine étant un microservice CRUD simple, le code est placé dans un contrôleur d’API web. 
+ 
+Dans les microservices plus avancés, comme avec l’approche CQRS, vous pouvez l’implémenter dans la classe `CommandHandler`, dans la méthode `Handle()`. 
 
-### <a name="designing-atomicity-and-resiliency-when-publishing-to-the-event-bus"></a>Conception d’atomicité et la résilience lors de la publication pour le bus d’événements
 
-Lorsque vous publiez des événements d’intégration via une distribution de messages système telles que le bus d’événements, vous rencontrez le problème de mise à jour de la base de données d’origine atomique et de publication d’un événement. Par exemple, dans l’exemple simplifié indiqué précédemment, le code valide les données la base de données lorsque le prix du produit est modifié et qu’il publie ensuite un message ProductPriceChangedIntegrationEvent. Au départ, il peut se présenter essentiel que ces deux opérations atomiquement. Toutefois, si vous utilisez une transaction distribuée implique la base de données et le message broker, comme vous le feriez dans les anciens systèmes comme [Microsoft Message Queuing (MSMQ)](https://msdn.microsoft.com/library/ms711472(v=vs.85).aspx), cela n’est pas recommandée pour les raisons décrites par la [Théorème de CAP](https://www.quora.com/What-Is-CAP-Theorem-1).
+### <a name="designing-atomicity-and-resiliency-when-publishing-to-the-event-bus"></a>Conception de l’atomicité et de la résilience lors de la publication d’événements dans le bus d’événements
 
-En fait, vous utilisez microservices pour créer des systèmes évolutifs et hautement disponibles. Ce qui simplifie quelque peu, le théorème CAP indique que vous ne pouvez pas créer une base de données (ou un microservice qui possède son modèle) qui est disponible en permanence, fortement cohérent, *et* à tolérance de panne à n’importe quelle partition. Vous devez choisir deux de ces trois propriétés.
+Lorsque vous publiez des événements d’intégration via un système distribution de messages comme le bus d’événements, vous devez mettre à jour la base de données d’origine et publier un événement de manière atomique. Par exemple, dans l’exemple simplifié précédent, le code valide les données dans la base de données lorsque le prix du produit est modifié, puis il publie un message ProductPriceChangedIntegrationEvent. Au début, il peut paraître essentiel que ces deux opérations soient effectuées de manière atomique. Toutefois, si vous utilisez une transaction distribuée impliquant la base de données et le répartiteur de messages, comme vous le feriez sur les anciens systèmes tels que [Microsoft Message Queuing (MSMQ)](https://msdn.microsoft.com/library/ms711472(v=vs.85).aspx), cette méthode n’est pas recommandée pour les raisons énoncées par le [théorème CAP](https://www.quora.com/What-Is-CAP-Theorem-1).
 
-Dans les architectures de microservices, vous devez choisir la disponibilité et la tolérance de panne et vous devez prisés cohérence forte. Par conséquent, dans les applications microservice les plus récents, vous généralement ne souhaitez pas utiliser les transactions distribuées dans la messagerie, comme vous le feriez lorsque vous implémentez [des transactions distribuées](https://msdn.microsoft.com/library/ms978430.aspx#bdadotnetasync2_topic3c) en fonction de la Transaction distribuée Windows Coordinator (DTC) avec [MSMQ](https://msdn.microsoft.com/library/ms711472(v=vs.85).aspx).
+Pour résumer, vous utilisez des microservices pour créer des systèmes évolutifs et hautement disponibles. Pour simplifier quelque peu, le théorème CAP dit qu’il n’est pas possible de créer une base de données (ou un microservice propriétaire de son modèle) qui soit continuellement disponible, fortement cohérente *et* tolérante à toutes les partitions. Vous ne pouvez avoir que deux de ces propriétés à la fois.
 
-Revenons à l’émission initiale et exemple. Si le service tombe en panne après la mise à jour de la base de données (dans ce cas, avec le bouton droit une fois la ligne de code avec \_contexte. SaveChangesAsync()), mais avant l’événement de l’intégration est publié, l’ensemble du système risquent de devenir incohérent. Cela peut être critiques, en fonction de l’opération métier spécifique que vous traitez.
+Dans les architectures basées sur les microservices, vous devez choisir la disponibilité et la tolérance, et donner moins d’importance à la cohérence. Par conséquent, dans les applications de microservice les plus récentes, il n’est généralement pas souhaitable d’utiliser des transactions distribuées pour la messagerie, comme vous le feriez pour implémenter des [transactions distribuées](https://msdn.microsoft.com/library/ms978430.aspx#bdadotnetasync2_topic3c) DTC avec [MSMQ](https://msdn.microsoft.com/library/ms711472(v=vs.85).aspx).
 
-Comme mentionné précédemment dans la section architecture, vous pouvez avoir plusieurs approches pour traiter ce problème :
+Revenons au problème de départ et à son exemple. Si le service tombe en panne après la mise à jour de la base de données (dans ce cas, juste après la ligne de code avec \_context.SaveChangesAsync()), mais avant la publication de l’événement d’intégration, l’ensemble du système risque de devenir incohérent. Cela peut être critique pour l’entreprise, selon le type d’opération.
 
--   À l’aide de la version complète [modèle d’approvisionnement de l’événement](https://msdn.microsoft.com/en-us/library/dn589792.aspx).
+Comme déjà mentionné dans la section relative à l’architecture, plusieurs méthodes permettent de traiter ce problème :
 
--   À l’aide de [d’exploration de données du journal des transactions](http://www.scoop.it/t/sql-server-transaction-log-mining).
+-   Utiliser la version complète du [modèle d’approvisionnement en événements](https://msdn.microsoft.com/library/dn589792.aspx)
 
--   À l’aide de la [modèle de boîte d’envoi](http://gistlabs.com/2014/05/the-outbox/). Il s’agit d’une table transactionnelle pour stocker les événements d’intégration (extension de la transaction locale).
+-   Utiliser [l’exploration des données du journal des transactions](http://www.scoop.it/t/sql-server-transaction-log-mining)
 
-Pour ce scénario, l’utilisation du modèle d’événement approvisionnement (ES) complet est une des meilleures approches, dans le cas contraire *le* meilleures. Toutefois, dans de nombreux scénarios d’application, vous peut-être pas en mesure d’implémenter un système ES complet. ES signifie stocker uniquement les événements de domaine dans votre base de données transactionnelle, au lieu de stocker les données d’état en cours. Stocker uniquement les événements de domaine peut avoir de nombreux avantages, tels que l’historique de votre système et en mesure de déterminer l’état de votre système à tout moment dans le passé. Toutefois, l’implémentation d’un système ES complète, vous devez remanier la majeure partie de votre système et introduit de nombreuses autres complexités et la configuration requise. Par exemple, vous pouvez utiliser une base de données apportée spécifiquement pour l’alimentation de l’événement, tel que [magasin d’événements](https://geteventstore.com/), ou une base de données telles que la base de données Azure Cosmos, MongoDB, Cassandra, CouchDB ou RavenDB orienté document. ES est une meilleure approche pour ce problème, mais pas la solution la plus simple, sauf si vous êtes déjà familiarisé avec la source d’événement.
+-   Utiliser le [modèle de boîte d’envoi](http://gistlabs.com/2014/05/the-outbox/) Il s’agit d’une table transactionnelle permettant de stocker les événements d’intégration (en étendant la transaction locale).
 
-La possibilité d’utiliser le journal des transactions d’exploration de données initialement semble très transparente. Toutefois, pour utiliser cette approche, la microservice doit être associé à votre journal des transactions SGBDR, telles que le journal des transactions SQL Server. Cela est probablement pas souhaitable. Un autre inconvénient est que les mises à jour de bas niveau enregistrés dans le journal des transactions ne peuvent pas être le même niveau que les événements d’intégration de haut niveau. Dans ce cas, le processus d’ingénierie à rebours ces opérations du journal des transactions peuvent être difficiles.
+Pour ce scénario, l’utilisation du modèle d’approvisionnement en événements est l’une des meilleures approches, sinon *la* meilleure. Toutefois, dans de nombreux scénarios d’application, vous ne pourrez pas implémenter un système d’approvisionnement en événements complet. Avec l’approvisionnement en événements, vous stockez uniquement des événements de domaine dans votre base de données transactionnelle, au lieu de stocker les données de l’état actuel. Le fait de stocker uniquement les événements de domaine comporte des avantages, tels que la disponibilité de l’historique de votre système et la capacité à déterminer l’état antérieur de votre système. Toutefois, l’implémentation d’un système d’approvisionnement en événements complet nécessite la modification d’une grande partie de l’architecture de votre système, et ajoute de nombreuses exigences et davantage de complexité. Par exemple, vous pouvez utiliser une base de données créée spécialement pour l’approvisionnement en événements, telle qu’un [magasin d’événements](https://geteventstore.com/), ou une base de données orientée documents, telle qu’Azure Cosmos DB, MongoDB, Cassandra, CouchDB ou RavenDB. L’approvisionnement en événements est une excellente approche pour ce problème, mais ce n’est pas la plus simple, sauf si vous êtes déjà familiarisé avec l’approvisionnement en événements.
 
-Une approche d’équilibrage de charge est une combinaison d’une table de base de données transactionnelle et d’un modèle de ES simplifié. Vous pouvez utiliser un état comme « prêt pour la publication de l’événement, » que vous définissez dans l’événement d’origine lorsque vous le validez dans la table d’événements de l’intégration. Vous essayez ensuite de publier l’événement vers le bus d’événements. Si l’action de l’événement de publication réussit, vous démarrez une autre transaction dans le service d’origine et déplacez l’état « prêt pour la publication de l’événement » à « événement déjà publiée ».
+L’exploration du journal des transactions peut paraître simple au premier abord. Toutefois, pour cette méthode, vous devez associer le microservice à votre journal des transactions SGBDR, comme par exemple le journal des transactions SQL Server. Toutefois, cela n’est pas souhaitable. Un autre inconvénient à cela est que les mises à jour de bas niveau enregistrées dans le journal des transactions peuvent ne pas être au même niveau que les événements d’intégration de haut niveau. Si c’est le cas, il peut être difficile d’effectuer une rétroconception sur les opérations du journal des transactions.
 
-Si l’action de l’événement de publication de l’événement de bus échoue, les données toujours pas seront incohérentes dans le microservice d’origine, il est toujours marqué comme « prêt à publier l’événement », et en ce qui concerne le reste des services, il ne sera cohérente. Vous pouvez toujours avoir les tâches en arrière-plan vérification de l’état des transactions ou des événements d’intégration. Si la tâche détecte un événement dans l’état « prêt pour la publication de l’événement », il peut tenter de publier à nouveau cet événement avec le bus d’événements.
+La meilleure approche consiste à combiner une table de base de données transactionnelle et un modèle simplifié d’approvisionnement en événements. Vous pouvez utiliser un état du type « prêt à publier l’événement », que vous définissez dans l’événement d’origine lorsque vous le validez dans la table d’événements d’intégration. Ensuite, vous essayez de publier l’événement dans le bus d’événements. Si l’action de publication de l’événement réussit, démarrez une autre transaction dans le service d’origine, puis remplacez l’état « prêt à publier l’événement » par l’état « événement déjà publié ».
 
-Notez qu’avec cette approche, vous rendez persistantes uniquement les événements d’intégration pour chaque microservice d’origine et uniquement les événements que vous souhaitez communiquer à d’autres microservices ou les systèmes externes. En revanche, dans un système ES complet, stocker tous les événements de domaine également.
+Si l’action de publication de l’événement échoue dans le bus d’événements, les données ne seront toujours pas incohérentes dans le microservice d’origine. Elles continueront d’être signalées comme étant « prêtes à publier l’événement », et par rapport aux autres services, elles seront cohérentes à terme. Vous pouvez toujours avoir des tâches en arrière-plan qui vérifient l’état des transactions ou des événements d’intégration. Si la tâche détecte un événement avec l’état « prêt à publier l’événement », elle peut tenter de republier cet événement dans le bus d’événements.
 
-Par conséquent, cette approche à charge équilibrée est un système ES simplifié. Vous avez besoin d’une liste des événements d’intégration avec leur état actuel (« prêt à publier » et « publié »). Mais vous devrez implémenter ces États pour les événements d’intégration. Et, dans cette approche, il est inutile stocker toutes les données de votre domaine en tant qu’événements dans la base de données transactionnelle, comme vous le feriez dans un système ES complet.
+Notez qu’avec cette approche, vous conservez uniquement les événements d’intégration de chaque microservice d’origine, et uniquement les événements que vous souhaitez communiquer aux autres microservices ou systèmes externes. En revanche, dans un système d’approvisionnement en événements complet, tous les événements de domaine sont également stockés.
 
-Si vous utilisez déjà une base de données relationnelle, vous pouvez utiliser une table transactionnelle pour stocker les événements d’intégration. Pour obtenir l’atomicité de votre application, vous utilisez un processus en deux étapes basé sur des transactions locales. En fait, vous avez une table de IntegrationEvent dans la même base de données où vous avez vos entités de domaine. Cette table fonctionne comme une assurance d’obtenir l’atomicité afin que vous incluez persistante des événements d’intégration dans les mêmes transactions en cours de validation les données du domaine.
+Par conséquent, cette approche mixte n’est autre qu’un système simplifié d’approvisionnement en événements. Vous avez besoin de la liste des événements d’intégration avec leur état actuel (« prêt pour la publication » ou« publié »). Toutefois, vous avez uniquement besoin d’implémenter ces états pour les événements d’intégration. En outre, avec cette approche, il n’est pas nécessaire de stocker toutes les données de votre domaine comme des événements dans la base de données transactionnelle, comme vous le feriez dans un système d’approvisionnement en événements complet.
 
-Étape par étape, le processus se déroule comme suit : l’application commence une transaction de base de données locale. Ensuite, il met à jour l’état de vos entités de domaine et insère un événement dans la table d’événements de l’intégration. Enfin, il valide la transaction. Vous obtenez l’atomicité de votre choix.
+Si vous utilisez déjà une base de données relationnelle, vous pouvez utiliser une table transactionnelle pour stocker les événements d’intégration. Pour obtenir l’atomicité de votre application, vous devez utiliser un processus en deux étapes basé sur les transactions locales. Pour résumer, une table IntegrationEvent doit se trouver dans la même base de données que vos entités de domaine. Cette table fonctionne comme une garantie d’obtention de l’atomicité, et vous permet d’inclure les événements d’intégration persistants dans les transactions qui valident vos données de domaine.
 
-Lorsque vous implémentez les étapes de la publication d’événements, vous avez ces possibilités :
+Voici, étape par étape, le déroulement de ce processus : l’application commence une transaction de base de données locale. Ensuite, elle met à jour l’état de vos entités de domaine et insère un événement dans la table d’événements d’intégration. Enfin, elle valide la transaction. Vous obtenez ainsi l’atomicité souhaitée.
 
--   Publier l’événement intégration juste après la validation de la transaction et une autre transaction locale permet de marquer les événements dans la table en cours de publication. Ensuite, utilisez le tableau comme un artefact pour suivre les événements d’intégration en cas de problèmes dans le microservices à distance et effectuer des actions de compensation basées sur les événements d’intégration stockée.
+Lorsque vous implémentez les étapes de publication des événements, vous avez les possibilités suivantes :
 
--   Utilisez le tableau comme un type de file d’attente. Un thread d’application distinct ou un processus interroge la table d’événements integration, publie les événements pour le bus d’événements, puis utilise une transaction locale pour marquer les événements publié.
+-   Publiez l’événement d’intégration juste après la validation de la transaction, puis utilisez une autre transaction locale pour marquer les événements de la table comme étant publiés. Ensuite, utilisez la table comme un artefact pour effectuer le suivi des événements d’intégration en cas de problèmes au niveau des microservices distants, puis effectuez des actions compensatoires en fonction des événements d’intégration stockés.
 
-Figure 8-22 illustre l’architecture de la première de ces approches.
+-   Utilisez la table comme un type de file d’attente. Un thread d’application ou un processus distinct interroge la table d’événements d’intégration, publie les événements dans le bus d’événements, puis utilise une transaction locale pour marquer les événements comme étant publiés.
+
+La Figure 8-22 montre l’architecture de la première approche.
 
 ![](./media/image23.png)
 
-**Figure 8-22**. Atomicité lors de la publication d’événements pour le bus d’événements
+**Figure 8-22**. Atomicité lors de la publication d’événements dans le bus d’événements
 
-L’approche illustrée dans la Figure 8-22 manque microservice un travail supplémentaire qui est responsable de la vérification et confirmant la réussite des événements d’intégration publiée. En cas de défaillance, ce microservice de travail de l’outil d’analyse supplémentaires permettre lire les événements à partir de la table et les republier.
+Il manque à l’approche illustrée à la Figure 8-22 un microservice de worker supplémentaire chargé de vérifier et de confirmer la publication des événements d’intégration. En cas de défaillance, le microservice de worker supplémentaire peut lire les événements de la table et les republier.
 
-Sur la deuxième approche : vous utilisez la table du journal des événements comme une file d’attente et un microservice de travail pour publier les messages. Dans ce cas, le processus est illustré comme cela dans la Figure 8-23. Cet exemple montre un microservice supplémentaire et la table est la seule source lors de la publication d’événements.
+Pour la deuxième approche, vous devez utiliser la table EventLog comme une file d’attente et toujours utiliser un microservice de worker pour publier les messages. Dans ce cas, le processus est similaire à celui illustré dans la Figure 8-23. On y voit un microservice supplémentaire, ainsi que la table qui est la seule source lors de la publication d’événements.
 
 ![](./media/image24.png)
 
-**Figure 8-23**. Atomicité lors de la publication d’événements pour le bus d’événements avec un microservice de travail
+**Figure 8-23**. Atomicité lors de la publication d’événements dans le bus d’événements avec un microservice de worker
 
-Par souci de simplicité, l’exemple eShopOnContainers utilise la première approche (sans processus supplémentaires ou avec l’outil d’analyse microservices) ainsi que le bus d’événements. Toutefois, l’eShopOnContainers ne gère pas tous les cas de défaillance. Dans une application réelle déployée sur le cloud, le fait de problèmes surviendront par la suite, et vous devez implémenter qui vérifier et renvoyez la logique doit adopter. À l’aide de la table comme une file d’attente peut être plus efficace que la première approche si vous avez cette table comme une seule source d’événements lorsque vous les publiez via le bus d’événements.
+Par souci de simplicité, l’exemple eShopOnContainers utilise la première approche (sans processus ou microservices de vérification supplémentaires), ainsi que le bus d’événements. Toutefois, l’exemple eShopOnContainers ne gère pas tous les cas de défaillance. Dans une application réelle déployée dans le cloud, vous devez accepter le fait que des problèmes surviendront un jour ou l’autre. Il est donc nécessaire d’implémenter cette logique de vérification et de renvoi. L’utilisation de la table comme une file d’attente peut se révéler plus efficace que la première approche, si cette table est la seule source d’événements lorsque vous les publiez via le bus d’événements.
 
-### <a name="implementing-atomicity-when-publishing-integration-events-through-the-event-bus"></a>Implémentation d’atomicité lors de la publication d’événements d’intégration via le bus d’événements
+### <a name="implementing-atomicity-when-publishing-integration-events-through-the-event-bus"></a>Implémentation de l’atomicité lors de la publication d’événements d’intégration via le bus d’événements
 
-Le code suivant montre comment vous pouvez créer une transaction impliquant plusieurs objets DbContext — un contexte liées aux données d’origine est mis à jour et le contexte de deuxième associées à la table IntegrationEventLog.
+Le code suivant montre comment vous pouvez créer une transaction impliquant plusieurs objets DbContext : un contexte lié aux données d’origine mises à jour, et le deuxième contexte lié à la table IntegrationEventLog.
 
-Notez que la transaction dans l’exemple de code ci-dessous ne sera pas résiliente si les connexions à la base de données n’importe quel problème au moment lorsque le code est en cours d’exécution. Cela peut se produire dans les systèmes cloud comme Azure SQL DB, qui peut déplacer des bases de données entre serveurs. Pour implémenter des transactions résilientes dans plusieurs contextes, consultez le [implémentation de connexions d’Entity Framework Core SQL résilientes](#implementing_resilient_EFCore_SQL_conns) section plus loin dans ce guide.
+Notez que la transaction de l’exemple de code ci-dessous ne sera pas résiliente si les connexions à la base de données rencontrent un problème lorsque le code est exécuté. Cela peut se produire dans les systèmes cloud comme Azure SQL DB, qui sont susceptibles de déplacer des bases de données d’un serveur à un autre. Pour implémenter des transactions résilientes dans plusieurs contextes, consultez la section [Implémentation de connexions SQL à Entity Framework Core résilientes](#implementing_resilient_EFCore_SQL_conns) plus loin dans ce guide.
 
-Pour plus de clarté, l’exemple suivant montre l’ensemble du processus dans un seul élément de code. Toutefois, l’implémentation d’eShopOnContainers est réellement refactorisée et fractionner cette logique dans plusieurs classes, par conséquent, il est plus facile à gérer.
+Pour plus de clarté, l’exemple suivant montre l’ensemble du processus dans un même bloc de code. En réalité, l’implémentation d’eShopOnContainers est refactorisée, et la logique est fractionnée en plusieurs classes, pour faciliter sa gestion.
 
 ```csharp
 // Update Product from the Catalog microservice
 //
-public async Task<IActionResult>
-    UpdateProduct([FromBody]CatalogItem productToUpdate)
+public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem productToUpdate) 
 {
-    var catalogItem = await _catalogContext.CatalogItems
-        .SingleOrDefaultAsync(i => i.Id == productToUpdate.Id);
+  var catalogItem = 
+       await _catalogContext.CatalogItems.SingleOrDefaultAsync(i => i.Id == 
+                                                               productToUpdate.Id); 
+  if (catalogItem == null) return NotFound();
 
-    if (catalogItem == null) return NotFound();
+  bool raiseProductPriceChangedEvent = false; 
+  IntegrationEvent priceChangedEvent = null; 
 
-    bool raiseProductPriceChangedEvent = false;
+  if (catalogItem.Price != productToUpdate.Price) 
+          raiseProductPriceChangedEvent = true; 
 
-    IntegrationEvent priceChangedEvent = null;
+  if (raiseProductPriceChangedEvent) // Create event if price has changed
+  {
+      var oldPrice = catalogItem.Price; 
+      priceChangedEvent = new ProductPriceChangedIntegrationEvent(catalogItem.Id,
+                                                                  productToUpdate.Price, 
+                                                                  oldPrice); 
+  }
+  // Update current product
+  catalogItem = productToUpdate; 
 
-    if (catalogItem.Price != productToUpdate.Price)
-        raiseProductPriceChangedEvent = true;
+  // Just save the updated product if the Product's Price hasn't changed.
+  if !(raiseProductPriceChangedEvent) 
+  {
+      await _catalogContext.SaveChangesAsync();
+  }
+  else  // Publish to event bus only if product price changed
+  {
+        // Achieving atomicity between original DB and the IntegrationEventLog 
+        // with a local transaction
+        using (var transaction = _catalogContext.Database.BeginTransaction())
+        {
+           _catalogContext.CatalogItems.Update(catalogItem); 
+           await _catalogContext.SaveChangesAsync();
 
-    if (raiseProductPriceChangedEvent) // Create event if price has changed
-    {
-        var oldPrice = catalogItem.Price;
-        priceChangedEvent = new ProductPriceChangedIntegrationEvent(catalogItem.Id,
-            productToUpdate.Price,
-            oldPrice);
-    }
+           // Save to EventLog only if product price changed
+           if(raiseProductPriceChangedEvent) 
+               await _integrationEventLogService.SaveEventAsync(priceChangedEvent); 
 
-    // Update current product
-    catalogItem = productToUpdate;
-    // Achieving atomicity between original DB and the IntegrationEventLog
-    // with a local transaction
+           transaction.Commit();
+        }   
 
-    using (var transaction = _catalogContext.Database.BeginTransaction())
-    {
-        _catalogContext.CatalogItems.Update(catalogItem);
+      // Publish the intergation event through the event bus
+      _eventBus.Publish(priceChangedEvent); 
 
-        await _catalogContext.SaveChangesAsync();
+      integrationEventLogService.MarkEventAsPublishedAsync(
+                                                priceChangedEvent); 
+  }
 
-        // Save to EventLog only if product price changed
-        if(raiseProductPriceChangedEvent)
-            await _integrationEventLogService.SaveEventAsync(priceChangedEvent);
-        transaction.Commit();
-   }
-
-   // Publish to event bus only if product price changed
-
-   if (raiseProductPriceChangedEvent)
-   {
-       _eventBus.Publish(priceChangedEvent);
-       integrationEventLogService.MarkEventAsPublishedAsync(
-           priceChangedEvent);
-   }
-
-   return Ok();
+  return Ok();
 }
+
 ```
 
-Une fois l’événement d’intégration ProductPriceChangedIntegrationEvent est créé, la transaction qui stocke l’opération de domaine d’origine (mise à jour l’élément de catalogue) inclut également la persistance de l’événement dans la table du journal des événements. Cela rend une transaction unique, et vous serez toujours en mesure de vérifier si les messages d’événement ont été envoyés.
+Une fois que l’événement d’intégration ProductPriceChangedIntegrationEvent a été créé, la transaction qui stocke l’opération de domaine d’origine (mise à jour de l’élément de catalogue) inclut également la persistance de l’événement dans la table EventLog. De cette façon, vous n’obtenez qu’une seule transaction, et vous pourrez toujours vérifier si les messages d’événement ont été envoyés.
 
-La table du journal des événements est mis à jour atomiquement avec l’opération de base de données d’origine, à l’aide d’une transaction locale par rapport à la même base de données. Si une des opérations échoue, une exception est levée et la transaction restaure toute opération terminée, ainsi maintenir la cohérence entre les opérations de domaine et les messages d’événement envoyés.
+La table du journal des événements est mise à jour atomiquement avec l’opération de base de données d’origine, à l’aide d’une transaction locale dans la même base de données. Si l’une des opérations échoue, une exception est levée et la transaction restaure toute opération terminée, de manière à maintenir la cohérence entre les opérations de domaine et les messages d’événement envoyés.
 
-### <a name="receiving-messages-from-subscriptions-event-handlers-in-receiver-microservices"></a>Réception de messages à partir d’abonnements : les gestionnaires d’événements dans le récepteur microservices
+### <a name="receiving-messages-from-subscriptions-event-handlers-in-receiver-microservices"></a>Réception de messages provenant d’abonnements : les gestionnaires d’événements dans les microservices récepteurs
 
-En plus de la logique d’abonnement événement, vous devez implémenter le code interne pour les gestionnaires d’événements integration (comme une méthode de rappel). Le Gestionnaire d’événements est où vous spécifiez où les messages d’un certain type d’événement sont reçus et traités.
+En plus de la logique d’abonnement aux événements, vous devez implémenter le code interne pour les gestionnaires d’événements d’intégration (comme une méthode de rappel). C’est dans le gestionnaire d’événements que vous spécifiez où les messages d’événement d’un certain type doivent être reçus et traités.
 
-Un gestionnaire d’événements reçoit d’abord une instance d’événement à partir du bus d’événements. Il localise ensuite le composant de traitement liés à cet événement d’intégration, multiplication et la conservation de l’événement en tant qu’une modification d’état dans le récepteur de microservice. Par exemple, un événement ProductPriceChanged proviennent du catalogue microservice, est gérée dans le panier d’achat microservice et modifie l’état de cette microservice de panier de récepteur ainsi, comme indiqué dans le code suivant.
+Un gestionnaire d’événements reçoit d’abord une instance d’événement provenant du bus d’événements. Il localise ensuite le composant à traiter qui est lié à cet événement d’intégration, en propageant et en conservant l’événement en tant que changement d’état dans le récepteur de microservice. Par exemple, si un événement ProductPriceChanged provient du microservice de catalogue, il est géré dans le microservice de panier d’achat et change également d’état dans le microservice de panier récepteur, comme indiqué dans le code suivant.
 
 ```csharp
 namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.EventHandling
@@ -262,107 +278,110 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 }
 ```
 
-Le Gestionnaire d’événements doit vérifier si le produit existe dans toutes les instances du panier d’achat. Il met également à jour du prix de chaque élément de ligne du panier d’achat associées. Enfin, il crée une alerte à afficher à l’utilisateur sur la modification de prix, comme indiqué dans la Figure 8 à 24.
+Le gestionnaire d’événements doit vérifier si le produit se trouve dans une des instances du panier d’achat. Il met également à jour le prix de chaque article associé. Enfin, il crée une alerte pour l’utilisateur concernant le changement de prix, comme indiqué dans la Figure 8-24.
 
 ![](./media/image25.png)
 
-**Figure 8-24**. Affichage d’une variation de l’élément dans un panier, communiquée par les événements d’intégration
+**Figure 8-24**. Affichage du changement de prix d’un article du panier, communiqué par les événements d’intégration
 
-## <a name="idempotency-in-update-message-events"></a>Idempotence dans les événements de message de mise à jour
+## <a name="idempotency-in-update-message-events"></a>Idempotence des événements de mise à jour des messages
 
-Un aspect important d’événements de message de mise à jour est qu’une défaillance dans n’importe quel point dans la communication doit entraîner le message à être réessayée. Sinon, une tâche en arrière-plan peut tenter de publier un événement qui a déjà été publié, création d’une condition de concurrence. Vous devez vous assurer que les mises à jour sont idempotents ou qu’ils fournissent suffisamment d’informations pour vous assurer que vous pouvez détecter un doublon, ignorer et envoyer arrière une seule réponse.
+Un aspect important des événements de mise à jour des messages est qu’une défaillance se produisant à n’importe quel moment de la communication doit entraîner une nouvelle tentative de publication du message. Sinon, une tâche en arrière-plan pourrait tenter de publier un événement qui a déjà été publié, ce qui aurait pour effet de créer une condition de concurrence. Vous devez faire en sorte que les mises à jour soient idempotentes ou qu’elles fournissent suffisamment d’informations pour que vous puissiez détecter le doublon, le supprimer et renvoyer une seule réponse.
 
-Comme indiqué précédemment, idempotence signifie qu’une opération peut être effectuée plusieurs fois sans modifier le résultat. Dans un environnement de messagerie, comme lors de la communication des événements, un événement est idempotente si elle peut être remis plusieurs fois sans modifier le résultat pour le récepteur de microservice. Cela peut être nécessaire en raison de la nature de l’événement lui-même, ou en raison du mode, le système gère l’événement. Message idempotence est importante dans toute application qui utilise la messagerie, pas seulement dans les applications qui implémentent le modèle de bus d’événements.
+Comme indiqué précédemment, l’idempotence signifie qu’une opération peut être effectuée plusieurs fois sans que le résultat soit modifié. Dans un environnement de messagerie, comme lorsque vous communiquez des événements, un événement est idempotent s’il peut être remis plusieurs fois sans modifier le résultat pour le microservice récepteur. Cela peut être nécessaire en raison de la nature de l’événement, ou en raison de la façon dont le système gère l’événement. L’idempotence des messages est importante dans les applications qui utilisent la messagerie, et pas seulement dans les applications qui implémentent le modèle de bus d’événements.
 
-Un exemple d’une opération idempotente est une instruction SQL qui insère des données dans une table uniquement si ces données ne sont pas déjà dans la table. Il n’a pas d’importance combien de fois vous exécutez qu’insérez l’instruction SQL ; le résultat sera le même, la table contiendra ces données. Idempotence, comme cela peut également être nécessaire lorsque vous traitez des messages si les messages pourraient potentiellement être envoyés et par conséquent traité plus d’une fois. Par exemple, si la logique de nouvelle tentative entraîne un émetteur d’envoyer exactement le même message plusieurs fois, vous devez vous assurer qu’il est idempotente.
+Un exemple d’opération idempotente est une instruction SQL qui insère des données dans une table uniquement si ces données ne s’y trouvent pas déjà. Quel que soit le nombre de fois que vous exécutez cette instruction SQL INSERT, le résultat sera le même et la table contiendra les mêmes données. Une telle idempotence peut également être nécessaire lorsque vous traitez des messages, si ces messages sont susceptibles d’être envoyés et donc traités plusieurs fois. Par exemple, si la logique de nouvelle tentative fait qu’un émetteur envoie exactement le même message plusieurs fois, vous devez vous assurer qu’il est idempotent.
 
-Il est possible de messages idempotent de conception. Par exemple, vous pouvez créer un événement indiquant que « le prix du produit la valeur \$25 » au lieu de « ajouter \$5 pour le prix du produit. » Vous pourriez traiter en toute sécurité le premier message n’importe quel nombre de fois et le résultat sera le même. Qui n’est pas vrai pour le second message. Mais même dans le premier cas, vous pouvez traiter le premier événement, car le système également a pu envoyer un événement de modification de prix plus récente et que vous feriez écraser le nouveau prix.
+Il est possible de concevoir des messages idempotents. Par exemple, vous pouvez créer un événement indiquant que « le prix du produit a été fixé à 25 \$ » au lieu de « ajouter 5 \$ au prix du produit ». Vous pouvez traiter le premier message autant de fois que vous voulez, le résultat sera le même. Cependant, ce n’est pas vrai pour le deuxième message. Mais même dans le premier cas, il n’est pas forcément souhaitable de traiter le premier événement, car le système peut avoir envoyé un événement de changement de prix plus récent et vous écraseriez ainsi le nouveau prix.
 
-Un autre exemple est un événement de fin de commande été propagé à plusieurs abonnés. Il est important que les informations de commande être mis à jour une seule fois, dans d’autres systèmes même s’il existe des événements de message en double pour le même événement de commande terminée.
+Un autre exemple peut être un événement de commande terminée propagé vers plusieurs abonnés. Il est important que les informations de commande ne soient mises à jour qu’une seule fois dans les autres systèmes, même s’il existe des événements de message en double pour le même événement de commande terminée.
 
-Il est utile d’avoir un type d’identité par événement afin que vous pouvez créer une logique qui impose que chaque événement est traité qu’une seule fois par le récepteur.
+Il peut être utile d’attribuer une identité à chaque événement, pour que vous puissiez créer une logique selon laquelle un événement ne doit être traité qu’une seule fois pour chaque récepteur.
 
-Un traitement de message est fondamentalement idempotent. Par exemple, si un système génère des images miniatures, il peut concerner pas combien de fois le traitement du message sur la miniature générée ; le résultat est que les miniatures sont générés et ils sont identiques à chaque fois. En revanche, opérations, telles que l’appel d’une passerelle de paiement pour charger une carte de crédit peut-être pas idempotent du tout. Dans ce cas, vous devez vous assurer que le traitement de message plusieurs fois a pour effet que vous attendez.
-
-### <a name="additional-resources"></a>Ressources supplémentaires
-
--   **En respectant le message idempotence** (sous-titre sur cette page) [ *https://msdn.microsoft.com/en-us/library/jj591565.aspx*](https://msdn.microsoft.com/en-us/library/jj591565.aspx)
-
-## <a name="deduplicating-integration-event-messages"></a>Messages d’événements de l’intégration de déduplication
-
-Pour vous assurer que les événements de message sont envoyés et traités une fois par l’abonné à des niveaux différents. Première consiste à utiliser une fonctionnalité de déduplication offerte par l’infrastructure de messagerie que vous utilisez. Une autre consiste à implémenter une logique personnalisée dans votre microservice de destination. Validations au niveau du transport et de niveau de l’application est la meilleure solution.
-
-### <a name="deduplicating-message-events-at-the-eventhandler-level"></a>Événements de message de déduplication au niveau EventHandler
-
-Une pour vous assurer qu’un événement est traité une seule fois par n’importe quel récepteur consiste en implémentant une logique spécifique lors du traitement des événements de message dans les gestionnaires d’événements. Par exemple, qui est l’approche utilisée dans l’application eShopOnContainers, comme vous pouvez le voir dans le [code source](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Controllers/OrdersController.cs) de la classe OrdersController lorsqu’il reçoit une commande CreateOrderCommand. (Dans ce cas, nous utilisons une commande de requête HTTP, pas une commande basée sur message, mais la logique que vous souhaitez apporter une idempotent basée sur message de commande est similaire).
-
-### <a name="deduplicating-messages-when-using-rabbitmq"></a>La déduplication de messages lors de l’utilisation de RabbitMQ
-
-Lorsque des défaillances intermittentes du réseau se produisent, les messages peuvent être dupliquées et le récepteur du message doit être prêt à gérer ces messages en double. Si possible, les récepteurs doivent gérer les messages de manière idempotente, qui est meilleure qu’explicitement de les gérer avec la déduplication.
-
-Conformément à la [RabbitMQ documentation](https://www.rabbitmq.com/reliability.html#consumer), « si un message est remis à un consommateur et puis remis (car il n’a pas accusé avant la suppression de la connexion de consommateur, par exemple), puis RabbitMQ définit l’indicateur de redistribution sur il lorsqu’il est remis à nouveau (s’il faut le même client ou une autre).
-
-Si l’indicateur « redistribution » est défini, le récepteur doit tenir qui compte, car le message peut avoir déjà été traité. Mais qui n’est pas garantie ; le message peut ne jamais avoir atteint le récepteur après qu’il quitté le courtier de messages, peut-être en raison de problèmes de réseau. En revanche, si l’indicateur « redistribué » n’est pas défini, il est garanti que le message n’a pas été envoyé plusieurs fois. Par conséquent, le destinataire doit dédupliquer des messages ou traiter les messages de manière idempotente uniquement si l’indicateur « redistribution » est défini dans le message.
+Le traitement des messages est fondamentalement idempotent. Par exemple, si un système génère des images miniatures, le nombre de traitements du message concernant la génération des miniatures importe peu. Le résultat est que les miniatures sont générées et qu’elles sont identiques à chaque fois. En revanche, les opérations telles que l’appel d’une passerelle de paiement pour prélever un montant sur une carte de crédit peuvent ne pas être idempotentes du tout. Dans ce cas, vous devez être sûr que le fait de traiter un message plusieurs fois aura l’effet que vous attendez.
 
 ### <a name="additional-resources"></a>Ressources supplémentaires
 
--   **Événement piloté par messagerie**
-    [*http://soapatterns.org/design\_modèles/événement\_par\_de messagerie*](http://soapatterns.org/design_patterns/event_driven_messaging)
+-   **Honoring message idempotency** (subhead on this page) [*https://msdn.microsoft.com/library/jj591565.aspx*](https://msdn.microsoft.com/library/jj591565.aspx)
 
--   **Jimmy Bogard. Refactorisation vers résilience : L’évaluation de couplage**
+## <a name="deduplicating-integration-event-messages"></a>Déduplication des messages d’événements d’intégration
+
+Vous pouvez faire en sorte que les événements de message ne soient envoyés et traités qu’une seule une fois par abonné à différents niveaux. L’une des méthodes possibles consiste à utiliser la fonctionnalité de déduplication proposée par l’infrastructure de messagerie que vous utilisez. Une autre consiste à implémenter une logique personnalisée dans votre microservice de destination. La meilleure solution est d’avoir des validations à la fois au niveau du transport et au niveau de l’application.
+
+### <a name="deduplicating-message-events-at-the-eventhandler-level"></a>Déduplication d’événements de message au niveau d’EventHandler
+
+Un moyen de s’assurer qu’un événement n’est traité qu’une seule fois par un récepteur est d’implémenter une logique spécifique lors du traitement des événements de message dans les gestionnaires d’événements. Il s’agit de l’approche utilisée dans l’application eShopOnContainers, comme vous pouvez le voir dans le [code source](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Controllers/OrdersController.cs) de la classe OrdersController, lorsqu’il reçoit une commande CreateOrderCommand. Dans ce cas, nous utilisons une commande de requête HTTP, et non une commande basée sur les messages. Toutefois, la logique dont vous avez besoin pour rendre idempotente une commande basée sur les messages est similaire.
+
+### <a name="deduplicating-messages-when-using-rabbitmq"></a>Déduplication de messages lors de l’utilisation de RabbitMQ
+
+Lorsque des défaillances intermittentes du réseau se produisent, des messages peuvent être dupliqués et le récepteur des messages doit être prêt à gérer cette déduplication. Si possible, les récepteurs doivent gérer les messages de manière idempotente, ce qui est mieux que de les gérer explicitement avec la déduplication.
+
+Conformément à la [documentation RabbitMQ](https://www.rabbitmq.com/reliability.html#consumer), si un message est remis à un utilisateur, puis est replacé dans la file d’attente (parce qu’il n’a pas été accepté avant la perte de la connexion de l’utilisateur, par exemple), RabbitMQ lui associe l’indicateur de redistribution lorsqu’il est remis à nouveau (au même utilisateur ou à un autre).
+
+Si l’indicateur de redistribution est défini, le récepteur doit en tenir compte, car le message peut déjà avoir été traité. Toutefois, cela n’est pas garanti. Le message peut ne jamais avoir atteint le récepteur après avoir quitté le répartiteur de messages, peut-être en raison de problèmes de réseau. En revanche, si l’indicateur de redistribution n’est pas défini, il est garanti que le message n’a pas été envoyé plusieurs fois. Par conséquent, le récepteur doit dédupliquer les messages ou les traiter de manière idempotente uniquement si l’indicateur de redistribution est défini dans le message.
+
+### <a name="additional-resources"></a>Ressources supplémentaires
+
+-   **Forked eShopOnContainers using NServiceBus (Particular Software)**
+    [*http://go.particular.net/eShopOnContainers*](http://go.particular.net/eShopOnContainers)
+
+-   **Event Driven Messaging**
+    [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
+
+-   **Jimmy Bogard. Refactoring Towards Resilience: Evaluating Coupling**
     [*https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/*](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
 
--   **Canal de publication-abonnement**
+-   **Publish-Subscribe channel**
     [*http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
 
--   **Communication entre délimitée contextes**
-    [*https://msdn.microsoft.com/en-us/library/jj591572.aspx*](https://msdn.microsoft.com/en-us/library/jj591572.aspx)
+-   **Communication entre contextes délimités**
+    [*https://msdn.microsoft.com/library/jj591572.aspx*](https://msdn.microsoft.com/library/jj591572.aspx)
 
--   **Cohérence éventuelle**
-    [*https://en.wikipedia.org/wiki/Eventual\_la cohérence*](https://en.wikipedia.org/wiki/Eventual_consistency)
+-   **Eventual consistency**
+    [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
 
--   **Philip Brown. Stratégies d’intégration délimitée contextes**
+-   **Philip Brown. Strategies for Integrating Bounded Contexts**
     [*http://culttt.com/2014/11/26/strategies-integrating-bounded-contexts/*](http://culttt.com/2014/11/26/strategies-integrating-bounded-contexts/)
 
--   **Chris Richardson. Développement de Microservices transactionnelle à l’aide d’agrégats, la source d’événement et CQRS - partie 2**
+-   **Chris Richardson. Developing Transactional Microservices Using Aggregates, Event Sourcing and CQRS - Part 2**
     [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson)
 
--   **Chris Richardson. Approvisionnement du modèle d’événement**
+-   **Chris Richardson. Event Sourcing pattern**
     [*http://microservices.io/patterns/data/event-sourcing.html*](http://microservices.io/patterns/data/event-sourcing.html)
 
--   **Présentation d’approvisionnement de l’événement**
-    [*https://msdn.microsoft.com/en-us/library/jj591559.aspx*](https://msdn.microsoft.com/en-us/library/jj591559.aspx)
+-   **Introducing Event Sourcing**
+    [*https://msdn.microsoft.com/library/jj591559.aspx*](https://msdn.microsoft.com/library/jj591559.aspx)
 
 -   **Base de données du magasin d’événements**. Site officiel.
     [*https://geteventstore.com/*](https://geteventstore.com/)
 
--   **Patrick Nommensen. Gestion des données pour Microservices basé sur l’événement**
-    *<https://dzone.com/articles/event-driven-data-management-for-microservices-1>*
+-   **Patrick Nommensen. Event-Driven Data Management for Microservices**
+    *<https://dzone.com/articles/event-driven-data-management-for-microservices-1> *
 
--   **Le théorème CAP**
-    [*https://en.wikipedia.org/wiki/CAP\_théorème*](https://en.wikipedia.org/wiki/CAP_theorem)
+-   **Théorème CAP**
+    [*https://fr.wikipedia.org/wiki/Théorème\_CAP*](https://en.wikipedia.org/wiki/CAP_theorem)
 
--   **Quel est le théorème de l’extrémité de fin ? ** 
-     [ *https://www.quora.com/What-Is-CAP-Theorem-1*](https://www.quora.com/What-Is-CAP-Theorem-1)
+-   **What is CAP Theorem?**
+    [*https://www.quora.com/What-Is-CAP-Theorem-1*](https://www.quora.com/What-Is-CAP-Theorem-1)
 
--   **Manuel de la cohérence des données**
-    [*https://msdn.microsoft.com/en-us/library/dn589800.aspx*](https://msdn.microsoft.com/en-us/library/dn589800.aspx)
+-   **Data Consistency Primer**
+    [*https://msdn.microsoft.com/library/dn589800.aspx*](https://msdn.microsoft.com/library/dn589800.aspx)
 
--   **Rick Saling. Le théorème CAP : Pourquoi « Tout est différente de « avec le Cloud et Internet**
+-   **Rick Saling. The CAP Theorem: Why “Everything is Different” with the Cloud and Internet**
     [*https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/*](https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/)
 
--   **Eric Brewer. Extrémité de fin douze ans plus tard : comment les « règles » ont été modifiés**
+-   **Eric Brewer. CAP Twelve Years Later: How the "Rules" Have Changed**
     [*https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed*](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed)
 
--   **Intervenant dans des Transactions externes (DTC)** (MSMQ) [ *https://msdn.microsoft.com/en-us/library/ms978430.aspx\#bdadotnetasync2\_topic3c*](https://msdn.microsoft.com/en-us/library/ms978430.aspx%23bdadotnetasync2_topic3c)
+-   **Participating in External (DTC) Transactions** (MSMQ) [*https://msdn.microsoft.com/library/ms978430.aspx\#bdadotnetasync2\_topic3c*](https://msdn.microsoft.com/library/ms978430.aspx%23bdadotnetasync2_topic3c)
 
--   **Azure Service Bus. Messagerie répartie : Détection des doublons**
+-   **Azure Service Bus. Brokered Messaging: Duplicate Detection**
     [*https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25*](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
 
--   **Guide de fiabilité** (documentation RabbitMQ) [ *https://www.rabbitmq.com/reliability.html\#consommateur*](https://www.rabbitmq.com/reliability.html%23consumer)
+-   **Reliability Guide** (RabbitMQ documentation) [*https://www.rabbitmq.com/reliability.html\#consumer*](https://www.rabbitmq.com/reliability.html%23consumer)
 
 
 
 
 >[!div class="step-by-step"]
-[Précédente] (rabbitmq-event-bus-development-test-environment.md) [suivant] (test-aspnet-core-services-web-apps.md)
+[précédent] (rabbitmq-event-bus-development-test-environment.md) [suivant] (test-aspnet-core-services-web-apps.md)

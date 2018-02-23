@@ -1,6 +1,6 @@
 ---
-title: "Souveraineté de données par microservice"
-description: "Architecture de Microservices .NET pour les Applications .NET en conteneur | Souveraineté de données par microservice"
+title: "Souveraineté des données par microservice"
+description: "Architecture en microservices .NET pour les applications .NET en conteneur | Souveraineté des données par microservice"
 keywords: Docker, microservices, ASP.NET, conteneur
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -8,51 +8,54 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: c51daae04215cfa6f5b5b8d2158a8ed1a8949652
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 76265490d7cb0d53686b43b88cb797cf887d578a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="data-sovereignty-per-microservice"></a>Souveraineté de données par microservice
+# <a name="data-sovereignty-per-microservice"></a>Souveraineté des données par microservice
 
-Une règle importante pour l’architecture de microservices est que chaque microservice doit posséder ses données de domaine et de la logique. Tout comme une application complète possède sa logique et les données, par conséquent, doit chaque microservice posséder sa logique et les données sous un cycle de vie autonome, avec un déploiement indépendant par microservice.
+L’architecture en microservices obéit à une règle importante, à savoir que chaque microservice doit posséder les données et la logique de son domaine. Au même titre qu’une application complète, chaque microservice doit posséder sa logique et ses données dans un cycle de vie autonome, avec un déploiement indépendant par microservice.
 
-Cela signifie que le modèle conceptuel du domaine varient entre les sous-systèmes ou microservices. Envisagez d’applications d’entreprise, où la relation (CRM) de gestion des applications client transactionnelles acheter sous-systèmes et client prise en charge de chaque appel sur les attributs d’entité client unique et des données et chacune utilise un autre Limite de contexte (BC).
+Cela signifie que le modèle conceptuel du domaine varie d’un sous-système ou d’un microservice à l’autre. Par exemple, dans le cas des applications d’entreprise, l’application de gestion de la relation client, le sous-système de vente transactionnelle et le sous-système d’assistance à la clientèle appellent chacun les attributs et les données d’une entité client unique, et utilisent chacun un contexte délimité (BC, Bounded Context) différent.
 
-Ce principe est similaire dans [conception domaine (DDD)](https://en.wikipedia.org/wiki/Domain-driven_design), où chaque [limitées de contexte](https://martinfowler.com/bliki/BoundedContext.html) ou sous-système autonome ou un service doit être propriétaire de son modèle de domaine (données plus logique et le comportement). Chaque contexte de délimitée DDD correspond à une entreprise microservice (un ou plusieurs services). (Nous développer sur ce point sur le modèle limitées de contexte dans la section suivante).
+Ce principe est similaire dans la [Conception pilotée par le domaine (DDD, Domain-Driven Design)](https://en.wikipedia.org/wiki/Domain-driven_design), où chaque [contexte délimité](https://martinfowler.com/bliki/BoundedContext.html) ou sous-système ou service autonome doit posséder son modèle de domaine (données, logique et comportement). Chaque contexte délimité DDD correspond à un microservice d’entreprise (un ou plusieurs services). (Nous traiterons plus en détail du modèle Contexte délimité dans la section suivante).
 
-En revanche, l’approche traditionnelle (données monolithique) utilisé dans de nombreuses applications est ayant quelques bases de données ou d’une base de données centralisée. Il s’agit souvent une base de données SQL normalisée qui est utilisé pour l’ensemble de l’application et de ses sous-systèmes internes, comme indiqué dans la Figure 4-7.
+D’un autre côté, l’approche traditionnelle (données monolithiques) utilisée dans de nombreuses applications consiste à avoir une seule base de données centralisée ou seulement quelques-unes. Il s’agit souvent d’une base de données SQL normalisée qui est utilisée pour l’ensemble de l’application et tous ses sous-systèmes internes (voir Figure 4-7).
 
 ![](./media/image7.png)
 
-**Figure 4-7**. Comparaison de données souveraineté : base de données monolithique pour microservices
+**Figure 4-7**. Comparaison de la souveraineté des données : base de données monolithique et microservices
 
-Initialement, l’approche de la base de données centralisée semble plus simple et semble pour permettre la réutilisation des entités dans les différents sous-systèmes pour rendre tous les éléments cohérent. Mais la réalité est que vous vous retrouvez avec grandes tables qui font Office de nombreux différents sous-systèmes et qui incluent des attributs et des colonnes qui ne sont pas nécessaires dans la plupart des cas. C’est comme une tentative d’utilisation de la même carte physique pour une piste courte de randonnée, en prenant un voyage de voiture de la journée et apprendre geography.
+À première vue, l’approche consistant à utiliser une base de données centralisée est plus simple et prend en charge la réutilisation des entités dans différents sous-systèmes à des fins de cohérence. Mais en réalité, vous vous retrouvez avec des tables énormes qui sont au service de différents sous-systèmes et qui incluent des attributs et des colonnes superflus dans la plupart des cas. C’est comme si vous utilisiez la même carte pour faire une petite promenade à pied, faire un trajet en voiture d’une journée et apprendre la géographie.
 
-Une application monolithique généralement une base de données relationnelles présente deux avantages essentiels : [les transactions ACID](https://en.wikipedia.org/wiki/ACID) et le langage SQL, les deux travaille avec toutes les tables et les données relatives à votre application. Cette approche vous permet d’écrire facilement une requête qui combine les données provenant de plusieurs tables.
+Une application monolithique, qui comprend généralement une seule base de données relationnelle, offre deux avantages importants : les [transactions ACID](https://en.wikipedia.org/wiki/ACID) et le langage SQL, ces deux éléments fonctionnant sur toutes les tables et toutes les données relatives à votre application. Cette approche vous permet d’écrire facilement une requête qui combine les données de plusieurs tables.
 
-Cependant, l’accès aux données devient beaucoup plus complexe lorsque vous déplacez vers une architecture microservices. Mais même lorsque les transactions ACID peuvent ou doivent être utilisées dans un contexte de limitées ou de microservice, les données appartenant à chaque microservice sont privées pour ce microservice et sont accessibles via son API microservice. En encapsulant les données garantit que les microservices sont faiblement couplés et peuvent évoluer indépendamment les unes des autres. Si plusieurs services ont été l’accès aux mêmes données, mises à jour de schéma nécessiterait la coordination des mises à jour à tous les services. Cela compromettrait l’autonomie de cycle de vie de microservice. Mais les structures de données distribuées signifient que vous ne pouvez effectuer une seule transaction ACID sur microservices. À son tour, cela signifie que lorsqu’un processus d’entreprise s’étend sur plusieurs microservices, vous devez utiliser la cohérence éventuelle. Cela est beaucoup plus difficile à implémenter que les jointures SQL simples ; de même, de nombreuses autres fonctionnalités de base de données relationnelle ne sont pas disponibles sur plusieurs microservices.
+Cependant, l’accès aux données devient beaucoup plus complexe quand vous passez à une architecture en microservices. Même quand des transactions ACID peuvent ou doivent être utilisées dans un microservice ou un contexte délimité, les données détenues par chaque microservice sont privées et ne sont accessibles que par le biais de l’API du microservice. L’encapsulation des données garantit que les microservices sont faiblement couplés et qu’ils peuvent évoluer indépendamment les uns des autres. Si plusieurs services accèdent aux mêmes données, les mises à jour du schéma nécessitent l’application de mises à jour coordonnées à tous les services, ce qui peut compromettre l’autonomie du cycle de vie des microservices. Mais les structures de données distribuées, de par leur nature, ne vous permettent pas d’effectuer une même transaction ACID sur plusieurs microservices. Vous devez donc recourir à la cohérence à terme quand un processus d’entreprise s’étend sur plusieurs microservices. C’est beaucoup plus difficile à implémenter que des jointures SQL simples. De même, de nombreuses autres fonctionnalités propres aux bases de données relationnelles ne sont pas disponibles à l’échelle de plusieurs microservices.
 
-Même aller microservices différents utilisent souvent différents *types* des bases de données. Magasin d’applications modernes et processus différents types de données et une base de données relationnelle n’est pas toujours le meilleur choix. Pour certains cas d’usage, d’une base de données NoSQL comme Azure DocumentDB ou MongoDB peut disposer d’un modèle de données plus pratique et offrent de meilleures performances et évolutivité à une base de données SQL telle que SQL Server ou de la base de données SQL Azure. Dans d’autres cas, une base de données relationnelle est toujours la meilleure approche. Par conséquent, les applications basées sur des microservices utilisent souvent un mélange de bases de données SQL et NoSQL, qui est parfois appelé le [polyglot persistance](http://martinfowler.com/bliki/PolyglotPersistence.html) approche.
+Pour aller encore plus loin, des microservices différents utilisent souvent différents *genres* de bases de données. Les applications modernes stockent et traitent différents genres de données, et une base de données relationnelle ne constitue pas toujours le meilleur choix. Pour certains cas d’usage, une base de données NoSQL comme Azure DocumentDB ou MongoDB peut offrir un modèle de données plus pratique et un meilleur niveau de performance et de scalabilité qu’une base de données SQL comme SQL Server ou Azure SQL Database. Dans d’autres cas, une base de données relationnelle reste la meilleure approche. Les applications basées sur des microservices utilisent donc souvent un mélange de bases de données SQL et NoSQL, une approche parfois appelée « [persistance polyglotte](http://martinfowler.com/bliki/PolyglotPersistence.html) ».
 
-Une architecture partitionnée, polyglot persistant pour le stockage de données présente de nombreux avantages. Notamment les services faiblement couplés et de meilleures performances, l’évolutivité, les coûts et facilité de gestion. Toutefois, il peut introduire des défis de gestion des données distribuées, comme nous allons expliquer dans «[identification des limites de domaine en mode](#identifying-domain-model-boundaries-for-each-microservice)» plus loin dans ce chapitre.
+Une architecture partitionnée avec persistance polyglotte pour le stockage de données présente de nombreux avantages, notamment des services faiblement couplés et de meilleurs résultats en termes de performances, de scalabilité, de coûts et de facilité de gestion. Toutefois, elle peut introduire des difficultés en matière de gestion des données distribuées, comme nous le verrons dans « [Identification des limites du modèle de domaine](#identifying-domain-model-boundaries-for-each-microservice) » plus loin dans ce chapitre.
 
-## <a name="the-relationship-between-microservices-and-the-bounded-context-pattern"></a>La relation entre microservices et le modèle limitées de contexte
+## <a name="the-relationship-between-microservices-and-the-bounded-context-pattern"></a>Relation entre les microservices et le modèle Contexte délimité
 
-Le concept de microservice dérive le [modèle de contexte délimité (BC)](http://martinfowler.com/bliki/BoundedContext.html) dans [conception domaine (DDD)](https://en.wikipedia.org/wiki/Domain-driven_design). DDD porte sur les modèles volumineux en distinguant plusieurs BCs et soient explicites sur leurs limites. Chaque BC doit avoir son propre modèle et la base de données ; de même, chaque microservice possède ses données associées. En outre, chaque BC généralement possède son propre [langage omniprésent](http://martinfowler.com/bliki/UbiquitousLanguage.html) permettant la communication entre les développeurs de logiciels et des experts du domaine.
+Le concept de microservice dérive du [modèle de Contexte délimité (BC, Bounded Context)](http://martinfowler.com/bliki/BoundedContext.html) présenté dans la [conception pilotée par le domaine (DDD, Domain-Driven Design)](https://en.wikipedia.org/wiki/Domain-driven_design). La conception DDD gère les modèles volumineux en les divisant en plusieurs contextes délimités et en définissant leurs limites de manière explicite. Chaque contexte délimité doit avoir son propre modèle et sa propre base de données. De même, chaque microservice possède ses données connexes. Chaque contexte délimité a aussi généralement son propre [langage omniprésent](http://martinfowler.com/bliki/UbiquitousLanguage.html) pour faciliter la communication entre les développeurs de logiciels et les experts du domaine.
 
-Ces termes (principalement les entités de domaine) dans le langage omniprésent peuvent avoir différents noms dans différents contextes limitées, même lorsque l’autre domaine entités partagent la même identité (autrement dit, l’ID unique est utilisé pour lire l’entité à partir du stockage). Par exemple, dans un contexte délimité de profil utilisateur, l’entité de domaine d’utilisateur susceptibles de partager identité avec l’entité de domaine de l’acheteur dans le contexte délimité tri.
+Les termes du langage omniprésent (principalement des entités de domaine) peuvent avoir des noms différents dans différents contextes délimités, même quand différentes entités de domaine partagent la même identité (c’est-à-dire l’ID unique utilisé pour lire l’entité dans le stockage). Par exemple, dans le contexte délimité d’un profil utilisateur, l’entité de domaine User peut partager l’identité avec l’entité de domaine Buyer dans le contexte délimité de la commande.
 
-Un microservice est par conséquent similaire à un contexte délimité, mais il indique également qu’il est un service distribué. Il est construit comme un processus séparé pour chaque contexte délimité, et il doit utiliser les protocoles distribuées indiquées précédemment, tels que HTTP/HTTPS, WebSockets, ou [AMQP](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol). Le modèle limitées de contexte, toutefois, ne spécifie pas si le contexte délimité est un service distribué ou s’il est simplement une limite logique (par exemple, un sous-système générique) dans une application de déploiement monolithique.
+Un microservice est par conséquent similaire à un contexte délimité, mais il indique également qu’il est un service distribué. Il se présente sous la forme d’un processus séparé pour chaque contexte délimité et doit utiliser les protocoles distribués indiqués précédemment, comme HTTP/HTTPS, WebSockets ou [AMQP](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol). Toutefois, le modèle Contexte délimité ne spécifie pas si le contexte délimité est un service distribué ou s’il s’agit simplement d’une limite logique (comme un sous-système générique) dans une application de déploiement monolithique.
 
-Il est important de souligner que la définition d’un service pour chaque contexte délimité est un bon point de départ. Mais il est inutile limiter votre conception à celui-ci. Parfois, vous devez concevoir un contexte délimité ou business microservice composé de plusieurs services physiques. Mais en fin de compte, les deux modèles : limitées de contexte et microservice — sont étroitement liés.
+Il est important de souligner que la définition d’un service pour chaque contexte délimité est un bon point de départ. Mais ceci ne doit en aucun cas restreindre votre conception. Parfois, vous devez concevoir un contexte délimité ou un microservice d’entreprise composé de plusieurs services physiques. Au bout du compte, les deux modèles (contexte délimité et microservice) sont étroitement liés.
 
-DDD bénéficie des microservices en obtenant les limites réelles sous la forme de microservices distribuée. Mais les idées à ne pas partager le modèle entre microservices sont ce que vous souhaitez également dans un contexte délimité.
+La conception DDD tire parti des microservices en obtenant les limites réelles sous la forme de microservices distribués. Mais le fait de ne pas partager le modèle entre microservices dans un contexte délimité peut aussi être ce que vous recherchez.
 
 ### <a name="additional-resources"></a>Ressources supplémentaires
 
--   **Chris Richardson. Modèle : La base de données par le service**
+-   **Chris Richardson. Pattern: Database per service**
     [*http://microservices.io/patterns/data/database-per-service.html*](http://microservices.io/patterns/data/database-per-service.html)
 
 -   **Martin Fowler. BoundedContext**
@@ -61,9 +64,9 @@ DDD bénéficie des microservices en obtenant les limites réelles sous la forme
 -   **Martin Fowler. PolyglotPersistence**
     [*http://martinfowler.com/bliki/PolyglotPersistence.html*](http://martinfowler.com/bliki/PolyglotPersistence.html)
 
--   **Blog d’Alberto Brandolini. Stratégique Domain Driven Design avec le mappage de contexte**
+-   **Alberto Brandolini. Strategic Domain Driven Design with Context Mapping**
     [*https://www.infoq.com/articles/ddd-contextmapping*](https://www.infoq.com/articles/ddd-contextmapping)
 
 
 >[!div class="step-by-step"]
-[Précédente] (microservices-architecture.md) [suivant] (logique-et-physique-architecture.md)
+[Précédent] (microservices-architecture.md) [Suivant] (logical-versus-physical-architecture.md)

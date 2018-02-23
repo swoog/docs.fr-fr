@@ -1,30 +1,35 @@
 ---
-title: "Implémentation d’un bus d’événements avec RabbitMQ pour l’environnement de développement ou de test"
-description: "Architecture de Microservices .NET pour les Applications .NET en conteneur | Implémentation d’un bus d’événements avec RabbitMQ pour l’environnement de développement ou de test"
+title: "Implémentation d’un bus d’événements avec RabbitMQ pour un environnement de développement ou de test"
+description: "Architecture des microservices .NET pour les applications .NET en conteneur | Implémentation d’un bus d’événements avec RabbitMQ pour un environnement de développement ou de test"
 keywords: Docker, microservices, ASP.NET, conteneur
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 12/11/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: f58d355b6f5fd31a21791d3b072c77f70f90c387
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3505cb993c736165d4aff4ce8fad38cfa14ed417
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>Implémentation d’un bus d’événements avec RabbitMQ pour l’environnement de développement ou de test
+# <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>Implémentation d’un bus d’événements avec RabbitMQ pour un environnement de développement ou de test
 
-Nous devons commencer en disant que si vous créez votre bus d’événements personnalisés en fonction de RabbitMQ en cours d’exécution dans un conteneur, comme le fait de l’application eShopOnContainers, il doit être utilisé uniquement pour vos environnements de test et de développement. Vous ne devez pas l’utiliser pour votre environnement de production, sauf si vous l’avez créée dans le cadre d’un bus de service de l’environnement de production. Un bus d’événements personnalisé simple peuvent être absentes de nombreuses fonctionnalités critiques opérationnelle qui dispose d’un bus de service commercial.
+Avant tout, nous tenons à préciser la chose suivante : si vous créez votre bus d’événements personnalisé en le basant sur l’exécution de RabbitMQ dans un conteneur, comme le fait l’application eShopOnContainers, utilisez ce bus d’événements personnalisé uniquement pour vos environnements de développement et de test. Ne l’utilisez pas pour votre environnement de production, sauf si vous le générez dans le cadre d’un Service Bus prêt pour la production. Dans un bus d’événements personnalisé simplifié, il manque de nombreuses fonctionnalités critiques prêtes pour la production, contrairement à un Service Bus commercial.
 
-L’implémentation personnalisée d’eShopOnContainers d’un bus d’événements est essentiellement une bibliothèque à l’aide de l’API RabbitMQ. L’implémentation permet de microservices s’abonner à des événements, de publier des événements et de recevoir des événements, comme indiqué dans la Figure 8-21.
+L’une des implémentations personnalisées du bus d’événements dans eShopOnContainers repose essentiellement sur une bibliothèque qui utilise l’API RabbitMQ (il existe une autre implémentation basée sur Azure Service Bus). 
+
+L’implémentation du bus d’événements avec RabbitMQ permet aux microservices de s’abonner aux événements, aux événements de publication et aux événements de réception, comme le montre la figure 8-21.
 
 ![](./media/image22.png)
 
-**Figure 8-21.** Implémentation de RabbitMQ de bus d’événements
+**Figure 8-21.** Implémentation RabbitMQ d’un bus d’événements
 
-Dans le code, la classe EventBusRabbitMQ implémente l’interface IEventBus générique. Cela est basée sur l’Injection de dépendance afin que vous pouvez permuter à partir de cette version de développement et de test vers une version de production.
+Dans le code, la classe EventBusRabbitMQ implémente l’interface IEventBus générique. Cette opération est basée sur une injection de dépendances pour vous permettre de passer de cette version de développement/test à une version de production.
 
 ```csharp
 public class EventBusRabbitMQ : IEventBus, IDisposable
@@ -33,11 +38,11 @@ public class EventBusRabbitMQ : IEventBus, IDisposable
     //...
 ```
 
-L’implémentation de RabbitMQ d’un bus d’événements de développement/test exemple est un code réutilisable. Il doit gérer la connexion au serveur RabbitMQ et fournissez du code pour la publication d’un événement de message dans les files d’attente. Il doit également implémenter un dictionnaire de collections à l’intégration de gestionnaires d’événements pour chaque type d’événement ; ces types d’événements peuvent avoir une instanciation différente et des abonnements différents pour chaque récepteur microservice, comme indiqué dans la Figure 8-21.
+L’implémentation RabbitMQ d’un exemple de bus d’événements de développement/de test correspond à du code standard. Elle doit prendre en charge la connexion au serveur RabbitMQ et fournir le code nécessaire à la publication d’un événement de message sur les files d’attente. Elle doit également implémenter un dictionnaire de collections de gestionnaires d’événements d’intégration pour chaque type d’événement ; ces types d’événement peuvent avoir une instanciation différente et des abonnements distincts pour chaque microservice de réception, comme le montre la figure 8-21.
 
-## <a name="implementing-a-simple-publish-method-with-rabbitmq"></a>Implémentation d’un simple publier avec RabbitMQ (méthode)
+## <a name="implementing-a-simple-publish-method-with-rabbitmq"></a>Implémentation d’une méthode de publication simplifiée avec RabbitMQ
 
-Le code suivant fait partie de l’implémentation de bus d’événements eShopOnContainers pour RabbitMQ, généralement, vous n’avez pas besoin pour le code, sauf si vous apportez des améliorations. Le code obtient une connexion et un canal RabbitMQ, crée un message, puis publie le message dans la file d’attente.
+Le code suivant est une implémentation simplifiée du bus d’événements pour RabbitMQ. Cette implémentation est améliorée dans le [code réel](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs) d’eShopOnContainers. En règle générale, vous n’avez pas besoin de toucher au code, sauf pour apporter des améliorations. Le code obtient une connexion et un canal vers RabbitMQ, crée un message, puis publie ce dernier sur la file d’attente.
 
 ```csharp
 public class EventBusRabbitMQ : IEventBus, IDisposable
@@ -65,45 +70,51 @@ public class EventBusRabbitMQ : IEventBus, IDisposable
 }
 ```
 
-Le [code réel](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs) de la publier méthode dans l’application eShopOnContainers est améliorée en utilisant un [Polly](https://github.com/App-vNext/Polly) réessayer la stratégie, qui tente de la tâche d’un certain nombre de fois au cas où le conteneur RabbitMQ est n’est pas prêt. Cela peut se produire lorsque de composer docker démarre les conteneurs ; par exemple, le conteneur RabbitMQ peut commencer plus lentement que les autres conteneurs.
+Le [code réel](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs) de la méthode Publish de l’application eShopOnContainers est amélioré à l’aide d’une stratégie de nouvelles tentatives d’[interrogation](https://github.com/App-vNext/Polly). Cette stratégie consiste à réessayer d’exécuter la tâche un certain nombre de fois, au cas où le conteneur RabbitMQ ne serait pas prêt. Cela peut se produire quand docker-compose démarre les conteneurs. Par exemple, le conteneur RabbitMQ peut démarrer plus lentement que les autres conteneurs.
 
-Comme mentionné précédemment, il existe plusieurs configurations possibles dans RabbitMQ, donc ce code doit être utilisé uniquement pour les environnements de développement et de test.
+Comme indiqué précédemment, il existe de nombreuses configurations possibles dans RabbitMQ. Ce code doit donc être utilisé uniquement pour les environnements de développement/test.
 
-## <a name="implementing-the-subscription-code-with-the-rabbitmq-api"></a>Implémentation du code de l’abonnement avec l’API RabbitMQ
+## <a name="implementing-the-subscription-code-with-the-rabbitmq-api"></a>Implémentation du code d’abonnement avec l’API RabbitMQ
 
-Comme avec le code de la publication, le code suivant est une simplification de la partie de l’implémentation de bus d’événements pour RabbitMQ. Là encore, généralement inutile pour le modifier, sauf si vous la réduction.
+Comme pour le code de publication, le code suivant est une simplification d’une partie de l’implémentation du bus d’événements pour RabbitMQ. Là encore, vous n’avez généralement pas besoin de le changer, sauf pour l’améliorer.
 
 ```csharp
 public class EventBusRabbitMQ : IEventBus, IDisposable
 {
     // Member objects and other methods ...
     // ...
-    public void Subscribe<T>(IIntegrationEventHandler<T> handler)
+
+    public void Subscribe<T, TH>()
         where T : IntegrationEvent
+        where TH : IIntegrationEventHandler<T>
     {
-        var eventName = typeof(T).Name;
-        if (_handlers.ContainsKey(eventName))
+        var eventName = _subsManager.GetEventKey<T>();
+        
+        var containsKey = _subsManager.HasSubscriptionsForEvent(eventName);
+        if (!containsKey)
         {
-            _handlers[eventName].Add(handler);
+            if (!_persistentConnection.IsConnected)
+            {
+                _persistentConnection.TryConnect();
+            }
+
+            using (var channel = _persistentConnection.CreateModel())
+            {
+                channel.QueueBind(queue: _queueName,
+                                    exchange: BROKER_NAME,
+                                    routingKey: eventName);
+            }
         }
-        else
-        {
-            var channel = GetChannel();
-            channel.QueueBind(queue: _queueName,
-                exchange: _brokerName,
-                routingKey: eventName);
-            _handlers.Add(eventName, new List<IIntegrationEventHandler>());
-            _handlers[eventName].Add(handler);
-            _eventTypes.Add(typeof(T));
-        }
+
+        _subsManager.AddSubscription<T, TH>();
     }
 }
 ```
 
-Chaque type d’événement a un canal associé pour obtenir les événements à partir de RabbitMQ. Vous pouvez ensuite configurer qu’un grand nombre de gestionnaires d’événements par type de canal et les événements en fonction des besoins.
+Chaque type d’événement a un canal associé qui permet d’obtenir les événements à partir de RabbitMQ. Vous pouvez avoir autant de gestionnaires d’événements par canal et par type d’événement que nécessaire.
 
-La méthode Subscribe accepte un objet IIntegrationEventHandler, ce qui ressemble à une méthode de rappel dans le microservice actuel, ainsi que son objet IntegrationEvent connexe. Le code ajoute ensuite ce gestionnaire d’événements à la liste des gestionnaires d’événements qui peut avoir des chaque type d’événement intégration par le client microservice. Si le code client n’est pas déjà abonné à l’événement, le code crée un canal pour le type d’événement afin qu’il peut recevoir des événements dans un style push à partir de RabbitMQ lorsque cet événement est publié à partir de n’importe quel autre service.
+La méthode Subscribe accepte un objet IIntegrationEventHandler, qui est semblable à une méthode de rappel dans le microservice actuel, en plus de son objet IntegrationEvent associé. Le code ajoute ensuite ce gestionnaire d’événements à la liste des gestionnaires d’événements que chaque type d’événement d’intégration peut avoir par microservice client. Si le code du client n’est pas déjà abonné à l’événement, il crée un canal pour le type d’événement afin de permettre la réception d’événements par envoi (push) à partir de RabbitMQ, quand l’événement concerné est publié depuis un autre service.
 
 
 >[!div class="step-by-step"]
-[Précédente] (intégration-événements-base-microservice-communications.md) [suivant] (events.md s’abonner)
+[Précédent] (integration-event-based-microservice-communications.md) [Suivant] (subscribe-events.md)

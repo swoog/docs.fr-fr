@@ -1,36 +1,39 @@
 ---
-title: "Implémentation du modèle de disjoncteur"
-description: "Architecture de Microservices .NET pour les Applications .NET en conteneur | Implémentation du modèle de disjoncteur"
+title: "Implémentation du modèle Disjoncteur"
+description: "Architecture des microservices .NET pour les applications .NET en conteneur | Implémentation du modèle Disjoncteur"
 keywords: Docker, microservices, ASP.NET, conteneur
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 11/12/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 2a629e25a7565aaba156f68cf06d9a24b6c2b8b0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 5d7db6899068f84f9165022cfbf17767a75e7db9
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="implementing-the-circuit-breaker-pattern"></a>Implémentation du modèle de disjoncteur
+# <a name="implementing-the-circuit-breaker-pattern"></a>Implémentation du modèle Disjoncteur
 
-Comme indiqué précédemment, vous devez gérer les erreurs qui peuvent prendre un certain délai de récupération, comme peut se produire quand vous essayez de vous connecter à un service distant ou une ressource. Gérer ce type d’erreur peut améliorer la stabilité et la résilience d’une application.
+Comme indiqué précédemment, vous devez gérer des erreurs dont le temps de récupération peut être variable, comme ça peut être le cas quand vous essayez de vous connecter à une ressource ou à un service distant. La gestion de ce type d’erreur peut améliorer la stabilité et la résilience d’une application.
 
-Dans un environnement distribué, les appels à des ressources distantes et des services peut échouer en raison d’erreurs temporaires, tels que les connexions réseau lentes et délais d’attente, ou si des ressources sont lentes ou sont temporairement indisponibles. Ces erreurs généralement corrigent d’eux-mêmes après une courte période et une application robuste de cloud doit être préparée à les gérer à l’aide d’une stratégie, comme le modèle de nouvelle tentative.
+Dans un environnement distribué, les appels à des ressources et services distants peuvent échouer en raison d’erreurs temporaires, telles que des connexions réseau lentes, l’expiration de délais d’attente, ou si des ressources sont lentes ou temporairement indisponibles. En général, ces erreurs se corrigent d’elles-mêmes après un bref laps de temps, et une application cloud fiable doit être prête à les gérer à l’aide d’une stratégie comme le modèle Nouvelle tentative.
 
-Toutefois, il peut également être situations où les erreurs sont en raison d’événements imprévus qui peuvent prendre beaucoup plus de temps à corriger. Ces erreurs peuvent s’échelonner de gravité d’une perte partielle de connectivité à la défaillance complète d’un service. Dans ces situations, il peut être inutile de l’application en permanence retenter une opération qui est vouée à l’échec. Au lieu de cela, l’application doit être codée pour accepter que l’opération a échoué et de gérer l’échec en conséquence.
+Toutefois, dans certaines situations, les erreurs sont dues à des événements imprévus dont la correction peut prendre beaucoup plus de temps. La gravité de ces erreurs peut aller d’une perte partielle de connectivité à la défaillance complète d’un service. Dans ces cas de figure, il peut être inutile qu’une application effectue de nouvelles tentatives dont la réussite sera peu probable. L’application doit plutôt être codée pour reconnaître que l’opération a échoué et gérer l’échec en conséquence.
 
-Modèle de disjoncteur a un objectif différent que le modèle de nouvelle tentative. Le modèle de nouvelle tentative permet à une application retenter une opération dans l’attente que l’opération de réussir. Modèle de disjoncteur empêche une application d’effectuer une opération qui risque d’échouer. Une application peut combiner ces deux modèles à l’aide du modèle de nouvelle tentative pour appeler une opération via un disjoncteur. Toutefois, la logique de nouvelle tentative doit être sensible à toute exception retournée par le disjoncteur, et elle doit abandonner des nouvelles tentatives si le disjoncteur indique qu’une erreur n’est pas temporaire.
+L’objectif du modèle Disjoncteur est différent de celui du modèle Nouvelle tentative. Le modèle Nouvelle tentative permet à une application de retenter une opération en partant du principe qu’elle finira par réussir. Le modèle Disjoncteur empêche une application d’effectuer une opération qui échouera probablement. Une application peut combiner ces deux modèles en utilisant le modèle Nouvelle tentative pour appeler une opération par le biais d’un disjoncteur. Toutefois, la logique de nouvelle tentative doit être sensible aux exceptions retournées par le disjoncteur, et abandonner les nouvelles tentatives si le disjoncteur indique qu’une erreur n’est pas temporaire.
 
-## <a name="implementing-a-circuit-breaker-pattern-with-polly"></a>Implémentation d’un modèle de disjoncteur avec Polly
+## <a name="implementing-a-circuit-breaker-pattern-with-polly"></a>Implémentation d’un modèle Disjoncteur avec Polly
 
-Comme lors de l’implémentation de nouvelles tentatives, l’approche recommandée pour les disjoncteurs consiste à tirer parti d’éprouvées bibliothèques .NET comme Polly.
+Comme lors de l’implémentation de nouvelles tentatives, l’approche recommandée pour les disjoncteurs consiste à tirer parti de bibliothèques .NET éprouvées comme Polly.
 
-L’application eShopOnContainers utilise la stratégie de disjoncteur Polly lors de l’implémentation de tentatives HTTP. En fait, l’application applique les deux stratégies à la classe d’utilitaire ResilientHttpClient. Chaque fois que vous utilisez un objet de type ResilientHttpClient pour les requêtes HTTP (d’eShopOnContainers), vous appliquerez ces deux stratégies, mais vous pouvez ajouter des stratégies supplémentaires, trop.
+L’application eShopOnContainers utilise la stratégie Disjoncteur de Polly lors de l’implémentation de nouvelles tentatives HTTP. En fait, l’application applique les deux stratégies à la classe d’utilitaire ResilientHttpClient. Chaque fois que vous utilisez un objet de type ResilientHttpClient pour des requêtes HTTP (à partir d’eShopOnContainers), vous appliquez ces deux stratégies, mais vous pouvez également ajouter des stratégies supplémentaires.
 
-La seule différence ici au code utilisé pour les tentatives d’appel HTTP est le code où vous ajoutez la stratégie de disjoncteur à la liste des stratégies à utiliser, comme indiqué à la fin du code suivant :
+Ici, le seul ajout au code utilisé pour les nouvelles tentatives d’appel HTTP est le code où vous ajoutez la stratégie Disjoncteur à la liste des stratégies à utiliser, comme indiqué à la fin du code suivant :
 
 ```csharp
 public ResilientHttpClient CreateResilientHttpClient()
@@ -75,15 +78,15 @@ private Policy[] CreatePolicies()
 }
 ```
 
-Le code ajoute une stratégie pour le wrapper HTTP. Que stratégie définit un disjoncteur qui s’ouvre lorsque le code détecte le nombre spécifié d’exceptions consécutifs (exceptions dans une ligne), en tant que passé dans le paramètre exceptionsAllowedBeforeBreaking (5 dans ce cas). Lorsque le circuit est ouvert, les requêtes HTTP ne fonctionnent pas, mais une exception est levée.
+Le code ajoute une stratégie au wrapper HTTP. Cette stratégie définit un disjoncteur qui s’ouvre quand le code détecte le nombre spécifié d’exceptions consécutives (exceptions dans une ligne), tel qu’il a été passé dans le paramètre exceptionsAllowedBeforeBreaking (5 dans le cas présent). Quand le circuit est ouvert, les requêtes HTTP ne fonctionnent pas, mais une exception est levée.
 
-Les disjoncteurs doit également être utilisées pour rediriger les demandes vers une infrastructure de secours si vous pouvez rencontrer des problèmes dans une ressource particulière qui est déployé dans un environnement autre que l’application cliente ou d’un service qui effectue l’appel HTTP. De cette façon, s’il existe une panne du centre de données qui a un impact sur uniquement votre microservices principal, mais pas les applications clientes, les applications clientes peuvent rediriger vers les services de secours. Polly projette une nouvelle stratégie pour automatiser ce processus [stratégie de basculement](https://github.com/App-vNext/Polly/wiki/Polly-Roadmap#failover-policy) scénario.
+Les disjoncteurs doivent également être utilisés pour rediriger les requêtes vers une infrastructure de secours si vous rencontrez des problèmes dans une ressource particulière déployée dans un environnement autre que l’application cliente ou le service qui effectue l’appel HTTP. De cette façon, si le centre de données subit une panne qui a un impact uniquement sur vos microservices backend, mais pas sur vos applications clientes, ces dernières peuvent effectuer une redirection vers les services de secours. Polly planifie une nouvelle stratégie pour automatiser ce scénario de [stratégie de basculement](https://github.com/App-vNext/Polly/wiki/Polly-Roadmap#failover-policy).
 
-Bien entendu, toutes ces fonctionnalités sont pour les cas où vous gérez le basculement depuis le code .NET, au lieu qu’il est géré automatiquement par Azure, avec la transparence de l’emplacement.
+Bien entendu, toutes ces fonctionnalités sont appropriées pour les cas où vous gérez le basculement à partir du code .NET, au lieu qu’il soit géré automatiquement par Azure, avec la transparence des emplacements.
 
-## <a name="using-the-resilienthttpclient-utility-class-from-eshoponcontainers"></a>À l’aide de la classe utilitaire ResilientHttpClient eShopOnContainers
+## <a name="using-the-resilienthttpclient-utility-class-from-eshoponcontainers"></a>Utilisation de la classe utilitaire ResilientHttpClient d’eShopOnContainers
 
-Vous utilisez la classe d’utilitaire ResilientHttpClient de manière similaire à l’utilisation de la classe .NET HttpClient. Dans l’exemple suivant à partir de l’application de web MVC eShopOnContainers (la classe de l’agent OrderingService utilisée par OrderController), l’objet ResilientHttpClient est injecté par le paramètre httpClient du constructeur. Puis, l’objet est utilisé pour effectuer des requêtes HTTP.
+Vous utilisez la classe utilitaire ResilientHttpClient de la même manière que vous utilisez la classe .NET HttpClient. Dans l’exemple suivant de l’application web MVC eShopOnContainers (la classe de l’agent OrderingService utilisée par OrderController), l’objet ResilientHttpClient est injecté par le biais du paramètre httpClient du constructeur. L’objet est ensuite utilisé pour exécuter des requêtes HTTP.
 
 ```csharp
 public class OrderingService : IOrderingService
@@ -134,90 +137,92 @@ public class OrderingService : IOrderingService
 }
 ```
 
-Chaque fois que le \_apiClient membre objet est utilisé, il utilise en interne la classe wrapper avec Polly policiesؙ : la stratégie de nouvelle tentative, la stratégie de disjoncteur et toute autre stratégie que vous pouvez appliquer à partir de la collection de stratégies Polly.
+Chaque fois que l’objet membre \_apiClient est utilisé, il utilise en interne la classe wrapper avec des stratégies de Polly (la stratégie Nouvelle tentative, la stratégie Disjoncteur et toute autre stratégie que vous voulez appliquer à partir de la collection de stratégies de Polly).
 
-## <a name="testing-retries-in-eshoponcontainers"></a>Tester les nouvelles tentatives dans eShopOnContainers
+## <a name="testing-retries-in-eshoponcontainers"></a>Test de nouvelles tentatives dans eShopOnContainers
 
-Chaque fois que vous démarrez la solution eShopOnContainers dans un hôte Docker, il doit démarrer plusieurs conteneurs. Certains des conteneurs sont plus lents à démarrer et initialiser, comme le conteneur de SQL Server. Cela est particulièrement vrai la première fois que vous déployez l’application eShopOnContainers dans Docker, car il a besoin installer les images et la base de données. Le fait que certains conteneurs démarrent plus lentement que d’autres utilisateurs peuvent entraîner le reste des services à initialement lever des exceptions HTTP, même si vous définissez des dépendances entre les conteneurs au composer docker niveau, comme expliqué dans les sections précédentes. Ceux docker-composent des dépendances entre les conteneurs sont uniquement au niveau du processus. Le processus de point d’entrée du conteneur peut être démarré, mais SQL Server n’est peut-être pas prêt pour les requêtes. Le résultat peut être en cascade d’erreurs, et l’application peut obtenir une exception lorsque vous tentez d’utiliser ce conteneur particulier.
+Chaque fois que vous démarrez la solution eShopOnContainers sur un hôte Docker, celle-ci doit démarrer plusieurs conteneurs. Certains des conteneurs sont plus lents à démarrer et à initialiser, comme le conteneur SQL Server. Cela est particulièrement vrai la première fois que vous déployez l’application eShopOnContainers dans Docker, car elle doit configurer les images et la base de données. Le fait que certains conteneurs démarrent plus lentement que d’autres peut entraîner la levée d’exceptions HTTP par le reste des services, même si vous définissez des dépendances entre les conteneurs au niveau de Docker Compose, comme expliqué dans les sections précédentes. Ces dépendances Docker Compose entre les conteneurs sont uniquement au niveau processus. Il est possible que le processus de point d’entrée du conteneur soit démarré alors que SQL Server n’est pas prêt pour les requêtes. Cela peut avoir pour conséquence une cascade d’erreurs, et l’application peut recevoir une exception lors d’une tentative d’utilisation de ce conteneur particulier.
 
-Vous pouvez également voir ce type d’erreur au démarrage lorsque le déploie de l’application dans le cloud. Dans ce cas, orchestrators peut déplacer conteneurs d’un nœud ou une machine virtuelle à un autre (qui est, à partir de nouvelles instances) lors de l’équilibrage de charge le nombre de conteneurs entre les nœuds du cluster.
+Vous pouvez également voir ce type d’erreur au démarrage pendant le déploiement de l’application dans le cloud. Dans ce cas, il est possible que les orchestrateurs déplacent des conteneurs d’un nœud ou d’une machine virtuelle vers un autre nœud ou une autre machine virtuelle (autrement dit, de démarrer de nouvelles instances) lors de l’équilibrage du nombre de conteneurs entre les nœuds du cluster.
 
-L’eShopOnContainers résout ce problème consiste à l’aide du modèle de nouvelle tentative que nous indiqués plus haut. Il est également pourquoi, lors du démarrage de la solution, vous pouvez obtenir les traces de journal ou d’avertissements à ce qui suit :
+eShopOnContainers résout ce problème en utilisant le modèle Nouvelle tentative illustré précédemment. C’est également pourquoi, lors du démarrage de la solution, vous pouvez obtenir des traces de journal ou des avertissements semblables à ce qui suit :
 
-> «**Nouvelle tentative 1 implémentée avec RetryPolicy de Polly**, en raison : System.Net.Http.HttpRequestException : une erreur s’est produite lors de l’envoi de la demande. ---&gt;System.Net.Http.CurlException : Impossible de se connecter au serveur\\n en System.Net.Http.CurlHandler.ThrowIfCURLEError (erreur CURLcode)\\n en \[... \].
+> « **Retry 1 implemented with Polly's RetryPolicy**, due to: System.Net.Http.HttpRequestException: An error occurred while sending the request. ---&gt; System.Net.Http.CurlException: Couldn't connect to server\\n at System.Net.Http.CurlHandler.ThrowIfCURLEError(CURLcode error)\\n at \[...\] ».
 
-## <a name="testing-the-circuit-breaker-in-eshoponcontainers"></a>Tester le disjoncteur dans eShopOnContainers
+## <a name="testing-the-circuit-breaker-in-eshoponcontainers"></a>Test du disjoncteur dans eShopOnContainers
 
-Il existe plusieurs façons, vous pouvez ouvrir le circuit et testez-le avec eShopOnContainers.
+Il existe plusieurs façons d’ouvrir le circuit et de le tester avec eShopOnContainers.
 
-Une option consiste à réduire le nombre autorisé de tentatives de 1 dans la stratégie de disjoncteur et de redéployer la solution dans son intégralité dans Docker. Avec une nouvelle tentative unique, il est également possible qu’une requête HTTP échoue pendant le déploiement, le disjoncteur s’ouvre et vous obtenez une erreur.
+L’une des options consiste à réduire le nombre de tentatives autorisées à 1 dans la stratégie Disjoncteur et à redéployer l’ensemble de la solution dans Docker. Avec une seule nouvelle tentative, il y a de fortes chances qu’une requête HTTP échoue pendant le déploiement, que le disjoncteur s’ouvre et que vous obteniez une erreur.
 
-Une autre option consiste à utiliser l’intergiciel (middleware) personnalisé qui est implémenté dans l’ordre de tri microservice. Lorsque cet intergiciel (middleware) est activée, elle intercepte toutes les demandes HTTP et renvoie le code d’état 500. Vous pouvez activer l’intergiciel (middleware) en effectuant une requête GET à l’échec d’URI, comme suit :
+Une autre option est d’utiliser l’intergiciel (middleware) personnalisé qui est implémenté dans le microservice `Basket`. Quand ce middleware est activé, il intercepte toutes les requêtes HTTP et retourne le code d’état 500. Vous pouvez activer le middleware en effectuant une requête GET à l’URI qui a échoué, comme suit :
 
--   OBTENIR/défaillant
+-   GET /failing
 
-Cette requête retourne l’état actuel de l’intergiciel (middleware). Si l’intergiciel (middleware) est activé, la requête retourne de code d’état 500. Si l’intergiciel (middleware) est désactivé, il n’existe aucune réponse.
+Cette requête retourne l’état actuel du middleware. Si le middleware est activé, la requête retourne le code d’état 500. Si le middleware est désactivé, il n’y a pas de réponse.
 
--   OBTENIR/défaillant ? activer
+-   GET /failing?enable
 
-Cette requête permet de l’intergiciel (middleware).
+Cette requête active le middleware.
 
--   OBTENIR/défaillant ? désactiver
+-   GET /failing?disable
 
-Cette demande désactive l’intergiciel (middleware).
+Cette requête désactive le middleware.
 
-Par exemple, une fois que l’application est en cours d’exécution, vous pouvez activer l’intergiciel (middleware) en faisant une demande à l’aide de l’URI suivant dans n’importe quel navigateur. Notez que le tri microservice utilise le port 5102.
+Par exemple, une fois que l’application est en cours d’exécution, vous pouvez activer le middleware en créant une requête à l’aide de l’URI suivant dans n’importe quel navigateur. Notez que le microservice de commandes utilise le port 5103.
 
-http://localhost:5102 / défaillant ? activer
+http://localhost:5103/failing?enable
 
-Vous pouvez vérifier puis de l’état à l’aide de l’URI [http://localhost:5102 / défaillant](http://localhost:5100/failing), comme illustré dans la Figure 10-4.
+Vous pouvez alors vérifier l’état à l’aide de l’URI [http://localhost:5103/failing](http://localhost:5103/failing), comme illustré dans la figure 10-4.
 
 ![](./media/image4.png)
 
-**Figure 10-4**. Simulation d’un échec avec l’intergiciel (middleware) ASP.NET
+**Figure 10-4**. Vérification de l’état du middleware ASP.NET (désactivé dans le cas présent) « Failing » (En échec). 
 
-À ce stade, le classement répond de microservice avec le code d’état 500 chaque fois que vous appelez l’appeler.
+À ce stade, le microservice Basket répond avec le code d’état 500 chaque fois que vous l’appelez.
 
-Une fois que l’intergiciel (middleware) est en cours d’exécution, vous pouvez essayer d’effectuer une commande à partir de l’application web MVC. Étant donné que les requêtes échoue, le circuit s’ouvre.
+Une fois que le middleware est en cours d’exécution, vous pouvez essayer d’effectuer une commande à partir de l’application web MVC. Étant donné que les requêtes échouent, le circuit s’ouvre.
 
-Dans l’exemple suivant, vous pouvez voir que l’application web MVC a un bloc catch bloquer dans la logique de passer une commande. Si le code intercepte une exception de circuit ouvert, il affiche l’utilisateur un message convivial les invitant à attendre.
+Dans l’exemple suivant, vous pouvez voir que l’application web MVC a un bloc catch dans la logique du processus consistant à passer une commande. Si le code intercepte une exception de circuit ouvert, il affiche à l’utilisateur un message convivial l’invitant à patienter.
 
 ```csharp
-[HttpPost]
-public async Task<IActionResult> Create(Order model, string action)
+public class CartController : Controller
 {
-    try
+    //…
+    public async Task<IActionResult> Index()
     {
-        if (ModelState.IsValid)
+        try
         {
-            var user = _appUserParser.Parse(HttpContext.User);
-            await _orderSvc.CreateOrder(model);
-            //Redirect to historic list.
-            return RedirectToAction("Index");
+            //… Other code
         }
-    }
-    catch(BrokenCircuitException ex)
+        catch (BrokenCircuitException)
+        {
+            // Catches error when Basket.api is in circuit-opened mode                 
+            HandleBrokenCircuitException();
+        }
+        return View();
+    }       
+
+    private void HandleBrokenCircuitException()
     {
-        ModelState.AddModelError("Error",
-            "It was not possible to create a new order, please try later on");
+        TempData["BasketInoperativeMsg"] = "Basket Service is inoperative, please try later on. (Business message due to Circuit-Breaker)";
     }
-    return View(model);
 }
 ```
 
-Voici un résumé. La stratégie de nouvelle tentative tente plusieurs fois pour créer la requête HTTP et obtient les erreurs HTTP. Lorsque le nombre de tentatives atteint le nombre maximal défini pour la stratégie de disjoncteur (dans ce cas, 5), l’application lève une BrokenCircuitException. Le résultat est un message convivial, comme indiqué dans la Figure 10-5.
+Voici un résumé. La stratégie Nouvelle tentative tente plusieurs fois d’exécuter la requête HTTP et obtient des erreurs HTTP. Quand le nombre maximal de tentatives pour la stratégie Disjoncteur est atteint (dans le cas présent, 5), l’application lève un BrokenCircuitException. Le résultat est un message convivial, comme illustré dans la figure 10-5.
 
 ![](./media/image5.png)
 
-**Figure 10-5**. Disjoncteur renvoyant une erreur à l’interface utilisateur
+**Figure 10-5**. Disjoncteur retournant une erreur à l’interface utilisateur
 
-Vous pouvez implémenter une logique différente pour l’ouvrir le circuit. Ou bien, vous pouvez essayer une requête HTTP sur un microservice principaux différents s’il existe un centre de données de secours ou un système principal redondant.
+Vous pouvez implémenter une logique différente pour ouvrir le circuit. Vous pouvez également essayer une requête HTTP sur un autre microservice backend s’il existe un centre de données de secours ou un système backend redondant.
 
-Enfin, une autre possibilité pour le CircuitBreakerPolicy consiste à utiliser isolent (qui force l’ouvrir et maintient ouvert le circuit) et réinitialisation (qui se ferme à nouveau). Il peut servir à créer un point de terminaison HTTP utilitaire appelle isoler et réinitialisation directement sur la stratégie. Ce point de terminaison HTTP peut également servir, convenablement sécurisés, en production d’isolement temporaire d’un système en aval, par exemple lorsque vous souhaitez mettre à niveau. Ou bien il peut déclencher le circuit manuellement pour protéger un système en aval que vous soupçonnez d’être défaillant.
+Enfin, une autre solution pour la stratégie Disjoncteur consiste à utiliser Isolate (qui force l’ouverture du circuit et le maintient ouvert) et Reset (qui le referme). Ces solutions peuvent être utilisées pour créer un point de terminaison HTTP d’utilitaire qui appelle Isolate et Reset directement sur la stratégie. Un tel point de terminaison HTTP peut également être utilisé, correctement sécurisé, en production pour l’isolation temporaire d’un système en aval, par exemple quand vous voulez procéder à sa mise à niveau. Ou bien il peut déclencher le circuit manuellement pour protéger un système en aval que vous soupçonnez d’avoir provoqué l’erreur.
 
 ## <a name="adding-a-jitter-strategy-to-the-retry-policy"></a>Ajout d’une stratégie d’instabilité à la stratégie de nouvelle tentative
 
-Stratégie de nouvelle tentative régulière peut affecter votre système en cas d’évolutivité et haute simultanéité et sous une contention élevée. Pour éviter des pics de tentatives similaires provenant d’un grand nombre de clients en cas de pannes partielles, une bonne solution de contournement est pour ajouter une stratégie d’instabilité pour l’algorithme/stratégie de nouvelle tentative. Cela peut améliorer les performances globales du système de bout en bout en ajoutant le caractère aléatoire pour l’interruption exponentielle. Cela permet de répartir les pointes lorsque des problèmes surviennent. Lorsque vous utilisez Polly, code d’implémentation instabilité pourrait ressembler à l’exemple suivant :
+Une stratégie Nouvelle tentative standard peut avoir un impact sur votre système en cas de fort accès concurrentiel, de haute scalabilité et de contention élevée. Pour surmonter les pointes de nouvelles tentatives similaires provenant de nombreux clients en cas de pannes partielles, une solution de contournement efficace consiste à ajouter une stratégie d’instabilité à la stratégie/l’algorithme de nouvelle tentative. Cela peut améliorer les performances globales du système de bout en bout en ajoutant le caractère aléatoire à l’interruption exponentielle. Les pointes sont alors réparties quand des problèmes surviennent. Quand vous utilisez Polly, le code permettant d’implémenter l’instabilité peut ressembler à l’exemple suivant :
 
 ```csharp
 Random jitterer = new Random();
@@ -230,18 +235,18 @@ Policy.Handle<HttpResponseException>() // etc
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
--   **Recommencez modèle**
+-   **Modèle Nouvelle tentative**
     [*https://docs.microsoft.com/azure/architecture/patterns/retry*](https://docs.microsoft.com/azure/architecture/patterns/retry)
 
--   **Résilience des connexions** (Entity Framework Core) [ *https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency*](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency)
+-   **Résilience des connexions** (Entity Framework Core) [*https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency*](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency)
 
--   **Polly** (bibliothèque de gestion d’erreurs transitoires et résilience de .NET) [ *https://github.com/App-vNext/Polly*](https://github.com/App-vNext/Polly)
+-   **Polly** (Résilience .NET et bibliothèque de gestion des erreurs temporaires) [*https://github.com/App-vNext/Polly*](https://github.com/App-vNext/Polly)
 
--   **Modèle de disjoncteur**
+-   **Modèle Disjoncteur**
     [*https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker*](https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker)
 
--   **Goff de Marc. Instabilité : Rendre les choses mieux avec caractère aléatoire** https://brooker.co.za/blog/2015/03/21/backoff.html
+-   **Marc Brooker. Jitter: Making Things Better With Randomness** https://brooker.co.za/blog/2015/03/21/backoff.html
 
 
 >[!div class="step-by-step"]
-[Précédente] (implement-http-call-retries-exponential-backoff-polly.md) [suivant] (analyse-app-health.md)
+[Précédent] (implement-http-call-retries-exponential-backoff-polly.md) [Suivant] (monitor-app-health.md)
