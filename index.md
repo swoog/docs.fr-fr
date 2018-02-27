@@ -4,11 +4,11 @@ hide_bc:
 title: Documentation .NET
 description: "Découvrez comment utiliser .NET pour créer diverses applications sur n’importe quelle plateforme en C#, Visual Basic et F#. Parcourez les informations de référence sur les API, les exemples de code, les didacticiels et plus encore."
 ms.custom: updateeachrelease
-ms.openlocfilehash: 9e2ed008752d37d79cabc8c9d341e797a715294c
-ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
+ms.openlocfilehash: 65d0a7681c8210ee458112a5486f36ceac7f65e4
+ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/24/2018
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -238,7 +238,7 @@ ms.lasthandoff: 02/09/2018
                                             </div>
                                             <div class="cardText">
                                                 <a href="https://www.asp.net/get-started">
-                                                    <h3>Générer votre première application web</h3>
+                                                    <h3>Créer votre première application web</h3>
                                                     <p>Apprenez à générer votre première application web ASP.NET Core.</p>
                                                 </a>
                                             </div>
@@ -256,9 +256,9 @@ ms.lasthandoff: 02/09/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="/aspnet/core/">
-                                                    <h3>Utilisation d’ASP.NET Core</h3>
-                                                    <p>Apprenez à générer des applications web modernes avec ASP.NET Core.</p>
+                                                <a href="/aspnet/core/tutorials/">
+                                                    <h3>Didacticiels ASP.NET Core</h3>
+                                                    <p>Découvrez les différents guides pas à pas à votre disposition qui vous apprendront à développer des applications ASP.NET Core.</p>
                                                 </a>
                                             </div>
                                         </div>
@@ -275,7 +275,7 @@ ms.lasthandoff: 02/09/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="https://www.asp.net/learn">
+                                                <a href="/aspnet/overview">
                                                     <h3>Qu’est-ce qu’ASP.NET ?</h3>
                                                     <p>Découvrez comment créer des applications web ASP.NET.</p>
                                                 </a>
@@ -296,7 +296,7 @@ ms.lasthandoff: 02/09/2018
                                             <div class="cardText">
                                                 <a href="/aspnet/core/tutorials/first-mvc-app/start-mvc">
                                                     <h3>ASP.NET Core dans Visual Studio</h3>
-                                                    <p>Découvrez les principes de base de la génération d’une application web ASP.NET Core MVC à l’aide de Visual Studio 2015.</p>
+                                                    <p>Découvrez les principes de base de la création d’une application web ASP.NET Core MVC à l’aide de Visual Studio.</p>
                                                 </a>
                                             </div>
                                         </div>
@@ -313,9 +313,9 @@ ms.lasthandoff: 02/09/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="/dotnet/framework/docker/aspnetmvc">
-                                                    <h3>Applications ASP.NET dans des conteneurs</h3>
-                                                    <p>Découvrez comment déployer des applications ASP.NET avec Docker.</p>
+                                                <a href="/aspnet/mvc/overview/deployment/docker-aspnetmvc">
+                                                    <h3>Applications ASP.NET MVC dans des conteneurs Windows</h3>
+                                                    <p>Découvrez comment déployer des applications ASP.NET MVC avec Docker.</p>
                                                 </a>
                                             </div>
                                         </div>
@@ -332,9 +332,9 @@ ms.lasthandoff: 02/09/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="/aspnet/core/tutorials/your-first-mac-aspnet">
-                                                    <h3>ASP.NET sur macOS et Visual Studio Code</h3>
-                                                    <p>Découvrez comment configurer, générer et déployer des applications ASP.NET Core sur macOS avec Visual Studio Code.</p>
+                                                <a href="/aspnet/core/tutorials/xplat">
+                                                    <h3>Didacticiels multiplateformes ASP.NET Core</h3>
+                                                    <p>Apprenez à créer des applications web ou des API web avec ASP.NET Core.</p>
                                                 </a>
                                             </div>
                                         </div>
@@ -356,8 +356,8 @@ ms.lasthandoff: 02/09/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="https://azure.microsoft.com/develop/net">
-                                                    <h3>Documentation .NET Azure</h3>
+                                                <a href="/dotnet/azure/">
+                                                    <h3>Documentation Azure pour .NET</h3>
                                                     <p>Découvrez les services Azure tels que Web Apps, WebJobs, Services cloud et Machines Virtuelles.</p>
                                                 </a>
                                             </div>
@@ -413,7 +413,7 @@ ms.lasthandoff: 02/09/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="https://docs.microsoft.com/azure/storage/">
+                                                <a href="/azure/storage/">
                                                     <h3>Azure Storage</h3>
                                                     <p>Découvrez le service Stockage Azure et apprenez à créer des applications à l’aide de tables, de files d’attente, de fichiers et d’objets blob Azure.</p>
                                                 </a>
@@ -519,7 +519,7 @@ ms.lasthandoff: 02/09/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="https://msdn.microsoft.com/library/ms754130.aspx">
+                                                <a href="/dotnet/framework/wpf/index">
                                                     <h3>Windows Presentation Foundation (WPF)</h3>
                                                     <p>WPF permet aux développeurs de créer des applications de bureau Windows à l’aide d’un modèle basé sur XAML.</p>
                                                 </a>
@@ -538,7 +538,7 @@ ms.lasthandoff: 02/09/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="https://msdn.microsoft.com/library/dd30h2yb.aspx">
+                                                <a href="/dotnet/framework/winforms/index">
                                                     <h3>Windows Forms</h3>
                                                     <p>Développez rapidement des applications métier pour postes de travail Windows.</p>
                                                 </a>
