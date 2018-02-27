@@ -6,12 +6,13 @@ ms.author: mairaw
 ms.date: 11/27/2017
 ms.topic: article
 ms.prod: .net-framework
-ms.workload: dotnet
-ms.openlocfilehash: ca56bfb37cee60ab014dada7b5d72b74b375dd7f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e81008eca3019860789db548d40998a7a7565d31
+ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="install-the-net-framework-35-on-windows-10-windows-81-and-windows-8"></a>Installer le .NET Framework 3.5 sur Windows 10, Windows 8.1 et Windows 8
 
@@ -39,4 +40,4 @@ Vous pouvez activer le .NET Framework 3.5 dans le Panneau de configuration de W
 
 Pendant l’installation, si vous rencontrez l’erreur 0x800f0906, 0x800f0907, 0x800f081f ou 0x800F0922, consultez [Erreur d’installation de .NET Framework 3.5 : 0x800f0906, 0x800f0907 ou 0x800f081f](https://support.microsoft.com/help/2734782/net-framework-3-5-installation-error-0x800f0906--0x800f081f--0x800f09) pour découvrir comment résoudre ces problèmes.
 
-Si l’une des méthodes décrites dans l’article précédent échoue ou que vous n’avez pas de connexion Internet, vous devez utiliser votre support d’installation Windows. Pour plus d’informations, consultez [Déployer le .NET Framework 3.5 à l’aide de Gestion et maintenance des images de déploiement (DISM)](https://technet.microsoft.com/library/Dn482069.aspx). Si vous ne disposez pas du support d’installation, consultez [Créer un support d’installation pour Windows](https://support.microsoft.com/help/15088/windows-create-installation-media).
+Si l’une des méthodes décrites dans l’article précédent échoue ou que vous n’avez pas de connexion Internet, vous devez utiliser votre support d’installation Windows. Pour plus d’informations, consultez [Déployer le .NET Framework 3.5 à l’aide de Gestion et maintenance des images de déploiement (DISM)](/windows-hardware/manufacture/desktop/deploy-net-framework-35-by-using-deployment-image-servicing-and-management--dism). Si vous ne disposez pas du support d’installation, consultez [Créer un support d’installation pour Windows](https://support.microsoft.com/help/15088/windows-create-installation-media).

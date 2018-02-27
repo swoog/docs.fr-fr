@@ -5,17 +5,18 @@ ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: fc92b08b-fe1d-4d07-84ab-5192fafe06bb
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 7a13763b2eeec93e7db7ca770c4d52b4a2ba768c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8b975b75f9ff31f43e722d3ceb28d08ed3b6ce11
+ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="control-flow-in-async-programs-c"></a>Flux de contrôle dans les programmes Async (C#)
 Vous pouvez écrire et tenir à jour des programmes asynchrones plus facilement à l’aide des mots clés `async` et `await`. Toutefois, les résultats peuvent vous étonner si vous ne comprenez pas le fonctionnement de votre programme. Cette rubrique suit le flux de contrôle par le biais d’un programme asynchrone simple pour vous montrer quand le contrôle se déplace d’une méthode à une autre et quelles informations sont transférées à chaque fois.  
@@ -105,7 +106,7 @@ Length of the downloaded string: 33946.
 >  Pour exécuter l’exemple, Visual Studio version 2012 ou ultérieure et .NET Framework version 4.5 ou ultérieure doivent être installés sur votre ordinateur.  
   
 ### <a name="download-the-program"></a>Télécharger le programme  
- Vous pouvez télécharger l’application utilisée dans cette rubrique à partir de l’[exemple Async : Flux de contrôle dans les programmes Async](http://go.microsoft.com/fwlink/?LinkId=255285). Les étapes suivantes ouvrent et exécutent le programme.  
+ Vous pouvez télécharger l’application utilisée dans cette rubrique à partir de l’[exemple Async : Flux de contrôle dans les programmes Async](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0). Les étapes suivantes ouvrent et exécutent le programme.  
   
 1.  Décompressez le fichier téléchargé, puis démarrez Visual Studio.  
   
@@ -391,4 +392,4 @@ int contentLength = await getLengthTask;
  [Programmation asynchrone avec Async et Await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)  
  [Types de retour async (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)  
  [Procédure pas à pas : accès au web avec Async et Await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
- [Exemple Async : Flux de contrôle dans les programmes Async (C# et Visual Basic)](http://go.microsoft.com/fwlink/?LinkId=255285)
+ [Exemple Async : Flux de contrôle dans les programmes Async (C# et Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)
