@@ -2,23 +2,25 @@
 title: "Avantages des génériques (guide de programmation C#)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-helpviewer_keywords: generics [C#], benefits
+helpviewer_keywords:
+- generics [C#], benefits
 ms.assetid: 80f037cd-9ea7-48be-bfc1-219bfb2d4277
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 9f46a328208b49aa33130a020e1a85b6f7aa7d97
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2eb4aad3d23e459af738045b37ae3f1e8f33da06
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="benefits-of-generics-c-programming-guide"></a>Avantages des génériques (guide de programmation C#)
 Les génériques constituent la solution à une limitation dans les versions antérieures du Common Language Runtime et du langage C# dans lesquelles la généralisation s’effectue par un cast de types vers et depuis le type de base universel <xref:System.Object>. En créant une classe générique, vous pouvez créer une collection qui est de type sécurisé au moment de la compilation.  
   
- Les restrictions relatives à l’utilisation de classes de collections non génériques peuvent être illustrées par l’écriture d’un programme court qui utilise la classe de collection <xref:System.Collections.ArrayList> de la bibliothèque de classes .NET Framework. <xref:System.Collections.ArrayList> est une classe de collection très pratique qui peut être utilisée sans modification pour stocker tout type référence ou valeur.  
+ Les restrictions relatives à l’utilisation de classes de collections non génériques peuvent être illustrées par l’écriture d’un programme court qui utilise la classe de collection <xref:System.Collections.ArrayList> de la bibliothèque de classes .NET. Une instance de la classe <xref:System.Collections.ArrayList> peut stocker n’importe quel type référence ou valeur.  
   
  [!code-csharp[csProgGuideGenerics#4](../../../csharp/programming-guide/generics/codesnippet/CSharp/benefits-of-generics_1.cs)]  
   
@@ -32,7 +34,7 @@ Les génériques constituent la solution à une limitation dans les versions ant
   
  Dans les versions 1.0 et 1.1 du langage C#, le seul moyen d’éviter les dangers du code généralisé dans les classes de collections de bibliothèques de classes de base .NET Framework était d’écrire vos propres collections spécifiques à un type. Bien sûr, puisqu’une classe de ce genre n’est pas réutilisable pour plusieurs types de données, vous perdez les avantages de la généralisation, et vous devez réécrire la classe pour chaque type qui sera stocké.  
   
- Ce dont <xref:System.Collections.ArrayList> et d’autres classes semblables ont vraiment besoin est un moyen permettant au code client de spécifier, pour chaque instance, le type de données particulier qu’elles ont l’intention d’utiliser. Cela élimine la nécessité d’effectuer un upcast en `T:System.Object` et permettrait également au compilateur d’effectuer un contrôle de type. En d’autres termes, <xref:System.Collections.ArrayList> a besoin d’un paramètre de type. C’est exactement ce que fournissent les génériques. Dans la collection <xref:System.Collections.Generic.List%601> générique, dans l’espace de noms `N:System.Collections.Generic`, la même opération d’ajout d’éléments à la collection ressemble à ceci :  
+ Ce dont <xref:System.Collections.ArrayList> et d’autres classes semblables ont vraiment besoin est un moyen permettant au code client de spécifier, pour chaque instance, le type de données particulier qu’elles ont l’intention d’utiliser. Cela élimine la nécessité d’effectuer un upcast en <xref:System.Object> et permettrait également au compilateur d’effectuer un contrôle de type. En d’autres termes, <xref:System.Collections.ArrayList> a besoin d’un paramètre de type. C’est exactement ce que fournissent les génériques. Dans la collection <xref:System.Collections.Generic.List%601> générique, dans l’espace de noms <xref:System.Collections.Generic>, la même opération d’ajout d’éléments à la collection ressemble à ceci :  
   
  [!code-csharp[csProgGuideGenerics#6](../../../csharp/programming-guide/generics/codesnippet/CSharp/benefits-of-generics_3.cs)]  
   
@@ -43,4 +45,5 @@ Les génériques constituent la solution à une limitation dans les versions ant
  [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
  [Introduction aux génériques](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
  [Conversion boxing et unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md)  
- [Bonnes pratiques relatives aux collections](http://go.microsoft.com/fwlink/?LinkId=112403)
+ [Quand utiliser les collections génériques](../../../standard/collections/when-to-use-generic-collections.md)  
+ [Instructions relatives aux collections](../../../standard/design-guidelines/guidelines-for-collections.md)   

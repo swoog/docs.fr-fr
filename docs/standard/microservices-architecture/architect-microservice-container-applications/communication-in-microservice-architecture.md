@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 3920160697c55a81a131a7d8c40b096b064a6f03
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 3c80ce8e3c4ccdc7e53634f54dd998581758ab07
+ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="communication-in-a-microservice-architecture"></a>Communication dans une architecture de microservices
 
@@ -47,7 +47,7 @@ Le deuxième axe consiste à définir si la communication a un destinataire uniq
 
 Une application basée sur des microservices utilise souvent une combinaison de ces styles de communication. Le type le plus courant est une communication avec un seul destinataire, avec un protocole synchrone comme HTTP/HTTPS lors de l’appel d’un service web HTTP d’API ordinaire. Les microservices utilisent aussi en général des protocoles de messagerie pour la communication asynchrone entre microservices.
 
-Il est bon de connaître ces axes pour une compréhension claire des mécanismes de communication possibles, mais ils ne représentent pas les problèmes importants à prendre en compte lors de la création de microservices. La nature asynchrone de l’exécution des threads clients et même la nature asynchrone du protocole choisi sont les points importants lors de l’intégration de microservices. Ce qui *est* important est de pouvoir intégrer vos microservices de façon asynchrone tout en conservant leur indépendance, comme expliqué dans la section suivante.
+Il est bon de connaître ces axes pour une compréhension claire des mécanismes de communication possibles, mais ils ne représentent pas les problèmes importants à prendre en compte lors de la création de microservices. Ni la nature asynchrone de l’exécution des threads clients ni la nature asynchrone du protocole choisi sont les points importants lors de l’intégration de microservices. Ce qui *est* important est de pouvoir intégrer vos microservices de façon asynchrone tout en conservant leur indépendance, comme expliqué dans la section suivante.
 
 ## <a name="asynchronous-microservice-integration-enforces-microservices-autonomy"></a>L’intégration de microservices asynchrones implique l’autonomie des microservices
 

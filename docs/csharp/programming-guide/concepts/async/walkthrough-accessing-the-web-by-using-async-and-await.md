@@ -5,17 +5,18 @@ ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: get-started-article
 ms.assetid: c95d8d71-5a98-4bf0-aaf4-45fed2ebbacd
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 85edc87bc8c5183f85618351034c0b043472b530
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 533cb4b342e3de3eb3143b001f5a26e36e4d79b9
+ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>Procédure pas à pas : accès au web avec Async et Await (C#)
 Vous pouvez écrire des programmes asynchrones plus facilement et intuitivement en utilisant les fonctionnalités async/await. Vous pouvez écrire du code asynchrone qui ressemble au code synchrone et laisser le compilateur gérer les difficiles fonctions de rappel et continuations qu’implique généralement le code asynchrone.  
@@ -24,7 +25,7 @@ Vous pouvez écrire des programmes asynchrones plus facilement et intuitivement 
   
  Cette procédure pas à pas commence avec une application Windows Presentation Foundation (WPF) synchrone qui additionne le nombre d’octets figurant dans une liste de sites web. La procédure pas à pas convertit ensuite l’application en solution asynchrone en utilisant les nouvelles fonctionnalités.  
   
- Si vous ne souhaitez pas générer les applications vous-même, vous pouvez télécharger « Exemple Async : Accès à la procédure web (C# et Visual Basic) » à partir des [exemples de code de développeur](http://go.microsoft.com/fwlink/?LinkId=255191).  
+ Si vous ne souhaitez pas générer les applications vous-même, vous pouvez télécharger [Exemple Async : accès à la procédure web (C# et Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f).  
   
  Dans cette procédure pas à pas, vous effectuez les tâches suivantes :  
   
@@ -52,8 +53,8 @@ Vous pouvez écrire des programmes asynchrones plus facilement et intuitivement 
   
 -   [Exemple](#BKMK_CompleteCodeExamples)  
   
-## <a name="prerequisites"></a>Conditions préalables  
- Visual Studio 2012 ou version ultérieure doit être installé sur votre ordinateur. Pour plus d’informations, consultez le [site web de Microsoft](http://go.microsoft.com/fwlink/?LinkId=235233).  
+> [!NOTE]
+>  Pour exécuter les exemples, Visual Studio version 2012 ou ultérieure et le .NET Framework version 4.5 ou ultérieure doivent être installés sur votre ordinateur.  
   
 ###  <a name="CreateWPFApp"></a> Pour créer une application WPF  
   
@@ -236,7 +237,7 @@ Vous pouvez écrire des programmes asynchrones plus facilement et intuitivement 
 ##  <a name="BKMK_TestSynchSol"></a>   
 ###  <a name="testSynch"></a> Pour tester la solution synchrone  
   
-1.  Appuyez sur la touche F5 pour exécuter le programme, puis choisissez le bouton **Démarrer** .  
+1.  Appuyez sur la touche F5 pour exécuter le programme, puis choisissez le bouton **Démarrer**.  
   
      Une sortie semblable à la liste suivante doit apparaître.  
   
@@ -430,7 +431,7 @@ Vous pouvez écrire des programmes asynchrones plus facilement et intuitivement 
 ##  <a name="BKMK_testAsynchSolution"></a>   
 ###  <a name="testAsynch"></a> Pour tester la solution asynchrone  
   
-1.  Appuyez sur la touche F5 pour exécuter le programme, puis choisissez le bouton **Démarrer** .  
+1.  Appuyez sur la touche F5 pour exécuter le programme, puis choisissez le bouton **Démarrer**.  
   
 2.  Une sortie semblable à la sortie de la solution synchrone doit apparaître. En revanche, observez les différences ci-après.  
   
@@ -732,11 +733,11 @@ namespace AsyncExampleWPF
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exemple Async : L’accès à la procédure Web (c# et Visual Basic)](http://go.microsoft.com/fwlink/?LinkId=255191)  
+ [Exemple Async : accès à la procédure web (C# et Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)  
  [async](../../../../csharp/language-reference/keywords/async.md)  
  [await](../../../../csharp/language-reference/keywords/await.md)  
  [Programmation asynchrone avec Async et Await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)  
  [Types de retour async (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)  
- [Programmation asynchrone basé sur des tâches (TAP)](http://go.microsoft.com/fwlink/?LinkId=204847)  
+ [Programmation asynchrone basée sur les tâches](https://www.microsoft.com/en-us/download/details.aspx?id=19957)  
  [Guide pratique : étendre la procédure pas à pas Async à l’aide de Task.WhenAll (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)  
  [Guide pratique : effectuer plusieurs requêtes web en parallèle avec async et await (C#)](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)

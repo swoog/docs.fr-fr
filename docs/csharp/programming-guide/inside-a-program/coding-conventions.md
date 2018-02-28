@@ -2,25 +2,24 @@
 title: Conventions de codage C# (Guide de programmation C#)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - coding conventions, C#
 - Visual C#, coding conventions
 - C# language, coding conventions
 ms.assetid: f4f60de9-d49b-4fb6-bab1-20e19ea24710
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 84ddc2b3cebb6bad95f5076889de11f12624b4de
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4a8806ddb0a9cc62fe68dc9d558917ee2d532e7f
+ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>Conventions de codage C# (Guide de programmation C#)
-La [spécification du langage C#](http://go.microsoft.com/fwlink/?LinkId=199552) ne définit pas une norme de codage. Toutefois, les instructions de cette rubrique sont utilisées par Microsoft pour développer les exemples et la documentation.  
-  
  Les conventions de codage répondent aux objectifs suivants :  
   
 -   Elles confèrent une apparence cohérente au code, afin que les lecteurs puissent se concentrer sur le contenu, pas sur la disposition.  
@@ -30,6 +29,8 @@ La [spécification du langage C#](http://go.microsoft.com/fwlink/?LinkId=199552
 -   Elles facilitent la copie, la modification et la gestion du code.  
   
 -   Elles illustrent les bonnes pratiques en C#.  
+
+ Les instructions de cette rubrique sont utilisées par Microsoft pour développer les exemples et la documentation.  
   
 ## <a name="naming-conventions"></a>Conventions d'affectation de noms  
   
@@ -145,7 +146,7 @@ La [spécification du langage C#](http://go.microsoft.com/fwlink/?LinkId=199552
   
 ### <a name="new-operator"></a>New, opérateur  
   
--   Utilisez la forme concise de l'instanciation d'objets, avec typage implicite, comme indiqué dans la déclaration suivante.  
+-   Utilisez la forme concise d'instanciation d'objets, avec un typage implicite, comme indiqué dans la déclaration suivante.  
   
      [!code-csharp[csProgGuideCodingConventions#19](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#19)]  
   
@@ -159,7 +160,7 @@ La [spécification du langage C#](http://go.microsoft.com/fwlink/?LinkId=199552
   
 ### <a name="event-handling"></a>Gestion des événements  
   
--   Si vous définissez un gestionnaire d'événements que vous n'avez pas besoin de supprimer ultérieurement, utilisez une expression lambda.  
+-   Si vous définissez un gestionnaire d’événements que vous n’avez pas besoin de supprimer ultérieurement, utilisez une expression lambda.  
   
      [!code-csharp[csProgGuideCodingConventions#22](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#22)]  
   
