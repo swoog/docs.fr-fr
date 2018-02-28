@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: ea42156f-e1b9-4535-9383-b45f46f3f7ca
-ms.openlocfilehash: 4378afebe6fd0d9317f734457576dc75d7488bf0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: f3f73c4fe2197f1f3f2babbe6691ef6662d8f581
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="namespaces"></a>Espaces de noms
 
@@ -27,7 +27,7 @@ Un espace de noms vous permet d’organiser le code en zones de fonctionnalités
 namespace [parent-namespaces.]identifier
 ```
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 Si vous souhaitez placer le code dans un espace de noms, la première déclaration dans le fichier doit déclarer l’espace de noms. Le contenu du fichier entier fait alors partie de l’espace de noms.
 
 Espaces de noms ne peut pas contenir directement de valeurs et des fonctions. Au lieu de cela, les fonctions et les valeurs doivent être incluses dans les modules et les modules sont inclus dans les espaces de noms. Espaces de noms peuvent contenir des types, des modules.
@@ -77,7 +77,7 @@ Vous pouvez également utiliser global pour référencer l’espace de noms .NET
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6408.fs)]
 
-##
+## <a name="recursive-namespaces"></a>Espaces de noms récursive
 
 F # 4.1 introduit la notion d’espaces de noms permettant à tous les contenus du code mutuellement récursive.  Cette opération est effectuée `namespace rec`.  Utilisation de `namespace rec` peut atténuer certains problèmes dans l’impossibilité d’écrire du code mutuellement référentielle entre les types et des modules.  Voici un exemple :
 

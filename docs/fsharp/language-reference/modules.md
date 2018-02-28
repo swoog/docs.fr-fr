@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 46de2d18-da51-40fa-a262-92edecada79d
-ms.openlocfilehash: 89401c1f889be6c5585a302e3a7ac62478573b95
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 9b189903511f53d3ecceb30f3d056e189b00511d
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="modules"></a>Modules
 
@@ -31,7 +31,7 @@ module [accessibility-modifier] module-name =
     declarations
 ```
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 Un module F # est un regroupement de constructions de code F # tels que les types, les valeurs, les valeurs de fonction et les code dans `do` liaisons. Il est implémenté comme une classe du common language runtime (CLR) qui comporte uniquement des membres statiques. Il existe deux types de déclarations de module, selon que la totalité du fichier est inclus dans le module : une déclaration de module de niveau supérieur et une déclaration de module locale. Une déclaration de module de niveau supérieur comprend la totalité du fichier dans le module. Une déclaration de module de niveau supérieur peut apparaître uniquement comme la première déclaration dans un fichier.
 
 Dans la syntaxe de la déclaration de module de niveau supérieur, le paramètre facultatif *espace de noms qualifié* est la séquence de noms de l’espace de noms imbriqué qui contient le module. L’espace de noms qualifié pas nécessairement être déclaré précédemment.
@@ -91,7 +91,7 @@ Si vous souhaitez que tout le code dans un fichier dans un module externe unique
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/modules/snippet6612.fs)]
 
-## <a name="module-rec-allowing-mutual-recursive-code-at-the-module-level"></a>Module `rec`: permettant à du code récursive mutuelle au niveau du module
+## <a name="recursive-modules"></a>Modules récursive
 
 F # 4.1 introduit la notion de modules permettant à tous les contenus du code mutuellement récursive.  Cette opération est effectuée `module rec`.  Utilisation de `module rec` peut atténuer certains problèmes dans l’impossibilité d’écrire du code mutuellement référentielle entre les types et des modules.  Voici un exemple :
 

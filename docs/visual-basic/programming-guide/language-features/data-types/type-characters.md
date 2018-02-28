@@ -46,11 +46,11 @@ ms.assetid: 6353cb9b-6ee4-4af6-a5a8-88ce39f90cc5
 author: rpetrusha
 ms.author: ronpet
 ms.manager: wpickett
-ms.openlocfilehash: bdb675b9605d03829c95897382daa6d03cf1b041
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: 20a9a30689fb62a6956987b06470e76eeb42ebab
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="type-characters-visual-basic"></a>Tapez les caractères (Visual Basic)
 
@@ -88,7 +88,7 @@ La forme d’un littéral, tel qu’il apparaît dans votre code normalement dé
 |Sous forme textuelle de littéral|Type de données par défaut|Exemple|  
 |-----------------------------|-----------------------|-------------|  
 |Numérique, aucune partie fractionnaire|`Integer`|`2147483647`|  
-|Numérique, aucune partie fractionnaire, trop grand pour`Integer`|`Long`|`2147483648`|  
+|Numérique, aucune partie fractionnaire, trop grand pour `Integer`|`Long`|`2147483648`|  
 |Numérique, partie fractionnaire|`Double`|`1.2`|  
 |Placé entre guillemets doubles|`String`|`"A"`|  
 |Encadrées par des signes dièse|`Date`|`#5/17/1993 9:32 AM#`|  
@@ -123,7 +123,7 @@ Le compilateur interprète normalement un littéral d’entier dans le système 
 |Nombre de base|Préfixe|Valeurs de chiffre valide|Exemple|
 |-----------------|------------|------------------------|-------------|
 |Hexadécimale (base 16)|`&H`|0-9 et A-F|`&HFFFF`|
-|Binaire (base 2)|`0B`|0-1|`&B01111100`|
+|Binaire (base 2)|`&B`|0-1|`&B01111100`|
 |Octale (base 8)|`&O`|0-7|`&O77`|
 
 À partir de Visual Basic 2017, vous pouvez utiliser le caractère de soulignement (`_`) comme séparateur de groupes pour améliorer la lisibilité d’un littéral intégral. L’exemple suivant utilise le `_` caractère pour regrouper un littéral binaire en groupes de 8 bits :
