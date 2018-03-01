@@ -1,5 +1,5 @@
 ---
-title: "Suppression d’espaces et des caractères à partir de chaînes dans .NET"
+title: "Suppression d’espaces et de caractères dans .NET"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -21,20 +21,23 @@ helpviewer_keywords:
 - TrimStart method
 - removing characters
 ms.assetid: ab248dab-70d4-4413-81c6-542d153fd195
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: fde24a97234d275d3d599f13bfc4063af939507b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: dac047c7efefcacb959401aedcb96080810f2278
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="trimming-and-removing-characters-from-strings-in-net"></a>Suppression d’espaces et des caractères à partir de chaînes dans .NET
+# <a name="trimming-and-removing-characters-from-strings-in-net"></a>Suppression d’espaces et de caractères dans .NET
 Si vous analysez une phrase en mots individuels, vous risquez d’obtenir des mots incluant des espaces vides (également appelés espaces blancs) à chaque extrémité du mot. Dans ce cas, vous pouvez utiliser l’une des méthodes de suppression de la classe **System.String** pour supprimer n’importe quel nombre d’espaces ou d’autres caractères à partir d’une position spécifiée dans la chaîne. Le tableau suivant décrit les méthodes de suppression disponibles.  
   
-|Nom de la méthode|Utilisation|  
+|Nom de la méthode|Utilisez|  
 |-----------------|---------|  
 |<xref:System.String.Trim%2A?displayProperty=nameWithType>|Supprime les espaces blancs ou caractères spécifiés dans un tableau de caractères à partir du début et la fin d’une chaîne.|  
 |<xref:System.String.TrimEnd%2A?displayProperty=nameWithType>|Supprime les caractères spécifiés dans un tableau de caractères à partir de la fin d’une chaîne.|  
@@ -42,7 +45,7 @@ Si vous analysez une phrase en mots individuels, vous risquez d’obtenir des mo
 |<xref:System.String.Remove%2A?displayProperty=nameWithType>|Supprime un nombre spécifié de caractères à partir de la position d’index spécifiée dans une chaîne.|  
   
 ## <a name="trim"></a>Trim  
- Vous pouvez facilement supprimer les espaces blancs des deux extrémités d’une chaîne à l’aide de la <xref:System.String.Trim%2A?displayProperty=nameWithType> méthode, comme indiqué dans l’exemple suivant.  
+ Vous pouvez facilement supprimer les espaces blancs situés aux deux extrémités d’une chaîne à l’aide de la méthode <xref:System.String.Trim%2A?displayProperty=nameWithType>, comme indiqué dans l’exemple suivant.  
   
  [!code-cpp[Conceptual.String.BasicOps#17](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/trimming.cpp#17)]
  [!code-csharp[Conceptual.String.BasicOps#17](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/trimming.cs#17)]
@@ -56,7 +59,7 @@ Si vous analysez une phrase en mots individuels, vous risquez d’obtenir des mo
 ## <a name="trimend"></a>TrimEnd  
  La méthode **String.TrimEnd** supprime les caractères à partir de la fin d’une chaîne, créant ainsi un objet String. Un tableau de caractères est passé à cette méthode pour spécifier les caractères à supprimer. L’ordre des éléments dans le tableau de caractères n’affecte pas l’opération de suppression. La suppression s’arrête lorsqu’un caractère non spécifié dans le tableau est trouvé.  
   
- L’exemple suivant supprime les dernières lettres d’une chaîne à l’aide de la **TrimEnd** (méthode). Dans cet exemple, la position du caractère `'r'` et du caractère `'W'` est inversée pour illustrer que l’ordre des caractères dans le tableau n’a pas d’importance. Remarquez que ce code supprime le dernier mot de `MyString` plus une partie du premier.  
+ L’exemple suivant supprime les dernières lettres d’une chaîne à l’aide de la méthode **TrimEnd**. Dans cet exemple, la position du caractère `'r'` et du caractère `'W'` est inversée pour illustrer que l’ordre des caractères dans le tableau n’a pas d’importance. Remarquez que ce code supprime le dernier mot de `MyString` plus une partie du premier.  
   
  [!code-cpp[Conceptual.String.BasicOps#18](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/trimming.cpp#18)]
  [!code-csharp[Conceptual.String.BasicOps#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/trimming.cs#18)]
@@ -83,8 +86,8 @@ Si vous analysez une phrase en mots individuels, vous risquez d’obtenir des mo
   
  Ce code affiche `World!` dans la console.  
   
-## <a name="remove"></a>Supprimer  
- Le <xref:System.String.Remove%2A?displayProperty=nameWithType> méthode supprime un nombre spécifié de caractères commençant à la position spécifiée dans une chaîne existante. Cette méthode suppose un index de base zéro.  
+## <a name="remove"></a>Remove  
+ La méthode <xref:System.String.Remove%2A?displayProperty=nameWithType> supprime un nombre spécifié de caractères en commençant à la position spécifiée dans une chaîne existante. Cette méthode suppose un index de base zéro.  
   
  L’exemple suivant supprime dix caractères d’une chaîne en commençant à la position cinq d’un index de base zéro de la chaîne.  
   
@@ -92,7 +95,7 @@ Si vous analysez une phrase en mots individuels, vous risquez d’obtenir des mo
  [!code-csharp[Conceptual.String.BasicOps#21](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/trimming.cs#21)]
  [!code-vb[Conceptual.String.BasicOps#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/trimming.vb#21)]  
   
- Vous pouvez également supprimer un caractère spécifié ou une sous-chaîne à partir d’une chaîne en appelant le <xref:System.String.Replace%28System.String%2CSystem.String%29?displayProperty=nameWithType> méthode et en spécifiant une chaîne vide (<xref:System.String.Empty?displayProperty=nameWithType>) comme valeur de remplacement. L’exemple suivant supprime toutes les virgules d’une chaîne.  
+ Vous pouvez également supprimer un caractère spécifié ou une sous-chaîne spécifiée d’une chaîne en appelant la méthode <xref:System.String.Replace%28System.String%2CSystem.String%29?displayProperty=nameWithType> et en spécifiant une chaîne vide (<xref:System.String.Empty?displayProperty=nameWithType>) comme valeur de remplacement. L’exemple suivant supprime toutes les virgules d’une chaîne.  
   
  [!code-csharp[Conceptual.String.BasicOps#23](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/replace1.cs#23)]
  [!code-vb[Conceptual.String.BasicOps#23](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/replace1.vb#23)]  

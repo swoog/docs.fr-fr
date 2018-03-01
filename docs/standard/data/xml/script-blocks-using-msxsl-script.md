@@ -12,18 +12,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fde6f43f-c594-486f-abcb-2211197fae20
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 2e127fb02725d11e62c45157b4e45327fc9f1ace
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: badf5511c5638d98d25997f31a3aff8dc11144d6
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="script-blocks-using-msxslscript"></a>Blocs de scripts utilisant msxsl:script
-La classe <xref:System.Xml.Xsl.XslCompiledTransform> prend en charge les scripts incorporés en utilisant l'élément `msxsl:script`. Lorsque la feuille de style est chargée, toute fonction définie est compilée en langage MSIL (Microsoft Intermediate Language) par le CodeDOM (Code Document Object Model) et exécutée au cours de l'exécution. L' assembly généré à partir du bloc de script incorporé est distinct de l'assembly généré pour la feuille de style.  
+La classe <xref:System.Xml.Xsl.XslCompiledTransform> prend en charge les scripts incorporés en utilisant l'élément `msxsl:script`. Lorsque la feuille de style est chargée, toute fonction définie est compilée en langage MSIL (Microsoft Intermediate Language) par le CodeDOM (Code Document Object Model) et exécutée au cours de l’exécution. L' assembly généré à partir du bloc de script incorporé est distinct de l'assembly généré pour la feuille de style.  
   
 ## <a name="enable-xslt-script"></a>Activer les scripts XSLT  
  La prise en charge des scripts incorporés est un réglage XSLT facultatif de la classe <xref:System.Xml.Xsl.XslCompiledTransform>. La prise en charge des scripts est désactivée par défaut. Pour l'activer, créez un objet <xref:System.Xml.Xsl.XsltSettings> avec la propriété <xref:System.Xml.Xsl.XsltSettings.EnableScript%2A> définie sur `true` et transmettez l'objet à la méthode <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A>.  
@@ -68,7 +71,7 @@ La classe <xref:System.Xml.Xsl.XslCompiledTransform> prend en charge les scripts
 |`Result Tree Fragment`|<xref:System.Xml.XPath.XPathNavigator>|  
 |`Node Set`|<xref:System.Xml.XPath.XPathNodeIterator>|  
   
- Les types CLR numériques sont convertis en objet <xref:System.Double>. Le type <xref:System.DateTime> est converti en <xref:System.String>. Les types <xref:System.Xml.XPath.IXPathNavigable> sont convertis en <xref:System.Xml.XPath.XPathNavigator>. **XPathNavigator []** est convertie en <xref:System.Xml.XPath.XPathNodeIterator>.  
+ Les types CLR numériques sont convertis en objet <xref:System.Double>. Le type <xref:System.DateTime> est converti en <xref:System.String>. Les types <xref:System.Xml.XPath.IXPathNavigable> sont convertis en <xref:System.Xml.XPath.XPathNavigator>. **XPathNavigator[]** est converti en objet <xref:System.Xml.XPath.XPathNodeIterator>.  
   
  Tous les autres types provoquent une erreur.  
   

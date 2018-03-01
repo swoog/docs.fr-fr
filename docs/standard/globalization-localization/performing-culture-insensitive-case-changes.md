@@ -21,25 +21,28 @@ helpviewer_keywords:
 - String.ToUpper method
 - culture parameter
 ms.assetid: 822d551c-c69a-4191-82f4-183d82c9179c
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c500b882c335572b8b458ba515b282e9f5362b85
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e65eb85e1355d3aa98e04e7bd73f0194243dcdb1
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="performing-culture-insensitive-case-changes"></a>Exécution de changements de casse indépendants de la culture
-Le <xref:System.String.ToUpper%2A?displayProperty=nameWithType>, <xref:System.String.ToLower%2A?displayProperty=nameWithType>, <xref:System.Char.ToUpper%2A?displayProperty=nameWithType>, et <xref:System.Char.ToLower%2A?displayProperty=nameWithType> méthodes fournissent des surcharges qui n’acceptent pas de paramètres. Par défaut, ces surcharges sans paramètre effectuent des changements de casse basés sur la valeur de la <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>. Cela produit des résultats de la casse peuvent varier selon la culture. Pour indiquer clairement que vous souhaitez être dépendante ou indépendante de la culture des changements de casse, vous devez utiliser les surcharges de ces méthodes, vous devez spécifier explicitement un `culture` paramètre. Pour les changements de casse dépendante de la culture, spécifiez `CultureInfo.CurrentCulture` pour la `culture` paramètre. Pour les changements de casse indépendants de la culture, spécifiez `CultureInfo.InvariantCulture` pour la `culture` paramètre.  
+Les méthodes <xref:System.String.ToUpper%2A?displayProperty=nameWithType>, <xref:System.String.ToLower%2A?displayProperty=nameWithType>, <xref:System.Char.ToUpper%2A?displayProperty=nameWithType> et <xref:System.Char.ToLower%2A?displayProperty=nameWithType> fournissent des surcharges qui n’acceptent pas de paramètres. Par défaut, ces surcharges sans paramètres effectuent des changements de casse basés sur la valeur de la <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>. Cela produit des résultats de la casse qui peuvent varier selon la culture. Pour indiquer clairement si vous souhaitez que les changements de casse soient ou non dépendants de la culture, vous devez utiliser les surcharges de ces méthodes qui vous demandent de spécifier explicitement un paramètre `culture`. Pour les changements de casse dépendants de la culture, spécifiez `CultureInfo.CurrentCulture` pour le paramètre `culture`. Pour les changements de casse indépendants de la culture, spécifiez `CultureInfo.InvariantCulture` pour le paramètre `culture`.  
   
- Souvent, les chaînes sont converties en une casse standard pour faciliter les recherches plus tard. Lorsque les chaînes sont utilisées de cette manière, vous devez spécifier `CultureInfo.InvariantCulture` pour le `culture` paramètre, car la valeur de <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> peut changer entre le moment où la casse est modifiée et l’heure à laquelle la recherche est effectuée.  
+ Souvent, les chaînes sont converties en casse standard pour faciliter des recherches ultérieures. Lorsque des chaînes sont utilisées de cette manière, vous devriez spécifier `CultureInfo.InvariantCulture` pour le paramètre `culture`, car la valeur de <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> peut changer entre le moment où la casse est modifiée et le moment de la recherche.  
   
- Si une décision de sécurité est basée sur une opération de changement de casse, l’opération doit être indépendante de la culture pour garantir que le résultat n’est pas affecté par la valeur de `CultureInfo.CurrentCulture`. Consultez la section « Chaîne comparaisons qui utiliser la Culture en cours » de la [meilleures pratiques pour l’utilisation de chaînes](../../../docs/standard/base-types/best-practices-strings.md) article pour obtenir un exemple qui montre comment des opérations de chaîne peut produire des résultats incohérents.  
+ Si une décision de sécurité est basée sur une opération de changement de casse, cette opération doit être indépendante de la culture pour garantir que le résultat n'est pas affecté par la valeur de `CultureInfo.CurrentCulture`. Consultez la section « Comparaisons de chaînes qui utilisent la culture actuelle » de l’article [Meilleures pratiques d’utilisation des chaînes](../../../docs/standard/base-types/best-practices-strings.md) pour voir un exemple montrant comment les opérations de chaînes dépendantes de la culture peuvent produire des résultats incohérents.  
   
-## <a name="using-the-stringtoupper-and-stringtolower-methods"></a>À l’aide de la String.ToUpper et String.ToLower  
- Pour la clarté du code, il est recommandé de toujours utiliser des surcharges de la `String.ToUpper` et `String.ToLower` méthodes qui vous permettent de spécifier un `culture` paramètre explicitement. Par exemple, le code suivant effectue une recherche d’identificateur. Le `key.ToLower` opération est dépendante de la culture par défaut, mais ce comportement n’est pas clair à partir de la lecture du code.  
+## <a name="using-the-stringtoupper-and-stringtolower-methods"></a>Utilisation des méthodes String.ToUpper et String.ToLower  
+ Pour la clarté du code, il est recommandé de toujours utiliser des surcharges des méthodes `String.ToUpper` et `String.ToLower` vous permettant de spécifier explicitement un paramètre `culture`. Par exemple, le code suivant effectue une recherche d’identificateur. L’opération `key.ToLower` est dépendante de la culture par défaut, mais ce comportement ne ressort pas clairement de la lecture du code.  
   
 ### <a name="example"></a>Exemple  
   
@@ -56,7 +59,7 @@ static object LookupKey(string key)
 }  
 ```  
   
- Si vous souhaitez que le `key.ToLower` opération soit indépendante de la culture, vous devez modifier l’exemple précédent comme suit pour utiliser explicitement le `CultureInfo.InvariantCulture` lors de la modification de la casse.  
+ Si vous souhaitez que l’opération `key.ToLower` soit indépendante de la culture, vous devez modifier l’exemple précédent comme suit pour utiliser explicitement le `CultureInfo.InvariantCulture` lors de la modification de la casse.  
   
 ```vb  
 Shared Function LookupKey(key As String) As Object  
@@ -71,8 +74,8 @@ static object LookupKey(string key)
 }  
 ```  
   
-## <a name="using-the-chartoupper-and-chartolower-methods"></a>À l’aide de la méthodes Char.ToUpper et Char.ToLower  
- Bien que le `Char.ToUpper` et `Char.ToLower` méthodes ont les mêmes caractéristiques que le `String.ToUpper` et `String.ToLower` méthodes, les seules cultures affectées sont le turc (Turquie) et Azérie (Latin, Azerbaïdjan). Il s’agit uniquement deux cultures avec des différences de casse de caractère unique. Pour plus d’informations sur ce mappage de casse unique, consultez la section « Casse » dans la <xref:System.String> rubrique de la classe. Pour la clarté du code et pour garantir des résultats cohérents, il est recommandé de toujours utiliser les surcharges de ces méthodes qui vous permettent de spécifier explicitement un `culture` paramètre.  
+## <a name="using-the-chartoupper-and-chartolower-methods"></a>Utilisation des méthodes Char.ToUpper et Char.ToLower  
+ Bien que les méthodes `Char.ToUpper` et `Char.ToLower` aient les mêmes caractéristiques que les méthodes `String.ToUpper` et `String.ToLower`, les seules cultures affectées sont le turc (Turquie) et l’azéri (latin, Azerbaïdjan). Ce sont les deux seules cultures avec des différences de casse de caractère unique. Pour plus d’informations sur ce mappage de casse unique, consultez la section « Casse » dans la rubrique de la classe <xref:System.String>. Pour la clarté du code et pour garantir des résultats cohérents, il est recommandé de toujours utiliser les surcharges de ces méthodes qui vous permettent de spécifier explicitement un paramètre `culture`.  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.String.ToUpper%2A?displayProperty=nameWithType>  

@@ -16,15 +16,18 @@ helpviewer_keywords:
 - for loop, parallel construction in .NET
 - parallel for loops, how to use
 ms.assetid: 9029ba7f-a9d1-4526-8c84-c88716dba5d4
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ed621f41e76addde777b974732470fcfbc903563
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3a70dcb5e3811a18e23aeb2ebf0940d2c52f49a9
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-write-a-simple-parallelfor-loop"></a>Comment : écrire une boucle Parallel.For simple
 Cette rubrique contient deux exemples qui illustrent la méthode <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>. Le premier utilise la surcharge de méthode <xref:System.Threading.Tasks.Parallel.For%28System.Int64%2CSystem.Int64%2CSystem.Action%7BSystem.Int64%7D%29?displayProperty=nameWithType> et le second utilise la surcharge <xref:System.Threading.Tasks.Parallel.For%28System.Int32%2CSystem.Int32%2CSystem.Action%7BSystem.Int32%7D%29?displayProperty=nameWithType>, les deux surcharges les plus simples de la méthode <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>. Vous pouvez utiliser ces deux surcharges de la méthode <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> quand vous n'avez pas besoin d'annuler la boucle, de sortir des itérations de boucle ou de maintenir un état de thread local.  
@@ -49,7 +52,7 @@ Cette rubrique contient deux exemples qui illustrent la méthode <xref:System.Th
  Lors de la parallélisation du code, y compris des boucles, un objectif important consiste à utiliser les processeurs le plus possible sans surparalléliser jusqu'au point où la surcharge de traitement en parallèle réduit les performances. Dans cet exemple, seule la boucle externe est parallélisée, car peu de travail est effectué dans la boucle interne. La combinaison d'une petite quantité de travail et des effets indésirables du cache peut entraîner une dégradation des performances dans les boucles parallèles imbriquées. Par conséquent, paralléliser uniquement la boucle externe est la meilleure façon d'optimiser les avantages offerts par l'accès concurrentiel sur la plupart des systèmes.  
   
 ## <a name="the-delegate"></a>Délégué  
- Le troisième paramètre de cette surcharge de <xref:System.Threading.Tasks.Parallel.For%2A> est un délégué de type `Action<int>` en C# ou `Action(Of Integer)` en Visual Basic. Un délégué `Action`, qu'il possède zéro, un ou seize paramètres de type, retourne toujours void. En Visual Basic, le comportement d'une `Action` est défini avec un `Sub`. L’exemple utilise une expression lambda pour créer le délégué, mais vous pouvez le créer d’autres façons. Pour plus d’informations, consultez [Expressions Lambda en PLINQ et la bibliothèque parallèle de tâches](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).  
+ Le troisième paramètre de cette surcharge de <xref:System.Threading.Tasks.Parallel.For%2A> est un délégué de type `Action<int>` en C# ou `Action(Of Integer)` en Visual Basic. Un délégué `Action`, qu'il possède zéro, un ou seize paramètres de type, retourne toujours void. En Visual Basic, le comportement d'une `Action` est défini avec un `Sub`. L’exemple utilise une expression lambda pour créer le délégué, mais vous pouvez le créer d’autres façons. Pour plus d’informations, consultez [Expressions lambda en PLINQ et dans la bibliothèque parallèle de tâches](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).  
   
 ## <a name="the-iteration-value"></a>Valeur d'itération  
  Le délégué accepte un seul paramètre d'entrée dont la valeur est l'itération actuelle. Cette valeur d'itération est fournie par le runtime et sa valeur de départ est l'index du premier élément du segment (partition) de la source qui est en cours de traitement sur le thread actuel.  
@@ -68,7 +71,7 @@ Cette rubrique contient deux exemples qui illustrent la méthode <xref:System.Th
   
 ## <a name="compiling-the-code"></a>Compilation du code  
   
--   Copiez et collez ce code dans un projet Visual Studio 2010.  
+-   Copiez et collez ce code dans un projet Visual Studio 2010.  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.Threading.Tasks.Parallel.For%2A>  

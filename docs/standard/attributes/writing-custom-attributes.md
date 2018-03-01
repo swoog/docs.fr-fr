@@ -22,18 +22,21 @@ helpviewer_keywords:
 - Inherited property
 - attribute classes, declaring
 ms.assetid: 97216f69-bde8-49fd-ac40-f18c500ef5dc
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0205edba221b833625becbe6a1f2fdda2f9409a2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d3fb814d6b458de90d684a3ac92e22a62e290a9a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="writing-custom-attributes"></a>Écriture des attributs personnalisés
-Pour concevoir vos propres attributs personnalisés, vous n’avez pas besoin de maîtriser les nombreux nouveaux concepts. Si vous êtes familiarisé avec la programmation orientée objet et savez concevoir des classes, vous possédez déjà la plupart des connaissances nécessaires. Attributs personnalisés sont essentiellement des classes traditionnelles qui dérivent directement ou indirectement de <xref:System.Attribute?displayProperty=nameWithType>. Tout comme les classes traditionnelles, les attributs personnalisés contiennent des méthodes qui stockent et récupèrent les données.  
+Pour concevoir vos propres attributs personnalisés, vous n’avez pas besoin de maîtriser les nombreux nouveaux concepts. Si vous êtes familiarisé avec la programmation orientée objet et savez concevoir des classes, vous possédez déjà la plupart des connaissances nécessaires. Les attributs personnalisés sont essentiellement des classes traditionnelles qui dérivent directement ou indirectement de <xref:System.Attribute?displayProperty=nameWithType>. Tout comme les classes traditionnelles, les attributs personnalisés contiennent des méthodes qui stockent et récupèrent les données.  
   
  Les principales étapes permettant de concevoir correctement des classes d’attributs personnalisés sont les suivantes :  
   
@@ -55,7 +58,7 @@ Pour concevoir vos propres attributs personnalisés, vous n’avez pas besoin de
  [!code-csharp[Conceptual.Attributes.Usage#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#5)]
  [!code-vb[Conceptual.Attributes.Usage#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#5)]  
   
- Le <xref:System.AttributeUsageAttribute?displayProperty=nameWithType> a trois membres qui sont importants pour la création d’attributs personnalisés : [AttributeTargets](#cpconwritingcustomattributesanchor1), [Inherited](#cpconwritingcustomattributesanchor2), et [AllowMultiple](#cpconwritingcustomattributesanchor3).  
+ <xref:System.AttributeUsageAttribute?displayProperty=nameWithType> possède trois membres importants pour la création d’attributs personnalisés : [AttributeTargets](#cpconwritingcustomattributesanchor1), [Inherited](#cpconwritingcustomattributesanchor2)et [AllowMultiple](#cpconwritingcustomattributesanchor3).  
   
 <a name="cpconwritingcustomattributesanchor1"></a>   
 ### <a name="attributetargets-member"></a>Membre AttributeTargets  
@@ -69,7 +72,7 @@ Pour concevoir vos propres attributs personnalisés, vous n’avez pas besoin de
   
 <a name="cpconwritingcustomattributesanchor2"></a>   
 ### <a name="inherited-property"></a>Propriété Inherited  
- Le <xref:System.AttributeUsageAttribute.Inherited%2A?displayProperty=nameWithType> propriété indique si votre attribut peut être hérité par les classes qui sont dérivées des classes auxquelles votre attribut est appliqué. Cette propriété reçoit un indicateur **true** (par défaut) ou **false** . Dans l’exemple suivant, la valeur `MyAttribute` par défaut de <xref:System.AttributeUsageAttribute.Inherited%2A> est **true**, tandis que la valeur `YourAttribute` de <xref:System.AttributeUsageAttribute.Inherited%2A> est **false**.  
+ La propriété <xref:System.AttributeUsageAttribute.Inherited%2A?displayProperty=nameWithType> indique si votre attribut peut être hérité par les classes qui sont dérivées des classes auxquelles votre attribut est appliqué. Cette propriété reçoit un indicateur **true** (par défaut) ou **false** . Dans l’exemple suivant, la valeur `MyAttribute` par défaut de <xref:System.AttributeUsageAttribute.Inherited%2A> est **true**, tandis que la valeur `YourAttribute` de <xref:System.AttributeUsageAttribute.Inherited%2A> est **false**.  
   
  [!code-cpp[Conceptual.Attributes.Usage#7](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#7)]
  [!code-csharp[Conceptual.Attributes.Usage#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#7)]
@@ -89,7 +92,7 @@ Pour concevoir vos propres attributs personnalisés, vous n’avez pas besoin de
   
 <a name="cpconwritingcustomattributesanchor3"></a>   
 ### <a name="allowmultiple-property"></a>Propriété AllowMultiple  
- Le <xref:System.AttributeUsageAttribute.AllowMultiple%2A?displayProperty=nameWithType> propriété indique si plusieurs instances de votre attribut peuvent exister sur un élément. Si la valeur est **true**, plusieurs instances sont autorisées, si la valeur est **false** (par défaut), une seule instance est autorisée.  
+ La propriété <xref:System.AttributeUsageAttribute.AllowMultiple%2A?displayProperty=nameWithType> indique si plusieurs instances de votre attribut peuvent exister sur un élément. Si la valeur est **true**, plusieurs instances sont autorisées, si la valeur est **false** (par défaut), une seule instance est autorisée.  
   
  Dans l’exemple suivant, la valeur `MyAttribute` par défaut de <xref:System.AttributeUsageAttribute.AllowMultiple%2A> est **true**, tandis que la valeur de `YourAttribute` est **false**.  
   

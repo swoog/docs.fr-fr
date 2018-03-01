@@ -16,19 +16,22 @@ helpviewer_keywords:
 - try/finally block
 - garbage collection, encapsulating resources
 ms.assetid: 81b2cdb5-c91a-4a31-9c83-eadc52da5cf0
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: fd78c2f99ca5c8ffe3c753e158ceba3e0c458c5b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 47ff64cab098425c5369773f792d586b65658d0f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="using-objects-that-implement-idisposable"></a>Utilisation d’objets implémentant IDisposable
 
-Garbage collector du common language runtime récupère la mémoire utilisée par les objets managés, mais les types qui utilisent les ressources non managées implémentent le <xref:System.IDisposable> interface pour permettre à la mémoire allouée à des ressources non managées à être récupéré. Une fois que vous avez fini d'utiliser un objet qui implémente <xref:System.IDisposable>, vous devez appeler l'implémentation de <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> de l'objet. Vous pouvez le faire de deux façons :  
+Le récupérateur de mémoire du Common Language Runtime libère la mémoire utilisée par les objets managés, mais les types qui utilisent des ressources non managées implémentent l'interface <xref:System.IDisposable> pour permettre à la mémoire allouée à ces ressources non managées d'être récupérée. Une fois que vous avez fini d'utiliser un objet qui implémente <xref:System.IDisposable>, vous devez appeler l'implémentation de <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> de l'objet. Vous pouvez le faire de deux façons :  
   
 * Avec l’instruction `using`C# ou l’instruction `Using`Visual Basic.  
   
@@ -48,7 +51,7 @@ Notez que, bien que la classe <xref:System.IO.StreamReader> implémente l'interf
 [!code-csharp[Conceptual.Disposable#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/using3.cs#3)]
 [!code-vb[Conceptual.Disposable#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/using3.vb#3)]  
   
-C# `using` instruction vous permet également d’acquérir plusieurs ressources dans une seule instruction, ce qui revient en interne imbriquée `using` instructions. L'exemple suivant instancie deux objets <xref:System.IO.StreamReader> pour lire le contenu de deux fichiers différents.  
+L’instruction `using` en C# vous permet d’acquérir plusieurs ressources dans une seule instruction, ce qui équivaut en interne à des instructions `using` imbriquées. L'exemple suivant instancie deux objets <xref:System.IO.StreamReader> pour lire le contenu de deux fichiers différents.  
   
 [!code-csharp[Conceptual.Disposable#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/using4.cs#4)]
 
@@ -60,15 +63,15 @@ Au lieu d’encapsuler un bloc `try/finally` dans une instruction `using`, vous 
   
 * Pour instancier un objet qui implémente <xref:System.IDisposable> dont la portée n'est pas locale au bloc dans lequel elle est déclarée.  
   
-L’exemple suivant est similaire à l’exemple précédent, sauf qu’elle utilise un `try/catch/finally` bloc pour instancier, utiliser et supprimer un <xref:System.IO.StreamReader> objet et de gérer les exceptions levées par le <xref:System.IO.StreamReader> constructeur et ses <xref:System.IO.StreamReader.ReadToEnd%2A> (méthode). Notez que le code du bloc `finally` vérifie que l'objet qui implémente <xref:System.IDisposable> n'est pas `null` avant d'appeler la méthode <xref:System.IDisposable.Dispose%2A>. La non-exécution de cette opération peut générer une <xref:System.NullReferenceException> au moment de l'exécution.  
+L'exemple suivant est similaire à l'exemple précédent, mais il utilise un bloc `try/catch/finally` pour instancier, utiliser et supprimer un objet <xref:System.IO.StreamReader>, ainsi que pour gérer les exceptions levées par le constructeur <xref:System.IO.StreamReader> et sa méthode <xref:System.IO.StreamReader.ReadToEnd%2A>. Notez que le code du bloc `finally` vérifie que l'objet qui implémente <xref:System.IDisposable> n'est pas `null` avant d'appeler la méthode <xref:System.IDisposable.Dispose%2A>. La non-exécution de cette opération peut générer une <xref:System.NullReferenceException> au moment de l'exécution.  
   
 [!code-csharp[Conceptual.Disposable#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/using5.cs#6)]
 [!code-vb[Conceptual.Disposable#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/using5.vb#6)]  
   
-Vous pouvez suivre ce modèle de base si vous choisissez d’implémenter ou devez implémenter un `try/finally` bloquer, car votre langage de programmation ne prend pas en charge un `using` instruction mais autorise les appels directs à la <xref:System.IDisposable.Dispose%2A> (méthode). 
+Vous pouvez suivre ce modèle de base si vous choisissez d’implémenter (ou que vous devez implémenter) un bloc `try/finally`, car votre langage de programmation ne prend pas en charge l’instruction `using`, mais autorise des appels directs à la méthode <xref:System.IDisposable.Dispose%2A>. 
   
 ## <a name="see-also"></a>Voir aussi
 
-[Nettoyage des ressources non managées](../../../docs/standard/garbage-collection/unmanaged.md)   
-[à l’aide de l’instruction (référence c#)](~/docs/csharp/language-reference/keywords/using-statement.md)   
-[À l’aide de l’instruction (Visual Basic)](~/docs/visual-basic/language-reference/statements/using-statement.md)
+[Nettoyage de ressources non managées](../../../docs/standard/garbage-collection/unmanaged.md)   
+[using, instruction (référence C#)](~/docs/csharp/language-reference/keywords/using-statement.md)   
+[Using, instruction (Visual Basic)](~/docs/visual-basic/language-reference/statements/using-statement.md)

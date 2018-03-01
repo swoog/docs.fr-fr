@@ -23,25 +23,28 @@ helpviewer_keywords:
 - locating directories in isolated storage file
 - storing data using isolated storage, finding files and directories
 ms.assetid: eb28458a-6161-4e7a-9ada-30ef93761b5c
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 656c390358b6f6a671cf3ef11ea7be75f897d21c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 8d460f07e7558fdf9190561b1cac4307767ff245
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-find-existing-files-and-directories-in-isolated-storage"></a>Comment : rechercher des fichiers et des répertoires existants dans un stockage isolé
-Pour rechercher un répertoire dans un stockage isolé, utilisez le <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A?displayProperty=nameWithType> (méthode). Cette méthode prend une chaîne qui représente un modèle de recherche. Vous pouvez utiliser le caractère unique ( ?) et plusieurs caractères (*) caractères génériques dans le modèle de recherche, mais les caractères génériques doivent apparaître dans la partie finale du nom. Par exemple, `directory1/*ect*` est une chaîne de recherche valide, mais `*ect*/directory2` n’est pas.  
+Pour rechercher un répertoire dans un stockage isolé, utilisez la méthode <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A?displayProperty=nameWithType>. Cette méthode prend une chaîne qui représente un modèle de recherche. Vous pouvez utiliser des caractères génériques à caractère unique (?) et à caractères multiples (*) dans le modèle de recherche, mais les caractères génériques doivent apparaître dans la partie finale du nom. Par exemple, `directory1/*ect*` est une chaîne de recherche valide, mais `*ect*/directory2` ne l’est pas.  
   
- Pour rechercher un fichier, utilisez le <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetFileNames%2A?displayProperty=nameWithType> (méthode). La restriction des caractères génériques dans des chaînes de recherche qui s’applique aux <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A> s’applique également aux <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetFileNames%2A>.  
+ Utilisez la méthode <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetFileNames%2A?displayProperty=nameWithType> pour rechercher un fichier. La restriction des caractères génériques dans des chaînes de recherche qui s’applique à <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A> s’applique également à <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetFileNames%2A>.  
   
- Aucune de ces méthodes est récursif ; la <xref:System.IO.IsolatedStorage.IsolatedStorageFile> classe ne fournit pas de méthode pour répertorier tous les répertoires ou fichiers de votre magasin. Toutefois, les méthodes récursives sont affichés dans l’exemple de code suivant.  
+ Aucune de ces méthodes n’est récursive ; la classe <xref:System.IO.IsolatedStorage.IsolatedStorageFile> ne fournit pas de méthode pour répertorier tous les répertoires ou fichiers de votre magasin. Toutefois, les méthodes récursives sont affichées dans l’exemple de code suivant.  
   
 ## <a name="example"></a>Exemple  
- L’exemple de code suivant illustre comment créer des fichiers et des répertoires dans un magasin isolé. Tout d’abord, un magasin isolé par utilisateur, de domaine et d’assembly est récupéré et placé dans le `isoStore` variable. Le <xref:System.IO.IsolatedStorage.IsolatedStorageFile.CreateDirectory%2A> méthode est utilisée pour définir quelques répertoires différents et le <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream.%23ctor%28System.String%2CSystem.IO.FileMode%2CSystem.IO.IsolatedStorage.IsolatedStorageFile%29> constructeur crée des fichiers dans ces répertoires. Le code parcourt ensuite les résultats de la `GetAllDirectories` (méthode). Cette méthode utilise <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A> pour rechercher tous les noms de répertoire dans le répertoire actif. Ces noms sont stockés dans un tableau, puis `GetAllDirectories` appelle, en passant dans chaque répertoire est détecté. Par conséquent, tous les noms de répertoire sont retournés dans un tableau. Ensuite, le code appelle la `GetAllFiles` (méthode). Cette méthode appelle `GetAllDirectories` pour connaître les noms de tous les répertoires, puis vérifie chaque répertoire pour les fichiers à l’aide de la <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetFileNames%2A> (méthode). Le résultat est retourné dans un tableau pour l’affichage.  
+ L’exemple de code suivant illustre comment créer des fichiers et des répertoires dans un magasin isolé. Tout d’abord, un magasin isolé pour l’utilisateur, le domaine et l’assembly est récupéré et placé dans la variable `isoStore`. La méthode <xref:System.IO.IsolatedStorage.IsolatedStorageFile.CreateDirectory%2A> est utilisée pour configurer quelques répertoires différents dans lesquels le constructeur <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream.%23ctor%28System.String%2CSystem.IO.FileMode%2CSystem.IO.IsolatedStorage.IsolatedStorageFile%29> crée des fichiers. Le code parcourt ensuite en boucle les résultats de la méthode `GetAllDirectories`. Cette méthode utilise <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A> pour rechercher tous les noms de répertoires dans le répertoire actif. Ces noms sont stockés dans un tableau, puis `GetAllDirectories` appelle lui-même en passant dans chaque répertoire détecté. Par conséquent, tous les noms de répertoires sont retournés dans un tableau. Ensuite, le code appelle la méthode `GetAllFiles`. Cette méthode appelle `GetAllDirectories` pour connaître les noms de tous les répertoires, puis recherche des fichiers dans chaque répertoire à l’aide de la méthode <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetFileNames%2A>. Le résultat est retourné dans un tableau pour y être affiché.  
   
  [!code-cpp[Conceptual.IsolatedStorage#9](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.isolatedstorage/cpp/source8.cpp#9)]
  [!code-csharp[Conceptual.IsolatedStorage#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source8.cs#9)]

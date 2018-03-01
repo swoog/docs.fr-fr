@@ -11,35 +11,39 @@ ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: PLINQ queries, sample data
+helpviewer_keywords:
+- PLINQ queries, sample data
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f0e94fec1d1390c68808c06a8ff23f52556c6f74
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4b1aaa6f3027283ff20088d6122f9b4ec4bb1111
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="plinq-data-sample"></a>Données PLINQ, exemple
-Cet exemple contient des exemples de données au format .csv, ainsi que des méthodes qui les transforment en collections en mémoire de clients, les produits, les commandes et les détails de la commande. Pour expérimenter davantage avec PLINQ, vous pouvez coller les exemples de code d’autres rubriques dans le code dans cette rubrique et l’appeler à partir de la `Main` (méthode). Vous pouvez également utiliser ces données avec vos propres requêtes PLINQ.  
+Cet exemple contient des exemples de données au format .csv ainsi que des méthodes qui les transforment en collections en mémoires de clients, de produits, de commandes et de détails des commandes. Pour expérimenter davantage avec PLINQ, vous pouvez coller des exemples de code d’autres rubriques dans le code de cette rubrique et l’appeler à partir de la méthode `Main`. Vous pouvez également utiliser ces données avec vos propres requêtes PLINQ.  
   
- Les données représentent un sous-ensemble de la base de données Northwind. Les enregistrements de clients cinquante (50) sont inclus, mais pas tous les champs. Un sous-ensemble de lignes dans les commandes et les données Order_Detail correspondantes pour chaque client est inclus. Tous les produits sont inclus.  
+ Les données représentent un sous-ensemble de la base de données Northwind. Cinquante (50) enregistrements de clients sont inclus, mais pas tous les champs. Un sous-ensemble de lignes dans les commandes et les données Order_Detail correspondantes pour chaque client sont inclus. Tous les produits sont inclus.  
   
 > [!NOTE]
->  Le jeu de données n’est pas assez grand pour démontrer que PLINQ est plus rapide que LINQ to Objects pour les requêtes qui contiennent simplement base `where` et `select` clauses. Pour observer augmente la vitesse de petits jeux de données tels que cela, utilisez les requêtes qui contiennent des opérations sollicitant sur chaque élément du jeu de données.  
+>  Le jeu de données n’est pas assez volumineux pour faire la démonstration que PLINQ est plus rapide que LINQ to Objects pour les requêtes qui contiennent uniquement des clauses `where` et `select` de base. Afin d’observer l’augmentation de vitesse pour les petits jeux de données comme celui-là, utilisez des requêtes qui contiennent des opérations onéreuses en calcul sur chaque élément du jeu de données.  
   
 ### <a name="to-set-up-this-sample"></a>Pour installer cet exemple  
   
-1.  Créez un projet d’application console Visual Basic ou Visual c#.  
+1.  Créez un projet d'application console Visual Basic ou Visual C#.  
   
-2.  Remplacez le contenu du Module1.vb ou Program.cs en utilisant le code qui suit ces étapes.  
+2.  Remplacez les contenu de Module1.vb ou de Program.cs en utilisant le code qui suit ces étapes.  
   
-3.  Dans le menu **Projet** , cliquez sur **Ajouter un nouvel élément**. Sélectionnez **fichier texte** puis cliquez sur **OK**. Copier les données dans cette rubrique et collez-le dans le nouveau fichier texte. Sur le **fichier** menu, cliquez sur **enregistrer**, nommez le fichier Plinqdata.csv, puis enregistrez-le dans le dossier qui contient vos fichiers de code source.  
+3.  Dans le menu **Projet** , cliquez sur **Ajouter un nouvel élément**. Sélectionnez **Fichier texte**, puis cliquez sur **OK**. Copiez les données dans cette rubrique et collez-les dans le nouveau fichier texte. Sur le menu **Fichier**, cliquez sur **Enregistrer**, nommez le fichier Plinqdata.csv, puis enregistrez-le dans le dossier qui contient vos fichiers de code source.  
   
-4.  Appuyez sur F5 pour vérifier que le projet est généré et s’exécute correctement. La sortie suivante doit être affichée dans la fenêtre de console.  
+4.  Appuyez sur F5 pour vérifier que le projet est créé et exécuté correctement. La sortie mentionnée plus bas devrait s’afficher dans la fenêtre de console.  
   
     ```  
     Customer count: 50  

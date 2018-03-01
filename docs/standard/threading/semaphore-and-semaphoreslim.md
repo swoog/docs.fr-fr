@@ -16,15 +16,18 @@ helpviewer_keywords:
 - SemaphoreSlim class, about SemaphoreSlim class
 - threading [.NET Framework], Semaphore class
 ms.assetid: 7722a333-b974-47a2-a7c0-f09097fb644e
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 039dee4df1a6d06fa1833eae077817ff5eca3ea3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3c7d196b54a831c807b7181c1c810c3e78a463a2
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="semaphore-and-semaphoreslim"></a>Semaphore et SemaphoreSlim
 La classe <xref:System.Threading.Semaphore?displayProperty=nameWithType> représente un sémaphore local ou nommé (visible à l'échelle du système). Il s'agit d'un wrapper mince entourant l'objet sémaphore Win32. Les sémaphores Win32 sont des sémaphores de comptage qui peuvent être utilisés pour contrôler l'accès à un pool de ressources.  
@@ -39,7 +42,7 @@ La classe <xref:System.Threading.Semaphore?displayProperty=nameWithType> représ
 ### <a name="semaphores-and-thread-identity"></a>Sémaphores et identité de thread  
  Les deux types de sémaphores n'appliquent pas l'identité de thread sur les appels aux méthodes <xref:System.Threading.WaitHandle.WaitOne%2A>, <xref:System.Threading.SemaphoreSlim.Wait%2A>, <xref:System.Threading.Semaphore.Release%2A> et <xref:System.Threading.SemaphoreSlim.Release%2A?displayProperty=nameWithType>. Par exemple, un scénario classique d'utilisation des sémaphores implique un thread producteur et un thread consommateur, avec un thread incrémentant le nombre du sémaphore et l'autre le décrémentant.  
   
- Il est de la responsabilité du programmeur de garantir qu'un thread ne libère pas le sémaphore trop souvent. Supposons, par exemple, qu'un sémaphore ait un nombre maximal égal à deux et que le thread A et le thread B entrent dans le sémaphore. Si une erreur de programmation dans le thread B le conduit à appeler `Release` deux fois, les deux appels aboutiront. Le compteur du sémaphore est plein et lorsque le thread A appellera `Release`, un <xref:System.Threading.SemaphoreFullException> est levée.  
+ Il est de la responsabilité du programmeur de garantir qu'un thread ne libère pas le sémaphore trop souvent. Supposons, par exemple, qu'un sémaphore ait un nombre maximal égal à deux et que le thread A et le thread B entrent dans le sémaphore. Si une erreur de programmation dans le thread B le conduit à appeler `Release` deux fois, les deux appels aboutiront. Le nombre maximal du sémaphore sera alors atteint, et quand le thread A appellera `Release`, une exception <xref:System.Threading.SemaphoreFullException> sera levée.  
   
 ## <a name="named-semaphores"></a>Sémaphores nommés  
  Le système d'exploitation Windows permet d'attribuer un nom aux sémaphores. Un sémaphore nommé est disponible à l'échelle du système. C'est-à-dire qu'une fois créé, le sémaphore nommé est visible par tous les threads de tous les processus. Par conséquent, un sémaphore nommé peut être utilisé pour synchroniser aussi bien des activités de processus que des threads.  

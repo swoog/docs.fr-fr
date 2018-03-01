@@ -1,5 +1,5 @@
 ---
-title: Tableaux de Conversion de type dans .NET
+title: Table de conversion de type dans .NET
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -18,17 +18,20 @@ helpviewer_keywords:
 - tables [.NET Framework], type conversions
 - data types [.NET Framework], converting
 ms.assetid: 0ea65c59-85eb-4a52-94ca-c36d3bd13058
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 327469f9a151b6ef7e1c42f6669c0a9dae7016fd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e741de47fec5f0ed607bba33b963d449c5c51cce
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="type-conversion-tables-in-net"></a>Tableaux de Conversion de type dans .NET
+# <a name="type-conversion-tables-in-net"></a>Table de conversion de type dans .NET
 Une conversion étendue se produit quand une valeur d’un type est convertie en un autre type de taille égale ou supérieure. Une conversion restrictive se produit quand une valeur d’un type est convertie en une valeur d’un autre type de taille inférieure. Les tableaux de cette rubrique illustrent les comportements propres aux deux types de conversion.  
   
 ## <a name="widening-conversions"></a>conversions étendues  
@@ -47,7 +50,7 @@ Une conversion étendue se produit quand une valeur d’un type est convertie en
 |<xref:System.UInt64>|<xref:System.Decimal>|  
 |<xref:System.Single>|<xref:System.Double>|  
   
- Certaines conversions étendues en valeurs <xref:System.Single> ou <xref:System.Double> peut entraîner une perte de précision. Le tableau suivant décrit les conversions étendues qui entraînent parfois une perte d’informations.  
+ Certaines conversions étendues à <xref:System.Single> ou <xref:System.Double> peuvent entraîner une perte de précision. Le tableau suivant décrit les conversions étendues qui entraînent parfois une perte d’informations.  
   
 |Type|Peut être converti en|  
 |----------|-------------------------|  
@@ -58,11 +61,11 @@ Une conversion étendue se produit quand une valeur d’un type est convertie en
 |<xref:System.Decimal>|<xref:System.Single>, <xref:System.Double>|  
   
 ## <a name="narrowing-conversions"></a>conversions restrictives  
- Une conversion restrictive <xref:System.Single> ou <xref:System.Double> peut entraîner une perte d’informations. Si le type cible ne peut pas exprimer correctement la grandeur de la source, le type résultant est défini sur la constante `PositiveInfinity` ou `NegativeInfinity`. `PositiveInfinity`résultat de la division d’un nombre positif par zéro et est également retourné lorsque la valeur d’un <xref:System.Single> ou <xref:System.Double> dépasse la valeur de la `MaxValue` champ. `NegativeInfinity`résultat de la division d’un nombre négatif par zéro et est également retourné lorsque la valeur d’un <xref:System.Single> ou <xref:System.Double> tombe en dessous de la valeur de la `MinValue` champ. Une conversion d’un <xref:System.Double> à un <xref:System.Single> risque de `PositiveInfinity` ou `NegativeInfinity`.  
+ Une conversion restrictive en <xref:System.Single> ou <xref:System.Double> peut entraîner une perte d’informations. Si le type cible ne peut pas exprimer correctement la grandeur de la source, le type résultant est défini sur la constante `PositiveInfinity` ou `NegativeInfinity`. `PositiveInfinity` est obtenu en divisant un nombre positif par zéro et est également retourné quand la valeur d’un <xref:System.Single> ou d’un <xref:System.Double> dépasse la valeur du champ `MaxValue`. `NegativeInfinity` est obtenu en divisant un nombre négatif par zéro et est également retourné quand la valeur d’un <xref:System.Single> ou d’un <xref:System.Double> descend en dessous de la valeur du champ `MinValue`. Une conversion d’un <xref:System.Double> en <xref:System.Single> peut avoir pour résultat `PositiveInfinity` ou `NegativeInfinity`.  
   
- Une conversion restrictive peut également entraîner une perte d’informations pour d’autres types de données. Toutefois, un <xref:System.OverflowException> est levée si la valeur d’un type qui est en cours de conversion se situe en dehors de la plage spécifiée par le type de cible `MaxValue` et `MinValue` champs, ainsi que la conversion est vérifiée par le runtime pour vous assurer que la valeur de la cible type ne dépasse pas son `MaxValue` ou `MinValue`. Les conversions qui sont effectuées avec la <xref:System.Convert?displayProperty=nameWithType> classe sont toujours vérifiées de cette manière.  
+ Une conversion restrictive peut également entraîner une perte d’informations pour d’autres types de données. Toutefois, une <xref:System.OverflowException>est levée si la valeur d’un type en cours de conversion se situe en dehors de la plage spécifiée par les champs `MaxValue` et `MinValue` du type cible, et la conversion est vérifiée par le runtime pour garantir que la valeur du type cible ne dépasse pas sa valeur `MaxValue` ou `MinValue`. Les conversions effectuées avec la classe <xref:System.Convert?displayProperty=nameWithType> sont toujours vérifiées de cette façon.  
   
- Le tableau suivant répertorie les conversions qui lèvent une <xref:System.OverflowException> à l’aide de <xref:System.Convert?displayProperty=nameWithType> ou toute conversion contrôlée si le type converti se situe en dehors de la plage définie du type résultant.  
+ Le tableau suivant répertorie les conversions qui lèvent une <xref:System.OverflowException> à l’aide de <xref:System.Convert?displayProperty=nameWithType> ou de toute conversion contrôlée si la valeur du type converti se situe en dehors de la plage définie du type résultant.  
   
 |Type|Peut être converti en|  
 |----------|-------------------------|  

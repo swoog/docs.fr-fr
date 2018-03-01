@@ -14,15 +14,18 @@ helpviewer_keywords:
 - threading [.NET Framework],exceptions in managed threads
 - managed threading
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ebb5559d300bb3db34fe640e87eb8b9e67931561
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4f68a7aebdb1625b149287d70fd91c2108a658b9
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="exceptions-in-managed-threads"></a>Exceptions dans les threads managés
 À partir du .NET Framework version 2.0, le common language runtime permet à la plupart des exceptions non prises en charge dans les threads de poursuivre naturellement. Dans la plupart des cas, cela signifie que l’exception non prise en charge provoque l’arrêt de l’application.  
@@ -32,9 +35,9 @@ ms.lasthandoff: 10/18/2017
   
  Le common language runtime représente une protection pour certaines exceptions non prises en charge qui sont utilisées pour contrôler le flux du programme :  
   
--   A <xref:System.Threading.ThreadAbortException> est levée dans un thread car <xref:System.Threading.Thread.Abort%2A> a été appelée.  
+-   Une <xref:System.Threading.ThreadAbortException> est levée dans un thread, car <xref:System.Threading.Thread.Abort%2A> a été appelé.  
   
--   Un <xref:System.AppDomainUnloadedException> est levée dans un thread, car le domaine d’application dans lequel le thread s’exécute est en cours de déchargement.  
+-   Une <xref:System.AppDomainUnloadedException> est levée dans un thread, car le domaine d’application dans lequel le thread s’exécute est en cours de déchargement.  
   
 -   Le common language runtime ou un processus hôte met fin au thread en levant une exception interne.  
   
@@ -56,7 +59,7 @@ ms.lasthandoff: 10/18/2017
   
 -   Il n’existe pas d’exceptions non prises en charge sur un thread de pool de threads. Lorsqu’une tâche lève une exception qu’elle ne prend pas en charge, le runtime imprime l’arborescence des appels de procédure de l’exception dans la console, puis renvoie le thread au pool de threads.  
   
--   Il n’existe pas comme une exception non gérée sur un thread créé avec la <xref:System.Threading.Thread.Start%2A> méthode de la <xref:System.Threading.Thread> classe. Lorsque le code qui s’exécute sur un tel thread lève une exception qu’elle ne prend pas en charge, le runtime imprime l’arborescence des appels de procédure de l’exception dans la console, puis arrête correctement le thread.  
+-   Il n’existe pas d’exceptions non prises en charge sur un thread créé avec la méthode <xref:System.Threading.Thread.Start%2A> de la classe <xref:System.Threading.Thread>. Lorsque le code qui s’exécute sur un tel thread lève une exception qu’elle ne prend pas en charge, le runtime imprime l’arborescence des appels de procédure de l’exception dans la console, puis arrête correctement le thread.  
   
 -   Il n’existe pas d’exceptions non prises en charge sur le thread du finaliseur. Lorsqu’un finaliseur lève une exception qu’elle ne prend pas en charge, le runtime imprime l’arborescence des appels de procédure de l’exception dans la console, puis permet au thread du finaliseur de reprendre l’exécution des finaliseurs.  
   
@@ -69,7 +72,7 @@ ms.lasthandoff: 10/18/2017
   
 -   Restructurer le code de façon que le thread s’arrête normalement à la réception d’un signal.  
   
--   Utilisez la <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> méthode pour abandonner le thread.  
+-   Utilisez la méthode <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> pour abandonner le thread.  
   
 -   Si un thread doit être arrêté pour permettre l’arrêt du processus, faire du thread un thread d’arrière-plan afin qu’il s’arrête automatiquement à la sortie du processus.  
   

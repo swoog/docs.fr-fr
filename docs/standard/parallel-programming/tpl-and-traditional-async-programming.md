@@ -11,24 +11,28 @@ ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: tasks, with other asynchronous models
+helpviewer_keywords:
+- tasks, with other asynchronous models
 ms.assetid: e7b31170-a156-433f-9f26-b1fc7cd1776f
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0f29ca819fa7a59edeb105720d74a25512e95bdc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 50c4f9cfeb135f1046fbb427585897ca99248afd
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="tpl-and-traditional-net-framework-asynchronous-programming"></a>Bibliothèque parallèle de tâches (TPL) et programmation asynchrone .NET Framework
 Le .NET Framework fournit les deux modèles standard suivants pour l’exécution d’opérations asynchrones liées aux E/S et orientées calculs :  
   
 -   Le modèle de programmation asynchrone, dans lequel les opérations asynchrones sont représentées par une paire de méthodes Begin/End telles que <xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType> et <xref:System.IO.Stream.EndRead%2A?displayProperty=nameWithType>.  
   
--   Basé sur des événements asynchrones (EAP), dans lequel les opérations asynchrones sont représentées par une paire méthode/événement nommés *NomOpération*Async et *NomOpération*Completed, par exemple, <xref:System.Net.WebClient.DownloadStringAsync%2A?displayProperty=nameWithType> et <xref:System.Net.WebClient.DownloadStringCompleted?displayProperty=nameWithType>. (Le modèle asynchrone basé sur des événements a été introduit avec le .NET Framework version 2.0).  
+-   Le modèle asynchrone basé sur des événements, dans lequel les opérations asynchrones sont représentées par une paire méthode/événement et nommées *OperationName*Async et *OperationName* Completed, par exemple, <xref:System.Net.WebClient.DownloadStringAsync%2A?displayProperty=nameWithType> et <xref:System.Net.WebClient.DownloadStringCompleted?displayProperty=nameWithType>. (Le modèle asynchrone basé sur des événements a été introduit avec le .NET Framework version 2.0).  
   
  La bibliothèque parallèle de tâches peut être utilisée de plusieurs façons conjointement à l'un ou l'autre des modèles asynchrones. Vous pouvez exposer à la fois les opérations de modèle de programmation asynchrone et de modèle asynchrone basé sur des événements en tant que Tâches aux consommateurs de la bibliothèque, ou bien exposer les modèles de programmation asynchrone et utiliser des objets Task pour les implémenter en interne. Dans les deux scénarios, en utilisant des objets Task, vous pouvez simplifier le code et bénéficier des fonctionnalités utiles suivantes :  
   
@@ -110,7 +114,7 @@ Le .NET Framework fournit les deux modèles standard suivants pour l’exécutio
  [!code-csharp[FromAsync#10](../../../samples/snippets/csharp/VS_Snippets_Misc/fromasync/cs/snippet10.cs#10)]
  [!code-vb[FromAsync#10](../../../samples/snippets/visualbasic/VS_Snippets_Misc/fromasync/vb/snippet10.vb#10)]  
   
- Pour un exemple plus complet, incluant la gestion des exceptions et montre comment appeler la méthode depuis le code client, consultez [Comment : encapsuler des modèles EAP dans une tâche](../../../docs/standard/parallel-programming/how-to-wrap-eap-patterns-in-a-task.md).  
+ Pour obtenir un exemple plus complet incluant une gestion supplémentaire des exceptions et indiquant comment appeler la méthode depuis le code client, consultez [Guide pratique pour exposer des modèles EAP dans une tâche](../../../docs/standard/parallel-programming/how-to-wrap-eap-patterns-in-a-task.md).  
   
  Souvenez-vous que toute tâche créée par un <xref:System.Threading.Tasks.TaskCompletionSource%601> sera lancée par ce TaskCompletionSource et que le code utilisateur ne doit donc pas appeler la méthode Start dans cette tâche.  
   
@@ -123,7 +127,7 @@ Le .NET Framework fournit les deux modèles standard suivants pour l’exécutio
  [!code-vb[FromAsync#09](../../../samples/snippets/visualbasic/VS_Snippets_Misc/fromasync/vb/module1.vb#09)]  
   
 ## <a name="using-the-streamextensions-sample-code"></a>Utilisation de l'exemple de code StreamExtensions  
- Fichier le Streamextensions.cs, dans [exemples de programmation parallèle avec .NET Framework 4](http://go.microsoft.com/fwlink/?LinkID=165717) sur le site Web MSDN, contient plusieurs implémentations de référence qui utilisent des objets Task pour les fichiers asynchrones et e/s réseau.  
+ Le fichier Streamextensions.cs, dans [Exemples de programmation parallèle avec .NET Framework 4](http://go.microsoft.com/fwlink/?LinkID=165717) sur le site web MSDN, contient plusieurs implémentations de référence qui utilisent des objets de la tâche pour les opérations d’E/S réseau ou de fichier asynchrones.  
   
 ## <a name="see-also"></a>Voir aussi  
  [La bibliothèque parallèle de tâches](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)

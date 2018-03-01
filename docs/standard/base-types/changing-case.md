@@ -19,27 +19,30 @@ helpviewer_keywords:
 - uppercase
 - lowercase
 ms.assetid: 6805f81b-e9ad-4387-9f4c-b9bdb21b87c0
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8b03dec350d38d15faaa6a0afc6a1f2c31d5c58f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a3d845f53238f3b5b1744c13de9800e0d8f65dbc
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="changing-case-in-net"></a>Changement de casse dans .NET
 Si vous écrivez une application qui accepte l'entrée d'un utilisateur, vous ne pouvez jamais être sûr de la casse qu'il utilisera pour entrer les données. Souvent, vous voulez que les chaînes aient une casse cohérente, en particulier si vous les affichez dans l'interface utilisateur. Le tableau suivant décrit trois méthodes de changement de la casse : Les deux premières méthodes fournissent une surcharge qui accepte une culture.  
   
-|Nom de la méthode|Utilisation|  
+|Nom de la méthode|Utilisez|  
 |-----------------|---------|  
 |<xref:System.String.ToUpper%2A?displayProperty=nameWithType>|Convertit tous les caractères d'une chaîne en majuscules.|  
 |<xref:System.String.ToLower%2A?displayProperty=nameWithType>|Convertit tous les caractères d'une chaîne en minuscules.|  
 |<xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=nameWithType>|Convertit une chaîne en une casse avec la première lettre des mots en majuscule.|  
   
 > [!WARNING]
->  Notez que les méthodes <xref:System.String.ToUpper%2A?displayProperty=nameWithType> et <xref:System.String.ToLower%2A?displayProperty=nameWithType> ne doivent pas être utilisées pour convertir des chaînes pour les comparer ou pour tester leur égalité. Pour plus d’informations, consultez la [comparaison de chaînes de casse mixte](#Comparing) section.  
+>  Notez que les méthodes <xref:System.String.ToUpper%2A?displayProperty=nameWithType> et <xref:System.String.ToLower%2A?displayProperty=nameWithType> ne doivent pas être utilisées pour convertir des chaînes pour les comparer ou pour tester leur égalité. Pour plus d'informations, consultez la section [Comparaison de chaînes de casse mixte](#Comparing).  
   
 <a name="Comparing"></a>   
 ## <a name="comparing-strings-of-mixed-case"></a>Comparaison de chaînes de casse mixte  
@@ -55,7 +58,7 @@ Si vous écrivez une application qui accepte l'entrée d'un utilisateur, vous ne
  [!code-csharp[Strings.ChangingCase#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.ChangingCase/cs/Example.cs#1)]
  [!code-vb[Strings.ChangingCase#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.ChangingCase/vb/Example.vb#1)]  
   
- L'exemple précédent est par défaut dépendant de la culture. Il applique les conventions de casse de la culture actuelle. Pour effectuer un changement de casse de la culture ou appliquer les conventions de casse d’une culture particulière, utilisez la <xref:System.String.ToUpper%28System.Globalization.CultureInfo%29?displayProperty=nameWithType> surcharge de méthode et fournir une valeur de <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> ou un <xref:System.Globalization.CultureInfo?displayProperty=nameWithType> objet qui représente la culture spécifiée pour le *culture* paramètre. Pour obtenir un exemple qui montre comment utiliser le <xref:System.String.ToUpper%2A> méthode pour effectuer un changement de casse de la culture, consultez [réalisation de changements de casse indépendants de la Culture](../../../docs/standard/globalization-localization/performing-culture-insensitive-case-changes.md).  
+ L'exemple précédent est par défaut dépendant de la culture. Il applique les conventions de casse de la culture actuelle. Pour effectuer un changement de casse indépendant de la culture ou appliquer les conventions de casse d'une culture particulière, utilisez la surcharge de la méthode <xref:System.String.ToUpper%28System.Globalization.CultureInfo%29?displayProperty=nameWithType> et spécifiez une valeur <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> ou un objet <xref:System.Globalization.CultureInfo?displayProperty=nameWithType> qui représente la culture spécifiée pour le paramètre *culture*. Pour un exemple montrant comment utiliser la méthode <xref:System.String.ToUpper%2A> pour effectuer un changement de casse indépendant de la culture, consultez [Réalisation de changements de casse indépendants de la culture](../../../docs/standard/globalization-localization/performing-culture-insensitive-case-changes.md).  
   
 ## <a name="tolower"></a>ToLower  
  La méthode <xref:System.String.ToLower%2A?displayProperty=nameWithType> est similaire à la méthode précédente, mais elle convertit tous les caractères d'une chaîne en minuscules. L’exemple suivant convertit la chaîne « Hello World! » en minuscules.  
@@ -63,7 +66,7 @@ Si vous écrivez une application qui accepte l'entrée d'un utilisateur, vous ne
  [!code-csharp[Strings.ChangingCase#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.ChangingCase/cs/Example.cs#2)]
  [!code-vb[Strings.ChangingCase#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.ChangingCase/vb/Example.vb#2)]  
   
- L'exemple précédent est par défaut dépendant de la culture. Il applique les conventions de casse de la culture actuelle. Pour effectuer un changement de casse de la culture ou appliquer les conventions de casse d’une culture particulière, utilisez la <xref:System.String.ToLower%28System.Globalization.CultureInfo%29?displayProperty=nameWithType> surcharge de méthode et fournir une valeur de <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> ou un <xref:System.Globalization.CultureInfo?displayProperty=nameWithType> objet qui représente la culture spécifiée pour le *culture* paramètre. Pour obtenir un exemple qui montre comment utiliser le <xref:System.String.ToLower%28System.Globalization.CultureInfo%29> méthode pour effectuer un changement de casse de la culture, consultez [réalisation de changements de casse indépendants de la Culture](../../../docs/standard/globalization-localization/performing-culture-insensitive-case-changes.md).  
+ L'exemple précédent est par défaut dépendant de la culture. Il applique les conventions de casse de la culture actuelle. Pour effectuer un changement de casse indépendant de la culture ou appliquer les conventions de casse d'une culture particulière, utilisez la surcharge de la méthode <xref:System.String.ToLower%28System.Globalization.CultureInfo%29?displayProperty=nameWithType> et spécifiez une valeur <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> ou un objet <xref:System.Globalization.CultureInfo?displayProperty=nameWithType> qui représente la culture spécifiée pour le paramètre *culture*. Pour un exemple montrant comment utiliser la méthode <xref:System.String.ToLower%28System.Globalization.CultureInfo%29> pour effectuer un changement de casse indépendant de la culture, consultez [Réalisation de changements de casse indépendants de la culture](../../../docs/standard/globalization-localization/performing-culture-insensitive-case-changes.md).  
   
 ## <a name="totitlecase"></a>ToTitleCase  
  La méthode <xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=nameWithType> convertit le premier caractère de chaque mot en majuscules et les autres caractères en minuscules. Cependant, les mots qui sont entièrement en majuscules sont supposés être des acronymes et ne sont pas convertis.  
