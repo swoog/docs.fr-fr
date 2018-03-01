@@ -2,11 +2,13 @@
 title: "Argument &#39; &lt;nom_argument&gt;&#39; doit être supérieur à 0 ou égal à -1"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrArgument_MinusOneOrGTZero1
+f1_keywords:
+- vbrArgument_MinusOneOrGTZero1
 ms.assetid: 22c6bf5f-5194-43ec-8a8c-88f781801927
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 9c1c0c5632dd11456da231b5afb6bea80598b9b4
