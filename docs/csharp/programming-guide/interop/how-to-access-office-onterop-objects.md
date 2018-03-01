@@ -2,7 +2,8 @@
 title: "Guide pratique pour accéder aux objets Office Interop à l’aide des fonctionnalités Visual C# (Guide de programmation C#)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - optional parameters [C#], Office programming
@@ -12,14 +13,14 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 25e83195d5f0d8a49e402a5a32e61940960b052a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 751e8240c9385f516315ff3b53221d1e1348ae58
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>Guide pratique pour accéder aux objets Office Interop à l’aide des fonctionnalités Visual C# (Guide de programmation C#)
 Visual C# offre des fonctionnalités qui simplifient l’accès aux objets d’API Office. Les nouvelles fonctionnalités incluent les arguments nommés et les arguments facultatifs, un nouveau type appelé `dynamic` et la possibilité de passer des arguments aux paramètres de référence dans les méthodes COM comme s'il s'agissait de paramètres de valeur.  
@@ -80,7 +81,7 @@ Visual C# offre des fonctionnalités qui simplifient l’accès aux objets d’
   
 1.  Ajoutez la méthode suivante à la classe `Program` pour définir une feuille de calcul Excel.  
   
-     La méthode [Add](http://go.microsoft.com/fwlink/?LinkId=210910) a un paramètre facultatif qui permet de spécifier un modèle particulier. Les paramètres optionnels, introduits dans [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], vous permettent d'omettre l'argument du paramètre, si vous souhaitez utiliser la valeur par défaut de ce dernier. Dans la mesure où aucun argument n'est envoyé dans le code suivant, `Add` utilise le modèle par défaut et crée un classeur. L'instruction équivalente dans les versions antérieures de C# nécessite un argument d'espace réservé : `ExcelApp.Workbooks.Add(Type.Missing)`.  
+     La méthode [Add](https://msdn.microsoft.com/library/microsoft.office.interop.excel.workbooks.add.aspx) a un paramètre facultatif qui permet de spécifier un modèle particulier. Les paramètres optionnels, introduits dans [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], vous permettent d'omettre l'argument du paramètre, si vous souhaitez utiliser la valeur par défaut de ce dernier. Dans la mesure où aucun argument n'est envoyé dans le code suivant, `Add` utilise le modèle par défaut et crée un classeur. L'instruction équivalente dans les versions antérieures de C# nécessite un argument d'espace réservé : `ExcelApp.Workbooks.Add(Type.Missing)`.  
   
      [!code-csharp[csProgGuideOfficeHowTo#4](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_4.cs)]  
   
@@ -96,7 +97,7 @@ Visual C# offre des fonctionnalités qui simplifient l’accès aux objets d’
   
      [!code-csharp[csProgGuideOfficeHowTo#13](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_7.cs)]  
   
-     Les versions antérieures de C# nécessitent un cast explicite pour ces opérations, parce que `ExcelApp.Columns[1]` retourne un `Object` et que `AutoFit` est une méthode [Range](http://go.microsoft.com/fwlink/?LinkId=210911) Excel. Les lignes suivantes illustrent le cast.  
+     Les versions antérieures de C# nécessitent un cast explicite pour ces opérations, parce que `ExcelApp.Columns[1]` retourne un `Object` et que `AutoFit` est une méthode [Range](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range.aspx) Excel. Les lignes suivantes illustrent le cast.  
   
      [!code-csharp[csProgGuideOfficeHowTo#14](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_8.cs)]  
   
@@ -116,7 +117,7 @@ Visual C# offre des fonctionnalités qui simplifient l’accès aux objets d’
   
 1.  Pour illustrer d'autres façons grâce auxquelles [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], ainsi que les versions ultérieures, améliore la programmation Office, le code suivant ouvre une application Word et crée une icône liée à la feuille de calcul Excel.  
   
-     Collez la méthode `CreateIconInWordDoc`, fournie ultérieurement dans cette étape, dans la classe `Program`. `CreateIconInWordDoc` utilise des arguments nommés et facultatifs pour réduire la complexité des appels de méthode à [Add](http://go.microsoft.com/fwlink/?LinkId=210937) et [PasteSpecial](http://go.microsoft.com/fwlink/?LinkId=147099). Ces appels incorporent deux autres nouvelles fonctionnalités introduites dans [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], qui simplifient les appels aux méthodes COM comportant des paramètres de référence. Premièrement, vous pouvez envoyer des arguments aux paramètres de référence comme s'il s'agissait de paramètres de valeur. Autrement dit, vous pouvez envoyer les valeurs directement, sans créer une variable pour chaque paramètre de référence. Le compilateur génère des variables temporaires pour stocker les valeurs d'argument et les ignore lors du retour de l'appel. Ensuite, vous pouvez omettre le mot clé `ref` dans la liste d'arguments.  
+     Collez la méthode `CreateIconInWordDoc`, fournie ultérieurement dans cette étape, dans la classe `Program`. `CreateIconInWordDoc` utilise des arguments nommés et facultatifs pour réduire la complexité des appels de méthode à [Add](https://msdn.microsoft.com/library/microsoft.office.interop.word.documents.add.aspx) et [PasteSpecial](https://msdn.microsoft.com/library/microsoft.office.interop.word.selection.pastespecial.aspx). Ces appels incorporent deux autres nouvelles fonctionnalités introduites dans [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], qui simplifient les appels aux méthodes COM comportant des paramètres de référence. Premièrement, vous pouvez envoyer des arguments aux paramètres de référence comme s'il s'agissait de paramètres de valeur. Autrement dit, vous pouvez envoyer les valeurs directement, sans créer une variable pour chaque paramètre de référence. Le compilateur génère des variables temporaires pour stocker les valeurs d'argument et les ignore lors du retour de l'appel. Ensuite, vous pouvez omettre le mot clé `ref` dans la liste d'arguments.  
   
      La méthode `Add` comporte quatre paramètres de référence, tous facultatifs. Dans [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], ou versions ultérieures, vous pouvez omettre les arguments de tout ou partie des paramètres si vous voulez utiliser leur valeur par défaut. Dans [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] et versions antérieures, un argument doit être fourni pour chaque paramètre et l'argument doit être une variable, car les paramètres sont des paramètres de référence.  
   
@@ -162,11 +163,11 @@ Visual C# offre des fonctionnalités qui simplifient l’accès aux objets d’
   
      [!code-csharp[csProgGuideOfficeHowTo#15](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_14.cs)]  
   
-     La méthode [AutoFormat](http://go.microsoft.com/fwlink/?LinkId=210948) comporte sept paramètres de valeur, tous facultatifs. Les arguments nommés et les arguments facultatifs vous permettent de fournir des arguments pour tout ou partie des paramètres, voire pour aucun. Dans l'instruction précédente, un argument est fourni pour un seul des paramètres, `Format`. Comme `Format` est le premier paramètre dans la liste des paramètres, vous n'avez pas à fournir le nom du paramètre. Cependant, l'instruction peut être plus facile à comprendre si le nom du paramètre est inclus, comme illustré dans le code suivant.  
+     La méthode [AutoFormat](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range.autoformat.aspx) comporte sept paramètres de valeur, tous facultatifs. Les arguments nommés et les arguments facultatifs vous permettent de fournir des arguments pour tout ou partie des paramètres, voire pour aucun. Dans l'instruction précédente, un argument est fourni pour un seul des paramètres, `Format`. Comme `Format` est le premier paramètre dans la liste des paramètres, vous n'avez pas à fournir le nom du paramètre. Cependant, l'instruction peut être plus facile à comprendre si le nom du paramètre est inclus, comme illustré dans le code suivant.  
   
      [!code-csharp[csProgGuideOfficeHowTo#16](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_15.cs)]  
   
-2.  Appuyez sur CTRL+F5 pour afficher le résultat. D’autres formats sont répertoriés dans l’énumération [XlRangeAutoFormat](http://go.microsoft.com/fwlink/?LinkId=210967).  
+2.  Appuyez sur CTRL+F5 pour afficher le résultat. D’autres formats sont répertoriés dans l’énumération [XlRangeAutoFormat](https://msdn.microsoft.com/library/microsoft.office.interop.excel.xlrangeautoformat.aspx).  
   
 3.  Comparez l'instruction de l'étape 1 au code suivant, qui indique les arguments requis dans [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] ou versions antérieures.  
   

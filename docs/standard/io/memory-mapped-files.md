@@ -15,60 +15,63 @@ helpviewer_keywords:
 - memory-mapped files
 - inter-process communiation
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 2602d431aada7b3e0ee226eed319903492022ae9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 23755f7b76e8cc050df8529852af9bf151472f72
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="memory-mapped-files"></a>Fichiers mappés en mémoire
-Un fichier mappé en mémoire comporte le contenu d'un fichier en mémoire virtuelle. Ce mappage entre un espace de fichier et de la mémoire permet à une application, y compris plusieurs processus modifier le fichier à lire et écrire directement dans la mémoire. En commençant par le [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], vous pouvez utiliser du code managé pour accéder aux fichiers mappés en mémoire de la même façon que les fonctions Windows natives accéder aux fichiers mappés en mémoire, comme décrit dans [fichiers http://go.Microsoft.com/fwlink/?linkid=180801 dans Win32](http://go.microsoft.com/fwlink/?linkid=180801).  
+Un fichier mappé en mémoire comporte le contenu d'un fichier en mémoire virtuelle. Ce mappage entre un fichier et un espace mémoire permet à une application incluant plusieurs processus de modifier le fichier en lisant et en écrivant directement dans la mémoire. En commençant par [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], vous pouvez utiliser du code managé pour accéder aux fichiers mappés en mémoire de la même façon que les fonctions Windows natives accèdent à des fichiers mappés en mémoire, comme décrit dans [Managing Memory-Mapped Files in Win32](http://go.microsoft.com/fwlink/?linkid=180801) (Gestion de fichiers mappés en mémoire dans Win32).  
   
  Il existe deux types de fichiers mappés en mémoire :  
   
--   Fichiers mappés en mémoire persistantes  
+-   Fichiers mappés en mémoire persistants  
   
-     Fichiers persistants sont des fichiers mappés en mémoire qui sont associés à un fichier source sur un disque. Lorsque le dernier processus a fini de travailler avec le fichier, les données sont enregistrées dans le fichier source sur le disque. Ces fichiers mappés en mémoire sont adaptés pour travailler avec les fichiers sources extrêmement volumineux.  
+     Les fichiers persistants sont des fichiers mappés en mémoire associés à un fichier source sur un disque. Lorsque le dernier processus a fini de travailler avec le fichier, les données sont enregistrées dans le fichier source sur le disque. Ces fichiers mappés en mémoire sont adaptés au travail avec des fichiers sources extrêmement volumineux.  
   
 -   Fichiers mappés en mémoire non persistants  
   
-     Fichiers non persistants sont des fichiers mappés en mémoire qui ne sont pas associés à un fichier sur un disque. Lorsque le dernier processus a fini de travailler avec le fichier, les données sont perdues et le fichier est récupéré par le garbage collection. Ces fichiers sont appropriés pour la création d’une mémoire partagée pour les communications entre processus (IPC).  
+     Les non fichiers persistants sont des fichiers mappés en mémoire associés à un fichier sur un disque. Lorsque le dernier processus a fini de travailler avec le fichier, les données sont perdues et le fichier est récupéré par le nettoyage de la mémoire. Ces fichiers sont adaptés à la création d’une mémoire partagée pour les communications entre processus (IPC).  
   
-## <a name="processes-views-and-managing-memory"></a>Gestion de mémoire, des vues et des processus  
- Fichiers mappés en mémoire peuvent être partagés entre plusieurs processus. Processus peuvent être mappés dans le même fichier mappé en mémoire à l’aide d’un nom commun qui est attribué par le processus qui a créé le fichier.  
+## <a name="processes-views-and-managing-memory"></a>Processus, vues et gestion de la mémoire  
+ Les fichiers mappés en mémoire ne peuvent pas être partagé entre plusieurs processus. Des processus peuvent être mappés dans le même fichier mappé en mémoire à l’aide d’un nom commun attribué par le processus qui a créé le fichier.  
   
- Pour utiliser un fichier mappé en mémoire, vous devez créer une vue de l’intégralité du fichier mappé en mémoire ou une partie de celui-ci. Vous pouvez également créer plusieurs vues à la même partie du fichier mappé en mémoire, en créant la mémoire simultanés. Pour les deux vues restent simultanées, elles doivent être créées à partir du même fichier mappé en mémoire.  
+ Pour utiliser un fichier mappé en mémoire, vous devez créer une vue de l’intégralité du fichier mappé en mémoire ou une partie de celui-ci. Vous pouvez également créer plusieurs vues dans la même partie du fichier mappé en mémoire et créer ainsi une mémoire simultanée. Pour que deux vues restent simultanées, elles doivent être créées à partir du même fichier mappé en mémoire.  
   
- Plusieurs vues peuvent également être nécessaires si le fichier est supérieur à la taille de l’espace de mémoire logique de l’application disponible pour le mappage (2 Go sur un ordinateur 32 bits) de mémoire.  
+ Plusieurs vues peuvent également être nécessaires si le fichier est supérieur à la taille de l’espace de mémoire logique de l’application disponible pour le mappage de mémoire (2 Go sur un ordinateur 32 bits).  
   
- Il existe deux types de vues : vue de l’accès et le mode d’accès aléatoire de flux. Utilisez les vues d’accès continu pour un accès séquentiel à un fichier ; Cela est recommandé pour les fichiers non persistants et IPC. Vues d’accès aléatoire sont privilégiés pour l’utilisation des fichiers persistants.  
+ Il existe deux types de vues : une vue d’accès à Stream et une vue d’accès aléatoire. Utilisez les vues d’accès à Stream pour un accès séquentiel à un fichier ; c’est recommandé pour les fichiers non persistants et pour IPC. Les vues d’accès aléatoire sont privilégiées pour l’utilisation de fichiers persistants.  
   
- Fichiers mappés en mémoire sont accessibles via le Gestionnaire de mémoire du système d’exploitation, le fichier est donc automatiquement partitionné en un nombre de pages et accessibles en fonction des besoins. Vous n’avez pas à gérer la mémoire vous-même.  
+ Les fichiers mappés en mémoire sont accessibles via le gestionnaire de mémoire du système d’exploitation. Le fichier est alors automatiquement partitionné en un nombre de pages et consulté en fonction des besoins. Vous n’avez pas à gérer vous-même la mémoire.  
   
- L’illustration suivante montre comment plusieurs processus peuvent avoir plusieurs et qui se chevauchent vues dans le même fichier mappé en mémoire en même temps.  
+ L’illustration suivante montre comment plusieurs processus peuvent avoir simultanément plusieurs vues qui se chevauchent dans le même fichier mappé en mémoire.  
   
- ![Affiche les vues à une mémoire &#45; le fichier mappé. ] (../../../docs/standard/io/media/memmappersisted.png "MemMapPersisted")  
-Plusieurs et avec chevauchement des vues dans un fichier mappé en mémoire  
+ ![Affiche des vues d’un fichier memory&#45;mapped.](../../../docs/standard/io/media/memmappersisted.png "MemMapPersisted")  
+Vues multiples et se chevauchant dans un fichier mappé en mémoire  
   
-## <a name="programming-with-memory-mapped-files"></a>Programmation avec les fichiers mappés en mémoire  
- Le tableau suivant fournit un guide pour l’utilisation des objets de fichier mappé en mémoire et leurs membres.  
+## <a name="programming-with-memory-mapped-files"></a>Programmation avec des fichiers mappés en mémoire  
+ Le tableau suivant fournit un guide pour l’utilisation d’objets de fichier mappé en mémoire et de leurs membres.  
   
 |Tâche|Méthodes ou propriétés à utiliser|  
 |----------|----------------------------------|  
-|Pour obtenir un <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> objet qui représente un fichier mappé en mémoire persistant à partir d’un fichier sur disque.|Méthode <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A?displayProperty=nameWithType>.|  
-|Pour obtenir un <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> objet qui représente un fichier mappé en mémoire non persistant (non associé à un fichier sur disque).|Méthode <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A?displayProperty=nameWithType>.<br /><br /> ou<br /><br /> Méthode <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A?displayProperty=nameWithType>.|  
-|Pour obtenir un <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> l’objet d’un fichier mappé en mémoire existant (persistant ou non persistant).|Méthode <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.OpenExisting%2A?displayProperty=nameWithType>.|  
-|Pour obtenir un <xref:System.IO.UnmanagedMemoryStream> objet pour un accès séquentiel affichage au fichier mappé en mémoire.|Méthode <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateViewStream%2A?displayProperty=nameWithType>.|  
-|Pour obtenir un <xref:System.IO.UnmanagedMemoryAccessor> de l’objet pour une vue d’un accès aléatoire à un mappé en mémoire fichier.|Méthode <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateViewAccessor%2A?displayProperty=nameWithType>.|  
-|Pour obtenir un <xref:Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle> objet à utiliser avec le code non managé.|Propriété <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.SafeMemoryMappedFileHandle%2A?displayProperty=nameWithType>.<br /><br /> ou<br /><br /> Propriété <xref:System.IO.MemoryMappedFiles.MemoryMappedViewAccessor.SafeMemoryMappedViewHandle%2A?displayProperty=nameWithType>.<br /><br /> ou<br /><br /> Propriété <xref:System.IO.MemoryMappedFiles.MemoryMappedViewStream.SafeMemoryMappedViewHandle%2A?displayProperty=nameWithType>.|  
-|Pour différer l’allocation de mémoire tant que la vue est créée (fichiers non persistants uniquement).<br /><br /> (Pour déterminer la taille de page en cours du système, utilisez le <xref:System.Environment.SystemPageSize%2A?displayProperty=nameWithType> propriété.)|<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A>méthode avec le <xref:System.IO.MemoryMappedFiles.MemoryMappedFileOptions.DelayAllocatePages?displayProperty=nameWithType> valeur.<br /><br /> ou<br /><br /> <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A>les méthodes qui ont un <xref:System.IO.MemoryMappedFiles.MemoryMappedFileOptions> énumération en tant que paramètre.|  
+|Pour obtenir un objet <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> qui représente un fichier mappé en mémoire persistant à partir d’un fichier sur disque.|Méthode <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A?displayProperty=nameWithType>.|  
+|Pour obtenir un objet <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> qui représente un fichier mappé en mémoire non persistant (pas associé à un fichier sur disque).|Méthode <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A?displayProperty=nameWithType>.<br /><br /> ou<br /><br /> Méthode <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A?displayProperty=nameWithType>.|  
+|Pour obtenir un objet <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> d’un fichier mappé en mémoire existant (persistant ou non persistant).|Méthode <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.OpenExisting%2A?displayProperty=nameWithType>.|  
+|Pour obtenir un objet <xref:System.IO.UnmanagedMemoryStream> pour une vue à accès séquentiel dans le fichier mappé en mémoire.|Méthode <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateViewStream%2A?displayProperty=nameWithType>.|  
+|Pour obtenir un objet <xref:System.IO.UnmanagedMemoryAccessor> pour une vue à accès aléatoire dans un fichier mappé en mémoire.|Méthode <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateViewAccessor%2A?displayProperty=nameWithType>.|  
+|Pour obtenir un objet <xref:Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle> à utiliser avec du code non managé.|Propriété <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.SafeMemoryMappedFileHandle%2A?displayProperty=nameWithType>.<br /><br /> ou<br /><br /> Propriété <xref:System.IO.MemoryMappedFiles.MemoryMappedViewAccessor.SafeMemoryMappedViewHandle%2A?displayProperty=nameWithType>.<br /><br /> ou<br /><br /> Propriété <xref:System.IO.MemoryMappedFiles.MemoryMappedViewStream.SafeMemoryMappedViewHandle%2A?displayProperty=nameWithType>.|  
+|Pour différer l’allocation de mémoire jusqu’à ce qu’une vue soit créée (fichiers non persistants uniquement).<br /><br /> (Pour déterminer la taille de page du système actuel, utilisez la propriété <xref:System.Environment.SystemPageSize%2A?displayProperty=nameWithType>.)|Méthode <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A> avec la valeur <xref:System.IO.MemoryMappedFiles.MemoryMappedFileOptions.DelayAllocatePages?displayProperty=nameWithType>.<br /><br /> ou<br /><br /> Méthodes <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A> qui ont une énumération <xref:System.IO.MemoryMappedFiles.MemoryMappedFileOptions> en tant que paramètre.|  
   
 ### <a name="security"></a>Sécurité  
- Vous pouvez appliquer des droits d’accès lorsque vous créez un fichier mappé en mémoire, en utilisant les méthodes suivantes qui prennent un <xref:System.IO.MemoryMappedFiles.MemoryMappedFileAccess> énumération en tant que paramètre :  
+ Vous pouvez appliquer des droits d’accès lorsque vous créez un fichier mappé en mémoire, en utilisant les méthodes suivantes qui prennent une énumération <xref:System.IO.MemoryMappedFiles.MemoryMappedFileAccess> en tant que paramètre :  
   
 -   <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A?displayProperty=nameWithType>  
   
@@ -76,18 +79,18 @@ Plusieurs et avec chevauchement des vues dans un fichier mappé en mémoire
   
 -   <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A?displayProperty=nameWithType>  
   
- Vous pouvez spécifier les droits d’accès pour l’ouverture d’un fichier mappé en mémoire à l’aide de la <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.OpenExisting%2A> méthodes qui prennent un <xref:System.IO.MemoryMappedFiles.MemoryMappedFileRights> en tant que paramètre.  
+ vous pouvez spécifier des droits d’accès pour l’ouverture d’un fichier mappé en mémoire existant à l’aide des méthodes <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.OpenExisting%2A> qui prennent un <xref:System.IO.MemoryMappedFiles.MemoryMappedFileRights> en tant que paramètre.  
   
- En outre, vous pouvez inclure un <xref:System.IO.MemoryMappedFiles.MemoryMappedFileSecurity> objet qui contient des règles d’accès prédéfinies.  
+ Vous pouvez également inclure un objet <xref:System.IO.MemoryMappedFiles.MemoryMappedFileSecurity> qui contient des règles d’accès prédéfinies.  
   
- Pour appliquer des règles d’accès nouvelles ou modifiées dans un fichier mappé en mémoire, utilisez le <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.SetAccessControl%2A> (méthode). Pour récupérer l’accès ou d’audit à partir d’un fichier existant, utilisez la <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.GetAccessControl%2A> (méthode).  
+ Pour appliquer des règles d’accès nouvelles ou modifiées à un fichier mappé en mémoire, utilisez la méthode <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.SetAccessControl%2A>. Pour récupérer un accès ou des règles d’audit à partir d’un fichier existant, utilisez la méthode <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.GetAccessControl%2A>.  
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="persisted-memory-mapped-files"></a>Fichiers mappés en mémoire persistantes  
- Le <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A> méthodes créent un fichier mappé en mémoire à partir d’un fichier existant sur le disque.  
+### <a name="persisted-memory-mapped-files"></a>Fichiers mappés en mémoire persistants  
+ Les méthodes <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A> créent un fichier mappé en mémoire à partir d’un fichier existant sur le disque.  
   
- L’exemple suivant crée une vue mappé en mémoire d’une partie d’un fichier très volumineux et manipule une partie de celui-ci.  
+ L’exemple suivant crée une vue mappée en mémoire d’une partie d’un fichier très volumineux et manipule une partie de ce dernier.  
   
  [!code-csharp[MemoryMappedFiles.MemoryMappedFile.CreateFromFile#1](../../../samples/snippets/csharp/VS_Snippets_CLR/memorymappedfiles.memorymappedfile.createfromfile/cs/program.cs#1)]
  [!code-vb[MemoryMappedFiles.MemoryMappedFile.CreateFromFile#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/memorymappedfiles.memorymappedfile.createfromfile/vb/program.vb#1)]  
@@ -98,35 +101,35 @@ Plusieurs et avec chevauchement des vues dans un fichier mappé en mémoire
  [!code-vb[MemoryMappedFiles.MemoryMappedFile.OpenExisting#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/memorymappedfiles.memorymappedfile.openexisting/vb/program.vb#1)]  
   
 ### <a name="non-persisted-memory-mapped-files"></a>Fichiers mappés en mémoire non persistants  
- Le <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A> et <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A> méthodes créent un fichier mappé en mémoire qui n’est pas mappé à un fichier existant sur le disque.  
+ Les méthodes <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A> et <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A> créent un fichier mappé en mémoire qui n’est pas mappé à un fichier existant sur le disque.  
   
- L’exemple suivant se compose de trois processus distincts (applications console) qui écrivent des valeurs booléennes dans un fichier mappé en mémoire. La séquence suivante d’actions se produisent :  
+ L’exemple suivant se compose de trois processus distincts (applications console) qui écrivent des valeurs booléennes dans un fichier mappé en mémoire. La séquence d’actions suivante se produit :  
   
-1.  `Process A`crée le fichier mappé en mémoire et écrit une valeur.  
+1.  `Process A` crée le fichier mappé en mémoire et y écrit une valeur.  
   
-2.  `Process B`Ouvre le fichier mappé en mémoire et écrit une valeur.  
+2.  `Process B` ouvre le fichier mappé en mémoire et y écrit une valeur.  
   
-3.  `Process C`Ouvre le fichier mappé en mémoire et écrit une valeur.  
+3.  `Process C` ouvre le fichier mappé en mémoire et y écrit une valeur.  
   
-4.  `Process A`lit et affiche les valeurs à partir du fichier mappé en mémoire.  
+4.  `Process A` lit et affiche les valeurs à partir du fichier mappé en mémoire.  
   
-5.  Après avoir `Process A` est terminé avec le fichier mappé en mémoire, le fichier est immédiatement libéré par le garbage collection.  
+5.  Après que `Process A` est terminé avec le fichier mappé en mémoire, ce dernier est immédiatement récupéré par le nettoyage de la mémoire.  
   
  Pour exécuter cet exemple, procédez comme suit :  
   
 1.  Compilez les applications et ouvrez trois fenêtres d’invite de commandes.  
   
-2.  Dans la première fenêtre d’invite de commandes, exécutez `Process A`.  
+2.  Dans la première fenêtre d’invite de commande, exécutez `Process A`.  
   
-3.  Dans la deuxième fenêtre d’invite de commandes, exécutez `Process B`.  
+3.  Dans la deuxième fenêtre d’invite de commande, exécutez `Process B`.  
   
-4.  Retour à `Process A` et appuyez sur ENTRÉE.  
+4.  Retournez à `Process A` et appuyez sur ENTRÉE.  
   
-5.  Dans la troisième fenêtre d’invite de commandes, exécutez `Process C`.  
+5.  Dans la troisième fenêtre d’invite de commande, exécutez `Process C`.  
   
-6.  Retour à `Process A` et appuyez sur ENTRÉE.  
+6.  Retournez à `Process A` et appuyez sur ENTRÉE.  
   
- La sortie de `Process A` est comme suit :  
+ La sortie de `Process A` est la suivante :  
   
 ```  
 Start Process B and press ENTER to continue.  

@@ -9,19 +9,22 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d2758ea1-03f6-47bd-88d2-0fb7ccdb2fab
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 7b6c81a5737b879b7c1356c4b9c2ab68fbbc4688
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 98ad31039b5351a7dc4aa3cf033ae8cd0f896b7b
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="implementation-of-discretionary-behaviors-in-the-xsltransform-class"></a>Implémentation de comportements discrétionnaires dans la classe XslTransform
 > [!NOTE]
->  La classe <xref:System.Xml.Xsl.XslTransform> est obsolète dans le [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]. Vous pouvez effectuer des transformations XSLT (Extensible Stylesheet Language Transformation) à l'aide de la classe <xref:System.Xml.Xsl.XslCompiledTransform>. Consultez [à l’aide de la classe XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) et [migration depuis la classe XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) pour plus d’informations.  
+>  La classe <xref:System.Xml.Xsl.XslTransform> est obsolète dans le [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]. Vous pouvez effectuer des transformations XSLT (Extensible Stylesheet Language Transformation) à l'aide de la classe <xref:System.Xml.Xsl.XslCompiledTransform>. Pour plus d'informations, consultez [Utilisation de la classe XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) et [Migration depuis la classe XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md).  
   
  Les comportements discrétionnaires sont décrits comme des comportements, répertoriés dans la recommandation du World Wide Web Consortium (W3C) sur XSLT (XSL Transformations) Version 1.0 (www.w3.org/TR/xslt), où le fournisseur d’implémentation choisit une option parmi plusieurs possibles pour gérer une situation. Par exemple, dans la section 7.3 sur la création d'instructions de traitement, la recommandation du W3C précise que la création de nœuds autres que des nœuds de texte lors d'une instanciation du contenu de `xsl:processing-instruction` correspond à une erreur. Pour certains problèmes, le W3C indique la décision à prendre si le processeur décide de récupérer l'erreur. Pour le problème donné dans la section 7.3, le W3C indique que l'implémentation peut récupérer cette erreur en ignorant les nœuds et leur contenu.  
   
@@ -40,7 +43,7 @@ ms.lasthandoff: 11/21/2017
 |L'attribut de nom `xsl:processing-instruction` ne produit pas un NCName et une cible d'instruction de traitement.|Récupération|7.3|  
 |L'instanciation du contenu de `xsl:processing-instruction` crée des nœuds autres que des nœuds de texte.|Récupération|7.3|  
 |Les résultats de l'instanciation du contenu de `xsl:processing-instruction` contiennent la chaîne « `?>` ».|Récupération|7.3|  
-|Résultats de l’instanciation du contenu de la `xsl:comment` contient la chaîne «-- », ou se termine par «- ».|Récupération|7.4|  
+|Les résultats de l'instanciation du contenu de `xsl:comment` contiennent la chaîne « -- » ou se terminent par « - ».|Récupération|7.4|  
 |Les résultats de l'instanciation du contenu de `xsl:comment` créent des nœuds autres que des nœuds de texte.|Récupération|7.4|  
 |Le modèle d'un élément de liaison de variables retourne un nœud d'attribut ou un nœud d'espace de noms.|Récupération|11.2|  
 |Une erreur se produit lors de l'extraction de la ressource à partir de l'URI passé dans la fonction de document.|Exception levée|12.1|  
@@ -68,26 +71,26 @@ ms.lasthandoff: 11/21/2017
   
 -   En ce qui concerne les langages, le tri effectué par des processeurs distincts peut varier sur un langage spécifique, non spécifié dans le `xsl:sort.`.  
   
- Le tableau suivant montre le comportement de tri implémenté pour chaque type de données dans l’implémentation .NET Framework d’une transformation utilisant le <xref:System.Xml.Xsl.XslTransform>.  
+ Le tableau suivant montre le comportement de tri implémenté pour chaque type de données dans l'implémentation .NET Framework d'une transformation utilisant l'objet <xref:System.Xml.Xsl.XslTransform>.  
   
 |Type de données|Comportement de tri|  
 |---------------|----------------------|  
 |Texte|Les données sont triées en utilisant la méthode String.Compare du Common Language Runtime (CLR) ainsi que les paramètres régionaux culturels. Lorsque les données sont de type « texte », le tri dans la classe <xref:System.Xml.Xsl.XslTransform> se comporte de la même façon que les comportements de comparaison de chaînes du Common Language Runtime.|  
-|Nombre|Les valeurs numériques sont traitées comme des nombres XPath (XML Path Language) et sont triées en fonction des détails présentés dans la recommandation du W3C sur le langage XPath (XML Path Language) Version 1.0, section 3.5 (www.w3.org/TR/xpath.html#numbers).|  
+|nombre|Les valeurs numériques sont traitées comme des nombres XPath (XML Path Language) et sont triées en fonction des détails présentés dans la recommandation du W3C sur le langage XPath (XML Path Language) Version 1.0, section 3.5 (www.w3.org/TR/xpath.html#numbers).|  
   
 ## <a name="optional-features-supported"></a>Fonctionnalités facultatives prises en charge  
  Le tableau suivant présente les fonctionnalités facultatives à implémenter pour un processeur XSLT et qui sont implémentées dans la classe <xref:System.Xml.Xsl.XslTransform>.  
   
-|Fonctionnalité|Emplacement de référence|Remarques|  
+|Fonctionnalité|Emplacement de référence|Notes|  
 |-------------|------------------------|-----------|  
 |Attribut `disable-output-escaping` sur les balises `<xsl:text...>` et `<xsl:value-of...>`.|Recommandation du W3C sur XSLT 1.0, <br /><br /> Section 16.4|L'attribut `disable-output-escaping` est ignoré lorsque l'élément `xsl:text` ou `xsl:value-of` est utilisé dans un élément `xsl:comment`, `xsl:processing-instruction` ou `xsl:attribute`.<br /><br /> Les fragments d'arborescence résultat qui contiennent du texte et la sortie de texte ayant fait l'objet d'un échappement ne sont pas pris en charge.<br /><br /> L'attribut disable-output-escaping est ignoré lors de sa transformation en un objet <xref:System.Xml.XmlReader> ou <xref:System.Xml.XmlWriter>.|  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.Xml.Xsl.XslTransform>  
- [XslTransform Class Implements the XSLT Processor](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)  
+ [Implémentation du processeur XSLT par la classe XslTransform](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)  
  [Transformations XSLT avec la classe XslTransform](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)  
- [XPathNavigator dans les Transformations](../../../../docs/standard/data/xml/xpathnavigator-in-transformations.md)  
- [XPathNodeIterator dans les Transformations](../../../../docs/standard/data/xml/xpathnodeiterator-in-transformations.md)  
+ [XPathNavigator dans les transformations](../../../../docs/standard/data/xml/xpathnavigator-in-transformations.md)  
+ [XPathNodeIterator dans les transformations](../../../../docs/standard/data/xml/xpathnodeiterator-in-transformations.md)  
  [Entrée XPathDocument dans XslTransform](../../../../docs/standard/data/xml/xpathdocument-input-to-xsltransform.md)  
  [Entrée XmlDataDocument dans XslTransform](../../../../docs/standard/data/xml/xmldatadocument-input-to-xsltransform.md)  
  [Entrée XmlDocument dans XslTransform](../../../../docs/standard/data/xml/xmldocument-input-to-xsltransform.md)

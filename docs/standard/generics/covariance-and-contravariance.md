@@ -17,15 +17,18 @@ helpviewer_keywords:
 - covariance and contravariance in generics
 - generic type parameters
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 1ae8b6da5917950664e1ab780b8db76cb6500e70
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2abd4c772c02c431ecb73139be7f620fe04d5d82
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>Covariance et contravariance dans les génériques
 <a name="top"></a> La covariance et la contravariance sont des termes qui font référence à la possibilité d'utiliser un type plus ou moins dérivé (plus ou moins spécifique) que celui spécifié à l'origine. Les paramètres de type générique prennent en charge la covariance et la contravariance afin de fournir une meilleure flexibilité dans l'assignation et l'utilisation des types génériques. Lorsque vous faites référence à un système de type, la covariance, la contravariance et l'invariance ont les définitions suivantes. Les exemples supposent qu'une classe de base est nommée `Base` et qu'une classe dérivée est nommée `Derived`.  
@@ -114,7 +117,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="DelegateVariantTypeParameters"></a>   
 ## <a name="generic-delegates-with-variant-type-parameters"></a>Délégués génériques avec paramètres de type variant  
- Dans le [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], les délégués génériques `Func` , tels que <xref:System.Func%602>, ont des types de retour covariants et des types de paramètres contravariants. Les délégués génériques `Action` , tels que <xref:System.Action%602>, ont des types de paramètres contravariants. Cela signifie que les délégués peuvent être assignés à des variables avec des types de paramètres plus dérivés et (dans le cas des délégués génériques `Func` ) des types de retour moins dérivés.  
+ Dans le [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], les délégués génériques `Func` , tels que <xref:System.Func%602>, ont des types de retour covariants et des types de paramètres contravariants. Les délégués génériques `Action` , tels que <xref:System.Action%602>, ont des types de paramètres contravariants. Cela signifie que les délégués peuvent être assignés à des variables avec des types de paramètres plus dérivés et (dans le cas des délégués génériques `Func`) des types de retour moins dérivés.  
   
 > [!NOTE]
 >  Le dernier paramètre de type générique des délégués génériques `Func` spécifie le type de la valeur de retour dans la signature du délégué. Il est covariant (mot clé`out` ), alors que les autres paramètres de type générique sont contravariants (mot clé`in` ).  
@@ -197,5 +200,5 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Covariance et contravariance (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/index.md)  
- [Covariance et Contravariance (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)    
+ [Covariance et contravariance (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)    
  [Variance dans les délégués](http://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)

@@ -19,15 +19,18 @@ helpviewer_keywords:
 - application development [.NET Framework], globalization
 - culture, globalization
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a60284bf2db8f47dd17c04fad5cbd6db4970a8a7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 357d18843af0af2869d0ec98def6c733e51f9a4c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="globalization"></a>Globalisation
 La globalisation a trait à la conception et au développement d’applications universelles qui prennent en charge les interfaces localisées et les données régionales pour les utilisateurs de diverses cultures. Avant d’entreprendre la phase de conception, vous devez déterminer les cultures que votre application devra prendre en charge. Bien qu’une application cible par défaut une seule et même culture ou région, vous pouvez la concevoir et l’écrire de façon à faciliter son extension à d’autres cultures ou régions.  
@@ -36,29 +39,29 @@ La globalisation a trait à la conception et au développement d’applications 
   
  Les sections suivantes exposent certaines des questions phares que vous devez prendre en considération, ainsi que les bonnes pratiques que vous pouvez suivre pour gérer les chaînes, les valeurs de date et d’heure et les valeurs numériques dans une application globalisée.  
   
--   [La gestion des chaînes](../../../docs/standard/globalization-localization/globalization.md#HandlingStrings)  
+-   [Gestion des chaînes](../../../docs/standard/globalization-localization/globalization.md#HandlingStrings)  
   
     -   [Utiliser Unicode en interne](../../../docs/standard/globalization-localization/globalization.md#Strings_Unicode)  
   
-    -   [Utiliser des fichiers de ressources](../../../docs/standard/globalization-localization/globalization.md#Strings_Resources)  
+    -   [Utiliser les fichiers de ressources](../../../docs/standard/globalization-localization/globalization.md#Strings_Resources)  
   
-    -   [Recherche et comparaison de chaînes](../../../docs/standard/globalization-localization/globalization.md#Strings_Searching)  
+    -   [Recherche et comparaison des chaînes](../../../docs/standard/globalization-localization/globalization.md#Strings_Searching)  
   
-    -   [Test des chaînes d’égalité](../../../docs/standard/globalization-localization/globalization.md#Strings_Equality)  
+    -   [Test d’égalité de chaînes](../../../docs/standard/globalization-localization/globalization.md#Strings_Equality)  
   
-    -   [Classement et tri de chaînes](../../../docs/standard/globalization-localization/globalization.md#Strings_Ordering)  
+    -   [Classement et tri des chaînes](../../../docs/standard/globalization-localization/globalization.md#Strings_Ordering)  
   
     -   [Éviter la concaténation de chaînes](../../../docs/standard/globalization-localization/globalization.md#Strings_Concat)  
   
--   [La gestion des Dates et heures](../../../docs/standard/globalization-localization/globalization.md#DatesAndTimes)  
+-   [Gestion des dates et heures](../../../docs/standard/globalization-localization/globalization.md#DatesAndTimes)  
   
-    -   [Persistance des Dates et heures](../../../docs/standard/globalization-localization/globalization.md#DatesAndTimes_Persist)  
+    -   [Persistance des dates et heures](../../../docs/standard/globalization-localization/globalization.md#DatesAndTimes_Persist)  
   
-    -   [Affichage des Dates et heures](../../../docs/standard/globalization-localization/globalization.md#DatesAndTimes_Display)  
+    -   [Affichage des dates et heures](../../../docs/standard/globalization-localization/globalization.md#DatesAndTimes_Display)  
   
-    -   [Sérialisation et des fuseaux horaires](../../../docs/standard/globalization-localization/globalization.md#DatesAndTimes_TimeZones)  
+    -   [Prise en compte de la sérialisation et des fuseaux horaires](../../../docs/standard/globalization-localization/globalization.md#DatesAndTimes_TimeZones)  
   
-    -   [Effectuer des calculs de Date et heure](../../../docs/standard/globalization-localization/globalization.md#DatesAndTimes_Arithmetic)  
+    -   [Exécution des calculs de date et d'heure](../../../docs/standard/globalization-localization/globalization.md#DatesAndTimes_Arithmetic)  
   
 -   [Gestion des valeurs numériques](../../../docs/standard/globalization-localization/globalization.md#Numbers)  
   
@@ -66,7 +69,7 @@ La globalisation a trait à la conception et au développement d’applications 
   
     -   [Persistance des valeurs numériques](../../../docs/standard/globalization-localization/globalization.md#Numbers_Persist)  
   
--   [Paramètres spécifiques à la Culture](../../../docs/standard/globalization-localization/globalization.md#Cultures)  
+-   [Utilisation des paramètres spécifiques à la culture](../../../docs/standard/globalization-localization/globalization.md#Cultures)  
   
 <a name="HandlingStrings"></a>   
 ## <a name="handling-strings"></a>Gestion des chaînes  
@@ -97,7 +100,7 @@ La globalisation a trait à la conception et au développement d’applications 
   
  L’utilisation de fichiers de ressources offre des avantages particuliers si vous créez une application localisée. Quand vous déployez des ressources dans des assemblys satellites, le common language runtime sélectionne automatiquement la ressource adaptée à la culture en fonction de la culture d’interface utilisateur active de l’utilisateur définie par la propriété <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>. Dans la mesure où vous fournissez une ressource appropriée propre à la culture et que vous instanciez correctement un objet <xref:System.Resources.ResourceManager> ou que vous utilisez une classe de ressource fortement typée, le runtime se charge de récupérer les ressources appropriées.  
   
- Pour plus d’informations sur la création de fichiers de ressources, consultez [création de fichiers de ressources](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md). Pour plus d’informations sur la création et déploiement d’assemblys satellites, consultez [création d’assemblys satellites](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md) et [empaquetage et déploiement de ressources](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md).  
+ Pour plus d’informations sur la création de fichiers de ressources, consultez [Création de fichiers de ressources](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md). Pour plus d’informations sur la création et le déploiement d’assemblys satellites, consultez [Création d'assemblys satellites](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md) et [Empaquetage et déploiement de ressources](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md).  
   
 <a name="Strings_Searching"></a>   
 ### <a name="searching-and-comparing-strings"></a>Recherche et comparaison des chaînes  
@@ -123,7 +126,7 @@ La globalisation a trait à la conception et au développement d’applications 
   
  Les comparaisons d’égalité impliquent parfois des recherches ou des comparaisons de sous-chaînes plutôt que des appels à la méthode <xref:System.String.Equals%2A?displayProperty=nameWithType>. Dans certains cas, vous pouvez rechercher une sous-chaîne pour déterminer si elle est égale à une autre chaîne. Si l’objet de cette comparaison n’est pas linguistique, la recherche doit aussi être ordinale et non dépendante de la culture.  
   
- L’exemple suivant illustre le risque associé à une recherche dépendante de la culture sur des données non linguistiques. La méthode `AccessesFileSystem` vise à interdire l’accès au système de fichiers pour les URI commençant par la sous-chaîne « FILE». Pour cela, elle effectue une comparaison dépendante de la culture et sans respect de la casse entre le début de l’URI et la chaîne « FILE ». Sachant qu’un URI qui accède au système de fichiers peut commencer par « FILE: » ou « file: », la supposition implicite est que ce « i » (U+0069) est toujours l’équivalent en minuscule de « I » (U+0049). Toutefois, dans le turc et Azérie, la version en majuscule du « i » est « i » (U + 0130). Du fait de cette différence, la comparaison dépendante de la culture autorise l’accès au système de fichiers, alors qu’il devrait être interdit.  
+ L’exemple suivant illustre le risque associé à une recherche dépendante de la culture sur des données non linguistiques. La méthode `AccessesFileSystem` vise à interdire l’accès au système de fichiers pour les URI commençant par la sous-chaîne « FILE». Pour cela, elle effectue une comparaison dépendante de la culture et sans respect de la casse entre le début de l’URI et la chaîne « FILE ». Sachant qu’un URI qui accède au système de fichiers peut commencer par « FILE: » ou « file: », la supposition implicite est que ce « i » (U+0069) est toujours l’équivalent en minuscule de « I » (U+0049). Toutefois, en turc et en azéri, la version en majuscule du « i » est « i » (U + 0130). Du fait de cette différence, la comparaison dépendante de la culture autorise l’accès au système de fichiers, alors qu’il devrait être interdit.  
   
  [!code-csharp[Conceptual.Globalization#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/equals1.cs#12)]
  [!code-vb[Conceptual.Globalization#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/equals1.vb#12)]  
@@ -150,8 +153,8 @@ La globalisation a trait à la conception et au développement d’applications 
 |.NET Framework 3.0|Tous les systèmes d’exploitation|Unicode 4.1|  
 |.NET Framework 3.5|Tous les systèmes d’exploitation|Unicode 4.1|  
 |.NET Framework 4|Tous les systèmes d’exploitation|Unicode 5.0|  
-|.NET Framework 4.5|[!INCLUDE[win7](../../../includes/win7-md.md)]|Unicode 5.0|  
-|.NET Framework 4.5|[!INCLUDE[win8](../../../includes/win8-md.md)]|Unicode 6.0|  
+|.NET Framework 4.5|[!INCLUDE[win7](../../../includes/win7-md.md)]|Unicode 5.0|  
+|.NET Framework 4.5|[!INCLUDE[win8](../../../includes/win8-md.md)]|Unicode 6.0|  
   
  Dans le [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], la comparaison et le tri de chaînes dépend du système d’exploitation. Le [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] s’exécutant sur [!INCLUDE[win7](../../../includes/win7-md.md)] récupère les données dans ses propres tables qui implémentent Unicode 5.0. Le [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] s’exécutant sur [!INCLUDE[win8](../../../includes/win8-md.md)] récupère les données dans les tables du système d’exploitation qui implémentent Unicode 6.0. Si vous sérialisez des données triées dépendantes de la culture, vous pouvez utiliser la classe <xref:System.Globalization.SortVersion> pour déterminer à quel moment vos données sérialisées doivent être triés de sorte qu’elles correspondent au .NET Framework et à l’ordre de tri du système d’exploitation. Pour obtenir un exemple, consultez la rubrique relative à la classe <xref:System.Globalization.SortVersion>.  
   
@@ -182,7 +185,7 @@ La globalisation a trait à la conception et au développement d’applications 
   
 -   <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType>, qui inclut une chaîne de format ;  
   
--   Le [mise en forme composite](../../../docs/standard/base-types/composite-formatting.md) fonctionnalité, lorsqu’elle est utilisée avec des dates  
+-   fonctionnalité de [mise en forme composite](../../../docs/standard/base-types/composite-formatting.md), quand elle est utilisée avec des dates.  
   
  L’exemple suivant affiche des données relatives au lever du soleil (« sunrise ») et au coucher du soleil (« sunset ») à deux reprises pour le 11 octobre 2012. Dans un premier temps, il définit la culture active Croate (Croatie), puis Anglais (Royaume-Uni). Dans les deux cas, les dates et heures s’affichent au format adapté à la culture en question.  
   
@@ -213,7 +216,7 @@ La globalisation a trait à la conception et au développement d’applications 
 ### <a name="serialization-and-time-zone-awareness"></a>Prise en compte de la sérialisation et des fuseaux horaires  
  Une valeur de date et d’heure peut être interprétée de plusieurs façons, par exemple, en tant qu’heure générale (« les magasins seront ouverts le 2 janvier 2013 à 9h00 ») ou en tant que moment précis dans le temps (« Date de naissance : le 2 janvier 2013 à 6h32 »). Quand une valeur d’heure représente un moment précis dans le temps et que vous la restaurez à partir d’une valeur sérialisée, vous devez vérifier qu’elle représente le même moment dans le temps, quelle que soit la situation géographique ou le fuseau horaire de l’utilisateur.  
   
- L'exemple de code suivant illustre ce problème. Il enregistre un seul local valeur date et heure sous forme de chaîne de trois [formats standard](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) (« G » pour heure longue, de date général « s » pour la date/heure pouvant être trié et « o » pour effectuer un aller-retour date/heure) ainsi que dans le format binaire.  
+ L'exemple de code suivant illustre ce problème. Il enregistre une même valeur de date et d’heure locale sous forme de chaîne dans trois [formats standard](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) (« G » pour date générale et heure longue, « s » pour date/heure pouvant être triée et « o » pour date/heure aller-retour), ainsi qu’au format binaire.  
   
  [!code-csharp[Conceptual.Globalization#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/dates4.cs#10)]
  [!code-vb[Conceptual.Globalization#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/dates4.vb#10)]  
@@ -263,13 +266,13 @@ La globalisation a trait à la conception et au développement d’applications 
 3/31/2013 3:00:00 AM Local  
 ```  
   
- Pour plus d’informations, consultez [conversion d’heures entre fuseaux horaires](../../../docs/standard/datetime/converting-between-time-zones.md).  
+ Pour plus d’informations, consultez [Conversion d’heures entre fuseaux horaires](../../../docs/standard/datetime/converting-between-time-zones.md).  
   
 <a name="DatesAndTimes_Arithmetic"></a>   
 ### <a name="performing-date-and-time-arithmetic"></a>Exécution des calculs de date et d'heure  
  Les types <xref:System.DateTime> et <xref:System.DateTimeOffset> prennent en charge les opérations arithmétiques. Vous pouvez calculer la différence entre deux valeurs de date, ou vous pouvez ajouter ou soustraire des intervalles de temps déterminés à une valeur de date. Cependant, les opérations arithmétiques sur les valeurs de date et d’heure ne prennent pas en compte les fuseaux horaires et les règles d’ajustement de fuseaux horaires. Pour cette raison, les calculs arithmétiques sur les valeurs de date et d’heure qui représentent des moments dans le temps peuvent retourner des résultats incorrects.  
   
- Par exemple, le passage de l’heure d’hiver à l’heure d’été dans la zone Pacifique intervient le deuxième dimanche de mars, c’est-à-dire le 10 mars pour l’année 2013. Comme l’exemple suivant montre, si vous calculez la date et d’heure qui est de 48 heures après le 9 mars 2013 à 10 h 30 sur un système dans le fuseau horaire Pacifique, le résultat, du 11 mars 2013 à 10 h 30, n’accepte pas l’intervenants à l’heure en compte.  
+ Par exemple, le passage de l’heure d’hiver à l’heure d’été dans la zone Pacifique intervient le deuxième dimanche de mars, c’est-à-dire le 10 mars pour l’année 2013. Comme le montre l’exemple suivant, si vous calculez la date et l’heure à 48 heures après le 9 mars 2013 à 10h30 sur un système situé dans le fuseau horaire du Pacifique, le résultat (11 mars 2013 à 10h30) ne prend pas en compte le changement d’heure intervenu entre-temps  
   
  [!code-csharp[Conceptual.Globalization#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/dates5.cs#8)]
  [!code-vb[Conceptual.Globalization#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/dates5.vb#8)]  
@@ -287,7 +290,7 @@ La globalisation a trait à la conception et au développement d’applications 
  [!code-csharp[Conceptual.Globalization#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/dates6.cs#9)]
  [!code-vb[Conceptual.Globalization#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/dates6.vb#9)]  
   
- Pour plus d’informations, consultez [exécution d’opérations arithmétiques avec des Dates et heures](../../../docs/standard/datetime/performing-arithmetic-operations.md).  
+ Pour plus d’informations, consultez [Exécution d’opérations arithmétiques avec des dates et heures](../../../docs/standard/datetime/performing-arithmetic-operations.md).  
   
 ### <a name="using-culture-sensitive-names-for-date-elements"></a>Utilisation de noms dépendants de la culture pour les éléments de date  
  Votre application peut avoir besoin d’afficher le nom du mois ou le jour de la semaine. Pour cela, le code suivant est d’usage courant.  
@@ -297,7 +300,7 @@ La globalisation a trait à la conception et au développement d’applications 
   
  Or, ce code retourne toujours le nom des jours de la semaine en anglais. Il est fréquent que le code chargé d’extraire le nom du mois soit encore moins flexible. Il part souvent du principe que le calendrier est constitué de douze mois et affiche le nom des mois dans une langue spécifique.  
   
- À l’aide de [chaînes de format de date et heure](../../../docs/standard/base-types/custom-date-and-time-format-strings.md) ou les propriétés de la <xref:System.Globalization.DateTimeFormatInfo> de l’objet, il est facile extraire les chaînes qui reflètent les noms des jours de la semaine ou mois à la culture de l’utilisateur, comme l’illustre l’exemple suivant. Il remplace la culture active par la culture Français (France) et affiche le nom du jour de la semaine et le nom du mois pour le 1er juillet 2013.  
+ En utilisant des [chaînes de format de date et d’heure personnalisées](../../../docs/standard/base-types/custom-date-and-time-format-strings.md) ou les propriétés de l’objet <xref:System.Globalization.DateTimeFormatInfo>, il est facile d’extraire des chaînes qui correspondent au nom des jours de la semaine ou des mois dans la culture de l’utilisateur, comme l’illustre l’exemple suivant. Il remplace la culture active par la culture Français (France) et affiche le nom du jour de la semaine et le nom du mois pour le 1er juillet 2013.  
   
  [!code-csharp[Conceptual.Globalization#20](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/monthname2.cs#20)]
  [!code-vb[Conceptual.Globalization#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/monthname2.vb#20)]  
@@ -317,7 +320,7 @@ La globalisation a trait à la conception et au développement d’applications 
   
 -   méthode `ToString(String)` de tout type numérique, ce qui inclut une chaîne de format en guise d’argument ;  
   
--   Le [mise en forme composite](../../../docs/standard/base-types/composite-formatting.md) fonctionnalité, lorsqu’elle est utilisée avec des valeurs numériques  
+-   fonctionnalité de [mise en forme composite](../../../docs/standard/base-types/composite-formatting.md), quand elle est utilisée avec des valeurs numériques.  
   
  L’exemple suivant affiche la température moyenne par mois à Paris. Dans un premier temps, il définit la culture active Français (France) avant d’afficher les données, puis définit ensuite Anglais (États-Unis). Dans les deux cas, le nom des mois et les températures s’affichent au format adapté à la culture en question. À noter que les deux cultures utilisent des séparateurs décimaux différents dans la valeur de température. De même, notez que la chaîne de format de date et d’heure personnalisée « MMMM » est utilisée pour afficher le nom de mois complet et que la quantité d’espace nécessaire est allouée au nom de mois dans la chaîne de résultat par rapport à la longueur du nom de mois le plus long dans la tableau <xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A?displayProperty=nameWithType>.  
   
@@ -374,7 +377,7 @@ La globalisation a trait à la conception et au développement d’applications 
   
 -   Le .NET Framework prend en charge les cultures de remplacement. Cela permet de définir une nouvelle culture personnalisée qui complète les cultures standard existants ou qui remplace entièrement une culture standard existante.  
   
--   L’utilisateur peut personnaliser les paramètres spécifiques à la culture à l’aide de la **région et langue** application dans le panneau de configuration. Quand vous instanciez un objet <xref:System.Globalization.CultureInfo>, vous pouvez déterminer s’il reflète ces personnalisations utilisateur en appelant le constructeur <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>. En règle générale, pour les applications destinées aux utilisateurs finals, veillez à respecter les préférences de mise en forme des utilisateurs de sorte que les données leur soient présentées comme attendu.  
+-   L’utilisateur peut personnaliser les paramètres propres à une culture à l’aide de l’application **Région et langue** du Panneau de configuration. Quand vous instanciez un objet <xref:System.Globalization.CultureInfo>, vous pouvez déterminer s’il reflète ces personnalisations utilisateur en appelant le constructeur <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>. En règle générale, pour les applications destinées aux utilisateurs finals, veillez à respecter les préférences de mise en forme des utilisateurs de sorte que les données leur soient présentées comme attendu.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Globalisation et localisation](../../../docs/standard/globalization-localization/index.md)  

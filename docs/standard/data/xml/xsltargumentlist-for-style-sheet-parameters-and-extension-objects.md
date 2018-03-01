@@ -12,21 +12,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: d4741551b1e6dd2694a0bd65e65a15953f808e59
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b14365266d5a477b32dbbe177d9644596b9e3b38
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>XsltArgumentList pour les paramètres de feuille de style et les objets d’extension
 La classe <xref:System.Xml.Xsl.XsltArgumentList> contient des paramètres XSLT (Extensible Stylesheet Language for Transformations) et des objets d'extension XSLT. Lorsqu'ils sont transmis à la méthode <xref:System.Xml.Xsl.XslTransform.Transform%2A>, ces paramètres et ces objets d'extension peuvent être appelés à partir des feuilles de style.  
   
 > [!NOTE]
->  Les classes <xref:System.Xml.Xsl.XslTransform> et <xref:System.Xml.Xsl.XsltArgumentList> sont obsolètes dans le [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]. Vous pouvez effectuer des transformations XSLT à l'aide de la classe <xref:System.Xml.Xsl.XslCompiledTransform>. Consultez [à l’aide de la classe XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) et [migration depuis la classe XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) pour plus d’informations.  
+>  Les classes <xref:System.Xml.Xsl.XslTransform> et <xref:System.Xml.Xsl.XsltArgumentList> sont obsolètes dans le [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]. Vous pouvez effectuer des transformations XSLT à l'aide de la classe <xref:System.Xml.Xsl.XslCompiledTransform>. Pour plus d'informations, consultez [Utilisation de la classe XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) et [Migration depuis la classe XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md).  
   
  La classe <xref:System.Xml.Xsl.XsltArgumentList> contient des paramètres XSLT et des objets d'extension XSLT. Lorsqu'ils sont transmis à la méthode <xref:System.Xml.Xsl.XslTransform.Transform%2A>, ces paramètres et ces objets d'extension peuvent être appelés à partir des feuilles de style.  
   
@@ -48,8 +51,8 @@ La classe <xref:System.Xml.Xsl.XsltArgumentList> contient des paramètres XSLT (
 |Type W3C|Classe .NET Framework équivalente (type)|Type XPath ou type XSLT|  
 |--------------|----------------------------------------------|-----------------------------|  
 |Chaîne|System.String|XPath|  
-|Boolean|System.Boolean|XPath|  
-|Nombre|System.Double|XPath|  
+|Booléen|System.Boolean|XPath|  
+|nombre|System.Double|XPath|  
 |Fragment d'arborescence résultat|System.Xml.XPath.XPathNavigator|XSLT|  
 |Collection de nœuds|System.Xml.XPath.XPathNodeIterator|XPath|  
   
@@ -196,11 +199,11 @@ public class Sample
   
  Les types de données retournés par les objets d'extension correspondent à l'un des quatre types de données de base XPath : nombre, chaîne, booléen et collection de nœuds.  
   
-#### <a name="to-use-the-xslt-extension-object-the-user-needs-to-do-the-following"></a>Pour utiliser l'objet d'extension XSLT, vous devez procéder comme suit :  
+#### <a name="to-use-the-xslt-extension-object-the-user-needs-to-do-the-following"></a>Pour utiliser l’objet d’extension XSLT, vous devez procéder comme suit :  
   
 1.  Créez un objet <xref:System.Xml.Xsl.XsltArgumentList> et ajoutez l'objet extension à l'aide de la méthode <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>.  
   
-2.  Appelez l'objet d'extension à partir de la feuille de style.  
+2.  Appelez l’objet d’extension à partir de la feuille de style.  
   
 3.  Transmettez l'objet <xref:System.Xml.Xsl.XsltArgumentList> à la méthode <xref:System.Xml.Xsl.XslTransform.Transform%2A>.  
   
@@ -372,4 +375,4 @@ public class Sample
  `</circles>`  
   
 ## <a name="see-also"></a>Voir aussi  
- [XslTransform Class Implements the XSLT Processor](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+ [Implémentation du processeur XSLT par la classe XslTransform](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

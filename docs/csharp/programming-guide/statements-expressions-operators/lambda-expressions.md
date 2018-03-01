@@ -2,7 +2,8 @@
 title: Expressions lambda (Guide de programmation C#)
 ms.date: 03/03/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - lambda expressions [C#]
@@ -11,19 +12,19 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-caps.latest.revision: "64"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 9127cc5404fb85356f01cac26aa7b03a8ccd70da
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: df59647b803bff448a801374a325f07e4903a160
+ms.sourcegitcommit: 22a48b64a0150a60b00b4fc4d8c62cde7f1670c4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Expressions lambda (Guide de programmation C#)
 Une expression lambda est une [fonction anonyme](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) que vous pouvez utiliser pour créer des types [délégués](../../../csharp/programming-guide/delegates/using-delegates.md) ou des types d' [arborescence d'expression](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b) . En utilisant des expressions lambda, vous pouvez écrire des fonctions locales qui peuvent être passées comme des arguments ou retournées comme la valeur d'appels de fonction. Les expressions lambda sont particulièrement utiles pour écrire des expressions de requête LINQ.  
   
- Pour créer une expression lambda, vous spécifiez des paramètres d'entrée (le cas échéant) à gauche de l'opérateur lambda [=>](../../../csharp/language-reference/operators/lambda-operator.md), et vous placez l'expression ou le bloc d'instructions de l'autre côté. Par exemple, l'expression lambda `x => x * x` spécifie un paramètre nommé `x` et retourne la valeur `x` élevée au carré. Vous pouvez assigner cette expression à un type délégué, comme dans l'exemple suivant :  
+ Pour créer une expression lambda, vous spécifiez des paramètres d'entrée (le cas échéant) à gauche de l'opérateur lambda [=>](../../../csharp/language-reference/operators/lambda-operator.md), et vous placez l'expression ou le bloc d'instructions de l'autre côté. Par exemple, l'expression lambda `x => x * x` spécifie un paramètre nommé `x` et retourne la valeur `x` élevée au carré. Vous pouvez assigner cette expression à un type délégué, comme dans l'exemple suivant :  
   
 ```csharp  
 delegate int del(int i);  
@@ -156,7 +157,7 @@ public partial class Form1 : Form
  Pour plus d’informations sur la création et l’utilisation des méthodes asyncrones, consultez [Programmation asynchrone avec async et await](../../../csharp/programming-guide/concepts/async/index.md).  
   
 ## <a name="lambdas-with-the-standard-query-operators"></a>Lambdas avec les opérateurs de requête standard  
- De nombreux opérateurs de requête standard comportent un paramètre d'entrée dont le type est l'un de la famille <xref:System.Func%602> de délégués génériques. Ces délégués utilisent des paramètres de type pour définir le nombre et les types de paramètres d'entrée, ainsi que le type de retour du délégué. Les délégués`Func` sont très utiles pour l'encapsulation des expressions définies par l'utilisateur appliquées à chaque élément dans un jeu de données sources. Considérons par exemple le type délégué suivant :  
+ De nombreux opérateurs de requête standard comportent un paramètre d'entrée dont le type est l'un de la famille <xref:System.Func%602> de délégués génériques. Ces délégués utilisent des paramètres de type pour définir le nombre et les types de paramètres d'entrée, ainsi que le type de retour du délégué. Les délégués`Func` sont très utiles pour l'encapsulation des expressions définies par l'utilisateur appliquées à chaque élément dans un jeu de données sources. Considérons par exemple le type délégué suivant :  
   
 ```csharp  
 public delegate TResult Func<TArg0, TResult>(TArg0 arg0)  
@@ -274,13 +275,13 @@ class Test
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="featured-book-chapter"></a>Chapitre proposé  
- [Delegates, Events, and Lambda Expressions](http://go.microsoft.com/fwlink/?LinkId=195395) (Délégués, événements et expressions lambda) dans [C# 3.0 Cookbook, Third Edition: More than 250 solutions for C# 3.0 programmers](http://go.microsoft.com/fwlink/?LinkId=195369)  
+ [Delegates, Events, and Lambda Expressions](https://msdn.microsoft.com/library/orm-9780596516109-03-09.aspx) (Délégués, événements et expressions lambda) dans [C# 3.0 Cookbook, Third Edition: More than 250 solutions for C# 3.0 programmers](https://msdn.microsoft.com/library/orm-9780596516109-03.aspx)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
- [LINQ (Language Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
+ [LINQ (Language Integrated Query)](../../../csharp/programming-guide/concepts/linq/index.md)  
  [Méthodes anonymes](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
  [is](../../../csharp/language-reference/keywords/is.md)  
- [Arborescences de l’expression](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)  
- [Exemples Visual Studio 2008 c# (voir les fichiers exemples de requêtes LINQ et le programme XQuery)](http://code.msdn.microsoft.com/Visual-Studio-2008-C-d295cdba)  
- [Expressions lambda récursives](http://go.microsoft.com/fwlink/?LinkId=112395)
+ [Arborescences d’expressions](../../../csharp/programming-guide/concepts/expression-trees/index.md)  
+ [Exemples Visual Studio 2008 C# (voir les fichiers d’exemples de requêtes LINQ et le programme XQuery)](http://code.msdn.microsoft.com/Visual-Studio-2008-C-d295cdba)  
+ [Expressions lambda récursives](https://blogs.msdn.microsoft.com/madst/2007/05/11/recursive-lambda-expressions/)

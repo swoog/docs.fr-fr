@@ -26,15 +26,18 @@ helpviewer_keywords:
 - waiting for asynchronous calls
 - status information [.NET Framework], asynchronous operations
 ms.assetid: 41972034-92ed-450a-9664-ab93fcc6f1fb
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 965e5928c03ae573eacba98a7596f55b56aaba26
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e7e6f402d9423a8ae1ee464499f1b794785c2b06
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="calling-synchronous-methods-asynchronously"></a>Appel de méthodes synchrones de façon asynchrone
 Le .NET Framework vous permet d’appeler n’importe quelle méthode de façon asynchrone. Pour ce faire, vous définissez un délégué avec la même signature que la méthode à appeler. Le Common Language Runtime définit automatiquement les méthodes `BeginInvoke` et `EndInvoke` pour ce délégué, avec les signatures appropriées.  
@@ -53,7 +56,7 @@ Le .NET Framework vous permet d’appeler n’importe quelle méthode de façon 
   
 -   Effectuez quelques tâches, puis appelez `EndInvoke` pour bloquer l’exécution jusqu’à la fin de l’appel.  
   
--   Obtenir un <xref:System.Threading.WaitHandle> à l’aide de la <xref:System.IAsyncResult.AsyncWaitHandle%2A?displayProperty=nameWithType> propriété, utilisez son <xref:System.Threading.WaitHandle.WaitOne%2A> méthode pour bloquer l’exécution jusqu'à ce que le <xref:System.Threading.WaitHandle> est signalé, puis appelez `EndInvoke`.  
+-   Obtenez un <xref:System.Threading.WaitHandle> à l’aide de la propriété <xref:System.IAsyncResult.AsyncWaitHandle%2A?displayProperty=nameWithType>, utilisez sa méthode <xref:System.Threading.WaitHandle.WaitOne%2A> pour bloquer l’exécution jusqu’à ce que <xref:System.Threading.WaitHandle> soit signalé, puis appelez `EndInvoke`.  
   
 -   Interrogez le <xref:System.IAsyncResult> retourné par `BeginInvoke` pour déterminer quand l’appel asynchrone s’est terminé, puis appelez `EndInvoke`.  
   
@@ -87,7 +90,7 @@ Le .NET Framework vous permet d’appeler n’importe quelle méthode de façon 
  Si vous utilisez un <xref:System.Threading.WaitHandle>, vous pouvez effectuer un traitement supplémentaire avant ou après la fin de l’appel asynchrone, mais avant d’appeler `EndInvoke` pour récupérer les résultats.  
   
 > [!NOTE]
->  Le handle d’attente n’est pas fermé automatiquement quand vous appelez `EndInvoke`. Si vous libérez toutes les références au handle d’attente, les ressources système sont libérées quand le garbage collection récupère le handle d’attente. Pour libérer les ressources système dès que vous avez terminé d’utiliser le handle d’attente, supprimez-le en appelant le <xref:System.Threading.WaitHandle.Close%2A?displayProperty=nameWithType> (méthode). Le garbage collection fonctionne plus efficacement quand les objets à supprimer le sont explicitement.  
+>  Le handle d’attente n’est pas fermé automatiquement quand vous appelez `EndInvoke`. Si vous libérez toutes les références au handle d’attente, les ressources système sont libérées quand le garbage collection récupère le handle d’attente. Pour libérer les ressources système dès que vous avez terminé d’utiliser le handle d’attente, supprimez-le en appelant la méthode <xref:System.Threading.WaitHandle.Close%2A?displayProperty=nameWithType>. Le garbage collection fonctionne plus efficacement quand les objets à supprimer le sont explicitement.  
   
  [!code-cpp[AsyncDelegateExamples#3](../../../samples/snippets/cpp/VS_Snippets_CLR/AsyncDelegateExamples/cpp/waithandle.cpp#3)]
  [!code-csharp[AsyncDelegateExamples#3](../../../samples/snippets/csharp/VS_Snippets_CLR/AsyncDelegateExamples/CS/waithandle.cs#3)]
@@ -103,11 +106,11 @@ Le .NET Framework vous permet d’appeler n’importe quelle méthode de façon 
 ## <a name="executing-a-callback-method-when-an-asynchronous-call-completes"></a>Exécution d’une méthode de rappel à la fin d’un appel asynchrone  
  Si le thread qui lance l’appel asynchrone ne doit pas nécessairement être le thread qui traite les résultats, vous pouvez exécuter une méthode de rappel à la fin de l’appel. La méthode de rappel est exécutée sur un thread <xref:System.Threading.ThreadPool> .  
   
- Pour utiliser une méthode de rappel, vous devez transmettre `BeginInvoke` et le délégué <xref:System.AsyncCallback> qui représente la méthode de rappel. Vous pouvez également transmettre un objet contenant les informations que la méthode de rappel doit utiliser. Dans la méthode de rappel, vous pouvez convertir le <xref:System.IAsyncResult>, qui est le seul paramètre de la méthode de rappel, en objet <xref:System.Runtime.Remoting.Messaging.AsyncResult> . Vous pouvez ensuite utiliser le <xref:System.Runtime.Remoting.Messaging.AsyncResult.AsyncDelegate%2A?displayProperty=nameWithType> propriété à obtenir le délégué utilisé pour lancer l’appel afin que vous puissiez appeler `EndInvoke`.  
+ Pour utiliser une méthode de rappel, vous devez transmettre `BeginInvoke` et le délégué <xref:System.AsyncCallback> qui représente la méthode de rappel. Vous pouvez également transmettre un objet contenant les informations que la méthode de rappel doit utiliser. Dans la méthode de rappel, vous pouvez convertir le <xref:System.IAsyncResult>, qui est le seul paramètre de la méthode de rappel, en objet <xref:System.Runtime.Remoting.Messaging.AsyncResult> . Vous pouvez ensuite utiliser la propriété <xref:System.Runtime.Remoting.Messaging.AsyncResult.AsyncDelegate%2A?displayProperty=nameWithType> pour obtenir le délégué utilisé pour lancer l’appel, afin de pouvoir appeler `EndInvoke`.  
   
  Remarques sur l’exemple :  
   
--   Le `threadId` paramètre de `TestMethod` est un `out` paramètre ([`<Out>` `ByRef` en Visual Basic), de sorte que sa valeur d’entrée n’est jamais utilisée par `TestMethod`. Une variable factice est transmise à l’appel `BeginInvoke` . Si le paramètre `threadId` était un paramètre `ref` (`ByRef` en Visual Basic), la variable doit être un champ de niveau classe pour pouvoir être transmise à `BeginInvoke` et `EndInvoke`.  
+-   Le paramètre `threadId` de `TestMethod` est un paramètre `out` (`<Out>` `ByRef` en Visual Basic). Sa valeur d’entrée n’est donc jamais utilisée par `TestMethod`. Une variable factice est transmise à l’appel `BeginInvoke` . Si le paramètre `threadId` était un paramètre `ref` (`ByRef` en Visual Basic), la variable doit être un champ de niveau classe pour pouvoir être transmise à `BeginInvoke` et `EndInvoke`.  
   
 -   Les informations d’état transmises à `BeginInvoke` sont une chaîne de format, que la méthode de rappel utilise pour mettre en forme un message de sortie. Parce qu’elles sont transmises en tant que type <xref:System.Object>, les informations d’état doivent être converties en leur propre type avant de pouvoir être utilisées.  
   

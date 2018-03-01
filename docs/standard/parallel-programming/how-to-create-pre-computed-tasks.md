@@ -11,28 +11,32 @@ ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: tasks, creating pre-computed
+helpviewer_keywords:
+- tasks, creating pre-computed
 ms.assetid: a73eafa2-1f49-4106-a19e-997186029b58
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4596b28afe48aad4a84a7dd72b4a1d44a9ada8a2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 262aa626e9e426da94de0d2ad5f2ef04a5bbc5f3
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-create-pre-computed-tasks"></a>Comment : créer des tâches précalculées
-Ce document décrit comment utiliser le <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType> méthode pour récupérer les résultats des opérations de téléchargement asynchrones qui sont conservées dans un cache. Le <xref:System.Threading.Tasks.Task.FromResult%2A> méthode retourne un fini <xref:System.Threading.Tasks.Task%601> objet qui contient la valeur fournie en tant que son <xref:System.Threading.Tasks.Task%601.Result%2A> propriété. Cette méthode est utile lorsque vous exécutez une opération asynchrone qui retourne un objet <xref:System.Threading.Tasks.Task%601>, et que le résultat de cet objet <xref:System.Threading.Tasks.Task%601> est déjà calculé.  
+Ce document décrit comment utiliser la méthode <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType> pour récupérer les résultats d’opérations de téléchargement asynchrones qui sont conservées dans un cache. La méthode <xref:System.Threading.Tasks.Task.FromResult%2A> retourne un objet <xref:System.Threading.Tasks.Task%601> fini qui contient la valeur fournie en tant que sa propriété <xref:System.Threading.Tasks.Task%601.Result%2A>. Cette méthode est utile lorsque vous exécutez une opération asynchrone qui retourne un objet <xref:System.Threading.Tasks.Task%601>, et que le résultat de cet objet <xref:System.Threading.Tasks.Task%601> est déjà calculé.  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant télécharge des chaînes à partir du web. Il définit le `DownloadStringAsync` (méthode). Cette méthode télécharge des chaînes à partir du web de façon asynchrone. Cet exemple utilise également un <xref:System.Collections.Concurrent.ConcurrentDictionary%602> objet à mettre en cache les résultats des opérations précédentes. Si l’adresse d’entrée est maintenue dans ce cache, `DownloadStringAsync` utilise le <xref:System.Threading.Tasks.Task.FromResult%2A> méthode pour produire un <xref:System.Threading.Tasks.Task%601> objet qui contient le contenu à l’adresse. Dans le cas contraire, `DownloadStringAsync` télécharge le fichier à partir du web et ajoute le résultat dans le cache.  
+ L’exemple suivant télécharge des chaînes à partir du web. Il définit la méthode `DownloadStringAsync`. Cette méthode télécharge des chaînes à partir du web de façon asynchrone. Cet exemple utilise également un objet <xref:System.Collections.Concurrent.ConcurrentDictionary%602> pour mettre en cache les résultats des opérations précédentes. Si l’adresse d’entrée est conservée dans ce cache, `DownloadStringAsync` utilise la méthode <xref:System.Threading.Tasks.Task.FromResult%2A> pour produire un objet <xref:System.Threading.Tasks.Task%601> qui contient le contenu à cette adresse. Dans le cas contraire, `DownloadStringAsync` télécharge le fichier à partir du web et ajoute le résultat dans le cache.  
   
  [!code-csharp[TPL_CachedDownloads#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_cacheddownloads/cs/cacheddownloads.cs#1)]
  [!code-vb[TPL_CachedDownloads#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_cacheddownloads/vb/cacheddownloads.vb#1)]  
   
- Cet exemple calcule le temps nécessaire pour télécharger plusieurs chaînes deux fois. Le deuxième ensemble d’opérations de téléchargement doit-elle prendre moins de temps que le premier jeu parce que les résultats sont conservés dans le cache. Le <xref:System.Threading.Tasks.Task.FromResult%2A> méthode permet le `DownloadStringAsync` méthode pour créer <xref:System.Threading.Tasks.Task%601> objets qui contiennent ces précalculée résultats.  
+ Cet exemple calcule le temps nécessaire pour télécharger plusieurs chaînes deux fois. Le deuxième ensemble d’opérations de téléchargement doit prendre moins de temps que le premier, car les résultats sont conservés dans le cache. La méthode <xref:System.Threading.Tasks.Task.FromResult%2A> permet à la méthode `DownloadStringAsync` de créer des objets <xref:System.Threading.Tasks.Task%601> qui contiennent ces résultats pré-calculés.  
   
 ## <a name="compiling-the-code"></a>Compilation du code  
  Copiez l’exemple de code et collez-le dans un projet Visual Studio, ou collez-le dans un fichier nommé `CachedDownloads.cs` (`CachedDownloads.vb` pour [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]), puis exécutez la commande suivante dans une fenêtre d’invite de commandes Visual Studio.  

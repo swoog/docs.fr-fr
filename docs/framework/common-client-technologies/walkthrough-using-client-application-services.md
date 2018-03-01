@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - application services host [client application services]
 - client application services, walkthroughs
 ms.assetid: bb7c8950-4517-4dae-b705-b74a14059b26
-caps.latest.revision: "47"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 124c9321623fd6fe9c5414fc1eed2e41be1e75f3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 71eac85d07ac54cf15edcfcc3a86de58afef5004
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="walkthrough-using-client-application-services"></a>Procédure pas à pas : utilisation des services d'application cliente
 Cette rubrique décrit comment créer une application Windows qui utilise des services d'application cliente pour authentifier les utilisateurs et récupérer des rôles d'utilisateur et des paramètres.  
@@ -191,7 +193,7 @@ Cette rubrique décrit comment créer une application Windows qui utilise des se
   	|**Nom d'utilisateur**|`manager`|  
   	|**Mot de passe**|`manager!`|  
   	|**Confirmer le mot de passe**|`manager!`|  
-  	|**Message électronique**|`manager@contoso.com`|  
+  	|**Courrier électronique**|`manager@contoso.com`|  
   	|**Question de sécurité**|`manager`|  
   	|**Réponse de sécurité**|`manager`|  
   
@@ -200,7 +202,7 @@ Cette rubrique décrit comment créer une application Windows qui utilise des se
      Un message indiquant la réussite de l'opération s'affiche.  
   
     > [!NOTE]
-    >  Les valeurs **Adresse de messagerie**, **Question de sécurité**et **Réponse de sécurité** sont requises par le formulaire, mais ne sont pas utilisées dans cet exemple.  
+    >  Les valeurs **Adresse de messagerie**, **Question de sécurité** et **Réponse de sécurité** sont requises par le formulaire, mais elles ne sont pas utilisées dans cet exemple.  
   
 13. Cliquez sur **Continuer**.  
   
@@ -213,7 +215,7 @@ Cette rubrique décrit comment créer une application Windows qui utilise des se
   	|**Nom d'utilisateur**|`employee`|  
   	|**Mot de passe**|`employee!`|  
   	|**Confirmer le mot de passe**|`employee!`|  
-  	|**Message électronique**|`employee@contoso.com`|  
+  	|**Courrier électronique**|`employee@contoso.com`|  
   	|**Question de sécurité**|`Employee`|  
   	|**Réponse de sécurité**|`employee`|  
   

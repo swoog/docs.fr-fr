@@ -18,15 +18,18 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: f120a5d9-933b-4d1d-acb6-f034a57c3749
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2e30b562b4795717df526c143df96607686a7582
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a46358052eb93662408f9c01592f917eee4540b9
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="interop-with-other-asynchronous-patterns-and-types"></a>Interopérabilité avec d’autres types et modèles asynchrones
 .NET Framework 1.0 a introduit le modèle <xref:System.IAsyncResult> , également appelé le [Asynchronous Programming Model (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md)ou le modèle `Begin/End` .  .NET Framework 2.0 a ajouté le [Event-based Asynchronous Pattern (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).  À partir de .NET Framework 4, le [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) remplace le modèle de programmation asychrone (APM, Asynchronous Programming Model) et le modèle asynchrone basé sur les évènements (EAP, Event-based Asynchronous Pattern), mais permet de créer facilement des routines de migration à partir de modèles antérieurs.  
@@ -55,7 +58,7 @@ ms.lasthandoff: 11/21/2017
 [!code-csharp[Conceptual.AsyncInterop#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/Stream1.cs#3)]
 [!code-vb[Conceptual.AsyncInterop#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/stream1.vb#3)]  
   
- Vous pouvez utiliser la <xref:System.Threading.Tasks.TaskFactory%601.FromAsync%2A?displayProperty=nameWithType> méthode pour implémenter un wrapper TAP pour cette opération comme suit :  
+ Vous pouvez utiliser la méthode <xref:System.Threading.Tasks.TaskFactory%601.FromAsync%2A?displayProperty=nameWithType> pour implémenter un wrapper TAP pour cette opération, comme le montre l’exemple ci-dessous :  
   
  [!code-csharp[Conceptual.AsyncInterop#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/Wrap1.cs#4)]
  [!code-vb[Conceptual.AsyncInterop#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/Wrap1.vb#4)]  
@@ -72,7 +75,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[Conceptual.AsyncInterop#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/APM1.cs#6)]
  [!code-vb[Conceptual.AsyncInterop#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/APM1.vb#6)]  
   
- À présent, imaginez une situation dans laquelle vous avez l’implémentation TAP suivante :  
+ À présent, imaginez une situation dans laquelle vous avez l’implémentation TAP suivante :  
   
  [!code-csharp[Conceptual.AsyncInterop#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/APM2.cs#7)]
  [!code-vb[Conceptual.AsyncInterop#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/APM2.vb#7)]  
@@ -101,12 +104,12 @@ ms.lasthandoff: 11/21/2017
   
 <a name="WHToTap"></a>   
 ### <a name="from-wait-handles-to-tap"></a>handles d’attente vers TAP  
- Bien que les handles d’attente n’implémentent pas un modèle asynchrone, les développeurs expérimentés peuvent utiliser le <xref:System.Threading.WaitHandle> classe et le <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType> méthode pour recevoir des notifications asynchrones lorsqu’un handle d’attente est défini.  Vous pouvez envelopper la méthode <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> pour autoriser une alternative basée sur les tâches pour toute attente synchrone sur un handle d’attente :  
+ Bien que les handles d’attente n’implémentent pas de modèle asynchrone, les développeurs expérimentés peuvent utiliser la classe <xref:System.Threading.WaitHandle> et la méthode <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType> pour recevoir des notifications asynchrones quand un handle d’attente est défini.  Vous pouvez envelopper la méthode <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> pour autoriser une alternative basée sur les tâches pour toute attente synchrone sur un handle d’attente :  
   
  [!code-csharp[Conceptual.AsyncInterop#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/Wait1.cs#12)]
  [!code-vb[Conceptual.AsyncInterop#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/Wait1.vb#12)]  
   
- Cette méthode vous permet d’utiliser les implémentations <xref:System.Threading.WaitHandle> existantes dans les méthodes asynchrones.  Par exemple, si vous souhaitez limiter le nombre d’opérations asynchrones qui s’exécutent à un moment donné, vous pouvez utiliser un sémaphore (un <xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType> objet).  Vous pouvez limiter à *N* le nombre d’opérations qui s’exécutent simultanément en initialisant le compteur du sémaphore à *N*, en attendant le sémaphore chaque fois que vous souhaitez effectuer une opération et en désactivant le sémaphore lorsque vous avez terminé une opération :  
+ Cette méthode vous permet d’utiliser les implémentations <xref:System.Threading.WaitHandle> existantes dans les méthodes asynchrones.  Par exemple, si vous souhaitez limiter le nombre d’opérations asynchrones en cours d’exécution à un moment donné, vous pouvez utiliser un sémaphore (un objet <xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType>).  Vous pouvez limiter à *N* le nombre d’opérations qui s’exécutent simultanément en initialisant le compteur du sémaphore à *N*, en attendant le sémaphore chaque fois que vous souhaitez effectuer une opération et en désactivant le sémaphore lorsque vous avez terminé une opération :  
   
  [!code-csharp[Conceptual.AsyncInterop#13](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/Semaphore1.cs#13)]
  [!code-vb[Conceptual.AsyncInterop#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/Semaphore1.vb#13)]  

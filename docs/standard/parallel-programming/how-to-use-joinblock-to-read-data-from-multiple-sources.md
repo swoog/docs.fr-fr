@@ -1,12 +1,8 @@
 ---
 title: "Comment : utiliser JoinBlock pour lire des données issues de plusieurs sources"
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,22 +12,23 @@ helpviewer_keywords:
 - TPL dataflow library, joining blocks in
 - dataflow blocks, joining in TPL
 ms.assetid: e9c1ada4-ac57-4704-87cb-2f5117f8151d
-caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 41445e4874b94809840ecf9ebda6f27ccc955c9b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f7d4e552404f99580bceafe7f900db4607201c3d
+ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-use-joinblock-to-read-data-from-multiple-sources"></a>Comment : utiliser JoinBlock pour lire des données issues de plusieurs sources
-Ce document explique comment utiliser la classe <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> pour effectuer une opération lorsque des données sont disponibles à partir de plusieurs sources. Il présente aussi comment utiliser le mode non gourmand pour permettre à plusieurs blocs de jointure de partager plus efficacement une source de données.  
-  
-> [!TIP]
->  La bibliothèque de flux de données TPL (espace de noms <xref:System.Threading.Tasks.Dataflow?displayProperty=nameWithType>) n'est pas distribuée avec le [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Pour installer l'espace de noms <xref:System.Threading.Tasks.Dataflow>, ouvrez votre projet dans [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], dans le menu Projet choisissez **Gérer les packages NuGet**, puis recherchez en ligne le package `Microsoft.Tpl.Dataflow`.  
-  
+Ce document explique comment utiliser la classe <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> pour effectuer une opération lorsque des données sont disponibles à partir de plusieurs sources. Il présente aussi comment utiliser le mode non gourmand pour permettre à plusieurs blocs de jointure de partager plus efficacement une source de données.
+
+[!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
+
 ## <a name="example"></a>Exemple  
  L'exemple suivant définit trois types de ressources, `NetworkResource`, `FileResource` et `MemoryResource`, et effectue des opérations lorsque les ressources sont disponibles. Cet exemple nécessite une paire `NetworkResource` et `MemoryResource` pour effectuer la première opération et une paire `FileResource` et `MemoryResource` pour effectuer la seconde opération. Pour permettre aux opérations de se produire lorsque toutes les ressources requises sont disponibles, cet exemple utilise la classe <xref:System.Threading.Tasks.Dataflow.JoinBlock%602>. Lorsqu'un objet <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> reçoit les données de toutes les sources, il envoie ces données à la cible, qui dans cet exemple est un objet <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>. Les objets <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> lisent à partir d'un pool partagé d'objets `MemoryResource`.  
   
@@ -52,7 +49,7 @@ Ce document explique comment utiliser la classe <xref:System.Threading.Tasks.Dat
  **vbc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowNonGreedyJoin.vb**  
   
 ## <a name="robust-programming"></a>Programmation fiable  
- L'utilisation de jointures non gourmandes peut également vous aider à empêcher tout interblocage dans votre application. Dans une application, *blocage* se produit lorsque deux ou plusieurs processus détiennent chacun une ressource et attendent mutuellement qu’un autre processus libère une autre ressource. Examinez la requête qui définit deux objets <xref:System.Threading.Tasks.Dataflow.JoinBlock%602>. Les deux objets lisent chacun des données de deux blocs sources partagés. En mode gourmand, si un bloc de jointure lit depuis la première source et le deuxième bloc de jointure lit depuis la seconde source, l'application peut être interbloquée car les deux blocs de jointure attendent mutuellement l'autre pour libérer sa ressource. En mode non gourmand, chaque bloc de jointure lit uniquement à partir de ses sources lorsque toutes les données sont disponibles, éliminant par conséquent, le risque d'interblocage.  
+ L'utilisation de jointures non gourmandes peut également vous aider à empêcher tout interblocage dans votre application. Dans une application logicielle, un *blocage* se produit lorsque au moins deux processus comportent chacun une ressource et attendent mutuellement qu’un autre processus en libère une autre. Examinez la requête qui définit deux objets <xref:System.Threading.Tasks.Dataflow.JoinBlock%602>. Les deux objets lisent chacun des données de deux blocs sources partagés. En mode gourmand, si un bloc de jointure lit depuis la première source et le deuxième bloc de jointure lit depuis la seconde source, l’application peut être interbloquée car les deux blocs de jointure attendent mutuellement l’autre pour libérer sa ressource. En mode non gourmand, chaque bloc de jointure lit uniquement à partir de ses sources lorsque toutes les données sont disponibles, éliminant par conséquent, le risque d'interblocage.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Le flux de données](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

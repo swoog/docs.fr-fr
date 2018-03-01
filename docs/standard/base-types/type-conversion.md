@@ -30,15 +30,18 @@ helpviewer_keywords:
 - Implicit operator
 - data types [.NET Framework], converting
 ms.assetid: ba36154f-064c-47d3-9f05-72f93a7ca96d
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 20b137e5df2fb6ebc62d0a64c1a93b53ded2e191
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 643a1c7d8dd141a8d898af61ba8302f46207321b
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="type-conversion-in-the-net-framework"></a>Conversion de type dans le .NET Framework
 <a name="top"></a> Chaque valeur a un type associé qui définit des attributs, tels la quantité d’espace allouée à la valeur, la plage de valeurs possibles et les membres qu’il rend disponibles. De nombreuses valeurs peuvent être exprimées sous forme de plusieurs types. Par exemple, la valeur 4 peut être exprimée sous forme d'un entier ou d'une valeur à virgule flottante. La conversion de type crée une valeur dans un nouveau type qui est équivalente à la valeur d'un ancien type, mais ne préserve pas nécessairement l'identité (ou la valeur exacte) de l'objet d'origine.  
@@ -104,7 +107,7 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.UInt32>|<xref:System.UInt32.MaxValue?displayProperty=nameWithType> est supérieur à <xref:System.Int32.MaxValue?displayProperty=nameWithType>.|  
 |<xref:System.UInt64>|<xref:System.UInt64.MaxValue?displayProperty=nameWithType> est supérieur à <xref:System.Int32.MaxValue?displayProperty=nameWithType>.|  
   
- Pour gérer ces conversions restrictives, le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] permet aux types de définir un opérateur `Explicit`. Chaque compilateur de langage peut ensuite implémenter cet opérateur à l’aide de leur propre syntaxe, ou un membre de la <xref:System.Convert> classe peut être appelée pour effectuer la conversion. (Pour plus d’informations sur la classe <xref:System.Convert>, consultez [Classe Convert](#Convert) plus loin dans cette rubrique.) L'exemple suivant illustre l'utilisation de fonctionnalités de langage pour gérer la conversion explicite de ces valeurs entières potentiellement hors limites en valeurs <xref:System.Int32>.  
+ Pour gérer ces conversions restrictives, le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] permet aux types de définir un opérateur `Explicit`. Chaque compilateur de langage peut ensuite implémenter cet opérateur à l'aide de sa propre syntaxe, ou un membre de la classe <xref:System.Convert> peut être appelé pour effectuer la conversion. (Pour plus d’informations sur la classe <xref:System.Convert>, consultez [Classe Convert](#Convert) plus loin dans cette rubrique.) L'exemple suivant illustre l'utilisation de fonctionnalités de langage pour gérer la conversion explicite de ces valeurs entières potentiellement hors limites en valeurs <xref:System.Int32>.  
   
  [!code-csharp[Conceptual.Conversion#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/explicit1.cs#4)]
  [!code-vb[Conceptual.Conversion#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/explicit1.vb#4)]  
@@ -176,7 +179,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[Conceptual.Conversion#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/convert1.cs#9)]
  [!code-vb[Conceptual.Conversion#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/convert1.vb#9)]  
   
- Pour une table qui répertorie à la fois les conversions étendues et restrictives prises en charge par le <xref:System.Convert> de classe, consultez [tableaux de Conversion de Type](../../../docs/standard/base-types/conversion-tables.md).  
+ Pour obtenir un tableau qui répertorie les conversions étendues et restrictives prises en charge par la classe <xref:System.Convert>, consultez [Tableaux de conversion de types](../../../docs/standard/base-types/conversion-tables.md).  
   
 <a name="ChangeType"></a>   
 ### <a name="custom-conversions-with-the-changetype-method"></a>Conversions personnalisées avec la méthode ChangeType  

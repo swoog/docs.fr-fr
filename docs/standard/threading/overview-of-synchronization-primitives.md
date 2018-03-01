@@ -13,15 +13,18 @@ helpviewer_keywords:
 - threading [.NET Framework],synchronizing threads
 - managed threading
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 58fb520365d0a80a8f8bc46e3fdbd23483fdf07f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 79d6e384458e289c4da8587eae66486a054aad08
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="overview-of-synchronization-primitives"></a>Vue d’ensemble des primitives de synchronisation
 <a name="top"></a> Le .NET Framework fournit une plage de primitives de synchronisation pour contrôler les interactions de threads et éviter des conditions de concurrence. Celles-ci peuvent être divisées approximativement en trois catégories : le verrouillage, la signalisation et les opérations verrouillées.  
@@ -47,9 +50,9 @@ ms.lasthandoff: 11/21/2017
  Les verrous donnent le contrôle d'une ressource à un seul thread à la fois ou à un nombre spécifié de threads. Un thread qui demande un verrou exclusif alors que ce verrou est en cours d'utilisation se bloque jusqu'à ce que le verrou soit de nouveau disponible.  
   
 ### <a name="exclusive-locks"></a>Verrous exclusifs  
- La forme la plus simple de verrouillage est l’instruction `lock` en C# et l’instruction `SyncLock` en Visual Basic, qui contrôle l’accès à un bloc de code. Ce type de bloc est souvent appelé « section critique ». Le `lock` instruction est implémentée à l’aide de la <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> et <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> méthodes et elle utilise `try…catch…finally` bloc pour garantir que le verrou est libéré.  
+ La forme la plus simple de verrouillage est l’instruction `lock` en C# et l’instruction `SyncLock` en Visual Basic, qui contrôle l’accès à un bloc de code. Ce type de bloc est souvent appelé « section critique ». L’instruction `lock` est implémentée à l’aide des méthodes <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> et <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> et utilise le bloc `try…catch…finally` pour garantir la libération du verrou.  
   
- En général, à l’aide de la `lock` ou `SyncLock` instruction pour protéger de petits blocs de code, jamais englober plus d’une méthode unique, est la meilleure façon d’utiliser la <xref:System.Threading.Monitor> classe. Bien que puissante, la classe <xref:System.Threading.Monitor> est susceptible de rendre orphelins des verrous et des blocages.  
+ En général, l’utilisation de l’instruction `lock` ou `SyncLock` pour protéger de petits blocs de code sans jamais englober plus d'une méthode est la meilleure façon d'utiliser la classe <xref:System.Threading.Monitor>. Bien que puissante, la classe <xref:System.Threading.Monitor> est susceptible de rendre orphelins des verrous et des blocages.  
   
 #### <a name="monitor-class"></a>Classe Monitor  
  La classe <xref:System.Threading.Monitor> fournit des fonctionnalités supplémentaires, qui peuvent être utilisée conjointement à l’instruction `lock` :  
@@ -80,7 +83,7 @@ ms.lasthandoff: 11/21/2017
  Pour bénéficier d’une vue d’ensemble conceptuelle, consultez [Mutex](../../../docs/standard/threading/mutexes.md).  
   
 #### <a name="spinlock-class"></a>Classe SpinLock  
- En commençant par le [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], vous pouvez utiliser la <xref:System.Threading.SpinLock> classe lorsque la charge mémoire requise par <xref:System.Threading.Monitor> dégrade les performances. Quand <xref:System.Threading.SpinLock> rencontre une section critique verrouillée, il tourne simplement en boucle jusqu'à ce que le verrou soit de nouveau disponible. Si le verrou est maintenu très peu de temps, la rotation peut fournir de meilleures performances que le blocage. Toutefois, si le verrou est maintenu pendant plusieurs dizaines de cycles, <xref:System.Threading.SpinLock> fonctionne aussi bien en tant que <xref:System.Threading.Monitor>, mais utilise plus de cycles processeur et peut donc dégrader les performances des autres threads ou processus.  
+ À partir du [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], vous pouvez utiliser la classe <xref:System.Threading.SpinLock> quand la surcharge requise par <xref:System.Threading.Monitor> dégrade les performances. Quand <xref:System.Threading.SpinLock> rencontre une section critique verrouillée, il tourne simplement en boucle jusqu'à ce que le verrou soit de nouveau disponible. Si le verrou est maintenu très peu de temps, la rotation peut fournir de meilleures performances que le blocage. Toutefois, si le verrou est maintenu pendant plusieurs dizaines de cycles, <xref:System.Threading.SpinLock> fonctionne aussi bien que <xref:System.Threading.Monitor>, mais utilise plus de cycles processeur et peut donc dégrader les performances d'autres threads ou processus.  
   
 ### <a name="other-locks"></a>Autres verrous  
  Les verrous n'ont pas besoin d'être exclusifs. Il est souvent utile d'autoriser un nombre limité d’accès simultanés de threads à une ressource. Les sémaphores et les verrous de lecteur-writer sont conçus pour contrôler ce type d'accès à des ressources regroupées.  
@@ -155,7 +158,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="spinwait"></a>   
 ## <a name="spinwait"></a>SpinWait  
- En commençant par le [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], vous pouvez utiliser la <xref:System.Threading.SpinWait?displayProperty=nameWithType> structure lorsqu’un thread doit attendre un événement soit signalé ou une condition à remplir, mais lorsque le temps d’attente réel est censé être inférieure à la durée d’attente requise à l’aide d’un handle d’attente ou par otherwi se bloque le thread actuel. À l'aide de <xref:System.Threading.SpinWait>, vous pouvez spécifier une courte période de rotation pendant l'attente, puis générer (par exemple, en attente ou en veille) uniquement si la condition n'a pas été remplie dans le délai spécifié.  
+ À partir du [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], vous pouvez utiliser la structure <xref:System.Threading.SpinWait?displayProperty=nameWithType> quand un thread doit attendre le signalement d'un événement ou la satisfaction d'une condition, mais quand le temps d'attente réel est supposé être inférieur à la latence requise, en utilisant un descripteur d'attente ou en bloquant le thread actuel. À l'aide de <xref:System.Threading.SpinWait>, vous pouvez spécifier une courte période de rotation pendant l'attente, puis générer (par exemple, en attente ou en veille) uniquement si la condition n'a pas été remplie dans le délai spécifié.  
   
  [Retour au début](#top)  
   

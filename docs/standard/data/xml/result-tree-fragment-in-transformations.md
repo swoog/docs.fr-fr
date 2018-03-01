@@ -9,19 +9,22 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: df363480-ba02-4233-9ddf-8434e421c4f1
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 1a4b585fe34a841061f8e5bab7cb18a58f53cfe8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 04e23f39f522fca7f69aa86be7036320a5698a60
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="result-tree-fragment-in-transformations"></a>Fragment d’arborescence résultat dans Transformations
 > [!NOTE]
->  La classe <xref:System.Xml.Xsl.XslTransform> est obsolète dans le [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]. Vous pouvez effectuer des transformations XSLT (Extensible Stylesheet Language Transformation) à l'aide de la classe <xref:System.Xml.Xsl.XslCompiledTransform>. Consultez [à l’aide de la classe XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) et [migration depuis la classe XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) pour plus d’informations.  
+>  La classe <xref:System.Xml.Xsl.XslTransform> est obsolète dans le [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]. Vous pouvez effectuer des transformations XSLT (Extensible Stylesheet Language Transformation) à l'aide de la classe <xref:System.Xml.Xsl.XslCompiledTransform>. Pour plus d'informations, consultez [Utilisation de la classe XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) et [Migration depuis la classe XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md).  
   
  Les fragments d’arborescence résultat ne sont rien d’autre qu’un type spécial de collection de nœuds. Vous pouvez effectuer sur ces collections toutes les fonctions pouvant être effectuées sur une collection de nœuds. Vous pouvez également convertir un fragment d'arborescence résultat en une collection de nœuds à l'aide la fonction `node-set()`, puis l'utiliser ensuite partout où il est possible d'utiliser une collection de nœuds.  
   
@@ -43,7 +46,7 @@ ms.lasthandoff: 11/21/2017
   
  Pour les éléments `parameter` et `variable`, si une valeur est assignée par l'expression XPath, un des quatre types XPath de base sera retourné : booléen, chaîne, nombre ou collection de nœuds. Lorsque la valeur est fournie à l'aide d'un corps de modèle non vide, un type de données non XPath est retourné qui correspond à un fragment d'arborescence résultat.  
   
- Lorsqu'une variable est liée à un fragment d'arborescence résultat au lieu d'un des quatre types de données XPath de base, c'est la seule fois où une requête XPath retourne un type qui ne correspond pas à un des quatre types d'objet XPath. Les fragments d'arborescence résultat et leur comportement sont expliqués dans la spécification du World Wide Web Consortium (W3C) à l'adresse http://www.w3.org/XSLT, de la section 11.1 sur les fragments d'arborescence résultat à la section 11.6 sur le transfert des paramètres aux modèles. Également, la section 1 Introduction explique comment des modèles peuvent contenir des éléments provenant de l'espace de noms XSLT qui retournent ou créent des fragments d'arborescence résultat.  
+ Lorsqu'une variable est liée à un fragment d'arborescence résultat au lieu d'un des quatre types de données XPath de base, c'est la seule fois où une requête XPath retourne un type qui ne correspond pas à un des quatre types d'objet XPath. Les fragments d’arborescence résultat et leur comportement sont expliqués dans la spécification du World Wide Web Consortium (W3C) à l’adresse http://www.w3.org/XSLT, de la section 11.1 sur les fragments d’arborescence résultat à la section 11.6 sur le transfert des paramètres aux modèles. Également, la section 1 Introduction explique comment des modèles peuvent contenir des éléments provenant de l'espace de noms XSLT qui retournent ou créent des fragments d'arborescence résultat.  
   
  Un fragment d'arborescence résultat, en théorie, se comporte comme une collection de nœuds avec rien de plus qu'un nœud racine unique. Cependant, le reste des nœuds retournés sont des nœuds enfants. Pour voir les nœuds enfants par programme, copiez le fragment d'arborescence résultat dans l'arborescence résultat à l'aide de l'élément `<xsl:copy-of>`. Une fois la copie effectuée, tous les nœuds enfants sont copiés également dans l'arborescence résultat, les uns après les autres. Tant qu'un `copy` ou `copy-of` n'est pas utilisé, un fragment d'arborescence résultat ne fait pas partie de l'arborescence résultat ou de la sortie provenant de la transformation.  
   
@@ -202,4 +205,4 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Xml.XPath.XPathNodeIterator>  
  <xref:System.Xml.XPath.XPathNodeIterator>  
  [Transformations XSLT avec la classe XslTransform](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)  
- [XslTransform Class Implements the XSLT Processor](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+ [Implémentation du processeur XSLT par la classe XslTransform](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

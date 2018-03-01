@@ -23,18 +23,21 @@ helpviewer_keywords:
 - standard TimeSpan format strings
 - formatting [.NET Framework], time intervals
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c4c486728ee4f98a6718c4d019976fccd6f380d7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 02dd73cd7f8f6be07b298e6fb1aac2b4759d21bb
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="standard-timespan-format-strings"></a>Chaînes de format TimeSpan standard.
-<a name="Top"></a>Une norme <xref:System.TimeSpan> chaîne de format utilise le spécificateur de format unique pour définir la représentation textuelle d’un <xref:System.TimeSpan> valeur qui résulte d’une opération de mise en forme. Toute chaîne de format contenant plusieurs caractères alphabétiques, y compris un espace blanc, est interprétée comme une chaîne de format <xref:System.TimeSpan> personnalisée. Pour plus d’informations, consultez [Chaînes de format TimeSpan personnalisées](../../../docs/standard/base-types/custom-timespan-format-strings.md).  
+<a name="Top"></a> Une chaîne de format <xref:System.TimeSpan> standard utilise un spécificateur de format pour définir la représentation textuelle d'une valeur <xref:System.TimeSpan> qui résulte d'une opération de mise en forme. Toute chaîne de format contenant plusieurs caractères alphabétiques, y compris un espace blanc, est interprétée comme une chaîne de format <xref:System.TimeSpan> personnalisée. Pour plus d’informations, consultez [Chaînes de format TimeSpan personnalisées](../../../docs/standard/base-types/custom-timespan-format-strings.md).  
   
  Les représentations sous forme de chaîne de valeurs <xref:System.TimeSpan> sont produites par des appels aux surcharges de la méthode <xref:System.TimeSpan.ToString%2A?displayProperty=nameWithType>, ainsi que par les méthodes qui prennent en charge la mise en forme composite, telles que <xref:System.String.Format%2A?displayProperty=nameWithType>. Pour plus d’informations, consultez [Mise en forme des types](../../../docs/standard/base-types/formatting-types.md) et [Mise en forme composite](../../../docs/standard/base-types/composite-formatting.md). L'exemple suivant illustre l'utilisation de chaînes de format standard dans des opérations de mise en forme.  
   
@@ -48,7 +51,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="top"></a> Le tableau suivant répertorie les spécificateurs de format d’intervalle de temps standard.  
   
-|Spécificateur de format|Nom|Description|Exemples|  
+|Spécificateur de format|Name|Description|Exemples|  
 |----------------------|----------|-----------------|--------------|  
 |"c"|Format constant (invariant)|Ce spécificateur ne dépend pas de la culture. Son format est le suivant : `[-][d’.’]hh’:’mm’:’ss[‘.’fffffff]`.<br /><br /> (les chaînes de format "t" et "T" produisent les mêmes résultats)<br /><br /> Pour plus d’informations, consultez [Spécificateur de format constant ("c")](#Constant).|`TimeSpan.Zero` -> 00:00:00<br /><br /> `New TimeSpan(0, 0, 30, 0)` -> 00:30:00<br /><br /> `New TimeSpan(3, 17, 25, 30, 500)` -> 3.17:25:30.5000000|  
 |"g"|Format court général|Ce spécificateur retourne uniquement ce qui est nécessaire. Il dépend de la culture et prend la forme suivante : `[-][d’:’]h’:’mm’:’ss[.FFFFFFF]`.<br /><br /> Pour plus d’informations, consultez [Spécificateur de format court général ("g")](#GeneralShort).|`New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50.5 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50,5 (fr-FR)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50.599 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50,599 (fr-FR)|  
@@ -71,7 +74,7 @@ ms.lasthandoff: 11/21/2017
 |*ss*|Nombre de secondes, allant de "0" à "59".|  
 |*fffffff*|Partie fractionnaire facultative d'une seconde.  Sa valeur peut varier de "0000001" (une graduation ou un dix-millionième de seconde) à "9999999" (9 999 999 dix-millionièmes de seconde ou une seconde moins une graduation).|  
   
- Contrairement aux spécificateurs de format "g" et "G", le spécificateur de format "c" ne dépend pas de la culture. Il produit la représentation sous forme de chaîne d'une valeur <xref:System.TimeSpan> qui est invariante et commune à toutes les versions du .NET Framework antérieures au [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. « c » est la valeur par défaut <xref:System.TimeSpan> chaîne de format ; le <xref:System.TimeSpan.ToString?displayProperty=nameWithType> méthode met en forme une valeur d’intervalle de temps à l’aide de la chaîne de format « c ».  
+ Contrairement aux spécificateurs de format "g" et "G", le spécificateur de format "c" ne dépend pas de la culture. Il produit la représentation sous forme de chaîne d'une valeur <xref:System.TimeSpan> qui est invariante et commune à toutes les versions du .NET Framework antérieures au [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. "c" est la chaîne de format <xref:System.TimeSpan> par défaut. La méthode <xref:System.TimeSpan.ToString?displayProperty=nameWithType> met en forme une valeur d'intervalle de temps à l'aide de la chaîne de format "c".  
   
 > [!NOTE]
 >  <xref:System.TimeSpan> prend également en charge les chaînes de format standard "t" et "T", dont le comportement est identique à celui de la chaîne de format standard "c".  
@@ -140,4 +143,4 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>Voir aussi  
  [Mise en forme des types](../../../docs/standard/base-types/formatting-types.md)  
  [Chaînes de format TimeSpan personnalisées](../../../docs/standard/base-types/custom-timespan-format-strings.md)  
- [Analyse de chaînes](../../../docs/standard/base-types/parsing-strings.md)
+ [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)

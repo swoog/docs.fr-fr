@@ -2,7 +2,8 @@
 title: "Implémentation du modèle asynchrone basé sur des tâches"
 ms.date: 06/14/2017
 ms.prod: .net
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.topic: article
 dev_langs:
 - csharp
@@ -14,26 +15,29 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: fab6bd41-91bd-44ad-86f9-d8319988aa78
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 3e61b0c94b1512509008d67017389fa11f938999
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 238f164fec78fe5e6dae9e7880fabc0a386bf399
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="implementing-the-task-based-asynchronous-pattern"></a>Implémentation du modèle asynchrone basé sur des tâches
-Vous pouvez implémenter le modèle asynchrone basé sur des tâches (TAP) de trois façons : à l’aide des compilateurs C# et Visual Basic dans Visual Studio, manuellement, ou par une combinaison des méthodes du compilateur et des méthodes manuelles. Les sections suivantes abordent chacune de ces méthodes en détail. Vous pouvez utiliser le modèle TAP pour implémenter des opérations asynchrones liées aux calculs et e/S. Le [les charges de travail](#workloads) section décrit chaque type d’opération.
+Vous pouvez implémenter le modèle asynchrone basé sur des tâches (TAP) de trois façons : à l’aide des compilateurs C# et Visual Basic dans Visual Studio, manuellement, ou par une combinaison des méthodes du compilateur et des méthodes manuelles. Les sections suivantes abordent chacune de ces méthodes en détail. Vous pouvez utiliser le modèle TAP pour implémenter à la fois des opérations asynchrones liées aux calculs et liées aux E/S. La section [Charges de travail](#workloads) aborde chacun des types d'opérations.
 
 ## <a name="generating-tap-methods"></a>Génération de méthodes TAP
 
-### <a name="using-the-compilers"></a>L’aide des compilateurs
-En commençant par [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], toute méthode qui est attribuée à la `async` (mot clé) (`Async` en Visual Basic) est considéré comme une méthode asynchrone, les compilateurs c# et Visual Basic effectuent les transformations nécessaires pour implémenter le méthode de façon asynchrone à l’aide de drainage. Une méthode asynchrone doit retourner un objet <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> ou <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>. Dans le second cas, le corps de la fonction doit retourner un `TResult`, le compilateur garantit ensuite que ce résultat est rendu disponible via l’objet de tâche qui en résulte. De même, toutes les exceptions non gérées dans le corps de la méthode sont marshalées vers la tâche de sortie et provoquent la fin de la tâche résultante avec l'état <xref:System.Threading.Tasks.TaskStatus.Faulted?displayProperty=nameWithType>. Une exception est levée quand un <xref:System.OperationCanceledException> (ou un type dérivé) n'est pas géré, auquel cas la tâche qui en résulte se termine avec l'état <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType>.
+### <a name="using-the-compilers"></a>Utilisation des compilateurs
+À partir de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], toute méthode attribuée avec le mot-clé `async` (`Async` dans Visual Basic) est considérée comme une méthode asynchrone. Les compilateurs C# et Visual Basic effectuent alors les transformations nécessaires pour implémenter la méthode de façon asynchrone à l'aide du modèle TAP. Une méthode asynchrone doit retourner un objet <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> ou <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>. Dans le dernier cas, le corps de la fonction doit retourner un `TResult`. Le compilateur garantit ensuite que ce résultat est rendu disponible via l’objet de tâche qui en résulte. De même, toutes les exceptions non gérées dans le corps de la méthode sont marshalées vers la tâche de sortie et provoquent la fin de la tâche résultante avec l'état <xref:System.Threading.Tasks.TaskStatus.Faulted?displayProperty=nameWithType>. Une exception est levée quand un <xref:System.OperationCanceledException> (ou un type dérivé) n'est pas géré, auquel cas la tâche qui en résulte se termine avec l'état <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType>.
 
-### <a name="generating-tap-methods-manually"></a>Générer manuellement les méthodes TAP
-Vous pouvez implémenter le modèle TAP manuellement pour mieux contrôler l’implémentation. Le compilateur s'appuie sur la surface publique exposée depuis l'espace de noms <xref:System.Threading.Tasks?displayProperty=nameWithType> et sur les types de prise en charge de l'espace de noms <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>. Pour implémenter le modèle TAP vous-même, créez un objet <xref:System.Threading.Tasks.TaskCompletionSource%601>, effectuez l'opération asynchrone, et lorsqu'elle est terminée, appelez la méthode <xref:System.Threading.Tasks.TaskCompletionSource%601.SetResult%2A>, <xref:System.Threading.Tasks.TaskCompletionSource%601.SetException%2A> ou <xref:System.Threading.Tasks.TaskCompletionSource%601.SetCanceled%2A>, ou bien la version `Try` de l'une de ces méthodes. Quand vous implémentez une méthode TAP manuellement, vous devez achever la tâche qui en résulte quand l'opération asynchrone représentée se termine. Exemple :
+### <a name="generating-tap-methods-manually"></a>Génération manuelle des méthodes TAP
+Vous pouvez implémenter le modèle TAP manuellement pour mieux contrôler l’implémentation. Le compilateur s'appuie sur la surface publique exposée depuis l'espace de noms <xref:System.Threading.Tasks?displayProperty=nameWithType> et sur les types de prise en charge de l'espace de noms <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>. Pour implémenter le modèle TAP vous-même, créez un objet <xref:System.Threading.Tasks.TaskCompletionSource%601>, effectuez l'opération asynchrone, et lorsqu'elle est terminée, appelez la méthode <xref:System.Threading.Tasks.TaskCompletionSource%601.SetResult%2A>, <xref:System.Threading.Tasks.TaskCompletionSource%601.SetException%2A> ou <xref:System.Threading.Tasks.TaskCompletionSource%601.SetCanceled%2A>, ou bien la version `Try` de l'une de ces méthodes. Quand vous implémentez une méthode TAP manuellement, vous devez achever la tâche qui en résulte quand l’opération asynchrone représentée se termine. Exemple :
 
 [!code-csharp[Conceptual.TAP_Patterns#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap_patterns/cs/patterns1.cs#1)]
 [!code-vb[Conceptual.TAP_Patterns#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.tap_patterns/vb/patterns1.vb#1)]
@@ -44,10 +48,10 @@ Vous pouvez implémenter le modèle TAP manuellement pour mieux contrôler l’
  [!code-csharp[Conceptual.TAP_Patterns#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap_patterns/cs/patterns1.cs#2)]
  [!code-vb[Conceptual.TAP_Patterns#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.tap_patterns/vb/patterns1.vb#2)]
 
- La délégation est également utile quand vous implémentez une optimisation de chemin d'accès rapide et souhaitez retourner une tâche mise en cache.
+ La délégation est également utile quand vous implémentez une optimisation de chemin d’accès rapide et souhaitez retourner une tâche mise en cache.
 
 ## <a name="workloads"></a>Charges de travail
-Vous pouvez implémenter des opérations asynchrones liées aux calculs et liées aux E/S en tant que méthodes TAP. Toutefois, quand des méthodes TAP sont exposées publiquement depuis une bibliothèque, elles doivent uniquement être fournies pour les charges de travail qui impliquent des opérations d'E/S (elles peuvent également impliquer des calculs, mais ne doivent pas consister uniquement de calculs). Si une méthode est entièrement liée, elle doit être exposée uniquement en tant qu’une implémentation synchrone. Le code qui la consomme peut ensuite décider s’il faut encapsuler un appel de cette méthode synchrone dans une tâche pour décharger le travail vers un autre thread ou pour atteindre un parallélisme. Et si une méthode est lié aux e/s, elle doit être exposée uniquement en tant qu’une implémentation asynchrone.
+Vous pouvez implémenter des opérations asynchrones liées aux calculs et liées aux E/S en tant que méthodes TAP. Toutefois, quand des méthodes TAP sont exposées publiquement depuis une bibliothèque, elles doivent uniquement être fournies pour les charges de travail qui impliquent des opérations d'E/S (elles peuvent également impliquer des calculs, mais ne doivent pas consister uniquement de calculs). Si une méthode est entièrement liée aux calculs, elle doit uniquement être exposée en tant qu’implémentation synchrone. Le code qui la consomme peut alors décider s'il faut encapsuler un appel à cette méthode synchrone dans une tâche pour décharger le travail vers un autre thread ou pour atteindre un parallélisme. En revanche, si une méthode est liée aux E/S, elle doit uniquement être exposée en tant qu’implémentation asynchrone.
 
 ### <a name="compute-bound-tasks"></a>Tâches liées aux calculs
 La classe <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> convient parfaitement aux opérations de calcul intensives. Par défaut, elle tire parti de la prise en charge spéciale de la classe <xref:System.Threading.ThreadPool> pour assurer une exécution efficace. Elle permet également de contrôler de manière précise le moment, l'endroit et la manière dont sont exécutés les calculs asynchrones.
@@ -56,13 +60,13 @@ Vous pouvez générer des tâches liées au calcul de la manière suivante :
 
 - Dans le .NET Framework 4, utilisez la méthode <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> qui accepte un délégué (en général un <xref:System.Action%601> ou un <xref:System.Func%601>) devant être exécuté de façon asynchrone. Si vous fournissez un délégué <xref:System.Action%601>, la méthode retourne un objet <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> qui représente l'exécution asynchrone de ce délégué. Si vous fournissez un délégué <xref:System.Func%601>, la méthode retourne un objet <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>. Les surcharges de la méthode <xref:System.Threading.Tasks.TaskFactory.StartNew%2A> acceptent un jeton d'annulation, (<xref:System.Threading.CancellationToken>), des options de création de tâche (<xref:System.Threading.Tasks.TaskCreationOptions>) et un planificateur de tâches (<xref:System.Threading.Tasks.TaskScheduler>) qui permettent un contrôle précis de la planification et de l'exécution de la tâche. Une instance de fabrique qui cible le planificateur de tâches actuel est disponible sous la forme d'une propriété statique (<xref:System.Threading.Tasks.Task.Factory%2A>) de la classe<xref:System.Threading.Tasks.Task>, par exemple `Task.Factory.StartNew(…)`.
 
-- Dans le [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] et versions ultérieures (y compris .NET Core et .NET Standard), utilisez la méthode statique <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> un raccourci vers la méthode <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType>. Vous pouvez utiliser <xref:System.Threading.Tasks.Task.Run%2A> pour lancer facilement une tâche liée aux calculs qui cible le pool de threads. Dans le [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] et versions ultérieures, il s’agit du moyen privilégié de lancer une tâche liée. Utilisez `StartNew` directement que lorsque vous souhaitez un contrôle plus précis sur la tâche.
+- Dans [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] et versions ultérieures (y compris .NET Core et .NET Standard), utilisez la méthode statique <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> en tant que raccourci vers <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType>. Vous pouvez utiliser <xref:System.Threading.Tasks.Task.Run%2A> pour lancer facilement une tâche liée aux calculs qui cible le pool de threads. Dans le [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] et versions ultérieures, il s'agit du moyen privilégié de lancer une tâche liée aux calculs. `StartNew` ne doit s'utiliser directement que quand vous souhaitez contrôler la tâche de manière plus précise.
 
 - Utilisez les constructeurs du type `Task` ou de la méthode `Start` pour générer et planifier la tâche séparément. Les méthodes publiques doivent retourner uniquement les tâches qui ont déjà été lancées.
 
 - Utilisez les surcharges de la méthode <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType>. Cette méthode crée une nouvelle tâche qui est planifiée quand l'exécution d'une autre tâche se termine. Certaines surcharges <xref:System.Threading.Tasks.Task.ContinueWith%2A> acceptent un jeton d'annulation, des options de continuation et un planificateur de tâches pour un meilleur contrôle de la planification et de l'exécution de la tâche de continuation.
 
-- Utilisez le <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A?displayProperty=nameWithType> et <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAny%2A?displayProperty=nameWithType> méthodes. Ces méthodes créent une nouvelle tâche qui est planifiée quand une partie ou l’intégralité d’un ensemble de tâches fourni se termine. Ces méthodes fournissent également des surcharges permettant de contrôler la planification et l’exécution de ces tâches.
+- Utilisez les méthodes <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A?displayProperty=nameWithType> et <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAny%2A?displayProperty=nameWithType>. Ces méthodes créent une nouvelle tâche qui est planifiée quand une partie ou l’intégralité d’un ensemble de tâches fourni se termine. Ces méthodes fournissent également des surcharges permettant de contrôler la planification et l’exécution de ces tâches.
 
 Dans les tâches liées aux calculs, le système peut empêcher l’exécution d’une tâche planifiée s’il reçoit une demande d’annulation avant l’exécution de la tâche. Par conséquent, si vous fournissez un jeton d'annulation (un objet <xref:System.Threading.CancellationToken>), vous pouvez passer ce jeton au code asynchrone qui surveille le jeton. Vous pouvez également fournir le jeton pour l'une des méthodes mentionnées précédemment telles que `StartNew` ou `Run`, pour que le runtime `Task` puisse également surveiller le jeton.
 
@@ -79,7 +83,7 @@ Les tâches liées aux calculs se terminent avec l'état <xref:System.Threading.
 
 Si une autre exception n'est pas gérée dans le corps de la tâche, la tâche se termine avec l'état <xref:System.Threading.Tasks.TaskStatus.Faulted>, et toute tentative d'attendre la tâche ou d'accéder à son résultat provoque la levée d'une exception.
 
-### <a name="io-bound-tasks"></a>Tâches d’e/S
+### <a name="io-bound-tasks"></a>Tâches d’E/S
 Pour créer une tâche qui ne doit pas être sauvegardée directement par un thread pour l'intégralité de son exécution, utilisez le type <xref:System.Threading.Tasks.TaskCompletionSource%601>. Ce type expose une propriété <xref:System.Threading.Tasks.TaskCompletionSource%601.Task%2A> qui retourne une instance <xref:System.Threading.Tasks.Task%601> associée. Le cycle de vie de cette tâche est contrôlé par les méthodes <xref:System.Threading.Tasks.TaskCompletionSource%601> telles que <xref:System.Threading.Tasks.TaskCompletionSource%601.SetResult%2A>, <xref:System.Threading.Tasks.TaskCompletionSource%601.SetException%2A> et <xref:System.Threading.Tasks.TaskCompletionSource%601.SetCanceled%2A>, et leurs variantes `TrySet`.
 
 Supposons que vous vouliez créer une tâche devant se terminer après une période spécifiée. Par exemple, vous pouvez vouloir différer une activité dans l'interface utilisateur. La classe <xref:System.Threading.Timer?displayProperty=nameWithType> fournit déjà la possibilité d'appeler un délégué de façon asynchrone après une période donnée, et grâce à <xref:System.Threading.Tasks.TaskCompletionSource%601>, vous pouvez ajouter un <xref:System.Threading.Tasks.Task%601> au minuteur, par exemple :
@@ -97,13 +101,13 @@ La classe <xref:System.Threading.Tasks.TaskCompletionSource%601> ne possède pas
 [!code-csharp[Conceptual.TAP_Patterns#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap_patterns/cs/patterns1.cs#6)]
 [!code-vb[Conceptual.TAP_Patterns#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.tap_patterns/vb/patterns1.vb#6)]
 
-### <a name="mixed-compute-bound-and-io-bound-tasks"></a>Tâches liées aux calculs et aux e/S mixtes
+### <a name="mixed-compute-bound-and-io-bound-tasks"></a>Tâches à la fois liées aux calculs et aux E/S
 Les méthodes asynchrones peuvent comprendre à la fois des opérations de calcul et d'E/S. En réalité, les opérations asynchrones sont souvent combinées au sein de plus grandes opérations mixtes. Par exemple, la méthode `RenderAsync` de l'exemple précédent permettait d'exécuter une opération de calcul intensive pour restituer une image basée sur des `imageData` d'entrée. Ces `imageData` peuvent provenir d'un service web auquel vous pouvez accéder de manière asynchrone :
 
 [!code-csharp[Conceptual.TAP_Patterns#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap_patterns/cs/patterns1.cs#7)]
 [!code-vb[Conceptual.TAP_Patterns#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.tap_patterns/vb/patterns1.vb#7)]
 
-Cet exemple montre également comment un jeton d'annulation peut être associé à un thread par l'intermédiaire de plusieurs opérations asynchrones. Pour plus d’informations, consultez la section Utilisation de l’annulation de [utilisation du modèle asynchrone basé sur des tâches](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md).
+Cet exemple montre également comment un jeton d'annulation peut être associé à un thread par l'intermédiaire de plusieurs opérations asynchrones. Pour plus d’informations, consultez la section relative à l’annulation dans [Utilisation du modèle asynchrone basé sur les tâches](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md).
 
 ## <a name="see-also"></a>Voir aussi
  [Modèle asynchrone basé sur les tâches (TAP, Task-based Asynchronous Pattern)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)  

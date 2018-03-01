@@ -12,15 +12,18 @@ helpviewer_keywords:
 - threading [.NET Framework], features
 - managed threading
 ms.assetid: 239b2e8d-581b-4ca3-992b-0e8525b9321c
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2a73e5c60a661c171e9e46e6307484cf5e0e6b80
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 0cb36c004c46e22256928b3b2432da59fb3e6fa2
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="threading-objects-and-features"></a>Fonctionnalités et objets de threading
 .NET Framework fournit plusieurs objets permettant de créer et de gérer des applications multithread. Les threads managés sont représentés par la classe <xref:System.Threading.Thread>. La classe <xref:System.Threading.ThreadPool> permet de créer et de gérer facilement des tâches d'arrière-plan multithread. La classe <xref:System.ComponentModel.BackgroundWorker> permet la même chose pour les tâches qui interagissent avec l'interface utilisateur. La classe <xref:System.Threading.Timer> exécute des tâches en arrière-plan à intervalles réguliers.  
@@ -44,7 +47,7 @@ ms.lasthandoff: 10/18/2017
  Décrit les handles d’attente d’événements managés qui sont utilisés pour synchroniser les activités de thread en signalant et en attendant des signaux.  
   
  [Mutex](../../../docs/standard/threading/mutexes.md)  
- Explique comment utiliser un <xref:System.Threading.Mutex> pour synchroniser l’accès à un objet ou pour créer vos propres mécanismes de synchronisation.  
+ Explique comment utiliser un <xref:System.Threading.Mutex> pour synchroniser l’accès à un objet ou créer vos propres mécanismes de synchronisation.  
   
  [Opérations verrouillées](../../../docs/standard/threading/interlocked-operations.md)  
  Explique comment utiliser la classe <xref:System.Threading.Interlocked> pour incrémenter ou décrémenter une valeur et la stocker dans une même opération atomique.  

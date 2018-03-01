@@ -2,7 +2,8 @@
 title: "Vue d'ensemble de l'interopérabilité (Guide de programmation C#)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - COM interop
@@ -11,14 +12,14 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 7e4bc1814ed5c86660b4333542a3dc4eb7462e89
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 5ebdd2d58f2fe502dbeb14148c303487774f531b
+ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/05/2018
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>Vue d'ensemble de l'interopérabilité (Guide de programmation C#)
 Cette rubrique décrit les méthodes qui permettent une interopérabilité entre le code managé C# et le code non managé.  
@@ -29,7 +30,7 @@ Cette rubrique décrit les méthodes qui permettent une interopérabilité entre
  Pour plus d’informations, consultez [Consommation de fonctions DLL non managées](../../../framework/interop/consuming-unmanaged-dll-functions.md) et [Guide pratique pour utiliser le code non managé pour lire un fichier audio](../../../csharp/programming-guide/interop/how-to-use-platform-invoke-to-play-a-wave-file.md).  
   
 > [!NOTE]
->  Le [common language runtime](../../../standard/clr.md) (CLR) gère l’accès aux ressources système. Le fait d’appeler du code non managé extérieur au CLR contourne ce mécanisme, ce qui présente un risque de sécurité. Par exemple, du code non managé peut appeler directement des ressources dans du code non managé en contournant les mécanismes de sécurité CLR. Pour plus d’informations, consultez [Sécurité .NET Framework](http://go.microsoft.com/fwlink/?LinkId=37122).  
+>  Le [common language runtime](../../../standard/clr.md) (CLR) gère l’accès aux ressources système. Le fait d’appeler du code non managé extérieur au CLR contourne ce mécanisme, ce qui présente un risque de sécurité. Par exemple, du code non managé peut appeler directement des ressources dans du code non managé en contournant les mécanismes de sécurité CLR. Pour plus d’informations, consultez [Sécurité .NET Framework](https://technet.microsoft.com/en-us/security/).  
   
 ## <a name="c-interop"></a>Interopérabilité C++  
  Vous pouvez utiliser l’interopérabilité C++, également appelée It Just Works (IJW), pour encapsuler une classe C++ native de sorte qu’elle puisse être utilisée par du code créé en C# ou un autre langage du .NET Framework. Pour ce faire, écrivez du code C++ pour encapsuler un composant DLL ou COM natif. Contrairement à d’autres langages du .NET Framework, [!INCLUDE[vcprvc](~/includes/vcprvc-md.md)] comprend la prise en charge de l’interopérabilité qui permet à du code managé et à du code non managé de se trouver dans la même application et même dans le même fichier. Vous pouvez ensuite générer le code C++ à l’aide du commutateur de compilateur **/clr** pour créer un assembly managé. Enfin, ajoutez une référence à l’assembly dans votre projet C# et utilisez les objets encapsulés comme vous le feriez pour les autres classes managées.  
@@ -41,13 +42,13 @@ Cette rubrique décrit les méthodes qui permettent une interopérabilité entre
   
 2.  Ajoutez au projet une référence au composant COM ou à la bibliothèque de types.  
   
-     Quand vous ajoutez la référence, [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] utilise le fichier [Tlbimp.exe (Type Library Importer)](http://msdn.microsoft.com/library/ec0a8d63-11b3-4acd-b398-da1e37e97382), qui prend comme entrée une bibliothèque de types, pour générer un assembly d’interopérabilité .NET Framework. L’assembly, également appelé wrapper RCW, contient des classes et des interfaces managées qui encapsulent les classes et les interfaces COM qui se trouvent dans la bibliothèque de types. [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] ajoute au projet une référence à l’assembly généré.  
+     Quand vous ajoutez la référence, [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] utilise le fichier [Tlbimp.exe (Type Library Importer)](../../../../docs/framework/tools/tlbimp-exe-type-library-importer.md), qui prend comme entrée une bibliothèque de types, pour générer un assembly d’interopérabilité .NET Framework. L’assembly, également appelé wrapper RCW, contient des classes et des interfaces managées qui encapsulent les classes et les interfaces COM qui se trouvent dans la bibliothèque de types. [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] ajoute au projet une référence à l’assembly généré.  
   
 3.  Créez une instance d’une classe qui est définie dans le wrapper RCW. Une instance de l’objet COM est ainsi créée.  
   
 4.  Utilisez l’objet comme vous utiliseriez tout autre objet managé. Lorsque l’objet est récupéré par le garbage collection, l’instance de l’objet COM est également libérée de la mémoire.  
   
- Pour plus d’informations, consultez [Exposition de composants COM au .NET Framework](http://msdn.microsoft.com/library/e78b14f1-e487-43cd-9c6d-1a07483f1730).  
+ Pour plus d’informations, consultez [Exposition de composants COM au .NET Framework](../../../../docs/framework/interop/exposing-com-components.md).  
   
 ## <a name="exposing-c-to-com"></a>Exposition du langage C# à COM  
  Les clients COM peuvent utiliser des types C# qui ont été correctement exposés. Les étapes de base pour exposer des types C# sont les suivantes :  
@@ -58,14 +59,14 @@ Cette rubrique décrit les méthodes qui permettent une interopérabilité entre
   
 2.  Générez une bibliothèque de types COM et inscrivez-la pour l’utilisation de COM.  
   
-     Vous pouvez modifier les propriétés de projet [!INCLUDE[csprcs](~/includes/csprcs-md.md)] de manière à inscrire automatiquement l’assembly C# pour COM Interop. [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] utilise le fichier [Regasm.exe (outil Assembly Registration Tool)](http://msdn.microsoft.com/library/e190e342-36ef-4651-a0b4-0e8c2c0281cb) avec le commutateur de ligne de commande `/tlb`, qui prend comme entrée un assembly managé pour générer une bibliothèque de types. Cette bibliothèque de types décrit les types `public` de l’assembly et ajoute les entrées du Registre pour que les clients COM puissent créer des classes managées.  
+     Vous pouvez modifier les propriétés de projet [!INCLUDE[csprcs](~/includes/csprcs-md.md)] de manière à inscrire automatiquement l’assembly C# pour COM Interop. [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] utilise le fichier [Regasm.exe (outil Assembly Registration Tool)](../../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md) avec le commutateur de ligne de commande `/tlb`, qui prend comme entrée un assembly managé pour générer une bibliothèque de types. Cette bibliothèque de types décrit les types `public` de l’assembly et ajoute les entrées du Registre pour que les clients COM puissent créer des classes managées.  
   
- Pour plus d’informations, consultez [Exposition de composants .NET Framework à COM](http://msdn.microsoft.com/library/e42a65f7-1e61-411f-b09a-aca1bbce24c6) et [Exemple de classe COM](../../../csharp/programming-guide/interop/example-com-class.md).  
+ Pour plus d’informations, consultez [Exposition de composants .NET Framework à COM](../../../../docs/framework/interop/exposing-dotnet-components-to-com.md) et [Exemple de classe COM](../../../csharp/programming-guide/interop/example-com-class.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Amélioration des performances d’interopérabilité](http://go.microsoft.com/fwlink/?LinkId=99564)  
- [Introduction à COM Interop](http://go.microsoft.com/fwlink/?LinkId=112406)  
- [Marshaling entre du code managé et non managé](http://go.microsoft.com/fwlink/?LinkId=112398)  
+ [Amélioration des performances d’interopérabilité](https://msdn.microsoft.com/library/ms998551.aspx)  
+ [Introduction à l’interopérabilité entre COM et .NET](https://msdn.microsoft.com/library/office/bb610378.aspx)  
+ [Introduction à COM Interop dans Visual Basic](../../../../docs/visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
+ [Marshaling entre du code managé et non managé](../../../../docs/framework/interop/interop-marshaling.md)  
  [Interopération avec du code non managé](../../../../docs/framework/interop/index.md)  
- [Interopérabilité COM avancée](http://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb)  
  [Guide de programmation C#](../../../csharp/programming-guide/index.md)
