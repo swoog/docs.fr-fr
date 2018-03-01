@@ -15,30 +15,33 @@ helpviewer_keywords:
 - destroying threads
 - threading [.NET Framework], destroying threads
 ms.assetid: df54e648-c5d1-47c9-bd29-8e4438c1db6d
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4a41dce5db707d0be49c283256de665d316e1a1f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3bdacb1cc54e3b67a1b4cef4f9fd274e65037faa
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="destroying-threads"></a>Destruction de threads
-Le <xref:System.Threading.Thread.Abort%2A> méthode est utilisée pour arrêter définitivement un thread managé. Lorsque vous appelez <xref:System.Threading.Thread.Abort%2A>, le common language runtime lève une <xref:System.Threading.ThreadAbortException> dans le thread cible, que le thread cible peut intercepter. Pour plus d'informations, consultez <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>.  
+La méthode <xref:System.Threading.Thread.Abort%2A> permet d’arrêter définitivement un thread managé. Quand vous appelez <xref:System.Threading.Thread.Abort%2A>, le Common Language Runtime lève une exception <xref:System.Threading.ThreadAbortException> dans le thread cible, que ce dernier peut intercepter. Pour plus d'informations, consultez <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>.  
   
 > [!NOTE]
->  Si un thread est en cours d’exécution non managée du code lorsque son <xref:System.Threading.Thread.Abort%2A> est appelée, le runtime marque <xref:System.Threading.ThreadState.AbortRequested?displayProperty=nameWithType>. L’exception est levée lorsque le thread retourne au code managé.  
+>  Si un thread est en train d’exécuter du code non managé quand sa méthode <xref:System.Threading.Thread.Abort%2A> est appelée, le runtime le marque comme <xref:System.Threading.ThreadState.AbortRequested?displayProperty=nameWithType>. L’exception est levée quand le thread retourne au code managé.  
   
- Une fois qu’un thread est abandonné, il ne peut pas être redémarré.  
+ Une fois un thread annulé, il ne peut pas être redémarré.  
   
- Le <xref:System.Threading.Thread.Abort%2A> méthode n’entraîne pas le thread d’abandonner immédiatement, car le thread cible peut intercepter le <xref:System.Threading.ThreadAbortException> et d’exécution arbitraire de code dans un `finally` bloc. Vous pouvez appeler <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> si vous avez besoin d’attendre que le thread s’est terminée. <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>est un appel bloquant qui ne retourne pas jusqu'à ce que le thread est en cours de l’exécution, ou un intervalle de délai d’attente facultatif a expiré. Le thread interrompu pourrait appeler le <xref:System.Threading.Thread.ResetAbort%2A> méthode ou exécuter un traitement illimité dans un `finally` bloquer, donc si vous ne spécifiez pas un délai d’attente, il n’est pas garantie que l’attente de fin.  
+ La méthode <xref:System.Threading.Thread.Abort%2A> n’entraîne pas l’annulation immédiate du thread, car le thread cible peut intercepter l’exception <xref:System.Threading.ThreadAbortException> et exécuter arbitrairement des quantités de code dans un bloc `finally`. Vous pouvez appeler <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> si vous devez attendre que le thread se termine. <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> est un appel bloquant qui ne retourne de résultats que quand le thread a réellement arrêté son exécution ou qu’un intervalle de délai d’attente facultatif a expiré. Le thread annulé pourrait appeler la méthode <xref:System.Threading.Thread.ResetAbort%2A> ou exécuter un traitement illimité dans un bloc `finally`. Par conséquent, si vous ne spécifiez pas de délai d’attente, l’attente pourrait ne jamais se terminer.  
   
- Les threads qui attendent un appel à la <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> méthode peut être interrompue par d’autres threads qui appellent <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType>.  
+ Les threads qui attendent suite à un appel à la méthode <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> peuvent être interrompus par d’autres threads qui appellent <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType>.  
   
 ## <a name="handling-threadabortexception"></a>Gestion de ThreadAbortException  
- Si vous pensez que votre thread est abandonnée, soit en tant que résultat de l’appel <xref:System.Threading.Thread.Abort%2A> à partir de votre propre code ou à la suite de décharger un domaine d’application dans lequel le thread est en cours d’exécution (<xref:System.AppDomain.Unload%2A?displayProperty=nameWithType> utilise <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> pour arrêter des threads), votre thread doit gérer. le <xref:System.Threading.ThreadAbortException> et d’effectuer un traitement final dans un `finally` clause, comme indiqué dans le code suivant.  
+ Si vous pensez que votre thread sera annulé, soit suite à un appel de votre propre code à <xref:System.Threading.Thread.Abort%2A>, soit suite au déchargement d’un domaine d’application dans lequel le thread est en cours d’exécution (<xref:System.AppDomain.Unload%2A?displayProperty=nameWithType> utilise <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> pour arrêter des threads), votre thread doit gérer l’exception <xref:System.Threading.ThreadAbortException> et exécuter tout traitement final dans une clause `finally`, comme indiqué dans le code suivant.  
   
 ```vb  
 Try  
@@ -69,9 +72,9 @@ catch (ThreadAbortException ex)
 // is rethrown at the end of the Finally clause.  
 ```  
   
- Votre code de nettoyage doit être dans le `catch` clause ou le `finally` clause, car un <xref:System.Threading.ThreadAbortException> est à nouveau levée par le système à la fin de la `finally` clause, ou à la fin de la `catch` clause s’il existe aucune `finally` clause.  
+ Votre code de nettoyage doit se trouver dans la clause `catch` ou la clause `finally`, car une exception <xref:System.Threading.ThreadAbortException> est de nouveau levée par le système à la fin de la clause `finally`, ou à la fin de la clause `catch` s’il n’existe pas de clause `finally`.  
   
- Vous pouvez empêcher le système de nouveau l’exception en appelant le <xref:System.Threading.Thread.ResetAbort%2A?displayProperty=nameWithType> (méthode). Toutefois, vous devez effectuer ce uniquement si votre propre code qui a provoqué le <xref:System.Threading.ThreadAbortException>.  
+ Vous pouvez empêcher le système de lever une nouvelle exception en appelant la méthode <xref:System.Threading.Thread.ResetAbort%2A?displayProperty=nameWithType>. Vous ne devez néanmoins le faire que si c’est votre propre code qui a provoqué l’exception <xref:System.Threading.ThreadAbortException>.  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.Threading.ThreadAbortException>  

@@ -18,22 +18,25 @@ helpviewer_keywords:
 - unmanaged resource cleanup
 - Finalize method
 ms.assetid: a17b0066-71c2-4ba4-9822-8e19332fc213
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c94a449edbbe38c4028e27fd946b66a054badf51
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: fea76042bb603889764a9d42b5a7836d704fcd48
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="cleaning-up-unmanaged-resources"></a>Nettoyage de ressources non managées
-Pour la majorité des objets créés par votre application, vous pouvez vous fier. Garbage collector du NET pour gérer la gestion de la mémoire. Lorsque vous créez des objets qui incluent des ressources non managées, vous devez libérer explicitement ces ressources lorsque vous avez fini de les utiliser dans votre application. Les types les plus courants de ressources non managées sont des objets qui encapsulent les ressources du système d'exploitation, telles que les fichiers, les fenêtres, les connexions réseau ou les connexions de bases de données. Bien que le récupérateur de mémoire puisse assurer le suivi de la durée de vie d'un objet qui encapsule une ressource non managée, il ne sait pas comment libérer et nettoyer la ressource non managée.  
+Pour la majorité des objets créés par votre application, vous pouvez laisser au Garbage collector .NET le soin de gérer les tâches de gestion de mémoire. Lorsque vous créez des objets qui incluent des ressources non managées, vous devez libérer explicitement ces ressources lorsque vous avez fini de les utiliser dans votre application. Les types les plus courants de ressources non managées sont des objets qui encapsulent les ressources du système d'exploitation, telles que les fichiers, les fenêtres, les connexions réseau ou les connexions de bases de données. Bien que le récupérateur de mémoire puisse assurer le suivi de la durée de vie d'un objet qui encapsule une ressource non managée, il ne sait pas comment libérer et nettoyer la ressource non managée.  
   
  Si vos types utilisent les ressources non managées, procédez comme suit :  
   
--   Implémentez la [modèle de suppression](../../../docs/standard/design-guidelines/dispose-pattern.md). Pour ce faire, vous devez fournir une implémentation de <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> pour activer la version déterministe des ressources non managées. Un consommateur de votre type appelle la méthode <xref:System.IDisposable.Dispose%2A> lorsque l'objet (et les ressources qu'il utilise) n'est plus nécessaire. La méthode <xref:System.IDisposable.Dispose%2A> libère immédiatement les ressources non managées.  
+-   Implémentez le [modèle de suppression](../../../docs/standard/design-guidelines/dispose-pattern.md). Pour ce faire, vous devez fournir une implémentation de <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> pour activer la version déterministe des ressources non managées. Un consommateur de votre type appelle la méthode <xref:System.IDisposable.Dispose%2A> lorsque l'objet (et les ressources qu'il utilise) n'est plus nécessaire. La méthode <xref:System.IDisposable.Dispose%2A> libère immédiatement les ressources non managées.  
   
 -   Prévoyez que vos ressources non managées soient libérées si un consommateur de votre type oublie d'appeler la méthode <xref:System.IDisposable.Dispose%2A>. Il existe deux façons d'effectuer cette opération :  
   
@@ -47,7 +50,7 @@ Pour la majorité des objets créés par votre application, vous pouvez vous fie
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Implémentation d’une méthode Dispose](../../../docs/standard/garbage-collection/implementing-dispose.md)  
- Décrit comment implémenter le [modèle de suppression](../../../docs/standard/design-guidelines/dispose-pattern.md) pour libérer les ressources non managées.  
+ Explique comment implémenter le [modèle de suppression](../../../docs/standard/design-guidelines/dispose-pattern.md) pour libérer les ressources non managées.  
   
  [Utilisation d’objets implémentant IDisposable](../../../docs/standard/garbage-collection/using-objects.md)  
  Décrit comment les consommateurs d'un type vérifient que son implémentation de <xref:System.IDisposable.Dispose%2A> est appelée. Pour ce faire, nous vous recommandons d'utiliser l'instruction `using` en C# ou l'instruction `Using` en Visual Basic.  

@@ -12,15 +12,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 450e350b-6a68-4634-a2a5-33f4dc33baf0
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1bf43922fb702988e9057f541833cd58d33c820a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2191cb15a85e9b16ff0a21084668e80d3c197bfa
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="mapping-the-object-hierarchy-to-xml-data"></a>Mappage de la hiérarchie d'objets à des données XML
 Quand un document XML est en mémoire, sa représentation conceptuelle est une arborescence. Pour la programmation, vous disposez d'une hiérarchie d'objets pour accéder aux nœuds de l'arborescence. L'exemple suivant illustre la manière dont le contenu XML se transforme en nœuds.  
@@ -39,12 +42,12 @@ Quand un document XML est en mémoire, sa représentation conceptuelle est une a
   
  L’entrée est représentée dans la mémoire sous la forme de l’arborescence de nœuds suivante, avec la propriété de type de nœud assignée :  
   
- ![exemple d’arborescence de nœud](../../../../docs/standard/data/xml/media/simple-xml.gif "Simple_XML")  
+ ![exemple d’arborescence de nœuds](../../../../docs/standard/data/xml/media/simple-xml.gif "Simple_XML")  
 Représentation sous forme d’arborescence de nœuds book et title  
   
- Le `book` élément devient une **XmlElement** (objet), l’élément suivant, `title`, devient également un **XmlElement**, tandis que le contenu de l’élément devient une **XmlText** objet. En examinant le **XmlElement** méthodes et propriétés, les méthodes et les propriétés sont différentes des méthodes et propriétés disponibles sur un **XmlText** objet. Il est donc vital de connaître le type de nœud dans lequel le balisage XML se transforme, puisque ce type de nœud détermine les actions possibles.  
+ L'élément `book` devient un objet **XmlElement**, tout comme l'élément suivant `title` devient aussi un objet **XmlElement**, tandis que le contenu de l'élément devient un objet **XmlText**. Si vous examinez les méthodes et propriétés de **XmlElement**, vous constaterez qu'elles sont différentes des méthodes et propriétés disponibles pour un objet **XmlText**. Il est donc vital de connaître le type de nœud dans lequel le balisage XML se transforme, puisque ce type de nœud détermine les actions possibles.  
   
- L'exemple suivant lit dans les données XML et écrit le texte différent, en fonction du type de nœud. En utilisant le fichier de données XML suivant comme entrée, **items.xml**:  
+ L'exemple suivant lit dans les données XML et écrit le texte différent, en fonction du type de nœud. En utilisant comme entrée le fichier de données XML **items.xml** :  
   
  **Entrée**  
   
@@ -62,7 +65,7 @@ Représentation sous forme d’arborescence de nœuds book et title
 </Items>  
 ```  
   
- Lectures de l’exemple de code suit le **items.xml** de fichiers et affiche des informations pour chaque type de nœud.  
+ L'exemple de code suivant lit le fichier **items.xml** et affiche des informations pour chaque type de nœud.  
   
 ```vb  
 Imports System  
@@ -195,37 +198,37 @@ public class Sample
   
 |Entrée|Sortie|Type de nœud test|  
 |-----------|------------|--------------------|  
-|\<? xml version = « 1.0 » ? >|\<? xml version ='1.0 ' ? >|XmlNodeType.XmlDeclaration|  
-|\<!--Il s’agit d’un exemple de document XML-->|\<!--Il s’agit d’un exemple de document XML-->|XmlNodeType.Comment|  
-|\<! DOCTYPE Items [\<! ENTITY number « 123 » >] >|\<! DOCTYPE Items [\<! ENTITY number « 123 » >]|XmlNodeType.DocumentType|  
-|\<Éléments >|\<Éléments >|XmlNodeType.Element|  
+|\<?xml version="1.0"?>|\<?xml version='1.0'?>|XmlNodeType.XmlDeclaration|  
+|\<!-- Exemple de document XML -->|\<!--Exemple de document XML -->|XmlNodeType.Comment|  
+|\<!DOCTYPE Items [\<!ENTITY number "123">]>|\<!DOCTYPE Items [\<!ENTITY number "123">]|XmlNodeType.DocumentType|  
+|\<Items>|\<Items>|XmlNodeType.Element|  
 |\<Item>|\<Item>|XmlNodeType.Element|  
-|Test avec une entité :&number;|Test with an entity: 123|XmlNodeType.Text|  
-|\</ Item >|\</ Item >|XmlNodeType.EndElement|  
+|Test with an entity: &number;|Test with an entity: 123|XmlNodeType.Text|  
+|\</Item>|\</Item>|XmlNodeType.EndElement|  
 |\<Item>|\<Item>|XmNodeType.Element|  
 |test with a child element|test with a child element|XmlNodeType.Text|  
-|\<plus >|\<plus >|XmlNodeType.Element|  
+|\<more>|\<more>|XmlNodeType.Element|  
 |stuff|stuff|XmlNodeType.Text|  
-|\</ Item >|\</ Item >|XmlNodeType.EndElement|  
+|\</Item>|\</Item>|XmlNodeType.EndElement|  
 |\<Item>|\<Item>|XmlNodeType.Element|  
 |test with a CDATA section|test with a CDATA section|XmlTest.Text|  
-|< ! [CDATA [\<456 >]]\>|< ! [CDATA [\<456 >]]\>|XmlTest.CDATA|  
+|<![CDATA[\<456>]]\>|<![CDATA[\<456>]]\>|XmlTest.CDATA|  
 |def|def|XmlNodeType.Text|  
-|\</ Item >|\</ Item >|XmlNodeType.EndElement|  
+|\</Item>|\</Item>|XmlNodeType.EndElement|  
 |\<Item>|\<Item>|XmlNodeType.Element|  
-|Test avec une entité caractère : &\#65 ;|Test with a char entity: A|XmlNodeType.Text|  
-|\</ Item >|\</ Item >|XmlNodeType.EndElement|  
-|\<!--Quatorze caractères dans cet élément.-->|\<--Quatorze caractères dans cet élément.-->|XmlNodeType.Comment|  
+|Test with a char entity: &\#65;|Test with a char entity: A|XmlNodeType.Text|  
+|\</Item>|\</Item>|XmlNodeType.EndElement|  
+|\<!-- Quatorze caractères dans cet élément.-->|\<--Quatorze caractères dans cet élément.-->|XmlNodeType.Comment|  
 |\<Item>|\<Item>|XmlNodeType.Element|  
 |1234567890ABCD|1234567890ABCD|XmlNodeType.Text|  
-|\</ Item >|\</ Item >|XmlNodeType.EndElement|  
-|\</ Éléments >|\</ Éléments >|XmlNodeType.EndElement|  
+|\</Item>|\</Item>|XmlNodeType.EndElement|  
+|\</Items>|\</Items>|XmlNodeType.EndElement|  
   
  Il est essentiel de savoir quel type de nœud est assigné, puisque le type de nœud régit les actions valides et les types de propriétés qu'il est possible de définir et d'extraire.  
   
- Création de nœuds pour l’espace blanc est contrôlée lorsque les données sont chargées dans le DOM par le **PreserveWhitespace** indicateur. Pour plus d’informations, consultez [espace blanc et gère un espace blanc significatif lors du chargement du DOM](../../../../docs/standard/data/xml/white-space-and-significant-white-space-handling-when-loading-the-dom.md).  
+ La création de nœuds pour l'espace blanc est contrôlée au moment du chargement des données dans le DOM par l'indicateur **PreserveWhitespace**. Pour plus d'informations, consultez [Gestion des espaces blancs significatifs ou non lors du chargement du DOM](../../../../docs/standard/data/xml/white-space-and-significant-white-space-handling-when-loading-the-dom.md).  
   
- Pour ajouter de nouveaux nœuds au DOM, consultez [insertion de nœuds dans un Document XML](../../../../docs/standard/data/xml/inserting-nodes-into-an-xml-document.md). Pour supprimer des nœuds du DOM, consultez [suppression de nœuds, de contenu et de valeurs à partir d’un Document XML](../../../../docs/standard/data/xml/removing-nodes-content-and-values-from-an-xml-document.md). Pour modifier le contenu de nœuds dans le DOM, consultez [modification de nœuds, de contenu et de valeurs dans un Document XML](../../../../docs/standard/data/xml/modifying-nodes-content-and-values-in-an-xml-document.md).  
+ Pour ajouter de nouveaux nœuds au DOM, voir [Insertion de nœuds dans un document XML](../../../../docs/standard/data/xml/inserting-nodes-into-an-xml-document.md). Pour supprimer des nœuds du DOM, voir [Suppression de nœuds, de contenu et de valeurs d'un document XML](../../../../docs/standard/data/xml/removing-nodes-content-and-values-from-an-xml-document.md). Pour modifier le contenu de nœuds dans le DOM, voir [Modification de nœuds, de contenu et de valeurs dans un document XML](../../../../docs/standard/data/xml/modifying-nodes-content-and-values-in-an-xml-document.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Document Object Model (DOM) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [DOM (Document Object Model) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

@@ -9,11 +9,11 @@ ms.technology: dotnet-docker
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 576a717cbdcb8cf465e8cb7b4898df1df7447aa7
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 21826e2c90d234d873cc06bfae3bd22ce89a62d2
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="development-process-for-azure"></a>Processus de développement pour Azure
 
@@ -36,7 +36,7 @@ Si vous préférez un IDE complet et puissant ou un éditeur léger et agile, Mi
 
 **Figure 10-1.** Installation de la charge de travail .NET Core dans Visual Studio 2017.
 
-[Télécharger Visual Studio 2017](https://www.visualstudio.com/downloads/)
+[Télécharger Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
 
 **Visual Studio Code et dotnet CLI** (les outils multiplateformes pour Mac, Linux et Windows). Si vous préférez un éditeur léger et inter-plateformes prenant en charge de n’importe quel langage de développement, vous pouvez utiliser Microsoft Visual Studio Code et l’interface CLI dotnet. Ces produits fournissent une expérience simple et robuste qui simplifie le flux de travail du développeur. En outre, Visual Studio Code prend en charge des extensions pour C\# et développement web, fournissant intellisense et les tâches de raccourcis dans l’éditeur.
 
@@ -56,9 +56,9 @@ Pour commencer à développer une application ASP.NET Core à l’aide de l’é
 
 Pour créer un pipeline de mise en production pour votre application, vous devez disposer de votre code d’application dans le contrôle de code source. Configurer un référentiel local et le connecter à un référentiel distant dans un projet d’équipe. Suivez ces instructions :
 
--   [Partager votre code avec Git et Visual Studio](https://www.visualstudio.com/docs/git/share-your-code-in-git-vs) ou
+-   [Partager votre code avec Git et Visual Studio](https://docs.microsoft.com/vsts/git/share-your-code-in-git-vs) ou
 
--   [Partager votre code avec TFVC et Visual Studio](https://www.visualstudio.com/docs/tfvc/share-your-code-in-tfvc-vs)
+-   [Partager votre code avec TFVC et Visual Studio](https://docs.microsoft.com/vsts/tfvc/share-your-code-in-tfvc-vs)
 
 Créer un Service d’application Azure où vous allez déployer votre application. Créer une application Web en accédant au panneau des Services d’application sur le portail Azure. Cliquez sur + Ajouter, sélectionnez le modèle d’application Web, cliquez sur Créer et fournir un nom et autres détails. L’application web est accessible à partir de {nom}. azurewebsites.net.
 
@@ -68,13 +68,13 @@ Créer un Service d’application Azure où vous allez déployer votre applicati
 
 Votre processus de génération de l’élément de configuration effectue une génération automatique chaque fois que le nouveau code est validé dans le référentiel de contrôle de code source du projet. Cela vous donne des informations immédiates que le code est généré (et, dans l’idéal, réussit les tests automatisés) et peuvent potentiellement être déployés. Cette version de l’élément de configuration génère un site web artefact de package de déploiement et le publier pour la consommation par votre processus de CD.
 
-[Définir votre processus de génération de l’élément de configuration](https://www.visualstudio.com/docs/build/apps/aspnet/aspnetcore-to-azure#ci)
+[Définir votre processus de génération de l’élément de configuration](https://docs.microsoft.com/vsts/build-release/apps/aspnet/build-aspnet-core#ci)
 
 Veillez à activer l’intégration continue pour le système sera en file d’attente une build chaque fois qu’une personne de votre équipe valide le nouveau code. La génération de test et vérifier qu’il produit un site web déployer le package comme l’un de ses artefacts.
 
 Lorsqu’une build terminée, votre processus de CD déploie les résultats de la génération de l’élément de configuration à votre application web Azure. Pour configurer cela, vous créez et configurez un *version*, laquelle sera déployez votre service d’application Azure.
 
-[Définir votre processus de mise en production du CD](https://www.visualstudio.com/docs/build/apps/aspnet/aspnetcore-to-azure#cd)
+[Définir votre processus de mise en production du CD](https://docs.microsoft.com/vsts/build-release/apps/aspnet/build-aspnet-core#cd)
 
 Une fois votre pipeline de l’élément de configuration/CD est configuré, vous pouvez simplement mettre à jour votre application web et les valider sur le contrôle de code source pour les déployer.
 
@@ -92,7 +92,7 @@ Développement de votre application ASP.NET Core pour le déploiement vers Azure
 
 #### <a name="step-2-application-code-repository"></a>Étape 2. Référentiel de Code d’application
 
-Chaque fois que vous êtes prêt à partager votre code avec votre équipe, vous devez orienter vos modifications à partir de votre référentiel local source vers le référentiel de partage de code source de votre équipe. Si vous avez déjà utilisé dans une branche personnalisée, cette étape implique généralement la fusion de votre code partagé à une branche (par exemple au moyen d’un [requête de tirage](https://www.visualstudio.com/docs/git/pull-requests)).
+Chaque fois que vous êtes prêt à partager votre code avec votre équipe, vous devez orienter vos modifications à partir de votre référentiel local source vers le référentiel de partage de code source de votre équipe. Si vous avez déjà utilisé dans une branche personnalisée, cette étape implique généralement la fusion de votre code partagé à une branche (par exemple au moyen d’un [requête de tirage](https://docs.microsoft.com/vsts/git/pull-requests)).
 
 #### <a name="step-3-build-server-continuous-integration-build-test-package"></a>Étape 3. Serveur de builds : L’intégration continue. Package de build, de Test,
 
@@ -113,7 +113,7 @@ Pendant l’exécution de l’application Web, vous pouvez surveiller l’intég
 ## <a name="references"></a>Références
 
 **Générer et déployer votre application ASP.NET Core vers Azure**  
-<https://www.visualstudio.com/docs/build/apps/aspnet/aspnetcore-to-azure>
+<https://docs.microsoft.com/vsts/build-release/apps/aspnet/build-aspnet-core>
 
 
 >[!div class="step-by-step"]

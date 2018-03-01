@@ -9,18 +9,21 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 23975f88-e0af-4b88-93de-9e20e11880ad
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 45e94954641e935597394b7cf04818c6c78ea675
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2f86abb7da5509a80cceede0f1092a75cef4d8da
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="attribute-and-namespace-node-navigation-using-xpathnavigator"></a>Navigation entre les nœuds d’attribut et d’espace de noms à l’aide de XPathNavigator
-Le <xref:System.Xml.XPath.XPathNavigator> classe fournit deux ensembles de méthodes de navigation, le premier jeu, trouvé dans le [Node Set Navigation à l’aide de XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md) rubrique, sont utilisées pour naviguer *les collections de nœuds* dans un <xref:System.Xml.XPath.XPathDocument> ou <xref:System.Xml.XmlDocument> objet. Le deuxième jeu, décrit dans cette rubrique, sont utilisées pour naviguer *nœuds d’attribut et d’espace de noms* dans un <xref:System.Xml.XPath.XPathDocument> ou <xref:System.Xml.XmlDocument> objet.  
+La classe <xref:System.Xml.XPath.XPathNavigator> fournit deux ensembles de méthodes de navigation. Le premier, trouvé dans la rubrique [Navigation dans la collection de nœuds à l’aide de XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md), permet de naviguer entre les *collections de nœuds* d'un objet <xref:System.Xml.XPath.XPathDocument> ou <xref:System.Xml.XmlDocument>. Le second, décrit dans cette rubrique, permet de naviguer entre les *nœuds d'attribut et d'espace de noms* d'un objet <xref:System.Xml.XPath.XPathDocument> ou <xref:System.Xml.XmlDocument>.  
   
 ## <a name="attribute-node-navigation"></a>Navigation entre les nœuds d'attribut  
  Les attributs sont des propriétés d'un élément, pas des enfants d'un élément. La distinction est importante étant donné que les méthodes de la classe <xref:System.Xml.XPath.XPathNavigator> permettent de naviguer entre les nœuds frères, parents et enfants.  
@@ -108,6 +111,6 @@ Le <xref:System.Xml.XPath.XPathNavigator> classe fournit deux ensembles de méth
  <xref:System.Xml.XPath.XPathDocument>  
  <xref:System.Xml.XPath.XPathNavigator>  
  [Traitement des données XML à l’aide du modèle de données XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
- [Navigation de jeu de nœud à l’aide de XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)  
- [Extraire des données XML à l’aide de XPathNavigator](../../../../docs/standard/data/xml/extract-xml-data-using-xpathnavigator.md)  
- [L’accès à fortement typée des données XML à l’aide de XPathNavigator](../../../../docs/standard/data/xml/accessing-strongly-typed-xml-data-using-xpathnavigator.md)
+ [Navigation dans la collection de nœuds à l’aide de XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)  
+ [Extraction de données XML à l’aide de XPathNavigator](../../../../docs/standard/data/xml/extract-xml-data-using-xpathnavigator.md)  
+ [Accès à des données XML fortement typées à l’aide de XPathNavigator](../../../../docs/standard/data/xml/accessing-strongly-typed-xml-data-using-xpathnavigator.md)

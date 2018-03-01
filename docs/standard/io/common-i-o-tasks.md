@@ -1,5 +1,5 @@
 ---
-title: "Tâches courantes d’e-S"
+title: "Tâches d’E/S courantes"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -8,20 +8,24 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: I/O, common tasks
+helpviewer_keywords:
+- I/O, common tasks
 ms.assetid: bf00c380-706a-4e38-b829-454a480629fc
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 51238020f4d93ad32dac85a95d7b1cab26f2dd64
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: be291265d59dca5d1f555f8a98a3d0c79235f3c3
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="common-io-tasks"></a>Tâches d’E/S courantes
-L'espace de noms <xref:System.IO> fournit plusieurs classes qui permettent d'exécuter différentes actions, telles que la lecture et l'écriture, sur des fichiers, des répertoires et des flux de données. Pour plus d’informations, consultez [de fichiers et flux de données e-S](../../../docs/standard/io/index.md).  
+L'espace de noms <xref:System.IO> fournit plusieurs classes qui permettent d'exécuter différentes actions, telles que la lecture et l'écriture, sur des fichiers, des répertoires et des flux de données. Pour plus d’informations, consultez [E/S de fichier et de flux](../../../docs/standard/io/index.md).  
   
 ## <a name="common-file-tasks"></a>Tâches de fichier courantes  
   
@@ -42,7 +46,7 @@ L'espace de noms <xref:System.IO> fournit plusieurs classes qui permettent d'ex�
 |Écrire dans un fichier binaire|[Comment : lire et écrire dans un fichier de données créé récemment](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|  
 |Récupérer une extension de nom de fichier|Méthode <xref:System.IO.Path.GetExtension%2A?displayProperty=nameWithType>|  
 |Récupérer le chemin d'accès qualifié complet d'un fichier|Méthode <xref:System.IO.Path.GetFullPath%2A?displayProperty=nameWithType>|  
-|Récupérer le nom de fichier et son extension à partir d'un chemin d'accès|Méthode <xref:System.IO.Path.GetFileName%2A?displayProperty=nameWithType>|  
+|Récupérer le nom de fichier et son extension à partir d’un chemin d’accès|Méthode <xref:System.IO.Path.GetFileName%2A?displayProperty=nameWithType>|  
 |Modifier l'extension d'un fichier|Méthode <xref:System.IO.Path.ChangeExtension%2A?displayProperty=nameWithType>|  
   
 ## <a name="common-directory-tasks"></a>Tâches de répertoire courantes  

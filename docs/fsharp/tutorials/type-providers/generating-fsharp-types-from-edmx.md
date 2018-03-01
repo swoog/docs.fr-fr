@@ -10,16 +10,16 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 81adb2eb-625f-4ad8-aeaa-8f672a6d79a2
-ms.openlocfilehash: 1df0344e8dab2b40d82d1b9c61ccd2f026906243
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 901457dce358f768b4f4c980703e09f6c744918e
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="walkthrough-generating-f-types-from-an-edmx-schema-file"></a>Procédure pas à pas : génération de types F# à partir d'un fichier de schéma EDMX
 
 > [!NOTE]
-Ce guide a été écrit pour F # 3.0 et sera mise à jour.  Pour obtenir la liste la plus récente des fournisseurs de type multiplateformes, consultez [FSharp.Data](http://fsharp.github.io/FSharp.Data/).
+Ce guide a été écrit pour F # 3.0 et sera mise à jour.  Pour obtenir la liste la plus récente des fournisseurs de type multiplateformes, consultez [FSharp.Data](https://fsharp.github.io/FSharp.Data/).
 
 > [!NOTE]
 Les liens de référence d’API vous permettront de MSDN.  Les informations de référence sur les API docs.microsoft.com ne sont pas terminées.
@@ -48,7 +48,7 @@ Les tâches suivantes, décrites dans cette procédure pas à pas, doivent être
 <br />
 
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Prérequis
 
 ## <a name="creating-an-edmx-file"></a>Création d'un fichier EDMX
 Si vous disposez déjà d'un fichier EDMX, vous pouvez ignorer cette étape.
@@ -222,7 +222,7 @@ Effectuez cette procédure uniquement si vous souhaitez savoir comment générer
 1. Dans la barre de menus, choisissez **SQL**, **éditeur Transact-SQL**, **nouvelle requête** pour créer une base de données. Si vous y êtes invité, spécifiez votre serveur et instance de base de données.
 <br />
 
-2. Copiez et collez le contenu du script de base de données qui crée la base de données de l’étudiant, comme décrit dans la [documentation d’Entity Framework](http://msdn.microsoft.com/data/JJ614587.aspx) dans le centre de développement de données.
+2. Copiez et collez le contenu du script de base de données qui crée la base de données de l’étudiant, comme décrit dans la [documentation d’Entity Framework](https://msdn.microsoft.com/data/JJ614587.aspx) dans le centre de développement de données.
 <br />
 
 3. Exécutez le script SQL en cliquant sur le bouton de barre d’outils avec le symbole de triangle ou en appuyant sur Ctrl + Q.
@@ -275,7 +275,7 @@ Examinez les autres requêtes en examinant les opérateurs de requête disponibl
 
 [Procédure pas à pas : accès à une base de données SQL à l’aide des fournisseurs de type et des entités](accessing-a-sql-database-entities.md)
 
-[Entity Framework](http://msdn.microsoft.com/data/ef)
+[Entity Framework](https://msdn.microsoft.com/data/ef)
 
 [vue d’ensemble du fichier .edmx](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)
 

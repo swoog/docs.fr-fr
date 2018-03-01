@@ -2,7 +2,8 @@
 title: "Niveaux d’accessibilité (référence C#)"
 ms.date: 12/06/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - access modifiers [C#], accessibility levels
@@ -10,24 +11,24 @@ helpviewer_keywords:
 ms.assetid: dc083921-0073-413e-8936-a613e8bb7df4
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 816ee0fab3fae21bff2ffbfcbfe39d04dcf95025
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: fed7d6d0eb3eda4d8d2e1847259dd8d23700d3e7
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="accessibility-levels-c-reference"></a>Niveaux d’accessibilité (référence C#)
 
-Utilisez les modificateurs d’accès [public](../../../csharp/language-reference/keywords/public.md), [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md) ou [private](../../../csharp/language-reference/keywords/private.md) pour spécifier l’un des niveaux d’accessibilité déclarée ci-dessous pour les membres.  
+Utilisez les modificateurs d’accès `public`, `protected`, `internal` ou `private` pour spécifier l’un des niveaux d’accessibilité déclarés ci-dessous pour les membres.  
   
 |Accessibilité déclarée|Signification|  
 |----------------------------|-------------|  
-|`public`|L’accès n’est pas limité.|  
-|`protected`|L’accès est limité à la classe conteneur ou aux types dérivés de la classe conteneur.|  
-|`internal`|L’accès est limité à l’assembly actuel.|  
-|`protected internal`|L’accès est limité à l’assembly actuel ou aux types dérivés de la classe conteneur.|  
-|`private`|L’accès est limité au type conteneur.|  
-|`private protected`|L’accès est limité à la classe conteneur ou aux types dérivés de la classe conteneur dans l’assembly actuel. Disponible depuis C# 7.2. |  
+|[`public`](public.md)|L’accès n’est pas limité.|  
+|[`protected`](protected.md)|L’accès est limité à la classe conteneur ou aux types dérivés de la classe conteneur.|  
+|[`internal`](internal.md)|L’accès est limité à l’assembly actuel.|  
+|[`protected internal`](protected-internal.md)|L’accès est limité à l’assembly actuel ou aux types dérivés de la classe conteneur.|  
+|[`private`](private.md)|L’accès est limité au type conteneur.|  
+|[`private protected`](private-protected.md)|L’accès est limité à la classe conteneur ou aux types dérivés de la classe conteneur dans l’assembly actuel. Disponible depuis C# 7.2. |  
   
  Vous ne pouvez spécifier qu’un seul modificateur d’accès pour un membre ou un type, sauf si vous utilisez les combinaisons `protected internal` ou `private protected`.  
   
@@ -41,9 +42,9 @@ Utilisez les modificateurs d’accès [public](../../../csharp/language-referenc
   
 |Membres de|Accessibilité par défaut du membre|Accessibilité déclarée du membre autorisée|  
 |----------------|----------------------------------|--------------------------------------------------|  
-|`enum`|`public`|Aucune|  
+|`enum`|`public`|Aucun.|  
 |`class`|`private`|`public`<br /><br /> `protected`<br /><br /> `internal`<br /><br /> `private`<br /><br /> `protected internal` <br /><br />`private protected`|  
-|`interface`|`public`|Aucune|  
+|`interface`|`public`|Aucun.|  
 |`struct`|`private`|`public`<br /><br /> `internal`<br /><br /> `private`|  
   
  L’accessibilité d’un type imbriqué dépend de son [domaine d’accessibilité](../../../csharp/language-reference/keywords/accessibility-domain.md), qui est déterminé à la fois par l’accessibilité déclarée du membre et par le domaine d’accessibilité du type conteneur immédiat. Toutefois, le domaine d'accessibilité d'un type imbriqué ne peut pas dépasser celui du type conteneur.  
@@ -52,7 +53,7 @@ Utilisez les modificateurs d’accès [public](../../../csharp/language-referenc
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur C#](../../../csharp/language-reference/index.md)  
+ [Référence C#](../../../csharp/language-reference/index.md)  
  [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
  [Mots clés C#](../../../csharp/language-reference/keywords/index.md)  
  [Modificateurs d’accès](../../../csharp/language-reference/keywords/access-modifiers.md)  

@@ -10,16 +10,16 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 6fbb6ccc-248f-4226-95e9-f6f99541dbe4
-ms.openlocfilehash: a919c2acb2b5b8c2ce93124f2f541bd092d15c35
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 3cd8df9becac0d1a8842eb22e2f772eee6307acf
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="walkthrough-generating-f-types-from-a-dbml-file"></a>Procédure pas à pas : génération de types F# à partir d'un fichier DBML
 
 > [!NOTE]
-Ce guide a été écrit pour F # 3.0 et sera mise à jour.  Pour obtenir la liste la plus récente des fournisseurs de type multiplateformes, consultez [FSharp.Data](http://fsharp.github.io/FSharp.Data/).
+Ce guide a été écrit pour F # 3.0 et sera mise à jour.  Pour obtenir la liste la plus récente des fournisseurs de type multiplateformes, consultez [FSharp.Data](https://fsharp.github.io/FSharp.Data/).
 
 > [!NOTE]
 Les liens de référence d’API vous permettront de MSDN.  Les informations de référence sur les API docs.microsoft.com ne sont pas terminées.
@@ -44,7 +44,7 @@ Cette procédure pas à pas décrit les tâches suivantes. Ils doivent être eff
 <br />
 
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Prérequis
 
 ## <a name="creating-a-dbml-file"></a>Création d’un fichier .dbml
 Si vous n’avez pas de test sur une base de données, créer un en suivant les instructions au bas de [procédure pas à pas : accès à une base de données SQL à l’aide des fournisseurs de Type](accessing-a-sql-database.md). Si vous suivez ces instructions, vous allez créer une base de données appelée MyDatabase contenant quelques tableaux simples et des procédures stockées sur votre serveur SQL Server.

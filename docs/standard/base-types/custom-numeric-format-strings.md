@@ -22,27 +22,30 @@ helpviewer_keywords:
 - formatting numbers [.NET Framework]
 - format specifiers, custom numeric format strings
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
-caps.latest.revision: "54"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a391ee54aaeaf007afcb6aacdb9376820950e89e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ec33a093e4f7f8ccda1992f26563bcd63853e634
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="custom-numeric-format-strings"></a>Chaînes de format numériques personnalisées
 Vous pouvez créer une chaîne de format numérique personnalisée, qui est composée d'un ou de plusieurs spécificateurs de format numériques personnalisés, pour définir la mise en forme des données numériques. Une chaîne de format numérique personnalisée est toute chaîne autre qu'une [chaîne de format numérique standard](../../../docs/standard/base-types/standard-numeric-format-strings.md).  
   
- Les chaînes de format numérique personnalisées sont prises en charge par certaines surcharges de la méthode `ToString` de tous les types numériques. Par exemple, vous pouvez fournir une chaîne de format numérique aux méthodes <xref:System.Int32.ToString%28System.String%29> et <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> du type <xref:System.Int32> . Chaînes de format numérique personnalisées sont également prises en charge par .NET [la fonctionnalité de mise en forme composite](../../../docs/standard/base-types/composite-formatting.md), qui est utilisé par certains `Write` et `WriteLine` méthodes de la <xref:System.Console> et <xref:System.IO.StreamWriter> des classes, les <xref:System.String.Format%2A?displayProperty=nameWithType>(méthode) et le <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> (méthode).  
+ Les chaînes de format numérique personnalisées sont prises en charge par certaines surcharges de la méthode `ToString` de tous les types numériques. Par exemple, vous pouvez fournir une chaîne de format numérique aux méthodes <xref:System.Int32.ToString%28System.String%29> et <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> du type <xref:System.Int32> . Les chaînes de format numérique personnalisées sont également prises en charge par la fonctionnalité de [mise en forme composite](../../../docs/standard/base-types/composite-formatting.md) .NET, utilisée par certaines méthodes `Write` et `WriteLine` des classes <xref:System.Console> et <xref:System.IO.StreamWriter>, la méthode <xref:System.String.Format%2A?displayProperty=nameWithType> et la méthode <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>.  
   
 > [!TIP]
 >  Vous pouvez télécharger l’ [utilitaire de formatage](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), une application qui vous permet d’appliquer des chaînes de mise en forme à des valeurs numériques ou à des valeurs de date et d’heure, et d’afficher la chaîne de résultat.  
   
 <a name="table"></a> Le tableau suivant décrit les spécificateurs de format numériques personnalisés et affiche un exemple de sortie produite par chaque spécificateur de format. Consultez la section [Remarques](#NotesCustomFormatting) pour plus d'informations sur l'utilisation de chaînes de format numériques personnalisées, et la section [Exemple](#example) pour obtenir une illustration complète de leur utilisation.  
   
-|Spécificateur de format|Nom|Description|Exemples|  
+|Spécificateur de format|Name|Description|Exemples|  
 |----------------------|----------|-----------------|--------------|  
 |"0"|Espace réservé du zéro|Remplace le zéro par le chiffre correspondant, le cas échéant ; sinon, le zéro s'affiche dans la chaîne de résultat.<br /><br /> Informations supplémentaires : [Spécificateur personnalisé « 0 »](#Specifier0).|1234.5678 ("00000") -> 01235<br /><br /> 0.45678 ("0.00", en-US) -> 0.46<br /><br /> 0.45678 ("0.00", fr-FR) -> 0,46|  
 |"#"|Espace réservé de chiffre|Remplace le symbole « # » par le chiffre correspondant, le cas échéant ; sinon, aucun chiffre ne s'affiche dans la chaîne de résultat.<br /><br /> Notez qu’aucun chiffre n’apparaît dans la chaîne de résultat si le chiffre correspondant dans la chaîne d’entrée est un 0 non significatif. Exemple : 0003 ("####") -> 3.<br /><br /> Informations supplémentaires : [Spécificateur personnalisé « # »](#SpecifierD).|1234.5678 ("#####") -> 1235<br /><br /> 0.45678 ("#.##", en-US) -> .46<br /><br /> 0.45678 ("#.##", fr-FR) -> ,46|  
@@ -51,7 +54,7 @@ Vous pouvez créer une chaîne de format numérique personnalisée, qui est comp
 |"%"|Espace réservé de pourcentage|Multiplie un nombre par 100 et insère un symbole de pourcentage localisé dans la chaîne de résultat.<br /><br /> Informations supplémentaires : [Spécificateur personnalisé « % »](#SpecifierPct).|0.3697 ("%#0.00", en-US) -> %36.97<br /><br /> 0.3697 ("%#0.00", el-GR) -> %36,97<br /><br /> 0.3697 ("##.0 %", en-US) -> 37.0 %<br /><br /> 0.3697 ("##.0 %", el-GR) -> 37,0 %|  
 |"‰"|Espace réservé « pour mille »|Multiplie un nombre par 1000 et insère un symbole « pour mille » localisé dans la chaîne de résultat.<br /><br /> Informations supplémentaires : [Spécificateur personnalisé« ‰ »](#SpecifierPerMille).|0.03697 ("#0.00‰", en-US) -> 36.97‰<br /><br /> 0.03697 ("#0.00‰", ru-RU) -> 36,97‰|  
 |"E0"<br /><br /> "E+0"<br /><br /> "E-0"<br /><br /> "E0"<br /><br /> "E+0"<br /><br /> "E-0"|Notation exponentielle|Si le spécificateur est suivi d'au moins un zéro (0), met en forme le résultat à l'aide de la notation exponentielle. La casse de « E » ou « e » indique la casse du symbole d'exposant dans la chaîne de résultat. Le nombre des zéros qui suivent le caractère « E » ou « e » détermine le nombre minimal de chiffres dans l'exposant. Un signe plus (+) indique qu'un caractère de signe précède toujours l'exposant. Un signe moins (-) indique qu'un caractère de signe précède uniquement les exposants négatifs.<br /><br /> Informations supplémentaires : [Spécificateurs personnalisés « E » et « e »](#SpecifierExponent).|987654 ("#0.0e0") -> 98.8e4<br /><br /> 1503.92311 ("0.0##e+00") -> 1.504e+03<br /><br /> 1.8901385E-16 ("0.0e+00") -> 1.9e-16|  
-|"\\"|Caractère d'échappement|Entraîne l'interprétation du caractère suivant comme un littéral plutôt que comme un spécificateur de format personnalisé.<br /><br /> Plus d’informations : [le «\\« caractère d’échappement](#SpecifierEscape).|987654 ("\\###00\\#") -> #987654#|  
+|"\\"|Caractère d'échappement|Entraîne l'interprétation du caractère suivant comme un littéral plutôt que comme un spécificateur de format personnalisé.<br /><br /> Informations supplémentaires : [Caractère d'échappement « \\ »](#SpecifierEscape).|987654 ("\\###00\\#") -> #987654#|  
 |'*chaîne*'<br /><br /> "*chaîne*"|Délimiteur de chaîne littérale|Indique que les caractères encadrés doivent être copiés inchangés dans la chaîne de résultat.|68 ("# ' degrees'") -> 68  degrees<br /><br /> 68 ("#' degrees'") -> 68 degrees|  
 |;|Séparateur de section|Définit des sections avec des chaînes de format distinctes pour les nombres positifs, négatifs et nuls.<br /><br /> Informations supplémentaires : [Séparateur de section « ; »](#SectionSeparator).|12.345 ("#0.0#;(#0.0#);-\0-") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#);-\0-") -> -0-<br /><br /> -12.345 ("#0.0#;(#0.0#);-\0-") -> (12.35)<br /><br /> 12.345 ("#0.0#;(#0.0#)") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#)") -> 0.0<br /><br /> -12.345 ("#0.0#;(#0.0#)") -> (12.35)|  
 |Autre|Tous les autres caractères|Le caractère est copié inchangé dans la chaîne de résultat.|68 ("# °") -> 68 °|  
@@ -148,7 +151,7 @@ Vous pouvez créer une chaîne de format numérique personnalisée, qui est comp
   
 <a name="SpecifierPerMille"></a>   
 ## <a name="the--custom-specifier"></a>Spécificateur personnalisé« ‰ »  
- Un caractère « pour mille » (‰ ou \u2030) dans une chaîne de format entraîne la multiplication d'un nombre par 1 000 avant sa mise en forme. Le symbole « pour mille » approprié est inséré dans la chaîne retournée, à l'emplacement où le symbole ‰ apparaît dans la chaîne de format. Le caractère « pour mille » utilisé est défini par la propriété <xref:System.Globalization.NumberFormatInfo.PerMilleSymbol%2A?displayProperty=nameWithType> de l'objet qui fournit les informations de mise en forme spécifique à la culture.  
+ Un caractère « pour mille » (‰ ou \u2030) dans une chaîne de format entraîne la multiplication d'un nombre par 1 000 avant sa mise en forme. Le symbole « pour mille » approprié est inséré dans la chaîne retournée, à l'emplacement où le symbole ‰ apparaît dans la chaîne de format. Le caractère « pour mille » utilisé est défini par la propriété <xref:System.Globalization.NumberFormatInfo.PerMilleSymbol%2A?displayProperty=nameWithType> de l'objet qui fournit les informations de mise en forme spécifique à la culture.  
   
  L'exemple suivant définit une chaîne de format personnalisée qui inclut le spécificateur personnalisé "‰".  
   
@@ -171,7 +174,7 @@ Vous pouvez créer une chaîne de format numérique personnalisée, qui est comp
  [Retour au tableau](#table)  
   
 <a name="SpecifierEscape"></a>   
-## <a name="the--escape-character"></a>Le «\\« caractère d’échappement  
+## <a name="the--escape-character"></a>Caractère d'échappement « \\ »  
  Les symboles "#", "0", ".", ",", "%" et "‰" dans une chaîne de format sont interprétés comme des spécificateurs de format plutôt que comme des caractères littéraux. En fonction de leur position dans une chaîne de format personnalisée, les "E" majuscules et minuscules ainsi que les symboles + et - peuvent également être interprétés comme des spécificateurs de format.  
   
  Pour éviter qu'un caractère soit interprété comme un spécificateur de format, vous pouvez le faire précéder d'une barre oblique inverse, qui est le caractère d'échappement. Le caractère d'échappement signifie que le caractère suivant est un caractère littéral qui doit être inclus inchangé dans la chaîne de résultat.  
@@ -181,7 +184,7 @@ Vous pouvez créer une chaîne de format numérique personnalisée, qui est comp
 > [!NOTE]
 >  Certains compilateurs, tels que les compilateurs C++ et C#, peuvent également interpréter une barre oblique inverse unique comme un caractère d'échappement. Pour garantir l'interprétation correcte d'une chaîne lors de la mise en forme, vous pouvez utiliser le caractère littéral de chaîne textuel(le caractère @) avant la chaîne en C#, ou ajouter une autre barre oblique inverse avant chaque barre oblique inverse en C# et C++. L'exemple C# suivant illustre ces deux approches.  
   
- L’exemple suivant utilise le caractère d’échappement pour empêcher l’opération de mise en forme d’interpréter le « # », « 0 » et «\\» caractères comme caractères d’échappement ou des spécificateurs de format. L'exemple C# utilise une barre oblique inverse supplémentaire pour garantir qu'une barre oblique inverse est interprétée comme un caractère littéral.  
+ L’exemple suivant utilise le caractère d’échappement pour empêcher l’opération de mise en forme d’interpréter les caractères « # », « 0 » et « \\ » comme des caractères d’échappement ou des spécificateurs de format. L'exemple C# utilise une barre oblique inverse supplémentaire pour garantir qu'une barre oblique inverse est interprétée comme un caractère littéral.  
   
  [!code-cpp[Formatting.Numeric.Custom#11](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/escape1.cpp#11)]
  [!code-csharp[Formatting.Numeric.Custom#11](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/escape1.cs#11)]
@@ -210,7 +213,7 @@ Vous pouvez créer une chaîne de format numérique personnalisée, qui est comp
  [Retour au tableau](#table)  
   
 <a name="NotesCustomFormatting"></a>   
-## <a name="notes"></a>Remarques  
+## <a name="notes"></a>Notes  
   
 ### <a name="floating-point-infinities-and-nan"></a>Infinis à virgule flottante et NaN  
  Quelle que soit la chaîne de format, si la valeur d'un type à virgule flottante <xref:System.Single> ou <xref:System.Double> est l'infini positif, l'infini négatif ou une valeur non numérique (NaN), la chaîne mise en forme est la valeur de la propriété <xref:System.Globalization.NumberFormatInfo.PositiveInfinitySymbol%2A>, <xref:System.Globalization.NumberFormatInfo.NegativeInfinitySymbol%2A>ou <xref:System.Globalization.NumberFormatInfo.NaNSymbol%2A> spécifiée par l'objet <xref:System.Globalization.NumberFormatInfo> actuellement applicable.  
@@ -218,7 +221,7 @@ Vous pouvez créer une chaîne de format numérique personnalisée, qui est comp
 ### <a name="control-panel-settings"></a>Paramètres du panneau de configuration  
  Les paramètres de l'élément **Options régionales et linguistiques** du Panneau de configuration influencent la chaîne résultante produite par une opération de mise en forme. Ces paramètres sont utilisés pour initialiser l'objet <xref:System.Globalization.NumberFormatInfo> associé à la culture du thread en cours et la culture du thread en cours fournit des valeurs utilisées pour indiquer la mise en forme. Les ordinateurs qui utilisent des paramètres différents génèrent des chaînes de résultat différentes.  
   
- En outre, si vous utilisez la <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> constructeur pour instancier un nouvel <xref:System.Globalization.CultureInfo> objet qui représente la même culture que la culture système en cours, toutes les personnalisations établies par le **Options régionales et linguistiques** élément dans le panneau de configuration est appliquée au nouvel <xref:System.Globalization.CultureInfo> objet. Vous pouvez utiliser le constructeur <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> pour créer un objet <xref:System.Globalization.CultureInfo> qui ne reflète pas les personnalisations d'un système.  
+ De plus, si vous utilisez le constructeur <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> pour instancier un nouvel objet <xref:System.Globalization.CultureInfo> qui représente la même culture que la culture système en cours, toutes les personnalisations établies par l'élément **Options régionales et linguistiques** du Panneau de configuration seront appliquées au nouvel objet <xref:System.Globalization.CultureInfo>. Vous pouvez utiliser le constructeur <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> pour créer un objet <xref:System.Globalization.CultureInfo> qui ne reflète pas les personnalisations d'un système.  
   
 ### <a name="rounding-and-fixed-point-format-strings"></a>Arrondi et chaînes de format à virgule fixe  
  Pour les chaînes de format à virgule fixe (c'est-à-dire les chaînes de format ne contenant pas de caractères de format de notation scientifique), les nombres sont arrondis au même nombre de décimales que d'espaces réservés de chiffres à droite du séparateur décimal. Si la chaîne de format ne contient pas de virgule décimale, le nombre est arrondi à l'entier le plus proche. Si le nombre possède plus de chiffres que d'espaces réservés de chiffres à gauche de la virgule décimale, les chiffres supplémentaires sont copiés dans la chaîne résultante immédiatement avant le premier espace réservé de chiffre.  

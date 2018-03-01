@@ -13,21 +13,24 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: fe1b4a11-37f4-4e1a-93c9-239f4fe736c0
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: d3b336b0ac4ca4fd02950a572404a117d4c193f2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a8c9b513f47fcb07f987b1e17f0b7f485cef3143
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="including-or-importing-xml-schemas"></a>Inclusion ou importation de schémas XML
 Un schéma XML peut contenir des éléments `<xs:import />`, `<xs:include />` et `<xs:redefine />`. Ces éléments de schéma réfèrent à d'autres schémas XML qui peuvent être utilisés pour compléter la structure du schéma où ils sont inclus ou importés. Les classes <xref:System.Xml.Schema.XmlSchemaImport>, <xref:System.Xml.Schema.XmlSchemaInclude> et <xref:System.Xml.Schema.XmlSchemaRedefine> sont mappées à ces éléments dans l'API SOM (Schema Object Model).  
   
 ## <a name="including-or-importing-an-xml-schema"></a>Inclusion ou importation d'un schéma XML  
- L’exemple de code suivant complète le schéma utilisateur créé dans le [création de schémas XML](../../../../docs/standard/data/xml/building-xml-schemas.md) rubrique avec le schéma d’adresse. Cette opération rend les types d'adresses disponibles dans le schéma utilisateur.  
+ L'exemple de code suivant complète le schéma utilisateur créé dans la rubrique [Création de schémas XML](../../../../docs/standard/data/xml/building-xml-schemas.md) avec le schéma d'adresse. Cette opération rend les types d'adresses disponibles dans le schéma utilisateur.  
   
  Le schéma d'adresse peut être incorporé à l'aide d'éléments `<xs:include />` ou `<xs:import />` pour utiliser les composants du schéma d'adresse tels quels, ou à l'aide d'un élément `<xs:redefine />` pour modifier l'un quelconque de ses composants en fonction des besoins du schéma utilisateur. Le schéma d'adresse ayant un `targetNamespace` différent de celui du schéma utilisateur, on utilise l'élément `<xs:import />` et donc la sémantique d'importation.  
   
@@ -105,12 +108,12 @@ Un schéma XML peut contenir des éléments `<xs:import />`, `<xs:include />` e
 </schema>  
 ```  
   
- Pour plus d’informations sur la `<xs:import />`, `<xs:include />`, et `<xs:redefine />` éléments et le <xref:System.Xml.Schema.XmlSchemaImport>, <xref:System.Xml.Schema.XmlSchemaInclude> et <xref:System.Xml.Schema.XmlSchemaRedefine> des classes, consultez le [W3C XML Schema](http://go.microsoft.com/fwlink/?LinkId=45242) et <xref:System.Xml.Schema?displayProperty=nameWithType> documentation de référence de classe espace de noms.  
+ Pour plus d'informations sur les éléments `<xs:import />`, `<xs:include />` et `<xs:redefine />`, ainsi que sur les classes <xref:System.Xml.Schema.XmlSchemaImport>, <xref:System.Xml.Schema.XmlSchemaInclude> et <xref:System.Xml.Schema.XmlSchemaRedefine>, consultez [W3C XML Schema](http://www.w3.org/XML/Schema) (en anglais) et la documentation de référence de la classe d'espace de noms <xref:System.Xml.Schema?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble du modèle objet schéma XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
- [La lecture et écriture de schémas XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
+ [Vue d’ensemble du modèle d’objet de schéma XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
+ [Lecture et écriture de schémas XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
  [Création de schémas XML](../../../../docs/standard/data/xml/building-xml-schemas.md)  
- [Traversée de schémas XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
+ [Parcours des schémas XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
  [Modification de schémas XML](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
- [XmlSchemaSet pour la Compilation du schéma](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
+ [XmlSchemaSet pour la compilation de schémas](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)

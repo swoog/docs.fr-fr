@@ -9,11 +9,14 @@ ms.topic: article
 ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
-ms.openlocfilehash: a6546818eaeac3c32a6a9ddd7e64b1b0e0ea170f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 33123732514a53574036f6f8e948b2cf9acb9229
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="net-glossary"></a>Glossaire .NET
 
@@ -31,19 +34,19 @@ Implémentation ASP.NET d’origine fournie avec .NET Framework.
 
 ASP.NET est parfois un terme général qui désigne les deux implémentations d’ASP.NET, y compris ASP.NET Core. C’est le contexte qui détermine la signification véhiculée par le terme. Reportez-vous à ASP.NET 4.x lorsque vous souhaitez indiquer clairement que vous n’utilisez pas ASP.NET pour les deux implémentations. 
 
-Consultez [documentation ASP.NET](/aspnet/#pivot=aspnet).
+Voir [Documentation d’ASP.NET](/aspnet/#pivot=aspnet).
 
 ## <a name="aspnet-core"></a>ASP.NET Core
 
 Implémentation multiplateforme, hautes performances et open source d’ASP.NET basée sur .NET Core.
 
-Consultez [documentation d’ASP.NET Core](/aspnet/#pivot=core).
+Voir [Documentation ASP.NET Core](/aspnet/#pivot=core).
 
 ## <a name="assembly"></a>assembly
 
-Fichier *.dll* qui contient une collection d’API pouvant être appelées par les applications ou d’autres assemblys.
+Fichier *.dll*/*.exe* qui contient une collection d’API pouvant être appelées par les applications ou d’autres assemblys.
 
-Un assembly .NET est une collection de types. Un assembly inclut des interfaces, des classes, des structures, des énumérations et des délégués.  Les assemblys qui se trouvent dans le dossier *bin* d’un projet sont parfois appelés *binaires*. Voir aussi [bibliothèque](#library).
+Un assembly peut inclure des types comme des interfaces, des classes, des structures, des énumérations et des délégués. Les assemblys qui se trouvent dans le dossier *bin* d’un projet sont parfois appelés *binaires*. Voir aussi [bibliothèque](#library).
 
 ## <a name="clr"></a>CLR
 
@@ -207,7 +210,7 @@ Vous pouvez considérer cette technologie comme un compilateur JIT persistant. E
 
 Un package NuGet &mdash; ou simplement un package &mdash; est un fichier *.zip* qui comporte un ou plusieurs assemblys portant le même nom, ainsi que des métadonnées supplémentaires, telles que le nom de l’auteur.
 
-Le fichier *.zip* porte l’extension *.nupkg* et peut contenir des composants, tels que des fichiers *.dll* et des fichiers *.xml*, à utiliser avec plusieurs frameworks et versions. Quand ils sont installés dans une application ou une bibliothèque, les composants appropriés sont sélectionnés en fonction du framework cible spécifié par l’application ou la bibliothèque. Les composants qui définissent l’interface se trouvent dans le dossier *ref*, tandis que les ressources qui définissent l’implémentation se trouvent dans le dossier *lib*.
+Le fichier *.zip* porte l’extension *.nupkg* et peut contenir des composants, tels que des fichiers *.dll* et des fichiers *.xml*, à utiliser avec plusieurs frameworks et versions cibles. Quand ils sont installés dans une application ou une bibliothèque, les composants appropriés sont sélectionnés en fonction du framework cible spécifié par l’application ou la bibliothèque. Les composants qui définissent l’interface se trouvent dans le dossier *ref*, tandis que les ressources qui définissent l’implémentation se trouvent dans le dossier *lib*.
 
 ## <a name="platform"></a>platform
 

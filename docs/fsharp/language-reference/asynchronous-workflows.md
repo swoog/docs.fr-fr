@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: ee2bb9bf-e04a-4fbe-bf58-46d07229e981
-ms.openlocfilehash: 425dbcbce06f183c81acb90993978c6dd9523de9
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.openlocfilehash: e1cbdb452c8f77d97a0231a5ec75d752a98d2ed6
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="asynchronous-workflows"></a>Flux de travail asynchrones
 
@@ -29,7 +29,7 @@ Cette rubrique décrit la prise en charge en F # pour effectuer des calculs de f
 async { expression }
 ```
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Dans la syntaxe précédente, le calcul représenté par `expression` est configuré pour s’exécuter de façon asynchrone, c'est-à-dire sans bloquer le thread actuel de calcul lorsque des opérations asynchrones de veille, d’e/s et d’autres opérations asynchrones sont effectuées. Les calculs asynchrones sont souvent démarrés dans un thread d’arrière-plan pendant que l’exécution se poursuit sur le thread actuel. Le type de l’expression est `Async<'T>`, où `'T` est le type retourné par l’expression lorsque le `return` mot clé est utilisé. Le code dans une telle expression est appelé un *bloc asynchrone*, ou *bloc async*.
 
@@ -52,11 +52,11 @@ En plus de `let!`, vous pouvez utiliser `use!` pour effectuer des liaisons async
 
 ## <a name="asynchronous-primitives"></a>Primitives asynchrones
 
-Une méthode qui effectue une tâche asynchrone unique et retourne le résultat est appelée un *primitive asynchrone*, et elles sont conçues spécifiquement pour une utilisation avec `let!`. Plusieurs primitives asynchrones sont définies dans la bibliothèque principale F #. Deux méthodes pour les applications Web sont définies dans le module [ `Microsoft.FSharp.Control.WebExtensions` ](https://msdn.microsoft.com/library/95ef17bc-ee3f-44ba-8a11-c90fcf4cf003): [ `WebRequest.AsyncGetResponse` ](https://msdn.microsoft.com/library/09a60c31-e6e2-4b5c-ad23-92a86e50060c) et [ `WebClient.AsyncDownloadString` ](https://msdn.microsoft.com/library/8a85a9b7-f712-4cac-a0ce-0a797f8ea32a). Les deux primitives téléchargent des données à partir d’une page Web, en fonction de l’URL. `AsyncGetResponse`génère un `System.Net.WebResponse` objet, et `AsyncDownloadString` produit une chaîne qui représente le code HTML pour une page Web.
+Une méthode qui effectue une tâche asynchrone unique et retourne le résultat est appelée un *primitive asynchrone*, et elles sont conçues spécifiquement pour une utilisation avec `let!`. Plusieurs primitives asynchrones sont définies dans la bibliothèque principale F #. Deux méthodes pour les applications Web sont définies dans le module [ `Microsoft.FSharp.Control.WebExtensions` ](https://msdn.microsoft.com/library/95ef17bc-ee3f-44ba-8a11-c90fcf4cf003): [ `WebRequest.AsyncGetResponse` ](https://msdn.microsoft.com/library/09a60c31-e6e2-4b5c-ad23-92a86e50060c) et [ `WebClient.AsyncDownloadString` ](https://msdn.microsoft.com/library/8a85a9b7-f712-4cac-a0ce-0a797f8ea32a). Les deux primitives téléchargent des données à partir d’une page Web, en fonction de l’URL. `AsyncGetResponse` génère un `System.Net.WebResponse` objet, et `AsyncDownloadString` produit une chaîne qui représente le code HTML pour une page Web.
 
 Plusieurs primitives pour les opérations d’e/s asynchrones sont inclus dans le [ `Microsoft.FSharp.Control.CommonExtensions` ](https://msdn.microsoft.com/library/2edb67cb-6814-4a30-849f-b6dbdd042396) module. Ces méthodes d’extension de la `System.IO.Stream` classe sont [ `Stream.AsyncRead` ](https://msdn.microsoft.com/library/85698aaa-bdda-47e6-abed-3730f59fda5e) et [ `Stream.AsyncWrite` ](https://msdn.microsoft.com/library/1b0a2751-e42a-47e1-bd27-020224adc618).
 
-D’autres primitives asynchrones sont disponibles dans le [F # PowerTools](http://fsprojects.github.io/VisualFSharpPowerTools/). Vous pouvez également écrire vos propres primitives asynchrones en définissant une fonction dont le corps complet est placé dans un bloc async.
+D’autres primitives asynchrones sont disponibles dans le [F # PowerTools](https://fsprojects.github.io/VisualFSharpPowerTools/). Vous pouvez également écrire vos propres primitives asynchrones en définissant une fonction dont le corps complet est placé dans un bloc async.
 
 Pour utiliser les méthodes asynchrones dans .NET Framework qui sont conçues pour d’autres modèles asynchrones avec le modèle de programmation asynchrone F #, vous créez une fonction qui retourne une F # `Async` objet. La bibliothèque F # a des fonctions qui vous permet d’exécuter.
 

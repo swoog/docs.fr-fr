@@ -12,15 +12,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 55c4b175-3170-4071-9d60-dd5a42f79b54
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 193a9980bba423292921beff6c4c3172ce02fd92
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a834fe8764744f5b2dd41de1f4fe1479059b87bb
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xmlschemaset-for-schema-compilation"></a>XmlSchemaSet pour la compilation de schémas
 Décrit l'objet <xref:System.Xml.Schema.XmlSchemaSet>, un cache où les schémas de langage XSD (XML Schema Definition) peuvent être stockés et validés.  
@@ -254,9 +257,9 @@ foreach (XmlSchema schema in schemaSet.Schemas())
  L'objet <xref:System.Xml.Schema.XmlSchemaSet> tente d'importer un schéma pour l'espace de noms `http://www.contoso.com` en le chargeant à partir de l'URL `http://www.contoso.com/schema.xsd`. Seuls la déclaration de schéma et les types déclarés dans le document de schéma sont disponibles dans le schéma d'importation, même si d'autres documents de schéma existent pour l'espace de noms `http://www.contoso.com` dans l'objet <xref:System.Xml.Schema.XmlSchemaSet>. Si le fichier `schema.xsd` est introuvable à l'URL `http://www.contoso.com/schema.xsd`, aucun schéma n'est importé dans le schéma d'importation pour l'espace de noms `http://www.contoso.com`.  
   
 ## <a name="validating-xml-documents"></a>Validation de documents XML  
- Les document XML peuvent être validés par rapport à des schémas dans un objet <xref:System.Xml.Schema.XmlSchemaSet>. Pour valider un document XML, ajoutez un schéma à la propriété <xref:System.Xml.Schema.XmlSchemaSet> de l'objet <xref:System.Xml.XmlReaderSettings.Schemas%2A> d'un objet <xref:System.Xml.XmlReaderSettings> ou ajoutez un objet <xref:System.Xml.Schema.XmlSchemaSet> à la propriété <xref:System.Xml.XmlReaderSettings.Schemas%2A> d'un objet <xref:System.Xml.XmlReaderSettings>. L'objet <xref:System.Xml.XmlReaderSettings> est ensuite utilisé par la méthode <xref:System.Xml.XmlReader.Create%2A> de la classe <xref:System.Xml.XmlReader> pour créer un objet <xref:System.Xml.XmlReader> et valider le document XML.  
+ Les document XML peuvent être validés par rapport à des schémas dans un objet <xref:System.Xml.Schema.XmlSchemaSet>. Pour valider un document XML, ajoutez un schéma à la propriété <xref:System.Xml.Schema.XmlSchemaSet><xref:System.Xml.XmlReaderSettings.Schemas%2A> d'un objet <xref:System.Xml.XmlReaderSettings>, ou ajoutez un objet <xref:System.Xml.Schema.XmlSchemaSet> à la propriété <xref:System.Xml.XmlReaderSettings.Schemas%2A> d'un objet <xref:System.Xml.XmlReaderSettings>. L'objet <xref:System.Xml.XmlReaderSettings> est ensuite utilisé par la méthode <xref:System.Xml.XmlReader.Create%2A> de la classe <xref:System.Xml.XmlReader> pour créer un objet <xref:System.Xml.XmlReader> et valider le document XML.  
   
- Pour plus d’informations sur la validation XML des documents à l’aide un <xref:System.Xml.Schema.XmlSchemaSet>, consultez [Validation de schéma XML (XSD) avec XmlSchemaSet](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemaset.md).  
+ Pour plus d’informations sur la validation de documents XML à l’aide d’un <xref:System.Xml.Schema.XmlSchemaSet>, consultez [Validation de schéma XML (XSD) avec XmlSchemaSet](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemaset.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.Xml.Schema.XmlSchemaSet.Add%2A>  
@@ -266,5 +269,5 @@ foreach (XmlSchema schema in schemaSet.Schemas())
  <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A>  
  <xref:System.Xml.Schema.XmlSchemaSet.Remove%2A>  
  <xref:System.Xml.Schema.XmlSchemaSet.RemoveRecursive%2A>  
- [XmlSchemaSet comme un Cache de schéma](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
- [Validation XML Schema (XSD) avec XmlSchemaSet](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemaset.md)
+ [XmlSchemaSet en tant que cache de schéma](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+ [Validation de schéma XML (XSD) avec XmlSchemaSet](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemaset.md)

@@ -1,5 +1,5 @@
 ---
-title: "Démarrage rapide - Chaînes interpolées - Guide C#"
+title: "Didacticiel sur les chaînes interpolées - Guides de démarrage rapide local en C#"
 description: "Dans ce guide de démarrage rapide sur les chaînes interpolées, vous écrivez du code C# de façon à inclure le résultat d’une expression dans une chaîne plus grande."
 author: rpetrusha
 ms.author: ronpet
@@ -9,17 +9,17 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 14185dd4e364f12756541ac6401d1c6ff3206fe9
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.openlocfilehash: 3cd9fc23dba104f92255b031eef32f80cca915b0
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="interpolated-strings"></a>Chaînes interpolées
 
 Ce guide de démarrage rapide explique comment utiliser des chaînes interpolées en C# pour insérer des valeurs dans une chaîne à sortie unique. Vous allez écrire un code en C# et afficher les résultats de la compilation et de l’exécution du code. Le guide de démarrage rapide contient une série de leçons qui insèrent des valeurs dans des chaînes et mettent en forme ces valeurs de différentes façons.
 
-Ce guide de démarrage rapide suppose que vous disposez d’un ordinateur que vous pouvez utiliser pour le développement. La rubrique .NET [Bien démarrer en 10 minutes](https://www.microsoft.com/net/core) contient des instructions pour configurer votre environnement de développement local sur Mac, PC ou Linux. Une brève vue d’ensemble des commandes que vous utiliserez est disponible dans la [présentation des guides de démarrage rapide locaux](local-environment.md) avec des liens pour plus d’informations. 
+Ce guide de démarrage rapide suppose que vous disposez d’un ordinateur que vous pouvez utiliser pour le développement. La rubrique .NET [Bien démarrer en 10 minutes](https://www.microsoft.com/net/core) contient des instructions pour configurer votre environnement de développement local sur Mac, PC ou Linux. Une brève vue d’ensemble des commandes que vous utiliserez est disponible dans la [présentation des guides de démarrage rapide local](local-environment.md), avec des liens vers des informations complémentaires. 
 
 ## <a name="create-an-interpolated-string"></a>Créer une chaîne interpolée
 
@@ -37,7 +37,7 @@ Ouvrez **Program.cs** dans votre éditeur favori, puis remplacez la ligne `Conso
 var name = "<name>";
 Console.WriteLine($"Hello, {name}. It's a pleasure to meet you!");
 ```
-Essayez ce code en tapant `dotnet run` dans la fenêtre de console. Quand vous exécutez le programme, il affiche une chaîne unique qui inclut votre nom dans le message d’accueil. La chaîne incluse dans l’appel de méthode <xref:System.Console.WriteLine%2A> est une *chaîne interpolée*. C’est un genre de modèle qui vous permet de construire une chaîne unique (appelée *chaîne de résultat*) à partir d’une chaîne qui comprend du code incorporé. Les chaînes interpolées sont particulièrement utiles pour insérer des valeurs dans une chaîne ou pour concaténer (joindre) des chaînes. 
+Essayez ce code en tapant `dotnet run` dans la fenêtre de console. Quand vous exécutez le programme, il affiche une chaîne unique qui inclut votre nom dans le message d’accueil. La chaîne qui se trouve dans l’appel de méthode <xref:System.Console.WriteLine%2A> est une *chaîne interpolée*. C’est un genre de modèle qui vous permet de construire une chaîne unique (appelée *chaîne de résultat*) à partir d’une chaîne qui comprend du code incorporé. Les chaînes interpolées sont particulièrement utiles pour insérer des valeurs dans une chaîne ou pour concaténer (joindre) des chaînes. 
     
 Cet exemple simple contient les deux éléments que chaque chaîne interpolée doit avoir : 
 
@@ -90,7 +90,7 @@ Dans la sortie de cet exemple, la date est trop précise (le prix des aubergines
 
 ## <a name="control-the-formatting-of-interpolated-expressions"></a>Contrôler la mise en forme des expressions interpolées
 
-Dans la section précédente, deux chaînes à la mise en forme incorrecte ont été insérées dans la chaîne de résultat. L’une était une valeur de date et d’heure pour laquelle seule la date était appropriée. La deuxième était un prix qui n’indiquait pas la devise. Ces deux problèmes sont faciles à résoudre. Les expressions interpolées peuvent inclure des *chaînes de format* qui contrôlent la mise en forme de types particuliers. Modifiez l’appel à `Console.WriteLine` dans l’exemple précédent de façon à inclure le spécificateur de format pour les champs de date et de prix, comme indiqué sur la ligne suivante :
+Dans la section précédente, deux chaînes à la mise en forme incorrecte ont été insérées dans la chaîne de résultat. L’une était une valeur de date et d’heure pour laquelle seule la date était appropriée. La deuxième était un prix qui n’indiquait pas la monnaie locale. Ces deux problèmes sont faciles à résoudre. Les expressions interpolées peuvent inclure des *chaînes de format* qui gèrent la mise en forme de types particuliers. Modifiez l’appel à `Console.WriteLine` dans l’exemple précédent de façon à inclure le spécificateur de format pour les champs de date et de prix, comme indiqué sur la ligne suivante :
 
 ```csharp
 Console.WriteLine($"On {date:d}, the price of {item} was {price:C2} per {unit}.");
@@ -166,5 +166,5 @@ Vous avez terminé le guide de démarrage rapide sur les chaînes interpolées.
     
 Vous pouvez passer au démarrage rapide [Tableaux et collections](arrays-and-collections.md) dans votre propre environnement de développement.
 
-Plus d’informations sur l’utilisation des chaînes interpolées, consultez la rubrique [Chaînes interpolées](../language-reference/keywords/interpolated-strings.md) dans la référence de C#.
+Plus d’informations sur l’utilisation des chaînes interpolées, consultez la rubrique [Chaînes interpolées](../language-reference/keywords/interpolated-strings.md) dans les informations de référence sur C#.
 

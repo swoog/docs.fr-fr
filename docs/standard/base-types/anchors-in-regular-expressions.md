@@ -21,15 +21,18 @@ helpviewer_keywords:
 - .NET Framework regular expressions, anchors
 - .NET Framework regular expressions, atomic zero-width assertions
 ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 453776c97ec0531cea94ecf44c31216cf5b17a3b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 648c86c71de3c92825af3cfdd4ac2ca023f5e027
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="anchors-in-regular-expressions"></a>Ancres dans les expressions régulières
 <a name="top"></a> Les ancres, ou assertions atomiques de largeur nulle, spécifient une position dans la chaîne où une correspondance doit se produire. Quand vous utilisez une ancre dans votre expression de recherche, le moteur des expressions régulières n'avance pas dans la chaîne ou ne consomme pas de caractères ; il recherche uniquement une correspondance à la position spécifiée. Par exemple, `^` spécifie que la correspondance doit commencer au début d'une ligne ou d'une chaîne. Par conséquent, l'expression régulière `^http:` correspond uniquement à « http: » quand elle se produit au début d'une ligne. Le tableau suivant répertorie les ancres prises en charge par les expressions régulières dans .NET.  
@@ -47,7 +50,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="Start"></a>   
 ## <a name="start-of-string-or-line-"></a>Début de chaîne ou de ligne : ^  
- L'ancre `^` spécifie que le modèle suivant doit commencer à la première position de caractère de la chaîne. Si vous utilisez `^` avec la <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> option (consultez [Options des expressions régulières](../../../docs/standard/base-types/regular-expression-options.md)), la correspondance doit se produire au début de chaque ligne.  
+ L'ancre `^` spécifie que le modèle suivant doit commencer à la première position de caractère de la chaîne. Si vous utilisez `^` avec l'option <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> (consultez [Options des expressions régulières](../../../docs/standard/base-types/regular-expression-options.md)), la correspondance doit se trouver au début de chaque ligne.  
   
  L'exemple suivant utilise l'ancre `^` dans une expression régulière qui extrait des informations à propos des années pendant lesquelles certaines équipes de base-ball professionnelles ont existé. L'exemple appelle deux surcharges de la méthode <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> :  
   
@@ -60,7 +63,7 @@ ms.lasthandoff: 11/21/2017
   
  Le modèle d'expression régulière `^((\w+(\s?)){2,}),\s(\w+\s\w+),(\s\d{4}(-(\d{4}|present))?,?)+` est défini comme indiqué dans le tableau suivant.  
   
-|Modèle|Description|  
+|Motif|Description|  
 |-------------|-----------------|  
 |`^`|Commencer la correspondance au début de la chaîne d'entrée (ou au début de la ligne si la méthode est appelée avec l'option <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>).|  
 |`((\w+(\s?)){2,}`|Mettre en correspondance un ou plusieurs caractères de mot suivis de zéro ou d'un espace précisément deux fois. Il s'agit du premier groupe de capture. Cette expression définit également un deuxième et un troisième groupe de capture : le deuxième se compose du mot capturé, et le troisième se compose des espaces capturés.|  
@@ -113,7 +116,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="EndOnly"></a>   
 ## <a name="end-of-string-only-z"></a>Fin de chaîne uniquement : \z  
- L'ancre `\z` spécifie qu'une correspondance doit se produire à la fin de la chaîne d'entrée. Comme l'élément de langage `$`, `\z` ignore l'option <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>. Contrairement à l'élément de langage `\Z` , `\z` ne correspond pas à un caractère `\n` à la fin d'une chaîne. Par conséquent, elle peut correspondre uniquement à la dernière ligne de la chaîne d'entrée.  
+ L'ancre `\z` spécifie qu'une correspondance doit se produire à la fin de la chaîne d'entrée. Comme l'élément de langage `$`, `\z` ignore l'option <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>. Contrairement à l'élément de langage `\Z`, `\z` ne correspond pas à un caractère `\n` à la fin d'une chaîne. Par conséquent, elle peut correspondre uniquement à la dernière ligne de la chaîne d'entrée.  
   
  L'exemple suivant utilise l'ancre `\z` dans une expression régulière qui est sinon identique à l'exemple dans la section précédente, qui extrait des informations à propos des années pendant lesquelles certaines équipes de base-ball professionnelles ont existé. L'exemple essaie de faire correspondre chacun des cinq éléments dans un tableau de chaînes avec le modèle d'expression régulière `^((\w+(\s?)){2,}),\s(\w+\s\w+),(\s\d{4}(-(\d{4}|present))?,?)+\r?\z`. Deux des chaînes se terminent par un retour chariot et des caractères de saut de ligne, l'une se termine par un caractère de saut de ligne, et deux ne se terminent ni par un retour chariot ni par un caractère de saut de ligne. Comme le montre la sortie, seules les chaînes sans retour chariot ou caractère de saut de ligne correspondent au modèle.  
   
@@ -133,7 +136,7 @@ ms.lasthandoff: 11/21/2017
   
  L'expression régulière `\G(\w+\s?\w*),?` est interprétée comme indiqué dans le tableau suivant.  
   
-|Modèle|Description|  
+|Motif|Description|  
 |-------------|-----------------|  
 |`\G`|Commencer là où la dernière correspondance s'est terminée.|  
 |`\w+`|Mettre en correspondance un ou plusieurs caractères alphabétiques.|  
@@ -146,7 +149,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="WordBoundary"></a>   
 ## <a name="word-boundary-b"></a>Limite de mot : \b  
- L'ancre `\b` spécifie que la correspondance doit se produire à la limite entre un caractère de mot (élément de langage `\w` ) et un caractère n'appartenant pas à un mot (élément de langage `\W` ). Les caractères de mot se composent de caractères alphanumériques et de traits de soulignement ; un caractère n'appartenant pas à un mot est un caractère qui n'est pas alphanumérique ou qui n'est pas un trait de soulignement. (Pour plus d’informations, consultez [Classes de caractères](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).) La correspondance peut également se produire à la limite d'un mot au début ou à la fin de la chaîne.  
+ L'ancre `\b` spécifie que la correspondance doit se produire à la limite entre un caractère de mot (élément de langage `\w` ) et un caractère n'appartenant pas à un mot (élément de langage `\W` ). Les caractères de mot se composent de caractères alphanumériques et de traits de soulignement ; un caractère n'appartenant pas à un mot est un caractère qui n'est pas alphanumérique ou qui n'est pas un trait de soulignement. (Pour plus d'informations, consultez [Classes de caractères](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).) La correspondance peut également se produire à la limite d'un mot au début ou à la fin de la chaîne.  
   
  L'ancre `\b` est fréquemment utilisée pour faire en sorte qu'une sous-expression corresponde à un mot entier plutôt qu'au début ou à la fin d'un mot uniquement. L'expression régulière `\bare\w*\b` dans l'exemple suivant illustre cette utilisation. Elle correspond à tout mot qui commence par la sous-chaîne « are ». La sortie de l'exemple illustre également que `\b` correspond à la fois au début et la fin de la chaîne d'entrée.  
   
@@ -155,7 +158,7 @@ ms.lasthandoff: 11/21/2017
   
  Le modèle d'expression régulière est interprété comme indiqué dans le tableau suivant.  
   
-|Modèle|Description|  
+|Motif|Description|  
 |-------------|-----------------|  
 |`\b`|Commencer la correspondance à la limite d'un mot.|  
 |`are`|Mettre en correspondance la sous-chaîne « are ».|  
@@ -175,7 +178,7 @@ ms.lasthandoff: 11/21/2017
   
  Le modèle d'expression régulière est interprété comme indiqué dans le tableau suivant.  
   
-|Modèle|Description|  
+|Motif|Description|  
 |-------------|-----------------|  
 |`\B`|Ne pas commencer la correspondance à la limite d'un mot.|  
 |`qu`|Mettre en correspondance la sous-chaîne « qu ».|  

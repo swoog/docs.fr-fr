@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 5c26a0aa-186e-476c-9f87-e0191754579e
-ms.openlocfilehash: 66b2503744e9024deac3d6dabea57da4fd393bd8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 5e1f6914acad5ae8c7148a7238e2d1d6a8ca5867
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="get-started-with-azure-file-storage-using-f"></a>Prise en main avec un stockage de fichier Azure à l’aide de F # #
 
@@ -22,7 +22,7 @@ Stockage de fichier Azure est un service qui offre les partages de fichiers dans
 
 Pour une vue d’ensemble conceptuelle de stockage de fichiers, consultez [le guide de .NET pour le stockage de fichier](/azure/storage/storage-dotnet-how-to-use-files).
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Prérequis
 
 Pour utiliser ce guide, vous devez d’abord [créer un compte de stockage Azure](/azure/storage/storage-create-storage-account).
 Vous devez également votre clé d’accès pour ce compte.
@@ -97,7 +97,7 @@ Ici vous téléchargez le fichier venez de créer, en ajoutant le contenu dans u
 
 ### <a name="set-the-maximum-size-for-a-file-share"></a>Définir la taille maximale d’un partage de fichiers
 
-L’exemple ci-dessous montre comment vérifier l’utilisation actuelle d’un partage et comment définir le quota pour le partage. `FetchAttributes`doit être appelé pour remplir un partage `Properties`, et `SetProperties` pour propager les modifications locales vers le stockage de fichiers Azure.
+L’exemple ci-dessous montre comment vérifier l’utilisation actuelle d’un partage et comment définir le quota pour le partage. `FetchAttributes` doit être appelé pour remplir un partage `Properties`, et `SetProperties` pour propager les modifications locales vers le stockage de fichiers Azure.
 
 [!code-fsharp[FileStorage](../../../samples/snippets/fsharp/azure/file-storage.fsx#L62-L72)]
 
@@ -161,5 +161,5 @@ Consultez ces liens pour plus d’informations sur le stockage de fichiers Azure
 
 - [Stockage de fichier Azure est désormais généralement disponible](https://azure.microsoft.com/blog/azure-file-storage-now-generally-available/)
 - [Stockage de fichiers Azure à l’intérieur](https://azure.microsoft.com/blog/inside-azure-file-storage/) 
-- [Présentation de Microsoft Azure File Service](http://blogs.msdn.com/b/windowsazurestorage/archive/2014/05/12/introducing-microsoft-azure-file-service.aspx)
-- [Connexions persistantes pour les fichiers Microsoft Azure](http://blogs.msdn.com/b/windowsazurestorage/archive/2014/05/27/persisting-connections-to-microsoft-azure-files.aspx)
+- [Présentation de Microsoft Azure File Service](https://blogs.msdn.microsoft.com/windowsazurestorage/2014/05/12/introducing-microsoft-azure-file-service/)
+- [Connexions persistantes pour les fichiers Microsoft Azure](https://blogs.msdn.microsoft.com/windowsazurestorage/2014/05/26/persisting-connections-to-microsoft-azure-files/)

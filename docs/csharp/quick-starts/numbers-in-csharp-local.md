@@ -1,5 +1,5 @@
 ---
-title: "Démarrage rapide - Nombres en C# - Guide C#"
+title: "Didacticiel sur les nombres en C# - Guides de démarrage rapide local en C#"
 description: "Découvrez C# en explorant les types numériques, leurs propriétés et méthodes."
 author: billwagner
 ms.author: wiwagn
@@ -9,17 +9,17 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 9a7f061de23c632560f40ac5eb46defd4537da16
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.openlocfilehash: 9a8b28d840d3c8ef63611e9f584e5984e1dcb1a3
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 02/01/2018
 ---
-# <a name="numbers-in-c-quick-start"></a>Démarrage rapide Nombres en C# #
+# <a name="numbers-in-c-quickstart"></a>Guide de démarrage rapide Nombres en C#
 
 Ce guide de démarrage rapide vous permet de découvrir de manière interactive les types numériques en C#. Vous allez écrire de petites quantités de code, puis vous compilerez et exécuterez ce code. Ce guide de démarrage rapide contient une série de leçons pour explorer les nombres et les opérations mathématiques en C#. Ces leçons présentent les concepts de base du langage C#.
 
-Ce guide de démarrage rapide suppose que vous disposez d’un ordinateur que vous pouvez utiliser pour le développement. La rubrique .NET [Bien démarrer en 10 minutes](https://www.microsoft.com/net/core) contient des instructions pour configurer votre environnement de développement local sur Mac, PC ou Linux. Une brève vue d’ensemble des commandes que vous utiliserez est disponible dans la [présentation des guides de démarrage rapide locaux](local-environment.md) avec des liens pour plus d’informations.
+Ce guide de démarrage rapide suppose que vous disposez d’un ordinateur que vous pouvez utiliser pour le développement. La rubrique .NET [Bien démarrer en 10 minutes](https://www.microsoft.com/net/core) contient des instructions pour configurer votre environnement de développement local sur Mac, PC ou Linux. Une brève vue d’ensemble des commandes que vous utiliserez est disponible dans la [présentation des guides de démarrage rapide local](local-environment.md), avec des liens vers des informations complémentaires.
 
 ## <a name="explore-integer-math"></a>Explorer les mathématiques avec des entiers
 
@@ -319,7 +319,7 @@ Vous pouvez vérifier votre réponse en [consultant l’exemple de code terminé
 
 Si vous le voulez, essayez d’autres formules. 
 
-Vous avez terminé le guide de démarrage rapide « Nombres en C# ». Vous pouvez passer au démarrage rapide [Branches et boucles](branches-and-loops-local.md) dans votre propre environnement de développement.
+Vous avez terminé le guide de démarrage rapide « Nombres en C# ». Vous pouvez passer au guide de démarrage rapide [Branches et boucles](branches-and-loops-local.md) dans votre propre environnement de développement.
 
 Pour en savoir plus sur les nombres en C#, consultez les rubriques suivantes :
 

@@ -1,7 +1,7 @@
 ### YamlMime:Tutorial
 title: Collections en C#
 metadata:
-  title: "Collections en C#. Apprenez à utiliser des séquences et des collections en C#."
+  title: "Didacticiel interactif sur les collections - Guides de démarrage rapide en C#"
   description: "Dans ce didacticiel, vous allez utiliser votre navigateur pour découvrir C# de manière interactive. Vous allez écrire un code C# et afficher les résultats de la compilation et de l’exécution du code directement dans le navigateur."
   audience: Developer
   ms.topic: get-started-article
@@ -11,14 +11,14 @@ metadata:
   interactive: csharp
   ms.prod: .net
   ms.technology: devlang-csharp
-  ms.openlocfilehash: 57cdf4e5c82c0e50de5422051df251db8ddb5d83
-  ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+  ms.openlocfilehash: 483b403b35eef4405b1c7debc52678aef19cb9b6
+  ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
   ms.translationtype: HT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 01/20/2018
+  ms.lasthandoff: 02/01/2018
 items:
 - durationInMinutes: 1
-  content: "Ce guide de démarrage rapide vous fait découvrir C# de manière interactive en utilisant votre navigateur pour écrire du code C# et afficher les résultats de la compilation et de l’exécution du code. Il contient une série de leçons sur la création, la modification et l’exploration de collections et tableaux.\n"
+  content: "Ce guide de démarrage rapide vous fait découvrir C# de manière interactive en utilisant votre navigateur pour écrire du code C# et afficher les résultats de la compilation et de l’exécution du code. Il contient une série de leçons sur la création, la modification et l’exploration de collections et tableaux.\n"
 - title: "Créer des listes"
   durationInMinutes: 2
   content: "Exécutez le code suivant dans la fenêtre interactive. Pour ce faire, tapez le bloc de code suivant dans la fenêtre interactive (remplacez « <name> » par votre nom) et cliquez sur le bouton **Exécuter** :\n\n```csharp\nvar names = new List<string> { \"<name>\", \"Ana\", \"Felipe\" };\nforeach (var name in names)\n{\n  Console.WriteLine($\"Hello {name.ToUpper()}!\");\n}\n```\n\nVous venez de créer une liste de chaînes, d’ajouter trois noms à cette liste et d’afficher les noms tout en majuscules. Vous utilisez des concepts que vous avez appris dans les guides de démarrage rapide précédents pour lire la liste en boucle.\n\nLe code permettant d’afficher les noms utilise des **chaînes interpolées**.  Quand vous faites précéder une `string` du caractère `$`, vous pouvez incorporer le code C# dans la déclaration de chaîne. La chaîne réelle remplace ce code C# par la valeur qu’elle génère. Dans cet exemple, elle remplace `{name.ToUpper()}` par chaque nom, converti en majuscules, car vous avez appelé la méthode <xref:System.String.ToUpper%2A>.\n\nContinuons notre exploration.\n\n> [!NOTE]\n> Cette expérience de codage en ligne est en mode d’aperçu. Si vous rencontrez des problèmes, veuillez les signaler [sur le référentiel dotnet/try](https://github.com/dotnet/try/issues).\n"
@@ -37,4 +37,4 @@ items:
 - title: Terminer le test
   durationInMinutes: 3
   content: "Avez-vous obtenu un résultat similaire à celui-ci ?\n\n```csharp\nvar fibonacciNumbers = new List<int> {1, 1};\n\nwhile (fibonacciNumbers.Count < 20)\n{\n    var previous = fibonacciNumbers[fibonacciNumbers.Count - 1];\n    var previous2 = fibonacciNumbers[fibonacciNumbers.Count - 2];\n    \n    fibonacciNumbers.Add(previous + previous2);\n}\nforeach(var item in fibonacciNumbers)\n    Console.WriteLine(item);\n```\n\nÀ chaque itération de la boucle, vous sélectionnez les deux derniers entiers de la liste, les additionner et ajoutez la valeur obtenue à la liste. La boucle se répète jusqu'à ce que vous ayez ajouté 20 éléments à la liste.\n\n> [!NOTE]\n> Cette expérience de codage en ligne est en mode d’aperçu. Si vous rencontrez des problèmes, veuillez les signaler [sur le référentiel dotnet/try](https://github.com/dotnet/try/issues).\n"
-- content: "Vous avez terminé le guide de démarrage rapide sur les listes. Ce guide de démarrage rapide est le dernier qui est interactif. Vous pouvez poursuivre ces guides de démarrage rapide dans votre propre environnement de développement. Découvrez les principes fondamentaux du [développement local](local-environment.md) puis choisissez un guide de démarrage rapide. Vous pouvez essayer ce même exercice, passer directement au guide de démarrage rapide suivant, ou recommencer à partir du guide de démarrage rapide sur les [nombres en C#](numbers-in-csharp-local.md).\n\nPour plus d’informations sur l’utilisation du type `List`, consultez la rubrique du [Guide .NET](../../standard/index.md) sur les [collections](../../standard/collections/index.md). Vous allez également en découvrir plus sur de nombreux autres types de collection.\0"
+- content: "Vous avez terminé le guide de démarrage rapide sur les listes. Ce guide de démarrage rapide est le dernier guide interactif. Vous pouvez poursuivre ces guides de démarrage rapide dans votre propre environnement de développement. Découvrez les principes fondamentaux du [développement local](local-environment.md), puis choisissez un guide de démarrage rapide. Vous pouvez tenter ce même exercice, passer directement au guide de démarrage rapide suivant ou recommencer à partir du guide de démarrage rapide sur les [nombres en C#](numbers-in-csharp-local.md).\n\nPour plus d’informations sur l’utilisation du type `List`, consultez la rubrique du [Guide .NET](../../standard/index.md) sur les [collections](../../standard/collections/index.md). Vous allez également en découvrir plus sur de nombreux autres types de collection.\0"

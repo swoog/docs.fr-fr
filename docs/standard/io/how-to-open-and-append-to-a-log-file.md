@@ -17,21 +17,24 @@ helpviewer_keywords:
 - log files, appending to
 - I/O [.NET Framework], log files
 ms.assetid: 74423362-1721-49cb-aa0a-e04005f72a06
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 60c31339231405a1cbbb98dae37d36ad3c3709c1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 333b20adee4ea2826a1fc6795a39490dca1af843
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-open-and-append-to-a-log-file"></a>Comment : ouvrir un fichier journal et y ajouter des éléments
-<xref:System.IO.StreamWriter>et <xref:System.IO.StreamReader> écrire des caractères à et lire des caractères à partir de flux. Le code suivant exemple ouvre le `log.txt` du fichier d’entrée, ou crée le fichier s’il n’existe pas déjà et ajoute les informations à la fin du fichier. Le contenu du fichier est ensuite écrites vers la sortie standard pour l’affichage. Comme alternative à cet exemple, les informations peut être stockées en tant que chaîne unique ou tableau de chaînes et le <xref:System.IO.File.WriteAllText%2A> ou <xref:System.IO.File.WriteAllLines%2A> méthode peut servir à obtenir la même fonctionnalité.  
+<xref:System.IO.StreamWriter> et <xref:System.IO.StreamReader> écrivent des caractères dans et lisent des caractères à partir des flux. L’exemple de code suivant ouvre le fichier `log.txt` pour l’entrée, ou crée le fichier s’il n’existe pas déjà, et ajoute les informations à la fin du fichier. Le contenu du fichier est ensuite écrit vers la sortie standard pour affichage. Comme alternative à cet exemple, les informations peuvent être stockées en tant que chaîne unique ou tableau de chaînes et la méthode <xref:System.IO.File.WriteAllText%2A> ou <xref:System.IO.File.WriteAllLines%2A> peut être utilisée pour obtenir la même fonctionnalité.  
   
 > [!NOTE]
->  Les utilisateurs de Visual Basic peuvent choisir d’utiliser les méthodes et les propriétés fournies par le <xref:Microsoft.VisualBasic.Logging.Log> classe ou <xref:Microsoft.VisualBasic.FileIO.FileSystem> classe pour la création ou l’écriture dans des fichiers journaux.  
+>  Les utilisateurs Visual Basic peuvent choisir d’utiliser les méthodes et les propriétés fournies par la classe <xref:Microsoft.VisualBasic.Logging.Log> ou la classe <xref:Microsoft.VisualBasic.FileIO.FileSystem> pour la création ou l’écriture dans des fichiers journaux.  
   
 ## <a name="example"></a>Exemple  
  [!code-csharp[Conceptual.BasicIO.TextFiles#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/source2.cs#2)]

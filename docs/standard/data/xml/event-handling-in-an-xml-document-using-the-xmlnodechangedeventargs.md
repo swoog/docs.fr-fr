@@ -12,20 +12,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0fe844e3-5b6f-4fe7-ad15-22459501738b
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 2bfd6eee5831b6bb92c0274fe5925184c80a92e2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: cc74b13fd4771cc4f00500ff3253795f45db2b40
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs"></a>Gestion d'événements dans un document XML à l'aide de XmlNodeChangedEventArgs
-Le **XmlNodeChangedEventArgs** encapsule les arguments passés aux gestionnaires d’événements inscrits sur le **XmlDocument** objet pour la gestion des événements. Le tableau suivant répertorie ces événements et fournit une description des circonstances dans lesquelles ils sont déclenchés :  
+**XmlNodeChangedEventArgs** encapsule les arguments passés aux gestionnaires d’événements inscrits dans l’objet **XmlDocument** pour la gestion d’événements. Le tableau suivant répertorie ces événements et fournit une description des circonstances dans lesquelles ils sont déclenchés :  
   
-|Événement|Est déclenché|  
+|événement|Est déclenché|  
 |-----------|-----------|  
 |<xref:System.Xml.XmlDocument.NodeInserting>|Quand un nœud faisant partie du document actif est sur le point d'être inséré dans un autre nœud.|  
 |<xref:System.Xml.XmlDocument.NodeInserted>|Quand un nœud faisant partie du document actif a été inséré dans un autre nœud.|  
@@ -35,7 +38,7 @@ Le **XmlNodeChangedEventArgs** encapsule les arguments passés aux gestionnaires
 |<xref:System.Xml.XmlDocument.NodeChanged>|Quand la valeur d'un nœud a été modifiée.|  
   
 > [!NOTE]
->  Si le **XmlDataDocument** utilisation de la mémoire est entièrement optimisée pour utiliser **DataSet** stockage, le **XmlDataDocument** peuvent ne pas déclencher les événements répertoriés ci-dessus lorsque des modifications sont sous-jacentes **DataSet**. Si vous avez besoin de ces événements, vous devez traverser l’intégralité **XmlDocument** une fois pour rendre l’utilisation de la mémoire non entièrement optimisée.  
+>  Si l'utilisation de la mémoire **XmlDataDocument** est pleinement optimisée pour utiliser le stockage **DataSet**, il est possible que **XmlDataDocument** ne déclenche aucun des événements répertoriés ci-avant quand des modifications sont apportées au **DataSet** sous-jacent. Si vous avez besoin de ces événements, vous devez traverser l'intégralité de **XmlDocument** une fois pour rendre partielle l'utilisation de la mémoire.  
   
  L'exemple de code suivant illustre la définition d'un gestionnaire d'événements et l'ajout de celui-ci à un événement :  
   
@@ -80,9 +83,9 @@ void NodeInsertedHandler(Object src, XmlNodeChangedEventArgs args)
 }  
 ```  
   
- Certaines opérations Document Object Model (DOM) XML sont des opérations composées pouvant entraîner le déclenchement de plusieurs événements. Par exemple, **AppendChild** peut-être également supprimer le nœud ajouté de son parent précédent. Dans ce cas, vous voyez un **NodeRemoved** l’événement déclenché en premier, suivi d’un **NodeInserted** événement. Les opérations telles que la définition **InnerXml** peuvent provoquer plusieurs événements.  
+ Certaines opérations Document Object Model (DOM) XML sont des opérations composées pouvant entraîner le déclenchement de plusieurs événements. Par exemple, **AppendChild** peut également avoir à supprimer le nœud ajouté de son ancien parent. Dans ce cas, un événement **NodeRemoved** est déclenché en premier, suivi d'un événement **NodeInserted**. Des opérations telles que la définition d'**InnerXml** peuvent provoquer plusieurs événements.  
   
- L’exemple de code suivant illustre la création du Gestionnaire d’événements et la gestion de la **NodeInserted** événement.  
+ L'exemple de code suivant montre la création du gestionnaire d'événements et la gestion de l'événement **NodeInserted**.  
   
 ```vb  
 Imports System  
@@ -216,4 +219,4 @@ public class Sample
  Pour plus d’informations, consultez <xref:System.Xml.XmlNodeChangedEventArgs> et <xref:System.Xml.XmlNodeChangedEventHandler>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Document Object Model (DOM) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [DOM (Document Object Model) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

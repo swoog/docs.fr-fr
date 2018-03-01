@@ -13,20 +13,23 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 7f1bc7f4-401b-459f-9078-f099cc711fde
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 77fe1790a4ff2f910a740e969e458549f1fd9642
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4b59b2b59852190bd19a3c1c9536fadb7b40603e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="post-schema-compilation-infoset"></a>Jeu d'informations de post-compilation de schéma
-Le [recommandation du World Wide Web Consortium (W3C) XML Schema](http://go.microsoft.com/fwlink/?linkid=45242) décrit le jeu d’informations (infoset) qui doit être exposé pour la pré-validation de schéma et de post-compilation de schéma. Le Modèle Objet du schéma (SOM) XML observe cette exposition avant et après l'appel à la méthode <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> de l'objet <xref:System.Xml.Schema.XmlSchemaSet>.  
+La [recommandation du World Wide Web Consortium (W3C) sur le schéma XML](http://go.microsoft.com/fwlink/?linkid=45242) décrit le jeu d'informations qui doit être exposé pour la pré-validation de schéma et la post-compilation de schéma. Le Modèle Objet du schéma (SOM) XML observe cette exposition avant et après l'appel à la méthode <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> de l'objet <xref:System.Xml.Schema.XmlSchemaSet>.  
   
- Le jeu d'informations de pré-validation de schéma est généré pendant la modification du schéma. Le jeu d'informations de post-compilation de schéma est généré après l'appel à la méthode <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> de l'objet <xref:System.Xml.Schema.XmlSchemaSet>, lors de la compilation du schéma et est exposé comme des propriétés.  
+ Le jeu d’informations de pré-validation de schéma est généré pendant la modification du schéma. Le jeu d'informations de post-compilation de schéma est généré après l'appel à la méthode <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> de l'objet <xref:System.Xml.Schema.XmlSchemaSet>, lors de la compilation du schéma et est exposé comme des propriétés.  
   
  Le SOM est le modèle d'objet qui représente les jeux d'informations de pré-validation de schéma et de post-compilation de schéma. Il est composé de classes dans l'espace de noms <xref:System.Xml.Schema?displayProperty=nameWithType>. Toutes les propriétés de lecture et d'écriture des classes de l'espace de noms <xref:System.Xml.Schema> appartiennent au jeu d'informations de pré-validation de schéma, alors que toutes les propriétés en lecture seule des classes de l'espace de noms <xref:System.Xml.Schema> appartiennent au jeu d'informations de post-compilation de schéma. Les propriétés suivantes, qui sont des propriétés des jeux d'informations de pré-validation de schéma et de post-compilation de schéma, constituent une exception à la règle.  
   

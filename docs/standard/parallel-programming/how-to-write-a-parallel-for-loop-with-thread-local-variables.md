@@ -11,17 +11,21 @@ ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: parallel for loops, how to use local state
+helpviewer_keywords:
+- parallel for loops, how to use local state
 ms.assetid: 68384064-7ee7-41e2-90e3-71f00bde01bb
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2e0b3e28c95d9ccfb0ecd1954e16960576d8f115
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 004998a8891d92e2d1f805b3353fbe93864dcf1d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>Comment : écrire une boucle Parallel.For avec des variables locales de thread
 Cet exemple montre comment utiliser des variables de thread local pour stocker et récupérer l'état de chaque tâche créée par une boucle <xref:System.Threading.Tasks.Parallel.For%2A>. En utilisant des données de thread local, vous pouvez éviter la surcharge liée à la synchronisation d'un grand nombre d'accès à un état partagé. Au lieu d'écrire dans une ressource partagée à chaque itération, vous calculez et stockez la valeur jusqu'à ce que toutes les itérations de la tâche soient terminées. Vous pouvez ensuite écrire une fois le résultat final dans la ressource partagée ou le transmettre à une autre méthode.  
@@ -34,7 +38,7 @@ Cet exemple montre comment utiliser des variables de thread local pour stocker e
   
  Les deux premiers paramètres de chaque méthode <xref:System.Threading.Tasks.Parallel.For%2A> spécifient les valeurs d'itération initiale et finale. Dans cette surcharge de la méthode, le troisième paramètre indique où vous initialisez votre état local. Dans ce contexte, « état local » signifie une variable dont la durée de vie commence juste avant la première itération de la boucle sur le thread actuel et se termine juste après la dernière itération.  
   
- Le type du troisième paramètre est un délégué <xref:System.Func%601> où `TResult` représente le type de la variable destinée à stocker l'état de thread local. Son type est défini par l'argument de type générique fourni au moment de l'appel de la méthode <xref:System.Threading.Tasks.Parallel.For%60%601%28System.Int32%2CSystem.Int32%2CSystem.Func%7B%60%600%7D%2CSystem.Func%7BSystem.Int32%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%600%2C%60%600%7D%2CSystem.Action%7B%60%600%7D%29> générique, en l'occurrence <xref:System.Int64>. L'argument de type indique au compilateur le type de la variable temporaire à utiliser pour stocker l'état de thread local. Dans cet exemple, l'expression `() => 0` (ou `Function() 0` dans Visual Basic) initialise la variable de thread local à zéro. Si l'argument de type générique est un type de référence ou un type de valeur défini par l'utilisateur, l'expression ressemble à ceci :  
+ Le type du troisième paramètre est un délégué <xref:System.Func%601> où `TResult` représente le type de la variable destinée à stocker l'état de thread local. Son type est défini par l'argument de type générique fourni au moment de l'appel de la méthode <xref:System.Threading.Tasks.Parallel.For%60%601%28System.Int32%2CSystem.Int32%2CSystem.Func%7B%60%600%7D%2CSystem.Func%7BSystem.Int32%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%600%2C%60%600%7D%2CSystem.Action%7B%60%600%7D%29> générique, en l'occurrence <xref:System.Int64>. L’argument de type indique au compilateur le type de la variable temporaire à utiliser pour stocker l’état de thread local. Dans cet exemple, l'expression `() => 0` (ou `Function() 0` dans Visual Basic) initialise la variable de thread local à zéro. Si l'argument de type générique est un type de référence ou un type de valeur défini par l'utilisateur, l'expression ressemble à ceci :  
   
 ```csharp  
 () => new MyClass()  
@@ -48,7 +52,7 @@ Function() new MyClass()
   
  Le cinquième paramètre définit la méthode qui est appelée une fois, après la fin de toutes les itérations sur un thread particulier. Le type de l'argument d'entrée correspond de nouveau à l'argument de type de la méthode <xref:System.Threading.Tasks.Parallel.For%60%601%28System.Int32%2CSystem.Int32%2CSystem.Func%7B%60%600%7D%2CSystem.Func%7BSystem.Int32%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%600%2C%60%600%7D%2CSystem.Action%7B%60%600%7D%29> et au type retourné par l'expression lambda du corps. Dans cet exemple, la valeur est ajoutée à une variable à portée de classe d'une façon thread-safe en appelant la méthode <xref:System.Threading.Interlocked.Add%2A?displayProperty=nameWithType>. L'utilisation d'une variable de thread local nous a évité d'écrire dans cette variable de classe à chaque itération de la boucle.  
   
- Pour plus d’informations sur l’utilisation d’expressions lambda, consultez [Expressions Lambda en PLINQ et la bibliothèque parallèle de tâches](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).  
+ Pour plus d’informations sur l’utilisation d’expressions lambda, consultez [Expressions lambda en PLINQ et dans la bibliothèque parallèle de tâches](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Parallélisme de données](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)  

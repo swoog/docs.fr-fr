@@ -18,15 +18,18 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, compilation
 - regular expressions, engines
 ms.assetid: 182ec76d-5a01-4d73-996c-0b0d14fcea18
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 76acdf2d0d2f7805ec78ea44136bfc63441b9bc9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 230a1b8b083362c149b5b7e64f708bd09ab21788
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="compilation-and-reuse-in-regular-expressions"></a>Compilation et réutilisation dans les expressions régulières
 Vous pouvez optimiser les performances des applications qui utilisent très souvent des expressions régulières en comprenant comment le moteur d’expression régulière compile les expressions et comment les expressions régulières sont mises en cache. Cette rubrique décrit la compilation et la mise en cache.  
@@ -34,24 +37,24 @@ Vous pouvez optimiser les performances des applications qui utilisent très souv
 ## <a name="compiled-regular-expressions"></a>Expressions régulières compilées  
  Par défaut, le moteur d’expression régulière compile une expression régulière en une séquence d’instructions internes (il s’agit des codes généraux différents de MSIL, ou Microsoft Intermediate Language). Quand le moteur exécute une expression régulière, il interprète les codes internes.  
   
- Si un <xref:System.Text.RegularExpressions.Regex> objet est construit avec la <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> option, il compile l’expression régulière de code MSIL explicite au lieu d’instructions internes d’expressions régulières. Ainsi, le compilateur juste-à-temps (JIT) de .NET convertit l’expression en code machine natif pour de meilleures performances.  
+ Si un objet <xref:System.Text.RegularExpressions.Regex> est construit avec l’option <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType>, il compile l’expression régulière en code MSIL explicite plutôt qu’en instructions internes d’expression régulière générale. Ainsi, le compilateur juste-à-temps (JIT) de .NET convertit l’expression en code machine natif pour de meilleures performances.  
   
-Toutefois, le MSIL généré ne peut pas être déchargé. La seule façon de décharger du code consiste à décharger un domaine d’application dans son intégralité (autrement dit, à décharger tout le code de vos applications). En effet, une fois qu’une expression régulière est compilée avec le <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> option, ne libère les ressources utilisées par l’expression compilée, même si l’expression régulière a été créée par un <xref:System.Text.RegularExpressions.Regex> objet qui est lui-même un garbage collection.  
+Toutefois, le MSIL généré ne peut pas être déchargé. La seule façon de décharger du code consiste à décharger un domaine d’application dans son intégralité (autrement dit, à décharger tout le code de vos applications). En effet, une fois qu’une expression régulière est compilée avec l’option <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType>, .NET ne libère jamais les ressources utilisées par l’expression compilée, même si l’expression régulière a été créée par un objet <xref:System.Text.RegularExpressions.Regex> lui-même libéré par nettoyage de la mémoire.  
   
- Vous devez veiller à limiter le nombre d’expressions régulières différentes que vous compilez avec le <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> option permet d’éviter de consommer trop de ressources. Si une application doit utiliser un nombre important ou illimité d’expressions régulières, chaque expression doit être interprétée, et non compilée. Toutefois, si un petit nombre d’expressions régulières est utilisé à plusieurs reprises, elles doivent être compilées avec <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> pour de meilleures performances. Une alternative consiste à utiliser des expressions régulières précompilées. Vous pouvez compiler l’ensemble de vos expressions dans une DLL réutilisable à l’aide de la <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A> (méthode). Cela évite de devoir compiler lors de l’exécution tout en bénéficiant toujours de la rapidité d’expressions régulières compilées.  
+ Vous devez veiller à limiter le nombre d’expressions régulières différentes que vous compilez avec l’option <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> pour éviter de consommer trop de ressources. Si une application doit utiliser un nombre important ou illimité d’expressions régulières, chaque expression doit être interprétée, et non compilée. Toutefois, si un petit nombre d’expressions régulières est utilisé à plusieurs reprises, elles doivent être compilées avec l’option <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> pour de meilleures performances. Une alternative serait d’utiliser des expressions régulières précompilées. Vous pouvez compiler l’ensemble de vos expressions dans une DLL réutilisable à l’aide de la méthode <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A>. Cela évite d’avoir à compiler au moment de l’exécution tout en continuant à tirer parti de la rapidité des expressions régulières compilées.  
   
 ## <a name="the-regular-expressions-cache"></a>Cache des expressions régulières  
  Pour améliorer les performances, le moteur d’expression régulière gère un cache à l’échelle de l’application des expressions régulières compilées. Ce cache stocke les modèles d’expression régulière utilisés uniquement dans les appels de méthode statique. (Les modèles d’expression régulière fournis aux méthodes d’instance ne sont pas mis en cache.) Ainsi, la nécessité de réanalyser une expression en code d’octet principal à chacune de ses utilisations est évité.  
   
- Le nombre maximal d’expressions régulières mises en cache est déterminé par la valeur de la `static` (`Shared` en Visual Basic) <xref:System.Text.RegularExpressions.Regex.CacheSize%2A?displayProperty=nameWithType> propriété. Par défaut, le moteur d’expression régulière met en cache jusqu’à 15 expressions régulières compilées. Si le nombre d’expressions régulières compilées dépasse la taille du cache, l’expression régulière la plus anciennement utilisée est ignorée et la nouvelle expression régulière est mise en cache.  
+ Le nombre maximal d’expressions régulières mises en cache est déterminé par la valeur de la propriété <xref:System.Text.RegularExpressions.Regex.CacheSize%2A?displayProperty=nameWithType> `static` (`Shared` en Visual Basic). Par défaut, le moteur d’expression régulière met en cache jusqu’à 15 expressions régulières compilées. Si le nombre d’expressions régulières compilées dépasse la taille du cache, l’expression régulière la plus anciennement utilisée est ignorée et la nouvelle expression régulière est mise en cache.  
   
  Votre application peut tirer parti des expressions régulières précompilées de l’une des deux manières suivantes :  
   
--   À l’aide d’une méthode statique de la <xref:System.Text.RegularExpressions.Regex> objet pour définir l’expression régulière. Si vous utilisez un modèle d’expression régulière qui a déjà été défini dans un autre appel de méthode statique, le moteur d’expression régulière le récupère à partir du cache. Si ce n’est pas le cas, le moteur compile l’expression régulière et l’ajoute au cache.  
+-   En utilisant une méthode statique de l’objet <xref:System.Text.RegularExpressions.Regex> pour définir l’expression régulière. Si vous utilisez un modèle d’expression régulière qui a déjà été défini dans un autre appel de méthode statique, le moteur d’expression régulière le récupère à partir du cache. Si ce n’est pas le cas, le moteur compile l’expression régulière et l’ajoute au cache.  
   
--   En réutilisant un existant <xref:System.Text.RegularExpressions.Regex> objet tant que son modèle d’expression régulière est requis.  
+-   En réutilisant un objet <xref:System.Text.RegularExpressions.Regex> existant tant que son modèle d’expression régulière est nécessaire.  
   
- Raison de la charge de l’instanciation d’objet et de la compilation d’expressions régulières, création et destruction rapide de nombreux <xref:System.Text.RegularExpressions.Regex> objets est un processus très coûteux. Pour les applications qui utilisent un grand nombre d’expressions régulières différentes, vous pouvez optimiser les performances en utilisant des appels statique `Regex` méthodes et en augmentant la taille du cache d’expression régulière.  
+ En raison de la surcharge liée à l’instanciation d’objets et à la compilation d’expressions régulières, la création et la destruction rapide d’un grand nombre d’objets <xref:System.Text.RegularExpressions.Regex> est un processus très coûteux. Pour les applications qui utilisent un grand nombre d’expressions régulières différentes, vous pouvez optimiser les performances en utilisant des appels de méthodes `Regex` statiques et en augmentant éventuellement la taille du cache des expressions régulières.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Expressions régulières .NET](../../../docs/standard/base-types/regular-expressions.md)

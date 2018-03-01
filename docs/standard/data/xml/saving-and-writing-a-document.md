@@ -12,15 +12,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 097b0cb1-5743-4c3a-86ef-caf5cbe6750d
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ad656e2db17e44733b5718fe2e3a2a48afcb1381
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2138b9c47c6e41cd94e775eaed005d8a6fd976c9
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="saving-and-writing-a-document"></a>Enregistrement et écriture d'un document
 Lorsque vous chargez et enregistrez un objet <xref:System.Xml.XmlDocument>, le document sauvegardé peut varier de l'original dans les points suivants :  
@@ -29,7 +32,7 @@ Lorsque vous chargez et enregistrez un objet <xref:System.Xml.XmlDocument>, le d
   
 -   Tous les espaces blancs entre les attributs sont réduits à un espace simple.  
   
--   L'espace blanc entre les éléments est modifié. Seuls les espaces blancs significatifs sont conservés. Mais lorsque le document est enregistré, il utilisera le <xref:System.Xml.XmlTextWriter> **mise en retrait** mode par défaut pour imprimer clairement la sortie pour le rendre plus lisible.  
+-   L'espace blanc entre les éléments est modifié. Seuls les espaces blancs significatifs sont conservés. Mais lors de l'enregistrement du document, celui-ci utilise le mode <xref:System.Xml.XmlTextWriter> **Indenting** par défaut pour imprimer clairement la sortie et la rendre plus lisible.  
   
 -   Le caractère guillemet qui entoure les valeurs d'attribut est remplacé par défaut par le guillemet double. Vous pouvez utiliser la propriété <xref:System.Xml.XmlTextReader.QuoteChar%2A> sur <xref:System.Xml.XmlTextWriter> pour définir le caractère guillemet sur un guillemet double ou un guillemet simple.  
   
@@ -98,4 +101,4 @@ string xml = mydoc.DocumentElement.OuterXml;
  En revanche, vous pouvez utiliser la propriété <xref:System.Xml.XmlNode.InnerText%2A> pour obtenir le contenu des nœuds enfants.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Document Object Model (DOM) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [DOM (Document Object Model) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

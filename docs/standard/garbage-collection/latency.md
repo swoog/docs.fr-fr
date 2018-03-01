@@ -12,18 +12,21 @@ helpviewer_keywords:
 - garbage collection, intrusiveness
 - garbage collection, latency modes
 ms.assetid: 96278bb7-6eab-4612-8594-ceebfc887d81
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 439fdd8fe78a0c0f0fda4ac7e759a4a780bb9b58
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d0ac0db376ad7cd4aa139ed0eb065a5ba33836c8
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="latency-modes"></a>Modes de latence
-Pour récupérer des objets, le garbage collector doit arrêter tous les threads en cours d'exécution dans une application. Dans certaines situations, par exemple, quand une application récupère des données ou affiche du contenu, un garbage collection complet peut se produire à un moment critique et nuire aux performances. Vous pouvez ajuster le niveau d'intrusion du garbage collector en définissant la propriété <xref:System.Runtime.GCSettings.LatencyMode%2A?displayProperty=nameWithType> sur l'une des valeurs.<xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType>.  
+Pour récupérer des objets, le garbage collector doit arrêter tous les threads en cours d'exécution dans une application. Dans certaines situations, par exemple, quand une application récupère des données ou affiche du contenu, un garbage collection complet peut se produire à un moment critique et nuire aux performances. Vous pouvez ajuster le niveau d'intrusion du garbage collector en définissant la propriété <xref:System.Runtime.GCSettings.LatencyMode%2A?displayProperty=nameWithType> sur l'une des valeurs<xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType>.  
   
  La latence fait référence à la durée pendant laquelle le garbage collector effectue une intrusion dans votre application. Pendant les périodes de faible latence, le garbage collector est moins intrusif quant à la récupération des objets. L'énumération <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType> fournit deux paramètres de latence faible :  
   
@@ -57,7 +60,7 @@ Pour récupérer des objets, le garbage collector doit arrêter tous les threads
   
 -   N'oubliez pas les threads qui peuvent être à l'origine d'allocations. Étant donné que le paramètre de propriété <xref:System.Runtime.GCSettings.LatencyMode%2A> s'étend à tout le processus, vous pouvez générer un <xref:System.OutOfMemoryException> sur n'importe quel thread à l'origine d'une allocation.  
   
--   Encapsulez le code de latence faible dans les régions d’exécution limitée (pour plus d’informations, consultez [régions d’exécution limitée](../../../docs/framework/performance/constrained-execution-regions.md)).  
+-   Encapsulez le code de latence faible dans les régions d'exécution limitée (pour plus d'informations, consultez [Régions d'exécution limitée](../../../docs/framework/performance/constrained-execution-regions.md)).  
   
 -   Vous pouvez forcer les collections de génération 2 pendant une période de latence basse en appelant la méthode <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%29?displayProperty=nameWithType>.  
   

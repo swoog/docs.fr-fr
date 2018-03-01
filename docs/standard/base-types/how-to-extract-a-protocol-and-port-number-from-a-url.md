@@ -19,28 +19,31 @@ helpviewer_keywords:
 - regular expressions [.NET Framework], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: ab7f62b3-6d2c-4efb-8ac6-28600df5fd5c
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 10ab05ac8b24c0658be2f27809137c6b0bd4834f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 62931273acd41768d131c08510e14ff187d64296
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-extract-a-protocol-and-port-number-from-a-url"></a>Comment : extraire un protocole et un numéro de port d'une URL
 L’exemple suivant montre comment extraire un protocole et un numéro de port d’une URL.  
   
 ## <a name="example"></a>Exemple  
- L’exemple utilise le <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> méthode pour retourner le protocole suivi du signe deux-points suivi du numéro de port.  
+ L’exemple utilise la méthode <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> pour retourner le protocole, suivi d’un signe deux-points, lui-même suivi du numéro de port.  
   
  [!code-csharp[RegularExpressions.Examples.Protocol#1](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.Protocol/cs/Example.cs#1)]
  [!code-vb[RegularExpressions.Examples.Protocol#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.Protocol/vb/Example.vb#1)]  
   
  Le modèle d’expression régulière `^(?<proto>\w+)://[^/]+?(?<port>:\d+)?/` peut être interprété comme indiqué dans le tableau suivant.  
   
-|Modèle|Description|  
+|Motif|Description|  
 |-------------|-----------------|  
 |`^`|Commence la recherche de correspondance au début de la chaîne.|  
 |`(?<proto>\w+)`|Mettre en correspondance un ou plusieurs caractères alphabétiques. Nommer ce groupe `proto`.|  
@@ -49,9 +52,9 @@ L’exemple suivant montre comment extraire un protocole et un numéro de port d
 |`(?<port>:\d+)?`|Mettre en correspondance zéro ou une occurrence d’un signe deux-points suivi d’un ou de plusieurs caractères de chiffre. Nommer ce groupe `port`.|  
 |`/`|Mettre en correspondance une barre oblique.|  
   
- Le <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> méthode développe le `${proto}${port}` séquence de remplacement, qui concatène la valeur des deux groupes nommés capturés dans le modèle d’expression régulière. Il s’agit d’une alternative pratique à la concaténation explicite des chaînes récupérées à partir de l’objet de la collection retournée par la <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> propriété.  
+ La méthode <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> étend la séquence de remplacement `${proto}${port}`, qui concatène la valeur des deux groupes nommés capturés dans le modèle d’expression régulière. Elle est plus pratique que la concaténation explicite des chaînes récupérées de l’objet de collection retourné par la propriété <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType>.  
   
- L’exemple utilise le <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> méthode avec deux substitutions, `${proto}` et `${port}`, pour inclure les groupes capturés dans la chaîne de sortie. Vous pouvez récupérer les groupes capturés à partir de la correspondance <xref:System.Text.RegularExpressions.GroupCollection> de l’objet à la place, comme le montre le code suivant.  
+ L’exemple utilise la méthode <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> avec deux substitutions, `${proto}` et `${port}`, pour inclure les groupes capturés dans la chaîne de sortie. Vous pouvez à la place récupérer les groupes capturés de l’objet <xref:System.Text.RegularExpressions.GroupCollection> de la mise en correspondance, comme le montre le code suivant.  
   
  [!code-csharp[RegularExpressions.Examples.Protocol#2](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.Protocol/cs/example2.cs#2)]
  [!code-vb[RegularExpressions.Examples.Protocol#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.Protocol/vb/example2.vb#2)]  

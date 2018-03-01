@@ -10,16 +10,16 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 1c413eb0-16a5-4c1a-9a4e-ad6877e645d6
-ms.openlocfilehash: 7177eca33ded712308bbc6198040d833b7364d55
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: dbc5d889fb7883b4327180fdf34accf45bf519e7
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="walkthrough-accessing-a-sql-database-by-using-type-providers"></a>Procédure pas à pas : accès à une base de données SQL Database à l’aide des fournisseurs de type
 
 > [!NOTE]
-Ce guide a été écrit pour F # 3.0 et sera mise à jour.  Pour obtenir la liste la plus récente des fournisseurs de type multiplateformes, consultez [FSharp.Data](http://fsharp.github.io/FSharp.Data/).
+Ce guide a été écrit pour F # 3.0 et sera mise à jour.  Pour obtenir la liste la plus récente des fournisseurs de type multiplateformes, consultez [FSharp.Data](https://fsharp.github.io/FSharp.Data/).
 
 > [!NOTE]
 Les liens de référence d’API vous permettront de MSDN.  Les informations de référence sur les API docs.microsoft.com ne sont pas terminées.
@@ -96,7 +96,7 @@ Dans cette étape, vous créez un fournisseur de type de votre schéma de base d
 
 #### <a name="to-set-up-the-type-provider-from-a-direct-database-connection"></a>Pour configurer le fournisseur de type à partir d’une connexion directe de la base de données
 
-Il existe deux lignes essentielles de code que vous avez besoin pour créer les types que vous pouvez utiliser pour interroger une base de données SQL à l’aide du fournisseur de type. Tout d’abord, vous instanciez le fournisseur de type. Pour ce faire, créez à quoi ressemble une abréviation de type pour un `SqlDataConnection` avec un paramètre générique statique. `SqlDataConnection`est un fournisseur de type SQL et ne doit pas être confondu avec `SqlConnection` type qui est utilisé dans la programmation d’ADO.NET. Si vous avez une base de données que vous souhaitez vous connecter à et que vous avez une chaîne de connexion, utilisez le code suivant pour appeler le fournisseur de type. Remplacez par votre propre chaîne de connexion pour l’exemple de chaîne donnée. Par exemple, si votre serveur est MYSERVER et l’instance de base de données est l’INSTANCE, le nom de la base de données est MyDatabase, et vous souhaitez utiliser l’authentification Windows pour accéder à la base de données, puis la chaîne de connexion est en tant que donnée dans l’exemple de code suivant.
+Il existe deux lignes essentielles de code que vous avez besoin pour créer les types que vous pouvez utiliser pour interroger une base de données SQL à l’aide du fournisseur de type. Tout d’abord, vous instanciez le fournisseur de type. Pour ce faire, créez à quoi ressemble une abréviation de type pour un `SqlDataConnection` avec un paramètre générique statique. `SqlDataConnection` est un fournisseur de type SQL et ne doit pas être confondu avec `SqlConnection` type qui est utilisé dans la programmation d’ADO.NET. Si vous avez une base de données que vous souhaitez vous connecter à et que vous avez une chaîne de connexion, utilisez le code suivant pour appeler le fournisseur de type. Remplacez par votre propre chaîne de connexion pour l’exemple de chaîne donnée. Par exemple, si votre serveur est MYSERVER et l’instance de base de données est l’INSTANCE, le nom de la base de données est MyDatabase, et vous souhaitez utiliser l’authentification Windows pour accéder à la base de données, puis la chaîne de connexion est en tant que donnée dans l’exemple de code suivant.
 
 ```fsharp
 type dbSchema = SqlDataConnection<"Data Source=MYSERVER\INSTANCE;Initial Catalog=MyDatabase;Integrated Security=SSPI;">

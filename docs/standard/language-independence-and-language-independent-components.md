@@ -19,15 +19,18 @@ helpviewer_keywords:
 - runtime, language interoperability
 - common language runtime, language interoperability
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: bc43226a508dfd0286c7667c02bdc2543346be9c
-ms.sourcegitcommit: 9c4b8d457ffb8d134c9d55c6d7682a0f22e2b9a8
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ec6f7df4cc42b71ab9c61e84b71a81f641a1d0b3
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/20/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="language-independence-and-language-independent-components"></a>Indépendance du langage et composants indépendants du langage
 Le .NET Framework est indépendant du langage. Cela signifie qu'en tant que développeur, vous pouvez développer dans l'un des nombreux langages qui ciblent le .NET Framework, tels que C#, C++/CLI, Eiffel, F#, IronPython, IronRuby, PowerBuilder, Visual Basic, Visual COBOL et Windows PowerShell. Vous pouvez accéder aux types et aux membres des bibliothèques de classes développées pour le .NET Framework sans avoir à connaître le langage dans lequel ils ont été initialement écrits ni à suivre les conventions du langage d'origine. Si vous développez des composants, votre composant est accessible par toute application .NET Framework, indépendamment de son langage.  
@@ -109,7 +112,7 @@ Le .NET Framework est indépendant du langage. Cela signifie qu'en tant que dév
   
  Les règles de conformité CLS sont répertoriées dans le tableau suivant. Le texte des règles est repris mot pour mot du document [ECMA-335 Standard: Common Language Infrastructure](http://go.microsoft.com/fwlink/?LinkID=116487), qui est protégé par copyright 2012 par Ecma International. Vous trouverez des informations plus détaillées sur ces règles dans les sections suivantes.  
   
-|Catégorie|Voir|Règle|Numéro de règle|  
+|Category|Voir|Règle|Numéro de règle|  
 |--------------|---------|----------|-----------------|  
 |Accessibilité|[Accessibilité des membres](#MemberAccess)|L'accessibilité ne devra pas être changée lors du remplacement de méthodes héritées, sauf en cas de remplacement d'une méthode héritée d'un assembly différent avec accessibilité `family-or-assembly`. Dans ce cas, le remplacement devra posséder l'accessibilité `family`.|10|  
 |Accessibilité|[Accessibilité des membres](#MemberAccess)|La visibilité et l'accessibilité des types et des membres seront déterminées de telle sorte que les types utilisés dans la signature d'un membre seront visibles et accessibles lorsque le membre proprement dit est visible et accessible. Par exemple, une méthode publique qui est visible à l'extérieur de son assembly n'aura pas d'argument dont le type est visible uniquement dans l'assembly. La visibilité et l'accessibilité des types composant un type générique instancié utilisé dans la signature d'un membre seront visibles et accessibles lorsque le membre proprement dit est visible et accessible. Par exemple, un type générique instancié présent dans la signature d'un membre qui est visible à l'extérieur de l'assembly n'aura pas d'argument générique dont le type est visible uniquement dans l'assembly.|12|  
@@ -122,11 +125,11 @@ Le .NET Framework est indépendant du langage. Cela signifie qu'en tant que dév
 |Énumérations|[Énumérations](#enums)|Le type sous-jacent d'une énumération devra être un type d'entier CLS intégré, le nom du champ devra être « valeur__ » et ce champ devra être marqué `RTSpecialName`.|7|  
 |Énumérations|[Énumérations](#enums)|Il existe deux types distincts d'énumérations, signalés par la présence ou l'absence de l'attribut personnalisé <xref:System.FlagsAttribute?displayProperty=nameWithType> (voir Partition IV, Profiles and Libraries). L'un représente des valeurs entières nommées ; l'autre représente les indicateurs binaires nommés qui peuvent être combinés pour générer une valeur sans nom. La valeur d'une `enum` n'est pas limitée aux valeurs spécifiées.|8|  
 |Énumérations|[Énumérations](#enums)|Les champs static littéraux d’une énumération auront le type de l’énumération elle-même.|9|  
-|événements|[Événements](#events)|Les méthodes qui implémentent un événement seront marquées `SpecialName` dans les métadonnées.|29|  
-|événements|[Événements](#events)|L’accessibilité d’un événement et de ses accesseurs sera identique.|30|  
-|événements|[Événements](#events)|Les méthodes `add` et `remove` d'un événement devront toutes les deux être présentes ou absentes.|31|  
-|événements|[Événements](#events)|Les méthodes `add` et `remove` d'un événement devront chacune accepter un paramètre dont le type définit le type de l'événement et qui sera dérivé de <xref:System.Delegate?displayProperty=nameWithType>.|32|  
-|événements|[Événements](#events)|Les événements adhéreront à un modèle d’attribution de nom spécifique. L'attribut `SpecialName` dont il est question dans la règle 29 de la spécification CLS sera ignoré dans les comparaisons de noms appropriées et respectera les règles d'identificateur.|33|  
+|Événements|[Événements](#events)|Les méthodes qui implémentent un événement seront marquées `SpecialName` dans les métadonnées.|29|  
+|Événements|[Événements](#events)|L’accessibilité d’un événement et de ses accesseurs sera identique.|30|  
+|Événements|[Événements](#events)|Les méthodes `add` et `remove` d'un événement devront toutes les deux être présentes ou absentes.|31|  
+|Événements|[Événements](#events)|Les méthodes `add` et `remove` d'un événement devront chacune accepter un paramètre dont le type définit le type de l'événement et qui sera dérivé de <xref:System.Delegate?displayProperty=nameWithType>.|32|  
+|Événements|[Événements](#events)|Les événements adhéreront à un modèle d’attribution de nom spécifique. L'attribut `SpecialName` dont il est question dans la règle 29 de la spécification CLS sera ignoré dans les comparaisons de noms appropriées et respectera les règles d'identificateur.|33|  
 |Exceptions|[Exceptions](#exceptions)|Les objets levés seront de type <xref:System.Exception?displayProperty=nameWithType> ou d'un type qui hérite de celui-ci. Néanmoins, les méthodes conformes à CLS ne sont pas requises pour bloquer la propagation d'autres types d'exceptions.|40|  
 |Général|[Conformité CLS : les règles](#Rules)|Les règles CLS s'appliquent uniquement aux éléments d'un type qui sont accessibles ou visibles en dehors de l'assembly de définition.|1|  
 |Général|[Conformité CLS : les règles](#Rules)|Les membres de types non conformes à CLS ne seront pas marqués comme conformes à CLS.|2|  
@@ -144,8 +147,8 @@ Le .NET Framework est indépendant du langage. Cela signifie qu'en tant que dév
 |Conventions d'attribution d'un nom|[Conventions d’attribution d’un nom](#naming)|Les assemblys suivront l'Annexe 7 du Rapport technique 15 de la norme Unicode 3.0 régissant l'ensemble des caractères autorisés pour lancer les identificateurs et être inclus dans ces derniers. Cette annexe est disponible en ligne à l'adresse : http://www.unicode.org/unicode/reports/tr15/tr15-18.html. Les identificateurs seront au format canonique défini par le formulaire de normalisation Unicode C. Dans le cadre de la spécification CLS, deux identificateurs sont les mêmes si leurs mappages en minuscules (comme spécifié par les mappages en minuscules un-à-un indépendants des paramètres régionaux Unicode) sont identiques. Autrement dit, pour que deux identificateurs soient considérés comme différents dans le cadre de la spécification CLS, ils doivent être différents de par d'autres éléments que leur casse. Toutefois, pour remplacer une définition héritée, l'interface de ligne de commande requiert l'utilisation de l'encodage exact de la déclaration d'origine.|4|  
 |Surcharge|[Conventions d’attribution d’un nom](#naming)|Tous les noms introduits dans une portée conforme à CLS devront être distincts indépendamment de leur type, sauf quand les noms sont identiques et résolus via la surcharge. Par exemple, alors que CTS autorise un type à utiliser le même nom pour une méthode et un champ, CLS ne l'autorise pas.|5|  
 |Surcharge|[Conventions d’attribution d’un nom](#naming)|Les champs et les types imbriqués seront distincts par comparaison d'identificateurs seule, même si CTS autorise la distinction de signatures différentes. Les méthodes, les propriétés et les événements qui portent le même nom (par comparaison d'identificateurs) devront différer par d'autres éléments que le seul type de retour, sauf dans les cas spécifiés dans la règle 39 de la spécification CLS.|6|  
-|Surcharge|[Surcharges](#overloads)|Seules les propriétés et les méthodes peuvent être surchargées.|37|  
-|Surcharge|[Surcharges](#overloads)|Les propriétés et les méthodes peuvent être surchargées en fonction du nombre et des types de leurs paramètres uniquement, à l'exception des opérateurs de conversion nommés `op_Implicit` et `op_Explicit`, qui peuvent également être surchargés selon leur type de retour.|38|  
+|Surcharge|[Overloads](#overloads)|Seules les propriétés et les méthodes peuvent être surchargées.|37|  
+|Surcharge|[Overloads](#overloads)|Les propriétés et les méthodes peuvent être surchargées en fonction du nombre et des types de leurs paramètres uniquement, à l'exception des opérateurs de conversion nommés `op_Implicit` et `op_Explicit`, qui peuvent également être surchargés selon leur type de retour.|38|  
 |Surcharge|--|Si deux ou plusieurs méthodes conformes à CLS déclarées dans un type ont le même nom et, pour un jeu spécifique d’instanciations de types, ont le même paramètre et les mêmes types de retour, alors toutes ces méthodes seront sémantiquement équivalentes à ces instanciations de type.|48|  
 |Types|[Types et signatures de membres de types](#Types)|<xref:System.Object?displayProperty=nameWithType> est conforme à CLS. Toute autre classe conforme à CLS héritera d'une classe conforme à CLS.|23|  
 |Propriétés|[Propriétés](#properties)|Les méthodes qui implémentent les méthodes getter et setter d'une propriété devront être marquées `SpecialName` dans les métadonnées.|24|  
@@ -195,7 +198,7 @@ Le .NET Framework est indépendant du langage. Cela signifie qu'en tant que dév
 |Type non conforme|Description|Alternative conforme à CLS|  
 |-------------------------|-----------------|--------------------------------|  
 |<xref:System.SByte>|Type de données entier signé 8 bits|<xref:System.Int16>|  
-|<xref:System.TypedReference>|Pointeur vers un objet et son type au moment de l'exécution|Aucune|  
+|<xref:System.TypedReference>|Pointeur vers un objet et son type au moment de l'exécution|Aucun.|  
 |<xref:System.UInt16>|Entier 16 bits non signé|<xref:System.Int32>|  
 |<xref:System.UInt32>|Entier 32 bits non signé|<xref:System.Int64>|  
 |<xref:System.UInt64>|Entier 64 bits non signé|<xref:System.Int64> (peut dépasser la capacité), <xref:System.Numerics.BigInteger> ou <xref:System.Double>|  
@@ -412,7 +415,7 @@ Le .NET Framework est indépendant du langage. Cela signifie qu'en tant que dév
   
 -   Une propriété doit posséder une méthode setter, getter ou les deux. Dans un assembly, celles-ci sont implémentées comme des méthodes spéciales, ce qui signifie qu’elles apparaîtront comme des méthodes distinctes (la méthode getter est nommée `get_`*nom_propriété* et la méthode setter est nommée `set_`*nom_propriété*) marquées comme `SpecialName` dans les métadonnées de l’assembly. Les compilateurs C# et Visual Basic appliquent automatiquement cette règle sans qu'il soit nécessaire d'appliquer l'attribut <xref:System.CLSCompliantAttribute>.  
   
--   Le type d'une propriété correspond au type de retour de la méthode getter de la propriété et du dernier argument de la méthode setter. Ces types doivent être conformes à CLS et les arguments ne peuvent pas être assignés à la propriété par référence (autrement dit, ils ne peuvent pas être des pointeurs managés).  
+-   Le type d’une propriété correspond au type de retour de la méthode getter de la propriété et du dernier argument de la méthode setter. Ces types doivent être conformes à CLS et les arguments ne peuvent pas être assignés à la propriété par référence (autrement dit, ils ne peuvent pas être des pointeurs managés).  
   
 -   Si une propriété possède une méthode getter et une méthode setter, elles doivent être toutes les deux virtuelles, statiques ou être toutes les deux des instances. Les compilateurs C# et Visual Basic appliquent automatiquement cette règle via leur syntaxe de définition de propriété.  
   
@@ -512,7 +515,7 @@ Le .NET Framework est indépendant du langage. Cela signifie qu'en tant que dév
 -   Pour vérifier que l'interface publique de la bibliothèque de composants expose uniquement les éléments de programme conformes à CLS. Si les éléments ne sont pas conformes à CLS, les compilateurs publieront généralement un avertissement.  
   
 > [!WARNING]
->  Dans certains cas, les compilateurs de langages imposent les règles conformes à CLS que l'attribut <xref:System.CLSCompliantAttribute> soit utilisé ou non. Par exemple, définir un membre statique dans une interface viole une règle CLS. À cet égard, si vous définissez un `static` (en c#) ou `Shared` (en Visual Basic) membre dans une interface, les deux compilateurs c# et Visual Basic affichent un message d’erreur et ne parviennent pas à compiler l’application.  
+>  Dans certains cas, les compilateurs de langages imposent les règles conformes à CLS que l'attribut <xref:System.CLSCompliantAttribute> soit utilisé ou non. Par exemple, définir un membre statique dans une interface viole une règle CLS. À cet égard, si vous définissez un membre `static` (en C#) ou `Shared` (en Visual Basic) dans une interface, les compilateurs C# et Visual Basic affichent un message d'erreur et ne parviennent pas à compiler l'application.  
   
  L'attribut <xref:System.CLSCompliantAttribute> est marqué avec un attribut <xref:System.AttributeUsageAttribute> qui a la valeur <xref:System.AttributeTargets.All?displayProperty=nameWithType>. Cette valeur permet d'appliquer l'attribut <xref:System.CLSCompliantAttribute> à un élément de programme, notamment aux assemblys, modules, types (classes, structures, énumérations, interfaces et délégués), membres de types (constructeurs, méthodes, propriétés, champs et événements), paramètres, paramètres génériques et valeurs de retour. Toutefois, dans la pratique, vous devez appliquer l'attribut uniquement aux assemblys, aux types et aux membres de types. Sinon, les compilateurs ignorent l'attribut et continuent à générer des avertissements de compilateur lorsqu'ils rencontrent un paramètre non conforme, un paramètre générique ou une valeur de retour dans l'interface publique de votre bibliothèque.  
   

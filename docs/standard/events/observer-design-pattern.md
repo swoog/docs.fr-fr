@@ -18,18 +18,21 @@ helpviewer_keywords:
 - IObservable(Of T) interface
 - observer design pattern [.NET Framework]
 ms.assetid: 3680171f-f522-453c-aa4a-54f755a78f88
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 83663a28ac7ae19848552583f2ec39a5e96c7fdc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c13424ad817ae73b5019f0ce5a7cda54c84adc71
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="observer-design-pattern"></a>Modèle de design observateur
-Le modèle de design Observateur permet à un abonné de s’inscrire auprès d’un fournisseur et d’en recevoir des notifications. Il convient pour les scénarios nécessitant des notifications selon le modèle push. Le modèle définit un *fournisseur* (également appelé un *sujet* ou *observable*) et zéro, un ou plusieurs *observateurs*. Les observateurs s'inscrivent auprès du fournisseur et, chaque fois qu'une condition prédéfinie, un événement ou un changement d'état se produit, le fournisseur notifie automatiquement tous les observateurs en appelant l'une de leurs méthodes. Dans cet appel de méthode, le fournisseur peut également fournir des informations sur l'état actuel aux observateurs. Dans le .NET Framework, le modèle de design Observateur est appliqué en implémentant les interfaces génériques <xref:System.IObservable%601?displayProperty=nameWithType> et <xref:System.IObserver%601?displayProperty=nameWithType>. Le paramètre de type générique représente le type qui fournit les informations de notification.  
+Le modèle de design Observateur permet à un abonné de s’inscrire auprès d’un fournisseur et d’en recevoir des notifications. Il convient pour les scénarios nécessitant des notifications selon le modèle push. Le modèle définit un *fournisseur* (également appelé un *sujet* ou un *observable*) et zéro, un ou plusieurs *observateurs*. Les observateurs s'inscrivent auprès du fournisseur et, chaque fois qu'une condition prédéfinie, un événement ou un changement d'état se produit, le fournisseur notifie automatiquement tous les observateurs en appelant l'une de leurs méthodes. Dans cet appel de méthode, le fournisseur peut également fournir des informations sur l'état actuel aux observateurs. Dans le .NET Framework, le modèle de design Observateur est appliqué en implémentant les interfaces génériques <xref:System.IObservable%601?displayProperty=nameWithType> et <xref:System.IObserver%601?displayProperty=nameWithType>. Le paramètre de type générique représente le type qui fournit les informations de notification.  
   
 ## <a name="applying-the-pattern"></a>Application du modèle  
  Le modèle de design Observateur convient pour les notifications push distribuées, car il prend en charge une séparation nette entre deux composants différents ou deux couches applicatives différentes, comme une couche de source de données (logique métier) et une couche d'interface utilisateur (affichage). Le modèle peut être implémenté chaque fois qu'un fournisseur utilise des rappels pour fournir les informations actuelles à ses clients.  
@@ -53,7 +56,7 @@ Le modèle de design Observateur permet à un abonné de s’inscrire auprès d�
 -   Un objet qui contient les données que le fournisseur envoie à ses observateurs. Le type de cet objet correspond au paramètre de type générique des interfaces <xref:System.IObservable%601> et <xref:System.IObserver%601>. Bien que cet objet puisse être le même que l'implémentation de <xref:System.IObservable%601>, il s'agit généralement d'un type distinct.  
   
 > [!NOTE]
->  En plus d'implémenter le modèle de design Observateur, vous pouvez être intéressé par l'exploration des bibliothèques générées à l'aide des interfaces <xref:System.IObservable%601> et <xref:System.IObserver%601>. Par exemple, [Extensions réactives pour .NET (Rx)](http://go.microsoft.com/fwlink/?LinkId=186345) se composent d’un ensemble de méthodes d’extension et d’opérateurs de séquence standard LINQ pour prendre en charge la programmation asynchrone.  
+>  En plus d'implémenter le modèle de design Observateur, vous pouvez être intéressé par l'exploration des bibliothèques générées à l'aide des interfaces <xref:System.IObservable%601> et <xref:System.IObserver%601>. Par exemple, les [Extensions réactives pour .NET (Rx)](https://msdn.microsoft.com/library/hh242985.aspx) se composent d’un ensemble de méthodes d’extension et d’opérateurs de séquence standard LINQ pour prendre en charge la programmation asynchrone.  
   
 ## <a name="implementing-the-pattern"></a>Implémentation du modèle  
  L'exemple suivant utilise le modèle de design Observateur pour implémenter un système de restitution des bagages d'un aéroport. Une classe `BaggageInfo` fournit des informations sur les vols arrivés et sur les tapis roulants où les bagages de chaque vol peuvent être récupérés. Elle est montrée dans l'exemple suivant.  

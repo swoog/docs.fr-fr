@@ -19,15 +19,18 @@ helpviewer_keywords:
 - constructs, substitutions
 - substitutions
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7a92c454548c69d1a64c954ab2d510b77553a895
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f93584b9dff721c8521d8cb58aaf5eab2c1fc931
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="substitutions-in-regular-expressions"></a>Substitutions dans les expressions régulières
 <a name="Top"></a> Les substitutions sont des éléments de langage reconnus uniquement dans des modèles de remplacement. Elles utilisent un modèle d'expression régulière pour définir tout ou partie du texte qui doit remplacer le texte correspondant dans la chaîne d'entrée. Le modèle de remplacement peut se composer d'une ou plusieurs substitutions avec des caractères littéraux. Les modèles de remplacement sont fournis aux surcharges de la méthode <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> qui a un paramètre `replacement` et à la méthode <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType>. Les méthodes remplacent le modèle correspondant par le modèle défini par le paramètre `replacement` .  
@@ -70,7 +73,7 @@ ms.lasthandoff: 10/18/2017
   
  Le modèle d'expression régulière `\p{Sc}*(\s?\d+[.,]?\d*)\p{Sc}*` est défini comme indiqué dans le tableau suivant.  
   
-|Modèle|Description|  
+|Motif|Description|  
 |-------------|-----------------|  
 |`\p{Sc}*`|Mettre en correspondance zéro ou plusieurs caractères de symbole monétaire.|  
 |`\s?`|Mettre en correspondance zéro ou des espaces blancs.|  
@@ -96,7 +99,7 @@ ms.lasthandoff: 10/18/2017
   
  Le modèle d'expression régulière `\p{Sc}*(?<amount>\s?\d[.,]?\d*)\p{Sc}*` est défini comme indiqué dans le tableau suivant.  
   
-|Modèle|Description|  
+|Motif|Description|  
 |-------------|-----------------|  
 |`\p{Sc}*`|Mettre en correspondance zéro ou plusieurs caractères de symbole monétaire.|  
 |`\s?`|Mettre en correspondance zéro ou des espaces blancs.|  
@@ -118,7 +121,7 @@ ms.lasthandoff: 10/18/2017
   
  Le modèle d'expression régulière `\b(\d+)(\.(\d+))?` est défini comme indiqué dans le tableau suivant.  
   
-|Modèle|Description|  
+|Motif|Description|  
 |-------------|-----------------|  
 |`\b`|Démarrer la correspondance au début d'une limite de mot.|  
 |`(\d+)`|Mettre en correspondance un ou plusieurs chiffres décimaux. Il s'agit du premier groupe de capture.|  
@@ -137,7 +140,7 @@ ms.lasthandoff: 10/18/2017
   
  Le modèle d'expression régulière `^(\w+\s?)+$` est défini comme indiqué dans le tableau suivant.  
   
-|Modèle|Description|  
+|Motif|Description|  
 |-------------|-----------------|  
 |`^`|Commencer la correspondance au début de la chaîne d'entrée.|  
 |`(\w+\s?)+`|Mettre en correspondance le modèle d'un ou plusieurs caractères de mot, suivis de zéro ou d'un espace blanc, une ou plusieurs fois.|  
@@ -149,7 +152,7 @@ ms.lasthandoff: 10/18/2017
   
 <a name="BeforeMatch"></a>   
 ## <a name="substituting-the-text-before-the-match"></a>Substitution du texte avant la correspondance  
- La substitution <code>$\`</code> remplace la chaîne correspondante par la chaîne d'entrée entière avant la correspondance. Autrement dit, elle duplique la chaîne d'entrée jusqu'à la correspondance en supprimant le texte correspondant. N'importe quel texte qui suit le texte correspondant est inchangé dans la chaîne de résultat. S'il existe plusieurs correspondances dans une chaîne d'entrée, le texte de remplacement est dérivé de la chaîne d'entrée d'origine, plutôt que de la chaîne dans laquelle le texte a été remplacé par des correspondances précédentes. \(L’exemple fournit une illustration.\) S'il n'y a pas de correspondance, la substitution <code>$\`</code> n'a aucun effet.  
+ La substitution <code>$\`</code> remplace la chaîne correspondante par la chaîne d'entrée entière avant la correspondance. Autrement dit, elle duplique la chaîne d'entrée jusqu'à la correspondance en supprimant le texte correspondant. N'importe quel texte qui suit le texte correspondant est inchangé dans la chaîne de résultat. S'il existe plusieurs correspondances dans une chaîne d'entrée, le texte de remplacement est dérivé de la chaîne d'entrée d'origine, plutôt que de la chaîne dans laquelle le texte a été remplacé par des correspondances précédentes. \(Cet exemple en fournit une illustration.\) S'il n'y a pas de correspondance, la substitution <code>$\`</code> n'a aucun effet.  
   
  L'exemple suivant utilise le modèle d'expression régulière `\d+` pour faire correspondre une séquence d'un ou de plusieurs chiffres décimaux dans la chaîne d'entrée. La chaîne de remplacement <code>$`</code> remplace ces chiffres par le texte qui précède la correspondance.  
   
@@ -200,7 +203,7 @@ ms.lasthandoff: 10/18/2017
   
  Le modèle d'expression régulière `\b(\w+)\s\1\b` est défini comme indiqué dans le tableau suivant.  
   
-|Modèle|Description|  
+|Motif|Description|  
 |-------------|-----------------|  
 |`\b`|Commencer la correspondance à la limite d'un mot.|  
 |`(\w+)`|Mettre en correspondance un ou plusieurs caractères alphabétiques. Il s'agit du premier groupe de capture.|  

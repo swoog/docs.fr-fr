@@ -19,18 +19,21 @@ helpviewer_keywords:
 - I/O [.NET Framework], writing data
 - BinaryWriter class, examples
 ms.assetid: e209d949-31e8-44ea-8e38-87f9093f3093
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b547f2c85495a497e5fc384f9a2ea44de7bf861c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 04ded71a23ba4cabab0a22e0d66c1084a726d8c8
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-read-and-write-to-a-newly-created-data-file"></a>Comment : lire et écrire dans un fichier de données créé récemment
-Le <xref:System.IO.BinaryWriter> et <xref:System.IO.BinaryReader?displayProperty=nameWithType> classes sont utilisées pour écrire et lire des données plutôt que des chaînes de caractères. L’exemple suivant montre comment écrire et lire des données à partir d’un flux de fichier vide nommé `Test.data`. Après avoir créé le fichier de données dans le répertoire actif, associé <xref:System.IO.BinaryWriter> et <xref:System.IO.BinaryReader> objets sont créés et le <xref:System.IO.BinaryWriter> objet est utilisé pour écrire les entiers de 0 à 10 pour `Test.data`, qui laisse le pointeur de fichier à la fin de la fichier. Après avoir défini le pointeur de fichier à l’origine, le <xref:System.IO.BinaryReader> objet lit le contenu spécifié.  
+Les classes <xref:System.IO.BinaryWriter> et <xref:System.IO.BinaryReader?displayProperty=nameWithType> sont utilisées pour écrire et lire des données plutôt que des chaînes de caractères. L’exemple suivant montre comment écrire et lire des données dans un flux de fichier vide nommé `Test.data`. Après avoir créé le fichier de données dans le répertoire actif, les objets <xref:System.IO.BinaryWriter> et <xref:System.IO.BinaryReader> associés sont créés, et l’objet <xref:System.IO.BinaryWriter> est utilisé pour écrire les entiers de 0 à 10 dans `Test.data`, ce qui laisse le pointeur de fichier à la fin du fichier. Après avoir replacé le pointeur de fichier au début, l’objet <xref:System.IO.BinaryReader> lit le contenu spécifié.  
   
 ## <a name="example"></a>Exemple  
  [!code-cpp[System.IO.BinaryReaderWriter#7](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter/CPP/source6.cpp#7)]
@@ -38,7 +41,7 @@ Le <xref:System.IO.BinaryWriter> et <xref:System.IO.BinaryReader?displayProperty
  [!code-vb[System.IO.BinaryReaderWriter#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter/VB/source6.vb#7)]  
   
 ## <a name="robust-programming"></a>Programmation fiable  
- Si `Test.data` existe déjà dans le répertoire actif, un <xref:System.IO.IOException> exception est levée. Utilisez l’option de mode de fichier <xref:System.IO.FileMode.Create?displayProperty=nameWithType> lors de l’initialisation du flux de fichier pour créer un nouveau fichier sans lever d’exception.  
+ Si `Test.data` existe déjà dans le répertoire actif, une exception <xref:System.IO.IOException> est levée. Utilisez l’option de mode de fichier <xref:System.IO.FileMode.Create?displayProperty=nameWithType> lors de l’initialisation du flux de fichier pour toujours créer un nouveau fichier sans lever d’exception.  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.IO.BinaryReader>  

@@ -10,16 +10,16 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 63374fa9-8fb8-43ac-bcb9-ef2290d9f851
-ms.openlocfilehash: 06d955033d465cf58af05f483d21175f90d1777a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 2929198172a4e9f908daa64af19208e07859263f
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="walkthrough-accessing-a-web-service-by-using-type-providers"></a>Procédure pas à pas : accès à un service Web à l’aide des fournisseurs de type
 
 > [!NOTE]
-Ce guide a été écrit pour F # 3.0 et sera mise à jour.  Pour obtenir la liste la plus récente des fournisseurs de type multiplateformes, consultez [FSharp.Data](http://fsharp.github.io/FSharp.Data/).
+Ce guide a été écrit pour F # 3.0 et sera mise à jour.  Pour obtenir la liste la plus récente des fournisseurs de type multiplateformes, consultez [FSharp.Data](https://fsharp.github.io/FSharp.Data/).
 
 > [!NOTE]
 Les liens de référence d’API vous permettront de MSDN.  Les informations de référence sur les API docs.microsoft.com ne sont pas terminées.
@@ -80,7 +80,7 @@ open Microsoft.FSharp.Data.TypeProviders
 <br />
 
 ```fsharp
-type TerraService = WsdlService<" HYPERLINK "http://terraserver-usa.com/TerraService2.asmx?WSDL" http://msrmaps.com/TerraService2.asmx?WSDL">
+type TerraService = WsdlService<" HYPERLINK "https://terraserver-usa.com/TerraService2.asmx?WSDL" https://msrmaps.com/TerraService2.asmx?WSDL">
 ```
 
   Si l’URI de service est mal orthographié ou si le service est arrêté ou ne fonctionne pas, une ligne ondulée rouge s’affiche sous cette ligne de code. Si vous pointez sur le code, un message d’erreur décrit le problème. Vous pouvez obtenir les mêmes informations dans le **liste d’erreurs** fenêtre ou dans le **fenêtre sortie** après la génération.

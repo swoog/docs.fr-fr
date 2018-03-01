@@ -12,18 +12,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b5489c96-4afd-439a-a25d-fc82eb4a148d
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b91c49be9268d8dc967daeac116cf67b2ed7d742
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 06cac8d76b17f3ef32931ea21d0556085f05d7b1
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="extending-the-dom"></a>Extension du DOM
-Microsoft .NET Framework inclut un ensemble de classes de base qui fournit une implémentation de l’objet de modèle DOM (Document XML). L'objet <xref:System.Xml.XmlNode> et ses classes dérivées proposent des méthodes et des propriétés qui permettent la navigation, l'interrogation et la modification du contenu et de la structure d'un document XML.  
+Le .NET Framework Microsoft comprend un ensemble de classes de base qui fournit une implémentation du DOM (Document Objet Model) XML. L'objet <xref:System.Xml.XmlNode> et ses classes dérivées proposent des méthodes et des propriétés qui permettent la navigation, l'interrogation et la modification du contenu et de la structure d'un document XML.  
   
  Lors du chargement en mémoire de contenu XML à l'aide du DOM, les nœuds créés contiennent des informations telles que le nom de nœud, le type de nœud, etc. Il peut arriver que vous ayez besoin d'informations spécifiques sur les nœuds que les classes de base ne fournissent pas. Par exemple, il peut être utile de connaître le numéro de ligne et la position d'un nœud. Dans ce cas, vous pouvez faire dériver de nouvelles classes de classes DOM existantes et ajouter des fonctionnalités complémentaires.  
   
@@ -250,10 +253,10 @@ Number of elements in book.xml: 3
   
  Le processus de gestion d'événements fonctionne exactement de la même façon dans les classes dérivées que dans les classes DOM d'origine.  
   
- Pour plus d’informations sur la gestion des événements de nœud, consultez [événements](../../../../docs/standard/events/index.md) et <xref:System.Xml.XmlNodeChangedEventHandler>.  
+ Pour plus d’informations sur la gestion des événements de nœud, consultez [Événements](../../../../docs/standard/events/index.md) et <xref:System.Xml.XmlNodeChangedEventHandler>.  
   
 ## <a name="default-attributes-and-the-createelement-method"></a>Attributs par défaut et méthode CreateElement  
- Lors de la substitution de la méthode <xref:System.Xml.XmlDocument.CreateElement%2A> dans une classe dérivée, les attributs par défaut ne sont pas ajoutés lorsque vous créez de nouveaux éléments pendant la modification du document. Ce problème ne se pose que lors de la modification. Puisque la méthode <xref:System.Xml.XmlDocument.CreateElement%2A> est responsable de l'ajout d'attributs par défaut à un objet <xref:System.Xml.XmlDocument>, vous devez coder cette fonctionnalité dans la méthode <xref:System.Xml.XmlDocument.CreateElement%2A>. Si vous chargez un objet <xref:System.Xml.XmlDocument> qui comporte des attributs par défaut, ceux-ci sont gérés correctement. Pour plus d’informations sur les attributs par défaut, consultez [création de nouveaux attributs pour les éléments dans le DOM](../../../../docs/standard/data/xml/creating-new-attributes-for-elements-in-the-dom.md).  
+ Lors de la substitution de la méthode <xref:System.Xml.XmlDocument.CreateElement%2A> dans une classe dérivée, les attributs par défaut ne sont pas ajoutés lorsque vous créez de nouveaux éléments pendant la modification du document. Ce problème ne se pose que lors de la modification. Puisque la méthode <xref:System.Xml.XmlDocument.CreateElement%2A> est responsable de l'ajout d'attributs par défaut à un objet <xref:System.Xml.XmlDocument>, vous devez coder cette fonctionnalité dans la méthode <xref:System.Xml.XmlDocument.CreateElement%2A>. Si vous chargez un objet <xref:System.Xml.XmlDocument> qui comporte des attributs par défaut, ceux-ci sont gérés correctement. Pour plus d'informations sur les attributs par défaut, voir [Création de nouveaux attributs pour des éléments du DOM](../../../../docs/standard/data/xml/creating-new-attributes-for-elements-in-the-dom.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Document Object Model (DOM) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [DOM (Document Object Model) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

@@ -13,88 +13,91 @@ helpviewer_keywords:
 - threading [.NET Framework]
 - threading [.NET Framework], multiple threads
 ms.assetid: 5baac3aa-e603-4fa6-9f89-0f2c1084e6b1
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b57cac34009e13c27c6d34a0ab402f9ecbe08305
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 114fb704a622d92ab8e92fa866fa0fc9bebf4e58
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="threads-and-threading"></a>Threads et threading
-Systèmes d’exploitation permet de séparer les différentes applications qu’ils exécutent des processus. Les threads sont l’unité de base à laquelle un système d’exploitation alloue du temps processeur et à plusieurs threads peuvent exécuter du code à l’intérieur de ce processus. Chaque thread maintient des gestionnaires d’exceptions, une priorité de planification et un ensemble de structures, que le système utilise pour enregistrer le contexte du thread jusqu'à ce qu’elle est planifiée. Le contexte de thread inclut toutes les informations que le thread doit reprendre sans interruption de l’exécution, notamment l’ensemble du thread de registres de l’UC et de la pile, dans l’espace d’adressage de processus de l’hôte du thread.  
+Les systèmes d’exploitation utilisent des processus pour séparer les différentes applications qu’ils exécutent. Les threads sont l’unité de base à laquelle un système d’exploitation alloue du temps processeur, et plusieurs threads peuvent exécuter du code au sein de ce processus. Chaque thread maintient des gestionnaires d’exceptions, une priorité de planification et un ensemble de structures utilisé par le système pour enregistrer le contexte du thread jusqu'à sa planification. Le contexte du thread comprend toutes les informations dont le thread a besoin pour reprendre l’exécution sans interruption, notamment son ensemble de registres d’UC et de pile, dans l’espace d’adressage de son processus hôte.  
   
- Le .NET Framework subdivise davantage un processus de système d’exploitation en légers sous-processus gérés, appelés domaines d’application, représentés par <xref:System.AppDomain?displayProperty=nameWithType>. Un ou plusieurs threads managés (représentée par <xref:System.Threading.Thread?displayProperty=nameWithType>) peuvent s’exécuter dans un ou plusieurs des domaines d’application au sein du même processus managé. Bien que chaque domaine d’application est démarrée avec un thread unique, le code dans ce domaine d’application peut créer des domaines d’application supplémentaires et des threads supplémentaires. Le résultat est qu’un thread managé peut se déplacer librement entre domaines d’application à l’intérieur du même processus managé ; Vous pouvez avoir qu’un seul thread déplacement entre plusieurs domaines d’application.  
+ .NET Framework subdivise chaque processus de système d’exploitation en plusieurs sous-processus gérés et légers, appelés domaines d’application et représentés par <xref:System.AppDomain?displayProperty=nameWithType>. Un ou plusieurs threads managés (représentés par <xref:System.Threading.Thread?displayProperty=nameWithType>) peuvent s’exécuter dans un ou plusieurs domaines d’application, au sein du même processus géré. Bien que chaque domaine d’application démarre avec un seul thread, le code qu’il contient permet de créer des domaines d’application et des threads supplémentaires. Par conséquent, un thread managé peut se déplacer librement entre les domaines d’application d’un même processus géré ; il est possible de n’avoir qu’un seul thread qui évolue entre différents domaines d’application.  
   
- Un système d’exploitation qui prend en charge les travaux multitâches préemptifs crée l’effet de l’exécution simultanée de plusieurs threads à partir de plusieurs processus. Cette opération est possible répartissant le temps processeur disponible entre les threads qui en ont besoin, allouant une tranche de temps processeur pour chaque thread un après l’autre. Le thread en cours d’exécution est suspendu lorsque sa durée de tranche est écoulé et un autre thread reprend l’exécution. Lorsque le système passe à partir d’un thread à un autre, il enregistre le contexte du thread du thread préempté et recharge le contexte enregistré du thread suivant dans la file d’attente du thread.  
+ Un système d’exploitation qui prend en charge le mode multitâche préemptif produit l’effet d’une exécution simultanée de plusieurs threads provenant de plusieurs processus. Pour cela, il répartit le temps processeur disponible entre les threads qui en ont besoin, en allouant une tranche de temps à chaque thread les uns après les autres. Le thread en cours d’exécution est suspendu lorsque sa tranche de temps est écoulée et un autre thread reprend l’exécution. Lorsque le système passe d’un thread à un autre, il enregistre le contexte du thread préempté et recharge le contexte enregistré du thread suivant dans la file d’attente de threads.  
   
- La longueur de la tranche de temps dépend du système d’exploitation et le processeur. Étant donné que chaque tranche de temps est petite, plusieurs threads semblent s’exécuter en même temps, même s’il existe un seul processeur. Il s’agit en fait le cas sur les systèmes multiprocesseurs, où les threads exécutables sont distribués entre les processeurs disponibles.  
+ La longueur de chaque tranche de temps dépend du système d’exploitation et du processeur. Dans la mesure où elle est petite, plusieurs threads semblent s’exécuter en même temps, même s’il n’y a qu’un processeur. C’est le cas sur les systèmes multiprocesseurs, où les threads exécutables sont distribués entre les processeurs disponibles.  
   
-## <a name="when-to-use-multiple-threads"></a>Quand utiliser plusieurs Threads  
- Logiciel qui nécessite l’intervention de l’utilisateur doit réagir aussi rapidement que possible pour fournir une expérience utilisateur riche pour les activités de l’utilisateur. En même temps, cependant, il doit effectuer les calculs nécessaires pour présenter les données à l’utilisateur aussi rapidement que possible. Si votre application utilise un seul thread d’exécution, vous pouvez combiner [programmation asynchrone](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md) avec[.NET Framework remoting](http://msdn.microsoft.com/en-us/eccb1d31-0a22-417a-97fd-f4f1f3aa4462) ou [des services Web XML](http://msdn.microsoft.com/en-us/1e64af78-d705-4384-b08d-591a45f4379c) créé à l’aide d’ASP .NET pour utiliser le temps de traitement d’autres ordinateurs en plus de votre propre pour augmenter la réactivité de l’utilisateur et à réduire le temps de traitement des données de votre application. Si vous effectuez des opérations d’entrée/sortie, vous pouvez également utiliser des ports de terminaison d’e/s pour augmenter la réactivité de votre application.  
+## <a name="when-to-use-multiple-threads"></a>Quand utiliser plusieurs threads  
+ Les logiciels qui nécessitent l’intervention de l’utilisateur doivent réagir aussi vite que possible aux activités de l’utilisateur pour offrir une expérience utilisateur riche. Il doit cependant effectuer en même temps les calculs nécessaires pour présenter les données à l’utilisateur aussi rapidement que possible. Si votre application utilise un seul thread d’exécution, vous pouvez combiner la [programmation asynchrone](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md) avec la [communication à distance .NET Framework](http://msdn.microsoft.com/library/eccb1d31-0a22-417a-97fd-f4f1f3aa4462) ou des [services web XML](http://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c) créés à l’aide d’ASP.NET pour utiliser le temps de traitement d’autres ordinateurs en plus des vôtres afin d’augmenter la réactivité vis-à-vis de l’utilisateur et de réduire le temps de traitement des données de votre application. Si vous effectuez des opérations riches en entrées/sorties, vous pouvez également utiliser des ports d’achèvement d’E/S pour accroître la rapidité de réaction de votre application.  
   
-### <a name="advantages-of-multiple-threads"></a>Avantages de plusieurs Threads  
- À l’aide de plusieurs threads, toutefois, est la technique la plus puissante disponible pour augmenter la réactivité de l’utilisateur et de traiter les données nécessaires pour effectuer le travail en même temps presque. Sur un ordinateur avec un seul processeur, plusieurs threads peuvent créer cet effet, en tirant profit de courtes périodes de temps entre les événements utilisateur pour traiter les données en arrière-plan. Par exemple, un utilisateur peut modifier une feuille de calcul lors d’un autre thread recalcule d’autres parties de la feuille de calcul dans la même application.  
+### <a name="advantages-of-multiple-threads"></a>Avantages des threads multiples  
+ L’utilisation de plusieurs threads, toutefois, est la technique la plus puissante qui soit pour augmenter la réactivité vis-à-vis de l’utilisateur et traiter les données nécessaires pour effectuer le travail presque en même temps. Sur un ordinateur doté d’un seul processeur, plusieurs threads peuvent créer cet effet, en tirant parti des courts laps de temps entre les événements utilisateur pour traiter les données en arrière-plan. Par exemple, un utilisateur peut modifier une feuille de calcul tandis qu’un autre thread recalcule d’autres parties de cette feuille de calcul au sein de la même application.  
   
- Sans modification, la même application augmenterait la satisfaction utilisateur lorsque vous exécutez sur un ordinateur avec plusieurs processeurs. Votre domaine d’application unique pourrait utiliser plusieurs threads pour accomplir les tâches suivantes :  
+ Sans modification, la même application augmenterait considérablement la satisfaction utilisateur si elle s’exécutait sur un ordinateur doté de plusieurs processeurs. Votre domaine d’application unique pourrait utiliser plusieurs threads pour accomplir les tâches suivantes :  
   
--   Communiquent via un réseau, un serveur Web et une base de données.  
+-   communiquer sur un réseau, avec un serveur web et une base de données ;  
   
--   Effectuer des opérations qui prennent beaucoup de temps.  
+-   effectuer des opérations qui prennent beaucoup de temps ;  
   
--   Différencier les tâches de priorité différents. Par exemple, un thread de priorité supérieure gère les tâches en temps critique, et un thread de priorité inférieure effectue d’autres tâches.  
+-   différencier des tâches de priorités différentes (par exemple, un thread prioritaire gère les tâches soumises à des contraintes de temps, et un thread de priorité inférieure effectue d’autres tâches) ;  
   
--   Autoriser l’interface utilisateur de rester réactive, lors de l’allocation de temps aux tâches en arrière-plan.  
+-   autoriser l’interface utilisateur à rester réactive, tout en allouant du temps aux tâches en arrière-plan.  
   
-### <a name="disadvantages-of-multiple-threads"></a>Inconvénients de plusieurs Threads  
- Il est recommandé d’utiliser aussi peu de threads que possible, réduisant ainsi l’utilisation des ressources du système d’exploitation et améliorer les performances. Threading possède également les besoins en ressources et les conflits potentiels à prendre en considération lorsque vous concevez votre application. Les besoins en ressources sont les suivantes :  
+### <a name="disadvantages-of-multiple-threads"></a>Inconvénients des threads multiples  
+ Il est recommandé d’utiliser aussi peu de threads que possible, afin de limiter l’exploitation des ressources du système d’exploitation et d’améliorer les performances. Le threading est également soumis à des critères de ressources ; par ailleurs, il faut prendre en considération les conflits potentiels au moment de concevoir une application. Voici les exigences en matière de ressources :  
   
--   Le système utilise la mémoire pour les informations de contexte requises par le processus, **AppDomain** objets et les threads. Par conséquent, le nombre de processus, **AppDomain** objets et les threads qui peuvent être créés est limité par la mémoire disponible.  
+-   Le système utilise la mémoire pour les informations de contexte requises par les processus, les objets **AppDomain** et les threads. Par conséquent, le nombre de processus, d’objets **AppDomain** et de threads qu’il est possible de créer est limité par la mémoire disponible.  
   
--   Le suivi d’un grand nombre de threads consomme un temps processeur important. S’il y a trop de threads, la plupart d'entre elles n’apporte un progrès important. Si la plupart des threads en cours est dans un processus, threads dans d’autres processus sont planifiés moins fréquemment.  
+-   Le fait de suivre un grand nombre de threads consomme un temps processeur non négligeable. S’il y a trop de threads, la plupart d'entre eux progresseront à peine. Si la majorité des threads en cours se trouvent dans un même processus, les threads des autres processus sont planifiés à une fréquence moindre.  
   
--   Contrôle de l’exécution de code avec un grand nombre de threads est complexe et peut être une source de nombreux bogues.  
+-   Il est difficile de contrôler l’exécution du code avec de nombreux threads, qui peut être source de nombreux bogues.  
   
--   Détruire des threads nécessite le fait de savoir ce qui peut se produire et le traitement de ces problèmes.  
+-   Détruire des threads implique de savoir ce qui pourrait se produire et de gérer ces problèmes.  
   
- Fournir un accès partagé aux ressources peut créer des conflits. Pour éviter les conflits, vous devez synchroniser ou contrôler l’accès aux ressources partagées. Échec pour synchroniser l’accès correctement (dans les même ou différents domaines d’application) peut entraîner des problèmes tels que des blocages (deux threads cesser de répondre attendant que l’autre se termine) et les conditions de concurrence critique (anomalie de résultat se produit en raison un inattendue critiques dépendance de la synchronisation de deux événements). Le système fournit des objets de synchronisation qui peuvent être utilisés pour coordonner le partage de ressources entre plusieurs threads. Réduction du nombre de threads facilite la synchronisation des ressources.  
+ L’accès partagé aux ressources risque de créer des conflits. Pour les éviter, il faut synchroniser ou contrôler l’accès aux ressources partagées. À défaut d’une synchronisation appropriée (dans le même domaine d’application ou non), des problèmes peuvent survenir, par exemple, des blocages (deux threads cessent de répondre, chacun dans l’attente que l’autre se termine) et des conditions de concurrence (un résultat anormal se produit en raison d’une dépendance critique inattendue à la synchronisation de deux événements). Le système fournit des objets de synchronisation permettant de coordonner le partage de ressources entre différents threads. La réduction du nombre de threads facilite la synchronisation des ressources.  
   
- Les ressources qui nécessitent une synchronisation sont les suivantes :  
+ Les ressources suivantes nécessitent une synchronisation :  
   
--   Ressources système (telles que les ports de communication).  
+-   ressources système (p. ex., ports de communication) ;  
   
--   Ressources partagées par plusieurs processus (par exemple, les handles de fichiers).  
+-   ressources partagées par plusieurs processus (p. ex., descripteurs de fichiers) ;  
   
--   Les ressources d’un seul domaine d’application (tels que global, statique et les champs d’instance) accessibles par plusieurs threads.  
+-   ressources d’un seul domaine d’application (p. ex., champs globaux, statiques et d’instance) auxquelles accèdent plusieurs threads.  
   
-### <a name="threading-and-application-design"></a>Conception de Threading et de l’Application  
- En général, à l’aide de la <xref:System.Threading.ThreadPool> classe est le moyen le plus simple pour gérer plusieurs threads pour les tâches relativement courtes qui ne bloquent pas les autres threads et lorsque vous ne prévoyez aucune planification particulière des tâches. Toutefois, il existe plusieurs raisons pour créer vos propres threads :  
+### <a name="threading-and-application-design"></a>Threading et de conception d’applications  
+ En général, la classe <xref:System.Threading.ThreadPool> représente le moyen le plus simple de gérer plusieurs threads pour des tâches relativement courtes qui ne bloquent pas d’autres threads et si vous ne prévoyez aucune planification particulière des tâches. Toutefois, il y a différentes raisons de créer ses propres threads :  
   
--   Si vous avez besoin d’une tâche pour avoir une priorité particulière.  
+-   Vous voulez qu’une tâche ait une priorité particulière.  
   
--   Si vous avez une tâche qui peut exécuter un certain temps (et par conséquent bloque les autres tâches).  
+-   L’exécution d’une tâche risque de prendre longtemps (ce qui bloquerait d’autres tâches).  
   
--   Si vous devez placer des threads dans un thread unique cloisonné (tous les **ThreadPool** threads se trouvent dans le multithread cloisonné).  
+-   Vous devez placer des threads dans un thread unique cloisonné (tous les threads **ThreadPool** se trouvent dans le multithread cloisonné).  
   
--   Si vous avez besoin d’une identité stable associée au thread. Par exemple, vous devez utiliser un thread dédié pour abandonner ce thread, suspendre ou identifier par son nom.  
+-   Vous avez besoin d’une identité stable associée au thread. Par exemple, vous devez utiliser un thread dédié pour abandonner ce thread, le suspendre ou l’identifier par son nom.  
   
--   Si vous avez besoin exécuter des threads d’arrière-plan qui interagissent avec l’interface utilisateur, le .NET Framework version 2.0 fournit un <xref:System.ComponentModel.BackgroundWorker> composant qui communique à l’aide d’événements, avec un marshaling inter-threads vers le thread d’interface utilisateur.  
+-   Si vous avez besoin d’exécuter des threads d’arrière-plan qui interagissent avec l’interface utilisateur, la version 2.0 de .NET Framework fournit un composant <xref:System.ComponentModel.BackgroundWorker> qui communique à l’aide d’événements, avec un marshaling interthread vers le thread d’interface utilisateur.  
   
-### <a name="threading-and-exceptions"></a>Thread et des Exceptions  
- Gérez des exceptions dans les threads. En règle générale, les exceptions non gérées dans les threads, les threads d’arrière-plan même terminer le processus. Il existe trois exceptions à cette règle :  
+### <a name="threading-and-exceptions"></a>Threading et exceptions  
+ Ne gérez pas les exceptions dans les threads. En règle générale, les exceptions non prises en charge dans les threads, même d’arrière-plan, mettent fin au processus. Il existe trois exceptions à cette règle :  
   
--   A <xref:System.Threading.ThreadAbortException> est levée dans un thread car <xref:System.Threading.Thread.Abort%2A> a été appelée.  
+-   Une <xref:System.Threading.ThreadAbortException> est levée dans un thread, car <xref:System.Threading.Thread.Abort%2A> a été appelé.  
   
--   Un <xref:System.AppDomainUnloadedException> est levée dans un thread, car le domaine d’application est en cours de déchargement.  
+-   Une <xref:System.AppDomainUnloadedException> est levée dans un thread, car le domaine d'application est en cours de déchargement.  
   
 -   Le common language runtime ou un processus hôte met fin au thread.  
   
- Pour plus d’informations, consultez [Exceptions dans les Threads managés](../../../docs/standard/threading/exceptions-in-managed-threads.md).  
+ Pour plus d'informations, consultez la page [Exceptions dans les threads managés](../../../docs/standard/threading/exceptions-in-managed-threads.md).  
   
 > [!NOTE]
->  Dans les versions 1.0 et 1.1 du .NET Framework, le common language runtime intercepte en mode silencieux certaines exceptions, par exemple dans les threads du pool. Cela peut endommager l’état de l’application et éventuellement provoquer le blocage, des applications qui peuvent être très difficiles à déboguer.  
+>  Dans les versions 1.0 et 1.1 de .NET Framework, le common language runtime intercepte sans assistance certaines exceptions, par exemple dans les threads de pool. Cela risque d’endommager l'état des applications et de finir par provoquer leur blocage, ce qui peut être très difficile à déboguer.  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.Threading.ThreadPool>  

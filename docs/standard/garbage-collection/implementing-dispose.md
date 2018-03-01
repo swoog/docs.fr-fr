@@ -15,28 +15,31 @@ helpviewer_keywords:
 - Dispose method
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b5a304c48a953b172cbcc3aa1c717a660298d36a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 404fdece284accf305ef3cf2324be2e37a8da4b6
+ms.sourcegitcommit: bf8a3ba647252010bdce86dd914ac6c61b5ba89d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/06/2018
 ---
 # <a name="implementing-a-dispose-method"></a>Implémentation d’une méthode Dispose
 
-Vous implémentez un <xref:System.IDisposable.Dispose%2A> méthode pour libérer les ressources non managées utilisées par votre application. Le Garbage collector .NET n’alloue pas de mémoire non managée, et n’en libère pas non plus.  
+Vous implémentez une méthode <xref:System.IDisposable.Dispose%2A> pour libérer les ressources non managées utilisées par votre application. Le Garbage collector .NET n’alloue pas de mémoire non managée, et n’en libère pas non plus.  
   
-Le modèle pour supprimer un objet, appelé un [modèle de suppression](../../../docs/standard/design-guidelines/dispose-pattern.md), impose un ordre sur la durée de vie d’un objet. Le modèle de suppression est utilisé uniquement pour les objets qui accèdent à des ressources non managées, telles que les handles de fichiers et de canaux, les handles d’attente, les handles d’attente ou les pointeurs vers les blocs de mémoire non managée. Cela est dû au fait que le récupérateur de mémoire est très efficace pour récupérer les objets managés inutilisés, mais ne peut pas récupérer les objets non managés.  
+Le modèle pour supprimer un objet, dénommé [modèle de suppression](../../../docs/standard/design-guidelines/dispose-pattern.md), impose un ordre sur la durée de vie d’un objet. Le modèle de suppression est utilisé uniquement pour les objets qui accèdent à des ressources non managées, telles que les handles de fichiers et de canaux, les handles d’attente, les handles d’attente ou les pointeurs vers les blocs de mémoire non managée. Cela est dû au fait que le récupérateur de mémoire est très efficace pour récupérer les objets managés inutilisés, mais ne peut pas récupérer les objets non managés.  
   
 Le modèle de suppression comporte deux variantes :  
   
 * Vous encapsulez chaque ressource non managée utilisée par un type dans un handle sécurisé (autrement dit, dans une classe dérivée de <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>). Dans ce cas, vous implémentez l'interface <xref:System.IDisposable> et une méthode `Dispose(Boolean)` supplémentaire. Il s'agit de la variante recommandée. Elle ne requiert pas le remplacement de la méthode <xref:System.Object.Finalize%2A?displayProperty=nameWithType>.  
   
   > [!NOTE]
-  > Le <xref:Microsoft.Win32.SafeHandles?displayProperty=nameWithType> espace de noms fournit un ensemble de classes dérivées de <xref:System.Runtime.InteropServices.SafeHandle>, qui sont répertoriées dans le [à l’aide de handles sécurisés](#SafeHandles) section. Si vous ne parvenez pas à trouver une classe qui convient pour libérer votre ressource non managée, vous pouvez implémenter votre propre sous-classe de <xref:System.Runtime.InteropServices.SafeHandle>.  
+  > L'espace de noms <xref:Microsoft.Win32.SafeHandles?displayProperty=nameWithType> fournit un ensemble de classes dérivées de <xref:System.Runtime.InteropServices.SafeHandle>, qui sont répertoriées dans la section [Utilisation des handles sécurisés](#SafeHandles). Si vous ne parvenez pas à trouver une classe qui convient pour libérer votre ressource non managée, vous pouvez implémenter votre propre sous-classe de <xref:System.Runtime.InteropServices.SafeHandle>.  
   
 * Vous implémentez l'interface <xref:System.IDisposable> et une méthode `Dispose(Boolean)` supplémentaire, puis vous remplacez la méthode <xref:System.Object.Finalize%2A?displayProperty=nameWithType>. Vous devez remplacer <xref:System.Object.Finalize%2A> pour vous assurer que les ressources non managées sont supprimées si votre implémentation de <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> n'est pas appelée par un consommateur de votre type. Si vous utilisez la technique recommandée présentée dans le point précédent, la classe <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> effectue cette opération pour vous.  
   
@@ -67,7 +70,7 @@ La méthode `Dispose` effectue le nettoyage de tous les objets, le récupérateu
   
 ### <a name="the-disposeboolean-overload"></a>Surcharge de Dispose(Boolean)
 
-Dans la seconde surcharge, le *disposing* paramètre est un <xref:System.Boolean> qui indique si l’appel de méthode provient d’un <xref:System.IDisposable.Dispose%2A> (méthode) (sa valeur est `true`) ou d’un finaliseur (sa valeur est `false`).  
+Dans la seconde surcharge, le paramètre *disposing* est un <xref:System.Boolean> qui indique si l'appel de la méthode provient d'une méthode <xref:System.IDisposable.Dispose%2A> (sa valeur est `true`) ou d'un finaliseur (sa valeur est `false`).  
   
 Le corps de la méthode se compose de deux blocs de code :  
   
@@ -108,13 +111,13 @@ Voici le modèle général d'implémentation du modèle de suppression d'une cla
 [!code-vb[System.IDisposable#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.idisposable/vb/base2.vb#5)]  
   
 > [!NOTE]
-> En c#, vous substituez <xref:System.Object.Finalize%2A?displayProperty=nameWithType> en définissant un [destructeur](~/docs/csharp/programming-guide/classes-and-structs/destructors.md).  
+> En C#, vous substituez <xref:System.Object.Finalize%2A?displayProperty=nameWithType> en définissant un [destructeur](~/docs/csharp/programming-guide/classes-and-structs/destructors.md).  
   
 ## <a name="implementing-the-dispose-pattern-for-a-derived-class"></a>Implémentation du modèle de suppression d’une classe dérivée
 
 Une classe dérivée d'une classe qui implémente l'interface <xref:System.IDisposable> ne doit pas implémenter <xref:System.IDisposable>, car l'implémentation de la classe de base de <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> est héritée par les classes dérivées. À la place, pour implémenter le modèle de suppression d’une classe dérivée, vous fournissez ce qui suit :  
   
-* Une méthode `protected``Dispose(Boolean)` qui substitue la méthode de la classe de base et effectue le travail réel de libération des ressources de la classe dérivée. Cette méthode doit également appeler la méthode `Dispose(Boolean)` de la classe de base et lui passer une valeur `true` pour l’argument *disposing*.  
+* Une méthode `protected Dispose(Boolean)` qui substitue la méthode de la classe de base et effectue le travail réel de libération des ressources de la classe dérivée. Cette méthode doit également appeler la méthode `Dispose(Boolean)` de la classe de base et lui passer une valeur `true` pour l’argument *disposing*.  
   
 * Une classe dérivée de <xref:System.Runtime.InteropServices.SafeHandle> qui encapsule votre ressource managée (recommandée) ou une substitution de la méthode <xref:System.Object.Finalize%2A?displayProperty=nameWithType>. La classe <xref:System.Runtime.InteropServices.SafeHandle> fournit un finaliseur qui vous permet de ne pas avoir à en coder un. Si vous fournissez un finaliseur, il doit appeler la surcharge `Dispose(Boolean)` avec un argument *disposing* égal à `false`.  
   
@@ -132,7 +135,7 @@ Voici le modèle général d'implémentation du modèle de suppression d'une cla
 [!code-vb[System.IDisposable#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.idisposable/vb/derived2.vb#6)]  
   
 > [!NOTE]
-> En c#, vous substituez <xref:System.Object.Finalize%2A?displayProperty=nameWithType> en définissant un [destructeur](~/docs/csharp/programming-guide/classes-and-structs/destructors.md).  
+> En C#, vous substituez <xref:System.Object.Finalize%2A?displayProperty=nameWithType> en définissant un [destructeur](~/docs/csharp/programming-guide/classes-and-structs/destructors.md).  
   
 <a name="SafeHandles"></a>   
 ## <a name="using-safe-handles"></a>Utilisation des handles sécurisés
@@ -175,5 +178,5 @@ L'exemple suivant illustre le modèle de suppression d'une classe dérivée, `Di
 <xref:Microsoft.Win32.SafeHandles>   
 <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>   
 <xref:System.Object.Finalize%2A?displayProperty=nameWithType>   
-[Comment : définir et consommer des Classes et Structs (C + c++ / CLI)](/cpp/dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli)   
-[Modèle de suppression](../../../docs/standard/design-guidelines/dispose-pattern.md)
+[Guide pratique pour définir et consommer des classes et des structs (C++-CLI)](/cpp/dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli)   
+[Dispose, modèle](../../../docs/standard/design-guidelines/dispose-pattern.md)

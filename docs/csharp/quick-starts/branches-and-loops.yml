@@ -1,7 +1,7 @@
 ### YamlMime:Tutorial
 title: Branches et boucles
 metadata:
-  title: Branches et boucles
+  title: "Didacticiel interactif sur les branches et les boucles - Guides de démarrage rapide en C#"
   description: "Dans ce guide de démarrage rapide sur les branches et les boucles, vous allez utiliser votre navigateur pour découvrir C# de manière interactive. Vous allez écrire un code C# et afficher les résultats de la compilation et de l’exécution du code directement dans le navigateur."
   audience: Developer
   level: Beginner
@@ -13,11 +13,11 @@ metadata:
   interactive: csharp
   nextTutorialHref: interpolated-strings
   nextTutorialTitle: "Chaînes interpolées en C#"
-  ms.openlocfilehash: 04fe3ae50791d3484f5f846a753aa55c6de1b01f
-  ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+  ms.openlocfilehash: 1fad5d5b205c9a02bbb00d3377e3cae59926faf9
+  ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
   ms.translationtype: HT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 01/20/2018
+  ms.lasthandoff: 02/01/2018
 items:
 - durationInMinutes: 1
   content: "Ce guide de démarrage rapide vous explique comment écrire un code qui examine des variables et modifie un chemin d’exécution en fonction de ces variables. Vous utiliserez votre navigateur pour écrire en C# de manière interactive et afficher les résultats de la compilation et de l’exécution de votre code. Ce guide de démarrage rapide contient une série de leçons pour explorer la création de branches et de boucles en C#. Ces leçons présentent les concepts de base du langage C#.\n"
@@ -38,4 +38,4 @@ items:
   content: "Maintenant que vous avez vu l’instruction `if` et la création de boucles en langage C#, vérifiez si vous pouvez écrire un code C# pour obtenir la somme de tous les entiers de 1 à 20 divisibles par 3.  Voici quelques conseils :\n\n- L’opérateur `%` vous donne le reste d’une opération de division.\n- L’instruction `if` vous donne la condition pour vérifier si un nombre doit être inclus dans la somme.\n- La boucle `for` peut vous aider à répéter une série d’étapes pour tous les nombres de 1 à 20.\n\nEssayez par vous-même et vérifiez le résultat. Vous devriez obtenir 63 comme réponse.\n\n> [!NOTE]\n> Cette expérience de codage en ligne est en mode d’aperçu. Si vous rencontrez des problèmes, veuillez les signaler [sur le référentiel dotnet/try](https://github.com/dotnet/try/issues).\n"
 - title: Terminer le test
   durationInMinutes: 1
-  content: "Vous avez terminé le guide de démarrage rapide « Branches et boucles ». \n\nVous pouvez poursuivre ces guides de démarrage rapide dans votre propre environnement de développement. Découvrez les principes fondamentaux du [développement local](local-environment.md) puis choisissez un guide de démarrage rapide. Vous pouvez essayer ce même exercice, passer directement au guide de démarrage rapide suivant, ou recommencer à partir du guide de démarrage rapide sur les [nombres en C#](numbers-in-csharp-local.md).\n\nPour en savoir plus sur ces concepts, consultez les rubriques suivantes :\n\n[Instruction if et else](../language-reference/keywords/if-else.md)   \n[Instruction while](../language-reference/keywords/while.md)   \n[Instruction do](../language-reference/keywords/do.md)   \n[Instruction for](../language-reference/keywords/for.md)\0"
+  content: "Vous avez terminé le guide de démarrage rapide « Branches et boucles ». \n\nVous pouvez poursuivre ces guides de démarrage rapide dans votre propre environnement de développement. Découvrez les principes fondamentaux du [développement local](local-environment.md), puis choisissez un guide de démarrage rapide. Vous pouvez tenter ce même exercice, passer directement au guide de démarrage rapide suivant ou recommencer à partir du guide de démarrage rapide sur les [nombres en C#](numbers-in-csharp-local.md).\n\nPour en savoir plus sur ces concepts, consultez les rubriques suivantes :\n\n[Instruction if et else](../language-reference/keywords/if-else.md)   \n[Instruction while](../language-reference/keywords/while.md)   \n[Instruction do](../language-reference/keywords/do.md)   \n[Instruction for](../language-reference/keywords/for.md)\0"

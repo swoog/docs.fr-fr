@@ -12,24 +12,27 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: dd6dc920-b011-418a-b3db-f1580a7d9251
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 6970ffc38e900c9b47c58c8ae4b81b9551f5589b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4f3ae0c3db65fe7bda1bcc5bd247fea80a2a9c4e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="creating-new-attributes-for-elements-in-the-dom"></a>Création de nouveaux attributs pour des éléments du DOM
-Création de nouveaux attributs diffère de celui de la création d’autres types de nœud car les attributs ne sont pas des nœuds, mais sont des propriétés d’un nœud d’élément et sont contenues dans un **XmlAttributeCollection** associé à l’élément. Il existe plusieurs manières de créer un attribut et de le joindre à un élément :  
+La création de nouveaux attributs diffère de la création d'autres types de nœud, car les attributs ne sont pas des nœuds, mais des propriétés d'un nœud d'élément, et appartiennent à un **XmlAttributeCollection** associé à cet élément. Il existe plusieurs manières de créer un attribut et de le joindre à un élément :  
   
--   Obtenir le nœud d’élément et utiliser **SetAttribute** pour ajouter un attribut à la collection d’attributs de cet élément.  
+-   Obtenir le nœud d’élément et utiliser **SetAttribute** pour ajouter un attribut à la collection d’attributs de cet élément  
   
--   Créer un **XmlAttribute** nœud à l’aide du **CreateAttribute** (méthode), obtenir le nœud d’élément, puis utilisez **SetAttributeNode** pour ajouter le nœud à la collection d’attributs de ce élément.  
+-   Créer un nœud **XmlAttribute** à l’aide de la méthode **CreateAttribute**, obtenir le nœud d’élément, puis utiliser **SetAttributeNode** pour ajouter le nœud à la collection d’attributs de cet élément  
   
- L’exemple suivant montre comment ajouter un attribut à un élément à l’aide de la **SetAttribute** (méthode).  
+ L'exemple suivant montre comment ajouter un attribut à un élément au moyen de la méthode **SetAttribute**.  
   
 ```vb  
 Imports System  
@@ -79,7 +82,7 @@ public class Sample
   }  
 ```  
   
- L’exemple suivant montre un nouvel attribut à l’aide de la **CreateAttribute** (méthode). Il montre ensuite l’attribut ajouté à la collection d’attributs de la **book** à l’aide de l’élément le **SetAttributeNode** (méthode).  
+ L'exemple suivant illustre la création d'un nouvel attribut à l'aide de la méthode **CreateAttribute**. Il affiche ensuite l’attribut ajouté à la collection d’attributs de l’élément **book** à l’aide de la méthode **SetAttributeNode**.  
   
  En partant du code XML suivant :  
   
@@ -119,17 +122,17 @@ doc.DocumentElement.SetAttributeNode(attr);
 </book>  
 ```  
   
- L’exemple de code complet, consultez <xref:System.Xml.XmlDocument.CreateAttribute%2A>.  
+ Pour obtenir l’exemple de code complet, consultez <xref:System.Xml.XmlDocument.CreateAttribute%2A>.  
   
- Vous pouvez également créer un **XmlAttribute** nœud et utilisez le **InsertBefore** ou **InsertAfter** pour le placer à la position appropriée dans la collection. Si un attribut portant le même nom est déjà présent dans la collection d’attributs existants **XmlAttribute** nœud est supprimé de la collection et la nouvelle **XmlAttribute** nœud est inséré. Il effectue la même façon que les **SetAttribute** (méthode). Ces méthodes prennent comme paramètre un nœud existant comme point de référence pour effectuer la **InsertBefore** et **InsertAfter**. Si vous ne fournissez pas un nœud de référence indiquant la position d’insertion du nouveau nœud, la valeur par défaut pour le **InsertAfter** méthode consiste à insérer le nouveau nœud au début de la collection. La position par défaut pour le **InsertBefore**, si aucun nœud de référence n’est fourni, est à la fin de la collection.  
+ Vous pouvez également créer un nœud **XmlAttribute** et utiliser la méthode **InsertBefore** ou **InsertAfter** pour le placer à la position voulue dans la collection. Si un attribut de même nom figure déjà dans la collection d’attributs, le nœud **XmlAttribute** existant est supprimé de la collection et le nouveau nœud **XmlAttribute** est inséré. Ce comportement est le même qu'avec la méthode **SetAttribute**. Ces méthodes prennent comme paramètre un nœud existant comme point de référence pour réaliser les opérations **InsertBefore** et **InsertAfter**. Si vous ne fournissez pas de nœud de référence indiquant la position d’insertion du nouveau nœud, la méthode **InsertAfter**, par défaut, place ce dernier au début de la collection. Pour la méthode **InsertBefore**, la position par défaut si aucun nœud de référence n’est fourni est la fin de la collection.  
   
- Si vous avez créé un **XmlNamedNodeMap** d’attributs, vous pouvez ajouter un attribut par nom à l’aide du <xref:System.Xml.XmlNamedNodeMap.SetNamedItem%2A>. Pour plus d’informations, consultez [Collections de nœuds dans NamedNodeMap et NodeList](../../../../docs/standard/data/xml/node-collections-in-namednodemaps-and-nodelists.md).  
+ Si vous avez créé un **XmlNamedNodeMap** d'attributs, vous pouvez ajouter un attribut en vous servant de son nom à l'aide de la méthode <xref:System.Xml.XmlNamedNodeMap.SetNamedItem%2A>. Pour plus d’informations, consultez [Collections de nœuds dans NamedNodeMap et NodeList](../../../../docs/standard/data/xml/node-collections-in-namednodemaps-and-nodelists.md).  
   
 ## <a name="default-attributes"></a>Attributs par défaut  
  Si vous créez un élément déclaré comme possédant un attribut par défaut, un nouvel attribut par défaut avec sa valeur par défaut est créé par le DOM (Document Object Model) XML et joint à cet élément. Les nœuds enfants de l'attribut par défaut sont également créés en même temps.  
   
 ## <a name="attribute-child-nodes"></a>Nœuds enfants d'attribut  
- La valeur d'un nœud d'attribut devient ses nœuds enfants. Il existe seulement deux types de nœuds enfants valides : **XmlText** nœuds, et **XmlEntityReference** nœuds. Ce sont des nœuds enfants en ce sens que les méthodes telles que **FirstChild** et **LastChild** les traiter comme des nœuds enfants. Cette distinction qui caractérise un attribut possédant des nœuds enfants est importante lorsque vous tentez de supprimer des attributs ou des nœuds enfants d'attribut. Pour plus d’informations, consultez [suppression d’attributs d’un nœud d’élément dans le DOM](../../../../docs/standard/data/xml/removing-attributes-from-an-element-node-in-the-dom.md).  
+ La valeur d'un nœud d'attribut devient ses nœuds enfants. Il n'y a que deux types de nœuds enfants valides : les nœuds **XmlText** et les nœuds **XmlEntityReference**. Ces nœuds sont des nœuds enfants, en ce sens que des méthodes telles que **FirstChild** et **LastChild** les traitent comme tels. Cette distinction qui caractérise un attribut possédant des nœuds enfants est importante lorsque vous tentez de supprimer des attributs ou des nœuds enfants d'attribut. Pour plus d'informations, consultez [Suppression d'attributs d'un nœud d'élément dans le DOM](../../../../docs/standard/data/xml/removing-attributes-from-an-element-node-in-the-dom.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Document Object Model (DOM) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [DOM (Document Object Model) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

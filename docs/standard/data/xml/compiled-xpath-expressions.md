@@ -12,15 +12,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e25dd95f-b64c-4d8b-a3a4-379e1aa0ad55
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 8f7b812d5d6f75e39e9eebcc003686ff88d009e9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e6ff5661a7e78f9b37f16acc86834561fc697bcc
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="compiled-xpath-expressions"></a>Expressions XPath compilées
 Un objet <xref:System.Xml.XPath.XPathExpression> représente une requête XPath compilée retournée depuis la méthode statique <xref:System.Xml.XPath.XPathExpression.Compile%2A> de la classe <xref:System.Xml.XPath.XPathExpression> ou depuis la méthode <xref:System.Xml.XPath.XPathNavigator.Compile%2A> de la classe <xref:System.Xml.XPath.XPathNavigator>.  
@@ -120,19 +123,19 @@ Console.WriteLine(nodes.Current.Value);
  [!code-xml[XPathXMLExamples#1](../../../../samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/books.xml#1)]  
   
 ### <a name="higher-performance-xpath-expressions"></a>Expressions XPath plus performantes  
- Pour obtenir des performances optimales, utilisez l'expression XPath la plus spécifique possible dans vos requêtes. Par exemple, si le nœud `book` est un enfant du noeud `bookstore` et si le nœud `bookstore` est l'élément de niveau supérieur dans un document XML, il est plus rapide d'utiliser l'expression XPath `/bookstore/book` que `//book`. L'expression XPath `//book` analysera en effet chaque nœud de l'arborescence XML en vue d'identifier les nœuds qui correspondent.  
+ Pour obtenir des performances optimales, utilisez l’expression XPath la plus spécifique possible dans vos requêtes. Par exemple, si le nœud `book` est un enfant du noeud `bookstore` et si le nœud `bookstore` est l'élément de niveau supérieur dans un document XML, il est plus rapide d'utiliser l'expression XPath `/bookstore/book` que `//book`. L'expression XPath `//book` analysera en effet chaque nœud de l'arborescence XML en vue d'identifier les nœuds qui correspondent.  
   
  De plus, l'utilisation des méthodes de navigation dans les nœuds fournies par la classe <xref:System.Xml.XPath.XPathNavigator> peut améliorer les performances par rapport aux méthodes de sélection fournies par la classe <xref:System.Xml.XPath.XPathNavigator> lorsque les critères de sélection sont simples. Par exemple, si vous devez sélectionner le premier enfant du nœud actuel, il est plus rapide d'utiliser la méthode <xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A> que d'utiliser l'expression XPath `child::*[1]` et la méthode <xref:System.Xml.XPath.XPathNavigator.Select%2A>.  
   
- Pour plus d’informations sur le nœud de définir des méthodes de navigation de la <xref:System.Xml.XPath.XPathNavigator> de classe, consultez [Node Set Navigation à l’aide de XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md).  
+ Pour plus d'informations sur les méthodes de navigation dans les nœuds fournies par la classe <xref:System.Xml.XPath.XPathNavigator>, consultez [Navigation dans la collection de nœuds à l’aide de XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.Xml.XmlDocument>  
  <xref:System.Xml.XPath.XPathDocument>  
  <xref:System.Xml.XPath.XPathNavigator>  
  [Traitement des données XML à l’aide du modèle de données XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
- [Sélectionnez les données XML à l’aide de XPathNavigator](../../../../docs/standard/data/xml/select-xml-data-using-xpathnavigator.md)  
- [Évaluer les Expressions XPath à l’aide de XPathNavigator](../../../../docs/standard/data/xml/evaluate-xpath-expressions-using-xpathnavigator.md)  
- [Nœuds qui correspondent à l’aide de XPathNavigator](../../../../docs/standard/data/xml/matching-nodes-using-xpathnavigator.md)  
+ [Sélection de données XML à l’aide de XPathNavigator](../../../../docs/standard/data/xml/select-xml-data-using-xpathnavigator.md)  
+ [Évaluation d’expressions XPath à l’aide de XPathNavigator](../../../../docs/standard/data/xml/evaluate-xpath-expressions-using-xpathnavigator.md)  
+ [Mise en correspondance de nœuds avec XPathNavigator](../../../../docs/standard/data/xml/matching-nodes-using-xpathnavigator.md)  
  [Types de nœuds reconnus avec les requêtes XPath](../../../../docs/standard/data/xml/node-types-recognized-with-xpath-queries.md)  
- [Espaces de noms et des requêtes XPath](../../../../docs/standard/data/xml/xpath-queries-and-namespaces.md)
+ [Requêtes et espaces de noms XPath](../../../../docs/standard/data/xml/xpath-queries-and-namespaces.md)

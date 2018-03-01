@@ -12,15 +12,18 @@ helpviewer_keywords:
 - exceptions, Exception class
 - Exception class
 ms.assetid: e2e1f8c4-e7b4-467d-9a66-13c90861221d
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 253a9846e484aa4e54c3433b0bbc8623519bbb7e
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 120d56832aad5024ee607d6e3114f164c967a12f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="exception-class-and-properties"></a>Classe et propriétés d’exception
 
@@ -46,7 +49,7 @@ La classe <xref:System.Exception> a les propriétés suivantes qui vous permettr
 
 La plupart des classes qui héritent de <xref:System.Exception> n’implémentent pas de membres supplémentaires ni ne fournissent de fonctionnalités supplémentaires, elles héritent simplement de <xref:System.Exception>. Par conséquent, vous pouvez trouver les informations les plus importantes d’une exception dans la hiérarchie des classes d’exception, le nom de l’exception et les informations contenues dans l’exception.
 
-Nous vous recommandons de lever et intercepter uniquement des objets qui dérivent de <xref:System.Exception>, mais vous pouvez lever n’importe quel objet qui dérive de la <xref:System.Object> classe en tant qu’exception. Notez que tous les langages ne prennent pas forcément en charge la levée et l’interception d’objets qui ne dérivent pas de <xref:System.Exception>.
+Nous vous recommandons de lever et d’intercepter uniquement des objets qui dérivent de <xref:System.Exception>, mais vous pouvez lever comme exception n’importe quel objet qui dérive de la classe <xref:System.Object>. Notez que tous les langages ne prennent pas forcément en charge la levée et l’interception d’objets qui ne dérivent pas de <xref:System.Exception>.
   
 ## <a name="see-also"></a>Voir aussi  
 [Exceptions](index.md)

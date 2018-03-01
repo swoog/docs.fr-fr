@@ -12,17 +12,21 @@ dev_langs:
 - csharp
 - vb
 - cpp
-helpviewer_keywords: exceptions, best practices
+helpviewer_keywords:
+- exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 87f9287c3714416ee5d6b63f3c9db311bb97b131
-ms.sourcegitcommit: 5d0e069655439984862a835f400058b7e8bbadc6
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4c5ea19077ff9ce8e36a33601b7e5e87c64afe60
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="best-practices-for-exceptions"></a>Bonnes pratiques pour les exceptions
 
@@ -72,7 +76,7 @@ Les exceptions font en sorte que les échecs ne passent pas inaperçus parce que
 
 ## <a name="use-the-predefined-net-exception-types"></a>Utiliser les types d’exception .NET prédéfinis
 
-N'introduisez une nouvelle classe d'exception que quand aucune classe d'exception prédéfinie ne s'applique. Par exemple :
+N'introduisez une nouvelle classe d'exception que quand aucune classe d'exception prédéfinie ne s'applique. Exemple :
 
 - Levez une exception <xref:System.InvalidOperationException> si un appel de jeu de propriétés ou de méthode n'est pas approprié étant donné l'état actuel de l'objet.
 
@@ -102,7 +106,7 @@ Pour obtenir un exemple, consultez [Guide pratique : créer des exceptions déf
 
 Quand vous créez des exceptions définies par l’utilisateur, vous devez vérifier que les métadonnées des exceptions sont disponibles pour le code qui s’exécute à distance. 
 
-Par exemple, sur des implémentations .NET qui prennent en charge les domaines d’application, les exceptions peuvent se produire entre les domaines d’application. Supposons que le domaine d’application A crée le domaine d’application B, lequel exécute du code qui lève une exception. Pour que le domaine d’application A intercepte et gère l’exception correctement, il doit pouvoir trouver l’assembly qui contient l’exception levée par le domaine d’application B. Si le domaine d’application B lève une exception qui est contenue dans un assembly sous sa base d’application, mais pas sous la base d’application du domaine d’application A, le domaine d’application A ne peut pas trouver l’exception et le Common Language Runtime lève une exception <xref:System.IO.FileNotFoundException>. Pour éviter cette situation, vous pouvez déployer l'assembly qui contient les informations sur les exceptions de deux façons :
+Par exemple, sur les implémentations .NET qui prennent en charge des domaines d’application, des exceptions peuvent se produire entre domaines d’application. Supposons que le domaine d’application A crée le domaine d’application B, lequel exécute du code qui lève une exception. Pour que le domaine d’application A intercepte et gère l’exception correctement, il doit pouvoir trouver l’assembly qui contient l’exception levée par le domaine d’application B. Si le domaine d’application B lève une exception qui est contenue dans un assembly sous sa base d’application, mais pas sous la base d’application du domaine d’application A, le domaine d’application A ne peut pas trouver l’exception et le Common Language Runtime lève une exception <xref:System.IO.FileNotFoundException>. Pour éviter cette situation, vous pouvez déployer l'assembly qui contient les informations sur les exceptions de deux façons :
 
 - Placez l'assembly dans une base d'application commune partagée par les deux domaines d'application.
 
@@ -116,7 +120,7 @@ Le message d’erreur que l’utilisateur voit est dérivé de la chaîne de des
 
 ## <a name="use-grammatically-correct-error-messages"></a>Utiliser des messages d’erreur grammaticalement corrects
 
-Écrivez des phrases claires et insérez une ponctuation finale. Chaque phrase de la chaîne de description d'une exception doit se terminer par un point. Par exemple, « la table du journal a débordé. » est une chaîne de description appropriée.
+Écrivez des phrases claires et insérez une ponctuation finale. Chaque phrase de la chaîne de description d'une exception doit se terminer par un point. Par exemple, « La table du journal a débordé. » est une chaîne de description appropriée.
 
 ## <a name="in-custom-exceptions-provide-additional-properties-as-needed"></a>Dans les exceptions personnalisées, fournir des propriétés supplémentaires si nécessaire
 
@@ -134,7 +138,7 @@ Il est fréquent qu'une classe lève la même exception à partir de différents
 [!code-csharp[Conceptual.Exception.Handling#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#6)]
 [!code-vb[Conceptual.Exception.Handling#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#6)]  
   
-Dans certains cas, il est plus approprié d’utiliser le constructeur de l’exception pour générer l’exception. Un exemple est une classe d’exception global comme <xref:System.ArgumentException>.
+Dans certains cas, il est plus approprié d’utiliser le constructeur de l’exception pour générer l’exception. Par exemple, une classe d’exception globale comme <xref:System.ArgumentException>.
 
 ## <a name="clean-up-intermediate-results-when-throwing-an-exception"></a>Nettoyer les résultats intermédiaires quand vous levez une exception
 

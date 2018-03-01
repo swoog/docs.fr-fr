@@ -12,22 +12,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 118f97d1-7110-4d1b-b0bd-4143252c0bb0
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 09f89708607ada18181bc6605994c7908e1dd14b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c492d470fe29041f32039d98ecb854e18f40423c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xpathnavigator-in-transformations"></a>XPathNavigator dans les transformations
 La classe <xref:System.Xml.XPath.XPathNavigator> fournit un accès aléatoire en lecture seule aux données et est destinée à être utilisée en tant qu'entrée dans XSLT (Extensible Stylesheet Language for Transformations). Elle est implémentée sur les objets <xref:System.Xml.XPath.XPathDocument>, <xref:System.Xml.XmlDataDocument> et <xref:System.Xml.XmlDocument>. L'objet <xref:System.Xml.XPath.XPathNavigator> est basé sur le modèle de données du World Wide Web Consortium (W3C), comme indiqué dans la section 5 de la recommandation sur le langage XPath (XML Path Language).  
   
  L'objet <xref:System.Xml.XPath.XPathNavigator> définit un modèle de curseur sur n'importe quel magasin et fournit des requêtes XPath en lecture seule rapides sur un magasin de données. <xref:System.Xml.XPath.XPathNavigator> est également la classe à utiliser pour itérer sur des fragments d'arborescence résultat.  
   
- L'API vous permet d'obtenir des informations à partir du nœud actuel dans le magasin et d'atteindre les nœuds connectés. Le <xref:System.Xml.XPath.XPathNavigator> est un modèle de style curseur qui parcourt un magasin à l’aide d’un ensemble de **déplacer** méthodes. La classe <xref:System.Xml.XPath.XPathNavigator> est toujours positionnée sur un nœud. N’importe quel **déplacer** méthode qui échoue laisse le <xref:System.Xml.XPath.XPathNavigator> inchangée.  
+ L'API vous permet d'obtenir des informations à partir du nœud actuel dans le magasin et d'atteindre les nœuds connectés. L'objet <xref:System.Xml.XPath.XPathNavigator> est un modèle de style curseur qui parcourt un magasin à l'aide d'un ensemble de méthodes **Move**. La classe <xref:System.Xml.XPath.XPathNavigator> est toujours positionnée sur un nœud. Une méthode **Move** qui échoue laisse l'objet <xref:System.Xml.XPath.XPathNavigator> inchangé.  
   
  <xref:System.Xml.XPath.XPathNavigator> est la classe à utiliser pour itérer sur des fragments d'arborescence résultat. L'exemple de code suivant crée un fragment d'arborescence résultat dans une feuille de style en appelant la fonction avec le paramètre `fragment` contenant du XML.  
   
@@ -70,7 +73,7 @@ La classe <xref:System.Xml.XPath.XPathNavigator> fournit un accès aléatoire en
 <root>Some text</root>  
 ```  
   
- Le code suivant utilise la **test.xsl** feuille de style et **test.xml** les données d’entrée.  
+ Le code suivant utilise la feuille de style **test.xsl** et les données d'entrée **test.xml**.  
   
 ```vb  
 Imports System  
@@ -117,11 +120,11 @@ public class sample
 ```  
   
 ## <a name="output"></a>Sortie  
- Le résultat de la transformation se trouve dans le fichier **out.xml**:  
+ Le résultat de la transformation se trouve dans le fichier **out.xml** :  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>Joe  
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [XslTransform Class Implements the XSLT Processor](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+ [Implémentation du processeur XSLT par la classe XslTransform](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

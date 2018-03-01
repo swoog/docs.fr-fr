@@ -10,16 +10,16 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 25697ef6-465e-4248-9de5-1d199d4a8b59
-ms.openlocfilehash: 68462a24a9fbd1ee671d7e335f2774adf3476750
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: f721b5b378bf70fb594cad66bd90bd96a0320ee2
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="type-providers"></a>Fournisseurs de type
 
 > [!NOTE]
-Ce guide, basé sur F# 3.0, va être mis à jour.  Pour obtenir la liste la plus récente des fournisseurs de type multiplateformes, consultez [FSharp.Data](http://fsharp.github.io/FSharp.Data/).
+Ce guide, basé sur F# 3.0, va être mis à jour.  Pour obtenir la liste la plus récente des fournisseurs de type multiplateformes, consultez [FSharp.Data](https://fsharp.github.io/FSharp.Data/).
 
 Un fournisseur de type F# est un composant qui fournit des types, des propriétés et des méthodes à utiliser dans votre programme. Dans F# 3.0, les fournisseurs de type représentent sont une part importante de la prise en charge de la programmation riche en informations. L'objectif de la programmation riche en informations est de supprimer les obstacles à l'utilisation de diverses sources d'informations provenant d'Internet et présentes dans les environnements d'entreprises modernes. Un des obstacles significatifs réside dans le fait que pour inclure une source d'informations dans un programme, ces dernières doivent être représentées en tant que types, propriétés et méthodes. Ainsi, elles pourront être utilisées dans un environnement de langage de programmation. Écrire ces types manuellement est très long et difficile à gérer. Une alternative courante consiste à utiliser un générateur de code qui ajoute des fichiers au projet ; toutefois, les types classiques de génération du code ne s'intègrent pas correctement dans des modes exploratoires de programmation pris en charge par F#, étant donné que le code généré doit être remplacé chaque fois qu'une référence de service est définie.
 

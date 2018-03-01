@@ -21,15 +21,18 @@ helpviewer_keywords:
 - namespaces [.NET Framework], types
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9f9952cfd6ed2d5bac66d1cd5e3c8eed7506cd5c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 26ee5cffd5e04a8c78cf5913b286fadfaab03c7c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="common-type-system"></a>Système de type commun
 Le système de type commun (CTS, Common Type System) définit la façon dont les types sont déclarés, utilisés et managés dans le Common Language Runtime ; il constitue également une partie importante de la prise en charge, par le runtime, de l'intégration interlangage. Le système de type commun met en œuvre les fonctions suivantes :  
@@ -95,7 +98,7 @@ Le système de type commun (CTS, Common Type System) définit la façon dont les
   
 <a name="Structures"></a>   
 ### <a name="structures"></a>Structures  
- Une structure est un type valeur qui dérive implicitement de <xref:System.ValueType?displayProperty=nameWithType> qui, à son tour, est dérivé de <xref:System.Object?displayProperty=nameWithType>. Une structure est très utile pour représenter des valeurs dont les besoins en ressources mémoire sont faibles, ainsi que pour passer des valeurs en tant que paramètres par valeur à des méthodes qui ont des paramètres fortement typés. Dans .NET, tous les types de données primitifs (<xref:System.Boolean>, <xref:System.Byte>, <xref:System.Char>, <xref:System.DateTime>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, et <xref:System.UInt64>) sont définis en tant que structures.  
+ Une structure est un type valeur qui dérive implicitement de <xref:System.ValueType?displayProperty=nameWithType> qui, à son tour, est dérivé de <xref:System.Object?displayProperty=nameWithType>. Une structure est très utile pour représenter des valeurs dont les besoins en ressources mémoire sont faibles, ainsi que pour passer des valeurs en tant que paramètres par valeur à des méthodes qui ont des paramètres fortement typés. Dans .NET, tous les types de données primitifs (<xref:System.Boolean>, <xref:System.Byte>, <xref:System.Char>, <xref:System.DateTime>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32> et <xref:System.UInt64>) sont définis en tant que structures.  
   
  Comme les classes, les structures définissent à la fois les données (les champs de la structure) et les opérations qui peuvent être exécutées sur ces données (les méthodes de la structure). Cela signifie que vous pouvez appeler des méthodes sur des structures, notamment les méthodes virtuelles définies sur les classes <xref:System.Object?displayProperty=nameWithType> et <xref:System.ValueType?displayProperty=nameWithType>, ainsi que toute méthode définie sur le type valeur lui-même. En d'autres termes, les structures peuvent comporter des champs, des propriétés et des événements, ainsi que des méthodes statiques et non statiques. Vous pouvez créer des instances de structures, les passer en tant que paramètres, les stocker en tant que variables locales ou les stocker dans un champ d'un autre type valeur ou type référence. Les structures peuvent aussi implémenter des interfaces.  
   
@@ -120,7 +123,7 @@ Le système de type commun (CTS, Common Type System) définit la façon dont les
 -   Elles ne peuvent pas être génériques, à moins qu'elles le soient uniquement parce qu'elles sont imbriquées dans un type générique. Par conséquent, une énumération ne peut pas avoir de paramètres de type propres.  
   
     > [!NOTE]
-    >  Les types imbriqués (y compris les énumérations) créés avec Visual Basic, C# et C++ incluent les paramètres de type de tous les types génériques englobants, et sont donc génériques, même s'ils n'ont pas de paramètres de type propres. Pour plus d'informations, consultez « Types imbriqués » de la rubrique de référence relative à <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType>.  
+    >  Les types imbriqués (y compris les énumérations) créés avec Visual Basic, C# et C++ incluent les paramètres de type de tous les types génériques englobants, et sont donc génériques, même s’ils n’ont pas de paramètres de type propres. Pour plus d'informations, consultez « Types imbriqués » de la rubrique de référence relative à <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType>.  
   
  L'attribut <xref:System.FlagsAttribute> désigne un genre particulier d'énumération appelé « champ de bits ». Le runtime lui-même ne fait pas de distinction entre les énumérations traditionnelles et les champs de bits, mais votre langage pourrait le faire. Lorsque cette distinction est effectuée, les opérateurs binaires peuvent être utilisés sur les champs de bits, mais pas sur les énumérations, pour générer des valeurs sans nom. Les énumérations sont généralement utilisées pour des listes d'éléments uniques, tels que les jours de la semaine, des noms de pays ou de région, etc. Les champs de bits sont généralement utilisés pour des listes de qualités ou de quantités pouvant être utilisées en combinaison, telle que `Red And Big And Fast`.  
   
@@ -151,7 +154,7 @@ Le système de type commun (CTS, Common Type System) définit la façon dont les
   
  Le paramètre d'un délégué est compatible avec le paramètre correspondant d'une méthode si le type de paramètre du délégué est plus restrictif que le type de paramètre de la méthode. En effet, cela garantit qu'un argument transmis au délégué peut être transmis à la méthode en toute sécurité.  
   
- De même, le type de retour d'un délégué est compatible avec le type de retour d'une méthode si le type de retour de la méthode est plus restrictif que le type de retour du délégué, car cela garantit que le cast de la valeur de retour de la méthode peut être effectué sans risque au type de retour du délégué.  
+ De même, le type de retour d’un délégué est compatible avec le type de retour d’une méthode si le type de retour de la méthode est plus restrictif que le type de retour du délégué, car cela garantit que le cast de la valeur de retour de la méthode peut être effectué sans risque au type de retour du délégué.  
   
  Par exemple, un délégué ayant un paramètre de type <xref:System.Collections.IEnumerable> et un type de retour <xref:System.Object> peut représenter une méthode ayant un paramètre de type <xref:System.Object> et une valeur de retour de type <xref:System.Collections.IEnumerable>. Pour obtenir des informations supplémentaires ainsi qu'un code d'exemple, consultez <xref:System.Delegate.CreateDelegate%28System.Type%2CSystem.Object%2CSystem.Reflection.MethodInfo%29?displayProperty=nameWithType>.  
   
@@ -166,7 +169,7 @@ Le système de type commun (CTS, Common Type System) définit la façon dont les
   
  Dans la plupart des cas, comme avec les méthodes de rappel, un délégué représente une seule méthode, et les mesures que vous devez prendre se limitent à la création et l'appel du délégué.  
   
- Pour les délégués qui représentent plusieurs méthodes .NET fournit des méthodes de la <xref:System.Delegate> et <xref:System.MulticastDelegate> déléguer des classes pour prendre en charge des opérations telles que l’ajout d’une méthode à liste d’appel d’un délégué (la <xref:System.Delegate.Combine%2A?displayProperty=nameWithType> méthode), suppression d’une méthode (la <xref:System.Delegate.Remove%2A?displayProperty=nameWithType> méthode) et l’obtention de la liste d’appel (la <xref:System.Delegate.GetInvocationList%2A?displayProperty=nameWithType> méthode).  
+ Pour les délégués qui représentent plusieurs méthodes, .NET fournit les méthodes des classes déléguées <xref:System.Delegate> et <xref:System.MulticastDelegate> pour prendre en charge des opérations telles que l'ajout d'une méthode à la liste d'appel d'un délégué (méthode <xref:System.Delegate.Combine%2A?displayProperty=nameWithType>), la suppression d'une méthode (méthode <xref:System.Delegate.Remove%2A?displayProperty=nameWithType>) et l'obtention de la liste d'appel (méthode <xref:System.Delegate.GetInvocationList%2A?displayProperty=nameWithType>).  
   
 > [!NOTE]
 >  Il n'est pas nécessaire d'utiliser ces méthodes pour les délégués de gestionnaires d'événements en C#, C++ et Visual Basic, car ces langages fournissent une syntaxe pour l'ajout et la suppression des gestionnaires d'événements.  
@@ -190,7 +193,7 @@ Le système de type commun (CTS, Common Type System) définit la façon dont les
 -   les définitions de chacun des membres du type.  
   
 ### <a name="attributes"></a>Attributs  
- Les attributs fournissent des métadonnées définies par l'utilisateur supplémentaires. La plupart du temps, ils sont utilisés pour stocker les informations supplémentaires relatives à un type de l'assembly, ou pour modifier le comportement d'un membre de type dans l'environnement au moment du design ou dans l'environnement d'exécution.  
+ Les attributs fournissent des métadonnées définies par l'utilisateur supplémentaires. La plupart du temps, ils sont utilisés pour stocker les informations supplémentaires relatives à un type de l’assembly, ou pour modifier le comportement d’un membre de type dans l’environnement au moment du design ou dans l’environnement d’exécution.  
   
  Les attributs sont des classes qui héritent de <xref:System.Attribute?displayProperty=nameWithType>. Les langages qui prennent en charge l'utilisation d'attributs ont chacun leur propre syntaxe pour l'application d'attributs à un élément du langage. Les attributs peuvent être appliqués à presque n'importe quel élément de langage ; les éléments spécifiques auxquels un attribut peut être appliqué sont définis par l'<xref:System.AttributeUsageAttribute> qui est appliqué à cette classe d'attributs.  
   
@@ -318,7 +321,7 @@ Le système de type commun (CTS, Common Type System) définit la façon dont les
  Chaque membre de type a une signature unique. Les signatures de méthode sont composées du nom de la méthode, d'une liste de paramètres (l'ordre et les types des arguments de la méthode). Plusieurs méthodes du même nom peuvent être définies dans un type à condition que leurs signatures diffèrent. Lorsque plusieurs méthodes du même nom sont définies, la méthode est dite surchargée. Par exemple, dans <xref:System.Char?displayProperty=nameWithType>, la méthode <xref:System.Char.IsDigit%2A> est surchargée. Une méthode prend un <xref:System.Char>. L'autre méthode prend un <xref:System.String> et un <xref:System.Int32>.  
   
 > [!NOTE]
->  Le type de retour n'est pas considéré comme une partie de la signature d'une méthode. En d'autres termes, les méthodes ne peuvent pas être surchargées si seul le type de retour les différencie.  
+>  Le type de retour n’est pas considéré comme une partie de la signature d’une méthode. En d'autres termes, les méthodes ne peuvent pas être surchargées si seul le type de retour les différencie.  
   
 ### <a name="inheriting-overriding-and-hiding-members"></a>Héritage, substitution et masquage de membres  
  Un type dérivé hérite de tous les membres de son type de base ; c'est-à-dire que ces membres sont définis sur le type dérivé et disponibles pour celui-ci. Le comportement ou les qualités de membres hérités peuvent être modifiés de deux manières :  

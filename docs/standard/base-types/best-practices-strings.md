@@ -1,5 +1,5 @@
 ---
-title: "Meilleures pratiques pour l’utilisation de chaînes dans .NET"
+title: "Bonnes pratiques pour l’utilisation de chaînes dans .NET"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -23,20 +23,23 @@ helpviewer_keywords:
 - comparing strings
 - strings [.NET Framework],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d187096fee5119a22d886029cd63173e4ca1c8ec
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a4b92cd9d6b880f23d6acaf9e38e685184ec3bfe
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="best-practices-for-using-strings-in-net"></a>Meilleures pratiques pour l’utilisation de chaînes dans .NET
-<a name="top"></a>.NET fournit la prise en charge étendue pour le développement d’applications localisées et globalisées et facilite la tâche appliquer les conventions de la culture actuelle ou une culture spécifique lors de l’exécution des opérations courantes telles que le tri et l’affichage de chaînes. Toutefois, le tri ou la comparaison de chaînes n'est pas toujours une opération dépendante de la culture. Par exemple, les chaînes utilisées en interne par une application doivent généralement être gérées de la même manière dans toutes les cultures. Quand des données de type chaîne culturellement indépendantes, telles que des balises XML, des balises HTML, des noms d'utilisateurs, des chemins d'accès aux fichiers et des noms d'objets système, sont interprétées comme si elles étaient dépendantes de la culture, le code d'application peut faire l'objet de bogues subtils, de performances médiocres et, dans certains cas, de problèmes de sécurité.  
+# <a name="best-practices-for-using-strings-in-net"></a>Bonnes pratiques pour l’utilisation de chaînes dans .NET
+<a name="top"></a> .NET offre une prise en charge complète du développement d’applications localisées et globalisées, et facilite l’application des conventions de la culture actuelle ou d’une culture spécifique durant l’exécution d’opérations courantes telles que le tri et l’affichage de chaînes. Toutefois, le tri ou la comparaison de chaînes n'est pas toujours une opération dépendante de la culture. Par exemple, les chaînes utilisées en interne par une application doivent généralement être gérées de la même manière dans toutes les cultures. Quand des données de type chaîne culturellement indépendantes, telles que des balises XML, des balises HTML, des noms d'utilisateurs, des chemins d'accès aux fichiers et des noms d'objets système, sont interprétées comme si elles étaient dépendantes de la culture, le code d'application peut faire l'objet de bogues subtils, de performances médiocres et, dans certains cas, de problèmes de sécurité.  
   
- Cette rubrique examine la chaîne de tri, de comparaison et des méthodes de casse dans .NET présente les recommandations pour sélectionner une méthode appropriée de gestion des chaînes et fournit des informations supplémentaires sur les méthodes de gestion des chaînes. Elle décrit également comment les données mises en forme, telles que les données numériques et les données de date et d'heure, sont traitées pour l'affichage et pour le stockage.  
+ Cette rubrique examine les méthodes de tri, de comparaison et d’application de la casse pour les chaînes dans .NET, présente des recommandations pour sélectionner une méthode appropriée de gestion des chaînes et fournit des informations supplémentaires sur les méthodes de gestion des chaînes. Elle décrit également comment les données mises en forme, telles que les données numériques et les données de date et d'heure, sont traitées pour l'affichage et pour le stockage.  
   
  Cette rubrique contient les sections suivantes :  
   
@@ -148,9 +151,9 @@ ms.lasthandoff: 10/18/2017
   
 -   les surcharges <xref:System.String.CompareTo%2A?displayProperty=nameWithType> ;  
   
--   La valeur par défaut <xref:System.String.StartsWith%28System.String%29?displayProperty=nameWithType> (méthode) et le <xref:System.String.StartsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> méthode avec un `null` <xref:System.Globalization.CultureInfo> paramètre.  
+-   la méthode <xref:System.String.StartsWith%28System.String%29?displayProperty=nameWithType> par défaut et la méthode <xref:System.String.StartsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> avec un paramètre `null`<xref:System.Globalization.CultureInfo> ;  
   
--   La valeur par défaut <xref:System.String.EndsWith%28System.String%29?displayProperty=nameWithType> (méthode) et le <xref:System.String.EndsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> méthode avec un `null` <xref:System.Globalization.CultureInfo> paramètre.  
+-   la méthode <xref:System.String.EndsWith%28System.String%29?displayProperty=nameWithType> par défaut et la méthode <xref:System.String.EndsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> avec un paramètre `null`<xref:System.Globalization.CultureInfo> ;  
   
 -   les surcharges <xref:System.String.IndexOf%2A?displayProperty=nameWithType> qui acceptent un <xref:System.String> comme paramètre de recherche et qui n'ont pas de paramètre <xref:System.StringComparison> ;  
   
@@ -160,7 +163,7 @@ ms.lasthandoff: 10/18/2017
   
  Des bogues, plus ou moins subtils, peuvent émerger quand des données de type chaîne non linguistiques sont interprétées linguistiquement, ou quand des données de type chaîne d'une culture particulière sont interprétées à l'aide des conventions d'une autre culture. L'exemple canonique est le problème du caractère I en turc.  
   
- Dans presque tous les alphabets latins, y compris l'anglais (États-Unis), le caractère "i" (\u0069) est la version en minuscule du caractère "I" (\u0049). Cette règle de casse devient rapidement la valeur par défaut pour quelqu'un qui effectue de la programmation dans une telle culture. Toutefois, l'alphabet turc ("tr-TR") inclut un caractère "I avec un point", "İ" (\u0130), qui est la version en majuscule de "i". Le turc comprend également un caractère "i sans point" minuscule, "ı" (\u0131), dont la majuscule est "I". Ce comportement se produit également dans la culture azérie ("az").  
+ Dans presque tous les alphabets latins, y compris l'anglais (États-Unis), le caractère "i" (\u0069) est la version en minuscule du caractère "I" (\u0049). Cette règle de casse devient rapidement la valeur par défaut pour quelqu'un qui effectue de la programmation dans une telle culture. Toutefois, l’alphabet turc ("tr-TR") inclut un caractère "I avec un point", "İ" (\u0130), qui est la version en majuscule de "i". Le turc comprend également un caractère "i sans point" minuscule, "ı" (\u0131), dont la majuscule est "I". Ce comportement se produit également dans la culture azérie ("az").  
   
  Par conséquent, les suppositions faites sur la mise en majuscule du "i" ou de la mise en minuscule du "I" ne sont pas valides dans toutes les cultures. Si vous utilisez les surcharges par défaut pour les routines de comparaison de chaînes, elles varieront suivant les cultures. Si les données à comparer sont non linguistiques, l'utilisation de surcharges par défaut peut produire des résultats indésirables, comme le montre la tentative suivante d'exécution d'une comparaison ne respectant pas la casse des chaînes "file" et "FILE".  
   
@@ -225,12 +228,12 @@ ms.lasthandoff: 10/18/2017
   
  InvariantCulture: a + ̊ = å  
   
- Le caractère LETTRE MINUSCULE LATINE A "a" (\u0061), quand il se trouve à côté du caractère DIACRITIQUE ROND EN CHEF "+ " ̊" (\u030a), est interprété comme le caractère LETTRE MINUSCULE LATINE A AVEC DIACRITIQUE ROND EN CHEF "å" (\u00e5). Comme le montre l'exemple suivant, ce comportement diffère de la comparaison ordinale.  
+ Le caractère LETTRE MINUSCULE LATINE A "a" (\u0061), quand il se trouve à côté du caractère DIACRITIQUE ROND EN CHEF " + " ̊" (\u030a), est interprété comme une LETTRE MINUSCULE LATINE A AVEC DIACRITIQUE ROND EN CHEF "å" (\u00e5). Comme le montre l'exemple suivant, ce comportement diffère de la comparaison ordinale.  
   
  [!code-csharp[Conceptual.Strings.BestPractices#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/comparison3.cs#15)]
  [!code-vb[Conceptual.Strings.BestPractices#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/comparison3.vb#15)]  
   
- Lors de l'interprétation de noms de fichiers, de cookies ou de tout autre élément dans lequel peut s'afficher une combinaison telle que "å", les comparaisons ordinales offrent toujours le comportement le plus transparent et le plus approprié.  
+ Lors de l’interprétation de noms de fichiers, de cookies ou de tout autre élément dans lequel peut s’afficher une combinaison telle que "å", les comparaisons ordinales offrent toujours le comportement le plus transparent et le plus approprié.  
   
  En définitive, la culture dite indifférente a très peu de propriétés qui la rendent utile pour la comparaison. Elle effectue la comparaison d'une manière linguistiquement pertinente, qui l'empêche de garantir une équivalence symbolique complète, mais elle ne constitue pas le choix approprié pour l'affichage dans n'importe quelle culture. L'une des rares raisons justifiant l'utilisation de <xref:System.StringComparison.InvariantCulture?displayProperty=nameWithType> pour la comparaison est de rendre persistantes des données classées pour un affichage identique dans toutes les cultures. Par exemple, si un fichier de données volumineux qui contient une liste d'identificateurs triés à des fins d'affichage accompagne une application, un ajout à cette liste nécessiterait une insertion avec un tri de style invariant.  
   
@@ -244,8 +247,8 @@ ms.lasthandoff: 10/18/2017
 |----------|--------------|-----------------------------------------------------|  
 |Identificateurs internes respectant la casse.<br /><br /> Identificateurs respectant la casse dans des normes telles que XML et HTTP.<br /><br /> Paramètres liés à la sécurité respectant la casse.|Identificateur non linguistique, où les octets correspondent exactement.|<xref:System.StringComparison.Ordinal>|  
 |Identificateurs internes ne respectant pas la casse.<br /><br /> Identificateurs ne respectant pas la casse dans des normes telles que XML et HTTP.<br /><br /> Chemins d'accès aux fichiers.<br /><br /> Clés et valeurs de Registre.<br /><br /> Variables d'environnement.<br /><br /> Identificateurs de ressource (par exemple, noms de handles).<br /><br /> Paramètres liés à la sécurité ne respectant pas la casse.|Identificateur non linguistique, où la casse n'est pas pertinente ; en particulier, les données stockées dans la plupart des services système Windows.|<xref:System.StringComparison.OrdinalIgnoreCase>|  
-|Certaines données rendues persistantes et linguistiquement pertinentes.<br /><br /> Affichage de données linguistiques qui nécessitent un ordre de tri fixe.|Données dont la culture n'est pas spécifiée qui sont toutefois linguistiquement pertinentes.|<xref:System.StringComparison.InvariantCulture><br /><br /> ou<br /><br /> <xref:System.StringComparison.InvariantCultureIgnoreCase>|  
-|Données affichées à l'utilisateur.<br /><br /> La plupart des entrées d'utilisateur.|Données qui nécessitent des usages linguistiques locaux.|<xref:System.StringComparison.CurrentCulture><br /><br /> ou<br /><br /> <xref:System.StringComparison.CurrentCultureIgnoreCase>|  
+|Certaines données rendues persistantes et linguistiquement pertinentes.<br /><br /> Affichage de données linguistiques qui nécessitent un ordre de tri fixe.|Données dont la culture n'est pas spécifiée qui sont toutefois linguistiquement pertinentes.|<xref:System.StringComparison.InvariantCulture><br /><br /> - ou -<br /><br /> <xref:System.StringComparison.InvariantCultureIgnoreCase>|  
+|Données affichées à l'utilisateur.<br /><br /> La plupart des entrées d'utilisateur.|Données qui nécessitent des usages linguistiques locaux.|<xref:System.StringComparison.CurrentCulture><br /><br /> - ou -<br /><br /> <xref:System.StringComparison.CurrentCultureIgnoreCase>|  
   
  [Retour au début](#top)  
   

@@ -19,15 +19,18 @@ helpviewer_keywords:
 - composite formatting
 - objects [.NET Framework], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1f4b311d6e933f6c653fd7ab189c2e644021970d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: dae73a7ace3aac4e7d89ccba186fceacfe9898ae
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="composite-formatting"></a>Mise en forme composite
 La fonctionnalité de mise en forme composite du .NET Framework utilise une liste d’objets et une chaîne de format composite comme entrée. Une chaîne de format composite se compose de texte fixe mélangé à des espaces réservés indexés, appelés éléments de format, qui correspondent aux objets de la liste. L'opération de mise en forme produit une chaîne résultante qui se compose du texte fixe d'origine mélangé à la représentation sous forme de chaîne des objets de la liste.  
@@ -49,7 +52,7 @@ La fonctionnalité de mise en forme composite du .NET Framework utilise une list
 -   La méthode <xref:System.Diagnostics.TraceSource.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, qui écrit une méthode à caractère informatif pour les écouteurs Trace.  
   
 ## <a name="composite-format-string"></a>Chaîne de format composite  
- Une chaîne de format composite et une liste d'objets sont utilisées comme arguments des méthodes qui prennent en charge la fonctionnalité de mise en forme composite. Une chaîne de format composite est constituée de zéro, une ou plusieurs séquences de texte fixe mélangées à un ou plusieurs éléments de format. Le texte fixe correspond à toute chaîne que vous choisissez, et chaque élément de format correspond à un objet ou une structure boxed dans la liste. La fonctionnalité de mise en forme composite retourne une nouvelle chaîne résultante, dans laquelle chaque élément de format est remplacé par la représentation sous forme de chaîne de l'objet correspondant dans la liste.  
+ Une chaîne de format composite et une liste d'objets sont utilisées comme arguments des méthodes qui prennent en charge la fonctionnalité de mise en forme composite. Une chaîne de format composite est constituée de zéro, une ou plusieurs séquences de texte fixe mélangées à un ou plusieurs éléments de format. Le texte fixe correspond à toute chaîne que vous choisissez, et chaque élément de format correspond à un objet ou une structure boxed dans la liste. La fonctionnalité de mise en forme composite retourne une nouvelle chaîne résultante, dans laquelle chaque élément de format est remplacé par la représentation sous forme de chaîne de l’objet correspondant dans la liste.  
   
  Prenons le fragment de code <xref:System.String.Format%2A> suivant.  
   
@@ -61,7 +64,7 @@ La fonctionnalité de mise en forme composite du .NET Framework utilise une list
 ## <a name="format-item-syntax"></a>Syntaxe des éléments de format  
  Chaque élément de format prend la forme suivante et comprend les composants suivants :  
   
- `{`*index*[`,`*alignement*] [`:`*formatString*]`}`  
+ `{` *index*[`,`*alignment*][`:`*formatString*]`}`  
   
  Les accolades correspondantes (« { » et « } ») sont nécessaires.  
   
@@ -87,7 +90,7 @@ La fonctionnalité de mise en forme composite du .NET Framework utilise une list
  [!code-vb[Formatting.Composite#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/alignment1.vb#8)]  
   
 ### <a name="format-string-component"></a>Composant de chaîne de format  
- Le composant facultatif *formatString* est une chaîne de format appropriée pour le type d’objet mis en forme. Spécifiez une chaîne de format numérique standard ou personnalisée si l’objet correspondant est une valeur numérique, standard ou personnalisée de date et heure chaîne de format si l’objet correspondant est un <xref:System.DateTime> objet, ou un [chaîne de format d’énumération](../../../docs/standard/base-types/enumeration-format-strings.md)si l’objet correspondant est une valeur d’énumération. Si *formatString* n’est pas spécifié, le spécificateur de format général (« G ») pour un type numérique, de date et d’heure ou d’énumération est utilisé. Le point est obligatoire si *formatString* est spécifié.  
+ Le composant facultatif *formatString* est une chaîne de format appropriée pour le type d’objet mis en forme. Spécifiez une chaîne de format numérique standard ou personnalisée si l'objet correspondant est une valeur numérique, une chaîne de format de date et d'heure standard ou personnalisée si l'objet correspondant est un objet <xref:System.DateTime>, ou une [chaîne de format d'énumération](../../../docs/standard/base-types/enumeration-format-strings.md) si l'objet correspondant est une valeur d'énumération. Si *formatString* n’est pas spécifié, le spécificateur de format général (« G ») pour un type numérique, de date et d’heure ou d’énumération est utilisé. Le point est obligatoire si *formatString* est spécifié.  
   
  Le tableau suivant répertorie les types ou les catégories de types dans la bibliothèque de classes .NET Framework qui prennent en charge un ensemble prédéfini de chaînes de format, et fournit des liens vers les rubriques qui répertorient les chaînes de format prises en charge. Notez que la mise en forme de chaînes est un mécanisme extensible qui permet de définir de nouvelles chaînes de format pour tous les types existants et de définir un ensemble de chaînes de format pris en charge par un type défini par l'application. Pour plus d'informations, consultez les rubriques sur l'interface <xref:System.IFormattable> et <xref:System.ICustomFormatter>.  
   
@@ -126,7 +129,7 @@ La fonctionnalité de mise en forme composite du .NET Framework utilise une list
   
 1.  Si la valeur à mettre en forme est `null`, une chaîne vide ("") est retournée.  
   
-2.  Si une implémentation de <xref:System.ICustomFormatter> est disponible, le runtime appelle sa méthode <xref:System.ICustomFormatter.Format%2A>. Il passe à la méthode de l’élément de format *formatString* valeur, le cas échéant, ou `null` si elle n’est pas, avec la <xref:System.IFormatProvider> implémentation.  
+2.  Si une implémentation de <xref:System.ICustomFormatter> est disponible, le runtime appelle sa méthode <xref:System.ICustomFormatter.Format%2A>. Il passe à la méthode la valeur *formatString* de l'élément de mise en forme, s'il en existe un, ou `null` si ce n'est pas le cas, ainsi que l'implémentation de <xref:System.IFormatProvider>.  
   
 3.  Si la valeur implémente l'interface <xref:System.IFormattable>, la méthode de l'interface <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29> est appelée. La valeur *formatString*, s’il en existe une dans l’élément de mise en forme, est passée à la méthode, ou bien la valeur `null` dans le cas contraire. L'argument <xref:System.IFormatProvider> est déterminé comme suit :  
   

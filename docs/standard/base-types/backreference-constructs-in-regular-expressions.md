@@ -17,15 +17,18 @@ helpviewer_keywords:
 - .NET Framework regular expressions, backreference constructs
 - regular expressions, backreference constructs
 ms.assetid: 567a4b8d-0e79-49dc-8df9-f4b1aa376a2a
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a884e70f542c2ed7ff63e39cb7eadedf0ef7b4d0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2ec92933bdf123412a3d489fc493d76c4a0dc0d0
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>Constructions de backreference dans les expressions régulières
 Les références arrière offrent un moyen pratique d’identifier un caractère répété ou une sous-chaîne répétée dans une chaîne. Par exemple, si la chaîne d’entrée contient plusieurs occurrences d’une sous-chaîne arbitraire, vous pouvez faire correspondre la première occurrence à un groupe de capture, puis utiliser une référence arrière pour faire correspondre les occurrences suivantes de la sous-chaîne.  
@@ -33,16 +36,16 @@ Les références arrière offrent un moyen pratique d’identifier un caractère
 > [!NOTE]
 >  Une syntaxe distincte est utilisée pour faire référence à des groupes de capture nommés et numérotés dans les chaînes de remplacement. Pour plus d'informations, consultez [Substitutions](substitutions-in-regular-expressions.md).  
   
- .NET définit des éléments de langage différents pour faire référence aux groupes de capture nommés et numérotés. Pour plus d’informations sur les groupes de capture, consultez [constructions de regroupement](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
+ .NET définit des éléments de langage différents pour faire référence aux groupes de capture nommés et numérotés. Pour plus d’informations sur les groupes de capture, consultez [Constructions de regroupement](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
   
 ## <a name="numbered-backreferences"></a>Références arrière numérotées  
  Une référence arrière numérotée utilise la syntaxe suivante :  
   
  `\` *nombre*  
   
- où *numéro* est la position ordinale du groupe de capture dans l’expression régulière. Par exemple, `\4` correspond au contenu du quatrième groupe de capture. Si *nombre* est ne pas défini dans le modèle d’expression régulière, une erreur d’analyse se produite, et le moteur des expressions régulières lève une <xref:System.ArgumentException>. Par exemple, l’expression régulière `\b(\w+)\s\1` est valide, car `(\w+)` est le premier et unique groupe de capture dans l’expression. D’un autre côté, `\b(\w+)\s\2` n’est pas valide et lève une exception d’argument, car il n’existe aucun groupe de capture numéroté `\2`.  
+ où *numéro* est la position ordinale du groupe de capture dans l’expression régulière. Par exemple, `\4` correspond au contenu du quatrième groupe de capture. Si *numéro* n’est pas défini dans le modèle d’expression régulière, une erreur d’analyse se produit et le moteur d’expression régulière lève une exception <xref:System.ArgumentException>. Par exemple, l’expression régulière `\b(\w+)\s\1` est valide, car `(\w+)` est le premier et unique groupe de capture dans l’expression. D’un autre côté, `\b(\w+)\s\2` n’est pas valide et lève une exception d’argument, car il n’existe aucun groupe de capture numéroté `\2`.  
   
- Notez l’ambiguïté entre les codes d’échappement octale (tel que `\16`) et `\` *nombre* références arrière qui utilisent la même notation. Cette ambiguïté est résolue comme suit :  
+ Remarquez l’ambiguïté entre les codes d’échappement octaux (tels que `\16`) et les références arrière `\`*numéro* qui utilisent la même notation. Cette ambiguïté est résolue comme suit :  
   
 -   Les expressions `\1` à `\9` sont toujours interprétées comme références arrière et non comme codes octaux.  
   
@@ -50,9 +53,9 @@ Les références arrière offrent un moyen pratique d’identifier un caractère
   
 -   Les expressions à partir de `\10` et plus sont considérées comme des références arrière s’il existe une référence arrière correspondant à ce numéro ; sinon, elles sont interprétées comme des codes octaux.  
   
--   Si une expression régulière contient une backreference à un numéro de groupe non défini, une erreur d’analyse se produit et le moteur des expressions régulières lève une <xref:System.ArgumentException>.  
+-   Si une expression régulière contient une référence arrière à un numéro de groupe non défini, une erreur d’analyse se produit et le moteur d’expression régulière lève une exception <xref:System.ArgumentException>.  
   
- Si l’ambiguïté est un problème, vous pouvez utiliser la `\k<` *nom* `>` notation, qui est sans équivoque et ne peut pas être confondue avec les codes de caractère octal. De même, les codes hexadécimaux tels que `\xdd` ne sont pas ambigus et ne peuvent pas être confondus avec les références arrière.  
+ Si l’ambiguïté est un problème, vous pouvez utiliser la notation `\k<`*nom*`>`, qui est sans équivoque et ne peut pas être confondue avec les codes de caractères octaux. De même, les codes hexadécimaux tels que `\xdd` ne sont pas ambigus et ne peuvent pas être confondus avec les références arrière.  
   
  L’exemple suivant recherche des caractères de mot doubles dans une chaîne. Il définit une expression régulière, `(\w)\1`, qui se compose des éléments suivants.  
   
@@ -73,14 +76,14 @@ Les références arrière offrent un moyen pratique d’identifier un caractère
   
  `\k'` *nom* `'`  
   
- où *nom* est le nom d’un groupe de capture défini dans le modèle d’expression régulière. Si *nom* est ne pas défini dans le modèle d’expression régulière, une erreur d’analyse se produite, et le moteur des expressions régulières lève une <xref:System.ArgumentException>.  
+ où *nom* est le nom d’un groupe de capture défini dans le modèle d’expression régulière. Si *nom* n’est pas défini dans le modèle d’expression régulière, une erreur d’analyse se produit et le moteur d’expression régulière lève une exception <xref:System.ArgumentException>.  
   
  L’exemple suivant recherche des caractères de mot doubles dans une chaîne. Il définit une expression régulière, `(?<char>\w)\k<char>`, qui se compose des éléments suivants.  
   
 |Élément|Description|  
 |-------------|-----------------|  
-|`(?<char>\w)`|Correspond à un caractère alphabétique et l’assigner à un groupe de capture nommé `char`.|  
-|`\k<char>`|Le caractère suivant qui est identique à la valeur de le `char` groupe de capture.|  
+|`(?<char>\w)`|Mettre en correspondance un caractère de mot et l’affecter à un groupe de capture nommé `char`.|  
+|`\k<char>`|Mettre en correspondance le caractère suivant dont la valeur est identique à celle du groupe de capture `char`.|  
   
  [!code-csharp[RegularExpressions.Language.Backreferences#2](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference2.cs#2)]
  [!code-vb[RegularExpressions.Language.Backreferences#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference2.vb#2)]  
@@ -95,17 +98,17 @@ Les références arrière offrent un moyen pratique d’identifier un caractère
   
  L’exemple suivant inclut un modèle d’expression régulière, `(?<1>a)(?<1>\1b)*`, qui redéfinit le groupe nommé \1. Le tableau suivant décrit chaque modèle dans l’expression régulière.  
   
-|Modèle|Description|  
+|Motif|Description|  
 |-------------|-----------------|  
-|`(?<1>a)`|Le caractère « a » et assigner le résultat au groupe de capture nommé `1`.|  
-|`(?<1>\1b)*`|Occurrence de mettre en correspondance 0 ou 1 du groupe nommé `1` avec un « b » et assigner le résultat au groupe de capture nommé `1`.|  
+|`(?<1>a)`|Mettre en correspondance le caractère « a » et affecter le résultat au groupe de capture nommé `1`.|  
+|`(?<1>\1b)*`|Mettre en correspondance 0 ou 1 occurrence du groupe nommé `1` avec un « b » et affecter le résultat au groupe de capture nommé `1`.|  
   
  [!code-csharp[RegularExpressions.Language.Backreferences#4](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference4.cs#4)]
  [!code-vb[RegularExpressions.Language.Backreferences#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference4.vb#4)]  
   
  En comparant l’expression régulière à la chaîne d’entrée (« aababb »), le moteur d’expression régulière effectue les opérations suivantes :  
   
-1.  Il commence au début de la chaîne et réussit à mettre en correspondance « a » avec l’expression `(?<1>a)`. La valeur de le `1` groupe est désormais « a ».  
+1.  Il commence au début de la chaîne et réussit à mettre en correspondance « a » avec l’expression `(?<1>a)`. La valeur du groupe `1` est maintenant « a ».  
   
 2.  Il passe au deuxième caractère et réussit à mettre en correspondance la chaîne « ab » avec l’expression `\1b`, ou « ab ». Il affecte ensuite le résultat, « ab », à `\1`.  
   
@@ -113,9 +116,9 @@ Les références arrière offrent un moyen pratique d’identifier un caractère
   
  Dans cet exemple, `*` est un quantificateur en boucle : il est évalué à plusieurs reprises jusqu’à ce que le moteur d’expression régulière ne puisse pas mettre en correspondance le modèle qu’il définit. Les quantificateurs en boucle ne suppriment pas les définitions de groupe.  
   
- Si un groupe n’a capturé aucune sous-chaîne, aucune référence arrière à ce groupe n’est définie et aucune correspondance n’est trouvée. Ceci est illustré dans le modèle d’expression régulière `\b(\p{Lu}{2})(\d{2})?(\p{Lu}{2})\b`, qui est défini comme suit :  
+ Si un groupe n’a capturé aucune sous-chaîne, aucune référence arrière à ce groupe n’est définie et aucune correspondance n’est trouvée. Ce point est illustré par le modèle d’expression régulière `\b(\p{Lu}{2})(\d{2})?(\p{Lu}{2})\b` qui est défini comme suit :  
   
-|Modèle|Description|  
+|Motif|Description|  
 |-------------|-----------------|  
 |`\b`|Commencer la correspondance à la limite d'un mot.|  
 |`(\p{Lu}{2})`|Mettre en correspondance deux lettres majuscules. Il s'agit du premier groupe de capture.|  

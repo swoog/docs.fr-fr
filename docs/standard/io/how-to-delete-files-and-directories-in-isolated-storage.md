@@ -23,22 +23,25 @@ helpviewer_keywords:
 - storing data using isolated storage, deleting files and directories
 - deleting directories within isolated stage file
 ms.assetid: 8fcc0dea-435b-4d40-ba4d-ba056265c202
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 971f27cd25cbe4be3ca3fad6283ab32d4f6db0ac
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: cd17b85dbdc9315654d042e18d28fbfd0e2dcc52
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-delete-files-and-directories-in-isolated-storage"></a>Comment : supprimer des fichiers et des répertoires dans un stockage isolé
-Vous pouvez supprimer des répertoires et des fichiers dans un fichier de stockage isolé. Dans un magasin, les noms de répertoires et de fichiers dépendent du système d’exploitation et sont spécifiées par rapport à la racine du système de fichiers virtuel. Ils ne sont pas la casse sur les systèmes d’exploitation Windows.  
+Vous pouvez supprimer des répertoires et des fichiers dans un fichier de stockage isolé. Dans un magasin, les noms de répertoires et de fichiers dépendent du système d’exploitation et sont spécifiées par rapport à la racine du système de fichiers virtuel. Ils ne sont pas sensibles à la casse sur les systèmes d’exploitation Windows.  
   
- Le <xref:System.IO.IsolatedStorage.IsolatedStorageFile?displayProperty=nameWithType> classe fournit deux méthodes pour supprimer des fichiers et répertoires : <xref:System.IO.IsolatedStorage.IsolatedStorageFile.DeleteDirectory%2A> et <xref:System.IO.IsolatedStorage.IsolatedStorageFile.DeleteFile%2A>. Un <xref:System.IO.IsolatedStorage.IsolatedStorageException> exception est levée si vous essayez de supprimer un fichier ou répertoire n’existe pas. Si vous incluez un caractère générique dans le nom, <xref:System.IO.IsolatedStorage.IsolatedStorageFile.DeleteDirectory%2A> lève une <xref:System.IO.IsolatedStorage.IsolatedStorageException> exception, et <xref:System.IO.IsolatedStorage.IsolatedStorageFile.DeleteFile%2A> lève une <xref:System.ArgumentException> exception.  
+ La classe <xref:System.IO.IsolatedStorage.IsolatedStorageFile?displayProperty=nameWithType> fournit deux méthodes pour supprimer des répertoires et des fichiers : <xref:System.IO.IsolatedStorage.IsolatedStorageFile.DeleteDirectory%2A> et <xref:System.IO.IsolatedStorage.IsolatedStorageFile.DeleteFile%2A>. Une exception <xref:System.IO.IsolatedStorage.IsolatedStorageException> est levée si vous essayez de supprimer un fichier ou un répertoire qui n’existe pas. Si vous incluez un caractère générique dans le nom, <xref:System.IO.IsolatedStorage.IsolatedStorageFile.DeleteDirectory%2A> lève une exception <xref:System.IO.IsolatedStorage.IsolatedStorageException> et <xref:System.IO.IsolatedStorage.IsolatedStorageFile.DeleteFile%2A> lève une exception <xref:System.ArgumentException>.  
   
- Le <xref:System.IO.IsolatedStorage.IsolatedStorageFile.DeleteDirectory%2A> méthode échoue si le répertoire contient des fichiers ou des sous-répertoires. Vous pouvez utiliser la <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetFileNames%2A> et <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A> méthodes pour extraire les fichiers existants et les répertoires. Pour plus d’informations sur la recherche dans le système de fichiers virtuel d’un magasin, consultez [Comment : rechercher des fichiers existants et des répertoires dans un stockage isolé](../../../docs/standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md).  
+ La méthode <xref:System.IO.IsolatedStorage.IsolatedStorageFile.DeleteDirectory%2A> échoue si le répertoire contient des fichiers ou des sous-répertoires. Vous pouvez utiliser les méthodes <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetFileNames%2A> et <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A> pour récupérer les fichiers et les répertoires existants. Pour plus d’informations sur la recherche dans le système de fichiers virtuel d’un magasin, consultez [Comment : rechercher des fichiers et des répertoires existants dans un stockage isolé](../../../docs/standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md).  
   
 ## <a name="example"></a>Exemple  
  L’exemple de code suivant crée et supprime ensuite plusieurs fichiers et répertoires.  

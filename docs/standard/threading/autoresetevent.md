@@ -12,22 +12,25 @@ helpviewer_keywords:
 - threading [.NET Framework], AutoResetEvent class
 - AutoResetEvent class
 ms.assetid: 6d39c48d-6b37-4a9b-8631-f2924cfd9c18
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 69d16e8c6491b4c66ab5a5452762e73172ebbb77
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 71933d0be804fdf68b0dc602902343f2d88b8c82
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="autoresetevent"></a>AutoResetEvent
-La <xref:System.Threading.AutoResetEvent> classe représente un événement de handle d’attente local qui se réinitialise automatiquement quand il est signalé, après avoir libéré un seul thread en attente. Cette classe représente un cas spécial de sa classe de base, <xref:System.Threading.EventWaitHandle>. Consultez la documentation conceptuelle de [EventWaitHandle](../../../docs/standard/threading/eventwaithandle.md) relative à l’utilisation et aux fonctionnalités des événements de réinitialisation automatique.  
+La classe <xref:System.Threading.AutoResetEvent> représente un événement de handle d’attente local qui se réinitialise automatiquement quand il est signalé, après avoir libéré un thread en attente unique. Cette classe représente un cas spécial de sa classe de base, <xref:System.Threading.EventWaitHandle>. Consultez la documentation conceptuelle de [EventWaitHandle](../../../docs/standard/threading/eventwaithandle.md) relative à l’utilisation et aux fonctionnalités des événements de réinitialisation automatique.  
   
- Un <xref:System.Threading.AutoResetEvent> objet est automatiquement réinitialisé à non signalé par le système après la libération d’un seul thread en attente. Si aucun thread n’attend, l’état de l’objet d’événement reste signalé. <xref:System.Threading.AutoResetEvent>correspond à un Win32 `CreateEvent` appelez, en spécifiant `false` pour la `bManualReset` argument.  
+ Un objet <xref:System.Threading.AutoResetEvent> est automatiquement réinitialisé à l’état non signalé par le système après la libération d’un thread en attente unique. Si aucun thread n’attend, l’état de l’objet d’événement reste signalé. <xref:System.Threading.AutoResetEvent> correspond à un appel `CreateEvent` Win32 spécifiant `false` pour l’argument `bManualReset`.  
   
- Pour obtenir un exemple qui utilise <xref:System.Threading.AutoResetEvent>, consultez [analyse](http://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db).  
+ Pour obtenir un exemple utilisant <xref:System.Threading.AutoResetEvent>, consultez [Monitor](http://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db).  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.Threading.ManualResetEvent>  

@@ -1,5 +1,5 @@
 ---
-title: "Démarrage rapide - Branches et boucles - Guide C#"
+title: "Didacticiel sur les branches et les boucles - Guides de démarrage rapide local en C#"
 description: "Dans ce guide de démarrage rapide sur les branches et les boucles, vous écrivez du code en C# pour explorer la syntaxe de langage qui prend en charge les branches et boucles conditionnelles pour exécuter des instructions de manière répétée."
 author: billwagner
 ms.author: wiwagn
@@ -9,21 +9,21 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 609c8625b19025a20c1da1e767870eafbab4c4a0
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.openlocfilehash: 7d69b2b9bb02e2999bcd785da653bd4a13ed947c
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="branches-and-loops"></a>Branches et boucles
 
 Ce guide de démarrage rapide vous explique comment écrire un code qui examine des variables et modifie un chemin d’exécution en fonction de ces variables. Vous allez écrire un code en C# et afficher les résultats de la compilation et de l’exécution du code. Le guide de démarrage rapide contient une série de leçons pour explorer la création de branches et de boucles en C#. Ces leçons présentent les concepts de base du langage C#.
 
-Ce guide de démarrage rapide suppose que vous disposez d’un ordinateur que vous pouvez utiliser pour le développement. La rubrique .NET [Bien démarrer en 10 minutes](https://www.microsoft.com/net/core) contient des instructions pour configurer votre environnement de développement local sur Mac, PC ou Linux. Une brève vue d’ensemble des commandes que vous utiliserez est disponible dans la [présentation des guides de démarrage rapide locaux](local-environment.md) avec des liens pour plus d’informations.
+Ce guide de démarrage rapide suppose que vous disposez d’un ordinateur que vous pouvez utiliser pour le développement. La rubrique .NET [Bien démarrer en 10 minutes](https://www.microsoft.com/net/core) contient des instructions pour configurer votre environnement de développement local sur Mac, PC ou Linux. Une brève vue d’ensemble des commandes que vous utiliserez est disponible dans la [présentation des guides de démarrage rapide local](local-environment.md), avec des liens vers des informations complémentaires.
 
 ## <a name="make-decisions-using-the-if-statement"></a>Prendre des décisions à l’aide de l’instruction `if`
 
-Créez un répertoire nommé **branches-quickstart**. Faites-en le répertoire actuel et exécutez `dotnet new console -n BranchesAndLoops -o .`. Cette commande crée une nouvelle application console .NET Core dans le répertoire actuel. 
+Créez un répertoire nommé **branches-quickstart**. Faites-en le répertoire actuel et exécutez `dotnet new console -n BranchesAndLoops -o .`. Cette commande crée une nouvelle application console .NET Core dans le répertoire actuel.
 
 Ouvrez **Program.cs** dans votre éditeur favori, puis remplacez la ligne `Console.Writeline("Hello World!");` par le code qui suit :
 
@@ -45,12 +45,11 @@ int b = 3;
 Tapez `dotnet run` à nouveau. La réponse étant inférieure à 10, rien ne s’affiche. La **condition** que vous testez a une valeur false. Vous n’avez pas de code à exécuter, car vous avez uniquement écrit l’une des branches possibles pour une instruction `if` : la branche true.
 
 > [!TIP]
-> Durant votre exploration de C# (ou de tout autre langage de programmation), vous commettrez des erreurs d’écriture du code. Le compilateur détectera et signalera les erreurs. Observez attentivement la sortie d’erreur et le code ayant généré l’erreur. L’erreur du compilateur peut en général vous aider à trouver le problème. 
+> Durant votre exploration de C# (ou de tout autre langage de programmation), vous commettrez des erreurs d’écriture du code. Le compilateur détectera et signalera les erreurs. Observez attentivement la sortie d’erreur et le code ayant généré l’erreur. L’erreur du compilateur peut en général vous aider à trouver le problème.
 
-Le premier exemple montre la puissance de l’instruction `if` et des types booléens. Un *booléen* est une variable qui peut avoir l’une des deux valeurs suivantes : `true` ou `false`. C# définit un type spécial, `bool`, pour les variables booléennes. L’instruction `if` vérifie la valeur d’un `bool`. Quand la valeur est `true`, l’instruction qui suit `if` s’exécute. Dans le cas contraire, elle est ignorée. 
+Le premier exemple montre la puissance de l’instruction `if` et des types booléens. Un *booléen* est une variable qui peut avoir l’une des deux valeurs suivantes : `true` ou `false`. C# définit un type spécial, `bool`, pour les variables booléennes. L’instruction `if` vérifie la valeur d’un `bool`. Quand la valeur est `true`, l’instruction qui suit `if` s’exécute. Dans le cas contraire, elle est ignorée.
 
 Ce processus de vérification des conditions et d’exécution des instructions en fonction de ces conditions est très performant.
-
 
 ## <a name="make-if-and-else-work-together"></a>Utiliser if et else ensemble
 
@@ -227,7 +226,7 @@ for(int index = 0; index < 10; index++)
 } 
 ```
 
-Cette boucle fonctionne de manière identique à la boucle `while` et la boucle `do` que vous avez déjà utilisées. L’instruction `for` comprend trois parties qui contrôlent son fonctionnement. 
+Cette boucle fonctionne de manière identique à la boucle `while` et la boucle `do` que vous avez déjà utilisées. L’instruction `for` comprend trois parties qui contrôlent son fonctionnement.
 
 La première partie est l’**initialiseur for** : `for index = 0;` déclare que `index` est la variable de boucle et définit sa valeur initiale sur `0`.
 
@@ -254,11 +253,11 @@ Essayez par vous-même et vérifiez le résultat. Vous devriez obtenir 63 comme 
 
 Vous avez terminé le guide de démarrage rapide « Branches et boucles ».
 
-Vous pouvez passer au démarrage rapide [Chaînes interpolées](interpolated-strings-local.md) dans votre propre environnement de développement.
+Vous pouvez passer au guide de démarrage rapide [Chaînes interpolées](interpolated-strings-local.md) dans votre propre environnement de développement.
 
 Pour en savoir plus sur ces concepts, consultez les rubriques suivantes :
 
-[Instruction if et else](../language-reference/keywords/if-else.md)   
-[Instruction while](../language-reference/keywords/while.md)   
-[Instruction do](../language-reference/keywords/do.md)   
-[Instruction for](../language-reference/keywords/for.md)   
+[Instruction if et else](../language-reference/keywords/if-else.md)  
+[Instruction while](../language-reference/keywords/while.md)  
+[Instruction do](../language-reference/keywords/do.md)  
+[Instruction for](../language-reference/keywords/for.md)  

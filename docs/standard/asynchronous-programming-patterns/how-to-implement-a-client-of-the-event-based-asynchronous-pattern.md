@@ -24,25 +24,28 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 21a858c1-3c99-4904-86ee-0d17b49804fa
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0b70d4ba205d39ad8fcbc7c7f6fa1f5b34a36c98
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f8069072f5d917d4ef169a1aed8854ae3139016d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-implement-a-client-of-the-event-based-asynchronous-pattern"></a>Comment : implémenter un client du modèle asynchrone basé sur des événements
-L’exemple de code suivant montre comment utiliser un composant conforme à la [Event-based Asynchronous Pattern Overview](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md). Le formulaire pour cet exemple utilise le `PrimeNumberCalculator` composant décrit dans [Comment : implémenter un composant qui prend en charge le modèle asynchrone basé sur événement](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md).  
+L’exemple de code suivant montre comment utiliser un composant conforme à la [vue d'ensemble du modèle asynchrone basé sur des événements](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md). Le formulaire de cet exemple utilise le composant `PrimeNumberCalculator` décrit dans la rubrique [Comment : implémenter un composant qui prend en charge le modèle asynchrone basé sur des événements](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md).  
   
- Lorsque vous exécutez un projet qui utilise cet exemple, vous verrez un formulaire « Calculatrice de nombres premiers » avec une grille et deux boutons : **démarrer une nouvelle tâche** et **Annuler**. Vous pouvez cliquer sur le **démarrer une nouvelle tâche** bouton plusieurs fois de suite, et à chaque clic, une opération asynchrone commence un calcul pour déterminer si un nombre test généré de manière aléatoire est un nombre premier. Le formulaire affiche périodiquement progression et des résultats incrémentiels. Chaque opération est attribuée à un ID de tâche unique. Le résultat du calcul est affiché dans le **résultat** colonne ; si le numéro de test n’est pas premier, il est étiqueté comme **Composite,** et son premier diviseur est affiché.  
+ Quand vous exécutez un projet utilisant cet exemple, un formulaire « Calculatrice de nombres premiers » s’affiche avec une grille et deux boutons : **Démarrer une nouvelle tâche** et **Annuler**. Si vous cliquez plusieurs fois de suite sur le bouton **Démarrer une nouvelle tâche**, à chaque clic, une opération asynchrone lance un calcul pour déterminer si un nombre test généré de manière aléatoire est un nombre premier. Le formulaire affiche régulièrement la progression et des résultats incrémentiels. Chaque opération est assignée à un ID de tâche unique. Le résultat du calcul est affiché dans la colonne **Résultat**. Si le nombre test n’est pas un nombre premier, il est étiqueté en tant que **Composite** et son premier diviseur est affiché.  
   
- Toute opération en attente peut être annulée avec le **Annuler** bouton. Sélections peuvent être effectuées.  
+ Toute opération en attente peut être annulée à l’aide du bouton **Annuler**. Il est possible d’effectuer des sélections multiples.  
   
 > [!NOTE]
->  La plupart des nombres ne seront pas premiers. Si vous ne trouvez pas un nombre premier après plusieurs opérations terminées, démarrez simplement davantage de tâches, et par la suite, vous trouverez des nombres premiers.  
+>  La plupart des nombres ne seront pas des nombres premiers. Si aucun nombre premier n’a été trouvé après plusieurs opérations, démarrez simplement davantage de tâches jusqu’à trouver des nombres premiers.  
   
 ## <a name="example"></a>Exemple  
  [!code-csharp[System.ComponentModel.AsyncOperationManager#10](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#10)]

@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 82bec076-19d4-470c-979f-6c3a14b7c70a
-ms.openlocfilehash: 58003c88baf0f8aeea1a511334b99bd0295f8bf1
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: c09f8abe4dd46453cb6cc5ed7dbb6f60dbf0ad98
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="tutorial-creating-a-type-provider"></a>Didacticiel : Création d’un fournisseur de Type
 
@@ -56,7 +56,7 @@ Fournisseurs de type sont mieux adaptées aux situations où le schéma est stab
 
 
 ## <a name="a-simple-type-provider"></a>Un fournisseur de Type Simple
-Cet exemple est Samples.HelloWorldTypeProvider dans les `SampleProviders\Providers` répertoire de la [F # 3.0 exemple Pack](http://fsharp3sample.codeplex.com) sur le site Web Codeplex. Le fournisseur met à disposition un « espace de type » qui contient les types d’effacées 100, comme le montre le code suivant à l’aide de syntaxe de signature F # et en omettant les détails pour tous sauf `Type1`. Pour plus d’informations sur les types effacées, consultez [plus d’informations sur effacées fourni Types](#details-about-erased-provided-types) plus loin dans cette rubrique.
+Cet exemple est Samples.HelloWorldTypeProvider dans les `SampleProviders\Providers` répertoire de la [F # 3.0 exemple Pack](https://fsharp3sample.codeplex.com) sur le site Web Codeplex. Le fournisseur met à disposition un « espace de type » qui contient les types d’effacées 100, comme le montre le code suivant à l’aide de syntaxe de signature F # et en omettant les détails pour tous sauf `Type1`. Pour plus d’informations sur les types effacées, consultez [plus d’informations sur effacées fourni Types](#details-about-erased-provided-types) plus loin dans cette rubrique.
 
 ```fsharp
 namespace Samples.HelloWorldTypeProvider
@@ -499,7 +499,7 @@ Notez les points suivants :
 - Chaque groupe nommé entraîne une propriété fournie, et l’accès à la propriété entraîne une utilisation d’un indexeur sur une correspondance `Groups` collection.
 <br />
 
-Le code suivant est le cœur de la logique pour implémenter ce type de fournisseur, et cet exemple omet l’ajout de tous les membres pour le type fourni. Pour plus d’informations sur chaque membre ajouté, consultez la section correspondante plus loin dans cette rubrique. Pour le code complet, téléchargez l’exemple à partir de la [F # 3.0 exemple Pack](http://fsharp3sample.codeplex.com) sur le site Web Codeplex.
+Le code suivant est le cœur de la logique pour implémenter ce type de fournisseur, et cet exemple omet l’ajout de tous les membres pour le type fourni. Pour plus d’informations sur chaque membre ajouté, consultez la section correspondante plus loin dans cette rubrique. Pour le code complet, téléchargez l’exemple à partir de la [F # 3.0 exemple Pack](https://fsharp3sample.codeplex.com) sur le site Web Codeplex.
 
 ```fsharp
 namespace Samples.FSharp.RegexTypeProvider
@@ -1140,7 +1140,7 @@ Jusqu'à présent, ce document a expliqué comment fournir des types effacées. 
 ```fsharp
 open Microsoft.FSharp.TypeProviders 
 
-type Service = ODataService<" http://services.odata.org/Northwind/Northwind.svc/">
+type Service = ODataService<" https://services.odata.org/Northwind/Northwind.svc/">
 ```
 
 Le code d’assistance ProvidedTypes-0,2 qui fait partie de la version 3.0) (F # prend uniquement en charge limitée pour fournir des types générés. Les instructions suivantes doivent être remplies pour une définition de type généré :
@@ -1196,10 +1196,10 @@ Lorsque vous écrivez des fournisseurs de type, gardez les règles suivantes et 
 Vous trouverez les conseils suivants utiles pendant le processus de développement.
 
 
-- `Run Two Instances of Visual Studio.`Vous pouvez développer le fournisseur de type dans une seule instance et le fournisseur de test dans l’autre, car le test IDE effectuera un verrou sur le fichier .dll qui empêche que le fournisseur de type en cours de reconstruction. Par conséquent, vous devez fermer la deuxième instance de Visual Studio pendant que le fournisseur est créé dans la première instance, puis vous devez rouvrir la deuxième instance une fois le fournisseur est créé.
+- `Run Two Instances of Visual Studio.` Vous pouvez développer le fournisseur de type dans une seule instance et le fournisseur de test dans l’autre, car le test IDE effectuera un verrou sur le fichier .dll qui empêche que le fournisseur de type en cours de reconstruction. Par conséquent, vous devez fermer la deuxième instance de Visual Studio pendant que le fournisseur est créé dans la première instance, puis vous devez rouvrir la deuxième instance une fois le fournisseur est créé.
 <br />
 
-- `Debug type providers by using invocations of fsc.exe.`Vous pouvez appeler des fournisseurs de type à l’aide des outils suivants :
+- `Debug type providers by using invocations of fsc.exe.` Vous pouvez appeler des fournisseurs de type à l’aide des outils suivants :
 <br />
   - FSC.exe (F # de la ligne de commande du compilateur)
 <br />

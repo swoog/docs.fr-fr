@@ -16,15 +16,18 @@ helpviewer_keywords:
 - formatting strings [.NET Framework], how-to topics
 - strings [.NET Framework], formatting
 ms.assetid: 36e7e096-4e6c-4cf2-9ab6-68073026ea0e
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8f09232080bb5c9aae4902dfc33b638bde82474c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a78c1caac318a19028472a2e4f6e8964f99abfba
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="performing-formatting-operations"></a>Exécution d'opérations de mise en forme
 Les rubriques suivantes fournissent des instructions pas à pas pour effectuer des opérations de mise en forme spécifiques.  
@@ -35,7 +38,7 @@ Les rubriques suivantes fournissent des instructions pas à pas pour effectuer d
   
 -   [Guide pratique pour convertir des entrées d'utilisateur numériques figurant dans des contrôles web en nombres](../../../docs/standard/base-types/how-to-convert-numeric-user-input-in-web-controls-to-numbers.md)  
   
--   [Comment : extraire le jour de la semaine d’une Date spécifique](../../../docs/standard/base-types/how-to-extract-the-day-of-the-week-from-a-specific-date.md).  
+-   [Guide pratique pour extraire le jour de la semaine d’une date spécifique](../../../docs/standard/base-types/how-to-extract-the-day-of-the-week-from-a-specific-date.md)  
   
 -   [Guide pratique pour effectuer un aller-retour de valeurs de date et d’heure](../../../docs/standard/base-types/how-to-round-trip-date-and-time-values.md)  
   

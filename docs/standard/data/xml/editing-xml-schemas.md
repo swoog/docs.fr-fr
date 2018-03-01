@@ -13,15 +13,18 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: fa09c8e5-c2b9-49d2-bb0d-40330cd13e4d
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b9505f60b2000ef227463404dab051ecb7fa3cc5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: dd2c5a0e4625a348daad9eccb7bae0e4788cab71
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="editing-xml-schemas"></a>Modification de schémas XML
 La modification d’un schéma XML est l’une des fonctionnalités les plus importantes du SOM (Schema Object Model). Toutes les propriétés de pré-compilation de schéma du SOM peuvent être utilisées pour changer les valeurs existantes d'un schéma XML. Le schéma XML peut ensuite être recompilé pour que les changements prennent effet.  
@@ -29,7 +32,7 @@ La modification d’un schéma XML est l’une des fonctionnalités les plus imp
  La première étape de la modification d'un schéma chargé dans le SOM consiste à parcourir le schéma. Vous devriez savoir comment traverser un schéma à l'aide de l'API du SOM avant de tenter de modifier un schéma. Vous devez aussi bien connaître les propriétés de pré- et post-compilation de schéma du PSCI (Post-Schema-Compilation-Infoset).  
   
 ## <a name="editing-an-xml-schema"></a>Modification d'un schéma XML  
- Dans cette section, les deux exemples de code sont fournis, de modifier le schéma utilisateur créé dans le [création de schémas XML](../../../../docs/standard/data/xml/building-xml-schemas.md) rubrique. Le premier exemple de code ajoute un nouvel élément `PhoneNumber` à l'élément `Customer` ; le second ajoute un nouvel attribut `Title` à l'élément `FirstName`. Le premier exemple utilise aussi la collection de post-compilation de schéma <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> comme moyen de traverser le schéma utilisateur, tandis que le second utilise la collection <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> de pré-compilation de schéma.  
+ Cette section présente deux exemples de code, qui modifient tous deux le schéma utilisateur créé dans la rubrique [Création de schémas XML](../../../../docs/standard/data/xml/building-xml-schemas.md). Le premier exemple de code ajoute un nouvel élément `PhoneNumber` à l'élément `Customer` ; le second ajoute un nouvel attribut `Title` à l'élément `FirstName`. Le premier exemple utilise aussi la collection de post-compilation de schéma <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> comme moyen de traverser le schéma utilisateur, tandis que le second utilise la collection <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> de pré-compilation de schéma.  
   
 ### <a name="phonenumber-element-example"></a>Exemple d'élément PhoneNumber  
  Le premier exemple de code ajoute un nouvel élément `PhoneNumber` à l'élément `Customer` du schéma utilisateur. Cet exemple de code modifie le schéma utilisateur en plusieurs étapes comme suit.  
@@ -54,7 +57,7 @@ La modification d’un schéma XML est l’une des fonctionnalités les plus imp
  [!code-csharp[XmlSchemaEditExample1#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XmlSchemaEditExample1/CS/XmlSchemaEditExample1.cs#1)]
  [!code-vb[XmlSchemaEditExample1#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaEditExample1/VB/XmlSchemaEditExample1.vb#1)]  
   
- Voici le schéma utilisateur modifié créé dans le [création de schémas XML](../../../../docs/standard/data/xml/building-xml-schemas.md) rubrique.  
+ Voici le schéma utilisateur modifié créé dans la rubrique [Création de schémas XML](../../../../docs/standard/data/xml/building-xml-schemas.md).  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -93,7 +96,7 @@ La modification d’un schéma XML est l’une des fonctionnalités les plus imp
   
 5.  Il crée l'attribut `Title` à l'aide de la classe <xref:System.Xml.Schema.XmlSchemaAttribute>, avec un <xref:System.Xml.Schema.XmlSchemaAttribute.SchemaTypeName%2A> comme propriété `xs:string` et ajoute l'attribut à l'extension de contenu simple.  
   
-6.  Il définit le modèle de contenu du contenu simple comme étant l'extension de contenu simple et celui du type complexe comme étant le contenu simple.  
+6.  Il définit le modèle de contenu du contenu simple comme étant l’extension de contenu simple et celui du type complexe comme étant le contenu simple.  
   
 7.  Il ajoute le nouveau type complexe à la collection de pré-compilation de schéma <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType>.  
   
@@ -118,7 +121,7 @@ La modification d’un schéma XML est l’une des fonctionnalités les plus imp
  [!code-csharp[XmlSchemaEditExample2#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XmlSchemaEditExample2/CS/XmlSchemaEditExample2.cs#1)]
  [!code-vb[XmlSchemaEditExample2#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaEditExample2/VB/XmlSchemaEditExample2.vb#1)]  
   
- Voici le schéma utilisateur modifié créé dans le [création de schémas XML](../../../../docs/standard/data/xml/building-xml-schemas.md) rubrique.  
+ Voici le schéma utilisateur modifié créé dans la rubrique [Création de schémas XML](../../../../docs/standard/data/xml/building-xml-schemas.md).  
   
 ```xml  
 <?xml version="1.0" encoding=" utf-8"?>  
@@ -143,10 +146,10 @@ La modification d’un schéma XML est l’une des fonctionnalités les plus imp
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble du modèle objet schéma XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
- [La lecture et écriture de schémas XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
+ [Vue d’ensemble du modèle d’objet de schéma XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
+ [Lecture et écriture de schémas XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
  [Création de schémas XML](../../../../docs/standard/data/xml/building-xml-schemas.md)  
- [Traversée de schémas XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
+ [Parcours des schémas XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
  [Inclusion ou importation de schémas XML](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
- [XmlSchemaSet pour la Compilation du schéma](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
- [Jeu d’informations de post-compilation de schéma](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
+ [XmlSchemaSet pour la compilation de schémas](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+ [Infoset de post-compilation de schéma](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)

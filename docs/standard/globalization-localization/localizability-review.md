@@ -22,30 +22,33 @@ helpviewer_keywords:
 - global applications, localizability
 - localizing resources
 ms.assetid: 3aee2fbb-de47-4e37-8fe4-ddebb9719247
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7633c7fe9e99bde96ee108460e983eff48f1c7f0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2aaf7c466c6662611e2b37d5c967a99d050158df
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="localizability-review"></a>Révision de l'adaptabilité
-La revue de l’adaptabilité est une étape intermédiaire du développement d’une application mondialisable. Il vérifie qu'une application globalisée est prête pour la localisation et identifie tout code ou tous les aspects de l'interface utilisateur qui nécessitent une gestion spéciale. Cette étape permet également de s'assurer que le processus de localisation n'introduira pas de défauts fonctionnels dans votre application. Lorsque tous les problèmes générés par l'examen de l'adaptabilité ont été traités, votre application est prête pour la localisation. Si l'examen de l'adaptabilité est complet, vous n'aurez pas à modifier le code source pendant le processus de localisation.  
+La revue de l’adaptabilité est une étape intermédiaire du développement d’une application mondialisable. Il vérifie qu'une application globalisée est prête pour la localisation et identifie tout code ou tous les aspects de l'interface utilisateur qui nécessitent une gestion spéciale. Cette étape permet également de s'assurer que le processus de localisation n'introduira pas de défauts fonctionnels dans votre application. Lorsque tous les problèmes générés par l'examen de l'adaptabilité ont été traités, votre application est prête pour la localisation. Si la revue de l’adaptabilité est complète, vous n’aurez pas à modifier le code source pendant le processus de localisation.  
   
  La revue de l’adaptabilité inclut les trois contrôles suivants :  
   
--   [Les recommandations de globalisation sont implémentées ?](#global)  
+-   [Les recommandations de globalisation sont-elles implémentées ?](#global)  
   
--   [Fonctionnalités dépendantes de la culture sont gérées correctement ?](#culture)  
+-   [Les fonctionnalités dépendantes de la culture sont-elles gérées correctement ?](#culture)  
   
 -   [Avez-vous testé votre application avec des données internationales ?](#test)  
   
 <a name="global"></a>   
 ## <a name="implementing-globalization-recommendations"></a>Implémentation des recommandations de globalisation  
- Si vous avez conçu et développé votre application à l’esprit la localisation, et si vous avez suivi les recommandations décrites dans le [globalisation](../../../docs/standard/globalization-localization/globalization.md) article, l’adaptabilité est essentiellement un test d’assurance qualité . Sinon, au cours de cette étape, vous devez examiner et mettre en œuvre des recommandations concernant la [globalisation](../../../docs/standard/globalization-localization/globalization.md)et corriger les erreurs dans le code source qui empêchent la localisation.  
+ Si vous avez conçu et développé votre application en gardant à l'esprit la localisation, et si vous avez suivi les recommandations décrites dans l'article [Globalisation](../../../docs/standard/globalization-localization/globalization.md), l'examen de l'adaptabilité sera largement un gage d'assurance qualité. Autrement, pendant cette étape vous devez examiner et exécuter les recommandations en termes de [globalisation](../../../docs/standard/globalization-localization/globalization.md), et corriger les erreurs dans le code source qui empêchent la localisation.  
   
 <a name="culture"></a>   
 ## <a name="handling-culture-sensitive-features"></a>Gestion des fonctionnalités dépendantes de la culture  
@@ -78,7 +81,7 @@ La revue de l’adaptabilité est une étape intermédiaire du développement d�
   
 -   Les comparaisons de chaînes ou les comparaisons d'égalité qui retournent des résultats inattendus.  
   
- Si vous avez suivi les recommandations de globalisation lors du développement de votre application, les fonctionnalités dépendantes de la culture sont-elles gérées correctement et identifié et résolu les problèmes de localisation est survenue pendant le test, vous pouvez passer à l’étape suivante, [Localisation](../../../docs/standard/globalization-localization/localization.md).  
+ Si vous avez suivi les recommandations de globalisation lorsque vous développez votre application, traité correctement les fonctionnalités dépendantes de la culture, et que vous avez identifié et traité les problèmes de localisation qui ont surgi pendant le test, vous pouvez passer à l'étape suivante, à savoir la [localisation](../../../docs/standard/globalization-localization/localization.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Globalisation et localisation](../../../docs/standard/globalization-localization/index.md)  

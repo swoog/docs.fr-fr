@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 9e5d6cea-a98c-461e-a5cc-75f1d154eafd
-ms.openlocfilehash: e003f537c6f0f85b3b0ba932655ae2a54c980bc5
-ms.sourcegitcommit: e2bf8e6bc365bd9a0e86fe81eeae7d14f85f48c1
+ms.openlocfilehash: 905374a60261b0c2a863edb956943d41ae80f04d
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="get-started-with-azure-table-storage-using-f"></a>Prise en main le stockage de Table Azure à l’aide de F # #
 
@@ -187,7 +187,7 @@ Vous pouvez supprimer une table à partir d’un compte de stockage. Une table q
 Maintenant que vous avez appris les notions de base du stockage Table, suivez ces liens pour en savoir plus sur les tâches de stockage plus complexes :
 
 - [API de stockage Azure pour .NET](/dotnet/api/overview/azure/storage)
-- [Fournisseur de Type de stockage Azure](http://fsprojects.github.io/AzureStorageTypeProvider/)
-- [Blog de l’équipe stockage Azure](http://blogs.msdn.com/b/windowsazurestorage/)
+- [Fournisseur de Type de stockage Azure](https://fsprojects.github.io/AzureStorageTypeProvider/)
+- [Blog de l’équipe stockage Azure](https://blogs.msdn.microsoft.com/b/windowsazurestorage/)
 - [Configurez les chaînes de connexion de stockage Azure](/azure/storage/common/storage-configure-connection-string)
 - [Prise en main avec un stockage de Table Windows Azure dans .NET](https://azure.microsoft.com/documentation/samples/storage-table-dotnet-getting-started/)

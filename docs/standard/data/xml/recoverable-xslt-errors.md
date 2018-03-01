@@ -9,15 +9,18 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 484929b0-fefb-4629-87ee-ebdde70ff1f8
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 78149e0e1c84a457f68b67ea8fe4c82098e794ad
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4564530cd173793519471c78105d0394595f6d5c
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="recoverable-xslt-errors"></a>Erreurs XSLT récupérables
 La recommandation du W3C sur XSLT (XSL Transformations) Version 1.0 comprend des zones dans lesquelles le fournisseur d'implémentation peut décider de la manière de gérer une situation. Ces zones sont considérées comme discrétionnaires en termes de comportement. Par exemple, dans la section 7.3 sur la création d'instructions de traitement, la recommandation sur XSLT 1.0 précise que la création de nœuds autres que des nœuds de texte lors d'une instanciation du contenu de `xsl:processing-instruction` génère une erreur. Pour certains problèmes, la recommandation sur XSLT 1.0 indique la décision à prendre si le processeur décide de récupérer l'erreur. Pour le problème donné dans la section 7.3, le W3C indique que l'implémentation peut récupérer cette erreur en ignorant les nœuds et leur contenu.  
@@ -29,7 +32,7 @@ La recommandation du W3C sur XSLT (XSL Transformations) Version 1.0 comprend de
   
 -   L'erreur indique qu'une exception est levée pour cette condition.  
   
--   Vous trouverez les références de section dans le [W3C XSL Transformations (XSLT) Version 1.0 Recommendation](http://go.microsoft.com/fwlink/?LinkId=49919) et [Errata de la spécification W3C XSL Transformations (XSLT) Version 1.0](http://go.microsoft.com/fwlink/?LinkId=49917).  
+-   Les références de section se trouvent dans la [recommandation du W3C sur XSLT (XSL Transformations) Version 1.0](http://www.w3.org/TR/xslt) et dans l'[errata de la spécification du W3C sur XSLT (XSL Transformations) Version 1.0](http://www.w3.org/1999/11/REC-xslt-19991116-errata/).  
   
 |Condition XSLT|Section|Comportement XslCompiledTransform|  
 |--------------------|-------------|-----------------------------------|  
@@ -37,7 +40,7 @@ La recommandation du W3C sur XSLT (XSL Transformations) Version 1.0 comprend de
 |Un nœud source correspond à plusieurs règles de modèle.|5.5|Récupération|  
 |Un URI d'espace de noms est déclaré comme étant un alias pour plusieurs URI d'espace de noms dont la priorité d'importation est identique.|7.1.1|Récupération|  
 |L'attribut `name` de `xsl:attribute` et `xsl:element` généré à partir d'une valeur d'attribut n'est pas un nom qualifié.|7.1.2, 7.1.3|Erreur*|  
-|Deux ensembles d'attributs avec le même nom d'importation et le même nom développé ont un attribut en commun et aucun autre ensemble d'attributs contenant l'attribut commun du même nom n'est d'une importance plus élevée.|7.1.4|Récupération|  
+|Deux ensembles d’attributs avec le même nom d’importation et le même nom développé ont un attribut en commun et aucun autre ensemble d’attributs contenant l’attribut commun du même nom n’est d’une importance plus élevée.|7.1.4|Récupération|  
 |Ajout d'un attribut à un élément après ajout d'enfants.|7.1.3|Erreur*|  
 |Création d'un attribut avec le nom « xmlns »|7.1.3|Erreur*|  
 |Ajout d'un attribut à un nœud que n'est pas un élément.|7.1.3|Erreur*|  
@@ -48,7 +51,7 @@ La recommandation du W3C sur XSLT (XSL Transformations) Version 1.0 comprend de
 |Le résultat de l'instanciation du contenu de `xsl:processing-instruction` contient la chaîne « -- » ou se termine par « - ».|7.4|Récupération|  
 |Le résultat de l'instanciation du contenu de `xsl:comment` crée des nœuds autres que des nœuds de texte.|7.4|Erreur*|  
 |Le modèle d'un élément de liaison de variables retourne un nœud d'attribut ou un nœud d'espace de noms.|11.2|Erreur*|  
-|Une erreur se produit lors de l'extraction de la ressource à partir de l'URI passé dans la fonction de document.|12.1|Erreur|  
+|Une erreur se produit lors de l'extraction de la ressource à partir de l'URI passé dans la fonction de document.|12.1|Error|  
 |La référence URI de la fonction de document contient un identificateur de fragment et une erreur se produit lors du traitement de ce dernier.|12.1|Récupération*|  
 |Il existe plusieurs attributs avec le même nom, mais des valeurs différentes, qui ne sont pas des éléments cdata-section nommés dans `xsl:output` avec la même priorité d'importation.|16|Récupération|  
 |Le processeur ne prend pas en charge l'encodage dans l'attribut d'encodage `xsl:output`.|16.1|Récupération|  
@@ -59,7 +62,7 @@ La recommandation du W3C sur XSLT (XSL Transformations) Version 1.0 comprend de
 |L'attribut `value` d'un `xsl:number` est NAN, infini ou inférieur à 0,5.|errata 24|Récupération|  
 |La collection de nœuds du second argument de la fonction de document est vide et la référence URI est relative.|errata 14|Récupération|  
   
- <sup>*</sup>Ce comportement est différent de celui de la <xref:System.Xml.Xsl.XslTransform> classe. Pour plus d’informations, consultez [implémentation de comportements discrétionnaires dans la classe XslTransform](../../../../docs/standard/data/xml/implementation-of-discretionary-behaviors-in-the-xsltransform-class.md).  
+ <sup>*</sup> Ce comportement diffère de celui de la classe <xref:System.Xml.Xsl.XslTransform>. Pour plus d’informations, consultez [Implémentation de comportements discrétionnaires dans la classe XslTransform](../../../../docs/standard/data/xml/implementation-of-discretionary-behaviors-in-the-xsltransform-class.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Transformations XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)

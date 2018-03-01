@@ -24,32 +24,35 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 35e9549c-1568-4768-ad07-17cc6dff11e1
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 49e03a8d886ccd4ed6e4b2a19692c1874f5928ec
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c7fe7d0a959a490893fba2b2fc7faceedee03879
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-use-components-that-support-the-event-based-asynchronous-pattern"></a>Comment : utiliser des composants qui prennent en charge le modèle asynchrone basé sur des événements
-De nombreux composants vous donnent la possibilité d’effectuer leur travail de façon asynchrone. Le <xref:System.Media.SoundPlayer> et <xref:System.Windows.Forms.PictureBox> composants, par exemple, vous permet de charger les sons et des images « en arrière-plan » pendant que votre thread principal continue de s’exécuter sans interruption.  
+De nombreux composants peuvent effectuer leur travail de façon asynchrone. Les composants <xref:System.Media.SoundPlayer> et <xref:System.Windows.Forms.PictureBox>, par exemple, permettent de charger des sons et des images « en arrière-plan » pendant que le thread principal continue de s’exécuter sans interruption.  
   
- À l’aide des méthodes asynchrones sur une classe qui prend en charge la [Event-based Asynchronous Pattern Overview](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md) peut être aussi simple que l’attachement d’un gestionnaire d’événements pour le composant *MethodName* `Completed` événement, comme vous le feriez pour tout autre événement. Lorsque vous appelez le *MethodName* `Async` (méthode), votre application continue à s’exécuter sans interruption jusqu'à ce que le *MethodName* `Completed` événement est déclenché. Dans votre gestionnaire d’événements, vous pouvez examiner le <xref:System.ComponentModel.AsyncCompletedEventArgs> paramètre pour déterminer si l’opération asynchrone est terminée avec succès ou si elle a été annulée.  
+ Il peut être aussi simple d’utiliser des méthodes asynchrones sur une classe qui prend en charge la [Vue d’ensemble du modèle asynchrone basé sur les événements](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md) que d’attacher un gestionnaire d’événements à l’événement *NomMéthode***Completed**, comme pour n’importe quel autre événement. Lorsque vous appelez la méthode *NomMéthode***Async*, votre application continuera de s’exécuter sans interruption jusqu'à ce que l’événement *NomMéthode***Completed** soit déclenché. Dans votre gestionnaire d’événements, vous pouvez examiner le paramètre <xref:System.ComponentModel.AsyncCompletedEventArgs> pour déterminer si l’opération asynchrone s’est terminée avec succès ou si elle a été annulée.  
   
- Pour plus d’informations sur l’utilisation des gestionnaires d’événements, consultez [vue d’ensemble des gestionnaires d’événements](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md).  
+ Pour plus d’informations sur les gestionnaires d’événements, consultez la page [Vue d’ensemble des gestionnaires d’événements](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md).  
   
- La procédure suivante montre comment utiliser la fonction de chargement d’image asynchrone d’un <xref:System.Windows.Forms.PictureBox> contrôle.  
+ La procédure suivante montre comment utiliser la fonction de chargement d’image asynchrone d’un contrôle <xref:System.Windows.Forms.PictureBox>.  
   
-### <a name="to-enable-a-picturebox-control-to-asynchronously-load-an-image"></a>Pour activer un contrôle PictureBox charger une image de façon asynchrone  
+### <a name="to-enable-a-picturebox-control-to-asynchronously-load-an-image"></a>Autoriser un contrôle PictureBox à charger une image de façon asynchrone  
   
-1.  Créez une instance de la <xref:System.Windows.Forms.PictureBox> composant dans votre formulaire.  
+1.  Créez une instance du composant <xref:System.Windows.Forms.PictureBox> dans votre formulaire.  
   
-2.  Affecter un gestionnaire d’événements pour le <xref:System.Windows.Forms.PictureBox.LoadCompleted> événement.  
+2.  Affectez un gestionnaire d'événements à l'événement <xref:System.Windows.Forms.PictureBox.LoadCompleted>.  
   
-     Recherchez les erreurs qui se sont produites pendant le téléchargement asynchrone. Il s’agit également lorsque vous vérifiez l’annulation.  
+     Regardez si des erreurs s’y sont produites pendant le téléchargement asynchrone. C’est également ici qu’il faut vérifier si une annulation est survenue.  
   
      [!code-csharp[System.Windows.Forms.PictureBox.LoadAsync#2](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.PictureBox.LoadAsync#2](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/VB/Form1.vb#2)]  
@@ -57,7 +60,7 @@ De nombreux composants vous donnent la possibilité d’effectuer leur travail d
      [!code-csharp[System.Windows.Forms.PictureBox.LoadAsync#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/CS/Form1.cs#5)]
      [!code-vb[System.Windows.Forms.PictureBox.LoadAsync#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/VB/Form1.vb#5)]  
   
-3.  Ajoutez deux boutons, appelés `loadButton` et `cancelLoadButton`, à votre formulaire. Ajouter <xref:System.Windows.Forms.Control.Click> gestionnaires d’événements pour démarrer et d’annuler le téléchargement.  
+3.  Ajoutez deux boutons, nommés `loadButton` et `cancelLoadButton`, à votre formulaire. Ajoutez des gestionnaires d’événements <xref:System.Windows.Forms.Control.Click> pour démarrer et annuler le téléchargement.  
   
      [!code-csharp[System.Windows.Forms.PictureBox.LoadAsync#3](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.PictureBox.LoadAsync#3](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/VB/Form1.vb#3)]  
@@ -67,9 +70,9 @@ De nombreux composants vous donnent la possibilité d’effectuer leur travail d
   
 4.  Exécutez l'application.  
   
-     Au fur et à mesure du téléchargement de l’image, vous pouvez déplacer librement le formulaire, réduire et agrandir.  
+     Pendant le téléchargement de l’image, vous pourrez déplacer librement le formulaire, le réduire et l’agrandir.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Guide pratique pour exécuter une opération en arrière-plan](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
  [Vue d’ensemble du modèle asynchrone basé sur les événements](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)  
- [NOT IN BUILD : Multithreading en Visual Basic](http://msdn.microsoft.com/en-us/c731a50c-09c1-4468-9646-54c86b75d269)
+ [ABSENT DE LA BUILD : Multithreading en Visual Basic](http://msdn.microsoft.com/library/c731a50c-09c1-4468-9646-54c86b75d269)

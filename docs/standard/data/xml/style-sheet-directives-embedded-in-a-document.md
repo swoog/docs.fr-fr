@@ -9,18 +9,21 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d79fb295-ebc7-438d-ba1b-05be7d534834
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 8c5cfcc9f35e4a07e9426a4dd24c1e2f04985f16
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b0d4589dc73b4effeff553e5b7bf5562a7602c2d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="style-sheet-directives-embedded-in-a-document"></a>Directives de feuille de style incorporées dans un document
-Il arrive parfois que des données XML existantes contiennent la directive de feuille de style de `<?xml:stylesheet?>`. Microsoft Internet Explorer accepte cette directive comme une alternative à le `<?xml-stylesheet?>` syntaxe. Quand les données XML contiennent une directive `<?xml:stylesheet?>`, comme le montrent les données suivantes, une tentative de chargement de ces données dans le DOM (Document Object Model) XML entraîne la levée d'une exception.  
+Il arrive parfois que des données XML existantes contiennent la directive de feuille de style de `<?xml:stylesheet?>`. Microsoft Internet Explorer accepte cette directive comme une alternative à la syntaxe `<?xml-stylesheet?>`. Quand les données XML contiennent une directive `<?xml:stylesheet?>`, comme le montrent les données suivantes, une tentative de chargement de ces données dans le DOM (Document Object Model) XML entraîne la levée d'une exception.  
   
 ```xml  
 <?xml version="1.0" ?>  
@@ -31,9 +34,9 @@ Il arrive parfois que des données XML existantes contiennent la directive de fe
 </root>  
 ```  
   
- Cela se produit car le `<?xml:stylesheet?>` est considéré comme non valide **ProcessingInstruction** au DOM. N’importe quel **ProcessingInstruction**, selon les espaces de noms dans la spécification XML peut uniquement comporter non-(noms sans deux-points), par opposition à qualifiés (QNames) des noms.  
+ Cela est dû au fait que `<?xml:stylesheet?>` est considéré comme un **ProcessingInstruction** non valide pour le DOM. Conformément à la spécification des espaces de noms XML, tout **ProcessingInstruction** peut uniquement comporter des noms sans deux-points (NCNames), par opposition aux noms qualifiés (QNames).  
   
- À partir de la Section 6 de la spécification XML, l’effet de ces espaces de noms du **charge** et **LoadXml** méthodes sont conformes à la spécification qui est dans un document :  
+ Si l'on s'en tient à la section 6 de cette spécification, la présence des méthodes **Load** et **LoadXml** conformes à cette spécification fait que, dans un document :  
   
 -   tous les types d'éléments et noms d'attributs contiennent un deux-points ou n'en contiennent pas ;  
   
@@ -44,4 +47,4 @@ Il arrive parfois que des données XML existantes contiennent la directive de fe
  Conformément à la recommandation du W3C (World Wide Web Consortium) sur l'association de feuilles de style à des documents XML version 1.0, disponible à l'adresse www.w3.org/TR/xml-stylesheet, l'instruction de traitement destinée à associer une feuille de style XSLT à un document XML est `<?xml-stylesheet?>`, où un trait d'union remplace le signe deux-points.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Document Object Model (DOM) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [DOM (Document Object Model) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

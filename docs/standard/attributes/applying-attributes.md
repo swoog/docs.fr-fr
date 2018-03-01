@@ -16,15 +16,18 @@ helpviewer_keywords:
 - assemblies [.NET Framework], attributes
 - attributes [.NET Framework], applying
 ms.assetid: dd7604eb-9fa3-4b60-b2dd-b47739fa3148
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e23649c5d833bef8b74ec5d3b9c22235756580e0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b55684ec30a69bd9773e19420fbe89ca58fd66dd
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="applying-attributes"></a>Application des attributs
 Effectuez la procédure suivante pour appliquer un attribut à un élément de votre code.  
@@ -37,11 +40,11 @@ Effectuez la procédure suivante pour appliquer un attribut à un élément de v
   
 3.  Spécifiez des paramètres positionnels et des paramètres nommés pour l’attribut.  
   
-     Les paramètres positionnels sont requis et doivent précéder les paramètres nommés. Ils correspondent aux paramètres d’un des constructeurs de l’attribut. Les paramètres nommés sont facultatifs et correspondent aux propriétés de lecture/écriture de l’attribut. En C++ et c#, vous devez spécifier `name` = `value` pour chaque paramètre facultatif, où `name` est le nom de la propriété. Dans Visual Basic, spécifiez `name`:=`value`.  
+     Les paramètres positionnels sont requis et doivent précéder les paramètres nommés. Ils correspondent aux paramètres d’un des constructeurs de l’attribut. Les paramètres nommés sont facultatifs et correspondent aux propriétés de lecture/écriture de l’attribut. En C++ et C#, spécifiez `name`=`value` pour chaque paramètre facultatif, où `name` est le nom de la propriété. Dans Visual Basic, spécifiez `name`:=`value`.  
   
  L’attribut est émis dans des métadonnées lorsque vous compilez votre code et est disponible pour le common language runtime et toute application ou tout outil personnalisé via les services de réflexion du runtime.  
   
- Par convention, tous les noms d’attribut se terminent par Attribute. Toutefois, plusieurs langages qui ciblent le runtime, tels que Visual Basic et C#, ne nécessitent pas de spécifier le nom complet d’un attribut. Par exemple, si vous souhaitez initialiser <xref:System.ObsoleteAttribute?displayProperty=nameWithType>, vous devez uniquement faire référence en tant que **obsolète**.  
+ Par convention, tous les noms d’attribut se terminent par Attribute. Toutefois, plusieurs langages qui ciblent le runtime, tels que Visual Basic et C#, ne nécessitent pas de spécifier le nom complet d’un attribut. Par exemple, si vous souhaitez initialiser <xref:System.ObsoleteAttribute?displayProperty=nameWithType>, vous devez uniquement le référencer en tant qu’attribut **obsolète**.  
   
 ## <a name="applying-an-attribute-to-a-method"></a>Application d’un attribut à une méthode  
  L’exemple de code suivant montre comment déclarer **System.ObsoleteAttribute**, qui marque le code comme obsolète. La chaîne `"Will be removed in next version"` est passée à l’attribut. Cet attribut provoque un avertissement du compilateur qui affiche la chaîne passée lorsque le code que l’attribut décrit est appelé.  

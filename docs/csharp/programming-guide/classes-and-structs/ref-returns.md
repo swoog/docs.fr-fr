@@ -3,45 +3,36 @@ title: "Les valeurs de retour de référence et variables locales ref (Guide C#
 description: "Découvrir comment définir et utiliser des valeurs de retour de référence et des variables locales ref"
 author: rpetrusha
 ms.author: ronpet
-ms.date: 05/30/2017
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.assetid: 18cf7a4b-29f0-4b14-85b8-80af754aabd8
-ms.openlocfilehash: 1d8fb092b578602b5d4f791a3fd14f47dfae1ba6
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: a74563c0d24b6cd2a2fa8534787f078f3cc92674
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="ref-returns-and-ref-locals"></a>Retours ref et variables locales ref
 
-À compter de C# 7, C# prend en charge les valeurs de retour de référence (retours ref). Une valeur de retour de référence permet à une méthode de retourner à un appelant une référence à un objet, plutôt qu’à une valeur. L’appelant peut alors choisir de traiter l’objet retourné comme s’il était retourné par valeur ou par référence. Une valeur retournée par référence que l’appelant gère comme une référence plutôt que comme une valeur est une variable locale ref.
+À compter de C# 7, C# prend en charge les valeurs de retour de référence (retours ref). Une valeur de retour de référence permet à une méthode de retourner à un appelant une référence à une variable, plutôt qu’à une valeur. L’appelant peut alors choisir de traiter la variable retournée comme si elle était retournée par valeur ou par référence. L’appelant peut créer une nouvelle variable qui est elle-même une référence à la valeur retournée, appelée variable locale ref.
 
 ## <a name="what-is-a-reference-return-value"></a>Qu’est-ce qu’une valeur de retour de référence ?
 
-La plupart des développeurs sont familiarisés avec le passage d’un argument à une méthode appelée *par référence*. La liste d’arguments d’une méthode appelée comprend une valeur passée par référence, et toute modification apportée à sa valeur par la méthode appelée est retournée à l’appelant. Une *valeur de retour de référence* est le contraire :
+La plupart des développeurs sont familiarisés avec le passage d’un argument à une méthode appelée *par référence*. La liste d’arguments d’une méthode appelée comprend une variable passée par référence, et toute modification apportée à sa valeur par la méthode appelée est observée par l’appelant. Une *valeur de retour de référence* signifie qu’une méthode retourne une *référence* (ou un alias) à une variable dont l’étendue inclut la méthode et dont la durée de vie doit s’étendre au-delà du retour de la méthode. Des modifications apportées par l’appelant à la valeur de retour de la méthode portent sur la variable qui est retournée par la méthode.
 
-- La valeur de retour de la méthode appelée est une référence, et non pas un argument qui lui est passé.
+La déclaration qu’une méthode retourne une *valeur de retour de référence* indique que la méthode retourne un alias vers une variable. L’intention de conception est souvent que le code appelant ait accès à cette variable à travers l’alias, et qu’il puisse également la modifier. C’est pourquoi les méthodes de retour par référence ne peuvent pas avoir le type de retour `void`.
 
-- L’appelant, et non pas la méthode appelée, peut modifier la valeur retournée par la méthode.
+Certaines restrictions s’appliquent à l’expression qu’une méthode peut retourner comme valeur de retour de référence. Elles incluent notamment :
 
-- Au lieu que les modifications apportées à l’argument soient reflétées dans l’état de l’objet sur l’appelant, les modifications apportées à la valeur de retour de la méthode par l’appelant sont reflétées dans l’état de l’objet dont la méthode a été appelée.
+- La valeur de retour doit avoir une durée de vie qui s’étend au-delà de l’exécution de la méthode. En d’autres termes, il ne peut pas s’agir d’une variable locale dans la méthode qui la retourne. Il peut s’agir d’un champ d’instance ou statique d’une classe, ou bien un argument passé à la méthode. Une tentative de retour d’une variable locale génère l’erreur du compilateur CS8168, « Impossible de retourner la variable locale 'obj' par référence, car il ne s’agit pas d’une variable locale de référence ».
 
-Les valeurs de retour de référence peuvent produire du code plus compact, et permettre également à un objet d’exposer uniquement les éléments de données individuels, tels que d’un élément de tableau, qui sont dignes d’intérêt pour l’appelant. Cela réduit la probabilité que l’appelant modifie par inadvertance l’état de l’objet.
+- La valeur de retour ne peut pas être le littéral `null`. Une tentative de retour de `null` génère l’erreur du compilateur CS8156, « Impossible d’utiliser une expression dans ce contexte, car elle ne peut pas être retournée par référence ».
 
-Certaines restrictions s’appliquent à la valeur qu’une méthode peut retourner comme valeur de retour de référence. Elles incluent notamment :
-
-- La valeur de retour ne peut pas être `void`. Une tentative de définition d’une méthode avec une valeur de retour de référence `void` génère l’erreur du compilateur CS1547, « Le mot clé 'void' ne peut pas être utilisé dans ce contexte ».
+   Une méthode avec un retour de référence peut retourner un alias vers une variable dont la valeur est actuellement la valeur (non instanciée) null ou un [type nullable](../nullable-types/index.md) pour un type valeur.
  
-- La valeur de retour ne peut pas être une variable locale dans la méthode qui la retourne. Elle doit avoir une portée située en dehors de la méthode qui la retourne. Il peut s’agir d’un champ d’instance ou statique d’une classe, ou bien un argument passé à la méthode. Une tentative de retour d’une variable locale génère l’erreur du compilateur CS8168, « Impossible de retourner la variable locale 'obj' par référence, car il ne s’agit pas d’une variable locale de référence ».
-
-- La valeur de retour ne peut pas être `null`. Une tentative de retour de `null` génère l’erreur du compilateur CS8156, « Impossible d’utiliser une expression dans ce contexte, car elle ne peut pas être retournée par référence ».
-
-   Si une méthode avec un retour ref doit retourner une valeur null, vous pouvez retourner une valeur null (non instanciée) pour un type référence ou un [type nullable](../nullable-types/index.md) pour un type valeur.
- 
-- La valeur de retour ne peut pas être une constante, un membre d’énumération ou une propriété d’un `class` ou d’un `struct`. Une tentative de retour de ces éléments génère l’erreur du compilateur CS8156, « Impossible d’utiliser une expression dans ce contexte, car elle ne peut pas être retournée par référence ».
+- La valeur de retour ne peut pas être une constante, un membre d’énumération, la valeur de retour par valeur d’une propriété, ou une méthode d’une `class` ou d’un `struct`. Une tentative de retour de ces éléments génère l’erreur du compilateur CS8156, « Impossible d’utiliser une expression dans ce contexte, car elle ne peut pas être retournée par référence ».
 
 De plus, étant donné qu’une méthode asynchrone peut retourner une valeur avant que son exécution soit terminée, alors que sa valeur de retour est toujours inconnue, les valeurs de retour de référence ne sont pas autorisées sur les méthodes async.
  
@@ -53,7 +44,7 @@ Vous définissez une valeur de retour de référence en ajoutant le mot clé [r
 public ref Person GetContactInformation(string fname, string lname);
 ```
 
-De plus, le nom de l’objet retourné par chaque instruction [return](../../language-reference/keywords/return.md) dans le corps de la méthode doit être précédé du mot clé [ref](../../language-reference/keywords/ref.md). Par exemple, l’instruction `return` suivante retourne un objet `Person` nommé `p` par référence :
+De plus, le nom de l’objet retourné par chaque instruction [return](../../language-reference/keywords/return.md) dans le corps de la méthode doit être précédé du mot clé [ref](../../language-reference/keywords/ref.md). Par exemple, l’instruction `return` suivante retourne une référence à un objet `Person` nommé `p` :
 
 ```csharp
 return ref p;
@@ -61,25 +52,40 @@ return ref p;
 
 ## <a name="consuming-a-ref-return-value"></a>Utilisation d’une valeur de retour de référence
 
-Un appelant peut gérer une valeur de retour de référence de deux manières :
+La valeur de retour de référence est l’alias vers une autre variable dans l’étendue de la méthode appelée. Toute utilisation d’une valeur de retour de référence revient à utiliser la variable dont elle est l’alias :
 
-- Comme une valeur ordinaire retournée par valeur à partir d’une méthode. L’appelant peut choisir d’ignorer que la valeur de retour est une valeur de retour de référence. Dans ce cas, toute modification apportée à la valeur retournée par l’appel de méthode n’est pas reflétée dans l’état du type appelé. Si la valeur retournée est un type valeur, toute modification apportée à la valeur retournée par l’appel de méthode n’est pas reflétée dans l’état du type appelé.
+- Quand vous lui affectez une valeur, vous affectez une valeur à la variable dont elle est l’alias.
+- Quand vous lisez sa valeur, vous lisez la valeur de la variable dont elle est l’alias.
+- Si vous la retournez *par référence*, vous retournez un alias vers cette même variable.
+- Si vous la passez à une autre méthode *par référence*, vous passez une référence à la variable dont elle est l’alias.
+- Quand vous créez un alias de [variable locale ref](#ref-local), vous créez un nouvel alias vers la même variable.
 
-- Comme valeur de retour de référence. L’appelant doit définir la variable à laquelle la valeur de retour de référence est affectée comme une [variable locale ref](#ref-local), et toute modification apportée à la valeur retournée par l’appel de méthode est reflétée dans l’état du type appelé. 
 
 ## <a name="ref-locals"></a>Variables locales ref
 
-Pour gérer la valeur de retour de référence comme une référence, l’appelant doit déclarer la valeur comme étant une *variable locale ref* à l’aide du mot clé `ref`. Par exemple, si la valeur retournée par la méthode `Person.GetContactInfomation` doit être utilisée comme une référence plutôt que comme une valeur, l’appel de la méthode se présente ainsi :
+Partez du principe que la méthode `GetContactInformation` est déclarée comme un retour de référence :
+
+```csharp
+public ref Person GetContactInformation(string fname, string lname)
+```
+
+Une affectation par valeur lit la valeur d’une variable et l’affecte à une nouvelle variable :
+
+```csharp
+Person p = contacts.GetContactInformation("Brandie", "Best");
+```
+
+L’affectation précédente déclare `p` comme une variable locale. Sa valeur initiale est copiée à partir de la lecture de la valeur retournée par `GetContactInformation`. Toute affectation future à `p` ne modifiera en rien la valeur de la variable renvoyée par `GetContactInformation`. La variable `p` n’est plus un alias vers la variable retournée.
+
+Vous déclarez une variable *locale ref* pour copier l’alias vers la valeur d’origine. Dans l’affectation suivante, `p` est un alias vers la variable retournée à partir de `GetContactInformation`.
 
 ```csharp
 ref Person p = ref contacts.GetContactInformation("Brandie", "Best");
 ```
 
-Notez que le mot clé `ref` est utilisé à la fois avant la déclaration de la variable locale *et* avant l’appel de la méthode. Si les deux mots clés `ref` ne sont pas inclus dans la déclaration et l’affectation de la variable, l’erreur du compilateur CS8172, « Impossible d’initialiser une variable par référence avec une valeur » est générée. 
- 
-Les modifications ultérieures apportées à l’objet `Person` retourné par la méthode sont reflétées dans l’objet `contacts`.
+L’utilisation ultérieure de `p` revient à utiliser la variable retournée par `GetContactInformation`, car `p` est un alias de cette variable. Les modifications apportées à `p` modifient également la variable retournée à partir de `GetContactInformation`.
 
-Si `p` n’est pas défini comme une variable locale ref à l’aide du mot clé `ref`, toute modification apportée à `p` par l’appelant n’est pas reflétée dans l’objet `contacts`.
+Notez que le mot clé `ref` est utilisé à la fois avant la déclaration de la variable locale *et* avant l’appel de la méthode. Si les deux mots clés `ref` ne sont pas inclus dans la déclaration et l’affectation de la variable, l’erreur du compilateur CS8172, « Impossible d’initialiser une variable par référence avec une valeur » est générée. 
  
 ## <a name="ref-returns-and-ref-locals-an-example"></a>Retours ref et variables locales ref : exemple
 

@@ -1,7 +1,7 @@
 ### YamlMime:Tutorial
 title: Hello C#
 metadata:
-  title: "Hello C#. Votre première introduction au langage C#."
+  title: "Didacticiel interactif sur Hello World - Guides de démarrage rapide en C#"
   description: "Dans ce guide de démarrage rapide, vous allez utiliser votre navigateur pour découvrir C# de manière interactive. Vous allez écrire un code C# et afficher les résultats de la compilation et de l’exécution du code directement dans le navigateur."
   audience: Developer
   level: Beginner
@@ -13,11 +13,11 @@ metadata:
   ms.custom: mvc
   ms.prod: .net
   ms.technology: devlang-csharp
-  ms.openlocfilehash: ca5fbcd903c5fd3aae35a4a1c4842f488d66fcf0
-  ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+  ms.openlocfilehash: 7bc970e3c6eb93bf98323bd266b8c6a49f0cc1d0
+  ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
   ms.translationtype: HT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 01/20/2018
+  ms.lasthandoff: 02/01/2018
 items:
 - durationInMinutes: 1
   content: "Ce guide de démarrage rapide vous explique comment utiliser C# de manière interactive à l’aide de votre navigateur et comment afficher les résultats de la compilation et de l’exécution de votre code. Il contient une série de leçons qui commencent par un programme « Hello World ». Ces leçons présentent les concepts de base du langage C#.\n"

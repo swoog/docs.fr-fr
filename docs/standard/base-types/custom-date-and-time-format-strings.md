@@ -20,15 +20,18 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-caps.latest.revision: "79"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f0346de00988a6863c212a95be3ffa9d356fe5ce
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 503f9d593235cc81c6e2ecf43b93abb2105e0adf
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="custom-date-and-time-format-strings"></a>Chaînes de format de date et d'heure personnalisées
 Une chaîne de format de date et d'heure définit la représentation textuelle d'une valeur <xref:System.DateTime> ou <xref:System.DateTimeOffset> qui résulte d'une opération de mise en forme. Elle peut également définir la représentation d'une valeur de date et d'heure qui est requise dans une opération d'analyse afin de convertir correctement la chaîne sous forme de date et d'heure. Une chaîne de format personnalisée se compose d'un ou de plusieurs spécificateurs de format de date et d'heure personnalisés. Toute chaîne autre qu’une [chaîne de format de date et d’heure standard](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) est interprétée comme une chaîne de format de date et d’heure personnalisée.  
@@ -358,7 +361,7 @@ Une chaîne de format de date et d'heure définit la représentation textuelle d
   
 -   Pour une heure d'un fuseau horaire non spécifié (une heure dont la propriété <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> a la valeur <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>), le résultat est équivalent à <xref:System.String.Empty?displayProperty=nameWithType>.  
   
- Pour <xref:System.DateTimeOffset> valeurs, le spécificateur de format « K » est équivalents au spécificateur de format « zzz » et produit une chaîne de résultat contenant le <xref:System.DateTimeOffset> valeur de décalage par rapport à l’heure UTC.  
+ Pour les valeurs <xref:System.DateTimeOffset>, le spécificateur de format "K" est équivalent au spécificateur de format "zzz", et produit une chaîne de résultat contenant l'offset de la valeur <xref:System.DateTimeOffset> par rapport à l'heure UTC.  
   
  Si le spécificateur de format "K" est utilisé sans autre spécificateur de format personnalisé, il est interprété comme un spécificateur de format de date et d'heure standard et lève un <xref:System.FormatException>. Pour plus d’informations sur l’utilisation d’un spécificateur de format unique, consultez [Utilisation de spécificateurs de format personnalisés uniques](#UsingSingleSpecifiers), plus loin dans cette rubrique.  
   
@@ -691,7 +694,7 @@ Une chaîne de format de date et d'heure définit la représentation textuelle d
 ### <a name="control-panel-settings"></a>Paramètres du panneau de configuration  
  Les paramètres **Options régionales et linguistiques** du Panneau de configuration influencent la chaîne de résultat produite par une opération de mise en forme qui inclut une grande partie des spécificateurs de format de date et d’heure personnalisés. Ces paramètres sont utilisés pour initialiser l'objet <xref:System.Globalization.DateTimeFormatInfo> associé à la culture du thread en cours qui fournit des valeurs utilisées pour indiquer la mise en forme. Les ordinateurs qui utilisent des paramètres différents génèrent des chaînes de résultat différentes.  
   
- En outre, si vous utilisez la <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> constructeur pour instancier un nouvel <xref:System.Globalization.CultureInfo> objet qui représente la même culture que la culture système en cours, toutes les personnalisations établies par le **Options régionales et linguistiques** élément dans le panneau de configuration est appliquée au nouvel <xref:System.Globalization.CultureInfo> objet. Vous pouvez utiliser le constructeur <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> pour créer un objet <xref:System.Globalization.CultureInfo> qui ne reflète pas les personnalisations d'un système.  
+ De plus, si vous utilisez le constructeur <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> pour instancier un nouvel objet <xref:System.Globalization.CultureInfo> qui représente la même culture que la culture système en cours, toutes les personnalisations établies par l'élément **Options régionales et linguistiques** du Panneau de configuration seront appliquées au nouvel objet <xref:System.Globalization.CultureInfo>. Vous pouvez utiliser le constructeur <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> pour créer un objet <xref:System.Globalization.CultureInfo> qui ne reflète pas les personnalisations d'un système.  
   
 ### <a name="datetimeformatinfo-properties"></a>Propriétés DateTimeFormatInfo  
  La mise en forme dépend des propriétés de l'objet <xref:System.Globalization.DateTimeFormatInfo> actif, qui est fourni implicitement par la culture actuelle du thread ou explicitement par le paramètre <xref:System.IFormatProvider> de la méthode qui appelle la mise en forme. Pour le paramètre <xref:System.IFormatProvider>, vous devez spécifier un objet <xref:System.Globalization.CultureInfo> qui représente une culture, ou un objet <xref:System.Globalization.DateTimeFormatInfo>.  
