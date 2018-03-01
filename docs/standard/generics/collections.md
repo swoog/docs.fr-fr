@@ -16,21 +16,24 @@ helpviewer_keywords:
 - generics [.NET Framework], collections
 - generic collections [.NET Framework]
 ms.assetid: 5b646751-6ab7-465c-916c-b1a76aefa9f5
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 94da20072f793e137b0b7545c1a658ed20537a7f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d7e7d11446c14cffbef1e5cade5f082874187636
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="generic-collections-in-the-net-framework"></a>Collections génériques dans le .NET Framework
-Cette rubrique donne une vue d'ensemble des classes de collections génériques et d'autres types génériques dans le .NET Framework.  
+Cette rubrique donne une vue d’ensemble des classes de collections génériques et d’autres types génériques dans le .NET Framework.  
   
 ## <a name="generic-collections-in-the-net-framework"></a>Collections génériques dans le .NET Framework  
- Le .NET Framework fournit plusieurs classes de collection génériques dans les espaces de noms <xref:System.Collections.Generic> et <xref:System.Collections.ObjectModel>. Pour plus d’informations sur ces classes, consultez [utilisé Types de collections couramment](../../../docs/standard/collections/commonly-used-collection-types.md).  
+ Le .NET Framework fournit plusieurs classes de collection génériques dans les espaces de noms <xref:System.Collections.Generic> et <xref:System.Collections.ObjectModel>. Pour plus d’informations sur ces classes, consultez [Types de collections couramment utilisés](../../../docs/standard/collections/commonly-used-collection-types.md).  
   
 ### <a name="systemcollectionsgeneric"></a>System.Collections.Generic  
  La plupart des types de collections génériques sont des équivalents directs de types non génériques. <xref:System.Collections.Generic.Dictionary%602> est une version générique de <xref:System.Collections.Hashtable> ; elle utilise la structure générique <xref:System.Collections.Generic.KeyValuePair%602> pour l'énumération, au lieu de <xref:System.Collections.DictionaryEntry>.  
