@@ -19,40 +19,43 @@ helpviewer_keywords:
 - reading data, strings
 - streams, reading characters from string
 ms.assetid: 27ea5e52-6db8-42d8-980a-50bcfc7fd270
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 9116ec63bfc1d12daf7627186a52bd29d5918485
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b8c41350431f49b638c4353e68c9bacded947a1d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="how-to-read-characters-from-a-string"></a><span data-ttu-id="2ca31-102">Comment : lire les caractères d'une chaîne</span><span class="sxs-lookup"><span data-stu-id="2ca31-102">How to: Read Characters from a String</span></span>
-<span data-ttu-id="2ca31-103">Les exemples de code suivants montrent comment lire les caractères d’une chaîne de façon synchrone et asynchrone.</span><span class="sxs-lookup"><span data-stu-id="2ca31-103">The following code examples show how to read characters synchronously and asynchronously from a string.</span></span>  
+# <a name="how-to-read-characters-from-a-string"></a><span data-ttu-id="22a14-102">Comment : lire les caractères d'une chaîne</span><span class="sxs-lookup"><span data-stu-id="22a14-102">How to: Read Characters from a String</span></span>
+<span data-ttu-id="22a14-103">Les exemples de code suivants montrent comment lire des caractères de façon synchrone et asynchrone à partir d’une chaîne.</span><span class="sxs-lookup"><span data-stu-id="22a14-103">The following code examples show how to read characters synchronously and asynchronously from a string.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="2ca31-104">Exemple</span><span class="sxs-lookup"><span data-stu-id="2ca31-104">Example</span></span>  
- <span data-ttu-id="2ca31-105">Cet exemple lit 13 caractères de façon synchrone à partir d’une chaîne, les stocke dans un tableau et affiche ces caractères.</span><span class="sxs-lookup"><span data-stu-id="2ca31-105">This example reads 13 characters synchronously from a string, stores them in an array, and displays those characters.</span></span> <span data-ttu-id="2ca31-106">Il lit les caractères restants dans la chaîne, les stocke dans le tableau en commençant à la sixième élément et affiche le contenu du tableau.</span><span class="sxs-lookup"><span data-stu-id="2ca31-106">It then reads the remaining characters in the string, stores them in the array starting at the sixth element, and displays the contents of the array.</span></span>  
+## <a name="example"></a><span data-ttu-id="22a14-104">Exemple</span><span class="sxs-lookup"><span data-stu-id="22a14-104">Example</span></span>  
+ <span data-ttu-id="22a14-105">Cet exemple lit 13 caractères de façon synchrone à partir d’une chaîne, les stocke dans un tableau et les affiche.</span><span class="sxs-lookup"><span data-stu-id="22a14-105">This example reads 13 characters synchronously from a string, stores them in an array, and displays those characters.</span></span> <span data-ttu-id="22a14-106">Ensuite, il lit les caractères restants de la chaîne, les stocke dans le tableau à partir du sixième élément et affiche le contenu du tableau.</span><span class="sxs-lookup"><span data-stu-id="22a14-106">It then reads the remaining characters in the string, stores them in the array starting at the sixth element, and displays the contents of the array.</span></span>  
   
  [!code-cpp[Conceptual.StringReader#1](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.stringreader/cpp/source.cpp#1)]
  [!code-csharp[Conceptual.StringReader#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.stringreader/cs/source.cs#1)]
  [!code-vb[Conceptual.StringReader#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.stringreader/vb/source.vb#1)]  
   
-## <a name="example"></a><span data-ttu-id="2ca31-107">Exemple</span><span class="sxs-lookup"><span data-stu-id="2ca31-107">Example</span></span>  
- <span data-ttu-id="2ca31-108">L’exemple suivant lit tous les caractères de façon asynchrone un <xref:System.Windows.Controls.TextBox> de contrôle et les stocke dans un tableau.</span><span class="sxs-lookup"><span data-stu-id="2ca31-108">The next example reads all the characters asynchronously from a <xref:System.Windows.Controls.TextBox> control, and stores them in an array.</span></span> <span data-ttu-id="2ca31-109">Il puis écrit de façon asynchrone chaque caractère lettre ou un espace blanc sur une ligne distincte, suivie d’un saut de ligne à un <xref:System.Windows.Controls.TextBlock> contrôle.</span><span class="sxs-lookup"><span data-stu-id="2ca31-109">It then asynchronously writes each letter or white space character on a separate line followed by a line break to a <xref:System.Windows.Controls.TextBlock> control.</span></span>  
+## <a name="example"></a><span data-ttu-id="22a14-107">Exemple</span><span class="sxs-lookup"><span data-stu-id="22a14-107">Example</span></span>  
+ <span data-ttu-id="22a14-108">L’exemple suivant lit tous les caractères de façon asynchrone à partir d’un contrôle <xref:System.Windows.Controls.TextBox> et les stocke dans un tableau.</span><span class="sxs-lookup"><span data-stu-id="22a14-108">The next example reads all the characters asynchronously from a <xref:System.Windows.Controls.TextBox> control, and stores them in an array.</span></span> <span data-ttu-id="22a14-109">Ensuite, il écrit de façon asynchrone chaque lettre ou espace blanc sur une ligne distincte, suivie d’un saut de ligne dans un contrôle <xref:System.Windows.Controls.TextBlock>.</span><span class="sxs-lookup"><span data-stu-id="22a14-109">It then asynchronously writes each letter or white space character on a separate line followed by a line break to a <xref:System.Windows.Controls.TextBlock> control.</span></span>  
   
  [!code-csharp[Conceptual.StringReader#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.stringreader/cs/source2.cs#2)]
  [!code-vb[Conceptual.StringReader#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.stringreader/vb/source2.vb#2)]  
   
-## <a name="see-also"></a><span data-ttu-id="2ca31-110">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="2ca31-110">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="22a14-110">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="22a14-110">See Also</span></span>  
  <xref:System.IO.StringReader>  
  <xref:System.IO.StringReader.Read%2A?displayProperty=nameWithType>  
- [<span data-ttu-id="2ca31-111">E/S sur fichier asynchrones</span><span class="sxs-lookup"><span data-stu-id="2ca31-111">Asynchronous File I/O</span></span>](../../../docs/standard/io/asynchronous-file-i-o.md)  
- [<span data-ttu-id="2ca31-112">NIB : Comment : créer une liste de répertoires</span><span class="sxs-lookup"><span data-stu-id="2ca31-112">NIB: How to: Create a Directory Listing</span></span>](http://msdn.microsoft.com/en-us/4d2772b1-b991-4532-a8a6-6ef733277e69)  
- [<span data-ttu-id="2ca31-113">Comment : lire et écrire dans un fichier de données créé récemment</span><span class="sxs-lookup"><span data-stu-id="2ca31-113">How to: Read and Write to a Newly Created Data File</span></span>](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)  
- [<span data-ttu-id="2ca31-114">Comment : ouvrir un fichier journal et y ajouter des éléments</span><span class="sxs-lookup"><span data-stu-id="2ca31-114">How to: Open and Append to a Log File</span></span>](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)  
- [<span data-ttu-id="2ca31-115">Comment : lire du texte dans un fichier</span><span class="sxs-lookup"><span data-stu-id="2ca31-115">How to: Read Text from a File</span></span>](../../../docs/standard/io/how-to-read-text-from-a-file.md)  
- [<span data-ttu-id="2ca31-116">Comment : écrire du texte dans un fichier</span><span class="sxs-lookup"><span data-stu-id="2ca31-116">How to: Write Text to a File</span></span>](../../../docs/standard/io/how-to-write-text-to-a-file.md)  
- [<span data-ttu-id="2ca31-117">Comment : écrire des caractères dans une chaîne</span><span class="sxs-lookup"><span data-stu-id="2ca31-117">How to: Write Characters to a String</span></span>](../../../docs/standard/io/how-to-write-characters-to-a-string.md)  
- [<span data-ttu-id="2ca31-118">Fichier et flux de données E/S</span><span class="sxs-lookup"><span data-stu-id="2ca31-118">File and Stream I-O</span></span>](../../../docs/standard/io/index.md)
+ [<span data-ttu-id="22a14-111">E/S sur fichier asynchrones</span><span class="sxs-lookup"><span data-stu-id="22a14-111">Asynchronous File I/O</span></span>](../../../docs/standard/io/asynchronous-file-i-o.md)  
+ [<span data-ttu-id="22a14-112">NIB : Guide pratique : créer un listing de répertoires</span><span class="sxs-lookup"><span data-stu-id="22a14-112">NIB: How to: Create a Directory Listing</span></span>](http://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69)  
+ [<span data-ttu-id="22a14-113">Comment : lire et écrire dans un fichier de données créé récemment</span><span class="sxs-lookup"><span data-stu-id="22a14-113">How to: Read and Write to a Newly Created Data File</span></span>](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)  
+ [<span data-ttu-id="22a14-114">Comment : ouvrir un fichier journal et y ajouter des éléments</span><span class="sxs-lookup"><span data-stu-id="22a14-114">How to: Open and Append to a Log File</span></span>](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)  
+ [<span data-ttu-id="22a14-115">Comment : lire du texte dans un fichier</span><span class="sxs-lookup"><span data-stu-id="22a14-115">How to: Read Text from a File</span></span>](../../../docs/standard/io/how-to-read-text-from-a-file.md)  
+ [<span data-ttu-id="22a14-116">Comment : écrire du texte dans un fichier</span><span class="sxs-lookup"><span data-stu-id="22a14-116">How to: Write Text to a File</span></span>](../../../docs/standard/io/how-to-write-text-to-a-file.md)  
+ [<span data-ttu-id="22a14-117">Comment : écrire des caractères dans une chaîne</span><span class="sxs-lookup"><span data-stu-id="22a14-117">How to: Write Characters to a String</span></span>](../../../docs/standard/io/how-to-write-characters-to-a-string.md)  
+ [<span data-ttu-id="22a14-118">Fichier et flux de données E/S</span><span class="sxs-lookup"><span data-stu-id="22a14-118">File and Stream I-O</span></span>](../../../docs/standard/io/index.md)

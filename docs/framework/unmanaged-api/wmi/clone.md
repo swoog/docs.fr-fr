@@ -3,18 +3,26 @@ title: "Clone (fonction) (référence des API non managées)"
 description: "La fonction de clonage retourne un nouvel objet qui est un clone complet de l’objet actuel."
 ms.date: 11/06/2017
 ms.prod: .net-framework
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.topic: reference
-api_name: Clone
-api_location: WMINet_Utils.dll
-api_type: DLLExport
-f1_keywords: Clone
-helpviewer_keywords: Clone function [.NET WMI and performance counters]
-topic_type: Reference
+api_name:
+- Clone
+api_location:
+- WMINet_Utils.dll
+api_type:
+- DLLExport
+f1_keywords:
+- Clone
+helpviewer_keywords:
+- Clone function [.NET WMI and performance counters]
+topic_type:
+- Reference
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 270150bb674ee7f9a71cf28008c663e3b833600d
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
