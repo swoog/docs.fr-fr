@@ -5,23 +5,30 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: reference
-api_name: IMetaDataImport.GetCustomAttributeByName
-api_location: mscoree.dll
-api_type: COM
-f1_keywords: IMetaDataImport::GetCustomAttributeByName
+api_name:
+- IMetaDataImport.GetCustomAttributeByName
+api_location:
+- mscoree.dll
+api_type:
+- COM
+f1_keywords:
+- IMetaDataImport::GetCustomAttributeByName
 helpviewer_keywords:
 - IMetaDataImport::GetCustomAttributeByName method [.NET Framework metadata]
 - GetCustomAttributeByName method [.NET Framework metadata]
 ms.assetid: 909aa530-2e3b-4d0a-a38a-a2750e535d7d
-topic_type: apiref
-caps.latest.revision: "12"
+topic_type:
+- apiref
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 7d234a58d95203a26e8b1cab2cb936e6ee50c2fa
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
@@ -53,7 +60,7 @@ HRESULT GetCustomAttributeByName (
  <span data-ttu-id="26bc9-108">[out] Pointeur vers un tableau de données qui est la valeur de l’attribut personnalisé.</span><span class="sxs-lookup"><span data-stu-id="26bc9-108">[out] A pointer to an array of data that is the value of the custom attribute.</span></span>  
   
  `pcbData`  
- <span data-ttu-id="26bc9-109">[out] La taille en octets des données retournées dans *`ppData`.</span><span class="sxs-lookup"><span data-stu-id="26bc9-109">[out] The size in bytes of the data returned in *`ppData`.</span></span>  
+ <span data-ttu-id="26bc9-109">[out] La taille en octets des données retournées dans \*`ppData`.</span><span class="sxs-lookup"><span data-stu-id="26bc9-109">[out] The size in bytes of the data returned in \*`ppData`.</span></span>  
   
 ## <a name="remarks"></a><span data-ttu-id="26bc9-110">Notes</span><span class="sxs-lookup"><span data-stu-id="26bc9-110">Remarks</span></span>  
  <span data-ttu-id="26bc9-111">Il est permis de définir plusieurs attributs personnalisés pour le même propriétaire ; ils peuvent même avoir le même nom.</span><span class="sxs-lookup"><span data-stu-id="26bc9-111">It is legal to define multiple custom attributes for the same owner; they may even have the same name.</span></span> <span data-ttu-id="26bc9-112">Toutefois, `GetCustomAttributeByName` ne retourne qu’une seule instance.</span><span class="sxs-lookup"><span data-stu-id="26bc9-112">However, `GetCustomAttributeByName` returns only one instance.</span></span> <span data-ttu-id="26bc9-113">(`GetCustomAttributeByName` retourne la première instance qu’il rencontre.) Pour rechercher toutes les instances d’un attribut personnalisé, appelez le [IMetaDataImport::EnumCustomAttributes](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumcustomattributes-method.md) (méthode).</span><span class="sxs-lookup"><span data-stu-id="26bc9-113">(`GetCustomAttributeByName` returns the first instance that it encounters.) To find all instances of a custom attribute, call the [IMetaDataImport::EnumCustomAttributes](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumcustomattributes-method.md) method.</span></span>  
