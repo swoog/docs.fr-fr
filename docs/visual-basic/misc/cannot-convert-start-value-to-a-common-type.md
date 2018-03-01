@@ -2,11 +2,13 @@
 title: "Impossible de convertir la valeur de début de type &#39; &lt;type1&gt;&#39; valeur limite de &#39;&lt; type2&gt;&#39; et valeur de pas de &#39;&lt; Type3&gt;&#39; pour un type commun"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrForLoop_CommonType3
+f1_keywords:
+- vbrForLoop_CommonType3
 ms.assetid: 21c45bcf-539c-488a-9cae-221558c37146
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 04bcc14bf1ce85423c5a5a99659955c62c74d8a5
