@@ -8,7 +8,8 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: VS.RegularExpressionBuilder
+f1_keywords:
+- VS.RegularExpressionBuilder
 helpviewer_keywords:
 - regex cheat sheet
 - parsing text with regular expressions, language elements
@@ -19,15 +20,18 @@ helpviewer_keywords:
 - cheat sheet
 - .NET Framework regular expressions, language elements
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
-caps.latest.revision: "56"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ab77293796eb20b1056f57f64903beb9357a80c5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a0fed14784327c6fe16f083a22471b56032b6b5d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="regular-expression-language---quick-reference"></a>Langage des expressions régulières - Aide-mémoire
 <a name="top"></a> Une expression régulière est un modèle que le moteur des expressions régulières tente de faire correspondre dans le texte d’entrée. Un modèle se compose d'un ou de plusieurs littéraux de caractère, opérateurs ou constructions.  Pour obtenir une brève présentation, consultez [Expressions régulières .NET](../../../docs/standard/base-types/regular-expressions.md).  
@@ -54,7 +58,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="character-escapes"></a>Caractères d'échappement  
  La barre oblique inverse (\\) dans une expression régulière indique que le caractère qui le suit est un caractère spécial (comme indiqué dans le tableau suivant), ou qu’il doit être interprété littéralement. Pour plus d’informations, consultez [Caractères d’échappement](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md).  
   
-|Caractère d'échappement|Description|Modèle|Correspondances|  
+|Caractère d'échappement|Description|Motif|Correspondances|  
 |-----------------------|-----------------|-------------|-------------|  
 |`\a`|Correspond à un caractère de cloche, \u0007.|`\a`|"\u0007" dans "Erreur !" + ’\u0007’|  
 |`\b`|Dans une classe de caractères, correspond à un retour arrière, \u0008.|`[\b]{3,}`|"\b\b\b\b" dans "\b\b\b\b"|  
@@ -68,7 +72,7 @@ ms.lasthandoff: 11/21/2017
 |`\x` *nn*|Utilise une représentation hexadécimale pour spécifier un caractère (*nn* se compose de deux chiffres exactement).|`\w\x20\w`|"a b", "c d" dans<br /><br /> "a bc d"|  
 |`\c` *X*<br /><br /> `\c` *x*|Correspond au caractère de contrôle ASCII spécifié par *X* ou *x*, où *X* ou *x* représente la lettre du caractère de contrôle.|`\cC`|"\x0003" dans "\x0003" (Ctrl-C)|  
 |`\u` *nnnn*|Correspond à un caractère Unicode en utilisant la représentation hexadécimale (quatre chiffres exactement, représentés par *nnnn*).|`\w\u0020\w`|"a b", "c d" dans<br /><br /> "a bc d"|  
-|`\`|Lorsque ce caractère d'échappement est suivi d'un caractère non identifié comme caractère d'échappement, correspond au caractère lui-même. Par exemple, `\*` est identique à `\x2A`et `\.` est identique à `\x2E`. Cela permet au moteur d’expression régulière lever l’ambiguïté d’éléments de langage (tels que \* ou ?) et de caractères littéraux (représentés par `\*` ou `\?`).|`\d+[\+-x\*]\d+`|« 2 + 2 » et « 3\*9" dans"(2+2) \* 3\*9 »|  
+|`\`|Lorsque ce caractère d'échappement est suivi d'un caractère non identifié comme caractère d'échappement, correspond au caractère lui-même. Par exemple, `\*` est identique à `\x2A`et `\.` est identique à `\x2E`. Cela permet au moteur des expressions régulières de lever l'ambiguïté d'éléments de langage (tels que \* ou ?) et de caractères littéraux (représentés par `\*` ou `\?`).|`\d+[\+-x\*]\d+`|"2+2" et "3\*9" dans "(2+2) \* 3\*9"|  
   
  [Retour au début](#top)  
   
@@ -76,7 +80,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="character-classes"></a>Classes de caractères  
  Une classe de caractères fait correspondre tout caractère d'un jeu de caractères. Les classes de caractères incluent les éléments de langage répertoriés dans le tableau suivant. Pour plus d'informations, consultez [Character Classes](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).  
   
-|Classe de caractères|Description|Modèle|Correspondances|  
+|Classe de caractères|Description|Motif|Correspondances|  
 |---------------------|-----------------|-------------|-------------|  
 |`[` *groupe_caractères* `]`|Correspond à n'importe quel caractère unique de *groupe_caractères*. Par défaut, la correspondance respecte la casse.|`[ae]`|"a" dans "gras"<br /><br /> "a", "e" dans "laine"|  
 |`[^` *groupe_caractères* `]`|Négation : correspond à n'importe quel caractère unique qui ne se trouve pas dans *groupe_caractères*. Par défaut, les caractères de *groupe_caractères* respectent la casse.|`[^aei]`|"r", "g", "n" dans "règne"|  
@@ -97,7 +101,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="anchors"></a>Ancres  
  Les ancres, ou assertions de largeur nulle atomiques, entraînent le succès ou l'échec d'une correspondance en fonction de la position actuelle dans la chaîne, mais elles n'entraînent pas l'avancement du moteur à travers la chaîne ou la consommation de caractères. Les métacaractères répertoriés dans le tableau suivant sont des ancres. Pour plus d'informations, consultez [Ancres](../../../docs/standard/base-types/anchors-in-regular-expressions.md).  
   
-|Assertion|Description|Modèle|Correspondances|  
+|Assertion|Description|Motif|Correspondances|  
 |---------------|-----------------|-------------|-------------|  
 |`^`|La correspondance doit commencer au début de la chaîne ou de la ligne.|`^\d{3}`|"901" dans<br /><br /> "901-333-"|  
 |`$`|La correspondance doit se produire à la fin de la chaîne ou avant `\n` à la fin de la ligne ou de la chaîne.|`-\d{3}$`|"-333" dans<br /><br /> "-901-333"|  
@@ -114,7 +118,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="grouping-constructs"></a>Constructions de regroupement  
  Les constructions de regroupement délimitent les sous-expressions d'une expression régulière et capturent généralement les sous-chaînes d'une chaîne d'entrée. Les constructions de regroupement incluent les éléments de langage répertoriés dans le tableau suivant. Pour plus d'informations, consultez [Grouping Constructs](grouping-constructs-in-regular-expressions.md).  
   
-|Construction de regroupement|Description|Modèle|Correspondances|  
+|Construction de regroupement|Description|Motif|Correspondances|  
 |------------------------|-----------------|-------------|-------------|  
 |`(` *sous-expression* `)`|Capture la sous-expression mise en correspondance et lui assigne un nombre ordinal de base un.|`(\w)\1`|"oo" dans "boot"|  
 |`(?<` *name* `>` *sous-expression* `)`|Capture la sous-expression mise en correspondance dans un groupe nommé.|`(?<double>\w)\k<double>`|"oo" dans "boot"|  
@@ -133,7 +137,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="quantifiers"></a>Quantificateurs  
  Un quantificateur indique combien d'instances de l'élément précédent (qui peut être un caractère, un groupe ou une classe de caractères) doivent être présentes dans la chaîne d'entrée pour qu'il y ait correspondance. Les quantificateurs incluent les éléments de langage répertoriés dans le tableau suivant. Pour plus d'informations, consultez [Quantifiers](quantifiers-in-regular-expressions.md).  
   
-|Quantifieur|Description|Modèle|Correspondances|  
+|Quantifieur|Description|Motif|Correspondances|  
 |----------------|-----------------|-------------|-------------|  
 |`*`|Correspond zéro, une ou plusieurs fois à l'élément précédent.|`\d*\.\d`|".0", "19.9", "219.9"|  
 |`+`|Correspond une ou plusieurs fois à l'élément précédent.|`"be+"`|"bee" dans "beefsteak", "be" dans "besoin"|  
@@ -154,7 +158,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="backreference-constructs"></a>Constructions de référence arrière  
  Une backreference permet qu'une sous-expression précédemment mise en correspondance soit ensuite identifiée dans la même expression régulière. Le tableau suivant répertorie les constructions de backreference prises en charge par les expressions régulières dans .NET. Pour plus d'informations, consultez [Backreference Constructs](backreference-constructs-in-regular-expressions.md).  
   
-|Construction de backreference|Description|Modèle|Correspondances|  
+|Construction de backreference|Description|Motif|Correspondances|  
 |-----------------------------|-----------------|-------------|-------------|  
 |`\` *nombre*|Backreference. Correspond à la valeur d'une sous-expression numérotée.|`(\w)\1`|"ee" dans "seek"|  
 |`\k<` *name* `>`|Backreference nommée. Correspond à la valeur d'une expression nommée.|`(?<char>\w)\k<char>`|"ee" dans "seek"|  
@@ -165,7 +169,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="alternation-constructs"></a>Constructions d’alternative  
  Les constructions d'alternative modifient une expression régulière pour permettre la correspondance de type inclusif/exclusif. Ces constructions incluent les éléments de langage répertoriés dans le tableau suivant. Pour plus d'informations, consultez [Alternation Constructs](alternation-constructs-in-regular-expressions.md).  
   
-|Construction d'alternative|Description|Modèle|Correspondances|  
+|Construction d'alternative|Description|Motif|Correspondances|  
 |---------------------------|-----------------|-------------|-------------|  
 |<code>&#124;</code>|Correspond à tout élément séparé par le caractère barre verticale (&#124;).|<code>th(e&#124;is&#124;at)</code>|"the", "this" dans "this is the day. " "|  
 |`(?(` *expression* `)` *oui* <code>&#124;</code> *non* `)`|Correspond à *oui* si le modèle d'expression régulière indiqué par *expression* correspond ; sinon, correspond à *no* (facultatif). *expression* est interprétée comme une assertion de largeur nulle.|<code>(?(A)A\d{2}\b&#124;\b\d{3}\b)</code>|"A10", "910" dans "A10 C103 910"|  
@@ -177,7 +181,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="substitutions"></a>Substitutions  
  Les substitutions sont des éléments de langage d'expression régulière pris en charge dans les modèles de remplacement. Pour plus d'informations, consultez [Substitutions](substitutions-in-regular-expressions.md). Les métacaractères répertoriés dans le tableau suivant sont des assertions de largeur nulle atomiques.  
   
-|Caractère|Description|Modèle|Modèle de remplacement|Chaîne d'entrée|Chaîne de résultat|  
+|Caractère|Description|Motif|Modèle de remplacement|Chaîne d'entrée|Chaîne de résultat|  
 |---------------|-----------------|-------------|-------------------------|------------------|-------------------|  
 |`$` *nombre*|Remplace la sous-chaîne mise en correspondance par le groupe *nombre*.|`\b(\w+)(\s)(\w+)\b`|`$3$2$1`|"un deux"|"deux un"|  
 |`${` *name* `}`|Remplace la sous-chaîne mise en correspondance par le groupe nommé *nom*.|`\b(?<word1>\w+)(\s)(?<word2>\w+)\b`|`${word2} ${word1}`|"un deux"|"deux un"|  
@@ -202,7 +206,7 @@ ms.lasthandoff: 11/21/2017
   
  Le moteur d’expression régulière de .NET prend en charge les options inline suivantes.  
   
-|Option|Description|Modèle|Correspondances|  
+|Option|Description|Motif|Correspondances|  
 |------------|-----------------|-------------|-------------|  
 |`i`|Utilise la correspondance qui ne respecte pas la casse.|`\b(?i)a(?-i)a\w+\b`|« aardvark », « aaaAuto » dans « aardvark AAAuto aaaAuto Adam breakfast »|  
 |`m`|Utilise le mode multiligne. `^` et `$` correspondent au début et à la fin d'une ligne, au lieu du début et de la fin d'une chaîne.|Pour obtenir un exemple, consultez la section « Mode multiligne » dans [Regular Expression Options](regular-expression-options.md).||  
@@ -226,7 +230,7 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Text.RegularExpressions?displayProperty=nameWithType>  
  <xref:System.Text.RegularExpressions.Regex>  
  [Expressions régulières](regular-expressions.md)  
- [Classes d’expressions régulières](the-regular-expression-object-model.md)  
+ [Classes d'expressions régulières](the-regular-expression-object-model.md)  
  [Exemples d'expressions régulières](regular-expression-examples.md)  
- [Expressions régulières - aide-mémoire (téléchargeable au format Word)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
+ [Expressions régulières - Aide-mémoire (téléchargement au format Word)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
  [Expressions régulières - Aide-mémoire (téléchargement au format PDF)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)
