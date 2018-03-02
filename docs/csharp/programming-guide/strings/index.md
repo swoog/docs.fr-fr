@@ -12,11 +12,11 @@ ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 24a030bb43d49615a7487ce10ad2347fdfd8a290
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: 6492edae6e4311252dc664236fb43cd373f7c59f
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="strings-c-programming-guide"></a>Chaînes (Guide de programmation C#)
 Une chaîne est un objet de type <xref:System.String> dont la valeur est du texte. En interne, le texte est stocké sous la forme d’une collection séquentielle en lecture seule d’objets <xref:System.Char>. Il n’existe aucun caractère de fin Null à la fin d’une chaîne C# ; par conséquent, une chaîne C# peut contenir n’importe quel nombre de caractères Null incorporés ('\0'). La propriété <xref:System.String.Length%2A> d’une chaîne représente le nombre d’objets `Char` qu’elle contient, et non pas le nombre de caractères Unicode. Pour accéder à des points de code Unicode individuels dans une chaîne, utilisez l’objet <xref:System.Globalization.StringInfo>.  
@@ -83,7 +83,7 @@ Une chaîne est un objet de type <xref:System.String> dont la valeur est du text
  Une surcharge de la méthode <xref:System.Console.WriteLine%2A> prend comme paramètre une chaîne de format. Par conséquent, vous pouvez simplement incorporer un littéral de chaîne de format sans appel explicite à la méthode. Toutefois, si vous utilisez la méthode <xref:System.Diagnostics.Trace.WriteLine%2A> pour afficher la sortie de débogage dans la fenêtre **Sortie** de Visual Studio, vous devez appeler explicitement la méthode <xref:System.String.Format%2A>, car <xref:System.Diagnostics.Trace.WriteLine%2A> accepte uniquement une chaîne, pas une chaîne de format. Pour plus d’informations sur les chaînes de format, consultez [Mise en forme des types](../../../standard/base-types/formatting-types.md).  
   
 ## <a name="substrings"></a>Sous-chaînes  
- Une sous-chaîne est une séquence de caractères qui est contenue dans une chaîne. Utilisez la méthode <xref:System.String.Substring%2A> pour créer une chaîne à partir d’une partie de la chaîne d’origine. Vous pouvez rechercher une ou plusieurs occurrences d’une sous-chaîne en utilisant la méthode <xref:System.String.IndexOf%2A>. Utilisez la méthode <xref:System.String.Replace%2A> pour remplacer toutes les occurrences d’une sous-chaîne spécifiée par une nouvelle chaîne. Comme la méthode <xref:System.String.Substring%2A>, <xref:System.String.Replace%2A> retourne en fait une nouvelle chaîne et ne modifie pas la chaîne d’origine. Pour plus d’informations, consultez [Comment : rechercher des chaînes à l’aide de méthodes String](../../../csharp/programming-guide/strings/how-to-search-strings-using-string-methods.md) et [Comment : modifier du contenu de chaîne](../../../csharp/programming-guide/strings/how-to-modify-string-contents.md).  
+ Une sous-chaîne est une séquence de caractères qui est contenue dans une chaîne. Utilisez la méthode <xref:System.String.Substring%2A> pour créer une chaîne à partir d’une partie de la chaîne d’origine. Vous pouvez rechercher une ou plusieurs occurrences d’une sous-chaîne en utilisant la méthode <xref:System.String.IndexOf%2A>. Utilisez la méthode <xref:System.String.Replace%2A> pour remplacer toutes les occurrences d’une sous-chaîne spécifiée par une nouvelle chaîne. Comme la méthode <xref:System.String.Substring%2A>, <xref:System.String.Replace%2A> retourne en fait une nouvelle chaîne et ne modifie pas la chaîne d’origine. Pour plus d’informations, consultez [Comment : rechercher des chaînes](../../how-to/search-strings.md) et [Comment : modifier le contenu des chaînes](../../../csharp/programming-guide/strings/how-to-modify-string-contents.md).  
   
  [!code-csharp[csProgGuideStrings#7](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_7.cs)]  
   
@@ -127,8 +127,7 @@ string s = String.Empty;
 |[Comment : concaténer plusieurs chaînes](../../../csharp/programming-guide/strings/how-to-concatenate-multiple-strings.md)|Montre comment utiliser l’opérateur `+` et la classe `Stringbuilder` pour joindre des chaînes au moment de la compilation et au moment de l’exécution.|  
 |[Comment : comparer des chaînes](../../../csharp/programming-guide/strings/how-to-compare-strings.md)|Montre comment effectuer des comparaisons ordinales de chaînes.|  
 |[Comment : analyser des chaînes à l’aide de String.Split](../../how-to/parse-strings-using-split.md)|Contient un exemple de code qui illustre l’utilisation de la méthode `String.Split` pour analyser des chaînes.|  
-|[Comment : rechercher des chaînes à l’aide de méthodes String](../../../csharp/programming-guide/strings/how-to-search-strings-using-string-methods.md)|Explique comment utiliser des méthodes spécifiques pour rechercher des chaînes.|  
-|[Comment : rechercher des chaînes à l’aide d’expressions régulières](../../../csharp/programming-guide/strings/how-to-search-strings-using-regular-expressions.md)|Explique comment utiliser des expressions régulières pour rechercher des chaînes.|  
+|[Comment : rechercher des chaînes](../../how-to/search-strings.md)|Explique comment utiliser des méthodes spécifiques pour rechercher des chaînes.|  
 |[Guide pratique pour déterminer si une chaîne représente une valeur numérique](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|Montre comment analyser une chaîne en toute sécurité pour déterminer si elle possède une valeur numérique valide.|  
 |[Comment : convertir une chaîne en DateTime](../../../csharp/programming-guide/strings/how-to-convert-a-string-to-a-datetime.md)|Montre comment convertir une chaîne telle que « 24/01/2008 » en objet <xref:System.DateTime?displayProperty=nameWithType>.|  
 |[Opérations de chaînes de base](../../../../docs/standard/base-types/basic-string-operations.md)|Fournit des liens vers des rubriques utilisant les méthodes <xref:System.String?displayProperty=nameWithType> et <xref:System.Text.StringBuilder?displayProperty=nameWithType> pour effectuer des opérations de chaînes de base.|  
