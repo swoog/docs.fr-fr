@@ -9,7 +9,6 @@
 ### [Nouveautés de .NET Standard](standard/whats-new/whats-new-in-dotnet-standard.md)
 ## [Frameworks cibles](standard/frameworks.md)
 ## [Glossaire .NET](standard/glossary.md)
-## [Génération de documentation avec mdoc](standard/mdoc/index.md)
 ## [Aide sur l’architecture](standard/guidance-architecture.md)
 ### [Architecturer des applications web modernes avec ASP.NET Core et Microsoft Azure](standard/modern-web-apps-azure-architecture/)
 ### [Moderniser des applications .NET existantes avec le cloud Azure et des conteneurs Windows](standard/modernize-with-azure-and-containers/)
@@ -25,9 +24,10 @@
 ### [Présentation des bibliothèques de classes .NET](standard/class-library-overview.md)
 ### [Types de base](standard/base-types/)
 ## [Bibliothèques de classes .NET](standard/class-libraries.md)
-## Analyseurs
+## [Analyseurs](standard/analyzers/index.md)
 ### [Analyseur d’API](standard/analyzers/api-analyzer.md) 
 ### [Analyseur de portabilité](standard/analyzers/portability-analyzer.md)
+### [Analyseur d’infrastructure](standard/analyzers/framework-analyzer.md)
 ## [Gestion et levée des exceptions](standard/exceptions/)
 ## [Format de fichier d’assembly .NET](standard/assembly-format.md)
 ## [Nettoyage de la mémoire](standard/garbage-collection/)
@@ -266,6 +266,7 @@
 ### [Guide pratique pour analyser des chaînes à l’aide de `String.Split`](csharp/how-to/parse-strings-using-split.md)
 ### [Guide pratique pour concaténer des chaînes](csharp/how-to/concatenate-multiple-strings.md)
 ### [Comment convertir une chaîne en DateTime](standard/base-types/parsing-datetime.md)
+### [Comment rechercher des chaînes](csharp/how-to/search-strings.md)
 <!-- End of C# Concepts section -->
 ## [Kit SDK .NET Compiler Platform (API Roslyn)](csharp/roslyn-sdk/)
 ## [Guide de programmation C#](csharp/programming-guide/)
