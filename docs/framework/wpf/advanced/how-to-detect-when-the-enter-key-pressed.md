@@ -1,5 +1,5 @@
 ---
-title: "Comment : effectuer une détection en cas d'appui sur la touche Entrée"
+title: "Comment détecter un appui sur la touche Entrée"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -26,8 +26,8 @@ ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-detect-when-the-enter-key-pressed"></a>Comment : effectuer une détection en cas d'appui sur la touche Entrée
-Cet exemple montre comment détecter lorsque le <xref:System.Windows.Input.Key.Enter> touche du clavier.  
+# <a name="how-to-detect-when-the-enter-key-pressed"></a>Comment : Détecter un appui sur la touche Entrée
+Cet exemple montre comment détecter lorsque la touche <xref:System.Windows.Input.Key.Enter> du clavier est appuyée.  
   
  Cet exemple se compose d’un [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] fichier et un fichier code-behind.  
   
