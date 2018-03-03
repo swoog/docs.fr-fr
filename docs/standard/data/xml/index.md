@@ -9,18 +9,18 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 22a2eb72dc06a644171c143a61698e661d2c66c6
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 824e06a00c4242d8ee38bdfc5a57151a71e4f285
+ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="xml-documents-and-data"></a>Documents et données XML
 Le .NET Framework fournit un jeu de classes complet et intégré qui vous permet de créer facilement des applications capables de traiter du code XML. Les classes dans les espaces de noms suivants prennent en charge l’analyse et l’écriture de code XML, l’édition de donnés XML en mémoire, la validation de données et la transformation XSLT.  
@@ -96,5 +96,3 @@ Le .NET Framework fournit un jeu de classes complet et intégré qui vous perme
  [Sécurité](../../../../docs/standard/security/index.md)  
  Offre une vue d'ensemble du système de sécurité .NET Framework.  
   
- [Centre de développement XML](http://go.microsoft.com/fwlink/?linkid=42458)  
- Fournit des informations techniques supplémentaires, des fichiers à télécharger, des groupes de discussion et d'autres ressources utiles aux développeurs XML.
