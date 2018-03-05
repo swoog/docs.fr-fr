@@ -17,15 +17,18 @@ helpviewer_keywords:
 - characters, matching syntax
 - .NET Framework regular expressions, character classes
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
-caps.latest.revision: "58"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 603633e1a0f385c061fe0928ea7361490d61fa3e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: dfcb0d0ace4bd42d89fe7b4c2dc04098858c2945
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="character-classes-in-regular-expressions"></a>Classes de caractères dans les expressions régulières
 <a name="Top"></a> Une classe de caractères définit un jeu de caractères, chacun d'entre eux pouvant apparaître dans une chaîne d'entrée pour aboutir à une correspondance. Le langage d’expression régulière dans .NET prend en charge les classes de caractères suivantes :  
@@ -55,7 +58,7 @@ ms.lasthandoff: 11/21/2017
  .NET prend en charge les expressions de soustraction de classe de caractères, ce qui vous permet de définir un jeu de caractères comme résultat de l’exclusion d’une classe de caractères d’une autre classe de caractères. Pour plus d’informations, consultez [Soustraction de classe de caractères](#CharacterClassSubtraction).  
   
 > [!NOTE]
->  Les classes qui correspondent aux caractères par catégorie, tels que des caractères [\w](#WordCharacter) pour correspondre à des caractères alphabétiques ou [\p {}](#CategoryOrBlock) pour correspondre à une catégorie Unicode, s’appuient sur la <xref:System.Globalization.CharUnicodeInfo> classe afin de fournir des informations sur les caractères catégories.  À compter de [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], les catégories de caractères sont basées sur la [norme Unicode version 8.0.0](http://www.unicode.org/versions/Unicode8.0.0/). Dans [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], via [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], elles sont basées sur la [norme Unicode version 6.3.0](http://www.unicode.org/versions/Unicode6.3.0/).  
+>  Les classes de caractères qui font correspondre les caractères par catégorie, comme [\w](#WordCharacter) pour faire correspondre les caractères alphabétiques, ou [\p{}](#CategoryOrBlock) pour les faire correspondre à une catégorie Unicode, s’appuient sur la classe <xref:System.Globalization.CharUnicodeInfo> pour fournir des informations sur les catégories de caractères.  À compter de [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], les catégories de caractères sont basées sur la [norme Unicode version 8.0.0](http://www.unicode.org/versions/Unicode8.0.0/). Dans [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], via [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], elles sont basées sur la [norme Unicode version 6.3.0](http://www.unicode.org/versions/Unicode6.3.0/).  
   
 <a name="PositiveGroup"></a>   
 ## <a name="positive-character-group--"></a>Groupe de caractères positif : [ ]  
@@ -181,7 +184,7 @@ ms.lasthandoff: 11/21/2017
      [!code-vb[Conceptual.RegEx.Language.CharacterClasses#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/any1.vb#4)]  
   
 > [!NOTE]
->  Étant donné qu'il correspond à n'importe quel caractère, l'élément de langage `.` est souvent utilisé avec un quantificateur limitatif si un modèle d'expression régulière essaie de correspondre plusieurs fois à n'importe quel caractère. Pour plus d'informations, consultez [Quantificateurs](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
+>  Étant donné qu'il correspond à n'importe quel caractère, l'élément de langage `.` est souvent utilisé avec un quantificateur limitatif si un modèle d'expression régulière essaie de correspondre plusieurs fois à n'importe quel caractère. Pour plus d’informations, consultez [Quantificateurs](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
   
  [Retour au début](#Top)  
   
@@ -239,7 +242,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="word-character-w"></a>Caractère de mot : \w  
  `\w` correspond à n'importe quel caractère alphabétique. Un caractère de mot est un membre d'une des catégories Unicode répertoriées dans le tableau suivant.  
   
-|Catégorie|Description|  
+|Category|Description|  
 |--------------|-----------------|  
 |Ll|Letter, Lowercase|  
 |Lu|Letter, Uppercase|  
@@ -253,7 +256,7 @@ ms.lasthandoff: 11/21/2017
  Si un comportement conforme à ECMAScript est spécifié, `\w` est équivalent à `[a-zA-Z_0-9]`. Pour plus d’informations sur les expressions régulières ECMAScript, consultez la section « Comportement de correspondance ECMAScript » dans [Options des expressions régulières](../../../docs/standard/base-types/regular-expression-options.md).  
   
 > [!NOTE]
->  Étant donné qu'il correspond à n'importe quel caractère alphabétique, l'élément de langage `\w` est souvent utilisé avec un quantificateur limitatif si un modèle d'expression régulière essaie de correspondre plusieurs fois à n'importe quel caractère alphabétique, suivi par un caractère alphabétique spécifique. Pour plus d'informations, consultez [Quantificateurs](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
+>  Étant donné qu'il correspond à n'importe quel caractère alphabétique, l'élément de langage `\w` est souvent utilisé avec un quantificateur limitatif si un modèle d'expression régulière essaie de correspondre plusieurs fois à n'importe quel caractère alphabétique, suivi par un caractère alphabétique spécifique. Pour plus d’informations, consultez [Quantificateurs](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
   
  L'exemple suivant utilise l'élément de langage `\w` pour le faire corresponde à des caractères en double dans un mot. L'exemple définit un modèle d'expression régulière, `(\w)\1`, qui peut être interprété comme suit.  
   
@@ -277,7 +280,7 @@ ms.lasthandoff: 11/21/2017
   
  En d’autres termes, il correspond à n’importe quel caractère à l’exception de ceux inclus dans les catégories Unicode répertoriées dans le tableau suivant.  
   
-|Catégorie|Description|  
+|Category|Description|  
 |--------------|-----------------|  
 |Ll|Letter, Lowercase|  
 |Lu|Letter, Uppercase|  
@@ -312,7 +315,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="white-space-character-s"></a>Espace blanc : \s  
  `\s` correspond à n'importe quel espace blanc. Il est équivalent aux séquences d'échappement et catégories Unicode répertoriées dans le tableau suivant.  
   
-|Catégorie|Description|  
+|Category|Description|  
 |--------------|-----------------|  
 |`\f`|Saut de page, \u000C.|  
 |`\n`|Saut de ligne, \u000A.|  
@@ -405,9 +408,9 @@ ms.lasthandoff: 11/21/2017
   
 <a name="SupportedUnicodeGeneralCategories"></a>   
 ## <a name="supported-unicode-general-categories"></a>Catégories générales Unicode prises en charge  
- La norme Unicode définit les catégories générales répertoriées dans le tableau suivant. Pour plus d’informations, consultez les sous-rubriques « Format de fichier UCD » et « Valeurs des catégories générales » dans la [Base de données de caractères Unicode](http://go.microsoft.com/fwlink/?LinkId=57650).  
+ La norme Unicode définit les catégories générales répertoriées dans le tableau suivant. Pour plus d’informations, consultez les sous-rubriques « Format de fichier UCD » et « Valeurs des catégories générales » dans la [Base de données de caractères Unicode](http://www.unicode.org/reports/tr44/).  
   
-|Catégorie|Description|  
+|Category|Description|  
 |--------------|-----------------|  
 |`Lu`|Letter, Uppercase|  
 |`Ll`|Letter, Lowercase|  
@@ -467,7 +470,7 @@ ms.lasthandoff: 11/21/2017
 |0250 - 02AF|`IsIPAExtensions`|  
 |02B0 - 02FF|`IsSpacingModifierLetters`|  
 |0300 - 036F|`IsCombiningDiacriticalMarks`|  
-|0370 - 03FF|`IsGreek`<br /><br /> ou<br /><br /> `IsGreekandCoptic`|  
+|0370 - 03FF|`IsGreek`<br /><br /> - ou -<br /><br /> `IsGreekandCoptic`|  
 |0400 - 04FF|`IsCyrillic`|  
 |0500 - 052F|`IsCyrillicSupplement`|  
 |0530 - 058F|`IsArmenian`|  
@@ -511,7 +514,7 @@ ms.lasthandoff: 11/21/2017
 |2000 - 206F|`IsGeneralPunctuation`|  
 |2070 - 209F|`IsSuperscriptsandSubscripts`|  
 |20A0 - 20CF|`IsCurrencySymbols`|  
-|20D0 - 20FF|`IsCombiningDiacriticalMarksforSymbols`<br /><br /> ou<br /><br /> `IsCombiningMarksforSymbols`|  
+|20D0 - 20FF|`IsCombiningDiacriticalMarksforSymbols`<br /><br /> - ou -<br /><br /> `IsCombiningMarksforSymbols`|  
 |2100 - 214F|`IsLetterlikeSymbols`|  
 |2150 - 218F|`IsNumberForms`|  
 |2190 - 21FF|`IsArrows`|  
@@ -574,7 +577,7 @@ ms.lasthandoff: 11/21/2017
   
  Une expression de soustraction de classe de caractères a la forme suivante :  
   
- `[`*groupe_base* `-[` *groupe_exclu*`]]`  
+ `[` *base_group* `-[` *excluded_group* `]]`  
   
  Les crochets (`[]`) et le trait d'union (`-`) sont obligatoires. Le *groupe_base* est un [groupe de caractères positif](#PositiveGroup) ou [négatif](#NegativeGroup). Le composant *groupe_exclu* est un autre groupe de caractères positif ou négatif, ou une autre expression de soustraction de classe de caractères (autrement dit, vous pouvez imbriquer des expressions de soustraction de classe de caractères).  
   

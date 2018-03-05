@@ -18,21 +18,24 @@ helpviewer_keywords:
 - regular expressions [.NET Framework], examples
 - examples [Visual Basic], strings
 - IsValidEmail
-- validation, e-mail strings
+- validation, email strings
 - input, checking
 - strings [.NET Framework], examples [Visual Basic]
-- e-mail [.NET Framework], validating
+- email [.NET Framework], validating
 - IsMatch method
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 03623cc4086981dc321aafe3020dcd571b74d9bc
-ms.sourcegitcommit: 9c4b8d457ffb8d134c9d55c6d7682a0f22e2b9a8
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: fdbb64cac1f1d4043b8b935fcad32aec88b7bb7a
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/20/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Comment : vérifier que des chaînes sont dans un format d'adresse de messagerie valide
 L'exemple suivant utilise une expression régulière pour vérifier qu'une chaîne est dans un format d'adresse de messagerie valide.  
@@ -42,7 +45,7 @@ L'exemple suivant utilise une expression régulière pour vérifier qu'une chaî
   
  Pour vérifier que l'adresse de messagerie est valide, la méthode `IsValidEmail` appelle la méthode <xref:System.Text.RegularExpressions.Regex.Replace%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.MatchEvaluator%29?displayProperty=nameWithType> avec le modèle d'expression régulière `(@)(.+)$` pour séparer le nom de domaine de l'adresse de messagerie. Le troisième paramètre est un délégué <xref:System.Text.RegularExpressions.MatchEvaluator> qui représente la méthode qui traite et remplace le texte correspondant. Le modèle d'expression régulière est interprété comme suit.  
   
-|Modèle|Description|  
+|Motif|Description|  
 |-------------|-----------------|  
 |`(@)`|Correspond à l'arobase (@). Il s'agit du premier groupe de capture.|  
 |`(.+)`|Correspond à une ou plusieurs occurrences d'un caractère quelconque. Il s'agit du deuxième groupe de capture.|  
@@ -59,11 +62,11 @@ L'exemple suivant utilise une expression régulière pour vérifier qu'une chaî
   
  Dans cet exemple, le modèle d'expression régulière ``^(?(")(".+?(?<!\\)"@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`{}|~\w])*)(?<=[0-9a-z])@))(?([)([(\d{1,3}.){3}\d{1,3}])|(([0-9a-z][-0-9a-z]*[0-9a-z]*.)+[a-z0-9][-a-z0-9]{0,22}[a-z0-9]))$`` est interprété de la manière indiquée dans le tableau ci-dessous. Notez que l'expression régulière est compilée à l'aide de l'indicateur <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>.  
   
-|Modèle|Description|  
+|Motif|Description|  
 |-------------|-----------------|  
 |`^`|Commence la recherche de correspondance au début de la chaîne.|  
 |`(?(")`|Détermine si le premier caractère est un guillemet. `(?(")` est le début d'une construction d'alternative.|  
-|`(?("")("".+?(?<!\\)""@)`|Si le premier caractère correspond à des guillemets, établit une correspondance avec des guillemets ouvrants suivis d'au moins une occurrence d'un caractère quelconque, suivie de guillemets fermants. Les guillemets doubles fermants ne doit pas être précédé par une barre oblique inverse (\\). `(?<!` est le début d'une assertion de postanalyse négative de largeur nulle. La chaîne doit se terminer par un arobase (@).|  
+|`(?("")("".+?(?<!\\)""@)`|Si le premier caractère correspond à des guillemets, établit une correspondance avec des guillemets ouvrants suivis d'au moins une occurrence d'un caractère quelconque, suivie de guillemets fermants. Les guillemets fermants ne doivent pas être précédés d'une barre oblique inverse (\\). `(?<!` est le début d'une assertion de postanalyse négative de largeur nulle. La chaîne doit se terminer par un arobase (@).|  
 |`&#124;(([0-9a-z]`|Si le premier caractère n'est pas un guillemet, établit une correspondance avec un caractère alphabétique de a à z ou de A à Z (la comparaison ne respecte pas la casse) ou un chiffre (de 0 à 9).|  
 |`(\.(?!\.))`|Si le caractère suivant est un point, établit une correspondance avec un point. Dans le cas contraire, effectue une préanalyse du caractère suivant et continue la recherche de correspondances. `(?!\.)` est une assertion de préanalyse négative de largeur nulle qui empêche deux points consécutifs de s'afficher dans la partie locale d'une adresse de messagerie.|  
 |``&#124;[-!#\$%&'\*\+/=\?\^`{}\&#124;~\w]``|Si le caractère suivant n’est pas un point, établit une correspondance avec un caractère alphabétique quelconque ou l’un des caractères suivants : -!#$%'*+=?^`{}&#124;~.|  
@@ -72,7 +75,7 @@ L'exemple suivant utilise une expression régulière pour vérifier qu'une chaî
 |`(?<=[0-9a-z])`|Continue la recherche de correspondances si le caractère qui précède le caractère @ est compris entre A et Z, a et z, ou 0 et 9. La construction `(?<=[0-9a-z])` définit une assertion de postanalyse positive de largeur nulle.|  
 |`(?(\[)`|Vérifie si le caractère qui suit @ est un crochet ouvrant.|  
 |`(\[(\d{1,3}\.){3}\d{1,3}\])`|S'il s'agit d'un crochet ouvrant, établit une correspondance avec le crochet ouvrant suivi d'une adresse IP (quatre ensembles de un à trois chiffres, chaque ensemble étant séparé par un point) et d'un crochet fermant.|  
-|`&#124;(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+`|Si le caractère qui suit @ n’est pas un crochet ouvrant, correspondance un caractère alphanumérique avec une valeur de A-Z, a-z ou 0-9, suivi par zéro ou plusieurs occurrences d’un trait d’union, suivi par zéro ou un caractère alphanumérique avec une valeur de A-Z, a-z ou 0-9 , suivi d’un point. Ce modèle peut être répété une ou plusieurs fois et doit être suivi du nom de domaine de niveau supérieur.|  
+|`&#124;(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+`|Si le caractère qui suit @ n'est pas un crochet ouvrant, établit une correspondance avec un caractère alphanumérique ayant une valeur comprise entre A et Z, a et z ou 0 et 9, suivi de zéro, une ou plusieurs occurrences d'un trait d'union, suivi de zéro, un ou plusieurs caractères alphanumériques ayant une valeur comprise entre A et Z, a et z ou 0 et 9, suivi d'un point. Ce modèle peut être répété une ou plusieurs fois et doit être suivi du nom de domaine de niveau supérieur.|  
 |`[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))`|Le nom de domaine de niveau supérieur doit commencer et se terminer par un caractère alphanumérique (compris entre a et z, A et Z ou 0 et 9). Il peut également comprendre entre zéro et 22 caractères ASCII (soit des caractères alphanumériques, soit des traits d'union).|  
 |`$`|Termine la correspondance à la fin de la chaîne.|  
   
