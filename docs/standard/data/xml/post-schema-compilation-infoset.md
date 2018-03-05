@@ -20,14 +20,14 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4b59b2b59852190bd19a3c1c9536fadb7b40603e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 5b55271306abdca95694bd8fb2ebb6e538d060ae
+ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="post-schema-compilation-infoset"></a>Jeu d'informations de post-compilation de schéma
-La [recommandation du World Wide Web Consortium (W3C) sur le schéma XML](http://go.microsoft.com/fwlink/?linkid=45242) décrit le jeu d'informations qui doit être exposé pour la pré-validation de schéma et la post-compilation de schéma. Le Modèle Objet du schéma (SOM) XML observe cette exposition avant et après l'appel à la méthode <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> de l'objet <xref:System.Xml.Schema.XmlSchemaSet>.  
+La [recommandation du World Wide Web Consortium (W3C) sur le schéma XML](https://www.w3.org/XML/Schema) décrit le jeu d'informations qui doit être exposé pour la pré-validation de schéma et la post-compilation de schéma. Le Modèle Objet du schéma (SOM) XML observe cette exposition avant et après l'appel à la méthode <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> de l'objet <xref:System.Xml.Schema.XmlSchemaSet>.  
   
  Le jeu d’informations de pré-validation de schéma est généré pendant la modification du schéma. Le jeu d'informations de post-compilation de schéma est généré après l'appel à la méthode <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> de l'objet <xref:System.Xml.Schema.XmlSchemaSet>, lors de la compilation du schéma et est exposé comme des propriétés.  
   

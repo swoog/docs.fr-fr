@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 13edec8b-614d-47ed-9e95-ed6d3b94ec0c
-ms.workload: dotnetcore
-ms.openlocfilehash: 2f421c72e8099a328fbc255d51f77a9cd0724e58
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 3c358ab9173032b1f76d30b756ee6290233b2702
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="hosting-net-core"></a>Hébergement de .NET Core
 
@@ -26,7 +27,7 @@ Cet article donne une vue d’ensemble des étapes nécessaires pour démarrer l
 
 ## <a name="prerequisites"></a>Prérequis
 
-Comme les hôtes sont des applications natives, ce didacticiel aborde la construction d’une application C++ pour héberger .NET Core. Vous avez besoin d’un environnement de développement C++ (comme celui fourni par [Visual Studio](https://www.visualstudio.com/downloads/)).
+Comme les hôtes sont des applications natives, ce didacticiel aborde la construction d’une application C++ pour héberger .NET Core. Vous avez besoin d’un environnement de développement C++ (comme celui fourni par [Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)).
 
 Vous avez également besoin d’une application .NET Core simple pour tester l’hôte, vous devez donc installer le [SDK .NET Core](https://www.microsoft.com/net/core) et [créer une petite application de test .NET Core](../../core/tutorials/with-visual-studio.md) (par exemple, une application « Hello World »). L’application « Hello World » créée par le nouveau modèle de projet de console .NET Core est suffisante.
 

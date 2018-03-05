@@ -26,11 +26,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: b6e0b9d3482bbfc3dabeee1f6b7fce7a93364dfb
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 9b9e54d8bbc9ca7cc9172fd83bd15968b3cef8e1
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Constructions de regroupement dans les expressions régulières
 Les constructions de regroupement délimitent les sous-expressions d'une expression régulière et capturent les sous-chaînes d'une chaîne d'entrée. Utilisez les constructions de regroupement pour effectuer les opérations suivantes :  
@@ -421,7 +421,7 @@ Les constructions de regroupement délimitent les sous-expressions d'une express
 |`\w+`|Mettre en correspondance un ou plusieurs caractères alphabétiques suivis d'un espace blanc.|  
 |`\d{1,2},`|Mettre en correspondance un ou deux chiffres décimaux suivis d'un espace blanc et d'une virgule.|  
 |`\d{4}\b`|Mettre en correspondance quatre chiffres décimaux, puis terminer la correspondance à la limite d'un mot.|  
-|`(?<!(Saturday&#124;Sunday) )`|Si la correspondance est précédée d'une chaîne autre que « Saturday » ou « Sunday » suivie d'un espace, la mise en correspondance réussit.|  
+|<code>(?<!(Saturday&#124;Sunday) )</code>|Si la correspondance est précédée d'une chaîne autre que « Saturday » ou « Sunday » suivie d'un espace, la mise en correspondance réussit.|  
   
 <a name="nonbacktracking_subexpression"></a>   
 ## <a name="nonbacktracking-subexpressions"></a>Sous-expressions non rétroactives  

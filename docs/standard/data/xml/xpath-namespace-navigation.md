@@ -16,16 +16,16 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: cae3fa68d3820e98bee333d0252aeb74b15fe2a7
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8cc8d1f031b3f00cdf2b698514220c25c9fec7be
+ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="xpath-namespace-navigation"></a>Navigation entre espaces de noms XPath
 Pour utiliser les requêtes XPath avec des documents XML, vous devez adresser correctement les espaces de noms XML et les éléments contenus dans ces espaces de noms. Les espaces de noms empêchent toute ambiguïté pouvant survenir lorsque des noms sont utilisés dans plusieurs contextes ; par exemple, le nom `ID` peut faire référence à plusieurs identificateurs associés à différents éléments d'un document XML. La syntaxe des espaces de noms spécifie des URI, des noms et des préfixes qui distinguent les éléments d'un document XML.  
   
- L'exemple fourni dans cette rubrique illustre l'utilisation des préfixes pour la navigation dans un document XML avec <xref:System.Xml.XPath.XPathNavigator>. Pour plus d'informations sur les espaces de noms et la syntaxe, consultez [Présentation des espaces de noms XML](http://go.microsoft.com/fwlink/?linkid=140245).  
+ L'exemple fourni dans cette rubrique illustre l'utilisation des préfixes pour la navigation dans un document XML avec <xref:System.Xml.XPath.XPathNavigator>. Pour plus d'informations sur les espaces de noms et la syntaxe, consultez [Présentation des espaces de noms XML](https://msdn.microsoft.com/library/aa468565.aspx).  
   
 ## <a name="namespace-declarations"></a>Déclarations d'espaces de noms  
  Les déclarations d'espaces de noms permettent de distinguer et d'adresser les éléments d'un document XML lors de l'utilisation d'une instance de <xref:System.Xml.XPath.XPathNavigator>. Les préfixes d'espaces de noms fournissent une syntaxe courte pour l'adressage des espaces de noms.  

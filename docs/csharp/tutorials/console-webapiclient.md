@@ -10,11 +10,11 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 6b0f3acc3a6dbed4f44497d92d3c518ee5a5d2a7
-ms.sourcegitcommit: dd6ea7f0e581ac84e0a90d9b23c463fcf1ec3ce7
+ms.openlocfilehash: 22391c4db3027c0fad2115c767b5e2808fee28a0
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="rest-client"></a>Client REST
 
@@ -89,7 +89,7 @@ Ensuite, renommez l’espace de noms défini dans l’instruction `namespace` de
 Ensuite, mettez à jour la méthode `Main` pour appeler cette méthode. La méthode `ProcessRepositories` retourne une tâche, et vous ne devez pas quitter le programme avant la fin de cette tâche. Par conséquent, vous devez utiliser la méthode `Wait` pour bloquer et attendre la fin de la tâche :
 
 ```csharp
-public static void Main(string[] args)
+static void Main(string[] args)
 {
     ProcessRepositories().Wait();
 }

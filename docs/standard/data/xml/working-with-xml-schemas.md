@@ -16,16 +16,16 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1cfac14f934efb22f7cd39faceb232cc819b540e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6cba66a0d8291592b082898d20ca780c8067401e
+ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="working-with-xml-schemas"></a>Utilisation de schémas XML
 Pour définir la structure d'un document XML, les relations entre ses éléments, les types de données et les limites de contenu, vous devez utiliser une définition de type de document (DTD) ou un schéma de langage XSD (XML Schema Definition). Bien qu'un document XML soit considéré comme correctement construit s'il répond à toutes les exigences syntaxiques définies par la recommandation du W3C (World Wide Web Consortium) sur le langage XML (Extensible Markup Language) 1.0, il est considéré comme non valide à moins d'être correctement construit et conforme aux limites définies par sa DTD ou son schéma. Par conséquent, même si tous les documents XML valides sont construits correctement, tous les documents XML construits correctement ne sont pas valides.  
   
- Pour plus d'informations sur XML, consultez [W3C XML 1.0 Recommendation](http://go.microsoft.com/fwlink/?linkid=7269) (en anglais). Pour plus d'informations sur le schéma XML, consultez les recommandations intitulées [W3C XML Schema Part 1: Structures Recommendation](http://go.microsoft.com/fwlink/?linkid=48881) et [W3C XML Schema Part 2: Datatypes Recommendation](http://go.microsoft.com/fwlink/?linkid=17392) (en anglais).  
+ Pour plus d'informations sur XML, consultez [W3C XML 1.0 Recommendation](https://www.w3.org/TR/REC-xml/) (en anglais). Pour plus d'informations sur le schéma XML, consultez les recommandations intitulées [W3C XML Schema Part 1: Structures Recommendation](https://www.w3.org/TR/xmlschema-1/) et [W3C XML Schema Part 2: Datatypes Recommendation](https://www.w3.org/TR/xmlschema-2/) (en anglais).  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Modèle Objet du schéma (SOM) XML](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  

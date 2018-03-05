@@ -10,12 +10,13 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 0d6e1e34-277c-4aaf-9880-3ebf81023857
-ms.workload: dotnetcore
-ms.openlocfilehash: cc2defb72c61e45ecfebd26937f1c3fd2d405171
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 552865f225ceac9e7a365452ee06d7fefeeb7213
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>Utilisation du SDK et des outils .NET Core avec l’intégration continue
 
@@ -44,7 +45,7 @@ Le script d’installation est automatisé pour s’exécuter au début de la g�
 
 ## <a name="ci-setup-examples"></a>Exemples de configuration de l’intégration continue
 
-Cette section décrit une configuration manuelle à l’aide d’un script PowerShell ou bash, et contient la description de plusieurs solutions d’intégration continue SaaS (logiciel en tant que service). Les solutions d’intégration continue SaaS traitées sont [CI Travis](https://travis-ci.org/), [AppVeyor](https://www.appveyor.com/) et [Visual Studio Team Services Build](https://www.visualstudio.com/docs/build/overview).
+Cette section décrit une configuration manuelle à l’aide d’un script PowerShell ou bash, et contient la description de plusieurs solutions d’intégration continue SaaS (logiciel en tant que service). Les solutions d’intégration continue SaaS traitées sont [CI Travis](https://travis-ci.org/), [AppVeyor](https://www.appveyor.com/) et [Visual Studio Team Services Build](https://docs.microsoft.com/vsts/build-release/index).
 
 ### <a name="manual-setup"></a>Configuration manuelle
 
@@ -155,7 +156,7 @@ Configurez Visual Studio Team Services (VSTS) pour générer des projets .NET Co
 1. Exécutez le script à partir de [l’étape de configuration manuelle](#manual-setup) en utilisant vos commandes.
 1. Créez une build composée de plusieurs tâches de build intégrées VSTS qui sont configurées pour utiliser les outils .NET Core.
 
-Les deux solutions sont valides. À l’aide d’un script de configuration manuelle, vous contrôlez la version des outils que vous recevez, car vous les téléchargez dans le cadre de la génération. La build est exécutée à partir d’un script que vous devez créer. Cette rubrique couvre uniquement l’option manuelle. Pour plus d’informations sur la composition d’une build avec des tâches de build VSTS, consultez la rubrique [Intégration et déploiement continus](https://www.visualstudio.com/docs/build/overview) de VSTS.
+Les deux solutions sont valides. À l’aide d’un script de configuration manuelle, vous contrôlez la version des outils que vous recevez, car vous les téléchargez dans le cadre de la génération. La build est exécutée à partir d’un script que vous devez créer. Cette rubrique couvre uniquement l’option manuelle. Pour plus d’informations sur la composition d’une build avec des tâches de build VSTS, consultez la rubrique [Intégration et déploiement continus](https://docs.microsoft.com/vsts/build-release/index) de VSTS.
 
 Pour utiliser un script de configuration manuelle dans VSTS, créez une nouvelle définition de build et spécifiez le script à exécuter pour l’étape de génération. Cette opération est possible grâce à l’interface utilisateur VSTS :
 
@@ -177,7 +178,7 @@ Pour utiliser un script de configuration manuelle dans VSTS, créez une nouvelle
 
 ## <a name="orchestrating-the-build"></a>Orchestration de la build
 
-Ce document décrit principalement comment obtenir les outils .NET Core et configurer différents services d’intégration continue sans fournir d’informations sur la façon d’orchestrer ou de *réellement générer* votre code avec .NET Core. Les choix sur la façon de structurer le processus de génération dépendent de nombreux facteurs qui ne peuvent pas être traités ici d’une manière générale. Explorez les ressources et les exemples fournis dans la documentation de [CI Travis](https://travis-ci.org/), [AppVeyor](https://www.appveyor.com/) et [VSTS](https://www.visualstudio.com/docs/build/overview) pour plus d’informations sur l’orchestration de vos builds avec chaque technologie.
+Ce document décrit principalement comment obtenir les outils .NET Core et configurer différents services d’intégration continue sans fournir d’informations sur la façon d’orchestrer ou de *réellement générer* votre code avec .NET Core. Les choix sur la façon de structurer le processus de génération dépendent de nombreux facteurs qui ne peuvent pas être traités ici d’une manière générale. Explorez les ressources et les exemples fournis dans la documentation de [CI Travis](https://travis-ci.org/), [AppVeyor](https://www.appveyor.com/) et [VSTS](https://docs.microsoft.com/vsts/build-release/index) pour plus d’informations sur l’orchestration de vos builds avec chaque technologie.
 
 L’utilisation directe de MSBuild ou l’utilisation des commandes de ligne de commande .NET Core constituent les deux méthodes générales que vous utilisez afin de structurer le processus de génération pour le code .NET Core à l’aide des outils .NET Core. La méthode que vous choisissez dépend de votre niveau d’assurance et des compromis en matière de complexité. MSBuild vous permet d’exprimer votre processus de génération sous la forme de tâches et de cibles, mais vous devez vous familiariser avec la syntaxe de fichier projet MSBuild complexe. L’utilisation des outils de ligne de commande .NET Core est peut-être plus simple, mais vous devez écrire une logique d’orchestration dans un langage de script comme `bash` ou PowerShell.
 

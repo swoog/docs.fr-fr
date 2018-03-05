@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2b7b85d2aa3c563fbd4c7cf89336827d25f22c0e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: e6ac6f2d316a94e69c2599acf07aaaf6361b3e5a
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="implementing-value-objects"></a>Implémentation d’objets de valeur
 
@@ -136,7 +136,7 @@ Vous venez de voir comment définir un objet de valeur dans votre modèle de dom
 
 ### <a name="background-and-older-approaches-using-ef-core-11"></a>Informations générales et anciennes approches avec EF Core 1.1
 
-L’utilisation d’EF Core 1.0 et 1.1 présente des limitations, en ce sens que vous ne pouvez pas recourir à des [types complexes](https://docs.microsoft.com/dotnet/api/system.componentmodel.dataannotations.schema.complextypeattribute?view=netframework-4.7) tels que définis dans EF 6.x dans le .NET Framework traditionnel. Si vous utilisez EF Core 1.0 ou 1.1, vous devez donc stocker votre objet de valeur sous la forme d’une entité EF avec un champ ID. Ensuite, pour qu’il ressemble plus à un objet de valeur sans identité, vous pouvez masquer son ID pour indiquer clairement que l’identité d’un objet de valeur n’est pas importante dans le modèle de domaine. Vous pouvez masquer cet ID en l’utilisant comme [propriété cachée](https://docs.microsoft.com/ef/core/modeling/shadow-properties ). Cette configuration consistant à masquer l’ID dans le modèle étant configurée dans le niveau d’infrastructure EF, elle est en quelque sorte transparente pour votre modèle de domaine.
+L’utilisation d’EF Core 1.0 et 1.1 présente des limitations, en ce sens que vous ne pouvez pas recourir à des [types complexes](xref:System.ComponentModel.DataAnnotations.Schema.ComplexTypeAttribute) tels que définis dans EF 6.x dans le .NET Framework traditionnel. Si vous utilisez EF Core 1.0 ou 1.1, vous devez donc stocker votre objet de valeur sous la forme d’une entité EF avec un champ ID. Ensuite, pour qu’il ressemble plus à un objet de valeur sans identité, vous pouvez masquer son ID pour indiquer clairement que l’identité d’un objet de valeur n’est pas importante dans le modèle de domaine. Vous pouvez masquer cet ID en l’utilisant comme [propriété cachée](https://docs.microsoft.com/ef/core/modeling/shadow-properties ). Cette configuration consistant à masquer l’ID dans le modèle étant configurée dans le niveau d’infrastructure EF, elle est en quelque sorte transparente pour votre modèle de domaine.
 
 Dans la version initiale d’eShopOnContainers (.NET Core 1.1), l’ID masqué exigé par l’infrastructure EF Core est implémenté de la manière suivante dans le niveau DbContext, à l’aide de l’API Fluent au niveau du projet d’infrastructure. L’ID est donc masqué du point de vue du modèle de domaine, mais il est toujours présent dans l’infrastructure.
 
@@ -168,7 +168,7 @@ Un type d’entité détenu vous permet de mapper les types dont l’identité n
 Un simple coup d’œil au modèle de domaine suffit pour constater qu’un type détenu n’a apparemment pas d’identité.
 Les types détenus ont toutefois une identité, mais la propriété de navigation du propriétaire fait partie de cette identité.
 
-L’identité des instances de types détenus ne leur appartient pas entièrement. Elle est formée de trois composants : 
+L’identité des instances de types détenus ne leur appartient pas entièrement. Elle est formée de trois composants :
 
 - l’identité du propriétaire ;
 
@@ -252,8 +252,8 @@ public class Order
 
 public class OrderDetails
 {
-    public StreetAddress BillingAddress { get; set; }
-    public StreetAddress ShippingAddress { get; set; }
+    public Address BillingAddress { get; set; }
+    public Address ShippingAddress { get; set; }
 }
 
 public class Address

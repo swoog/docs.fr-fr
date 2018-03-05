@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 6945bedf-5bf3-4955-8588-83fb87511b79
-ms.workload: dotnetcore
-ms.openlocfilehash: f64bc6463c455a288a374604e42e6747f701b0e7
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 0db67593340ea3bae00a45b845a0effe0c1fcab1
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Génération d’une solution .NET Core complète sur macOS à l’aide de Visual Studio pour Mac
 
@@ -33,7 +34,7 @@ Ce didacticiel vous montre comment créer une application qui accepte un terme d
 - [Kit SDK .NET Core 1.1 ou version ultérieure](https://www.microsoft.com/net/core#macos)
 - [Visual Studio 2017 pour Mac](https://www.visualstudio.com/vs/visual-studio-mac/)
 
-Pour plus d’informations sur la configuration requise, consultez la [configuration requise de .NET Core sur Mac](../../core/macos-prerequisites.md). Pour connaître l’ensemble des exigences système de Visual Studio 2017 pour Mac, consultez la page [Exigences système de la famille de produits Visual Studio 2017 pour Mac](https://www.visualstudio.com/productinfo/vs2017-system-requirements-mac).
+Pour plus d’informations sur la configuration requise, consultez la [configuration requise de .NET Core sur Mac](../../core/macos-prerequisites.md). Pour connaître l’ensemble des exigences système de Visual Studio 2017 pour Mac, consultez la page [Exigences système de la famille de produits Visual Studio 2017 pour Mac](/visualstudio/productinfo/vs2017-system-requirements-mac).
 
 ## <a name="building-a-library"></a>Génération d'une bibliothèque
 
@@ -197,4 +198,4 @@ Les tests unitaires effectuent des tests logiciels automatisés pendant le déve
 
 ## <a name="see-also"></a>Voir aussi
 
-[Notes de publication de Visual Studio 2017 pour Mac](https://www.visualstudio.com/news/releasenotes/vs2017-mac-relnotes)
+[Notes de publication de Visual Studio 2017 pour Mac](/visualstudio/releasenotes/vs2017-mac-relnotes)
