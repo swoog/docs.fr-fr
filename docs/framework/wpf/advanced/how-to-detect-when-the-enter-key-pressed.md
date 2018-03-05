@@ -1,5 +1,5 @@
 ---
-title: "Comment : effectuer une détection en cas d'appui sur la touche Entrée"
+title: "Comment détecter un appui sur la touche Entrée"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -26,19 +26,19 @@ ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-detect-when-the-enter-key-pressed"></a>Comment : effectuer une détection en cas d'appui sur la touche Entrée
-Cet exemple montre comment détecter lorsque le <xref:System.Windows.Input.Key.Enter> touche du clavier.  
+# <a name="how-to-detect-when-the-enter-key-pressed"></a>Comment : Détecter un appui sur la touche Entrée
+Cet exemple montre comment détecter lorsque la touche <xref:System.Windows.Input.Key.Enter> du clavier est appuyée.  
   
  Cet exemple se compose d’un [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] fichier et un fichier code-behind.  
   
 ## <a name="example"></a>Exemple  
- Lorsque l’utilisateur appuie sur le <xref:System.Windows.Input.Key.Enter> clé dans le <xref:System.Windows.Controls.TextBox>, l’entrée dans la zone de texte s’affiche dans une autre zone de la [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].  
+ Lorsque l’utilisateur appuie sur la touche <xref:System.Windows.Input.Key.Enter> dans la <xref:System.Windows.Controls.TextBox>, le texte entré s’affiche dans une autre zone de la [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].  
   
- Les éléments suivants [!INCLUDE[TLA2#tla_titlexaml](../../../../includes/tla2sharptla-titlexaml-md.md)] crée l’interface utilisateur, qui se compose d’un <xref:System.Windows.Controls.StackPanel>, un <xref:System.Windows.Controls.TextBlock>et un <xref:System.Windows.Controls.TextBox>.  
+ Les éléments suivants [!INCLUDE[TLA2#tla_titlexaml](../../../../includes/tla2sharptla-titlexaml-md.md)] créent l’interface utilisateur, qui se compose d’un <xref:System.Windows.Controls.StackPanel>, un <xref:System.Windows.Controls.TextBlock>et une <xref:System.Windows.Controls.TextBox>.  
   
  [!code-xaml[keydown#KeyDownUI](../../../../samples/snippets/csharp/VS_Snippets_Wpf/KeyDown/CSharp/Window1.xaml#keydownui)]  
   
- Le code-behind suivant crée le <xref:System.Windows.UIElement.KeyDown> Gestionnaire d’événements.  Si la touche est enfoncée est la <xref:System.Windows.Input.Key.Enter> clé, un message s’affiche dans le <xref:System.Windows.Controls.TextBlock>.  
+ Le code-behind suivant crée le <xref:System.Windows.UIElement.KeyDown> Gestionnaire d’événements.  Si la touche enfoncée est la touche  <xref:System.Windows.Input.Key.Enter>, un message s’affiche dans le <xref:System.Windows.Controls.TextBlock>.  
   
  [!code-csharp[keydown#KeyDownSample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/KeyDown/CSharp/Window1.xaml.cs#keydownsample)]
  [!code-vb[keydown#KeyDownSample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/KeyDown/VisualBasic/Window1.xaml.vb#keydownsample)]  
