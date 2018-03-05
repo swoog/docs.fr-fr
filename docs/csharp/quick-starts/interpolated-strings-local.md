@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 3cd9fc23dba104f92255b031eef32f80cca915b0
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: b6089b69eb350fce29f86f19f5abeb44acb4b6b4
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="interpolated-strings"></a>Chaînes interpolées
 
@@ -100,7 +100,7 @@ Vous spécifiez une chaîne de format en plaçant après l’expression interpol
 
 Plusieurs types dans les bibliothèques .NET Standard prennent en charge un ensemble prédéfini de chaînes de format. Il s’agit notamment de tous les types numériques et des types de date et d’heure. Pour obtenir une liste complète des types qui prennent en charge les chaînes de format, consultez [Chaînes de format et types de bibliothèque de classes .NET](../../standard/base-types/formatting-types.md#stringRef) dans l’article [Mise en forme des types dans .NET](../../standard/base-types/formatting-types.md). Tout type peut prendre en charge un ensemble de chaînes de format, et vous pouvez également développer des extensions de mise en forme personnalisées qui fournissent une mise en forme personnalisée pour des types existants. Pour plus d’informations sur la mise en forme personnalisée à l’aide d’une implémentation<xref:System.ICustomFormatter>, consultez [Mise en forme personnalisée avec ICustomFormatter](../../standard/base-types/formatting-types.md#custom-formatting-with-icustomformatter) dans l’article [Mise en forme des types dans .NET](../../standard/base-types/formatting-types.md).
 
-Essayez de modifier les chaînes de format dans votre éditeur de texte et, chaque fois que vous apportez une modification, réexécutez le programme pour voir comment les modifications affectent la mise en forme de la date et de l’heure et la valeur numérique. Remplacez le « d » dans `{date:d}` par « t » (pour afficher le format d’heure courte), « y » (pour afficher l’année et mois) et « yyyy » (pour afficher l’année sous forme de nombre à quatre chiffres). Remplacez le « C2 » dans `{price:C2}` par « e » (pour la notation exponentielle) et « F3 » (pour une valeur numérique avec trois chiffres après la virgule).
+Essayez de modifier les chaînes de format dans votre éditeur de texte et, à chaque modification, relancez le programme pour voir comment celles-ci affectent la mise en forme de la date et de l’heure et la valeur numérique. Remplacez le « d » dans `{date:d}` par « t » (pour afficher le format d’heure courte), « y » (pour afficher l’année et mois) et « yyyy » (pour afficher l’année sous forme de nombre à quatre chiffres). Remplacez le « C2 » dans `{price:C2}` par « e » (pour la notation exponentielle) et « F3 » (pour une valeur numérique avec trois chiffres après la virgule).
 
 En plus de la mise en forme, vous pouvez aussi contrôler la largeur de champ et l’alignement des chaînes retournées par une expression interpolée. Dans la section suivante, vous allez découvrir comment effectuer cette opération.
 
@@ -144,9 +144,9 @@ Si la largeur du champ est un nombre négatif, le champ est aligné à gauche :
 Essayez de supprimer les signes négatifs des expressions interpolées `{"Author",-25}` et `{title.Key,-25}`, puis réexécutez l’exemple, comme avec le code suivant :
 
 ```csharp
-Console.WriteLine($"\n{"Author",-25}    {"Title",30}\n");
+Console.WriteLine($"\n{"Author",25}    {"Title",30}\n");
 foreach (var title in titles)
-   Console.WriteLine($"{title.Key,-25}     {title.Value,30}");
+   Console.WriteLine($"{title.Key,25}     {title.Value,30}");
 ```
 
 Cette fois, les informations sur l’auteur sont alignées à droite.

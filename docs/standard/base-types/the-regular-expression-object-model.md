@@ -48,11 +48,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4f1918788a571e9626554eaeec9fdd3f1686d4cc
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8917ce764d615282f95aad2eee494fcc0ba7a847
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="the-regular-expression-object-model"></a>Modèle objet d'expression régulière
 <a name="introduction"></a> Cette rubrique décrit le modèle objet utilisé avec les expressions régulières .NET. Elle contient les sections suivantes :  
@@ -210,7 +210,7 @@ ms.lasthandoff: 12/23/2017
   
 -   La propriété `Match.Captures` retourne un objet <xref:System.Text.RegularExpressions.CaptureCollection> dont l'utilisation est limitée. La collection n'est pas remplie dans le cas d'un objet <xref:System.Text.RegularExpressions.Match> dont la propriété `Success` a pour valeur `false`. Sinon, elle contient un objet <xref:System.Text.RegularExpressions.Capture> unique qui possède les mêmes informations que l'objet <xref:System.Text.RegularExpressions.Match>.  
   
- Pour plus d’informations sur ces objets, voir les sections [Collection de groupes](#GroupCollection) et [Collection de captures](#CaptureCollection) plus loin dans cette rubrique.  
+ Pour plus d’informations sur ces objets, consultez les sections [La collection de groupes](#GroupCollection) et [La collection de captures](#CaptureCollection) plus avant dans cette rubrique.  
   
  Deux propriétés supplémentaires de la classe <xref:System.Text.RegularExpressions.Match> fournissent des informations sur la correspondance. La propriété `Match.Value` retourne la sous-chaîne de la chaîne d'entrée qui correspond au modèle d'expression régulière. La propriété `Match.Index` retourne la position de début en base zéro de la chaîne mise en correspondance dans la chaîne d'entrée.  
   
