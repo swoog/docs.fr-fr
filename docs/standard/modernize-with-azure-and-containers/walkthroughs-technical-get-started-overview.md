@@ -7,11 +7,11 @@ ms.date: 10/26/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ead28fe1ffe1e002af73642a1c3b2e72479520f4
-ms.sourcegitcommit: bf8a3ba647252010bdce86dd914ac6c61b5ba89d
+ms.openlocfilehash: bced3bed84d138dbda4f322322213b47c0159016
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/06/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>Procédures pas à pas et les techniques obtiennent une vue d’ensemble démarrée 
 
@@ -47,7 +47,7 @@ La procédure pas à pas technique complet est disponible dans le wiki de réfé
 
 Dans cette procédure pas à pas, vous pouvez explorer l’implémentation initiale de deux exemples d’applications héritées. Les deux exemples d’applications une architecture monolithique et ont été créées à l’aide d’ASP.NET classique. Une application est basée sur ASP.NET 4.x MVC ; la deuxième application est basée sur les Web Forms ASP.NET 4.x. Les deux applications sont dans le [eShopModernizing du référentiel GitHub](https://github.com/dotnet-architecture/eShopModernizing).
 
-Vous pouvez mettez en conteneur les deux exemples d’applications, semblable à la façon dont vous pouvez mettez en conteneur un classique [Windows Communication Foundation](https://docs.microsoft.com/dotnet/framework/wcf/whats-wcf) application (WCF) à être consommés en tant qu’une application de bureau. Pour obtenir un exemple, consultez [eShopModernizingWCFWinForms](https://github.com/dotnet-architecture/eShopModernizingWCFWinForms).
+Vous pouvez mettez en conteneur les deux exemples d’applications, semblable à la façon dont vous pouvez mettez en conteneur un classique [Windows Communication Foundation](../../framework/wcf/whats-wcf.md) application (WCF) à être consommés en tant qu’une application de bureau. Pour obtenir un exemple, consultez [eShopModernizingWCFWinForms](https://github.com/dotnet-architecture/eShopModernizingWCFWinForms).
 
 ### <a name="goals"></a>Objectifs
 
@@ -97,7 +97,7 @@ Les conteneurs Windows permet d’améliorer le déploiement des applications .N
 
 L’objectif de cette procédure pas à pas est de vous montrer plusieurs options pour containerizing une application .NET Framework existante. Vous pouvez :
 
--   Mettez en conteneur de votre application à l’aide de [Visual Studio 2017 Tools pour Docker](https://docs.microsoft.com/dotnet/core/docker/visual-studio-tools-for-docker) (Visual Studio 2017 ou versions ultérieures).
+-   Mettez en conteneur de votre application à l’aide de [Visual Studio 2017 Tools pour Docker](/aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker) (Visual Studio 2017 ou versions ultérieures).
 
 -   Mettez en conteneur de votre application en ajoutant manuellement un [Dockerfile](https://docs.docker.com/engine/reference/builder/), puis en utilisant la [Docker CLI](https://docs.docker.com/engine/reference/commandline/cli/).
 

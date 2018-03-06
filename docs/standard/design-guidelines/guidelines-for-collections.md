@@ -9,18 +9,18 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 297b8f1d-b11f-4dc6-960a-8e990817304e
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 62205e6bea39214383f6a653d719c0285f374a9f
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 09a2a075e21de6968989575385db07ab39eb627f
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="guidelines-for-collections"></a>Instructions relatives aux collections
 N’importe quel type conçue spécifiquement pour manipuler un groupe d’objets ayant des caractéristiques communes peut être considéré comme une collection. Il est presque toujours approprié pour ces types d’implémenter <xref:System.Collections.IEnumerable> ou <xref:System.Collections.Generic.IEnumerable%601>, de sorte que dans cette section, nous ne considérons que types implémentant une ou deux de ces interfaces sont des collections.  
@@ -31,7 +31,7 @@ N’importe quel type conçue spécifiquement pour manipuler un groupe d’objet
   
  **X ne sont pas** utiliser <xref:System.Collections.ArrayList> ou <xref:System.Collections.Generic.List%601> dans les API publiques.  
   
- Ces types sont des structures de données conçus pour être utilisé dans l’implémentation interne, pas dans les API publiques. `List<T>`est optimisé pour les performances et la puissance au détriment de la propreté de l’API et de flexibilité. Par exemple, si vous retournez `List<T>`, vous n’êtes pas jamais être en mesure de recevoir des notifications lorsque le code client modifiera la collection. En outre, `List<T>` expose de nombreux membres, tels que <xref:System.Collections.Generic.List%601.BinarySearch%2A>, qui ne sont pas utiles ou applicable dans de nombreux scénarios. Les deux sections suivantes décrivent les types (abstractions) conçus spécifiquement pour une utilisation dans les API publiques.  
+ Ces types sont des structures de données conçus pour être utilisé dans l’implémentation interne, pas dans les API publiques. `List<T>` est optimisé pour les performances et la puissance au détriment de la propreté de l’API et de flexibilité. Par exemple, si vous retournez `List<T>`, vous n’êtes pas jamais être en mesure de recevoir des notifications lorsque le code client modifiera la collection. En outre, `List<T>` expose de nombreux membres, tels que <xref:System.Collections.Generic.List%601.BinarySearch%2A>, qui ne sont pas utiles ou applicable dans de nombreux scénarios. Les deux sections suivantes décrivent les types (abstractions) conçus spécifiquement pour une utilisation dans les API publiques.  
   
  **X ne sont pas** utiliser `Hashtable` ou `Dictionary<TKey,TValue>` dans les API publiques.  
   
@@ -61,7 +61,7 @@ N’importe quel type conçue spécifiquement pour manipuler un groupe d’objet
   
  **✓ FAIRE** utiliser <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>, une sous-classe de `ReadOnlyCollection<T>`, ou dans de rares cas `IEnumerable<T>` pour les valeurs de propriétés ou retour qui représentent des collections en lecture seule.  
   
- En général, préférez `ReadOnlyCollection<T>`. Si celui-ci ne remplit pas certaines conditions (par exemple, la collection ne doit pas implémenter `IList`), utilisez une collection personnalisée en implémentant `IEnumerable<T>`, `ICollection<T>`, ou `IList<T>`. Si vous implémentez une collection en lecture seule personnalisée, implémentez `ICollection<T>.ReadOnly` retourne false.  
+ En général, préférez `ReadOnlyCollection<T>`. Si celui-ci ne remplit pas certaines conditions (par exemple, la collection ne doit pas implémenter `IList`), utilisez une collection personnalisée en implémentant `IEnumerable<T>`, `ICollection<T>`, ou `IList<T>`. Si vous implémentez une collection en lecture seule personnalisée, implémentez `ICollection<T>.IsReadOnly` pour retourner `true`.  
   
  Dans les cas où vous êtes sûr que le seul scénario, vous devez toujours prendre en charge est itération avant uniquement, vous pouvez simplement utiliser `IEnumerable<T>`.  
   

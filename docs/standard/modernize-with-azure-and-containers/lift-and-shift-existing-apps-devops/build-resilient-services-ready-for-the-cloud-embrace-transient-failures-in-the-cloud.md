@@ -7,11 +7,11 @@ ms.date: 10/26/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: aaf1ef968600a56d91267c6c12efa90d99446dd7
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: eef0197edb3aba555da63f1ea0b75726a826bd32
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>Créer des services résilients prêts pour le cloud : adopter les erreurs temporaires dans le cloud 
 
@@ -19,7 +19,7 @@ La résilience est la capacité à surmonter les défaillances et à continuer d
 
 Votre application est prête pour le cloud quand, au minimum, il implémente un modèle basé sur les logiciels de résilience, plutôt qu’un modèle basé sur le matériel. Votre application de cloud doit adopter les défaillances partielles certainement se produit. Vous devez concevoir ou partiellement refactoriser votre application si vous souhaitez obtenir la résilience aux défaillances partielles attendus. Il doit être conçu pour faire face à des défaillances partielles, telles que les pannes réseau temporaires et des nœuds ou des machines virtuelles en panne dans le cloud. Conteneurs même déplacés vers un autre nœud dans un cluster orchestrator peuvent provoquer l’échec de courte intermittente dans l’application.
 
-## <a name="handling-partial-failure"></a>Gestion des défaillances partielles
+## <a name="handling-partial-failure"></a>Gestion d’une défaillance partielle
 
 Dans une application basée sur le cloud, il existe un risque de permanente de défaillance partielle. Par exemple, une instance unique de site Web ou un conteneur peut échouer, ou il peut être indisponible ou ne répond pas pendant une courte période. Ou bien, un ordinateur virtuel ou un serveur unique peut se bloquer.
 
@@ -47,15 +47,13 @@ Pour savoir comment implémenter des stratégies pour gérer les défaillances p
 
 -   **Implémentation de la communication résiliente pour gérer une défaillance partielle**
 
-    [https://docs.microsoft.com/dotnet/standard/microservices-architecture/implement-resilient-applications/partial-failure-strategies](https://docs.microsoft.com/dotnet/standard/microservices-architecture/implement-resilient-applications/partial-failure-strategies)
+    [https://docs.microsoft.com/dotnet/standard/microservices-architecture/implement-resilient-applications/partial-failure-strategies](../../microservices-architecture/implement-resilient-applications/partial-failure-strategies.md)
 
 -   **Entity Framework résilience et nouvelle tentative logique de connexion (version 6 et versions ultérieure)**
 
     [https://msdn.microsoft.com/library/dn456835(v=vs.113).aspx](https://msdn.microsoft.com/library/dn456835(v=vs.113).aspx)
 
 -   **Le bloc d’Application de gestion d’erreurs transitoires**
-
-<!-- -->
 
 -   [https://msdn.microsoft.com/library/hh680934(v=pandp.50).aspx](https://msdn.microsoft.com/library/hh680934(v=pandp.50).aspx)
 

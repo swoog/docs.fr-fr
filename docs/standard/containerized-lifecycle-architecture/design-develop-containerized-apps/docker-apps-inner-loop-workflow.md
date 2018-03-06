@@ -8,11 +8,11 @@ ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 3605a6cd53db695de3af015a777e3c1a0e92af58
-ms.sourcegitcommit: 672c9cd122c13c9813f57f022c86ebdf6dd69b4f
+ms.openlocfilehash: 632c04507c1478238a5dc2573542f8c88bae2a51
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Flux de travail de développement de la boucle interne pour les applications de Docker
 
@@ -123,7 +123,7 @@ Dans le fichier DockerFile, vous devez également indiquent à Docker pour écou
 
 Il existe des autres lignes de configuration que vous pouvez ajouter dans le fichier DockerFile en fonction de la langue/framework que vous utilisez, pour que Docker sache comment exécuter l’application. Par exemple, vous devez la ligne de point d’entrée \[« dotnet », « MyCustomMicroservice.dll »\] pour exécuter une application .NET Core, bien que vous pouvez avoir plusieurs variantes selon l’approche pour générer et exécuter votre service. Si vous utilisez le Kit de développement logiciel et dotnet CLI pour générer et exécuter l’application .NET, il est légèrement différent. L’essentiel est que la ligne de point d’entrée ainsi que des lignes supplémentaires sera différentes selon la langue/plateforme que vous choisissez pour votre application.
 
-**Plus d’informations** pour plus d’informations sur la création d’images Docker pour les applications .NET Core, accédez à <https://docs.microsoft.com/dotnet/articles/core/docker/building-net-docker-images>.
+**Plus d’informations** pour plus d’informations sur la création d’images Docker pour les applications .NET Core, accédez à <https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images>.
 
 Pour en savoir plus sur la création de vos propres images, accédez à [https://docs.docker.com/engine/ \didacticiels/dockerimages/](https://docs.docker.com/engine/tutorials/dockerimages/).
 
@@ -258,7 +258,7 @@ Code Visual Studio prend en charge le débogage Docker si vous utilisez Node.js 
 
 Vous également pourrez déboguer les conteneurs .NET Core dans Docker lors de l’utilisation de Visual Studio, comme décrit dans la section suivante.
 
-**Plus d’informations :** pour en savoir plus sur le débogage des conteneurs Docker de Node.js, accédez à <https://blog.docker.com/2016/07/live-debugging-docker/> et [https://blogs.msdn.microsoft.com/ \ utilisateur\_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/](https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/).
+**Plus d’informations :** pour en savoir plus sur le débogage des conteneurs Docker de Node.js, accédez à <https://blog.docker.com/2016/07/live-debugging-docker/> et [https://blogs.msdn.microsoft.com/ \ utilisateur\_ed/2016/02/27 / Visual-Studio-code-New-Features-13-Big-Debugging-Updates-Rich-Object-Hover-Conditional-Breakpoints-Node-js-mono-more/](https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/).
 
 
 >[!div class="step-by-step"]
