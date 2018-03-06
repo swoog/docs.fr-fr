@@ -27,11 +27,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: db1c3af1bb3ad207278eed64a8fb2ef8ed6dc465
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: ad4e8ab527ca59c21bf4771ca9d386866d9919f7
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="quantifiers-in-regular-expressions"></a>quantificateurs dans les expressions régulières
 Les quantificateurs spécifient le nombre d’instances d’un caractère, groupe ou classe de caractères devant être présentes dans l’entrée pour qu’une correspondance soit trouvée.  Le tableau suivant répertorie les quantificateurs pris en charge par .NET.  
@@ -273,7 +273,7 @@ Les quantificateurs spécifient le nombre d’instances d’un caractère, group
 |Modèle|Description|  
 |-------------|-----------------|  
 |`(a\1`|Mettre en correspondance « a » avec la valeur du premier groupe capturé …|  
-|`&#124;(?(1)`|… ou tester si le premier groupe capturé a été défini. (Notez que la construction `(?(1)` ne définit pas un groupe de capture.)|  
+|<code>&#124;(?(1)</code>|… ou tester si le premier groupe capturé a été défini. (Notez que la construction `(?(1)` ne définit pas un groupe de capture.)|  
 |`\1))`|Si le premier groupe capturé existe, établir une correspondance avec sa valeur. Si le groupe n’existe pas, le groupe correspond à <xref:System.String.Empty?displayProperty=nameWithType>.|  
   
  La première expression régulière essaie de correspondre à ce modèle entre zéro et deux fois ; la deuxième, exactement deux fois. Étant donné que le premier modèle atteint son nombre minimal de captures avec sa première capture de <xref:System.String.Empty?displayProperty=nameWithType>, il ne se répète jamais pour essayer d’établir une correspondance avec `a\1` ; le quantificateur `{0,2}` autorise uniquement les correspondances vides dans la dernière itération. En revanche, la seconde expression régulière établit une correspondance avec « a », car elle évalue `a\1` une deuxième fois ; le nombre minimal d’itérations, 2, entraîne la répétition du moteur après une correspondance vide.  

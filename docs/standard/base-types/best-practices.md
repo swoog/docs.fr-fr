@@ -22,11 +22,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4064e3f9bd9be425108baf934817645fc7fa51c2
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: c665dfbf8c3b6609a934aae027ba40e0462498db
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>Bonnes pratiques pour les expressions régulières dans .NET
 <a name="top"></a> Le moteur d’expressions régulières de .NET est un outil puissant et complet. Il traite le texte en fonction de correspondances de modèles plutôt qu’en comparant et en confrontant le texte littéral. Dans la plupart des cas, il exécute les critères spéciaux de façon rapide et efficace. Toutefois, dans certains cas, le moteur des expressions régulières peut sembler très lent. Dans des cas extrêmes, il semble même cesser de répondre. Il traite en effet peu d'entrées sur une période de plusieurs heures ou même de plusieurs jours.  
@@ -150,8 +150,8 @@ ms.lasthandoff: 01/09/2018
 |-------------|-----------------|  
 |`\b`|Commencer la correspondance à la limite d'un mot.|  
 |`\w+`|Mettre en correspondance un ou plusieurs caractères alphabétiques.|  
-|`(\r?\n)&#124;,?\s)`|Mettre en correspondance un ou aucun retour chariot suivi d'un caractère de saut de ligne, ou une ou aucune virgule, suivie d'un espace blanc.|  
-|`(\w+((\r?\n)&#124;,?\s))*`|Mettre en correspondance zéro, une ou plusieurs occurrences d'un ou plusieurs caractères alphabétiques qui sont suivis par un ou aucun retour chariot et un caractère de saut de ligne, ou par une ou aucune virgule, suivie d'un espace blanc.|  
+|<code>(\r?\n)&#124;,?\s)</code>|Mettre en correspondance un ou aucun retour chariot suivi d'un caractère de saut de ligne, ou une ou aucune virgule, suivie d'un espace blanc.|  
+|<code>(\w+((\r?\n)&#124;,?\s))*</code>|Mettre en correspondance zéro, une ou plusieurs occurrences d'un ou plusieurs caractères alphabétiques qui sont suivis par un ou aucun retour chariot et un caractère de saut de ligne, ou par une ou aucune virgule, suivie d'un espace blanc.|  
 |`\w+`|Mettre en correspondance un ou plusieurs caractères alphabétiques.|  
 |`[.?:;!]`|Mettre en correspondance un point, un point d'interrogation, deux-points, un point-virgule ou un point d'exclamation.|  
   
