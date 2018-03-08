@@ -24,11 +24,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2ec92933bdf123412a3d489fc493d76c4a0dc0d0
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b4cecc44ff740dd99d10131341c6a6056ce3aab3
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>Constructions de backreference dans les expressions régulières
 Les références arrière offrent un moyen pratique d’identifier un caractère répété ou une sous-chaîne répétée dans une chaîne. Par exemple, si la chaîne d’entrée contient plusieurs occurrences d’une sous-chaîne arbitraire, vous pouvez faire correspondre la première occurrence à un groupe de capture, puis utiliser une référence arrière pour faire correspondre les occurrences suivantes de la sous-chaîne.  
@@ -43,7 +43,7 @@ Les références arrière offrent un moyen pratique d’identifier un caractère
   
  `\` *nombre*  
   
- où *numéro* est la position ordinale du groupe de capture dans l’expression régulière. Par exemple, `\4` correspond au contenu du quatrième groupe de capture. Si *numéro* n’est pas défini dans le modèle d’expression régulière, une erreur d’analyse se produit et le moteur d’expression régulière lève une exception <xref:System.ArgumentException>. Par exemple, l’expression régulière `\b(\w+)\s\1` est valide, car `(\w+)` est le premier et unique groupe de capture dans l’expression. D’un autre côté, `\b(\w+)\s\2` n’est pas valide et lève une exception d’argument, car il n’existe aucun groupe de capture numéroté `\2`.  
+ où *numéro* est la position ordinale du groupe de capture dans l’expression régulière. Par exemple, `\4` correspond au contenu du quatrième groupe de capture. Si *numéro* n’est pas défini dans le modèle d’expression régulière, une erreur d’analyse se produit et le moteur d’expression régulière lève une exception <xref:System.ArgumentException>. Par exemple, l’expression régulière `\b(\w+)\s\1` est valide, car `(\w+)` est le premier et unique groupe de capture dans l’expression. D’un autre côté, `\b(\w+)\s\2` n’est pas valide et lève une exception d’argument, car il n’existe aucun groupe de capture numéroté `\2`. En outre, si *nombre* identifie un groupe de capture dans une position ordinale particulière, mais qu’un nom numérique différent de sa position ordinale a été affecté au groupe de capture, l’analyseur d’expression régulière lève également une <xref:System.ArgumentException>. 
   
  Remarquez l’ambiguïté entre les codes d’échappement octaux (tels que `\16`) et les références arrière `\`*numéro* qui utilisent la même notation. Cette ambiguïté est résolue comme suit :  
   
@@ -87,12 +87,24 @@ Les références arrière offrent un moyen pratique d’identifier un caractère
   
  [!code-csharp[RegularExpressions.Language.Backreferences#2](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference2.cs#2)]
  [!code-vb[RegularExpressions.Language.Backreferences#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference2.vb#2)]  
-  
- Remarquez que *nom* peut également être la représentation sous forme de chaîne d’un numéro. Par exemple, l’exemple suivant utilise l’expression régulière `(?<2>\w)\k<2>` pour rechercher des caractères de mot doubles dans une chaîne.  
+
+## <a name="named-numeric-backreferences"></a>Références arrières numériques nommées
+
+Dans une référence arrière nommée avec `\k`, *nom* peut également être la représentation d’un nombre sous forme de chaîne. Par exemple, l’exemple suivant utilise l’expression régulière `(?<2>\w)\k<2>` pour rechercher des caractères de mot doubles dans une chaîne. Dans ce cas, l’exemple définit un groupe de capture explicitement nommé « 2 », et la référence arrière est nommée en conséquence « 2 ». 
   
  [!code-csharp[RegularExpressions.Language.Backreferences#3](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference3.cs#3)]
  [!code-vb[RegularExpressions.Language.Backreferences#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference3.vb#3)]  
-  
+
+Si *nom* est la représentation d’un nombre sous forme de chaîne et qu’aucun groupe de capture n’a ce nom, `\k<`*nom* `>` est identique au `\` *nombre* de la référence arrière, où *nombre* est la position ordinale de la capture. Dans l’exemple suivant, il existe un seul groupe de capture nommé `char`. La construction de la référence arrière la référence en tant que `\k<1>`. Comme la sortie de l’exemple le montre, l’appel à <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> réussit, car `char` est le premier groupe de capture.
+
+[!code-csharp[Ordinal.Backreference](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference6.cs)]
+[!code-vb[Ordinal.BackReference](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference6.vb)]  
+
+Cependant, si *nom* est la représentation sous forme de chaîne d’un nombre et qu’un nom numérique a été affecté explicitement à ce groupe de capture dans cette position, l’analyseur d’expression régulière ne peut pas identifier le groupe de capture par sa position ordinale. Au lieu de cela, elle lève une <xref:System.ArgumentException>. Le seul groupe de capture dans l’exemple suivant est nommé « 2 ». Comme la construction `\k` est utilisée pour définir une référence arrière nommée « 1 », l’analyseur d’expression régulière ne peut pas identifier le premier groupe de capture et lève une exception.
+
+[!code-csharp[Ordinal.Backreference](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference7.cs)]
+[!code-vb[Ordinal.BackReference](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference7.vb)]  
+
 ## <a name="what-backreferences-match"></a>Correspondance des références arrière  
  Une référence arrière référence la définition la plus récente d’un groupe (la définition la plus immédiatement à gauche, dans le cadre d’une mise en correspondance de gauche à droite). Quand un groupe effectue plusieurs captures, une référence arrière référence la capture la plus récente.  
   

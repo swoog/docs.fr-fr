@@ -3,22 +3,23 @@ title: Configuration requise pour .NET Core sur Windows
 description: "Découvrez les dépendances nécessaires sur votre machine Windows pour développer et exécuter des applications .NET Core."
 author: JRAlexander
 ms.author: johalex
-ms.date: 08/13/2017
+ms.date: 02/28/2018
 ms.topic: article
 ms.prod: .net-core
-ms.workload: dotnetcore
-ms.openlocfilehash: fdbba188cf939ce3eb969a1f780e086fcf17da13
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: e64ecb807fd377458a9998ebbdfe2f6f15b115bb
+ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Configuration requise pour .NET Core sur Windows
 
 Cet article montre les dépendances nécessaires pour développer des applications .NET Core sur Windows. Les versions de système d’exploitation et les dépendances prises en charge ci-après s’appliquent aux trois façons de développer des applications .NET Core sur Windows :
 
 * [Ligne de commande](tutorials/using-with-xplat-cli.md)
-* [Visual Studio 2017](https://www.visualstudio.com/downloads/)
+* [Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
 * [Visual Studio Code](https://code.visualstudio.com/)
 
 ## <a name="net-core-supported-windows-versions"></a>Versions Windows prises en charge par .NET Core
@@ -27,7 +28,7 @@ Cet article montre les dépendances nécessaires pour développer des applicatio
 
 * Windows 7 SP1
 * Windows 8.1
-* Windows 10, Mise à jour anniversaire Windows 10 (version 1607) ou versions ultérieures
+* Mise à jour anniversaire Windows 10 (version 1607) ou ultérieur
 * Windows Server 2008 R2 SP1 (version complète ou Server Core)
 * Windows Server 2012 SP1 (version complète ou Server Core)
 * Windows Server 2012 R2 (version complète ou Server Core)
@@ -39,47 +40,53 @@ Consultez [.NET Core 1.x - Versions des systèmes d’exploitation prises en cha
 
 ## <a name="net-core-dependencies"></a>Dépendances .NET Core
 
-.NET Core 1.1 et versions antérieures nécessitent le package redistribuable Visual C++ lors de l’exécution sur des versions Windows antérieures à Windows 10 et Windows Server 2016. Cette dépendance est installée automatiquement par le programme d’installation de .NET Core.
+.NET Core 1.1 et ses versions antérieures nécessitent le package redistribuable Visual C++ lors de l’exécution sur des versions de Windows antérieures à Windows 10 et Windows Server 2016. Cette dépendance est installée automatiquement par le programme d’installation de .NET Core.
 
 Vous devez installer [Microsoft Visual C++ 2015 Redistributable Update 3](https://www.microsoft.com/download/details.aspx?id=52685) manuellement quand :
 
-   * vous installez .NET Core avec le [script du programme d’installation](./tools/dotnet-install-script.md) ;
-   * vous déployez une application .NET Core autonome.
+* vous installez .NET Core avec le [script du programme d’installation](./tools/dotnet-install-script.md) ;
+* vous déployez une application .NET Core autonome.
+* Génération du produit à partir de la source.
+* Installation de .NET Core via un fichier *.zip*. Ceci peut inclure des serveurs de builds/CI/CD.
 
 > [!NOTE]
-> <em>Pour les machines Windows 7 et Windows Server 2008 uniquement :</em><br>
-> Vérifiez que votre installation Windows est à jour et comprend le correctif logiciel [KB2533623](https://support.microsoft.com/help/2533623) installé via Windows Update.
+> *Pour les machines Windows 7 et Windows Server 2008 seulement :* vérifiez que votre installation Windows est à jour et que le correctif logiciel [KB2533623](https://support.microsoft.com/help/2533623) y est installé via Windows Update.
 
 ## <a name="prerequisites-with-visual-studio-2017"></a>Prérequis pour Visual Studio 2017
 
-Vous pouvez utiliser l’éditeur de votre choix pour développer des applications .NET Core à l’aide du Kit SDK .NET Core.  [Visual Studio 2017](#visual-studio-2017) fournit un environnement de développement intégré pour les applications .NET Core sur Windows.
+Vous pouvez utiliser l’éditeur de votre choix pour développer des applications .NET Core à l’aide du Kit SDK .NET Core. [Visual Studio 2017](#visual-studio-2017) fournit un environnement de développement intégré pour les applications .NET Core sur Windows.
 
-Vous trouverez plus d’informations sur les modifications apportées à Visual Studio 2017 dans les [notes de publication](https://www.visualstudio.com/news/releasenotes/vs2017-relnotes).
+Vous trouverez plus d’informations sur les modifications apportées à Visual Studio 2017 dans les [notes de publication](/visualstudio/releasenotes/vs2017-relnotes).
+
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 Pour développer des applications .NET Core 2.x dans Visual Studio 2017 :
 
  1. [Téléchargez et installez Visual Studio 2017 version 15.3.0 ou version ultérieure](/visualstudio/install/install-visual-studio) en sélectionnant la charge de travail **Développement multiplateforme .NET Core** (dans la section **Autres ensembles d’outils**).
+
 ![Capture d’écran de l’installation de Visual Studio 2017 avec la charge de travail « Développement multiplateforme .NET Core » sélectionnée](./media/windows-prerequisites/vs-15-3-workloads.jpg)
 
 Une fois installé l’ensemble d’outils **Développement multiplateforme .NET Core**, Visual Studio 2017 utilise .NET Core 1.x par défaut. Installez le SDK .NET Core 2.x pour obtenir la prise en charge de .NET Core 2.x dans Visual Studio 2017.
 
  2. Installez le [SDK .NET Core 2.x](https://www.microsoft.com/net/download/core).
  3. Reciblez les projets .NET Core 1.x existants ou nouveaux sur .NET Core 2.x en suivant les instructions suivantes :
-    * Dans le menu **Projet**, choisissez **Propriétés**. 
+    * Dans le menu **Projet**, choisissez **Propriétés**.
     * Dans le menu de sélection **framework cible**, choisissez **.NET Core 2.0**.
 
 ![Capture d’écran de la propriété de projet Application Visual Studio 2017 avec définition de l’élément de menu framework cible sur « .NET Core 2.0 »](./media/windows-prerequisites/Targeting-dotnetCore2.png)
 
 Une fois installé le SDK .NET Core 2.x, Visual Studio 2017 l’utilise par défaut et prend en charge les actions suivantes :
 
-  * Ouvrir, générer et exécuter les projets .NET Core 1.x existants.
-  * Recibler les projets .NET Core 1.x vers .NET Core 2.x, les générer et les exécuter.
-  * Créer des projets .NET Core 2.x.
+* Ouvrir, générer et exécuter les projets .NET Core 1.x existants.
+* Recibler les projets .NET Core 1.x vers .NET Core 2.x, les générer et les exécuter.
+* Créer des projets .NET Core 2.x.
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
 Pur développer des applications .NET Core 1.x dans Visual Studio, [téléchargez et installez Visual Studio 2017 RTM (version 15.0.26228.4) ou version ultérieure](/visualstudio/install/install-visual-studio) en sélectionnant la charge de travail **Développement multiplateforme .NET Core** (dans la section **Autres ensembles d’outils**).
+
 ![Capture d’écran de l’installation de Visual Studio 2017 avec la charge de travail « Développement multiplateforme .NET Core » sélectionnée](./media/windows-prerequisites/vs_workloads.jpg)
+
 > [!IMPORTANT]
 > Bien que vous puissiez utiliser Visual Studio 2015 pour le développement .NET Core 1.x, nous vous le déconseillons pour les raisons suivantes :
   > * Les outils .NET Core sont une préversion, qui n’est pas prise en charge.
@@ -88,10 +95,10 @@ Pur développer des applications .NET Core 1.x dans Visual Studio, [télécharge
 > Pour plus d’informations sur les changements de format de projet, consultez la page [Vue d’ensemble des modifications](./tools/cli-msbuild-architecture.md).
 ---
 
->[!TIP]
-  > Pour vérifier votre version de Visual Studio 2017 :
+> [!TIP]
+> Pour vérifier votre version de Visual Studio 2017 :
 >
-     > * Dans le menu **Aide**, choisissez **À propos de Microsoft Visual Studio**.
-     > * Dans la boîte de dialogue **À propos de Microsoft Visual Studio**, vérifiez le numéro de version.
->     * Pour les applications .NET Core 2.x, Visual Studio 2017 version 15.3 (26730.01) ou une version ultérieure.
->     * Pour les applications .NET Core 1.x, Visual Studio 2017 version 15.0 (26228.04) ou une version ultérieure.
+> * Dans le menu **Aide**, choisissez **À propos de Microsoft Visual Studio**.
+> * Dans la boîte de dialogue **À propos de Microsoft Visual Studio**, vérifiez le numéro de version.
+>   * Pour les applications .NET Core 2.x, Visual Studio 2017 version 15.3 (26730.01) ou une version ultérieure.
+>   * Pour les applications .NET Core 1.x, Visual Studio 2017 version 15.0 (26228.04) ou une version ultérieure.

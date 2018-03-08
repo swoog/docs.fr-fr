@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: baeeb47dde77ceaa461214f55482d2312d67ccec
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 0b5fdb03e4b0d0c2d4e8aa8a897fd46d56707f11
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="strategies-for-handling-partial-failure"></a>Stratégies pour la gestion d’une défaillance partielle
 
@@ -31,7 +31,7 @@ Les stratégies pour la gestion des défaillances partielles sont les suivantes.
 
 **Fournissez des solutions de secours**. Dans cette approche, le processus client exécute la logique de secours en cas d’échec d’une requête, comme le retour de données mises en cache ou d’une valeur par défaut. Il s’agit d’une approche appropriée pour les requêtes, mais qui est plus complexe pour les mises à jour ou les commandes.
 
-**Limitez le nombre de requêtes placées en file d’attente**. Les clients doivent également imposer une limite plus grande du nombre de requêtes en attente qu’un microservice client peut envoyer à un service particulier. Si la limite est atteinte, il est probablement inutile d’effectuer d’autres requêtes, et ces tentatives devraient échouer immédiatement. En termes d’implémentation, la stratégie d’[isolation par cloisonnement](https://github.com/App-vNext/Polly/wiki/Bulkhead) de Polly peut être utilisée pour satisfaire cette exigence. Cette approche est essentiellement une limitation de parallélisation avec [SemaphoreSlim](https://docs.microsoft.com/dotnet/api/system.threading.semaphoreslim?view=netcore-1.1) comme implémentation. Elle autorise également une « file d’attente » à l’extérieur du cloisonnement. Vous pouvez vous protéger de manière proactive contre une charge excessive , même avant l’exécution (par exemple, parce que la capacité maximale est considérée comme atteinte). Ainsi, sa réponse à certains scénarios de défaillance est plus rapide que celle d’un disjoncteur, puisque le disjoncteur attend la défaillance. Dans Polly, l’objet BulkheadPolicy expose le niveau de remplissage du cloisonnement et de la file d’attente. De plus, en cas de dépassement, il propose des événements qui peuvent également être utilisés pour gérer la mise à l’échelle horizontale automatisée.
+**Limitez le nombre de requêtes placées en file d’attente**. Les clients doivent également imposer une limite plus grande du nombre de requêtes en attente qu’un microservice client peut envoyer à un service particulier. Si la limite est atteinte, il est probablement inutile d’effectuer d’autres requêtes, et ces tentatives devraient échouer immédiatement. En termes d’implémentation, la stratégie d’[isolation par cloisonnement](https://github.com/App-vNext/Polly/wiki/Bulkhead) de Polly peut être utilisée pour satisfaire cette exigence. Cette approche est essentiellement une limitation de parallélisation avec <xref:System.Threading.SemaphoreSlim> comme implémentation. Elle autorise également une « file d’attente » à l’extérieur du cloisonnement. Vous pouvez vous protéger de manière proactive contre une charge excessive , même avant l’exécution (par exemple, parce que la capacité maximale est considérée comme atteinte). Ainsi, sa réponse à certains scénarios de défaillance est plus rapide que celle d’un disjoncteur, puisque le disjoncteur attend la défaillance. Dans Polly, l’objet BulkheadPolicy expose le niveau de remplissage du cloisonnement et de la file d’attente. De plus, en cas de dépassement, il propose des événements qui peuvent également être utilisés pour gérer la mise à l’échelle horizontale automatisée.
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 

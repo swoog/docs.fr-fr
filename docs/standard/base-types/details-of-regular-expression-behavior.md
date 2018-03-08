@@ -22,11 +22,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c574ab8ddf506802fb42f53b5212dcb4a3bd9d34
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 5b471cd8e934880fc8095fbad68b460174ec338c
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="details-of-regular-expression-behavior"></a>Comportement détaillé des expressions régulières
 Le moteur d’expression régulière du .NET Framework est un analyseur d’expression régulière rétroactive qui incorpore un moteur NFA (Nondeterministic Finite Automaton) tel que celui utilisé par Perl, Python, Emacs et Tcl. Cette particularité le distingue des moteurs d’expression régulière pure DFA (Deterministic Finite Automaton) plus rapides, mais plus limités, comme ceux d’awk, egrep ou lex. Elle le distingue également des moteurs NFA POSIX standardisés, mais plus lents. La section suivante décrit les trois types de moteurs d’expression régulière et explique pourquoi les expressions régulières dans le .NET Framework sont implémentées à l’aide d’un moteur NFA classique.  
@@ -108,7 +108,7 @@ Le moteur d’expression régulière du .NET Framework est un analyseur d’expr
     |`^`|Commencer la correspondance au début d’une ligne.|  
     |`(?<Pvt>\<PRIVATE\>\s)?`|Mettre en correspondance zéro ou une occurrence de la chaîne `<PRIVATE>` suivie d’un espace blanc. Assigner la correspondance à un groupe de capture nommé `Pvt`.|  
     |`(?(Pvt)((\w+\p{P}?\s)+)`|Si le groupe de capture `Pvt` existe, mettre en correspondance une ou plusieurs occurrences d’un ou plusieurs caractères de mot suivis de zéro ou un séparateur de ponctuation suivi d’un espace blanc. Assigner la sous-chaîne au premier groupe de capture.|  
-    |`&#124;((\w+\p{P}?\s)+))`|Si le groupe de capture `Pvt` n’existe pas, mettre en correspondance une ou plusieurs occurrences d’un ou plusieurs caractères de mot suivis de zéro ou un séparateur de ponctuation suivi d’un espace blanc. Assigner la sous-chaîne au troisième groupe de capture.|  
+    |<code>&#124;((\w+\p{P}?\s)+))<code>|Si le groupe de capture `Pvt` n’existe pas, mettre en correspondance une ou plusieurs occurrences d’un ou plusieurs caractères de mot suivis de zéro ou un séparateur de ponctuation suivi d’un espace blanc. Assigner la sous-chaîne au troisième groupe de capture.|  
     |`\r?$`|Mettre en correspondance la fin d’une ligne ou la fin de la chaîne.|  
   
      Pour plus d’informations sur l’évaluation conditionnelle, consultez [Constructions d’alternative](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md).  
@@ -145,7 +145,7 @@ Le moteur d’expression régulière du .NET Framework est un analyseur d’expr
     |-------------|-----------------|  
     |`^`|Commencer la correspondance au début de la chaîne.|  
     |`[A-Z0-9]`|Mettre en correspondance n’importe quel caractère numérique ou alphanumérique. (La comparaison respecte la casse.)|  
-    |`([-!#$%&'.*+/=?^`{}&#124;~\w])*`|Mettre en correspondance zéro, une ou plusieurs occurrences de n’importe quel caractère de mot ou de l’un des caractères suivants : -, !, #, $, %, &, ', ., *, +, /, =, ?, ^, `, {, }, &#124;, ou ~.|  
+    |<code>([-!#$%&'.*+/=?^\`{}&#124;~\w])*<code>|Mettre en correspondance zéro, une ou plusieurs occurrences de n’importe quel caractère ou de l’un des caractères suivants :  -, !, #, $, %, &, ’, ., *, +, /, =, ?, ^, \`, {, }, &#124; ou ~.|  
     |`(?<=[A-Z0-9])`|Postanalyser jusqu’au caractère précédent, qui doit être numérique ou alphanumérique. (La comparaison respecte la casse.)|  
     |`$`|Termine la correspondance à la fin de la chaîne.|  
   

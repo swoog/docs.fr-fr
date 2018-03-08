@@ -21,15 +21,15 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: d14f82fa73400695faad49f010e6ef52a14dd9e3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6ee718737885618322c3623a80b0b091bbfc729d
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="introduction-to-plinq"></a>Introduction à PLINQ
 ## <a name="what-is-a-parallel-query"></a>Qu’est une requête parallèle ?  
- Language-Integrated Query (LINQ) a été présenté dans le [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)].  Elle propose un modèle unifié pour interroger une source de données <xref:System.Collections.IEnumerable?displayProperty=nameWithType> ou <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> de manière sécurisée. LINQ to Objects est le nom des requêtes LINQ exécutées sur les collections en mémoire telles que <xref:System.Collections.Generic.List%601> et les tableaux. Cet article suppose que vous avez des connaissances de base de LINQ. Pour plus d’informations, consultez [LINQ (Language-Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d).  
+ Language-Integrated Query (LINQ) a été présenté dans le [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)].  Elle propose un modèle unifié pour interroger une source de données <xref:System.Collections.IEnumerable?displayProperty=nameWithType> ou <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> de manière sécurisée. LINQ to Objects est le nom des requêtes LINQ exécutées sur les collections en mémoire telles que <xref:System.Collections.Generic.List%601> et les tableaux. Cet article suppose que vous avez une connaissance de base de LINQ. Pour plus d’informations, consultez [LINQ (Language-Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d).  
   
  Parallel LINQ (PLINQ) est une implémentation parallèle du modèle de requête LINQ. Une requête PLINQ ressemble à bien des égards à une requête LINQ to Objects non parallèle. Les requêtes PLINQ, tout comme les requêtes [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)] séquentielles, fonctionnent sur toutes les sources de données <xref:System.Collections.IEnumerable> ou <xref:System.Collections.Generic.IEnumerable%601> en mémoire et ont une exécution différée, ce qui signifie que leur exécution ne démarre pas tant que la requête est énumérée. La principale différence est que PLINQ essaie d’utiliser pleinement tous les processeurs sur le système. Cela s’effectue par le partitionnement de la source de données en segments et l’exécution de la requête sur chaque segment sur des threads de travail distincts en parallèle sur plusieurs processeurs. Dans de nombreux cas, l’exécution parallèle signifie une exécution beaucoup plus rapide de la requête.  
   
