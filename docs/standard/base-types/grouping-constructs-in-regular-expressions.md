@@ -26,11 +26,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 9b9e54d8bbc9ca7cc9172fd83bd15968b3cef8e1
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: 107e935f3fd4fd38b4393d09e46c03c0c51c4d79
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Constructions de regroupement dans les expressions régulières
 Les constructions de regroupement délimitent les sous-expressions d'une expression régulière et capturent les sous-chaînes d'une chaîne d'entrée. Utilisez les constructions de regroupement pour effectuer les opérations suivantes :  
@@ -393,7 +393,7 @@ Les constructions de regroupement délimitent les sous-expressions d'une express
 |Motif|Description|  
 |-------------|-----------------|  
 |`\d{2}`|Mettre en correspondance deux chiffres décimaux.|  
-|`{?<=\b20)`|Continuer la mise en correspondance si les deux chiffres décimaux sont précédés des chiffres décimaux « 20 » à la limite d'un mot.|  
+|`(?<=\b20)`|Continuer la mise en correspondance si les deux chiffres décimaux sont précédés des chiffres décimaux « 20 » à la limite d'un mot.|  
 |`\b`|Terminer la correspondance à la limite d'un mot.|  
   
  Les assertions de postanalyse positive de largeur nulle permettent également de limiter la rétroactivité quand le ou les derniers caractères d'un groupe capturé doivent être une partie des caractères qui correspondent au modèle d'expression régulière de ce groupe. Par exemple, si un groupe capture tous les caractères alphabétiques consécutifs, vous pouvez utiliser une assertion de postanalyse positive de largeur nulle pour imposer que le dernier caractère soit un caractère alphabétique.  
