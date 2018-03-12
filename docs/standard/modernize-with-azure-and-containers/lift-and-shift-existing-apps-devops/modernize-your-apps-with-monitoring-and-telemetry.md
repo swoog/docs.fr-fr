@@ -4,14 +4,15 @@ description: "Architecture de Microservices .NET pour les Applications .NET en c
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
+ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1535951eb648deab17cf8c2fe64db6ddf7df4cb5
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 3caeb60cf0107aaf5413d935f3bde11863561c7d
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>Moderniser vos applications avec la surveillance et télémétrie
 
@@ -37,13 +38,13 @@ Vous pouvez accéder Analytique de journal par le biais du portail OMS ou le por
 
 Le [solution d’analyse de conteneur](https://docs.microsoft.com/azure/log-analytics/log-analytics-containers) dans Analytique de journal permet de consulter et de gérer vos hôtes Docker et conteneur Windows dans un emplacement unique. La solution montre les conteneurs sont en cours d’exécution, image de conteneur qu’ils s’exécutent et exécutant des conteneurs. Vous pouvez afficher des informations d’audit détaillées, y compris les commandes qui sont utilisés avec des conteneurs. Vous pouvez également résoudre les conteneurs en affichant et en recherche de journaux centralisées, sans avoir à afficher à distance des ordinateurs hôtes Docker ou Windows. Vous pouvez rechercher des conteneurs qui peuvent être bruyants et beaucoup de ressources en excès sur un ordinateur hôte. En outre, vous pouvez afficher centralisée de l’UC, mémoire, stockage, l’utilisation du réseau et des informations sur les performances, pour les conteneurs. Sur les ordinateurs exécutant Windows, vous pouvez centraliser et comparer les journaux à partir de Windows Server, Hyper-V et des conteneurs Docker. La solution prend en charge les orchestrators conteneur suivant :
 
--   Docker essaim
+-   Docker Swarm
 
 -   DC/OS
 
 -   Kubernetes
 
--   Infrastructure de service
+-   Service Fabric
 
 -   Red Hat OpenShift
 

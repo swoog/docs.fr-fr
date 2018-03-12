@@ -4,36 +4,37 @@ description: "Moderniser des Applications .NET existantes avec Azure Cloud et le
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
+ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: bced3bed84d138dbda4f322322213b47c0159016
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: 6a2abda3949c1fffc4d731b01e35e58e7c56dac0
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="walkthroughs-and-technical-get-started-overview"></a>Procédures pas à pas et les techniques obtiennent une vue d’ensemble démarrée 
+# <a name="walkthroughs-and-technical-get-started-overview"></a>Procédures pas à pas et les techniques obtiennent une vue d’ensemble démarrée
 
-Pour limiter la taille de ce livre électronique, nous avons documentation technique supplémentaire et les procédures pas à pas complète disponible dans un référentiel GitHub. La série en ligne des procédures pas à pas qui est décrite dans ce chapitre traite le programme d’installation pas à pas plusieurs environnements qui sont basées sur les conteneurs Windows et le déploiement vers Azure.
+Pour limiter la taille de ce livre électronique, documentation technique supplémentaire et les procédures pas à pas complète étaient mis à disposition dans un référentiel GitHub. La série en ligne des procédures pas à pas qui est décrite dans ce chapitre traite le programme d’installation pas à pas plusieurs environnements qui sont basées sur les conteneurs Windows et le déploiement vers Azure.
 
-Les sections suivantes expliquent ce que chaque procédure pas à pas est sur ses objectifs, sa vision globale- et fournit un schéma de tâches qui sont impliquées. Vous pouvez obtenir les procédures pas à pas eux-mêmes dans le *eShopModernizing* applications wiki de référentiel GitHub à [https://github.com/dotnet-architecture/eShopModernizing/wiki](https://github.com/dotnet-architecture/eShopModernizing/wiki).
+Les sections suivantes expliquent ce que chaque procédure pas à pas sur ses objectifs et la vision de haut niveau et fournit un diagramme des tâches qui sont impliquées. Vous pouvez obtenir les procédures pas à pas eux-mêmes dans le *eShopModernizing* applications wiki de référentiel GitHub à [https://github.com/dotnet-architecture/eShopModernizing/wiki](https://github.com/dotnet-architecture/eShopModernizing/wiki).
 
-# <a name="technical-walkthrough-list"></a>Liste des techniques de procédure pas à pas
+## <a name="technical-walkthrough-list"></a>Liste des techniques de procédure pas à pas
 
 Les procédures get-started suivantes fournissent des conseils techniques cohérent et complet des exemples d’applications que vous pouvez de courbes d’élévation et MAJ en utilisant des conteneurs et ensuite déplacer à l’aide de plusieurs options de déploiement dans Azure.
 
 Chacun des procédures suivantes utilise les nouveaux exemples eShopLegacy et eShopModernizing d’applications, qui sont disponibles sur GitHub à l’adresse [https://github.com/dotnet-architecture/eShopModernizing](https://github.com/dotnet-architecture/eShopModernizing).
 
--   **Visite guidée de shopping des applications héritées**
+- **Visite guidée de shopping des applications héritées**
 
--   **Mettez en conteneur de vos applications .NET existantes avec des conteneurs Windows**
+- **Mettez en conteneur de vos applications .NET existantes avec des conteneurs Windows**
 
--   **Déployer votre application basée sur les conteneurs de Windows pour les machines virtuelles Azure**
+- **Déployer votre application basée sur les conteneurs de Windows pour les machines virtuelles Azure**
 
--   **Déployer vos applications basée sur les conteneurs de Windows à Kubernetes dans le Service de conteneur Azure**
+- **Déployer vos applications basée sur les conteneurs de Windows à Kubernetes dans le Service de conteneur Azure**
 
--   **Déployer vos applications basée sur les conteneurs de Windows Azure Service fabric**
+- **Déployer vos applications basée sur les conteneurs de Windows Azure Service fabric**
 
 ## <a name="walkthrough-1-tour-of-eshop-legacy-apps"></a>Procédure pas à pas 1 : Visite guidée des applications héritées de shopping
 
@@ -97,13 +98,13 @@ Les conteneurs Windows permet d’améliorer le déploiement des applications .N
 
 L’objectif de cette procédure pas à pas est de vous montrer plusieurs options pour containerizing une application .NET Framework existante. Vous pouvez :
 
--   Mettez en conteneur de votre application à l’aide de [Visual Studio 2017 Tools pour Docker](/aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker) (Visual Studio 2017 ou versions ultérieures).
+- Mettez en conteneur de votre application à l’aide de [Visual Studio 2017 Tools pour Docker](/aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker) (Visual Studio 2017 ou versions ultérieures).
 
--   Mettez en conteneur de votre application en ajoutant manuellement un [Dockerfile](https://docs.docker.com/engine/reference/builder/), puis en utilisant la [Docker CLI](https://docs.docker.com/engine/reference/commandline/cli/).
+- Mettez en conteneur de votre application en ajoutant manuellement un [Dockerfile](https://docs.docker.com/engine/reference/builder/), puis en utilisant la [Docker CLI](https://docs.docker.com/engine/reference/commandline/cli/).
 
--   Mettez en conteneur de votre application à l’aide de la [Img2Docker](https://github.com/docker/communitytools-image2docker-win) outil (outil open source à partir de Docker).
+- Mettez en conteneur de votre application à l’aide de la [Img2Docker](https://github.com/docker/communitytools-image2docker-win) outil (outil open source à partir de Docker).
 
-Cette procédure pas à pas se concentre sur les outils de 2017 Visual Studio pour l’approche de Docker, mais les deux autres approches sont relativement similaires en ce qui concerne l’aide des fichiers Dockerfile.
+Cette procédure pas à pas se concentre sur les outils de 2017 Visual Studio pour l’approche de Docker, mais les deux autres approches sont relativement similaires en ce qui concerne l’utilisation des fichiers Dockerfile.
 
 ### <a name="scenario"></a>Scénario
 
@@ -137,7 +138,7 @@ La procédure pas à pas technique complet est disponible dans le wiki de réfé
 
 ### <a name="overview"></a>Vue d'ensemble
 
-Déploiement sur un hôte Docker sur un ordinateur Windows Server 2016 dans Azure vous permet de définir rapidement des environnements de développement/test/mise en lots. Elle vous donne également un emplacement commun pour les testeurs ou les utilisateurs des activités à valider l’application. Machines virtuelles peuvent également être des environnements de production IaaS valides.
+Déploiement sur un hôte Docker sur un serveur Windows Server 2016 Virtual Machine (VM) dans Azure vous permet de définir rapidement des environnements de développement/test/mise en lots. Elle vous donne également un emplacement commun pour les testeurs ou les utilisateurs des activités à valider l’application. Machines virtuelles peuvent également être infrastructure valide comme les environnements de production de Service (IaaS).
 
 ### <a name="goals"></a>Objectifs
 
@@ -167,13 +168,13 @@ Plusieurs scénarios sont traités dans cette procédure pas à pas.
 
 ### <a name="azure-vms-for-windows-containers"></a>Machines virtuelles Azure pour les conteneurs Windows
 
-Machines virtuelles Azure pour les conteneurs Windows sont simplement les machines virtuelles qui sont basés sur Windows Server 2016, Windows 10, ou versions ultérieures, à la fois avec le moteur Docker installé. Dans la plupart des cas, vous allez utiliser Windows Server 2016 dans les machines virtuelles Azure.
+Machines virtuelles Azure pour les conteneurs Windows sont basés sur Windows Server 2016, Windows 10 ou versions ultérieures de machines virtuelles, à la fois avec le moteur Docker configuré. Dans la plupart des cas, Windows Server 2016 est utilisé dans les machines virtuelles Azure.
 
 Azure fournit actuellement une machine virtuelle nommée **Windows Server 2016 avec des conteneurs**. Vous pouvez utiliser cet ordinateur virtuel pour essayer la nouvelle fonctionnalité de conteneur Windows Server avec Windows Server Core ou Nano Server de Windows. Les images de système d’exploitation de conteneur sont installés, et ensuite l’ordinateur virtuel est prêt à être utilisé avec Docker.
 
 ### <a name="benefits"></a>Avantages
 
-Bien que les conteneurs Windows peuvent être déployées sur local Windows Server 2016 machines virtuelles, lorsque vous déployez dans Azure, vous obtenez un moyen plus simple pour commencer, machines virtuelles de prêt à utiliser Windows Server conteneur. Vous obtenez également un emplacement commun en ligne qui est accessible aux testeurs et évolutivité automatique via Azure VM identiques.
+Bien que les conteneurs Windows peuvent être déployées sur local Windows Server 2016 machines virtuelles, lorsque vous déployez dans Azure, vous obtenez un moyen plus simple pour commencer, machines virtuelles de prêt à utiliser Windows Server conteneur. Vous obtenez également un emplacement commun en ligne qui est accessible aux testeurs et évolutivité automatique par le biais des machines virtuelles Azure identiques.
 
 ### <a name="next-steps"></a>Étapes suivantes
 
@@ -217,25 +218,25 @@ L’objectif de cette procédure pas à pas est d’apprendre à déployer une a
 
 ### <a name="benefits"></a>Avantages
 
-Il existe de nombreux avantages pour le déploiement vers un cluster dans Kubernetes. Le principal avantage est que vous obtenez un environnement de l’environnement de production dans laquelle vous pouvez monter en charge l’application en fonction du nombre d’instances de conteneurs, vous souhaitez utiliser (évolutivité interne dans les nœuds existants), en fonction du nombre de nœuds ou des machines virtuelles dans le cluster ( évolutivité globale du cluster).
+Il existe de nombreux avantages pour le déploiement vers un cluster dans Kubernetes. Le principal avantage est que vous obtenez un environnement de l’environnement de production dans laquelle vous pouvez faire évoluer l’application en fonction du nombre d’instances de conteneurs, vous souhaitez utiliser (évolutivité interne dans les nœuds existants), en fonction du nombre de nœuds ou des machines virtuelles dans le cluster ( évolutivité globale du cluster).
 
 Service de conteneur Azure optimise les technologies et outils open source populaires spécifiquement pour Azure. Vous obtenez une solution ouverte qui offre la portabilité de vos conteneurs et lors de la configuration de votre application. Sélectionnez la taille, le nombre d’hôtes, et le conteneur-Outils orchestrator Service gère tout le reste.
 
 Avec Kubernetes, les développeurs peuvent progresser de réfléchir à des machines physiques et virtuelles, à la planification d’une infrastructure orientée conteneur qui facilite les fonctionnalités suivantes, entre autres :
 
--   Applications basées sur plusieurs conteneurs
+- Applications basées sur plusieurs conteneurs
 
--   Réplication des instances de conteneurs et d’échelle horizontale
+- Réplication des instances de conteneurs et d’échelle horizontale
 
--   Attribution de noms et de découverte (par exemple, DNS interne)
+- Attribution de noms et de découverte (par exemple, DNS interne)
 
--   L’équilibrage de charge
+- L’équilibrage de charge
 
--   Mises à jour propagées
+- Mises à jour propagées
 
--   Distribution de clés secrètes
+- Distribution de clés secrètes
 
--   Vérifications de l’intégrité des applications
+- Vérifications de l’intégrité des applications
 
 ## <a name="next-steps"></a>Étapes suivantes
 
@@ -251,7 +252,7 @@ La procédure pas à pas technique complet est disponible dans le wiki de réfé
 
 ### <a name="overview"></a>Vue d'ensemble
 
-Une application qui est basée sur les conteneurs Windows devra rapidement utilisent des plateformes, éloigner encore davantage de machines virtuelles IaaS. Cela est nécessaire pour facilement atteindre une haute évolutivité et mieux automatisée de l’évolutivité et pour une amélioration significative dans automatisée déploiements et le contrôle de version. Vous pouvez atteindre ces objectifs à l’aide de l’orchestrateur Azure Service Fabric, qui est disponible dans le cloud Azure, mais vous pouvez également utiliser localement, ou même dans un autre cloud public.
+Une application basée sur les conteneurs Windows rapidement doit utiliser des plates-formes, éloigner encore davantage de machines virtuelles IaaS. Cela est nécessaire pour facilement atteindre une haute évolutivité et mieux automatisée de l’évolutivité et pour une amélioration significative dans automatisée déploiements et le contrôle de version. Vous pouvez atteindre ces objectifs à l’aide de l’orchestrateur Azure Service Fabric, qui est disponible dans le cloud Azure, mais vous pouvez également utiliser localement, ou même dans un autre cloud public.
 
 ### <a name="goals"></a>Objectifs
 
@@ -277,37 +278,37 @@ L’objectif de cette procédure pas à pas est d’apprendre à déployer une a
 
 ## <a name="benefits"></a>Avantages
 
-Les avantages du déploiement vers un cluster Service fabric sont semblables aux avantages de Kubernetes. Une différence, cependant, est que le Service Fabric est un environnement de production très bien établie pour les applications Windows par rapport à Kubernetes, ce qui a été entrent dans l’aperçu pour les conteneurs Windows jusqu’au début de 2017. (Kubernetes est un environnement plus mature pour Linux). 
+Les avantages du déploiement vers un cluster Service fabric sont semblables aux avantages de Kubernetes. Cependant, une différence est que le Service Fabric est un environnement de production plus mature pour les applications Windows par rapport à Kubernetes, qui se trouve dans une phase bêta pour les conteneurs Windows dans Kubernetes version 1.9 (2017 décembre). Kubernetes est un environnement plus mature pour Linux.
 
-Le principal avantage de l’utilisation d’Azure Service Fabric est que vous obtenez un environnement de l’environnement de production dans lequel vous pouvez monter en charge l’application en fonction du nombre d’instances de conteneurs, vous souhaitez utiliser (évolutivité interne dans les nœuds existants), en fonction du nombre de les nœuds ou des ordinateurs virtuels du cluster (évolutivité globale du cluster).
+Le principal avantage de l’utilisation d’Azure Service Fabric est que vous obtenez un environnement de l’environnement de production dans laquelle vous pouvez faire évoluer l’application en fonction du nombre d’instances de conteneurs, vous souhaitez utiliser (évolutivité interne dans les nœuds existants), en fonction du nombre de les nœuds ou des ordinateurs virtuels du cluster (évolutivité globale du cluster).
 
 Azure Service Fabric offre la portabilité de vos conteneurs et lors de la configuration de votre application. Vous pouvez avoir une infrastructure de Service de cluster dans Azure, ou installer localement dans votre centre de données. Vous pouvez même installer un cluster Service Fabric dans un autre cloud, tels que [Amazon AWS](https://blogs.msdn.microsoft.com/azureservicefabric/2017/05/18/tutorial-how-to-create-a-service-fabric-standalone-cluster-with-aws-ec2-instances/).
 
 Avec Service Fabric, les développeurs peuvent progresser de réfléchir à des machines physiques et virtuelles à la planification d’une infrastructure orientée conteneur qui facilite les fonctionnalités suivantes, entre autres :
 
--   Applications basées sur plusieurs conteneurs.
+- Applications basées sur plusieurs conteneurs.
 
--   Réplication des instances de conteneurs et d’échelle horizontale.
+- Réplication des instances de conteneurs et d’échelle horizontale.
 
--   Attribution de noms et de découverte (par exemple, DNS interne).
+- Attribution de noms et de découverte (par exemple, DNS interne).
 
--   L’équilibrage de charge.
+- L’équilibrage de charge.
 
--   Mises à jour propagées.
+- Mises à jour propagées.
 
--   La distribution de clés secrètes.
+- La distribution de clés secrètes.
 
--   Vérifications de contrôle d’intégrité de l’application.
+- Vérifications de contrôle d’intégrité de l’application.
 
 Les fonctionnalités suivantes sont exclusives dans Service Fabric (par rapport à d’autres orchestrators) :
 
--   Fonctionnalité de services avec état, par le biais du modèle d’application des Services fiables.
+- Fonctionnalité de services avec état, par le biais du modèle d’application des Services fiables.
 
--   Modèle d’acteurs, par le biais du modèle d’application Reliable Actors.
+- Modèle d’acteurs, par le biais du modèle d’application Reliable Actors.
 
--   Déployer un processus nus, en plus des conteneurs Windows ou Linux.
+- Déployer un processus nus, en plus des conteneurs Windows ou Linux.
 
--   Avancé des mises à jour et les vérifications d’intégrité.
+- Avancé des mises à jour et les vérifications d’intégrité.
 
 ### <a name="next-steps"></a>Étapes suivantes
 

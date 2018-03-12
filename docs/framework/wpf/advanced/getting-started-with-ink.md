@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-wpf
+ms.technology:
+- dotnet-wpf
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -18,16 +19,17 @@ helpviewer_keywords:
 - animation [WPF], gradient brush colors
 - brushes [WPF], animating colors of
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c977e8a4a23f9739541cf28d9e34ad9e8db1daf0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 74227ebe815e971087569ff39ac0a3479c1b0d14
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="getting-started-with-ink"></a>Débuter avec l'encre
 Incorporation d’encre numérique dans vos applications est plus facile que jamais. Encre a évolué d’être un corollaire à la méthode COM et Windows Forms de la programmation à la réalisation d’une intégration complète dans le [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Vous n’avez pas besoin installer les kits de développement logiciel distincts ou des bibliothèques runtime.  
@@ -38,9 +40,9 @@ Incorporation d’encre numérique dans vos applications est plus facile que jam
 ## <a name="quick-start"></a>Démarrage rapide  
  Cette section vous permet d’écrire un simple [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application qui collecte de l’encre.  
   
- Si vous n’avez pas déjà fait, installez Microsoft Visual Studio 2005 et le [!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)]. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]applications généralement doivent être compilées avant de pouvoir afficher, même si elles sont entièrement composent de [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Toutefois, le [!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)] inclut une application, XamlPad, conçue pour accélérer le processus d’implémentation d’un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-en fonction de l’interface utilisateur. Vous pouvez utiliser cette application pour afficher et vous entraîner avec les premiers exemples dans ce document. Le processus de création d’applications compilées [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] est couvert plus loin dans ce document.  
+ Si vous n’avez pas déjà fait, installez Microsoft Visual Studio 2005 et le [!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)]. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications généralement doivent être compilées avant de pouvoir afficher, même si elles sont entièrement composent de [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Toutefois, le [!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)] inclut une application, XamlPad, conçue pour accélérer le processus d’implémentation d’un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-en fonction de l’interface utilisateur. Vous pouvez utiliser cette application pour afficher et vous entraîner avec les premiers exemples dans ce document. Le processus de création d’applications compilées [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] est couvert plus loin dans ce document.  
   
- Pour lancer XAMLPad, cliquez sur le **Démarrer** menu, pointez sur **tous les programmes**, pointez sur **Winndows SDK Microsoft**, pointez sur **outils**, puis cliquez sur **XAMLPad**. Dans le volet de rendu, XAMLPad restitue le code XAML dans le volet du code. Vous pouvez modifier le code XAML, et les modifications apparaissent immédiatement dans le volet de rendu.  
+ Pour lancer XAMLPad, cliquez sur le **Démarrer** menu, pointez sur **tous les programmes**, pointez sur **Microsoft Windows SDK**, pointez sur **outils**, puis cliquez sur **XAMLPad**. Dans le volet de rendu, XAMLPad restitue le code XAML dans le volet du code. Vous pouvez modifier le code XAML, et les modifications apparaissent immédiatement dans le volet de rendu.  
   
 #### <a name="got-ink"></a>Vous avez encre ?  
  Pour démarrer votre première [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application qui prend en charge les services d’encre :  

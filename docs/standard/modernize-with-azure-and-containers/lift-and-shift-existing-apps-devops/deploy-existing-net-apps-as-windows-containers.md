@@ -4,20 +4,21 @@ description: "Architecture de Microservices .NET pour les Applications .NET en c
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
+ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f9a30605313c06542fabf9689f700ed726445f57
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: bab6e275c93d2cedddf010ab20f98cb8392fa9fa
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Déployer des applications .NET existantes en tant que conteneurs Windows
 
 Déploiements basés sur les conteneurs Windows sont applicables aux optimisée pour le Cloud des applications, les applications cloud en mode natif et DevOps prête pour le Cloud.
 
-Dans ce guide et dans les sections suivantes, nous concentrer sur l’utilisation de conteneurs Windows pour *DevOps prête pour le Cloud* applications, lorsque vous porter des applications de .NET existantes.
+Dans ce guide et dans les sections suivantes est activé à l’aide de conteneurs Windows pour *DevOps prête pour le Cloud* applications, lorsque vous porter des applications de .NET existantes.
 
 ## <a name="what-are-containers-linux-or-windows"></a>Présentation des conteneurs (Windows ou Linux)
 
@@ -41,7 +42,7 @@ Dans les conteneurs Windows, le processus d’empaquetage d’applications est e
 
 Un grand nombre d’organisations est containerizing applications monolithiques existantes pour les raisons suivantes :
 
--   **Agilité via l’optimisation du déploiement de la version**. Les conteneurs présentent un contrat d’un déploiement cohérent entre le développement et les opérations. Lorsque vous utilisez des conteneurs, les développeurs ne sont pas entendu dire, « Il fonctionne sur mon ordinateur, pourquoi ne pas en production ? » Ils peuvent simplement le dire, « Il s’exécute sous un conteneur, donc il aurez en production. » L’application empaquetée, avec toutes ses dépendances, peut être exécutée dans n’importe quel environnement conteneur pris en charge. Il s’exécutera la manière qu’il a été conçu pour s’exécuter dans toutes les cibles de déploiement (développement, assurance qualité, de mise en lots, production). Conteneurs éliminer la plupart des frictions lorsqu’ils passent d’une étape à l’autre, ce qui améliore considérablement le déploiement, et vous pouvez expédier plus rapidement.
+-   **Agilité via l’optimisation du déploiement de la version**. Les conteneurs présentent un contrat d’un déploiement cohérent entre le développement et les opérations. Lorsque vous utilisez des conteneurs, les développeurs ne sont pas entendu dire, « Il fonctionne sur mon ordinateur, pourquoi ne pas en production ? » Ils peuvent simplement le dire, « Il s’exécute sous un conteneur, donc il s’exécutera en production. » L’application empaquetée, avec toutes ses dépendances, peut être exécutée dans n’importe quel environnement conteneur pris en charge. Il s’exécutera la manière qu’il a été conçu pour s’exécuter dans toutes les cibles de déploiement (développement, assurance qualité, de mise en lots, production). Conteneurs éliminer la plupart des frictions lorsqu’ils passent d’une étape à l’autre, ce qui améliore considérablement le déploiement, et vous pouvez expédier plus rapidement.
 
 -   **Réduction des coûts**. Conteneurs de contribuer à réduire les coûts, soit par la consolidation et la suppression du matériel existant, ou d’exécuter des applications à une densité plus élevée par unité du matériel.
 
@@ -51,13 +52,13 @@ Un grand nombre d’organisations est containerizing applications monolithiques 
 
 Des améliorations significatives dans l’agilité, la portabilité et le contrôle finalement conduire les réductions des coûts importants lorsque vous utilisez des conteneurs pour développer et maintenir des applications.
 
-## <a name="what-is-docker"></a>Qu’est-ce que Docker ?
+## <a name="what-is-docker"></a>Présentation de Docker
 
 [Docker](https://www.docker.com/) est un [projet open source](https://github.com/docker/docker) qui automatise le déploiement d’applications en tant que conteneurs portables, autonomes qui peuvent s’exécuter dans le nuage ou sur site. Docker est également un [société](https://www.docker.com/) qui promeut et évolue cette technologie. La société fonctionne en collaboration avec le cloud, Linux et les fournisseurs de Windows, notamment Microsoft.
 
 ![](./media/image6.png)
 
-> **Figure 4-6.** Docker déploie des conteneurs à toutes les couches du cloud hybride
+> **Figure 4-6.** Docker déploie des conteneurs dans toutes les couches du cloud hybride
 
 À une personne familiarisé avec les machines virtuelles, les conteneurs peuvent sembler très similaire. Un conteneur exécute un système d’exploitation, a un système de fichiers et sont accessibles via un réseau, tout comme un système d’ordinateur physique ou virtuel. Toutefois, la technologie et les concepts derrière les conteneurs sont très différents des machines virtuelles. À partir du point de vue du développeur, un conteneur doit être traité plus comme un processus unique. En fait, un conteneur possède un point d’entrée unique pour un processus.
 
@@ -81,9 +82,9 @@ Par conséquent, un des principaux avantages des conteneurs Windows est qu’ils
 
 Étant donné la diversité des systèmes d’exploitation pris en charge par Docker, ainsi que les différences entre .NET Framework et .NET Core, vous devez cibler un système d’exploitation spécifique et en fonction de l’infrastructure que vous utilisez des versions spécifiques.
 
-Pour Windows, vous pouvez utiliser Windows Server Core ou Nano Server de Windows. Ces versions de Windows fournissent des caractéristiques différentes (comme IIS par rapport à un serveur web auto-hébergé comme Kestrel) qui peuvent être nécessaires aux applications .NET Framework ou .NET Core.
+Pour Windows, vous pouvez utiliser Windows Server Core ou Windows Nano Server. Ces versions de Windows fournissent des caractéristiques différentes (comme IIS par rapport à un serveur web auto-hébergé comme Kestrel) qui peuvent être nécessaires aux applications .NET Framework ou .NET Core.
 
-Pour Linux, plusieurs versions sont disponibles et pris en charge dans les images Docker de .NET officiels (par exemple, Debian).
+Pour Linux, plusieurs distributions sont disponibles et prises en charge dans les images .NET Docker officielles (comme Debian).
 
 Figure 4-7 indique les versions du système d’exploitation que vous pouvez cibler, selon la version de l’application du .NET Framework.
 
