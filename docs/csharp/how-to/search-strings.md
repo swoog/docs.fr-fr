@@ -11,11 +11,11 @@ helpviewer_keywords:
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
 ms.author: wiwagn
-ms.openlocfilehash: cb672ef74d9eb83df7d1c8985e518136dad54c34
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 60d31a3d6d694c04d0c93b96816928e2ccbd3fba
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="how-to-search-strings"></a>Guide pratique pour faire des recherches dans des chaînes
 
@@ -60,7 +60,7 @@ Le modèle de recherche décrit le texte que vous recherchez. Le tableau suivant
 
 ## <a name="does-a-string-follow-a-pattern"></a>Une chaîne suit-elle un modèle ?
 
-Le code suivant utilise des expressions régulières pour valider le format de chaque chaîne d’un tableau. La validation doit vérifier que chaque chaîne a la forme d’un numéro de téléphone constitué de trois groupes de chiffres séparés par des tirets, les deux premiers groupes contenant trois chiffres et le troisième en contenant quatre. Le modèle de recherche utilise l’expression régulière `^\\d{3}-\\d{3}-\\d{4}$`. Pour plus d’informations, consultez [Langage des expressions régulières - Aide-mémoire](http://msdn.microsoft.com/library/930653a6-95d2-4697-9d5a-52d11bb6fd4c).
+Le code suivant utilise des expressions régulières pour valider le format de chaque chaîne d’un tableau. La validation doit vérifier que chaque chaîne a la forme d’un numéro de téléphone constitué de trois groupes de chiffres séparés par des tirets, les deux premiers groupes contenant trois chiffres et le troisième en contenant quatre. Le modèle de recherche utilise l’expression régulière `^\\d{3}-\\d{3}-\\d{4}$`. Pour plus d’informations, consultez [Langage des expressions régulières - Aide-mémoire](../../standard/base-types/regular-expression-language-quick-reference.md).
 
 | pattern  | Signification                             |
 | -------- |-------------------------------------|

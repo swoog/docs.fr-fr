@@ -27,11 +27,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 8e565d029096b88d304b9cfc241807084873e735
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: cea67e0309bccac7d21d7e8db659a55d34d4959a
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>Constructions d'alternative dans les expressions régulières
 <a name="top"></a> Les constructions d'alternative modifient une expression régulière pour permettre la correspondance de type inclusif/exclusif ou conditionnelle. .NET prend en charge trois constructions d’alternative :  
@@ -126,18 +126,18 @@ ms.lasthandoff: 12/23/2017
  [!code-csharp[RegularExpressions.Language.Alternation#4](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation4.cs#4)]
  [!code-vb[RegularExpressions.Language.Alternation#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation4.vb#4)]  
   
- Le modèle d'expression régulière `\b(?<n2>\d{2}-)*(?(n2)\d{7}|\d{3}-\d{2}-\d{4})\b` est interprété comme indiqué dans le tableau suivant.  
+ Le modèle d'expression régulière `\b(?<n2>\d{2}-)?(?(n2)\d{7}|\d{3}-\d{2}-\d{4})\b` est interprété comme indiqué dans le tableau suivant.  
   
 |Motif|Description|  
 |-------------|-----------------|  
 |`\b`|Commencer à la limite d'un mot.|  
-|`(?<n2>\d{2}-)*`|Mettre en correspondance zéro ou une occurrence de deux chiffres suivis d'un trait d'union. Nommer ce groupe de capture `n2`.|  
+|`(?<n2>\d{2}-)?`|Mettre en correspondance zéro ou une occurrence de deux chiffres suivis d'un trait d'union. Nommer ce groupe de capture `n2`.|  
 |`(?(n2)`|Testez si `n2` a été mis en correspondance dans la chaîne d'entrée.|  
 |`)\d{7}`|Si `n2` a été mis en correspondance, faites correspondre sept chiffres décimaux.|  
 |<code>&#124;\d{3}-\d{2}-\d{4}</code>|Si `n2` ne correspondait pas, faites correspondre trois chiffres décimaux, un trait d'union, deux chiffres décimaux, un autre trait d'union et quatre chiffres décimaux.|  
 |`\b`|Mettre en correspondance la limite d'un mot.|  
   
- Une variation de cet exemple qui utilise un groupe numéroté au lieu d'un groupe nommé est illustrée dans l'exemple suivant. Son modèle d'expression régulière est `\b(\d{2}-)*(?(1)\d{7}|\d{3}-\d{2}-\d{4})\b`.  
+ Une variation de cet exemple qui utilise un groupe numéroté au lieu d'un groupe nommé est illustrée dans l'exemple suivant. Son modèle d'expression régulière est `\b(\d{2}-)?(?(1)\d{7}|\d{3}-\d{2}-\d{4})\b`.  
   
  [!code-csharp[RegularExpressions.Language.Alternation#5](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation5.cs#5)]
  [!code-vb[RegularExpressions.Language.Alternation#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation5.vb#5)]  

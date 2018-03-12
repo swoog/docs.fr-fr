@@ -7,11 +7,11 @@ ms.date: 12/20/2017
 ms.topic: article
 ms.prod: .net
 ms.devlang: devlang-csharp
-ms.openlocfilehash: 26d4dffa6f6680b193788ee6d90dad01fde7cf51
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 591996c02c55c1f54af94280940e41720684251a
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="how-to-c"></a>Guides pratiques (C#)
 
@@ -55,7 +55,7 @@ Ces articles vous permettent d’utiliser des collections de données.
 Les chaînes constituent le type de données fondamental utilisé pour afficher ou manipuler du texte. Ces articles présentent les pratiques courantes avec des chaînes.
 
 - [Comparer des chaînes](../programming-guide/strings/how-to-compare-strings.md).
-- [Modifier le contenu d’une chaîne](../programming-guide/strings/how-to-modify-string-contents.md).
+- [Modifier le contenu d’une chaîne](modify-string-contents.md).
 - [Déterminer si une chaîne représente un nombre](../programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md).
 - [Utiliser `String.Split` pour séparer les chaînes](parse-strings-using-split.md).
 - [Combiner plusieurs chaînes en une seule](concatenate-multiple-strings.md).
