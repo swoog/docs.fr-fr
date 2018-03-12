@@ -13,11 +13,11 @@ helpviewer_keywords:
 ms.assetid: 3e66cd1b-3432-4e1d-8c37-5ebacae8f53f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2653b9dc8a6ecbcb718c20be8bd6275edf4cfb6e
-ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
+ms.openlocfilehash: bf26b7ce58c1e20fbbe5043cbd2acfd5712837fa
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="tuples-visual-basic"></a>Tuples (Visual Basic)
 
@@ -64,69 +64,70 @@ Pour activer les noms d’élément de tuple interred, vous devez définir la ve
 <PropertyGroup> 
   <LangVersion>15.3</LangVersion> 
 </PropertyGroup> 
+```
 
-The version number can be any version of the Visual Basic compiler starting with 15.3. Rather than hard-coding a specific compiler version, you can also specify "Latest" as the value of `LangVersion` to compile with the most recent version of the Visual Basic compiler installed on your system.
+Le numéro de version peut être n’importe quelle version du compilateur Visual Basic 15.3 à compter. Au lieu de coder en dur une version du compilateur spécifique, vous pouvez également spécifier « Dernier » comme valeur de `LangVersion` pour compiler avec la version la plus récente du compilateur Visual Basic installée sur votre système.
 
-In some cases, the Visual Basic compiler cannot infer the tuple element name from the candidate name, and the tuple field can only be referenced using its default name, such as `Item1`, `Item2`, etc. These include:
+Dans certains cas, le compilateur Visual Basic ne peut pas déduire le nom d’élément de tuple à partir du nom du candidat et le champ de tuple peut uniquement être référencé à l’aide de son nom par défaut, tel que `Item1`, `Item2`, etc. Elles incluent notamment :
 
-- The candidate name is the same as the name of a tuple member, such as `Item3`, `Rest`, or `ToString`.
+- Le nom du candidat est le même que le nom d’un membre de tuple, tel que `Item3`, `Rest`, ou `ToString`.
 
-- The candidate name is duplicated in the tuple.
+- Le nom du candidat est dupliqué dans le tuple.
  
-When field name inference fails, Visual Basic does not generate a compiler error, nor is an exception thrown at runtime. Instead, tuple fields must be referenced by their predefined names, such as `Item1` and `Item2`. 
+En cas d’échec de l’inférence de nom de champ, Visual Basic ne génère pas d’une erreur du compilateur, et n’est pas une exception levée lors de l’exécution. Au lieu de cela, les champs de tuple doivent être référencés par leurs noms prédéfinis, tels que `Item1` et `Item2`. 
   
-## Tuples versus structures
+## <a name="tuples-versus-structures"></a>Tuples et structures
 
-A Visual Basic tuple is a value type that is an instance of one of the a **System.ValueTuple** generic types. For example, the `holiday` tuple defined in the previous example is an instance of the <xref:System.ValueTuple%603> structure. It is designed to be a lightweight container for data. Since the tuple aims to make it easy to create an object with multiple data items, it lacks some of the features that a custom structure might have. These include:
+Un tuple de Visual Basic est un type valeur qui est une instance de l’un de l’un **System.ValueTuple** types génériques. Par exemple, le `holiday` tuple défini dans l’exemple précédent est une instance de la <xref:System.ValueTuple%603> structure. Il est conçu pour être un conteneur léger pour les données. Étant donné que le tuple vise pour faciliter la création d’un objet avec plusieurs éléments de données, il ne dispose pas de certaines fonctionnalités susceptibles de présenter une structure personnalisée. Elles incluent notamment :
 
-- Customer members. You cannot define your own properties, methods, or events for a tuple.
+- Les membres des clients. Vous ne pouvez pas définir vos propres propriétés, méthodes ou événements pour un tuple.
 
-- Validation. You cannot validate the data assigned to fields.
+- Validation. Impossible de valider les données assignées à des champs.
 
-- Immutability. Visual Basic tuples are mutable. In contrast, a custom structure allows you to control whether an instance is mutable or immutable.
+- Immuabilité. Les tuples Visual Basic sont mutables. En revanche, une structure personnalisée permet de vous contrôler si une instance est mutable ou immuable.
 
-If custom members, property and field validation, or immutability are important, you should use the Visual Basic [Structure](../../../language-reference/statements/structure-statement.md) statement to define a custom value type.
+Si des membres personnalisés, la propriété et la validation de champ ou que l’immuabilité est importante, vous devez utiliser Visual Basic [Structure](../../../language-reference/statements/structure-statement.md) instruction afin de définir un type de valeur personnalisée.
 
-A Visual Basic tuple does inherit the members of its **ValueTuple** type. In addition to its fields, these include the following methods:
+Un tuple de Visual Basic n’hérite pas les membres de sa **ValueTuple** type. En plus de ses champs, notamment les méthodes suivantes :
 
-| Member | Description |
+| Membre | Description |
 | ---|---|
-| CompareTo | Compares the current tuple to another tuple with the same number of elements. |
-| Equals | Determines whether the current tuple is equal to another tuple or object. |
-| GetHashCode | Calculates the hash code for the current instance. |
-| ToString | Returns the string representation of this tuple, which takes the form `(Item1, Item2...)`, where `Item1` and `Item2` represent the values of the tuple's fields. |
+| CompareTo | Compare le tuple actif à un autre tuple avec le même nombre d’éléments. |
+| Equals | Détermine si le tuple actif est égal à un autre objet ou tuple. |
+| GetHashCode | Calcule le code de hachage pour l’instance actuelle. |
+| ToString | Retourne la représentation sous forme de chaîne de ce tuple, qui prend la forme `(Item1, Item2...)`, où `Item1` et `Item2` représentent les valeurs des champs du tuple. |
 
-In addition, the **ValueTuple** types implement <xref:System.Collections.IStructuralComparable> and <xref:System.Collections.IStructuralEquatable> interfaces, which allow you to define customer comparers.
+En outre, le **ValueTuple** types implémentent <xref:System.Collections.IStructuralComparable> et <xref:System.Collections.IStructuralEquatable> interfaces, ce qui vous permet de définir des comparateurs de client.
 
-## Assignment and tuples
+## <a name="assignment-and-tuples"></a>Affectation et tuples
 
-Visual Basic supports assignment between tuple types that have the same number of fields. The field types can be converted if one of the following is true:
+Visual Basic prend en charge l’assignation entre les types de tuple qui ont le même nombre de champs. Les types de champs peuvent être converties si une des conditions suivantes est remplie :
 
-- The source and target field are of the same type.
+- Le champ source et cible sont du même type.
 
-- A widening (or implicit) conversion of the source type to the target type is defined. 
+- Une conversion étendue (ou implicite) du type de source pour le type de cible est définie. 
 
-- `Option Strict` is `On`, and a narrowing (or explicit) conversion of the source type to the target type is defined. This conversion can throw an exception if the source value is outside the range of the target type.
+- `Option Strict` est `On`, et une conversion restrictive (ou explicite) du type de source pour le type de cible est définie. Cette conversion peut lever une exception si la valeur source est en dehors de la plage du type cible.
 
-Other conversions are not considered for assignments. Let's look at the kinds of assignments that are allowed between tuple types.
+Les autres conversions ne sont pas prises en compte pour les affectations. Examinons les types d’affectation qui sont autorisés entre les types tuple.
 
-Consider these variables used in the following examples:
+Prenez en compte les variables utilisées dans les exemples suivants :
 
 [!code-vb[Assign](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple3.vb#1)]
 
-The first two variables, `unnamed` and `anonymous`, do not have semantic names provided for the fields. Their field names are the default `Item1` and `Item2`. The last two variables, `named` and `differentName` have semantic field names. Note that these two tuples have different names for the fields.
+Les deux premières variables `unnamed` et `anonymous`, n’ont pas de noms sémantiques fournies pour les champs. Leurs noms de champ sont la valeur par défaut `Item1` et `Item2`. Les deux dernières variables `named` et `differentName` ont des noms de champ de sémantique. Notez que ces deux tuples ont des noms différents pour les champs.
 
-All four of these tuples have the same number of fields (referred to as 'arity'), and the types of those fields are identical. Therefore, all of these assignments work:
+Les quatre de ces tuples ont le même nombre de champs (également appelé « arité ») et les types de ces champs sont identiques. Par conséquent, toutes ces affectations fonctionnent :
 
 [!code-vb[Assign](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple3.vb#2)]
 
-Notice that the names of the tuples are not assigned. The values of the fields are assigned following the order of the fields in the tuple.
+Notez que les noms des tuples ne sont pas affectés. Les valeurs des champs sont affectées suivant l’ordre des champs dans le tuple.
 
-Finally, notice that we can assign the `named` tuple to the `conversion` tuple, even though the first field of `named` is an `Integer`, and the first field of `conversion` is a `Long`. This assignment succeeds because converting an `Integer` to a `Long` is a widening conversion.
+Enfin, notez que nous pouvons attribuer le `named` tuple à la `conversion` tuple, même si le premier champ de `named` est un `Integer`et le premier champ de `conversion` est un `Long`. Cette attribution a réussi, car la conversion d’un `Integer` à un `Long` est une conversion étendue.
 
 [!code-vb[Assign](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple3.vb#3)]
 
-Tuples with different numbers of fields are not assignable:
+Tuples avec différents nombres de champs ne sont pas être assignés :
 
 ```vb
 ' Does not compile.
