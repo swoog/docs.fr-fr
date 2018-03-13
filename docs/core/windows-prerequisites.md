@@ -3,16 +3,16 @@ title: Configuration requise pour .NET Core sur Windows
 description: "Découvrez les dépendances nécessaires sur votre machine Windows pour développer et exécuter des applications .NET Core."
 author: JRAlexander
 ms.author: johalex
-ms.date: 02/28/2018
+ms.date: 03/02/2018
 ms.topic: article
 ms.prod: .net-core
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: e64ecb807fd377458a9998ebbdfe2f6f15b115bb
-ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
+ms.openlocfilehash: 48102f3fb7fa6e93238eefff0e7f1ecbed4d8409
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Configuration requise pour .NET Core sur Windows
 
@@ -100,5 +100,6 @@ Pur développer des applications .NET Core 1.x dans Visual Studio, [télécharge
 >
 > * Dans le menu **Aide**, choisissez **À propos de Microsoft Visual Studio**.
 > * Dans la boîte de dialogue **À propos de Microsoft Visual Studio**, vérifiez le numéro de version.
->   * Pour les applications .NET Core 2.x, Visual Studio 2017 version 15.3 (26730.01) ou une version ultérieure.
->   * Pour les applications .NET Core 1.x, Visual Studio 2017 version 15.0 (26228.04) ou une version ultérieure.
+>   * Pour les applications .NET Core 2.1 Preview 1, Visual Studio 2017 version 15.6 Preview 6 ou ultérieure.
+>   * Pour les applications .NET Core 2.0, Visual Studio 2017 version 15.3 ou ultérieure.
+>   * Pour les applications .NET Core 1.x, Visual Studio 2017 version 15.0 ou ultérieure.

@@ -267,6 +267,7 @@
 ### [Guide pratique pour concaténer des chaînes](csharp/how-to/concatenate-multiple-strings.md)
 ### [Comment convertir une chaîne en DateTime](standard/base-types/parsing-datetime.md)
 ### [Comment rechercher des chaînes](csharp/how-to/search-strings.md)
+### [Guide pratique pour modifier du contenu de chaîne](csharp/how-to/modify-string-contents.md)
 <!-- End of C# Concepts section -->
 ## [Kit SDK .NET Compiler Platform (API Roslyn)](csharp/roslyn-sdk/)
 ## [Guide de programmation C#](csharp/programming-guide/)
