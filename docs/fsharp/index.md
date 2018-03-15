@@ -1,62 +1,85 @@
 ---
 title: Guide F#
-description: "En savoir plus sur F #, un langage de programmation fonctionnels qui s’exécute sur .NET."
-keywords: .NET, .NET Core
+description: "Ce guide fournit une vue d’ensemble des différents documents de formation pour F #, un langage de programmation fonctionnels qui s’exécute sur .NET."
 author: jackfoxy
 ms.author: phcart
-ms.date: 12/01/2016
+ms.date: 02/28/2018
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: ea27fb37-dad1-4bd4-a3cc-4f5c70767ae9
-ms.openlocfilehash: 45f5d2ca794ccea7a35cf6c0bf9d58a3e6500453
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.openlocfilehash: b7cf3feb5699f85bf09a47f008fdaf70ac7c8d77
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="f-guide"></a>Guide F#
 
-F # est un langage de programmation fonctionnels qui s’exécute sur .NET.  En plus des constructions de programmation fonctionnelle prise en charge, il possède également des fonctionnalités de programmation d’objets.  Cet hybride de la programmation fonctionnelle avec les fonctionnalités orientées objet rend F # une langue pragmatique pour accomplir une tâche.
+F # est un langage de programmation fonctionnels qui s’exécute sur .NET. Il possède également une prise en charge complète pour les objets, ce qui vous permet de blend fonctionnel et la programmation de l’objet pour les solutions pragmatiques à n’importe quel problème.
 
-## <a name="if-youre-new-to-f"></a>Si vous débutez avec F # #
+```fsharp
+open System // Get access to functionality in System namespace.
 
-Si vous utilisez F #, commencer par le [visite guidée de F #](tour.md) pour obtenir une vue d’ensemble du langage et certains de ses concepts de programmation.  Si vous utilisez Visual Studio, le modèle de projet du didacticiel contient le même contenu.
+// Function: takes a name and produces a greeting.
+let getGreeting name =
+    sprintf "Hello, %s! Isn't F# great?" name
 
-## <a name="if-youre-experienced-with-f"></a>Si vous êtes familiarisé avec F # #
+// Use the EntryPoint attribute to run the program.
+[<EntryPoint>]
+let main args =
+    args                     // Use F# pipe operators to send the args into some functions.
+    |> Array.map getGreeting // Turn each name into a friendly greeting.
+    |> Array.iter printfn    // Print them!
 
-Si vous familiariser avec F #, ou que vous souhaitez en savoir plus sur une construction de langage spécifiques, consultez la [référence du langage](language-reference/index.md).  Il s’agit d’un guide complet de toutes les fonctionnalités du langage F #.
+    0
+```
 
-En outre, le [référence de bibliothèque F # Core](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-core-library-reference) est un bon point de départ pour en savoir plus sur FSharp.Core, la bibliothèque principale qui fait partie de F #.
+F # est sur la productivité son cœur. La prise en charge des outils pour F # est omniprésent et complet des fonctionnalités avancées.
+
+## <a name="learning-f"></a>Apprentissage de F # #
+
+[Visite guidée de F #](tour.md) donne une vue d’ensemble des fonctionnalités de langue principale avec un grand nombre d’exemples de code. Cette opération est recommandée si vous débutez en F # et que vous souhaitez faire une idée des comment fonctionne le langage.
+
+[Prise en main) (F # dans Visual Studio](get-started/get-started-visual-studio.md) si vous êtes sur Windows et que vous souhaitez une expérience complète de Visual Studio IDE (environnement de développement Integraded).
+
+[Prise en main) (F # dans Visual Studio pour Mac](get-started/get-started-with-visual-studio-for-mac.md) si vous êtes sur macOS et que vous souhaitez utiliser un IDE de Visual Studio.
+
+[Prise en main) (F # dans Visual Studio Code](get-started/get-started-vscode.md) si vous voulez un léger et inter-plateformes, et que l’expérience de fonctionnalités l’IDE.
+
+[Prise en main) (F # avec l’interface de ligne de base .NET](get-started/get-started-command-line.md) si vous souhaitez utiliser les outils de ligne de commande.
+
+## <a name="references"></a>Références
+
+[Référence du langage F #](language-reference/index.md) est la référence officielle et complète pour toutes les fonctionnalités du langage F #. Chaque article explique la syntaxe et présente des exemples de code. Vous pouvez utiliser la barre de filtre dans la table des matières pour rechercher des articles spécifiques.
+
+[Référence de bibliothèque F # Core](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-core-library-reference) est la référence d’API pour la bibliothèque principale F #.
+
+## <a name="additional-guides"></a>Guides supplémentaires
+
+[F # et bénéfices](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/) est un livre complet et très détaillé sur l’apprentissage de F #. Son contenu et son auteur sont bien-aimée par la Communauté F #. La cible s’adresse principalement aux développeurs de l’arrière-plan d’une programmation orientée objet.
+
+[Wikibook programmation F #](https://en.wikibooks.org/wiki/F_Sharp_Programming) est un wikibook d’apprentissage F #. Il est également un produit de la Communauté F #. Le public visé est personnes qui débutent dans F #, avec un peu familiarisé avec la programmation orientée objet.
+
+## <a name="learn-f-through-videos"></a>Apprendre F # grâce à des vidéos
+
+[Didacticiel F # sur YouTube](https://www.youtube.com/watch?v=c7eNDJN758U) est une bonne introduction à F # à l’aide de Visual Studio, en affichant un grand nombre de bons exemples au cours de 1,5 heures. Le public visé est de développeurs Visual Studio qui débutent à F #.
+
+[Introduction à la programmation avec F #](https://www.youtube.com/watch?v=Teak30_pXHk&list=PLEoMzSkcN8oNiJ67Hd7oRGgD1d4YBxYGC) est une série vidéo qui utilise le Code de Visual Studio comme éditeur principal. La série de vidéos démarre à partir de rien et se termine par la création d’un jeu de vidéo RPG textuel. Le public visé est les développeurs qui préfèrent Visual Studio Code (ou un IDE léger) et qui sont nouvelles pour F #.
+
+[Nouveautés de Visual Studio 2017, pour F # pour les développeurs](https://www.linkedin.com/learning/what-s-new-in-visual-studio-2017-for-f-sharp-for-developers) un cours vidéo qui montre certaines des nouvelles fonctionnalités de F # dans Visual Studio 2017. Le public visé est de développeurs Visual Studio qui débutent à F #.
+
+## <a name="other-useful-resources"></a>Autres ressources utiles.
+
+Le [site Web d’extraits de code F #](http://www.fssnip.net) contient un ensemble massif d’extraits de code montrant comment effectuer n’importe quoi en F #, allant de débutant à des extraits de code hautement avancées.
+
+Le [F # Software Foundation Slack](http://fsharp.org/guides/slack/) est l’endroit idéal pour les débutants et les experts similaires, est très actifs, et possède certains meilleures F # aux programmeurs monde de disponibles pour une conversation. Nous vous recommandons vivement de jointure.
 
 ## <a name="the-f-software-foundation"></a>F# Software Foundation
 
-Bien que Microsoft est le principal développeur du langage F # et ses outils, F # est soutenu par une base indépendante, le F # Software Foundation (FSSF).
+Bien que Microsoft est le principal développeur du langage F # et ses outils dans Visual Studio, F # est soutenu par une base indépendante, le F # Software Foundation (FSSF).
 
 La FSSF a pour but non seulement de promouvoir, protéger et développer le langage de programmation F#, mais aussi de soutenir et d’étendre la communauté internationale et diversifiée de programmeurs F#.
 
-Pour en savoir plus et vous impliquer, consultez [fsharp.org](http://fsharp.org).
-
-## <a name="documentation"></a>Documentation
-
-* [Didacticiels](tutorials/getting-started/index.md)
-* [Fonctions comme valeurs de première classe](introduction-to-functional-programming/functions-as-first-class-values.md)<!--[Introduction to Functional Programming](introduction-to-functional-programming/index.md)-->
-* [Informations de référence sur le langage](language-reference/index.md)
-* [Informations de référence sur la bibliothèque principale F#](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-core-library-reference)
-
-## <a name="online-reading-resources"></a>Ressources à lire en ligne
-
-* [F # et bénéfices Gitbook](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/) 
-* [F# Programming Wikibook](https://en.wikibooks.org/wiki/F_Sharp_Programming)
-
-## <a name="video-learning-resources"></a>Ressources vidéo
-
-* [Série « Introduction to Functional Programming with F# » sur YouTube](https://www.youtube.com/watch?v=Teak30_pXHk&list=PLEoMzSkcN8oNiJ67Hd7oRGgD1d4YBxYGC)
-* [Série « Introduction to F# » sur FSharpTV](https://fsharp.tv/courses/fsharp-programming-intro/)
-
-## <a name="further-resources"></a>Ressources supplémentaires
-
-* [Ressources destinées à apprendre F# sur fsharp.org](http://fsharp.org/learn.html)
-* [Site web d’extraits de code en F#](http://www.fssnip.net)
-* [F# Software Foundation](http://fsharp.org)
+Pour en savoir plus et vous impliquer, consultez [fsharp.org](http://fsharp.org). Il est gratuit joindre, et le réseau des développeurs F # dans la base de quelque chose que vous ne souhaitez pas manquez !
