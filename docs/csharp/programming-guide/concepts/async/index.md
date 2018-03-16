@@ -9,11 +9,11 @@ ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 501a11f1bc6118e647cc414f4b83a14f6b41a37d
-ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
+ms.openlocfilehash: c9f2699646db17c9358f84f4c5407e7aab8b60cf
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="asynchronous-programming-with-async-and-await-c"></a>Programmation asynchrone avec async et await (C#)
 Vous pouvez éviter des goulots d'étranglement de performance et améliorer la réactivité globale de votre application à l'aide de la programmation asynchrone. Toutefois, les techniques traditionnelles pour écrire des applications asynchrones peuvent être complexes et rendre ces applications difficiles à écrire, déboguer et mettre à jour.  
@@ -219,7 +219,7 @@ Une méthode async peut également avoir un type de retour `void`. Ce type de re
   
 Une méthode async dont le type de retour est `void` ne peut pas être attendue, et l’appelant d’une méthode retournant void ne peut capturer aucune exception levée par la méthode.  
   
-Une méthode async ne peut pas déclarer de paramètres [ref](../../../../csharp/language-reference/keywords/ref.md) ou [out](../../../../csharp/language-reference/keywords/out.md), mais elle peut appeler des méthodes qui comportent ces paramètres. De même, une méthode async ne peut pas retourner une valeur par référence, bien qu’elle puisse appeler des méthodes avec des valeurs de retour de référence. 
+Une méthode async ne peut pas déclarer de paramètres [in](../../../../csharp/language-reference/keywords/in-parameter-modifier.md), [ref](../../../../csharp/language-reference/keywords/ref.md) ou [out](../../../../csharp/language-reference/keywords/out-parameter-modifier.md), mais elle peut appeler des méthodes qui ont ces paramètres. De même, une méthode async ne peut pas retourner une valeur par référence, bien qu’elle puisse appeler des méthodes avec des valeurs de retour de référence. 
   
 Pour plus d’informations ainsi que des exemples, consultez la page [Types de retour Async (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md). Pour plus d’informations sur l’interception des exceptions dans les méthodes async, consultez la page [try-catch](../../../../csharp/language-reference/keywords/try-catch.md). 
   
