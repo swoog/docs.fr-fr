@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - interoperation with unmanaged code, marshaling
 - marshaling behavior
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0e66caf800fd49b4822ee22326b8a5cf712d99bb
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: f0a8fcba31ddfa09ca60f8ba6cf08d20b270c3da
+ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="default-marshaling-behavior"></a>comportement de marshaling par défaut
 Le marshaling d’interopérabilité agit sur les règles qui définissent le comportement des données associées aux paramètres de méthode quand elles sont passées de la mémoire managée à la mémoire non managée. Ces règles intégrées contrôlent les activités de marshaling telles que les transformations de types de données, le fait qu'un appelant puisse modifier les données transmises et renvoyer ces modifications à l'appelant, ainsi que les circonstances dans lesquelles le marshaleur fournit des optimisations de performances.  
@@ -33,7 +35,7 @@ Le marshaling d’interopérabilité agit sur les règles qui définissent le co
  Cette section aborde les caractéristiques de comportement par défaut du service de marshaling d'interopérabilité. Elle présente des informations détaillées sur le marshaling des tableaux, des types booléens, des types char, des délégués, des classes, des objets, des chaînes et des structures.  
   
 > [!NOTE]
->  Le marshaling des types génériques n’est pas pris en charge. Pour plus d’informations, consultez [Interopérabilité à l’aide de types génériques](http://msdn.microsoft.com/library/26b88e03-085b-4b53-94ba-a5a9c709ce58).  
+>  Le marshaling des types génériques n’est pas pris en charge. Pour plus d’informations, consultez [Interopérabilité à l’aide de types génériques](https://msdn.microsoft.com/library/26b88e03-085b-4b53-94ba-a5a9c709ce58(v=vs.100)).  
   
 ## <a name="memory-management-with-the-interop-marshaler"></a>Gestion de la mémoire avec le marshaleur d’interopérabilité  
  Le marshaleur d'interopérabilité tente toujours de libérer de la mémoire allouée par du code non managé. Ce comportement est conforme aux règles de gestion de mémoire COM, mais pas à celles qui régissent le code C++ natif.  
