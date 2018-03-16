@@ -4,17 +4,17 @@ description: "Examiner certaines des fonctionnalités clés de la programmation 
 keywords: "Visual f #, f #, fonctionnelle programmation .NET, visite guidée"
 author: cartermp
 ms.author: phcart
-ms.date: 01/24/2017
+ms.date: 02/28/2018
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 49775139-082e-442f-b5a2-dd402399b5d2
-ms.openlocfilehash: c027e6b71f35fc3b58750eb164124de145244825
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 7327573a25aa62af28570b4a8662235f3e41a972
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="tour-of-f"></a>Visite guidée de F # #
 
@@ -22,20 +22,13 @@ La meilleure façon d’en savoir plus sur F # est en lecture et écriture de co
 
 Il existe deux concepts principaux en F #: types et les fonctions.  Cette visite guidée sera mettent l’accent sur les fonctionnalités du langage qui appartiennent à ces deux concepts.
 
-## <a name="how-to-run-the-code-samples"></a>Comment exécuter les exemples de Code
-
->[!NOTE]
-Deux options pour les exemples de code en cours d’exécution sont [F # essayez](http://www.tryfsharp.org/Create) (requiert Silverlight) et [F # pour les ordinateurs portables Azure](https://notebooks.azure.com/Microsoft/libraries/fsharp/html/FSharp%20for%20Azure%20Notebooks.ipynb) sur Microsoft Azure.
-
-Pour exécuter ces exemples de code le plus rapide consiste à utiliser [F # Interactive](tutorials/fsharp-interactive/index.md).  Simplement copier/coller les exemples de code et il les exécuter.  Vous pouvez également configurer un projet pour compiler et exécuter le code en tant qu’une Application Console.  Consultez le [prise en main](./get-started/index.md) section pour en savoir plus.
-
 ## <a name="functions-and-modules"></a>Fonctions et des Modules
 
 Les éléments essentiels de n’importe quel programme F # sont ***fonctions*** organisés en ***modules***.  [Fonctions](language-reference/functions/index.md) travailler sur des entrées pour produire des sorties, et ils sont organisés sous [Modules](language-reference/modules.md), qui sont la principale manière de regrouper des éléments en F #.  Ils sont définis à l’aide de la [ `let` liaison](language-reference/functions/let-bindings.md), donnez un nom à la fonction et définir ses arguments.
 
 [!code-fsharp[BasicFunctions](../../samples/snippets/fsharp/tour.fs#L101-L133)]
 
-`let`les liaisons sont également comment vous liez une valeur à un nom, semblable à une variable dans d’autres langages.  `let`les liaisons sont ***immuable*** par défaut, ce qui signifie qu’une fois qu’une valeur ou une fonction est liée à un nom, il ne peut pas être modifié sur place.  Ce comportement diffère variables dans d’autres langages qui sont ***mutable***, ce qui signifie que leurs valeurs peut être modifié à tout moment dans le temps.  Si vous avez besoin d’une liaison mutable, vous pouvez utiliser `let mutable ...` syntaxe.
+`let` les liaisons sont également comment vous liez une valeur à un nom, semblable à une variable dans d’autres langages.  `let` les liaisons sont ***immuable*** par défaut, ce qui signifie qu’une fois qu’une valeur ou une fonction est liée à un nom, il ne peut pas être modifié sur place.  Ce comportement diffère variables dans d’autres langages qui sont ***mutable***, ce qui signifie que leurs valeurs peut être modifié à tout moment dans le temps.  Si vous avez besoin d’une liaison mutable, vous pouvez utiliser `let mutable ...` syntaxe.
 
 [!code-fsharp[Immutability](../../samples/snippets/fsharp/tour.fs#L75-L94)]
 
