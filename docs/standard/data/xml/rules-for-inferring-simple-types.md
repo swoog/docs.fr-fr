@@ -17,10 +17,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: c3e6c24fafdd79676e68fa9dd06cf399fc09d5ea
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
-ms.translationtype: HT
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="rules-for-inferring-simple-types"></a>Règles relatives à l'inférence de types simples
 Décrit comment la classe <xref:System.Xml.Schema.XmlSchemaInference> déduit le type de données pour les attributs et les éléments.  
@@ -54,7 +54,7 @@ Décrit comment la classe <xref:System.Xml.Schema.XmlSchemaInference> déduit le
 |heure|Le format d'heure de W3C.|  
 |date|Les valeurs d'année doivent être comprises entre 0001 et 9999.|  
 |gYearMonth|Format d'année et de mois du calendrier grégorien de W3C.|  
-|chaîne|Un ou plusieurs caractères Unicode.|  
+|string|Un ou plusieurs caractères Unicode.|  
   
 ## <a name="type-promotion"></a>Promotion de type  
  La classe <xref:System.Xml.Schema.XmlSchemaInference> examine les valeurs d'attributs et d'éléments l'une après l'autre. Au fur et à mesure que des valeurs sont rencontrées, le type non signé le plus restrictif est déduit. Si un type a été déduit pour un attribut ou un élément et si une nouvelle valeur est rencontrée, qui ne correspond pas au type actuellement déduit, le type déduit est promu au rang de nouveau type qui s'applique au type actuellement déduit et à la nouvelle valeur. La classe <xref:System.Xml.Schema.XmlSchemaInference> ne considère pas les valeurs précédentes lors de la promotion du type déduit.  
@@ -75,7 +75,7 @@ Décrit comment la classe <xref:System.Xml.Schema.XmlSchemaInference> déduit le
   
  Lorsque la première valeur `attr2` est rencontrée, le type de `attr2` est déduit comme `unsignedByte` sur la base de la valeur `0`. Lorsque la seconde valeur `attr2` est rencontrée, le type est promu au rang de `string` sur la base du type actuellement déduit de `unsignedByte` et de la valeur actuelle `true` parce que la classe <xref:System.Xml.Schema.XmlSchemaInference> prend en considération les valeurs précédents lors de la promotion du type déduit. Toutefois, si les deux instances de `attr2` avaient été rencontrées dans le même document XML et pas dans deux documents XML différents, comme illustré ci-avant, `attr2` aurait été déduit comme `boolean`.  
   
-### <a name="ignored-attributes-from-the-httpwwww3org2001xmlschema-instance-namespace"></a>Attributs ignorés de l'espace de noms de l'instance de schéma XML (http://www.w3.org/2001/XMLSchema-instance)  
+### <a name="ignored-attributes-from-the-httpwwww3org2001xmlschema-instance-namespace"></a>Ignorés des attributs à partir de la http://www.w3.org/2001/XMLSchema-instance Namespace  
  Vous trouverez ci-après les attributs de définition du schéma qui sont ignorés durant l'inférence de schéma.  
   
 |Attribut|Description|  

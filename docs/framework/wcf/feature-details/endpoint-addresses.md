@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,22 +14,23 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 58e6d383856d57e95a1ea5bd2658af2ec0b22ed5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="endpoint-addresses"></a>Adresses de point de terminaison
 Chaque point de terminaison a une adresse qui lui est associée et qui est utilisé pour localiser et identifier le point de terminaison. Cette adresse se compose à l'origine d'un URI (Uniform Resource Identifier) qui spécifie l'emplacement du point de terminaison. L'adresse de point de terminaison est représentée dans le modèle de programmation [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] par la classe <xref:System.ServiceModel.EndpointAddress>, qui contient une propriété <xref:System.ServiceModel.EndpointAddress.Identity%2A> facultative qui active l'authentification du point de terminaison par d'autres points de terminaison qui échangent des messages avec celui-ci et un jeu de propriétés <xref:System.ServiceModel.EndpointAddress.Headers%2A> facultatives qui définissent tous les autres en-têtes SOAP requis pour atteindre le service. Les en-têtes facultatifs fournissent des données d'adressage plus détaillées supplémentaires pour identifier ou interagir avec le point de terminaison de service. L'adresse d'un point de terminaison est représentée sur le câble comme une référence de point de terminaison WS-Addressing (EPR).  
   
 ## <a name="uri-structure-of-an-address"></a>Structure URI d'une adresse  
- L'URI d'adresse de la plupart des transports se compose de quatre parties. Par exemple, les quatre parties de l'URI http://www.fabrikam.com:322/mathservice.svc/secureEndpoint peut être décomposées comme suit :  
+ L'URI d'adresse de la plupart des transports se compose de quatre parties. Par exemple, les quatre parties de l’URI http://www.fabrikam.com:322/mathservice.svc/secureEndpoint peuvent être décomposées comme suit :  
   
 -   Schéma : http:  
   
@@ -86,7 +88,7 @@ Chaque point de terminaison a une adresse qui lui est associée et qui est utili
 </system.serviceModel>  
 ```  
   
- Dans l'exemple précédent, net.tcp://payroll.myorg.com:8000 et http://shipping.myorg.com:8000 sont les seules adresses de base, pour leurs schémas respectifs, qui sont transmises.  
+ Dans l’exemple précédent, NET.TCP://Payroll.myorg.com : 8000 et http://shipping.myorg.com:8000 sont les seules adresses de base, pour leur modèle respectif, qui est transmises.  
   
  Le `baseAddressPrefixFilter` ne prend pas en charge de caractères génériques.  
   

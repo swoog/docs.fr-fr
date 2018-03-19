@@ -5,20 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 37575ead-d820-4a67-8059-da11a2ab48e2
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 791e201907f72f9d590f6d835fd6ec1bfc25633f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="service-versioning"></a>Contrôle des versions du service
 Après leur déploiement initial, et potentiellement plusieurs fois pendant leur durée de vie, il peut s’avérer nécessaire de modifier les services (et les points de terminaison qu’ils exposent) pour diverses raisons, telles que l’évolution des besoins de l’entreprise, des exigences informatiques, ou pour résoudre d’autres problèmes. Chaque modification introduit une nouvelle version du service. Cette rubrique explique comment tenir compte du contrôle de version dans [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].  
@@ -110,7 +112,7 @@ Après leur déploiement initial, et potentiellement plusieurs fois pendant leur
  À l'instar du contrôle de version des contrats de données, celui concernant les contrats de service implique également des opérations d'ajout, de modification et de suppression.  
   
 ### <a name="specifying-name-namespace-and-action"></a>Spécification du nom, de l'espace de noms et de l'action  
- Par défaut, le nom d'un contrat de service correspond à celui de l'interface. Son espace de noms par défaut est "http://tempuri.org", et l'action de chaque opération est "http://tempuri.org/contractname/methodname". Il est recommandé de spécifier explicitement un nom et un espace de noms pour le contrat de service, et une action pour chaque opération afin d'éviter d'utiliser "http://tempuri.org" et empêcher l'exposition des noms d'interface et de méthode dans le contrat du service.  
+ Par défaut, le nom d'un contrat de service correspond à celui de l'interface. Son espace de noms par défaut est «http://tempuri.org», et l’action de chaque opération est «http://tempuri.org/contractname/methodname». Il est recommandé de spécifier explicitement un nom et un espace de noms du contrat de service et qu’une action pour chaque opération afin d’éviter d’utiliser «http://tempuri.org» et pour éviter des noms d’interface et la méthode d’être exposé dans le contrat du service.  
   
 ### <a name="adding-parameters-and-operations"></a>Ajout de paramètres et d'opérations  
  L'ajout des opérations de service exposées par le service est une modification sans rupture car les clients existants n'ont pas à se soucier de ces nouvelles opérations.  
@@ -136,7 +138,7 @@ Après leur déploiement initial, et potentiellement plusieurs fois pendant leur
  Les modifications apportées à la liaison et à l'adresse de point de terminaison sont des modifications avec rupture, sauf si les clients sont capables de découvrir dynamiquement la nouvelle liaison ou adresse de point de terminaison. L'un des mécanismes permettant d'implémenter cette fonctionnalité consiste à utiliser un registre UDDI (Universal Discovery Description and Integration) et le modèle d'appel UDDI lorsqu'un client tente de communiquer avec un point de terminaison et, qu'après échec, il interroge un registre UDDI connu pour les métadonnées de point de terminaison actuelles. Le client utilise ensuite l’adresse et la liaison à partir de ces métadonnées pour communiquer avec le point de terminaison. Si cette communication réussit, le client met en cache les informations d'adresse et de liaison pour un usage ultérieur.  
   
 ## <a name="routing-service-and-versioning"></a>Contrôle de version et service de routage  
- Si les modifications apportées à un service sont des modifications avec rupture et vous n'avez pas besoin de plusieurs versions différentes d'un service exécutées simultanément, vous pouvez utiliser le Service de routage WCF pour acheminer les messages vers l'instance de service appropriée. Le Service de routage WCF utilise le routage basé sur le contenu, c'est-à-dire qu'il utilise les informations contenues dans le message pour déterminer la destination du message. [!INCLUDE[crabout](../../../includes/crabout-md.md)]le voir Service de routage WCF [Service de routage](../../../docs/framework/wcf/feature-details/routing-service.md). Pour obtenir un exemple montrant comment utiliser le Service de routage WCF pour le contrôle de version de service, consultez [How To : le Service de contrôle de version](../../../docs/framework/wcf/feature-details/how-to-service-versioning.md).  
+ Si les modifications apportées à un service sont des modifications avec rupture et vous n'avez pas besoin de plusieurs versions différentes d'un service exécutées simultanément, vous pouvez utiliser le Service de routage WCF pour acheminer les messages vers l'instance de service appropriée. Le Service de routage WCF utilise le routage basé sur le contenu, c'est-à-dire qu'il utilise les informations contenues dans le message pour déterminer la destination du message. [!INCLUDE[crabout](../../../includes/crabout-md.md)] le voir Service de routage WCF [Service de routage](../../../docs/framework/wcf/feature-details/routing-service.md). Pour obtenir un exemple montrant comment utiliser le Service de routage WCF pour le contrôle de version de service, consultez [How To : le Service de contrôle de version](../../../docs/framework/wcf/feature-details/how-to-service-versioning.md).  
   
 ## <a name="appendix"></a>Annexe  
  Les instructions relatives au contrôle de version des contrats de données lorsque le contrôle de version strict est requis permettent de traiter des contrats de données comme immuables et d'en créer de nouveaux lorsque des modifications sont requises. Une nouvelle classe devant être créée pour chaque nouveau contrat de données, un mécanisme est donc nécessaire pour éviter d'avoir à utiliser le code existant qui a été écrit par rapport à l'ancienne classe de contrat de données et à le réécrire par rapport à la nouvelle.  
