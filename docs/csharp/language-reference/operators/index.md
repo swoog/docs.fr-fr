@@ -25,11 +25,11 @@ ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 0ac5c6bfb129f0367c2d62ebf139e44b8eb60379
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 68da402bde670077e0700ce1ac60e7980c6568ad
+ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="c-operators"></a>Opérateurs C#
 C# fournit de nombreux opérateurs, qui sont des symboles spécifiant quelles opérations (mathématiques, indexation, appel de fonction, etc.) effectuer dans une expression.  Vous pouvez [surcharger](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md) de nombreux opérateurs pour modifier leur signification quand ils sont appliqués à un type défini par l’utilisateur.  
@@ -78,7 +78,7 @@ C# fournit de nombreux opérateurs, qui sont des symboles spécifiant quelles op
   
  [-x](../../../csharp/language-reference/operators/subtraction-operator.md) : négation numérique.  
   
- [!x](../../../csharp/language-reference/operators/logical-negation-operator.md) : négation logique.  
+ [\!x](../../../csharp/language-reference/operators/logical-negation-operator.md) : négation logique.  
   
  [~x](../../../csharp/language-reference/operators/bitwise-complement-operator.md) : complément au niveau du bit.  
   
