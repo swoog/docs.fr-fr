@@ -66,6 +66,7 @@
 #### [Guide pratique pour personnaliser une stratégie de cache basée sur la durée](how-to-customize-a-time-based-cache-policy.md)
 #### [Guide pratique pour définir une stratégie de cache pour une requête](how-to-set-cache-policy-for-a-request.md)
 ## [Sécurité dans la programmation réseau](security-in-network-programming.md)
+### [Meilleures pratiques avec Transport Layer Security (TLS)](tls.md)
 ### [Utilisation de SSL (Secure Sockets Layer)](using-secure-sockets-layer.md)
 #### [Sélection et validation de certificats](certificate-selection-and-validation.md)
 ### [Authentification Internet](internet-authentication.md)
