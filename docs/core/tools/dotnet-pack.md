@@ -3,16 +3,17 @@ title: Commande dotnet pack - Interface CLI .NET Core
 description: "La commande dotnet pack crée des packages NuGet pour votre projet .NET Core."
 author: mairaw
 ms.author: mairaw
-ms.date: 12/13/2017
+ms.date: 03/10/2018
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.workload: dotnetcore
-ms.openlocfilehash: 28cd05db0643097a7271fd0488354846598ba493
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 401a4491c27ea10d0fdf1877417f1e2d5da6839f
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -27,7 +28,8 @@ ms.lasthandoff: 12/23/2017
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 ```
-dotnet pack [<PROJECT>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--no-build] [--no-dependencies] [--no-restore] [-o|--output] [--runtime] [-s|--serviceable] [-v|--verbosity] [--version-suffix]
+dotnet pack [<PROJECT>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--no-build] [--no-dependencies]
+    [--no-restore] [-o|--output] [--runtime] [-s|--serviceable] [-v|--verbosity] [--version-suffix]
 dotnet pack [-h|--help]
 ```
 
@@ -47,6 +49,8 @@ Les dépendances NuGet du projet empaqueté sont ajoutées dans le fichier *.nu
 Par défaut, `dotnet pack` génère d’abord le projet. Pour éviter ce comportement, passez l’option `--no-build`. Elle est souvent utile dans les scénarios de build d’intégration continue, pour lesquels vous savez que le code a déjà été créé.
 
 Vous pouvez fournir des propriétés MSBuild à la commande `dotnet pack` pour le processus de compression. Pour plus d’informations, consultez [Propriétés des métadonnées NuGet](csproj.md#nuget-metadata-properties) et [Informations de référence sur la ligne de commande MSBuild](/visualstudio/msbuild/msbuild-command-line-reference). La section [Exemples](#examples) montre comment utiliser le commutateur MSBuild /p pour deux scénarios différents.
+
+[!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
 ## <a name="arguments"></a>Arguments
 
@@ -157,7 +161,7 @@ Empaquetez le projet dans le répertoire actif :
 Empaqueter le projet `app1` :
 
 `dotnet pack ~/projects/app1/project.csproj`
-    
+
 Empaqueter le projet dans le répertoire actif et placer les packages résultants dans le dossier `nupkgs` :
 
 `dotnet pack --output nupkgs`
@@ -177,3 +181,7 @@ Affectez `2.1.0` à la version du package à l’aide de la propriété MSBuild 
 Empaquetez le projet pour un [framework cible](../../standard/frameworks.md) spécifique :
 
 `dotnet pack /p:TargetFrameworks=net45`
+
+Empaqueter le projet et utiliser un runtime spécifique (Windows 10) pour l’opération de restauration (SDK .NET Core 2.0 et versions ultérieures) :
+
+`dotnet pack --runtime win10-x64`

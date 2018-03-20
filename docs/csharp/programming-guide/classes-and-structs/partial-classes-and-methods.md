@@ -2,21 +2,22 @@
 title: "Classes et méthodes partielles (Guide de programmation C#)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - partial methods [C#]
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 662b3308c3baa429ed29adca750cbb9b143b79dc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 396914e487bee0924c36bb1d7a0f28976f4ad354
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Classes et méthodes partielles (Guide de programmation C#)
 Il est possible de fractionner la définition d’une [classe](../../../csharp/language-reference/keywords/class.md), d’un [struct](../../../csharp/language-reference/keywords/struct.md), d’une [interface](../../../csharp/language-reference/keywords/interface.md) ou d’une méthode entre deux fichiers sources ou plus. Chaque fichier source contient une section de la définition de méthode ou de type, et toutes les parties sont combinées au moment où l’application est compilée.  
@@ -150,7 +151,7 @@ partial void onNameChanged()
   
 -   Une déclaration de méthode partielle doit commencer par le mot clé contextuel [partial](../../../csharp/language-reference/keywords/partial-type.md), et la méthode doit retourner [void](../../../csharp/language-reference/keywords/void.md).  
   
--   Les méthodes partielles peuvent avoir des paramètres [ref](../../../csharp/language-reference/keywords/ref.md), mais pas [out](../../../csharp/language-reference/keywords/out.md).  
+-   Les méthodes partielles peuvent avoir des paramètres [in](../../../csharp/language-reference/keywords/in-parameter-modifier.md) ou [ref](../../../csharp/language-reference/keywords/ref.md), mais pas [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md).  
   
 -   Les méthodes partielles sont implicitement [private](../../../csharp/language-reference/keywords/private.md) et, par conséquent, elles ne peuvent pas être [virtual](../../../csharp/language-reference/keywords/virtual.md).  
   

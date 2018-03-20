@@ -24,11 +24,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: dfcb0d0ace4bd42d89fe7b4c2dc04098858c2945
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: 98aaa5c7bbd28facf9cc06fd0d0898b72ea7dbc2
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="character-classes-in-regular-expressions"></a>Classes de caractères dans les expressions régulières
 <a name="Top"></a> Une classe de caractères définit un jeu de caractères, chacun d'entre eux pouvant apparaître dans une chaîne d'entrée pour aboutir à une correspondance. Le langage d’expression régulière dans .NET prend en charge les classes de caractères suivantes :  
@@ -335,7 +335,7 @@ ms.lasthandoff: 01/09/2018
 |\w+|Mettre en correspondance un ou plusieurs caractères alphabétiques.|  
 |(e)?|Mettre en correspondance un « e » zéro ou une fois.|  
 |s|Mettre en correspondance un « s ».|  
-|(\s&#124;$)|Mettre en correspondance un espace blanc ou la fin de la chaîne d'entrée.|  
+|(\s&#124;$)|Mettre en correspondance un espace blanc ou la fin de la chaîne d’entrée.|  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/whitespace1.cs#10)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/whitespace1.vb#10)]  

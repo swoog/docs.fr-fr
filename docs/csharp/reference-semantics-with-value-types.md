@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 0c6e44a3e1a1458f4211b66b6d1ef5b4b30cd7c1
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.openlocfilehash: 6e40907cab2aabcf8c8321819c99298314bcfbc5
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="reference-semantics-with-value-types"></a>Sémantique de référence avec les types valeur
 
@@ -46,7 +46,7 @@ Quand vous ajoutez le modificateur `in` pour passer un argument par référence,
 
 Les arguments sont deux structures qui contiennent chacune trois valeurs de type double. Un double représentant 8 octets, chaque argument représente 24 octets. En spécifiant le modificateur `in`, vous passez une référence de 4 ou 8 octets à ces arguments, selon l’architecture de l’ordinateur. La différence de taille est minime, mais elle peut rapidement s’accentuer si votre application appelle cette méthode dans une boucle serrée avec de nombreuses valeurs différentes.
  
-Le modificateur `in` complète aussi `out` et `ref` d’autres façons. Vous ne pouvez pas créer de surcharges d’une méthode qui diffèrent uniquement en présence de `in`, `out` ou `ref`. Ces nouvelles règles étendent le même comportement qui a toujours été défini pour les paramètres `out` et `ref`.
+Le modificateur `in` complète aussi `out` et `ref` d’autres façons. Vous ne pouvez pas créer de surcharges de méthode qui diffèrent uniquement en présence de `in`, `out` ou `ref`. Ces nouvelles règles étendent le même comportement qui a toujours été défini pour les paramètres `out` et `ref`.
 
 Le modificateur `in` peut être appliqué à tout membre acceptant des paramètres : méthodes, délégués, expressions lambda, fonctions locales, indexeurs, opérateurs.
 

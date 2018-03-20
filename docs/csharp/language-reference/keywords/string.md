@@ -2,7 +2,8 @@
 title: "string (référence C#)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - string
@@ -13,17 +14,17 @@ helpviewer_keywords:
 - string literals [C#]
 - string keyword [C#]
 ms.assetid: 3037e558-fb22-494d-bca1-a15ade11b11a
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 87df2b158b173072aad5257594e1b1482ae61067
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8899eb75b1b7c556a1e92f173a4d0ca4135014c8
+ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="string-c-reference"></a>string (référence C#)
-Le type `string` représente une séquence de zéro, un ou plusieurs caractères Unicode. `string` est un alias pour <xref:System.String> dans le .NET Framework.  
+Le type `string` représente une séquence de zéro, un ou plusieurs caractères Unicode. `string` est un alias de <xref:System.String> dans .NET.  
   
  Bien que `string` soit un type référence, les opérateurs d’égalité (`==` et `!=`) sont définis pour comparer les valeurs d’objets `string`, pas les références. Cela permet de tester l’égalité de chaînes de façon plus intuitive. Exemple :  
   
@@ -76,7 +77,7 @@ Console.WriteLine(a);
 > [!NOTE]
 >  Le code d’échappement `\udddd` (où `dddd` est un nombre à quatre chiffres) représente le caractère Unicode U+`dddd`. Les codes d’échappement Unicode à huit chiffres sont également reconnus : `\Udddddddd`.  
   
- Les littéraux de chaîne textuelle commencent par @ et sont placés entre guillemets doubles. Exemple :  
+ Les littéraux de chaîne textuelle commencent par `@` et sont placés entre guillemets doubles. Exemple :  
   
 ```csharp  
 @"good morning"  // a string literal  
@@ -94,7 +95,7 @@ Console.WriteLine(a);
 @"""Ahoy!"" cried the captain." // "Ahoy!" cried the captain.  
 ```  
   
- Une autre manière d’utiliser le symbole @ consiste à utiliser des identificateurs ([/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)) référencés qui sont des mots clés C#.  
+ Pour d’autres utilisations du caractère spécial `@`, consultez [@ -- Identificateur de chaîne textuelle](../tokens/verbatim.md).  
   
  Pour plus d’informations sur les chaînes en C#, consultez la rubrique [Chaînes](../../../csharp/programming-guide/strings/index.md).  
   

@@ -15,11 +15,11 @@ ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: df59647b803bff448a801374a325f07e4903a160
-ms.sourcegitcommit: 22a48b64a0150a60b00b4fc4d8c62cde7f1670c4
+ms.openlocfilehash: 14bb60a5009f9a1ae59ed9846ebc868cfdcc05c6
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Expressions lambda (Guide de programmation C#)
 Une expression lambda est une [fonction anonyme](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) que vous pouvez utiliser pour créer des types [délégués](../../../csharp/programming-guide/delegates/using-delegates.md) ou des types d' [arborescence d'expression](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b) . En utilisant des expressions lambda, vous pouvez écrire des fonctions locales qui peuvent être passées comme des arguments ou retournées comme la valeur d'appels de fonction. Les expressions lambda sont particulièrement utiles pour écrire des expressions de requête LINQ.  
@@ -265,7 +265,7 @@ class Test
   
 -   Les variables introduites dans une expression lambda ne sont pas visibles dans la méthode externe.  
   
--   Une expression lambda ne peut pas capturer directement un paramètre `ref` ou `out` dans une méthode englobante.  
+-   Une expression lambda ne peut pas capturer directement un paramètre `in`, `ref` ou `out` dans une méthode englobante.  
   
 -   Une instruction return dans une expression lambda ne provoque pas le retour de la méthode englobante.  
   

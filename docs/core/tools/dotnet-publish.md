@@ -3,16 +3,17 @@ title: Commande dotnet publish - Interface CLI .NET Core
 description: "La commande dotnet publish publie votre projet .NET Core dans un répertoire."
 author: mairaw
 ms.author: mairaw
-ms.date: 09/01/2017
+ms.date: 03/10/2018
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.workload: dotnetcore
-ms.openlocfilehash: e29d5269ab5e9e2c9fd08811552c09ec1c95363d
-ms.sourcegitcommit: 3fd4e718d1bac9769fe0c1dd08ca1b2323ae272b
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 2aa69217e949b970b632c4fad72838b63c2a8988
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -50,6 +51,8 @@ dotnet publish [-h|--help]
 * Les dépendances de l’application. Ces dernières sont copiées du cache NuGet vers le dossier de sortie.
 
 Le résultat de la commande `dotnet publish` est prêt pour le déploiement sur un système hôte (par exemple, un serveur, un PC, un Mac ou un ordinateur portable) et pour l’exécution ; c’est le seul moyen officiellement pris en charge de préparer l’application en vue de son déploiement. En fonction du type de déploiement que spécifie le projet, le runtime .NET Core partagé peut ou non être installé sur le système d’hébergement. Pour plus d’informations, consultez la page [Déploiement d’applications .NET Core](../deploying/index.md). Pour connaître la structure des répertoires d’une application publiée, consultez la page [Structure de répertoires](/aspnet/core/hosting/directory-structure).
+
+[!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
 ## <a name="arguments"></a>Arguments
 
@@ -156,14 +159,18 @@ Publier le projet dans le répertoire actif :
 Publier l’application à l’aide du fichier projet spécifié :
 
 `dotnet publish ~/projects/app1/app1.csproj`
-    
+
 Publier le projet dans le répertoire actif à l’aide du framework `netcoreapp1.1` :
 
 `dotnet publish --framework netcoreapp1.1`
-    
+
 Publier l’application actuelle à l’aide du framework `netcoreapp1.1` et du runtime pour `OS X 10.10` (vous devez lister cet identificateur de runtime dans le fichier projet) :
 
 `dotnet publish --framework netcoreapp1.1 --runtime osx.10.11-x64`
+
+Publier l’application actuelle, mais ne pas restaurer les références de projet à projet (P2P), seulement le projet racine durant l’opération de restauration (SDK .NET Core 2.0 et ultérieur) :
+
+`dotnet publish --no-dependencies`
 
 ## <a name="see-also"></a>Voir aussi
 

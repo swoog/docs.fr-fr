@@ -8,12 +8,13 @@ ms.date: 11/30/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.workload: dotnetcore
-ms.openlocfilehash: dc93e0554d422ddf42ac54dd94223f0285451e85
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 50e8d5c335386c41e36a490263a4f4ebd2bd39ba
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -118,7 +119,7 @@ Spécifie un runtime pour la restauration du package. Cela permet de restaurer l
 
 `-s|--source <SOURCE>`
 
-Spécifie la source de package NuGet à utiliser pendant l’opération de restauration. Cela remplace toutes les sources spécifiées dans le(s) fichier(s) *NuGet.config*. Vous pouvez spécifier plusieurs sources en spécifiant cette option plusieurs fois.
+Spécifie la source de package NuGet à utiliser pendant l’opération de restauration. Cette option remplace toutes les sources spécifiées dans les fichiers *NuGet.config*. Vous pouvez spécifier plusieurs sources en spécifiant cette option plusieurs fois.
 
 `--verbosity <LEVEL>`
 
@@ -160,7 +161,7 @@ Spécifie un runtime pour la restauration du package. Cela permet de restaurer l
 
 `-s|--source <SOURCE>`
 
-Spécifie la source de package NuGet à utiliser pendant l’opération de restauration. Cela remplace toutes les sources spécifiées dans le(s) fichier(s) *NuGet.config*. Vous pouvez spécifier plusieurs sources en spécifiant cette option plusieurs fois.
+Spécifie la source de package NuGet à utiliser pendant l’opération de restauration. Cette option remplace toutes les sources spécifiées dans les fichiers *NuGet.config*. Vous pouvez spécifier plusieurs sources en spécifiant cette option plusieurs fois.
 
 `--verbosity <LEVEL>`
 

@@ -3,16 +3,17 @@ title: Commande dotnet build - Interface CLI .NET Core
 description: "La commande dotnet build permet de générer un projet et l’ensemble de ses dépendances."
 author: mairaw
 ms.author: mairaw
-ms.date: 08/13/2017
+ms.date: 03/10/2018
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.workload: dotnetcore
-ms.openlocfilehash: 403dc2262e2aba29fc432581a4b325092cdfb25e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: e7181f502e2a25b17077366da9d9f071e7e94d33
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="dotnet-build"></a>dotnet-build
 
@@ -26,12 +27,14 @@ ms.lasthandoff: 12/23/2017
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 ```
-dotnet build [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--no-dependencies] [--no-incremental] [--no-restore] [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
+dotnet build [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--no-dependencies] [--no-incremental]
+    [--no-restore] [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
 dotnet build [-h|--help]
 ```
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 ```
-dotnet build [<PROJECT>] [-c|--configuration] [-f|--framework] [--no-dependencies] [--no-incremental] [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
+dotnet build [<PROJECT>] [-c|--configuration] [-f|--framework] [--no-dependencies] [--no-incremental] [-o|--output]
+    [-r|--runtime] [-v|--verbosity] [--version-suffix]
 dotnet build [-h|--help]
 ```
 ---
@@ -44,7 +47,7 @@ Si le projet a des dépendances tierces, comme des bibliothèques NuGet, elles s
 
 La génération requiert le fichier *project.assets.json* qui répertorie les dépendances de votre application. Le fichier est créé quand la commande [`dotnet restore`](dotnet-restore.md) est exécutée. Si le fichier de ressources est absent, les outils ne peuvent pas résoudre les assemblys de référence, ce qui entraîne des erreurs. Avec le SDK .NET Core 1.x, vous deviez explicitement exécuter `dotnet restore` avant d’exécuter `dotnet build`. À compter du SDK .NET Core 2.0, `dotnet restore` s’exécute implicitement quand vous exécutez `dotnet build`. Si vous souhaitez désactiver la restauration implicite au moment d’exécuter la commande de génération, vous pouvez passer l’option `--no-restore`.
 
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+[!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
 La commande `dotnet build` utilise MSBuild pour générer le projet. Elle prend donc en charge les builds parallèles et les builds incrémentielles. Pour plus d’informations, consultez [Builds incrémentielles](/visualstudio/msbuild/incremental-builds).
 
@@ -167,3 +170,7 @@ Générer un projet et ses dépendances à l’aide de la configuration Release�
 Générer un projet et ses dépendances pour un runtime spécifique (dans cet exemple, Ubuntu 16.04) :
 
 `dotnet build --runtime ubuntu.16.04-x64`
+
+Générer le projet et utiliser la source de package NuGet spécifiée pendant l’opération de restauration (SDK .NET Core 2.0 et versions ultérieures) :
+
+`dotnet build --source c:\packages\mypackages`

@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 609b0845-49e7-4864-957b-21ffe1b93bf2
-ms.workload: dotnetcore
-ms.openlocfilehash: 599f46253a29db5dfd21d0d44ecf67654b6d2eb3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 85f20594844025655bbfb590364324631bd8e695
+ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="packages-metapackages-and-frameworks"></a>Packages, métapackages et frameworks
 
@@ -76,7 +77,7 @@ Le métapackage .NET Standard est le suivant :
 
 Les principaux métapackages .NET Core sont les suivants :
 
-- [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App) : décrit les bibliothèques qui font partie de la distribution .NET Core. Établit le [`.NETCoreApp`framework](https://github.com/dotnet/core-setup/blob/master/pkg/projects/Microsoft.NETCore.App/Microsoft.NETCore.App.pkgproj). Dépend de la bibliothèque `NETStandard.Library` (plus petite).
+- [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App) : décrit les bibliothèques qui font partie de la distribution .NET Core. Établit le [`.NETCoreApp`framework](https://github.com/dotnet/core-setup/blob/release/1.1.0/pkg/projects/Microsoft.NETCore.App/Microsoft.NETCore.App.pkgproj). Dépend de la bibliothèque `NETStandard.Library` (plus petite).
 - [Microsoft.NETCore.Portable.Compatibility](https://www.nuget.org/packages/Microsoft.NETCore.Portable.Compatibility) : ensemble de façades de compatibilité qui permettent aux bibliothèques de classes portables (PCL) basées sur mscorlib de s’exécuter sur .NET Core.
 
 ## <a name="frameworks"></a>Frameworks

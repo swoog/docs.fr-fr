@@ -1,11 +1,12 @@
 ---
 title: "Spécification des noms de types qualifiés complets"
 ms.custom: 
-ms.date: 03/30/2017
+ms.date: 03/14/2018
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,48 +16,108 @@ helpviewer_keywords:
 - tokens
 - BNF
 - assemblies [.NET Framework], names
-- Backus-Naur form
-- languages, BNF grammar
+- languages, grammar
 - fully qualified type names
 - type names
 - special characters
 - IDENTIFIER
 ms.assetid: d90b1e39-9115-4f2a-81c0-05e7e74e5580
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e19aebbeee7fd65e27704af49185a1b8d48b9639
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e31e6e0284de44768b2faad7bcf84d5be343e479
+ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="specifying-fully-qualified-type-names"></a>Spécification des noms de types qualifiés complets
 Vous devez spécifier des noms de types pour pouvoir valider l’entrée servant aux diverses opérations de réflexion. Un nom de type complet se compose d’une spécification de nom d’assembly, d’une spécification d’espace de noms et d’un nom de type. Les spécifications de noms de types sont utilisées par les méthodes telles que <xref:System.Type.GetType%2A?displayProperty=nameWithType>, <xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType>, <xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=nameWithType> et <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>.  
   
-## <a name="backus-naur-form-grammar-for-type-names"></a>Syntaxe de la notation BNF (Backus-Naur) pour les noms de types  
- La notation BNF (Backus-Naur) définit la syntaxe des langages formels. Le tableau suivant décrit les règles lexicales BNF permettant de reconnaître une entrée valide. Les éléments terminaux (qui ne peuvent pas être réduits davantage) sont affichés en majuscules. Les éléments non terminaux (qui peuvent être réduits davantage) sont affichés dans une casse mixte ou entre des guillemets simples ; toutefois, le guillemet simple (') ne fait pas partie de la syntaxe proprement dite. La barre verticale (&#124;) signale des règles qui ont des sous-règles.  
-  
-|Syntaxe BNF des noms de types complets|  
-|-----------------------------------------------|  
-|TypeSpec                          :=   ReferenceTypeSpec<br /><br /> &#124;     SimpleTypeSpec|  
-|ReferenceTypeSpec            :=   SimpleTypeSpec '&'|  
-|SimpleTypeSpec                :=   PointerTypeSpec<br /><br /> &#124;     ArrayTypeSpec<br /><br /> &#124;     TypeName|  
-|PointerTypeSpec                :=   SimpleTypeSpec '*'|  
-|ArrayTypeSpec                  :=   SimpleTypeSpec '[ReflectionDimension]'<br /><br /> &#124;     SimpleTypeSpec '[ReflectionEmitDimension]'|  
-|ReflectionDimension           :=   '*'<br /><br /> &#124;     ReflectionDimension ',' ReflectionDimension<br /><br /> &#124;     NOTOKEN|  
-|ReflectionEmitDimension    :=   '*'<br /><br /> &#124;     Number '..' nombre<br /><br /> &#124;     Number '…'<br /><br /> &#124;     ReflectionDimension ',' ReflectionDimension<br /><br /> &#124;     NOTOKEN|  
-|Number                            :=   [0-9]+|  
-|TypeName                         :=   NamespaceTypeName<br /><br /> &#124;     NamespaceTypeName ',' AssemblyNameSpec|  
-|NamespaceTypeName        :=   NestedTypeName<br /><br /> &#124;     NamespaceSpec '.' NestedTypeName|  
-|NestedTypeName               :=   IDENTIFIER<br /><br /> &#124;     NestedTypeName '+' IDENTIFIER|  
-|NamespaceSpec                 :=   IDENTIFIER<br /><br /> &#124;     NamespaceSpec '.' IDENTIFIER|  
-|AssemblyNameSpec           :=   IDENTIFIER<br /><br /> &#124;     IDENTIFIER ',' AssemblyProperties|  
-|AssemblyProperties            :=   AssemblyProperty<br /><br /> &#124;     AssemblyProperties ',' AssemblyProperty|  
-|AssemblyProperty              :=   AssemblyPropertyName '=' AssemblyPropertyValue|  
-  
+## <a name="grammar-for-type-names"></a>Grammaire pour les noms de types  
+ La grammaire définit la syntaxe des langages formels. Le tableau suivant décrit les règles lexicales permettant de reconnaître une entrée valide. Les éléments terminaux (qui ne peuvent pas être réduits davantage) sont affichés en majuscules. Les éléments non terminaux (qui peuvent être réduits davantage) sont affichés dans une casse mixte ou entre des guillemets simples ; toutefois, le guillemet simple (') ne fait pas partie de la syntaxe proprement dite. La barre verticale (&#124;) signale des règles qui ont des sous-règles.  
+
+```antlr
+TypeSpec
+    : ReferenceTypeSpec
+    | SimpleTypeSpec
+    ;
+
+ReferenceTypeSpec
+    : SimpleTypeSpec '&'
+    ;
+
+SimpleTypeSpec
+    : PointerTypeSpec
+    | ArrayTypeSpec
+    | TypeName
+    ;
+
+PointerTypeSpec
+    : SimpleTypeSpec '*'
+    ;
+
+ArrayTypeSpec
+    : SimpleTypeSpec '[ReflectionDimension]'
+    | SimpleTypeSpec '[ReflectionEmitDimension]'
+    ;
+
+ReflectionDimension
+    : '*'
+    | ReflectionDimension ',' ReflectionDimension
+    | NOTOKEN
+    ;
+
+ReflectionEmitDimension
+    : '*'
+    | Number '..' Number
+    | Number '…'
+    | ReflectionDimension ',' ReflectionDimension
+    | NOTOKEN
+    ;
+
+Number
+    : [0-9]+
+    ;
+
+TypeName
+    : NamespaceTypeName
+    | NamespaceTypeName ',' AssemblyNameSpec
+    ;
+
+NamespaceTypeName
+    : NestedTypeName
+    | NamespaceSpec '.' NestedTypeName
+    ;
+
+NestedTypeName
+    : IDENTIFIER
+    | NestedTypeName '+' IDENTIFIER
+    ;
+
+NamespaceSpec
+    : IDENTIFIER
+    | NamespaceSpec '.' IDENTIFIER
+    ;
+
+AssemblyNameSpec
+    : IDENTIFIER
+    | IDENTIFIER ',' AssemblyProperties
+    ;
+
+AssemblyProperties
+    : AssemblyProperty
+    | AssemblyProperties ',' AssemblyProperty
+    ;
+
+AssemblyProperty
+    : AssemblyPropertyName '=' AssemblyPropertyValue
+    ;
+```
+
 ## <a name="specifying-special-characters"></a>Spécification de caractères spéciaux  
  Dans un nom de type, IDENTIFIER correspond à n’importe quel nom valide déterminé par les règles d’un langage.  
   
@@ -71,7 +132,7 @@ Vous devez spécifier des noms de types pour pouvoir valider l’entrée servant
 |\\[|Délimiteur de dimension du tableau.|  
 |\\]|Délimiteur de dimension du tableau.|  
 |\\.|Utilisez la barre oblique inverse avant un point uniquement si celui-ci est utilisé dans une spécification de tableau. Les points de NamespaceSpec ne sont pas précédés d’une barre oblique inverse.|  
-|\\\|Barre oblique inverse nécessaire en tant que littéral de chaîne.|  
+|\\\|Barre oblique inverse nécessaire comme littéral de chaîne.|  
   
  Notez que des espaces peuvent être utilisés dans tous les composants TypeSpec, sauf AssemblyNameSpec. Dans AssemblyNameSpec, les espaces précédant le séparateur « , » peuvent être utilisés, mais ceux situés après le séparateur « , » sont ignorés.  
   

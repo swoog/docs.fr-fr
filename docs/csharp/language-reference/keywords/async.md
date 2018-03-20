@@ -2,22 +2,24 @@
 title: "async (référence C#)"
 ms.date: 05/22/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-f1_keywords: async_CSharpKeyword
+f1_keywords:
+- async_CSharpKeyword
 helpviewer_keywords:
 - async keyword [C#]
 - async method [C#]
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
-caps.latest.revision: "52"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c4a89736822342a9d9a24db6d43435f9795b81b5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2ddbd0f7268dd5dae4095d661cf800b5b481cbbd
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="async-c-reference"></a>async (référence C#)
 Utilisez le modificateur `async` pour spécifier qu’une méthode, une [expression lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) ou une [méthode anonyme](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) sont asynchrones. Si vous utilisez ce modificateur sur une méthode ou une expression, il s’agit d’une *méthode async*. L’exemple suivant définit une méthode async nommée `ExampleMethodAsync` : 
@@ -76,7 +78,7 @@ Une méthode async peut avoir les types de retour suivants :
 - [void](../../../csharp/language-reference/keywords/void.md), qui doit être utilisé uniquement pour les gestionnaires d’événements.
 - À compter de C# 7, tout type ayant une méthode `GetAwaiter` accessible. Le type `System.Threading.Tasks.ValueTask<TResult>` est une implémentation de ce genre. Il est disponible en ajoutant le package NuGet `System.Threading.Tasks.Extensions`. 
 
-La méthode async ne peut déclarer aucun paramètre [ref](../../../csharp/language-reference/keywords/ref.md) ou [out](../../../csharp/language-reference/keywords/out.md), ni avoir une <!-- [reference return value](../../programming-guide/classes-and-structs/ref-returns.md) -->valeur de retour de référence, mais elle peut appeler des méthodes qui comportent de tels paramètres.  
+La méthode async ne peut déclarer aucun paramètre [in](../../../csharp/language-reference/keywords/in-parameter-modifier.md), [ref](../../../csharp/language-reference/keywords/ref.md) ou [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md), ni avoir une [valeur de retour de référence](../../programming-guide/classes-and-structs/ref-returns.md), mais elle peut appeler des méthodes qui ont ces paramètres.  
   
 Vous spécifiez `Task<TResult>` comme type de retour d’une méthode async si l’instruction [return](../../../csharp/language-reference/keywords/return.md) de la méthode spécifie un opérande de type `TResult`. Utilisez `Task` si aucune valeur significative n'est retournée lorsque la méthode est terminée. En d'autres termes, un appel à la méthode retourne `Task`, mais lorsque `Task` est terminé, toute expression `await` qui attend `Task` prend la valeur `void`.  
   

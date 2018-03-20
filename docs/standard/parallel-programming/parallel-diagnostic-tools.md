@@ -18,14 +18,14 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4ed0b3991b08eceb950aa1a3aa1704529700feb3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 127737877ac64ac9278bc039650caf72936571bf
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="parallel-diagnostic-tools"></a>Outils de diagnostic parallèles
-[!INCLUDE[vs_dev10_ext](../../../includes/vs-dev10-ext-md.md)] assure la prise en charge complète des applications de débogage et de profilage multithread.  
+Visual Studio fournit une prise en charge complète des applications de débogage et de profilage multithread.  
   
 ## <a name="debugging"></a>Débogage  
  L’outil de débogage de Visual Studio ajoute de nouvelles fenêtres pour le débogage des applications parallèles. Pour plus d’informations, consultez les rubriques suivantes :  

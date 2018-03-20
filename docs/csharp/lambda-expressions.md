@@ -10,23 +10,23 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b6a0539a-8ce5-4da7-adcf-44be345a2714
-ms.openlocfilehash: 1a97d830c675c8e3980eddae78f3face279ec6dc
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.openlocfilehash: 6395d873c4a04501d25a2edbb1acc0a163dd3e5c
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="lambda-expressions"></a>Expressions lambda #
 
 Une *expression lambda* est un bloc de code (une expression ou un bloc d’instructions) qui est traité comme un objet. Elle peut être passée comme argument à des méthodes, et peut aussi être retournée par des appels de méthode. Les expressions lambda sont largement utilisées pour :
 
-- Transmettre le code qui est exécuté pour les méthodes asynchrones, telles que <xref:System.Threading.Tasks.Task.Run(System.Action)>.
+- Passer le code à exécuter à des méthodes asynchrones, comme <xref:System.Threading.Tasks.Task.Run(System.Action)>.
 
 - Écrire des [expressions de requête LINQ](linq/index.md).
 
 - Créer des [arborescences d’expressions](expression-trees-building.md).
 
-Les expressions lambda sont du code qui peut être représenté comme un délégué, ou comme une arborescence d’expressions qui est compilée en délégué. Le type délégué spécifique d’une expression lambda dépend de ses paramètres et de sa valeur de retour. Les expressions lambda qui ne retournent pas de valeur correspondent à un délégué `Action` spécifique, en fonction du nombre de ses paramètres. Les expressions lambda qui retournent une valeur correspondent à un délégué `Func` spécifique, en fonction du nombre de ses paramètres. Par exemple, une expression lambda qui a deux paramètres, mais ne retourne aucune valeur correspond à un <xref:System.Action%602> déléguer. Une expression lambda qui a un paramètre et retourne une valeur correspond à <xref:System.Func%602> déléguer.
+Les expressions lambda sont du code qui peut être représenté comme un délégué, ou comme une arborescence d’expressions qui est compilée en délégué. Le type délégué spécifique d’une expression lambda dépend de ses paramètres et de sa valeur de retour. Les expressions lambda qui ne retournent pas de valeur correspondent à un délégué `Action` spécifique, en fonction du nombre de ses paramètres. Les expressions lambda qui retournent une valeur correspondent à un délégué `Func` spécifique, en fonction du nombre de ses paramètres. Par exemple, une expression lambda qui a deux paramètres, mais qui ne retourne aucune valeur correspond à un délégué <xref:System.Action%602>. Une expression lambda qui a un paramètre et qui retourne une valeur correspond à un délégué <xref:System.Func%602>.
 
 Une expression lambda utilise `=>`, l’[opérateur de déclaration lambda](language-reference/operators/lambda-operator.md), pour séparer la liste des paramètres de l’expression lambda de son code exécutable. Pour créer une expression lambda, vous spécifiez des paramètres d’entrée (le cas échéant) du côté gauche de l’opérateur lambda, et vous placez l’expression ou le bloc d’instructions de l’autre côté. Par exemple, l’expression lambda d’une seule ligne `x => x * x` spécifie un paramètre nommé `x` et retourne la valeur `x` élevée au carré. Vous pouvez assigner cette expression à un type délégué, comme dans l'exemple suivant :
 
@@ -66,7 +66,7 @@ Une instruction lambda ressemble à une expression lambda, mais l'instruction ou
 (input parameters) => { statement; }
 ```
 
-Le corps d'une instruction lambda peut se composer d'un nombre illimité d'instructions ; toutefois, en pratique, leur nombre est généralement de deux ou trois.
+Le corps d'une instruction lambda peut se composer d'un nombre illimité d'instructions ; toutefois, en pratique, leur nombre est généralement de deux ou trois.
 
 [!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/statement1.cs#1)]
 
@@ -96,7 +96,7 @@ Pour plus d’informations sur la prise en charge des tuples en C#, consultez [T
 
 ## <a name="lambdas-with-the-standard-query-operators"></a>Lambdas avec les opérateurs de requête standard ##
 
-LINQ to objets, entre autres implémentations, ont un paramètre d’entrée dont le type est un de le <xref:System.Func%601> famille des délégués génériques. Ces délégués utilisent des paramètres de type pour définir le nombre et le type des paramètres d’entrée, ainsi que le type de retour du délégué. Les délégués `Func` sont très utiles pour l'encapsulation des expressions définies par l'utilisateur appliquées à chaque élément dans un jeu de données sources. Par exemple, considérez le <xref:System.Func%601> délégué, dont la syntaxe est :
+LINQ to Objects, parmi d’autres implémentations, a un paramètre d’entrée dont le type fait partie de la famille <xref:System.Func%601> de délégués génériques. Ces délégués utilisent des paramètres de type pour définir le nombre et le type des paramètres d’entrée, ainsi que le type de retour du délégué. Les délégués `Func` sont très utiles pour l'encapsulation des expressions définies par l'utilisateur appliquées à chaque élément dans un jeu de données sources. Par exemple, considérez le délégué <xref:System.Func%601>, dont la syntaxe est :
 
 [!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/query1.cs#1)]
 
@@ -108,7 +108,7 @@ où `int` est un paramètre d’entrée et `bool` est la valeur de retour. La va
 
 [!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/query1.cs#3)]
 
-Vous pouvez également fournir une expression lambda lorsque le type d’argument est un <xref:System.Linq.Expressions.Expression%601>, par exemple dans les opérateurs de requête standard définis dans le <xref:System.Linq.Queryable> type. Lorsque vous spécifiez une <xref:System.Linq.Expressions.Expression%601> argument, le lambda est compilé en une arborescence d’expression. L’exemple suivant utilise l’opérateur de requête standard [System.Linq.Enumerable.Count](xref:System.Linq.Enumerable.Count%60%601(System.Collections.Generic.IEnumerable{%60%600})).
+Vous pouvez aussi fournir une expression lambda quand le type d’argument est <xref:System.Linq.Expressions.Expression%601>, par exemple, dans les opérateurs de requête standard définis dans le type <xref:System.Linq.Queryable>. Quand vous spécifiez un argument <xref:System.Linq.Expressions.Expression%601>, l’expression lambda est compilée en arborescence de l’expression. L’exemple suivant utilise l’opérateur de requête standard [System.Linq.Enumerable.Count](xref:System.Linq.Enumerable.Count%60%601(System.Collections.Generic.IEnumerable{%60%600})).
 
 [!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/query1.cs#4)]
 
@@ -150,7 +150,7 @@ Les lambdas peuvent faire référence à des *variables externes* (consultez [M�
 
 - Les variables introduites dans une expression lambda ne sont pas visibles dans la méthode externe.
 
-- Une expression lambda ne peut pas capturer directement un paramètre `ref` ou `out` dans une méthode englobante.
+- Une expression lambda ne peut pas capturer directement un paramètre `in`, `ref` ou `out` dans une méthode englobante.
 
 - Une instruction return dans une expression lambda ne provoque pas le retour de la méthode englobante.
 
@@ -158,6 +158,6 @@ Les lambdas peuvent faire référence à des *variables externes* (consultez [M�
 
 ## <a name="see-also"></a>Voir aussi ##
 
-[LINQ (Language-Integrated Query)](../standard/using-linq.md)   
+[LINQ (Language Integrated Query)](../standard/using-linq.md)   
 [Méthodes anonymes](programming-guide/statements-expressions-operators/anonymous-methods.md)   
 [Arborescences d’expressions](expression-trees.md)

@@ -25,11 +25,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: a4a1513840d17f2e7b02acf821b5032eaac6e6fc
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: cc32a98930c4c1243f53fc9c5d2a10f339b4de11
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="regular-expression-options"></a>Options des expressions régulières
 <a name="Top"></a> Par défaut, la comparaison d’une chaîne d’entrée avec des caractères littéraux dans un modèle d’expression régulière respecte la casse, l’espace blanc dans un modèle d’expression régulière est interprété comme un espace blanc littéral et les groupes de capture dans une expression régulière sont nommés de manière implicite aussi bien qu’explicite. Vous pouvez modifier ces aspects, ainsi que d'autres, du comportement par défaut des expressions régulières en spécifiant des options d'expression régulière. Ces options, qui sont répertoriées dans le tableau suivant, peuvent être incluses inline dans le cadre du modèle d'expression régulière ou fournies à un constructeur de classe <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> ou à une méthode de mise en correspondance de modèle statique en tant que valeur d'énumération <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>.  
@@ -279,13 +279,13 @@ ms.lasthandoff: 12/23/2017
   
 -   L’espace blanc sans séquence d’échappement dans le modèle d’expression régulière est ignoré. Pour faire partie d’un modèle d’expression régulière, les espaces blancs doivent être inclus dans une séquence d’échappement (par exemple, as `\s` ou « `\` »).  
   
--   Le signe dièse (#) est interprété comme le début d'un commentaire, plutôt que comme un caractère littéral. Tout le texte d'un modèle d'expression régulière depuis le caractère # jusqu'à la fin de la chaîne est interprété comme un commentaire.  
+-   Le signe dièse (#) est interprété comme le début d'un commentaire, plutôt que comme un caractère littéral. Tout le texte d’un modèle d’expression régulière depuis le caractère # jusqu’à la fin de la chaîne est interprété comme un commentaire.  
   
- Toutefois, dans les cas suivants, les espaces blancs d'une expression régulière ne sont pas ignorés, même si vous utilisez l'option <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> :  
+ Toutefois, dans les cas suivants, les espaces blancs d’une expression régulière ne sont pas ignorés, même si vous utilisez l’option <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> :  
   
 -   L'espace blanc dans une classe de caractères est toujours interprété de façon littérale. Par exemple, le modèle d'expression régulière `[ .,;:]` met en correspondance n'importe quel espace blanc, point, virgule, point-virgule ou symbole deux-points unique.  
   
--   L’espace blanc n’est pas autorisé dans un quantificateur entre accolades, comme `{`*n* `}`, `{`*n*`,}` et `{`*n*`,`*m*`}`. Par exemple, le modèle d'expression régulière `\d{1. 3}` ne peut pas mettre en correspondance les séquences d'un à trois chiffres, car il contient un espace blanc.  
+-   L’espace blanc n’est pas autorisé dans un quantificateur entre accolades, comme `{`*n*`}`, `{`*n*`,}` et `{`*n*`,`*m*`}`. Par exemple, le modèle d'expression régulière `\d{1. 3}` ne peut pas mettre en correspondance les séquences d'un à trois chiffres, car il contient un espace blanc.  
   
 -   L'espace blanc n'est pas autorisé dans une séquence de caractères qui introduit un élément de langage. Exemple :  
   

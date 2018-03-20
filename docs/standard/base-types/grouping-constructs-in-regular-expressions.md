@@ -26,11 +26,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 107e935f3fd4fd38b4393d09e46c03c0c51c4d79
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 766f20f92cd4ac2d987137f86616a69df9f53600
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Constructions de regroupement dans les expressions régulières
 Les constructions de regroupement délimitent les sous-expressions d'une expression régulière et capturent les sous-chaînes d'une chaîne d'entrée. Utilisez les constructions de regroupement pour effectuer les opérations suivantes :  
@@ -301,7 +301,7 @@ Les constructions de regroupement délimitent les sous-expressions d'une express
   
  La construction des options de groupe n'est pas un groupe de capture. En d'autres termes, bien qu'une partie d'une chaîne capturée par *sous-expression* soit incluse dans la correspondance, elle n'est pas placée dans un groupe capturé, ni utilisée pour remplir l'objet <xref:System.Text.RegularExpressions.GroupCollection> .  
   
- Dans l'exemple suivant, l'expression régulière `\b(?ix: d \w+)\s` utilise des options inline dans une construction de regroupement pour désactiver la prise en compte des majuscules et des minuscules et ignorer l'espace blanc du modèle durant l'identification de tous les mots commençant par la lettre « d ». L'expression régulière est définie comme indiqué dans le tableau suivant.  
+ Dans l’exemple suivant, l’expression régulière `\b(?ix: d \w+)\s` utilise des options inline dans une construction de regroupement pour désactiver le respect de la casse et ignorer l’espace blanc du modèle durant l’identification de tous les mots commençant par la lettre « d ». L'expression régulière est définie comme indiqué dans le tableau suivant.  
   
 |Motif|Description|  
 |-------------|-----------------|  

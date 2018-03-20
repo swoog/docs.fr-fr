@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 67f89b4ee42d896497f462b80d41afff6b347e05
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 4acdbde6405af7eb78a8c605562fdb1795fedf4d
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="implementing-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Implémentation de la couche de persistance de l’infrastructure avec Entity Framework Core
 
@@ -37,7 +37,7 @@ Dans la mesure où une introduction à EF Core est déjà disponible dans la doc
 -   **Bien démarrer avec ASP.NET Core et Entity Framework Core à l’aide de Visual Studio**
     [*https://docs.microsoft.com/aspnet/core/data/ef-mvc/*](https://docs.microsoft.com/aspnet/core/data/ef-mvc/)
 
--   **DbContext, classe**
+-   **Classe DbContext**
     [*https://docs.microsoft.com/ef/core/api/microsoft.entityframeworkcore.dbcontext*](https://docs.microsoft.com/ef/core/api/microsoft.entityframeworkcore.dbcontext)
 
 -   **Comparer EF Core et EF6.x**
@@ -240,13 +240,13 @@ Notez que l’utilisation de la durée de vie singleton pour le dépôt peut vou
 
 #### <a name="additional-resources"></a>Ressources supplémentaires
 
--   **Implémentation des modèles d’unité de travail et de dépôt dans une application ASP.NET MVC**
+-   **Implémentation du dépôt et des modèles d’unité de travail dans une application ASP.NET MVC**
     [*https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application*](https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
 
--   **Jonathan Allen. Implementation Strategies for the Repository Pattern with Entity Framework, Dapper, and Chain**
+-   **Jonathan Allen. Stratégies d’implémentation du modèle Dépôt avec Entity Framework, Dapper et Chain**
     [*https://www.infoq.com/articles/repository-implementation-strategies*](https://www.infoq.com/articles/repository-implementation-strategies)
 
--   **Cesar de la Torre. Comparing ASP.NET Core IoC container service lifetimes with Autofac IoC container instance scopes**
+-   **Cesar de la Torre. Comparaison des durées de vie du service conteneur ASP.NET Core IoC avec des étendues d’instance conteneur Autofac IoC**
     [*https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/*](https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/)
 
 ## <a name="table-mapping"></a>Mappage de tables
@@ -330,7 +330,7 @@ Le code dans l’exemple montre quelques déclarations et mappages explicites. T
 
 ### <a name="the-hilo-algorithm-in-ef-core"></a>Algorithme Hi/Lo dans EF Core
 
-Un aspect intéressant du code dans l’exemple précédent est qu’il utilise [l’algorithme Hi/Lo](https://vladmihalcea.com/2014/06/23/the-hilo-algorithm/) comme stratégie de génération de clés.
+Un aspect intéressant du code dans l’exemple précédent est qu’il utilise [l’algorithme Hi/Lo](https://vladmihalcea.com/the-hilo-algorithm/) comme stratégie de génération de clés.
 
 L’algorithme Hi/Lo est utile quand vous avez besoin de clés uniques. En résumé, l’algorithme Hi/Lo affecte des identificateurs uniques aux lignes de table sans dépendre du stockage immédiat de la ligne dans la base de données. Cela vous permet de commencer à utiliser les identificateurs dès à présent, comme c’est le cas avec les ID de base de données séquentiels standard.
 
@@ -466,13 +466,13 @@ Même si nous ne recommandons pas de retourner des données IQueryable à partir
 -   **Champs de stockage**
     [*https://docs.microsoft.com/ef/core/modeling/backing-field*](https://docs.microsoft.com/ef/core/modeling/backing-field)
 
--   **Steve Smith. Encapsulated Collections in Entity Framework Core**
+-   **Steve Smith. Collections encapsulées dans Entity Framework Core**
     [*http://ardalis.com/encapsulated-collections-in-entity-framework-core*](http://ardalis.com/encapsulated-collections-in-entity-framework-core)
 
 -   **Propriétés cachées**
     [*https://docs.microsoft.com/ef/core/modeling/shadow-properties*](https://docs.microsoft.com/ef/core/modeling/shadow-properties)
 
--   **Modèle de spécification**
+-   **Modèle Spécification**
     [*http://deviq.com/specification-pattern/*](http://deviq.com/specification-pattern/)
     
 

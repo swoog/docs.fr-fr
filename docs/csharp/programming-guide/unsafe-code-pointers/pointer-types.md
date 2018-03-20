@@ -2,20 +2,21 @@
 title: Types pointeur (Guide de programmation C#)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
 ms.assetid: 3319faf9-336d-4148-9af2-1da2579cdd1e
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 0699793e91199cc623c0d13e42937c8b919e992a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fe7b926bdf9f662d25f2fe960b51fc8254b7aa3a
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="pointer-types-c-programming-guide"></a>Types pointeur (Guide de programmation C#)
 Dans un contexte unsafe, un type peut être un type pointeur, un type valeur ou un type référence. La déclaration d'un type pointeur peut prendre l'une des formes suivantes :  
@@ -113,11 +114,11 @@ Console.ReadLine();
   
  Un pointeur peut être `null`. Le fait d'appliquer un opérateur d'indirection à un pointeur Null donne lieu à un comportement défini par l'implémentation.  
   
- Sachez que le passage de pointeurs entre méthodes peut engendrer un comportement non défini. Par exemple, retourner un pointeur à une variable locale via un paramètre Out ou Ref ou en tant que résultat de fonction. Si le pointeur a été défini dans un bloc fixed, la variable vers laquelle il pointe peut ne plus être fixed.  
+ Sachez que le passage de pointeurs entre méthodes peut engendrer un comportement non défini. Supposons une méthode qui retourne un pointeur à une variable locale par le biais d’un paramètre `in`, `out` ou `ref`, ou comme résultat de fonction. Si le pointeur a été défini dans un bloc fixed, la variable vers laquelle il pointe peut ne plus être fixed.  
   
  Le tableau suivant répertorie les opérateurs et les instructions qui peuvent fonctionner sur des pointeurs dans un contexte unsafe :  
   
-|Opérateur/Instruction|Utilisation|  
+|Opérateur/Instruction|Utilisez|  
 |-------------------------|---------|  
 |*|Exécute l'indirection de pointeur.|  
 |->|Accède à un membre d'un struct via un pointeur.|  

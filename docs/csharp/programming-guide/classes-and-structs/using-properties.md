@@ -2,26 +2,27 @@
 title: "Utilisation de propriétés (Guide de programmation C#)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - set accessor [C#]
 - get accessor [C#]
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: aae36195f4a6eb2ab49ec27e1e07debff7289b37
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 36345748e514f0e0a4c945d8ead149c7d8ca9a19
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="using-properties-c-programming-guide"></a>Utilisation de propriétés (Guide de programmation C#)
 Les propriétés allient des caractéristiques des champs et des méthodes. Pour l’utilisateur d’un objet, une propriété s’apparente à un champ. Pour accéder à celle-ci, il doit utiliser la même syntaxe. Pour l’implémenteur d’une classe, une propriété est constituée d’un ou deux blocs de code, représentant un accesseur [get](../../../csharp/language-reference/keywords/get.md) et/ou un accesseur [set](../../../csharp/language-reference/keywords/set.md). Le bloc de code correspondant à l’accesseur `get` est exécuté à la lecture de la propriété ; le bloc de code correspondant à l’accesseur `set` est exécuté au moment où une nouvelle valeur est assignée à la propriété. Une propriété sans accesseur `set` est considérée comme étant en lecture seule. Une propriété sans accesseur `get` est considérée comme étant en écriture seule. Une propriété qui possède les deux accesseurs est en lecture-écriture.  
   
- Contrairement aux champs, les propriétés ne sont pas classifiées en tant que variables. Par conséquent, vous ne pouvez pas passer une propriété en tant que paramètre [ref](../../../csharp/language-reference/keywords/ref.md) ou [out](../../../csharp/language-reference/keywords/out.md).  
+ Contrairement aux champs, les propriétés ne sont pas classifiées en tant que variables. Par conséquent, vous ne pouvez pas passer une propriété en tant que paramètre [ref](../../../csharp/language-reference/keywords/ref.md) ou [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md).  
   
  Les propriétés ont diverses utilisations : elles peuvent valider les données avant d’autoriser une modification ; elles peuvent exposer de manière transparente les données d’une classe quand celles-ci sont effectivement extraites d’une autre source, telle qu’une base de données ; elles peuvent effectuer une action quand des données sont modifiées, comme déclencher un événement ou modifier la valeur d’autres champs.  
   
@@ -65,10 +66,10 @@ Les propriétés allient des caractéristiques des champs et des méthodes. Pour
   
  Il s’agit d’une erreur d’utiliser le nom de paramètre implicite, `value`, pour une déclaration de variable locale dans un accesseur `set`.  
   
-## <a name="remarks"></a>Remarques  
- Les propriétés peuvent être marquées comme `public`, `private`, `protected`, `internal`, `protected internal` ou `private protected`. Ces modificateurs d’accès définissent comment les utilisateurs de la classe peuvent accéder à la propriété. Les accesseurs `get` et `set` d’une même propriété peuvent avoir des modificateurs d’accès différents. Par exemple, l’accesseur `get` peut être `public` pour autoriser l’accès en lecture seule en dehors du type, tandis que l’accesseur `set` peut être `private` ou `protected`. Pour plus d’informations, consultez [Modificateurs d’accès](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
+## <a name="remarks"></a>Notes  
+ Les propriétés peuvent être marquées comme étant `public`, `private`, `protected`, `internal`, `protected internal` ou `private protected`. Ces modificateurs d’accès définissent comment les utilisateurs de la classe peuvent accéder à la propriété. Les accesseurs `get` et `set` d’une même propriété peuvent avoir des modificateurs d’accès différents. Par exemple, l’accesseur `get` peut être `public` pour autoriser l’accès en lecture seule en dehors du type, tandis que l’accesseur `set` peut être `private` ou `protected`. Pour plus d’informations, consultez la page [Modificateurs d’accès](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
   
- Une propriété peut être déclarée en tant que propriété statique à l’aide du mot clé `static`. La propriété devient ainsi accessible à tout moment aux appelants, même s’il n’existe aucune instance de la classe. Pour plus d’informations, consultez [Classes static et membres de classe static](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
+ Une propriété peut être déclarée en tant que propriété statique à l’aide du mot clé `static`. La propriété devient ainsi accessible à tout moment aux appelants, même s’il n’existe aucune instance de la classe. Pour plus d’informations, consultez [Classes statiques et membres de classe statique](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
   
  Une propriété peut être marquée comme étant une propriété virtuelle à l’aide du mot clé [virtual](../../../csharp/language-reference/keywords/virtual.md). Cela permet aux classes dérivées de substituer le comportement de la propriété à l’aide du mot clé [override](../../../csharp/language-reference/keywords/override.md). Pour plus d'informations sur ces options, consultez [Héritage](../../../csharp/programming-guide/classes-and-structs/inheritance.md).  
   

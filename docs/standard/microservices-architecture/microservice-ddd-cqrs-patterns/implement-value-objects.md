@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: e6ac6f2d316a94e69c2599acf07aaaf6361b3e5a
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: ce81991e48fb5eb4eb3bed3dd2fcfe1734ca7bac
+ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="implementing-value-objects"></a>Implémentation d’objets de valeur
 
@@ -92,6 +92,13 @@ public abstract class ValueObject
         }
         return !thisValues.MoveNext() && !otherValues.MoveNext();
     }
+
+    public override int GetHashCode()
+    {
+        return GetAtomicValues()
+         .Select(x => x != null ? x.GetHashCode() : 0)
+         .Aggregate((x, y) => x ^ y);
+    }        
     // Other utilility methods
 }
 ```
@@ -304,12 +311,12 @@ public class Address
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
--   **Martin Fowler. ValueObject pattern**
+-   **Martin Fowler. Modèle ValueObject**
     [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)
 
--   **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software.** (Livre comprenant une description des objets de valeur) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+-   **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software.** (Livre. Inclut une discussion sur les objets de valeur) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
--   **Vaughn Vernon. Implementing Domain-Driven Design.** (Livre comprenant une description des objets de valeur) [*https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/*](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/)
+-   **Vaughn Vernon. Implementing Domain-Driven Design.** (Livre. Inclut une discussion sur les objets de valeur) [*https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/*](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/)
 
 -   **Propriétés cachées**
     [*https://docs.microsoft.com/ef/core/modeling/shadow-properties*](https://docs.microsoft.com/ef/core/modeling/shadow-properties)

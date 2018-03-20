@@ -2,17 +2,18 @@
 title: "Itérateurs (C#)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: c93f6dd4-e72a-4a06-be1c-a98b3255b734
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 6d4994ea57d9fd0df8dfca7ffa40c280499caee6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 48b09368ed0a84dc84793091b819ba7b4b6183f1
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="iterators-c"></a>Itérateurs (C#)
 Un *itérateur* peut être utilisé pour parcourir des collections, comme des listes et des tableaux.  
@@ -344,7 +345,7 @@ public class Stack<T> : IEnumerable<T>
   
  Une conversion implicite doit exister depuis le type d’expression dans l’instruction `yield return` vers le type de retour de l’itérateur.  
   
- En C#, une méthode d’itérateur ne peut avoir aucun paramètre `ref` ou `out`.  
+ En C#, une méthode d’itérateur ne peut avoir aucun paramètre `in`, `ref` ou `out`.  
   
  En C#, « yield » n’est pas un mot réservé ; il a une signification spéciale seulement quand il est utilisé avant un mot clé `return` ou `break`.  
   

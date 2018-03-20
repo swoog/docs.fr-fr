@@ -2,23 +2,24 @@
 title: "Passage de paramètres de type référence (Guide de programmation C#)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - method parameters [C#], reference types
 - parameters [C#], reference
 ms.assetid: 9e6eb65c-942e-48ab-920a-b7ba9df4ea20
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 2cd862a9179e027ab82631631784203993d0465a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 282929d82822f81f12dae91d2f422da51a0f43e5
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="passing-reference-type-parameters-c-programming-guide"></a>Passage de paramètres de type référence (Guide de programmation C#)
-Une variable d’un [type référence](../../../csharp/language-reference/keywords/reference-types.md) ne contient pas directement ses données ; il contient une référence à ses données. Quand vous passez un paramètre de type référence par valeur, il est possible de modifier les données vers lesquelles la référence pointe, comme la valeur d’un membre de classe. En revanche, vous ne pouvez pas modifier la valeur de la référence elle-même. Autrement dit, vous ne pouvez pas utiliser la même référence pour allouer de la mémoire à une nouvelle classe et la faire persister en dehors du bloc. Pour cela, passez le paramètre en utilisant le mot clé [ref](../../../csharp/language-reference/keywords/ref.md) ou [out](../../../csharp/language-reference/keywords/out.md). Pour des raisons de simplicité, les exemples suivants utilisent `ref`.  
+Une variable d’un [type référence](../../../csharp/language-reference/keywords/reference-types.md) ne contient pas directement ses données ; il contient une référence à ses données. Quand vous passez un paramètre de type référence par valeur, il est possible de changer les données appartenant à l’objet référencé, comme la valeur d’un membre de classe. En revanche, vous ne pouvez pas changer la valeur de la référence elle-même. Par exemple, vous ne pouvez pas utiliser la même référence pour allouer de la mémoire à une nouvelle classe et la faire persister en dehors de la méthode. Pour cela, passez le paramètre en utilisant le mot clé [ref](../../../csharp/language-reference/keywords/ref.md) ou [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md). Pour des raisons de simplicité, les exemples suivants utilisent `ref`.  
   
 ## <a name="passing-reference-types-by-value"></a>Passage de types référence par valeur  
  L’exemple suivant illustre le passage d’un paramètre de type référence (`arr`) par valeur, à une méthode (`Change`). Sachant que le paramètre est une référence à `arr`, il est possible de modifier les valeurs des éléments du tableau. Cependant, la tentative de réassignation du paramètre à un emplacement de mémoire différent n’aboutit qu’à l’intérieur de la méthode et n’affecte pas la variable d’origine, `arr`.  
@@ -48,4 +49,6 @@ Une variable d’un [type référence](../../../csharp/language-reference/keywor
  [Passage de paramètres](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)  
  [Passage de tableaux à l’aide de paramètres ref et out](../../../csharp/programming-guide/arrays/passing-arrays-using-ref-and-out.md)  
  [ref](../../../csharp/language-reference/keywords/ref.md)  
+ [in](../../../csharp/language-reference/keywords/in-parameter-modifier.md)  
+ [out](../../../csharp/language-reference/keywords/out.md)  
  [Types référence](../../../csharp/language-reference/keywords/reference-types.md)
