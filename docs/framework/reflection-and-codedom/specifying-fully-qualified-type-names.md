@@ -1,11 +1,12 @@
 ---
 title: "Spécification des noms de types qualifiés complets"
 ms.custom: 
-ms.date: 03/30/2017
+ms.date: 03/14/2018
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,97 +16,157 @@ helpviewer_keywords:
 - tokens
 - BNF
 - assemblies [.NET Framework], names
-- Backus-Naur form
-- languages, BNF grammar
+- languages, grammar
 - fully qualified type names
 - type names
 - special characters
 - IDENTIFIER
 ms.assetid: d90b1e39-9115-4f2a-81c0-05e7e74e5580
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e19aebbeee7fd65e27704af49185a1b8d48b9639
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e31e6e0284de44768b2faad7bcf84d5be343e479
+ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/16/2018
 ---
-# <a name="specifying-fully-qualified-type-names"></a><span data-ttu-id="179a1-102">Spécification des noms de types qualifiés complets</span><span class="sxs-lookup"><span data-stu-id="179a1-102">Specifying Fully Qualified Type Names</span></span>
-<span data-ttu-id="179a1-103">Vous devez spécifier des noms de types pour pouvoir valider l’entrée servant aux diverses opérations de réflexion.</span><span class="sxs-lookup"><span data-stu-id="179a1-103">You must specify type names to have valid input to various reflection operations.</span></span> <span data-ttu-id="179a1-104">Un nom de type complet se compose d’une spécification de nom d’assembly, d’une spécification d’espace de noms et d’un nom de type.</span><span class="sxs-lookup"><span data-stu-id="179a1-104">A fully qualified type name consists of an assembly name specification, a namespace specification, and a type name.</span></span> <span data-ttu-id="179a1-105">Les spécifications de noms de types sont utilisées par les méthodes telles que <xref:System.Type.GetType%2A?displayProperty=nameWithType>, <xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType>, <xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=nameWithType> et <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="179a1-105">Type name specifications are used by methods such as <xref:System.Type.GetType%2A?displayProperty=nameWithType>, <xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType>, <xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=nameWithType>, and <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>.</span></span>  
+# <a name="specifying-fully-qualified-type-names"></a><span data-ttu-id="ef290-102">Spécification des noms de types qualifiés complets</span><span class="sxs-lookup"><span data-stu-id="ef290-102">Specifying Fully Qualified Type Names</span></span>
+<span data-ttu-id="ef290-103">Vous devez spécifier des noms de types pour pouvoir valider l’entrée servant aux diverses opérations de réflexion.</span><span class="sxs-lookup"><span data-stu-id="ef290-103">You must specify type names to have valid input to various reflection operations.</span></span> <span data-ttu-id="ef290-104">Un nom de type complet se compose d’une spécification de nom d’assembly, d’une spécification d’espace de noms et d’un nom de type.</span><span class="sxs-lookup"><span data-stu-id="ef290-104">A fully qualified type name consists of an assembly name specification, a namespace specification, and a type name.</span></span> <span data-ttu-id="ef290-105">Les spécifications de noms de types sont utilisées par les méthodes telles que <xref:System.Type.GetType%2A?displayProperty=nameWithType>, <xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType>, <xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=nameWithType> et <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="ef290-105">Type name specifications are used by methods such as <xref:System.Type.GetType%2A?displayProperty=nameWithType>, <xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType>, <xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=nameWithType>, and <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>.</span></span>  
   
-## <a name="backus-naur-form-grammar-for-type-names"></a><span data-ttu-id="179a1-106">Syntaxe de la notation BNF (Backus-Naur) pour les noms de types</span><span class="sxs-lookup"><span data-stu-id="179a1-106">Backus-Naur Form Grammar for Type Names</span></span>  
- <span data-ttu-id="179a1-107">La notation BNF (Backus-Naur) définit la syntaxe des langages formels.</span><span class="sxs-lookup"><span data-stu-id="179a1-107">The Backus-Naur form (BNF) defines the syntax of formal languages.</span></span> <span data-ttu-id="179a1-108">Le tableau suivant décrit les règles lexicales BNF permettant de reconnaître une entrée valide.</span><span class="sxs-lookup"><span data-stu-id="179a1-108">The following table lists BNF lexical rules that describe how to recognize a valid input.</span></span> <span data-ttu-id="179a1-109">Les éléments terminaux (qui ne peuvent pas être réduits davantage) sont affichés en majuscules.</span><span class="sxs-lookup"><span data-stu-id="179a1-109">Terminals (those elements that are not further reducible) are shown in all uppercase letters.</span></span> <span data-ttu-id="179a1-110">Les éléments non terminaux (qui peuvent être réduits davantage) sont affichés dans une casse mixte ou entre des guillemets simples ; toutefois, le guillemet simple (') ne fait pas partie de la syntaxe proprement dite.</span><span class="sxs-lookup"><span data-stu-id="179a1-110">Nonterminals (those elements that are further reducible) are shown in mixed-case or singly quoted strings, but the single quote (') is not a part of the syntax itself.</span></span> <span data-ttu-id="179a1-111">La barre verticale (&#124;) signale des règles qui ont des sous-règles.</span><span class="sxs-lookup"><span data-stu-id="179a1-111">The pipe character (&#124;) denotes rules that have subrules.</span></span>  
+## <a name="grammar-for-type-names"></a><span data-ttu-id="ef290-106">Grammaire pour les noms de types</span><span class="sxs-lookup"><span data-stu-id="ef290-106">Grammar for Type Names</span></span>  
+ <span data-ttu-id="ef290-107">La grammaire définit la syntaxe des langages formels.</span><span class="sxs-lookup"><span data-stu-id="ef290-107">The grammar defines the syntax of formal languages.</span></span> <span data-ttu-id="ef290-108">Le tableau suivant décrit les règles lexicales permettant de reconnaître une entrée valide.</span><span class="sxs-lookup"><span data-stu-id="ef290-108">The following table lists lexical rules that describe how to recognize a valid input.</span></span> <span data-ttu-id="ef290-109">Les éléments terminaux (qui ne peuvent pas être réduits davantage) sont affichés en majuscules.</span><span class="sxs-lookup"><span data-stu-id="ef290-109">Terminals (those elements that are not further reducible) are shown in all uppercase letters.</span></span> <span data-ttu-id="ef290-110">Les éléments non terminaux (qui peuvent être réduits davantage) sont affichés dans une casse mixte ou entre des guillemets simples ; toutefois, le guillemet simple (') ne fait pas partie de la syntaxe proprement dite.</span><span class="sxs-lookup"><span data-stu-id="ef290-110">Nonterminals (those elements that are further reducible) are shown in mixed-case or singly quoted strings, but the single quote (') is not a part of the syntax itself.</span></span> <span data-ttu-id="ef290-111">La barre verticale (&#124;) signale des règles qui ont des sous-règles.</span><span class="sxs-lookup"><span data-stu-id="ef290-111">The pipe character (&#124;) denotes rules that have subrules.</span></span>  
+
+```antlr
+TypeSpec
+    : ReferenceTypeSpec
+    | SimpleTypeSpec
+    ;
+
+ReferenceTypeSpec
+    : SimpleTypeSpec '&'
+    ;
+
+SimpleTypeSpec
+    : PointerTypeSpec
+    | ArrayTypeSpec
+    | TypeName
+    ;
+
+PointerTypeSpec
+    : SimpleTypeSpec '*'
+    ;
+
+ArrayTypeSpec
+    : SimpleTypeSpec '[ReflectionDimension]'
+    | SimpleTypeSpec '[ReflectionEmitDimension]'
+    ;
+
+ReflectionDimension
+    : '*'
+    | ReflectionDimension ',' ReflectionDimension
+    | NOTOKEN
+    ;
+
+ReflectionEmitDimension
+    : '*'
+    | Number '..' Number
+    | Number '…'
+    | ReflectionDimension ',' ReflectionDimension
+    | NOTOKEN
+    ;
+
+Number
+    : [0-9]+
+    ;
+
+TypeName
+    : NamespaceTypeName
+    | NamespaceTypeName ',' AssemblyNameSpec
+    ;
+
+NamespaceTypeName
+    : NestedTypeName
+    | NamespaceSpec '.' NestedTypeName
+    ;
+
+NestedTypeName
+    : IDENTIFIER
+    | NestedTypeName '+' IDENTIFIER
+    ;
+
+NamespaceSpec
+    : IDENTIFIER
+    | NamespaceSpec '.' IDENTIFIER
+    ;
+
+AssemblyNameSpec
+    : IDENTIFIER
+    | IDENTIFIER ',' AssemblyProperties
+    ;
+
+AssemblyProperties
+    : AssemblyProperty
+    | AssemblyProperties ',' AssemblyProperty
+    ;
+
+AssemblyProperty
+    : AssemblyPropertyName '=' AssemblyPropertyValue
+    ;
+```
+
+## <a name="specifying-special-characters"></a><span data-ttu-id="ef290-112">Spécification de caractères spéciaux</span><span class="sxs-lookup"><span data-stu-id="ef290-112">Specifying Special Characters</span></span>  
+ <span data-ttu-id="ef290-113">Dans un nom de type, IDENTIFIER correspond à n’importe quel nom valide déterminé par les règles d’un langage.</span><span class="sxs-lookup"><span data-stu-id="ef290-113">In a type name, IDENTIFIER is any valid name determined by the rules of a language.</span></span>  
   
-|<span data-ttu-id="179a1-112">Syntaxe BNF des noms de types complets</span><span class="sxs-lookup"><span data-stu-id="179a1-112">BNF grammar of fully qualified type names</span></span>|  
-|-----------------------------------------------|  
-|<span data-ttu-id="179a1-113">TypeSpec                          :=   ReferenceTypeSpec</span><span class="sxs-lookup"><span data-stu-id="179a1-113">TypeSpec                          :=   ReferenceTypeSpec</span></span><br /><br /> <span data-ttu-id="179a1-114">&#124;     SimpleTypeSpec</span><span class="sxs-lookup"><span data-stu-id="179a1-114">&#124;     SimpleTypeSpec</span></span>|  
-|<span data-ttu-id="179a1-115">ReferenceTypeSpec            :=   SimpleTypeSpec '&'</span><span class="sxs-lookup"><span data-stu-id="179a1-115">ReferenceTypeSpec            :=   SimpleTypeSpec '&'</span></span>|  
-|<span data-ttu-id="179a1-116">SimpleTypeSpec                :=   PointerTypeSpec</span><span class="sxs-lookup"><span data-stu-id="179a1-116">SimpleTypeSpec                :=   PointerTypeSpec</span></span><br /><br /> <span data-ttu-id="179a1-117">&#124;     ArrayTypeSpec</span><span class="sxs-lookup"><span data-stu-id="179a1-117">&#124;     ArrayTypeSpec</span></span><br /><br /> <span data-ttu-id="179a1-118">&#124;     TypeName</span><span class="sxs-lookup"><span data-stu-id="179a1-118">&#124;     TypeName</span></span>|  
-|<span data-ttu-id="179a1-119">PointerTypeSpec                :=   SimpleTypeSpec '*'</span><span class="sxs-lookup"><span data-stu-id="179a1-119">PointerTypeSpec                :=   SimpleTypeSpec '*'</span></span>|  
-|<span data-ttu-id="179a1-120">ArrayTypeSpec                  :=   SimpleTypeSpec '[ReflectionDimension]'</span><span class="sxs-lookup"><span data-stu-id="179a1-120">ArrayTypeSpec                  :=   SimpleTypeSpec '[ReflectionDimension]'</span></span><br /><br /> <span data-ttu-id="179a1-121">&#124;     SimpleTypeSpec '[ReflectionEmitDimension]'</span><span class="sxs-lookup"><span data-stu-id="179a1-121">&#124;     SimpleTypeSpec '[ReflectionEmitDimension]'</span></span>|  
-|<span data-ttu-id="179a1-122">ReflectionDimension           :=   '*'</span><span class="sxs-lookup"><span data-stu-id="179a1-122">ReflectionDimension           :=   '*'</span></span><br /><br /> <span data-ttu-id="179a1-123">&#124;     ReflectionDimension ',' ReflectionDimension</span><span class="sxs-lookup"><span data-stu-id="179a1-123">&#124;     ReflectionDimension ',' ReflectionDimension</span></span><br /><br /> <span data-ttu-id="179a1-124">&#124;     NOTOKEN</span><span class="sxs-lookup"><span data-stu-id="179a1-124">&#124;     NOTOKEN</span></span>|  
-|<span data-ttu-id="179a1-125">ReflectionEmitDimension    :=   '*'</span><span class="sxs-lookup"><span data-stu-id="179a1-125">ReflectionEmitDimension    :=   '*'</span></span><br /><br /> <span data-ttu-id="179a1-126">&#124;     Number '..'</span><span class="sxs-lookup"><span data-stu-id="179a1-126">&#124;     Number '..'</span></span> <span data-ttu-id="179a1-127">nombre</span><span class="sxs-lookup"><span data-stu-id="179a1-127">Number</span></span><br /><br /> <span data-ttu-id="179a1-128">&#124;     Number '…'</span><span class="sxs-lookup"><span data-stu-id="179a1-128">&#124;     Number '…'</span></span><br /><br /> <span data-ttu-id="179a1-129">&#124;     ReflectionDimension ',' ReflectionDimension</span><span class="sxs-lookup"><span data-stu-id="179a1-129">&#124;     ReflectionDimension ',' ReflectionDimension</span></span><br /><br /> <span data-ttu-id="179a1-130">&#124;     NOTOKEN</span><span class="sxs-lookup"><span data-stu-id="179a1-130">&#124;     NOTOKEN</span></span>|  
-|<span data-ttu-id="179a1-131">Number                            :=   [0-9]+</span><span class="sxs-lookup"><span data-stu-id="179a1-131">Number                            :=   [0-9]+</span></span>|  
-|<span data-ttu-id="179a1-132">TypeName                         :=   NamespaceTypeName</span><span class="sxs-lookup"><span data-stu-id="179a1-132">TypeName                         :=   NamespaceTypeName</span></span><br /><br /> <span data-ttu-id="179a1-133">&#124;     NamespaceTypeName ',' AssemblyNameSpec</span><span class="sxs-lookup"><span data-stu-id="179a1-133">&#124;     NamespaceTypeName ',' AssemblyNameSpec</span></span>|  
-|<span data-ttu-id="179a1-134">NamespaceTypeName        :=   NestedTypeName</span><span class="sxs-lookup"><span data-stu-id="179a1-134">NamespaceTypeName        :=   NestedTypeName</span></span><br /><br /> <span data-ttu-id="179a1-135">&#124;     NamespaceSpec '.' NestedTypeName</span><span class="sxs-lookup"><span data-stu-id="179a1-135">&#124;     NamespaceSpec '.' NestedTypeName</span></span>|  
-|<span data-ttu-id="179a1-136">NestedTypeName               :=   IDENTIFIER</span><span class="sxs-lookup"><span data-stu-id="179a1-136">NestedTypeName               :=   IDENTIFIER</span></span><br /><br /> <span data-ttu-id="179a1-137">&#124;     NestedTypeName '+' IDENTIFIER</span><span class="sxs-lookup"><span data-stu-id="179a1-137">&#124;     NestedTypeName '+' IDENTIFIER</span></span>|  
-|<span data-ttu-id="179a1-138">NamespaceSpec                 :=   IDENTIFIER</span><span class="sxs-lookup"><span data-stu-id="179a1-138">NamespaceSpec                 :=   IDENTIFIER</span></span><br /><br /> <span data-ttu-id="179a1-139">&#124;     NamespaceSpec '.' IDENTIFIER</span><span class="sxs-lookup"><span data-stu-id="179a1-139">&#124;     NamespaceSpec '.' IDENTIFIER</span></span>|  
-|<span data-ttu-id="179a1-140">AssemblyNameSpec           :=   IDENTIFIER</span><span class="sxs-lookup"><span data-stu-id="179a1-140">AssemblyNameSpec           :=   IDENTIFIER</span></span><br /><br /> <span data-ttu-id="179a1-141">&#124;     IDENTIFIER ',' AssemblyProperties</span><span class="sxs-lookup"><span data-stu-id="179a1-141">&#124;     IDENTIFIER ',' AssemblyProperties</span></span>|  
-|<span data-ttu-id="179a1-142">AssemblyProperties            :=   AssemblyProperty</span><span class="sxs-lookup"><span data-stu-id="179a1-142">AssemblyProperties            :=   AssemblyProperty</span></span><br /><br /> <span data-ttu-id="179a1-143">&#124;     AssemblyProperties ',' AssemblyProperty</span><span class="sxs-lookup"><span data-stu-id="179a1-143">&#124;     AssemblyProperties ',' AssemblyProperty</span></span>|  
-|<span data-ttu-id="179a1-144">AssemblyProperty              :=   AssemblyPropertyName '=' AssemblyPropertyValue</span><span class="sxs-lookup"><span data-stu-id="179a1-144">AssemblyProperty              :=   AssemblyPropertyName '=' AssemblyPropertyValue</span></span>|  
+ <span data-ttu-id="ef290-114">Utilisez la barre oblique inverse (\\) comme caractère d’échappement pour séparer les jetons suivants quand ils sont utilisés avec IDENTIFIER.</span><span class="sxs-lookup"><span data-stu-id="ef290-114">Use the backslash (\\) as an escape character to separate the following tokens when used as part of IDENTIFIER.</span></span>  
   
-## <a name="specifying-special-characters"></a><span data-ttu-id="179a1-145">Spécification de caractères spéciaux</span><span class="sxs-lookup"><span data-stu-id="179a1-145">Specifying Special Characters</span></span>  
- <span data-ttu-id="179a1-146">Dans un nom de type, IDENTIFIER correspond à n’importe quel nom valide déterminé par les règles d’un langage.</span><span class="sxs-lookup"><span data-stu-id="179a1-146">In a type name, IDENTIFIER is any valid name determined by the rules of a language.</span></span>  
-  
- <span data-ttu-id="179a1-147">Utilisez la barre oblique inverse (\\) comme caractère d’échappement pour séparer les jetons suivants quand ils sont utilisés avec IDENTIFIER.</span><span class="sxs-lookup"><span data-stu-id="179a1-147">Use the backslash (\\) as an escape character to separate the following tokens when used as part of IDENTIFIER.</span></span>  
-  
-|<span data-ttu-id="179a1-148">Token</span><span class="sxs-lookup"><span data-stu-id="179a1-148">Token</span></span>|<span data-ttu-id="179a1-149">Signification</span><span class="sxs-lookup"><span data-stu-id="179a1-149">Meaning</span></span>|  
+|<span data-ttu-id="ef290-115">Token</span><span class="sxs-lookup"><span data-stu-id="ef290-115">Token</span></span>|<span data-ttu-id="ef290-116">Signification</span><span class="sxs-lookup"><span data-stu-id="ef290-116">Meaning</span></span>|  
 |-----------|-------------|  
-|<span data-ttu-id="179a1-150">\\,</span><span class="sxs-lookup"><span data-stu-id="179a1-150">\\,</span></span>|<span data-ttu-id="179a1-151">Séparateur d’assembly.</span><span class="sxs-lookup"><span data-stu-id="179a1-151">Assembly separator.</span></span>|  
-|\\+|<span data-ttu-id="179a1-152">Séparateur de type imbriqué.</span><span class="sxs-lookup"><span data-stu-id="179a1-152">Nested type separator.</span></span>|  
-|\\&|<span data-ttu-id="179a1-153">Type référence.</span><span class="sxs-lookup"><span data-stu-id="179a1-153">Reference type.</span></span>|  
-|\\*|<span data-ttu-id="179a1-154">Type pointeur.</span><span class="sxs-lookup"><span data-stu-id="179a1-154">Pointer type.</span></span>|  
-|<span data-ttu-id="179a1-155">\\[</span><span class="sxs-lookup"><span data-stu-id="179a1-155">\\[</span></span>|<span data-ttu-id="179a1-156">Délimiteur de dimension du tableau.</span><span class="sxs-lookup"><span data-stu-id="179a1-156">Array dimension delimiter.</span></span>|  
-|<span data-ttu-id="179a1-157">\\]</span><span class="sxs-lookup"><span data-stu-id="179a1-157">\\]</span></span>|<span data-ttu-id="179a1-158">Délimiteur de dimension du tableau.</span><span class="sxs-lookup"><span data-stu-id="179a1-158">Array dimension delimiter.</span></span>|  
-|<span data-ttu-id="179a1-159">\\.</span><span class="sxs-lookup"><span data-stu-id="179a1-159">\\.</span></span>|<span data-ttu-id="179a1-160">Utilisez la barre oblique inverse avant un point uniquement si celui-ci est utilisé dans une spécification de tableau.</span><span class="sxs-lookup"><span data-stu-id="179a1-160">Use the backslash before a period only if the period is used in an array specification.</span></span> <span data-ttu-id="179a1-161">Les points de NamespaceSpec ne sont pas précédés d’une barre oblique inverse.</span><span class="sxs-lookup"><span data-stu-id="179a1-161">Periods in NamespaceSpec do not take the backslash.</span></span>|  
-|\\\|<span data-ttu-id="179a1-162">Barre oblique inverse nécessaire en tant que littéral de chaîne.</span><span class="sxs-lookup"><span data-stu-id="179a1-162">Backslash when needed as a string literal.</span></span>|  
+|<span data-ttu-id="ef290-117">\\,</span><span class="sxs-lookup"><span data-stu-id="ef290-117">\\,</span></span>|<span data-ttu-id="ef290-118">Séparateur d’assembly.</span><span class="sxs-lookup"><span data-stu-id="ef290-118">Assembly separator.</span></span>|  
+|\\+|<span data-ttu-id="ef290-119">Séparateur de type imbriqué.</span><span class="sxs-lookup"><span data-stu-id="ef290-119">Nested type separator.</span></span>|  
+|\\&|<span data-ttu-id="ef290-120">Type référence.</span><span class="sxs-lookup"><span data-stu-id="ef290-120">Reference type.</span></span>|  
+|\\*|<span data-ttu-id="ef290-121">Type pointeur.</span><span class="sxs-lookup"><span data-stu-id="ef290-121">Pointer type.</span></span>|  
+|<span data-ttu-id="ef290-122">\\[</span><span class="sxs-lookup"><span data-stu-id="ef290-122">\\[</span></span>|<span data-ttu-id="ef290-123">Délimiteur de dimension du tableau.</span><span class="sxs-lookup"><span data-stu-id="ef290-123">Array dimension delimiter.</span></span>|  
+|<span data-ttu-id="ef290-124">\\]</span><span class="sxs-lookup"><span data-stu-id="ef290-124">\\]</span></span>|<span data-ttu-id="ef290-125">Délimiteur de dimension du tableau.</span><span class="sxs-lookup"><span data-stu-id="ef290-125">Array dimension delimiter.</span></span>|  
+|<span data-ttu-id="ef290-126">\\.</span><span class="sxs-lookup"><span data-stu-id="ef290-126">\\.</span></span>|<span data-ttu-id="ef290-127">Utilisez la barre oblique inverse avant un point uniquement si celui-ci est utilisé dans une spécification de tableau.</span><span class="sxs-lookup"><span data-stu-id="ef290-127">Use the backslash before a period only if the period is used in an array specification.</span></span> <span data-ttu-id="ef290-128">Les points de NamespaceSpec ne sont pas précédés d’une barre oblique inverse.</span><span class="sxs-lookup"><span data-stu-id="ef290-128">Periods in NamespaceSpec do not take the backslash.</span></span>|  
+|<span data-ttu-id="ef290-129">\\\|Barre oblique inverse nécessaire comme littéral de chaîne.</span><span class="sxs-lookup"><span data-stu-id="ef290-129">\\\|Backslash when needed as a string literal.</span></span>|  
   
- <span data-ttu-id="179a1-163">Notez que des espaces peuvent être utilisés dans tous les composants TypeSpec, sauf AssemblyNameSpec.</span><span class="sxs-lookup"><span data-stu-id="179a1-163">Note that in all TypeSpec components except AssemblyNameSpec, spaces are relevant.</span></span> <span data-ttu-id="179a1-164">Dans AssemblyNameSpec, les espaces précédant le séparateur « , » peuvent être utilisés, mais ceux situés après le séparateur « , » sont ignorés.</span><span class="sxs-lookup"><span data-stu-id="179a1-164">In the AssemblyNameSpec, spaces before the ',' separator are relevant, but spaces after the ',' separator are ignored.</span></span>  
+ <span data-ttu-id="ef290-130">Notez que des espaces peuvent être utilisés dans tous les composants TypeSpec, sauf AssemblyNameSpec.</span><span class="sxs-lookup"><span data-stu-id="ef290-130">Note that in all TypeSpec components except AssemblyNameSpec, spaces are relevant.</span></span> <span data-ttu-id="ef290-131">Dans AssemblyNameSpec, les espaces précédant le séparateur « , » peuvent être utilisés, mais ceux situés après le séparateur « , » sont ignorés.</span><span class="sxs-lookup"><span data-stu-id="ef290-131">In the AssemblyNameSpec, spaces before the ',' separator are relevant, but spaces after the ',' separator are ignored.</span></span>  
   
- <span data-ttu-id="179a1-165">Les classes Reflection, telles que <xref:System.Type.FullName%2A?displayProperty=nameWithType>, retournent le nom tronqué, lequel peut être utilisé dans un appel à <xref:System.Type.GetType%2A>, comme dans `MyType.GetType(myType.FullName)`.</span><span class="sxs-lookup"><span data-stu-id="179a1-165">Reflection classes, such as <xref:System.Type.FullName%2A?displayProperty=nameWithType>, return the mangled name so that the returned name can be used in a call to <xref:System.Type.GetType%2A>, as in `MyType.GetType(myType.FullName)`.</span></span>  
+ <span data-ttu-id="ef290-132">Les classes Reflection, telles que <xref:System.Type.FullName%2A?displayProperty=nameWithType>, retournent le nom tronqué, lequel peut être utilisé dans un appel à <xref:System.Type.GetType%2A>, comme dans `MyType.GetType(myType.FullName)`.</span><span class="sxs-lookup"><span data-stu-id="ef290-132">Reflection classes, such as <xref:System.Type.FullName%2A?displayProperty=nameWithType>, return the mangled name so that the returned name can be used in a call to <xref:System.Type.GetType%2A>, as in `MyType.GetType(myType.FullName)`.</span></span>  
   
- <span data-ttu-id="179a1-166">Par exemple, le nom complet d’un type peut être `Ozzy.OutBack.Kangaroo+Wallaby,MyAssembly`.</span><span class="sxs-lookup"><span data-stu-id="179a1-166">For example, the fully qualified name for a type might be `Ozzy.OutBack.Kangaroo+Wallaby,MyAssembly`.</span></span>  
+ <span data-ttu-id="ef290-133">Par exemple, le nom complet d’un type peut être `Ozzy.OutBack.Kangaroo+Wallaby,MyAssembly`.</span><span class="sxs-lookup"><span data-stu-id="ef290-133">For example, the fully qualified name for a type might be `Ozzy.OutBack.Kangaroo+Wallaby,MyAssembly`.</span></span>  
   
- <span data-ttu-id="179a1-167">Si l’espace de noms est `Ozzy.Out+Back`, le signe plus (+) doit être précédé d’une barre oblique inverse.</span><span class="sxs-lookup"><span data-stu-id="179a1-167">If the namespace were `Ozzy.Out+Back`, then the plus sign must be preceded by a backslash.</span></span> <span data-ttu-id="179a1-168">Sinon, l’analyseur l’interprète comme un séparateur d’imbrication.</span><span class="sxs-lookup"><span data-stu-id="179a1-168">Otherwise, the parser would interpret it as a nesting separator.</span></span> <span data-ttu-id="179a1-169">La réflexion génère cette chaîne comme suit : `Ozzy.Out\+Back.Kangaroo+Wallaby,MyAssembly`.</span><span class="sxs-lookup"><span data-stu-id="179a1-169">Reflection emits this string as `Ozzy.Out\+Back.Kangaroo+Wallaby,MyAssembly`.</span></span>  
+ <span data-ttu-id="ef290-134">Si l’espace de noms est `Ozzy.Out+Back`, le signe plus (+) doit être précédé d’une barre oblique inverse.</span><span class="sxs-lookup"><span data-stu-id="ef290-134">If the namespace were `Ozzy.Out+Back`, then the plus sign must be preceded by a backslash.</span></span> <span data-ttu-id="ef290-135">Sinon, l’analyseur l’interprète comme un séparateur d’imbrication.</span><span class="sxs-lookup"><span data-stu-id="ef290-135">Otherwise, the parser would interpret it as a nesting separator.</span></span> <span data-ttu-id="ef290-136">La réflexion génère cette chaîne comme suit : `Ozzy.Out\+Back.Kangaroo+Wallaby,MyAssembly`.</span><span class="sxs-lookup"><span data-stu-id="ef290-136">Reflection emits this string as `Ozzy.Out\+Back.Kangaroo+Wallaby,MyAssembly`.</span></span>  
   
-## <a name="specifying-assembly-names"></a><span data-ttu-id="179a1-170">Spécification des noms d’assemblys</span><span class="sxs-lookup"><span data-stu-id="179a1-170">Specifying Assembly Names</span></span>  
- <span data-ttu-id="179a1-171">Au minimum, vous devez fournir le nom textuel (IDENTIFIER) de l’assembly comme spécification du nom d’assembly.</span><span class="sxs-lookup"><span data-stu-id="179a1-171">The minimum information required in an assembly name specification is the textual name (IDENTIFIER) of the assembly.</span></span> <span data-ttu-id="179a1-172">Vous pouvez faire suivre IDENTIFIER d’une liste de paires de propriétés/valeurs avec la virgule comme séparateur, comme l’illustre le tableau suivant.</span><span class="sxs-lookup"><span data-stu-id="179a1-172">You can follow the IDENTIFIER by a comma-separated list of property/value pairs as described in the following table.</span></span> <span data-ttu-id="179a1-173">L’affectation d’un nom à IDENTIFIER doit se conformer aux règles d’attribution de noms de fichiers.</span><span class="sxs-lookup"><span data-stu-id="179a1-173">IDENTIFIER naming should follow the rules for file naming.</span></span> <span data-ttu-id="179a1-174">IDENTIFIER ne respecte pas la casse.</span><span class="sxs-lookup"><span data-stu-id="179a1-174">The IDENTIFIER is case-insensitive.</span></span>  
+## <a name="specifying-assembly-names"></a><span data-ttu-id="ef290-137">Spécification des noms d’assemblys</span><span class="sxs-lookup"><span data-stu-id="ef290-137">Specifying Assembly Names</span></span>  
+ <span data-ttu-id="ef290-138">Au minimum, vous devez fournir le nom textuel (IDENTIFIER) de l’assembly comme spécification du nom d’assembly.</span><span class="sxs-lookup"><span data-stu-id="ef290-138">The minimum information required in an assembly name specification is the textual name (IDENTIFIER) of the assembly.</span></span> <span data-ttu-id="ef290-139">Vous pouvez faire suivre IDENTIFIER d’une liste de paires de propriétés/valeurs avec la virgule comme séparateur, comme l’illustre le tableau suivant.</span><span class="sxs-lookup"><span data-stu-id="ef290-139">You can follow the IDENTIFIER by a comma-separated list of property/value pairs as described in the following table.</span></span> <span data-ttu-id="ef290-140">L’affectation d’un nom à IDENTIFIER doit se conformer aux règles d’attribution de noms de fichiers.</span><span class="sxs-lookup"><span data-stu-id="ef290-140">IDENTIFIER naming should follow the rules for file naming.</span></span> <span data-ttu-id="ef290-141">IDENTIFIER ne respecte pas la casse.</span><span class="sxs-lookup"><span data-stu-id="ef290-141">The IDENTIFIER is case-insensitive.</span></span>  
   
-|<span data-ttu-id="179a1-175">Nom de propriété</span><span class="sxs-lookup"><span data-stu-id="179a1-175">Property name</span></span>|<span data-ttu-id="179a1-176">Description</span><span class="sxs-lookup"><span data-stu-id="179a1-176">Description</span></span>|<span data-ttu-id="179a1-177">Valeurs autorisées</span><span class="sxs-lookup"><span data-stu-id="179a1-177">Allowable values</span></span>|  
+|<span data-ttu-id="ef290-142">Nom de propriété</span><span class="sxs-lookup"><span data-stu-id="ef290-142">Property name</span></span>|<span data-ttu-id="ef290-143">Description</span><span class="sxs-lookup"><span data-stu-id="ef290-143">Description</span></span>|<span data-ttu-id="ef290-144">Valeurs autorisées</span><span class="sxs-lookup"><span data-stu-id="ef290-144">Allowable values</span></span>|  
 |-------------------|-----------------|----------------------|  
-|<span data-ttu-id="179a1-178">**Version**</span><span class="sxs-lookup"><span data-stu-id="179a1-178">**Version**</span></span>|<span data-ttu-id="179a1-179">Numéro de version de l’assembly</span><span class="sxs-lookup"><span data-stu-id="179a1-179">Assembly version number</span></span>|<span data-ttu-id="179a1-180">*version_majeure.version_mineure_build.révision*, où *version_majeure*, *version_mineure*, *build* et *révision* sont des entiers compris entre 0 et 65535 inclus.</span><span class="sxs-lookup"><span data-stu-id="179a1-180">*Major.Minor.Build.Revision*, where *Major*, *Minor*, *Build*, and *Revision* are integers between 0 and 65535 inclusive.</span></span>|  
-|<span data-ttu-id="179a1-181">**PublicKey**</span><span class="sxs-lookup"><span data-stu-id="179a1-181">**PublicKey**</span></span>|<span data-ttu-id="179a1-182">Clé publique complète</span><span class="sxs-lookup"><span data-stu-id="179a1-182">Full public key</span></span>|<span data-ttu-id="179a1-183">Valeur de chaîne de la clé publique complète au format hexadécimal.</span><span class="sxs-lookup"><span data-stu-id="179a1-183">String value of full public key in hexadecimal format.</span></span> <span data-ttu-id="179a1-184">Spécifiez une référence Null (**Nothing** en Visual Basic) pour indiquer explicitement un assembly privé.</span><span class="sxs-lookup"><span data-stu-id="179a1-184">Specify a null reference (**Nothing** in Visual Basic) to explicitly indicate a private assembly.</span></span>|  
-|<span data-ttu-id="179a1-185">**PublicKeyToken**</span><span class="sxs-lookup"><span data-stu-id="179a1-185">**PublicKeyToken**</span></span>|<span data-ttu-id="179a1-186">Jeton de clé publique (hachage de 8 octets de la clé publique complète)</span><span class="sxs-lookup"><span data-stu-id="179a1-186">Public key token (8-byte hash of the full public key)</span></span>|<span data-ttu-id="179a1-187">Valeur de chaîne du jeton de clé publique au format hexadécimal.</span><span class="sxs-lookup"><span data-stu-id="179a1-187">String value of public key token in hexadecimal format.</span></span> <span data-ttu-id="179a1-188">Spécifiez une référence Null (**Nothing** en Visual Basic) pour indiquer explicitement un assembly privé.</span><span class="sxs-lookup"><span data-stu-id="179a1-188">Specify a null reference (**Nothing** in Visual Basic) to explicitly indicate a private assembly.</span></span>|  
-|<span data-ttu-id="179a1-189">**Culture**</span><span class="sxs-lookup"><span data-stu-id="179a1-189">**Culture**</span></span>|<span data-ttu-id="179a1-190">Culture de l’assembly</span><span class="sxs-lookup"><span data-stu-id="179a1-190">Assembly culture</span></span>|<span data-ttu-id="179a1-191">Culture de l’assembly au format RFC-1766 ou « neutre » pour les assemblys indépendants du langage (non-satellites).</span><span class="sxs-lookup"><span data-stu-id="179a1-191">Culture of the assembly in RFC-1766 format, or "neutral" for language-independent (nonsatellite) assemblies.</span></span>|  
-|<span data-ttu-id="179a1-192">**Personnalisé**</span><span class="sxs-lookup"><span data-stu-id="179a1-192">**Custom**</span></span>|<span data-ttu-id="179a1-193">Objet binaire volumineux (BLOB) personnalisé.</span><span class="sxs-lookup"><span data-stu-id="179a1-193">Custom binary large object (BLOB).</span></span> <span data-ttu-id="179a1-194">Utilisé uniquement dans les assemblys générés par le [générateur d’images natives (Ngen)](../../../docs/framework/tools/ngen-exe-native-image-generator.md).</span><span class="sxs-lookup"><span data-stu-id="179a1-194">This is currently used only in assemblies generated by the [Native Image Generator (Ngen)](../../../docs/framework/tools/ngen-exe-native-image-generator.md).</span></span>|<span data-ttu-id="179a1-195">Chaîne personnalisée utilisée par le générateur d’images natives (Ngen) pour informer le cache d’assembly que l’assembly installé est une image native, et qu’il doit donc être installé dans le cache des images natives.</span><span class="sxs-lookup"><span data-stu-id="179a1-195">Custom string used by the Native Image Generator tool to notify the assembly cache that the assembly being installed is a native image, and is therefore to be installed in the native image cache.</span></span> <span data-ttu-id="179a1-196">Également appelée chaîne zap.</span><span class="sxs-lookup"><span data-stu-id="179a1-196">Also called a zap string.</span></span>|  
+|<span data-ttu-id="ef290-145">**Version**</span><span class="sxs-lookup"><span data-stu-id="ef290-145">**Version**</span></span>|<span data-ttu-id="ef290-146">Numéro de version de l’assembly</span><span class="sxs-lookup"><span data-stu-id="ef290-146">Assembly version number</span></span>|<span data-ttu-id="ef290-147">*version_majeure.version_mineure_build.révision*, où *version_majeure*, *version_mineure*, *build* et *révision* sont des entiers compris entre 0 et 65535 inclus.</span><span class="sxs-lookup"><span data-stu-id="ef290-147">*Major.Minor.Build.Revision*, where *Major*, *Minor*, *Build*, and *Revision* are integers between 0 and 65535 inclusive.</span></span>|  
+|<span data-ttu-id="ef290-148">**PublicKey**</span><span class="sxs-lookup"><span data-stu-id="ef290-148">**PublicKey**</span></span>|<span data-ttu-id="ef290-149">Clé publique complète</span><span class="sxs-lookup"><span data-stu-id="ef290-149">Full public key</span></span>|<span data-ttu-id="ef290-150">Valeur de chaîne de la clé publique complète au format hexadécimal.</span><span class="sxs-lookup"><span data-stu-id="ef290-150">String value of full public key in hexadecimal format.</span></span> <span data-ttu-id="ef290-151">Spécifiez une référence Null (**Nothing** en Visual Basic) pour indiquer explicitement un assembly privé.</span><span class="sxs-lookup"><span data-stu-id="ef290-151">Specify a null reference (**Nothing** in Visual Basic) to explicitly indicate a private assembly.</span></span>|  
+|<span data-ttu-id="ef290-152">**PublicKeyToken**</span><span class="sxs-lookup"><span data-stu-id="ef290-152">**PublicKeyToken**</span></span>|<span data-ttu-id="ef290-153">Jeton de clé publique (hachage de 8 octets de la clé publique complète)</span><span class="sxs-lookup"><span data-stu-id="ef290-153">Public key token (8-byte hash of the full public key)</span></span>|<span data-ttu-id="ef290-154">Valeur de chaîne du jeton de clé publique au format hexadécimal.</span><span class="sxs-lookup"><span data-stu-id="ef290-154">String value of public key token in hexadecimal format.</span></span> <span data-ttu-id="ef290-155">Spécifiez une référence Null (**Nothing** en Visual Basic) pour indiquer explicitement un assembly privé.</span><span class="sxs-lookup"><span data-stu-id="ef290-155">Specify a null reference (**Nothing** in Visual Basic) to explicitly indicate a private assembly.</span></span>|  
+|<span data-ttu-id="ef290-156">**Culture**</span><span class="sxs-lookup"><span data-stu-id="ef290-156">**Culture**</span></span>|<span data-ttu-id="ef290-157">Culture de l’assembly</span><span class="sxs-lookup"><span data-stu-id="ef290-157">Assembly culture</span></span>|<span data-ttu-id="ef290-158">Culture de l’assembly au format RFC-1766 ou « neutre » pour les assemblys indépendants du langage (non-satellites).</span><span class="sxs-lookup"><span data-stu-id="ef290-158">Culture of the assembly in RFC-1766 format, or "neutral" for language-independent (nonsatellite) assemblies.</span></span>|  
+|<span data-ttu-id="ef290-159">**Personnalisé**</span><span class="sxs-lookup"><span data-stu-id="ef290-159">**Custom**</span></span>|<span data-ttu-id="ef290-160">Objet binaire volumineux (BLOB) personnalisé.</span><span class="sxs-lookup"><span data-stu-id="ef290-160">Custom binary large object (BLOB).</span></span> <span data-ttu-id="ef290-161">Utilisé uniquement dans les assemblys générés par le [générateur d’images natives (Ngen)](../../../docs/framework/tools/ngen-exe-native-image-generator.md).</span><span class="sxs-lookup"><span data-stu-id="ef290-161">This is currently used only in assemblies generated by the [Native Image Generator (Ngen)](../../../docs/framework/tools/ngen-exe-native-image-generator.md).</span></span>|<span data-ttu-id="ef290-162">Chaîne personnalisée utilisée par le générateur d’images natives (Ngen) pour informer le cache d’assembly que l’assembly installé est une image native, et qu’il doit donc être installé dans le cache des images natives.</span><span class="sxs-lookup"><span data-stu-id="ef290-162">Custom string used by the Native Image Generator tool to notify the assembly cache that the assembly being installed is a native image, and is therefore to be installed in the native image cache.</span></span> <span data-ttu-id="ef290-163">Également appelée chaîne zap.</span><span class="sxs-lookup"><span data-stu-id="ef290-163">Also called a zap string.</span></span>|  
   
- <span data-ttu-id="179a1-197">L’exemple suivant illustre un **AssemblyName** pour un assembly nommé simplement avec une culture par défaut.</span><span class="sxs-lookup"><span data-stu-id="179a1-197">The following example shows an **AssemblyName** for a simply named assembly with default culture.</span></span>  
+ <span data-ttu-id="ef290-164">L’exemple suivant illustre un **AssemblyName** pour un assembly nommé simplement avec une culture par défaut.</span><span class="sxs-lookup"><span data-stu-id="ef290-164">The following example shows an **AssemblyName** for a simply named assembly with default culture.</span></span>  
   
 ```csharp  
 com.microsoft.crypto, Culture=""   
 ```  
   
- <span data-ttu-id="179a1-198">L’exemple suivant illustre une référence complète pour un assembly utilisant un nom fort et la culture « en ».</span><span class="sxs-lookup"><span data-stu-id="179a1-198">The following example shows a fully specified reference for a strongly named assembly with culture "en".</span></span>  
+ <span data-ttu-id="ef290-165">L’exemple suivant illustre une référence complète pour un assembly utilisant un nom fort et la culture « en ».</span><span class="sxs-lookup"><span data-stu-id="ef290-165">The following example shows a fully specified reference for a strongly named assembly with culture "en".</span></span>  
   
 ```csharp  
 com.microsoft.crypto, Culture=en, PublicKeyToken=a5d015c7d5a0b012,  
     Version=1.0.0.0   
 ```  
   
- <span data-ttu-id="179a1-199">Les exemples suivants montrent chacun un **AssemblyName** partiellement spécifié, qui peut correspondre à un assembly portant un nom fort ou nommé simplement.</span><span class="sxs-lookup"><span data-stu-id="179a1-199">The following examples each show a partially specified **AssemblyName**, which can be satisfied by either a strong or a simply named assembly.</span></span>  
+ <span data-ttu-id="ef290-166">Les exemples suivants montrent chacun un **AssemblyName** partiellement spécifié, qui peut correspondre à un assembly portant un nom fort ou nommé simplement.</span><span class="sxs-lookup"><span data-stu-id="ef290-166">The following examples each show a partially specified **AssemblyName**, which can be satisfied by either a strong or a simply named assembly.</span></span>  
   
 ```csharp  
 com.microsoft.crypto  
@@ -113,14 +174,14 @@ com.microsoft.crypto, Culture=""
 com.microsoft.crypto, Culture=en   
 ```  
   
- <span data-ttu-id="179a1-200">Les exemples suivants montrent chacun un **AssemblyName** partiellement spécifié, qui doit correspondre à un assembly nommé simplement.</span><span class="sxs-lookup"><span data-stu-id="179a1-200">The following examples each show a partially specified **AssemblyName**, which must be satisfied by a simply named assembly.</span></span>  
+ <span data-ttu-id="ef290-167">Les exemples suivants montrent chacun un **AssemblyName** partiellement spécifié, qui doit correspondre à un assembly nommé simplement.</span><span class="sxs-lookup"><span data-stu-id="ef290-167">The following examples each show a partially specified **AssemblyName**, which must be satisfied by a simply named assembly.</span></span>  
   
 ```csharp  
 com.microsoft.crypto, Culture="", PublicKeyToken=null   
 com.microsoft.crypto, Culture=en, PublicKeyToken=null  
 ```  
   
- <span data-ttu-id="179a1-201">Les exemples suivants montrent chacun un **AssemblyName** partiellement spécifié, qui doit correspondre à un assembly portant un nom fort.</span><span class="sxs-lookup"><span data-stu-id="179a1-201">The following examples each show a partially specified **AssemblyName**, which must be satisfied by a strongly named assembly.</span></span>  
+ <span data-ttu-id="ef290-168">Les exemples suivants montrent chacun un **AssemblyName** partiellement spécifié, qui doit correspondre à un assembly portant un nom fort.</span><span class="sxs-lookup"><span data-stu-id="ef290-168">The following examples each show a partially specified **AssemblyName**, which must be satisfied by a strongly named assembly.</span></span>  
   
 ```csharp  
 com.microsoft.crypto, Culture="", PublicKeyToken=a5d015c7d5a0b012  
@@ -128,34 +189,34 @@ com.microsoft.crypto, Culture=en, PublicKeyToken=a5d015c7d5a0b012,
     Version=1.0.0.0  
 ```  
   
-## <a name="specifying-pointers"></a><span data-ttu-id="179a1-202">Spécification des pointeurs</span><span class="sxs-lookup"><span data-stu-id="179a1-202">Specifying Pointers</span></span>  
- <span data-ttu-id="179a1-203">SimpleTypeSpec* représente un pointeur non managé.</span><span class="sxs-lookup"><span data-stu-id="179a1-203">SimpleTypeSpec* represents an unmanaged pointer.</span></span> <span data-ttu-id="179a1-204">Par exemple, pour obtenir un pointeur vers le type MyType, utilisez `Type.GetType("MyType*")`.</span><span class="sxs-lookup"><span data-stu-id="179a1-204">For example, to get a pointer to type MyType, use `Type.GetType("MyType*")`.</span></span> <span data-ttu-id="179a1-205">Pour obtenir un pointeur vers un autre pointeur vers le type MyType, utilisez `Type.GetType("MyType**")`.</span><span class="sxs-lookup"><span data-stu-id="179a1-205">To get a pointer to a pointer to type MyType, use `Type.GetType("MyType**")`.</span></span>  
+## <a name="specifying-pointers"></a><span data-ttu-id="ef290-169">Spécification des pointeurs</span><span class="sxs-lookup"><span data-stu-id="ef290-169">Specifying Pointers</span></span>  
+ <span data-ttu-id="ef290-170">SimpleTypeSpec\* représente un pointeur non managé.</span><span class="sxs-lookup"><span data-stu-id="ef290-170">SimpleTypeSpec\* represents an unmanaged pointer.</span></span> <span data-ttu-id="ef290-171">Par exemple, pour obtenir un pointeur vers le type MyType, utilisez `Type.GetType("MyType*")`.</span><span class="sxs-lookup"><span data-stu-id="ef290-171">For example, to get a pointer to type MyType, use `Type.GetType("MyType*")`.</span></span> <span data-ttu-id="ef290-172">Pour obtenir un pointeur vers un autre pointeur vers le type MyType, utilisez `Type.GetType("MyType**")`.</span><span class="sxs-lookup"><span data-stu-id="ef290-172">To get a pointer to a pointer to type MyType, use `Type.GetType("MyType**")`.</span></span>  
   
-## <a name="specifying-references"></a><span data-ttu-id="179a1-206">Spécification des références</span><span class="sxs-lookup"><span data-stu-id="179a1-206">Specifying References</span></span>  
- <span data-ttu-id="179a1-207">SimpleTypeSpec & représente un pointeur ou une référence managé.</span><span class="sxs-lookup"><span data-stu-id="179a1-207">SimpleTypeSpec & represents a managed pointer or reference.</span></span> <span data-ttu-id="179a1-208">Par exemple, pour obtenir une référence au type MyType, utilisez `Type.GetType("MyType &")`.</span><span class="sxs-lookup"><span data-stu-id="179a1-208">For example, to get a reference to type MyType, use `Type.GetType("MyType &")`.</span></span> <span data-ttu-id="179a1-209">Notez que contrairement aux pointeurs, les références sont limitées à un niveau.</span><span class="sxs-lookup"><span data-stu-id="179a1-209">Note that unlike pointers, references are limited to one level.</span></span>  
+## <a name="specifying-references"></a><span data-ttu-id="ef290-173">Spécification des références</span><span class="sxs-lookup"><span data-stu-id="ef290-173">Specifying References</span></span>  
+ <span data-ttu-id="ef290-174">SimpleTypeSpec & représente un pointeur ou une référence managé.</span><span class="sxs-lookup"><span data-stu-id="ef290-174">SimpleTypeSpec & represents a managed pointer or reference.</span></span> <span data-ttu-id="ef290-175">Par exemple, pour obtenir une référence au type MyType, utilisez `Type.GetType("MyType &")`.</span><span class="sxs-lookup"><span data-stu-id="ef290-175">For example, to get a reference to type MyType, use `Type.GetType("MyType &")`.</span></span> <span data-ttu-id="ef290-176">Notez que contrairement aux pointeurs, les références sont limitées à un niveau.</span><span class="sxs-lookup"><span data-stu-id="ef290-176">Note that unlike pointers, references are limited to one level.</span></span>  
   
-## <a name="specifying-arrays"></a><span data-ttu-id="179a1-210">Spécification des tableaux</span><span class="sxs-lookup"><span data-stu-id="179a1-210">Specifying Arrays</span></span>  
- <span data-ttu-id="179a1-211">Dans la syntaxe BNF, ReflectionEmitDimension ne s’applique qu’aux définitions de types incomplètes récupérées à l’aide de <xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="179a1-211">In the BNF Grammar, ReflectionEmitDimension only applies to incomplete type definitions retrieved using <xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="179a1-212">Les définitions de types incomplètes sont des objets <xref:System.Reflection.Emit.TypeBuilder> construits à l’aide de <xref:System.Reflection.Emit?displayProperty=nameWithType>, mais sur lesquels <xref:System.Reflection.Emit.TypeBuilder.CreateType%2A?displayProperty=nameWithType> n’a pas été appelé.</span><span class="sxs-lookup"><span data-stu-id="179a1-212">Incomplete type definitions are <xref:System.Reflection.Emit.TypeBuilder> objects constructed using <xref:System.Reflection.Emit?displayProperty=nameWithType> but on which <xref:System.Reflection.Emit.TypeBuilder.CreateType%2A?displayProperty=nameWithType> has not been called.</span></span> <span data-ttu-id="179a1-213">ReflectionDimension peut être utilisé pour récupérer une définition de type achevée, c’est-à-dire un type qui a été chargé.</span><span class="sxs-lookup"><span data-stu-id="179a1-213">ReflectionDimension can be used to retrieve any type definition that has been completed, that is, a type that has been loaded.</span></span>  
+## <a name="specifying-arrays"></a><span data-ttu-id="ef290-177">Spécification des tableaux</span><span class="sxs-lookup"><span data-stu-id="ef290-177">Specifying Arrays</span></span>  
+ <span data-ttu-id="ef290-178">Dans la syntaxe BNF, ReflectionEmitDimension ne s’applique qu’aux définitions de types incomplètes récupérées à l’aide de <xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="ef290-178">In the BNF Grammar, ReflectionEmitDimension only applies to incomplete type definitions retrieved using <xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="ef290-179">Les définitions de types incomplètes sont des objets <xref:System.Reflection.Emit.TypeBuilder> construits à l’aide de <xref:System.Reflection.Emit?displayProperty=nameWithType>, mais sur lesquels <xref:System.Reflection.Emit.TypeBuilder.CreateType%2A?displayProperty=nameWithType> n’a pas été appelé.</span><span class="sxs-lookup"><span data-stu-id="ef290-179">Incomplete type definitions are <xref:System.Reflection.Emit.TypeBuilder> objects constructed using <xref:System.Reflection.Emit?displayProperty=nameWithType> but on which <xref:System.Reflection.Emit.TypeBuilder.CreateType%2A?displayProperty=nameWithType> has not been called.</span></span> <span data-ttu-id="ef290-180">ReflectionDimension peut être utilisé pour récupérer une définition de type achevée, c’est-à-dire un type qui a été chargé.</span><span class="sxs-lookup"><span data-stu-id="ef290-180">ReflectionDimension can be used to retrieve any type definition that has been completed, that is, a type that has been loaded.</span></span>  
   
- <span data-ttu-id="179a1-214">Les tableaux sont accessibles dans la réflexion en spécifiant le rang du tableau :</span><span class="sxs-lookup"><span data-stu-id="179a1-214">Arrays are accessed in reflection by specifying the rank of the array:</span></span>  
+ <span data-ttu-id="ef290-181">Les tableaux sont accessibles dans la réflexion en spécifiant le rang du tableau :</span><span class="sxs-lookup"><span data-stu-id="ef290-181">Arrays are accessed in reflection by specifying the rank of the array:</span></span>  
   
--   <span data-ttu-id="179a1-215">`Type.GetType("MyArray[]")` obtient un tableau unidimensionnel dont la limite inférieure est égale à 0.</span><span class="sxs-lookup"><span data-stu-id="179a1-215">`Type.GetType("MyArray[]")` gets a single-dimension array with 0 lower bound.</span></span>  
+-   <span data-ttu-id="ef290-182">`Type.GetType("MyArray[]")` obtient un tableau unidimensionnel dont la limite inférieure est égale à 0.</span><span class="sxs-lookup"><span data-stu-id="ef290-182">`Type.GetType("MyArray[]")` gets a single-dimension array with 0 lower bound.</span></span>  
   
--   <span data-ttu-id="179a1-216">`Type.GetType("MyArray[*]")` obtient un tableau unidimensionnel dont la limite inférieure est inconnue.</span><span class="sxs-lookup"><span data-stu-id="179a1-216">`Type.GetType("MyArray[*]")` gets a single-dimension array with unknown lower bound.</span></span>  
+-   <span data-ttu-id="ef290-183">`Type.GetType("MyArray[*]")` obtient un tableau unidimensionnel dont la limite inférieure est inconnue.</span><span class="sxs-lookup"><span data-stu-id="ef290-183">`Type.GetType("MyArray[*]")` gets a single-dimension array with unknown lower bound.</span></span>  
   
--   <span data-ttu-id="179a1-217">`Type.GetType("MyArray[][]")` obtient un tableau contenant un tableau à deux dimensions.</span><span class="sxs-lookup"><span data-stu-id="179a1-217">`Type.GetType("MyArray[][]")` gets a two-dimensional array's array.</span></span>  
+-   <span data-ttu-id="ef290-184">`Type.GetType("MyArray[][]")` obtient un tableau contenant un tableau à deux dimensions.</span><span class="sxs-lookup"><span data-stu-id="ef290-184">`Type.GetType("MyArray[][]")` gets a two-dimensional array's array.</span></span>  
   
--   <span data-ttu-id="179a1-218">`Type.GetType("MyArray[*,*]")` et`Type.GetType("MyArray[,]")` obtiennent un tableau rectangulaire à deux dimensions dont les limites inférieures sont inconnues.</span><span class="sxs-lookup"><span data-stu-id="179a1-218">`Type.GetType("MyArray[*,*]")` and `Type.GetType("MyArray[,]")` gets a rectangular two-dimensional array with unknown lower bounds.</span></span>  
+-   <span data-ttu-id="ef290-185">`Type.GetType("MyArray[*,*]")` et`Type.GetType("MyArray[,]")` obtiennent un tableau rectangulaire à deux dimensions dont les limites inférieures sont inconnues.</span><span class="sxs-lookup"><span data-stu-id="ef290-185">`Type.GetType("MyArray[*,*]")` and `Type.GetType("MyArray[,]")` gets a rectangular two-dimensional array with unknown lower bounds.</span></span>  
   
- <span data-ttu-id="179a1-219">Notez que du point de vue du runtime, `MyArray[] != MyArray[*]`, mais pour les tableaux multidimensionnels, les deux notations sont équivalentes.</span><span class="sxs-lookup"><span data-stu-id="179a1-219">Note that from a runtime point of view, `MyArray[] != MyArray[*]`, but for multidimensional arrays, the two notations are equivalent.</span></span> <span data-ttu-id="179a1-220">En d’autres termes, `Type.GetType("MyArray [,]") == Type.GetType("MyArray[*,*]")` prend la valeur **true**.</span><span class="sxs-lookup"><span data-stu-id="179a1-220">That is, `Type.GetType("MyArray [,]") == Type.GetType("MyArray[*,*]")` evaluates to **true**.</span></span>  
+ <span data-ttu-id="ef290-186">Notez que du point de vue du runtime, `MyArray[] != MyArray[*]`, mais pour les tableaux multidimensionnels, les deux notations sont équivalentes.</span><span class="sxs-lookup"><span data-stu-id="ef290-186">Note that from a runtime point of view, `MyArray[] != MyArray[*]`, but for multidimensional arrays, the two notations are equivalent.</span></span> <span data-ttu-id="ef290-187">En d’autres termes, `Type.GetType("MyArray [,]") == Type.GetType("MyArray[*,*]")` prend la valeur **true**.</span><span class="sxs-lookup"><span data-stu-id="ef290-187">That is, `Type.GetType("MyArray [,]") == Type.GetType("MyArray[*,*]")` evaluates to **true**.</span></span>  
   
- <span data-ttu-id="179a1-221">Pour **ModuleBuilder.GetType**, `MyArray[0..5]` indique un tableau unidimensionnel dont la taille est égale à 6 et la limite inférieure à 0.</span><span class="sxs-lookup"><span data-stu-id="179a1-221">For **ModuleBuilder.GetType**, `MyArray[0..5]` indicates a single-dimension array with size 6, lower bound 0.</span></span> <span data-ttu-id="179a1-222">`MyArray[4…]` indique un tableau unidimensionnel dont la taille est inconnue et dont la limite inférieure est égale à 4.</span><span class="sxs-lookup"><span data-stu-id="179a1-222">`MyArray[4…]` indicates a single-dimension array of unknown size and lower bound 4.</span></span>  
+ <span data-ttu-id="ef290-188">Pour **ModuleBuilder.GetType**, `MyArray[0..5]` indique un tableau unidimensionnel dont la taille est égale à 6 et la limite inférieure à 0.</span><span class="sxs-lookup"><span data-stu-id="ef290-188">For **ModuleBuilder.GetType**, `MyArray[0..5]` indicates a single-dimension array with size 6, lower bound 0.</span></span> <span data-ttu-id="ef290-189">`MyArray[4…]` indique un tableau unidimensionnel dont la taille est inconnue et dont la limite inférieure est égale à 4.</span><span class="sxs-lookup"><span data-stu-id="ef290-189">`MyArray[4…]` indicates a single-dimension array of unknown size and lower bound 4.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="179a1-223">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="179a1-223">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="ef290-190">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="ef290-190">See Also</span></span>  
  <xref:System.Reflection.AssemblyName>  
  <xref:System.Reflection.Emit.ModuleBuilder>  
  <xref:System.Reflection.Emit.TypeBuilder>  
  <xref:System.Type.FullName%2A?displayProperty=nameWithType>  
  <xref:System.Type.GetType%2A?displayProperty=nameWithType>  
  <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType>  
- [<span data-ttu-id="179a1-224">Affichage des informations de type</span><span class="sxs-lookup"><span data-stu-id="179a1-224">Viewing Type Information</span></span>](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
+ [<span data-ttu-id="ef290-191">Affichage des informations de type</span><span class="sxs-lookup"><span data-stu-id="ef290-191">Viewing Type Information</span></span>](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
