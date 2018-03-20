@@ -25,11 +25,11 @@ ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 68da402bde670077e0700ce1ac60e7980c6568ad
-ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
+ms.openlocfilehash: f18c2332f3576847800423c5c0bf7471bf37aafc
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="c-operators"></a>Opérateurs C#
 C# fournit de nombreux opérateurs, qui sont des symboles spécifiant quelles opérations (mathématiques, indexation, appel de fonction, etc.) effectuer dans une expression.  Vous pouvez [surcharger](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md) de nombreux opérateurs pour modifier leur signification quand ils sont appliqués à un type défini par l’utilisateur.  
@@ -84,7 +84,7 @@ C# fournit de nombreux opérateurs, qui sont des symboles spécifiant quelles op
   
  [++x](../../../csharp/language-reference/operators/increment-operator.md) : incrément préfixé.  Retourne la valeur de x après avoir mis à jour l'emplacement de stockage avec la valeur de x augmentée de un (ajoute généralement l'entier 1).  
   
- [--x](../../../csharp/language-reference/operators/decrement-operator.md) : décrément préfixé.  Retourne la valeur de x après avoir mis à jour l'emplacement de stockage avec la valeur de x diminuée de un (ajoute généralement l'entier 1).  
+ [--x](../../../csharp/language-reference/operators/decrement-operator.md) : décrément préfixé.  Retourne la valeur de x après avoir mis à jour l’emplacement de stockage avec la valeur de x diminuée d’une unité (soustrait généralement l’entier 1).  
   
  [(T)x](../../../csharp/language-reference/operators/invocation-operator.md) : cast de type.  
   
