@@ -1,19 +1,21 @@
 ---
-title: "Compatibilité des fonctionnalités dans un environnement de confiance partielle"
-ms.custom: 
+title: Compatibilité des fonctionnalités dans un environnement de confiance partielle
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
-caps.latest.revision: "75"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 1950a0c4015658affb0b9fa0d7c87a062865144b
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
@@ -103,7 +105,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Si l'application est déployée comme une application de confiance partielle, vérifiez que les utilisateurs ne peuvent pas modifier les paramètres de sécurité d'accès du code pour exécuter l'application dans un environnement de confiance partielle. S'ils peuvent le faire, le comportement ne s'exécute pas et aucune exception n'est levée. Pour ce faire, consultez la **levelfinal** en utilisant [Caspol.exe (Code Access Security Policy Tool)](../../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md).  
   
- [!INCLUDE[crexample](../../../../includes/crexample-md.md)] un comportement courant, consultez [How to: Lock Down Endpoints in the Enterprise](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).  
+ [!INCLUDE[crexample](../../../../includes/crexample-md.md)] un comportement courant, consultez [Comment : verrouiller des points de terminaison dans l'entreprise](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).  
   
 ## <a name="configuration"></a>Configuration  
  À une exception, le code d'un niveau de confiance partielle ne peut charger que les sections de configuration [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dans le fichier `app.config` local. Pour charger des sections de configuration [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] qui référencent des sections [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dans machine.config ou dans une racine, le fichier web.config requiert une autorisation ConfigurationPermission(Unrestricted). Sans cette autorisation, les références aux sections de configuration [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] (comportements, liaisons) en dehors des résultats de fichier de configuration local aboutissent à une exception lorsque la configuration est chargée.  
