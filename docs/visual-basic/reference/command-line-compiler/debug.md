@@ -1,10 +1,11 @@
 ---
 title: /debug (Visual Basic)
-ms.date: 07/20/2015
+ms.date: 03/10/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - debug compiler switches
@@ -12,24 +13,23 @@ helpviewer_keywords:
 - -debug compiler option [Visual Basic]
 - debug compiler option [Visual Basic]
 ms.assetid: c2b0bea5-1d5e-499f-9bd5-4f6c6b715ea2
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 07ab386ddb456c059b6390b986ec0a880320973b
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 7430a3ac85a86ed5528af9ea830da530208749eb
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="debug-visual-basic"></a>/debug (Visual Basic)
+# <a name="-debug-visual-basic"></a>-debug (Visual Basic)
 Indique au compilateur de générer des informations de débogage et les placer dans les fichiers de sortie.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-/debug[+ | -]  
+-debug[+ | -]  
 ' -or-  
-/debug:[full | pdbonly]  
+-debug:[full | pdbonly]  
 ```  
   
 ## <a name="arguments"></a>Arguments  
@@ -46,7 +46,7 @@ Indique au compilateur de générer des informations de débogage et les placer 
   
  Pour plus d’informations sur la configuration des performances de débogage d’une application, consultez [Simplification du débogage d’une image](../../../framework/debug-trace-profile/making-an-image-easier-to-debug.md).  
   
-|Pour définir /debug dans Visual Studio environnement de développement intégré|  
+|Pour définir - déboguez dans l’environnement de développement intégré Visual Studio|  
 |---|  
 |1.  Après avoir sélectionné un projet dans l’ **Explorateur de solutions**, dans le menu **Projet** , cliquez sur **Propriétés**. <br />2.  Cliquez sur l’onglet **Compiler**.<br />3.  Cliquez sur **Options avancées de compilation**.<br />4.  Modifiez la valeur dans la **générer des infos de débogage** boîte.|  
   
@@ -54,7 +54,7 @@ Indique au compilateur de générer des informations de débogage et les placer 
  L’exemple suivant place des informations de débogage dans le fichier de sortie `App.exe`.  
   
 ```  
-vbc /debug /out:app.exe test.vb  
+vbc -debug -out:app.exe test.vb  
 ```  
   
 ## <a name="see-also"></a>Voir aussi  

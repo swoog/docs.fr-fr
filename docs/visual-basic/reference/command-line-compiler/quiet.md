@@ -1,43 +1,44 @@
 ---
-title: /quiet
+title: -quiet
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
-- /quiet
+- -quiet
 - quiet
 helpviewer_keywords:
 - -quiet compiler option [Visual Basic]
 - /quiet compiler option [Visual Basic]
 - quiet compiler option [Visual Basic]
 ms.assetid: 5d77fa23-4c50-4708-8535-649912b098e8
-caps.latest.revision: "11"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 3b816cadb9d805d57a14e9b5df553654dd8167af
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a0ed08e013f088f512ae915daa9aeb2fa6b249b0
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="quiet"></a>/quiet
+# <a name="-quiet"></a>-quiet
 Empêche le compilateur d'afficher le code pour les erreurs et les avertissements liés à la syntaxe.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-/quiet  
+-quiet  
 ```  
   
-## <a name="remarks"></a>Remarques  
- Par défaut, l'option `/quiet` n'est pas activée. Lorsque le compilateur signale une erreur de syntaxe ou un avertissement, il génère également la ligne de code source. Pour les applications qui analysent la sortie du compilateur, il peut être plus pratique pour la sortie du compilateur est uniquement le texte de diagnostic.  
+## <a name="remarks"></a>Notes  
+ Par défaut, l'option `-quiet` n'est pas activée. Lorsque le compilateur signale une erreur de syntaxe ou un avertissement, il génère également la ligne de code source. Pour les applications qui analysent la sortie du compilateur, il peut être plus pratique pour la sortie du compilateur est uniquement le texte de diagnostic.  
   
- Dans l’exemple suivant, `Module1` génère une erreur qui inclut le code source compilé sans `/quiet`.  
+ Dans l’exemple suivant, `Module1` génère une erreur qui inclut le code source compilé sans `-quiet`.  
   
-```  
+```vb  
 Module Module1  
     Sub Main()  
         x()  
@@ -46,25 +47,25 @@ End Module
 ```  
   
  Sortie :  
-  
- `E:\test\t2.vb(3) : error BC30451: Name 'x' is not declared.`  
-  
- `x`  
-  
- `~`  
-  
- Compilé avec `/quiet`, le compilateur génère uniquement les éléments suivants :  
+ 
+```console
+C:\projects\vb2.vb(3) : error BC30451: 'x' is not declared. It may be inaccessible due to its protection level.
+
+        x()
+        ~
+``` 
+ Compilé avec `-quiet`, le compilateur génère uniquement les éléments suivants :  
   
  `E:\test\t2.vb(3) : error BC30451: Name 'x' is not declared.`  
   
 > [!NOTE]
->  Le `/quiet` option n’est pas disponible dans l’environnement de développement Visual Studio ; il est disponible uniquement lors de la compilation à partir de la ligne de commande.  
+>  Le `-quiet` option n’est pas disponible dans l’environnement de développement Visual Studio ; il est disponible uniquement lors de la compilation à partir de la ligne de commande.  
   
 ## <a name="example"></a>Exemple  
  Le code suivant compile `T2.vb` et n’affiche pas de code pour les diagnostics du compilateur liés à la syntaxe :  
   
 ```  
-vbc /quiet t2.vb  
+vbc -quiet t2.vb  
 ```  
   
 ## <a name="see-also"></a>Voir aussi  

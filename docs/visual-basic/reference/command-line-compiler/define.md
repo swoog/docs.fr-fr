@@ -1,10 +1,10 @@
 ---
-title: /define (Visual Basic)
-ms.date: 07/20/2015
+title: -définir (Visual Basic)
+ms.date: 03/10/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - -d compiler option [Visual Basic]
@@ -14,24 +14,23 @@ helpviewer_keywords:
 - /define compiler option [Visual Basic]
 - define compiler option [Visual Basic]
 ms.assetid: f735c57d-1cf9-4f2f-a26f-0de630fd4077
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 62669ec40803170cb623382b09472b82121d26bb
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 136339c84ce80bff790c6683eef76065fb6d71ef
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="define-visual-basic"></a>/define (Visual Basic)
+# <a name="-define-visual-basic"></a>-définir (Visual Basic)
 Définit des constantes conditionnelles du compilateur.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-/define:["]symbol[=value][,symbol[=value]]["]  
+-define:["]symbol[=value][,symbol[=value]]["]  
 ' -or-  
-/d:["]symbol[=value][,symbol[=value]]["]  
+-d:["]symbol[=value][,symbol[=value]]["]  
 ```  
   
 ## <a name="arguments"></a>Arguments  
@@ -42,13 +41,13 @@ Définit des constantes conditionnelles du compilateur.
 |`value`|Facultatif. Valeur à affecter au `symbol`. Si `value` est une chaîne, elle doit être entourée par des séquences de barre oblique inverse/guillemets (\\») au lieu des guillemets doubles. Si aucune valeur n'est spécifiée, il prend la valeur True.|  
   
 ## <a name="remarks"></a>Notes  
- Le `/define` option a un effet semblable à l’aide un `#Const` directive de préprocesseur dans votre fichier source, excepté que les constantes définies avec `/define` sont publiques et s’appliquent à tous les fichiers dans le projet.  
+ L'option `-define` revient à utiliser la directive de préprocesseur `#Const` dans votre fichier source, excepté que les constantes définies avec `-define` sont publiques et s'appliquent à tous les fichiers du projet.  
   
  Vous pouvez utiliser les symboles créés par cette option avec la directive `#If`...`Then`...`#Else` pour effectuer une compilation conditionnelle des fichiers sources.  
   
- `/d` est la forme abrégée de `/define`.  
+ `-d` est la forme abrégée de `-define`.  
   
- Vous pouvez définir plusieurs symboles avec `/define` en utilisant une virgule pour séparer les définitions de symbole.  
+ Vous pouvez définir plusieurs symboles avec `-define` en utilisant une virgule pour séparer les définitions de symbole.  
   
 |Pour définir /define dans l'environnement de développement intégré Visual Studio|  
 |---|  

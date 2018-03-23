@@ -1,8 +1,9 @@
 ---
-title: "Comment : créer une application Windows Forms à partir de la ligne de commande"
-ms.date: 03/30/2017
+title: 'Comment : créer une application Windows Forms à partir de la ligne de commande'
+ms.date: 03/14/2018
 ms.prod: .net-framework
-ms.technology: dotnet-winforms
+ms.technology:
+- dotnet-winforms
 ms.topic: article
 dev_langs:
 - csharp
@@ -12,16 +13,15 @@ helpviewer_keywords:
 - Windows Forms, getting started
 - Windows Forms, creating basic form
 ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 22acab6ea3912488ae1382ffb42ca5383a7311af
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+author: rpetrusha
+ms.author: ronpet
+ms.workload:
+- dotnet
+ms.openlocfilehash: 79fda0f5f455cbac50c0c1b51f0cd3bef4c5bfbc
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>Comment : créer une application Windows Forms à partir de la ligne de commande
 Les procédures suivantes décrivent les étapes de base que vous devez effectuer pour créer et exécuter une application Windows Forms à partir de la ligne de commande. Ces procédures sont très bien prises en charge dans Visual Studio.  Consultez également [procédure pas à pas : création d’un Windows Form Simple](http://msdn.microsoft.com/library/z9w2f38k\(v=vs.100\)).  
@@ -49,9 +49,9 @@ Les procédures suivantes décrivent les étapes de base que vous devez effectue
   
 4.  Ajoutez une méthode `Main` à la classe.  
   
-    1.  Appliquer le <xref:System.STAThreadAttribute> à la méthode `Main` pour indiquer que votre application Windows Forms est un thread unique cloisonné.  
+    1.  Appliquer le <xref:System.STAThreadAttribute> au c# `Main` méthode pour indiquer que votre application Windows Forms est un thread cloisonné. (L’attribut n’est pas nécessaire en Visual Basic, étant donné que les applications Windows forms développement avec Visual Basic utilisent un modèle de thread unique cloisonné par défaut.)  
   
-    2.  Appelez <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> pour donner une apparence Windows XP à votre application.  
+    2.  Appelez <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> pour appliquer des styles de système d’exploitation pour votre application.  
   
     3.  Créez une instance du formulaire et exécutez-la.  
   
@@ -64,13 +64,13 @@ Les procédures suivantes décrivent les étapes de base que vous devez effectue
   
 2.  Compilez le formulaire.  
   
-    -   Si vous utilisez c#, tapez :`csc form1.cs`  
+    -   Si vous utilisez c#, tapez : `csc form1.cs`  
   
          `-or-`  
   
-    -   Si vous utilisez Visual Basic, tapez :`vbc form1.vb /r:system.dll,system.drawing.dll,system.windows.forms.dll`  
+    -   Si vous utilisez Visual Basic, tapez : `vbc form1.vb`  
   
-3.  À l’invite de commandes, tapez :`Form1.exe`  
+3.  À l’invite de commandes, tapez : `Form1.exe`  
   
 ## <a name="adding-a-control-and-handling-an-event"></a>Ajout d'un contrôle et gestion d'un événement  
  Les étapes de la procédure précédente illustrent simplement comment créer un Windows Form de base qui se compile et s'exécute. La procédure suivante illustre comment créer et ajouter un contrôle au formulaire et comment gérer un événement pour le contrôle. Pour plus d’informations sur les contrôles que vous pouvez ajouter aux Windows Forms, consultez [des contrôles Windows Forms](../../../docs/framework/winforms/controls/index.md).  

@@ -1,12 +1,13 @@
 ---
-title: "Comment : effectuer une compilation conditionnelle avec Trace et Debug"
-ms.custom: 
+title: 'Comment : effectuer une compilation conditionnelle avec Trace et Debug'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - trace compiler options
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - TRACE directive
 - conditional compilation, tracing code
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
-caps.latest.revision: "11"
+caps.latest.revision: ''
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ccdadc22728c28c8dea80f168a98cb985b2572a7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5e590888a56ed4c325e89eb828349f4f289815cd
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Comment : effectuer une compilation conditionnelle avec Trace et Debug
 Quand vous déboguez une application pendant le développement, les sorties de débogage et de traçage sont dirigées vers la fenêtre de sortie dans Visual Studio. Toutefois, pour inclure les fonctionnalités de suivi dans une application déployée, vous devez compiler vos applications instrumentées en activant la directive de compilateur **TRACE**. De cette façon, le code de traçage peut être compilé dans la version commerciale de votre application. Si vous n’activez pas la directive **TRACE**, tout le code de suivi est ignoré pendant la compilation et n’est pas inclus dans le code exécutable que vous déployez.  
@@ -59,9 +61,9 @@ Quand vous déboguez une application pendant le développement, les sorties de d
   
      Par exemple, l'instruction de compilateur suivante entrée sur la ligne de commande inclut le code de traçage dans un fichier exécutable compilé :  
   
-     Pour Visual Basic : **vbc /r:System.dll /d:TRACE=TRUE /d:DEBUG=FALSE MyApplication.vb**  
+     Pour Visual Basic : **vbc-r:System.dll -d : TRACE = TRUE -d : DEBUG = FALSE MyApplication.vb**  
   
-     Pour C# : **csc /r:System.dll /d:TRACE /d:DEBUG=FALSE MyApplication.cs**  
+     Pour c# : **csc-r:System.dll -d : TRACE -d : DEBUG = FALSE MyApplication.cs**  
   
     > [!TIP]
     >  Pour compiler plusieurs fichiers d’application, insérez un espace entre les noms de fichiers, par exemple **MyApplication1.vb MyApplication2.vb MyApplication3.vb** ou **MyApplication1.cs MyApplication2.cs MyApplication3.cs**.  
@@ -72,8 +74,8 @@ Quand vous déboguez une application pendant le développement, les sorties de d
     |---------------|-------------|  
     |`vbc`|compilateur Visual Basic|  
     |`csc`|Compilateur C#|  
-    |`/r:`|Référence un assembly externe (EXE ou DLL)|  
-    |`/d:`|Définit un symbole de compilation conditionnelle|  
+    |`-r:`|Référence un assembly externe (EXE ou DLL)|  
+    |`-d:`|Définit un symbole de compilation conditionnelle|  
   
     > [!NOTE]
     >  Vous devez écrire TRACE ou DEBUG en majuscules. Pour plus d'informations sur les commandes de compilation conditionnelle, entrez `vbc /?` (pour Visual Basic) ou `csc /?` (pour C#) à l'invite de commandes. Pour plus d’informations, consultez [Génération à partir de la ligne de commande](~/docs/csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md) (C#) ou [Appel du compilateur de ligne de commande](~/docs/visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md) (Visual Basic).  
@@ -95,14 +97,14 @@ Quand vous déboguez une application pendant le développement, les sorties de d
   
 ### <a name="to-disable-tracing-or-debugging"></a>Pour désactiver le traçage ou le débogage  
   
-1.  Supprimez la directive de compilateur de votre code source.  
+Supprimez la directive de compilateur de votre code source.  
   
-     \- ou -  
+\- ou -  
   
-2.  Commentez la directive de compilateur.  
+Commentez la directive de compilateur.  
   
-    > [!NOTE]
-    >  Quand vous êtes prêt pour la compilation, vous pouvez choisir **Générer** dans le menu **Générer**, ou utiliser la méthode de ligne de commande, mais sans taper **d:** pour définir les symboles de compilation conditionnelle.  
+> [!NOTE]
+>  Quand vous êtes prêt pour la compilation, vous pouvez choisir **Générer** dans le menu **Générer**, ou utiliser la méthode de ligne de commande, mais sans taper **d:** pour définir les symboles de compilation conditionnelle.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Suivi et instrumentation d’applications](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)  
