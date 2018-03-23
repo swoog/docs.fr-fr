@@ -12,14 +12,16 @@ helpviewer_keywords:
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bc14d090951f12fd322b90fababa064d1f5b4e80
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: e66ec709a32b39e2e7427d6ce165f62212dac543
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>Options du compilateur Visual Basic par catégorie
-Le compilateur de ligne de commande [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] est fourni comme alternative aux programmes de compilation issus de l'environnement de développement intégré (IDE) [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]. Voici la liste des options du compilateur de ligne de commande [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] triées par catégorie fonctionnelle.  
+Le compilateur de ligne de commande Visual Basic est fourni comme alternative aux programmes de compilation dans le [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] l’environnement de développement intégré (IDE). Voici une liste des options du compilateur de ligne de commande Visual Basic triées par catégorie fonctionnelle.  
+
+[!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
 ## <a name="compiler-output"></a>Sortie du compilateur  
   
@@ -45,6 +47,8 @@ Le compilateur de ligne de commande [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 
 |[-doc](../../../visual-basic/reference/command-line-compiler/doc.md)|Traite les commentaires de documentation pour les diriger vers un fichier XML.|  
 |[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|Configure le compilateur pour cibler le [!INCLUDE[Compact](~/includes/compact-md.md)].|  
 |[-out](../../../visual-basic/reference/command-line-compiler/out.md)|Spécifie un fichier de sortie.|  
+|[-refonly](refonly-compiler-option.md)|Génère un assembly de référence uniquement.|
+|[/refout](refout-compiler-option.md)|Spécifie le chemin de sortie d’un assembly de référence.|
 |[-target](../../../visual-basic/reference/command-line-compiler/target.md)|Spécifie le format de la sortie.|  
   
 ## <a name="net-assemblies"></a>Assemblys .NET  
@@ -113,7 +117,7 @@ Le compilateur de ligne de commande [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 
 |[@ (spécifier un fichier réponse)](../../../visual-basic/reference/command-line-compiler/specify-response-file.md)|Spécifie un fichier réponse.|  
 |[-baseaddress](../../../visual-basic/reference/command-line-compiler/baseaddress.md)|Spécifie l'adresse de base d'une DLL.|  
 |[-codepage](../../../visual-basic/reference/command-line-compiler/codepage.md)|Spécifie la page de codes à utiliser pour tous les fichiers de code source inclus dans la compilation.|  
-|[-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|Indique comment le compilateur [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] doit signaler les erreurs internes du compilateur.|  
+|[-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|Spécifie comment le compilateur Visual Basic doit signaler les erreurs internes du compilateur.|  
 |[-highentropyva](../../../visual-basic/reference/command-line-compiler/highentropyva.md)|Indique au noyau Windows si un fichier exécutable particulier prend en charge la randomisation du format d'espace d'adresse (ASLR) de forte entropie.|  
 |[-main](../../../visual-basic/reference/command-line-compiler/main.md)|Spécifie la classe qui contient le `Sub Main` procédure à utiliser au démarrage.|  
 |[-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)|Ne compilez pas avec Vbc.rsp.|  
@@ -130,6 +134,6 @@ Le compilateur de ligne de commande [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 
   
 ## <a name="see-also"></a>Voir aussi  
  [Options du compilateur Visual Basic par ordre alphabétique](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)  
- [Présentation du Concepteur de projets](http://msdn.microsoft.com/library/898dd854-c98d-430c-ba1b-a913ce3c73d7)  
+ [Présentation du Concepteur de projets](https://msdn.microsoft.com/en-us/library/898dd854-c98d-430c-ba1b-a913ce3c73d7(v=vs.100))  
  [Options du compilateur C# par ordre alphabétique](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)  
  [Options du compilateur C# par catégorie](../../../csharp/language-reference/compiler-options/listed-by-category.md)

@@ -12,14 +12,16 @@ helpviewer_keywords:
 ms.assetid: e67febba-bacf-4e1f-a143-c141e063f90e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 008a1619343874396e22c3606f8a0aeadd81cd7a
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 4c78246a1e9fe14b0ba64ac447293d02e8416079
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="visual-basic-compiler-options-listed-alphabetically"></a>Options du compilateur Visual Basic par ordre alphabétique
-Le compilateur de ligne de commande [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] est fourni comme alternative aux programmes de compilation issus de l'environnement de développement intégré (IDE) [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]. Voici la liste des options du compilateur de ligne de commande [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] triées par ordre alphabétique.  
+Le compilateur de ligne de commande Visual Basic est fourni comme alternative aux programmes de compilation du [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] l’environnement de développement intégré (IDE). Voici une liste des options du compilateur de ligne de commande Visual Basic par ordre alphabétique.  
+
+[!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
 |Option|Objectif|  
 |------------|-------------|  
@@ -36,9 +38,9 @@ Le compilateur de ligne de commande [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 
 |[-define](../../../visual-basic/reference/command-line-compiler/define.md)|Définit des symboles de compilation conditionnelle.|  
 |[-delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md)|Spécifie si l'assembly sera complètement ou partiellement signé.|  
 |[-doc](../../../visual-basic/reference/command-line-compiler/doc.md)|Traite les commentaires de documentation pour les diriger vers un fichier XML.|  
-|[-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|Indique comment le compilateur [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] doit signaler les erreurs internes du compilateur.|  
+|[-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|Spécifie comment le compilateur Visual Basic doit signaler les erreurs internes du compilateur.|  
 |[-filealign](../../../visual-basic/reference/command-line-compiler/filealign.md)|Spécifie où les sections du fichier de sortie doivent être alignées.|  
-|[-help](../../../visual-basic-reference/command-line-compiler/help.md)|Affiche les options du compilateur. Cette commande est identique à l'option `-?`. Aucune compilation n'a lieu.|  
+|[-help](../../../visual-basic/reference/command-line-compiler/help.md)|Affiche les options du compilateur. Cette commande est identique à l'option `-?`. Aucune compilation n'a lieu.|  
 |[-highentropyva](../../../visual-basic/reference/command-line-compiler/highentropyva.md)|Indique si un fichier exécutable particulier prend en charge la fonctionnalité de randomisation du format d'espace d'adresse (ASLR) de forte entropie.|  
 |[-imports](../../../visual-basic/reference/command-line-compiler/imports.md)|Importe un espace de noms à partir d'un assembly spécifié.|  
 |[-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)|Spécifie un nom de conteneur de clé pour une paire de clés afin d'attribuer un nom fort à un assembly.|  
@@ -67,6 +69,8 @@ Le compilateur de ligne de commande [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 
 |[-quiet](../../../visual-basic/reference/command-line-compiler/quiet.md)|Empêche le compilateur d'afficher le code pour les erreurs et les avertissements liés à la syntaxe.|  
 |[-recurse](../../../visual-basic/reference/command-line-compiler/recurse.md)|Recherche des fichiers sources à compiler dans les sous-répertoires.|  
 |[-reference](../../../visual-basic/reference/command-line-compiler/reference.md)|Importe des métadonnées à partir d'un assembly.|  
+|[-refonly](refonly-compiler-option.md)|Génère un assembly de référence uniquement.|
+|[/refout](refout-compiler-option.md)|Spécifie le chemin de sortie d’un assembly de référence.|
 |[-removeintchecks](../../../visual-basic/reference/command-line-compiler/removeintchecks.md)|Désactive les contrôles de dépassement sur les entiers.|  
 |[-resource](../../../visual-basic/reference/command-line-compiler/resource.md)|Incorpore une ressource managée dans un assembly.|  
 |[-rootnamespace](../../../visual-basic/reference/command-line-compiler/rootnamespace.md)|Spécifie un espace de noms pour toutes les déclarations de type.|  

@@ -1,13 +1,13 @@
 ---
 title: Conseils relatifs aux performances .NET
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - C# language, performance
@@ -15,17 +15,17 @@ helpviewer_keywords:
 - Visual Basic, performance
 - performance [Visual Basic]
 ms.assetid: ae275793-857d-4102-9095-b4c2a02d57f4
-caps.latest.revision: 
+caps.latest.revision: ''
 author: BillWagner
 ms.author: wiwagn
 manager: wpickett
 ms.workload:
 - wiwagn
-ms.openlocfilehash: cad50862d5ed05dd13c3f73f50af0c466ad930cd
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: ac1f5b9e0897650751320a7f5a9290c378d428b6
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="net-performance-tips"></a>Conseils relatifs aux performances .NET
 Le terme *performances* désigne généralement la vitesse d’exécution d’un programme. Vous pouvez parfois augmenter la vitesse d’exécution en suivant certaines règles de base dans votre code source. Dans certains programmes, il est important d’examiner attentivement le code et d’utiliser des profileurs pour garantir que le programme s’exécute aussi rapidement que possible. Dans d’autres programmes, vous n’avez pas à effectuer une telle optimisation, car le code, tel qu’il est écrit, est suffisamment rapide. Cet article répertorie les zones dont les performances sont fréquemment impactées, et fournit des conseils d’amélioration, ainsi que des liens vers d’autres rubriques relatives aux performances. Pour plus d’informations sur la planification et la mesure des performances, consultez [Performances](../../../docs/framework/performance/index.md)  
@@ -48,10 +48,10 @@ Le terme *performances* désigne généralement la vitesse d’exécution d’un
 -   [Garbage Collector Basics and Performance Hints](http://go.microsoft.com/fwlink/?LinkId=99296)  
   
 -   [Performance Tips and Tricks in .NET Applications](http://go.microsoft.com/fwlink/?LinkId=99297)  
-  
--   [Inside Diagnostic Tools for .NET](http://go.microsoft.com/fwlink/?LinkId=112407)  
-  
+
 -   [Rico Mariani’s Performance Tidbits](http://go.microsoft.com/fwlink/?LinkId=115679) (Blog de Rico Mariani sur les performances)  
+
+-   [Blog de Vance](https://blogs.msdn.microsoft.com/vancem/)
   
 ## <a name="see-also"></a>Voir aussi  
  [Performances](../../../docs/framework/performance/index.md)  
