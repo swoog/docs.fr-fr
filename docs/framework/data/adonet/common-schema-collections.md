@@ -1,24 +1,26 @@
 ---
-title: "Collections de schémas courantes"
-ms.custom: 
+title: Collections de schémas courantes
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 50127ced-2ac8-4d7a-9cd1-5c98c655ff03
-caps.latest.revision: "3"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 893093900b3fc4276f9bd7143b1f235a5ba98f90
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="common-schema-collections"></a>Collections de schémas courantes
 Les collections de schémas communes sont les collections de schémas implémentées par chacun des fournisseurs .NET Framework managés. Vous pouvez interroger un fournisseur .NET Framework managé afin de déterminer la liste des collections de schémas prises en charge en appelant le **GetSchema** méthode sans argument ou avec le nom de collection de schémas « MetaDataCollections ». Cette opération retourne un <xref:System.Data.DataTable> avec une liste des collections de schémas prises en charge, le nombre de restrictions qu'elles prennent en charge et le nombre d'éléments d'identification qu'elles utilisent. Ces collections décrivent toutes les colonnes requises. Les fournisseurs sont libres d'ajouter des colonnes s'ils le souhaitent. Par exemple, `SqlClient` et `OracleClient` ajoutent ParameterName à la collection de restrictions.  
@@ -41,7 +43,7 @@ Les collections de schémas communes sont les collections de schémas implément
   
 |Nom de colonne|Type de données|Description|  
 |----------------|--------------|-----------------|  
-|CompositeIdentifierSeparatorPattern|string|Expression régulière pour mettre en correspondance les séparateurs composites dans un identificateur composite. Par exemple, «\\. » (pour SQL Server) ou « @&#124; \\." (pour Oracle).<br /><br /> Un identificateur composite est généralement ce qui est utilisé pour un nom d’objet de base de données, par exemple : pubs.dbo.authors ou pubs@dbo.authors.<br /><br /> Pour SQL Server, utilisez l’expression régulière «\\. ». Pour OracleClient, utilisez « @&#124; \\.".<br /><br /> Pour ODBC, utilisez Catalog_name_seperator.<br /><br /> Pour OLE DB, utilisez DBLITERAL_CATALOG_SEPARATOR ou DBLITERAL_SCHEMA_SEPARATOR.|  
+|CompositeIdentifierSeparatorPattern|string|Expression régulière pour mettre en correspondance les séparateurs composites dans un identificateur composite. Par exemple, «\\. » (pour SQL Server) ou « @&#124;\\. » (pour Oracle).<br /><br /> Un identificateur composite est généralement ce qui est utilisé pour un nom d’objet de base de données, par exemple : pubs.dbo.authors ou pubs@dbo.authors.<br /><br /> Pour SQL Server, utilisez l’expression régulière «\\. ». Pour OracleClient, utilisez « @&#124;\\. ».<br /><br /> Pour ODBC, utilisez Catalog_name_seperator.<br /><br /> Pour OLE DB, utilisez DBLITERAL_CATALOG_SEPARATOR ou DBLITERAL_SCHEMA_SEPARATOR.|  
 |DataSourceProductName|string|Nom du produit auquel accède le fournisseur, tel que « Oracle » ou « SQLServer ».|  
 |DataSourceProductVersion|string|Indique la version du produit auquel accède le fournisseur, dans le format natif des sources de données et non dans un format Microsoft.<br /><br /> Dans certains cas, DataSourceProductVersion et DataSourceProductVersionNormalized ont la même valeur. Dans le cas d'OLE DB et d'ODBC, ces valeurs sont toujours identiques étant donné qu'elles sont mappées sur le même appel de fonction dans l'API native sous-jacente.|  
 |DataSourceProductVersionNormalized|string|Version normalisée pour la source de données, telle qu'elle peut être comparée à `String.Compare()`. Son format est identique pour toutes les versions du fournisseur afin d'empêcher la version 10 d'opérer un tri entre les versions 1 et 2.<br /><br /> Par exemple, le fournisseur Oracle utilise un format de « nn.nn.nn.nn.nn » pour sa version normalisée, ce qui entraîne une source de données Oracle 8i retourne « 08.01.07.04.01 ». SQL Server utilise le format « nn.nn.nnnn » Microsoft classique.<br /><br /> Dans certains cas, DataSourceProductVersion et DataSourceProductVersionNormalized ont la même valeur. Dans le cas d'OLE DB et d'ODBC, ces valeurs sont toujours identiques étant donné qu'elles sont mappées sur le même appel de fonction dans l'API native sous-jacente.|  
@@ -53,10 +55,10 @@ Les collections de schémas communes sont les collections de schémas implément
 |ParameterMarkerPattern|string|Expression régulière représentant un marqueur de paramètre. Elle a pour valeur de correspondance éventuelle le nom de paramètre.<br /><br /> Par exemple, si les paramètres nommés sont pris en charge avec un caractère initial « @ » qui sera inclus dans le nom de paramètre, cela donne : « (@[A-Za-z0-9_$#]*) ».<br /><br /> Toutefois, si les paramètres nommés sont pris en charge avec un « : » comme caractère initial et il n’est pas partie du nom du paramètre, il s’agit : » : ([A-Za-z0-9_$ #]\*) ».<br /><br /> Bien sûr, si la source de données ne prend pas en charge les paramètres nommés, cela donne simplement « ? ».|  
 |ParameterNameMaxLength|int|Longueur maximale d'un nom de paramètre en caractères. Si les noms de paramètres sont pris en charge, Visual Studio attend que la valeur minimale de longueur maximale soit de 30 caractères.<br /><br /> Si la source de données ne prend pas en charge les paramètres nommés, cette propriété retourne zéro.|  
 |ParameterNamePattern|string|Expression régulière représentant les noms de paramètre valides. Les différentes sources de données ont des règles différentes concernant les caractères qui peuvent être utilisés pour les noms de paramètre.<br /><br /> Si les noms de paramètre sont pris en charge, Visual Studio attend que les caractères « \p{Lu}\p{Ll}\p{Lt}\p{Lm}\p{Lo}\p{Nl}\p{Nd} » correspondent à l'ensemble minimal pris en charge de caractères valides pour les noms de paramètre.|  
-|QuotedIdentifierPattern|string|Expression régulière qui correspond à un identificateur entre guillemets et qui a pour valeur de correspondance l'identificateur proprement dit, sans les guillemets. Par exemple, si la source de données utilise des guillemets doubles pour identifier des identificateurs entre guillemets, cela serait : « (([^\\»] &#124;\\» \\")*)".|  
+|QuotedIdentifierPattern|string|Expression régulière qui correspond à un identificateur entre guillemets et qui a pour valeur de correspondance l'identificateur proprement dit, sans les guillemets. Par exemple, si la source de données utilise des guillemets doubles pour identifier des identificateurs entre guillemets, cela serait : « (([^\\"]&#124;\\"\\") *) ».|  
 |QuotedIdentifierCase|<xref:System.Data.Common.IdentifierCase>|Indique si des identificateurs entourés de guillemets sont traités ou non comme respectant la casse.|  
 |StatementSeparatorPattern|string|Expression régulière représentant le séparateur d'instruction.|  
-|StringLiteralPattern|string|Expression régulière qui correspond à un littéral de chaîne et dont la valeur de correspondance est le littéral proprement dit. Par exemple, si la source de données utilise des guillemets simples pour identifier des chaînes, cela serait : « ('([^'] &#124; ») *')"'|  
+|StringLiteralPattern|string|Expression régulière qui correspond à un littéral de chaîne et dont la valeur de correspondance est le littéral proprement dit. Par exemple, si la source de données utilise des guillemets simples pour identifier des chaînes, cela serait : « ('([^']&#124;'') *') » »|  
 |SupportedJoinOperators|<xref:System.Data.Common.SupportedJoinOperators>|Spécifie les types d'instructions SQL jointes prises en charge par la source de données.|  
   
 ## <a name="datatypes"></a>DataTypes  

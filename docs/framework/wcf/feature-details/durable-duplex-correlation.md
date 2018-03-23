@@ -1,24 +1,26 @@
 ---
-title: "Corrélation duplex durable"
-ms.custom: 
+title: Corrélation duplex durable
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8eb0e49a-6d3b-4f7e-a054-0d4febee2ffb
-caps.latest.revision: "9"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: ceb5cbedf30c8ec53bc815f9cd52f7bcb8a6e327
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="durable-duplex-correlation"></a>Corrélation duplex durable
 La corrélation duplex durable, également appelée corrélation de rappel, est utile lorsqu’un service de workflow a besoin d’envoyer un rappel à l’appelant initial. Contrairement au duplex WCF, le rappel peut arriver à n'importe quel moment du futur et n'est pas lié au même canal ni à la durée de vie du canal ; la seule condition est que l'appelant ait un point de terminaison actif qui écoute le message de rappel. Cela permet à deux services de workflow de communiquer dans une conversation de longue durée. Cette rubrique présente une vue d'ensemble de la corrélation duplex durable.  
@@ -27,7 +29,7 @@ La corrélation duplex durable, également appelée corrélation de rappel, est 
  Pour utiliser la corrélation duplex durable, les deux services doivent utiliser une liaison contextuelle qui prend en charge les opérations bidirectionnelles, telle que <xref:System.ServiceModel.NetTcpContextBinding> ou <xref:System.ServiceModel.WSHttpContextBinding>. Le service d'appel enregistre une propriété <xref:System.ServiceModel.WSHttpContextBinding.ClientCallbackAddress%2A> avec la liaison souhaitée sur son <xref:System.ServiceModel.Endpoint> client. Le service de réception reçoit ces données dans l'appel initial, puis les utilise sur son propre <xref:System.ServiceModel.Endpoint> dans l'activité <xref:System.ServiceModel.Activities.Send> qui effectue le rappel vers le service d'appel. Dans cet exemple, deux services communiquent entre eux. Le premier service appelle une méthode sur le deuxième service, puis attend une réponse. Le deuxième service connait le nom de la méthode de rappel, mais le point de terminaison du service qui implémente cette méthode n'est pas connu au moment de la conception.  
   
 > [!NOTE]
->  La corrélation duplex durable peut être utilisée uniquement lorsque le <xref:System.ServiceModel.Channels.AddressingVersion> du point de terminaison est configuré avec <xref:System.ServiceModel.Channels.AddressingVersion.WSAddressing10%2A>. Si elle n’est pas, alors un <xref:System.InvalidOperationException> exception est levée avec le message suivant : « le message contient un en-tête de contexte de rappel avec une référence de point de terminaison pour le AddressingVersion ' Addressing200408 (lien hypertexte « http://schemas.xmlsoap.org/ws/2004/08/ adressage « http://schemas.xmlsoap.org/ws/2004/08/addressing)'. Le contexte de rappel ne peut être transmis que lorsque AddressingVersion est configuré avec 'WSAddressing10'. ».  
+>  La corrélation duplex durable peut être utilisée uniquement lorsque le <xref:System.ServiceModel.Channels.AddressingVersion> du point de terminaison est configuré avec <xref:System.ServiceModel.Channels.AddressingVersion.WSAddressing10%2A>. Si elle n’est pas, alors un <xref:System.InvalidOperationException> exception est levée avec le message suivant : « le message contient un en-tête de contexte de rappel avec une référence de point de terminaison pour le AddressingVersion ' Addressing200408 (lien hypertexte «http://schemas.xmlsoap.org/ws/2004/08/addressing« http://schemas.xmlsoap.org/ws/2004/08/addressing)». Le contexte de rappel ne peut être transmis que lorsque AddressingVersion est configuré avec 'WSAddressing10'. ».  
   
  Dans l'exemple suivant, un service de workflow est hébergé, qui crée un <xref:System.ServiceModel.Endpoint> de rappel à l'aide de l'objet <xref:System.ServiceModel.WSHttpContextBinding>.  
   
@@ -212,4 +214,4 @@ WF1 - Items Received
  Dans cet exemple, les deux workflows gèrent explicitement la corrélation à l'aide d'un objet <xref:System.ServiceModel.Activities.CallbackCorrelationInitializer>. Étant donné qu'il n'y avait qu'une seule corrélation dans ces exemples de workflows, la gestion <xref:System.ServiceModel.Activities.CorrelationHandle> par défaut aurait suffi.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Corrélation Duplex durable &#91; Exemples WF &#93;](../../../../docs/framework/windows-workflow-foundation/samples/durable-duplex.md)
+ [Durable Duplex &#91;WF Samples&#93;](../../../../docs/framework/windows-workflow-foundation/samples/durable-duplex.md)

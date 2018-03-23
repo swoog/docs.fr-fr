@@ -1,24 +1,26 @@
 ---
-title: "Référence Entity SQL"
-ms.custom: 
+title: Référence Entity SQL
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 61ce7ee1-ffe2-477d-8a9f-835b0a11d900
-caps.latest.revision: "4"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: ac05ec8a8732da383a4e33e84c669aa29660a0da
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="entity-sql-reference"></a>Référence Entity SQL
 Cette section contient des rubriques de référence sur [!INCLUDE[esql](../../../../../../includes/esql-md.md)]. Cette rubrique résume et regroupe les [!INCLUDE[esql](../../../../../../includes/esql-md.md)] opérateurs par catégorie.  
@@ -57,7 +59,7 @@ Cette section contient des rubriques de référence sur [!INCLUDE[esql](../../..
 |[= (égal à)](../../../../../../docs/framework/data/adonet/ef/language-reference/equals-entity-sql.md)|Compare l'égalité de deux expressions.|  
 |[> (supérieur à)](../../../../../../docs/framework/data/adonet/ef/language-reference/greater-than-entity-sql.md)|Compare deux expressions pour déterminer si la valeur de l'expression de gauche est supérieure à celle de l'expression de droite.|  
 |[>= (supérieur ou égal à)](../../../../../../docs/framework/data/adonet/ef/language-reference/greater-than-or-equal-to-entity-sql.md)|Compare deux expressions pour déterminer si la valeur de l'expression de gauche est supérieure ou égale à celle de l'expression de droite.|  
-|[EST &#91; PAS &#93; VALEUR NULL](../../../../../../docs/framework/data/adonet/ef/language-reference/isnull-entity-sql.md)|Détermine si une expression de requête a la valeur NULL.|  
+|[EST &AMP;#91;PAS&AMP;#93; NULL](../../../../../../docs/framework/data/adonet/ef/language-reference/isnull-entity-sql.md)|Détermine si une expression de requête a la valeur NULL.|  
 |[< (inférieur à)](../../../../../../docs/framework/data/adonet/ef/language-reference/less-than-entity-sql.md)|Compare deux expressions pour déterminer si la valeur de l'expression de gauche est inférieure à celle de l'expression de droite.|  
 |[<= (inférieur ou égal à)](../../../../../../docs/framework/data/adonet/ef/language-reference/less-than-or-equal-to-entity-sql.md)|Compare deux expressions pour déterminer si la valeur de l'expression de gauche est inférieure ou égale à celle de l'expression de droite.|  
 |[&#91;NOT&#93; BETWEEN](../../../../../../docs/framework/data/adonet/ef/language-reference/between-entity-sql.md)|Détermine si une expression a pour résultat une valeur contenue dans une plage spécifiée.|  
@@ -92,7 +94,7 @@ Cette section contient des rubriques de référence sur [!INCLUDE[esql](../../..
 |[WHERE](../../../../../../docs/framework/data/adonet/ef/language-reference/where-entity-sql.md)|Filtre de manière conditionnelle les données qui sont retournées par une requête.|  
   
 ## <a name="reference-operators"></a>Opérateurs de référence  
- Une référence est un pointeur logique (clé étrangère) vers une entité spécifique dans un jeu d'entités spécifique. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]prend en charge les opérateurs suivants pour construire, déconstruire et Explorer les références.  
+ Une référence est un pointeur logique (clé étrangère) vers une entité spécifique dans un jeu d'entités spécifique. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] prend en charge les opérateurs suivants pour construire, déconstruire et Explorer les références.  
   
 |Opérateur|Utilisez|  
 |--------------|---------|  
@@ -118,13 +120,13 @@ Cette section contient des rubriques de référence sur [!INCLUDE[esql](../../..
 |[UNION](../../../../../../docs/framework/data/adonet/ef/language-reference/union-entity-sql.md)|Combine les résultats de deux requêtes, ou plus, en une collection unique.|  
   
 ## <a name="type-operators"></a>Opérateurs de type  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]fournit les opérations qui permettent le type d’une expression (valeur) à être construit, l’interrogation et manipulé. Le tableau ci-dessous répertorie les opérateurs qui permettent d'utiliser les types.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] fournit les opérations qui permettent le type d’une expression (valeur) à être construit, l’interrogation et manipulé. Le tableau ci-dessous répertorie les opérateurs qui permettent d'utiliser les types.  
   
 |Opérateur|Utilisez|  
 |--------------|---------|  
 |[CAST](../../../../../../docs/framework/data/adonet/ef/language-reference/cast-entity-sql.md)|Convertit une expression d'un type de données à un autre.|  
 |[COLLECTION](../../../../../../docs/framework/data/adonet/ef/language-reference/collection-entity-sql.md)|Utilisé dans un [fonction](../../../../../../docs/framework/data/adonet/ef/language-reference/function-entity-sql.md) opération pour déclarer une collection de types d’entité ou des types complexes.|  
-|[EST &#91; PAS &#93; DE](../../../../../../docs/framework/data/adonet/ef/language-reference/isof-entity-sql.md)|Détermine si le type d'une expression appartient au type spécifié ou à l'un de ses sous-types.|  
+|[EST &AMP;#91;PAS&AMP;#93; OF](../../../../../../docs/framework/data/adonet/ef/language-reference/isof-entity-sql.md)|Détermine si le type d'une expression appartient au type spécifié ou à l'un de ses sous-types.|  
 |[OFTYPE](../../../../../../docs/framework/data/adonet/ef/language-reference/oftype-entity-sql.md)|Retourne une collection d'objets à partir d'une expression de requête d'un type spécifique.|  
 |[Constructeur de type nommé](../../../../../../docs/framework/data/adonet/ef/language-reference/named-type-constructor-entity-sql.md)|Permet de créer des instances de types d'entités ou de types complexes.|  
 |[MULTISET](../../../../../../docs/framework/data/adonet/ef/language-reference/multiset-entity-sql.md)|Crée une instance d'un multiensemble à partir d'une liste de valeurs.|  

@@ -1,33 +1,35 @@
 ---
-title: "Quel & #39 ; nouveauté dans Windows Communication Foundation 4.5"
-ms.custom: 
+title: Ce que&#39;nouveauté dans Windows Communication Foundation 4.5
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WCF [WCF], what's new
 - Windows Communication Foundation [WCF], what's new
 ms.assetid: 7e93fe73-af93-46b5-9f63-32f761ee40cf
-caps.latest.revision: "35"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 091925dd1f505693df0d1eb770bca604cf038667
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/23/2018
 ---
-# <a name="what39s-new-in-windows-communication-foundation-45"></a>Quel & #39 ; nouveauté dans Windows Communication Foundation 4.5
+# <a name="what39s-new-in-windows-communication-foundation-45"></a>Ce que&#39;nouveauté dans Windows Communication Foundation 4.5
 Cette rubrique présente les nouvelles fonctionnalités de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].  
   
 ## <a name="wcf-simplification-features"></a>Fonctionnalités de simplification de WCF  
- Beaucoup de travail a été effectué pour faciliter le développement et la gestion des applications WCF 4.5. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Fonctionnalités de Simplification de WCF](../../../docs/framework/wcf/wcf-simplification-features.md).  
+ Beaucoup de travail a été effectué pour faciliter le développement et la gestion des applications WCF 4.5. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Fonctionnalités de Simplification de WCF](../../../docs/framework/wcf/wcf-simplification-features.md).  
   
 ### <a name="task-based-async-support"></a>Prise en charge du modèle asynchrone basé sur les tâches  
  Par défaut, la fonctionnalité Ajouter une référence de service génère des méthodes d'opération de service asynchrone retournant des tâches. Cette opération est effectuée pour les méthodes synchrones et asynchrones. Cela vous permet d’appeler les opérations de service de façon asynchrone à l’aide du modèle de programmation asynchrone basé sur les tâches. Lorsque vous appelez la méthode de proxy générée, WCF construit un objet Tâche pour représenter l’opération asynchrone et retourne cette tâche. La tâche se termine lorsque l’opération se termine.  Lors de l’implémentation d’une opération asynchrone, vous pouvez l’implémenter en tant qu’une opération asynchrone basé sur des tâches. Pour plus d’informations, consultez [synchrone et asynchrone des opérations](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md).  
@@ -35,22 +37,22 @@ Cette rubrique présente les nouvelles fonctionnalités de [!INCLUDE[indigo1](..
 ### <a name="simplified-generated-configuration-files"></a>Fichiers de configuration générés simplifiés  
  Lorsque vous ajoutez une référence de service dans Visual Studio ou utilisez l'outil SvcUtil.exe, un fichier de configuration client est généré. Dans les versions antérieures de WCF, ces fichiers de configuration contenaient la valeur de chaque propriété de liaison et ce, même si sa valeur était la valeur par défaut. Dans WCF 4.5, les fichiers de configuration générés contiennent uniquement les propriétés de liaison qui ont une valeur non définie par défaut.  
   
- [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Fonctionnalités de Simplification de WCF](../../../docs/framework/wcf/wcf-simplification-features.md)  
+ [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Fonctionnalités de Simplification de WCF](../../../docs/framework/wcf/wcf-simplification-features.md)  
   
 ### <a name="contract-first-development"></a>Développement Contrat en premier  
  WCF prend désormais en charge le développement Contrat en premier. L'outil svcutl.exe a un commutateur /serviceContract qui vous permet de générer le service et les contrats de données à partir d'un document WSDL.  
   
 ### <a name="add-service-reference-from-a-portable-subset-project"></a>Ajouter une référence de service d'un projet de sous-ensemble portable  
- Les projets portables du sous-ensemble permettent aux programmeurs d’assembly .NET de maintenir une arborescence source unique et le système de génération tout en prenant en charge plusieurs plateformes .NET (de bureau, Silverlight, Windows Phone et XBOX). Projets portables du sous-ensemble référencent uniquement les bibliothèques portables .NET qui sont un assembly .NET framework qui peut être utilisé sur toute plateforme .NET. L'expérience du développeur est identique à celle de l'ajout d'une référence de service dans une autre application cliente WCF. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Ajouter une référence de Service dans un projet de sous-ensemble Portable](../../../docs/framework/wcf/add-service-reference-in-a-portable-subset-project.md).  
+ Les projets portables du sous-ensemble permettent aux programmeurs d’assembly .NET de maintenir une arborescence source unique et le système de génération tout en prenant en charge plusieurs plateformes .NET (de bureau, Silverlight, Windows Phone et XBOX). Projets portables du sous-ensemble référencent uniquement les bibliothèques portables .NET qui sont un assembly .NET framework qui peut être utilisé sur toute plateforme .NET. L'expérience du développeur est identique à celle de l'ajout d'une référence de service dans une autre application cliente WCF. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Ajouter une référence de Service dans un projet de sous-ensemble Portable](../../../docs/framework/wcf/add-service-reference-in-a-portable-subset-project.md).  
   
 ### <a name="aspnet-compatibility-mode-default-changed"></a>Modification de la valeur par défaut pour le mode de compatibilité ASP.NET  
- WCF fournit le mode de compatibilité ASP.NET pour accorder aux développeurs l’accès total aux fonctionnalités dans le pipeline HTTP ASP.NET lors de l’écriture des services WCF. Pour utiliser ce mode, vous devez définir le `aspNetCompatibilityEnabled` attribut sur true dans le [ \<serviceHostingEnvironment >](../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) section du fichier web.config. De plus, la propriété `RequirementsMode` de tout service dans cet appDomain sur son <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> doit avoir la valeur <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> ou <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>. Par défaut <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> a maintenant la valeur <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Quelles sont les nouveautés dans Windows Communication Foundation](../../../docs/framework/wcf/whats-new.md) et [Services WCF et ASP.NET](../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).  
+ WCF fournit le mode de compatibilité ASP.NET pour accorder aux développeurs l’accès total aux fonctionnalités dans le pipeline HTTP ASP.NET lors de l’écriture des services WCF. Pour utiliser ce mode, vous devez définir le `aspNetCompatibilityEnabled` attribut sur true dans le [ \<serviceHostingEnvironment >](../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) section du fichier web.config. De plus, la propriété `RequirementsMode` de tout service dans cet appDomain sur son <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> doit avoir la valeur <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> ou <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>. Par défaut <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> a maintenant la valeur <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Quelles sont les nouveautés dans Windows Communication Foundation](../../../docs/framework/wcf/whats-new.md) et [Services WCF et ASP.NET](../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).  
   
 ### <a name="new-transport-default-values"></a>Valeurs par défaut pour le nouveau transport  
- Afin de simplifier la configuration, plusieurs valeurs de propriété de transport par défaut ont été modifiées. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Fonctionnalités de Simplification de WCF](../../../docs/framework/wcf/wcf-simplification-features.md).  
+ Afin de simplifier la configuration, plusieurs valeurs de propriété de transport par défaut ont été modifiées. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Fonctionnalités de Simplification de WCF](../../../docs/framework/wcf/wcf-simplification-features.md).  
   
 ### <a name="xmldictionaryreaderquotas"></a>XmlDictionaryReaderQuotas  
- <xref:System.Xml.XmlDictionaryReaderQuotas> contient des valeurs de quota configurables pour les lecteurs du dictionnaire XML qui limitent la quantité de mémoire utilisée par un encodeur lors de la création d'un message. Bien que ces quotas soient configurables, les valeurs par défaut ont changé pour réduire le risque qu'un développeur doivent les définir explicitement. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Fonctionnalités de Simplification de WCF](../../../docs/framework/wcf/wcf-simplification-features.md).  
+ <xref:System.Xml.XmlDictionaryReaderQuotas> contient des valeurs de quota configurables pour les lecteurs du dictionnaire XML qui limitent la quantité de mémoire utilisée par un encodeur lors de la création d'un message. Bien que ces quotas soient configurables, les valeurs par défaut ont changé pour réduire le risque qu'un développeur doivent les définir explicitement. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Fonctionnalités de Simplification de WCF](../../../docs/framework/wcf/wcf-simplification-features.md).  
   
 ### <a name="wcf-configuration-validation"></a>Validation de configuration WCF  
  Dans le cadre du processus de génération dans Visual Studio, les fichiers de configuration WCF sont maintenant validés pour les attributs définis dans le projet. Une liste d'erreurs ou d'avertissements de validation s'affiche dans Visual Studio si la validation échoue.  
@@ -59,7 +61,7 @@ Cette rubrique présente les nouvelles fonctionnalités de [!INCLUDE[indigo1](..
  Pour aider les développeurs de services WCF nouveaux et existants à configurer leurs services, l'Éditeur XML de Visual Studio fournit maintenant des info-bulles pour chaque élément de configuration et ses propriétés qui fait partie du fichier de configuration du service.  
   
 ## <a name="streaming-improvements"></a>Améliorations de la diffusion en continu  
- Ajout de la prise en charge de la diffusion en continu asynchrone là où le côté expéditeur ne bloque pas les threads si le côté destinataire ne lit pas ou n'est pas lent dans la lecture, ce qui accroît l'extensibilité. Suppression de la limitation de mise en mémoire tampon des messages lorsqu'un client envoie un message transmis en continu à un service WCF hébergé par IIS. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Fonctionnalités de Simplification de WCF](../../../docs/framework/wcf/wcf-simplification-features.md).  
+ Ajout de la prise en charge de la diffusion en continu asynchrone là où le côté expéditeur ne bloque pas les threads si le côté destinataire ne lit pas ou n'est pas lent dans la lecture, ce qui accroît l'extensibilité. Suppression de la limitation de mise en mémoire tampon des messages lorsqu'un client envoie un message transmis en continu à un service WCF hébergé par IIS. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Fonctionnalités de Simplification de WCF](../../../docs/framework/wcf/wcf-simplification-features.md).  
   
 ## <a name="simplifying-exposing-an-endpoint-over-https-with-iis"></a>Simplifier l'exposition d'un point de terminaison sur HTTPS avec IIS  
  Un mappage de protocole HTTPS a été ajouté pour simplifier l'exposition d'un point de terminaison sur HTTPS. Pour activer un point de terminaison HTTPS, assurez-vous que votre site Web dispose d'une liaison HTTPS et d'un certificat SSL configurés, puis activez HTTPS pour le répertoire virtuel qui héberge le service. Si les métadonnées sont activées pour le service, elles seront également exposées via HTTPS.  
@@ -77,7 +79,7 @@ Cette rubrique présente les nouvelles fonctionnalités de [!INCLUDE[indigo1](..
 |--------------|--------|-----------------|------------------------------|  
 |channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 secondes|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|  
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|12 * nombre de processeurs|<xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|  
-|maxPendingAccepts|ConnectionOrientedTransportBindingElement<br /><br /> SMSvcHost.exe|2 * nombre de processeurs pour le transport<br /><br /> 4 \* nombre de processeurs pour SMSvcHost.exe|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingAccepts%2A>[Configuration du Service de partage de ports Net.TCP](http://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)|  
+|maxPendingAccepts|ConnectionOrientedTransportBindingElement<br /><br /> SMSvcHost.exe|2 * nombre de processeurs pour le transport<br /><br /> 4 \* nombre de processeurs pour SMSvcHost.exe|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingAccepts%2A> [Configuration du Service de partage de ports Net.TCP](http://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)|  
 |maxPendingConnections|ConnectionOrientedTransportBindingElement|12 * nombre de processeurs|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingConnections%2A>|  
 |receiveTimeout|SMSvcHost.exe|30 secondes|[Configuration du service de partage de ports Net.TCP](http://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)|  
   
@@ -85,7 +87,7 @@ Cette rubrique présente les nouvelles fonctionnalités de [!INCLUDE[indigo1](..
  Pour aider les développeurs de services WCF nouveaux et existants à configurer leurs services, l'Éditeur XML de Visual Studio fournit maintenant des info-bulles pour chaque élément de configuration et ses propriétés qui fait partie du fichier de configuration du service.  
   
 ## <a name="configuring-wcf-services-in-code"></a>Configuration de services WCF dans le code  
- [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] permet aux développeurs de configurer des services dans les fichiers de configuration ou du code.  Les fichiers de configuration sont utiles lorsqu'un service doit être configuré après avoir été déployé. Lorsqu'il utilise des fichiers de configuration, un professionnel de l'informatique doit uniquement mettre à jour le fichier de configuration, aucune recompilation n'est nécessaire. Les fichiers de configuration, toutefois, peuvent être complexes et difficiles à gérer. Il n'existe aucune prise en charge du débogage de fichiers de configuration et les éléments de configuration sont référencés par des noms. La création de fichiers de configuration est donc susceptible d'engendrer des erreurs et difficile. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] vous permet également de configurer des services dans le code. Dans les versions antérieures de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] (4.0 ou version antérieure) configurer des services dans le code était simple dans les scénarios auto-hébergés ; la classe <xref:System.ServiceModel.ServiceHost> vous autorisait à configurer les points de terminaison et les comportements avant d'appeler ServiceHost.Open. Dans les scénarios hébergés sur le Web, toutefois, vous n'avez pas accès à la classe <xref:System.ServiceModel.ServiceHost>. Pour configurer un service hébergé sur le Web vous deviez créer un `System.ServiceModel.ServiceHostFactory` qui créait le <xref:System.ServiceModel.Activation.ServiceHostFactory> et effectuait la configuration nécessaire. Depuis le .NET 4.5, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] offre un moyen plus simple de configurer des services auto-hébergés et hébergés sur le Web dans le code. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Configuration des Services WCF dans le Code](../../../docs/framework/wcf/configuring-wcf-services-in-code.md).  
+ [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] permet aux développeurs de configurer des services dans les fichiers de configuration ou du code.  Les fichiers de configuration sont utiles lorsqu'un service doit être configuré après avoir été déployé. Lorsqu'il utilise des fichiers de configuration, un professionnel de l'informatique doit uniquement mettre à jour le fichier de configuration, aucune recompilation n'est nécessaire. Les fichiers de configuration, toutefois, peuvent être complexes et difficiles à gérer. Il n'existe aucune prise en charge du débogage de fichiers de configuration et les éléments de configuration sont référencés par des noms. La création de fichiers de configuration est donc susceptible d'engendrer des erreurs et difficile. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] vous permet également de configurer des services dans le code. Dans les versions antérieures de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] (4.0 ou version antérieure) configurer des services dans le code était simple dans les scénarios auto-hébergés ; la classe <xref:System.ServiceModel.ServiceHost> vous autorisait à configurer les points de terminaison et les comportements avant d'appeler ServiceHost.Open. Dans les scénarios hébergés sur le Web, toutefois, vous n'avez pas accès à la classe <xref:System.ServiceModel.ServiceHost>. Pour configurer un service hébergé sur le Web vous deviez créer un `System.ServiceModel.ServiceHostFactory` qui créait le <xref:System.ServiceModel.Activation.ServiceHostFactory> et effectuait la configuration nécessaire. Depuis le .NET 4.5, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] offre un moyen plus simple de configurer des services auto-hébergés et hébergés sur le Web dans le code. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Configuration des Services WCF dans le Code](../../../docs/framework/wcf/configuring-wcf-services-in-code.md).  
   
 ## <a name="channelfactory-caching"></a>Mise en cache de ChannelFactory  
  Les applications clientes WCF utilisent la classe <xref:System.ServiceModel.ChannelFactory%601> pour créer un canal de communication avec un service WCF.  La création d'instances <xref:System.ServiceModel.ChannelFactory%601> entraîne une certaine charge, car elle comporte les opérations suivantes :  
@@ -98,10 +100,10 @@ Cette rubrique présente les nouvelles fonctionnalités de [!INCLUDE[indigo1](..
   
 4.  Suppression de ressources  
   
- Pour réduire cette surcharge, WCF peut mettre en cache les fabriques de canaux lorsque vous utilisez un proxy du client WCF. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Mise en cache et la fabrique de canal](../../../docs/framework/wcf/feature-details/channel-factory-and-caching.md).  
+ Pour réduire cette surcharge, WCF peut mettre en cache les fabriques de canaux lorsque vous utilisez un proxy du client WCF. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Mise en cache et la fabrique de canal](../../../docs/framework/wcf/feature-details/channel-factory-and-caching.md).  
   
 ## <a name="compression-and-the-binary-encoder"></a>Compression et encodeur binaire  
- Depuis WCF 4.5, l'encodeur binaire WCF ajoute la prise en charge de la compression. Le type de compression est configuré avec la propriété <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.CompressionFormat%2A>. Le client et le service doivent configurer la propriété <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.CompressionFormat%2A>. La compression fonctionnera pour les protocoles HTTP, HTTPS et TCP. Si un client détermine l'utilisation de la compression, mais le service ne la prend pas en charge, une exception de protocole est levée indiquant une incompatibilité de protocole. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][En choisissant un encodeur de Message](../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)  
+ Depuis WCF 4.5, l'encodeur binaire WCF ajoute la prise en charge de la compression. Le type de compression est configuré avec la propriété <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.CompressionFormat%2A>. Le client et le service doivent configurer la propriété <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.CompressionFormat%2A>. La compression fonctionnera pour les protocoles HTTP, HTTPS et TCP. Si un client détermine l'utilisation de la compression, mais le service ne la prend pas en charge, une exception de protocole est levée indiquant une incompatibilité de protocole. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Choix d’un encodeur de Message](../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)  
   
 ## <a name="udp"></a>UDP  
  Prise en charge a été ajoutée pour un transport UDP qui permet aux développeurs d’écrire des services qui utilisent « fire and forget » de messagerie. Un client envoie un message à un service et n'attend aucune réponse de ce dernier.  

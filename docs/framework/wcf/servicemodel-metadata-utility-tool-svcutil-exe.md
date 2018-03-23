@@ -1,12 +1,13 @@
 ---
 title: Outil Service Model Metadata Tool (Svcutil.exe)
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - clients [WCF], building
@@ -14,16 +15,17 @@ helpviewer_keywords:
 - Svcutil.exe
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
-caps.latest.revision: "40"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: ce66f98f064ec5c9460dd1909f8eb7bc44c26f76
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>Outil Service Model Metadata Tool (Svcutil.exe)
 L'outil Service Model Metadata Tool est utilisé pour générer un code de modèle de service à partir de documents de métadonnées, ainsi que des documents de métadonnées à partir d'un code de modèle de service.  
@@ -63,16 +65,16 @@ L'outil Service Model Metadata Tool est utilisé pour générer un code de modè
   
 |Option|Description|  
 |------------|-----------------|  
-|/ directory :\<répertoire >|Répertoire à utiliser pour la création des fichiers.<br /><br /> Valeur par défaut : le répertoire actif.<br /><br /> Forme abrégée : `/d`|  
+|/directory:\<directory>|Répertoire à utiliser pour la création des fichiers.<br /><br /> Valeur par défaut : le répertoire actif.<br /><br /> Forme abrégée : `/d`|  
 |/help|Affiche la syntaxe de commande et les options de l'outil.<br /><br /> Forme abrégée : `/?`|  
 |/noLogo|Supprime le message de copyright et de bannière.|  
-|/ svcutilconfig :\<configFile >|Spécifie un fichier de configuration personnalisé à utiliser en remplacement du fichier App.config. Peut être utilisé pour enregistrer des extensions system.serviceModel sans modifier le fichier de configuration de l’outil.|  
+|/svcutilConfig:\<configFile>|Spécifie un fichier de configuration personnalisé à utiliser en remplacement du fichier App.config. Peut être utilisé pour enregistrer des extensions system.serviceModel sans modifier le fichier de configuration de l’outil.|  
 |/ target :\<TYPE_SORTIE >|Spécifie la sortie à générer par l'outil.<br /><br /> Les valeurs valides sont code, métadonnées ou xmlSerializer.<br /><br /> Forme abrégée : `/t`|  
   
 ### <a name="code-generation"></a>Génération de code  
  Svcutil.exe peut générer du code pour les contrats de service, les clients et les types de données à partir de documents de métadonnées. Ces documents de métadonnées peuvent se trouver sur un stockage durable, ou encore être récupérés en ligne. La récupération en ligne suit le protocole WS-Metadata Exchange ou le protocole DISCO (pour plus d'informations, consultez la section consacrée au téléchargement de métadonnées).  
   
- Utilisez l'outil SvcUtil.exe pour générer des contrats de service et de données basés sur un document WSDL prédéfini. Utilisez le commutateur /serviceContract et spécifiez une URL ou un emplacement de fichier dans lequel le document WSDL peut être téléchargé ou disponible. Cela génère le service et les contrats de données définis dans le document WSDL, qui peuvent ensuite être utilisés pour implémenter un service conforme. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Comment : récupérer les métadonnées et implémenter un Service conforme](../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md).  
+ Utilisez l'outil SvcUtil.exe pour générer des contrats de service et de données basés sur un document WSDL prédéfini. Utilisez le commutateur /serviceContract et spécifiez une URL ou un emplacement de fichier dans lequel le document WSDL peut être téléchargé ou disponible. Cela génère le service et les contrats de données définis dans le document WSDL, qui peuvent ensuite être utilisés pour implémenter un service conforme. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Comment : récupérer les métadonnées et implémenter un Service conforme](../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md).  
   
  Pour un service avec un point de terminaison BasicHttpContextbinding, Svcutil.exe génère un BasicHttpBinding avec l'attribut `allowCookies` affecté à la place de la valeur `true`. Les cookies sont utilisés pour le contexte sur le serveur. Pour gérer le contexte sur le client lorsque le service utiliser des cookies, vous pouvez modifier manuellement la configuration pour utiliser une liaison de contexte.  
   
@@ -90,11 +92,11 @@ L'outil Service Model Metadata Tool est utilisé pour générer un code de modè
 |Option|Description|  
 |------------|-----------------|  
 |/async|Génère à la fois des signatures de méthode synchrones et asynchrones.<br /><br /> Valeur par défaut : génération de signatures de méthode synchrones uniquement.<br /><br /> Forme abrégée : `/a`|  
-|/CollectionType :\<type >|Spécifie le type de collection de listes pour un client WCF.<br/><br /> Valeur par défaut : le type de collection est System.Array. <br /><br /> Forme abrégée : `/ct`|  
-|/ config :\<configFile >|Spécifie le nom de fichier du fichier de configuration généré.<br /><br /> Valeur par défaut : output.config.|  
+|/collectionType:\<type>|Spécifie le type de collection de listes pour un client WCF.<br/><br /> Valeur par défaut : le type de collection est System.Array. <br /><br /> Forme abrégée : `/ct`|  
+|/config:\<configFile>|Spécifie le nom de fichier du fichier de configuration généré.<br /><br /> Valeur par défaut : output.config.|  
 |/dataContractOnly|Génère du code pour les types de contrat de données uniquement. Aucun type de contrat de service n'est généré.<br /><br /> Pour cette option, vous devez spécifier uniquement des fichiers de métadonnées locaux.<br /><br /> Forme abrégée : `/dconly`|  
 |/enableDataBinding|Implémente l'interface <xref:System.ComponentModel.INotifyPropertyChanged> sur tous les types de contrat de données pour activer la liaison de données.<br /><br /> Forme abrégée : `/edb`|  
-|/excludeType :\<type >|Spécifie un nom de type qualifié complet ou qualifié d'assembly à exclure des types de contrat référencés.<br /><br /> Lors de l'utilisation de ce commutateur avec `/r` à partir de DLL séparées, le nom complet de la classe XSD est référencé.<br /><br /> Forme abrégée : `/et`|  
+|/excludeType:\<type>|Spécifie un nom de type qualifié complet ou qualifié d'assembly à exclure des types de contrat référencés.<br /><br /> Lors de l'utilisation de ce commutateur avec `/r` à partir de DLL séparées, le nom complet de la classe XSD est référencé.<br /><br /> Forme abrégée : `/et`|  
 |/importXmlTypes|Configure le sérialiseur de contrat de données de façon à importer des types autres que le type de contrat de données en tant que types IXmlSerializable.|  
 |/internal|Génère des classes marquées comme internes. Valeur par défaut : génération de classes publiques uniquement.<br /><br /> Forme abrégée : `/i`|  
 |/ Language :\<langue >|Spécifie le langage de programmation à utiliser pour la génération de code. Vous devez spécifier un nom de langage enregistré dans le fichier Machine.config, ou le nom qualifié complet d'une classe qui hérite de <xref:System.CodeDom.Compiler.CodeDomProvider>.<br /><br /> Valeurs: c#, cs, csharp, vb, visualbasic, c++, cpp<br /><br /> Valeur par défaut : csharp<br /><br /> Forme abrégée : `/l` **Remarque :** le commutateur prend uniquement en charge C++ pour le fournisseur de code qui est fourni avec Visual Studio 2005 SP1.|  
@@ -103,7 +105,7 @@ L'outil Service Model Metadata Tool est utilisé pour générer un code de modè
 |/ namespace :\<chaîne, chaîne >|Spécifie un mappage d'un espace de noms WSDL ou XML Schema targetNamespace vers un espace de noms CLR. À l’aide de '\*' de targetNamespace mappe tous les targetNamespaces sans mappage explicite à cet espace de noms CLR.<br /><br /> Pour vérifier que le nom de contrat du message n'entre pas en collision avec le nom d'opération, vous devez soit qualifier la référence de type avec `::`, soit vous assurer que les noms sont uniques.<br /><br /> Valeur par défaut : dérivée de l'espace de noms cible du document de schéma pour les contrats de données. L'espace de noms par défaut est utilisé pour tous les autres types générés.<br /><br /> Forme abrégée : `/n` **Remarque :** lors de la génération de types à utiliser avec XmlSerializer, uniquement un mappage d’espace de noms unique est prise en charge. Tous les types générés sera dans l’espace de noms par défaut ou l’espace de noms spécifié par ' *'.|  
 |/noConfig|Ne génère pas de fichiers de configuration.|  
 |/noStdLib|Ne référence pas les bibliothèques standard.<br /><br /> Valeur par défaut: Mscorlib.dll et System.servicemodel.dll sont référencés.|  
-|/ out :\<fichier >|Spécifie le nom de fichier du code généré.<br /><br /> Valeur par défaut: dérivée du nom de définition WSDL, du nom de service WSDL ou de l'espace de noms cible de l'un des schémas.<br /><br /> Forme abrégée : `/o`|  
+|/out:\<file>|Spécifie le nom de fichier du code généré.<br /><br /> Valeur par défaut: dérivée du nom de définition WSDL, du nom de service WSDL ou de l'espace de noms cible de l'un des schémas.<br /><br /> Forme abrégée : `/o`|  
 |/ reference :\<chemin d’accès >|Référence les types contenus dans l'assembly spécifié. Lorsque vous générez des clients, utilisez cette option pour spécifier des assemblys qui peuvent contenir des types représentant les métadonnées importées.<br /><br /> Vous ne pouvez pas spécifier de contrats de message et de types <xref:System.Xml.Serialization.XmlSerializer> à l'aide de ce commutateur.<br /><br /> Si <xref:System.DateTimeOffset> est référencé, ce type est utilisé au lieu de générer un nouveau type. Si l'application est écrite à l'aide de [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)], SvcUtil.exe référence automatiquement <xref:System.DateTimeOffset>.<br /><br /> Forme abrégée : `/r`|  
 |/serializable|Génère des classes marquées avec l'attribut Serializable.<br /><br /> Forme abrégée : `/s`|  
 |/serviceContract|Générez le code pour les contrats de service uniquement. La classe de client et la configuration ne sont pas générées<br /><br /> Forme abrégée : `/sc`|  
@@ -127,10 +129,10 @@ L'outil Service Model Metadata Tool est utilisé pour générer un code de modè
   
 |Option|Description|  
 |------------|-----------------|  
-|/ ServiceName :\<serviceConfigName >|Spécifie le nom de configuration d'un service à exporter. Si cette option est utilisée, un assembly exécutable avec un fichier de configuration associé doit être passé en tant qu'entrée. Svcutil.exe recherche tous les fichiers de configuration associés la configuration du service. Si les fichiers de configuration contiennent des types d'extension, les assemblys qui contiennent ces types doivent être dans le GAC ou être explicitement fournis à l'aide de l'option `/reference`.|  
+|/serviceName:\<serviceConfigName>|Spécifie le nom de configuration d'un service à exporter. Si cette option est utilisée, un assembly exécutable avec un fichier de configuration associé doit être passé en tant qu'entrée. Svcutil.exe recherche tous les fichiers de configuration associés la configuration du service. Si les fichiers de configuration contiennent des types d'extension, les assemblys qui contiennent ces types doivent être dans le GAC ou être explicitement fournis à l'aide de l'option `/reference`.|  
 |/ reference :\<chemin d’accès >|Ajoute l'assembly spécifié au jeu d'assemblys utilisé pour résoudre des références de type. Si vous exportez ou validez un service qui utilise des extensions tierces (Comportements, Liaisons et BindingElements) enregistrées dans la configuration, utilisez cette option pour localiser des assemblys d'extension qui ne figurent pas dans le GAC.<br /><br /> Forme abrégée : `/r`|  
 |/dataContractOnly|Fonctionne uniquement sur les types de contrat de données. Les contrats de service ne sont pas traités.<br /><br /> Pour cette option, vous devez spécifier uniquement des fichiers de métadonnées locaux.<br /><br /> Forme abrégée : `/dconly`|  
-|/excludeType :\<type >|Spécifie le nom qualifié complet ou qualifié d'assembly d'un type à exclure de l'exportation. Cette option peut être utilisée lors de l'exportation des métadonnées d'un service (ou d'un ensemble de contrats de services) afin d'exclure certains types de l'opération d'exportation. Cette option ne peut pas être utilisée avec l'option `/dconly`.<br /><br /> Lorsqu'un assembly contient plusieurs services et que chacun d'entre eux utilise des classes séparées tout en portant le même nom XSD, vous devez spécifier le nom du service au lieu du nom de la classe XSD pour ce commutateur.<br /><br /> Les types XSD ou les types de contrat de données ne sont pas pris en charge.<br /><br /> Forme abrégée : `/et`|  
+|/excludeType:\<type>|Spécifie le nom qualifié complet ou qualifié d'assembly d'un type à exclure de l'exportation. Cette option peut être utilisée lors de l'exportation des métadonnées d'un service (ou d'un ensemble de contrats de services) afin d'exclure certains types de l'opération d'exportation. Cette option ne peut pas être utilisée avec l'option `/dconly`.<br /><br /> Lorsqu'un assembly contient plusieurs services et que chacun d'entre eux utilise des classes séparées tout en portant le même nom XSD, vous devez spécifier le nom du service au lieu du nom de la classe XSD pour ce commutateur.<br /><br /> Les types XSD ou les types de contrat de données ne sont pas pris en charge.<br /><br /> Forme abrégée : `/et`|  
   
 ### <a name="service-validation"></a>Validation de service  
  La validation peut être utilisée pour détecter des erreurs dans les implémentations de service sans héberger le service. Vous devez utiliser l'option `/serviceName` pour indiquer le service à valider.  
@@ -144,10 +146,10 @@ L'outil Service Model Metadata Tool est utilisé pour générer un code de modè
 |Option|Description|  
 |------------|-----------------|  
 |/validate|Valide une implémentation de service spécifiée par l'option `/serviceName`. Si cette option est utilisée, un assembly exécutable avec un fichier de configuration associé doit être passé en tant qu'entrée.<br /><br /> Forme abrégée : `/v`|  
-|/ ServiceName :\<serviceConfigName >|Spécifie le nom de configuration d'un service à valider. Svcutil.exe recherche tous les fichiers de configuration associés de tous les assemblys d'entrée pour la configuration du service. Si les fichiers de configuration contiennent des types d'extension, les assemblys qui contiennent ces types doivent être dans le GAC ou être explicitement fournis à l'aide de l'option `/reference`.|  
+|/serviceName:\<serviceConfigName>|Spécifie le nom de configuration d'un service à valider. Svcutil.exe recherche tous les fichiers de configuration associés de tous les assemblys d'entrée pour la configuration du service. Si les fichiers de configuration contiennent des types d'extension, les assemblys qui contiennent ces types doivent être dans le GAC ou être explicitement fournis à l'aide de l'option `/reference`.|  
 |/ reference :\<chemin d’accès >|Ajoute l'assembly spécifié au jeu d'assemblys utilisé pour résoudre des références de type. Si vous exportez ou validez un service qui utilise des extensions tierces (Comportements, Liaisons et BindingElements) enregistrées dans la configuration, utilisez cette option pour localiser des assemblys d'extension qui ne figurent pas dans le GAC.<br /><br /> Forme abrégée : `/r`|  
 |/dataContractOnly|Fonctionne uniquement sur les types de contrat de données. Les contrats de service ne sont pas traités.<br /><br /> Pour cette option, vous devez spécifier uniquement des fichiers de métadonnées locaux.<br /><br /> Forme abrégée : `/dconly`|  
-|/excludeType :\<type >|Spécifie le nom qualifié complet ou qualifié d’assembly d’un type à exclure de la validation.<br /><br /> Forme abrégée : `/et`|  
+|/excludeType:\<type>|Spécifie le nom qualifié complet ou qualifié d’assembly d’un type à exclure de la validation.<br /><br /> Forme abrégée : `/et`|  
   
 ### <a name="metadata-download"></a>Téléchargement de métadonnées  
  Svcutil.exe permet de télécharger des métadonnées à partir de services en cours d'exécution et de les enregistrer dans des fichiers locaux. Pour pouvoir télécharger des métadonnées, vous devez spécifier l'option `/t:metadata`. Sinon, un code client est généré. Pour les schémas d'URL HTTP et HTTPS, Svcutil.exe essaie de récupérer les métadonnées à l'aide de WS-Metadata Exchange et DISCO. Pour tous les autres schémas d'URL, Svcutil.exe utilise uniquement WS-MetadataExchange.  
@@ -189,8 +191,8 @@ L'outil Service Model Metadata Tool est utilisé pour générer un code de modè
 |Option|Description|  
 |------------|-----------------|  
 |/ reference :\<chemin d’accès >|Ajoute l'assembly spécifié au jeu d'assemblys utilisé pour résoudre des références de type.<br /><br /> Forme abrégée : `/r`|  
-|/excludeType :\<type >|Spécifie le nom qualifié complet ou qualifié d’assembly d’un type à exclure de l’exportation ou de la validation.<br /><br /> Forme abrégée : `/et`|  
-|/ out :\<fichier >|Spécifie le nom de fichier du code généré. Cette option est ignorée lorsque plusieurs assemblys sont passés à l'outil en tant qu'entrée.<br /><br /> Valeur par défaut : dérivée du nom de l'assembly.<br /><br /> Forme abrégée : `/o`|  
+|/excludeType:\<type>|Spécifie le nom qualifié complet ou qualifié d’assembly d’un type à exclure de l’exportation ou de la validation.<br /><br /> Forme abrégée : `/et`|  
+|/out:\<file>|Spécifie le nom de fichier du code généré. Cette option est ignorée lorsque plusieurs assemblys sont passés à l'outil en tant qu'entrée.<br /><br /> Valeur par défaut : dérivée du nom de l'assembly.<br /><br /> Forme abrégée : `/o`|  
 |/UseSerializerForFaults|Spécifie que le <!--zz <xref:System.Xml.XmlSerializer> --> `xref:System.Xml.XmlSerializer ` doit être utilisé pour lire et écrire les erreurs, au lieu de la valeur par défaut <xref:System.Runtime.Serialization.DataContractSerializer>.|  
   
 ## <a name="examples"></a>Exemples  
