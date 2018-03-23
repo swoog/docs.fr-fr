@@ -1,4 +1,5 @@
 # [Projet de spécification C# 6.0](index.md)
+## [Introduction](../../../../_csharplang/spec/introduction.md)
 ## [Structure lexicale](../../../../_csharplang/spec/lexical-structure.md)
 ## [Concepts de base](../../../../_csharplang/spec/basic-concepts.md)
 ## [Types](../../../../_csharplang/spec/types.md)
