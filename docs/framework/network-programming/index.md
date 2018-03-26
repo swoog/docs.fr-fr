@@ -1,11 +1,11 @@
 ---
-title: "Programmation réseau dans le .NET Framework"
-ms.custom: 
+title: Programmation réseau dans le .NET Framework
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Networking
@@ -13,21 +13,23 @@ helpviewer_keywords:
 - Internet, .NET Framework Internet services
 - Network Resources
 ms.assetid: 8d455610-67a0-4fa8-a62f-7747064a9256
-caps.latest.revision: "24"
+caps.latest.revision: ''
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: d702e7c910536566aabfaa7948afb24ae94d2cb1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.workload:
+- dotnet
+ms.openlocfilehash: e51f4464eb39dc12ea50f4a94e55030895866f08
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="network-programming-in-the-net-framework"></a>Programmation réseau dans le .NET Framework
 Microsoft .NET Framework fournit une implémentation en couche, extensible et managée des services Internet que vous pouvez intégrer rapidement et facilement à vos applications. Les applications réseau peuvent générer des protocoles enfichables pour tirer parti automatiquement de nouveaux protocoles Internet, ou elles peuvent utiliser une implémentation managée de l'interface Windows Socket pour fonctionner au niveau du socket.  
   
 ## <a name="in-this-section"></a>Dans cette section  
+
  [Introduction aux protocoles enfichables](../../../docs/framework/network-programming/introducing-pluggable-protocols.md)  
  Décrit comment accéder à une ressource réseau sans tenir compte du protocole d'accès dont elle a besoin.  
   
@@ -144,6 +146,8 @@ Microsoft .NET Framework fournit une implémentation en couche, extensible et ma
  Fournit un support pour la configuration de l'authentification à l'aide de la protection étendue pour les applications.  
   
 ## <a name="see-also"></a>Voir aussi  
+
+ [Bonnes pratiques du protocole TLS (Transport Layer Security) avec le .NET Framework](../../../docs/framework/network-programming/tls.md)  
  [Rubriques de guide pratique sur la programmation réseau](../../../docs/framework/network-programming/network-programming-how-to-topics.md)  
  [Exemples de programmation réseau](../../../docs/framework/network-programming/network-programming-samples.md)  
  [Exemples de mise en réseau pour .NET dans MSDN Code Gallery](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)  

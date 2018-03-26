@@ -1,6 +1,6 @@
 ---
 title: Didacticiels .NET Core
-description: "Suivez les didacticiels pour apprendre .NET Core et générer des applications et des bibliothèques sur Mac, Linux et Windows."
+description: Suivez les didacticiels pour apprendre .NET Core et générer des applications et des bibliothèques sur Mac, Linux et Windows.
 keywords: .NET, .NET Core
 author: richlander
 ms.author: mairaw
@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f654b1-1d2c-4105-8376-7c1959e23803
-ms.workload: dotnetcore
-ms.openlocfilehash: 8b1e80023139a4ebc3c961c47c06b9afd0370014
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 267cac338263f964006b424bb855d1022990498c
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="net-core-tutorials"></a>Didacticiels .NET Core
 
@@ -30,7 +31,7 @@ Les didacticiels disponibles pour découvrir .NET Core sont les suivants.
 - [Test d’une bibliothèque de classes](testing-library-with-visual-studio.md)
 - [Utilisation d’une bibliothèque de classes](consuming-library-with-visual-studio.md)
 - [Génération d’une solution C# .NET Core complète sur Windows](using-on-windows-full-solution.md)
-- [Didacticiel NoSQL : Création d’une application console DocumentDB C# sur .NET Core](/azure/documentdb/documentdb-dotnetcore-get-started)
+- [Azure Cosmos DB : Bien démarrer avec l’API SQL et .NET Core](/azure/cosmos-db/sql-api-dotnetcore-get-started)
 
 ## <a name="building-applications-with-visual-studio-code"></a>Création d’applications avec Visual Studio Code
 
