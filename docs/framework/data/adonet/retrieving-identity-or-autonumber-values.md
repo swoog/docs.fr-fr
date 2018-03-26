@@ -1,27 +1,29 @@
 ---
-title: "Extraction de l'identité ou de valeurs à numérotation automatique"
-ms.custom: 
+title: Extraction de l'identité ou de valeurs à numérotation automatique
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d6b7f9cb-81be-44e1-bb94-56137954876d
-caps.latest.revision: "7"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 15c435d46d3695f78db27801f54ec9de475b2989
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="retrieving-identity-or-autonumber-values"></a>Extraction de l'identité ou de valeurs à numérotation automatique
 Dans une base de données relationnelle, une clé primaire est une colonne ou une combinaison de colonnes qui contient toujours des valeurs uniques. Si vous connaissez la valeur d'une clé primaire, vous pouvez rechercher la ligne qui la contient. Les moteurs de base de données relationnelle, comme SQL Server, Oracle et Microsoft Access/Jet prennent en charge la création de colonnes à incrémentation automatique qui peuvent être désignées comme clés primaires. Ces valeurs sont générées par le serveur lorsque des lignes sont ajoutées à une table. Dans SQL Server, vous définissez la propriété d'identité d'une colonne, dans Oracle vous créez une séquence et dans Microsoft Access vous créez une colonne NuméroAuto.  

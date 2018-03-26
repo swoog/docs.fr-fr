@@ -1,24 +1,26 @@
 ---
-title: "Gestion des messages incohérents"
-ms.custom: 
+title: Gestion des messages incohérents
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-caps.latest.revision: "29"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 8202c9f715944c6d556c0023444475838cfd5eab
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="poison-message-handling"></a>Gestion des messages incohérents
 A *message incohérent* est un message qui a dépassé le nombre maximal de tentatives de remise à l’application. Cette situation peut survenir lorsqu'une application basée sur file d'attente ne peut pas traiter un message car des erreurs se sont produites. Pour faire face aux demandes de fiabilité, une application en file d'attente reçoit des messages sous une transaction. L'abandon de la transaction dans laquelle un message en file d'attente a été reçu laisse le message dans la file d'attente afin qu'une nouvelle tentative de remise puisse être effectuée sous une nouvelle transaction. Si le problème qui a provoqué l'abandon de la transaction n'est pas résolu, l'application réceptrice peut être bloquée dans une réception et un abandon en boucle du même message jusqu'à ce que le nombre maximal de tentatives de remise soit dépassé et qu'un message incohérent soit généré.  
@@ -73,7 +75,7 @@ A *message incohérent* est un message qui a dépassé le nombre maximal de tent
 ## <a name="best-practice-handling-msmqpoisonmessageexception"></a>Recommandation : Gestion de MsmqPoisonMessageException  
  Lorsque le service détermine qu'un message est incohérent, le transport de mise en file d'attente lève une <xref:System.ServiceModel.MsmqPoisonMessageException> qui contient le `LookupId` du message incohérent.  
   
- Une application de réception peut implémenter l'interface <xref:System.ServiceModel.Dispatcher.IErrorHandler> pour gérer toute erreur requise par l'application. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Extension du contrôle à la gestion des erreurs et création de rapports](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md).  
+ Une application de réception peut implémenter l'interface <xref:System.ServiceModel.Dispatcher.IErrorHandler> pour gérer toute erreur requise par l'application. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Extension du contrôle à la gestion des erreurs et création de rapports](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md).  
   
  Il est possible que l'application requière un système de gestion automatisée des messages empoisonnés qui déplace ceux-ci vers une file d'attente de messages empoisonnés afin que le service puisse accéder au reste des messages dans la file d'attente. Le seul scénario dans lequel on utilise le mécanisme de gestionnaire d'erreurs pour écouter les exceptions de message incohérent est lorsque le paramètre <xref:System.ServiceModel.Configuration.MsmqBindingElementBase.ReceiveErrorHandling%2A> a la valeur <xref:System.ServiceModel.ReceiveErrorHandling.Fault>. L'exemple de message empoisonné pour Message Queuing 3.0 illustre ce comportement. La section suivante décrit les étapes à suivre pour gérer des messages incohérents et fournit quelques recommandations :  
   
@@ -102,7 +104,7 @@ A *message incohérent* est un message qui a dépassé le nombre maximal de tent
  Une session subit les mêmes procédures de nouvelle tentative et de gestion des messages incohérents qu'un simple message. Les propriétés indiquées précédemment pour les messages empoisonnés s'appliquent à la session entière. En d'autres termes, la session entière est soumise à une nouvelle tentative et finit dans une ultime file d'attente de messages empoisonnés ou dans la file d'attente de lettres mortes de l'expéditeur si le message est refusé.  
   
 ## <a name="batching-and-poison-messages"></a>Traitement par lot et messages incohérents  
- Si un message faisant partie d'un lot devient un message incohérent, le lot entier est annulé et le canal recommence à lire un message à la fois. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]le traitement par lots, consultez [le traitement par lot des Messages dans une Transaction](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
+ Si un message faisant partie d'un lot devient un message incohérent, le lot entier est annulé et le canal recommence à lire un message à la fois. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] le traitement par lots, consultez [le traitement par lot des Messages dans une Transaction](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
   
 ## <a name="poison-message-handling-for-messages-in-a-poison-queue"></a>Gestion des messages incohérents pour les messages dans une file d'attente de messages incohérents  
  La gestion des messages incohérents ne se termine pas lorsqu'un message est placé dans la file d'attente de messages incohérents. Les messages dans la file d'attente de messages incohérents doivent encore être lus et gérés. Vous pouvez utiliser un sous-ensemble des paramètres de gestion de messages incohérents lors de la lecture des messages à partir de l'ultime sous-file d'attente de messages incohérents. Les paramètres applicables sont `ReceiveRetryCount` et `ReceiveErrorHandling`. Vous pouvez affecter la valeur Drop, Reject ou Fault à `ReceiveErrorHandling`. `MaxRetryCycles` est ignoré et une exception est levée si `ReceiveErrorHandling` a la valeur Move.  

@@ -1,28 +1,28 @@
 ---
 title: '&lt;wsDualHttpBinding&gt;'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - wsDualHttpBinding Element
 ms.assetid: fd8ac4e2-5641-473b-9115-73f14ab1c065
-caps.latest.revision: 
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 ms.openlocfilehash: a49b534ba22f4ac422eb26885388e24594b49afd
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="ltwsdualhttpbindinggt"></a>&lt;wsDualHttpBinding&gt;
 Définit une liaison sécurisée, fiable et interopérable qui est appropriée pour les contrats de service ou les communications en duplex à travers des intermédiaires SOAP.  

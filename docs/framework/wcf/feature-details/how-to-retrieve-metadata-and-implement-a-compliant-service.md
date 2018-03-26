@@ -1,24 +1,26 @@
 ---
-title: "Comment : récupérer des métadonnées et implémenter un service conforme"
-ms.custom: 
+title: 'Comment : récupérer des métadonnées et implémenter un service conforme'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f6f3a2b9-c8aa-4b0b-832c-ec2927bf1163
-caps.latest.revision: "13"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: ac7654fa041688bbd703d564f6703df9671fbaea
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="how-to-retrieve-metadata-and-implement-a-compliant-service"></a>Comment : récupérer des métadonnées et implémenter un service conforme
 Souvent, la personne qui conçoit et implémente des services n'est pas la même. Dans les environnements où l'interaction d'applications est importante, les contrats peuvent être conçus ou décrits en WSDL (Web Services Description Language) et un développeur doit implémenter un service qui se conforme au contrat fourni. Vous pouvez souhaiter également effectuer une migration d'un service existant vers [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] mais conserver le format de transmission. De plus, les contrats duplex requièrent que les appelants implémentent également un contrat de rappel.  

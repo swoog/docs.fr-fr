@@ -1,24 +1,26 @@
 ---
 title: Choix d'un filtre
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 67ab5af9-b9d9-4300-b3b1-41abb5a1fd10
-caps.latest.revision: "8"
+caps.latest.revision: ''
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: e81af51be3e281faa94bcea17ff75b41341abb33
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="choosing-a-filter"></a>Choix d'un filtre
 Lors de la configuration du service de routage, il est important de sélectionner des filtres de message corrects et de les configurer pour vous permettre d'établir des correspondances exactes avec les messages que vous recevez. Si les filtres que vous sélectionnez établissent des correspondances trop générales ou ne sont pas configurés correctement, les messages sont routés de manière incorrecte. Si les filtres sont trop restrictifs, vous risquez de ne pas disposer d'itinéraires valides disponibles pour certains de vos messages.  
@@ -142,9 +144,9 @@ XPathMessageFilter xpath1=new XPathMessageFilter("//ns:element");
   
  Ce filtre est utile si vous savez que les messages que vous recevez contiennent une valeur spécifique. Par exemple, vous hébergez deux versions du même service et savez que les messages adressés à la version la plus récente du service contiennent une valeur unique dans un en-tête personnalisé. Vous pouvez créer un filtre qui utilise XPath pour accéder à cet en-tête. Le filtre compare la valeur présente dans l'en-tête à une autre indiquée dans la configuration du filtre, afin de déterminer si le filtre correspond.  
   
- Étant donné que les requêtes XPath contiennent souvent des espaces de noms uniques, qui sont souvent des valeurs de chaîne longues ou complexes, le filtre XPath vous permet d’utiliser la table d’espace de noms pour définir des préfixes uniques pour vos espaces de noms. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]la table de l’espace de noms, consultez [filtres de Message](../../../../docs/framework/wcf/feature-details/message-filters.md).  
+ Étant donné que les requêtes XPath contiennent souvent des espaces de noms uniques, qui sont souvent des valeurs de chaîne longues ou complexes, le filtre XPath vous permet d’utiliser la table d’espace de noms pour définir des préfixes uniques pour vos espaces de noms. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] la table de l’espace de noms, consultez [filtres de Message](../../../../docs/framework/wcf/feature-details/message-filters.md).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]conception de requêtes XPath, consultez [syntaxe XPath](http://go.microsoft.com/fwlink/?LinkId=164592).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] conception de requêtes XPath, consultez [syntaxe XPath](http://go.microsoft.com/fwlink/?LinkId=164592).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Filtres de message](../../../../docs/framework/wcf/feature-details/message-filters.md)  

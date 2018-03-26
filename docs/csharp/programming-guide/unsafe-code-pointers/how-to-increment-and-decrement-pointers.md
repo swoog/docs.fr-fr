@@ -1,21 +1,22 @@
 ---
-title: "Comment : incrémenter et décrémenter des pointeurs (Guide de programmation C#)"
+title: 'Comment : incrémenter et décrémenter des pointeurs (Guide de programmation C#)'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - pointers [C#], increment and decrement
 - pointer expressions [C#], increment and decrement
 ms.assetid: 1b8b9281-44ee-485a-9045-3db38a4b4b89
-caps.latest.revision: "20"
+caps.latest.revision: ''
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 2c8efc6d0844d867ad6eebccf3bb22c03e6d5020
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="how-to-increment-and-decrement-pointers-c-programming-guide"></a>Comment : incrémenter et décrémenter des pointeurs (Guide de programmation C#)
 Utilisez les opérateurs d’incrémentation et de décrémentation, `++` et `--`, pour changer l’emplacement du pointeur de [sizeof](../../../csharp/language-reference/keywords/sizeof.md) (`pointer-type`) pour un pointeur de type pointer-type*. Les expressions d’incrémentation et de décrémentation prennent la forme suivante :  

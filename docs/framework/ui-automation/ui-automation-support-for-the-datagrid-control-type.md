@@ -1,28 +1,30 @@
 ---
-title: "Prise en charge d'UI Automation pour le type de contrôle DataGrid"
-ms.custom: 
+title: Prise en charge d'UI Automation pour le type de contrôle DataGrid
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Data Grid control type
 - control types, Data Grid
 - UI Automation, Data Grid control type
 ms.assetid: a3db4a3f-feb5-4e5f-9b42-aae7fa816e8a
-caps.latest.revision: "32"
+caps.latest.revision: ''
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 3eb60004f4ffad0b62b10cf1e3ff5f28a3bf3fef
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="ui-automation-support-for-the-datagrid-control-type"></a>Prise en charge d'UI Automation pour le type de contrôle DataGrid
 > [!NOTE]
@@ -86,20 +88,20 @@ ms.lasthandoff: 12/22/2017
   
 |Événement[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] |Assistance|Notes|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Obligatoire|Aucun.|  
-|Événement de modification de propriété<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> |Obligatoire|Aucun.|  
-|Événement de modification de propriété<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> .|Obligatoire|Aucun.|  
-|Événement de modification de propriété<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> .|Obligatoire|Aucun.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LayoutInvalidatedEvent>|Selon le cas|Aucun.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Obligatoire|Aucun.|  
-|Événement de modification de propriété<xref:System.Windows.Automation.MultipleViewPatternIdentifiers.CurrentViewProperty> .|Selon le cas|Aucun.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Obligatoire|Aucun|  
+|Événement de modification de propriété<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> |Obligatoire|Aucun|  
+|Événement de modification de propriété<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> .|Obligatoire|Aucun|  
+|Événement de modification de propriété<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> .|Obligatoire|Aucun|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LayoutInvalidatedEvent>|Selon le cas|Aucun|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Obligatoire|Aucun|  
+|Événement de modification de propriété<xref:System.Windows.Automation.MultipleViewPatternIdentifiers.CurrentViewProperty> .|Selon le cas|Aucun|  
 |Événement de modification de propriété<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> .|Selon le cas|Si le contrôle prend en charge le modèle Scroll, il doit prendre en charge cet événement.|  
 |Événement de modification de propriété<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> |Selon le cas|Si le contrôle prend en charge le modèle Scroll, il doit prendre en charge cet événement.|  
 |Événement de modification de propriété<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> .|Selon le cas|Si le contrôle prend en charge le modèle Scroll, il doit prendre en charge cet événement.|  
 |Événement de modification de propriété<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> |Selon le cas|Si le contrôle prend en charge le modèle Scroll, il doit prendre en charge cet événement.|  
 |Événement de modification de propriété<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> .|Selon le cas|Si le contrôle prend en charge le modèle Scroll, il doit prendre en charge cet événement.|  
 |Événement de modification de propriété<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> |Selon le cas|Si le contrôle prend en charge le modèle Scroll, il doit prendre en charge cet événement.|  
-|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|Obligatoire|Aucun.|  
+|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|Obligatoire|Aucun|  
   
 <a name="List_View_Control_Example"></a>   
 ## <a name="date-grid-control-type-example"></a>Exemple de type de contrôle DataGrid  
@@ -111,7 +113,7 @@ ms.lasthandoff: 12/22/2017
   
 |Arborescence[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] - Affichage de contrôle|Arborescence[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] - Affichage de contenu|  
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
-|<ul><li>DataGrid (Table, Grid, Selection)</li><li>Header<br /><br /> <ul><li>HeaderItem « Nom » (Invoke)</li><li>HeaderItem « Date de modification » (Invoke)</li><li>HeaderItem « Taille » (Invoke)</li></ul></li><li>Groupe « Contoso » (TableItem, GridItem, SelectionItem, Table *, grille\*)<br /><br /> <ul><li>DataItem « Accounts Receivable.doc » (SelectionItem, Invoke, TableItem\*, GridItem\*)</li><li>DataItem « Accounts Payable.doc » (SelectionItem, Invoke, TableItem\*, GridItem\*)</li></ul></li></ul>|<ul><li>DataGrid (Table, Grid, Selection)</li><li>Groupe « Contoso » (TableItem, GridItem, SelectionItem, Table *, grille\*)<br /><br /> <ul><li>DataItem « Accounts Receivable.doc » (SelectionItem, Invoke, TableItem\*, GridItem\*)</li><li>DataItem « Accounts Payable.doc » (SelectionItem, Invoke, TableItem\*, GridItem\*)</li></ul></li></ul>|  
+|<ul><li>DataGrid (Table, Grid, Selection)</li><li>Header<br /><br /> <ul><li>HeaderItem « Nom » (Invoke)</li><li>HeaderItem « Date de modification » (Invoke)</li><li>HeaderItem « Taille » (Invoke)</li></ul></li><li>Group "Contoso" (TableItem, GridItem, SelectionItem, Table*, Grid\*)<br /><br /> <ul><li>DataItem "Accounts Receivable.doc" (SelectionItem, Invoke, TableItem\*, GridItem\*)</li><li>DataItem « Accounts Payable.doc » (SelectionItem, Invoke, TableItem\*, GridItem\*)</li></ul></li></ul>|<ul><li>DataGrid (Table, Grid, Selection)</li><li>Group "Contoso" (TableItem, GridItem, SelectionItem, Table*, Grid\*)<br /><br /> <ul><li>DataItem "Accounts Receivable.doc" (SelectionItem, Invoke, TableItem\*, GridItem\*)</li><li>DataItem « Accounts Payable.doc » (SelectionItem, Invoke, TableItem\*, GridItem\*)</li></ul></li></ul>|  
   
  *L’exemple précédent montre un DataGrid contenant plusieurs niveaux de contrôles. Le contrôle Group (« Contoso ») contient deux contrôles DataItem (« Accounts Receivable.doc » et « Accounts Payable.doc »). Une paire DataGrid/GridItem est indépendante d’une paire d’un autre niveau. Les contrôles DataItem sous un contrôle Group peuvent également être exposés en tant que type de contrôle ListItem, ce qui leur permet d’être présentés plus clairement comme des objets sélectionnables, plutôt que comme de simples éléments de données. Cet exemple n’inclut pas les sous-éléments des éléments de données groupés.  
   

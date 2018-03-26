@@ -1,24 +1,26 @@
 ---
-title: "Comparaison des services Web ASP.NET et de WCF du point de vue du développement"
-ms.custom: 
+title: Comparaison des services Web ASP.NET et de WCF du point de vue du développement
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f362d00e-ce82-484f-9d4f-27e579d5c320
-caps.latest.revision: "10"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: c12bd11cee62cd769f7dffc142806fa5ab1b0137
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-development"></a>Comparaison des services Web ASP.NET et de WCF du point de vue du développement
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] a une option de mode de compatibilité ASP.NET pour permettre la programmation et la configuration d'applications [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] comme services Web ASP.NET, et reproduire leur comportement. Les sections suivantes proposent une comparaison entre les services Web ASP.NET et [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] en évoquant les exigences requises pour développer des applications qui utilisent ces deux technologies.  
@@ -380,7 +382,7 @@ typeof(Service), //"Service" is the name of the service type baseAdresses))
   
  Cet exemple indique comment les adresses pour un ou plusieurs protocoles de transport sont spécifiées dans la construction d'un <xref:System.ServiceModel.ServiceHost>. Ces adresses sont connues sous le nom d'adresses de base.  
   
- L'adresse fournie pour un point de terminaison d'un service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] est une adresse relative à une adresse de base de l'hôte du point de terminaison. L'hôte peut avoir une adresse de base pour chaque protocole de transport de communication. Dans l'exemple de configuration du fichier de configuration précédent, l'objet <xref:System.ServiceModel.BasicHttpBinding> sélectionné comme point de terminaison fait appel à HTTP comme protocole de transport, l'adresse du point de terminaison, `EchoService`, est donc relative à l'adresse de base HTTP de l'hôte. Dans le cas de l'hôte de l'exemple précédent, l'adresse de base HTTP est http://www.contoso.com:8000/. Pour un service hébergé dans les services IIS ou WAS, l'adresse de base est l'URL du fichier de service du service.  
+ L'adresse fournie pour un point de terminaison d'un service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] est une adresse relative à une adresse de base de l'hôte du point de terminaison. L'hôte peut avoir une adresse de base pour chaque protocole de transport de communication. Dans l'exemple de configuration du fichier de configuration précédent, l'objet <xref:System.ServiceModel.BasicHttpBinding> sélectionné comme point de terminaison fait appel à HTTP comme protocole de transport, l'adresse du point de terminaison, `EchoService`, est donc relative à l'adresse de base HTTP de l'hôte. Dans le cas de l’ordinateur hôte dans l’exemple précédent, l’adresse de base HTTP est http://www.contoso.com:8000/. Pour un service hébergé dans les services IIS ou WAS, l'adresse de base est l'URL du fichier de service du service.  
   
  Seuls les services hébergé dans les services IIS ou WAS, et configurés exclusivement avec HTTP comme protocole de transport, peuvent utiliser l'option de mode de compatibilité ASP.NET [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. L'activation de cette option requiert les étapes suivantes.  
   

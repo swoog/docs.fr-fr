@@ -1,5 +1,5 @@
 ---
-title: "Exécuter les applications composées et microservices dans les environnements de production"
+title: Exécuter les applications composées et microservices dans les environnements de production
 description: Cycle de vie des applications Docker en conteneur avec la plateforme et les outils Microsoft
 keywords: Docker, microservices, ASP.NET, conteneur
 author: CESARDELATORRE
@@ -9,10 +9,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 0d7611d07c9995984269e3f7b071154d9b861367
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="run-composed-and-microservices-based-applications-in-production-environments"></a>Exécuter les applications composées et microservices dans les environnements de production
 
@@ -24,11 +24,11 @@ Plus haut dans ce livre électronique, nous avons présenté *clusters* et *plan
 
 Lorsque les applications sont montés sur plusieurs systèmes hôtes, la possibilité de gérer chaque système hôte et d’abstraire la complexité de la plateforme sous-jacente devient intéressante. C’est précisément ce que fournissent orchestrators et des planificateurs. Examinons une brève les ici :
 
--   **Planificateurs*** *« Planification » désigne la capacité d’un administrateur pour charger un fichier de service sur un système hôte qui établit la façon d’exécuter un conteneur spécifique. Lancement des conteneurs dans un cluster de Docker a tendance à être appelée à la planification. Bien que la planification fait référence à l’acte spécifique du chargement de la définition de service, dans un sens plus général, les planificateurs sont responsables de se connecter à un système de l’hôte init pour gérer les services de la capacité nécessaire.
+-   **Planificateurs *** *« Planification » désigne la capacité d’un administrateur pour charger un fichier de service sur un système hôte qui établit la façon d’exécuter un conteneur spécifique. Lancement des conteneurs dans un cluster de Docker a tendance à être appelée à la planification. Bien que la planification fait référence à l’acte spécifique du chargement de la définition de service, dans un sens plus général, les planificateurs sont responsables de se connecter à un système de l’hôte init pour gérer les services de la capacité nécessaire.
 
 Un planificateur de cluster a plusieurs objectifs : utilisation efficace des ressources du cluster, l’utilisation des contraintes de placement de fourni par l’utilisateur, applications rapidement à ne pas les laisser dans un état d’attente, ayant un degré de « respect, « en cours fiables pour les erreurs, de planification et être toujours disponibles.
 
--   **Orchestration*** *plateformes étendent les capacités de gestion du cycle de vie des charges de travail complexes, multicontainer déployées sur un cluster d’hôtes. En faisant abstraction de l’infrastructure de l’hôte, outils d’orchestration de permettent aux utilisateurs de traiter l’intégralité du cluster comme cible de déploiement unique.
+-   **Orchestration *** *plateformes étendent les capacités de gestion du cycle de vie des charges de travail complexes, multicontainer déployées sur un cluster d’hôtes. En faisant abstraction de l’infrastructure de l’hôte, outils d’orchestration de permettent aux utilisateurs de traiter l’intégralité du cluster comme cible de déploiement unique.
 
 Le processus d’orchestration implique des outils et une plateforme qui automatise tous les aspects de la gestion des applications à partir de la sélection élective initiale ou de déploiement par conteneur ; déplacement de conteneurs sur différents hôtes selon l’intégrité de son hôte ou des performances ; le contrôle de version et enchaînée mises à jour et l’intégrité de la surveillance des fonctions qui prennent en charge la mise à l’échelle et basculement ; et bien plus encore.
 

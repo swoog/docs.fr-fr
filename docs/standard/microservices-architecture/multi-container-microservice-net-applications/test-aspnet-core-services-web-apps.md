@@ -1,6 +1,6 @@
 ---
-title: "Test d’applications web et de services ASP.NET Core"
-description: "Architecture des microservices .NET pour les applications .NET en conteneur | Test d’applications web et de services ASP.NET Core"
+title: Test d’applications web et de services ASP.NET Core
+description: Architecture des microservices .NET pour les applications .NET en conteneur | Test d’applications web et de services ASP.NET Core
 keywords: Docker, microservices, ASP.NET, conteneur
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 596f588aae8c0814e5b40d29c4bf5723f944c5ac
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>Test d’applications web et de services ASP.NET Core
 
@@ -102,20 +102,20 @@ public class PrimeWebDefaultRequestShould
 
 #### <a name="additional-resources"></a>Ressources supplémentaires
 
--   **Steve Smith. Test des contrôleurs** (ASP.NET Core) [ *https://docs.microsoft.com/aspnet/core/mvc/controllers/testing*](/aspnet/core/mvc/controllers/testing)
+-   **Steve Smith. Test d’un contrôleur** (ASP.NET Core) [*https://docs.microsoft.com/aspnet/core/mvc/controllers/testing*](/aspnet/core/mvc/controllers/testing)
 
--   **Steve Smith. Tests d’intégration** (ASP.NET Core) [ *https://docs.microsoft.com/aspnet/core/testing/integration-testing*](/aspnet/core/testing/integration-testing)
+-   **Steve Smith. Tests d’intégration** (ASP.NET Core) [*https://docs.microsoft.com/aspnet/core/testing/integration-testing*](/aspnet/core/testing/integration-testing)
 
--   **Effectuer des tests unitaires dans .NET Core à l’aide de dotnet test**
+-   **Test unitaire dans .NET Core, à l’aide de test de dotnet**
     [*https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test*](../../../core/testing/unit-testing-with-dotnet-test.md)
 
 -   **xUnit.net**. Site officiel.
     [*https://xunit.github.io/*](https://xunit.github.io/)
 
--   **Notions de base des tests unitaires.**
+-   **Concepts de base du Test unitaire.**
     [*https://msdn.microsoft.com/library/hh694602.aspx*](https://msdn.microsoft.com/library/hh694602.aspx)
 
--   **Moq**. Dépôt GitHub.
+-   **Moq**. Dépôt GitHub
     [*https://github.com/moq/moq*](https://github.com/moq/moq)
 
 -   **NUnit**. Site officiel.

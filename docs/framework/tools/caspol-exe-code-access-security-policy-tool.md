@@ -1,12 +1,13 @@
 ---
-title: "Caspol.exe (outil Stratégie de sécurité d'accès du code)"
-ms.custom: 
+title: Caspol.exe (outil Stratégie de sécurité d'accès du code)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - permission sets, modifying security policy
@@ -22,16 +23,17 @@ helpviewer_keywords:
 - security policy [.NET Framework], modifying
 - manually editing security configuration files
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
-caps.latest.revision: "44"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 6ab363e833ecde86a17d9adea3fcd26351725868
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (outil Stratégie de sécurité d'accès du code)
 L'outil Stratégie de sécurité d'accès du code (CAS) (Caspol.exe) permet aux utilisateurs et aux administrateurs de modifier la stratégie de sécurité au niveau de l'ordinateur, de l'utilisateur et de l'entreprise.  
@@ -97,8 +99,8 @@ caspol [options]
 |**-custom**  *xmlfile*|Ajoute une condition d'appartenance personnalisée. L’argument obligatoire *xmlfile* spécifie le fichier .xml qui contient la sérialisation XML de la condition d’appartenance personnalisée.|  
 |**-hash** *hashAlg* {**-hex** *hashValue* &#124; **-file** *assembly_file* }|Spécifie un code qui contient la valeur de hachage de l'assembly donné. Pour utiliser une valeur de hachage comme condition d'appartenance à un groupe de codes, vous devez spécifier la valeur de hachage ou le fichier d'assembly. Pour plus d’informations sur cette condition d’appartenance, consultez <xref:System.Security.Policy.HashMembershipCondition>.|  
 |**-pub** { **-cert** *cert_file_name* &#124;<br /><br /> **-file** *signed_file_name* &#124; **-hex**  *hex_string* }|Spécifie un code qui présente l'éditeur de logiciel indiqué par un fichier de certificat, une signature sur un fichier ou la représentation hexadécimale d'un certificat X509. Pour plus d’informations sur cette condition d’appartenance, consultez <xref:System.Security.Policy.PublisherMembershipCondition>.|  
-|**-site** *website*|Spécifie un code qui présente le site d'origine donné. Exemple :<br /><br /> **-site** www.proseware.com<br /><br /> Pour plus d’informations sur cette condition d’appartenance, consultez <xref:System.Security.Policy.SiteMembershipCondition>.|  
-|**-strong -file** *file_name* {*name* &#124; **-noname**} {*version* &#124; **-noversion**}|Spécifie un code avec un nom fort spécifique désigné par son nom de fichier, le nom de l'assembly (chaîne) et la version de l'assembly au format *major*.*minor*.*build*.*revision*. Exemple :<br /><br /> **-strong -file** myAssembly.exe myAssembly 1.2.3.4<br /><br /> Pour plus d’informations sur cette condition d’appartenance, consultez <xref:System.Security.Policy.StrongNameMembershipCondition>.|  
+|**-site** *website*|Spécifie un code qui présente le site d'origine donné. Exemple :<br /><br /> **-site** www.proseware.com<br /><br /> Pour plus d’informations sur cette condition d’appartenance, consultez <xref:System.Security.Policy.SiteMembershipCondition>.|  
+|**-strong -file** *file_name* {*name* &#124; **-noname**} {*version* &#124; **-noversion**}|Spécifie un code avec un nom fort spécifique désigné par son nom de fichier, le nom de l'assembly (chaîne) et la version de l'assembly au format *major*.*minor*.*build*.*revision*. Exemple :<br /><br /> **-strong -file** myAssembly.exe myAssembly 1.2.3.4<br /><br /> Pour plus d’informations sur cette condition d’appartenance, consultez <xref:System.Security.Policy.StrongNameMembershipCondition>.|  
 |**-url** *URL*|Spécifie un code qui provient de l'URL donnée. L'URL doit contenir un protocole, tel que http:// ou ftp://. Par ailleurs, un caractère générique (\*) peut être utilisé pour spécifier plusieurs assemblys pour une même URL. **Remarque :** Parce qu'une URL peut être identifiée à l'aide de plusieurs noms, l'utilisation d'une URL comme condition d'appartenance n'est pas un moyen sûr d'établir l'identité du code. Lorsque cela est possible, utilisez une condition d'appartenance à nom fort, une condition d'appartenance d'un éditeur ou la condition d'appartenance de hachage. <br /><br /> Pour plus d’informations sur cette condition d’appartenance, consultez <xref:System.Security.Policy.UrlMembershipCondition>.|  
 |**-zone** *zonename*|Spécifie un code qui présente la zone d'origine donnée. L'argument *zonename* peut avoir l'une des valeurs suivantes : **MyComputer**, **Intranet**, **Trusted**, **Internet** ou **Untrusted**. Pour plus d'informations sur cette condition d'appartenance, reportez-vous à la classe <xref:System.Security.Policy.ZoneMembershipCondition>.|  
   

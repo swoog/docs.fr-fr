@@ -1,24 +1,26 @@
 ---
-title: "Recommandations sur la migration d’une application générée à l’aide de WIF 3.5 à WIF 4.5"
-ms.custom: 
+title: Recommandations sur la migration d’une application générée à l’aide de WIF 3.5 à WIF 4.5
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7a32fe6e-5f68-4693-9371-19411fa8063c
-caps.latest.revision: "12"
+caps.latest.revision: ''
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 87443a83b80440a30e942b30bd98cce09816f25f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="guidelines-for-migrating-an-application-built-using-wif-35-to-wif-45"></a>Recommandations sur la migration d’une application générée à l’aide de WIF 3.5 à WIF 4.5
 ## <a name="applies-to"></a>S'applique à  

@@ -1,12 +1,13 @@
 ---
 title: Extensions de balisage et XAML WPF
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - brace character [WPF]
@@ -22,16 +23,17 @@ helpviewer_keywords:
 - characters [WPF], curly brace
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
-caps.latest.revision: "26"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 5e6dec42d40039f9cc23ba976ecf421f6471888e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>Extensions de balisage et XAML WPF
 Cette rubrique introduit le concept d’extensions de balisage pour XAML, notamment leurs règles de syntaxe, leur finalité et le modèle d’objet de classe sous-jacent. Les extensions de balisage sont une fonctionnalité générale du langage XAML et de l’implémentation .NET des services XAML. Cette rubrique détaille spécifiquement des extensions de balisage pour une utilisation dans le langage XAML de WPF.  
@@ -74,7 +76,7 @@ Cette rubrique introduit le concept d’extensions de balisage pour XAML, notamm
   
 -   `Binding` fournit une valeur liée aux données pour une propriété, en utilisant le contexte de données qui s’applique à l’objet parent au moment de l’exécution. Cette extension de balisage est relativement complexe, car elle active une syntaxe inline substantielle pour spécifier une liaison de données. Pour plus d’informations, consultez [Binding, extension de balisage](../../../../docs/framework/wpf/advanced/binding-markup-extension.md).  
   
--   `RelativeSource`Fournit des informations sources pour un <xref:System.Windows.Data.Binding> qui peut naviguer entre plusieurs relations possibles dans l’arborescence de l’objet d’exécution. Cela fournit une source d’approvisionnement spécialisée pour les liaisons créées dans des modèles multiusage ou dans du code sans avoir pleine connaissance de l’arborescence d’objets environnante. Pour plus d’informations, consultez [RelativeSource, extension de balisage](../../../../docs/framework/wpf/advanced/relativesource-markupextension.md).  
+-   `RelativeSource` Fournit des informations sources pour un <xref:System.Windows.Data.Binding> qui peut naviguer entre plusieurs relations possibles dans l’arborescence de l’objet d’exécution. Cela fournit une source d’approvisionnement spécialisée pour les liaisons créées dans des modèles multiusage ou dans du code sans avoir pleine connaissance de l’arborescence d’objets environnante. Pour plus d’informations, consultez [RelativeSource, extension de balisage](../../../../docs/framework/wpf/advanced/relativesource-markupextension.md).  
   
 -   `TemplateBinding` permet à un modèle de contrôle d’utiliser des valeurs pour des propriétés basées sur un modèle provenant de propriétés définies par un modèle objet de la classe destinée à utiliser le modèle. En d’autres termes, la propriété au sein de la définition du modèle peut accéder à un contexte qui existe uniquement une fois que le modèle est appliqué. Pour plus d’informations, consultez [TemplateBinding, extension de balisage](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md). Pour plus d’informations sur l’utilisation pratique de `TemplateBinding`, consultez [Style avec ControlTemplates, exemple](http://go.microsoft.com/fwlink/?LinkID=160041).  
   

@@ -1,6 +1,6 @@
 ---
-title: "S’abonner à des événements"
-description: "Architecture des microservices .NET pour les applications .NET en conteneur | S’abonner à des événements"
+title: S’abonner à des événements
+description: Architecture des microservices .NET pour les applications .NET en conteneur | S’abonner à des événements
 keywords: Docker, microservices, ASP.NET, conteneur
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 7538c760d396349fe9b1e93a21839e3e59d7f046
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="subscribing-to-events"></a>S’abonner à des événements
 
@@ -302,7 +302,7 @@ Le traitement des messages est fondamentalement idempotent. Par exemple, si un s
 
 ### <a name="additional-resources"></a>Ressources supplémentaires
 
--   **Honoring message idempotency** (subhead on this page) [*https://msdn.microsoft.com/library/jj591565.aspx*](https://msdn.microsoft.com/library/jj591565.aspx)
+-   **En respectant le message idempotence** (sous-titre sur cette page) [*https://msdn.microsoft.com/library/jj591565.aspx*](https://msdn.microsoft.com/library/jj591565.aspx)
 
 ## <a name="deduplicating-integration-event-messages"></a>Déduplication des messages d’événements d’intégration
 
@@ -322,63 +322,63 @@ Si l’indicateur de redistribution est défini, le récepteur doit en tenir com
 
 ### <a name="additional-resources"></a>Ressources supplémentaires
 
--   **Forked eShopOnContainers using NServiceBus (Particular Software)**
+-   **EShopOnContainers comprenant des branches à l’aide de NServiceBus (logiciel)**
     [*http://go.particular.net/eShopOnContainers*](http://go.particular.net/eShopOnContainers)
 
--   **Event Driven Messaging**
-    [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
+-   **Événement piloté par messagerie**
+    [*http://soapatterns.org/design\_modèles/événement\_par\_de messagerie*](http://soapatterns.org/design_patterns/event_driven_messaging)
 
--   **Jimmy Bogard. Refactoring Towards Resilience: Evaluating Coupling**
+-   **Jimmy Bogard. Refactorisation vers résilience : L’évaluation de couplage**
     [*https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/*](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
 
--   **Publish-Subscribe channel**
+-   **Canal de publication-abonnement**
     [*http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
 
--   **Communication entre contextes délimités**
+-   **Communication entre les contextes de limitées**
     [*https://msdn.microsoft.com/library/jj591572.aspx*](https://msdn.microsoft.com/library/jj591572.aspx)
 
--   **Eventual consistency**
-    [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
+-   **Cohérence éventuelle**
+    [*https://en.wikipedia.org/wiki/Eventual\_la cohérence*](https://en.wikipedia.org/wiki/Eventual_consistency)
 
--   **Philip Brown. Strategies for Integrating Bounded Contexts**
+-   **Philip Brown. Stratégies d’intégration délimitée contextes**
     [*http://culttt.com/2014/11/26/strategies-integrating-bounded-contexts/*](http://culttt.com/2014/11/26/strategies-integrating-bounded-contexts/)
 
--   **Chris Richardson. Developing Transactional Microservices Using Aggregates, Event Sourcing and CQRS - Part 2**
+-   **Chris Richardson. Développement de Microservices transactionnelle à l’aide d’agrégats, la source d’événement et CQRS - partie 2**
     [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson)
 
--   **Chris Richardson. Event Sourcing pattern**
+-   **Chris Richardson. Approvisionnement du modèle d’événement**
     [*http://microservices.io/patterns/data/event-sourcing.html*](http://microservices.io/patterns/data/event-sourcing.html)
 
--   **Introducing Event Sourcing**
+-   **Présentation de source d’événement**
     [*https://msdn.microsoft.com/library/jj591559.aspx*](https://msdn.microsoft.com/library/jj591559.aspx)
 
 -   **Base de données du magasin d’événements**. Site officiel.
     [*https://geteventstore.com/*](https://geteventstore.com/)
 
--   **Patrick Nommensen. Event-Driven Data Management for Microservices**
+-   **Patrick Nommensen. Gestion des données de pilotée par événements Microservices**
     *<https://dzone.com/articles/event-driven-data-management-for-microservices-1> *
 
--   **Théorème CAP**
-    [*https://fr.wikipedia.org/wiki/Théorème\_CAP*](https://en.wikipedia.org/wiki/CAP_theorem)
+-   **Le théorème CAP**
+    [*https://en.wikipedia.org/wiki/CAP\_théorème*](https://en.wikipedia.org/wiki/CAP_theorem)
 
--   **What is CAP Theorem?**
+-   **Quel est le théorème de l’extrémité de fin ?**
     [*https://www.quora.com/What-Is-CAP-Theorem-1*](https://www.quora.com/What-Is-CAP-Theorem-1)
 
--   **Data Consistency Primer**
+-   **Manuel de la cohérence des données**
     [*https://msdn.microsoft.com/library/dn589800.aspx*](https://msdn.microsoft.com/library/dn589800.aspx)
 
--   **Rick Saling. The CAP Theorem: Why “Everything is Different” with the Cloud and Internet**
+-   **Rick Saling. Le théorème CAP : Pourquoi « Tout est différente de « avec le Cloud et Internet**
     [*https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/*](https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/)
 
--   **Eric Brewer. CAP Twelve Years Later: How the "Rules" Have Changed**
+-   **Eric Brewer. Extrémité de fin douze ans plus tard : comment les « règles » ont été modifiés**
     [*https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed*](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed)
 
--   **Participating in External (DTC) Transactions** (MSMQ) [*https://msdn.microsoft.com/library/ms978430.aspx\#bdadotnetasync2\_topic3c*](https://msdn.microsoft.com/library/ms978430.aspx%23bdadotnetasync2_topic3c)
+-   **Intervenant dans des Transactions externes (DTC)** (MSMQ) [  *https://msdn.microsoft.com/library/ms978430.aspx \#bdadotnetasync2\_topic3c*](https://msdn.microsoft.com/library/ms978430.aspx%23bdadotnetasync2_topic3c)
 
--   **Azure Service Bus. Brokered Messaging: Duplicate Detection**
+-   **Azure Service Bus. De messagerie répartie : Détection des doublons**
     [*https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25*](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
 
--   **Reliability Guide** (RabbitMQ documentation) [*https://www.rabbitmq.com/reliability.html\#consumer*](https://www.rabbitmq.com/reliability.html%23consumer)
+-   **Guide de fiabilité** (documentation RabbitMQ) [  *https://www.rabbitmq.com/reliability.html \#consommateur*](https://www.rabbitmq.com/reliability.html%23consumer)
 
 
 

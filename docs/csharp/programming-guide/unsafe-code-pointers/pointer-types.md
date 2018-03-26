@@ -9,14 +9,14 @@ helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
 ms.assetid: 3319faf9-336d-4148-9af2-1da2579cdd1e
-caps.latest.revision: 
+caps.latest.revision: ''
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: fe7b926bdf9f662d25f2fe960b51fc8254b7aa3a
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="pointer-types-c-programming-guide"></a>Types pointeur (Guide de programmation C#)
 Dans un contexte unsafe, un type peut être un type pointeur, un type valeur ou un type référence. La déclaration d'un type pointeur peut prendre l'une des formes suivantes :  
@@ -38,7 +38,7 @@ void* identifier; //allowed but not recommended
   
  Les types pointeur n’héritent pas de [object](../../../csharp/language-reference/keywords/object.md), et aucune conversion n’est possible entre les types pointeur et `object`. Par ailleurs, le boxing et l'unboxing ne prennent pas en charge les pointeurs. Cependant, vous pouvez effectuer des conversions entre différents types pointeur ainsi qu'entre des types pointeur et des types intégraux.  
   
- Lorsque vous déclarez plusieurs pointeurs dans la même déclaration, l'astérisque (*) est écrit conjointement au type sous-jacent uniquement, il n'est pas utilisé en tant que préfixe de chaque nom de pointeur. Exemple :  
+ Lorsque vous déclarez plusieurs pointeurs dans la même déclaration, l'astérisque (*) est écrit conjointement au type sous-jacent uniquement, il n'est pas utilisé en tant que préfixe de chaque nom de pointeur. Exemple :  
   
 ```  
 int* p1, p2, p3;   // Ok  

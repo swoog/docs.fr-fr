@@ -1,24 +1,26 @@
 ---
 title: Outils
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 89c907f9-313f-408c-992a-631f1eadf1da
-caps.latest.revision: "5"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 5badbb9142261fc1dc6c2b2d5af3c89c7af776b6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="tools"></a>Outils
 Cette rubrique répertorie toutes les exceptions générées par les outils [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].  
@@ -27,8 +29,8 @@ Cette rubrique répertorie toutes les exceptions générées par les outils [!IN
   
 |Code de la ressource|Chaîne de la ressource|  
 |-------------------|---------------------|  
-|ParametersTarget|\<enum >|  
-|ParametersToolConfig|\<configFile >|  
+|ParametersTarget|\<enum>|  
+|ParametersToolConfig|\<configFile>|  
 |ErrInvalidPath|Le chemin spécifié est incorrect. Vérifiez l'argument spécifié.|  
 |ParametersReference|\<chemin d’accès >|  
 |WrnCannotLoadConfigFileForValidation|Une erreur s'est produite lors du traitement du fichier de configuration chargé depuis l'emplacement spécifié. Les services définis dans ce fichier de configuration ne peuvent pas être validés.|  
@@ -79,7 +81,7 @@ Cette rubrique répertorie toutes les exceptions générées par les outils [!IN
 |HelpCodeGenerationCategory|-= GÉNÉRATION DE CODE =-|  
 |RetreivingMetadataWithMexAndDisco|Tentative de téléchargement de métadonnées à partir du spécifié à l'aide de WS-Metadata Exchange ou DISCO.|  
 |ErrGeneralSchemaValidation|Une erreur s'est produite lors de la vérification des schémas XML générés pendant l'exportation.|  
-|ParametersDirectory|\<répertoire >|  
+|ParametersDirectory|\<directory>|  
 |ErrCannotLoadSpecifiedType|Aucun type ne peut être chargé pour la valeur spécifiée passée à l'option spécifiée. Assurez-vous que l'assembly auquel ce type appartient est spécifié à l'aide de l'option spécifiée.|  
 |ErrOptionModeConflict|L'option spécifiée ne peut pas être utilisée avec l'option spécifiée car elles impliquent des types de sortie différents.|  
 |ErrIsNotAnAssembly|Impossible de charger le spécifié en tant qu'assembly. Vérifiez que ce fichier est un assembly .NET.|  
@@ -98,7 +100,7 @@ Cette rubrique répertorie toutes les exceptions générées par les outils [!IN
 |ErrDirectoryNotFound|Le répertoire spécifié est introuvable. Vérifiez que le répertoire existe et que vous avez les autorisations appropriées pour le lire.|  
 |ErrUnableToLoadFile|Impossible de lire le fichier spécifié.|  
 |ErrNoFilesFound|Le chemin d'accès d'entrée spécifié semble ne faire référence à aucun fichier existant.|  
-|ParametersConfig|\<configFile >|  
+|ParametersConfig|\<configFile>|  
 |ErrDirectoryInsteadOfFile|Le chemin d'accès d'entrée spécifié semble être un répertoire. L’entrée doit être un URL ou un chemin d’accès de fichier.|  
 |HelpConfig|Fait en sorte que les outils génèrent un fichier de configuration avec le nom fourni. Par défaut : output.config.|  
 |ErrSingleUseSwitch|L'option spécifiée ne peut pas être spécifiée à plusieurs reprises.|  
@@ -123,9 +125,9 @@ Cette rubrique répertorie toutes les exceptions générées par les outils [!IN
 |ErrInvalidTarget|La cible spécifiée n'est pas valide lorsqu'elle est spécifiée à l'aide de l'option spécifiée. Les cibles prises en charge sont spécifiées.|  
 |ErrPathTooLong|Le chemin d’accès résultant est trop long. Examinez les arguments spécifiés.|  
 |HelpCommonOptionsCategory|- = OPTIONS COURANTES = -|  
-|ParametersServiceName|\<serviceConfigName >|  
+|ParametersServiceName|\<serviceConfigName>|  
 |ErrNoValidInputFilesSpecified|Aucun fichier d'entrée valide n'a été spécifié. Spécifiez des documents de métadonnées ou des fichiers d'assembly.|  
-|ParametersLanguage|\<langue >|  
+|ParametersLanguage|\<language>|  
 |ErrUnableToLoadMetadataDocument|Une erreur s'est produite lors de la lecture des métadonnées à partir de l'un des documents chargés. L'identificateur de document est spécifié.|  
 |ErrConflictingInputs|L’argument d’entrée spécifié est en conflit avec le spécifié car ils impliquent différents modes d’opération d’outil.|  
 |WrnUnableToLoadContractForValidation|Une erreur s'est produite lors du chargement d'un type de contrat. Le type et les détails sont spécifiés.|  
@@ -136,7 +138,7 @@ Cette rubrique répertorie toutes les exceptions générées par les outils [!IN
 |GeneratingFiles|Génération de fichiers…|  
 |ErrCannotSpecifyMultipleMappingsForNamespace|Une valeur non valide a été passée à l'option spécifiée. L'espace de noms cible spécifié ne peut pas être mappé à plusieurs espaces de noms CLR comme spécifié.|  
 |ErrCouldNotLoadReferenceAssemblyAt|Impossible de charger l'assembly de référence spécifié.|  
-|ParametersOut|\<fichier >|  
+|ParametersOut|\<file>|  
 |NoCodeWasGeneratedSuggestDCOnly|Pour générer des contrats à partir des schémas, utilisez l'option spécifiée.|  
 |ErrUnableToLoadInputConfig|Impossible de charger le fichier de configuration spécifié.|  
 |ErrUnexpectedDelimiter|Un séparateur d’arguments non valide (’:’ ou ’=’) ne peut pas démarrer l’option.|  

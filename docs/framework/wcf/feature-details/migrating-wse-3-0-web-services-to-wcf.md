@@ -1,24 +1,26 @@
 ---
 title: Migration des services Web WSE 3.0 vers WCF
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7bc5fff7-a2b2-4dbc-86cc-ecf73653dcdc
-caps.latest.revision: "16"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: a7e7187eb6ed444ba2c28aa301ce4b3b16129030
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="migrating-wse-30-web-services-to-wcf"></a>Migration des services Web WSE 3.0 vers WCF
 Les avantages liés à la migration des services Web WSE 3.0 vers [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] incluent l'amélioration des performances et la prise en charge de transports supplémentaires, de scénarios de sécurité supplémentaires et des spécifications WS-*. Un service Web migré à partir de WSE 3.0 vers [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] peut présenter une amélioration des performances comprise entre 200 % et 400 %. Pour plus d’informations sur les transports pris en charge par [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], consultez [choisir un Transport](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md). Pour obtenir la liste des scénarios pris en charge par [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], consultez [des scénarios de sécurité courants](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md). Pour obtenir la liste des spécifications qui sont pris en charge par [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], consultez [Guide de l’interopérabilité de protocoles de Services Web](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md).  
@@ -67,12 +69,12 @@ Les avantages liés à la migration des services Web WSE 3.0 vers [!INCLUDE[ind
   
 |Assertion de sécurité clé en main WSE 3.0|Configuration de liaison personnalisée WCF|  
 |----------------------------------------|--------------------------------------|  
-|\<usernameOverTransportSecurity / >|`<customBinding>   <binding name="MyBinding">     <security authenticationMode="UserNameOverTransport" />     <textMessageEncoding messageVersion="Soap12WSAddressingAugust2004" />   </binding> </customBinding>`|  
-|\<mutualCertificate10Security / >|`<customBinding>   <binding name="MyBinding">     <security messageSecurityVersion="WSSecurity10WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10" authenticationMode="MutualCertificate" />     <textMessageEncoding messageVersion="Soap12WSAddressingAugust2004" />   </binding> </customBinding>`|  
-|\<usernameForCertificateSecurity / >|`<customBinding>   <binding name="MyBinding">     <security authenticationMode="UsernameForCertificate"/>     <textMessageEncoding messageVersion="Soap12WSAddressingAugust2004" />   </binding> </customBinding>`|  
-|\<anonymousForCertificateSecurity / >|`<customBinding>   <binding name="MyBinding">     <security authenticationMode="AnonymousForCertificate"/>     <textMessageEncoding messageVersion="Soap12WSAddressingAugust2004" />   </binding> </customBinding>`|  
-|\<kerberosSecurity / >|`<customBinding>   <binding name="MyBinding">     <security authenticationMode="Kerberos"/>     <textMessageEncoding messageVersion="Soap12WSAddressingAugust2004" />   </binding> </customBinding>`|  
-|\<mutualCertificate11Security / >|`<customBinding>   <binding name="MyBinding">     <security authenticationMode="MutualCertificate"/>     <textMessageEncoding messageVersion="Soap12WSAddressingAugust2004" />   </binding> </customBinding>`|  
+|\<usernameOverTransportSecurity />|`<customBinding>   <binding name="MyBinding">     <security authenticationMode="UserNameOverTransport" />     <textMessageEncoding messageVersion="Soap12WSAddressingAugust2004" />   </binding> </customBinding>`|  
+|\<mutualCertificate10Security />|`<customBinding>   <binding name="MyBinding">     <security messageSecurityVersion="WSSecurity10WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10" authenticationMode="MutualCertificate" />     <textMessageEncoding messageVersion="Soap12WSAddressingAugust2004" />   </binding> </customBinding>`|  
+|\<usernameForCertificateSecurity />|`<customBinding>   <binding name="MyBinding">     <security authenticationMode="UsernameForCertificate"/>     <textMessageEncoding messageVersion="Soap12WSAddressingAugust2004" />   </binding> </customBinding>`|  
+|\<anonymousForCertificateSecurity />|`<customBinding>   <binding name="MyBinding">     <security authenticationMode="AnonymousForCertificate"/>     <textMessageEncoding messageVersion="Soap12WSAddressingAugust2004" />   </binding> </customBinding>`|  
+|\<kerberosSecurity />|`<customBinding>   <binding name="MyBinding">     <security authenticationMode="Kerberos"/>     <textMessageEncoding messageVersion="Soap12WSAddressingAugust2004" />   </binding> </customBinding>`|  
+|\<mutualCertificate11Security />|`<customBinding>   <binding name="MyBinding">     <security authenticationMode="MutualCertificate"/>     <textMessageEncoding messageVersion="Soap12WSAddressingAugust2004" />   </binding> </customBinding>`|  
   
  Pour plus d’informations sur la création de liaisons personnalisées dans WCF, consultez [des liaisons personnalisées](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   

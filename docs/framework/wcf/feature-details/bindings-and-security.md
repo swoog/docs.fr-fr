@@ -1,12 +1,13 @@
 ---
-title: "Liaisons et sécurité"
-ms.custom: 
+title: Liaisons et sécurité
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - bindings [WCF], security
@@ -14,28 +15,29 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-caps.latest.revision: "42"
+caps.latest.revision: ''
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 9e44db963a696f22f91569eb3d7c2956289a9c76
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="bindings-and-security"></a>Liaisons et sécurité
 Les liaisons fournies par le système incluses avec [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] permettent de programmer rapidement des applications [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. À une exception près, la méthode de sécurité par défaut de toutes les liaisons est activée. Cette rubrique vous permet de sélectionner la liaison appropriée à vos besoins de sécurité.  
   
- Pour une vue d’ensemble de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sécurité, consultez [vue d’ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]programmation [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] à l’aide de liaisons, consultez [de programmation de sécurité de WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md).  
+ Pour une vue d’ensemble de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sécurité, consultez [vue d’ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] programmation [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] à l’aide de liaisons, consultez [de programmation de sécurité de WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md).  
   
  Si vous avez déjà sélectionné une liaison, vous pouvez trouver plus d’informations sur les comportements d’exécution qui sont associés à la sécurité dans [comportements de sécurité](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md).  
   
  Certaines fonctions de sécurité ne sont pas programmables à l’aide des liaisons fournies par le système. Pour plus de contrôle à l’aide d’une liaison personnalisée, consultez [les fonctionnalités de sécurité avec des liaisons personnalisées](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md).  
   
 ## <a name="security-functions-of-bindings"></a>Fonctions de sécurité des liaisons  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] inclut un certain nombre de liaisons fournies par le système qui répondent à la plupart des besoins. Si une liaison spécifique ne suffit pas, vous pouvez également créer une liaison personnalisée. Pour obtenir la liste des liaisons fournies par le système, consultez [les liaisons fournies](../../../../docs/framework/wcf/system-provided-bindings.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]liaisons personnalisées, consultez [des liaisons personnalisées](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] inclut un certain nombre de liaisons fournies par le système qui répondent à la plupart des besoins. Si une liaison spécifique ne suffit pas, vous pouvez également créer une liaison personnalisée. Pour obtenir la liste des liaisons fournies par le système, consultez [les liaisons fournies](../../../../docs/framework/wcf/system-provided-bindings.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] liaisons personnalisées, consultez [des liaisons personnalisées](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
  Chaque liaison dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] comporte deux formulaires : l'un en tant qu'API et l'autre en tant qu'élément XML utilisé dans un fichier de configuration. Par exemple, le `WSHttpBinding` (API) possède un équivalent le [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
   
@@ -54,7 +56,7 @@ Les liaisons fournies par le système incluses avec [!INCLUDE[indigo1](../../../
   
 -   Profil de sécurité de base tel que défini dans WS-I.  
   
- Par défaut, cette liaison n’est pas sécurisée. Elle est conçue pour interagir avec les services ASMX. Lorsque la sécurité est activée, la liaison fournit une interopérabilité transparente avec les mécanismes de sécurité IIS (Internet Information Services), tels que l’authentification de base, Digest et la sécurité Windows intégrée. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Vue d’ensemble de la sécurité de transport](../../../../docs/framework/wcf/feature-details/transport-security-overview.md). Cette liaison prend en charge les fonctionnalités suivantes :  
+ Par défaut, cette liaison n’est pas sécurisée. Elle est conçue pour interagir avec les services ASMX. Lorsque la sécurité est activée, la liaison fournit une interopérabilité transparente avec les mécanismes de sécurité IIS (Internet Information Services), tels que l’authentification de base, Digest et la sécurité Windows intégrée. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Vue d’ensemble de la sécurité de transport](../../../../docs/framework/wcf/feature-details/transport-security-overview.md). Cette liaison prend en charge les fonctionnalités suivantes :  
   
 -   Sécurité du transport HTTPS.  
   
@@ -100,7 +102,7 @@ Les liaisons fournies par le système incluses avec [!INCLUDE[indigo1](../../../
   
     -   Fourniture des informations d'identification de service négociées à partir du service dans le cadre de l'installation des canaux.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<xref:System.ServiceModel.WSDualHttpSecurity> et <xref:System.ServiceModel.WSDualHttpSecurityMode>.  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.WSDualHttpSecurity> et <xref:System.ServiceModel.WSDualHttpSecurityMode>.  
   
 ### <a name="nettcpbinding"></a>NetTcpBinding  
  Dans le code, utilisez la <xref:System.ServiceModel.NetTcpBinding> classe ; dans la configuration, utilisez la [ \<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).  
@@ -155,7 +157,7 @@ Les liaisons fournies par le système incluses avec [!INCLUDE[indigo1](../../../
   
 -   Sécurité de transport MSMQ (Transport).  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<xref:System.ServiceModel.NetMsmqSecurity> et <xref:System.ServiceModel.NetMsmqSecurityMode>.  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.NetMsmqSecurity> et <xref:System.ServiceModel.NetMsmqSecurityMode>.  
   
 ### <a name="netmsmqbinding"></a>NetMsmqBinding  
  Dans le code, utilisez la <xref:System.ServiceModel.NetMsmqBinding> classe ; dans la configuration, utilisez la [ \<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md).  
@@ -176,17 +178,17 @@ Les liaisons fournies par le système incluses avec [!INCLUDE[indigo1](../../../
   
  L'information d'identification <xref:System.ServiceModel.MessageCredentialType.Certificate> est uniquement prise en charge lorsque le mode de sécurité a la valeur <xref:System.ServiceModel.NetMsmqSecurityMode.Both> ou <xref:System.ServiceModel.NetMsmqSecurityMode.Message>.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<xref:System.ServiceModel.MessageSecurityOverMsmq> et <xref:System.ServiceModel.MsmqTransportSecurity>.  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.MessageSecurityOverMsmq> et <xref:System.ServiceModel.MsmqTransportSecurity>.  
   
 ### <a name="wsfederationhttpbinding"></a>WSFederationHttpBinding  
  Dans le code, utilisez la <xref:System.ServiceModel.WSFederationHttpBinding> classe ; dans la configuration, utilisez la [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
   
  Par défaut, cette liaison utilise WS-Security (sécurité au niveau de la couche de message).  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Fédération](../../../../docs/framework/wcf/feature-details/federation.md), <xref:System.ServiceModel.WSFederationHttpSecurity>, et <xref:System.ServiceModel.WSFederationHttpSecurityMode>.  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Fédération](../../../../docs/framework/wcf/feature-details/federation.md), <xref:System.ServiceModel.WSFederationHttpSecurity>, et <xref:System.ServiceModel.WSFederationHttpSecurityMode>.  
   
 ## <a name="custom-bindings"></a>Liaisons personnalisées  
- Si aucune des liaisons fournies par le système ne répondent à vos besoins, vous pouvez créer une liaison personnalisée à l’aide d’un élément de liaison de sécurité personnalisé. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Les fonctionnalités de sécurité avec des liaisons personnalisées](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md).  
+ Si aucune des liaisons fournies par le système ne répondent à vos besoins, vous pouvez créer une liaison personnalisée à l’aide d’un élément de liaison de sécurité personnalisé. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Fonctionnalités de sécurité avec des liaisons personnalisées](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md).  
   
 ## <a name="binding-choices"></a>Options de liaison  
  Le tableau suivant récapitule les fonctionnalités offertes par le paramètre de mode de sécurité défini ; autrement dit, il répertorie les fonctionnalités disponibles lorsque le mode de sécurité a la valeur `Transport`, `Message`ou `TransportWithMessageCredential`. Utilisez-le pour rechercher les fonctionnalités de sécurité que votre application requiert.  
@@ -216,19 +218,19 @@ Les liaisons fournies par le système incluses avec [!INCLUDE[indigo1](../../../
 |Type|Description|  
 |----------|-----------------|  
 |None|Spécifie que le client n'a pas besoin de présenter d'informations d'identification. Cela se traduit en un client anonyme.|  
-|Basic|Authentification de base. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]RFC 2617 – authentification HTTP : Authentification de base et Digest, disponible à l’adresse [http://go.microsoft.com/fwlink/?LinkId=84023](http://go.microsoft.com/fwlink/?LinkId=84023).|  
-|Digest|Authentification Digest. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]RFC 2617 – authentification HTTP : Authentification de base et Digest, disponible à l’adresse [http://go.microsoft.com/fwlink/?LinkId=84023](http://go.microsoft.com/fwlink/?LinkId=84023).|  
+|Basic|Authentification de base. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] RFC 2617 – authentification HTTP : Authentification de base et Digest, disponible à l’adresse [ http://go.microsoft.com/fwlink/?LinkId=84023 ](http://go.microsoft.com/fwlink/?LinkId=84023).|  
+|Digest|Authentification Digest. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] RFC 2617 – authentification HTTP : Authentification de base et Digest, disponible à l’adresse [ http://go.microsoft.com/fwlink/?LinkId=84023 ](http://go.microsoft.com/fwlink/?LinkId=84023).|  
 |NTLM|Authentification NTLM (NT LAN Manager).|  
 |Windows|Authentification Windows.|  
 |Certificat|Authentification effectuée à l'aide d'un certificat.|  
-|IssuedToken|Autorise le service à imposer que le client soit authentifié à l'aide d'un jeton émis par un service d'émission de jeton de sécurité ou par [!INCLUDE[infocard](../../../../includes/infocard-md.md)]. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Fédération et jetons émis](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
+|IssuedToken|Autorise le service à imposer que le client soit authentifié à l'aide d'un jeton émis par un service d'émission de jeton de sécurité ou par [!INCLUDE[infocard](../../../../includes/infocard-md.md)]. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Fédération et jetons émis](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
   
 ### <a name="message-client-credentials-in-bindings"></a>Informations d’identification du client de message dans les liaisons  
  Le tableau suivant répertorie les types d'informations d'identification du client disponibles lors de l'utilisation d'une liaison en mode de sécurité Message.  
   
 |Type|Description|  
 |----------|-----------------|  
-|Aucun.|Autorise le service à interagir avec des clients anonymes.|  
+|Aucun|Autorise le service à interagir avec des clients anonymes.|  
 |Windows|Autorise les échanges de messages SOAP à se produire sous le contexte authentifié d'une information d'identification Windows.|  
 |UserName|Autorise le service à imposer que le client soit authentifié à l'aide d'une information d'identification de nom d'utilisateur. Notez que lorsque le mode de sécurité a la valeur `TransportWithMessageCredential`, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ne prend pas en charge l'envoi d'un condensé du mot de passe ou la dérivation de clés à l'aide du mot de passe, ainsi que l'utilisation de ces clés pour le mode de sécurité Message. De ce fait, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] s'assure que le transport est sécurisé lors de l'utilisation d'informations d'identification de nom d'utilisateur.|  
 |Certificat|Autorise le service à exiger une authentification du client via un certificat.|  

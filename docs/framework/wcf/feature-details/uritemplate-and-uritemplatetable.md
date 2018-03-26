@@ -1,24 +1,26 @@
 ---
 title: UriTemplate et UriTemplateTable
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
-caps.latest.revision: "24"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: ac77fe2c83828d2cc9473417d2b29b2d2e540923
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate et UriTemplateTable
 Les développeurs de sites Web ont besoin de pouvoir décrire la forme et la disposition des URI auxquels leurs services répondent. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] a ajouté deux nouvelles classes pour permettre aux développeurs de mieux contrôler leurs URI. <xref:System.UriTemplate> et <xref:System.UriTemplateTable> forment la base du moteur de répartition reposant sur les URI dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Ces classes peuvent également être utilisées seules, ce qui permet aux développeurs de tirer parti des modèles et du mécanisme du mappage des URI sans avoir à implémenter un service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
@@ -140,7 +142,7 @@ Les développeurs de sites Web ont besoin de pouvoir décrire la forme et la dis
 -   /{chaussure}{bateau} – Les variables doivent être séparées par un littéral.  
   
 ### <a name="matching-and-compound-path-segments"></a>Segments de chemin d'accès composés et correspondants  
- Les segments de chemin d’accès composés vous permettent de définit un modèle d’URI ayant plusieurs variables dans un seul segment de chemin d’accès. Par exemple, dans la chaîne de modèle suivant : « adresses / {état}. {Ville} » deux variables (état et ville) sont définis dans le même segment. Ce modèle correspondrait à une URL comme « http://example.com/Washington.Redmond », mais il correspond également à une URL comme « http://example.com/Washington.Redmond.Microsoft ». Dans ce cas, la variable d’état contiendra « Washington » et la variable ville contiendra « Redmond.Microsoft ». Dans ce cas, tout texte (sauf ‘/’) correspondra à la variable {ville}. Si vous souhaitez un modèle qui ne corresponde pas le texte « supplémentaire », placez la variable dans un segment de modèle séparé, par exemple : « adresses / {état} / {ville}.  
+ Les segments de chemin d’accès composés vous permettent de définit un modèle d’URI ayant plusieurs variables dans un seul segment de chemin d’accès. Par exemple, dans la chaîne de modèle suivant : « adresses / {état}. {Ville} » deux variables (état et ville) sont définis dans le même segment. Ce modèle correspondrait à une URL comme «http://example.com/Washington.Redmond«, mais il correspond également à une URL telle que »http://example.com/Washington.Redmond.Microsoft». Dans ce cas, la variable d’état contiendra « Washington » et la variable ville contiendra « Redmond.Microsoft ». Dans ce cas, tout texte (sauf ‘/’) correspondra à la variable {ville}. Si vous souhaitez un modèle qui ne corresponde pas le texte « supplémentaire », placez la variable dans un segment de modèle séparé, par exemple : « adresses / {état} / {ville}.  
   
 ### <a name="named-wildcard-segments"></a>Segments de caractère générique nommés  
  Un segment de caractère générique nommé est tout segment variable de chemin d’accès dont le nom de variable commence par le caractère générique ’*’. La chaîne de modèle suivante contient un segment de caractère générique nommé « chaussure ».  

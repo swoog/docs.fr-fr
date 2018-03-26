@@ -1,13 +1,13 @@
 ---
-title: "Marshaling de données à l’aide de l’appel de code managé"
-ms.custom: 
+title: Marshaling de données à l’aide de l’appel de code managé
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - cpp
@@ -16,17 +16,17 @@ helpviewer_keywords:
 - data marshaling, platform invoke
 - marshaling, platform invoke
 ms.assetid: dc5c76cf-7b12-406f-b79c-d1a023ec245d
-caps.latest.revision: 
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 ms.openlocfilehash: 24ae6da0b32cf15ee9104bd10ba5fe6bb03a9763
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="marshaling-data-with-platform-invoke"></a>Marshaling de données à l’aide de l’appel de code managé
 Pour appeler des fonctions exportées depuis une bibliothèque non managée, une application .NET Framework a besoin d'un prototype de fonction dans du code managé qui représente la fonction non managée. Pour créer un prototype qui permette à un appel de code non managé de marshaler des données correctement, vous devez procédez comme suit :  

@@ -1,6 +1,6 @@
 ---
-title: "Création d’un microservice CRUD simple piloté par les données"
-description: "Architecture des microservices .NET pour les applications .NET en conteneur | Création d’un microservice CRUD simple piloté par les données"
+title: Création d’un microservice CRUD simple piloté par les données
+description: Architecture des microservices .NET pour les applications .NET en conteneur | Création d’un microservice CRUD simple piloté par les données
 keywords: Docker, microservices, ASP.NET, conteneur
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: be8644e45be8db88c99332476e74c5c968764c74
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Création d’un microservice CRUD simple piloté par les données
 
@@ -220,7 +220,7 @@ public void ConfigureServices(IServiceCollection services)
 -   **Interrogation des données**
     [*https://docs.microsoft.com/ef/core/querying/index*](https://docs.microsoft.com/ef/core/querying/index)
 
--   **Enregistrement des données**
+-   **L’enregistrement de données**
     [*https://docs.microsoft.com/ef/core/saving/index*](https://docs.microsoft.com/ef/core/saving/index)
 
 ## <a name="the-db-connection-string-and-environment-variables-used-by-docker-containers"></a>Chaîne de connexion de la base de données et variables d’environnement utilisées par les conteneurs Docker
@@ -293,13 +293,13 @@ Ce mécanisme de gestion de version est simple et dépend du serveur qui achemin
 
 ### <a name="additional-resources"></a>Ressources supplémentaires
 
--   **Scott Hanselman. ASP.NET Core RESTful Web API versioning made easy**
+-   **Scott Hanselman. Contrôle de version des API Web RESTful ASP.NET Core simplifiée**
     [*http://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx*](http://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx)
 
--   **Contrôle de version d’une API web RESTful**
+-   **Contrôle de version une API RESTful web**
     [*https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api*](https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
 
--   **Roy Fielding. Versioning, Hypermedia, and REST**
+-   **Roy Fielding. Le contrôle de version et hypermédia REST**
     [*https://www.infoq.com/articles/roy-fielding-on-versioning*](https://www.infoq.com/articles/roy-fielding-on-versioning)
 
 ## <a name="generating-swagger-description-metadata-from-your-aspnet-core-web-api"></a>Génération de métadonnées de description Swagger à partir de votre API web ASP.NET Core 
@@ -310,7 +310,7 @@ Le principal intérêt de Swagger est la spécification Swagger, c’est-à-dire
 
 Cette spécification est la base de la spécification OpenAPI (OAS). Elle a été développée par une communauté ouverte, transparente et collaborative pour normaliser la façon dont les interfaces RESTful sont définies.
 
-La spécification permet de définir la façon dont un service peut être découvert et la façon dont ses fonctionnalités sont comprises. Pour plus d’informations, notamment sur l’éditeur web Swagger, et pour obtenir les exemples de spécifications Swagger d’entreprises comme Spotify, Uber, Slack et Microsoft, consultez le site Swagger (<http://swagger.io>).
+La spécification permet de définir la façon dont un service peut être découvert et la façon dont ses fonctionnalités sont comprises. Pour plus d’informations, notamment un éditeur web et des exemples de spécifications de Swagger d’entreprises comme Spotify, Uber, la marge et Microsoft, consultez le site Swagger (<http://swagger.io>).
 
 ### <a name="why-use-swagger"></a>Pourquoi utiliser Swagger ?
 
@@ -415,7 +415,7 @@ C’est aussi simple que cela. Et parce qu’elles sont générées automatiquem
 
 ### <a name="additional-resources"></a>Ressources supplémentaires
 
--   **Pages d’aide d’API web ASP.NET Core à l’aide de Swagger**
+-   **API aide des Pages Web ASP.NET à l’aide de Swagger**
     [*https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger*](https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger)
 
 

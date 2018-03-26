@@ -1,28 +1,30 @@
 ---
-title: "Types obsolètes dans le .NET Framework"
-ms.custom: 
+title: Types obsolètes dans le .NET Framework
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - .NET Framework 4.5, obsolete types
 - types, obsolete in .NET Framework 4.5
 - obsolete types [.NET Framework]
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
-caps.latest.revision: "41"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: f30b9e245ad38b0e861590e9b2ca3658a2b5e967
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>Types obsolètes dans le .NET Framework
 <a name="introduction"></a> Les tableaux de cet article, organisés par assembly, répertorient les types qui sont obsolètes dans le [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] et le [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]. Utilisez les liens suivants pour consulter la liste des types obsolètes et des alternatives recommandées dans chaque assembly. Ces types étant obsolètes, tous leurs membres le sont également. Pour obtenir la liste des membres obsolètes supplémentaires dans la bibliothèque de classes .NET Framework, consultez [Membres obsolètes](../../../docs/framework/whats-new/obsolete-members.md).  

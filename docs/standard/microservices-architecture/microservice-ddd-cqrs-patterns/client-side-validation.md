@@ -1,6 +1,6 @@
 ---
-title: "Validation côté client (validation dans les couches de présentation)"
-description: "Architecture des microservices .NET pour les applications .NET en conteneur | Validation côté client (validation dans les couches de présentation)"
+title: Validation côté client (validation dans les couches de présentation)
+description: Architecture des microservices .NET pour les applications .NET en conteneur | Validation côté client (validation dans les couches de présentation)
 keywords: Docker, microservices, ASP.NET, conteneur
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 273aa0a8ceb7f683999f1074faae0a6aa303f9be
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="client-side-validation-validation-in-the-presentation-layers"></a>Validation côté client (validation dans les couches de présentation)
 
@@ -35,8 +35,8 @@ L’implémentation de la validation côté client dépend du type d’applicati
 
 ### <a name="validation-in-xamarin-mobile-apps"></a>Validation dans les applications mobiles Xamarin
 
--   **Valider l’entrée de texte et afficher les erreurs**
-    [*https://developer.xamarin.com/recipes/ios/standard\_controls/text\_field/validate\_input/*](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
+-   **Valider le texte d’entrée et afficher les erreurs**
+    [*https://developer.xamarin.com/recipes/ios/standard\_contrôles/texte\_/valider le champ\_d’entrée /*](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
 
 -   **Rappel de validation**
     [*https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/*](https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/)
@@ -48,10 +48,10 @@ L’implémentation de la validation côté client dépend du type d’applicati
 
 ### <a name="validation-in-spa-web-apps-angular-2-typescript-javascript"></a>Validation dans les applications web SPA (Angular 2, TypeScript, JavaScript)
 
--   **Ado Kukic. Validation des formulaires Angular 2** **
+-   **Ado Kukic. Validation de formulaire 2 angulaire** **
     **[*https://scotch.io/tutorials/angular-2-form-validation*](https://scotch.io/tutorials/angular-2-form-validation)
 
--   **Validation des formulaires**
+-   **Validation de formulaire**
     [*https://angular.io/docs/ts/latest/cookbook/form-validation.html*](https://angular.io/docs/ts/latest/cookbook/form-validation.html)
 
 -   **Validation.** Documentation Breeze.

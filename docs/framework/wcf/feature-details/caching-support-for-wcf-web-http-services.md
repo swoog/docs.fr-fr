@@ -1,27 +1,29 @@
 ---
 title: Prise en charge de la mise en cache pour les services HTTP Web WCF
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7f8078e0-00d9-415c-b8ba-c1b6d5c31799
-caps.latest.revision: "11"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 723f485ab45cbe127bfd337c2d428d38d5f27232
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="caching-support-for-wcf-web-http-services"></a>Prise en charge de la mise en cache pour les services HTTP Web WCF
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]vous permet d’utiliser le mécanisme de mise en cache déclaratif déjà disponible dans ASP.NET dans vos services HTTP Web WCF. Il vous permet de mettre en cache les réponses provenant de vos opérations de service HTTP Web WCF. Lorsqu'un utilisateur envoie un HTTP GET à votre service qui est configuré pour la mise en cache, ASP.NET renvoie la réponse mise en cache et la méthode de service n'est pas appelée. Lorsque le cache expire, au prochain envoi d'un HTTP GET par un utilisateur, votre méthode de service est appelée et la réponse est encore une fois mise en cache. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]ASP.NET mise en cache, consultez [vue d’ensemble de la mise en cache ASP.NET](http://go.microsoft.com/fwlink/?LinkId=152534)  
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] vous permet d’utiliser le mécanisme de mise en cache déclaratif déjà disponible dans ASP.NET dans vos services HTTP Web WCF. Il vous permet de mettre en cache les réponses provenant de vos opérations de service HTTP Web WCF. Lorsqu'un utilisateur envoie un HTTP GET à votre service qui est configuré pour la mise en cache, ASP.NET renvoie la réponse mise en cache et la méthode de service n'est pas appelée. Lorsque le cache expire, au prochain envoi d'un HTTP GET par un utilisateur, votre méthode de service est appelée et la réponse est encore une fois mise en cache. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] ASP.NET mise en cache, consultez [vue d’ensemble de la mise en cache ASP.NET](http://go.microsoft.com/fwlink/?LinkId=152534)  
   
 ## <a name="basic-web-http-service-caching"></a>Mise en cache du service HTTP Web de base  
  Pour activer la mise en cache du service HTTP WEB, vous devez d'abord activer la compatibilité ASP.NET en appliquant au service l'objet <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> et en attribuant à la propriété <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute.RequirementsMode%2A> la valeur <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> ou <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>.  
@@ -133,7 +135,7 @@ public class Service
  Ici, la durée de mise en cache est définie à 60 secondes, `varyByParam` est défini sur aucun et `sqlDependency` est défini sur une liste délimitée par des points-virgules de paires de nom de base de données/table séparés par le signe deux-points. Lorsque les données dans `MyTable` sont modifiées, la réponse mise en cache pour l'opération de service est supprimée, et lorsque l'opération est appelée, une nouvelle réponse est générée (en appelant l'opération de service), mise en cache et retournée au client.  
   
 > [!IMPORTANT]
->  Pour ASP.NET accéder à une base de données SQL, vous devez utiliser le [ASP.NET SQL Server Registration Tool](http://go.microsoft.com/fwlink/?LinkId=152536). De plus, vous devez autoriser le compte d'utilisateur approprié à accéder à la base de données et à la table. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Accès à SQL Server à partir d’une Application Web](http://go.microsoft.com/fwlink/?LinkId=178988).  
+>  Pour ASP.NET accéder à une base de données SQL, vous devez utiliser le [ASP.NET SQL Server Registration Tool](http://go.microsoft.com/fwlink/?LinkId=152536). De plus, vous devez autoriser le compte d'utilisateur approprié à accéder à la base de données et à la table. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Accès à SQL Server à partir d’une Application Web](http://go.microsoft.com/fwlink/?LinkId=178988).  
   
 ## <a name="conditional-http-get-based-caching"></a>Mise en cache basée sur HTTP GET conditionnel  
  Dans les scénarios HTTP Web HTTP GET conditionnel est souvent utilisée par les services pour implémenter la mise en cache HTTP intelligent comme décrit dans la [spécification HTTP](http://go.microsoft.com/fwlink/?LinkId=165800). Pour ce faire, le service doit définir la valeur de l'en-tête ETag dans la réponse HTTP. Il doit également activer l'en-tête If-None-Match dans la requête HTTP pour vérifier si l'un des ETag spécifiés correspond à l'ETag actuel.  

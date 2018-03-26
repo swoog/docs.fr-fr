@@ -1,5 +1,5 @@
 ---
-title: "Guide de déploiement du .NET Framework pour les développeurs"
+title: Guide de déploiement du .NET Framework pour les développeurs
 ms.custom: updateeachrelease
 ms.date: 12/14/2017
 ms.prod: .net-framework
@@ -16,10 +16,10 @@ manager: wpickett
 ms.workload:
 - dotnet
 ms.openlocfilehash: 6b2083efabd6c16bafd8b241980c4cd413258ae5
-ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/05/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Guide de déploiement du .NET Framework pour les développeurs
 Cette rubrique fournit des informations destinées aux développeurs qui souhaitent installer une version du .NET Framework (du .NET Framework 4.5 au [!INCLUDE[net_current](../../../includes/net-current-version.md)]) avec leurs applications.
@@ -196,7 +196,7 @@ InstallAware génère l’application Windows (APPX), Windows Installer (MSI), l
 dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
 ```
 
- Vous pouvez utiliser des options de ligne de commande supplémentaires pour personnaliser l'installation. Exemple :
+ Vous pouvez utiliser des options de ligne de commande supplémentaires pour personnaliser l'installation. Par exemple :
 
 - Pour permettre aux utilisateurs de fermer les applications .NET Framework en cours d'exécution, afin de réduire le nombre de redémarrages système, basculez en mode passif et utilisez l'option `/showrmui` comme suit :
 
@@ -260,7 +260,7 @@ dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
 |[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] installé sur la mise à jour de novembre de Windows 10|394254|
 |[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] installé sur toutes les versions de système d’exploitation autres que la mise à jour de novembre de Windows 10|394271|
 |[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] installé sur Windows 10|393295|
-|[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] installé sur toutes les versions du système d'exploitation autres que Windows 10|393297|
+|[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] installé sur toutes les versions du système d'exploitation autre que Windows 10|393297|
 |.NET Framework 4.5.2|379893|
 |[!INCLUDE[net_v451](../../../includes/net-v451-md.md)] installé avec [!INCLUDE[win81](../../../includes/win81-md.md)] ou Windows Server 2012 R2|378675|
 |[!INCLUDE[net_v451](../../../includes/net-v451-md.md)] installé sur [!INCLUDE[win8](../../../includes/win8-md.md)], Windows 7|378758|
@@ -392,7 +392,7 @@ Le tableau ci-dessous répertorie les modules linguistiques du .NET Framework di
 |1041|Japonais|ja|
 |1042|Coréen|ko|
 |1043|Néerlandais – Pays-Bas|nl|
-|1044|Norvégien (Bokmål)|Non|
+|1044|Norvégien (Bokmål)|non|
 |1045|Polonais|pl|
 |1046|Portugais – Brésil|pt-BR|
 |1049|Russe|ru|

@@ -20,7 +20,7 @@ ms.openlocfilehash: 893093900b3fc4276f9bd7143b1f235a5ba98f90
 ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="common-schema-collections"></a>Collections de schémas courantes
 Les collections de schémas communes sont les collections de schémas implémentées par chacun des fournisseurs .NET Framework managés. Vous pouvez interroger un fournisseur .NET Framework managé afin de déterminer la liste des collections de schémas prises en charge en appelant le **GetSchema** méthode sans argument ou avec le nom de collection de schémas « MetaDataCollections ». Cette opération retourne un <xref:System.Data.DataTable> avec une liste des collections de schémas prises en charge, le nombre de restrictions qu'elles prennent en charge et le nombre d'éléments d'identification qu'elles utilisent. Ces collections décrivent toutes les colonnes requises. Les fournisseurs sont libres d'ajouter des colonnes s'ils le souhaitent. Par exemple, `SqlClient` et `OracleClient` ajoutent ParameterName à la collection de restrictions.  

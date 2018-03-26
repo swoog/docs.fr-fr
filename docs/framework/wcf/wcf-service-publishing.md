@@ -20,7 +20,7 @@ ms.openlocfilehash: 823edadf7d387d1a509edbdf839ac6eeece5d41f
 ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="wcf-service-publishing"></a>Publication du service WCF
 La Publication de service [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] vous aide à progresser de l'environnement des premières phases de développement fourni par l'hôte de service [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] et le client test [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] au déploiement proprement dit de l'application dans un environnement de production aux fins de test. Avant de vous engager dans un plan de déploiement final, vous pouvez utiliser la Publication de service [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] pour vérifier que votre service [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] s'exécute correctement et est prêt à être publié. Vous pouvez également choisir de déployer vos bibliothèques de services [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] à différents emplacements cibles en vue de les tester.  

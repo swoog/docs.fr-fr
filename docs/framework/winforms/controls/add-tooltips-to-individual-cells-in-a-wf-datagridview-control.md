@@ -1,12 +1,13 @@
 ---
-title: "Comment : ajouter des info-bulles à des cellules dans un contrôle DataGridView Windows Forms"
-ms.custom: 
+title: 'Comment : ajouter des info-bulles à des cellules dans un contrôle DataGridView Windows Forms'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], adding tooltips
 - data grids [Windows Forms], adding tooltips
 ms.assetid: 2a81f9de-d58b-4ea8-bc0b-8d93c2f4cf78
-caps.latest.revision: "16"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: a533f4cbf5000489e774ba8661c3ab03cea4948a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="how-to-add-tooltips-to-individual-cells-in-a-windows-forms-datagridview-control"></a>Comment : ajouter des info-bulles à des cellules dans un contrôle DataGridView Windows Forms
 Par défaut, les info-bulles sont utilisés pour afficher les valeurs de <xref:System.Windows.Forms.DataGridView> cellules qui sont trop petits pour afficher leur contenu entier. Vous pouvez substituer ce comportement, toutefois, pour définir des valeurs de texte d’info-bulle pour les cellules individuelles. Cela est utile à afficher aux utilisateurs plus d’informations sur une cellule ou pour fournir aux utilisateurs une autre description du contenu de la cellule. Par exemple, si vous avez une ligne qui affiche des icônes d’état, vous souhaiterez fournir des explications de texte à l’aide des info-bulles.  

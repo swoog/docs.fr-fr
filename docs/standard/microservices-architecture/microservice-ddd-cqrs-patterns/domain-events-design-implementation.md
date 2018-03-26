@@ -1,6 +1,6 @@
 ---
-title: "Événements de domaine. Conception et implémentation"
-description: "Architecture des microservices .NET pour les applications .NET en conteneur | Événements de domaine : conception et implémentation"
+title: Événements de domaine. Conception et implémentation
+description: 'Architecture des microservices .NET pour les applications .NET en conteneur | Événements de domaine : conception et implémentation'
 keywords: Docker, microservices, ASP.NET, conteneur
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 5840c2f7692d81f193c7d659aea6eb42a431369e
-ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="domain-events-design-and-implementation"></a>Événements de domaine : conception et implémentation
 
@@ -65,7 +65,7 @@ En revanche, si vous utilisez des événements de domaine, vous pouvez créer un
 2.  Recevez la commande dans un gestionnaire de commandes.
     -   Exécutez la transaction d’un seul agrégat.
     -   (Facultatif) Déclenchez des événements de domaine pour les effets secondaires (par exemple, OrderStartedDomainEvent).
-1.  Gérez les événements de domaine (dans le processus actuel) qui vont exécuter un nombre ouvert d’effets secondaires dans plusieurs agrégats ou actions d’application. Exemple :
+1.  Gérez les événements de domaine (dans le processus actuel) qui vont exécuter un nombre ouvert d’effets secondaires dans plusieurs agrégats ou actions d’application. Exemple :
     -   Vérifiez ou créez l’acheteur et la méthode de paiement.
     -   Créez et envoyez un événement d’intégration associé au bus d’événements pour propager les états sur les microservices ou déclencher des actions externes, comme l’envoi d’un e-mail à l’acheteur.
     -   Gérez les autres effets secondaires.
@@ -76,7 +76,7 @@ Comme le montre la Figure 9-15, à partir du même événement de domaine, vous 
 
 **Figure 9-15**. Gestion de plusieurs actions par domaine
 
-Les gestionnaires d’événements se trouvent en général dans la couche Application, car vous allez utiliser les objets d’infrastructure comme les dépôts ou une API d’application pour le comportement du microservice. Dans ce sens, les gestionnaires d’événements sont similaires aux gestionnaires de commandes, car tous deux font partie de la couche Application. La principale différence est qu’une commande ne doit être traitée qu’une seule fois. Un événement de domaine peut être traité zéro ou *n* fois, car il peut être reçu par plusieurs récepteurs ou gestionnaires d’événements, chaque gestionnaire ayant un rôle différent.
+Les gestionnaires d’événements se trouvent en général dans la couche Application, car vous allez utiliser les objets d’infrastructure comme les dépôts ou une API d’application pour le comportement du microservice. Dans ce sens, les gestionnaires d’événements sont similaires aux gestionnaires de commandes, car tous deux font partie de la couche Application. La principale différence est qu’une commande ne doit être traitée qu’une seule fois. Un événement de domaine peut être traité de zéro ou *n* délai d’attente, car si peut être reçu par plusieurs récepteurs ou des gestionnaires d’événements avec un objectif différent pour chaque gestionnaire.
 
 La possibilité d’un nombre ouvert de gestionnaires pour chaque événement de domaine permet d’ajouter plusieurs règles de domaine sans impacter votre code actuel. Par exemple, pour implémenter la règle métier suivante qui doit se produire juste après un événement, vous pouvez simplement ajouter quelques gestionnaires d’événements (voire un seul) :
 
@@ -337,37 +337,37 @@ Comme nous l’avons vu, les événements de domaine permettent d’implémenter
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
--   **Greg Young. What is a Domain Event?**
+-   **Greg Young. Qu’est un événement de domaine ?**
     [*http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/*](http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/)
 
--   **Jan Stenberg. Domain Events and Eventual Consistency**
+-   **Jan Stenberg. Événements de domaine et de la cohérence éventuelle**
     [*https://www.infoq.com/news/2015/09/domain-events-consistency*](https://www.infoq.com/news/2015/09/domain-events-consistency)
 
--   **Jimmy Bogard. A better domain events pattern**
+-   **Jimmy Bogard. Un modèle d’événements domaine mieux**
     [*https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/*](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/)
 
--   **Vaughn Vernon. Effective Aggregate Design Part II: Making Aggregates Work Together**
-    [*http://dddcommunity.org/wp-content/uploads/files/pdf\_articles/Vernon\_2011\_2.pdf*](http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
+-   **Vaughn Vernon. Efficace d’agrégation conception partie II : Effectue le travail agrégats ensemble**
+    [*http://dddcommunity.org/wp-content/uploads/files/pdf\_articles/Vernon\_2011\_pdf de 2.*](http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
 
--   **Jimmy Bogard. Strengthening your domain: Domain Events**
+-   **Jimmy Bogard. Renforcement de votre domaine : événements de domaine**
     *<https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/> *
 
--   **Tony Truong. Domain Events Pattern Example**
+-   **Tony Truong. Exemple de modèle de domaine événements**
     [*http://www.tonytruong.net/domain-events-pattern-example/*](http://www.tonytruong.net/domain-events-pattern-example/)
 
--   **Udi Dahan. How to create fully encapsulated Domain Models**
+-   **Udi Dahan. Comment créer entièrement encapsulé les modèles de domaine**
     [*http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/*](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/)
 
--   **Udi Dahan. Domain Events – Take 2**
+-   **Udi Dahan. Événements de domaine – prendre 2**
     [*http://udidahan.com/2008/08/25/domain-events-take-2/*](http://udidahan.com/2008/08/25/domain-events-take-2/%20)
 
--   **Udi Dahan. Domain Events – Salvation**
+-   **Udi Dahan. Événements de domaine – Salvation**
     [*http://udidahan.com/2009/06/14/domain-events-salvation/*](http://udidahan.com/2009/06/14/domain-events-salvation/)
 
--   **Jan Kronquist. Don’t publish Domain Events, return them!**
+-   **Jan Kronquist. Ne pas publier des événements de domaine, les retourner !**
     [*https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/*](https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/)
 
--   **Cesar de la Torre. Domain Events vs. Integration Events in DDD and microservices architectures**
+-   **Cesar de la Torre. Domain Events vs. Événements d’intégration dans les architectures DDD et microservices**
     [*https://blogs.msdn.microsoft.com/cesardelatorre/2017/02/07/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/*](https://blogs.msdn.microsoft.com/cesardelatorre/2017/02/07/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/)
 
 

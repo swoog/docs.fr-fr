@@ -1,5 +1,5 @@
 ---
-title: "Sérialisation avec tolérance de version"
+title: Sérialisation avec tolérance de version
 ms.date: 08/08/2017
 ms.prod: .net
 ms.topic: article
@@ -15,7 +15,7 @@ helpviewer_keywords:
 - BinaryFormatter class, samples
 - serialization, attributes
 ms.assetid: bea0ffe3-2708-4a16-ac7d-e586ed6b8e8d
-caps.latest.revision: "9"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
@@ -23,10 +23,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 46a6ccde7c978fe18737c6ae8733dd2e1e1ec858
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="version-tolerant-serialization"></a>Sérialisation avec tolérance de version
 Dans les versions 1.0 et 1.1 du .NET Framework, la création de types sérialisables pouvant être réutilisés d'une version d'application à l'autre était problématique. Si un type était modifié via l'ajout de champs supplémentaires, les problèmes suivants étaient susceptibles de se produire :  
@@ -265,7 +265,7 @@ End Class
 ```  
   
 ## <a name="serializationbinder"></a>SerializationBinder  
- Certains utilisateurs doivent contrôler la classe à sérialiser et désérialiser, car une version différente de la classe est requise sur le serveur et le client. <xref:System.Runtime.Serialization.SerializationBinder> est une classe abstraite utilisée pour contrôler les types réels utilisés lors de la sérialisation et de la désérialisation.  Pour tirer parti de cette classe, dérivez une classe de <xref:System.Runtime.Serialization.SerializationBinder> et substituez une méthode aux deux suivantes : <xref:System.Runtime.Serialization.SerializationBinder.BindToName%2A> et <xref:System.Runtime.Serialization.SerializationBinder.BindToType%2A>. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Contrôle de la sérialisation et désérialisation avec SerializationBinder](../../../docs/framework/wcf/feature-details/controlling-serialization-and-deserialization-with-serializationbinder.md).  
+ Certains utilisateurs doivent contrôler la classe à sérialiser et désérialiser, car une version différente de la classe est requise sur le serveur et le client. <xref:System.Runtime.Serialization.SerializationBinder> est une classe abstraite utilisée pour contrôler les types réels utilisés lors de la sérialisation et de la désérialisation.  Pour tirer parti de cette classe, dérivez une classe de <xref:System.Runtime.Serialization.SerializationBinder> et substituez une méthode aux deux suivantes : <xref:System.Runtime.Serialization.SerializationBinder.BindToName%2A> et <xref:System.Runtime.Serialization.SerializationBinder.BindToType%2A>. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Contrôle de la sérialisation et désérialisation avec SerializationBinder](../../../docs/framework/wcf/feature-details/controlling-serialization-and-deserialization-with-serializationbinder.md).  
   
 ## <a name="best-practices"></a>meilleures pratiques recommandées.  
  Pour garantir un comportement de versioning correct, suivez les règles ci-dessous lors de la modification d'un type d'une version à l'autre :  

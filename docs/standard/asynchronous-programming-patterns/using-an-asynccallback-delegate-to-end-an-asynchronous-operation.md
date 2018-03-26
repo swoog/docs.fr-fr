@@ -1,12 +1,12 @@
 ---
-title: "Utilisation d'un délégué AsyncCallback pour terminer une opération asynchrone"
-ms.custom: 
+title: Utilisation d'un délégué AsyncCallback pour terminer une opération asynchrone
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,7 +17,7 @@ helpviewer_keywords:
 - AsyncCallback delegate
 - stopping asynchronous operations
 ms.assetid: 9d97206c-8917-406c-8961-7d0909d84eeb
-caps.latest.revision: 
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
@@ -25,10 +25,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: d71e78ecd5bf365d0a1f3efb8c8e15d4a1de6dc7
-ms.sourcegitcommit: 957c696f25e39f923a827fc3ad5e8ab72768838c
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="using-an-asynccallback-delegate-to-end-an-asynchronous-operation"></a>Utilisation d'un délégué AsyncCallback pour terminer une opération asynchrone
 Les applications qui peuvent continuer à effectuer d’autres tâches en attendant les résultats d’une opération asynchrone ne doivent pas se bloquer en attendant que cette opération se termine. Pour poursuivre l’exécution des instructions tout en attendant la fin d’une opération asynchrone, utilisez l’une des options suivantes :  

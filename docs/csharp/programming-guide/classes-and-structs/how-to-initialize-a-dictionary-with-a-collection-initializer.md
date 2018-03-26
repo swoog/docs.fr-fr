@@ -12,10 +12,10 @@ caps.latest.revision: ''
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 8b8de5fb85a839d52ad00ad552ef823d9817e9b7
-ms.sourcegitcommit: 32172ca05d5dcce7ef3d327b9c8639c736e0fe2b
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="how-to-initialize-a-dictionary-with-a-collection-initializer-c-programming-guide"></a>Comment : initialiser un dictionnaire avec un initialiseur de collection (Guide de programmation C#)
 Un <xref:System.Collections.Generic.Dictionary`2> contient une collection de paires clé/valeur. Sa méthode <xref:System.Collections.Generic.Dictionary`2.Add*> prend deux paramètres, un pour la clé et un pour la valeur. Pour initialiser un <xref:System.Collections.Generic.Dictionary`2> ou toute collection dont la méthode `Add` prend plusieurs paramètres, mettez chaque jeu de paramètres entre accolades, comme illustré dans l’exemple suivant.  

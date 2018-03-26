@@ -1,27 +1,29 @@
 ---
-title: "Traduction des opérateurs de requête standard"
-ms.custom: 
+title: Traduction des opérateurs de requête standard
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-caps.latest.revision: "2"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: fc99fea9b722f6c3395f6bade625a09c6e97eb08
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="standard-query-operator-translation"></a>Traduction des opérateurs de requête standard
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] traduit les opérateurs de requête standard en commandes SQL. Le processeur de requêtes de la base de données détermine la sémantique d’exécution de la traduction SQL.  
@@ -45,7 +47,7 @@ ms.lasthandoff: 01/17/2018
  La méthode <xref:System.Linq.Enumerable.Union%2A> est définie pour les multijeux comme la concaténation non ordonnée des multijeux (le résultat de la clause UNION ALL dans SQL).  
   
 ### <a name="take-skip"></a>Take, Skip  
- <xref:System.Linq.Enumerable.Take%2A>et <xref:System.Linq.Enumerable.Skip%2A> méthodes sont bien définies uniquement sur *jeux ordonnés*. La sémantique des jeux non ordonnés ou des multijeux n'est pas définie.  
+ <xref:System.Linq.Enumerable.Take%2A> et <xref:System.Linq.Enumerable.Skip%2A> méthodes sont bien définies uniquement sur *jeux ordonnés*. La sémantique des jeux non ordonnés ou des multijeux n'est pas définie.  
   
 > [!NOTE]
 >  <xref:System.Linq.Enumerable.Take%2A> et <xref:System.Linq.Enumerable.Skip%2A> sont soumis à certaines limites lorsqu'ils sont utilisés dans des requêtes SQL Server 2000. Pour plus d’informations, consultez l’entrée « Skip et Take des Exceptions dans SQL Server 2000 » dans [dépannage](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
@@ -105,7 +107,7 @@ ORDER BY [t0].[CustomerID]
  De même, la traduction [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] de <xref:System.Linq.Enumerable.Average%2A> pour des valeurs entières est calculée comme un `integer` et non comme un `double`.  
   
 ### <a name="entity-arguments"></a>Arguments d’entité  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]permet aux types d’entité à utiliser dans le <xref:System.Linq.Enumerable.GroupBy%2A> et <xref:System.Linq.Enumerable.OrderBy%2A> méthodes. Dans la traduction de ces opérateurs, l’utilisation d’un argument d’un type est considérée comme équivalente à la spécification de tous les membres de ce type. Par exemple, le code suivant est équivalent :  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] permet aux types d’entité à utiliser dans le <xref:System.Linq.Enumerable.GroupBy%2A> et <xref:System.Linq.Enumerable.OrderBy%2A> méthodes. Dans la traduction de ces opérateurs, l’utilisation d’un argument d’un type est considérée comme équivalente à la spécification de tous les membres de ce type. Par exemple, le code suivant est équivalent :  
   
  [!code-csharp[DLinqSQOTranslation#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSQOTranslation/cs/Program.cs#2)]
  [!code-vb[DLinqSQOTranslation#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#2)]  
@@ -123,7 +125,7 @@ ORDER BY [t0].[CustomerID]
   
  <xref:System.Linq.Enumerable.Except%2A>  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]prend en charge l’égalité et comparaison pour *plat* arguments, mais pas pour les arguments qui contiennent des séquences ou. Un argument plat est un type qui peut être mappé à une ligne SQL. Une projection d'un ou de plusieurs types d'entité qui peuvent être déterminés statiquement comme ne contenant pas de séquence est considérée comme un argument plat.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] prend en charge l’égalité et comparaison pour *plat* arguments, mais pas pour les arguments qui contiennent des séquences ou. Un argument plat est un type qui peut être mappé à une ligne SQL. Une projection d'un ou de plusieurs types d'entité qui peuvent être déterminés statiquement comme ne contenant pas de séquence est considérée comme un argument plat.  
   
  Des exemples d'arguments plats sont présentés ci-dessous :  
   
@@ -206,7 +208,7 @@ ORDER BY [t0].[CustomerID]
  Aucune résolution n’est disponible pour cette limitation. Précisément, vous ne pouvez pas utiliser `Distinct()` sur des résultats contenant des membres mappés à des colonnes `text` ou `ntext`.  
   
 ### <a name="behavior-triggered-by-nested-queries"></a>Comportement déclenché par les sous-requêtes  
- [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)](via SP4) classeur présente des spécificités qui sont déclenchées par des requêtes imbriquées. Le jeu de requêtes SQL qui déclenche ces spécificités n'est pas bien défini. Pour cette raison, vous ne pouvez pas définir l’ensemble des [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] requêtes susceptibles de provoquer des exceptions de SQL Server.  
+ [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] (via SP4) classeur présente des spécificités qui sont déclenchées par des requêtes imbriquées. Le jeu de requêtes SQL qui déclenche ces spécificités n'est pas bien défini. Pour cette raison, vous ne pouvez pas définir l’ensemble des [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] requêtes susceptibles de provoquer des exceptions de SQL Server.  
   
 ### <a name="skip-and-take-operators"></a>Opérateurs Skip et Take  
  <xref:System.Linq.Enumerable.Take%2A> et <xref:System.Linq.Enumerable.Skip%2A> sont soumis à certaines restrictions lorsqu'ils sont utilisés dans des requêtes sur [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)]. Pour plus d’informations, consultez l’entrée « Skip et Take des Exceptions dans SQL Server 2000 » dans [dépannage](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  

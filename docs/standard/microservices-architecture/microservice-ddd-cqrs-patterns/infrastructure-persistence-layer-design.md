@@ -1,6 +1,6 @@
 ---
-title: "Conception de la couche de persistance de l’infrastructure"
-description: "Architecture des microservices .NET pour les applications .NET en conteneur | Conception de la couche de persistance de l’infrastructure"
+title: Conception de la couche de persistance de l’infrastructure
+description: Architecture des microservices .NET pour les applications .NET en conteneur | Conception de la couche de persistance de l’infrastructure
 keywords: Docker, microservices, ASP.NET, conteneur
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 76db5388c75d4eb3b5cc23c1e57cc391a15f2934
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="designing-the-infrastructure-persistence-layer"></a>Conception de la couche de persistance de l’infrastructure
 
@@ -138,30 +138,30 @@ Dans les sections ci-après, la manière d’implémenter le modèle Spécificat
 
 ### <a name="the-repository-pattern"></a>Le modèle Dépôt
 
--   **Edward Hieatt et Rob Mee. Repository pattern.**
+-   **Edward Hieatt et Rob Mee. Modèle de référentiel.**
     [*http://martinfowler.com/eaaCatalog/repository.html*](http://martinfowler.com/eaaCatalog/repository.html)
 
--   **The Repository pattern**
+-   **Le modèle de référentiel**
     [*https://msdn.microsoft.com/library/ff649690.aspx*](https://msdn.microsoft.com/library/ff649690.aspx)
 
--   **Repository Pattern: A data persistence abstraction**
+-   **Modèle de référentiel : Une persistance abstraction de données**
     [*http://deviq.com/repository-pattern/*](http://deviq.com/repository-pattern/)
 
--   **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software.** (Livre qui inclut une description du modèle Dépôt)[*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+-   **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software.** (Livre et en savoir plus sur le modèle de référentiel) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
 ### <a name="unit-of-work-pattern"></a>Modèle Unité de travail
 
--   **Martin Fowler. Unit of Work pattern.**
+-   **Martin Fowler. Unité de modèle de travail.**
     [*http://martinfowler.com/eaaCatalog/unitOfWork.html*](http://martinfowler.com/eaaCatalog/unitOfWork.html)
 
 <!-- -->
 
--   **Implémentation des modèles Dépôt et Unité de travail dans une application MVC ASP.NET**
+-   **Implémentation du dépôt et des modèles d’unité de travail dans une application ASP.NET MVC**
     [*https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application*](https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
 
 ### <a name="the-specification-pattern"></a>Le modèle Spécification
 
--   **The Specification pattern.**
+-   **Le modèle de spécification.**
     [*http://deviq.com/specification-pattern/*](http://deviq.com/specification-pattern/)
 
 -   **Evans, Eric (2004). Domain Driven Design. Addison-Wesley. p. 224.**

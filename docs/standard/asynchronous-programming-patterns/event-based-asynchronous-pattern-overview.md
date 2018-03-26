@@ -1,12 +1,12 @@
 ---
-title: "Vue d’ensemble du modèle asynchrone basé sur des événements"
-ms.custom: 
+title: Vue d’ensemble du modèle asynchrone basé sur des événements
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,7 +22,7 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-caps.latest.revision: 
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
@@ -30,15 +30,15 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: efe136ceb87213c5f9911b24a8a522b29a37b384
-ms.sourcegitcommit: 957c696f25e39f923a827fc3ad5e8ab72768838c
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>Vue d’ensemble du modèle asynchrone basé sur des événements
 Les applications qui effectuent de nombreuses tâches simultanément tout en réagissant aux interventions de l’utilisateur nécessitent souvent une conception utilisant plusieurs threads. L'espace de noms <xref:System.Threading> fournit tous les outils nécessaires à la création d'applications multithread de hautes performances, mais l'utilisation de ces outils suppose une connaissance approfondie de l'ingénierie logicielle multithread. Pour les applications multithread relativement simples, le composant <xref:System.ComponentModel.BackgroundWorker> fournit une solution simple. Pour les applications asynchrones plus sophistiquées, envisagez l'implémentation d'une classe obéissant au modèle asynchrone basé sur les événements.  
   
- Le modèle asynchrone basé sur les événements permet de profiter des avantages des applications multithread tout en masquant de nombreux problèmes complexes inhérents à la conception multithread. L’utilisation d’une classe prenant en charge ce modèle peut vous permettre :  
+ Le modèle asynchrone basé sur les événements permet de profiter des avantages des applications multithread tout en masquant de nombreux problèmes complexes inhérents à la conception multithread. L'utilisation d'une classe prenant en charge ce modèle peut vous permettre :  
   
 -   d'effectuer, « en arrière-plan », des tâches de longue durée, telles que des téléchargements et des opérations de base de données, sans interrompre votre application ;  
   
@@ -116,7 +116,7 @@ public class AsyncExample
 }  
 ```  
   
- La classe `AsyncExample` fictive possède deux méthodes qui prennent en charge les appels synchrones et asynchrones. Les surcharges synchrones se comportent comme tout appel de méthode et exécutent l’opération sur le thread appelant ; si l’opération est de longue durée, le délai de retour de l’appel peut être important. Les surcharges asynchrones démarrent l'opération sur un autre thread, puis elles sont retournées immédiatement, permettant au thread appelant de continuer pendant l'exécution de l'opération « en arrière-plan ».  
+ La classe `AsyncExample` fictive possède deux méthodes qui prennent en charge les appels synchrones et asynchrones. Les surcharges synchrones se comportent comme tout appel de méthode et exécutent l'opération sur le thread appelant ; si l'opération est de longue durée, le délai de retour de l'appel peut être important. Les surcharges asynchrones démarrent l'opération sur un autre thread, puis elles sont retournées immédiatement, permettant au thread appelant de continuer pendant l'exécution de l'opération « en arrière-plan ».  
   
 ### <a name="asynchronous-method-overloads"></a>Surcharges de méthode asynchrone  
  Il existe potentiellement deux surcharges pour les opérations asynchrones : l'appel unique et les appels multiples. Ces deux surcharges se distinguent par leurs signatures de méthode : la surcharge d'appels multiples possède un paramètre supplémentaire appelé `userState`. Elle permet à votre code d'appeler `Method1Async(string param, object userState)` plusieurs fois sans attendre que les opérations asynchrones en attente se terminent. En revanche, si vous tentez d'appeler `Method1Async(string param)` avant qu'un appel antérieur soit terminé, la méthode lève une <xref:System.InvalidOperationException>.  

@@ -1,24 +1,26 @@
 ---
 title: Migration de votre application du Windows Store vers .NET Native
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
-caps.latest.revision: "29"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: ce23d66f79f94af74250cff137499f6c8b1582ac
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>Migration de votre application du Windows Store vers .NET Native
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] fournit une compilation statique des applications dans le Windows Store ou sur l'ordinateur du développeur. Cela diffère de la compilation dynamique effectuée pour les applications du Windows Store par le compilateur juste-à-temps (JIT) ou le [générateur d'images natives (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) sur l'appareil. Malgré les différences, [!INCLUDE[net_native](../../../includes/net-native-md.md)] essaie d’assurer la compatibilité avec [.NET pour les applications du Windows Store](http://msdn.microsoft.com/library/windows/apps/br230302.aspx). Pour l'essentiel, les éléments qui fonctionnent sur .NET pour les applications du Windows Store fonctionnent également avec [!INCLUDE[net_native](../../../includes/net-native-md.md)].  Toutefois, dans certains cas, vous pouvez rencontrer des changements de comportement. Ce document traite de ces différences entre la version .NET standard pour les applications du Windows Store et [!INCLUDE[net_native](../../../includes/net-native-md.md)] dans les domaines suivants :  
@@ -166,7 +168,7 @@ ms.lasthandoff: 12/22/2017
   
 -   La méthode <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> traite correctement les chaînes qui contiennent des dates courtes dans [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Toutefois, elle n’assure pas la compatibilité avec les changements apportés à l’analyse des dates et heures, décrits dans les articles de la Base de connaissances Microsoft [KB2803771](http://support.microsoft.com/kb/2803771) et [KB2803755](http://support.microsoft.com/kb/2803755).  
   
--   <xref:System.Numerics.BigInteger.ToString%2A?displayProperty=nameWithType>`("E")` est arrondi correctement dans [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Dans certaines versions du CLR, la chaîne de résultat est tronquée et non arrondie.  
+-   <xref:System.Numerics.BigInteger.ToString%2A?displayProperty=nameWithType> `("E")` est arrondi correctement dans [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Dans certaines versions du CLR, la chaîne de résultat est tronquée et non arrondie.  
   
 <a name="HttpClient"></a>   
 ### <a name="httpclient-differences"></a>Différences pour HttpClient  
@@ -230,7 +232,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Runtime.InteropServices.UnmanagedType.SafeArray?displayProperty=nameWithType>|  
 |<xref:System.Runtime.InteropServices.VarEnum?displayProperty=nameWithType>|  
   
- <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType>est pris en charge, mais elle lève une exception dans certains scénarios, tels que lorsqu’il est utilisé avec [IDispatch](http://msdn.microsoft.com/library/windows/apps/ms221608.aspx) ou des variants byref.  
+ <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> est pris en charge, mais elle lève une exception dans certains scénarios, tels que lorsqu’il est utilisé avec [IDispatch](http://msdn.microsoft.com/library/windows/apps/ms221608.aspx) ou des variants byref.  
   
  API déconseillées pour la prise en charge de [IDispatch](http://msdn.microsoft.com/library/windows/apps/ms221608.aspx) :  
   

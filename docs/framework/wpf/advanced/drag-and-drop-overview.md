@@ -1,12 +1,13 @@
 ---
-title: "Vue d'ensemble du glisser-déplacer"
-ms.custom: 
+title: Vue d'ensemble du glisser-déplacer
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -19,16 +20,17 @@ helpviewer_keywords:
 - drag-and-drop [WPF], events
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
-caps.latest.revision: "31"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: b7a69a4dcd5fc39b700bf9c3404e70d581509ebc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="drag-and-drop-overview"></a>Vue d'ensemble du glisser-déplacer
 Cette rubrique offre une vue d'ensemble de la prise en charge du glisser-déplacer dans les applications [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Le glisser-déplacer fait généralement référence à une méthode de transfert de données qui implique l'utilisation d'une souris (ou d'un autre dispositif de pointage) pour sélectionner un ou plusieurs objets, les faire glisser vers une cible de déplacement souhaitée dans l'[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] et les y déplacer.  

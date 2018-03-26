@@ -1,9 +1,9 @@
 ---
-title: "Propriété de valeur XML (Visual Basic)"
+title: Propriété de valeur XML (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - XML axis [Visual Basic], Value
 - XML Value property [Visual Basic]
 ms.assetid: 7ddd057a-a195-4e9b-ad8b-2ee0e615a20f
-caps.latest.revision: 
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: d9294c2d1d83dce3bca2abc22ee9c70296fc8014
-ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="xml-value-property-visual-basic"></a>Propriété de valeur XML (Visual Basic)
 Fournit l’accès à la valeur du premier élément d’une collection de <xref:System.Xml.Linq.XElement> objets.  
@@ -42,7 +42,7 @@ object.Value
 ## <a name="return-value"></a>Valeur de retour  
  A `String` qui contient la valeur du premier élément de la collection, ou `Nothing` si la collection est vide.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le <xref:System.Xml.Linq.XElement.Value%2A> propriété permet d’accéder à la valeur du premier élément dans une collection de <xref:System.Xml.Linq.XElement> objets. Cette propriété vérifie d’abord si la collection contient au moins un objet. Si la collection est vide, cette propriété retourne `Nothing`. Sinon, cette propriété retourne la valeur de la <xref:System.Xml.Linq.XElement.Value%2A> propriété du premier élément dans la collection.  
   
 > [!NOTE]

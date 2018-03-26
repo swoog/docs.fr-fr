@@ -1,6 +1,6 @@
 ---
-title: "Conception d’une application orientée microservices"
-description: "Architecture de microservices .NET pour les applications .NET en conteneur | Conception d’une application orientée microservices"
+title: Conception d’une application orientée microservices
+description: Architecture de microservices .NET pour les applications .NET en conteneur | Conception d’une application orientée microservices
 keywords: Docker, microservices, ASP.NET, conteneur
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 116ddb44655f0a9708a6496cbe7fb4fbc608300b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="designing-a-microservice-oriented-application"></a>Conception d’une application orientée microservices
 
@@ -104,7 +104,7 @@ Par conséquent, les unités de déploiement pour les microservices (et même po
 
 ### <a name="additional-resources"></a>Ressources supplémentaires
 
--   **Code source de l’application de référence eShopOnContainers sur le dépôt GitHub : **
+-   **Code source de l’application de référence eShopOnContainers Code source pour l’application de référence**
     *https://aka.ms/eShopOnContainers/*
 
 ## <a name="benefits-of-a-microservice-based-solution"></a>Avantages d’une solution basée sur des microservices

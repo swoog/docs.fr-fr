@@ -1,12 +1,13 @@
 ---
-title: "Syntaxe XAML pour les tracés"
-ms.custom: 
+title: Syntaxe XAML pour les tracés
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - attribute usage in XAML [WPF]
@@ -14,16 +15,17 @@ helpviewer_keywords:
 - graphics [WPF], PathGeometry class
 - XAML [WPF], object element usage
 ms.assetid: b8586241-a02d-486e-9223-e1e98e047f41
-caps.latest.revision: "22"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 9cd8f9b14f114060ebec8e336c1212d61fa19c83
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="path-markup-syntax"></a>Syntaxe XAML pour les tracés
 Chemins d’accès sont décrites dans [formes et dessins de base dans WPF Overview](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md) et [vue d’ensemble de Geometry](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md), toutefois, cette rubrique décrit en détail la mini-langue puissante et plus complexe, vous pouvez utiliser pour spécifier le chemin d’accès les géométries de manière plus compacte en [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
@@ -34,7 +36,7 @@ Chemins d’accès sont décrites dans [formes et dessins de base dans WPF Overv
   
 <a name="abouthisdocument"></a>   
 ## <a name="streamgeometry-and-pathfigurecollection-mini-languages"></a>Mini langages StreamGeometry et PathFigureCollection  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]fournit deux classes qui fournissent des mini-langages pour décrire les chemins d’accès géométriques : <xref:System.Windows.Media.StreamGeometry> et <xref:System.Windows.Media.PathFigureCollection>.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fournit deux classes qui fournissent des mini-langages pour décrire les chemins d’accès géométriques : <xref:System.Windows.Media.StreamGeometry> et <xref:System.Windows.Media.PathFigureCollection>.  
   
 -   Vous utilisez la <xref:System.Windows.Media.StreamGeometry> mini langage lors de la définition d’une propriété de type <xref:System.Windows.Media.Geometry>, telles que la <xref:System.Windows.UIElement.Clip%2A> propriété d’un <xref:System.Windows.UIElement> ou <xref:System.Windows.Shapes.Path.Data%2A> propriété d’un <xref:System.Windows.Shapes.Path> élément. L’exemple suivant utilise la syntaxe d’attribut pour créer un <xref:System.Windows.Media.StreamGeometry>.  
   
@@ -58,17 +60,17 @@ Chemins d’accès sont décrites dans [formes et dessins de base dans WPF Overv
   
 |Utilisation d’attribut XAML pour StreamGeometry|  
 |-----------------------------------------|  
-|`<`*objet* *propriété* `="`[ `fillRule`] `figureDescription`[ `figureDescription`] *`" ... />`|  
+|`<` *object* *property* `="`[ `fillRule`] `figureDescription`[ `figureDescription`]* `" ... />`|  
   
  Le [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] attribut syntaxe d’utilisation pour un <xref:System.Windows.Media.PathFigureCollection> est composé d’une ou plusieurs descriptions de figure.  
   
 |Utilisation d’attributs XAML pour PathFigureCollection|  
 |-----------------------------------------------|  
-|`<`*objet* *propriété* `="` `figureDescription`[ `figureDescription`] *`" ... />`|  
+|`<` *object* *property* `="` `figureDescription`[ `figureDescription`]* `" ... />`|  
   
 |Terme|Description|  
 |----------|-----------------|  
-|*fillRule*|<xref:System.Windows.Media.FillRule?displayProperty=nameWithType><br /><br /> Spécifie si le <xref:System.Windows.Media.StreamGeometry> utilise le <xref:System.Windows.Media.FillRule.EvenOdd> ou <xref:System.Windows.Media.FillRule.Nonzero> <xref:System.Windows.Media.PathGeometry.FillRule%2A>.<br /><br /> -   `F0`Spécifie la <xref:System.Windows.Media.FillRule.EvenOdd> règle de remplissage.<br />-   `F1`Spécifie la <xref:System.Windows.Media.FillRule.Nonzero> règle de remplissage.<br /><br /> Si vous omettez cette commande, le sous-tracé utilise le comportement par défaut, qui est <xref:System.Windows.Media.FillRule.EvenOdd>. Si vous spécifiez cette commande, vous devez la placer en premier.|  
+|*fillRule*|<xref:System.Windows.Media.FillRule?displayProperty=nameWithType><br /><br /> Spécifie si le <xref:System.Windows.Media.StreamGeometry> utilise le <xref:System.Windows.Media.FillRule.EvenOdd> ou <xref:System.Windows.Media.FillRule.Nonzero> <xref:System.Windows.Media.PathGeometry.FillRule%2A>.<br /><br /> -   `F0` Spécifie la <xref:System.Windows.Media.FillRule.EvenOdd> règle de remplissage.<br />-   `F1` Spécifie la <xref:System.Windows.Media.FillRule.Nonzero> règle de remplissage.<br /><br /> Si vous omettez cette commande, le sous-tracé utilise le comportement par défaut, qui est <xref:System.Windows.Media.FillRule.EvenOdd>. Si vous spécifiez cette commande, vous devez la placer en premier.|  
 |*figureDescription*|Une figure composée d’une commande move, de commandes draw et d’une commande close facultative.<br /><br /> `moveCommand` `drawCommands`  `[` `closeCommand` `]`|  
 |*moveCommand*|Une commande move qui spécifie le point de départ de la figure. Consultez le [commande Déplacer](#themovecommand) section.|  
 |*drawCommands*|Une ou plusieurs commandes draw qui décrivent le contenu de la figure. Consultez le [commandes de dessin](#drawcommands) section.|  
@@ -95,7 +97,7 @@ Chemins d’accès sont décrites dans [formes et dessins de base dans WPF Overv
  Vous entrez chaque commande en utilisant une majuscule ou une minuscule : les majuscules indiquent des valeurs absolues et les minuscules indiquent des valeurs relatives : les points de contrôle pour ce segment sont relatifs au point de fin de l’exemple précédent. Lorsque vous entrez plusieurs commandes du même type, vous pouvez omettre l’entrée de commande en double. par exemple, `L 100,200 300,400` équivaut à `L 100,200 L 300,400`. Le tableau suivant décrit les **déplacer** et **dessiner** commandes.  
   
 ### <a name="line-command"></a>Commande line  
- Crée une ligne droite entre le point actuel et le point de fin spécifié. `l 20 30`et `L 20,30` sont des exemples de valide **ligne** commandes.  
+ Crée une ligne droite entre le point actuel et le point de fin spécifié. `l 20 30` et `L 20,30` sont des exemples de valide **ligne** commandes.  
   
 |Syntaxe|  
 |------------|  

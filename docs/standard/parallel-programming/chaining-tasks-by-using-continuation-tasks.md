@@ -1,12 +1,12 @@
 ---
-title: "Chaînage des tâches à l’aide de tâches de continuation"
-ms.custom: 
+title: Chaînage des tâches à l’aide de tâches de continuation
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -14,7 +14,7 @@ dev_langs:
 helpviewer_keywords:
 - tasks, continuations
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
-caps.latest.revision: 
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
@@ -22,15 +22,15 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: b8e21c338648d5925c8576f76dae3aae43a9ca0d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>Chaînage des tâches à l’aide de tâches de continuation
 En programmation asynchrone, il est très courant pour une opération asynchrone, une fois terminée, d'appeler une deuxième opération et de lui passer des données. Habituellement, cela se fait à l'aide des méthodes de rappel. Dans la bibliothèque parallèle de tâches, les mêmes fonctionnalités sont fournies par les *tâches de continuation*. Une tâche de continuation (également appelée continuation) est une tâche asynchrone appelée par une autre tâche, appelée *antécédent*, quand ce dernier est terminé.  
   
- Les continuations sont relativement faciles à utiliser, mais sont néanmoins très puissantes et souples. Par exemple, vous pouvez :  
+ Les continuations sont relativement faciles à utiliser, mais sont néanmoins très puissantes et souples. Par exemple, vous pouvez :  
   
 -   passer des données de l'antécédent à la continuation ;  
   

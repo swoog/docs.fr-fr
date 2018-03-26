@@ -1,6 +1,6 @@
 ---
-title: "Utiliser le modèle syntaxique du SDK .NET Compiler Platform"
-description: "Cette présentation fournit des informations sur les types que vous utilisez pour comprendre et manipuler les nœuds de syntaxe."
+title: Utiliser le modèle syntaxique du SDK .NET Compiler Platform
+description: Cette présentation fournit des informations sur les types que vous utilisez pour comprendre et manipuler les nœuds de syntaxe.
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/15/2017
@@ -9,10 +9,10 @@ ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
 ms.openlocfilehash: 09d07e6257ad7d32d75328a8c1850888b4d0b937
-ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/05/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="work-with-syntax"></a>Utiliser la syntaxe
 
@@ -69,13 +69,13 @@ Contrairement aux nœuds et jetons de syntaxe, les trivia de syntaxe n’ont pas
 
 Chaque nœud, jeton ou trivia connaît sa position dans le texte source et le nombre de caractères qui le composent. La position du texte est représentée par un entier 32 bits, qui est un index `char` de base zéro. L’objet <xref:Microsoft.CodeAnalysis.Text.TextSpan> représente la position de début et le nombre de caractères sous forme de deux entiers. Si <xref:Microsoft.CodeAnalysis.Text.TextSpan> a une longueur nulle, il fait référence à une position entre deux caractères.
 
-Chaque nœud a deux propriétés <xref:Microsoft.CodeAnalysis.Text.TextSpan> : <xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> et <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*>. 
+Chaque nœud possède deux <xref:Microsoft.CodeAnalysis.Text.TextSpan> propriétés : <xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> et <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*>. 
 
 La propriété <xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> définit l’étendue de texte comprise entre le début du premier jeton dans la sous-arborescence du nœud et la fin du dernier jeton. Cette étendue n’inclut pas les trivia de début ou de fin.
 
 La propriété <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*> définit l’étendue de texte qui inclut l’étendue du nœud, plus l’étendue des trivia de début ou de fin.
 
-Exemple : 
+Exemple : 
 
 ``` csharp
       if (x > 3)
@@ -89,7 +89,7 @@ L’étendue du nœud de l’instruction dans le bloc est délimitée par deux b
 
 ## <a name="kinds"></a>Genres
 
-Chaque nœud, jeton ou trivia a une propriété <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType> de type <xref:System.Int32?displayProperty=nameWithType>, qui identifie précisément l’élément de syntaxe représenté. Cette valeur peut être castée en une énumération spécifique au langage. Les langages C# et VB ont chacun une énumération `SyntaxKind` unique (<xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> et <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>, respectivement) qui répertorie tous les nœuds, jetons et trivia acceptés dans leur grammaire. Cette conversion peut être effectuée automatiquement en accédant aux méthodes d’extension <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*?displayProperty=nameWithType> ou <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind*?displayProperty=nameWithType>.
+Chaque nœud, jeton ou trivia a une propriété <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType> de type <xref:System.Int32?displayProperty=nameWithType>, qui identifie précisément l’élément de syntaxe représenté. Cette valeur peut être castée en une énumération spécifique au langage. Les langages C# et VB ont chacun une énumération `SyntaxKind` unique (<xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> et <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>, respectivement) qui répertorie tous les nœuds, jetons et trivia acceptés dans leur grammaire. Cette conversion peut être effectuée automatiquement en accédant à la <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*?displayProperty=nameWithType> ou <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind*?displayProperty=nameWithType> les méthodes d’extension.
 
 La propriété <xref:Microsoft.CodeAnalysis.SyntaxToken.RawKind> permet de lever facilement toute ambiguïté sur les types de nœud de syntaxe qui utilisent la même classe de nœud. Pour les jetons et les trivia, cette propriété est le seul moyen de différencier les types d’élément entre eux. 
 

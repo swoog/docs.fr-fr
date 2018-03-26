@@ -1,33 +1,35 @@
 ---
 title: '&lt;textMessageEncoding&gt;'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e6d834d0-356e-45eb-b530-bbefbb9ec3f0
-caps.latest.revision: "14"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 5ac17ead3c7054f0125527e3992fe865624770a9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="lttextmessageencodinggt"></a>&lt;textMessageEncoding&gt;
 Spécifie l'encodage de caractères et le suivi des versions de message utilisés pour les messages XML textuels.  
   
- \<system.serviceModel >  
-\<liaisons >  
-\<customBinding >  
-\<liaison >  
-\<textMessageEncoding >  
+ \<system.serviceModel>  
+\<bindings>  
+\<customBinding>  
+\<binding>  
+\<textMessageEncoding>  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,20 +49,20 @@ Spécifie l'encodage de caractères et le suivi des versions de message utilisé
 |---------------|-----------------|  
 |maxReadPoolSize|Entier qui spécifie combien de messages peuvent être lus de manière simultanée sans allouer de nouveaux lecteurs. Des pools plus volumineux permettent au système d'être plus tolérant aux pics d'activité au prix d'une plage de travail plus volumineuse. La valeur par défaut est 64.|  
 |maxWritePoolSize|Entier qui spécifie combien de messages peuvent être envoyés simultanément sans allouer de nouveaux enregistreurs. Des pools plus volumineux permettent au système d'être plus tolérant aux pics d'activité au prix d'une plage de travail plus volumineuse. La valeur par défaut est 16.|  
-|messageVersion|Spécifie la version SOAP des messages envoyés à l'aide de la liaison. Les valeurs valides sont les suivantes :<br /><br /> -Soap11Addressing10<br />-Soap12Addressing10<br /><br /> La valeur par défaut est Soap12Addressing10. Cet attribut est de type <xref:System.ServiceModel.Channels.MessageVersion>.|  
+|messageVersion|Spécifie la version SOAP des messages envoyés à l'aide de la liaison. Les valeurs valides sont les suivantes :<br /><br /> -   Soap11Addressing10<br />-   Soap12Addressing10<br /><br /> La valeur par défaut est Soap12Addressing10. Cet attribut est de type <xref:System.ServiceModel.Channels.MessageVersion>.|  
 |writeEncoding|Spécifie l'encodage de jeu de caractères à utiliser pour l'émission de messages sur la liaison. Les valeurs valides sont les suivantes :<br /><br /> -UnicodeFffeTextEncoding : Unicode BigEndian encodage<br />-Utf16TextEncoding : L’encodage Unicode<br />-Utf8TextEncoding : encodage de 8 bits<br /><br /> La valeur par défaut est Utf8TextEncoding. Cet attribut est de type <xref:System.Text.Encoding>.|  
   
 ### <a name="child-elements"></a>Éléments enfants  
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<readerQuotas >](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Définit les contraintes sur la complexité des messages SOAP pouvant être traités par les points de terminaison configurés avec cette liaison. Cet élément est de type <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
+|[\<readerQuotas>](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Définit les contraintes sur la complexité des messages SOAP pouvant être traités par les points de terminaison configurés avec cette liaison. Cet élément est de type <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
   
 ### <a name="parent-elements"></a>Éléments parents  
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<liaison >](../../../../../docs/framework/misc/binding.md)|Définit toutes les fonctions de liaison d’une liaison personnalisée.|  
+|[\<binding>](../../../../../docs/framework/misc/binding.md)|Définit toutes les fonctions de liaison d’une liaison personnalisée.|  
   
 ## <a name="remarks"></a>Notes  
  L'encodage est le processus de transformation d'un message en une séquence d'octets. Le décodage est le processus inverse. Windows Communication Foundation (WCF) inclut trois types d'encodage des messages SOAP : Texte, Binaire et MTOM (Message Transmission Optimization Mechanism).  
@@ -86,4 +88,4 @@ Spécifie l'encodage de caractères et le suivi des versions de message utilisé
  [Liaisons](../../../../../docs/framework/wcf/bindings.md)  
  [Extension de liaisons](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [Liaisons personnalisées](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+ [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
