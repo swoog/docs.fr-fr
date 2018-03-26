@@ -1,1 +1,1 @@
-<span data-ttu-id="2bed6-101">Microsoft SQL Server 2005</span><span class="sxs-lookup"><span data-stu-id="2bed6-101">Microsoft SQL Server 2005</span></span>
+<span data-ttu-id="1b4a1-101">Microsoft SQL Server 2005</span><span class="sxs-lookup"><span data-stu-id="1b4a1-101">Microsoft SQL Server 2005</span></span>

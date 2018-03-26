@@ -1,1 +1,1 @@
-<span data-ttu-id="6e825-101">XML</span><span class="sxs-lookup"><span data-stu-id="6e825-101">XML</span></span>
+<span data-ttu-id="202f4-101">XML</span><span class="sxs-lookup"><span data-stu-id="202f4-101">XML</span></span>
