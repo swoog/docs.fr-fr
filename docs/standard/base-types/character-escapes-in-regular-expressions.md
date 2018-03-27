@@ -1,12 +1,12 @@
 ---
-title: "Caractères d'échappement dans les expressions régulières"
-ms.custom: 
+title: Caractères d'échappement dans les expressions régulières
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -20,7 +20,7 @@ helpviewer_keywords:
 - .NET Framework regular expressions, character escapes
 - constructs, character escapes
 ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
-caps.latest.revision: 
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
@@ -28,10 +28,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 8a4ec10bfa332c8caafce57385791d8069a7231a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="character-escapes-in-regular-expressions"></a>Caractères d'échappement dans les expressions régulières
 La barre oblique inverse (\\) dans une expression régulière indique une des possibilités suivantes :  
@@ -48,7 +48,7 @@ La barre oblique inverse (\\) dans une expression régulière indique une des po
   
 |Caractère ou séquence|Description|  
 |---------------------------|-----------------|  
-|Tous les caractères à l'exception des suivants :<br /><br /> . $ ^ { [ ( &#124; ) * + ? \|Les caractères autres que ceux répertoriés dans la colonne **Caractère ou séquence** n’ont pas de signification spéciale dans les expressions régulières ; ils ne correspondent qu’à eux-mêmes.<br /><br /> Les caractères inclus dans la colonne **Caractère ou séquence** sont des éléments spéciaux du langage des expressions régulières. Pour les faire correspondre dans une expression régulière, ils doivent être utilisés avec un caractère d’échappement ou inclus dans un [groupe de caractères positif](../../../docs/standard/base-types/character-classes-in-regular-expressions.md). Par exemple, l'expression régulière `\$\d+` ou `[$]\d+` est en correspondance avec "$1200".|  
+|Tous les caractères à l'exception des suivants :<br /><br /> . $ ^ { [ ( &#124; ) * + ? \|Caractères autres que ceux répertoriés dans le **caractère ou séquence** colonne n’ont aucune signification spéciale dans les expressions régulières ; ils correspondent à eux-mêmes.<br /><br /> Les caractères inclus dans la colonne **Caractère ou séquence** sont des éléments spéciaux du langage des expressions régulières. Pour les faire correspondre dans une expression régulière, ils doivent être utilisés avec un caractère d’échappement ou inclus dans un [groupe de caractères positif](../../../docs/standard/base-types/character-classes-in-regular-expressions.md). Par exemple, l'expression régulière `\$\d+` ou `[$]\d+` est en correspondance avec "$1200".|  
 |`\a`|Correspond à un caractère représentant une cloche (alarme), `\u0007`.|  
 |`\b`|Dans une classe de caractères `[`*groupe_caractères*`]`, correspond à un retour arrière, `\u0008`.  (Voir [Classes de caractères](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).) En dehors d'une classe de caractères, `\b` est une ancre qui correspond à une limite de mot. (Voir [Ancres](../../../docs/standard/base-types/anchors-in-regular-expressions.md).)|  
 |`\t`|Correspond à une tabulation, `\u0009`.|  
@@ -60,7 +60,7 @@ La barre oblique inverse (\\) dans une expression régulière indique une des po
 |`\` *nnn*|Correspond à un caractère ASCII, où *nnn* est constitué de deux ou trois chiffres qui représentent le code octal du caractère. Par exemple, `\040` représente un espace. Cette construction est interprétée comme une référence arrière si elle a un seul chiffre (par exemple `\2`) ou si elle correspond au nombre d'un groupe de capture. (Voir [Constructions de référence arrière](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md).)|  
 |`\x` *nn*|Correspond à un caractère ASCII, où *nn* est un code hexadécimal à deux chiffres d’un caractère.|  
 |`\c` *X*|Correspond à un caractère de contrôle ASCII, où X est la lettre du caractère de contrôle. Par exemple, `\cC` est Ctrl-C.|  
-|`\u` *nnnn*|Correspond à une unité de code UTF-16 dont la valeur est *nnnn* en hexadécimal. **Remarque :** La séquence d’échappement des caractères de Perl 5 utilisée pour spécifier Unicode n’est pas prise en charge par .NET. La séquence d'échappement des caractères de Perl 5 a la forme `\x{`*####*`…}`, où *####*`…` est une série de chiffres hexadécimaux. Utilisez plutôt `\u`*nnnn*.|  
+|`\u` *nnnn*|Correspond à une unité de code UTF-16 dont la valeur est *nnnn* en hexadécimal. **Remarque :** La séquence d’échappement des caractères de Perl 5 utilisée pour spécifier Unicode n’est pas prise en charge par .NET. La séquence d'échappement des caractères de Perl 5 a la forme `\x{`*####*`…}`, où *####*`…` est une série de chiffres hexadécimaux. Utilisez à la place `\u`*nnnn*.|  
 |`\`|Quand ce caractère d'échappement est suivi d'un caractère non reconnu comme caractère d'échappement, correspond au caractère lui-même. Par exemple, `\*` correspond à un astérisque (*) et est identique à `\x2A`.|  
   
 ## <a name="an-example"></a>Exemple  
@@ -71,7 +71,7 @@ La barre oblique inverse (\\) dans une expression régulière indique une des po
   
  L'expression régulière `\G(.+)[\t|\u007c](.+)\r?\n` est interprétée comme indiqué dans le tableau suivant.  
   
-|Motif|Description|  
+|Modèle|Description|  
 |-------------|-----------------|  
 |`\G`|Commencer la correspondance là où la dernière correspondance s'est terminée.|  
 |`(.+)`|Faire correspondre à n'importe quel caractère une ou plusieurs fois. Il s'agit du premier groupe de capture.|  
