@@ -1,6 +1,6 @@
 ---
-title: "Workflow de développement des applications Docker"
-description: "Architecture des microservices .NET pour les applications .NET en conteneur | Workflow de développement des applications Docker"
+title: Workflow de développement des applications Docker
+description: Architecture des microservices .NET pour les applications .NET en conteneur | Workflow de développement des applications Docker
 keywords: Docker, microservices, ASP.NET, conteneur
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 8537b1db27f512ec0bfc2f23589efe8199ca3287
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: 9c3df50430117936fd0b9d4390cb84e02085e48d
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="development-workflow-for-docker-apps"></a>Workflow de développement des applications Docker
 
@@ -351,7 +351,7 @@ Avec [DC/OS](https://mesosphere.com/blog/2015/09/02/dcos-cli-command-line-tool-d
 
 ## <a name="step-6-test-your-docker-application-using-your-local-docker-host"></a>Étape 6. Tester votre application Docker à l’aide de l’hôte Docker local
 
-Cette étape varie en fonction de ce que fait votre application. Dans une application web .NET Core simple qui est déployée en tant que service ou conteneur unique, vous pouvez accéder au service en ouvrant un navigateur sur l’hôte Docker et en accédant à ce site comme indiqué à la figure 5-13. (Si la configuration dans le fichier Dockerfile mappe le conteneur à un autre port sur l’hôte que le port 80, incluez l’adresse de l’hôte dans l’URL.)
+Cette étape varie en fonction de ce que fait votre application. Dans une application web .NET Core simple qui est déployée en tant que service ou conteneur unique, vous pouvez accéder au service en ouvrant un navigateur sur l’hôte Docker et en accédant à ce site comme indiqué à la figure 5-13. (Si la configuration dans le fichier Dockerfile mappe le conteneur à un autre port sur l’hôte que le port 80, incluez le port de l’hôte dans l’URL.)
 
 ![](./media/image18.png)
 
@@ -377,7 +377,7 @@ Si vous avez choisi l’approche de développement avec un éditeur ou une CLI, 
 
 ### <a name="additional-resources"></a>Ressources supplémentaires
 
--   **Débogage d’applications dans un conteneur Docker local**
+-   **Débogage des applications dans un conteneur Docker local**
     [*https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh*](https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh)
 
 -   **Steve Lasker. Build, Debug, Deploy ASP.NET Core Apps with Docker.** Vidéo.

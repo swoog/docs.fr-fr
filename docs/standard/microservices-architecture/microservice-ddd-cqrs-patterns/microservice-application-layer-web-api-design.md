@@ -1,6 +1,6 @@
 ---
-title: "Conception de la couche Application de microservices et de l’API web"
-description: "Architecture des microservices .NET pour les applications .NET en conteneur | Conception de la couche Application de microservices et de l’API web"
+title: Conception de la couche Application de microservices et de l’API web
+description: Architecture des microservices .NET pour les applications .NET en conteneur | Conception de la couche Application de microservices et de l’API web
 keywords: Docker, microservices, ASP.NET, conteneur
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c166e0286d0769e24a6361037eb6c4694fb821ae
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 87b48624fde8c7cdab097289f1cf56ab56e1173f
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="designing-the-microservice-application-layer-and-web-api"></a>Conception de la couche Application de microservices et de l’API web
 

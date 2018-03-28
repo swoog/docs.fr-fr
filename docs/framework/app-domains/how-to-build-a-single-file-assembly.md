@@ -1,12 +1,13 @@
 ---
-title: "Guide pratique pour générer un assembly à fichier unique"
-ms.custom: 
+title: Guide pratique pour générer un assembly à fichier unique
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -20,16 +21,17 @@ helpviewer_keywords:
 - code modules
 - single-file assemblies
 ms.assetid: a6063221-43a5-4d3e-814c-288a4ec69aec
-caps.latest.revision: "10"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bd9f2bab23fff1bbc4ebb521b167ac8031af3bc7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 80fa584a21a3bdfb9392021959d777139daafd04
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="how-to-build-a-single-file-assembly"></a>Guide pratique pour générer un assembly à fichier unique
 Un assembly à fichier unique, qui est le type d’assembly le plus simple, contient l’implémentation et les informations de type, ainsi que le [manifeste d’assembly](../../../docs/framework/app-domains/assembly-manifest.md). Vous pouvez utiliser des compilateurs de ligne de commande ou [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] pour créer un assembly à fichier unique. Par défaut, le compilateur crée un fichier d’assembly avec une extension .exe.  
@@ -49,11 +51,11 @@ Un assembly à fichier unique, qui est le type d’assembly le plus simple, cont
   
  L’exemple suivant crée un assembly nommé `myCode.exe` à partir d’un module de code nommé `myCode`.  
   
-```csharp  
+```console
 csc myCode.cs  
 ```  
-  
-```vb  
+
+```console
 vbc myCode.vb  
 ```  
   
@@ -67,12 +69,12 @@ vbc myCode.vb
   
  L’exemple suivant crée un assembly nommé `myAssembly.exe` à partir d’un module de code nommé `myCode`.  
   
-```csharp  
-csc /out:myAssembly.exe myCode.cs  
+```console  
+csc -out:myAssembly.exe myCode.cs  
 ```  
   
-```vb  
-vbc /out:myAssembly.exe myCode.vb  
+```console
+vbc -out:myAssembly.exe myCode.vb  
 ```  
   
 ## <a name="creating-library-assemblies"></a>Création d’assemblys de bibliothèque  
@@ -82,18 +84,18 @@ vbc /out:myAssembly.exe myCode.vb
   
 1.  À l'invite de commandes, tapez la commande suivante :  
   
-     \<*commande_du_compilateur*> **/t:library** \<*nom_du_module*>  
+     \<*commande_du_compilateur*> **-t:library** \<*nom_du_module*>  
   
-     Dans cette commande, *commande_du_compilateur* est la commande du compilateur pour le langage utilisé dans votre module de code, et *nom_du_module* est le nom du module de code à compiler dans l’assembly. Vous pouvez également utiliser d’autres options du compilateur, telles que l’option **/out:**.  
+     Dans cette commande, *commande_du_compilateur* est la commande du compilateur pour le langage utilisé dans votre module de code, et *nom_du_module* est le nom du module de code à compiler dans l’assembly. Vous pouvez également utiliser d’autres options du compilateur, telles que l’option **-out:**.  
   
  L’exemple suivant crée un assembly de bibliothèque nommé `myCodeAssembly.dll` à partir d’un module de code nommé `myCode`.  
   
-```csharp  
-csc /out:myCodeLibrary.dll /t:library myCode.cs  
+```console  
+csc -out:myCodeLibrary.dll -t:library myCode.cs  
 ```  
   
-```vb  
-vbc /out:myCodeLibrary.dll /t:library myCode.vb  
+```console
+vbc -out:myCodeLibrary.dll -t:library myCode.vb  
 ```  
   
 ## <a name="see-also"></a>Voir aussi  

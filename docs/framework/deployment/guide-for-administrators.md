@@ -1,27 +1,29 @@
 ---
-title: "Guide de déploiement du .NET Framework pour les administrateurs"
-ms.custom: 
+title: Guide de déploiement du .NET Framework pour les administrateurs
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - administrator's guide, deploying .NET Framework
 - deployment [.NET Framework], administrator's guide
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
-caps.latest.revision: "40"
+caps.latest.revision: ''
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3af5e301e57350b72ac0ea50448c7a46ca6c5387
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f57b5db5c03030d8cb930355586d0253cae13319
+ms.sourcegitcommit: 6f967c86dde55472440f0c8669b0e910ee3c53ba
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Guide de déploiement du .NET Framework pour les administrateurs
 Cet article explique étape par étape comment un administrateur système peut déployer [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] et ses dépendances système dans un réseau à l'aide de Microsoft System Center Configuration Manager (SCCM). Cet article suppose que tous les ordinateurs clients cibles ont la configuration minimale requise pour le .NET Framework. Pour obtenir la liste des configurations logicielle et matérielle requises pour installer le [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], consultez [Configuration système requise](../../../docs/framework/get-started/system-requirements.md).  
@@ -230,8 +232,7 @@ Cet article explique étape par étape comment un administrateur système peut d
 ### <a name="log-file-locations"></a>Emplacements des fichiers journaux  
  Les fichiers journaux suivants sont générés pendant l'installation du [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] :  
   
- %temp%\Microsoft .NET Framework 4.5*.txt  
- %temp%\Microsoft .NET Framework 4.5\*.html  
+ %temp%\Microsoft .NET Framework 4.5*.txt %temp%\Microsoft .NET Framework 4.5*.html  
   
  Vous pouvez utiliser l’[outil de collecte des journaux](http://www.microsoft.com/download/details.aspx?id=12493) pour collecter les fichiers journaux [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] et créer un fichier CAB compressé (.cab) afin de réduire la taille des fichiers.  
   

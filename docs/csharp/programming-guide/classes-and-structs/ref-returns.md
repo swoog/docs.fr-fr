@@ -1,6 +1,6 @@
 ---
-title: "Les valeurs de retour de référence et variables locales ref (Guide C#)"
-description: "Découvrir comment définir et utiliser des valeurs de retour de référence et des variables locales ref"
+title: Les valeurs de retour de référence et variables locales ref (Guide C#)
+description: Découvrir comment définir et utiliser des valeurs de retour de référence et des variables locales ref
 author: rpetrusha
 ms.author: ronpet
 ms.date: 01/23/2017
@@ -8,11 +8,11 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.openlocfilehash: a74563c0d24b6cd2a2fa8534787f078f3cc92674
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: c37c6dd61ae02813bcc467982f3b175da9136e4a
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="ref-returns-and-ref-locals"></a>Retours ref et variables locales ref
 
@@ -85,7 +85,15 @@ ref Person p = ref contacts.GetContactInformation("Brandie", "Best");
 
 L’utilisation ultérieure de `p` revient à utiliser la variable retournée par `GetContactInformation`, car `p` est un alias de cette variable. Les modifications apportées à `p` modifient également la variable retournée à partir de `GetContactInformation`.
 
-Notez que le mot clé `ref` est utilisé à la fois avant la déclaration de la variable locale *et* avant l’appel de la méthode. Si les deux mots clés `ref` ne sont pas inclus dans la déclaration et l’affectation de la variable, l’erreur du compilateur CS8172, « Impossible d’initialiser une variable par référence avec une valeur » est générée. 
+Notez que le mot clé `ref` est utilisé à la fois avant la déclaration de la variable locale *et* avant l’appel de la méthode. 
+
+Vous pouvez accéder à une valeur par référence de la même façon. Dans certains cas, l’accès à une valeur par référence augmente les performances en évitant une opération de copie potentiellement coûteuse. Par exemple, l’instruction suivante montre comment il est possible de définir une valeur locale ref qui est utilisée pour référencer une valeur.
+
+```csharp
+ref VeryLargeStruct reflocal = ref veryLargeStruct;
+```
+
+Notez que le mot clé `ref` est utilisé à la fois avant la déclaration de la variable locale *et* avant la valeur du second exemple. Si les deux mots clés `ref` ne sont pas inclus dans la déclaration et l’affectation de la variable dans les deux exemples, l’erreur du compilateur CS8172, « Impossible d’initialiser une variable par référence avec une valeur » est générée. 
  
 ## <a name="ref-returns-and-ref-locals-an-example"></a>Retours ref et variables locales ref : exemple
 
@@ -101,4 +109,5 @@ Si les valeurs de retour de référence ne sont pas prises en charge, une telle 
  
 ## <a name="see-also"></a>Voir aussi
 
-[ref, mot clé](../../language-reference/keywords/ref.md)
+[ref, mot clé](../../language-reference/keywords/ref.md)  
+[Sémantique de référence avec les types valeur](../../../csharp/reference-semantics-with-value-types.md)

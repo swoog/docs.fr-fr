@@ -1,5 +1,5 @@
 ---
-title: "in, modificateur de paramètre (référence C#)"
+title: in, modificateur de paramètre (référence C#)
 ms.date: 03/06/2018
 ms.prod: .net
 ms.technology:
@@ -10,11 +10,11 @@ helpviewer_keywords:
 - in parameters [C#]
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 035aac3e6b902f607e533b709713eb1d07c9774a
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 9b8b21e2bdc95829c831ee71f24b47986321b7d0
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="in-parameter-modifier-c-reference"></a>in, modificateur de paramètre (référence C#)
 
@@ -60,7 +60,10 @@ Vous ne pouvez pas utiliser les mots clés `in`, `ref` ou `out` pour les types d
   
 - Les méthodes Iterator, qui incluent une instruction [yield return](../../../csharp/language-reference/keywords/yield.md) ou `yield break`.  
 
-En général, vous déclarez des arguments `in` afin d’éviter les opérations de copie nécessaires pour passer des arguments par valeur. Cela est particulièrement utile quand les arguments sont des structures ou des tableaux de structures.
+En général, vous déclarez des arguments `in` afin d’éviter les opérations de copie nécessaires pour passer des arguments par valeur. C’est particulièrement utile lorsque les arguments sont des types valeur tels que les structures où les opérations de copie sont plus coûteuses que le passage par référence.
+
+> [!WARNING]
+>  Les paramètres `in` peuvent être encore plus coûteux s’ils sont utilisés à mauvais escient. Le compilateur risque de ne pas savoir si les méthodes de membres modifient l’état du struct. Quand le compilateur ne peut pas assurer que l’objet n’est pas modifié, il crée une copie défensive et appelle les références de membre à l’aide de cette copie. Toutes les modifications possibles sont apportées à cette copie défensive. Les deux façons d’éviter ces copies consistent à passer les paramètres `in` comme arguments `in` ou à définir des structures comme `readonly struct`.
 
 ## <a name="c-language-specification"></a>Spécification du langage C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
@@ -69,4 +72,5 @@ En général, vous déclarez des arguments `in` afin d’éviter les opérations
  [Référence C#](../../../csharp/language-reference/index.md)  
  [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
  [Mots clés C#](../../../csharp/language-reference/keywords/index.md)  
- [Paramètres de méthodes](../../../csharp/language-reference/keywords/method-parameters.md)
+ [Paramètres de méthodes](../../../csharp/language-reference/keywords/method-parameters.md)  
+ [Sémantique de référence avec les types valeur](../../../csharp/reference-semantics-with-value-types.md)

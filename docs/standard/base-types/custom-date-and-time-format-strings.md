@@ -1,12 +1,8 @@
 ---
-title: "Chaînes de format de date et d'heure personnalisées"
-ms.custom: 
+title: Chaînes de format de date et d'heure personnalisées
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
@@ -20,18 +16,18 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-caps.latest.revision: 
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 503f9d593235cc81c6e2ecf43b93abb2105e0adf
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c54a5ec9cdbfd73bccd8f70befcfcff7cf8aac2d
+ms.sourcegitcommit: 6f967c86dde55472440f0c8669b0e910ee3c53ba
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="custom-date-and-time-format-strings"></a>Chaînes de format de date et d'heure personnalisées
 Une chaîne de format de date et d'heure définit la représentation textuelle d'une valeur <xref:System.DateTime> ou <xref:System.DateTimeOffset> qui résulte d'une opération de mise en forme. Elle peut également définir la représentation d'une valeur de date et d'heure qui est requise dans une opération d'analyse afin de convertir correctement la chaîne sous forme de date et d'heure. Une chaîne de format personnalisée se compose d'un ou de plusieurs spécificateurs de format de date et d'heure personnalisés. Toute chaîne autre qu’une [chaîne de format de date et d’heure standard](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) est interprétée comme une chaîne de format de date et d’heure personnalisée.  
@@ -101,7 +97,7 @@ Une chaîne de format de date et d'heure définit la représentation textuelle d
 |"/"|Séparateur de date.<br /><br /> Informations supplémentaires : [Spécificateur de format personnalisé "/"](#dateSeparator).|2009-06-15T13:45:30 -> / (en-US)<br /><br /> 2009-06-15T13:45:30 -> - (ar-DZ)<br /><br /> 2009-06-15T13:45:30 -> . (tr-TR)|  
 |"*chaîne*"<br /><br /> '*chaîne*'|Délimiteur de chaîne littérale.<br /><br /> Plus d’informations : [Littéraux de caractère](#Literals).|2009-06-15T13:45:30 ("arr:" h:m t) -> arr: 1:45 P<br /><br /> 2009-06-15T13:45:30 ('arr:' h:m t) -> arr: 1:45 P|  
 |%|Définit le caractère suivant comme spécificateur de format personnalisé.<br /><br /> Informations supplémentaires : [Utilisation de spécificateurs de format personnalisés uniques](#UsingSingleSpecifiers).|2009-06-15T13:45:30 (%h) -> 1|  
-|\|Caractère d'échappement.<br /><br /> Plus d’informations : [Littéraux de caractère](#Literals) et [Utilisation du caractère d’échappement](#escape).|2009-06-15T13:45:30 (h \h) -> 1 h|  
+|Caractère d’échappement \|.<br /><br /> Plus d’informations : [Littéraux de caractère](#Literals) et [Utilisation du caractère d’échappement](#escape).|2009-06-15T13:45:30 (h \h) -> 1 h|  
 |N'importe quel autre caractère|Le caractère est copié inchangé dans la chaîne de résultat.<br /><br /> Plus d’informations : [Littéraux de caractère](#Literals).|2009-06-15T01:45:30 (arr hh:mm t) -> arr 01:45 A|  
   
  Les sections suivantes fournissent des informations supplémentaires sur chaque spécificateur de format de date et d'heure personnalisé. Sauf indication contraire, chaque spécificateur produit une représentation sous forme de chaîne identique, qu'il soit utilisé avec une valeur <xref:System.DateTime> ou une valeur <xref:System.DateTimeOffset>.  
@@ -614,7 +610,7 @@ Une chaîne de format de date et d'heure définit la représentation textuelle d
  Le spécificateur de format personnalisé ":" représente le séparateur d'heure, lequel est utilisé pour différencier les heures, les minutes et les secondes. Le séparateur d'heure localisé approprié est récupéré de la propriété <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A?displayProperty=nameWithType> de la culture actuelle ou spécifiée.  
   
 > [!NOTE]
->  Pour modifier le séparateur horaire d'une chaîne de date et heure, spécifiez le caractère de séparation dans un délimiteur de chaîne littérale. Par exemple, la chaîne de format personnalisée `hh'_'dd'_'ss` produit une chaîne de résultat dans laquelle "_ " (trait de soulignement) est toujours utilisé comme séparateur horaire. Pour modifier le séparateur horaire de toutes les dates d'une culture, modifiez la valeur de la propriété <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A?displayProperty=nameWithType> de la culture actuelle, ou instanciez un objet <xref:System.Globalization.DateTimeFormatInfo>, affectez le caractère à sa propriété <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A>, puis appelez une surcharge de la méthode de mise en forme qui inclut un paramètre <xref:System.IFormatProvider>.  
+>  Pour modifier le séparateur horaire d'une chaîne de date et heure, spécifiez le caractère de séparation dans un délimiteur de chaîne littérale. Par exemple, la chaîne de format personnalisée `hh'_'dd'_'ss` produit une chaîne de résultat dans laquelle "\_" (trait de soulignement) est toujours utilisé comme séparateur horaire. Pour modifier le séparateur horaire de toutes les dates d'une culture, modifiez la valeur de la propriété <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A?displayProperty=nameWithType> de la culture actuelle, ou instanciez un objet <xref:System.Globalization.DateTimeFormatInfo>, affectez le caractère à sa propriété <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A>, puis appelez une surcharge de la méthode de mise en forme qui inclut un paramètre <xref:System.IFormatProvider>.  
   
  Si le spécificateur de format ":" est utilisé sans autre spécificateur de format personnalisé, il est interprété comme un spécificateur de format de date et d'heure standard et lève un <xref:System.FormatException>. Pour plus d’informations sur l’utilisation d’un spécificateur de format unique, consultez [Utilisation de spécificateurs de format personnalisés uniques](#UsingSingleSpecifiers), plus loin dans cette rubrique.  
   

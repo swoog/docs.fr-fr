@@ -1,5 +1,5 @@
 ---
-title: "ref (référence C#)"
+title: ref (référence C#)
 ms.date: 03/06/2018
 ms.prod: .net
 ms.technology:
@@ -13,11 +13,11 @@ helpviewer_keywords:
 - ref keyword [C#]
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 427045317e9d7d0fe3435a486b9f761908ab5e78
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 63f984f4004cfce9694e7e7405ec2477bc370731
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="ref-c-reference"></a>ref (référence C#)
 
@@ -27,7 +27,7 @@ Le mot clé `ref` indique une valeur qui est passée par référence. Il est ut
 
 - Dans une signature de méthode, pour retourner une valeur à l’appelant par référence. Pour plus d’informations, consultez [Valeurs de retour de référence](#reference-return-values).
 
-- Dans le corps d’un membre, pour indiquer qu’une valeur de retour de référence est stockée localement sous la forme d’une référence que l’appelant a l’intention de modifier. Pour plus d’informations, consultez [Variables locales ref](#ref-locals).
+- Dans le corps d’un membre, pour indiquer qu’une valeur de retour de référence est stockée localement sous la forme d’une référence que l’appelant a l’intention de modifier, ou une variable locale accède généralement à une valeur par référence. Pour plus d’informations, consultez [Variables locales ref](#ref-locals).
 
 ## <a name="passing-an-argument-by-reference"></a>Passage d’un argument par référence
 
@@ -63,7 +63,7 @@ Toutefois, les méthodes peuvent être surchargées quand une méthode a un para
   
  Pour plus d’informations sur la manière de passer des tableaux, consultez [Passage de tableaux à l’aide de paramètres ref et out](../../../csharp/programming-guide/arrays/passing-arrays-using-ref-and-out.md).  
   
- Vous ne pouvez pas utiliser les mots clés `ref`, `in` et `out` pour les types de méthodes suivants :  
+ Vous ne pouvez pas utiliser les mots clés `ref`, `in` ou `out` pour les types de méthodes suivants :  
   
 - Méthodes async, que vous définissez à l’aide du modificateur [async](../../../csharp/language-reference/keywords/async.md).  
 - Les méthodes Iterator, qui incluent une instruction [yield return](../../../csharp/language-reference/keywords/yield.md) ou `yield break`.  
@@ -109,7 +109,13 @@ Par exemple, l’instruction suivante définit une valeur de variable locale ref
 ref decimal estValue = ref Building.GetEstimatedValue();
 ```
 
-Notez que le mot clé `ref` doit être utilisé aux deux emplacements, sans quoi le compilateur génère l’erreur CS8172, « Impossible d’initialiser une variable par référence avec une valeur ». 
+Vous pouvez accéder à une valeur par référence de la même façon. Dans certains cas, l’accès à une valeur par référence augmente les performances en évitant une opération de copie potentiellement coûteuse. Par exemple, l’instruction suivante montre comment il est possible de définir une valeur locale ref qui est utilisée pour référencer une valeur.
+
+```csharp
+ref VeryLargeStruct reflocal = ref veryLargeStruct;
+```
+
+Notez que dans les deux exemples, le mot clé `ref` doit être utilisé aux deux emplacements, sans quoi le compilateur génère l’erreur CS8172, « Impossible d’initialiser une variable par référence avec une valeur ». 
  
 ## <a name="a-ref-returns-and-ref-locals-example"></a>Exemple de retours ref et de variables locales ref
 

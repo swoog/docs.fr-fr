@@ -33,7 +33,7 @@ Cette rubrique décrit comment utiliser plusieurs commutateurs dans Svcutil.exe 
   
 -   Requête DISCO (à l’aide de la [DiscoveryClientProtocol](http://go.microsoft.com/fwlink/?LinkId=94777) de services Web ASP.NET) à l’adresse fournie.  
   
- Svcutil.exe génère le client basé sur WSDL (Web Services Description Language) ou le fichier de stratégie reçu du service. Le nom d'utilisateur principal (UPN) est généré en concaténant le nom d'utilisateur avec "@" et en ajoutant ensuite un nom de domaine qualifié complet (FQDN). Toutefois, pour les utilisateurs qui sont enregistrés sur Active Directory, ce format n’est pas valid et que l’UPN de l’outil génère provoque un échec de l’authentification Kerberos avec le message d’erreur suivant : **Échec de la tentative d’ouverture de session.** Pour résoudre ce problème, résolvez manuellement le fichier client que l'outil a généré.  
+ Svcutil.exe génère le client basé sur WSDL (Web Services Description Language) ou le fichier de stratégie reçu du service. Le nom d'utilisateur principal (UPN) est généré en concaténant le nom d'utilisateur avec "\@" et en ajoutant ensuite un nom de domaine qualifié complet (FQDN). Toutefois, pour les utilisateurs qui sont enregistrés sur Active Directory, ce format n’est pas valid et que l’UPN de l’outil génère provoque un échec de l’authentification Kerberos avec le message d’erreur suivant : **Échec de la tentative d’ouverture de session.** Pour résoudre ce problème, résolvez manuellement le fichier client que l'outil a généré.  
   
 ```  
 svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>  

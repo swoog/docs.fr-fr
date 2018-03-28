@@ -1,18 +1,19 @@
 ---
-title: "Programmation orientée objet (C#)"
+title: Programmation orientée objet (C#)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-caps.latest.revision: "4"
+caps.latest.revision: ''
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 4a7f30293bb2d50981353badfb7e373b60dcfeec
-ms.sourcegitcommit: 5fb6646b5ee3769ffb214e672041833ea4ceeb26
+ms.openlocfilehash: 6da28e97a33e962d4926a3b65d0fdf388c252d9a
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/08/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="object-oriented-programming-c"></a>Programmation orientée objet (C#)
 C# offre une prise en charge complète de la programmation orientée objet, y compris l’encapsulation, l’héritage et le polymorphisme.  
@@ -95,7 +96,7 @@ struct SampleStruct
  Pour définir un champ :  
   
 ```csharp  
-Class SampleClass  
+class SampleClass  
 {  
     public string sampleField;  
 }  
@@ -233,10 +234,10 @@ Container.Nested nestedInstance = new Container.Nested()
 |[private](../../../csharp/language-reference/keywords/private.md)|Seul le code de la même classe peut accéder au type ou au membre.|  
 |[protected](../../../csharp/language-reference/keywords/protected.md)|Seul le code de la même classe ou d'une classe dérivée peut accéder au type ou au membre.|  
 |[internal](../../../csharp/language-reference/keywords/internal.md)|Tout code du même assembly, mais pas d'un autre assembly, peut accéder au type ou au membre.|  
-|[protégée interne](../../../csharp/language-reference/keywords/protected-internal.md)|Tout code du même assembly ou toute classe dérivée dans un autre assembly peut accéder au type ou au membre.|  
-|[protégé privé](../../../csharp/language-reference/keywords/private-protected.md)|Le type ou membre accessibles par le code dans la même classe ou dans une classe dérivée dans l’assembly de la classe de base.|  
+|[protected internal](../../../csharp/language-reference/keywords/protected-internal.md)|Tout code du même assembly ou toute classe dérivée dans un autre assembly peut accéder au type ou au membre.|  
+|[private protected](../../../csharp/language-reference/keywords/private-protected.md)|Le code de la même classe ou d'une classe dérivée peut accéder au type ou au membre dans l’assembly de la classe de base.|  
   
- Pour plus d’informations, consultez [Modificateurs d’accès](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
+ Pour plus d’informations, consultez la page [Modificateurs d’accès](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
   
 ###  <a name="InstantiatingClasses"></a> Instanciation de classes  
  Pour créer un objet, vous devez instancier une classe ou créer une instance de classe.  
@@ -383,7 +384,7 @@ class SampleClass : ISampleInterface
  Pour définir une classe générique :  
   
 ```csharp  
-Public class SampleGeneric<T>   
+public class SampleGeneric<T>   
 {  
     public T Field;  
 }  

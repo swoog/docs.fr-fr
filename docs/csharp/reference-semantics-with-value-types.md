@@ -1,6 +1,6 @@
 ---
-title: "Sémantique de référence avec les types valeur"
-description: "Comprendre les fonctionnalités de langage conçues pour minimiser les structures de copie en toute sécurité"
+title: Sémantique de référence avec les types valeur
+description: Comprendre les fonctionnalités de langage conçues pour minimiser les structures de copie en toute sécurité
 author: billwagner
 ms.author: wiwagn
 ms.date: 11/10/2017
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 6e40907cab2aabcf8c8321819c99298314bcfbc5
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 8a0cfe83200d50eefa9b01ab51591a5fe0703ec0
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="reference-semantics-with-value-types"></a>Sémantique de référence avec les types valeur
 
@@ -110,6 +110,22 @@ La conservation d’un type `ref struct` comme variable allouée par la pile int
 - Vous ne pouvez pas capturer de variables `ref struct` dans des expressions lambda ou des fonctions locales.
 
 Ces restrictions vous empêchent d’utiliser accidentellement un `ref struct` d’une manière qui pourrait le promouvoir au niveau du tas managé.
+
+## <a name="readonly-ref-struct-type"></a>Type `readonly ref struct`
+
+La déclaration d’un struct comme `readonly ref` combine les avantages et les restrictions des déclarations `ref struct` et `readonly struct`. 
+
+L’exemple suivant montre la déclaration de `readonly ref struct`.
+
+```csharp
+readonly ref struct ReadOnlyRefPoint2D
+{
+    public int X { get; }
+    public int Y { get; }
+    
+    ReadOnlyRefPoint2D(int x, int y) => (X, Y) = (x, y);
+}
+```
 
 ## <a name="conclusions"></a>Conclusions
 
