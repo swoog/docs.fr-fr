@@ -1,6 +1,6 @@
 ---
 title: Guide F#
-description: "Ce guide fournit une vue d’ensemble des différents documents de formation pour F #, un langage de programmation fonctionnels qui s’exécute sur .NET."
+description: 'Ce guide fournit une vue d’ensemble des différents documents de formation pour F #, un langage de programmation fonctionnels qui s’exécute sur .NET.'
 author: jackfoxy
 ms.author: phcart
 ms.date: 03/19/2018
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: ea27fb37-dad1-4bd4-a3cc-4f5c70767ae9
-ms.openlocfilehash: 8be5ac5090e10ae9270e7eec529bd9b7c3c663fb
-ms.sourcegitcommit: 32172ca05d5dcce7ef3d327b9c8639c736e0fe2b
+ms.openlocfilehash: a101233f396368c0bc25937c49f77699cb9f8cf2
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="f-guide"></a>Guide F#
 
@@ -54,11 +54,14 @@ F # est sur la productivité son cœur. La prise en charge des outils pour F # e
 
 [Prise en main) (F # avec l’interface de ligne de base .NET](get-started/get-started-command-line.md) si vous souhaitez utiliser les outils de ligne de commande.
 
+[Prise en main F # et Xamarin](https://docs.microsoft.com/xamarin/cross-platform/platform/fsharp/) pour la programmation mobile avec F #.
+
 ## <a name="references"></a>Références
 
 [Référence du langage F #](language-reference/index.md) est la référence officielle et complète pour toutes les fonctionnalités du langage F #. Chaque article explique la syntaxe et présente des exemples de code. Vous pouvez utiliser la barre de filtre dans la table des matières pour rechercher des articles spécifiques.
 
 [Référence de bibliothèque F # Core](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-core-library-reference) est la référence d’API pour la bibliothèque principale F #.
+
 
 ## <a name="additional-guides"></a>Guides supplémentaires
 

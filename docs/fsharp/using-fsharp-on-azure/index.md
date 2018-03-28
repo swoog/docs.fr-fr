@@ -1,6 +1,6 @@
 ---
 title: Utilisation de F# dans Azure
-description: "Guide à l’aide des services Azure avec F #"
+description: 'Guide à l’aide des services Azure avec F #'
 keywords: Azure, cloud, visual f#, f#, programmation fonctionnelle, .NET, .NET Core
 author: sylvanc
 ms.author: phcart
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: FAD4D11E-703A-42D4-9F72-893D9E0F569B
-ms.openlocfilehash: 8f1d5abe0412ecf72e38c7d76ef44fdc5fd4a0f7
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 0849bc77139b4f4383e2c772f5bae62741ee2b8b
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="using-f-on-azure"></a>Utilisation de F# dans Azure
 
@@ -69,14 +69,14 @@ Vous pouvez aussi utiliser Stockage Azure conjointement avec Azure Functions en 
 * [Implémentation d’applications Spark en F# à l’aide de Mobius](https://github.com/Microsoft/Mobius/blob/master/notes/spark-fsharp-mobius.md)
 * [Exemples d’applications Spark F# à l’aide de Mobius](https://github.com/Microsoft/Mobius/tree/master/examples/fsharp)
 
-## <a name="using-azure-documentdb-with-f"></a>À l’aide d’Azure DocumentDB avec F # #
+## <a name="using-azure-cosmos-db-with-f"></a>À l’aide d’Azure Cosmos DB avec F # #
 
-[Azure DocumentDB](https://azure.microsoft.com/services/documentdb/) est un service NoSQL pour les applications hautement disponibles et distribuées globalement.
+[Base de données Azure Cosmos](https://azure.microsoft.com/services/cosmos-db) est un service NoSQL pour les applications hautement disponibles et distribués internationalement.
 
-Vous pouvez utiliser Azure DocumentDB avec F# de deux manières :
+Base de données Azure Cosmos est utilisable avec F # de deux manières :
 
-1. Soit en créant des fonctions Azure Functions en F# qui réagissent aux changements dans les collections DocumentDB ou qui provoquent de tels changements. Consultez [Déclencheurs Azure Functions pour DocumentDB](/azure/azure-functions/functions-bindings-documentdb).
-2. Soit en utilisant le [SDK .NET pour Azure](/azure/documentdb/documentdb-get-started-quickstart). Notez que ces exemples sont en C#.
+1. Grâce à la création de fonctions d’Azure) (F # qui réagir à ou de provoquer des modifications apportées aux regroupements de la base de données Azure Cosmos. Consultez [pour les fonctions d’Azure, les liaisons de base de données Azure Cosmos](/azure/azure-functions/functions-bindings-cosmosdb), ou
+2. À l’aide de la [Azure Cosmos DB .NET SDK pour l’API SQL](/azure/cosmos-db/sql-api-sdk-dotnet). Les exemples associés sont en c#.
 
 ## <a name="using-azure-event-hubs-with-f"></a>À l’aide de concentrateurs d’événements Azure avec F # #
 
@@ -119,7 +119,7 @@ Vous pouvez implémenter des minuteries en F# et les héberger sur Azure par le
 
 Vous pouvez déployer et gérer des machines virtuelles Azure par programmation à partir de scripts F# à l’aide de packages et d’API Microsoft.Azure.Management. Par exemple, consultez [Bien démarrer avec les bibliothèques de gestion pour .NET](https://msdn.microsoft.com/library/dn722415.aspx) et [Utilisation d’Azure Resource Manager](/azure/azure-resource-manager/resource-manager-deployment-model).
 
-De même, vous pouvez déployer et gérer d’autres ressources Azure à partir de scripts F# à l’aide des mêmes composants. Par exemple, vous pouvez créer des comptes de stockage, déployer Azure Cloud Services, créer des instances d’Azure DocumentDB et gérer Azure Notifcation Hubs par programmation à partir de scripts F#.
+De même, vous pouvez déployer et gérer d’autres ressources Azure à partir de scripts F# à l’aide des mêmes composants. Par exemple, vous pourrez créer des comptes de stockage, déployer des Services de cloud computing Azure, créer des instances de base de données Azure Cosmos et gérer Azure des notifications Hubs par programme à partir de scripts F #.
 
 Il est généralement inutile d’utiliser des scripts F# pour déployer et gérer des ressources. Par exemple, vous pouvez déployer des ressources Azure directement à partir de descriptions de modèles JSON paramétrables. Consultez [Modèles Azure Resource Manager](/azure/azure-resource-manager/resource-manager-template-best-practices), en particulier les exemples fournis tels que les [modèles de démarrage rapide Azure](https://azure.microsoft.com/documentation/templates/).
 
