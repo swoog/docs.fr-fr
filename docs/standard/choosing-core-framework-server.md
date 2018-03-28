@@ -1,19 +1,19 @@
 ---
 title: Choisir entre .NET Core et .NET Framework pour les applications serveur
-description: "Guide sur l’implémentation de .NET à envisager pour générer une application serveur dans .NET."
+description: Guide sur l’implémentation de .NET à envisager pour générer une application serveur dans .NET.
 author: cartermp
 ms.author: mairaw
-ms.date: 08/15/2016
+ms.date: 03/15/2018
 ms.topic: article
 ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2108125b9c01a2686d66b0ebd4e43e7ac863e223
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c07b0b760e2a46faea574eef3575409bac773942
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Choix entre .NET Core et .NET Framework pour les applications serveur
 
@@ -79,6 +79,7 @@ Dans la plupart des cas, vous ne devez pas migrer vos applications existantes ve
 ### <a name="a-need-to-use-third-party-net-libraries-or-nuget-packages-not-available-for-net-core"></a>Besoin d’utiliser des packages NuGet ou des bibliothèques .NET tiers non disponibles pour .NET Core
 
 Les bibliothèques adoptent rapidement .NET Standard. .NET standard permet de partager du code sur toutes les implémentations de .NET, y compris .NET Core. Avec .NET 2.0 Standard, cela est encore plus simple :
+
 - La surface de l’API est désormais beaucoup plus grande. 
 - Un mode de compatibilité du .NET Framework a été introduit. Ce mode de compatibilité permet aux projets .NET Standard/.NET Core de référencer des bibliothèques .NET Framework. Pour en savoir plus sur le mode de compatibilité, consultez [Annonce de .NET 2.0 Standard](https://blogs.msdn.microsoft.com/dotnet/2017/08/14/announcing-net-standard-2-0/).
 
@@ -92,7 +93,7 @@ Certaines technologies du .NET Framework ne sont pas disponibles dans .NET Core.
 
 * Applications Pages Web ASP.NET : le framework Pages Web ASP.NET n’est pas inclus dans ASP.NET Core. ASP.NET Core [Pages Razor](/aspnet/core/mvc/razor-pages/) a beaucoup de similitudes avec Pages Web.
 
-* Implémentation client/serveur SignalR ASP.NET. ASP.NET SignalR n’est pas disponible pour ASP.NET Core (ni client, ni serveur). ASP.NET Core SignalR est prévu dans ASP.NET Core 2.1. Consultez [la planification et la feuille de route d’ASP.NET Core](https://github.com/aspnet/Home/wiki/Roadmap). L’état en préversion est disponible dans les dépôts GitHub [côté serveur](https://github.com/aspnet/SignalR-Server) et de la [bibliothèque cliente](https://github.com/aspnet/SignalR-Client-Net).
+* Implémentation client/serveur SignalR ASP.NET. Actuellement, [ASP.NET SignalR](https://github.com/aspnet/SignalR) est disponible en mode Preview avec ASP.NET Core 2.1.
 
 * Implémentation des services WCF. Même s’il existe une [bibliothèque cliente WCF](https://github.com/dotnet/wcf) pour utiliser des services WCF à partir de .NET Core, l’implémentation serveur WCF est disponible uniquement sur le .NET Framework. Ce scénario ne fait pas partie du plan actuel pour .NET Core, mais il est envisagé pour l’avenir.
 

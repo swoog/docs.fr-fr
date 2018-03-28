@@ -1,6 +1,6 @@
 ---
-title: "Bibliothèques de classes .NET"
-description: "Découvrez dans quelle mesure les bibliothèques de classes .NET vous permettent de grouper des fonctionnalités utiles en modules utilisables par plusieurs applications."
+title: Bibliothèques de classes .NET
+description: Découvrez dans quelle mesure les bibliothèques de classes .NET vous permettent de grouper des fonctionnalités utiles en modules utilisables par plusieurs applications.
 keywords: .NET, .NET Core
 author: richlander
 ms.author: mairaw
@@ -13,11 +13,11 @@ ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 5445c6971e243e9fc2eea34937683a5c3c432c01
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8f7c421d2490678f7122e78bc0b83ebf3a1aa9ea
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="net-class-libraries"></a>Bibliothèques de classes .NET
 
@@ -55,11 +55,16 @@ Les bibliothèques .NET Standard remplacent les concepts de bibliothèques spéc
 
 Les plateformes suivantes prennent en charge les bibliothèques .NET Standard :
 
-*   .NET Core
-*   ASP.NET Core
-*   .NET Framework 4.5+
-*   Applications Windows Store
-*   Windows Phone 8+
+* .NET Core
+* .NET Framework
+* Mono
+* Xamarin.iOS, Xamarin.Mac, Xamarin.Android
+* Plateforme Windows universelle (UWP)
+* Windows
+* Windows Phone
+* Windows Phone Silverlight
+
+Pour plus d’informations, consultez la rubrique [.NET Standard](net-standard.md).
 
 ### <a name="mono-class-libraries"></a>Bibliothèques de classes Mono
 
