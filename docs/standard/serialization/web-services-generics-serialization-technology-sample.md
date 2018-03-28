@@ -70,7 +70,7 @@ ms.lasthandoff: 03/23/2018
   
 1.  Ouvrez une fenêtre de navigateur et sélectionnez sa barre d'adresses.  
   
-2.  Tapez **http://localhost/[répertoirevirtuel]/Service.asmx**, où [répertoire virtuel] représente le répertoire virtuel que vous avez créé au moment de la génération de l’exemple.  
+2.  Tapez **http: //localhost/[répertoirevirtuel]/Service.asmx**, où [répertoire virtuel] représente le répertoire virtuel que vous avez créé au moment de la génération de l’exemple.  
   
 ## <a name="remarks"></a>Notes  
  L'exemple affiche une page ASP.NET par défaut qui contient des liens vers la définition du service Web. Vous pouvez modifier le code source pour le service Web, mais également personnaliser l'affichage. Pour plus d’informations, consultez [Création de clients de service web XML](http://msdn.microsoft.com/library/c606f3cb-4111-45b4-ae42-9300420fa16c).  
