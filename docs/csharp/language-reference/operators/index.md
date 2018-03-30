@@ -1,5 +1,5 @@
 ---
-title: "Opérateurs C#"
+title: Opérateurs C#
 ms.date: 03/09/2017
 ms.prod: .net
 ms.technology:
@@ -22,48 +22,48 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-caps.latest.revision: 
+caps.latest.revision: 40
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: f18c2332f3576847800423c5c0bf7471bf37aafc
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: 14ebd489c48f53c8618cadf91f9744bb30f582d3
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="c-operators"></a>Opérateurs C#
-C# fournit de nombreux opérateurs, qui sont des symboles spécifiant quelles opérations (mathématiques, indexation, appel de fonction, etc.) effectuer dans une expression.  Vous pouvez [surcharger](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md) de nombreux opérateurs pour modifier leur signification quand ils sont appliqués à un type défini par l’utilisateur.  
+C# fournit de nombreux opérateurs, qui sont des symboles spécifiant quelles opérations (mathématiques, indexation, appel de fonction, etc.) effectuer dans une expression. Vous pouvez [surcharger](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md) de nombreux opérateurs pour modifier leur signification quand ils sont appliqués à un type défini par l’utilisateur.  
   
  Les opérations sur les types intégraux (comme `==`, `!=`, `<`, `>`, `&` ou `|`) sont en général autorisées sur les types énumération (`enum`).  
   
- Les sections répertorient les opérateurs C# de la priorité la plus élevée à la plus basse.  Les opérateurs inclus dans chaque section partagent le même niveau de priorité.  
-  
+ Les sections ci-dessous listent les opérateurs C# de la priorité la plus élevée à la plus basse. Les opérateurs inclus dans chaque section partagent le même niveau de priorité.  
+ 
 ## <a name="primary-operators"></a>Opérateurs principaux  
- Ce sont les opérateurs dont la priorité est la plus élevée.  Notez que vous pouvez cliquer sur les opérateurs pour accéder aux pages détaillées assorties d'exemples.  
+ Ce sont les opérateurs dont la priorité est la plus élevée.
   
  [x.y](../../../csharp/language-reference/operators/member-access-operator.md) : accès au membre.  
   
- [x?.y](../../../csharp/language-reference/operators/null-conditional-operators.md) : accès au membre conditionnel Null.  Retourne `null` si l’opérande de gauche a la valeur `null`.  
+ [x?.y](../../../csharp/language-reference/operators/null-conditional-operators.md) : accès au membre conditionnel Null. Retourne `null` si l’opérande de gauche prend la valeur `null`.  
  
- [x?[y]](../../../csharp/language-reference/operators/null-conditional-operators.md) : accès à l’index conditionnel Null. Retourne `null` si l’opérande de gauche a la valeur `null`.
+ [x?[y]](../../../csharp/language-reference/operators/null-conditional-operators.md) : accès à l’index conditionnel Null. Retourne `null` si l’opérande de gauche prend la valeur `null`.
  
  [f(x)](../../../csharp/language-reference/operators/invocation-operator.md) : appel de fonction.  
   
  [a&#91;x&#93;](../../../csharp/language-reference/operators/index-operator.md) : indexation de l’objet d’agrégation.  
    
- [x++](../../../csharp/language-reference/operators/increment-operator.md) : incrément suffixé.  Retourne la valeur de x et met à jour l'emplacement de stockage avec la valeur de x augmentée de un (ajoute généralement l'entier 1).  
+ [x++](../../../csharp/language-reference/operators/increment-operator.md) : incrément suffixé. Retourne la valeur de x et met à jour l'emplacement de stockage avec la valeur de x augmentée de un (ajoute généralement l'entier 1).  
   
- [x--](../../../csharp/language-reference/operators/decrement-operator.md) : décrément suffixé.  Retourne la valeur de x et met à jour l'emplacement de stockage avec la valeur de x diminuée de un (soustrait généralement l'entier 1).  
+ [x--](../../../csharp/language-reference/operators/decrement-operator.md) : décrément suffixé. Retourne la valeur de x et met à jour l'emplacement de stockage avec la valeur de x diminuée de un (soustrait généralement l'entier 1).  
   
  [new](../../../csharp/language-reference/keywords/new-operator.md) : instanciation de type.  
   
- [typeof](../../../csharp/language-reference/keywords/typeof.md) : retourne l’objet System.Type qui représente l’opérande.  
+ [typeof](../../../csharp/language-reference/keywords/typeof.md) : retourne l’objet <xref:System.Type> qui représente l’opérande.  
   
  [checked](../../../csharp/language-reference/keywords/checked.md) : active le contrôle de dépassement de capacité pour les opérations sur les entiers.  
   
- [unchecked](../../../csharp/language-reference/keywords/unchecked.md) : désactive le contrôle de dépassement de capacité pour les opérations sur les entiers.  Il s'agit du comportement de compilateur par défaut.  
+ [unchecked](../../../csharp/language-reference/keywords/unchecked.md) : désactive le contrôle de dépassement de capacité pour les opérations sur les entiers. Il s'agit du comportement de compilateur par défaut.  
   
- [default(T)](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md) : retourne la valeur par défaut de type T, la valeur `null` pour les types de référence, zéro pour les types numériques et zéro/`null` renseigné dans les membres pour les types struct.  
+ [default(T)](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md) : retourne la valeur par défaut de type T:, la valeur `null` pour les types de référence, zéro pour les types numériques et zéro/`null` renseigné dans les membres pour les types struct.  
   
  [delegate](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) : déclare et retourne une instance de délégué.  
   
@@ -72,7 +72,7 @@ C# fournit de nombreux opérateurs, qui sont des symboles spécifiant quelles op
  [->](../../../csharp/language-reference/operators/dereference-operator.md) : déréférencement de pointeur associé à l’accès au membre.  
   
 ## <a name="unary-operators"></a>Opérateurs unaires  
- Ces opérateurs ont une priorité supérieure à celle de la section suivante et une priorité inférieure à celle de la section précédente.  Notez que vous pouvez cliquer sur les opérateurs pour accéder aux pages détaillées assorties d'exemples.  
+ Ces opérateurs ont une priorité supérieure à celle de la section suivante et une priorité inférieure à celle de la section précédente.  
   
  [+x](../../../csharp/language-reference/operators/addition-operator.md) : retourne la valeur de x.  
   
@@ -82,9 +82,9 @@ C# fournit de nombreux opérateurs, qui sont des symboles spécifiant quelles op
   
  [~x](../../../csharp/language-reference/operators/bitwise-complement-operator.md) : complément au niveau du bit.  
   
- [++x](../../../csharp/language-reference/operators/increment-operator.md) : incrément préfixé.  Retourne la valeur de x après avoir mis à jour l'emplacement de stockage avec la valeur de x augmentée de un (ajoute généralement l'entier 1).  
+ [++x](../../../csharp/language-reference/operators/increment-operator.md) : incrément préfixé. Retourne la valeur de x après avoir mis à jour l'emplacement de stockage avec la valeur de x augmentée de un (ajoute généralement l'entier 1).  
   
- [--x](../../../csharp/language-reference/operators/decrement-operator.md) : décrément préfixé.  Retourne la valeur de x après avoir mis à jour l’emplacement de stockage avec la valeur de x diminuée d’une unité (soustrait généralement l’entier 1).  
+ [--x](../../../csharp/language-reference/operators/decrement-operator.md) : décrément préfixé. Retourne la valeur de x après avoir mis à jour l’emplacement de stockage avec la valeur de x diminuée d’une unité (soustrait généralement l’entier 1).  
   
  [(T)x](../../../csharp/language-reference/operators/invocation-operator.md) : cast de type.  
   
@@ -95,30 +95,30 @@ C# fournit de nombreux opérateurs, qui sont des symboles spécifiant quelles op
  [*x](../../../csharp/language-reference/operators/multiplication-operator.md) : déréférencement.  
   
 ## <a name="multiplicative-operators"></a>Opérateurs multiplicatifs  
- Ces opérateurs ont une priorité supérieure à celle de la section suivante et une priorité inférieure à celle de la section précédente.  Notez que vous pouvez cliquer sur les opérateurs pour accéder aux pages détaillées assorties d'exemples.  
+ Ces opérateurs ont une priorité supérieure à celle de la section suivante et une priorité inférieure à celle de la section précédente.  
   
  [x * y](../../../csharp/language-reference/operators/multiplication-operator.md) : multiplication.  
   
- [x / y](../../../csharp/language-reference/operators/division-operator.md) : division.  Si les opérandes sont des entiers, le résultat est un entier tronqué vers zéro (par exemple, `-7 / 2 is -3`).  
+ [x / y](../../../csharp/language-reference/operators/division-operator.md) : division. Si les opérandes sont des entiers, le résultat est un entier tronqué vers zéro (par exemple, `-7 / 2 is -3`).  
   
- [x % y](../../../csharp/language-reference/operators/modulus-operator.md) : modulo.  Si les opérandes sont des entiers, cet opérateur renvoie le reste de la division de x par y.  Si `q = x / y` et `r = x % y`, alors `x = q * y + r`.  
+ [x % y](../../../csharp/language-reference/operators/modulus-operator.md) : modulo. Si les opérandes sont des entiers, cet opérateur renvoie le reste de la division de x par y.  Si `q = x / y` et `r = x % y`, alors `x = q * y + r`.  
   
 ## <a name="additive-operators"></a>Opérateurs additifs  
- Ces opérateurs ont une priorité supérieure à celle de la section suivante et une priorité inférieure à celle de la section précédente.  Notez que vous pouvez cliquer sur les opérateurs pour accéder aux pages détaillées assorties d'exemples.  
+ Ces opérateurs ont une priorité supérieure à celle de la section suivante et une priorité inférieure à celle de la section précédente.  
   
  [x + y](../../../csharp/language-reference/operators/addition-operator.md) : addition.  
   
  [x – y](../../../csharp/language-reference/operators/subtraction-operator.md) : soustraction.  
   
 ## <a name="shift-operators"></a>Opérateurs de décalage  
- Ces opérateurs ont une priorité supérieure à celle de la section suivante et une priorité inférieure à celle de la section précédente.  Notez que vous pouvez cliquer sur les opérateurs pour accéder aux pages détaillées assorties d'exemples.  
+ Ces opérateurs ont une priorité supérieure à celle de la section suivante et une priorité inférieure à celle de la section précédente.  
   
  [x <\<  y](../../../csharp/language-reference/operators/left-shift-operator.md) : décalage des bits vers la gauche et remplissage avec zéro à droite.  
   
- [x >> y](../../../csharp/language-reference/operators/right-shift-operator.md) : décalage des bits vers la droite.  Si l'opérande de gauche est `int` ou `long`, alors les bits de gauche sont remplis avec le bit de signe.  Si l'opérande de gauche est `uint` ou `ulong`, alors les bits de gauche sont remplis avec zéro.  
+ [x >> y](../../../csharp/language-reference/operators/right-shift-operator.md) : décalage des bits vers la droite. Si l'opérande de gauche est `int` ou `long`, alors les bits de gauche sont remplis avec le bit de signe. Si l'opérande de gauche est `uint` ou `ulong`, alors les bits de gauche sont remplis avec zéro.  
   
 ## <a name="relational-and-type-testing-operators"></a>Opérateurs relationnels et de test de type  
- Ces opérateurs ont une priorité supérieure à celle de la section suivante et une priorité inférieure à celle de la section précédente.  Notez que vous pouvez cliquer sur les opérateurs pour accéder aux pages détaillées assorties d'exemples.  
+ Ces opérateurs ont une priorité supérieure à celle de la section suivante et une priorité inférieure à celle de la section précédente.  
   
  [x \< y](../../../csharp/language-reference/operators/less-than-operator.md) : inférieur à (true si x est inférieur à y).  
   
@@ -128,76 +128,76 @@ C# fournit de nombreux opérateurs, qui sont des symboles spécifiant quelles op
   
  [x >= y](../../../csharp/language-reference/operators/greater-than-equal-operator.md) : supérieur ou égal à.  
   
- [is](../../../csharp/language-reference/keywords/is.md) : compatibilité du type.  Retourne true si l’opérande de gauche évalué peut être converti en type spécifié dans l’opérande de droite (type statique).  
+ [is](../../../csharp/language-reference/keywords/is.md) : compatibilité du type. Retourne true si l’opérande de gauche évalué peut être converti en type spécifié dans l’opérande de droite (type statique).  
   
- [as](../../../csharp/language-reference/keywords/as.md) : conversion de type.  Retourne l'opérande de gauche converti en type spécifié par l'opérande de droite (type statique), mais `as` retourne `null` où `(T)x` lèverait une exception.  
+ [as](../../../csharp/language-reference/keywords/as.md) : conversion de type. Retourne l'opérande de gauche converti en type spécifié par l'opérande de droite (type statique), mais `as` retourne `null` où `(T)x` lèverait une exception.  
   
 ## <a name="equality-operators"></a>Opérateurs d'égalité  
- Ces opérateurs ont une priorité supérieure à celle de la section suivante et une priorité inférieure à celle de la section précédente.  Notez que vous pouvez cliquer sur les opérateurs pour accéder aux pages détaillées assorties d'exemples.  
+ Ces opérateurs ont une priorité supérieure à celle de la section suivante et une priorité inférieure à celle de la section précédente.  
   
- [x == y](../../../csharp/language-reference/operators/equality-comparison-operator.md) : égalité.  Par défaut, pour les types de référence autres que `string`, cet opérateur retourne l'égalité de référence (test d'identité).  Toutefois, des types peuvent surcharger `==`, donc si votre objectif est de tester l'identité, il est préférable d'utiliser la méthode `ReferenceEquals` sur `object`.  
+ [x == y](../../../csharp/language-reference/operators/equality-comparison-operator.md) : égalité. Par défaut, pour les types de référence autres que `string`, cet opérateur retourne l'égalité de référence (test d'identité). Toutefois, des types peuvent surcharger `==`, donc si votre objectif est de tester l'identité, il est préférable d'utiliser la méthode `ReferenceEquals` sur `object`.  
   
- [x != y](../../../csharp/language-reference/operators/not-equal-operator.md) : différent.  Consultez le commentaire sur `==`.  Si un type surcharge `==`, alors il doit surcharger `!=`.  
+ [x != y](../../../csharp/language-reference/operators/not-equal-operator.md) : différent. Consultez le commentaire sur `==`. Si un type surcharge `==`, alors il doit surcharger `!=`.  
   
 ## <a name="logical-and-operator"></a>Opérateur AND logique  
- Cet opérateur a une priorité supérieure à celle de la section suivante et une priorité inférieure à celle de la section précédente.  Notez que vous pouvez cliquer sur l'opérateur à accéder à la page détaillée assortie d'exemples.  
+ Cet opérateur a une priorité supérieure à celle de la section suivante et une priorité inférieure à celle de la section précédente.  
   
- [x & y](../../../csharp/language-reference/operators/and-operator.md) : ET logique ou au niveau du bit.  L'utilisation avec des types entiers et des types `enum` est généralement autorisée.  
+ [x & y](../../../csharp/language-reference/operators/and-operator.md) : ET logique ou au niveau du bit. Vous pouvez l'utiliser généralement avec des types entiers et des types `enum`.  
   
 ## <a name="logical-xor-operator"></a>Opérateur XOR logique  
- Cet opérateur a une priorité supérieure à celle de la section suivante et une priorité inférieure à celle de la section précédente.  Notez que vous pouvez cliquer sur l'opérateur à accéder à la page détaillée assortie d'exemples.  
+ Cet opérateur a une priorité supérieure à celle de la section suivante et une priorité inférieure à celle de la section précédente.  
   
- [x ^ y](../../../csharp/language-reference/operators/xor-operator.md) : XOR logique ou au niveau du bit.  Vous pouvez l'utiliser généralement avec des types entiers et des types `enum`.  
+ [x ^ y](../../../csharp/language-reference/operators/xor-operator.md) : XOR logique ou au niveau du bit. Vous pouvez l'utiliser généralement avec des types entiers et des types `enum`.  
   
 ## <a name="logical-or-operator"></a>Opérateur OR logique  
- Cet opérateur a une priorité supérieure à celle de la section suivante et une priorité inférieure à celle de la section précédente.  Notez que vous pouvez cliquer sur l'opérateur à accéder à la page détaillée assortie d'exemples.  
+ Cet opérateur a une priorité supérieure à celle de la section suivante et une priorité inférieure à celle de la section précédente.  
   
- [x &#124; y](../../../csharp/language-reference/operators/or-operator.md) : OU logique ou au niveau du bit.  L'utilisation avec des types entiers et des types `enum` est généralement autorisée.  
+ [x &#124; y](../../../csharp/language-reference/operators/or-operator.md) : OU logique ou au niveau du bit. Vous pouvez l'utiliser généralement avec des types entiers et des types `enum`.  
   
 ## <a name="conditional-and-operator"></a>Opérateur AND conditionnel  
- Cet opérateur a une priorité supérieure à celle de la section suivante et une priorité inférieure à celle de la section précédente.  Notez que vous pouvez cliquer sur l'opérateur à accéder à la page détaillée assortie d'exemples.  
+ Cet opérateur a une priorité supérieure à celle de la section suivante et une priorité inférieure à celle de la section précédente.  
   
- [x && y](../../../csharp/language-reference/operators/conditional-and-operator.md) : ET logique.  Si le premier opérande a la valeur false, alors C# n’évalue pas le second opérande.  
+ [x && y](../../../csharp/language-reference/operators/conditional-and-operator.md) : ET logique. Si le premier opérande prend la valeur false, C# n’évalue pas le second opérande.  
   
 ## <a name="conditional-or-operator"></a>Opérateur OR conditionnel  
- Cet opérateur a une priorité supérieure à celle de la section suivante et une priorité inférieure à celle de la section précédente.  Notez que vous pouvez cliquer sur l'opérateur à accéder à la page détaillée assortie d'exemples.  
+ Cet opérateur a une priorité supérieure à celle de la section suivante et une priorité inférieure à celle de la section précédente.  
   
- [x &#124;&#124; y](../../../csharp/language-reference/operators/conditional-or-operator.md) : OU logique.  Si le premier opérande a la valeur true, alors C# n’évalue pas le second opérande.  
+ [x &#124;&#124; y](../../../csharp/language-reference/operators/conditional-or-operator.md) : OU logique. Si le premier opérande prend la valeur true, C# n’évalue pas le second opérande.  
   
 ## <a name="null-coalescing-operator"></a>Opérateur de fusion de Null  
- Cet opérateur a une priorité supérieure à celle de la section suivante et une priorité inférieure à celle de la section précédente.  Notez que vous pouvez cliquer sur l'opérateur à accéder à la page détaillée assortie d'exemples.  
+ Cet opérateur a une priorité supérieure à celle de la section suivante et une priorité inférieure à celle de la section précédente.  
   
  [x ?? y](../../../csharp/language-reference/operators/null-conditional-operator.md) : retourne `x` si non `null` ; dans le cas contraire, retourne `y`.  
   
 ## <a name="conditional-operator"></a>Opérateur conditionnel  
- Cet opérateur a une priorité supérieure à celle de la section suivante et une priorité inférieure à celle de la section précédente.  Notez que vous pouvez cliquer sur l'opérateur à accéder à la page détaillée assortie d'exemples.  
+ Cet opérateur a une priorité supérieure à celle de la section suivante et une priorité inférieure à celle de la section précédente.  
   
- [t ? x : y](../../../csharp/language-reference/operators/conditional-operator.md) : si le test `t` a la valeur true, alors évalue et retourne `x` ; sinon, évalue et retourne `y`.  
+ [t ? x : y](../../../csharp/language-reference/operators/conditional-operator.md) : si le test `t` prend la valeur true, alors évalue et retourne `x` ; sinon, évalue et retourne `y`.  
   
 ## <a name="assignment-and-lambda-operators"></a>Opérateurs d'assignation et lambda  
- Ces opérateurs ont une priorité supérieure à celle de la section suivante et une priorité inférieure à celle de la section précédente.  Notez que vous pouvez cliquer sur les opérateurs pour accéder aux pages détaillées assorties d'exemples.  
+ Ces opérateurs ont une priorité supérieure à celle de la section suivante et une priorité inférieure à celle de la section précédente.  
   
  [x = y](../../../csharp/language-reference/operators/assignment-operator.md) : affectation.  
   
- [x += y](../../../csharp/language-reference/operators/addition-assignment-operator.md) : incrément.  Additionne la valeur de `y` à la valeur de `x`, stocke le résultat dans `x` et retourne la nouvelle valeur.  Si `x` désigne un `event`, alors `y` doit être une fonction appropriée que C# ajoute en tant que gestionnaire d'événements.  
+ [x += y](../../../csharp/language-reference/operators/addition-assignment-operator.md) : incrément. Additionne la valeur de `y` à la valeur de `x`, stocke le résultat dans `x` et retourne la nouvelle valeur. Si `x` désigne un `event`, alors `y` doit être une fonction appropriée que C# ajoute en tant que gestionnaire d'événements.  
   
- [x -= y](../../../csharp/language-reference/operators/subtraction-assignment-operator.md) : décrément.  Soustrait la valeur de `y` de la valeur de `x`, stocke le résultat dans `x` et retourne la nouvelle valeur.  Si `x` désigne un `event`, alors `y` doit être une fonction appropriée que C# supprime en tant que gestionnaire d'événements.  
+ [x -= y](../../../csharp/language-reference/operators/subtraction-assignment-operator.md) : décrément. Soustrait la valeur de `y` de la valeur de `x`, stocke le résultat dans `x` et retourne la nouvelle valeur. Si `x` désigne un `event`, alors `y` doit être une fonction appropriée que C# supprime en tant que gestionnaire d'événements.  
   
- [x *= y](../../../csharp/language-reference/operators/multiplication-assignment-operator.md) : affectation de multiplication.  Multiplie la valeur de `y` par la valeur de `x`, stocke le résultat dans `x` et retourne la nouvelle valeur.  
+ [x *= y](../../../csharp/language-reference/operators/multiplication-assignment-operator.md) : affectation de multiplication. Multiplie la valeur de `y` par la valeur de `x`, stocke le résultat dans `x` et retourne la nouvelle valeur.  
   
- [x /= y](../../../csharp/language-reference/operators/division-assignment-operator.md) : affectation de division.  Divise la valeur de `x` par la valeur de `y`, stocke le résultat dans `x` et retourne la nouvelle valeur.  
+ [x /= y](../../../csharp/language-reference/operators/division-assignment-operator.md) : affectation de division. Divise la valeur de `x` par la valeur de `y`, stocke le résultat dans `x` et retourne la nouvelle valeur.  
   
- [x %= y](../../../csharp/language-reference/operators/modulus-assignment-operator.md) : affectation de modulo.  Divise la valeur de `x` par la valeur de `y`, stocke le reste dans `x` et retourne la nouvelle valeur.  
+ [x %= y](../../../csharp/language-reference/operators/modulus-assignment-operator.md) : affectation de modulo. Divise la valeur de `x` par la valeur de `y`, stocke le reste dans `x` et retourne la nouvelle valeur.  
   
- [x &= y](../../../csharp/language-reference/operators/and-assignment-operator.md) : affectation ET.  Assigne l'opérateur AND à la valeur de `y` et la valeur de `x`, stocke le résultat dans `x` et retourne la nouvelle valeur.  
+ [x &= y](../../../csharp/language-reference/operators/and-assignment-operator.md) : affectation ET. Assigne l'opérateur AND à la valeur de `y` et la valeur de `x`, stocke le résultat dans `x` et retourne la nouvelle valeur.  
   
- [x &#124;= y](../../../csharp/language-reference/operators/or-assignment-operator.md) : affectation OU.  Assigne l'opérateur OR à la valeur de `y` et la valeur de `x`, stocke le résultat dans `x` et retourne la nouvelle valeur.  
+ [x &#124;= y](../../../csharp/language-reference/operators/or-assignment-operator.md) : affectation OU. Assigne l'opérateur OR à la valeur de `y` et la valeur de `x`, stocke le résultat dans `x` et retourne la nouvelle valeur.  
   
- [x ^= y](../../../csharp/language-reference/operators/xor-assignment-operator.md) : affectation XOR.  Assigne l'opérateur XOR à la valeur de `y` et la valeur de `x`, stocke le résultat dans `x` et retourne la nouvelle valeur.  
+ [x ^= y](../../../csharp/language-reference/operators/xor-assignment-operator.md) : affectation XOR. Assigne l'opérateur XOR à la valeur de `y` et la valeur de `x`, stocke le résultat dans `x` et retourne la nouvelle valeur.  
   
- [x <<= y](../../../csharp/language-reference/operators/left-shift-assignment-operator.md) : affectation de décalage vers la gauche.  Décale la valeur de `x` vers la gauche de `y` places, stocke le résultat dans `x` et retourne la nouvelle valeur.  
+ [x <<= y](../../../csharp/language-reference/operators/left-shift-assignment-operator.md) : affectation de décalage vers la gauche. Décale la valeur de `x` vers la gauche de `y` places, stocke le résultat dans `x` et retourne la nouvelle valeur.  
   
- [x >>= y](../../../csharp/language-reference/operators/right-shift-assignment-operator.md) : affectation de décalage vers la droite.  Décale la valeur de `x` vers la droite de `y` places, stocke le résultat dans `x` et retourne la nouvelle valeur.  
+ [x >>= y](../../../csharp/language-reference/operators/right-shift-assignment-operator.md) : affectation de décalage vers la droite. Décale la valeur de `x` vers la droite de `y` places, stocke le résultat dans `x` et retourne la nouvelle valeur.  
   
  [=>](../../../csharp/language-reference/operators/lambda-operator.md) : déclaration lambda.  
   

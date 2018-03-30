@@ -1,9 +1,9 @@
 ---
 layout: HubPage
 ms.topic: hub-page
-hide_bc: 
+hide_bc: true
 title: Documentation .NET
-description: "Découvrez comment utiliser .NET pour créer diverses applications sur n’importe quelle plateforme en C#, Visual Basic et F#. Parcourez les informations de référence sur les API, les exemples de code, les didacticiels et plus encore."
+description: Découvrez comment utiliser .NET pour créer diverses applications sur n’importe quelle plateforme en C#, Visual Basic et F#. Parcourez les informations de référence sur les API, les exemples de code, les didacticiels et plus encore.
 ms.custom: updateeachrelease
 ms.openlocfilehash: f3a044df40a5508f62b5b441965c4ce16e998428
 ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
