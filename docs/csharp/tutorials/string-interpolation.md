@@ -1,7 +1,7 @@
 ---
-title: "Interpolation de chaîne - C#"
-description: "Apprenez comment l’interpolation de chaîne fonctionne dans C# 6"
-keywords: ".NET, .NET Core, C#, chaîne"
+title: Interpolation de chaîne - C#
+description: Apprenez comment l’interpolation de chaîne fonctionne dans C# 6
+keywords: .NET, .NET Core, C#, chaîne
 author: mgroves
 ms.author: wiwagn
 ms.date: 03/06/2017
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: f8806f6b-3ac7-4ee6-9b3e-c524d5301ae9
-ms.openlocfilehash: db062ed2f832ae933941da1c49e84303090f4390
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: a9578d006861b987871071961437345c378a5b58
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="string-interpolation-in-c"></a>Interpolation de chaîne en C# #
 
@@ -122,4 +122,4 @@ Par défaut, une chaîne interpolée utilise la culture actuelle. Pour utiliser 
 
 ## <a name="conclusion"></a>Conclusion 
 
-Dans ce didacticiel, vous avez appris comment utiliser les fonctionnalités d’interpolation des chaînes C# 6. Il s’agit d’un moyen plus concis d’écrire des instructions `String.Format` simples, avec certaines précautions à observer pour des utilisations plus avancées. Pour plus d’informations, consultez la rubrique [Chaînes interpolées](../../csharp//language-reference/keywords/interpolated-strings.md).
+Dans ce didacticiel, vous avez appris comment utiliser les fonctionnalités d’interpolation des chaînes C# 6. Il s’agit d’un moyen plus concis d’écrire des instructions `String.Format` simples, avec certaines précautions à observer pour des utilisations plus avancées. Pour plus d’informations, consultez la rubrique [Interpolation de chaîne](../../csharp//language-reference/tokens/interpolated.md).

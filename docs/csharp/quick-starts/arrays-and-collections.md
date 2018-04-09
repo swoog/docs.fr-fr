@@ -1,6 +1,6 @@
 ---
-title: "Didacticiel sur les collections - Guides de démarrage rapide local en C#"
-description: "Découvrez C# en explorant la collection de listes de ce guide de démarrage rapide."
+title: Didacticiel sur les collections - Guides de démarrage rapide local en C#
+description: Découvrez C# en explorant la collection de listes de ce guide de démarrage rapide.
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/13/2017
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 76b3baf0525c81e5b3058aa2ab6fd4ccd97d1916
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: 88471c5fc60178c058f121ba5e5703999ad61030
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="c-quickstart-collections"></a>Guide de démarrage rapide en C# : Collections
 
@@ -54,7 +54,7 @@ Remplacez `<name>` par votre nom. Enregistrez **Program.cs**. Tapez `dotnet run`
 
 Vous venez de créer une liste de chaînes, d’ajouter trois noms à cette liste et d’afficher les noms tout en majuscules. Vous utilisez des concepts que vous avez appris dans les guides de démarrage rapide précédents pour lire la liste en boucle.
 
-Le code permettant d’afficher les noms utilise des **chaînes interpolées**.  Quand vous faites précéder une `string` du caractère `$`, vous pouvez incorporer le code C# dans la déclaration de chaîne. La chaîne réelle remplace ce code C# par la valeur qu’elle génère. Dans cet exemple, elle remplace `{name.ToUpper()}` par chaque nom, converti en majuscules, car vous avez appelé la méthode <xref:System.String.ToUpper%2A>.
+Le code permettant d’afficher les noms utilise la fonctionnalité [d’interpolation de chaîne](../language-reference/tokens/interpolated.md).  Quand vous faites précéder une `string` du caractère `$`, vous pouvez incorporer le code C# dans la déclaration de chaîne. La chaîne réelle remplace ce code C# par la valeur qu’elle génère. Dans cet exemple, elle remplace `{name.ToUpper()}` par chaque nom, converti en majuscules, car vous avez appelé la méthode <xref:System.String.ToUpper%2A>.
 
 Continuons notre exploration.
 

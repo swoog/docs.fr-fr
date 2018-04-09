@@ -1,6 +1,6 @@
 ---
-title: "Guide pratique pour concaténer plusieurs chaînes (Guide C#)"
-description: "Il existe plusieurs façons de concaténer des chaînes dans C#. Découvrez les options et les raisons de les choisir."
+title: Guide pratique pour concaténer plusieurs chaînes (Guide C#)
+description: Il existe plusieurs façons de concaténer des chaînes dans C#. Découvrez les options et les raisons de les choisir.
 ms.date: 02/20/2018
 ms.prod: .net
 ms.technology:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - concatenating strings [C#]
 - strings [C#], concatenation
 ms.assetid: 8e16736f-4096-4f3f-be0f-9d4c3ff63520
-caps.latest.revision: 
+caps.latest.revision: 21
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 43b60455762ecd91a790ea5c7dae49d3348794aa
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 05f4932710870c26256659252fcef3814462d488
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-concatenate-multiple-strings-c-guide"></a>Guide pratique pour concaténer plusieurs chaînes (Guide C#)
 
@@ -31,11 +31,11 @@ L’exemple suivant utilise la concaténation pour diviser un long littéral de 
  [!code-csharp-interactive[Combining strings at compile time](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#1)]  
   
 
-Pour concaténer des variables de chaîne, vous pouvez utiliser les opérateurs `+` ou `+=`, l’[interpolation de chaînes](../tutorials/string-interpolation.md), ou encore les méthodes <xref:System.String.Format%2A?displayProperty=nameWithType>, <xref:System.String.Concat%2A?displayProperty=nameWithType>, <xref:System.String.Join%2A?displayProperty=nameWithType> ou <xref:System.Text.StringBuilder.Append%2A?displayProperty=nameWithType>. L’opérateur `+` est facile à utiliser et convient au code intuitif. Même si vous utilisez plusieurs opérateurs `+` dans une instruction, le contenu de la chaîne est copié une seule fois. Le code suivant montre des exemples d’utilisation des opérateurs `+` et `+=` pour concaténer des chaînes :
+Pour concaténer des variables de chaîne, vous pouvez utiliser les opérateurs `+` ou `+=`, l’[interpolation de chaînes](../language-reference/tokens/interpolated.md), ou encore les méthodes <xref:System.String.Format%2A?displayProperty=nameWithType>, <xref:System.String.Concat%2A?displayProperty=nameWithType>, <xref:System.String.Join%2A?displayProperty=nameWithType> ou <xref:System.Text.StringBuilder.Append%2A?displayProperty=nameWithType>. L’opérateur `+` est facile à utiliser et convient au code intuitif. Même si vous utilisez plusieurs opérateurs `+` dans une instruction, le contenu de la chaîne est copié une seule fois. Le code suivant montre des exemples d’utilisation des opérateurs `+` et `+=` pour concaténer des chaînes :
 
 [!code-csharp-interactive[combining strings using +](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#2)]  
 
-Dans certaines expressions, il est plus facile de concaténer des chaînes à l’aide de l’interpolation de chaînes, comme le montre le code suivant :
+Dans certaines expressions, il est plus facile de concaténer des chaînes à l’aide de l’interpolation de chaînes, comme le montre le code suivant :
   
 [!code-csharp-interactive[building strings using string interpolation](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#3)]  
   

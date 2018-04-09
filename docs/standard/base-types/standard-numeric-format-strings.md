@@ -1,5 +1,5 @@
 ---
-title: "Chaînes de format numériques standard"
+title: Chaînes de format numériques standard
 ms.date: 09/10/2017
 ms.prod: .net
 ms.technology: dotnet-standard
@@ -24,11 +24,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 9416bff21607d8e37f9e7dbc270477539043fe8b
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f042d72c76ddbf3b5eaf8923fc747325b701c9a6
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="standard-numeric-format-strings"></a>Chaînes de format numériques standard
 Les chaînes de format numériques standard sont utilisées pour mettre en forme des types numériques courants. Une chaîne de format numérique standard se présente sous la forme `Axx`, où :  
@@ -48,7 +48,7 @@ Les chaînes de format numériques standard sont prises en charge par :
  
 - La [fonctionnalité de mise en forme composite](../../../docs/standard/base-types/composite-formatting.md) .NET, utilisée par certaines méthodes `Write` et `WriteLine` des classes <xref:System.Console> et <xref:System.IO.StreamWriter>, la méthode <xref:System.String.Format%2A?displayProperty=nameWithType> et la méthode <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>. La fonctionnalité de mise en forme composite vous permet d’inclure la représentation sous forme de chaîne de plusieurs éléments de données dans une même chaîne, de spécifier la largeur d’un champ et d’aligner les nombres dans un champ. Pour plus d’informations, consultez [Mise en forme composite](../../../docs/standard/base-types/composite-formatting.md).  
 
-- Les [chaînes interpolées](../../csharp/language-reference/keywords/interpolated-strings.md) en C# et Visual Basic, qui fournissent une syntaxe simplifiée par rapport aux de chaînes de format composite.
+- Les [chaînes interpolées](../../csharp/language-reference/tokens/interpolated.md) en C# et Visual Basic, qui fournissent une syntaxe simplifiée par rapport aux de chaînes de format composite.
  
 > [!TIP]
 >  Vous pouvez télécharger l’ [utilitaire de formatage](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), une application qui vous permet d’appliquer des chaînes de mise en forme à des valeurs numériques ou à des valeurs de date et d’heure, et d’afficher la chaîne de résultat.  
@@ -89,6 +89,8 @@ Les chaînes de format numériques standard sont prises en charge par :
      [!code-cpp[Formatting.Numeric.Standard#12](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#12)]
      [!code-csharp[Formatting.Numeric.Standard#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#12)]
      [!code-vb[Formatting.Numeric.Standard#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#12)]  
+  
+-   Il peut être fourni en tant qu’argument `formatString` dans un élément d’expression interpolée d’une chaîne interpolée. Pour plus d’informations, consultez la rubrique [Interpolation de chaîne](../../csharp/language-reference/tokens/interpolated.md) dans les informations de référence sur C# ou la rubrique [Chaînes interpolées](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) dans les informations de référence sur Visual Basic.  
   
  Les sections suivantes fournissent des informations détaillées sur chacune des chaînes de format numériques standard.  
   

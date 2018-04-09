@@ -1,12 +1,12 @@
 ---
 title: Mise en forme composite
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -19,21 +19,21 @@ helpviewer_keywords:
 - composite formatting
 - objects [.NET Framework], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
-caps.latest.revision: 
+caps.latest.revision: 36
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: dae73a7ace3aac4e7d89ccba186fceacfe9898ae
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 156ef0f063219f5e78084dd664b64699d33e6593
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="composite-formatting"></a>Mise en forme composite
-La fonctionnalité de mise en forme composite du .NET Framework utilise une liste d’objets et une chaîne de format composite comme entrée. Une chaîne de format composite se compose de texte fixe mélangé à des espaces réservés indexés, appelés éléments de format, qui correspondent aux objets de la liste. L'opération de mise en forme produit une chaîne résultante qui se compose du texte fixe d'origine mélangé à la représentation sous forme de chaîne des objets de la liste.  
+La fonctionnalité de mise en forme composite du .NET utilise une liste d’objets et une chaîne de format composite comme entrée. Une chaîne de format composite se compose de texte fixe mélangé à des espaces réservés indexés, appelés éléments de format, qui correspondent aux objets de la liste. L'opération de mise en forme produit une chaîne résultante qui se compose du texte fixe d'origine mélangé à la représentation sous forme de chaîne des objets de la liste.  
   
  La fonctionnalité de mise en forme composite est prise en charge par les méthodes suivantes :  
   
@@ -169,6 +169,8 @@ La fonctionnalité de mise en forme composite du .NET Framework utilise une list
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.Console.WriteLine%2A>  
  <xref:System.String.Format%2A?displayProperty=nameWithType>  
+ [Interpolation de chaîne (C#)](../../csharp/language-reference/tokens/interpolated.md)  
+ [Interpolation de chaîne (Visual Basic)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)  
  [Mise en forme des types](../../../docs/standard/base-types/formatting-types.md)  
  [Chaînes de format numériques standard](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
  [Chaînes de format numériques personnalisées](../../../docs/standard/base-types/custom-numeric-format-strings.md)  

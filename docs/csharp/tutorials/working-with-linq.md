@@ -1,6 +1,6 @@
 ---
 title: Utilisation de LINQ
-description: "Ce didacticiel vous apprend à générer des séquences avec LINQ, à écrire des méthodes pour les requêtes LINQ et à faire la distinction entre l’évaluation stricte et l’évaluation paresseuse."
+description: Ce didacticiel vous apprend à générer des séquences avec LINQ, à écrire des méthodes pour les requêtes LINQ et à faire la distinction entre l’évaluation stricte et l’évaluation paresseuse.
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: 3f0fcfebf37d9e6dad52c69111cc5e374ae27183
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: c5720d5391eec327aa2f885fd65579aeb6260488
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="working-with-linq"></a>Utilisation de LINQ
 
@@ -313,7 +313,7 @@ En guise de nettoyage final, créons un type pour représenter la carte, au lieu
 
 [!CODE-csharp[PlayingCard](../../../samples/csharp/getting-started/console-linq/playingcard.cs?name=snippet1)]
 
-Ce type utilise des *propriétés en lecture seule implémentées automatiquement* qui sont définies dans le constructeur et ne sont pas modifiées. Il utilise également la nouvelle fonctionnalité *d’interpolation de chaîne*, qui facilite le formatage des chaînes de sortie.
+Ce type utilise des *propriétés en lecture seule implémentées automatiquement* qui sont définies dans le constructeur et ne sont pas modifiées. Il utilise également la fonctionnalité [d’interpolation de chaîne](../language-reference/tokens/interpolated.md), qui facilite le formatage des chaînes de sortie.
 
 Mettez à jour la requête qui génère le jeu de départ pour qu’elle utilise le nouveau type :
 

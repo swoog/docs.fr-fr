@@ -1,7 +1,7 @@
 ---
 title: Ajouts au format csproj pour .NET Core
-description: "Découvrir les différences entre les fichiers csproj existants et les fichiers csproj .NET Core"
-keywords: "référence, csproj, .NET Core"
+description: Découvrir les différences entre les fichiers csproj existants et les fichiers csproj .NET Core
+keywords: référence, csproj, .NET Core
 author: blackdwarf
 ms.author: mairaw
 ms.date: 09/22/2017
@@ -11,11 +11,11 @@ ms.devlang: dotnet
 ms.assetid: bdc29497-64f2-4d11-a21b-4097e0bdf5c9
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: d2a318f099eaa67912c2cecd1c67ceebaee8629e
-ms.sourcegitcommit: dd6ea7f0e581ac84e0a90d9b23c463fcf1ec3ce7
+ms.openlocfilehash: fdf91bdb24819c2d92b708e5937980ac2fb0d5fc
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Ajouts au format csproj pour .NET Core
 
@@ -255,7 +255,7 @@ Ces valeurs booléennes spécifient si les assemblys de sortie de génération d
 Cette valeur booléenne indique si tous les éléments qui ont un type `Content` sont automatiquement inclus dans le package obtenu. La valeur par défaut est `true`. 
 
 ### <a name="buildoutputtargetfolder"></a>BuildOutputTargetFolder
-Spécifie le dossier où placer les assemblys de sortie... Les assemblys de sortie (et les autres fichiers de sortie) sont copiés dans les dossiers de leur framework respectif.
+Spécifie le dossier où placer les assemblys de sortie. Les assemblys de sortie (et les autres fichiers de sortie) sont copiés dans les dossiers de leur framework respectif.
 
 ### <a name="contenttargetfolders"></a>ContentTargetFolders
 Cette propriété spécifie l’emplacement par défaut où placer tous les fichiers de contenu si `PackagePath` n’est pas spécifié pour eux. La valeur par défaut est « content;contentFiles ».

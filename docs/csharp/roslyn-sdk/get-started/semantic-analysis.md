@@ -1,6 +1,6 @@
 ---
-title: "Bien démarrer avec l’analyse sémantique"
-description: "Ce tutoriel fournit une vue d’ensemble de l’utilisation de l’analyse sémantique avec le SDK du compilateur .NET."
+title: Bien démarrer avec l’analyse sémantique
+description: Ce tutoriel fournit une vue d’ensemble de l’utilisation de l’analyse sémantique avec le SDK du compilateur .NET.
 author: billwagner
 ms.author: wiwagn
 ms.date: 02/06/2018
@@ -8,17 +8,21 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: 94a28d21cfec1894c3ee3b631335043e1d0ec817
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: b9921bc3621d6abfc37b1bf1fc4f481620ccc407
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="get-started-with-semantic-analysis"></a>Bien démarrer avec l’analyse sémantique
 
 Ce tutoriel suppose que vous êtes familiarisé avec l’API Syntaxe. L’article [Bien démarrer avec l’analyse syntaxique](syntax-analysis.md) fournit une introduction suffisante.
 
 Dans ce tutoriel, vous découvrez les API **Symbole** et **Liaison**. Ces API fournissent des informations sur la _signification sémantique_ d’un programme. Elles vous permettent de poser et de répondre à des questions sur les types représentés par un symbole dans votre programme.
+
+Vous devez installer le SDK **.NET Compiler Platform** :
+
+[!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
 
 ## <a name="understanding-compilations-and-symbols"></a>Présentation des compilations et des symboles
 
@@ -31,9 +35,6 @@ Comme <xref:Microsoft.CodeAnalysis.SyntaxTree?displayProperty=nameWithType>, <xr
 ## <a name="querying-symbols"></a>Interrogation des symboles
 
 Dans ce tutoriel, vous examinez à nouveau le programme « Hello World ». Cette fois-ci, vous interrogez les symboles du programme pour comprendre quels types ces symboles représentent. Vous interrogez les types dans un espace de noms et vous découvrez comment trouver les méthodes disponibles sur un type.
-
-> [!IMPORTANT]
-> Les exemples suivants nécessitent que le **SDK du compilateur .NET** soit installé dans le cadre de Visual Studio 2017. Le SDK du compilateur .NET est le dernier composant facultatif répertorié sous la charge de travail **Développement d’extension Visual Studio**. Les modèles ne sont pas installés sans ce composant.
 
 Vous pouvez trouver le code complet de cet exemple dans [notre dépôt GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/roslyn-sdk/SemanticQuickStart).
 

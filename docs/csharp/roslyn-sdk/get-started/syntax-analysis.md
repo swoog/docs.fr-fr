@@ -1,6 +1,6 @@
 ---
-title: "Bien démarrer avec l’analyse de la syntaxe (API Roslyn)"
-description: "Une introduction à la façon de parcourir et d’interroger les arborescences de syntaxe."
+title: Bien démarrer avec l’analyse de la syntaxe (API Roslyn)
+description: Une introduction à la façon de parcourir et d’interroger les arborescences de syntaxe.
 author: billwagner
 ms.author: wiwagn
 ms.date: 02/05/2018
@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: 52f66782086af651517d54105fea6f5533ea05a2
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 90d6542122dd8c579c63f5f003441ce63a7ca5e9
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="get-started-with-syntax-analysis"></a>Bien démarrer avec l’analyse de la syntaxe
 
@@ -43,6 +43,10 @@ L’API Syntaxe crée une arborescence dont la racine représente l’unité de 
 
 Cette brève description fournit une vue d’ensemble des types d’informations accessibles avec l’API Syntaxe. L’API Syntaxe n’est rien de plus qu’une API formelle qui décrit les constructions de code familières que vous connaissez en C#. Les fonctionnalités complètes incluent des informations sur la façon dont le code est mis en forme, notamment les sauts de ligne, les espaces et l’indentation. Avec ces informations, vous pouvez représenter entièrement le code comme étant écrit et lu par des programmeurs ou par le compilateur. L’utilisation de cette structure vous permet d’interagir avec le code source à un niveau qui est vraiment significatif. Il ne s’agit plus de chaînes de texte, mais de données qui représentent la structure d’un programme C#.
 
+Pour commencer, vous devez installer le kit **.NET Compiler Platform SDK** :
+
+[!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
+
 ## <a name="understanding-syntax-trees"></a>Présentation des arborescences de syntaxe
 
 Vous utilisez l’API Syntaxe pour les analyses de la structure du code C#. **L’API Syntaxe** expose les analyseurs, les arborescences de syntaxe, et des utilitaires pour l’analyse et la construction d’arborescences de syntaxe. C’est ainsi que vous recherchez le code pour des éléments de syntaxe spécifiques ou que vous lisez le code d’un programme.
@@ -67,9 +71,6 @@ Vous pouvez rechercher n’importe quel élément dans un fichier de code à l�
 ## <a name="traversing-trees"></a>Exploration des arborescences
 
 Vous pouvez examiner les nœuds d’une arborescence de syntaxe de deux façons. Vous pouvez parcourir l’arborescence pour examiner chaque nœud, ou vous pouvez rechercher des éléments ou des nœuds spécifiques.
-
-> [!IMPORTANT]
-> Les exemples suivants nécessitent que le **SDK de la plateforme du compilateur .NET** soit installé dans le cadre de Visual Studio 2017. Le SDK du compilateur .NET est le dernier composant facultatif répertorié sous la charge de travail **Développement d’extension Visual Studio**. Les modèles ne sont pas installés sans ce composant.
 
 ### <a name="manual-traversal"></a>Exploration manuelle
 

@@ -1,6 +1,6 @@
 ---
-title: "Propriétés"
-description: "En savoir plus sur les propriétés C#, notamment les fonctionnalités liées à la validation, les valeurs calculées, l’évaluation différée et les notifications de modification de propriété."
+title: Propriétés
+description: En savoir plus sur les propriétés C#, notamment les fonctionnalités liées à la validation, les valeurs calculées, l’évaluation différée et les notifications de modification de propriété.
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 6950d25a-bba1-4744-b7c7-a3cc90438c55
-ms.openlocfilehash: 1ffacd52df89a955ebfa72dc58836211c7a58640
-ms.sourcegitcommit: 5fb6646b5ee3769ffb214e672041833ea4ceeb26
+ms.openlocfilehash: 2a25919048f94211b1696ac8c8471a14ce6e15c5
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/08/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="properties"></a>Propriétés
 
@@ -149,7 +149,7 @@ public class Person
 
 À présent, la propriété `FirstName` est accessible à partir de n’importe quel code, mais elle peut uniquement être assignée à partir de code dans la classe `Person`.
 
-Vous pouvez ajouter n’importe quel modificateur d’accès restrictif à l’accesseur set ou get. Le modificateur d’accès que vous ajoutez à un accesseur doit être plus restrictif que le modificateur d’accès spécifié dans la définition de propriété. Le code ci-dessus est autorisé, car la propriété `FirstName` est `public`, mais l’accesseur set est `private`. En revanche, vous ne pouvez pas déclarer une propriété `private` avec un accesseur `public`. Déclarations de propriétés peuvent également être déclarées `protected`, `internal`, `protected internal`, `private protected` ou même `private`.   
+Vous pouvez ajouter n’importe quel modificateur d’accès restrictif à l’accesseur set ou get. Le modificateur d’accès que vous ajoutez à un accesseur doit être plus restrictif que le modificateur d’accès spécifié dans la définition de propriété. Le code ci-dessus est autorisé, car la propriété `FirstName` est `public`, mais l’accesseur set est `private`. En revanche, vous ne pouvez pas déclarer une propriété `private` avec un accesseur `public`. Les propriétés peuvent également être déclarées comme `protected`, `internal`, `protected internal`, `private protected` voire même `private`.   
 
 Placer le modificateur le plus restrictif sur l’accesseur `get` est également autorisé. Par exemple, vous pouvez avoir une propriété `public`, mais restreindre l’accesseur `get` à `private`. Ce scénario s’observe rarement dans la pratique.
 
@@ -193,7 +193,7 @@ public class Person
 }
 ```
 
-L’exemple ci-dessus utilise la syntaxe d’*interpolation de chaîne* pour créer la chaîne mise en forme du nom complet.
+L’exemple ci-dessus utilise la fonctionnalité d’[interpolation de chaîne](../csharp/language-reference/tokens/interpolated.md) pour créer la chaîne mise en forme du nom complet.
 
 Vous pouvez également utiliser des *membres expression-bodied*, qui constituent un moyen plus succinct de créer la propriété `FullName` calculée :
 

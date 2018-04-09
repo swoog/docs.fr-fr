@@ -1,12 +1,12 @@
 ---
-title: "Fichiers mappés en mémoire"
-ms.custom: 
+title: Fichiers mappés en mémoire
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,7 +15,7 @@ helpviewer_keywords:
 - memory-mapped files
 - inter-process communiation
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
-caps.latest.revision: 
+caps.latest.revision: 24
 author: mairaw
 ms.author: mairaw
 manager: wpickett
@@ -42,7 +42,7 @@ Un fichier mappé en mémoire comporte le contenu d'un fichier en mémoire virtu
      Les non fichiers persistants sont des fichiers mappés en mémoire associés à un fichier sur un disque. Lorsque le dernier processus a fini de travailler avec le fichier, les données sont perdues et le fichier est récupéré par le nettoyage de la mémoire. Ces fichiers sont adaptés à la création d’une mémoire partagée pour les communications entre processus (IPC).  
   
 ## <a name="processes-views-and-managing-memory"></a>Processus, vues et gestion de la mémoire  
- Les fichiers mappés en mémoire peuvent être partagés entre plusieurs processus. Des processus peuvent mapper le même fichier en mémoire à l’aide d’un nom commun attribué par le processus qui a créé le fichier.
+ Les fichiers mappés en mémoire peuvent être partagés entre plusieurs processus. Des processus peuvent mapper le même fichier en mémoire à l’aide d’un nom commun attribué par le processus qui a créé le fichier.  
   
  Pour utiliser un fichier mappé en mémoire, vous devez créer une vue de l’intégralité du fichier mappé en mémoire ou une partie de celui-ci. Vous pouvez également créer plusieurs vues dans la même partie du fichier mappé en mémoire et créer ainsi une mémoire simultanée. Pour que deux vues restent simultanées, elles doivent être créées à partir du même fichier mappé en mémoire.  
   

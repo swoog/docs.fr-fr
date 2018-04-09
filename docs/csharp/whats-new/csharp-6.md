@@ -1,6 +1,6 @@
 ---
-title: "Quelles sont les nouveautés en c# 6 - Guide c#"
-description: "Découvrez les nouvelles fonctionnalités de C# version 6"
+title: Nouveautés de C# 6 | Guide C#
+description: Découvrez les nouvelles fonctionnalités de C# version 6
 keywords: .NET, .NET Core
 author: BillWagner
 ms.date: 09/22/2016
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 4d879f69-f889-4d3f-a781-75194e143400
-ms.openlocfilehash: f3e7a515b1dde52461ab6abf8a9adbe84d27b7c1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ea54e9a05120134eea8e1bc9d82302a7513b43e7
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="whats-new-in-c-6"></a>Nouveautés de C# 6
 
@@ -56,7 +56,7 @@ La syntaxe des propriétés implémentées automatiquement (généralement appel
 
 Toutefois, cette syntaxe simple limitait les types de conceptions que vous pouviez prendre en charge à l’aide d’auto-properties. C# 6 améliore les fonctionnalités des auto-properties afin de vous permettre de les exécuter dans un plus grand nombre de scénarios. Vous n’aurez pas besoin de fréquemment revenir manuellement sur la syntaxe plus détaillée de la déclaration et de la manipulation du champ de stockage.
 
-La nouvelle syntaxe répond à des scénarios pour les propriétés en lecture seule et pour l’initialisation de la variable stockage derrière une propriété automatique.
+La nouvelle syntaxe répond aux scénarios de propriétés en lecture seule et d’initialisation du stockage des variables derrière une auto-property.
 
 ### <a name="read-only-auto-properties"></a>Auto-properties en lecture seule
 
@@ -105,17 +105,17 @@ C# 6 vous permet d’assigner une valeur initiale pour le stockage utilisé par
 
 Le membre `Grades` est initialisé à l’emplacement où il est déclaré. Il est ainsi plus facile d’effectuer l’initialisation une seule fois. L’initialisation fait partie de la déclaration de propriété, facilitant ainsi la mise en correspondance de l’allocation de stockage et de l’interface publique pour les objets `Student`.
 
-Initialiseurs de propriété peuvent être utilisés avec les propriétés en lecture/écriture, ainsi que les propriétés en lecture seule, comme indiqué ici.
+Les initialiseurs de propriété peuvent être utilisés avec des propriétés en lecture/écriture, ainsi qu’avec des propriétés en lecture seule, comme indiqué ici.
 
 [!code-csharp[ReadWriteInitialization](../../../samples/snippets/csharp/new-in-6/newcode.cs#ReadWriteInitialization)]
 
 ## <a name="expression-bodied-function-members"></a>Membres de fonction expression-bodied
 
-Le corps de beaucoup de membres que nous écrivons se compose d’une seule instruction qui peut être représentée sous la forme d’une expression. Vous pouvez réduire cette syntaxe en écrivant un membre expression-bodied à la place. Il fonctionne pour les méthodes et propriétés en lecture seule. Par exemple, une substitution de `ToString()` est souvent un excellent candidat :
+Le corps de beaucoup de membres que nous écrivons se compose d’une seule instruction qui peut être représentée sous la forme d’une expression. Vous pouvez réduire cette syntaxe en écrivant un membre expression-bodied à la place. Cela fonctionne pour les méthodes et les propriétés en lecture seule. Par exemple, une substitution de `ToString()` est souvent un excellent candidat :
 
 [!code-csharp[ToStringExpressionMember](../../../samples/snippets/csharp/new-in-6/newcode.cs#ToStringExpressionMember)]
 
-Vous pouvez également utiliser des membres de l’expression-pulvérisés dans les propriétés en lecture seule :
+Vous pouvez également utiliser des membres expression-bodied dans des propriétés en lecture seule :
 
 [!code-csharp[FullNameExpressionMember](../../../samples/snippets/csharp/new-in-6/newcode.cs#FullNameExpressionMember)]
 
@@ -128,7 +128,7 @@ Votre code sera encombré de <xref:System.Math.Sin%2A>, de <xref:System.Math.Sqr
 
 [!code-csharp[UsingStaticMath](../../../samples/snippets/csharp/new-in-6/newcode.cs#UsingStaticMath)]
 
-Vous pouvez maintenant utiliser n’importe quelle méthode statique de la classe <xref:System.Math> sans qualifier la classe <xref:System.Math>. La classe <xref:System.Math> est un excellent cas d’usage de cette fonctionnalité, car elle ne contient aucune méthode d’instance. Vous pouvez également utiliser `using static` pour importer les méthodes statiques d’une classe pour une classe qui comprend à la fois des méthodes statiques et des méthodes d’instance. Un des exemples plus utiles est <xref:System.String>:
+Vous pouvez maintenant utiliser n’importe quelle méthode statique de la classe <xref:System.Math> sans qualifier la classe <xref:System.Math>. La classe <xref:System.Math> est un excellent cas d’usage de cette fonctionnalité, car elle ne contient aucune méthode d’instance. Vous pouvez également utiliser `using static` pour importer les méthodes statiques d’une classe pour une classe qui comprend à la fois des méthodes statiques et des méthodes d’instance. Un des exemples les plus utiles est <xref:System.String> :
 
 [!code-csharp[UsingStatic](../../../samples/snippets/csharp/new-in-6/newcode.cs#UsingStatic)]
 
@@ -209,17 +209,17 @@ Le fait de garantir que la partie gauche n’est évaluée qu’une seule fois v
 
 ## <a name="string-interpolation"></a>Interpolation de chaîne
 
-C# 6 contient une nouvelle syntaxe pour la composition de chaînes à partir d’une chaîne de format et des expressions qui peuvent être évaluées pour produire d’autres valeurs de chaîne.
+C# 6 contient une nouvelle syntaxe pour la composition de chaînes à partir d’une chaîne de format et des expressions qui sont évaluées pour produire d’autres valeurs de chaîne.
 
 Habituellement, vous deviez utiliser des paramètres de position dans une méthode telle que `string.Format` :
 
 [!code-csharp[stringFormat](../../../samples/snippets/csharp/new-in-6/oldcode.cs#stringFormat)]
 
-Avec C# 6, la nouvelle fonctionnalité d’interpolation de chaîne vous permet d’incorporer des expressions dans la chaîne de format. Faites simplement précéder la chaîne de `$` :
+Avec C# 6, la nouvelle fonctionnalité d’[interpolation de chaîne](../language-reference/tokens/interpolated.md) vous permet d’incorporer des expressions dans la chaîne de format. Faites simplement précéder la chaîne de `$` :
 
 [!code-csharp[stringInterpolation](../../../samples/snippets/csharp/new-in-6/newcode.cs#FullNameExpressionMember)]
 
-Cet exemple initial utilisait des expressions variables pour les expressions substituées. Vous pouvez étendre cette syntaxe pour utiliser n’importe quelle expression. Par exemple, vous pourrez calculer la moyenne pondérée cumulative d’un étudiant dans le cadre de l’interpolation :
+Cet exemple initial utilise des expressions de propriété pour les expressions substituées. Vous pouvez étendre cette syntaxe pour utiliser n’importe quelle expression. Par exemple, vous pourrez calculer la moyenne pondérée cumulative d’un étudiant dans le cadre de l’interpolation :
 
 [!code-csharp[stringInterpolationExpression](../../../samples/snippets/csharp/new-in-6/newcode.cs#stringInterpolationExpression)]
 
@@ -227,7 +227,7 @@ En exécutant l’exemple précédent, vous pouvez voir que la sortie de `Grades
 
 [!code-csharp[stringInterpolationFormat](../../../samples/snippets/csharp/new-in-6/newcode.cs#stringInterpolationFormat)]
 
-La ligne de code précédente mettra en forme la valeur de `Grades.Average()` sous la forme d’un nombre à virgule flottante à deux décimales.
+La ligne de code précédente met en forme la valeur de `Grades.Average()` sous la forme d’un nombre à virgule flottante à deux décimales.
 
 Le `:` est toujours interprété comme le séparateur entre l’expression mise en forme et la chaîne de format. Cela peut entraîner des problèmes quand votre expression utilise un `:` d’une autre manière, par exemple comme opérateur conditionnel :
 
@@ -249,22 +249,17 @@ En fait, il illustre l’étendue de la fonctionnalité. Toute expression C# pe
 
 ### <a name="string-interpolation-and-specific-cultures"></a>Interpolation de chaîne et cultures spécifiques
 
-Tous les exemples présentés dans la section précédente mettront en forme les chaînes à l’aide de la culture et de la langue actuelles sur l’ordinateur sur lequel le code s’exécute. Souvent, vous devrez mettre en forme la chaîne produite à l’aide d’une culture spécifique.
-L’objet créé à partir d’une interpolation de chaîne est un type qui a une conversion implicite en <xref:System.String> ou en <xref:System.FormattableString>.
+Tous les exemples présentés dans la section précédente mettent en forme les chaînes à l’aide de la culture et de la langue actuelles sur l’ordinateur sur lequel le code s’exécute. Souvent, vous devrez mettre en forme la chaîne produite à l’aide d’une culture spécifique.
+Pour cela, utilisez le fait que l’objet résultant d’une interpolation de chaîne peut être converti implicitement en <xref:System.FormattableString>.
 
-Le type <xref:System.FormattableString> contient la chaîne de format et les résultats de l’évaluation des arguments avant leur conversion en chaînes. Vous pouvez utiliser des méthodes publiques de <xref:System.FormattableString> pour spécifier la culture lors de la mise en forme d’une chaîne. Par exemple, le code suivant produira une chaîne utilisant l’allemand comme langue et culture. (Il utilisera le caractère ',' comme séparateur décimal et le caractère '.' comme séparateur des milliers.)
+L’instance <xref:System.FormattableString> contient la chaîne de format et les résultats de l’évaluation des expressions avant leur conversion en chaînes. Vous pouvez utiliser des méthodes publiques de <xref:System.FormattableString> pour spécifier la culture lors de la mise en forme d’une chaîne. Par exemple, l’exemple suivant produit une chaîne en utilisant la culture allemande. (Il utilise le caractère « , » comme séparateur décimal et le caractère « . » comme séparateur des milliers.)
 
 ```csharp
 FormattableString str = $"Average grade is {s.Grades.Average()}";
-var gradeStr = string.Format(null, 
-    System.Globalization.CultureInfo.CreateSpecificCulture("de-de"),
-    str.GetFormat(), str.GetArguments());
+var gradeStr = str.ToString(new System.Globalization.CultureInfo("de-DE"));
 ```
 
-> [!NOTE]
-> L’exemple précédent n’est pas pris en charge dans .NET Core version 1.0.1. Il est pris en charge uniquement dans le .NET Framework.
-
-En général, les expressions d’interpolation de chaîne produisent des chaînes comme sortie. Toutefois, si vous souhaitez mieux contrôler la culture utilisée pour mettre en forme la chaîne, vous pouvez spécifier une sortie spécifique.  S’il s’agit d’une fonctionnalité dont vous avez souvent besoin, vous pouvez créer des méthodes pratiques, comme des méthodes d’extension, pour faciliter la mise en forme simple avec des cultures spécifiques.
+Pour plus d’informations, consultez la rubrique [Interpolation de chaîne](../language-reference/tokens/interpolated.md).
 
 ## <a name="exception-filters"></a>Filtres d’exception
 

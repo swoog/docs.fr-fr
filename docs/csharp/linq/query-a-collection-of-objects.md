@@ -1,5 +1,5 @@
 ---
-title: "Interroger une collection d’objets"
+title: Interroger une collection d’objets
 description: Comment interroger les collections.
 keywords: .NET, .NET Core, C#
 author: BillWagner
@@ -10,11 +10,11 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.assetid: 87a76f8a-0b58-4791-90ea-2fe0a30416c9
-ms.openlocfilehash: 74d6c1f080c3e70867f5d2f074315bd1d8486bf0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a62e5c6324d15376f1b42ad078eeb883b05ef14f
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="query-a-collection-of-objects"></a>Interroger une collection d’objets
 Cet exemple montre comment effectuer une requête simple sur une liste d’objets `Student`. Chaque objet `Student` contient des informations de base sur l’étudiant et une liste qui représente les notes de l’étudiant lors de quatre examens.  
@@ -31,4 +31,4 @@ Cet exemple montre comment effectuer une requête simple sur une liste d’objet
 
 ## <a name="see-also"></a>Voir aussi  
  [Expressions de requête LINQ](index.md)  
- [Chaînes interpolées](../language-reference/keywords/interpolated-strings.md)
+ [Interpolation de chaîne](../language-reference/tokens/interpolated.md)

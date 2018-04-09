@@ -1,6 +1,6 @@
 ---
-title: "Didacticiel sur les chaînes interpolées - Guides de démarrage rapide local en C#"
-description: "Dans ce guide de démarrage rapide sur les chaînes interpolées, vous écrivez du code C# de façon à inclure le résultat d’une expression dans une chaîne plus grande."
+title: Didacticiel sur les chaînes interpolées - Guides de démarrage rapide local en C#
+description: Dans ce guide de démarrage rapide sur les chaînes interpolées, vous écrivez du code C# de façon à inclure le résultat d’une expression dans une chaîne plus grande.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 01/11/2018
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: b6089b69eb350fce29f86f19f5abeb44acb4b6b4
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: 1edd2b9f59d1933547c4152343f226a86ad90216
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="interpolated-strings"></a>Chaînes interpolées
 
@@ -166,5 +166,4 @@ Vous avez terminé le guide de démarrage rapide sur les chaînes interpolées.
     
 Vous pouvez passer au démarrage rapide [Tableaux et collections](arrays-and-collections.md) dans votre propre environnement de développement.
 
-Plus d’informations sur l’utilisation des chaînes interpolées, consultez la rubrique [Chaînes interpolées](../language-reference/keywords/interpolated-strings.md) dans les informations de référence sur C#.
-
+Plus d’informations sur les chaînes interpolées sont disponibles dans la rubrique [Interpolation de chaîne](../language-reference/tokens/interpolated.md) dans Référence C#.

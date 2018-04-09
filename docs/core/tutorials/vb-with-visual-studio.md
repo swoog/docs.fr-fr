@@ -1,6 +1,6 @@
 ---
-title: "Génération d’une application Hello World avec .NET Core et Visual Basic dans Visual Studio 2017"
-description: "Découvrez comment générer une application de console .NET Core simple avec Visual Basic à l’aide de Visual Studio 2017."
+title: Génération d’une application Hello World avec .NET Core et Visual Basic dans Visual Studio 2017
+description: Découvrez comment générer une application de console .NET Core simple avec Visual Basic à l’aide de Visual Studio 2017.
 keywords: .NET Core, application de console .NET Core, Visual Studio 2017
 author: rpetrusha
 ms.author: ronpet
@@ -12,11 +12,11 @@ dev_langs:
 - vb
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 0e3dbdb5df72963980f459643fcb5f4588e0029f
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: c3775fccf8d6e7c544cbd0b05df7043752e8bef9
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="build-a-visual-basic-hello-world-application-with-net-core-in-visual-studio-2017"></a>Générer une application Visual Basic Hello World avec .NET Core dans Visual Studio 2017
 
@@ -70,7 +70,7 @@ Améliorez votre application pour inviter l’utilisateur à entrer son nom, et 
 
    ![Fichier du programme Visual Studio avec la méthode Main mise à jour](./media/vb-with-visual-studio/codewindow.png)
 
-   Ce code affiche « What is your name? ». dans la fenêtre de console et attend que l’utilisateur entre une chaîne suivie de la touche Entrée. Il stocke cette chaîne dans une variable nommée `name`. Elle récupère également la valeur de la propriété <xref:System.DateTime.Now?displayProperty=nameWithType>, qui contient l’heure locale actuelle et l’assigne à une variable nommée `currentDate`. Enfin, elle utilise une [chaîne interpolée](../../csharp/language-reference/keywords/interpolated-strings.md) pour afficher ces valeurs dans la fenêtre de console.
+   Ce code affiche « What is your name? ». dans la fenêtre de console et attend que l’utilisateur entre une chaîne suivie de la touche Entrée. Il stocke cette chaîne dans une variable nommée `name`. Elle récupère également la valeur de la propriété <xref:System.DateTime.Now?displayProperty=nameWithType>, qui contient l’heure locale actuelle et l’assigne à une variable nommée `currentDate`. Enfin, elle utilise une [chaîne interpolée](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) pour afficher ces valeurs dans la fenêtre de console.
 
 1. Recompilez le programme en choisissant **Build** > **Générer la solution**.
 

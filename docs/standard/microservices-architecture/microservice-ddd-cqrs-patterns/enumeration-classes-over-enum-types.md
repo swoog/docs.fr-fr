@@ -1,6 +1,6 @@
 ---
-title: "Utilisation de classes d’énumération plutôt que de types enum"
-description: "Architecture des microservices .NET pour les applications .NET en conteneur | Utilisation de classes d’énumération plutôt que de types enum"
+title: Utilisation de classes d’énumération plutôt que de types enum
+description: Architecture des microservices .NET pour les applications .NET en conteneur | Utilisation de classes d’énumération plutôt que de types enum
 keywords: Docker, microservices, ASP.NET, conteneur
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4b190ee9dde5628bf16fe9c483d3636539c29361
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 57ff60ea01421f1a2a0466b7de9716b72b02d2c1
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="using-enumeration-classes-instead-of-enum-types"></a>Utilisation de classes d’énumération plutôt que de types enum
 
@@ -32,8 +32,8 @@ Le microservice Ordering (Commandes) dans eShopOnContainers fournit un exemple d
 ```csharp
 public abstract class Enumeration : IComparable
 {
-    public string Name { get; private set; }
-    public int Id { get; private set; }
+    public string Name { get; }
+    public int Id { get; }
 
     protected Enumeration()
     {

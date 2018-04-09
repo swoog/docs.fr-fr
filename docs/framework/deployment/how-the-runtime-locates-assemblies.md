@@ -1,12 +1,13 @@
 ---
-title: "Méthode de localisation des assemblys par le runtime"
-ms.custom: 
+title: Méthode de localisation des assemblys par le runtime
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - app.config files, assembly locations
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - locating assemblies
 - assemblies [.NET Framework], location
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 97a56a095c1b0c080cd3df329fce0085dd01af23
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6e154e0658534018ccd1086631cad6d350528b5d
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Méthode de localisation des assemblys par le runtime
 Pour déployer correctement votre application .NET Framework, il est important de bien comprendre comment le common language runtime localise les assemblys qui composent votre application et comment il établit des liaisons à ces assemblys. Par défaut, le runtime essaie d'établir une liaison avec la version exacte d'un assembly avec lequel l'application a été générée. Ce comportement par défaut peut être substitué par les paramètres du fichier de configuration.  
@@ -187,7 +189,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
   
 -   Le nom, qui est le nom de l'assembly référencé.  
   
--   L’attribut `privatePath` de l’élément [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md), qui est la liste définie par l’utilisateur des sous-répertoires sous l’emplacement racine. Cet emplacement peut être spécifié dans le fichier de configuration de l'application et dans le code managé en utilisant la propriété <xref:System.AppDomain.AppendPrivatePath%2A> pour un domaine d'application. Quand il est spécifié dans le code managé, l'attribut `privatePath` du code managé est détecté en premier, suivi du chemin d'accès spécifié dans le fichier de configuration de l'application.  
+-   L’attribut `privatePath` de l’élément [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md), qui est la liste définie par l’utilisateur des sous-répertoires sous l’emplacement racine. Cet emplacement peut être spécifié dans le fichier de configuration de l'application et dans le code managé en utilisant la propriété <xref:System.AppDomainSetup.PrivateBinPath?displayProperty=nameWithType> pour un domaine d'application. Quand il est spécifié dans le code managé, l'attribut `privatePath` du code managé est détecté en premier, suivi du chemin d'accès spécifié dans le fichier de configuration de l'application.  
   
 #### <a name="probing-the-application-base-and-culture-directories"></a>Détection de la base de l'application et des répertoires de culture  
  Le runtime commence toujours le processus de détection dans la base de l'application, qui peut être une URL ou le répertoire racine de l'application sur un ordinateur. Si l'assembly référencé n'est pas trouvé dans la base de l'application et qu'aucune information de culture n'est fournie, le runtime recherche des sous-répertoires avec le nom de l'assembly. Les répertoires détectés sont les suivants :  
@@ -224,7 +226,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
   
 -   Nom de l'assembly référencé : myAssembly  
   
--   Répertoire racine de l'application : http://www.code.microsoft.com  
+-   Répertoire racine de l’application : http://www.code.microsoft.com  
   
 -   L’élément [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) dans le fichier de configuration spécifie : bin  
   
@@ -254,7 +256,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 #### <a name="other-locations-probed"></a>Autres emplacements détectés  
  L'emplacement de l'assembly peut aussi être déterminé d'après le contexte de liaison actuel. Cela se produit le plus souvent quand la méthode <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> est utilisée dans des scénarios COM Interop. Si un assembly utilise la méthode <xref:System.Reflection.Assembly.LoadFrom%2A> pour référencer un autre assembly, l'emplacement de l'assembly appelant est considéré comme étant une indication de l'emplacement de l'assembly référencé. Si une correspondance est trouvée, cet assembly est chargé. Si aucune correspondance n'est trouvée, le runtime continue ses recherches sémantiques, puis demande à Windows Installer de lui fournir l'assembly. Si aucun assembly correspondant à la demande de liaison n'est fourni, une exception est levée. Il s'agit d'une exception <xref:System.TypeLoadException> dans le code managé si un type a été référencé ou d'une exception <xref:System.IO.FileNotFoundException> si un assembly à charger n'a pas été trouvé.  
   
- Par exemple, si Assembly1 référence Assembly2 et qu'Assembly1 a été chargé à partir de http://www.code.microsoft.com/utils, cet emplacement est considéré comme étant une indication de l'emplacement d'Assembly2.dll. Le runtime tente ensuite de détecter l'assembly dans http://www.code.microsoft.com/utils/Assembly2.dll et http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll. Si Assembly2 n'est pas trouvé dans ces emplacements, le runtime demande à Windows Installer de lui fournir l'assembly.  
+ Par exemple, si Assembly1 référence Assembly2 et qu’Assembly1 a été chargé à partir de http://www.code.microsoft.com/utils, cet emplacement est considéré comme étant une indication de l’emplacement d’Assembly2.dll. Le runtime sonde alors l’assembly dans http://www.code.microsoft.com/utils/Assembly2.dll et http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll. Si Assembly2 n'est pas trouvé dans ces emplacements, le runtime demande à Windows Installer de lui fournir l'assembly.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Meilleures pratiques pour le chargement d'assemblys](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
