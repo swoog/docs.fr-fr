@@ -1,5 +1,5 @@
 ---
-title: "Concevoir et développer des applications en conteneur à l’aide de Docker et de Microsoft Azure"
+title: Concevoir et développer des applications en conteneur à l’aide de Docker et de Microsoft Azure
 description: Cycle de vie des applications Docker en conteneur avec la plateforme et les outils Microsoft
 keywords: Docker, microservices, ASP.NET, conteneur
 author: CESARDELATORRE

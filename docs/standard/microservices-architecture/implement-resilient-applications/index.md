@@ -1,6 +1,6 @@
 ---
-title: "Implémentation d’applications résilientes"
-description: "Architecture des microservices .NET pour les applications .NET en conteneur | Implémentation d’applications résilientes"
+title: Implémentation d’applications résilientes
+description: Architecture des microservices .NET pour les applications .NET en conteneur | Implémentation d’applications résilientes
 keywords: Docker, microservices, ASP.NET, conteneur
 author: CESARDELATORRE
 ms.author: wiwagn

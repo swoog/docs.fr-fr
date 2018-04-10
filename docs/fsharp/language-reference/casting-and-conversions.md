@@ -1,6 +1,6 @@
 ---
 title: Cast et conversions (F#)
-description: "Découvrez comment le langage de programmation F # fournit des opérateurs de conversion pour les conversions arithmétiques entre différents types primitifs."
+description: 'Découvrez comment le langage de programmation F # fournit des opérateurs de conversion pour les conversions arithmétiques entre différents types primitifs.'
 keywords: visual f#, f#, programmation fonctionnelle
 author: cartermp
 ms.author: phcart
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: db30db67-da21-4206-bf0c-9211bd3cb22f
-ms.openlocfilehash: f17d3919c59c5881213d28a59cea7ae184493949
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: df8352b0dd8651f1480515311454a218ea79b971
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="casting-and-conversions-f"></a>Cast et conversions (F#)
 
@@ -110,7 +110,7 @@ let base1 = d1 :> Base1
 par
 
 ```fsharp
-base1 = upcast d1
+let base1 = upcast d1
 ```
 
 Dans le code précédent, le type d’argument et les types de retour sont `Derived1` et `Base1`, respectivement.

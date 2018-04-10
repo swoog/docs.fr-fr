@@ -1,20 +1,20 @@
 ---
-title: "Informations de référence sur les symboles et les opérateurs (F#)"
-description: "En savoir plus sur les symboles et les opérateurs qui sont utilisés dans le langage de programmation F #."
+title: Informations de référence sur les symboles et les opérateurs (F#)
+description: 'En savoir plus sur les symboles et les opérateurs qui sont utilisés dans le langage de programmation F #.'
 keywords: visual f#, f#, programmation fonctionnelle
 author: cartermp
 ms.author: phcart
-ms.date: 05/16/2016
+ms.date: 04/04/2018
 ms.topic: language-reference
 ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: ab453800-d4d0-4a11-9d55-2b358d56af27
-ms.openlocfilehash: cb21ef7385cb679f9d445f8ee419db3d727fa057
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: 2fa4504c7059b4559b364d4000fe4ec6131430e5
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="symbol-and-operator-reference"></a>Informations de référence sur les symboles et les opérateurs
 
@@ -34,9 +34,9 @@ Le tableau suivant décrit les symboles utilisés dans le langage F#, fournit de
 |`"""`|[Chaînes](../strings.md)|Délimite une chaîne textuelle. Diffère de `@"..."` en ce sens que vous pouvez indiquer un caractère guillemet anglais en utilisant un seul guillemet dans la chaîne.|
 |`#`|[Directives de compilateur](../compiler-directives.md)<br /><br />[Types flexibles](../flexible-types.md)|<ul><li>Préfixe une directive de préprocesseur ou de compilateur, telle que `#light`.<br /></li><li>Quand il est utilisé avec un type, indique un *type flexible* qui fait référence à un type ou à l’un de ses types dérivés.<br /></li><ul/>|
 |`$`|Aucune information supplémentaire n'est disponible.|<ul><li>Utilisé en interne pour certains noms de variable et de fonction générés par le compilateur.<br /></li><ul/>|
-|`%`|[Opérateurs arithmétiques](arithmetic-operators.md)<br /><br />[Quotations de code](../code-quotations.md)|<ul><li>Calcule le modulo entier.<br /></li><li>Utilisée pour les expressions d'ajout dans les quotations de code typé.<br /></li><ul/>|
+|`%`|[Opérateurs arithmétiques](arithmetic-operators.md)<br /><br />[Quotations de code](../code-quotations.md)|<ul><li>Calcule le reste entier.<br /></li><li>Utilisée pour les expressions d'ajout dans les quotations de code typé.<br /></li><ul/>|
 |`%%`|[Quotations de code](../code-quotations.md)|<ul><li>Utilisée pour les expressions d'ajout dans les quotations de code non typé.<br /></li><ul/>|
-|`%?`|[Opérateurs autorisant la valeur Null](nullable-operators.md)|<ul><li>Calcule le modulo entier lorsque la partie droite est un type Nullable.<br /></li><ul/>|
+|`%?`|[Opérateurs autorisant la valeur Null](nullable-operators.md)|<ul><li>Calcule le reste entier, lorsque la partie droite est un type nullable.<br /></li><ul/>|
 |`&`|[Expressions match](../match-expressions.md)|<ul><li>Calcule l'adresse d'une valeur mutable pour une utilisation lors de l'interaction avec d'autres langages.<br /></li><li>Utilisé dans les modèles AND.<br /></li><ul/>|
 |`&&`|[Opérateurs booléens](boolean-operators.md)|<ul><li>Calcule l'opération booléenne AND.<br /></li><ul/>|
 |`&&&`|[Opérateurs au niveau du bit](bitwise-operators.md)|<ul><li>Calcule l'opération AND au niveau du bit.<br /></li><ul/>|
@@ -127,7 +127,7 @@ Le tableau suivant indique l'ordre de priorité des opérateurs et autres mots c
 |--------|-------------|
 |`as`|Droit|
 |`when`|Droit|
-|<code>&#124;</code>(barre verticale)|Gauche|
+|<code>&#124;</code> (barre verticale)|Gauche|
 |`;`|Droit|
 |`let`|Non associatif|
 |`function`, `fun`, `match`, `try`|Non associatif|
@@ -138,7 +138,7 @@ Le tableau suivant indique l'ordre de priorité des opérateurs et autres mots c
 |`or`, <code>&#124;&#124;</code>|Gauche|
 |`&`, `&&`|Gauche|
 |`:>`, `:?>`|Droit|
-|`!=`*Op*, `<` *op*, `>` *op*, `=`, <code>&#124;</code> *op*, `&`  *Op*,`&`<br /><br />(y compris `<<<`, `>>>`, <code>&#124;&#124;&#124;</code>, `&&&`)|Gauche|
+|`!=`*op*, `<`*op*, `>`*op*, `=`, <code>&#124;</code>*op*, `&`*op*, `&`<br /><br />(y compris `<<<`, `>>>`, <code>&#124;&#124;&#124;</code>, `&&&`)|Gauche|
 |`^`*op*<br /><br />(y compris `^^^`)|Droit|
 |`::`|Droit|
 |`:?`|Non associatif|
@@ -146,7 +146,7 @@ Le tableau suivant indique l'ordre de priorité des opérateurs et autres mots c
 |`*`*op*, `/`*op*, `%`*op*|Gauche|
 |`**`*op*|Droit|
 |`f x` (application de fonction)|Gauche|
-|<code>&#124;</code>(critères spéciaux)|Droit|
+|<code>&#124;</code> (critères spéciaux)|Droit|
 |opérateurs de préfixe (`+`*op*, `-`*op*, `%`, `%%`, `&`, `&&`, `!`*op*, `~`*op*)|Gauche|
 |`.`|Left|
 |`f(x)`|Gauche|

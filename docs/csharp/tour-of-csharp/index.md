@@ -1,7 +1,7 @@
 ---
-title: "Visite guidée du langage C# - Guide du langage C#"
-description: "Novice en matière de langage C# ? Découvrez les principes de base du langage."
-keywords: ".NET, .NET Core, C#, Abécédaire du langage C#, Guide du langage C#"
+title: Visite guidée du langage C# - Guide du langage C#
+description: Novice en matière de langage C# ? Découvrez les principes de base du langage.
+keywords: .NET, .NET Core, C#, Abécédaire du langage C#, Guide du langage C#
 author: BillWagner
 ms.author: wiwagn
 ms.date: 08/10/2016

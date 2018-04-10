@@ -1,23 +1,24 @@
 ---
-title: "Sérialisation de workflows et d'activités vers et à partir de XAML"
-ms.custom: 
+title: Sérialisation de workflows et d'activités vers et à partir de XAML
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 37685b32-24e3-4d72-88d8-45d5fcc49ec2
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6c1954f02aef13599f7bd24f8e2d136f0f876256
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4ca32eb9543498279448617e33169ddd22882702
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="serializing-workflows-and-activities-to-and-from-xaml"></a>Sérialisation de workflows et d'activités vers et à partir de XAML
 Outre le fait d'être compilées en types qui sont contenus dans des assemblys, les définitions de workflow peuvent également être sérialisées en XAML. Ces définitions sérialisées peuvent être rechargées pour la modification ou l'inspection, passées à un système de génération pour la compilation, ou bien chargées et appelées. Cette rubrique fournit une vue d'ensemble de la sérialisation de définitions de workflow et de l'utilisation de définitions de workflow XAML.  
@@ -27,7 +28,7 @@ Outre le fait d'être compilées en types qui sont contenus dans des assemblys, 
   
  [!code-csharp[CFX_WorkflowApplicationExample#41](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#41)]  
   
- Chacune des instances <xref:System.Activities.DynamicActivityProperty> représente l'un des arguments d'entrée du workflow, et <xref:System.Activities.ActivityBuilder.Implementation%2A> contient les activités qui composent la logique du workflow. Notez que les expressions r-value dans cet exemple sont des expressions Visual Basic. Les expressions lambda ne sont pas sérialisables en XAML à moins d'utiliser <xref:System.Activities.Expressions.ExpressionServices.Convert%2A>. Si les workflows sérialisés sont destinés à être ouverts ou modifiés dans le concepteur de workflow, des expressions Visual Basic doivent être utilisées. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Création de flux de travail, des activités et des Expressions à l’aide du Code impératif](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md).  
+ Chacune des instances <xref:System.Activities.DynamicActivityProperty> représente l'un des arguments d'entrée du workflow, et <xref:System.Activities.ActivityBuilder.Implementation%2A> contient les activités qui composent la logique du workflow. Notez que les expressions r-value dans cet exemple sont des expressions Visual Basic. Les expressions lambda ne sont pas sérialisables en XAML à moins d'utiliser <xref:System.Activities.Expressions.ExpressionServices.Convert%2A>. Si les workflows sérialisés sont destinés à être ouverts ou modifiés dans le concepteur de workflow, des expressions Visual Basic doivent être utilisées. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Création de flux de travail, des activités et des Expressions à l’aide du Code impératif](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md).  
   
  Pour sérialiser la définition de workflow représentée par l'instance <xref:System.Activities.ActivityBuilder> en XAML, utilisez <xref:System.Activities.XamlIntegration.ActivityXamlServices> de créer <xref:System.Xaml.XamlWriter>, puis utilisez <xref:System.Xaml.XamlServices> pour sérialiser la définition de workflow à l'aide de <xref:System.Xaml.XamlWriter>. <xref:System.Activities.XamlIntegration.ActivityXamlServices> a des méthodes pour mapper des instances <xref:System.Activities.ActivityBuilder> vers et à partir du XAML, et pour charger des workflows XAML et retourner un <xref:System.Activities.DynamicActivity> qui peut être appelé. Dans l'exemple suivant, l'instance <xref:System.Activities.ActivityBuilder> de l'exemple précédent est sérialisée en chaîne, et également enregistrée dans un fichier.  
   
@@ -74,7 +75,7 @@ sw.Close();
 </Activity>  
 ```  
   
- Pour charger un workflow sérialisé, le <xref:System.Activities.XamlIntegration.ActivityXamlServices> <xref:System.Activities.XamlIntegration.ActivityXamlServices.Load%2A> méthode est utilisée. Elle prend la définition de workflow sérialisée et retourne un <xref:System.Activities.DynamicActivity> qui représente la définition de workflow. Notez que le XAML n'est pas désérialisé tant que <xref:System.Activities.Activity.CacheMetadata%2A> n'est pas appelé sur le corps de <xref:System.Activities.DynamicActivity> pendant le processus de validation. Si la validation n'est pas appelée explicitement, elle est effectuée lors de l'appel du workflow. Si la définition de workflow XAML n'est pas valide, une exception <xref:System.Argument> est levée. Toutes les exceptions levées à partir de <xref:System.Activities.Activity.CacheMetadata%2A> sont soustraites à l'appel à <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> et doivent être gérées par l'appelant. Dans l'exemple suivant, le workflow sérialisé de l'exemple précédent est chargé et appelé à l'aide de <xref:System.Activities.WorkflowInvoker>.  
+ Pour charger un workflow sérialisé, le <xref:System.Activities.XamlIntegration.ActivityXamlServices> <xref:System.Activities.XamlIntegration.ActivityXamlServices.Load%2A> méthode est utilisée. Elle prend la définition de workflow sérialisée et retourne un <xref:System.Activities.DynamicActivity> qui représente la définition de workflow. Notez que le XAML n'est pas désérialisé tant que <xref:System.Activities.Activity.CacheMetadata%2A> n'est pas appelé sur le corps de <xref:System.Activities.DynamicActivity> pendant le processus de validation. Si la validation n'est pas appelée explicitement, elle est effectuée lors de l'appel du workflow. Si la définition de workflow XAML n'est pas valide, une exception <xref:System.ArgumentException> est levée. Toutes les exceptions levées à partir de <xref:System.Activities.Activity.CacheMetadata%2A> sont soustraites à l'appel à <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> et doivent être gérées par l'appelant. Dans l'exemple suivant, le workflow sérialisé de l'exemple précédent est chargé et appelé à l'aide de <xref:System.Activities.WorkflowInvoker>.  
   
  [!code-csharp[CFX_WorkflowApplicationExample#43](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#43)]  
   
@@ -83,7 +84,7 @@ sw.Close();
  **25 + 15**  
 **40**    
 > [!NOTE]
->  [!INCLUDE[crabout](../../../includes/crabout-md.md)]appel de flux de travail avec des arguments d’entrée et de sortie, consultez [à l’aide de WorkflowInvoker et WorkflowApplication](../../../docs/framework/windows-workflow-foundation/using-workflowinvoker-and-workflowapplication.md) et <xref:System.Activities.WorkflowInvoker.Invoke%2A>.  
+>  [!INCLUDE[crabout](../../../includes/crabout-md.md)] appel de flux de travail avec des arguments d’entrée et de sortie, consultez [à l’aide de WorkflowInvoker et WorkflowApplication](../../../docs/framework/windows-workflow-foundation/using-workflowinvoker-and-workflowapplication.md) et <xref:System.Activities.WorkflowInvoker.Invoke%2A>.  
   
  Si le workflow sérialisé contient des expressions c#, alors un <xref:System.Activities.XamlIntegration.ActivityXamlServicesSettings> de l’instance avec son <xref:System.Activities.XamlIntegration.ActivityXamlServicesSettings.CompileExpressions%2A> propriété la valeur `true` doit être passé en tant que paramètre à <xref:System.Activities.XamlIntegration.ActivityXamlServices.Load%2A?displayProperty=nameWithType>, sinon un <xref:System.NotSupportedException> sera levée avec un message semblable à la suivant : `Expression Activity type 'CSharpValue`1' requiert une compilation pour pouvoir pour s’exécuter.  Veuillez vous assurer que le flux de travail a été compilé. »  
   
@@ -96,7 +97,7 @@ ActivityXamlServicesSettings settings = new ActivityXamlServicesSettings
 DynamicActivity<int> wf = ActivityXamlServices.Load(new StringReader(serializedAB), settings) as DynamicActivity<int>;  
 ```  
   
- [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Expressions c#](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md).  
+ [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Les Expressions c#](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md).  
   
  Une définition de workflow sérialisée peut également être chargée dans un <xref:System.Activities.ActivityBuilder> instance à l’aide de la <xref:System.Activities.XamlIntegration.ActivityXamlServices> <xref:System.Activities.XamlIntegration.ActivityXamlServices.CreateBuilderReader%2A> (méthode). Une fois qu'un workflow sérialisé est chargé dans une instance <xref:System.Activities.ActivityBuilder>, il peut être inspecté et modifié. Cette possibilité, qui est utile pour les auteurs de concepteurs de workflow personnalisés, fournit un mécanisme permettant d'enregistrer et de recharger des définitions de workflow pendant le processus de conception. Dans l'exemple suivant, la définition de workflow sérialisée de l'exemple précédent est chargée et ses propriétés sont inspectées.  
   

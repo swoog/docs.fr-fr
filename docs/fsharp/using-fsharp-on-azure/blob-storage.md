@@ -1,6 +1,6 @@
 ---
-title: "Prise en main le stockage Blob Azure à l’aide de F #"
-description: "Stocker des données non structurées dans le cloud avec le stockage d’objets Blob Azure."
+title: 'Prise en main le stockage Blob Azure à l’aide de F #'
+description: Stocker des données non structurées dans le cloud avec le stockage d’objets Blob Azure.
 keywords: 'Visual f #, f #, fonctionnelle de programmation, .NET, .NET Core, Azure'
 author: sylvanc
 ms.author: phcart
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: c5b74a4f-dcd1-4849-930c-904b6c8a04e1
-ms.openlocfilehash: 5be948e100c496bc6613f1fdfb826ece5de6df8e
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 14ccba36638c724536793a6a589cf1c0a6186eeb
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>Prise en main le stockage Blob Azure à l’aide de F # #
 
@@ -247,7 +247,7 @@ Maintenant que vous avez appris les notions de base du stockage Blob, suivez ces
 
 ### <a name="related-guides"></a>Guides connexes
 
-- [Mise en route avec le stockage d’objets Blob Azure en c#](https://azure.microsoft.com/documentation/samples/storage-blob-dotnet-getting-started/)
+- [Mise en route avec le stockage d’objets Blob Azure en c#](https://azure.microsoft.com/resources/samples/storage-blob-dotnet-getting-started/)
 - [Transfert de données avec l’utilitaire de ligne de commande AzCopy sur Windows](/azure/storage/common/storage-use-azcopy)
 - [Transfert de données avec l’utilitaire de ligne de commande AzCopy sur Linux](/azure/storage/common/storage-use-azcopy-linux)
 - [Configurez les chaînes de connexion de stockage Azure](/azure/storage/common/storage-configure-connection-string)

@@ -1,17 +1,19 @@
 ---
-title: "base (référence C#)"
-description: "Découvrez le mot clé base, qui sert à accéder aux membres de la classe de base à partir d’une classe dérivée en C#."
+title: base (référence C#)
+description: Découvrez le mot clé base, qui sert à accéder aux membres de la classe de base à partir d’une classe dérivée en C#.
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - base
 - BaseClass.BaseClass
 - base_CSharpKeyword
-helpviewer_keywords: base keyword [C#]
+helpviewer_keywords:
+- base keyword [C#]
 ms.assetid: 8b645dbe-1a33-49b8-8716-1c401f9a5ea5
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 1bbaa0cc05b35f822113bc3a8c3cde966b1484ef

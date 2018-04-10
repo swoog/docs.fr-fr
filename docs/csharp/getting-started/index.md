@@ -1,7 +1,7 @@
 ---
-title: "Bien démarrer - Guide C#"
-description: "Vous trouverez ici de petits didacticiels simples qui vous permettront d’apprendre les concepts de base de C# et d’écrire des applications .NET Core."
-keywords: "C#, bien démarrer, acquisition, installation"
+title: Bien démarrer - Guide C#
+description: Vous trouverez ici de petits didacticiels simples qui vous permettront d’apprendre les concepts de base de C# et d’écrire des applications .NET Core.
+keywords: C#, bien démarrer, acquisition, installation
 helpviewer_keywords:
 - Visual C#, getting started
 - getting started, Visual C#
@@ -12,11 +12,11 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.openlocfilehash: 002c0e35bc8dfb54fc081fcb70000c9c61eb5fcc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: f335ee1412932043b175aa49b29ecd360d447eb9
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="get-started-with-c"></a>Bien démarrer avec C# #
 
@@ -43,10 +43,6 @@ Les rubriques suivantes sont disponibles :
    Visual Studio Code est un éditeur de code gratuit optimisé pour la création et le débogage d’applications cloud et web modernes. Il prend en charge IntelliSense et est disponible pour Linux, macOS et Windows.
 
    Cette rubrique vous montre comment créer et exécuter une application Hello World simple avec Visual Studio Code et .NET Core.
-
-* [Ressources supplémentaires pour les programmeurs Visual C#](additional-resources.md)
-
-   Fournit des liens vers les sites web et les groupes de discussion susceptibles de vous aider à trouver les réponses aux problèmes courants.
 
 ## <a name="related-sections"></a>Rubriques connexes
 

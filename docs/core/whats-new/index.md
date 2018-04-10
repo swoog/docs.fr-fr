@@ -1,13 +1,14 @@
 ---
-title: "Nouveautés de .NET Core 2.0"
-description: "Découvrez les nouvelles fonctionnalités de .NET Core."
+title: Nouveautés de .NET Core 2.0
+description: Découvrez les nouvelles fonctionnalités de .NET Core.
 keywords: .NET, .NET Core
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/13/2017
 ms.topic: article
 ms.prod: .net-core
-ms.workload: dotnetcore
+ms.workload:
+- dotnetcore
 ms.openlocfilehash: 749f0502b5c80ed3d6b81d2036e7591e3f1fe08a
 ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT

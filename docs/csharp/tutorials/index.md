@@ -1,6 +1,6 @@
 ---
 title: Didacticiels C#
-description: "Explorez ces didacticiels C# pour savoir comment générer des programmes C# et découvrez les fonctionnalités du langage C#."
+description: Explorez ces didacticiels C# pour savoir comment générer des programmes C# et découvrez les fonctionnalités du langage C#.
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn

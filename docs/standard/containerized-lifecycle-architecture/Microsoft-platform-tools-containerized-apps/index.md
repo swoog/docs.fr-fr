@@ -1,5 +1,5 @@
 ---
-title: "Présentation de la plateforme et des outils Microsoft pour les applications en conteneur"
+title: Présentation de la plateforme et des outils Microsoft pour les applications en conteneur
 description: Cycle de vie des applications Docker en conteneur avec la plateforme et les outils Microsoft
 keywords: Docker, microservices, ASP.NET, conteneur
 author: CESARDELATORRE

@@ -1,32 +1,33 @@
 ---
 title: Assemblys et le Global Assembly Cache (C#)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: 149f5ca5-5b34-4746-9542-1ae43b2d0256
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 3743c07f1de1d39f07d559aa161e4547422a6e52
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 923a64e98fde3ab11f4e3feb6c91507ae8886151
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="assemblies-and-the-global-assembly-cache-c"></a>Assemblys et le Global Assembly Cache (C#)
 Les assemblys constituent l’unité fondamentale dans le déploiement, la gestion de version, la portée d’activation et les autorisations de sécurité d’une application .NET. Les assemblys prennent la forme d’un fichier exécutable (.exe) ou d’un fichier de bibliothèque de liens dynamiques (.dll) et sont les blocs de construction du .NET Framework. Ils fournissent au Common Language Runtime les informations dont il a besoin pour connaître les implémentations de type. Vous pouvez comparer un assembly à une collection de types et de ressources conçus pour opérer ensemble et former une unité logique de fonctionnalité.  
   
- Les assemblys peuvent contenir un ou plusieurs modules. Par exemple, les projets plus importants peuvent être planifiés de sorte que plusieurs développeurs individuels travaillent sur des modules distincts, qui se regroupent pour créer un assembly unique. Pour plus d’informations sur les modules, consultez la rubrique [Comment : générer un assembly multifichier](https://msdn.microsoft.com/library/226t7yxe).  
+ Les assemblys peuvent contenir un ou plusieurs modules. Par exemple, les projets plus importants peuvent être planifiés de sorte que plusieurs développeurs individuels travaillent sur des modules distincts, qui se regroupent pour créer un assembly unique. Pour plus d’informations sur les modules, consultez la rubrique [Comment : générer un assembly multifichier](../../../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md).  
   
  Les assemblys ont les propriétés suivantes :  
   
 -   Les assemblys sont implémentés en tant que fichiers .exe ou .dll.  
   
--   Vous pouvez partager un assembly entre des applications en le plaçant dans le Global Assembly Cache. Les assemblys doivent avoir un nom fort avant d’être inclus dans le GAC. Pour plus d’informations, consultez [Assemblys avec nom fort](https://msdn.microsoft.com/library/wd40t7ad).  
+-   Vous pouvez partager un assembly entre des applications en le plaçant dans le Global Assembly Cache. Les assemblys doivent avoir un nom fort avant d’être inclus dans le GAC. Pour plus d’informations, consultez [Assemblys avec nom fort](../../../../../docs/framework/app-domains/strong-named-assemblies.md).  
   
 -   Les assemblys sont chargés en mémoire uniquement s’ils sont requis. S’ils ne sont pas utilisés, ils ne sont pas chargés. Cela signifie que les assemblys peuvent être un moyen efficace pour gérer les ressources dans les grands projets.  
   
@@ -45,7 +46,7 @@ Les assemblys constituent l’unité fondamentale dans le déploiement, la gesti
   
  Comme les assemblys contiennent des informations sur le contenu, le contrôle de version et les dépendances, les applications créées avec C# ne dépendent pas des valeurs du Registre Windows pour fonctionner correctement. Les assemblys réduisent les conflits de fichiers .dll et rendent vos applications plus fiables et plus faciles à déployer. Dans de nombreux cas, vous pouvez installer une application .NET simplement en copiant ses fichiers sur l’ordinateur cible.  
   
- Pour plus d’informations, consultez [Manifeste d’assembly](https://msdn.microsoft.com/library/1w45z383).  
+ Pour plus d’informations, consultez [Manifeste d’assembly](../../../../../docs/framework/app-domains/assembly-manifest.md).  
   
 ## <a name="adding-a-reference-to-an-assembly"></a>Ajout d’une référence à un assembly  
  Pour utiliser un assembly, vous devez y ajouter une référence. Ensuite, vous utilisez [la directive using](../../../../csharp/language-reference/keywords/using-directive.md) pour choisir l’espace de noms des éléments que vous voulez utiliser. Une fois qu’un assembly est référencé et importé, toutes les classes, propriétés, méthodes accessibles et les autres membres de ses espaces de noms sont disponibles pour votre application comme si leur code faisait partie de votre fichier source.  
@@ -60,7 +61,7 @@ Les assemblys constituent l’unité fondamentale dans le déploiement, la gesti
   
 ## <a name="see-also"></a>Voir aussi  
  [Guide de programmation C#](../../../../csharp/programming-guide/index.md)  
- [Assemblys dans le Common Language Runtime](https://msdn.microsoft.com/library/k3677y81)  
+ [Assemblys dans le Common Language Runtime](../../../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
  [Assemblys friend (C#)](friend-assemblies.md)  
  [Guide pratique pour partager un assembly avec d’autres applications (C#)](how-to-share-an-assembly-with-other-applications.md)  
  [Guide pratique pour charger et décharger des assemblys (C#)](how-to-load-and-unload-assemblies.md)  

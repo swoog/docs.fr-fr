@@ -1,6 +1,6 @@
 ---
-title: "Sécurisation des microservices .NET et des applications web"
-description: "Architecture des microservices .NET pour les applications .NET en conteneur | Sécurisation des microservices .NET et des applications web"
+title: Sécurisation des microservices .NET et des applications web
+description: Architecture des microservices .NET pour les applications .NET en conteneur | Sécurisation des microservices .NET et des applications web
 keywords: Docker, microservices, ASP.NET, conteneur
 author: mjrousos
 ms.author: wiwagn

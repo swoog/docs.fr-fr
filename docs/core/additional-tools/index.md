@@ -1,6 +1,6 @@
 ---
-title: "Outils .NET Core supplémentaires"
-description: "Vue d’ensemble des outils supplémentaires qui prennent en charge et étendent les fonctionnalités de .NET Core."
+title: Outils .NET Core supplémentaires
+description: Vue d’ensemble des outils supplémentaires qui prennent en charge et étendent les fonctionnalités de .NET Core.
 author: mlacouture
 manager: wpickett
 ms.author: johalex

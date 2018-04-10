@@ -1,7 +1,7 @@
 ---
-title: "Didacticiels interactifs pour C# - Démarrages rapides pour C#"
-description: "Découvrez C# dans votre navigateur et prenez en main votre propre environnement de développement"
-keywords: "C#, Prise en main, Leçons, Interactif"
+title: Didacticiels interactifs pour C# - Démarrages rapides pour C#
+description: Découvrez C# dans votre navigateur et prenez en main votre propre environnement de développement
+keywords: C#, Prise en main, Leçons, Interactif
 author: billwagner
 ms.author: wiwagn
 ms.date: 01/30/2018
