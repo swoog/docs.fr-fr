@@ -1,5 +1,5 @@
 ---
-title: "Exécuter, gérer et surveiller des environnements de production Docker"
+title: Exécuter, gérer et surveiller des environnements de production Docker
 description: Cycle de vie des applications Docker en conteneur avec la plateforme et les outils Microsoft
 keywords: Docker, microservices, ASP.NET, conteneur
 author: CESARDELATORRE

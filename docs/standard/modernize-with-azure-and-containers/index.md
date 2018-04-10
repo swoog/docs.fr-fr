@@ -1,6 +1,6 @@
 ---
 title: Moderniser des applications .NET existantes avec le cloud Azure et des conteneurs Windows
-description: "Apprenez à déplacer les applications existantes vers le cloud Azure et les conteneurs avec ce livre électronique."
+description: Apprenez à déplacer les applications existantes vers le cloud Azure et les conteneurs avec ce livre électronique.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017

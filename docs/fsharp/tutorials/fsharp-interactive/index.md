@@ -1,6 +1,6 @@
 ---
-title: "Informations de référence sur F# Interactive (fsi.exe)"
-description: "Découvrez comment F # Interactive (fsi.exe) est utilisée pour exécuter du code F # interactive sur la console ou pour exécuter des scripts F #."
+title: Informations de référence sur F# Interactive (fsi.exe)
+description: 'Découvrez comment F # Interactive (fsi.exe) est utilisée pour exécuter du code F # interactive sur la console ou pour exécuter des scripts F #.'
 keywords: visual f#, f#, programmation fonctionnelle
 author: cartermp
 ms.author: phcart

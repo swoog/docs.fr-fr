@@ -1,6 +1,6 @@
 ---
 title: Gestion des versions de .NET Core
-description: "Découvrez comment fonctionne la gestion des versions de .NET Core."
+description: Découvrez comment fonctionne la gestion des versions de .NET Core.
 author: bleroy
 ms.author: mairaw
 ms.date: 02/13/2018

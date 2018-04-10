@@ -1,6 +1,6 @@
 ---
 title: Valeurs (F#)
-description: "Découvrez comment les valeurs en F # sont les quantités qui ont un type spécifique."
+description: 'Découvrez comment les valeurs en F # sont les quantités qui ont un type spécifique.'
 keywords: visual f#, f#, programmation fonctionnelle
 author: cartermp
 ms.author: phcart

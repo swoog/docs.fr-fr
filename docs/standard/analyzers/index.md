@@ -1,6 +1,6 @@
 ---
 title: Les analyseurs de Roslyn - .NET
-description: "En savoir plus sur les analyseurs de Roslyn capables de détecter les problèmes et de suggérer des correctifs pour les résoudre."
+description: En savoir plus sur les analyseurs de Roslyn capables de détecter les problèmes et de suggérer des correctifs pour les résoudre.
 keywords: .NET, .NET Core
 author: billwagner
 ms.author: billwagner

@@ -1,6 +1,6 @@
 ---
 title: Gestion des exceptions (F#)
-description: "Découvrez les principes fondamentaux de la gestion des exceptions dans F # et des liens vers des expressions et des fonctions de gestion des exceptions."
+description: 'Découvrez les principes fondamentaux de la gestion des exceptions dans F # et des liens vers des expressions et des fonctions de gestion des exceptions.'
 keywords: visual f#, f#, programmation fonctionnelle
 author: cartermp
 ms.author: phcart

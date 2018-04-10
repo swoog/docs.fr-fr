@@ -1,6 +1,6 @@
 ---
-title: "Points importants à retenir"
-description: "Cycle de vie des applications Docker en conteneur avec la plateforme et les outils Microsoft (livre électronique) _v1.1"
+title: Points importants à retenir
+description: Cycle de vie des applications Docker en conteneur avec la plateforme et les outils Microsoft (livre électronique) _v1.1
 keywords: Docker, microservices, ASP.NET, conteneur
 author: CESARDELATORRE
 ms.author: wiwagn

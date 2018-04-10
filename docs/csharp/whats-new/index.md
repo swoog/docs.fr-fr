@@ -1,7 +1,7 @@
 ---
-title: "Nouveautés de C# | Guide C#"
-description: "Évolution du langage C#"
-keywords: "C#, dernières fonctionnalités, nouveautés, Roslyn"
+title: Nouveautés de C# | Guide C#
+description: Évolution du langage C#
+keywords: C#, dernières fonctionnalités, nouveautés, Roslyn
 author: BillWagner
 ms.author: wiwagn
 ms.date: 11/13/2017

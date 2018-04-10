@@ -1,6 +1,6 @@
 ---
-title: "Conception et développement d’applications .NET à plusieurs conteneurs et basées sur des microservices"
-description: "Architecture des Microservices .NET pour les applications .NET en conteneur | Conception et développement d’applications .NET à plusieurs conteneurs et basées sur des microservices"
+title: Conception et développement d’applications .NET à plusieurs conteneurs et basées sur des microservices
+description: Architecture des Microservices .NET pour les applications .NET en conteneur | Conception et développement d’applications .NET à plusieurs conteneurs et basées sur des microservices
 keywords: Docker, microservices, ASP.NET, conteneur
 author: CESARDELATORRE
 ms.author: wiwagn

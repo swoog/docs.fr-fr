@@ -1,6 +1,6 @@
 ---
-title: "Portage vers .NET Core à partir du .NET Framework"
-description: "Présentation du processus de portage et d’outils qui peuvent s’avérer utiles lors du portage d’un projet .NET Framework vers .NET Core."
+title: Portage vers .NET Core à partir du .NET Framework
+description: Présentation du processus de portage et d’outils qui peuvent s’avérer utiles lors du portage d’un projet .NET Framework vers .NET Core.
 keywords: .NET, .NET Core
 author: cartermp
 ms.author: mairaw
@@ -9,7 +9,8 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 00d00d38-99af-44f4-a75f-defcd9729dc5
-ms.workload: dotnetcore
+ms.workload:
+- dotnetcore
 ms.openlocfilehash: 3413b73c2a0a3c3ebf49b0b3ec81d00c6558d9a8
 ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT

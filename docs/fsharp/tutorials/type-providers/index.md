@@ -1,6 +1,6 @@
 ---
 title: Fournisseurs de type
-description: "Découvrez comment un fournisseur de type F # est un composant qui fournit des types, propriétés et méthodes à utiliser dans vos programmes."
+description: 'Découvrez comment un fournisseur de type F # est un composant qui fournit des types, propriétés et méthodes à utiliser dans vos programmes.'
 keywords: visual f#, f#, programmation fonctionnelle
 author: cartermp
 ms.author: phcart

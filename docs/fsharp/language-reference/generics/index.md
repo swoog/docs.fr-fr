@@ -1,6 +1,6 @@
 ---
-title: "Génériques (F#)"
-description: "Découvrez comment utiliser les fonctions F # génériques et types, qui vous permettent d’écrire du code qui fonctionne avec un large éventail de types sans avoir à répéter le code."
+title: Génériques (F#)
+description: 'Découvrez comment utiliser les fonctions F # génériques et types, qui vous permettent d’écrire du code qui fonctionne avec un large éventail de types sans avoir à répéter le code.'
 keywords: visual f#, f#, programmation fonctionnelle
 author: cartermp
 ms.author: phcart

@@ -1,6 +1,6 @@
 ---
 title: Guide C#
-description: "Découvrez comment le guide C# peut vous aider à approfondir vos connaissances en C#, que vous soyez développeur débutant ou expert chevronné."
+description: Découvrez comment le guide C# peut vous aider à approfondir vos connaissances en C#, que vous soyez développeur débutant ou expert chevronné.
 author: BillWagner
 ms.date: 01/30/2018
 ms.topic: article

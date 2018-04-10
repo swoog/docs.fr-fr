@@ -1,6 +1,6 @@
 ---
-title: "WMI et les compteurs de Performance (référence des API non managées)"
-description: "Résume le .NET Framework API non managée pour des informations sur les compteurs de performance ou WMI."
+title: WMI et les compteurs de Performance (référence des API non managées)
+description: Résume le .NET Framework API non managée pour des informations sur les compteurs de performance ou WMI.
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett

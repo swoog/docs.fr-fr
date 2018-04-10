@@ -1,6 +1,6 @@
 ---
-title: "Introduction aux conteneurs et à Docker"
-description: "Architecture des microservices .NET pour les applications .NET en conteneur | Introduction aux conteneurs et à Docker"
+title: Introduction aux conteneurs et à Docker
+description: Architecture des microservices .NET pour les applications .NET en conteneur | Introduction aux conteneurs et à Docker
 keywords: Docker, microservices, ASP.NET, conteneur
 author: CESARDELATORRE
 ms.author: wiwagn

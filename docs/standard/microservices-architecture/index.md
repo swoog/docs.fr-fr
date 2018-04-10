@@ -1,6 +1,6 @@
 ---
 title: Microservices .NET. Architecture pour les applications .NET en conteneur
-description: "Architecture des microservices .NET pour les applications .NET en conteneur | Avant-propos"
+description: Architecture des microservices .NET pour les applications .NET en conteneur | Avant-propos
 keywords: Docker, microservices, ASP.NET, conteneur
 author: CESARDELATORRE
 ms.author: wiwagn

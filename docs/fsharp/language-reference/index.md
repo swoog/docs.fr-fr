@@ -1,6 +1,6 @@
 ---
-title: "Informations de référence sur le langage F#"
-description: "Rechercher des informations de fonctionnalité des langage F # à partir de cette référence pour les jetons de langage, concepts, types, expressions et les rubriques de prise en charge du compilateur de construction."
+title: Informations de référence sur le langage F#
+description: 'Rechercher des informations de fonctionnalité des langage F # à partir de cette référence pour les jetons de langage, concepts, types, expressions et les rubriques de prise en charge du compilateur de construction.'
 keywords: visual f#, f#, programmation fonctionnelle
 author: cartermp
 ms.author: phcart

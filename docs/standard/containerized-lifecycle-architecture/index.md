@@ -1,5 +1,5 @@
 ---
-title: "Présentation des conteneurs et de Docker"
+title: Présentation des conteneurs et de Docker
 description: Cycle de vie des applications Docker en conteneur avec la plateforme et les outils Microsoft
 keywords: Docker, microservices, ASP.NET, conteneur
 author: CESARDELATORRE

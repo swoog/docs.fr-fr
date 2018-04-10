@@ -1,6 +1,6 @@
 ---
 title: 'Mise en route avec F #'
-description: "Découvrez comment démarrer avec le langage dans .NET de programmation F #."
+description: 'Découvrez comment démarrer avec le langage dans .NET de programmation F #.'
 keywords: visual f#, f#, programmation fonctionnelle, .NET, .NET Core
 author: cartermp
 ms.author: phcart

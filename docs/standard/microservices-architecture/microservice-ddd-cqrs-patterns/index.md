@@ -1,6 +1,6 @@
 ---
-title: "Lutte contre la complexité d’entreprise dans un microservice disposant des modèles DDD et CQRS"
-description: "Architecture des Microservices .NET pour les applications .NET en conteneur | Lutte contre la complexité d’entreprise dans un microservice disposant des modèles DDD et CQRS"
+title: Lutte contre la complexité d’entreprise dans un microservice disposant des modèles DDD et CQRS
+description: Architecture des Microservices .NET pour les applications .NET en conteneur | Lutte contre la complexité d’entreprise dans un microservice disposant des modèles DDD et CQRS
 keywords: Docker, microservices, ASP.NET, conteneur
 author: CESARDELATORRE
 ms.author: wiwagn
