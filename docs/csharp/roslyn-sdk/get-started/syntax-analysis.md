@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: 90d6542122dd8c579c63f5f003441ce63a7ca5e9
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 9e42253e520b89fd8a864dead8c17d53bdb8a439
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="get-started-with-syntax-analysis"></a>Bien démarrer avec l’analyse de la syntaxe
 
@@ -64,7 +64,7 @@ Tout cela, les jetons et les nœuds sont composés de façon hiérarchique pour 
 
 **SyntaxNode** : Bleu | **SyntaxToken** : Vert | **SyntaxTrivia** : Rouge ![Fichier de code C#](media/walkthrough-csharp-syntax-figure1.png)
 
-En parcourant cette arborescence, vous pouvez trouver les instructions, expressions, jetons ou espaces, quels qu’ils soient, dans un fichier de code.
+En parcourant cette arborescence, vous trouverez les instructions, expressions, jetons ou espaces, quels qu’ils soient, dans un fichier de code.
 
 Vous pouvez rechercher n’importe quel élément dans un fichier de code à l’aide des API Syntaxe, mais la plupart des scénarios concernent l’examen de petits extraits de code, ou la recherche d’instructions ou de fragments particuliers. Les deux exemples qui suivent montrent des utilisations classiques d’exploration de la structure du code ou de recherche d’instructions individuelles.
 
@@ -74,7 +74,7 @@ Vous pouvez examiner les nœuds d’une arborescence de syntaxe de deux façons.
 
 ### <a name="manual-traversal"></a>Exploration manuelle
 
-Vous pouvez trouver le code complet de cet exemple dans [notre dépôt GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/roslyn-sdk/SyntaxQuickStart).
+Vous pouvez trouver le code complet de cet exemple dans [notre dépôt GitHub](https://github.com/dotnet/samples/tree/master/csharp/roslyn-sdk/SyntaxQuickStart).
 
 > [!NOTE]
 > Les types de l’arborescence de syntaxe utilisent l’héritage pour décrire les différents éléments de syntaxe qui sont valides à différents emplacements du programme. Utiliser ces API signifie souvent effectuer un cast des propriétés ou des membres de collection vers des types dérivés spécifiques. Dans les exemples suivants, l’affectation et les casts sont des instructions distinctes, qui utilisent des variables typées explicitement. Vous pouvez lire le code pour voir les types de retour de l’API et le type à l’exécution des objets retournés. Dans la pratique, il est plus courant d’utiliser des variables typées implicitement et de se baser sur des noms d’API pour décrire le type des objets examinés.
@@ -164,7 +164,7 @@ Cet exemple implémente un <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalke
 
 Créez un projet C# **Outil d’analyse du code autonome** et nommez-le « **SyntaxWalker** ».
 
-Vous pouvez trouver le code complet de cet exemple dans [notre dépôt GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/roslyn-sdk/SyntaxQuickStart). L’exemple sur GitHub contient les deux projets décrits dans ce tutoriel.
+Vous pouvez trouver le code complet de cet exemple dans [notre dépôt GitHub](https://github.com/dotnet/samples/tree/master/csharp/roslyn-sdk/SyntaxQuickStart). L’exemple sur GitHub contient les deux projets décrits dans ce tutoriel.
 
 Comme dans l’exemple précédent, vous pouvez définir une constante de chaîne pour contenir le texte du programme que vous voulez analyser :
 

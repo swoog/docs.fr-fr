@@ -8,7 +8,7 @@ ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1b26617c-53e9-476a-81af-675c36d95919
-caps.latest.revision: ''
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
@@ -130,7 +130,7 @@ WCF Data Services est un composant du [!INCLUDE[dnprdnshort](../../../includes/d
  **xmlns:m = « http://schemas.microsoft.com/ado/2007/08/dataservices/metadata »**  
  **xmlns = « http://www.w3.org/2005/Atom » >**  
  **\<titre de type = « text » > commandes \< /title >**  
- **\<ID>http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/commandes\</id>**  
+ **\<id>http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders\</id>**  
  **\<mise à jour > 2010-05-19T19:37:07Z\</ mise à jour >**  
  **\<Link rel = « personnel » title = « Orders » href = « Orders » / >**  
  **\<entrée >**  
