@@ -1,6 +1,6 @@
 ---
 title: Attributs (F#)
-description: "Découvrez comment les attributs F # pour activer les métadonnées à appliquer à une construction de programmation."
+description: 'Découvrez comment les attributs F # pour activer les métadonnées à appliquer à une construction de programmation.'
 keywords: visual f#, f#, programmation fonctionnelle
 author: cartermp
 ms.author: phcart

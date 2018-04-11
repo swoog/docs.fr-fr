@@ -1,6 +1,6 @@
 ---
 title: Attributs - C#
-description: "Découvrez comment les attributs fonctionnent en C#."
+description: Découvrez comment les attributs fonctionnent en C#.
 keywords: .NET, .NET Core, C#, attribut
 author: mgroves
 ms.author: wiwagn

@@ -1,6 +1,6 @@
 ---
-title: "Attributs C# - Visite guidée du langage C#"
-description: "Découvrir la programmation déclarative à l’aide des attributs en C#"
+title: Attributs C# - Visite guidée du langage C#
+description: Découvrir la programmation déclarative à l’aide des attributs en C#
 keywords: .NET, csharp
 author: BillWagner
 ms.author: wiwagn
