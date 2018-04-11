@@ -1,13 +1,13 @@
 ---
-title: "ICorDebug::CreateProcess, méthode"
-ms.custom: 
+title: ICorDebug::CreateProcess, méthode
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ICorDebug.CreateProcess
@@ -23,17 +23,17 @@ helpviewer_keywords:
 ms.assetid: b6128694-11ed-46e7-bd4e-49ea1914c46a
 topic_type:
 - apiref
-caps.latest.revision: 
+caps.latest.revision: 21
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 ms.openlocfilehash: 16e45f3bad92914ce8c7fb0044534789a7a28b2e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="icordebugcreateprocess-method"></a>ICorDebug::CreateProcess, méthode
 Lance un processus et son thread principal sous le contrôle du débogueur.  
@@ -103,14 +103,14 @@ HRESULT CreateProcess (
   
  Débogage d’interopérabilité n’est pas pris en charge sur les plateformes Win9x et non x86 telles que les plateformes basée sur IA-64 et AMD64.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [ICorDebug, interface](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)

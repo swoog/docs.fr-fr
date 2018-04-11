@@ -17,17 +17,17 @@ helpviewer_keywords:
 - interoperation with unmanaged code, marshaling
 - marshaling behavior
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
-caps.latest.revision: ''
+caps.latest.revision: 15
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 ms.openlocfilehash: f0a8fcba31ddfa09ca60f8ba6cf08d20b270c3da
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="default-marshaling-behavior"></a>comportement de marshaling par défaut
 Le marshaling d’interopérabilité agit sur les règles qui définissent le comportement des données associées aux paramètres de méthode quand elles sont passées de la mémoire managée à la mémoire non managée. Ces règles intégrées contrôlent les activités de marshaling telles que les transformations de types de données, le fait qu'un appelant puisse modifier les données transmises et renvoyer ces modifications à l'appelant, ainsi que les circonstances dans lesquelles le marshaleur fournit des optimisations de performances.  

@@ -1,5 +1,5 @@
 ---
-title: "Élément personnalisé pour SingleTagSectionHandler"
+title: Élément personnalisé pour SingleTagSectionHandler
 ms.date: 05/01/2017
 ms.prod: .net-framework
 ms.technology:
@@ -16,17 +16,17 @@ manager: wpickett
 ms.workload:
 - dotnet
 ms.openlocfilehash: 8ee722c7d5db9d58ab1a91f4b1299912981510af
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="custom-element-for-singletagsectionhandler"></a>Élément personnalisé pour SingleTagSectionHandler
 
 Définit les paramètres dans une section de configuration personnalisée qui est définie par un <section> élément et utilise la <xref:System.Configuration.SingleTagSectionHandler> classe.
 
 [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;*\<sectionName >*
+&nbsp;&nbsp;*\<sectionName>*
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -46,7 +46,7 @@ Attributs et valeurs d’attribut sont définies par l’utilisateur.
 
 ## <a name="child-elements"></a>Éléments enfants
 
-Aucun.
+Aucun
 
 ## <a name="remarks"></a>Notes
 
