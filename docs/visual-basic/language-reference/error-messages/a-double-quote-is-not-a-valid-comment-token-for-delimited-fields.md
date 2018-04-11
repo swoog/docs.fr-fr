@@ -1,13 +1,15 @@
 ---
-title: "Les guillemets doubles ne constituent pas un jeton de commentaire valide pour les champs délimités quand EscapeQuote a la valeur True"
+title: Les guillemets doubles ne constituent pas un jeton de commentaire valide pour les champs délimités quand EscapeQuote a la valeur True
 ms.date: 07/20/2015
 ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrTextFieldParser_InvalidComment
+f1_keywords:
+- vbrTextFieldParser_InvalidComment
 ms.assetid: 636d4b81-00ba-4cfd-98f7-4d57036f494d
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 5677ee7415fe385805413ccbdec20762ac0573a0

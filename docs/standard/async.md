@@ -1,6 +1,6 @@
 ---
-title: "Vue d’ensemble d’async"
-description: "Découvrez dans quelle mesure la programmation asynchrone est une technique clé qui facilite le blocage des E/S et des opérations simultanées sur plusieurs cœurs."
+title: Vue d’ensemble d’async
+description: Découvrez dans quelle mesure la programmation asynchrone est une technique clé qui facilite le blocage des E/S et des opérations simultanées sur plusieurs cœurs.
 keywords: .NET, .NET Core
 author: cartermp
 ms.author: wiwagn

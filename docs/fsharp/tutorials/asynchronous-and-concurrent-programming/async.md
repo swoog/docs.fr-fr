@@ -1,6 +1,6 @@
 ---
 title: 'Programmation asynchrone en F #'
-description: "Découvrez comment F # de programmation asynchrone est effectuée via un modèle de programmation au niveau du langage qui est facile à utiliser et naturelle à la langue."
+description: 'Découvrez comment F # de programmation asynchrone est effectuée via un modèle de programmation au niveau du langage qui est facile à utiliser et naturelle à la langue.'
 keywords: .NET, .NET Core
 author: cartermp
 ms.author: phcart

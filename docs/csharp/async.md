@@ -1,6 +1,6 @@
 ---
 title: Programmation asynchrone
-description: "Découvrez le modèle de programmation asynchrone au niveau du langage C# fourni par .NET Core."
+description: Découvrez le modèle de programmation asynchrone au niveau du langage C# fourni par .NET Core.
 keywords: .NET, .NET Core
 author: cartermp
 ms.author: wiwagn
