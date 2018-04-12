@@ -1,17 +1,19 @@
 ---
-title: "&#39; IsNot &#39; opérande de type &#39; typename &#39; ne peut être comparé qu’à &#39; Nothing &#39; car &#39; typename &#39; est un type nullable"
+title: '&#39; IsNot &#39; opérande de type &#39; typename &#39; ne peut être comparé qu’à &#39; Nothing &#39; car &#39; typename &#39; est un type nullable'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - bc32128
 - vbc32128
-helpviewer_keywords: BC32128
+helpviewer_keywords:
+- BC32128
 ms.assetid: 1155b23a-ad75-4bab-b9da-73f35c767a36
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: ec0ae1561bfbee998e7c65f6023012c0f982a8a7

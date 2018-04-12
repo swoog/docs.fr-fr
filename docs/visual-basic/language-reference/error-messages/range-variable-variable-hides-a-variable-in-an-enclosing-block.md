@@ -1,17 +1,19 @@
 ---
-title: "Variable de portée &lt;variable&gt; masque une variable dans un bloc englobant, une variable de portée précédemment définie ou une variable déclarée implicitement dans une expression de requête"
+title: Variable de portée &lt;variable&gt; masque une variable dans un bloc englobant, une variable de portée précédemment définie ou une variable déclarée implicitement dans une expression de requête
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - bc36633
 - vbc36633
-helpviewer_keywords: BC36633
+helpviewer_keywords:
+- BC36633
 ms.assetid: 5d5470e4-3de5-49c2-8831-1087625f4a77
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: ccbac48694a13daa09f2511cf39d5dbd51cdaaf7

@@ -1,12 +1,14 @@
 ---
-title: "Effectuer un cast du type &#39; &lt;nom_type1&gt;&#39; en type &#39;&lt; nom_type2&gt;&#39; n’est pas valide"
+title: Effectuer un cast du type &#39; &lt;nom_type1&gt;&#39; en type &#39;&lt; nom_type2&gt;&#39; n’est pas valide
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrInvalidCast_FromTo
+f1_keywords:
+- vbrInvalidCast_FromTo
 ms.assetid: 4e6a8957-63ca-461f-a833-f48a1ff2eba6
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: d97aeac3618cb2b9d37ee14ec080d135f1bc5901

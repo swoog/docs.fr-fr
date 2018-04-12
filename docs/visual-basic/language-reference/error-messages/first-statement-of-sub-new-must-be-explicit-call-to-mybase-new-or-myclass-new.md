@@ -1,17 +1,19 @@
 ---
-title: "La première instruction de ce &#39; Sub nouveau &#39; doit être un appel explicite à &#39; MyBase.New &#39; ou &#39; MyClass.New &#39; Étant donné que le &#39; &lt;Nom_Constructeur&gt;&#39; dans la classe de base &#39;&lt; nom_classe_base&gt;&#39; de &#39;&lt; nom_classe_dérivée&gt;&#39; est marqué comme obsolète : &#39;&lt; message d’erreur&gt;&#39;"
+title: 'La première instruction de ce &#39; Sub nouveau &#39; doit être un appel explicite à &#39; MyBase.New &#39; ou &#39; MyClass.New &#39; Étant donné que le &#39; &lt;Nom_Constructeur&gt;&#39; dans la classe de base &#39;&lt; nom_classe_base&gt;&#39; de &#39;&lt; nom_classe_dérivée&gt;&#39; est marqué comme obsolète : &#39;&lt; message d’erreur&gt;&#39;'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc30920
 - bc30920
-helpviewer_keywords: BC30920
+helpviewer_keywords:
+- BC30920
 ms.assetid: e47dc755-4294-4368-b813-2177b7677957
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 8882acd947251d85804fbefd54267ce078e31b95
