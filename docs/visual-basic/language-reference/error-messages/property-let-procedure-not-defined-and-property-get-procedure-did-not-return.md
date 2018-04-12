@@ -1,14 +1,16 @@
 ---
-title: "La procédure Property Let n'est pas définie et la procédure Property Get n'a pas retourné d'objet"
+title: La procédure Property Let n'est pas définie et la procédure Property Get n'a pas retourné d'objet
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrID451
+f1_keywords:
+- vbrID451
 ms.assetid: 8542382a-689f-4e1b-abc0-c1e2dadb92f4
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: b043ca698a9c90afd41de90c7dbc5879ae7de623

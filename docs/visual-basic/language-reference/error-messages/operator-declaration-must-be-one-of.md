@@ -1,17 +1,19 @@
 ---
-title: "Déclaration d’opérateur doit être de type : +,-, *,-, -, ^, &amp;, Like, Mod et, Or, Xor, pas &lt; &lt;, &gt; &gt;, =, &lt; &gt;, &lt;, &lt;=, &gt; , &gt;=, CType, IsTrue ou IsFalse"
+title: 'Déclaration d’opérateur doit être de type : +,-, *,-, -, ^, &amp;, Like, Mod et, Or, Xor, pas &lt; &lt;, &gt; &gt;, =, &lt; &gt;, &lt;, &lt;=, &gt; , &gt;=, CType, IsTrue ou IsFalse'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - bc33000
 - vbc33000
-helpviewer_keywords: BC33000
+helpviewer_keywords:
+- BC33000
 ms.assetid: 15c5d8eb-3a8c-4141-8f41-33151afabf97
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 80c8358dd13105c18e73e94735a51b02d5bd22c5

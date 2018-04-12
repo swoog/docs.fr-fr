@@ -1,17 +1,19 @@
 ---
-title: "Conversion implicite de &#39; &lt;nom_type1&gt;&#39; à &#39;&lt; nom_type2&gt;&#39; lors de la copie de la valeur des &#39; ByRef &#39; paramètre &#39; &lt;nom_paramètre&gt;&#39; retour à l’argument correspondant."
+title: Conversion implicite de &#39; &lt;nom_type1&gt;&#39; à &#39;&lt; nom_type2&gt;&#39; lors de la copie de la valeur des &#39; ByRef &#39; paramètre &#39; &lt;nom_paramètre&gt;&#39; retour à l’argument correspondant.
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc41999
 - bc41999
-helpviewer_keywords: BC41999
+helpviewer_keywords:
+- BC41999
 ms.assetid: ae48c738-dff8-4c0f-8931-bbb70b2c8b03
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 9e858b475a816a35d18822643de5a273abe28562
