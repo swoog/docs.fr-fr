@@ -28,7 +28,7 @@ Le tableau suivant montre les options du compilateur classées par ordre alphab�
 
 |Option du compilateur|Description|
 |---------------|-----------|
-|**-a****&lt;output-filename&gt;**|Génère une bibliothèque et spécifie son nom de fichier. Cette option est une forme abrégée de **--target : library ***&lt;nom de fichier&gt;**.|
+|**-a****&lt;output-filename&gt;**|Génère une bibliothèque et spécifie son nom de fichier. Cette option est une forme abrégée de **--target:library****&lt;nom de fichier&gt;**.|
 |**--baseaddress:&lt;string&gt;**|Spécifie l’adresse de base de la bibliothèque à générer.<br /><br />Cette option du compilateur est équivalente à l’option du compilateur c# du même nom. Pour plus d’informations, consultez [ &#47;baseaddress &#40;C&#35; Options du compilateur&#41;](https://msdn.microsoft.com/library/2fdbz5xd.aspx).|
 |**--codepage:&lt;int&gt;**|Spécifie la page de codes utilisée pour lire les fichiers de code source.<br /><br />Cette option du compilateur est équivalente à l’option du compilateur c# du même nom. Pour plus d’informations, consultez [ &#47;page de codes &#40;C&#35; Options du compilateur&#41;](https://msdn.microsoft.com/library/w0kyekyh.aspx).|
 |**--consolecolors**|Spécifie que les erreurs et avertissements utilisent texte coloré sur la console.|
