@@ -1,18 +1,18 @@
 ---
-title: "À l’aide de Visual Studio Tools pour Docker (Visual Studio sous Windows)"
+title: À l’aide de Visual Studio Tools pour Docker (Visual Studio sous Windows)
 description: Cycle de vie des applications Docker en conteneur avec la plateforme et les outils Microsoft
-keywords: Docker, microservices, ASP.NET, conteneur
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 0525633b23625d915fd447d438c6281fb14b3b46
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: cbd4dea32b98e79e85302aa5d4a5c97b1b0fa556
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-visual-studio-tools-for-docker-visual-studio-on-windows"></a>À l’aide de Visual Studio Tools pour Docker (Visual Studio sous Windows)
 
@@ -26,7 +26,7 @@ Avec les versions plus récentes de Docker pour Windows, il est plus facile que 
 
 Si vous utilisez Visual Studio 2015, vous devez disposer de mise à jour 3 ou une version ultérieure ainsi que Visual Studio Tools pour Docker.
 
-**Plus d’informations :** pour obtenir des instructions sur l’installation de Visual Studio, accédez à [https://www.visualstudio.com/ \ produits/vs-2015-produit-éditions](https://www.visualstudio.com/products/vs-2015-product-editions).
+**Plus d’informations :** pour obtenir des instructions sur l’installation de Visual Studio, accédez à [ https://www.visualstudio.com/\ produits/vs-2015-produit-éditions](https://www.visualstudio.com/products/vs-2015-product-editions).
 
 Pour plus d’informations sur l’installation de Visual Studio Tools pour Docker, accédez à <http://aka.ms/vstoolsfordocker> et <https://docs.microsoft.com/aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker>.
 
@@ -70,7 +70,7 @@ Vous pouvez déployer un multicontainer docker à l’aide d’un fichier unique
 
 Générer, déboguer, mettre à jour et actualiser des applications dans un conteneur Docker local : [https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh/](https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh)
 
-Déployer un conteneur ASP.NET à un hôte Docker distant : [https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker/](https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker)
+Déployer un conteneur ASP.NET sur un hôte Docker distant : [https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker/](https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker)
 
 
 >[!div class="step-by-step"]

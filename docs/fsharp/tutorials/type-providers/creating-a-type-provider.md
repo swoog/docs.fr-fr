@@ -1,6 +1,6 @@
 ---
-title: "Didacticiel : création d’un fournisseur de type (F#)"
-description: "Découvrez comment créer vos propres fournisseurs de type F # dans F # 3.0 en examinant les fournisseurs de type simple pour illustrer les concepts de base."
+title: 'Didacticiel : Créer un fournisseur de Type (F #)'
+description: 'Découvrez comment créer vos propres fournisseurs de type F # dans F # 3.0 en examinant les fournisseurs de type simple pour illustrer les concepts de base.'
 keywords: visual f#, f#, programmation fonctionnelle
 author: cartermp
 ms.author: phcart
@@ -10,17 +10,17 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 82bec076-19d4-470c-979f-6c3a14b7c70a
-ms.openlocfilehash: 30d1c20d66fd0a193c05c97ee726a886f98356ad
-ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
+ms.openlocfilehash: b2e83218184bd1aef8258378485b99697cc8cf8d
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="tutorial-creating-a-type-provider"></a>Didacticiel : Création d’un fournisseur de Type
+# <a name="tutorial-create-a-type-provider"></a>Didacticiel : Créer un fournisseur de Type
 
 Le mécanisme de fournisseur de type en F # est une partie importante de la prise en charge pour la programmation riche d’informations. Ce didacticiel explique comment créer vos propres fournisseurs de type en vous guidant à travers le développement de plusieurs fournisseurs de type simple pour illustrer les concepts de base. Pour plus d’informations sur le mécanisme de fournisseur de type en F #, consultez [fournisseurs de Type](index.md).
 
-L’écosystème de F # contient une plage de fournisseurs de type pour les services de données Internet et d’entreprise couramment utilisés. Exemple :
+L’écosystème de F # contient une plage de fournisseurs de type pour les services de données Internet et d’entreprise couramment utilisés. Par exemple :
 
 - [FSharp.Data](https://fsharp.github.io/FSharp.Data/) inclut les fournisseurs de type pour les formats de document JSON, XML, CSV et HTML.
 

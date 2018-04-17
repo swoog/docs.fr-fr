@@ -1,13 +1,9 @@
 ---
 title: Marshaling par défaut pour les objets
-ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,17 +12,16 @@ helpviewer_keywords:
 - objects, interop marshaling
 - interop marshaling, objects
 ms.assetid: c2ef0284-b061-4e12-b6d3-6a502b9cc558
-caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b49575bb7f16b942a56a48e9ad3f5a44edfb373a
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 6980db381322d354cace38709586e50681ae0a7e
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="default-marshaling-for-objects"></a>Marshaling par défaut pour les objets
 Les paramètres et les champs de type <xref:System.Object?displayProperty=nameWithType> peuvent être exposés à un code non managé sous la forme de l’un des types suivants :  
@@ -304,7 +299,7 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
 ## <a name="marshaling-byref-variants"></a>Marshaling des variants ByRef  
  Bien que les variants puissent eux-mêmes être passés par valeur ou par référence, l’indicateur **VT_BYREF** peut être également utilisé avec n’importe quel type de variant pour indiquer que le contenu du variant est passé par référence plutôt que par valeur. La différence entre le marshaling de variants par référence et le marshaling d’un variant dont l’indicateur **VT_BYREF** est défini peut prêter à confusion. L’illustration suivante clarifie ces différences.  
   
- ![Variant passé sur la pile](../../../docs/framework/interop/media/interopvariant.gif "interopvariant")  
+ ![Variant passé sur la pile](./media/interopvariant.gif "interopvariant")  
 Variants passés par valeur et par référence  
   
  **Comportement par défaut pour le marshaling d’objets et de variants par valeur**  
@@ -342,7 +337,7 @@ Variants passés par valeur et par référence
 |**Variant**  *v* **(VT_BYREF** *&#124;* **VT_)**|**Ref Object**  *o*|Uniquement si le type n’a pas changé.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Comportement de marshaling par défaut](../../../docs/framework/interop/default-marshaling-behavior.md)  
- [Types blittable et non blittable](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
- [Attributs directionnels](http://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
- [Copie et épinglage](../../../docs/framework/interop/copying-and-pinning.md)
+ [Comportement de marshaling par défaut](default-marshaling-behavior.md)  
+ [Types blittable et non blittable](blittable-and-non-blittable-types.md)  
+ [Attributs directionnels](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))  
+ [Copie et épinglage](copying-and-pinning.md)

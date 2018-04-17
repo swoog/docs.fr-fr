@@ -1,20 +1,20 @@
 ---
-title: "État et les données dans les applications de Docker"
+title: État et données dans les applications Docker
 description: Cycle de vie des applications Docker en conteneur avec la plateforme et les outils Microsoft
-keywords: Docker, microservices, ASP.NET, conteneur
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: d4b75faffd76a85f9ca1c779ed58bfa37625cff3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 83094cd9a13d77f489df639096bb42b23ce152e7
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="state-and-data-in-docker-applications"></a>État et les données dans les applications de Docker
+# <a name="state-and-data-in-docker-applications"></a>État et données dans les applications Docker
 
 Une primitive de conteneurs est que l’immuabilité. Quand elle est comparée à une machine virtuelle, les conteneurs ne disparaissent comme une occurrence courante. Une machine virtuelle peut échouer dans différentes formes à partir des processus, surcharge de l’UC ou un disque complet ou ayant échoué. Encore, nous pensons que la machine virtuelle soit disponible et de disques RAID sont courants pour vous assurer de défaillances de disque conserver les données.
 
@@ -36,7 +36,7 @@ Pour gérer les données persistantes dans les applications de Docker, il existe
 
 Volumes de données sont désignés spécialement de répertoires dans un ou plusieurs conteneurs qui ignorent la [système de fichiers Union](https://docs.docker.com/v1.8/reference/glossary#union-file-system). Volumes de données sont conçus pour mettre à jour les données, indépendamment du cycle de vie du conteneur. Docker donc jamais supprime automatiquement les volumes lorsque vous supprimez un conteneur, ni s’il les volumes « collecter garbage » qui ne sont plus référencés par un conteneur. Le système d’exploitation hôte peuvent parcourir et modifier les données dans n’importe quel volume de librement, qui est simplement une autre raison d’utiliser des volumes de données avec parcimonie.
 
-A [conteneur de volumes de données](https://docs.docker.com/v1.8/userguide/dockervolumes/) est une amélioration des volumes de données standard. Il est en fait un conteneur dormant qui possède un ou plusieurs volumes de données créées dans cette (comme décrit précédemment). Le conteneur de volume de données fournit l’accès aux conteneurs à partir d’un point de montage centrale. L’avantage de cette méthode d’accès est qu’il résume l’emplacement des données d’origine, qui effectue le conteneur de données à un point de montage logique. Il permet également à des conteneurs de « application » accèdent aux volumes de conteneur de données pour la création et la destruction tout en conservant les données persistantes dans un conteneur dédié.
+A [conteneur de volumes de données](https://docs.docker.com/v1.8/userguide/dockervolumes/) est une amélioration des volumes de données standard. Il est en fait un conteneur dormant qui possède un ou plusieurs volumes de données créées dans cette (comme décrit précédemment). Le conteneur de volumes de données fournit un accès aux conteneurs à partir d’un point de montage central. L’avantage de cette méthode d’accès est qu’il résume l’emplacement des données d’origine, qui effectue le conteneur de données à un point de montage logique. Il permet également à des conteneurs de « application » accèdent aux volumes de conteneur de données pour la création et la destruction tout en conservant les données persistantes dans un conteneur dédié.
 
 Figure 4-5 indique que les volumes Docker standard peuvent être placés sur un stockage hors les conteneurs eux-mêmes, mais dans les limites physiques du serveur/machine virtuelle hôte. *Volumes docker n’ont pas la possibilité d’utiliser un volume à partir d’un ordinateur hôte serveur/machine virtuelle à un autre*.
 

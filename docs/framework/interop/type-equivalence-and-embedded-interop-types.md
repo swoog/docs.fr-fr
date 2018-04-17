@@ -16,11 +16,11 @@ ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 03b906c71b1b3e8f4817697edb520f8cfef1e009
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: ce1285f64c6d50fea2d44b60773d949b673b1825
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="type-equivalence-and-embedded-interop-types"></a>Équivalence des types et types interop incorporés
 
@@ -62,5 +62,5 @@ Si un type n’est pas défini avec l’attribut <xref:System.Runtime.InteropSer
 ## <a name="see-also"></a>Voir aussi
 
 <xref:System.Type.IsEquivalentTo%2A>  
-[Utilisation de Types COM en Code managé](http://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66(v=vs.100))  
+[Utilisation de Types COM en Code managé](https://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66(v=vs.100))  
 [Importation d'une bibliothèque de types sous la forme d'un assembly](importing-a-type-library-as-an-assembly.md)  

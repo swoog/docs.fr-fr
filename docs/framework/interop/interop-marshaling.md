@@ -1,28 +1,26 @@
 ---
-title: "Marshaling d’interopérabilité"
-ms.custom: 
+title: Marshaling d’interopérabilité
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-clr
 ms.topic: article
 helpviewer_keywords:
 - marshaling, COM interop
 - interop marshaling
 - interop marshaling, about interop marshaling
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 17638390a07f752a7101209e5635752bc0511d1d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: cb22c708221fcc80962fd7da6e26c3720173d824
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="interop-marshaling"></a>Marshaling d’interopérabilité
 <a name="top"></a> Le marshaling d’interopérabilité détermine la façon dont les données sont transmises dans les arguments de méthode et les valeurs de retour entre la mémoire managée et non managée lors des appels. Le marshaling d’interopérabilité est une activité d’exécution effectuée par le service de marshaling du common language runtime.  
@@ -51,12 +49,12 @@ ms.lasthandoff: 01/19/2018
   
 -   COM Interop, qui permet au code managé d'interagir avec les objets COM via des interfaces.  
   
- L’appel de code non managé et COM Interop utilisent tous deux le marshaling d’interopérabilité pour faire passer les arguments de méthode de l’appelant à l’appelé, puis dans l’autre sens, si nécessaire. Comme le montre l’illustration suivante, un appel de méthode d’appel de code non managé passe du code managé au code non managé et jamais dans l’autre sens, sauf quand des [fonctions de rappel](../../../docs/framework/interop/callback-functions.md) sont impliquées. Même si les appels de code non managé peuvent uniquement passer du code managé au code non managé, les données peuvent circuler dans les deux sens en tant que paramètres d'entrée ou de sortie. Les appels de méthode COM Interop peuvent circuler dans les deux sens.  
+ L’appel de code non managé et COM Interop utilisent tous deux le marshaling d’interopérabilité pour faire passer les arguments de méthode de l’appelant à l’appelé, puis dans l’autre sens, si nécessaire. Comme le montre l’illustration suivante, un appel de méthode d’appel de code non managé passe du code managé au code non managé et jamais dans l’autre sens, sauf quand des [fonctions de rappel](callback-functions.md) sont impliquées. Même si les appels de code non managé peuvent uniquement passer du code managé au code non managé, les données peuvent circuler dans les deux sens en tant que paramètres d'entrée ou de sortie. Les appels de méthode COM Interop peuvent circuler dans les deux sens.  
   
- ![Appel de code non managé](../../../docs/framework/interop/media/interopmarshaling.png "interopmarshaling")  
+ ![Appel de code non managé](./media/interopmarshaling.png "interopmarshaling")  
 Flux des appels de code non managé et des appels COM Interop  
   
- Au niveau le plus bas, ces deux mécanismes utilisent le même service de marshaling d’interopérabilité. Toutefois, certains types de données sont pris en charge exclusivement par COM Interop ou par l’appel de code non managé. Pour plus d’informations, consultez [Comportement de marshaling par défaut](../../../docs/framework/interop/default-marshaling-behavior.md).  
+ Au niveau le plus bas, ces deux mécanismes utilisent le même service de marshaling d’interopérabilité. Toutefois, certains types de données sont pris en charge exclusivement par COM Interop ou par l’appel de code non managé. Pour plus d’informations, consultez [Comportement de marshaling par défaut](default-marshaling-behavior.md).  
   
  [Retour au début](#top)  
   
@@ -67,7 +65,7 @@ Flux des appels de code non managé et des appels COM Interop
  COM possède également un marshaleur qui marshale les données entre des cloisonnements COM ou différents processus COM. Lors d'un appel entre du code managé et du code non managé au sein d'un même cloisonnement COM, le marshaleur d'interopérabilité est le seul marshaleur impliqué. Lors d'un appel entre du code managé et du code non managé au sein de cloisonnements COM (ou autres processus) différents, le marshaleur d'interopérabilité et le marshaleur COM sont tous les deux impliqués.  
   
 ### <a name="com-clients-and-managed-servers"></a>Clients COM et serveurs managés  
- L’entrée de Registre `ThreadingModel` d’un serveur managé exporté avec une bibliothèque de types inscrite par l’outil [Regasm.exe (outil d’inscription d’assemblys)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md) a la valeur `Both`. Cette valeur indique que le serveur peut être activé dans un thread unique cloisonné (STA) ou dans un multithread cloisonné (MTA). L'objet serveur est créé dans le même cloisonnement que son appelant, comme indiqué dans le tableau suivant.  
+ L’entrée de Registre `ThreadingModel` d’un serveur managé exporté avec une bibliothèque de types inscrite par l’outil [Regasm.exe (outil d’inscription d’assemblys)](../tools/regasm-exe-assembly-registration-tool.md) a la valeur `Both`. Cette valeur indique que le serveur peut être activé dans un thread unique cloisonné (STA) ou dans un multithread cloisonné (MTA). L'objet serveur est créé dans le même cloisonnement que son appelant, comme indiqué dans le tableau suivant.  
   
 |Client COM|Serveur .NET|Configuration requise|  
 |----------------|-----------------|-----------------------------|  
@@ -76,7 +74,7 @@ Flux des appels de code non managé et des appels COM Interop
   
  Étant donné que le client et le serveur se trouvent dans le même cloisonnement, le service de marshaling d'interopérabilité gère automatiquement tout le marshaling de données. L’illustration suivante montre le service de marshaling d’interopérabilité agissant entre les tas managés et non managés au sein du même cloisonnement de style COM.  
   
- ![Marshaling d’interopérabilité](../../../docs/framework/interop/media/interopheap.gif "interopheap")  
+ ![Marshaling d’interopérabilité](./media/interopheap.gif "interopheap")  
 Processus de marshaling dans un même cloisonnement.  
   
  Si vous prévoyez d'exporter un serveur managé, n'oubliez pas que le client COM détermine le cloisonnement du serveur. Un serveur managé appelé par un client COM initialisé dans un MTA doit garantir la cohérence des threads.  
@@ -93,7 +91,7 @@ Processus de marshaling dans un même cloisonnement.
   
  Quand un client managé et un serveur non managé se trouvent dans un même cloisonnement, le service de marshaling d'interopérabilité gère tout le marshaling de données. Toutefois, quand le client et le serveur sont initialisés dans des cloisonnements différents, le marshaling COM est également requis. L'illustration suivante montre les éléments d'un appel intercloisonnements.  
   
- ![Marshaling COM](../../../docs/framework/interop/media/singleprocessmultapt.gif "singleprocessmultapt")  
+ ![Marshaling COM](./media/singleprocessmultapt.gif "singleprocessmultapt")  
 Appel intercloisonnements entre un client .NET et un objet COM  
   
  Pour le marshaling intercloisonnements, vous pouvez procéder comme suit :  
@@ -105,7 +103,7 @@ Appel intercloisonnements entre un client .NET et un objet COM
     > [!NOTE]
     >  Une fois le thread d’un client C# défini sur STA, les appels aux composants COM MTA nécessiteront un marshaling intercloisonnements.  
   
- Pour obtenir des instructions sur la sélection explicite d’un modèle de cloisonnement, consultez [Threading managé et non managé](http://msdn.microsoft.com/library/db425c20-4b2f-4433-bf96-76071c7881e5).  
+ Pour obtenir des instructions sur la sélection explicite d’un modèle de cloisonnement, consultez [Threading managé et non managé](https://msdn.microsoft.com/library/db425c20-4b2f-4433-bf96-76071c7881e5(v=vs.100)).  
   
  [Retour au début](#top)  
   
@@ -119,13 +117,13 @@ Appel intercloisonnements entre un client .NET et un objet COM
   
  L’illustration suivante montre comment le marshaling d’interopérabilité et le marshaling COM fournissent des canaux de communication entre les limites des hôtes et des processus.  
   
- ![Marshaling COM](../../../docs/framework/interop/media/interophost.gif "interophost")  
+ ![Marshaling COM](./media/interophost.gif "interophost")  
 Marshaling interprocessus  
   
 ### <a name="preserving-identity"></a>Conservation d'identité  
  Le common language runtime préserve l'identité des références managées et non managées. L'illustration suivante montre le flux des références non managées directes (ligne du haut) et des références managées directes (ligne du bas) entre plusieurs hôtes et processus.  
   
- ![Wrapper CCW (COM Callable Wrapper) et wrapper RCW (Runtime Callable Wrapper)](../../../docs/framework/interop/media/interopdirectref.gif "interopdirectref")  
+ ![Wrapper CCW (COM Callable Wrapper) et wrapper RCW (Runtime Callable Wrapper)](./media/interopdirectref.gif "interopdirectref")  
 Références franchissant les limites d'hôtes et de processus  
   
  Dans cette illustration :  
@@ -142,10 +140,10 @@ Références franchissant les limites d'hôtes et de processus
 ### <a name="managed-remoting"></a>Communication à distance managée  
  Le runtime fournit également une communication à distance managée que vous pouvez utiliser pour établir un canal de communication entre des objets managés de plusieurs hôtes et processus. La communication à distance managée peut prendre en charge un pare-feu entre des composants qui communiquent, comme le montre l'illustration suivante.  
   
- ![SOAP ou TcpChannel](../../../docs/framework/interop/media/interopremotesoap.gif "interopremotesoap")  
+ ![SOAP ou TcpChannel](./media/interopremotesoap.gif "interopremotesoap")  
 Appels distants traversant des pare-feu à l'aide de SOAP ou de la classe TcpChannel  
   
- Certains appels non managés peuvent être transmis via SOAP, tels que les appels entre [composants pris en charge](http://msdn.microsoft.com/library/f109ee24-81ad-4d99-9892-51ac6f34978c) et COM.  
+ Certains appels non managés peuvent être transmis via SOAP, tels que les appels entre les composants de service et COM.  
   
  [Retour au début](#top)  
   
@@ -154,15 +152,15 @@ Appels distants traversant des pare-feu à l'aide de SOAP ou de la classe TcpCha
   
 |Titre|Description|  
 |-----------|-----------------|  
-|[Comportement de marshaling par défaut](../../../docs/framework/interop/default-marshaling-behavior.md)|Décrit les règles utilisées par le service de marshaling d’interopérabilité pour marshaler des données.|  
-|[Marshaling de données à l’aide de l’appel de code managé](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)|Décrit comment déclarer des paramètres de méthode et passer des arguments à des fonctions exportées par des bibliothèques non managées.|  
-|[Marshaler des données avec COM Interop](../../../docs/framework/interop/marshaling-data-with-com-interop.md)|Décrit comment personnaliser des wrappers COM pour modifier le comportement de marshaling.|  
-|[Guide pratique pour migrer le modèle DCOM de code managé vers WCF](../../../docs/framework/interop/how-to-migrate-managed-code-dcom-to-wcf.md)|Décrit comment effectuer une migration de DCOM à WCF.|  
-|[Guide pratique pour mapper des HRESULT et des exceptions](../../../docs/framework/interop/how-to-map-hresults-and-exceptions.md)|Décrit comment mapper des exceptions personnalisées aux HRESULT et fournit le mappage complet de chaque HRESULT à sa classe d'exception comparable dans .NET Framework.|  
-|[Interopérabilité à l’aide de types génériques](http://msdn.microsoft.com/library/26b88e03-085b-4b53-94ba-a5a9c709ce58)|Décrit les actions prises en charge lors de l'utilisation de types génériques pour l'interopérabilité COM.|  
-|[Interopération avec du code non managé](../../../docs/framework/interop/index.md)|Décrit les services d'interopérabilité fournis par le common language runtime.|  
-|[Interopérabilité COM avancée](http://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb)|Fournit des liens vers des informations sur l'incorporation de composants COM dans une application .NET Framework.|  
-|[Considérations de design pour l’interopérabilité](http://msdn.microsoft.com/library/b59637f6-fe35-40d6-ae72-901e7a707689)|Fournit des conseils pour l'écriture de composants COM intégrés.|  
+|[Comportement de marshaling par défaut](default-marshaling-behavior.md)|Décrit les règles utilisées par le service de marshaling d’interopérabilité pour marshaler des données.|  
+|[Marshaling de données à l’aide de l’appel de code managé](marshaling-data-with-platform-invoke.md)|Décrit comment déclarer des paramètres de méthode et passer des arguments à des fonctions exportées par des bibliothèques non managées.|  
+|[Marshaler des données avec COM Interop](marshaling-data-with-com-interop.md)|Décrit comment personnaliser des wrappers COM pour modifier le comportement de marshaling.|  
+|[Guide pratique pour migrer le modèle DCOM de code managé vers WCF](how-to-migrate-managed-code-dcom-to-wcf.md)|Décrit comment effectuer une migration de DCOM à WCF.|  
+|[Guide pratique pour mapper des HRESULT et des exceptions](how-to-map-hresults-and-exceptions.md)|Décrit comment mapper des exceptions personnalisées aux HRESULT et fournit le mappage complet de chaque HRESULT à sa classe d'exception comparable dans .NET Framework.|  
+|[Interopérabilité à l’aide de types génériques](https://msdn.microsoft.com/library/26b88e03-085b-4b53-94ba-a5a9c709ce58(v=vs.100))|Décrit les actions prises en charge lors de l'utilisation de types génériques pour l'interopérabilité COM.|  
+|[Interopération avec du code non managé](index.md)|Décrit les services d'interopérabilité fournis par le common language runtime.|  
+|[Interopérabilité COM avancée](https://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb(v=vs.100))|Fournit des liens vers des informations sur l'incorporation de composants COM dans une application .NET Framework.|  
+|[Considérations de design pour l’interopérabilité](https://msdn.microsoft.com/library/b59637f6-fe35-40d6-ae72-901e7a707689(v=vs.100))|Fournit des conseils pour l'écriture de composants COM intégrés.|  
   
  [Retour au début](#top)  
   
