@@ -5,11 +5,11 @@ hide_bc: true
 title: Documentation .NET
 description: Découvrez comment utiliser .NET pour créer diverses applications sur n’importe quelle plateforme en C#, Visual Basic et F#. Parcourez les informations de référence sur les API, les exemples de code, les didacticiels et plus encore.
 ms.custom: updateeachrelease
-ms.openlocfilehash: f3a044df40a5508f62b5b441965c4ce16e998428
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 35a85cfc9f829f287a239d1a1bb98fd5d15487ca
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -149,11 +149,11 @@ ms.lasthandoff: 03/22/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="https://developer.xamarin.com/guides/cross-platform/getting_started">Xamarin</a></h3>
-                                                <p><a href="https://developer.xamarin.com/guides/cross-platform/getting_started">Bien démarrer</a></p>
-                                                <p><a href="https://developer.xamarin.com/guides/ios">Guide Xamarin.iOS</a></p>
-                                                <p><a href="https://developer.xamarin.com/guides/android/getting_started">Guide Xamarin.Android</a></p>
-                                                <p><a href="https://developer.xamarin.com/guides/xamarin-forms">Guide Xamarin.Forms</a></p>
+                                                <h3><a href="/xamarin">Xamarin</a></h3>
+                                                <p><a href="/xamarin/cross-platform">Développement multiplateforme</a></p>
+                                                <p><a href="/xamarin/ios">Guide Xamarin.iOS</a></p>
+                                                <p><a href="/xamarin/android">Guide Xamarin.Android</a></p>
+                                                <p><a href="/xamarin/xamarin-forms">Guide Xamarin.Forms</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -438,7 +438,7 @@ ms.lasthandoff: 03/22/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="https://developer.xamarin.com/guides/ios/getting_started/">
+                                                <a href="/xamarin/ios">
                                                     <h3>Xamarin.iOS</h3>
                                                     <p>Créez des applications iOS natives en C# et F# avec Xamarin.iOS.</p>
                                                 </a>
@@ -457,7 +457,7 @@ ms.lasthandoff: 03/22/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="https://developer.xamarin.com/guides/android/getting_started">
+                                                <a href="/xamarin/android">
                                                     <h3>Xamarin.Android</h3>
                                                     <p>Créez des applications Android natives en C# et F# avec Xamarin.Android.</p>
                                                 </a>
@@ -476,7 +476,7 @@ ms.lasthandoff: 03/22/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="https://developer.xamarin.com/guides/xamarin-forms">
+                                                <a href="/xamarin/xamarin-forms">
                                                     <h3>Xamarin.Forms</h3>
                                                     <p>Créez des interfaces utilisateur mobiles multiplateformes en C# et F# avec Xamarin.Forms.</p>
                                                 </a>
@@ -558,7 +558,7 @@ ms.lasthandoff: 03/22/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="https://developer.xamarin.com/guides/mac/getting_started">
+                                                <a href="/xamarin/mac">
                                                     <h3>Xamarin pour macOS</h3>
                                                     <p>Créez des applications pour macOS en C# et F# avec Xamarin.</p>
                                                 </a>

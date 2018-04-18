@@ -19,11 +19,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 43fe5f9d193de3f48abfc0d91e01a70ee601a651
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 26f69429bb6ee479bd981474513698bf27993564
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="managed-threading"></a>Threading managé
 Que votre développement s’applique à des ordinateurs avec un ou plusieurs processeurs, votre application doit fournir l’interaction la plus réactive avec l’utilisateur, même si l’application effectue actuellement d’autres opérations. Utiliser plusieurs threads d’exécution est l’une des manières les plus efficaces pour maintenir la réactivité de votre application vis-à-vis de l’utilisateur, tout en exploitant le processeur entre voire pendant des événements utilisateur. Bien que cette section présente les concepts de base du threading, elle se concentre sur les concepts de threading managé et son utilisation.  
@@ -61,8 +61,8 @@ Que votre développement s’applique à des ordinateurs avec un ou plusieurs pr
  [E/S sur fichier asynchrones](../../../docs/standard/io/asynchronous-file-i-o.md)  
  Décrit les opérations élémentaires des E/S asynchrones et leurs avantages en termes de performances.  
   
- [Modèle asynchrone basé sur les événements (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  
- Fournit une vue d'ensemble de la programmation asynchrone.  
+ [Modèle asynchrone basé sur les tâches (TAP, Task-based Asynchronous Pattern)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)  
+ Offre une vue d’ensemble du modèle recommandé pour la programmation asynchrone dans .NET.  
   
  [Appel de méthodes synchrones de façon asynchrone](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)  
  Explique comment appeler des méthodes sur les threads d’un pool à l’aide des fonctionnalités intégrées des délégués.  
