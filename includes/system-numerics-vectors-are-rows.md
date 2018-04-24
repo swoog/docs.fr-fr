@@ -1,0 +1,1 @@
+Pour les transformations de matrice, les instances <xref:System.Numerics.Vector2>, <xref:System.Numerics.Vector3>, et <xref:System.Numerics.Vector4> sont représentées sous forme de lignes : un vecteur *v* est transformé par une matrice *M* avec la multiplication *vM*.
