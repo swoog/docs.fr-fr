@@ -1,12 +1,12 @@
 ---
-title: "Expressions régulières du .NET Framework"
-ms.custom: 
+title: Expressions régulières du .NET Framework
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -26,18 +26,18 @@ helpviewer_keywords:
 - .NET Framework regular expressions
 - strings [.NET Framework], regular expressions
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
-caps.latest.revision: 
+caps.latest.revision: 24
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 145e0c9a722afd9f49216058604936189c003f17
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 5d0ec5572776368fa9943a87fa72280a4ebeb03d
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="net-regular-expressions"></a>Expressions régulières .NET
 Les expressions régulières permettent de traiter un texte de façon puissante, souple et efficace. Grâce à la syntaxe complète des expressions régulières pour la recherche de correspondance avec un modèle, vous pouvez rapidement analyser des volumes importants de texte pour rechercher des modèles de caractères spécifiques, valider le texte pour vous assurer qu'il correspond à un modèle prédéfini (tel qu'une adresse e-mail), extraire, modifier, remplacer ou supprimer des sous-chaînes de texte et ajouter les chaînes extraites à une collection afin de générer un rapport. Pour de nombreuses applications qui traitent des chaînes ou qui analysent de grands blocs de texte, les expressions régulières constituent un outil indispensable.  
@@ -63,8 +63,8 @@ Les expressions régulières permettent de traiter un texte de façon puissante,
   
  Pour plus d'informations sur le langage d'expression régulière, consultez [Langage des expressions régulières - Aide-mémoire](../../../docs/standard/base-types/regular-expression-language-quick-reference.md) ou téléchargez et imprimez l'une des brochures suivantes :  
   
- [Aide-mémoire au format Word (.docx)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
- [Aide-mémoire au format PDF (.pdf)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)  
+ [Aide-mémoire au format Word (.docx)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
+ [Aide-mémoire au format PDF (.pdf)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)  
   
 ## <a name="regular-expression-examples"></a>Exemples d'expressions régulières  
  La classe <xref:System.String> comprend de nombreuses méthodes de recherche et de remplacement de chaîne qui vous permettent de trouver des chaînes littérales dans une chaîne plus grande. Les expressions régulières sont particulièrement utiles quand vous souhaitez trouver une sous-chaîne spécifique dans une chaîne plus grande ou identifier des modèles dans une chaîne, comme le montrent les exemples suivants.  
@@ -131,5 +131,5 @@ Les expressions régulières permettent de traiter un texte de façon puissante,
 ## <a name="reference"></a>Référence  
  <xref:System.Text.RegularExpressions?displayProperty=nameWithType>  
  <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>  
- [Expressions régulières - Aide-mémoire (téléchargement au format Word)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
- [Expressions régulières - Aide-mémoire (téléchargement au format PDF)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)
+ [Expressions régulières - Aide-mémoire (téléchargement au format Word)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
+ [Expressions régulières - Aide-mémoire (téléchargement au format PDF)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)

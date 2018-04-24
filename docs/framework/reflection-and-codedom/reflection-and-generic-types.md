@@ -1,12 +1,13 @@
 ---
-title: "Réflexion et types génériques"
-ms.custom: 
+title: Réflexion et types génériques
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,16 +23,17 @@ helpviewer_keywords:
 - types, generic
 - type parameters
 ms.assetid: f7180fc5-dd41-42d4-8a8e-1b34288e06de
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2c6ace8f34999a6d98fc6784dd21ce88baf2af42
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 54ce839c6a569bed784a03acd5e2b92f4f1f5aca
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="reflection-and-generic-types"></a>Réflexion et types génériques
 <a name="top"></a> Du point de vue de la réflexion, la différence entre un type générique et un type ordinaire est qu'un type générique est associé à un ensemble de paramètres de type (s'il s'agit d'une définition de type générique) ou d'arguments de type (s'il s'agit d'un type construit). Une méthode générique diffère d'une méthode ordinaire de la même façon.  
@@ -65,15 +67,15 @@ ms.lasthandoff: 12/22/2017
   
 <a name="is_this_a_generic_type_or_method"></a>   
 ## <a name="is-this-a-generic-type-or-method"></a>S'agit-il d'un type ou d'une méthode générique ?  
- Quand vous utilisez la réflexion pour examiner un type inconnu, représenté par une instance de <xref:System.Type>, utilisez la propriété <xref:System.Type.IsGenericType%2A> pour déterminer si le type inconnu est générique. Elle retourne `true` si le type est générique. De la même façon, quand vous examiner une méthode inconnue, représentée par une instance de la classe <xref:System.Reflection.MethodInfo> , utilisez la propriété <xref:System.Reflection.MethodInfo.IsGenericMethod%2A> pour déterminer si la méthode est générique.  
+ Quand vous utilisez la réflexion pour examiner un type inconnu, représenté par une instance de <xref:System.Type>, utilisez la propriété <xref:System.Type.IsGenericType%2A> pour déterminer si le type inconnu est générique. Elle retourne `true` si le type est générique. De la même façon, quand vous examiner une méthode inconnue, représentée par une instance de la classe <xref:System.Reflection.MethodInfo> , utilisez la propriété <xref:System.Reflection.MethodBase.IsGenericMethod%2A> pour déterminer si la méthode est générique.  
   
 ### <a name="is-this-a-generic-type-or-method-definition"></a>S'agit-il d'une définition de type ou de méthode générique ?  
- Utilisez la propriété <xref:System.Type.IsGenericTypeDefinition%2A> pour déterminer si un objet <xref:System.Type> représente une définition de type générique et utilisez la méthode <xref:System.Reflection.MethodInfo.IsGenericMethodDefinition%2A> pour déterminer si un <xref:System.Reflection.MethodInfo> représente une définition de méthode générique.  
+ Utilisez la propriété <xref:System.Type.IsGenericTypeDefinition%2A> pour déterminer si un objet <xref:System.Type> représente une définition de type générique et utilisez la méthode <xref:System.Reflection.MethodBase.IsGenericMethodDefinition%2A> pour déterminer si un <xref:System.Reflection.MethodInfo> représente une définition de méthode générique.  
   
  Les définitions de type et de méthode génériques sont les modèles à partir desquels les types instanciables sont créés. Les types génériques dans la bibliothèque de classes .NET Framework, tels que <xref:System.Collections.Generic.Dictionary%602>, sont des définitions de type générique.  
   
 ### <a name="is-the-type-or-method-open-or-closed"></a>Le type ou la méthode est-il ouvert ou fermé ?  
- Un type ou une méthode générique est fermé si des types instanciables ont été substitués à tous ses paramètres de type, y compris tous les paramètres de type de tous les types englobants. Vous pouvez uniquement créer une instance d'un type générique s'il est fermé. La propriété <xref:System.Type.ContainsGenericParameters%2A?displayProperty=nameWithType> renvoie `true` si un type est ouvert. Pour les méthodes, la méthode <xref:System.Reflection.MethodInfo.ContainsGenericParameters%2A?displayProperty=nameWithType> a la même fonction.  
+ Un type ou une méthode générique est fermé si des types instanciables ont été substitués à tous ses paramètres de type, y compris tous les paramètres de type de tous les types englobants. Vous pouvez uniquement créer une instance d'un type générique s'il est fermé. La propriété <xref:System.Type.ContainsGenericParameters%2A?displayProperty=nameWithType> renvoie `true` si un type est ouvert. Pour les méthodes, la méthode <xref:System.Reflection.MethodBase.ContainsGenericParameters%2A?displayProperty=nameWithType> a la même fonction.  
   
  [Retour au début](#top)  
   
@@ -149,7 +151,7 @@ generic<typename V, typename W> ref class D : B<int, V> {};
   
 <a name="invariants"></a>   
 ## <a name="invariants"></a>Invariants  
- Pour obtenir un tableau des conditions invariantes pour les termes courants dans la réflexion pour les types génériques, consultez <xref:System.Type.IsGenericType%2A?displayProperty=nameWithType>. Pour obtenir des termes supplémentaires relatifs aux méthodes génériques, consultez <xref:System.Reflection.MethodInfo.IsGenericMethod%2A?displayProperty=nameWithType>.  
+ Pour obtenir un tableau des conditions invariantes pour les termes courants dans la réflexion pour les types génériques, consultez <xref:System.Type.IsGenericType%2A?displayProperty=nameWithType>. Pour obtenir des termes supplémentaires relatifs aux méthodes génériques, consultez <xref:System.Reflection.MethodBase.IsGenericMethod%2A?displayProperty=nameWithType>.  
   
  [Retour au début](#top)  
   

@@ -1,6 +1,6 @@
 ---
-title: "Qu’est-ce que le code managé ?"
-description: "Découvrez dans quelle mesure le code managé est du code dont l’exécution est gérée par un runtime, le Common Language Runtime (CLR)."
+title: Qu’est-ce que le code managé ?
+description: Découvrez dans quelle mesure le code managé est du code dont l’exécution est gérée par un runtime, le Common Language Runtime (CLR).
 keywords: .NET, .NET Core
 author: blackdwarf
 ms.author: mairaw
@@ -13,17 +13,17 @@ ms.assetid: 20bb7ea8-192e-4a96-8ef3-e10e1950fd3d
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ca2ae076229a1726d3a25a84e358f9cfb623a297
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 46bbe30f216ba9b0a3bc7f88267c428ec56de614
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="what-is-managed-code"></a>Qu’est-ce que le code managé ?
 
 Quand vous utilisez .NET Framework, vous rencontrez souvent le terme « code managé ». Ce document explique ce que signifie ce terme et fournit des informations supplémentaires sur le sujet.
 
-Pour faire simple, le code managé est du code dont l’exécution est gérée par un runtime. Dans ce cas, le runtime en question est appelé le **Common Language Runtime** ou CLR, indépendamment de l’implémentation ([Mono](http://www.mono-project.com/) ou .NET Framework, ou .NET Core). CLR est chargé de prendre le code managé, de le compiler en code machine, puis de l’exécuter. Par ailleurs, le runtime fournit plusieurs services importants comme la gestion automatique de la mémoire, les limites de sécurité, la cohérence des types, etc.
+Pour faire simple, le code managé est du code dont l’exécution est gérée par un runtime. Dans ce cas, le runtime en question est appelé le **Common Language Runtime** ou CLR, indépendamment de l’implémentation ([Mono](https://www.mono-project.com/) ou .NET Framework, ou .NET Core). CLR est chargé de prendre le code managé, de le compiler en code machine, puis de l’exécuter. Par ailleurs, le runtime fournit plusieurs services importants comme la gestion automatique de la mémoire, les limites de sécurité, la cohérence des types, etc.
 
 Par opposition, le « code non managé » est la façon dont vous pouvez exécuter un programme C/C++. Dans un environnement non managé, le programmeur est responsable de presque tout. Le programme réel est, essentiellement, un fichier binaire que le système d’exploitation charge en mémoire et démarre. Tout le reste, depuis la gestion de la mémoire aux considérations de sécurité, est à la charge du programmeur.
 

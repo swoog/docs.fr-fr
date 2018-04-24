@@ -1,12 +1,12 @@
 ---
-title: "Encodage de caractères dans .NET"
-ms.custom: 
+title: Encodage de caractères dans .NET
+ms.custom: ''
 ms.date: 12/22/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - encoding, choosing
 - encoding, fallback strategy
 ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
-caps.latest.revision: 
+caps.latest.revision: 33
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ac24e3a685c20445c473f0f5222ddba72b6b098c
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 1d296920d75af2194323791c4ea571c10f1e3c7d
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="character-encoding-in-net"></a>Encodage de caractères dans .NET
 Les caractères sont des entités abstraites qui peuvent être représentées de nombreuses façons différentes. Un encodage de caractères est un système qui associe chaque caractère d'un jeu de caractères pris en charge à une valeur qui représente ce caractère. Par exemple, le code Morse est un encodage de caractères qui associe chaque caractère de l'alphabet latin à une séquence de points et de tirets qui conviennent pour la transmission sur des lignes télégraphiques. Un encodage de caractères pour les ordinateurs associe chaque caractère d'un jeu de caractères à une valeur numérique qui représente ce caractère. Un encodage de caractères a deux composants distincts :  
@@ -70,7 +70,7 @@ Les caractères sont des entités abstraites qui peuvent être représentées de
 > [!NOTE]
 >  La norme Unicode affecte un point de code (un nombre) et un nom à chaque caractère de chaque jeu de caractères pris en charge. Par exemple, le caractère "A" est représenté par le point de code U+0041 et par le nom "LETTRE MAJUSCULE LATINE A". Les encodages UTF (Unicode Transformation Format) définissent des moyens d'encoder ce point de code en une séquence d'un ou plusieurs octets. Un schéma d'encodage Unicode simplifie le développement d'applications mondialisées, car il permet la représentation avec un encodage unique des caractères provenant de n'importe quel jeu de caractères. Les développeurs d'applications ne doivent plus faire le suivi du schéma d'encodage qui a été utilisé pour produire des caractères pour une langue ou un système d'écriture spécifique, et les données peuvent être partagées entre des systèmes à une échelle internationale sans risque d'endommagement.  
 >   
->  .NET prend en charge trois encodages définis par la norme Unicode : UTF-8, UTF-16 et UTF-32. Pour plus d’informations, consultez la norme Unicode dans la [page d’accueil Unicode](http://www.unicode.org/).  
+>  .NET prend en charge trois encodages définis par la norme Unicode : UTF-8, UTF-16 et UTF-32. Pour plus d’informations, consultez la norme Unicode dans la [page d’accueil Unicode](https://www.unicode.org/).  
   
  Vous pouvez récupérer des informations sur les encodages disponibles dans .NET en appelant la méthode <xref:System.Text.Encoding.GetEncodings%2A?displayProperty=nameWithType>. .NET prend en charge les systèmes d’encodage de caractères répertoriés dans le tableau suivant.  
   
@@ -157,7 +157,7 @@ Les caractères sont des entités abstraites qui peuvent être représentées de
  Les stratégies de secours les mieux adaptées varient pour les différentes pages de codes. Par exemple, pour certaines pages de codes, les caractères latins à pleine chasse sont mappés aux caractères latins à demi-chasse plus courants. Pour d'autres pages de codes, ce mappage n'est pas effectué. Même avec une stratégie la plus adaptée appliquée de façon agressive, il n'existe pas d'ajustement possible pour certains caractères dans certains encodages. Par exemple, un idéogramme chinois n'a pas de mappage acceptable avec la page de codes 1252. Dans ce cas, une chaîne de remplacement est utilisée. Par défaut, cette chaîne est simplement un POINT D'INTERROGATION (U+003F).  
   
 > [!NOTE]
->  Les stratégies de secours les mieux adaptées ne sont pas documentées en détail. Toutefois, plusieurs pages de codes sont documentées sur le site Web du [consortium Unicode](http://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/). Consultez le fichier **readme.txt** de ce dossier pour obtenir une description sur la manière d’interpréter les fichiers de mappage.
+>  Les stratégies de secours les mieux adaptées ne sont pas documentées en détail. Toutefois, plusieurs pages de codes sont documentées sur le site Web du [consortium Unicode](https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/). Consultez le fichier **readme.txt** de ce dossier pour obtenir une description sur la manière d’interpréter les fichiers de mappage.
   
  L'exemple suivant utilise la page de codes 1252 (la page de codes Windows pour les langues d'Europe occidentale) pour illustrer le mappage le mieux adapté et ses inconvénients. La méthode <xref:System.Text.Encoding.GetEncoding%28System.Int32%29?displayProperty=nameWithType> est utilisée pour récupérer un objet d'encodage pour la page de codes 1252. Par défaut, elle utilise un mappage le mieux adapté pour les caractères Unicode qu'elle ne prend pas en charge. L'exemple instancie une chaîne contenant trois caractères non-ASCII, LETTRE MAJUSCULE LATINE S CERCLÉE (U+24C8), EXPOSANT CINQ (U+2075) et INFINI (U+221E), séparés par des espaces. Comme le montre la sortie de l'exemple, quand la chaîne est encodée, les trois caractères d'origine autres qu'un espace sont remplacés par POINT D'INTERROGATION (U+003F), CHIFFRE CINQ (U+0035) et CHIFFRE HUIT (U+0038). CHIFFRE HUIT est un substitut particulièrement médiocre pour le caractère INFINI non pris en charge, et POINT D'INTERROGATION indique qu'aucun mappage n'est disponible pour le caractère d'origine.  
   

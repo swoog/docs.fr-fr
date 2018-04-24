@@ -24,11 +24,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f042d72c76ddbf3b5eaf8923fc747325b701c9a6
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 34fe406dac4cbbc0c25e43f479154fd3e398ffc2
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="standard-numeric-format-strings"></a>Chaînes de format numériques standard
 Les chaînes de format numériques standard sont utilisées pour mettre en forme des types numériques courants. Une chaîne de format numérique standard se présente sous la forme `Axx`, où :  
@@ -51,7 +51,7 @@ Les chaînes de format numériques standard sont prises en charge par :
 - Les [chaînes interpolées](../../csharp/language-reference/tokens/interpolated.md) en C# et Visual Basic, qui fournissent une syntaxe simplifiée par rapport aux de chaînes de format composite.
  
 > [!TIP]
->  Vous pouvez télécharger l’ [utilitaire de formatage](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), une application qui vous permet d’appliquer des chaînes de mise en forme à des valeurs numériques ou à des valeurs de date et d’heure, et d’afficher la chaîne de résultat.  
+>  Vous pouvez télécharger l’[utilitaire de formatage](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), une application qui vous permet d’appliquer des chaînes de mise en forme à des valeurs numériques ou à des valeurs de date et d’heure, et d’afficher la chaîne de résultat.  
   
 <a name="table"></a> Le tableau suivant décrit les spécificateurs de format numériques standard et affiche une sortie produite par chaque spécificateur de format. Consultez la section [Remarques](#NotesStandardFormatting) pour plus d’informations sur l’utilisation de chaînes de format numériques standard, et la section [Exemple](#example) pour obtenir une illustration complète de leur utilisation.  
   
@@ -361,5 +361,5 @@ Pour les valeurs <xref:System.Double> et <xref:System.Single>, le spécificateur
  [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)  
  [Mise en forme des types](../../../docs/standard/base-types/formatting-types.md)  
  [Guide pratique pour remplir un nombre avec des zéros non significatifs](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  
- [Exemple : utilitaire de mise en forme .NET Framework 4](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)  
+ [Exemple : utilitaire de mise en forme .NET Framework 4](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)  
  [Mise en forme composite](../../../docs/standard/base-types/composite-formatting.md)

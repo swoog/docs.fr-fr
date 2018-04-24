@@ -6,14 +6,15 @@ ms.author: wiwagn
 ms.date: 10/06/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: eb830ede1b644700a80f0e9fac2f3608deb88276
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b1472f8107d57eff8faca1b4c7de7ba43f4271c0
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Choisir entre des applications web traditionnelles et des applications monopages
 
@@ -88,7 +89,7 @@ Si vous prenez déjà en charge une API web pour une utilisation par d’autres 
 
 Le tableau de décision ci-dessous récapitule certains facteurs à prendre en compte lors du choix entre une application web traditionnelle et une application monopage.
 
-  | **Facteur** | **Application web traditionnelle** | **Application monopage** |
+  | **Facteur** | **Application web traditionnelle** | **Application à une seule page** |
   |---|---|---|
   | Connaissances de l’équipe de JavaScript/TypeScript | **Minimale** | **Obligatoire** |
   | Prise en charge des navigateurs sans script | **Prise en charge** | **Pas de prise en charge** |

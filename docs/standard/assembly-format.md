@@ -1,6 +1,6 @@
 ---
-title: "Format de fichier d’assembly .NET"
-description: "Découvrez le format de fichier d’assembly .NET, qui sert à décrire et à contenir les bibliothèques et les applications .NET."
+title: Format de fichier d’assembly .NET
+description: Découvrez le format de fichier d’assembly .NET, qui sert à décrire et à contenir les bibliothèques et les applications .NET.
 keywords: .NET, .NET Core
 author: richlander
 ms.author: mairaw
@@ -13,11 +13,11 @@ ms.assetid: 6520323e-ff28-4c8a-ba80-e64a413199e6
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: d219a584f2f5521fc3b0fd00ab037a8e486c9050
-ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
+ms.openlocfilehash: f2e838746762922087162142e61ce3ce5b33b2fb
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="net-assembly-file-format"></a>Format de fichier d’assembly .NET
 
@@ -25,7 +25,7 @@ ms.lasthandoff: 02/24/2018
 
 > Chaque composant CLI inclut les métadonnées des déclarations, implémentations et références spécifiques de ce composant. Par conséquent, les métadonnées spécifiques du composant sont désignées comme les métadonnées de composant, et le composant qui en résulte est autodescriptif (d’après ECMA 335 I.9.1, Components and assemblies).
 
-Le format est entièrement spécifié et normalisé sous [ECMA 335](http://www.ecma-international.org/publications/standards/Ecma-335.htm). Tous les compilateurs et les runtimes .NET utilisent ce format. La présence d’un format binaire documenté et rarement mis à jour a été un atout majeur (sans doute une exigence) pour l’interopérabilité. Le format a été modifié de manière substantielle en 2005 (.NET 2.0) pour prendre en charge les génériques et l’architecture de processeur.
+Le format est entièrement spécifié et normalisé sous [ECMA 335](https://www.ecma-international.org/publications/standards/Ecma-335.htm). Tous les compilateurs et les runtimes .NET utilisent ce format. La présence d’un format binaire documenté et rarement mis à jour a été un atout majeur (sans doute une exigence) pour l’interopérabilité. Le format a été modifié de manière substantielle en 2005 (.NET 2.0) pour prendre en charge les génériques et l’architecture de processeur.
 
 Le format est indépendant du processeur et du système d’exploitation. Il a été utilisé dans le cadre des implémentations de .NET qui ciblent plusieurs processeurs. Le format lui-même est hérité de Windows, il peut être implémenté sur n’importe quel système d’exploitation. La raison pour laquelle il est largement adopté pour l’interopérabilité du système d’exploitation est sans doute que la plupart des valeurs sont stockées dans un format Little Endian. Il n’a pas d’affinité particulière avec la taille du pointeur d’ordinateur (par exemple, 32 bits, 64 bits).
 
@@ -33,7 +33,7 @@ Le format d’assembly .NET est également très descriptif de la structure d’
 
 ## <a name="format"></a>Format
 
-Le format binaire .NET est basé sur le format de [fichier PE](http://en.wikipedia.org/wiki/Portable_Executable) de Windows. En fait, les bibliothèques de classes .NET sont des fichiers Windows PE conformes qui ressemblent à première vue à des bibliothèques de liens dynamiques (DLL) Windows ou à des fichiers exécutables d’application (EXE). Il s’agit d’une caractéristique très utile dans Windows, car ces fichiers peuvent se faire passer pour des fichiers binaires exécutables natifs et recevoir le même traitement (par exemple, charge de système d’exploitation, outils PE).
+Le format binaire .NET est basé sur le format de [fichier PE](https://en.wikipedia.org/wiki/Portable_Executable) de Windows. En fait, les bibliothèques de classes .NET sont des fichiers Windows PE conformes qui ressemblent à première vue à des bibliothèques de liens dynamiques (DLL) Windows ou à des fichiers exécutables d’application (EXE). Il s’agit d’une caractéristique très utile dans Windows, car ces fichiers peuvent se faire passer pour des fichiers binaires exécutables natifs et recevoir le même traitement (par exemple, charge de système d’exploitation, outils PE).
 
 ![En-têtes d’assembly](./media/assembly-format/assembly-headers.png)
 
@@ -41,4 +41,4 @@ En-têtes d’assembly d’après ECMA 335 II.25.1, Structure of the runtime f
 
 ## <a name="processing-the-assemblies"></a>Traitement des assemblys
 
-Vous pouvez écrire des outils ou des API pour traiter les assemblys. Les informations d’assembly permettent de prendre des décisions de programmation au moment de l’exécution, de réécrire des assemblys, de fournir l’IntelliSense des API dans un éditeur et de générer de la documentation. <xref:System.Reflection?displayProperty=nameWithType> et [Mono.Cecil](http://www.mono-project.com/docs/tools+libraries/libraries/Mono.Cecil/) sont de bons exemples d’outils fréquemment utilisés à cet effet.
+Vous pouvez écrire des outils ou des API pour traiter les assemblys. Les informations d’assembly permettent de prendre des décisions de programmation au moment de l’exécution, de réécrire des assemblys, de fournir l’IntelliSense des API dans un éditeur et de générer de la documentation. <xref:System.Reflection?displayProperty=nameWithType> et [Mono.Cecil](https://www.mono-project.com/docs/tools+libraries/libraries/Mono.Cecil/) sont de bons exemples d’outils fréquemment utilisés à cet effet.

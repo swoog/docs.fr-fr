@@ -1,6 +1,6 @@
 ---
-title: "Indépendance du langage et composants indépendants du langage"
-description: "Découvrez comment développer dans un des nombreux langages pris en charge dans .NET, tels que C#, C++/CLI, F#, IronPython, VB, Visual COBOL et PowerShell."
+title: Indépendance du langage et composants indépendants du langage
+description: Découvrez comment développer dans un des nombreux langages pris en charge dans .NET, tels que C#, C++/CLI, F#, IronPython, VB, Visual COBOL et PowerShell.
 keywords: .NET, .NET Core
 author: dotnet-bot
 ms.author: dotnetcontent
@@ -16,11 +16,11 @@ ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 0a7a37b1c8eed81866035dc6fb55db89391f25aa
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 2745bc67c926f50c28f5fdfb122ee94a85f020ec
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="language-independence-and-language-independent-components"></a>Indépendance du langage et composants indépendants du langage
 
@@ -29,7 +29,7 @@ ms.lasthandoff: 12/23/2017
 > [!NOTE]
 > La première partie de cet article décrit la création de composants indépendants du langage, c’est-à-dire de composants qui peuvent être utilisés par des applications écrites dans n’importe quel langage. Vous pouvez également créer un composant ou une application unique à partir de code source écrit dans plusieurs langages. Consultez [Interopérabilité multilingue](#cross-language-interoperability) dans la deuxième partie de cet article. 
 
-Pour interagir entièrement avec d’autres objets écrits dans un langage quelconque, les objets ne doivent exposer aux appelants que les fonctionnalités communes à tous les langages. Cet ensemble commun de fonctionnalités est défini par la spécification CLS (Common Language Specification), qui est un ensemble de règles qui s’appliquent aux assemblys générés. La spécification CLS (Common Language Specification) est définie dans la Partition I, clauses 7 à 11 du document [ECMA-335 Standard: Common Language Infrastructure](http://www.ecma-international.org/publications/standards/Ecma-335.htm). 
+Pour interagir entièrement avec d’autres objets écrits dans un langage quelconque, les objets ne doivent exposer aux appelants que les fonctionnalités communes à tous les langages. Cet ensemble commun de fonctionnalités est défini par la spécification CLS (Common Language Specification), qui est un ensemble de règles qui s’appliquent aux assemblys générés. La spécification CLS (Common Language Specification) est définie dans la Partition I, clauses 7 à 11 du document [ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm). 
 
 Si votre composant est conforme à la spécification CLS, il est garanti d'être conforme CLS et accessible à partir du code dans les assemblys écrits dans n'importe quel langage de programmation qui prend en charge la spécification CLS. Vous pouvez déterminer si votre composant est conforme à la spécification CLS (Common Language Specification) au moment de la compilation en appliquant l’attribut [CSLCompliantAttribute](xref:System.CLSCompliantAttribute) à votre code source. Pour plus d’informations, consultez [Attribut CLSCompliantAttribute](#the-clscompliantattribute-attribute).
 
@@ -73,7 +73,7 @@ Dans cet article :
 
 ## <a name="cls-compliance-rules"></a>Règles de conformité CLS
 
-Cette section présente les règles de création d'un composant conforme à CLS. Pour obtenir une liste complète des règles, consultez la Partition I, clause 11 du document [ECMA-335 Standard: Common Language Infrastructure](http://www.ecma-international.org/publications/standards/Ecma-335.htm).
+Cette section présente les règles de création d'un composant conforme à CLS. Pour obtenir une liste complète des règles, consultez la Partition I, clause 11 du document [ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm).
 
 > [!NOTE]
 > La spécification CLS (Common Language Specification) présente chaque règle de conformité CLS telle qu'elle s'applique aux consommateurs (les développeurs qui accèdent par programme à un composant conforme CLS), aux infrastructures (les développeurs qui utilisent un compilateur de langage pour créer des bibliothèques conformes CLS) et aux extendeurs (les développeurs qui créent un outil tel qu'un compilateur de langage ou un analyseur de code qui crée des composants conformes CLS). Cet article se concentre sur les règles applicables aux infrastructures. Notez, toutefois, qu’une partie des règles qui s’appliquent aux extendeurs peut également s’appliquer aux assemblys créés à l’aide de [Reflection.Emit](xref:System.Reflection.Emit). 
@@ -158,7 +158,7 @@ L'interface publique d'une bibliothèque inclut les éléments suivants :
 
 * Paramètres et types de retour des méthodes publiques des classes publiques, et paramètres et types de retour des méthodes accessibles aux classes dérivées. 
 
-Les règles de conformité CLS sont répertoriées dans le tableau suivant. Le texte des règles est repris mot pour mot du document [ECMA-335 Standard: Common Language Infrastructure](http://www.ecma-international.org/publications/standards/Ecma-335.htm), qui est protégé par copyright 2012 par Ecma International. Vous trouverez des informations plus détaillées sur ces règles dans les sections suivantes. 
+Les règles de conformité CLS sont répertoriées dans le tableau suivant. Le texte des règles est repris mot pour mot du document [ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm), qui est protégé par copyright 2012 par Ecma International. Vous trouverez des informations plus détaillées sur ces règles dans les sections suivantes. 
 
 Category | Voir | Règle | Numéro de règle
 -------- | --- | ---- | -----------
@@ -617,7 +617,7 @@ public class person
 //    Naming1.cs(6,14): (Location of symbol related to previous warning)
 ```
 
-Les identificateurs de langage de programmation, comme les noms d’espaces de noms, de types et de membres, doivent être conformes au document [Unicode Standard 3.0, Technical Report 15, Annex 7](http://www.unicode.org/reports/tr15/tr15-18.html) (Norme Unicode 3.0, Rapport technique 15, Annexe 7). Cela signifie que :
+Les identificateurs de langage de programmation, comme les noms d’espaces de noms, de types et de membres, doivent être conformes au document [Unicode Standard 3.0, Technical Report 15, Annex 7](https://www.unicode.org/reports/tr15/tr15-18.html) (Norme Unicode 3.0, Rapport technique 15, Annexe 7). Cela signifie que :
 
 * Le premier caractère d'un identificateur peut être une lettre majuscule, une lettre minuscule, une initiale majuscule, une lettre de modificateur, une autre lettre ou un nombre sous forme de lettre, Unicode. Pour plus d’informations sur les catégories de caractères Unicode, consultez l’énumération [System.Globalization.UnicodeCategory](xref:System.Globalization.UnicodeCategory). 
 

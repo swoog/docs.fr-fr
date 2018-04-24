@@ -1,6 +1,6 @@
 ---
-title: "Utiliser le modèle d’espace de travail du SDK .NET Compiler Platform"
-description: "Cette présentation fournit des informations sur le type que vous utilisez pour interroger et manipuler l’espace de travail et les projets dans votre code."
+title: Utiliser le modèle d’espace de travail du SDK .NET Compiler Platform
+description: Cette présentation fournit des informations sur le type que vous utilisez pour interroger et manipuler l’espace de travail et les projets dans votre code.
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/15/2017
@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: d0d4e9c012b025b9393ac34f0833795fca9841d5
-ms.sourcegitcommit: d095094e942eedf09530ea5636fbaf9029853027
+ms.openlocfilehash: c42795346c505f925c0b4cb232325085fa065201
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="work-with-a-workspace"></a>Utiliser un espace de travail
 
@@ -40,7 +40,7 @@ Un document est une autre composante du modèle de solution immuable global. Un 
 
 Le diagramme suivant illustre les relations entre l’espace de travail et l’environnement hôte, les outils, et la façon dont les modifications sont effectuées.
 
-![relations entre différents éléments d’un espace de travail contenant des projets et des fichiers sources](media/workspace-obj-relations.png)
+![relations entre différents éléments d’un espace de travail contenant des projets et des fichiers sources](media/work-with-workspace/workspace-obj-relations.png)
 
 ## <a name="summary"></a>Récapitulatif
 

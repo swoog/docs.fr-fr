@@ -1,6 +1,6 @@
 ---
-title: "Concepts et modèle objet du SDK .NET Compiler Platform"
-description: "Cette présentation fournit les informations dont vous avez besoin pour utiliser efficacement le SDK .NET Compiler Platform. Vous allez découvrir les différentes couches d’API, les principaux types utilisés et le modèle objet global."
+title: Concepts et modèle objet du SDK .NET Compiler Platform
+description: Cette présentation fournit les informations dont vous avez besoin pour utiliser efficacement le SDK .NET Compiler Platform. Vous allez découvrir les différentes couches d’API, les principaux types utilisés et le modèle objet global.
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/10/2017
@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: d230d334eba4e438635a4c70e8c1b5fc5075b065
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 17a7884518f71d7df1f4a9fe8c91da87d7335e0d
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="understand-the-net-compiler-platform-sdk-model"></a>Comprendre le modèle du SDK .NET Compiler Platform
 
@@ -22,15 +22,15 @@ Les compilateurs traitent le code que vous écrivez en suivant des règles struc
 
 Le SDK .NET Compiler Platform expose les analyses de code des compilateurs C# et Visual Basic en vous fournissant, en tant que consommateur, une couche d’API qui reflète un pipeline de compilateur standard.
 
-![étapes du pipeline de compilateur pour traiter le code source en code objet](media/compiler-pipeline.png)
+![étapes du pipeline de compilateur pour traiter le code source en code objet](media/compiler-api-model/compiler-pipeline.png)
 
 Chaque phase de ce pipeline correspond à un composant distinct. Tout d’abord, la phase d’analyse segmente et analyse le texte source dans la syntaxe grammaticale du langage utilisé. Ensuite, la phase de déclaration analyse les métadonnées sources et importées pour former des symboles nommés. Après cela, la phase de liaison mappe les identificateurs dans le code à des symboles. Enfin, la phase d’émission émet un assembly qui contient toutes les informations générées par le compilateur.
 
-![l’API du pipeline du compilateur fournit l’accès à chaque phase du pipeline du compilateur](media/compiler-pipeline-api.png)
+![l’API du pipeline du compilateur fournit l’accès à chaque phase du pipeline du compilateur](media/compiler-api-model/compiler-pipeline-api.png)
 
 Pour chacune de ces phases, le SDK .NET Compiler Platform expose un modèle objet qui permet d’accéder aux informations disponibles à la phase en question. La phase d’analyse expose une arborescence de syntaxe, la phase de déclaration expose une table de symboles hiérarchique, la phase de liaison expose le résultat de l’analyse sémantique du compilateur et la phase d’émission est une API qui produit des codes d’octets IL.
 
-![services de langage disponibles à partir de l’API du compilateur à chaque phase du pipeline du compilateur](media/compiler-pipeline-lang-svc.png)
+![services de langage disponibles à partir de l’API du compilateur à chaque phase du pipeline du compilateur](media/compiler-api-model/compiler-pipeline-lang-svc.png)
 
 Chaque compilateur combine ces composants en une solution de bout en bout unique.
 
@@ -40,7 +40,7 @@ Ces API sont les mêmes que celles utilisées par Visual Studio. Par exemple, le
 
 Le SDK .NET Compiler comporte deux couches principales d’API : les API du compilateur et les API des espaces de travail.
 
-![couches d’API représentées par les API du pipeline du compilateur](media/api-layers.png)
+![couches d’API représentées par les API du pipeline du compilateur](media/compiler-api-model/api-layers.png)
 
 ### <a name="compiler-apis"></a>API du compilateur
 

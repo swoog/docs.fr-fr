@@ -1,5 +1,5 @@
 ---
-title: "Guide pratique pour modifier du contenu de chaîne - C#"
+title: Guide pratique pour modifier du contenu de chaîne - C#
 ms.date: 02/26/2018
 ms.prod: .net
 ms.technology:
@@ -9,11 +9,11 @@ helpviewer_keywords:
 - strings [C#], modifying
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 830ca207c4cd5bd24dbb667328465cafb2509409
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 2f193f09458829ec6f358b9330334b68f092ee80
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>Guide pratique pour modifier du contenu de chaîne en C# #
 
@@ -74,7 +74,7 @@ L’exemple suivant est fourni dans les rares cas où vous souhaiteriez modifier
 
 [!code-csharp-interactive[unsafe ways to create a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#7)]
 
-Vous pouvez essayer ces exemples en examinant le code dans notre [dépôt GitHub](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings). Vous pouvez aussi télécharger les exemples [sous forme de fichier zip](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings.zip).
+Vous pouvez essayer ces exemples en examinant le code dans notre [dépôt GitHub](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings). Vous pouvez aussi télécharger les exemples [sous forme de fichier zip](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip).
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -1,6 +1,6 @@
 ---
 title: LINQ (Language Integrated Query)
-description: "Découvrez comment LINQ fournit des fonctionnalités de requête au niveau du langage, ainsi qu’une API pour C# et VB qui permet d’écrire du code déclaratif expressif."
+description: Découvrez comment LINQ fournit des fonctionnalités de requête au niveau du langage, ainsi qu’une API pour C# et VB qui permet d’écrire du code déclaratif expressif.
 keywords: .NET, .NET Core
 author: cartermp
 ms.author: wiwagn
@@ -13,11 +13,11 @@ ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: eb9bc30c31ab02df7c04c885f59cadfcc1f00253
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 5ce6819abee90ceccc52a79f8bda794f2fd345fb
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="linq-language-integrated-query"></a>LINQ (Language Integrated Query)
 
@@ -83,7 +83,7 @@ public static IEnumerable<XElement> FindAllElementsWithAttribute(XElement docume
 
 Écrire du code pour parcourir manuellement le document XML afin de rechercher ces éléments est une tâche très complexe.
 
-Les fournisseurs LINQ ne vous permettent pas seulement d’interagir avec le XML. [LINQ to SQL](../../docs/framework/data/adonet/sql/linq/index.md) est un mappeur ORM (Object-Relational Mapper) de base de données MSSQL relativement minimaliste. La bibliothèque [JSON.NET](http://www.newtonsoft.com/json/help/html/LINQtoJSON.htm) fournit un balayage efficace du document JSON via LINQ. Par ailleurs, si vous n’avez pas de bibliothèque pour faire ce dont vous avez besoin, vous pouvez également [écrire votre propre fournisseur LINQ](https://msdn.microsoft.com/library/Bb546158.aspx) !
+Les fournisseurs LINQ ne vous permettent pas seulement d’interagir avec le XML. [LINQ to SQL](../../docs/framework/data/adonet/sql/linq/index.md) est un mappeur ORM (Object-Relational Mapper) de base de données MSSQL relativement minimaliste. La bibliothèque [JSON.NET](https://www.newtonsoft.com/json/help/html/LINQtoJSON.htm) fournit un balayage efficace du document JSON via LINQ. Par ailleurs, si vous n’avez pas de bibliothèque pour faire ce dont vous avez besoin, vous pouvez également [écrire votre propre fournisseur LINQ](https://msdn.microsoft.com/library/Bb546158.aspx) !
 
 ## <a name="why-use-the-query-syntax"></a>Pourquoi utiliser la syntaxe de requête ?
 
@@ -143,7 +143,7 @@ var cats = dogs.Select(dog => dog.TurnIntoACat());
 var queryCats = from dog in dogs
                 select dog.TurnIntoACat();
 
-// Summing then lengths of a set of strings
+// Summing the lengths of a set of strings
 int seed = 0;
 int sumOfStrings = strings.Aggregate(seed, (s1, s2) => s1.Length + s2.Length);
 ```
@@ -263,4 +263,4 @@ Les tâches parallèles utilisant le processeur qui peuvent être facilement exp
 
 *   [101 exemples LINQ](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)
 *   [Linqpad](https://www.linqpad.net/), environnement de laboratoire et moteur d’interrogation de base de données pour C#/F#/VB
-*   [EduLinq](http://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/), livre électronique pour apprendre comment LINQ-to-objects est implémenté
+*   [EduLinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/), livre électronique pour apprendre comment LINQ-to-objects est implémenté

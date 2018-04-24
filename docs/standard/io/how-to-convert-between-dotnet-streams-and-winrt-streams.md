@@ -1,29 +1,29 @@
 ---
-title: "Comment : effectuer une conversion entre les flux .NET Framework et les flux Windows Runtime"
-ms.custom: 
+title: 'Comment : effectuer une conversion entre les flux .NET Framework et les flux Windows Runtime'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 23a763ea-8348-4244-9f8c-a4280b870b47
-caps.latest.revision: 
+caps.latest.revision: 15
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: d9e4c1c0b432ff44af0410b1efdc3940cd0ff19c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 25df0b363e5c9b44ae51d14ef0c2286cbb80ced8
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="how-to-convert-between-net-framework-streams-and-windows-runtime-streams"></a>Comment : effectuer une conversion entre les flux .NET Framework et les flux Windows Runtime
 Le .Net Framework pour les applications Windows Store est un sous-ensemble du .NET Framework complet. En raison de la sécurité et d'autres spécifications des applications Windows Store, vous ne pouvez pas utiliser l'ensemble d'API .NET Framework pour ouvrir et lire des fichiers. Pour plus d’informations, consultez [Vue d’ensemble de .NET pour les applications du Windows Store](http://msdn.microsoft.com/library/windows/apps/br230302.aspx). Toutefois, vous pouvez utiliser des API .NET Framework pour les autres opérations de manipulation des flux. Pour manipuler ces flux, il peut s’avérer nécessaire d’effectuer une conversion entre un type de flux .NET Framework tel que <xref:System.IO.MemoryStream> ou <xref:System.IO.FileStream>, et un flux Windows Runtime tel que [IInputStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.iinputstream.aspx), [IOutputStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ioutputstream.aspx)ou [IRandomAccessStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.irandomaccessstream.aspx).  
@@ -90,6 +90,6 @@ Le .Net Framework pour les applications Windows Store est un sous-ensemble du .N
     [!code-vb[System.IO.WindowsRuntimeStreamExtensionsEx#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.windowsruntimestreamextensionsex/vb/mainpage.xaml.vb#2)]  
   
 ## <a name="see-also"></a>Voir aussi  
- [Démarrage rapide : lecture et écriture dans un fichier (Windows)](http://msdn.microsoft.com/library/windows/apps/hh464978.aspx)  
+ [Démarrage rapide : lecture et écriture dans un fichier (Windows)](https://msdn.microsoft.com/library/windows/apps/hh464978.aspx)  
  [Vue d’ensemble de .NET pour les applications Windows Store](http://msdn.microsoft.com/library/windows/apps/br230302.aspx)  
- [.NET pour les applications du Windows Store : API prises en charge](http://msdn.microsoft.com/library/windows/apps/br230232.aspx)
+ [.NET pour les applications du Windows Store : API prises en charge](https://msdn.microsoft.com/library/windows/apps/br230232.aspx)

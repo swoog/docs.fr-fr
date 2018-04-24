@@ -6,18 +6,19 @@ ms.author: wiwagn
 ms.date: 10/06/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ecef23870ac547f4b4066628da71f8af98c91b27
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 4f12b6860f1c4efe0f55cae4fefd8cd5f4539095
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="characteristics-of-modern-web-applications"></a>Caractéristiques des applications web modernes
 
-> « … avec une bonne conception, les fonctionnalités sont peu coûteuses. Cette approche est compliquée, mais continue à porter ses fruits. »  
+> "… avec une bonne conception, les fonctionnalités sont peu coûteuses. Cette approche est compliquée, mais continue à porter ses fruits. »  
 > _\- Dennis Ritchie_
 
 ## <a name="summary"></a>Récapitulatif
@@ -42,7 +43,7 @@ Ce guide comprend une application de référence, *eShopOnWeb*, qui illustre cer
 
 ASP.NET Core est optimisé pour le cloud (cloud public, cloud privé, n’importe quel cloud), car il consomme peu de mémoire et offre un débit élevé. Le faible encombrement des applications ASP.NET Core signifie que vous pouvez en héberger davantage sur le même matériel, tout en réduisant les coûts de ressources lors de l’utilisation de services d’hébergement cloud de type Paiement à l’utilisation. Le débit plus élevé signifie que vous pouvez servir davantage de clients à partir d’une application avec le même matériel, réduisant ainsi la nécessité d’investir dans des serveurs et une infrastructure d’hébergement.
 
-## <a name="cross-platform"></a>Multiplateformes
+## <a name="cross-platform"></a>Multiplateforme
 
 ASP.NET Core est multiplateforme et peut s’exécuter sur Linux et MacOS en plus de Windows. Cela donne accès à de nombreuses nouvelles options pour le développement et le déploiement d’applications créées avec ASP.NET Core. Les conteneurs Docker, qui exécutent généralement Linux aujourd’hui, peuvent héberger des applications ASP.NET Core, ce qui leur permet de tirer parti des avantages offerts par les [conteneurs et microservices](../microservices-architecture/index.md).
 

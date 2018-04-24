@@ -6,14 +6,15 @@ ms.author: wiwagn
 ms.date: 10/07/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 648e0a4cdd388cf4a322f0fc049d5dcfca53d54b
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 7d160d23808832ff6456e5c95f6e5ed5f4d44fa5
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Utilisation de données dans les applications ASP.NET Core
 
@@ -206,7 +207,7 @@ Le premier DbContext est le \_catalogContext et le second DbContext se trouve da
 > - **EF Core : Données associées**  
 > <https://docs.microsoft.com/ef/core/querying/related-data>
 > - **Éviter le chargement différé des entités dans les applications ASPNET**  
-> <http://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications>
+> <https://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications>
 
 ## <a name="ef-core-or-micro-orm"></a>EF Core ou micro-ORM ?
 
@@ -236,7 +237,7 @@ Si vous avez besoin de générer des graphiques d’objets plus complexes avec D
 
 ```sql
 select * from #Posts p
-left join \#Users u on u.Id = p.OwnerId
+left join #Users u on u.Id = p.OwnerId
 Order by p.Id
 ```
 
@@ -270,7 +271,7 @@ Une autre complexité que les bases de données NoSQL doivent gérer est le cont
 
 Il est possible dans les bases de données NoSQL de stocker plusieurs versions d’objets, ce qui n’est en général pas pris en charge par les bases de données relationnelles à schéma fixe. Toutefois, dans ce cas votre code d’application devra prendre en compte l’existence de versions d’objets précédentes, ce qui augmentera la complexité.
 
-Les bases de données NoSQL n’appliquent généralement pas [ACID](http://en.wikipedia.org/wiki/ACID), ce qui signifie qu’elles présentent des avantages en termes de performances et de scalabilité par rapport aux bases de données relationnelles. Elles conviennent bien aux jeux de données très volumineux et aux objets qui ne sont pas adaptés au stockage dans des structures de tables normalisées. Rien n’empêche une application de tirer parti à la fois des bases de données relationnelles et NoSQL, en utilisant chacune là où c’est préférable.
+Les bases de données NoSQL n’appliquent généralement pas [ACID](https://en.wikipedia.org/wiki/ACID), ce qui signifie qu’elles présentent des avantages en termes de performances et de scalabilité par rapport aux bases de données relationnelles. Elles conviennent bien aux jeux de données très volumineux et aux objets qui ne sont pas adaptés au stockage dans des structures de tables normalisées. Rien n’empêche une application de tirer parti à la fois des bases de données relationnelles et NoSQL, en utilisant chacune là où c’est préférable.
 
 ## <a name="azure-documentdb"></a>Azure DocumentDB
 

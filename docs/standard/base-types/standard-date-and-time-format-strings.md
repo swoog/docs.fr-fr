@@ -1,12 +1,12 @@
 ---
-title: "Chaînes de format de date et d'heure standard"
-ms.custom: 
+title: Chaînes de format de date et d'heure standard
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
-caps.latest.revision: 
+caps.latest.revision: 92
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 55f8f6b544a3ade0ad9423e8253cc44e0fb5fec1
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 5de7da12867e11fcde00089e13c98396ed279a5e
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="standard-date-and-time-format-strings"></a>Chaînes de format de date et d'heure standard
 Une chaîne de format de date et d'heure standard utilise un spécificateur de format unique pour définir la représentation textuelle d'une valeur de date et d'heure. Toute chaîne de format de date et d’heure contenant plusieurs caractères, y compris un espace, est interprétée comme une chaîne de format de date et d’heure personnalisée. Pour plus d’informations, consultez [Chaînes de format de date et d’heure personnalisées](../../../docs/standard/base-types/custom-date-and-time-format-strings.md). Une chaîne de format standard ou personnalisée peut être utilisée de deux façons :  
@@ -43,7 +43,7 @@ Une chaîne de format de date et d'heure standard utilise un spécificateur de f
  Les chaînes de format de date et d'heure standard peuvent être utilisées avec les valeurs <xref:System.DateTime> et <xref:System.DateTimeOffset>.  
   
 > [!TIP]
->  Vous pouvez télécharger l’ [utilitaire de formatage](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), une application qui vous permet d’appliquer des chaînes de mise en forme à des valeurs numériques ou à des valeurs de date et d’heure, et d’afficher la chaîne de résultat.  
+>  Vous pouvez télécharger l’[utilitaire de formatage](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), une application qui vous permet d’appliquer des chaînes de mise en forme à des valeurs numériques ou à des valeurs de date et d’heure, et d’afficher la chaîne de résultat.  
   
 <a name="table"></a> Le tableau suivant décrit les spécificateurs de format de date et d’heure standard. Sauf indication contraire, un spécificateur de format de date et d'heure standard particulier produit une représentation sous forme de chaîne identique, qu'il soit utilisé avec une valeur <xref:System.DateTime> ou <xref:System.DateTimeOffset>. Pour plus d’informations sur l’utilisation de chaînes de format de date et d’heure standard, consultez la section [Remarques](#Notes).  
   
@@ -426,4 +426,4 @@ Une chaîne de format de date et d'heure standard utilise un spécificateur de f
  <xref:System.DateTimeOffset?displayProperty=nameWithType>  
  [Mise en forme des types](../../../docs/standard/base-types/formatting-types.md)  
  [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
- [Exemple : utilitaire de mise en forme .NET Framework 4](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
+ [Exemple : utilitaire de mise en forme .NET Framework 4](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

@@ -1,6 +1,6 @@
 ---
-title: "Introduction au didacticiel sur les classes - Guides de démarrage rapide local en C#"
-description: "Créez votre premier programme C# et explorez les concepts orientés objet"
+title: Introduction au didacticiel sur les classes - Guides de démarrage rapide local en C#
+description: Créez votre premier programme C# et explorez les concepts orientés objet
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/11/2017
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 97c1de562c86ea04153ec09bb0e813565523a3ba
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: dd3fff6f74c92a45545e8e36f28eab351b39b37e
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="introduction-to-classes"></a>Introduction aux classes
 
@@ -215,6 +215,6 @@ Tapez `dotnet run` pour afficher les résultats.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Si vous êtes bloqué, vous pouvez afficher la source de ce guide de démarrage rapide [dans notre dépôt GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/classes-quickstart/).
+Si vous êtes bloqué, vous pouvez afficher la source de ce guide de démarrage rapide [dans notre dépôt GitHub](https://github.com/dotnet/samples/tree/master/csharp/classes-quickstart/).
 
 Félicitations, vous avez terminé tous nos guides de démarrage rapide. Si vous souhaitez en savoir plus, explorez nos [didacticiels](../tutorials/index.md).

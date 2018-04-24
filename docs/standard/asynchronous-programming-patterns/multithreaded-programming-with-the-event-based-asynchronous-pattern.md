@@ -1,12 +1,12 @@
 ---
-title: "Programmation multithread avec le modèle asynchrone basé sur les événements"
-ms.custom: 
+title: Programmation multithread avec le modèle asynchrone basé sur les événements
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Event-based Asynchronous Pattern
@@ -19,18 +19,18 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 958d6617-5e70-4b36-b5db-63c16dc35e43
-caps.latest.revision: 
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 557d639cc8a4e7ade2cfbd1f5d7264bca226d273
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6d93e449877456e415ebd4d3490a7df99280e7e5
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="multithreaded-programming-with-the-event-based-asynchronous-pattern"></a>Programmation multithread avec le modèle asynchrone basé sur les événements
 Il existe plusieurs façons d’exposer des fonctionnalités asynchrones à du code client. Le modèle asynchrone basé sur les événements prescrit la méthode recommandée pour que les classes présentent un comportement asynchrone.  
@@ -67,5 +67,5 @@ Il existe plusieurs façons d’exposer des fonctionnalités asynchrones à du c
 ## <a name="see-also"></a>Voir aussi  
  [Bonnes pratiques de threading géré](../../../docs/standard/threading/managed-threading-best-practices.md)  
  [Événements](../../../docs/standard/events/index.md)  
- [Multithreading dans les composants](http://msdn.microsoft.com/library/2fc31e68-fb71-4544-b654-0ce720478779)  
+ [Multithreading dans les composants](https://msdn.microsoft.com/library/2fc31e68-fb71-4544-b654-0ce720478779)  
  [Modèle asynchrone basé sur les événements (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)

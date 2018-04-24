@@ -1,12 +1,12 @@
 ---
-title: "Valeurs numériques dans le .NET Framework"
-ms.custom: 
+title: Valeurs numériques dans le .NET Framework
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SIMD
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - numerics
 - BigInteger
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
-caps.latest.revision: 
+caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: bd55b127f73fe1cefce9724f3a74400b5fe7488f
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 074ed60a3cbc1949eea4a8d866cdb3bba7c0f196
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="numerics-in-the-net-framework"></a>Valeurs numériques dans le .NET Framework
 Le .NET Framework prend en charge les primitives numériques standard pour les intégraux et les nombres à virgule flottante, ainsi que <xref:System.Numerics.BigInteger>, un type intégral sans limite théorique supérieure ou inférieure, <xref:System.Numerics.Complex>, un type qui représente des nombres complexes et un ensemble de types de vecteurs compatibles SIMD dans l’espace de noms <xref:System.Numerics>.  
@@ -85,7 +85,7 @@ Le .NET Framework prend en charge les primitives numériques standard pour les i
   
  Les types de vecteurs compatibles SIMD sont implémentés en langage intermédiaire, ce qui permet de les utiliser sur un matériel non compatible SIMD et sur les compilateurs JIT. Pour tirer parti des instructions SIMD, vos applications 64 bits doivent être compilées par le nouveau compilateur JIT 64 bits pour le code managé, qui est intégré au.NET Framework 4.6 ; il ajoute la prise en charge SIMD quand les processeurs x64 sont ciblés.  
   
- SIMD peut aussi être téléchargé sous forme de [NuGet package](http://www.nuget.org/packages/System.Numerics.Vectors).  Le package NuGet inclut aussi une structure <xref:System.Numerics.Vector%601> générique, qui permet de créer un vecteur de n’importe quel type numérique primitif. (Les types numériques primitifs incluent tous les types numériques de l'espace de noms <xref:System> à l'exception de <xref:System.Decimal>.) De plus, la structure <xref:System.Numerics.Vector%601> fournit une bibliothèque de méthodes pratiques que vous pouvez appeler quand vous utilisez des vecteurs.  
+ SIMD peut aussi être téléchargé sous forme de [NuGet package](https://www.nuget.org/packages/System.Numerics.Vectors).  Le package NuGet inclut aussi une structure <xref:System.Numerics.Vector%601> générique, qui permet de créer un vecteur de n’importe quel type numérique primitif. (Les types numériques primitifs incluent tous les types numériques de l'espace de noms <xref:System> à l'exception de <xref:System.Decimal>.) De plus, la structure <xref:System.Numerics.Vector%601> fournit une bibliothèque de méthodes pratiques que vous pouvez appeler quand vous utilisez des vecteurs.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Application Essentials](../../docs/standard/application-essentials.md)

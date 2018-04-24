@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: ec9d9fcdcaf2c018762542f6dc403e2a4f89376b
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 04452159c759a0c7236c1b93dc966e5e9c54574a
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a>Explorer le code avec le visualiseur de syntaxe Roslyn dans Visual Studio
 
@@ -28,16 +28,17 @@ Le **visualiseur de syntaxe** permet d’inspecter l’arborescence de syntaxe d
 
 Cette commande ouvre ce dernier dans une fenêtre Outil flottante. Si aucune fenêtre d’éditeur de code n’est ouverte, l’affichage est vide, comme l’illustre la figure suivante. 
 
-![Fenêtre Outil du visualiseur de syntaxe](media/syntax-visualizer.png)
+![Fenêtre Outil du visualiseur de syntaxe](media/syntax-visualizer/syntax-visualizer.png)
 
 Ancrez cette fenêtre Outil à un emplacement pratique dans Visual Studio, comme le côté gauche. Le visualiseur indique des informations sur le fichier de code actuel.
 
 Créez un projet à l’aide de la commande **Fichier** > **Nouveau projet**. Vous pouvez créer un projet VB ou C#. Quand Visual Studio ouvre le fichier de code principal de ce projet, le visualiseur en présente l’arborescence de syntaxe. Vous pouvez ouvrir n’importe quel fichier C#/VB existant dans cette instance Visual Studio pour que le visualiseur en présente l’arborescence de syntaxe. Si plusieurs fichiers de code sont ouverts dans Visual Studio, le visualiseur présente l’arborescence de syntaxe du fichier de code actif (celui qui a le focus clavier.)
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
-![Visualisation d’une arborescence de syntaxe C#](media/visualize-csharp.png)
+![Visualisation d’une arborescence de syntaxe C#](media/syntax-visualizer/visualize-csharp.png)
 # <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
-<a name="visualizing-a-vb-syntax-treemediavisualize-visual-basicpng"></a>![Visualisation d’une arborescence de syntaxe VB](media/visualize-visual-basic.png)
+![Visualisation d’une arborescence de syntaxe VB](media/syntax-visualizer/visualize-visual-basic.png)
+
 ---
 
 Comme l’illustrent les images précédentes, la fenêtre Outil du visualiseur présente l’arborescence de syntaxe en haut et une grille des propriétés en bas. La grille des propriétés présente les propriétés de l’élément actuellement sélectionné dans l’arborescence, notamment le *type* .NET et le *genre* (SyntaxKind) de l’élément.
@@ -60,13 +61,18 @@ Interrompez la frappe une fois vous avez tapé `Console.`. L’arborescence colo
 
 Cliquez avec le bouton droit sur un élément dans l’arborescence, puis cliquez sur **Afficher un graphique de syntaxe orienté**. 
 
+# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+
 Le visualiseur affiche une représentation graphique de la sous-arborescence dont la racine est l’élément sélectionné. Essayez ces étapes pour le nœud **MethodDeclaration** correspondant à la méthode `Main()` dans l’exemple C#. Le visualiseur affiche un graphique de syntaxe qui ressemble à celui-ci :
 
-![Affichage d’un graphique de syntaxe C#](media/csharp-syntax-graph.png)
+![Affichage d’un graphique de syntaxe C#](media/syntax-visualizer/csharp-syntax-graph.png)
+# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
 
 Essayez la même chose pour le nœud **SubBlock** correspondant à la méthode `Main()` dans le précédent exemple VB. Le visualiseur affiche un graphique de syntaxe qui ressemble à celui-ci :
 
-![Affichage d’un graphique de syntaxe VB](media/visual-basic-syntax-graph.png)
+![Affichage d’un graphique de syntaxe VB](media/syntax-visualizer/visual-basic-syntax-graph.png)
+
+---
 
 La visionneuse de graphique de syntaxe comporte une option qui permet d’afficher la légende des couleurs. Vous pouvez également placer le pointeur de la souris au-dessus d’éléments individuels dans le graphique de syntaxe pour afficher les propriétés correspondantes.
 
@@ -74,7 +80,7 @@ Vous pouvez afficher des graphiques de syntaxe pour différents éléments dans 
 
 Voici la disposition d’ancrage à utiliser avec la fenêtre Outil du visualiseur et la fenêtre de graphique de syntaxe :
 
-![Une disposition d’ancrage du visualiseur et de la fenêtre de graphique de syntaxe](media/docking-layout.png)
+![Une disposition d’ancrage du visualiseur et de la fenêtre de graphique de syntaxe](media/syntax-visualizer/docking-layout.png)
 
 Une autre option consiste à placer la fenêtre de graphique de syntaxe sur un deuxième écran, dans une configuration à double écran.
 
@@ -84,19 +90,19 @@ Le visualiseur de syntaxe permet une inspection rudimentaire des symboles et des
 
 La grille des propriétés se met à jour dans le visualiseur comme l’illustre la figure suivante : le symbole de l’expression est un **SynthesizedIntrinsicOperatorSymbol** avec **Kind = Method**.
 
-![Propriétés des symboles](media/symbol-properties.png)
+![Propriétés des symboles](media/syntax-visualizer/symbol-properties.png)
 
 Essayez **Afficher TypeSymbol (le cas échéant)** pour le même nœud **AddExpression**. La grille des propriétés se met à jour dans le visualiseur comme l’illustre la figure suivante, en indiquant que le type de l’expression sélectionnée est `Int32`.
 
-![Propriétés de TypeSymbol](media/type-symbol-properties.png)
+![Propriétés de TypeSymbol](media/syntax-visualizer/type-symbol-properties.png)
 
 Essayez **Afficher un TypeSymbol converti (le cas échéant)** pour le même nœud **AddExpression**. La grille des propriétés se met à jour en indiquant que, bien que le type de l’expression soit `Int32`, le type converti de l’expression est `Double` comme l’illustre la figure suivante. Ce nœud inclut des informations de symbole de type converti, car l’expression `Int32` se produit dans un contexte où elle doit être convertie en `Double`. Cette conversion satisfait au type `Double` spécifié pour la variable `x` du côté gauche de l’opérateur d’assignation.
 
-![Propriétés d’un TypeSymbol converti](media/converted-type-symbol-properties.png)
+![Propriétés d’un TypeSymbol converti](media/syntax-visualizer/converted-type-symbol-properties.png)
 
 Enfin, essayez **Afficher la valeur constante (le cas échéant)** pour le même nœud **AddExpression**. La grille des propriétés montre que la valeur de l’expression est une constante au moment de la compilation de valeur `2`.
 
-![Valeur de constante](media/constant-value.png)
+![Valeur de constante](media/syntax-visualizer/constant-value.png)
 
 L’exemple précédent peut également être répliqué dans VB. Tapez `Dim x As Double = 1 + 1` dans un fichier VB. Sélectionnez l’expression `1 + 1` dans la fenêtre de l’éditeur de code. Le visualiseur met en surbrillance le nœud **AddExpression** correspondant dans le visualiseur. Répétez les étapes précédentes pour ce nœud **AddExpression** et vous obtiendrez normalement des résultats identiques.
 
@@ -114,15 +120,15 @@ End Module
 
 Ce code présente un alias nommé `C` qui se mappe sur le type `System.Console` en haut du fichier et utilise cet alias dans `Main()`. Sélectionnez l’utilisation de cet alias, le `C` dans `C.WriteLine()`, à l’intérieur de la méthode `Main()`. Le visualiseur sélectionne le nœud **IdentifierName** correspondant. Cliquez avec le bouton droit sur ce nœud et cliquez sur **Afficher le symbole (le cas échéant)**. La grille des propriétés indique que cet identificateur est lié au type `System.Console` comme l’illustre la figure suivante :
 
-![Propriétés des symboles](media/symbol-visual-basic.png)
+![Propriétés des symboles](media/syntax-visualizer/symbol-visual-basic.png)
 
 Essayez **Afficher AliasSymbol (le cas échéant)** pour le même nœud **IdentifierName**. La grille des propriétés indique que l’identificateur est un alias du nom de `C` qui est lié à la cible `System.Console`. En d’autres termes, la grille des propriétés fournit des informations sur l’**AliasSymbol** correspondant à l’identificateur `C`.
 
-![Propriétés d’un AliasSymbol](media/alias-symbol.png)
+![Propriétés d’un AliasSymbol](media/syntax-visualizer/alias-symbol.png)
 
 Examinez le symbole correspondant à un type, une méthode, une propriété qui ont été déclarés. Sélectionnez le nœud correspondant dans le visualiseur et cliquez sur **Afficher le symbole (le cas échéant)**. Sélectionnez la méthode `Sub Main()`, corps de la méthode compris. Cliquez sur **Afficher le symbole (le cas échéant)** pour le nœud **SubBlock** correspondant dans le visualiseur. La grille des propriétés montre que le **MethodSymbol** de ce **SubBlock** porte le nom `Main` avec un type de retour `Void`.
 
-![Affichage du symbole d’une déclaration de méthode](media/method-symbol.png)
+![Affichage du symbole d’une déclaration de méthode](media/syntax-visualizer/method-symbol.png)
 
 Les exemples VB ci-dessus sont facilement réplicables en C#. Tapez `using C = System.Console;` à la place de `Imports C = System.Console` pour l’alias. Les étapes précédentes en C# produisent des résultats identiques dans la fenêtre du visualiseur.
 

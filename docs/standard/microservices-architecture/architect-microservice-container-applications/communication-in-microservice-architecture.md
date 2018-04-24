@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 3c80ce8e3c4ccdc7e53634f54dd998581758ab07
-ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
+ms.openlocfilehash: 6bf4de57d3431577e6c770a5a83b911f41e5a4fe
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="communication-in-a-microservice-architecture"></a>Communication dans une architecture de microservices
 
@@ -25,7 +25,7 @@ Il n’y a pas une solution, mais plusieurs. Une solution consiste à isoler aut
 
 Une application basée sur des microservices est un système distribué s’exécutant sur plusieurs processus ou services, généralement même entre plusieurs serveurs ou plusieurs hôtes. Chaque instance de service est généralement un processus. Pour cette raison, les services doivent interagir en utilisant un protocole de communication interprocessus, comme HTTP ou AMQP, ou un protocole binaire, comme TCP, selon la nature de chaque service.
 
-La communauté des microservices promeut une philosophie consistant à avoir des « [des points de terminaison intelligents et des canaux stupides](http://simplicable.com/new/smart-endpoints-and-dumb-pipes) ». Ce slogan encourage une conception qui est aussi découplée que possible entre les microservices, et aussi cohésive que possible au sein d’un même microservice. Comme expliqué précédemment, chaque microservice a ses propres données et sa propre logique de domaine. Cependant, les microservices composant une application de bout en bout sont généralement chorégraphiés simplement avec des communications REST au lieu de protocoles complexes comme WS-\*, et avec des communications flexibles pilotées par les événements au lieu d’orchestrateurs de processus métier centralisés.
+La communauté des microservices promeut une philosophie consistant à avoir des « [des points de terminaison intelligents et des canaux stupides](https://simplicable.com/new/smart-endpoints-and-dumb-pipes) ». Ce slogan encourage une conception qui est aussi découplée que possible entre les microservices, et aussi cohésive que possible au sein d’un même microservice. Comme expliqué précédemment, chaque microservice a ses propres données et sa propre logique de domaine. Cependant, les microservices composant une application de bout en bout sont généralement chorégraphiés simplement avec des communications REST au lieu de protocoles complexes comme WS-\*, et avec des communications flexibles pilotées par les événements au lieu d’orchestrateurs de processus métier centralisés.
 
 Les deux protocoles couramment utilisés sont le protocole de requête/réponse HTTP avec des API de ressources (lors de l’interrogation de la plupart d’entre eux) et une messagerie asynchrone légère lors de la communication lors de la communication de mises à jour entre plusieurs microservices. Ils sont expliqués avec plus de détails dans les sections suivantes.
 
@@ -43,7 +43,7 @@ Le deuxième axe consiste à définir si la communication a un destinataire uniq
 
 -   Destinataire unique. Chaque demande doit être traitée par exactement un récepteur ou un service. Le [modèle Commande](https://en.wikipedia.org/wiki/Command_pattern) est un exemple de cette communication.
 
--   Plusieurs destinataires. Chaque demande peut être traitée par zéro à plusieurs destinataires. Ce type de communication doit être asynchrone. Le mécanisme de [publication/abonnement](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern) utilisé dans des modèles comme [Event-driven architecture](http://microservices.io/patterns/data/event-driven-architecture.html) en est un exemple. Il s’appuie sur une interface de bus d’événements ou un broker de messages lors de la propagation des mises à jour des données entre plusieurs microservices via des événements. Il est généralement implémenté via un bus de service ou un artefact similaire, comme [Azure Service Bus](https://azure.microsoft.com/services/service-bus/), avec des [rubriques et des abonnements](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions).
+-   Plusieurs destinataires. Chaque demande peut être traitée par zéro à plusieurs destinataires. Ce type de communication doit être asynchrone. Le mécanisme de [publication/abonnement](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern) utilisé dans des modèles comme [Event-driven architecture](https://microservices.io/patterns/data/event-driven-architecture.html) en est un exemple. Il s’appuie sur une interface de bus d’événements ou un broker de messages lors de la propagation des mises à jour des données entre plusieurs microservices via des événements. Il est généralement implémenté via un bus de service ou un artefact similaire, comme [Azure Service Bus](https://azure.microsoft.com/services/service-bus/), avec des [rubriques et des abonnements](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions).
 
 Une application basée sur des microservices utilise souvent une combinaison de ces styles de communication. Le type le plus courant est une communication avec un seul destinataire, avec un protocole synchrone comme HTTP/HTTPS lors de l’appel d’un service web HTTP d’API ordinaire. Les microservices utilisent aussi en général des protocoles de messagerie pour la communication asynchrone entre microservices.
 
@@ -91,15 +91,15 @@ Quand un client utilise une communication demande/réponse, il suppose que la r�
 
 [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) est un style d’architecture répandu pour la communication demande/réponse. Cette approche est basée sur le protocole [HTTP](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) et y est étroitement couplée ; elle utilise des verbes HTTP comme GET, POST et PUT. REST est l’approche architecturale de communication la plus couramment utilisée pour la création de services. Vous pouvez implémenter des services REST quand vous développez des services d’API web ASP.NET Core.
 
-Vous profitez d’autres avantages si vous utilisez des services HTTP REST comme langage de définition d’interface. Par exemple, si vous utilisez des [métadonnées Swagger](http://swagger.io/) pour décrire l’API de votre service, vous pouvez utiliser des outils qui génèrent des stubs clients, qui peuvent directement découvrir et utiliser vos services.
+Vous profitez d’autres avantages si vous utilisez des services HTTP REST comme langage de définition d’interface. Par exemple, si vous utilisez des [métadonnées Swagger](https://swagger.io/) pour décrire l’API de votre service, vous pouvez utiliser des outils qui génèrent des stubs clients, qui peuvent directement découvrir et utiliser vos services.
 
 ### <a name="additional-resources"></a>Ressources supplémentaires
 
 -   **Martin Fowler. Modèle de maturité de Richardson.** Une description du modèle REST.
-    [*http://martinfowler.com/articles/richardsonMaturityModel.html*](http://martinfowler.com/articles/richardsonMaturityModel.html)
+    [*https://martinfowler.com/articles/richardsonMaturityModel.html*](https://martinfowler.com/articles/richardsonMaturityModel.html)
 
 -   **Swagger.** Le site officiel.
-    [*http://swagger.io/*](http://swagger.io/)
+    [*https://swagger.io/*](https://swagger.io/)
 
 ### <a name="push-and-real-time-communication-based-on-http"></a>Communication par envoi (push) en temps réel basée sur HTTP
 

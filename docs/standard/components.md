@@ -1,6 +1,6 @@
 ---
 title: Composants architecturaux de .NET
-description: "Décrit les composants architecturaux de .NET tels que .NET Standard, les implémentations de .NET, les runtimes .NET et les outils."
+description: Décrit les composants architecturaux de .NET tels que .NET Standard, les implémentations de .NET, les runtimes .NET et les outils.
 author: cartermp
 ms.author: mairaw
 ms.date: 08/23/2017
@@ -10,11 +10,11 @@ ms.technology: dotnet-standard
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 8a17d4c36d9c1942166b9ad889103a7942f1813d
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: 51e6779d63cdaccc5633c9e81f97471d71099653
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="net-architectural-components"></a>Composants architecturaux de .NET
 
@@ -61,7 +61,7 @@ Historiquement, Mono implémentait l’API plus volumineuse de .NET Framework et
 
 Mono est généralement utilisé avec un compilateur juste-à-temps, mais il comporte également un compilateur statique complet (compilation Ahead Of Time) qui est utilisé sur des plateformes comme iOS.
 
-Pour en savoir plus sur Mono, consultez la [documentation Mono](http://www.mono-project.com/docs/).
+Pour en savoir plus sur Mono, consultez la [documentation Mono](https://www.mono-project.com/docs/).
 
 ### <a name="universal-windows-platform-uwp"></a>Plateforme Windows universelle (UWP)
 
@@ -86,7 +86,7 @@ Vous avez accès à un ensemble complet d’outils et de composants d’infrastr
 - Le système de projet .NET (basé sur les fichiers *.csproj*, *.vbproj* et *.fsproj*)
 - [MSBuild](/visualstudio/msbuild/msbuild), moteur de génération utilisé pour générer les projets
 - [NuGet](/nuget/), gestionnaire de package de Microsoft pour .NET
-- Outils d’orchestration de génération open source, tels que [CAKE](http://cakebuild.net/) et [FAKE](https://fake.build/)
+- Outils d’orchestration de génération open source, tels que [CAKE](https://cakebuild.net/) et [FAKE](https://fake.build/)
 
 ## <a name="see-also"></a>Voir aussi
 [Choix entre .NET Core et .NET Framework pour les applications serveur](choosing-core-framework-server.md)   

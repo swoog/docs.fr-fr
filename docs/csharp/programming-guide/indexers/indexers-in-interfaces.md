@@ -2,20 +2,21 @@
 title: Indexeurs dans les interfaces (Guide de programmation C#)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - indexers [C#], in interfaces
 - accessors [C#], indexers
 ms.assetid: e16b54bd-4a83-4f52-bd75-65819fca79e8
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 304f2e037d8df025376d06f229ddd1584f8713b6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 478920b5c1dea489db48caa48c045c4bd3da66ec
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="indexers-in-interfaces-c-programming-guide"></a>Indexeurs dans les interfaces (Guide de programmation C#)
 Des indexeurs peuvent être déclarés dans une [interface](../../../csharp/language-reference/keywords/interface.md). Les accesseurs d’indexeurs d’interface se distinguent sur plusieurs plans des accesseurs d’indexeurs de [classe](../../../csharp/language-reference/keywords/class.md), à savoir :  
@@ -40,7 +41,7 @@ Des indexeurs peuvent être déclarés dans une [interface](../../../csharp/lang
  Dans l’exemple précédent, vous pouvez utiliser l’implémentation de membre d’interface explicite en utilisant le nom qualifié complet du membre d’interface. Exemple :  
   
 ```  
-public string ISomeInterface.this   
+public string ISomeInterface.this[int index]   
 {   
 }   
 ```  
@@ -48,7 +49,7 @@ public string ISomeInterface.this
  Cependant, le nom qualifié complet est seulement nécessaire pour éviter toute ambiguïté quand la classe implémente plusieurs interfaces avec la même signature d’indexeur. Par exemple, si une classe `Employee` implémente deux interfaces, `ICitizen` et `IEmployee`, et que les deux interfaces ont la même signature d’indexeur, l’implémentation de membre d’interface explicite est nécessaire. Autrement dit, la déclaration d’indexeur suivante :  
   
 ```  
-public string IEmployee.this   
+public string IEmployee.this[int index]   
 {   
 }   
 ```  
@@ -56,7 +57,7 @@ public string IEmployee.this
  implémente l’indexeur dans l’interface `IEmployee`, alors que la déclaration suivante :  
   
 ```  
-public string ICitizen.this   
+public string ICitizen.this[int index]
 {   
 }   
 ```  

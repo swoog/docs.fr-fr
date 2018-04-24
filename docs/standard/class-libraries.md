@@ -13,15 +13,15 @@ ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 8f7c421d2490678f7122e78bc0b83ebf3a1aa9ea
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: 44d5745daed8539c5dd48b08f9f73edce4da939f
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="net-class-libraries"></a>Bibliothèques de classes .NET
 
-Les bibliothèques de classes représentent le concept de [bibliothèque partagée](http://en.wikipedia.org/wiki/Library_%28computing%29#Shared_libraries) pour .NET. Elles vous permettent d’inclure des fonctionnalités utiles dans des modules utilisables par plusieurs applications. Elles peuvent également servir à charger des fonctionnalités qui ne sont pas nécessaires ou connues au démarrage de l’application. Les bibliothèques de classes sont décrites à l’aide du [format de fichier d’assembly .NET](assembly-format.md).
+Les bibliothèques de classes représentent le concept de [bibliothèque partagée](https://en.wikipedia.org/wiki/Library_%28computing%29#Shared_libraries) pour .NET. Elles vous permettent d’inclure des fonctionnalités utiles dans des modules utilisables par plusieurs applications. Elles peuvent également servir à charger des fonctionnalités qui ne sont pas nécessaires ou connues au démarrage de l’application. Les bibliothèques de classes sont décrites à l’aide du [format de fichier d’assembly .NET](assembly-format.md).
 
 Il existe trois types de bibliothèques de classes que vous pouvez utiliser :
 
@@ -43,7 +43,7 @@ Les bibliothèques portables sont prises en charge sur plusieurs implémentation
 
 Vous choisissez une configuration de plateforme quand vous créez une bibliothèque portable. Il s’agit de l’ensemble des plateformes que vous devez prendre en charge (par exemple, .NET Framework 4.5+, Windows Phone 8.0+). Plus vous avez de plateformes à prendre en charge, moins vous avez d’API et moins vous pouvez faire d’hypothèses de plateforme, selon le plus petit dénominateur commun. Cette caractéristique peut porter à confusion dans un premier temps, car on pense souvent que « plus, c’est mieux », mais ici plus vous prenez en charge des plateformes et moins vous avez d’API disponibles.
 
-De nombreux développeurs de bibliothèques ont abandonné la production de plusieurs bibliothèques spécifiques d’une plateforme à partir d’une seule source (à l’aide de directives de compilation conditionnelle) au profit des bibliothèques portables. Il existe [plusieurs approches](http://blog.stephencleary.com/2012/11/portable-class-library-enlightenment.html) permettant d’accéder à une fonctionnalité spécifique d’une plateforme dans les bibliothèques portables, [bait-and-switch](http://log.paulbetts.org/the-bait-and-switch-pcl-trick/) étant la technique la plus répandue à ce stade.
+De nombreux développeurs de bibliothèques ont abandonné la production de plusieurs bibliothèques spécifiques d’une plateforme à partir d’une seule source (à l’aide de directives de compilation conditionnelle) au profit des bibliothèques portables. Il existe [plusieurs approches](https://blog.stephencleary.com/2012/11/portable-class-library-enlightenment.html) permettant d’accéder à une fonctionnalité spécifique d’une plateforme dans les bibliothèques portables, [bait-and-switch](https://log.paulbetts.org/the-bait-and-switch-pcl-trick/) étant la technique la plus répandue à ce stade.
 
 ### <a name="net-standard-class-libraries"></a>Bibliothèques de classes .NET Standard
 

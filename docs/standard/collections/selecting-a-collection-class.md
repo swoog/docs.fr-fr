@@ -1,12 +1,12 @@
 ---
-title: "Sélection d’une classe de collection"
-ms.custom: 
+title: Sélection d’une classe de collection
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - last-in-first-out collections
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - Collections classes
 - grouping data in collections, selecting collection class
 ms.assetid: ba049f9a-ce87-4cc4-b319-3f75c8ddac8a
-caps.latest.revision: 
+caps.latest.revision: 20
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 05339b829262a6b9b3a0265e4fbd444c6d586ea3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: cede57d398930684a68ad15f3e6426939bba2e08
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="selecting-a-collection-class"></a>Sélection d’une classe de collection
 Veillez à choisir votre classe de collection avec soin. L'utilisation d'un type incorrect peut limiter votre utilisation de la collection. En règle générale, évitez d'utiliser les types de l'espace de noms <xref:System.Collections>, sauf si vous ciblez spécifiquement le .NET Framework version 1.1. Les versions génériques et simultanées des collections doivent être préférées en raison de leur sécurité supérieure des types et d'autres améliorations.  
@@ -85,7 +85,7 @@ Veillez à choisir votre classe de collection avec soin. L'utilisation d'un type
     -   En outre, vous pouvez utiliser toutes les classes de collection génériques dans l'espace de noms <xref:System.Collections.Generic> comme des collections de chaînes fortement typées en spécifiant la classe <xref:System.String> pour leurs arguments de types génériques.  
   
 ## <a name="linq-to-objects-and-plinq"></a>LINQ to Objects et PLINQ  
- La fonctionnalité LINQ to Objects permet aux développeurs d'utiliser des requêtes LINQ pour accéder aux objets en mémoire pour autant que le type d'objet implémente <xref:System.Collections.IEnumerable> ou <xref:System.Collections.Generic.IEnumerable%601>. Les requêtes LINQ fournissent un modèle commun pour accéder aux données. Elles sont généralement plus concises et plus lisibles que les boucles `foreach` standard et offrent des fonctions de filtrage, de classement et de regroupement. Pour plus d’informations, consultez [LINQ to Objects](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9).  
+ La fonctionnalité LINQ to Objects permet aux développeurs d'utiliser des requêtes LINQ pour accéder aux objets en mémoire pour autant que le type d'objet implémente <xref:System.Collections.IEnumerable> ou <xref:System.Collections.Generic.IEnumerable%601>. Les requêtes LINQ fournissent un modèle commun pour accéder aux données. Elles sont généralement plus concises et plus lisibles que les boucles `foreach` standard et offrent des fonctions de filtrage, de classement et de regroupement. Pour plus d’informations, consultez [LINQ to Objects](https://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9).  
   
  PLINQ fournit une implémentation parallèle de LINQ to Objects, qui peut offrir une exécution plus rapide des requêtes dans de nombreux scénarios, via une utilisation plus efficace des ordinateurs multicœurs. Pour plus d’informations, consultez [PLINQ (Parallel LINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
   

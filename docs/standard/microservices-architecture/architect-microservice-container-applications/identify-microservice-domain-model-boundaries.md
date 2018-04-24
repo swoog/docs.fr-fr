@@ -1,6 +1,6 @@
 ---
-title: "Identification des limites du modèle de domaine pour chaque microservice"
-description: "Architecture de microservices .NET pour les applications .NET en conteneur | Identification des limites du modèle de domaine pour chaque microservice"
+title: Identification des limites du modèle de domaine pour chaque microservice
+description: Architecture de microservices .NET pour les applications .NET en conteneur | Identification des limites du modèle de domaine pour chaque microservice
 keywords: Docker, microservices, ASP.NET, conteneur
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -11,17 +11,17 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 830dd48a420a462842de57e436323a5a930c195d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 23b5ebafc5ea037568f168426d76b3ec9839040e
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="identify-domain-model-boundaries-for-each-microservice"></a>Identifier les limites du modèle de domaine pour chaque microservice
 
 L’objectif de l’identification des limites et de la taille du modèle pour chaque microservice n’est pas d’obtenir la séparation la plus granulaire possible, même si vous devez tendre vers de petits microservices si c’est possible. Votre objectif doit plutôt être de parvenir à la séparation la plus significative en fonction de votre connaissance du domaine. L’accent ne doit pas être mis sur la taille, mais bien sur les fonctions métier. De plus, si une cohésion claire est nécessaire pour une certaine zone de l’application en raison d’un grand nombre de dépendances, cela indique également la nécessité d’un seul microservice. La cohésion est une façon d’identifier comment dissocier ou regrouper ensemble des microservices. Enfin, au fil de l’approfondissement de vos connaissances sur le domaine, vous devez adapter la taille de votre microservice par itérations successives. Trouver la bonne taille ne se fait pas en une seule fois.
 
-[Sam Newman](http://samnewman.io/), promoteur reconnu des microservices et auteur du livre [Building Microservices](http://samnewman.io/books/building_microservices/), insiste sur le fait que vous devez concevoir vos microservices en fonction du modèle de contexte délimité (qui fait partie de la conception pilotée par le domaine), introduit précédemment. Parfois, un contexte délimité peut être composé de plusieurs services physiques, mais l’inverse n’est pas vrai.
+[Sam Newman](https://samnewman.io/), promoteur reconnu des microservices et auteur du livre [Building Microservices](https://samnewman.io/books/building_microservices/), insiste sur le fait que vous devez concevoir vos microservices en fonction du modèle de contexte délimité (qui fait partie de la conception pilotée par le domaine), introduit précédemment. Parfois, un contexte délimité peut être composé de plusieurs services physiques, mais l’inverse n’est pas vrai.
 
 Un modèle de domaine avec des entités de domaine spécifique s’applique dans un contexte délimité ou un microservice concret. Un contexte délimité détermine l’applicabilité d’un modèle de domaine, et donne aux membres de l’équipe de développement une compréhension claire et partagée de ce qui doit être cohésif et de ce qui peut être développé indépendamment. Ces objectifs sont identiques pour les microservices.
 

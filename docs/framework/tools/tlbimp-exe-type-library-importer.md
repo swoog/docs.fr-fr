@@ -1,12 +1,9 @@
 ---
 title: Tlbimp.exe (Type Library Importer)
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.suite: 
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - type libraries [.NET Framework], importing
@@ -22,16 +19,16 @@ ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2eb29c82b21088f4bfe4752d70b927ca048c875b
-ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
+ms.openlocfilehash: 9591c9ced836a98c5843f5fb53809903f72c73f3
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="tlbimpexe-type-library-importer"></a>Tlbimp.exe (Type Library Importer)
-L''importateur de bibliothèques de types convertit les définitions de types présentes dans une bibliothèque de types COM en définitions équivalentes dans un assembly de Common Language Runtime. Le résultat de Tlbimp.exe est un fichier binaire (un assembly) qui contient les métadonnées de runtime pour les types définis dans la bibliothèque de types d'origines. Vous pouvez examiner ce fichier à l’aide d’outils comme [Ildasm.exe](../../../docs/framework/tools/ildasm-exe-il-disassembler.md).  
+L''importateur de bibliothèques de types convertit les définitions de types présentes dans une bibliothèque de types COM en définitions équivalentes dans un assembly de Common Language Runtime. Le résultat de Tlbimp.exe est un fichier binaire (un assembly) qui contient les métadonnées de runtime pour les types définis dans la bibliothèque de types d'origines. Vous pouvez examiner ce fichier à l’aide d’outils comme [Ildasm.exe](ildasm-exe-il-disassembler.md).  
   
- Cet outil est installé automatiquement avec Visual Studio. Pour exécuter l'outil, utilisez l'invite de commandes développeur (ou l'invite de commandes Visual Studio dans Windows 7). Pour plus d'informations, consultez [Invites de commandes](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Cet outil est installé automatiquement avec Visual Studio. Pour exécuter l'outil, utilisez l'invite de commandes développeur (ou l'invite de commandes Visual Studio dans Windows 7). Pour plus d'informations, consultez [Invites de commandes](developer-command-prompt-for-vs.md).  
   
  À l'invite de commandes, tapez le texte suivant :  
   
@@ -52,7 +49,7 @@ tlbimp tlbFile [options]
 |**/asmversion:** *versionnumber*|Spécifie le numéro de version de l'assembly à produire. Spécifiez *versionnumber* au format *major.minor.build.revision*.|  
 |**/company:** `companyinformation`|Ajoute les informations de l'entreprise à l'assembly de sortie.|  
 |**/copyright:** `copyrightinformation`|Ajoute les informations de copyright à l'assembly de sortie. Ces informations peuvent être affichées dans la boîte de dialogue **Propriétés du fichier** de l’assembly.|  
-|**/delaysign**|Indique à Tlbimp.exe de signer l'assembly résultant avec un nom fort à l'aide d'une signature différée. Vous devez spécifier cette option avec l’option **/keycontainer:**, **/keyfile:** ou **/publickey:**. Pour plus d’informations sur le processus de signature différée, consultez [Temporisation de signature d’un assembly](../../../docs/framework/app-domains/delay-sign-assembly.md).|  
+|**/delaysign**|Indique à Tlbimp.exe de signer l'assembly résultant avec un nom fort à l'aide d'une signature différée. Vous devez spécifier cette option avec l’option **/keycontainer:**, **/keyfile:** ou **/publickey:**. Pour plus d’informations sur le processus de signature différée, consultez [Temporisation de signature d’un assembly](../app-domains/delay-sign-assembly.md).|  
 |**/help**|Affiche la syntaxe et les options de commande de l'outil.|  
 |**/keycontainer:** *containername*|Signe l’assembly obtenu avec un nom fort en utilisant la paire de clés publique/privée présente dans le conteneur de clé spécifié par *containername*.|  
 |**/keyfile:** *filename*|Signe l’assembly obtenu avec un nom fort en utilisant la paire de clés publique/privée officielle de l’éditeur présente dans *filename*.|  
@@ -61,10 +58,10 @@ tlbimp tlbFile [options]
 |**/noclassmembers**|Empêche Tlbimp.exe d'ajouter des membres aux classes. Cela évite une <xref:System.TypeLoadException> potentielle.|  
 |**/nologo**|Supprime l'affichage de la bannière de démarrage Microsoft.|  
 |**/out:** *filename*|Spécifie le nom du fichier de sortie, de l'assembly et de l'espace de noms dans lesquels écrire les définitions de métadonnées. L’option **/out** n’a aucun effet sur l’espace de noms de l’assembly si la bibliothèque de types spécifie l’attribut personnalisé IDL (Interface Definition Language) qui contrôle explicitement l’espace de noms de l’assembly. Si vous ne spécifiez pas cette option, Tlbimp.exe écrit les métadonnées dans un fichier portant le même nom que la bibliothèque de types effective définie dans le fichier d’entrée, et lui assigne une extension .dll. Si le fichier de sortie porte le même nom que le fichier d'entrée, l'outil génère une erreur pour empêcher le remplacement de la bibliothèque de types.|  
-|**/primary**|Produit un assembly PIA (Primary Interop Assembly) pour la bibliothèque de types spécifiée. Des informations sont ajoutées à l'assembly pour indiquer qu'il a été produit par l'éditeur de la bibliothèque de types. En spécifiant un assembly PIA, vous différenciez l'assembly d'un éditeur des autres assemblys créés à partir de la bibliothèque de types à l'aide de Tlbimp.exe. Vous devez utiliser uniquement l’option **/primary** si vous êtes l’éditeur de la bibliothèque de types que vous importez avec Tlbimp.exe. Notez que vous devez signer un assembly PIA (Primary Interop Assembly) avec un [nom fort](../../../docs/framework/app-domains/strong-named-assemblies.md). Pour plus d’informations, consultez [Assemblys PIA (Primary Interop Assembly)](https://msdn.microsoft.com/library/b977a8be-59a0-40a0-a806-b11ffba5c080(v=vs.100)).|  
+|**/primary**|Produit un assembly PIA (Primary Interop Assembly) pour la bibliothèque de types spécifiée. Des informations sont ajoutées à l'assembly pour indiquer qu'il a été produit par l'éditeur de la bibliothèque de types. En spécifiant un assembly PIA, vous différenciez l'assembly d'un éditeur des autres assemblys créés à partir de la bibliothèque de types à l'aide de Tlbimp.exe. Vous devez utiliser uniquement l’option **/primary** si vous êtes l’éditeur de la bibliothèque de types que vous importez avec Tlbimp.exe. Notez que vous devez signer un assembly PIA (Primary Interop Assembly) avec un [nom fort](../app-domains/strong-named-assemblies.md). Pour plus d’informations, consultez [Assemblys PIA (Primary Interop Assembly)](https://msdn.microsoft.com/library/b977a8be-59a0-40a0-a806-b11ffba5c080(v=vs.100)).|  
 |**/product:** `productinformation`|Ajoute les informations produit à l'assembly de sortie. Ces informations peuvent être affichées dans la boîte de dialogue **Propriétés du fichier** de l’assembly.|  
 |**/productversion:** `productversioninformation`|Ajoute les informations de version du produit à l'assembly de sortie. Il n'existe aucune restriction de format. Ces informations peuvent être affichées dans la boîte de dialogue **Propriétés du fichier** de l’assembly.|  
-|**/publickey:** *filename*|Spécifie le fichier contenant la clé publique à utiliser pour signer l'assembly résultant. Si vous spécifiez l’option **/keyfile:** ou **/keycontainer:** au lieu de **/publickey:**, Tlbimp.exe génère la clé publique à partir de la paire de clés publique/privée fournie avec **/keyfile:** ou **/keycontainer:**. L’option **/publickey:** prend en charge les scénarios de clé de test et de signature différée. Le fichier est au format généré par Sn.exe. Pour plus d’informations, consultez l’option **-p** de Sn.exe dans l’[outil Strong Name (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md).|  
+|**/publickey:** *filename*|Spécifie le fichier contenant la clé publique à utiliser pour signer l'assembly résultant. Si vous spécifiez l’option **/keyfile:** ou **/keycontainer:** au lieu de **/publickey:**, Tlbimp.exe génère la clé publique à partir de la paire de clés publique/privée fournie avec **/keyfile:** ou **/keycontainer:**. L’option **/publickey:** prend en charge les scénarios de clé de test et de signature différée. Le fichier est au format généré par Sn.exe. Pour plus d’informations, consultez l’option **-p** de Sn.exe dans l’[outil Strong Name (Sn.exe)](sn-exe-strong-name-tool.md).|  
 |**/reference:** *filename*|Spécifie le fichier d'assembly à utiliser pour résoudre les références aux types définis en dehors de la bibliothèque de types en cours. Si vous ne spécifiez pas l’option **/reference**, Tlbimp.exe importe automatiquement de manière récursive les bibliothèques de types externes que la bibliothèque de types importée référence. Si vous spécifiez l’option **/reference**, l’outil essaie de résoudre les types externes des assemblys référencés avant d’importer d’autres bibliothèques de types.|  
 |**/silence:** `warningnumber`|Supprime l'affichage de l'avertissement spécifié. Cette option ne peut pas être utilisée avec **/silent**.|  
 |**/silent**|Supprime l'affichage des messages indiquant la réussite des opérations. Cette option ne peut pas être utilisée avec **/silence**.|  
@@ -85,7 +82,7 @@ tlbimp tlbFile [options]
 ## <a name="remarks"></a>Notes  
  Tlbimp.exe effectue d'un seul tenant les conversions sur la totalité d'une bibliothèque de types. Vous ne pouvez pas utiliser cet outil dans le but de générer des informations de type pour un sous-ensemble de types définis dans une bibliothèque de types unique.  
   
- Il est souvent utile ou nécessaire d’assigner des [noms forts](../../../docs/framework/app-domains/strong-named-assemblies.md) aux assemblys. Par conséquent, Tlbimp.exe comprend des options permettant de fournir les informations nécessaires pour générer des assemblys portant un nom fort. Les options **/keyfile:** et **/keycontainer:** permettent de signer les assemblys avec des noms forts. Par conséquent, il est logique de fournir uniquement une seule de ces options à la fois.  
+ Il est souvent utile ou nécessaire d’assigner des [noms forts](../app-domains/strong-named-assemblies.md) aux assemblys. Par conséquent, Tlbimp.exe comprend des options permettant de fournir les informations nécessaires pour générer des assemblys portant un nom fort. Les options **/keyfile:** et **/keycontainer:** permettent de signer les assemblys avec des noms forts. Par conséquent, il est logique de fournir uniquement une seule de ces options à la fois.  
   
  Vous pouvez spécifier plusieurs assemblys de référence en utilisant l’option **/reference** plusieurs fois.  
   
@@ -135,12 +132,12 @@ void SomeMethod(out bool x);
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Outils](../../../docs/framework/tools/index.md)  
- [Tlbexp.exe (exportateur de bibliothèques de types)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)  
- [Importation d'une bibliothèque de types sous la forme d'un assembly](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)  
- [Récapitulatif de la conversion d’une bibliothèque de types en assembly](http://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958)  
- [Ildasm.exe (désassembleur IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)  
- [Sn.exe (outil Strong Name)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
- [Assemblys avec nom fort](../../../docs/framework/app-domains/strong-named-assemblies.md)  
- [Attributs d’importation de bibliothèques de types dans les assemblys d’interopérabilité](http://msdn.microsoft.com/library/81e587b8-393f-43e1-9add-c4b05e65cbfd)  
- [Invites de commandes](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+ [Outils](index.md)  
+ [Tlbexp.exe (exportateur de bibliothèques de types)](tlbexp-exe-type-library-exporter.md)  
+ [Importation d'une bibliothèque de types sous la forme d'un assembly](../interop/importing-a-type-library-as-an-assembly.md)  
+ [Récapitulatif de la conversion d’une bibliothèque de types en assembly](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))  
+ [Ildasm.exe (désassembleur IL)](ildasm-exe-il-disassembler.md)  
+ [Sn.exe (outil Strong Name)](sn-exe-strong-name-tool.md)  
+ [Assemblys avec nom fort](../app-domains/strong-named-assemblies.md)  
+ [Attributs d’importation de bibliothèques de types dans les assemblys d’interopérabilité](https://msdn.microsoft.com/library/81e587b8-393f-43e1-9add-c4b05e65cbfd(v=vs.100))  
+ [Invites de commandes](developer-command-prompt-for-vs.md)

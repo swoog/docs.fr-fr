@@ -1,28 +1,28 @@
 ---
-title: "Structures de données pour la programmation parallèle"
-ms.custom: 
+title: Structures de données pour la programmation parallèle
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data structures, multi-threading
 ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
-caps.latest.revision: 
+caps.latest.revision: 15
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f2da3e1ecfb9018adf7827aad6a569cd057c59eb
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 7b59a6c15e9a11a6b76187aabcbfe9104d595a1f
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="data-structures-for-parallel-programming"></a>Structures de données pour la programmation parallèle
 La version 4 de .NET Framework introduit de nouveaux types très utiles pour la programmation parallèle, notamment un ensemble de classes de collections simultanées, des primitives de synchronisation légères et des types pour l’initialisation tardive. Vous pouvez utiliser ces types avec n’importe quel code d’application multithread, y compris la bibliothèque parallèle de tâches et PLINQ.  
@@ -76,7 +76,7 @@ La version 4 de .NET Framework introduit de nouveaux types très utiles pour la 
  Pour plus d’informations, consultez [Initialisation tardive](../../../docs/framework/performance/lazy-initialization.md).  
   
 ## <a name="aggregate-exceptions"></a>Agréger des exceptions  
- Le type <xref:System.AggregateException?displayProperty=nameWithType> permet de capturer plusieurs exceptions levées simultanément sur des threads distincts, et de les retourner au thread de jonction comme une seule exception. Les types <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> et <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> ainsi que PLINQ utilisent beaucoup <xref:System.AggregateException> pour cela. Pour plus d’informations, consultez les pages [NIB : Guide pratique : gérer les exceptions levées par des tâches](http://msdn.microsoft.com/library/d6c47ec8-9de9-4880-beb3-ff19ae51565d) et [Guide pratique : gérer les exceptions dans une requête PLINQ](../../../docs/standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md).  
+ Le type <xref:System.AggregateException?displayProperty=nameWithType> permet de capturer plusieurs exceptions levées simultanément sur des threads distincts, et de les retourner au thread de jonction comme une seule exception. Les types <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> et <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> ainsi que PLINQ utilisent beaucoup <xref:System.AggregateException> pour cela. Pour plus d’informations, consultez les pages [NIB : Guide pratique : gérer les exceptions levées par des tâches](https://msdn.microsoft.com/library/d6c47ec8-9de9-4880-beb3-ff19ae51565d) et [Guide pratique : gérer les exceptions dans une requête PLINQ](../../../docs/standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.Collections.Concurrent?displayProperty=nameWithType>  

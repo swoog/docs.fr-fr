@@ -1,6 +1,6 @@
 ---
-title: "Didacticiel sur les nombres en C# - Guides de démarrage rapide local en C#"
-description: "Découvrez C# en explorant les types numériques, leurs propriétés et méthodes."
+title: Didacticiel sur les nombres en C# - Guides de démarrage rapide local en C#
+description: Découvrez C# en explorant les types numériques, leurs propriétés et méthodes.
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/31/2017
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 99c2f8e4807c4d18c0c798e3a737f4a88d6e62d6
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: 6570693ea09ca2b548615291ba4f2b69f6d92482
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="numbers-in-c-quickstart"></a>Guide de démarrage rapide Nombres en C#
 
@@ -315,7 +315,7 @@ Notez que le calcul utilisant le type décimal a plus de chiffres à droite de l
 Maintenant que vous avez vu les différents types numériques, écrivez du code qui calcule la surface d’un cercle avec un rayon de 2,5 centimètres. Rappelez-vous que la surface d’un cercle est le rayon au carré multiplié par PI. Conseil : .NET contient une constante pour PI, à savoir <xref:System.Math.PI?displayProperty=nameWithType>, que vous pouvez utiliser pour cette valeur. 
 
 Vous devriez obtenir une réponse comprise entre 19 et 20.
-Vous pouvez vérifier votre réponse en [consultant l’exemple de code terminé sur GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/numbers-quickstart/Program.cs#L104-L106)
+Vous pouvez vérifier votre réponse en [consultant l’exemple de code terminé sur GitHub](https://github.com/dotnet/samples/tree/master/csharp/numbers-quickstart/Program.cs#L104-L106)
 
 Si vous le voulez, essayez d’autres formules. 
 

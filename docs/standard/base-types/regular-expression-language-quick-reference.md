@@ -1,12 +1,12 @@
 ---
-title: "Langage des expressions régulières - Aide-mémoire"
-ms.custom: 
+title: Langage des expressions régulières - Aide-mémoire
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - VS.RegularExpressionBuilder
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - cheat sheet
 - .NET Framework regular expressions, language elements
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
-caps.latest.revision: 
+caps.latest.revision: 56
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: a0fed14784327c6fe16f083a22471b56032b6b5d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b8e43264619158ed9325875d9843e322e08872a4
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="regular-expression-language---quick-reference"></a>Langage des expressions régulières - Aide-mémoire
 <a name="top"></a> Une expression régulière est un modèle que le moteur des expressions régulières tente de faire correspondre dans le texte d’entrée. Un modèle se compose d'un ou de plusieurs littéraux de caractère, opérateurs ou constructions.  Pour obtenir une brève présentation, consultez [Expressions régulières .NET](../../../docs/standard/base-types/regular-expressions.md).  
@@ -51,8 +51,8 @@ ms.lasthandoff: 12/23/2017
   
  Ces informations sont également disponibles dans deux documents de référence, que vous pouvez télécharger et imprimer :  
   
- [Télécharger au format Word (.docx)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
- [Télécharger au format PDF (.pdf)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)  
+ [Télécharger au format Word (.docx)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
+ [Télécharger au format PDF (.pdf)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)  
   
 <a name="character_escapes"></a>   
 ## <a name="character-escapes"></a>Caractères d'échappement  
@@ -148,8 +148,8 @@ ms.lasthandoff: 12/23/2017
 |`*?`|Correspond zéro fois ou plus à l'élément précédent, mais le moins de fois possible.|`\d*?\.\d`|".0", "19.9", "219.9"|  
 |`+?`|Correspond une ou plusieurs fois à l'élément précédent, mais le moins de fois possible.|`"be+?"`|"bee" dans "beefsteak", "be" dans "besoin"|  
 |`??`|Correspond zéro ou une fois à l'élément précédent, mais le moins de fois possible.|`"rai??n"`|"rang", "train"|  
-|`{` *n* `}?`|Correspond exactement *n* fois.|`",\d{3}?"`|",043" dans "1,043.6", ",876", ",543" et ",210" dans "9,876,543,210"|  
-|`{` *n* `,}?`|Correspond à l'élément précédent au moins *n* fois à l'élément précédent, mais le moins de fois possible.|`"\d{2,}?"`|"166", "29", "1930"|  
+|`{` *n* `}?`|Correspond exactement *n* fois à l'élément précédent.|`",\d{3}?"`|",043" dans "1,043.6", ",876", ",543" et ",210" dans "9,876,543,210"|  
+|`{` *n* `,}?`|Correspond au moins *n* fois à l'élément précédent, mais le moins de fois possible.|`"\d{2,}?"`|"166", "29", "1930"|  
 |`{` *n* `,` *m* `}?`|Correspond entre *n* et *m* fois à l'élément précédent, mais le moins de fois possible.|`"\d{3,5}?"`|"166", "17668"<br /><br /> "193", "024" dans "193024"|  
   
  [Retour au début](#top)  
@@ -232,5 +232,5 @@ ms.lasthandoff: 12/23/2017
  [Expressions régulières](regular-expressions.md)  
  [Classes d'expressions régulières](the-regular-expression-object-model.md)  
  [Exemples d'expressions régulières](regular-expression-examples.md)  
- [Expressions régulières - Aide-mémoire (téléchargement au format Word)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
- [Expressions régulières - Aide-mémoire (téléchargement au format PDF)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)
+ [Expressions régulières - Aide-mémoire (téléchargement au format Word)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
+ [Expressions régulières - Aide-mémoire (téléchargement au format PDF)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)

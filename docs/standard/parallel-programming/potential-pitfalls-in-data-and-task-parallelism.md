@@ -21,11 +21,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2f575e8bdf06490eb0e5eba0ac07fe23787aa18d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 0b932de530c8ae48c4c8204d7da8e9b3dff59021
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="potential-pitfalls-in-data-and-task-parallelism"></a>Pièges potentiels dans le parallélisme des données et des tâches
 Dans de nombreux cas, <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> et <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> permettent une amélioration significative des performances par rapport à des boucles séquentielles ordinaires. Toutefois, le travail de la parallélisation de la boucle présente une certaine complexité pouvant entraîner des problèmes qui, dans du code séquentiel, ne sont pas si courants ou ne surviennent pas du tout. Cette rubrique répertorie les pratiques à éviter lorsque vous écrivez des boucles parallèles.  
@@ -68,7 +68,7 @@ Dans de nombreux cas, <xref:System.Threading.Tasks.Parallel.For%2A?displayProper
  Dans certaines circonstances, la bibliothèque parallèle de tâches intègre une tâche, ce qui signifie qu’elle s’exécute sur la tâche du thread en cours d’exécution. Pour plus d’informations, consultez l’article [Planificateurs de tâches](http://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65). Cette optimisation des performances peut provoquer un interblocage dans certains cas. Par exemple, deux tâches peuvent exécuter le même code de délégué, qui signale la survenue d’un événement et attend l’autre tâche à signaler. Si la seconde tâche est incluse sur le même thread que la première et que cette dernière passe à l’état En attente, la seconde tâche ne pourra jamais signaler son événement. Pour éviter une telle situation, vous pouvez spécifier un délai d’expiration sur l’opération d’attente, ou utiliser les constructeurs de thread explicites pour s’assurer qu’une tâche ne peut pas bloquer l’autre.  
   
 ## <a name="do-not-assume-that-iterations-of-foreach-for-and-forall-always-execute-in-parallel"></a>Ne pas supposer que les itérations de ForEach, For et ForAll s’exécutent toujours en parallèle  
- Il est important de garder à l’esprit que les itérations individuelles dans une boucle <xref:System.Threading.Tasks.Parallel.For%2A>, <xref:System.Threading.Tasks.Parallel.ForEach%2A> ou <xref:System.Linq.ParallelEnumerable.ForAll%2A> peuvent, mais ne doivent pas forcément s’exécuter en parallèle. Par conséquent, vous devez éviter d’écrire du code dont l’exactitude dépend de l’exécution parallèle d’itérations ou de l’exécution d’itérations dans un ordre particulier. Par exemple, ce code est susceptible d’interbloquer :  
+ Il est important de garder à l’esprit que les itérations individuelles dans une boucle <xref:System.Threading.Tasks.Parallel.For%2A>, <xref:System.Threading.Tasks.Parallel.ForEach%2A> ou <xref:System.Linq.ParallelEnumerable.ForAll%2A> peuvent, mais ne doivent pas forcément, s’exécuter en parallèle. Par conséquent, vous devez éviter d’écrire du code dont l’exactitude dépend de l’exécution parallèle d’itérations ou de l’exécution d’itérations dans un ordre particulier. Par exemple, ce code est susceptible d’interbloquer :  
   
  [!code-csharp[TPL_Pitfalls#01](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_pitfalls/cs/pitfalls.cs#01)]
  [!code-vb[TPL_Pitfalls#01](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_pitfalls/vb/pitfalls_vb.vb#01)]  
@@ -93,4 +93,4 @@ Dans de nombreux cas, <xref:System.Threading.Tasks.Parallel.For%2A?displayProper
 ## <a name="see-also"></a>Voir aussi  
  [Programmation parallèle](../../../docs/standard/parallel-programming/index.md)  
  [Pièges potentiels avec PLINQ](../../../docs/standard/parallel-programming/potential-pitfalls-with-plinq.md)  
- [Modèles de programmation parallèle : présentation et application des modèles parallèles avec le .NET Framework 4 (page éventuellement en anglais)](http://go.microsoft.com/fwlink/?LinkID=185142)
+ [Modèles de programmation parallèle : présentation et application des modèles parallèles avec le .NET Framework 4 (page éventuellement en anglais)](https://www.microsoft.com/download/details.aspx?id=19222)

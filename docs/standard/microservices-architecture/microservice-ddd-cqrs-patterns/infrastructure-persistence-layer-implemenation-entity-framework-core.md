@@ -1,6 +1,6 @@
 ---
-title: "Implémentation de la couche de persistance de l’infrastructure avec Entity Framework Core"
-description: "Architecture des microservices .NET pour les applications .NET en conteneur | Implémentation de la couche de persistance de l’infrastructure avec Entity Framework Core"
+title: Implémentation de la couche de persistance de l’infrastructure avec Entity Framework Core
+description: Architecture des microservices .NET pour les applications .NET en conteneur | Implémentation de la couche de persistance de l’infrastructure avec Entity Framework Core
 keywords: Docker, microservices, ASP.NET, conteneur
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4acdbde6405af7eb78a8c605562fdb1795fedf4d
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 49bd528db50397ea896b7251ea60d18b90fea30c
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="implementing-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Implémentation de la couche de persistance de l’infrastructure avec Entity Framework Core
 
@@ -342,7 +342,7 @@ L’algorithme Hi/Lo décrit un mécanisme pour générer des ID sécurisés sur
 
 -   Il génère un identificateur contrôlable de visu, contrairement aux techniques qui utilisent des GUID.
 
-EF Core prend en charge [HiLo](http://stackoverflow.com/questions/282099/whats-the-hi-lo-algorithm) avec la méthode ForSqlServerUseSequenceHiLo, comme indiqué dans l’exemple précédent.
+EF Core prend en charge [HiLo](https://stackoverflow.com/questions/282099/whats-the-hi-lo-algorithm) avec la méthode ForSqlServerUseSequenceHiLo, comme indiqué dans l’exemple précédent.
 
 ### <a name="mapping-fields-instead-of-properties"></a>Mappage de champs au lieu de propriétés
 
@@ -467,7 +467,7 @@ Même si nous ne recommandons pas de retourner des données IQueryable à partir
     [*https://docs.microsoft.com/ef/core/modeling/backing-field*](https://docs.microsoft.com/ef/core/modeling/backing-field)
 
 -   **Steve Smith. Collections encapsulées dans Entity Framework Core**
-    [*http://ardalis.com/encapsulated-collections-in-entity-framework-core*](http://ardalis.com/encapsulated-collections-in-entity-framework-core)
+    [*https://ardalis.com/encapsulated-collections-in-entity-framework-core*](https://ardalis.com/encapsulated-collections-in-entity-framework-core)
 
 -   **Propriétés cachées**
     [*https://docs.microsoft.com/ef/core/modeling/shadow-properties*](https://docs.microsoft.com/ef/core/modeling/shadow-properties)

@@ -1,30 +1,30 @@
 ---
-title: "Inclusion ou importation de schémas XML"
-ms.custom: 
+title: Inclusion ou importation de schémas XML
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 - cpp
 ms.assetid: fe1b4a11-37f4-4e1a-93c9-239f4fe736c0
-caps.latest.revision: 
+caps.latest.revision: 2
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: a8c9b513f47fcb07f987b1e17f0b7f485cef3143
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: 7ee43ddbcd038574fbff3ae487fbebbbd2643656
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="including-or-importing-xml-schemas"></a>Inclusion ou importation de schémas XML
 Un schéma XML peut contenir des éléments `<xs:import />`, `<xs:include />` et `<xs:redefine />`. Ces éléments de schéma réfèrent à d'autres schémas XML qui peuvent être utilisés pour compléter la structure du schéma où ils sont inclus ou importés. Les classes <xref:System.Xml.Schema.XmlSchemaImport>, <xref:System.Xml.Schema.XmlSchemaInclude> et <xref:System.Xml.Schema.XmlSchemaRedefine> sont mappées à ces éléments dans l'API SOM (Schema Object Model).  
@@ -108,7 +108,7 @@ Un schéma XML peut contenir des éléments `<xs:import />`, `<xs:include />` e
 </schema>  
 ```  
   
- Pour plus d'informations sur les éléments `<xs:import />`, `<xs:include />` et `<xs:redefine />`, ainsi que sur les classes <xref:System.Xml.Schema.XmlSchemaImport>, <xref:System.Xml.Schema.XmlSchemaInclude> et <xref:System.Xml.Schema.XmlSchemaRedefine>, consultez [W3C XML Schema](http://www.w3.org/XML/Schema) (en anglais) et la documentation de référence de la classe d'espace de noms <xref:System.Xml.Schema?displayProperty=nameWithType>.  
+ Pour plus d'informations sur les éléments `<xs:import />`, `<xs:include />` et `<xs:redefine />`, ainsi que sur les classes <xref:System.Xml.Schema.XmlSchemaImport>, <xref:System.Xml.Schema.XmlSchemaInclude> et <xref:System.Xml.Schema.XmlSchemaRedefine>, consultez [W3C XML Schema](https://www.w3.org/XML/Schema) (en anglais) et la documentation de référence de la classe d'espace de noms <xref:System.Xml.Schema?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble du modèle d’objet de schéma XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  

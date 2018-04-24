@@ -1,12 +1,12 @@
 ---
-title: "Meilleures pratiques pour développer des applications mondialisables"
-ms.custom: 
+title: Meilleures pratiques pour développer des applications mondialisables
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - global applications, best practices
@@ -14,18 +14,18 @@ helpviewer_keywords:
 - globalization [.NET Framework], best practices
 - international applications [.NET Framework], best practices
 ms.assetid: f08169c7-aad8-4ec3-9a21-9ebd3b89986c
-caps.latest.revision: 
+caps.latest.revision: 20
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1fbdbe2596f44a6efda35b8c3e3aace303d79364
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 65566d54c97db7592fdd38178d88fe2963e637bf
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="best-practices-for-developing-world-ready-applications"></a>Meilleures pratiques pour développer des applications mondialisables
 Cette section décrit les meilleures pratiques pour développer des applications mondialisables.  
@@ -102,7 +102,7 @@ Cette section décrit les meilleures pratiques pour développer des applications
   
 4.  Spécifiez les valeurs des attributs requestEncoding, responseEncoding, fileEncoding, culture et uiCulture aux trois emplacements suivants dans une application ASP.NET :  
   
-    -   Dans la section globalisation d'un fichier Web.config. Ce fichier est externe à l'application ASP.NET. Pour plus d'informations, consultez la page [\<globalization> Element](http://msdn.microsoft.com/library/e2dffc8e-ebd2-439b-a2fd-e3ac5e620da7).  
+    -   Dans la section globalisation d'un fichier Web.config. Ce fichier est externe à l'application ASP.NET. Pour plus d'informations, consultez la page [\<globalization> Element](https://msdn.microsoft.com/library/e2dffc8e-ebd2-439b-a2fd-e3ac5e620da7).  
   
     -   Dans une directive de page. Notez que lorsqu'une application se trouve dans une page, le fichier a déjà été lu. De ce fait, il est trop tard pour spécifier fileEncoding et requestEncoding. Seuls uiCulture, Culture et responseEncoding peuvent être spécifiés dans une directive de page.  
   

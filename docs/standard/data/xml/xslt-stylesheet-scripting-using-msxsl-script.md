@@ -1,35 +1,35 @@
 ---
-title: "Écriture de feuilles de style XSLT avec &lt;msxsl:script&gt;"
-ms.custom: 
+title: Écriture de feuilles de style XSLT avec &lt;msxsl:script&gt;
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
-caps.latest.revision: 
+caps.latest.revision: 4
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f9e7ceb40167d970b1886aec17b93f4bcf08f631
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 01d4271eb5795e3760d289842bdfbdfa11c883fd
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="xslt-stylesheet-scripting-using-ltmsxslscriptgt"></a>Écriture de feuilles de style XSLT avec &lt;msxsl:script&gt;
 La classe <xref:System.Xml.Xsl.XslTransform> prend en charge les scripts incorporés en utilisant l'élément `script`.  
   
 > [!NOTE]
->  La classe <xref:System.Xml.Xsl.XslTransform> est obsolète dans le [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]. Vous pouvez effectuer des transformations XSLT (Extensible Stylesheet Language Transformation) à l'aide de la classe <xref:System.Xml.Xsl.XslCompiledTransform>. Pour plus d'informations, consultez les pages [Utiliser la classe XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) et [Migrer à partir de la classe XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md).  
+>  La classe <xref:System.Xml.Xsl.XslTransform> est obsolète dans le [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]. Vous pouvez effectuer des transformations XSLT (Extensible Stylesheet Language Transformation) à l'aide de la classe <xref:System.Xml.Xsl.XslCompiledTransform>. Pour plus d'informations, consultez [Utilisation de la classe XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) et [Migration depuis la classe XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md).  
   
  La classe <xref:System.Xml.Xsl.XslTransform> prend en charge les scripts incorporés en utilisant l'élément `script`. Lorsque la feuille de style est chargée, toute fonction définie est compilée en langage MSIL (Microsoft Intermediate Language) par son enveloppement dans une définition de classe et n'engendre aucune perte des performances.  
   
@@ -55,7 +55,7 @@ La classe <xref:System.Xml.Xsl.XslTransform> prend en charge les scripts incorpo
   
  Pour obtenir la preuve de votre assembly, utilisez `this.GetType().Assembly.Evidence`. Pour obtenir la preuve d'un URI (Uniform Resource Identifier), utilisez `Evidence e = XmlSecureResolver.CreateEvidenceForUrl(stylesheetURI)`.  
   
- Si vous utilisez les méthodes <xref:System.Xml.Xsl.XslTransform.Load%2A> qui prennent un objet <xref:System.Xml.XmlResolver> mais aucun `Evidence`, la zone de sécurité pour l'assembly prend la valeur Confiance totale par défaut. Pour plus d'informations, consultez les pages <xref:System.Security.SecurityZone> et [Ensemble d'autorisations nommés](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3).  
+ Si vous utilisez les méthodes <xref:System.Xml.Xsl.XslTransform.Load%2A> qui prennent un objet <xref:System.Xml.XmlResolver> mais aucun `Evidence`, la zone de sécurité pour l'assembly prend la valeur Confiance totale par défaut. Pour plus d'informations, consultez les pages <xref:System.Security.SecurityZone> et [Ensemble d'autorisations nommés](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3).  
   
  Les fonctions peuvent être déclarées dans l'élément `msxsl:script`. Le tableau suivant montre les espaces de noms qui sont pris en charge par défaut. Vous pouvez utiliser des classes en dehors des espaces de noms répertoriés. Toutefois, ces classes doivent être qualifiées complètes.  
   

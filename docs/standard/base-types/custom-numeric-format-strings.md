@@ -29,11 +29,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: b33acfef1cabd3aa53fbe8947bd7adbe52d3b7a4
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 1b0940432d3fd201979b537752b917d60a10d22e
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="custom-numeric-format-strings"></a>Chaînes de format numériques personnalisées
 Vous pouvez créer une chaîne de format numérique personnalisée, qui est composée d'un ou de plusieurs spécificateurs de format numériques personnalisés, pour définir la mise en forme des données numériques. Une chaîne de format numérique personnalisée est toute chaîne autre qu'une [chaîne de format numérique standard](../../../docs/standard/base-types/standard-numeric-format-strings.md).  
@@ -41,7 +41,7 @@ Vous pouvez créer une chaîne de format numérique personnalisée, qui est comp
  Les chaînes de format numérique personnalisées sont prises en charge par certaines surcharges de la méthode `ToString` de tous les types numériques. Par exemple, vous pouvez fournir une chaîne de format numérique aux méthodes <xref:System.Int32.ToString%28System.String%29> et <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> du type <xref:System.Int32> . Les chaînes de format numérique personnalisées sont également prises en charge par la fonctionnalité de [mise en forme composite](../../../docs/standard/base-types/composite-formatting.md) .NET, utilisée par certaines méthodes `Write` et `WriteLine` des classes <xref:System.Console> et <xref:System.IO.StreamWriter>, la méthode <xref:System.String.Format%2A?displayProperty=nameWithType> et la méthode <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>. La fonctionnalité [Interpolation de chaîne](../../csharp/language-reference/tokens/interpolated.md) prend également en charge les chaînes de format numérique personnalisées.  
   
 > [!TIP]
->  Vous pouvez télécharger l’ [utilitaire de formatage](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), une application qui vous permet d’appliquer des chaînes de mise en forme à des valeurs numériques ou à des valeurs de date et d’heure, et d’afficher la chaîne de résultat.  
+>  Vous pouvez télécharger l’[utilitaire de formatage](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), une application qui vous permet d’appliquer des chaînes de mise en forme à des valeurs numériques ou à des valeurs de date et d’heure, et d’afficher la chaîne de résultat.  
   
 <a name="table"></a> Le tableau suivant décrit les spécificateurs de format numériques personnalisés et affiche un exemple de sortie produite par chaque spécificateur de format. Consultez la section [Remarques](#NotesCustomFormatting) pour plus d'informations sur l'utilisation de chaînes de format numériques personnalisées, et la section [Exemple](#example) pour obtenir une illustration complète de leur utilisation.  
   
@@ -243,4 +243,4 @@ Vous pouvez créer une chaîne de format numérique personnalisée, qui est comp
  [Mise en forme des types](../../../docs/standard/base-types/formatting-types.md)  
  [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
  [Guide pratique pour remplir un nombre avec des zéros non significatifs](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  
- [Exemple : utilitaire de mise en forme .NET Framework 4](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
+ [Exemple : utilitaire de mise en forme .NET Framework 4](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

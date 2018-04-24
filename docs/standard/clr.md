@@ -24,11 +24,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4aa9a6d37a52d5f15643e9179060450a2d7a34c4
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 2993fbcdc1caf73147c252a0d501e65478a3d08d
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="common-language-runtime-clr"></a>Common Language Runtime (CLR)
 Le .NET Framework fournit un environnement d'exécution, appelé le Common Language Runtime, qui exécute le code et offre des services qui simplifient le processus de développement.  
@@ -87,7 +87,7 @@ Le .NET Framework fournit un environnement d'exécution, appelé le Common Lang
 |-----------|-----------------|  
 |[Processus d'exécution managée](../../docs/standard/managed-execution-process.md)|Décrit les étapes nécessaires pour tirer parti du Common Language Runtime.|  
 |[Gestion automatique de la mémoire](../../docs/standard/automatic-memory-management.md)|Explique comment le « garbage collector » alloue et libère la mémoire.|  
-|[NIB : Vue d’ensemble du .NET Framework](http://msdn.microsoft.com/library/ea38ac1e-92af-4d1b-8db1-e8a5ea10ed85)|Décrit les concepts fondamentaux du .NET Framework, tels que le système de type commun (CTS, Common Type System), l'interopérabilité interlangage, l'exécution managée, les domaines d'application et les assemblys.|  
+|[NIB : Vue d’ensemble du .NET Framework](https://msdn.microsoft.com/library/ea38ac1e-92af-4d1b-8db1-e8a5ea10ed85)|Décrit les concepts fondamentaux du .NET Framework, tels que le système de type commun (CTS, Common Type System), l'interopérabilité interlangage, l'exécution managée, les domaines d'application et les assemblys.|  
 |[Système de type commun](../../docs/standard/base-types/common-type-system.md)|Décrit la manière dont les types sont déclarés, utilisés et managés dans le runtime à l'appui de l'intégration interlangage.|  
   
 ## <a name="see-also"></a>Voir aussi  

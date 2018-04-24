@@ -1,6 +1,6 @@
 ---
-title: "Interopérabilité native"
-description: "Découvrez comment interagir avec les composants natifs dans .NET."
+title: Interopérabilité native
+description: Découvrez comment interagir avec les composants natifs dans .NET.
 keywords: .NET, .NET Core
 author: blackdwarf
 ms.author: ronpet
@@ -13,11 +13,11 @@ ms.assetid: 3c357112-35fb-44ba-a07b-6a1c140370ac
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 11a93f4014734130f7c4e33cf215c6d49d2554c5
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: d9b0fa5ebe37e51c45a8a5d8a42ce9b9688cc7c1
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="native-interoperability"></a>Interopérabilité native
 
@@ -26,7 +26,7 @@ Dans ce document, nous allons approfondir un peu les trois façons disponibles d
 Voici quelques-unes des raisons qui peuvent vous inciter à appeler du code natif :
 
 *   Les systèmes d’exploitation sont fournis avec un volume important d’API qui ne sont pas présentes dans les bibliothèques de classes managées. Un bon exemple est l’accès à des fonctions de gestion de matériel ou de gestion de système d’exploitation.
-*   La communication avec d’autres composants qui ont produit ou peuvent produire des ABI de style C (ABI natifs). Cela concerne, par exemple, le code Java qui est exposé via l’[interface native Java (JNI)](http://docs.oracle.com/javase/8/docs/technotes/guides/jni/) ou tout autre langage managé qui peut produire un composant natif.
+*   La communication avec d’autres composants qui ont produit ou peuvent produire des ABI de style C (ABI natifs). Cela concerne, par exemple, le code Java qui est exposé via l’[interface native Java (JNI)](https://docs.oracle.com/javase/8/docs/technotes/guides/jni/) ou tout autre langage managé qui peut produire un composant natif.
 *   Sur Windows, la plupart des logiciels qui sont installés, comme la suite Microsoft Office, inscrivent des composants COM qui représentent leurs programmes et permettent aux développeurs de les automatiser ou de les utiliser. Cela nécessite également l’interopérabilité native.
 
 Bien entendu, la liste ci-dessus n’englobe pas toutes les situations et scénarios potentiels dans lesquels le développeur voudrait ou aurait besoin d’interagir avec des composants natifs. La bibliothèque de classes .NET, par exemple, utilise la prise en charge de l’interopérabilité native pour implémenter un certain nombre de ses API, comme la prise en charge et la manipulation de la console, l’accès au système de fichiers, etc. Notez, toutefois, qu’il existe une option, en cas de besoin.
@@ -340,6 +340,6 @@ La classe `StatClass` représente une structure qui est retournée par l’appel
 
 ## <a name="more-resources"></a>Autres ressources
 
-*   [Wiki PInvoke.net](http://www.pinvoke.net), un excellent Wiki avec des informations sur les API Win32 courantes et comment les appeler.
+*   [Wiki PInvoke.net](https://www.pinvoke.net/), un excellent Wiki avec des informations sur les API Win32 courantes et comment les appeler.
 *   [P/Invoke sur MSDN](https://msdn.microsoft.com/library/zbz07712.aspx)
-*   [Documentation Mono sur P/Invoke](http://www.mono-project.com/docs/advanced/pinvoke/)
+*   [Documentation Mono sur P/Invoke](https://www.mono-project.com/docs/advanced/pinvoke/)
