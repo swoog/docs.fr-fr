@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 6281442f42b511170f83eaeb1c940a35a566e519
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 0ca69ada16fbb5a6757da96a7ea64d2113c15b6f
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="securing-net-microservices-and-web-applications"></a>Sécurisation des microservices .NET et des applications web
 
@@ -31,7 +31,7 @@ Si les services sont directement accessibles, il est possible d’authentifier l
 
 ![](./media/image2.png)
 
-**(Figure 11-2)** : authentification par un microservice d’identité ; l’approbation est partagée à l’aide d’un jeton d’autorisation
+**(Figure 11-2)**  : authentification par un microservice d’identité ; l’approbation est partagée à l’aide d’un jeton d’autorisation
 
 ## <a name="authenticating-using-aspnet-core-identity"></a>Authentification à l’aide d’ASP.NET Core Identity
 
@@ -126,7 +126,7 @@ Si vous optez pour l’option d’authentification **Compte d’utilisateur indi
 
 ![https://msdnshared.blob.core.windows.net/media/2016/10/new-web-app.png](./media/image3.png)
 
-**(Figure 11-3)** : sélection d’une option visant à utiliser l’authentification externe pendant la création d’un projet d’application web
+**(Figure 11-3)**  : sélection d’une option visant à utiliser l’authentification externe pendant la création d’un projet d’application web
 
 Outre les fournisseurs d’authentification externe mentionnés ci-dessus, il existe des packages tiers qui proposent un intergiciel permettant l’utilisation d’un nombre bien plus important de fournisseurs d’authentification externe. Pour obtenir la liste, consultez le dépôt [AspNet.Security.OAuth.Providers](https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src) sur GitHub.
 
@@ -136,7 +136,7 @@ Bien entendu, vous pouvez aussi créer votre propre intergiciel d’authentifica
 
 L’authentification avec ASP.NET Core Identity (ou Identity couplé à des fournisseurs d’authentification externe) est parfaitement adaptée à de nombreux scénarios d’application web dans lesquels il est approprié de stocker les informations utilisateur dans un cookie. En revanche, dans d’autres scénarios, il n’est pas commun de conserver et de transmettre les données au moyen de cookies.
 
-Par exemple, dans une API web ASP.NET Core qui expose les points de terminaison RESTful potentiellement accessibles par des applications à page unique, des clients natifs, voire d’autres API web, l’authentification par jeton du porteur est généralement privilégiée. Les applications de ce type n’utilisent pas de cookies, mais elles peuvent facilement récupérer un jeton du porteur et l’inclure dans l’en-tête d’autorisation des requêtes suivantes. Pour activer l’authentification par jeton, ASP.NET Core prend en charge plusieurs options en vue d’utiliser [OAuth 2.0](https://oauth.net/2/) et [OpenID Connect](http://openid.net/connect/).
+Par exemple, dans une API web ASP.NET Core qui expose les points de terminaison RESTful potentiellement accessibles par des applications à page unique, des clients natifs, voire d’autres API web, l’authentification par jeton du porteur est généralement privilégiée. Les applications de ce type n’utilisent pas de cookies, mais elles peuvent facilement récupérer un jeton du porteur et l’inclure dans l’en-tête d’autorisation des requêtes suivantes. Pour activer l’authentification par jeton, ASP.NET Core prend en charge plusieurs options en vue d’utiliser [OAuth 2.0](https://oauth.net/2/) et [OpenID Connect](https://openid.net/connect/).
 
 ## <a name="authenticating-with-an-openid-connect-or-oauth-20-identity-provider"></a>Authentification avec un fournisseur d’identité OpenID Connect ou OAuth 2.0
 
@@ -230,25 +230,25 @@ L’intergiciel d’authentification du porteur JWT peut aussi prendre en charge
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
--   **Partage de cookies entre applications**
+-   **Partage des cookies entre applications**
     [*https://docs.microsoft.com/aspnet/core/security/data-protection/compatibility/cookie-sharing\#sharing-authentication-cookies-between-applications*](https://docs.microsoft.com/aspnet/core/security/data-protection/compatibility/cookie-sharing#sharing-authentication-cookies-between-applications)
 
 -   **Présentation d’Identity**
     [*https://docs.microsoft.com/aspnet/core/security/authentication/identity*](https://docs.microsoft.com/aspnet/core/security/authentication/identity)
 
--   **Rick Anderson. Authentification à deux facteurs par SMS**
+-   **Rick Anderson. Authentification à 2 facteurs avec SMS**
     [*https://docs.microsoft.com/aspnet/core/security/authentication/2fa*](https://docs.microsoft.com/aspnet/core/security/authentication/2fa)
 
--   **Activation de l’authentification via Facebook, Google et d’autres fournisseurs externes**
+-   **Activation de l’authentification à l’aide de Facebook, de Google et d’autres fournisseurs externes**
     [*https://docs.microsoft.com/aspnet/core/security/authentication/social/*](https://docs.microsoft.com/aspnet/core/security/authentication/social/)
 
--   **Michell Anicas. An Introduction to OAuth 2**
+-   **Michell Anicas. Présentation d’OAuth 2**
     [*https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2*](https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2)
 
 -   **AspNet.Security.OAuth.Providers** (dépôt GitHub pour fournisseurs d’autorisation OAuth ASP.NET :
-    [*https://github.com/ASPNET-contrib/ASPNET.Security.OAuth.Providers/Tree/dev/src*](https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src))
+    [*https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src*](https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src)
 
--   **Danny Strockis. Intégration d’Azure AD à une application web ASP.NET Core**
+-   **Danny Strockis. Intégration d’Azure AD dans une application web ASP.NET Core**
     [*https://azure.microsoft.com/resources/samples/active-directory-dotnet-webapp-openidconnect-aspnetcore/*](https://azure.microsoft.com/resources/samples/active-directory-dotnet-webapp-openidconnect-aspnetcore/)
 
 -   **IdentityServer4. Documentation officielle**

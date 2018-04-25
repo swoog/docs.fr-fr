@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 45f29a8d19e49685f864b7ca83e466ceb1f73a62
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8098c62ac18593d8044d52cb24c4cd8859972e68
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="tackling-business-complexity-in-a-microservice-with-ddd-and-cqrs-patterns"></a>Lutte contre la complexité d’entreprise dans un microservice disposant des modèles DDD et CQRS
 
@@ -38,10 +38,10 @@ DDD est un large sujet avec un ensemble complet de ressources d’apprentissage.
 ##### <a name="ddd-domain-driven-design"></a>DDD (Domain-Driven Design)
 
 -   **Eric Evans. Domain Language**
-    [*http://domainlanguage.com/*](http://domainlanguage.com/)
+    [*https://domainlanguage.com/*](https://domainlanguage.com/)
 
 -   **Martin Fowler. Domain-Driven Design**
-    [*http://martinfowler.com/tags/domain%20driven%20design.html*](http://martinfowler.com/tags/domain%20driven%20design.html)
+    [*https://martinfowler.com/tags/domain%20driven%20design.html*](https://martinfowler.com/tags/domain%20driven%20design.html)
 
 -   **Jimmy Bogard. Strengthening your domain: a primer**
     [*https://lostechies.com/jimmybogard/2010/02/04/strengthening-your-domain-a-primer/*](https://lostechies.com/jimmybogard/2010/02/04/strengthening-your-domain-a-primer/)
