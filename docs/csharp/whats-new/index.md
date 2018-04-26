@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 77deec51-a14d-46d4-9bb3-faf449477149
-ms.openlocfilehash: 719fbe826b0b115b19067dbaf0d04f14e6534890
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.openlocfilehash: d66f835d57f43d2016d3b20e2205e0052d064acb
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="whats-new-in-c"></a>Nouveautés de C# #
 
@@ -30,8 +30,8 @@ Cette page fournit un Guide des nouvelles fonctionnalités de chaque version maj
 * [C# 7.1](csharp-7-1.md):
     - Cette page décrit les fonctionnalités dans C# 7.1. Ces fonctionnalités ont été ajoutées dans [Visual Studio 2017 version 15.3](https://www.visualstudio.com/vs/whatsnew/) et dans le kit [SDK .NET Core 2.0](../../core/whats-new/index.md).
 
-* [C# 7](csharp-7.md) :
-    - Cette page décrit les fonctionnalités ajoutées dans C# 7. Ces fonctionnalités ont été ajoutées dans [Visual Studio 2017](https://www.visualstudio.com/vs/whatsnew/) et [.NET Core 1.0](../../core/whats-new/index.md) et versions ultérieures
+* [C# 7.0](csharp-7.md) :
+    - Cette page décrit les fonctionnalités ajoutées dans C# 7.0. Ces fonctionnalités ont été ajoutées dans [Visual Studio 2017](https://www.visualstudio.com/vs/whatsnew/) et [.NET Core 1.0](../../core/whats-new/index.md) et versions ultérieures
      
 * [C# 6](csharp-6.md) :
     - Cette page décrit les nouvelles fonctionnalités de C# 6. Ces fonctionnalités sont disponibles dans Visual Studio 2015 pour les développeurs Windows, et dans .NET Core 1.0 pour les développeurs s’intéressant à C# sur Mac OS et Linux.

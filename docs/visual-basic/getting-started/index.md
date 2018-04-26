@@ -12,11 +12,11 @@ ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
 caps.latest.revision: 36
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e53ba3e1134b09edcc87a0421b7699bcf3bb1d39
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: 58e63d95c2f10329f85d6150b58f196294de38d1
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="get-started-with-visual-basic"></a>Bien démarrer avec Visual Basic
 Cette section de la documentation vous aide à commencer à développer des applications Visual Basic.  
@@ -55,10 +55,10 @@ Fournit une liste de sites web et de newsgroups susceptibles de vous aider à tr
  Fournit des liens vers les pages qui présentent la programmation orientée objet et décrivent comment créer vos propres objets et comment utiliser des objets pour simplifier votre codage.  
   
  [Exemples](../../visual-basic/sample-applications.md)  
- Fournit des liens vers un exemple de code en [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Fournit des liens vers un exemple de code en Visual Basic.  
   
  [Procédures pas à pas](../../visual-basic/walkthroughs.md)  
- Fournit une liste de pages d'aide qui illustrent les aspects du langage [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Fournit une liste de pages d’aide qui illustrent les aspects du langage Visual Basic.  
   
  [Nous contacter](/visualstudio/ide/talk-to-us)  
  Décrit la procédure à suivre pour recevoir de l'aide de la part des services de Support Technique et envoyer des commentaires.  
@@ -66,7 +66,7 @@ Fournit une liste de sites web et de newsgroups susceptibles de vous aider à tr
  [Visual Studio](/visualstudio/)  
  Fournit des liens vers la documentation de [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
   
- [C#](../../csharp/index.md) Fournit des liens vers la documentation sur le développement d'applications avec [!INCLUDE[csprcs](~/includes/csprcs-md.md)].  
+ [C#](../../csharp/index.md) Fournit des liens vers la documentation sur le développement d'applications avec Visual C#.  
   
  [Visual C++](/cpp/)  
  Fournit des liens vers la documentation Visual C++.  

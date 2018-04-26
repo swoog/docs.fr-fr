@@ -9,11 +9,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: c627903743f8867e05bac9ce835659fc7270b94e
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: aad6b06748b02e2ea3003ca339d8a5a0b15583f8
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="the-net-compiler-platform-sdk"></a>Kit SDK .NET Compiler Platform
 
@@ -40,9 +40,9 @@ Il existe trois grands scénarios d’écriture d’analyseurs et de correctifs 
 
 ## <a name="enforce-team-coding-standards"></a>Appliquer des normes de codage pour l’équipe
 
-De nombreuses équipes ont des normes de codage, qui sont appliquées par le biais des révisions du code effectuées avec d’autres membres de l’équipe. Les analyseurs et les correctifs de code peuvent rendre ce processus beaucoup plus efficace. Les révisions du code se produisent quand un développeur partage son travail avec d’autres membres de l’équipe. Il aura investi tout le temps nécessaire pour terminer une nouvelle fonctionnalité avant de recevoir le moindre commentaire. Plusieurs semaines peuvent s’écouler, au cours desquelles il renforce des habitudes qui ne correspondent pas aux pratiques de l’équipe.
+De nombreuses équipes ont des normes de codage, qui sont appliquées par le biais des revues de code effectuées avec d’autres membres de l’équipe. Les analyseurs et les correctifs de code peuvent rendre ce processus beaucoup plus efficace. Les revues de code se produisent quand un développeur partage son travail avec d’autres membres de l’équipe. Le développeur aura investi tout le temps nécessaire pour terminer une nouvelle fonctionnalité avant de recevoir le moindre commentaire. Plusieurs semaines peuvent s’écouler, au cours desquelles le développeur renforce des habitudes qui ne correspondent pas aux pratiques de l’équipe.
 
-Les analyseurs s’exécutent au moment même où il écrit du code. Il obtient immédiatement des commentaires qui l’encouragent à suivre les instructions sans attendre. Il prend l’habitude d’écrire du code conforme dès qu’il commence le prototypage. Lorsque la fonctionnalité est prête à être révisée par des humains, toutes les instructions standard ont été appliquées.
+Les analyseurs s’exécutent au moment même où il écrit du code. Le développeur obtient immédiatement des commentaires qui l’encouragent à suivre les instructions sans attendre. Le développeur prend l’habitude d’écrire du code conforme dès qu’il commence le prototypage. Lorsque la fonctionnalité est prête à être révisée par des humains, toutes les instructions standard ont été appliquées.
 
 Les équipes peuvent créer des analyseurs et des correctifs de code permettant de rechercher les pratiques les plus courantes qui enfreignent les pratiques de codage de l’équipe. Ils peuvent être installés sur l’ordinateur de chaque développeur pour appliquer les normes.
 

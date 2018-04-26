@@ -18,17 +18,17 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ae53d5afbca15f8adafed428d4c2141312c972ed
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 5850335a13960df9094c1a6276799de043eb28f3
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="thread-safe-collections"></a>Collections thread-safe
 Le [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] introduit l’espace de noms <xref:System.Collections.Concurrent?displayProperty=nameWithType>, qui inclut plusieurs classes de collections qui sont à la fois thread-safe et évolutives. Plusieurs threads peuvent, sans risque et de façon efficace, ajouter ou supprimer des éléments dans ces collections, sans nécessiter une synchronisation supplémentaire dans le code utilisateur. Quand vous écrivez du nouveau code, utilisez les classes de collections simultanées chaque fois que la collection écrit simultanément dans plusieurs threads. Si vous lisez seulement dans une collection partagée, vous pouvez utiliser les classes de l’espace de noms <xref:System.Collections.Generic?displayProperty=nameWithType>. Nous vous recommandons de ne pas utiliser les classes de collections 1.0, à moins que vous ne deviez cibler le runtime .NET Framework 1.1 ou une version antérieure.  
   
 ## <a name="thread-synchronization-in-the-net-framework-10-and-20-collections"></a>Synchronisation de threads dans les collections .NET Framework 1.0 et 2.0  
- Les collections introduites dans le .NET Framework 1.0 se trouvent dans l’espace de noms <xref:System.Collections?displayProperty=nameWithType>. Ces collections, qui incluent les <xref:System.Collections.ArrayList> et <xref:System.Collections.Hashtable> fréquemment utilisés, garantissent une certaine cohérence des threads par le biais de la propriété `Synchronized`, qui retourne un wrapper thread-safe autour de la collection. Le wrapper fonctionne en verrouillant l’ensemble de la collection à chaque opération d’ajout ou de suppression. Par conséquent, chaque thread qui tente d’accéder à la collection doit attendre son tour pour prendre le verrou. Ce fonctionnement n’est pas évolutif et peut provoquer une importante dégradation des performances pour les grandes collections. De même, la conception n’est pas complètement protégée contre la concurrence critique. Pour plus d’informations, consultez [Synchronisation dans les collections génériques](http://go.microsoft.com/fwlink/?LinkID=161130) sur le site Web MSDN.  
+ Les collections introduites dans le .NET Framework 1.0 se trouvent dans l’espace de noms <xref:System.Collections?displayProperty=nameWithType>. Ces collections, qui incluent les <xref:System.Collections.ArrayList> et <xref:System.Collections.Hashtable> fréquemment utilisés, garantissent une certaine cohérence des threads par le biais de la propriété `Synchronized`, qui retourne un wrapper thread-safe autour de la collection. Le wrapper fonctionne en verrouillant l’ensemble de la collection à chaque opération d’ajout ou de suppression. Par conséquent, chaque thread qui tente d’accéder à la collection doit attendre son tour pour prendre le verrou. Ce fonctionnement n’est pas évolutif et peut provoquer une importante dégradation des performances pour les grandes collections. De même, la conception n’est pas complètement protégée contre la concurrence critique. Pour plus d’informations, consultez [Synchronisation dans les collections génériques](https://blogs.msdn.microsoft.com/bclteam/2005/03/15/synchronization-in-generic-collections-brian-grunkemeyer/).  
   
  Les classes de collection introduites dans le .NET Framework 2.0 se trouvent dans l’espace de noms <xref:System.Collections.Generic?displayProperty=nameWithType>. Elles comprennent notamment <xref:System.Collections.Generic.List%601>, <xref:System.Collections.Generic.Dictionary%602>, etc. Ces classes garantissent une cohérence des types et des performances améliorées par rapport aux classes du .NET Framework 1.0. Toutefois, les classes de collections .NET Framework 2.0 ne fournissent pas de synchronisation des threads. Le code utilisateur doit fournir toute la synchronisation quand des éléments sont ajoutés ou supprimés simultanément sur plusieurs threads.  
   
