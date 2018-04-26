@@ -39,7 +39,7 @@ Un fichier mappé en mémoire comporte le contenu d'un fichier en mémoire virtu
   
 -   Fichiers mappés en mémoire non persistants  
   
-     Les non fichiers persistants sont des fichiers mappés en mémoire associés à un fichier sur un disque. Lorsque le dernier processus a fini de travailler avec le fichier, les données sont perdues et le fichier est récupéré par le nettoyage de la mémoire. Ces fichiers sont adaptés à la création d’une mémoire partagée pour les communications entre processus (IPC).  
+     Les fichiers non persistants sont des fichiers mappés en mémoire qui ne sont pas associés à un fichier sur un disque. Lorsque le dernier processus a fini de travailler avec le fichier, les données sont perdues et l'espace mémoire est récupéré par le nettoyage de la mémoire. Ces fichiers sont adaptés à la création d’un partage pour les communications entre processus (IPC).  
   
 ## <a name="processes-views-and-managing-memory"></a>Processus, vues et gestion de la mémoire  
  Les fichiers mappés en mémoire peuvent être partagés entre plusieurs processus. Des processus peuvent mapper le même fichier en mémoire à l’aide d’un nom commun attribué par le processus qui a créé le fichier.  
