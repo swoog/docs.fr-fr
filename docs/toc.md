@@ -217,7 +217,7 @@
 ## [Nouveautés de C#](csharp/whats-new/index.md)
 ### [Nouveautés de C# 7.2](csharp/whats-new/csharp-7-2.md)
 ### [Nouveautés de C# 7.1](csharp/whats-new/csharp-7-1.md)
-### [Nouveautés de C# 7](csharp/whats-new/csharp-7.md)
+### [Nouveautés de C# 7.0](csharp/whats-new/csharp-7.md)
 ### [Nouveautés de C# 6](csharp/whats-new/csharp-6.md)
 ### [Historique des versions de C#](csharp/whats-new/csharp-version-history.md)
 ### [Relations entre le langage et le framework](csharp/whats-new/relationships-between-language-and-library.md)
