@@ -1,9 +1,10 @@
 ---
-title: "Nous sommes désolés, nous don &#39; t pas de détails sur cette erreur Visual Basic"
+title: Désolé, nous n&#39;t pas de détails sur cette erreur Visual Basic
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - vbc30234
@@ -3048,36 +3049,36 @@ f1_keywords:
 - bc30233
 - bc30829
 ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 132bb3f93ae5084df73aed56b6d1483830984928
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: MT
+ms.openlocfilehash: 4ab447c06504d6c3bb7c51107e422b2cba1f45e3
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a><span data-ttu-id="e5f28-102">Nous sommes désolés, nous don &#39; t pas de détails sur cette erreur Visual Basic</span><span class="sxs-lookup"><span data-stu-id="e5f28-102">Sorry, we don&#39;t have specifics on this Visual Basic error</span></span>
-<span data-ttu-id="e5f28-103">Nous sommes désolés, mais nous n'avons pas d'informations spécifiques sur cette erreur.</span><span class="sxs-lookup"><span data-stu-id="e5f28-103">We’re sorry, but we don’t have any specific information about this error.</span></span> <span data-ttu-id="e5f28-104">Pour plus d'informations, vous pouvez rechercher le numéro d'erreur et le texte du message sur le web.</span><span class="sxs-lookup"><span data-stu-id="e5f28-104">You can search for the error number and message text to find information on the web.</span></span> <span data-ttu-id="e5f28-105">Ou bien, vous pouvez interroger d'autres développeurs au travers des forums suivants :</span><span class="sxs-lookup"><span data-stu-id="e5f28-105">Or, you can ask other developers using one of these forums:</span></span>  
+# <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a><span data-ttu-id="37ff6-102">Désolé, nous n&#39;t pas de détails sur cette erreur Visual Basic</span><span class="sxs-lookup"><span data-stu-id="37ff6-102">Sorry, we don&#39;t have specifics on this Visual Basic error</span></span>
+<span data-ttu-id="37ff6-103">Nous sommes désolés, mais nous n'avons pas d'informations spécifiques sur cette erreur.</span><span class="sxs-lookup"><span data-stu-id="37ff6-103">We’re sorry, but we don’t have any specific information about this error.</span></span> <span data-ttu-id="37ff6-104">Pour plus d'informations, vous pouvez rechercher le numéro d'erreur et le texte du message sur le web.</span><span class="sxs-lookup"><span data-stu-id="37ff6-104">You can search for the error number and message text to find information on the web.</span></span> <span data-ttu-id="37ff6-105">Ou bien, vous pouvez interroger d'autres développeurs au travers des forums suivants :</span><span class="sxs-lookup"><span data-stu-id="37ff6-105">Or, you can ask other developers using one of these forums:</span></span>  
   
- [<span data-ttu-id="e5f28-106">Langage Visual Basic</span><span class="sxs-lookup"><span data-stu-id="e5f28-106">Visual Basic Language</span></span>](http://go.microsoft.com/fwlink/?LinkId=145963)  
- <span data-ttu-id="e5f28-107">Propose un forum de questions et de discussions générales sur la syntaxe du langage [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] et son compilateur.</span><span class="sxs-lookup"><span data-stu-id="e5f28-107">Provides a forum for questions about and general discussions of the [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] language syntax and compiler.</span></span>  
+ [<span data-ttu-id="37ff6-106">Langage Visual Basic</span><span class="sxs-lookup"><span data-stu-id="37ff6-106">Visual Basic Language</span></span>](http://go.microsoft.com/fwlink/?LinkId=145963)  
+ <span data-ttu-id="37ff6-107">Propose un forum de questions et de discussions générales de la syntaxe du langage Visual Basic et du compilateur.</span><span class="sxs-lookup"><span data-stu-id="37ff6-107">Provides a forum for questions about and general discussions of the Visual Basic language syntax and compiler.</span></span>  
   
- [<span data-ttu-id="e5f28-108">Interopérabilité et mise à niveau Visual Basic</span><span class="sxs-lookup"><span data-stu-id="e5f28-108">Visual Basic Interop and Upgrade</span></span>](http://go.microsoft.com/fwlink/?LinkId=145966)  
- <span data-ttu-id="e5f28-109">Propose un forum de questions et de problèmes liés à la mise à niveau vers [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] et à l'utilisation avec des fonctionnalités d'interopérabilité.</span><span class="sxs-lookup"><span data-stu-id="e5f28-109">Provides a forum for questions about and issues with upgrading to [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] and working with interoperability features.</span></span>  
+ [<span data-ttu-id="37ff6-108">Interopérabilité et mise à niveau Visual Basic</span><span class="sxs-lookup"><span data-stu-id="37ff6-108">Visual Basic Interop and Upgrade</span></span>](http://go.microsoft.com/fwlink/?LinkId=145966)  
+ <span data-ttu-id="37ff6-109">Propose un forum de questions et de problèmes avec la mise à niveau vers Visual Basic et l’utilisation des fonctionnalités d’interopérabilité.</span><span class="sxs-lookup"><span data-stu-id="37ff6-109">Provides a forum for questions about and issues with upgrading to Visual Basic and working with interoperability features.</span></span>  
   
- [<span data-ttu-id="e5f28-110">IDE Visual Basic</span><span class="sxs-lookup"><span data-stu-id="e5f28-110">Visual Basic IDE</span></span>](http://go.microsoft.com/fwlink/?LinkId=145971)  
- <span data-ttu-id="e5f28-111">Fournit un forum de questions sur l'utilisation dans l'environnement [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].</span><span class="sxs-lookup"><span data-stu-id="e5f28-111">Provides a forum for questions about how to work in the [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] environment.</span></span>  
+ [<span data-ttu-id="37ff6-110">IDE Visual Basic</span><span class="sxs-lookup"><span data-stu-id="37ff6-110">Visual Basic IDE</span></span>](http://go.microsoft.com/fwlink/?LinkId=145971)  
+ <span data-ttu-id="37ff6-111">Fournit un forum de questions sur l'utilisation dans l'environnement [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].</span><span class="sxs-lookup"><span data-stu-id="37ff6-111">Provides a forum for questions about how to work in the [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] environment.</span></span>  
   
- [<span data-ttu-id="e5f28-112">Généralités Visual Basic</span><span class="sxs-lookup"><span data-stu-id="e5f28-112">Visual Basic General</span></span>](http://go.microsoft.com/fwlink/?LinkId=145973)  
- <span data-ttu-id="e5f28-113">Propose un forum de questions et de problèmes avec [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] qui ne sont pas abordés dans d'autres forums.</span><span class="sxs-lookup"><span data-stu-id="e5f28-113">Provides a forum for questions about and issues with [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] that are not discussed in other forums.</span></span>  
+ [<span data-ttu-id="37ff6-112">Généralités Visual Basic</span><span class="sxs-lookup"><span data-stu-id="37ff6-112">Visual Basic General</span></span>](http://go.microsoft.com/fwlink/?LinkId=145973)  
+ <span data-ttu-id="37ff6-113">Propose un forum de questions et de problèmes avec Visual Basic qui ne sont pas abordés dans d’autres forums.</span><span class="sxs-lookup"><span data-stu-id="37ff6-113">Provides a forum for questions about and issues with Visual Basic that are not discussed in other forums.</span></span>  
   
- [<span data-ttu-id="e5f28-114">Dépassement de capacité</span><span class="sxs-lookup"><span data-stu-id="e5f28-114">StackOverflow</span></span>](http://stackoverflow.com/questions/tagged/vb.net)  
- <span data-ttu-id="e5f28-115">Fournit un forum de questions et de problèmes relatifs à [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span><span class="sxs-lookup"><span data-stu-id="e5f28-115">Provides a forum for questions about and issues with [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span></span>  
+ [<span data-ttu-id="37ff6-114">Dépassement de capacité</span><span class="sxs-lookup"><span data-stu-id="37ff6-114">StackOverflow</span></span>](http://stackoverflow.com/questions/tagged/vb.net)  
+ <span data-ttu-id="37ff6-115">Propose un forum de questions et de problèmes avec Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="37ff6-115">Provides a forum for questions about and issues with Visual Basic.</span></span>  
   
- <span data-ttu-id="e5f28-116">Voir aussi :</span><span class="sxs-lookup"><span data-stu-id="e5f28-116">Also see:</span></span>  
- [<span data-ttu-id="e5f28-117">Ressources supplémentaires pour les programmeurs Visual Basic</span><span class="sxs-lookup"><span data-stu-id="e5f28-117">Additional Resources for Visual Basic Programmers</span></span>](../../visual-basic/getting-started/additional-resources.md)  
+ <span data-ttu-id="37ff6-116">Voir aussi :</span><span class="sxs-lookup"><span data-stu-id="37ff6-116">Also see:</span></span>  
+ [<span data-ttu-id="37ff6-117">Ressources supplémentaires pour les programmeurs Visual Basic</span><span class="sxs-lookup"><span data-stu-id="37ff6-117">Additional Resources for Visual Basic Programmers</span></span>](../../visual-basic/getting-started/additional-resources.md)  
   
-## <a name="see-also"></a><span data-ttu-id="e5f28-118">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="e5f28-118">See Also</span></span>  
- [<span data-ttu-id="e5f28-119">Guide de programmation Visual Basic</span><span class="sxs-lookup"><span data-stu-id="e5f28-119">Visual Basic Programming Guide</span></span>](../../visual-basic/programming-guide/index.md)  
- [<span data-ttu-id="e5f28-120">Informations de référence sur Visual Basic</span><span class="sxs-lookup"><span data-stu-id="e5f28-120">Visual Basic Reference</span></span>](../../visual-basic/reference/index.md)
+## <a name="see-also"></a><span data-ttu-id="37ff6-118">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="37ff6-118">See Also</span></span>  
+ [<span data-ttu-id="37ff6-119">Guide de programmation Visual Basic</span><span class="sxs-lookup"><span data-stu-id="37ff6-119">Visual Basic Programming Guide</span></span>](../../visual-basic/programming-guide/index.md)  
+ [<span data-ttu-id="37ff6-120">Informations de référence sur Visual Basic</span><span class="sxs-lookup"><span data-stu-id="37ff6-120">Visual Basic Reference</span></span>](../../visual-basic/reference/index.md)
