@@ -2,9 +2,10 @@
 title: Dim, instruction (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.Dim
@@ -34,14 +35,14 @@ helpviewer_keywords:
 - Dim statement [Visual Basic], syntax
 - variables [Visual Basic], member and local
 ms.assetid: fae3eca1-f0b2-4400-994b-7aa58a848448
-caps.latest.revision: "72"
+caps.latest.revision: 72
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: a428f8be7b62600ca8fffd3160039c1de911e34e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 36e2d416e4653bfa6fe212b75b92ae2d90775d53
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="dim-statement-visual-basic"></a>Dim, instruction (Visual Basic)
 Déclare et alloue de l’espace de stockage pour une ou plusieurs variables.  
@@ -116,7 +117,7 @@ Dim [ WithEvents ] variablelist
     |`propinitializer`|Requis après `propertyname` =. L’expression qui est évaluée et assignée au nom de propriété.|  
     |`initializer`|Facultatif si `New` n’est pas spécifié. Expression qui est évaluée et assignée à la variable lors de sa création.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le compilateur Visual Basic utilise le `Dim` pour déterminer le type de données de la variable et d’autres informations, telles que le code peut accéder à la variable. L’exemple suivant déclare une variable qui doit contenir un `Integer` valeur.  
   
 ```vb  
@@ -251,7 +252,7 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
   
  Pour plus d’informations sur les littéraux de tableau, consultez [tableaux](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
-##  <a name="default"></a>Types de données par défaut et valeurs  
+##  <a name="default"></a> Types de données par défaut et valeurs  
  Le tableau suivant décrit les résultats des diverses combinaisons de spécification du type de données et d'un initialiseur dans une instruction `Dim`.  
   
 |Type de données spécifié ?|Initialiseur spécifié ?|Exemple|Résultat|  
@@ -261,7 +262,7 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
 |Oui|Non|`Dim qty As Integer`|La variable est initialisée avec la valeur par défaut du type de données. Consultez le tableau plus loin dans cette section.|  
 |Oui|Oui|`Dim qty  As Integer = 5`|Si le type de données de l’initialiseur ne peut pas être converti dans le type de données spécifié, une erreur se produit au moment de la compilation.|  
   
- Si vous spécifiez un type de données mais que vous ne spécifiez pas un initialiseur, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] initialise la variable à la valeur par défaut pour son type de données. Le tableau suivant présente la valeur par défaut des valeurs d’initialisation.  
+ Si vous spécifiez un type de données mais que vous ne spécifiez pas d’initialiseur, Visual Basic initialise la variable à la valeur par défaut pour son type de données. Le tableau suivant présente la valeur par défaut des valeurs d’initialisation.  
   
 |Type de données|Valeur par défaut|  
 |---|---|  
@@ -279,8 +280,8 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
 |Déclaration de procédure|Variable initialisée|Variable n’existe plus.|  
 |---|---|---|  
 |Dans un module|La première fois que la procédure est appelée.|Lorsque votre programme s’arrête l’exécution|  
-|Dans une classe ou une structure, la procédure est`Shared`|La première fois que la procédure est appelée sur une instance spécifique ou sur la classe ou la structure elle-même|Lorsque votre programme s’arrête l’exécution|  
-|Dans une classe ou une structure, la procédure n’est pas`Shared`|La première fois que la procédure est appelée sur une instance spécifique|Lorsque l’instance est libérée pour le garbage collection (GC)|  
+|Dans une classe ou une structure, la procédure est `Shared`|La première fois que la procédure est appelée sur une instance spécifique ou sur la classe ou la structure elle-même|Lorsque votre programme s’arrête l’exécution|  
+|Dans une classe ou une structure, la procédure n’est pas `Shared`|La première fois que la procédure est appelée sur une instance spécifique|Lorsque l’instance est libérée pour le garbage collection (GC)|  
   
 ## <a name="attributes-and-modifiers"></a>Attributs et les modificateurs  
  Vous pouvez appliquer des attributs qu’aux variables membres, pas aux variables locales. Un attribut fournit des informations aux métadonnées de l’assembly, qui n’est pas significatif pour le stockage temporaire, tels que des variables locales.  

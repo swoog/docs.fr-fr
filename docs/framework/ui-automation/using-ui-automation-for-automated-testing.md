@@ -1,28 +1,30 @@
 ---
-title: "Utilisation d'UI Automation pour des tests automatisés"
-ms.custom: 
+title: Utilisation d'UI Automation pour des tests automatisés
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - automated testing
 - testing, UI Automation
 - UI Automation, automated testing
 ms.assetid: 3a0435c0-a791-4ad7-ba92-a4c1d1231fde
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 128af9a015d25985b7075f5b670fea36c6773267
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6539829feacf8c9a5c9c1339df299a21ac5fe64f
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>Utilisation d'UI Automation pour des tests automatisés
 > [!NOTE]
@@ -50,7 +52,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Implementing_UI_Automation"></a>   
 ### <a name="implementing-ui-automation"></a>Implémentation d’UI Automation  
- Comme mentionné précédemment, sans le modèle unifié fourni par [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], les outils de test et les développeurs doivent connaître les informations spécifiques à l’infrastructure pour exposer les propriétés et les comportements des contrôles dans cette infrastructure. Dans la mesure où il peut exister plusieurs infrastructures d’interface utilisateur différentes à tout moment dans les systèmes d’exploitation [!INCLUDE[TLA2#tla_win](../../../includes/tla2sharptla-win-md.md)] , notamment [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]et [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)], il est parfois très difficile de tester plusieurs applications avec des contrôles apparemment similaires. Par exemple, le tableau suivant présente les noms de propriétés spécifiques à l’infrastructure, et qui sont nécessaires pour récupérer le nom (ou le texte) associé à un contrôle bouton. En outre, il indique la seule propriété [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] équivalente.  
+ Comme mentionné précédemment, sans le modèle unifié fourni par [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], les outils de test et les développeurs doivent connaître les informations spécifiques à l’infrastructure pour exposer les propriétés et les comportements des contrôles dans cette infrastructure. Dans la mesure où il peut y avoir plusieurs différentes infrastructures d’interface utilisateur à tout moment dans les systèmes d’exploitation Windows, y compris [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)], et [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)], il peut être déconcertant pour tester plusieurs applications avec des contrôles apparemment similaires . Par exemple, le tableau suivant présente les noms de propriétés spécifiques à l’infrastructure, et qui sont nécessaires pour récupérer le nom (ou le texte) associé à un contrôle bouton. En outre, il indique la seule propriété [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] équivalente.  
   
 |Type de contrôle UI Automation|Infrastructure d’interface utilisateur|Propriété spécifique à l’infrastructure|Propriété UI Automation|  
 |--------------------------------|------------------|---------------------------------|----------------------------|  

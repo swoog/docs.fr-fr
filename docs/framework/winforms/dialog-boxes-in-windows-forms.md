@@ -1,31 +1,33 @@
 ---
-title: "Boîtes de dialogue dans les Windows Forms"
-ms.custom: 
+title: Boîtes de dialogue dans les Windows Forms
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - dialog boxes [Windows Forms], Windows Forms
 - Windows Forms dialog boxes
 - dialogs [Windows Forms], using in Windows Forms
 ms.assetid: d43d022b-451b-490d-9386-dc79d98fbf8a
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b8f493013744ffa7819d4cb554f794d9a591a371
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 423f8e83290d46b1f49a34517f67ddaef398b3b3
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="dialog-boxes-in-windows-forms"></a>Boîtes de dialogue dans les Windows Forms
-Les boîtes de dialogue servent à interagir avec l'utilisateur et à récupérer des informations. En termes simples, une boîte de dialogue est un formulaire dont la propriété d'énumération <xref:System.Windows.Forms.FormBorderStyle> a la valeur `FixedDialog`. Vous pouvez construire vos propres boîtes de dialogue personnalisées à l'aide du Concepteur Windows Forms dans [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]. Ajoutez des contrôles tels que `Label`, `Textbox` et `Button` pour personnaliser les boîtes de dialogue en fonction de vos besoins spécifiques. Le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] inclut également des boîtes de dialogue prédéfinies, telles que **ouvrir le fichier** et boîtes de message, vous pouvez adapter à vos propres applications. Pour plus d’informations, consultez [composants et contrôles de boîte de dialogue](../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md).  
+Les boîtes de dialogue servent à interagir avec l'utilisateur et à récupérer des informations. En termes simples, une boîte de dialogue est un formulaire dont la propriété d'énumération <xref:System.Windows.Forms.FormBorderStyle> a la valeur `FixedDialog`. Vous pouvez construire vos propres boîtes de dialogue personnalisées à l’aide du Concepteur Windows Forms dans Visual Studio. Ajoutez des contrôles tels que `Label`, `Textbox` et `Button` pour personnaliser les boîtes de dialogue en fonction de vos besoins spécifiques. Le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] inclut également des boîtes de dialogue prédéfinies, telles que **ouvrir le fichier** et boîtes de message, vous pouvez adapter à vos propres applications. Pour plus d’informations, consultez [composants et contrôles de boîte de dialogue](../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md).  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Guide pratique pour afficher des boîtes de dialogue pour les Windows Forms](../../../docs/framework/winforms/how-to-display-dialog-boxes-for-windows-forms.md)  

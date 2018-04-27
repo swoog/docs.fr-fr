@@ -14,17 +14,17 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 999c18f20264a71cf73bbd5afd352ad3104a03e8
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: a11a1cddbb5b65bf174cabe7774ad62791657f54
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>Prise en charge de nouvelles fonctionnalités Workflow Foundation 4.5 dans le concepteur de workflow réhébergé
-[!INCLUDE[wf](../../../includes/wf-md.md)] dans [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] a introduit plusieurs nouvelles fonctionnalités, notamment plusieurs améliorations à l'utilisation de Workflow Designer. Cette rubrique détaille lesquelles de ces fonctionnalités sont prises en charge dans le concepteur réhébergé, et celles qui ne sont pas actuellement prises en charge.  
+Windows Workflow Foundation (WF) dans [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] a introduit de nombreuses nouvelles fonctionnalités, notamment plusieurs améliorations à l’utilisation de workflow designer. Cette rubrique détaille lesquelles de ces fonctionnalités sont prises en charge dans le concepteur réhébergé, et celles qui ne sont pas actuellement prises en charge.  
   
 > [!NOTE]
->  Pour obtenir la liste de tous les nouveaux [!INCLUDE[wf](../../../includes/wf-md.md)] fonctionnalités introduites dans [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], y compris celles qui ne sont pas liées au réhébergement du concepteur, consultez [quelles sont les nouveautés de Windows Workflow Foundation dans .NET 4.5](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md).  
+>  Pour obtenir la liste de toutes les nouvelles fonctionnalités de Windows Workflow Foundation (WF) introduites dans [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], y compris celles qui ne sont pas liées au réhébergement du concepteur, consultez [quelles sont les nouveautés de Windows Workflow Foundation dans .NET 4.5](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md).  
   
 ## <a name="activities"></a>Activités  
  La bibliothèque d'activités intégrée contient de nouvelles activités et de nouvelles fonctionnalités pour les activités existantes. Toutes ces nouvelles activités sont prises en charge dans le concepteur réhébergé. Pour plus d’informations sur ces nouvelles activités, consultez le [activités](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_NewActivities) section de [quelles sont les nouveautés de Windows Workflow Foundation dans .NET 4.5](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md).  

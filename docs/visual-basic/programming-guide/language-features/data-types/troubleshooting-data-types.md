@@ -1,11 +1,12 @@
 ---
-title: "Dépannage des types de données (Visual Basic)"
-ms.custom: 
+title: Dépannage des types de données (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Char data type [Visual Basic], converting
@@ -25,14 +26,14 @@ helpviewer_keywords:
 - floating-point numbers [Visual Basic], comparison
 - floating-point numbers
 ms.assetid: 90040d67-b630-4125-a6ae-37195b079042
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4d2fb1cd1be9c88ad0dd413eedb8a226fe59f41e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f34e7bc50a51032387cf01db3fae17ef44b8b4d9
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="troubleshooting-data-types-visual-basic"></a>Dépannage des types de données (Visual Basic)
 Cette page répertorie certains problèmes courants qui peuvent se produire lorsque vous effectuez des opérations sur les types de données intrinsèques.  
@@ -74,7 +75,7 @@ Cette page répertorie certains problèmes courants qui peuvent se produire lors
  Notez qu’il n’est pas suffisant pour déclarer `decimalRemainder` comme `Decimal`. Vous devez également forcer les littéraux à `Decimal`, ou ils utilisent `Double` par défaut et `decimalRemainder` reçoit la même valeur inexacte que `doubleRemainder`.  
   
 ## <a name="boolean-type-does-not-convert-to-numeric-type-accurately"></a>Type booléen ne convertit pas correctement en Type numérique  
- [Type de données booléen](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) valeurs ne sont pas stockées sous forme de nombres et les valeurs stockées ne sont pas destinées à être équivalentes en nombres. Pour la compatibilité avec les versions antérieures, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] fournit des mots clés de conversion ([CType, fonction](../../../../visual-basic/language-reference/functions/ctype-function.md), `CBool`, `CInt`, et ainsi de suite) pour effectuer des conversions entre `Boolean` et des types numériques. Toutefois, autres langages parfois effectuer ces conversions différemment, comme le [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] méthodes.  
+ [Type de données booléen](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) valeurs ne sont pas stockées sous forme de nombres et les valeurs stockées ne sont pas destinées à être équivalentes en nombres. Pour la compatibilité avec les versions antérieures, Visual Basic fournit des mots clés de conversion ([CType, fonction](../../../../visual-basic/language-reference/functions/ctype-function.md), `CBool`, `CInt`, et ainsi de suite) pour effectuer des conversions entre `Boolean` et des types numériques. Toutefois, autres langages parfois effectuer ces conversions différemment, comme le [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] méthodes.  
   
  Vous devez jamais écrire du code qui s’appuie sur des valeurs numériques équivalentes pour `True` et `False`. Chaque fois que possible, vous devez limiter l’utilisation de `Boolean` variables aux valeurs logiques pour lesquelles elles sont conçues. Si vous devez combiner `Boolean` et des valeurs numériques, assurez-vous que vous comprenez la méthode de conversion que vous sélectionnez.  
   
@@ -87,7 +88,7 @@ Cette page répertorie certains problèmes courants qui peuvent se produire lors
  Si vous devez convertir un `Boolean` la valeur en un type de données numérique, soyez prudent sur la méthode de conversion que vous utilisez.  
   
 ## <a name="character-literal-generates-compiler-error"></a>Le littéral de caractère génère l’erreur du compilateur  
- En l’absence de caractères de n’importe quel type [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] utilise par défaut pour les littéraux, les types de données. Le type par défaut pour un littéral de caractère, entourée de guillemets (`" "`) — est `String`.  
+ En l’absence de tous les caractères de type, Visual Basic utilise par défaut pour les littéraux, les types de données. Le type par défaut pour un littéral de caractère, entourée de guillemets (`" "`) — est `String`.  
   
  Le `String` type de données ne s’étend pas à la [Type de données Char](../../../../visual-basic/language-reference/data-types/char-data-type.md). Cela signifie que si vous souhaitez assigner un littéral à un `Char` variable, vous devez effectuer une conversion restrictive ou forcer le littéral à la `Char` type.  
 
@@ -102,7 +103,7 @@ Cette page répertorie certains problèmes courants qui peuvent se produire lors
  Il existe toujours un risque en utilisant les conversions restrictives, car elles peuvent échouer au moment de l’exécution. Par exemple, une conversion de `String` à `Char` peut échouer si le `String` valeur contient plusieurs caractères. Par conséquent, il est mieux de programmation à utiliser le `C` caractère de type.  
   
 ## <a name="string-conversion-fails-at-run-time"></a>Échec de la Conversion de chaîne en cours d’exécution  
- Le [Type de données String](../../../../visual-basic/language-reference/data-types/string-data-type.md) participe à très peu de conversions étendues. `String`s’étend uniquement à lui-même et `Object`et uniquement `Char` et `Char()` (un `Char` tableau) s’étendent à `String`. C’est parce que `String` variables et les constantes peuvent contenir des valeurs qui ne peut pas contenir des autres types de données.  
+ Le [Type de données String](../../../../visual-basic/language-reference/data-types/string-data-type.md) participe à très peu de conversions étendues. `String` s’étend uniquement à lui-même et `Object`et uniquement `Char` et `Char()` (un `Char` tableau) s’étendent à `String`. C’est parce que `String` variables et les constantes peuvent contenir des valeurs qui ne peut pas contenir des autres types de données.  
   
  Lorsque la vérification du type de commutateur ([Option Strict, instruction](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) est `On`, le compilateur rejette toutes les conversions restrictives implicites. Comprennent celles qui impliquent `String`. Votre code peut toujours utiliser les mots clés de conversion tels que `CStr` et [CType, fonction](../../../../visual-basic/language-reference/functions/ctype-function.md), qui invitent le [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] pour essayer la conversion.  
   
