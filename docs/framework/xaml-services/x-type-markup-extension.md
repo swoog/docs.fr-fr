@@ -1,12 +1,13 @@
 ---
 title: x:Type, extension de balisage
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - x:TypeExtension
@@ -21,16 +22,17 @@ helpviewer_keywords:
 - TargetType attribute [XAML Services]
 - Type markup extension in XAML [XAML Services]
 ms.assetid: e0e0ce6f-e873-49c7-8ad7-8b840eb353ec
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a4d645d5c953c0ff33435a5648024ace099455e2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: db56c2bcdca14b87de320dfe19a6c364c76ecef7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xtype-markup-extension"></a>x:Type, extension de balisage
 Fournit le CLR <xref:System.Type> objet qui est le type sous-jacent pour un type XAML spécifié.  
@@ -55,7 +57,7 @@ Fournit le CLR <xref:System.Type> objet qui est le type sous-jacent pour un type
 |`typeNameValue`|Obligatoire. Un nom de type peut être résolu à l’espace de noms XAML par défaut en cours ; ou spécifié préfixe mappé si `prefix` est fourni.|  
   
 ## <a name="remarks"></a>Notes  
- Le `x:Type` extension de balisage a une fonction semblable à la `typeof()` opérateur dans [!INCLUDE[TLA#tla_cshrp](../../../includes/tlasharptla-cshrp-md.md)] ou `GetType` opérateur dans [!INCLUDE[TLA#tla_visualb](../../../includes/tlasharptla-visualb-md.md)].  
+ Le `x:Type` extension de balisage a une fonction semblable à la `typeof()` opérateur en c# ou le `GetType` opérateur dans Microsoft Visual Basic.  
   
  Le `x:Type` extension de balisage fournit un comportement de conversion de chaînes pour les propriétés qui prennent le type <xref:System.Type>. L’entrée est un type XAML. La relation entre le type XAML d’entrée et la sortie CLR <xref:System.Type> est que la sortie <xref:System.Type> est la <xref:System.Xaml.XamlType.UnderlyingType%2A> de l’entrée <xref:System.Xaml.XamlType>, après avoir recherché le nécessaire <xref:System.Xaml.XamlType> selon le contexte de schéma XAML et le <xref:System.Windows.Markup.IXamlTypeResolver>le contexte de service.  
   
@@ -67,7 +69,7 @@ Fournit le CLR <xref:System.Type> objet qui est le type sous-jacent pour un type
   
  Le `x:Type` extension de balisage peut être utilisée dans la syntaxe d’élément objet. Dans ce cas, en spécifiant la valeur de la <xref:System.Windows.Markup.TypeExtension.TypeName%2A> propriété est requise pour initialiser correctement l’extension.  
   
- Le `x:Type` extension de balisage peut également servir comme attribut brut ; toutefois cette utilisation n’est pas classique : `<``object``property``="{x:Type TypeName=``typeNameValue``}" .../>`  
+ Le `x:Type` extension de balisage peut également servir comme attribut brut ; toutefois cette utilisation n’est pas classique : `<``object` `property``="{x:Type TypeName=``typeNameValue``}" .../>`  
   
 ## <a name="wpf-usage-notes"></a>Notes d’utilisation WPF  
   
@@ -82,7 +84,7 @@ Fournit le CLR <xref:System.Type> objet qui est le type sous-jacent pour un type
 ## <a name="xaml-2009"></a>XAML 2009  
  XAML 2009 fournit la prise en charge supplémentaire pour les types génériques et modifie le comportement de la fonctionnalité de `x:TypeArguments` et `x:Type` pour fournir cette prise en charge.  
   
--   `x:TypeArguments`et l’élément objet associé pour une instanciation d’objet générique peut être sur des éléments autres que la racine. Pour plus d’informations, consultez la section « XAML 2009 » de [Directive x : TypeArguments](../../../docs/framework/xaml-services/x-typearguments-directive.md).  
+-   `x:TypeArguments` et l’élément objet associé pour une instanciation d’objet générique peut être sur des éléments autres que la racine. Pour plus d’informations, consultez la section « XAML 2009 » de [Directive x : TypeArguments](../../../docs/framework/xaml-services/x-typearguments-directive.md).  
   
 -   XAML 2009 prend en charge une syntaxe permettant de spécifier la contrainte d’un type générique dans le balisage. Cela peut être utilisé par `x:TypeArguments`, par `x:Type`, ou par les deux fonctionnalités conjointement.  
   

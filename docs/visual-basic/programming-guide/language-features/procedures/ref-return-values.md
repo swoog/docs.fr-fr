@@ -1,12 +1,13 @@
 ---
-title: "Valeurs de retour de référence (Visual Basic)"
-ms.custom: 
+title: Valeurs de retour de référence (Visual Basic)
+ms.custom: ''
 ms.date: 04/28/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - variables [Visual Basic]
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 5ef0cc69-eb3a-4a67-92a2-78585f223cb5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 560607f7aa304b25314daabeef3952e6bbef7426
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: 6055028ac92016cbc4b6f7bffa7f483e5ea76608
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="support-for-reference-return-values-visual-basic"></a>Prise en charge des valeurs de retour de référence (Visual Basic)
 
-À partir de C# 7, le langage c# prend en charge les *référencer des valeurs de retour*. Pour comprendre les valeurs de retour de référence est qu’ils sont le contraire des arguments qui sont passés par référence à une méthode. Lorsqu’un argument passé par référence est modifié, les modifications sont répercutées dans la valeur de la variable sur l’appelant. Lorsqu’une méthode fournit une valeur de retour de référence pour un appelant, les modifications apportées à la valeur de retour de référence par l’appelant sont reflétées dans les données de la méthode appelée.
+À partir de c# 7.0, le langage c# prend en charge les *référencer des valeurs de retour*. Pour comprendre les valeurs de retour de référence est qu’ils sont le contraire des arguments qui sont passés par référence à une méthode. Lorsqu’un argument passé par référence est modifié, les modifications sont répercutées dans la valeur de la variable sur l’appelant. Lorsqu’une méthode fournit une valeur de retour de référence pour un appelant, les modifications apportées à la valeur de retour de référence par l’appelant sont reflétées dans les données de la méthode appelée.
 
 Visual Basic n’autorise pas les valeurs de retour vous permet de créer des méthodes avec référence, mais il vous permet d’utiliser des valeurs de retour de référence. En d’autres termes, vous pouvez appeler une méthode avec une valeur de retour de référence et modifier cette valeur de retour, et les modifications apportées à la valeur de retour de référence sont reflétées dans les données de la méthode appelée.
 

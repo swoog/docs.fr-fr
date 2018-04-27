@@ -1,24 +1,26 @@
 ---
-title: "Résolution des problèmes"
-ms.custom: 
+title: Résolution des problèmes
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 56d06fa7adf2690a2cb9194342071c7814a4ec4a
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5544540c6a27975a885bf4cd8b2e0a26183e192b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="troubleshooting"></a>Résolution des problèmes
 Les informations suivantes exposent quelques problèmes que vous pouvez rencontrer dans vos applications [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] et fournissent des suggestions pour les éviter, ou du moins en réduire l'effet.  
@@ -57,7 +59,7 @@ Les informations suivantes exposent quelques problèmes que vous pouvez rencontr
   
 -   Il y a une référence à `System.Core.dll` et `System.Data.Linq.dll`.  
   
--   Il y a une directive `Imports` ([!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]) ou `using` (C#) pour <xref:System.Linq> et <xref:System.Data.Linq>.  
+-   Vous avez un `Imports` (Visual Basic) ou `using` directive (c#) pour <xref:System.Linq> et <xref:System.Data.Linq>.  
   
 ## <a name="duplicatekeyexception"></a>DuplicateKeyException  
  Au cours de débogage un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] projet, il est possible que vous les relations d’une entité. Cela place ces éléments dans le cache, et [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] est informé de leur présence. Si vous tentez ensuite d'exécuter <xref:System.Data.Linq.Table%601.Attach%2A> ou <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A> ou une méthode similaire qui produit plusieurs lignes ayant la même clé, une <xref:System.Data.Linq.DuplicateKeyException> est levée.  

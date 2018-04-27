@@ -1,30 +1,32 @@
 ---
-title: "Gestion des événements Visual Basic et WPF"
-ms.custom: 
+title: Gestion des événements Visual Basic et WPF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic [WPF], event handlers
 - event handlers [WPF], Visual Basic
 ms.assetid: ad4eb9aa-3afc-4a71-8cf6-add3fbea54a1
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ed10e52c59112714a500fe52ccf5b398c14a97b7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f61b63e7f80ec779d03c230bd4f24eed00098242
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-basic-and-wpf-event-handling"></a>Gestion des événements Visual Basic et WPF
-Pour le [!INCLUDE[TLA#tla_visualbnet](../../../../includes/tlasharptla-visualbnet-md.md)] langage en particulier, vous pouvez utiliser spécifique au langage `Handles` mot clé à associer des gestionnaires d’événements avec des instances, au lieu d’attacher des gestionnaires d’événements avec des attributs ou à l’aide de la <xref:System.Windows.UIElement.AddHandler%2A> (méthode). La technique `Handles` présente toutefois quelques limitations, car la syntaxe de `Handles` ne prend pas en charge certaines fonctionnalités d’événement routé spécifiques du système d’événement [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+Pour la langue de Microsoft Visual Basic .NET en particulier, vous pouvez utiliser spécifique au langage `Handles` mot clé à associer des gestionnaires d’événements avec des instances, au lieu d’attacher des gestionnaires d’événements avec des attributs ou à l’aide de la <xref:System.Windows.UIElement.AddHandler%2A> (méthode). La technique `Handles` présente toutefois quelques limitations, car la syntaxe de `Handles` ne prend pas en charge certaines fonctionnalités d’événement routé spécifiques du système d’événement [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
 ## <a name="using-handles-in-a-wpf-application"></a>Utilisation de « handles » dans une application WPF  
  Les gestionnaires d’événements connectés à des instances et à des événements par le biais de `Handles` doivent être définis dans la déclaration de classe partielle de l’instance. C’est également le cas des gestionnaires d’événements assignés par le biais de valeurs d’attribut sur les éléments. Vous ne pouvez spécifier `Handles` d’un élément sur la page qui comporte un <xref:System.Windows.FrameworkContentElement.Name%2A> valeur de la propriété (ou [Directive x : Name](../../../../docs/framework/xaml-services/x-name-directive.md) déclaré). C’est parce que le <xref:System.Windows.FrameworkContentElement.Name%2A> dans [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] crée la référence d’instance qui est nécessaire pour prendre en charge la *instance.événement* au format de référence requis par le `Handles` syntaxe. Le seul élément qui peut être utilisé pour `Handles` sans un <xref:System.Windows.FrameworkContentElement.Name%2A> référence est l’instance de l’élément racine qui définit la classe partielle.  
@@ -45,7 +47,7 @@ Pour le [!INCLUDE[TLA#tla_visualbnet](../../../../includes/tlasharptla-visualbne
  `Handles` ne peut pas joindre des gestionnaires appelés pour des événements déjà marqués comme gérés. Au lieu de cela, vous devez utiliser le code et appeler le `handledEventsToo` surcharge de <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29>.  
   
 > [!NOTE]
->  N’utilisez pas la syntaxe `Handles` dans le code [!INCLUDE[vb_current_short](../../../../includes/vb-current-short-md.md)] quand vous spécifiez un gestionnaire d’événements pour le même événement en XAML. Dans ce cas, le gestionnaire d’événements est appelé deux fois.  
+>  N’utilisez pas le `Handles` syntaxe dans le code Visual Basic lorsque vous spécifiez un gestionnaire d’événements pour le même événement en XAML. Dans ce cas, le gestionnaire d’événements est appelé deux fois.  
   
 ## <a name="how-wpf-implements-handles-functionality"></a>Implémentation de la fonctionnalité « Handles » par WPF  
  Quand un [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] page est compilée, le fichier intermédiaire déclare `Friend` `WithEvents` des références à tous les éléments sur la page qui comporte un <xref:System.Windows.FrameworkContentElement.Name%2A> jeu de propriétés (ou [Directive x : Name](../../../../docs/framework/xaml-services/x-name-directive.md) déclaré). Chaque instance nommée est un élément susceptible d’être assigné à un gestionnaire par le biais de `Handles`.  

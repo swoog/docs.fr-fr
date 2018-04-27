@@ -1,27 +1,29 @@
 ---
-title: "Transaction et opérations de copie en bloc"
-ms.custom: 
+title: Transaction et opérations de copie en bloc
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: f6f0cbc9-f7bf-4d6e-875f-ad1ba0b4aa62
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: d37ea32ef1f73b84050cdd64ca026ac12813bbd2
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 40494c887ffa48c6ebc7f020cb4d42eecbd08e75
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="transaction-and-bulk-copy-operations"></a>Transaction et opérations de copie en bloc
 Les opérations de copie en bloc peuvent être réalisées sous forme d’opérations isolées ou en tant qu’étape d’une transaction en comptant plusieurs. Cette dernière option vous permet d'effectuer plus d'une opération de copie en bloc dans la même transaction et d'effectuer d'autres opérations de base de données (telles que des insertions, des mises à jour et des suppressions) tout en vous laissant la possibilité de valider ou de restaurer toute la transaction.  
@@ -36,7 +38,7 @@ Les opérations de copie en bloc peuvent être réalisées sous forme d’opéra
  L'opération de copie en bloc est exécutée avec la propriété <xref:System.Data.SqlClient.SqlBulkCopy.BatchSize%2A> ayant la valeur 10. Lorsque l'opération rencontre la ligne non valide, une exception est levée. Dans ce premier exemple, l'opération de copie en bloc n'est pas traitée. Tous les lots copiés jusqu’au moment de l’erreur sont validés ; le lot contenant la clé dupliquée est annulé et l’opération de copie en bloc est suspendue avant la reprise du traitement des autres lots.  
   
 > [!NOTE]
->  Cet exemple ne s’exécutera pas à moins que vous ayez créé les tables de travail comme décrit dans [configuration exemple de copie en bloc](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Ce code est fourni pour illustrer la syntaxe pour l’utilisation de **SqlBulkCopy** uniquement. Si les tables sources et de destination se trouvent dans la même instance [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)], il est plus facile et plus rapide d'utiliser une instruction [!INCLUDE[tsql](../../../../../includes/tsql-md.md)]`INSERT … SELECT` pour copier les données.  
+>  Cet exemple ne s’exécutera pas à moins que vous ayez créé les tables de travail comme décrit dans [configuration exemple de copie en bloc](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Ce code est fourni pour illustrer la syntaxe pour l’utilisation de **SqlBulkCopy** uniquement. Si les tables source et de destination se trouvent dans la même instance de SQL Server, il est plus facile et plus rapide d’utiliser un [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] `INSERT … SELECT` instruction pour copier les données.  
   
  [!code-csharp[DataWorks SqlBulkCopy.DefaultTransaction#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.DefaultTransaction/CS/source.cs#1)]
  [!code-vb[DataWorks SqlBulkCopy.DefaultTransaction#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.DefaultTransaction/VB/source.vb#1)]  
@@ -52,7 +54,7 @@ Les opérations de copie en bloc peuvent être réalisées sous forme d’opéra
  L'application console suivante est semblable à l'exemple précédent, avec une exception : dans cet exemple, l'opération de copie en bloc gère ses propres transactions. Tous les lots copiés jusqu’au moment de l’erreur sont validés ; le lot contenant la clé dupliquée est annulé et l’opération de copie en bloc est suspendue avant la reprise du traitement des autres lots.  
   
 > [!IMPORTANT]
->  Cet exemple ne s’exécutera pas à moins que vous ayez créé les tables de travail comme décrit dans [configuration exemple de copie en bloc](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Ce code est fourni pour illustrer la syntaxe pour l’utilisation de **SqlBulkCopy** uniquement. Si les tables sources et de destination se trouvent dans la même instance [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)], il est plus facile et plus rapide d'utiliser une instruction [!INCLUDE[tsql](../../../../../includes/tsql-md.md)]`INSERT … SELECT` pour copier les données.  
+>  Cet exemple ne s’exécutera pas à moins que vous ayez créé les tables de travail comme décrit dans [configuration exemple de copie en bloc](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Ce code est fourni pour illustrer la syntaxe pour l’utilisation de **SqlBulkCopy** uniquement. Si les tables source et de destination se trouvent dans la même instance de SQL Server, il est plus facile et plus rapide d’utiliser un [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] `INSERT … SELECT` instruction pour copier les données.  
   
  [!code-csharp[DataWorks SqlBulkCopy.InternalTransaction#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.InternalTransaction/CS/source.cs#1)]
  [!code-vb[DataWorks SqlBulkCopy.InternalTransaction#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.InternalTransaction/VB/source.vb#1)]  
@@ -65,7 +67,7 @@ Les opérations de copie en bloc peuvent être réalisées sous forme d’opéra
  L'application console suivante est semblable au premier exemple (non accompli), avec une exception : dans cet exemple, l'opération de copie en bloc est incluse dans une transaction externe plus large. Si l’erreur de violation de clé primaire se produit, toute la transaction est annulée et aucune ligne n’est ajoutée à la table de destination.  
   
 > [!IMPORTANT]
->  Cet exemple ne s’exécutera pas à moins que vous ayez créé les tables de travail comme décrit dans [configuration exemple de copie en bloc](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Ce code est fourni pour illustrer la syntaxe pour l’utilisation de **SqlBulkCopy** uniquement. Si les tables sources et de destination se trouvent dans la même instance [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)], il est plus facile et plus rapide d'utiliser une instruction [!INCLUDE[tsql](../../../../../includes/tsql-md.md)]`INSERT … SELECT` pour copier les données.  
+>  Cet exemple ne s’exécutera pas à moins que vous ayez créé les tables de travail comme décrit dans [configuration exemple de copie en bloc](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Ce code est fourni pour illustrer la syntaxe pour l’utilisation de **SqlBulkCopy** uniquement. Si les tables source et de destination se trouvent dans la même instance de SQL Server, il est plus facile et plus rapide d’utiliser un [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] `INSERT … SELECT` instruction pour copier les données.  
   
  [!code-csharp[DataWorks SqlBulkCopy.SqlTransaction#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.SqlTransaction/CS/source.cs#1)]
  [!code-vb[DataWorks SqlBulkCopy.SqlTransaction#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.SqlTransaction/VB/source.vb#1)]  

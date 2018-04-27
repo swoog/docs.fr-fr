@@ -1,31 +1,33 @@
 ---
-title: "Prise en charge de SqlClient pour la haute disponibilité et la récupération d'urgence"
-ms.custom: 
+title: Prise en charge de SqlClient pour la haute disponibilité et la récupération d'urgence
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 4f6ede253f52682cfe5a698cf4fb02841dc4c1e0
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: aab233fca7754f154166778646acba8d8df7de83
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Prise en charge de SqlClient pour la haute disponibilité et la récupération d'urgence
-Cette rubrique décrit la prise en charge SqlClient (ajoutée dans [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]) de la haute disponibilité, récupération d'urgence -- groupes de disponibilité AlwaysOn.  La fonctionnalité Groupes de disponibilité AlwaysOn a été ajoutée à [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012. Pour plus d'informations sur les groupes de disponibilité AlwaysOn, consultez la documentation en ligne de [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].  
+Cette rubrique décrit la prise en charge SqlClient (ajoutée dans [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]) de la haute disponibilité, récupération d'urgence -- groupes de disponibilité AlwaysOn.  Fonctionnalité de groupes de disponibilité AlwaysOn a été ajoutée à SQL Server 2012. Pour plus d’informations sur les groupes de disponibilité AlwaysOn, consultez la documentation en ligne de SQL Server.  
   
- Vous pouvez à présent spécifier l'écouteur du groupe de disponibilité (haute disponibilité, récupération d'urgence) ou une instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012 dans la propriété de connexion. Si une application SqlClient est connectée à une base de données AlwaysOn qui bascule, la connexion initiale est interrompue et l'application doit ouvrir une nouvelle connexion pour continuer les tâches après le basculement.  
+ Vous pouvez maintenant spécifier l’écouteur du groupe de disponibilité d’une (haute disponibilité, récupération d’urgence) groupe de disponibilité (AG) ou l’Instance de Cluster de basculement SQL Server 2012 dans la propriété de connexion. Si une application SqlClient est connectée à une base de données AlwaysOn qui bascule, la connexion initiale est interrompue et l'application doit ouvrir une nouvelle connexion pour continuer les tâches après le basculement.  
   
- Si vous ne vous connectez pas à un écouteur du groupe de disponibilité ou à une instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012, et si plusieurs adresses IP sont associées à un nom d'hôte, SqlClient itèrera de manière séquentielle au sein de toutes les adresses IP associées aux entrées DNS. Cela peut prendre du temps si la première adresse IP retournée par le serveur DNS n'est liée à aucune carte d'interface réseau. Lors de la connexion à un écouteur du groupe de disponibilité ou une instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012, SqlClient tente d'établir des connexions à toutes les adresses IP en parallèle et si une tentative de connexion réussit, le pilote ignore toutes les tentatives de connexion en attente.  
+ Si vous ne vous connectez pas à un écouteur de groupe de disponibilité ou d’une Instance de Cluster de basculement SQL Server 2012, et si plusieurs adresses IP sont associées à un nom d’hôte, SqlClient sera itérer séquentiellement toutes les adresses IP associées entrée DNS. Cela peut prendre du temps si la première adresse IP retournée par le serveur DNS n'est liée à aucune carte d'interface réseau. Lors de la connexion à un écouteur de groupe de disponibilité ou d’une Instance de Cluster de basculement SQL Server 2012, SqlClient tente d’établir des connexions à toutes les adresses IP en parallèle et si une tentative de connexion réussit, le pilote ignore toutes les connexions en attente tentatives.  
   
 > [!NOTE]
 >  L'augmentation du délai de connexion et l'implémentation de la logique de nouvelles tentatives de connexion augmentent la probabilité qu'une application se connecte à un groupe de disponibilité. En outre, étant donné qu'une connexion peut échouer en raison d'un basculement, vous devez implémenter la logique pour les nouvelles tentatives de connexion, nouvelle tentative de connexion jusqu'à reconnexion.  
@@ -46,23 +48,23 @@ Cette rubrique décrit la prise en charge SqlClient (ajoutée dans [!INCLUDE[net
 >  Paramètre `MultiSubnetFailover` à `true` n’est pas nécessaire avec [!INCLUDE[net_v461](../../../../../includes/net-v461-md.md)]) ou versions ultérieures.
   
 ## <a name="connecting-with-multisubnetfailover"></a>Connexion avec MultiSubnetFailover  
- Spécifiez toujours `MultiSubnetFailover=True` lors de la connexion à un écouteur du groupe de disponibilité [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012 ou à l'instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012. `MultiSubnetFailover` permet le basculement plus rapide de tous les groupes de disponibilité et/ou de l'instance de cluster de basculement dans [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012 et réduit considérablement le temps de basculement pour les topologies de sous-réseau unique et de plusieurs sous-réseaux AlwaysOn. Pendant un basculement de multi sous-réseau, le client effectue des tentatives de connexion en parallèle. Pendant un basculement de sous-réseau, le client effectue des tentatives de connexion TCP de manière agressive.  
+ Spécifiez toujours `MultiSubnetFailover=True` lors de la connexion à un écouteur de groupe de disponibilité de SQL Server 2012 ou une Instance de Cluster de basculement SQL Server 2012. `MultiSubnetFailover` permet un basculement plus rapide pour tous les groupes de disponibilité et ou Instance de Cluster de basculement dans SQL Server 2012 et va réduire considérablement le temps de basculement pour les topologies AlwaysOn de sous-réseaux uniques et multiples. Pendant un basculement de multi sous-réseau, le client effectue des tentatives de connexion en parallèle. Pendant un basculement de sous-réseau, le client effectue des tentatives de connexion TCP de manière agressive.  
   
- La propriété de connexion `MultiSubnetFailover` indique que l'application est déployée dans un groupe de disponibilité ou une instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012 et que SqlClient tente de se connecter à la base de données sur l'instance principale [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] lorsque vous essayez de vous connecter à toutes les adresses IP. Lorsque `MultiSubnetFailover=True` est spécifié pour une connexion, le client effectue des tentatives de connexion TCP plus rapidement que les intervalles de retransmission TCP par défaut du système d'exploitation. Cela permet une reconnexion plus rapide après basculement d'un groupe de disponibilité AlwaysOn ou d'une instance de cluster de basculement AlwaysOn, et s'applique aux groupes de disponibilité de sous-réseau unique et de multi-sous-réseau et aux instances de cluster de basculement.  
+ Le `MultiSubnetFailover` propriété de connexion indique que l’application est déployée dans un groupe de disponibilité ou d’une Instance de Cluster de basculement SQL Server 2012 et que SqlClient tente de se connecter à la base de données sur l’instance de SQL Server principale en essayant de se connecter à toutes les adresses IP. Lorsque `MultiSubnetFailover=True` est spécifié pour une connexion, le client effectue des tentatives de connexion TCP plus rapidement que les intervalles de retransmission TCP par défaut du système d'exploitation. Cela permet une reconnexion plus rapide après basculement d'un groupe de disponibilité AlwaysOn ou d'une instance de cluster de basculement AlwaysOn, et s'applique aux groupes de disponibilité de sous-réseau unique et de multi-sous-réseau et aux instances de cluster de basculement.  
   
  Pour plus d'informations sur les mots clés de chaîne de connexion dans SqlClient, consultez <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
   
- La spécification de `MultiSubnetFailover=True` lors de la connexion à un élément autre qu'un écouteur du groupe de disponibilité ou une instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012 peut provoquer une diminution des performances, et n'est pas prise en charge.  
+ Spécification de `MultiSubnetFailover=True` lorsque la connexion à un élément autre qu’un écouteur du groupe de disponibilité ou d’une Instance de Cluster de basculement SQL Server 2012 peut provoquer une diminution des performances et n’est pas pris en charge.  
   
- Suivez les indications suivantes pour vous connecter à un serveur dans un groupe de disponibilité ou une instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012 :  
+ Utilisez les instructions suivantes pour vous connecter à un serveur dans un groupe de disponibilité ou Instance de Cluster de basculement SQL Server 2012 :  
   
 -   Utilisez la propriété de connexion `MultiSubnetFailover` lors de la connexion à un sous-réseau unique ou à un multi-sous-réseau ; elle permet d'améliorer les performances pour les deux.  
   
 -   Pour vous connecter à un groupe de disponibilité, spécifiez l'écouteur du groupe de disponibilité en tant que serveur dans votre chaîne de connexion.  
   
--   La connexion à une instance [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] configurée avec plus de 64 adresses IP entraîne un échec de connexion.  
+-   Connexion à un serveur SQL Server instance configurée avec plus de 64 adresses IP entraîne un échec de connexion.  
   
--   Le comportement d'une application qui utilise la propriété de connexion `MultiSubnetFailover` n'est pas affecté selon le type d'authentification : authentification [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)], authentification Kerberos ou authentification Windows.  
+-   Comportement d’une application qui utilise le `MultiSubnetFailover` propriété de connexion n’est pas affectée selon le type d’authentification : l’authentification SQL Server, l’authentification Kerberos ou l’authentification Windows.  
   
 -   Augmentez la valeur de `Connect Timeout` pour permettre la prise en charge pour le temps de basculement et réduire les tentatives de nouvelle connexion d'application.  
   
@@ -79,7 +81,7 @@ Cette rubrique décrit la prise en charge SqlClient (ajoutée dans [!INCLUDE[net
  Une connexion échoue si un réplica principal est configuré pour rejeter les charges de travail en lecture seule et la chaîne de connexion contient `ApplicationIntent=ReadOnly`.  
   
 ## <a name="upgrading-to-use-multi-subnet-clusters-from-database-mirroring"></a>Mise à niveau pour utiliser des clusters de multi-sous-réseaux de mise en miroir de bases de données  
- Une erreur de connexion (<xref:System.ArgumentException>) se produira si les mots clés de connexion `MultiSubnetFailover` et `Failover Partner` sont présents dans la chaîne de connexion, ou si `MultiSubnetFailover=True` et un protocole autre que TCP est utilisé. Une erreur (<xref:System.Data.SqlClient.SqlException>) peut aussi se produire si `MultiSubnetFailover` est utilisé et [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] retourne une réponse de partenaire de basculement indiquant qu'il fait partie de la paire de mise en miroir de bases de données.  
+ Une erreur de connexion (<xref:System.ArgumentException>) se produira si les mots clés de connexion `MultiSubnetFailover` et `Failover Partner` sont présents dans la chaîne de connexion, ou si `MultiSubnetFailover=True` et un protocole autre que TCP est utilisé. Une erreur (<xref:System.Data.SqlClient.SqlException>) se produit également si `MultiSubnetFailover` est utilisé et le serveur SQL Server retourne une réponse de partenaire de basculement indiquant qu’il fait partie d’une paire de mise en miroir de base de données.  
   
  Si vous mettez à niveau une application SqlClient qui utilise actuellement la mise en miroir de bases de données dans un scénario de multi-sous-réseau, vous devez supprimer la propriété de connexion `Failover Partner` et la remplacer par `MultiSubnetFailover` ayant la valeur `True` et remplacer le nom du serveur dans la chaîne de connexion par un écouteur du groupe de disponibilité. Si une chaîne de connexion utilise `Failover Partner` et `MultiSubnetFailover=True`, le pilote génère une erreur. Toutefois, si une chaîne de connexion utilise `Failover Partner` et `MultiSubnetFailover=False` (ou `ApplicationIntent=ReadWrite`), l'application utilise la mise en miroir de bases de données.  
   

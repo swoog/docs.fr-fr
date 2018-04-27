@@ -1,5 +1,5 @@
 ---
-title: '&#39; En tant que &#39; n’est pas pris en charge dans &#39; Declare &#39; instructions'
+title: '&#39;En tant que&#39; n’est pas pris en charge dans &#39;Declare&#39; instructions'
 ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: ''
@@ -15,14 +15,14 @@ ms.assetid: 7e5cf519-8b64-4ac5-8116-705fe26c846d
 caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 59120622688ee38d5b8f45c08dfc3ae40711fb8b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d8146e339ac5cb005b99c9a1e02f1cd248c4558b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="39as-any39-is-not-supported-in-39declare39-statements"></a>&#39; En tant que &#39; n’est pas pris en charge dans &#39; Declare &#39; instructions
-Le `Any` type de données a été utilisé avec `Declare` instructions dans Visual Basic 6.0 et versions antérieures pour permettre l’utilisation d’arguments qui peut contenir n’importe quel type de données. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]prend en charge la surcharge, toutefois et rend ainsi le `Any` de type de données obsolète.  
+# <a name="39as-any39-is-not-supported-in-39declare39-statements"></a>&#39;En tant que&#39; n’est pas pris en charge dans &#39;Declare&#39; instructions
+Le `Any` type de données a été utilisé avec `Declare` instructions dans Visual Basic 6.0 et versions antérieures pour permettre l’utilisation d’arguments qui peut contenir n’importe quel type de données. Visual Basic prend en charge la surcharge, toutefois et rend ainsi le `Any` de type de données obsolète.  
   
  **ID d’erreur :** BC30828  
   

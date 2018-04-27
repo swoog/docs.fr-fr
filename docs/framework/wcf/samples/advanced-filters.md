@@ -1,24 +1,26 @@
 ---
-title: "Filtres avancés"
-ms.custom: 
+title: Filtres avancés
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8d81590f-e036-4f96-824a-4a187f462764
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 357b57bb39ca31b48d21cb83209a72d0b3d12a62
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a374765317751a5adc241941a0c0dc613a3ea2cc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="advanced-filters"></a>Filtres avancés
 Cet exemple illustre un service de routage [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Le service de routage est un composant [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] qui facilite l'inclusion d'un routeur basé sur le contenu dans votre application. Cet exemple adapte l'exemple [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Calculator standard pour communiquer à l'aide du service de routage. Il montre comment définir une logique de routage basé sur le contenu via l'utilisation de filtres de messages et de tables de filtres de messages.  
@@ -60,7 +62,7 @@ XPathMessageFilter xpathFilter = new XPathMessageFilter("/s12:Envelope/s12:Heade
 EndpointNameMessageFilter endpointNameFilter = new EndpointNameMessageFilter("calculatorEndpoint");  
 ```  
   
- Le troisième filtre est un <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>. Il accepte comme correspondance tout message apparu sur un point de terminaison avec une adresse qui correspond au préfixe (ou première partie) d'adresse fourni. Dans cet exemple, le préfixe d'adresse défini est "http://localhost/routingservice/router/rounding/". Cela signifie que ce filtre établit une correspondance avec tous les messages entrants adressés à "http://localhost/routingservice/router/rounding/*". Dans ce cas, il s'agit des messages qui apparaissent sur le point de terminaison Rounding Calculator, dont l'adresse est "http://localhost/routingservice/router/rounding/calculator".  
+ Le troisième filtre est un <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>. Il accepte comme correspondance tout message apparu sur un point de terminaison avec une adresse qui correspond au préfixe (ou première partie) d'adresse fourni. Dans cet exemple, le préfixe d’adresse est défini comme «http://localhost/routingservice/router/rounding/». Cela signifie que tous les messages entrants adressés à «http://localhost/routingservice/router/rounding/* » sont mis en correspondance par ce filtre. Dans ce cas, il concerne les messages qui apparaissent sur le point de terminaison Rounding Calculator, qui a l’adresse de «http://localhost/routingservice/router/rounding/calculator».  
   
 ```  
 PrefixEndpointAddressMessageFilter prefixAddressFilter = new PrefixEndpointAddressMessageFilter(new EndpointAddress("http://localhost/routingservice/router/rounding/"));  
@@ -91,7 +93,7 @@ RoundRobinMessageFilter roundRobinFilter2 = new RoundRobinMessageFilter("group1"
   
 2.  Pour ouvrir **l’Explorateur de solutions**, sélectionnez **l’Explorateur de solutions** à partir de la **vue** menu.  
   
-3.  Appuyez sur F5 ou CTRL+MAJ+B dans [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)].  
+3.  Appuyez sur F5 ou CTRL + MAJ + B dans Visual Studio.  
   
     1.  Si vous souhaitez lancer automatiquement les projets nécessaires lorsque vous appuyez sur F5, cliquez sur la solution et sélectionnez **propriétés**. Sélectionnez le **projet de démarrage** nœud sous **propriétés communes** dans le volet gauche. Sélectionnez le **plusieurs projets de démarrage** case d’option et tous les projets d’avoir défini la **Démarrer** action.  
   

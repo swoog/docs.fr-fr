@@ -1,12 +1,13 @@
 ---
 title: Vue d'ensemble de l'impression
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,19 +23,20 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 91ccf1f98d9e1e2f5784246cf30995b689a0b94b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9a36589ca670892398b4d6bb171e79a07060d458
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="printing-overview"></a>Vue d'ensemble de l'impression
-Avec [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)], les développeurs d'applications utilisant [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] disposent d'un nouvel ensemble étoffé d'[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] d'impression et de gestion du système d'impression. Avec [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], certaines de ces améliorations du système d'impression sont aussi accessibles aux développeurs créant des applications [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] et à ceux utilisant du code non managé. Le nouveau format de fichier [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] et le chemin d'impression [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] sont au cœur de cette nouvelle fonctionnalité.  
+Avec Microsoft .NET Framework, les développeurs d’applications à l’aide de [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] ont un nouvel ensemble riche de gestion du système d’impression et impression [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]. Avec [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], certaines de ces améliorations du système d'impression sont aussi accessibles aux développeurs créant des applications [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] et à ceux utilisant du code non managé. Le nouveau format de fichier [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] et le chemin d'impression [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] sont au cœur de cette nouvelle fonctionnalité.  
   
  Cette rubrique contient les sections suivantes.  
   
@@ -46,11 +48,11 @@ Avec [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)], le
   
 <a name="XPS_print_path_intro"></a>   
 ## <a name="xps-print-path"></a>Chemin d'impression XPS  
- Le chemin d'impression [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] est une nouvelle fonctionnalité [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] qui redéfinit la façon dont l'impression est gérée dans les applications [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)]. Comme [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] peut remplacer un langage de présentation de document (comme RTF), un format de spouleur d'impression (comme WMF) et un langage de description de page (comme PCL ou Postscript), le nouveau chemin d'impression conserve le format [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] de la publication de l'application jusqu'au traitement final dans le pilote ou le périphérique d'impression.  
+ Le [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] d’impression est un nouveau [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] fonctionnalité qui redéfinit la gestion de l’impression dans les applications Windows. Comme [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] peut remplacer un langage de présentation de document (comme RTF), un format de spouleur d'impression (comme WMF) et un langage de description de page (comme PCL ou Postscript), le nouveau chemin d'impression conserve le format [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] de la publication de l'application jusqu'au traitement final dans le pilote ou le périphérique d'impression.  
   
  Le chemin d'impression [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] repose sur le modèle de pilote d'imprimante [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] (XPSDrv), qui offre aux développeurs plusieurs avantages tels que l'impression [!INCLUDE[TLA#tla_wys](../../../../includes/tlasharptla-wys-md.md)], une meilleure prise en charge de la couleur et des performances d'impression nettement améliorées. (Pour plus d’informations sur XPSDrv, consultez [Windows Driver Kit (WDK)](https://msdn.microsoft.com/library/windows/hardware/ff557573.aspx).)  
   
- Le fonctionnement du spouleur d'impression pour les documents [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] est pour l'essentiel le même que dans les versions précédentes de [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)]. Cependant, il a été amélioré pour prendre en charge le chemin d'impression [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)], en plus du chemin d'impression existante [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]. Le nouveau chemin d'impression utilise un fichier spool [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] en mode natif. Bien que les pilotes d'imprimantes en mode utilisateur écrits pour les versions antérieures de [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] continuent de fonctionner, un pilote d'imprimante [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] (XPSDrv) est nécessaire pour pouvoir utiliser le chemin d'impression [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)].  
+ L’opération du spouleur d’impression pour [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] documents est essentiellement la même que dans les versions précédentes de Windows. Cependant, il a été amélioré pour prendre en charge le chemin d'impression [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)], en plus du chemin d'impression existante [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]. Le nouveau chemin d'impression utilise un fichier spool [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] en mode natif. Bien que les pilotes d'imprimantes en mode utilisateur écrits pour les versions antérieures de [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] continuent de fonctionner, un pilote d'imprimante [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] (XPSDrv) est nécessaire pour pouvoir utiliser le chemin d'impression [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)].  
   
  Le chemin d'impression [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] présente des avantages significatifs, à savoir :  
   

@@ -18,11 +18,11 @@ ms.assetid: f7bbee56-0911-41de-b907-96f20450137b
 caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 008b5857418a572046797bf061a05f265669d427
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d5c84fecbb035c229cc3576bc556db6ecb6f3934
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xml-document-literal-visual-basic"></a>Littéral de document XML (Visual Basic)
 Littéral représentant un <xref:System.Xml.Linq.XDocument> objet.  
@@ -48,15 +48,15 @@ rootElement
 ## <a name="return-value"></a>Valeur de retour  
  Objet <xref:System.Xml.Linq.XDocument>.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Un littéral de document XML est identifié par la déclaration XML au début du littéral. Bien que chaque littéral de document XML doit avoir exactement un élément XML racine, il peut avoir n’importe quel nombre d’instructions de traitement XML et de commentaires XML.  
   
  Un littéral de document XML ne peut pas apparaître dans un élément XML.  
   
 > [!NOTE]
->  Un littéral XML peut couvrir plusieurs lignes sans utiliser de caractères de continuation de ligne. Cela vous permet de copier le contenu d’un document XML et coller directement dans un [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] programme.  
+>  Un littéral XML peut couvrir plusieurs lignes sans utiliser de caractères de continuation de ligne. Cela vous permet de copier le contenu d’un document XML et le coller directement dans un programme Visual Basic.  
   
- Le [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilateur convertit le littéral de document XML en appels à la <xref:System.Xml.Linq.XDocument.%23ctor%2A> et <xref:System.Xml.Linq.XDeclaration.%23ctor%2A> constructeurs.  
+ Le compilateur Visual Basic convertit le littéral de document XML en appels à la <xref:System.Xml.Linq.XDocument.%23ctor%2A> et <xref:System.Xml.Linq.XDeclaration.%23ctor%2A> constructeurs.  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant crée un document XML qui possède une déclaration XML, une instruction de traitement, un commentaire et un élément qui contient un autre élément.  

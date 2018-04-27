@@ -1,11 +1,12 @@
 ---
-title: "Types de données composites (Visual Basic)"
-ms.custom: 
+title: Types de données composites (Visual Basic)
+ms.custom: ''
 ms.date: 04/25/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - classes [Visual Basic], composite data types
@@ -17,17 +18,17 @@ helpviewer_keywords:
 - classes [Visual Basic], composite types
 - types [Visual Basic], composite
 ms.assetid: 62970f2e-52c0-4369-8963-613820f1f434
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e9adb407757dbee2f7ac5a94118623a62212faec
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: caa832fc191ad925674e21b1237ac98328ce0bd7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="composite-data-types-visual-basic"></a>Types de données composites (Visual Basic)
-Outre les types de données élémentaires [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] fournit, vous pouvez assembler des éléments de différents types pour créer *types de données composites* tels que des structures, des tableaux et des classes. Vous pouvez générer des types de données composites à partir des types élémentaires et d’autres types composites. Par exemple, vous pouvez définir un tableau d’éléments de structure ou une structure avec des membres de tableau.  
+Outre les blocs de Visual Basic de types de données élémentaires, vous pouvez assembler des éléments de différents types pour créer *types de données composites* tels que des structures, des tableaux et des classes. Vous pouvez générer des types de données composites à partir des types élémentaires et d’autres types composites. Par exemple, vous pouvez définir un tableau d’éléments de structure ou une structure avec des membres de tableau.  
   
 ## <a name="data-types"></a>Types de données  
  Un type composite est différent du type de données d’un de ses composants. Par exemple, un tableau de `Integer` éléments n’est pas le `Integer` type de données.  
@@ -35,7 +36,7 @@ Outre les types de données élémentaires [!INCLUDE[vbprvb](~/includes/vbprvb-m
  Un type de données de tableau est généralement représenté à l’aide du type d’élément, parenthèses et des virgules si nécessaire. Par exemple, un tableau unidimensionnel de `String` éléments est représenté en tant que `String()`et un tableau à deux dimensions de `Boolean` éléments est représenté en tant que `Boolean(,)`.  
   
 ## <a name="structure-types"></a>Types de structure  
- Il n’existe aucun type de données unique comprenant toutes les structures. Au lieu de cela, chaque définition d’une structure représente un type de données unique, même si deux structures définissent des éléments identiques dans le même ordre. Toutefois, si vous créez deux ou plusieurs instances de la même structure, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] considère qu’ils soient du même type de données.  
+ Il n’existe aucun type de données unique comprenant toutes les structures. Au lieu de cela, chaque définition d’une structure représente un type de données unique, même si deux structures définissent des éléments identiques dans le même ordre. Toutefois, si vous créez deux ou plusieurs instances de la même structure, Visual Basic considère qu’ils soient du même type de données.  
   
 ## <a name="tuples"></a>Tuples
 

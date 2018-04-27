@@ -1,12 +1,13 @@
 ---
 title: UI Automation et Microsoft Active Accessibility
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Active Accessibility
@@ -14,16 +15,17 @@ helpviewer_keywords:
 - UI Automation, Microsoft Active Accessibility
 - Active Accessibility, UI Automation compared to
 ms.assetid: 87bee662-0a3e-4232-a421-20e7a5968321
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: b826bff9f16dcd564e9b5bd91aab8b2170db6ce3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2028f312433e3a4cf8c90f2e6809ed29288d7819
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ui-automation-and-microsoft-active-accessibility"></a>UI Automation et Microsoft Active Accessibility
 > [!NOTE]
@@ -35,7 +37,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Programming_Languages_compare"></a>   
 ## <a name="programming-languages"></a>Langages de programmation  
- [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] est basé sur [!INCLUDE[TLA#tla_com](../../../includes/tlasharptla-com-md.md)] avec la prise en charge des interfaces doubles. Ainsi, il est programmable en C/C++, en [!INCLUDE[TLA#tla_vb6](../../../includes/tlasharptla-vb6-md.md)]et dans les langages de script. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] (y compris la bibliothèque fournisseur côté client pour les contrôles standard) est écrit en code managé et les applications clientes UI Automation sont programmées plus facilement à l’aide de [!INCLUDE[TLA#tla_vcshrp](../../../includes/tlasharptla-vcshrp-md.md)] ou de [!INCLUDE[TLA#tla_visualbnet](../../../includes/tlasharptla-visualbnet-md.md)]. Les fournisseurs UI Automation, qui sont des implémentations d’interface, peuvent être écrits en code managé ou en C/C++.  
+<[!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] est basé sur le [!INCLUDE[TLA#tla_com](../../../includes/tlasharptla-com-md.md)] avec prise en charge pour les interfaces doubles et est par conséquent programmable en C/C++, [!INCLUDE[TLA#tla_vb6](../../../includes/tlasharptla-vb6-md.md)]et les langages de script. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] (y compris la bibliothèque de fournisseur côté client pour les contrôles standard) est écrit en code managé, et les applications clientes UI Automation sont programmées plus facilement à l’aide de c# ou Visual Basic .NET. Les fournisseurs UI Automation, qui sont des implémentations d’interface, peuvent être écrits en code managé ou en C/C++.  
   
 <a name="Support_in_Windows_Presentation_Foundation_"></a>   
 ## <a name="support-in-windows-presentation-foundation"></a>Prise en charge dans Windows Presentation Foundation  
@@ -218,7 +220,7 @@ ms.lasthandoff: 12/22/2017
 |EVENT_OBJECT_SELECTIONWITHIN|Aucun équivalent|  
 |EVENT_OBJECT_SHOW|<xref:System.Windows.Automation.AutomationElement.StructureChangedEvent>|  
 |EVENT_OBJECT_STATECHANGE|Différents événements de modification de propriété|  
-|EVENT_OBJECT_VALUECHANGE|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty?displayProperty=nameWithType>et <xref:System.Windows.Automation.ValuePattern.ValueProperty?displayProperty=nameWithType> modifié|  
+|EVENT_OBJECT_VALUECHANGE|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty?displayProperty=nameWithType> et <xref:System.Windows.Automation.ValuePattern.ValueProperty?displayProperty=nameWithType> modifié|  
 |EVENT_SYSTEM_ALERT|Aucun équivalent|  
 |EVENT_SYSTEM_CAPTUREEND|Aucun équivalent|  
 |EVENT_SYSTEM_CAPTURESTART|Aucun équivalent|  

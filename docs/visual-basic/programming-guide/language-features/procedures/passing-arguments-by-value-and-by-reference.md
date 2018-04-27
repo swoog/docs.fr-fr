@@ -1,11 +1,12 @@
 ---
-title: "Passage d’un argument par valeur et par référence (Visual Basic)"
-ms.custom: 
+title: Passage d’un argument par valeur et par référence (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - ByRef keyword [Visual Basic], passing arguments by reference
@@ -15,17 +16,17 @@ helpviewer_keywords:
 - arguments [Visual Basic], passing by value or by reference
 - argument passing [Visual Basic], by value or by reference
 ms.assetid: fd8a9de6-7178-44d5-a9bf-458d4ad907c2
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 752c0c8e90cafe457cbd5d684bc984a1ea4632ac
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f10e0e582e060c1305a9c0fe922620cb4da2c215
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="passing-arguments-by-value-and-by-reference-visual-basic"></a>Passage d’un argument par valeur et par référence (Visual Basic)
-Dans [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], vous pouvez passer un argument à une procédure *par valeur* ou *par référence*. Il s’agit du *mécanisme de passage*, et détermine si la procédure peut modifier l’élément de programmation sous-jacent à l’argument dans le code appelant. La déclaration de procédure détermine le mécanisme de passage pour chaque paramètre en spécifiant le [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) ou [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) (mot clé).  
+En Visual Basic, vous pouvez passer un argument à une procédure *par valeur* ou *par référence*. Il s’agit du *mécanisme de passage*, et détermine si la procédure peut modifier l’élément de programmation sous-jacent à l’argument dans le code appelant. La déclaration de procédure détermine le mécanisme de passage pour chaque paramètre en spécifiant le [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) ou [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) (mot clé).  
   
 ## <a name="distinctions"></a>Distinctions  
  Lorsque vous passez un argument à une procédure, tenez compte des diverses distinctions qui interagissent entre eux :  
@@ -45,7 +46,7 @@ Dans [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], vous pouvez passer un argument
   
 -   **Protection**. Dans le choix entre les deux mécanismes de transfert, le critère le plus important est l’exposition de l’appel de variables à modifier. L’avantage de passage d’un argument `ByRef` est que la procédure peut retourner une valeur au code appelant via cet argument. L’avantage de passage d’un argument `ByVal` permet d’empêcher une variable d’être modifiée par la procédure.  
   
--   **Performances**. Bien que le mécanisme de passage peut affecter les performances de votre code, la différence est généralement insignifiante. Une exception à cela est un type de valeur passé `ByVal`. Dans ce cas, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] copie le contenu de la totalité des données de l’argument. Par conséquent, pour un type de valeur élevée comme une structure, il peut être plus efficace de passer `ByRef`.  
+-   **Performances**. Bien que le mécanisme de passage peut affecter les performances de votre code, la différence est généralement insignifiante. Une exception à cela est un type de valeur passé `ByVal`. Dans ce cas, Visual Basic copie le contenu de la totalité des données de l’argument. Par conséquent, pour un type de valeur élevée comme une structure, il peut être plus efficace de passer `ByRef`.  
   
      Pour les types référence, seul le pointeur vers les données est copié (quatre octets sur les plateformes 32 bits, huit octets sur les plateformes 64 bits). Par conséquent, vous pouvez passer des arguments de type `String` ou `Object` par valeur sans nuire aux performances.  
   
@@ -54,7 +55,7 @@ Dans [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], vous pouvez passer un argument
   
  Si un paramètre est déclaré avec `ByRef`, le code appelant peut forcer le mécanisme à `ByVal` en mettant le nom de l’argument entre parenthèses dans l’appel. Pour plus d’informations, consultez [Comment : forcer un Argument à passer par valeur](./how-to-force-an-argument-to-be-passed-by-value.md).  
   
- La valeur par défaut dans [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] consiste à passer des arguments par valeur.  
+ La valeur par défaut en Visual Basic est de passer des arguments par valeur.  
   
 ## <a name="when-to-pass-an-argument-by-value"></a>Quand passer un Argument par valeur  
   

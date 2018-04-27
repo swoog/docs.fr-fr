@@ -1,30 +1,32 @@
 ---
-title: "Accès au service à partir d'un navigateur Web (démarrage rapide des services de données WCF)"
-ms.custom: 
+title: Accès au service à partir d'un navigateur Web (démarrage rapide des services de données WCF)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5a6fa180-3094-4e6e-ba2b-8c80975d18d1
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 71beb254bf258da97207f14afca73cd68c6927ca
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c9ae96facd79ae3d268c630ff7bf8adf411eb775
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="accessing-the-service-from-a-web-browser-wcf-data-services-quickstart"></a>Accès au service à partir d'un navigateur Web (démarrage rapide des services de données WCF)
-Dans cette tâche, vous allez démarrer [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] à partir de [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] et éventuellement désactiver la lecture de flux dans le navigateur Web. Vous serez ensuite extraire le document de définition de service ainsi accéder aux ressources du service de données en soumettant des demandes HTTP GET via un navigateur Web aux ressources exposées.  
+Dans cette tâche, vous allez démarrer [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] à partir de Visual Studio et éventuellement désactiver la lecture de flux dans le navigateur Web. Vous serez ensuite extraire le document de définition de service ainsi accéder aux ressources du service de données en soumettant des demandes HTTP GET via un navigateur Web aux ressources exposées.  
   
 > [!NOTE]
->  Par défaut, [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] affecte automatiquement un numéro de port à l'URI `localhost` sur votre ordinateur. Cette tâche utilise le numéro de port `12345` dans les exemples d'URI. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]comment définir un numéro de port spécifique dans votre [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] projet consultez [création du Service de données](../../../../docs/framework/data/wcf/creating-the-data-service.md).  
+>  Par défaut, Visual Studio affecte automatiquement un numéro de port à l'URI `localhost` sur votre ordinateur. Cette tâche utilise le numéro de port `12345` dans les exemples d'URI. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] comment définir un numéro de port spécifique dans votre projet Visual Studio [création du Service de données](../../../../docs/framework/data/wcf/creating-the-data-service.md).  
   
 ### <a name="to-request-the-default-service-document-by-using-internet-explorer"></a>Pour demander le document de service par défaut à l'aide d'Internet Explorer  
   
@@ -35,7 +37,7 @@ Dans cette tâche, vous allez démarrer [!INCLUDE[ssAstoria](../../../../include
     > [!NOTE]
     >  Si votre navigateur ne peut pas afficher le flux sous forme de données XML brutes, vous devriez encore être en mesure de voir le flux sous forme de code source de la page.  
   
-2.  Dans [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)], appuyez sur la touche F5 pour démarrer le débogage de l'application.  
+2.  Dans Visual Studio, appuyez sur la touche F5 pour démarrer le débogage de l'application.  
   
 3.  Ouvrez un navigateur Web sur l'ordinateur local. Dans la barre d'adresses, entrez l'URI suivant :  
   

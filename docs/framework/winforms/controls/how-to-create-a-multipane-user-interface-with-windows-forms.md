@@ -1,12 +1,13 @@
 ---
 title: "Comment : créer une interface utilisateur à plusieurs volets à l'aide des Windows Forms"
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -19,16 +20,17 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], examples
 - Splitter control [Windows Forms], examples
 ms.assetid: e79f6bcc-3740-4d1e-b46a-c5594d9b7327
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f29fb5fc4f873431471cd1c037446a5157d5f07c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6011eb2d49e537a2f5dfc540611af40a30b3e721
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms"></a>Comment : créer une interface utilisateur à plusieurs volets à l'aide des Windows Forms
 Dans la procédure suivante, vous allez créer une interface utilisateur à plusieurs volets semblable à celle utilisée dans Microsoft Outlook, avec une **dossier** liste, un **Messages** volet et un **aperçu** volet. Cette disposition est obtenue principalement par le biais d’ancrage de contrôles dans le formulaire.  
@@ -175,7 +177,7 @@ Dans la procédure suivante, vous allez créer une interface utilisateur à plus
     }  
     ```  
   
-3.  Dans [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)], ajoutez un appel à la procédure que vous venez de créer dans le `New()` procédure. Dans [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], ajoutez la ligne de code au constructeur de la classe de formulaire.  
+3.  En Visual Basic, ajoutez un appel à la procédure que vous venez de créer dans le `New()` procédure. Dans Visual c#, ajoutez cette ligne de code au constructeur de la classe de formulaire.  
   
     ```vb  
     ' Add this to the New procedure.  

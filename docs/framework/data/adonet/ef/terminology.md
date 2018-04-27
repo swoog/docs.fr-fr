@@ -1,24 +1,26 @@
 ---
 title: Terminologie Entity Framework
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fa2a1bd1-6118-487b-8673-eebc66b92945
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: a2d55319b5463b2c9624fe22e7a16235c3d57614
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: cd85760e219e810c089ebe88c8295d79ebaf0944
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="entity-framework-terminology"></a>Terminologie Entity Framework
 Cette rubrique définit des termes souvent référencés dans [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] documentation. Des liens vers des rubriques pertinentes dans lesquelles des informations supplémentaires sont disponibles sont fournis.  
@@ -55,7 +57,7 @@ Cette rubrique définit des termes souvent référencés dans [!INCLUDE[adonet_e
 |association indépendante|Association entre des entités qui est représentée et suivie par un objet indépendant.|  
 |clé|Attribut d'un type d'entité qui spécifie quelle propriété ou quel jeu de propriétés est utilisé pour identifier des instances uniques du type d'entité. Représenté dans la couche objet par la classe <xref:System.Data.EntityKey>.<br /><br /> Pour plus d’informations, consultez [élément clé (CSDL)](http://msdn.microsoft.com/library/0cdb1402-dbc7-4a04-a11e-5729cdf7431b) et [clé d’entité](../../../../../docs/framework/data/adonet/entity-key.md).|  
 |chargement différé|Lorsque des objets sont retournés par une requête, les objets connexes ne sont pas chargés en même temps. Ils sont en revanche chargés automatiquement lorsque la propriété de navigation est accédée.|  
-|[!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]|Syntaxe de requête qui définit un ensemble d'opérateurs de requête qui permettent d'exprimer des opérations de parcours, de filtre et de projection d'une manière déclarative directe dans [!INCLUDE[csprcs](../../../../../includes/csprcs-md.md)] et [!INCLUDE[vbprvb](../../../../../includes/vbprvb-md.md)].<br /><br /> Pour plus d’informations, consultez [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).|  
+|[!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]|Syntaxe de requête qui définit un ensemble d’opérateurs de requête qui permettent des opérations de parcours, de filtre et de projection à être exprimée de façon directe et déclarative en Visual c# et Visual Basic.<br /><br /> Pour plus d’informations, consultez [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).|  
 |mapper|Spécification des correspondances entre des éléments d'un modèle conceptuel et des éléments d'un modèle de stockage.<br /><br /> Pour plus d’informations, consultez [spécification MSL](../../../../../docs/framework/data/adonet/ef/language-reference/msl-specification.md).|  
 |fichier .msl|Fichier XML qui contient le mappage entre le modèle conceptuel et le modèle de stockage, exprimé en MSL.|  
 |langage MSL (Mapping Specification Language)|Langage basé sur XML utilisé pour mapper les éléments définis dans un modèle conceptuel aux éléments d'un modèle de stockage.<br /><br /> Pour plus d’informations, consultez [spécification MSL](../../../../../docs/framework/data/adonet/ef/language-reference/msl-specification.md).|  
@@ -64,7 +66,7 @@ Cette rubrique définit des termes souvent référencés dans [!INCLUDE[adonet_e
 |jeux d'entités multiples par type|Possibilité, pour un type d'entité, d'être défini dans plusieurs jeux d'entités.<br /><br /> Pour plus d’informations, consultez [élément EntitySet (CSDL)](http://msdn.microsoft.com/library/ec56db77-718d-4c0e-adc9-f1d33c896287) et [Comment : définir un modèle avec des jeux d’entités multiples par Type](http://msdn.microsoft.com/library/61aa4fca-5ac0-4f47-9bc8-46e8c2965ef7).|  
 |propriété de navigation|Propriété d'un type d'entité qui représente une relation à un autre type d'entité, tel que définie par une association. Les propriétés de navigation sont utilisées pour retourner des objets connexes sous forme de <xref:System.Data.Objects.DataClasses.EntityCollection%601> ou de <xref:System.Data.Objects.DataClasses.EntityReference%601>, en fonction de la multiplicité à l'autre terminaison de l'association.<br /><br /> Pour plus d’informations, consultez [élément NavigationProperty (CSDL)](http://msdn.microsoft.com/library/5829a238-a50e-4c81-901d-7b54fc00f27e) et [propriété de navigation](../../../../../docs/framework/data/adonet/navigation-property.md).|  
 |chemin d’accès de la requête|Représentation sous forme de chaîne d'un chemin d'accès qui spécifie quels objets connexes doivent être retournés lorsqu'une requête d'objet est exécutée. Un chemin d'accès de la requête est défini en appelant la méthode <xref:System.Data.Objects.ObjectQuery%601.Include%2A> sur un <xref:System.Data.Objects.ObjectQuery%601>.<br /><br /> Pour plus d’informations, consultez [le chargement des objets connexes](http://msdn.microsoft.com/library/452347d2-7b3b-44cd-9001-231299a28cb1).|  
-|contexte d'objet|Représente le conteneur d'entités défini dans le modèle conceptuel. Il contient une connexion à la source de données sous-jacente et fournit des services tels que le suivi des modifications et la résolution d'identité. Une extension de contexte de l'objet est représentée par une instance de la classe <xref:System.Data.Objects.ObjectContext> ou `DbContext`.<br /><br /> `DbContext`fait partie de la [Entity Framework 5.0](http://go.microsoft.com/fwlink/?LinkId=234900). Entity Framework 5.0 ne fait pas partie du .NET Framework, mais repose sur le .NET Framework 4.5. Entity Framework 5.0 est disponible en tant que le ['Entity Framework'](http://go.microsoft.com/fwlink/?LinkID=215714)[NuGet](http://go.microsoft.com/fwlink/?LinkId=232488) package. Pour plus d’informations, consultez [versions et Entity Framework le contrôle de version](http://go.microsoft.com/fwlink/?LinkId=234899).|  
+|contexte d'objet|Représente le conteneur d'entités défini dans le modèle conceptuel. Il contient une connexion à la source de données sous-jacente et fournit des services tels que le suivi des modifications et la résolution d'identité. Une extension de contexte de l'objet est représentée par une instance de la classe <xref:System.Data.Objects.ObjectContext> ou `DbContext`.<br /><br /> `DbContext` fait partie de la [Entity Framework 5.0](http://go.microsoft.com/fwlink/?LinkId=234900). Entity Framework 5.0 ne fait pas partie du .NET Framework, mais repose sur le .NET Framework 4.5. Entity Framework 5.0 est disponible en tant que le ['Entity Framework'](http://go.microsoft.com/fwlink/?LinkID=215714)[NuGet](http://go.microsoft.com/fwlink/?LinkId=232488) package. Pour plus d’informations, consultez [versions et Entity Framework le contrôle de version](http://go.microsoft.com/fwlink/?LinkId=234899).|  
 |couche objet|Types d'entité et définitions du contexte de l'objet utilisés par Entity Framework.|  
 |requête d'objet|Requête exécutée dans un contexte d'objet sur un modèle conceptuel et qui retourne des données sous forme d'objets.<br /><br /> Pour plus d’informations, consultez [requêtes d’objet](http://msdn.microsoft.com/library/0768033c-876f-471d-85d5-264884349276).|  
 |mappage relationnel objet|Technique permettant de transformer des données d'une base de données relationnelle en types de données qui peuvent être utilisés dans des applications logicielles orientées objet.<br /><br /> [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] fournit des services de mappage objet/relation en mappant des données relationnelles, telles que définies dans le modèle de stockage, aux types de données, tels que définis dans le modèle conceptuel.<br /><br /> Pour plus d’informations, consultez [de modélisation et mappage](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md).|  

@@ -1,24 +1,26 @@
 ---
-title: "Contexte de schéma XAML par défaut et contexte de schéma XAML WPF"
-ms.custom: 
+title: Contexte de schéma XAML par défaut et contexte de schéma XAML WPF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 04e06a15-09b3-4210-9bdf-9a64c2eccb83
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9ee7c83868934f1a524bb0068ea5e749e6cbfab4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ec5e29ae9022470f8b583dc1b673a0b93040c862
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="default-xaml-schema-context-and-wpf-xaml-schema-context"></a>Contexte de schéma XAML par défaut et contexte de schéma XAML WPF
 Un contexte de schéma XAML est une entité conceptuelle qui qualifie la façon dont une production XAML qui utilise un vocabulaire XAML particulier interagit avec l’objet de comportement, y compris la mappage de type est résolu, comment les assemblys sont chargés, comment certaines lecteur et writer d’écriture les paramètres sont interprétés. Cette rubrique décrit les fonctionnalités des Services XAML .NET Framework et le contexte de schéma XAML par défaut associé, qui est basé sur le système de type CLR. Cette rubrique décrit également le contexte de schéma XAML est utilisé pour WPF.  
@@ -35,7 +37,7 @@ Un contexte de schéma XAML est une entité conceptuelle qui qualifie la façon 
 ## <a name="wpf-xaml-schema-context"></a>Contexte de schéma XAML WPF  
  Le contexte de schéma XAML WPF est décrite dans cette rubrique, car l’implémentation WPF fournit une illustration intéressante des types de fonctionnalités qui peuvent être introduites en implémentant un contexte de schéma XAML par défaut. En outre, le concept de contexte de schéma XAML n’est pas traitée beaucoup dans la documentation WPF concernant XAML WPF ; le comportement permettant le contexte de schéma XAML peut uniquement être entièrement faciles à comprendre si intégré à en savoir plus sur le fonctionnement de contexte de schéma XAML par défaut. Le contexte de schéma XAML WPF implémente le comportement suivant.  
   
- **Substitutions de recherche :** WPF a quelques modèles de contenu pour le code XAML où il existe des propriétés de contenu XAML fonctionnent sans se <xref:System.Windows.Markup.ContentPropertyAttribute> avec attributs. <xref:System.Xaml.XamlType.LookupContentProperty%2A>remplacements pour WPF implémentent ce comportement.  
+ **Substitutions de recherche :** WPF a quelques modèles de contenu pour le code XAML où il existe des propriétés de contenu XAML fonctionnent sans se <xref:System.Windows.Markup.ContentPropertyAttribute> avec attributs. <xref:System.Xaml.XamlType.LookupContentProperty%2A> remplacements pour WPF implémentent ce comportement.  
   
  **Report pour les expressions de WPF :** WPF comprend plusieurs classes d’expressions qui différeront d’une valeur jusqu'à ce qu’un contexte d’exécution n’est disponible. En outre, expansion de modèle est un comportement d’exécution qui s’appuie sur les techniques de report.  
   
@@ -68,7 +70,7 @@ Un contexte de schéma XAML est une entité conceptuelle qui qualifie la façon 
     -   Si le nom non qualifié dans le mappage, appelez <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>.  
   
 #### <a name="xamlbuildtask"></a>XamlBuildTask  
- `XamlBuildTask`est utilisé pour [!INCLUDE[vsindigo](../../../includes/vsindigo-md.md)] et [!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)].  
+ `XamlBuildTask` est utilisé pour [!INCLUDE[vsindigo](../../../includes/vsindigo-md.md)] et Windows Workflow Foundation.  
   
  Notez que les références d’assembly via `XamlBuildTask` sont toujours qualifiées.  
   

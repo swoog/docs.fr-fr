@@ -1,30 +1,31 @@
 ---
-title: "Tâche 1 : créer une nouvelle application Windows Presentation Foundation."
-ms.custom: 
+title: 'Tâche 1 : créer une nouvelle application Windows Presentation Foundation.'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 270eaeba-9492-4532-af9f-403ce5c9935b
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a207b09ff7124bb161678627f365a6fa4021a38d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: cd21013331e19fa9e18ad7cbee0a7bb07abaf3d2
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="task-1-create-a-new-windows-presentation-foundation-application"></a>Tâche 1 : créer une nouvelle application Windows Presentation Foundation.
-Dans cette tâche, vous allez créer une application [!INCLUDE[avalon1](../../../includes/avalon1-md.md)] vide à l'aide du modèle Visual Studio d'application WPF, et ajouter des références aux assemblys de workflow [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] appropriés.  
+Dans cette tâche, vous créez une application Windows Presentation Foundation (WPF) vide en utilisant le modèle Visual Studio d’Application WPF et ajouter des références approprié [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] assemblys de workflow.  
   
 ### <a name="to-create-the-wpf-application-project"></a>Pour créer le projet d'application WPF  
   
-1.  Ouvrez [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] et sur le **fichier** menu, pointez sur **nouveau**, puis cliquez sur **projet**.  
+1.  Ouvrez Visual Studio et sur le **fichier** menu, pointez sur **nouveau**, puis cliquez sur **projet**.  
   
 2.  Dans le **nouveau projet** boîte de dialogue, sélectionnez soit **Visual C#** ou **Visual Basic** à partir de la **modèles installés** volet situé à gauche de la zone. Si la langue de votre choix n’apparaît pas, regardez sous **autres langages**.  
   
@@ -36,7 +37,7 @@ Dans cette tâche, vous allez créer une application [!INCLUDE[avalon1](../../..
   
 6.  Définissez le nom de la solution sur **RehostingTheDesigner**.  
   
-7.  Cliquez sur **OK** pour créer le projet d’application. [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] crée une interface utilisateur WPF de base de votre application et inclut le code XAML et les fichiers code-behind appropriés.  
+7.  Cliquez sur **OK** pour créer le projet d’application. Visual Studio crée une base WPF UI pour votre application et inclut les fichiers code-behind XAML approprié.  
   
 8.  Ajoutez des références aux **WorkflowModel** assemblys. Pour ce faire, dans **l’Explorateur de solutions**, avec le bouton droit le **HostingApplication** de projet et sélectionnez **ajouter une référence**.  
   

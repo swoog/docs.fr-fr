@@ -1,11 +1,12 @@
 ---
 title: "Comment : appeler une procédure d'opérateur (Visual Basic)"
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - operator procedures [Visual Basic], calling
@@ -17,19 +18,19 @@ helpviewer_keywords:
 - overloaded operators [Visual Basic], calling
 - operator overloading
 ms.assetid: 0dce42cc-f0b0-4c14-9f62-018b21f33497
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 0abff0a81ebcdacb59b69d0c307bb4aa219906c3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 21545f2488bfabd0abc9c6e316d21bbc4d5aeb91
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-call-an-operator-procedure-visual-basic"></a>Comment : appeler une procédure d'opérateur (Visual Basic)
 Vous appelez une procédure d’opérateur en utilisant le symbole d’opérateur dans une expression. Dans le cas d’un opérateur de conversion, vous appelez le [CType, fonction](../../../../visual-basic/language-reference/functions/ctype-function.md) pour convertir une valeur à partir d’un type de données à un autre.  
   
- Vous n’appelez pas les procédures d’opérateur explicitement. Vous utilisez l’opérateur, ou la `CType` fonction dans une instruction d’assignation ou une expression, la même façon que vous utilisez habituellement un opérateur. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]effectue l’appel à la procédure d’opérateur.  
+ Vous n’appelez pas les procédures d’opérateur explicitement. Vous utilisez l’opérateur, ou la `CType` fonction dans une instruction d’assignation ou une expression, la même façon que vous utilisez habituellement un opérateur. Visual Basic effectue l’appel à la procédure d’opérateur.  
   
  Définition d’un opérateur sur une classe ou structure est également appelée *surcharge* l’opérateur.  
   
@@ -47,7 +48,7 @@ Vous appelez une procédure d’opérateur en utilisant le symbole d’opérateu
   
 2.  Veillez à ce que les types de données des opérandes sont appropriés pour la conversion et dans le bon ordre.  
   
-3.  `CType`appelle la procédure d’opérateur de conversion et retourne la valeur convertie.  
+3.  `CType` appelle la procédure d’opérateur de conversion et retourne la valeur convertie.  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant crée deux <xref:System.TimeSpan> structures, les additionne et stocke le résultat dans une troisième <xref:System.TimeSpan> structure. Le <xref:System.TimeSpan> structure définit des procédures d’opérateur pour surcharger plusieurs opérateurs standards.  

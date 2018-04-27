@@ -1,36 +1,38 @@
 ---
-title: "Liaison de données"
-ms.custom: 
+title: Liaison de données
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: cbec8b02-a1e8-4ae8-a83b-bb5190413ac5
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: bb7562c2f6fab7ce496fd87ecdd891531589abfa
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8308700a35bdd2aec2d66f4edd8a89c128e07d7c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="data-binding"></a>Liaison de données
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]prend en charge la liaison aux contrôles communs, tels que les contrôles de grille. Plus précisément, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] définit les modèles de base pour la liaison à une grille de données et de gérer la liaison maître / détail en termes d’affichage et la mise à jour.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] prend en charge la liaison aux contrôles communs, tels que les contrôles de grille. Plus précisément, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] définit les modèles de base pour la liaison à une grille de données et de gérer la liaison maître / détail en termes d’affichage et la mise à jour.  
   
 ## <a name="underlying-principle"></a>Principe sous-jacent  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]traduit [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] requêtes SQL pour l’exécution sur une base de données. Les résultats sont des `IEnumerable` fortement typés. Étant donné que ces objets sont des objets Common Language Runtime (CLR) ordinaires, la liaison de données d'objet ordinaire peut être utilisée pour afficher les résultats. En revanche, les opérations de modification (insertions, mises à jour et suppressions) requièrent des étapes supplémentaires.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] traduit [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] requêtes SQL pour l’exécution sur une base de données. Les résultats sont des `IEnumerable` fortement typés. Étant donné que ces objets sont des objets Common Language Runtime (CLR) ordinaires, la liaison de données d'objet ordinaire peut être utilisée pour afficher les résultats. En revanche, les opérations de modification (insertions, mises à jour et suppressions) requièrent des étapes supplémentaires.  
   
 ## <a name="operation"></a>Opération  
- La liaison implicite aux contrôles Windows Forms s'effectue en implémentant <xref:System.ComponentModel.IListSource>. Les sources de données <xref:System.Data.Linq.Table%601> génériques (`Table<T>` en C# ou `Table(Of T)` en [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]) et le `DataQuery` générique ont été mis à jour pour implémenter <xref:System.ComponentModel.IListSource>. Les moteurs de liaison de données de l'interface utilisateur (UI) (Windows Forms et Windows Presentation Foundation) effectuent tous les deux un test pour vérifier si leur source de données implémente <xref:System.ComponentModel.IListSource>. Par conséquent, l’écriture d’une affectation directe d’une requête à une source de données d’un contrôle implicitement appelle [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] génération de collection, comme dans l’exemple suivant :  
+ La liaison implicite aux contrôles Windows Forms s'effectue en implémentant <xref:System.ComponentModel.IListSource>. Sources de données génériques <xref:System.Data.Linq.Table%601> (`Table<T>` en c# ou `Table(Of T)` en Visual Basic) et générique `DataQuery` ont été mis à jour pour mettre en œuvre <xref:System.ComponentModel.IListSource>. Les moteurs de liaison de données de l'interface utilisateur (UI) (Windows Forms et Windows Presentation Foundation) effectuent tous les deux un test pour vérifier si leur source de données implémente <xref:System.ComponentModel.IListSource>. Par conséquent, l’écriture d’une affectation directe d’une requête à une source de données d’un contrôle implicitement appelle [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] génération de collection, comme dans l’exemple suivant :  
   
  [!code-csharp[DLinqDataBinding#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqDataBinding/cs/Program.cs#1)]
  [!code-vb[DLinqDataBinding#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqDataBinding/vb/Module1.vb#1)]  
@@ -43,7 +45,7 @@ ms.lasthandoff: 01/17/2018
  Les générations de collection sont implémentées par le <xref:System.Data.Linq.Table%601> générique et le `DataQuery` générique dans <xref:System.ComponentModel.IListSource.GetList%2A>.  
   
 ## <a name="ilistsource-implementation"></a>Implémentation IListSource  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]implémente <xref:System.ComponentModel.IListSource> dans deux emplacements :  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] implémente <xref:System.ComponentModel.IListSource> dans deux emplacements :  
   
 -   La source de données est un <xref:System.Data.Linq.Table%601>: [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] parcourt la table pour remplir un `DataBindingList` collection qui garde une référence dans la table.  
   
@@ -51,7 +53,7 @@ ms.lasthandoff: 01/17/2018
   
     -   Si [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] recherche sous-jacent <xref:System.Data.Linq.Table%601> à partir de la <xref:System.Linq.IQueryable%601>, permet à la source pour l’édition et la situation est la même que dans le premier point.  
   
-    -   Si [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ne peut pas trouver sous-jacent <xref:System.Data.Linq.Table%601>, la source n’autorise pas d’édition (par exemple, `groupby`). [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]parcourt la requête pour remplir un générique `SortableBindingList`, qui est un simple <xref:System.ComponentModel.BindingList%601> qui implémente la fonctionnalité de tri pour les entités T pour une propriété donnée.  
+    -   Si [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ne peut pas trouver sous-jacent <xref:System.Data.Linq.Table%601>, la source n’autorise pas d’édition (par exemple, `groupby`). [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] parcourt la requête pour remplir un générique `SortableBindingList`, qui est un simple <xref:System.ComponentModel.BindingList%601> qui implémente la fonctionnalité de tri pour les entités T pour une propriété donnée.  
   
 ## <a name="specialized-collections"></a>Collections spécialisées  
  Pour de nombreuses fonctionnalités décrites précédemment dans ce document, <xref:System.ComponentModel.BindingList%601> a été spécialisé pour quelques classes différentes. Ces classes sont le `SortableBindingList` et le `DataBindingList` génériques. Les deux sont déclarés comme internes.  
@@ -69,7 +71,7 @@ ms.lasthandoff: 01/17/2018
  Cette classe hérite du `SortableBindingLIst` générique. Le `DataBindingList` générique garde une référence au `Table` générique sous-jacent de l'`IQueryable` générique utilisé pour remplir la première fois la collection. Le `DatabindingList` générique ajoute le suivi des ajouts/suppressions d'élément à la collection en substituant `InsertItem`() et `RemoveItem`(). Il implémente également la fonctionnalité récapitulative de suivi des interruptions/reprises pour rendre le suivi conditionnel. Avec cette fonctionnalité, le `DataBindingList` générique tire parti de toute l'utilisation polymorphe de la fonctionnalité de suivi des classes parentes.  
   
 ## <a name="binding-to-entitysets"></a>Création d'une liaison à EntitySets  
- La création d'une liaison avec `EntitySet` est un cas spécial parce que `EntitySet` est déjà une collection qui implémente <xref:System.ComponentModel.IBindingList>. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Ajoute le tri et l’annulation (<xref:System.ComponentModel.ICancelAddNew>) prend en charge. Une classe `EntitySet` utilise une liste interne pour stocker des entités. Cette liste est une collection de bas niveau basée sur un tableau générique, la classe `ItemList` générique.  
+ La création d'une liaison avec `EntitySet` est un cas spécial parce que `EntitySet` est déjà une collection qui implémente <xref:System.ComponentModel.IBindingList>. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Ajoute le tri et l’annulation (<xref:System.ComponentModel.ICancelAddNew>) prend en charge. Une classe `EntitySet` utilise une liste interne pour stocker des entités. Cette liste est une collection de bas niveau basée sur un tableau générique, la classe `ItemList` générique.  
   
 ### <a name="adding-a-sorting-feature"></a>Ajout d’une fonctionnalité de tri  
  Les tableaux proposent une méthode de tri (`Array.Sort()`) que vous pouvez utiliser avec un `Comparer` de T. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] utilise la classe `SortableBindingList.PropertyComparer` générique décrite précédemment dans cette rubrique pour obtenir ce `Comparer` et effectuer le tri en fonction de la propriété et de la direction. Une méthode `ApplySort` est ajoutée à l'`ItemList` générique pour appeler cette fonctionnalité.  
@@ -87,7 +89,7 @@ ms.lasthandoff: 01/17/2018
  Si vous utilisez un System.Windows.Forms.BindingSource et définissez la propriété BindingSource.DataMember et affectez à BindingSource.DataSource une classe qui a une propriété nommée dans le BindingSource.DataMember qui expose EntitySet\<TEntity >, vous n’avez pas à appeler EntitySet\<Tentity >. GetNewBindingList pour mettre à jour BindingSource.List, mais vous perdez la fonction de tri.  
   
 ## <a name="caching"></a>Mise en cache  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]implémentent des requêtes <xref:System.ComponentModel.IListSource.GetList%2A>. Lorsque la classe BindingSource Windows Forms rencontre cette interface, elle appelle GetList() trois fois pour une seule connexion. Pour éviter cette situation, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] implémente un cache par instance pour stocker et toujours retourner la même collection générée.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] implémentent des requêtes <xref:System.ComponentModel.IListSource.GetList%2A>. Lorsque la classe BindingSource Windows Forms rencontre cette interface, elle appelle GetList() trois fois pour une seule connexion. Pour éviter cette situation, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] implémente un cache par instance pour stocker et toujours retourner la même collection générée.  
   
 ## <a name="cancellation"></a>Annulation  
  <xref:System.ComponentModel.IBindingList> définit une méthode <xref:System.ComponentModel.IBindingList.AddNew%2A> utilisée par les contrôles pour créer un élément à partir d'une collection liée. Le contrôle `DataGridView` présente très bien cette fonctionnalité lorsque la dernière ligne visible contient une étoile dans son en-tête. L'étoile vous indique que vous pouvez ajouter un nouvel élément.  

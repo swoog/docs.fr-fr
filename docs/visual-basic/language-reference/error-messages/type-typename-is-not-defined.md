@@ -1,5 +1,5 @@
 ---
-title: Type de &#39; &lt;typename&gt;&#39; n’est pas défini
+title: Type &#39; &lt;typename&gt; &#39; n’est pas défini
 ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: ''
@@ -16,13 +16,13 @@ ms.assetid: b0faf204-57fd-44de-8c05-9db027eea663
 caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 68eb37f43600c51dc9117c3785a12e3c8ede1965
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7c3efbcabf1e40c7f550b5f54d16e697561cf82c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="type-39lttypenamegt39-is-not-defined"></a>Type de &#39; &lt;typename&gt;&#39; n’est pas défini
+# <a name="type-39lttypenamegt39-is-not-defined"></a>Type &#39; &lt;typename&gt; &#39; n’est pas défini
 L’instruction a fait référence à un type qui n’a pas été défini. Vous pouvez définir un type dans une instruction de déclaration, tel que `Enum`, `Structure`, `Class`, ou `Interface`.  
   
  **ID d’erreur :** BC30002  
@@ -35,7 +35,7 @@ L’instruction a fait référence à un type qui n’a pas été défini. Vous 
   
 -   Assurez-vous que l’espace de noms du type n’est pas redéfinie dans votre projet. Si tel est le cas, utilisez le `Global` (mot clé) pour qualifier complètement le nom de type. Par exemple, si un projet définit un espace de noms `System`, le <xref:System.Object?displayProperty=nameWithType> type ne sont pas accessibles, sauf si elle est qualifié avec le `Global` (mot clé) : `Global.System.Object`.  
   
--   Si le type est défini, mais que la bibliothèque d’objets ou la bibliothèque de types dans laquelle il est défini n’est pas inscrit dans [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], cliquez sur **ajouter une référence** sur la **projet** menu et sélectionnez l’objet approprié bibliothèque ou bibliothèque de types.  
+-   Si le type est défini, mais que la bibliothèque d’objets ou la bibliothèque de types dans laquelle il est défini n’est pas inscrit dans Visual Basic, cliquez sur **ajouter une référence** sur la **projet** menu et sélectionnez l’objet approprié bibliothèque ou bibliothèque de types.  
   
 -   Assurez-vous que le type est dans un assembly qui fait partie du profil .NET Framework ciblé. Pour plus d’informations, consultez [Dépannage des erreurs de ciblage du .NET Framework](/visualstudio/msbuild/troubleshooting-dotnet-framework-targeting-errors).  
   

@@ -15,19 +15,19 @@ ms.assetid: 410b60dc-5e60-4ec0-bfae-426755a2ee28
 caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: fe21d8c0dcefaea35d9f96cd2ecbff92a1c83d36
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 6c83667534dcf69ea0ec1106bb3a02d2c9accd87
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="delegates-visual-basic"></a>Délégués (Visual Basic)
-Les délégués sont des objets qui font référence à des méthodes. Ils sont parfois décrits comme des *pointeurs de fonction de type sécurisé*, car ils sont comparables aux pointeurs de fonction utilisés dans d’autres langages de programmation. Mais, contrairement aux pointeurs de fonction, les délégués [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] sont un type de référence basé sur la classe <xref:System.Delegate?displayProperty=nameWithType>. Les délégués peuvent faire référence à des méthodes partagées (méthodes qui peuvent être appelées sans une instance spécifique de classe) et des méthodes d’instance.  
+Les délégués sont des objets qui font référence à des méthodes. Ils sont parfois décrits comme des *pointeurs de fonction de type sécurisé*, car ils sont comparables aux pointeurs de fonction utilisés dans d’autres langages de programmation. Mais contrairement aux pointeurs de fonction, les délégués Visual Basic sont un type référence basé sur la classe <xref:System.Delegate?displayProperty=nameWithType>. Les délégués peuvent faire référence à des méthodes partagées (méthodes qui peuvent être appelées sans une instance spécifique de classe) et des méthodes d’instance.  
   
 ## <a name="delegates-and-events"></a>Délégués et événements  
- Les délégués sont utiles dans les situations où un intermédiaire est nécessaire entre une procédure appelante et la procédure appelée. Par exemple, vous pouvez créer un objet qui déclenche des événements pour pouvoir appeler différents gestionnaires d’événements dans différentes circonstances. Malheureusement, l’objet qui déclenche les événements ne peut pas savoir à l’avance quel gestionnaire d’événements gère un événement donné. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] vous permet d’associer de façon dynamique des gestionnaires d’événements à des événements en créant un délégué lorsque vous utilisez l’instruction `AddHandler`. À l’exécution, le délégué transmet les appels au gestionnaire d’événements approprié.  
+ Les délégués sont utiles dans les situations où un intermédiaire est nécessaire entre une procédure appelante et la procédure appelée. Par exemple, vous pouvez créer un objet qui déclenche des événements pour pouvoir appeler différents gestionnaires d’événements dans différentes circonstances. Malheureusement, l’objet qui déclenche les événements ne peut pas savoir à l’avance quel gestionnaire d’événements gère un événement donné. Visual Basic vous permet de gestionnaires d’événements associer dynamiquement avec les événements en créant un délégué pour vous lorsque vous utilisez la `AddHandler` instruction. À l’exécution, le délégué transmet les appels au gestionnaire d’événements approprié.  
   
- Bien que vous puissiez créer vos propres délégués, dans la plupart des cas [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] crée le délégué et s’occupe des détails pour vous. Par exemple, une instruction `Event` définit implicitement une classe déléguée nommée `<EventName>EventHandler` comme classe imbriquée de la classe contenant l’instruction `Event`, avec la même signature que l’événement. L’instruction `AddressOf` crée implicitement une instance d’un délégué qui fait référence à une procédure spécifique. Les deux lignes de code suivantes sont équivalentes. Dans la première ligne, vous voyez la création explicite d’une instance de `Eventhandler`, avec une référence à la méthode `Button1_Click` envoyée comme argument. La deuxième ligne est un moyen plus commode de faire la même chose.  
+ Bien que vous pouvez créer vos propres délégués, dans la plupart des cas, Visual Basic crée le délégué et prend en charge les détails pour vous. Par exemple, une instruction `Event` définit implicitement une classe déléguée nommée `<EventName>EventHandler` comme classe imbriquée de la classe contenant l’instruction `Event`, avec la même signature que l’événement. L’instruction `AddressOf` crée implicitement une instance d’un délégué qui fait référence à une procédure spécifique. Les deux lignes de code suivantes sont équivalentes. Dans la première ligne, vous voyez la création explicite d’une instance de `Eventhandler`, avec une référence à la méthode `Button1_Click` envoyée comme argument. La deuxième ligne est un moyen plus commode de faire la même chose.  
   
  [!code-vb[VbVbalrDelegates#6](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/delegates_1.vb)]  
   

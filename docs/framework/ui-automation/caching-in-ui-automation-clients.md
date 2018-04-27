@@ -1,27 +1,29 @@
 ---
 title: Mise en cache dans les clients UI Automation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - UI Automation caching in clients
 - caching, UI Automation clients
 ms.assetid: 94c15031-4975-43cc-bcd5-c9439ed21c9c
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: cce1890357f5781f1772b6a0aa583e493e2cfa8b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5bbd54d4e1e8a6a1eae52f50696aecddd1f8bd8a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="caching-in-ui-automation-clients"></a>Mise en cache dans les clients UI Automation
 > [!NOTE]
@@ -67,7 +69,7 @@ ms.lasthandoff: 01/19/2018
 ## <a name="activating-the-cacherequest"></a>Activation de CacheRequest  
  La mise en cache s’effectue uniquement quand les objets <xref:System.Windows.Automation.AutomationElement> sont récupérés alors qu’un <xref:System.Windows.Automation.CacheRequest> est actif pour le thread en cours. Il existe deux façons d’activer un <xref:System.Windows.Automation.CacheRequest>.  
   
- La plus courante consiste à appeler <xref:System.Windows.Automation.CacheRequest.Activate%2A>. Cette méthode retourne un objet qui implémente <xref:System.IDisposable>. La requête reste active tant que l’objet <xref:System.IDisposable> existe. La manière la plus simple de contrôler la durée de vie de l’objet consiste à placer l’appel dans un bloc `using` ([!INCLUDE[TLA#tla_cshrp](../../../includes/tlasharptla-cshrp-md.md)]) ou `Using` ([!INCLUDE[TLA2#tla_visualb](../../../includes/tla2sharptla-visualb-md.md)]). Cela garantit l’extraction de la demande de la pile même si une exception est levée.  
+ La plus courante consiste à appeler <xref:System.Windows.Automation.CacheRequest.Activate%2A>. Cette méthode retourne un objet qui implémente <xref:System.IDisposable>. La requête reste active tant que l’objet <xref:System.IDisposable> existe. Pour contrôler la durée de vie de l’objet le plus simple consiste à placer l’appel dans un `using` (c#) ou `Using` (Visual Basic) bloc. Cela garantit l’extraction de la demande de la pile même si une exception est levée.  
   
  L’autre manière, utile quand vous souhaitez imbriquer des requêtes de cache, consiste à appeler <xref:System.Windows.Automation.CacheRequest.Push%2A>. Cette opération place la requête sur une pile et l’active. La requête reste active jusqu’à ce qu’elle soit supprimée de la pile par <xref:System.Windows.Automation.CacheRequest.Pop%2A>. La requête devient temporairement inactive si une autre requête est envoyée à la pile. Seule la première requête sur la pile est active.  
   

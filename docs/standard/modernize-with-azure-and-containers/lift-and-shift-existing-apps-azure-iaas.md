@@ -1,18 +1,19 @@
 ---
-title: "Déplacer des applications existantes IaaS Azure"
+title: Déplacer des applications existantes IaaS Azure
 description: Moderniser des Applications .NET existantes avec Azure Cloud et les conteneurs Windows.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
 ms.prod: .net
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 6811da4b59531e27f2d832c102d37ba1383b15ab
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: d7922ad3a3cd5346f81008e1841a55b5e3663832
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="lift-and-shift-existing-apps-azure-iaas"></a>Déplacer des applications existantes IaaS Azure
 
@@ -26,7 +27,7 @@ Figure 2-1 positionne les applications Cloud Infrastructure prêt dans les nivea
 
 ![Positionnement des applications de l’Infrastructure prête pour le Cloud](./media/image2-1.png)
 
-> **Figure 2-1.** Positionnement des applications de l’Infrastructure prête pour le Cloud
+> **Figure 2-1.** Positionnement des applications de l’Infrastructure prête pour le Cloud
 
 ## <a name="why-migrate-existing-net-web-applications-to-azure-iaas"></a>Pourquoi effectuer la migration des applications web .NET existantes vers Azure IaaS
 
@@ -88,7 +89,7 @@ Figure 2-3 illustre l’exécution de plusieurs migrations d’ordinateur virtue
 
 - **Azure migrer la feuille de données**
 
-    [https://aka.ms/azuremigration\_datasheet](https://aka.ms/azuremigration\_datasheet)
+    [https://aka.ms/azuremigration\_Feuille de données](https://aka.ms/azuremigration\_datasheet)
 
 - **Migrer de Azure**
 

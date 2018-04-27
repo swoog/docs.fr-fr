@@ -1,11 +1,12 @@
 ---
-title: "Comment : appeler une procédure qui retourne une valeur (Visual Basic)"
-ms.custom: 
+title: 'Comment : appeler une procédure qui retourne une valeur (Visual Basic)'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - procedure calls [Visual Basic], returning values
@@ -13,14 +14,14 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 - procedures [Visual Basic], returning a value
 ms.assetid: a445127b-0f5f-465a-98fb-3e514b93d115
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f6d408eed67fa417f42252bb49ecea28d4458382
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cbaaa5ed17845a7ac8847786fb10111c724015ba
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-call-a-procedure-that-returns-a-value-visual-basic"></a>Comment : appeler une procédure qui retourne une valeur (Visual Basic)
 A `Function` procédure retourne une valeur au code appelant. Vous appeler en incluant son nom et ses arguments soit à droite d’une instruction d’assignation ou dans une expression.  
@@ -48,7 +49,7 @@ A `Function` procédure retourne une valeur au code appelant. Vous appeler en in
 4.  La valeur retournée par la procédure est stockée dans la variable ou une propriété sur le côté gauche de l’instruction d’assignation.  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant appelle la [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] <xref:Microsoft.VisualBasic.Interaction.Environ%2A> pour récupérer la valeur d’une variable d’environnement de système d’exploitation. La première ligne appelle `Environ` au sein d’une expression et la deuxième ligne l’appelle dans une instruction d’assignation. `Environ`prend le nom de variable comme unique argument. Elle retourne la valeur de la variable au code appelant.  
+ L’exemple suivant appelle Visual Basic <xref:Microsoft.VisualBasic.Interaction.Environ%2A> pour récupérer la valeur d’une variable d’environnement de système d’exploitation. La première ligne appelle `Environ` au sein d’une expression et la deuxième ligne l’appelle dans une instruction d’assignation. `Environ` prend le nom de variable comme unique argument. Elle retourne la valeur de la variable au code appelant.  
   
  [!code-vb[VbVbcnProcedures#7](./codesnippet/VisualBasic/how-to-call-a-procedure-that-returns-a-value_1.vb)]  
   

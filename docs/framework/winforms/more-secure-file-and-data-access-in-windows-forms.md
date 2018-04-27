@@ -1,12 +1,13 @@
 ---
-title: "Accès plus sécurisé aux fichiers et aux données dans les Windows Forms"
-ms.custom: 
+title: Accès plus sécurisé aux fichiers et aux données dans les Windows Forms
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -20,16 +21,17 @@ helpviewer_keywords:
 - file access [Windows Forms]
 - security [Windows Forms], data access
 ms.assetid: 3cd3e55b-2f5e-40dd-835d-f50f7ce08967
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 335e9487468522abb3a18f51f9a089d25519e71c
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 61e4893ac32d2013b090a748078ec1e3a84ea3ac
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Accès plus sécurisé aux fichiers et aux données dans les Windows Forms
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] utilise des autorisations pour aider à protéger les ressources et les données. L'emplacement où votre application peut lire ou écrire des données dépend des autorisations qui lui sont accordées. Quand votre application s'exécute dans un environnement de confiance partielle, vous n'avez peut-être pas accès à vos données ou vous devrez peut-être modifier la manière dont vous accédez aux données.  
@@ -63,7 +65,7 @@ ms.lasthandoff: 01/19/2018
  L'exemple de code suivant utilise la méthode <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> pour ouvrir un fichier spécifié par l'utilisateur dans un contrôle <xref:System.Windows.Forms.RichTextBox>. L'exemple exige <xref:System.Security.Permissions.FileDialogPermission> et la valeur d'énumération <xref:System.Security.Permissions.FileDialogPermissionAttribute.Open%2A> associée. Il illustre comment gérer <xref:System.Security.SecurityException> pour déterminer si la fonctionnalité d'enregistrement doit être désactivée. Cet exemple exige que votre <xref:System.Windows.Forms.Form> ait un contrôle <xref:System.Windows.Forms.Button> nommé `ButtonOpen` et un contrôle <xref:System.Windows.Forms.RichTextBox> nommé `RtfBoxMain`.  
   
 > [!NOTE]
->  La logique de programmation pour la fonctionnalité d'enregistrement n'est pas illustrée dans l'exemple.  
+>  La logique de programmation pour la fonctionnalité d’enregistrement n’est pas illustrée dans l’exemple.  
   
 ```vb  
 Private Sub ButtonOpen_Click(ByVal sender As System.Object, _  
@@ -144,7 +146,7 @@ private void ButtonOpen_Click(object sender, System.EventArgs e)
 ```  
   
 > [!NOTE]
->  Dans [!INCLUDE[csprcs](../../../includes/csprcs-md.md)], veillez à ajouter le code permettant d'activer le gestionnaire d'événements. En utilisant le code de l'exemple précédent, le code suivant montre comment activer le gestionnaire d'événements.`this.ButtonOpen.Click += newSystem.Windows.Forms.EventHandler(this.ButtonOpen_Click);`  
+>  Dans Visual c#, assurez-vous que vous ajoutez le code pour activer le Gestionnaire d’événements. En utilisant le code de l'exemple précédent, le code suivant montre comment activer le gestionnaire d'événements.`this.ButtonOpen.Click += newSystem.Windows.Forms.EventHandler(this.ButtonOpen_Click);`  
   
 ### <a name="other-files"></a>Autres fichiers  
  Vous devrez parfois lire ou écrire dans des fichiers que l'utilisateur ne spécifie pas, par exemple quand vous devrez conserver les paramètres d'application. Dans les zones Intranet local et Internet, votre application ne sera pas autorisée à stocker des données dans un fichier local. Toutefois, elle pourra stocker des données dans un stockage isolé. Le stockage isolé est un compartiment de données abstrait (et non un emplacement de stockage spécifique) composé d'au moins un fichier de stockage isolé, appelé magasin, contenant les emplacements de répertoire réels où sont stockées les données. Les autorisations d'accès aux fichiers telles que <xref:System.Security.Permissions.FileIOPermission> ne sont pas nécessaires. Au lieu de cela, la classe <xref:System.Security.Permissions.IsolatedStoragePermission> contrôle les autorisations pour le stockage isolé. Par défaut, les applications qui s'exécutent dans les zones Intranet local et Internet peuvent stocker des données à l'aide du stockage isolé. Toutefois, des paramètres tels que les quotas de disque peuvent varier. Pour plus d’informations sur le stockage isolé, consultez [le stockage isolé](../../../docs/standard/io/isolated-storage.md).  

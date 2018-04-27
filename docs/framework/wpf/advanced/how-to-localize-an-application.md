@@ -2,8 +2,9 @@
 title: Guide pratique pour localiser une application
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,12 +17,13 @@ ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 83ed8ee8b8bfd9c3d6dadfedad8889af10a86466
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3c5621de2a2d10e67f45fa2d6980cb84c388630f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-localize-an-application"></a>Guide pratique pour localiser une application
 Ce didacticiel explique comment créer une application localisée à l'aide de l'outil LocBaml.  
@@ -88,7 +90,7 @@ Ce didacticiel explique comment créer une application localisée à l'aide de l
 <a name="build_locbaml"></a>   
 ## <a name="build-the-locbaml-tool"></a>Générer l'outil LocBaml  
   
-1.  Tous les fichiers nécessaires à la génération de LocBaml se trouvent dans les exemples [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Téléchargez le [!INCLUDE[TLA#tla_lhcshrp](../../../../includes/tlasharptla-lhcshrp-md.md)] fichiers à partir de la [outil LocBaml, exemple](http://go.microsoft.com/fwlink/?LinkID=160016).  
+1.  Tous les fichiers nécessaires à la génération de LocBaml se trouvent dans les exemples [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Télécharger les fichiers c# à partir de la [outil LocBaml, exemple](http://go.microsoft.com/fwlink/?LinkID=160016).  
   
 2.  Dans la ligne de commande, exécutez le fichier de projet (locbaml.csproj) pour générer l'outil :  
   
@@ -195,7 +197,7 @@ Ce didacticiel explique comment créer une application localisée à l'aide de l
   
 7.  Pour tester le nouvel assembly satellite, vous devez modifier la culture sous laquelle votre application s'exécutera. Vous pouvez le faire de deux façons :  
   
-    -   Modifier les paramètres régionaux de votre système d’exploitation (**Démarrer** &#124; **Panneau** &#124; **Options régionales et linguistiques**).  
+    -   Modifier les paramètres régionaux de votre système d’exploitation (**Démarrer** &#124; **le panneau de configuration** &#124; **Options régionales et linguistiques**).  
   
     -   Dans votre application, ajoutez le code suivant à App.xaml.cs :  
   

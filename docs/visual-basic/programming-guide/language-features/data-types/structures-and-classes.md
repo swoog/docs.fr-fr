@@ -1,11 +1,12 @@
 ---
 title: Structures et classes (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - classes [Visual Basic], vs. structures
@@ -15,17 +16,17 @@ helpviewer_keywords:
 - structures [Visual Basic], structure variables
 - structure variables [Visual Basic]
 ms.assetid: a221e74a-ffcf-4bdc-a0f6-a088a9bf26cc
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 08e31481feac7a6184c6b29269d193c749f440ff
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cf72fb0a7a34d45774cb9a58c037ebcb1c05288f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="structures-and-classes-visual-basic"></a>Structures et classes (Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]unifie la syntaxe des structures et des classes, avec le résultat que les deux entités prennent en charge la plupart de ces fonctionnalités. Toutefois, il existe également des différences importantes entre les classes et structures.  
+Visual Basic unifie la syntaxe des structures et des classes, avec le résultat que les deux entités prennent en charge la plupart de ces fonctionnalités. Toutefois, il existe également des différences importantes entre les classes et structures.  
   
  Classes ont l’avantage d’être des types référence, en passant une référence est plus efficace de passer une variable de structure avec toutes ses données. En revanche, les structures ne nécessitent pas d’allocation de mémoire sur le tas global.  
   
@@ -80,7 +81,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="instances-and-variables"></a>Instances et Variables  
  Étant donné que les structures sont des types valeur, chaque variable de structure est définitivement lié à une instance de structure individuelle. Mais les classes sont des types référence, et une variable objet peut faire référence à plusieurs instances de classe à des moments différents. Cette distinction affecte votre utilisation de structures et les classes de plusieurs manières :  
   
--   **Initialisation.** Une variable de structure comprend implicitement une initialisation des éléments à l’aide du constructeur sans paramètre de la structure. Par conséquent, `Dim s As struct1` équivaut à `Dim s As struct1 = New struct1()`.  
+-   **initialisation.** Une variable de structure comprend implicitement une initialisation des éléments à l’aide du constructeur sans paramètre de la structure. Par conséquent, `Dim s As struct1` équivaut à `Dim s As struct1 = New struct1()`.  
   
 -   **Assignation de Variables.** Lorsque vous assignez une variable de structure à une autre, ou passez une instance de structure à un argument de procédure, les valeurs actuelles de tous les éléments de variable sont copiés vers la nouvelle structure. Lorsque vous assignez une variable objet à une autre, ou passez une variable objet à une procédure, seul le pointeur de la référence est copié.  
   
@@ -92,7 +93,7 @@ ms.lasthandoff: 11/21/2017
   
      Toutefois, les éléments de structure sont isolés dans leur propre instance. Modifications apportées à leurs valeurs ne sont pas reflétées dans d’autres variables de structure, même dans les autres instances du même `Structure` déclaration.  
   
--   **Égalité.** Tester l’égalité de deux structures doit être effectué sur un élément par élément. Deux variables objet peuvent être comparées à l’aide de la <xref:System.Object.Equals%2A> (méthode). <xref:System.Object.Equals%2A>Indique si les deux variables pointent vers la même instance.  
+-   **Égalité.** Tester l’égalité de deux structures doit être effectué sur un élément par élément. Deux variables objet peuvent être comparées à l’aide de la <xref:System.Object.Equals%2A> (méthode). <xref:System.Object.Equals%2A> Indique si les deux variables pointent vers la même instance.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Types de données](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  

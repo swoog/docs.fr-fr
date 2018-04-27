@@ -1,5 +1,5 @@
 ---
-title: Nom de &#39; &lt;nom&gt;&#39; n’est pas déclaré
+title: Nom &#39; &lt;nom&gt; &#39; n’est pas déclaré
 ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: ''
@@ -16,20 +16,20 @@ ms.assetid: 765f099b-e21e-47c6-a906-a065444e56b3
 caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 7a63ae74c7179d71756e2b9b4bf6b41a71ce12a6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 26245952a2dc5341dedba6c497c47773b882b49b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="name-39ltnamegt39-is-not-declared"></a>Nom de &#39; &lt;nom&gt;&#39; n’est pas déclaré
+# <a name="name-39ltnamegt39-is-not-declared"></a>Nom &#39; &lt;nom&gt; &#39; n’est pas déclaré
 Une instruction fait référence à un élément de programmation, mais le compilateur ne peut pas trouver un élément portant ce nom exact.  
   
  **ID d’erreur :** BC30451  
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   
-1.  Vérifiez l’orthographe du nom dans l’instruction de référence. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]respecte la casse, mais toute autre variation dans l’orthographe est considérée comme un nom complètement différent. Notez que le caractère de soulignement (`_`) fait partie du nom et donc de l’orthographe.  
+1.  Vérifiez l’orthographe du nom dans l’instruction de référence. Visual Basic n’est pas la casse, mais toute autre variation dans l’orthographe est considérée comme un nom complètement différent. Notez que le caractère de soulignement (`_`) fait partie du nom et donc de l’orthographe.  
   
 2.  Vérifiez que vous disposez de l’opérateur d’accès au membre (`.`) entre un objet et son membre. Par exemple, si vous disposez d’un contrôle <xref:System.Windows.Forms.TextBox> dont le nom est `TextBox1`, pour accéder à sa propriété <xref:System.Windows.Forms.TextBoxBase.Text%2A> , vous devez taper `TextBox1.Text`. Si, au lieu de cela, vous tapez `TextBox1Text`, vous créez un nom différent.  
   

@@ -1,12 +1,13 @@
 ---
 title: x:Key, directive
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - xKey
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - Key attribute in XAML [XAML Services]
 - XAML [XAML Services], x:Key attribute
 ms.assetid: 1985cd45-f197-42d5-b75e-886add64b248
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2c73cf28905e1dd0f3056ab0eed953d6f05b0a7f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f28ed1e4077a48016ddd8d9b5eeb45d6ba25d8e5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xkey-directive"></a>x:Key, directive
 Identifie de façon unique les éléments qui sont créés et référencés dans un dictionnaire définies en XAML. Ajout d’un `x:Key` valeur à un élément d’objet XAML est la méthode la plus courante pour identifier une ressource dans un dictionnaire de ressources, par exemple dans un WPF <xref:System.Windows.ResourceDictionary>.  
@@ -56,10 +58,10 @@ Identifie de façon unique les éléments qui sont créés et référencés dans
 |||  
 |-|-|  
 |`stringKeyValue`|Une chaîne de texte à utiliser en tant que clé. La chaîne de texte doit être conforme à la [XamlName, grammaire](../../../docs/framework/xaml-services/xamlname-grammar.md).|  
-|`markupExtensionUsage`|Dans le balisage extension délimiteurs {}, une extension de balisage qui fournit un objet à utiliser en tant que clé. Consultez la section Notes.|  
+|`markupExtensionUsage`|Dans les délimiteurs d’extension de balisage {}, une extension de balisage qui fournit un objet à utiliser en tant que clé. Consultez la section Notes.|  
   
 ## <a name="remarks"></a>Notes  
- `x:Key`prend en charge le concept de dictionnaire de ressources XAML. Le langage XAML ne définit pas une implémentation de dictionnaire de ressources, qui reste pour les infrastructures d’interface utilisateur spécifiques. Pour plus d’informations sur l’implémentation des dictionnaires de ressources XAML dans WPF, consultez [ressources XAML](../../../docs/framework/wpf/advanced/xaml-resources.md).  
+ `x:Key` prend en charge le concept de dictionnaire de ressources XAML. Le langage XAML ne définit pas une implémentation de dictionnaire de ressources, qui reste pour les infrastructures d’interface utilisateur spécifiques. Pour plus d’informations sur l’implémentation des dictionnaires de ressources XAML dans WPF, consultez [ressources XAML](../../../docs/framework/wpf/advanced/xaml-resources.md).  
   
  Dans XAML 2006 et WPF, `x:Key` doit être fourni en tant qu’attribut. Vous pouvez toujours utiliser les clés, mais cela nécessite une extension de balisage afin de fournir la valeur de chaîne sous forme d’attribut. Si vous utilisez XAML 2009, `x:Key` peut être spécifié comme un élément, pour prendre en charge explicitement des dictionnaires indexés par les types d’objets autres que des chaînes sans exiger une extension de balisage intermédiaire. Consultez la section « XAML 2009 » dans cette rubrique. Le reste de la section Notes s’applique spécifiquement à l’implémentation XAML 2006.  
   
@@ -76,7 +78,7 @@ Identifie de façon unique les éléments qui sont créés et référencés dans
   
 -   WPF prend en charge un concept de dictionnaire de ressources fusionnés. Les clés peuvent être partagées entre les dictionnaires fusionnés, et le comportement de la clé partagée est accessible à l’aide de <xref:System.Windows.FrameworkContentElement.FindResource%2A>. Pour plus d’informations, consultez [Dictionnaires de ressources fusionnés](../../../docs/framework/wpf/advanced/merged-resource-dictionaries.md).  
   
- Dans le XAML WPF application et l’implémentation modèle général, l’unicité des clés n’est pas vérifiée par le compilateur de balisage XAML. Au lieu de cela, manquantes ou non uniques `x:Key` valeurs provoquent des erreurs au moment du chargement de l’analyseur XAML. Toutefois, [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] gestion des dictionnaires pour WPF peut souvent noter ces erreurs dans la phase de conception.  
+ Dans le XAML WPF application et l’implémentation modèle général, l’unicité des clés n’est pas vérifiée par le compilateur de balisage XAML. Au lieu de cela, manquantes ou non uniques `x:Key` valeurs provoquent des erreurs au moment du chargement de l’analyseur XAML. Toutefois, la gestion de Visual Studio de dictionnaires pour WPF peut souvent noter ces erreurs dans la phase de conception.  
   
  Notez que dans la syntaxe indiquée, le <xref:System.Windows.ResourceDictionary> objet est implicite dans la façon dont le processeur WPF XAML produit une collection pour remplir une <xref:System.Windows.FrameworkElement.Resources%2A> collection. A <xref:System.Windows.ResourceDictionary> est généralement pas fourni explicitement en tant qu’élément dans le balisage, bien qu’il peut être dans certains cas, si vous souhaitiez par souci de clarté (il serait un élément d’objet de collection entre le <xref:System.Windows.FrameworkElement.Resources%2A> élément de propriété et les éléments qui remplissent la dictionnaire). Pour plus d’informations sur la raison pour laquelle un objet de collection est presque toujours un élément implicite dans le balisage, consultez [XAML Syntax In Detail](../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md).  
   
@@ -112,14 +114,14 @@ keyObject
 |-|-|  
 |`keyObject`|Élément objet pour l’objet qui est utilisé comme clé pour une donnée `object` dans un dictionnaire spécialisé.|  
   
--   Le conteneur/parent pour ce type d’utilisation n’est pas indiqué ici. `object`est censé être un enfant d’un élément de l’objet qui représente une implémentation de dictionnaire spécialisé. `keyObject`est censé être une instance d’objet (ou une valeur d’un type valeur) qui est appropriée comme clé pour cette implémentation de dictionnaire spécialisée particulière.  
+-   Le conteneur/parent pour ce type d’utilisation n’est pas indiqué ici. `object` est censé être un enfant d’un élément de l’objet qui représente une implémentation de dictionnaire spécialisé. `keyObject` est censé être une instance d’objet (ou une valeur d’un type valeur) qui est appropriée comme clé pour cette implémentation de dictionnaire spécialisée particulière.  
   
 -   WPF n’implémente pas les dictionnaires qui requièrent cette utilisation. Clés d’objet est plus une fonctionnalité générale du langage XAML, éventuellement utile dans certains scénarios de dictionnaire personnalisé où il est souhaitable de création du dictionnaire en XAML. Pour les fonctionnalités WPF telles que les styles implicites qui utilisent des clés de chaîne non pour les ressources, les autres techniques de l’établissement ou en spécifiant les clés existent, à l’aide d’une clé d’objet n’est pas nécessaire.  
   
 -   *keyObject* peut également être une extension de balisage dans le formulaire d’élément objet, plutôt que sur une instance d’objet direct.  
   
 ## <a name="silverlight-usage-notes"></a>Notes d’utilisation de Silverlight  
- `x:Key`pour Silverlight est documenté séparément. Pour plus d’informations, consultez [XAML Namespace (x :)) Fonctionnalités de langage (Silverlight)](http://go.microsoft.com/fwlink/?LinkId=199081).  
+ `x:Key` pour Silverlight est documenté séparément. Pour plus d’informations, consultez [XAML Namespace (x :)) Fonctionnalités de langage (Silverlight)](http://go.microsoft.com/fwlink/?LinkId=199081).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Ressources XAML](../../../docs/framework/wpf/advanced/xaml-resources.md)  

@@ -1,22 +1,23 @@
 ---
-title: "Partitionnement des données (Visual Basic)"
-ms.custom: 
+title: Partitionnement des données (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 69c59379-b66e-422c-b324-5b5c07760ef7
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 0ea305a67765e1b11ceebbf65c48a685024a41f3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 01e4e6d6db07a520b97911de5388b8e42b7e1acc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="partitioning-data-visual-basic"></a>Partitionnement des données (Visual Basic)
 Le partitionnement dans LINQ désigne l’opération consistant à diviser une séquence d’entrée en deux sections, sans réorganiser les éléments, puis à retourner l’une des sections.  
@@ -39,22 +40,22 @@ Le partitionnement dans LINQ désigne l’opération consistant à diviser une s
 ## <a name="query-expression-syntax-examples"></a>Exemples de syntaxe d'expression de requête  
   
 ### <a name="skip"></a>Ignorer  
- Le code suivant exemple utilise le `Skip` clause dans [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] pour ignorer les quatre premières chaînes dans un tableau de chaînes avant de retourner les chaînes restantes dans le tableau.  
+ Le code suivant exemple utilise le `Skip` clause en Visual Basic pour ignorer les quatre premières chaînes dans un tableau de chaînes avant de retourner les autres chaînes dans le tableau.  
   
  [!code-vb[CsLINQPartitioning#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/partitioning-data_1.vb)]  
   
 ### <a name="skipwhile"></a>SkipWhile  
- Le code suivant exemple utilise le `Skip While` clause dans [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] pour ignorer les chaînes dans un tableau lors de la première lettre de la chaîne est « a ». Les chaînes restantes dans le tableau sont retournés.  
+ Le code suivant exemple utilise le `Skip While` clause en Visual Basic pour ignorer les chaînes dans un tableau pendant que la première lettre de la chaîne est « a ». Les chaînes restantes dans le tableau sont retournés.  
   
  [!code-vb[CsLINQPartitioning#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/partitioning-data_2.vb)]  
   
 ### <a name="take"></a>Take  
- Le code suivant exemple utilise le `Take` clause dans [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] pour retourner les deux premières chaînes dans un tableau de chaînes.  
+ Le code suivant exemple utilise le `Take` clause dans Visual Basic pour retourner les deux premières chaînes dans un tableau de chaînes.  
   
  [!code-vb[CsLINQPartitioning#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/partitioning-data_3.vb)]  
   
 ### <a name="takewhile"></a>TakeWhile  
- Le code suivant exemple utilise le `Take While` clause dans [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] pour retourner des chaînes à partir d’un tableau pendant que la longueur de la chaîne est inférieur ou égal à cinq.  
+ Le code suivant exemple utilise le `Take While` clause dans Visual Basic pour retourner des chaînes à partir d’un tableau pendant que la longueur de la chaîne est inférieur ou égal à cinq.  
   
  [!code-vb[CsLINQPartitioning#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/partitioning-data_4.vb)]  
   

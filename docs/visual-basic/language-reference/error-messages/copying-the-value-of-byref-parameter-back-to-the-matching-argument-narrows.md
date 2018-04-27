@@ -1,5 +1,5 @@
 ---
-title: Copie la valeur des &#39; ByRef &#39; paramètre &#39; &lt;nom_paramètre&gt;&#39; retour à la correspondance restreint d’argument de type &#39;&lt; NomType1&gt;&#39; en type &#39;&lt; nom_type2&gt;&#39;
+title: Copie de la valeur de &#39;ByRef&#39; paramètre &#39; &lt;nom_paramètre&gt; &#39; à l’argument correspondant passe du type &#39; &lt;nom_type1&gt; &#39; type &#39; &lt;nom_type2&gt;&#39;
 ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: ''
@@ -16,26 +16,26 @@ ms.assetid: 281564b7-99f7-451f-b10d-f985e831bb25
 caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4bf993639007162e2e17d4b8cb9dfe8d5316acaa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 18c72e56e4b2cc9c2251de2417a9f12a6688323f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="copying-the-value-of-39byref39-parameter-39ltparameternamegt39-back-to-the-matching-argument-narrows-from-type-39lttypename1gt39-to-type-39lttypename2gt39"></a>Copie la valeur des &#39; ByRef &#39; paramètre &#39; &lt;nom_paramètre&gt;&#39; retour à la correspondance restreint d’argument de type &#39;&lt; NomType1&gt;&#39; en type &#39;&lt; nom_type2&gt;&#39;
+# <a name="copying-the-value-of-39byref39-parameter-39ltparameternamegt39-back-to-the-matching-argument-narrows-from-type-39lttypename1gt39-to-type-39lttypename2gt39"></a>Copie de la valeur de &#39;ByRef&#39; paramètre &#39; &lt;nom_paramètre&gt; &#39; à l’argument correspondant passe du type &#39; &lt;nom_type1&gt; &#39; type &#39; &lt;nom_type2&gt;&#39;
 Une procédure est appelée avec un argument qui s’étend au type de paramètre correspondant, et la conversion à partir du paramètre à l’argument est restrictive.  
   
- Quand vous définissez une classe ou une structure, vous pouvez définir un ou plusieurs opérateurs de conversion pour convertir le type de la classe ou de la structure en d’autres types. Vous pouvez également définir des opérateurs de conversion inverse pour convertir ces autres types vers le type de votre classe ou de votre structure. Quand vous utilisez votre type de classe ou de structure dans un appel de procédure, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] peut utiliser ces opérateurs de conversion pour convertir le type d’un argument vers le type de son paramètre correspondant.  
+ Quand vous définissez une classe ou une structure, vous pouvez définir un ou plusieurs opérateurs de conversion pour convertir le type de la classe ou de la structure en d’autres types. Vous pouvez également définir des opérateurs de conversion inverse pour convertir ces autres types vers le type de votre classe ou de votre structure. Lorsque vous utilisez votre type de classe ou structure dans un appel de procédure, Visual Basic peut utiliser ces opérateurs de conversion pour convertir le type d’un argument pour le type de son paramètre correspondant.  
   
- Si vous passez l’argument [ByRef](../../../visual-basic/language-reference/modifiers/byref.md), [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] copie parfois la valeur d’argument dans une variable locale de la procédure au lieu de passer une référence. Dans ce cas, quand la procédure est retournée, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] doit recopier la valeur de la variable locale dans l’argument du code appelant.  
+ Si vous passez l’argument [ByRef](../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic copie parfois la valeur d’argument dans une variable locale de la procédure au lieu de passer une référence. Dans ce cas, lorsque la procédure est retournée, Visual Basic doit copier la valeur de variable locale dans l’argument dans le code appelant.  
   
- Si une valeur d’argument `ByRef` est copiée dans la procédure, et si l’argument et le paramètre sont du même type, aucune conversion n’est nécessaire. Toutefois, si les types sont différents, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] doit effectuer une conversion dans les deux sens. Si l’un des types est celui de votre classe ou de votre structure, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] doit le convertir vers et à partir de l’autre type. Si une de ces conversions est étendue, la conversion inverse peut être restrictive.  
+ Si une valeur d’argument `ByRef` est copiée dans la procédure, et si l’argument et le paramètre sont du même type, aucune conversion n’est nécessaire. Mais si les types sont différents, Visual Basic doit convertir dans les deux sens. Si un des types est votre type de classe ou structure, Visual Basic doit le convertir vers et à partir de l’autre type. Si une de ces conversions est étendue, la conversion inverse peut être restrictive.  
   
  **ID d’erreur :** BC32053  
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   
--   Si possible, utilisez un argument d’appel du même type que celui du paramètre de procédure, pour que [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] n’ait pas besoin d’effectuer de conversion.  
+-   Si possible, utilisez un argument d’appel du même type que le paramètre de procédure pour Visual Basic n’a pas besoin d’effectuer de conversion.  
   
 -   Si vous avez besoin d’appeler la procédure avec un argument de type différent du type de paramètre, mais n’avez pas besoin de retourner une valeur dans l’argument d’appel, définissez le paramètre [ByVal](../../../visual-basic/language-reference/modifiers/byval.md) au lieu de `ByRef`.  
   

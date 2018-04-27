@@ -1,18 +1,19 @@
 ---
-title: "Créer des services résilients prêts pour le cloud. Adopter les erreurs temporaires dans le cloud"
-description: "Architecture de Microservices .NET pour les Applications .NET en conteneur | Créer des services résilients prêts pour le cloud. Adopter les erreurs temporaires dans le cloud"
+title: Créer des services résilients prêts pour le cloud. Adopter les erreurs temporaires dans le cloud
+description: Architecture de Microservices .NET pour les Applications .NET en conteneur | Créer des services résilients prêts pour le cloud. Adopter les erreurs temporaires dans le cloud
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
 ms.prod: .net
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: df452c9fbf1c16603efcec40844b55810bd5d2d4
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 0ac1d67a5b5b9a19f47c1d20eeb446977466510f
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>Créer des services résilients prêts pour le cloud : adopter les erreurs temporaires dans le cloud
 
@@ -34,7 +35,7 @@ Une application résistante comme celui illustré dans la Figure 4-9 doit implé
 
 ![Défaillances partielles gérées par les nouvelles tentatives avec interruption exponentielle](./media/image9.png)
 
-> **Figure 4-9.** Défaillances partielles gérées par les nouvelles tentatives avec interruption exponentielle
+> **Figure 4 à 9.** Défaillances partielles gérées par les nouvelles tentatives avec interruption exponentielle
 
 Vous pouvez utiliser ces techniques pour les ressources HTTP et les ressources de base de données. Dans la Figure 4-9, l’application est basée sur une architecture à 3 couches, vous avez besoin de ces techniques au niveau des services (HTTP) et au niveau de la couche données (TCP). Dans une application monolithique qui utilise uniquement un niveau d’application unique en plus de la base de données (aucun des services supplémentaires ou microservices), la gestion des erreurs temporaires au niveau de la connexion de base de données peuvent être suffisant. Dans ce scénario, généralement simplement une configuration particulière de la connexion de base de données est requise.
 

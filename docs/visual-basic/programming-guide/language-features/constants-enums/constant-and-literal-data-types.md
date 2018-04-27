@@ -1,11 +1,12 @@
 ---
-title: "Constantes et types de données littérales (Visual Basic)"
-ms.custom: 
+title: Constantes et types de données littérales (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - declaring constants [Visual Basic], literal data types
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - literals [Visual Basic], coercing data type
 - declarations [Visual Basic], data types
 ms.assetid: 057206d2-3a5b-40b9-b3af-57446f9b52fa
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 554753e26d185593ce43b741b3b2f9e3cb1ad6dd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 58fa1e8c6c659c80cd7998a88d07849ea223750f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="constant-and-literal-data-types-visual-basic"></a>Constantes et types de données littérales (Visual Basic)
 Un littéral est une valeur qui est exprimée comme elle-même plutôt que comme valeur d’une variable ou le résultat d’une expression, telles que le nombre 3 ou la chaîne « Hello ». Une constante est un nom explicite qui prend la place d’un littéral et conserve cette même valeur tout au long du programme, par opposition à une variable dont la valeur peut changer.  
@@ -53,21 +54,21 @@ myDecimal = 100000000000000000000   ' This causes a compiler error.
   
  [!code-vb[VbVbalrConstants#3](../../../../visual-basic/programming-guide/language-features/constants-enums/codesnippet/VisualBasic/constant-and-literal-data-types_3.vb)]  
   
- Le tableau suivant indique les caractères et le type englobant de caractères disponibles dans [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Le tableau suivant répertorie les caractères englobants et les caractères de type disponibles dans Visual Basic.  
   
 |Type de données|Caractère englobant|Caractère de type ajouté|  
 |---|---|---|  
-|`Boolean`|(aucun)|(aucun)|  
-|`Byte`|(aucun)|(aucun)|  
+|`Boolean`|(aucune)|(aucune)|  
+|`Byte`|(aucune)|(aucune)|  
 |`Char`|"|C|  
-|`Date`|#|(aucun)|  
-|`Decimal`|(aucun)|D ou @|  
-|`Double`|(aucun)|R ou #|  
-|`Integer`|(aucun)|I ou %|  
-|`Long`|(aucun)|L ou &|  
-|`Short`|(aucun)|S|  
-|`Single`|(aucun)|F ou !|  
-|`String`|"|(aucun)|  
+|`Date`|#|(aucune)|  
+|`Decimal`|(aucune)|D ou @|  
+|`Double`|(aucune)|R ou #|  
+|`Integer`|(aucune)|I ou %|  
+|`Long`|(aucune)|L ou &|  
+|`Short`|(aucune)|S|  
+|`Single`|(aucune)|F ou !|  
+|`String`|"|(aucune)|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Constantes définies par l’utilisateur](../../../../visual-basic/programming-guide/language-features/constants-enums/user-defined-constants.md)  

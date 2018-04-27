@@ -1,34 +1,36 @@
 ---
-title: "Modèles d'événement faible"
-ms.custom: 
+title: Modèles d'événement faible
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - weak event pattern implementation [WPF]
 - event handlers [WPF], weak event pattern
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 21a36797f945f37a641e7002bbb9937a664650fd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f96327f8eaad36f3faebf48db083125816589821
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="weak-event-patterns"></a>Modèles d'événement faible
-Dans les applications, il est possible que les gestionnaires qui sont attachés à des sources d’événements ne sont pas détruits en coordination avec l’objet écouteur qui joint le gestionnaire à la source. Cette situation peut conduire à des fuites de mémoire. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]introduit un modèle de conception qui peut être utilisé pour résoudre ce problème, en fournissant une classe de gestionnaire dédiée pour des événements particuliers et en implémentant une interface sur les écouteurs de cet événement. Ce modèle de conception est appelé le *du modèle d’événement faible*.  
+Dans les applications, il est possible que les gestionnaires qui sont attachés à des sources d’événements ne sont pas détruits en coordination avec l’objet écouteur qui joint le gestionnaire à la source. Cette situation peut conduire à des fuites de mémoire. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] introduit un modèle de conception qui peut être utilisé pour résoudre ce problème, en fournissant une classe de gestionnaire dédiée pour des événements particuliers et en implémentant une interface sur les écouteurs de cet événement. Ce modèle de conception est appelé le *du modèle d’événement faible*.  
   
 ## <a name="why-implement-the-weak-event-pattern"></a>Pourquoi implémenter le modèle d’événement faible ?  
- L’écoute des événements peut provoquer des fuites de mémoire. La technique standard pour écouter un événement est d’utiliser la syntaxe spécifique au langage qui attache un gestionnaire à un événement sur une source. Par exemple, dans [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)], que la syntaxe est : `source.SomeEvent += new SomeEventHandler(MyEventHandler)`.  
+ L’écoute des événements peut provoquer des fuites de mémoire. La technique standard pour écouter un événement est d’utiliser la syntaxe spécifique au langage qui attache un gestionnaire à un événement sur une source. Par exemple, en c#, cette syntaxe est : `source.SomeEvent += new SomeEventHandler(MyEventHandler)`.  
   
  Cette technique crée une référence forte à partir de la source d’événements à l’écouteur d’événements. En règle générale, attachement d’un gestionnaire d’événements pour un écouteur de provoque l’écouteur ont une durée de vie est influencée par la durée de vie de la source (sauf si le Gestionnaire d’événements est supprimé explicitement). Toutefois, dans certaines circonstances, vous pouvez la durée de vie de l’écouteur à être contrôlés par d’autres facteurs, tels que si elle appartient actuellement à l’arborescence d’éléments visuels de l’application et non par la durée de vie de la source. Chaque fois que la durée de vie source s’étend au-delà de la durée de vie de l’écouteur, le modèle d’événement normal entraîne une fuite de mémoire : l’écouteur est maintenue actif plus longtemps que prévu.  
   

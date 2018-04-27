@@ -1,11 +1,12 @@
 ---
-title: "Structures de contrôle imbriquées (Visual Basic)"
-ms.custom: 
+title: Structures de contrôle imbriquées (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, control flow
@@ -16,20 +17,20 @@ helpviewer_keywords:
 - structures [Visual Basic], nested control
 - nested control statements [Visual Basic]
 ms.assetid: cf60b061-65d9-44a8-81f2-b0bdccd23a05
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 22adf4086cd494202a540b2ec16310072329b6ca
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f2c91bcdd741ef75417fe50b0c08bd0f9bd5ff80
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="nested-control-structures-visual-basic"></a>Structures de contrôle imbriquées (Visual Basic)
 Vous pouvez placer des instructions de contrôle dans d’autres instructions de contrôle, par exemple un `If...Then...Else` bloquer dans un `For...Next` boucle. Une instruction de contrôle à l’intérieur d’une autre instruction de contrôle est dite *imbriquée*.  
   
 ## <a name="nesting-levels"></a>Niveaux d’imbrication  
- Contrôler les structures dans [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] peuvent être imbriquées au nombre de niveaux que vous le souhaitez. Il est courant d’améliorer la lisibilité des structures imbriquées en retrait le corps de chacun d’eux. L’éditeur d’environnement (IDE) de développement intégré fait automatiquement.  
+ En Visual Basic, les structures de contrôle peuvent être imbriquées au nombre de niveaux que vous le souhaitez. Il est courant d’améliorer la lisibilité des structures imbriquées en retrait le corps de chacun d’eux. L’éditeur d’environnement (IDE) de développement intégré fait automatiquement.  
   
  Dans l’exemple suivant, la procédure `sumRows` additionne les éléments positifs de chaque ligne de la matrice.  
   
@@ -78,7 +79,7 @@ Next ctl
  ![Diagramme graphique d’imbrication non valide](../../../../visual-basic/programming-guide/language-features/control-flow/media/nestexampleinvalid.gif "NestExampleInvalid")  
 Imbrication non valide de structures For et With  
   
- Le [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilateur détecte les structures de contrôle qui se chevauchent et signale une erreur de compilation.  
+ Le compilateur Visual Basic détecte ces structures de contrôle qui se chevauchent et signale une erreur de compilation.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Flux de contrôle](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)  

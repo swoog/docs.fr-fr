@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: a7fe83a2-a6d8-460c-8dad-79a8f433f501
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 59dc833299161eac7b119e654c94534f202b1cb7
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 5dc321f7f927d68a9f270076640cbc6d31d2f6d5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="-errorreport"></a>-errorreport
-Indique comment le compilateur [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] doit signaler les erreurs internes du compilateur.  
+Spécifie comment le compilateur Visual Basic doit signaler les erreurs internes du compilateur.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -29,7 +29,7 @@ Indique comment le compilateur [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] doit 
 ```  
   
 ## <a name="remarks"></a>Notes  
- Cette option fournit un moyen pratique de rapport un [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] erreur interne du compilateur (ICE) pour le [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] équipe de Microsoft. Par défaut, le compilateur n’envoie aucune information à Microsoft. Toutefois, si vous rencontrez une erreur interne du compilateur, cette option vous permet de signaler l’erreur à Microsoft. Ces informations aideront les ingénieurs de Microsoft à identifier la cause et peut aider à améliorer la prochaine version de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Cette option offre un moyen pratique de signaler une erreur interne du compilateur de Visual Basic (ICE) à l’équipe Microsoft Visual Basic. Par défaut, le compilateur n’envoie aucune information à Microsoft. Toutefois, si vous rencontrez une erreur interne du compilateur, cette option vous permet de signaler l’erreur à Microsoft. Ces informations aideront les ingénieurs de Microsoft à identifier la cause et peuvent aider à améliorer la prochaine version de Visual Basic.  
   
  Capacité d’un utilisateur d’envoyer des rapports dépend des autorisations de stratégie ordinateur et utilisateur.  
   

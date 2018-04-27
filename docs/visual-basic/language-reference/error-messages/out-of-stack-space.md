@@ -13,11 +13,11 @@ ms.assetid: bfcd792b-ac29-4158-81fc-ea0c13f4ffa2
 caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 3959c24aa4e95204e156a9863ef0ce237af1fcda
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: ec839d1f0ad1931ed4229e898a900c3210d813ed
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="out-of-stack-space-visual-basic"></a>Espace de pile insuffisant (Visual Basic)
 La pile est une zone de travail de la mémoire augmente et se réduit dynamiquement aux demandes de votre programme en cours d’exécution. Ses limites ont été dépassées.  
@@ -34,7 +34,7 @@ La pile est une zone de travail de la mémoire augmente et se réduit dynamiquem
   
 5.  Vérifiez le nombre d’imbriquée `DoEvents` appels de fonctions, à l’aide de la `Calls` boîte de dialogue pour afficher les procédures actives sur la pile.  
   
-6.  Assurez-vous que vous n’avez pas provoqué une « cascade d’événements » en déclenchant un événement qui appelle une procédure événementielle déjà sur la pile. Une cascade d’événements est similaire à un appel de procédure récursive inachevé, mais il est moins évidente, étant donné que l’appel est effectué par [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] au lieu d’un appel explicite dans le code. Utilisez le `Calls` boîte de dialogue pour afficher les procédures actives sur la pile.  
+6.  Assurez-vous que vous n’avez pas provoqué une « cascade d’événements » en déclenchant un événement qui appelle une procédure événementielle déjà sur la pile. Une cascade d’événements est similaire à un appel de procédure récursive inachevé, mais elle est moins évidente, étant donné que l’appel est effectué en Visual Basic, plutôt qu’un appel explicite dans le code. Utilisez le `Calls` boîte de dialogue pour afficher les procédures actives sur la pile.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fenêtres Mémoire](/visualstudio/debugger/memory-windows)

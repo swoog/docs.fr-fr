@@ -1,12 +1,13 @@
 ---
-title: "Guide pratique pour configurer IIS 5.0 et IIS 6.0 pour déployer des applications WPF"
-ms.custom: 
+title: Guide pratique pour configurer IIS 5.0 et IIS 6.0 pour déployer des applications WPF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - MIME types [WPF], registering
@@ -20,16 +21,17 @@ helpviewer_keywords:
 - file extensions [WPF], registering
 - registering MIME types [WPF]
 ms.assetid: c6e8c2cb-9ba2-4e75-a0d5-180ec9639433
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3ab1d7223299697a4be10ba5b35bc90b120603d7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5c1b03cf39608566ed80e2288204480e77994ad7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-configure-iis-50-and-iis-60-to-deploy-wpf-applications"></a>Guide pratique pour configurer IIS 5.0 et IIS 6.0 pour déployer des applications WPF
 Vous pouvez déployer une application [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] à partir de la plupart des serveurs web, tant qu’ils sont configurés avec les types [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] appropriés. Par défaut, [!INCLUDE[TLA#tla_iis70](../../../../includes/tlasharptla-iis70-md.md)] est configuré avec ces types [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)], mais [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] et [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] ne le sont pas.  
@@ -68,9 +70,9 @@ Vous pouvez déployer une application [!INCLUDE[TLA#tla_winclient](../../../../i
 |.xps|application/vnd.ms-xpsdocument|  
   
 > [!NOTE]
->  Vous n’avez pas besoin d’inscrire d’extensions de fichiers ou de types [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] sur les systèmes clients. Ils sont inscrits automatiquement quand vous installez le [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)].  
+>  Vous n’avez pas besoin d’inscrire d’extensions de fichiers ou de types [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] sur les systèmes clients. Ils sont inscrits automatiquement lorsque vous installez Microsoft .NET Framework.  
   
- L’exemple [!INCLUDE[TLA#tla_visualbscrpt](../../../../includes/tlasharptla-visualbscrpt-md.md)] suivant ajoute automatiquement les types [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] nécessaires à [!INCLUDE[TLA2#tla_iis5](../../../../includes/tla2sharptla-iis5-md.md)]. Pour utiliser le script, copiez le code dans un fichier .vbs sur votre serveur. Ensuite, exécutez le script en exécutant le fichier à partir de la ligne de commande ou en double-cliquant sur le fichier dans [!INCLUDE[TLA#tla_winexpl](../../../../includes/tlasharptla-winexpl-md.md)].  
+ L’exemple Microsoft Visual Basic Scripting Edition (VBScript) suivant ajoute automatiquement le nécessaire [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] types [!INCLUDE[TLA2#tla_iis5](../../../../includes/tla2sharptla-iis5-md.md)]. Pour utiliser le script, copiez le code dans un fichier .vbs sur votre serveur. Ensuite, exécutez le script en exécutant le fichier à partir de la ligne de commande ou en double-cliquant sur le fichier dans [!INCLUDE[TLA#tla_winexpl](../../../../includes/tlasharptla-winexpl-md.md)].  
   
 ```  
 ' This script adds the necessary Windows Presentation Foundation MIME types   

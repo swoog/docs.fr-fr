@@ -1,27 +1,29 @@
 ---
-title: "Exemples de requêtes"
-ms.custom: 
+title: Exemples de requêtes
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 137f8677-494c-4d49-95ce-c17742f2d01f
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 1b3aabf5a47088fa408547527c5f18fa69a48e02
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5b1681f609d8715167defcb1df57cc270b61e53a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="query-examples"></a>Exemples de requêtes
-Cette section fournit des exemples [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] et C# de requêtes [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] standard. Les développeurs qui utilisent [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] peuvent rechercher de nombreux autres exemples dans un exemple de solution disponible dans la section Exemples. Pour plus d’informations, consultez [exemples](../../../../../../docs/framework/data/adonet/sql/linq/samples.md).  
+Cette section fournit des exemples Visual Basic et c# de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] des requêtes. Les développeurs qui utilisent Visual Studio peuvent trouver beaucoup plus d’exemples dans un exemple de solution disponible dans la section Exemples. Pour plus d’informations, consultez [exemples](../../../../../../docs/framework/data/adonet/sql/linq/samples.md).  
   
 > [!IMPORTANT]
 >  *base de données* est souvent utilisée dans les exemples de code dans [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentation. *base de données* est supposé pour être une instance d’un *Northwind* (classe), qui hérite de <xref:System.Data.Linq.DataContext>.  

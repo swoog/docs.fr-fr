@@ -1,24 +1,26 @@
 ---
-title: "Génération SQL à partir d’arborescences de commandes - meilleures pratiques"
-ms.custom: 
+title: Génération SQL à partir d’arborescences de commandes - meilleures pratiques
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 71ef6a24-4c4f-4254-af3a-ffc0d855b0a8
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: d68194ab83a6606337a33668470411ed8b1c6957
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 037d1eaa8d781d012cde7a1bd3b08aa7003edd77
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>Génération SQL à partir d’arborescences de commandes - meilleures pratiques
 Les arborescences de commandes de requête de sortie modèlent de façon précise les requêtes pouvant être exprimées en SQL. Toutefois, les développeurs de fournisseur sont confrontés à des problèmes courants lors de la génération SQL d'une arborescence de commandes de sortie. Cette rubrique expose ces difficultés. Dans la rubrique suivante, le fournisseur d'exemples indique comment résoudre ces problèmes.  
@@ -147,7 +149,7 @@ ON b.y = d.z
  Les expressions peuvent être réutilisées dans l'arborescence de commandes de requête transmise par [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Ne partez pas du principe que chaque expression apparaît une seule fois que dans l'arborescence de commandes de requête.  
   
 ## <a name="mapping-primitive-types"></a>Mappage de types primitifs  
- Lorsque vous mappez des types conceptuels (EDM) à des types de fournisseur, vous devez mapper au type le plus large (Int32) afin que toutes les valeurs possibles puissent correspondre. Évitez également de mapper à des types qui ne peuvent pas être utilisés pour de nombreuses opérations, comme les types BLOB (par exemple, `ntext` dans [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]).  
+ Lorsque vous mappez des types conceptuels (EDM) à des types de fournisseur, vous devez mapper au type le plus large (Int32) afin que toutes les valeurs possibles puissent correspondre. Évitez également de mapper aux types qui ne peut pas être utilisé pour de nombreuses opérations, comme les types BLOB (par exemple, `ntext` dans SQL Server).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Génération SQL](../../../../../docs/framework/data/adonet/ef/sql-generation.md)

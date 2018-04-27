@@ -1,12 +1,13 @@
 ---
 title: Fournisseurs de diffusion en continu (WCF Data Services)
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f965bc46c62742c0e2ffb0a7f8ae2e09eca5dc1c
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: bc66d4154f60e46e53de8ca72596e133dc84eb97
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Fournisseurs de diffusion en continu (WCF Data Services)
 Un service de données peut exposer des données Large Object Binary. Ces données binaires peuvent représenter des flux vidéo et audio, des images, des fichiers de document ou d'autres types de supports binaires. Lorsqu'une entité du modèle de données inclut une ou plusieurs propriétés binaires, le service de données retourne ces données binaires encodées en Base 64 au sein de l'entrée dans le flux de réponse. Étant donné que le chargement et la sérialisation des données binaires volumineuses de cette manière peuvent affecter les performances, le [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] définit un mécanisme pour récupérer des données binaires indépendantes de l’entité à laquelle il appartient. Cela s'effectue en séparant l'entité et les données binaires de l'entité dans un ou plusieurs flux de données  
@@ -61,7 +63,7 @@ Un service de données peut exposer des données Large Object Binary. Ces donné
   
  Vous devez également ajouter l'espace de noms `xmlns:m=http://schemas.microsoft.com/ado/2007/08/dataservices/metadata` à l'entité ou à la racine du fichier .edmx ou .csdl qui définit le modèle de données.  
   
- [!INCLUDE[crexample](../../../../includes/crexample-md.md)]un service de données qui utilise le [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] fournisseur et expose une ressource multimédia, consultez le billet [série fournisseur de Services de diffusion en continu de données : implémentation d’un fournisseur de diffusion en continu (partie 1)](http://go.microsoft.com/fwlink/?LinkID=198989).  
+ Pour obtenir un exemple d’un service de données qui utilise le [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] fournisseur et expose une ressource multimédia, consultez le billet [série fournisseur de Services de diffusion en continu de données : implémentation d’un fournisseur de diffusion en continu (partie 1)](http://go.microsoft.com/fwlink/?LinkID=198989).  
   
  **Fournisseur de réflexion**  
  Pour indiquer qu'une entité est une entrée de lien média, ajoutez l'objet <xref:System.Data.Services.Common.HasStreamAttribute> à la classe qui définit le type d'entité dans le fournisseur de réflexion.  
@@ -122,7 +124,7 @@ Un service de données peut exposer des données Large Object Binary. Ces donné
   
     -   Une propriété binaire qui est une ressource multimédia ne doit pas être incluse dans le modèle de données. Toutes les propriétés exposées dans un modèle de données sont retournées dans l'entrée dans un flux de réponse.  
   
-    -   Pour améliorer les performances avec des flux binaires volumineux, nous vous conseillons de créer une classe de flux de données personnalisée pour stocker les données binaires dans la base de données. Cette classe est retournée par votre implémentation de <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> et transmet les données binaires à la base de données par segments. Pour un [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] base de données, nous vous recommandons d’utiliser un FILESTREAM pour diffuser des données dans la base de données lorsque les données binaires sont supérieurs à 1 Mo.  
+    -   Pour améliorer les performances avec des flux binaires volumineux, nous vous conseillons de créer une classe de flux de données personnalisée pour stocker les données binaires dans la base de données. Cette classe est retournée par votre implémentation de <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> et transmet les données binaires à la base de données par segments. Pour une base de données SQL Server, nous vous recommandons d’utiliser un FILESTREAM pour diffuser des données dans la base de données lorsque les données binaires sont supérieurs à 1 Mo.  
   
     -   Vérifiez que votre base de données est conçue pour stocker les flux de données binaires volumineux qui seront reçus par votre service de données.  
   

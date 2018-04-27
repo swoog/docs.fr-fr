@@ -17,11 +17,11 @@ ms.assetid: 9eafb6a4-dd9d-4866-85e8-0654c65abc44
 caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 906fd2494dd952c08088b9b7e38dba4505780481
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e8dfc091409e060e20970b0b6d6bc19b4fc2aeea
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xml-cdata-literal-visual-basic"></a>Littéral CDATA XML (Visual Basic)
 Littéral représentant un <xref:System.Xml.Linq.XCData> objet.  
@@ -45,7 +45,7 @@ Littéral représentant un <xref:System.Xml.Linq.XCData> objet.
 ## <a name="return-value"></a>Valeur de retour  
  Objet <xref:System.Xml.Linq.XCData>.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Les sections XML CDATA contiennent du texte brut qui doit être inclus, mais non analysé, avec le code XML qui le contient. Une section CDATA XML peut contenir n’importe quel texte. Cela inclut les caractères XML réservés. La section CDATA XML se termine par la séquence «]] > ». Cela implique les points suivants :  
   
 -   Vous ne pouvez pas utiliser une expression incorporée dans un littéral XML CDATA, car les délimiteurs d’expression sont contenus XML CDATA valides.  
@@ -55,9 +55,9 @@ Littéral représentant un <xref:System.Xml.Linq.XCData> objet.
  Vous pouvez assigner un littéral XML CDATA à une variable ou l’inclure dans un littéral d’élément XML.  
   
 > [!NOTE]
->  Un littéral XML peut couvrir plusieurs lignes, mais n’utilise pas de caractères de continuation de ligne. Cela vous permet de copier le contenu d’un document XML et coller directement dans un [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] programme.  
+>  Un littéral XML peut couvrir plusieurs lignes, mais n’utilise pas de caractères de continuation de ligne. Cela vous permet de copier le contenu d’un document XML et le coller directement dans un programme Visual Basic.  
   
- Le [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilateur convertit le littéral XML CDATA à un appel à la <xref:System.Xml.Linq.XCData.%23ctor%2A> constructeur.  
+ Le compilateur Visual Basic convertit le littéral XML CDATA à un appel à la <xref:System.Xml.Linq.XCData.%23ctor%2A> constructeur.  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant crée une section CDATA qui contient le texte « peut contenir des littéraux \<XML > balises ».  

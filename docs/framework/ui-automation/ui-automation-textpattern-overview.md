@@ -1,34 +1,36 @@
 ---
 title: Vue d'ensemble de TextPattern d'UI Automation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - UI Automation, TextPattern class
 - TextPattern class
 - classes, TextPattern
 ms.assetid: 41787927-df1f-4f4a-aba3-641662854fc4
-caps.latest.revision: "38"
+caps.latest.revision: 38
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: dbf3e125d911a407be3b07d0ce93d5c17bd8a0b7
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1b9504dceea6987945cfb3960f756148db9ebb8f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ui-automation-textpattern-overview"></a>Vue d'ensemble de TextPattern d'UI Automation
 > [!NOTE]
 >  Cette documentation s'adresse aux développeurs .NET Framework qui souhaitent utiliser les classes [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] managées définies dans l'espace de noms <xref:System.Windows.Automation>. Pour obtenir les dernières informations sur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consultez [API Windows Automation : UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).  
   
- Cette présentation décrit comment utiliser [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] pour exposer le contenu textuel, y compris les attributs de mise en forme et de style, des contrôles de texte dans les plateformes prises en charge par [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Ces contrôles incluent, entre autres, [!INCLUDE[TLA#tla_winfx](../../../includes/tlasharptla-winfx-md.md)] <xref:System.Windows.Controls.TextBox> et <xref:System.Windows.Controls.RichTextBox> , ainsi que leurs équivalents [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] .  
+ Cette présentation décrit comment utiliser [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] pour exposer le contenu textuel, y compris les attributs de mise en forme et de style, des contrôles de texte dans les plateformes prises en charge par [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Ces contrôles incluent, mais ne sont pas limités à, Microsoft .NET Framework <xref:System.Windows.Controls.TextBox> et <xref:System.Windows.Controls.RichTextBox> , ainsi que leurs [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] équivalents.  
   
  L’exposition du contenu textuel d’un contrôle s’effectue via l’utilisation du modèle de contrôle <xref:System.Windows.Automation.TextPattern> , qui représente le contenu d’un conteneur de texte sous forme d’un flux de texte. En retour, <xref:System.Windows.Automation.TextPattern> requiert la prise en charge de la classe <xref:System.Windows.Automation.Text.TextPatternRange> pour exposer les attributs de mise en forme et de style. <xref:System.Windows.Automation.Text.TextPatternRange> prend en charge <xref:System.Windows.Automation.TextPattern> en représentant les étendues de texte disjointes contiguës ou multiples dans un conteneur de texte par une collection de points de terminaison <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> et <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> . <xref:System.Windows.Automation.Text.TextPatternRange> prend en charge des fonctionnalités telles que la sélection, la comparaison, la récupération et la traversée.  
   
@@ -121,7 +123,7 @@ ms.lasthandoff: 01/19/2018
  Caractéristique de mise en forme d'une plage de texte (par exemple, <xref:System.Windows.Automation.TextPattern.IsItalicAttribute> ou <xref:System.Windows.Automation.TextPattern.FontNameAttribute>).  
   
  **Plage dégénérée**  
- Une plage dégénérée est une plage de texte vide ou sans caractère. Pour les besoins du modèle de contrôle TextPattern, le point d'insertion de texte (ou signe insertion) est considéré comme une plage dégénérée. Si aucun texte n'est sélectionné, <xref:System.Windows.Automation.TextPattern.GetSelection%2A> retourne une plage dégénérée au niveau du point d'insertion de texte et <xref:System.Windows.Automation.TextPattern.RangeFromPoint%2A> retourne une plage dégénérée en tant que point de terminaison initial. <xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> et <xref:System.Windows.Automation.TextPattern.GetVisibleRanges%2A> peuvent retourner des plages dégénérées quand le fournisseur de texte ne peut pas trouver de plages de texte correspondant à la condition donnée. Cette plage dégénérée peut être utilisée en tant que point de terminaison initial dans le fournisseur de texte. <xref:System.Windows.Automation.Text.TextPatternRange.FindText%2A> et <xref:System.Windows.Automation.Text.TextPatternRange.FindAttribute%2A> retournent une référence null (`Nothing` dans [!INCLUDE[TLA2#tla_visualbnet](../../../includes/tla2sharptla-visualbnet-md.md)]) pour éviter toute confusion entre une plage découverte et une plage dégénérée.  
+ Une plage dégénérée est une plage de texte vide ou sans caractère. Pour les besoins du modèle de contrôle TextPattern, le point d'insertion de texte (ou signe insertion) est considéré comme une plage dégénérée. Si aucun texte n'est sélectionné, <xref:System.Windows.Automation.TextPattern.GetSelection%2A> retourne une plage dégénérée au niveau du point d'insertion de texte et <xref:System.Windows.Automation.TextPattern.RangeFromPoint%2A> retourne une plage dégénérée en tant que point de terminaison initial. <xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> et <xref:System.Windows.Automation.TextPattern.GetVisibleRanges%2A> peuvent retourner des plages dégénérées quand le fournisseur de texte ne peut pas trouver de plages de texte correspondant à la condition donnée. Cette plage dégénérée peut être utilisée en tant que point de terminaison initial dans le fournisseur de texte. <xref:System.Windows.Automation.Text.TextPatternRange.FindText%2A> et <xref:System.Windows.Automation.Text.TextPatternRange.FindAttribute%2A> retourner une référence null (`Nothing` dans Microsoft Visual Basic .NET) pour éviter toute confusion entre une plage découverte et une plage dégénérée.  
   
  **Objet incorporé**  
  Il existe deux types d'objets incorporés dans le modèle de texte [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] . Il s'agit des éléments de contenu de type texte tels que les liens hypertexte ou les tables, et des éléments de contrôle tels que les images et les boutons. Pour obtenir des informations détaillées, consultez [Access Embedded Objects Using UI Automation](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md).  
@@ -129,7 +131,7 @@ ms.lasthandoff: 01/19/2018
  **Point de terminaison**  
  Point <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> ou <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> absolu d'une plage de texte dans un conteneur de texte.  
   
- ![TextPatternRangeEndpoints &#40; début et fin &#41;. ] (../../../docs/framework/ui-automation/media/uia-textpattern-endpoints.PNG "UIA_TextPattern_Endpoints")  
+ ![TextPatternRangeEndpoints &#40;commencer et se terminer&#41;. ] (../../../docs/framework/ui-automation/media/uia-textpattern-endpoints.PNG "UIA_TextPattern_Endpoints")  
 L'exemple suivant illustre un ensemble de points de début et de terminaison.  
   
  **TextRange**  

@@ -1,12 +1,13 @@
 ---
-title: "Comment : créer des formulaires MDI enfants"
-ms.custom: 
+title: 'Comment : créer des formulaires MDI enfants'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - MDI [Windows Forms], creating forms
 - child forms
 ms.assetid: 164b69bb-2eca-4339-ada3-0679eb2c6dda
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d0ee60e9b25ed4238ccdd738cd59a69876f6b55d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: d28a7390ea3cfbd922f029d963ad3249db399177
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-create-mdi-child-forms"></a>Comment : créer des formulaires MDI enfants
 Formulaires MDI enfants constituent un élément essentiel de [Applications d’Interface multidocument (MDI)](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md), car ils représentent le centre de l’interaction utilisateur.  
@@ -47,7 +49,7 @@ Formulaires MDI enfants constituent un élément essentiel de [Applications d’
   
 4.  Dans **l’Explorateur de solutions**, cliquez sur le projet, pointez sur **ajouter**, puis sélectionnez **ajouter un nouvel élément**.  
   
-5.  Dans le **ajouter un nouvel élément** boîte de dialogue, sélectionnez **Windows Form** (dans [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] ou dans [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]) ou **Application Windows Forms (.NET)** (dans [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) à partir de la **modèles** volet. Dans le **nom** zone, nommez le formulaire **Form2**. Cliquez sur le **ouvrir** pour ajouter le formulaire au projet.  
+5.  Dans le **ajouter un nouvel élément** boîte de dialogue, sélectionnez **Windows Form** (en Visual Basic ou Visual c#) ou **Application Windows Forms (.NET)** (dans [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) à partir de la  **Modèles** volet. Dans le **nom** zone, nommez le formulaire **Form2**. Cliquez sur le **ouvrir** pour ajouter le formulaire au projet.  
   
     > [!NOTE]
     >  Le formulaire MDI enfant que vous avez créé lors de cette étape est un Windows Form standard. Il a donc une propriété <xref:System.Windows.Forms.Form.Opacity%2A>, ce qui vous permet de contrôler la transparence du formulaire. Cependant, la propriété <xref:System.Windows.Forms.Form.Opacity%2A> a été conçue pour les fenêtres de niveau supérieur. Ne l'utilisez pas avec des formulaires MDI enfants, car des problèmes de peinture peuvent survenir.  

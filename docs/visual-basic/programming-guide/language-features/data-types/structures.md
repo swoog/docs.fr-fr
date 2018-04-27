@@ -1,11 +1,12 @@
 ---
 title: Structures (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - structures [Visual Basic]
@@ -15,17 +16,17 @@ helpviewer_keywords:
 - user-defined data types [Visual Basic], about user-defined data types
 - types [Visual Basic], user-defined
 ms.assetid: 55e86462-5e99-4d33-8018-6d097ca491b2
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: de99d67ee31d8fb8e92e0a351142b30f622bf5f0
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: d1f537b25a405548816ab3d356a18f693a5d0006
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="structures-visual-basic"></a>Structures (Visual Basic)
-A *structure* est une généralisation du type défini par l’utilisateur (UDT) est pris en charge par les versions précédentes de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. En plus des champs, les structures peuvent exposer des propriétés, méthodes et événements. Une structure peut implémenter une ou plusieurs interfaces, et vous pouvez déclarer des niveaux d’accès individuels pour chaque champ.  
+A *structure* est une généralisation du type défini par l’utilisateur (UDT) est pris en charge par les versions précédentes de Visual Basic. En plus des champs, les structures peuvent exposer des propriétés, méthodes et événements. Une structure peut implémenter une ou plusieurs interfaces, et vous pouvez déclarer des niveaux d’accès individuels pour chaque champ.  
   
  Vous pouvez combiner des éléments de données de différents types pour créer une structure. Une structure associe un ou plusieurs *éléments* entre eux et avec la structure elle-même. Lorsque vous déclarez une structure, il devient un *type de données composite*, et vous pouvez déclarer des variables de ce type.  
   
@@ -46,7 +47,7 @@ A *structure* est une généralisation du type défini par l’utilisateur (UDT)
   
 ## <a name="related-sections"></a>Rubriques connexes  
  [Types de données](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- Présente le [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] types de données et décrit comment les utiliser.  
+ Présente les types de données Visual Basic et décrit comment les utiliser.  
   
  [Types de données](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
- Répertorie les types de données élémentaires fournis par [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].
+ Répertorie les types de données élémentaires fournis par Visual Basic.

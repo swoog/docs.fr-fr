@@ -24,11 +24,11 @@ ms.author: ghogen
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 325e43f4b1734bc6ab8753285e5069f36b0fda51
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 4ed6a741a6f86b492929598613a0c10ae08981c5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="developing-windows-service-applications"></a>Développement des applications de service Windows
 À l’aide de Microsoft [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ou Microsoft [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK, vous pouvez facilement créer services en créant une application qui est installée en tant que service. Ce type d’application est appelé un service Windows. Avec les fonctionnalités de framework, vous pouvez créer des services, les installer, Démarrer, arrêter et contrôler leur comportement.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 01/19/2018
  Fournit une vue d’ensemble des applications de service Windows, la durée de vie d’un service, et comment les applications de service diffèrent des autres types de projets courants.  
   
  [Procédure pas à pas : création d’une application de service Windows dans le Concepteur de composants](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)  
- Fournit un exemple de création d’un service dans [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] et Visual c#.  
+ Fournit un exemple de création d’un service dans Visual Basic et Visual c#.  
   
  [Architecture de programmation d’une application de service](../../../docs/framework/windows-services/service-application-programming-architecture.md)  
  Explique les éléments de langage utilisées dans la programmation de service.  

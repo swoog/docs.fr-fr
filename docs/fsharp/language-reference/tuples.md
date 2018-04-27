@@ -1,6 +1,6 @@
 ---
 title: Tuples (F#)
-description: "Découvrez le tuple F #, un regroupement de valeurs sans nom, mais ordonnées, de types éventuellement différents."
+description: 'Découvrez le tuple F #, un regroupement de valeurs sans nom, mais ordonnées, de types éventuellement différents.'
 keywords: visual f#, f#, programmation fonctionnelle
 author: cartermp
 ms.author: phcart
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 35069073-9a82-410f-8dea-912e2a152e6d
-ms.openlocfilehash: 996566f2baaea8ab01e5c80e53caea82e9684714
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: e0a5e5eb08e13bd5cbe9f88a47d4cf4bba19ea22
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="tuples"></a>Tuples
 
@@ -89,7 +89,7 @@ int * float * string
 
 ## <a name="interoperation-with-c-tuples"></a>Interopérabilité avec des Tuples c#
 
-C# 7 introduit des tuples de la langue.  Tuples en c# sont des structures et sont équivalentes aux tuples struct en F #.  Si vous avez besoin d’interagir avec c#, vous devez utiliser des tuples de struct.
+C# 7.0 introduit des tuples de la langue.  Tuples en c# sont des structures et sont équivalentes aux tuples struct en F #.  Si vous avez besoin d’interagir avec c#, vous devez utiliser des tuples de struct.
 
 Il est facile à suivre.  Par exemple, imaginez que vous devez passer un tuple à une classe c# et ensuite utiliser son résultat, qui est également un tuple :
 
@@ -119,7 +119,7 @@ Référence Tuples et Struct Tuples ayant une représentation sous-jacente compl
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/interop.fsx#L5-L12)]
 
-Vous devez répéter correspondent dans un tuple et construire l’autre avec les parties qui le composent.  Exemple :
+Vous devez répéter correspondent dans un tuple et construire l’autre avec les parties qui le composent.  Par exemple :
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/tuples/interop.fsx#L18-L22)]
 
@@ -130,7 +130,7 @@ Tuples sont compilés en objets de l’un des divers types génériques, tous ap
 
 ### <a name="compiled-form-of-struct-tuples"></a>Forme compilée de Tuples d’un Struct
 
-Struct tuples (par exemple, `struct (x, y)`), sont fondamentalement différents à partir des tuples de référence.  Ils sont compilés dans le <xref:System.ValueTuple> type, surchargé par une arité, ou le nombre de paramètres de type.  Ils sont équivalents aux [C# 7 Tuples](../../csharp/tuples.md) et [Visual Basic 2017 Tuples](../../visual-basic/programming-guide/language-features/data-types/tuples.md)et interagir de façon bidirectionnelle.
+Struct tuples (par exemple, `struct (x, y)`), sont fondamentalement différents à partir des tuples de référence.  Ils sont compilés dans le <xref:System.ValueTuple> type, surchargé par une arité, ou le nombre de paramètres de type.  Ils sont équivalents aux [c# 7.0 Tuples](../../csharp/tuples.md) et [Visual Basic 2017 Tuples](../../visual-basic/programming-guide/language-features/data-types/tuples.md)et interagir de façon bidirectionnelle.
 
 ## <a name="see-also"></a>Voir aussi
 [Informations de référence du langage F#](index.md)

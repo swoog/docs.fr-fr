@@ -1,10 +1,10 @@
 ---
-title: "Procédure : diviser et combiner des instructions dans le code (Visual Basic)"
-ms.custom: 
+title: 'Procédure : diviser et combiner des instructions dans le code (Visual Basic)'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -28,14 +28,14 @@ helpviewer_keywords:
 - Visual Basic code, line continuation in
 - statements [Visual Basic], line breaks in
 ms.assetid: dea01dad-a8ac-484a-bb3a-8c45a1b1eccc
-caps.latest.revision: 
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: cf6b3ce7e5f9549ca04c4980bd3c91513b343ff6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 06702cdc9073065a418b17d198dbb43be4aefca1
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>Procédure : diviser et combiner des instructions dans le code (Visual Basic)
 Lorsque vous écrivez votre code, vous pouvez parfois créer des longues instructions qui imposent un défilement horizontal dans l’éditeur de Code. Bien que cela n’affecte pas la façon votre code s’exécute, elle rend difficile pour vous ou toute autre personne à lire le code tel qu’il apparaît sur le moniteur. Dans ce cas, vous devez envisager de diviser cette instruction longue en plusieurs lignes.  
@@ -59,7 +59,7 @@ Lorsque vous écrivez votre code, vous pouvez parfois créer des longues instruc
   
      Vous ne peut pas continuer un commentaire à l’aide d’un caractère de continuation de ligne. Le compilateur n’Examinez les caractères dans un commentaire pour une signification particulière. Pour un commentaire de plusieurs lignes, répétez le symbole de commentaire (`'`) sur chaque ligne.  
   
- Bien que de placer chaque instruction sur une ligne distincte est la méthode recommandée, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] vous permet également de placer plusieurs instructions sur la même ligne.  
+ Bien que la méthode recommandée consiste à placer chaque instruction sur une ligne distincte, Visual Basic vous permet également de placer plusieurs instructions sur la même ligne.  
   
 ### <a name="to-place-multiple-statements-on-the-same-line"></a>Pour placer plusieurs instructions sur la même ligne  
   

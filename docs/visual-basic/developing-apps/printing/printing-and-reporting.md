@@ -1,22 +1,23 @@
 ---
-title: "Impression et création de rapports (Visual Basic)"
+title: Impression et création de rapports (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 ms.assetid: 92997b65-0279-4889-8db7-32cb6708be9c
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e51ca5482a87dca1661f8b7d78272b70da676359
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 1bcb8d0101bb558d64208ff8b2df72238a968adb
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="printing-and-reporting-visual-basic"></a>Impression et création de rapports (Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]offre plusieurs options d’impression et de création de rapports. Les rubriques suivantes fournissent une vue d’ensemble et des liens vers la documentation relative à l’impression et de création de rapports.  
+Visual Basic propose plusieurs options d’impression et de création de rapports. Les rubriques suivantes fournissent une vue d’ensemble et des liens vers la documentation relative à l’impression et de création de rapports.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [PrintForm, composant](../../../visual-basic/developing-apps/printing/printform-component.md)  

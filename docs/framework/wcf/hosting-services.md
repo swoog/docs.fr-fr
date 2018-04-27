@@ -1,28 +1,28 @@
 ---
-title: "Hébergement de services"
-ms.custom: 
+title: Hébergement de services
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - hosting services [WCF]
 ms.assetid: 192be927-6be2-4fda-98f0-e513c4881acc
-caps.latest.revision: 
+caps.latest.revision: 31
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b23dac1db5252d3ce2bd60e4f8525dd89d9127b0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: db4662245f348eca795440f149160a66d87c998f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="hosting-services"></a>Hébergement de services
 Pour devenir actif, un service doit être hébergé dans un environnement d'exécution qui le crée et contrôle son contexte et sa durée de vie. Les services[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] sont conçus pour s'exécuter dans tout processus Windows qui prend en charge le code managé.  
@@ -34,12 +34,12 @@ Pour devenir actif, un service doit être hébergé dans un environnement d'exé
 ## <a name="hosting-options"></a>Options d'hébergement  
   
 #### <a name="self-hosting-in-a-managed-application"></a>Auto-hébergement dans une application managée  
- Les services[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] peuvent être hébergés dans toute application managée. Il s'agit de l'option la plus souple car l'infrastructure à déployer est la plus faible. Vous incorporez le code pour le service à l'intérieur du code d'application managée, puis créez et ouvrez une instance de <xref:System.ServiceModel.ServiceHost> pour rendre le service disponible. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Comment : héberger un Service WCF dans une Application managée](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md).  
+ Les services[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] peuvent être hébergés dans toute application managée. Il s'agit de l'option la plus souple car l'infrastructure à déployer est la plus faible. Vous incorporez le code pour le service à l'intérieur du code d'application managée, puis créez et ouvrez une instance de <xref:System.ServiceModel.ServiceHost> pour rendre le service disponible. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Comment : héberger un Service WCF dans une Application managée](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md).  
   
- Cette option active deux scénarios courants : les services [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] qui s'exécutent à l'intérieur d'applications console et des applications clientes élaborées telles que celles basées sur [!INCLUDE[avalon1](../../../includes/avalon1-md.md)] ou Windows Forms (WinForms). L'hébergement d'un service [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] à l'intérieur d'une application console est en général utile pendant la phase de développement de l'application. Cela simplifie son débogage, l'obtention des informations de suivi pour déterminer ce qui se passe à l'intérieur de l'application, et son déplacement en la copiant vers un nouvel emplacement. Cette option d'hébergement permet aux applications clientes complexes, comme [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] et WinForms, de communiquer facilement avec le monde extérieur. Il peut s'agit par exemple, d'un client de collaboration pair à pair qui utilise [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] pour son interface utilisateur et héberge également un service [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] qui permet à d'autres clients de se connecter à lui et de partager des informations.  
+ Cette option active deux scénarios courants : [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] services en cours d’exécution à l’intérieur d’applications console et les applications clientes complexes, tels que ceux basés sur Windows Presentation Foundation (WPF) ou Windows Forms (WinForms). L'hébergement d'un service [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] à l'intérieur d'une application console est en général utile pendant la phase de développement de l'application. Cela simplifie son débogage, l'obtention des informations de suivi pour déterminer ce qui se passe à l'intérieur de l'application, et son déplacement en la copiant vers un nouvel emplacement. Cette option d'hébergement permet aux applications clientes complexes, comme [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] et WinForms, de communiquer facilement avec le monde extérieur. Il peut s'agit par exemple, d'un client de collaboration pair à pair qui utilise [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] pour son interface utilisateur et héberge également un service [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] qui permet à d'autres clients de se connecter à lui et de partager des informations.  
   
 #### <a name="managed-windows-services"></a>Services Windows managés  
- Cette option d'hébergement consiste à enregistrer le domaine d'application (AppDomain) qui héberge un service [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] comme un service Windows managé (autrefois appelé un service NT) afin que la durée de vie de processus du service soit contrôlée par le Gestionnaire de contrôle des services (SCM) pour les services Windows. Comme l'option d'auto-hébergement, ce type d'environnement d'hébergement requiert que du code d'hébergement soit écrit dans le cadre de l'application. Le service est implémenté comme un service Windows et comme un service [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] en lui faisant hériter de la classe <xref:System.ServiceProcess.ServiceBase> ainsi que d'une interface de contrat de service [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] . Le <xref:System.ServiceModel.ServiceHost> est ensuite créé et ouvert dans une méthode <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> substituée et fermée dans une méthode <xref:System.ServiceProcess.ServiceBase.OnStop> substituée. Une classe Installer qui hérite de <xref:System.Configuration.Install.Installer> doit également être implémentée pour permettre au programme d'être installé comme un service Windows par l'outil Installutil.exe. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Comment : héberger un Service WCF dans un Service Windows managé](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md). Le scénario activé par l'option d'hébergement du service Windows managé est celui d'un service [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] de longue durée hébergé en dehors d'IIS dans un environnement sécurisé qui n'est pas activé par message. La durée de vie du service est contrôlée par le système d'exploitation. Cette option d'hébergement est disponible dans toutes les versions de Windows.  
+ Cette option d'hébergement consiste à enregistrer le domaine d'application (AppDomain) qui héberge un service [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] comme un service Windows managé (autrefois appelé un service NT) afin que la durée de vie de processus du service soit contrôlée par le Gestionnaire de contrôle des services (SCM) pour les services Windows. Comme l'option d'auto-hébergement, ce type d'environnement d'hébergement requiert que du code d'hébergement soit écrit dans le cadre de l'application. Le service est implémenté comme un service Windows et comme un service [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] en lui faisant hériter de la classe <xref:System.ServiceProcess.ServiceBase> ainsi que d'une interface de contrat de service [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] . Le <xref:System.ServiceModel.ServiceHost> est ensuite créé et ouvert dans une méthode <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> substituée et fermée dans une méthode <xref:System.ServiceProcess.ServiceBase.OnStop> substituée. Une classe Installer qui hérite de <xref:System.Configuration.Install.Installer> doit également être implémentée pour permettre au programme d'être installé comme un service Windows par l'outil Installutil.exe. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Comment : héberger un Service WCF dans un Service Windows managé](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md). Le scénario activé par l'option d'hébergement du service Windows managé est celui d'un service [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] de longue durée hébergé en dehors d'IIS dans un environnement sécurisé qui n'est pas activé par message. La durée de vie du service est contrôlée par le système d'exploitation. Cette option d'hébergement est disponible dans toutes les versions de Windows.  
   
 #### <a name="internet-information-services-iis"></a>Services IIS (Internet Information Services)  
  L'option d'hébergement IIS est intégrée à [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] et utilise les fonctionnalités offertes par ces technologies, telles que le recyclage de processus, l'arrêt inactif, le contrôle d'état de processus et l'activation basée sur des messages. Sur les systèmes d'exploitation [!INCLUDE[wxp](../../../includes/wxp-md.md)] et [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] , il s'agit de la solution par défaut pour héberger les applications de service Web qui sont fortement sollicitées et doivent être très évolutives. Les services IIS offrent également la facilité de gestion intégrée que les clients attendent d'un produit serveur de classe d'entreprise. Cette option d'hébergement requiert que les services IIS soient configurés correctement, mais n'exige pas l'écriture d'un code d'hébergement dans le cadre de l'application. [!INCLUDE[crabout](../../../includes/crabout-md.md)] la configuration de l’hébergement IIS pour un service [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] , consultez [How to: Host a WCF Service in IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md).  

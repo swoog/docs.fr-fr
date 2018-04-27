@@ -1,5 +1,5 @@
 ---
-title: 'Impossible d’écrire dans le fichier de sortie &#39; &lt;nom de fichier&gt;&#39; : &lt;erreur&gt;'
+title: 'Impossible d’écrire dans le fichier de sortie &#39; &lt;nom de fichier&gt;&#39;: &lt;erreur&gt;'
 ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: ''
@@ -16,13 +16,13 @@ ms.assetid: 0845b245-11bb-46fd-95ca-f6cef3c318ef
 caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: d142a8c741a9f0e25b8ac3c0002d04f437bf0ca9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: a183f81a73c3c8034d9ba7366be8b36d425263da
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="unable-to-write-to-output-file-39ltfilenamegt39-lterrorgt"></a>Impossible d’écrire dans le fichier de sortie &#39; &lt;nom de fichier&gt;&#39; : &lt;erreur&gt;
+# <a name="unable-to-write-to-output-file-39ltfilenamegt39-lterrorgt"></a>Impossible d’écrire dans le fichier de sortie &#39; &lt;nom de fichier&gt;&#39;: &lt;erreur&gt;
 Un problème s'est produit pendant la création du fichier.  
   
  Vous ne pouvez pas ouvrir un fichier de sortie pour écriture. Le fichier (ou le dossier qui le contient) est peut être ouvert pour un usage exclusif par un autre processus, ou a son attribut de lecture seule défini.  
@@ -45,7 +45,7 @@ Un problème s'est produit pendant la création du fichier.
   
 3.  Si l'erreur continue, redémarrez l'ordinateur.  
   
-4.  Si l'erreur se produit à nouveau, réinstallez [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+4.  Si l’erreur persiste, réinstallez Visual Basic.  
   
 5.  Si l'erreur persiste après la réinstallation, avertissez les services de support technique Microsoft.  
   

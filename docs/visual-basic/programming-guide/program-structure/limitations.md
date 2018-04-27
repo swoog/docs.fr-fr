@@ -1,11 +1,12 @@
 ---
-title: "Restrictions liées à Visual Basic"
-ms.custom: 
+title: Restrictions liées à Visual Basic
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - limits
@@ -14,19 +15,19 @@ helpviewer_keywords:
 - limits, Visual Basic code
 - Visual Basic code, limitations
 ms.assetid: cf1646b7-5d24-48c6-9616-bda8a4849d91
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 97a2e162b9f1a673fbe805a5d2ef1421cd423a4f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d06b743996969dcd7fc022bbb8ab625f3a151137
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-basic-limitations"></a>Restrictions liées à Visual Basic
-Les versions antérieures de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] appliquée à des limites dans le code, comme la longueur des noms de variables, le nombre de variables autorisé dans les modules et la taille du module. Dans Visual Basic .NET, ces restrictions ont été allégées, ce qui vous donne une plus grande liberté d’écriture et d’organisation de votre code.  
+Les versions antérieures de Visual Basic appliquées des limites dans le code, comme la longueur des noms de variables, le nombre de variables autorisé dans les modules et la taille du module. Dans Visual Basic .NET, ces restrictions ont été allégées, ce qui vous donne une plus grande liberté d’écriture et d’organisation de votre code.  
   
- Les limites physiques sont dépendants plus sur l’exécution de mémoire que sur les considérations relatives à la compilation. Si vous utilisez des pratiques de programmation prudentes et divisez de grandes applications en plusieurs classes et les modules, il est peu de risque de rencontrer une interne [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] limitation.  
+ Les limites physiques sont dépendants plus sur l’exécution de mémoire que sur les considérations relatives à la compilation. Si vous utilisez des pratiques de programmation prudentes et divisez de grandes applications en plusieurs classes et les modules, il est peu de risque de rencontrer une limitation interne de Visual Basic.  
   
  Voici quelques limitations que vous pouvez rencontrer dans les cas extrêmes :  
   

@@ -1,27 +1,29 @@
 ---
 title: Regroupement de connexions SQL Server (ADO.NET)
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 497ebbd573ea05568010485f04f08cdeddbf6041
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: c0be63e767255508ac93555a503980f3798e70c0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>Regroupement de connexions SQL Server (ADO.NET)
 La connexion à un serveur de base de données consiste généralement en plusieurs étapes de longue durée. Un canal physique tel qu'un socket ou un canal nommé doit être établi, le contrôle initial avec le serveur doit avoir lieu, les informations de chaîne de connexion doivent être analysées, la connexion doit être authentifiée par le serveur, des contrôles doivent être effectués pour l'inscription dans la transaction en cours, etc.  
@@ -78,13 +80,13 @@ using (SqlConnection connection = new SqlConnection(
  Le dispositif de regroupement de connexions répond à ces requêtes de connexion en réallouant les connexions à mesure qu'elles se libèrent dans le pool. Si la taille maximale du pool est atteinte et qu'aucune connexion utilisable n'est disponible, la requête est mise en attente. Le dispositif de regroupement de connexions tente ensuite de récupérer des connexions jusqu'à ce que le délai de temporisation ait expiré (la valeur par défaut est de 15 secondes). Si le dispositif de regroupement de connexions ne peut pas répondre à la requête avant que le délai de temporisation de la connexion ait expiré, une exception est levée.  
   
 > [!CAUTION]
->  Il est vivement recommandé de toujours fermer la connexion lorsque vous avez terminé de l'utiliser, de sorte qu'elle soit retournée au pool. Pour ce faire, utilisez la méthode `Close` ou `Dispose` de l'objet `Connection` ou ouvrez toutes les connexions à l'intérieur d'une instruction `using` dans C# ou d'une instruction `Using` dans [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]. Les connexions qui ne sont pas explicitement fermées risquent de ne pas être ajoutées ni retournées au pool. Pour plus d’informations, consultez [à l’aide d’instruction](~/docs/csharp/language-reference/keywords/using-statement.md) ou [Comment : supprimer une ressource système](~/docs/visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md) pour [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)].  
+>  Il est vivement recommandé de toujours fermer la connexion lorsque vous avez terminé de l'utiliser, de sorte qu'elle soit retournée au pool. Ce faire, vous pouvez utiliser soit le `Close` ou `Dispose` méthodes de la `Connection` de l’objet, ou en ouvrant toutes les connexions à l’intérieur d’un `using` instruction en langage c#, ou un `Using` instruction en Visual Basic. Les connexions qui ne sont pas explicitement fermées risquent de ne pas être ajoutées ni retournées au pool. Pour plus d’informations, consultez [à l’aide d’instruction](~/docs/csharp/language-reference/keywords/using-statement.md) ou [Comment : supprimer une ressource système](~/docs/visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md) pour Visual Basic.  
   
 > [!NOTE]
 >  N'appelez pas une commande `Close` ou `Dispose` sur une `Connection`, un `DataReader` ou tout autre objet managé dans la méthode `Finalize` de votre classe. Dans un finaliseur, libérez seulement les ressources non managées que votre classe possède directement. Si votre classe ne possède pas de ressource non managée, n'incluez pas une méthode `Finalize` dans la définition de classe. Pour plus d’informations, consultez [le Garbage Collection](../../../../docs/standard/garbage-collection/index.md).  
   
 > [!NOTE]
->  Les événements de connexion et de déconnexion ne seront pas déclenchés sur le serveur si une connexion est récupérée depuis le pool de connexions ou qu’elle est retournée au pool. En effet, la connexion n'est pas réellement fermée lorsqu'elle est retournée au pool de connexions. Pour plus d’informations, consultez [Audit Login Event Class](http://msdn2.microsoft.com/library/ms190260.aspx) et [classe d’événements Audit Logout](http://msdn2.microsoft.com/library/ms175827.aspx) dans [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] la documentation en ligne.  
+>  Les événements de connexion et de déconnexion ne seront pas déclenchés sur le serveur si une connexion est récupérée depuis le pool de connexions ou qu’elle est retournée au pool. En effet, la connexion n'est pas réellement fermée lorsqu'elle est retournée au pool de connexions. Pour plus d’informations, consultez [Audit Login Event Class](http://msdn2.microsoft.com/library/ms190260.aspx) et [classe d’événements Audit Logout](http://msdn2.microsoft.com/library/ms175827.aspx) dans la documentation en ligne de SQL Server.  
   
 ## <a name="removing-connections"></a>Suppression de connexions  
  Le dispositif de regroupement de connexions supprime une connexion du pool restée inactive pendant environ 4 à 8 minutes ou s'il détecte que la connexion au serveur a été interrompue. Notez qu'une connexion interrompue ne peut être détectée qu'après une tentative de communication avec le serveur. Si une connexion n'est plus reliée au serveur, elle est marquée comme étant non valide. Les connexions non valides ne sont supprimées du pool de connexions que lorsqu'elles sont fermées ou récupérées.  
@@ -111,7 +113,7 @@ using (SqlConnection connection = new SqlConnection(
 ### <a name="pool-fragmentation-due-to-many-databases"></a>Fragmentation de pool due à un trop grand nombre de base de données  
  De nombreux fournisseurs de services Internet hébergent plusieurs sites Web sur un seul serveur. Ils peuvent utiliser une seule base de données pour confirmer une connexion d'authentification Forms, puis ouvrir une connexion à une base de données spécifique pour cet utilisateur ou ce groupe d'utilisateurs. La connexion à la base de données d'authentification est regroupée et utilisée par tout le monde. Toutefois, il existe un pool de connexions distinct à chaque base de données, ce qui augmente le nombre de connexions au serveur.  
   
- Cela est également un effet secondaire de la conception de l'application. Il existe une méthode relativement simple pour éviter cet effet secondaire sans compromettre la sécurité lors de la connexion à [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]. Au lieu d'établir une connexion à une base de données distincte pour chaque utilisateur ou groupe d'utilisateurs, établissez une connexion à la même base de données sur le serveur, puis exécutez l'instruction [!INCLUDE[tsql](../../../../includes/tsql-md.md)] USE pour accéder à la base de données souhaitée. Le fragment de code suivant montre comment créer une connexion initiale à la base de données `master`, puis basculer vers la base de données souhaitée spécifiée dans la variable chaîne `databaseName`.  
+ Cela est également un effet secondaire de la conception de l'application. Il existe une méthode relativement simple pour éviter cet effet secondaire sans compromettre la sécurité lors de la connexion à SQL Server. Au lieu d'établir une connexion à une base de données distincte pour chaque utilisateur ou groupe d'utilisateurs, établissez une connexion à la même base de données sur le serveur, puis exécutez l'instruction [!INCLUDE[tsql](../../../../includes/tsql-md.md)] USE pour accéder à la base de données souhaitée. Le fragment de code suivant montre comment créer une connexion initiale à la base de données `master`, puis basculer vers la base de données souhaitée spécifiée dans la variable chaîne `databaseName`.  
   
 ```vb  
 ' Assumes that command is a valid SqlCommand object and that  
@@ -136,7 +138,7 @@ using (SqlConnection connection = new SqlConnection(
 ```  
   
 ## <a name="application-roles-and-connection-pooling"></a>Rôles d'application et regroupement de connexions  
- Après qu'un rôle d'application [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] a été activé en appelant la procédure stockée système `sp_setapprole`, le contexte de sécurité de cette connexion ne peut pas être rétabli. Toutefois, lorsque le regroupement est activé, la connexion est retournée au pool et une erreur se produit en cas de réutilisation de la connexion regroupée. Pour plus d’informations, consultez l’article de la Base de connaissances, «[erreurs du rôle d’application SQL avec le regroupement des ressources OLE DB](http://support.microsoft.com/default.aspx?scid=KB;EN-US;Q229564). »  
+ Après qu'un rôle d'application SQL Server a été activé en appelant la procédure stockée système `sp_setapprole`, le contexte de sécurité de cette connexion ne peut pas être rétabli. Toutefois, lorsque le regroupement est activé, la connexion est retournée au pool et une erreur se produit en cas de réutilisation de la connexion regroupée. Pour plus d’informations, consultez l’article de la Base de connaissances, «[erreurs du rôle d’application SQL avec le regroupement des ressources OLE DB](http://support.microsoft.com/default.aspx?scid=KB;EN-US;Q229564). »  
   
 ### <a name="application-role-alternatives"></a>Alternatives aux rôles d'application  
  Il est recommandé de tirer parti des mécanismes de sécurité qui peuvent être employés à la place des rôles d'application. Pour plus d’informations, consultez [création de rôles d’Application dans SQL Server](../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md).  

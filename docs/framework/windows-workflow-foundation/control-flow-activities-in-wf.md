@@ -1,26 +1,27 @@
 ---
-title: "Activités de flux de contrôle dans WF"
-ms.custom: 
+title: Activités de flux de contrôle dans WF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6892885b-f7c5-4aea-8f5e-28863fb4ae75
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1e8520e34cf9bd9d31e9b877849e7c9611d6d989
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 91fb4e18d753709ab973730300ffef5a952c56d6
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="control-flow-activities-in-wf"></a>Activités de flux de contrôle dans WF
-[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] fournit plusieurs activités pour le contrôle de flux d'exécution dans un workflow. Quelques-unes de ces activités (telles que `Switch` et `If`) implémentent des structures de contrôle de flux semblables à celles utilisées dans les environnements de programmation tels que [!INCLUDE[csprcs](../../../includes/csprcs-md.md)], alors que d'autres modélisent de nouvelles structures de programmation (telles que `Pick`.)  
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] fournit plusieurs activités pour le contrôle de flux d'exécution dans un workflow. Certaines de ces activités (telles que `Switch` et `If`) implémentent des structures de contrôle de flux semblables à celles des environnements tels que Visual c#, tandis que d’autres de programmation (telles que `Pick`) nouvelles structures de programmation.  
   
  Notez que lorsque les activités telles que les activités `Parallel` et `ParallelForEach` planifient plusieurs activités enfants pour qu'elles s'exécutent simultanément, seul un thread unique est utilisé pour un workflow. Chaque activité enfant de ces activités s'exécute séquentiellement et les activités consécutives ne s'exécutent pas tant que d'anciennes activités ne soient terminées ou ne deviennent inactives. Par conséquent, ces activités sont très utiles pour les applications dans lesquelles plusieurs activités potentielles de blocage doivent s'exécuter de façon entrelacée. Si aucune des activités enfants de ces activités n'est inactive, une activité `Parallel` s'exécute juste comme une activité `Sequence`, et une activité `ParallelForEach` s'exécute juste comme une activité `ForEach`. Si, toutefois, des activités asynchrones (telles que des activités qui dérivent de <xref:System.Activities.AsyncCodeActivity>) ou des activités de messagerie sont utilisées, le contrôle passe à la branche suivante alors que l'activité enfant attend son message à accepter ou son travail asynchrone à exécuter.  
   

@@ -1,18 +1,19 @@
 ---
-title: "Qu’en est-il optimisée pour le cloud des applications ?"
-description: "Architecture de Microservices .NET pour les Applications .NET en conteneur | Qu’en est-il optimisée pour le Cloud des applications ?"
+title: Qu’en est-il optimisée pour le cloud des applications ?
+description: Architecture de Microservices .NET pour les Applications .NET en conteneur | Qu’en est-il optimisée pour le Cloud des applications ?
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
 ms.prod: .net
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 249da9ecbac90514647f4fdc926928ac7ad4648e
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 63eb80dc43e174f4c803f772f09f6e72d8c8e7c2
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="what-about-cloud-optimized-applications"></a>Qu’en est-il optimisée pour le cloud des applications ?
 
@@ -72,7 +73,7 @@ Mais même dans les scénarios dans lesquels microservices offrent des puissante
 
 En raison de la complexité d’une architecture de microservices, uniquement les scénarios spécifiques et certains types d’applications conviennent pour les applications microservice. Ceux-ci incluent des applications volumineuses et complexes qui ont plusieurs évolution sous-systèmes. Dans ces cas, il convient d’investir dans une architecture plus complexe de logiciel, pour une souplesse accrue à long terme et la maintenance des applications plus efficace. Mais pour les scénarios moins complexes, il peut être préférable continuer avec une approche application monolithique ou multicouches plus simple est proche.
 
-En tant qu’une note finale, même au risque d’être répétitive sur ce concept, vous ne doivent pas consulter à l’aide de microservices dans vos applications en tant que « tout dedans tout ou rien du tout*.*» Vous pouvez étendre et faire évoluer des applications monolithiques existantes en ajoutant de nouveaux, petits scénarios basés sur microservices. Vous n’avez pas besoin de démarrer à partir de zéro pour commencer à utiliser avec une approche d’architecture microservices. En fait, nous recommandons que vous développez à l’aide d’une application monolithique ou multicouches existant en ajoutant de nouveaux scénarios. Par la suite, vous pouvez décomposer l’application en composants autonomes ou microservices. Vous pouvez démarrer l’évolution de vos applications monolithiques dans une direction microservices, étape par étape.
+En tant qu’une note finale, même au risque d’être répétitive sur ce concept, vous ne doivent pas consulter à l’aide de microservices dans vos applications en tant que « tout dedans tout ou rien du tout *.*» Vous pouvez étendre et faire évoluer des applications monolithiques existantes en ajoutant de nouveaux, petits scénarios basés sur microservices. Vous n’avez pas besoin de démarrer à partir de zéro pour commencer à utiliser avec une approche d’architecture microservices. En fait, nous recommandons que vous développez à l’aide d’une application monolithique ou multicouches existant en ajoutant de nouveaux scénarios. Par la suite, vous pouvez décomposer l’application en composants autonomes ou microservices. Vous pouvez démarrer l’évolution de vos applications monolithiques dans une direction microservices, étape par étape.
 
 ## <a name="when-to-use-azure-app-service-for-modernizing-existing-net-apps"></a>Quand utiliser le Service d’applications Azure de rénovation des applications .NET existantes
 

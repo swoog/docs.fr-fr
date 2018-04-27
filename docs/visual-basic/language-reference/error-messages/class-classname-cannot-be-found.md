@@ -1,5 +1,5 @@
 ---
-title: Classe &#39; &lt;classname&gt;&#39; est introuvable
+title: Classe &#39; &lt;classname&gt; &#39; ne peut pas être trouvé.
 ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: ''
@@ -16,13 +16,13 @@ ms.assetid: 72528d02-77b7-4b4c-8b9e-d12f666f92ef
 caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: aed0bc5643d0714e5994abce09b04b1910f2becc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 63dfdf0f2fe8869577d450f21c4f12b5eec125bb
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="class-39ltclassnamegt39-cannot-be-found"></a>Classe &#39; &lt;classname&gt;&#39; est introuvable
+# <a name="class-39ltclassnamegt39-cannot-be-found"></a>Classe &#39; &lt;classname&gt; &#39; ne peut pas être trouvé.
 La classe\<nom_classe >' est introuvable. Cette condition est généralement le résultat d'un 'Microsoft.VisualBasic.dll' incompatible.  
   
  Un membre défini est introuvable.  
@@ -35,7 +35,7 @@ La classe\<nom_classe >' est introuvable. Cette condition est généralement le 
   
 2.  Le cas échéant, enregistrez votre travail et redémarrez [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
   
-3.  Si l'erreur se produit à nouveau, réinstallez [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+3.  Si l’erreur persiste, réinstallez Visual Basic.  
   
 4.  Si l'erreur persiste après la réinstallation, avertissez les services de support technique Microsoft.  
   

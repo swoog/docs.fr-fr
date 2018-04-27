@@ -1,11 +1,12 @@
 ---
-title: "Dépannage des tableaux (Visual Basic)"
-ms.custom: 
+title: Dépannage des tableaux (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - troubleshooting arrays
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - arrays [Visual Basic], declaration errors
 - arrays [Visual Basic], troubleshooting
 ms.assetid: f4e971c7-c0a4-4ed7-a77a-8d71039f266f
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 0417ae8d37642a65b14cc81ae9dcf3a3c32d63ce
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9e5c00c2b531dd019a207b16ffcac95424bfe450
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="troubleshooting-arrays-visual-basic"></a>Dépannage des tableaux (Visual Basic)
 Cette page répertorie certains problèmes courants qui peuvent se produire lorsque vous travaillez avec des tableaux.  
@@ -60,10 +61,10 @@ Cette page répertorie certains problèmes courants qui peuvent se produire lors
  Le processus d’initialisation d’un tableau assigne une limite supérieure et inférieure à chaque dimension. Tous les accès à un élément du tableau doivent spécifier un index valide, ou un indice, pour chaque dimension. Si un index est inférieur à sa limite inférieure ou au-dessus de sa limite supérieure, une <xref:System.IndexOutOfRangeException> résultats de l’exception. Le compilateur ne peut pas détecter une telle erreur, donc une erreur se produit au moment de l’exécution.  
   
 ### <a name="determining-bounds"></a>Détermination des limites  
- Si un autre composant passe un tableau à votre code, par exemple en tant qu’argument de procédure, vous ne connaissez pas la taille de ce tableau ou les longueurs de ses dimensions. Vous devez toujours déterminer la limite supérieure de chaque dimension d’un tableau avant de tenter d’accéder aux éléments. Si le tableau a été créé par un moyen autre qu’un [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] `New` clause, la limite inférieure peut avoir une valeur différente de 0, et il est plus sûre pour déterminer ce inférieure.  
+ Si un autre composant passe un tableau à votre code, par exemple en tant qu’argument de procédure, vous ne connaissez pas la taille de ce tableau ou les longueurs de ses dimensions. Vous devez toujours déterminer la limite supérieure de chaque dimension d’un tableau avant de tenter d’accéder aux éléments. Si le tableau a été créé par un moyen autre qu’un Visual Basic `New` clause, la limite inférieure peut avoir une valeur différente de 0, et il est plus sûre pour déterminer ce inférieure.  
   
 ### <a name="specifying-the-dimension"></a>Spécification de la Dimension  
- Lorsque vous déterminez les limites d’un tableau multidimensionnel, prenez soin la façon dont vous spécifiez la dimension. Le `dimension` les paramètres de la <xref:System.Array.GetLowerBound%2A> et <xref:System.Array.GetUpperBound%2A> méthodes sont basés sur 0, lors de la `Rank` paramètres de la [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] <xref:Microsoft.VisualBasic.Information.LBound%2A> et <xref:Microsoft.VisualBasic.Information.UBound%2A> fonctions sont de base 1.  
+ Lorsque vous déterminez les limites d’un tableau multidimensionnel, prenez soin la façon dont vous spécifiez la dimension. Le `dimension` les paramètres de la <xref:System.Array.GetLowerBound%2A> et <xref:System.Array.GetUpperBound%2A> méthodes sont basés sur 0, lors de la `Rank` paramètres de Visual Basic <xref:Microsoft.VisualBasic.Information.LBound%2A> et <xref:Microsoft.VisualBasic.Information.UBound%2A> fonctions sont de base 1.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Tableaux](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  

@@ -1,24 +1,26 @@
 ---
-title: "Considérations sur la sécurité (Entity Framework)"
-ms.custom: 
+title: Considérations sur la sécurité (Entity Framework)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 68b077ec6c7edd30882c9c84a10aa14060a589e8
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: d70b1a6aff3e93122b5d0fb21affdfcd13d817e6
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="security-considerations-entity-framework"></a>Considérations sur la sécurité (Entity Framework)
 Cette rubrique décrit les considérations sur la sécurité qui sont spécifiques au développement, au déploiement et à l'exécution d'applications [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Vous devez également suivre ces recommandations pour créer des applications [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] sécurisées. Pour plus d’informations, consultez [vue d’ensemble de la sécurité](../../../../../docs/framework/data/adonet/security-overview.md).  
@@ -84,7 +86,7 @@ Cette rubrique décrit les considérations sur la sécurité qui sont spécifiqu
   
 -   <xref:System.Security.Permissions.SecurityPermission> : <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> pour sérialiser des exceptions à l'aide de l'interface <xref:System.Runtime.Serialization.ISerializable>.  
   
--   Autorisation d’ouvrir une connexion de base de données et exécuter des commandes sur la base de données, tel que <xref:System.Data.SqlClient.SqlClientPermission> pour un [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] base de données.  
+-   Autorisation d’ouvrir une connexion de base de données et exécuter des commandes sur la base de données, tel que <xref:System.Data.SqlClient.SqlClientPermission> pour une base de données SQL Server.  
   
  Pour plus d'informations, consultez [Sécurité d'accès du code et ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md).  
   

@@ -1,11 +1,12 @@
 ---
 title: "Comment : définir plusieurs versions d'une procédure (Visual Basic)"
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - procedures [Visual Basic], defining
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 - procedure overloading [Visual Basic], multiple versions
 ms.assetid: 71ccdd66-1b00-4b66-bee4-6926c0d696f4
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 1abeaa6806252005dd3abfab3ff60bafa0c0cef1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e6db075e9b31355d4a0a593040b1fe7c96a0c730
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-define-multiple-versions-of-a-procedure-visual-basic"></a>Comment : définir plusieurs versions d'une procédure (Visual Basic)
 Vous pouvez définir une procédure dans plusieurs versions par *surcharge* elle, à l’aide du même nom mais une liste de paramètres différente pour chaque version. L’objectif de la surcharge consiste à définir de plusieurs versions étroitement liées d’une procédure sans avoir à les différencier par nom.  
@@ -34,7 +35,7 @@ Vous pouvez définir une procédure dans plusieurs versions par *surcharge* elle
   
 2.  Précéder la `Sub` ou `Function` mot clé dans chaque déclaration avec le [surcharges](../../../../visual-basic/language-reference/modifiers/overloads.md) (mot clé). Vous pouvez omettre `Overloads` dans les déclarations, mais si vous l’incluez dans une des déclarations, vous devez l’inclure dans chaque déclaration.  
   
-3.  Après chaque instruction de déclaration, écrire du code de procédure pour gérer le cas spécifique où le code appelant fournit des arguments de correspondance de liste de paramètres de cette version. Vous n’avez pas à tester pour quels paramètres le code appelant a fourni. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]transmet le contrôle à la version correspondante de votre procédure.  
+3.  Après chaque instruction de déclaration, écrire du code de procédure pour gérer le cas spécifique où le code appelant fournit des arguments de correspondance de liste de paramètres de cette version. Vous n’avez pas à tester pour quels paramètres le code appelant a fourni. Visual Basic passe le contrôle à la version correspondante de votre procédure.  
   
 4.  Terminez chaque version de la procédure avec le `End Sub` ou `End Function` instruction comme il convient.  
   

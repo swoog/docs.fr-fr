@@ -1,30 +1,31 @@
 ---
-title: "Utilisation d'un éditeur d'expressions personnalisé"
-ms.custom: 
+title: Utilisation d'un éditeur d'expressions personnalisé
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0901b58b-e037-44a8-8281-f6f54361cfca
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5ae60b8267e60d880ccdc156566b489163d2e686
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5388ed3f55d97f3282a710ac59fe36cfb32fa49c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="using-a-custom-expression-editor"></a>Utilisation d'un éditeur d'expressions personnalisé
 Un éditeur d'expressions personnalisé peut être implémenté pour fournir une expérience d'édition d'expressions plus riche ou plus simple. Il existe plusieurs scénarios dans lesquels vous souhaiterez peut-être utiliser un éditeur d'expressions personnalisé :  
   
 -   Pour assurer la prise en charge d'IntelliSense et d'autres fonctionnalités d'édition riches dans un concepteur de workflow réhébergé. Ces fonctionnalités doivent être fournies car l'éditeur d'expressions [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] par défaut ne peut pas être utilisé dans les applications réhébergées.  
   
--   Pour simplifier l'édition d'expressions pour les utilisateurs analystes d'entreprise, afin qu'ils ne soient pas, par exemple, obligés de se familiariser avec [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] ou de traiter des expressions [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)].  
+-   Pour simplifier l’expérience pour les utilisateurs analystes d’entreprise, de modification d’expressions afin qu’ils ne doivent pas, par exemple, pour découvrir Visual Basic ou de traiter les expressions Visual Basic.  
   
  Trois étapes de base sont nécessaires pour implémenter un éditeur d'expressions personnalisé :  
   

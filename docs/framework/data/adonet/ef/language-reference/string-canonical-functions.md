@@ -1,24 +1,26 @@
 ---
-title: "Fonctions de chaînes canoniques"
-ms.custom: 
+title: Fonctions de chaînes canoniques
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5e2cbebd-5df3-47c7-b0e2-49a17ab22bfb
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 2eef6928098f762274ecd19272b34cce6ab41920
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8bead8bc61c06a2daf4dd95dca8808caf823f245
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="string-canonical-functions"></a>Fonctions de chaînes canoniques
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] inclut des fonctions canoniques de chaîne.  
@@ -30,7 +32,7 @@ ms.lasthandoff: 01/17/2018
 |--------------|-----------------|  
 |`Concat (` `string1`, `string2``)`|Retourne une chaîne qui contient `string2` ajouté à `string1`.<br /><br /> **Arguments**<br /><br /> `string1` : chaîne à laquelle `string2` est ajouté.<br /><br /> `string2` : chaîne ajoutée à `string1`.<br /><br /> **Valeur de retour**<br /><br /> `String` Une erreur se produit si la longueur de la chaîne de valeur de retour est supérieure à la longueur maximale autorisée.<br /><br /> **Exemple**<br /><br /> `-- The following example returns abcxyz.`<br /><br /> `Concat('abc', 'xyz')`|  
 |`Contains (` `string`, `target``)`|Retourne `true` si `target` est contenu dans `string`.<br /><br /> **Arguments**<br /><br /> `string` : chaîne dans laquelle la recherche est effectuée.<br /><br /> `target` : chaîne cible recherchée.<br /><br /> **Valeur de retour**<br /><br /> `true` si `target` est contenu dans `string` ; sinon, `false`.<br /><br /> **Exemple**<br /><br /> `-- The following example returns true.`<br /><br /> `Contains('abc', 'bc')`|  
-|`EndsWith (` `string`, `target``)`|Retourne `true` si `target` se termine par `string`.<br /><br /> **Arguments**<br /><br /> `string` : chaîne dans laquelle la recherche est effectuée.<br /><br /> `target` : chaîne cible recherchée à la fin de `string`.<br /><br /> **Valeur de retour**<br /><br /> `True` si `string` se termine par `target` ; sinon, `false`.<br /><br /> **Exemple**<br /><br /> `-- The following example returns true.`<br /><br /> `EndsWith('abc', 'bc')`**Remarque :** si vous utilisez la [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)] fournisseur de données, cette fonction retourne `false` si la chaîne est stockée dans une colonne de chaîne de longueur fixe et `target` est une constante. Dans ce cas, la chaîne entière est recherchée, y compris les éventuels espaces de remplissage de fin. Une solution de contournement possible consiste à découper les données dans la chaîne de longueur fixe, comme dans l'exemple suivant : `EndsWith(TRIM(string), target)`|  
+|`EndsWith (` `string`, `target``)`|Retourne `true` si `target` se termine par `string`.<br /><br /> **Arguments**<br /><br /> `string` : chaîne dans laquelle la recherche est effectuée.<br /><br /> `target` : chaîne cible recherchée à la fin de `string`.<br /><br /> **Valeur de retour**<br /><br /> `True` si `string` se termine par `target` ; sinon, `false`.<br /><br /> **Exemple**<br /><br /> `-- The following example returns true.`<br /><br /> `EndsWith('abc', 'bc')` **Remarque :** si vous utilisez le fournisseur de données SQL Server, cette fonction retourne `false` si la chaîne est stockée dans une colonne de chaîne de longueur fixe et `target` est une constante. Dans ce cas, la chaîne entière est recherchée, y compris les éventuels espaces de remplissage de fin. Une solution de contournement possible consiste à découper les données dans la chaîne de longueur fixe, comme dans l'exemple suivant : `EndsWith(TRIM(string), target)`|  
 |`IndexOf(` `target`, `string``)`|Retourne la position de la chaîne `target` dans `string` ou 0 si elle est introuvable. Retourne 1 pour indiquer le début de `string`. La numérotation de l'index commence à 1.<br /><br /> **Arguments**<br /><br /> `target` : chaîne recherchée.<br /><br /> `string` : chaîne dans laquelle la recherche est effectuée.<br /><br /> **Valeur de retour**<br /><br /> Élément `Int32`.<br /><br /> **Exemple**<br /><br /> `-- The following example returns 4.`<br /><br /> `IndexOf('xyz', 'abcxyz')`|  
 |`Left (` `string`, `length``)`|Retourne les `length` premiers caractères du côté gauche de `string`. Si la longueur de `string` est inférieure à `length`, la chaîne est retournée dans son intégralité.<br /><br /> **Arguments**<br /><br /> `string` : `String`.<br /><br /> `length` :`Int16`,`Int32`, `Int64` ou `Byte`. `length` ne peut pas être inférieur à zéro.<br /><br /> **Valeur de retour**<br /><br /> `String`<br /><br /> **Exemple**<br /><br /> `-- The following example returns abc.`<br /><br /> `Left('abcxyz', 3)`|  
 |`Length (` `string` `)`|Retourne la longueur (`Int32`), en caractères, de la chaîne.<br /><br /> **Arguments**<br /><br /> `string` : `String`.<br /><br /> **Valeur de retour**<br /><br /> Élément `Int32`.<br /><br /> **Exemple**<br /><br /> `-- The following example returns 6.`<br /><br /> `Legth('abcxyz')`|  

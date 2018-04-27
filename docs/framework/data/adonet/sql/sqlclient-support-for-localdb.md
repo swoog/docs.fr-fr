@@ -1,30 +1,32 @@
 ---
 title: Prise en charge de SqlClient pour LocalDB
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: cf796898-5575-46f2-ae6e-21e5aa8c4123
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: a3d643ac386aebf51673f937b3f47e73c749b78f
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: e2564e49a90a1c8fd9fe2cc000ebf648cf90b4e7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sqlclient-support-for-localdb"></a>Prise en charge de SqlClient pour LocalDB
-À partir de [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] nom de code Denali, une version légère de [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)], appelée LocalDB, sera disponible. Cette rubrique explique comment se connecter à une base de données LocalDB.  
+À compter de SQL Server, nom de code Denali, une version légère de SQL Server, appelée LocalDB, sera disponible. Cette rubrique explique comment se connecter à une base de données LocalDB.  
   
 ## <a name="remarks"></a>Notes  
- Pour plus d'informations sur LocalDB, y compris comment installer LocalDB et configurer votre instance de LocalDB, consultez la documentation en ligne de [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] .  
+ Pour plus d’informations sur la base de données locale, y compris comment installer LocalDB et configurer votre instance de base de données locale, consultez la documentation en ligne de SQL Server.  
   
  Pour résumer les opérations possibles avec LocalDB :  
   
@@ -42,7 +44,7 @@ ms.lasthandoff: 01/17/2018
   
  Vous ne pouvez pas utiliser`User Instance=True` lors de la connexion à une base de données LocalDB.  
   
- Vous pouvez télécharger LocalDB à partir de [Microsoft SQL Server 2012 Feature Pack](http://www.microsoft.com/download/en/details.aspx?id=29065). Si vous devez utiliser sqlcmd.exe pour modifier des données dans votre instance de LocalDB, vous aurez besoin de sqlcmd de [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012, que vous pouvez également obtenir dans le [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012 Feature Pack.  
+ Vous pouvez télécharger LocalDB à partir de [Microsoft SQL Server 2012 Feature Pack](http://www.microsoft.com/download/en/details.aspx?id=29065). Si vous devez utiliser sqlcmd.exe pour modifier les données dans votre instance de base de données locale, vous aurez besoin de sqlcmd à partir de SQL Server 2012, vous pouvez également obtenir à partir de SQL Server 2012 Feature Pack.  
   
 ## <a name="programmatically-create-a-named-instance"></a>Créer par programme une instance nommée  
  Une application peut créer une instance nommée et spécifier une base de données comme suit :  

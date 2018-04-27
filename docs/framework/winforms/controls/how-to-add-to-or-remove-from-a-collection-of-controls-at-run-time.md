@@ -1,12 +1,13 @@
 ---
-title: "Comment : ajouter des contrôles dans une collection au moment de l’exécution, ou comment les supprimer"
-ms.custom: 
+title: 'Comment : ajouter des contrôles dans une collection au moment de l’exécution, ou comment les supprimer'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -19,16 +20,17 @@ helpviewer_keywords:
 - run time [Windows Forms], adding controls
 - controls [Windows Forms], removing using collections
 ms.assetid: 771bf895-3d5f-469b-a324-3528f343657e
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 548ca8d682ffea6f2afa03124719a1bb5097a2fb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b34863e7846f75c5dc9a8af24591522e37252f4c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time"></a>Comment : ajouter des contrôles dans une collection au moment de l’exécution, ou comment les supprimer
 Tâches courantes dans le développement d’applications sont Ajout de contrôles à et suppression de contrôles à partir de n’importe quel contrôle conteneur sur vos formulaires (tels que les <xref:System.Windows.Forms.Panel> ou <xref:System.Windows.Forms.GroupBox> contrôle, ou même le formulaire lui-même). Au moment de la conception, vous pouvez faire glisser les contrôles directement vers un panneau ou une zone de groupe. Au moment de l’exécution, ces contrôles gèrent une collection `Controls`, qui assure le suivi des contrôles qui y sont placés.  
@@ -77,7 +79,7 @@ Tâches courantes dans le développement d’applications sont Ajout de contrôl
   
 ### <a name="to-remove-controls-from-a-collection-programmatically"></a>Pour supprimer des contrôles d’une collection par programme  
   
-1.  Supprimez le gestionnaire d’événements de l’événement. Dans [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)], utilisez le mot clé [RemoveHandler Statement](~/docs/visual-basic/language-reference/statements/removehandler-statement.md) ; dans [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], utilisez [-= Operator (référence C#)](~/docs/csharp/language-reference/operators/subtraction-assignment-operator.md).  
+1.  Supprimez le gestionnaire d’événements de l’événement. En Visual Basic, utilisez la [RemoveHandler, instruction](~/docs/visual-basic/language-reference/statements/removehandler-statement.md) (mot clé) ; dans Visual c#, utilisez le [-=, opérateur (référence c#)](~/docs/csharp/language-reference/operators/subtraction-assignment-operator.md).  
   
 2.  Utilisez la méthode `Remove` pour supprimer le contrôle souhaité dans la collection `Controls` du panneau.  
   

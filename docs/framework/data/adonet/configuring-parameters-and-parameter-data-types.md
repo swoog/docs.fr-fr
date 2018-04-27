@@ -1,27 +1,29 @@
 ---
-title: "Configuration des paramètres et des types de données des paramètres"
-ms.custom: 
+title: Configuration des paramètres et des types de données des paramètres
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: a71ba7ed12196184b7e826ed70c92a9873efdb0c
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: cdb6efb428f5c096178895f95fe1256846e9c1e5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>Configuration des paramètres et des types de données des paramètres
 Les objets de commande utilisent des paramètres pour passer des valeurs à des instructions SQL ou à des procédures stockées, en fournissant la vérification et la validation des types. Contrairement au texte de la commande, l'entrée de paramètre est traitée comme une valeur littérale et non pas comme du code exécutable. Cela vous permet de vous protéger des attaques « par injection de code SQL », dans lesquelles un attaquant insère une commande qui compromet la sécurité sur le serveur dans une instruction SQL.  
@@ -90,7 +92,7 @@ Les objets de commande utilisent des paramètres pour passer des valeurs à des 
 >  Les conversions du type decimal vers d'autres types sont des conversions restrictives qui arrondissent la valeur décimale à la valeur entière la plus proche de zéro. Si le résultat de la conversion ne peut pas être représenté dans le type de destination, un <xref:System.OverflowException> est levé.  
   
 > [!NOTE]
->  Lorsque vous envoyez une valeur de paramètre Null au serveur, vous devez spécifier <xref:System.DBNull>, et non `null` (`Nothing` dans [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]). Dans le système, la valeur null désigne un objet vide qui ne possède pas de valeur. <xref:System.DBNull> est utilisé pour représenter des valeurs null. Pour plus d’informations sur les valeurs Null de base de données, consultez [Handling Null Values](../../../../docs/framework/data/adonet/sql/handling-null-values.md).  
+>  Lorsque vous envoyez une valeur de paramètre null au serveur, vous devez spécifier <xref:System.DBNull>, et non `null` (`Nothing` en Visual Basic). Dans le système, la valeur null désigne un objet vide qui ne possède pas de valeur. <xref:System.DBNull> est utilisé pour représenter des valeurs null. Pour plus d’informations sur les valeurs Null de base de données, consultez [Handling Null Values](../../../../docs/framework/data/adonet/sql/handling-null-values.md).  
   
 ## <a name="deriving-parameter-information"></a>Dérivation des informations sur les paramètres  
  Les paramètres peuvent aussi être dérivés d'une procédure stockée à l'aide de la classe `DbCommandBuilder` . Les classes `SqlCommandBuilder` et `OleDbCommandBuilder` fournissent une méthode statique, `DeriveParameters`, qui remplit automatiquement la collection de paramètres d'un objet Command qui utilise les informations sur les paramètres provenant d'une procédure stockée. Notez que `DeriveParameters` remplace toutes les informations existantes sur les paramètres pour la commande.  

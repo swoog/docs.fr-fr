@@ -1,28 +1,28 @@
 ---
-title: "Configuration du traçage"
-ms.custom: 
+title: Configuration du traçage
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-caps.latest.revision: 
+caps.latest.revision: 53
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3beeaec1ed9982fc49f6bf81e2717db862e7882f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b7b9590096789af609e83d1a5ed736cf18e27700
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configuring-tracing"></a>Configuration du traçage
 Cette rubrique décrit comment activer le suivi, configurer des sources de suivi pour émettre des suivis et définir des niveaux de suivi, définir le suivi et la propagation d'activité afin de prendre en charge la corrélation de suivi de bout en bout, et définir des écouteurs de suivi pour accéder aux suivis.  
@@ -66,7 +66,7 @@ Cette rubrique décrit comment activer le suivi, configurer des sources de suivi
 ```  
   
 > [!NOTE]
->  Pour modifier le fichier de configuration d’un [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] projet de service dans [!INCLUDE[vs_current_short](../../../../../includes/vs-current-short-md.md)], cliquez avec le bouton droit sur le fichier de configuration application : Web.config pour les applications hébergées par le Web, ou Appname.exe.config pour les applications auto-hébergées dans  **L’Explorateur de solutions**. Puis choisissez le **modifier la Configuration WCF** élément de menu contextuel. Cette opération lance le [l’outil Éditeur de Configuration (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md), ce qui vous permet de modifier les paramètres de configuration de [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] services à l’aide d’une interface utilisateur graphique.  
+>  Pour modifier le fichier de configuration d’un [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] service de projet dans Visual Studio, cliquez avec le bouton droit sur le fichier de configuration application : Web.config pour les applications hébergées par le Web, ou Appname.exe.config pour les applications auto-hébergées dans  **L’Explorateur de solutions**. Puis choisissez le **modifier la Configuration WCF** élément de menu contextuel. Cette opération lance le [l’outil Éditeur de Configuration (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md), ce qui vous permet de modifier les paramètres de configuration de [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] services à l’aide d’une interface utilisateur graphique.  
   
 ## <a name="configuring-trace-sources-to-emit-traces"></a>Configuration de sources de suivi de façon à émettre des suivis  
  [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] définit une source de suivi pour chaque assembly. Les écouteurs définis pour cette source accèdent aux suivis générés dans un assembly. Les sources de suivi suivantes sont définies :  
@@ -146,7 +146,7 @@ Cette rubrique décrit comment activer le suivi, configurer des sources de suivi
 </system.diagnostics>  
 ```  
   
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]Création définie par l’utilisateur des sources de trace, consultez [extension suivi](../../../../../docs/framework/wcf/samples/extending-tracing.md).  
+ [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] Création définie par l’utilisateur des sources de trace, consultez [extension suivi](../../../../../docs/framework/wcf/samples/extending-tracing.md).  
   
 ## <a name="configuring-trace-listeners-to-consume-traces"></a>Configuration d'écouteurs de suivi pour consommer des suivis  
  Au moment de l'exécution, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] fournit des données de suivi aux écouteurs qui traitent les données. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] fournit plusieurs écouteurs prédéfinis pour <xref:System.Diagnostics>, qui diffèrent quant au format utilisé pour la sortie. Vous pouvez également ajouter des types d'écouteurs personnalisés.  
@@ -155,7 +155,7 @@ Cette rubrique décrit comment activer le suivi, configurer des sources de suivi
   
  Vous pouvez configurer un écouteur de suivi personnalisé pour envoyer des suivis sur le câble, par exemple à une base de données distante. En tant que responsable du déploiement d'applications, vous devez appliquer un contrôle d'accès approprié sur les journaux de suivi sur l'ordinateur distant.  
   
- Vous pouvez également configurer un écouteur de suivi par programmation. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][Comment : créer et initialiser les écouteurs de traçage](http://go.microsoft.com/fwlink/?LinkId=94648) et [création d’un TraceListener personnalisé](http://go.microsoft.com/fwlink/?LinkId=96239).  
+ Vous pouvez également configurer un écouteur de suivi par programmation. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)] [Comment : créer et initialiser les écouteurs de traçage](http://go.microsoft.com/fwlink/?LinkId=94648) et [création d’un TraceListener personnalisé](http://go.microsoft.com/fwlink/?LinkId=96239).  
   
 > [!CAUTION]
 >  `System.Diagnostics.XmlWriterTraceListener` n'étant pas thread-safe, la source de suivi peut verrouiller des ressources exclusivement lors de la sortie de suivis. Lorsque de nombreux threads sortent des suivis vers une source de suivi configurée pour utiliser cet écouteur, un conflit de ressource peut se produire, provoquant une dégradation significative des performances. Pour résoudre ce problème, vous devez implémenter un écouteur personnalisé thread-safe.  
@@ -187,7 +187,7 @@ Cette rubrique décrit comment activer le suivi, configurer des sources de suivi
   
  L'attribut `propagateActivity` indique si l'activité doit être propagée vers d'autres points de terminaison qui participent à l'échange de messages. En affectant à cet attribut la valeur `true`, vous pouvez prendre des fichiers de suivi générés par deux points de terminaison quelconque et observer comment un ensemble de suivis sur un point de terminaison a été transféré vers un ensemble de suivis sur un autre point de terminaison.  
   
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]le suivi des activités et propagation, consultez [Propagation](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md).  
+ [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] le suivi des activités et propagation, consultez [Propagation](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md).  
   
  Les deux `propagateActivity` et `ActivityTracing` valeurs booléennes s’appliquent à la System.ServiceModel TraceSource. Le `ActivityTracing` valeur s’applique également à toutes les sources de trace, y compris [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] ou défini par l’utilisateur.  
   

@@ -1,27 +1,29 @@
 ---
-title: "Paramètres DataAdapter"
-ms.custom: 
+title: Paramètres DataAdapter
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: f21e6aba-b76d-46ad-a83e-2ad8e0af1e12
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 4b5cc66e1d2240450743afa8ca8aaa6efe94398d
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 600dd949ffbed5c1066f9e3c3d9cc09eb174a22e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="dataadapter-parameters"></a>Paramètres DataAdapter
 L'objet <xref:System.Data.Common.DbDataAdapter> possède quatre propriétés qui sont utilisées pour récupérer des données dans la source de données et y mettre des données à jour : la propriété <xref:System.Data.Common.DbDataAdapter.SelectCommand%2A> retourne des données de la source de données et les propriétés <xref:System.Data.Common.DbDataAdapter.InsertCommand%2A>, <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> et <xref:System.Data.Common.DbDataAdapter.DeleteCommand%2A> sont utilisées pour gérer les modifications au niveau de la source de données. La  propriété `SelectCommand` doit être définie avant d'appeler la méthode `Fill` du `DataAdapter`. Les propriétés `InsertCommand`, `UpdateCommand` ou `DeleteCommand` doivent être définies avant que la méthode `Update` du `DataAdapter` ne soit appelée, en fonction des modifications qui ont été apportées aux données dans le <xref:System.Data.DataTable>. Par exemple, si des lignes ont été ajoutées, `InsertCommand` doit être défini avant d'appeler `Update`. Lorsque `Update` traite une ligne insérée, mise à jour ou supprimée, le `DataAdapter` utilise la propriété `Command` respective pour traiter l'action. Les informations actuelles concernant la ligne modifiée sont passées à l'objet `Command` par le biais de la collection `Parameters`.  
@@ -36,7 +38,7 @@ UPDATE Customers SET CompanyName = @CompanyName
 > [!NOTE]
 >  La syntaxe des espaces réservés des paramètres dépend de la source de données. Cet exemple montre les espaces réservés pour une source de données SQL Server. Utilisez des espaces réservés point d'interrogation (?) pour les paramètres <xref:System.Data.OleDb> et <xref:System.Data.Odbc>.  
   
- Dans ce [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] exemple, le `CompanyName` est mis à jour avec la valeur de la `@CompanyName` paramètre pour la ligne où `CustomerID` est égal à la valeur de le `@CustomerID` paramètre. Les paramètres extraient les informations à partir de la ligne modifiée à l’aide de la <xref:System.Data.SqlClient.SqlParameter.SourceColumn%2A> propriété de la <xref:System.Data.SqlClient.SqlParameter> objet. Les paramètres suivants sont ceux de l'instruction UPDATE de l'exemple précédent. Le code est basé sur l'hypothèse que la variable `adapter` représente un objet <xref:System.Data.SqlClient.SqlDataAdapter> valide.  
+ Dans cet exemple Visual Basic, le `CompanyName` est mis à jour avec la valeur de la `@CompanyName` paramètre pour la ligne où `CustomerID` est égal à la valeur de le `@CustomerID` paramètre. Les paramètres extraient les informations à partir de la ligne modifiée à l’aide de la <xref:System.Data.SqlClient.SqlParameter.SourceColumn%2A> propriété de la <xref:System.Data.SqlClient.SqlParameter> objet. Les paramètres suivants sont ceux de l'instruction UPDATE de l'exemple précédent. Le code est basé sur l'hypothèse que la variable `adapter` représente un objet <xref:System.Data.SqlClient.SqlDataAdapter> valide.  
   
 ```  
 adapter.Parameters.Add( _  
@@ -64,7 +66,7 @@ parameter.SourceVersion = DataRowVersion.Original
 |`Original`|Le paramètre utilise la valeur d'origine de la colonne.|  
 |`Proposed`|Le paramètre utilise une valeur proposée.|  
   
- L'exemple de code `SqlClient` de la section suivante définit un paramètre d'une propriété <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> dans lequel la colonne `CustomerID` est utilisée comme `SourceColumn` pour deux paramètres : `@CustomerID` (`SET CustomerID = @CustomerID`) et `@OldCustomerID` (`WHERE CustomerID = @OldCustomerID`). Le `@CustomerID` paramètre est utilisé pour mettre à jour le **CustomerID** colonne à la valeur actuelle dans le `DataRow`. Par conséquent, le `CustomerID` `SourceColumn` avec un `SourceVersion` de `Current` est utilisé. Le  *@OldCustomerID*  paramètre est utilisé pour identifier la ligne actuelle dans la source de données. Puisque la valeur de colonne correspondante se trouve dans la version `Original` de la ligne, le même `SourceColumn` (`CustomerID`) avec un `SourceVersion` ayant la valeur `Original` est utilisé.  
+ L'exemple de code `SqlClient` de la section suivante définit un paramètre d'une propriété <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> dans lequel la colonne `CustomerID` est utilisée comme `SourceColumn` pour deux paramètres : `@CustomerID` (`SET CustomerID = @CustomerID`) et `@OldCustomerID` (`WHERE CustomerID = @OldCustomerID`). Le `@CustomerID` paramètre est utilisé pour mettre à jour le **CustomerID** colonne à la valeur actuelle dans le `DataRow`. Par conséquent, le `CustomerID` `SourceColumn` avec un `SourceVersion` de `Current` est utilisé. Le *@OldCustomerID* paramètre est utilisé pour identifier la ligne actuelle dans la source de données. Puisque la valeur de colonne correspondante se trouve dans la version `Original` de la ligne, le même `SourceColumn` (`CustomerID`) avec un `SourceVersion` ayant la valeur `Original` est utilisé.  
   
 ## <a name="working-with-sqlclient-parameters"></a>Utilisation de paramètres SqlClient  
  L'exemple suivant montre comment créer un objet <xref:System.Data.SqlClient.SqlDataAdapter> et affecter la valeur <xref:System.Data.Common.DataAdapter.MissingSchemaAction%2A> à la propriété <xref:System.Data.MissingSchemaAction.AddWithKey> de manière à récupérer des informations de schéma supplémentaires de la base de données. Les propriétés <xref:System.Data.SqlClient.SqlDataAdapter.SelectCommand%2A>, <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A>, <xref:System.Data.SqlClient.SqlDataAdapter.UpdateCommand%2A> et <xref:System.Data.SqlClient.SqlDataAdapter.DeleteCommand%2A> définies, ainsi que les objets <xref:System.Data.SqlClient.SqlParameter> correspondants ajoutés à la collection <xref:System.Data.SqlClient.SqlCommand.Parameters%2A>. La méthode retourne un objet `SqlDataAdapter`.  

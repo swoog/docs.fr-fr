@@ -1,36 +1,38 @@
 ---
-title: "Spécification de valeurs XML comme paramètres"
-ms.custom: 
+title: Spécification de valeurs XML comme paramètres
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2c4d08b8-fc29-4614-97fa-29c8ff7ca5b3
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 7514d2d19b6691fc5a25e17e7ad483d108fe4aa2
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: dace7c3adc1b7a55c8c945e82399828ce16f1bb0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="specifying-xml-values-as-parameters"></a>Spécification de valeurs XML comme paramètres
-Si une requête requiert un paramètre dont la valeur est une chaîne XML, les développeurs peuvent fournir cette valeur à l’aide d’une instance de la **SqlXml** type de données. Il n'y a réellement pas d'astuces ; les colonnes XML dans [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] acceptent les valeurs de paramètre exactement de la même manière que d'autres types de données.  
+Si une requête requiert un paramètre dont la valeur est une chaîne XML, les développeurs peuvent fournir cette valeur à l’aide d’une instance de la **SqlXml** type de données. Il n’y a pas d’astuces ; Colonnes XML dans SQL Server acceptent les valeurs de paramètre d’exactement la même façon que d’autres types de données.  
   
 ## <a name="example"></a>Exemple  
  L’application console suivante crée une nouvelle table dans le **AdventureWorks** base de données. La nouvelle table inclut une colonne nommée **SalesID** et une colonne XML nommée **SalesInfo**.  
   
 > [!NOTE]
->  Le **AdventureWorks** base de données exemple n’est pas installé par défaut lorsque vous installez [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]. Vous pouvez l'installer en exécutant l'Installation de SQL Server.  
+>  Le **AdventureWorks** base de données exemple n’est pas installé par défaut lorsque vous installez SQL Server. Vous pouvez l'installer en exécutant l'Installation de SQL Server.  
   
  L'exemple prépare un objet <xref:System.Data.SqlClient.SqlCommand> à insérer une ligne dans la nouvelle table. Un fichier enregistré fournit les données XML nécessaires pour le **SalesInfo** colonne.  
   

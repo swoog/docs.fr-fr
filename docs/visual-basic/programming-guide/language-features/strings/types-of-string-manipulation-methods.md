@@ -1,30 +1,31 @@
 ---
-title: "Types de méthodes de manipulation de chaînes en Visual Basic"
-ms.custom: 
+title: Types de méthodes de manipulation de chaînes en Visual Basic
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - strings [Visual Basic], manipulating [Visual Basic]
 - string manipulation
 ms.assetid: 905055cd-7f50-48fb-9eed-b0995af1dc1f
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b437be4a6f4a0cc9d5a4d21291a80c9cb8fffcd3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 3677c8a23e956716af4357fe79041fc96f4014f2
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="types-of-string-manipulation-methods-in-visual-basic"></a>Types de méthodes de manipulation de chaînes en Visual Basic
-Il existe plusieurs façons différentes pour analyser et manipuler des chaînes. Certaines méthodes font partie de la [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] langage et autres sont inhérentes à la `String` classe.  
+Il existe plusieurs façons différentes pour analyser et manipuler des chaînes. Certaines méthodes font partie du langage Visual Basic, et d’autres sont inhérentes à la `String` classe.  
   
 ## <a name="visual-basic-language-and-the-net-framework"></a>Langage Visual Basic et .NET Framework  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]méthodes sont utilisées en tant que fonctions inhérentes du langage. Ils peuvent être utilisés sans qualification dans votre code. L’exemple suivant illustre une utilisation classique d’un [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] commande de manipulation de chaînes :  
+ Les méthodes de Visual Basic sont utilisées en tant que fonctions inhérentes du langage. Ils peuvent être utilisés sans qualification dans votre code. L’exemple suivant illustre une utilisation classique d’une commande de manipulation de chaînes Visual Basic :  
   
  [!code-vb[VbVbalrStrings#44](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/types-of-string-manipulation-methods_1.vb)]  
   
@@ -36,14 +37,14 @@ Il existe plusieurs façons différentes pour analyser et manipuler des chaînes
  Vous pouvez également manipuler des chaînes avec les méthodes de la `String` classe. Il existe deux types de méthodes de `String`: *partagé* méthodes et *instance* méthodes.  
   
 #### <a name="shared-methods"></a>Méthodes partagées  
- Une méthode partagée est une méthode qui provient du `String` classe proprement dit et ne nécessite pas une instance de cette classe. Ces méthodes peuvent être qualifiés avec le nom de la classe (`String`) plutôt qu’avec une instance de la `String` classe. Exemple :  
+ Une méthode partagée est une méthode qui provient du `String` classe proprement dit et ne nécessite pas une instance de cette classe. Ces méthodes peuvent être qualifiés avec le nom de la classe (`String`) plutôt qu’avec une instance de la `String` classe. Par exemple :  
   
  [!code-vb[VbVbalrStrings#45](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/types-of-string-manipulation-methods_2.vb)]  
   
  Dans l’exemple précédent, le <xref:System.String.Copy%2A?displayProperty=nameWithType> méthode est une méthode statique, qui agit sur une expression qui lui est attribuée et affecte la valeur obtenue dans `bString`.  
   
 #### <a name="instance-methods"></a>Méthodes d’instance  
- Méthodes d’instance, en revanche, proviennent d’une instance particulière de `String` et doit être qualifié avec le nom d’instance. Exemple :  
+ Méthodes d’instance, en revanche, proviennent d’une instance particulière de `String` et doit être qualifié avec le nom d’instance. Par exemple :  
   
  [!code-vb[VbVbalrStrings#46](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/types-of-string-manipulation-methods_3.vb)]  
   

@@ -17,11 +17,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1e1c00abfec36622f5da493165259fb1786ab8d6
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: a13e5a0044c51700acce6b123688868443f635ae
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>Comment : héberger et exécuter un service Windows Communication Foundation de base
 Il s'agit de la troisième des six tâches requises pour créer une application [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. Pour une vue d’ensemble des six tâches, consultez la [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md) rubrique.  
@@ -170,7 +170,7 @@ Il s'agit de la troisième des six tâches requises pour créer une application 
   
 ### <a name="to-verify-the-service-is-working"></a>Pour vérifier que le service fonctionne  
   
-1.  Exécutez l'application console GettingStartedHost à partir de [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]. Lors de l'exécution sur [!INCLUDE[wv](../../../includes/wv-md.md)] et les systèmes d'exploitation ultérieurs, le service doit être exécuté avec des privilèges d'administrateur. Parce que [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] a été exécuté avec les privilèges d'administrateur, GettingStartedHost est également exécuté avec ces mêmes privilèges. Vous pouvez aussi démarrer une nouvelle invite de commandes qui l'exécute avec les privilèges d'administrateur et y exécuter service.exe.  
+1.  Exécutez l'application console GettingStartedHost à partir de [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]. Lors de l'exécution sur [!INCLUDE[wv](../../../includes/wv-md.md)] et les systèmes d'exploitation ultérieurs, le service doit être exécuté avec des privilèges d'administrateur. Étant donné que Visual Studio a été exécuté avec des privilèges d’administrateur, GettingStartedHost est également exécuté avec des privilèges d’administrateur. Vous pouvez aussi démarrer une nouvelle invite de commandes qui l'exécute avec les privilèges d'administrateur et y exécuter service.exe.  
   
 2.  Ouvrez Internet Explorer et accédez à la page de débogage du service à l'adresse `http://localhost:8000/GettingStarted/CalculatorService`.  
   
@@ -424,7 +424,7 @@ End Module
 ```  
   
 > [!NOTE]
->  Les services tels que celui-ci requièrent que l'autorisation enregistre des adresses HTTP sur l'ordinateur pour écouter. Les comptes Administrateur possèdent cette autorisation, mais l'autorisation pour les espaces de noms HTTP doit être accordée aux comptes qui ne sont pas administrateur. [!INCLUDE[crabout](../../../includes/crabout-md.md)] comment configurer des réservations d’espace de noms, consultez [configuration de HTTP et HTTPS](../../../docs/framework/wcf/feature-details/configuring-http-and-https.md). Lors de l'exécution sous [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)], service.exe doit être exécuté avec les privilèges d'administrateur.  
+>  Les services tels que celui-ci requièrent que l'autorisation enregistre des adresses HTTP sur l'ordinateur pour écouter. Les comptes Administrateur possèdent cette autorisation, mais l'autorisation pour les espaces de noms HTTP doit être accordée aux comptes qui ne sont pas administrateur. [!INCLUDE[crabout](../../../includes/crabout-md.md)] comment configurer des réservations d’espace de noms, consultez [configuration de HTTP et HTTPS](../../../docs/framework/wcf/feature-details/configuring-http-and-https.md). Lors de l’exécution sous Visual Studio, vous devez exécuter service.exe avec des privilèges d’administrateur.  
   
  Le service est en cours d'exécution. Passez à [Comment : créer un Client](../../../docs/framework/wcf/how-to-create-a-wcf-client.md). Pour des informations de dépannage, consultez [dépannage Getting Started Tutorial](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md).  
   

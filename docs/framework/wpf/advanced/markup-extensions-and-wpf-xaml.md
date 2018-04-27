@@ -23,17 +23,17 @@ helpviewer_keywords:
 - characters [WPF], curly brace
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
-caps.latest.revision: ''
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5e6dec42d40039f9cc23ba976ecf421f6471888e
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: cf1d7fda58c3bca0f9d76c3c4d3b8d22545a9912
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>Extensions de balisage et XAML WPF
 Cette rubrique introduit le concept d’extensions de balisage pour XAML, notamment leurs règles de syntaxe, leur finalité et le modèle d’objet de classe sous-jacent. Les extensions de balisage sont une fonctionnalité générale du langage XAML et de l’implémentation .NET des services XAML. Cette rubrique détaille spécifiquement des extensions de balisage pour une utilisation dans le langage XAML de WPF.  
@@ -64,7 +64,7 @@ Cette rubrique introduit le concept d’extensions de balisage pour XAML, notamm
 -   `x:Array` offre une prise en charge pour la création de tableaux généraux dans la syntaxe XAML, dans les cas où la prise en charge des collections assurée par les éléments de base et les modèles de contrôle WPF n’est délibérément pas utilisée. Pour plus d’informations, consultez [x:Array, extension de balisage](../../../../docs/framework/xaml-services/x-array-markup-extension.md).  
   
 > [!NOTE]
->  Le préfixe `x:` est utilisé pour le mappage d’espace de noms XAML standard des intrinsèques du langage XAML, dans l’élément racine d’un fichier ou d’une production XAML. Par exemple, les modèles [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] pour applications WPF initient un fichier XAML à l’aide de ce mappage `x:`. Vous pouvez choisir un autre jeton de préfixe pour votre propre mappage d’espace de noms XAML. Cependant, dans cette documentation, le mappage `x:` par défaut est considéré comme un moyen d’identifier les entités qui représentent une partie définie de l’espace de noms XAML du langage XAML, par opposition à l’espace de noms XAML par défaut ou à d’autres espaces de noms XAML non liés à un framework spécifique.  
+>  Le préfixe `x:` est utilisé pour le mappage d’espace de noms XAML standard des intrinsèques du langage XAML, dans l’élément racine d’un fichier ou d’une production XAML. Par exemple, les modèles Visual Studio pour les applications WPF lancer un fichier XAML à l’aide de ce `x:` mappage. Vous pouvez choisir un autre jeton de préfixe pour votre propre mappage d’espace de noms XAML. Cependant, dans cette documentation, le mappage `x:` par défaut est considéré comme un moyen d’identifier les entités qui représentent une partie définie de l’espace de noms XAML du langage XAML, par opposition à l’espace de noms XAML par défaut ou à d’autres espaces de noms XAML non liés à un framework spécifique.  
   
 <a name="WPF_Specific_Markup_Extensions"></a>   
 ## <a name="wpf-specific-markup-extensions"></a>Extensions de balisage spécifiques à WPF  
@@ -112,7 +112,7 @@ Cette rubrique introduit le concept d’extensions de balisage pour XAML, notamm
   
 <a name="EscapeSequences"></a>   
 ## <a name="escape-sequences-and-markup-extensions"></a>Séquences d’échappement et extensions de balisage  
- La gestion des attributs dans un processeur XAML utilise les accolades comme indicateurs d’une séquence d’extension de balisage. Il est possible aussi de générer une valeur d’attribut de caractère d’accolade littérale, si nécessaire, en entrant une séquence d’échappement avec une paire d’accolades vides, suivie de l’accolade littérale. Consultez [{}, séquence d’échappement - Extension de balisage](../../xaml-services/escape-sequence-markup-extension.md).  
+ La gestion des attributs dans un processeur XAML utilise les accolades comme indicateurs d’une séquence d’extension de balisage. Il est possible aussi de générer une valeur d’attribut de caractère d’accolade littérale, si nécessaire, en entrant une séquence d’échappement avec une paire d’accolades vides, suivie de l’accolade littérale. Consultez [ {} séquence - Extension de balisage d’échappement](../../xaml-services/escape-sequence-markup-extension.md).  
   
 <a name="Nesting"></a>   
 ## <a name="nesting-markup-extensions-in-xaml-usage"></a>Imbrication d’extensions de balisage dans l’utilisation de XAML  

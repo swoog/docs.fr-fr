@@ -16,11 +16,11 @@ ms.author: douglasl
 manager: craigg
 ms.workload:
 - dotnet
-ms.openlocfilehash: 76d8765be1dc24f4b8c457644595796680c2f2c3
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 3939abaf376100e09d244afdb32662729a990ff7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connection-string-syntax"></a>Syntaxe des chaînes de connexion
 Chaque fournisseur de données .NET Framework a un objet `Connection` qui hérite de <xref:System.Data.Common.DbConnection> et d'une propriété <xref:System.Data.Common.DbConnection.ConnectionString%2A> spécifique au fournisseur. La syntaxe de chaîne de connexion spécifique à chaque fournisseur est documentée dans sa propriété `ConnectionString`. Le tableau suivant répertorie les quatre fournisseurs de données inclus dans le .NET Framework.  
@@ -98,7 +98,7 @@ Data Source=MySqlServer\MSSQL1;"
 Vous pouvez également définir la propriété <xref:System.Data.SqlClient.SqlConnectionStringBuilder.DataSource%2A> du `SqlConnectionStringBuilder` sur le nom d'instance lors de la création d'une chaîne de connexion. La propriété <xref:System.Data.SqlClient.SqlConnection.DataSource%2A> d'un objet <xref:System.Data.SqlClient.SqlConnection> est en lecture seule.  
   
 ### <a name="type-system-version-changes"></a>Modifications de la version de système de type  
- Le mot clé `Type System Version` dans une propriété <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> spécifie la représentation côté client des types [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]. Pour plus d'informations sur le mot clé <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType>, consultez `Type System Version`.  
+ Le `Type System Version` mot clé dans un <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> spécifie la représentation côté client des types SQL Server. Pour plus d'informations sur le mot clé <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType>, consultez `Type System Version`.  
   
 ## <a name="connecting-and-attaching-to-sql-server-express-user-instances"></a>Connexion et attachement aux instances utilisateur de SQL Server Express  
  Les instances utilisateur sont une nouveauté de SQL Server Express. Elles permettent à un utilisateur qui s'exécute sur un compte Windows local disposant de privilèges minimum de se connecter à une base de données SQL Server et de l'exécuter sans nécessiter de privilèges d'administrateur. Une instance utilisateur s'exécute avec les informations d'identification Windows de l'utilisateur, pas en tant que service.  
@@ -106,7 +106,7 @@ Vous pouvez également définir la propriété <xref:System.Data.SqlClient.SqlCo
  Pour plus d’informations sur l’utilisation des instances utilisateur, consultez [Instances utilisateur SQL Server Express](../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md).  
   
 ## <a name="using-trustservercertificate"></a>Utilisation de TrustServerCertificate  
- Le mot clé `TrustServerCertificate` est valide uniquement pour se connecter à une instance [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] avec un certificat valide. Lorsque `TrustServerCertificate` a la valeur `true`, la couche de transport fait appel au protocole SSL pour chiffrer le canal et ignore la chaîne du certificat pour valider la confiance.  
+ Le `TrustServerCertificate` mot clé est valide uniquement lors de la connexion à une instance de SQL Server avec un certificat valide. Lorsque `TrustServerCertificate` a la valeur `true`, la couche de transport fait appel au protocole SSL pour chiffrer le canal et ignore la chaîne du certificat pour valider la confiance.  
   
 ```  
 "TrustServerCertificate=true;"   

@@ -1,27 +1,29 @@
 ---
-title: "Fournisseur de données .NET Framework"
-ms.custom: 
+title: Fournisseur de données .NET Framework
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: a78654f5c8de480b1eb38fbf25fbc923a30a0d25
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 69acb7b2fe4eafcce75a7b76305fab37dbb7d2f6
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="net-framework-data-providers"></a>Fournisseur de données .NET Framework
 Un fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] est utilisé pour la connexion à une base de données, l'exécution de commandes et l'extraction de résultats. Ces résultats sont traités directement, placés dans un objet <xref:System.Data.DataSet> pour pouvoir être exposés à l'utilisateur le cas échéant, combinés aux données de différentes sources ou accessibles à distance entre couches. Les fournisseurs de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] sont légers et créent une couche minimale entre la source des données et le code, ce qui augmente les performances sans nuire aux fonctionnalités.  
@@ -30,12 +32,12 @@ Un fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnsho
   
 |Fournisseur de données[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] |Description|  
 |-------------------------------------------------------------------------------|-----------------|  
-|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Fournisseur de données pour [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]|Fournit l'accès aux données pour Microsoft [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]. Utilise l'espace de noms <xref:System.Data.SqlClient> .|  
+|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Fournisseur de données pour SQL Server|Fournit l'accès aux données pour Microsoft SQL Server. Utilise l'espace de noms <xref:System.Data.SqlClient> .|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Fournisseur de données pour OLE DB|Pour les sources de données exposées à l'aide de OLE DB. Utilise l'espace de noms <xref:System.Data.OleDb> .|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]Fournisseur de données pour ODBC|Pour les sources de données exposées à l'aide de ODBC. Utilise l'espace de noms <xref:System.Data.Odbc> .|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Fournisseur de données pour Oracle|Pour les sources de données Oracle. Le fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pour Oracle prend en charge le logiciel client Oracle version 8.1.7 et ultérieure, et utilise l'espace de noms <xref:System.Data.OracleClient> .|  
 |fournisseur EntityClient|Fournit un accès aux données pour les applications EDM (Entity Data Model). Utilise l'espace de noms <xref:System.Data.EntityClient> .|  
-|Fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pour [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] Compact 4.0.|Fournit l'accès aux données pour Microsoft [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] Compact 4.0. Utilise l’espace de noms [System.Data.SqlServerCe](http://msdn.microsoft.com/library/system.data.sqlserverce.aspx) .|  
+|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Fournisseur de données pour SQL Server Compact 4.0.|Fournit l’accès aux données pour Microsoft SQL Server Compact 4.0. Utilise l’espace de noms [System.Data.SqlServerCe](http://msdn.microsoft.com/library/system.data.sqlserverce.aspx) .|  
   
 ## <a name="core-objects-of-net-framework-data-providers"></a>Objets principaux des fournisseurs de données .NET Framework  
  Le tableau suivant présente les quatre principaux objets qui composent un fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] .  
@@ -59,8 +61,8 @@ Un fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnsho
 |`Error`|Expose les informations provenant d'un avertissement ou d'une erreur retournée par une source de données.|  
 |`ClientPermission`|Fourni pour les attributs de sécurité d'accès du code du fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] . La classe de base pour tous les objets `ClientPermission` est la classe <xref:System.Data.Common.DBDataPermission> .|  
   
-## <a name="net-framework-data-provider-for-includessnoversionincludesssnoversion-mdmd-sqlclient"></a>Fournisseur de données .NET Framework pour [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] (SqlClient)  
- Le fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pour [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] (SqlClient) utilise son propre protocole pour communiquer avec [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]. Il est léger et ses performances sont élevées car il est optimisé de façon à accéder directement à [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] , sans ajout d'une couche OLE DB ou ODBC (Open DataBase Connectivity). L'illustration suivante compare le fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pour [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] avec le fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pour OLE DB. Le fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pour OLE DB communique avec une source de données OLE DB à la fois par l'intermédiaire du composant de service OLE DB, qui assure le regroupement de connexion et les services de transactions, et par le biais du fournisseur OLE DB de la source de données.  
+## <a name="net-framework-data-provider-for-sql-server-sqlclient"></a>Fournisseur de données .NET Framework pour SQL Server (SqlClient)  
+ Le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] du fournisseur de données pour SQL Server (SqlClient) utilise son propre protocole pour communiquer avec SQL Server. Il est léger et fonctionne bien car il est optimisé pour accéder à un serveur SQL Server directement, sans ajout d’une couche OLE DB ou ODBC Open Database Connectivity (). L’illustration suivante compare la [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] fournisseur de données pour SQL Server avec le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] du fournisseur de données pour OLE DB. Le fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pour OLE DB communique avec une source de données OLE DB à la fois par l'intermédiaire du composant de service OLE DB, qui assure le regroupement de connexion et les services de transactions, et par le biais du fournisseur OLE DB de la source de données.  
   
 > [!NOTE]
 >  Le fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pour ODBC présente une architecture similaire à celle du fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pour OLE DB ; par exemple, il appelle un composant de service ODBC.  
@@ -68,9 +70,9 @@ Un fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnsho
  ![Fournisseurs de données](../../../../docs/framework/data/adonet/media/netdataproviders-bpuedev11.gif "NETDataProviders_bpuedev11")  
 Comparaison du fournisseur de données .NET Framework pour SQL Server et du fournisseur de données .NET Framework pour OLE DB  
   
- Les classes du fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pour [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] sont situées dans l'espace de noms <xref:System.Data.SqlClient> .  
+ Le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] fournisseur de données pour les classes SQL Server se trouvent dans le <xref:System.Data.SqlClient> espace de noms.  
   
- Le fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pour [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] prend en charge les transactions locales et distribuées. Pour les transactions distribuées, le fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pour [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]s'inscrit automatiquement par défaut dans une transaction et obtient des détails de transaction des services de composants Windows ou <xref:System.Transactions>. Pour plus d’informations, consultez [Transactions et la concurrence](../../../../docs/framework/data/adonet/transactions-and-concurrency.md).  
+ Le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] du fournisseur de données pour SQL Server prend en charge les transactions locales et distribuées. Pour les transactions distribuées, le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] fournisseur de données pour SQL Server, par défaut, est automatiquement inscrit dans une transaction et obtient les détails de transaction des Services de composants Windows ou <xref:System.Transactions>. Pour plus d’informations, consultez [Transactions et la concurrence](../../../../docs/framework/data/adonet/transactions-and-concurrency.md).  
   
  L'exemple de code suivant montre comment inclure l'espace de noms `System.Data.SqlClient` dans vos applications.  
   
@@ -89,7 +91,7 @@ using System.Data.SqlClient;
   
 |Pilote|Fournisseur|  
 |------------|--------------|  
-|SQLOLEDB|Fournisseur Microsoft OLE DB pour [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]|  
+|SQLOLEDB|Fournisseur Microsoft OLE DB pour SQL Server|  
 |MSDAORA|Fournisseur Microsoft OLE DB pour Oracle|  
 |Microsoft.Jet.OLEDB.4.0|Fournisseur OLE DB pour Microsoft Jet|  
   
@@ -117,7 +119,7 @@ using System.Data.OleDb;
   
 |Pilote|  
 |------------|  
-|[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]|  
+|SQL Server|  
 |Microsoft ODBC pour Oracle|  
 |Pilote Microsoft Access (*.mdb)|  
   
@@ -160,10 +162,10 @@ using System.Data.OracleClient;
   
 |Fournisseur|Notes|  
 |--------------|-----------|  
-|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Fournisseur de données pour [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]|Recommandé pour les applications de couche intermédiaire qui utilisent Microsoft [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)].<br /><br /> Recommandé pour les applications monocouches qui utilisent des bases de données Microsoft Database Engine (MSDE) ou [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)].<br /><br /> Recommandé par rapport à l'utilisation du fournisseur OLE DB pour [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] (SQLOLEDB) avec le fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pour OLE DB.|  
-|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Fournisseur de données pour OLE DB|Pour [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)], le fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pour [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] est recommandé à la place de ce fournisseur.<br /><br /> Il est recommandé pour les applications monocouches qui utilisent des bases de données Microsoft Access. L'utilisation d'une base de données Access pour une application de couche intermédiaire est déconseillée.|  
-|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]« Fournisseur de données pour ODBC|Recommandé pour les applications monocouches et de couche intermédiaire qui utilisent des sources de données ODBC.|  
-|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]« Fournisseur de données pour Oracle|Recommandé pour les applications monocouches et de couche intermédiaire qui utilisent des sources de données Oracle.|  
+|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Fournisseur de données pour SQL Server|Recommandé pour les applications de couche intermédiaire qui utilisent Microsoft SQL Server.<br /><br /> Recommandé pour les applications monocouches qui utilisent Microsoft Database Engine (MSDE) ou SQL Server.<br /><br /> Préférable à l’utilisation du fournisseur OLE DB pour SQL Server (SQLOLEDB) avec le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] du fournisseur de données pour OLE DB.|  
+|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Fournisseur de données pour OLE DB|Pour SQL Server, le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] est recommandé de fournisseur de données pour SQL Server au lieu de ce fournisseur.<br /><br /> Il est recommandé pour les applications monocouches qui utilisent des bases de données Microsoft Access. L'utilisation d'une base de données Access pour une application de couche intermédiaire est déconseillée.|  
+|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] « Fournisseur de données pour ODBC|Recommandé pour les applications monocouches et de couche intermédiaire qui utilisent des sources de données ODBC.|  
+|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] « Fournisseur de données pour Oracle|Recommandé pour les applications monocouches et de couche intermédiaire qui utilisent des sources de données Oracle.|  
   
 ## <a name="entityclient-provider"></a>fournisseur EntityClient  
  Le fournisseur EntityClient permet d'accéder aux données basées sur un modèle de données d'entité EDM (Entity Data Model). Contrairement aux autres fournisseurs de données .NET Framework, il n'interagit pas directement avec une source de données. Au lieu de cela, il utilise Entity SQL pour communiquer avec le fournisseur de données sous-jacent. Pour plus d’informations, consultez [EntityClient et Entity SQL](http://msdn.microsoft.com/library/49202ab9-ac98-4b4b-a05c-140e422bf527).  

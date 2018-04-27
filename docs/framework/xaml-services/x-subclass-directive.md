@@ -1,12 +1,13 @@
 ---
 title: x:Subclass, directive
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - Subclass
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Subclass attribute
 - Subclass attribute in XAML [XAML Services]
 ms.assetid: 99f66072-8107-4362-ab99-8171dc83b469
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1d620b59208b9dc852abee3dd2e4d6c58b223d70
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 566b772db0e8f96c3272481d47b3e220f727d95b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xsubclass-directive"></a>x:Subclass, directive
 Modifie le comportement de compilation du balisage XAML lorsque `x:Class` est également fourni. Au lieu de créer une classe partielle qui est basée sur `x:Class`, fourni `x:Class` est créée comme une classe intermédiaire, et ensuite votre classe dérivée fournie est censée être basée sur `x:Class`.  
@@ -52,18 +54,18 @@ Modifie le comportement de compilation du balisage XAML lorsque `x:Class` est é
  [x : Class Directive](../../../docs/framework/xaml-services/x-class-directive.md) doit également être fourni sur le même objet, et cet objet doit être l’élément racine de la production XAML.  
   
 ## <a name="remarks"></a>Notes  
- `x:Subclass`l’utilisation est principalement utilisée pour les langages qui ne prennent pas en charge les déclarations de classe partielle.  
+ `x:Subclass` l’utilisation est principalement utilisée pour les langages qui ne prennent pas en charge les déclarations de classe partielle.  
   
  La classe utilisée comme le `x:Subclass` ne peut pas être une classe imbriquée, et `x:Subclass` doit faire référence à l’objet racine, comme expliqué dans la section « Dépendances ».  
   
  Dans le cas contraire, la signification conceptuelle de `x:Subclass` n’est pas définie par une implémentation de Services XAML .NET Framework. Il s’agit, car le comportement des Services XAML .NET Framework ne spécifie pas le modèle de programmation général en XAML balisage et le code de stockage sont connectés. Les implémentations de concepts supplémentaires liés à `x:Class` et `x:Subclass` sont effectuées par les infrastructures spécifiques qui utilisent des modèles de programmation ou des modèles d’application pour définir comment connecter le balisage XAML compilé de balisage et code-behind basé sur CLR. Chacune de ces infrastructures peut avoir ses propres actions de génération qui activent une partie du comportement, ou des composants spécifiques qui doivent être inclus dans l’environnement de génération. Dans une infrastructure, les actions de génération peuvent également varier selon le langage CLR spécifique qui est utilisé pour le code-behind.  
   
 ## <a name="wpf-usage-notes"></a>Notes d’utilisation WPF  
- `x:Subclass`peut être sur une racine de page ou le <xref:System.Windows.Application> racine dans la définition d’application, qui a déjà `x:Class`. Déclaration `x:Subclass` sur tout élément autre qu’une racine de page ou d’une application, ou sa spécification lorsqu’aucun `x:Class` existe, provoque une erreur de compilation.  
+ `x:Subclass` peut être sur une racine de page ou le <xref:System.Windows.Application> racine dans la définition d’application, qui a déjà `x:Class`. Déclaration `x:Subclass` sur tout élément autre qu’une racine de page ou d’une application, ou sa spécification lorsqu’aucun `x:Class` existe, provoque une erreur de compilation.  
   
  Création de classes dérivées qui fonctionnent correctement pour le `x:Subclass` scénario est relativement complexe. Vous devrez peut-être examiner les fichiers intermédiaires (les fichiers .g produits dans le dossier obj de votre projet par la compilation de balisage, avec des noms qui incorporent les noms de fichier .xaml). Ces fichiers intermédiaires peuvent vous aider à déterminer l’origine de certaines constructions de programmation dans les classes partielles jointes dans l’application compilée.  
   
- Gestionnaires d’événements dans la classe dérivée doivent être `internal override` (`Friend Overrides` dans [!INCLUDE[TLA#tla_visualb](../../../includes/tlasharptla-visualb-md.md)]) afin de substituer les stubs pour les gestionnaires créés dans la classe intermédiaire au moment de la compilation. Sinon, les implémentations de classe dérivée masqueront l’implémentation de la classe intermédiaire et les gestionnaires de classe intermédiaire ne sont pas appelés.  
+ Gestionnaires d’événements dans la classe dérivée doivent être `internal override` (`Friend Overrides` dans Microsoft Visual Basic) afin de substituer les stubs pour les gestionnaires créés dans la classe intermédiaire au moment de la compilation. Sinon, les implémentations de classe dérivée masqueront l’implémentation de la classe intermédiaire et les gestionnaires de classe intermédiaire ne sont pas appelés.  
   
  Lorsque vous définissez `x:Class` et `x:Subclass`, vous n’avez pas besoin de fournir d’implémentation pour la classe qui est référencée par `x:Class`. Vous devez uniquement afin de lui donner un nom via le `x:Class` attribut afin que le compilateur dispose de quelques conseils pour la classe qu’il crée dans les fichiers intermédiaires (dans ce cas, le compilateur ne sélectionne pas de nom par défaut). Vous pouvez donner le `x:Class` une implémentation de la classe ; Toutefois, cela n’est pas le scénario classique pour l’utilisation `x:Class` et `x:Subclass`.  
   

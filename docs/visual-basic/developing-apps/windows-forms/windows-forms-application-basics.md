@@ -1,25 +1,26 @@
 ---
-title: "Concepts de base de l’application Windows Forms (Visual Basic)"
+title: Concepts de base de l’application Windows Forms (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 7872d3c7b19ec9cd7059cccf41e5fab50d85123b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: aaa7fbd679eceea53a673646173dc14dc4f209bc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Concepts de base de l’application Windows Forms (Visual Basic)
-Une partie importante de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] est la possibilité de créer des applications Windows Forms qui s’exécutent localement sur les ordinateurs des utilisateurs. Vous pouvez utiliser Visual Studio pour créer l’interface utilisateur et d’applications à l’aide de Windows Forms. Une application Windows Forms repose sur les classes de le <xref:System.Windows.Forms> espace de noms.  
+Une partie importante de Visual Basic est la possibilité de créer des applications Windows Forms qui s’exécutent localement sur les ordinateurs des utilisateurs. Vous pouvez utiliser Visual Studio pour créer l’interface utilisateur et d’applications à l’aide de Windows Forms. Une application Windows Forms repose sur les classes de le <xref:System.Windows.Forms> espace de noms.  
   
 ## <a name="designing-windows-forms-applications"></a>Conception de Windows Forms Applications  
  Vous pouvez créer des Windows Forms et des applications de service Windows avec [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]. Pour plus d’informations, consultez les rubriques suivantes :  
@@ -52,9 +53,9 @@ Une partie importante de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] est la poss
   
 |À|Voir|  
 |--------|---------|  
-|Créez une application Windows Forms avec[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]|[Procédure pas à pas : Création un Windows Form Simple](http://msdn.microsoft.com/library/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
+|Créez une application Windows Forms avec [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]|[Procédure pas à pas : Création un Windows Form Simple](http://msdn.microsoft.com/library/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
 |Utiliser des contrôles sur les formulaires|[Comment : ajouter des contrôles à des Windows Forms](../../../framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|   
-|Créer des graphismes avec<xref:System.Drawing>|[Mise en route de la programmation graphique](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|  
+|Créer des graphismes avec <xref:System.Drawing>|[Mise en route de la programmation graphique](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|  
 |Créer des contrôles personnalisés|[Comment : hériter de la classe UserControl](../../../framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|  
   
 ## <a name="displaying-and-manipulating-data"></a>Affichage et manipulation de données  
@@ -77,19 +78,19 @@ Une partie importante de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] est la poss
 |Utilisez la fenêtre Sources de données|[Procédure pas à pas : affichage de données sur un Windows Form](/visualstudio/data-tools/accessing-data-in-visual-studio)|  
   
 ## <a name="deploying-applications-to-client-computers"></a>Déploiement d'applications sur les ordinateurs clients  
- Une fois que vous avez écrit votre application, vous devez l’envoyer à vos utilisateurs afin qu’ils peuvent installer et exécuter sur leurs propres ordinateurs clients. À l’aide de la [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] technologie, vous pouvez déployer vos applications depuis [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] en seulement quelques clics et fournir aux utilisateurs une URL pointant vers votre application sur le Web. [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]gère tous les éléments et dépendances dans votre application et vérifie que l’application est correctement installée sur l’ordinateur client.  
+ Une fois que vous avez écrit votre application, vous devez l’envoyer à vos utilisateurs afin qu’ils peuvent installer et exécuter sur leurs propres ordinateurs clients. À l’aide de la [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] technologie, vous pouvez déployer vos applications depuis [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] en seulement quelques clics et fournir aux utilisateurs une URL pointant vers votre application sur le Web. [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] gère tous les éléments et dépendances dans votre application et vérifie que l’application est correctement installée sur l’ordinateur client.  
   
  Vous pouvez configurer les applications [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] pour qu'elles s'exécutent uniquement quand l'utilisateur est connecté au réseau ou pour qu'elles s'exécutent en ligne et hors connexion. Lorsque vous spécifiez qu’une application doit prendre en charge une opération hors connexion, [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] ajoute un lien à votre application de l’utilisateur **Démarrer** menu, afin que l’utilisateur peut l’ouvrir sans utiliser l’URL.  
   
- Quand vous mettez à jour votre application, vous publiez un nouveau manifeste de déploiement et une nouvelle copie de votre application sur votre serveur web. [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]détecte les mises à jour disponibles et met à niveau l’installation de l’utilisateur ; aucune programmation personnalisée n’est requis pour mettre à jour les anciens assemblys.  
+ Quand vous mettez à jour votre application, vous publiez un nouveau manifeste de déploiement et une nouvelle copie de votre application sur votre serveur web. [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] détecte les mises à jour disponibles et met à niveau l’installation de l’utilisateur ; aucune programmation personnalisée n’est requis pour mettre à jour les anciens assemblys.  
   
  Pour obtenir une introduction complète à [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)], consultez [Sécurité et déploiement ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment). Pour obtenir des informations détaillées sur l’utilisation de ces fonctionnalités, consultez les rubriques suivantes :  
   
 |À|Voir|  
 |--------|---------|  
-|Déployer une application avec[!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[Guide pratique pour publier une application ClickOnce à l’aide de l’Assistant Publication](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [Procédure pas à pas : déploiement manuel d’une application ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|  
+|Déployer une application avec [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[Guide pratique pour publier une application ClickOnce à l’aide de l’Assistant Publication](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [Procédure pas à pas : déploiement manuel d’une application ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|  
 |Mise à jour un [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] déploiement|[Guide pratique pour gérer les mises à jour pour une application ClickOnce](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|  
-|Gérer la sécurité avec[!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[Guide pratique pour activer les paramètres de sécurité ClickOnce](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|  
+|Gérer la sécurité avec [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[Guide pratique pour activer les paramètres de sécurité ClickOnce](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|  
   
 ## <a name="other-controls-and-features"></a>Autres contrôles et fonctionnalités  
  Il existe de nombreuses autres fonctionnalités dans Windows Forms qui simplifient et accélèrent l'implémentation des tâches courantes, par exemple la prise en charge de la création de boîtes de dialogue, de l'impression, de l'ajout d'aide et de documentation et de la localisation de votre application en plusieurs langues. En outre, Windows Forms repose sur le système de sécurité fiable de la [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], ce qui vous permet de distribuer des applications plus sécurisées à vos clients.  

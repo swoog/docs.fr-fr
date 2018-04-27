@@ -1,11 +1,12 @@
 ---
-title: "Procédures Sub (Visual Basic)"
-ms.custom: 
+title: Procédures Sub (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Sub procedures [Visual Basic], about Sub procedures
@@ -17,17 +18,17 @@ helpviewer_keywords:
 - procedures [Visual Basic], Sub
 - syntax [Visual Basic], Sub procedures
 ms.assetid: 6a0a4958-ed0a-4d3d-8d31-0772c82bda58
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4e20e0dd5ff9e2b931e5792bebb3144930826f89
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7258d57d2677042a2020097893a4f7a0adb35508
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sub-procedures-visual-basic"></a>Procédures Sub (Visual Basic)
-A `Sub` procédure est une série de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] instructions délimitée par le `Sub` et `End Sub` instructions. Le `Sub` procédure effectue une tâche, puis retourne le contrôle au code appelant, mais elle ne retourne pas de valeur au code appelant.  
+A `Sub` procédure est une série d’instructions Visual Basic délimitée par le `Sub` et `End Sub` instructions. Le `Sub` procédure effectue une tâche, puis retourne le contrôle au code appelant, mais elle ne retourne pas de valeur au code appelant.  
   
  Chaque fois que la procédure est appelée, ses instructions sont exécutées, en commençant par la première instruction exécutable après le `Sub` instruction et en terminant par la première `End Sub`, `Exit Sub`, ou `Return` instruction rencontrée.  
   
@@ -38,7 +39,7 @@ A `Sub` procédure est une série de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]
 ## <a name="declaration-syntax"></a>Syntaxe de déclaration  
  La syntaxe de déclaration d’un `Sub` comme suit :  
   
- `[`*modificateurs* `] Sub` *nomsub* `[(` *parameterlist*  `)]`  
+ `[` *modificateurs* `] Sub` *nomsub* `[(` *parameterlist*  `)]`  
   
  `' Statements of the Sub procedure.`  
   
@@ -65,7 +66,7 @@ A `Sub` procédure est une série de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]
   
  La syntaxe d’un appel à un `Sub` comme suit :  
   
- `[Call]`  *nomsub* `[(` *argumentlist*`)]`  
+ `[Call]`  *nomsub* `[(` *argumentlist* `)]`  
   
  Vous pouvez appeler une `Sub` méthode en dehors de la classe qui le définit. Tout d’abord, vous devez utiliser le `New` (mot clé) pour créer une instance de la classe ou appeler une méthode qui retourne une instance de la classe. Pour plus d’informations, consultez [nouvel opérateur](../../../../visual-basic/language-reference/operators/new-operator.md). Ensuite, vous pouvez utiliser la syntaxe suivante pour appeler le `Sub` méthode sur l’objet de l’instance :  
   

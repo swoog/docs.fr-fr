@@ -1,27 +1,29 @@
 ---
 title: Fournisseur de statistiques pour SQL Server
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 429c9d09-92ac-46ec-829a-fbff0a9575a2
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 43cafc8feb6cee761baffcb2efe41aec18e98abb
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 27346f483251231f16abfa1d0fc5001e156ca8ea
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="provider-statistics-for-sql-server"></a>Fournisseur de statistiques pour SQL Server
 À partir du .NET Framework version 2.0, le fournisseur de données .NET Framework pour SQL Server prend en charge des statistiques d'exécution. Vous devez activer les statistiques en attribuant à la propriété <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> de l'objet <xref:System.Data.SqlClient.SqlConnection> la valeur `True` après la création d'un objet de connexion valide. Une fois les statistiques activées, vous pouvez les consulter comme « instantané dans le temps » en extrayant une référence <xref:System.Collections.IDictionary> via la méthode <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> de l'objet <xref:System.Data.SqlClient.SqlConnection>. Vous détaillez la liste comme un ensemble d'entrées de dictionnaire de paires nom-valeur. Ces paires nom-valeur ne sont triées. À tout moment, vous pouvez appeler la méthode <xref:System.Data.SqlClient.SqlConnection.ResetStatistics%2A> de l'objet <xref:System.Data.SqlClient.SqlConnection> pour réinitialiser les compteurs. Si la collecte de statistiques n'est pas activée, aucune exception n'est générée. En outre, si <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> est appelé sans que <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> ait été appelé précédemment, les valeurs extraites sont les valeurs initiales de chaque entrée. Si vous activez les statistiques, exécutez votre application pendant un moment, puis désactivez les statistiques, les valeurs extraites reflètent celles collectées jusqu'au point où les statistiques étaient désactivées. Toutes les valeurs statistiques sont collectées par connexion.  
@@ -59,7 +61,7 @@ ms.lasthandoff: 01/17/2018
  L'application console suivante montre comment activer les statistiques sur une connexion, extraire quatre valeurs statistiques individuelles et les afficher dans la fenêtre de console.  
   
 > [!NOTE]
->  L’exemple suivant utilise l’exemple **AdventureWorks** base de données incluse avec [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]. La chaîne de connexion fournie dans l'exemple de code suppose que la base de données est installée et disponible sur l'ordinateur local. Si nécessaire, modifiez la chaîne de connexion en fonction de votre environnement.  
+>  L’exemple suivant utilise l’exemple **AdventureWorks** inclus avec SQL Server de base de données. La chaîne de connexion fournie dans l'exemple de code suppose que la base de données est installée et disponible sur l'ordinateur local. Si nécessaire, modifiez la chaîne de connexion en fonction de votre environnement.  
   
 ```vb  
 Option Strict On  
@@ -215,7 +217,7 @@ namespace CS_Stats_Console_GetValue
  L'application console suivante montre comment activer les statistiques sur une connexion, extraire toutes les valeurs statistiques disponibles à l'aide de l'énumérateur et les afficher dans la fenêtre de console.  
   
 > [!NOTE]
->  L’exemple suivant utilise l’exemple **AdventureWorks** base de données incluse avec [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]. La chaîne de connexion fournie dans l'exemple de code suppose que la base de données est installée et disponible sur l'ordinateur local. Si nécessaire, modifiez la chaîne de connexion en fonction de votre environnement.  
+>  L’exemple suivant utilise l’exemple **AdventureWorks** inclus avec SQL Server de base de données. La chaîne de connexion fournie dans l'exemple de code suppose que la base de données est installée et disponible sur l'ordinateur local. Si nécessaire, modifiez la chaîne de connexion en fonction de votre environnement.  
   
 ```vb  
 Option Strict On  

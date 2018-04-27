@@ -1,24 +1,26 @@
 ---
 title: Reconfiguration dynamique
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b20786ae-cce6-4f91-b6cb-9cae116faf8b
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cbf286891211da0e35274ff59f3bee69ebf3c9bb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 36b548ee47ed9165743bbfb1eaab5cf3bbe82bd2
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="dynamic-reconfiguration"></a>Reconfiguration dynamique
 Cet exemple illustre le service de routage [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Le service de routage est un composant [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] qui facilite l'inclusion d'un routeur basé sur le contenu dans votre application. Cet exemple adapte l'exemple [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Calculator standard pour communiquer à l'aide du service de routage. Il montre comment le service de routage peut être reconfiguré dynamiquement pendant l'exécution.  
@@ -43,7 +45,7 @@ Cet exemple illustre le service de routage [!INCLUDE[indigo1](../../../../includ
   
 2.  Pour ouvrir **l’Explorateur de solutions**, sélectionnez **l’Explorateur de solutions** à partir de la **vue** menu.  
   
-3.  Appuyez sur **F5** ou **CTRL + MAJ + B** dans [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)].  
+3.  Appuyez sur **F5** ou **CTRL + MAJ + B** dans Visual Studio.  
   
     1.  Si vous souhaitez lancer automatiquement les projets nécessaires lorsque vous appuyez sur **F5**, avec le bouton droit de la solution et sélectionnez **propriétés**. Sélectionnez le **projet de démarrage** nœud sous **propriétés communes** dans le volet gauche. Sélectionnez le **plusieurs projets de démarrage** case d’option et tous les projets d’avoir défini la **Démarrer** action.  
   

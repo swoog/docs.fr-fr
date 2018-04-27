@@ -1,9 +1,9 @@
 ---
-title: "Impossible de lier à un fichier de ressources &#39; &lt;nom de fichier&gt;&#39; : &lt;message d’erreur&gt;"
+title: 'Impossible de lier au fichier de ressources &#39; &lt;nom de fichier&gt;&#39;: &lt;message d’erreur&gt;'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC30144
 ms.assetid: 67ae276e-80d4-4162-ba00-e546c9294340
-caps.latest.revision: 
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4cb6cad67514678c4006221ba41dd69d2452340b
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: f3ba2b4ebe8bea851776d21b7752434b9db84b62
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="unable-to-link-to-resource-file-39ltfilenamegt39-lterror-messagegt"></a>Impossible de lier à un fichier de ressources &#39; &lt;nom de fichier&gt;&#39; : &lt;message d’erreur&gt;
-Le compilateur [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] appelle Assembly Linker (Al.exe, également appelé Alink) pour générer un assembly avec un manifeste. L'éditeur de liens a signalé une erreur de liaison à un fichier de ressources COM+ natif à partir de l'assembly.  
+# <a name="unable-to-link-to-resource-file-39ltfilenamegt39-lterror-messagegt"></a>Impossible de lier au fichier de ressources &#39; &lt;nom de fichier&gt;&#39;: &lt;message d’erreur&gt;
+Le compilateur Visual Basic appelle l’utilitaire Assembly Linker (Al.exe, également appelé Alink) pour générer un assembly avec un manifeste. L'éditeur de liens a signalé une erreur de liaison à un fichier de ressources COM+ natif à partir de l'assembly.  
   
  **ID d’erreur :** BC30144  
   

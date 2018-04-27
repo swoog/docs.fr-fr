@@ -13,17 +13,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d6b7f9cb-81be-44e1-bb94-56137954876d
-caps.latest.revision: ''
+caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload:
 - dotnet
-ms.openlocfilehash: 15c435d46d3695f78db27801f54ec9de475b2989
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: ef070c737f6a108aa9c9285d2cc8e0a1144479bd
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="retrieving-identity-or-autonumber-values"></a>Extraction de l'identité ou de valeurs à numérotation automatique
 Dans une base de données relationnelle, une clé primaire est une colonne ou une combinaison de colonnes qui contient toujours des valeurs uniques. Si vous connaissez la valeur d'une clé primaire, vous pouvez rechercher la ligne qui la contient. Les moteurs de base de données relationnelle, comme SQL Server, Oracle et Microsoft Access/Jet prennent en charge la création de colonnes à incrémentation automatique qui peuvent être désignées comme clés primaires. Ces valeurs sont générées par le serveur lorsque des lignes sont ajoutées à une table. Dans SQL Server, vous définissez la propriété d'identité d'une colonne, dans Oracle vous créez une séquence et dans Microsoft Access vous créez une colonne NuméroAuto.  
@@ -35,7 +35,7 @@ Dans une base de données relationnelle, une clé primaire est une colonne ou un
  Certains moteurs de base de données, comme Microsoft Access Jet, ne prennent pas en charge les paramètres de sortie et ne peuvent pas traiter plusieurs instructions dans un même lot. Avec le moteur de base de données Jet, vous pouvez récupérer la nouvelle valeur NuméroAuto générée pour une ligne insérée en exécutant une commande SELECT distincte dans un gestionnaire d'événements pour l'événement `RowUpdated` de l'objet `DataAdapter`.  
   
 > [!NOTE]
->  Plutôt que d'utiliser une valeur d'auto-incrémentation, vous pouvez utiliser la méthode <xref:System.Guid.NewGuid%2A> d'un objet <xref:System.Guid> pour générer un GUID, ou identificateur global unique, sur l'ordinateur client qui peut être copié sur le serveur dès qu'une nouvelle ligne est insérée. La méthode `NewGuid` génère une valeur binaire encodée sur 16 octets créée à l'aide d'un algorithme qui offre une forte probabilité qu'aucun valeur ne sera dupliquée. Dans une base de données SQL Server, un GUID est stocké dans une colonne `uniqueidentifier` qui peut être générée automatiquement par SQL Server à l'aide de la fonction `NEWID()` Transact-SQL. L'utilisation d'un GUID comme clé primaire peut nuire aux performances. [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] prend en charge la fonction `NEWSEQUENTIALID()` qui génère un GUID séquentiel dont l'unicité globale n'est pas garantie, mais qui peut être indexé de manière plus efficace.  
+>  Plutôt que d'utiliser une valeur d'auto-incrémentation, vous pouvez utiliser la méthode <xref:System.Guid.NewGuid%2A> d'un objet <xref:System.Guid> pour générer un GUID, ou identificateur global unique, sur l'ordinateur client qui peut être copié sur le serveur dès qu'une nouvelle ligne est insérée. La méthode `NewGuid` génère une valeur binaire encodée sur 16 octets créée à l'aide d'un algorithme qui offre une forte probabilité qu'aucun valeur ne sera dupliquée. Dans une base de données SQL Server, un GUID est stocké dans une colonne `uniqueidentifier` qui peut être générée automatiquement par SQL Server à l'aide de la fonction `NEWID()` Transact-SQL. L'utilisation d'un GUID comme clé primaire peut nuire aux performances. SQL Server prend en charge la `NEWSEQUENTIALID()` (fonction), ce qui génère un GUID séquentiel qui n’est pas garanti pour être globalement uniques, mais qui peut être indexé de manière plus efficace.  
   
 ## <a name="retrieving-sql-server-identity-column-values"></a>Extraction de valeurs de colonne d'identité SQL Server  
  Avec Microsoft SQL Server, vous pouvez créer une procédure stockée contenant un paramètre de sortie qui permet de retourner la valeur d'identité d'une ligne insérée. Le tableau suivant décrit les trois fonctions Transact-SQL disponibles dans SQL Server qui peuvent être utilisées pour récupérer la valeur des colonnes d'identité.  

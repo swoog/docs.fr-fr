@@ -1,25 +1,26 @@
 ---
-title: "Constantes et énumérations (Visual Basic)"
+title: Constantes et énumérations (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - enumerations [Visual Basic]
 - constants [Visual Basic]
 - constants [Visual Basic], list of
 ms.assetid: 309c0ad5-83e4-4f96-99ea-83cd95107417
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9fd298cc504f9e4faf5205e53ebbf2ee355a21b3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: da42d58190e8069154cd8383cf0a87e0b19f5ae4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="constants-and-enumerations-visual-basic"></a>Constantes et énumérations (Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]fournit un nombre de constantes prédéfinies et des énumérations pour les développeurs. Constantes stockent des valeurs qui restent constants pendant l’exécution d’une application. Les énumérations offrent un moyen pratique de travailler avec des ensembles de constantes connexes et d’associer des valeurs de constantes à des noms.  
+Visual Basic fournit plusieurs constantes prédéfinies et des énumérations pour les développeurs. Constantes stockent des valeurs qui restent constants pendant l’exécution d’une application. Les énumérations offrent un moyen pratique de travailler avec des ensembles de constantes connexes et d’associer des valeurs de constantes à des noms.  
   
 ## <a name="constants"></a>Constantes  
   
@@ -32,7 +33,7 @@ ms.lasthandoff: 11/21/2017
 |`DEBUG`|A `Boolean` valeur peut être définie dans le **propriétés du projet** boîte de dialogue. Par défaut, la configuration du débogage pour un projet définit `DEBUG`. Lorsque `DEBUG` est défini, <xref:System.Diagnostics.Debug> méthodes de la classe génèrent un résultat vers la **sortie** fenêtre. Lorsqu’il n’est pas défini, <xref:System.Diagnostics.Debug> méthodes de classe ne sont pas compilées et aucune sortie de débogage n’est généré.|  
 |`TARGET`|Chaîne représentant le type de sortie pour le projet ou le paramètre de la ligne de commande **/target** option. Les valeurs possibles de `TARGET` sont :<br /><br /> -« winexe » pour une application Windows.<br />-« exe » pour une application console.<br />-« bibliothèque » pour une bibliothèque de classes.<br />-« module » pour un module.<br />-La **/target** option peut être définie dans le [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] environnement de développement intégré. Pour plus d’informations, consultez [/target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md).|  
 |`TRACE`|A `Boolean` valeur peut être définie dans le **propriétés du projet** boîte de dialogue. Par défaut, toutes les configurations pour un projet définissent `TRACE`. Lorsque `TRACE` est défini, <xref:System.Diagnostics.Trace> méthodes de la classe génèrent un résultat vers la **sortie** fenêtre. Lorsqu’il n’est pas défini, <xref:System.Diagnostics.Trace> classe les méthodes ne sont pas compilées et aucun `Trace` sortie est générée.|  
-|`VBC_VER`|Un nombre représentant le [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] version, dans *majeure*. *mineure* format. Le numéro de version [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)] est 8.0.|  
+|`VBC_VER`|Nombre qui représente la version de Visual Basic, dans *majeure*. *mineure* format. Le numéro de version [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)] est 8.0.|  
   
 ### <a name="print-and-display-constants"></a>Constantes d’impression et affichage  
  Lorsque vous appelez impression et fonctions d’affichage, vous pouvez utiliser les constantes suivantes dans votre code à la place des valeurs réelles.  
@@ -45,14 +46,14 @@ ms.lasthandoff: 11/21/2017
 |`vbNewLine`|Caractère de saut de ligne.|  
 |`vbNullChar`|Caractère null.|  
 |`vbNullString`|Différent d’une chaîne de longueur nulle ( » ») ; utilisé pour appeler des procédures externes.|  
-|`vbObjectError`|Numéro d'erreur. Numéros d’erreur définis par l’utilisateur doivent être supérieures à cette valeur. Exemple :<br /><br /> `Err.Raise(Number) = vbObjectError + 1000`|  
+|`vbObjectError`|Numéro d'erreur. Numéros d’erreur définis par l’utilisateur doivent être supérieures à cette valeur. Par exemple :<br /><br /> `Err.Raise(Number) = vbObjectError + 1000`|  
 |`vbTab`|Caractère de tabulation.|  
 |`vbBack`|Caractère de retour arrière.|  
 |`vbFormFeed`|Pas utilisé dans Microsoft Windows.|  
 |`vbVerticalTab`|Non utilisé dans Microsoft Windows.|  
   
 ## <a name="enumerations"></a>Énumérations  
- Le tableau suivant répertorie et décrit les énumérations fournies par [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Le tableau suivant répertorie et décrit les énumérations fournies par Visual Basic.  
   
 |Énumération|Description|  
 |---|---|  

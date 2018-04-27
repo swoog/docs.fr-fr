@@ -1,18 +1,19 @@
 ---
-title: "Déployer des applications .NET existantes en tant que conteneurs Windows"
-description: "Architecture de Microservices .NET pour les Applications .NET en conteneur | Déployer des applications .NET existantes en tant que conteneurs Windows"
+title: Déployer des applications .NET existantes en tant que conteneurs Windows
+description: Architecture de Microservices .NET pour les Applications .NET en conteneur | Déployer des applications .NET existantes en tant que conteneurs Windows
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
 ms.prod: .net
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: bab6e275c93d2cedddf010ab20f98cb8392fa9fa
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 6c70e30c10674c086e6ad880b97151ae1918ed87
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Déployer des applications .NET existantes en tant que conteneurs Windows
 
@@ -52,13 +53,13 @@ Un grand nombre d’organisations est containerizing applications monolithiques 
 
 Des améliorations significatives dans l’agilité, la portabilité et le contrôle finalement conduire les réductions des coûts importants lorsque vous utilisez des conteneurs pour développer et maintenir des applications.
 
-## <a name="what-is-docker"></a>Présentation de Docker
+## <a name="what-is-docker"></a>Qu’est-ce que Docker ?
 
 [Docker](https://www.docker.com/) est un [projet open source](https://github.com/docker/docker) qui automatise le déploiement d’applications en tant que conteneurs portables, autonomes qui peuvent s’exécuter dans le nuage ou sur site. Docker est également un [société](https://www.docker.com/) qui promeut et évolue cette technologie. La société fonctionne en collaboration avec le cloud, Linux et les fournisseurs de Windows, notamment Microsoft.
 
 ![](./media/image6.png)
 
-> **Figure 4-6.** Docker déploie des conteneurs dans toutes les couches du cloud hybride
+> **Figure 4 à 6.** Docker déploie des conteneurs à toutes les couches du cloud hybride
 
 À une personne familiarisé avec les machines virtuelles, les conteneurs peuvent sembler très similaire. Un conteneur exécute un système d’exploitation, a un système de fichiers et sont accessibles via un réseau, tout comme un système d’ordinateur physique ou virtuel. Toutefois, la technologie et les concepts derrière les conteneurs sont très différents des machines virtuelles. À partir du point de vue du développeur, un conteneur doit être traité plus comme un processus unique. En fait, un conteneur possède un point d’entrée unique pour un processus.
 
@@ -96,17 +97,17 @@ Dans les scénarios de migration pour les applications existantes ou héritées 
 
 Lorsque vous ajoutez le nom de l’image à votre fichier Dockerfile, vous pouvez sélectionner le système d’exploitation et la version à l’aide d’une balise, comme dans les exemples suivants pour les images de conteneur Windows basé sur le .NET Framework :
 
-> | **Tag** | **Version du système et** |
+> | **Balise** | **Version du système et** |
 > |---|---|
-> | **microsoft/dotnet-framework:4.x-windowsservercore** | .NET framework 4.x sur Windows Server Core |
+> | **Microsoft/dotnet-framework:4.x-windowsservercore** | .NET framework 4.x sur Windows Server Core |
 > | **microsoft/aspnet:4.x-windowsservercore** | .NET framework 4.x avec une personnalisation supplémentaire ASP.NET, sur Windows Server Core |
 
 Pour .NET Core (multiplateforme pour Linux et Windows), les balises ressemble à ceci :
 
-> | **Tag** | **Version du système et**
+> | **Balise** | **Version du système et**
 > |---|---|
-> | **microsoft/dotnet:2.0.0-runtime** | .NET core 2.0 runtime uniquement sur Linux |
-> | **microsoft/dotnet:2.0.0-runtime-nanoserver** | .NET core 2.0 runtime uniquement sur Windows Nano Server |
+> | **Microsoft/dotnet:2.0.0-Runtime** | .NET core 2.0 runtime uniquement sur Linux |
+> | **Microsoft/dotnet:2.0.0-Runtime-nanoserver** | .NET core 2.0 runtime uniquement sur Windows Nano Server |
 
 ### <a name="multi-arch-images"></a>Images arch multiples
 

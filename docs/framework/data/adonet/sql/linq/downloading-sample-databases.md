@@ -1,24 +1,26 @@
 ---
-title: "Téléchargement d'exemples de base de données"
-ms.custom: 
+title: Téléchargement d'exemples de base de données
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ef9d69a1-9461-43fe-94bb-7c836754bcb5
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 3b0dccd831591946684fb0087f33563b87ee6ba7
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: dd0b29e97d36d67781c92ee24c56aed43c703261
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="downloading-sample-databases"></a>Téléchargement d'exemples de base de données
 Plusieurs exemples et procédures pas à pas dans la documentation de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] utilisent l'exemple de base de données Northwind et SQL Server Express Edition. Vous pouvez télécharger ces produits gratuitement à partir du site de téléchargement Microsoft.  
@@ -57,7 +59,7 @@ Plusieurs exemples et procédures pas à pas dans la documentation de [!INCLUDE[
 6.  Suivez les instructions d’installation indiquées sur le site web.  
   
 ## <a name="downloading-management-studio-express"></a>Téléchargement de Management Studio Express  
- Si vous souhaitez modifier une base de données que vous avez téléchargé, vous pouvez accéder à la base de données à partir de **l’Explorateur de serveurs** dans les [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] l’environnement de développement intégré (IDE), ou l’utilisation de Microsoft SQL Server Management Studio Express () SSMSE).  
+ Si vous souhaitez modifier une base de données que vous avez téléchargé, vous pouvez accéder à la base de données à partir de **l’Explorateur de serveurs** dans Visual Studio development environnement intégré (IDE), ou utiliser Microsoft SQL Server Management Studio Express (SSMSE) .  
   
 #### <a name="to-download-management-studio-express"></a>Pour télécharger Management Studio Express  
   

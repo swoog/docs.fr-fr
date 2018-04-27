@@ -1,29 +1,31 @@
 ---
-title: "Hébergement dans une application managée"
-ms.custom: 
+title: Hébergement dans une application managée
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: af70132d-e9e1-4f32-b20f-f0014629758a
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c74f95fba492b677d3b1702d090c7a055bc5f1ff
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1e81a8eb27725edeccf3e5c7489109ba47b70dec
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="hosting-in-a-managed-application"></a>Hébergement dans une application managée
 Les services[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] peuvent être hébergés dans toute application [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] . Les services auto-hébergés constituent l'option d'hébergement la plus flexible parce qu'ils requièrent le déploiement de moins d'infrastructure. Toutefois, c'est également l'option d'hébergement la moins fiable, parce que les applications gérées ne fournissent pas les fonctionnalités d'hébergement et de gestion avancées offertes par d'autres solutions d'hébergement dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], comme les services IIS (Internet Information Services) et les services Windows.  
   
- Pour créer un service auto-hébergé, créez et ouvrez une instance d'objet <xref:System.ServiceModel.ServiceHost>, qui démarre un service d'écoute des messages. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Comment : héberger un Service WCF dans une Application managée](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md).  
+ Pour créer un service auto-hébergé, créez et ouvrez une instance d'objet <xref:System.ServiceModel.ServiceHost>, qui démarre un service d'écoute des messages. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Comment : héberger un Service WCF dans une Application managée](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md).  
   
  Pour obtenir un exemple complet sur la façon de définir un contrat, implémentez le contrat et héberger un service à l’intérieur d’une application managée, consultez le [Getting Started Tutorial](../../../../docs/framework/wcf/getting-started-tutorial.md) et [auto-hébergement](../../../../docs/framework/wcf/samples/self-host.md).  
   
@@ -33,7 +35,7 @@ Les services[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] peuvent êtr
  Les scénarios courants autorisés par l'auto-hébergement sont les services [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] qui s'exécutent à l'intérieur d'applications console. L'hébergement d'un service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] à l'intérieur d'une application console est en général utile pendant la phase de développement du service. Cela simplifie son débogage, l'obtention des informations de suivi pour déterminer ce qui se passe à l'intérieur de l'application, et son déplacement en la copiant vers un nouvel emplacement.  
   
 ## <a name="rich-client-applications"></a>Applications clientes complexes  
- Les autres scénarios courants autorisés par l'auto-hébergement sont les applications clientes élaborées, comme [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] ou Windows Forms (WinForms). Cette option d'hébergement permet aux applications clientes complexes, comme [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] et WinForms, de communiquer facilement avec le monde extérieur. Il peut s'agit par exemple, d'un client de collaboration pair à pair qui utilise [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] pour son interface utilisateur et héberge également un service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] qui permet à d'autres clients de se connecter à lui et de partager des informations.  
+ D’autres scénarios communs qu’auto-hébergement sont les applications clientes complexes, tels que ceux basés sur Windows Presentation Foundation (WPF) ou Windows Forms (WinForms). Cette option d'hébergement permet aux applications clientes complexes, comme [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] et WinForms, de communiquer facilement avec le monde extérieur. Il peut s'agit par exemple, d'un client de collaboration pair à pair qui utilise [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] pour son interface utilisateur et héberge également un service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] qui permet à d'autres clients de se connecter à lui et de partager des informations.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Hébergement de services](../../../../docs/framework/wcf/hosting-services.md)  

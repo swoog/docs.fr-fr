@@ -1,30 +1,30 @@
 ---
-title: "Développement interplateforme avec la bibliothèque de classes portable"
-ms.custom: 
+title: Développement interplateforme avec la bibliothèque de classes portable
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Portable Class Library [.NET Framework]
 - targeting multiple platforms
 - multiple platforms, targeting
 ms.assetid: c31e1663-c164-4e65-b66d-d3aa8750a154
-caps.latest.revision: "95"
+caps.latest.revision: 95
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ea0a111727093cb65a98e48255b06b3c4516d258
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: 4e6b853c3548f27bbb4056f7d59d51a6964e0d91
+ms.sourcegitcommit: 68b60d38043e50104ccc90c76f8599b1ffe18346
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>Développement interplateforme avec la bibliothèque de classes portable
 Le type de projet de bibliothèque de classes portables .NET Framework dans Visual Studio vous permet de créer rapidement et facilement des applications interplateformes et des bibliothèques pour les plateformes Microsoft.  
@@ -38,7 +38,7 @@ Le type de projet de bibliothèque de classes portables .NET Framework dans Visu
  Visual Studio fournit des modèles qui vous aident à développer avec la bibliothèque de classes portables. Suivant la version de Visual Studio que vous utilisez, les modèles et menus disponibles peuvent différer de ceux décrits dans cet article.  
   
 > [!WARNING]
->  [Visual Studio 2013 Update 2](http://go.microsoft.com/fwlink/p/?LinkId=393658) inclut les mises à jour pour les modèles de bibliothèque de classes portables. Si vous disposez d’une version antérieure de Visual Studio et Visual Studio 2013 est installé sur le même ordinateur, puis que vous installez Update 2, les modifications apportées à la **Framework cible** choix est appliquées aux deux versions de Visual Studio.  
+>  Visual Studio 2013 Update 2 inclut des mises à jour les modèles de bibliothèque de classes portables. Si vous disposez d’une version antérieure de Visual Studio et Visual Studio 2013 est installé sur le même ordinateur, puis que vous installez Update 2, les modifications apportées à la **Framework cible** choix est appliquées aux deux versions de Visual Studio.  
   
  Dans cette rubrique :  
   
@@ -59,10 +59,10 @@ Le type de projet de bibliothèque de classes portables .NET Framework dans Visu
 |-----------------------|---------------------------------------------------|  
 |Visual Studio 2010 Professional, Premium ou Ultimate|Oui, quand vous installez le [outils de bibliothèque Portable](https://marketplace.visualstudio.com/items?itemName=BCLTeam.PortableLibraryTools2).|  
 |Versions Visual Studio Express 2010|Non.|  
-|Visual Studio 2012 Professional, Premium ou Ultimate|Oui. Pour un support téléphonique, vous devez installer le [Windows Phone SDK 8.0](http://go.microsoft.com/fwlink/?LinkId=265772).|  
+|Visual Studio 2012 Professional, Premium ou Ultimate|Oui. Pour la prise en charge de Windows Phone 8.0, installez le [Windows Phone SDK 8.0](https://www.microsoft.com/download/details.aspx?id=35471).|  
 |Versions Visual Studio Express 2012|Non.|  
-|Visual Studio 2013 Professional, Premium ou Ultimate|Oui. Pour la prise en charge de Windows Phone 8.1, installez [Visual Studio 2013 Update 2](http://go.microsoft.com/fwlink/p/?LinkId=393658).|  
-|Visual Studio Express 2013 pour Windows|Oui, quand vous installez le [version la plus récente de Visual Studio Express](http://go.microsoft.com/fwlink/p/?LinkId=394629), qui inclut la mise à jour 2, ou ajoutez [Visual Studio 2013 Update 2](http://go.microsoft.com/fwlink/p/?LinkId=393658).|  
+|Visual Studio 2013 Professional, Premium ou Ultimate|Oui. Pour la prise en charge de Windows Phone 8.1, installez le [version la plus récente de Visual Studio 2013](https://www.visualstudio.com/vs/older-downloads/).|  
+|Communauté Visual Studio 2013 pour Windows|Oui, quand vous installez le [version la plus récente de Visual Studio Community 2013](https://www.visualstudio.com/vs/older-downloads/), qui inclut la mise à jour 2.|  
   
 <a name="create_pcl"></a>   
 ## <a name="creating-a-portable-class-library-project"></a>Création d'un projet de bibliothèque de classes portables  
@@ -152,10 +152,10 @@ Boîte de dialogue Modifier les cibles dans Visual Studio 2012
   
  ➊ Nécessite le [Microsoft Async](https://www.nuget.org/packages/Microsoft.Bcl.Async/) package  
  ➋ Nécessite le [Microsoft Compression](https://www.nuget.org/packages/Microsoft.Bcl.Compression) package  
- ➌ Nécessite le [Microsoft HTTP Client Libraries](http://www.nuget.org/packages/Microsoft.Net.Http) package  
+ ➌ Nécessite le [Microsoft HTTP Client Libraries](https://www.nuget.org/packages/Microsoft.Net.Http) package  
   
 > [!WARNING]
->  Vous pouvez rencontrer des erreurs lorsque vous référencez le [Microsoft Compression](https://www.nuget.org/packages/Microsoft.Bcl.Compression) et [Microsoft HTTP Client Libraries](http://www.nuget.org/packages/Microsoft.Net.Http) packages à partir d’une bibliothèque portable utilisée par une application Windows Phone Silverlight 8.1. Pour plus d’informations, consultez [compatibilité de la plateforme et modifications récentes pour les applications Windows Phone Silverlight 8.1](http://go.microsoft.com/fwlink/p/?LinkId=394744).  
+>  Vous pouvez rencontrer des erreurs lorsque vous référencez le [Microsoft Compression](https://www.nuget.org/packages/Microsoft.Bcl.Compression) et [Microsoft HTTP Client Libraries](https://www.nuget.org/packages/Microsoft.Net.Http) packages à partir d’une bibliothèque portable utilisée par une application Windows Phone Silverlight 8.1. Pour plus d’informations, consultez [compatibilité de la plateforme et modifications récentes pour les applications Windows Phone Silverlight 8.1](/previous-versions/windows/apps/dn642084(v=vs.105)).  
   
 <a name="members"></a>   
 ## <a name="supported-types-and-members"></a>Types et membres pris en charge  
@@ -197,7 +197,7 @@ Exemple d'informations sur la version
  Quand vous créez une application du Windows store ou Windows Phone qui référence un assembly de bibliothèque de classes portables, tout ce dont vous avez besoin pour déployer l'application se trouve dans le package d'application, et aucune étape supplémentaire n'est nécessaire.  
   
 ### <a name="deploying-a-net-framework-app"></a>Déploiement d'une application .NET Framework  
- Quand vous déployez une application .NET Framework qui référence un assembly de bibliothèque de classes portables, vous devez spécifier une dépendance sur la version appropriée du .NET Framework. En spécifiant cette dépendance, vous êtes assuré que la version requise est installée avec votre application. Si vous ciblez .NET Framework 4 ou version ultérieure, l’ordinateur doit disposer de .NET Framework 4 avec une [mettre à jour](http://go.microsoft.com/fwlink/?LinkId=210824), mise à jour 4.0.3 pour .NET Framework 4 ou .NET Framework 4.5 est installé.  
+ Quand vous déployez une application .NET Framework qui référence un assembly de bibliothèque de classes portables, vous devez spécifier une dépendance sur la version appropriée du .NET Framework. En spécifiant cette dépendance, vous êtes assuré que la version requise est installée avec votre application. Si vous ciblez .NET Framework 4 ou version ultérieure, l’ordinateur doit disposer de .NET Framework 4 avec une [mettre à jour](https://www.microsoft.com/download/details.aspx?id=3556), mise à jour 4.0.3 pour .NET Framework 4 ou .NET Framework 4.5 est installé.  
   
 -   Pour créer une dépendance avec le déploiement ClickOnce : dans **l’Explorateur de solutions**, choisissez le nœud du projet pour le projet que vous voulez publier. (Il s'agit du projet qui référence le projet de bibliothèque de classes portables.) Dans la barre de menus, choisissez **projet**, **propriétés**, puis choisissez le **publier** onglet. Sur le **publier** choisissez **conditions préalables**. Sélectionnez la version requise du .NET Framework (ou la mise à jour pour .NET Framework 4) comme composant requis.  
   
@@ -217,9 +217,9 @@ Exemple d'informations sur la version
     <param name="background" value="white" />  
     <param name="minRuntimeVersion" value="4.0.60129.0" />  
     <param name="autoUpgrade" value="true" />  
-    <a href="http://go.microsoft.com/fwlink/?LinkID=149156&v=4.0.50826.0"   
+    <a href="https://www.microsoft.com/getsilverlight/get-started/install/"   
              style="text-decoration:none">  
-      <img src=http://go.microsoft.com/fwlink/?LinkId=161376  
+      <img src=http://download.microsoft.com/download/5/1/6/5165823D-1D79-4871-8AC2-42DDDB94A5C2/PNGs/SLMedallion_ENU.png  
              alt="Get Microsoft Silverlight" style="border-style:none"/>  
     </a>  
   </object>  

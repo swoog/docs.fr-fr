@@ -1,24 +1,26 @@
 ---
-title: "Sécurité dans LINQ to SQL"
-ms.custom: 
+title: Sécurité dans LINQ to SQL
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d49787f7-414e-4c71-aa33-80a5895536b1
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 0ee361c27bd14f0266b2b86f315f9c091e049c12
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 96951b3b3c8a6ee93a83ba24f6c6a19c3e36381c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="security-in-linq-to-sql"></a>Sécurité dans LINQ to SQL
 Les risques de sécurité sont toujours présents lorsque vous vous connectez à une base de données. Même si LINQ to SQL inclut de nouvelles méthodes d'utilisation des données dans SQL Server, il ne fournit pas de mécanismes de sécurité supplémentaires.  
@@ -32,7 +34,7 @@ Les risques de sécurité sont toujours présents lorsque vous vous connectez à
 ## <a name="connection-strings"></a>Chaînes de connexion  
  Dans la mesure du possible, vous devez éviter d'utiliser des mots de passe dans les chaînes de connexion. Non seulement une chaîne de connexion constitue un risque de sécurité en tant que telle, mais elle peut également être ajoutée en texte clair au modèle objet ou au fichier de mappage externe lors de l'utilisation du Concepteur Objet/Relationnel ou de l'outil de ligne de commande SQLMetal. Toute personne pouvant accéder au modèle objet ou au fichier de mappage externe via le système de fichiers peut visualiser le mot de passe de connexion (s'il est inclus dans la chaîne de connexion).  
   
- Pour réduire de tels risques, utilisez la sécurité intégrée pour effectuer une connexion approuvée avec [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)]. En utilisant cette approche, vous ne devez pas stocker de mot de passe dans la chaîne de connexion. Pour plus d’informations, consultez [sécurité SQL Server](../../../../../../docs/framework/data/adonet/sql/sql-server-security.md).  
+ Pour réduire ces risques, utiliser la sécurité intégrée pour établir une connexion approuvée avec SQL Server. En utilisant cette approche, vous ne devez pas stocker de mot de passe dans la chaîne de connexion. Pour plus d’informations, consultez [sécurité SQL Server](../../../../../../docs/framework/data/adonet/sql/sql-server-security.md).  
   
  En l'absence de sécurité intégrée, un mot de passe en texte clair est nécessaire dans la chaîne de connexion. La méthode la plus appropriée pour sécuriser votre chaîne de connexion, dans l'ordre croissant de risque, est la suivante :  
   

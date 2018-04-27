@@ -1,12 +1,13 @@
 ---
-title: "Opérations synchrones et asynchrones"
-ms.custom: 
+title: Opérations synchrones et asynchrones
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3d108c8c84af2563e48a9f339df2a96f8218c742
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 123186dd5f0d63693c04c0857709292ce122f918
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>Opérations synchrones et asynchrones
 Cette rubrique traite de l'implémentation et de l'appel des opérations de service asynchrones.  
@@ -53,7 +55,7 @@ Cette rubrique traite de l'implémentation et de l'appel des opérations de serv
   
 -   Si vous appelez des opérations à partir d'une page ASP.NET, utiliser des pages asynchrones.  
   
--   Si vous appelez des opérations à partir de n'importe quelle application monothread, telle que Windows Forms ou [!INCLUDE[avalon1](../../../includes/avalon1-md.md)]. Lorsque vous utilisez le modèle d'appel asynchrone basé sur des événements, l'événement résultant est déclenché sur le thread d'interface utilisateur, ce qui accroît la réactivité de l'application sans exiger la gestion de plusieurs threads.  
+-   Si vous appelez des opérations à partir de n’importe quelle application qui est unique monothread, telle que Windows Forms ou Windows Presentation Foundation (WPF). Lorsque vous utilisez le modèle d'appel asynchrone basé sur des événements, l'événement résultant est déclenché sur le thread d'interface utilisateur, ce qui accroît la réactivité de l'application sans exiger la gestion de plusieurs threads.  
   
 -   En général, si vous avez le choix entre un appel synchrone et asynchrone, choisissez l'appel asynchrone.  
   
@@ -67,7 +69,7 @@ Cette rubrique traite de l'implémentation et de l'appel des opérations de serv
 3.  Modèle asynchrone IAsyncResult  
   
 #### <a name="task-based-asynchronous-pattern"></a>Modèle asynchrone basé sur les tâches (TAP, Task-based Asynchronous Pattern)  
- Le modèle asynchrone basé sur des tâches constitue le meilleur moyen d’implémenter des opérations asynchrones, car il est le plus facile et le plus simple. Pour utiliser cette méthode, implémentez votre opération de service simplement et spécifiez un type de retour de tâche\<T >, où T est le type retourné par l’opération logique. Exemple :  
+ Le modèle asynchrone basé sur des tâches constitue le meilleur moyen d’implémenter des opérations asynchrones, car il est le plus facile et le plus simple. Pour utiliser cette méthode, implémentez votre opération de service simplement et spécifiez un type de retour de tâche\<T >, où T est le type retourné par l’opération logique. Par exemple :  
   
 ```csharp  
 public class SampleService:ISampleService   

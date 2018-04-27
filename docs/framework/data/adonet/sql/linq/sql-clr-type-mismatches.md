@@ -1,27 +1,29 @@
 ---
-title: "Incompatibilité entre types SQL-CLR"
-ms.custom: 
+title: Incompatibilité entre types SQL-CLR
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0a90c33f-7ed7-4501-ad5f-6224c5da8e9b
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 6a027bd898409708dd6800908a6736f5853058df
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6006bb8fd1f6b49382c89acc2b55efcb035ffbf5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-clr-type-mismatches"></a>Incompatibilité entre types SQL-CLR
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] automatise en grande partie la traduction entre le modèle objet et SQL Server. Certaines situations ne permettent toutefois pas une traduction exacte. Cette incompatibilité majeure entre les types CLR (Common Language Runtime) et les types de base de données SQL Server est résumée dans les sections suivantes. Vous trouverez plus d’informations sur les mappages de type spécifique et de la traduction de fonctions à [le mappage de Type SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md) et [les fonctions et les Types de données](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md).  
@@ -44,7 +46,7 @@ Select DateOfBirth From Customer Where CustomerId = @id
   
     -   **Booléenne**. Ces types peuvent être mappés à un bit ou à un numérique ou une chaîne de taille supérieure. Un littéral peut être mappé à une expression qui correspond à la même valeur (par exemple, `1=1` dans SQL pour `True` dans CLS).  
   
-    -   **TimeSpan**. Ce type représente la différence entre deux valeurs `DateTime` et ne correspond pas au `timestamp` de SQL Server. Dans certains cas, le <xref:System.TimeSpan?displayProperty=nameWithType> CLR peut également mapper au type `TIME` SQL Server. Le type `TIME` SQL Server a pour but de représenter les valeurs positives inférieures à 24 heures. Le <xref:System.TimeSpan> CLR offre une plage beaucoup plus étendue.  
+    -   **Intervalle de temps**. Ce type représente la différence entre deux valeurs `DateTime` et ne correspond pas au `timestamp` de SQL Server. Dans certains cas, le <xref:System.TimeSpan?displayProperty=nameWithType> CLR peut également mapper au type `TIME` SQL Server. Le type `TIME` SQL Server a pour but de représenter les valeurs positives inférieures à 24 heures. Le <xref:System.TimeSpan> CLR offre une plage beaucoup plus étendue.  
   
     > [!NOTE]
     >  Spécifiques à SQL Server [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] dans les types <xref:System.Data.SqlTypes> ne sont pas inclus dans cette comparaison.  
@@ -53,9 +55,9 @@ Select DateOfBirth From Customer Where CustomerId = @id
   
     -   **Types de caractères de longueur fixe**. Transact-SQL fait la distinction entre les catégories Unicode et non Unicode et possède trois types distincts dans chaque catégorie : longueur fixe `nchar` / `char`, de longueur variable `nvarchar` / `varchar`, et plus grande taille `ntext` / `text`. Les types de caractères de longueur fixe peuvent être mappés au type <xref:System.Char?displayProperty=nameWithType> CLR pour récupérer des caractères, mais ils ne correspondent pas vraiment au même type dans les conversions et le comportement.  
   
-    -   **Bit**. Bien que le domaine `bit` présente le même nombre de valeurs que `Nullable<Boolean>`, il s'agit de deux types différents. `Bit`prend les valeurs `1` et `0` au lieu de `true` / `false`et ne peut pas être utilisé comme un équivalent aux expressions booléennes.  
+    -   **Bit**. Bien que le domaine `bit` présente le même nombre de valeurs que `Nullable<Boolean>`, il s'agit de deux types différents. `Bit` prend les valeurs `1` et `0` au lieu de `true` / `false`et ne peut pas être utilisé comme un équivalent aux expressions booléennes.  
   
-    -   **Timestamp**. Contrairement au type <xref:System.TimeSpan?displayProperty=nameWithType> CLR, le type `TIMESTAMP` SQL Server représente un nombre de 8 octets généré par la base de données qui est unique pour chaque mise à jour et n'est pas basé sur la différence entre des valeurs <xref:System.DateTime>.  
+    -   **Horodatage**. Contrairement au type <xref:System.TimeSpan?displayProperty=nameWithType> CLR, le type `TIMESTAMP` SQL Server représente un nombre de 8 octets généré par la base de données qui est unique pour chaque mise à jour et n'est pas basé sur la différence entre des valeurs <xref:System.DateTime>.  
   
     -   **Money** et **SmallMoney**. Ces types peuvent être mappés à <xref:System.Decimal> mais ils sont fondamentalement différents et sont traités comme tels par les fonctions et les conversions serveur.  
   
@@ -118,7 +120,7 @@ or col1 != col2
   
  Dans le cas précédent, vous pouvez obtenir un comportement équivalent en générant du SQL, mais la traduction risque de ne pas refléter correctement votre intention.  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]n’impose pas c# `null` ou [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] `nothing` une sémantique de comparaison sur SQL. Les opérateurs de comparaison sont traduits syntaxiquement dans leurs équivalents SQL. La sémantique reflète la sémantique SQL définie par les paramètres du serveur ou de la connexion. Deux valeurs null sont considérées comme différentes selon les paramètres SQL Server (bien que vous puissiez modifier les paramètres pour changer la sémantique). Quoi qu'il en soit, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ne tient pas compte des paramètres du serveur lors de la traduction de requête.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] n’impose pas c# `null` ou Visual Basic `nothing` une sémantique de comparaison sur SQL. Les opérateurs de comparaison sont traduits syntaxiquement dans leurs équivalents SQL. La sémantique reflète la sémantique SQL définie par les paramètres du serveur ou de la connexion. Deux valeurs null sont considérées comme différentes selon les paramètres SQL Server (bien que vous puissiez modifier les paramètres pour changer la sémantique). Quoi qu'il en soit, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ne tient pas compte des paramètres du serveur lors de la traduction de requête.  
   
  Une comparaison avec le littéral `null` (`nothing`) est traduite dans la version SQL appropriée (`is null` ou `is not null`).  
   
@@ -179,7 +181,7 @@ Where Col1 = Col2
     > [!NOTE]
     >  Ce comportement de l'opérateur `Like` s'applique uniquement à C# ; le mot clé `Like` de Visual Basic reste inchangé.  
   
--   Le dépassement de capacité est toujours vérifié dans SQL mais il doit être spécifié explicitement dans C# (pas dans [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]) pour éviter le bouclage. Considérons des colonnes d'entiers C1, C2 et C3, si C1+C2 est stocké dans C3 (Update T Set C3 = C1+C2).  
+-   Dépassement de capacité est toujours activée dans SQL, mais il doit être spécifié explicitement dans c# (pas en Visual Basic) pour éviter le bouclage. Considérons des colonnes d'entiers C1, C2 et C3, si C1+C2 est stocké dans C3 (Update T Set C3 = C1+C2).  
   
     ```  
     create table T3 (  
@@ -197,7 +199,7 @@ Where Col1 = Col2
   
 -   SQL effectue un arrondi arithmétique symétrique lorsque le [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] utilise l'arrondi bancaire. Pour plus d'informations, consultez l'article 196652 de la Base de connaissances.  
   
--   Par défaut, les comparaisons de chaînes de caractères ne sont pas sensibles à la casse dans SQL pour les paramètres régionaux communs. Dans Visual Basic et C#, elles sont sensibles à la casse. Par exemple, `s == "Food"` (`s = "Food"` dans [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]) et `s == "Food"` peuvent générer des résultats différents si `s` est `food`.  
+-   Par défaut, les comparaisons de chaînes de caractères ne sont pas sensibles à la casse dans SQL pour les paramètres régionaux communs. Dans Visual Basic et C#, elles sont sensibles à la casse. Par exemple, `s == "Food"` (`s = "Food"` en Visual Basic) et `s == "Food"` peuvent donner des résultats différents si `s` est `food`.  
   
     ```  
     -- Assume default US-English locale (case insensitive).  

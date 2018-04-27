@@ -1,11 +1,12 @@
 ---
 title: Types d'erreurs (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - exceptions, types
@@ -16,20 +17,20 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], types of errors
 - syntax errors [Visual Basic], Visual Basic
 ms.assetid: 3048aabf-8c97-4e13-9150-853769cb5f6f
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e01ed588d284a475a537a5fcf5ca506d25ca69f1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2b3cf1307f54a5c902bf8e6379c8760c735a45e4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="error-types-visual-basic"></a>Types d'erreurs (Visual Basic)
-Dans [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], les erreurs (également appelé *exceptions*) se répartissent en trois catégories : erreurs de syntaxe, les erreurs d’exécution et les erreurs de logique.  
+En Visual Basic, les erreurs (également appelé *exceptions*) se répartissent en trois catégories : erreurs de syntaxe, les erreurs d’exécution et les erreurs de logique.  
   
 ## <a name="syntax-errors"></a>Erreurs de syntaxe  
- *Erreurs de syntaxe* sont celles qui s’affichent lorsque vous écrivez du code. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]vérifie votre code en cours de frappe dans le **éditeur de Code** fenêtre et vous avertit si vous commettez une erreur, comme un mot mal orthographié ou l’utilisation incorrecte d’un élément de langage. Erreurs de syntaxe sont le type d’erreurs le plus courant. Vous pouvez les résoudre facilement dans l’environnement de codage dès qu’elles se produisent.  
+ *Erreurs de syntaxe* sont celles qui s’affichent lorsque vous écrivez du code. Visual Basic vérifie votre code en cours de frappe dans le **éditeur de Code** fenêtre et vous avertit si vous commettez une erreur, comme un mot mal orthographié ou l’utilisation incorrecte d’un élément de langage. Erreurs de syntaxe sont le type d’erreurs le plus courant. Vous pouvez les résoudre facilement dans l’environnement de codage dès qu’elles se produisent.  
   
 > [!NOTE]
 >  La `Option Explicit` instruction est un des moyens d’éviter les erreurs de syntaxe. Il vous oblige à déclarer à l’avance, toutes les variables à utiliser dans l’application. Par conséquent, lorsque ces variables sont utilisées dans le code, les erreurs typographiques sont interceptées immédiatement et peuvent être corrigés.  

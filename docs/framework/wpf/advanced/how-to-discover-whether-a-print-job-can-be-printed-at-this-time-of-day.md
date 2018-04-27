@@ -1,12 +1,13 @@
 ---
 title: "Comment : déterminer si un travail d'impression peut être imprimé à cette heure de la journée"
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,23 +18,24 @@ helpviewer_keywords:
 - printers [WPF], availability
 - print jobs [WPF], timing
 ms.assetid: 7e9c8ec1-abf6-4b3d-b1c6-33b35d3c4063
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ef9da205792823b7069024c5e4a3e9ac80d60a24
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: eef74cfa290614e530fa22a34533c7924d4af1b4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>Comment : déterminer si un travail d'impression peut être imprimé à cette heure de la journée
 Les files d’attente d’impression ne sont pas toujours disponibles pour 24 heures par jour. Ils ont des propriétés au moment du début et de fin qui peuvent être définies pour les rendre indisponibles à certains moments de la journée. Cette fonctionnalité peut être utilisée, par exemple, pour réserver une imprimante à l’usage exclusif d’un département après 17 h 00. Ce service aurait une autre file d’attente l’imprimante que les autres services à utiliser. La file d’attente pour les autres services a la valeur n’est pas disponible après 17 h 00, alors que la file d’attente pour le département privilégié peut être définie pour être disponible à tout moment.  
   
  En outre, les travaux d’impression eux-mêmes peuvent être définis pour être imprimables uniquement dans un intervalle de temps spécifié.  
   
- Le <xref:System.Printing.PrintQueue> et <xref:System.Printing.PrintSystemJobInfo> classes exposées dans le [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] de [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] fournissent un moyen de vérifier à distance si un travail d’impression donné peut imprimer sur une file d’attente donnée à l’heure actuelle.  
+ Le <xref:System.Printing.PrintQueue> et <xref:System.Printing.PrintSystemJobInfo> classes exposées dans le [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] de Microsoft .NET Framework fournissent un moyen de vérifier à distance si un travail d’impression donné peut imprimer sur une file d’attente donnée à l’heure actuelle.  
   
 ## <a name="example"></a>Exemple  
  L’exemple ci-dessous est un exemple qui peut diagnostiquer les problèmes liés à un travail d’impression.  
@@ -79,7 +81,7 @@ Les files d’attente d’impression ne sont pas toujours disponibles pour 24 he
  [!code-csharp[DiagnoseProblematicPrintJob#PrintQueueStartUntil](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#printqueuestartuntil)]
  [!code-vb[DiagnoseProblematicPrintJob#PrintQueueStartUntil](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#printqueuestartuntil)]  
   
- Le **TimeConverter.ConvertToLocalHumanReadableTime** (méthode) (présentée dans l’exemple de code ci-dessous) n’utilise pas les méthodes introduites avec [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)], de sorte que la description est brève. La méthode a une double tâche de conversion : il doit prendre un entier exprimant des minutes après minuit et le convertir en une heure contrôlable de visu et il doit le convertir en heure locale. Il y parvient en créant d’abord un <xref:System.DateTime> objet qui est définie à minuit UTC, puis il utilise le <xref:System.DateTime.AddMinutes%2A> méthode pour ajouter les minutes qui ont été passés à la méthode. Cela retourne une nouvelle <xref:System.DateTime> exprimant l’heure d’origine qui a été passé à la méthode. Le <xref:System.DateTime.ToLocalTime%2A> méthode convertit ensuite cette valeur d’heure locale.  
+ Le **TimeConverter.ConvertToLocalHumanReadableTime** (méthode) (présentée dans l’exemple de code ci-dessous) n’utilise pas de méthodes introduites avec Microsoft .NET Framework, par conséquent, la discussion est courte. La méthode a une double tâche de conversion : il doit prendre un entier exprimant des minutes après minuit et le convertir en une heure contrôlable de visu et il doit le convertir en heure locale. Il y parvient en créant d’abord un <xref:System.DateTime> objet qui est définie à minuit UTC, puis il utilise le <xref:System.DateTime.AddMinutes%2A> méthode pour ajouter les minutes qui ont été passés à la méthode. Cela retourne une nouvelle <xref:System.DateTime> exprimant l’heure d’origine qui a été passé à la méthode. Le <xref:System.DateTime.ToLocalTime%2A> méthode convertit ensuite cette valeur d’heure locale.  
   
  [!code-cpp[DiagnoseProblematicPrintJob#TimeConverter](../../../../samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#timeconverter)]
  [!code-csharp[DiagnoseProblematicPrintJob#TimeConverter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#timeconverter)]

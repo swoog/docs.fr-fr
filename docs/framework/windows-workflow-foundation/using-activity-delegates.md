@@ -1,23 +1,24 @@
 ---
-title: "Utilisation de délégués d'activité"
-ms.custom: 
+title: Utilisation de délégués d'activité
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e33cf876-8979-440b-9b23-4a12d1139960
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 82aafd49528e7ce36f9cf09b7402e65d0844f797
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: efec9885ae804263f7ae4c6d1d5c3bc4f39831c9
+ms.sourcegitcommit: 68b60d38043e50104ccc90c76f8599b1ffe18346
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="using-activity-delegates"></a>Utilisation de délégués d'activité
 Les délégués d'activité permettent aux auteurs d'activités d'exposer des rappels avec des signatures spécifiques pour lesquelles les utilisateurs de l'activité peuvent fournir des gestionnaires basés sur l'activité. Deux types de délégués d'activité sont disponibles : <xref:System.Activities.ActivityAction%601> est utilisé pour définir des délégués d'activité qui n'ont pas de valeur de retour et <xref:System.Activities.ActivityFunc%601> est utilisé pour définir des délégués d'activité qui ont une valeur de retour.  
@@ -37,7 +38,7 @@ Les exemples de cette rubrique utilisent la syntaxe d'initialisation d'objet. La
   
  [!code-csharp[CFX_ActivityExample#7](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#7)]  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]initialiseurs d’objets, consultez [Comment : initialiser des objets sans appeler de constructeur (Guide de programmation c#)](http://go.microsoft.com/fwlink/?LinkId=161015) et [Comment : déclarer un objet à l’aide d’un initialiseur d’objet](http://go.microsoft.com/fwlink/?LinkId=161016).  
+ [!INCLUDE[crabout](../../../includes/crabout-md.md)] initialiseurs d’objets, consultez [Comment : initialiser des objets sans appeler de constructeur (Guide de programmation c#)](http://go.microsoft.com/fwlink/?LinkId=161015) et [Comment : déclarer un objet à l’aide d’un initialiseur d’objet](http://go.microsoft.com/fwlink/?LinkId=161016).  
   
  Dans l'exemple suivant, une activité <xref:System.Activities.Statements.TryCatch> est utilisée dans un workflow. Un <xref:System.ApplicationException> est levé par le workflow et géré par une activité <xref:System.Activities.Statements.Catch%601>. Le gestionnaire pour le <xref:System.Activities.Statements.Catch%601> action de l’activité de l’activité est un <xref:System.Activities.Statements.WriteLine> l’activité et les détails de l’exception est transféré à l’aide de la `ex` <xref:System.Activities.DelegateInArgument%601>.  
   
@@ -62,7 +63,7 @@ Les exemples de cette rubrique utilisent la syntaxe d'initialisation d'objet. La
   
  [!code-csharp[CFX_ActivityExample#4](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#4)]  
   
- Pour utiliser l'activité `TextGenerator` avec l'activité `WriteRandomText`, spécifiez-la en tant que <xref:System.Activities.ActivityDelegate.Handler%2A>.  
+ Pour utiliser l'activité `TextGenerator` avec l'activité `WriteFillerText`, spécifiez-la en tant que <xref:System.Activities.ActivityDelegate.Handler%2A>.  
   
  [!code-csharp[CFX_ActivityExample#5](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#5)]  
   

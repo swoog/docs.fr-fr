@@ -1,13 +1,13 @@
 ---
-title: "Vue d'ensemble des déclarations de liaison"
-ms.custom: 
+title: Vue d'ensemble des déclarations de liaison
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -20,17 +20,17 @@ helpviewer_keywords:
 - syntax [WPF], object elements
 - binding declarations [WPF]
 ms.assetid: b97fd626-4c0d-4761-872a-2bca5820da2c
-caps.latest.revision: 
+caps.latest.revision: 34
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 615b92d264b91ab5b267d5e79ab829b8afa489cd
-ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
+ms.openlocfilehash: 3fcc1b57f758abd2791bc6970c29300fd2fc0e30
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="binding-declarations-overview"></a>Vue d'ensemble des déclarations de liaison
 Cette rubrique décrit les différentes façons dont vous pouvez déclarer une liaison.  
@@ -88,7 +88,7 @@ Cette rubrique décrit les différentes façons dont vous pouvez déclarer une l
   
 -   Dans le cas le plus simple, le <xref:System.Windows.Data.Binding.Path%2A> valeur de propriété est le nom de la propriété de l’objet source à utiliser pour la liaison, tel que `Path=PropertyName`.  
   
--   Les sous-propriétés d’une propriété peuvent être spécifiées par une syntaxe semblable à [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)]. Par exemple, la clause `Path=ShoppingCart.Order` définit la liaison à la sous-propriété `Order` de l’objet ou la propriété `ShoppingCart`.  
+-   Les sous-propriétés d’une propriété peuvent être spécifiées par une syntaxe semblable, comme dans c#. Par exemple, la clause `Path=ShoppingCart.Order` définit la liaison à la sous-propriété `Order` de l’objet ou la propriété `ShoppingCart`.  
   
 -   Pour lier à une propriété jointe, placez des parenthèses autour de la propriété. Par exemple, pour lier à la propriété jointe <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>, la syntaxe est `Path=(DockPanel.Dock)`.  
   

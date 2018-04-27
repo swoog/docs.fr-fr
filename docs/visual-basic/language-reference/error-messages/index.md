@@ -16,11 +16,11 @@ ms.assetid: f2dda05b-baef-41f5-8bb1-598bd7cf239f
 caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f7f5138d430e6737a4a8a47d4a800905dedff660
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: de52d95cfbc8135db1dc9434860f02b8992db0b4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="error-messages-visual-basic"></a>Messages d'erreur (Visual Basic)
 Lorsque vous écrivez, compilez ou exécutez une application Visual Basic, les types d’erreurs suivants peuvent se produire :  
@@ -34,7 +34,7 @@ Lorsque vous écrivez, compilez ou exécutez une application Visual Basic, les t
  Pour plus d’informations sur la résolution d’une erreur spécifique, consultez la page [Ressources supplémentaires pour les programmeurs Visual Basic](../../../visual-basic/getting-started/additional-resources.md).  
   
 ## <a name="run-time-errors"></a>Erreurs d’exécution  
- Si une application Visual Basic essaie d’exécuter une action que le système ne peut pas exécuter, une erreur d’exécution se produit, et [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] lève un objet `Exception`. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] peut générer des erreurs personnalisées de tous les types de données, y compris des objets `Exception`, à l’aide de l’instruction `Throw`. Une application peut identifier l’erreur en affichant le numéro d’erreur et le message d’une exception interceptée. Si l’erreur n’est pas interceptée, l’application se termine.  
+ Si une application Visual Basic essaie d’effectuer une action que le système ne peut pas exécuter, une erreur d’exécution se produit, et Visual Basic lève une `Exception` objet. Visual Basic peuvent générer des erreurs personnalisées de toutes les données de type, y compris `Exception` objets, à l’aide de la `Throw` instruction. Une application peut identifier l’erreur en affichant le numéro d’erreur et le message d’une exception interceptée. Si l’erreur n’est pas interceptée, l’application se termine.  
   
  Le code peut intercepter et examiner les erreurs d’exécution. Si vous placez le code qui génère l’erreur dans un bloc `Try`, vous pouvez intercepter toute erreur levée dans un bloc `Catch` correspondant. Pour plus d’informations sur la façon d’intercepter les erreurs à l’exécution et d’y répondre dans votre code, consultez la page [Instruction Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
   

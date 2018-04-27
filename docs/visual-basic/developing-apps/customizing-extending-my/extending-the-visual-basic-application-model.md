@@ -11,11 +11,11 @@ ms.assetid: e91d3bed-4c27-40e3-871d-2be17467c72c
 caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 15e6ea1a8b2df0b8ed1b84abceee9e6be2c556f9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5ffd882c2a1d04c29483d380e972d6ce70bdb5c4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="extending-the-visual-basic-application-model"></a>Extension du modèle d'application Visual Basic
 Vous pouvez ajouter des fonctionnalités au modèle d’application en substituant les `Overridable` membres de la <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> classe. Cette technique vous permet de personnaliser le comportement du modèle d’application et ajoutez des appels à vos propres méthodes lorsque l’application démarre et s’arrête.  
@@ -25,11 +25,11 @@ Vous pouvez ajouter des fonctionnalités au modèle d’application en substitua
   
  L’illustration suivante montre la séquence d’appel de modèle application dans une application Windows Forms de Visual Basic normale. La séquence commence lorsque la `Sub Main` les appels de procédure le <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run%2A> (méthode).  
   
- ![Modèle d’Application Visual Basic &#45; &#45; Exécutez](../../../visual-basic/developing-apps/customizing-extending-my/media/vb_modelrun.gif "VB_ModelRun")  
+ ![Modèle d’Application Visual Basic &#45; &#45; exécuter](../../../visual-basic/developing-apps/customizing-extending-my/media/vb_modelrun.gif "VB_ModelRun")  
   
  Le modèle d’Application Visual Basic fournit également la <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance> et <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> les événements. Les graphiques suivants illustrent le mécanisme de déclenchement de ces événements.  
   
- ![Modèle d’Application Visual Basic &#45; &#45; Instance ensuite](../../../visual-basic/developing-apps/customizing-extending-my/media/vb_modelnext.gif "VB_ModelNext")  
+ ![Modèle d’Application Visual Basic &#45; &#45; ensuite l’Instance](../../../visual-basic/developing-apps/customizing-extending-my/media/vb_modelnext.gif "VB_ModelNext")  
   
  ![Exception non gérée du modèle d’Application Visual Basic](../../../visual-basic/developing-apps/customizing-extending-my/media/vb_unhandex.gif "VB_UnhandEx")  
   
@@ -50,7 +50,7 @@ Vous pouvez ajouter des fonctionnalités au modèle d’application en substitua
   
     2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A>. Permet à un concepteur d’émettre du code qui initialise l’écran de démarrage.  
   
-         Par défaut, cette méthode ne fait rien. Si vous sélectionnez un écran de démarrage pour votre application dans le [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] **Concepteur de projets**, le concepteur substitue la <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> méthode avec une méthode qui définit le <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A> propriété à une nouvelle instance de l’écran de démarrage formulaire.  
+         Par défaut, cette méthode ne fait rien. Si vous sélectionnez un écran de démarrage pour votre application dans Visual Basic **Concepteur de projets**, le concepteur substitue la <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> méthode avec une méthode qui définit le <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A> propriété à une nouvelle instance de la forme de l’écran de démarrage .  
   
 2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartup%2A>. Fournit un point d’extensibilité pour déclencher le `Startup` événement. La séquence de démarrage d’application s’arrête si cette fonction retourne `False`.  
   
@@ -62,7 +62,7 @@ Vous pouvez ajouter des fonctionnalités au modèle d’application en substitua
   
     1.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A>. Fournit un moyen pour un concepteur d’émettre du code qui initialise le formulaire principal.  
   
-         Par défaut, cette méthode ne fait rien. Toutefois, lorsque vous sélectionnez un formulaire principal pour votre application dans le [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] **Concepteur de projets**, le concepteur substitue la <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A> méthode avec une méthode qui définit le <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MainForm%2A> propriété à une nouvelle instance du formulaire principal .  
+         Par défaut, cette méthode ne fait rien. Toutefois, lorsque vous sélectionnez un formulaire principal pour votre application dans Visual Basic **Concepteur de projets**, le concepteur substitue la <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A> méthode avec une méthode qui définit le <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MainForm%2A> propriété à une nouvelle instance du formulaire principal.  
   
     2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.HideSplashScreen%2A>. Si l’application a un écran de démarrage défini et qu’il est ouvert, cette méthode ferme l’écran de démarrage.  
   
@@ -85,7 +85,7 @@ Vous pouvez ajouter des fonctionnalités au modèle d’application en substitua
  Le <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance(Microsoft.VisualBasic.ApplicationServices.StartupNextInstanceEventArgs)> constructeur appelle la <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> propriété pour déterminer le moteur de rendu de texte à utiliser pour les formulaires de l’application. Par défaut, le <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> propriété renvoie `False`, indiquant que le moteur de rendu de texte GDI utilisé, qui est la valeur par défaut dans [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)]. Vous pouvez remplacer le <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> propriété à retourner `True`, ce qui signifie que le moteur de rendu de texte GDI + est utilisé, qui est la valeur par défaut dans Visual Basic .NET 2002 et Visual Basic .NET 2003.  
   
 ## <a name="configuring-the-application"></a>Configuration de l’Application  
- Dans le cadre de la [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] modèle d’Application, la <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering> classe fournit des propriétés protégées qui configurent l’application. Ces propriétés doivent être définies dans le constructeur de la classe d’implémentation.  
+ Dans le cadre du modèle d’Application Visual Basic, la <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering> classe fournit des propriétés protégées qui configurent l’application. Ces propriétés doivent être définies dans le constructeur de la classe d’implémentation.  
   
  Dans un projet Windows Forms par défaut, le **Concepteur de projets** crée du code pour définir les propriétés avec les paramètres du concepteur. Les propriétés sont utilisées uniquement lors du démarrage de l’application ; leur définition après le démarrage de l’application n’a aucun effet.  
   

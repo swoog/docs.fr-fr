@@ -1,12 +1,12 @@
 ---
-title: "Conception d'énumérations"
-ms.custom: 
+title: Conception d'énumérations
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - type design guidelines, enumerations
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], enumerations
 - flags enumerations
 ms.assetid: dd53c952-9d9a-4736-86ff-9540e815d545
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 3ee73e8677ca3fd48f4bb3c94bd4e15c49a564c7
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c3e89567761367ddcd67078b138c15b982a0d666
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="enum-design"></a>Conception d'énumérations
 Les énumérations sont un type spécial de type valeur. Il existe deux genres d’enums : les enums enums et indicateur simples.  
@@ -77,7 +77,7 @@ Les énumérations sont un type spécial de type valeur. Il existe deux genres d
   
  **X ne sont pas** étendre <xref:System.Enum?displayProperty=nameWithType> directement.  
   
- <xref:System.Enum?displayProperty=nameWithType>est un type spécial utilisé par le CLR pour créer des énumérations de défini par l’utilisateur. La plupart des langages de programmation fournissent un élément de programmation qui vous permet d’accéder à cette fonctionnalité. Par exemple, en c# le `enum` est utilisé pour définir une énumération.  
+ <xref:System.Enum?displayProperty=nameWithType> est un type spécial utilisé par le CLR pour créer des énumérations de défini par l’utilisateur. La plupart des langages de programmation fournissent un élément de programmation qui vous permet d’accéder à cette fonctionnalité. Par exemple, en c# le `enum` est utilisé pour définir une énumération.  
   
 <a name="design"></a>   
 ### <a name="designing-flag-enums"></a>Conception énumérations d’indicateur  
@@ -87,7 +87,7 @@ Les énumérations sont un type spécial de type valeur. Il existe deux genres d
   
  **✓ Envisagez** fournissant des valeurs enum spécial pour couramment utilisé les combinaisons d’indicateurs.  
   
- Opérations de bits sont un concept avancé et ne doivent pas être requises pour les tâches simples. <xref:System.IO.FileAccess.ReadWrite>est un exemple d’une telle valeur spéciale.  
+ Opérations de bits sont un concept avancé et ne doivent pas être requises pour les tâches simples. <xref:System.IO.FileAccess.ReadWrite> est un exemple d’une telle valeur spéciale.  
   
  **X Évitez** création enums indicateur où certaines combinaisons de valeurs ne sont pas valides.  
   
@@ -105,7 +105,7 @@ Les énumérations sont un type spécial de type valeur. Il existe deux genres d
   
  *Portions © 2005, 2009 Microsoft Corporation. Tous droits réservés.*  
   
- *Réimprimées avec l’autorisation de Pearson éducation, Inc. à partir de [règles de conception d’infrastructure : Conventions, idiomes et des modèles pour les bibliothèques .NET réutilisable, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina et Brad Abrams, publié le 22 octobre 2008 par Addison-Wesley Professional dans le cadre de la série de développement Microsoft Windows.*  
+ *Réimprimées avec l’autorisation de Pearson éducation, Inc. à partir de [règles de conception d’infrastructure : Conventions, idiomes et des modèles pour les bibliothèques .NET réutilisable, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina et Brad Abrams, publié le 22 octobre 2008 par Addison-Wesley Professional dans le cadre de la série de développement Microsoft Windows.*  
   
 ## <a name="see-also"></a>Voir aussi  
  [Instructions pour la conception des types](../../../docs/standard/design-guidelines/type.md)  

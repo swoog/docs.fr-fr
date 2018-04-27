@@ -1,27 +1,29 @@
 ---
 title: Oracle et ADO.NET
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8ee8e389-53cf-45cf-80bd-1df63ef34f2e
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 529c98b0ea9b9d4ec3587ce138af8af981f1e008
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 40b81df158dbad0247df76124201decae41e3267
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="oracle-and-adonet"></a>Oracle et ADO.NET
 > [!NOTE]
@@ -29,7 +31,7 @@ ms.lasthandoff: 01/17/2018
   
  Cette section décrit des fonctions et des comportements spécifiques au fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pour Oracle.  
   
- Le fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pour Oracle donne accès à une base de données Oracle utilisant l'interface OCI (Oracle Call Interface) fournie par le logiciel client Oracle. La fonctionnalité du fournisseur de données est conçue pour être similaire à celle des fournisseurs de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pour [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)], OLE DB et ODBC.  
+ Le fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pour Oracle donne accès à une base de données Oracle utilisant l'interface OCI (Oracle Call Interface) fournie par le logiciel client Oracle. La fonctionnalité du fournisseur de données est conçue pour être similaire à celle de la [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] des fournisseurs de données pour SQL Server, OLE DB et ODBC.  
   
  Pour utiliser le fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pour Oracle, une application doit faire référence à l'espace de noms <xref:System.Data.OracleClient> comme suit :  
   
@@ -83,7 +85,7 @@ csc /r:System.Data.OracleClient.dll
  Décrit comment utiliser des données dans ADO.NET.  
   
  [SQL Server et ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)  
- Décrit comment utiliser des fonctions et fonctionnalités spécifiques à [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)].  
+ Décrit comment utiliser des fonctions et fonctionnalités spécifiques à SQL Server.  
   
  [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
  Décrit des classes génériques qui vous permettent d'écrire du code indépendant du fournisseur dans [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  

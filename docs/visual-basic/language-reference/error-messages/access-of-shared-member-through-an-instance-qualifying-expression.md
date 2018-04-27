@@ -15,18 +15,18 @@ ms.assetid: db3337e5-c349-42bf-86df-d9c1e00952a5
 caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: bcf3c37852e73464eec612e9e1d458ca707342e2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9bbec233435ab728657c1b99e26ab157d4657093
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="access-of-shared-member-through-an-instance-qualifying-expression-will-not-be-evaluated"></a>Accès d'un membre partagé via une instance ; l'expression qualifiante ne sera pas évaluée
 Une variable d’instance d’une classe ou une structure est utilisée pour accéder à un `Shared` variable, propriété, procédure ou l’événement défini dans cette classe ou structure. Cet avertissement peut également se produire si une variable d’instance est utilisée pour accéder à un membre implicitement partagé d’une classe ou une structure, par exemple une constante ou énumération, ou une classe imbriquée ou une structure.  
   
  Le partage d’un membre vise à créer qu’une seule copie de ce membre et le rendre disponible à chaque instance de la classe ou structure dans laquelle elle est déclarée. Il est conforme à cet effet pour accéder à un `Shared` membre via le nom de sa classe ou structure, plutôt que via une variable qui conserve une instance de cette classe ou structure.  
   
- L’accès à un `Shared` membre via une variable d’instance peut rendre votre code plus difficile à comprendre en masquant le fait que le membre est `Shared`. En outre, si ce type d’accès fait partie d’une expression qui exécute d’autres actions, comme un `Function` procédure qui retourne une instance du membre partagé, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] ignore l’expression et autres actions, il doit effectuer dans le cas contraire.  
+ L’accès à un `Shared` membre via une variable d’instance peut rendre votre code plus difficile à comprendre en masquant le fait que le membre est `Shared`. En outre, si ce type d’accès fait partie d’une expression qui exécute d’autres actions, comme un `Function` procédure qui retourne une instance du membre partagé, Visual Basic ignore l’expression et autres actions, il doit effectuer dans le cas contraire.  
   
  Pour plus d’informations et obtenir un exemple, consultez [partagé](../../../visual-basic/language-reference/modifiers/shared.md).  
   

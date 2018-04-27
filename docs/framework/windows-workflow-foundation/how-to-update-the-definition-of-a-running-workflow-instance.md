@@ -1,26 +1,27 @@
 ---
 title: "Procédure : mettre à jour la définition d'une instance de workflow en cours d'exécution"
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 26dfac36-ae23-4909-9867-62495b55fb5e
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 86a6e8d22d1e46407082af5d71cd83c179825bb9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9c0590f7fc9cd8cc48b725b83af55b4ed81a0e59
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-update-the-definition-of-a-running-workflow-instance"></a>Procédure : mettre à jour la définition d'une instance de workflow en cours d'exécution
 La mise à jour dynamique fournit un mécanisme pour permettre aux développeurs d'applications de workflow de mettre à jour la définition de workflow d'une instance de workflow persistante. Il peut s’agit de l’implémentation d’une résolution de bogue, de nouvelles exigences ou de l’adaptation à des modifications inattendues. Cette étape dans le didacticiel montre comment utiliser la mise à jour dynamique pour modifier des instances persistantes de le `v1` nombre estimation des flux de travail pour correspondre à la nouvelle fonctionnalité introduite dans [Comment : hôte de plusieurs Versions d’un Workflow côte à côte ](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).  
@@ -50,7 +51,7 @@ La mise à jour dynamique fournit un mécanisme pour permettre aux développeurs
   
 -   [Pour activer le démarrage des versions antérieures des flux de travail](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_StartPreviousVersions)  
   
-###  <a name="BKMK_CreateProject"></a>Pour créer le projet CreateUpdateMaps  
+###  <a name="BKMK_CreateProject"></a> Pour créer le projet CreateUpdateMaps  
   
 1.  Avec le bouton droit **WF45GettingStartedTutorial** dans **l’Explorateur de solutions** et choisissez **ajouter**, **nouveau projet**.  
   
@@ -234,7 +235,7 @@ La mise à jour dynamique fournit un mécanisme pour permettre aux développeurs
     }  
     ```  
   
-###  <a name="BKMK_StateMachine"></a>Pour mettre à jour StateMachineNumberGuessWorkflow  
+###  <a name="BKMK_StateMachine"></a> Pour mettre à jour StateMachineNumberGuessWorkflow  
   
 1.  Ajoutez une méthode `CreateStateMachineUpdateMap` à la classe `Program` (ou `Module1`).  
   
@@ -427,7 +428,7 @@ La mise à jour dynamique fournit un mécanisme pour permettre aux développeurs
     }  
     ```  
   
-###  <a name="BKMK_Flowchart"></a>Pour mettre à jour FlowchartNumberGuessWorkflow  
+###  <a name="BKMK_Flowchart"></a> Pour mettre à jour FlowchartNumberGuessWorkflow  
   
 1.  Ajoutez la méthode `CreateFlowchartUpdateMethod` suivante à la classe `Program` (ou `Module1`). Cette méthode est semblable à `CreateStateMachineUpdateMap`. Elle commence par un appel à `StartUpdate`, met à jour la définition de workflow de l'organigramme, et se termine en enregistrant la carte de mise à jour et la définition mise à jour de workflow.  
   
@@ -541,7 +542,7 @@ La mise à jour dynamique fournit un mécanisme pour permettre aux développeurs
     }  
     ```  
   
-###  <a name="BKMK_Sequential"></a>Pour mettre à jour SequentialNumberGuessWorkflow  
+###  <a name="BKMK_Sequential"></a> Pour mettre à jour SequentialNumberGuessWorkflow  
   
 1.  Ajoutez la méthode `CreateSequentialUpdateMethod` suivante à la classe `Program` (ou `Module1`). Cette méthode est similaire aux deux autres méthodes. Elle commence par un appel à `StartUpdate`, met à jour la définition de workflow séquentiel, et se termine en enregistrant la carte de mise à jour et la définition mise à jour de workflow.  
   
@@ -621,7 +622,7 @@ La mise à jour dynamique fournit un mécanisme pour permettre aux développeurs
     }  
     ```  
   
-###  <a name="BKMK_CreateUpdateMaps"></a>Pour générer et exécuter l’application CreateUpdateMaps  
+###  <a name="BKMK_CreateUpdateMaps"></a> Pour générer et exécuter l’application CreateUpdateMaps  
   
 1.  Ajoutez la méthode `Main` suivante, puis les trois appels de méthodes suivants. Ces méthodes sont ajoutées dans les sections suivantes. Chaque méthode met à jour le workflow d'estimation de nombre correspondant et crée un `DynamicUpdateMap` qui décrit les mises à jour.  
   
@@ -655,7 +656,7 @@ La mise à jour dynamique fournit un mécanisme pour permettre aux développeurs
   
      Une fois les cartes de mise à jour créées et les définitions de workflow mises à jour, l'étape suivante consiste à générer un assembly mis à jour de workflow contenant les définitions mises à jour.  
   
-###  <a name="BKMK_BuildAssembly"></a>Pour générer l’assembly de flux de travail mis à jour  
+###  <a name="BKMK_BuildAssembly"></a> Pour générer l’assembly de flux de travail mis à jour  
   
 1.  Ouvrez une deuxième instance de [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].  
   
@@ -680,13 +681,13 @@ La mise à jour dynamique fournit un mécanisme pour permettre aux développeurs
   
 9. Appuyez sur CTRL+MAJ+B pour générer le projet.  
   
-10. Choisissez **fermer la Solution** à partir de la **fichier** menu. Un fichier de solution pour le projet n’est pas requis, cliquez sur **non** pour fermer [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] sans enregistrer un fichier de solution. Choisissez **Exit** à partir de la **fichier** menu fermer [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)].  
+10. Choisissez **fermer la Solution** à partir de la **fichier** menu. Un fichier de solution pour le projet n’est pas requis, cliquez sur **non** pour fermer Visual Studio sans enregistrer un fichier de solution. Choisissez **Exit** à partir de la **fichier** menu pour fermer Visual Studio.  
   
 11. Ouvrez l’Explorateur Windows et accédez à la **Numberguessworkflowhost_du\bin\debug** dossier (ou **bin\Release** selon les paramètres du projet).  
   
 12. Renommer **NumberGuessWorkflowActivities.dll** à **NumberGuessWorkflowActivities_v15.dll**et copiez-le dans le **PreviousVersions** dossier que vous avez créé dans [Comment : héberger plusieurs Versions d’un Workflow côte à côte](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).  
   
-###  <a name="BKMK_UpdateWorkflowVersionMap"></a>Pour mettre à jour WorkflowVersionMap avec les nouvelles versions  
+###  <a name="BKMK_UpdateWorkflowVersionMap"></a> Pour mettre à jour WorkflowVersionMap avec les nouvelles versions  
   
 1.  Basculez vers l'instance initiale de [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].  
   
@@ -1073,7 +1074,7 @@ La mise à jour dynamique fournit un mécanisme pour permettre aux développeurs
   
 5.  Appuyez sur CTRL+MAJ+B pour générer le projet.  
   
-###  <a name="BKMK_ApplyUpdate"></a>Pour appliquer les mises à jour dynamiques  
+###  <a name="BKMK_ApplyUpdate"></a> Pour appliquer les mises à jour dynamiques  
   
 1.  Avec le bouton droit **WF45GettingStartedTutorial** dans **l’Explorateur de solutions** et choisissez **ajouter**, **nouveau projet**.  
   
@@ -1448,7 +1449,7 @@ La mise à jour dynamique fournit un mécanisme pour permettre aux développeurs
 **Inspection : SequentialNumberGuessWorkflow ; Version = 2.0.0.0**   
 **Appuyez sur n’importe quelle touche pour continuer...**  
   
-###  <a name="BKMK_BuildAndRun"></a>Pour exécuter l’application avec les flux de travail mis à jour  
+###  <a name="BKMK_BuildAndRun"></a> Pour exécuter l’application avec les flux de travail mis à jour  
   
 1.  Avec le bouton droit **NumberGuessWorkflowHost** dans **l’Explorateur de solutions** et choisissez **définir comme projet de démarrage**.  
   
@@ -1483,7 +1484,7 @@ La mise à jour dynamique fournit un mécanisme pour permettre aux développeurs
 **Entrez un nombre compris entre 1 et 10**   
 **6 est correct. Vous avez deviné en 4 tours.**  
   
-###  <a name="BKMK_StartPreviousVersions"></a>Pour activer le démarrage des versions antérieures des flux de travail  
+###  <a name="BKMK_StartPreviousVersions"></a> Pour activer le démarrage des versions antérieures des flux de travail  
  Si vous ne disposez pas de workflow à mettre jour, modifiez l'application `NumberGuessWorkflowHost` afin d'activer le démarrage des versions antérieures des workflows.  
   
 1.  Double-cliquez sur **WorkflowHostForm** dans **l’Explorateur de solutions**, puis sélectionnez le **WorkflowType** zone de liste déroulante.  

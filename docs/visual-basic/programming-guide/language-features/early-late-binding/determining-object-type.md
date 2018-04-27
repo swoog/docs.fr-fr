@@ -1,11 +1,12 @@
 ---
-title: "Détermination du type Object (Visual Basic)"
-ms.custom: 
+title: Détermination du type Object (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - classes [Visual Basic], discovering which an object belongs to
@@ -15,17 +16,17 @@ helpviewer_keywords:
 - TypeName function
 - objects [Visual Basic], type determining
 ms.assetid: d95e7ad1-cd63-41d6-9a28-d7a1380d49c1
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9a63b5cf5941deb4dcc7518880b4dc7d0545803c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a6d24be68ea4a9872f8f4fe89c1aabb943fbcb91
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="determining-object-type-visual-basic"></a>Détermination du type Object (Visual Basic)
-Les variables objets génériques (autrement dit, les variables que vous déclarez comme `Object`) peuvent contenir les objets à partir de n’importe quelle classe. Lors de l’utilisation de variables de type `Object`, vous devrez peut-être prendre des mesures différentes selon la classe de l’objet ; par exemple, certains objets ne peuvent pas en charge une propriété ou méthode particulière. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]offre deux moyens de déterminer quel type d’objet est stocké dans une variable objet : le `TypeName` (fonction) et le `TypeOf...Is` opérateur.  
+Les variables objets génériques (autrement dit, les variables que vous déclarez comme `Object`) peuvent contenir les objets à partir de n’importe quelle classe. Lors de l’utilisation de variables de type `Object`, vous devrez peut-être prendre des mesures différentes selon la classe de l’objet ; par exemple, certains objets ne peuvent pas en charge une propriété ou méthode particulière. Visual Basic fournit deux moyens de déterminer quel type d’objet est stocké dans une variable objet : le `TypeName` (fonction) et le `TypeOf...Is` opérateur.  
   
 ## <a name="typename-and-typeofis"></a>TypeName et TypeOf... Est  
  Le `TypeName` fonction retourne une chaîne et est le meilleur choix lorsque vous devez stocker ou afficher le nom de classe d’un objet, comme indiqué dans le fragment de code suivant :  
@@ -36,7 +37,7 @@ Les variables objets génériques (autrement dit, les variables que vous déclar
   
  [!code-vb[VbVbalrOOP#93](../../../../visual-basic/misc/codesnippet/VisualBasic/determining-object-type_2.vb)]  
   
- Un mot de prudence est due ici. Le `TypeOf...Is` opérateur retourne `True` si un objet est d’un type spécifique, ou est dérivé d’un type spécifique. Presque tout ce que vous effectuez avec [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] implique des objets, qui incluent des éléments normalement pas considérés comme des objets, tels que les chaînes et les entiers. Ces objets sont dérivés et héritent des méthodes de <xref:System.Object>. Lorsqu’il est passé un `Integer` et évaluée avec `Object`, le `TypeOf...Is` opérateur retourne `True`. L’exemple suivant indique que le paramètre `InParam` est à la fois un `Object` et une `Integer`:  
+ Un mot de prudence est due ici. Le `TypeOf...Is` opérateur retourne `True` si un objet est d’un type spécifique, ou est dérivé d’un type spécifique. Presque tout ce que vous effectuez avec Visual Basic implique des objets, qui incluent des éléments normalement pas considérés comme des objets, tels que les chaînes et les entiers. Ces objets sont dérivés et héritent des méthodes de <xref:System.Object>. Lorsqu’il est passé un `Integer` et évaluée avec `Object`, le `TypeOf...Is` opérateur retourne `True`. L’exemple suivant indique que le paramètre `InParam` est à la fois un `Object` et une `Integer`:  
   
  [!code-vb[VbVbalrOOP#94](../../../../visual-basic/misc/codesnippet/VisualBasic/determining-object-type_3.vb)]  
   

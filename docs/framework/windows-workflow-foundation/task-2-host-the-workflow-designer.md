@@ -8,20 +8,20 @@ ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
-caps.latest.revision: ''
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 991f3d25a81e90ab779936c993ec7dd09a71b794
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 15fa4372f4a110577f055d0e3c22977d0f5417bb
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="task-2-host-the-workflow-designer"></a>Tâche 2 : héberger le Workflow Designer
-Cette rubrique décrit la procédure d'hébergement d'une instance du [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] dans une application [!INCLUDE[avalon1](../../../includes/avalon1-md.md)].  
+Cette rubrique décrit la procédure pour l’hébergement d’une instance de la [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] dans une application Windows Presentation Foundation (WPF).  
   
  La procédure configure le **grille** contrôle qui contient le concepteur, crée par programmation une instance de la <xref:System.Activities.Presentation.WorkflowDesigner> qui contient une valeur par défaut <xref:System.Activities.Statements.Sequence> activité, inscrit pour fournir les métadonnées du Concepteur prise en charge du concepteur pour des ordinateurs hôtes et des activités intégrées tous les le [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] dans le [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] application.  
   

@@ -1,23 +1,24 @@
 ---
 title: Processus d'embauche
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 30cad662a9cca679f7e8ce720cfde3d369b9ba60
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8cfa23ab5f36b3a40de107a546dd4700a4523595
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="hiring-process"></a>Processus d'embauche
 Cet exemple montre comment implémenter un processus d'entreprise à l'aide d'activités de messagerie et de deux workflows hébergés en tant que services de workflow. Ces workflows font partie de l'infrastructure informatique d'une société fictive nommée Contoso, Inc.  
@@ -129,7 +130,7 @@ Cet exemple montre comment implémenter un processus d'entreprise à l'aide d'ac
 |Suivi personnalisé|L'exemple comprend un participant de suivi personnalisé qui enregistre l'historique d'un `HiringRequestProcess` (enregistre l'action effectuée, par qui et à quel moment). Le code source se trouve dans le dossier Tracking de HiringRequestService.|HiringRequestService|  
 |Suivi ETW|Le suivi ETW fourni par le système est configuré dans le fichier App.config du service HiringRequestService.|HiringRequestService|  
 |Composition des activités|La définition de processus utilise la composition libre de <xref:System.Activities.Activity>. L'Organigramme contient plusieurs activités de séquence et parallèles qui contiennent simultanément d'autres activités (et ainsi de suite).|HiringRequestService|  
-|Activités parallèles|-   <xref:System.Activities.Statements.ParallelForEach%601>Permet d’inscrire dans la boîte de réception du CEO et des responsables des ressources humaines en parallèle (en attente pour l’étape d’approbation responsables des ressources humaines deux).<br />-   <xref:System.Activities.Statements.Parallel>est utilisée pour effectuer certaines tâches de nettoyage dans les étapes terminé et refusé|HiringRequestService|  
+|Activités parallèles|-   <xref:System.Activities.Statements.ParallelForEach%601> Permet d’inscrire dans la boîte de réception du CEO et des responsables des ressources humaines en parallèle (en attente pour l’étape d’approbation responsables des ressources humaines deux).<br />-   <xref:System.Activities.Statements.Parallel> est utilisée pour effectuer certaines tâches de nettoyage dans les étapes terminé et refusé|HiringRequestService|  
 |Annulation de modèle|L'organigramme utilise <xref:System.Activities.Statements.CancellationScope> pour créer le comportement d'annulation (dans ce cas, pour procéder à un nettoyage).|HiringRequestService|  
 |Participant de persistance client|`HiringRequestPersistenceParticipant` enregistre les données d'une variable de workflow dans une table stockée dans la base de données des Ressources Humaines de Contoso.|HiringRequestService|  
 |Services de workflow|`ResumeRequestService` est implémenté à l'aide de services de workflow. La définition du workflow et les informations sur les services se trouvent dans le fichier ResumeRequestService.xamlx. Le service est configuré pour utiliser la persistance et le suivi.|ResumeRequestService|  
@@ -141,15 +142,15 @@ Cet exemple montre comment implémenter un processus d'entreprise à l'aide d'ac
 ## <a name="data-storage"></a>Stockage des données  
  Les données sont stockées dans une base de données SQL Server nommée `ContosoHR` (le script pour créer cette base de données se trouve dans le dossier `DbSetup`). Les instances de workflow sont stockées dans une base de données SQL Server nommée `InstanceStore` (les scripts pour créer le magasin d'instances font partie de la distribution [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]).  
   
- Les deux bases de données sont créées en exécutant le script Setup.cmd à partir d'une invite de commandes de [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)].  
+ Les deux bases de données sont créées en exécutant le script Setup.cmd à partir d’une invite de commandes Visual Studio.  
   
 ## <a name="running-the-sample"></a>Exécution de l'exemple  
   
 #### <a name="to-create-the-databases"></a>Pour créer les bases de données  
   
-1.  Ouvrez une invite de commandes [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)].  
+1.  Ouvrez une invite de commandes de Visual Studio.  
   
-2.  Naviguez jusqu'au dossier de l'exemple.  
+2.  Naviguez jusqu’au dossier de l’exemple.  
   
 3.  Exécutez Setup.cmd.  
   
@@ -157,7 +158,7 @@ Cet exemple montre comment implémenter un processus d'entreprise à l'aide d'ac
   
 #### <a name="to-set-up-the-solution-for-execution"></a>Pour configurer la solution en vue de l'exécution  
   
-1.  Exécutez [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] en tant qu'administrateur. Ouvrez HiringRequest.sln.  
+1.  Exécutez Visual Studio en tant qu'administrateur. Ouvrez HiringRequest.sln.  
   
 2.  Avec le bouton droit de la solution dans **l’Explorateur de solutions** et sélectionnez **propriétés**.  
   
@@ -221,7 +222,7 @@ Cet exemple montre comment implémenter un processus d'entreprise à l'aide d'ac
   
 ## <a name="troubleshooting"></a>Résolution des problèmes  
   
-1.  Assurez-vous d'exécuter [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] avec des privilèges d'administrateur.  
+1.  Assurez-vous que vous exécutez Visual Studio avec des privilèges d’administrateur.  
   
 2.  En cas d'échec de la génération de la solution, vérifiez les points suivants :  
   
@@ -237,7 +238,7 @@ Cet exemple montre comment implémenter un processus d'entreprise à l'aide d'ac
   
         2.  Avec le bouton droit **Contoso** et sélectionnez **références Web/de Service de mise à jour**.  
   
-        3.  Régénérez la solution en appuyant sur Ctrl+Maj+B dans [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)].  
+        3.  Régénérez la solution en appuyant sur CTRL + MAJ + B dans Visual Studio.  
   
 ## <a name="uninstalling"></a>Désinstallation  
   

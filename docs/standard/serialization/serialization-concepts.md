@@ -1,21 +1,21 @@
 ---
-title: "Concepts de la sérialisation"
+title: Concepts de la sérialisation
 ms.date: 08/07/2017
 ms.prod: .net
 ms.topic: article
 ms.assetid: e1ff4740-20a1-4c76-a8ad-d857db307054
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 84bb6b4d80d59a09a1daa808cbfed60c2464ec19
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 038e150e167da62c7e67d59eb1f460237851ed87
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="serialization-concepts"></a>Concepts de la sérialisation
 Pourquoi utiliser la sérialisation ? L'une des deux raisons majeures est que vous pouvez, d'une part, rendre persistant l'état d'un objet sur un support de stockage afin qu'une copie exacte puisse être recréée ultérieurement. D'autre part, vous pouvez envoyer cet objet par valeur d'un domaine d'application à l'autre. Par exemple, la sérialisation est utilisée pour enregistrer l'état de session dans ASP.NET et copier des objets vers le Presse-papiers dans les Windows Forms. Elle est également utilisée par la communication à distance pour passer des objets par valeur d'un domaine d'application à un autre.
@@ -38,7 +38,7 @@ Quand un objet dérive de `MarshalByRefObject`, une référence de l’objet (et
  [Sérialisation binaire](../../../docs/standard/serialization/binary-serialization.md)  
  Décrit le mécanisme de sérialisation binaire inclus avec le Common Language Runtime.  
   
- [Objets distants](http://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)  
+ [Objets distants](https://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)  
  Décrit les différentes méthodes de communication disponibles dans le .NET Framework pour les communications distantes.  
   
  [Sérialisation XML et SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)  

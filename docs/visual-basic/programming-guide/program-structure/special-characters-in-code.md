@@ -1,11 +1,12 @@
 ---
-title: "Caractères spéciaux dans le code (Visual Basic)"
-ms.custom: 
+title: Caractères spéciaux dans le code (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.)
@@ -36,17 +37,17 @@ helpviewer_keywords:
 - exclamation point operator (!)
 - Visual Basic code, special characters
 ms.assetid: 310dce0c-45b5-4e0d-83e9-32df258d2a3e
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 11c5ef9ad41fc2362d9ba4f2cb5eb5b63a9ca31c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b724c48320f74045d7192be6d6e269c00511ffc9
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="special-characters-in-code-visual-basic"></a>Caractères spéciaux dans le code (Visual Basic)
-Vous devez parfois utiliser des caractères spéciaux dans votre code, autrement dit, les caractères qui ne sont pas alphabétiques ou numériques. La ponctuation et caractères spéciaux dans le [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] jeu de caractères ont plusieurs utilisations, de l’organisation du texte de programme à la définition des tâches effectuées par le compilateur ou le programme compilé. Ils ne spécifient pas d'opération à effectuer.  
+Vous devez parfois utiliser des caractères spéciaux dans votre code, autrement dit, les caractères qui ne sont pas alphabétiques ou numériques. La ponctuation et caractères spéciaux dans le jeu de caractères de Visual Basic ont plusieurs utilisations, de l’organisation du texte de programme à la définition des tâches effectuées par le compilateur ou le programme compilé. Ils ne spécifient pas d'opération à effectuer.  
   
 ## <a name="parentheses"></a>Entre parenthèses  
  Utilisez des parenthèses lorsque vous définissez une procédure, comme un `Sub` ou `Function`. Vous devez placer toutes les listes d’arguments de procédure entre parenthèses. Vous également utilisez des parenthèses pour insérer des variables ou arguments en groupes logiques, en particulier pour substituer l’ordre par défaut de priorité des opérateurs dans une expression complexe. L'exemple suivant illustre ce comportement.  
@@ -56,7 +57,7 @@ Vous devez parfois utiliser des caractères spéciaux dans votre code, autrement
  Après l’exécution du code précédent, la valeur de `d` est 8.225 et la valeur de `e` est 3. Le calcul de `d` utilise la priorité par défaut de `/` sur `+` et équivaut à `d = b + (c / a)`. Les parenthèses dans le calcul de `e` la priorité par défaut.  
   
 ## <a name="separators"></a>Séparateurs  
- Les séparateurs de faire ce que leur nom le suggère : séparent les différentes sections de code. Dans [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], le caractère de séparation est le signe deux-points (`:`). Utilisez des séparateurs lorsque vous voulez inclure plusieurs instructions sur une seule ligne à la place des lignes distinctes. Cela économise de l’espace et améliore la lisibilité de votre code. L’exemple suivant montre les trois instructions séparées par un signe deux-points.  
+ Les séparateurs de faire ce que leur nom le suggère : séparent les différentes sections de code. En Visual Basic, le caractère de séparation est le signe deux-points (`:`). Utilisez des séparateurs lorsque vous voulez inclure plusieurs instructions sur une seule ligne à la place des lignes distinctes. Cela économise de l’espace et améliore la lisibilité de votre code. L’exemple suivant montre les trois instructions séparées par un signe deux-points.  
   
  [!code-vb[VbVbcnConventions#12](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/special-characters-in-code_2.vb)]  
   

@@ -1,24 +1,26 @@
 ---
-title: "Serveur et rôles de base de données dans SQL Server"
-ms.custom: 
+title: Serveur et rôles de base de données dans SQL Server
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 1a9d8de6b3302684bd8769b7b1baaebedefb649c
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: b650c61a8d3d0b457bc9d5232c613d47f36ccbfc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>Serveur et rôles de base de données dans SQL Server
 Toutes les versions de SQL Server utilisent la sécurité basée sur les rôles, qui vous permet d'attribuer des autorisations à un rôle ou à un groupe d'utilisateurs au lieu de les attribuer à des utilisateurs individuels. Les rôles serveur fixes et de base de données fixes possèdent un ensemble fixe d'autorisations qui leur sont attribuées.  
@@ -29,7 +31,7 @@ Toutes les versions de SQL Server utilisent la sécurité basée sur les rôles,
 > [!IMPORTANT]
 >  Le rôle serveur fixe `sysadmin` englobe tous les autres rôles et a une portée illimitée. N'ajoutez pas de principaux à ce rôle à moins qu'ils soient dotés d'une confiance très élevée. Les membres du rôle `sysadmin` possèdent des privilèges d'administrateur irrévocables sur toutes les bases de données et ressources de serveur.  
   
- Soyez sélectif lors de l'ajout d'utilisateurs à des rôles serveur fixes. Par exemple, le rôle `bulkadmin` permet aux utilisateurs d'insérer le contenu d'un fichier local quelconque dans une table, ce qui peut mettre en danger l'intégrité des données. Consultez la documentation en ligne de [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] pour obtenir la liste complète des rôles serveur fixes et des autorisations.  
+ Soyez sélectif lors de l'ajout d'utilisateurs à des rôles serveur fixes. Par exemple, le rôle `bulkadmin` permet aux utilisateurs d'insérer le contenu d'un fichier local quelconque dans une table, ce qui peut mettre en danger l'intégrité des données. Pour obtenir la liste complète des rôles serveur fixes et des autorisations, consultez la documentation en ligne de SQL Server.  
   
 ## <a name="fixed-database-roles"></a>Rôles de base de données fixes  
  Les rôles de base de données fixes possèdent un ensemble prédéfini d'autorisations conçues pour vous permettre de gérer aisément des groupes d'autorisations. Les membres du rôle `db_owner` peuvent effectuer toutes les activités de configuration et de maintenance sur la base de données.  
@@ -38,8 +40,8 @@ Toutes les versions de SQL Server utilisent la sécurité basée sur les rôles,
   
 |Ressource|Description|  
 |--------------|-----------------|  
-|[Rôles de niveau serveur](http://msdn.microsoft.com/library/ms188659.aspx) et [autorisations des rôles serveur fixes](http://msdn.microsoft.com/library/ms175892.aspx) dans [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] la documentation en ligne|Décrit les rôles serveur fixes et les autorisations qui leur sont associées dans [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].|  
-|[Rôles au niveau de la base de données](http://msdn.microsoft.com/library/ms189121.aspx) et [autorisations des rôles de base de données fixe](http://msdn.microsoft.com/library/ms189612.aspx) dans [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] la documentation en ligne|Décrit les rôles de base de données fixes et les autorisations qui leur sont attribuées|  
+|[Rôles de niveau serveur](http://msdn.microsoft.com/library/ms188659.aspx) et [autorisations des rôles serveur fixes](http://msdn.microsoft.com/library/ms175892.aspx) dans la documentation en ligne de SQL Server|Décrit les rôles serveur fixes et les autorisations qui s’y rapportent dans SQL Server.|  
+|[Rôles au niveau de la base de données](http://msdn.microsoft.com/library/ms189121.aspx) et [autorisations des rôles de base de données fixe](http://msdn.microsoft.com/library/ms189612.aspx) dans la documentation en ligne de SQL Server|Décrit les rôles de base de données fixes et les autorisations qui leur sont attribuées|  
   
 ## <a name="database-roles-and-users"></a>Rôles de base de données et utilisateurs  
  Les connexions doivent être mappées sur des comptes d'utilisateur de base de données afin de fonctionner avec des objets de base de données. Les utilisateurs de base de données peuvent alors être ajoutés à des rôles de base de données et héritent de tous les jeux d'autorisations associés à ces rôles. Toutes les autorisations peuvent être accordées.  
@@ -53,7 +55,7 @@ Toutes les versions de SQL Server utilisent la sécurité basée sur les rôles,
  Le compte `dbo`, ou propriétaire de base de données, est un compte d'utilisateur qui possède des autorisations implicites pour effectuer toutes les activités dans la base de données. Les membres du rôle serveur fixe `sysadmin` sont automatiquement mappés sur `dbo`.  
   
 > [!NOTE]
->  `dbo`est également le nom d’un schéma, comme indiqué dans [la propriété et séparation utilisateur-schéma dans SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md).  
+>  `dbo` est également le nom d’un schéma, comme indiqué dans [la propriété et séparation utilisateur-schéma dans SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md).  
   
  Le compte d'utilisateur `dbo` est fréquemment confondu avec le rôle de base de données fixe `db_owner`. La portée de `db_owner` est une base de données, tandis que la portée de `sysadmin` est le serveur dans son intégralité. L'appartenance au rôle `db_owner` ne confère pas les privilèges d'utilisateur `dbo`.  
   
@@ -70,7 +72,7 @@ Toutes les versions de SQL Server utilisent la sécurité basée sur les rôles,
 |Ressource|Description|  
 |--------------|-----------------|  
 |[Identité et contrôle d’accès](http://msdn.microsoft.com/library/bb510418.aspx) dans la documentation en ligne de SQL Server|Contient des liens vers des rubriques qui décrivent les entités de sécurité, les rôles, les informations d'identification, les éléments sécurisables et les autorisations.|  
-|[Principaux](http://msdn.microsoft.com/library/ms181127.aspx) dans [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] la documentation en ligne|Décrit les entités de sécurité et contient des liens vers des rubriques qui décrivent les rôles serveur et de base de données.|  
+|[Principaux](http://msdn.microsoft.com/library/ms181127.aspx) dans la documentation en ligne de SQL Server|Décrit les entités de sécurité et contient des liens vers des rubriques qui décrivent les rôles serveur et de base de données.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Sécurisation des applications ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  

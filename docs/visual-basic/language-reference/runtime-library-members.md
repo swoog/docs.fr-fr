@@ -16,14 +16,14 @@ ms.assetid: f5e82c6e-3500-452b-bdb8-78f0d5477604
 caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f928a01424853dc7e3637f49cc3af4108c5afb5b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 47c7af031b2169d1a259a8f96f5485bcb354aa25
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-basic-runtime-library-members"></a>Membres de la bibliothèque runtime Visual Basic
-Le `Microsoft.VisualBasic` espace de noms contient les classes, les modules, les constantes et les énumérations qui constituent le [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] de la bibliothèque runtime. Ces membres de bibliothèque fournissent les procédures, les propriétés et les valeurs de constante que vous pouvez utiliser dans votre code. Chaque module et la classe représentent une catégorie particulière de fonctionnalité.  
+Le `Microsoft.VisualBasic` espace de noms contient les classes, les modules, les constantes et les énumérations qui constituent la bibliothèque runtime Visual Basic. Ces membres de bibliothèque fournissent les procédures, les propriétés et les valeurs de constante que vous pouvez utiliser dans votre code. Chaque module et la classe représentent une catégorie particulière de fonctionnalité.  
   
 ## <a name="microsoftvisualbasiccollection-class"></a>Classe Microsoft.VisualBasic.Collection  
   
@@ -197,7 +197,7 @@ Le `Microsoft.VisualBasic` espace de noms contient les classes, les modules, les
 |<xref:Microsoft.VisualBasic.VBMath.Randomize%2A>|<xref:Microsoft.VisualBasic.VBMath.Rnd%2A>|||  
   
 ## <a name="microsoftvisualbasic-constants-and-enumerations"></a>Constantes et énumérations Microsoft.VisualBasic  
- Le `Microsoft.VisualBasic` espace de noms fournit des constantes et énumérations dans le cadre de la [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] bibliothèque Runtime. Vous pouvez utiliser ces valeurs constantes dans votre code. Chaque énumération représente une catégorie particulière de fonctionnalité. Pour plus d’informations, consultez [constantes et énumérations](../../visual-basic/language-reference/constants-and-enumerations.md).  
+ Le `Microsoft.VisualBasic` espace de noms fournit des constantes et énumérations dans le cadre de la bibliothèque Runtime Visual Basic. Vous pouvez utiliser ces valeurs constantes dans votre code. Chaque énumération représente une catégorie particulière de fonctionnalité. Pour plus d’informations, consultez [constantes et énumérations](../../visual-basic/language-reference/constants-and-enumerations.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Constantes et énumérations](../../visual-basic/language-reference/constants-and-enumerations.md)  

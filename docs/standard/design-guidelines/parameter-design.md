@@ -1,12 +1,12 @@
 ---
-title: "Conception de paramètres"
-ms.custom: 
+title: Conception de paramètres
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - member design guidelines [.NET Framework], parameters
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - parameters, design guidelines
 - reserved parameters
 ms.assetid: 3f33bf46-4a7b-43b3-bb78-1ffebe0dcfa6
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f95301bab57e8bdb6b22c54140a4c02ed208b8d3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 0d89ed81c06558a6bc101864a7fef3173f019fd0
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="parameter-design"></a>Conception de paramètres
 Cette section fournit des indications générales sur la conception de paramètres, y compris des sections avec des recommandations pour la vérification d’arguments. En outre, vous devez consulter les instructions décrites dans [d’affectation de noms de paramètres](../../../docs/standard/design-guidelines/naming-parameters.md).  
@@ -82,9 +82,9 @@ Cette section fournit des indications générales sur la conception de paramètr
   
  Lorsqu’un argument est passé via un paramètre par valeur, le membre reçoit une copie de l’argument réel passé. Si l’argument est un type valeur, une copie de l’argument est placée sur la pile. Si l’argument est un type référence, une copie de la référence est placée sur la pile. Les plus populaires CLR langages, tels que c#, VB.NET et C++, par défaut pour le passage de paramètres par valeur.  
   
- Lorsqu’un argument est passé via un `ref` paramètre, le membre reçoit une référence à l’argument réel passé. Si l’argument est un type valeur, une référence à l’argument est placée sur la pile. Si l’argument est un type référence, une référence à la référence est placée sur la pile. `Ref`paramètres peuvent être utilisés pour permettre au membre de modifier les arguments passés par l’appelant.  
+ Lorsqu’un argument est passé via un `ref` paramètre, le membre reçoit une référence à l’argument réel passé. Si l’argument est un type valeur, une référence à l’argument est placée sur la pile. Si l’argument est un type référence, une référence à la référence est placée sur la pile. `Ref` paramètres peuvent être utilisés pour permettre au membre de modifier les arguments passés par l’appelant.  
   
- `Out`les paramètres sont similaires à `ref` paramètres, avec de petites différences. Le paramètre est considéré comme initialement non assigné et ne peut pas être lu dans le corps du membre avant de l’assigner une valeur. En outre, le paramètre a à assigner une valeur avant le retour du membre.  
+ `Out` les paramètres sont similaires à `ref` paramètres, avec de petites différences. Le paramètre est considéré comme initialement non assigné et ne peut pas être lu dans le corps du membre avant de l’assigner une valeur. En outre, le paramètre a à assigner une valeur avant le retour du membre.  
   
  **X Évitez** à l’aide de `out` ou `ref` paramètres.  
   
@@ -164,7 +164,7 @@ public class String {
   
  *Portions © 2005, 2009 Microsoft Corporation. Tous droits réservés.*  
   
- *Réimprimées avec l’autorisation de Pearson éducation, Inc. à partir de [règles de conception d’infrastructure : Conventions, idiomes et des modèles pour les bibliothèques .NET réutilisable, 2nd Edition](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina et Brad Abrams, publié le 22 octobre 2008 par Addison-Wesley Professional dans le cadre de la série de développement Microsoft Windows.*  
+ *Réimprimées avec l’autorisation de Pearson éducation, Inc. à partir de [règles de conception d’infrastructure : Conventions, idiomes et des modèles pour les bibliothèques .NET réutilisable, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina et Brad Abrams, publié le 22 octobre 2008 par Addison-Wesley Professional dans le cadre de la série de développement Microsoft Windows.*  
   
 ## <a name="see-also"></a>Voir aussi  
  [Instructions de conception des membres](../../../docs/standard/design-guidelines/member.md)  

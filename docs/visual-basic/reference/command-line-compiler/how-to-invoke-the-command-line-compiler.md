@@ -1,10 +1,11 @@
 ---
-title: "Comment : appeler le compilateur de ligne de commande (Visual Basic)"
+title: 'Comment : appeler le compilateur de ligne de commande (Visual Basic)'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - command-line arguments
@@ -12,14 +13,14 @@ helpviewer_keywords:
 - Visual Basic compiler, starting
 - command line [Visual Basic], arguments
 ms.assetid: 0fd9a8f6-f34e-4c35-a49d-9b9bbd8da4a9
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 5c69860ede5620272e67bde435e6e6fa08cc81bc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f1ccf08ba58fa6af60bd8ffd7cba79b205dc0f3d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>Comment : appeler le compilateur de ligne de commande (Visual Basic)
 Vous pouvez appeler le compilateur de ligne de commande en tapant le nom de son fichier exécutable dans la ligne de commande, également appelée invite de commande MS-DOS. Si vous compilez à partir de l’invite de commandes Windows par défaut, vous devez taper le chemin d’accès complet au fichier exécutable. Pour remplacer ce comportement par défaut, vous pouvez utiliser la [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] invite de commandes, ou modifier la variable d’environnement PATH. Deux vous permettent de compiler à partir de n’importe quel répertoire en tapant simplement le nom du compilateur.  
@@ -54,7 +55,7 @@ Vous pouvez appeler le compilateur de ligne de commande en tapant le nom de son 
   
 6.  Cliquez sur **OK** pour confirmer vos modifications et fermer les boîtes de dialogue.  
   
-     Après avoir modifié la variable d’environnement PATH, vous pouvez exécuter la [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilateur à l’invite de commandes Windows à partir de n’importe quel répertoire sur l’ordinateur.  
+     Après avoir modifié la variable d’environnement PATH, vous pouvez exécuter le compilateur Visual Basic à l’invite de commande Windows à partir de n’importe quel répertoire sur l’ordinateur.  
   
 ### <a name="to-invoke-the-compiler-using-the-windows-command-prompt"></a>Pour appeler le compilateur à l’aide de l’invite de commandes Windows  
   

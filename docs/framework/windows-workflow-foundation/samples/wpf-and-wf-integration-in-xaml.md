@@ -1,26 +1,27 @@
 ---
-title: "Intégration de WPF et WF en XAML"
-ms.custom: 
+title: Intégration de WPF et WF en XAML
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a4f53b48-fc90-4315-bca0-ba009562f488
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 327efb0b829e2628328d2e324c0736f8cb423b75
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0447df0e6d4f14a4171a315858f992ad23d69373
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="wpf-and-wf-integration-in-xaml"></a>Intégration de WPF et WF en XAML
-Cet exemple montre comment créer une application qui utilise les fonctionnalités [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] et [!INCLUDE[wf](../../../../includes/wf-md.md)] dans un document XAML unique. Pour ce faire, l'exemple utilise [!INCLUDE[wf](../../../../includes/wf-md.md)] et l'extensibilité XAML.  
+Cet exemple montre comment créer une application qui utilise Windows Presentation Foundation (WPF) et [!INCLUDE[wf](../../../../includes/wf-md.md)] fonctionnalités dans un document XAML unique. Pour ce faire, l'exemple utilise [!INCLUDE[wf](../../../../includes/wf-md.md)] et l'extensibilité XAML.  
   
 ## <a name="sample-details"></a>Détails de l'exemple  
  Le fichier ShowWindow.xaml désérialise dans une activité <xref:System.Activities.Statements.Sequence> avec deux variables String manipulées par les activités de la séquence : `ShowWindow` et `WriteLine`. L'activité <xref:System.Activities.Statements.WriteLine> renvoie dans la fenêtre de console l'expression qu'elle assigne à la propriété <xref:System.Activities.Statements.WriteLine.Text%2A>. L'activité `ShowWindow` affiche une fenêtre [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] dans le cadre de sa logique d'exécution. Le <xref:System.Activities.ActivityContext.DataContext%2A> de la fenêtre inclut les variables déclarées dans la séquence. Les contrôles de la fenêtre déclarée dans l'activité `ShowWindow` utilisent la liaison de données pour manipuler ces variables. Enfin, la fenêtre contient un contrôle bouton. L'événement `Click` pour le bouton est géré par <xref:System.Activities.ActivityDelegate> nommé `MarkupExtension` qui contient une activité `CloseWindow`. `MarkUpExtension` appelle l'activité contenue qui fournit, comme contexte, tous les objets identifiés par `x:Name`, ainsi que le <xref:System.Activities.ActivityContext.DataContext%2A> de la fenêtre. Ainsi, le `CloseWindow.InArgument<Window>` peut être lié à l'aide d'une expression qui référence le nom de la fenêtre.  

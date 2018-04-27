@@ -1,28 +1,30 @@
 ---
 title: Vue d'ensemble des sources de liaison
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - binding data [WPF], binding sources
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6b603599232a5cb4d33e2b7c9ad00e7ab3a24649
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.workload:
+- dotnet
+ms.openlocfilehash: 94238ba34976ad5971e7181aa3377e38ab0e4659
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="binding-sources-overview"></a>Vue d'ensemble des sources de liaison
 Dans la liaison de données, l’objet de source de liaison fait référence à l’objet à partir duquel vous obtenez des données. Cette rubrique décrit les types d’objets que vous pouvez utiliser comme source de liaison.  
@@ -55,7 +57,7 @@ Dans la liaison de données, l’objet de source de liaison fait référence à 
 ### <a name="other-characteristics"></a>Autres caractéristiques  
  La liste suivante fournit d’autres points importants à noter :  
   
--   Si vous souhaitez créer l’objet dans [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], la classe doit avoir un constructeur par défaut. Dans certains langages [!INCLUDE[TLA2#tla_net](../../../../includes/tla2sharptla-net-md.md)], tels que [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)], le constructeur par défaut peut être créé pour vous.  
+-   Si vous souhaitez créer l’objet dans [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], la classe doit avoir un constructeur par défaut. Dans certains [!INCLUDE[TLA2#tla_net](../../../../includes/tla2sharptla-net-md.md)] langages, tels que c#, le constructeur par défaut peut être créé pour vous.  
   
 -   Les propriétés que vous utilisez comme propriétés de source de liaison pour une liaison doivent être des propriétés publiques de votre classe. Les propriétés d’interface explicitement définies ne sont pas accessibles pour la liaison, tout comme les propriétés protégées, privées, internes ou virtuelles qui n’ont aucune implémentation de base.  
   
@@ -79,7 +81,7 @@ Dans la liaison de données, l’objet de source de liaison fait référence à 
   
  WPF ne lie jamais directement à la collection. Si vous spécifiez une collection comme source de liaison, WPF lie plutôt à la vue par défaut de la collection. Pour plus d’informations sur les vues par défaut, consultez [Vue d’ensemble de la liaison de données](../../../../docs/framework/wpf/data/data-binding-overview.md).  
   
- Si vous avez un scénario avancé et que vous souhaitez implémenter votre propre collection, envisagez d’utiliser le <xref:System.Collections.IList> interface. <xref:System.Collections.IList>Fournit une collection non générique d’objets accessibles individuellement par index, ce qui peut améliorer les performances.  
+ Si vous avez un scénario avancé et que vous souhaitez implémenter votre propre collection, envisagez d’utiliser le <xref:System.Collections.IList> interface. <xref:System.Collections.IList> Fournit une collection non générique d’objets accessibles individuellement par index, ce qui peut améliorer les performances.  
   
 <a name="permissions"></a>   
 ## <a name="permission-requirements-in-data-binding"></a>Conditions d’autorisation dans la liaison de données  

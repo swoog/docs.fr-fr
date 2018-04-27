@@ -1,11 +1,12 @@
 ---
-title: "Types de données caractères (Visual Basic)"
-ms.custom: 
+title: Types de données caractères (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - data types [Visual Basic], character
@@ -14,22 +15,22 @@ helpviewer_keywords:
 - Char data type [Visual Basic], character data types
 - data types [Visual Basic], choosing
 ms.assetid: 902479ef-1679-47fc-9911-0c1c5008226c
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: d1066444ba3a98f26fc2a35135a50b2954c6b992
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: dca9cde0af08c4113ea9a4644efa40a721b4d9b1
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="character-data-types-visual-basic"></a>Types de données caractères (Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]Fournit des *types de données caractère* afin de traiter les caractères imprimables et peut être affichée. Les caractères Unicode, alors que les deux `Char` contient un caractère tandis que `String` contient un nombre indéfini de caractères.  
+Visual Basic fournit *types de données caractère* afin de traiter les caractères imprimables et peut être affichée. Les caractères Unicode, alors que les deux `Char` contient un caractère tandis que `String` contient un nombre indéfini de caractères.  
   
- Pour une table qui affiche une comparaison côte-à-côte de la [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] des types de données, consultez [des Types de données](../../../../visual-basic/language-reference/data-types/data-type-summary.md).  
+ Pour une table qui affiche une comparaison côte-à-côte des types de données Visual Basic, consultez [des Types de données](../../../../visual-basic/language-reference/data-types/data-type-summary.md).  
   
 ## <a name="char-type"></a>Char (Type)  
- Le `Char` type de données est un caractère de Unicode (16 bits) sur deux octets. Si une variable stocke toujours exactement un caractère, déclarez-le en tant que `Char`. Exemple :  
+ Le `Char` type de données est un caractère de Unicode (16 bits) sur deux octets. Si une variable stocke toujours exactement un caractère, déclarez-le en tant que `Char`. Par exemple :  
   
  [!code-vb[VbVbalrCharTypes#1](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/VisualBasic/character-data-types_1.vb)]  
   
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/21/2017
  Pour plus d’informations, consultez [Type de données Char](../../../../visual-basic/language-reference/data-types/char-data-type.md).  
   
 ## <a name="string-type"></a>Type de chaîne  
- Le `String` type de données est une séquence de zéro ou plusieurs caractères Unicode à deux octets (16 bits). Si une variable peut contenir un nombre indéfini de caractères, déclarez-le en tant que `String`. Exemple :  
+ Le `String` type de données est une séquence de zéro ou plusieurs caractères Unicode à deux octets (16 bits). Si une variable peut contenir un nombre indéfini de caractères, déclarez-le en tant que `String`. Par exemple :  
   
  [!code-vb[VbVbalrCharTypes#2](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/VisualBasic/character-data-types_2.vb)]  
   

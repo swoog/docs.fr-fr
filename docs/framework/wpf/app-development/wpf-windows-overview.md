@@ -1,13 +1,13 @@
 ---
-title: "Vue d'ensemble des fenêtres WPF"
-ms.custom: 
+title: Vue d'ensemble des fenêtres WPF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -36,17 +36,17 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-caps.latest.revision: 
+caps.latest.revision: 65
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c176f08904bac8e9c3877977c1e52afb57d5daca
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: ae454e54abc2c8200f33bdb0bc5537806c824074
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="wpf-windows-overview"></a>Vue d'ensemble des fenêtres WPF
 Les utilisateurs interagissent avec les applications autonomes [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] par le biais de fenêtres. L’objectif principal d’une fenêtre est d’héberger du contenu qui permet aux utilisateurs de visualiser les données et d’interagir avec celles-ci. Autonome [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] applications fournissent leurs propres fenêtres à l’aide de la <xref:System.Windows.Window> classe. Cette rubrique présente les <xref:System.Windows.Window> avant de couvrir les notions de base de la création et la gestion de fenêtres dans des applications autonomes.  
@@ -282,7 +282,7 @@ Les utilisateurs interagissent avec les applications autonomes [!INCLUDE[TLA#tla
   
  Pendant une fenêtre peut être fermée explicitement par le biais des mécanismes fournis dans les zones non clientes et de client, une fenêtre peut aussi être implicitement fermée à la suite de comportement dans d’autres parties de l’application ou [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)], notamment les suivantes :  
   
--   Un utilisateur se déconnecte ou arrête [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)].  
+-   Un utilisateur se déconnecte ou ferme Windows.  
   
 -   Propriétaire d’une fenêtre se ferme (voir <xref:System.Windows.Window.Owner%2A>).  
   
@@ -315,7 +315,7 @@ Les utilisateurs interagissent avec les applications autonomes [!INCLUDE[TLA#tla
   
 -   <xref:System.Windows.WindowStartupLocation.Manual>  
   
- Si l’emplacement de démarrage est spécifié en tant que <xref:System.Windows.WindowStartupLocation.Manual>et le <xref:System.Windows.Window.Left%2A> et <xref:System.Windows.Window.Top%2A> propriétés n’ont pas été définies, <xref:System.Windows.Window> demandera [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] pour un emplacement s’affichent dans.  
+ Si l’emplacement de démarrage est spécifié en tant que <xref:System.Windows.WindowStartupLocation.Manual>et le <xref:System.Windows.Window.Left%2A> et <xref:System.Windows.Window.Top%2A> propriétés n’ont pas été définies, <xref:System.Windows.Window> demandera Windows pour un emplacement s’affichent dans.  
   
 <a name="Topmost_Windows_and_Z_Order"></a>   
 ### <a name="topmost-windows-and-z-order"></a>Fenêtres au premier plan et ordre de plan  

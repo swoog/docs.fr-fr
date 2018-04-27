@@ -1,12 +1,13 @@
 ---
-title: "Importation du schéma pour générer des classes"
-ms.custom: 
+title: Importation du schéma pour générer des classes
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - WCF, schema import and export
 - XsdDataContractImporter class
 ms.assetid: b9170583-8c34-43bd-97bb-6c0c8dddeee0
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a872fbd5be56fed3d01481d1740c70932fd60c06
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7fc755ff7f1b6c583a1e9aa1bc209495563812f0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="importing-schema-to-generate-classes"></a>Importation du schéma pour générer des classes
 Pour générer des classes à partir des schémas qui sont utilisables avec [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], utilisez la classe <xref:System.Runtime.Serialization.XsdDataContractImporter>. Cette rubrique décrit le processus et les variations.  
@@ -77,7 +79,7 @@ Pour générer des classes à partir des schémas qui sont utilisables avec [!IN
   
  [!code-xml[c_SchemaImportExport#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/common/source.config#10)]  
   
- L'exemple suivant utilise la propriété `Namespaces` pour mapper l'espace de noms « http://schemas.contoso.com/carSchema » à « Contoso.Cars ».  
+ L’exemple suivant utilise le `Namespaces` propriété à mapper la «http://schemas.contoso.com/carSchema« espace de noms à « Contoso.Cars ».  
   
  [!code-csharp[c_SchemaImportExport#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/cs/source.cs#8)]
  [!code-vb[c_SchemaImportExport#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_schemaimportexport/vb/source.vb#8)]  
@@ -95,7 +97,7 @@ Pour générer des classes à partir des schémas qui sont utilisables avec [!IN
 #### <a name="adding-data-binding-support-enabledatabinding-or-the-enabledatabinding-switch"></a>Ajout de la prise en charge de la liaisons de données (EnableDataBinding ou le commutateur /enableDataBinding)  
  Cela correspond à la **/enableDataBinding** basculer sur l’outil Svcutil.exe.  
   
- Il est parfois utile de lier les types générés à partir du schéma à des composants d'interface utilisateur graphique afin que toute mise à jour des instances de ces types mette à jour automatiquement l'interface utilisateur. `XsdDataContractImporter` peut générer des types qui implémentent l'interface <xref:System.ComponentModel.INotifyPropertyChanged> afin que toute modification de propriété déclenche un événement. Si vous générez des types à utiliser avec un environnement de programmation d'interface utilisateur client qui prend en charge cette interface (tel que [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)]), affectez à la propriété <xref:System.Runtime.Serialization.ImportOptions.EnableDataBinding%2A> la valeur `true` pour activer cette fonction.  
+ Il est parfois utile de lier les types générés à partir du schéma à des composants d'interface utilisateur graphique afin que toute mise à jour des instances de ces types mette à jour automatiquement l'interface utilisateur. `XsdDataContractImporter` peut générer des types qui implémentent l'interface <xref:System.ComponentModel.INotifyPropertyChanged> afin que toute modification de propriété déclenche un événement. Si vous générez des types pour une utilisation avec un environnement de programmation de l’interface utilisateur de client qui prend en charge cette interface (tel que Windows Presentation Foundation (WPF)), définissez la <xref:System.Runtime.Serialization.ImportOptions.EnableDataBinding%2A> propriété `true` pour activer cette fonctionnalité.  
   
  L'exemple suivant affiche la classe `Vehicle` générée lorsque <xref:System.Runtime.Serialization.ImportOptions.EnableDataBinding%2A> a la valeur `true`.  
   
@@ -112,7 +114,7 @@ Pour générer des classes à partir des schémas qui sont utilisables avec [!IN
  [!code-xml[C_SchemaImportExport#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/common/source.config#12)]  
   
 > [!NOTE]
->  Toute association peut aussi être considérée comme une liste. Par exemple, vous pouvez considérer l'association précédente comme une liste d'objets `city` complexes qui contiennent deux champs (un champ de chaîne et un champ d'entier). Les deux modèles sont représentés dans le schéma XSD. Il n'est pas possible de distinguer une liste et une association, donc ces modèles sont toujours traités comme des listes sauf si une annotation spéciale spécifique à [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] est présente dans le schéma. L’annotation indique qu’un modèle donné représente une association. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Référence du schéma de contrat de données](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
+>  Toute association peut aussi être considérée comme une liste. Par exemple, vous pouvez considérer l'association précédente comme une liste d'objets `city` complexes qui contiennent deux champs (un champ de chaîne et un champ d'entier). Les deux modèles sont représentés dans le schéma XSD. Il n'est pas possible de distinguer une liste et une association, donc ces modèles sont toujours traités comme des listes sauf si une annotation spéciale spécifique à [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] est présente dans le schéma. L’annotation indique qu’un modèle donné représente une association. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Référence du schéma de contrat de données](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
   
  Normalement, une liste est importée sous la forme d'un contrat de données de collection qui dérive d'une liste générique ou sous la forme d'un tableau du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], selon si le schéma adopte ou non le modèle de désignation standard pour les collections. Cet exemple est décrit plus en détail dans [Types de collections dans les contrats de données](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md). Les associations sont importées normalement comme <xref:System.Collections.Generic.Dictionary%602> ou comme un contrat de données de collection qui dérive de l'objet dictionnaire. Par exemple, considérons le schéma suivant.  
   
@@ -159,7 +161,7 @@ Pour générer des classes à partir des schémas qui sont utilisables avec [!IN
   
 ##### <a name="design-considerations"></a>Considérations de design  
   
--   Il peut s'avérer difficile d'utiliser directement la représentation XML faiblement typée. Vous pouvez faire appel à un moteur de sérialisation différent, tel que <xref:System.Xml.Serialization.XmlSerializer>, pour utiliser d'une manière fortement typée un schéma incompatible avec les contrats de données. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][à l’aide de la classe XmlSerializer](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md).  
+-   Il peut s'avérer difficile d'utiliser directement la représentation XML faiblement typée. Vous pouvez faire appel à un moteur de sérialisation différent, tel que <xref:System.Xml.Serialization.XmlSerializer>, pour utiliser d'une manière fortement typée un schéma incompatible avec les contrats de données. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [À l’aide de la classe XmlSerializer](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md).  
   
 -   Certaines constructions de schéma ne peuvent pas être importées par <xref:System.Runtime.Serialization.XsdDataContractImporter> même lorsque la propriété <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> a la valeur `true`. Là encore, utilisez <xref:System.Xml.Serialization.XmlSerializer> pour ces cas.  
   
@@ -188,7 +190,7 @@ Pour générer des classes à partir des schémas qui sont utilisables avec [!IN
   
 -   Propriété <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A>. Spécifiez la <xref:System.CodeDom.Compiler.CodeDomProvider> à utiliser pour générer le code destiné aux classes générées. Le mécanisme d'importation cherche à éviter les fonctionnalités que la <xref:System.CodeDom.Compiler.CodeDomProvider> ne prend pas en charge. Si la <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> n'est pas définie, le jeu complet des fonctionnalités du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] est utilisé sans restrictions.  
   
--   Propriété <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A>. Une implémentation <xref:System.Runtime.Serialization.IDataContractSurrogate> peut être spécifiée avec cette propriété. <xref:System.Runtime.Serialization.IDataContractSurrogate> personnalise le processus d'importation. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Substituts de contrat de données](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). Par défaut, aucun substitut n'est utilisé.  
+-   Propriété <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A>. Une implémentation <xref:System.Runtime.Serialization.IDataContractSurrogate> peut être spécifiée avec cette propriété. <xref:System.Runtime.Serialization.IDataContractSurrogate> personnalise le processus d'importation. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Substituts de contrat de données](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). Par défaut, aucun substitut n'est utilisé.  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.Runtime.Serialization.DataContractSerializer>  

@@ -1,11 +1,12 @@
 ---
-title: "Considérations sur les surcharges de procédures (Visual Basic)"
-ms.custom: 
+title: Considérations sur les surcharges de procédures (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - signatures [Visual Basic], ParamArray arguments
@@ -31,14 +32,14 @@ helpviewer_keywords:
 - restrictions [Visual Basic], overloading procedures
 - procedures [Visual Basic], parameter lists
 ms.assetid: a2001248-10d0-42c5-b0ce-eeedc987319f
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 3c9a9a4759d4ec2dd87778c49c4fd82a08c081a8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ac4bc47f9e781f83c7930efffedd40d9c25c2ec2
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="considerations-in-overloading-procedures-visual-basic"></a>Considérations sur les surcharges de procédures (Visual Basic)
 Lorsque vous surchargez une procédure, vous devez utiliser un autre *signature* pour chaque version surchargée. Cela signifie généralement que chaque version doit spécifier une liste de paramètres différente. Pour plus d’informations, consultez « Signature différente » dans [surcharge de procédure](./procedure-overloading.md).  
@@ -50,7 +51,7 @@ Lorsque vous surchargez une procédure, vous devez utiliser un autre *signature*
 ## <a name="alternatives-to-overloaded-versions"></a>Alternatives aux Versions surchargées  
  Vous devez parfois des alternatives aux versions surchargées, en particulier lorsque la présence d’arguments est facultative ou que leur nombre est variable.  
   
- N’oubliez pas que les arguments facultatifs ne sont pas nécessairement pris en charge par tous les langages et les tableaux de paramètres sont limités à [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Si vous écrivez une procédure qui est susceptible d’être appelée à partir du code écrit dans un des différents langages, les versions surchargées offrent la plus grande flexibilité.  
+ Gardez à l’esprit que les arguments facultatifs ne sont pas nécessairement pris en charge par tous les langages et les tableaux de paramètres sont limités à Visual Basic. Si vous écrivez une procédure qui est susceptible d’être appelée à partir du code écrit dans un des différents langages, les versions surchargées offrent la plus grande flexibilité.  
   
 ### <a name="overloads-and-optional-arguments"></a>Surcharges et Arguments facultatifs  
  Lorsque le code appelant peut éventuellement fournir ou omettre un ou plusieurs arguments, vous pouvez définir plusieurs versions surchargées ou utiliser des paramètres facultatifs.  
@@ -104,7 +105,7 @@ Lorsque vous surchargez une procédure, vous devez utiliser un autre *signature*
 ## <a name="implicit-overloads-for-a-paramarray-parameter"></a>Surcharges implicites pour un paramètre ParamArray  
  Le compilateur considère qu’une procédure avec un [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) paramètre possède un nombre infini de surcharges, qui se différencient selon ce que le code appelant passe au tableau de paramètres, comme suit :  
   
--   Une surcharge lorsque le code appelant ne fournit pas un argument à la`ParamArray`  
+-   Une surcharge lorsque le code appelant ne fournit pas un argument à la `ParamArray`  
   
 -   Une surcharge lorsque le code appelant fournit un tableau unidimensionnel de la `ParamArray` le type d’élément  
   

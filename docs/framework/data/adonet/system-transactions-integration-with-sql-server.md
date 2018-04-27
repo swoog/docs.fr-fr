@@ -1,36 +1,38 @@
 ---
-title: "Intégration de System.Transactions à SQL Server"
-ms.custom: 
+title: Intégration de System.Transactions à SQL Server
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: b555544e-7abb-4814-859b-ab9cdd7d8716
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 21924441c091c53a79d4b7bf8a683f8a7c74bd07
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 06f1555c8dbbdf10e8a1d0de867ddb227cb148b6
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>Intégration de System.Transactions à SQL Server
 La version 2.0 du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] a introduit une nouvelle infrastructure de transactions à laquelle il est possible d'accéder via l'espace de noms <xref:System.Transactions> . Cette infrastructure expose des transactions de manière totalement intégrée au [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], y compris à [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
   
  Outre les améliorations en termes de programmabilité, <xref:System.Transactions> et [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] peuvent collaborer pour coordonner les optimisations lorsque vous utilisez des transactions. Une transaction susceptible d'être promue est une transaction légère (locale) qui peut être promue automatiquement en une transaction entièrement distribuée en fonction des besoins.  
   
- À partir de la version 2.0 d' [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] , <xref:System.Data.SqlClient> prend en charge des transactions pouvant être promues lorsque vous utilisez [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]. Une transaction pouvant être promue n'invoque pas la charge supplémentaire d'une transaction distribuée à moins qu'elle ne soit requise. Transactions pouvant être promues sont automatiques et ne requièrent aucune intervention du développeur.  
+ En commençant par [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0, <xref:System.Data.SqlClient> prend en charge les transactions pouvant être promues lorsque vous travaillez avec SQL Server. Une transaction pouvant être promue n'invoque pas la charge supplémentaire d'une transaction distribuée à moins qu'elle ne soit requise. Transactions pouvant être promues sont automatiques et ne requièrent aucune intervention du développeur.  
   
- Les transactions pouvant être promues sont disponibles uniquement lorsque vous utilisez le fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pour SQL Server (`SqlClient`) avec [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)].  
+ Transactions pouvant être promues sont disponibles uniquement lorsque vous utilisez la [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] fournisseur de données pour SQL Server (`SqlClient`) avec SQL Server.  
   
 ## <a name="creating-promotable-transactions"></a>Création de transactions pouvant être promues  
  Le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] fournisseur pour SQL Server prend en charge les transactions pouvant être promues, qui sont gérées via les classes dans le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] <xref:System.Transactions> espace de noms. Les transactions pouvant être promues optimisent les transactions distribuées en différant la création d'une transaction distribuée jusqu'à ce qu'elle soit nécessaire. Si un seul gestionnaire de ressources est requis, aucune transaction distribuée n'a lieu.  
@@ -39,7 +41,7 @@ La version 2.0 du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)
 >  Dans un scénario de niveau de confiance partiel, l'objet <xref:System.Transactions.DistributedTransactionPermission> est requis lorsqu'une transaction est promue en transaction distribuée.  
   
 ## <a name="promotable-transaction-scenarios"></a>Scénarios de transaction pouvant être promue  
- Les transactions distribuées consomment généralement une partie importante des ressources système, car elles sont gérées par Microsoft Distributed Transaction Coordinator (MS DTC), qui intègre tous les gestionnaires de ressources auxquels la transaction accède. Une transaction pouvant être promue est une forme particulière de transaction <xref:System.Transactions> qui délègue efficacement le travail à une transaction [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] simple. <xref:System.Transactions>, <xref:System.Data.SqlClient>et [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] coordonnent le travail de gestion de la transaction, en promouvant celle-ci au niveau d'une transaction entièrement distribuée, si nécessaire.  
+ Les transactions distribuées consomment généralement une partie importante des ressources système, car elles sont gérées par Microsoft Distributed Transaction Coordinator (MS DTC), qui intègre tous les gestionnaires de ressources auxquels la transaction accède. Une transaction pouvant être promue est une forme particulière d’un <xref:System.Transactions> transaction qui délègue efficacement le travail à une transaction SQL Server simple. <xref:System.Transactions>, <xref:System.Data.SqlClient>, et SQL Server coordonnent le travail de gestion de la transaction, de promouvoir à une transaction entièrement distribuée en fonction des besoins.  
   
  L'avantage de l'utilisation de transactions pouvant être promues réside dans le fait que, quand une connexion est ouverte à l'aide d'une transaction <xref:System.Transactions.TransactionScope> active alors qu'aucune autre connexion n'est ouverte, la transaction est validée comme transaction légère, au lieu de générer la charge supplémentaire d'une transaction entièrement distribuée.  
   

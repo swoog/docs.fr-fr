@@ -1,22 +1,20 @@
 ---
-title: Expressions match (F#)
-description: "Découvrez comment l’expression de correspondance F # fournit le contrôle de branchement basé sur la comparaison d’une expression avec un jeu de modèles."
-keywords: visual f#, f#, programmation fonctionnelle
+title: 'Expressions Match (F #)'
+description: 'Découvrez comment l’expression de correspondance F # fournit le contrôle de branchement basé sur la comparaison d’une expression avec un jeu de modèles.'
 author: cartermp
 ms.author: phcart
-ms.date: 05/16/2016
+ms.date: 04/19/2018
 ms.topic: language-reference
 ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
-ms.assetid: 8854b713-255a-408d-942a-e80ab52fd2a4
-ms.openlocfilehash: c8b9be744cfa7bc76f0d663b12abd66f8757fc56
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: f843e6fde98eae8a10235dd5cae38ffc10a4fb9f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="match-expressions"></a>Expressions match
+# <a name="match-expressions"></a>Expressions de correspondance
 
 Le `match` expression fournit le contrôle de branchement basé sur la comparaison d’une expression avec un jeu de modèles.
 
@@ -36,7 +34,7 @@ function
 | ...
 ```
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Les expressions de critères spéciaux autorisent des branchements complexes basés sur la comparaison d’une expression de test avec un jeu de modèles. Dans le `match` expression, le *test-expression* est comparé à chaque modèle à son tour, lorsqu’une correspondance est trouvée, correspondant *expression de résultat* est évaluée et la valeur résultante est retourné en tant que la valeur de l’expression de correspondance.
 
@@ -48,7 +46,7 @@ fun arg ->
     | pattern1 [ when condition ] -> result-expression1
     | pattern2 [ when condition ] -> result-expression2
     | ...
-```    
+```
 
 Pour plus d’informations sur les expressions lambda, consultez [Expressions Lambda : le `fun` mot clé](functions/lambda-expressions-the-fun-keyword.md).
 
@@ -66,14 +64,29 @@ L’exemple suivant illustre l’utilisation d’un garde pour spécifier une pl
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4602.fs)]
 
-Notez qu’étant donné que les valeurs autres que des littéraux ne peut pas être utilisés dans le modèle, vous devez utiliser un `when` clause si vous devez comparer une partie de l’entrée à une valeur. Ceci est illustré dans le code suivant.
+Notez qu’étant donné que les valeurs autres que des littéraux ne peut pas être utilisés dans le modèle, vous devez utiliser un `when` clause si vous devez comparer une partie de l’entrée à une valeur. Ceci est illustré dans le code suivant :
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4603.fs)]
 
+Notez que lorsqu’un modèle d’union est couverte par un module de protection, la protection s’applique aux **tous les** des modèles, et pas seulement le dernier. Par exemple, prenons le code suivant, le module de protection `when a > 12` s’applique aux deux `A a` et `B a`:
+
+```fsharp
+type Union =
+    | A of int
+    | B of int
+
+let foo() =
+    let test = A 42
+    match test with
+    | A a
+    | B a when a > 41 -> a // the guard applies to both patterns
+    | _ -> 1
+
+foo() // returns 42
+```
+
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence du langage F#](index.md)
-
-[Modèles actifs](active-patterns.md)
-
-[Critères spéciaux](pattern-matching.md)
+[Informations de référence du langage F#](index.md)  
+[Modèles actifs](active-patterns.md)  
+[Critères spéciaux](pattern-matching.md)  

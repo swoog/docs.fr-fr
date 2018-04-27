@@ -1,11 +1,12 @@
 ---
-title: "Noms d'éléments déclarés (Visual Basic)"
-ms.custom: 
+title: Noms d'éléments déclarés (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - declared elements [Visual Basic], case sensitivity
@@ -29,20 +30,20 @@ helpviewer_keywords:
 - names [Visual Basic], naming conventions
 - identifiers [Visual Basic], elements
 ms.assetid: 09d8843b-c0dc-4afe-9dab-87c439a69e66
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 22595eff2509d3954b3ce9d5038b19a681fbfbbe
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: ad883dd8e1de419c74b5bcdb8762994e762b4cf7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="declared-element-names-visual-basic"></a>Noms d'éléments déclarés (Visual Basic)
 Chaque élément déclaré a un nom, également appelé un *identificateur*, qui est utilisé par le code qui y fait référence.  
   
 ## <a name="rules"></a>Règles  
- Un nom d’élément dans [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] doit respecter les règles suivantes :  
+ Un nom d’élément dans Visual Basic doit respecter les règles suivantes :  
   
 -   Il doit commencer par un caractère alphabétique ou un trait de soulignement (`_`).  
   
@@ -79,18 +80,18 @@ Chaque élément déclaré a un nom, également appelé un *identificateur*, qui
  En revanche, votre nom ne doit pas être court que ne pas correctement décrit ce que représente l’élément et la façon dont votre code utilise. Ceci est important pour la lisibilité de votre code. Si quelqu'un d’autre tente de le comprendre, ou si vous devez l’observer longtemps après que l’avoir écrit, noms d’éléments appropriés peuvent enregistrer un temps considérable.  
   
 ## <a name="escaped-names"></a>Noms d’échappement  
- En règle générale, un nom d’élément ne doit pas correspondre à un des mots clés réservés par [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], tel que `Case` ou `Friend`. Toutefois, vous pouvez définir un *nom échappement*, lequel est placé entre crochets (`[ ]`). Un nom d’échappement peut correspondre à tout [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] (mot clé), étant donné que les crochets supprimer toute ambiguïté. Vous utilisez également les crochets lorsque vous faites référence au nom ultérieurement dans votre code.  
+ En règle générale, un nom d’élément ne doit pas correspondre à un des mots clés réservés par Visual Basic, tel que `Case` ou `Friend`. Toutefois, vous pouvez définir un *nom échappement*, lequel est placé entre crochets (`[ ]`). Un nom d’échappement peut correspondre à n’importe quel mot clé Visual Basic, étant donné que les crochets supprimer toute ambiguïté. Vous utilisez également les crochets lorsque vous faites référence au nom ultérieurement dans votre code.  
   
  En règle générale, vous devez utiliser des noms échappés uniquement lorsque :  
   
--   Votre code a migré à partir d’une version antérieure de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] qui n’a pas réservé le mot clé utilisé comme un nom ; ou  
+-   Votre code a migré à partir d’une version antérieure de Visual Basic qui n’a pas réservé le mot clé utilisé comme un nom ; ou  
   
 -   Vous travaillez avec du code écrit dans un autre langage dans lequel le mot clé donné n’est pas réservé.  
   
  Dans le cas contraire, vous devez envisager de renommer l’élément si son nom est en conflit avec un mot clé. L’environnement de développement intégré (IDE) fournit un moyen simple pour ce faire. Pour plus d’informations, consultez [Refactoring](/visualstudio/vb-ide/refactoring-vb).  
   
 ## <a name="case-sensitivity-in-names"></a>Respect de la casse dans les noms  
- Noms d’élément dans [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] respectent pas la casse. Cela signifie que lorsque le compilateur compare deux noms qui diffèrent uniquement par la casse des lettres, il les interprète comme étant le même nom. Par exemple, il considère que `ABC` et `abc` font référence au même élément déclaré.  
+ Noms d’éléments dans Visual Basic respectent la casse. Cela signifie que lorsque le compilateur compare deux noms qui diffèrent uniquement par la casse des lettres, il les interprète comme étant le même nom. Par exemple, il considère que `ABC` et `abc` font référence au même élément déclaré.  
   
  Toutefois, le common language runtime (CLR) utilise une liaison qui respecte la casse. Ainsi, quand vous générez un assembly ou une DLL et que vous le mettez à disposition d’autres assemblys, la casse de vos noms est respectée. Par exemple, si vous définissez une classe avec un élément nommé `ABC`et que d’autres assemblys utilisent votre classe par le biais du Common Language Runtime, ils doivent faire référence à l’élément en tant que `ABC`. Si vous recompilez votre classe par la suite et modifier le nom de l’élément à `abc`, les autres assemblys utilisent votre classe pourraient ne plus accéder à cet élément. Ainsi, quand vous publiez une version mise à jour d’un assembly, vous ne devez pas modifier la casse des éléments publics.  
   

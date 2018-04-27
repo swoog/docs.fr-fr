@@ -1,5 +1,5 @@
 ---
-title: "Indications concernant la sérialisation"
+title: Indications concernant la sérialisation
 ms.date: 03/30/2017
 ms.prod: .net
 ms.topic: article
@@ -10,18 +10,18 @@ helpviewer_keywords:
 - serialization, guidelines
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 27423607959af4b3201da8d83630b7827b2eeeb6
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 60ae369bcf3d1e874c01c9daa8db097b3c1aee5f
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="serialization-guidelines"></a>Indications concernant la sérialisation
 Ce document répertorie les indications à prendre en compte lors de la conception d'une API à sérialiser.  
@@ -151,6 +151,6 @@ Ce document répertorie les indications à prendre en compte lors de la concepti
  [Sérialiseur de contrat de données](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)  
  [Types pris en charge par le sérialiseur de contrat de données](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)  
  [Sérialisation binaire](binary-serialization.md)  
- [Objets distants](http://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)  
+ [Objets distants](https://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)  
  [Sérialisation XML et SOAP](xml-and-soap-serialization.md)  
  [Sécurité et sérialisation](../../../docs/framework/misc/security-and-serialization.md)

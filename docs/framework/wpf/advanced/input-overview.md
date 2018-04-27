@@ -1,12 +1,13 @@
 ---
-title: "Vue d'ensemble des entrées"
-ms.custom: 
+title: Vue d'ensemble des entrées
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -31,16 +32,17 @@ helpviewer_keywords:
 - focus [WPF]
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
-caps.latest.revision: "50"
+caps.latest.revision: 50
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 910eed7c1786730a3ffce5add995e543021f4759
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b10890cc433e1adf72b7e26c91e919bd239942b8
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="input-overview"></a>Vue d'ensemble des entrées
 <a name="introduction"></a> Le sous-système [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fournit une puissante [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] pour obtenir une entrée à partir de différents périphériques, notamment la souris, le clavier, le stylet et l’entrée tactile. Cette rubrique décrit les services fournis par [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] et explique l’architecture des systèmes d’entrée.  
@@ -70,7 +72,7 @@ ms.lasthandoff: 12/22/2017
  Le <xref:System.Windows.Input.Mouse> et <xref:System.Windows.Input.Keyboard> classes sont traités plus en détail tout au long de cette vue d’ensemble.  
   
 ### <a name="stylus-input"></a>Entrée du stylet  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]prend en charge la <xref:System.Windows.Input.Stylus>.  Le <xref:System.Windows.Input.Stylus> est une entrée de stylet rendue populaire par le [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)].  Les applications [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] peuvent traiter le stylet comme une souris à l’aide de l’[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] de souris, mais [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] expose également une abstraction du stylet qui utilise un modèle semblable au clavier et à la souris.  Toutes les [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] liées au stylet contiennent le mot « Stylus ».  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] prend en charge la <xref:System.Windows.Input.Stylus>.  Le <xref:System.Windows.Input.Stylus> est une entrée de stylet rendue populaire par le [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)].  Les applications [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] peuvent traiter le stylet comme une souris à l’aide de l’[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] de souris, mais [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] expose également une abstraction du stylet qui utilise un modèle semblable au clavier et à la souris.  Toutes les [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] liées au stylet contiennent le mot « Stylus ».  
   
  Étant donné que le stylet peut agir comme une souris, les applications qui prennent uniquement en charge l’entrée de la souris peuvent quand même bénéficier automatiquement d’un certain niveau de prise en charge du stylet. Quand le stylet est utilisé de cette manière, l’application a la possibilité de gérer l’événement de stylet approprié, et elle gère ensuite l’événement de souris correspondant. En outre, les services de niveau supérieur tels que l’entrée d’encre sont également disponibles grâce à l’abstraction du stylet.  Pour plus d’informations sur l’encre comme entrée, consultez [Débuter avec l’encre](../../../../docs/framework/wpf/advanced/getting-started-with-ink.md).  
   
@@ -84,7 +86,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="handling_input_events"></a>   
 ## <a name="handling-input-events"></a>Gestion des événements d’entrée  
- Pour recevoir une entrée sur un élément, un gestionnaire d’événements doit être associé à cet événement particulier.  Dans [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], c’est simple : vous référencez le nom de l’événement en tant qu’attribut de l’élément qui écoute cet événement.  Ensuite, vous affectez comme valeur de l’attribut le nom du gestionnaire d’événements que vous définissez, en fonction d’un délégué.  Le gestionnaire d’événements doit être écrit en code (par exemple [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)]) et peut être inclus dans un fichier code-behind.  
+ Pour recevoir une entrée sur un élément, un gestionnaire d’événements doit être associé à cet événement particulier.  Dans [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], c’est simple : vous référencez le nom de l’événement en tant qu’attribut de l’élément qui écoute cet événement.  Ensuite, vous affectez comme valeur de l’attribut le nom du gestionnaire d’événements que vous définissez, en fonction d’un délégué.  Le Gestionnaire d’événements doit être écrit dans le code tel que c# et peut être inclus dans un fichier code-behind.  
   
  Les événements de clavier se produisent quand le système d’exploitation signale des actions de touches qui ont lieu pendant que le focus clavier se trouve sur un élément. Les événements de souris et de stylet appartiennent chacun à deux catégories : les événements qui signalent des changements de la position du pointeur par rapport à l’élément, et les événements qui signalent des changements d’état des boutons du périphérique.  
   
@@ -330,7 +332,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="keyboard-focus"></a>Focus clavier  
  Le focus clavier fait référence à l’élément qui reçoit actuellement l’entrée au clavier.  Un seul élément de l’ordinateur peut avoir le focus clavier.  Dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], l’élément qui a le focus clavier possède <xref:System.Windows.IInputElement.IsKeyboardFocused%2A> la valeur `true`.  La méthode statique <xref:System.Windows.Input.Keyboard> méthode <xref:System.Windows.Input.Keyboard.FocusedElement%2A> retourne l’élément qui a le focus clavier.  
   
- Le focus clavier peut être obtenu par tabulation à un élément ou en cliquant sur la souris sur certains éléments, comme un <xref:System.Windows.Controls.TextBox>.  Le focus clavier peuvent également être obtenu par programmation à l’aide de la <xref:System.Windows.Input.Keyboard.Focus%2A> méthode sur la <xref:System.Windows.Input.Keyboard> classe.  <xref:System.Windows.Input.Keyboard.Focus%2A>tente de donner le focus clavier de l’élément spécifié.  L’élément retourné par <xref:System.Windows.Input.Keyboard.Focus%2A> est l’élément qui a le focus clavier.  
+ Le focus clavier peut être obtenu par tabulation à un élément ou en cliquant sur la souris sur certains éléments, comme un <xref:System.Windows.Controls.TextBox>.  Le focus clavier peuvent également être obtenu par programmation à l’aide de la <xref:System.Windows.Input.Keyboard.Focus%2A> méthode sur la <xref:System.Windows.Input.Keyboard> classe.  <xref:System.Windows.Input.Keyboard.Focus%2A> tente de donner le focus clavier de l’élément spécifié.  L’élément retourné par <xref:System.Windows.Input.Keyboard.Focus%2A> est l’élément qui a le focus clavier.  
   
  Dans l’ordre d’un élément obtenir le focus clavier le <xref:System.Windows.UIElement.Focusable%2A> propriété et la <xref:System.Windows.UIElement.IsVisible%2A> propriétés doivent être définies sur **true**.  Certaines classes, telles que <xref:System.Windows.Controls.Panel>, ont <xref:System.Windows.UIElement.Focusable%2A> la valeur `false` par défaut ; par conséquent, vous devrez peut-être définir cette propriété sur `true` si vous souhaitez que cet élément puisse obtenir le focus.  
   
@@ -375,11 +377,11 @@ ms.lasthandoff: 12/22/2017
 ## <a name="commands"></a>Commandes  
  Les commandes permettent de gérer les entrées à un niveau plus sémantique que l’entrée de périphérique.  Les commandes sont des directives simples, telles que `Cut`, `Copy`, `Paste` ou `Open`.  Elles sont utiles pour centraliser la logique de commande.  La même commande peut être accessible depuis un <xref:System.Windows.Controls.Menu>, dans un <xref:System.Windows.Controls.ToolBar>, ou via un raccourci clavier. Les commandes fournissent également un mécanisme permettant de désactiver des contrôles quand la commande devient indisponible.  
   
- <xref:System.Windows.Input.RoutedCommand>est la [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] implémentation de <xref:System.Windows.Input.ICommand>.  Lorsqu’un <xref:System.Windows.Input.RoutedCommand> est exécutée, un <xref:System.Windows.Input.CommandManager.PreviewExecuted> et un <xref:System.Windows.Input.CommandManager.Executed> déclenché sur la cible de commande, le tunnel et le se propagent dans l’arborescence d’éléments comme tout autre entrée.  Si une cible de commande n’est pas définie, l’élément qui a le focus clavier est la cible de commande.  La logique qui exécute la commande est attachée à un <xref:System.Windows.Input.CommandBinding>.  Quand une <xref:System.Windows.Input.CommandManager.Executed> événement atteint un <xref:System.Windows.Input.CommandBinding> pour une commande spécifique, le <xref:System.Windows.Input.ExecutedRoutedEventHandler> sur le <xref:System.Windows.Input.CommandBinding> est appelée.  Ce gestionnaire exécute l’action de la commande.  
+ <xref:System.Windows.Input.RoutedCommand> est la [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] implémentation de <xref:System.Windows.Input.ICommand>.  Lorsqu’un <xref:System.Windows.Input.RoutedCommand> est exécutée, un <xref:System.Windows.Input.CommandManager.PreviewExecuted> et un <xref:System.Windows.Input.CommandManager.Executed> déclenché sur la cible de commande, le tunnel et le se propagent dans l’arborescence d’éléments comme tout autre entrée.  Si une cible de commande n’est pas définie, l’élément qui a le focus clavier est la cible de commande.  La logique qui exécute la commande est attachée à un <xref:System.Windows.Input.CommandBinding>.  Quand une <xref:System.Windows.Input.CommandManager.Executed> événement atteint un <xref:System.Windows.Input.CommandBinding> pour une commande spécifique, le <xref:System.Windows.Input.ExecutedRoutedEventHandler> sur le <xref:System.Windows.Input.CommandBinding> est appelée.  Ce gestionnaire exécute l’action de la commande.  
   
  Pour plus d’informations sur l’exécution des commandes, consultez [Vue d’ensemble des commandes](../../../../docs/framework/wpf/advanced/commanding-overview.md).  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Fournit une bibliothèque de commandes communes qui se compose de <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.MediaCommands>, <xref:System.Windows.Input.ComponentCommands>, <xref:System.Windows.Input.NavigationCommands>, et <xref:System.Windows.Documents.EditingCommands>, ou vous pouvez définir les vôtres.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Fournit une bibliothèque de commandes communes qui se compose de <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.MediaCommands>, <xref:System.Windows.Input.ComponentCommands>, <xref:System.Windows.Input.NavigationCommands>, et <xref:System.Windows.Documents.EditingCommands>, ou vous pouvez définir les vôtres.  
   
  L’exemple suivant montre comment configurer un <xref:System.Windows.Controls.MenuItem> afin que lorsque l’utilisateur clique dessus, il appelle la <xref:System.Windows.Input.ApplicationCommands.Paste%2A> commande sur le <xref:System.Windows.Controls.TextBox>, en supposant que le <xref:System.Windows.Controls.TextBox> a le focus clavier.  
   

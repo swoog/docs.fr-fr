@@ -1,23 +1,24 @@
 ---
 title: Scenario1
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: cb678fda-79aa-4495-833b-ef570539d4c3
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 50efd36e1d54bd456e184c42d62aded14e510947
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 60f6571d7702236ee24c0cb9da2aa4121feddcf0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="scenario"></a>Scénario
 Cette section contient des exemples de scénarios [!INCLUDE[wf](../../../../includes/wf-md.md)].  
@@ -39,7 +40,7 @@ Cette section contient des exemples de scénarios [!INCLUDE[wf](../../../../incl
  Montre comment implémenter un scénario de chronomètre simple à l'aide d'une combinaison des activités <xref:System.Activities.Statements.Flowchart> et <xref:System.Activities.Statements.Pick>.  
   
  [Intégration de WPF et WF en XAML](../../../../docs/framework/windows-workflow-foundation/samples/wpf-and-wf-integration-in-xaml.md)  
- Montre comment créer une application qui utilise les fonctionnalités [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] et [!INCLUDE[wf](../../../../includes/wf-md.md)] dans un document XAML unique. Pour ce faire, l'exemple utilise [!INCLUDE[wf](../../../../includes/wf-md.md)] et l'extensibilité XAML.  
+ Montre comment créer une application qui utilise Windows Presentation Foundation (WPF) et [!INCLUDE[wf](../../../../includes/wf-md.md)] fonctionnalités dans un document XAML unique. Pour ce faire, l'exemple utilise [!INCLUDE[wf](../../../../includes/wf-md.md)] et l'extensibilité XAML.  
   
  [Boîte à outils de l’ensemble de règles externe](../../../../docs/framework/windows-workflow-foundation/samples/external-ruleset-toolkit.md)  
  Montre comment gérer et modifier des ensembles de règles dans une base de données et accéder à ces ensembles de règles depuis un workflow au moment de l'exécution.

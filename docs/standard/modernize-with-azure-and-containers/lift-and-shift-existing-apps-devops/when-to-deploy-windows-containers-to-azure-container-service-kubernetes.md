@@ -1,18 +1,19 @@
 ---
-title: "Moment de déployer des conteneurs Windows dans le Service de conteneur Azure (autrement dit, Kubernetes)"
-description: "Architecture de Microservices .NET pour les Applications .NET en conteneur | Moment de déployer des conteneurs Windows dans le Service de conteneur Azure (autrement dit, Kubernetes)"
+title: Moment de déployer des conteneurs Windows dans le Service de conteneur Azure (autrement dit, Kubernetes)
+description: Architecture de Microservices .NET pour les Applications .NET en conteneur | Moment de déployer des conteneurs Windows dans le Service de conteneur Azure (autrement dit, Kubernetes)
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
 ms.prod: .net
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f0a096712e14e506403961f0b9283ca4b707cbda
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: cccf78ef5b7683a2eefa3efab50a7bbe1bffda18
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="when-to-deploy-windows-containers-to-azure-container-service-that-is-kubernetes"></a>Moment de déployer des conteneurs Windows dans le Service de conteneur Azure (autrement dit, Kubernetes)
 
