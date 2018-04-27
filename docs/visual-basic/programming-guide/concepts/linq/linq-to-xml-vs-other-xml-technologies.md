@@ -1,22 +1,23 @@
 ---
-title: "LINQ to XML, différences par rapport à Autres Technologies2 XML"
-ms.custom: 
+title: LINQ to XML, différences par rapport à Autres Technologies2 XML
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 72ce3a82-ffc6-488c-98e7-b9b40f3591ec
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: ba342b68828d427bfbddf51fa3d2da5d3c614dae
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: fdc9c950be0d0ec573b093a72b1e7f3b0da861b7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="linq-to-xml-vs-other-xml-technologies"></a>LINQ to XML, différences par rapport à d'autres technologies XML
 Cette rubrique compare [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] aux technologies XML suivantes : <xref:System.Xml.XmlReader>, XSLT, MSXML et XmlLite. Ces informations peuvent vous aider à décider de la technologie à utiliser.  
@@ -50,7 +51,7 @@ Cette rubrique compare [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] aux
 ## <a name="linq-to-xml-vs-msxml"></a>LINQ to XML, différences par rapport à MSXML  
  MSXML est une technologie compatible COM pour le traitement du code XML qui est fournie avec Microsoft Windows. MSXML fournit une implémentation native du modèle DOM avec prise en charge de XPath et XSLT. Il contient également l'analyseur sans mise en cache et basé sur les événements SAX2.  
   
- MSXML offre de bonnes performances, est sécurisé par défaut dans la plupart des scénarios et est accessible dans Internet Explorer pour l'exécution de traitement XML du côté client dans les applications de style AJAX. MSXML peut être utilisé à partir de n'importe quel langage de programmation qui prend en charge COM, notamment C++, JavaScript et [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 6.0.  
+ MSXML offre de bonnes performances, est sécurisé par défaut dans la plupart des scénarios et est accessible dans Internet Explorer pour l'exécution de traitement XML du côté client dans les applications de style AJAX. MSXML peut être utilisée à partir de n’importe quel langage de programmation qui prend en charge COM, notamment C++, JavaScript et Visual Basic 6.0.  
   
  L'utilisation de MSXML n'est pas recommandée dans le code managé basé sur le Common Language Runtime (CLR).  
   

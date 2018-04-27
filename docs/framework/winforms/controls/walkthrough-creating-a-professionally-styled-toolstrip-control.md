@@ -1,12 +1,13 @@
 ---
 title: "Procédure pas à pas : création d'un contrôle ToolStrip de style professionnel"
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - toolbars [Windows Forms], walkthroughs
 - ToolStrip control [Windows Forms], creating professionally styled controls
 ms.assetid: b52339ae-f1d3-494e-996e-eb455614098a
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ab9adb72a174da25298b6ea104b002914de0cc40
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 18ffb09e581b830329a0d32f11ae09d8b0f68788
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a>Procédure pas à pas : création d'un contrôle ToolStrip de style professionnel
 Vous pouvez donner à votre application <xref:System.Windows.Forms.ToolStrip> contrôle un aspect professionnel et le comportement en écrivant votre propre classe dérivée de la <xref:System.Windows.Forms.ToolStripProfessionalRenderer> type.  
@@ -49,7 +51,7 @@ Vous pouvez donner à votre application <xref:System.Windows.Forms.ToolStrip> co
 ## <a name="prerequisites"></a>Prérequis  
  Pour exécuter cette procédure pas à pas, vous avez besoin des éléments suivants :  
   
--   Des autorisations suffisantes pour pouvoir créer et exécuter des projets d’application Windows Forms sur l’ordinateur où [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] est installé.  
+-   Autorisations suffisantes pour pouvoir créer et exécuter des projets d’application Windows Forms sur l’ordinateur où Visual Studio est installé.  
   
 ## <a name="creating-a-windows-control-library-project"></a>Création d’un projet de bibliothèque de contrôles Windows  
  La première étape consiste à créer le projet de bibliothèque de contrôles.  
@@ -80,7 +82,7 @@ Vous pouvez donner à votre application <xref:System.Windows.Forms.ToolStrip> co
     |Station d' accueil|<xref:System.Windows.Forms.DockStyle.Bottom>|  
     |Police|`Tahoma, 10pt, style=Bold`|  
     |GripStyle|<xref:System.Windows.Forms.ToolStripGripStyle.Hidden>|  
-    |LayoutStyle|<xref:System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow>|  
+    |LayoutStyle a été|<xref:System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow>|  
     |Padding|`0, 7, 0, 0`|  
     |RenderMode|<xref:System.Windows.Forms.ToolStripRenderMode.Professional>|  
   
@@ -99,7 +101,7 @@ Vous pouvez donner à votre application <xref:System.Windows.Forms.ToolStrip> co
     |ImageTransparentColor|`238, 238, 238`|  
     |Marge|`0, 0, 0, 0`|  
     |Padding|`3, 3, 3, 3`|  
-    |Texte|**Mail**|  
+    |Texte|**messagerie**|  
     |TextAlign|<xref:System.Drawing.ContentAlignment.MiddleLeft>|  
   
 5.  Répétez l’étape 7 pour les trois autres <xref:System.Windows.Forms.ToolStripButton> contrôles.  

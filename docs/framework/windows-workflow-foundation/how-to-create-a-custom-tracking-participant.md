@@ -1,29 +1,30 @@
 ---
-title: "Procédure : créer un participant de suivi personnalisé"
-ms.custom: 
+title: 'Procédure : créer un participant de suivi personnalisé'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1b612c7e-2381-4a7c-b07a-77030415f2a3
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 345fd696559ba52d41874ff774bd46a2d37f6e6f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d53035c2fb41800a91d3cdea134ae811a09fa3e9
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-create-a-custom-tracking-participant"></a>Procédure : créer un participant de suivi personnalisé
-Le suivi de workflow offre une visibilité dans l'état d'exécution de workflow. L'exécution de workflow émet des enregistrements de suivi qui décrivent les événements de cycle de vie du workflow, les événements de cycle de vie de l'activité, la reprise de signet et les erreurs. Ces enregistrements de suivi sont consommés par les participants de suivi. [!INCLUDE[wf](../../../includes/wf-md.md)] inclut un participant de trace standard qui écrit des enregistrements de suivi en tant qu'événements de suivi d'événements pour Windows (ETW). Si cela ne répond pas à vos besoins, vous pouvez également écrire un participant de suivi personnalisé. Cette étape du didacticiel décrit comment créer un participant de suivi et un modèle de suivi qui capturent la sortie des activités de `WriteLine` afin qu'elles puissent être affichées à l'utilisateur.  
+Le suivi de workflow offre une visibilité dans l'état d'exécution de workflow. L'exécution de workflow émet des enregistrements de suivi qui décrivent les événements de cycle de vie du workflow, les événements de cycle de vie de l'activité, la reprise de signet et les erreurs. Ces enregistrements de suivi sont consommés par les participants de suivi. Windows Workflow Foundation (WF) inclut un participant de suivi standard qui écrit des enregistrements de suivi en tant qu’événements de suivi d’événements pour Windows (ETW). Si cela ne répond pas à vos besoins, vous pouvez également écrire un participant de suivi personnalisé. Cette étape du didacticiel décrit comment créer un participant de suivi et un modèle de suivi qui capturent la sortie des activités de `WriteLine` afin qu'elles puissent être affichées à l'utilisateur.  
   
 > [!NOTE]
 >  Chaque rubrique du didacticiel de mise en route dépend des rubriques précédentes. Pour effectuer cette rubrique, vous devez d'abord terminer les rubriques précédentes. Pour télécharger une version complète ou consulter une procédure pas à pas vidéo du didacticiel, consultez [Windows Workflow Foundation (WF45) - didacticiel de mise en route](http://go.microsoft.com/fwlink/?LinkID=248976).  
@@ -38,7 +39,7 @@ Le suivi de workflow offre une visibilité dans l'état d'exécution de workflow
   
 -   [Pour générer et exécuter l’application](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_BuildAndRun)  
   
-###  <a name="BKMK_CustomTrackingParticipant"></a>Pour créer le participant de suivi personnalisé  
+###  <a name="BKMK_CustomTrackingParticipant"></a> Pour créer le participant de suivi personnalisé  
   
 1.  Avec le bouton droit **NumberGuessWorkflowHost** dans **l’Explorateur de solutions** et choisissez **ajouter**, **classe**. Type `StatusTrackingParticipant` dans les **nom** , puis cliquez sur **ajouter**.  
   
@@ -114,7 +115,7 @@ Le suivi de workflow offre une visibilité dans l'état d'exécution de workflow
   
      Si aucun modèle de suivi n'est spécifié, le modèle de suivi par défaut est utilisé. Lorsque le modèle de suivi par défaut est utilisé, les enregistrements de suivi sont émis pour tous les `ActivityStates`. Étant donné que nous devons uniquement capturer le texte une seule fois pendant le cycle de vie de l'activité `WriteLine`, nous extrayons uniquement le texte de l'état `ActivityStates.Executing`. Dans [pour créer le modèle de suivi et inscrire le participant de suivi](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_TrackingProfile), un modèle de suivi est créé qui spécifie que seules `WriteLine` `ActivityStates.Executing` des enregistrements de suivi sont émis.  
   
-###  <a name="BKMK_TrackingProfile"></a>Pour créer le modèle de suivi et inscrire le participant de suivi  
+###  <a name="BKMK_TrackingProfile"></a> Pour créer le modèle de suivi et inscrire le participant de suivi  
   
 1.  Avec le bouton droit **WorkflowHostForm** dans **l’Explorateur de solutions** et choisissez **afficher le Code**.  
   
@@ -235,7 +236,7 @@ Le suivi de workflow offre une visibilité dans l'état d'exécution de workflow
         // Workflow lifecycle handlers...  
     ```  
   
-###  <a name="BKMK_DisplayTracking"></a>Pour afficher les informations de suivi  
+###  <a name="BKMK_DisplayTracking"></a> Pour afficher les informations de suivi  
   
 1.  Avec le bouton droit **WorkflowHostForm** dans **l’Explorateur de solutions** et choisissez **afficher le Code**.  
   
@@ -330,7 +331,7 @@ Le suivi de workflow offre une visibilité dans l'état d'exécution de workflow
     }  
     ```  
   
-###  <a name="BKMK_BuildAndRun"></a>Pour générer et exécuter l’application  
+###  <a name="BKMK_BuildAndRun"></a> Pour générer et exécuter l’application  
   
 1.  Appuyez sur Ctrl+Maj+B pour générer l'application.  
   

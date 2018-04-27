@@ -1,12 +1,13 @@
 ---
-title: "Assistant Débogage managé contextSwitchDeadlock"
-ms.custom: 
+title: Assistant Débogage managé contextSwitchDeadlock
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - deadlocks [.NET Framework]
@@ -19,16 +20,17 @@ helpviewer_keywords:
 - message pumping
 - context switching deadlocks
 ms.assetid: 26dfaa15-9ddb-4b0a-b6da-999bba664fa6
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 816afbae0cca18de24c11152541a509b54c119b8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2f3ee9aef3bc824ee25e577a5dbd14aeaa210be3
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="contextswitchdeadlock-mda"></a>Assistant Débogage managé contextSwitchDeadlock
 L'Assistant Débogage managé `contextSwitchDeadlock` est activé quand un interblocage est détecté pendant une tentative de transition de contexte COM.  
@@ -54,7 +56,7 @@ L'Assistant Débogage managé `contextSwitchDeadlock` est activé quand un inter
  Pour déterminer si l'Assistant Débogage managé est faussement activé, désactivez tous les points d'arrêt, redémarrez l'application et laissez-la s'exécuter sans l'interrompre. Si l'Assistant Débogage managé n'est pas activé, l'activation initiale était probablement fausse. Dans ce cas, désactivez l'Assistant Débogage managé pour éviter des interférences avec la session de débogage.  
   
 > [!NOTE]
->  Cet Assistant Débogage managé se trouve dans l'ensemble par défaut de [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] et versions ultérieures. Quand le processus d'hébergement est activé dans [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], vous ne pouvez pas désactiver les Assistants Débogage managé qui se trouvent dans l'ensemble par défaut. Le processus d'hébergement étant activé par défaut, il doit être désactivé explicitement. Pour plus d’informations sur la désactivation des Assistants Débogage managé, consultez « Activation et désactivation des Assistants Débogage managé » dans [Diagnostic d’erreurs avec les Assistants de débogage managés](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md).  
+>  Cet Assistant Débogage managé se trouve dans l'ensemble par défaut de [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] et versions ultérieures. Lorsque le processus d’hébergement est activé dans Visual Studio, vous ne pouvez pas désactiver les Assistants Débogage managé qui est définies dans la valeur par défaut. Le processus d'hébergement étant activé par défaut, il doit être désactivé explicitement. Pour plus d’informations sur la désactivation des Assistants Débogage managé, consultez « Activation et désactivation des Assistants Débogage managé » dans [Diagnostic d’erreurs avec les Assistants de débogage managés](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md).  
   
 ## <a name="resolution"></a>Résolution  
  Appliquez les règles COM relatives au pompage des messages de thread cloisonné.  

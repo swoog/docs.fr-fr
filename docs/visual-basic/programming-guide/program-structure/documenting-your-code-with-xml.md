@@ -16,11 +16,11 @@ ms.assetid: a0d35dc7-c5f9-4d74-92ff-a1c6f28d5235
 caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 645dd4a8a9d1c78fd54f0f31ad0efd772b671d39
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: d132fa514008d072158a0e6bedaff511c55b18c0
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="documenting-your-code-with-xml-visual-basic"></a>Documentation de votre code avec le langage XML (Visual Basic)
 En Visual Basic, vous pouvez documenter votre code à l’aide de XML  
@@ -40,7 +40,7 @@ En Visual Basic, vous pouvez documenter votre code à l’aide de XML
   
     -   L’attribut `cref` peut être joint à n’importe quelle balise pour fournir une référence à un élément de code. Le compilateur vérifie l’existence de cet élément de code. Si la vérification échoue, le compilateur émet un avertissement. Le compilateur respecte également les `Imports` instructions lorsque vous recherchez un type décrit dans le `cref` attribut.  
   
-    -   Le \<Résumé > balise est utilisée par IntelliSense dans [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] pour afficher des informations supplémentaires sur un type ou membre.  
+    -   La \<Résumé > balise est utilisée par IntelliSense dans Visual Studio pour afficher des informations supplémentaires sur un type ou membre.  
   
 ## <a name="related-sections"></a>Rubriques connexes  
  Pour plus d’informations sur la création d’un fichier XML avec des commentaires de documentation, consultez les rubriques suivantes :  

@@ -1,27 +1,29 @@
 ---
 title: Planification des performances des applications
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - applications [WPF], optimizing
 - WPF application [WPF], optimizing
 ms.assetid: c91bd0c5-a193-46ff-9da1-eb7a3a76a3b3
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6bdb140d90de02fa817c55a05f40e57fcd0d636c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 15130ac57b0df2ab1632ad8ec31ae5e350afdfec
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="planning-for-application-performance"></a>Planification des performances des applications
 La réussite d’atteindre vos objectifs de performances dépend du degré de l’élaboration de votre stratégie de performances. La planification est la première étape du développement d’un produit. Cette rubrique décrit quelques règles simples pour le développement d’une stratégie de bonnes performances.  
@@ -36,12 +38,12 @@ La réussite d’atteindre vos objectifs de performances dépend du degré de l�
  Toujours conserver le cycle de mesure, investigation et ajustement/correction pendant votre cycle de développement d’applications. À partir du début à la fin du cycle de développement, vous devez mesurer les performances de votre application dans un environnement fiable et stable. Vous devez éviter les variations provoquées par des facteurs externes. Par exemple, lorsque vous testez les performances, vous devez désactiver un antivirus ou une mise à jour automatique, telles que SMS, pour ne pas affecter les performances des résultats de tests. Une fois que vous avez mesuré les performances de votre application, vous devez identifier les modifications qui seront traduiront améliorations les plus importantes. Une fois que vous avez modifié votre application, démarrez le cycle.  
   
 ## <a name="make-performance-tuning-an-iterative-process"></a>Un processus itératif de réglage des performances  
- Vous devez connaître le coût relatif de chaque fonctionnalité que vous utilisez. Par exemple, l’utilisation de la réflexion dans [!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)] est généralement très gourmande en termes de ressources informatiques, vous pouvez utiliser judicieusement. Cela ne signifie pas éviter l’utilisation de la réflexion, uniquement que vous devez être prudent à équilibrer les besoins de performances de votre application avec les exigences de performance de fonctionnalités que vous utilisez.  
+ Vous devez connaître le coût relatif de chaque fonctionnalité que vous utilisez. Par exemple, l’utilisation de la réflexion de Microsoft .NET Framework est généralement gourmande en ressources informatiques, de performances et vous devez utiliser judicieusement. Cela ne signifie pas éviter l’utilisation de la réflexion, uniquement que vous devez être prudent à équilibrer les besoins de performances de votre application avec les exigences de performance de fonctionnalités que vous utilisez.  
   
 ## <a name="build-towards-graphical-richness"></a>La richesse graphique  
  Une technique de clé pour la création d’une approche évolutive vers la réalisation des [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] des performances des applications consiste à générer richesse graphique et la complexité. Commencez toujours par utiliser les ressources les moins gourmandes en performances pour atteindre vos objectifs de scénario. Une fois que vous atteindre ces objectifs, richesse graphique à l’aide de plus de fonctionnalités exigeantes, toujours vos objectifs en n’oubliant pas. N’oubliez pas, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] est une plateforme très riche et propose de puissantes fonctionnalités de graphique. À l’aide de fonctionnalités exigeantes sans prendre en considération peut avoir un impact négatif sur les performances de votre application globale.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]les contrôles sont par nature extensibles en permettant la personnalisation de la poussée de leur apparence sans modification de leur comportement de contrôle. En tirant parti des styles, les modèles de données et les modèles de contrôle, vous pouvez créer et évoluer une personnalisable [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] qui s’adapte à vos besoins.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] les contrôles sont par nature extensibles en permettant la personnalisation de la poussée de leur apparence sans modification de leur comportement de contrôle. En tirant parti des styles, les modèles de données et les modèles de contrôle, vous pouvez créer et évoluer une personnalisable [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] qui s’adapte à vos besoins.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Optimisation des performances des applications WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)  

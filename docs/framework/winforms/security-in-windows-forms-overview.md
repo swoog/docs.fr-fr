@@ -1,12 +1,13 @@
 ---
-title: "Vue d'ensemble de la sécurité dans les Windows Forms"
-ms.custom: 
+title: Vue d'ensemble de la sécurité dans les Windows Forms
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - code access security [Windows Forms], Windows Forms
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e56ae77a36ce0000fd518a3324ab5e5b8409d1d4
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 57f46620e7b98bb1a4c120684075dbe065db9714
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="security-in-windows-forms-overview"></a>Vue d'ensemble de la sécurité dans les Windows Forms
 Avant la publication de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], tout code exécuté sur l'ordinateur d'un utilisateur avait les mêmes droits ou autorisations d'accéder aux ressources que l'utilisateur de l'ordinateur. Par exemple, si l'utilisateur était autorisé à accéder au système de fichiers, le code était autorisé à accéder au système de fichiers. Si l'utilisateur était autorisé à accéder à une base de données, le code était autorisé à accéder à cette base de données. Bien que ces droits ou autorisations puissent être acceptables pour le code dans les exécutables que l'utilisateur a explicitement installé sur l'ordinateur local, ils peuvent ne pas être acceptables pour le code potentiellement malveillant provenant d'Internet ou d'un intranet local. Ce code ne doit pas pouvoir accéder aux ressources de l'ordinateur de l'utilisateur sans autorisation.  
@@ -60,7 +62,7 @@ Avant la publication de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.
   
  Quand vous demandez des autorisations facultatives, vous devez gérer les exceptions de sécurité qui seront générées si votre application effectue une action qui nécessite des autorisations qui ne lui ont pas été accordées. Une gestion appropriée de <xref:System.Security.SecurityException> garantit que votre application peut continuer à fonctionner. Votre application peut utiliser l’exception pour déterminer si une fonctionnalité doit être désactivée pour l’utilisateur. Par exemple, une application peut désactiver l’option de menu **Enregistrer** si l’autorisation de fichier nécessaire n’est pas accordée.  
   
- Il est parfois difficile de savoir si vous avez déclaré toutes les autorisations requises. Par exemple, un appel de méthode apparemment anodin peut accéder au système de fichiers à un moment donné de son exécution. Si vous ne déployez pas votre application avec toutes les autorisations requises, les tests peuvent réussir lors du débogage sur votre bureau, mais échouer lors du déploiement. Le Kit SDK [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] et [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] contiennent tous deux des outils permettant de calculer les autorisations dont une application a besoin : l'outil en ligne de commande MT.exe et la fonctionnalité Calculer les autorisations de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], respectivement.  
+ Il est parfois difficile de savoir si vous avez déclaré toutes les autorisations requises. Par exemple, un appel de méthode apparemment anodin peut accéder au système de fichiers à un moment donné de son exécution. Si vous ne déployez pas votre application avec toutes les autorisations requises, les tests peuvent réussir lors du débogage sur votre bureau, mais échouer lors du déploiement. Les deux le [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] SDK et [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] contiennent des outils permettant de calculer les autorisations requises par une application : il commande MT.exe outil en ligne et la fonctionnalité calculer les autorisations de Visual Studio, respectivement.  
   
  Les rubriques suivantes décrivent les fonctionnalités de sécurité supplémentaires de Windows Forms.  
   
@@ -86,12 +88,12 @@ Avant la publication de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.
   
  La technologie adoptée dépendra de votre environnement de déploiement. Pour plus d’informations, consultez [Choix d’une stratégie de déploiement ClickOnce](/visualstudio/deployment/choosing-a-clickonce-deployment-strategy).  
   
- Par défaut, les applications [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] déployées à l'aide des outils de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ou du Kit SDK [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] (Mage.exe et MageUI.exe) sont configurées pour s'exécuter sur un ordinateur client qui dispose de la confiance totale. Si vous déployez votre application avec une confiance partielle ou en utilisant uniquement certaines autorisations supplémentaires, vous devez modifier ce comportement par défaut. Vous pouvez pour cela utiliser [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ou l'outil MageUI.exe du Kit SDK [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] quand vous configurez votre déploiement. Pour plus d'informations sur l'utilisation de MageUI.exe, consultez la rubrique Procédure pas à pas : déploiement d'une application ClickOnce à partir de la ligne de commande.  Consultez également [Comment : définir des autorisations personnalisées pour une application ClickOnce](http://msdn.microsoft.com/library/hafybdaa\(v=vs.110\)) ou [Comment : définir des autorisations personnalisées pour une application ClickOnce](http://msdn.microsoft.com/library/hafybdaa\(v=vs.120\)).  
+ Par défaut, [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] applications déployées à l’aide de Visual Studio ou le [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] outils de kit de développement logiciel (Mage.exe et MageUI.exe) sont configurés pour s’exécuter sur un ordinateur client qui dispose de la confiance totale. Si vous déployez votre application avec une confiance partielle ou en utilisant uniquement certaines autorisations supplémentaires, vous devez modifier ce comportement par défaut. Vous pouvez le faire avec Visual Studio ou le [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] outil du Kit de développement logiciel MageUI.exe lorsque vous configurez votre déploiement. Pour plus d'informations sur l'utilisation de MageUI.exe, consultez la rubrique Procédure pas à pas : déploiement d'une application ClickOnce à partir de la ligne de commande.  Consultez également [Comment : définir des autorisations personnalisées pour une application ClickOnce](http://msdn.microsoft.com/library/hafybdaa\(v=vs.110\)) ou [Comment : définir des autorisations personnalisées pour une application ClickOnce](http://msdn.microsoft.com/library/hafybdaa\(v=vs.120\)).  
   
  Pour plus d’informations sur les aspects de sécurité dans [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] et sur l’élévation d’autorisations, consultez [Déploiement et sécurité ClickOnce](/visualstudio/deployment/securing-clickonce-applications). Pour plus d’informations sur le déploiement d’applications approuvées, consultez [Vue d’ensemble du déploiement d’applications approuvées](/visualstudio/deployment/trusted-application-deployment-overview).  
   
 ### <a name="testing-the-application"></a>Test de l'application  
- Si vous avez déployé votre application Windows Forms à l'aide de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], vous pouvez activer le débogage avec confiance partielle ou un jeu d'autorisations restreint à partir de l'environnement de développement.  Consultez également [Comment : déboguer une application ClickOnce avec des autorisations restreintes](http://msdn.microsoft.com/library/593zkfdf\(v=vs.110\)) ou [Comment : déboguer une application ClickOnce avec des autorisations restreintes](http://msdn.microsoft.com/library/593zkfdf\(v=vs.120\)).  
+ Si vous avez déployé votre application Windows Forms à l’aide de Visual Studio, vous pouvez activer le débogage de confiance partielle ou un jeu à partir de l’environnement de développement d’autorisations restreintes.  Consultez également [Comment : déboguer une application ClickOnce avec des autorisations restreintes](http://msdn.microsoft.com/library/593zkfdf\(v=vs.110\)) ou [Comment : déboguer une application ClickOnce avec des autorisations restreintes](http://msdn.microsoft.com/library/593zkfdf\(v=vs.120\)).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Sécurité de Windows Forms](../../../docs/framework/winforms/windows-forms-security.md)  

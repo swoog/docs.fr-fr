@@ -15,11 +15,11 @@ ms.assetid: 3ffd1bdf-1b8d-47f5-87eb-75b659f64294
 caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f3f9d7fb51198041356cfc68d49cc703dfdf78b5
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: a2c418855cd2e79c31301705706ff1b98f119a97
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="com-interop-visual-basic"></a>COM Interop (Visual Basic)
 Le modèle COM (Component Object Model) permet à un objet d’exposer ses fonctionnalités à d’autres composants et d’héberger des applications. La plupart des logiciels actuels incluent des objets COM. Bien que les assemblys .NET représentent le meilleur choix pour les nouvelles applications, vous devrez peut-être parfois utiliser des objets COM. Cette section décrit certains des problèmes liés à la création et l’utilisation des objets COM avec Visual Basic.  
@@ -32,7 +32,7 @@ Le modèle COM (Component Object Model) permet à un objet d’exposer ses fonct
  Décrit la procédure à suivre pour ajouter des références aux objets COM qui ont des bibliothèques de types.  
   
  [Guide pratique : utiliser les contrôles ActiveX](../../../visual-basic/programming-guide/com-interop/how-to-work-with-activex-controls.md)  
- Montre comment utiliser des contrôles ActiveX existants pour ajouter des fonctionnalités à la boîte à outils [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
+ Montre comment utiliser des contrôles ActiveX existants pour ajouter des fonctionnalités à la boîte à outils Visual Studio.  
   
  [Procédure pas à pas : appel des API Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)  
  Vous guide tout au long du processus d’appel des API qui font partie du système d’exploitation Windows.  

@@ -26,11 +26,11 @@ ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4d288d321063512f91ad94b417bb1a6bf38c9ef9
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 2e31605f428f4e1dc58ee3332977f14dfd394489
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="add-ins-and-extensibility"></a>Compléments et extensibilité
 <a name="top"></a> Les compléments fournissent des fonctionnalités ou des services étendus pour une application hôte. Le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] fournit un modèle de programmation que les développeurs peuvent utiliser pour développer des compléments et les activer dans leur application hôte. Le modèle permet de réaliser ceci en construisant un pipeline de communication entre l'hôte et le complément. Le modèle est implémenté à l'aide des types des espaces de noms <xref:System.AddIn>, <xref:System.AddIn.Hosting>, <xref:System.AddIn.Pipeline>et <xref:System.AddIn.Contract> .  
@@ -54,7 +54,7 @@ ms.lasthandoff: 02/01/2018
   
  L'illustration suivante présente le pipeline.  
   
- ![Ajouter &#45; dans le modèle de pipeline. ] (../../../docs/framework/add-ins/media/addin1.png "AddIn1")  
+ ![Ajoutez&#45;dans le modèle de pipeline. ] (../../../docs/framework/add-ins/media/addin1.png "AddIn1")  
 Pipeline de complément  
   
  Les assemblys pour ces segments ne doivent pas obligatoirement se trouver dans le même domaine d'application. Vous pouvez charger un complément dans son propre nouveau domaine d'application, dans un domaine d'application existant ou même dans le domaine d'application de l'hôte. Vous pouvez charger plusieurs compléments dans le même domaine d'application, ce qui permet aux compléments de partager des ressources et des contextes de sécurité.  
@@ -116,7 +116,7 @@ Pipeline de complément
   
 |Titre|Description|  
 |-----------|-----------------|  
-|[Pipeline Development](../../../docs/framework/add-ins/pipeline-development.md)|Décrit le pipeline de communication de segments de l'application hôte vers le complément. Fournit des exemples de code dans des rubriques de procédure pas à pas qui décrivent comment construire le pipeline et déployer des segments vers le pipeline dans [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].|  
+|[Pipeline Development](../../../docs/framework/add-ins/pipeline-development.md)|Décrit le pipeline de communication de segments de l'application hôte vers le complément. Fournit des exemples de code dans les rubriques de procédure pas à pas qui décrivent comment construire le pipeline et déployer des segments vers le pipeline dans Visual Studio.|  
 |[Domaines d'application et assemblys](http://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346)|Décrit la relation entre les domaines d'application, qui fournissent une frontière d'isolement pour la sécurité, la fiabilité et le contrôle de version, et les assemblys.|  
   
  [Retour au début](#top)  

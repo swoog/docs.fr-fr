@@ -27,11 +27,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 61e4893ac32d2013b090a748078ec1e3a84ea3ac
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 77c69c5c39d90dcc28aa9c6084d84ace29df6f18
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Accès plus sécurisé aux fichiers et aux données dans les Windows Forms
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] utilise des autorisations pour aider à protéger les ressources et les données. L'emplacement où votre application peut lire ou écrire des données dépend des autorisations qui lui sont accordées. Quand votre application s'exécute dans un environnement de confiance partielle, vous n'avez peut-être pas accès à vos données ou vous devrez peut-être modifier la manière dont vous accédez aux données.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 04/26/2018
  Quand vous rencontrez une restriction de sécurité, vous avez deux options : déclarer l'autorisation (en supposant qu'elle a été accordée à votre application) ou utiliser une version de la fonctionnalité écrite pour fonctionner en mode de confiance partielle. Les sections suivantes décrivent comment gérer l'accès aux fichiers, aux bases de données et au Registre à partir d'applications qui s'exécutent dans un environnement de confiance partielle.  
   
 > [!NOTE]
->  Par défaut, les outils qui génèrent des déploiements [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] font en sorte que ces déploiements demandent par défaut une confiance totale aux ordinateurs sur lesquels ils s'exécutent. Si vous souhaitez bénéficier des avantages de sécurité supplémentaires offerts par l'exécution avec confiance partielle, vous devez modifier ce comportement par défaut dans [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ou dans l'un des outils du [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] (Mage.exe ou MageUI.exe). Pour plus d’informations sur la sécurité des Windows Forms et comment déterminer le niveau de confiance approprié pour votre application, consultez [sécurité dans la vue d’ensemble de Windows Forms](../../../docs/framework/winforms/security-in-windows-forms-overview.md).  
+>  Par défaut, les outils qui génèrent des déploiements [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] font en sorte que ces déploiements demandent par défaut une confiance totale aux ordinateurs sur lesquels ils s'exécutent. Si vous décidez que vous souhaitez que les avantages de sécurité de l’exécution en confiance partielle, vous devez modifier cette valeur par défaut dans Visual Studio ou l’un de le [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] outils (Mage.exe ou MageUI.exe). Pour plus d’informations sur la sécurité des Windows Forms et comment déterminer le niveau de confiance approprié pour votre application, consultez [sécurité dans la vue d’ensemble de Windows Forms](../../../docs/framework/winforms/security-in-windows-forms-overview.md).  
   
 ## <a name="file-access"></a>Accès aux fichiers  
  La classe <xref:System.Security.Permissions.FileIOPermission> contrôle l'accès aux fichiers et aux dossiers dans [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Par défaut, le système de sécurité n'accorde pas <xref:System.Security.Permissions.FileIOPermission> aux environnements de confiance partielle tels que les zones Intranet local et Internet. Cependant, une application qui nécessite l'accès aux fichiers peut quand même fonctionner dans ces environnements si vous modifiez la conception de votre application ou si vous utilisez des méthodes différentes pour accéder aux fichiers. Par défaut, la zone Intranet local est autorisée à accéder au même site et au même répertoire, à se reconnecter au site de son origine et à lire à partir de son répertoire d'installation. Par défaut, la zone Internet est autorisée uniquement à se reconnecter au site de son origine.  

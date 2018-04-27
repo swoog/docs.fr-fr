@@ -1,12 +1,13 @@
 ---
-title: "Procédure pas à pas : liaison de données dans des applications hybrides"
-ms.custom: 
+title: 'Procédure pas à pas : liaison de données dans des applications hybrides'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
-caps.latest.revision: "39"
+caps.latest.revision: 39
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c1348f3a57dd04d58298c9746b74a7c3a1baf30c
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: b8afe4732363ec61d73db13e9b190381cbd8f29d
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>Procédure pas à pas : liaison de données dans des applications hybrides
 Liaison d’une source de données à un contrôle est essentielle pour fournir aux utilisateurs d’accéder aux données sous-jacentes, que vous utilisiez [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ou [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Cette procédure pas à pas montre comment vous pouvez utiliser la liaison de données dans les applications hybrides qui incluent les deux [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] et [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contrôles.  
@@ -90,7 +92,7 @@ Liaison d’une source de données à un contrôle est essentielle pour fournir 
      [!code-xaml[WPFWithWFAndDatabinding#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#3)]  
   
 ## <a name="specifying-the-form-layout"></a>Spécification de la disposition du formulaire  
- La disposition du formulaire est définie par une grille de trois lignes et trois colonnes. <xref:System.Windows.Controls.Label>les contrôles sont fournis pour identifier chaque colonne dans la table Customers.  
+ La disposition du formulaire est définie par une grille de trois lignes et trois colonnes. <xref:System.Windows.Controls.Label> les contrôles sont fournis pour identifier chaque colonne dans la table Customers.  
   
 #### <a name="to-set-up-the-grid-layout"></a>Pour configurer la disposition de la grille  
   
@@ -127,7 +129,7 @@ Liaison d’une source de données à un contrôle est essentielle pour fournir 
      [!code-xaml[WPFWithWFAndDatabinding#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#7)]  
   
 ## <a name="adding-the-data-source-to-the-project"></a>Ajout de la source de données au projet  
- Avec [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)], vous pouvez facilement ajouter une source de données à votre projet. Cette procédure ajoute un jeu de données fortement typé à votre projet. Plusieurs autres classes de prise en charge, comme les adaptateurs de table pour chacune des tables choisies, sont également ajoutées.  
+ Avec Visual Studio, vous pouvez facilement ajouter une source de données à votre projet. Cette procédure ajoute un jeu de données fortement typé à votre projet. Plusieurs autres classes de prise en charge, comme les adaptateurs de table pour chacune des tables choisies, sont également ajoutées.  
   
 #### <a name="to-add-the-data-source"></a>Pour ajouter la source de données  
   

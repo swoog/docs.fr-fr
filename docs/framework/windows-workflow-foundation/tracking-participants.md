@@ -1,23 +1,24 @@
 ---
 title: Participants de suivi
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f13e360c-eeb7-4a49-98a0-8f6a52d64f68
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f335695c86037d792b17b98080b7a2e668ac1df5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0d67924061b5d87bdb2e3229d9bf956501036c30
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="tracking-participants"></a>Participants de suivi
 Les participants de traçage sont des points d'extensibilité qui permettent à un développeur de workflow d'accéder aux objets <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> et de les traiter. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] inclut un participant de trace standard qui écrit des enregistrements de suivi en tant qu'événements de suivi d'événements pour Windows (ETW). Si cela ne répond pas à vos besoins, vous pouvez également écrire un participant de suivi personnalisé.  
@@ -25,7 +26,7 @@ Les participants de traçage sont des points d'extensibilité qui permettent à 
 ## <a name="tracking-participants"></a>Participants de suivi  
  L'infrastructure de suivi permet l'application d'un filtre sur les enregistrements de suivi sortants pour permettre à un participant de s'abonner à un sous-ensemble des enregistrements. L'application d'un filtre s'effectue par l'intermédiaire d'un modèle de suivi.  
   
- [!INCLUDE[wf](../../../includes/wf-md.md)] dans [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] fournit un participant de suivi qui écrit les enregistrements de suivi dans une session ETW. Le participant est configuré sur un service de flux de travail en ajoutant un comportement spécifique au suivi dans un fichier de configuration. L'activation d'un participant au suivi ETW permet d'afficher les enregistrements de suivi dans l'Observateur d'événements. L'exemple du Kit de développement logiciel pour le suivi ETW constitue un bon moyen de se familiariser avec le suivi WF à l'aide du participant de suivi ETW.  
+ Windows Workflow Foundation (WF) dans [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] fournit un participant de suivi qui écrit les enregistrements de suivi dans une session ETW. Le participant est configuré sur un service de flux de travail en ajoutant un comportement spécifique au suivi dans un fichier de configuration. L'activation d'un participant au suivi ETW permet d'afficher les enregistrements de suivi dans l'Observateur d'événements. L'exemple du Kit de développement logiciel pour le suivi ETW constitue un bon moyen de se familiariser avec le suivi WF à l'aide du participant de suivi ETW.  
   
 ## <a name="etw-tracking-participant"></a>Participant de suivi ETW  
  [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] inclut un participant de suivi ETW qui écrit les enregistrements de suivi dans une session ETW. Cette opération est effectuée de façon très efficace avec un impact minimal sur les performances de l'application ou sur le débit du serveur. L'un des avantages de l'utilisation du participant de suivi ETW standard est que les enregistrements de suivi qu'il reçoit peuvent être affichés avec l'autre application et les journaux système dans l'observateur d'événements Windows.  

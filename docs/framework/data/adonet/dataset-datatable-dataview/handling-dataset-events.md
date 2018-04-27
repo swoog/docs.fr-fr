@@ -1,27 +1,29 @@
 ---
-title: "Gestion des événements de DataSet"
-ms.custom: 
+title: Gestion des événements de DataSet
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 54edefe0-bc38-419b-b486-3d8a0c356f13
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 820d93529fc12f3eeacd730cc66ec85ffd560ff9
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: aea9fc2caae675b77a8aad730869adb00f593baf
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="handling-dataset-events"></a>Gestion des événements de DataSet
 L'objet <xref:System.Data.DataSet> fournit trois événements : <xref:System.ComponentModel.MarshalByValueComponent.Disposed>, <xref:System.Data.DataSet.Initialized>et <xref:System.Data.DataSet.MergeFailed>.  
@@ -56,10 +58,10 @@ private static void DataSetMergeFailed(
 ## <a name="the-initialized-event"></a>Événement Initialized  
  L'événement <xref:System.Data.DataSet.Initialized> se produit après que le constructeur `DataSet` a initialisé une nouvelle instance du `DataSet`.  
   
- La propriété <xref:System.Data.DataSet.IsInitialized%2A> retourne `true` si le `DataSet` a terminé l'initialisation ; dans le cas contraire, elle retourne `false`. La méthode <xref:System.Data.DataSet.BeginInit%2A> , qui commence l'initialisation d'un `DataSet`, affecte à la propriété <xref:System.Data.DataSet.IsInitialized%2A> la valeur `false`. La méthode <xref:System.Data.DataSet.EndInit%2A> , qui termine l'initialisation du `DataSet`, lui affecte la valeur `true`. Ces méthodes sont utilisées par l'environnement de conception [!INCLUDE[vsprvs](../../../../../includes/vsprvs-md.md)] pour initialiser un `DataSet` utilisé par un autre composant. Vous ne les utiliserez pas couramment dans votre code.  
+ La propriété <xref:System.Data.DataSet.IsInitialized%2A> retourne `true` si le `DataSet` a terminé l'initialisation ; dans le cas contraire, elle retourne `false`. La méthode <xref:System.Data.DataSet.BeginInit%2A> , qui commence l'initialisation d'un `DataSet`, affecte à la propriété <xref:System.Data.DataSet.IsInitialized%2A> la valeur `false`. La méthode <xref:System.Data.DataSet.EndInit%2A> , qui termine l'initialisation du `DataSet`, lui affecte la valeur `true`. Ces méthodes sont utilisées par l’environnement de conception de Visual Studio pour initialiser un `DataSet` qui est utilisé par un autre composant. Vous ne les utiliserez pas couramment dans votre code.  
   
 ## <a name="the-disposed-event"></a>Événement Disposed  
- `DataSet` est dérivé de la classe <xref:System.ComponentModel.MarshalByValueComponent> , qui expose la méthode <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A> et l'événement <xref:System.ComponentModel.MarshalByValueComponent.Disposed> . Le <xref:System.ComponentModel.MarshalByValueComponent.Disposed> événement ajoute un gestionnaire d’événements pour écouter l’événement libéré sur le composant. Vous pouvez utiliser la <xref:System.ComponentModel.MarshalByValueComponent.Disposed> événement d’un `DataSet` si vous souhaitez exécuter code lorsque le <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A> méthode est appelée. <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A>Libère les ressources utilisées par le <xref:System.ComponentModel.MarshalByValueComponent>.  
+ `DataSet` est dérivé de la classe <xref:System.ComponentModel.MarshalByValueComponent> , qui expose la méthode <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A> et l'événement <xref:System.ComponentModel.MarshalByValueComponent.Disposed> . Le <xref:System.ComponentModel.MarshalByValueComponent.Disposed> événement ajoute un gestionnaire d’événements pour écouter l’événement libéré sur le composant. Vous pouvez utiliser la <xref:System.ComponentModel.MarshalByValueComponent.Disposed> événement d’un `DataSet` si vous souhaitez exécuter code lorsque le <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A> méthode est appelée. <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A> Libère les ressources utilisées par le <xref:System.ComponentModel.MarshalByValueComponent>.  
   
 > [!NOTE]
 >  Le `DataSet` et `DataTable` objets héritent de <xref:System.ComponentModel.MarshalByValueComponent> et prend en charge la <xref:System.Runtime.Serialization.ISerializable> interface pour la communication à distance. Ce sont les seuls objets ADO.NET qui peuvent être exécutés à distance. Pour plus d’informations, consultez [des objets distants](http://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58).  

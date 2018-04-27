@@ -1,27 +1,29 @@
 ---
-title: "Optimisation des performances : liaison de données"
-ms.custom: 
+title: 'Optimisation des performances : liaison de données'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - binding data [WPF], performance
 - data binding [WPF], performance
 ms.assetid: 1506a35d-c009-43db-9f1e-4e230ad5be73
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c420748a9361655eeb2df33ce8426d9f167d3414
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4b21089ea3f3aef8a934c78187b30f2576b8d39b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="optimizing-performance-data-binding"></a>Optimisation des performances : liaison de données
 La liaison de données [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] offre un moyen simple et cohérent pour les applications de présenter les données et d’interagir avec elles. Les éléments peuvent être liés à des données émanant de diverses sources de données sous la forme d’objets [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] et de [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)].  
@@ -34,7 +36,7 @@ La liaison de données [!INCLUDE[TLA#tla_winclient](../../../../includes/tlashar
 ## <a name="how-data-binding-references-are-resolved"></a>Comment les références de liaison de données sont résolues  
  Avant d’aborder les problèmes de performances de la liaison de données, il est utile d’explorer la façon dont le moteur de liaison de données [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] résout les références d’objet pour la liaison.  
   
- La source d’une liaison de données [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] peut être n’importe quel objet [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]. Vous pouvez créer une liaison avec les propriétés, sous-propriétés ou indexeurs d’un objet [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]. Les références de liaison sont résolues à l’aide [!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)] réflexion ou un <xref:System.ComponentModel.ICustomTypeDescriptor>. Voici trois méthodes permettant de résoudre les références d’objet pour la liaison.  
+ La source d’une liaison de données [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] peut être n’importe quel objet [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]. Vous pouvez créer une liaison avec les propriétés, sous-propriétés ou indexeurs d’un objet [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]. Les références de liaison sont résolues à l’aide d’une réflexion de Microsoft .NET Framework ou un <xref:System.ComponentModel.ICustomTypeDescriptor>. Voici trois méthodes permettant de résoudre les références d’objet pour la liaison.  
   
  La première méthode repose sur l’utilisation de la réflexion. Dans ce cas, le <xref:System.Reflection.PropertyInfo> objet est utilisé pour découvrir les attributs de la propriété et fournit l’accès aux métadonnées de propriété. Lorsque vous utilisez la <xref:System.ComponentModel.ICustomTypeDescriptor> interface, le moteur de liaison de données utilise cette interface pour accéder aux valeurs de propriété. Le <xref:System.ComponentModel.ICustomTypeDescriptor> interface est particulièrement utile dans les cas où l’objet ne dispose pas d’un ensemble statique de propriétés.  
   
@@ -51,7 +53,7 @@ La liaison de données [!INCLUDE[TLA#tla_winclient](../../../../includes/tlashar
 |**Liaison de la propriété Text d’un TextBlox**|**Temps de liaison (ms)**|**Temps de rendu -- liaison incluse (ms)**|  
 |--------------------------------------------------|-----------------------------|--------------------------------------------------|  
 |À une propriété d’un objet [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]|115|314|  
-|Pour une propriété d’un [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] objet qui implémente<xref:System.ComponentModel.INotifyPropertyChanged>|115|305|  
+|Pour une propriété d’un [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] objet qui implémente <xref:System.ComponentModel.INotifyPropertyChanged>|115|305|  
 |Pour un <xref:System.Windows.DependencyProperty> d’un <xref:System.Windows.DependencyObject>.|90|263|  
   
 <a name="Binding_to_Large_CLR_Objects"></a>   
@@ -74,7 +76,7 @@ La liaison de données [!INCLUDE[TLA#tla_winclient](../../../../includes/tlashar
 |**Liaison de données de la propriété ItemsSource**|**Temps de mise à jour pour 1 élément (ms)**|  
 |--------------------------------------|---------------------------------------|  
 |Pour un [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] <xref:System.Collections.Generic.List%601> objet|1 656|  
-|Pour un<xref:System.Collections.ObjectModel.ObservableCollection%601>|20|  
+|Pour un <xref:System.Collections.ObjectModel.ObservableCollection%601>|20|  
   
 <a name="Binding_IList_to_ItemsControl_not_IEnumerable"></a>   
 ## <a name="bind-ilist-to-itemscontrol-not-ienumerable"></a>Lier un objet IList à un objet ItemsControl non IEnumerable  

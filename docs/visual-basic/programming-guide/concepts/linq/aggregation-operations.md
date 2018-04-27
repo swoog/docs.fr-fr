@@ -1,22 +1,23 @@
 ---
-title: "Opérations d’agrégation (Visual Basic)"
-ms.custom: 
+title: Opérations d’agrégation (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0f47e92c-5dd2-4007-baf4-c5fe5dc3b4a8
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9d4b07eeb1d09d7db0f75d96629c816f66dbb128
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e2f4234b9f56794b9bfe6c56029ccc9c00ae0642
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="aggregation-operations-visual-basic"></a>Opérations d’agrégation (Visual Basic)
 Une opération d’agrégation calcule une valeur unique à partir d’une collection de valeurs. Par exemple, une opération d'agrégation peut être le calcul de la température quotidienne moyenne à partir des valeurs de température quotidiennes relevées sur un mois.  
@@ -42,12 +43,12 @@ Une opération d’agrégation calcule une valeur unique à partir d’une colle
 ## <a name="query-expression-syntax-examples"></a>Exemples de syntaxe d'expression de requête  
   
 ### <a name="average"></a>Average  
- Le code suivant exemple utilise le `Aggregate Into Average` clause dans [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] pour calculer la température moyenne dans un tableau de nombres qui représentent des températures.  
+ Le code suivant exemple utilise le `Aggregate Into Average` clause en Visual Basic pour calculer la température moyenne dans un tableau de nombres qui représentent des températures.  
   
  [!code-vb[CsLINQAggregating#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/aggregation-operations_1.vb)]  
   
 ### <a name="count"></a>Nombre  
- Le code suivant exemple utilise le `Aggregate Into Count` clause dans [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] pour compter le nombre de valeurs dans un tableau qui est supérieur ou égal à 80.  
+ Le code suivant exemple utilise le `Aggregate Into Count` clause en Visual Basic pour compter le nombre de valeurs dans un tableau qui est supérieur ou égal à 80.  
   
  [!code-vb[CsLINQAggregating#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/aggregation-operations_2.vb)]  
   

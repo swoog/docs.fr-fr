@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e5ad91fa70a743b7135648cb10c7c519e3559bdb
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 5f1c7449372ad012280b360c09017a15733fb95b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="configuring-services-using-configuration-files"></a>Configuration des services à l'aide de fichiers de configuration
 La configuration d'un service [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] avec un fichier de configuration vous donne la souplesse de fournir des données de point de terminaison et de comportement du service au point de déploiement au lieu qu'au moment du design. Cette rubrique esquisse les principales techniques disponibles.  
@@ -37,9 +37,9 @@ La configuration d'un service [!INCLUDE[indigo1](../../../includes/indigo1-md.md
 ## <a name="systemconfiguration-webconfig-and-appconfig"></a>System.Configuration : Web.config et App.config  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] utilise le système de configuration System.Configuration du [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
   
- Lorsque vous configurez un service dans [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], utilisez un fichier Web.config ou un fichier App.config pour spécifier les paramètres. Le choix du nom de fichier de configuration est déterminé par l'environnement d'hébergement que vous choisissez pour le service. Si vous utilisez IIS pour héberger votre service, utilisez un fichier Web.config. Si vous utilisez tout autre environnement d'hébergement, utilisez un fichier App.config.  
+ Lorsque vous configurez un service dans Visual Studio, vous devez utiliser un fichier Web.config ou un fichier App.config pour spécifier les paramètres. Le choix du nom de fichier de configuration est déterminé par l'environnement d'hébergement que vous choisissez pour le service. Si vous utilisez IIS pour héberger votre service, utilisez un fichier Web.config. Si vous utilisez tout autre environnement d'hébergement, utilisez un fichier App.config.  
   
- Dans [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], le fichier nommé App.config est utilisé pour créer le fichier de configuration final. Le nom final réellement utilisé pour la configuration dépend du nom de l'assembly. Par exemple, un assembly nommé "Cohowinery.exe" porte le nom de fichier de configuration final "Cohowinery.exe.config". Toutefois, vous devez seulement modifier le fichier App.config. Les modifications apportées à ce fichier sont automatiquement répercutées dans le fichier final de configuration de l'application, à la compilation.  
+ Dans Visual Studio, le fichier nommé App.config est utilisé pour créer le fichier de configuration finale. Le nom final réellement utilisé pour la configuration dépend du nom de l'assembly. Par exemple, un assembly nommé "Cohowinery.exe" porte le nom de fichier de configuration final "Cohowinery.exe.config". Toutefois, vous devez seulement modifier le fichier App.config. Les modifications apportées à ce fichier sont automatiquement répercutées dans le fichier final de configuration de l'application, à la compilation.  
   
  Pour utiliser un fichier App.config, le système de configuration fusionne le fichier App.config avec le contenu du fichier Machine.config lorsque l'application démarre et la configuration est appliquée. Ce mécanisme autorise la définition de paramètres à l'échelle de l'ordinateur dans le fichier Machine.config. Le fichier App.config peut être utilisé pour substituer les paramètres du fichier Machine.config ; vous pouvez également verrouiller les paramètres dans le fichier Machine.config afin qu'ils soient utilisés. Dans le cas de Web.config, le système de configuration fusionne les fichiers Web.config dans tous les répertoires qui mènent au répertoire de l'application dans la configuration qui est appliquée. [!INCLUDE[crabout](../../../includes/crabout-md.md)] la configuration et les priorités de paramètre, consultez les rubriques dans l'espace de noms <xref:System.Configuration> .  
   

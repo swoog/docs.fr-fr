@@ -1,27 +1,29 @@
 ---
 title: Vue d'ensemble des Windows Forms
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - smart clients
 - Windows Forms, about Windows Forms
 ms.assetid: 3a2b6284-c8d6-4e1c-8c69-0bed38f38cd4
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bc9ff97583566bd950486d96bd100f05ef651c7e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2620d8314a11e0a90864120c40dbc3935cce75fe
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="windows-forms-overview"></a>Vue d'ensemble des Windows Forms
 La présentation suivante décrit les avantages offerts par les applications Smart Client, les principales fonctionnalités de programmation Windows Forms et comment utiliser Windows Forms pour générer des clients intelligents qui répondent aux besoins des utilisateurs finaux et des entreprises d’aujourd’hui.  
@@ -30,7 +32,7 @@ La présentation suivante décrit les avantages offerts par les applications Sma
  Avec Windows Forms, vous pouvez développer des clients intelligents (Smart Clients). Les *clients intelligents* sont des applications enrichies du point de vue graphique, faciles à déployer et à mettre à jour, pouvant fonctionner même si elles ne sont pas connectées à Internet et pouvant accéder aux ressources sur l’ordinateur local de façon plus sécurisée que les applications Windows traditionnelles.  
   
 ### <a name="building-rich-interactive-user-interfaces"></a>Création d'interfaces utilisateur interactives et enrichies  
- Windows Forms est une technologie Smart Client pour [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], un ensemble de bibliothèques managées qui simplifient les tâches d'application courantes telles que la lecture et l'écriture dans le système de fichiers. Quand vous utilisez un environnement de développement comme [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], vous pouvez créer des applications Smart Client Windows Forms qui affichent des informations, demandent des entrées d'utilisateur et communiquent avec les ordinateurs distants sur un réseau.  
+ Windows Forms est une technologie Smart Client pour [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], un ensemble de bibliothèques managées qui simplifient les tâches d'application courantes telles que la lecture et l'écriture dans le système de fichiers. Lorsque vous utilisez un environnement de développement tel que Visual Studio, vous pouvez créer les applications smart client Windows Forms qui affichent des informations, de demandent la saisie des utilisateurs et de communiquent avec des ordinateurs distants sur un réseau.  
   
  Dans Windows Forms, un *formulaire* est une surface visuelle sur laquelle vous présentez des informations à l’utilisateur. Habituellement, vous générez des applications Windows Forms en ajoutant des contrôles à des formulaires et en développant des réponses aux actions de l’utilisateur, telles que des clics de souris ou des pressions sur des touches du clavier. Un *contrôle* est un élément d’interface utilisateur discret qui affiche des données ou accepte l’entrée de données.  
   
@@ -40,7 +42,7 @@ La présentation suivante décrit les avantages offerts par les applications Sma
   
  Windows Forms offre des contrôles d'interface utilisateur enrichis qui émulent les fonctionnalités des applications haut de gamme telles que Microsoft Office. Quand vous utilisez les contrôles <xref:System.Windows.Forms.ToolStrip> et <xref:System.Windows.Forms.MenuStrip>, vous pouvez créer des barres d'outils et des menus qui contiennent du texte et des images, qui affichent des sous-menus et qui hébergent d'autres contrôles tels que des zones de texte et des zones de liste déroulante.  
   
- Avec le Concepteur Windows Forms « glisser-déplacer » de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], vous pouvez créer facilement des applications Windows Forms. Il vous suffit de sélectionner les contrôles avec votre curseur et de les ajouter à l'emplacement souhaité sur le formulaire. Le concepteur fournit des outils tels que des quadrillages et des lignes d'alignement pour simplifier l'alignement des contrôles. Et que vous utilisiez [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ou que vous compiliez sur la ligne de commande, vous pouvez utiliser les contrôles <xref:System.Windows.Forms.FlowLayoutPanel>, <xref:System.Windows.Forms.TableLayoutPanel> et <xref:System.Windows.Forms.SplitContainer> pour accélérer la création des dispositions de formulaire avancées.  
+ Avec le Concepteur de formulaires Windows du glisser-déplacer de Visual Studio, vous pouvez facilement créer des applications Windows Forms. Il vous suffit de sélectionner les contrôles avec votre curseur et de les ajouter à l'emplacement souhaité sur le formulaire. Le concepteur fournit des outils tels que des quadrillages et des lignes d'alignement pour simplifier l'alignement des contrôles. Si vous utilisez Visual Studio ou que vous compilez sur la ligne de commande, vous pouvez utiliser la <xref:System.Windows.Forms.FlowLayoutPanel>, <xref:System.Windows.Forms.TableLayoutPanel> et <xref:System.Windows.Forms.SplitContainer> dispositions de formulaire de contrôles pour créer des avancées en moins de temps.  
   
  Pour finir, si vous devez créer vos propres éléments d'interface utilisateur personnalisés, l'espace de noms <xref:System.Drawing> contient une large sélection de classes pour afficher des lignes, des cercles et autres formes directement sur un formulaire.  
   
@@ -64,7 +66,7 @@ La présentation suivante décrit les avantages offerts par les applications Sma
   
  Vous pouvez facilement créer des contrôles liés aux données à l'aide de la fenêtre Sources de données. Cette fenêtre affiche des sources de données telles que les bases de données, les services web et les objets dans votre projet. Pour créer des contrôles liés aux données, vous pouvez faire glisser des éléments depuis cette fenêtre vers des formulaires dans votre projet. Vous pouvez également lier des contrôles existants à des données en faisant glisser des objets depuis la fenêtre Sources de données vers des contrôles existants.  
   
- Les *paramètres* sont un autre type de liaison de données que vous pouvez gérer dans Windows Forms. La plupart des applications Smart Client doivent conserver certaines informations sur leur état d'exécution, telles que la dernière taille connue des formulaires, et conserver des données de préférence utilisateur, telles que les emplacements par défaut des fichiers enregistrés. La fonctionnalité Paramètres d'application répond à ces exigences en offrant un mécanisme simple de stockage des deux types de paramètres sur l'ordinateur client. Une fois que vous avez défini ces paramètres à l'aide de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ou d'un éditeur de code, les paramètres sont conservés au format XML et lus automatiquement en mémoire au moment de l'exécution.  
+ Les *paramètres* sont un autre type de liaison de données que vous pouvez gérer dans Windows Forms. La plupart des applications Smart Client doivent conserver certaines informations sur leur état d'exécution, telles que la dernière taille connue des formulaires, et conserver des données de préférence utilisateur, telles que les emplacements par défaut des fichiers enregistrés. La fonctionnalité Paramètres d'application répond à ces exigences en offrant un mécanisme simple de stockage des deux types de paramètres sur l'ordinateur client. Après avoir défini ces paramètres à l’aide de Visual Studio ou un éditeur de code, les paramètres sont conservés au format XML et lus automatiquement en mémoire au moment de l’exécution.  
   
 #### <a name="help-displaying-and-manipulating-data"></a>Aide à l'affichage et à la manipulation des données  
  Pour obtenir des informations détaillées sur l'utilisation de ces fonctionnalités, consultez les rubriques d'aide suivantes.  
@@ -77,7 +79,7 @@ La présentation suivante décrit les avantages offerts par les applications Sma
 |Utilisation des paramètres d'application|[Comment : créer des paramètres d’application](../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)|  
   
 ### <a name="deploying-applications-to-client-computers"></a>Déploiement d'applications sur les ordinateurs clients  
- Une fois que vous avez écrit votre application, vous devez l'envoyer à vos utilisateurs pour qu'ils puissent l'installer et l'exécuter sur leurs propres ordinateurs clients. Quand vous utilisez la technologie [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], vous pouvez déployer vos applications depuis [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] en quelques clics et fournir aux utilisateurs une URL pointant vers votre application sur le web. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] gère tous les éléments et dépendances dans votre application et s'assure que l'application est correctement installée sur l'ordinateur client.  
+ Une fois que vous avez écrit votre application, vous devez l'envoyer à vos utilisateurs pour qu'ils puissent l'installer et l'exécuter sur leurs propres ordinateurs clients. Lorsque vous utilisez la [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] technologie, vous pouvez déployer vos applications à partir de Visual Studio à l’aide de seulement quelques clics et fournir aux utilisateurs une URL pointant vers votre application sur le Web. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] gère tous les éléments et dépendances dans votre application et s'assure que l'application est correctement installée sur l'ordinateur client.  
   
  Vous pouvez configurer les applications [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] pour qu'elles s'exécutent uniquement quand l'utilisateur est connecté au réseau ou pour qu'elles s'exécutent en ligne et hors connexion. Quand vous spécifiez qu’une application doit prendre en charge l’exécution hors connexion, [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] ajoute un lien à votre application dans le menu **Démarrer** de l’utilisateur. L'utilisateur peut alors ouvrir l'application sans utiliser l'URL.  
   

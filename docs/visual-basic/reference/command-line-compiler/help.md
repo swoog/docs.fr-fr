@@ -16,11 +16,11 @@ helpviewer_keywords:
 ms.assetid: eb984aa5-ac98-4d0b-a0d2-24238d7bc8dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4d56312743d70ed0d2f361c27d027a726562dc73
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 59b89d91cd81f735b44e030f72288f6b9a4d2b79
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="-help---visual-basic"></a>-help, -? (Visual Basic)
 Affiche les options du compilateur.  
@@ -37,7 +37,7 @@ Affiche les options du compilateur.
  Si vous incluez cette option dans une compilation, aucun fichier de sortie n’est créé et aucune compilation n’a lieu.  
   
 > [!NOTE]
->  Le `-help` option n’est pas disponible dans le [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] l’environnement de développement, il est disponible uniquement lors de la compilation à partir de la ligne de commande.  
+>  Le `-help` option n’est pas disponible dans l’environnement de développement Visual Studio ; il est disponible uniquement lors de la compilation à partir de la ligne de commande.  
   
 ## <a name="example"></a>Exemple  
  Le code suivant affiche l’aide de la ligne de commande.  

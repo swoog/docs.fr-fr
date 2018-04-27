@@ -1,24 +1,26 @@
 ---
 title: Volatile Queued Communication
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0d012f64-51c7-41d0-8e18-c756f658ee3d
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d7af5e29faf000fe3fe86463cb4eca9dc1e5c567
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 01dc48d7df85051449c92f4e91e5d1e58d6ddb91
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="volatile-queued-communication"></a>Volatile Queued Communication
 Cet exemple montre comment procéder à la communication de messages volatils mis en file d'attente sur le transport MSMQ (Message Queuing). Il utilise <xref:System.ServiceModel.NetMsmqBinding>. Dans le cas présent, le service est une application console auto-hébergée qui vous permet d'observer le service qui reçoit les messages mis en file d'attente.  
@@ -36,19 +38,19 @@ Cet exemple montre comment procéder à la communication de messages volatils mi
 >  Vous ne pouvez pas envoyer de messages volatils sans assurances dans l'étendue d'une transaction à l'aide de MSMQ. Vous devez également créer une file d’attente non transactionnelle pour envoyer des messages volatils.  
   
  Le contrat de service dans cet exemple est `IStockTicker`, qui définit les services unidirectionnels les mieux adaptés à une utilisation avec mise en file d'attente.  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  
 public interface IStockTicker  
 {  
     [OperationContract(IsOneWay = true)]  
     void StockTick(string symbol, float price);  
 }  
-```  
-  
+```
+
  L'opération de service affiche le symbole de cotation et le cours des titres boursiers, comme le montre l'exemple de code suivant :  
   
-```  
+```csharp
 public class StockTickerService : IStockTicker  
 {  
     public void StockTick(string symbol, float price)  
@@ -60,8 +62,8 @@ public class StockTickerService : IStockTicker
 ```  
   
  Le service est auto-hébergé. Lors de l'utilisation du transport MSMQ, la file d'attente utilisée doit être créée au préalable. Cela peut s'effectuer manuellement ou via le code. Dans cet exemple, le service contient du code pour vérifier pour l'existence de la file d'attente et la créer si besoin. Le nom de la file d'attente est lu depuis le fichier de configuration. L’adresse de base est utilisée par le [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) pour générer le proxy pour le service.  
-  
-```  
+
+```csharp
 // Host the service within this EXE console application.  
 public static void Main()  
 {  
@@ -88,8 +90,8 @@ public static void Main()
         serviceHost.Close();  
     }  
 }  
-```  
-  
+```
+
  Le nom de la file d'attente MSMQ est spécifié dans la section appSettings du fichier de configuration. Le point de terminaison pour le service est défini dans la section system.serviceModel du fichier de configuration et spécifie la liaison `netMsmqBinding`.  
   
 > [!NOTE]
@@ -114,7 +116,7 @@ public static void Main()
                 bindingConfiguration="volatileBinding"   
                 contract="Microsoft.ServiceModel.Samples.IStockTicker" />  
     ...  
-          </service>  
+    </service>  
   </services>  
   
   <bindings>  
@@ -129,8 +131,8 @@ public static void Main()
 ```  
   
  Étant donné que l’exemple envoie des messages mis en file d’attente en utilisant une file d’attente non transactionnelle, les messages traités ne peuvent pas être envoyés à la file d’attente.  
-  
-```  
+
+```csharp
 // Create a client.  
 Random r = new Random(137);  
   
@@ -145,8 +147,8 @@ for (int i = 0; i < 10; i++)
   
 //Closing the client gracefully cleans up resources.  
 client.Close();  
-```  
-  
+```
+
  Lorsque vous exécutez l'exemple, les activités du client et du service s'affichent dans leurs fenêtres de console respectives. Vous pouvez voir le service recevoir des messages du client. Appuyez sur ENTER dans chaque fenêtre de console pour arrêter le service et le client. Notez qu'en raison de l'utilisation de la mise en file d'attente, il n'est pas nécessaire que le service et le client s'exécutent simultanément. Vous pouvez exécuter le client, l'arrêter, puis démarrer le service et il recevra encore ses messages.  
   
 ```  

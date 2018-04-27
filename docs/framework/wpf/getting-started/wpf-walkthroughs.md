@@ -1,27 +1,29 @@
 ---
-title: "Procédures pas à pas WPF"
-ms.custom: 
+title: Procédures pas à pas WPF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - walkthroughs [WPF]
 - WPF walkthroughs [WPF]
 ms.assetid: c29bde96-0389-4aff-a9fb-cd678f66b7f7
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a6407ccb093d6bdba4e3953ffa1117cf4b56c119
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: c99d23769e99ea01fe1e1d264361a933228f4c1c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="wpf-walkthroughs"></a>Procédures pas à pas WPF
 Procédures pas à pas fournissent des instructions détaillées pour les scénarios courants. Elles constituent donc un bon point de départ pour vous familiariser avec le produit ou un ensemble de fonctionnalités particulier.  
@@ -52,7 +54,7 @@ Procédures pas à pas fournissent des instructions détaillées pour les scéna
 |Titre|Description|  
 |-----------|-----------------|  
 |[Procédure pas à pas : hébergement d’un contrôle Windows Forms dans WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)|Montre comment héberger un Windows Forms <xref:System.Windows.Forms.MaskedTextBox?displayProperty=nameWithType> contrôle dans une application WPF.|  
-|[Procédure pas à pas : hébergement d'un contrôle composite Windows Forms dans WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)|Montre comment héberger un [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] contrôle composite à l’entrée de données dans un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application.|  
+|[Procédure pas à pas : hébergement d'un contrôle composite Windows Forms dans WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)|Montre comment héberger un contrôle composite de saisie de données Windows Forms dans un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application.|  
 |[Procédure pas à pas : Hébergement d'un contrôle composite WPF dans Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)|Montre comment héberger un contrôle composite de saisie de données WPF dans une application Windows Forms.|  
 |[Procédure pas à pas : organisation des contrôles Windows Forms dans WPF](../../../../docs/framework/wpf/advanced/walkthrough-arranging-windows-forms-controls-in-wpf.md)|Montre comment utiliser les fonctionnalités de disposition WPF pour organiser les contrôles Windows Forms dans une application hybride.|  
 |[Procédure pas à pas : liaison de données dans des applications hybrides](../../../../docs/framework/wpf/advanced/walkthrough-binding-to-data-in-hybrid-applications.md)|Montre comment utiliser la liaison de données dans des applications hybrides qui incluent des contrôles Windows Forms et WPF.|  

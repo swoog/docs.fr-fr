@@ -22,11 +22,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7fc755ff7f1b6c583a1e9aa1bc209495563812f0
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 43eaa4ffe562cf1dde5abd7e7540125dcf383732
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="importing-schema-to-generate-classes"></a>Importation du schéma pour générer des classes
 Pour générer des classes à partir des schémas qui sont utilisables avec [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], utilisez la classe <xref:System.Runtime.Serialization.XsdDataContractImporter>. Cette rubrique décrit le processus et les variations.  
@@ -154,7 +154,7 @@ Pour générer des classes à partir des schémas qui sont utilisables avec [!IN
  Le `ReferencedTypes` propriété correspond à la **/reference** basculer dans certains modes de fonctionnement de l’outil Svcutil.exe.  
   
 > [!NOTE]
->  Lorsque vous utilisez Svcutil.exe ou (dans [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]) le **ajouter une référence de Service** outils, tous les types dans MsCorLib.dll sont référencés automatiquement.  
+>  Lorsque vous utilisez Svcutil.exe ou (dans Visual Studio) le **ajouter une référence de Service** outils, tous les types dans MsCorLib.dll sont référencés automatiquement.  
   
 #### <a name="import-options-importing-non-datacontract-schema-as-ixmlserializable-types"></a>Options d'importation : importer le schéma non DataContract comme types IXmlSerializable  
  <xref:System.Runtime.Serialization.XsdDataContractImporter> prend en charge un sous-ensemble limité du schéma. Si des constructions de schéma non prises en charge sont présentes (par exemple, les attributs XML), la tentative d'importation échoue et génère une exception. Cependant, affecter à la propriété <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> la valeur `true` étend la plage de schéma prise en charge. Une fois qu'elle a la valeur `true`, la propriété <xref:System.Runtime.Serialization.XsdDataContractImporter> génère des types qui implémentent l'interface <xref:System.Xml.Serialization.IXmlSerializable>. Cette opération permet d'accéder directement à la représentation XML de ces types.  

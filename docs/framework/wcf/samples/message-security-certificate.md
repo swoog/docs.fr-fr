@@ -1,28 +1,28 @@
 ---
 title: Message Security Certificate
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WS Security
 ms.assetid: 909333b3-35ec-48f0-baff-9a50161896f6
-caps.latest.revision: 
+caps.latest.revision: 51
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9339258c4f5df606db9126c8b4b886b0a26029a6
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 6ff680c9d85e4d395af550bf60de3b962d6a0c2a
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="message-security-certificate"></a>Message Security Certificate
 Cet exemple montre comment implémenter une application qui utilise WS-Security avec l'authentification de certificat X.509 v3 pour le client et requiert l'authentification de serveur à l'aide du certificat X.509 v3 du serveur. Il utilise des paramètres par défaut de sorte que tous les messages d'application entre le client et le serveur soient signés et chiffrés. Cet exemple est basé sur le [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) et se compose d’un programme de console du client et une bibliothèque de service hébergé par Internet Information Services (IIS). Le service implémente un contrat qui définit un modèle de communication demande-réponse.  
@@ -31,8 +31,8 @@ Cet exemple montre comment implémenter une application qui utilise WS-Security 
 >  La procédure d'installation ainsi que les instructions de génération relatives à cet exemple figurent à la fin de cette rubrique.  
   
  L'exemple montre comment contrôler l'authentification à l'aide de la configuration et comment obtenir l'identité de l'appelant à partir du contexte de sécurité, tel qu'indiqué dans l'exemple de code suivant.  
-  
-```  
+
+```csharp
 public class CalculatorService : ICalculator  
 {  
     public string GetCallerIdentity()  
@@ -192,8 +192,8 @@ public class CalculatorService : ICalculator
 ```  
   
  L'exemple suivant montre comment appeler le service dans votre programme.  
-  
-```  
+
+```csharp
 // Create a client.  
 CalculatorClient client = new CalculatorClient();  
   
@@ -202,7 +202,7 @@ Console.WriteLine(client.GetCallerIdentity());
 ...  
 //Closing the client gracefully closes the connection and cleans up resources.  
 client.Close();  
-```  
+```
   
  Lorsque vous exécutez l'exemple, les demandes et réponses d'opération s'affichent dans la fenêtre de console du client. Appuyez sur Entrée dans la fenêtre du client pour l'arrêter.  
   
@@ -221,7 +221,7 @@ Press <ENTER> to terminate client.
   
      La ligne suivante du fichier de commandes crée le certificat client. Le nom client spécifié est utilisé dans le nom du sujet du certificat créé. Le certificat est stocké dans le magasin `My` situé au niveau de l'emplacement de magasin `CurrentUser`.  
   
-    ```  
+    ```bat
     echo ************  
     echo making client cert  
     echo ************  
@@ -232,7 +232,7 @@ Press <ENTER> to terminate client.
   
      La ligne suivante du fichier de commandes copie le certificat client dans le magasin TrustedPeople du serveur afin que le serveur puisse prendre les décisions d'approbation ou de non-approbation appropriées. Pour qu'un certificat installé dans le magasin TrustedPeople soit approuvé par un service [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], le mode de la validation du certificat client doit avoir la valeur `PeerOrChainTrust` ou `PeerTrust`. Pour connaître la procédure à suivre à l'aide d'un fichier de configuration, consultez l'exemple de configuration de service précédent.  
   
-    ```  
+    ```bat
     echo ************  
     echo copying client cert to server's LocalMachine store  
     echo ************  
@@ -243,7 +243,7 @@ Press <ENTER> to terminate client.
   
      Les lignes suivantes du fichier de commandes Setup.bat créent le certificat de serveur à utiliser.  
   
-    ```  
+    ```bat
     echo ************  
     echo Server cert setup starting  
     echo %SERVER_NAME%  
@@ -267,7 +267,7 @@ Press <ENTER> to terminate client.
   
      Les lignes suivantes du fichier Setup.bat rendent le certificat de serveur stocké dans le magasin LocalMachine accessible au compte du processus de travail [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].  
   
-    ```  
+    ```bat
     echo ************  
     echo setting privileges on server certificates  
     echo ************  

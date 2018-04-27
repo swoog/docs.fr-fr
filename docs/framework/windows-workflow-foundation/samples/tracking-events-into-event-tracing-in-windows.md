@@ -1,31 +1,32 @@
 ---
-title: "Événements de suivi dans Event Tracing for Windows"
-ms.custom: 
+title: Événements de suivi dans Event Tracing for Windows
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6798494e442b2e7633461fb821c56130a2af2508
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1a1038f848563c106ee1cac441b8a247e161e268
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>Événements de suivi dans Event Tracing for Windows
-Cet exemple montre comment activer le suivi [!INCLUDE[wf](../../../../includes/wf-md.md)] sur un service de workflow et émettre les événements de suivi dans le suivi d'événements pour Windows (ETW). Pour émettre des enregistrements de suivi de workflow dans ETW, l'exemple utilise le participant de suivi ETW (<xref:System.Activities.Tracking.EtwTrackingParticipant>).  
+Cet exemple montre comment activer le suivi sur un service de flux de travail Windows Workflow Foundation (WF) et émettre les événements de suivi dans événement le suivi pour Windows (ETW). Pour émettre des enregistrements de suivi de workflow dans ETW, l'exemple utilise le participant de suivi ETW (<xref:System.Activities.Tracking.EtwTrackingParticipant>).  
   
  Le workflow dans l'exemple reçoit une demande, assigne la réciproque des données d'entrée à la variable d'entrée et retourne la réciproque au client. Lorsque les données d'entrée sont égales à 0, une exception de division par zéro qui n'est pas gérée et provoque l'abandon du workflow se produit. Lorsque le suivi est activé, l'enregistrement de suivi des erreurs est émis dans ETW, ce qui peut aider à corriger l'erreur ultérieurement. Le participant de suivi ETW est configuré avec un modèle de suivi pour s'abonner aux enregistrements de suivi. Le modèle de suivi est défini dans le fichier Web.config et fourni comme paramètre de configuration au participant de suivi ETW. Le participant de suivi ETW est configuré dans le fichier Web.config du service de workflow et appliqué au service comme comportement de service. Dans cet exemple, vous consultez les événements de suivi dans le journal des événements à l'aide de l'observateur d'événements.  
   
 ## <a name="workflow-tracking-details"></a>Détails de suivi de workflow  
- [!INCLUDE[wf2](../../../../includes/wf2-md.md)] fournit une infrastructure de suivi pour suivre l'exécution d'une instance de workflow. Le runtime de suivi crée une instance de workflow pour émettre des événements associés au cycle de vie de workflow, événements des activités de workflow et événements personnalisés. Le tableau suivant détaille les composants principaux de l'infrastructure de suivi.  
+ Windows Workflow Foundation fournit une infrastructure de suivi pour suivre l’exécution d’une instance de workflow. Le runtime de suivi crée une instance de workflow pour émettre des événements associés au cycle de vie de workflow, événements des activités de workflow et événements personnalisés. Le tableau suivant détaille les composants principaux de l'infrastructure de suivi.  
   
 |Composant|Description|  
 |---------------|-----------------|  
@@ -55,7 +56,7 @@ Cet exemple montre comment activer le suivi [!INCLUDE[wf](../../../../includes/w
   
 3.  Pour exécuter la solution, appuyez sur F5.  
   
-     Par défaut, le service écoute sur le port 53797 (http://localhost:53797/SampleWorkflowService.xamlx).  
+     Par défaut, le service est à l’écoute sur le port 53797 (http://localhost:53797/SampleWorkflowService.xamlx).  
   
 4.  À l'aide de l'[!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], ouvrez le client de test WCF.  
   

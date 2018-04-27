@@ -15,21 +15,21 @@ ms.assetid: c68c5752-1006-46e1-975a-6717b62a42fc
 caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: be5e0156b4cacc39e1613e06fe3c138838b02700
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 19aa20097e35a780f923a84e3e5809eb2b8bb3e8
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Objets et classes dans Visual Basic
 Un *objet* est une combinaison de code et de données qui peuvent être traités en tant qu’unité. Un objet peut être une partie d’une application, comme une commande ou un formulaire. Une application entière peut également être un objet.
 
-Lorsque vous créez une application dans [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], vous utilisez constamment des objets. Vous pouvez utiliser les objets fournis par [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], comme les commandes, les formulaires et les objets d’accès aux données. Vous pouvez également utiliser des objets d’autres applications au sein de votre application [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Vous pouvez même créer vos propres objets et définir des propriétés et des méthodes supplémentaires pour ceux-ci. Les objets se comportent comme des blocs de construction préfabriqués : ils vous permettent d’écrire un fragment de code une seule fois et de le réutiliser maintes fois.  
+Lorsque vous créez une application dans Visual Basic, vous travaillez constamment avec des objets. Vous pouvez utiliser les objets fournis par Visual Basic, telles que des objets de données, les formulaires et les contrôles d’accès. Vous pouvez également utiliser des objets à partir d’autres applications au sein de votre application Visual Basic. Vous pouvez même créer vos propres objets et définir des propriétés et des méthodes supplémentaires pour ceux-ci. Les objets se comportent comme des blocs de construction préfabriqués : ils vous permettent d’écrire un fragment de code une seule fois et de le réutiliser maintes fois.  
   
 Cette rubrique présente les objets en détail.  
 
 ## <a name="objects-and-classes"></a>Objets et classes
-Chaque objet dans [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] est défini par une *classe*. Une classe décrit les variables, les propriétés, les procédures et les événements d’un objet. Les objets sont des instances de classes. Vous pouvez créer autant d’objets que nécessaire dès que vous avez défini une classe.
+Chaque objet en Visual Basic est défini par un *classe*. Une classe décrit les variables, les propriétés, les procédures et les événements d’un objet. Les objets sont des instances de classes. Vous pouvez créer autant d’objets que nécessaire dès que vous avez défini une classe.
 
 Pour comprendre la relation entre un objet et sa classe, prenez l’exemple des emporte-pièces et des biscuits. L’emporte-pièce est la classe. Il définit les caractéristiques de chaque biscuit, par exemple la taille et la forme. La classe est utilisée pour créer des objets. Les objets sont les biscuits.
 
@@ -241,7 +241,7 @@ Assurez-vous que le compilateur peut accéder à la classe à partir de laquelle
 Les objets peuvent également être liés par une *relation d’imbrication*. Les objets conteneur encapsulent de manière logique d’autres objets. Par exemple, l’objet <xref:System.OperatingSystem> contient de manière logique un objet <xref:System.Version>, qu’il retourne via sa propriété <xref:System.OperatingSystem.Version%2A>. Notez que l’objet conteneur ne contient physiquement aucun autre objet.
 
 #### <a name="collections"></a>Collections
-Un type particulier de relation d’imbrication d’objet est représenté par les *collections*. Les collections sont des groupes d’objets similaires qui peuvent être énumérés. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] prend en charge une syntaxe spécifique dans [l’instruction For Each...Next](../../../../visual-basic/language-reference/statements/for-each-next-statement.md) qui vous permet de parcourir les éléments d’une collection. En outre, les collections vous permettent souvent d’utiliser un <xref:Microsoft.VisualBasic.Collection.Item%2A> pour récupérer des éléments à l’aide de leur index ou en les associant à une chaîne unique. Les collections peuvent être plus faciles à utiliser que les tableaux car elles vous permettent d’ajouter ou de supprimer des éléments sans utiliser d’index. En raison de leur simplicité d’utilisation, les collections sont souvent utilisées pour stocker les formulaires et les commandes.
+Un type particulier de relation d’imbrication d’objet est représenté par les *collections*. Les collections sont des groupes d’objets similaires qui peuvent être énumérés. Visual Basic prend en charge une syntaxe spécifique dans le [For Each... L’instruction suivante](../../../../visual-basic/language-reference/statements/for-each-next-statement.md) qui vous permet de parcourir les éléments d’une collection. En outre, les collections vous permettent souvent d’utiliser un <xref:Microsoft.VisualBasic.Collection.Item%2A> pour récupérer des éléments à l’aide de leur index ou en les associant à une chaîne unique. Les collections peuvent être plus faciles à utiliser que les tableaux car elles vous permettent d’ajouter ou de supprimer des éléments sans utiliser d’index. En raison de leur simplicité d’utilisation, les collections sont souvent utilisées pour stocker les formulaires et les commandes.
 
 ## <a name="related-topics"></a>Rubriques connexes  
  [Procédure pas à pas : définition de classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)  

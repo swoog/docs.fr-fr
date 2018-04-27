@@ -1,10 +1,10 @@
 ---
 title: Espaces de noms dans Visual Basic
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -23,14 +23,14 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], naming conflicts
 - namespaces
 ms.assetid: cffac744-ab8c-4f1f-ba50-732c22ab4b88
-caps.latest.revision: 
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c18d0a9abb1d8b9e3e22f3b81bf605fb8ed75cfa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0ec038a17b4a6b10dbe339fe33969c4ade57e2a7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="namespaces-in-visual-basic"></a>Espaces de noms dans Visual Basic
 Les espaces de noms permettent d’organiser les objets définis dans un assembly. Les assemblys peuvent contenir plusieurs espaces de noms, qui peuvent à leur tour contenir d’autres espaces de noms. Les espaces de noms permettent d’éviter les ambiguïtés et de simplifier les références quand de grands groupes d’objets, tels que des bibliothèques de classes, sont utilisés.  
@@ -42,7 +42,7 @@ Les espaces de noms permettent d’organiser les objets définis dans un assembl
 ## <a name="avoiding-name-collisions"></a>Éviter les collisions de noms  
  Les espaces de noms[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] permettent de résoudre un problème parfois appelé *pollution d’espace de noms*, où le développeur d’une bibliothèque de classes est gêné par l’utilisation de noms similaires dans une autre bibliothèque. Ces conflits avec des éléments existants sont également connus sous le terme de *collisions de noms*.  
   
- Par exemple, si vous créez une classe nommée `ListBox`, vous pouvez l’utiliser dans votre projet sans qualification. Toutefois, si vous souhaitez utiliser le [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Windows.Forms.ListBox> classe dans le même projet, vous devez utiliser une référence qualifiée complète pour rendre la référence unique. Si la référence n’est pas unique, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] génère une erreur indiquant que le nom est ambigu. L’exemple de code suivant montre comment déclarer ces objets :  
+ Par exemple, si vous créez une classe nommée `ListBox`, vous pouvez l’utiliser dans votre projet sans qualification. Toutefois, si vous souhaitez utiliser le [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Windows.Forms.ListBox> classe dans le même projet, vous devez utiliser une référence qualifiée complète pour rendre la référence unique. Si la référence n’est pas unique, Visual Basic génère une erreur indiquant que le nom est ambigu. L’exemple de code suivant montre comment déclarer ces objets :  
   
  [!code-vb[VbVbalrApplication#7](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_2.vb)]  
   
@@ -50,9 +50,9 @@ Les espaces de noms permettent d’organiser les objets définis dans un assembl
   
  ![Hiérarchie de Namespace](../../../visual-basic/programming-guide/program-structure/media/vanamespacehierarchy.gif "vaNamespaceHierarchy")  
   
- Par défaut, chaque fichier exécutable que vous créez à l’aide de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] contient un espace de noms portant le même nom que votre projet. Par exemple, si vous définissez un objet dans un projet nommé `ListBoxProject`, le fichier exécutable, ListBoxProject.exe, contient un espace de noms appelé `ListBoxProject`.  
+ Par défaut, tous les fichiers exécutables créés avec Visual Basic contient un espace de noms portant le même nom que votre projet. Par exemple, si vous définissez un objet dans un projet nommé `ListBoxProject`, le fichier exécutable, ListBoxProject.exe, contient un espace de noms appelé `ListBoxProject`.  
   
- Plusieurs assemblys peuvent utiliser le même espace de noms. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] les traite alors comme un ensemble unique de noms. Par exemple, vous pouvez définir des classes pour un espace de noms appelé `SomeNameSpace` dans un assembly nommé `Assemb1`, et définir des classes supplémentaires pour le même espace de noms d’un assembly nommé `Assemb2`.  
+ Plusieurs assemblys peuvent utiliser le même espace de noms. Visual Basic les traite comme un ensemble unique de noms. Par exemple, vous pouvez définir des classes pour un espace de noms appelé `SomeNameSpace` dans un assembly nommé `Assemb1`, et définir des classes supplémentaires pour le même espace de noms d’un assembly nommé `Assemb2`.  
   
 ## <a name="fully-qualified-names"></a>noms qualifiés complets  
  Les noms qualifiés complets sont des références d’objet dont le préfixe est le nom de l’espace de noms dans lequel l’objet est défini. Vous pouvez utiliser les objets définis dans d’autres projets si vous créez une référence à la classe (en choisissant **Ajouter une référence** dans le menu **Projet** ), puis utiliser le nom qualifié complet de l’objet dans votre code. Le fragment de code suivant montre comment utiliser le nom qualifié complet d’un objet provenant de l’espace de noms d’un autre projet :  
@@ -69,7 +69,7 @@ Les espaces de noms permettent d’organiser les objets définis dans un assembl
   
  [!code-vb[VbVbalrApplication#11](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_6.vb)]  
   
- Si vous essayez d’utiliser `Class1` sans fournir son nom qualifié complet, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] génère une erreur indiquant que le nom `Class1` est ambigu.  
+ Si vous tentez d’utiliser `Class1` sans qualifier complètement, Visual Basic génère une erreur indiquant que le nom `Class1` est ambigu.  
   
 ## <a name="namespace-level-statements"></a>Instructions au niveau de l’espace de noms  
  Dans un espace de noms, vous pouvez définir des éléments tels que des modules, des interfaces, des classes, des délégués, des énumérations, des structures et d’autres espaces de noms. Vous ne pouvez pas définir d’éléments tels que des propriétés, des procédures, des variables et des événements au niveau de l’espace de noms. Ces éléments doivent être déclarés dans des conteneurs tels que des modules, des structures ou des classes.  

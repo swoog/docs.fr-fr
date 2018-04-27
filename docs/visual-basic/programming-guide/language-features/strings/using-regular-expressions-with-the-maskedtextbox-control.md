@@ -1,31 +1,32 @@
 ---
-title: "Utilisation d'expressions régulières avec le contrôle MaskedTextBox en Visual Basic"
-ms.custom: 
+title: Utilisation d'expressions régulières avec le contrôle MaskedTextBox en Visual Basic
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - strings [Visual Basic], regular expressions
 - strings [Visual Basic], masked edit
 ms.assetid: 2a048fb0-7053-487d-b2c5-ffa5e22ed6f9
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2638ed804593dd52481bd3865e1c67c5fdb2dcf9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c72542c05123ef62a8f95afbe1bb19cb823d1f21
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="using-regular-expressions-with-the-maskedtextbox-control-in-visual-basic"></a>Utilisation d'expressions régulières avec le contrôle MaskedTextBox en Visual Basic
 Cet exemple montre comment convertir des expressions régulières simples pour travailler avec les <xref:System.Windows.Forms.MaskedTextBox> contrôle.  
   
 ## <a name="description-of-the-masking-language"></a>Description du langage de masquage  
- La norme <xref:System.Windows.Forms.MaskedTextBox> le langage de masquage est basé sur celui utilisé par le `Masked Edit` contrôler dans [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 6.0 et doit être connu pour les utilisateurs de la migration à partir de cette plateforme.  
+ La norme <xref:System.Windows.Forms.MaskedTextBox> le langage de masquage est basé sur celui utilisé par le `Masked Edit` contrôler dans Visual Basic 6.0 et doit être connu pour les utilisateurs de la migration à partir de cette plateforme.  
   
  Le <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> propriété de la <xref:System.Windows.Forms.MaskedTextBox> contrôle spécifie le masque d’entrée à utiliser. Le masque doit être une chaîne composée d’un ou plusieurs des éléments de masques dans le tableau suivant.  
   
@@ -57,7 +58,7 @@ Cet exemple montre comment convertir des expressions régulières simples pour t
   
  Le tableau suivant compare quatre expressions régulières et le masque équivalent pour chacune.  
   
-|Expression régulière|Masque|Remarques|  
+|Expression régulière|Masque|Notes|  
 |------------------------|----------|-----------|  
 |`\d{2}/\d{2}/\d{4}`|`00/00/0000`|Le `/` dans le masque est un séparateur de date logique, et elle apparaîtra à l’utilisateur en tant que séparateur de date approprié à la culture actuelle de l’application.|  
 |`\d{2}-[A-Z][a-z]{2}-\d{4}`|`00->L<LL-0000`|Date (jour, abréviation du mois et année) au format américain dans lequel l’abréviation de trois lettres du mois est affichée par une lettre majuscule initiale suivie de deux lettres minuscules.|  

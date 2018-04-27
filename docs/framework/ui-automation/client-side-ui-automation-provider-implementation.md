@@ -1,28 +1,30 @@
 ---
-title: "Implémentation de fournisseur UI Automation côté client"
-ms.custom: 
+title: Implémentation de fournisseur UI Automation côté client
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - UI Automation, client-side provider implementation
 - client-side UI Automation provider, implementation
 - provider implementation, UI Automation
 ms.assetid: 3584c0a1-9cd0-4968-8b63-b06390890ef6
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 50335994fab424b3100c91a202a7ea53643db551
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 09f54098c34d835c04a18b16dc5e33c7ebed5edb
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="client-side-ui-automation-provider-implementation"></a>Implémentation de fournisseur UI Automation côté client
 > [!NOTE]
@@ -34,9 +36,9 @@ ms.lasthandoff: 12/22/2017
   
  Toutefois, les contrôles plus anciens tels que ceux de [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] et [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] ne prennent pas directement en charge [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. En effet, ces contrôles sont traités par des fournisseurs qui existent dans le processus client et obtiennent des informations sur les contrôles à l’aide de la communication entre processus. C’est le cas, par exemple, avec la surveillance des messages de fenêtres à destination et en provenance des contrôles. Ces fournisseurs côté client sont parfois appelés des proxies.  
   
- [!INCLUDE[TLA2#tla_winvista](../../../includes/tla2sharptla-winvista-md.md)] prévoit des fournisseurs pour les contrôles [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] et [!INCLUDE[TLA2#tla_winforms](../../../includes/tla2sharptla-winforms-md.md)] standard. En outre, un fournisseur de secours assure une prise en charge [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] partielle pour les contrôles non traités par un autre fournisseur côté serveur ou un proxy, mais disposant d’une implémentation de [!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)] . Tous ces fournisseurs sont automatiquement chargés et disponibles pour les applications clientes.  
+ [!INCLUDE[TLA2#tla_winvista](../../../includes/tla2sharptla-winvista-md.md)] prévoit des fournisseurs pour standard [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] et contrôles Windows Forms. En outre, un fournisseur de secours assure une prise en charge [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] partielle pour les contrôles non traités par un autre fournisseur côté serveur ou un proxy, mais disposant d’une implémentation de [!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)] . Tous ces fournisseurs sont automatiquement chargés et disponibles pour les applications clientes.  
   
- Pour plus d’informations sur la prise en charge des contrôles [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] et [!INCLUDE[TLA2#tla_winforms](../../../includes/tla2sharptla-winforms-md.md)] , consultez [UI Automation Support for Standard Controls](../../../docs/framework/ui-automation/ui-automation-support-for-standard-controls.md).  
+ Pour plus d’informations sur la prise en charge de [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] et contrôles Windows Forms, consultez [UI Automation prennent en charge pour les contrôles Standard](../../../docs/framework/ui-automation/ui-automation-support-for-standard-controls.md).  
   
  Les applications peuvent également inscrire d’autres fournisseurs côté client.  
   

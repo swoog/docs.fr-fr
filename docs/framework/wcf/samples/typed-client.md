@@ -1,24 +1,26 @@
 ---
 title: Typed Client
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 62c40e8f-e9b4-4b1a-939a-93c37393d343
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: edad174ac5977aabf6c3fb410ede6ab07b85e4aa
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 638b4a82a5407cbfbe15b75f6f1bfda27367b174
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="typed-client"></a>Typed Client
 L’exemple montre comment obtenir des informations à partir d’un client typé généré par le [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Cet exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md) qui implémente un service de calculatrice. Dans cet exemple, le client est une application console (.exe) et le service est hébergé par les services IIS (Internet Information Services).  
@@ -28,7 +30,7 @@ L’exemple montre comment obtenir des informations à partir d’un client typ�
   
  La propriété `Endpoint` du client permet d'accéder aux informations sur le point de terminaison de service avec lequel le client communique, et notamment aux informations d'adresse, de liaison et de contrat. La propriété `InnerChannel` du client est une instance de <xref:System.ServiceModel.IClientChannel> qui permet d'accéder aux informations sur le canal sous-jacent, tel que son identificateur d'état et de session.  
   
-```  
+```csharp   
 // Create a client.  
 CalculatorClient client = new CalculatorClient();  
 ...  

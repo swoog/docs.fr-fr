@@ -1,11 +1,12 @@
 ---
 title: Instructions dans Visual Basic
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - variables [Visual Basic], declaring
@@ -21,17 +22,17 @@ helpviewer_keywords:
 - variables [Visual Basic], defining
 - statements [Visual Basic], about statements
 ms.assetid: fcfdee1a-82b7-4846-98f7-9ca3f5160089
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 210637105e54244ba829dabd73feab0b43ec7c6c
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: beb33b8f2c30723158e41244cbb5c9cfca108a53
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="statements-in-visual-basic"></a>Instructions dans Visual Basic
-Une instruction dans [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] est une instruction complète. Il peut contenir des mots clés, des opérateurs, des variables, des constantes et des expressions. Chaque instruction appartient à une des catégories suivantes :  
+Une instruction en Visual Basic est une instruction complète. Il peut contenir des mots clés, des opérateurs, des variables, des constantes et des expressions. Chaque instruction appartient à une des catégories suivantes :  
   
 -   **Les instructions de déclaration**, qui nommer une variable, une constante ou une procédure et que vous pouvez également spécifier un type de données.  
   
@@ -53,7 +54,7 @@ Une instruction dans [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] est une instruc
  La troisième déclaration est la `Dim` instruction qui déclare la variable `thisWidget`. Le type de données est un objet spécifique, à savoir un objet créé à partir de la `Widget` classe. Vous pouvez déclarer une variable qui doit être de n’importe quel type de données élémentaire ou de tout type d’objet qui est exposé dans l’application que vous utilisez.  
   
 ### <a name="initial-values"></a>Valeurs initiales  
- Lorsque le code contenant une instruction de déclaration s’exécute, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] réserve la mémoire requise pour l’élément déclaré. Si l’élément contient une valeur, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] initialise à la valeur par défaut pour son type de données. Pour plus d’informations, consultez « Comportement » dans [instruction Dim](../../../visual-basic/language-reference/statements/dim-statement.md).  
+ Lorsque le code contenant une instruction de déclaration s’exécute, Visual Basic réserve la mémoire requise pour l’élément déclaré. Si l’élément contient une valeur, Visual Basic l’initialise à la valeur par défaut pour son type de données. Pour plus d’informations, consultez « Comportement » dans [instruction Dim](../../../visual-basic/language-reference/statements/dim-statement.md).  
   
  Vous pouvez affecter une valeur initiale à une variable dans le cadre de sa déclaration, comme l’illustre l’exemple suivant.  
   
@@ -121,7 +122,7 @@ Une instruction dans [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] est une instruc
 ### <a name="type-conversions-in-assignment-statements"></a>Conversions de type dans les instructions d’assignation  
  La valeur que vous assignez à une variable, une propriété ou un élément de tableau doit être un type de données approprié pour cet élément de destination. En règle générale, vous devez tenter de générer une valeur du même type de données que celui de l’élément de destination. Toutefois, certains types peuvent être convertis en d’autres types lors de l’attribution.  
   
- Pour plus d’informations sur la conversion entre types de données, consultez [en Visual Basic, les Conversions de Type](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md). En bref, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] convertit automatiquement une valeur d’un type donné en un autre type auquel elle s’étend. A *conversion étendue* est un qui réussit au moment de l’exécution toujours et que vous ne perdez pas de données. Par exemple, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] convertit un `Integer` valeur `Double` quand cela est approprié, car `Integer` s’étend à `Double`. Pour plus d’informations, consultez [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
+ Pour plus d’informations sur la conversion entre types de données, consultez [en Visual Basic, les Conversions de Type](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md). En bref, Visual Basic convertit automatiquement une valeur d’un type donné en un autre type auquel elle s’étend. A *conversion étendue* est un qui réussit au moment de l’exécution toujours et que vous ne perdez pas de données. Par exemple, Visual Basic convertit un `Integer` valeur `Double` quand cela est approprié, car `Integer` s’étend à `Double`. Pour plus d’informations, consultez [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
   
  *Les conversions restrictives* (celles qui ne sont pas étendues) comportent un risque de défaillance au moment de l’exécution, ou de perte de données. Vous pouvez effectuer une conversion restrictive explicitement à l’aide d’une fonction de conversion de type, ou vous pouvez demander au compilateur d’effectuer toutes les conversions implicitement en définissant `Option Strict Off`. Pour plus d’informations, consultez [Conversions implicites et explicites](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md).  
   
@@ -158,7 +159,7 @@ Une instruction dans [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] est une instruc
 |Après le `From` mot clé dans un initialiseur de collection.|[!code-vb[VbVbalrLineContinuation#13](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_27.vb)]<br /><br /> Pour plus d’informations, consultez [Initialiseurs de collection](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md).|  
   
 ## <a name="adding-comments"></a>L’ajout de commentaires  
- Code source n’est pas toujours évident, même pour le programmeur qui l’a écrit. Pour vous aider à documenter leur code, la plupart des programmeurs donc l’utilisation répandue des commentaires incorporés. Commentaires dans le code peuvent expliquer une procédure ou une instruction particulière à toute personne lors de la lecture ou de son utilisation ultérieure. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]ignore les commentaires pendant la compilation, et ils n’affectent pas le code compilé.  
+ Code source n’est pas toujours évident, même pour le programmeur qui l’a écrit. Pour vous aider à documenter leur code, la plupart des programmeurs donc l’utilisation répandue des commentaires incorporés. Commentaires dans le code peuvent expliquer une procédure ou une instruction particulière à toute personne lors de la lecture ou de son utilisation ultérieure. Visual Basic ignore les commentaires pendant la compilation, et ils n’affectent pas le code compilé.  
   
  Les lignes de commentaire commencent par une apostrophe (`'`) ou `REM` suivi d’un espace. Ils peuvent être ajoutés n’importe où dans le code, sauf dans une chaîne. Pour ajouter un commentaire à une instruction, insérez une apostrophe ou `REM` après l’instruction, suivie du commentaire. Commentaires peuvent également passer sur leur propre ligne distincte. L’exemple suivant illustre ces possibilités.  
   

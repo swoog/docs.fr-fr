@@ -1,13 +1,13 @@
 ---
-title: "Expressions incorporées en XML (Visual Basic)"
-ms.custom: 
+title: Expressions incorporées en XML (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - vb.XmlEmbeddedExpression
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], embedded expressions
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: bf2eb779-b751-4b7c-854f-9f2161482352
-caps.latest.revision: 
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b1cdba0a39a932f143ac98c2514240e1696a8fe0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3c6dff88d123f33ad4c33e91685104b760ecca3b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="embedded-expressions-in-xml-visual-basic"></a>Expressions incorporées en XML (Visual Basic)
 Expressions incorporées permettent de créer des littéraux XML qui contiennent des expressions qui sont évaluées au moment de l’exécution. La syntaxe pour une expression incorporée est `<%=` `expression` `%>`, qui est le même que la syntaxe utilisée dans [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)].  
@@ -43,14 +43,14 @@ Expressions incorporées permettent de créer des littéraux XML qui contiennent
 ## <a name="embedded-expression-location-and-validation"></a>Validation et l’emplacement de l’Expression incorporée  
  Expressions incorporées peuvent apparaître uniquement à certains emplacements dans des expressions littérales XML. Les contrôles d’emplacement expression les types de l’expression peuvent retourner et comment `Nothing` est gérée. Le tableau suivant décrit les emplacements autorisés et les types d’expressions incorporées.  
   
-|Emplacement dans le littéral|Type d’expression|Gestion des`Nothing`|  
+|Emplacement dans le littéral|Type d’expression|Gestion des `Nothing`|  
 |---|---|---|  
-|Nom d’élément XML|<xref:System.Xml.Linq.XName>|Erreur|  
-|Contenu de l’élément XML|`Object`ou un tableau de`Object`|Ignoré|  
-|Nom d’attribut XML élément|<xref:System.Xml.Linq.XName>|Erreur, sauf si la valeur d’attribut est également`Nothing`|  
+|Nom d’élément XML|<xref:System.Xml.Linq.XName>|Error|  
+|Contenu de l’élément XML|`Object` ou un tableau de `Object`|Ignoré|  
+|Nom d’attribut XML élément|<xref:System.Xml.Linq.XName>|Erreur, sauf si la valeur d’attribut est également `Nothing`|  
 |Valeur d’attribut XML élément|`Object`|Déclaration d’attribut ignorée|  
-|Attribut d’élément XML|<xref:System.Xml.Linq.XAttribute>ou une collection de<xref:System.Xml.Linq.XAttribute>|Ignoré|  
-|Élément racine du document XML|<xref:System.Xml.Linq.XElement>ou une collection d’un <xref:System.Xml.Linq.XElement> objet et un nombre arbitraire de <xref:System.Xml.Linq.XProcessingInstruction> et <xref:System.Xml.Linq.XComment> objets|Ignoré|  
+|Attribut d’élément XML|<xref:System.Xml.Linq.XAttribute> ou une collection de <xref:System.Xml.Linq.XAttribute>|Ignoré|  
+|Élément racine du document XML|<xref:System.Xml.Linq.XElement> ou une collection d’un <xref:System.Xml.Linq.XElement> objet et un nombre arbitraire de <xref:System.Xml.Linq.XProcessingInstruction> et <xref:System.Xml.Linq.XComment> objets|Ignoré|  
   
 -   Exemple d’une expression incorporée dans un nom d’élément XML :  
   
@@ -83,7 +83,7 @@ Expressions incorporées permettent de créer des littéraux XML qui contiennent
  Pour plus d’informations sur l’utilisation d’une expression incorporée dans un type particulier de littéral, consultez [littéral de Document XML](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md), [XML élément Literal](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
   
 ## <a name="scoping-rules"></a>Règles de portée  
- Le compilateur convertit chaque littéral XML en un appel de constructeur pour le type de littéral approprié. Le contenu littéral et les expressions incorporées dans un littéral XML sont passées comme arguments au constructeur. Cela signifie que tous les [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] les éléments de programmation disponibles pour un littéral XML sont également disponibles pour ses expressions incorporées.  
+ Le compilateur convertit chaque littéral XML en un appel de constructeur pour le type de littéral approprié. Le contenu littéral et les expressions incorporées dans un littéral XML sont passées comme arguments au constructeur. Cela signifie que tous les éléments de programmation de Visual Basic disponibles pour un littéral XML sont également disponibles pour ses expressions incorporées.  
   
  Dans un littéral XML, vous pouvez accéder à l’espace de noms XML préfixes déclarés avec la `Imports` instruction. Vous pouvez déclarer un nouveau préfixe d’espace de noms XML ou masquer un préfixe d’espace de noms XML existant dans un élément à l’aide de la `xmlns` attribut. Le nouvel espace de noms est disponible pour les nœuds enfants de cet élément, mais pas pour les littéraux XML dans des expressions incorporées.  
   

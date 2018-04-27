@@ -2,9 +2,10 @@
 title: Option Strict Statement
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.Strict
@@ -16,14 +17,14 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 - implicit conversions [Visual Basic]
 ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
-caps.latest.revision: "49"
+caps.latest.revision: 49
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 1a01edd918ea49c08defddb45bf23c33307e814f
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 0e49c8f64d38b7f8d2dc1a34cf22925c15e3a505
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="option-strict-statement"></a>Option Strict Statement
 Restreint les conversions de types de données implicites aux seules conversions étendues, n’autorise pas la liaison tardive et n’autorise pas le typage implicite qui entraîne une `Object` type.  
@@ -68,7 +69,7 @@ Option Strict { On | Off }
 ## <a name="implicit-narrowing-conversion-errors"></a>Erreurs de Conversion restrictive implicite  
  Les erreurs de conversion restrictive implicite se produisent quand une conversion de types de données implicite est une conversion restrictive.  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]peut convertir les nombreux types de données à d’autres types de données. Une perte de données peut se produire lorsque la valeur d’un type de données est convertie en un type de données qui a moins de précision ou une capacité réduite. Une erreur d’exécution se produit si une telle conversion restrictive échoue. `Option Strict`garantit la notification de compilation de ces conversions restrictives afin que vous puissiez les éviter. Pour plus d’informations, consultez [Conversions implicites et explicites](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) et [Conversions étendues et restrictives](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
+ Visual Basic peut convertir les nombreux types de données à d’autres types de données. Une perte de données peut se produire lorsque la valeur d’un type de données est convertie en un type de données qui a moins de précision ou une capacité réduite. Une erreur d’exécution se produit si une telle conversion restrictive échoue. `Option Strict` garantit la notification de compilation de ces conversions restrictives afin que vous puissiez les éviter. Pour plus d’informations, consultez [Conversions implicites et explicites](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) et [Conversions étendues et restrictives](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
   
  Les conversions qui peuvent provoquer des erreurs incluent des conversions implicites qui se produisent dans les expressions. Pour plus d’informations, consultez les rubriques suivantes :  
   
@@ -120,7 +121,7 @@ Option Strict { On | Off }
   
 2.  Sur le **compiler** onglet, définissez la valeur dans la **Option Strict** boîte.  
   
-###  <a name="conditions"></a>Pour définir les configurations des avertissements dans l’IDE  
+###  <a name="conditions"></a> Pour définir les configurations des avertissements dans l’IDE  
  Lorsque vous utilisez la [Page Compiler, Concepteur de projets (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) au lieu d’un `Option Strict` instruction, vous avez un contrôle supplémentaire sur les conditions qui génèrent des erreurs. Le **configurations des avertissements** section de la **Page Compiler** possède des paramètres qui correspondent aux trois conditions qui provoquent une erreur de compilation lorsque `Option Strict` sur. Voici ces paramètres :  
   
 -   **Conversion implicite**  

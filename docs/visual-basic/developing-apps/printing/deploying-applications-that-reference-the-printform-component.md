@@ -12,11 +12,11 @@ ms.assetid: b595ea44-a712-4625-a761-190c64f59bbe
 caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 15b6e21e769c90e23e66e4f87b37f74462423985
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: f49a5ef8dd4e36c9ab055ca01dc25ed05b083349
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="deploying-applications-that-reference-the-printform-component-visual-basic"></a>Déploiement d’applications faisant référencent au composant PrintForm (Visual Basic)
 Si vous voulez déployer une application qui fait référence au composant <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> , le composant doit être installé sur l’ordinateur de destination.  
@@ -26,7 +26,7 @@ Si vous voulez déployer une application qui fait référence au composant <xref
 ## <a name="installing-the-printform-as-a-prerequisite"></a>Installation de PrintForm comme composant requis  
  Pour déployer une application, vous devez également déployer tous les composants qui sont référencés par l’application. Le processus d’installation des composants prérequis est connu sous le nom d’ *amorçage*.  
   
- Quand le composant <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> est installé sur votre ordinateur de développement, un package de programme d’amorçage Microsoft Visual Basic Power Packs est ajouté au répertoire du programme d’amorçage [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] . Ce package est alors disponible quand vous suivez les procédures d’ajout des composants prérequis pour le déploiement de [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] ou de Windows Installer.  
+ Lorsque le <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> composant est installé sur votre ordinateur de développement, un package de programme d’amorçage Microsoft Visual Basic Power Packs est ajouté au répertoire du programme d’amorçage Visual Studio. Ce package est alors disponible quand vous suivez les procédures d’ajout des composants prérequis pour le déploiement de [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] ou de Windows Installer.  
   
  Par défaut, les composants d’amorçage sont déployés à partir du même emplacement que le package d’installation. Vous pouvez également déployer les composants à partir d’une URL ou d’un emplacement de partage de fichiers, à partir duquel les utilisateurs peuvent les télécharger si nécessaire.  
   

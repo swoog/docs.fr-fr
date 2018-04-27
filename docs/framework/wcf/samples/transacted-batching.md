@@ -1,24 +1,26 @@
 ---
 title: Transacted Batching
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ecd328ed-332e-479c-a894-489609bcddd2
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 87d8e3e09618b214dcafb7afd82970dde54fc4fc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 50596aaf5290146148ecb9636b78f7f9180c0b79
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="transacted-batching"></a>Transacted Batching
 Cet exemple montre comment traiter les lectures transactionnelles à l'aide de Message Queuing (MSMQ). Le traitement transactionnel par lots est une fonctionnalité d'optimisation des performances pour les lectures transactionnelles dans les communications mises en file d'attente.  
@@ -114,7 +116,7 @@ Cet exemple montre comment traiter les lectures transactionnelles à l'aide de M
   
 4.  Pour exécuter la base de données sur un ordinateur distant, modifiez la chaîne de connexion pour qu'elle pointe vers l'ordinateur sur lequel se trouve la base de données.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  Pour exécuter cet exemple, MSMQ doit être installé et SQL ou SQL Express est requis.  
   
 ## <a name="demonstrates"></a>Démonstrations  
@@ -142,8 +144,8 @@ Cet exemple montre comment traiter les lectures transactionnelles à l'aide de M
  Le comportement de service définit un comportement d'opération avec la valeur `TransactionScopeRequired` affectée à `true`. Ainsi, l'étendue de transaction qui est utilisée pour récupérer le message de la file d'attente est utilisée par tous les gestionnaires des ressources auxquels accède la méthode. Dans cet exemple, nous utilisons une base de données classique pour stocker les informations de commande fournisseur contenues dans le message. L'étendue de transaction garantie également que si la méthode lève une exception, le message est renvoyé dans la file d'attente. Sans définir ce comportement d'opération, un canal mis en file d'attente crée une transaction pour lire le message à partir de la file d'attente et le valide automatiquement avant qu'il soit distribué afin que si l'opération échoue, le message soit perdu. Dans la plupart des cas, les opérations de service s'inscrivent dans la transaction utilisée pour lire le message à partir de la file d'attente, comme indiqué dans le code suivant.  
   
  Notez que `ReleaseServiceInstanceOnTransactionComplete` a la valeur `false`. C'est une spécification importante pour le traitement par lots. La propriété `ReleaseServiceInstanceOnTransactionComplete` sur `ServiceBehaviorAttribute` indique que faire avec l'instance de service une fois la transaction terminée. Par défaut, l'instance de service est diffusée lorsque la transaction est terminée. La principale particularité du traitement par lots est l'utilisation d'une seule transaction pour lire et distribuer de nombreux messages dans la file d'attente. Par conséquent, la diffusion de l'instance de service provoque par conséquent la fin prématurée de la transaction, empêchant l'utilisation du traitement par lots. Si cette propriété a la valeur `true` et que le comportement du traitement transactionnel par lots est ajouté au point de terminaison, le comportement de la validation du traitement par lots lève une exception.  
-  
-```  
+
+```csharp
 // Service class that implements the service contract.  
 // Added code to write output to the console window.  
 [ServiceBehavior(ReleaseServiceInstanceOnTransactionComplete=false,   
@@ -160,11 +162,11 @@ public class OrderProcessorService : IOrderProcessor
     }  
     …  
 }  
-```  
-  
+```
+
  La classe `Orders` encapsule le traitement de la commande. Dans cet exemple, elle met à jour la base de données avec les informations du bon de commande.  
-  
-```  
+
+```csharp
 // Order Processing Logic  
 public class Orders  
 {  
@@ -234,8 +236,8 @@ public class Orders
                                      {1} ", rowsAffected, po.PONumber);  
     }  
 }  
-```  
-  
+```
+
  Le comportement du traitement par lots et sa configuration sont spécifiés dans la configuration de l'application de service.  
   
 ```xml  
@@ -292,8 +294,8 @@ public class Orders
 >  Le choix de la taille de lot dépend de votre application. Si la taille de lot est trop petite, vous risquez de ne pas obtenir la performance désirée. En revanche, si la taille de lot est trop grande, elle risque de diminuer les performances. Par exemple, la transaction pourrait durer plus longtemps et verrouiller des enregistrements dans votre base de données ou la transaction pourrait se bloquer, ce qui entraînerait la restauration du lot et la nécessité de recommencer le travail.  
   
  Le client crée une étendue de transaction. La communication avec la file d'attente a lieu dans l'étendue de la transaction, entraînant son traitement en tant qu'une unité atomique dans laquelle tous les messages sont envoyés à la file d'attente ou aucun des messages n'est envoyé à la file d'attente. La transaction est validée par l'appel de la méthode <xref:System.Transactions.TransactionScope.Complete%2A> sur l'étendue de la transaction.  
-  
-```  
+
+```csharp
 //Client implementation code.  
 class Client  
 {  
@@ -340,8 +342,8 @@ class Client
         Console.ReadLine();  
     }  
 }  
-```  
-  
+```
+
  Lorsque vous exécutez l'exemple, les activités du client et du service s'affichent dans leurs fenêtres de console respectives. Vous pouvez voir le service recevoir des messages du client. Appuyez sur ENTER dans chaque fenêtre de console pour arrêter le service et le client. Notez qu'en raison de l'utilisation de la mise en file d'attente, il n'est pas nécessaire que le service et le client s'exécutent simultanément. Vous pouvez exécuter le client, l'arrêter, puis démarrer le service et il recevra encore ses messages. Vous pouvez voir une sortie en continu à mesure que les messages sont lus dans un lot et traités.  
   
 ```  

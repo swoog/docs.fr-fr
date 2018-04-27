@@ -1,28 +1,30 @@
 ---
-title: "Comment : ajouter des contrôles ActiveX aux Windows Forms"
-ms.custom: 
+title: 'Comment : ajouter des contrôles ActiveX aux Windows Forms'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows Forms controls, ActiveX controls
 - forms [Windows Forms], adding ActiveX controls
 - ActiveX controls [Windows Forms], adding
 ms.assetid: 54a61e5b-555e-4887-b41e-6244fed271eb
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 940dd21fc48c23ce623280aab2c487db5810057c
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2cedd71665dc098ca3a6a6bf43c74b2d3a11fe11
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-add-activex-controls-to-windows-forms"></a>Comment : ajouter des contrôles ActiveX aux Windows Forms
 Alors que le Concepteur Windows Forms est optimisé pour héberger des contrôles Windows Forms, vous pouvez également insérer des contrôles ActiveX aux Windows Forms.  
@@ -39,7 +41,7 @@ Alors que le Concepteur Windows Forms est optimisé pour héberger des contrôle
   
 -   Double-cliquez sur le contrôle dans la boîte à outils.  
   
-     [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]Ajoute toutes les références au contrôle de votre projet. Pour plus d’informations sur les éléments à prendre en compte lors de l’utilisation de contrôles ActiveX aux Windows Forms, consultez [considérations sur l’hébergement d’un contrôle ActiveX dans un Windows Form](../../../../docs/framework/winforms/controls/considerations-when-hosting-an-activex-control-on-a-windows-form.md).  
+     Visual Studio ajoute toutes les références au contrôle de votre projet. Pour plus d’informations sur les éléments à prendre en compte lors de l’utilisation de contrôles ActiveX aux Windows Forms, consultez [considérations sur l’hébergement d’un contrôle ActiveX dans un Windows Form](../../../../docs/framework/winforms/controls/considerations-when-hosting-an-activex-control-on-a-windows-form.md).  
   
     > [!NOTE]
     >  L’importateur de contrôles ActiveX Windows Forms (AxImp.exe) crée des arguments d’événement d’un type différent que prévu lors de l’importation de bibliothèques de liens dynamiques ActiveX. Les arguments créés par AxImp.exe sont semblables à ce qui suit : `Invoke(object sender, DWebBrowserEvents2_ProgressChangeEvent e)`, lorsque `Invoke(object sender, DWebBrowserEvents2_ProgressChangeEventArgs e)` est attendu. N’oubliez pas que cette anomalie n’empêche pas le code de fonctionner normalement. Pour plus d’informations, consultez [Windows Forms ActiveX Control Importer (Aximp.exe)](../../../../docs/framework/tools/aximp-exe-windows-forms-activex-control-importer.md).  

@@ -1,24 +1,26 @@
 ---
-title: "Considérations sur la migration (Entity Framework)"
-ms.custom: 
+title: Considérations sur la migration (Entity Framework)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 8e4c1b06e5a3a7717b99379fd9bca2c5a8a14a6a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: c31d7d481d5016b8f2d440f8a727e5bfcf66717c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="migration-considerations-entity-framework"></a>Considérations sur la migration (Entity Framework)
 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] Entity Framework présente plusieurs avantages pour une application existante. La possibilité d'utiliser un modèle conceptuel pour séparer des structures de données utilisées par l'application du schéma de la source de données constitue l'un de ces avantages les plus importants. Cela vous permet d'apporter facilement des modifications à venir au modèle de stockage ou à la source de données eux-mêmes sans apporter de modifications de compensation à l'application. Pour plus d’informations sur les avantages de l’utilisation de la [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], consultez [présentation d’Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md) et [Entity Data Model](../../../../../docs/framework/data/adonet/entity-data-model.md).  
@@ -44,7 +46,7 @@ ms.lasthandoff: 01/19/2018
   
 1.  Mettez à niveau l'application.  
   
-     Un projet créé à l’aide d’une version antérieure de [!INCLUDE[vsprvs](../../../../../includes/vsprvs-md.md)] et [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] doit être mis à niveau pour utiliser [!INCLUDE[vsOrcas](../../../../../includes/vsorcas-md.md)] SP1 et [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] depuis la version 3.5 SP1.  
+     Un projet créé à l’aide d’une version antérieure de Visual Studio et le [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] doit être mis à niveau pour utiliser [!INCLUDE[vsOrcas](../../../../../includes/vsorcas-md.md)] SP1 et [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] depuis la version 3.5 SP1.  
   
 2.  Définissez les modèles et le mappage.  
   
@@ -59,15 +61,15 @@ ms.lasthandoff: 01/19/2018
   
      [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] utilise une chaîne de connexion spécialement mise en forme lors de l'exécution de requêtes sur un modèle conceptuel. Cette chaîne de connexion encapsule des informations relatives aux fichiers de modèle et de mappage et à la connexion à la source de données. Pour plus d’informations, consultez [Comment : définir la chaîne de connexion](../../../../../docs/framework/data/adonet/ef/how-to-define-the-connection-string.md).  
   
-4.  Configurez le projet [!INCLUDE[vsprvs](../../../../../includes/vsprvs-md.md)].  
+4.  Configurer le projet Visual Studio.  
   
-     Les références à des assemblys [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] et aux fichiers de modèle et de mappage doivent être ajoutées au projet [!INCLUDE[vsprvs](../../../../../includes/vsprvs-md.md)]. Vous pouvez ajouter ces fichiers de mappage au projet pour garantir qu'ils sont déployés avec l'application dans l'emplacement indiqué dans la chaîne de connexion. Pour plus d’informations, consultez [Comment : configurer manuellement un projet Entity Framework](http://msdn.microsoft.com/library/73f6ae1d-b3b2-4577-aebd-ad5a75954e9e).  
+     Des références aux [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] assemblys et le modèle et le mappage de fichiers doivent être ajoutés au projet Visual Studio. Vous pouvez ajouter ces fichiers de mappage au projet pour garantir qu'ils sont déployés avec l'application dans l'emplacement indiqué dans la chaîne de connexion. Pour plus d’informations, consultez [Comment : configurer manuellement un projet Entity Framework](http://msdn.microsoft.com/library/73f6ae1d-b3b2-4577-aebd-ad5a75954e9e).  
   
 ## <a name="considerations-for-applications-with-existing-objects"></a>Considérations relatives aux applications comportant des objets existants  
  À partir du [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 4, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] prend en charge des objets CLR (POCO) « simples », également appelés « objets ignorant la persistance ». Dans la plupart des cas, vos objets existants peuvent fonctionner avec [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] en effectuant des changements mineurs. Pour plus d’informations, consultez [utilisation des entités POCO](http://msdn.microsoft.com/library/5e0fb82a-b6d1-41a1-b37b-c12db61629d3). Vous pouvez également migrer une application à la [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] et utiliser les classes de données qui sont générés par les outils Entity Framework. Pour plus d’informations, consultez [Comment : utiliser l’Assistant Entity Data Model](http://msdn.microsoft.com/library/dadb058a-c5d9-4c5c-8b01-28044112231d).  
   
 ## <a name="considerations-for-applications-that-use-adonet-providers"></a>Considérations relatives aux applications qui utilisent des fournisseurs ADO.NET  
- [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)]fournisseurs, tels que SqlClient, vous permettent d’interroger une source de données pour retourner des données tabulaires. Données peuvent également être chargées dans un [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] jeu de données. La liste suivante décrit des considérations relatives à la mise à niveau d'une application qui utilise un fournisseur [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] existant :  
+ [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] fournisseurs, tels que SqlClient, vous permettent d’interroger une source de données pour retourner des données tabulaires. Données peuvent également être chargées dans un [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] jeu de données. La liste suivante décrit des considérations relatives à la mise à niveau d'une application qui utilise un fournisseur [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] existant :  
   
  Affichage de données tabulaires à l'aide d'un lecteur de données.  
  Vous pouvez envisager d’exécuter un [!INCLUDE[esql](../../../../../includes/esql-md.md)] de requête à l’aide du fournisseur EntityClient et de l’énumération retourné <xref:System.Data.EntityClient.EntityDataReader> objet. Procédez de cette manière si votre application affiche des données tabulaires à l'aide d'un lecteur de données et ne requiert pas les fonctionnalités fournies par [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] pour la matérialisation des données dans des objets, le suivi des modifications et l'exécution des mises à jour. Vous pouvez continuer à utiliser le code d'accès aux données existant qui effectuer des mises à jour dans la source de données, mais vous pouvez utiliser la connexion existante accessible à partir de la propriété <xref:System.Data.EntityClient.EntityConnection.StoreConnection%2A> de l'objet <xref:System.Data.EntityClient.EntityConnection>. Pour plus d’informations, consultez [fournisseur EntityClient pour Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).  
@@ -104,7 +106,7 @@ ms.lasthandoff: 01/19/2018
  Si votre application nécessite la possibilité d'interroger des données XML, vous pouvez tout de même tirer parti des avantages des requêtes LINQ en utilisant LINQ to XML. Pour plus d’informations, consultez [LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13).  
   
  Applications qui gèrent l'état.  
- [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)]Les applications Web doivent fréquemment gérer l’état d’une page Web ou d’une session utilisateur. Les objets dans une <xref:System.Data.Objects.ObjectContext> instance peut être stockée dans l’état d’affichage client ou dans l’état de session sur le serveur et ultérieurement récupérée et rattachée à un nouveau contexte de l’objet. Pour plus d’informations, consultez [attachement et détachement des objets](http://msdn.microsoft.com/library/41d5c1ef-1b78-4502-aa10-7e1438d62d23).  
+ [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] Les applications Web doivent fréquemment gérer l’état d’une page Web ou d’une session utilisateur. Les objets dans une <xref:System.Data.Objects.ObjectContext> instance peut être stockée dans l’état d’affichage client ou dans l’état de session sur le serveur et ultérieurement récupérée et rattachée à un nouveau contexte de l’objet. Pour plus d’informations, consultez [attachement et détachement des objets](http://msdn.microsoft.com/library/41d5c1ef-1b78-4502-aa10-7e1438d62d23).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Points à prendre en considération pour le déploiement](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  

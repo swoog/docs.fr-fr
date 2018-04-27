@@ -1,24 +1,26 @@
 ---
 title: Transacted MSMQ Binding
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 71f5cb8d-f1df-4e1e-b8a2-98e734a75c37
-caps.latest.revision: "50"
+caps.latest.revision: 50
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 702f3ac45ade5fcd2f37d256ce1213a79f012ae3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e0529aa940c02ee79e25034e57f89d4b476861b8
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="transacted-msmq-binding"></a>Transacted MSMQ Binding
 Cet exemple montre comment effectuer la communication de messages mis en file d'attente avec transactions à l'aide de MSMQ (Message Queuing).  
@@ -33,19 +35,19 @@ Cet exemple montre comment effectuer la communication de messages mis en file d'
  Dans cet exemple, le client envoie un lot de messages au service à partir de l'étendue d'une transaction. Les messages envoyés à la file d'attente sont ensuite reçus par le service dans l'étendue de la transaction définie par le service.  
   
  Le contrat de service est `IOrderProcessor`, tel qu'indiqué dans l'exemple de code suivant. L'interface définit un service monodirectionnel utilisable avec les files d'attente.  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IOrderProcessor  
 {  
     [OperationContract(IsOneWay = true)]  
     void SubmitPurchaseOrder(PurchaseOrder po);  
 }  
-```  
-  
+```
+
  Le comportement de service définit un comportement d'opération avec la valeur `TransactionScopeRequired` affectée à `true`. Ainsi, l’étendue de transaction qui est utilisée pour récupérer le message de la file d’attente est utilisée par tous les gestionnaires des ressources auxquels accède la méthode. Si, par ailleurs, la méthode lève une exception, le message est retourné à la file d'attente. Si ce comportement d'opération n'est pas défini, un canal mis en file d'attente crée une transaction pour lire le message à partir de la file d'attente et le valide automatiquement avant sa distribution de sorte qu'en cas d'échec de l'opération, le message est perdu. Le scénario le plus courant est l’inscription des opérations de service dans la transaction utilisée pour lire le message à partir de la file d’attente, tel qu’indiqué dans le code suivant.  
-  
-```  
+
+```csharp
  // This service class that implements the service contract.  
  // This added code writes output to the console window.  
  public class OrderProcessorService : IOrderProcessor  
@@ -58,11 +60,11 @@ public interface IOrderProcessor
      }  
   …  
 }  
-```  
-  
+```
+
  Le service est auto-hébergé. Lors de l'utilisation du transport MSMQ, la file d'attente utilisée doit être créée au préalable. Cela peut s'effectuer manuellement ou via le code. Dans cet exemple, le service contient du code permettant de vérifier l'existence de la file d'attente et de la créer en cas d'absence. Le nom de la file d'attente est lu depuis le fichier de configuration. L’adresse de base est utilisée par le [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) pour générer le proxy pour le service.  
-  
-```  
+
+```csharp
 // Host the service within this EXE console application.  
 public static void Main()  
 {  
@@ -89,8 +91,8 @@ public static void Main()
         serviceHost.Close();  
     }  
 }  
-```  
-  
+```
+
  Le nom de file d'attente MSMQ est spécifié dans une section appSettings du fichier de configuration, tel qu'indiqué dans l'exemple de configuration suivant.  
   
 ```xml  
@@ -103,8 +105,8 @@ public static void Main()
 >  Le nom de la file d'attente comporte un point (.) pour l'ordinateur local et des barres obliques inverses comme séparateur dans son chemin d'accès lors de la création de la file d'attente à l'aide de <xref:System.Messaging>. Le point de terminaison [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] utilise l'adresse de la file d'attente avec le modèle net.msmq, « localhost » pour désigner l'ordinateur local et des barres obliques dans son chemin d'accès.  
   
  Le client crée une étendue de transaction. La communication avec la file d'attente a lieu dans l'étendue de la transaction, entraînant son traitement en tant qu'une unité atomique dans laquelle tous les messages sont envoyés à la file d'attente ou aucun des messages n'est envoyé à la file d'attente. La transaction est validée par l'appel de la méthode <xref:System.Transactions.TransactionScope.Complete%2A> sur l'étendue de la transaction.  
-  
-```  
+
+```csharp
 // Create a client.  
 OrderProcessorClient client = new OrderProcessorClient();  
   
@@ -142,14 +144,14 @@ client.Close();
 Console.WriteLine();  
 Console.WriteLine("Press <ENTER> to terminate client.");  
 Console.ReadLine();  
-```  
-  
+```
+
  Pour vérifier que les transactions fonctionnent, modifiez le client en commentant l'étendue de la transaction tel qu'indiqué dans l'exemple de code suivant, reconstruisez la solution et exécutez le client.  
-  
-```  
+
+```csharp
 //scope.Complete();  
-```  
-  
+```
+
  La transaction n'étant pas terminée, les messages ne sont pas envoyés à la file d'attente.  
   
  Lorsque vous exécutez l'exemple, les activités du client et du service s'affichent dans leurs fenêtres de console respectives. Vous pouvez voir le service recevoir des messages du client. Appuyez sur ENTER dans chaque fenêtre de console pour arrêter le service et le client. Notez qu'en raison de l'utilisation de la mise en file d'attente, il n'est pas nécessaire que le service et le client s'exécutent simultanément. Vous pouvez exécuter le client, l'arrêter, puis démarrer le service et il recevra toujours les messages.  

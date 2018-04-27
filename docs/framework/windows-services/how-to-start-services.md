@@ -1,27 +1,29 @@
 ---
-title: "Comment : démarrer des services"
-ms.custom: 
+title: 'Comment : démarrer des services'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows Service applications, starting
 - services, starting
 ms.assetid: 9ea77955-2d96-4c3d-913c-14db7604cdad
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.workload: dotnet
-ms.openlocfilehash: 8352edaa9386adc1fbf3057c6e98f5a9cf9ce4a1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 47e27f579c0ed7d1be0b061bc6e79bba0c060abb
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-start-services"></a>Comment : démarrer des services
 Une fois un service est installé, il doit être démarré. Appelez le <xref:System.ServiceProcess.ServiceBase.OnStart%2A> méthode sur la classe de service. En règle générale, le <xref:System.ServiceProcess.ServiceBase.OnStart%2A> méthode définit le travail utile effectué par le service. Après le démarrage d’un service, il reste actif jusqu'à ce qu’il est suspendu ou arrêté.  
@@ -29,7 +31,7 @@ Une fois un service est installé, il doit être démarré. Appelez le <xref:Sys
  Services peuvent être configurés pour démarrer automatiquement ou manuellement. Un service qui démarre automatiquement démarrera lorsque l’ordinateur sur lequel il est installé est tension ou redémarré. Un utilisateur doit démarrer un service qui démarre manuellement.  
   
 > [!NOTE]
->  Par défaut, les services créés avec [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] sont configurés pour démarrer manuellement.  
+>  Par défaut, les services créés avec Visual Studio sont configurés pour démarrer manuellement.  
   
  Il existe plusieurs façons, vous pouvez démarrer manuellement un service — à partir de **l’Explorateur de serveurs**, à partir de la **Gestionnaire de contrôle des Services**, ou à partir du code à l’aide d’un composant appelé le <xref:System.ServiceProcess.ServiceController>.  
   

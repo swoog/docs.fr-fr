@@ -1,24 +1,26 @@
 ---
 title: Dead Letter Queues
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 09a41abc8bc9fc3469ba35d7c7cfbe85d05ca174
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9892579633103f1e7a6612c09865c91c559df34c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="dead-letter-queues"></a>Dead Letter Queues
 Cet exemple montre comment gérer et traiter des messages n'ayant pas pu être remis. Il est basé sur le [transactionnel de liaison MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) exemple. Cet exemple utilise la liaison `netMsmqBinding`. Le service est une application console auto-hébergée qui permet d'observer le service qui reçoit les messages mis en file d'attente.  
@@ -50,21 +52,21 @@ Cet exemple montre comment gérer et traiter des messages n'ayant pas pu être r
  L'application cliente peut lire les messages dans la file d'attente de lettres mortes. Elle tente ensuite de renvoyer le message ou de corriger l'erreur qui a provoqué la mise en file d'attente de lettres mortes du message et de renvoyer le message. Dans l'exemple, le client affiche un message d'erreur.  
   
  Le contrat de service est `IOrderProcessor`, tel qu'indiqué dans l'exemple de code suivant.  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IOrderProcessor  
 {  
     [OperationContract(IsOneWay = true)]  
     void SubmitPurchaseOrder(PurchaseOrder po);  
 }  
-```  
-  
+```
+
  Le code de service dans l’exemple est celui de la [transactionnel de liaison MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md).  
   
  La communication avec le service a lieu dans l’étendue d’une transaction. Le service lit des messages à partir de la file d'attente, effectue l'opération puis affiche les résultats de cette dernière. L'application crée également une file d'attente de lettres mortes pour les messages de lettres mortes.  
-  
-```  
+
+```csharp
 //The service contract is defined in generatedClient.cs, generated from the service by the svcutil tool.  
   
 //Client implementation code.  
@@ -117,8 +119,8 @@ class Client
         Console.ReadLine();  
     }  
 }  
-```  
-  
+```
+
  La configuration du client spécifie une durée courte pour que le message atteigne le service. Si le message n'est pas transmis dans la durée définie, il expire et est déplacé vers la file d'attente de lettres mortes.  
   
 > [!NOTE]
@@ -163,8 +165,8 @@ class Client
 >  La file d'attente de lettres mortes est une file d'attente cliente et est locale sur le gestionnaire de files d'attente client.  
   
  L'implémentation du service de lettres mortes vérifie le motif d'échec de remise d'un message et prend les mesures adéquates. Le motif d'échec de remise d'un message est capturé dans les deux énumérations, <xref:System.ServiceModel.Channels.MsmqMessageProperty.DeliveryFailure%2A> et <xref:System.ServiceModel.Channels.MsmqMessageProperty.DeliveryStatus%2A>. Vous pouvez récupérer <xref:System.ServiceModel.Channels.MsmqMessageProperty> dans <xref:System.ServiceModel.OperationContext> comme illustré dans l'exemple de code suivant :  
-  
-```  
+
+```csharp
 public void SubmitPurchaseOrder(PurchaseOrder po)  
 {  
     Console.WriteLine("Submitting purchase order did not succed ", po);  
@@ -176,15 +178,15 @@ public void SubmitPurchaseOrder(PurchaseOrder po)
     Console.WriteLine("Message Delivery Failure: {0}",   
                                                mqProp.DeliveryFailure);  
     Console.WriteLine();  
-    ….  
-}  
-```  
-  
+    …  
+}
+```
+
  Les messages dans la file d'attente de lettres mortes sont des messages adressés au service qui est le traite le message. Par conséquent, lorsque le service de lettres mortes lit des messages de la file d'attente, la couche de canal [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] recherche l'incompatibilité dans les points de terminaison et ne distribue pas le message. Dans ce cas, le message est adressé au service de traitement des commandes mais est reçu par le service de lettres mortes. Pour recevoir un message adressé à un point de terminaison différent, un filtre d'adresse pouvant correspondre à n'importe quelle adresse est spécifié dans `ServiceBehavior`. Cela est requis pour traiter correctement les messages lus à partir de la file d'attente de lettres mortes.  
   
  Dans cet exemple, le service de message de lettres mortes renvoie le message si la raison de l'échec est que le message a expiré. Pour toutes les autres raisons, il affiche l'échec de la remise, comme illustré dans l'exemple de code suivant :  
-  
-```  
+
+```csharp
 // Service class that implements the service contract.  
 // Added code to write output to the console window.  
 [ServiceBehavior(InstanceContextMode=InstanceContextMode.Single, ConcurrencyMode=ConcurrencyMode.Single, AddressFilterMode=AddressFilterMode.Any)]  
@@ -237,8 +239,8 @@ public class PurchaseOrderDLQService : IOrderProcessor
         }  
     }  
 }   
-```  
-  
+```
+
  L'exemple suivant affiche la configuration pour un message de lettres mortes :  
   
 ```xml  

@@ -1,24 +1,26 @@
 ---
 title: Sessions and Queues
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 47d7c5c2-1e6f-4619-8003-a0ff67dcfbd6
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0de2668eb03a658632bb8a18c711f780b333e86b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f1aeaa72937d23a321eb615ad8b1eb4ec1e7b48e
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="sessions-and-queues"></a>Sessions and Queues
 Cet exemple montre comment envoyer et recevoir un ensemble de messages connexes dans une communication en file d'attente sur le transport (Message Queuing ou MSMQ). Cet exemple utilise la liaison `netMsmqBinding`. Le service est une application console auto-hébergée qui permet d'observer le service qui reçoit les messages mis en file d'attente.  
@@ -42,8 +44,8 @@ Cet exemple montre comment envoyer et recevoir un ensemble de messages connexes 
  Dans l’exemple, le client envoie plusieurs messages au service dans le cadre d’une session, dans une étendue de transaction unique.  
   
  Le contrat de service est `IOrderTaker`, qui définit un service monodirectionnel qui peut être utilisé avec des files d'attente. Le <xref:System.ServiceModel.SessionMode> utilisé dans le contrat illustré dans l'exemple de code suivant indique que les messages font partie de la session.  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples", SessionMode=SessionMode.Required)]  
 public interface IOrderTaker  
 {  
@@ -56,11 +58,11 @@ public interface IOrderTaker
     [OperationContract(IsOneWay = true)]  
     void EndPurchaseOrder();  
 }  
-```  
-  
+```
+
  Le service définit des opérations de service de manière à ce que la première opération s’inscrive dans une transaction mais ne complète pas automatiquement la transaction. Les opérations suivantes s’inscrivent également dans la même transaction mais ne se complètent pas automatiquement. La dernière opération de la session complète automatiquement la transaction. Donc, la même transaction est utilisée pour plusieurs appels d’opération dans le contrat de service. Si chacune des opérations lève une exception, la transaction est restaurée et la session est remise dans la file d'attente. À l'achèvement réussi de la dernière opération, la transaction est validée. Le service utilise `PerSession` comme <xref:System.ServiceModel.InstanceContextMode> pour recevoir tous les messages dans une session sur la même instance du service.  
-  
-```  
+
+```csharp
 [ServiceBehavior(InstanceContextMode=InstanceContextMode.PerSession)]  
 public class OrderTakerService : IOrderTaker  
 {  
@@ -92,11 +94,11 @@ public class OrderTakerService : IOrderTaker
        Console.WriteLine(po.ToString());  
     }  
 }  
-```  
-  
+```
+
  Le service est auto-hébergé. Lors de l'utilisation du transport MSMQ, la file d'attente utilisée doit être créée au préalable. Cela peut s'effectuer manuellement ou via le code. Dans cet exemple, le service contient le code <xref:System.Messaging> pour vérifier l'existence de la file d'attente et la crée si besoin. Le nom de la file d'attente est lu depuis le fichier de configuration à l'aide de la classe <xref:System.Configuration.ConfigurationManager.AppSettings%2A>.  
-  
-```  
+
+```csharp
 // Host the service within this EXE console application.  
 public static void Main()  
 {  
@@ -123,8 +125,8 @@ public static void Main()
         serviceHost.Close();   
     }  
 }  
-```  
-  
+```
+
  Le nom de la file d'attente MSMQ est spécifié dans la section appSettings de ce fichier de configuration. Le point de terminaison pour le service est défini dans la section system.serviceModel du fichier de configuration et spécifie la liaison `netMsmqBinding`.  
   
 ```xml  
@@ -150,8 +152,8 @@ public static void Main()
 ```  
   
  Le client crée une étendue de transaction. Tous les messages dans la session sont envoyés à la file d'attente dans l'étendue de transaction, traitée comme une unité atomique dans laquelle tous les messages réussissent ou échouent. La transaction est validée en appelant <xref:System.Transactions.TransactionScope.Complete%2A>.  
-  
-```  
+
+```csharp
 //Create a transaction scope.  
 using (TransactionScope scope = new TransactionScope(TransactionScopeOption.Required))  
 {  
@@ -178,8 +180,8 @@ using (TransactionScope scope = new TransactionScope(TransactionScopeOption.Requ
     // Complete the transaction.  
     scope.Complete();  
 }  
-```  
-  
+```
+
 > [!NOTE]
 >  Vous pouvez utiliser une seule transaction pour tous les messages dans la session et tous les messages dans la session doit être envoyés avant de valider la transaction. La fermeture du client entraîne la fermeture de la session. Par conséquent, le client doit être fermé avant que la transaction soit terminée pour envoyer tous les messages dans la session à la file d'attente.  
   

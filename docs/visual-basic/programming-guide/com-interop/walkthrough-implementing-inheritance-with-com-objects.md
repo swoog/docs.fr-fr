@@ -17,11 +17,11 @@ ms.assetid: f8e7263a-de13-48d1-b67c-ca1adf3544d9
 caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 10c6bdf46e351b23705107da3b693531718cfd37
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: b03b81c9e04e79f8ce7763ecf8a489d248ff480b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>Procédure pas à pas : implémentation de l'héritage avec les objets COM (Visual Basic)
 Vous pouvez dériver des classes Visual Basic à partir de `Public` classes dans les objets COM, même ceux créés dans les versions antérieures de Visual Basic. Les propriétés et méthodes des classes héritées d’objets COM peuvent être substituées ou surchargées comme les propriétés et méthodes de toute autre classe de base peuvent être remplacées ou surchargés. L’héritage à partir des objets COM est utile lorsque vous disposez d’une bibliothèque de classe existante que vous ne souhaitez pas recompiler.  
@@ -81,7 +81,7 @@ Vous pouvez dériver des classes Visual Basic à partir de `Public` classes dans
     >  Bien que vous pouvez également exposer une classe créée avec Visual Basic en tant qu’objet COM, il n’est pas un objet COM réel et ne peut pas être utilisé dans cette procédure pas à pas. Pour plus d’informations, consultez [interopérabilité COM dans les Applications .NET Framework](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  
   
 ## <a name="interop-assemblies"></a>Assemblys d’interopérabilité  
- Dans la procédure suivante, vous allez créer un assembly d’interopérabilité, qui fait Office de pont entre le code non managé (par exemple, un objet COM) et le code managé [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] utilise. L’assembly PIA Visual Basic crée gère de nombreux détails de l’utilisation avec des objets COM, tel que *le marshaling d’interopérabilité*, le processus empaqueter des paramètres et valeurs de retour des données de l’équivalentes de types lors de leur déplacement à et à partir des objets COM. La référence de l’application Visual Basic pointe vers l’assembly d’interopérabilité, pas l’objet COM réel.  
+ Dans la procédure suivante, vous allez créer un assembly d’interopérabilité, qui fait Office de pont entre le code non managé (par exemple, un objet COM) et le code managé, que Visual Studio utilise. L’assembly PIA Visual Basic crée gère de nombreux détails de l’utilisation avec des objets COM, tel que *le marshaling d’interopérabilité*, le processus empaqueter des paramètres et valeurs de retour des données de l’équivalentes de types lors de leur déplacement à et à partir des objets COM. La référence de l’application Visual Basic pointe vers l’assembly d’interopérabilité, pas l’objet COM réel.  
   
 #### <a name="to-use-a-com-object-with-visual-basic-2005-and-later-versions"></a>Pour utiliser un objet COM avec Visual Basic 2005 et versions ultérieures  
   

@@ -16,11 +16,11 @@ ms.assetid: 0845b245-11bb-46fd-95ca-f6cef3c318ef
 caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: a183f81a73c3c8034d9ba7366be8b36d425263da
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: ce97bcb2dd0de774c1a82ae75ef5b83c02467edb
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="unable-to-write-to-output-file-39ltfilenamegt39-lterrorgt"></a>Impossible d’écrire dans le fichier de sortie &#39; &lt;nom de fichier&gt;&#39;: &lt;erreur&gt;
 Un problème s'est produit pendant la création du fichier.  
@@ -41,7 +41,7 @@ Un problème s'est produit pendant la création du fichier.
   
 1.  Recompilez le programme pour voir si l'erreur se produit à nouveau.  
   
-2.  Le cas échéant, enregistrez votre travail et redémarrez [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
+2.  Si l’erreur persiste, enregistrez votre travail et redémarrez Visual Studio.  
   
 3.  Si l'erreur continue, redémarrez l'ordinateur.  
   

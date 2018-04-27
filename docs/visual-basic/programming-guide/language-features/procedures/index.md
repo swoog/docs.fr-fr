@@ -18,14 +18,14 @@ ms.assetid: 9effbcf0-80a0-4d1a-98f4-2c6920592766
 caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 5487dc7dbe9be50e065610cfd61815242bb74ac0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 92cb2dd3f356acf89cbe62b5f3f5dc81fce271fc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="procedures-in-visual-basic"></a>Procédures dans Visual Basic
-Une *procédure* est un bloc d’instructions [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] délimitées par une instruction de déclaration (`Function`, `Sub`, `Operator`, `Get`, `Set`) et une déclaration `End` correspondante. Toutes les instructions exécutables dans [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] doivent figurer dans une procédure.  
+A *procédure* est un bloc d’instructions Visual Basic délimitées par une instruction de déclaration (`Function`, `Sub`, `Operator`, `Get`, `Set`) et une mise en correspondance `End` déclaration. Toutes les instructions exécutables en Visual Basic doivent figurer dans une procédure.  
   
 ## <a name="calling-a-procedure"></a>Appel d’une procédure  
  Vous appelez une procédure à partir d’une autre partie du code. Il s’agit d’un *appel de procédure*. Une fois la procédure exécutée, elle renvoie le contrôle au code qui l’a appelée, opération qui se nomme *appel du code*. Le code appelant est une instruction ou une expression au sein d’une instruction, qui désigne la procédure par nom et lui transfère le contrôle.  
@@ -43,7 +43,7 @@ Une *procédure* est un bloc d’instructions [!INCLUDE[vbprvb](~/includes/vbprv
  Dans la plupart des cas, une procédure doit s’exécuter sur des données différentes chaque fois que vous l’appelez. Vous pouvez transmettre ces informations à la procédure dans le cadre de l’appel de procédure. La procédure définit zéro ou plusieurs *paramètres*, chacun d’eux représentant une valeur qu’elle s’attend à recevoir de votre part. Dans l’appel de procédure, un *argument* est associé à chaque paramètre dans la définition de la procédure. Un argument représente la valeur que vous passez au paramètre correspondant dans un appel de procédure donné.  
   
 ## <a name="types-of-procedures"></a>Types de procédures  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] utilise plusieurs types de procédures :  
+ Visual Basic utilise plusieurs types de procédures :  
   
 -   Les [procédures Sub](./sub-procedures.md) exécutent des actions mais ne retournent aucune valeur au code appelant.  
   

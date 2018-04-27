@@ -1,13 +1,13 @@
 ---
-title: "Comment : ajouter des contrôles sans interface utilisateur à des Windows Forms"
-ms.custom: 
+title: 'Comment : ajouter des contrôles sans interface utilisateur à des Windows Forms'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-winforms
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,17 +22,17 @@ helpviewer_keywords:
 - Windows Forms controls, nonvisual
 - nonvisual controls [Windows Forms]
 ms.assetid: 52134d9c-cff6-4eed-8e2b-3d5eb3bd494e
-caps.latest.revision: 
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3abbf931cff9ad459e8c9221f91430ecccefa9cc
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: e900c1c34f69531a14cfa11803ef5a6afb4783c6
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-add-controls-without-a-user-interface-to-windows-forms"></a>Comment : ajouter des contrôles sans interface utilisateur à des Windows Forms
 Un contrôle non visuel (ou un composant) fournit des fonctionnalités à votre application. Contrairement à d’autres contrôles, les composants ne fournissent pas d’interface utilisateur à l’utilisateur et par conséquent, n’avez pas besoin être affiché sur l’aire du Concepteur Windows Forms. Lorsqu’un composant est ajouté à un formulaire, le Concepteur Windows Forms affiche une barre d’état redimensionnable au bas de l’écran où tous les composants sont affichés. Une fois qu’un contrôle a été ajouté à la barre d’état du composant, vous pouvez sélectionner le composant et définissez ses propriétés comme vous le feriez pour tout autre contrôle sur le formulaire.  
@@ -48,7 +48,7 @@ Un contrôle non visuel (ou un composant) fournit des fonctionnalités à votre 
   
      Votre composant s’affiche dans la barre d’état du composant.  
   
- En outre, les composants peuvent être ajoutés à un formulaire au moment de l’exécution. Il s’agit d’un scénario courant, en particulier, car les composants n’ont pas de représentation visuelle, contrairement aux contrôles qui ont une interface utilisateur. Dans l’exemple ci-dessous, un <xref:System.Windows.Forms.Timer> composant est ajouté au moment de l’exécution. (Notez que [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] contient un numéro de différents types de minuteries ; dans ce cas, utilisez un Windows Forms <xref:System.Windows.Forms.Timer> composant. Pour plus d’informations sur les différentes minuteries dans [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)], consultez [Introduction aux minuteurs serveur](http://msdn.microsoft.com/library/adc0bc0a-a519-4812-bafc-fb9d1a5801fc).)  
+ En outre, les composants peuvent être ajoutés à un formulaire au moment de l’exécution. Il s’agit d’un scénario courant, en particulier, car les composants n’ont pas de représentation visuelle, contrairement aux contrôles qui ont une interface utilisateur. Dans l’exemple ci-dessous, un <xref:System.Windows.Forms.Timer> composant est ajouté au moment de l’exécution. (Notez que Visual Studio contient différents types de minuteries ; dans ce cas, utilisez un Windows Forms <xref:System.Windows.Forms.Timer> composant. Pour plus d’informations sur les différentes minuteries dans Visual Studio, consultez [Introduction aux minuteurs serveur](http://msdn.microsoft.com/library/adc0bc0a-a519-4812-bafc-fb9d1a5801fc).)  
   
 > [!CAUTION]
 >  Composants ont souvent des propriétés spécifiques au contrôle qui doivent être définies pour le composant de fonctionner efficacement. Dans le cas de la <xref:System.Windows.Forms.Timer> composant ci-dessous, vous définissez le `Interval` propriété. Assurez-vous que, lors de l’ajout de composants à votre projet, définissez les propriétés nécessaires à ce composant.  

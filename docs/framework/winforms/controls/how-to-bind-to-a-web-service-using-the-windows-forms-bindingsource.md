@@ -26,11 +26,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 00526e97c148fc4b587571993d2780d2e99f3ecc
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: fbbdc57eeebef9c9f14610255ece799c1e8867e1
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-bind-to-a-web-service-using-the-windows-forms-bindingsource"></a>Comment : établir une liaison à un service Web à l’aide du BindingSource Windows Forms
 Si vous voulez lier un contrôle Windows Forms aux résultats obtenus à partir d'un appel à un service web XML, vous pouvez utiliser un composant <xref:System.Windows.Forms.BindingSource>. Cette procédure est similaire à celle d'une liaison d'un composant <xref:System.Windows.Forms.BindingSource> à un type. Vous devez créer un proxy côté client qui contienne les méthodes et les types exposés par le service web. Vous générez un proxy côté client à partir du service web (.asmx) lui-même ou à partir de son fichier WSDL. En outre, votre proxy côté client doit exposer les champs de types complexes utilisés par le service web en tant que propriétés publiques. Vous pouvez ensuite lier la <xref:System.Windows.Forms.BindingSource> à l'un des types exposés dans le proxy du service web.  
@@ -45,7 +45,7 @@ Si vous voulez lier un contrôle Windows Forms aux résultats obtenus à partir 
   
 4.  À l’aide de l’outil WSDL, entrez `wsdl` et l’URL du fichier .asmx ou WSDL du service web, suivi de l’espace de noms de votre application, et éventuellement le langage utilisé.  
   
-     L’exemple de code suivant utilise le service Web situé à http://webservices.eraserver.net/zipcoderesolver/zipcoderesolver.asmx. Par exemple, pour un type C# `wsdl http://webservices.eraserver.net.zipcoderesolver/zipcoderesolver.asmx /n:BindToWebService` ou pour un type Visual Basic `wsdl http://webservices.eraserver.net.zipcoderesolver/zipcoderesolver.asmx /n:BindToWebService /language:VB`. Le fait de passer le chemin d’accès en tant qu’argument à l’outil WSDL génère un proxy côté client dans le même répertoire et le même espace de noms que votre application, dans le langage spécifié. Si vous utilisez [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)], ajoutez le fichier à votre projet.  
+     L’exemple de code suivant utilise le service Web situé à http://webservices.eraserver.net/zipcoderesolver/zipcoderesolver.asmx. Par exemple, pour un type C# `wsdl http://webservices.eraserver.net.zipcoderesolver/zipcoderesolver.asmx /n:BindToWebService` ou pour un type Visual Basic `wsdl http://webservices.eraserver.net.zipcoderesolver/zipcoderesolver.asmx /n:BindToWebService /language:VB`. Le fait de passer le chemin d’accès en tant qu’argument à l’outil WSDL génère un proxy côté client dans le même répertoire et le même espace de noms que votre application, dans le langage spécifié. Si vous utilisez Visual Studio, ajoutez le fichier à votre projet.  
   
 5.  Sélectionnez un type dans le proxy côté client avec lequel créer une liaison.  
   
@@ -83,7 +83,7 @@ Si vous voulez lier un contrôle Windows Forms aux résultats obtenus à partir 
   
 -   Des références aux assemblys System, System.Drawing, System.Web.Services, System.Windows.Forms et System.Xml.  
   
- Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également générer cet exemple dans [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] en collant le code dans un nouveau projet.  Consultez également la page [Comment : compiler et exécuter un exemple complet de code Windows Forms à l’aide de Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également générer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  Consultez également la page [Comment : compiler et exécuter un exemple complet de code Windows Forms à l’aide de Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
 ## <a name="see-also"></a>Voir aussi  
  [BindingSource, composant](../../../../docs/framework/winforms/controls/bindingsource-component.md)  

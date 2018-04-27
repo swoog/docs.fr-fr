@@ -15,14 +15,14 @@ ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
 caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c18c1ea645c9f144e2c2043af5460d6fb03f13a1
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 6a303b0bc9a51ec5566be5cf6db40ff9b9de4c9c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="events-visual-basic"></a>Événements (Visual Basic)
-On peut se représenter un projet [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] comme une série de procédures qui s’exécutent de façon séquentielle, mais, en réalité, la plupart des programmes sont pilotés par des événements, ce qui signifie que le flux d’exécution est déterminé par des occurrences externes nommées *événements*.  
+Vous pouvez visualiser un projet Visual Studio sous la forme d’une série de procédures qui s’exécutent dans une séquence, en réalité, la plupart des programmes sont pilotés par des événements, ce qui signifie que le flux d’exécution est déterminé par les occurrences externes appelées *événements*.  
   
  Un événement est un signal qui informe l’application que quelque chose d’important s’est produit. Par exemple, lorsqu’un utilisateur clique sur un contrôle sur un formulaire, le formulaire peut déclencher un événement `Click` et appeler une procédure qui gère l’événement. Les événements permettent également à des tâches distinctes de communiquer. Supposons, par exemple, que votre application exécute une tâche de tri de façon distincte de l’application principale. Si un utilisateur annule le tri, votre application peut envoyer un événement d’annulation demandant l’arrêt du processus de tri.  
   

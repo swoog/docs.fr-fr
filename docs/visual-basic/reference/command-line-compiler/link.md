@@ -18,11 +18,11 @@ helpviewer_keywords:
 ms.assetid: 1885f24a-86f5-486c-a064-9fb7e455ccec
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4410818b43c0ab12f9488198fffbe4b0f2d89252
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 4699e3adfd83a35ee81a5c8838e300adf6ecf667
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="-link-visual-basic"></a>-link (Visual Basic)
 Fait que le compilateur rend disponible pour le projet en cours de compilation les informations de type COM des assemblys spécifiés.  
@@ -51,7 +51,7 @@ Fait que le compilateur rend disponible pour le projet en cours de compilation l
 > [!NOTE]
 >  Quand vous créez une instance d’un type COM incorporé dans votre code, vous devez créer l’instance à l’aide de l’interface appropriée. Une tentative de création d’une instance d’un type COM incorporé à l’aide de la coclasse provoque une erreur.  
   
- Pour définir l’option `-link` dans [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], ajoutez une référence d’assembly et définissez la propriété `Embed Interop Types` sur **true**. La valeur par défaut pour la propriété `Embed Interop Types` est **false**.  
+ Pour définir le `-link` option dans Visual Studio, ajoutez une référence d’assembly et définir le `Embed Interop Types` propriété **true**. La valeur par défaut pour la propriété `Embed Interop Types` est **false**.  
   
  Si vous liez à un assembly COM (Assembly A) qui référence lui-même un autre assembly COM (Assembly B), vous devez également lier à l’Assembly B si une des conditions suivantes est vraie :  
   

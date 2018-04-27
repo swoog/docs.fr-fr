@@ -1,12 +1,13 @@
 ---
 title: "Procédure pas à pas : mise en cache de données d'application dans une application WPF"
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 81d808b982852d5cc6dc187a3c8389748a0dc0bf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a8d3fe2dbfe0b4b5fb9081d71cec080dfa54add8
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>Procédure pas à pas : mise en cache de données d'application dans une application WPF
 La mise en cache vous permet de stocker des données en mémoire pour y accéder rapidement. Lorsque vous accédez à nouveau les données, les applications peuvent obtenir les données à partir du cache à la place de la récupération à partir de la source d’origine. Cela peut améliorer les performances et la scalabilité. La mise en cache rend également les données disponibles quand la source de données est temporairement indisponible.  
@@ -67,7 +69,7 @@ La mise en cache vous permet de stocker des données en mémoire pour y accéder
   
 #### <a name="to-create-a-wpf-application"></a>Pour créer une application WPF  
   
-1.  Démarrez [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].  
+1.  Démarrez Visual Studio.  
   
 2.  Dans le **fichier** menu, cliquez sur **nouveau**, puis cliquez sur **nouveau projet**.  
   
@@ -86,7 +88,7 @@ La mise en cache vous permet de stocker des données en mémoire pour y accéder
   
 7.  Cliquez sur **OK**.  
   
-     Le Concepteur WPF s’ouvre dans **conception** afficher et affiche le fichier MainWindow.xaml. [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]crée le **mon projet** dossier, le fichier Application.xaml et le fichier MainWindow.xaml.  
+     Le Concepteur WPF s’ouvre dans **conception** afficher et affiche le fichier MainWindow.xaml. Visual Studio crée le **mon projet** dossier, le fichier Application.xaml et le fichier MainWindow.xaml.  
   
 ## <a name="targeting-the-net-framework-and-adding-a-reference-to-the-caching-assemblies"></a>Ciblage du .NET Framework et l’ajout d’une référence aux assemblys de mise en cache  
  Par défaut, les applications WPF ciblent le [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]. Pour utiliser le <xref:System.Runtime.Caching> espace de noms dans une application WPF, l’application doit cibler le [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] (pas le [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]) et doit inclure une référence à l’espace de noms.  
@@ -307,7 +309,7 @@ La mise en cache vous permet de stocker des données en mémoire pour y accéder
   
      Le contenu mis en cache à partir du fichier texte est affiché dans une boîte de message. Notez que l’horodatage du fichier.  
   
-3.  Fermez la boîte de message, puis **extraire du Cache** nouveau**.**  
+3.  Fermez la boîte de message, puis **extraire du Cache** nouveau **.**  
   
      L’horodatage reste inchangé. Cela indique que le contenu mis en cache s’affiche.  
   
@@ -317,7 +319,7 @@ La mise en cache vous permet de stocker des données en mémoire pour y accéder
   
 5.  Dans un éditeur de texte, ouvrez le fichier texte que vous avez créé. N’apportez pas encore de modifications.  
   
-6.  Fermez la boîte de message, puis **extraire du Cache** nouveau**.**  
+6.  Fermez la boîte de message, puis **extraire du Cache** nouveau **.**  
   
      Notez l’horodatage à nouveau.  
   

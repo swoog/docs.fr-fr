@@ -1,12 +1,13 @@
 ---
 title: Documents dans WPF
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - documents [WPF], packaging
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - documents [WPF], types of
 - documents [WPF], browser-viewable
 ms.assetid: 6e8db7bc-050a-4070-aa72-bb8c46e87ff8
-caps.latest.revision: "36"
+caps.latest.revision: 36
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 02f65d68cdaad8824905c4545239f5b607c672d6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0fcf7281cce7e5921ad7a03011ff85c254231690
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="documents-in-wpf"></a>Documents dans WPF
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] offre une large gamme de fonctionnalités liées aux documents qui permettent de créer du contenu haute fidélité conçu pour être accessible et lu plus facilement que sur les générations précédentes de [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]. En plus d’une amélioration des capacités et de la qualité, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fournit également des services intégrés pour l’affichage, le packaging et la sécurité des documents. Cette rubrique fournit une introduction aux types et au packaging des documents [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -42,12 +44,12 @@ ms.lasthandoff: 12/22/2017
   
 <a name="document_viewer"></a>   
 ## <a name="document-controls-and-text-layout"></a>Contrôles de document et disposition du texte  
- Le [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] fournit un ensemble de contrôles prédéfinis qui simplifient l’utilisation de documents fixes, de documents dynamiques et de texte standard dans votre application.  L’affichage du contenu de document fixe est pris en charge à l’aide de la <xref:System.Windows.Controls.DocumentViewer> contrôle.  Affichage du contenu de document de flux est pris en charge par trois contrôles différents : <xref:System.Windows.Controls.FlowDocumentReader>, <xref:System.Windows.Controls.FlowDocumentPageViewer>, et <xref:System.Windows.Controls.FlowDocumentScrollViewer> qui mappent sur différents scénarios utilisateur (voir les sections ci-dessous).  D’autres contrôles [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fournissent une disposition simplifiée pour la prise en charge des utilisations générales de texte (voir [Texte dans l’interface utilisateur](#text_in_the_user_interface), ci-dessous).  
+ Le .NET Framework fournit un ensemble de contrôles prédéfinis qui simplifient l’utilisation de documents fixes, dynamiques et documents texte dans votre application.  L’affichage du contenu de document fixe est pris en charge à l’aide de la <xref:System.Windows.Controls.DocumentViewer> contrôle.  Affichage du contenu de document de flux est pris en charge par trois contrôles différents : <xref:System.Windows.Controls.FlowDocumentReader>, <xref:System.Windows.Controls.FlowDocumentPageViewer>, et <xref:System.Windows.Controls.FlowDocumentScrollViewer> qui mappent sur différents scénarios utilisateur (voir les sections ci-dessous).  D’autres contrôles [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fournissent une disposition simplifiée pour la prise en charge des utilisations générales de texte (voir [Texte dans l’interface utilisateur](#text_in_the_user_interface), ci-dessous).  
   
 ### <a name="fixed-document-control---documentviewer"></a>Contrôle de document fixe - DocumentViewer  
  Le <xref:System.Windows.Controls.DocumentViewer> contrôle est conçu pour afficher <xref:System.Windows.Documents.FixedDocument> contenu. Le <xref:System.Windows.Controls.DocumentViewer> contrôle fournit une interface utilisateur intuitive qui fournit la prise en charge intégrée pour les opérations courantes telles que la sortie imprimée, copiez dans le Presse-papiers, le zoom et les fonctionnalités de recherche de texte. Le contrôle permet d’accéder aux pages de contenu par le biais d’un mécanisme de défilement familier. Comme tous les [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contrôles, <xref:System.Windows.Controls.DocumentViewer> prend en charge la modification complète ou partielle du style, qui permet au contrôle d’être intégré visuellement dans pratiquement n’importe quelle application ou d’un environnement.  
   
- <xref:System.Windows.Controls.DocumentViewer>est conçu pour afficher le contenu d’une manière en lecture seule ; modification ou la modification de contenu n’est pas disponible et n’est pas pris en charge.  
+ <xref:System.Windows.Controls.DocumentViewer> est conçu pour afficher le contenu d’une manière en lecture seule ; modification ou la modification de contenu n’est pas disponible et n’est pas pris en charge.  
   
 <a name="flow_document"></a>   
 ### <a name="flow-document-controls"></a>Contrôles de document dynamique  
@@ -56,16 +58,16 @@ ms.lasthandoff: 12/22/2017
  Affichage du contenu de document de flux est pris en charge par trois contrôles : <xref:System.Windows.Controls.FlowDocumentReader>, <xref:System.Windows.Controls.FlowDocumentPageViewer>, et <xref:System.Windows.Controls.FlowDocumentScrollViewer>.  
   
 #### <a name="flowdocumentreader"></a>FlowDocumentReader  
- <xref:System.Windows.Controls.FlowDocumentReader>inclut des fonctionnalités qui permettent aux utilisateurs de choisir dynamiquement entre plusieurs modes d’affichage, y compris un mode d’affichage de page unique (page-à-un-time), deux page-à-un à la fois (format livre) un mode de défilement continu (sans marge inférieure) et du mode d’affichage.  Pour plus d’informations sur les modes d’affichage, consultez <xref:System.Windows.Controls.FlowDocumentReaderViewingMode>.  Si vous n’avez pas besoin de la possibilité de basculer dynamiquement entre les différents modes d’affichage, <xref:System.Windows.Controls.FlowDocumentPageViewer> et <xref:System.Windows.Controls.FlowDocumentScrollViewer> fournissent les flux légère afficheurs de contenu qui sont résolus dans un mode d’affichage particulier.  
+ <xref:System.Windows.Controls.FlowDocumentReader> inclut des fonctionnalités qui permettent aux utilisateurs de choisir dynamiquement entre plusieurs modes d’affichage, y compris un mode d’affichage de page unique (page-à-un-time), deux page-à-un à la fois (format livre) un mode de défilement continu (sans marge inférieure) et du mode d’affichage.  Pour plus d’informations sur les modes d’affichage, consultez <xref:System.Windows.Controls.FlowDocumentReaderViewingMode>.  Si vous n’avez pas besoin de la possibilité de basculer dynamiquement entre les différents modes d’affichage, <xref:System.Windows.Controls.FlowDocumentPageViewer> et <xref:System.Windows.Controls.FlowDocumentScrollViewer> fournissent les flux légère afficheurs de contenu qui sont résolus dans un mode d’affichage particulier.  
   
 #### <a name="flowdocumentpageviewer-and-flowdocumentscrollviewer"></a>FlowDocumentPageViewer et FlowDocumentScrollViewer  
- <xref:System.Windows.Controls.FlowDocumentPageViewer>Affiche le contenu dans la page au moment mode d’affichage, tandis que <xref:System.Windows.Controls.FlowDocumentScrollViewer> affiche le contenu en mode de défilement continu.  Les deux <xref:System.Windows.Controls.FlowDocumentPageViewer> et <xref:System.Windows.Controls.FlowDocumentScrollViewer> sont fixés pour un mode d’affichage particulier. Comparer à <xref:System.Windows.Controls.FlowDocumentReader>, qui inclut des fonctionnalités qui permettent aux utilisateurs de choisir dynamiquement entre plusieurs modes d’affichage (tel que fourni par le <xref:System.Windows.Controls.FlowDocumentReaderViewingMode> énumération), au détriment de la plus performante que celle de ressources <xref:System.Windows.Controls.FlowDocumentPageViewer> ou <xref:System.Windows.Controls.FlowDocumentScrollViewer>.  
+ <xref:System.Windows.Controls.FlowDocumentPageViewer> Affiche le contenu dans la page au moment mode d’affichage, tandis que <xref:System.Windows.Controls.FlowDocumentScrollViewer> affiche le contenu en mode de défilement continu.  Les deux <xref:System.Windows.Controls.FlowDocumentPageViewer> et <xref:System.Windows.Controls.FlowDocumentScrollViewer> sont fixés pour un mode d’affichage particulier. Comparer à <xref:System.Windows.Controls.FlowDocumentReader>, qui inclut des fonctionnalités qui permettent aux utilisateurs de choisir dynamiquement entre plusieurs modes d’affichage (tel que fourni par le <xref:System.Windows.Controls.FlowDocumentReaderViewingMode> énumération), au détriment de la plus performante que celle de ressources <xref:System.Windows.Controls.FlowDocumentPageViewer> ou <xref:System.Windows.Controls.FlowDocumentScrollViewer>.  
   
  Par défaut, une barre de défilement verticale est toujours affichée et une barre de défilement horizontale apparaît si nécessaire. La valeur par défaut [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] pour <xref:System.Windows.Controls.FlowDocumentScrollViewer> n’inclut pas d’une barre d’outils ; Toutefois, le <xref:System.Windows.Controls.FlowDocumentScrollViewer.IsToolBarVisible%2A> propriété peut être utilisée pour activer une barre d’outils.  
   
 <a name="text_in_the_user_interface"></a>   
 ### <a name="text-in-the-user-interface"></a>Texte dans l’interface utilisateur  
- En plus d’ajouter du texte à des documents, vous pouvez bien évidemment utiliser du texte dans l’interface utilisateur de l’application, notamment dans des formulaires. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] inclut plusieurs contrôles pour dessiner le texte à l’écran. Chaque contrôle cible un scénario différent et dispose de sa propre liste de fonctionnalités et limitations. En général, les <xref:System.Windows.Controls.TextBlock> élément doit être utilisé lors de la prise en charge limitée de texte est requis, par exemple, une brève phrase dans un [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Controls.Label>peut être utilisé lors de la prise en charge de texte minimale est requise. Pour plus d’informations, consultez [Vue d’ensemble de TextBlock](../../../../docs/framework/wpf/controls/textblock-overview.md).  
+ En plus d’ajouter du texte à des documents, vous pouvez bien évidemment utiliser du texte dans l’interface utilisateur de l’application, notamment dans des formulaires. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] inclut plusieurs contrôles pour dessiner le texte à l’écran. Chaque contrôle cible un scénario différent et dispose de sa propre liste de fonctionnalités et limitations. En général, les <xref:System.Windows.Controls.TextBlock> élément doit être utilisé lors de la prise en charge limitée de texte est requis, par exemple, une brève phrase dans un [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Controls.Label> peut être utilisé lors de la prise en charge de texte minimale est requise. Pour plus d’informations, consultez [Vue d’ensemble de TextBlock](../../../../docs/framework/wpf/controls/textblock-overview.md).  
   
 <a name="packaging"></a>   
 ## <a name="document-packaging"></a>Packaging de documents  
@@ -85,7 +87,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="packages"></a>   
 ### <a name="package-components"></a>Composants d’un package  
- Les API de packaging [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] permettent d’organiser les données et documents d’une application en une seule unité portable. Un fichier ZIP est l’un des types de package les plus courants. Il s’agit du type de package par défaut fourni avec [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  <xref:System.IO.Packaging.Package>lui-même est une classe abstraite à partir de laquelle <xref:System.IO.Packaging.ZipPackage> est implémentée à l’aide d’une architecture de fichiers ZIP et XML standard ouverte.  Le <xref:System.IO.Packaging.Package.Open%2A> utilise <xref:System.IO.Packaging.ZipPackage> pour créer et utiliser des fichiers ZIP par défaut. Un package peut contenir trois types d’éléments de base :  
+ Les API de packaging [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] permettent d’organiser les données et documents d’une application en une seule unité portable. Un fichier ZIP est l’un des types de package les plus courants. Il s’agit du type de package par défaut fourni avec [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  <xref:System.IO.Packaging.Package> lui-même est une classe abstraite à partir de laquelle <xref:System.IO.Packaging.ZipPackage> est implémentée à l’aide d’une architecture de fichiers ZIP et XML standard ouverte.  Le <xref:System.IO.Packaging.Package.Open%2A> utilise <xref:System.IO.Packaging.ZipPackage> pour créer et utiliser des fichiers ZIP par défaut. Un package peut contenir trois types d’éléments de base :  
   
 |||  
 |-|-|  
@@ -95,7 +97,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="PackageParts"></a>   
 #### <a name="packageparts"></a>PackageParts  
- A <xref:System.IO.Packaging.PackagePart> (« partie ») est une classe abstraite qui fait référence à un objet stocké dans un <xref:System.IO.Packaging.Package>. Dans un fichier ZIP, les parties du package correspondent aux fichiers individuels stockés qu’il contient.  <xref:System.IO.Packaging.ZipPackagePart>fournit l’implémentation par défaut pour les objets sérialisables stockés dans un <xref:System.IO.Packaging.ZipPackage>.  Comme pour un système de fichiers, les parties contenues dans le package sont stockées dans des répertoires hiérarchiques ou sous forme de dossiers.  À l’aide de la [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] empaquetage API, les applications peuvent écrire, stocker et lire plusieurs <xref:System.IO.Packaging.PackagePart> objets à l’aide d’un conteneur de fichier ZIP unique.  
+ A <xref:System.IO.Packaging.PackagePart> (« partie ») est une classe abstraite qui fait référence à un objet stocké dans un <xref:System.IO.Packaging.Package>. Dans un fichier ZIP, les parties du package correspondent aux fichiers individuels stockés qu’il contient.  <xref:System.IO.Packaging.ZipPackagePart> fournit l’implémentation par défaut pour les objets sérialisables stockés dans un <xref:System.IO.Packaging.ZipPackage>.  Comme pour un système de fichiers, les parties contenues dans le package sont stockées dans des répertoires hiérarchiques ou sous forme de dossiers.  À l’aide de la [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] empaquetage API, les applications peuvent écrire, stocker et lire plusieurs <xref:System.IO.Packaging.PackagePart> objets à l’aide d’un conteneur de fichier ZIP unique.  
   
 <a name="PackageDigitalSignatures"></a>   
 #### <a name="packagedigitalsignatures"></a>PackageDigitalSignatures  

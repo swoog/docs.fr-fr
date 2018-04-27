@@ -1,24 +1,26 @@
 ---
 title: Custom Demux
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fc54065c-518e-4146-b24a-0fe00038bfa7
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 540469571f06f9c2ab38f9754a40aae5a3c3b267
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 45184c2d884347baef4090ed496e22e77aab5423
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="custom-demux"></a>Custom Demux
 Cet exemple montre comment les en-têtes de message MSMQ peuvent être mappés à différentes opérations de service afin que [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] les services qui utilisent <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> ne sont pas limités à l’utilisation d’une opération de service comme illustré dans le [de Message Queuing Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md) et [Windows Communication Foundation à Message Queuing](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md) exemples.  
@@ -26,8 +28,8 @@ Cet exemple montre comment les en-têtes de message MSMQ peuvent être mappés �
  Dans cet exemple, le service est une application console auto-hébergée qui permet d'observer le service qui reçoit les messages mis en file d'attente.  
   
  Le contrat de service est `IOrderProcessor`, et il définit un service unidirectionnel pouvant être utilisé avec des files d'attente.  
-  
-```  
+
+```csharp
 [ServiceContract]  
 [KnownType(typeof(PurchaseOrder))]  
 [KnownType(typeof(String))]  
@@ -39,11 +41,11 @@ public interface IOrderProcessor
     [OperationContract(IsOneWay = true, Name = "CancelPurchaseOrder")]  
     void CancelPurchaseOrder(MsmqMessage<string> ponumber);  
 }  
-```  
-  
+```
+
  Un message MSMQ n'a pas d'en-tête Action. Il n'est pas possible de mapper automatiquement différents messages MSMQ aux contrats d'opération. Par conséquent, il ne peut y avoir qu'un seul contrat d'opération. Pour passer outre cette limitation, le service implémente la méthode <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A> de l'interface <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector>. La méthode <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A> permet au service de mapper un en-tête donné du message à une opération de service particulière. Dans cet exemple, l'en-tête d'étiquette du message est mappé aux opérations de service. Le paramètre `Name` du contrat d'opération détermine quelle opération de service doit être distribuée pour une étiquette de message donnée. Par exemple, si l'en-tête d'étiquette du message contient « SubmitPurchaseOrder », l'opération de service « SubmitPurchaseOrder » est appelée.  
-  
-```  
+
+```csharp
 public class OperationSelector : IDispatchOperationSelector  
 {  
     public string SelectOperation(ref System.ServiceModel.Channels.Message message)  
@@ -52,29 +54,29 @@ public class OperationSelector : IDispatchOperationSelector
         return property.Label;  
     }  
 }  
-```  
-  
+```
+
  Le service doit implémenter la méthode <xref:System.ServiceModel.Description.IContractBehavior.ApplyDispatchBehavior%28System.ServiceModel.Description.ContractDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%2CSystem.ServiceModel.Dispatcher.DispatchRuntime%29> de l'interface <xref:System.ServiceModel.Description.IContractBehavior> comme illustré dans l'exemple de code suivant. Le `OperationSelector` personnalisé est alors appliqué à l'exécution du répartiteur de l'infrastructure du service.  
-  
-```  
+
+```csharp
 void IContractBehavior.ApplyDispatchBehavior(ContractDescription description, ServiceEndpoint endpoint, DispatchRuntime dispatch)  
 {  
     dispatch.OperationSelector = new OperationSelector();  
 }  
-```  
-  
+```
+
  Un message doit traverser le <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> du répartiteur avant d'arriver à OperationSelector. Par défaut, un message est rejeté si son action n'est trouvée sur aucun des contrats implémentés par le service. Pour éviter ce contrôle, nous implémentons un <xref:System.ServiceModel.Description.IEndpointBehavior> nommé `MatchAllFilterBehavior` qui permet à tout message de traverser le `ContractFilter`, en appliquant le <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> comme suit.  
-  
-```  
+
+```csharp
 public void ApplyDispatchBehavior(ServiceEndpoint serviceEndpoint, EndpointDispatcher endpointDispatcher)  
 {  
     endpointDispatcher.ContractFilter = new MatchAllMessageFilter();  
 }  
-```  
+```
   
  Lorsqu'un message est reçu par le service, l'opération de service appropriée est distribuée à l'aide des informations fournies par l'en-tête d'étiquette. Le corps du message est désérialisé dans un objet `PurchaseOrder`, comme affiché dans l'exemple de code suivant.  
-  
-```  
+
+```csharp
 [OperationBehavior(TransactionScopeRequired = true, TransactionAutoComplete = true)]  
 public void SubmitPurchaseOrder(MsmqMessage<PurchaseOrder> msg)  
 {  
@@ -83,11 +85,11 @@ public void SubmitPurchaseOrder(MsmqMessage<PurchaseOrder> msg)
     po.Status = (OrderStates)statusIndexer.Next(3);  
     Console.WriteLine("Processing {0} ", po);  
 }  
-```  
-  
+```
+
  Le service est auto-hébergé. Lors de l'utilisation de MSMQ, la file d'attente utilisée doit être créée en avance. Cela peut s'effectuer manuellement ou via le code. Dans cet exemple, le service contient du code permettant de vérifier l'existence de la file d'attente et de la créer, si nécessaire. Le nom de la file d'attente est lu depuis le fichier de configuration.  
-  
-```  
+
+```csharp
 public static void Main()  
 {  
     // Get MSMQ queue name from app settings in configuration  
@@ -115,8 +117,8 @@ public static void Main()
         serviceHost.Close();  
     }  
 }  
-```  
-  
+```
+
  Le nom de la file d'attente MSMQ est spécifié dans la section appSettings de ce fichier de configuration.  
   
 > [!NOTE]

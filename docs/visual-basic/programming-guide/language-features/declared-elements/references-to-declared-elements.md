@@ -1,32 +1,33 @@
 ---
-title: "Références aux éléments déclarés (Visual Basic)"
-ms.custom: 
+title: Références aux éléments déclarés (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - declared elements [Visual Basic]
 - references [Visual Basic], declared elements
 - qualified names [Visual Basic]
 ms.assetid: d6301709-f4cc-4b7a-b8ba-80898f14ab46
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9b3847164b4e577a9265a746b9329218b4af928b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 86d25d42688cffbf4076c4fb42eccc3b917d1dc1
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="references-to-declared-elements-visual-basic"></a>Références aux éléments déclarés (Visual Basic)
-Lorsque votre code fait référence à un élément déclaré, le [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilateur correspond au nom de la référence à la déclaration appropriée de ce nom. Si plus d’un élément est déclaré avec le même nom, vous pouvez contrôler lequel de ces éléments doit être référencé par *éligible* son nom.  
+Lorsque votre code fait référence à un élément déclaré, le compilateur Visual Basic correspond au nom de la référence à la déclaration appropriée de ce nom. Si plus d’un élément est déclaré avec le même nom, vous pouvez contrôler lequel de ces éléments doit être référencé par *éligible* son nom.  
   
  Le compilateur tente de correspondre à une référence de nom à une déclaration de nom avec la *plus petite portée*. Cela signifie qu’il commence par le code qui effectue la référence et parcourt niveaux successifs d’éléments conteneurs.  
   
- L’exemple suivant montre des références à deux variables portant le même nom. L’exemple déclare deux variables, chacune nommée `totalCount`, à différents niveaux de portée dans le module `container`. Lors de la procédure `showCount` affiche `totalCount` sans qualification, le [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilateur résout la référence à la déclaration avec la plus petite portée, à savoir la déclaration locale à l’intérieur de `showCount`. Lorsqu’il qualifie `totalCount` avec le module conteneur `container`, le compilateur résout la référence à la déclaration avec une portée plus large.  
+ L’exemple suivant montre des références à deux variables portant le même nom. L’exemple déclare deux variables, chacune nommée `totalCount`, à différents niveaux de portée dans le module `container`. Lors de la procédure `showCount` affiche `totalCount` sans qualification, le compilateur Visual Basic résout la référence à la déclaration avec la plus petite portée, à savoir la déclaration locale à l’intérieur de `showCount`. Lorsqu’il qualifie `totalCount` avec le module conteneur `container`, le compilateur résout la référence à la déclaration avec une portée plus large.  
   
 ```vb  
 ' Assume these two modules are both in the same assembly.  
@@ -199,7 +200,7 @@ Dim xDoc As xD.XmlDocument
  Pour éviter toute ambiguïté, vous pouvez affecter des noms uniques de tous les éléments de. Ensuite, vous pouvez faire référence à n’importe quel élément sans devoir qualifier son nom avec un espace de noms, un module ou une classe. Vous réduisez également le risque de faire référence par erreur à l’élément incorrect.  
   
 ## <a name="shadowing"></a>Clichés instantanés  
- Lorsque deux éléments de programmation partagent le même nom, un d’eux peut masquer, ou *ombre*, autre. Un élément occulté n’est pas disponible pour la référence ; au lieu de cela, lorsque votre code utilise le nom de l’élément occulté, le [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilateur résout vers l’élément d’occultation. Pour obtenir une explication plus détaillée avec des exemples, consultez [occultation dans Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
+ Lorsque deux éléments de programmation partagent le même nom, un d’eux peut masquer, ou *ombre*, autre. Un élément occulté n’est pas disponible pour la référence ; au lieu de cela, lorsque votre code utilise le nom de l’élément occulté, le compilateur Visual Basic le résout en l’élément d’occultation. Pour obtenir une explication plus détaillée avec des exemples, consultez [occultation dans Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Noms d’éléments déclarés](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  

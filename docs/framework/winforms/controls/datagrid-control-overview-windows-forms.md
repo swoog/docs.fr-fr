@@ -1,13 +1,13 @@
 ---
-title: "Vue d'ensemble du contrôle DataGrid (Windows Forms)"
-ms.custom: 
+title: Vue d'ensemble du contrôle DataGrid (Windows Forms)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-winforms
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - DataGrid
@@ -28,17 +28,17 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-caps.latest.revision: 
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 10220efc0bb77ddcc7f0f9fa0e3f2793a032a1bd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fd74ed0e31fff211f0197ad27f297f9fbecf5cab
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>Vue d'ensemble du contrôle DataGrid (Windows Forms)
 > [!NOTE]
@@ -103,7 +103,7 @@ Contrôle DataGrid lié aux données par plusieurs tables
 |Plusieurs tables associées.|La grille peut afficher une arborescence dans laquelle sélectionner des tables ou vous pouvez spécifier que la grille affiche la table parente. Les enregistrements dans la table parente permettent aux utilisateurs d'accéder aux lignes enfants associées.|  
   
 > [!NOTE]
->  Les tables dans un dataset sont associées à l'aide d'un <xref:System.Data.DataRelation>.  Consultez également [LIEN HYPERTEXTE "http://msdn.microsoft.com/library/dbwcse3d(v=vs.110)" Relations dans les datasets](http://msdn.microsoft.com/library/dbwcse3d\(v=vs.110\)) ou [Relations dans les datasets](http://msdn.microsoft.com/library/dbwcse3d\(v=vs.120\)).  
+>  Les tables dans un dataset sont associées à l'aide d'un <xref:System.Data.DataRelation>.  Consultez également [lien hypertexte «http://msdn.microsoft.com/library/dbwcse3d(v=vs.110)» des relations dans les jeux de données](http://msdn.microsoft.com/library/dbwcse3d\(v=vs.110\)) ou [des relations dans les jeux de données](http://msdn.microsoft.com/library/dbwcse3d\(v=vs.120\)).  
   
  Quand le contrôle <xref:System.Windows.Forms.DataGrid> affiche une table et que la propriété <xref:System.Windows.Forms.DataGrid.AllowSorting%2A> a la valeur `true`, vous pouvez retrier les données en cliquant sur les en-têtes de colonnes. L'utilisateur peut aussi ajouter des lignes et modifier des cellules.  
   
@@ -137,7 +137,7 @@ L'illustration suivante montre les objets inclus dans le contrôle DataGrid.
   
  Les styles de colonne sont liés aux colonnes d'un dataset tout comme les styles de table sont liés aux tables de données. Vous ne pouvez définir qu'un seul style de colonne à la fois pour chaque colonne dans un style de table particulier. Cette relation est définie dans la propriété <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> de la colonne.  
   
- Si vous avez créé un style de table sans y ajouter de style de colonne, [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] ajoute des styles de colonne par défaut quand le formulaire et la grille sont créés au moment de l'exécution. En revanche, si vous avez créé un style de table et que vous y avez ajouté des styles de colonne, [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] ne crée pas de style de colonne. De plus, vous devrez définir des styles de colonne et les assigner avec le nom de mappage pour afficher les colonnes de votre choix dans la grille.  
+ Si vous avez créé un style de table sans ajouté de styles de colonne, Visual Studio ajoute des styles de colonne par défaut lorsque le formulaire et la grille sont créés au moment de l’exécution. Toutefois, si vous avez créé un style de table et ajouté des styles de colonne, Visual Studio ne crée pas de styles de colonne. De plus, vous devrez définir des styles de colonne et les assigner avec le nom de mappage pour afficher les colonnes de votre choix dans la grille.  
   
  Étant donné que vous spécifiez les colonnes à inclure dans la grille de données en leur assignant un style de colonne et qu'aucun style de colonne n'a été assigné aux colonnes, vous pouvez inclure dans le dataset des colonnes de données qui ne sont pas affichées dans la grille. Toutefois, comme la colonne de données est incluse dans le dataset, vous pouvez modifier par programmation les données qui ne sont pas affichées.  
   

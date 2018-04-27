@@ -1,26 +1,27 @@
 ---
 title: Variables et arguments
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d03dbe34-5b2e-4f21-8b57-693ee49611b8
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d01c31cce9aa6ae6d87773fc8e616e0e08bbd8c8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c81d05120f8cf0decc7c6036e2a722ba6271dab8
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="variables-and-arguments"></a>Variables et arguments
-Dans [!INCLUDE[wf](../../../includes/wf-md.md)], les variables représentent le stockage de données et les arguments représentent le flux de données à l'intérieur et à l'extérieur d'une activité. Une activité a un ensemble d'arguments et ils composent la signature de l'activité. En outre, une activité peut gérer une liste de variables dans laquelle un développeur peut ajouter ou supprimer des variables pendant la conception d'un workflow. Un argument est lié à l'aide d'une expression qui retourne une valeur.  
+Dans Windows Workflow Foundation (WF), les variables représentent le stockage des données et les arguments représentent le flux de données dans et hors d’une activité. Une activité a un ensemble d’arguments et ils composent la signature de l’activité. En outre, une activité peut gérer une liste de variables dans laquelle un développeur peut ajouter ou supprimer des variables pendant la conception d'un workflow. Un argument est lié à l'aide d'une expression qui retourne une valeur.  
   
 ## <a name="variables"></a>Variables  
  Les variables sont des emplacements de stockage pour les données. Les variables sont déclarées dans le cadre de la définition d'un workflow. Les variables prennent des valeurs au moment de l'exécution et ces valeurs sont stockées dans le cadre de l'état d'une instance de workflow. Une définition de variable spécifie le type de la variable et éventuellement le nom. Le code suivant indique comment déclarer une variable, lui affecter une valeur à l'aide d'une activité <xref:System.Activities.Statements.Assign%601>, puis afficher sa valeur dans la console à l'aide d'une activité <xref:System.Activities.Statements.WriteLine>.  
@@ -77,7 +78,7 @@ Variable<string> var = new Variable<string>
   
 2.  Lorsque <xref:System.Activities.InOutArgument%601.Set%2A> est appelé, l'exécution définit immédiatement la valeur.  
   
-3.  Les arguments peuvent éventuellement avoir leur <xref:System.Activities.Argument.EvaluationOrder%2A> spécifié. <xref:System.Activities.Argument.EvaluationOrder%2A> est une valeur de base zéro qui spécifie l'ordre dans lequel l'argument est évalué. Par défaut, l'ordre d'évaluation de l'argument n'est pas spécifié et est égal à la valeur <xref:System.Activities.Argument.UnspecifiedEvaluationOrder>. Affectez à <xref:System.Activities.Argument.EvaluationOrder%2A> une valeur supérieure ou égale à zéro pour spécifier un ordre d'évaluation pour cet argument. [!INCLUDE[wf2](../../../includes/wf2-md.md)] évalue des arguments avec une évaluation spécifiée dans l'ordre croissant. Notez que les arguments avec un ordre d'évaluation non spécifié sont évalués avant ceux avec un ordre d'évaluation spécifié.  
+3.  Les arguments peuvent éventuellement avoir leur <xref:System.Activities.Argument.EvaluationOrder%2A> spécifié. <xref:System.Activities.Argument.EvaluationOrder%2A> est une valeur de base zéro qui spécifie l'ordre dans lequel l'argument est évalué. Par défaut, l'ordre d'évaluation de l'argument n'est pas spécifié et est égal à la valeur <xref:System.Activities.Argument.UnspecifiedEvaluationOrder>. Affectez à <xref:System.Activities.Argument.EvaluationOrder%2A> une valeur supérieure ou égale à zéro pour spécifier un ordre d'évaluation pour cet argument. Windows Workflow Foundation évalue des arguments avec un ordre d’évaluation spécifié dans l’ordre croissant. Notez que les arguments avec un ordre d’évaluation non spécifié sont évalués avant ceux avec un ordre d’évaluation spécifié.  
   
  Un auteur d'activité peut utiliser un mécanisme fortement typé pour l'exposition de ses arguments. Pour ce faire, déclarez des propriétés de type <xref:System.Activities.InArgument%601>, <xref:System.Activities.OutArgument%601> et <xref:System.Activities.InOutArgument%601>. Cela permet à un auteur d'activité d'établir un contrat spécifique sur les données qui entrent dans une activité et en sortent.  
   
@@ -151,4 +152,4 @@ public sealed class Add : CodeActivity<int>
 }  
 ```  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]utilisation avec des arguments, variables et expressions dans le code, consultez [création de Workflows, des activités et des Expressions à l’aide d’impératif Code](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md) et [requis des Arguments et des groupes surchargés](../../../docs/framework/windows-workflow-foundation/required-arguments-and-overload-groups.md).
+ [!INCLUDE[crabout](../../../includes/crabout-md.md)] utilisation avec des arguments, variables et expressions dans le code, consultez [création de Workflows, des activités et des Expressions à l’aide d’impératif Code](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md) et [requis des Arguments et des groupes surchargés](../../../docs/framework/windows-workflow-foundation/required-arguments-and-overload-groups.md).

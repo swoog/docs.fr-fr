@@ -14,14 +14,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 60f6571d7702236ee24c0cb9da2aa4121feddcf0
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: ecf45e4d40c305c5e324d3ab8469ff24f5a092ef
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="scenario"></a>Scénario
-Cette section contient des exemples de scénarios [!INCLUDE[wf](../../../../includes/wf-md.md)].  
+Cette section contient des exemples de scénarios de Windows Workflow Foundation (WF).  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Bibliothèque d’activités](../../../../docs/framework/windows-workflow-foundation/samples/activity-library.md)  
@@ -40,7 +40,7 @@ Cette section contient des exemples de scénarios [!INCLUDE[wf](../../../../incl
  Montre comment implémenter un scénario de chronomètre simple à l'aide d'une combinaison des activités <xref:System.Activities.Statements.Flowchart> et <xref:System.Activities.Statements.Pick>.  
   
  [Intégration de WPF et WF en XAML](../../../../docs/framework/windows-workflow-foundation/samples/wpf-and-wf-integration-in-xaml.md)  
- Montre comment créer une application qui utilise Windows Presentation Foundation (WPF) et [!INCLUDE[wf](../../../../includes/wf-md.md)] fonctionnalités dans un document XAML unique. Pour ce faire, l'exemple utilise [!INCLUDE[wf](../../../../includes/wf-md.md)] et l'extensibilité XAML.  
+ Montre comment créer une application qui utilise des fonctionnalités de Windows Presentation Foundation (WPF) et Windows Workflow Foundation (WF) dans un document XAML unique. Pour ce faire, l’exemple utilise l’extensibilité de Windows Workflow Foundation (WF) et XAML.  
   
  [Boîte à outils de l’ensemble de règles externe](../../../../docs/framework/windows-workflow-foundation/samples/external-ruleset-toolkit.md)  
  Montre comment gérer et modifier des ensembles de règles dans une base de données et accéder à ces ensembles de règles depuis un workflow au moment de l'exécution.

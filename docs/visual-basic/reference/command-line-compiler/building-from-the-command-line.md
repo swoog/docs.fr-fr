@@ -22,18 +22,18 @@ ms.assetid: e61947e9-a42e-4717-a699-5f70a98cdd03
 caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 1fd4054838925267647986a5166fd88037b17fae
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 9a9dee47f06e4f7d9fc8d237376df7707130921d
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="building-from-the-command-line-visual-basic"></a>Génération à partir de la ligne de commande (Visual Basic)
 Un projet Visual Basic est constitué d’un ou plusieurs fichiers sources séparés. Pendant le processus appelé compilation, ces fichiers sont regroupés en un seul package, un seul fichier exécutable qui peut être exécuté en tant qu’application.  
   
- Visual Basic fournit un compilateur de ligne de commande comme alternative aux programmes de compilation dans le [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] l’environnement de développement intégré (IDE). Le compilateur de ligne de commande est conçu pour les cas dans lequel vous n’avez pas besoin l’ensemble complet des fonctionnalités de l’IDE, par exemple, lorsque vous utilisez ou l’écriture pour les ordinateurs avec un espace mémoire ou stockage limitées sur le système.  
+ Visual Basic fournit un compilateur de ligne de commande comme alternative aux programmes de compilation dans l’environnement de développement intégré (IDE) Visual Studio. Le compilateur de ligne de commande est conçu pour les cas dans lequel vous n’avez pas besoin l’ensemble complet des fonctionnalités de l’IDE, par exemple, lorsque vous utilisez ou l’écriture pour les ordinateurs avec un espace mémoire ou stockage limitées sur le système.  
   
-  Pour compiler des fichiers sources à partir la [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] IDE, choisissez le **générer** commande à partir de la **générer** menu.  
+  Pour compiler des fichiers sources à partir de l’IDE de Visual Studio, choisissez le **générer** commande à partir de la **générer** menu.  
   
 > [!TIP]
 >  Lorsque vous générez des fichiers de projet à l’aide de l’IDE de Visual Studio, vous pouvez afficher les informations associé **vbc** commande et les commutateurs dans la fenêtre Sortie. Pour afficher ces informations, ouvrez le [boîte de dialogue Options, projets et Solutions, générer et exécuter](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run), puis définissez le **détail de sortie de génération du projet MSBuild** à **Normal** ou augmenter le niveau de détail. Pour plus d’informations, consultez l’article [Comment : afficher, enregistrer et configurer des fichiers journaux de génération](http://msdn.microsoft.com/library/75d38b76-26d6-4f43-bbe7-cbacd7cc81e7).  

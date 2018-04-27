@@ -1,26 +1,27 @@
 ---
-title: "Procédure : créer une activité"
-ms.custom: 
+title: 'Procédure : créer une activité'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c09b1e99-21b5-4d96-9c04-ec31db3f4436
-caps.latest.revision: "39"
+caps.latest.revision: 39
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4a3b9698d6a060120addff52e6600916a2de19fc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0d0d48d1e78efb3484f521958edf22d97ca8053d
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-create-an-activity"></a>Procédure : créer une activité
 Les activités sont l'unité principale de comportement dans [!INCLUDE[wf1](../../../includes/wf1-md.md)]. La logique d'exécution d'une activité peut être implémentée en code managé ou à l'aide d'autres activités. Cette rubrique indique comment créer deux activités. La première activité est une activité simple qui utilise le code pour implémenter la logique d'exécution. L'implémentation de la deuxième activité est définie à l'aide d'autres activités. Ces activités sont utilisées dans les procédures du didacticiel.  
@@ -44,7 +45,7 @@ Les activités sont l'unité principale de comportement dans [!INCLUDE[wf1](../.
 5.  Dans le nœud **Installé** , sélectionnez **Visual C#**, **Workflow** (ou **Visual Basic**, **Workflow**). Vérifiez que **.NET Framework 4.5** est sélectionné dans le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] liste déroulante de la version. Sélectionnez **bibliothèque d’activités** à partir de la **Workflow** liste. Type `NumberGuessWorkflowActivities` dans les **nom** , puis cliquez sur **OK**.  
   
     > [!NOTE]
-    >  En fonction du langage de programmation qui est configuré comme langage principal dans [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], le **Visual C#** ou **Visual Basic** nœud peut se trouver sous le **autres langages**nœud dans le **installé** nœud.  
+    >  En fonction du langage de programmation qui est configuré comme langage principal dans Visual Studio, le nœud **Visual C#** ou **Visual Basic** peut se trouver sous le nœud **Autres langages** dans le nœud **Installé** .  
   
 6.  Avec le bouton droit **Activity1.xaml** dans **l’Explorateur de solutions** et choisissez **supprimer**. Pour confirmer, cliquez sur **OK** .  
   

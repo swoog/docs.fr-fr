@@ -1,26 +1,27 @@
 ---
 title: Persistance
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 79c14759-9f87-458a-b339-beec8300e339
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3b326c56ce96b9b0f2d2089976b530d530d9a55b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2e07e215b9afed5cc2af950186cfe66c9808c8f2
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="persistence"></a>Persistance
-Cette section contient des exemples qui illustrent la façon de rendre des workflows persistants sur un support durable dans [!INCLUDE[wf](../../../../includes/wf-md.md)].  
+Cette section contient des exemples qui illustrent des workflows persistants sur un support durable dans Windows Workflow Foundation (WF).  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Persistance d’une application de workflow](../../../../docs/framework/windows-workflow-foundation/samples/persisting-a-workflow-application.md)  

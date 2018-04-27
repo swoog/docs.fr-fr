@@ -1,30 +1,31 @@
 ---
 title: Processus d'achat d'entreprise
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bbbed0209eec95ec452385b6c78b1beb2ddfcd75
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 451698d92c47c32b45e08bdef7e88e8f04b90ed3
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="corporate-purchase-process"></a>Processus d'achat d'entreprise
 Cet exemple montre comment créer un processus d'achat basé sur des appels d'offres très simples avec sélection automatique de la meilleure proposition. Il combine <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601> et <xref:System.Activities.Statements.ForEach%601> ainsi qu'une activité personnalisée pour créer un workflow qui représente le processus.  
   
  Cet exemple contient une application cliente [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] qui permet l'interaction avec le processus en tant que participants différents (en tant que demandeur d'origine ou fournisseur particulier).  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
 -   [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
   
@@ -58,7 +59,7 @@ Cet exemple montre comment créer un processus d'achat basé sur des appels d'of
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Application\PurchaseProcess`  
   
 ## <a name="description-of-the-process"></a>Description du processus  
- Cet exemple montre une implémentation d'un programme [!INCLUDE[wf](../../../../includes/wf-md.md)] pour rassembler des propositions de fournisseurs pour une société générique.  
+ Cet exemple illustre une implémentation d’un programme Windows Workflow Foundation (WF) pour rassembler des propositions de fournisseurs pour une société générique.  
   
 1.  Un employé de la Société X crée un appel d'offres.  
   

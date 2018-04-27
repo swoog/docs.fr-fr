@@ -1,29 +1,30 @@
 ---
-title: "Extraire des données WF à l'aide du suivi"
-ms.custom: 
+title: Extraire des données WF à l'aide du suivi
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e30c68f5-8c6a-495a-bd20-667a4364c68e
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4d6c269dc9c8b5a0050cfc3ffcefc3160b07c897
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 44e49aa0c9b3b9b53b921fe90838875ab34b7772
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="extract-wf-data-using-tracking"></a>Extraire des données WF à l'aide du suivi
 Cet exemple montre comment utiliser le suivi de workflow pour extraire des variables de workflow et des arguments d’activités. Il montre également l'ajout d'annotations à des enregistrements de suivi et l'extraction de la charge utile de données dans des enregistrements de suivi personnalisés. L'exemple utilise le participant de suivi Suivi d'événements pour Windows (ETW, Event Tracing for Windows) pour extraire des données du workflow.  
   
 ## <a name="sample-details"></a>Détails de l'exemple  
- [!INCLUDE[wf](../../../../includes/wf-md.md)] fournit le suivi pour avoir plus de visibilité dans l'exécution d'une instance de workflow. Le runtime de suivi émet des enregistrements de suivi de workflow lors de l'exécution du workflow. Avec les enregistrements de suivi de workflow, les données dans l'instance de workflow peuvent être extraites du workflow. La liste suivante détaille les types des données qui peuvent être extraites des enregistrements de suivi :  
+ Windows Workflow Foundation (WF) fournit le suivi pour gagner en visibilité dans l’exécution d’une instance de workflow. Le runtime de suivi émet des enregistrements de suivi de workflow lors de l'exécution du workflow. Avec les enregistrements de suivi de workflow, les données dans l'instance de workflow peuvent être extraites du workflow. La liste suivante détaille les types des données qui peuvent être extraites des enregistrements de suivi :  
   
 1.  Variables de workflow dans une activité et enregistrements de suivi pendant l'exécution de l'activité.  
   

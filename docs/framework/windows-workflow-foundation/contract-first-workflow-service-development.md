@@ -1,26 +1,27 @@
 ---
-title: "Développement de services de workflow « contrat en premier »"
-ms.custom: 
+title: Développement de services de workflow « contrat en premier »
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e5dbaa7b-005f-4330-848d-58ac4f42f093
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bdafa52219dc7a275ceb64e24e8ecd91f0ec8068
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4bc0c8fafd80651114d85d2d6b06c57dec6199b5
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="contract-first-workflow-service-development"></a>Développement de services de workflow « contrat en premier »
-À partir de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], [!INCLUDE[wf](../../../includes/wf-md.md)] offre une meilleure intégration entre les services Web et les workflows sous la forme du développement de workflow contrat en premier. L'outil de développement de workflow Contrat en premier vous permet de concevoir le contrat dans le code en premier. L'outil génère automatiquement un modèle d'activité dans la boîte à outils pour les opérations du contrat. Cette rubrique fournit une vue d'ensemble de la façon dont les activités et les propriétés d'un service de workflow sont mappées aux attributs d'un contrat de service. Pour obtenir un exemple de création d’un service de workflow contrat en premier, consultez [Comment : créer un service de flux de travail qui consomme un contrat de service existant](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).  
+En commençant par [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], les fonctionnalités de Windows Workflow Foundation (WF) une meilleure intégration entre les services web et les workflows sous la forme du développement de workflow contrat en premier. L'outil de développement de workflow Contrat en premier vous permet de concevoir le contrat dans le code en premier. L'outil génère automatiquement un modèle d'activité dans la boîte à outils pour les opérations du contrat. Cette rubrique fournit une vue d'ensemble de la façon dont les activités et les propriétés d'un service de workflow sont mappées aux attributs d'un contrat de service. Pour obtenir un exemple de création d’un service de workflow contrat en premier, consultez [Comment : créer un service de flux de travail qui consomme un contrat de service existant](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).  
   
 ## <a name="in-this-topic"></a>Dans cette rubrique  
   
@@ -42,7 +43,7 @@ ms.lasthandoff: 12/22/2017
   
     -   [Génération d’activités de messagerie configurées](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ActivityGeneration)  
   
-##  <a name="MappingAttributes"></a>Mappage des attributs de contrat de service pour les attributs de flux de travail  
+##  <a name="MappingAttributes"></a> Mappage des attributs de contrat de service pour les attributs de flux de travail  
  Les tableaux des sections suivantes spécifient différents attributs et propriétés WCF et comment ils sont mappés aux activités de messagerie et aux propriétés dans un workflow contrat en premier.  
   
 -   [Attributs de contrat de service](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ServiceContract)  
@@ -55,7 +56,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [Attributs de contrat d’erreur](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#FaultContract)  
   
-###  <a name="ServiceContract"></a>Attributs de contrat de service  
+###  <a name="ServiceContract"></a> Attributs de contrat de service  
   
 |Nom de la propriété|Pris en charge|Description|Validation WF|  
 |-------------------|---------------|-----------------|-------------------|  
@@ -70,7 +71,7 @@ ms.lasthandoff: 12/22/2017
   
  Insérez le corps de la sous-section ici.  
   
-###  <a name="OperationContract"></a>Attributs de contrat d’opération  
+###  <a name="OperationContract"></a> Attributs de contrat d’opération  
   
 |Nom de la propriété|Pris en charge|Description|Validation WF|  
 |-------------------|---------------|-----------------|-------------------|  
@@ -85,7 +86,7 @@ ms.lasthandoff: 12/22/2017
 |ReplyAction|Oui|Obtient ou définit la valeur de l'action SOAP pour le message de réponse de l'opération.|SendReply.Action doit correspondre.|  
 |TypeId|Non|Lors de l'implémentation dans une classe dérivée, obtient un identificateur unique pour cet attribut. (Hérité de l'attribut.)|(N/A)|  
   
-###  <a name="MessageContract"></a>Attributs de contrat de message  
+###  <a name="MessageContract"></a> Attributs de contrat de message  
   
 |Nom de la propriété|Pris en charge|Description|Validation WF|  
 |-------------------|---------------|-----------------|-------------------|  
@@ -96,7 +97,7 @@ ms.lasthandoff: 12/22/2017
 |WrapperName|Oui|Obtient ou définit le nom de l'élément wrapper du corps du message.|Aucune validation (Receive.Content et SendReply.Content doivent correspondre au type de contrat de message).|  
 |WrapperNamespace|Non|Obtient ou définit l'espace de noms de l'élément wrapper du corps du message.|(N/A)|  
   
-###  <a name="DataContract"></a>Attributs de contrat de données  
+###  <a name="DataContract"></a> Attributs de contrat de données  
   
 |Nom de la propriété|Pris en charge|Description|Validation WF|  
 |-------------------|---------------|-----------------|-------------------|  
@@ -105,7 +106,7 @@ ms.lasthandoff: 12/22/2017
 |Espace de noms|Oui|Obtient ou définit l'espace de noms du contrat de données pour le type.|Aucune validation (Receive.Content et SendReply.Content doivent correspondre au type de contrat de message).|  
 |TypeId|Non|Lors de l'implémentation dans une classe dérivée, obtient un identificateur unique pour cet attribut. (Hérité de l'attribut.)|(N/A)|  
   
-###  <a name="FaultContract"></a>Attributs de contrat d’erreur  
+###  <a name="FaultContract"></a> Attributs de contrat d’erreur  
   
 |Nom de la propriété|Pris en charge|Description|Validation WF|  
 |-------------------|---------------|-----------------|-------------------|  
@@ -117,19 +118,19 @@ ms.lasthandoff: 12/22/2017
 |ProtectionLevel|Non|Spécifie le niveau de protection que l'erreur SOAP requiert de la liaison.|(N/A)|  
 |TypeId|Non|Lors de l'implémentation dans une classe dérivée, obtient un identificateur unique pour cet attribut. (Hérité de l'attribut.)|(N/A)|  
   
-##  <a name="AdditionalSupport"></a>Prise en charge supplémentaire et les informations d’implémentation  
+##  <a name="AdditionalSupport"></a> Prise en charge supplémentaire et les informations d’implémentation  
   
 -   [Fonctionnalités de contrat de service non pris en charge](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#UnsupportedFeatures)  
   
 -   [Génération d’activités de messagerie configurées](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ActivityGeneration)  
   
-###  <a name="UnsupportedFeatures"></a>Fonctionnalités de contrat de service non pris en charge  
+###  <a name="UnsupportedFeatures"></a> Fonctionnalités de contrat de service non pris en charge  
   
 -   L’utilisation des tâches de bibliothèque parallèle de tâches dans les contrats n’est pas prise en charge.  
   
 -   L'héritage dans les contrats de service n'est pas pris en charge.  
   
-###  <a name="ActivityGeneration"></a>Génération d’activités de messagerie configurées  
+###  <a name="ActivityGeneration"></a> Génération d’activités de messagerie configurées  
  Deux méthodes statiques publiques sont ajoutées aux activités <xref:System.ServiceModel.Activities.Receive> et <xref:System.ServiceModel.Activities.SendReply> pour prendre en charge la génération d'activités préconfigurées de message lors de l'utilisation de services de workflow contrat en premier.  
   
 -   <xref:System.ServiceModel.Activities.Receive.FromOperationDescription%2A?displayProperty=nameWithType>  

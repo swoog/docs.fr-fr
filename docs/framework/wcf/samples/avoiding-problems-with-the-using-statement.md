@@ -1,24 +1,26 @@
 ---
 title: Avoiding Problems with the Using Statement
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: aff82a8d-933d-4bdc-b0c2-c2f7527204fb
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 202bf02f017857a354a6f23270e49571c6240b26
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: dd3065a21c1714b0643bfb87b731193d3367352f
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="avoiding-problems-with-the-using-statement"></a>Avoiding Problems with the Using Statement
 Cet exemple vous indique que vous ne devez pas utiliser l'instruction « using » C# pour nettoyer automatiquement les ressources lorsqu'un client typé est utilisé. Cet exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md) qui implémente un service de calculatrice. Dans cet exemple, le client est une application console (.exe) et le service est hébergé par les services IIS (Internet Information Services).  
@@ -32,7 +34,7 @@ Cet exemple vous indique que vous ne devez pas utiliser l'instruction « using�
   
  Le premier problème, illustré dans la méthode `DemonstrateProblemUsingCanThrow`, réside dans le fait que l'accolade fermante lève une exception et que le code figurant après cette accolade ne s'exécute pas :  
   
-```  
+```csharp   
 using (CalculatorClient client = new CalculatorClient())  
 {  
     ...  
@@ -44,7 +46,7 @@ Console.WriteLine("Hope this code wasn't important, because it might not happen.
   
  Le second problème, illustré dans la méthode `DemonstrateProblemUsingCanThrowAndMask`, est une autre conséquence du problème résultant de la levée d'une exception par l'accolade fermante :  
   
-```  
+```csharp   
 using (CalculatorClient client = new CalculatorClient())  
 {  
     ...  
@@ -57,7 +59,7 @@ using (CalculatorClient client = new CalculatorClient())
   
  Enfin, cette exemple illustre comment procéder à un nettoyage adéquat lors de la survenue d'exceptions dans `DemonstrateCleanupWithExceptions`. Pour ce faire, un bloc essai/interception est utilisé pour signaler les erreurs et appeler la méthode `Abort`. Consultez le [attendu des Exceptions](../../../../docs/framework/wcf/samples/expected-exceptions.md) sample pour plus d’informations sur l’interception d’exceptions à partir des appels du client.  
   
-```  
+```csharp   
 try  
 {  
     ...  

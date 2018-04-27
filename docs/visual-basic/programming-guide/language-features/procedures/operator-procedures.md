@@ -1,11 +1,12 @@
 ---
-title: "Procédures d'opérateur (Visual Basic)"
-ms.custom: 
+title: Procédures d'opérateur (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, procedures
@@ -17,22 +18,22 @@ helpviewer_keywords:
 - operator overloading
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 865695731dd591b0c48f4416814fa97edf4ea42e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8fba5180da6498d280fa4192937c39d3e33168e8
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="operator-procedures-visual-basic"></a>Procédures d'opérateur (Visual Basic)
-Une procédure d’opérateur est une série de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] instructions qui définissent le comportement d’un opérateur standard (tel que `*`, `<>`, ou `And`) sur une classe ou une structure que vous avez définie. Également appelé *surcharge d’opérateur*.  
+Une procédure d’opérateur est une série d’instructions Visual Basic qui définissent le comportement d’un opérateur standard (tel que `*`, `<>`, ou `And`) sur une classe ou une structure que vous avez définie. Également appelé *surcharge d’opérateur*.  
   
 ## <a name="when-to-define-operator-procedures"></a>Quand définir des procédures d’opérateur  
  Lorsque vous avez défini une classe ou structure, vous pouvez déclarer des variables comme étant du type de cette classe ou structure. Cette variable doit parfois participer à une opération dans le cadre d’une expression. Pour ce faire, il doit être un opérande d’un opérateur.  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]définit les opérateurs uniquement sur ses types de données fondamentaux. Vous pouvez définir le comportement d’un opérateur lorsqu’une ou les deux opérandes sont du type de votre classe ou structure.  
+ Visual Basic définit les opérateurs uniquement sur ses types de données fondamentaux. Vous pouvez définir le comportement d’un opérateur lorsqu’une ou les deux opérandes sont du type de votre classe ou structure.  
   
  Pour plus d’informations, consultez [Operator, instruction](../../../../visual-basic/language-reference/statements/operator-statement.md).  
   

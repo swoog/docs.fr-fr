@@ -1,27 +1,29 @@
 ---
-title: "Implémentation de la logique métier (LINQ to SQL)"
-ms.custom: 
+title: Implémentation de la logique métier (LINQ to SQL)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c4577590-7b12-42e1-84a6-95aa2562727e
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: d905f34c29fbd8a15cb8225a4a547490a5c14efd
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: f519162818739d04cbe66b107911a0e0c30d93bc
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="implementing-business-logic-linq-to-sql"></a>Implémentation de la logique métier (LINQ to SQL)
 Le terme "logique métier" utilisé dans cette rubrique désigne toutes les règles ou tests de validation personnalisés que vous appliquez aux données avant de les insérer, de les mettre à jour ou de les supprimer de la base de données. La logique métier est parfois également désignée par le terme "règles métier" ou "logique de domaine". Dans les applications multicouches, elle est généralement conçue comme une couche logique de manière à ce qu'elle puisse être modifiée indépendamment de la couche Présentation ou de la couche Data Access. La logique métier peut être appelée par la couche Data Access avant ou après toute mise à jour, insertion ou suppression de données dans la base de données.  
@@ -166,7 +168,7 @@ public string CustomerID
 }  
 ```  
   
- Dans votre partie de la classe, vous écrivez une définition d'implémentation de la méthode. Dans [!INCLUDE[vsprvs](../../../../../../includes/vsprvs-md.md)], après avoir tapé `partial` vous consulterez IntelliSense pour les définitions de méthode dans l’autre partie de la classe.  
+ Dans votre partie de la classe, vous écrivez une définition d'implémentation de la méthode. Dans Visual Studio, une fois que vous tapez `partial` vous consulterez IntelliSense pour les définitions de méthode dans l’autre partie de la classe.  
   
 ```vb  
 Partial Public Class Customer  

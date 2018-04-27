@@ -1,11 +1,12 @@
 ---
-title: "Déclaration et déclenchement des événements (Visual Basic)"
-ms.custom: 
+title: Déclaration et déclenchement des événements (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - declarations [Visual Basic], events
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - events [Visual Basic], raising
 - raising events [Visual Basic], walkthroughs
 ms.assetid: 8ffb3be8-097d-4d3c-b71e-04555ebda2a2
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 0bf75cfba5102be5d837af385e2d3578f78a03c0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 27db585084703607a7389f5a0aa3eba6f70dd793
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-declaring-and-raising-events-visual-basic"></a>Procédure pas à pas : déclaration et déclenchement des événements (Visual Basic)
 Cette procédure pas à pas montre comment déclarer et déclencher des événements pour une classe nommée `Widget`. Après avoir terminé les étapes, vous pouvez souhaiter lire la rubrique connexe, [procédure pas à pas : gestion des événements](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md), qui montre comment utiliser les événements du `Widget` objets pour fournir des informations d’état dans une application.  
@@ -36,7 +37,7 @@ Cette procédure pas à pas montre comment déclarer et déclencher des événem
   
 #### <a name="to-build-the-code-example-for-this-topic"></a>Pour générer l’exemple de code pour cette rubrique  
   
-1.  Ouvrez une nouvelle [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Application Windows de projet et créez un formulaire nommé `Form1`.  
+1.  Ouvrez un nouveau projet d’Application Windows Visual Basic et créez un formulaire nommé `Form1`.  
   
 2.  Ajoutez deux boutons et une étiquette à `Form1`.  
   
@@ -61,7 +62,7 @@ Cette procédure pas à pas montre comment déclarer et déclencher des événem
 > [!NOTE]
 >  Vous pouvez déclarer des arguments d’événement comme arguments de procédures, avec les exceptions suivantes : les événements ne peut pas avoir `Optional` ou `ParamArray` arguments et les événements n’ont pas de valeurs de retour.  
   
- Le `PercentDone` événement est déclenché par le `LongTask` méthode de la `Widget` classe. `LongTask`accepte deux arguments : la durée pendant laquelle la méthode prétend être active et l’intervalle minimal avant `LongTask` suspendue pour déclencher le `PercentDone` événement.  
+ Le `PercentDone` événement est déclenché par le `LongTask` méthode de la `Widget` classe. `LongTask` accepte deux arguments : la durée pendant laquelle la méthode prétend être active et l’intervalle minimal avant `LongTask` suspendue pour déclencher le `PercentDone` événement.  
   
 #### <a name="to-raise-the-percentdone-event"></a>Pour déclencher l’événement PercentDone  
   

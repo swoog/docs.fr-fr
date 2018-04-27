@@ -1,24 +1,26 @@
 ---
 title: Message Queuing to Windows Communication Foundation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6d718eb0-9f61-4653-8a75-d2dac8fb3520
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2a4b63dd620d071b875caa255f681bdd5fb867f7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6a29c0225117c57079b5048705f58dcde4a06426
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="message-queuing-to-windows-communication-foundation"></a>Message Queuing to Windows Communication Foundation
 Cet exemple montre comment une application MSMQ (Message Queuing) peut envoyer un message MSMQ à un service [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Le service est une application console auto-hébergée qui permet d'observer le service qui reçoit les messages mis en file d'attente.  
@@ -28,8 +30,8 @@ Cet exemple montre comment une application MSMQ (Message Queuing) peut envoyer u
  Le message MSMQ ne contient pas d'informations concernant les en-têtes qui sont mappés à différents paramètres du contrat d'opération. Le paramètre est de type <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>(`MsmqMessage<T>`), lequel contient le message MSMQ sous-jacent. Le type "T" dans la classe <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>(`MsmqMessage<T>`) représente les données sérialisées dans le corps du message MSMQ. Dans cet exemple, le type `PurchaseOrder` est sérialisé dans le corps du message MSMQ.  
   
  L'exemple de code suivant présente le contrat de service du service du traitement des commandes.  
-  
-```  
+
+```csharp
 // Define a service contract.  
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  
 [ServiceKnownType(typeof(PurchaseOrder))]  
@@ -38,11 +40,11 @@ public interface IOrderProcessor
     [OperationContract(IsOneWay = true, Action = "*")]  
     void SubmitPurchaseOrder(MsmqMessage<PurchaseOrder> msg);  
 }  
-```  
-  
+```
+
  Le service est auto-hébergé. Lorsque vous utilisez MSMQ, vous devez créer au préalable la file d'attente utilisée. Cela peut s'effectuer manuellement ou via le code. Dans cet exemple, le service vérifie l'existence de la file d'attente et la crée, si nécessaire. Le nom de la file d'attente est lu depuis le fichier de configuration.  
-  
-```  
+
+```csharp
 public static void Main()  
 {  
     // Get the MSMQ queue name from the application settings in   
@@ -53,11 +55,11 @@ public static void Main()
         MessageQueue.Create(queueName, true);  
     …  
 }  
-```  
-  
+```
+
  Le service crée et ouvre <xref:System.ServiceModel.ServiceHost> pour `OrderProcessorService`, tel qu'indiqué dans l'exemple de code suivant.  
-  
-```  
+
+```csharp
 using (ServiceHost serviceHost = new ServiceHost(typeof(OrderProcessorService)))  
 {  
     serviceHost.Open();  
@@ -66,8 +68,8 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(OrderProcessorService)))
     Console.ReadLine();  
     serviceHost.Close();  
 }  
-```  
-  
+```
+
  Le nom de file d'attente MSMQ est spécifié dans une section appSettings du fichier de configuration, tel qu'indiqué dans l'exemple de configuration suivant.  
   
 > [!NOTE]
@@ -80,8 +82,8 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(OrderProcessorService)))
 ```  
   
  L'application cliente est une application MSMQ qui utilise la méthode <xref:System.Messaging.MessageQueue.Send%2A> pour envoyer un message fiable et transactionnel à la file d'attente, tel qu'indiqué dans l'exemple de code suivant.  
-  
-```  
+
+```csharp
 //Connect to the queue.  
 MessageQueue orderQueue = new MessageQueue(ConfigurationManager.AppSettings["orderQueueName"]);  
   
@@ -119,8 +121,8 @@ using (TransactionScope scope = new TransactionScope(TransactionScopeOption.Requ
 Console.WriteLine("Placed the order:{0}", po);  
 Console.WriteLine("Press <ENTER> to terminate client.");  
 Console.ReadLine();  
-```  
-  
+```
+
  Lorsque vous exécutez l'exemple, les activités du client et du service s'affichent dans leurs fenêtres de console respectives. Vous pouvez voir le service recevoir des messages du client. Appuyez sur ENTER dans chaque fenêtre de console pour arrêter le service et le client. Notez qu'en raison de l'utilisation de la mise en file d'attente, il n'est pas nécessaire que le service et le client s'exécutent simultanément. Par exemple, vous pouvez exécuter le client, l'arrêtez, puis démarrer le service et il recevra toujours ses messages.  
   
 ### <a name="to-setup-build-and-run-the-sample"></a>Pour configurer, générer et exécuter l'exemple  

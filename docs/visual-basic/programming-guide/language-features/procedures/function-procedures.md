@@ -1,11 +1,12 @@
 ---
-title: "Procédures Function (Visual Basic)"
-ms.custom: 
+title: Procédures Function (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Function procedures
@@ -15,17 +16,17 @@ helpviewer_keywords:
 - procedures [Visual Basic], Function procedures
 - syntax [Visual Basic], function procedures
 ms.assetid: 1b9f632c-553b-4cb6-920a-ded117ead8c0
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9520a6555e65fd801a5c40d40748028e04a10739
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ad4f55a9dd9fbd68c36dd53a01f97ddb03c2bb9b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="function-procedures-visual-basic"></a>Procédures Function (Visual Basic)
-A `Function` procédure est une série de [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] instructions délimitée par le `Function` et `End Function` instructions. Le `Function` procédure effectue une tâche, puis retourne le contrôle au code appelant. Lorsqu’elle retourne le contrôle, il retourne également une valeur au code appelant.  
+A `Function` procédure est une série d’instructions Visual Basic délimitée par le `Function` et `End Function` instructions. Le `Function` procédure effectue une tâche, puis retourne le contrôle au code appelant. Lorsqu’elle retourne le contrôle, il retourne également une valeur au code appelant.  
   
  Chaque fois que la procédure est appelée, ses instructions sont exécutées, en commençant par la première instruction exécutable après le `Function` instruction et en terminant par la première `End Function`, `Exit Function`, ou `Return` instruction rencontrée.  
   
@@ -91,11 +92,11 @@ End Function
   
  La syntaxe d’un appel à un `Function` comme suit :  
   
- *lvalue*`=`*functionname* `[(` *argumentlist*    `)]`  
+ *lvalue*`=`*functionname* `[(` *argumentlist*  `)]`  
   
- `If ((`*functionname* `[(` *argumentlist* `)] / 3) <=` *expression*  `) Then`  
+ `If ((` *FunctionName* `[(` *argumentlist* `)] / 3) <=` *expression*  `) Then`  
   
- Lorsque vous appelez un `Function` procédure, il est inutile d’utiliser sa valeur de retour. Si vous ne le faites pas, toutes les actions de la fonction sont effectuées, mais la valeur de retour est ignorée. <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>est souvent appelé de cette manière.  
+ Lorsque vous appelez un `Function` procédure, il est inutile d’utiliser sa valeur de retour. Si vous ne le faites pas, toutes les actions de la fonction sont effectuées, mais la valeur de retour est ignorée. <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> est souvent appelé de cette manière.  
   
 ### <a name="illustration-of-declaration-and-call"></a>Illustration de déclaration et d’appel  
  Les éléments suivants `Function` procédure calcule le côté le plus long, ou hypoténuse, d’un triangle rectangle, selon les valeurs des deux autres côtés.  

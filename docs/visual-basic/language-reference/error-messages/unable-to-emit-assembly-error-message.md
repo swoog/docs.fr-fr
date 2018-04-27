@@ -16,11 +16,11 @@ ms.assetid: 2e7eb2b9-eda6-4bdb-95cc-72c7f0be7528
 caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 61a5c6b753b8aa70905027bc1449739769cd8da5
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 59288ba7b4cec34cd2266d66aa931e92598e819a
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="unable-to-emit-assembly-lterror-messagegt"></a>Impossible de créer l’assembly : &lt;message d’erreur&gt;
 Le compilateur Visual Basic appelle Assembly Linker (Al.exe, également appelé Alink) pour générer un assembly avec un manifeste, avec l’éditeur de liens signale une erreur lors de l’étape d’émission de création de l’assembly.  
@@ -61,7 +61,7 @@ Le compilateur Visual Basic appelle Assembly Linker (Al.exe, également appelé 
   
      Utilisez des guillemets doubles (") si un chemin ou un fichier contient des espaces.  
   
-6.  Dans [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], ajoutez une référence à un assembly .NET dans le fichier que vous venez de créer.  
+6.  Dans Visual Studio, ajoutez une référence d’Assembly .NET au fichier que vous venez de créer.  
   
 ## <a name="see-also"></a>Voir aussi  
  

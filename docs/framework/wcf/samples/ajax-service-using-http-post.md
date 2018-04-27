@@ -1,24 +1,26 @@
 ---
 title: AJAX Service Using HTTP POST
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1ac80f20-ac1c-4ed1-9850-7e49569ff44e
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c2447f641748cdcc3419fda2a6ae8f02d68ed98e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1446fadeb249d91f0eb3e65b1155f00090441a5a
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="ajax-service-using-http-post"></a>AJAX Service Using HTTP POST
 Cet exemple montre comment utiliser [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] pour créer un [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] service AJAX (JavaScript et XML asynchrones) qui utilise HTTP POST. Un service AJAX est un service auquel vous pouvez accéder à l'aide du code Javascript de base d'un client de navigateur Web. Cet exemple est basé le [servie AJAX de base](../../../../docs/framework/wcf/samples/basic-ajax-service.md) sample ; la seule différence entre les deux exemples est l’utilisation de HTTP POST au lieu de HTTP GET.  
@@ -31,19 +33,20 @@ Cet exemple montre comment utiliser [!INCLUDE[indigo1](../../../../includes/indi
  Le service dans l'exemple suivant est un service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sans code spécifique à AJAX.  
   
  Si le <xref:System.ServiceModel.Web.WebInvokeAttribute> attribut est appliqué à une opération, ou le <xref:System.ServiceModel.Web.WebGetAttribute> attribut n’est pas appliqué, le verbe HTTP de valeur par défaut (« POST ») est utilisé. Les demandes POST sont plus difficiles à générer que les demandes GET, mais elles ne sont pas mises en cache ; utilisez des demandes POST pour toutes les opérations où la mise en cache n'est pas appropriée.  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace = "PostAjaxService")]  
-    public interface ICalculator  
-    {        [WebInvoke]  
-        double Add(double n1, double n2);  
-        //Other operations omitted…  
-    }  
-```  
-  
+public interface ICalculator  
+{
+    [WebInvoke]  
+    double Add(double n1, double n2);  
+    //Other operations omitted…  
+}
+```
+
  Créez un point de terminaison AJAX sur le service à l'aide de <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>, comme dans l'exemple de servie AJAX de base.  
   
- Contrairement aux demandes GET, vous ne pouvez pas appeler des services POST depuis le navigateur. Par exemple, le fait de naviguer jusqu’à http://localhost/ServiceModelSamples/service.svc/Add?n1=100&n2=200 génère une erreur, car le service POST s’attend à ce que les paramètres `n1` et `n2` soient envoyés dans le corps du message (au format JSON) et non dans l’URL.  
+ Contrairement aux demandes GET, vous ne pouvez pas appeler des services POST depuis le navigateur. Par exemple, accédez à http://localhost/ServiceModelSamples/service.svc/Add?n1=100&n2=200 génère une erreur, car le service POST s’attend le `n1` et `n2` paramètres à envoyer dans le corps du message : au format JSON et non dans l’URL.  
   
  La page web PostAjaxClientPage.aspx du client contient le code ASP.NET pour appeler le service toutes les fois que l’utilisateur clique sur l’un des boutons d’opération de la page. Le service répond de la même façon que dans les [servie AJAX de base](../../../../docs/framework/wcf/samples/basic-ajax-service.md) exemple, avec la demande GET.  
   
@@ -62,6 +65,6 @@ Cet exemple montre comment utiliser [!INCLUDE[indigo1](../../../../includes/indi
   
 2.  Générez la solution PostAjaxService.sln comme décrit dans [génération des exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Naviguez jusqu'à http://localhost/ServiceModelSamples/PostAjaxClientPage.aspx (n'ouvrez pas PostAjaxClientPage.aspx dans le navigateur depuis le répertoire du projet).  
+3.  Accédez à http://localhost/ServiceModelSamples/PostAjaxClientPage.aspx (n’ouvrez pas postajaxclientpage.aspx dans le navigateur depuis le répertoire du projet).  
   
 ## <a name="see-also"></a>Voir aussi

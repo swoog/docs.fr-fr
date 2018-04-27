@@ -1,32 +1,33 @@
 ---
 title: Compensation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 722e9766-48d7-456c-9496-d7c5c8f0fa76
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7dd56b41b7b661b58446219d426be1a19edba059
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 861e0c9eb4e9afa5f9924160efed428d565bac4e
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="compensation"></a>Compensation
-La compensation dans [!INCLUDE[wf](../../../includes/wf-md.md)] est le mécanisme qui permet d'annuler ou de compenser un travail terminé (en fonction de la logique définie par l'application) lorsqu'un échec ultérieur se produit. Cette section décrit comment utiliser une compensation dans les flux de travail.  
+Compensation dans Windows Workflow Foundation (WF) est le mécanisme par lequel précédemment travail terminé peut être annulé ou compensé (suite à la logique définie par l’application) lorsqu’un échec ultérieur se produit. Cette section décrit comment utiliser une compensation dans les flux de travail.  
   
 ## <a name="compensation-vs-transactions"></a>Compensation et Transactions  
  Une transaction vous permet de combiner plusieurs opérations en une seule unité de travail. L'utilisation d'une transaction permet à votre application d'annuler (restaurer) toute modification exécutée depuis une transaction en cas d'erreur au cours du processus de transaction. Toutefois, l'utilisation de transactions peut ne pas convenir dans le cas d'un travail de longue durée. Par exemple, une application de planification de voyage est implémentée en tant que flux de travail. Les étapes du flux de travail peuvent porter sur la réservation d'un vol, l'attente de l'approbation du gestionnaire et le paiement du vol. Ce processus pourrait prendre de nombreux jours et ne s'avère pas pratique pour que les étapes de réservation et de paiement du vol puissent participer à la même transaction. Dans un tel scénario, la compensation pourrait être utilisée pour annuler l'étape de réservation du flux de travail en cas d'erreur ultérieure lors du traitement.  
   
 > [!NOTE]
->  Cette rubrique couvre la compensation dans les workflows. [!INCLUDE[crabout](../../../includes/crabout-md.md)]transactions dans les workflows, consultez [Transactions](../../../docs/framework/windows-workflow-foundation/workflow-transactions.md) et <xref:System.Activities.Statements.TransactionScope>. [!INCLUDE[crabout](../../../includes/crabout-md.md)] les transactions, consultez <xref:System.Transactions?displayProperty=nameWithType> et <xref:System.Transactions.Transaction?displayProperty=nameWithType>.  
+>  Cette rubrique couvre la compensation dans les workflows. [!INCLUDE[crabout](../../../includes/crabout-md.md)] transactions dans les workflows, consultez [Transactions](../../../docs/framework/windows-workflow-foundation/workflow-transactions.md) et <xref:System.Activities.Statements.TransactionScope>. [!INCLUDE[crabout](../../../includes/crabout-md.md)] les transactions, consultez <xref:System.Transactions?displayProperty=nameWithType> et <xref:System.Transactions.Transaction?displayProperty=nameWithType>.  
   
 ## <a name="using-compensableactivity"></a>Utilisation de CompensableActivity  
  <xref:System.Activities.Statements.CompensableActivity> est l'activité de compensation principale dans [!INCLUDE[wf1](../../../includes/wf1-md.md)]. Toutes les activités qui effectuent un travail pouvant nécessiter d'être compensé sont placées dans le <xref:System.Activities.Statements.CompensableActivity.Body%2A> d'un <xref:System.Activities.Statements.CompensableActivity>. Dans cet exemple, l'étape de réservation de l'achat d'un vol est placée dans le <xref:System.Activities.Statements.CompensableActivity.Body%2A> d'un <xref:System.Activities.Statements.CompensableActivity> et l'annulation de la réservation est placée dans le <xref:System.Activities.Statements.CompensableActivity.CompensationHandler%2A>. Juste après le <xref:System.Activities.Statements.CompensableActivity> dans le workflow, deux activités doivent être exécutées, d'une part l'approbation du gestionnaire, d'autre part l'achat du vol. Si une condition d'erreur entraîne l'annulation du workflow une fois <xref:System.Activities.Statements.CompensableActivity> correctement terminé, les activités du gestionnaire <xref:System.Activities.Statements.CompensableActivity.CompensationHandler%2A> sont planifiées et le vol est annulé.  
@@ -176,7 +177,7 @@ Activity wf = new Sequence()
 **Exception non gérée du flux de travail :**   
 **System.ApplicationException : Condition d’erreur simulée dans le flux de travail.**   
 **CancelCreditCard : Annulation des frais de carte de crédit.**   
-**Flux de travail s’est terminée correctement avec l’état : annulé.**  [!INCLUDE[crabout](../../../includes/crabout-md.md)]l’annulation, consultez [annulation](../../../docs/framework/windows-workflow-foundation/modeling-cancellation-behavior-in-workflows.md).  
+**Flux de travail s’est terminée correctement avec l’état : annulé.**  [!INCLUDE[crabout](../../../includes/crabout-md.md)] l’annulation, consultez [annulation](../../../docs/framework/windows-workflow-foundation/modeling-cancellation-behavior-in-workflows.md).  
   
 ### <a name="explicit-compensation-using-the-compensate-activity"></a>Compensation explicite à l'aide de l'activité Compensate  
  Dans la section précédente, la compensation implicite a été couverte. La compensation implicite peut convenir à des scénarios simples, mais si un contrôle explicite supplémentaire est requis sur la planification de compensation, la gestion de l'activité <xref:System.Activities.Statements.Compensate> peut être utilisée. Pour initialiser le processus de compensation avec l'activité <xref:System.Activities.Statements.Compensate>, le <xref:System.Activities.Statements.CompensationToken> du <xref:System.Activities.Statements.CompensableActivity> pour lequel la compensation est désirée est utilisé. L'activité <xref:System.Activities.Statements.Compensate> peut être utilisée pour initialiser la compensation sur tout <xref:System.Activities.Statements.CompensableActivity> ayant abouti et qui n'a pas été confirmé ou compensé. Par exemple, une activité <xref:System.Activities.Statements.Compensate> pourrait être utilisée dans la section <xref:System.Activities.Statements.TryCatch.Catches%2A> d'une activité <xref:System.Activities.Statements.TryCatch>, ou à n'importe quel moment après que le <xref:System.Activities.Statements.CompensableActivity> a abouti. Dans cet exemple, l'activité <xref:System.Activities.Statements.Compensate> est utilisée dans la propriété <xref:System.Activities.Statements.TryCatch.Catches%2A> d'une activité <xref:System.Activities.Statements.TryCatch> pour inverser l'action du <xref:System.Activities.Statements.CompensableActivity>.  

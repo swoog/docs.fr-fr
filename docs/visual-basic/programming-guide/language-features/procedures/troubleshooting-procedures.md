@@ -1,11 +1,12 @@
 ---
-title: "Procédures de dépannage (Visual Basic)"
-ms.custom: 
+title: Procédures de dépannage (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - troubleshooting Visual Basic, procedures
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - troubleshooting procedures
 - procedures [Visual Basic], about procedures
 ms.assetid: 525721e8-2e02-4f75-b5d8-6b893462cf2b
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b838644baa5ad10f1deb917cff5751a0f625fca6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7e54c965dc15131734be2c5bcfe04ad70292bf23
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="troubleshooting-procedures-visual-basic"></a>Procédures de dépannage (Visual Basic)
 Cette page répertorie certains problèmes courants qui peuvent se produire lorsque vous travaillez avec des procédures.  
@@ -83,11 +84,11 @@ Cette page répertorie certains problèmes courants qui peuvent se produire lors
   
  Les éléments suivants, même si elles se rapportent à la liste de paramètres ne sont pas les composants de la signature d’une procédure :  
   
--   Mots clés de modificateur de procédure, tel que `Public`, `Shared`, et`Static`  
+-   Mots clés de modificateur de procédure, tel que `Public`, `Shared`, et `Static`  
   
 -   Noms de paramètres  
   
--   Mots clés de modificateur de paramètre, telles que `ByRef` et`Optional`  
+-   Mots clés de modificateur de paramètre, telles que `ByRef` et `Optional`  
   
 -   Le type de données de la valeur de retour (à l’exception d’un opérateur de conversion)  
   
@@ -99,7 +100,7 @@ Cette page répertorie certains problèmes courants qui peuvent se produire lors
  Si vous surchargez une procédure avec un ou plusieurs [facultatif](../../../../visual-basic/language-reference/modifiers/optional.md) paramètres ou un [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) paramètre, vous devez éviter de dupliquer de la *surcharges implicites*. Pour plus d’informations, consultez [considérations relatives à la surcharge de procédures](./considerations-in-overloading-procedures.md).  
   
 ## <a name="calling-a-wrong-version-of-an-overloaded-procedure"></a>Appel d’une Version incorrecte d’une procédure surchargée  
- Si une procédure possède plusieurs versions surchargées, vous devez être familiarisé avec toutes leurs listes de paramètres et comprendre comment [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] résout les appels parmi les surcharges. Dans le cas contraire, vous pouvez appeler une surcharge autre que celui prévu.  
+ Si une procédure possède plusieurs versions surchargées, vous devez être familiarisé avec toutes leurs listes de paramètres et comprendre comment Visual Basic résout les appels parmi les surcharges. Dans le cas contraire, vous pouvez appeler une surcharge autre que celui prévu.  
   
  Lorsque vous avez identifié la surcharge à appeler, veillez à respecter les règles suivantes :  
   

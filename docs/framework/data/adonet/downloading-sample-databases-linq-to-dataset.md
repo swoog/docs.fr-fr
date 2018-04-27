@@ -1,24 +1,26 @@
 ---
-title: "Téléchargement d'exemples de base de données (LINQ to DataSet)"
-ms.custom: 
+title: Téléchargement d'exemples de base de données (LINQ to DataSet)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: eb42a7af-d410-4b7f-b4a8-13c72ce6fd09
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c8c1c2dabb13393764ca8b1fd9c1a717b9e2527e
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8e19e51ecf4868d0d49e26b4aafd7e8b3840992d
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="downloading-sample-databases-linq-to-dataset"></a>Téléchargement d'exemples de base de données (LINQ to DataSet)
 Les exemples et procédures pas à pas dans le [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] documentation utilisent la base de données AdventureWorks. Vous pouvez télécharger ce produit gratuitement à partir du site de téléchargement Microsoft. Les exemples et procédures pas à pas de la documentation [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] utilisent SQL Server comme magasin de données. SQL Server Express Edition, disponible gratuitement, peut également être utilisé comme magasin de données à la place de SQL Server.  
@@ -74,7 +76,7 @@ Les exemples et procédures pas à pas dans le [!INCLUDE[linq_dataset](../../../
      Si vous avez installé ces fichiers dans un lecteur ou un répertoire différent, vous devez modifier les chemins en conséquence avant d'exécuter la procédure stockée `sp_attach_db`.  
   
 ## <a name="downloading-sql-server-express-edition"></a>Téléchargement de SQL Server Express Edition  
- Les exemples et procédures pas à pas dans la [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] section utiliser SQL Server 2005 comme magasin de données, mais peut être modifiée pour utiliser à la place de SQL Server Express Edition. SQL Server Express Edition est disponible gratuitement et vous pouvez le redistribuer avec les applications. Si vous utilisez [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)], SQL Server Express Edition est inclus dans les éditions professionnelles et ultérieures.  
+ Les exemples et procédures pas à pas dans la [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] section utiliser SQL Server 2005 comme magasin de données, mais peut être modifiée pour utiliser à la place de SQL Server Express Edition. SQL Server Express Edition est disponible gratuitement et vous pouvez le redistribuer avec les applications. Si vous utilisez Visual Studio, SQL Server Express Edition est incluse dans les éditions professionnelles et ultérieures.  
   
 #### <a name="to-download-and-install-sql-server-express-edition"></a>Pour télécharger et installer SQL Server Express Edition  
   

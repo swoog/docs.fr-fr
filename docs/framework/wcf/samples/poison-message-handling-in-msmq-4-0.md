@@ -1,24 +1,26 @@
 ---
-title: "Poison Message Handling in MSMQ 4,0"
-ms.custom: 
+title: Poison Message Handling in MSMQ 4,0
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 32d7c7a93636cbe0086cfbcb5fd1e401a2f013fb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6f2361ed862986d2490968ae422b9b1313eedea3
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>Poison Message Handling in MSMQ 4,0
 Cet exemple montre comment assurer la gestion des messages incohérents dans un service. Cet exemple est basé sur le [transactionnel de liaison MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) exemple. Cet exemple utilise `netMsmqBinding`. Le service est une application console auto-hébergée qui permet d'observer le service qui reçoit les messages mis en file d'attente.  
@@ -49,19 +51,19 @@ Cet exemple montre comment assurer la gestion des messages incohérents dans un 
  L'exemple montre comment utiliser la disposition `Move` pour le message incohérent. `Move` permet de déplacer le message vers la sous-file d'attente de messages incohérents.  
   
  Le contrat de service est `IOrderProcessor`, qui définit un service monodirectionnel qui peut être utilisé avec des files d'attente.  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IOrderProcessor  
 {  
     [OperationContract(IsOneWay = true)]  
     void SubmitPurchaseOrder(PurchaseOrder po);  
 }  
-```  
-  
+```
+
  L'opération de service affiche un message indiquant qu'elle traite la commande. Pour illustrer la fonctionnalité de message incohérent, l'opération de service `SubmitPurchaseOrder` lève une exception pour restaurer la transaction sur un appel aléatoire du service. Le message est alors remis dans la file d'attente. Le message est par la suite marqué comme étant incohérent. La configuration est définie pour déplacer le message incohérent vers  la sous-file d'attente de messages incohérents.  
-  
-```  
+
+```csharp
 // Service class that implements the service contract.  
 // Added code to write output to the console window.  
 public class OrderProcessorService : IOrderProcessor  
@@ -127,8 +129,8 @@ public class OrderProcessorService : IOrderProcessor
   
     }  
 }  
-```  
-  
+```
+
  La configuration du service inclut les propriétés de message incohérent suivantes : `receiveRetryCount`, `maxRetryCycles`, `retryCycleDelay` et `receiveErrorHandling`, comme indiqué dans le fichier de configuration suivant.  
   
 ```xml  
@@ -171,8 +173,8 @@ public class OrderProcessorService : IOrderProcessor
  Les messages de la file d'attente de messages incohérents sont adressés au service de traitement, qui peut être différent du point de terminaison de service de message incohérent. Par conséquent, lorsque le service de message incohérent lit des messages de la file d'attente, la couche de canal [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] recherche l'incompatibilité dans les points de terminaison et ne distribue pas le message. Dans ce cas, le message est adressé au service de traitement des commandes mais est reçu par le service de message incohérent. Pour continuer à recevoir le message même s'il est adressé à un autre point de terminaison, nous devons ajouter un `ServiceBehavior` pour filtrer les adresses où le critère de correspondance doit correspondre aux points de terminaison de service auxquels le message est adressé. Cela est nécessaire pour pouvoir traiter les messages que vous lisez à partir de la file d'attente de messages incohérents.  
   
  L'implémentation du service de message incohérent elle-même est très similaire à l'implémentation du service. Elle implémente le contrat et traite les commandes. L'exemple de code se présente comme suit :  
-  
-```  
+
+```csharp
 // Service class that implements the service contract.  
 // Added code to write output to the console window.  
 [ServiceBehavior(AddressFilterMode=AddressFilterMode.Any)]  
@@ -215,8 +217,8 @@ public class OrderProcessorService : IOrderProcessor
             serviceHost.Close();  
         }  
     }  
-```  
-  
+```
+
  Contrairement au service de traitement des commandes qui lit les messages de la file d'attente de commande, le service de message incohérent lit les messages de la sous-file d'attente de messages incohérents. La file d'attente de messages incohérents est une sous-file d'attente de la file d'attente principale ; elle est appelée « poison » et est générée automatiquement par MSMQ. Pour y accéder, indiquez le nom de la file d'attente principale suivi de « ; » et du nom de la sous-file d'attente (dans ce cas « poison »), tel qu'indiqué dans l'exemple de configuration suivant.  
   
 > [!NOTE]
@@ -325,7 +327,7 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
     > [!NOTE]
     >  L'affectation de `security mode` à `None` revient à affecter `MsmqAuthenticationMode` à la sécurité `MsmqProtectionLevel`, `Message` et `None`.  
   
-3.  Pour que Meta Data Exchange fonctionne, nous enregistrons une URL avec une liaison http. Cela demande que le service soit exécuté dans une fenêtre de commande élevée. Sinon, vous obtenez une exception telle que : Exception non prise en charge: System.ServiceModel.AddressAccessDeniedException: HTTP n'a pas pu enregistrer l'URL http://+:8000/ServiceModelSamples/service/. Votre processus ne dispose pas des droits d'accès à cet espace de noms. Pour plus d'informations, consultez http://go.microsoft.com/fwlink/?LinkId=70353. ---> System.Net.HttpListenerException : accès refusé.  
+3.  Pour que Meta Data Exchange fonctionne, nous enregistrons une URL avec une liaison http. Cela demande que le service soit exécuté dans une fenêtre de commande élevée. Dans le cas contraire, vous obtenez une exception telles que : Exception non gérée : System.ServiceModel.AddressAccessDeniedException : HTTP n’a pas pu inscrire URL http://+:8000/ServiceModelSamples/service/. Le processus n’a pas de droits d’accès à cet espace de noms (consultez http://go.microsoft.com/fwlink/?LinkId=70353 pour plus d’informations). ---> System.Net.HttpListenerException : accès refusé.  
   
 > [!IMPORTANT]
 >  Les exemples peuvent déjà être installés sur votre ordinateur. Recherchez le répertoire (par défaut) suivant avant de continuer.  

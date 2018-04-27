@@ -1,12 +1,13 @@
 ---
-title: "Définition de valeurs par défaut avec les méthodes ShouldSerialize et Reset"
-ms.custom: 
+title: Définition de valeurs par défaut avec les méthodes ShouldSerialize et Reset
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,19 +16,20 @@ helpviewer_keywords:
 - custom controls [Windows Forms], property methods
 - ShouldPersist method
 ms.assetid: 7b6c5e00-3771-46b4-9142-5a80d5864a5e
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a654fef461d92c4b93db131e303bb07a1e839d34
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a28cd84c88cd7434eaca3fdaa7b4406006c44dad
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="defining-default-values-with-the-shouldserialize-and-reset-methods"></a>Définition de valeurs par défaut avec les méthodes ShouldSerialize et Reset
-`ShouldSerialize`et `Reset` sont des méthodes facultatives que vous pouvez fournir pour une propriété, si la propriété n’a pas un ont la valeur par défaut simple. Si la propriété a une valeur par défaut simple, vous devez appliquer le <xref:System.ComponentModel.DefaultValueAttribute> et fournir la valeur par défaut pour le constructeur de classe d’attribut à la place. Ces deux mécanismes Active les fonctionnalités suivantes dans le concepteur :  
+`ShouldSerialize` et `Reset` sont des méthodes facultatives que vous pouvez fournir pour une propriété, si la propriété n’a pas un ont la valeur par défaut simple. Si la propriété a une valeur par défaut simple, vous devez appliquer le <xref:System.ComponentModel.DefaultValueAttribute> et fournir la valeur par défaut pour le constructeur de classe d’attribut à la place. Ces deux mécanismes Active les fonctionnalités suivantes dans le concepteur :  
   
 -   La propriété fournit une indication visuelle dans l’Explorateur de propriétés s’il a été modifié à partir de sa valeur par défaut.  
   
@@ -53,9 +55,9 @@ public void ResetMyFont() {
 ```  
   
 > [!NOTE]
->  Si une propriété n’a pas un `Reset` (méthode), n’est pas marqué avec un <xref:System.ComponentModel.DefaultValueAttribute>et n’a pas de valeur par défaut fournie dans sa déclaration, le `Reset` option de cette propriété est désactivée dans le menu contextuel de la **propriétés** fenêtre du Concepteur Windows Forms dans [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].  
+>  Si une propriété n’a pas un `Reset` (méthode), n’est pas marqué avec un <xref:System.ComponentModel.DefaultValueAttribute>et n’a pas de valeur par défaut fournie dans sa déclaration, le `Reset` option de cette propriété est désactivée dans le menu contextuel de la **propriétés** fenêtre du Concepteur Windows Forms dans Visual Studio.  
   
- Les concepteurs tels que [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] utiliser le `ShouldSerialize` *PropertyName* méthode pour vérifier si une propriété a changé sa valeur par défaut et d’écrire du code dans le formulaire uniquement si une propriété est modifiée, permettant ainsi plus efficace génération de code. Exemple :  
+ Les concepteurs tels que Visual Studio utilisent le `ShouldSerialize` *PropertyName* méthode pour vérifier si une propriété a changé sa valeur par défaut et d’écrire du code dans le formulaire uniquement si une propriété est modifiée, ce qui permet de code plus efficace génération. Par exemple :  
   
 ```vb  
 'Returns true if the font has changed; otherwise, returns false.  

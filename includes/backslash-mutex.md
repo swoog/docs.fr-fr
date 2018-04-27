@@ -1,0 +1,1 @@
+La barre oblique inverse (\\) est un caractère réservé dans un nom de mutex. N’utilisez pas de barre oblique inverse (\\) dans un nom de mutex, sauf si spécifié dans la remarque sur l’utilisation de mutex dans les sessions Terminal Server. Sinon, une <xref:System.IO.DirectoryNotFoundException> peut être levée, même si le nom du mutex représente un fichier existant.

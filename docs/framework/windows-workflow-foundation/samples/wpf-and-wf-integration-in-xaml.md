@@ -14,14 +14,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0447df0e6d4f14a4171a315858f992ad23d69373
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 6bc761b93ff8d5c0dc79a86d0159d50d65fb727c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="wpf-and-wf-integration-in-xaml"></a>Intégration de WPF et WF en XAML
-Cet exemple montre comment créer une application qui utilise Windows Presentation Foundation (WPF) et [!INCLUDE[wf](../../../../includes/wf-md.md)] fonctionnalités dans un document XAML unique. Pour ce faire, l'exemple utilise [!INCLUDE[wf](../../../../includes/wf-md.md)] et l'extensibilité XAML.  
+Cet exemple montre comment créer une application qui utilise des fonctionnalités de Windows Presentation Foundation (WPF) et Windows Workflow Foundation (WF) dans un document XAML unique. Pour ce faire, l’exemple utilise l’extensibilité de Windows Workflow Foundation (WF) et XAML.  
   
 ## <a name="sample-details"></a>Détails de l'exemple  
  Le fichier ShowWindow.xaml désérialise dans une activité <xref:System.Activities.Statements.Sequence> avec deux variables String manipulées par les activités de la séquence : `ShowWindow` et `WriteLine`. L'activité <xref:System.Activities.Statements.WriteLine> renvoie dans la fenêtre de console l'expression qu'elle assigne à la propriété <xref:System.Activities.Statements.WriteLine.Text%2A>. L'activité `ShowWindow` affiche une fenêtre [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] dans le cadre de sa logique d'exécution. Le <xref:System.Activities.ActivityContext.DataContext%2A> de la fenêtre inclut les variables déclarées dans la séquence. Les contrôles de la fenêtre déclarée dans l'activité `ShowWindow` utilisent la liaison de données pour manipuler ces variables. Enfin, la fenêtre contient un contrôle bouton. L'événement `Click` pour le bouton est géré par <xref:System.Activities.ActivityDelegate> nommé `MarkupExtension` qui contient une activité `CloseWindow`. `MarkUpExtension` appelle l'activité contenue qui fournit, comme contexte, tous les objets identifiés par `x:Name`, ainsi que le <xref:System.Activities.ActivityContext.DataContext%2A> de la fenêtre. Ainsi, le `CloseWindow.InArgument<Window>` peut être lié à l'aide d'une expression qui référence le nom de la fenêtre.  

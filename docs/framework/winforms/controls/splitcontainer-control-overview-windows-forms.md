@@ -1,36 +1,36 @@
 ---
-title: "Vue d'ensemble du contrôle SplitContainer (Windows Forms)"
-ms.custom: 
+title: Vue d'ensemble du contrôle SplitContainer (Windows Forms)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-winforms
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - SplitContainer
 helpviewer_keywords:
 - SplitContainer control [Windows Forms], about SplitContainer control
 ms.assetid: 6de5a5f7-97a5-402d-be6d-7e2785483db5
-caps.latest.revision: 
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7d2e538241cca8288158628df777895fae9aa756
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a553ea1b6dae24b4a0c3bd169edccbd9b52c5203
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="splitcontainer-control-overview-windows-forms"></a>Vue d'ensemble du contrôle SplitContainer (Windows Forms)
 Le contrôle Windows Forms <xref:System.Windows.Forms.SplitContainer> peut être considéré comme un composite ; il s'agit de deux panneaux séparés par une barre mobile. Quand le pointeur de la souris est sur la barre, il change de forme pour montrer que la barre est mobile.  
   
 > [!IMPORTANT]
->  Dans le **boîte à outils**, <xref:System.Windows.Forms.SplitContainer> contrôle remplace le <xref:System.Windows.Forms.Splitter> contrôle qui existait dans la version précédente de [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]. Il vaut beaucoup mieux utiliser le contrôle <xref:System.Windows.Forms.SplitContainer> que le contrôle <xref:System.Windows.Forms.Splitter>. Le <xref:System.Windows.Forms.Splitter> classe est toujours inclus dans le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pour la compatibilité avec les applications existantes, mais nous vous encourageons vivement à utiliser le <xref:System.Windows.Forms.SplitContainer> contrôle pour les nouveaux projets.  
+>  Dans le **boîte à outils**, <xref:System.Windows.Forms.SplitContainer> contrôle remplace le <xref:System.Windows.Forms.Splitter> contrôle qui existait dans la version précédente de Visual Studio. Il vaut beaucoup mieux utiliser le contrôle <xref:System.Windows.Forms.SplitContainer> que le contrôle <xref:System.Windows.Forms.Splitter>. Le <xref:System.Windows.Forms.Splitter> classe est toujours inclus dans le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pour la compatibilité avec les applications existantes, mais nous vous encourageons vivement à utiliser le <xref:System.Windows.Forms.SplitContainer> contrôle pour les nouveaux projets.  
   
  Avec la <xref:System.Windows.Forms.SplitContainer> contrôle, vous pouvez créer des interfaces utilisateur complexes ; souvent, une sélection dans un panneau détermine les objets affichés dans l’autre panneau. Cette disposition est très efficace pour afficher et parcourir des informations. Avoir deux panneaux vous permet de regrouper des informations dans les zones et de la barre, ou « séparateur », permet aux utilisateurs de redimensionner les panneaux.  
   
@@ -59,8 +59,8 @@ Le contrôle Windows Forms <xref:System.Windows.Forms.SplitContainer> peut être
 |Propriété <xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A>|Détermine la distance en pixels du bord gauche ou supérieur à la barre de fractionnement mobile.|  
 |Propriété <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A>|Détermine la distance minimale, en pixels, que le séparateur peut être déplacé par l’utilisateur.|  
 |Propriété <xref:System.Windows.Forms.SplitContainer.SplitterWidth%2A>|Détermine l’épaisseur, en pixels, du séparateur.|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterMoving>événement|Se produit lorsque le séparateur est en mouvement.|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterMoved>événement|Se produit lorsque le séparateur a été déplacé.|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterMoving> Événement|Se produit lorsque le séparateur est en mouvement.|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterMoved> Événement|Se produit lorsque le séparateur a été déplacé.|  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.Windows.Forms.SplitContainer>  

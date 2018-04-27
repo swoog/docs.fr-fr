@@ -16,14 +16,14 @@ ms.assetid: b770e8f5-e07d-491a-ab4b-a977980f9ba2
 caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c02e95573d0ba894bf68510219bd66965fc234fc
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 4497c9586182cca9e2be97dc39e5ccb242725d25
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-collapse-and-hide-sections-of-code-visual-basic"></a>Comment : réduire et masquer des sections de code (Visual Basic)
-Le `#Region` directive vous permet de réduire et masquer des sections de code dans des fichiers Visual Basic. Le `#Region` directive vous permet de spécifier un bloc de code que vous pouvez développer ou réduire lorsque vous utilisez la [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] éditeur de code. La possibilité de masquer le code de manière sélective rend vos fichiers plus gérable et plus facile à lire. Pour plus d’informations, voir [Mode Plan](/visualstudio/ide/outlining).  
+Le `#Region` directive vous permet de réduire et masquer des sections de code dans des fichiers Visual Basic. Le `#Region` directive vous permet de spécifier un bloc de code que vous pouvez développer ou réduire lors de l’utilisation de l’éditeur de code Visual Studio. La possibilité de masquer le code de manière sélective rend vos fichiers plus gérable et plus facile à lire. Pour plus d’informations, voir [Mode Plan](/visualstudio/ide/outlining).  
   
  `#Region` directives prennent en charge une sémantique de bloc de code comme `#If...#End If`. Cela signifie qu’ils ne peuvent pas commencer dans un bloc et se terminer par une autre ; le début et fin doivent être dans le même bloc. `#Region` directives ne sont pas pris en charge dans les fonctions.  
   

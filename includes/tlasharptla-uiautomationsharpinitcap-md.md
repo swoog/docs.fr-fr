@@ -1,1 +1,1 @@
-UI Automation
+Automation de l'interface utilisateur

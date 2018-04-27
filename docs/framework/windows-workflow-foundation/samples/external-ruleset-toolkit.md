@@ -1,23 +1,24 @@
 ---
 title: External RuleSet Toolkit
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a306d283-a031-475e-aa01-9ae86e7adcb0
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7fbac6bf8be169aca8ad61c69b8d024f44928d8b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 40e28bb2b17e511a1b8953ccc8ff9bdf4f0f7392
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="external-ruleset-toolkit"></a>External RuleSet Toolkit
 Généralement, lorsque des règles sont utilisées dans une application de workflow, elles font partie de l'assembly. Dans certains cas, il peut être préférable de gérer les RuleSets séparément de l'assembly afin qu'ils soient mis à jour sans que la génération et le déploiement de l'assembly de workflow ne soient nécessaires. Cet exemple vous permet de gérer et de modifier des RuleSets dans une base de données et d'accéder à ceux-ci à partir d'un workflow au moment de son exécution, opération qui permet aux instances de workflow en cours d'intégrer automatiquement des modifications de RuleSets.  
@@ -67,9 +68,9 @@ Généralement, lorsque des règles sont utilisées dans une application de work
   
  Figure 3 : Outil RuleSet Editor  
   
- Il s'agit d'une nouvelle présentation de la boîte de dialogue de l'éditeur, qui fait partie du complément [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] de Windows Workflow Foundation. Elle contient les mêmes fonctionnalités, y compris la prise en charge Intellisense. Les règles sont créées pour un type de cible (par exemple, un flux de travail) qui est associé à l’ensemble de règles dans l’outil ; Lorsque vous cliquez sur **Parcourir** dans la boîte de dialogue principale de l’outil, le **Workflow/Type Selector** boîte de dialogue s’affiche, comme illustré dans la Figure 4.  
+ Il s’agit d’une nouvelle présentation de la boîte de dialogue d’éditeur qui fait partie de la macro complémentaire Windows Workflow Foundation Visual Studio. Elle contient les mêmes fonctionnalités, y compris la prise en charge Intellisense. Les règles sont créées pour un type de cible (par exemple, un flux de travail) qui est associé à l’ensemble de règles dans l’outil ; Lorsque vous cliquez sur **Parcourir** dans la boîte de dialogue principale de l’outil, le **Workflow/Type Selector** boîte de dialogue s’affiche, comme illustré dans la Figure 4.  
   
- ![Flux de travail &#47; Type de sélection](../../../../docs/framework/windows-workflow-foundation/samples/media/71f08d57-e8f2-499e-8151-ece2cbdcabfd.gif "71f08d57-e8f2-499e-8151-ece2cbdcabfd")  
+ ![Flux de travail &#47;tapez sélection](../../../../docs/framework/windows-workflow-foundation/samples/media/71f08d57-e8f2-499e-8151-ece2cbdcabfd.gif "71f08d57-e8f2-499e-8151-ece2cbdcabfd")  
   
  Figure 4 : Workflow/Type Selector  
   
@@ -83,7 +84,7 @@ Généralement, lorsque des règles sont utilisées dans une application de work
   
  Figure 5 : Erreurs de validation  
   
- À partir de la **données** menu dans l’outil, vous pouvez importer et exporter des groupes de règles. Lorsque vous cliquez sur **importation**, une boîte de dialogue Sélecteur de fichier s’affiche, dans laquelle vous pouvez sélectionner un fichier .rules. Il peut s'agir ou non d'un fichier créé initialement dans [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]. Le fichier .rules doit contenir une instance de `RuleDefinitions` sérialisée qui dispose d'une collection de conditions et d'une collection de RuleSets. L'outil n'utilise pas la collection de conditions, mais il utilise le format `RuleDefinitions`.rules pour permettre l'interaction avec l'environnement [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].  
+ À partir de la **données** menu dans l’outil, vous pouvez importer et exporter des groupes de règles. Lorsque vous cliquez sur **importation**, une boîte de dialogue Sélecteur de fichier s’affiche, dans laquelle vous pouvez sélectionner un fichier .rules. Cela peut ou ne peut pas être un fichier créé initialement dans Visual Studio. Le fichier .rules doit contenir une instance de `RuleDefinitions` sérialisée qui dispose d'une collection de conditions et d'une collection de RuleSets. L’outil n’utilise pas la collection de conditions, mais il n’utilise pas le `RuleDefinitions` format .rules pour permettre l’interaction avec l’environnement Visual Studio.  
   
  Après avoir sélectionné un fichier .rules, un **RuleSet Selector** boîte de dialogue s’affiche (voir Figure 6). Celle-ci permet de sélectionner les ensembles de règles que vous souhaitez importer à partir du fichier (par défaut, tous les ensembles de règles sont sélectionnés). Les RuleSets d'un fichier .rules ne disposent pas de numéros de version, car leur version dans un projet WF est identique à celle de l'assembly. Pendant le processus d’importation, l’outil assigne automatiquement le numéro de version principal disponible suivant (que vous pouvez modifier après l’importation) ; Vous pouvez voir les numéros de version attribué dans le **RuleSet Selector** liste.  
   
@@ -141,7 +142,7 @@ Généralement, lorsque des règles sont utilisées dans une application de work
   
 9. Un fichier de configuration d'application est ajouté au projet de workflow afin d'indiquer la chaîne de connexion correspondant à la base de données devant être utilisée par le service. Cette chaîne doit être la même que celle utilisée par l'outil RuleSet, laquelle cible la base de données contenant la table RuleSet.  
   
-10. Vous pouvez désormais exécuter le projet `RuleSetToolkitUsageSample` comme s'il s'agissait de toute autre application console de workflow. Appuyez sur F5 ou Ctrl+F5 dans [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] ou exécutez directement le fichier RuleSetToolkitUsageSample.exe.  
+10. Vous pouvez désormais exécuter le projet `RuleSetToolkitUsageSample` comme s'il s'agissait de toute autre application console de workflow. Appuyez sur F5 ou Ctrl + F5 dans Visual Studio ou le fichier RuleSetToolkitUsageSample.exe directement.  
   
     > [!NOTE]
     >  Vous devez fermer l'outil RuleSet pour recompiler l'exemple d'utilisation, car l'outil charge l'assembly correspondant à cet exemple.

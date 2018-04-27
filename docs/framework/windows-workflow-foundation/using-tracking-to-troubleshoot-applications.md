@@ -1,29 +1,30 @@
 ---
-title: "Utilisation du suivi pour résoudre les problèmes posés par les applications"
-ms.custom: 
+title: Utilisation du suivi pour résoudre les problèmes posés par les applications
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8851adde-c3c2-4391-9523-d8eb831490af
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bb8971c344ff24120b5f85dceb518b0944bd5feb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: adc9a159b8887b0198cf19891f73fdee2a48437b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="using-tracking-to-troubleshoot-applications"></a>Utilisation du suivi pour résoudre les problèmes posés par les applications
-[!INCLUDE[wf](../../../includes/wf-md.md)] vous permet de suivre les informations associées au workflow pour donner des détails concernant l'exécution d'une application de [!INCLUDE[wf2](../../../includes/wf2-md.md)] ou d'un service. Les hôtes de [!INCLUDE[wf2](../../../includes/wf2-md.md)] sont en mesure de capturer des événements du workflow pendant l'exécution d'une instance de workflow. Si votre workflow génère des erreurs ou des exceptions, vous pouvez utiliser les détails du suivi [!INCLUDE[wf2](../../../includes/wf2-md.md)] pour résoudre les problèmes liés à son traitement.  
+Windows Workflow Foundation (WF) vous permet de vous permettent de suivre les informations relatives au flux de travail pour donner des détails concernant l’exécution d’une application Windows Workflow Foundation ou de service. Les hôtes de Windows Workflow Foundation sont en mesure de capturer des événements de workflow pendant l’exécution d’une instance de workflow. Si votre flux de travail génère des erreurs ou des exceptions, vous pouvez utiliser le suivi des détails pour la résolution des problèmes de son traitement Windows Workflow Foundation.  
   
 ## <a name="troubleshooting-a-wf-using-wf-tracking"></a>Dépannage d'un WF à l'aide du suivi WF  
- Pour détecter des erreurs dans le traitement d'une activité [!INCLUDE[wf2](../../../includes/wf2-md.md)], vous pouvez activer le suivi avec un modèle de suivi chargé de rechercher un <xref:System.Activities.Tracking.ActivityStateRecord> dont l'état est Faulted. La requête correspondante est spécifiée dans le code suivant.  
+ Pour détecter les erreurs dans le traitement d’une activité de Windows Workflow Foundation, vous pouvez activer le suivi avec un modèle de suivi des requêtes pour un <xref:System.Activities.Tracking.ActivityStateRecord> avec l’état Faulted. La requête correspondante est spécifiée dans le code suivant.  
   
 ```xml  
 <activityStateQueries>  
@@ -55,9 +56,9 @@ ms.lasthandoff: 12/22/2017
 </workflowInstanceQueries>  
 ```  
   
- Lorsqu'une instance de workflow rencontre une exception non prise en charge, un objet <xref:System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord> est émis si le suivi [!INCLUDE[wf2](../../../includes/wf2-md.md)] a été activé.  
+ Lorsqu’une instance de workflow rencontre une exception non gérée, un <xref:System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord> objet est émis si le suivi de Windows Workflow Foundation a été activé.  
   
- Cet enregistrement de suivi contient les détails de l'erreur sous la forme d'une pile d'exception. Il comprend les détails de la source de l'erreur (par exemple, l'activité) qui a échoué et généré une exception non prise en charge. Pour s'abonner aux les événements d'erreur issus de [!INCLUDE[wf2](../../../includes/wf2-md.md)], activez le suivi en ajoutant un participant de suivi. Configurez ce participant avec un modèle de suivi qui recherche `ActivityStateQuery (state="Faulted")`, <xref:System.Activities.Tracking.FaultPropagationRecord> et `WorkflowInstanceQuery (state="UnhandledException")`.  
+ Cet enregistrement de suivi contient les détails de l'erreur sous la forme d'une pile d'exception. Il comporte les détails de la source de l’erreur qui a échoué et a provoqué l’exception non gérée (par exemple, l’activité). Pour vous abonner aux événements d’erreur à partir d’un ordinateur Windows Workflow Foundation, activer le suivi en ajoutant un participant de suivi. Configurez ce participant avec un modèle de suivi qui recherche `ActivityStateQuery (state="Faulted")`, <xref:System.Activities.Tracking.FaultPropagationRecord> et `WorkflowInstanceQuery (state="UnhandledException")`.  
   
  Si le suivi est activé à l'aide du participant de suivi ETW, les événements d'erreur sont émis sur une session ETW. Les événements peuvent être visualisés à l'aide de l'Observateur d'événements. Il se trouve dans le nœud **Applications -> l’Observateur d’événements et journaux des Services -> Microsoft -> Windows -> serveur d’applications-Applications** dans le canal analytique.  
   

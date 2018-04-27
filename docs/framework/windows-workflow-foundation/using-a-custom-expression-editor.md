@@ -14,16 +14,16 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5388ed3f55d97f3282a710ac59fe36cfb32fa49c
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 6e9481364a70257f6c1711692daf5c81eee9fd88
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="using-a-custom-expression-editor"></a>Utilisation d'un éditeur d'expressions personnalisé
 Un éditeur d'expressions personnalisé peut être implémenté pour fournir une expérience d'édition d'expressions plus riche ou plus simple. Il existe plusieurs scénarios dans lesquels vous souhaiterez peut-être utiliser un éditeur d'expressions personnalisé :  
   
--   Pour assurer la prise en charge d'IntelliSense et d'autres fonctionnalités d'édition riches dans un concepteur de workflow réhébergé. Ces fonctionnalités doivent être fournies car l'éditeur d'expressions [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] par défaut ne peut pas être utilisé dans les applications réhébergées.  
+-   Pour assurer la prise en charge d’IntelliSense et d’autres fonctionnalités d’édition riches dans un concepteur de workflow réhébergé. Cette fonctionnalité doit être fournie, car l’éditeur d’expressions par défaut Visual Studio ne peut pas être utilisé dans les applications réhébergées.  
   
 -   Pour simplifier l’expérience pour les utilisateurs analystes d’entreprise, de modification d’expressions afin qu’ils ne doivent pas, par exemple, pour découvrir Visual Basic ou de traiter les expressions Visual Basic.  
   

@@ -17,11 +17,11 @@ ms.assetid: 95039642-7893-48b7-b23f-45a6c55d8f67
 caps.latest.revision: 32
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: de5825a6af1dd1b93c3c85651125cf817dc564f2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 58b11c61253b199bdeeb2f373eed5f6a358b9e0e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xml-element-literal-visual-basic"></a>Littéral d'élément XML (Visual Basic)
 
@@ -107,22 +107,22 @@ Un littéral qui représente un <xref:System.Xml.Linq.XElement> objet.
 ## <a name="return-value"></a>Valeur de retour  
  Objet <xref:System.Xml.Linq.XElement>.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Vous pouvez utiliser la syntaxe de littéral d’élément XML pour créer <xref:System.Xml.Linq.XElement> objets dans votre code.  
   
 > [!NOTE]
->  Un littéral XML peut couvrir plusieurs lignes sans utiliser de caractères de continuation de ligne. Cette fonctionnalité vous permet de copier le contenu d’un document XML et coller directement dans un [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] programme.  
+>  Un littéral XML peut couvrir plusieurs lignes sans utiliser de caractères de continuation de ligne. Cette fonctionnalité vous permet de copier le contenu d’un document XML et le coller directement dans un programme Visual Basic.  
   
  Les expressions incorporées du formulaire `<%= exp %>` vous permettent d’ajouter des informations dynamiques à un littéral d’élément XML. Pour plus d’informations, consultez [Expressions incorporées en XML](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).  
   
- Le [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilateur convertit le littéral d’élément XML en appels à la <xref:System.Xml.Linq.XElement.%23ctor%2A> constructeur et, si nécessaire, le <xref:System.Xml.Linq.XAttribute.%23ctor%2A> constructeur.  
+ Le compilateur Visual Basic convertit le littéral d’élément XML en appels à la <xref:System.Xml.Linq.XElement.%23ctor%2A> constructeur et, si nécessaire, le <xref:System.Xml.Linq.XAttribute.%23ctor%2A> constructeur.  
   
 ## <a name="xml-namespaces"></a>Espaces de noms XML  
  Les préfixes d’espace de noms XML sont utiles lorsque vous avez besoin de créer des littéraux XML avec des éléments du même espace de noms plusieurs fois dans le code. Vous pouvez utiliser les préfixes d’espace de noms XML globaux, que vous définissez à l’aide de la `Imports` instruction, ou les préfixes locaux, que vous définissez à l’aide de la `xmlns:xmlPrefix="xmlNamespace"` la syntaxe d’attribut. Pour plus d’informations, consultez [Imports, instruction (XML Namespace)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).  
   
  Conformément aux règles de portée pour les espaces de noms XML, les préfixes locaux sont prioritaires sur les préfixes globaux. Toutefois, si un littéral XML définit un espace de noms XML, cet espace de noms n’est pas disponible pour les expressions qui apparaissent dans une expression incorporée. L’expression incorporée peut accéder uniquement l’espace de noms XML global.  
   
- Le [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilateur convertit chaque espace de noms XML global utilisé par un littéral XML dans une définition d’espace de noms locale dans le code généré. Espaces de noms XML globaux qui ne sont pas utilisés n’apparaissent pas dans le code généré.  
+ Le compilateur Visual Basic convertit chaque espace de noms XML global utilisé par un littéral XML dans une définition d’espace de noms locale dans le code généré. Espaces de noms XML globaux qui ne sont pas utilisés n’apparaissent pas dans le code généré.  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant montre comment créer un élément XML simple qui a deux éléments vides imbriqués.  

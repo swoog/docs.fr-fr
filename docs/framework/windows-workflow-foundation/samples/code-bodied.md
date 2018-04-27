@@ -1,23 +1,24 @@
 ---
 title: Code-Bodied
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5bfb2d95-9092-4551-9c59-bd8f0a37225e
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1e9c0cecbf398fb024bda672cf9085e9c779d620
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1a07ef581459585f0418cdd24660b8064d0f51b0
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="code-bodied"></a>Code-Bodied
 Cette section contient des exemples d'activités personnalisées créées de façon déclarative dans le code.  
@@ -39,7 +40,7 @@ Cette section contient des exemples d'activités personnalisées créées de fa�
  Cet exemple montre comment développer un <xref:System.Activities.CodeActivity> personnalisé qui utilise <xref:System.Activities.AsyncCodeActivityContext> pour effectuer un travail de façon asynchrone en dehors du workflow. 
   
  [Activité personnalisée Hello World](../../../../docs/framework/windows-workflow-foundation/samples/hello-world-custom-activity.md)  
- Cet exemple illustre plusieurs fonctionnalités clés de [!INCLUDE[wf](../../../../includes/wf-md.md)], notamment la façon de créer une activité personnalisée simple.  
+ Cet exemple illustre plusieurs fonctionnalités clés de Windows Workflow Foundation (WF), y compris la création d’une activité personnalisée simple.  
   
  [Arguments dynamiques](../../../../docs/framework/windows-workflow-foundation/samples/dynamic-arguments.md)  
  Cet exemple montre comment implémenter une activité pour laquelle les arguments sont définis par le consommateur de l’activité plutôt que par l’auteur de l’activité.

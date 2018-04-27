@@ -1,24 +1,26 @@
 ---
 title: Address Headers
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b0c94d4a-3bde-4b4d-bb6d-9f12bc3a6940
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: aafd6ec911464dcc2b936b9f9fc74b9bc39808bf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1392e06b0148ee24c9591839b58baf45da5109d4
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="address-headers"></a>Address Headers
 Cet exemple illustre comment les clients peuvent passer des paramètres de référence à un service à l'aide de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -35,7 +37,7 @@ Cet exemple illustre comment les clients peuvent passer des paramètres de réf�
 ## <a name="client"></a>Client  
  Pour que le client envoie un paramètre de référence, il doit ajouter un en-tête `AddressHeader` à l'adresse `EndpointAddress` du `ServiceEndpoint`. La classe `EndpointAddress` étant immuable, le changement d'une adresse de point de terminaison doit être effectué à l'aide de la classe `EndpointAddressBuilder`. Le code suivant initialise le client pour envoyer un paramètre de référence dans le cadre de son message.  
   
-```  
+```csharp   
 HelloClient client = new HelloClient();  
 EndpointAddressBuilder builder =   
     new EndpointAddressBuilder(client.Endpoint.Address);  
@@ -54,23 +56,21 @@ client.Endpoint.Address = builder.ToEndpointAddress();
 ## <a name="server"></a>Serveur  
  L'implémentation de l'opération de service `Hello()` utilise le contexte `OperationContext` actuel pour inspecter la valeur des en-têtes figurant dans le message entrant.  
   
-```  
+```csharp   
 string id = null;  
 // look at headers on incoming message  
 for (int i = 0;   
      i < OperationContext.Current.IncomingMessageHeaders.Count;   
      ++i)  
 {  
-    MessageHeaderInfo h =   
-        OperationContext.Current.IncomingMessageHeaders[i];  
+    MessageHeaderInfo h = OperationContext.Current.IncomingMessageHeaders[i];  
     // for any reference parameters with the correct name & namespace  
     if (h.IsReferenceParameter &&   
         h.Name == IDName &&   
         h.Namespace == IDNamespace)  
     {  
         // read the value of that header  
-        XmlReader xr =   
-OperationContext.Current.IncomingMessageHeaders.GetReaderAtHeader(i);  
+        XmlReader xr = OperationContext.Current.IncomingMessageHeaders.GetReaderAtHeader(i);  
         id = xr.ReadElementContentAsString();  
     }  
 }  

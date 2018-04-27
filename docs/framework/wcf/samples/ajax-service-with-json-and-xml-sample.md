@@ -1,24 +1,26 @@
 ---
 title: AJAX Service with JSON and XML, exemple
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8ea5860d-0c42-4ae9-941a-e07efdd8e29c
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7d831d4663031419977b75c6cfe183ac4bd52a86
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: f1a3f2185743be6d6331db4aa253a0767484b32d
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="ajax-service-with-json-and-xml-sample"></a>AJAX Service with JSON and XML, exemple
 Cet exemple indique comment utiliser [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] pour créer un service AJAX (Asynchronous JavaScript and XML) qui retourne des données JSON (JavaScript Object Notation) ou XML. Vous pouvez accéder à un service AJAX en utilisant le code JavaScript à partir d'un client de navigateur Web. Cet exemple est basé le [servie AJAX de base](../../../../docs/framework/wcf/samples/basic-ajax-service.md) exemple.  
@@ -30,9 +32,9 @@ Cet exemple indique comment utiliser [!INCLUDE[indigo1](../../../../includes/ind
 > [!NOTE]
 >  La procédure d'installation ainsi que les instructions de génération relatives à cet exemple figurent à la fin de cette rubrique.  
   
- Pour permettre l'utilisation de clients AJAX non-ASP.NET, utilisez <xref:System.ServiceModel.Activation.WebServiceHostFactory> (pas <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>) dans le fichier .svc. <xref:System.ServiceModel.Activation.WebServiceHostFactory> ajoute un point de terminaison standard <xref:System.ServiceModel.Description.WebHttpEndpoint> au service. Ce point de terminaison est configuré avec une adresse vide renvoyant au fichier .svc ; cela signifie que l'adresse du service est http://localhost/ServiceModelSamples/service.svc, sans autre suffixe que celui correspondant au nom de l'opération.  
+ Pour permettre l'utilisation de clients AJAX non-ASP.NET, utilisez <xref:System.ServiceModel.Activation.WebServiceHostFactory> (pas <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>) dans le fichier .svc. <xref:System.ServiceModel.Activation.WebServiceHostFactory> ajoute un point de terminaison standard <xref:System.ServiceModel.Description.WebHttpEndpoint> au service. Le point de terminaison est configuré avec une adresse vide renvoyant au fichier .svc ; Cela signifie que l’adresse du service est http://localhost/ServiceModelSamples/service.svc, sans autre suffixe autres que le nom de l’opération.  
   
-```html  
+```svc
 <%@ServiceHost language="c#" Debug="true" Service="Microsoft.Samples.XmlAjaxService.CalculatorService" Factory="System.ServiceModel.Activation.WebServiceHostFactory" %>  
 ```  
   
@@ -52,28 +54,28 @@ Cet exemple indique comment utiliser [!INCLUDE[indigo1](../../../../includes/ind
  Mettre en forme les données par défaut pour <xref:System.ServiceModel.Description.WebHttpEndpoint> est XML, le format de données par défaut lors de la <xref:System.ServiceModel.Description.WebScriptEndpoint> est JSON. Pour plus d’informations, consultez [création de Services AJAX WCF sans ASP.NET](../../../../docs/framework/wcf/feature-details/creating-wcf-ajax-services-without-aspnet.md).  
   
  Le service présenté dans l'exemple suivant est un service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] standard avec deux opérations. Ces deux opérations requièrent le style de corps <xref:System.ServiceModel.Web.WebMessageBodyStyle.Wrapped> sur les attributs <xref:System.ServiceModel.Web.WebGetAttribute> ou <xref:System.ServiceModel.Web.WebInvokeAttribute>, ce qui est spécifique au comportement `webHttp` et n'a aucune incidence sur le commutateur de format de données JSON/XML.  
-  
-```  
+
+```csharp
 [OperationContract]  
 [WebInvoke(ResponseFormat = WebMessageFormat.Xml, BodyStyle = WebMessageBodyStyle.Wrapped)]  
 MathResult DoMathXml(double n1, double n2);  
-```  
-  
+```
+
  Le format de réponse pour l’opération est spécifié en tant que XML, qui est la valeur par défaut pour la définition de la [ \<webHttp >](../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md) comportement. Il est toutefois conseillé de spécifier explicitement le format de réponse.  
   
  L'autre opération utilise l'attribut `WebInvokeAttribute` et spécifie explicitement JSON au lieu de XML pour la réponse.  
-  
-```  
+
+```csharp
 [OperationContract]  
 [WebInvoke(ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Wrapped)]  
 MathResult DoMathJson(double n1, double n2);  
-```  
-  
+```
+
  Notez que dans les deux cas, les opérations retournent un type complexe, `MathResult`, lequel constitue un type de contrat de données [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] standard.  
   
  La page Web XmlAjaxClientPage.htm client contient du code JavaScript qui appelle l’une des deux opérations lorsque l’utilisateur clique sur le **Perform calculation (return JSON)** ou **Perform calculation (return XML)**  boutons de la page. Le code permettant d'appeler le service construit un corps JSON et l'envoie à l'aide de HTTP POST. La demande est créée manuellement dans JavaScript, contrairement à la [servie AJAX de base](../../../../docs/framework/wcf/samples/basic-ajax-service.md) exemple et les autres exemples à l’aide d’ASP.NET AJAX.  
-  
-```  
+
+```csharp
 // Create HTTP request  
 var xmlHttp;  
 // Request instantiation code omitted…  
@@ -92,19 +94,19 @@ body = body + document.getElementById("num2").value + '}';
 xmlHttp.open("POST", url, true);  
 xmlHttp.setRequestHeader("Content-type", "application/json");  
 xmlHttp.send(body);  
-```  
-  
+```
+
  La réponse du service s'affiche sans traitement supplémentaire dans une zone de texte de la page. Cet exemple est implémenté à des fins de démonstration pour vous permettre d'observer directement les formats de données XML et JSON utilisés.  
-  
-```  
+
+```javascript
 // Create result handler   
 xmlHttp.onreadystatechange=function(){  
      if(xmlHttp.readyState == 4){  
           document.getElementById("result").value = xmlHttp.responseText;  
      }  
 }  
-```  
-  
+```
+
 > [!IMPORTANT]
 >  Les exemples peuvent déjà être installés sur votre ordinateur. Recherchez le répertoire (par défaut) suivant avant de continuer.  
 >   
@@ -120,7 +122,7 @@ xmlHttp.onreadystatechange=function(){
   
 2.  Générez la solution XmlAjaxService.sln comme décrit dans [génération des exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Accédez à http://localhost/ServiceModelSamples/XmlAjaxClientPage.htm (n'ouvrez pas XmlAjaxClientPage.htm dans le navigateur à partir du répertoire du projet).  
+3.  Accédez à http://localhost/ServiceModelSamples/XmlAjaxClientPage.htm (n’ouvrez pas XmlAjaxClientPage.htm dans le navigateur depuis le répertoire du projet).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Service AJAX utilisant HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)

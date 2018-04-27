@@ -1,24 +1,26 @@
 ---
 title: Two-Way Communication
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fb64192d-b3ea-4e02-9fb3-46a508d26c60
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3ea6ea34e83f9c813062620c5029ea4b812cd777
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9eb37e7e307bc9748113e5580ee96c8863d3ef89
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="two-way-communication"></a>Two-Way Communication
 Cet exemple montre comment effectuer une communication en file d'attente bidirectionnelle sur MSMQ. Cet exemple utilise la liaison `netMsmqBinding`. Dans le cas présent, le service est une application console auto-hébergée qui permet d'observer le service qui reçoit les messages mis en file d'attente.  
@@ -33,33 +35,33 @@ Cet exemple montre comment effectuer une communication en file d'attente bidirec
  Cet exemple illustre la communication bidirectionnelle à l'aide de files d'attente. Le client envoie des bons de commande à la file d'attente dans les limites de l'étendue d'une transaction. Le service reçoit les bons de commande, les traite puis rappelle le client avec l'état des bons dans la file d'attente dans les limites de l'étendue d'une transaction. Pour faciliter la communication bidirectionnelle, le client et service utilisent tous deux des files d'attente pour y placer les bons de commande et leur état.  
   
  Le contrat de service `IOrderProcessor` définit des opérations de service unidirectionnelles compatibles avec l'utilisation des files d'attente. L'opération de service inclut le point de terminaison de réponse auquel envoyer les états des bons de commande. Le point de terminaison de réponse est l'URI de la file d'attente pour renvoyer l'état du bon de commande au client. L'application de traitement des bons de commande implémente ce contrat.  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IOrderProcessor  
 {  
     [OperationContract(IsOneWay = true)]  
     void SubmitPurchaseOrder(PurchaseOrder po, string   
                                   reportOrderStatusTo);  
-}  
-```  
+}
+```
   
  Le contrat de réponse auquel envoyer l'état des bons de commande est spécifié par le client. Le client implémente le contrat d'état des bons de commande. Le service utilise le proxy généré de ce contrat pour renvoyer l'état des bons de commande au client.  
-  
-```  
+
+```csharp
 [ServiceContract]  
 public interface IOrderStatus  
 {  
     [OperationContract(IsOneWay = true)]  
     void OrderStatus(string poNumber, string status);  
 }  
-```  
-  
+```
+
  L'opération de service traite le bon de commande envoyé. L'attribut <xref:System.ServiceModel.OperationBehaviorAttribute> est appliqué à l'opération de service pour spécifier l'inscription automatique dans la transaction utilisée pour recevoir les messages depuis la file d'attente et au terme automatique de la transaction une fois l'opération de service terminée. La classe `Orders` encapsule la fonctionnalité de traitement des bons de commande. Dans cet exemple, elle ajoute les bons de commande à un dictionnaire. Les opérations peuvent accéder à la transaction à laquelle l'opération de service s'est inscrite depuis la classe `Orders`.  
   
  L'opération de service, outre traiter des bons de commande envoyés, envoie une réponse au client l'informant de l'état des commandes.  
-  
-```  
+
+```csharp
 [OperationBehavior(TransactionScopeRequired = true, TransactionAutoComplete = true)]  
 public void SubmitPurchaseOrder(PurchaseOrder po, string reportOrderStatusTo)  
 {  
@@ -79,16 +81,16 @@ public void SubmitPurchaseOrder(PurchaseOrder po, string reportOrderStatusTo)
     //Close the client.  
     client.Close();  
 }  
-```  
-  
+```
+
  Le nom de la file d'attente MSMQ est spécifié dans la section appSettings de ce fichier de configuration. Le point de terminaison du service est défini dans la section System.ServiceModel du fichier de configuration.  
   
 > [!NOTE]
 >  Le nom de la file d'attente MSMQ et l'adresse du point de terminaison utilisent des conventions d'adressage légèrement différentes. Le nom de la file d'attente MSMQ utilise un point (.) pour l'ordinateur local et des barres obliques inverses comme séparateur dans son chemin d'accès. L'adresse du point de terminaison [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] spécifie un schéma net.msmq:, utilise « localhost » pour l'ordinateur local et des barres obliques dans son chemin d'accès. Pour lire une file d'attente hébergée sur un ordinateur distant, remplacez « . » et « localhost » par le nom de cet ordinateur.  
   
  Le service est auto-hébergé. Lors de l'utilisation du transport MSMQ, la file d'attente utilisée doit être créée au préalable. Cela peut s'effectuer manuellement ou via le code. Dans cet exemple, le service vérifie l'existence de la file d'attente et la crée, si nécessaire. Le nom de la file d'attente est lu depuis le fichier de configuration. L’adresse de base est utilisée par le [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) pour générer le proxy pour le service.  
-  
-```  
+
+```csharp
 // Host the service within this EXE console application.  
 public static void Main()  
 {  
@@ -112,11 +114,11 @@ public static void Main()
         Console.ReadLine();  
     }  
 }  
-```  
-  
+```
+
  Le client crée une transaction. La communication avec la file d'attente s'effectue dans les limites d'étendue de la transaction. Elle est donc considérée comme une unité atomique dans laquelle l'intégralité des messages réussissent ou échouent.  
-  
-```  
+
+```csharp
 // Create a ServiceHost for the OrderStatus service type.  
 using (ServiceHost serviceHost = new ServiceHost(typeof(OrderStatusService)))  
 {  
@@ -152,11 +154,11 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(OrderStatusService)))
     // Close the ServiceHost to shutdown the service.  
     serviceHost.Close();  
 }  
-```  
-  
+```
+
  Le code du client implémente le contrat `IOrderStatus` pour pouvoir recevoir l'état des bons de commande depuis le service. Dans ce cas, le code imprime l'état des bons de commande.  
-  
-```  
+
+```csharp
 [ServiceBehavior]  
 public class OrderStatusService : IOrderStatus  
 {  
@@ -168,8 +170,8 @@ public class OrderStatusService : IOrderStatus
                                                            status);  
     }  
 }  
-```  
-  
+```
+
  La file d'attente de l'état des bons de commande est créée dans la méthode `Main`. La configuration du client intègre la configuration du service de l'état des bons de commande pour héberger le service de l'état des bons de commande, comme illustré dans l'exemple de configuration suivant.  
   
 ```xml  
@@ -323,7 +325,7 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
   
 3.  Le service pour cet exemple crée une liaison dans `OrderProcessorService`. Ajoutez une ligne de code après que la liaison a été instanciée pour affecter au mode de sécurité la valeur `None`.  
   
-    ```  
+    ```csharp
     NetMsmqBinding msmqCallbackBinding = new NetMsmqBinding();  
     msmqCallbackBinding.Security.Mode = NetMsmqSecurityMode.None;  
     ```  

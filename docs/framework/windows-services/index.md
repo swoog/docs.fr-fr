@@ -24,14 +24,14 @@ ms.author: ghogen
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4ed6a741a6f86b492929598613a0c10ae08981c5
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: cc01c836daa73b1a39ceab0b523791b6a520dc70
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="developing-windows-service-applications"></a>Développement des applications de service Windows
-À l’aide de Microsoft [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ou Microsoft [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK, vous pouvez facilement créer services en créant une application qui est installée en tant que service. Ce type d’application est appelé un service Windows. Avec les fonctionnalités de framework, vous pouvez créer des services, les installer, Démarrer, arrêter et contrôler leur comportement.  
+À l’aide de Microsoft Visual Studio ou Microsoft [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK, vous pouvez facilement créer services en créant une application qui est installée en tant que service. Ce type d’application est appelé un service Windows. Avec les fonctionnalités de framework, vous pouvez créer des services, les installer, Démarrer, arrêter et contrôler leur comportement.  
   
 > [!WARNING]
 >  Le modèle de service Windows pour C++ n’était pas inclus dans Visual Studio 2010. Pour créer un service Windows, vous pouvez créer un service dans le code managé en Visual c# ou Visual Basic, qui peut interagir avec le code C++ existant si nécessaire, ou vous pouvez créer un service Windows en C++ natif à l’aide de le [Assistant de projet ATL](/cpp/atl/reference/atl-project-wizard).  

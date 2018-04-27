@@ -1,12 +1,13 @@
 ---
-title: "Stratégie de sécurité de WPF - ingénierie de la plateforme"
-ms.custom: 
+title: Stratégie de sécurité de WPF - ingénierie de la plateforme
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -24,16 +25,17 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b40a4f1ba28559ee35dff9866539476e55cbd0fd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c3c1654bd63d59bf6588b1dc18593ef7a33f37c0
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="wpf-security-strategy---platform-security"></a>Stratégie de sécurité de WPF - sécurité de la plateforme
 Bien que [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] fournisse divers services de sécurité, il tire aussi parti des fonctionnalités de sécurité de la plateforme sous-jacente, qui inclut le système d'exploitation, le [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] et [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]. Ces couches se combinent pour fournir à [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] un modèle de sécurité de défense en profondeur renforcé qui essaie d'éviter le moindre point de défaillance, comme cela est illustré dans l'image suivante :  
@@ -46,11 +48,11 @@ Bien que [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] fourni
   
 <a name="Operating_System_Security"></a>   
 ## <a name="operating-system-security"></a>Sécurité du système d'exploitation  
- Le niveau minimal de système d'exploitation exigé par [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] est [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)]. Le cœur de [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] fournit plusieurs fonctionnalités de sécurité qui constituent la base de sécurité de toutes les applications [!INCLUDE[TLA2#tla_win](../../../includes/tla2sharptla-win-md.md)], y compris celles créées avec [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] intègre les fonctionnalités de sécurité de [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] et les étend. Cette rubrique traite de l'ampleur de ces fonctionnalités de sécurité qui sont importantes pour [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)], ainsi que de la manière dont [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] les intègre pour offrir une défense en profondeur supplémentaire.  
+ Le niveau minimal de système d'exploitation exigé par [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] est [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)]. Le cœur de [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] fournit plusieurs fonctionnalités de sécurité qui constituent la base de sécurité pour toutes les applications Windows, y compris celles créées avec [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] intègre les fonctionnalités de sécurité de [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] et les étend. Cette rubrique traite de l'ampleur de ces fonctionnalités de sécurité qui sont importantes pour [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)], ainsi que de la manière dont [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] les intègre pour offrir une défense en profondeur supplémentaire.  
   
 <a name="Microsoft_Windows_XP_Service_Pack_2__SP2_"></a>   
 ### <a name="microsoft-windows-xp-service-pack-2-sp2"></a>Microsoft Windows XP Service Pack 2 (SP2)  
- Outre un tour d'horizon général et le renforcement de [!INCLUDE[TLA2#tla_win](../../../includes/tla2sharptla-win-md.md)], trois fonctionnalités clés de [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] seront abordées dans cette rubrique :  
+ Outre une révision générale et le renforcement de Windows, il existe trois fonctionnalités clés de [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] seront abordées dans cette rubrique :  
   
 -   Compilation /GS  
   
@@ -73,7 +75,7 @@ Bien que [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] fourni
  Les utilisateurs [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] sur [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] bénéficieront des améliorations de sécurité supplémentaires du système d'exploitation, y compris l'« accès utilisateur de moindre privilège », les contrôles d'intégrité du code et l'isolation des privilèges.  
   
 #### <a name="user-account-control-uac"></a>Contrôle de compte d'utilisateur (UAC)  
- Aujourd'hui, les utilisateurs [!INCLUDE[TLA2#tla_win](../../../includes/tla2sharptla-win-md.md)] ont tendance à travailler avec des privilèges d'administrateur, car de nombreuses applications en ont besoin pour l'installation, l'exécution ou les deux à la fois. Le fait de pouvoir écrire les paramètres d'application par défaut dans le Registre en est un exemple.  
+ Aujourd'hui, les utilisateurs Windows ont tendance à s’exécuter avec des privilèges d’administrateur car de nombreuses applications ont besoin pour l’installation ou l’exécution ou les deux. Le fait de pouvoir écrire les paramètres d'application par défaut dans le Registre en est un exemple.  
   
  Une exécution avec des privilèges d'administrateur signifie en réalité que les applications s'exécutent à partir de processus auxquels sont accordés des privilèges d'administrateur. L'impact de cela sur la sécurité est que tout code malveillant qui détourne un processus s'exécutant avec des privilèges d'administrateur héritera automatiquement de ces privilèges, y compris l'accès aux ressources système critiques.  
   
@@ -174,18 +176,18 @@ Bien que [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] fourni
   
  Cela suppose que [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] reçoive des privilèges élevés tout en empêchant ces privilèges d'être régis par le jeu d'autorisations de la zone Internet du domaine d'application hôte.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]Pour cela, à l’aide de la **Assert** méthode d’une autorisation. Le code suivant en donne l'illustration.  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Pour cela, à l’aide de la **Assert** méthode d’une autorisation. Le code suivant en donne l'illustration.  
   
  [!code-csharp[WPFPlatformSecuritySnippets#Permission](../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/CSharp/Page1.xaml.cs#permission)]
  [!code-vb[WPFPlatformSecuritySnippets#Permission](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/VisualBasic/Page1.xaml.vb#permission)]  
   
  Le **Assert** empêche essentiellement les autorisations illimitées requises par [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] d’être restreintes par Internet de la zone autorisations de le [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)].  
   
- Du point de vue de la plateforme, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] est responsable de l’utilisation **Assert** correctement ; une utilisation incorrecte de **Assert** pourrait permettre à un code malveillant d’élever les privilèges. Par conséquent, il est important puis d’appeler **Assert** si nécessaire, et pour vous assurer que sandbox restrictions restent intactes. Par exemple, le code en mode sandbox n'est pas autorisé à ouvrir des fichiers aléatoires, mais il est autorisé à utiliser des polices. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]permet aux applications de bac à sable à utiliser les fonctionnalités de police en appelant **Assert**et pour [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] pour lire des fichiers connus pour contenir ces polices pour le compte de l’application en sandbox.  
+ Du point de vue de la plateforme, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] est responsable de l’utilisation **Assert** correctement ; une utilisation incorrecte de **Assert** pourrait permettre à un code malveillant d’élever les privilèges. Par conséquent, il est important puis d’appeler **Assert** si nécessaire, et pour vous assurer que sandbox restrictions restent intactes. Par exemple, le code en mode sandbox n'est pas autorisé à ouvrir des fichiers aléatoires, mais il est autorisé à utiliser des polices. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] permet aux applications de bac à sable à utiliser les fonctionnalités de police en appelant **Assert**et pour [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] pour lire des fichiers connus pour contenir ces polices pour le compte de l’application en sandbox.  
   
 <a name="ClickOnce_Deployment"></a>   
 ### <a name="clickonce-deployment"></a>déploiement ClickOnce  
- [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)]est une technologie de déploiement complet est incluse avec [!INCLUDE[TLA2#tla_winfx](../../../includes/tla2sharptla-winfx-md.md)]et s’intègre aux [!INCLUDE[TLA#tla_visualstu](../../../includes/tlasharptla-visualstu-md.md)] (consultez [vue d’ensemble du déploiement ClickOnce](http://msdn.microsoft.com/library/142dbbz4.aspx) pour plus d’informations). Les applications [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] autonomes peuvent être déployées à l'aide de [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)], tandis que les applications hébergées par un navigateur doivent être déployées avec [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)].  
+ [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] est une technologie de déploiement complet est incluse avec [!INCLUDE[TLA2#tla_winfx](../../../includes/tla2sharptla-winfx-md.md)]et s’intègre aux [!INCLUDE[TLA#tla_visualstu](../../../includes/tlasharptla-visualstu-md.md)] (consultez [vue d’ensemble du déploiement ClickOnce](http://msdn.microsoft.com/library/142dbbz4.aspx) pour plus d’informations). Les applications [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] autonomes peuvent être déployées à l'aide de [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)], tandis que les applications hébergées par un navigateur doivent être déployées avec [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)].  
   
  Les applications déployées à l'aide de [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)] bénéficient d'une couche de sécurité supplémentaire par rapport à [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)] ; en fait, les applications [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] déployées demandent les autorisations dont elles ont besoin. Seules ces autorisations leur sont accordées si elles ne dépassent pas le jeu d'autorisations pour la zone à partir de laquelle l'application est déployée. En limitant le jeu d'autorisations à celles qui sont uniquement nécessaires, même si elles sont moins nombreuses que celles fournies par le jeu d'autorisations de la zone de lancement, le nombre de ressources auxquelles a accès l'application est réduite au strict minimum. Par conséquent, si l'application est détournée, les risques de dommages sur l'ordinateur client sont réduits.  
   
@@ -211,7 +213,7 @@ Bien que [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] fourni
   
  Dans certains cas, des sites web non fiables pouvaient essayer de tromper les utilisateurs en imitant l'[!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] d'installation ou en affichant une boîte de dialogue d'installation [!INCLUDE[TLA#tla_actx](../../../includes/tlasharptla-actx-md.md)] de manière répétée, même après avoir été annulée par l'utilisateur. Il possible que ces techniques aient amené un nombre significatif d'utilisateurs à prendre de mauvaises décisions aboutissant à l'installation de logiciels espions.  
   
- [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] intègre plusieurs fonctionnalités destinées à limiter ces types de problèmes, qui tournent autour du concept d'intervention de l'utilisateur. [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)]détecte si un utilisateur a cliqué sur un lien ou élément de page avant une action, qui est appelé *intervention de l’utilisateur*et le traite différemment lorsqu’une action semblable est déclenchée par le script sur une page. Par exemple, [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] incorpore un **bloqueur de fenêtres publicitaires** qui détecte quand un utilisateur clique sur un bouton avant la page de création d’une fenêtre contextuelle. Cela permet à [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] d'autoriser les fenêtre contextuelles les plus inoffensives tout en bloquant celles que l'utilisateur n'a ni sollicitées ni voulues. Les fenêtres publicitaires intempestives bloquées sont interceptées sous la nouvelle **barre d’informations**, ce qui permet à l’utilisateur de substituer le bloc manuellement et de consulter le menu contextuel.  
+ [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] intègre plusieurs fonctionnalités destinées à limiter ces types de problèmes, qui tournent autour du concept d'intervention de l'utilisateur. [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] détecte si un utilisateur a cliqué sur un lien ou élément de page avant une action, qui est appelé *intervention de l’utilisateur*et le traite différemment lorsqu’une action semblable est déclenchée par le script sur une page. Par exemple, [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] incorpore un **bloqueur de fenêtres publicitaires** qui détecte quand un utilisateur clique sur un bouton avant la page de création d’une fenêtre contextuelle. Cela permet à [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] d'autoriser les fenêtre contextuelles les plus inoffensives tout en bloquant celles que l'utilisateur n'a ni sollicitées ni voulues. Les fenêtres publicitaires intempestives bloquées sont interceptées sous la nouvelle **barre d’informations**, ce qui permet à l’utilisateur de substituer le bloc manuellement et de consulter le menu contextuel.  
   
  La même logique d’intervention de l’utilisateur est également appliquée à **ouvrir**/**enregistrer** invites de sécurité. Les boîtes de dialogue d'installation [!INCLUDE[TLA2#tla_actx](../../../includes/tla2sharptla-actx-md.md)] sont toujours interceptées sous la barre d'informations, sauf si elles représentent une mise à niveau d'un contrôle installé précédemment. Ces mesures se combinent pour donner à l'utilisateur une expérience plus sûre et mieux contrôlée, puisqu'ils sont protégés contre les sites qui les poussent à installer des logiciel indésirables ou malveillants.  
   

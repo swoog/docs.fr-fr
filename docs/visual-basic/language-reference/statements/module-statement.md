@@ -2,9 +2,10 @@
 title: Module, instruction
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - Module
@@ -18,21 +19,21 @@ helpviewer_keywords:
 - classes [Visual Basic], vs. modules
 - declarations [Visual Basic], modules
 ms.assetid: a1243afc-14a5-45df-95d5-51118aeac362
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 92cdcd1919f21243118108da3bc382ea5d954130
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 51f8fd063449c072a69cdffd9f6ce2a96cc3f68c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="module-statement"></a>Module, instruction
 Déclare le nom d’un module et introduit la définition des variables, propriétés, événements et procédures contenus dans le module.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```vb 
 [ <attributelist> ] [ accessmodifier ]  Module name  
     [ statements ]  
 End Module  
@@ -60,7 +61,7 @@ End Module
  `End Module`  
  Met fin à la `Module` définition.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  A `Module` instruction définit un type de référence disponible tout au long de son espace de noms. A *module* (parfois appelé un *module standard*) est semblable à une classe, mais avec certaines des différences importantes. Chaque module a exactement une seule instance et ne doit-elle pas être créé ou assigné à une variable. Les modules ne prennent en charge l’héritage ou implémenter des interfaces. Notez qu’un module n’est pas un *type* dans le sens où une classe ou une structure, vous ne pouvez pas déclarer un élément de programmation comme ayant le type de données d’un module.  
   
  Vous pouvez utiliser `Module` uniquement au niveau de l’espace de noms. Cela signifie que la *contexte de déclaration* pour un module doit être un fichier source ou un espace de noms et qu’il ne peut pas être une classe, structure, module, interface, procédure ou bloc. Vous ne pouvez pas imbriquer un module dans un autre module, ou dans n’importe quel type. Pour plus d’informations, consultez [Contextes de déclaration et niveaux d’accès par défaut](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  

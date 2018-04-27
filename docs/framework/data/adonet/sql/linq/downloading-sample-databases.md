@@ -16,11 +16,11 @@ ms.author: douglasl
 manager: craigg
 ms.workload:
 - dotnet
-ms.openlocfilehash: dd0b29e97d36d67781c92ee24c56aed43c703261
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: c4f18bc3e078a03795037f77505aa2533f1e853e
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="downloading-sample-databases"></a>Téléchargement d'exemples de base de données
 Plusieurs exemples et procédures pas à pas dans la documentation de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] utilisent l'exemple de base de données Northwind et SQL Server Express Edition. Vous pouvez télécharger ces produits gratuitement à partir du site de téléchargement Microsoft.  
@@ -42,7 +42,7 @@ Plusieurs exemples et procédures pas à pas dans la documentation de [!INCLUDE[
      Par défaut, la base de données est installé à *lecteur*: \SQL Server 2000 Sample Databases.  
   
 ## <a name="downloading-sql-server-express-edition"></a>Téléchargement de SQL Server Express Edition  
- SQL Server Express Edition est disponible gratuitement et vous pouvez le redistribuer avec les applications. Si vous utilisez [!INCLUDE[vsprvs](../../../../../../includes/vsprvs-md.md)], SQL Server Express Edition est inclus dans les éditions professionnelles et supérieures.  
+ SQL Server Express Edition est disponible gratuitement et vous pouvez le redistribuer avec les applications. Si vous utilisez Visual Studio, SQL Server Express Edition est incluse dans les éditions professionnelles et supérieures.  
   
 #### <a name="to-download-and-install-sql-server-express-edition"></a>Pour télécharger et installer SQL Server Express Edition  
   

@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 72282c62ad23ec825eab7054ab1909d07a062b45
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 20cb6c1cd7a3b06b57bce02d5c3caacc7e2e42b7
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="partial-trust-feature-compatibility"></a>Compatibilité des fonctionnalités dans un environnement de confiance partielle
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] prend en charge un sous-ensemble limité de fonctionnalités lors de son exécution dans un environnement de confiance partielle. Les fonctionnalités de confiance partielle prises en charge sont conçues autour d’un ensemble spécifique de scénarios, comme décrit dans la rubrique [Supported Deployment Scenarios](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) .  
@@ -154,7 +154,7 @@ ms.lasthandoff: 04/26/2018
 >  Pour éviter de saturer les fichiers de trace avec des erreurs en double, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] désactive le traçage de la ressource ou de l'action après le premier échec de sécurité. Une trace d'exception est créée pour chaque échec de l'accès aux ressources lors de la première tentative d'accès à la ressource ou d'accomplissement de l'action.  
   
 ## <a name="wcf-service-host"></a>Hôte de service WCF  
- L'hôte de service[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ne prend pas en charge la confiance partielle. Si vous souhaitez utiliser un service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dans un environnement de confiance partielle, n'utilisez pas le modèle du projet de bibliothèque de service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dans [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] pour générer votre service. Créez plutôt un site Web dans [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] en choisissant le modèle de site Web du service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] , qui peut héberger le service sur un serveur Web sur lequel la confiance partielle [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] est prise en charge.  
+ L'hôte de service[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ne prend pas en charge la confiance partielle. Si vous souhaitez utiliser un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] de service avec une confiance partielle, n’utilisez pas le [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modèle de projet bibliothèque du Service dans Visual Studio pour générer votre service. Au lieu de cela, créez un nouveau site Web dans Visual Studio en choisissant le [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modèle de site Web de service, qui peut héberger le service sur un serveur Web sur lequel [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] confiance partielle est prise en charge.  
   
 ## <a name="other-limitations"></a>Autres limitations  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] est en général limité par les considérations de sécurité imposées par l'application d'hébergement. Par exemple, si [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] est hébergé dans une application du navigateur XAML (XBAP), il est soumis aux limitations XBAP, comme décrit dans [Sécurité de confiance partielle de WPF](http://go.microsoft.com/fwlink/?LinkId=89138).  

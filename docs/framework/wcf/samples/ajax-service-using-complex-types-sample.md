@@ -1,24 +1,26 @@
 ---
 title: AJAX Service Using Complex Types, exemple
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 88242b99-4811-4cbe-8201-52ddf48fb174
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4c83da8aba2e1a88665f4443d98dbebbd5b1962b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: b821a252e202f0fef719e1545b38b4423237d0c7
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="ajax-service-using-complex-types-sample"></a>AJAX Service Using Complex Types, exemple
 Cet exemple montre comment utiliser [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] pour créer un service AJAX (ASP.NET Asynchronous JavaScript and XML) qui créent des instances de types complexes et les envoient entre le service et le client au format JSON (JavaScript Object Notation). Vous pouvez accéder à un service AJAX en utilisant le code JavaScript à partir d'un client de navigateur Web. Cet exemple est basé le [servie AJAX de base](../../../../docs/framework/wcf/samples/basic-ajax-service.md) exemple.  
@@ -29,44 +31,44 @@ Cet exemple montre comment utiliser [!INCLUDE[indigo1](../../../../includes/indi
 >  La procédure d'installation ainsi que les instructions de génération relatives à cet exemple figurent à la fin de cette rubrique.  
   
  Le service dans l'exemple suivant est un service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sans code spécifique à AJAX. L'attribut <xref:System.ServiceModel.Web.WebGetAttribute> n'étant pas appliqué, le verbe HTTP par défaut ("POST") est utilisé. Le service a une opération appelée `DoMath` qui retourne un type complexe appelé `MathResult`. Le type complexe est un type de contrat de données standard qui ne contient pas non plus de code spécifique à AJAX.  
-  
-```  
+
+```csharp
 [DataContract]  
-    public class MathResult  
-    {  
-        [DataMember]  
-        public double sum;  
-        [DataMember]  
-        public double difference;  
-        [DataMember]  
-        public double product;  
-        [DataMember]  
-        public double quotient;  
-    }  
-```  
-  
+public class MathResult  
+{  
+    [DataMember]  
+    public double sum;  
+    [DataMember]  
+    public double difference;  
+    [DataMember]  
+    public double product;  
+    [DataMember]  
+    public double quotient;  
+}  
+```
+
  Créez un point de terminaison AJAX sur le service à l'aide de <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>, comme dans l'exemple de servie AJAX de base.  
   
  La page Web client ComplexTypeClientPage.aspx contient du code ASP.NET et JavaScript pour appeler le service lorsque l’utilisateur clique sur le **effectuer le calcul** bouton sur la page. Le code pour appeler le service construit un corps JSON et l’envoie à l’aide de HTTP POST, similaire à la [AJAX Service utilisant HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md) exemple.  
   
  Une fois l'appel de service réussi, vous pouvez accéder aux membres de données individuels (`sum`, `difference`, `product` et `quotient`) sur l'objet JavaScript résultant.  
-  
-```  
+
+```javascript
 function onSuccess(mathResult){  
      document.getElementById("sum").value = mathResult.sum;  
      document.getElementById("difference").value = mathResult.difference;  
      document.getElementById("product").value = mathResult.product;  
      document.getElementById("quotient").value = mathResult.quotient;  
 }  
-```  
-  
+```
+
 ### <a name="to-set-up-build-and-run-the-sample"></a>Pour configurer, générer et exécuter l'exemple  
   
 1.  Assurez-vous d’avoir effectué la [procédure d’installation d’à usage unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 2.  Générez la solution ComplexTypeAjaxService.sln comme décrit dans [génération des exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Naviguez jusqu'à http://localhost/ServiceModelSamples/ComplexTypeClientPage.aspx (n'ouvrez pas ComplexTypeClientPage.aspx dans le navigateur depuis le répertoire du projet).  
+3.  Accédez à http://localhost/ServiceModelSamples/ComplexTypeClientPage.aspx (n’ouvrez pas ComplexTypeClientPage.aspx dans le navigateur depuis le répertoire du projet).  
   
 > [!IMPORTANT]
 >  Les exemples peuvent déjà être installés sur votre ordinateur. Recherchez le répertoire (par défaut) suivant avant de continuer.  

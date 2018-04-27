@@ -2,7 +2,8 @@
 title: Prise en charge bidirectionnelle pour les applications Windows Forms
 ms.date: 09/30/2017
 ms.prod: .net-framework
-ms.technology: dotnet-winforms
+ms.technology:
+- dotnet-winforms
 ms.topic: article
 helpviewer_keywords:
 - globalization [Windows Forms], bi-directional support in Windows
@@ -13,15 +14,16 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a8ae0e958c842c2f3cf3fbb788cad1cde6e6cc2b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d670fedb2fe693a871de8f0147b81b97b4958853
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Prise en charge bidirectionnelle pour les applications Windows Forms
-Vous pouvez utiliser [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] pour créer des applications Windows qui prennent en charge les langues bidirectionnelles (de droite à gauche) comme l'arabe et l'hébreu. Cela comprend les formulaires standard, les boîtes de dialogue, les formulaires MDI et tous les contrôles que vous pouvez utiliser dans ces formulaires, c'est-à-dire tous les objets de l'espace de noms <xref:System.Windows.Forms.Control>.  
+Vous pouvez utiliser Visual Studio pour créer des applications basées sur Windows qui prennent en charge les (de droite à gauche) langues bidirectionnelles (arabe ou hébraïque). Cela comprend les formulaires standard, les boîtes de dialogue, les formulaires MDI et tous les contrôles que vous pouvez utiliser dans ces formulaires, c'est-à-dire tous les objets de l'espace de noms <xref:System.Windows.Forms.Control>.  
   
 ## <a name="culture-support"></a>Prise en charge de la culture  
  La culture et les paramètres de culture d'interface utilisateur déterminent comment une application gère les dates, heures, devises et autres informations. La prise en charge de la culture et de la culture d'interface utilisateur pour les langues bidirectionnelles est identique à celle des autres langues.   Consultez également [Classes spécifiques à la culture pour les Windows Forms et les Web Forms](http://msdn.microsoft.com/library/94ye9x8c\(v=vs.110\)) ou [Classes spécifiques à la culture pour les Windows Forms et les Web Forms globaux](http://msdn.microsoft.com/library/94ye9x8c\(v=vs.120\))  
@@ -122,5 +124,5 @@ Vous pouvez utiliser [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] pour 
  Certains contrôles sont scellés, ce qui signifie que vous ne pouvez pas dériver un nouveau contrôle à partir d'eux. Il s'agit entre autres des contrôles <xref:System.Windows.Forms.ImageList> et <xref:System.Windows.Forms.ProgressBar>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Prise en charge bidirectionnelle pour les Applications Web ASP.NET](http://msdn.microsoft.com/library/5576f9b1-9b86-41ef-8354-092d366bcd03)  
+ [Prise en charge bidirectionnelle pour les applications web ASP.NET](http://msdn.microsoft.com/library/5576f9b1-9b86-41ef-8354-092d366bcd03)  
  [Globalisation des Windows Forms](../../../../docs/framework/winforms/advanced/globalizing-windows-forms.md)

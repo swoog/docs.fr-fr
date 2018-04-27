@@ -1,24 +1,25 @@
 ---
-title: "Personnalisation de la disponibilité ou non des objets dans My (Visual Basic)"
+title: Personnalisation de la disponibilité ou non des objets dans My (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - My namespace [Visual Basic], customizing
 - My namespace
 ms.assetid: 4e8279c2-ed5b-4681-8903-8a6671874000
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e5f5be7481ee102074fe1236b91110ee6b1d2944
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 669641a2b6ecbf988f6cad68acf52c5561b32515
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="customizing-which-objects-are-available-in-my-visual-basic"></a>Personnalisation de la disponibilité ou non des objets dans My (Visual Basic)
-Cette rubrique décrit comment vous pouvez contrôler qui `My` les objets sont activés en définissant de votre projet `_MYTYPE` constante de compilation conditionnelle. Le [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] un environnement de développement intégré (IDE) conserve les `_MYTYPE` constante de compilation conditionnelle pour un projet synchronisé avec le type du projet.  
+Cette rubrique décrit comment vous pouvez contrôler qui `My` les objets sont activés en définissant de votre projet `_MYTYPE` constante de compilation conditionnelle. L’environnement de développement intégré de Visual Studio (IDE) conserve les `_MYTYPE` constante de compilation conditionnelle pour un projet synchronisé avec le type du projet.  
   
 ## <a name="predefined-mytype-values"></a>Valeurs _MYTYPE prédéfinies  
  Vous devez utiliser le `/define` option du compilateur pour définir le `_MYTYPE` constante de compilation conditionnelle. Lorsque vous spécifiez votre propre valeur pour le `_MYTYPE` constante, vous devez placer la valeur de chaîne dans la barre oblique inverse/guillemets (\\») séquences. Par exemple, vous pouvez utiliser :  
@@ -36,7 +37,7 @@ Cette rubrique décrit comment vous pouvez contrôler qui `My` les objets sont a
 |Web|« Web »|  
 |Bibliothèque de contrôles Web|« WebControl »|  
 |Application Windows|« WindowsForms »|  
-|Application Windows, lors du démarrage avec personnalisé`Sub Main`|« WindowsFormsWithCustomSubMain »|  
+|Application Windows, lors du démarrage avec personnalisé `Sub Main`|« WindowsFormsWithCustomSubMain »|  
 |Bibliothèque de contrôles Windows|« Windows »|  
 |Service Windows|« Console »|  
 |Empty|« Vide »|  
@@ -49,14 +50,14 @@ Cette rubrique décrit comment vous pouvez contrôler qui `My` les objets sont a
   
 |_MYTYPE|_MYAPPLICATIONTYPE|_MYCOMPUTERTYPE|_MYFORMS|_MYUSERTYPE|_MYWEBSERVICES|  
 |--------------|-------------------------|----------------------|---------------|------------------|---------------------|  
-|« Console »|« Console »|« Windows »|Non défini|« Windows »|TRUE|  
-|« Custom »|Non défini|Non défini|Non défini|Non défini|Non défini|  
-|« Vide »|Non défini|Non défini|Non défini|Non défini|Non défini|  
-|« Web »|Non défini|« Web »|FALSE|« Web »|FALSE|  
-|« WebControl »|Non défini|« Web »|FALSE|« Web »|TRUE|  
-|« Windows » ou « »|« Windows »|« Windows »|Non défini|« Windows »|TRUE|  
-|« WindowsForms »|« WindowsForms »|« Windows »|TRUE|« Windows »|TRUE|  
-|« WindowsFormsWithCustomSubMain »|« Console »|« Windows »|TRUE|« Windows »|TRUE|  
+|« Console »|« Console »|« Windows »|Undefined|« Windows »|true|  
+|« Custom »|Undefined|Undefined|Undefined|Undefined|Undefined|  
+|« Vide »|Undefined|Undefined|Undefined|Undefined|Undefined|  
+|« Web »|Undefined|« Web »|false|« Web »|false|  
+|« WebControl »|Undefined|« Web »|false|« Web »|true|  
+|« Windows » ou « »|« Windows »|« Windows »|Undefined|« Windows »|TRUE|  
+|« WindowsForms »|« WindowsForms »|« Windows »|true|« Windows »|true|  
+|« WindowsFormsWithCustomSubMain »|« Console »|« Windows »|true|« Windows »|true|  
   
  Par défaut, les constantes de compilation conditionnelle non définis se résolvent en `FALSE`. Vous pouvez spécifier des valeurs pour les constantes non définies lors de la compilation de votre projet pour substituer le comportement par défaut.  
   

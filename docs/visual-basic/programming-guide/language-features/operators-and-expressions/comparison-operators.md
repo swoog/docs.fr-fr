@@ -1,11 +1,12 @@
 ---
-title: "Opérateurs de comparaison en Visual Basic"
-ms.custom: 
+title: Opérateurs de comparaison en Visual Basic
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - comparison operators [Visual Basic], comparing strings
@@ -21,32 +22,32 @@ helpviewer_keywords:
 - comparison operators [Visual Basic], comparing numeric values
 - operators [Visual Basic], comparison
 ms.assetid: 0b570339-5407-474f-8421-e183a8b303ee
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: d8bf37ad30f410251f18aea6747734fc24d42cd0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 77c5520be63d6d05cc4b895b99b466cd8e486f6a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="comparison-operators-in-visual-basic"></a>Opérateurs de comparaison en Visual Basic
 Opérateurs de comparaison comparent deux expressions et retourne un `Boolean` valeur qui représente la relation de leurs valeurs. Il existe des opérateurs pour comparer des valeurs numériques, des opérateurs de comparaison de chaînes et des opérateurs pour comparer des objets. Les trois types d’opérateurs sont abordées dans cet article.  
   
 ## <a name="comparing-numeric-values"></a>Comparer des valeurs numériques  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]Compare des valeurs numériques à l’aide de six opérateurs de comparaison numériques. Chaque opérateur accepte comme opérandes deux expressions qui évaluent des valeurs numériques. Le tableau suivant répertorie les opérateurs et présente des exemples de chacun.  
+ Visual Basic compare des valeurs numériques à l’aide de six opérateurs de comparaison numériques. Chaque opérateur accepte comme opérandes deux expressions qui évaluent des valeurs numériques. Le tableau suivant répertorie les opérateurs et présente des exemples de chacun.  
   
 |Opérateur|Condition testée|Exemples|  
 |--------------|----------------------|--------------|  
-|`=`(Égalité)|Est la valeur de la première expression égale à la valeur de la seconde ?|`23`   `=`   `33    ' False`<br /><br /> `23`   `=`   `23    ' True`<br /><br /> `23`   `=`   `12    ' False`|  
-|`<>`(Inégalité)|La valeur de la première expression n’est pas égale à la valeur de la seconde ?|`23`   `<>`   `33    ' True`<br /><br /> `23`   `<>`   `23    ' False`<br /><br /> `23`   `<>`   `12    ' True`|  
-|`<`(Inférieur à)|Est la valeur de la première expression inférieure à la valeur de la seconde ?|`23`   `<`   `33    ' True`<br /><br /> `23`   `<`   `23    ' False`<br /><br /> `23`   `<`   `12    ' False`|  
-|`>`(Supérieur à)|La valeur de la première expression n’est supérieure à la valeur de la seconde ?|`23`   `>`   `33    ' False`<br /><br /> `23`   `>`   `23    ' False`<br /><br /> `23`   `>`   `12    ' True`|  
-|`<=`(Inférieur ou égal à)|Est la valeur de la première expression inférieur ou égal à la valeur de la seconde ?|`23`   `<=`   `33    ' True`<br /><br /> `23`   `<=`   `23    ' True`<br /><br /> `23`   `<=`   `12    ' False`|  
-|`>=`(Supérieur ou égal à)|Est la valeur de la première expression supérieure ou égale à la valeur de la seconde ?|`23`   `>=`   `33    ' False`<br /><br /> `23`   `>=`   `23    ' True`<br /><br /> `23`   `>=`   `12    ' True`|  
+|`=` (Égalité)|Est la valeur de la première expression égale à la valeur de la seconde ?|`23`   `=`   `33    ' False`<br /><br /> `23`   `=`   `23    ' True`<br /><br /> `23`   `=`   `12    ' False`|  
+|`<>` (Inégalité)|La valeur de la première expression n’est pas égale à la valeur de la seconde ?|`23`   `<>`   `33    ' True`<br /><br /> `23`   `<>`   `23    ' False`<br /><br /> `23`   `<>`   `12    ' True`|  
+|`<` (Inférieur à)|Est la valeur de la première expression inférieure à la valeur de la seconde ?|`23`   `<`   `33    ' True`<br /><br /> `23`   `<`   `23    ' False`<br /><br /> `23`   `<`   `12    ' False`|  
+|`>` (Supérieur à)|La valeur de la première expression n’est supérieure à la valeur de la seconde ?|`23`   `>`   `33    ' False`<br /><br /> `23`   `>`   `23    ' False`<br /><br /> `23`   `>`   `12    ' True`|  
+|`<=` (Inférieur ou égal à)|Est la valeur de la première expression inférieur ou égal à la valeur de la seconde ?|`23`   `<=`   `33    ' True`<br /><br /> `23`   `<=`   `23    ' True`<br /><br /> `23`   `<=`   `12    ' False`|  
+|`>=` (Supérieur ou égal à)|Est la valeur de la première expression supérieure ou égale à la valeur de la seconde ?|`23`   `>=`   `33    ' False`<br /><br /> `23`   `>=`   `23    ' True`<br /><br /> `23`   `>=`   `12    ' True`|  
   
 ## <a name="comparing-strings"></a>Comparaison de chaînes  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]Compare des chaînes à l’aide de la [opérateur Like](../../../../visual-basic/language-reference/operators/like-operator.md) , ainsi que les opérateurs de comparaison numérique. Le `Like` opérateur vous permet de spécifier un modèle. La chaîne est ensuite comparée par rapport au modèle, et si elle correspond, le résultat est `True`. Dans le cas contraire, le résultat est `False`. Les opérateurs numériques permettent de comparer `String` valeurs selon leur ordre de tri, comme le montre l’exemple suivant.  
+ Visual Basic compare des chaînes à l’aide de la [opérateur Like](../../../../visual-basic/language-reference/operators/like-operator.md) , ainsi que les opérateurs de comparaison numérique. Le `Like` opérateur vous permet de spécifier un modèle. La chaîne est ensuite comparée par rapport au modèle, et si elle correspond, le résultat est `True`. Dans le cas contraire, le résultat est `False`. Les opérateurs numériques permettent de comparer `String` valeurs selon leur ordre de tri, comme le montre l’exemple suivant.  
   
  `"73" < "9"`  
   
@@ -67,7 +68,7 @@ Opérateurs de comparaison comparent deux expressions et retourne un `Boolean` v
  L’ordre de tri est basé sur une comparaison binaire ou une comparaison de texte selon le paramètre de `Option Compare`. Pour plus d’informations, consultez [instruction Option Compare](../../../../visual-basic/language-reference/statements/option-compare-statement.md).  
   
 ## <a name="comparing-objects"></a>Comparaison des objets  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]Compare deux variables de référence avec l’objet le [est un opérateur](../../../../visual-basic/language-reference/operators/is-operator.md) et [opérateur IsNot](../../../../visual-basic/language-reference/operators/isnot-operator.md). Vous pouvez utiliser un de ces opérateurs pour déterminer si deux variables de référence font référence à la même instance d’objet. L'exemple suivant illustre ce comportement.  
+ Visual Basic compare deux variables de référence d’objet avec la [est un opérateur](../../../../visual-basic/language-reference/operators/is-operator.md) et [opérateur IsNot](../../../../visual-basic/language-reference/operators/isnot-operator.md). Vous pouvez utiliser un de ces opérateurs pour déterminer si deux variables de référence font référence à la même instance d’objet. L'exemple suivant illustre ce comportement.  
   
  [!code-vb[VbVbalrOperators#65](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_1.vb)]  
   

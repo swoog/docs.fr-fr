@@ -1,11 +1,12 @@
 ---
-title: "Durée de vie dans Visual Basic"
-ms.custom: 
+title: Durée de vie dans Visual Basic
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - static variables [Visual Basic], lifetime
@@ -16,14 +17,14 @@ helpviewer_keywords:
 - lifetime [Visual Basic], Visual Basic
 - lifetime [Visual Basic]
 ms.assetid: bd91e390-690a-469a-9946-8dca70bc14e7
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 999490885571889b2de911cc14754f8db257d0af
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 14a75a2c3af52f63051d02df9341faf19c3b76c7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lifetime-in-visual-basic"></a>Durée de vie dans Visual Basic
 Le *durée de vie* d’un élément déclaré est la période pendant laquelle il est disponible pour utilisation. Les variables sont les seuls éléments qui ont la durée de vie. Pour cela, le compilateur traite les paramètres de procédure et retours de fonction comme des cas spéciaux de variables. La durée de vie d’une variable représente la période pendant laquelle elle peut contenir une valeur. Sa valeur peut changer pendant sa durée de vie, mais il conserve toujours une valeur.  
@@ -41,7 +42,7 @@ Le *durée de vie* d’un élément déclaré est la période pendant laquelle i
  Les variables déclarées dans un bloc à l’intérieur d’une procédure (comme un `For` boucle) sont initialisées sur entrée dans la procédure. Ces initialisations prennent effet ou non de votre code n’exécute le bloc.  
   
 ## <a name="end-of-lifetime"></a>Fin de la durée de vie  
- Lorsqu’une procédure se termine, les valeurs de ses variables locales ne sont pas conservées, et [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] libère leur mémoire. La prochaine fois que vous appelez la procédure, toutes ses variables locales sont recréés et réinitialisés.  
+ Lorsqu’une procédure se termine, les valeurs de ses variables locales ne sont pas conservées, et Visual Basic récupère leur mémoire. La prochaine fois que vous appelez la procédure, toutes ses variables locales sont recréés et réinitialisés.  
   
  Lorsqu’une instance d’une classe ou structure prend fin, ses variables non partagées perdent leur mémoire et leurs valeurs. Chaque nouvelle instance de la classe ou structure crée et réinitialise ses variables non partagées. Toutefois, `Shared` variables sont conservées jusqu'à ce que votre application s’arrête en cours d’exécution.  
   
@@ -55,7 +56,7 @@ Le *durée de vie* d’un élément déclaré est la période pendant laquelle i
 |Dans une instance d’une classe, pas `Shared` (la procédure est un membre d’instance)|La première fois que la procédure est appelée sur une instance spécifique|Lorsque l’instance est libérée pour le garbage collection (GC)|  
   
 ## <a name="static-variables-of-the-same-name"></a>Variables statiques du même nom  
- Vous pouvez déclarer des variables statiques avec le même nom dans plusieurs procédures. Dans ce cas, le [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compilateur considère chacune des variables comme un élément distinct. L’initialisation de l’un de ces variables n’affecte pas les valeurs de toutes les autres. Va de même si vous définissez une procédure avec un ensemble de surcharges et que vous déclarez une variable statique avec le même nom dans chaque surcharge.  
+ Vous pouvez déclarer des variables statiques avec le même nom dans plusieurs procédures. Si vous faites cela, le compilateur Visual Basic considère chacune des variables comme un élément distinct. L’initialisation de l’un de ces variables n’affecte pas les valeurs de toutes les autres. Va de même si vous définissez une procédure avec un ensemble de surcharges et que vous déclarez une variable statique avec le même nom dans chaque surcharge.  
   
 ## <a name="containing-elements-for-static-variables"></a>Contenant les éléments pour les Variables statiques  
  Vous pouvez déclarer une variable locale statique dans une classe, autrement dit, à l’intérieur d’une procédure dans cette classe. Toutefois, vous ne pouvez pas déclarer une variable locale statique dans une structure, en tant qu’un membre de structure ou une variable locale d’une procédure dans cette structure.  

@@ -3052,11 +3052,11 @@ ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
 caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4ab447c06504d6c3bb7c51107e422b2cba1f45e3
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
-ms.translationtype: HT
+ms.openlocfilehash: 2af9ad571f1e89c11d3aafc118124093d1246f19
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a>Désolé, nous n&#39;t pas de détails sur cette erreur Visual Basic
 Nous sommes désolés, mais nous n'avons pas d'informations spécifiques sur cette erreur. Pour plus d'informations, vous pouvez rechercher le numéro d'erreur et le texte du message sur le web. Ou bien, vous pouvez interroger d'autres développeurs au travers des forums suivants :  
@@ -3068,7 +3068,7 @@ Nous sommes désolés, mais nous n'avons pas d'informations spécifiques sur cet
  Propose un forum de questions et de problèmes avec la mise à niveau vers Visual Basic et l’utilisation des fonctionnalités d’interopérabilité.  
   
  [IDE Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145971)  
- Fournit un forum de questions sur l'utilisation dans l'environnement [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
+ Propose un forum de questions sur la façon de travailler dans l’environnement Visual Studio.  
   
  [Généralités Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145973)  
  Propose un forum de questions et de problèmes avec Visual Basic qui ne sont pas abordés dans d’autres forums.  
