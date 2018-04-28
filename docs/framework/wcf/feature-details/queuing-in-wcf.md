@@ -1,24 +1,26 @@
 ---
 title: Mise en file d'attente dans WCF
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e98d76ba-1acf-42cd-b137-0f8214661112
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3c50bbc54d56d3fdc7a848af0e77cfbb2c15c9bb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 01dc36c73d9e668dd98cb5ba8b275d3d5177ba61
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="queuing-in-wcf"></a>Mise en file d'attente dans WCF
 Cette section décrit comment utiliser la communication mise en file d'attente dans [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -49,12 +51,12 @@ Cette section décrit comment utiliser la communication mise en file d'attente d
   
  Les files d'attente MSMQ peuvent également être sécurisées à l'aide d'une identité Windows inscrite auprès du service d'annuaire Active Directory. Lors de l'installation de MSMQ, vous pouvez installer l'intégration Active Directory, laquelle requiert l'appartenance de l'ordinateur à un réseau de domaine Windows.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]MSMQ, consultez [l’installation de Message Queuing (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] MSMQ, consultez [l’installation de Message Queuing (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md).  
   
 ### <a name="netmsmqbinding"></a>NetMsmqBinding  
  Le [ \<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) est la liaison en file d’attente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fournit pour deux [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] points de terminaison pour communiquer à l’aide de MSMQ. Par conséquent, la liaison expose des propriétés qui sont spécifiques à MSMQ. Toutefois, toutes les fonctionnalités et propriétés MSMQ ne sont pas exposées dans le `NetMsmqBinding`. Le `NetMsmqBinding` compact regroupe un jeu optimal de fonctionnalités qui s'avère suffisant pour la majorité des clients.  
   
- Le `NetMsmqBinding` illustre les concepts de mise en file d'attente clés discutés jusqu'ici sous la forme de propriétés sur les liaisons. À leur tour, ces propriétés communiquent à MSMQ comment transférer et remettre les messages. Les sections qui suivent décrivent les catégories de propriétés. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] les rubriques conceptuelles qui décrivent des propriétés spécifiques plus en détail.  
+ Le `NetMsmqBinding` illustre les concepts de mise en file d'attente clés discutés jusqu'ici sous la forme de propriétés sur les liaisons. À leur tour, ces propriétés communiquent à MSMQ comment transférer et remettre les messages. Les sections qui suivent décrivent les catégories de propriétés. Pour plus d’informations, consultez les rubriques conceptuelles qui décrivent les propriétés spécifiques plus en détail.  
   
 #### <a name="exactlyonce-and-durable-properties"></a>Propriétés ExactlyOnce et Durable  
  Les propriétés `ExactlyOnce` et `Durable` affectent la manière dont les messages sont transférés entre des files d'attente :  
@@ -77,17 +79,17 @@ Cette section décrit comment utiliser la communication mise en file d'attente d
   
  La liaison possède deux propriétés intéressantes :  
   
--   `DeadLetterQueue` : cette propriété est une énumération qui indique si une file d'attente de lettres mortes est demandée. Cette énumération contient également le type de file d'attente de lettres mortes, si une est demandée. Les valeurs sont `None`, `System` et `Custom`. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]l’interprétation de ces propriétés, consultez [lettres mortes à l’aide de files d’attente pour gérer les échecs de transfert de messages](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
+-   `DeadLetterQueue` : cette propriété est une énumération qui indique si une file d'attente de lettres mortes est demandée. Cette énumération contient également le type de file d'attente de lettres mortes, si une est demandée. Les valeurs sont `None`, `System` et `Custom`. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] l’interprétation de ces propriétés, consultez [lettres mortes à l’aide de files d’attente pour gérer les échecs de transfert de messages](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
   
 -   `CustomDeadLetterQueue` : cette propriété est l'adresse URI (Uniform Resource Identifier) de la file d'attente de lettres mortes propre à l'application. Cela est nécessaire si `DeadLetterQueue`.`Custom` est choisi.  
   
 #### <a name="poison-message-handling-properties"></a>Propriétés de gestion des messages incohérents  
- Lorsque le service lit des messages à partir de la file d'attente cible par le biais d'une transaction, il risque de ne pas pouvoir traiter le message pour différentes raisons. Le message est ensuite remis dans la file d'attente pour y être lu de nouveau. Pour traiter les messages qui échouent de manière répétée, un ensemble de propriétés de gestion des messages incohérents peut être configuré dans la liaison. Il existe quatre propriétés : `ReceiveRetryCount`, `MaxRetryCycles`, `RetryCycleDelay` et `ReceiveErrorHandling`. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Ces propriétés, consultez [des messages incohérents](../../../../docs/framework/wcf/feature-details/poison-message-handling.md).  
+ Lorsque le service lit des messages à partir de la file d'attente cible par le biais d'une transaction, il risque de ne pas pouvoir traiter le message pour différentes raisons. Le message est ensuite remis dans la file d'attente pour y être lu de nouveau. Pour traiter les messages qui échouent de manière répétée, un ensemble de propriétés de gestion des messages incohérents peut être configuré dans la liaison. Il existe quatre propriétés : `ReceiveRetryCount`, `MaxRetryCycles`, `RetryCycleDelay` et `ReceiveErrorHandling`. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Ces propriétés, consultez [des messages incohérents](../../../../docs/framework/wcf/feature-details/poison-message-handling.md).  
   
 #### <a name="security-properties"></a>Propriétés de sécurité  
- MSMQ expose son propre modèle de sécurité, comme les listes de contrôle d'accès sur une file d'attente ou l'envoi de messages authentifiés. Le `NetMsmqBinding` expose ces propriétés de sécurité dans le cadre de ses paramètres de sécurité de transport. La liaison pour la sécurité de transport a deux propriétés : `MsmqAuthenticationMode` et `MsmqProtectionLevel`. Les paramètres de ces propriétés dépendent de la configuration de MSMQ. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Sécurisation des Messages à l’aide de la sécurité de Transport](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md).  
+ MSMQ expose son propre modèle de sécurité, comme les listes de contrôle d'accès sur une file d'attente ou l'envoi de messages authentifiés. Le `NetMsmqBinding` expose ces propriétés de sécurité dans le cadre de ses paramètres de sécurité de transport. La liaison pour la sécurité de transport a deux propriétés : `MsmqAuthenticationMode` et `MsmqProtectionLevel`. Les paramètres de ces propriétés dépendent de la configuration de MSMQ. Pour plus d’informations, consultez [sécurisation des Messages à l’aide de sécurité du Transport](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md).  
   
- Outre la sécurité de transport, le message SOAP lui-même peut être sécurisé à l'aide de la sécurité de message. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Sécurisation des Messages à l’aide de la sécurité de Message](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md).  
+ Outre la sécurité de transport, le message SOAP lui-même peut être sécurisé à l'aide de la sécurité de message. Pour plus d’informations, consultez [sécurisation de la sécurité des messages à l’aide de Messages](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md).  
   
  `MsmqTransportSecurity` expose également deux propriétés : `MsmqEncryptionAlgorithm` et `MsmqHashAlgorithm`. Il s'agit d'énumérations de différents algorithmes que vous pouvez choisir pour le chiffrement des messages en vue du transfert entre files d'attente et pour le hachage des signatures.  
   
@@ -100,7 +102,7 @@ Cette section décrit comment utiliser la communication mise en file d'attente d
   
 -   `QueueTransferProtocol` : énumération du protocole à utiliser pour les transferts de messages entre files d'attente. MSMQ implémente un protocole natif de transfert entre files d'attente et un protocole SOAP nommé SRMP (SOAP Reliable Messaging Protocol). Le protocole SRMP est appliqué lors de l'utilisation du transport HTTP pour les transferts entre files d'attente. Le protocole SRMP sécurisé est appliqué lors de l'utilisation d'HTTPS pour les transferts entre files d'attente.  
   
--   `UseActiveDirectory` : valeur booléenne permettant d'indiquer si Active Directory doit être utilisé pour la résolution d'adresse de file d'attente. Par défaut, cette propriété a la valeur Off. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Points de terminaison et l’adressage de file d’attente de service](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
+-   `UseActiveDirectory` : valeur booléenne permettant d'indiquer si Active Directory doit être utilisé pour la résolution d'adresse de file d'attente. Par défaut, cette propriété a la valeur Off. Pour plus d’informations, consultez [points de terminaison de Service et l’adressage de file d’attente](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
   
 ### <a name="msmqintegrationbinding"></a>MsmqIntegrationBinding  
  Le `MsmqIntegrationBinding` est utilisé lorsque vous souhaitez qu'un point de terminaison [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] communique avec une application MSMQ existante écrite en C, C++, COM ou dans des API System.Messaging.  

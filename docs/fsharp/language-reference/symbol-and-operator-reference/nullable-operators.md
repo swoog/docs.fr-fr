@@ -1,20 +1,17 @@
 ---
-title: "Opérateurs autorisant la valeur Null (F#)"
-description: "En savoir plus sur les opérateurs autorisant la valeur null qui sont disponibles dans le langage de programmation F #."
-keywords: visual f#, f#, programmation fonctionnelle
+title: Opérateurs autorisant la valeur Null (F#)
+description: 'En savoir plus sur les opérateurs autorisant la valeur null qui sont disponibles dans le langage de programmation F #.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 3108c4ac-9e13-464d-a829-084a6eba038f
-ms.openlocfilehash: b3c55dcbfd70c9bcddcc4a990b19a5b92620f822
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 37025e16768b949b51f6b9f0cff32e88da110ca8
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="nullable-operators"></a>Opérateurs autorisant la valeur Null
 
@@ -38,7 +35,7 @@ Le tableau suivant répertorie les opérateurs autorisant la valeur null pris en
 |[?/](https://msdn.microsoft.com/library/add02a42-f556-40a7-a168-fbf2053322e3)|[/?](https://msdn.microsoft.com/library/1de07646-3778-476d-8c61-5d37495d463c)|[?/?](https://msdn.microsoft.com/library/b17be0ac-bf98-4590-861d-a4dd6c6fa535)|
 |[?%](https://msdn.microsoft.com/library/44297bba-1bd9-4ed2-a848-f1e1e598db87)|[%?](https://msdn.microsoft.com/library/a4c178e5-eec4-42e8-847f-90b24fc609fe)|[?%?](https://msdn.microsoft.com/library/dd555f20-1be3-4b8d-81f1-bf1921e62fda)|
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 Les opérateurs nullables sont inclus dans le [NullableOperators](https://msdn.microsoft.com/library/2c3633c5-3f31-4d62-a9f8-272ad6b19007) module dans l’espace de noms [Microsoft.FSharp.Linq](https://msdn.microsoft.com/library/4765b4e8-4006-4d8c-a405-39c218b3c82d). Le type de données accepte les valeurs NULL est `System.Nullable<'T>`.
 
 Dans les expressions de requête, les types nullable se produisent lors de la sélection des données à partir d’une source de données qui autorise des valeurs NULL au lieu de valeurs. Dans une base de données SQL Server, chaque colonne de données dans une table possède un attribut qui indique si les valeurs NULL sont autorisées. Si les valeurs NULL sont autorisées, les données retournées à partir de la base de données peuvent contenir des valeurs NULL ne peut pas être représenté par un type de données primitif tel que `int`, `float`, et ainsi de suite. Par conséquent, les données sont retournées en tant qu’un `System.Nullable<int>` au lieu de `int`, et `System.Nullable<float>` au lieu de `float`. La valeur réelle peut être obtenue à partir un `System.Nullable<'T>` objet à l’aide de la `Value` propriété et vous pouvez déterminer si un `System.Nullable<'T>` objet a une valeur en appelant le `HasValue` (méthode). Une autre méthode utile est la `System.Nullable<'T>.GetValueOrDefault` (méthode), ce qui vous permet d’obtenir la valeur ou une valeur par défaut du type approprié. La valeur par défaut est une forme de valeur « zéro », telle que 0, 0,0, ou `false`.

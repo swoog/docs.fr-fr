@@ -1,20 +1,18 @@
 ---
-title: "Exceptions : fonction raise (F#)"
+title: 'Exceptions : fonction raise (F#)'
 description: "Découvrez comment la fonction F # 'raise' est utilisée pour indiquer qu’une erreur ou une condition exceptionnelle s’est produite."
-keywords: visual f#, f#, programmation fonctionnelle
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
 ms.assetid: b00da469-4789-4cdd-9f77-7a2e29f28637
-ms.openlocfilehash: dc524a06d075b982a6aa1fd266769bfc7d883517
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 6bc62b13467b8cf4cfcb22f7d4a5f3464236f6d1
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="exceptions-the-raise-function"></a>Exceptions : fonction raise
 
@@ -27,7 +25,7 @@ Le `raise` fonction est utilisée pour indiquer qu’une erreur ou une condition
 raise (expression)
 ```
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 Le `raise` fonction génère un objet exception et lance une pile de processus de déroulement. Le processus de déroulement de pile est géré par le common language runtime (CLR), par conséquent, le comportement de ce processus est le même, comme dans tout autre langage .NET. Le processus de déroulement de pile est une recherche pour un gestionnaire d’exceptions qui correspond à l’exception générée. La recherche commence dans le courant `try...with` expression, le cas échéant. Chaque modèle dans le `with` bloc est activé, dans l’ordre. Lorsqu’un gestionnaire d’exceptions correspondant est trouvé, l’exception est considérée comme gérée ; Sinon, la pile est déroulée et `with` blocs de la chaîne d’appel sont vérifiées jusqu'à ce qu’un gestionnaire correspondant est trouvé. N’importe quel `finally` blocs qui sont rencontrées dans la chaîne d’appel sont également exécutées en séquence comme la pile se déroule.
 
 Le `raise` fonction est l’équivalent de `throw` en c# ou C++. Utilisez `reraise` dans un gestionnaire catch pour propager la même exception en haut de la chaîne d’appel.

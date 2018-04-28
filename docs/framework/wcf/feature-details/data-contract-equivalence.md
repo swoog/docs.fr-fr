@@ -1,13 +1,13 @@
 ---
-title: "Équivalence de contrats de données"
-ms.custom: 
+title: Équivalence de contrats de données
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], equivalence
 ms.assetid: f06f3c7e-c235-4ec1-b200-68142edf1ed1
-caps.latest.revision: 
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4059fa401d082f4408080cf5fd13f1331314a2d9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9d4463a04ac2113778d9ea0d315beeef7d564764
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="data-contract-equivalence"></a>Équivalence de contrats de données
 Pour qu'un client puisse envoyer des données d'un certain type à un service ou pour qu'un service puisse envoyer des données à un client, le type des données envoyées n'a pas nécessairement besoin d'exister à l'extrémité de réception. La seule exigence est que les contrats de données des deux types soient équivalents. (Parfois, une équivalence stricte n’est pas requise, comme indiqué dans [contrôle de version de contrat de données](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md).)  
@@ -37,7 +37,7 @@ Pour qu'un client puisse envoyer des données d'un certain type à un service ou
 > [!NOTE]
 >  Notez que le nom et l'espace de noms des contrats de données, de même que le nom des membres de données, respectent la casse.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]les noms de contrat de données et les espaces de noms, ainsi que les noms de membres de données, consultez [les noms de contrat de données](../../../../docs/framework/wcf/feature-details/data-contract-names.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] les noms de contrat de données et les espaces de noms, ainsi que les noms de membres de données, consultez [les noms de contrat de données](../../../../docs/framework/wcf/feature-details/data-contract-names.md).  
   
  Si deux types existent d'un même côté (expéditeur ou récepteur) et si leurs contrats de données ne sont pas équivalents (par exemple, ils possèdent des membre de données différents), vous ne devez pas leur donner le même nom ni le même espace de noms. Vous risqueriez alors de lever des exceptions.  
   
@@ -47,7 +47,7 @@ Pour qu'un client puisse envoyer des données d'un certain type à un service ou
  [!code-vb[C_DataContractNames#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractnames/vb/source.vb#5)]  
   
 ## <a name="data-member-order-and-data-contract-equivalence"></a>Ordre des membres de données et équivalence des contrats de données  
- La propriété <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> de la classe <xref:System.Runtime.Serialization.DataMemberAttribute> peut affecter l'équivalence des contrats de données. Les membres des contrats de données doivent apparaître dans le même ordre pour que les contrats de données soient équivalents. L'ordre par défaut est l'ordre alphabétique. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Ordre des membres de données](../../../../docs/framework/wcf/feature-details/data-member-order.md).  
+ La propriété <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> de la classe <xref:System.Runtime.Serialization.DataMemberAttribute> peut affecter l'équivalence des contrats de données. Les membres des contrats de données doivent apparaître dans le même ordre pour que les contrats de données soient équivalents. L'ordre par défaut est l'ordre alphabétique. Pour plus d’informations, consultez [ordre des membres de données](../../../../docs/framework/wcf/feature-details/data-member-order.md).  
   
  Par exemple, le code suivant donne des contrats de données équivalents :  
   
@@ -60,7 +60,7 @@ Pour qu'un client puisse envoyer des données d'un certain type à un service ou
  [!code-vb[C_DataContractNames#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractnames/vb/source.vb#7)]  
   
 ## <a name="inheritance-interfaces-and-data-contract-equivalence"></a>Héritage, interfaces et équivalence des contrats de données  
- Lors de la détermination de l'équivalence, un contrat de données qui hérite d'un autre contrat de données est traité comme un seul contrat de données incluant tous les membres de données du type de base. N'oubliez pas que l'ordre des membres de données doit correspondre et que les membres du type de base précèdent les membres du type dérivé, dans l'ordre choisi. En outre, si, comme dans l'exemple de code suivant, deux membres de données ont la même valeur d'ordre, l'ordre de ces membres de données est alphabétique. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Ordre des membres de données](../../../../docs/framework/wcf/feature-details/data-member-order.md).  
+ Lors de la détermination de l'équivalence, un contrat de données qui hérite d'un autre contrat de données est traité comme un seul contrat de données incluant tous les membres de données du type de base. N'oubliez pas que l'ordre des membres de données doit correspondre et que les membres du type de base précèdent les membres du type dérivé, dans l'ordre choisi. En outre, si, comme dans l'exemple de code suivant, deux membres de données ont la même valeur d'ordre, l'ordre de ces membres de données est alphabétique. Pour plus d’informations, consultez [ordre des membres de données](../../../../docs/framework/wcf/feature-details/data-member-order.md).  
   
  Dans l'exemple suivant, le contrat de données de type `Employee` est équivalent au contrat de données de type `Worker`.  
   
@@ -69,7 +69,7 @@ Pour qu'un client puisse envoyer des données d'un certain type à un service ou
   
  Lors du passage des paramètres et des valeurs de retour entre un client et un service, un contrat de données d'une classe de base ne peut pas être envoyé lorsque le point de terminaison de réception attend un contrat de données d'une classe dérivée, conformément aux doctrines de la programmation orientée objet. Dans l’exemple précédent, un objet de type `Person` ne peut pas être envoyé lorsqu’un `Employee` est attendu.  
   
- Un contrat de données d'une classe dérivée peut être envoyé lorsqu'un contrat de données d'une classe de base est attendu, mais uniquement si le point de terminaison de réception prend connaissance du type dérivé à l'aide de <xref:System.Runtime.Serialization.KnownTypeAttribute>. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Types connus de contrat de données](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md). Dans l'exemple précédent, un objet de type `Employee` peut être envoyé lorsqu'un `Person` est attendu, mais uniquement si le code de récepteur utilise <xref:System.Runtime.Serialization.KnownTypeAttribute> pour l'inclure dans la liste des types connus.  
+ Un contrat de données d'une classe dérivée peut être envoyé lorsqu'un contrat de données d'une classe de base est attendu, mais uniquement si le point de terminaison de réception prend connaissance du type dérivé à l'aide de <xref:System.Runtime.Serialization.KnownTypeAttribute>. Pour plus d’informations, consultez [Types connus de contrat de données](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md). Dans l'exemple précédent, un objet de type `Employee` peut être envoyé lorsqu'un `Person` est attendu, mais uniquement si le code de récepteur utilise <xref:System.Runtime.Serialization.KnownTypeAttribute> pour l'inclure dans la liste des types connus.  
   
  Lors du passage des paramètres et des valeurs de retour entre des applications, si le type attendu est une interface, il est équivalent au type attendu de type <xref:System.Object>. Dans la mesure où chaque type dérive en dernier lieu de <xref:System.Object>, chaque contrat de données dérive en dernier lieu du contrat de données pour <xref:System.Object>. De ce fait, tout type de contrat de données peut être passé lorsqu'une interface est attendue. Des étapes supplémentaires sont nécessaires pour fonctionner correctement avec les interfaces ; Pour plus d’informations, consultez [Types connus de contrat de données](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
   

@@ -1,27 +1,29 @@
 ---
-title: "Sécurité Overview1"
-ms.custom: 
+title: Sécurité Overview1
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: f478c80d-792d-4e7a-96bd-a2ff0b6f65f9
-caps.latest.revision: "37"
+caps.latest.revision: 37
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: c4c6ecbfc3407e3ebc321e92cd9e78dc2d80a3a6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a50b3d3ec2a99d53bc7d5817f3ed530ef92d474b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="security-overview"></a>Vue d'ensemble de la sécurité
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] est une plateforme de programmation distribuée basée sur les messages SOAP, et la sécurisation des messages entre les clients et les services est essentielle à la protection des données. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fournit une plateforme souple et interopérable pour échanger des messages sécurisés qui reposent sur l'infrastructure de sécurité existante et les normes de sécurité reconnues pour les messages SOAP.  
@@ -96,7 +98,7 @@ ms.lasthandoff: 12/22/2017
   
 -   *Mode de sécurité de message*, en revanche, utilise WS-Security (et autres spécifications) pour implémenter la sécurité de transfert. Étant donné que la sécurité de message est appliquée directement aux messages SOAP et qu'elle est contenue à l'intérieur des enveloppes SOAP, ainsi que les données d'application, elle a l'avantage d'être indépendante du protocole de transport, d'être plus extensible, et de garantir la sécurité de bout en bout (au lieu de point à point) ; son inconvénient est d'être nettement plus lente que le mode de sécurité du transport parce qu'elle doit traiter la nature XML des messages SOAP.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Ces différences, consultez [sécurisation des Services et les Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Ces différences, consultez [sécurisation des Services et les Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md).  
   
  Un troisième mode de sécurité utilise les deux modes précédents en offrant leurs avantages. Ce mode est appelé `TransportWithMessageCredential`. Dans ce mode, la sécurité de message est utilisée pour authentifier le client et la sécurité de transport est utilisée pour authentifier le serveur et fournir la confidentialité et l'intégrité des messages. Grâce à ces fonctions, le mode de sécurité `TransportWithMessageCredential` est presque aussi rapide que le mode de sécurité de transport et permet l'extensibilité de l'authentification du client de la même manière que la sécurité de message. Toutefois, il ne permet pas la sécurité complète de bout en bout contrairement au mode de sécurité de message.  
   
@@ -106,7 +108,7 @@ ms.lasthandoff: 12/22/2017
  Dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], fonctionnalités de contrôle d’accès sont fournies via l’intégration avec le common language runtime (CLR) <xref:System.Security.Permissions.PrincipalPermissionAttribute> et d’un jeu d’API identifié comme le *modèle d’identité*. Pour plus d’informations sur le contrôle d’accès et d’autorisation basée sur les revendications, consultez [extension de sécurité](../../../../docs/framework/wcf/extending/extending-security.md).  
   
 ### <a name="auditing"></a>Audit  
- *L’audit* est la journalisation des événements de sécurité dans le journal des événements Windows. Vous pouvez enregistrer des événements relatifs à la sécurité, tels que les échecs (ou les succès) d'authentification. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Audit](../../../../docs/framework/wcf/feature-details/auditing-security-events.md). Pour plus d’informations de programmation, consultez [Comment : auditer les événements de sécurité](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md).  
+ *L’audit* est la journalisation des événements de sécurité dans le journal des événements Windows. Vous pouvez enregistrer des événements relatifs à la sécurité, tels que les échecs (ou les succès) d'authentification. Pour plus d’informations, consultez [audit](../../../../docs/framework/wcf/feature-details/auditing-security-events.md). Pour plus d’informations de programmation, consultez [Comment : auditer les événements de sécurité](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.Security.Permissions.PrincipalPermissionAttribute>  

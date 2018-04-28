@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3834f48c407f799fc5fede17182f47652f49747f
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 082fa083dbba601cefc00e40bad7b91e14a45d44
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="best-practices-for-queued-communication"></a>Meilleures pratiques pour les communications mises en file d'attente
 Cette rubrique fournit des méthodes recommandées pour les communications mises en file d'attente dans [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Les sections suivantes traitent des méthodes recommandées à partir d'un scénario.  
@@ -33,7 +33,7 @@ Cette rubrique fournit des méthodes recommandées pour les communications mises
   
  De plus, vous pouvez choisir de ne pas encourir le coût des écritures sur disque en affectant à la propriété <xref:System.ServiceModel.MsmqBindingBase.Durable%2A> la valeur `false`.  
   
- La sécurité a des conséquences sur la performance. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Considérations relatives aux performances](../../../../docs/framework/wcf/feature-details/performance-considerations.md).  
+ La sécurité a des conséquences sur la performance. Pour plus d’informations, consultez [considérations relatives aux performances](../../../../docs/framework/wcf/feature-details/performance-considerations.md).  
   
 ## <a name="reliable-end-to-end-queued-messaging"></a>Messagerie mise en file d'attente fiable de bout en bout  
  Les sections suivantes décrivent des méthodes recommandées pour les scénarios qui requièrent une messagerie fiable de bout en bout.  
@@ -49,21 +49,21 @@ Cette rubrique fournit des méthodes recommandées pour les communications mises
   
  La désactivation des files d'attente de lettres mortes pour les communications fiables de bout en bout n'est pas recommandée.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [À l’aide de files d’attente de lettres mortes pour gérer les échecs de transfert de Message](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md).  
+ Pour plus d’informations, consultez [lettres mortes à l’aide de files d’attente pour gérer les échecs de transfert de messages](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md).  
   
 ### <a name="use-of-poison-message-handling"></a>Utilisation de la gestion des messages incohérents  
  La gestion des messages empoisonnés permet de reprendre le traitement des messages après une défaillance.  
   
  Lorsque vous utilisez la fonctionnalité de gestion des messages incohérents, vérifiez que la propriété <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A> a la valeur appropriée. Lui affecter la valeur <xref:System.ServiceModel.ReceiveErrorHandling.Drop> signifie que les données sont perdues. En revanche, lui affecter la valeur <xref:System.ServiceModel.ReceiveErrorHandling.Fault> entraîne la défaillance de l'hôte de service lorsqu'il détecte un message incohérent. Avec MSMQ 3.0, <xref:System.ServiceModel.ReceiveErrorHandling.Fault> est la meilleure option pour éviter la perte de données et se débarrasser du message incohérent. Avec MSMQ 4.5, <xref:System.ServiceModel.ReceiveErrorHandling.Move> est l'approche recommandée. <xref:System.ServiceModel.ReceiveErrorHandling.Move> déplace un message incohérent hors de la file d'attente afin que le service puisse continuer à traiter de nouveaux messages. Le service des messages incohérents peut ensuite traiter séparément le message incohérent.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Gestion des messages incohérents](../../../../docs/framework/wcf/feature-details/poison-message-handling.md).  
+ Pour plus d’informations, consultez [des messages incohérents](../../../../docs/framework/wcf/feature-details/poison-message-handling.md).  
   
 ## <a name="achieving-high-throughput"></a>Obtention d'un haut débit  
  Pour obtenir un débit supérieur sur un point de terminaison unique, utilisez les fonctionnalités suivantes :  
   
--   Traitement transactionnel par lots. Le traitement transactionnel par lots permet de lire de nombreux messages dans une transaction unique. Il optimise les validations de transactions et augmente la performance globale. L'inconvénient du traitement par lots est que si une défaillance se produit dans un message unique dans un lot, le lot entier est restauré et les messages doivent être traités un par un jusqu'à ce que le traitement par lots soit revenu sûr. Dans la plupart des cas, les messages incohérents sont rares, donc le traitement par lots est le meilleur moyen d’augmenter les performances du système, en particulier lorsque d’autres gestionnaires de ressources participent à la transaction. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Le traitement par lot des Messages dans une Transaction](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md).  
+-   Traitement transactionnel par lots. Le traitement transactionnel par lots permet de lire de nombreux messages dans une transaction unique. Il optimise les validations de transactions et augmente la performance globale. L'inconvénient du traitement par lots est que si une défaillance se produit dans un message unique dans un lot, le lot entier est restauré et les messages doivent être traités un par un jusqu'à ce que le traitement par lots soit revenu sûr. Dans la plupart des cas, les messages incohérents sont rares, donc le traitement par lots est le meilleur moyen d’augmenter les performances du système, en particulier lorsque d’autres gestionnaires de ressources participent à la transaction. Pour plus d’informations, consultez [le traitement par lot des Messages dans une Transaction](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md).  
   
--   Accès concurrentiel. L'accès concurrentiel augmente le débit, mais il peut également créer des conflits de ressources partagées. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Accès concurrentiel](../../../../docs/framework/wcf/samples/concurrency.md).  
+-   Accès concurrentiel. L'accès concurrentiel augmente le débit, mais il peut également créer des conflits de ressources partagées. Pour plus d’informations, consultez [concurrence](../../../../docs/framework/wcf/samples/concurrency.md).  
   
 -   Limitation. Pour des performances optimales, limitez le nombre de messages dans le pipeline de répartiteur. Pour obtenir un exemple de procédure à suivre, consultez [limitation](../../../../docs/framework/wcf/samples/throttling.md).  
   
@@ -73,12 +73,12 @@ Cette rubrique fournit des méthodes recommandées pour les communications mises
   
  Lorsque vous utilisez des batteries de services, sachez que MSMQ 3.0 ne prend pas en charge les lectures transactionnelles à distance. MSMQ 4.0 prend en charge les lectures transactionnelles à distance.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Le traitement par lot des Messages dans une Transaction](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md) et [les différences dans les files d’attente de fonctionnalités dans Windows Vista, Windows Server 2003 et Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md).  
+ Pour plus d’informations, consultez [le traitement par lot des Messages dans une Transaction](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md) et [les différences de fonctionnalités Queuing dans Windows Vista, Windows Server 2003 et Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md).  
   
 ## <a name="queuing-with-unit-of-work-semantics"></a>Mise en file d'attente avec sémantique d'unité de travail  
  Dans certains scénarios, les messages d'un groupe dans une file d'attente peuvent être liés et, par conséquent, l'ordre de ces messages est significatif. Dans de tels scénarios, traitez le groupe de messages connexes comme une unité unique : soit tous les messages sont traités avec succès, soit aucun ne l'est. Pour implémenter un tel comportement, utilisez des sessions avec files d'attente.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Regroupement des Messages en file d’attente dans une Session](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md).  
+ Pour plus d’informations, consultez [regrouper en file d’attente des Messages dans une Session](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md).  
   
 ## <a name="correlating-request-reply-messages"></a>Corrélation des messages demande-réponse  
  Bien que les files d'attente soient en général unidirectionnelles, dans certains scénarios vous pouvez corréler une réponse reçue à une demande envoyée plus tôt. Si vous avez besoin d'une telle corrélation, il est recommandé d'insérer votre propre en-tête de message SOAP qui contient des informations de corrélation dans le message. En général, l'expéditeur joint cet en-tête avec le message, et le récepteur, en traitant le message et en y répondant avec un nouveau message sur une file d'attente de réponse, joint l'en-tête du message de l'expéditeur qui contient les informations de corrélation afin que l'expéditeur puisse identifier le message de réponse en relation avec le message de demande.  

@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c541c44f0043000ccd4e7edb0d38eba2c66d0844
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 15e958a3bfe4dfdeebfaaad83130a604c56932c7
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-the-xmlserializer-class"></a>Utilisation de la classe XmlSerializer
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] peut utiliser deux technologies de sérialisation différentes pour convertir les données de votre application en code XML transmis entre les clients et les services : processus appelé sérialisation.  
@@ -45,10 +45,10 @@ ms.lasthandoff: 04/27/2018
   
  De nombreux types du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] appartiennent à ces deux dernières catégories et sont par conséquent sérialisables. Les tableaux de types sérialisables sont également sérialisables. Pour obtenir la liste complète, consultez [spécification de transfert de données dans les contrats de Service](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).  
   
- Le <xref:System.Runtime.Serialization.DataContractSerializer>, utilisé avec les types de contrats de données, est la méthode recommandée pour écrire de nouveaux services [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [À l’aide de contrats de données](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
+ Le <xref:System.Runtime.Serialization.DataContractSerializer>, utilisé avec les types de contrats de données, est la méthode recommandée pour écrire de nouveaux services [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Pour plus d’informations, consultez [à l’aide de contrats de données](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
 ## <a name="when-to-use-the-xmlserializer-class"></a>Quand utiliser la classe XmlSerializer ?  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] prend également en charge la classe <xref:System.Xml.Serialization.XmlSerializer>. La classe <xref:System.Xml.Serialization.XmlSerializer> n'est pas exclusive à [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Il s'agit du même moteur de sérialisation utilisé par les services Web [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. La classe <xref:System.Xml.Serialization.XmlSerializer> prend en charge un ensemble de types beaucoup plus restreint que la classe <xref:System.Runtime.Serialization.DataContractSerializer>, mais elle permet un meilleur contrôle sur le code XML résultant et prend en charge une plus grande partie de la norme XSD (XML Schema Definition). En outre, elle ne requiert aucun attribut déclaratif sur les types sérialisables. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] la rubrique sur la sérialisation XML dans la documentation du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. La classe <xref:System.Xml.Serialization.XmlSerializer> ne prend pas en charge les types de contrats de données.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] prend également en charge la classe <xref:System.Xml.Serialization.XmlSerializer>. La classe <xref:System.Xml.Serialization.XmlSerializer> n'est pas exclusive à [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Il s'agit du même moteur de sérialisation utilisé par les services Web [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. La classe <xref:System.Xml.Serialization.XmlSerializer> prend en charge un ensemble de types beaucoup plus restreint que la classe <xref:System.Runtime.Serialization.DataContractSerializer>, mais elle permet un meilleur contrôle sur le code XML résultant et prend en charge une plus grande partie de la norme XSD (XML Schema Definition). En outre, elle ne requiert aucun attribut déclaratif sur les types sérialisables. Pour plus d’informations, consultez la rubrique de la sérialisation XML dans le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] documentation. La classe <xref:System.Xml.Serialization.XmlSerializer> ne prend pas en charge les types de contrats de données.  
   
  Lorsque vous utilisez Svcutil.exe ou le **ajouter une référence de Service** fonctionnalité dans Visual Studio pour générer le code client pour un service tiers ou d’accéder à un schéma tiers, un sérialiseur approprié est sélectionnée automatiquement. Si le schéma est incompatible avec le <xref:System.Runtime.Serialization.DataContractSerializer>, le <xref:System.Xml.Serialization.XmlSerializer> est sélectionné.  
   
@@ -150,7 +150,7 @@ ms.lasthandoff: 04/27/2018
   
 -   L'implémentation `ReadXml` ne doit pas lire l'élément wrapper. Elle est censée lire l'élément unique produit par `WriteXml`.  
   
--   Lors de la sérialisation régulière d'un type d'élément (par exemple, comme membre de données dans un contrat de données), le sérialiseur produit un élément wrapper avant d'appeler `WriteXml`, comme avec les types de contenu. Cependant, lors de la sérialisation d'un type d'élément au niveau supérieur, le sérialiseur ne produit normalement pas un élément wrapper autour de l'élément écrit par `WriteXml`, sauf si un nom racine et l'espace de noms sont spécifiés explicitement lors de l'élaboration du sérialiseur dans les constructeurs `DataContractSerializer` ou `NetDataContractSerializer`. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Sérialisation et désérialisation](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
+-   Lors de la sérialisation régulière d'un type d'élément (par exemple, comme membre de données dans un contrat de données), le sérialiseur produit un élément wrapper avant d'appeler `WriteXml`, comme avec les types de contenu. Cependant, lors de la sérialisation d'un type d'élément au niveau supérieur, le sérialiseur ne produit normalement pas un élément wrapper autour de l'élément écrit par `WriteXml`, sauf si un nom racine et l'espace de noms sont spécifiés explicitement lors de l'élaboration du sérialiseur dans les constructeurs `DataContractSerializer` ou `NetDataContractSerializer`. Pour plus d’informations, consultez [sérialisation et désérialisation](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
   
 -   Si vous sérialisez un type d'élément au niveau supérieur sans spécifier le nom racine et l'espace de noms au moment de la construction, <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteStartObject%2A> et <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteEndObject%2A> n'effectuent essentiellement aucune tâche et <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObjectContent%2A> appelle `WriteXml`. Dans ce mode, l'objet qui est sérialisé ne peut être `null` et ne peut pas être assigné d'une manière polymorphe. La conservation des graphiques d'objet ne peut pas non plus être activée et le `NetDataContractSerializer` ne peut pas être utilisé.  
   

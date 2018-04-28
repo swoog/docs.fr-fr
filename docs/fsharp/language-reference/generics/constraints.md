@@ -1,20 +1,17 @@
 ---
 title: Contraintes (F#)
-description: "En savoir plus sur F # les contraintes qui s’appliquent aux paramètres de type générique pour spécifier la configuration requise pour un argument de type dans un type générique ou une fonction."
-keywords: visual f#, f#, programmation fonctionnelle
+description: 'En savoir plus sur F # les contraintes qui s’appliquent aux paramètres de type générique pour spécifier la configuration requise pour un argument de type dans un type générique ou une fonction.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 2f232a3a-9486-48fb-9759-f23404ed4b52
-ms.openlocfilehash: 91854fd2f692688e0f1c27aba1422eff64156048
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 65f648d39cf7c3dedf5e558c2ed35337a12efe4a
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="constraints"></a>Contraintes
 
@@ -27,7 +24,7 @@ Cette rubrique décrit les contraintes que vous pouvez appliquer aux générique
 type-parameter-list when constraint1 [ and constraint2]
 ```
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 Il existe plusieurs contraintes différentes, que vous pouvez appliquer pour limiter les types qui peuvent être utilisés dans un type générique. Le tableau suivant répertorie et décrit ces contraintes.
 
 |Contrainte|Syntaxe|Description|

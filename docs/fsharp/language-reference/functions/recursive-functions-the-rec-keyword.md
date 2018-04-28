@@ -1,20 +1,17 @@
 ---
-title: "Fonctions récursives : mot clé rec (F#)"
+title: 'Fonctions récursives : mot clé rec (F#)'
 description: "Découvrez comment le mot clé F # 'rec' est utilisé avec le mot clé 'let' pour définir une fonction récursive."
-keywords: visual f#, f#, programmation fonctionnelle
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 1a95639f-9bfe-4f1d-a5e2-246d1d37776e
-ms.openlocfilehash: b837d2c0f8e2b1d28980620103097ccc8345c098
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 1f5302c125605d2186deab0bbeaf2e84cc51edc3
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="recursive-functions-the-rec-keyword"></a>Fonctions récursives : mot clé rec
 
@@ -36,10 +33,10 @@ function2-body
 ...
 ```
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 Les fonctions récursives, les fonctions qui appellent elles-mêmes, sont identifiées de façon explicite dans le langage F #. Cela permet l’identificateur qui est défini dans la portée de la fonction.
 
-Le code suivant illustre une fonction récursive qui calcule le  *n* ème nombre de Fibonacci.
+Le code suivant illustre une fonction récursive qui calcule le *n*ème nombre de Fibonacci.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet4001.fs)]
 

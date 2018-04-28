@@ -1,12 +1,13 @@
 ---
 title: Fonctionnement des niveaux de protection
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - WCF, security
 - ProtectionLevel property
 ms.assetid: 0c034608-a1ac-4007-8287-b1382eaa8bf2
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c379cf39f30bf7e75907dba5fb06ba4e3862e299
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4b079d7f6e22f0c1904433c2822b92da91923ef2
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="understanding-protection-level"></a>Fonctionnement des niveaux de protection
 La propriété `ProtectionLevel` est partagée par de nombreuses classes différentes, par exemple par les classes <xref:System.ServiceModel.ServiceContractAttribute> et <xref:System.ServiceModel.OperationContractAttribute>. Cette propriété contrôle tout ou partie des modalités de protection d'un message. Cette rubrique contient des explications sur la fonctionnalité [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] ainsi que sur son fonctionnement.  
@@ -84,7 +86,7 @@ La propriété `ProtectionLevel` est partagée par de nombreuses classes différ
  Pour programmer `ProtectionLevel` à un quelconque niveau de la hiérarchie, il vous suffit d'affecter à la propriété une valeur adéquate lors de l'application de l'attribut. Pour obtenir des exemples, consultez [Comment : définir la propriété ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md).  
   
 > [!NOTE]
->  La définition de la propriété sur les erreurs et les contrats de message nécessite de comprendre au préalable le fonctionnement de ces fonctionnalités. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Comment : définir la propriété ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md) et [à l’aide de contrats de Message](../../../docs/framework/wcf/feature-details/using-message-contracts.md).  
+>  La définition de la propriété sur les erreurs et les contrats de message nécessite de comprendre au préalable le fonctionnement de ces fonctionnalités. Pour plus d’informations, consultez [Comment : définir la propriété ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md) et [à l’aide de contrats de Message](../../../docs/framework/wcf/feature-details/using-message-contracts.md).  
   
 ## <a name="ws-addressing-dependency"></a>Dépendance WS-Addressing  
  Dans la plupart des cas, à l’aide de la [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) pour générer un client permet de s’assurer que les contrats de service et le client sont identiques. Toutefois, des contrats apparemment identiques peuvent provoquer la levée d'une exception de la part du client. Cela se produit lorsqu'une liaison ne prend pas en charge la spécification WS-Addressing et que plusieurs niveaux de protection sont spécifiés sur le contrat. Par exemple, la classe <xref:System.ServiceModel.BasicHttpBinding> ne prend pas en charge cette spécification ni la création de liaisons personnalisées non compatibles avec WS-Addressing. La fonctionnalité `ProtectionLevel` utilise la spécification WS-Addressing pour activer des niveaux de protection différents sur un contrat unique. Si la liaison ne prend pas en charge la spécification WS-Addressing, le même niveau de protection sera affecté à tous les niveaux. Le niveau de protection le plus élevé du contrat sera celui de toutes les portées figurant sur ce dernier.  

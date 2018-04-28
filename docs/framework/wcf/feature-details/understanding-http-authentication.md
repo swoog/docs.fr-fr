@@ -1,24 +1,26 @@
 ---
 title: Fonctionnement de l'authentification HTTP
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9376309a-39e3-4819-b47b-a73982b57620
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 32d7df95c6acbe34a677cbd2951fd912466d015f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0fe72ad1aab35a8cb384248e90500cf5410c0774
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="understanding-http-authentication"></a>Fonctionnement de l'authentification HTTP
 L'authentification est le processus visant à identifier si un client est susceptible d'accéder à une ressource. Le protocole HTTP prend en charge des authentifications dans le but de négocier l'accès à une ressource sécurisée.  
@@ -35,7 +37,7 @@ L'authentification est le processus visant à identifier si un client est suscep
 |Digest|L’authentification Digest est un schéma de type stimulation/réponse destiné à remplacer l’authentification de base. Le serveur envoie une chaîne de données aléatoires appelée un *nonce* au client comme stimulation. Le client répond avec un hachage qui inclut le nom d'utilisateur, le mot de passe et la valeur à usage unique entre autres informations. La complexité que cet échange introduit et le hachage des données compliquent le vol et la réutilisation des informations d'identification de l'utilisateur avec ce schéma d'authentification.<br /><br /> L’authentification Digest requiert l’utilisation de comptes de domaine Windows. Le condensé *domaine* est le nom de domaine Windows. Par conséquent, vous ne pouvez pas utiliser un serveur exécutant un système d’exploitation qui ne prend pas en charge les domaines Windows, tel que Windows XP Édition familiale, avec l’authentification Digest. Inversement, lorsque le client s'exécute sur un système d'exploitation qui ne prend pas en charge les domaines Windows, un compte de domaine doit être spécifié explicitement lors de l'authentification.|  
 |NTLM|L'authentification NTLM (NT LAN Manager) correspond à un schéma stimulation/réponse qui est une variation plus sécurisée de l'authentification Digest. Pour transformer les données de stimulation, NTLM utilise les informations d'identification Windows à la place du nom d'utilisateur et du mot de passe non chiffrés. L'authentification NTLM requiert plusieurs échanges entre le client et le serveur. Le serveur et tous les proxys qui interviennent doivent prendre en charge les connexions permanentes pour réussir l'authentification.|  
 |Par négociation|L'authentification par négociation choisit automatiquement entre le protocole Kerberos et authentification NTLM, selon la disponibilité. Le protocole Kerberos est utilisé s'il est disponible ; dans le cas contraire, l'authentification NTLM est tentée. L'authentification Kerberos offre des améliorations importantes par rapport à NTLM. L'authentification Kerberos est plus rapide que l'authentification NTLM et elle permet l'utilisation de l'authentification mutuelle et de la délégation des informations d'identification aux ordinateurs distants.|  
-|Windows Live ID|Le service HTTP Windows sous-jacent inclut une authentification qui utilise des protocoles fédérés. Toutefois, les transports HTTP standard dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ne prennent pas en charge l'utilisation des schémas d'authentification fédérée, tels que Microsoft Windows Live ID. La prise en charge de cette fonctionnalité est actuellement disponible par le biais de l’utilisation de la sécurité de message. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Fédération et jetons émis](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
+|Windows Live ID|Le service HTTP Windows sous-jacent inclut une authentification qui utilise des protocoles fédérés. Toutefois, les transports HTTP standard dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ne prennent pas en charge l'utilisation des schémas d'authentification fédérée, tels que Microsoft Windows Live ID. La prise en charge de cette fonctionnalité est actuellement disponible par le biais de l’utilisation de la sécurité de message. Pour plus d’informations, consultez [fédération et les jetons émis](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
   
 ## <a name="choosing-an-authentication-scheme"></a>Choix d'un schéma d'authentification  
  Lors de la sélection des schémas d'authentification possibles pour un serveur HTTP, voici quelques éléments à prendre en compte :  

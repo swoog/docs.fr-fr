@@ -1,20 +1,17 @@
 ---
 title: Types F#
-description: "En savoir plus sur les types qui sont utilisés en F # et comment les types F # sont nommés et décrits."
-keywords: visual f#, f#, programmation fonctionnelle
+description: 'En savoir plus sur les types qui sont utilisés en F # et comment les types F # sont nommés et décrits.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: c7272a0d-5ab6-4eae-bceb-e49af498b917
-ms.openlocfilehash: 9b7235637f301f91ae2cc8fbc59adc27cdfd5bd0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 42521ed75a76753af81d3bbb9693ec5af29536ad
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="f-types"></a>Types F#
 
@@ -44,19 +41,19 @@ Le tableau suivant montre les aspects de la syntaxe de type pour des types F #.
 
 |Type|Syntaxe de type|Exemples|
 |----|-----------|--------|
-|type primitif|*nom de type*|`int`<br /><br />`float`<br /><br />`string`|
-|type d’agrégation (classe, structure, union, enregistrement, enum et ainsi de suite)|*nom de type*|`System.DateTime`<br /><br />`Color`|
+|type primitif|*type-name*|`int`<br /><br />`float`<br /><br />`string`|
+|type d’agrégation (classe, structure, union, enregistrement, enum et ainsi de suite)|*type-name*|`System.DateTime`<br /><br />`Color`|
 |abréviation de type|*nom de l’abréviation de type*|`bigint`|
 |type qualifié complet|*nom de Namespaces.type*<br /><br />ou<br /><br />*nom de modules.type*<br /><br />ou<br /><br />*nom de Namespaces.modules.type*|`System.IO.StreamWriter`|
 |array|*nom de type*[] ou<br /><br />*nom de type* tableau|`int[]`<br /><br />`array<int>`<br /><br />`int array`|
 |Tableau à deux dimensions|*nom de type*[,]|`int[,]`<br /><br />`float[,]`|
 |Tableau à trois dimensions|*nom de type*[,]|`float[,,]`|
-|tuple|*type-nom1* &#42; *nom2 de type* ...|Par exemple, `(1,'b',3)` a un type`int * char * int`|
+|tuple|*type-nom1* &#42; *nom2 de type* ...|Par exemple, `(1,'b',3)` a un type `int * char * int`|
 |type générique|*paramètre de type* *nom de type générique*<br /><br />ou<br /><br />*nom de type générique*&lt;*liste de paramètres de type*&gt;|`'a list`<br /><br />`list<'a>`<br /><br />`Dictionary<'key, 'value>`|
 |type (un type générique qui a un argument de type spécifique fourni) construit|*argument de type* *nom de type générique*<br /><br />ou<br /><br />*nom de type générique*&lt;*liste d’arguments type*&gt;|`int option`<br /><br />`string list`<br /><br />`int ref`<br /><br />`option<int>`<br /><br />`list<string>`<br /><br />`ref<int>`<br /><br />`Dictionary<int, string>`|
-|type de fonction qui a un paramètre unique|*paramètre-type1*  - &gt; *type de retour*|Une fonction qui accepte une `int` et retourne un `string` a un type`int -> string`|
-|type de fonction qui a plusieurs paramètres|*paramètre-type1*  - &gt; *paramètre-type2*  - &gt; ... -&gt; *type de retour*|Une fonction qui accepte une `int` et un `float` et retourne un `string` a un type`int -> float -> string`|
-|fonction d’ordre supérieur en tant que paramètre|(*type de fonction*)|`List.map`a un type`('a -> 'b) -> 'a list -> 'b list`|
+|type de fonction qui a un paramètre unique|*paramètre-type1*  - &gt; *type de retour*|Une fonction qui accepte une `int` et retourne un `string` a un type `int -> string`|
+|type de fonction qui a plusieurs paramètres|*paramètre-type1*  - &gt; *paramètre-type2*  - &gt; ... -&gt; *type de retour*|Une fonction qui accepte une `int` et un `float` et retourne un `string` a un type `int -> float -> string`|
+|fonction d’ordre supérieur en tant que paramètre|(*type de fonction*)|`List.map` a un type `('a -> 'b) -> 'a list -> 'b list`|
 |délégué|délégué de *type de fonction*|`delegate of unit -> int`|
 |type flexible|#*nom de type*|`#System.Windows.Forms.Control`<br /><br />`#seq<int>`|
 

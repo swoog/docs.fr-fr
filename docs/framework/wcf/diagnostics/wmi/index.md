@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3df15e80a550857adbfbf30ebf8b6ef902426a1a
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: e8fd88edd711513d1b143029d8088401c9945d13
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Utilisation de Windows Management Instrumentation pour les diagnostics
 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] expose au moment de l'exécution les données d'inspection d'un service par l'intermédiaire d'un fournisseur WMI (Windows Management Instrumentation) de [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] .  
@@ -160,7 +160,7 @@ ms.lasthandoff: 04/26/2018
 Whoami /user  
 ```  
   
- Ce faisant, vous obtenez l'identificateur SID de l'utilisateur actuel, mais cette méthode ne peut pas être utilisée pour obtenir le SID d'un utilisateur arbitraire. Une autre méthode permettant d’obtenir le SID consiste à utiliser le [getsid.exe](http://go.microsoft.com/fwlink/?LinkId=186467) outil à partir de la [outils Kit de ressources techniques Windows 2000 pour les tâches administratives](http://go.microsoft.com/fwlink/?LinkId=178660). Cet outil compare l'identificateur SID de deux utilisateurs (locaux ou domaine), et imprime par voie de conséquence les deux SID sur la ligne de commande. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)] [SID connus](http://go.microsoft.com/fwlink/?LinkId=186468).  
+ Ce faisant, vous obtenez l'identificateur SID de l'utilisateur actuel, mais cette méthode ne peut pas être utilisée pour obtenir le SID d'un utilisateur arbitraire. Une autre méthode permettant d’obtenir le SID consiste à utiliser le [getsid.exe](http://go.microsoft.com/fwlink/?LinkId=186467) outil à partir de la [outils Kit de ressources techniques Windows 2000 pour les tâches administratives](http://go.microsoft.com/fwlink/?LinkId=178660). Cet outil compare l'identificateur SID de deux utilisateurs (locaux ou domaine), et imprime par voie de conséquence les deux SID sur la ligne de commande. Pour plus d’informations, consultez [Well Known SID](http://go.microsoft.com/fwlink/?LinkId=186468).  
   
 ## <a name="accessing-remote-wmi-object-instances"></a>Accès aux instances d'objet WMI distantes  
  Si vous devez accéder aux instances WMI de [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] sur un ordinateur distant, vous devez activer la confidentialité de paquet sur les outils que vous utilisez pour l'accès. La section suivante décrit comment y parvenir à l'aide de WMI CIM Studio, Windows Management Instrumentation Tester, et le Kit de développement .Net SDK 2.0.  

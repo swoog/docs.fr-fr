@@ -1,29 +1,29 @@
 ---
-title: "Données volumineuses et diffusion en continu"
-ms.custom: 
+title: Données volumineuses et diffusion en continu
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-caps.latest.revision: 
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e9551fcf4f302be899dcee8737b3bcfad15f1210
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: b37af67a3deeed4e55939ff1c1baf73752233e94
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="large-data-and-streaming"></a>Données volumineuses et diffusion en continu
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] est une infrastructure de communications basées sur XML. Étant donné que les données XML sont souvent codées au format texte standard défini dans le [spécification XML 1.0](http://go.microsoft.com/fwlink/?LinkId=94838)et connectées, les architectes et développeurs de systèmes sont généralement concerne l’encombrement du câble (ou taille) de messages envoyés entre le réseau et l’encodage de texte XML pose des défis particuliers pour le transfert efficace de données binaires.  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] est une infrastructure de communication basée sur XML. Étant donné que les données XML sont souvent codées au format texte standard défini dans le [spécification XML 1.0](http://go.microsoft.com/fwlink/?LinkId=94838)et connectées, les architectes et développeurs de systèmes sont généralement concerne l’encombrement du câble (ou taille) de messages envoyés entre le réseau et l’encodage de texte XML pose des défis particuliers pour le transfert efficace de données binaires.  
   
 ## <a name="basic-considerations"></a>Considérations de base  
  Pour fournir des informations générales à propos des informations suivantes pour [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], cette section souligne quelques préoccupations et considérations générales pour les encodages, les données binaires et la diffusion en continu qui s'appliquent généralement aux infrastructures des systèmes connectés.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 02/01/2018
   
  Par conséquent, pour choisir le format texte ou le format binaire, il ne suffit pas de partir du principe que les messages binaires sont toujours plus petits que les messages texte XML.  
   
- Un avantage net des messages texte XML est qu'ils sont basés sur des normes et qu'ils offrent le choix le plus large d'options d'interopérabilité et de prise en charge de plateformes. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] la section « Encodages » plus loin dans cette rubrique.  
+ Un avantage net des messages texte XML est qu'ils sont basés sur des normes et qu'ils offrent le choix le plus large d'options d'interopérabilité et de prise en charge de plateformes. Pour plus d’informations, consultez la section « Encodages » plus loin dans cette rubrique.  
   
 ### <a name="binary-content"></a>Contenu binaire  
  Un domaine dans lequel les encodages binaires sont supérieurs aux encodages basés sur le texte en termes de taille des messages obtenus concerne les éléments de données binaires volumineux tels que les photos, vidéos, clips audio ou tout autre forme de données binaires et opaques qui doivent être échangées entre des services et leurs consommateurs. Pour adapter ces types de données au texte XML, l'approche courante consiste à les encoder à l'aide d'un encodage Base64.  
@@ -52,7 +52,7 @@ ms.lasthandoff: 02/01/2018
   
  Un message SOAP MTOM est modifié par rapport à sa version non encodée afin que les étiquettes d’éléments spéciales qui font référence aux parties MIME respectives prennent la place des éléments d’origine dans le message contenait des données binaires. En conséquence, le message SOAP fait référence au contenu binaire en pointant vers les parties MIME envoyées avec lui, mais sinon il transporte uniquement les données texte XML. Parce que ce modèle s'aligne étroitement sur le modèle SMTP bien établi, il existe une large prise en charge d'outils permettant d'encoder et de décoder les messages MTOM sur de nombreuses plateformes, ce qui en fait un choix extrêmement interopérable.  
   
- Pour autant, comme avec Base64, MTOM s'accompagne également d'une charge mémoire nécessaire pour le format MIME, de sorte que les avantages de l'utilisation de MTOM s'aperçoivent uniquement quand la taille d'un élément de données binaires dépasse 1 Ko environ. En raison de la charge mémoire, les messages encodés MTOM peuvent être plus volumineux que les messages qui utilisent l'encodage Base64 pour les données binaires, si la charge utile binaire reste sous ce seuil. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] la section « Encodages » plus loin dans cette rubrique.  
+ Pour autant, comme avec Base64, MTOM s'accompagne également d'une charge mémoire nécessaire pour le format MIME, de sorte que les avantages de l'utilisation de MTOM s'aperçoivent uniquement quand la taille d'un élément de données binaires dépasse 1 Ko environ. En raison de la charge mémoire, les messages encodés MTOM peuvent être plus volumineux que les messages qui utilisent l'encodage Base64 pour les données binaires, si la charge utile binaire reste sous ce seuil. Pour plus d’informations, consultez la section « Encodages » plus loin dans cette rubrique.  
   
 ### <a name="large-data-content"></a>Contenu de données volumineux  
  L'encombrement du câble mis de côté, la charge utile de 500 Mo précédemment mentionnée représente également un grand challenge local pour le service et le client. Par défaut, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] traite les messages dans *mode mémoire tampon*. Cela signifie que le contenu entier d'un message est présent en mémoire avant son envoi ou après sa réception. Alors qu’il s’agit d’une bonne stratégie pour la plupart des scénarios et qu’elle est nécessaire pour les fonctionnalités de messagerie telles que les signatures numériques et la remise fiable, les messages volumineux peuvent épuiser les ressources d’un système.  
@@ -67,14 +67,14 @@ ms.lasthandoff: 02/01/2018
   
 -   ne sont pas disponibles dans leur intégralité lors de l'initialisation du transfert.  
   
- Pour les données qui ne présentent pas ces contraintes, il est en général préférable d'envoyer des séquences de messages au sein de la portée d'une session plutôt qu'un message volumineux. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] la section « Diffusion en continu de données » plus loin dans cette rubrique.  
+ Pour les données qui ne présentent pas ces contraintes, il est en général préférable d'envoyer des séquences de messages au sein de la portée d'une session plutôt qu'un message volumineux. Pour plus d’informations, consultez la section « Diffusion en continu des données » plus loin dans cette rubrique.  
   
  Lors de l’envoi de grandes quantités de données, vous devez définir le `maxAllowedContentLength` le paramètre IIS (pour plus d’informations, consultez [configuration des limites des demandes IIS](http://go.microsoft.com/fwlink/?LinkId=253165)) et le `maxReceivedMessageSize` paramètre de liaison (par exemple [ System.ServiceModel.BasicHttpBinding.MaxReceivedMessageSize](xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A) ou <xref:System.ServiceModel.NetTcpBinding.MaxReceivedMessageSize%2A>). Le `maxAllowedContentLength` propriété par défaut 28,6 M et `maxReceivedMessageSize` propriété valeur par défaut est 64 Ko.  
   
 ## <a name="encodings"></a>Encodages  
  Un *codage* définit un ensemble de règles sur la façon de présenter des messages sur le câble. Un *encodeur* implémente un tel encodage et est responsable du côté expéditeur, pour activer un <xref:System.ServiceModel.Channels.Message> message en mémoire dans un flux d’octets ou de la mémoire tampon d’octets qui peut être envoyé sur le réseau. Du côté destinataire, l'encodeur transforme une séquence d'octets en un message en mémoire.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] inclut trois encodeurs et vous permet d’écrire et incorporer vos propres encodeurs, si nécessaire.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] inclut trois encodeurs et vous permet d'écrire et de brancher vos propres encodeurs, si nécessaire.  
   
  Chacune des liaisons standard inclut un encodeur préconfiguré, selon lequel les liaisons avec le préfixe Net* utilisent l'encodeur binaire (en incluant la classe <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>) pendant que les classes <xref:System.ServiceModel.BasicHttpBinding> et <xref:System.ServiceModel.WSHttpBinding> utilisent l'encodeur de message texte par défaut (au moyen de la classe <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>).  
   
@@ -246,7 +246,7 @@ public class UploadStreamMessage
   
  Par conséquent, la restriction de la taille maximale des messages entrants n'est pas suffisante dans ce cas. La propriété `MaxBufferSize` est requise pour contraindre la mémoire que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] met en tampon. Il est important d'affecter à cette propriété une valeur sûre (ou de conserver sa valeur par défaut) lors de la diffusion en continu. Par exemple, supposez que votre service doive recevoir des fichiers d'une taille allant jusqu'à 4 Go afin de les stocker sur le disque local. Supposez également que votre mémoire soit contrainte de sorte à ce que vous puissiez uniquement mettre en mémoire tampon 64 Ko de données à la fois. Vous devez alors affecter la valeur 4 Go à `MaxReceivedMessageSize` et la valeur 64 Ko à `MaxBufferSize`. En outre, dans votre implémentation de service, vous devez veiller à lire uniquement à partir du flux entrant par segment de 64 Ko et à ne pas lire le segment suivant avant que le précédent ne soit écrit sur le disque et qu'il soit effacé de la mémoire.  
   
- Il est également important de comprendre que ce quota limite uniquement la mise en mémoire tampon effectuée par [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] et qu'il ne vous protège pas contre toute mise en mémoire tampon que vous effectuez dans votre propre service ou implémentation cliente. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Considérations de sécurité supplémentaires, consultez [considérations de sécurité pour les données](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).  
+ Il est également important de comprendre que ce quota limite uniquement la mise en mémoire tampon effectuée par [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] et qu'il ne vous protège pas contre toute mise en mémoire tampon que vous effectuez dans votre propre service ou implémentation cliente. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Considérations de sécurité supplémentaires, consultez [considérations de sécurité pour les données](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).  
   
 > [!NOTE]
 >  La décision d'utiliser des transferts mis en mémoire tampon ou diffusés en continu est une décision locale du point de terminaison. Pour les transports HTTP, le mode de transfert ne se propage pas sur une connexion ou sur des serveurs proxy et d'autres intermédiaires. La description de l'interface de service ne reflète pas le mode de transfert défini. Après avoir généré un client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sur un service, vous devez modifier le fichier de configuration des services destinés à être utilisés avec des transferts en continu pour définir le mode. Pour les transports TCP et les transports de canal nommé, le mode de transfert est propagé sous forme d'assertion de stratégie.  

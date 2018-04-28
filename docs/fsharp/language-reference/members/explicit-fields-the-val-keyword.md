@@ -1,20 +1,17 @@
 ---
-title: "Champs explicites : mot clé val (F#)"
+title: 'Champs explicites : mot clé val (F#)'
 description: "En savoir plus sur F # 'val' mot clé, qui est utilisé pour déclarer un emplacement pour stocker une valeur dans un type classe ou structure sans l’initialisation du type."
-keywords: visual f#, f#, programmation fonctionnelle
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 3bdbc745-436b-407f-bf54-5d11ca829cd0
-ms.openlocfilehash: cee53a48f08aec89b0bdd40189ed331cadee877d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: dc277680121976c0469b18c77bd84443cd251afb
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="explicit-fields-the-val-keyword"></a>Champs explicites : mot clé val
 
@@ -27,7 +24,7 @@ Le mot clé `val` est utilisé pour déclarer un emplacement pour stocker une va
 val [ mutable ] [ access-modifier ] field-name : type-name
 ```
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 La façon habituelle de définir des champs dans un type de classe ou de structure consiste à utiliser une liaison `let`. Toutefois, les liaisons `let` doivent être initialisées dans le cadre du constructeur de classe, ce qui n'est pas toujours possible, nécessaire ou souhaitable. Vous pouvez utiliser le mot clé `val` quand vous voulez un champ qui n'est pas initialisé.
 
 Les champs explicites peuvent être statiques ou non statiques. Le *modificateur d’accès* peut être `public`, `private`, ou `internal`. Par défaut, les champs explicites sont publics. À la différence des liaisons `let` dans les classes, qui elles sont toujours privées.
@@ -49,7 +46,7 @@ Pour un champ mutable, la représentation compilée .NET est un champ .NET.
 
 
 >[!WARNING] 
-`Note`L’espace de noms .NET Framework `System.ComponentModel` contient un attribut qui porte le même nom. Pour plus d'informations sur cet attribut, consultez `System.ComponentModel.DefaultValueAttribute`.
+`Note` L’espace de noms .NET Framework `System.ComponentModel` contient un attribut qui porte le même nom. Pour plus d'informations sur cet attribut, consultez `System.ComponentModel.DefaultValueAttribute`.
 
 
 Le code suivant illustre l'utilisation de champs explicites et, à titre de comparaison, d'une liaison `let` dans une classe qui a un constructeur principal. Notez que le champ lié à `let` `myInt1` est privé. Quand le champ lié à `let` `myInt1` est référencé à partir d'une méthode membre, l'auto-identificateur `this` n'est pas requis. Mais quand vous référencez les champs explicites `myInt2` et `myString`, l'auto-identificateur est requis.

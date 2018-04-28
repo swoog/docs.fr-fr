@@ -1,13 +1,13 @@
 ---
 title: "Comment : utiliser des informations d'identification de sécurité de transport et de message"
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - TransportWithMessageCredentials
 ms.assetid: 6cc35346-c37a-4859-b82b-946c0ba6e68f
-caps.latest.revision: 
+caps.latest.revision: 11
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 70575732e7840d243373fd1512f788c776f17ceb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fad7970711435cdabecd883f5e1dc44c64bd2c93
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-use-transport-security-and-message-credentials"></a>Comment : utiliser des informations d'identification de sécurité de transport et de message
-La sécurisation d'un service à l'aide de la sécurité de transport et des informations d'identification de message tire partie des avantages les plus intéressants offerts par ces deux modes de sécurité dans [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. En résumé, la sécurité de la couche de transport assure l'intégrité et la confidentialité des informations tandis que la sécurité de la couche de message offre diverses informations d'identification, lesquelles ne sont pas disponibles lorsque seule la sécurité de niveau transport est utilisée. Cette rubrique contient la procédure par étape permettant d'implémenter la sécurité de transport avec les informations d'identification de message à l'aide des liaisons <xref:System.ServiceModel.WSHttpBinding> et <xref:System.ServiceModel.NetTcpBinding>. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]le mode de sécurité, consultez [Comment : définir le Mode de sécurité](../../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
+La sécurisation d'un service à l'aide de la sécurité de transport et des informations d'identification de message tire partie des avantages les plus intéressants offerts par ces deux modes de sécurité dans [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. En résumé, la sécurité de la couche de transport assure l'intégrité et la confidentialité des informations tandis que la sécurité de la couche de message offre diverses informations d'identification, lesquelles ne sont pas disponibles lorsque seule la sécurité de niveau transport est utilisée. Cette rubrique contient la procédure par étape permettant d'implémenter la sécurité de transport avec les informations d'identification de message à l'aide des liaisons <xref:System.ServiceModel.WSHttpBinding> et <xref:System.ServiceModel.NetTcpBinding>. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] le mode de sécurité, consultez [Comment : définir le Mode de sécurité](../../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
   
  Lorsque vous affectez au mode de sécurité la valeur `TransportWithMessageCredential`, le mécanisme chargé d'offrir la sécurité de niveau transport dépend du transport utilisé. Pour le transport HTTP, le mécanisme utilisé est Secure Sockets Layer (SSL) sur HTTP, c'est-à-dire HTTPS, pour le transport TCP, il s'agit de SSL sur TCP ou de Windows.  
   
@@ -38,11 +38,11 @@ La sécurisation d'un service à l'aide de la sécurité de transport et des inf
   
 ### <a name="to-use-the-wshttpbinding-with-a-certificate-for-transport-security-in-code"></a>Pour utiliser la liaison WSHttpBinding avec un certificat pour la sécurité de niveau transport (dans le code)  
   
-1.  Utilisez l’outil HttpCfg.exe pour attribuer un certificat SSL à l’un des ports de l’ordinateur. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Comment : configurer un Port avec un certificat SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
+1.  Utilisez l’outil HttpCfg.exe pour attribuer un certificat SSL à l’un des ports de l’ordinateur. Pour plus d’informations, consultez [Comment : configurer un Port avec un certificat SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
   
 2.  Créez une instance de la classe <xref:System.ServiceModel.WSHttpBinding>, puis affectez à la propriété <xref:System.ServiceModel.WSHttpSecurity.Mode%2A> la valeur <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>.  
   
-3.  Affectez à la propriété <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> une valeur appropriée. ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Sélection d’un Type d’informations d’identification](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md).) Dans l'exemple de code suivant, la valeur <xref:System.ServiceModel.MessageCredentialType.Certificate> est utilisée.  
+3.  Affectez à la propriété <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> une valeur appropriée. (Pour plus d’informations, consultez [sélection d’un Type d’informations d’identification](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md).) Dans l'exemple de code suivant, la valeur <xref:System.ServiceModel.MessageCredentialType.Certificate> est utilisée.  
   
 4.  Créez une instance de la classe <xref:System.Uri> en utilisant une adresse de base appropriée. Remarque : cette adresse doit utiliser le schéma HTTPS et contenir le véritable nom de l'ordinateur ainsi que le numéro de port auquel le certificat SSL a été attribué. Vous pouvez également définir l'adresse de base dans la configuration.  
   
@@ -97,7 +97,7 @@ La sécurisation d'un service à l'aide de la sécurité de transport et des inf
   
 #### <a name="to-use-the-wshttpbinding"></a>Pour utiliser la liaison WSHttpBinding  
   
-1.  Configurez l’ordinateur en attribuant un certificat SSL à l’un de ses ports. ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Comment : configurer un Port avec un certificat SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)). Vous n’avez pas besoin de définir un <`transport`> valeur de l’élément avec cette configuration.  
+1.  Configurez l’ordinateur en attribuant un certificat SSL à l’un de ses ports. (Pour plus d’informations, consultez [Comment : configurer un Port avec un certificat SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)). Vous n’avez pas besoin de définir un <`transport`> valeur de l’élément avec cette configuration.  
   
 2.  Spécifiez le type d'informations d'identification pour la sécurité de niveau message. L’exemple suivant définit la `clientCredentialType` attribut de la <`message`> élément `UserName`.  
   

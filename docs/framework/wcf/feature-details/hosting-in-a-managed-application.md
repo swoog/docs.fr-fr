@@ -16,16 +16,16 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1e81a8eb27725edeccf3e5c7489109ba47b70dec
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 4e2afa9e868c1f561aed699a2bdf7d09c17898b3
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="hosting-in-a-managed-application"></a>Hébergement dans une application managée
 Les services[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] peuvent être hébergés dans toute application [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] . Les services auto-hébergés constituent l'option d'hébergement la plus flexible parce qu'ils requièrent le déploiement de moins d'infrastructure. Toutefois, c'est également l'option d'hébergement la moins fiable, parce que les applications gérées ne fournissent pas les fonctionnalités d'hébergement et de gestion avancées offertes par d'autres solutions d'hébergement dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], comme les services IIS (Internet Information Services) et les services Windows.  
   
- Pour créer un service auto-hébergé, créez et ouvrez une instance d'objet <xref:System.ServiceModel.ServiceHost>, qui démarre un service d'écoute des messages. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Comment : héberger un Service WCF dans une Application managée](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md).  
+ Pour créer un service auto-hébergé, créez et ouvrez une instance d'objet <xref:System.ServiceModel.ServiceHost>, qui démarre un service d'écoute des messages. Pour plus d’informations, consultez [Comment : héberger un Service WCF dans une Application managée](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md).  
   
  Pour obtenir un exemple complet sur la façon de définir un contrat, implémentez le contrat et héberger un service à l’intérieur d’une application managée, consultez le [Getting Started Tutorial](../../../../docs/framework/wcf/getting-started-tutorial.md) et [auto-hébergement](../../../../docs/framework/wcf/samples/self-host.md).  
   

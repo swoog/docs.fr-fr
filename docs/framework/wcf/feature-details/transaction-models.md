@@ -1,24 +1,26 @@
 ---
-title: "Modèles de transaction"
-ms.custom: 
+title: Modèles de transaction
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 48a8bc1b-128b-4cf1-a421-8cc73223c340
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 782a6b5bdb206d285d619b8085993b591785aca5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ab3baf8cc0bb6af951f6f3e6396b7545d0c6b301
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="transaction-models"></a>Modèles de transaction
 Cette rubrique décrit la relation entre les modèles de programmation de transactions et les composants d’infrastructure que Microsoft fournit.  
@@ -35,13 +37,13 @@ Cette rubrique décrit la relation entre les modèles de programmation de transa
 ## <a name="systemtransactions-transactions"></a>Transactions System.Transactions  
  L'espace de noms <xref:System.Transactions> fournit un modèle de programmation explicite basé sur la classe <xref:System.Transactions.Transaction>, ainsi qu'un modèle de programmation implicite à utilisant la classe <xref:System.Transactions.TransactionScope>, dans lequel l'infrastructure gère automatiquement les transactions.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]comment créer une application transactionnelle à l’aide de ces deux modèles, consultez [l’écriture d’une Application transactionnelle](http://go.microsoft.com/fwlink/?LinkId=94947).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] comment créer une application transactionnelle à l’aide de ces deux modèles, consultez [l’écriture d’une Application transactionnelle](http://go.microsoft.com/fwlink/?LinkId=94947).  
   
  Dans un service ou une application [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], <xref:System.Transactions> fournit le modèle de programmation pour créer des transactions dans une application cliente et pour interagir explicitement avec une transaction, si nécessaire, au sein d'un service.  
   
 ## <a name="msdtc-transactions"></a>Transactions MSDTC  
  MSDTC (Microsoft Distributed Transaction Coordinator) est un gestionnaire de transactions qui prend en charge les transactions distribuées.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]le [de référence du programmeur DTC](http://go.microsoft.com/fwlink/?LinkId=94948).  
+ Pour plus d’informations, consultez la [de référence du programmeur DTC](http://go.microsoft.com/fwlink/?LinkId=94948).  
   
  Dans un service ou une application [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], MSDTC fournit l'infrastructure pour la coordination de transactions créées dans un client ou un service.

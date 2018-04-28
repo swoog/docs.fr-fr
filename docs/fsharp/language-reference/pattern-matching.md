@@ -1,27 +1,24 @@
 ---
-title: "Critères spéciaux (F#)"
-description: "Découvrez comment les modèles sont utilisés en F # pour comparer des données avec les structures logiques, décomposer les données en parties constituantes ou extraire des informations à partir des données."
-keywords: visual f#, f#, programmation fonctionnelle
+title: Critères spéciaux (F#)
+description: 'Découvrez comment les modèles sont utilisés en F # pour comparer des données avec les structures logiques, décomposer les données en parties constituantes ou extraire des informations à partir des données.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 5562ee98-e2f1-4dcd-8e2f-16ae27baaade
-ms.openlocfilehash: 7c7a3110a8f34c0c96c12d4584010a9ac4b485fa
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 31a5b321e5daecdc3add9a205d60b63b2c00ccd2
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="pattern-matching"></a>Critères spéciaux
 
 Les modèles sont des règles de transformation des données d’entrée. Elles sont utilisées dans le langage F # pour comparer des données avec une ou plusieurs structures logiques, décomposer les données en parties constituantes ou extraire des informations à partir des données de différentes manières.
 
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 Modèles utilisés dans de nombreuses constructions de langage, tels que le `match` expression. Ils sont utilisés lorsque vous traitez des arguments pour les fonctions dans `let` liaisons, des expressions lambda et les gestionnaires d’exceptions associés le `try...with` expression. Pour plus d’informations, consultez [Expressions de correspondance](match-expressions.md), [liaisons let](functions/let-bindings.md), [Expressions Lambda : le `fun` mot clé](functions/lambda-expressions-the-fun-keyword.md), et [Exceptions : le `try...with` Expression](exception-handling/the-try-with-expression.md).
 
 Par exemple, dans le `match` expression, le *modèle* est ce qui suit le symbole de barre verticale.
@@ -36,12 +33,12 @@ Chaque modèle agit comme une règle transforme l’entrée d’une certaine fa�
 
 Modèles pris en charge sont indiqués dans le tableau suivant. Au moment de l’exécution, l’entrée est testée par chacun des modèles dans l’ordre indiqué dans le tableau suivant et modèles sont appliquées de manière récursive, à partir de tout d’abord au dernier telles qu’elles apparaissent dans votre code et de gauche à droite pour les modèles sur chaque ligne.
 
-|Nom|Description|Exemple|
+|Name|Description|Exemple|
 |----|-----------|-------|
 |Modèle de constante|Toute numérique, caractère, ou littéral de chaîne, une constante d’énumération ou identificateur littéral défini|`1.0`, `"test"`, `30`, `Color.Red`|
 |Modèle d’identificateur|Valeur de cas d’une union discriminée, étiquette d’exception ou un cas de modèle actif|`Some(x)`<br /><br />`Failure(msg)`|
 |Modèle de variable|*identifier*|`a`|
-|`as`modèle|*modèle* comme *identificateur*|`(a, b) as tuple1`|
+|`as` Modèle|*modèle* comme *identificateur*|`(a, b) as tuple1`|
 |OU un modèle|*Motif1* &#124; *Motif2*|<code>([h] &#124; [h; _])</code>|
 |ET le modèle|*Motif1* &amp; *Motif2*|`(a, b) & (_, "test")`|
 |Modèle Cons|*identificateur* :: *identificateur de la liste*|`h :: t`|

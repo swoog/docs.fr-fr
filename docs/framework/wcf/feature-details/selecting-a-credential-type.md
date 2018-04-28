@@ -1,26 +1,26 @@
 ---
-title: "Sélection d'un type d'informations d'identification"
-ms.custom: 
+title: Sélection d'un type d'informations d'identification
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
-caps.latest.revision: 
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9e6b3d84db619ba1b4b5785b134cfe87d1b15cdc
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 9858475520b949d5b9ee62ecdc0994bbb9398953
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="selecting-a-credential-type"></a>Sélection d'un type d'informations d'identification
 *Informations d’identification* sont les données [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] utilise pour établir une identité déclarée ou des fonctions. Par exemple, un passeport est une information d'identification émise par un gouvernement pour établir la citoyenneté dans un pays ou une région. Dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], les informations d'identification peuvent prendre plusieurs formes, telles que les jetons de nom d'utilisateur et les certificats X.509. Cette rubrique traite des informations d'identification, de leur mode d'utilisation dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] et de la façon de sélectionner les informations d'identification appropriées pour votre application.  
@@ -55,7 +55,7 @@ ms.lasthandoff: 02/01/2018
 |Windows|Permet les échanges de messages SOAP dans le contexte de sécurité établi avec des informations d'identification Windows.|  
 |Nom d'utilisateur|Autorise le service à exiger que le client soit authentifié avec des informations d'identification de nom d'utilisateur. Notez que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] n'autorise pas d'opération de chiffrement avec les noms d'utilisateurs, telle que la génération d'une signature ou le chiffrement de données. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] s'assure que le transport est sécurisé lors de l'utilisation d'informations d'identification de nom d'utilisateur.|  
 |Certificat|Autorise le service à exiger que le client soit authentifié à l'aide d'un certificat X.509.|  
-|Jeton émis|Type de jeton personnalisé configuré en fonction d'une stratégie de sécurité. Le type de jeton par défaut est le jeton SAML (Security Assertions Markup Language). Le jeton est émis par un service de jetons sécurisé. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Fédération et jetons émis](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
+|Jeton émis|Type de jeton personnalisé configuré en fonction d'une stratégie de sécurité. Le type de jeton par défaut est le jeton SAML (Security Assertions Markup Language). Le jeton est émis par un service de jetons sécurisé. Pour plus d’informations, consultez [fédération et les jetons émis](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
   
 ### <a name="negotiation-model-of-service-credentials"></a>Modèle de négociation des informations d'identification du service  
  *Négociation* consiste à établir une approbation entre un client et un service en échangeant des informations d’identification. Le processus est exécuté de manière itérative entre le client et le service afin de divulguer uniquement les informations nécessaires pour l'étape suivante dans le processus de négociation. En pratique, le résultat final consiste à remettre les informations d'identification d'un service au client pour qu'elles soient utilisées dans des opérations ultérieures.  
@@ -77,7 +77,7 @@ ms.lasthandoff: 02/01/2018
  Selon que vous programmez un service ou un client, la méthode pour définir la valeur des informations d'identification diffère légèrement.  
   
 ### <a name="setting-service-credentials"></a>Définition des informations d'identification de service  
- Si vous utilisez le mode de transport et que vous utilisez le protocole HTTP comme transport, vous devez utiliser les services Internet (IIS) ou configurer le port avec un certificat. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Vue d’ensemble de la sécurité de transport](../../../../docs/framework/wcf/feature-details/transport-security-overview.md) et [sécurité de Transport HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
+ Si vous utilisez le mode de transport et que vous utilisez le protocole HTTP comme transport, vous devez utiliser les services Internet (IIS) ou configurer le port avec un certificat. Pour plus d’informations, consultez [vue d’ensemble de sécurité de Transport](../../../../docs/framework/wcf/feature-details/transport-security-overview.md) et [sécurité de Transport HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
  Pour configurer un service avec les informations d'identification dans le code, créez une instance de la classe <xref:System.ServiceModel.ServiceHost> et spécifiez les informations d'identification appropriées à l'aide de la classe <xref:System.ServiceModel.Description.ServiceCredentials>, accessible par la propriété <xref:System.ServiceModel.ServiceHostBase.Credentials%2A>.  
   

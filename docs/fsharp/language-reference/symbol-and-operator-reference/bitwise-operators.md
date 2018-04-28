@@ -1,20 +1,17 @@
 ---
-title: "Opérateurs au niveau du bit (F#)"
-description: "Obtenir des informations sur les opérateurs de bits qui sont disponibles dans le langage de programmation F #."
-keywords: visual f#, f#, programmation fonctionnelle
+title: Opérateurs au niveau du bit (F#)
+description: 'Obtenir des informations sur les opérateurs de bits qui sont disponibles dans le langage de programmation F #.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 8a2c87f5-b4c7-47fe-8580-82c956f605e5
-ms.openlocfilehash: 61a8e6bafe97a229480c967a4afb5d2a256474c8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 4d5abff564a5d1dcbe52b99edf431ca10e442061
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="bitwise-operators"></a>Opérateurs au niveau du bit
 
@@ -23,7 +20,7 @@ Cette rubrique décrit les opérateurs de bits qui sont disponibles dans le lang
 ## <a name="summary-of-bitwise-operators"></a>Résumé des opérateurs de bits
 Le tableau suivant décrit les opérateurs au niveau du bit qui sont pris en charge pour les types intégraux unboxed dans le langage F #.
 
-|Opérateur|Remarques|
+|Opérateur|Notes|
 |--------|-----|
 |`&&&`|Opérateur de bits AND. Dans le résultat ont la valeur 1 si et seulement si les bits correspondants dans les deux opérandes source sont 1.|
 |<code>&#124;&#124;&#124;</code>|Opérateur de bits OR. Dans le résultat ont la valeur 1 si des bits correspondants dans la source d’opérandes sont de 1.|

@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b7b9590096789af609e83d1a5ed736cf18e27700
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 2ad8a3a79967c42b8e8afdd9b9d796a7a1dfdd79
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="configuring-tracing"></a>Configuration du traçage
 Cette rubrique décrit comment activer le suivi, configurer des sources de suivi pour émettre des suivis et définir des niveaux de suivi, définir le suivi et la propagation d'activité afin de prendre en charge la corrélation de suivi de bout en bout, et définir des écouteurs de suivi pour accéder aux suivis.  
@@ -155,7 +155,7 @@ Cette rubrique décrit comment activer le suivi, configurer des sources de suivi
   
  Vous pouvez configurer un écouteur de suivi personnalisé pour envoyer des suivis sur le câble, par exemple à une base de données distante. En tant que responsable du déploiement d'applications, vous devez appliquer un contrôle d'accès approprié sur les journaux de suivi sur l'ordinateur distant.  
   
- Vous pouvez également configurer un écouteur de suivi par programmation. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)] [Comment : créer et initialiser les écouteurs de traçage](http://go.microsoft.com/fwlink/?LinkId=94648) et [création d’un TraceListener personnalisé](http://go.microsoft.com/fwlink/?LinkId=96239).  
+ Vous pouvez également configurer un écouteur de suivi par programmation. Pour plus d’informations, consultez [Comment : créer et initialiser les écouteurs de traçage](http://go.microsoft.com/fwlink/?LinkId=94648) et [création d’un TraceListener personnalisé](http://go.microsoft.com/fwlink/?LinkId=96239).  
   
 > [!CAUTION]
 >  `System.Diagnostics.XmlWriterTraceListener` n'étant pas thread-safe, la source de suivi peut verrouiller des ressources exclusivement lors de la sortie de suivis. Lorsque de nombreux threads sortent des suivis vers une source de suivi configurée pour utiliser cet écouteur, un conflit de ressource peut se produire, provoquant une dégradation significative des performances. Pour résoudre ce problème, vous devez implémenter un écouteur personnalisé thread-safe.  

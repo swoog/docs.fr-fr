@@ -1,20 +1,17 @@
 ---
 title: Enregistrements (F#)
-description: "Découvrez comment F # enregistrements représentent des agrégats simples de valeurs nommées, éventuellement avec des membres."
-keywords: visual f#, f#, programmation fonctionnelle
+description: 'Découvrez comment F # enregistrements représentent des agrégats simples de valeurs nommées, éventuellement avec des membres.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 3a3701ea-4308-4fa1-9b5c-b955c470f17a
-ms.openlocfilehash: 478ab74ad32cc6e53daffd1bd6229729149d2a1e
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 1270bf4eaeba99a15b0f81b5477f4c3b98644f66
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="records"></a>Enregistrements
 
@@ -114,7 +111,7 @@ Point is at (10.000000, 0.000000, -1.000000).
 ## <a name="differences-between-records-and-classes"></a>Différences entre les Classes et les enregistrements
 Champs d’enregistrement diffèrent des classes dans la mesure où ils sont automatiquement exposés en tant que propriétés, et ils sont utilisés lors de la création et de copie d’enregistrements. La construction d’enregistrement diffère également de construction de la classe. Dans un type d’enregistrement, vous ne pouvez pas définir un constructeur. Au lieu de cela, la syntaxe de construction décrite dans cette rubrique s’applique. Classes ont aucune relation directe entre les paramètres du constructeur, des champs et propriétés.
 
-Comme les types d’union et de structure, les enregistrements ont une sémantique d’égalité structurelle. Classes ont référence une sémantique d’égalité. L’exemple de code suivant illustre cela.
+Comme les types d’union et de structure, les enregistrements ont une sémantique d’égalité structurelle. Classes ont référence une sémantique d’égalité. L'exemple de code suivant illustre cette tâche.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1911.fs)]
 

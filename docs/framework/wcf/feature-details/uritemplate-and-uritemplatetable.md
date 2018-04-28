@@ -10,17 +10,17 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
-caps.latest.revision: ''
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ac77fe2c83828d2cc9473417d2b29b2d2e540923
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: b0fedb812cee5cfa1e4c2ff921a78beb2a6c1beb
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate et UriTemplateTable
 Les développeurs de sites Web ont besoin de pouvoir décrire la forme et la disposition des URI auxquels leurs services répondent. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] a ajouté deux nouvelles classes pour permettre aux développeurs de mieux contrôler leurs URI. <xref:System.UriTemplate> et <xref:System.UriTemplateTable> forment la base du moteur de répartition reposant sur les URI dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Ces classes peuvent également être utilisées seules, ce qui permet aux développeurs de tirer parti des modèles et du mécanisme du mappage des URI sans avoir à implémenter un service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
@@ -51,7 +51,7 @@ Les développeurs de sites Web ont besoin de pouvoir décrire la forme et la dis
   
  La propriété <xref:System.UriTemplate.PathSegmentVariableNames%2A> contient une collection des noms des variables utilisés dans les segments de chemin d'accès de la chaîne du modèle.  
   
- <xref:System.UriTemplate.IsEquivalentTo%28System.UriTemplate%29> prend <xref:System.UriTemplate> comme paramètre et retourne une valeur booléenne qui spécifie si les deux modèles sont équivalents. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] la section intitulée Équivalence des modèles, un peu plus loin dans cette rubrique.  
+ <xref:System.UriTemplate.IsEquivalentTo%28System.UriTemplate%29> prend <xref:System.UriTemplate> comme paramètre et retourne une valeur booléenne qui spécifie si les deux modèles sont équivalents. Pour plus d’informations, consultez la section de l’équivalence des modèles plus loin dans cette rubrique.  
   
  <xref:System.UriTemplate> est conçu pour utiliser tout schéma URI conforme à la grammaire d'URI HTTP. Les éléments suivants illustrent des modèles URI pris en charge.  
   
@@ -135,9 +135,9 @@ Les développeurs de sites Web ont besoin de pouvoir décrire la forme et la dis
   
 -   /{a}.{b}someLiteral{c}({d})/  
   
- Les exemples suivants illustrent des segments de chemin d'accès non valides.  
+ Les exemples suivants illustrent des segments de chemin d’accès non valides.  
   
--   /{} - Les variables doivent être nommées.  
+-   /{} -Variables doivent être nommés.  
   
 -   /{chaussure}{bateau} – Les variables doivent être séparées par un littéral.  
   
@@ -202,7 +202,7 @@ foreach (string key in m1.BoundVariables.AllKeys)
 ```  
   
 > [!NOTE]
->  Un URI tel que http://localhost:8000/// ne correspond pas au modèle indiqué dans le code précédent ; en revanche, un URI tel que http://localhost:8000/ lui correspond.  
+>  Un URI tel http://localhost:8000/// ne correspond pas à ce modèle dans le code précédent, toutefois un URI comme http://localhost:8000/ est.  
   
  Le code suivant montre comment les valeurs de variables par défaut sont gérées à la création d'un URI avec un modèle.  
   

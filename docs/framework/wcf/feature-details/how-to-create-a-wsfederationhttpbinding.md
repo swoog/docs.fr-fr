@@ -1,12 +1,13 @@
 ---
-title: "Comment : créer une liaison WSFederationHttpBinding"
-ms.custom: 
+title: 'Comment : créer une liaison WSFederationHttpBinding'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: e54897d7-aa6c-46ec-a278-b2430c8c2e10
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 22322c7b8cd03abcf3a98c49b9d43125b37d956d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8962564bbefc3f43261a2979ae9765369b211f15
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-create-a-wsfederationhttpbinding"></a>Comment : créer une liaison WSFederationHttpBinding
 Dans [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], le <xref:System.ServiceModel.WSFederationHttpBinding> classe ([\<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) dans la configuration) fournit un mécanisme qui permet d’exposer un service fédéré. autrement dit, un service qui oblige les clients à s'authentifier à l'aide d'un jeton de sécurité émis par un service de jeton de sécurité. Cette rubrique montre comment installer <xref:System.ServiceModel.WSFederationHttpBinding> dans le code et la configuration. Une fois la liaison créée, vous pouvez installer un point de terminaison pour utiliser cette liaison.  
@@ -44,9 +46,9 @@ Dans [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], le <xref:System.Se
   
      Si aucun type de jeton n'est spécifié, les clients génèrent des jetons RST (Request Security Token) WS-Trust sans l'URI d'un type de jeton, et les services attendent l'authentification du client à l'aide d'un jeton SAML (Security Assertions Markup Language) 1.1 par défaut.  
   
-     L'URI d'un jeton SAML 1.1 est "http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1".  
+     L’URI d’un jeton SAML 1.1 est «http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1».  
   
-4.  Facultatif. Sur les services fédérés, affectez à la propriété <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerMetadataAddress%2A> l'URL de métadonnées d'un service de jeton de sécurité. Le point de terminaison de métadonnées permet aux clients du service de sélectionner une paire liaison/point de terminaison appropriée, si le service est configuré pour publier des métadonnées. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]publication de métadonnées, consultez [publication des métadonnées](../../../../docs/framework/wcf/feature-details/publishing-metadata.md).  
+4.  Facultatif. Sur les services fédérés, affectez à la propriété <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerMetadataAddress%2A> l'URL de métadonnées d'un service de jeton de sécurité. Le point de terminaison de métadonnées permet aux clients du service de sélectionner une paire liaison/point de terminaison appropriée, si le service est configuré pour publier des métadonnées. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] publication de métadonnées, consultez [publication des métadonnées](../../../../docs/framework/wcf/feature-details/publishing-metadata.md).  
   
  Vous pouvez également définir d’autres propriétés, y compris le type de clé utilisé comme clé de vérification dans le jeton émis, la suite algorithmique à utiliser entre le client et le service, l’option de négocier ou de spécifier explicitement les informations d’identification du service, toutes les revendications spécifiques que le service s’attend à trouver dans le jeton émis et tous les éléments XML supplémentaires qui doivent être ajoutés à la demande que le client envoie au service de jeton de sécurité.  
   
@@ -63,7 +65,7 @@ Dans [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], le <xref:System.Se
   
 4.  Définir le <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedKeyType%2A> propriété <xref:System.IdentityModel.Tokens.SecurityKeyType> `SymmetricKey` ou.`AsymmetricKey` selon les besoins.  
   
-5.  Affectez la valeur appropriée à la propriété <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedTokenType%2A>. Si aucune valeur n'est définie, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] a la valeur par défaut "http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1", qui indique des jetons SAML 1.1.  
+5.  Affectez la valeur appropriée à la propriété <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedTokenType%2A>. Si aucune valeur n’est définie, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] par défaut est «http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1», ce qui indique des jetons SAML 1.1.  
   
 6.  Requis sur le client si aucun émetteur local n'est spécifié ; facultatif sur le service. Créez un <xref:System.ServiceModel.EndpointAddress> qui contient les informations d'adresse et d'identité du service de jeton de sécurité et assignez l'instance <xref:System.ServiceModel.EndpointAddress> à la propriété <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerAddress%2A>.  
   
@@ -99,9 +101,9 @@ Dans [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], le <xref:System.Se
   
 11. Facultatif. Ajoutez un élément enfant `<identity>` et spécifiez l'identité du service de jeton de sécurité.  
   
-12. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Identité et authentification de service](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+12. Pour plus d’informations, consultez [l’identité du Service et l’authentification](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
-13. Requis sur le client si aucun émetteur local n'est spécifié ; non utilisé sur le service. Créer un [ \<liaison >](../../../../docs/framework/misc/binding.md) élément dans la section des liaisons qui peut être utilisée pour communiquer avec le service de jeton de sécurité. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Création d’une liaison, consultez [Comment : spécifier une liaison de Service dans la Configuration](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
+13. Requis sur le client si aucun émetteur local n'est spécifié ; non utilisé sur le service. Créer un [ \<liaison >](../../../../docs/framework/misc/binding.md) élément dans la section des liaisons qui peut être utilisée pour communiquer avec le service de jeton de sécurité. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Création d’une liaison, consultez [Comment : spécifier une liaison de Service dans la Configuration](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
   
 14. Spécifiez la liaison créée à l'étape précédente en définissant les attributs `binding` et `bindingConfiguration` de l'élément `<issuer>`.  
   

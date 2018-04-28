@@ -1,20 +1,17 @@
 ---
 title: Génériques (F#)
 description: 'Découvrez comment utiliser les fonctions F # génériques et types, qui vous permettent d’écrire du code qui fonctionne avec un large éventail de types sans avoir à répéter le code.'
-keywords: visual f#, f#, programmation fonctionnelle
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: a9f2e2ee-bcb1-4ce3-8531-850aa183040f
-ms.openlocfilehash: e7a5712fddf4d372d1ada86927f50e394a59a410
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 0e5c7ad59f0e4d278f478e9fd8e6da70a13aba02
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="generics"></a>Génériques
 
@@ -37,7 +34,7 @@ method-body
 type type-name<type-parameters> type-definition
 ```
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 La déclaration d’un type ou d’une fonction explicitement générique s’apparente considérablement à celle d’un type ou d’une fonction non générique, sauf pour la spécification (et l’utilisation) des paramètres de type (entre crochets pointus après le nom du type ou de la fonction).
 
 Les déclarations sont souvent implicitement génériques. Si vous ne spécifiez pas complètement le type de tous les paramètres utilisés pour composer un type ou une fonction, le compilateur tente de déduire le type de chaque paramètre, valeur et variable du code que vous écrivez. Pour plus d’informations, consultez [Inférence de type](../type-inference.md). Si le code de votre type ou fonction n’exerce pas de contrainte sur les types de paramètres, le type ou la fonction est implicitement générique. Le terme « *généralisation automatique* » désigne ce processus. La généralisation automatique présente des limites. Par exemple, si le compilateur F# ne parvient pas à déduire les types d’une construction générique, il signale une erreur qui fait référence à une restriction appelée « *restriction de valeur* ». Dans ce cas, vous devrez peut-être ajouter des annotations de type. Pour plus d’informations sur la généralisation automatique et sur la restriction de valeur, ainsi que sur la modification de votre code pour traiter le problème, consultez [Généralisation automatique](automatic-generalization.md).
@@ -70,7 +67,7 @@ Vous pouvez également rendre une fonction générique en déclarant expliciteme
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1703.fs)]
     
 ## <a name="using-generic-constructs"></a>Utilisation de constructions génériques
-Quand vous utilisez des fonctions ou des méthodes génériques, il est possible que vous n’ayez pas à spécifier les arguments de type. Le compilateur utilise l’inférence de type pour déduire les arguments de type appropriés. Si une ambigüité persiste, vous pouvez fournir des arguments de type entre crochets pointus, en prenant soin de séparer les différents arguments de type à l’aide de virgules.
+Quand vous utilisez des fonctions ou des méthodes génériques, il est possible que vous n’ayez pas à spécifier les arguments de type. Le compilateur utilise l’inférence de type pour déduire les arguments de type appropriés. S’il existe toujours une ambiguïté, vous pouvez fournir des arguments de type figurant entre crochets, pour séparer plusieurs arguments de type avec des virgules.
 
 Le code suivant présente l’utilisation des fonctions définies aux sections précédentes.
 

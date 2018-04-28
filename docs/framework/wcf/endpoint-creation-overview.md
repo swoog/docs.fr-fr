@@ -1,13 +1,13 @@
 ---
-title: "Vue d'ensemble de la création de points de terminaison"
-ms.custom: 
+title: Vue d'ensemble de la création de points de terminaison
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], overview
 ms.assetid: f4dce0fb-6f54-47e6-8054-86d7f574b91c
-caps.latest.revision: 
+caps.latest.revision: 40
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: fa20edd8fa43fb1e6a28f7b1ec18f83fedd96bca
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3f7e12f3a6c5d722b2eda1eaaeb390ee3284a70e
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="endpoint-creation-overview"></a>Vue d'ensemble de la création de points de terminaison
 Toutes les communications avec un [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] service s’effectue via le *points de terminaison* du service. Les points de terminaison fournissent aux clients l'accès aux fonctionnalités offertes par un service [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Cette section décrit la structure d'un point de terminaison et explique comment définir un point de terminaison dans la configuration et dans le code.  
@@ -33,11 +33,11 @@ Toutes les communications avec un [!INCLUDE[indigo1](../../../includes/indigo1-m
 ## <a name="the-structure-of-an-endpoint"></a>Structure d'un point de terminaison  
  Chaque point de terminaison contient une adresse qui indique où rechercher le point de terminaison, une liaison qui spécifie le mode de communication d’un client avec le point de terminaison, et un contrat qui identifie les méthodes disponibles.  
   
--   **Adresse**. L'adresse identifie le point de terminaison de manière unique et indique aux consommateurs potentiels l'emplacement du service. Elle est représentée dans le modèle objet [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] par l'adresse <xref:System.ServiceModel.EndpointAddress> qui contient un URI (Uniform Resource Identifier) et les propriétés d'adresse qui incluent une identité, certains éléments WSDL (Web Services Description Language) et une collection d'en-têtes facultatifs. Les en-têtes facultatifs fournissent des données d'adressage détaillées supplémentaires pour identifier ou interagir avec le point de terminaison. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Spécification d’une adresse de point de terminaison](../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
+-   **Adresse**. L'adresse identifie le point de terminaison de manière unique et indique aux consommateurs potentiels l'emplacement du service. Elle est représentée dans le modèle objet [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] par l'adresse <xref:System.ServiceModel.EndpointAddress> qui contient un URI (Uniform Resource Identifier) et les propriétés d'adresse qui incluent une identité, certains éléments WSDL (Web Services Description Language) et une collection d'en-têtes facultatifs. Les en-têtes facultatifs fournissent des données d'adressage détaillées supplémentaires pour identifier ou interagir avec le point de terminaison. Pour plus d’informations, consultez [spécification d’une adresse de point de terminaison](../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
   
--   **Liaison**. La liaison spécifie le mode de communication avec le point de terminaison. La liaison spécifie comment le point de terminaison communique avec le monde, y compris quel protocole de transport utiliser (par exemple, TCP ou HTTP), quel encodage utiliser pour les messages (par exemple, texte ou binaire), et quelles exigences de sécurité sont nécessaires (par exemple, SSL [Secure Sockets Layer] ou la sécurité des messages SOAP). [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][à l’aide de liaisons pour configurer les Clients et Services](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md).  
+-   **Liaison**. La liaison spécifie le mode de communication avec le point de terminaison. La liaison spécifie comment le point de terminaison communique avec le monde, y compris quel protocole de transport utiliser (par exemple, TCP ou HTTP), quel encodage utiliser pour les messages (par exemple, texte ou binaire), et quelles exigences de sécurité sont nécessaires (par exemple, SSL [Secure Sockets Layer] ou la sécurité des messages SOAP). Pour plus d’informations, consultez [à l’aide de liaisons pour configurer les Services et les Clients](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md).  
   
--   **Contrat de service**. Le contrat de service définit les fonctionnalités que le point de terminaison expose au client. Un contrat spécifie les opérations qu'un client peut appeler, la forme du message et le type de paramètres d'entrée ou de données requis pour appeler l'opération, ainsi que le type du traitement ou le message de réponse auquel le client peut s'attendre. Trois types de contrats de base correspondent aux modèles d'échange de messages (MEPs, message exchange patterns) de base : datagramme (unidirectionnel), demande/réponse et duplex (bidirectionnel). Le contrat de service peut aussi employer des contrats de données et de message pour requérir des types de données spécifiques et des formats de message lors de son accès. [!INCLUDE[crabout](../../../includes/crabout-md.md)]comment définir un contrat de service, consultez [concevoir des contrats de Service](../../../docs/framework/wcf/designing-service-contracts.md). Notez qu'un client peut aussi devoir implémenter un contrat défini par le service, appelé un contrat de rappel, pour recevoir des messages du service dans un MEP duplex. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Services duplex](../../../docs/framework/wcf/feature-details/duplex-services.md).  
+-   **Contrat de service**. Le contrat de service définit les fonctionnalités que le point de terminaison expose au client. Un contrat spécifie les opérations qu'un client peut appeler, la forme du message et le type de paramètres d'entrée ou de données requis pour appeler l'opération, ainsi que le type du traitement ou le message de réponse auquel le client peut s'attendre. Trois types de contrats de base correspondent aux modèles d'échange de messages (MEPs, message exchange patterns) de base : datagramme (unidirectionnel), demande/réponse et duplex (bidirectionnel). Le contrat de service peut aussi employer des contrats de données et de message pour requérir des types de données spécifiques et des formats de message lors de son accès. [!INCLUDE[crabout](../../../includes/crabout-md.md)] comment définir un contrat de service, consultez [concevoir des contrats de Service](../../../docs/framework/wcf/designing-service-contracts.md). Notez qu'un client peut aussi devoir implémenter un contrat défini par le service, appelé un contrat de rappel, pour recevoir des messages du service dans un MEP duplex. Pour plus d’informations, consultez [Services Duplex](../../../docs/framework/wcf/feature-details/duplex-services.md).  
   
  Le point de terminaison pour un service peut être spécifié de manière impérative en utilisant le code ou de façon déclarative par la configuration. Si aucun point de terminaison n'est spécifié, le runtime fournit les points de terminaison par défaut en ajoutant un point de terminaison par défaut pour chaque adresse de base pour chaque contrat de service implémenté par le service. La définition de points de terminaison dans le code est généralement peu pratique car les liaisons et les adresses pour un service déployé sont en général différentes de celles utilisées au cours du développement du service. En général, il est plus pratique de définir des points de terminaison de service à l'aide de la configuration plutôt que du code. Le fait de conserver les informations de liaison et d'adressage hors du code leur permet de changer sans devoir recompiler ou de redéployer l'application.  
   
@@ -51,7 +51,7 @@ Toutes les communications avec un [!INCLUDE[indigo1](../../../includes/indigo1-m
   
 -   Implémentez un service `Echo` du type défini par le contrat `IEcho`.  
   
--   Spécifiez une adresse de point de terminaison http://localhost:8000/Echo pour le service.  
+-   Spécifiez une adresse de point de terminaison de http://localhost:8000/Echo pour le service.  
   
 -   Configurez le service `Echo` à l'aide d'une liaison <xref:System.ServiceModel.WSHttpBinding>.  
   
@@ -209,7 +209,7 @@ Dim echoUri As Uri = New Uri("http://localhost:8000/")
 serviceHost.Open()  
 ```  
   
- Si des points de terminaison sont fournis explicitement, les points de terminaison par défaut peuvent toujours être ajoutés en appelant <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> sur le <xref:System.ServiceModel.ServiceHost> avant d'appeler <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>. [!INCLUDE[crabout](../../../includes/crabout-md.md)]par défaut des points de terminaison, consultez [Configuration simplifiée](../../../docs/framework/wcf/simplified-configuration.md) et [simplifié la Configuration des Services WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+ Si des points de terminaison sont fournis explicitement, les points de terminaison par défaut peuvent toujours être ajoutés en appelant <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> sur le <xref:System.ServiceModel.ServiceHost> avant d'appeler <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>. [!INCLUDE[crabout](../../../includes/crabout-md.md)] par défaut des points de terminaison, consultez [Configuration simplifiée](../../../docs/framework/wcf/simplified-configuration.md) et [simplifié la Configuration des Services WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Implémentation de contrats de service](../../../docs/framework/wcf/implementing-service-contracts.md)

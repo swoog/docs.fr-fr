@@ -1,24 +1,26 @@
 ---
-title: "Sécurisation des messages à l'aide de la sécurité de message"
-ms.custom: 
+title: Sécurisation des messages à l'aide de la sécurité de message
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: be727fe2b69258a058ba99dc8aa40ae148d3dd99
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: be9d55e508308f23e70be81ac0d4fe0dfd0ea9cd
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="securing-messages-using-message-security"></a>Sécurisation des messages à l'aide de la sécurité de message
 Cette section présente la sécurité de message [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] lors de l'utilisation de <xref:System.ServiceModel.NetMsmqBinding>.  
@@ -52,7 +54,7 @@ Cette section présente la sécurité de message [!INCLUDE[indigo2](../../../../
   
  Étant donné la nature déconnectée des files d'attente, le client et le service peuvent ne pas être en ligne au même moment. Par conséquent, le client et le service doivent échanger des certificats hors bande. En particulier, le client, du fait qu'il détient le certificat du service (lequel peut être chaîné à une autorité de certification) dans son magasin approuvé, doit croire qu'il communique avec le service correct. Pour authentifier le client, le service utilise le certificat X.509 joint au message pour le mettre en correspondance avec le certificat dans son magasin afin de vérifier l'authenticité du client. De nouveau, le certificat doit être chaîné à une autorité de certification.  
   
- Sur un ordinateur exécutant Windows, les certificats sont conservés dans plusieurs types de magasins. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]les magasins différents, consultez [des magasins de certificats](http://go.microsoft.com/fwlink/?LinkId=87787).  
+ Sur un ordinateur exécutant Windows, les certificats sont conservés dans plusieurs types de magasins. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] les magasins différents, consultez [des magasins de certificats](http://go.microsoft.com/fwlink/?LinkId=87787).  
   
 ### <a name="windows"></a>Windows  
  Le type d'informations d'identification de message Windows utilise le protocole Kerberos.  
@@ -63,7 +65,7 @@ Cette section présente la sécurité de message [!INCLUDE[indigo2](../../../../
   
  Notez que lors de l'utilisation de ce type d'informations d'identification, le service doit s'exécuter sous le compte SERVICE.  
   
- Le protocole Kerberos est utilisé par défaut lors du choix des informations d'identification d'un message. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Explorant Kerberos, le protocole de sécurité distribuée dans Windows 2000](http://go.microsoft.com/fwlink/?LinkId=87790).  
+ Le protocole Kerberos est utilisé par défaut lors du choix des informations d'identification d'un message. Pour plus d’informations, consultez [Explorer de Kerberos, le protocole pour la sécurité distribuée dans Windows 2000](http://go.microsoft.com/fwlink/?LinkId=87790).  
   
 ### <a name="username-password"></a>Username Password  
  À l'aide de cette propriété, le client peut s'authentifier auprès du serveur en utilisant un mot de passe de nom d'utilisateur dans l'en-tête de sécurité du message.  

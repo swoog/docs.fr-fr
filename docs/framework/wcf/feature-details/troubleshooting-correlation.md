@@ -1,24 +1,26 @@
 ---
-title: "Dépannage de la corrélation"
-ms.custom: 
+title: Dépannage de la corrélation
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 98003875-233d-4512-a688-4b2a1b0b5371
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 76b6178d3190165e711f46af60a6541a82ad0bd7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5bdf111e6802692aef893cf9dcae88f0f51aa467
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="troubleshooting-correlation"></a>Dépannage de la corrélation
 La corrélation est utilisée pour établir une relation entre des messages de service de workflow et avec l'instance de workflow appropriée, mais si elle n'est pas proprement configurée, les messages ne seront pas reçus et les applications ne fonctionneront pas correctement. Cette rubrique fournit une vue d'ensemble de plusieurs méthodes de résolution des problèmes de corrélation et présente certains problèmes courants qui peuvent se produire lorsque vous utilisez la corrélation.  
@@ -89,7 +91,7 @@ host.WorkflowExtensions.Add(new ConsoleTrackingParticipant());
   
  Un participant de suivi tel que ConsoleTrackingParticipant est utile pour les services de workflow auto-hébergés qui ont une fenêtre de console. Pour un service hébergé sur le Web, un participant de suivi qui enregistre les informations de suivi à une banque de données doit être utilisé, telles que la fonction intégrée <xref:System.Activities.Tracking.EtwTrackingParticipant>, ou à un participant de suivi personnalisé qui enregistre les informations dans un fichier, tel que le `TextWriterTrackingParticpant` à partir de la [ Suivi à l’aide d’un fichier texte](../../../../docs/framework/windows-workflow-foundation/samples/tracking-using-a-text-file.md) exemple.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]le suivi et la configuration du suivi pour un service de flux de travail hébergé sur le Web, consultez [suivi et traçage de Workflow](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md), [configuration du suivi d’un flux de travail](../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)et le [suivi &#91; Exemples WF &#93; ](../../../../docs/framework/windows-workflow-foundation/samples/tracking.md) exemples.  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] le suivi et la configuration du suivi pour un service de flux de travail hébergé sur le Web, consultez [suivi et traçage de Workflow](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md), [configuration du suivi d’un flux de travail](../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)et le [suivi &#91;WF Exemples&#93; ](../../../../docs/framework/windows-workflow-foundation/samples/tracking.md) exemples.  
   
 ## <a name="use-wcf-tracing"></a>Utiliser le suivi WCF  
  Le suivi WCF fournit un suivi du flux de messages à destination et en provenance d'un service de workflow. Ces informations de suivi sont utiles dans la résolution des problèmes de corrélation, en particulier lorsqu'il s'agit de corrélation basée sur le contenu. Pour activer le suivi, spécifiez les écouteurs de suivi voulus dans la section `system.diagnostics` du fichier `web.config` si le service de workflow est hébergé sur le Web ou du fichier `app.config` si le service de workflow est auto-hébergé. Pour inclure le contenu des messages dans le fichier de trace, spécifiez `true` pour `logEntireMessage` dans l'élément `messageLogging` de la section `diagnostics` de `system.serviceModel`. Dans l'exemple suivant, les informations de suivi, notamment le contenu des messages, sont configurées pour être écrites dans un fichier nommé `service.svclog`.  
@@ -127,7 +129,7 @@ host.WorkflowExtensions.Add(new ConsoleTrackingParticipant());
 </configuration>  
 ```  
   
- Pour afficher les informations de trace qui sont contenues dans `service.svclog`, le [outil Service Trace Viewer (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) est utilisé. Celui-ci est particulièrement utile pour résoudre les problèmes de corrélation basée sur le contenu, car vous pouvez consulter le contenu des messages, voir exactement ce qui est passé, et si cela correspond au <xref:System.ServiceModel.CorrelationQuery> de la corrélation basée sur le contenu. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]WCF le traçage, consultez [outil Service Trace Viewer (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md), [configuration du traçage](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md), et [à l’aide de suivi pour résoudre les problèmes de votre Application](../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).  
+ Pour afficher les informations de trace qui sont contenues dans `service.svclog`, le [outil Service Trace Viewer (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) est utilisé. Celui-ci est particulièrement utile pour résoudre les problèmes de corrélation basée sur le contenu, car vous pouvez consulter le contenu des messages, voir exactement ce qui est passé, et si cela correspond au <xref:System.ServiceModel.CorrelationQuery> de la corrélation basée sur le contenu. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] WCF le traçage, consultez [outil Service Trace Viewer (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md), [configuration du traçage](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md), et [à l’aide de suivi pour résoudre les problèmes de votre Application](../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).  
   
 ## <a name="common-context-exchange-correlation-issues"></a>Problèmes courants rencontrés avec la corrélation basée sur l'échange de contextes  
  Certains types de corrélation requièrent pour fonctionner correctement l'utilisation d'un type spécifique de liaison. C'est par exemple le cas de la corrélation demande-réponse, qui requiert une liaison bidirectionnelle telle que <xref:System.ServiceModel.BasicHttpBinding> et de la corrélation basée sur l'échange de contextes, qui requiert une liaison basée sur le contexte, telle que <xref:System.ServiceModel.BasicHttpContextBinding>. La plupart des liaisons prennent en charge des opérations bidirectionnelles, aussi cela ne constitue-t-il pas un problème courant pour la corrélation demande-réponse, mais il n'existe qu'une poignée de liaisons basées sur le contexte, notamment <xref:System.ServiceModel.BasicHttpContextBinding>, <xref:System.ServiceModel.WSHttpContextBinding> et <xref:System.ServiceModel.NetTcpContextBinding>. Si l'une de ces liaisons n'est pas utilisée, l'appel initial à un service de workflow réussira, mais les appels suivants échoueront avec le <xref:System.ServiceModel.FaultException> suivant :  
@@ -141,7 +143,7 @@ supports the context protocol and has a valid context initialized.
   
  Les informations de contexte utilisées pour la corrélation de contexte peuvent être retournées par le <xref:System.ServiceModel.Activities.SendReply> à l'activité <xref:System.ServiceModel.Activities.Receive> qui initialise la corrélation de contexte lors de l'utilisation d'une opération bidirectionnelle, ou elles peuvent être spécifiées par l'appelant si l'opération est unidirectionnelle. Si le contexte n'est pas envoyé par l'appelant ou retourné par le service de workflow, le <xref:System.ServiceModel.FaultException> décrit précédemment sera retourné lorsqu'une opération suivante sera appelée.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Échange de contexte](../../../../docs/framework/wcf/feature-details/context-exchange-correlation.md).  
+ Pour plus d’informations, consultez [échange de contexte](../../../../docs/framework/wcf/feature-details/context-exchange-correlation.md).  
   
 ## <a name="common-request-reply-correlation-issues"></a>Problèmes courants rencontrés avec la corrélation demande-réponse  
  Corrélation demande-réponse est utilisée avec un <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> paire pour implémenter une opération bidirectionnelle dans un service de workflow et avec un <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> paire qui appelle une opération bidirectionnelle dans un autre site Web service. Lors de l'appel d'une opération bidirectionnelle dans un service WCF, le service peut être soit un service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] basé sur un code impératif traditionnel, soit un service de workflow. Pour utiliser la corrélation demande-réponse, une liaison bidirectionnelle doit être utilisée, telle que <xref:System.ServiceModel.BasicHttpBinding>, et les opérations doivent être bidirectionnelles.  
@@ -176,7 +178,7 @@ SendReply ReplyToStartOrder = new SendReply
   
  Persistance n’est pas autorisée entre un <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> paire ou un <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> paire. Une zone de non-persistance valide tant que les deux activités ne sont pas terminées, est créée. Si une activité, telle qu'une activité de délai, se trouve dans cette zone de non-persistance et cause une inactivité du workflow, ce dernier ne sera pas rendu persistant même si l'hôte est configuré pour rendre persistants les workflows lorsqu'ils deviennent inactifs. Si une activité, telle qu'une activité persistante, tente de persister de façon explicite dans la zone de non-persistance, une exception irrécupérable est levée, le workflow est abandonné et un <xref:System.ServiceModel.FaultException> est retourné à l'appelant. Le message d'exception irrécupérable est « System.InvalidOperationException : Les activités Persist ne peuvent pas être contenues au sein de blocs sans persistance ». Cette exception n'est pas retournée à l'appelant mais peut-être observée si le suivi est activé. Le message du <xref:System.ServiceModel.FaultException> retourné à l'appelant est « Impossible d'effectuer l'opération car WorkflowInstance '5836145b-7da2-49d0-a052-a49162adeab6' a terminé ».  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]corrélation demande-réponse, consultez [demande-réponse](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] corrélation demande-réponse, consultez [demande-réponse](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md).  
   
 ## <a name="common-content-correlation-issues"></a>Problèmes courants rencontrés avec la corrélation basée sur le contenu  
  La corrélation basée sur le contenu est utilisée lorsqu'un service de workflow reçoit plusieurs messages et dispose de quelques données dans les messages échangés qui identifient l'instance souhaitée. La corrélation basée sur le contenu utilise ces données dans les messages, par exemple un numéro de client ou un ID de commande, pour router les messages vers l'instance de workflow appropriée. Cette section décrit plusieurs problèmes courants qui peuvent se produire lors de l'utilisation de la corrélation basée sur le contenu.  
@@ -261,4 +263,4 @@ sm:header()/tempuri:CartId
 </Receive>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Corrélation basée sur le contenu, consultez [basée sur le contenu](../../../../docs/framework/wcf/feature-details/content-based-correlation.md) et [corrélés de calculatrice](../../../../docs/framework/windows-workflow-foundation/samples/correlated-calculator.md) exemple.
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Corrélation basée sur le contenu, consultez [basée sur le contenu](../../../../docs/framework/wcf/feature-details/content-based-correlation.md) et [corrélés de calculatrice](../../../../docs/framework/windows-workflow-foundation/samples/correlated-calculator.md) exemple.

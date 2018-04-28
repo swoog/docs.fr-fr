@@ -1,33 +1,35 @@
 ---
-title: "&lt;clientCertificate&gt;, élément de &lt;clientCredentials&gt;"
-ms.custom: 
+title: '&lt;clientCertificate&gt;, élément de &lt;clientCredentials&gt;'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3b3fa000-3434-4142-a178-11903bdd2c5d
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1b5603ad7402e46f8b977fe21b0ad1d43c4bfbf8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9c5616aab5cb54e94a62370ad682eaa55eceb8ef
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="ltclientcertificategt-of-ltclientcredentialsgt-element"></a>&lt;clientCertificate&gt;, élément de &lt;clientCredentials&gt;
 Définit un certificat X.509 utilisé pour authentifier un client à un service.  
   
- \<système. ServiceModel >  
+ \<system.ServiceModel>  
 \<comportements >  
 \<endpointBehaviors >  
 \<comportement >  
-\<clientCredentials >  
+\<clientCredentials>  
 \<clientCertificate >  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -59,10 +61,10 @@ X509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|Indique les informations d'identification utilisées pour authentifier le client auprès d'un service.|  
+|[\<clientCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|Indique les informations d'identification utilisées pour authentifier le client auprès d'un service.|  
   
 ## <a name="remarks"></a>Notes  
- Cet élément de configuration spécifie le certificat utilisé pour authentifier le client avec cet élément. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][Comment : spécifier des valeurs d’informations d’identification de Client](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
+ Cet élément de configuration spécifie le certificat utilisé pour authentifier le client avec cet élément. Pour plus d’informations, consultez [Comment : spécifier les valeurs d’informations d’identification Client](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.ServiceModel.Configuration.ClientCredentialsElement>  

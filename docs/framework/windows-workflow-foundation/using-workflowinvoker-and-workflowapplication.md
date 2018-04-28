@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 90999867ee1dd678e279832d73d7ecaaa416fe7b
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: af520c1520f605d34076e6ecabdf84deb52fbfd0
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-workflowinvoker-and-workflowapplication"></a>Utilisation de WorkflowInvoker et WorkflowApplication
 Windows Workflow Foundation (WF) fournit plusieurs méthodes d’hébergement de workflows. <xref:System.Activities.WorkflowInvoker> offre un moyen simple pour appeler un workflow comme s'il s'agissait d'un appel de méthode et ne peut être utilisé que pour les workflows qui n'utilisent pas la persistance. <xref:System.Activities.WorkflowApplication> fournit un modèle plus riche pour exécuter des workflows, qui inclut la notification des événements de cycle de vie, le contrôle d'exécution, la modification de signet et la persistance. <xref:System.ServiceModel.Activities.WorkflowServiceHost> fournit la prise en charge des activités de messagerie et est principalement utilisé avec les services de workflow. Cette rubrique vous présente l'hébergement de workflow avec <xref:System.Activities.WorkflowInvoker> et <xref:System.Activities.WorkflowApplication>. [!INCLUDE[crabout](../../../includes/crabout-md.md)] hébergement de workflows avec <xref:System.ServiceModel.Activities.WorkflowServiceHost>, consultez [Services de Workflow](../../../docs/framework/wcf/feature-details/workflow-services.md) et [d’hébergement de la vue d’ensemble des Services de Workflow](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md).  
@@ -35,7 +35,7 @@ Windows Workflow Foundation (WF) fournit plusieurs méthodes d’hébergement de
 > [!NOTE]
 >  <xref:System.TimeoutException> est levée uniquement si l'intervalle de délai d'attente est écoulé et que le workflow devient inactif pendant l'exécution. Un flux de travail dont le délai d'exécution dépasse l'intervalle de délai d'attente spécifié se termine correctement s'il ne devient pas inactif.  
   
- <xref:System.Activities.WorkflowInvoker> fournit également des versions asynchrones de la méthode invoke. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] <xref:System.Activities.WorkflowInvoker.InvokeAsync%2A> et <xref:System.Activities.WorkflowInvoker.BeginInvoke%2A>.  
+ <xref:System.Activities.WorkflowInvoker> fournit également des versions asynchrones de la méthode invoke. Pour plus d’informations, consultez <xref:System.Activities.WorkflowInvoker.InvokeAsync%2A> et <xref:System.Activities.WorkflowInvoker.BeginInvoke%2A>.  
   
 ### <a name="setting-input-arguments-of-a-workflow"></a>Définition des arguments d’entrée d’un workflow  
  Les données peuvent être passées dans un workflow à l'aide d'un dictionnaire de paramètres d'entrée, indexés par nom d'argument, qui correspondent aux arguments d'entrée du workflow. Dans cet exemple, un <xref:System.Activities.Statements.WriteLine> est appelé et la valeur de son argument <xref:System.Activities.Statements.WriteLine.Text%2A> est spécifiée à l'aide du dictionnaire de paramètres d'entrée.  

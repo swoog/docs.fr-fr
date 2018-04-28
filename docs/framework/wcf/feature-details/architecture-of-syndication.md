@@ -1,24 +1,26 @@
 ---
 title: Architecture de syndication
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ed4ca86e-e3d8-4acb-87aa-1921fbc353be
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 22df793bd5873d6f69c3a2e86e96d4a1cefcff0d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: bcb64a4e03cae5e6186754dacb87e17a22d13001
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="architecture-of-syndication"></a>Architecture de syndication
 L'API de syndication est conçue pour fournir un modèle de programmation neutre en ce qui concerne le format qui autorise l'écriture du contenu syndiqué sur le fil dans divers formats. Le modèle de données abstrait inclut les classes suivantes :  
@@ -41,7 +43,7 @@ L'API de syndication est conçue pour fournir un modèle de programmation neutre
   
  [!code-csharp[S_UE_SyndicationBoth#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_syndicationboth/cs/service.cs#0)]  
   
- La prise en charge de la syndication est construite sur le modèle de programmation REST de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] qui définit la liaison <xref:System.ServiceModel.WebHttpBinding> utilisée conjointement à <xref:System.ServiceModel.Description.WebHttpBehavior> pour rendre les flux disponibles en tant que services. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]le [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modèle de programmation REST, consultez [HTTP Web WCF Programming Model Overview](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md).  
+ La prise en charge de la syndication est construite sur le modèle de programmation REST de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] qui définit la liaison <xref:System.ServiceModel.WebHttpBinding> utilisée conjointement à <xref:System.ServiceModel.Description.WebHttpBehavior> pour rendre les flux disponibles en tant que services. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] le [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modèle de programmation REST, consultez [HTTP Web WCF Programming Model Overview](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md).  
   
 > [!NOTE]
 >  La spécification Atom 1.0 permet de spécifier des fractions de seconde dans l'un de ses constructeurs Date. Lors de la sérialisation et de la désérialisation, l'implémentation [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]  ignore les fractions de seconde.  
@@ -86,7 +88,7 @@ L'API de syndication est conçue pour fournir un modèle de programmation neutre
   
 ## <a name="extensibility"></a>Extensibilité  
   
--   L'une des fonctionnalités clés de protocoles de syndication est l'extensibilité. Atom 1.0 et RSS 2.0 vous permettent d'ajouter aux flux de syndication des attributs et des éléments qui ne sont pas définis dans les spécifications. Le modèle de programmation de la syndication [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] offre deux moyens d'utiliser des attributs personnalisés et des extensions : la dérivation d'une nouvelle classe et l'accès faiblement typé. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Syndication extensibilité](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md).  
+-   L'une des fonctionnalités clés de protocoles de syndication est l'extensibilité. Atom 1.0 et RSS 2.0 vous permettent d'ajouter aux flux de syndication des attributs et des éléments qui ne sont pas définis dans les spécifications. Le modèle de programmation de la syndication [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] offre deux moyens d'utiliser des attributs personnalisés et des extensions : la dérivation d'une nouvelle classe et l'accès faiblement typé. Pour plus d’informations, consultez [Syndication extensibilité](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble de la syndication WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)  

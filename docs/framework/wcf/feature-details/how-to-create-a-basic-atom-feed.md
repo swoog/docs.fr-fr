@@ -1,27 +1,29 @@
 ---
-title: "Comment : créer un flux Atom de base"
-ms.custom: 
+title: 'Comment : créer un flux Atom de base'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6e0cacc1-9b11-4665-adb7-577a62626fd6
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 51a42e9b954fba7ccd58d74248fb65dc2b57a76b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 26e5bf0771e3b8d700efeaf4f63b9866534db68a
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-create-a-basic-atom-feed"></a>Comment : créer un flux Atom de base
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] vous permet de créer un service qui expose un flux de syndication. Cette rubrique explique comment créer un service de syndication qui expose un flux de syndication Atom.  
@@ -34,7 +36,7 @@ ms.lasthandoff: 12/22/2017
      [!code-vb[htAtomBasic#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatombasic/vb/program.vb#0)]  
   
     > [!NOTE]
-    >  Toutes les opérations du service qui appliquent <xref:System.ServiceModel.Web.WebGetAttribute> sont mappées aux demandes HTTP GET. Pour mapper votre opération à une méthode HTTP différente, utilisez <xref:System.ServiceModel.Web.WebInvokeAttribute> à la place. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Comment : créer un Service Web HTTP de WCF de base](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md).  
+    >  Toutes les opérations du service qui appliquent <xref:System.ServiceModel.Web.WebGetAttribute> sont mappées aux demandes HTTP GET. Pour mapper votre opération à une méthode HTTP différente, utilisez <xref:System.ServiceModel.Web.WebInvokeAttribute> à la place. Pour plus d’informations, consultez [Comment : créer un Service WCF Web HTTP de base](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md).  
   
 2.  Implémentez le contrat de service.  
   
@@ -75,9 +77,9 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="to-call-getblog-with-an-http-get"></a>Pour appeler GetBlog() avec un HTTP GET  
   
-1.  Ouvrez Internet Explorer, tapez l'URL suivante et appuyez sur ENTRÉE : http://localhost:8000/BlogService/GetBlog  
+1.  Ouvrez Internet Explorer, tapez l’URL suivante et appuyez sur ENTRÉE : http://localhost:8000/BlogService/GetBlog  
   
-     L'URL contient l'adresse de base du service (http://localhost:8000/BlogService), l'adresse relative du point de terminaison et l'opération de service à appeler.  
+     L’URL contient l’adresse de base du service (http://localhost:8000/BlogService), l’adresse relative du point de terminaison et l’opération de service à appeler.  
   
 ### <a name="to-call-getblog-from-code"></a>Pour appeler GetBlog() à partir d'un code  
   

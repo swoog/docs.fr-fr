@@ -1,32 +1,33 @@
 ---
 title: OperationScope
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 56206a21-1e63-422d-b92a-e5d8b713e707
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 837be2de516f604dd6869449d99df238fb6dbd24
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3bf92d7a726a53c5d625f31b0386e11c941cdde9
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="operationscope"></a>OperationScope
 Cet exemple montre comment les activités de messagerie, <xref:System.ServiceModel.Activities.Receive> et <xref:System.ServiceModel.Activities.SendReply>, peuvent être utilisées pour exposer une activité personnalisée existante en tant qu'opération dans un service de workflow. Cet exemple inclut une nouvelle activité personnalisée appelée `OperationScope`. Elle est destinée à faciliter le développement d'un service de workflow en permettant aux utilisateurs de créer le corps de leurs opérations séparément en tant qu'activités personnalisées et de les exposer facilement en tant qu'opérations de service à l'aide de l'activité `OperationScope`. Par exemple, une activité `Add` personnalisée que prend deux arguments `in` et qui retourne un argument `out` pourrait être exposée en tant qu'opération `Add` sur le service de workflow en le déposant dans un `OperationScope`.  
   
  L'étendue fonctionne en inspectant l'activité fournie comme étant son corps. Tous les arguments `in` non liés sont supposés être des entrées du message entrant. Tous les arguments `out`, qu'ils soient liés ou non, sont supposés être des sorties dans le message de réponse suivant. Le nom de l'opération exposée provient du nom complet de l'activité `OperationScope`. Le résultat final est que l'activité de corps est incluse dans un wrapper dans un <xref:System.ServiceModel.Activities.Receive> et un <xref:System.ServiceModel.Activities.SendReply> avec les paramètres provenant des messages liés aux arguments de l'activité.  
   
- Cet exemple expose un service de workflow à l'aide de points de terminaison HTTP. Pour s'exécuter, des listes de contrôle d'accès (ACL) d'URL appropriées doivent être ajoutées. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Configuration de HTTP et HTTPS](http://go.microsoft.com/fwlink/?LinkId=70353). L’exécution de la commande suivante à une invite de commandes avec élévation de privilèges ajoute les ACL appropriées (Vérifiez que votre domaine et le nom d’utilisateur sont substitués pour le domaine %\\%username%).  
+ Cet exemple expose un service de workflow à l'aide de points de terminaison HTTP. Pour s'exécuter, des listes de contrôle d'accès (ACL) d'URL appropriées doivent être ajoutées. Pour plus d’informations, consultez [configuration de HTTP et HTTPS](http://go.microsoft.com/fwlink/?LinkId=70353). L’exécution de la commande suivante à une invite de commandes avec élévation de privilèges ajoute les ACL appropriées (Vérifiez que votre domaine et le nom d’utilisateur sont substitués pour le domaine %\\%username%).  
   
- **netsh http ajouter urlacl url = http : / / + : 8000 / utilisateur = domaine %\\%UserName%**  
+ **netsh http ajouter les url urlacl =http://+:8000/ utilisateur = domaine %\\%UserName%**  
   
 ### <a name="to-run-the-sample"></a>Pour exécuter l'exemple  
   

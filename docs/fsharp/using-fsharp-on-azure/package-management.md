@@ -1,20 +1,17 @@
 ---
-title: "À l’aide de la gestion des packages avec F # pour Azure"
-description: "Permet de gérer les dépendances de F # Azure Paket ou Nuget"
-keywords: 'Visual f #, f #, fonctionnelle de programmation, .NET, .NET Core, Azure'
+title: 'À l’aide de la gestion des packages avec F # pour Azure'
+description: 'Permet de gérer les dépendances de F # Azure Paket ou Nuget'
 author: sylvanc
 ms.author: phcart
 ms.date: 09/20/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.topic: conceptual
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: dd32ef9c-5416-467e-9fa3-c9ee3bb08456
-ms.openlocfilehash: d1a807053f5c4c45492f206739922aacdf6d4122
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: da6938c6ee29292571f4269c68a9148c13738422
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="package-management-for-f-azure-dependencies"></a>Gestion des packages pour les dépendances F# Azure
 
@@ -22,7 +19,7 @@ Il est facile d’obtention de packages pour le développement Azure lorsque vou
 
 ## <a name="using-paket"></a>À l’aide de Paket
 
-Si vous utilisez [Paket](https://fsprojects.github.io/Paket/) comme gestionnaire de dépendance, vous pouvez utiliser la `paket.exe` outil pour ajouter des dépendances Azure. Exemple :
+Si vous utilisez [Paket](https://fsprojects.github.io/Paket/) comme gestionnaire de dépendance, vous pouvez utiliser la `paket.exe` outil pour ajouter des dépendances Azure. Par exemple :
 
     > paket add nuget WindowsAzure.Storage
 
@@ -48,7 +45,7 @@ Ou, pour le développement Mono :
 
 ## <a name="using-nuget"></a>À l’aide de Nuget
 
-Si vous utilisez [NuGet](https://www.nuget.org/) comme gestionnaire de dépendance, vous pouvez utiliser la `nuget.exe` outil pour ajouter des dépendances Azure. Exemple :
+Si vous utilisez [NuGet](https://www.nuget.org/) comme gestionnaire de dépendance, vous pouvez utiliser la `nuget.exe` outil pour ajouter des dépendances Azure. Par exemple :
 
     > nuget install WindowsAzure.Storage -ExcludeVersion
 
@@ -74,7 +71,7 @@ Ou, pour le développement Mono :
 
 ## <a name="referencing-assemblies"></a>Référencement d'assemblys
 
-Pour utiliser vos packages dans votre script F #, vous devez référencer les assemblys inclus dans les packages à l’aide un `#r` la directive. Exemple :
+Pour utiliser vos packages dans votre script F #, vous devez référencer les assemblys inclus dans les packages à l’aide un `#r` la directive. Par exemple :
 
     > #r "packages/WindowsAzure.Storage/lib/net40/Microsoft.WindowsAzure.Storage.dll"
 

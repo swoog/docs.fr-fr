@@ -1,20 +1,17 @@
 ---
 title: Classes (F#)
-description: "Découvrez comment les Classes F # sont des types qui représentent des objets qui peuvent avoir des propriétés, méthodes et événements."
-keywords: visual f#, f#, programmation fonctionnelle
+description: 'Découvrez comment les Classes F # sont des types qui représentent des objets qui peuvent avoir des propriétés, méthodes et événements.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: d58679d5-7753-4b3b-a12f-6e9f00ed5ba3
-ms.openlocfilehash: 2a73baba1f7c1b0d3bd09d22c9d6d9f0524daef3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 0bfb45b6481576729bfe8d4bd016fb151757660a
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="classes"></a>Classes
 
@@ -39,7 +36,7 @@ and [access-modifier] type-name2 ...
 ...
 ```
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 Les classes représentent la description fondamentale des types d’objet .NET ; la classe est le concept de type principal qui prend en charge la programmation orientée objet en F #.
 
 Dans la syntaxe précédente, le `type-name` est un identificateur valide quelconque. Le `type-params` décrit les paramètres de type générique facultatifs. Il se compose des noms de paramètre de type et contraintes placé entourés crochets pointus (`<` et `>`). Pour plus d’informations, consultez [génériques](generics/index.md) et [contraintes](generics/constraints.md). Le `parameter-list` décrit les paramètres du constructeur. Le modificateur d’accès associé au type ; le second se rapporte au constructeur principal. Dans les deux cas, la valeur par défaut est `public`.

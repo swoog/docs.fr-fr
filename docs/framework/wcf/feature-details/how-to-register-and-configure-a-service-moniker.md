@@ -1,27 +1,29 @@
 ---
-title: "Comment : inscrire et configurer un moniker de service"
-ms.custom: 
+title: 'Comment : inscrire et configurer un moniker de service'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - COM [WCF], configure service monikers
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6e5c57927a455b5d2a253becac35b1bf9033933f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 52b3ec27560ca2dc47b7951cb209f33f307fa7ea
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-register-and-configure-a-service-moniker"></a>Comment : inscrire et configurer un moniker de service
 Avant d'utiliser le moniker de service [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] dans une application COM avec un contrat typé, vous devez inscrire les types avec attributs requis avec COM et paramétrer l'application COM et le moniker avec la configuration de liaison requise.  
@@ -36,7 +38,7 @@ Avant d'utiliser le moniker de service [!INCLUDE[indigo1](../../../../includes/i
     [assembly: ComVisible(true)]  
     ```  
   
-3.  Compilez le client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] managé comme un assembly avec nom fort. Cette procédure requiert une signature à l'aide d'une paire de clés de chiffrement. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Signature d’un Assembly avec un nom fort](http://go.microsoft.com/fwlink/?LinkId=94874) dans le Guide du développeur .NET.  
+3.  Compilez le client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] managé comme un assembly avec nom fort. Cette procédure requiert une signature à l'aide d'une paire de clés de chiffrement. Pour plus d’informations, consultez [signature d’un Assembly avec un nom fort](http://go.microsoft.com/fwlink/?LinkId=94874) dans le Guide du développeur .NET.  
   
 4.  Utilisez l'outil Assembly Registration Tool (Regasm.exe) avec l'option `/tlb` pour inscrire les types dans l'assembly avec COM.  
   

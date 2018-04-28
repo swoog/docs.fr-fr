@@ -1,20 +1,17 @@
 ---
 title: Liaisons let (F#)
 description: "Découvrez comment utiliser une liaison qui associe un identificateur à une valeur ou une fonction ' let' F #."
-keywords: visual f#, f#, programmation fonctionnelle
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: bee69edc-d5ae-46bd-8b56-f02d97725d0d
-ms.openlocfilehash: a57c5572e4bb5a3777c928dd572b7a84d4f0a334
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 2abc4e05f9f2977501f01f745062e2e7cd611f68
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="let-bindings"></a>Liaisons let
 
@@ -29,7 +26,7 @@ let identifier-or-pattern [: type] =expressionbody-expression
 let identifier parameter-list [: return-type ] =expressionbody-expression
 ```
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Le `let` mot clé est utilisé dans des expressions pour définir des valeurs ou des valeurs de fonction pour un ou plusieurs noms de liaison. La forme la plus simple du `let` expression lie un nom à une valeur simple, comme suit.
 
@@ -87,7 +84,7 @@ Les étendues de `field1` et `field2` sont limitées au type dans lequel ils son
 
 ## <a name="type-parameters-in-let-bindings"></a>Paramètres de type dans les liaisons let
 
-A `let` liaison au niveau du module dans un type, ou dans une expression de calcul peut avoir des paramètres de type explicite. Une liaison let dans une expression, comme dans une définition de fonction, ne peut pas avoir de paramètres de type. Pour plus d’informations, consultez [Génériques](../generics/index.md).
+A `let` liaison au niveau du module dans un type, ou dans une expression de calcul peut avoir des paramètres de type explicite. Une liaison let dans une expression, comme dans une définition de fonction, ne peut pas avoir de paramètres de type. Pour plus d’informations, consultez la page [Génériques](../generics/index.md).
 
 ## <a name="attributes-on-let-bindings"></a>Attributs sur les liaisons let
 

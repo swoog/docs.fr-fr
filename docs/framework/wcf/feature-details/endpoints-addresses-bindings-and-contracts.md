@@ -1,28 +1,30 @@
 ---
-title: "Points de terminaison : adresses, liaisons et contrats"
-ms.custom: 
+title: 'Points de terminaison : adresses, liaisons et contrats'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - endpoints [WCF]
 - Windows Communication Foundation [WCF], endpoints
 - WCF [WCF], endpoints
 ms.assetid: 9ddc46ee-1883-4291-9926-28848c57e858
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: af82cb934570b371d332c0e08ebc9b2338d0c0d6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 477c23facd846580bac698ce6e61d02e11afe430
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="endpoints-addresses-bindings-and-contracts"></a>Points de terminaison : adresses, liaisons et contrats
 Toutes les communications avec un [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] service s’effectue via le *points de terminaison* du service. Les points de terminaison fournissent aux clients l'accès aux fonctionnalités offertes par un service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
@@ -48,7 +50,7 @@ Toutes les communications avec un [!INCLUDE[indigo1](../../../../includes/indigo
   
     -   Une propriété <xref:System.ServiceModel.EndpointAddress.Identity%2A> qui représente l'identité de sécurité du service et une collection d'en-tête de message facultatifs. Les en-têtes de message facultatifs sont utilisés pour fournir des informations d'adressage supplémentaires et plus détaillées afin d'identifier le point de terminaison ou d'interagir avec lui.  
   
-     [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Spécification d’une adresse de point de terminaison](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
+     Pour plus d’informations, consultez [spécification d’une adresse de point de terminaison](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
   
 -   Liaison : la liaison spécifie le mode de communication avec le point de terminaison. Cela concerne :  
   
@@ -58,7 +60,7 @@ Toutes les communications avec un [!INCLUDE[indigo1](../../../../includes/indigo
   
     -   Les exigences de sécurité nécessaires (par exemple, SSL ou la sécurité des messages SOAP).  
   
-     [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Vue d’ensemble des liaisons WCF](../../../../docs/framework/wcf/bindings-overview.md). Une liaison est représentée dans le modèle objet [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] par la classe de base abstraite <xref:System.ServiceModel.Channels.Binding>. Pour la plupart des scénarios, les utilisateurs peuvent utiliser l’une des liaisons fournies par le système. Pour plus d’informations, consultez [les liaisons fournies](../../../../docs/framework/wcf/system-provided-bindings.md).  
+     Pour plus d’informations, consultez [vue d’ensemble des liaisons WCF](../../../../docs/framework/wcf/bindings-overview.md). Une liaison est représentée dans le modèle objet [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] par la classe de base abstraite <xref:System.ServiceModel.Channels.Binding>. Pour la plupart des scénarios, les utilisateurs peuvent utiliser l’une des liaisons fournies par le système. Pour plus d’informations, consultez [les liaisons fournies](../../../../docs/framework/wcf/system-provided-bindings.md).  
   
 -   Contrats : le contrat de service définit les fonctionnalités que le point de terminaison expose au client. Un contrat spécifie :  
   
@@ -72,10 +74,10 @@ Toutes les communications avec un [!INCLUDE[indigo1](../../../../includes/indigo
   
      Pour plus d’informations sur la définition d’un contrat, consultez [concevoir des contrats de Service](../../../../docs/framework/wcf/designing-service-contracts.md).  
   
--   Comportements : vous pouvez utiliser des comportements de point de terminaison pour personnaliser le comportement local du point de terminaison du service. Les comportements de point de terminaison y parvenir en participant au processus de génération un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]runtime. Un exemple de comportement de point de terminaison est la propriété <xref:System.ServiceModel.Description.ServiceEndpoint.ListenUri%2A> qui vous permet de spécifier une adresse d'écoute différente de l'adresse SOAP ou WSDL (Web Services Description Language). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][ClientViaBehavior](../../../../docs/framework/wcf/diagnostics/wmi/clientviabehavior.md).  
+-   Comportements : vous pouvez utiliser des comportements de point de terminaison pour personnaliser le comportement local du point de terminaison du service. Les comportements de point de terminaison y parvenir en participant au processus de génération un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]runtime. Un exemple de comportement de point de terminaison est la propriété <xref:System.ServiceModel.Description.ServiceEndpoint.ListenUri%2A> qui vous permet de spécifier une adresse d'écoute différente de l'adresse SOAP ou WSDL (Web Services Description Language). Pour plus d’informations, consultez [ClientViaBehavior](../../../../docs/framework/wcf/diagnostics/wmi/clientviabehavior.md).  
   
 ## <a name="defining-endpoints"></a>Définition des points de terminaison  
- L'adresse du point de terminaison pour un service peut être spécifiée de manière impérative en utilisant le code ou de façon déclarative par la configuration. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Comment : créer un point de terminaison de Service dans la Configuration](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md) et [Comment : créer un point de terminaison de Service dans le Code](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md).  
+ L'adresse du point de terminaison pour un service peut être spécifiée de manière impérative en utilisant le code ou de façon déclarative par la configuration. Pour plus d’informations, consultez [Comment : créer un point de terminaison de Service dans la Configuration](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md) et [Comment : créer un point de terminaison de Service dans le Code](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md).  
   
 ## <a name="in-this-section"></a>Dans cette section  
  Cette section explique à quoi servent les liaisons, les points de terminaison et les adresses, indique comment configurer une liaison et un point de terminaison et montre comment utiliser le comportement `ClientVia` et la propriété `ListenUri`.  

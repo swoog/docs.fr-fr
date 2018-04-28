@@ -1,20 +1,17 @@
 ---
-title: "Boucles : expression for...in (F#)"
-description: "Voir comment la boucle for) (F #... dans l’expression de construction en boucle est utilisée pour itérer sur les correspondances d’un modèle dans une collection énumérable."
-keywords: visual f#, f#, programmation fonctionnelle
+title: 'Boucles : expression for...in (F#)'
+description: 'Voir comment la boucle for) (F #... dans l’expression de construction en boucle est utilisée pour itérer sur les correspondances d’un modèle dans une collection énumérable.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: f54e3228-4aec-4d0a-ae37-bc3376508284
-ms.openlocfilehash: d86aeb3bdd975261e59004d636354a740bd95c47
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: eaf0f4fc6419d8e0bff46795120ee5e42c4efe1d
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="loops-forin-expression"></a>Boucles : expression for...in
 
@@ -28,7 +25,7 @@ for pattern in enumerable-expression do
     body-expression
 ```
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 Le `for...in` expression peut être comparée à la `for each` instruction dans d’autres langages .NET, car il est utilisé pour effectuer une boucle sur les valeurs d’une collection énumérable. Toutefois, `for...in` prend également en charge la mise en correspondance sur la collection au lieu de simplement itération sur la collection entière.
 
 L’expression énumérable peut être spécifiée comme une collection énumérable ou, à l’aide de la `..` opérateur, comme une plage sur un type intégral. Les collections énumérables incluent les listes, séquences, tableaux, jeux, mappages et ainsi de suite. Tout type qui implémente `System.Collections.IEnumerable` peut être utilisé.
@@ -138,7 +135,7 @@ La sortie est la suivante.
 Number of elements in list1: 5
 ```
 
-`Note`Vous pouvez utiliser `for...in` dans les expressions de séquence et autres expressions de calcul, auquel cas une version personnalisée de la `for...in` expression est utilisée. Pour plus d’informations, consultez [séquences](sequences.md), [Workflows asynchrones](asynchronous-workflows.md), et [Expressions de calcul](computation-expressions.md).
+`Note` Vous pouvez utiliser `for...in` dans les expressions de séquence et autres expressions de calcul, auquel cas une version personnalisée de la `for...in` expression est utilisée. Pour plus d’informations, consultez [séquences](sequences.md), [Workflows asynchrones](asynchronous-workflows.md), et [Expressions de calcul](computation-expressions.md).
 
 
 ## <a name="see-also"></a>Voir aussi

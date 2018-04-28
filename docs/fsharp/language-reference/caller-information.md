@@ -1,20 +1,17 @@
 ---
-title: "Informations sur l’appelant (F #)"
-description: "Décrit comment utiliser les attributs d’Argument appelant Info pour obtenir des informations de l’appelant à partir d’une méthode."
-keywords: visual f#, f#, programmation fonctionnelle
+title: 'Informations sur l’appelant (F #)'
+description: Décrit comment utiliser les attributs d’Argument appelant Info pour obtenir des informations de l’appelant à partir d’une méthode.
 author: cartermp
 ms.author: phcart
 ms.date: 04/25/2017
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: a3dcc335-433b-4672-ac2d-ae6b11b816f3
-ms.openlocfilehash: 533d2f0429ddb31e6d1dd7efca2f0760069a2945
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 840c6c6308c55fe2a2dbefd52b159a32fb92f787
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="caller-information"></a>Informations sur l’appelant
 
@@ -50,7 +47,7 @@ type Tracer() =
         | _,_,_ -> ()
 ```
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Attributs d’informations de l’appelant est applicable uniquement aux paramètres facultatifs. Vous devez fournir une valeur explicite pour chaque paramètre optionnel. Les attributs d’informations d’appelant que le compilateur écrire la valeur appropriée pour chaque paramètre optionnel décoré avec un attribut d’informations de l’appelant.
 

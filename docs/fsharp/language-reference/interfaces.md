@@ -1,20 +1,17 @@
 ---
 title: Interfaces (F#)
-description: "Découvrez comment F # Interfaces spécifient des jeux de membres associés qui implémentent des autres classes."
-keywords: visual f#, f#, programmation fonctionnelle
+description: 'Découvrez comment F # Interfaces spécifient des jeux de membres associés qui implémentent des autres classes.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 3a082459-17d4-45cf-9153-0b7550a154ec
-ms.openlocfilehash: d7c95e5f5cc0bc6c7f6393af990427ac491c5b79
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: fa299a7e37d4e1e3800a02bf5a77831db9146daf
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="interfaces"></a>Interfaces
 
@@ -48,7 +45,7 @@ let class-name (argument-list) =
     member-list
 ```
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 Déclarations d’interface ressemblent aux déclarations de classe, sauf qu’aucun membre n’est implémentées. Au lieu de cela, tous les membres sont abstraits, comme indiqué par le mot clé `abstract`. Vous ne fournissez pas un corps de méthode pour les méthodes abstraites. Toutefois, vous pouvez fournir une implémentation par défaut en incluant une définition séparée du membre comme une méthode avec le `default` (mot clé). Cela équivaut à la création d’une méthode virtuelle dans une classe de base dans d’autres langages .NET. Une telle méthode virtuelle peut être substituée dans les classes qui implémentent l’interface.
 
 Vous pouvez éventuellement donner à chaque paramètre de méthode un nom à l’aide de la syntaxe normale F # :

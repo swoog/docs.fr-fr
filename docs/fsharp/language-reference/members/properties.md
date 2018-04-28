@@ -1,20 +1,17 @@
 ---
-title: "Propriétés (F#)"
-description: "En savoir plus sur les propriétés F #, qui sont des membres qui représentent des valeurs associées à un objet."
-keywords: visual f#, f#, programmation fonctionnelle
+title: Propriétés (F#)
+description: 'En savoir plus sur les propriétés F #, qui sont des membres qui représentent des valeurs associées à un objet.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 98b363a5-ee6a-4b7b-b8ae-b244f2a0b316
-ms.openlocfilehash: 53b93b20310c557ad9c30226bc08f85cbf2f3010
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 6cad5d0e32958374e080f9b8046f7eb73b6bf615
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="properties"></a>Propriétés
 
@@ -63,7 +60,7 @@ with set parameter =
 [ static ] member val [accessibility-modifier] PropertyName = initialization-expression [ with get, set ]
 ```
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 Propriétés représentent la » a une « relation dans la programmation orientée objet, représentant les données qui sont associés à des instances d’objet ou, pour les propriétés statiques, avec le type.
 
 Vous pouvez déclarer des propriétés de deux façons, selon que vous souhaitez spécifier explicitement la valeur sous-jacente (également appelée magasin de stockage) pour la propriété, ou si vous souhaitez permettre au compilateur de générer automatiquement le magasin de stockage pour vous. En règle générale, vous devez utiliser le mode plus explicite si la propriété a une implémentation non triviale et automatique lorsque la propriété est un simple wrapper simple pour une valeur ou une variable. Pour déclarer une propriété explicitement, utilisez le `member` (mot clé). Cette syntaxe déclarative est suivie par la syntaxe qui spécifie le `get` et `set` méthodes, également nommés *accesseurs*. Les différentes formes de la syntaxe explicite indiquée dans la section syntaxe sont utilisées pour les propriétés en lecture/écriture, en lecture seule et en écriture seule. Pour les propriétés en lecture seule, vous définissez uniquement un `get` méthode ; définir uniquement pour les propriétés en écriture seule, un `set` (méthode). Notez que lorsqu’une propriété a à la fois `get` et `set` accesseurs, l’autre syntaxe vous permet de spécifier les attributs et les modificateurs d’accessibilité qui sont différents pour chaque accesseur, comme indiqué dans le code suivant.
@@ -74,7 +71,7 @@ Pour les propriétés en lecture/écriture, qui ont à la fois un `get` et `set`
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3203.fs)]
 
-Cette suspension les données pour les propriétés sont appelées des valeurs privé *magasins de stockage*. Pour indiquer au compilateur de créer le magasin de stockage automatiquement, utilisez les mots clés `member val`, omettez l’auto-identificateur, puis indiquez une expression pour initialiser la propriété. Si la propriété doit être mutable, inclure `with get, set`. Par exemple, le type de classe suivant inclut deux propriétés implémentées automatiquement. `Property1`est en lecture seule et est initialisée à l’argument fourni pour le constructeur principal, et `Property2` est une propriété définissable initialisée avec une chaîne vide :
+Cette suspension les données pour les propriétés sont appelées des valeurs privé *magasins de stockage*. Pour indiquer au compilateur de créer le magasin de stockage automatiquement, utilisez les mots clés `member val`, omettez l’auto-identificateur, puis indiquez une expression pour initialiser la propriété. Si la propriété doit être mutable, inclure `with get, set`. Par exemple, le type de classe suivant inclut deux propriétés implémentées automatiquement. `Property1` est en lecture seule et est initialisée à l’argument fourni pour le constructeur principal, et `Property2` est une propriété définissable initialisée avec une chaîne vide :
 
 ```fsharp
 type MyClass(property1 : int) =

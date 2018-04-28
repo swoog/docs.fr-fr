@@ -1,27 +1,24 @@
 ---
 title: Signatures (F#)
-description: "Découvrez comment utiliser un fichier de signature F # pour conserver les informations sur les signatures publiques d’un jeu de F # d’éléments de programme, telles que des types, des espaces de noms et des modules."
-keywords: visual f#, f#, programmation fonctionnelle
+description: 'Découvrez comment utiliser un fichier de signature F # pour conserver les informations sur les signatures publiques d’un jeu de F # d’éléments de programme, telles que des types, des espaces de noms et des modules.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 76c84a62-b2f6-44ec-8238-e687e2f7d18e
-ms.openlocfilehash: d0f71c6472852268303a2d3af2e4b0a3c256704e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: c98ac6c62fdcee51532a162596e99309a31802ec
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="signatures"></a>Signatures
 
 Un fichier de signature contient des informations sur les signatures publiques d’un jeu d’éléments de programme F#, tels que des types, des espaces de noms et des modules. Il peut être utilisé pour spécifier l’accessibilité de ces éléments de programme.
 
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 Pour chaque fichier de code F#, vous pouvez avoir un *fichier de signature*, qui est un fichier portant le même nom que le fichier de code, mais avec l’extension .fsi au lieu de .fs. Les fichiers de signature peuvent également être ajoutés à la ligne de commande de compilation si vous utilisez la ligne de commande directement. Pour faire la distinction entre les fichiers de code et les fichiers de signature, les fichiers de code sont parfois appelés *fichiers d’implémentation*. Dans un projet, le fichier de signature doit précéder le fichier de code associé.
 
 Un fichier de signature décrit les espaces de noms, modules, types et membres dans le fichier d’implémentation correspondant. Les informations dans un fichier de signature vous permettent de spécifier les parties du code dans le fichier d’implémentation correspondant auxquelles le code peut accéder à l’extérieur du fichier d’implémentation, ainsi que les parties qui sont internes au fichier d’implémentation. Les espaces de noms, modules et types inclus dans le fichier de signature doivent être un sous-ensemble des espaces de noms, des modules et des types inclus dans le fichier d’implémentation. À quelques exceptions près notées plus loin dans cette rubrique, les éléments de langage qui n’apparaissent pas dans le fichier de signature sont considérés comme privés pour le fichier d’implémentation. Si aucun fichier de signature n’est trouvé dans le projet ou la ligne de commande, l’accessibilité par défaut est utilisée.

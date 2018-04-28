@@ -1,20 +1,17 @@
 ---
 title: Types flexibles (F#)
-description: "Découvrez comment utiliser F # annotation de type flexible, ce qui indique qu’un paramètre, une variable ou une valeur a un type qui est compatible avec un type spécifié."
-keywords: visual f#, f#, programmation fonctionnelle
+description: 'Découvrez comment utiliser F # annotation de type flexible, ce qui indique qu’un paramètre, une variable ou une valeur a un type qui est compatible avec un type spécifié.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: c8b510f2-3405-4cc9-b55b-e47b35e2b15b
-ms.openlocfilehash: 7c5e4eb97791b9c6c56fe2847755866e8240e038
-ms.sourcegitcommit: a19548e5167cbe7e9e58df4ffd8c3b23f17d5c7a
+ms.openlocfilehash: bee2364a6c30b1fbdc09aa0aac2249e3f0c295e8
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="flexible-types"></a>Types flexibles
 
@@ -26,7 +23,7 @@ A *annotation de type flexible* indique qu’un paramètre, une variable ou une 
 #type
 ```
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Dans la syntaxe précédente, *type* représente un type de base ou une interface.
 

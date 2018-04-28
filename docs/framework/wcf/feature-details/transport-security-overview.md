@@ -13,17 +13,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
-caps.latest.revision: ''
+caps.latest.revision: 23
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 71325089f2c72f6f01b2179bd150d21a98b3a8e2
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 5619041ccf4ce4d899f3c9a478d125a1a2d8d32a
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="transport-security-overview"></a>Vue d'ensemble de la sécurité des transports
 Les mécanismes de sécurité de transport dans [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] dépendent de la liaison et du transport utilisé. Par exemple, lors de l'utilisation de la classe <xref:System.ServiceModel.WSHttpBinding>, le transport correspond à HTTP et le mécanisme principal utilisé pour sécuriser ce transport correspond à SSL (Secure Sockets Layer) sur HTTP, c'est-à-dire à HTTPS. Cette rubrique aborde les principaux mécanismes de sécurité de transport utilisés dans les liaisons [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fournies par le système.  
@@ -72,10 +72,10 @@ Les mécanismes de sécurité de transport dans [!INCLUDE[indigo1](../../../../i
  Il s'agit de l'authentification Windows intégrée à IIS. Lorsque ce mode d'authentification est activé, le serveur doit également figurer dans un domaine Windows utilisant le protocole Kerberos comme contrôleur. Dans le cas contraire ou si le système Kerberos connaît une défaillance, vous pouvez utiliser l'authentification NT LAN Manager (NTLM), abordée dans la section suivante. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[iis601](../../../../includes/iis601-md.md)], consultez [l’authentification Windows intégrée dans IIS 6.0](http://go.microsoft.com/fwlink/?LinkId=88597). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[iisver](../../../../includes/iisver-md.md)], consultez [IIS 7.0 bêta : configuration des certificats de serveur dans IIS 7.0](http://go.microsoft.com/fwlink/?LinkId=88595).  
   
 #### <a name="ntlm"></a>NTLM  
- Cela permet au serveur d'utiliser NTLM pour l'authentification si le fournisseur Kerberos échoue. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] configuration d’IIS dans [!INCLUDE[iis601](../../../../includes/iis601-md.md)], consultez [authentification NTLM forcée](http://go.microsoft.com/fwlink/?LinkId=88598). Pour [!INCLUDE[iisver](../../../../includes/iisver-md.md)], l'authentification Windows intègre l'authentification NTLM. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [IIS 7.0 bêta : configuration des certificats de serveur dans IIS 7.0](http://go.microsoft.com/fwlink/?LinkID=88595).  
+ Cela permet au serveur d'utiliser NTLM pour l'authentification si le fournisseur Kerberos échoue. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] configuration d’IIS dans [!INCLUDE[iis601](../../../../includes/iis601-md.md)], consultez [authentification NTLM forcée](http://go.microsoft.com/fwlink/?LinkId=88598). Pour [!INCLUDE[iisver](../../../../includes/iisver-md.md)], l'authentification Windows intègre l'authentification NTLM. Pour plus d’informations, consultez [IIS 7.0 bêta : configuration des certificats de serveur dans IIS 7.0](http://go.microsoft.com/fwlink/?LinkID=88595).  
   
 ## <a name="wshttpbinding"></a>WsHttpBinding  
- La classe <xref:System.ServiceModel.WSHttpBinding> est conçue pour interagir avec les services qui implémentent les spécifications WS-*. La sécurité de transport de cette liaison correspond à Secure Sockets Layer (SSL) sur HTTP, c'est-à-dire à HTTPS. Pour créer une application [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] qui utilise SSL, utilisez les services IIS afin d'héberger cette application. Si vous créez une application auto-hébergée, vous pouvez également utiliser l'outil HttpCfg.exe afin d'attribuer un certificat X.509 à un port spécifique de l'ordinateur. Ce numéro de port est spécifié dans le cadre d'une application [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sous forme d'adresse de point de terminaison. Lorsqu'un mode de transport est utilisé, l'adresse de point de terminaison doit comporter le protocole HTTPS. Dans le cas contraire, une exception sera levée pendant l'exécution. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Sécurité de Transport HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
+ La classe <xref:System.ServiceModel.WSHttpBinding> est conçue pour interagir avec les services qui implémentent les spécifications WS-*. La sécurité de transport de cette liaison correspond à Secure Sockets Layer (SSL) sur HTTP, c'est-à-dire à HTTPS. Pour créer une application [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] qui utilise SSL, utilisez les services IIS afin d'héberger cette application. Si vous créez une application auto-hébergée, vous pouvez également utiliser l'outil HttpCfg.exe afin d'attribuer un certificat X.509 à un port spécifique de l'ordinateur. Ce numéro de port est spécifié dans le cadre d'une application [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sous forme d'adresse de point de terminaison. Lorsqu'un mode de transport est utilisé, l'adresse de point de terminaison doit comporter le protocole HTTPS. Dans le cas contraire, une exception sera levée pendant l'exécution. Pour plus d’informations, consultez [sécurité de Transport HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
  Pour l'authentification client, affectez à la propriété <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> de la classe <xref:System.ServiceModel.HttpTransportSecurity> l'une des valeurs d'énumération <xref:System.ServiceModel.HttpClientCredentialType>. Les valeurs d'énumération sont identiques aux types d'informations d'identification client pour <xref:System.ServiceModel.BasicHttpBinding> et sont conçues pour être hébergées dans les services IIS.  
   

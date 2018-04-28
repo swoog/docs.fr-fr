@@ -1,20 +1,17 @@
 ---
-title: "Boucles : expression while...do (F#)"
-description: "Voir comment l’instruction while... procédez comme expression est utilisée pour effectuer une exécution itérative (boucle) lorsqu’une condition de test spécifié a la valeur true."
-keywords: visual f#, f#, programmation fonctionnelle
+title: 'Boucles : expression while...do (F#)'
+description: Voir comment l’instruction while... procédez comme expression est utilisée pour effectuer une exécution itérative (boucle) lorsqu’une condition de test spécifié a la valeur true.
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 0416ffca-7ed9-4aff-9493-e001fdba8c9b
-ms.openlocfilehash: 5f10fda84a5e748856eb7b2c63ad46cc1fba44bb
-ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
+ms.openlocfilehash: 847f99faab42c8805bd788e42e3f24ad6369ba52
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="loops-whiledo-expression"></a>Boucles : expression while...do
 
@@ -28,7 +25,7 @@ while test-expression do
     body-expression
 ```
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 Le *test-expression* est évaluée ; si elle est `true`, le *expression de corps* est exécuté et l’expression de test est réévaluée. Le *expression de corps* doit avoir un type `unit`. Si l’expression de test est `false`, l’itération se termine.
 
 L’exemple suivant illustre l’utilisation de la `while...do` expression.

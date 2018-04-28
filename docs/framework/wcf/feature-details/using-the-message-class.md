@@ -1,27 +1,29 @@
 ---
 title: Utilisation de la classe Message
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d1d62bfb-2aa3-4170-b6f8-c93d3afdbbed
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5c3e33f4db403fdc4ad1d4efd14282fe2beac8dc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c63a0a88997a1c35b24562bcca3e0fdb40ebfd41
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-the-message-class"></a>Utilisation de la classe Message
 La classe <xref:System.ServiceModel.Channels.Message> est fondamentale à [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Toute la communication entre les clients et les services a pour résultat l'envoi et la réception d'instances <xref:System.ServiceModel.Channels.Message>.  
@@ -172,7 +174,7 @@ La classe <xref:System.ServiceModel.Channels.Message> est fondamentale à [!INCL
   
  Vous pouvez récupérer un en-tête particulier à l'aide de la méthode <xref:System.ServiceModel.Channels.MessageHeaders.FindHeader%2A>. Cette méthode prend le nom et l'espace de noms de l'en-tête à rechercher et retourne son index. Si l'en-tête est présent plus d'une fois, une exception est levée. Si l'en-tête est introuvable, la méthode retourne la valeur -1.  
   
- Dans le modèle d'en-tête SOAP, les en-têtes peuvent avoir une valeur `Actor` qui spécifie le destinataire prévu de l'en-tête. La surcharge `FindHeader` la plus simple recherche uniquement les en-têtes destinés au destinataire final du message. Toutefois, une autre surcharge vous permet de spécifier les valeurs `Actor` qui sont incluses dans la recherche. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] la spécification SOAP.  
+ Dans le modèle d'en-tête SOAP, les en-têtes peuvent avoir une valeur `Actor` qui spécifie le destinataire prévu de l'en-tête. La surcharge `FindHeader` la plus simple recherche uniquement les en-têtes destinés au destinataire final du message. Toutefois, une autre surcharge vous permet de spécifier les valeurs `Actor` qui sont incluses dans la recherche. Pour plus d’informations, consultez la spécification SOAP.  
   
  Une méthode <xref:System.ServiceModel.Channels.MessageHeaders.CopyTo%28System.ServiceModel.Channels.MessageHeaderInfo%5B%5D%2CSystem.Int32%29> est fournie pour copier des en-têtes depuis une collection <xref:System.ServiceModel.Channels.MessageHeaders> vers un tableau d'objets <xref:System.ServiceModel.Channels.MessageHeaderInfo>.  
   

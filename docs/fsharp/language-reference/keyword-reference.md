@@ -1,20 +1,17 @@
 ---
-title: "Référence des mots clés (F#)"
-description: "Trouver des liens vers des informations sur tous les mots-clés du langage F #."
-keywords: visual f#, f#, programmation fonctionnelle
+title: Référence des mots clés (F#)
+description: 'Trouver des liens vers des informations sur tous les mots-clés du langage F #.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 5795ce1f-11bf-4798-9f1f-6e44ffa1477e
-ms.openlocfilehash: cdfdd86843acf05a8b33647823f934a161f6d885
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 35a127a38db4874699ef7b43681cb967a139c81e
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="keyword-reference"></a>Référence des mots clés
 
@@ -24,10 +21,10 @@ Cette rubrique contient des liens vers des informations sur tous les mots clés 
 
 Le tableau suivant affiche tous les mots-clés F # dans l’ordre alphabétique, ainsi que de brèves descriptions et des liens vers les rubriques qui contiennent des informations supplémentaires.
 
-|Mot clé|Link|Description|
+|Mot clé|Lien|Description|
 |-------|----|-----------|
 |`abstract`|[Membres](members/index.md)<br /><br />[Classes abstraites](abstract-classes.md)|Indique une méthode qui n’a aucune implémentation dans le type dans lequel il est déclaré ou qui est virtuelle et a une implémentation par défaut.|
-|`and`|[`let`Liaisons](functions/let-bindings.md)<br /><br />[Membres](members/index.md)<br /><br />[Contraintes](generics/constraints.md)|Utilisé dans les liaisons mutuellement récursives, dans les déclarations de propriété et avec plusieurs contraintes sur les paramètres génériques.|
+|`and`|[`let` Liaisons](functions/let-bindings.md)<br /><br />[Membres](members/index.md)<br /><br />[Contraintes](generics/constraints.md)|Utilisé dans les liaisons mutuellement récursives, dans les déclarations de propriété et avec plusieurs contraintes sur les paramètres génériques.|
 |`as`|[Classes](classes.md)<br /><br />[Critères spéciaux](Pattern-Matching.md)|Utilisé pour permettre à l’objet de classe actuel à un nom d’objet. Également utilisé pour donner un nom à un modèle entier dans une correspondance de modèle.|
 |`assert`|[Assertions](assertions.md)|Utilisé pour vérifier le code pendant le débogage.|
 |`base`|[Classes](classes.md)<br /><br />[Héritage](inheritance.md)|Utilisé comme nom de l’objet de classe de base.|
@@ -46,7 +43,7 @@ Le tableau suivant affiche tous les mots-clés F # dans l’ordre alphabétique,
 |`extern`|[Fonctions externes](functions/external-functions.md)|Indique qu’un élément de programme déclaré est défini dans un autre binaire ou assembly.|
 |`false`|[Types primitifs](primitive-types.md)|Utilisé comme littéral booléen.|
 |`finally`|[Exceptions : expression `try...finally`](exception-handling/the-try-finally-expression.md)|Utilisé conjointement avec `try` pour introduire un bloc de code qui s’exécute indépendamment de si une exception se produit.|
-|`fixed`|[Fixe](fixed.md)|Utilisé pour « épingler » un pointeur sur la pile pour empêcher le garbage collecté.|
+|`fixed`|[fixe](fixed.md)|Utilisé pour « épingler » un pointeur sur la pile pour empêcher le garbage collecté.|
 |`for`|[Boucles : expression `for...to`](loops-for-to-expression.md)<br /><br />[Boucles : expression for...in](loops-for-in-expression.md)|Utilisée dans les constructions de bouclage.|
 |`fun`|[Expressions lambda : Le `fun` (mot clé)](functions/lambda-expressions-the-fun-keyword.md)|Utilisé dans les expressions lambda, également appelées fonctions anonymes.|
 |`function`|[Expressions match](match-expressions.md)<br /><br />[Expressions lambda : Mot clé fun](functions/lambda-expressions-the-fun-keyword.md)|Utilisé comme une alternative plus courte pour le `fun` (mot clé) et un `match` expression dans une expression lambda qui a des critères spéciaux sur un argument unique.|
@@ -58,7 +55,7 @@ Le tableau suivant affiche tous les mots-clés F # dans l’ordre alphabétique,
 |`interface`|[Interfaces](interfaces.md)|Utilisé pour déclarer et implémenter des interfaces.|
 |`internal`|[Contrôle d'accès](access-control.md)|Permet de spécifier qu’un membre est visible à l’intérieur d’un assembly, mais pas à l’extérieur.|
 |`lazy`|[Calculs tardifs](lazy-computations.md)|Utilisé pour spécifier un calcul qui doit être effectuée uniquement lorsqu’un résultat est nécessaire.|
-|`let`|[`let`Liaisons](functions/let-bindings.md)|Utilisé pour associer ou lier, un nom à une valeur ou une fonction.|
+|`let`|[`let` Liaisons](functions/let-bindings.md)|Utilisé pour associer ou lier, un nom à une valeur ou une fonction.|
 |`let!`|[Flux de travail asynchrones](asynchronous-workflows.md)<br /><br />[Expressions de calcul](computation-expressions.md)|Utilisé dans le flux de travail asynchrone pour lier un nom pour le résultat d’un calcul asynchrone, ou, dans d’autres expressions de calcul, utilisées pour lier un nom à un résultat, qui est du type de calcul.|
 |`match`|[Expressions match](match-expressions.md)|Utilisé pour créer une branche en comparant une valeur à un modèle.|
 |`member`|[Membres](members/index.md)|Utilisé pour déclarer une propriété ou une méthode dans un type d’objet.|

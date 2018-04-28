@@ -1,12 +1,13 @@
 ---
-title: "Types connus de contrats de données"
-ms.custom: 
+title: Types connus de contrats de données
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,23 +17,24 @@ helpviewer_keywords:
 - KnownTypeAttribute [WCF]
 - KnownTypes [WCF]
 ms.assetid: 1a0baea1-27b7-470d-9136-5bbad86c4337
-caps.latest.revision: "42"
+caps.latest.revision: 42
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 24d26358c0bf0440b2fbba143629a0e4bda21cec
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c9c180a0f1544fa187ddb53ec79a47f908c298d7
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="data-contract-known-types"></a>Types connus de contrats de données
 La classe <xref:System.Runtime.Serialization.KnownTypeAttribute> vous permet de spécifier, en avance, les types qui doivent être inclus pour être pris en compte pendant la désérialisation. Pour obtenir un exemple fonctionnel, consultez l’exemple [Known Types](../../../../docs/framework/wcf/samples/known-types.md) .  
   
  Normalement, lors du passage des paramètres et des valeurs de retour entre un client et un service, les deux points de terminaison partagent tous les contrats de données des données à transmettre. Toutefois, ce n'est pas le cas dans les circonstances suivantes :  
   
--   Le contrat de données envoyé est dérivé du contrat de données attendu. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] la section traitant de l’héritage dans [Data Contract Equivalence](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)). Dans ce cas, les données transmises n'ont pas le même contrat de données que celui attendu par le point de terminaison de réception.  
+-   Le contrat de données envoyé est dérivé du contrat de données attendu. Pour plus d’informations, consultez la section sur l’héritage dans [équivalence des contrats de données](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)). Dans ce cas, les données transmises n'ont pas le même contrat de données que celui attendu par le point de terminaison de réception.  
   
 -   Le type déclaré pour les informations à transmettre est une interface, par opposition à une classe, une structure ou une énumération. Par conséquent, il n'est pas possible de connaître à l'avance quel type implémentant l'interface est envoyé réellement et, par conséquent, le point de terminaison de réception ne peut pas déterminer, à l'avance, le contrat de données pour les données transmises.  
   

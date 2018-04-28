@@ -1,13 +1,13 @@
 ---
-title: "Identité du service et authentification"
-ms.custom: 
+title: Identité du service et authentification
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
-caps.latest.revision: 
+caps.latest.revision: 32
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 579f41a213564dd18dae719a14170100903efd92
-ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
+ms.openlocfilehash: a0229ce5c6b7081ae493af22b0daeee444736783
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/22/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="service-identity-and-authentication"></a>Identité du service et authentification
 D’un service *identité du point de terminaison*est une valeur générée à partir du service Web Services Description Language (WSDL). Cette valeur, propagée à tout client, est utilisée pour authentifier le service. Une fois que le client a initialisé une communication à un point de terminaison et le service s'authentifie au client, le client compare la valeur de l'identité du point de terminaison avec la valeur réelle que le processus d'authentification du point de terminaison a retournée. Si elles correspondent, le client est assuré qu'il a contacté le point de terminaison du service attendu. Cela fonctionne comme une protection contre les *hameçonnage* par un client empêche d’être redirigé vers un point de terminaison hébergé par un service malveillant.  
@@ -48,7 +48,7 @@ D’un service *identité du point de terminaison*est une valeur générée à p
  La propriété <xref:System.ServiceModel.EndpointAddress.Identity%2A> de la classe <xref:System.ServiceModel.EndpointAddress> représente l'identité du service appelé par le client. Le service publie <xref:System.ServiceModel.EndpointAddress.Identity%2A> dans ses métadonnées. Lorsque le développeur client exécute le [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) sur le point de terminaison de service, la configuration générée contient la valeur du service <xref:System.ServiceModel.EndpointAddress.Identity%2A> propriété. L'infrastructure [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] (en cas de configuration sécurisée) vérifie que le service possède l'identité spécifiée.  
   
 > [!IMPORTANT]
->  Les métadonnées contiennent l'identité attendue du service, il est par conséquent recommandé d'exposer les métadonnées du service de manière sécurisée, par exemple, en créant un point de terminaison HTTPS. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Comment : sécuriser des points de terminaison de métadonnées](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md).  
+>  Les métadonnées contiennent l'identité attendue du service, il est par conséquent recommandé d'exposer les métadonnées du service de manière sécurisée, par exemple, en créant un point de terminaison HTTPS. Pour plus d’informations, consultez [Comment : sécuriser les points de terminaison de métadonnées](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md).  
   
 ## <a name="identity-types"></a>Types d'identité  
  Un service peut fournir des six types d’identités. Chaque type d'identité correspond à un élément qui peut être contenu à l'intérieur de l'élément `<identity>` dans la configuration. Le type utilisé dépend du scénario et des spécifications de sécurité du service. Le tableau suivant décrit chaque type d'identité.  

@@ -27,11 +27,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5c1b03cf39608566ed80e2288204480e77994ad7
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: edc4bc985f7117dc66d29053d62a283d67b01a85
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-configure-iis-50-and-iis-60-to-deploy-wpf-applications"></a>Guide pratique pour configurer IIS 5.0 et IIS 6.0 pour déployer des applications WPF
 Vous pouvez déployer une application [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] à partir de la plupart des serveurs web, tant qu’ils sont configurés avec les types [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] appropriés. Par défaut, [!INCLUDE[TLA#tla_iis70](../../../../includes/tlasharptla-iis70-md.md)] est configuré avec ces types [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)], mais [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] et [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] ne le sont pas.  
@@ -40,7 +40,7 @@ Vous pouvez déployer une application [!INCLUDE[TLA#tla_winclient](../../../../i
   
   
 > [!NOTE]
->  Vous pouvez vérifier la chaîne *UserAgent* dans le Registre pour déterminer si le [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] est installé sur un système. Pour plus d’informations et pour obtenir un script qui examine la chaîne *UserAgent* pour déterminer si le [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] est installé sur un système, consultez [Détecter si .NET Framework 3.0 est installé](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-0-is-installed.md).  
+>  Vous pouvez vérifier le *UserAgent* chaîne dans le Registre pour déterminer si un système dispose de .NET Framework est installé. Pour plus d’informations sur un script qui examine le *UserAgent* chaîne pour déterminer si le .NET Framework est installée sur un système, consultez [détecter si le .NET Framework 3.0 est installé](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-0-is-installed.md).  
   
 <a name="content_expiration"></a>   
 ## <a name="adjust-the-content-expiration-setting"></a>Régler le paramètre d’expiration du contenu  

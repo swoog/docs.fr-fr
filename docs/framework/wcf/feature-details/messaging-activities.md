@@ -1,24 +1,26 @@
 ---
-title: "Activités de messagerie"
-ms.custom: 
+title: Activités de messagerie
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8498f215-1823-4aba-a6e1-391407f8c273
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8ba5d49f357fe1cf56a45f733e91c1dbc2208736
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8db31e8559d22e35f0d754a44ce425e144487296
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="messaging-activities"></a>Activités de messagerie
 Les activités de messagerie permettent aux workflows d'envoyer et de recevoir des messages WCF. En ajoutant des activités de messagerie à un workflow, vous pouvez modéliser n’importe quel modèle d’échange de messages (MEP) arbitrairement complexe.  
@@ -48,7 +50,7 @@ Les activités de messagerie permettent aux workflows d'envoyer et de recevoir d
 ## <a name="messaging-activities-and-message-exchange-patterns"></a>Activités de messagerie et modèles d’échange de messages  
  Un MEP datagramme implique un client qui envoie un message et un service qui reçoit le message. Si le client est un workflow, utilisez une activité <xref:System.ServiceModel.Activities.Send> pour envoyer le message. Pour recevoir ce message dans un workflow, utilisez une activité <xref:System.ServiceModel.Activities.Receive>. Les activités <xref:System.ServiceModel.Activities.Send> et <xref:System.ServiceModel.Activities.Receive> ont chacune une propriété nommée `Content`. Cette propriété contient les données qui sont envoyées ou reçues. Lors de l'implémentation du MEP demande-réponse, le client et le service utilisent tous les deux des paires d'activités. Le client utilise une activité <xref:System.ServiceModel.Activities.Send> pour envoyer le message et une activité <xref:System.ServiceModel.Activities.ReceiveReply> pour recevoir la réponse du service. Ces deux activités sont associées l'une à l'autre par la propriété <xref:System.ServiceModel.Activities.ReceiveReply.Request%2A>. Cette propriété est définie sur l'activité <xref:System.ServiceModel.Activities.Send> qui a envoyé le message d'origine. Le service utilise également une paire d'activités associées : <xref:System.ServiceModel.Activities.Receive> et <xref:System.ServiceModel.Activities.SendReply>. Ces deux activités sont associées par la propriété <xref:System.ServiceModel.Activities.SendReply.Request%2A>. Cette propriété est définie sur l'activité <xref:System.ServiceModel.Activities.Receive> qui a reçu le message d'origine. Les activités <xref:System.ServiceModel.Activities.ReceiveReply> et <xref:System.ServiceModel.Activities.SendReply>, comme <xref:System.ServiceModel.Activities.Send> et <xref:System.ServiceModel.Activities.Receive> vous permettent d'envoyer une instance <xref:System.ServiceModel.Channels.Message> ou un type de contrat de message.  
   
- En raison de la longue durée d'exécution des workflows, il est important que le modèle duplex de communication prenne également en charge des conversations de longue durée. Pour prendre en charge des conversations de longue durée, les clients qui initialisent la conversation doivent donner au service la possibilité de le rappeler plus tard lorsque les données deviennent disponibles. Par exemple, une demande de bon de commande est soumise à l'approbation du gestionnaire, mais elle risque de ne pas être traitée dans la journée, la semaine ou même l'année ; le workflow qui gère l'approbation du bon de commande doit le savoir pour continuer une fois l'approbation donnée. Ce modèle de communication en duplex est pris en charge dans les workflows à l’aide de la corrélation. Pour implémenter un modèle duplex, utilisez les activités <xref:System.ServiceModel.Activities.Send> et <xref:System.ServiceModel.Activities.Receive>. Sur le <xref:System.ServiceModel.Activities.Receive> activité, initialisez une corrélation à l’aide de la valeur de clé spéciale <!--zz <xref:System.ServiceModel.Activities.CorrelationHandle.CallbackHandleName%2A>--> `System.ServiceModel.Activities.CorrelationHandle.CallbackHandleName`. Sur l'activité <xref:System.ServiceModel.Activities.Send>, définissez ce gestionnaire de corrélation comme valeur de la propriété <xref:System.ServiceModel.Activities.Send.CorrelatesWith%2A>. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Duplex durable](../../../../docs/framework/wcf/feature-details/durable-duplex-correlation.md).  
+ En raison de la longue durée d'exécution des workflows, il est important que le modèle duplex de communication prenne également en charge des conversations de longue durée. Pour prendre en charge des conversations de longue durée, les clients qui initialisent la conversation doivent donner au service la possibilité de le rappeler plus tard lorsque les données deviennent disponibles. Par exemple, une demande de bon de commande est soumise à l'approbation du gestionnaire, mais elle risque de ne pas être traitée dans la journée, la semaine ou même l'année ; le workflow qui gère l'approbation du bon de commande doit le savoir pour continuer une fois l'approbation donnée. Ce modèle de communication en duplex est pris en charge dans les workflows à l’aide de la corrélation. Pour implémenter un modèle duplex, utilisez les activités <xref:System.ServiceModel.Activities.Send> et <xref:System.ServiceModel.Activities.Receive>. Sur le <xref:System.ServiceModel.Activities.Receive> activité, initialisez une corrélation à l’aide de la valeur de clé spéciale <!--zz <xref:System.ServiceModel.Activities.CorrelationHandle.CallbackHandleName%2A>--> `System.ServiceModel.Activities.CorrelationHandle.CallbackHandleName`. Sur l'activité <xref:System.ServiceModel.Activities.Send>, définissez ce gestionnaire de corrélation comme valeur de la propriété <xref:System.ServiceModel.Activities.Send.CorrelatesWith%2A>. Pour plus d’informations, consultez [Durable Duplex](../../../../docs/framework/wcf/feature-details/durable-duplex-correlation.md).  
   
 > [!NOTE]
 >  Implémentation du flux de travail de duplex à l’aide d’une corrélation de rappel (« Duplex Durable ») est destinée aux conversations de longue. Ce n'est pas la même chose qu'un duplex WCF avec des contrats de rappel, où la conversation est de courte durée d'exécution (durée de vie du canal).  
@@ -112,7 +114,7 @@ Request = rcv
  To make setting up a request/response MEP on the client and service easier, [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] provides two messaging activity templates. <xref:System.ServiceModel.Activities.Design.ReceiveAndSendReply> is used on the service and <xref:System.ServiceModel.Activities.Design.SendAndReceiveReply> is used on the client. In both cases the templates add the appropriate messaging activities to your workflow. On the service, the <xref:System.ServiceModel.Activities.Design.ReceiveAndSendReply> adds a <xref:System.ServiceModel.Activities.Receive> activity followed by a <xref:System.ServiceModel.Activities.SendReply> activity. The <xref:System.ServiceModel.Activities.SendReply.Request> property is automatically set to the <xref:System.ServiceModel.Activities.Receive> activity. On the client, the <xref:System.ServiceModel.Activities.Design.SendAndReceiveReply> adds a <xref:System.ServiceModel.Activities.Send> activity followed by a <xref:System.ServiceModel.Activities.ReceiveReply>. The <xref:System.ServiceModel.Activities.ReceiveReply.Request%2A> property is automatically set to the <xref:System.ServiceModel.Activities.Send> activity. To use these templates, just drag and drop the appropriate template onto your workflow.  
 -->
 ## <a name="messaging-activities-and-transactions"></a>Activités de messagerie et transactions  
- Lorsqu'un appel est effectué à un service de workflow, vous pouvez souhaiter transmettre une transaction à l'opération de service. Pour cela, placez l'activité <xref:System.ServiceModel.Activities.Receive> dans une activité <xref:System.ServiceModel.Activities.TransactedReceiveScope>. L'activité <xref:System.ServiceModel.Activities.TransactedReceiveScope> contient une activité `Receive` et un corps. La transaction transmise au service reste ambiante pendant l'exécution du corps de l'activité <xref:System.ServiceModel.Activities.TransactedReceiveScope>. La transaction se termine une fois l’exécution du corps terminée. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]flux de travail et des transactions, consultez [Transactions de Workflow](../../../../docs/framework/windows-workflow-foundation/workflow-transactions.md).  
+ Lorsqu'un appel est effectué à un service de workflow, vous pouvez souhaiter transmettre une transaction à l'opération de service. Pour cela, placez l'activité <xref:System.ServiceModel.Activities.Receive> dans une activité <xref:System.ServiceModel.Activities.TransactedReceiveScope>. L'activité <xref:System.ServiceModel.Activities.TransactedReceiveScope> contient une activité `Receive` et un corps. La transaction transmise au service reste ambiante pendant l'exécution du corps de l'activité <xref:System.ServiceModel.Activities.TransactedReceiveScope>. La transaction se termine une fois l’exécution du corps terminée. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] flux de travail et des transactions, consultez [Transactions de Workflow](../../../../docs/framework/windows-workflow-foundation/workflow-transactions.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Comment envoyer et recevoir des erreurs dans les Services de flux de travail](http://go.microsoft.com/fwlink/?LinkId=189151)  

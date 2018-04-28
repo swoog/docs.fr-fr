@@ -1,35 +1,37 @@
 ---
-title: "Activation dynamique du traçage analytique"
-ms.custom: 
+title: Activation dynamique du traçage analytique
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 58b63cfc-307a-427d-b69d-9917ff9f44ac
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 18dda3f63a12a9f9a2320f413137943e5864ad27
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d070c66eebbf1a067254c38c6e5bfc7f40742863
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="dynamically-enabling-analytic-tracing"></a>Activation dynamique du traçage analytique
 À l'aide des outils fournis par le système d'exploitation Windows, vous pouvez activer ou désactiver de manière dynamique le suivi d'événements Windows (ETW). Pour tous les services [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] , le traçage analytique peut être activé et désactivé de manière dynamique sans modifier le fichier Web.config de l'application ni redémarrer le service. Cela permet de ne pas perturber l'application qui émet les événements de suivi.  
   
  Les options de suivi[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] peuvent être configurées de manière similaire. Par exemple, vous pouvez modifier le niveau de gravité **Erreur** en **Informations** sans porter atteinte à l'application. Cela peut s'effectuer à l'aide des outils suivants :  
   
--   **Logman** : outil de ligne de commande pour configurer, contrôler et interroger les données de suivi. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][Logman Create Trace](http://go.microsoft.com/fwlink/?LinkId=165426) et [Logman Update Trace](http://go.microsoft.com/fwlink/?LinkId=165427).  
+-   **Logman** : outil de ligne de commande pour configurer, contrôler et interroger les données de suivi. Pour plus d’informations, consultez [Logman création de Trace](http://go.microsoft.com/fwlink/?LinkId=165426) et [Logman Update Trace](http://go.microsoft.com/fwlink/?LinkId=165427).  
   
--   **Observateur d'événements** : outil d'administration graphique de Windows pour afficher les résultats du suivi. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][Les Services WCF et suivi d’événements pour Windows](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md) et [Observateur d’événements](http://go.microsoft.com/fwlink/?LinkId=165428).  
+-   **Observateur d'événements** : outil d'administration graphique de Windows pour afficher les résultats du suivi. Pour plus d’informations, consultez [les Services WCF et Event Tracing for Windows](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md) et [Observateur d’événements](http://go.microsoft.com/fwlink/?LinkId=165428).  
   
--   **Perfmon** : outil d'administration graphique de Windows utilisant des compteurs pour analyser les compteurs de suivi et les effets du suivi sur les performances. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][Créer un ensemble de collecteurs de données manuellement](http://go.microsoft.com/fwlink/?LinkId=165429).  
+-   **Perfmon** : outil d'administration graphique de Windows utilisant des compteurs pour analyser les compteurs de suivi et les effets du suivi sur les performances. Pour plus d’informations, consultez [créer un données collecteur définir manuellement](http://go.microsoft.com/fwlink/?LinkId=165429).  
   
 ### <a name="keywords"></a>Mots clés  
  Lors de l'utilisation de la classe <xref:System.ServiceModel.Activation.Configuration.ServiceModelActivationSectionGroup.Diagnostics%2A> , les messages de trace .NET Framework sont généralement filtrés en fonction du niveau de gravité (par exemple, Erreur, Avertissement et Informations). Le suivi ETW prend en charge le concept de niveau de gravité, mais introduit un nouveau mécanisme de filtre souple, utilisant des mots clés. Les mots clés sont des valeurs textuelles arbitraires qui permettent aux événements de suivi de fournir un contexte supplémentaire sur la signification de cet événement.  

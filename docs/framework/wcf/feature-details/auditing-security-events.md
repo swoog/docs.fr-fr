@@ -1,35 +1,35 @@
 ---
-title: "Audit des événements de sécurité"
-ms.custom: 
+title: Audit des événements de sécurité
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-caps.latest.revision: 
+caps.latest.revision: 27
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: cb8f112c71c743fd6650baf04b8db55ceaeef4ae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 948ff11cf1b7ecacc6f9f5fdebfc3a0cbd1ef5b1
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="auditing-security-events"></a>Audit des événements de sécurité
 Les applications créées avec [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] peuvent enregistrer des événements de sécurité (succès, échec, ou les deux) à l'aide de la fonctionnalité d'audit. Les événements sont écrits dans le journal des événements système Windows et peuvent être examinés à l'aide de l'Observateur d'événements.  
   
  L'audit permet à un administrateur de détecter une attaque que s'est déjà produite ou qui est en cours. En outre, l'audit permet de déboguer des problèmes relatifs à la sécurité. Par exemple, si une erreur dans la configuration de la stratégie d'autorisation ou de vérification refuse accidentellement l'accès à un utilisateur autorisé, un développeur peut la détecter rapidement et en isoler la cause en examinant le journal des événements.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)][!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sécurité, consultez [vue d’ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]programmation [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], consultez [programmation WCF de base](../../../../docs/framework/wcf/basic-wcf-programming.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] la sécurité, consultez [vue d’ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] programmation [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], consultez [programmation WCF de base](../../../../docs/framework/wcf/basic-wcf-programming.md).  
   
 ## <a name="audit-level-and-behavior"></a>Niveau et comportement d'audit  
  Il existe deux niveaux d'audit de sécurité :  
@@ -41,7 +41,7 @@ Les applications créées avec [!INCLUDE[indigo1](../../../../includes/indigo1-m
  Vous pouvez vérifier les deux niveaux d’audit pour réussite ou l’échec, ce qui est appelé le *comportement de vérification*.  
   
 ## <a name="audit-log-location"></a>Emplacement du journal d'audit  
- Après avoir déterminé un niveau et un comportement d'audit, vous (ou un administrateur) pouvez spécifier l'emplacement du journal d'audit. Vous disposez pour cela de trois options : Default, Application et Security. Lorsque vous spécifiez Default, le journal réel dépend du système que vous utilisez et du fait que celui-ci prend ou non en charge l'écriture dans le journal Security. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] la section « Système d'exploitation » plus loin dans cette rubrique.  
+ Après avoir déterminé un niveau et un comportement d'audit, vous (ou un administrateur) pouvez spécifier l'emplacement du journal d'audit. Vous disposez pour cela de trois options : Default, Application et Security. Lorsque vous spécifiez Default, le journal réel dépend du système que vous utilisez et du fait que celui-ci prend ou non en charge l'écriture dans le journal Security. Pour plus d’informations, consultez la section « Système d’exploitation » plus loin dans cette rubrique.  
   
  L'écriture dans le journal Security requiert le privilège `SeAuditPrivilege`. Par défaut, seuls les comptes Système local et Service réseau possèdent ce privilège. La gestion des fonctions du journal Security `read` et `delete` requièrent le privilège `SeSecurityPrivilege`. Par défaut, seuls les administrateurs possèdent ce privilège.  
   
@@ -86,10 +86,10 @@ Les applications créées avec [!INCLUDE[indigo1](../../../../includes/indigo1-m
 </configuration>  
 ```  
   
- Si l'audit est activé et que `auditLogLocation` n'est pas spécifié, le nom de journal par défaut est "Security" pour la plateforme qui prend en charge l'écriture dans le journal Security, sinon il s'agit de "Application". Seuls les systèmes d'exploitation [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] et [!INCLUDE[wv](../../../../includes/wv-md.md)] prennent en charge l'écriture dans le journal Security. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] la section « Système d'exploitation » plus loin dans cette rubrique.  
+ Si l'audit est activé et que `auditLogLocation` n'est pas spécifié, le nom de journal par défaut est "Security" pour la plateforme qui prend en charge l'écriture dans le journal Security, sinon il s'agit de "Application". Seuls les systèmes d'exploitation [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] et [!INCLUDE[wv](../../../../includes/wv-md.md)] prennent en charge l'écriture dans le journal Security. Pour plus d’informations, consultez la section « Système d’exploitation » plus loin dans cette rubrique.  
   
 ## <a name="security-considerations"></a>Considérations relatives à la sécurité  
- Si un utilisateur malveillant sait que l'audit est activé, cet intrus peut envoyer des messages non valides pour provoquer l'écriture d'entrées d'audit. Si le journal d'audit se remplit de cette manière, le système d'audit échoue. Pour minimiser ce problème, affectez à la propriété <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> la valeur `true` et utilisez les propriétés de l'Observateur d'événements pour contrôler le comportement d'audit. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]l’article du Support technique de Microsoft sur l’affichage et la gestion des journaux des événements à l’aide de l’Observateur d’événements dans Windows XP disponible à l’adresse [comment afficher et gérer les journaux des événements dans l’Observateur d’événements de Windows XP](http://go.microsoft.com/fwlink/?LinkId=89150).  
+ Si un utilisateur malveillant sait que l'audit est activé, cet intrus peut envoyer des messages non valides pour provoquer l'écriture d'entrées d'audit. Si le journal d'audit se remplit de cette manière, le système d'audit échoue. Pour minimiser ce problème, affectez à la propriété <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> la valeur `true` et utilisez les propriétés de l'Observateur d'événements pour contrôler le comportement d'audit. Pour plus d’informations, consultez l’article de Support technique de Microsoft sur l’affichage et la gestion des journaux des événements à l’aide de l’Observateur d’événements dans Windows XP disponible à l’adresse [comment afficher et gérer les journaux des événements dans l’Observateur d’événements de Windows XP](http://go.microsoft.com/fwlink/?LinkId=89150).  
   
  Les événements d'audit écrits dans le journal Application sur [!INCLUDE[wxp](../../../../includes/wxp-md.md)] sont accessibles aux utilisateurs authentifiés.  
   

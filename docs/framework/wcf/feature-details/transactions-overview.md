@@ -1,28 +1,30 @@
 ---
 title: Vue d'ensemble des transactions Windows Communication Foundation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - transactions [WCF]
 - WCF, transactions
 - Windows Communication Foundation, transactions
 ms.assetid: c7757854-1207-4019-8b31-552578b7d570
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6fb90d0f93e9bdf7dd9779ffd5d4b1288ba56e7a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 76edd7cf30d9da06db6e0c2f4624bf9a6d677eca
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="windows-communication-foundation-transactions-overview"></a>Vue d’ensemble des transactions Windows Communication Foundation
 Les transactions permettent de regrouper un ensemble d’actions ou d’opérations dans une unité d’exécution unique et indivisible. Une transaction est une collection d'opérations avec les propriétés suivantes :  
@@ -39,7 +41,7 @@ Les transactions permettent de regrouper un ensemble d’actions ou d’opérati
   
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implémente la prise en charge du protocole WS-AtomicTransaction (WS-AT) qui permet aux applications [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] de transférer des transactions aux applications interopérables, telles que les services Web interopérables générés à l'aide d'une technologie tierce. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implémente également la prise en charge du protocole OLE Transactions, qui peut être utilisé dans des scénarios où vous n'avez pas besoin de fonctionnalités d'interopérabilité pour activer le flux de transaction.  
   
- Vous pouvez utiliser un fichier de configuration d'application pour configurer des liaisons afin d'activer ou de désactiver le flux de transaction, ainsi que pour définir le protocole de transaction souhaité sur une liaison. De plus, vous pouvez définir des délais d’expiration de transaction au niveau du service à l’aide du fichier de configuration. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Activation du flux de Transaction](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md).  
+ Vous pouvez utiliser un fichier de configuration d'application pour configurer des liaisons afin d'activer ou de désactiver le flux de transaction, ainsi que pour définir le protocole de transaction souhaité sur une liaison. De plus, vous pouvez définir des délais d’expiration de transaction au niveau du service à l’aide du fichier de configuration. Pour plus d’informations, consultez [l’activation de flux de Transaction](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md).  
   
  Les attributs de transaction dans l'espace de noms <xref:System.ServiceModel> vous permettent d'effectuer les opérations suivantes :  
   
@@ -49,7 +51,7 @@ Les transactions permettent de regrouper un ensemble d’actions ou d’opérati
   
 -   utiliser les attributs <xref:System.ServiceModel.ServiceContractAttribute> et <xref:System.ServiceModel.OperationContractAttribute> sur une méthode de contrat pour exiger, autoriser ou refuser le flux de transaction.  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Attributs de Transaction ServiceModel](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md).  
+ Pour plus d’informations, consultez [attributs de Transaction ServiceModel](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Attributs de transaction ServiceModel](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md)  

@@ -1,20 +1,17 @@
 ---
 title: Classes abstraites (F#)
-description: "En savoir plus sur les classes abstraites F #, qui laissent certains ou tous les membres non implémentés et représentent des fonctionnalités communes de différents types de types d’objet."
-keywords: visual f#, f#, programmation fonctionnelle
+description: 'En savoir plus sur les classes abstraites F #, qui laissent certains ou tous les membres non implémentés et représentent des fonctionnalités communes de différents types de types d’objet.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: a3dcc335-433b-4672-ac2d-ae6b11b816f3
-ms.openlocfilehash: 209bcca70318db59506011b1f2bb74a09bf3814a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 0d7ca996de89c44a5cfb9197c1b515741a2303df
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="abstract-classes"></a>Classes abstraites
 
@@ -33,7 +30,7 @@ type [ accessibility-modifier ] abstract-class-name =
 abstract member member-name : type-signature
 ```
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 Dans la programmation orientée objet, une classe abstraite est utilisée comme classe de base d’une hiérarchie et représente les fonctionnalités communes de différents types de types d’objet. Comme l’indique l’abstraite « nom », les classes abstraites ne correspondent pas souvent directement à des entités concrètes dans le domaine de problème. Toutefois, elles ne représentent que nombreuses entités concrètes ont en commun.
 
 Classes abstraites doivent avoir le `AbstractClass` attribut. Ils peuvent ont implémenté et non implémenté des membres. L’utilisation du terme *abstraite* quand il est appliqué à une classe est la même que dans d’autres langages .NET ; Toutefois, l’utilisation du terme *abstraite* quand il est appliqué aux méthodes (et des propriétés) est un peu différente en F # à partir de son utiliser dans d’autres langages .NET. En F #, lorsqu’une méthode est marquée avec la `abstract` (mot clé), cela indique qu’un membre a une entrée, appelée un *emplacement de dispatch virtuel*, dans la table interne des fonctions virtuelles pour ce type. En d’autres termes, la méthode est virtuelle, bien que le `virtual` mot clé n’est pas utilisé dans le langage F #. Le mot clé `abstract` est utilisé pour les méthodes virtuelles, quelle que soit la méthode est implémentée ou non. La déclaration d’un emplacement de dispatch virtuel est séparée de la définition d’une méthode pour cet emplacement de dispatch. Par conséquent, l’équivalent en F # d’une déclaration de méthode virtuelle et la définition dans un autre langage .NET est une combinaison d’une déclaration de méthode abstraite et d’une définition séparée, avec l’option le `default` mot clé ou le `override` (mot clé). Pour plus d’informations et d’exemples, consultez [méthodes](members/methods.md).

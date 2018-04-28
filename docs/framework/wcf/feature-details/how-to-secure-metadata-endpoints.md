@@ -1,32 +1,34 @@
 ---
-title: "Comment : sécuriser des points de terminaison de métadonnées"
-ms.custom: 
+title: 'Comment : sécuriser des points de terminaison de métadonnées'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9f71b6ae-737c-4382-8d89-0a7b1c7e182b
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 6923703230d6792d8938de149f64c41a3bf95699
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 50a62366063123de9e1773b2926f79b76a1b1c3b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-secure-metadata-endpoints"></a>Comment : sécuriser des points de terminaison de métadonnées
 Les métadonnées d'un service peuvent contenir des informations sensibles sur votre application dont un utilisateur malveillant peut tirer parti. Les consommateurs de votre service peuvent également avoir besoin d'un mécanisme sécurisé pour obtenir des métadonnées sur votre service. Par conséquent, il est parfois nécessaire de publier vos métadonnées à l'aide d'un point de terminaison sécurisé.  
   
- Les points de terminaison de métadonnées sont en général sécurisés à l'aide des mécanismes de sécurité standard définis dans [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] pour la sécurisation des points de terminaison d'application. ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Vue d’ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md).)  
+ Les points de terminaison de métadonnées sont en général sécurisés à l'aide des mécanismes de sécurité standard définis dans [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] pour la sécurisation des points de terminaison d'application. (Pour plus d’informations, consultez [vue d’ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md).)  
   
  Cette rubrique présente en détail les étapes permettant de créer un point de terminaison sécurisé par un certificat SSL (Secure Sockets Layer) ou, en d'autres termes, un point de terminaison HTTPS.  
   

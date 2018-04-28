@@ -33,11 +33,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 87785d6bba58442a1a5ad27f5304aa63e16c1aa9
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: ec0c7645d4d6a1affe78e23a9498ea5f5f8d5235
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="xaml-overview-wpf"></a>Vue d’ensemble du langage XAML (WPF)
 Cette rubrique décrit les fonctionnalités du langage XAML et montre comment utiliser XAML pour écrire des applications [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Cette rubrique décrit en particulier le langage XAML tel qu’il est implémenté par [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Le XAML lui-même est un concept de langage plus vaste que [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -46,7 +46,7 @@ Cette rubrique décrit les fonctionnalités du langage XAML et montre comment u
   
 <a name="what_is_xaml"></a>   
 ## <a name="what-is-xaml"></a>Qu’est-ce que XAML ?  
- XAML est un langage de balisage déclaratif. Appliqué au modèle de programmation [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)], le langage XAML simplifie la création d’une [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] pour une application [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]. Vous pouvez créer les éléments [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] visibles dans le balisage XAML déclaratif, puis séparer la logique de la définition de l’interface [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] au moment de l’exécution, en utilisant les fichiers code-behind joints au balisage par le biais de définitions de classe partielle. XAML représente directement l’instanciation d’objets dans un ensemble spécifique de types de stockage définis dans des assemblys. C’est ce qui le différencie de la plupart des autres langages de balisage, qui sont en général des langages interprétés sans un lien aussi direct à un système de type de stockage. XAML permet un flux de travail dans lequel des parties distinctes peuvent travailler sur l’interface [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] et la logique d’une application avec des outils pouvant être différents.  
+ XAML est un langage de balisage déclaratif. Alors que le modèle de programmation .NET Framework, XAML simplifie la création d’un [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] pour une application .NET Framework. Vous pouvez créer les éléments [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] visibles dans le balisage XAML déclaratif, puis séparer la logique de la définition de l’interface [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] au moment de l’exécution, en utilisant les fichiers code-behind joints au balisage par le biais de définitions de classe partielle. XAML représente directement l’instanciation d’objets dans un ensemble spécifique de types de stockage définis dans des assemblys. C’est ce qui le différencie de la plupart des autres langages de balisage, qui sont en général des langages interprétés sans un lien aussi direct à un système de type de stockage. XAML permet un flux de travail dans lequel des parties distinctes peuvent travailler sur l’interface [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] et la logique d’une application avec des outils pouvant être différents.  
   
  Représentés sous forme de texte, les fichiers XAML sont des fichiers XML qui ont généralement l’extension `.xaml`. Les fichiers peuvent être encodés par un encodage XML, même si UTF-8 est l’encodage classique.  
   

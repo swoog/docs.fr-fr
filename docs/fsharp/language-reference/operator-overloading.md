@@ -1,20 +1,17 @@
 ---
-title: "Surcharge d'opérateur (F#)"
-description: "Découvrez comment surcharger des opérateurs arithmétiques dans une classe ou un type d’enregistrement et au niveau global dans F #."
-keywords: visual f#, f#, programmation fonctionnelle
+title: Surcharge d'opérateur (F#)
+description: 'Découvrez comment surcharger des opérateurs arithmétiques dans une classe ou un type d’enregistrement et au niveau global dans F #.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 019277ed-f649-4fa5-ad43-097865f449d9
-ms.openlocfilehash: 76ddab5339e11d71bb326b60d727017eb838ccf4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 45fcb4d2acce29caa6b38d08ae4f166884f20147
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="operator-overloading"></a>Surcharge d'opérateur
 
@@ -31,7 +28,7 @@ static member (operator-symbols) (parameter-list) =
 let [inline] (operator-symbols) parameter-list = function-body
 ```
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 Dans la syntaxe précédente, le *symbole d’opérateur* est un des `+`, `-`, `*`, `/`, `=`, et ainsi de suite. Le *la liste des paramètres* spécifie les opérandes dans l’ordre d’apparition dans la syntaxe standard pour cet opérateur. Le *corps de la méthode* construit la valeur résultante.
 
 Les surcharges d’opérateur pour les opérateurs doivent être statiques. Surcharges d’opérateur pour les opérateurs unaires, telles que `+` et `-`, doivent utiliser un tilde (`~`) dans le *symbole d’opérateur* pour indiquer que l’opérateur est un opérateur unaire et non un opérateur binaire, comme indiqué dans les déclaration suivante.
@@ -106,7 +103,7 @@ Autres combinaisons de caractères d’opérateur qui ne sont pas répertoriées
 
 
 
-|Caractère d’opérateur|Nom|
+|Caractère d’opérateur|Name|
 |------------------|----|
 |`>`|`Greater`|
 |`<`|`Less`|

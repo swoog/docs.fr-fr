@@ -1,20 +1,17 @@
 ---
-title: "Contrôle d'accès (F#)"
-description: "Découvrez comment contrôler l’accès aux éléments de programmation, tels que les types, méthodes et fonctions, dans le langage de programmation F #."
-keywords: visual f#, f#, programmation fonctionnelle
+title: Contrôle d'accès (F#)
+description: 'Découvrez comment contrôler l’accès aux éléments de programmation, tels que les types, méthodes et fonctions, dans le langage de programmation F #.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 955b06fe-d1cd-431d-8db6-93e83b697453
-ms.openlocfilehash: a02e20a585a0456577901f2762a0eeb0e3ecd2f0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: fee5f719904b61c3082d56f73448defdea39f472
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="access-control"></a>Contrôle d'accès
 
@@ -25,11 +22,11 @@ ms.lasthandoff: 10/18/2017
 En F #, les spécificateurs de contrôle de l’accès `public`, `internal`, et `private` peut être appliqué à des modules, des types, des méthodes, des définitions de valeur, des fonctions, des propriétés et des champs explicites.
 
 
-- `public`Indique que l’entité est accessible par tous les appelants.
+- `public` Indique que l’entité est accessible par tous les appelants.
 
-- `internal`Indique que l’entité est accessible uniquement à partir du même assembly.
+- `internal` Indique que l’entité est accessible uniquement à partir du même assembly.
 
-- `private`Indique que l’entité est accessible uniquement à partir de type ou le module englobant.
+- `private` Indique que l’entité est accessible uniquement à partir de type ou le module englobant.
 
 
 >[!NOTE] 

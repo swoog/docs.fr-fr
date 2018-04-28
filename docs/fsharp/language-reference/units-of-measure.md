@@ -1,20 +1,17 @@
 ---
-title: "Unités de mesure (F#)"
-description: "Découvrez comment flottantes et des valeurs de l’entier signé en F # peuvent être associée à des unités de mesure, qui sont généralement utilisées pour indiquer la longueur, le volume et en série."
-keywords: visual f#, f#, programmation fonctionnelle
+title: Unités de mesure (F#)
+description: 'Découvrez comment flottantes et des valeurs de l’entier signé en F # peuvent être associée à des unités de mesure, qui sont généralement utilisées pour indiquer la longueur, le volume et en série.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: cb2eb658-df6c-422e-afad-97422609c773
-ms.openlocfilehash: 2d0683e864c5684a78c02e177c296d3067295723
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 336a1e04426fb39f5ceb98e06a06cd7eadc36e85
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="units-of-measure"></a>Unités de mesure
 
@@ -27,7 +24,7 @@ Virgule flottante et valeurs de l’entier signé en F # peut avoir associé à 
 [<Measure>] type unit-name [ = measure ]
 ```
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 La syntaxe précédente définit *-nom de l’unité* en tant qu’unité de mesure. La partie facultative est utilisée pour définir une nouvelle mesure en termes d’unités précédemment définies. Par exemple, la ligne suivante définit la mesure `cm` (centimètre).
 
 ```fsharp

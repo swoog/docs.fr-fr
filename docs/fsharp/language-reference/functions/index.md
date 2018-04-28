@@ -1,20 +1,17 @@
 ---
 title: Fonctions (F#)
 description: 'En savoir plus sur les fonctions dans F # et comment F # prend en charge les constructions de programmation fonctionnelle courants.'
-keywords: visual f#, f#, programmation fonctionnelle
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 6dea2c3e-2f9d-4c9d-97a2-d8f9a72b6f4c
-ms.openlocfilehash: adb2b0b3680c97582dfefda41c43735f9f09e6c9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4cdab85dd63cc74a4c6e7abf660f8f32cc088120
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="functions"></a>Fonctions
 
@@ -115,7 +112,7 @@ Vous fournissez ensuite, selon vos besoins, l’argument supplémentaire pour le
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet107.fs)]
     
 ## <a name="recursive-functions"></a>Fonctions récursives
-Les *fonctions récursives* sont des fonctions qui s’appellent. Elles nécessitent la spécification du mot clé **rec** après le mot clé **let**. Appelez la fonction récursive à partir du corps de la fonction, comme vous le feriez pour tout autre appel de fonction. La fonction récursive suivante calcule le  *n* ème nombre de Fibonacci. La séquence de nombres de Fibonacci est connue depuis l’antiquité ; il s’agit d’une séquence dans laquelle chaque nombre consécutif est la somme des deux nombres précédents dans la séquence.
+Les *fonctions récursives* sont des fonctions qui s’appellent. Elles nécessitent la spécification du mot clé **rec** après le mot clé **let**. Appelez la fonction récursive à partir du corps de la fonction, comme vous le feriez pour tout autre appel de fonction. La fonction récursive suivante calcule le *n*e nombre de Fibonacci. La séquence de nombres de Fibonacci est connue depuis l’antiquité ; il s’agit d’une séquence dans laquelle chaque nombre consécutif est la somme des deux nombres précédents dans la séquence.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet108.fs)]
 

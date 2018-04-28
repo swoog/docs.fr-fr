@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0af083ba1d97fcf07eab6f9d789f023a9194070c
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: c603032e175fd8390abea2db625321d3e3558c1a
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="information-disclosure"></a>Divulgation d'informations
 La divulgation d'informations permet à un intrus d'obtenir des informations précieuses à propos d'un système. Par conséquent, examinez toujours les informations que vous révélez et demandez-vous si elles peuvent être utilisées par un utilisateur malveillant. Vous trouverez ci-dessous la liste des attaques par divulgation d’informations possibles et les moyens d’atténuation pour chacune d’elles.  
@@ -32,7 +32,7 @@ La divulgation d'informations permet à un intrus d'obtenir des informations pr�
  Il est important de sécuriser la stratégie, surtout dans les scénarios de fédération dans lesquels les spécifications sensibles des jetons émis ou les informations de l'émetteur de jetons sont exposées dans la stratégie. Dans ces cas, il est recommandé de sécuriser le point de terminaison de stratégie du service fédéré pour empêcher les intrus d'obtenir des informations à propos du service, tel que le type de revendications à placer dans le jeton émis, ou de rediriger les clients vers des émetteurs de jetons malveillants. Par exemple, un intrus pourrait découvrir des paires de nom d'utilisateur/mot de passe en reconfigurant la chaîne de confiance fédérée afin qu'elle se termine dans un émetteur qui exécute une attaque de « l'homme du milieu » (« man-in-the-middle »). Il est également recommandé que les clients fédérés qui obtiennent leurs liaisons grâce à la récupération de la stratégie vérifient qu’ils approuvent les émetteurs de la chaîne de confiance fédérée obtenue. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] les scénarios de fédération, consultez [fédération](../../../../docs/framework/wcf/feature-details/federation.md).  
   
 ## <a name="memory-dumps-can-reveal-claim-information"></a>Les images mémoire peuvent révéler des informations de revendication  
- Lorsqu'une application échoue, des fichiers journaux, tels que ceux générés par Dr. Watson, peut contenir des informations de revendication. Ces informations ne doivent pas être exportées à d’autres entités, telles que les équipes de support ; sinon, les informations de revendication qui contiennent des données privées sont également exportées. Vous pouvez atténuer cet aspect en n'envoyant pas les fichiers journaux à des entités inconnues. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Windows Server 2003](http://go.microsoft.com/fwlink/?LinkId=89160).  
+ Lorsqu'une application échoue, des fichiers journaux, tels que ceux générés par Dr. Watson, peut contenir des informations de revendication. Ces informations ne doivent pas être exportées à d’autres entités, telles que les équipes de support ; sinon, les informations de revendication qui contiennent des données privées sont également exportées. Vous pouvez atténuer cet aspect en n'envoyant pas les fichiers journaux à des entités inconnues. Pour plus d’informations, consultez [Windows Server 2003](http://go.microsoft.com/fwlink/?LinkId=89160).  
   
 ## <a name="endpoint-addresses"></a>Adresses de point de terminaison  
  Une adresse de point de terminaison contient les informations nécessaires pour communiquer avec un point de terminaison. La sécurité SOAP doit inclure l'adresse complète dans les messages de négociation de la sécurité qui sont échangés afin de négocier une clé symétrique entre un client et un serveur. Vu que la négociation de sécurité est un processus d'amorçage, les en-têtes d'adresse ne peuvent pas être chiffrés pendant ce processus. Par conséquent, l'adresse ne doit pas contenir de données confidentielles ; sinon, il existe un risque d'attaque par divulgation d'informations.  

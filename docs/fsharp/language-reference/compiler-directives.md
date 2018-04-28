@@ -1,20 +1,17 @@
 ---
 title: Directives de compilateur (F#)
-description: "En savoir plus sur F # language les directives de préprocesseur, directives de compilation conditionnelle, directives de ligne et les directives du compilateur."
-keywords: visual f#, f#, programmation fonctionnelle
+description: 'En savoir plus sur F # language les directives de préprocesseur, directives de compilation conditionnelle, directives de ligne et les directives du compilateur.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 93aef07a-6747-4ce4-a10f-a05168978af6
-ms.openlocfilehash: c7ec056f407f3af34528205a5abb1cdef7d43fef
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 03fe3598f04025cf6dfaf2424b9fcb33ed4b3859
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="compiler-directives"></a>Directives de compilateur
 
@@ -29,11 +26,11 @@ Le tableau suivant répertorie les directives de préprocesseur disponibles en F
 
 |Directive|Description|
 |---------|-----------|
-|`#if` *symbol*|Prend en charge la compilation conditionnelle. Le code dans la section après le `#if` est inclus si le *symbole* est défini.|
+|`#if` *Symbole*|Prend en charge la compilation conditionnelle. Le code dans la section après le `#if` est inclus si le *symbole* est défini.|
 |`#else`|Prend en charge la compilation conditionnelle. Marque une section de code à inclure si le symbole utilisé avec le `#if` précédent n'est pas défini.|
 |`#endif`|Prend en charge la compilation conditionnelle. Marque la fin d'une section conditionnelle de code.|
-|`#`[ligne] *int*,<br/>`#`[line] *int* *string*,<br/>`#`[line] *int* *verbatim-string*|Indique la ligne et le nom de fichier du code source d'origine, à des fins de débogage. Cette fonctionnalité est fournie pour les outils qui génèrent du code source F#.|
-|`#nowarn` *warningcode*|Désactive un ou plusieurs avertissements du compilateur. Pour désactiver un avertissement, trouvez son numéro dans la sortie du compilateur et incluez-le entre guillemets. Omettez le préfixe « FS ». Pour désactiver plusieurs numéros d'avertissement sur la même ligne, incluez chaque nombre entre guillemets, puis séparez chaque chaîne par un espace. Exemple :
+|`#`[ligne] *int*,<br/>`#`[ligne] *int* *chaîne*,<br/>`#`[ligne] *int* *chaîne textuelle*|Indique la ligne et le nom de fichier du code source d'origine, à des fins de débogage. Cette fonctionnalité est fournie pour les outils qui génèrent du code source F#.|
+|`#nowarn` *warningcode*|Désactive un ou plusieurs avertissements du compilateur. Pour désactiver un avertissement, trouvez son numéro dans la sortie du compilateur et incluez-le entre guillemets. Omettez le préfixe « FS ». Pour désactiver plusieurs numéros d'avertissement sur la même ligne, incluez chaque nombre entre guillemets, puis séparez chaque chaîne par un espace. Par exemple :
 
 `#nowarn "9" "40"`
 

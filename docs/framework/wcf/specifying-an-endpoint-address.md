@@ -1,13 +1,13 @@
 ---
-title: "Spécification d'une adresse de point de terminaison"
-ms.custom: 
+title: Spécification d'une adresse de point de terminaison
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], addressing
 ms.assetid: ac24f5ad-9558-4298-b168-c473c68e819b
-caps.latest.revision: 
+caps.latest.revision: 41
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 403ff897de4dc9ee95a854d9658bdee344755d59
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 09a3bf2d552b49e36375210e3036e344a9702405
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="specifying-an-endpoint-address"></a>Spécification d'une adresse de point de terminaison
 Toute communication avec un service [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] a lieu par l'intermédiaire de ses points de terminaison. Chaque <xref:System.ServiceModel.Description.ServiceEndpoint> contient un <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>, un <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A> et un <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>. Le contrat spécifie quelles opérations sont disponibles. La liaison spécifie comment communiquer avec le service et l'adresse spécifie où rechercher le service. Chaque point de terminaison doit avoir une adresse unique. L'adresse de point de terminaison est représentée par la classe <xref:System.ServiceModel.EndpointAddress>, qui contient un URI (Uniform Resource Identifier) représentant l'adresse du service, un <xref:System.ServiceModel.EndpointAddress.Identity%2A> représentant l'identité de sécurité du service et une collection de <xref:System.ServiceModel.EndpointAddress.Headers%2A> facultative. Les en-têtes facultatifs fournissent des informations d'adressage plus détaillées pour identifier ou interagir avec le point de terminaison. Par exemple, les en-tête peuvent indiquer comment traiter un message entrant, où le point de terminaison doit envoyer un message de réponse ou quelle instance d'un service utiliser pour traiter un message entrant d'un utilisateur particulier lorsque plusieurs instances sont disponibles.  
@@ -33,7 +33,7 @@ Toute communication avec un service [!INCLUDE[indigo1](../../../includes/indigo1
 ## <a name="definition-of-an-endpoint-address"></a>Définition d'une adresse de point de terminaison  
  Dans [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], un <xref:System.ServiceModel.EndpointAddress> modèle une référence de point de terminaison (EPR) comme défini dans le standard WS-Addressing.  
   
- L'URI d'adresse de la plupart des transports se compose de quatre parties. Par exemple, cet URI, "http://www.fabrikam.com: 322/mathservice.svc/secureEndpoint" est constitué des quatre parties suivantes :  
+ L'URI d'adresse de la plupart des transports se compose de quatre parties. Par exemple, cet URI, «http://www.fabrikam.com:322/mathservice.svc/secureEndpoint» a quatre parties suivantes :  
   
 -   Schéma : http:  
   
@@ -49,7 +49,7 @@ Toute communication avec un service [!INCLUDE[indigo1](../../../includes/indigo1
   
  Il y a deux façons de spécifier des adresses de point de terminaison pour un service dans [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Vous pouvez spécifier une adresse absolue pour chaque point de terminaison associé au service ou vous pouvez fournir une adresse de base pour le <xref:System.ServiceModel.ServiceHost> d'un service puis spécifier une adresse pour chaque point de terminaison associé à ce service défini comme relatif à cette adresse de base. Vous pouvez utiliser chacune de ces procédures pour spécifier les adresses de point de terminaison pour un service dans la configuration ou le code. Si vous ne spécifiez pas d'adresse relative, le service utilise l'adresse de base. Vous pouvez également avoir plusieurs adresses de base pour un service, mais une seule adresse de base pour chaque transport est autorisée pour chaque service. Si vous avez plusieurs points de terminaison, chacun configuré avec une liaison différente, leurs adresses doivent être uniques. Les points de terminaison qui utilisent la même liaison mais des contrats différents peuvent utiliser la même adresse.  
   
- Lorsque vous hébergez avec les services IIS, vous ne gérez pas l'instance <xref:System.ServiceModel.ServiceHost> vous-même. L'adresse de base est toujours l'adresse spécifiée dans le fichier .svc pour le service lors de l'hébergement dans IIS. Par conséquent, vous devez toujours utiliser des adresses de point de terminaison relatives pour les points de terminaison de service hébergés dans IIS. Fournir une adresse de point de terminaison qualifiée complète peut entraîner des erreurs lors du déploiement du service. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Déploiement d’un Service WCF hébergé par les Services d’Internet Information](../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md).  
+ Lorsque vous hébergez avec les services IIS, vous ne gérez pas l'instance <xref:System.ServiceModel.ServiceHost> vous-même. L'adresse de base est toujours l'adresse spécifiée dans le fichier .svc pour le service lors de l'hébergement dans IIS. Par conséquent, vous devez toujours utiliser des adresses de point de terminaison relatives pour les points de terminaison de service hébergés dans IIS. Fournir une adresse de point de terminaison qualifiée complète peut entraîner des erreurs lors du déploiement du service. Pour plus d’informations, consultez [déploiement d’un Service WCF de sujet](../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md).  
   
 ## <a name="defining-endpoint-addresses-in-configuration"></a>Définition des adresses de point de terminaison dans la configuration  
  Pour définir un point de terminaison dans un fichier de configuration, utilisez la [ \<point de terminaison >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) élément.  
@@ -58,7 +58,7 @@ Toute communication avec un service [!INCLUDE[indigo1](../../../includes/indigo1
   
  Lorsque le <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> est appelée (autrement dit, lorsque l’application d’hébergement tente de démarrer le service), le système recherche un [ \<service >](../../../docs/framework/configure-apps/file-schema/wcf/service.md) élément avec un attribut de nom qui indique « UE. Samples.HelloService ». Si le [ \<service >](../../../docs/framework/configure-apps/file-schema/wcf/service.md) élément est trouvé, le système charge la classe spécifiée et crée des points de terminaison en utilisant les définitions de point de terminaison fournies dans le fichier de configuration. Ce mécanisme vous permet de charger et de démarrer un service avec deux lignes de code tout en laissant la liaison et les informations d’adressage hors de votre code. L'avantage de cette approche est que ces modifications peuvent être apportées sans devoir recompiler ou redéployer l'application.  
   
- Les en-têtes facultatifs sont déclarés dans un [ \<en-têtes >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md). Les éléments suivants sont un exemple des éléments utilisé pour spécifier des points de terminaison pour un service dans un fichier de configuration qui fait la distinction entre deux en-tête : clients "Gold" de http://tempuri1.org/ et clients "Standard" de http://tempuri2.org/. Appel de ce service doit être approprié [ \<en-têtes >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md) dans son fichier de configuration.  
+ Les en-têtes facultatifs sont déclarés dans un [ \<en-têtes >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md). Voici un exemple des éléments utilisés pour spécifier des points de terminaison pour un service dans un fichier de configuration qui fait la distinction entre les deux en-têtes : clients « Gold » de http://tempuri1.org/ et les clients à partir de « Standard » http://tempuri2.org/. Appel de ce service doit être approprié [ \<en-têtes >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md) dans son fichier de configuration.  
   
  [!code-xml[S_UEHelloWorld#1](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp.config#1)]  
   
@@ -99,4 +99,4 @@ Toute communication avec un service [!INCLUDE[indigo1](../../../includes/indigo1
  <xref:System.ServiceModel.EndpointAddress>  
  [Identité du service et authentification](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
  [Vue d’ensemble de la création de points de terminaison](../../../docs/framework/wcf/endpoint-creation-overview.md)  
- [Hébergement d’applications WPF](../../../docs/framework/wcf/feature-details/hosting.md)
+ [Hébergement](../../../docs/framework/wcf/feature-details/hosting.md)

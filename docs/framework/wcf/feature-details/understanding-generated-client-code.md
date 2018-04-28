@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f7716921be5ff97c2353b3b31d841c0c8dc01658
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 95e27941cece3bfb96c4567516d07bcbe07c7490
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="understanding-generated-client-code"></a>Fonctionnement du code client généré
 L' [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) génère du code client et un fichier de configuration d'application cliente à des fins de création d’applications clientes. Cette rubrique présente des exemples de code généré pour des scénarios de contrat de service standard. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] la génération d'une application cliente à l'aide du code généré, consultez [WCF Client Overview](../../../../docs/framework/wcf/wcf-client-overview.md).  
@@ -52,14 +52,14 @@ L' [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework
   
  [!code-csharp[C_GeneratedCodeFiles#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#12)]  
   
- Vous pouvez utiliser l'interface de contrat de service générée avec la classe <xref:System.ServiceModel.ChannelFactory?displayProperty=nameWithType> pour créer un objet de canal [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] avec lequel appeler des opérations de service. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Comment : utiliser la classe ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md).  
+ Vous pouvez utiliser l'interface de contrat de service générée avec la classe <xref:System.ServiceModel.ChannelFactory?displayProperty=nameWithType> pour créer un objet de canal [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] avec lequel appeler des opérations de service. Pour plus d’informations, consultez [Comment : utiliser la classe ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md).  
   
 ### <a name="finding-wcf-client-classes"></a>Recherche de classes de client WCF  
  Pour trouver la classe de client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] qui implémente le contrat de service que vous souhaitez utiliser, recherchez une extension de <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>, où le paramètre de type est l'interface de contrat de service que vous avez trouvée précédemment et qui étend cette interface. L'exemple de code suivant illustre la classe <xref:System.ServiceModel.ClientBase%601> de type `ISampleService`.  
   
  [!code-csharp[C_GeneratedCodeFiles#14](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#14)]  
   
- Vous pouvez utiliser cette classe de client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] en créant une nouvelle instance et en appelant les méthodes qu'elle implémente. Ces méthodes appellent l'opération de service avec laquelle elle est conçue et configurée pour interagir. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Vue d’ensemble du Client WCF](../../../../docs/framework/wcf/wcf-client-overview.md).  
+ Vous pouvez utiliser cette classe de client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] en créant une nouvelle instance et en appelant les méthodes qu'elle implémente. Ces méthodes appellent l'opération de service avec laquelle elle est conçue et configurée pour interagir. Pour plus d’informations, consultez [vue d’ensemble du Client WCF](../../../../docs/framework/wcf/wcf-client-overview.md).  
   
 > [!NOTE]
 >  Lorsque SvcUtil.exe génère une classe de client WCF, il ajoute un <xref:System.Diagnostics.DebuggerStepThroughAttribute> à la classe de client qui empêche les débogueurs de parcourir pas à pas la classe de client WCF.  

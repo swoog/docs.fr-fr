@@ -1,20 +1,17 @@
 ---
 title: Liaisons do dans les classes (F#)
 description: "Découvrez comment utiliser une liaison dans une définition de classe, qui effectue des actions lorsque l’objet est construit ou le type de la première utilisation de ' do' F #."
-keywords: visual f#, f#, programmation fonctionnelle
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 78987cb8-bdba-46e2-b5b2-994c83fe42c4
-ms.openlocfilehash: f9582338306d87c3dd799425083037cc95b31b1e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 27c2372328c8b23b91239517271c0d71a672a34d
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="do-bindings-in-classes"></a>Liaisons do dans les classes
 
@@ -27,7 +24,7 @@ A `do` liaison dans une définition de classe exécute des actions lorsque l’o
 [static] do expression
 ```
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 A `do` liaison apparaît avec ou après `let` liaisons mais avant les définitions de membre dans une définition de classe. Bien que le `do` (mot clé) est facultatif pour `do` liaisons au niveau du module, il n’est pas facultatif pour `do` liaisons dans une définition de classe.
 
 Pour la construction de chaque objet d’un type donné, non statique `do` liaisons et non statiques `let` sont exécutées dans l’ordre dans lequel elles apparaissent dans la définition de classe. Plusieurs `do` liaisons peuvent se produire dans un type. Non statiques `let` liaisons et non statiques `do` liaisons devient le corps du constructeur principal. Le code non statiques `do` section des liaisons peut référencer les paramètres du constructeur principal et des valeurs ou des fonctions qui sont définies dans la `let` section des liaisons.
@@ -60,4 +57,4 @@ Initializing object 1 2 2 4 8 16
 
 [Liaisons `let` dans des classes](let-bindings-in-classes.md)
 
-[`do`Liaisons](../functions/do-Bindings.md)
+[`do` Liaisons](../functions/do-Bindings.md)

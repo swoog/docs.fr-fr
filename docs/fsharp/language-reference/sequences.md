@@ -1,20 +1,17 @@
 ---
-title: "Séquences (F#)"
-description: "Découvrez comment utiliser des séquences de F #, lorsque vous avez une grande collection ordonnée de données mais que vous ne prévoyez pas nécessairement à utiliser tous les éléments."
-keywords: visual f#, f#, programmation fonctionnelle
+title: Séquences (F#)
+description: 'Découvrez comment utiliser des séquences de F #, lorsque vous avez une grande collection ordonnée de données mais que vous ne prévoyez pas nécessairement à utiliser tous les éléments.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 23dc7d75-cd26-4df2-9be3-9d1aba5c4443
-ms.openlocfilehash: b0562a6efbd2398cd8730bb835a1833955fee1c7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: a3521037112d40998ed00cd6fed376882c2f2c88
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="sequences"></a>Séquences
 
@@ -90,7 +87,7 @@ La sortie est la suivante :
 0 10 20 30 40
 ```
 
-À l’aide de [Seq.ofArray](https://msdn.microsoft.com/library/299cd4d9-be72-4511-aac8-089e1ddaac99) et [Seq.ofList &#60;' T &#62; Fonction](https://msdn.microsoft.com/visualfsharpdocs/conceptual/seq.oflist%5b%27t%5d-function-%5bfsharp%5d), vous pouvez créer des séquences de tableaux et listes. Toutefois, vous pouvez également convertir tableaux et listes aux séquences à l’aide d’un opérateur de conversion. Ces deux techniques sont affichés dans le code suivant.
+À l’aide de [Seq.ofArray](https://msdn.microsoft.com/library/299cd4d9-be72-4511-aac8-089e1ddaac99) et [Seq.ofList&#60;' t&#62; fonction](https://msdn.microsoft.com/visualfsharpdocs/conceptual/seq.oflist%5b%27t%5d-function-%5bfsharp%5d), vous pouvez créer des séquences de tableaux et listes. Toutefois, vous pouvez également convertir tableaux et listes aux séquences à l’aide d’un opérateur de conversion. Ces deux techniques sont affichés dans le code suivant.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssequences/snippet11.fs)]
 
@@ -102,7 +99,7 @@ Vous pouvez définir des séquences infinies à l’aide de la [Seq.initInfinite
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssequences/snippet13.fs)]
 
-[Seq.unfold](https://msdn.microsoft.com/library/7d9232fc-742e-42bc-bdf7-6f130f0eff21) génère une séquence à partir d’une fonction de calcul qui prend un état et le transforme pour produire chaque élément suivant dans la séquence. L’état est simplement une valeur qui est utilisée pour calculer chaque élément et peut changer que chaque élément est calculé. Le deuxième argument de `Seq.unfold` est la valeur initiale est utilisée pour démarrer la séquence. `Seq.unfold`utilise un type d’option pour l’état, ce qui vous permet de terminer la séquence en retournant la `None` valeur. Le code suivant montre deux exemples de séquences, `seq1` et `fib`, qui sont générés par une `unfold` opération. La première, `seq1`, est juste une séquence simple avec des nombres jusqu'à 100. La seconde, `fib`, utilise `unfold` pour calculer la séquence de Fibonacci. Étant donné que chaque élément de la séquence de Fibonacci est la somme de deux nombres de Fibonacci précédents, la valeur d’état est un tuple qui se compose de deux nombres précédents de la séquence. La valeur initiale est `(1,1)`, les deux premiers nombres dans la séquence.
+[Seq.unfold](https://msdn.microsoft.com/library/7d9232fc-742e-42bc-bdf7-6f130f0eff21) génère une séquence à partir d’une fonction de calcul qui prend un état et le transforme pour produire chaque élément suivant dans la séquence. L’état est simplement une valeur qui est utilisée pour calculer chaque élément et peut changer que chaque élément est calculé. Le deuxième argument de `Seq.unfold` est la valeur initiale est utilisée pour démarrer la séquence. `Seq.unfold` utilise un type d’option pour l’état, ce qui vous permet de terminer la séquence en retournant la `None` valeur. Le code suivant montre deux exemples de séquences, `seq1` et `fib`, qui sont générés par une `unfold` opération. La première, `seq1`, est juste une séquence simple avec des nombres jusqu'à 100. La seconde, `fib`, utilise `unfold` pour calculer la séquence de Fibonacci. Étant donné que chaque élément de la séquence de Fibonacci est la somme de deux nombres de Fibonacci précédents, la valeur d’état est un tuple qui se compose de deux nombres précédents de la séquence. La valeur initiale est `(1,1)`, les deux premiers nombres dans la séquence.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssequences/snippet14.fs)]
 
@@ -198,7 +195,7 @@ Le code suivant illustre l'utilisation de `Seq.compareWith`.
 
 Dans le code précédent, seul le premier élément est calculé et examiné, et le résultat est -1.
 
-[Seq.countBy](https://msdn.microsoft.com/library/721702a5-150e-4fe8-81cd-ffbf8476cc1f) prend une fonction qui génère une valeur appelée un *clé* pour chaque élément. Une clé est générée pour chaque élément en appelant cette fonction sur chaque élément. `Seq.countBy`retourne ensuite une séquence qui contient les valeurs de clé et le nombre d’éléments ayant généré chaque valeur de la clé.
+[Seq.countBy](https://msdn.microsoft.com/library/721702a5-150e-4fe8-81cd-ffbf8476cc1f) prend une fonction qui génère une valeur appelée un *clé* pour chaque élément. Une clé est générée pour chaque élément en appelant cette fonction sur chaque élément. `Seq.countBy` retourne ensuite une séquence qui contient les valeurs de clé et le nombre d’éléments ayant généré chaque valeur de la clé.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssequences/snippet201.fs)]
 
@@ -210,7 +207,7 @@ La sortie est la suivante.
 
 La sortie précédente indique qu’il existait 34 d’éléments de la séquence d’origine qui a généré la clé 1, 33 valeurs qui produit la clé 2 et 33 qui produit la clé 0.
 
-Vous pouvez regrouper les éléments d’une séquence en appelant [Seq.groupBy](https://msdn.microsoft.com/library/d46a04df-1a42-40cc-a368-058c9c5806fd). `Seq.groupBy`prend une séquence et une fonction qui génère une clé à partir d’un élément. La fonction est exécutée sur chaque élément de la séquence. `Seq.groupBy`Retourne une séquence de tuples, où le premier élément de chaque tuple est la clé et le second est une séquence d’éléments qui produisent la clé.
+Vous pouvez regrouper les éléments d’une séquence en appelant [Seq.groupBy](https://msdn.microsoft.com/library/d46a04df-1a42-40cc-a368-058c9c5806fd). `Seq.groupBy` prend une séquence et une fonction qui génère une clé à partir d’un élément. La fonction est exécutée sur chaque élément de la séquence. `Seq.groupBy` Retourne une séquence de tuples, où le premier élément de chaque tuple est la clé et le second est une séquence d’éléments qui produisent la clé.
 
 L’exemple de code suivant illustre l’utilisation de `Seq.groupBy` pour partitionner la séquence de nombres de 1 à 100 en trois groupes qui ont les valeurs de clés distinctes, 0, 1 et 2.
 
@@ -224,7 +221,7 @@ La sortie est la suivante.
 
 Vous pouvez créer une séquence qui élimine des éléments en double en appelant [Seq.distinct](https://msdn.microsoft.com/library/99d01014-7e0e-4e7b-9d0a-41a61d93f401). Vous pouvez également utiliser [Seq.distinctBy](https://msdn.microsoft.com/library/9293293b-9420-49c8-848f-401a9cd49b75), qui prend une fonction génératrice de clé à appeler sur chaque élément. La séquence résultante contient les éléments de la séquence d’origine qui ont des clés uniques ; éléments ultérieurs qui produisent une clé en double d’un élément antérieur sont ignorés.
 
-L’exemple de code suivant illustre l’utilisation de `Seq.distinct`. `Seq.distinct`est illustrée en générant des séquences qui représentent des nombres binaires, puis en montrant que les seuls éléments distincts sont 0 et 1.
+L’exemple de code suivant illustre l’utilisation de `Seq.distinct`. `Seq.distinct` est illustrée en générant des séquences qui représentent des nombres binaires, puis en montrant que les seuls éléments distincts sont 0 et 1.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssequences/snippet22.fs)]
 
@@ -233,7 +230,7 @@ Le code suivant montre comment `Seq.distinctBy` en commençant par une séquence
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssequences/snippet23.fs)]
     
 ## <a name="readonly-and-cached-sequences"></a>En lecture seule et les séquences de mise en cache
-[Seq.ReadOnly](https://msdn.microsoft.com/library/88059cb4-3bb0-4126-9448-fbcd48fe13a7) crée une copie en lecture seule d’une séquence. `Seq.readonly`est utile lorsque vous avez une collection en lecture-écriture, tel qu’un tableau, et vous ne souhaitez pas modifier la collection d’origine. Cette fonction peut être utilisée pour conserver l’encapsulation de données. Dans l’exemple de code suivant, un type qui contient un tableau est créé. Une propriété expose le tableau, mais au lieu de retourner un tableau, elle retourne une séquence qui est créée à partir du tableau à l’aide de `Seq.readonly`.
+[Seq.ReadOnly](https://msdn.microsoft.com/library/88059cb4-3bb0-4126-9448-fbcd48fe13a7) crée une copie en lecture seule d’une séquence. `Seq.readonly` est utile lorsque vous avez une collection en lecture-écriture, tel qu’un tableau, et vous ne souhaitez pas modifier la collection d’origine. Cette fonction peut être utilisée pour conserver l’encapsulation de données. Dans l’exemple de code suivant, un type qui contient un tableau est créé. Une propriété expose le tableau, mais au lieu de retourner un tableau, elle retourne une séquence qui est créée à partir du tableau à l’aide de `Seq.readonly`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssequences/snippet24.fs)]
 

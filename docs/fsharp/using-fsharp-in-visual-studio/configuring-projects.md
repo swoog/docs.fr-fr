@@ -1,20 +1,17 @@
 ---
 title: 'Configuration de projets (F #)'
-description: "Découvrez comment utiliser le Concepteur de projet lorsque vous travaillez avec des projets F # dans Visual Studio."
-keywords: visual f#, f#, programmation fonctionnelle
+description: 'Découvrez comment utiliser le Concepteur de projet lorsque vous travaillez avec des projets F # dans Visual Studio.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 8b2ed206-34e4-4256-a6ce-0c2499561165
-ms.openlocfilehash: f56fed1e16b4de1d97766f37cb1c72297d5502d5
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: eac5b61d6b61d2aa1cb7b1606d60995a0355e975
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="configuring-projects-in-visual-studio"></a>Configuration de projets dans Visual Studio
 
@@ -28,9 +25,9 @@ Le **Concepteur de projets** et son utilisation générale sont entièrement dé
 
 |Page du Concepteur de projet|Liens connexes|Description|
 |---------------------|-------------|-----------|
-|`Application`|[Page application, Concepteur de projets &#40; C &#35; &#41;](https://msdn.microsoft.com/library/ms247046.aspx)|Permet de spécifier des paramètres au niveau de l’application et des propriétés, telles que si vous créez une bibliothèque ou un fichier exécutable, quelle version du .NET Framework ciblée par l’application et des informations où la ressource de fichiers que l’application utilisations sont stockées.|
-|`Build`|[Build Page, Project Designer &#40; C &#35; &#41;](https://msdn.microsoft.com/library/kb4wyys2.aspx)|Vous permet de contrôler comment le code est compilé.|
-|`Build Events`|[Build Page événements, Concepteur de projets &#40; C &#35; &#41;](https://msdn.microsoft.com/library/kb4wyys2.aspx)|Vous permet de spécifier des commandes à exécuter avant ou après la compilation.|
+|`Application`|[Page application, Concepteur de projets &#40;C&#35;&#41;](https://msdn.microsoft.com/library/ms247046.aspx)|Permet de spécifier des paramètres au niveau de l’application et des propriétés, telles que si vous créez une bibliothèque ou un fichier exécutable, quelle version du .NET Framework ciblée par l’application et des informations où la ressource de fichiers que l’application utilisations sont stockées.|
+|`Build`|[Build Page, Project Designer &#40;C&#35;&#41;](https://msdn.microsoft.com/library/kb4wyys2.aspx)|Vous permet de contrôler comment le code est compilé.|
+|`Build Events`|[Page événements de génération, le Concepteur de projets &#40;C&#35;&#41;](https://msdn.microsoft.com/library/kb4wyys2.aspx)|Vous permet de spécifier des commandes à exécuter avant ou après la compilation.|
 |`Debug`|[Page Déboguer, Concepteur de projet](https://msdn.microsoft.com/library/2wcdezs5.aspx)|Permet de contrôler la façon dont l’application s’exécute pendant le débogage. Cela inclut tout spécial débogage modes que vous voulez activer, telles que le code natif et SQL et de la ligne de commande à utiliser et quel est le répertoire de démarrage de votre application.|
 |`Reference Paths`|[Gestion des références dans un projet](/visualstudio/ide/managing-references-in-a-project)|Vous permet de spécifier où rechercher les assemblys dont dépend le code.|
 

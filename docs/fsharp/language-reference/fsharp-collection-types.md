@@ -1,20 +1,17 @@
 ---
-title: "Types de collection F#"
-description: "En savoir plus sur les types de collection F # et comment ils diffèrent des types de collections dans le .NET Framework."
-keywords: visual f#, f#, programmation fonctionnelle
+title: Types de collection F#
+description: 'En savoir plus sur les types de collection F # et comment ils diffèrent des types de collections dans le .NET Framework.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: cdf6a7e6-6b3d-4c44-b7b6-773a2b700331
-ms.openlocfilehash: c22178641a88c304e0f666b07aca94e620161071
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 0baad5bdf88e8f381240b822a3f6132898dc9ff9
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="f-collection-types"></a>Types de collection F#
 
@@ -33,7 +30,7 @@ Le tableau suivant présente les types de collection F #.
 |[List](https://msdn.microsoft.com/library/c627b668-477b-4409-91ed-06d7f1b3e4a7)|Une série chronologique, immuable d’éléments du même type. Implémenté comme une liste liée.|[Listes](lists.md)<br /><br />[Module List](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788)|
 |[Tableau](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1)|Une collection de taille fixe, de base zéro et mutable d’éléments de données consécutifs qui sont tous du même type.|[Tableaux](arrays.md)<br /><br />[Module Array](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1)<br /><br />[Array2D Module](https://msdn.microsoft.com/library/ae1a9746-7817-4430-bcdb-a79c2411bbd3)<br /><br />[Module de Array3D](https://msdn.microsoft.com/library/c8355e2d-add8-48a4-8aa6-1c57ae74c560)|
 |[Seq](https://msdn.microsoft.com/library/2f0c87c6-8a0d-4d33-92a6-10d1d037ce75)|Une série logique d’éléments d’un type. Les séquences sont particulièrement utiles lorsque vous avez une grande collection ordonnée de données mais que vous ne prévoyez pas nécessairement à utiliser tous les éléments. Séquence des éléments sont calculés uniquement lorsque cela est nécessaire une séquence peut fonctionnent mieux qu’une liste si ce n’est pas tous les éléments sont utilisés. Les séquences sont représentées par le `seq<'T>` type, qui est un alias pour `IEnumerable<T>`. Par conséquent, tout type .NET Framework qui implémente `System.Collections.Generic.IEnumerable<'T>` peut être utilisé comme une séquence.|[Séquences](sequences.md)<br /><br />[Module Seq](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684)|
-|[Carte](https://msdn.microsoft.com/library/975316ea-55e3-4987-9994-90897ad45664)|Dictionnaire immuable d’éléments. Éléments accessibles par clé.|[Module de mappage](https://msdn.microsoft.com/library/bfe61ead-f16c-416f-af98-56dbcbe23e4f)|
+|[carte](https://msdn.microsoft.com/library/975316ea-55e3-4987-9994-90897ad45664)|Dictionnaire immuable d’éléments. Éléments accessibles par clé.|[Module de mappage](https://msdn.microsoft.com/library/bfe61ead-f16c-416f-af98-56dbcbe23e4f)|
 |[Set](https://msdn.microsoft.com/library/50cebdce-0cd7-4c5c-8ebc-f3a9e90b38d8)|Un ensemble immuable qui est basé sur les arborescences binaires, lequel la comparaison est la fonction de comparaison structurelle F #, qui utilise potentiellement des implémentations de la `System.IComparable` interface sur les valeurs de clé.|[Configuration d’un Module](https://msdn.microsoft.com/library/61efa732-d55d-4c32-993f-628e2f98e6a0)|
 
 ### <a name="table-of-functions"></a>Table de fonctions
@@ -62,9 +59,9 @@ Cette section compare les fonctions qui sont disponibles sur les types de collec
 |créer|O (N)|-|-|-|-|Crée un tableau d’éléments ensemble sont tous initialement la valeur donnée.|
 |délai|-|-|O (1)|-|-|Retourne une séquence qui est construite à partir de la spécification différée donnée d’une séquence.|
 |différence|-|-|-|-|O (M &#42; log N)|Retourne un nouveau jeu avec les éléments du second jeu supprimés du premier jeu.|
-|Distinctes|||O (1) &#42;|||Retourne une séquence qui ne contient aucune entrée en double en fonction des comparaisons de hachage et d’égalité génériques sur les entrées. Si un élément apparaît plusieurs fois dans la séquence, les occurrences ultérieures sont ignorées.|
-|distinctBy|||O (1) &#42;|||Retourne une séquence qui ne contient aucune entrée en double selon les comparaisons d’égalité et du hachage génériques sur les clés de la fonction génératrice de clé donnée. Si un élément apparaît plusieurs fois dans la séquence, les occurrences ultérieures sont ignorées.|
-|empty|O (1)|O (1)|O (1)|O (1)|O (1)|Crée une collection vide.|
+|Distinctes|||O (1)&AMP;#42;|||Retourne une séquence qui ne contient aucune entrée en double en fonction des comparaisons de hachage et d’égalité génériques sur les entrées. Si un élément apparaît plusieurs fois dans la séquence, les occurrences ultérieures sont ignorées.|
+|distinctBy|||O (1)&AMP;#42;|||Retourne une séquence qui ne contient aucune entrée en double selon les comparaisons d’égalité et du hachage génériques sur les clés de la fonction génératrice de clé donnée. Si un élément apparaît plusieurs fois dans la séquence, les occurrences ultérieures sont ignorées.|
+|vide|O (1)|O (1)|O (1)|O (1)|O (1)|Crée une collection vide.|
 |exists|O (N)|O (N)|O (N)|O (log N)|O (log N)|Teste si un élément de la séquence répond au prédicat donné.|
 |exists2|O(min(N,M))|-|O(min(N,M))|||Teste si une paire d’éléments correspondants des séquences d’entrée répond au prédicat donné.|
 |fill|O (N)|||||Définit une plage d’éléments du tableau avec la valeur donnée.|
@@ -83,7 +80,7 @@ Cette section compare les fonctions qui sont disponibles sur les types de collec
 |init|O (N)|O (N)|O (1)|-|-|Crée une fonction de la dimension et une fonction de générateur pour calculer les éléments de collection.|
 |initInfinite|-|-|O (1)|-|-|Génère une séquence qui, lorsqu’elle est itérée, retourne des éléments consécutifs en appelant la fonction donnée.|
 |Intersect|-|-|-|-|O (log N &#42; journal M)|Calcule l’intersection de deux jeux.|
-|intersectMany|-|-|-|-|O (N1 &#42; N2...)|Calcule l’intersection d’une séquence de jeux. La séquence ne doit pas être vide.|
+|intersectMany|-|-|-|-|O (N1 &AMP;#42; N2...)|Calcule l’intersection d’une séquence de jeux. La séquence ne doit pas être vide.|
 |La fonction IsEmpty|O (1)|O (1)|O (1)|O (1)|-|Retourne `true` si la collection est vide.|
 |isProperSubset|-|-|-|-|O (M &#42; log N)|Retourne `true` si tous les éléments du premier jeu sont dans le deuxième jeu, et au moins un élément du deuxième jeu n’est pas dans le premier jeu.|
 |isProperSuperset|-|-|-|-|O (M &#42; log N)|Retourne `true` si tous les éléments du deuxième jeu sont dans le premier jeu, et au moins un élément du premier jeu n’est pas dans le deuxième jeu.|
@@ -146,7 +143,7 @@ Cette section compare les fonctions qui sont disponibles sur les types de collec
 |tryPick|O (N)|O (N)|O (N)|O (log N)|-|Applique la fonction donnée à des éléments consécutifs, en retournant le premier résultat où la fonction retourne `Some` pour une valeur. Si cet élément n’existe, l’opération retourne `None`.|
 |dérouler|-|-|O (N)|-|-|Retourne une séquence qui contient les éléments qui le calcul donné génère.|
 |union|-|-|-|-|O (M &#42; log N)|Calcule l’union des deux jeux.|
-|unionMany|-|-|-|-|O (N1 &#42; N2...)|Calcule l’union d’une séquence de jeux.|
+|unionMany|-|-|-|-|O (N1 &AMP;#42; N2...)|Calcule l’union d’une séquence de jeux.|
 |unzip|O (N)|O (N)|O (N)|-|-|Fractionne une liste de paires en deux listes.|
 |unzip3|O (N)|O (N)|O (N)|-|-|Fractionne une liste de triples en trois listes.|
 |fenêtrées|-|-|O (N)|-|-|Retourne une séquence qui produit des fenêtres défilantes du contenant des éléments qui sont dessinées à partir de la séquence d’entrée. Chaque fenêtre est retournée en tant que nouveau tableau.|

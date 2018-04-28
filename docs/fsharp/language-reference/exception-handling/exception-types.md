@@ -1,20 +1,17 @@
 ---
 title: Types d'exceptions (F#)
-description: "Découvrez comment définir et utiliser des types d’exception F #."
-keywords: visual f#, f#, programmation fonctionnelle
+description: 'Découvrez comment définir et utiliser des types d’exception F #.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: e850205a-b8da-459e-8f6d-cb3510f8f173
-ms.openlocfilehash: a0864218841396c0ebdf26c7585e0e5bb778f83e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 6aaa5cd1b94f829b98d5aed5dcf6e30472a8b751
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="exception-types"></a>Types d'exceptions
 
@@ -27,7 +24,7 @@ Il existe deux catégories d’exceptions en F #: les types d’exceptions .NET 
 exception exception-type of argument-type
 ```
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 Dans la syntaxe précédente, *-type d’exception* est le nom d’un type d’exception F # nouveau, et *-type d’argument* représente le type d’un argument qui peut être fourni lorsque vous déclenchez une exception de ce type. Vous pouvez spécifier plusieurs arguments à l’aide d’un type de tuple pour *-type d’argument*.
 
 Une définition classique pour une exception F # semblable au suivant.

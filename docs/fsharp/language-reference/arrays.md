@@ -1,20 +1,17 @@
 ---
 title: Tableaux (F#)
-description: "Découvrez comment créer et utiliser des tableaux dans le langage de programmation F #."
-keywords: visual f#, f#, programmation fonctionnelle
+description: 'Découvrez comment créer et utiliser des tableaux dans le langage de programmation F #.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 61fa9084-abdc-4cf5-8213-91ec1211866b
-ms.openlocfilehash: 7c9d8405230f4d765d3afdeaa154ddc598d0d1ec
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 650321e864556ff0ba8591e09ffa34877c8a39b7
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="arrays"></a>Tableaux
 
@@ -68,7 +65,7 @@ Le type de tous les tableaux F # est le type .NET Framework <xref:System.Array?d
 Le module de bibliothèque [ `Microsoft.FSharp.Collections.Array` ](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1) prend en charge les opérations sur les tableaux unidimensionnels. Les modules `Array2D`, `Array3D`, et `Array4D` contiennent des fonctions qui prennent en charge les opérations sur les tableaux de deux, trois et quatre dimensions, respectivement. Vous pouvez créer des tableaux de rang supérieur à quatre à l’aide de <xref:System.Array?displayProperty=nameWithType>.
 
 ### <a name="simple-functions"></a>Fonctions simples
-[`Array.get`](https://msdn.microsoft.com/library/dd93e85d-7e80-4d76-8de0-b6d45bcf07bc)Obtient un élément. [`Array.length`](https://msdn.microsoft.com/library/0d775b6a-4a8f-4bd1-83e5-843b3251725f)donne la longueur d’un tableau. [`Array.set`](https://msdn.microsoft.com/library/847edc0d-4dc5-4a39-98c7-d4320c60e790)définit un élément à une valeur spécifiée. L’exemple de code suivant illustre l’utilisation de ces fonctions.
+[`Array.get`](https://msdn.microsoft.com/library/dd93e85d-7e80-4d76-8de0-b6d45bcf07bc) Obtient un élément. [`Array.length`](https://msdn.microsoft.com/library/0d775b6a-4a8f-4bd1-83e5-843b3251725f) donne la longueur d’un tableau. [`Array.set`](https://msdn.microsoft.com/library/847edc0d-4dc5-4a39-98c7-d4320c60e790) définit un élément à une valeur spécifiée. L’exemple de code suivant illustre l’utilisation de ces fonctions.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet9.fs)]
 
@@ -80,7 +77,7 @@ La sortie est la suivante.
 
 ### <a name="functions-that-create-arrays"></a>Fonctions qui créent des tableaux
 
-Plusieurs fonctions de créer des tableaux sans nécessiter un tableau existant. [`Array.empty`](https://msdn.microsoft.com/library/c3694b92-1c16-4c54-9bf2-fe398fadce32)Crée un tableau qui ne contient-elle pas d’éléments. [`Array.create`](https://msdn.microsoft.com/library/e848c8d6-1142-4080-9727-8dacc26066be)Crée un tableau d’une taille spécifiée et affecte tous les éléments de valeurs fournies. [`Array.init`](https://msdn.microsoft.com/library/ee898089-63b0-40aa-910c-5ae7e32f6665)Crée un tableau, en fonction d’une dimension et une fonction pour générer les éléments. [`Array.zeroCreate`](https://msdn.microsoft.com/library/fa5b8e7a-1b5b-411c-8622-b58d7a14d3b2)Crée un tableau dans lequel tous les éléments sont initialisés à la valeur zéro pour le type du tableau. Le code suivant illustre ces fonctions.
+Plusieurs fonctions de créer des tableaux sans nécessiter un tableau existant. [`Array.empty`](https://msdn.microsoft.com/library/c3694b92-1c16-4c54-9bf2-fe398fadce32) Crée un tableau qui ne contient-elle pas d’éléments. [`Array.create`](https://msdn.microsoft.com/library/e848c8d6-1142-4080-9727-8dacc26066be) Crée un tableau d’une taille spécifiée et affecte tous les éléments de valeurs fournies. [`Array.init`](https://msdn.microsoft.com/library/ee898089-63b0-40aa-910c-5ae7e32f6665) Crée un tableau, en fonction d’une dimension et une fonction pour générer les éléments. [`Array.zeroCreate`](https://msdn.microsoft.com/library/fa5b8e7a-1b5b-411c-8622-b58d7a14d3b2) Crée un tableau dans lequel tous les éléments sont initialisés à la valeur zéro pour le type du tableau. Le code suivant illustre ces fonctions.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet91.fs)]
 
@@ -92,7 +89,7 @@ Area of floats set to 5.0: [|5.0; 5.0; 5.0; 5.0; 5.0; 5.0; 5.0; 5.0; 5.0; 5.0|]
 Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 ```
 
-[`Array.copy`](https://msdn.microsoft.com/library/9d0202f1-1ea0-475e-9d66-4f8ccc3c5b5f)Crée un tableau qui contient des éléments copiés à partir d’un tableau existant. Notez que la copie est une copie superficielle, ce qui signifie que si le type d’élément est un type référence, uniquement la référence est copiée, pas l’objet sous-jacent. L'exemple de code suivant illustre ceci.
+[`Array.copy`](https://msdn.microsoft.com/library/9d0202f1-1ea0-475e-9d66-4f8ccc3c5b5f) Crée un tableau qui contient des éléments copiés à partir d’un tableau existant. Notez que la copie est une copie superficielle, ce qui signifie que si le type d’élément est un type référence, uniquement la référence est copiée, pas l’objet sous-jacent. L'exemple de code suivant illustre ceci.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet11.fs)]
 
@@ -105,7 +102,7 @@ La sortie du code précédent est la suivante :
 
 La chaîne `Test1` s’affiche uniquement dans le premier tableau parce que l’opération de création d’un nouvel élément remplace la référence dans `firstArray` mais n’affecte ne pas la référence d’origine à une chaîne vide est toujours présente dans `secondArray`. La chaîne `Test2` s’affiche dans les deux tableaux, car le `Insert` opération sur le <xref:System.Text.StringBuilder?displayProperty=nameWithType> type affecte sous-jacent <xref:System.Text.StringBuilder?displayProperty=nameWithType> objet, qui est référencé dans les deux tableaux.
 
-[`Array.sub`](https://msdn.microsoft.com/library/40fb12ba-41d7-4ef0-b33a-56727deeef9d)génère un nouveau tableau à partir d’une sous-plage d’un tableau. Vous spécifiez la sous-plage en fournissant l’index de départ et la longueur. Le code suivant montre l'utilisation de `Array.sub`.
+[`Array.sub`](https://msdn.microsoft.com/library/40fb12ba-41d7-4ef0-b33a-56727deeef9d) génère un nouveau tableau à partir d’une sous-plage d’un tableau. Vous spécifiez la sous-plage en fournissant l’index de départ et la longueur. Le code suivant montre l'utilisation de `Array.sub`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet12.fs)]
 
@@ -114,7 +111,7 @@ La sortie indique que le sous-tableau démarre à l’élément 5 et contienne 1
 ```
 [|5; 6; 7; 8; 9; 10; 11; 12; 13; 14|]
 ```
-[`Array.append`](https://msdn.microsoft.com/library/08836310-5036-4474-b9a2-2c73e2293911)Crée un nouveau tableau combinant deux tableaux existants.
+[`Array.append`](https://msdn.microsoft.com/library/08836310-5036-4474-b9a2-2c73e2293911) Crée un nouveau tableau combinant deux tableaux existants.
 
 Le code suivant montre comment **Array.append**.
 
@@ -126,7 +123,7 @@ La sortie du code précédent est comme suit.
 [|1; 2; 3; 4; 5; 6|]
 ```
 
-[`Array.choose`](https://msdn.microsoft.com/library/f5c8a5e2-637f-44d4-b35c-be96a6618b09)Sélectionne les éléments d’un tableau à inclure dans un nouveau tableau. Le code suivant montre comment `Array.choose`. Notez que le type d’élément du tableau n’est pas nécessairement correspond au type de la valeur retournée dans le type d’option. Dans cet exemple, le type d’élément est `int` et l’option est le résultat d’une fonction polynomiale, `elem*elem - 1`, comme flottante point nombre.
+[`Array.choose`](https://msdn.microsoft.com/library/f5c8a5e2-637f-44d4-b35c-be96a6618b09) Sélectionne les éléments d’un tableau à inclure dans un nouveau tableau. Le code suivant montre comment `Array.choose`. Notez que le type d’élément du tableau n’est pas nécessairement correspond au type de la valeur retournée dans le type d’option. Dans cet exemple, le type d’élément est `int` et l’option est le résultat d’une fonction polynomiale, `elem*elem - 1`, comme flottante point nombre.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet14.fs)]
 
@@ -136,7 +133,7 @@ La sortie du code précédent est comme suit.
 [|3.0; 15.0; 35.0; 63.0; 99.0|]
 ```
 
-[`Array.collect`](https://msdn.microsoft.com/library/c3b60c3b-9455-48c9-bc2b-e88f0434342a)exécute une fonction spécifiée sur chaque élément du tableau d’un tableau existant puis collecte les éléments générés par la fonction et les combine dans un nouveau tableau. Le code suivant montre comment `Array.collect`.
+[`Array.collect`](https://msdn.microsoft.com/library/c3b60c3b-9455-48c9-bc2b-e88f0434342a) exécute une fonction spécifiée sur chaque élément du tableau d’un tableau existant puis collecte les éléments générés par la fonction et les combine dans un nouveau tableau. Le code suivant montre comment `Array.collect`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet15.fs)]
 
@@ -146,7 +143,7 @@ La sortie du code précédent est comme suit.
 [|0; 1; 0; 1; 2; 3; 4; 5; 0; 1; 2; 3; 4; 5; 6; 7; 8; 9; 10|]
 ```
 
-[`Array.concat`](https://msdn.microsoft.com/library/f7219b79-1ec8-4a25-96b1-edbedb358302)prend une séquence de tableaux et les combine dans un tableau. Le code suivant montre comment `Array.concat`.
+[`Array.concat`](https://msdn.microsoft.com/library/f7219b79-1ec8-4a25-96b1-edbedb358302) prend une séquence de tableaux et les combine dans un tableau. Le code suivant montre comment `Array.concat`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet16.fs)]
 
@@ -157,7 +154,7 @@ La sortie du code précédent est comme suit.
 (3, 2, 6); (3, 3, 9)|]
 ```
 
-[`Array.filter`](https://msdn.microsoft.com/library/b885b214-47fc-4639-9664-b8c183a39ede)prend une fonction de condition booléenne et génère un nouveau tableau qui contient uniquement les éléments du tableau d’entrée pour lesquels la condition est remplie. Le code suivant montre comment `Array.filter`.
+[`Array.filter`](https://msdn.microsoft.com/library/b885b214-47fc-4639-9664-b8c183a39ede) prend une fonction de condition booléenne et génère un nouveau tableau qui contient uniquement les éléments du tableau d’entrée pour lesquels la condition est remplie. Le code suivant montre comment `Array.filter`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet17.fs)]
 
@@ -167,7 +164,7 @@ La sortie du code précédent est comme suit.
 [|2; 4; 6; 8; 10|]
 ```
 
-[`Array.rev`](https://msdn.microsoft.com/library/1bbf822c-763b-4794-af21-97d2e48ef709)génère un nouveau tableau en inversant l’ordre d’un tableau existant. Le code suivant montre comment `Array.rev`.
+[`Array.rev`](https://msdn.microsoft.com/library/1bbf822c-763b-4794-af21-97d2e48ef709) génère un nouveau tableau en inversant l’ordre d’un tableau existant. Le code suivant montre comment `Array.rev`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet18.fs)]  
 
@@ -334,7 +331,7 @@ false
 
 ### <a name="searching-arrays"></a>Recherche dans les tableaux
 
-[`Array.find`](https://msdn.microsoft.com/library/db6d920a-de19-4520-85a4-d83de77c1b33)prend une fonction booléenne et retourne le premier élément pour lequel la fonction retourne `true`, ou déclenche un <xref:System.Collections.Generic.KeyNotFoundException?displayProperty=nameWithType> si aucun élément qui satisfait la condition n’a été trouvé. [`Array.findIndex`](https://msdn.microsoft.com/library/5ae3a8f9-7b8f-44ea-a740-d5700f4d899f)est semblable à `Array.find`, sauf qu’il retourne l’index de l’élément au lieu de l’élément lui-même.
+[`Array.find`](https://msdn.microsoft.com/library/db6d920a-de19-4520-85a4-d83de77c1b33) prend une fonction booléenne et retourne le premier élément pour lequel la fonction retourne `true`, ou déclenche un <xref:System.Collections.Generic.KeyNotFoundException?displayProperty=nameWithType> si aucun élément qui satisfait la condition n’a été trouvé. [`Array.findIndex`](https://msdn.microsoft.com/library/5ae3a8f9-7b8f-44ea-a740-d5700f4d899f) est semblable à `Array.find`, sauf qu’il retourne l’index de l’élément au lieu de l’élément lui-même.
 
 Le code suivant utilise `Array.find` et `Array.findIndex` pour trouver un nombre qui est un carré et un cube parfait.
 
@@ -346,7 +343,7 @@ La sortie est la suivante.
 The first element that is both a square and a cube is 64 and its index is 62.
 ```
 
-[`Array.tryFind`](https://msdn.microsoft.com/library/7bd65f6c-df77-454c-ac3a-6f7baecec9d9)est semblable à `Array.find`, sauf que son résultat est un type d’option, et elle retourne `None` si aucun élément n’est trouvé. `Array.tryFind`doit être utilisé à la place de `Array.find` lorsque vous ne connaissez pas si un élément correspondant est dans le tableau. De même, [ `Array.tryFindIndex` ](https://msdn.microsoft.com/library/da82f7fe-95e9-4fd5-a924-cd3c9d10618a) est similaire à [ `Array.findIndex` ](https://msdn.microsoft.com/library/5ae3a8f9-7b8f-44ea-a740-d5700f4d899f) , sauf que le type d’option est la valeur de retour. Si aucun élément n’est trouvé, l’option est `None`.
+[`Array.tryFind`](https://msdn.microsoft.com/library/7bd65f6c-df77-454c-ac3a-6f7baecec9d9) est semblable à `Array.find`, sauf que son résultat est un type d’option, et elle retourne `None` si aucun élément n’est trouvé. `Array.tryFind` doit être utilisé à la place de `Array.find` lorsque vous ne connaissez pas si un élément correspondant est dans le tableau. De même, [ `Array.tryFindIndex` ](https://msdn.microsoft.com/library/da82f7fe-95e9-4fd5-a924-cd3c9d10618a) est similaire à [ `Array.findIndex` ](https://msdn.microsoft.com/library/5ae3a8f9-7b8f-44ea-a740-d5700f4d899f) , sauf que le type d’option est la valeur de retour. Si aucun élément n’est trouvé, l’option est `None`.
 
 Le code suivant montre l'utilisation de `Array.tryFind`. Ce code varie selon le code précédent.
 
@@ -380,7 +377,7 @@ Le [ `Array.average` ](https://msdn.microsoft.com/library/7029f2b9-91ea-41cb-be1
 
 Utilisez [ `Array.max` ](https://msdn.microsoft.com/library/f03fbda0-fce6-40e2-a85d-79c9d81f710b) ou [ `Array.min` ](https://msdn.microsoft.com/library/d6b3da5f-bac0-4355-9846-4b72d95bc3fd) pour obtenir l’élément minimale ou maximale, si le type d’élément prend en charge. De même, [ `Array.maxBy` ](https://msdn.microsoft.com/library/18dbe7c5-482e-4766-8e01-12a76f847045) et [ `Array.minBy` ](https://msdn.microsoft.com/library/24091583-be78-4cc9-9fab-de6d7506af4f) permettent à une fonction à exécuter tout d’abord, par exemple, pour transformer un type qui prend en charge la comparaison.
 
-[`Array.sum`](https://msdn.microsoft.com/library/4ffdb8c8-cd94-4b0b-9e5c-a7c9c17963c2)Ajoute les éléments d’un tableau, et [ `Array.sumBy` ](https://msdn.microsoft.com/library/41698ba6-1adc-4169-8cc5-7a0e3f8de56b) appelle une fonction sur chaque élément et additionne les résultats.
+[`Array.sum`](https://msdn.microsoft.com/library/4ffdb8c8-cd94-4b0b-9e5c-a7c9c17963c2) Ajoute les éléments d’un tableau, et [ `Array.sumBy` ](https://msdn.microsoft.com/library/41698ba6-1adc-4169-8cc5-7a0e3f8de56b) appelle une fonction sur chaque élément et additionne les résultats.
 
 Pour exécuter une fonction sur chaque élément dans un tableau sans stocker les valeurs de retour, utilisez [ `Array.iter` ](https://msdn.microsoft.com/library/94eba0f1-ecd7-459f-b89f-ed2a2923e516). Pour une fonction qui implique deux tableaux de longueur égale, utilisez [ `Array.iter2` ](https://msdn.microsoft.com/library/018aa9b9-f186-4142-be8a-a62462794fdc). Si vous devez également garder un tableau des résultats de la fonction, utilisez [ `Array.map` ](https://msdn.microsoft.com/library/38cbe824-0480-47be-85fd-df3afdd97a45) ou [ `Array.map2` ](https://msdn.microsoft.com/library/bb7aafe8-4a1f-45b9-92fc-1af9eafbea5c), qui fonctionne sur deux tableaux à la fois.
 
@@ -392,7 +389,7 @@ Ces fonctions pour effectuer des calculs correspondent aux fonctions du même no
 
 ### <a name="modifying-arrays"></a>Modification de tableaux
 
-[`Array.set`](https://msdn.microsoft.com/library/847edc0d-4dc5-4a39-98c7-d4320c60e790)définit un élément à une valeur spécifiée. [`Array.fill`](https://msdn.microsoft.com/library/c83c9886-81d9-44f9-a195-61c7b87f7df2)définit une plage d’éléments dans un tableau à une valeur spécifiée. Le code suivant fournit un exemple de `Array.fill`.
+[`Array.set`](https://msdn.microsoft.com/library/847edc0d-4dc5-4a39-98c7-d4320c60e790) définit un élément à une valeur spécifiée. [`Array.fill`](https://msdn.microsoft.com/library/c83c9886-81d9-44f9-a195-61c7b87f7df2) définit une plage d’éléments dans un tableau à une valeur spécifiée. Le code suivant fournit un exemple de `Array.fill`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet28.fs)]
 
@@ -406,7 +403,7 @@ Vous pouvez utiliser [ `Array.blit` ](https://msdn.microsoft.com/library/675e13e
 
 ### <a name="converting-to-and-from-other-types"></a>Conversion vers et depuis d’autres Types
 
-[`Array.ofList`](https://msdn.microsoft.com/library/e7225239-f561-45a4-b0b5-69a1cdcae78b)Crée un tableau à partir d’une liste. [`Array.ofSeq`](https://msdn.microsoft.com/library/6bedf5e0-4b22-46da-b09c-6aa09eff220c)Crée un tableau à partir d’une séquence. [`Array.toList`](https://msdn.microsoft.com/library/4deff724-0be4-4688-92e7-9d67a1097786)et [ `Array.toSeq` ](https://msdn.microsoft.com/library/ac28dbab-406c-4fe0-ab08-c1ce5e247af4) convertir ces autres types de collection à partir du type de tableau.
+[`Array.ofList`](https://msdn.microsoft.com/library/e7225239-f561-45a4-b0b5-69a1cdcae78b) Crée un tableau à partir d’une liste. [`Array.ofSeq`](https://msdn.microsoft.com/library/6bedf5e0-4b22-46da-b09c-6aa09eff220c) Crée un tableau à partir d’une séquence. [`Array.toList`](https://msdn.microsoft.com/library/4deff724-0be4-4688-92e7-9d67a1097786) et [ `Array.toSeq` ](https://msdn.microsoft.com/library/ac28dbab-406c-4fe0-ab08-c1ce5e247af4) convertir ces autres types de collection à partir du type de tableau.
 
 ### <a name="sorting-arrays"></a>Tri de tableaux
 
@@ -414,7 +411,7 @@ Utilisez [ `Array.sort` ](https://msdn.microsoft.com/library/c6679075-e7eb-463c-
 
 ### <a name="arrays-and-tuples"></a>Tableaux et Tuples
 
-Les fonctions [ `Array.zip` ](https://msdn.microsoft.com/library/23e086b8-b266-4db2-8b68-e88e6a8e2187) et [ `Array.unzip` ](https://msdn.microsoft.com/library/a529b47c-2e2b-4f79-ad44-c578432d2f48) convertissent des tableaux de paires de tuples en tuples de tableaux et vice versa. [`Array.zip3`](https://msdn.microsoft.com/library/1745744a-d2ca-4c3e-b825-3f15d9f4000d)et [ `Array.unzip3` ](https://msdn.microsoft.com/library/bc3e6db0-f334-444f-8c30-813942880677) sont similaires à ceci près qu’ils fonctionnent avec des tuples de trois éléments ou des tuples de trois tableaux.
+Les fonctions [ `Array.zip` ](https://msdn.microsoft.com/library/23e086b8-b266-4db2-8b68-e88e6a8e2187) et [ `Array.unzip` ](https://msdn.microsoft.com/library/a529b47c-2e2b-4f79-ad44-c578432d2f48) convertissent des tableaux de paires de tuples en tuples de tableaux et vice versa. [`Array.zip3`](https://msdn.microsoft.com/library/1745744a-d2ca-4c3e-b825-3f15d9f4000d) et [ `Array.unzip3` ](https://msdn.microsoft.com/library/bc3e6db0-f334-444f-8c30-813942880677) sont similaires à ceci près qu’ils fonctionnent avec des tuples de trois éléments ou des tuples de trois tableaux.
 
 ## <a name="parallel-computations-on-arrays"></a>Calculs parallèles sur les tableaux
 

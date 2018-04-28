@@ -21,11 +21,11 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7416f8429f347d0b8dc6227415ad366b3ff63986
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 19bb6d4a172568611f73e3a50d0c526016c65aac
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="best-practices-for-security-in-wcf"></a>Meilleures pratiques pour la sécurité dans WCF
 Les sections suivantes répertorient les meilleures pratiques à considérer lors de la création d'applications sécurisées à l'aide de la sécurité [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] la sécurité, consultez [considérations de sécurité](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md), [considérations sur la sécurité des données](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md), et [considérations de sécurité avec des métadonnées](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md).  
@@ -60,7 +60,7 @@ Les sections suivantes répertorient les meilleures pratiques à considérer lor
  Soyez sûr de la source de vos métadonnées et vérifiez qu'elles n'ont pas été falsifiées. Les métadonnées récupérées à l'aide du protocole HTTP sont envoyées en texte clair et peuvent être falsifiées. Si le service utilise les propriétés <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> et <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>, utilisez l'URL que le créateur du service vous a fournie pour télécharger les données à l'aide du protocole HTTPS.  
   
 ## <a name="publish-metadata-using-security"></a>Publier des métadonnées à l'aide de la sécurité  
- Pour empêcher la falsification des métadonnées publiées d'un service, sécurisez le point de terminaison d'échange de métadonnées avec la sécurité de transport ou au niveau du message. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Points de terminaison de métadonnées de publication](../../../../docs/framework/wcf/publishing-metadata-endpoints.md) et [Comment : publier les métadonnées d’un Service à l’aide de Code](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md).  
+ Pour empêcher la falsification des métadonnées publiées d'un service, sécurisez le point de terminaison d'échange de métadonnées avec la sécurité de transport ou au niveau du message. Pour plus d’informations, consultez [points de terminaison de métadonnées de publication](../../../../docs/framework/wcf/publishing-metadata-endpoints.md) et [Comment : publier des métadonnées pour un Code à l’aide du Service](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md).  
   
 ## <a name="ensure-use-of-local-issuer"></a>Utiliser un émetteur local  
  Si une liaison et une adresse d’émetteur sont spécifiées pour une liaison donnée, l’émetteur local n’est pas utilisé pour les points de terminaison qui utilisent cette liaison. Les clients qui prévoient d’utiliser systématiquement l’émetteur local doivent s’assurer de ne pas utiliser de liaison de ce type ou de modifier la liaison afin que l’adresse de l’émetteur ait la valeur null.  

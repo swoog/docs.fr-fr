@@ -1,27 +1,29 @@
 ---
 title: Utilisation des NAT et des pare-feu
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - firewalls [WCF]
 - NATs [WCF]
 ms.assetid: 74db0632-1bf0-428b-89c8-bd53b64332e7
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cae680c8958c86dc57a2aff3c2d567e1fdac981d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: fe74b4bd86a25a8e6b769be1abe5fd81e5ffe5f9
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="working-with-nats-and-firewalls"></a>Utilisation des NAT et des pare-feu
 Il arrive fréquemment que les client et serveur d’une connexion réseau ne disposent pas d’une voie de communication directe et ouverte. Les paquets sont filtrés, acheminés, analysés et transformés par les ordinateurs de point de terminaison ainsi que par les ordinateurs intermédiaires sur le réseau. Ces ordinateurs intermédiaires, qui participent à la communication, sont notamment les applications de traduction d'adresses réseau (Network address translation, NAT) et les pare-feu.  
@@ -43,7 +45,7 @@ Il arrive fréquemment que les client et serveur d’une connexion réseau ne di
  Les pare-feu des ordinateurs personnels sont le plus souvent configurés de manière à interdire les connexions entrantes lorsqu'une connexion sortante n'a pas été établie au préalable vers ces ordinateurs. Dans le cadre professionnel, la configuration standard des pare-feu est celle consistant à interdire les connexions entrantes sur tous les ports sauf sur un groupe de ports spécifié. Par exemple, un pare-feu peut empêcher les connexions sur tous les ports sauf sur les ports 80 et 443 afin d'assurer les services HTTP et HTTPS. Les pare-feu managés sont utilisés à la fois par les professionnels et les particuliers. Ils permettent à un utilisateur ou à un processus approuvé de modifier leur configuration. Ce type de pare-feu se rencontre le plus fréquemment chez les particuliers puisque l'utilisation de leur réseau n'est régie par aucune politique d'entreprise.  
   
 ## <a name="using-teredo"></a>Utilisation de Teredo  
- Teredo est une technologie de transition IPv6 qui permet l'adressabilité directe des ordinateurs se trouvant derrière une application NAT. Cette technologie utilise un serveur pouvant être acheminé publiquement pour rendre publiques les éventuelles connexions afférentes. Le serveur Teredo sert de point de rencontre aux applications client et serveur et leur permet ainsi d'échanger leurs informations de connexion respectives. Les ordinateurs concernés demandent ensuite à obtenir une adresse Teredo temporaire et les paquets sont acheminés via le réseau existant. La prise en charge de Teredo dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nécessite l'activation du protocole IPv6 ainsi que la prise en charge de Teredo dans le système d'exploitation concerné. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] et les systèmes d'exploitation ultérieurs prennent en charge Teredo. [!INCLUDE[wv](../../../../includes/wv-md.md)] et les systèmes d'exploitation de version ultérieure prennent en charge le protocole IPv6 par défaut et nécessitent uniquement l'activation de Teredo. [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] et [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] nécessitent à la fois l'activation du protocole IPv6 et de Teredo. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]le [vue d’ensemble de Teredo](http://go.microsoft.com/fwlink/?LinkId=87571).  
+ Teredo est une technologie de transition IPv6 qui permet l'adressabilité directe des ordinateurs se trouvant derrière une application NAT. Cette technologie utilise un serveur pouvant être acheminé publiquement pour rendre publiques les éventuelles connexions afférentes. Le serveur Teredo sert de point de rencontre aux applications client et serveur et leur permet ainsi d'échanger leurs informations de connexion respectives. Les ordinateurs concernés demandent ensuite à obtenir une adresse Teredo temporaire et les paquets sont acheminés via le réseau existant. La prise en charge de Teredo dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nécessite l'activation du protocole IPv6 ainsi que la prise en charge de Teredo dans le système d'exploitation concerné. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] et les systèmes d'exploitation ultérieurs prennent en charge Teredo. [!INCLUDE[wv](../../../../includes/wv-md.md)] et les systèmes d'exploitation de version ultérieure prennent en charge le protocole IPv6 par défaut et nécessitent uniquement l'activation de Teredo. [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] et [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] nécessitent à la fois l'activation du protocole IPv6 et de Teredo. Pour plus d’informations, consultez la [vue d’ensemble de Teredo](http://go.microsoft.com/fwlink/?LinkId=87571).  
   
 ## <a name="choosing-a-transport-and-message-exchange-pattern"></a>Sélection d’un transport et d’un modèle d’échange de messages  
  La sélection d'un transport et d'un MEP s'effectue en trois étapes :  

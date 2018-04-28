@@ -20,11 +20,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2fa6efdc61620647d5c6318746e61e09cdde7a46
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: d9650fd6a4fa40cb425c9f15d4a12e6c73d8c599
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="what-is-windows-communication-foundation"></a>Présentation de Windows Communication Foundation
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] est une infrastructure permettant de générer des applications orientées services. Avec [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], vous pouvez envoyer des données sous forme de messages asynchrones d'un point de terminaison de service à un autre. Un point de terminaison de service peut faire partie d'un service disponible en continu et hébergé par IIS, ou il peut s'agir d'un service hébergé dans une application. Un point de terminaison peut être un client d'un service qui demande des données auprès d'un point de terminaison de service. Les messages peuvent être simplement constitués d'un caractère ou d'un mot unique envoyé au format XML, ou se présenter sous la forme d'un flux de données binaires plus complexe. Voici quelques exemples de scénarios :  
@@ -44,7 +44,7 @@ ms.lasthandoff: 04/27/2018
  Si la création de telles applications était possible avant [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] simplifie le développement de points de terminaison comme jamais auparavant. En résumé, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] est conçu de manière à offrir une approche gérable à la création de services Web et de clients de services Web.  
   
 ## <a name="features-of-wcf"></a>Fonctions de WCF  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] comprend l'ensemble de fonctionnalités suivant. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [WCF Feature Details](../../../docs/framework/wcf/feature-details/index.md).  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] comprend l'ensemble de fonctionnalités suivant. Pour plus d’informations, consultez [détails sur les fonctionnalités de WCF](../../../docs/framework/wcf/feature-details/index.md).  
   
 -   **Orientation services**  
   
@@ -60,15 +60,15 @@ ms.lasthandoff: 04/27/2018
   
 -   **Métadonnées de service**  
   
-     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] prend en charge la publication de métadonnées de service à l'aide de formats spécifiés dans les normes industrielles, tels que WSDL, les schémas XML et WS-Policy. Ces métadonnées peuvent être utilisées pour générer et configurer automatiquement des clients en vue de l'accès à des services [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] . Les métadonnées peuvent être publiées via HTTP et HTTPS ou à l'aide de la norme d'échange de métadonnées de service Web. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Metadata](../../../docs/framework/wcf/feature-details/metadata.md).  
+     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] prend en charge la publication de métadonnées de service à l'aide de formats spécifiés dans les normes industrielles, tels que WSDL, les schémas XML et WS-Policy. Ces métadonnées peuvent être utilisées pour générer et configurer automatiquement des clients en vue de l'accès à des services [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] . Les métadonnées peuvent être publiées via HTTP et HTTPS ou à l'aide de la norme d'échange de métadonnées de service Web. Pour plus d’informations, consultez [métadonnées](../../../docs/framework/wcf/feature-details/metadata.md).  
   
 -   **Contrats de données**  
   
-     Étant donné que [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] repose sur [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], il offre également des méthodes faciles à coder pour fournir les contrats que vous souhaitez appliquer. Le contrat de données représente l'un des types universels de contrats. Par nature, lorsque vous codez votre service à l'aide de Visual C# ou de Visual Basic, la méthode la plus simple de gérer les données consiste à créer des classes qui représentent une entité de données dotée de propriétés. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] inclut un système complet permettant d'utiliser les données aisément grâce à cette méthode. Une fois que vous avez créé les classes qui représentent les données, votre service génère automatiquement les métadonnées qui permettent aux clients de se conformer aux types de données que vous avez conçus. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Using Data Contracts](../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
+     Étant donné que [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] repose sur [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], il offre également des méthodes faciles à coder pour fournir les contrats que vous souhaitez appliquer. Le contrat de données représente l'un des types universels de contrats. Par nature, lorsque vous codez votre service à l'aide de Visual C# ou de Visual Basic, la méthode la plus simple de gérer les données consiste à créer des classes qui représentent une entité de données dotée de propriétés. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] inclut un système complet permettant d'utiliser les données aisément grâce à cette méthode. Une fois que vous avez créé les classes qui représentent les données, votre service génère automatiquement les métadonnées qui permettent aux clients de se conformer aux types de données que vous avez conçus. Pour plus d’informations, consultez [à l’aide de contrats de données](../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
   
 -   **Sécurité**  
   
-     Les messages peuvent être chiffrés afin de protéger la confidentialité. Par ailleurs, vous pouvez demander aux utilisateurs de s'authentifier avant de pouvoir recevoir des messages. La sécurité peut être implémentée à l'aide de normes célèbres, telles que SSL ou WS-SecureConversation. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Sécurité](../../../docs/framework/wcf/feature-details/security.md).  
+     Les messages peuvent être chiffrés afin de protéger la confidentialité. Par ailleurs, vous pouvez demander aux utilisateurs de s'authentifier avant de pouvoir recevoir des messages. La sécurité peut être implémentée à l'aide de normes célèbres, telles que SSL ou WS-SecureConversation. Pour plus d’informations, consultez l’article [Sécurité](../../../docs/framework/wcf/feature-details/security.md).  
   
 -   **Transports et encodages variés**  
   
@@ -80,7 +80,7 @@ ms.lasthandoff: 04/27/2018
   
 -   **Messages durables**  
   
-     Un message durable est un message qui n'est jamais perdu suite à une interruption de la communication. Les messages conformes au modèle de message durable sont toujours enregistrés dans une base de données. En cas d'interruption, la base de données vous permet de reprendre l'échange de messages une fois la connexion restaurée. Vous pouvez également créer un message durable à l’aide de Windows Workflow Foundation (WF). [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Workflow Services](../../../docs/framework/wcf/feature-details/workflow-services.md).  
+     Un message durable est un message qui n'est jamais perdu suite à une interruption de la communication. Les messages conformes au modèle de message durable sont toujours enregistrés dans une base de données. En cas d'interruption, la base de données vous permet de reprendre l'échange de messages une fois la connexion restaurée. Vous pouvez également créer un message durable à l’aide de Windows Workflow Foundation (WF). Pour plus d’informations, consultez [Services de Workflow](../../../docs/framework/wcf/feature-details/workflow-services.md).  
   
 -   **Transactions**  
   

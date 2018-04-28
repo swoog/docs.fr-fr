@@ -1,27 +1,24 @@
 ---
 title: Membres (F#)
 description: 'En savoir plus sur les membres de l’objet dans le langage de programmation F #.'
-keywords: visual f#, f#, programmation fonctionnelle
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: e472f50a-4939-4e62-abbc-471f8f265790
-ms.openlocfilehash: ca34c8d073594791ec268a85ad56f50cc6d9e435
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: a37f14d138cc017cf78e3a0ff1d5b5bba2f09020
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="members"></a>Membres
 
 Cette section décrit les membres de types d’objet F#.
 
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 Les *membres* sont des fonctionnalités qui font partie d’une définition de type et qui sont déclarées avec le mot clé `member`. Les types d’objet F#, comme les enregistrements, les classes, les unions discriminées, les interfaces et les structures, prennent en charge les membres. Pour plus d’informations, consultez [Enregistrements](../records.md), [Classes](../classes.md), [Unions discriminées](../discriminated-Unions.md), [Interfaces](../interfaces.md) et [Structures](../structures.md).
 
 Les membres constituent en général l’interface publique d’un type ; c’est pourquoi ils sont publics, sauf spécification contraire. Les membres peuvent également être déclarés comme privés ou internes. Pour plus d’informations, consultez [Contrôle d’accès](../access-Control.md). Des signatures peuvent également être utilisées pour les types pour exposer ou ne pas exposer certains membres d’un type. Pour plus d’informations, consultez [Signatures](../signatures.md).

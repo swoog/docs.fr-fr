@@ -1,23 +1,24 @@
 ---
 title: Meilleures pratiques de persistance
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6974c5a4-1af8-4732-ab53-7d694608a3a0
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 408257d9ec51e9d60cb899c16cbef3a26cdc609f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: cfea5b8728774a4e788f3f0d866c6741d5b0bbe9
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="persistence-best-practices"></a>Meilleures pratiques de persistance
 Ce document traite des meilleures pratiques de conception et configuration de workflow associées à la persistance de workflow.  
@@ -31,7 +32,7 @@ Ce document traite des meilleures pratiques de conception et configuration de wo
   
  Si le workflow est occupé pendant longtemps, il est recommandé de rendre persistante l'instance de workflow régulièrement pendant toute cette période. Pour ce faire, vous pouvez ajouter des activités <xref:System.Activities.Statements.Persist> dans l'ensemble de la séquence des activités qui maintiennent l'instance de workflow occupée. De cette façon, un recyclage de domaine d'application, un échec de l'hôte ou de l'ordinateur n'entraîne pas la restauration au début de la période d'occupation. Soyez conscient que l'ajout d'activités <xref:System.Activities.Statements.Persist> à votre workflow peut provoquer une diminution des performances.  
   
- Windows Server AppFabric simplifie grandement la configuration et l'utilisation de la persistance. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Persistance de Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201200&clcid=0x409)  
+ Windows Server AppFabric simplifie grandement la configuration et l'utilisation de la persistance. Pour plus d’informations, consultez [persistance de Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=201200&clcid=0x409)  
   
 ## <a name="configuration-of-scalability-parameters"></a>Configuration des paramètres d'évolutivité  
  Les conditions requises en termes d'évolutivité et de performance déterminent la configuration des paramètres suivants :  

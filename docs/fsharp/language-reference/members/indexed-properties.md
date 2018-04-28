@@ -1,20 +1,17 @@
 ---
-title: "Propriétés indexées (F#)"
-description: "En savoir plus sur les propriétés indexées F #, qui sont des propriétés qui fournissent un accès de type tableau aux données classées."
-keywords: visual f#, f#, programmation fonctionnelle
+title: Propriétés indexées (F#)
+description: 'En savoir plus sur les propriétés indexées F #, qui sont des propriétés qui fournissent un accès de type tableau aux données classées.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: f1266b8b-e2e3-4f49-9332-65c6d34dc0f3
-ms.openlocfilehash: 78a09a70621e82f073346471e68ec826359641d6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 39396b3a5ec43f9a8ab0df96afeb69e05801c752
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="indexed-properties"></a>Propriétés indexées
 
@@ -46,7 +43,7 @@ member self-identifier.PropertyName
         set-function-body
 ```
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 Les trois formes de la syntaxe précédente montrent comment définir des propriétés indexées qui ont à la fois un `get` et un `set` (méthode), ont un `get` uniquement, méthode ou avoir un `set` méthode uniquement. Vous pouvez également combiner les deux la syntaxe indiquée pour get uniquement et la syntaxe indiquée pour set uniquement et produire une propriété qui a get et set. Cette dernière forme vous permet de placer les modificateurs d’accessibilité différente et les attributs sur get et de définir des méthodes.
 
 Lorsque le *PropertyName* est `Item`, le compilateur traite la propriété comme une propriété indexée par défaut. A *propriété indexée par défaut* est une propriété que vous pouvez accéder à l’aide de la syntaxe de type tableau sur l’instance d’objet. Par exemple, si `obj` est un objet du type qui définit cette propriété, la syntaxe `obj.[index]` est utilisé pour accéder à la propriété.

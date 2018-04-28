@@ -1,24 +1,26 @@
 ---
-title: "Scénarios non pris en charge"
-ms.custom: 
+title: Scénarios non pris en charge
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-caps.latest.revision: "43"
+caps.latest.revision: 43
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 96ae88fd29391bf173da33398dfb41b3a06441ba
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7738eba66619e8a312ed2f9bd43142dbb097b259
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="unsupported-scenarios"></a>Scénarios non pris en charge
 Pour diverses raisons, certains modes de sécurité ne sont pas pris en charge par [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Par exemple, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Édition familiale n'implémentant pas les protocoles d'authentification SSPI ou Kerberos, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ne prend pas en charge, sur ce type de plateforme, l'exécution des services utilisant l'authentification Windows. En revanche, d'autres mécanismes d'authentification, tels que l'association nom d'utilisateur/mot de passe et l'authentification intégrée HTTP/HTTPS, sont pris en charge lorsque [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] s'exécute sous Windows XP Édition familiale.  
@@ -39,7 +41,7 @@ Pour diverses raisons, certains modes de sécurité ne sont pas pris en charge p
   
 -   Un jeton de contexte de sécurité basé sur l'état est créé (cette création est désactivée par défaut).  
   
- Ce jeton peut uniquement être crée à l’aide d’une liaison personnalisée. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Comment : créer un contexte de sécurité jeton pour une Session sécurisée](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).) Dans le code, ce jeton est activé en créant un élément de liaison de sécurité (<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> ou <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>) à l'aide de la méthode <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> ou <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType> et en affectant au paramètre `requireCancellation` la valeur `false`. Ce paramètre concerne la mise en cache du jeton. L'affectation de la valeur `false` à ce paramètre permet d'activer la fonctionnalité de jeton basé sur l'état.  
+ Ce jeton peut uniquement être crée à l’aide d’une liaison personnalisée. Pour plus d’informations, consultez [Comment : créer un jeton de contexte de sécurité pour une Session sécurisée](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).) Dans le code, ce jeton est activé en créant un élément de liaison de sécurité (<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> ou <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>) à l'aide de la méthode <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> ou <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType> et en affectant au paramètre `requireCancellation` la valeur `false`. Ce paramètre concerne la mise en cache du jeton. L'affectation de la valeur `false` à ce paramètre permet d'activer la fonctionnalité de jeton basé sur l'état.  
   
  Ou bien, dans la configuration, le jeton est activé en créant un <`customBinding`>, puis en ajoutant un <`security`> élément et affecter le `authenticationMode` attribut SecureConversation et le `requireSecurityContextCancellation` attribut `true`.  
   
@@ -53,10 +55,10 @@ Pour diverses raisons, certains modes de sécurité ne sont pas pris en charge p
  Si le contexte emprunté ne dispose de droits d'accès permettant le chargement d'un assembly et que l'objet CLR tente pour la première fois de le charger pour AppDomain, <xref:System.AppDomain> met l'échec en mémoire cache. Les tentatives suivantes pour charger cet assembly échoueront également, même après restauration de l'emprunt d'identité et même si le contexte restauré dispose cette fois de droits d'accès permettant de charger cet assembly. Ces échecs successifs se produisent car l'objet CLR ne tente pas une nouvelle fois de charger l'assembly après la modification du contexte utilisateur. Vous devez redémarrer le domaine d'application pour résoudre ce problème.  
   
 > [!NOTE]
->  La valeur par défaut de la propriété <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> de la classe <xref:System.ServiceModel.Security.WindowsClientCredential> est <xref:System.Security.Principal.TokenImpersonationLevel.Identification>. Dans la plupart des cas, les contextes d'emprunt d'identité de niveau identification ne disposent pas de droits leur permettant de charger d'autres assemblys. Il s'agit de la valeur par défaut. Il est donc important de garder à l'esprit ce cas très fréquent. L'emprunt d'identité de niveau identification se produit lorsque le processus d'emprunt ne dispose pas du droit `SeImpersonate`. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Délégation et emprunt d’identité](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+>  La valeur par défaut de la propriété <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> de la classe <xref:System.ServiceModel.Security.WindowsClientCredential> est <xref:System.Security.Principal.TokenImpersonationLevel.Identification>. Dans la plupart des cas, les contextes d'emprunt d'identité de niveau identification ne disposent pas de droits leur permettant de charger d'autres assemblys. Il s'agit de la valeur par défaut. Il est donc important de garder à l'esprit ce cas très fréquent. L'emprunt d'identité de niveau identification se produit lorsque le processus d'emprunt ne dispose pas du droit `SeImpersonate`. Pour plus d’informations, consultez [délégation et emprunt d’identité](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
 ### <a name="delegation-requires-credential-negotiation"></a>La délégation nécessite la négociation des informations d'identification  
- Pour pouvoir utiliser le protocole d'authentification Kerberos avec la délégation, vous devez implémenter le protocole Kerberos en utilisant la négociation des informations d'identification (parfois appelé Kerberos multi-segment ou multi-étape). Si vous implémentez l'authentification Kerberos sans négociation d'informations d'identification (parfois appelée Kerberos « one-shot » ou Kerberos « single-leg »), une exception est levée. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]comment implémenter la négociation des informations d’identification, consultez [débogage des erreurs de l’authentification Windows](../../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md).  
+ Pour pouvoir utiliser le protocole d'authentification Kerberos avec la délégation, vous devez implémenter le protocole Kerberos en utilisant la négociation des informations d'identification (parfois appelé Kerberos multi-segment ou multi-étape). Si vous implémentez l'authentification Kerberos sans négociation d'informations d'identification (parfois appelée Kerberos « one-shot » ou Kerberos « single-leg »), une exception est levée. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] comment implémenter la négociation des informations d’identification, consultez [débogage des erreurs de l’authentification Windows](../../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md).  
   
 ## <a name="cryptography"></a>Chiffrement  
   
@@ -81,18 +83,18 @@ Pour diverses raisons, certains modes de sécurité ne sont pas pris en charge p
   
 -   Exécutez `p/invoke` de `CertGetCertificateContextProperty` et inspectez `dwProvType` sur la `CertGetCertificateContextProperty` retournée.  
   
--   Utilisez la `certutil` commande à partir de la ligne de commande pour interroger des certificats. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Tâches Certutil pour le dépannage des certificats](http://go.microsoft.com/fwlink/?LinkId=120056).  
+-   Utilisez la `certutil` commande à partir de la ligne de commande pour interroger des certificats. Pour plus d’informations, consultez [Tâches Certutil pour le dépannage des certificats](http://go.microsoft.com/fwlink/?LinkId=120056).  
   
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>La sécurité de message échouera si l'emprunt d'identité ASP.NET est utilisé et si la compatibilité ASP.NET est requise  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ne prend pas en charge l'utilisation combinée des paramètres suivants, une telle utilisation pouvant empêcher l'authentification client :  
   
 -   L'emprunt d'identité [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] est activé. Cette opération est effectuée dans le fichier Web.config en définissant le `impersonate` attribut de la <`identity`> élément `true`.  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]mode de compatibilité est activé en définissant le `aspNetCompatibilityEnabled` attribut de la [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) à `true`.  
+-   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] mode de compatibilité est activé en définissant le `aspNetCompatibilityEnabled` attribut de la [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) à `true`.  
   
 -   Le mode de sécurité de niveau message est utilisé.  
   
- Pour contourner cette difficulté, il suffit de désactiver le mode de compatibilité [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Si le mode de compatibilité [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] est requis, désactivez la fonctionnalité d'emprunt d'identité [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] et utilisez la fonctionnalité d'emprunt d'identité fournie par [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] à la place. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Délégation et emprunt d’identité](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+ Pour contourner cette difficulté, il suffit de désactiver le mode de compatibilité [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Si le mode de compatibilité [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] est requis, désactivez la fonctionnalité d'emprunt d'identité [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] et utilisez la fonctionnalité d'emprunt d'identité fournie par [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] à la place. Pour plus d’informations, consultez [délégation et emprunt d’identité](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
 ## <a name="ipv6-literal-address-failure"></a>Échec d'adresse littérale IPv6  
  Les demandes de sécurité échouent si le client et le service s'exécutent sur le même ordinateur et les adresses littérales IPv6 sont utilisées pour le service.  
@@ -106,7 +108,7 @@ Pour diverses raisons, certains modes de sécurité ne sont pas pris en charge p
   
 -   http://localhost/CalculatorService/service (le service)  
   
--   http://localhost/CalculatorService/issue_ticket (le STS)  
+-   http://localhost/CalculatorService/issue_ticket (STS)  
   
 -   http://localhost/CalculatorService/mex (le point de terminaison de métadonnées)  
   

@@ -1,20 +1,17 @@
 ---
-title: "Littéraux (F#)"
-description: "En savoir plus sur les types de littéral dans le langage de programmation F #."
-keywords: visual f#, f#, programmation fonctionnelle
+title: Littéraux (F#)
+description: 'En savoir plus sur les types de littéral dans le langage de programmation F #.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 4b1d6e9d-f933-4cd4-966d-d643152c27e4
-ms.openlocfilehash: 6bb1f233b6846e226c4e73aee00b8cf77735fe2d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 961d6a10122c5d5c691d394efa8d2b7b31a80453
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="literals"></a>Littéraux
 
@@ -39,7 +36,7 @@ Le tableau suivant indique les types de littéraux en F #. Les caractères qui r
 |uint64|nombre non signé 64 bits|UL|`86UL`|
 |float32 unique,|nombre à virgule flottante 32 bits|F ou f|`4.14F` ou `4.14f`|
 |||saut de ligne|`0x00000000lf`|
-|type float ; Double|nombre à virgule flottante 64 bits|aucun|`4.14`ou `2.3E+32` ou`2.3e+32`|
+|type float ; Double|nombre à virgule flottante 64 bits|aucun|`4.14` ou `2.3E+32` ou `2.3e+32`|
 |||SAUT DE LIGNE|`0x0000000000000000LF`|
 |bigint|entier non limité à la représentation sous forme de 64 bits|I|`9999999999999999999999999999I`|
 |decimal|nombre de fractions de seconde représentée comme un point fixe ou d’un nombre rationnel|M ou m|`0.7833M` ou `0.7833m`|
@@ -47,9 +44,9 @@ Le tableau suivant indique les types de littéraux en F #. Les caractères qui r
 |Chaîne|chaîne Unicode|aucun|`"text\n"`<br /><br />ou<br /><br />`@"c:\filename"`<br /><br />ou<br /><br />`"""<book title="Paradise Lost">"""`<br /><br />ou<br /><br />`"string1" + "string2"`<br /><br />Voir aussi [chaînes](Strings.md).|
 |byte|Caractère ASCII|B|`'a'B`|
 |byte[]|Chaîne ASCII|B|`"text"B`|
-|[] String ou byte|chaîne textuelle|préfixe @|`@"\\server\share"`(Unicode)<br /><br />`@"\\server\share"B`(ASCII)|
+|[] String ou byte|chaîne textuelle|préfixe @|`@"\\server\share"` (Unicode)<br /><br />`@"\\server\share"B` (ASCII)|
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 Chaînes Unicode peuvent contenir des encodages explicites que vous pouvez spécifier à l’aide de `\u` suivi d’un code hexadécimal 16 bits ou les encodages UTF-32 que vous pouvez spécifier à l’aide de `\U` suivi d’un code hexadécimal 32 bits qui représente un Unicode paire de substitution.
 
 À compter de F # 3.1, vous pouvez utiliser le `+` se connecter pour combiner des littéraux de chaîne. Vous pouvez également utiliser l’opérateur de bits ou (`|||`) opérateur pour combiner les indicateurs de l’enum. Par exemple, le code suivant est autorisé dans F # 3.1 :

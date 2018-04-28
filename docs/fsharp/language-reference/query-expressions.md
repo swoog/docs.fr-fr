@@ -1,20 +1,17 @@
 ---
-title: "Expressions de requête (F#)"
-description: "En savoir plus sur le support d’expression de requête LINQ dans le langage de programmation F #."
-keywords: visual f#, f#, programmation fonctionnelle
+title: Expressions de requête (F#)
+description: 'En savoir plus sur le support d’expression de requête LINQ dans le langage de programmation F #.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 35df2d80-e6d2-4873-b2de-9b45b9e9e650
-ms.openlocfilehash: 20ea7ef820dd295497ed996ce10e5a594d021f7e
-ms.sourcegitcommit: 39b65a49271e082add68cb737b48fdbe09d24718
+ms.openlocfilehash: 81b81d25b8c0d8656dedffd2f8ec7a8297ef7191
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="query-expressions"></a>Expressions de requête
 
@@ -29,7 +26,7 @@ Les expressions de requête permettent d’interroger une source de données et 
 query { expression }
 ```
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 Les expressions de requête sont un type d’expression de calcul similaire aux expressions de séquence. Tout comme vous spécifiez une séquence en fournissant du code dans une expression de séquence, vous spécifiez un jeu de données en fournissant du code dans une expression de requête. Dans une expression de séquence, la `yield` mot clé identifie les données à retourner dans le cadre de la séquence résultante. Dans les expressions de requête, le `select` (mot clé) effectue la même fonction. Outre le `select` mot clé F # prend également en charge un nombre d’opérateurs de requête qui s’apparentent à des parties d’une instruction SQL SELECT. Voici un exemple d’une expression de requête simple, ainsi que du code qui se connecte à la source OData de Northwind.
 
 ```fsharp
@@ -680,7 +677,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<code>IN</code>un ensemble de valeurs spécifiées<br/>
+<code>IN</code> un ensemble de valeurs spécifiées<br/>
 
 <pre><code class="lang-sql">SELECT *
 FROM Student
@@ -721,7 +718,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<code>LIKE</code>avec le modèle correspond à l’ensemble.<br/>
+<code>LIKE</code> avec le modèle correspond à l’ensemble.<br/>
 
 <pre><code class="lang-sql">-- '[abc]%' matches strings where the first character is
 -- 'a', 'b', 'c', 'A', 'B', or 'C'
@@ -738,7 +735,7 @@ WHERE Student.Name LIKE '[abc]%'
 </code></pre>
 
 </td></tr><tr><td>
-<code>LIKE</code>avec le modèle de jeu d’exclusion.<br/>
+<code>LIKE</code> avec le modèle de jeu d’exclusion.<br/>
 
 <pre><code class="lang-sql">-- '[^abc]%' matches strings where the first character is
 -- not 'a', 'b', 'c', 'A', 'B', or 'C'
@@ -757,7 +754,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<code>LIKE</code>sur un champ, mais sélectionnez un autre champ.<br/>
+<code>LIKE</code> sur un champ, mais sélectionnez un autre champ.<br/>
 
 <pre><code class="lang-sql">SELECT StudentID AS ID FROM Student
 WHERE Student.Name LIKE '[^abc]%'
@@ -807,7 +804,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>LEFT JOIN</code>avec deux tables.<br/>
+</td></tr><tr><td><code>LEFT JOIN</code> avec deux tables.<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 LEFT JOIN CourseSelection
@@ -826,7 +823,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>JOIN</code>avec<code>COUNT</code><br/>
+</td></tr><tr><td><code>JOIN</code> Avec <code>COUNT</code><br/>
 
 <pre><code class="lang-sql">SELECT COUNT( * ) FROM Student
 JOIN CourseSelection
@@ -909,7 +906,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>OR</code>dans l’ordre<br/>
+</td></tr><tr><td><code>OR</code> dans l’ordre<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 WHERE Student.Age = 12 OR Student.Age = 13
@@ -949,7 +946,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>UNION</code>de deux requêtes.<br/>
+</td></tr><tr><td><code>UNION</code> de deux requêtes.<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 UNION
@@ -998,7 +995,7 @@ let query2 =
 query1.Intersect(query2)
 </code></pre>
 
-</td></tr><tr><td><code>CASE</code>condition.<br/>
+</td></tr><tr><td><code>CASE</code> condition.<br/>
 
 <pre><code class="lang-sql">SELECT student.StudentID,
 CASE Student.Age

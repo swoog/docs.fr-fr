@@ -1,12 +1,13 @@
 ---
 title: Jetons SAML et revendications
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - issued tokens
 - SAML token
 ms.assetid: 930b6e34-9eab-4e95-826c-4e06659bb977
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a2b35ba4da503663a2bb92597ed193c408e7c99b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9bd10fe663ccb4c78af775baf3e76663ef9a91bd
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="saml-tokens-and-claims"></a>Jetons SAML et revendications
 Sécurité Assertions Markup Language (SAML) *jetons* sont des représentations XML de revendications. Par défaut, les jetons SAML [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] utilise dans les scénarios de sécurité fédérée est *jetons émis*.  
@@ -42,13 +44,13 @@ Sécurité Assertions Markup Language (SAML) *jetons* sont des représentations 
 4.  La signature sur le jeton SAML indique à la partie de confiance que le service de jeton de sécurité a émis le jeton. La signature de message créée avec la clé de vérification indique à la partie de confiance que le jeton a été émis pour le client.  
   
 ## <a name="from-claims-to-samlattributes"></a>Des revendications aux éléments SamlAttributes  
- Dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], les instructions incluses dans les jetons SAML sont modelées en tant qu'objets <xref:System.IdentityModel.Tokens.SamlAttribute>, qui peuvent être remplis directement à partir d'objets <xref:System.IdentityModel.Claims.Claim> à condition que l'objet <xref:System.IdentityModel.Claims.Claim> ait une propriété <xref:System.IdentityModel.Claims.Claim.Right%2A> de <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> et que la propriété <xref:System.IdentityModel.Claims.Claim.Resource%2A> soit du type <xref:System.String>. Exemple :  
+ Dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], les instructions incluses dans les jetons SAML sont modelées en tant qu'objets <xref:System.IdentityModel.Tokens.SamlAttribute>, qui peuvent être remplis directement à partir d'objets <xref:System.IdentityModel.Claims.Claim> à condition que l'objet <xref:System.IdentityModel.Claims.Claim> ait une propriété <xref:System.IdentityModel.Claims.Claim.Right%2A> de <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> et que la propriété <xref:System.IdentityModel.Claims.Claim.Resource%2A> soit du type <xref:System.String>. Par exemple :  
   
  [!code-csharp[c_CreateSTS#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#8)]
  [!code-vb[c_CreateSTS#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#8)]  
   
 > [!NOTE]
->  Lorsque des jetons SAML sont sérialisés dans des messages, lorsqu'ils sont émis par un service de jeton de sécurité ou lorsqu'ils sont présentés par des clients à des services dans le cadre de l'authentification, le quota de taille maximale de message doit être suffisamment important pour prendre en charge le jeton SAML et les autres parties du message. Dans un cas normal, les quotas de taille de message par défaut sont suffisants. Toutefois, dans le cas où un jeton SAML est de grande taille parce qu'il contient des centaines de revendications, vous pouvez avoir besoin d'augmenter les quotas pour prendre en charge le jeton sérialisé. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Considérations de sécurité pour les données](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).  
+>  Lorsque des jetons SAML sont sérialisés dans des messages, lorsqu'ils sont émis par un service de jeton de sécurité ou lorsqu'ils sont présentés par des clients à des services dans le cadre de l'authentification, le quota de taille maximale de message doit être suffisamment important pour prendre en charge le jeton SAML et les autres parties du message. Dans un cas normal, les quotas de taille de message par défaut sont suffisants. Toutefois, dans le cas où un jeton SAML est de grande taille parce qu'il contient des centaines de revendications, vous pouvez avoir besoin d'augmenter les quotas pour prendre en charge le jeton sérialisé. Pour plus d’informations, consultez [considérations de sécurité pour les données](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).  
   
 ## <a name="from-samlattributes-to-claims"></a>Des éléments SamlAttributes aux revendications  
  Lorsque des jetons SAML sont reçus dans des messages, les différentes instructions incluses dans le jeton SAML sont transformées en objets <xref:System.IdentityModel.Policy.IAuthorizationPolicy> qui sont placés dans <xref:System.IdentityModel.Policy.AuthorizationContext>. Les revendications provenant de chaque instruction SAML sont retournées par la propriété <xref:System.IdentityModel.Policy.AuthorizationContext.ClaimSets%2A> de <xref:System.IdentityModel.Policy.AuthorizationContext> et peuvent être examinées pour déterminer s'il convient d'authentifier et d'autoriser l'utilisateur.  

@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ba49d990c9f067ae2c10ae2a60cbad24b30f43eb
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: e731fd31f2a247466891abbf75d67a61dba7f286
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="working-with-certificates"></a>Utilisation des certificats
 Dans le cadre de la programmation de la sécurité [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], les certificats numériques X.509 sont fréquemment utilisés pour authentifier les clients et les serveurs, chiffrer les messages et signer numériquement ces derniers. Cette rubrique contient des explications sur les fonctionnalités de certificat numérique X.509 ainsi que des instructions permettant de les utiliser dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Elle renvoie également à d'autres rubriques qui abordent plus en détail ces différents concepts ou contiennent des instructions permettant d'effectuer des tâches courantes à l'aide de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] et des certificats.  
@@ -37,7 +37,7 @@ Dans le cadre de la programmation de la sécurité [!INCLUDE[indigo1](../../../.
  Les certificats doivent être émis par une autorité de certification, c'est-à-dire le plus souvent par une partie tierce. Les domaines Windows intègrent une autorité de certification pouvant être utilisée afin d'émettre des certificats pour les ordinateurs figurant sur ces domaines.  
   
 ## <a name="viewing-certificates"></a>Affichage des certificats  
- Si vous souhaitez utiliser des certificats, vous devrez souvent les afficher et examiner leurs propriétés au préalable. Pour ce faire, il vous suffit d'utiliser l'outil enfichable MMC (Microsoft Management Console). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Comment : afficher des certificats avec le composant logiciel enfichable MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
+ Si vous souhaitez utiliser des certificats, vous devrez souvent les afficher et examiner leurs propriétés au préalable. Pour ce faire, il vous suffit d'utiliser l'outil enfichable MMC (Microsoft Management Console). Pour plus d’informations, consultez [Comment : afficher les certificats avec le composant logiciel enfichable MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
   
 ## <a name="certificate-stores"></a>Magasin de certificats  
  Les certificats sont stockés dans des magasins. Deux emplacements de magasin majeurs existent et sont divisés en sous-magasins. Si vous disposez des droits administrateur sur un ordinateur, vous pouvez afficher ces deux principaux magasins à l'aide de l'outil enfichable MMC. Dans le cas contraire, vous pouvez uniquement afficher le magasin de l'utilisateur en cours.  
@@ -89,14 +89,14 @@ Dans le cadre de la programmation de la sécurité [!INCLUDE[indigo1](../../../.
   
 -   [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)  
   
--   [\<peerAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication-element.md)  
+-   [\<peerAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication-element.md)  
   
 -   [\<messageSenderAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication-element.md)  
   
 ## <a name="custom-authentication"></a>Authentification personnalisée  
  La propriété `CertificateValidationMode` vous permet également de personnaliser les modalités d'authentification des certificats. Par défaut, le niveau a la valeur `ChainTrust`. Pour utiliser la valeur <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>, vous devez également affecter à l'attribut `CustomCertificateValidatorType` l'assembly et le type utilisés pour valider le certificat. Pour créer un validateur personnalisé, vous devez hériter de la classe <xref:System.IdentityModel.Selectors.X509CertificateValidator> abstraite.  
   
- Lorsque vous créez un authentificateur personnalisé, la méthode la plus importante à substituer correspond à la méthode <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%2A>. Pour obtenir un exemple d’authentification personnalisée, consultez le [validateur de certificat X.509](../../../../docs/framework/wcf/samples/x-509-certificate-validator.md) exemple. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Informations d’identification personnalisées et Validation des informations d’identification](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md).  
+ Lorsque vous créez un authentificateur personnalisé, la méthode la plus importante à substituer correspond à la méthode <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%2A>. Pour obtenir un exemple d’authentification personnalisée, consultez le [validateur de certificat X.509](../../../../docs/framework/wcf/samples/x-509-certificate-validator.md) exemple. Pour plus d’informations, consultez [informations d’identification personnalisées et Validation des informations d’identification](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md).  
   
 ## <a name="using-makecertexe-to-build-a-certificate-chain"></a>Utilisation de l'outil Makecert.exe pour construire une chaîne de certificat  
  L'outil de création de certificat (Makecert.exe) crée des certificats X.509 ainsi que des paires de clés publique/privée. Vous pouvez enregistre les clés privées sur votre disque, puis les utiliser pour émettre et signer de nouveaux certificats, instaurant ainsi une hiérarchie de certificats sous forme de chaîne. Cet outil est conçu uniquement pour vous assister lors du développement des services et ne doit en aucun cas être utilisé pour créer des certificats devant être effectivement déployés. Lorsque vous développez un service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], effectuez les étapes suivantes afin de construire une chaîne d'approbation à l'aide de l'outil Makecert.exe.  

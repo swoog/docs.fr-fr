@@ -20,11 +20,11 @@ ms.author: wpickett
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1548f74cab4589690e49517cdf96144fb6515693
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: f36f22e8bf68520f5f57280d33cf37990feb2df6
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="xaml-services"></a>Services XAML
 Cette rubrique décrit les fonctionnalités d’un ensemble de la technologie appelée Services XAML .NET Framework. La plupart des services et API décrits se trouvent dans l’assembly System.Xaml, qui est un assembly introduite avec la [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] ensemble d’assemblys principaux .NET. Les services incluent des lecteurs et writers, les classes du schéma et la prise en charge des schémas, des fabriques, attribution de classes, XAML intrinsèque prise en charge et autres fonctionnalités de langage XAML.  
@@ -49,7 +49,7 @@ Cette rubrique décrit les fonctionnalités d’un ensemble de la technologie ap
  Si vous recherchez une partie introductive dans XAML en tant que langage, vous pouvez essayer de [vue d’ensemble du XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md). Cette rubrique aborde XAML pour un public qui est une nouveauté pour [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] et également à l’aide de balisage XAML et les fonctionnalités de langage XAML. Un autre document utile est la partie introductive dans le [spécification du langage XAML](http://go.microsoft.com/fwlink/?LinkId=114525).  
   
 ## <a name="net-framework-xaml-services-and-systemxaml-in-the-net-architecture"></a>Les Services XAML .NET framework et System.Xaml dans l’Architecture .NET  
- Dans les versions précédentes de [!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)], prise en charge des fonctionnalités de langage XAML a été implémentée par des infrastructures qui reposent sur [!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)] ([!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Windows Workflow Foundation et [!INCLUDE[vsindigo](../../../includes/vsindigo-md.md)]) et par conséquent variées dans son comportement et l’API utilisée selon l’infrastructure spécifique que vous utilisiez. Cela inclus le code XAML analyseur et son objet de graphiquement le mécanisme de création, intrinsèques du langage XAML, la prise en charge de la sérialisation et ainsi de suite.  
+ Dans les versions précédentes de [!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)], prise en charge des fonctionnalités de langage XAML a été implémentée par des infrastructures qui reposent sur [!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)] ([!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Windows Workflow Foundation et Windows Communication Foundation (WCF)) et par conséquent variées dans son comportement et l’API utilisée selon quelle infrastructure spécifique que vous utilisiez. Cela inclus le code XAML analyseur et son objet de graphiquement le mécanisme de création, intrinsèques du langage XAML, la prise en charge de la sérialisation et ainsi de suite.  
   
  Dans [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], les Services XAML .NET Framework et l’assembly System.Xaml définissent la plupart de ce qui est nécessaire pour prendre en charge des fonctionnalités de langage XAML. Cela inclut les classes de base pour les lecteurs et writers XAML. La fonctionnalité la plus importante ajoutée aux Services XAML .NET Framework qui n’était pas présente dans les implémentations XAML spécifiques à l’infrastructure est une représentation de système de type pour XAML. La représentation sous forme de système de type présente le code XAML d’une manière orientée objet qui est centrée sur les fonctions XAML sans définir de dépendances sur des fonctions spécifiques des infrastructures.  
   

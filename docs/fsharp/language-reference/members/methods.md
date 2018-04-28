@@ -1,20 +1,17 @@
 ---
-title: "Méthodes (F#)"
-description: "Découvrez comment une méthode) (F # est une fonction associée à un type qui sont utilisées pour exposer et implémenter les fonctionnalités et le comportement des objets et des types."
-keywords: visual f#, f#, programmation fonctionnelle
+title: Méthodes (F#)
+description: 'Découvrez comment une méthode) (F # est une fonction associée à un type qui sont utilisées pour exposer et implémenter les fonctionnalités et le comportement des objets et des types.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 1febab3b-c922-49c6-889f-c22db107710c
-ms.openlocfilehash: dae31abe6bb0773671b889646c9cceb410a492cd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e73e4f8ea6979de3b0d5403fcb31275e99e9fa5f
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="methods"></a>Méthodes
 
@@ -55,7 +52,7 @@ override member [inline] self-identifier.method-nameparameter-list [ : return-ty
 [ modifier ] member [inline] self-identifier.method-name ([<Optional; DefaultParameterValue([ default-value ])>] input) [ : return-type ]
 ```
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 Dans la syntaxe précédente, vous pouvez voir les différentes formes de définitions et déclarations de méthode. Dans le corps de méthode plus longs, un saut de ligne suit le signe égal (=) et le corps de la totalité de la méthode est mise en retrait.
 
 Attributs peuvent être appliqués à une déclaration de méthode. Ils précèdent la syntaxe pour une définition de méthode et sont généralement répertoriés sur une ligne distincte. Pour plus d’informations, consultez [Attributs](../attributes.md).

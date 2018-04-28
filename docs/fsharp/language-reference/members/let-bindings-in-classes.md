@@ -1,20 +1,17 @@
 ---
 title: Liaisons let dans les classes (F#)
 description: "Apprendre à définir des champs privés et des fonctions privées pour des classes F # à l’aide de liaisons 'let' dans la définition de classe."
-keywords: visual f#, f#, programmation fonctionnelle
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 9d3710f5-68b1-4e4c-b02b-27fe018f20e8
-ms.openlocfilehash: 1337cc0794e366e8c39745f5c45065362c9c38c9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: c4511a541403dde517acaf902e86de8d48f13781
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="let-bindings-in-classes"></a>Liaisons let dans des classes
 
@@ -31,7 +28,7 @@ Vous pouvez définir des champs privés et des fonctions privées pour les class
 [static] let [ rec ] binding1 [ and ... binding-n ]
 ```
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 La syntaxe précédente apparaît après les déclarations de titre et l’héritage de classe, mais avant les définitions de membre. La syntaxe est similaire à celle de `let` liaisons en dehors des classes, mais les noms définis dans une classe ont une portée limitée à la classe. A `let` liaison crée un champ privé ou une fonction ; pour exposer des données ou les fonctions déclarer publiquement, une propriété ou une méthode membre.
 
 A `let` de liaison qui n’est pas statique est appelée une instance `let` liaison. Instance `let` liaisons s’exécutent lorsque des objets sont créés. Statique `let` liaisons font partie de l’initialiseur statique pour la classe, qui est garantie à exécuter avant le type est utilisé pour la première fois.
@@ -60,4 +57,4 @@ Vous pouvez également définir des champs privés dans une classe en utilisant 
 
 [Liaisons `do` dans des classes](do-bindings-in-classes.md)
 
-[`let`Liaisons](../functions/let-bindings.md)
+[`let` Liaisons](../functions/let-bindings.md)

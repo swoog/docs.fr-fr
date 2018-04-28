@@ -1,23 +1,24 @@
 ---
 title: Exceptions
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 065205cc-52dd-4f30-9578-b17d8d113136
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bf2c6e12dac2130a26aa01efc21b8f58f509294a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9e78546a10e1a8cdff780c44898fd209ca829c6c
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="exceptions"></a>Exceptions
 Les flux de travail peuvent utiliser l'activité <xref:System.Activities.Statements.TryCatch> pour gérer des exceptions déclenchées lors de leur exécution. Ces exceptions peuvent être gérées ou être à nouveau levées à l'aide de l'activité <xref:System.Activities.Statements.Rethrow>. Les activités de la section <xref:System.Activities.Statements.TryCatch.Finally%2A> sont exécutées lorsque soit la section <xref:System.Activities.Statements.TryCatch.Try%2A>, soit la section <xref:System.Activities.Statements.TryCatch.Catches%2A> est terminée. Flux de travail hébergé par un <xref:System.Activities.WorkflowApplication> l’instance peut également utiliser le <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> Gestionnaire d’événements pour gérer les exceptions qui ne sont pas gérées par un <xref:System.Activities.Statements.TryCatch> activité.  
@@ -58,7 +59,7 @@ Les flux de travail peuvent utiliser l'activité <xref:System.Activities.Stateme
 -   L'exception n'est pas gérée par une activité <xref:System.Activities.Statements.TryCatch> de niveau supérieur, s'échappe de la racine du flux de travail et le flux de travail est configuré de sorte à annuler au lieu de terminer ou abandonner. Les flux de travail hébergés à l'aide de <xref:System.Activities.WorkflowApplication> peuvent configurer cela en gérant <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> et en retournant <xref:System.Activities.UnhandledExceptionAction.Cancel>. Un exemple de gestion <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> est disponible précédemment dans cette rubrique. Les services de flux de travail peuvent configurer cette opération à l'aide de <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> et en spécifiant <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.Cancel>. Pour obtenir un exemple de configuration <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior>, consultez [extensibilité d’hôte de Service de Workflow](../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md).  
   
 ## <a name="exception-handling-versus-compensation"></a>Gestion des exceptions et compensation  
- La différence entre la gestion des exceptions et la compensation réside dans le fait que la gestion des exceptions a lieu lors de l'exécution d'une activité. La compensation a lieu une fois une activité terminée correctement. La gestion des exceptions permet de nettoyer une fois l’exception levée par l’activité, tandis que la compensation fournit un mécanisme permettant d’annuler un travail correctement terminé d’une activité précédemment terminée. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Compensation](../../../docs/framework/windows-workflow-foundation/compensation.md).  
+ La différence entre la gestion des exceptions et la compensation réside dans le fait que la gestion des exceptions a lieu lors de l'exécution d'une activité. La compensation a lieu une fois une activité terminée correctement. La gestion des exceptions permet de nettoyer une fois l’exception levée par l’activité, tandis que la compensation fournit un mécanisme permettant d’annuler un travail correctement terminé d’une activité précédemment terminée. Pour plus d’informations, consultez [Compensation](../../../docs/framework/windows-workflow-foundation/compensation.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.Activities.Statements.TryCatch>  

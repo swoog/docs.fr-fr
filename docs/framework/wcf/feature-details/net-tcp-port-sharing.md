@@ -1,27 +1,29 @@
 ---
 title: Partage de ports Net.TCP
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - port activation [WCF]
 - port sharing [WCF]
 ms.assetid: f13692ee-a179-4439-ae72-50db9534eded
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 013c9e963ca75cc612d869a55b33d69aebbcad33
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c7abf272cb1d069b0fbdcd561256580de5a82c29
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="nettcp-port-sharing"></a>Partage de ports Net.TCP
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] fournit un nouveau protocole réseau basé sur TCP (net.tcp://) pour une communication hautes performances. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] introduit également un nouveau composant système, le Service de partage de ports Net.TCP, qui permet le partage de ports net.tcp à travers plusieurs processus utilisateur.  
@@ -49,18 +51,18 @@ ms.lasthandoff: 12/22/2017
  Lorsqu'un service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilisant le partage de ports net.tcp:// s'ouvre, l'infrastructure de transport TCP de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] n'ouvre pas directement de socket TCP dans le processus d'application. À la place, l'infrastructure de transport enregistre l'URI (Uniform Resource Identifier) de l'adresse de base de service auprès du Service de partage de ports Net.TCP et attend que le service écoute les messages pour son compte.  Le service de partage de ports distribue des messages adressés au service de l'application quand ils arrivent.  
   
 ## <a name="installing-port-sharing"></a>Installation du partage de ports  
- Le Service de partage de ports Net.TCP est disponible sur tous les systèmes d'exploitation qui prennent en charge le [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], mais le service n'est pas activé par défaut. Comme précaution de sécurité, un administrateur doit activer manuellement le Service de partage de ports Net.TCP avant la première utilisation. Le Service de partage de ports Net.TCP expose les options de configuration qui vous permettent de manipuler plusieurs caractéristiques des sockets réseau possédés par le service de partage de ports. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Comment : activer le Service de partage de ports Net.TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md).  
+ Le Service de partage de ports Net.TCP est disponible sur tous les systèmes d'exploitation qui prennent en charge le [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], mais le service n'est pas activé par défaut. Comme précaution de sécurité, un administrateur doit activer manuellement le Service de partage de ports Net.TCP avant la première utilisation. Le Service de partage de ports Net.TCP expose les options de configuration qui vous permettent de manipuler plusieurs caractéristiques des sockets réseau possédés par le service de partage de ports. Pour plus d’informations, consultez [Comment : activer le Service de partage de ports Net.TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md).  
   
 ## <a name="using-nettcp-port-sharing-in-an-application"></a>Utilisation du partage de ports Net.tcp dans une application  
  La façon la plus simple d'utiliser le partage de ports net.tcp:// dans votre application [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] est d'exposer un service à l'aide de <xref:System.ServiceModel.NetTcpBinding>, puis d'activer le Service de partage de ports Net.TCP à l'aide de la propriété <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A>.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]comment procéder, consultez [Comment : configurer un Service WCF à utiliser le partage de Port](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] comment procéder, consultez [Comment : configurer un Service WCF à utiliser le partage de Port](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md).  
   
 ## <a name="security-implications-of-port-sharing"></a>Conséquences sur la sécurité du partage de ports  
  Bien que le Service de partage de ports Net.TCP fournisse une couche de traitement entre les applications et le réseau, les applications qui utilisent ce service doivent néanmoins être sécurisées comme si elles écoutaient directement le réseau. Spécifiquement, les applications qui utilisent le partage de ports doivent évaluer les privilèges de processus sous lesquels elles s'exécutent. Envisagez d'exécuter votre application à l'aide du compte de service réseau intégré, qui s'exécute avec le jeu minime de privilèges de processus requis pour la communication réseau.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Configuration du service de partage de ports Net.TCP](../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)  
- [Hébergement d’applications WPF](../../../../docs/framework/wcf/feature-details/hosting.md)  
+ [Hébergement](../../../../docs/framework/wcf/feature-details/hosting.md)  
  [Guide pratique pour configurer un service WCF pour qu’il utilise le partage de ports](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md)  
  [Guide pratique pour activer le service de partage de ports Net.TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)

@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3669260d34aac0783f2ebd735c79ced91741408a
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: b0042d9b90066553d6fc962bba1b7a7b990ca242
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="wcf-client-overview"></a>Vue d'ensemble d'un client WCF
 Cette section décrit le fonctionnement des applications clientes, comment configurer, créer et utiliser un client [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], et comment sécuriser des applications clientes.  
@@ -83,7 +83,7 @@ svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/M
   
  Cette classe peut être créée comme un objet local à l'aide de l'un des constructeurs, elle peut être configurée, puis utilisée pour se connecter à un service du type `ISampleService`.  
   
- Il est recommandé de commencer par créer votre objet client [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], puis de l'utiliser et de l'insérer dans un bloc try/catch unique. Vous ne devez pas utiliser le `using` instruction (`Using` en Visual Basic), car elle peut masquer des exceptions dans certains modes d’échec. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] les sections suivantes ainsi que [en évitant les problèmes avec l’instruction à l’aide de](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md).  
+ Il est recommandé de commencer par créer votre objet client [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], puis de l'utiliser et de l'insérer dans un bloc try/catch unique. Vous ne devez pas utiliser le `using` instruction (`Using` en Visual Basic), car elle peut masquer des exceptions dans certains modes d’échec. Pour plus d’informations, consultez les sections suivantes ainsi que [en évitant les problèmes avec l’instruction à l’aide de](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md).  
   
 ### <a name="contracts-bindings-and-addresses"></a>Contrats, liaisons et adresses  
  Avant de pouvoir créer un objet client [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], vous devez le configurer. Plus précisément, elle doit avoir un service *point de terminaison* à utiliser. Un point de terminaison est la combinaison d’un contrat de service, d’une liaison et d’une adresse. ([!INCLUDE[crabout](../../../includes/crabout-md.md)] points de terminaison, consultez [points de terminaison : adresses, liaisons et contrats](../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md).) En règle générale, cette information se trouve dans le [ \<point de terminaison >](../../../docs/framework/configure-apps/file-schema/wcf/endpoint-of-client.md) élément dans un fichier de configuration d’application de client, tel que celui de l’outil Svcutil.exe génère et chargé automatiquement lorsque vous créez votre client objet. Les deux types clients [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] possèdent aussi des surcharges qui vous permettent de spécifier ces informations par programme.  
@@ -140,7 +140,7 @@ Namespace Microsoft.ServiceModel.Samples
 End Interface  
 ```  
   
- Vous pouvez appeler des opérations en créant un objet client [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] et en appelant ses méthodes, comme illustré dans l'exemple de code suivant. Notez que l'ouverture, l'appel et la fermeture de l'objet client [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] se produisent dans un bloc try/catch unique. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [L’accès à des Services à l’aide d’un Client WCF](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md) et [éviter les problèmes avec l’instruction à l’aide de](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md).  
+ Vous pouvez appeler des opérations en créant un objet client [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] et en appelant ses méthodes, comme illustré dans l'exemple de code suivant. Notez que l'ouverture, l'appel et la fermeture de l'objet client [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] se produisent dans un bloc try/catch unique. Pour plus d’informations, consultez [les Services de l’accès à l’aide d’un Client WCF](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md) et [en évitant les problèmes avec l’instruction à l’aide de](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md).  
   
  [!code-csharp[C_GeneratedCodeFiles#20](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#20)]  
   
@@ -167,7 +167,7 @@ End Interface
   
  Les objets clients [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] duplex fonctionnent comme leurs équivalents non-duplex, sauf qu'ils exposent les fonctionnalités nécessaire pour prendre en charge les rappels, y compris la configuration du service de rappel.  
   
- Par exemple, vous pouvez contrôler différents aspects de comportement à l'exécution de l'objet de rappel en utilisant des propriétés de l'attribut <xref:System.ServiceModel.CallbackBehaviorAttribute?displayProperty=nameWithType> sur la classe de rappel. Un autre exemple est l'utilisation de la classe <xref:System.ServiceModel.Description.CallbackDebugBehavior?displayProperty=nameWithType> pour permettre le retour d'informations sur les exceptions aux services qui appellent l'objet de rappel. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Les Services duplex](../../../docs/framework/wcf/feature-details/duplex-services.md). Pour obtenir un exemple complet, consultez [Duplex](../../../docs/framework/wcf/samples/duplex.md).  
+ Par exemple, vous pouvez contrôler différents aspects de comportement à l'exécution de l'objet de rappel en utilisant des propriétés de l'attribut <xref:System.ServiceModel.CallbackBehaviorAttribute?displayProperty=nameWithType> sur la classe de rappel. Un autre exemple est l'utilisation de la classe <xref:System.ServiceModel.Description.CallbackDebugBehavior?displayProperty=nameWithType> pour permettre le retour d'informations sur les exceptions aux services qui appellent l'objet de rappel. Pour plus d’informations, consultez [Services Duplex](../../../docs/framework/wcf/feature-details/duplex-services.md). Pour obtenir un exemple complet, consultez [Duplex](../../../docs/framework/wcf/samples/duplex.md).  
   
  Sur les ordinateurs Windows XP qui exécutent les services IIS (Internet Information Services) 5.1, les clients duplex doivent spécifier une adresse de base cliente à l'aide de la classe <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType> ou une exception est levée. L'exemple de code suivant montre comment procéder.  
   
@@ -179,7 +179,7 @@ End Interface
  [!code-csharp[S_DualHttp#134](../../../samples/snippets/csharp/VS_Snippets_CFX/s_dualhttp/cs/program.cs#134)]  
   
 ## <a name="calling-services-asynchronously"></a>Appels des services de façon asynchrone.  
- Le mode d'appel des opérations dépend entièrement du développeur du client. En effet, les messages qui composent une opération peuvent être mappés aux méthodes synchrones ou asynchrones lorsqu'ils sont exprimés dans le code managé. Par conséquent, si vous souhaitez générer un client qui appelle des opérations de façon asynchrone, vous pouvez utiliser Svcutil.exe pour générer le code client asynchrone à l'aide de l'option `/async`. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Comment : appeler des opérations de Service de façon asynchrone](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md).  
+ Le mode d'appel des opérations dépend entièrement du développeur du client. En effet, les messages qui composent une opération peuvent être mappés aux méthodes synchrones ou asynchrones lorsqu'ils sont exprimés dans le code managé. Par conséquent, si vous souhaitez générer un client qui appelle des opérations de façon asynchrone, vous pouvez utiliser Svcutil.exe pour générer le code client asynchrone à l'aide de l'option `/async`. Pour plus d’informations, consultez [Comment : appeler les opérations de Service asynchrone](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md).  
   
 ## <a name="calling-services-using-wcf-client-channels"></a>Appels des services à l'aide des canaux clients WCF  
  Les types clients [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] étendent <xref:System.ServiceModel.ClientBase%601> qui dérive de l'interface <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType> pour exposer le système de canaux sous-jacent. Vous pouvez appeler des services à l'aide du contrat de service cible avec la classe <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>. Pour plus d’informations, consultez [Architecture de Client WCF](../../../docs/framework/wcf/feature-details/client-architecture.md).  

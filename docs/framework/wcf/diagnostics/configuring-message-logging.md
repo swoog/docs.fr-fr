@@ -1,28 +1,28 @@
 ---
 title: Configuration de la journalisation des messages
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - message logging [WCF]
 ms.assetid: 0ff4c857-8f09-4b85-9dc0-89084706e4c9
-caps.latest.revision: 
+caps.latest.revision: 40
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: a867d5f85177ad9a19a5766c65a8f1f98c04cd17
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 63bdbc68851ace71b3afef30e274b9821ed1ad5f
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="configuring-message-logging"></a>Configuration de la journalisation des messages
 Cette rubrique contient des instructions permettant de configurer l'enregistrement des messages en fonction de différentes situations.  
@@ -58,7 +58,7 @@ Cette rubrique contient des instructions permettant de configurer l'enregistreme
 </system.serviceModel>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]paramètres de journalisation des messages, consultez [les paramètres recommandés pour le suivi et la journalisation des messages](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] paramètres de journalisation des messages, consultez [les paramètres recommandés pour le suivi et la journalisation des messages](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md).  
   
  Vous pouvez utiliser la méthode `add` afin d'indiquer le nom et type de l'écouteur de suivi à utiliser. Dans l'exemple de configuration, nous avons attribué le nom « messages » à l'écouteur et ajouté l'écouteur de suivi standard .NET Framework (`System.Diagnostics.XmlWriterTraceListener`) comme type à utiliser. Si vous utilisez `System.Diagnostics.XmlWriterTraceListener`, vous devez spécifier l'emplacement et le nom du fichier de sortie dans le fichier de configuration. Pour ce faire, il suffit d'affecter le nom du fichier journal à `initializeData`. Si cette consigne n'est pas respectée, le système lèvera une exception. Vous pouvez également implémenter un écouteur personnalisé qui enregistrera les journaux dans un fichier par défaut.  
   
@@ -73,7 +73,7 @@ Cette rubrique contient des instructions permettant de configurer l'enregistreme
 <source name="System.ServiceModel.MessageLogging" switchValue="Verbose">  
 ```  
   
- Si vous souhaitez désactiver la source de suivi, vous devrez utiliser à la place les attributs `logMessagesAtServiceLevel`, `logMalformedMessages`et `logMessagesAtTransportLevel` de l'élément `messageLogging`. Vous devez affecter à tous ces attributs la valeur `false`. Pour ce faire, il suffit d'utiliser le fichier de configuration figurant dans l'exemple de code précédent avec l'Éditeur de configuration ou WMI. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]l’outil Éditeur de Configuration, consultez [l’outil Éditeur de Configuration (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]WMI, consultez [à l’aide de Windows Management Instrumentation pour les Diagnostics](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
+ Si vous souhaitez désactiver la source de suivi, vous devrez utiliser à la place les attributs `logMessagesAtServiceLevel`, `logMalformedMessages`et `logMessagesAtTransportLevel` de l'élément `messageLogging`. Vous devez affecter à tous ces attributs la valeur `false`. Pour ce faire, il suffit d'utiliser le fichier de configuration figurant dans l'exemple de code précédent avec l'Éditeur de configuration ou WMI. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] l’outil Éditeur de Configuration, consultez [l’outil Éditeur de Configuration (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] WMI, consultez [à l’aide de Windows Management Instrumentation pour les Diagnostics](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
   
 ## <a name="logging-levels-and-options"></a>Niveaux d'enregistrement et options supplémentaires  
  Pour les messages entrants, leur enregistrement intervient immédiatement après leur création, immédiatement avant leur arrivée dans le code utilisateur au niveau du service et lorsque des erreurs sont détectées les concernant.  
@@ -107,7 +107,7 @@ Cette rubrique contient des instructions permettant de configurer l'enregistreme
   
  Si aucun écouteur de suivi n'est défini dans le fichier de configuration, aucune sortie d'enregistrement n'est générée, quel que soit le niveau d'enregistrement spécifié.  
   
- Les options de journalisation des messages, telles que les attributs présentés de cette section, peuvent être changées en cours d'exécution à l'aide de Windows Management Instrumentation (WMI). Cela est possible en accédant à la [AppDomainInfo](../../../../docs/framework/wcf/diagnostics/wmi/appdomaininfo.md) instance, ce qui expose ces propriétés booléennes : `LogMessagesAtServiceLevel`, `LogMessagesAtTransportLevel`, et `LogMalformedMessages`. Par conséquent, si vous configurez un écouteur de suivi pour l'enregistrement des messages, mais affectez la valeur `false` à ces options dans la configuration, vous pourrez leur affecter ultérieurement la valeur `true` pendant l'exécution de l'application. Ceci permet en fait d'activer l'enregistrement des messages pendant l'exécution. De la même façon, si vous activez l'enregistrement des messages dans votre fichier de configuration, vous pouvez le désactiver pendant l'exécution à l'aide de WMI. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][à l’aide de Windows Management Instrumentation pour les Diagnostics](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
+ Les options de journalisation des messages, telles que les attributs présentés de cette section, peuvent être changées en cours d'exécution à l'aide de Windows Management Instrumentation (WMI). Cela est possible en accédant à la [AppDomainInfo](../../../../docs/framework/wcf/diagnostics/wmi/appdomaininfo.md) instance, ce qui expose ces propriétés booléennes : `LogMessagesAtServiceLevel`, `LogMessagesAtTransportLevel`, et `LogMalformedMessages`. Par conséquent, si vous configurez un écouteur de suivi pour l'enregistrement des messages, mais affectez la valeur `false` à ces options dans la configuration, vous pourrez leur affecter ultérieurement la valeur `true` pendant l'exécution de l'application. Ceci permet en fait d'activer l'enregistrement des messages pendant l'exécution. De la même façon, si vous activez l'enregistrement des messages dans votre fichier de configuration, vous pouvez le désactiver pendant l'exécution à l'aide de WMI. Pour plus d’informations, consultez [à l’aide de Windows Management Instrumentation pour les Diagnostics](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
   
  Le champ `source` d'un journal de message indique le contexte de journalisation des messages : envoi / réception d'un message de demande, demande-réponse ou demande unidirectionnelle au niveau de la couche de modèle de service ou de transport, ou message mal formé.  
   

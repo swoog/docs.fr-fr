@@ -1,20 +1,17 @@
 ---
-title: "Fonctionnalités de l’environnement de développement F#"
-description: "Découvrez les fonctionnalités de Visual Studio 2012 sont pris en charge en F #."
-keywords: visual f#, f#, programmation fonctionnelle
+title: Fonctionnalités de l’environnement de développement F#
+description: 'Découvrez les fonctionnalités de Visual Studio 2012 sont pris en charge en F #.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 809e9a34-b271-4c87-8356-2426b44f4721
-ms.openlocfilehash: 05727bf11eccfd64f823dd280b1a19210815ca5a
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: dd5c3165a73bd4f821a26d183094829dab7eaeae
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="visual-f-development-environment-features"></a>Fonctionnalités de l’environnement de développement Visual F#
 
@@ -92,7 +89,7 @@ Le tableau suivant récapitule les fonctionnalités qui sont disponibles lorsque
 |Automatique (fenêtre)|Affiche les variables automatiques ou temporaires.|Non|
 |Points d'arrêt|Vous permet de suspendre l’exécution de code à des points spécifiques pendant le débogage.|Oui|
 |Points d’arrêt conditionnels|Active les points d’arrêt qui testent une condition qui détermine si l’exécution doit être suspendue.|Oui|
-|Modifier & Continuer|Permet au code d’être modifié et compilée comme vous déboguez un programme en cours d’exécution sans arrêter et redémarrer le débogueur.|Non|
+|Modifier & Continuer|Permet au code d’être modifié et compilée comme vous déboguez un programme en cours d’exécution sans arrêter et redémarrer le débogueur.|Non|
 |Évaluateur d’expression|Évalue et exécute le code au moment de l’exécution.|Non, mais le c# évaluateur d’expression peut être utilisé, bien que vous devez utiliser la syntaxe c#.|
 |Débogage d’historique|Vous permet de pas à pas dans le code exécuté précédemment.|Oui|
 |Fenêtre Variables locales|Montre localement défini les variables et les valeurs.|Oui|
@@ -113,7 +110,7 @@ Le tableau suivant récapitule la prise en charge pour F # de Visual Studio tool
 |Explorateur d'objets|Permet d’afficher les types dans un assembly.|Types F # tels qu’ils apparaissent dans des assemblys compilés n’apparaissent pas exactement comme vous les avez créés. Vous pouvez parcourir la représentation compilée des types F #, mais vous ne pouvez pas afficher les types de telles qu’elles apparaissent à partir de F #.|
 |[Sortie (fenêtre)](/visualstudio/ide/reference/output-window)|Affiche la sortie de build.|Oui|
 |Analyse des performances|Fournit des outils pour mesurer les performances de votre code.|Oui|
-|Fenêtre Propriétés|Affiche et permet la modification des propriétés de l’objet dans l’environnement de développement qui a le focus.|Oui|
+|Propriétés (fenêtre)|Affiche et permet la modification des propriétés de l’objet dans l’environnement de développement qui a le focus.|Oui|
 |[Explorateur de serveurs](https://msdn.microsoft.com/library/x603htbk.aspx)|Fournit des méthodes pour interagir avec un large éventail de ressources du serveur.|Oui|
 |Explorateur de solutions|Permet d’afficher et gérer des projets et des fichiers.|Oui|
 |Liste des tâches|Vous permet de gérer les éléments de travail se rapportant à votre code.|Oui|

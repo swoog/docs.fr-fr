@@ -1,27 +1,29 @@
 ---
-title: "Hébergement de services de workflow"
-ms.custom: 
+title: Hébergement de services de workflow
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2d55217e-8697-4113-94ce-10b60863342e
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c4a18289fcc5f6dfd68f13a006223d5870d3cd4f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e9f8d38b97a422d2d59e2dea05d53cf6f9684d99
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="hosting-workflow-services"></a>Hébergement de services de workflow
-Un service de workflow doit être hébergé pour pouvoir répondre aux messages entrants. Les services de workflow utilisent l'infrastructure de messagerie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] et sont donc hébergés de manière similaire. Comme les services [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], les services de workflow peuvent être hébergés dans n'importe quelle application managée, dans les services IIS (Internet Information Services) ou WAS (Windows Process Activation Services). De plus, les services de workflow peuvent être hébergés sous Windows Server App Fabric. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Voir de Windows Server AppFabric [documentation de Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkId=193037), [fonctionnalités d’hébergement AppFabric](http://go.microsoft.com/fwlink/?LinkId=196494), et [Concepts d’hébergement AppFabric](http://go.microsoft.com/fwlink/?LinkId=196495). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]les différentes façons de hôte [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services voir [Services d’hébergement](../../../../docs/framework/wcf/hosting-services.md).  
+Un service de workflow doit être hébergé pour pouvoir répondre aux messages entrants. Les services de workflow utilisent l'infrastructure de messagerie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] et sont donc hébergés de manière similaire. Comme les services [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], les services de workflow peuvent être hébergés dans n'importe quelle application managée, dans les services IIS (Internet Information Services) ou WAS (Windows Process Activation Services). De plus, les services de workflow peuvent être hébergés sous Windows Server App Fabric. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Voir de Windows Server AppFabric [documentation de Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkId=193037), [fonctionnalités d’hébergement AppFabric](http://go.microsoft.com/fwlink/?LinkId=196494), et [Concepts d’hébergement AppFabric](http://go.microsoft.com/fwlink/?LinkId=196495). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] les différentes façons de hôte [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services voir [Services d’hébergement](../../../../docs/framework/wcf/hosting-services.md).  
   
 ## <a name="hosting-in-a-managed-application"></a>Hébergement dans une application managée  
  Pour héberger un service de workflow dans une application managée, utilisez la classe <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Le constructeur <xref:System.ServiceModel.Activities.WorkflowServiceHost> vous permet de spécifier une instance singleton du service de workflow, une définition du service de workflow ou une activité qui utilise les activités de messagerie du workflow. Appel de <<!--zz xref:System.ServiceModel.Activities.WorkflowServiceHost.Open%2A--> `System.ServiceModel.Activities.WorkflowServiceHost.Open`>, le service commence à écouter les messages entrants.  
@@ -56,13 +58,13 @@ Un service de workflow doit être hébergé pour pouvoir répondre aux messages 
  Un fichier .xamlx qui définit un service de workflow doit contenir un <`Service`> élément racine ou un élément racine contenant n’importe quel type dérivé de <xref:System.Workflow.ComponentModel.Activity>. Lors de l'utilisation du modèle Activité de [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], un fichier .xamlx est créé. Lors de l'utilisation du modèle Service de workflow WCF, un fichier .xamlx est créé.  
   
 ## <a name="hosting-workflow-services-under-windows-server-app-fabric"></a>Hébergement des services de workflow sous Windows Server App Fabric  
- L'hébergement d'un service de workflow sous Windows Server App Fabric est similaire à l'hébergement sous IIS/WAS. La seule différence est que Windows Server App Fabric est installé. Windows Server App Fabric fournit des outils qui sont ajoutés au Gestionnaire des services IIS, ainsi que des applets de commande powershell. Ces outils simplifient le déploiement, la gestion et le suivi des services de workflow et des services WCF. . [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Voir de Windows Server AppFabric [Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkId=193037)  
+ L'hébergement d'un service de workflow sous Windows Server App Fabric est similaire à l'hébergement sous IIS/WAS. La seule différence est que Windows Server App Fabric est installé. Windows Server App Fabric fournit des outils qui sont ajoutés au Gestionnaire des services IIS, ainsi que des applets de commande powershell. Ces outils simplifient le déploiement, la gestion et le suivi des services de workflow et des services WCF. . [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Voir de Windows Server AppFabric [Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkId=193037)  
   
 ## <a name="referencing-custom-activities"></a>Référencement d'activités personnalisées  
  Références à des activités personnalisées doivent être ajoutées à la <`Assemblies`> sous <`System.Web.Compilation`> afin qu’ils sont chargés dans le domaine d’Application et le désérialiseur XAML est en mesure de localiser les types. Ces paramètres peuvent être effectués au niveau de l'application ou dans le Web.config racine si les paramètres doivent s'appliquer à toutes les applications sur l'ordinateur.  
   
 ## <a name="deployment"></a>Déploiement  
- L'outil de déploiement Web a été créé pour simplifier le travail de déploiement. Cet outil vous permet de migrer des applications entre IIS 6.0 et IIS 7.0, de synchroniser des batteries de serveurs et d’empaqueter, d’archiver et de déployer des applications Web. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Outil de déploiement de MS](http://go.microsoft.com/fwlink/?LinkId=178690)  
+ L'outil de déploiement Web a été créé pour simplifier le travail de déploiement. Cet outil vous permet de migrer des applications entre IIS 6.0 et IIS 7.0, de synchroniser des batteries de serveurs et d’empaqueter, d’archiver et de déployer des applications Web. Pour plus d’informations, consultez [outil de déploiement MS](http://go.microsoft.com/fwlink/?LinkId=178690)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Éléments internes de l’hôte du service de workflow](../../../../docs/framework/wcf/feature-details/workflow-service-host-internals.md)  

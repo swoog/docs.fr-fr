@@ -1,20 +1,17 @@
 ---
-title: "Déclarations d’importation : mot clé open (F#)"
-description: "En savoir plus sur les déclarations d’importation F # et comment elles spécifient un module ou un espace de noms dont les éléments que vous pouvez référencer sans utiliser un nom qualifié complet."
-keywords: visual f#, f#, programmation fonctionnelle
+title: 'Déclarations d’importation : mot clé open (F#)'
+description: 'En savoir plus sur les déclarations d’importation F # et comment elles spécifient un module ou un espace de noms dont les éléments que vous pouvez référencer sans utiliser un nom qualifié complet.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 1e98e48c-52e9-4314-8954-85d5583125f0
-ms.openlocfilehash: a6d79bed3dd202657d06956edf9499a9b21a5f03
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: ddbc1086e2adbe8dae408f4d39fd5af888d7fd5e
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="import-declarations-the-open-keyword"></a>Déclarations d’importation : Le `open` (mot clé)
 
@@ -30,7 +27,7 @@ Un *déclaration d’importation* spécifie un module ou un espace de noms dont 
 open module-or-namespace-name
 ```
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 Faisant référence à code en utilisant le chemin qualifié complet de l’espace de noms ou module chaque fois peut créer le code qui est difficile à écrire, lire et mettre à jour. Au lieu de cela, vous pouvez utiliser le `open` mot clé pour fréquemment utilisées de modules et les espaces de noms afin que lorsque vous référencez un membre de ce module ou un espace de noms, vous pouvez utiliser la forme abrégée du nom au lieu du nom qualifié complet. Ce mot clé est similaire à la `using` mot clé en c#, `using namespace` dans Visual C++, et `Imports` en Visual Basic.
 
 Le module ou l’espace de noms fourni doit être dans le même projet ou dans un projet ou assembly référencé. Si elle n’est pas le cas, vous pouvez ajouter une référence au projet, ou utiliser le `-reference` commande`-`option de ligne (ou son abréviation, `-r`). Pour plus d’informations, consultez l’article [Options du compilateur](compiler-options.md).
