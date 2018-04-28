@@ -1,1 +1,1 @@
-Extensions de composant Visual C++
+<span data-ttu-id="ffe2f-101">Extensions de composant Visual C++</span><span class="sxs-lookup"><span data-stu-id="ffe2f-101">Visual C++ component extensions</span></span>

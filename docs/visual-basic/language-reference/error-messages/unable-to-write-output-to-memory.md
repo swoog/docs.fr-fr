@@ -16,26 +16,26 @@ ms.assetid: 23996dca-250f-4320-8211-1560e90172df
 caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 3f27fcf3bd1f80b5daf501609c2cd157c209924a
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 5314702192dd4536f1d49c3ac8b26214d06b786b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
-# <a name="unable-to-write-output-to-memory"></a><span data-ttu-id="e5a18-102">Impossible d'écrire la sortie dans la mémoire</span><span class="sxs-lookup"><span data-stu-id="e5a18-102">Unable to write output to memory</span></span>
-<span data-ttu-id="e5a18-103">Un problème s'est produit pendant l'écriture de la sortie en mémoire.</span><span class="sxs-lookup"><span data-stu-id="e5a18-103">There was a problem writing output to memory.</span></span>  
+# <a name="unable-to-write-output-to-memory"></a><span data-ttu-id="2c168-102">Impossible d'écrire la sortie dans la mémoire</span><span class="sxs-lookup"><span data-stu-id="2c168-102">Unable to write output to memory</span></span>
+<span data-ttu-id="2c168-103">Un problème s'est produit pendant l'écriture de la sortie en mémoire.</span><span class="sxs-lookup"><span data-stu-id="2c168-103">There was a problem writing output to memory.</span></span>  
   
- <span data-ttu-id="e5a18-104">**ID d’erreur :** BC31020</span><span class="sxs-lookup"><span data-stu-id="e5a18-104">**Error ID:** BC31020</span></span>  
+ <span data-ttu-id="2c168-104">**ID d’erreur :** BC31020</span><span class="sxs-lookup"><span data-stu-id="2c168-104">**Error ID:** BC31020</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="e5a18-105">Pour corriger cette erreur</span><span class="sxs-lookup"><span data-stu-id="e5a18-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="2c168-105">Pour corriger cette erreur</span><span class="sxs-lookup"><span data-stu-id="2c168-105">To correct this error</span></span>  
   
-1.  <span data-ttu-id="e5a18-106">Recompilez le programme pour voir si l’erreur se produit à nouveau.</span><span class="sxs-lookup"><span data-stu-id="e5a18-106">Compile the program again to see if the error reoccurs.</span></span>  
+1.  <span data-ttu-id="2c168-106">Recompilez le programme pour voir si l’erreur se produit à nouveau.</span><span class="sxs-lookup"><span data-stu-id="2c168-106">Compile the program again to see if the error reoccurs.</span></span>  
   
-2.  <span data-ttu-id="e5a18-107">Si l'erreur se produit encore, enregistrez votre travail et redémarrez [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].</span><span class="sxs-lookup"><span data-stu-id="e5a18-107">If the error continues, save your work and restart [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].</span></span>  
+2.  <span data-ttu-id="2c168-107">Si l’erreur persiste, enregistrez votre travail et redémarrez Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="2c168-107">If the error continues, save your work and restart Visual Studio.</span></span>  
   
-3.  <span data-ttu-id="e5a18-108">Si l’erreur persiste, réinstallez Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="e5a18-108">If the error recurs, reinstall Visual Basic.</span></span>  
+3.  <span data-ttu-id="2c168-108">Si l’erreur persiste, réinstallez Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="2c168-108">If the error recurs, reinstall Visual Basic.</span></span>  
   
-4.  <span data-ttu-id="e5a18-109">Si l'erreur persiste après la réinstallation, avertissez les services de support technique Microsoft.</span><span class="sxs-lookup"><span data-stu-id="e5a18-109">If the error persists after reinstallation, notify Microsoft Product Support Services.</span></span>  
+4.  <span data-ttu-id="2c168-109">Si l'erreur persiste après la réinstallation, avertissez les services de support technique Microsoft.</span><span class="sxs-lookup"><span data-stu-id="2c168-109">If the error persists after reinstallation, notify Microsoft Product Support Services.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e5a18-110">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="e5a18-110">See Also</span></span>  
- [<span data-ttu-id="e5a18-111">Nous contacter</span><span class="sxs-lookup"><span data-stu-id="e5a18-111">Talk to Us</span></span>](/visualstudio/ide/talk-to-us)
+## <a name="see-also"></a><span data-ttu-id="2c168-110">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="2c168-110">See Also</span></span>  
+ [<span data-ttu-id="2c168-111">Nous contacter</span><span class="sxs-lookup"><span data-stu-id="2c168-111">Talk to Us</span></span>](/visualstudio/ide/talk-to-us)
