@@ -1,26 +1,23 @@
 ---
 title: Options (F#)
-description: "Découvrez comment utiliser l’option F # de types lorsqu’une valeur réelle n’existe ne peut-être pas pour une valeur nommée ou une variable."
-keywords: visual f#, f#, programmation fonctionnelle
+description: 'Découvrez comment utiliser l’option F # de types lorsqu’une valeur réelle n’existe ne peut-être pas pour une valeur nommée ou une variable.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: a15b5cf1-9055-4481-918c-4c8a051b5829
-ms.openlocfilehash: 537ba69aecc1ab489de63d67c5f9ff857afb4a28
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: ce9be0793c86d8d588fb4f905394bd2383c262e1
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="options"></a>Options
 
 Le type d’option en F # est utilisé lorsqu’une valeur réelle n’existe ne peut-être pas pour une valeur nommée ou une variable. Une option a un type sous-jacent et peut contenir une valeur de ce type, ou il ne peut pas avoir une valeur.
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 Le code suivant illustre une fonction qui génère un type d’option.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1404.fs)]

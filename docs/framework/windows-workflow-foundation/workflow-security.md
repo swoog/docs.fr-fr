@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 90e9d5f3a2cff454ff7892877f012f8679b9ccac
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: bfd7c3e36bf28c364adf3cd230522cfc40a9503b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="workflow-security"></a>Sécurité de workflow
 Windows Workflow Foundation (WF) est intégré à différentes technologies, telles que Microsoft SQL Server et [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. L'interaction avec ces technologies peut poser des problèmes de sécurité dans votre workflow si elle est effectuée de façon incorrecte.  
@@ -41,15 +41,15 @@ Windows Workflow Foundation (WF) est intégré à différentes technologies, tel
   
 -   Lors de l'utilisation d'un grand nombre d'activités enfants, d'emplacements, de signets, d'extensions hôtes ou d'étendues, ou de signets avec des charges utiles très importantes, la mémoire peut être épuisée ou des quantités inutiles d'espace de base de données peuvent être allouées pendant la persistance. Cette situation peut être atténuée en utilisant la sécurité aux niveaux objet et base de données.  
   
--   Lors de l'utilisation de <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, le magasin d'instances doit être sécurisé. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Meilleures pratiques SQL Server](http://go.microsoft.com/fwlink/?LinkId=164972).  
+-   Lors de l'utilisation de <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, le magasin d'instances doit être sécurisé. Pour plus d’informations, consultez [meilleures pratiques SQL Server](http://go.microsoft.com/fwlink/?LinkId=164972).  
   
--   Les données sensibles dans le magasin d'instances doivent être chiffrées. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Chiffrement SQL Server](http://go.microsoft.com/fwlink/?LinkId=164976).  
+-   Les données sensibles dans le magasin d'instances doivent être chiffrées. Pour plus d’informations, consultez [chiffrement SQL Server](http://go.microsoft.com/fwlink/?LinkId=164976).  
   
 -   Étant donné que la chaîne de connexion à une base de données est souvent incluse dans un fichier de configuration, la sécurité au niveau fenêtre (ACL) doit être utilisée pour vérifier que le fichier de configuration (Web.Config généralement) est sécurisé, et que les informations de connexion et de mot de passe ne sont pas incluses dans la chaîne de connexion. L'authentification Windows doit être utilisée entre la base de données et le serveur Web à la place.  
   
 ## <a name="considerations-for-workflowservicehost"></a>Considérations sur WorkflowServiceHost  
   
--   Les points de terminaison [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] utilisés dans les workflows doivent être sécurisés. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Vue d’ensemble de la sécurité WCF](http://go.microsoft.com/fwlink/?LinkID=164975).  
+-   Les points de terminaison [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] utilisés dans les workflows doivent être sécurisés. Pour plus d’informations, consultez [vue d’ensemble de la sécurité WCF](http://go.microsoft.com/fwlink/?LinkID=164975).  
   
 -   L'autorisation au niveau hôte peut être implémentée à l'aide de <xref:System.ServiceModel.ServiceAuthorizationManager>. Consultez [comment faire : créer un gestionnaire d’autorisation personnalisé pour un Service](http://go.microsoft.com/fwlink/?LinkId=192228) pour plus d’informations. Cela est également illustré dans l’exemple suivant : [sécurisation des Services de flux de travail](../../../docs/framework/windows-workflow-foundation/samples/securing-workflow-services.md).  
   

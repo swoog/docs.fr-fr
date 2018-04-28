@@ -1,20 +1,17 @@
 ---
 title: Extensions de type (F#)
-description: "Découvrez comment les extensions de type F # permettent de que vous ajoutez de nouveaux membres à un type d’objet précédemment défini."
-keywords: visual f#, f#, programmation fonctionnelle
+description: 'Découvrez comment les extensions de type F # permettent de que vous ajoutez de nouveaux membres à un type d’objet précédemment défini.'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: c9d7ce27-f5ad-4766-b9e9-34187da5bc24
-ms.openlocfilehash: f78f8689e95fc1547f1a2b17c615592c00051f7c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 3399778799fbf0f8eee56e332135656150918a60
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="type-extensions"></a>Extensions de type
 
@@ -38,7 +35,7 @@ type typename with
 [ end ]
 ```
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 Il existe deux formes d’extensions de type qui ont des comportements et une syntaxe légèrement différente. Un *extension intrinsèque* est une extension qui s’affiche dans le même espace de noms ou module, dans le même fichier source et dans le même assembly (DLL ou fichier exécutable) que le type étendu. Un *extension facultative* est une extension qui apparaît en dehors du module, espace de noms ou assembly du type en cours d’extension d’origine. Les extensions intrinsèques apparaissent sur le type lorsque le type est examiné par réflexion, mais pas des extensions facultatives. Facultatif pour les extensions doivent être dans des modules et sont uniquement dans la portée lorsque le module qui contient l’extension est ouvert.
 
 Dans la syntaxe précédente, *typename* représente le type qui est étendu. N’importe quel type accessible peut être étendu, mais le nom de type doit être un nom de type réel, pas une abréviation de type. Vous pouvez définir plusieurs membres dans une extension de type. Le *auto-identificateur* représente l’instance de l’objet qui est appelée, comme dans des membres ordinaires.

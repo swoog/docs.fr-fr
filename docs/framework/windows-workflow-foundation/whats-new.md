@@ -17,11 +17,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 605e1401eb2f2fdee7bb39c6636c0245154041a4
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 6604c4fccec50369d83cede58ff2931c2015c5b9
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="what39s-new-in-windows-workflow-foundation"></a>Ce que&#39;nouveauté dans Windows Workflow Foundation
 Windows Workflow Foundation (WF) dans [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] modifie plusieurs paradigmes de développement à partir de versions précédentes. Les flux de travail sont désormais plus faciles à créer, à exécuter et à gérer et mettent en œuvre de nombreuses nouvelles fonctionnalités. [!INCLUDE[crabout](../../../includes/crabout-md.md)] migration de .NET 3.0 et 3.5 de .NET des applications de workflow à utiliser la version la plus récente, consultez [conseils de Migration](../../../docs/framework/windows-workflow-foundation/migration-guidance.md).  
@@ -44,7 +44,7 @@ Windows Workflow Foundation (WF) dans [!INCLUDE[netfx40_long](../../../includes/
 -   nouvelles activités de messagerie comme <xref:System.ServiceModel.Activities.SendContent> et <xref:System.ServiceModel.Activities.ReceiveReply>.  
   
 ## <a name="explicit-activity-data-model"></a>Modèle explicite de données d'activité  
- [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] inclut de nouvelles options de stockage ou de déplacement de données. Les données peuvent être stockées dans une activité à l'aide de l'objet <xref:System.Activities.Variable>. Lors du déplacement de données vers l'intérieur et l'extérieur d'une activité, les types d'arguments spécialisés servent à déterminer quelles données de direction se déplacent. Ces types sont <xref:System.Activities.InArgument>, <xref:System.Activities.InOutArgument> et <xref:System.Activities.OutArgument>. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Modèle de données Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/data-model.md).  
+ [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] inclut de nouvelles options de stockage ou de déplacement de données. Les données peuvent être stockées dans une activité à l'aide de l'objet <xref:System.Activities.Variable>. Lors du déplacement de données vers l'intérieur et l'extérieur d'une activité, les types d'arguments spécialisés servent à déterminer quelles données de direction se déplacent. Ces types sont <xref:System.Activities.InArgument>, <xref:System.Activities.InOutArgument> et <xref:System.Activities.OutArgument>. Pour plus d’informations, consultez [modèle de données Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/data-model.md).  
   
 ## <a name="enhanced-hosting-persistence-and-tracking-options"></a>Options d'hébergement, de persistance et de suivi améliorées  
  [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] comporte des améliorations de persistance, dont les suivantes :  
@@ -66,4 +66,4 @@ Windows Workflow Foundation (WF) dans [!INCLUDE[netfx40_long](../../../includes/
 -   La reprise d'un flux de travail en attente est désormais gérée à l'aide d'un objet <xref:System.Activities.Bookmark>.  
   
 ## <a name="easier-ability-to-extend-wf-designer-experience"></a>Meilleure capacité à étendre l'expérience du concepteur WF  
- Le nouveau concepteur WF repose sur Windows Presentation Foundation (WPF) et fournit un modèle plus facile à utiliser lors du réhébergement du concepteur WF en dehors de Visual Studio et fournit également des mécanismes pour la création de concepteurs d’activités personnalisées. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Personnalisation de l’expérience de conception de flux de travail](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md).
+ Le nouveau concepteur WF repose sur Windows Presentation Foundation (WPF) et fournit un modèle plus facile à utiliser lors du réhébergement du concepteur WF en dehors de Visual Studio et fournit également des mécanismes pour la création de concepteurs d’activités personnalisées. Pour plus d’informations, consultez [personnalisation de l’expérience de conception de flux de travail](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md).

@@ -1,33 +1,35 @@
 ---
-title: "Considérations sur la sécurité des métadonnées"
-ms.custom: 
+title: Considérations sur la sécurité des métadonnées
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e78ef8ab-4f63-4656-ab93-b1deab2666d5
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 098b31e479322d9de3a299f06652e819a5388c42
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d033a3e22def60c5d82191fd7fcc93bd67f4548b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="security-considerations-with-metadata"></a>Considérations sur la sécurité des métadonnées
 Lorsque vous utilisez des fonctionnalités de métadonnées dans [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], vous devez tenir compte des conséquences liées à la publication, la récupération et l'utilisation de métadonnées de service en termes de sécurité.  
   
 ## <a name="when-to-publish-metadata"></a>Quand publier des métadonnées  
- Les services [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ne publient pas de métadonnées par défaut. Pour publier les métadonnées pour un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service, vous devez explicitement activer la publication des métadonnées en ajoutant des points de terminaison de métadonnées à votre service (consultez [publication des métadonnées](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)). Désactiver la publication de métadonnées permet de réduire la surface d'attaque de votre service et limiter le risque de divulgation d'informations involontaire. Tous les services ne sont pas tenus de publier des métadonnées. Si vous n'avez pas besoin de publier de métadonnées, laissez cette fonctionnalité désactivée. Notez que vous pouvez toujours générer des métadonnées et du code client directement à partir de vos assemblys de service à l’aide de la [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]à l’aide de Svcutil.exe pour exporter les métadonnées, consultez [Comment : utiliser Svcutil.exe pour exporter les métadonnées à partir de Code de Service compilé](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md).  
+ Les services [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ne publient pas de métadonnées par défaut. Pour publier les métadonnées pour un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service, vous devez explicitement activer la publication des métadonnées en ajoutant des points de terminaison de métadonnées à votre service (consultez [publication des métadonnées](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)). Désactiver la publication de métadonnées permet de réduire la surface d'attaque de votre service et limiter le risque de divulgation d'informations involontaire. Tous les services ne sont pas tenus de publier des métadonnées. Si vous n'avez pas besoin de publier de métadonnées, laissez cette fonctionnalité désactivée. Notez que vous pouvez toujours générer des métadonnées et du code client directement à partir de vos assemblys de service à l’aide de la [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] à l’aide de Svcutil.exe pour exporter les métadonnées, consultez [Comment : utiliser Svcutil.exe pour exporter les métadonnées à partir de Code de Service compilé](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md).  
   
 ## <a name="publishing-metadata-using-a-secure-binding"></a>Publication de métadonnées à l’aide d’une liaison sécurisée  
- Les liaisons de métadonnées par défaut fournies par [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ne sont pas sécurisées et elles autorisent l'accès anonyme aux métadonnées. Les métadonnées de service publiées par un service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] contiennent une description détaillée du service et peuvent, de manière intentionnelle ou non intentionnelle, contenir des informations sensibles. Par exemple, des métadonnées de service peuvent contenir des informations sur des opérations d'infrastructure qui n'étaient pas destinées à être diffusées publiquement. Pour protéger des métadonnées de service contre les accès non autorisés, vous pouvez recourir à une liaison sécurisée pour le point de terminaison des métadonnées. Les points de terminaison de métadonnées répondent à des demandes HTTP/GET qui peuvent utiliser le protocole SSL (Secure Sockets Layer) pour sécuriser les métadonnées. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Comment : sécuriser des points de terminaison de métadonnées](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md).  
+ Les liaisons de métadonnées par défaut fournies par [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ne sont pas sécurisées et elles autorisent l'accès anonyme aux métadonnées. Les métadonnées de service publiées par un service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] contiennent une description détaillée du service et peuvent, de manière intentionnelle ou non intentionnelle, contenir des informations sensibles. Par exemple, des métadonnées de service peuvent contenir des informations sur des opérations d'infrastructure qui n'étaient pas destinées à être diffusées publiquement. Pour protéger des métadonnées de service contre les accès non autorisés, vous pouvez recourir à une liaison sécurisée pour le point de terminaison des métadonnées. Les points de terminaison de métadonnées répondent à des demandes HTTP/GET qui peuvent utiliser le protocole SSL (Secure Sockets Layer) pour sécuriser les métadonnées. Pour plus d’informations, consultez [Comment : sécuriser les points de terminaison de métadonnées](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md).  
   
  La sécurisation des points de terminaison de métadonnées permet aussi de fournir aux demandeurs un moyen de récupérer en toute sécurité les métadonnées de service sans risque de falsification ou d'usurpation.  
   
