@@ -1,22 +1,20 @@
 ---
-title: "Utilisation du SDK et des outils .NET Core avec l’intégration continue"
-description: "Informations sur l’utilisation du SDK .NET Core et de ses outils sur le serveur de builds."
-keywords: ".NET, .NET Core, intégration continue, ci, build, automatisation, CI Travis, AppVeyor, Visual Studio Team Services, vsts"
+title: Utilisation du SDK et des outils .NET Core avec l’intégration continue
+description: Informations sur l’utilisation du SDK .NET Core et de ses outils sur le serveur de builds.
 author: guardrex
 ms.author: mairaw
 ms.date: 05/18/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 0d6e1e34-277c-4aaf-9880-3ebf81023857
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 552865f225ceac9e7a365452ee06d7fefeeb7213
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 76165b515bace71ca9269e587a817876c0e9eecf
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>Utilisation du SDK et des outils .NET Core avec l’intégration continue
 

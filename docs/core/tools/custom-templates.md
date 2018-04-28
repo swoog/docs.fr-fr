@@ -1,20 +1,20 @@
 ---
-title: "Modèles personnalisés pour dotnet new"
-description: "Découvrez les modèles personnalisés pour tout type de projet ou de fichier .NET."
-keywords: "dotnet new,CLI,commande CLI,.NET Core,modèle,création de modèles"
+title: Modèles personnalisés pour dotnet new
+description: Découvrez les modèles personnalisés pour tout type de projet ou de fichier .NET.
 author: guardrex
 ms.author: mairaw
 ms.date: 08/11/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.workload: dotnetcore
-ms.openlocfilehash: f2b712f1b8b7800f2f02c9529114e92f77e32286
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 1915c2609391d0aa1ff32ea9ebb011cf0f925aa8
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="custom-templates-for-dotnet-new"></a>Modèles personnalisés pour dotnet new
 

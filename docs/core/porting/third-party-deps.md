@@ -1,19 +1,18 @@
 ---
-title: "Portage sur .NET Core - Analyser vos dépendances tierces"
-description: "Découvrez comment analyser les dépendances tierces afin de porter votre projet de .NET Framework sur .NET Core."
+title: Portage sur .NET Core - Analyser vos dépendances tierces
+description: Découvrez comment analyser les dépendances tierces afin de porter votre projet de .NET Framework sur .NET Core.
 author: cartermp
 ms.author: mairaw
 ms.date: 02/15/2018
-ms.topic: article
-ms.prod: .net-core
-ms.assetid: b446e9e0-72f6-48f6-92c6-70ad0ce3f86a
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 365aff32de75d0658027c35675ed58a2b23691c5
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: be8d5a60977c7863136a1661a60e3bf23c0eb93e
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="analyze-your-third-party-dependencies"></a>Analyser vos dépendances tierces
 
@@ -67,7 +66,7 @@ Ces valeurs sont les [monikers de framework cible (TFM, Target Framework Moniker
 > Lorsque vous observez les TFM pris en charge par un package, notez que `netcoreapp*`, bien que compatible, ne s’applique qu’aux projets .NET Core, pas aux projets .NET Standard.
 > Une bibliothèque qui cible uniquement `netcoreapp*` et pas `netstandard*` ne peut être consommée que par d’autres applications .NET Core.
 
-Il existe également certains monikers du framework cible hérités utilisés dans des préversions de .NET Core qui peuvent également être compatibles :
+Il existe également certains monikers du Framework cible hérités utilisés dans des préversions de .NET Core qui peuvent également être compatibles :
 
 ```
 dnxcore50
@@ -79,7 +78,7 @@ dotnet5.4
 dotnet5.5
 ```
 
-Même s’il est probable que ces TFM fonctionnent avec votre code, il n’existe aucune garantie de compatibilité. Les packages avec ces monikers du framework cible ont été créés avec des packages .NET Core en préversion. Notez quand (et si) les packages utilisant ces TFM sont mis à jour pour être basés sur .NET Standard.
+Même s’il est probable que ces TFM fonctionnent avec votre code, il n’existe aucune garantie de compatibilité. Les packages avec ces monikers du Framework cible ont été créés avec des packages .NET Core en préversion. Notez quand (et si) les packages utilisant ces TFM sont mis à jour pour être basés sur .NET Standard.
 
 > [!NOTE]
 > Pour utiliser un package ciblant une bibliothèque de classes portables ou une cible .NET Core en préversion, vous devez utiliser l’élément MSBuild `PackageTargetFallback` de votre fichier projet.
