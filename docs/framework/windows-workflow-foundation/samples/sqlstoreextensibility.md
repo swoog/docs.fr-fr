@@ -1,23 +1,24 @@
 ---
 title: SQLStoreExtensibility
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5da1b5a3-f144-41ba-b9c4-02818b28b15d
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f4d3776c4cc3fb61fc01b84ee90bb714e1acb4fa
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 722c7cda49b2efc4c146970c69cc5e3c7bbad9b0
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="sqlstoreextensibility"></a>SQLStoreExtensibility
 Cet exemple illustre l'utilisation et la configuration de propriétés promues dans le magasin d'instances de workflow SQL. Le magasin d'instances de workflow SQL est une implémentation basée sur SQL d'un magasin d'instances. Il permet à une instance d'enregistrer et de charger son état vers et à partir d'une base de données SQL Server ou SQL Server Express. La fonctionnalité d'extensibilité de magasin permet à l'utilisateur de définir des propriétés qui sont stockées dans le magasin d'instances. Ces propriétés sont affichées dans une vue de propriétés promues qui permet à l'utilisateur de les rechercher.  
@@ -62,7 +63,7 @@ Cet exemple illustre l'utilisation et la configuration de propriétés promues d
   
 ### <a name="to-verify-the-sample-is-working-correctly"></a>Pour vérifier que l'exemple fonctionne correctement  
   
-1.  SQL Server Management Studio permet d’afficher le contenu de la table des instances en sélectionnant **bases de données**, **InstanceStore**, puis  **System.ServiceModel.Activities.DurableInstancing.InstanceTable** dans l’Explorateur d’objets, cliquez sur **System.ServiceModel.Activities.DurableInstancing.InstanceTable** et sélectionnez  **Sélectionner les 1000 lignes**. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]SQL Server Management Studio, consultez [présentation de SQL Server Management Studio](http://go.microsoft.com/fwlink/?LinkId=165645)  
+1.  SQL Server Management Studio permet d’afficher le contenu de la table des instances en sélectionnant **bases de données**, **InstanceStore**, puis  **System.ServiceModel.Activities.DurableInstancing.InstanceTable** dans l’Explorateur d’objets, cliquez sur **System.ServiceModel.Activities.DurableInstancing.InstanceTable** et sélectionnez  **Sélectionner les 1000 lignes**. Pour plus d’informations sur SQL Server Management Studio, consultez [présentation de SQL Server Management Studio](http://go.microsoft.com/fwlink/?LinkId=165645)  
   
 2.  Observez les instances de workflow répertoriées.  
   

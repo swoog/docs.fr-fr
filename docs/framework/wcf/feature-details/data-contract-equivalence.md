@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9d4463a04ac2113778d9ea0d315beeef7d564764
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: aebd21186f7d038dfa5d7c3c65f833d41f4a1f71
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="data-contract-equivalence"></a>Équivalence de contrats de données
 Pour qu'un client puisse envoyer des données d'un certain type à un service ou pour qu'un service puisse envoyer des données à un client, le type des données envoyées n'a pas nécessairement besoin d'exister à l'extrémité de réception. La seule exigence est que les contrats de données des deux types soient équivalents. (Parfois, une équivalence stricte n’est pas requise, comme indiqué dans [contrôle de version de contrat de données](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md).)  
@@ -37,7 +37,7 @@ Pour qu'un client puisse envoyer des données d'un certain type à un service ou
 > [!NOTE]
 >  Notez que le nom et l'espace de noms des contrats de données, de même que le nom des membres de données, respectent la casse.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] les noms de contrat de données et les espaces de noms, ainsi que les noms de membres de données, consultez [les noms de contrat de données](../../../../docs/framework/wcf/feature-details/data-contract-names.md).  
+ Pour plus d’informations sur les noms de contrat de données et les espaces de noms, ainsi que les noms de membres de données, consultez [les noms de contrat de données](../../../../docs/framework/wcf/feature-details/data-contract-names.md).  
   
  Si deux types existent d'un même côté (expéditeur ou récepteur) et si leurs contrats de données ne sont pas équivalents (par exemple, ils possèdent des membre de données différents), vous ne devez pas leur donner le même nom ni le même espace de noms. Vous risqueriez alors de lever des exceptions.  
   

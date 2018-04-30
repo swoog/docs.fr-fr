@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c81d05120f8cf0decc7c6036e2a722ba6271dab8
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 66b11dda1b245fa88548cf70268a6ca10ee27708
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="variables-and-arguments"></a>Variables et arguments
 Dans Windows Workflow Foundation (WF), les variables représentent le stockage des données et les arguments représentent le flux de données dans et hors d’une activité. Une activité a un ensemble d’arguments et ils composent la signature de l’activité. En outre, une activité peut gérer une liste de variables dans laquelle un développeur peut ajouter ou supprimer des variables pendant la conception d'un workflow. Un argument est lié à l'aide d'une expression qui retourne une valeur.  
@@ -152,4 +152,4 @@ public sealed class Add : CodeActivity<int>
 }  
 ```  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] utilisation avec des arguments, variables et expressions dans le code, consultez [création de Workflows, des activités et des Expressions à l’aide d’impératif Code](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md) et [requis des Arguments et des groupes surchargés](../../../docs/framework/windows-workflow-foundation/required-arguments-and-overload-groups.md).
+ Pour plus d’informations sur l’utilisation des arguments, variables et expressions dans le code, consultez [création de Workflows, des activités et des Expressions à l’aide d’impératif Code](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md) et [requis des Arguments et des groupes surchargés](../../../docs/framework/windows-workflow-foundation/required-arguments-and-overload-groups.md).

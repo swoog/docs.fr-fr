@@ -1,12 +1,13 @@
 ---
-title: "Application d'un style et création de modèles"
-ms.custom: 
+title: Application d'un style et création de modèles
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,16 +23,17 @@ helpviewer_keywords:
 - styles [WPF], triggers
 - styles [WPF], event triggers
 ms.assetid: 481765e5-5467-4a75-9f7b-e10e2ac410d9
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c33739d0e753146ffdc8b825d88c6ca7ba63fa1a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7aafd709bfc1da63d11a56ada59aedf0ada12f3a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="styling-and-templating"></a>Application d'un style et création de modèles
 L’application d'un style et la création de modèles [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] font référence à une suite de fonctionnalités (styles, modèles, déclencheurs et tables de montage séquentiel) qui permettent aux développeurs et aux concepteurs de créer des effets visuellement attrayants et un aspect cohérent pour leur produit. Bien que les développeurs et/ou les concepteurs puissent largement personnaliser une à une l’apparence de leur application, il est essentiel d’utiliser un modèle de création de style et de modèle suffisamment robuste pour conserver et partager l’apparence dans une même application et entre différentes applications. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fournit ce modèle.  
@@ -181,15 +183,15 @@ L’application d'un style et la création de modèles [!INCLUDE[TLA#tla_winclie
  ![Capture d’écran : exemple de styles](../../../../docs/framework/wpf/controls/media/stylingintro-eventtriggers.png "StylingIntro_EventTriggers")  
   
 ### <a name="multitriggers-datatriggers-and-multidatatriggers"></a>MultiTriggers, DataTriggers et MultiDataTriggers  
- En plus de <xref:System.Windows.Trigger> et <xref:System.Windows.EventTrigger>, il existe d’autres types de déclencheurs. <xref:System.Windows.MultiTrigger>vous permet de définir des valeurs de propriété selon plusieurs conditions. Vous utilisez <xref:System.Windows.DataTrigger> et <xref:System.Windows.MultiDataTrigger> lorsque la propriété de votre condition est liée aux données.  
+ En plus de <xref:System.Windows.Trigger> et <xref:System.Windows.EventTrigger>, il existe d’autres types de déclencheurs. <xref:System.Windows.MultiTrigger> vous permet de définir des valeurs de propriété selon plusieurs conditions. Vous utilisez <xref:System.Windows.DataTrigger> et <xref:System.Windows.MultiDataTrigger> lorsque la propriété de votre condition est liée aux données.  
   
 <a name="styling_themes"></a>   
 ## <a name="shared-resources-and-themes"></a>Ressources et thèmes partagés  
- Une application [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] type peut avoir plusieurs ressources d’interface utilisateur qui sont appliquées sur l’ensemble de l’application. Collectivement, cet ensemble de ressources peut être considéré comme le thème de l’application. [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]prend en charge pour l’utilisateur de l’empaquetage ressources d’interface utilisateur comme un thème à l’aide d’un dictionnaire de ressources qui est encapsulé en tant que la <xref:System.Windows.ResourceDictionary> classe.  
+ Une application Windows Presentation Foundation (WPF) classique peut avoir plusieurs ressources d’interface utilisateur utilisateur qui sont appliqués à l’application. Collectivement, cet ensemble de ressources peut être considéré comme le thème de l’application. Windows Presentation Foundation (WPF) prend en charge pour l’utilisateur de l’empaquetage ressources d’interface utilisateur comme un thème à l’aide d’un dictionnaire de ressources qui est encapsulé en tant que la <xref:System.Windows.ResourceDictionary> classe.  
   
- Le thèmes [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] sont définis en utilisant le mécanisme de styles et modèles exposé par [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] pour la personnalisation des visuels de tout élément.  
+ Les thèmes Windows Presentation Foundation (WPF) sont définis à l’aide du style et le mécanisme de création de modèles Windows Presentation Foundation (WPF) expose pour personnaliser les éléments visuels d’un élément.  
   
- Les ressources de thème [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] sont stockées dans des dictionnaires de ressources incorporés. Ces dictionnaires de ressources doivent être incorporés dans un assembly signé, et peuvent être incorporés dans le même assembly que le code lui-même, ou bien dans un assembly parallèle. Dans le cas de PresentationFramework.dll, l’assembly qui contient les contrôles [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)], les ressources de thème se trouvent dans une série d’assemblys parallèles.  
+ Ressources de thème Windows Presentation Foundation (WPF) sont stockées dans les dictionnaires de ressources incorporé. Ces dictionnaires de ressources doivent être incorporés dans un assembly signé, et peuvent être incorporés dans le même assembly que le code lui-même, ou bien dans un assembly parallèle. Dans le cas de PresentationFramework.dll, l’assembly qui contient des contrôles Windows Presentation Foundation (WPF), les ressources de thème sont une série d’assemblys côte à côte.  
   
  Le thème est alors le dernier emplacement à consulter lors de la recherche du style d’un élément. En règle générale, la recherche commence en remontant l’arborescence d’éléments pour rechercher une ressource appropriée, avant de consulter la collection de ressources d’application et d’interroger pour finir le système. Cela permet aux développeurs d’applications de redéfinir le style pour n’importe quel objet au niveau de l’arborescence ou de l’application avant d’atteindre le thème.  
   

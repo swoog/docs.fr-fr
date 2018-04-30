@@ -23,11 +23,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f232cb1cf98fe01aa0542c2a4b459fb7fc7b5089
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: fd1679bb50a0dc6ee4997f7ae427c1cbdc0948ef
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="data-contract-versioning"></a>Contrôle de version des contrats de données
 À mesure que les applications évoluent, il peut s'avérer nécessaire de modifier les contrats de données utilisés par les services. Cette rubrique explique comment assigner des versions aux contrats de données. Cette rubrique décrit les mécanismes de contrôle de version des contrats de données. Pour une vue d’ensemble complète et des instructions de contrôle de version des, consultez [meilleures pratiques : contrôle de version de contrat de données](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
@@ -125,7 +125,7 @@ ms.lasthandoff: 04/28/2018
  L'ajout ou la suppression d'un membre d'énumération est une modification avec rupture. La modification du nom d'un membre d'énumération est avec rupture, sauf si son nom de contrat est conservé en utilisant l'attribut `EnumMemberAtttribute`. Pour plus d’informations, consultez [Types énumération dans les contrats de données](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md).  
   
 ## <a name="collections"></a>Collections  
- La plupart des modifications de collection sont sans rupture car la plupart des types de collections sont interchangeables les uns avec les autres dans le modèle de contrat de données. Toutefois, la personnalisation d'une collection non personnalisée, ou vice versa, est une modification avec rupture. De plus, la modification des paramètres de personnalisation de la collection est une modification avec rupture ; en d’autres termes, la modification de l’espace de noms et du nom de contrat de données, du nom d’élément répétitif, du nom d’élément clé et du nom d’élément de valeur. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] personnalisation des collections, consultez [Types de collections dans les contrats de données](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md).  
+ La plupart des modifications de collection sont sans rupture car la plupart des types de collections sont interchangeables les uns avec les autres dans le modèle de contrat de données. Toutefois, la personnalisation d'une collection non personnalisée, ou vice versa, est une modification avec rupture. De plus, la modification des paramètres de personnalisation de la collection est une modification avec rupture ; en d’autres termes, la modification de l’espace de noms et du nom de contrat de données, du nom d’élément répétitif, du nom d’élément clé et du nom d’élément de valeur. Pour plus d’informations sur la personnalisation des collections, consultez [Types de collections dans les contrats de données](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md).  
 Naturellement, la modification du contrat de données de contenu d’une collection (par exemple, la modification d’une liste d’entiers en une liste de chaînes) est une modification avec rupture.  
   
 ## <a name="see-also"></a>Voir aussi  

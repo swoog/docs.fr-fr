@@ -1,23 +1,24 @@
 ---
-title: "Modélisation du comportement d'annulation dans les workflows"
-ms.custom: 
+title: Modélisation du comportement d'annulation dans les workflows
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d48f6cf3-cdde-4dd3-8265-a665acf32a03
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 94a3cb69e2e897e992a05a19325630ca9bb1ae3a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e455bf4d74f77c6cd87301dc9a21f56117777ecf
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="modeling-cancellation-behavior-in-workflows"></a>Modélisation du comportement d'annulation dans les workflows
 Les activités peuvent être annulées à l'intérieur d'un workflow, par exemple par une activité <xref:System.Activities.Statements.Parallel> qui annule des branches incomplètes lorsque son <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> a la valeur `true`, ou à l'extérieur du workflow, si l'hôte appelle <xref:System.Activities.WorkflowApplication.Cancel%2A>. Pour fournir la gestion des annulations, les auteurs de workflow peuvent utiliser l'activité <xref:System.Activities.Statements.CancellationScope>, l'activité <xref:System.Activities.Statements.CompensableActivity> ou créer des activités personnalisées qui fournissent la logique d'annulation. Cette rubrique fournit une vue d'ensemble de l'annulation dans les workflows.  
@@ -26,7 +27,7 @@ Les activités peuvent être annulées à l'intérieur d'un workflow, par exempl
  Les transactions permettent à votre application d'annuler (restaurer) toute modification exécutée dans une transaction en cas d'erreur au cours du processus de transaction. Toutefois, le travail qui peut devoir être annulé n'est pas dans sa totalité approprié pour les transactions, tel que le travail de longue durée ou le travail qui n'implique pas de ressources transactionnelles. La compensation fournit un modèle pour l'annulation de travail non transactionnel précédemment effectué en cas d'échec ultérieur dans le workflow. L'annulation fournit un modèle pour les auteurs de workflow et d'activité pour gérer le travail non transactionnel qui n'a pas été effectué. Si une activité n'a pas terminé son exécution et est annulée, sa logique d'annulation sera appelée si elle est disponible.  
   
 > [!NOTE]
->  [!INCLUDE[crabout](../../../includes/crabout-md.md)]transactions et compensation, consultez [Transactions](../../../docs/framework/windows-workflow-foundation/workflow-transactions.md) et [Compensation](../../../docs/framework/windows-workflow-foundation/compensation.md).  
+>  Pour plus d’informations sur les transactions et compensation, consultez [Transactions](../../../docs/framework/windows-workflow-foundation/workflow-transactions.md) et [Compensation](../../../docs/framework/windows-workflow-foundation/compensation.md).  
   
 ## <a name="using-cancellationscope"></a>Utilisation de CancellationScope  
  L'activité <xref:System.Activities.Statements.CancellationScope> a deux sections qui peuvent contenir des activités enfants : <xref:System.Activities.Statements.CancellationScope.Body%2A> et <xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A>. Le <xref:System.Activities.Statements.CancellationScope.Body%2A> est l'endroit où les activités qui composent la logique de l'activité sont placées et le <xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A> est l'endroit où les activités qui fournissent la logique d'annulation pour l'activité sont placées. Une activité peut être annulée uniquement si elle n'est pas terminée. Dans le cas de l'activité <xref:System.Activities.Statements.CancellationScope>, l'achèvement fait référence à l'achèvement des activités dans le <xref:System.Activities.Statements.CancellationScope.Body%2A>. Si une demande d'annulation est planifiée et que les activités dans le <xref:System.Activities.Statements.CancellationScope.Body%2A> ne sont pas terminées, le <xref:System.Activities.Statements.CancellationScope> sera marqué comme <xref:System.Activities.ActivityInstanceState.Canceled> et les activités <xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A> seront exécutées.  

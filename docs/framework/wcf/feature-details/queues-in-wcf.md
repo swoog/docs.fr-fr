@@ -1,28 +1,28 @@
 ---
 title: Files d'attente dans Windows Communication Foundation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - queues [WCF]
 ms.assetid: 43008409-1bb4-4bd4-85d7-862c8f10ae20
-caps.latest.revision: 
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4dfc78d355db4bd8c9d43541545e6fac35086b39
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 82eb421b86f57cfe7c9a23de3ab24de2d4c470cb
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Files d'attente dans Windows Communication Foundation
 Les rubriques de cette section traitent de la prise en charge des files d'attente par [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] prend en charge la mise en file d'attente en utilisant Microsoft Message Queuing (anciennement connu sous le nom MSMQ) comme un transport et active les scénarios suivants :  
@@ -35,7 +35,7 @@ Les rubriques de cette section traitent de la prise en charge des files d'attent
   
 -   Opérations hors circuit. L'envoi, la réception et le traitement d'opérations peut se faire hors circuit en cas de communication sur des réseaux à forte latence ou à disponibilité limitée, comme dans le cas des appareils mobiles. Les files d'attente permettent à ces opérations de se poursuivre, même lorsque les points de terminaison sont déconnectés. Lorsque la connexion est rétablie, la file d'attente envoie des messages à l'application réceptrice.  
   
- Pour utiliser la fonctionnalité de file d'attente dans une application [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], vous pouvez utiliser l'une des liaisons standard, ou vous pouvez créer une liaison personnalisée si aucune des liaisons standard ne correspond à vos spécifications. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]les liaisons standard appropriés et comment choisir un, consultez [Comment : échanger des Messages avec les points de terminaison WCF et les Applications Message Queuing](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Création de liaisons personnalisées, consultez [des liaisons personnalisées](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+ Pour utiliser la fonctionnalité de file d'attente dans une application [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], vous pouvez utiliser l'une des liaisons standard, ou vous pouvez créer une liaison personnalisée si aucune des liaisons standard ne correspond à vos spécifications. Pour plus d’informations sur les liaisons standard appropriés et comment choisir l’une, consultez [Comment : échanger des Messages avec les points de terminaison WCF et les Applications Message Queuing](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md). Pour plus d’informations sur la création de liaisons personnalisées, consultez [des liaisons personnalisées](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Vue d’ensemble des files d’attente](../../../../docs/framework/wcf/feature-details/queues-overview.md)  

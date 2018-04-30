@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9858475520b949d5b9ee62ecdc0994bbb9398953
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: ae5eb9a10f438f1bb76c51c3c9da68273d94ab57
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="selecting-a-credential-type"></a>Sélection d'un type d'informations d'identification
 *Informations d’identification* sont les données [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] utilise pour établir une identité déclarée ou des fonctions. Par exemple, un passeport est une information d'identification émise par un gouvernement pour établir la citoyenneté dans un pays ou une région. Dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], les informations d'identification peuvent prendre plusieurs formes, telles que les jetons de nom d'utilisateur et les certificats X.509. Cette rubrique traite des informations d'identification, de leur mode d'utilisation dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] et de la façon de sélectionner les informations d'identification appropriées pour votre application.  
@@ -108,7 +108,7 @@ ms.lasthandoff: 04/28/2018
 > [!IMPORTANT]
 >  Il existe un cas où l'identité ne peut pas être établie (autrement dit, lorsque le contexte de sécurité établi est activé, ce qui est le comportement par défaut). Si vous créez un service qui communique avec un deuxième service, l'identité utilisée pour ouvrir le client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] pour le deuxième service ne peut pas être modifiée. Cela devient problématique si plusieurs clients sont autorisés à utiliser le premier service et que le service emprunte l'identité des clients lors de l'accès au deuxième service. Si le service réutilise le même client pour tous les appelants, tous les appels au deuxième service sont effectués sous l'identité du premier appelant ayant été utilisé pour ouvrir le client au deuxième service. En d'autres termes, le service utilise l'identité du premier client pour tous ses clients afin de communiquer avec le deuxième service. Cette situation peut entraîner l'élévation des privilèges. Si ce comportement n'est pas souhaité pour votre service, vous devez suivre chaque appelant et créer un client au deuxième service pour chaque appelant et veiller à ce que le service utilise uniquement le bon client pour le bon appelant en vue de communiquer avec le deuxième service.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] informations d’identification et des sessions sécurisées, consultez [considérations de sécurité pour des Sessions sécurisées](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md).  
+ Pour plus d’informations sur les informations d’identification et des sessions sécurisées, consultez [considérations de sécurité pour des Sessions sécurisées](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>  

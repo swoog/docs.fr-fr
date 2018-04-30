@@ -1,24 +1,26 @@
 ---
-title: "Utilisation du canal client de découverte"
-ms.custom: 
+title: Utilisation du canal client de découverte
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1494242a-1d64-4035-8ecd-eb4f06c8d2ba
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 11d693e35017d7290e1cf1209dc3d6423afc38b0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7828b3037318e4fb63820fe8d235a92e64fb0b07
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-the-discovery-client-channel"></a>Utilisation du canal client de découverte
 Lors de l'écriture d'une application cliente WCF vous devez connaître l'adresse du point de terminaison du service que vous appelez. Dans de nombreux cas, l'adresse du point de terminaison d'un service n'est pas connue à l'avance ou bien l'adresse du service change avec le temps. Le canal client de découverte vous permet d'écrire une application cliente WCF, de décrire le service que vous souhaitez appeler, et le canal client envoie automatiquement une demande de sonde. Lorsqu'un service répond, le canal client de découverte extrait de la réponse de sonde l'adresse du point de terminaison du service et l'utilise pour appeler le service.  
@@ -33,9 +35,9 @@ Lors de l'écriture d'une application cliente WCF vous devez connaître l'adress
   
 1.  <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.FindCriteria%2A>, utilisée pour décrire le service que vous souhaitez appeler.  
   
-2.  <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.DiscoveryEndpointProvider%2A>qui spécifie le point de terminaison de découverte à envoyer des messages de découverte.  
+2.  <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.DiscoveryEndpointProvider%2A> qui spécifie le point de terminaison de découverte à envoyer des messages de découverte.  
   
- La propriété <xref:System.ServiceModel.Discovery.FindCriteria.%23ctor%2A> vous permet de spécifier le contrat de service que vous recherchez, un URI d'étendue requis et la durée maximale de tentative d'ouverture du canal. Le type de contrat est spécifié en appelant le constructeur <xref:System.ServiceModel.Discovery.FindCriteria>. Des URI d'étendue peuvent être ajoutés à la propriété <xref:System.ServiceModel.Discovery.FindCriteria.Scopes%2A>. La propriété <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> vous permet de spécifier le nombre maximal de résultats auxquels le client essaie de se connecter. Lorsqu'une réponse de sonde est reçue, le client tente d'ouvrir le canal à l'aide de l'adresse du point de terminaison de la réponse de sonde. Si une exception se produit, le client passe à la réponse de sonde suivante, en attendant que davantage de réponses soit reçues, si nécessaire. Il continue à procéder ainsi jusqu'à ce que le canal s'ouvre avec succès ou que le nombre maximal de résultats soit atteint. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Ces paramètres, consultez <xref:System.ServiceModel.Discovery.FindCriteria>.  
+ La propriété <xref:System.ServiceModel.Discovery.FindCriteria.%23ctor%2A> vous permet de spécifier le contrat de service que vous recherchez, un URI d'étendue requis et la durée maximale de tentative d'ouverture du canal. Le type de contrat est spécifié en appelant le constructeur <xref:System.ServiceModel.Discovery.FindCriteria>. Des URI d'étendue peuvent être ajoutés à la propriété <xref:System.ServiceModel.Discovery.FindCriteria.Scopes%2A>. La propriété <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> vous permet de spécifier le nombre maximal de résultats auxquels le client essaie de se connecter. Lorsqu'une réponse de sonde est reçue, le client tente d'ouvrir le canal à l'aide de l'adresse du point de terminaison de la réponse de sonde. Si une exception se produit, le client passe à la réponse de sonde suivante, en attendant que davantage de réponses soit reçues, si nécessaire. Il continue à procéder ainsi jusqu'à ce que le canal s'ouvre avec succès ou que le nombre maximal de résultats soit atteint. Pour plus d’informations sur ces paramètres, consultez <xref:System.ServiceModel.Discovery.FindCriteria>.  
   
  La propriété <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.DiscoveryEndpointProvider%2A> vous permet de spécifier le point de terminaison de découverte à utiliser. Normalement, c'est un <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, mais il peut s'agir de tout point de terminaison valide.  
   
@@ -71,4 +73,4 @@ catch (EndpointNotFoundException ex)
 ```  
   
 ## <a name="security-and-the-discovery-client-channel"></a>La sécurité et le canal client de découverte  
- Lors de l'utilisation du canal client de découverte, deux points de terminaison sont spécifiés. L'un, <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> habituellement, est utilisé pour les messages de découverte et l'autre est le point de terminaison d'application. Lors de l'implémentation d'un service sécurisé, il faut veiller à sécuriser les deux points de terminaison. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]la sécurité, consultez [sécurisation des Services et les Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md).
+ Lors de l'utilisation du canal client de découverte, deux points de terminaison sont spécifiés. L'un, <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> habituellement, est utilisé pour les messages de découverte et l'autre est le point de terminaison d'application. Lors de l'implémentation d'un service sécurisé, il faut veiller à sécuriser les deux points de terminaison. Pour plus d’informations sur la sécurité, consultez [sécurisation des Services et les Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md).

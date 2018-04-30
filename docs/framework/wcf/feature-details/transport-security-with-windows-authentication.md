@@ -1,30 +1,32 @@
 ---
-title: "Sécurité de transport avec l'authentification Windows"
-ms.custom: 
+title: Sécurité de transport avec l'authentification Windows
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 96dd26e2-46e7-4de0-9a29-4fcb05bf187b
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 4f5f81617a8962eeb8748e2c5c35ea34f7a1705f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5effb18435241b00c3036fd23e15ef5ce485b646
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="transport-security-with-windows-authentication"></a>Sécurité de transport avec l'authentification Windows
-Le scénario suivant illustre un client [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] et le service sécurisé par la sécurité Windows. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]la programmation, consultez [Comment : sécuriser un Service avec les informations d’identification Windows](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md).  
+Le scénario suivant illustre un client [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] et le service sécurisé par la sécurité Windows. Pour plus d’informations sur la programmation, consultez [Comment : sécuriser un Service avec les informations d’identification Windows](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md).  
   
  Un service Web d'intranet affiche des informations de ressources humaines. Le client est une application Windows Form. L'application est déployée dans un domaine sécurisé par un contrôleur Kerberos.  
   

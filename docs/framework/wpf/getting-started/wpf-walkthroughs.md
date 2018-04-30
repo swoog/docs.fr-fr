@@ -19,16 +19,16 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c99d23769e99ea01fe1e1d264361a933228f4c1c
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: b177517b809adfbfa4afdc292f98f949a68101bb
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wpf-walkthroughs"></a>Procédures pas à pas WPF
 Procédures pas à pas fournissent des instructions détaillées pour les scénarios courants. Elles constituent donc un bon point de départ pour vous familiariser avec le produit ou un ensemble de fonctionnalités particulier.  
   
- Cette rubrique contient des liens vers [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] procédures pas à pas.  
+ Cette rubrique contient des liens vers des procédures pas à pas de Windows Presentation Foundation (WPF).  
   
 ## <a name="wpf-designer-walkthroughs"></a>Procédures pas à pas concepteur de WPF  
   

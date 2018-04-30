@@ -1,24 +1,26 @@
 ---
 title: Points de terminaison de service et adressage de files d'attente
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8488e802ee191c261b65388d48bd26aa37d18206
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: f2244ccb1637f944f9e3349cf0d94caa2f6676bf
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>Points de terminaison de service et adressage de files d'attente
 Cette rubrique discute comment les clients adressent des services qui lisent à partir des files d'attente et comment les points de terminaison de service mappent aux files d'attente. En guise de rappel, l'illustration suivante montre le déploiement classique d'applications en file d'attente [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -32,7 +34,7 @@ Cette rubrique discute comment les clients adressent des services qui lisent à 
   
  Les noms de chemin d’accès sont mappés à des « FormatNames » pour déterminer des aspects supplémentaires de l’adresse, y compris le protocole de transfert de gestionnaire file d’attente et de routage. Le Gestionnaire de files d'attente prend en charge deux protocoles de transfert : le protocole MSMQ natif et le protocole SRMP (SOAP Reliable Messaging Protocol).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Noms de chemin d’accès et le format MSMQ, consultez [sur Message Queuing](http://go.microsoft.com/fwlink/?LinkId=94837).  
+ Pour plus d’informations sur les noms de chemin d’accès et le format MSMQ, consultez [sur Message Queuing](http://go.microsoft.com/fwlink/?LinkId=94837).  
   
 ## <a name="netmsmqbinding-and-service-addressing"></a>NetMsmqBinding et adressage de service  
  Lors de l'adressage d'un message à un service, le schéma dans l'URI est choisi en fonction du transport utilisé pour la communication. Chaque transport dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] a un schéma unique. Le schéma doit refléter la nature du transport utilisé pour la communication. Par exemple, net.tcp, net.pipe, HTTP, et ainsi de suite.  
@@ -84,7 +86,7 @@ Cette rubrique discute comment les clients adressent des services qui lisent à 
 |Adresse de file d'attente basée sur URI WCF |Utiliser la propriété Active Directory|Propriété de protocole de transfert de mise en file d'attente|Noms de format MSMQ résultants|  
 |----------------------------------|-----------------------------------|--------------------------------------|---------------------------------|  
 |Net.msmq://\<machine-name>/private/abc|False (valeur par défaut)|Native (valeur par défaut)|DIRECT=OS:machine-name\private$\abc|  
-|Net.msmq://\<machine-name>/private/abc|False|SRMP|DIRECT=http://machine/msmq/private$/abc|  
+|Net.msmq://\<machine-name>/private/abc|False|SRMP|DIRECT =http://machine/msmq/private$/ abc|  
 |Net.msmq://\<machine-name>/private/abc|True|Natif|PUBLIC=un-guid (le GUID de la file d'attente)|  
   
 ### <a name="reading-messages-from-the-dead-letter-queue-or-the-poison-message-queue"></a>Lecture de messages à partir de la file d'attente de lettres mortes ou de la file d'attente de messages incohérents  
@@ -105,13 +107,13 @@ Cette rubrique discute comment les clients adressent des services qui lisent à 
 ## <a name="msmqintegrationbinding-and-service-addressing"></a>MsmqIntegrationBinding et adressage de service  
  Le `MsmqIntegrationBinding` est utilisé pour la communication avec les applications MSMQ traditionnelles. Pour faciliter l'interopérabilité avec une application MSMQ existante, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] prend en charge uniquement l'adressage de nom de format. Par conséquent, les messages envoyés à l’aide de cette liaison doivent se conformer au schéma d’URI suivant :  
   
- msmq.formatname:\<*MSMQ-format-name*>>  
+ MSMQ.FormatName :\<*nom de format MSMQ*>>  
   
  Le nom de format MSMQ est au format spécifié par MSMQ dans [sur Message Queuing](http://go.microsoft.com/fwlink/?LinkId=94837).  
   
  Notez que vous pouvez utiliser des noms de format directs, et des noms de format publics et privés (requiert l'intégration Active Directory) uniquement lors de la réception de messages à partir d'une file d'attente à l'aide de `MsmqIntegrationBinding`. Il est toutefois recommandé d'utiliser des noms de format directs. Par exemple, sur [!INCLUDE[wv](../../../../includes/wv-md.md)], l'utilisation de tout autre nom de format provoque une erreur car le système essaie d'ouvrir une sous-file d'attente qui ne peut être ouverte qu'avec des noms de format directs.  
   
- Lors de l'adressage SRMP à l'aide de `MsmqIntegrationBinding`, il n'est pas obligatoire d'ajouter /msmq/ dans le nom de format direct pour aider les services Internet (IIS) à effectuer la distribution. Par exemple : lors de l'adressage d'une file d'attente abc à l'aide du protocole SRMP, au lieu de DIRECT=http://adatum.com/msmq/private$/abc, vous devez utiliser DIRECT=http://adatum.com/private$/abc.  
+ Lors de l'adressage SRMP à l'aide de `MsmqIntegrationBinding`, il n'est pas obligatoire d'ajouter /msmq/ dans le nom de format direct pour aider les services Internet (IIS) à effectuer la distribution. Par exemple : lors de l’adressage d’une file d’attente de protocole abc à l’aide du protocole SRMP, au lieu de DIRECT =http://adatum.com/msmq/private$/ abc, vous devez utiliser DIRECT =http://adatum.com/private$/ abc.  
   
  Notez que vous ne pouvez pas utiliser l'adressage net.msmq:// avec `MsmqIntegrationBinding`. Étant donné que `MsmqIntegrationBinding` prend en charge l'adressage de nom de format MSMQ de forme libre, vous pouvez utiliser un service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] qui utilise cette liaison pour utiliser les fonctionnalités de multidiffusion et de liste de distribution dans MSMQ. Une exception concerne la spécification de `CustomDeadLetterQueue` lors de l'utilisation du `MsmqIntegrationBinding`. Il doit être de la forme net.msmq://, semblable à la façon dont il est spécifié à l'aide du `NetMsmqBinding`.  
   

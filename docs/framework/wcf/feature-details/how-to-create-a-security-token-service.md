@@ -22,11 +22,11 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: e043b9b9a3b09bec0d7484fb732e33571b5aaf0c
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 827fef90a6277387ceac1c8f1d6df00a69a5d612
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-a-security-token-service"></a>Comment : créer un service de jeton de sécurité
 Un service de jeton de sécurité implémente le protocole défini dans la spécification WS-Trust. Ce protocole définit des formats de message et des modèles d'échange de message pour émettre, renouveler, annuler et valider des jetons de sécurité. Un service de jeton de sécurité donné fournit une ou plusieurs de ces fonctions. Cette rubrique examine le scénario le plus courant : l'implémentation de l'émission de jeton.  
@@ -124,7 +124,7 @@ Un service de jeton de sécurité implémente le protocole défini dans la spéc
  [!code-csharp[c_CreateSTS#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#6)]
  [!code-vb[c_CreateSTS#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#6)]  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] comment construire le jeton de preuve lorsque le client et le jeton de sécurité de service à la fois fournissent du matériel de clé pour la clé partagée, consultez [Federation, exemple](../../../../docs/framework/wcf/samples/federation-sample.md).  
+ Pour plus d’informations sur la façon de construire le jeton de preuve lorsque le client et le service de jeton de sécurité fournissent le matériel de clé pour la clé partagée, consultez [Federation, exemple](../../../../docs/framework/wcf/samples/federation-sample.md).  
   
  Les références au jeton émis sont construites en créant des instances de la classe <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause>.  
   

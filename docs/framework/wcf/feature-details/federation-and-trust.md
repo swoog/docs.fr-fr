@@ -1,38 +1,38 @@
 ---
-title: "Fédération et confiance"
-ms.custom: 
+title: Fédération et confiance
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - federation [WCF], and trust
 ms.assetid: 4bdec4f2-f8a2-4512-bdcf-14ef54b5877a
-caps.latest.revision: 
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 98b1274866dec2a4ca923d390f33df68449cf286
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8ccd395f96f3e7af0ce7afe9938c0295d5778914
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="federation-and-trust"></a>Fédération et confiance
 Cette rubrique couvre divers aspects relatifs aux applications fédérées, aux limites d'approbation et à la configuration, ainsi qu'à l'utilisation de jetons émis dans [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
   
 ## <a name="services-security-token-services-and-trust"></a>Services, services d'émission de jeton de sécurité et confiance  
- Les services qui exposent des points de terminaison fédérés s'attendent en général à ce que les clients s'authentifient à l'aide d'un jeton fourni par un émetteur spécifique. Il est important que le service soit configuré avec les informations d'identification correctes de l'émetteur ; dans le cas contraire, il ne sera pas en mesure de vérifier les signatures sur les jetons émis, et le client ne pourra pas communiquer avec le service. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]configuration des informations d’identification de l’émetteur sur le service, consultez [Comment : configurer les informations d’identification sur un Service de fédération](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).  
+ Les services qui exposent des points de terminaison fédérés s'attendent en général à ce que les clients s'authentifient à l'aide d'un jeton fourni par un émetteur spécifique. Il est important que le service soit configuré avec les informations d'identification correctes de l'émetteur ; dans le cas contraire, il ne sera pas en mesure de vérifier les signatures sur les jetons émis, et le client ne pourra pas communiquer avec le service. Pour plus d’informations sur la configuration des informations d’identification de l’émetteur sur le service, consultez [Comment : configurer les informations d’identification sur un Service de fédération](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).  
   
  De la même façon, lorsque vous utilisez des clés symétriques, les clés sont chiffrées pour le service cible et vous devez donc configurer le service d'émission de jeton de sécurité avec les informations d'identification correctes du service cible ; dans le cas contraire, il ne sera pas en mesure de chiffrer la clé pour le service cible, et une nouvelle fois, le client ne pourra pas communiquer avec le service.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]les services utilisent la valeur de la <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxClockSkew%2A> propriété sur le [SecurityBindingElement](../../../../docs/framework/wcf/diagnostics/wmi/securitybindingelement.md) pour permettre d’horloge maximal autorisé entre le client et le service. Dans la fédération, le paramètre `MaxClockSkew` s'applique aux inclinaisons de l'horloge entre à la fois le client et le service d'émission de jeton de sécurité à partir duquel le client a obtenu le jeton émis. Par conséquent, les services d'émission de jeton de sécurité n'ont pas besoin d'allouer d'inclinaison d'horloge lors de la définition des délais de validité et d'expiration du jeton émis.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] les services utilisent la valeur de la <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxClockSkew%2A> propriété sur le [SecurityBindingElement](../../../../docs/framework/wcf/diagnostics/wmi/securitybindingelement.md) pour permettre d’horloge maximal autorisé entre le client et le service. Dans la fédération, le paramètre `MaxClockSkew` s'applique aux inclinaisons de l'horloge entre à la fois le client et le service d'émission de jeton de sécurité à partir duquel le client a obtenu le jeton émis. Par conséquent, les services d'émission de jeton de sécurité n'ont pas besoin d'allouer d'inclinaison d'horloge lors de la définition des délais de validité et d'expiration du jeton émis.  
   
 > [!NOTE]
 >  L'importance de l'inclinaison de l'horloge augmente à mesure que la durée de vie du jeton émis raccourcit. Dans la plupart des cas, l'inclinaison de l'horloge n'est pas un problème significatif si la durée de vie du jeton est de 30 minutes ou plus. Des scénarios avec des durées de vie plus courtes ou dans lesquels le délai de validité exact du jeton est important doivent être conçus afin de prendre l'inclinaison de l'horloge en compte.  
@@ -43,7 +43,7 @@ Cette rubrique couvre divers aspects relatifs aux applications fédérées, aux 
  Par exemple, le délai d'expiration sur le canal côté client a pour valeur 30 secondes. Deux émetteurs de jeton doivent être appelés pour récupérer des jetons avant d'envoyer le message au point de terminaison final, et chacun prend 15 secondes pour émettre un jeton. Dans ce cas, la tentative échoue et une exception <xref:System.TimeoutException> est levée. Vous devez donc définir <xref:System.ServiceModel.IContextChannel.OperationTimeout%2A> sur le canal client à une valeur suffisamment élevée pour inclure le temps pris pour récupérer tous les jetons émis. Si aucune valeur n'est spécifiée pour la propriété <xref:System.ServiceModel.IContextChannel.OperationTimeout%2A>, la propriété <xref:System.ServiceModel.Channels.Binding.OpenTimeout%2A> ou la propriété <xref:System.ServiceModel.Channels.Binding.SendTimeout%2A> (ou les deux) doivent avoir une valeur suffisamment élevée pour inclure le temps pris pour récupérer tous les jetons émis.  
   
 ## <a name="token-lifetime-and-renewal"></a>Renouvellement et durée de vie des jetons  
- Les clients [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ne vérifient pas le jeton émis lorsqu'ils effectuent une demande initiale à un service.  Au lieu de cela, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] approuve le service d'émission de jeton de sécurité pour émettre un jeton avec des délais de validité et d'expiration appropriés. Si le jeton est mis en cache par le client et réutilisé, sa durée de vie est vérifiée sur les demandes suivantes, et le client le renouvelle automatiquement si nécessaire. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]la mise en cache des jetons, consultez [Comment : créer un Client fédéré](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md).  
+ Les clients [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ne vérifient pas le jeton émis lorsqu'ils effectuent une demande initiale à un service.  Au lieu de cela, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] approuve le service d'émission de jeton de sécurité pour émettre un jeton avec des délais de validité et d'expiration appropriés. Si le jeton est mis en cache par le client et réutilisé, sa durée de vie est vérifiée sur les demandes suivantes, et le client le renouvelle automatiquement si nécessaire. Pour plus d’informations sur la mise en cache de jeton, consultez [Comment : créer un Client fédéré](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md).  
   
  La spécification de durées de vie courtes, de l'ordre de 30 secondes ou moins pour les jetons émis ou les jetons de contexte de sécurité, peut provoquer l'expiration de la négociation ou la levée d'autres exceptions par les clients [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] lors de la demande des jetons émis, ou lors de la négociation ou du renouvellement des jetons de contexte de sécurité.  
   

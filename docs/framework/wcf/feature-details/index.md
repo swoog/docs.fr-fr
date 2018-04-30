@@ -20,14 +20,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2aa8adc0ce197c3776b8314009fcaa061bed884d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 91b22cbcabba95d8cc91ffbc0b74b51e61dae393
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wcf-feature-details"></a>Informations détaillées sur les fonctionnalités de WCF
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] offre un contrôle étendu sur les fonctions de messagerie d'une application. Les rubriques de cette section présentent dans le détail les fonctionnalités disponibles. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]base de programmation, consultez [programmation WCF de base](../../../../docs/framework/wcf/basic-wcf-programming.md).  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] offre un contrôle étendu sur les fonctions de messagerie d'une application. Les rubriques de cette section présentent dans le détail les fonctionnalités disponibles. Pour plus d’informations sur la programmation de base, consultez [programmation WCF de base](../../../../docs/framework/wcf/basic-wcf-programming.md).  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Services de workflow](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
@@ -63,7 +63,7 @@ ms.lasthandoff: 12/22/2017
  [Clients](../../../../docs/framework/wcf/feature-details/clients.md)  
  Décrit comment créer divers clients qui accèdent à des services.  
   
- [Hébergement d’applications WPF](../../../../docs/framework/wcf/feature-details/hosting.md)  
+ [Hébergement](../../../../docs/framework/wcf/feature-details/hosting.md)  
  Décrit l'hébergement. Un service peut être hébergé par une autre application ou il peut être auto-hébergé.  
   
  [Interopérabilité et intégration](../../../../docs/framework/wcf/feature-details/interoperability-and-integration.md)  
@@ -81,7 +81,7 @@ ms.lasthandoff: 12/22/2017
  [Découverte WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)  
  Décrit la prise en charge pour permettre aux services d'être détectables pendant l'exécution d'une façon interopérable à l'aide du protocole WS-Discovery.  
   
- [Routage](../../../../docs/framework/wcf/feature-details/routing.md)  
+ [Le routage](../../../../docs/framework/wcf/feature-details/routing.md)  
  Décrit le service de routage.  
   
 ## <a name="reference"></a>Référence  

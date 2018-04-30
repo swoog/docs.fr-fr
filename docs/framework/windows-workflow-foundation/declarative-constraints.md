@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f5ab784498805473830b46962d9e02591fc3eace
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 4406bbbe7780fabc8872718ca21e8d755ea85c59
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="declarative-constraints"></a>Contraintes déclaratives
 Les contraintes déclaratives fournissent une méthode puissante de validation d’une activité et de ses relations avec d’autres activités. Les contraintes sont configurées pour une activité pendant le processus de création, mais les contraintes supplémentaires peuvent également être spécifiées par l'hôte du workflow. Cette rubrique fournit une vue d'ensemble de l'utilisation de contraintes déclaratives afin de fournir la validation d'activité.  
@@ -188,4 +188,4 @@ else
 }  
 ```  
   
- Si la propriété <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> de <xref:System.Activities.Validation.ValidationSettings> est définie sur `true`, seules les contraintes supplémentaires spécifiées sont évaluées lorsque la validation est appelée en invoquant <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>. Cela peut être utile pour inspecter les workflows et rechercher des configurations de validation spécifiques. Notez toutefois que lorsque le workflow est appelé, la logique de validation configurée dans le workflow est évaluée et doit aboutir pour que le workflow démarre avec succès. [!INCLUDE[crabout](../../../includes/crabout-md.md)] appel de la validation, consultez [appel de Validation d’activité](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md).
+ Si la propriété <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> de <xref:System.Activities.Validation.ValidationSettings> est définie sur `true`, seules les contraintes supplémentaires spécifiées sont évaluées lorsque la validation est appelée en invoquant <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>. Cela peut être utile pour inspecter les workflows et rechercher des configurations de validation spécifiques. Notez toutefois que lorsque le workflow est appelé, la logique de validation configurée dans le workflow est évaluée et doit aboutir pour que le workflow démarre avec succès. Pour plus d’informations sur l’appel de la validation, consultez [appel de Validation d’activité](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md).

@@ -1,24 +1,26 @@
 ---
-title: "Procédure d'installation unique pour les exemples Windows Communication Foundation"
-ms.custom: 
+title: Procédure d'installation unique pour les exemples Windows Communication Foundation
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-caps.latest.revision: "83"
+caps.latest.revision: 83
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bab723e4e52db9936e635f1348dff86d75de274d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: acb89c8c1819024ebdb77720654ab7280333e456
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Procédure d'installation unique pour les exemples Windows Communication Foundation
 La plupart des exemples [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] sont hébergés dans Internet Information Services (IIS) et sont exécutés à partir d'un répertoire virtuel commun. Cette procédure d’installation unique crée un dossier sur le disque ; Il ajoute également un répertoire virtuel dans IIS nommé **ServiceModelSamples**.  
@@ -30,7 +32,7 @@ La plupart des exemples [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 
   
 ### <a name="one-time-setup-procedure-for-wcf-samples"></a>Procédure d'installation unique pour les exemples WCF  
   
-1.  Vérifiez que [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] est installé. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]comment configurer [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], consultez [Internet Information Service d’hébergement Instructions](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md).  
+1.  Vérifiez que [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] est installé. Pour plus d’informations sur la configuration [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], consultez [Internet Information Service d’hébergement Instructions](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md).  
   
 2.  Vérifiez que [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] est installé. Rechercher les éléments suivants de répertoire pour la version 4.0 (ou version ultérieures) : **\Windows\Microsoft.NET\Framework**  
   
@@ -88,7 +90,7 @@ La plupart des exemples [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 
     > [!NOTE]
     >  Pour des raisons de sécurité, n'oubliez pas de supprimer la définition de répertoire virtuel et les autorisations accordées au cours des étapes d'installation ci-dessus lorsque vous en avez terminé avec les exemples en exécutant le fichier de commandes Cleanupvroot.bat.  
   
-13. Les exemples auto-hébergés (non hébergés dans IIS) doivent être autorisés à enregistrer des adresses HTTP sur l'ordinateur pour pouvoir écouter les données. Ces autorisations (qui permettent de réserver les espaces de noms HTTP) dépendent directement des autorisations dont les comptes d'utilisateurs utilisés pour exécuter ces exemples disposent. Par défaut, les comptes d'administrateur sont autorisés à enregistrer n'importe quelle adresse HTTP. L'autorisation pour les espaces de noms HTTP utilisés par les exemples doit être accordée aux comptes qui ne sont pas administrateur. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]comment configurer des réservations d’espace de noms, consultez [configuration de HTTP et HTTPS](../../../../docs/framework/wcf/feature-details/configuring-http-and-https.md).  
+13. Les exemples auto-hébergés (non hébergés dans IIS) doivent être autorisés à enregistrer des adresses HTTP sur l'ordinateur pour pouvoir écouter les données. Ces autorisations (qui permettent de réserver les espaces de noms HTTP) dépendent directement des autorisations dont les comptes d'utilisateurs utilisés pour exécuter ces exemples disposent. Par défaut, les comptes d'administrateur sont autorisés à enregistrer n'importe quelle adresse HTTP. L'autorisation pour les espaces de noms HTTP utilisés par les exemples doit être accordée aux comptes qui ne sont pas administrateur. Pour plus d’informations sur la façon de configurer des réservations d’espace de noms, consultez [configuration de HTTP et HTTPS](../../../../docs/framework/wcf/feature-details/configuring-http-and-https.md).  
   
 14. Certains exemples nécessitent Message Queuing. Consultez [l’installation de Message Queuing (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md) pour obtenir des instructions d’installation.  
   

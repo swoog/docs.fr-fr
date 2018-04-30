@@ -1,24 +1,26 @@
 ---
-title: "Corrélation basée sur le contenu"
-ms.custom: 
+title: Corrélation basée sur le contenu
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f46a2b68-8d24-4122-bbee-9573fc3f9fb4
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 72c7233a1c667b7ee3a1f00cc2fdf3c78f58e789
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4b4ebd49fbed12f1e8120e67f32496cd782531da
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="content-based-correlation"></a>Corrélation basée sur le contenu
 Lorsque les services de workflow communiquent avec des clients et d'autres services, il existe souvent des données dans les messages échangés qui servent uniquement à lier un message à une instance particulière. La corrélation basée sur le contenu utilise ces données dans les messages, par exemple un numéro de client ou un ID de commande, pour router les messages vers l'instance de workflow appropriée. Cette rubrique explique comment utiliser la corrélation basée sur le contenu dans les workflows.  
@@ -27,7 +29,7 @@ Lorsque les services de workflow communiquent avec des clients et d'autres servi
  La corrélation basée sur le contenu est utilisée lorsqu'un service de workflow possède plusieurs méthodes accessibles par un client unique et dispose de quelques données dans les messages échangés qui identifient l'instance souhaitée.  
   
 > [!NOTE]
->  La corrélation basée sur le contenu est utile lorsque la corrélation de contexte ne peut pas être utilisée parce que la liaison ne fait pas partie des liaisons d’échange de contexte compatibles. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]corrélation de contexte, consultez [échange de contexte](../../../../docs/framework/wcf/feature-details/context-exchange-correlation.md).  
+>  La corrélation basée sur le contenu est utile lorsque la corrélation de contexte ne peut pas être utilisée parce que la liaison ne fait pas partie des liaisons d’échange de contexte compatibles. Pour plus d’informations sur la corrélation de contexte, consultez [échange de contexte](../../../../docs/framework/wcf/feature-details/context-exchange-correlation.md).  
   
  Chaque activité de messagerie utilisée dans ce type de communication doit spécifier à quel emplacement dans le message se trouvent les données identifiant l'instance de manière unique. Cela s'effectue en fournissant un objet <xref:System.ServiceModel.MessageQuerySet>, utilisant un objet <xref:System.ServiceModel.Activities.QueryCorrelationInitializer> ou une propriété <xref:System.ServiceModel.Activities.Receive.CorrelatesOn%2A>, qui recherche dans le message les données identifiant l'instance de manière unique.  
   

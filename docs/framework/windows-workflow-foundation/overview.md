@@ -1,23 +1,24 @@
 ---
 title: Vue d'ensemble de Windows Workflow
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fc44adbe-1412-49ae-81af-0298be44aae6
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: dce6962feb0f425958f89182ee7695332389b567
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: bc1aa65b413b87b27c05e7a12ce607d1cd30b89b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="windows-workflow-overview"></a>Vue d'ensemble de Windows Workflow
 Un flux de travail est un ensemble d’unités élémentaires appelé *activités* qui sont stockés sous la forme d’un modèle qui décrit un processus réel. Les workflows offrent un moyen de décrire l'ordre d'exécution et les relations de dépendance entre des éléments de travail de courte ou longue durée. Ce travail s'effectue à travers le modèle de démarrage à l'arrêt et les activités peuvent être exécutées par des utilisateurs ou par les fonctions système.  
@@ -45,11 +46,11 @@ Composants de workflow dans le processus hôte
   
  Dans le diagramme précédent, la méthode <xref:System.Activities.WorkflowInvoker.Invoke%2A> de classe <xref:System.Activities.WorkflowInvoker> est utilisée pour appeler plusieurs instances de workflow. <xref:System.Activities.WorkflowInvoker> est utilisé pour les workflows légers ne nécessitant pas de gestion à partir de l'hôte ; les workflows qui nécessitent d'être gérés à partir de l'hôte (tel qu'une reprise <xref:System.Activities.Bookmark>) doivent être exécutés avec <xref:System.Activities.WorkflowApplication.Run%2A> à la place. Il n'est pas nécessaire d'attendre qu'une instance de workflow soit terminée avant d'en appeler une autre ; le moteur de runtime prend en charge plusieurs instances de workflow simultanément.  Les workflows appelés sont les suivants :  
   
--   Une activité <xref:System.Activities.Statements.Sequence> qui contient une activité <xref:System.Activities.Statements.WriteLine> enfant. <xref:System.Activities.Variable> de l'activité parente est lié à un <xref:System.Activities.InArgument> de l'activité enfant. [!INCLUDE[crabout](../../../includes/crabout-md.md)]sur les variables, arguments et la liaison, consultez [Variables et Arguments](../../../docs/framework/windows-workflow-foundation/variables-and-arguments.md).  
+-   Une activité <xref:System.Activities.Statements.Sequence> qui contient une activité <xref:System.Activities.Statements.WriteLine> enfant. <xref:System.Activities.Variable> de l'activité parente est lié à un <xref:System.Activities.InArgument> de l'activité enfant. Pour plus d’informations sur les variables, arguments et de liaison, consultez [Variables et Arguments](../../../docs/framework/windows-workflow-foundation/variables-and-arguments.md).  
   
 -   Une activité personnalisée appelée `ReadLine`. Un <xref:System.Activities.OutArgument> de l'activité `ReadLine` est retourné à la méthode  <xref:System.Activities.WorkflowInvoker.Invoke%2A> appelante.  
   
--   Une activité personnalisée qui dérive de la classe abstraite <xref:System.Activities.CodeActivity>. Le <xref:System.Activities.CodeActivity> peut accéder aux fonctionnalités d'exécution (telles que le suivi et les propriétés) à l'aide du <xref:System.Activities.CodeActivityContext> qui est disponible en tant que paramètre de la méthode <xref:System.Activities.CodeActivity.Execute%2A>. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Ces fonctionnalités d’exécution, consultez [suivi et traçage de Workflow](../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) et [propriétés d’exécution de Workflow](../../../docs/framework/windows-workflow-foundation/workflow-execution-properties.md).  
+-   Une activité personnalisée qui dérive de la classe abstraite <xref:System.Activities.CodeActivity>. Le <xref:System.Activities.CodeActivity> peut accéder aux fonctionnalités d'exécution (telles que le suivi et les propriétés) à l'aide du <xref:System.Activities.CodeActivityContext> qui est disponible en tant que paramètre de la méthode <xref:System.Activities.CodeActivity.Execute%2A>. Pour plus d’informations sur ces fonctionnalités d’exécution, consultez [suivi et traçage de Workflow](../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) et [propriétés d’exécution de Workflow](../../../docs/framework/windows-workflow-foundation/workflow-execution-properties.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [BizTalk Server 2006 ou WF ? Choix de l’outil de Workflow approprié pour votre projet](http://go.microsoft.com/fwlink/?LinkId=154901)

@@ -1,33 +1,33 @@
 ---
-title: "Hébergement dans le service d'activation de processus de Windows (WAS, Windows Process Activation Service)"
-ms.custom: 
+title: Hébergement dans le service d'activation de processus de Windows (WAS, Windows Process Activation Service)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-caps.latest.revision: 
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 40122670c84f87590a31b79f39695e9626ea9883
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a31d66cd4b4430ec838b34fcd77d712698f9e1dc
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>Hébergement dans le service d'activation de processus de Windows (WAS, Windows Process Activation Service)
 Le service d'activation de processus de Windows (WAS, Windows Process Activation Service) gère l'activation et la durée de vie des processus de travail qui contiennent des applications qui hébergent des services [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Le modèle de processus WAS généralise le modèle de processus [!INCLUDE[iis601](../../../../includes/iis601-md.md)] pour le serveur HTTP en supprimant la dépendance envers le protocole HTTP. Cela permet aux services [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] d'utiliser à la fois les protocoles HTTP et non-HTTP, tel que Net.TCP, dans un environnement d'hébergement qui prend en charge l'activation basée sur message et offre la capacité d'héberger un grand nombre d'applications sur un ordinateur donné.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Création d’un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service qui s’exécute dans WAS qui héberge l’environnement, consultez [Comment : héberger un Service WCF dans WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md).  
+ Pour plus d’informations sur la génération un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service qui s’exécute dans WAS qui héberge l’environnement, consultez [Comment : héberger un Service WCF dans WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md).  
   
  Le modèle de processus WAS fournit plusieurs fonctionnalités qui permettent aux applications d’être hébergées de façon plus fiable, plus maniable et plus efficace au niveau de l’utilisation des ressources :  
   
@@ -39,7 +39,7 @@ Le service d'activation de processus de Windows (WAS, Windows Process Activation
   
 -   Permet aux applications de tirer parti du modèle de processus IIS sans requérir d'espace mémoire pour le déploiement d'une installation IIS complète.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Fonctionnalités WAS, consultez [IIS 7.0 Beta : une Administration Web IIS 7.0](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).  
+ Pour plus d’informations sur les fonctionnalités WAS, consultez [IIS 7.0 Beta : une Administration Web IIS 7.0](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).  
   
  [Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkId=196496) fonctionne avec [!INCLUDE[iisver](../../../../includes/iisver-md.md)] et le Service de l’Activation des processus Windows (WAS) pour fournir une environnement de services aux services NET4 WCF et WF d’hébergement d’application riche. Ces avantages incluent la gestion du cycle de vie de processus, le recyclage de processus, l'hébergement partagé, la protection rapide contre les incidents, les processus parallèles, l'activation à la demande et le contrôle d'état. Pour plus d’informations, consultez [fonctionnalités d’hébergement AppFabric](http://go.microsoft.com/fwlink/?LinkId=196494) et [Concepts d’hébergement AppFabric](http://go.microsoft.com/fwlink/?LinkId=196495).  
   

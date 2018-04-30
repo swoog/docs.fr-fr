@@ -16,17 +16,17 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e8fd88edd711513d1b143029d8088401c9945d13
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 2e01418844db4197cea2f9292f72b9089e77a596
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Utilisation de Windows Management Instrumentation pour les diagnostics
 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] expose au moment de l'exécution les données d'inspection d'un service par l'intermédiaire d'un fournisseur WMI (Windows Management Instrumentation) de [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] .  
   
 ## <a name="enabling-wmi"></a>Activation de WMI  
- WMI est l'implémentation de Microsoft de la norme WBEM (Web-Based Enterprise Management). [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] le SDK WMI, consultez [Windows Management Instrumentation](https://msdn.microsoft.com/library/aa394582.aspx). WBEM est une norme d'industrie qui détermine comment les applications exposent l'instrumentation de gestion aux outils de gestion externes.  
+ WMI est l'implémentation de Microsoft de la norme WBEM (Web-Based Enterprise Management). Pour plus d’informations sur le SDK WMI, consultez [Windows Management Instrumentation](https://msdn.microsoft.com/library/aa394582.aspx). WBEM est une norme d'industrie qui détermine comment les applications exposent l'instrumentation de gestion aux outils de gestion externes.  
   
  Un fournisseur WMI est un composant qui expose l'instrumentation au moment de l'exécution par l'intermédiaire d'une interface WBEM compatible. Il se compose d'un jeu d'objets WMI qui ont des paires attribut/valeur. Les paires peuvent être plusieurs types simples. Les outils de gestion peuvent se connecter aux services au moment de l'exécution par l'intermédiaire de l'interface. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] expose des attributs de services tels que les adresses, les liaisons, les comportements et les écouteurs.  
   

@@ -1,27 +1,29 @@
 ---
 title: Page d'aide du service HTTP Web WCF
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 63c7c695-44b6-4f31-bb9c-00f2763f525e
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cdd05397990c2b1bfc89493235804e14f6d41a1f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: dabb5e7a949cb26c619ad02dc73d0405222d08cf
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wcf-web-http-service-help-page"></a>Page d'aide du service HTTP Web WCF
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] fournit une page d'aide automatique pour les services HTTP WEB WCF. Cette page d'aide contient une description de chaque opération, des formats de demande et de réponse, ainsi que des schémas. Ces fonctionnalités sont désactivées par défaut. Lorsqu'un utilisateur accède à un service HTTP WEB WCF et ajoute « /Help » à la fin de l'URL, par exemple http://localhost:8000/Customers/Help, une page d'aide s'affiche comme suit.  
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] fournit une page d'aide automatique pour les services HTTP WEB WCF. Cette page d'aide contient une description de chaque opération, des formats de demande et de réponse, ainsi que des schémas. Ces fonctionnalités sont désactivées par défaut. Lorsqu’un utilisateur accède à un service HTTP WEB WCF et ajoute « /Help » à la fin de l’URL, par exemple http://localhost:8000/Customers/Help, une page d’aide comme suit s’affiche.  
   
  ![Page d’aide WCF REST](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagemain.gif "WCFRESTHELPPAGEMAIN")  
   
@@ -251,4 +253,4 @@ using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http:/
 </xs:schema>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]le schéma de sérialisation de contrat de données, consultez [référence de schéma de contrat de données](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).
+ Pour plus d’informations sur le schéma de sérialisation de contrat de données, consultez [référence de schéma de contrat de données](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).

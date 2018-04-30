@@ -1,34 +1,36 @@
 ---
-title: "Rubriques \"Comment\" relatives à l'impression"
-ms.custom: 
+title: Rubriques "Comment" relatives à l'impression
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - printing [WPF]
 - print system management [WPF]
 ms.assetid: 5f3d391a-4afd-49ee-ad99-ceb737c0c8a8
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9647ce04528df390620dba67619a538d96aa7068
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0865e0f2d28ec44647882c030050638144fa715d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="printing-how-to-topics"></a>Rubriques "Comment" relatives à l'impression
 Les rubriques de cette section montrent comment utiliser l’impression et les fonctionnalités de gestion de système d’impression inclus avec [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] , ainsi que la nouvelle [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] chemin d’impression.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Appeler une boîte de dialogue Imprimer](../../../../docs/framework/wpf/advanced/how-to-invoke-a-print-dialog.md)  
- Instructions de balisage XAML déclarer un [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] imprimer objet boîte de dialogue et à l’aide de code pour appeler la boîte de dialogue à partir d’un [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] application.  
+ Instructions de balisage XAML déclarer un [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] imprimer l’objet de la boîte de dialogue et à l’aide de code pour appeler la boîte de dialogue à partir d’une application Windows Presentation Foundation (WPF).  
   
  [Cloner une imprimante](../../../../docs/framework/wpf/advanced/how-to-clone-a-printer.md)  
  Instructions pour installer une deuxième file d’attente d’impression avec exactement les mêmes propriétés comme existant file d’attente d’impression.  

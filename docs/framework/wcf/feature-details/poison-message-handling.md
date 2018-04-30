@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 14b3eebb83115617ce32ab0ff45184cd6754e58c
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 6fa35209b2dafc088605848a0dc96a53a2813dfd
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="poison-message-handling"></a>Gestion des messages incohérents
 A *message incohérent* est un message qui a dépassé le nombre maximal de tentatives de remise à l’application. Cette situation peut survenir lorsqu'une application basée sur file d'attente ne peut pas traiter un message car des erreurs se sont produites. Pour faire face aux demandes de fiabilité, une application en file d'attente reçoit des messages sous une transaction. L'abandon de la transaction dans laquelle un message en file d'attente a été reçu laisse le message dans la file d'attente afin qu'une nouvelle tentative de remise puisse être effectuée sous une nouvelle transaction. Si le problème qui a provoqué l'abandon de la transaction n'est pas résolu, l'application réceptrice peut être bloquée dans une réception et un abandon en boucle du même message jusqu'à ce que le nombre maximal de tentatives de remise soit dépassé et qu'un message incohérent soit généré.  
@@ -104,7 +104,7 @@ A *message incohérent* est un message qui a dépassé le nombre maximal de tent
  Une session subit les mêmes procédures de nouvelle tentative et de gestion des messages incohérents qu'un simple message. Les propriétés indiquées précédemment pour les messages empoisonnés s'appliquent à la session entière. En d'autres termes, la session entière est soumise à une nouvelle tentative et finit dans une ultime file d'attente de messages empoisonnés ou dans la file d'attente de lettres mortes de l'expéditeur si le message est refusé.  
   
 ## <a name="batching-and-poison-messages"></a>Traitement par lot et messages incohérents  
- Si un message faisant partie d'un lot devient un message incohérent, le lot entier est annulé et le canal recommence à lire un message à la fois. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] le traitement par lots, consultez [le traitement par lot des Messages dans une Transaction](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
+ Si un message faisant partie d'un lot devient un message incohérent, le lot entier est annulé et le canal recommence à lire un message à la fois. Pour plus d’informations sur le traitement par lots, consultez [le traitement par lot des Messages dans une Transaction](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
   
 ## <a name="poison-message-handling-for-messages-in-a-poison-queue"></a>Gestion des messages incohérents pour les messages dans une file d'attente de messages incohérents  
  La gestion des messages incohérents ne se termine pas lorsqu'un message est placé dans la file d'attente de messages incohérents. Les messages dans la file d'attente de messages incohérents doivent encore être lus et gérés. Vous pouvez utiliser un sous-ensemble des paramètres de gestion de messages incohérents lors de la lecture des messages à partir de l'ultime sous-file d'attente de messages incohérents. Les paramètres applicables sont `ReceiveRetryCount` et `ReceiveErrorHandling`. Vous pouvez affecter la valeur Drop, Reject ou Fault à `ReceiveErrorHandling`. `MaxRetryCycles` est ignoré et une exception est levée si `ReceiveErrorHandling` a la valeur Move.  

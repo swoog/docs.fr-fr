@@ -1,24 +1,26 @@
 ---
 title: Transfert des messages par diffusion en continu
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 72a47a51-e5e7-4b76-b24a-299d51e0ae5a
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a751245f0a933fda649d5919bab86abf2969dbf6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ed2aa57e044910ab9fd9c60dfd47eb7aaa0ce75e
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="streaming-message-transfer"></a>Transfert des messages par diffusion en continu
 Les transports [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] prennent en charge deux modes de transfert pour les messages :  
@@ -52,7 +54,7 @@ Les transports [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] prennent 
   
  Certaines fonctionnalités [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], telles que la messagerie fiable, les transactions et la sécurité de niveau message SOAP s'appuient sur les messages en mémoire tampon pour leurs transmissions. L’utilisation de ces fonctionnalités peut réduire, voire annuler les gains en termes de performances obtenus grâce au flux continu. Pour sécuriser le transport en flux continu, utilisez la sécurité de niveau transport uniquement ou la sécurité de niveau transport et le sécurité de niveau message avec authentification uniquement.  
   
- Les en-têtes SOAP sont toujours mis en mémoire tampon, même lorsque le mode de transfert a la valeur flux continu. La taille des en-têtes de message ne doit pas dépasser la taille du quota de transport `MaxBufferSize`. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Cette configuration, consultez [Quotas de Transport](../../../../docs/framework/wcf/feature-details/transport-quotas.md).  
+ Les en-têtes SOAP sont toujours mis en mémoire tampon, même lorsque le mode de transfert a la valeur flux continu. La taille des en-têtes de message ne doit pas dépasser la taille du quota de transport `MaxBufferSize`. Pour plus d’informations sur ce paramètre, consultez [Quotas de Transport](../../../../docs/framework/wcf/feature-details/transport-quotas.md).  
   
 ## <a name="differences-between-buffered-and-streamed-transfers"></a>Différences entre les transferts mis en mémoire tampon et les transferts en flux continu  
  Modifier le mode de transfert de mis en mémoire tampon à flux continu modifie également la forme du canal natif des transports TCP et des transports de canal nommé. Pour les transferts mis en mémoire tampon, la forme du canal natif est <xref:System.ServiceModel.Channels.IDuplexSessionChannel>. Pour les transferts en flux continu, les canaux natifs correspondent à <xref:System.ServiceModel.Channels.IRequestChannel> et à <xref:System.ServiceModel.Channels.IReplyChannel>. Modifier le mode de transfert d'une application existante utilisant directement ces transports (c'est-à-dire sans passer par un contrat de service) nécessite de modifier la forme de canal escomptée des fabrications et écouteurs de canal.  

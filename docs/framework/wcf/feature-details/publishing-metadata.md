@@ -1,28 +1,28 @@
 ---
-title: "Publication de métadonnées"
-ms.custom: 
+title: Publication de métadonnées
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - meatadata [WCF], publishing
 ms.assetid: 3a56831a-cabc-45c0-bd02-12e2e9bd7313
-caps.latest.revision: 
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 86d9eb8e7e7c78f091deea55322cbef6e6d0f3c5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 031a80c52c194f300d7785f05e73eabeebb296b7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="publishing-metadata"></a>Publication de métadonnées
 Les services [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] publient les métadonnées à l'aide d'un ou de plusieurs points de terminaison. La publication de métadonnées de service permet d'accéder à celles-ci à l'aide de protocoles standardisés, tels que WS-MetadataExchange (MEX) et les requêtes HTTP/GET. Les points de terminaison de métadonnées sont semblables aux autres points de terminaison de service dans le sens où ils ont une adresse, une liaison et un contrat, et qu'ils peuvent être ajoutés à un hôte de service via la configuration ou du code impératif.  
@@ -30,7 +30,7 @@ Les services [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] publient le
 ## <a name="publishing-metadata-endpoints"></a>Publication de points de terminaison de métadonnées  
  Pour publier des points de terminaison de métadonnées pour un service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], vous devez dans un premier temps ajouter le comportement de service <xref:System.ServiceModel.Description.ServiceMetadataBehavior> au service. L'ajout d'une instance <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> permet à votre service d'exposer des points de terminaison de métadonnées. Après avoir ajouté le comportement de service <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType>, vous pouvez ensuite exposer les points de terminaison de métadonnées qui prennent en charge le protocole MEX ou qui répondent aux requêtes HTTP/GET.  
   
- <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> utilise <xref:System.ServiceModel.Description.WsdlExporter> pour exporter les métadonnées de tous les points de terminaison de service de votre service. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]exportation de métadonnées à partir d’un service, consultez [exportation et importation de métadonnées](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md).  
+ <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> utilise <xref:System.ServiceModel.Description.WsdlExporter> pour exporter les métadonnées de tous les points de terminaison de service de votre service. Pour plus d’informations sur l’exportation de métadonnées à partir d’un service, consultez [exportation et importation de métadonnées](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md).  
   
  <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> ajoute une instance <xref:System.ServiceModel.Description.ServiceMetadataExtension> comme extension à votre hôte de service. <xref:System.ServiceModel.Description.ServiceMetadataExtension?displayProperty=nameWithType> fournit l'implémentation pour les protocoles de publication de métadonnées. Vous pouvez également utiliser <xref:System.ServiceModel.Description.ServiceMetadataExtension?displayProperty=nameWithType> pour obtenir les métadonnées de service au moment de l'exécution en accédant à la propriété <xref:System.ServiceModel.Description.ServiceMetadataExtension.Metadata%2A?displayProperty=nameWithType>.  
   

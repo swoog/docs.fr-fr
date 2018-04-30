@@ -1,28 +1,28 @@
 ---
-title: "Liaisons fournies par le système"
-ms.custom: 
+title: Liaisons fournies par le système
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - bindings [WCF], system-provided
 ms.assetid: 2c243746-45ce-4588-995e-c17126a579a6
-caps.latest.revision: 
+caps.latest.revision: 60
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c5f8df31e31c9617fe7bcd92789671d220382a82
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4ccdab56a90f4114836dd9f0a56cc495657ee9c8
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="system-provided-bindings"></a>Liaisons fournies par le système
 Les liaisons spécifient le mécanisme de communication à utiliser pour communiquer avec un point de terminaison et indiquer comment se connecter à un point de terminaison. Une liaison contient les éléments suivants :  
@@ -33,7 +33,7 @@ Les liaisons spécifient le mécanisme de communication à utiliser pour communi
   
 -   L'encodage détermine l'encodage de câble à utiliser pour les messages envoyés au point de terminaison, par exemple, texte/XML, binaire ou MTOM (Message Transmission Optimization Mechanism).  
   
- Cette rubrique présente toutes les liaisons [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] fournies par le système. Si aucune d’entre elles ne répond aux critères exacts pour votre application, créez une liaison personnalisée. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Création de liaisons personnalisées, consultez [des liaisons personnalisées](../../../docs/framework/wcf/extending/custom-bindings.md).  
+ Cette rubrique présente toutes les liaisons [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] fournies par le système. Si aucune d’entre elles ne répond aux critères exacts pour votre application, créez une liaison personnalisée. Pour plus d’informations sur la création de liaisons personnalisées, consultez [des liaisons personnalisées](../../../docs/framework/wcf/extending/custom-bindings.md).  
   
  Une liaison sécurisée et interopérable qui prend en charge le protocole WS-Federation permet aux organisations qui sont dans une fédération d’authentifier et d’autoriser efficacement les utilisateurs.  
   
@@ -48,20 +48,20 @@ Les liaisons spécifient le mécanisme de communication à utiliser pour communi
   
 |Liaison|Élément de configuration|Description|  
 |-------------|---------------------------|-----------------|  
-|<xref:System.ServiceModel.BasicHttpBinding>|[\<basicHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)|Une liaison qui est appropriée pour communiquer avec les services Web conformes à WS-Basic Profil, par exemple, les services basés sur les services Web ASP.NET (ASMX). Cette liaison utilise HTTP comme le transport et texte/XML comme encodage de message par défaut.|  
-|<xref:System.ServiceModel.WSHttpBinding>|[\<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)|Une liaison sécurisée et interopérable adaptée aux contrats de service non duplex.|  
-|<xref:System.ServiceModel.WSDualHttpBinding>|[\<wsDualHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)|Une liaison sécurisée et interopérable appropriée pour les contrats de service duplex ou les communications par le biais des intermédiaires SOAP.|  
-|<xref:System.ServiceModel.WSFederationHttpBinding>|[\<wsFederationHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|Une liaison sécurisée et interopérable qui prend en charge le protocole WS-Federation qui permet aux organisations dans une fédération d’authentifier et d’autoriser efficacement les utilisateurs.|  
-|<xref:System.ServiceModel.NetHttpBinding>|\<netHttpBinding >|Liaison conçue pour consommer des services HTTP ou WebSocket qui utilise l’encodage binaire par défaut.|  
+|<xref:System.ServiceModel.BasicHttpBinding>|[\<basicHttpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)|Une liaison qui est appropriée pour communiquer avec les services Web conformes à WS-Basic Profil, par exemple, les services basés sur les services Web ASP.NET (ASMX). Cette liaison utilise HTTP comme le transport et texte/XML comme encodage de message par défaut.|  
+|<xref:System.ServiceModel.WSHttpBinding>|[\<wsHttpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)|Une liaison sécurisée et interopérable adaptée aux contrats de service non duplex.|  
+|<xref:System.ServiceModel.WSDualHttpBinding>|[\<wsDualHttpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)|Une liaison sécurisée et interopérable appropriée pour les contrats de service duplex ou les communications par le biais des intermédiaires SOAP.|  
+|<xref:System.ServiceModel.WSFederationHttpBinding>|[\<wsFederationHttpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|Une liaison sécurisée et interopérable qui prend en charge le protocole WS-Federation qui permet aux organisations dans une fédération d’authentifier et d’autoriser efficacement les utilisateurs.|  
+|<xref:System.ServiceModel.NetHttpBinding>|\<netHttpBinding>|Liaison conçue pour consommer des services HTTP ou WebSocket qui utilise l’encodage binaire par défaut.|  
 |<xref:System.ServiceModel.NetHttpsBinding>|\<netHttpsBinding >|Liaison sécurisée conçue pour consommer des services HTTP ou WebSocket qui utilise l’encodage binaire par défaut.|  
-|<xref:System.ServiceModel.NetTcpBinding>|[\<netTcpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)|Une liaison sécurisée et optimisée appropriée pour la communication entre ordinateurs entre des applications [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].|  
+|<xref:System.ServiceModel.NetTcpBinding>|[\<netTcpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)|Une liaison sécurisée et optimisée appropriée pour la communication entre ordinateurs entre des applications [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].|  
 |<xref:System.ServiceModel.NetNamedPipeBinding>|[\<netNamedPipeBinding >](../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md)|Une liaison sécurisée, fiable, optimisée appropriée pour la communication sur les ordinateurs entre des applications [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].|  
 |<xref:System.ServiceModel.NetMsmqBinding>|[\<netMsmqBinding >](../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)|Une liaison mise en file d'attente qui est appropriée pour la communication entre ordinateurs entre des applications [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].|  
 |<xref:System.ServiceModel.NetPeerTcpBinding>|[\<netPeerTcpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)|Une liaison qui permet la communication sécurisée entre plusieurs ordinateurs.|  
-|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|[\<msmqIntegrationBinding >](../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)|Une liaison appropriée pour la communication entre ordinateurs entre une application [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] et des applications Message Queuing existantes.|  
+|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|[\<msmqIntegrationBinding>](../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)|Une liaison appropriée pour la communication entre ordinateurs entre une application [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] et des applications Message Queuing existantes.|  
 |<xref:System.ServiceModel.BasicHttpContextBinding>|[\<basicHttpContextBinding >](../../../docs/framework/configure-apps/file-schema/wcf/basichttpcontextbinding.md)|Une liaison qui est appropriée pour communiquer avec les services Web conformes avec WS-Basic Profile, qui active des cookies HTTP en vue de leur utilisation pour échanger le contexte.|  
 |<xref:System.ServiceModel.NetTcpContextBinding>|[\<netTcpContextBinding >](../../../docs/framework/configure-apps/file-schema/wcf/nettcpcontextbinding.md)|Une liaison sécurisée et optimisée qui convient à la communication entre ordinateurs entre les applications [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], qui active des en-têtes SOAP à utiliser pour échanger le contexte.|  
-|<xref:System.ServiceModel.WebHttpBinding>|[\<webHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|Une liaison utilisée pour configurer des points de terminaison pour les services Web [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] exposés par le biais de requêtes HTTP au lieu de messages SOAP.|  
+|<xref:System.ServiceModel.WebHttpBinding>|[\<webHttpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|Une liaison utilisée pour configurer des points de terminaison pour les services Web [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] exposés par le biais de requêtes HTTP au lieu de messages SOAP.|  
 |<xref:System.ServiceModel.WSHttpContextBinding>|[\<wsHttpContextBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpcontextbinding.md)|Sécurisée et |<xref:System.ServiceModel.UdpBinding>|\<udpBinding >|Liaison à utiliser lors de l’envoi d’une rafale de messages simples à un grand nombre de clients simultanément.|  
   
  Le tableau suivant affiche les fonctionnalités de chacune des liaisons fournies par le système. Les liaisons figurent dans les colonnes du tableau ; les fonctionnalités sont répertoriées dans les lignes et décrites dans un deuxième tableau. Le tableau suivant fournit une clé pour les abréviations de liaison utilisées. Pour sélectionner une liaison, déterminez quelle colonne satisfait toutes les fonctionnalités de ligne dont vous avez besoin.  
@@ -72,8 +72,8 @@ Les liaisons spécifient le mécanisme de communication à utiliser pour communi
 |<xref:System.ServiceModel.WSHttpBinding>|WS|Transport, (message), mixte|(Aucun), session fiable, session de sécurité|(Aucun), oui|N/A|(Texte), MTOM|Non|  
 |<xref:System.ServiceModel.WSDualHttpBinding>|WS|(Message), aucun|(Session fiable), session de sécurité|(Aucun), oui|Oui|(Texte), MTOM|Non|  
 |<xref:System.ServiceModel.WSFederationHttpBinding>|WS-Federation|(Message), mixte, aucun|(Aucun), session fiable, session de sécurité|(Aucun), oui|Non|(Texte), MTOM|Non|  
-|<xref:System.ServiceModel.NetHttpBinding>|.NET|(None), Transport, Message, TransportWithMessageCredential, TransportCredentialOnly|Voir la remarque ci-dessous|Aucun.|Voir la remarque ci-dessous|(Binary), Text,MTOM|Oui (mis en mémoire tampon)|  
-|<xref:System.ServiceModel.NetHttpsBinding>|.NET|(Transport), TransportWithMessageCredential|Voir la remarque ci-dessous|Aucun.|Voir la remarque ci-dessous|(Binary), Text,MTOM|Oui (mis en mémoire tampon)|  
+|<xref:System.ServiceModel.NetHttpBinding>|.NET|(None), Transport, Message, TransportWithMessageCredential, TransportCredentialOnly|Voir la remarque ci-dessous|Aucun|Voir la remarque ci-dessous|(Binary), Text,MTOM|Oui (mis en mémoire tampon)|  
+|<xref:System.ServiceModel.NetHttpsBinding>|.NET|(Transport), TransportWithMessageCredential|Voir la remarque ci-dessous|Aucun|Voir la remarque ci-dessous|(Binary), Text,MTOM|Oui (mis en mémoire tampon)|  
 |<xref:System.ServiceModel.NetTcpBinding>|.NET|(Transport), message, aucun, mixte|(Transport), session fiable, session de sécurité|(Aucun), oui|Oui|Binaire|Oui<br /><br /> (mis en mémoire tampon)|  
 |<xref:System.ServiceModel.NetNamedPipeBinding>|.NET|(Transport), aucun|Aucun, (Transport)|(Aucun), oui|Oui|Binaire|Oui<br /><br /> (mis en mémoire tampon)|  
 |<xref:System.ServiceModel.NetMsmqBinding>|.NET|Message, (Transport), Aucun|(Aucun), Transport|Aucun, (Oui)|Non|Binaire|Non|  

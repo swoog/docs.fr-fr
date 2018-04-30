@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1c20905c8eafb1ac31702a46878e517ac090e484
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: fff55f6177a50d05f54c8839fd3497c181290ecf
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-systemtransactions-in-aspnet"></a>Utilisation de System.Transactions dans ASP.NET
 Cette rubrique explique comment utiliser <xref:System.Transactions> dans une application [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] .  
@@ -51,7 +51,7 @@ Cette rubrique explique comment utiliser <xref:System.Transactions> dans une app
 </PermissionSet>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] stratégie de sécurité, consultez [securityPolicy, élément (schéma des paramètres ASP.NET)](http://msdn.microsoft.com/library/469d8d22-d263-46bb-8400-40d8d027faba).  
+ Pour plus d’informations sur [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] stratégie de sécurité, consultez [securityPolicy, élément (schéma des paramètres ASP.NET)](http://msdn.microsoft.com/library/469d8d22-d263-46bb-8400-40d8d027faba).  
   
 ## <a name="dynamic-compilation"></a>Compilation dynamique  
  Pour importer et utiliser <xref:System.Transactions> dans une application [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] compilée dynamiquement lors de l’accès, insérez une référence à l’assembly <xref:System.Transactions> dans le fichier de configuration. Cette référence doit être ajoutée sous la section **compilation**/**assemblies** du fichier de configuration **Web.config** racine par défaut ou du fichier de configuration d’une application Web spécifique. Cela est illustré par l'exemple suivant.  

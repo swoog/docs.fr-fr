@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 63bdbc68851ace71b3afef30e274b9821ed1ad5f
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 6e2d45e7b8769ee525835ad3dc50262a03a5a7b6
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="configuring-message-logging"></a>Configuration de la journalisation des messages
 Cette rubrique contient des instructions permettant de configurer l'enregistrement des messages en fonction de différentes situations.  
@@ -58,7 +58,7 @@ Cette rubrique contient des instructions permettant de configurer l'enregistreme
 </system.serviceModel>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] paramètres de journalisation des messages, consultez [les paramètres recommandés pour le suivi et la journalisation des messages](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md).  
+ Pour plus d’informations sur les paramètres de journalisation des messages, consultez [les paramètres recommandés pour le suivi et la journalisation des messages](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md).  
   
  Vous pouvez utiliser la méthode `add` afin d'indiquer le nom et type de l'écouteur de suivi à utiliser. Dans l'exemple de configuration, nous avons attribué le nom « messages » à l'écouteur et ajouté l'écouteur de suivi standard .NET Framework (`System.Diagnostics.XmlWriterTraceListener`) comme type à utiliser. Si vous utilisez `System.Diagnostics.XmlWriterTraceListener`, vous devez spécifier l'emplacement et le nom du fichier de sortie dans le fichier de configuration. Pour ce faire, il suffit d'affecter le nom du fichier journal à `initializeData`. Si cette consigne n'est pas respectée, le système lèvera une exception. Vous pouvez également implémenter un écouteur personnalisé qui enregistrera les journaux dans un fichier par défaut.  
   
@@ -73,7 +73,7 @@ Cette rubrique contient des instructions permettant de configurer l'enregistreme
 <source name="System.ServiceModel.MessageLogging" switchValue="Verbose">  
 ```  
   
- Si vous souhaitez désactiver la source de suivi, vous devrez utiliser à la place les attributs `logMessagesAtServiceLevel`, `logMalformedMessages`et `logMessagesAtTransportLevel` de l'élément `messageLogging`. Vous devez affecter à tous ces attributs la valeur `false`. Pour ce faire, il suffit d'utiliser le fichier de configuration figurant dans l'exemple de code précédent avec l'Éditeur de configuration ou WMI. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] l’outil Éditeur de Configuration, consultez [l’outil Éditeur de Configuration (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] WMI, consultez [à l’aide de Windows Management Instrumentation pour les Diagnostics](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
+ Si vous souhaitez désactiver la source de suivi, vous devrez utiliser à la place les attributs `logMessagesAtServiceLevel`, `logMalformedMessages`et `logMessagesAtTransportLevel` de l'élément `messageLogging`. Vous devez affecter à tous ces attributs la valeur `false`. Pour ce faire, il suffit d'utiliser le fichier de configuration figurant dans l'exemple de code précédent avec l'Éditeur de configuration ou WMI. Pour plus d’informations sur l’outil Éditeur de Configuration, consultez [l’outil Éditeur de Configuration (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md). Pour plus d’informations sur WMI, consultez [à l’aide de Windows Management Instrumentation pour les Diagnostics](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
   
 ## <a name="logging-levels-and-options"></a>Niveaux d'enregistrement et options supplémentaires  
  Pour les messages entrants, leur enregistrement intervient immédiatement après leur création, immédiatement avant leur arrivée dans le code utilisateur au niveau du service et lorsque des erreurs sont détectées les concernant.  
@@ -91,7 +91,7 @@ Cette rubrique contient des instructions permettant de configurer l'enregistreme
  Les messages enregistrés à ce niveau sont prêts à être encodés ou décodés pour ou après transmission. Si des filtres ont été définis, seuls les messages respectant les critères définis par ces filtres seront enregistrés. Dans le cas contraire, tous les messages de niveau transport seront enregistrés. Tous les messages d'infrastructure sont enregistrés à ce niveau, notamment les messages de messagerie fiable. Pour les messages transmis en flux continu, seuls les en-têtes sont enregistrés. Les messages sécurisés sont également enregistrés à ce niveau sous leur forme chiffrée, sauf si un transport sécurisé tel qu'HTTPS est utilisé.  
   
 ### <a name="malformed-level"></a>Niveau erreurs  
- Les messages erronés sont des messages qui sont rejetés par la pile [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], quelle que soit la phase de traitement dans laquelle ils se trouvent. Les messages mal formés sont enregistrés en l'état : sous leur forme chiffrée lorsqu'ils le sont, dans un langage XML incorrect et ainsi de suite. `maxSizeOfMessageToLog` définit la taille du message à enregistrer sous forme de CDATA. Par défaut, `maxSizeOfMessageToLog` est égal à 256K. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] cet attribut, consultez la section Autres options.  
+ Les messages erronés sont des messages qui sont rejetés par la pile [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], quelle que soit la phase de traitement dans laquelle ils se trouvent. Les messages mal formés sont enregistrés en l'état : sous leur forme chiffrée lorsqu'ils le sont, dans un langage XML incorrect et ainsi de suite. `maxSizeOfMessageToLog` définit la taille du message à enregistrer sous forme de CDATA. Par défaut, `maxSizeOfMessageToLog` est égal à 256K. Pour plus d’informations sur cet attribut, consultez la section autres Options.  
   
 ### <a name="other-options"></a>Autres options  
  Outre les niveaux d'enregistrement, l'utilisateur peut spécifier les options suivantes :  

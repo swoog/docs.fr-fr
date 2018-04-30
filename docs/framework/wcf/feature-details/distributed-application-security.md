@@ -1,32 +1,34 @@
 ---
-title: "Sécurité des applications distribuées"
-ms.custom: 
+title: Sécurité des applications distribuées
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 1e67c5da534e7b35d4d27c0164d9389c8afe252b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8b5bc311262aae1110f7d0249be60135e318785e
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="distributed-application-security"></a>Sécurité des applications distribuées
 La sécurité [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] est divisée en trois domaines fonctionnels principaux : la sécurité de transfert, le contrôle d'accès et l'audit. La sécurité de transfert fournit l'intégrité, la confidentialité et l'authentification. La sécurité de transfert est fournie par l'un des éléments suivants : sécurité de transport, sécurité de message ou `TransportWithMessageCredential`.  
   
- Pour une vue d’ensemble de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] la sécurité de message, consultez [vue d’ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]les deux autres éléments de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sécurité, consultez [autorisation](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md) et [audit](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
+ Pour une vue d’ensemble de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] la sécurité de message, consultez [vue d’ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md). Pour plus d’informations sur les deux autres éléments de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sécurité, consultez [autorisation](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md) et [audit](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
   
 ## <a name="transfer-security-scenarios"></a>Scénarios de sécurité de transfert  
  Les scénarios courants qui utilisent la sécurité de transfert [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sont les suivants :  
@@ -51,7 +53,7 @@ La sécurité [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] est divis�
   
 |Mode|Description|  
 |----------|-----------------|  
-|Aucun.|Aucune sécurité n'est fournie au niveau de la couche de transport ou de la couche de message. Aucun des liaisons prédéfinies utilisent ce mode par défaut, sauf le [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) élément ou, lors de l’utilisation de code, la <xref:System.ServiceModel.BasicHttpBinding> classe.|  
+|Aucun|Aucune sécurité n'est fournie au niveau de la couche de transport ou de la couche de message. Aucun des liaisons prédéfinies utilisent ce mode par défaut, sauf le [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) élément ou, lors de l’utilisation de code, la <xref:System.ServiceModel.BasicHttpBinding> classe.|  
 |Transport|Utilise un transport sécurisé tel que HTTPS pour l'intégrité, la confidentialité et l'authentification mutuelle.|  
 |Message|Utilise la sécurité de message SOAP pour l'intégrité, la confidentialité et l'authentification mutuelle. Les messages SOAP sont sécurisés conformément aux standards WS-Security.|  
 |Mixed Mode|Utilise la sécurité de transport pour l'intégrité, la confidentialité et l'authentification du serveur. Utilise la sécurité de message (WS-Security et autres standards) pour l'authentification du client.<br /><br /> (Cette énumération pour ce mode est `TransportWithMessageCredential`.)|  
@@ -68,7 +70,7 @@ La sécurité [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] est divis�
   
  Dans l'information d'identification de certificat, le nom du sujet, le nom de substitution du sujet ou des champs spécifiques inclus dans le certificat peuvent être utilisés pour représenter l'identité déclarée et/ou les fonctions. La preuve de la propriété des données dans l'information d'identification est établie en utilisant la clé privée associée pour générer une signature.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]programmation de la sécurité de transfert et en spécifiant les informations d’identification, consultez [liaisons et sécurité](../../../../docs/framework/wcf/feature-details/bindings-and-security.md) et [comportements de sécurité](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md).  
+ Pour plus d’informations sur la programmation de sécurité de transfert et en spécifiant les informations d’identification, consultez [liaisons et sécurité](../../../../docs/framework/wcf/feature-details/bindings-and-security.md) et [comportements de sécurité](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md).  
   
 ### <a name="transport-client-credential-types"></a>Types d'informations d'identification du client de transport  
  Le tableau suivant présente les valeurs possibles utilisées lors de la création d'une application utilisant la sécurité de transfert. Vous pouvez utiliser ces valeurs dans le code ou les paramètres de liaison.  
@@ -87,7 +89,7 @@ La sécurité [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] est divis�
   
 |Paramètre|Description|  
 |-------------|-----------------|  
-|Aucun.|Autorise le service à interagir avec des clients anonymes.|  
+|Aucun|Autorise le service à interagir avec des clients anonymes.|  
 |Windows|Autorise les échanges de messages SOAP à se produire sous le contexte authentifié d'une information d'identification Windows. Utilise le mécanisme de négociation SSPI pour sélectionner le protocole Kerberos ou NTLM comme service d'authentification.|  
 |Utilisateur|Autorise le service à exiger que le client soit authentifié avec des informations d'identification de nom d'utilisateur. Notez que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] n'autorise pas d'opération de chiffrement avec le nom d'utilisateur, telle que la génération d'une signature ou le chiffrement de données. De ce fait, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] s'assure que le transport est sécurisé lors de l'utilisation d'informations d'identification de nom d'utilisateur.|  
 |Certificat|Autorise le service à exiger une authentification du client via un certificat.|  

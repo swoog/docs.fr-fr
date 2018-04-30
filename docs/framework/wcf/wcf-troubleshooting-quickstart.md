@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 490b756a9beae09b20a36d3fc6a20c85aad76618
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 24ca6899e6ac2bb316c0543932d70abc13626aa2
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>Démarrage rapide de la résolution des problèmes WCF
 Cette rubrique décrit quelques problèmes connus rencontrés par les clients lorsqu'ils développement des clients et services WCF. Si le problème que vous rencontrez n'est pas répertorié dans la liste, nous vous recommandons de configurer le traçage de votre service. Vous allez ainsi générer un fichier de suivi que vous pourrez consulter à l'aide de la visionneuse dédiée pour obtenir des informations détaillées sur les exceptions pouvant se produire au sein du service. Pour plus d’informations sur la configuration du traçage, consultez [Configuring Tracing](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md). Pour plus d’informations sur la visionneuse de fichier de traçage, consultez [Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
@@ -64,7 +64,7 @@ Cette rubrique décrit quelques problèmes connus rencontrés par les clients lo
   
 <a name="BKMK_q1"></a>   
 ## <a name="sometimes-i-receive-a-messagesecurityexception-on-the-second-request-if-my-client-is-idle-for-a-while-after-the-first-request-what-is-happening"></a>Je reçois parfois une MessageSecurityException sur la deuxième demande si mon client est inactif pendant un instant après la première demande. Que se passe-t-il ?  
- La deuxième demande peut échouer pour deux raisons principales : (1) la session a expiré ou (2) le serveur Web qui héberge le service est recyclé. Dans le premier cas, la session est valide jusqu'à ce que le service expire. Lorsque le service ne reçoit pas de demande du client pendant la période spécifiée dans la liaison du service (<xref:System.ServiceModel.Channels.Binding.ReceiveTimeout%2A>), le service met fin à la session de sécurité. Les messages clients suivants engendrent une <xref:System.ServiceModel.Security.MessageSecurityException>. Le client doit de nouveau établir une session sécurisée avec le service pour envoyer de futurs messages ou utiliser un jeton de contexte de sécurité avec état. Les jetons de contexte de sécurité avec état permettent également à une session sécurisée de survivre à un serveur Web en cours de recyclage. [!INCLUDE[crabout](../../../includes/crabout-md.md)] l’utilisation de jetons de contexte dans une session sécurisée, consultez [Comment : créer un jeton de contexte de sécurité pour une Session sécurisée](../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md). Vous pouvez également désactiver des sessions sécurisées. Lorsque vous utilisez la [ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) de liaison, vous pouvez définir le `establishSecurityContext` propriété `false` pour désactiver des sessions sécurisées. Pour désactiver des sessions sécurisées pour d'autres liaisons, vous devez créer une liaison personnalisée. Pour plus d’informations sur la création d’une liaison personnalisée, consultez [How to: Create a Custom Binding Using the SecurityBindingElement](../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md). Avant d'appliquer chacune de ces options, vous devez comprendre les conditions de sécurité de votre application.  
+ La deuxième demande peut échouer pour deux raisons principales : (1) la session a expiré ou (2) le serveur Web qui héberge le service est recyclé. Dans le premier cas, la session est valide jusqu'à ce que le service expire. Lorsque le service ne reçoit pas de demande du client pendant la période spécifiée dans la liaison du service (<xref:System.ServiceModel.Channels.Binding.ReceiveTimeout%2A>), le service met fin à la session de sécurité. Les messages clients suivants engendrent une <xref:System.ServiceModel.Security.MessageSecurityException>. Le client doit de nouveau établir une session sécurisée avec le service pour envoyer de futurs messages ou utiliser un jeton de contexte de sécurité avec état. Les jetons de contexte de sécurité avec état permettent également à une session sécurisée de survivre à un serveur Web en cours de recyclage. Pour plus d’informations sur l’utilisation de jetons de contexte dans une session sécurisée, consultez [Comment : créer un jeton de contexte de sécurité pour une Session sécurisée](../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md). Vous pouvez également désactiver des sessions sécurisées. Lorsque vous utilisez la [ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) de liaison, vous pouvez définir le `establishSecurityContext` propriété `false` pour désactiver des sessions sécurisées. Pour désactiver des sessions sécurisées pour d'autres liaisons, vous devez créer une liaison personnalisée. Pour plus d’informations sur la création d’une liaison personnalisée, consultez [How to: Create a Custom Binding Using the SecurityBindingElement](../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md). Avant d'appliquer chacune de ces options, vous devez comprendre les conditions de sécurité de votre application.  
   
 <a name="BKMK_q2"></a>   
 ## <a name="my-service-starts-to-reject-new-clients-after-about-10-clients-are-interacting-with-it-what-is-happening"></a>Mon service commence à rejeter les nouveaux clients une fois qu'environ 10 clients interagissent avec lui. Que se passe-t-il ?  
@@ -145,7 +145,7 @@ public class MyServiceHost : ServiceHost
   
     4.  Enregistrez un nouveau SPN avec le domaine à l'aide de SetSPN. Notez que vous devez être administrateur de domaine pour effectuer cette opération.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] le protocole Kerberos, consultez [Security Concepts Used in WCF](../../../docs/framework/wcf/feature-details/security-concepts-used-in-wcf.md) et :  
+ Pour plus d’informations sur le protocole Kerberos, consultez [Concepts de sécurité utilisés dans WCF](../../../docs/framework/wcf/feature-details/security-concepts-used-in-wcf.md) et :  
   
 -   [Débogage d’erreurs d’authentification Windows](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)  
   
@@ -175,7 +175,7 @@ public class MyServiceHost : ServiceHost
   
  Le cas échéant, vous devez octroyer des privilèges d'accès en lecture au compte du processus pour le fichier contenant la clé privée. Par exemple, si le processus de travail IIS s'exécute sous le compte Jacques, vous devrez octroyer à Jacques un accès en lecture au fichier contenant la clé privée.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] sur la manière d’octroyer au compte d’utilisateur l’accès correct au fichier contenant la clé privée pour un certificat X.509 spécifique, consultez [How to: Make X.509 Certificates Accessible to WCF](../../../docs/framework/wcf/feature-details/how-to-make-x-509-certificates-accessible-to-wcf.md).  
+ Pour plus d’informations sur la façon d’octroyer l’accès de compte d’utilisateur correct au fichier qui contient la clé privée pour un certificat X.509 spécifique, consultez [Comment : rendre les certificats X.509 accessibles à WCF](../../../docs/framework/wcf/feature-details/how-to-make-x-509-certificates-accessible-to-wcf.md).  
   
 <a name="BKMK_q88"></a>   
 ## <a name="i-changed-the-first-parameter-of-an-operation-from-uppercase-to-lowercase-now-my-client-throws-an-exception-whats-happening"></a>J'ai remplacé les majuscules du premier paramètre d'une opération par des minuscules ; à présent, mon client lève une exception. Que se passe-t-il ?  

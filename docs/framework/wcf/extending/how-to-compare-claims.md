@@ -1,12 +1,13 @@
 ---
-title: "Comment : comparer des revendications"
-ms.custom: 
+title: 'Comment : comparer des revendications'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,19 +16,20 @@ helpviewer_keywords:
 - claims [WCF], comparing
 - claims [WCF]
 ms.assetid: 0c4ec84d-53df-408f-8953-9bc437f56c28
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bf7a621a7aa457b2993c761caa2ad576d216638b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5188ed17e3a10bfd93b885fcdd93e01391dd8256
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-compare-claims"></a>Comment : comparer des revendications
-L'infrastructure de modèle d'identité dans [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] est utilisée pour effectuer les contrôles d'autorisation. L’une des tâches fréquentes de cette infrastructure de contrôle consiste notamment à comparer les revendications émises dans le cadre des autorisations à celles requises pour l’exécution des requêtes d’action ou des requêtes d’accès aux ressources. Cette rubrique contient des instructions qui permettent de comparer des revendications, notamment les types de revendication intégrés et personnalisés. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]l’infrastructure de modèle d’identité, consultez [la gestion des revendications et autorisation avec le modèle d’identité](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).  
+L'infrastructure de modèle d'identité dans [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] est utilisée pour effectuer les contrôles d'autorisation. L’une des tâches fréquentes de cette infrastructure de contrôle consiste notamment à comparer les revendications émises dans le cadre des autorisations à celles requises pour l’exécution des requêtes d’action ou des requêtes d’accès aux ressources. Cette rubrique contient des instructions qui permettent de comparer des revendications, notamment les types de revendication intégrés et personnalisés. Pour plus d’informations sur l’infrastructure de modèle d’identité, consultez [la gestion des revendications et autorisation avec le modèle d’identité](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).  
   
  Comparer des revendications signifie comparer leurs trois composantes, à savoir leur type, leurs droits et leurs ressources avec les composantes d'autres revendications, et ce afin de savoir si elles sont égales. Lisez l'exemple suivant.  
   

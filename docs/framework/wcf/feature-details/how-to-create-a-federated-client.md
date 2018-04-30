@@ -22,16 +22,16 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 38436a83bf58c4903a931ecafebf922800d230c1
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 9a52aa5c2c3af6c7288b2a375e44024195dfe1cc
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-a-federated-client"></a>Comment : créer un client fédéré
 Dans [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], création d’un client pour un *service fédéré* se compose de trois étapes principales :  
   
-1.  Configurer un [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) ou une liaison personnalisée similaire. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Création d’une liaison appropriée, consultez [Comment : créer une liaison WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md). Vous pouvez également exécuter la [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) sur le point de terminaison de métadonnées du service fédéré pour générer un fichier de configuration pour la communication avec le service fédéré et un ou plusieurs services de jeton de sécurité.  
+1.  Configurer un [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) ou une liaison personnalisée similaire. Pour plus d’informations sur la création d’une liaison appropriée, consultez [Comment : créer une liaison WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md). Vous pouvez également exécuter la [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) sur le point de terminaison de métadonnées du service fédéré pour générer un fichier de configuration pour la communication avec le service fédéré et un ou plusieurs services de jeton de sécurité.  
   
 2.  Définissez les propriétés du <xref:System.ServiceModel.Security.IssuedTokenClientCredential> qui contrôle différents aspects de l'interaction d'un client avec un service d'émission de jeton de sécurité.  
   
@@ -40,7 +40,7 @@ Dans [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], création d’un c
 > [!NOTE]
 >  Un <xref:System.Security.Cryptography.CryptographicException> peut être levé lorsqu'un client utilise des informations d'identification personnalisées, la liaison <xref:System.ServiceModel.WSFederationHttpBinding> ou un jeton émis de façon personnalisée, et des clés asymétriques. Les clés asymétriques sont utilisées avec la liaison <xref:System.ServiceModel.WSFederationHttpBinding> et les jetons émis de façon personnalisée lorsque les propriétés <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedKeyType%2A> et <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.KeyType%2A>, respectivement, ont la valeur <xref:System.IdentityModel.Tokens.SecurityKeyType.AsymmetricKey>. L'exception <xref:System.Security.Cryptography.CryptographicException> est levée lorsque le client tente d'envoyer un message et un profil utilisateur n'existe pas pour l'identité que le client emprunte. Pour minimiser ce problème, connectez-vous à l'ordinateur client ou appelez `LoadUserProfile` avant d'envoyer le message.  
   
- Cette rubrique fournit des informations détaillées à propos de ces procédures. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Création d’une liaison appropriée, consultez [Comment : créer une liaison WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] fonctionnement d’un service fédéré, voir [fédération](../../../../docs/framework/wcf/feature-details/federation.md).  
+ Cette rubrique fournit des informations détaillées à propos de ces procédures. Pour plus d’informations sur la création d’une liaison appropriée, consultez [Comment : créer une liaison WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md). Pour plus d’informations sur le fonctionne d’un service fédéré, voir [fédération](../../../../docs/framework/wcf/feature-details/federation.md).  
   
 ### <a name="to-generate-and-examine-the-configuration-for-a-federated-service"></a>Pour générer et examiner la configuration d'un service fédéré  
   
@@ -165,7 +165,7 @@ Dans [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], création d’un c
 ## <a name="localissuer-required"></a>LocalIssuer requis  
  Si les clients doivent toujours utiliser un émetteur local, prenez note des éléments suivants : la sortie par défaut de Svcutil.exe entraîne la non-émission de l'émetteur local qui n'est pas utilisé si l'antépénultième service d'émission de jeton de sécurité dans la chaîne spécifie une adresse d'émetteur ou une adresse de métadonnées d'émetteur.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] définition de la <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerAddress%2A>, <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerBinding%2A>, et <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerChannelBehaviors%2A> propriétés de la <xref:System.ServiceModel.Security.IssuedTokenClientCredential> de classe, consultez [Comment : configurer un émetteur Local](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md).  
+ Pour plus d’informations sur la configuration de la <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerAddress%2A>, <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerBinding%2A>, et <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerChannelBehaviors%2A> propriétés de la <xref:System.ServiceModel.Security.IssuedTokenClientCredential> de classe, consultez [Comment : configurer un émetteur Local](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md).  
   
 ## <a name="scoped-certificates"></a>Certificats à étendue  
  Si les certificats de service doivent être spécifiés pour communiquer avec des services d'émission de jeton de sécurité, parce que la négociation de certificat n'est pas le plus souvent utilisée, ils peuvent être spécifiés à l'aide de la propriété <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A> de la classe <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>. La méthode <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.SetDefaultCertificate%2A> accepte un <xref:System.Uri> et un <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> comme paramètres. Le certificat spécifié est utilisé pour communiquer avec les points de terminaison à l'URI spécifié. Vous pouvez également utiliser la méthode <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.SetScopedCertificate%2A> pour ajouter un certificat à la collection retournée par la propriété <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A>.  

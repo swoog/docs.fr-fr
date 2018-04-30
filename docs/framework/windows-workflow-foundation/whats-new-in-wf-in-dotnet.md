@@ -14,14 +14,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: fa529ddbdfa05ce876c99efd4a717c6136cf6686
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: d862865057f9978a0b815f3026f2ba67c87eac7d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="what39s-new-in-windows-workflow-foundation-in-net-45"></a>Ce que&#39;nouveauté dans Windows Workflow Foundation dans .NET 4.5
-Windows Workflow Foundation (WF) dans [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] introduit de nouvelles fonctionnalités, telles que de nouvelles activités, les fonctions du concepteur et les modèles de développement de flux de travail. Nombre des nouvelles fonctionnalités de workflow introduites dans [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] sont prises en charge dans le concepteur de workflow réhébergé. [!INCLUDE[crabout](../../../includes/crabout-md.md)] les nouvelles fonctionnalités qui sont prises en charge, consultez [prise en charge de nouvelles Workflow Foundation 4.5 dans le Concepteur de Workflow réhébergés](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)] migration de .NET 3.0 et 3.5 de .NET des applications de workflow à utiliser la version la plus récente, consultez [conseils de Migration](../../../docs/framework/windows-workflow-foundation/migration-guidance.md). Cette rubrique fournit une vue d'ensemble des nouvelles fonctionnalités de workflow introduites dans [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  
+Windows Workflow Foundation (WF) dans [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] introduit de nouvelles fonctionnalités, telles que de nouvelles activités, les fonctions du concepteur et les modèles de développement de flux de travail. Nombre des nouvelles fonctionnalités de workflow introduites dans [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] sont prises en charge dans le concepteur de workflow réhébergé. Pour plus d’informations sur les nouvelles fonctionnalités qui sont prises en charge, consultez [prise en charge de nouvelles Workflow Foundation 4.5 dans le Concepteur de Workflow réhébergés](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md). Pour plus d’informations sur la migration applications de workflow .NET 3.0 et 3.5 de .NET à utiliser la version la plus récente, consultez [conseils de Migration](../../../docs/framework/windows-workflow-foundation/migration-guidance.md). Cette rubrique fournit une vue d'ensemble des nouvelles fonctionnalités de workflow introduites dans [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  
   
 > [!WARNING]
 >  Les nouvelles fonctionnalités de Windows Workflow Foundation intégrées dans [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ne sont pas disponibles pour les projets qui ciblent des versions antérieures du framework. Si un projet qui cible [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] est reciblé vers une version antérieure du .NET Framework, plusieurs problèmes peuvent se produire.  
@@ -158,7 +158,7 @@ Windows Workflow Foundation (WF) dans [!INCLUDE[net_v45](../../../includes/net-v
   
  Les expressions C# sont validées au moment de la conception. Les erreurs dans les expressions C# sont marquées avec un soulignement ondulé rouge.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] Les expressions c#, consultez [Expressions c#](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md).  
+ Pour plus d’informations sur les expressions c#, consultez [Expressions c#](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md).  
   
 ###  <a name="BKMK_Visibility"></a> Davantage de contrôle de la visibilité de barre de shell et l’en-tête des éléments  
  Dans un concepteur réhébergé, certains des contrôles d'interface utilisateur standard peuvent ne pas avoir de signification pour un workflow donné, et peuvent être désactivés. Dans le [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], cette personnalisation est prise en charge uniquement par la barre de shell en bas du concepteur. Dans [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], la visibilité des éléments d'en-tête de shell en haut du concepteur peut être ajustée en affectant à <xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A> la valeur <xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility> appropriée.  

@@ -1,13 +1,13 @@
 ---
 title: Vue d'ensemble des annotations
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,22 +17,22 @@ helpviewer_keywords:
 - documents [WPF], annotations
 - sticky notes [WPF]
 ms.assetid: 716bf474-29bd-4c74-84a4-8e0744bdad62
-caps.latest.revision: 
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1f3ac3ce66d944934724bef1b69307030ec813e2
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: dcc881421e1a6960ab1ab9760ec2cd18a4c77c36
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="annotations-overview"></a>Vue d'ensemble des annotations
 Écrire des notes ou des commentaires sur des documents papier est une activité si banale que nous pensons qu’elle va de soi. Ces notes ou commentaires sont des « annotations » que nous ajoutons à un document pour marquer des informations ou mettre en évidence des éléments présentant un intérêt particulier afin de nous y référer plus tard. Bien que la rédaction de notes sur des documents imprimés soit une tâche simple et banale, la possibilité d’ajouter des commentaires personnels à des documents électroniques, quand cette fonctionnalité est disponible, est généralement très limitée.  
   
- Cette rubrique passe en revue plusieurs types d’annotation courants, en particulier les pense-bêtes et les mises en surbrillance. Elle explique en quoi [!INCLUDE[TLA#tla_caf](../../../../includes/tlasharptla-caf-md.md)] simplifie ces types d’annotation dans les applications via les contrôles d’affichage de document [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)].  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]incluent des contrôles d’affichage de document qui prennent en charge les annotations <xref:System.Windows.Controls.FlowDocumentReader> et <xref:System.Windows.Controls.FlowDocumentScrollViewer>, ainsi que les contrôles dérivés de <xref:System.Windows.Controls.Primitives.DocumentViewerBase> comme <xref:System.Windows.Controls.DocumentViewer> et <xref:System.Windows.Controls.FlowDocumentPageViewer>.  
+ Cette rubrique passe en revue plusieurs types d’annotations, en particulier les pense-bêtes et surbrillances, courants et explique comment les [!INCLUDE[TLA#tla_caf](../../../../includes/tlasharptla-caf-md.md)] facilite ces types d’annotations dans les applications via le document de Windows Presentation Foundation (WPF) contrôles d’affichage.  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] incluent des contrôles d’affichage de document qui prennent en charge les annotations <xref:System.Windows.Controls.FlowDocumentReader> et <xref:System.Windows.Controls.FlowDocumentScrollViewer>, ainsi que les contrôles dérivés de <xref:System.Windows.Controls.Primitives.DocumentViewerBase> comme <xref:System.Windows.Controls.DocumentViewer> et <xref:System.Windows.Controls.FlowDocumentPageViewer>.  
   
   
 <a name="caf1_type_stickynotes"></a>   

@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: fb9f542d931f5febc2c04d1b0e093cc20f487c57
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 4734407868d9dae2acc422c0f07aad57d42d4566
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="denial-of-service"></a>Refus de service
 Un déni de service se produit lorsqu'un système est saturé au point que le traitement des messages est impossible ou extrêmement lent.  
@@ -57,7 +57,7 @@ Un déni de service se produit lorsqu'un système est saturé au point que le tr
 ## <a name="auditing-event-log-can-be-filled"></a>Risque de saturation du journal des événements d'audit  
  Si un utilisateur malveillant se rend compte que l'audit est activé, l'intrus peut envoyer des messages non valides pour forcer l'écriture d'entrées d'audit. Si le journal d'audit se remplit de cette manière, le système d'audit échoue.  
   
- Pour minimiser ce problème, affectez à la propriété <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> la valeur `true` et utilisez les propriétés de l'Observateur d'événements pour contrôler le comportement d'audit. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] à l’aide de l’Observateur d’événements pour afficher et gérer les journaux des événements, consultez [Observateur d’événements](http://go.microsoft.com/fwlink/?LinkId=186123). Pour plus d’informations, consultez [audit](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
+ Pour minimiser ce problème, affectez à la propriété <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> la valeur `true` et utilisez les propriétés de l'Observateur d'événements pour contrôler le comportement d'audit. Pour plus d’informations sur l’utilisation de l’Observateur d’événements pour afficher et gérer les journaux des événements, consultez [Observateur d’événements](http://go.microsoft.com/fwlink/?LinkId=186123). Pour plus d’informations, consultez [audit](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
   
 ## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-hangs"></a>Une implémentation non valide de la stratégie IAuthorizationPolicy peut provoquer le blocage du service  
  L'appel de la méthode <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> sur une implémentation défaillante de l'interface <xref:System.IdentityModel.Policy.IAuthorizationPolicy> peut provoquer le blocage du service.  
@@ -74,7 +74,7 @@ Un déni de service se produit lorsqu'un système est saturé au point que le tr
   
  Pour atténuer ce risque, référence le certificat exact à utiliser à l’aide d’un critère de recherche plus précis sur le [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md). Par exemple, utilisez l'option <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> et spécifiez le certificat par son empreinte numérique unique (hachage).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] la fonctionnalité d’inscription automatique, consultez [inscription automatique des certificats dans Windows Server 2003](http://go.microsoft.com/fwlink/?LinkId=95166).  
+ Pour plus d’informations sur la fonctionnalité d’inscription automatique, consultez [inscription automatique des certificats dans Windows Server 2003](http://go.microsoft.com/fwlink/?LinkId=95166).  
   
 ## <a name="last-of-multiple-alternative-subject-names-used-for-authorization"></a>Dernier des noms de sujet de remplacement utilisés pour l'autorisation  
  Dans les rares cas où un certificat X.509 contient plusieurs noms de sujet de remplacement, et que vous autorisez l'utilisation du nom de sujet de remplacement, l'autorisation peut échouer.  
@@ -88,7 +88,7 @@ Un déni de service se produit lorsqu'un système est saturé au point que le tr
  Lorsqu'un client est correctement authentifié par un service et qu'une session sécurisée est établie avec ce dernier, le service effectue le suivi de la session jusqu'à ce qu'elle soit annulée par le client ou qu'elle expire. Chaque session établie est décomptée du nombre maximal de sessions simultanées actives pour un service. Lorsque cette limite est atteinte, les clients qui essaient de créer une session avec ce service sont rejetés jusqu'à ce qu'une ou plusieurs sessions actives expirent ou soient annulées par un client. Un client peut ouvrir plusieurs sessions sur un service, chacune de ces sessions étant décomptée du nombre limite.  
   
 > [!NOTE]
->  Lorsque vous utilisez des sessions avec état, le paragraphe précédent ne s’applique pas. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] les sessions avec état, consultez [Comment : créer un jeton de contexte de sécurité pour une Session sécurisée](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
+>  Lorsque vous utilisez des sessions avec état, le paragraphe précédent ne s’applique pas. Pour plus d’informations sur les sessions avec état, consultez [Comment : créer un jeton de contexte de sécurité pour une Session sécurisée](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
   
  Pour atténuer ce risque, paramétrez le nombre maximal de sessions actives et la durée de vie maximale d'une session en définissant la propriété <xref:System.ServiceModel.Channels.SecurityBindingElement> de la classe <xref:System.ServiceModel.Channels.SecurityBindingElement>.  
   

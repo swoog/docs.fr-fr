@@ -10,17 +10,17 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 67ab5af9-b9d9-4300-b3b1-41abb5a1fd10
-caps.latest.revision: ''
+caps.latest.revision: 8
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e81af51be3e281faa94bcea17ff75b41341abb33
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 653013de37278f051f37fdda52e68fc3d84c2cbb
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="choosing-a-filter"></a>Choix d'un filtre
 Lors de la configuration du service de routage, il est important de sélectionner des filtres de message corrects et de les configurer pour vous permettre d'établir des correspondances exactes avec les messages que vous recevez. Si les filtres que vous sélectionnez établissent des correspondances trop générales ou ne sont pas configurés correctement, les messages sont routés de manière incorrecte. Si les filtres sont trop restrictifs, vous risquez de ne pas disposer d'itinéraires valides disponibles pour certains de vos messages.  
@@ -29,7 +29,7 @@ Lors de la configuration du service de routage, il est important de sélectionne
  Lors de la sélection des filtres utilisés par le service de routage, il est important de connaître le fonctionnement de chaque filtre, ainsi que les informations disponibles dans le cadre des messages entrants. Par exemple, si tous les messages sont reçus sur le même point de terminaison, les filtres Adresse et EndpointName sont inutiles, parce que tous les messages correspondent à ces filtres.  
   
 ### <a name="action"></a>Action  
- Le filtre Action inspecte la propriété <xref:System.ServiceModel.Channels.MessageHeaders.Action%2A>. Si le contenu de l'en-tête Action du message correspond à la valeur des données de filtre spécifiée dans la configuration du filtre, alors ce filtre retourne `true`. L’exemple suivant définit un `FilterElement` qui utilise le filtre d’Action à faire correspondre des messages avec un en-tête d’action qui contient une valeur « http://namespace/Contract/Operation/ ».  
+ Le filtre Action inspecte la propriété <xref:System.ServiceModel.Channels.MessageHeaders.Action%2A>. Si le contenu de l'en-tête Action du message correspond à la valeur des données de filtre spécifiée dans la configuration du filtre, alors ce filtre retourne `true`. L’exemple suivant définit un `FilterElement` qui utilise le filtre d’Action à faire correspondre des messages avec un en-tête d’action qui contient une valeur de «http://namespace/contract/operation/».  
   
 ```xml  
 <filter name="action1" filterType="Action" filterData="http://namespace/contract/operation/" />  
@@ -144,9 +144,9 @@ XPathMessageFilter xpath1=new XPathMessageFilter("//ns:element");
   
  Ce filtre est utile si vous savez que les messages que vous recevez contiennent une valeur spécifique. Par exemple, vous hébergez deux versions du même service et savez que les messages adressés à la version la plus récente du service contiennent une valeur unique dans un en-tête personnalisé. Vous pouvez créer un filtre qui utilise XPath pour accéder à cet en-tête. Le filtre compare la valeur présente dans l'en-tête à une autre indiquée dans la configuration du filtre, afin de déterminer si le filtre correspond.  
   
- Étant donné que les requêtes XPath contiennent souvent des espaces de noms uniques, qui sont souvent des valeurs de chaîne longues ou complexes, le filtre XPath vous permet d’utiliser la table d’espace de noms pour définir des préfixes uniques pour vos espaces de noms. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] la table de l’espace de noms, consultez [filtres de Message](../../../../docs/framework/wcf/feature-details/message-filters.md).  
+ Étant donné que les requêtes XPath contiennent souvent des espaces de noms uniques, qui sont souvent des valeurs de chaîne longues ou complexes, le filtre XPath vous permet d’utiliser la table d’espace de noms pour définir des préfixes uniques pour vos espaces de noms. Pour plus d’informations sur la table de l’espace de noms, consultez [filtres de Message](../../../../docs/framework/wcf/feature-details/message-filters.md).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] conception de requêtes XPath, consultez [syntaxe XPath](http://go.microsoft.com/fwlink/?LinkId=164592).  
+ Pour plus d’informations sur la conception des requêtes XPath, consultez [syntaxe XPath](http://go.microsoft.com/fwlink/?LinkId=164592).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Filtres de message](../../../../docs/framework/wcf/feature-details/message-filters.md)  

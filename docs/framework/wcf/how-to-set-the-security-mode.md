@@ -23,18 +23,18 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 34c53389694aa48742becfd713796feb8111d888
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: bdfd273f7a541cac4f1fd8a03a976d73e997b718
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-set-the-security-mode"></a>Comment : définir le mode de sécurité
 La sécurité [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] propose trois modes de sécurité standard disponibles sur la plupart des liaisons prédéfinies : transport, message et transport avec informations d'identification de message. Il existe également deux modes supplémentaires propres à deux liaisons particulières. Il s'agit du mode « informations d'identification de transport uniquement » disponible sur la liaison <xref:System.ServiceModel.BasicHttpBinding> et du mode « les deux » disponible sur la liaison <xref:System.ServiceModel.NetMsmqBinding>. Cette rubrique traite essentiellement des trois principaux modes de sécurité : <xref:System.ServiceModel.SecurityMode.Transport>, <xref:System.ServiceModel.SecurityMode.Message> et <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>.  
   
  Remarque : toutes les liaisons prédéfinies ne prennent pas nécessairement en charge chacun de ces modes. Cette rubrique, dans laquelle le mode est défini à l'aide des classes <xref:System.ServiceModel.WSHttpBinding> et <xref:System.ServiceModel.NetTcpBinding>, illustre comment définir les modes de sécurité à l'aide d'un programme ou dans la configuration.  
   
- Pour plus d’informations, consultez [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] sécurité, consultez [vue d’ensemble de la sécurité](../../../docs/framework/wcf/feature-details/security-overview.md), [sécurisation des Services](../../../docs/framework/wcf/securing-services.md), et [sécurisation des Services et les Clients](../../../docs/framework/wcf/feature-details/securing-services-and-clients.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)] mode de transport et message, consultez [sécurité du Transport](../../../docs/framework/wcf/feature-details/transport-security.md) et [la sécurité des messages](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md).  
+ Pour plus d’informations, consultez [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] sécurité, consultez [vue d’ensemble de la sécurité](../../../docs/framework/wcf/feature-details/security-overview.md), [sécurisation des Services](../../../docs/framework/wcf/securing-services.md), et [sécurisation des Services et les Clients](../../../docs/framework/wcf/feature-details/securing-services-and-clients.md). Pour plus d’informations sur le mode de transport et le message, consultez [sécurité du Transport](../../../docs/framework/wcf/feature-details/transport-security.md) et [la sécurité des messages](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md).  
   
 ### <a name="to-set-the-security-mode-in-code"></a>Pour définir le mode de sécurité dans le code  
   

@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9f6a6a819b4667bc60ab0abb575d6fff397d67fe
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 172ef71bd3ae09e3c9f15cb0bdb48728a587605e
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-sessions"></a>Utilisation de sessions
 Dans les applications [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] , une *session* met en corrélation un groupe de messages dans une conversation. Les sessions[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] sont différentes de l'objet session disponible dans des applications [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] , prennent en charge différents comportements et sont contrôlées de différentes façons. Cette rubrique décrit les fonctionnalités activées par les sessions dans les applications [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] et comment les utiliser.  
@@ -144,7 +144,7 @@ Dans les applications [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] , une
   
  Pour obtenir des exemples, consultez [How to: Create a Service That Requires Sessions](../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md) ainsi que [Default Service Behavior](../../../docs/framework/wcf/samples/default-service-behavior.md) et [Instancing](../../../docs/framework/wcf/samples/instancing.md) .  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] les clients et les sessions, consultez [les Services de l’accès à l’aide d’un Client WCF](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md).  
+ Pour plus d’informations sur les clients et les sessions, consultez [les Services de l’accès à l’aide d’un Client WCF](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md).  
   
 ## <a name="sessions-interact-with-instancecontext-settings"></a>Sessions interagissant avec les paramètres InstanceContext  
  Il y a une interaction entre l'énumération <xref:System.ServiceModel.SessionMode> dans un contrat et la propriété <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> qui contrôle l'association entre canaux et objets de service spécifiques. Pour plus d’informations, consultez [Sessions, Instancing et concurrence](../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md).  

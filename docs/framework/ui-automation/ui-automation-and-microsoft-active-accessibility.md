@@ -21,11 +21,11 @@ ms.author: mhopkins
 manager: markl
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2028f312433e3a4cf8c90f2e6809ed29288d7819
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 581fe3272808da84fcf31667f8191f3cc6322033
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="ui-automation-and-microsoft-active-accessibility"></a>UI Automation et Microsoft Active Accessibility
 > [!NOTE]
@@ -41,7 +41,7 @@ ms.lasthandoff: 04/26/2018
   
 <a name="Support_in_Windows_Presentation_Foundation_"></a>   
 ## <a name="support-in-windows-presentation-foundation"></a>Prise en charge dans Windows Presentation Foundation  
- [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] est le nouveau modèle pour la création d’interfaces utilisateur. Les éléments[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] n’assurent pas la prise en charge native d’ [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]En revanche, ils prennent en charge [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], qui inclut la prise en charge du pontage pour les clients [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] . Seuls les clients spécifiquement écrits pour [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] peuvent tirer pleinement parti des fonctionnalités d’accessibilité de [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)], comme la prise en charge étendue pour le texte.  
+ Windows Presentation Foundation (WPF) est le nouveau modèle pour la création d’interfaces utilisateur. Les éléments[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] n’assurent pas la prise en charge native d’ [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]En revanche, ils prennent en charge [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], qui inclut la prise en charge du pontage pour les clients [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] . Seuls les clients spécifiquement écrits pour [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] peuvent tirer pleinement parti des fonctionnalités d’accessibilité de [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)], comme la prise en charge étendue pour le texte.  
   
 <a name="Servers_and_Clients_compare"></a>   
 ## <a name="servers-and-clients"></a>Serveurs et clients  

@@ -1,27 +1,29 @@
 ---
-title: "Procédure : implémenter un proxy de découverte"
-ms.custom: 
+title: 'Procédure : implémenter un proxy de découverte'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 78d70e0a-f6c3-4cfb-a7ca-f66ebddadde0
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 25db6b46758e11c194952fbca03286891a5914d9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2e984a55137aec0042f8de0d69aa1310ed43a0df
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-implement-a-discovery-proxy"></a>Procédure : implémenter un proxy de découverte
-Cette rubrique explique comment implémenter un proxy de découverte. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]la fonctionnalité de découverte dans [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], consultez [vue d’ensemble de la découverte WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md). Un proxy de découverte peut être implémenté en créant une classe qui étend la classe abstraite <xref:System.ServiceModel.Discovery.DiscoveryProxy>. Un certain nombre d'autres classes de prise en charge sont définies et utilisées dans cet exemple. `OnResolveAsyncResult`, `OnFindAsyncResult` et `AsyncResult`. Ces classes implémentent l'interface <xref:System.IAsyncResult>. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<xref:System.IAsyncResult> consultez [System.IAsyncResult interface](xref:System.IAsyncResult).
+Cette rubrique explique comment implémenter un proxy de découverte. Pour plus d’informations sur la fonctionnalité de découverte dans [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], consultez [vue d’ensemble de la découverte WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md). Un proxy de découverte peut être implémenté en créant une classe qui étend la classe abstraite <xref:System.ServiceModel.Discovery.DiscoveryProxy>. Un certain nombre d'autres classes de prise en charge sont définies et utilisées dans cet exemple. `OnResolveAsyncResult`, `OnFindAsyncResult` et `AsyncResult`. Ces classes implémentent l'interface <xref:System.IAsyncResult>. Pour plus d’informations sur <xref:System.IAsyncResult> consultez [System.IAsyncResult interface](xref:System.IAsyncResult).
   
  L'implémentation d'un proxy de découverte est divisée en trois parties principales dans cette rubrique :  
   

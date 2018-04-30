@@ -1,28 +1,28 @@
 ---
-title: "Équilibrage de charge"
-ms.custom: 
+title: Équilibrage de charge
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - load balancing [WCF]
 ms.assetid: 148e0168-c08d-4886-8769-776d0953b80f
-caps.latest.revision: 
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5874d7237608331e5d8284a4ad1cd94ba6fb3451
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fe13c4aee41cd7af188ccaea77b3c0af07603e2c
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="load-balancing"></a>Équilibrage de charge
 L'une des méthodes utilisées pour augmenter la capacité des applications [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] consiste à les monter en charge en les déployant dans une batterie de serveurs à charge équilibrée. Les applications [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] peuvent faire l'objet d'un équilibrage de charge à l'aide des techniques d'équilibrage de charge standard, dont notamment les programmes d'équilibrage de charge logicielle tels Windows Network Load Balancing ainsi que les appareils d'équilibrage de charge matérielle.  
@@ -90,7 +90,7 @@ L'une des méthodes utilisées pour augmenter la capacité des applications [!IN
 </configuration>  
 ```  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] les points de terminaison, les liaisons et les comportements par défaut, consultez [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) et [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+ Pour plus d’informations sur les points de terminaison par défaut, les liaisons et comportements, consultez [Configuration simplifiée](../../../docs/framework/wcf/simplified-configuration.md) et [simplifié la Configuration des Services WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ## <a name="load-balancing-with-the-wshttp-binding-and-the-wsdualhttp-binding"></a>Équilibrage de charge avec les liaisons WSHttp et WSDualHttp  
  <xref:System.ServiceModel.WSHttpBinding> et <xref:System.ServiceModel.WSDualHttpBinding> peuvent tous deux faire l'objet d'un équilibrage de charge à l'aide des techniques d'équilibrage de charge HTTP sous réserve que plusieurs modifications soient apportées à la configuration de liaison par défaut.  

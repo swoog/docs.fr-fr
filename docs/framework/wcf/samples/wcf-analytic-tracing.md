@@ -1,45 +1,47 @@
 ---
-title: "traçage analytique [WCF]"
-ms.custom: 
+title: traçage analytique [WCF]
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 37dea97db8816f68f0331580cfa21daed7f69914
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 57e3ee18848031bce8ffbb54d26353fe36ee1def
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wcf-analytic-tracing"></a>traçage analytique [WCF]
 Cet exemple montre comment ajouter vos propres événements de suivi au flux de données des traces analytiques que [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] écrit dans le suivi des événements pour Windows dans [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Les traces analytiques permettent d'obtenir facilement une visibilité de vos services sans que cela se traduise par une lourde pénalité en termes de performances. Cet exemple montre comment utiliser les API <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> pour écrire des événements qui s'intègrent aux services [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] les API <xref:System.Diagnostics.Eventing?displayProperty=nameWithType>, consultez <xref:System.Diagnostics.Eventing?displayProperty=nameWithType>.  
+ Pour plus d’informations sur la <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> API, consultez <xref:System.Diagnostics.Eventing?displayProperty=nameWithType>.  
   
  Pour en savoir plus sur le suivi d’événements dans Windows, consultez [Améliorez le débogage et l’optimisation des performances avec ETW](http://go.microsoft.com/fwlink/?LinkId=166488).  
   
 ## <a name="disposing-eventprovider"></a>Suppression d'EventProvider  
- Cet exemple utilise la classe <xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType>, qui implémente <xref:System.IDisposable?displayProperty=nameWithType>. Lors de l'implémentation du suivi pour un service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], il est probable que vous utilisiez les ressources de <xref:System.Diagnostics.Eventing.EventProvider> pour la durée de vie du service. Pour cette raison, et à des fins de lisibilité, cet exemple ne supprime jamais l'<xref:System.Diagnostics.Eventing.EventProvider> inclus dans un wrapper. Si pour une raison ou une autre, les exigences de votre service diffèrent en matière de suivi et que vous devez supprimer cette ressource, modifiez cet exemple conformément aux meilleures pratiques de suppression de ressources non managées. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]suppression des ressources non managées, consultez [implémentant une méthode de suppression](http://go.microsoft.com/fwlink/?LinkId=166436).  
+ Cet exemple utilise la classe <xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType>, qui implémente <xref:System.IDisposable?displayProperty=nameWithType>. Lors de l'implémentation du suivi pour un service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], il est probable que vous utilisiez les ressources de <xref:System.Diagnostics.Eventing.EventProvider> pour la durée de vie du service. Pour cette raison, et à des fins de lisibilité, cet exemple ne supprime jamais l'<xref:System.Diagnostics.Eventing.EventProvider> inclus dans un wrapper. Si pour une raison ou une autre, les exigences de votre service diffèrent en matière de suivi et que vous devez supprimer cette ressource, modifiez cet exemple conformément aux meilleures pratiques de suppression de ressources non managées. Pour plus d’informations sur la disposition des ressources non managées, consultez [implémentant une méthode de suppression](http://go.microsoft.com/fwlink/?LinkId=166436).  
   
 ## <a name="self-hosting-vs-web-hosting"></a>Auto-hébergement et Hébergement Web  
- Pour les services hébergés sur le Web, les traces analytiques de WCF fournissent un champ nommé « HostReference », qui est utilisé pour identifier le service qui émet les traces. Les traces utilisateur extensibles peuvent participer à ce modèle et cet exemple en illustre les meilleures pratiques. Le format d’un hôte Web référencer lorsque le canal ' &#124;' caractères apparaît réellement dans la boîte chaîne peut prendre l’une des opérations suivantes :  
+ Pour les services hébergés sur le Web, les traces analytiques de WCF fournissent un champ nommé « HostReference », qui est utilisé pour identifier le service qui émet les traces. Les traces utilisateur extensibles peuvent participer à ce modèle et cet exemple en illustre les meilleures pratiques. Le format d’un hôte Web référencer lorsque le canal '&#124;' caractère apparaît réellement dans la boîte chaîne peut prendre l’une des opérations suivantes :  
   
 -   Si l'application ne se situe pas à la racine.  
   
-     \<SiteName >\<ApplicationVirtualPath > &#124;\< ServiceVirtualPath > &#124; \<ServiceName >  
+     \<SiteName >\<ApplicationVirtualPath >&#124;\<ServiceVirtualPath >&#124;\<ServiceName >  
   
 -   Si l'application se situe à la racine.  
   
-     \<SiteName > &#124; \<ServiceVirtualPath > &#124; \<ServiceName >  
+     \<SiteName >&#124;\<ServiceVirtualPath >&#124;\<ServiceName >  
   
  Pour les services auto-hébergés, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]de traces analytiques ne remplissent pas le champ « HostReference ». La classe `WCFUserEventProvider` de cet exemple se comporte de manière cohérente lorsqu'elle est utilisée par un service auto-hébergé.  
   

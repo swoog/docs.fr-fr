@@ -1,24 +1,26 @@
 ---
 title: Service de routage
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ca7c216a-5141-4132-8193-102c181d2eba
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a7214a14b11ae1f91906c8d2140bc82836988390
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8ff2a99bc06ab0de2aedce98ea029f484e47053f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="routing-service"></a>Service de routage
 Le service de routage est un intermédiaire SOAP générique qui agit en tant que routeur de messages. La fonctionnalité principale du service de routage est la possibilité de router des messages en fonction du contenu des messages ; un message peut ainsi être envoyé à un point de terminaison client en fonction d'une valeur située à l'intérieur du message, soit dans l'en-tête, soit dans le corps du message.  
@@ -98,12 +100,12 @@ Le service de routage est un intermédiaire SOAP générique qui agit en tant qu
   
  Si le service de routage rencontre une exception <xref:System.ServiceModel.CommunicationException> en essayant d'envoyer un message, la gestion des erreurs intervient.  Ces exceptions indiquent en général qu'un problème s'est produit lors de la tentative de communication avec le point de terminaison client défini ; il peut s'agir d'une exception <xref:System.ServiceModel.EndpointNotFoundException>, <xref:System.ServiceModel.ServerTooBusyException> ou <xref:System.ServiceModel.CommunicationObjectFaultedException>.  Le code de gestion des erreurs intercepte également et tentez de nouvelle tentative d’envoi quand un **TimeoutException** se produit, qui est une autre exception courante non dérivée de **CommunicationException**.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]gestion des erreurs, consultez [Introduction de routage](../../../../docs/framework/wcf/feature-details/routing-introduction.md).  
+ Pour plus d’informations sur la gestion des erreurs, consultez [Introduction de routage](../../../../docs/framework/wcf/feature-details/routing-introduction.md).  
   
 ## <a name="backup-endpoints"></a>Points de terminaison de sauvegarde  
  En plus des points de terminaison clients de destination associés à chaque définition de filtre dans la table de filtres, vous pouvez également créer une liste de points de terminaison de sauvegarde, vers lesquels le message sera routé en cas d'échec de transmission. Si une erreur se produit et qu'une liste de sauvegarde est définie pour l'entrée de filtre, le service de routage essaie d'envoyer le message au premier point de terminaison défini dans la liste. Si cette tentative de transmission échoue, le service essaie le point de terminaison suivant et continue ce processus jusqu'à ce que la tentative de transmission réussisse, retourne une erreur non liée à la transmission ou que tous les points de terminaison de la liste de sauvegarde aient retourné une erreur de transmission.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]points de terminaison de sauvegarde, consultez [Introduction de routage](../../../../docs/framework/wcf/feature-details/routing-introduction.md) et [filtres de Message](../../../../docs/framework/wcf/feature-details/message-filters.md).  
+ Pour plus d’informations sur les points de terminaison de sauvegarde, consultez [Introduction de routage](../../../../docs/framework/wcf/feature-details/routing-introduction.md) et [filtres de Message](../../../../docs/framework/wcf/feature-details/message-filters.md).  
   
 ## <a name="streaming"></a>Diffusion en continu  
  Le service de routage peut diffuser en continu les messages si vous définissez la liaison qui prend en charge la diffusion en continu.  Toutefois, dans certains cas, les messages doivent être mis en mémoire tampon :  

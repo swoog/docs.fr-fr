@@ -16,14 +16,14 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9506e791cf4da947eaadaff1669e5f2f975431c8
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 068615510d7e1d73ae260441ccef6536ee6ff317
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="secure-sessions"></a>Sessions sécurisées
-Les sessions fiables sont l'une des fonctionnalités de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ; elles garantissent que les messages sont reçus dans l'ordre dans lequel ils ont été envoyés. Les rubriques de cette section traitent des implications de sécurité à considérer lors de la création d'une session fiable. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] les sessions fiables, consultez [à l’aide de Sessions](../../../../docs/framework/wcf/using-sessions.md).  
+Les sessions fiables sont l'une des fonctionnalités de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ; elles garantissent que les messages sont reçus dans l'ordre dans lequel ils ont été envoyés. Les rubriques de cette section traitent des implications de sécurité à considérer lors de la création d'une session fiable. Pour plus d’informations sur les sessions fiables, consultez [à l’aide de Sessions](../../../../docs/framework/wcf/using-sessions.md).  
   
 > [!NOTE]
 >  Lorsque l’emprunt d’identité est requis sur Windows XP, utilisez une session sécurisée sans jeton de contexte de sécurité avec état (SCT). Lorsque des SCT avec état sont utilisés avec l'emprunt d'identité, une <xref:System.InvalidOperationException> est levée. Pour plus d’informations, consultez [scénarios non pris en charge](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md).  

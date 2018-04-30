@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7b44a1587c704b0995821c7126f0264695861558
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: c0ac6cec6a86b431d71534880f1a883d648c4332
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wcf-discovery-overview"></a>Vue d'ensemble de la découverte WCF
 Les API de découverte offrent un modèle de programmation unifié pour la publication et la découverte dynamiques de services Web, à l'aide du protocole WS-Discovery. Ces API permettent aux services de se publier eux-mêmes et permettent aux clients de rechercher des services publiés. Une fois un service rendu détectable, le service a la capacité d'envoyer des messages d'annonce, ainsi que d'écouter des demandes de découverte et d'y répondre. Les services détectables peuvent envoyer des messages de type Hello pour annoncer leur arrivée sur un réseau et des messages de type Bye pour annoncer leur départ d'un réseau. Pour trouver un service, les clients envoient une demande `Probe` qui contient des critères spécifiques tels que le type de contrat de service, les mots clés et l'étendue sur le réseau. Les services reçoivent la demande `Probe` et déterminent s'ils correspondent aux critères. Si un service correspond, il répond en renvoyant au client un message `ProbeMatch`, avec les informations nécessaires pour contacter le service. Les clients peuvent également envoyer des demandes `Resolve` qui leur permettent de trouver des services dont l'adresse du point de terminaison risque d'avoir été modifiée. Les services correspondants répondent aux demandes `Resolve` en renvoyant un message `ResolveMatch` au client.  
@@ -159,7 +159,7 @@ class Client
 ```  
   
 ## <a name="discovery-and-message-level-security"></a>Découverte et sécurité de niveau message  
- Lors de l'utilisation de la sécurité de niveau message, il est nécessaire de spécifier un objet <xref:System.ServiceModel.EndpointIdentity> sur le point de terminaison de découverte du service et un objet <xref:System.ServiceModel.EndpointIdentity> correspondant sur le point de terminaison de découverte client. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] sécurité au niveau du message, consultez [la sécurité des messages](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md).  
+ Lors de l'utilisation de la sécurité de niveau message, il est nécessaire de spécifier un objet <xref:System.ServiceModel.EndpointIdentity> sur le point de terminaison de découverte du service et un objet <xref:System.ServiceModel.EndpointIdentity> correspondant sur le point de terminaison de découverte client. Pour plus d’informations sur la sécurité de niveau message, consultez [la sécurité des messages](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md).  
   
 ## <a name="discovery-and-web-hosted-services"></a>Services de découverte et hébergés Web  
  Pour que les services WCF soient détectables, ils doivent être en cours d'exécution. Les services WCF hébergés sous IIS ou WAS ne sont pas exécutés tant que IIS/WAS ne reçoit pas de message lié pour le service, ainsi, ils ne sont pas détectables par défaut.  Il existe deux options pour rendre les services hébergés Web détectables :  
@@ -168,9 +168,9 @@ class Client
   
 2.  Utiliser un proxy de découverte pour communiquer pour le compte du service  
   
- Windows Server AppFabric possède une fonction de démarrage automatique qui permet de démarrer un service avant de recevoir des messages. Lorsque cette fonction de démarrage automatique est définie, un service hébergé IIS/WAS peut être configuré pour être détecté. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] la fonctionnalité de démarrage automatique, voir [fonctionnalité de démarrage automatique de Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkId=205545). En plus de l’activation de la fonctionnalité de démarrage automatique, vous devez configurer le service pour la découverte. Pour plus d’informations, consultez [Comment : ajouter par programmation de découverte pour un Service WCF et un Client](../../../../docs/framework/wcf/feature-details/how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)[découverte de configuration dans un fichier de Configuration](../../../../docs/framework/wcf/feature-details/configuring-discovery-in-a-configuration-file.md).  
+ Windows Server AppFabric possède une fonction de démarrage automatique qui permet de démarrer un service avant de recevoir des messages. Lorsque cette fonction de démarrage automatique est définie, un service hébergé IIS/WAS peut être configuré pour être détecté. Pour plus d’informations sur la fonctionnalité de démarrage automatique, voir [fonctionnalité de démarrage automatique de Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkId=205545). En plus de l’activation de la fonctionnalité de démarrage automatique, vous devez configurer le service pour la découverte. Pour plus d’informations, consultez [Comment : ajouter par programmation de découverte pour un Service WCF et un Client](../../../../docs/framework/wcf/feature-details/how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)[découverte de configuration dans un fichier de Configuration](../../../../docs/framework/wcf/feature-details/configuring-discovery-in-a-configuration-file.md).  
   
- Un proxy de découverte peut être utilisé pour communiquer pour le compte du service WCF lorsque le service n'est pas exécuté. Le proxy peut écouter la sonde ou résoudre des messages et répondre au client. Le client peut ensuite envoyer des messages directement au service. Lorsque le client envoie un message au service, il est instancié pour répondre au message. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] l’implémentation d’un proxy de découverte voir, [mise en œuvre d’un Proxy de découverte](../../../../docs/framework/wcf/feature-details/implementing-a-discovery-proxy.md).  
+ Un proxy de découverte peut être utilisé pour communiquer pour le compte du service WCF lorsque le service n'est pas exécuté. Le proxy peut écouter la sonde ou résoudre des messages et répondre au client. Le client peut ensuite envoyer des messages directement au service. Lorsque le client envoie un message au service, il est instancié pour répondre au message. Pour plus d’informations sur l’implémentation d’une découverte, voir proxy [mise en œuvre d’un Proxy de découverte](../../../../docs/framework/wcf/feature-details/implementing-a-discovery-proxy.md).  
   
 > [!NOTE]
 >  Pour la découverte WCF fonctionne correctement, toutes les cartes réseau (contrôleur d’Interface réseau) ne doivent avoir 1 adresse IP.

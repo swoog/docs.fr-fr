@@ -1,27 +1,29 @@
 ---
 title: "Procédure : remplacer la réservation d'URL WCF par une réservation restreinte"
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2754d223-79fc-4e2b-a6ce-989889f2abfa
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e4cfae36dfcb65dfd93dfc4fb1d6b64ba01e1b11
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b1f17a5c21888a9fc778d9649f62478d43ba0e86
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation"></a>Procédure : remplacer la réservation d'URL WCF par une réservation restreinte
-Une réservation d'URL vous permet de limiter les personnes qui reçoivent les messages d'une URL ou d'un jeu d'URL. Une réservation se compose d'un modèle d'URL, d'une liste de contrôle d'accès (ACL) et d'un jeu d'indicateurs. Le modèle d'URL définit les URL affectées par la réservation. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]mode de traitement des modèles d’URL, consultez [le routage des demandes entrantes](http://go.microsoft.com/fwlink/?LinkId=136764). L'ACL contrôle quel utilisateur ou groupe d'utilisateurs est autorisé à recevoir des messages en provenance des URL spécifiées. Les indicateurs spécifient si la réservation consiste à donner directement à un utilisateur ou à un groupe l'autorisation d'écouter l'URL ou à déléguer l'autorisation d'écouter à d'autres processus.  
+Une réservation d'URL vous permet de limiter les personnes qui reçoivent les messages d'une URL ou d'un jeu d'URL. Une réservation se compose d'un modèle d'URL, d'une liste de contrôle d'accès (ACL) et d'un jeu d'indicateurs. Le modèle d'URL définit les URL affectées par la réservation. Pour plus d’informations sur le traitement des modèles d’URL, consultez [le routage des demandes entrantes](http://go.microsoft.com/fwlink/?LinkId=136764). L'ACL contrôle quel utilisateur ou groupe d'utilisateurs est autorisé à recevoir des messages en provenance des URL spécifiées. Les indicateurs spécifient si la réservation consiste à donner directement à un utilisateur ou à un groupe l'autorisation d'écouter l'URL ou à déléguer l'autorisation d'écouter à d'autres processus.  
   
  Dans le cadre de la configuration du système d'exploitation par défaut, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] crée une réservation accessible globalement pour le port 80, afin de permettre à tous les utilisateurs d'exécuter des applications qui utilisent une double liaison HTTP pour la communication en duplex. Étant donné que l'ACL sur cette réservation concerne tous les utilisateurs, les administrateurs ne peuvent pas explicitement accorder ou refuser l'autorisation d'écouter une URL ou un jeu d'URL. Cette rubrique explique comment supprimer cette réservation et comment la recréer avec une ACL restreinte.  
   
@@ -35,13 +37,13 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
             SDDL: D:(A;;GX;;;WD)  
 ```  
   
- La réservation se compose d'un modèle d'URL utilisé lorsqu'une application [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilise une double liaison HTTP pour la communication en duplex. Les URL de cette forme sont utilisées pour qu'un service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] renvoie des messages au client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] lors de la communication sur une double liaison HTTP. Tous les utilisateurs sont autorisés à écouter l'URL, mais pas à déléguer l'écoute à un autre processus. Enfin, l'ACL est décrite en langage SDDL (Security Descriptor Definition Language). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]SSDL, consultez [SSDL](http://go.microsoft.com/fwlink/?LinkId=136789)  
+ La réservation se compose d'un modèle d'URL utilisé lorsqu'une application [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilise une double liaison HTTP pour la communication en duplex. Les URL de cette forme sont utilisées pour qu'un service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] renvoie des messages au client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] lors de la communication sur une double liaison HTTP. Tous les utilisateurs sont autorisés à écouter l'URL, mais pas à déléguer l'écoute à un autre processus. Enfin, l'ACL est décrite en langage SDDL (Security Descriptor Definition Language). Pour plus d’informations sur le langage SSDL, consultez [SSDL](http://go.microsoft.com/fwlink/?LinkId=136789)  
   
 ### <a name="to-delete-the-wcf-url-reservation"></a>Pour supprimer la réservation d'URL WCF  
   
 1.  Cliquez sur **Démarrer**, pointez sur **tous les programmes**, cliquez sur **Accessoires**, avec le bouton droit **invite de commandes** et cliquez sur **d’identification Administrateur** dans le menu contextuel qui s’affiche. Cliquez sur **continuer** dans la fenêtre de contrôle de compte d’utilisateur (UAC) qui peut demander des autorisations pour continuer.  
   
-2.  Tapez dans **netsh http delete urlacl url = http : / / + :80/Temporary_Listen_Addresses/** dans la fenêtre d’invite de commandes.  
+2.  Tapez dans **netsh http delete urlacl url =http://+:80/Temporary_Listen_Addresses/**  dans la fenêtre d’invite de commandes.  
   
 3.  Si la réservation est supprimée avec succès, le message suivant s'affiche. **Réservation d’URL a été supprimée**  
   
@@ -66,6 +68,6 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
   
 1.  Cliquez sur **Démarrer**, pointez sur **tous les programmes**, cliquez sur **Accessoires**, avec le bouton droit **invite de commandes** et cliquez sur **d’identification Administrateur** dans le menu contextuel qui s’affiche. Cliquez sur **continuer** dans la fenêtre de contrôle de compte d’utilisateur (UAC) qui peut demander des autorisations pour continuer.  
   
-2.  Tapez dans **netsh http ajouter urlacl url = http : / / + : 80/Temporary_Listen_Addresses/utilisateur = «\<nom de l’ordinateur >\\< nom de groupe de sécurité\>**  à l’invite de commandes. En remplaçant  **\<nom de l’ordinateur >** avec le nom de l’ordinateur sur lequel le groupe doit être créé et  **\<nom de groupe de sécurité >** avec le nom du groupe de sécurité que vous avez créé précédemment.  
+2.  Tapez dans **netsh http ajouter les url urlacl =http://+:80/Temporary_Listen_Addresses/ utilisateur = «\<nom de l’ordinateur >\\< nom de groupe de sécurité\>**  à l’invite de commandes. En remplaçant  **\<nom de l’ordinateur >** avec le nom de l’ordinateur sur lequel le groupe doit être créé et  **\<nom de groupe de sécurité >** avec le nom du groupe de sécurité que vous avez créé précédemment.  
   
 3.  Si la réservation est créée avec succès, le message suivant s'affiche. **Réservation d’URL ajoutée avec succès**.

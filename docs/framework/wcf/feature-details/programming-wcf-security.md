@@ -21,11 +21,11 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6c8769511f608834c7539779d83977880e1d4093
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 63f5c2c61a374b92b018419c83c9429e6ad796d8
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="programming-wcf-security"></a>Programmation de la sécurité dans WCF
 Cette rubrique répertorie les principales tâches de programmation à effectuer pour créer une application [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] sécurisée. Cette rubrique couvre uniquement l’authentification, la confidentialité et l’intégrité, appelés collectivement *sécurité de transfert*. Cette rubrique ne couvre pas d’autorisation (le contrôle d’accès aux ressources ou services) ; Pour plus d’informations sur l’autorisation, consultez [autorisation](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
@@ -48,7 +48,7 @@ Cette rubrique répertorie les principales tâches de programmation à effectuer
   
     1.  `Transport`  
   
-         La sécurité de transport dépend du mécanisme utilisé par la liaison sélectionnée. Par exemple, si vous utilisez la liaison `WSHttpBinding`, la sécurité utilisée correspondra à Secure Sockets Layer (SSL) (il s'agit également de la sécurité utilisée pour le protocole HTTPS). De manière générale, le principal avantage de la sécurité de niveau transport réside dans le fait qu'elle offre un débit relativement élevé quel que soit le transport utilisé. Elle présente cependant deux inconvénients. Le premier réside dans le fait que le mécanisme de transport impose quel type d'informations d'identification doit être utilisé pour authentifier un utilisateur. Cela pose problème uniquement lorsque le service concerné doit interagir avec d'autres services exigeant un autre type d'informations d'identification. Le second réside dans le fait que la sécurité est implémentée saut par saut plutôt que de bout en bout. Cela peut poser un problème lorsque les messages circulant entre le client et le service concernés rencontrent des intermédiaires. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] que le transport à utiliser, consultez [choisir un Transport](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] à l’aide de la sécurité de transport, consultez [vue d’ensemble de sécurité de Transport](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).  
+         La sécurité de transport dépend du mécanisme utilisé par la liaison sélectionnée. Par exemple, si vous utilisez la liaison `WSHttpBinding`, la sécurité utilisée correspondra à Secure Sockets Layer (SSL) (il s'agit également de la sécurité utilisée pour le protocole HTTPS). De manière générale, le principal avantage de la sécurité de niveau transport réside dans le fait qu'elle offre un débit relativement élevé quel que soit le transport utilisé. Elle présente cependant deux inconvénients. Le premier réside dans le fait que le mécanisme de transport impose quel type d'informations d'identification doit être utilisé pour authentifier un utilisateur. Cela pose problème uniquement lorsque le service concerné doit interagir avec d'autres services exigeant un autre type d'informations d'identification. Le second réside dans le fait que la sécurité est implémentée saut par saut plutôt que de bout en bout. Cela peut poser un problème lorsque les messages circulant entre le client et le service concernés rencontrent des intermédiaires. Pour plus d’informations sur le transport à utiliser, consultez [choisir un Transport](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md). Pour plus d’informations sur l’utilisation de la sécurité de transport, consultez [vue d’ensemble de sécurité de Transport](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).  
   
     2.  `Message`  
   

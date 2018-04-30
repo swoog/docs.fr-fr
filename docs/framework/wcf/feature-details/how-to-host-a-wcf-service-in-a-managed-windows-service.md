@@ -1,27 +1,29 @@
 ---
-title: "Comment : héberger un service WCF dans un service Windows managé"
-ms.custom: 
+title: 'Comment : héberger un service WCF dans un service Windows managé'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8e37363b-4dad-4fb6-907f-73c30fac1d9a
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f4b2c8daa176ef1f9aef24cac3125d59fcc02fa9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: aab9780a0d40ab71710d454deb3144219557450f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>Comment : héberger un service WCF dans un service Windows managé
 Cette rubrique décrit les étapes de base requises pour créer un service [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] hébergé par un service Windows. Le scénario est activé par le service Windows managé qui héberge l'option de service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] à durée d'exécution longue en dehors des services IIS (Internet Information Services) dans un environnement sécurisé qui n'est pas activé pour les messages. La durée de vie du service est contrôlée par le système d'exploitation. Cette option d'hébergement est disponible dans toutes les versions de Windows.  
@@ -122,7 +124,7 @@ Cette rubrique décrit les étapes de base requises pour créer un service [!INC
   
      Cliquez avec le bouton droit sur le fichier App.config dans le **l’Explorateur de solutions** et sélectionnez **propriétés**. Sous **copier dans le répertoire de sortie** sélectionnez **Copier si plus récent**.  
   
-     L'exemple spécifie explicitement les points de terminaison dans le fichier de configuration. Si vous n'ajoutez pas de points de terminaison au service, le runtime ajoute les points de terminaison par défaut. Dans cet exemple, étant donné que le service a un <xref:System.ServiceModel.Description.ServiceMetadataBehavior> défini sur la valeur `true`, la publication des métadonnées est également activée pour votre service. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]points de terminaison par défaut, les liaisons et comportements, consultez [Configuration simplifiée](../../../../docs/framework/wcf/simplified-configuration.md) et [simplifié la Configuration des Services WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+     L'exemple spécifie explicitement les points de terminaison dans le fichier de configuration. Si vous n'ajoutez pas de points de terminaison au service, le runtime ajoute les points de terminaison par défaut. Dans cet exemple, étant donné que le service a un <xref:System.ServiceModel.Description.ServiceMetadataBehavior> défini sur la valeur `true`, la publication des métadonnées est également activée pour votre service. Pour plus d’informations sur les points de terminaison par défaut, les liaisons et comportements, consultez [Configuration simplifiée](../../../../docs/framework/wcf/simplified-configuration.md) et [simplifié la Configuration des Services WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ### <a name="install-and-run-the-service"></a>Démarrez et exécutez le service.  
   

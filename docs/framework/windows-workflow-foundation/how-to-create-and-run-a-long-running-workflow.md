@@ -17,11 +17,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 10ca88533297e56d48b73b6368c2e8457380f543
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: c7776c9155ef2c2c5c4ea804285cd67e995ef119
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-and-run-a-long-running-workflow"></a>Procédure : créer et exécuter un workflow de longue durée
 Une des fonctionnalités centrales de Windows Workflow Foundation (WF) est la capacité du runtime pour rendre persistant et décharger les workflows inactifs dans une base de données. Les étapes de [Comment : exécuter un Workflow](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md) démontré les principes fondamentaux de l’hébergement de flux de travail à l’aide d’une application console. Des exemples de démarrage de workflow, gestionnaires de cycle de vie de workflow et de reprise des signets ont été donnés. Pour illustrer la persistance de workflow efficacement, un hôte de workflow plus complexe est nécessaire, prenant en charge le démarrage et la reprise de plusieurs instances de workflow. Cette étape du didacticiel explique comment créer une application hôte de formulaire Windows qui prend en charge le démarrage et la reprise de plusieurs instances de workflow, la persistance de workflow, et constitue une base pour les fonctionnalités avancées telles que le suivi et le versioning qui sont expliquées dans les étapes suivantes du didacticiel.  
@@ -703,7 +703,7 @@ Une des fonctionnalités centrales de Windows Workflow Foundation (WF) est la ca
     ```  
   
 ###  <a name="BKMK_WorkflowVersionMap"></a> Pour activer le démarrage et la reprise de plusieurs types de flux de travail  
- Afin de reprendre une instance de workflow, l'hôte doit fournir la définition du workflow. Dans ce didacticiel il existe trois types de workflow, et les étapes suivantes présentent plusieurs versions de ces types. `WorkflowIdentity` offre un moyen pour une application hôte d'associer les informations d'identification à une instance persistante de workflow. Les étapes de cette section expliquent comment créer une classe utilitaire pour assister le mappage de l'identité de workflow d'une instance persistante de workflow à la définition correspondante de workflow. [!INCLUDE[crabout](../../../includes/crabout-md.md)] `WorkflowIdentity` et le contrôle de version, consultez [à l’aide de WorkflowIdentity et du Versioning](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md).  
+ Afin de reprendre une instance de workflow, l'hôte doit fournir la définition du workflow. Dans ce didacticiel il existe trois types de workflow, et les étapes suivantes présentent plusieurs versions de ces types. `WorkflowIdentity` offre un moyen pour une application hôte d'associer les informations d'identification à une instance persistante de workflow. Les étapes de cette section expliquent comment créer une classe utilitaire pour assister le mappage de l'identité de workflow d'une instance persistante de workflow à la définition correspondante de workflow. Pour plus d’informations sur `WorkflowIdentity` et le contrôle de version, consultez [à l’aide de WorkflowIdentity et du Versioning](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md).  
   
 1.  Avec le bouton droit **NumberGuessWorkflowHost** dans **l’Explorateur de solutions** et choisissez **ajouter**, **classe**. Type `WorkflowVersionMap` dans les **nom** , puis cliquez sur **ajouter**.  
   

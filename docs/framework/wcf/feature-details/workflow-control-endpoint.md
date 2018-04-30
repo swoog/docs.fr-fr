@@ -1,24 +1,26 @@
 ---
-title: "Point de terminaison de contrôle de workflow"
-ms.custom: 
+title: Point de terminaison de contrôle de workflow
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1b883334-1590-4fbb-b0d6-65197efe0700
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 676451ac3dce4ff9d328bf4c46809444e0e7cb7c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3cd72919acd8e6392d809f22ddd87042d00008f6
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="workflow-control-endpoint"></a>Point de terminaison de contrôle de workflow
 Le point de terminaison de contrôle de workflow permet aux développeurs d'appeler des opérations de contrôle qui permettent de contrôler à distance des instances de workflow hébergées à l'aide de <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Cette fonctionnalité peut être utilisée pour effectuer par programme des opérations de contrôle, comme interrompre, continuer et terminer.  
@@ -57,10 +59,10 @@ Le point de terminaison de contrôle de workflow permet aux développeurs d'appe
 |TransactedTerminate|Effectue l’opération Arrêter dans le cadre d’une transaction (transmise à partir du client ou créée localement). Si le système maintient l'état durable de l'instance de workflow, celle-ci doit être persistante pendant l'exécution de cette opération.|  
 |TransactedUnsuspend|Effectue l'opération Annuler l'interruption dans le cadre d'une transaction (transmise à partir du client ou créée localement). Si le système maintient l'état durable de l'instance de workflow, celle-ci doit être persistante pendant l'exécution de cette opération.|  
   
- Le contrat <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement> ne permet pas de créer une nouvelle instance de workflow, mais seulement de gérer des instances de workflow existantes. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]création à distance d’une nouvelle instance de flux de travail, consultez [extensibilité d’hôte de Service de Workflow](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md).  
+ Le contrat <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement> ne permet pas de créer une nouvelle instance de workflow, mais seulement de gérer des instances de workflow existantes. Pour plus d’informations sur la création d’une nouvelle instance de flux de travail à distance, consultez [extensibilité d’hôte de Service de Workflow](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md).  
   
 ## <a name="workflowcontrolendpoint"></a>WorkflowControlEndpoint  
- <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> est un point de terminaison standard avec un contrat fixe, <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement>. Lorsqu'il est ajouté à une instance <xref:System.ServiceModel.Activities.WorkflowServiceHost>, ce point de terminaison peut être utilisé pour envoyer des opérations de commande à n'importe quelle instance de workflow hébergée par l'instance hôte. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]points de terminaison standard, consultez [points de terminaison Standard](../../../../docs/framework/wcf/feature-details/standard-endpoints.md).  
+ <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> est un point de terminaison standard avec un contrat fixe, <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement>. Lorsqu'il est ajouté à une instance <xref:System.ServiceModel.Activities.WorkflowServiceHost>, ce point de terminaison peut être utilisé pour envoyer des opérations de commande à n'importe quelle instance de workflow hébergée par l'instance hôte. Pour plus d’informations sur les points de terminaison standard, consultez [points de terminaison Standard](../../../../docs/framework/wcf/feature-details/standard-endpoints.md).  
   
 ## <a name="workflowcontrolclient"></a>WorkflowControlClient  
  <xref:System.ServiceModel.Activities.WorkflowControlClient> est une classe qui vous permet d'envoyer des messages de contrôle à un <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> sur un <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Elle contient une méthode pour chacune des opérations prises en charge par le contrat <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement> à l'exception des opérations avec transaction. <xref:System.ServiceModel.Activities.WorkflowControlClient> utilise la transaction ambiante pour déterminer si une opération avec transaction doit être utilisée.

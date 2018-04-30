@@ -1,24 +1,26 @@
 ---
-title: "Création d'un service de workflow de longue durée"
-ms.custom: 
+title: Création d'un service de workflow de longue durée
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4c39bd04-5b8a-4562-a343-2c63c2821345
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 94a62a54fb138e394d8e9fa944e49e6526ae7152
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1cd7cc70c50ac2aa56d8cca55037769aa0b6a64a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="creating-a-long-running-workflow-service"></a>Création d'un service de workflow de longue durée
 Cette rubrique décrit comment créer un service de workflow de longue durée. Les services de workflow de longue durée peuvent s'exécuter sur de longues périodes. À un certain stade, le workflow peut devenir inactif en attendant des informations supplémentaires. Lorsque cela se produit, le workflow est rendu persistant dans une base de données SQL et supprimé de la mémoire. Une fois que les informations supplémentaires sont disponibles, l'instance de workflow est à nouveau chargée dans la mémoire et continue de s'exécuter.  Dans ce scénario, vous implémentez un système de commande très simplifié.  Le client envoie un message initial au service de workflow pour commencer la commande. Un ID de commande est retourné au client. À ce stade, le service de workflow attend un autre message du client, passe à l'état inactif et est rendu persistant dans une base de données SQL Server.  Lorsque le client envoie le message suivant pour commander un article, le service de workflow est à nouveau chargé dans la mémoire et termine le traitement de la commande. Dans l'exemple de code, il retourne une chaîne indiquant que l'article a été ajouté à la commande. L'exemple de code n'est pas censé refléter une application réelle de la technologie mais plutôt un exemple simple illustrant des services de workflow de longue durée. Cette rubrique suppose que vous savez déjà créer des projets et des solutions [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
@@ -82,7 +84,7 @@ Cette rubrique décrit comment créer un service de workflow de longue durée. L
   
          ![Jeu de propriétés de l’activité de réception](../../../../docs/framework/wcf/feature-details/media/setreceiveproperties.png "SetReceiveProperties")  
   
-         La propriété DisplayName définit le nom affiché pour l'activité Receive dans le concepteur. Les propriétés ServiceContractName et OperationName spécifient le nom du contrat de service et de l'opération implémentés par l'activité Receive. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]utilisation des contrats dans le flux de travail des services voir [à l’aide de contrats dans le Workflow](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md).  
+         La propriété DisplayName définit le nom affiché pour l'activité Receive dans le concepteur. Les propriétés ServiceContractName et OperationName spécifient le nom du contrat de service et de l'opération implémentés par l'activité Receive. Pour plus d’informations sur l’utilisation des contrats dans les services de flux de travail, consultez [à l’aide de contrats dans le Workflow](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md).  
   
     2.  Cliquez sur le **définir...**  lien dans le **ReceiveStartOrder** activité et définissez les propriétés affichées dans l’illustration suivante.  Notez que la **paramètres** case d’option est sélectionnée, un paramètre nommé `p_customerName` est lié à la `customerName` variable. Cela configure le **réception** activité qui permet de recevoir des données et de lier ces données aux variables locales.  
   
@@ -120,13 +122,13 @@ Cette rubrique décrit comment créer un service de workflow de longue durée. L
   
          ![En spécifiant les paramètres pour la deuxième reçoivent](../../../../docs/framework/wcf/feature-details/media/addreceive2parameters.png "AddReceive2Parameters")  
   
-    4.  Cliquez sur le **CorrelateOn** points de suspension bouton et entrez `orderIdHandle`. Sous **requêtes XPath**, cliquez sur la flèche déroulante et sélectionnez `p_orderId`. Cela permet de configurer la corrélation sur la deuxième activité Receive. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]corrélation, consultez [corrélation](../../../../docs/framework/wcf/feature-details/correlation.md).  
+    4.  Cliquez sur le **CorrelateOn** points de suspension bouton et entrez `orderIdHandle`. Sous **requêtes XPath**, cliquez sur la flèche déroulante et sélectionnez `p_orderId`. Cela permet de configurer la corrélation sur la deuxième activité Receive. Pour plus d’informations sur la corrélation, consultez [corrélation](../../../../docs/framework/wcf/feature-details/correlation.md).  
   
          ![Définition de la propriété CorrelatesOn](../../../../docs/framework/wcf/feature-details/media/correlateson.png "CorrelatesOn")  
   
     5.  Faites glisser et déposez une **si** activité immédiatement après le **ReceiveAddItem** activité. Cette activité agit de la même façon qu'une instruction if.  
   
-        1.  Définir le **Condition** propriété`itemId=="Zune HD" (itemId="Zune HD" for Visual Basic)`  
+        1.  Définir le **Condition** propriété `itemId=="Zune HD" (itemId="Zune HD" for Visual Basic)`  
   
         2.  Glisser- déposer un **affecter** activité dans le **puis** section et une autre dans le **Else** section définie les propriétés de la **affecter** activités, comme indiqué dans l’illustration suivante.  
   

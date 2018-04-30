@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7b051cdeebf83b34b6e503d8d9cb54a38a46a2a6
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 989ae3d70bce2a4cb374904ee6b2f30f770ccf8a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="choosing-a-transport"></a>Choix d'un transport
 Cette rubrique traite des critères permettant de choisir parmi les trois principaux transports inclus dans [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] : HTTP, TCP et canaux nommés. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] inclut également un transport de mise en file d'attente de messages (également appelé MSMQ), mais ce document n'inclut pas la mise en file d'attente de messages.  
@@ -39,7 +39,7 @@ Cette rubrique traite des critères permettant de choisir parmi les trois princi
  Cette section décrit les raisons principales motivant le choix d'un des trois principaux transports, ainsi qu'un tableau de prise de décision détaillé pour effectuer ce choix.  
   
 ### <a name="when-to-use-http-transport"></a>Quand utiliser le transport HTTP  
- HTTP est un protocole de demande/réponse entre clients et serveurs. L'application la plus courante se compose de clients de navigateur Web qui communiquent avec un serveur Web. Le client envoie une demande à un serveur qui écoute les messages de demande du client. Lorsque le serveur reçoit une demande, il renvoie une réponse qui contient l'état de la demande. Si cette demande aboutit, des données facultatives, telles qu’une page web, un message d’erreur ou autres informations, sont retournées. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] le protocole HTTP, consultez [HTTP - Hypertext Transfer Protocol](http://go.microsoft.com/fwlink/?LinkId=94858).  
+ HTTP est un protocole de demande/réponse entre clients et serveurs. L'application la plus courante se compose de clients de navigateur Web qui communiquent avec un serveur Web. Le client envoie une demande à un serveur qui écoute les messages de demande du client. Lorsque le serveur reçoit une demande, il renvoie une réponse qui contient l'état de la demande. Si cette demande aboutit, des données facultatives, telles qu’une page web, un message d’erreur ou autres informations, sont retournées. Pour plus d’informations sur le protocole HTTP, consultez [HTTP - Hypertext Transfer Protocol](http://go.microsoft.com/fwlink/?LinkId=94858).  
   
  Le protocole HTTP n'est pas basé sur une connexion ; une fois la réponse envoyée, aucun état n'est maintenu. Pour gérer des transactions de plusieurs pages, l'application doit rendre persistant tout état nécessaire.  
   

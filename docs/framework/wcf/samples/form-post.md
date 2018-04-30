@@ -1,24 +1,26 @@
 ---
 title: Publication du formulaire
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fa6f84f9-2e07-4e3c-92d0-a245308b7dff
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fe1be9177f3e811a3037377360f46f42904d5af3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 31d2ebbdb6f899390d7b3af485c1583fb80ae6dc
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="form-post"></a>Publication du formulaire
 Cet exemple montre comment étendre le modèle de programmation REST WCF pour prendre en charge de nouveaux formats de requêtes entrantes. L'exemple inclut également une implémentation de formateur capable de désérialiser une requête provenant d'une publication de formulaire HTML en type [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. L'exemple utilise en outre un modèle T4 pour retourner une page HTML, qui fournit le formulaire HTML que les utilisateurs peuvent publier sur le service REST WCF.  
@@ -38,7 +40,7 @@ Cet exemple montre comment étendre le modèle de programmation REST WCF pour pr
   
  Ce projet d’application console étend la [Basic Resource Service](../../../../docs/framework/wcf/samples/basic-resource-service.md) exemple. L'exemple Basic Resource Service montre comment exposer une ressource en utilisant le modèle de programmation REST WCF. Dans l'exemple Basic Resource Service, une ressource de collection de clients nommée « customer » est exposée de façon à ce que les clients qu'elle contient puissent être créés, récupérés, mis à jour et supprimés. L'exemple Basic Resource Service utilise uniquement les deux formats de requêtes entrantes pris en charge en natif : XML et JSON.  
   
- L'application console de cet exemple Form Post utilise le formateur personnalisé de la bibliothèque HtmlFormProcessing, qui permet aux utilisateurs de créer des clients en envoyant une requête provenant d'une publication de formulaire HTML à l'aide d'un navigateur. Il ajoute également une opération qui retourne une page HTML, laquelle inclut le formulaire à publier sur le service. Cette page HTML est générée à l'aide d'un modèle T4 prétraité, qui se compose d'un fichier .tt et d'un fichier .cs généré automatiquement. Le fichier .tt permet à un développeur d'écrire une réponse sous forme de modèle contenant des variables et des structures de contrôle. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]T4, consultez [génération d’artefacts à l’aide de modèles de texte](http://go.microsoft.com/fwlink/?LinkId=178139).  
+ L'application console de cet exemple Form Post utilise le formateur personnalisé de la bibliothèque HtmlFormProcessing, qui permet aux utilisateurs de créer des clients en envoyant une requête provenant d'une publication de formulaire HTML à l'aide d'un navigateur. Il ajoute également une opération qui retourne une page HTML, laquelle inclut le formulaire à publier sur le service. Cette page HTML est générée à l'aide d'un modèle T4 prétraité, qui se compose d'un fichier .tt et d'un fichier .cs généré automatiquement. Le fichier .tt permet à un développeur d'écrire une réponse sous forme de modèle contenant des variables et des structures de contrôle. Pour plus d’informations sur T4, consultez [génération d’artefacts à l’aide de modèles de texte](http://go.microsoft.com/fwlink/?LinkId=178139).  
   
 #### <a name="to-run-the-sample"></a>Pour exécuter l'exemple  
   

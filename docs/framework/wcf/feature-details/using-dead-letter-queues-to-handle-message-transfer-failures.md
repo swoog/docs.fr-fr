@@ -1,27 +1,29 @@
 ---
-title: "Utilisation de files d'attente de lettres mortes pour gérer des défaillances de transfert de messages"
-ms.custom: 
+title: Utilisation de files d'attente de lettres mortes pour gérer des défaillances de transfert de messages
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9e891c6a-d960-45ea-904f-1a00e202d61a
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9f10b3895fcdea0c3ab80617acd9874953b7665e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b51999b1984dedf1baf23e41c1592382849c431b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a>Utilisation de files d'attente de lettres mortes pour gérer des défaillances de transfert de messages
 La remise de messages en file d'attente peut échouer. Les messages qui ont échoué sont enregistrés dans une file d'attente de lettres mortes. L'échec de la remise peut être dû à des défaillances du réseau, une file d'attente supprimée, une file d'attente saturée, un échec d'authentification ou un retard de remise.  
@@ -54,7 +56,7 @@ La remise de messages en file d'attente peut échouer. Les messages qui ont éch
   
 -   Pour lire des messages à partir d’une file d’attente de lettres mortes personnalisée, l’URI doit être de la forme : net.msmq://localhost/private/\<*nom personnalisé-dlq*> où *nom personnalisé-dlq* est le nom personnalisé file d’attente de lettres mortes.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]comment résoudre les files d’attente, consultez [points de terminaison de Service et l’adressage de file d’attente](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
+ Pour plus d’informations sur la façon de files d’attente de l’adresse, consultez [points de terminaison de Service et l’adressage de file d’attente](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
   
  La pile [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sur le récepteur met en correspondance les adresses où le service est à l'écoute et l'adresse sur le message. Si les adresses correspondent, le message est distribué ; dans le cas contraire, le message n'est pas distribué. Cela peut provoquer des problèmes lors de la lecture à partir de la file d'attente de lettres mortes, parce que les messages dans la file d'attente de lettres mortes sont adressés en général au service et pas le service de file d'attente de lettres mortes. Par conséquent, le service qui lit à partir de la file d'attente de lettres mortes doit installer un filtre d'adresse `ServiceBehavior` qui indique à la pile de mettre en correspondance tous les messages de la file d'attente indépendamment du destinataire. En particulier, vous devez ajouter un filtre `ServiceBehavior` avec le paramètre <xref:System.ServiceModel.AddressFilterMode.Any> au service qui lit des messages à partir de la file d'attente de lettres mortes.  
   

@@ -1,24 +1,26 @@
 ---
-title: "Encodeurs personnalisés"
-ms.custom: 
+title: Encodeurs personnalisés
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f1c8223ea7900ba0a89ee2c5c48895a1782d18a0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 90926fd334eb5ccef3a63f637d5273c408c0c13e
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="custom-encoders"></a>Encodeurs personnalisés
 Cette rubrique décrit comment créer des encodeurs personnalisés.  
@@ -34,7 +36,7 @@ Cette rubrique décrit comment créer des encodeurs personnalisés.
 ## <a name="system-provided-encoders"></a>Encodeurs fournis par le système  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fournit plusieurs liaisons fournies par le système et conçues pour couvrir les scénarios d'application les plus courants. Chacune de ces liaisons associe un transport, un encodeur de message et d'autres options (la sécurité, par exemple). Cette rubrique décrit comment étendre les encodeurs de message `Text`, `Binary` et `MTOM` inclus dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], ou comment créer votre propre encodeur personnalisé. L'encodeur de message texte prend en charge un encodage XML ordinaire ainsi que des encodages SOAP. Le mode d'encodage XML brut de l'encodeur de message texte est appelé POX (Plain Old XML) afin de le distinguer de l'encodage SOAP basé sur le texte.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]les combinaisons d’éléments de liaison fournies par les liaisons fournies par le système, consultez la section correspondante de [choisir un Transport](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
+ Pour plus d’informations sur les combinaisons d’éléments de liaison fournies par les liaisons fournies par le système, consultez la section correspondante de [choisir un Transport](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
   
 ## <a name="how-to-work-with-system-provided-encoders"></a>Comment utiliser des encodeurs fournis par le système  
  Un encodage est ajouté à une liaison à l'aide d'une classe dérivée de <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>.  
@@ -45,7 +47,7 @@ Cette rubrique décrit comment créer des encodeurs personnalisés.
   
 -   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement> représente l'élément de liaison qui spécifie l'encodage de caractères et le versioning de messages utilisés pour les messages XML binaires. Il s'agit de la plus efficace des options d'encodage, mais la moins interopérable, parce qu'elle est prise en charge uniquement par les points de terminaison [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
--   <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement -->`System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`> : représente l’élément de liaison qui spécifie l’encodage de caractères et le versioning de messages utilisés pour un message à l’aide d’un encodage de (Message Transmission Optimization Mechanism). MTOM est une technologie efficace pour la transmission de données binaires dans les messages [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. L'encodeur MTOM tente de parvenir à un équilibre entre rendement et interopérabilité. L'encodage MTOM transmet la plupart du XML sous forme textuelle, mais optimise les grands blocs de données binaires en les transmettant tels quels, sans conversion en texte.  
+-   <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement --> `System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`> : représente l’élément de liaison qui spécifie l’encodage de caractères et le versioning de messages utilisés pour un message à l’aide d’un encodage de (Message Transmission Optimization Mechanism). MTOM est une technologie efficace pour la transmission de données binaires dans les messages [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. L'encodeur MTOM tente de parvenir à un équilibre entre rendement et interopérabilité. L'encodage MTOM transmet la plupart du XML sous forme textuelle, mais optimise les grands blocs de données binaires en les transmettant tels quels, sans conversion en texte.  
   
  L'élément de liaison crée un <xref:System.ServiceModel.Channels.MessageEncoderFactory> Binary, MTOM ou Text. La fabrique crée une instance <xref:System.ServiceModel.Channels.MessageEncoderFactory> Binary, MTOM ou Text. En général, il n'y a qu'une instance unique. Toutefois si des sessions sont utilisées, un encodeur différent peut être fourni à chaque session. L'encodeur Binary utilise celle-ci pour coordonner des dictionnaires dynamiques (consultez Infrastructure XML).  
   

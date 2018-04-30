@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: faeb05045049e9a53babf754f1ec058c6aac2f05
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 2c55d88eb6c3b41c703bddfd09e6224f3a6aefe2
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="fundamental-windows-workflow-concepts"></a>Concepts Windows Workflow fondamentaux
 Le développement de flux de travail dans [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] fait appel à des concepts que certains développeurs peuvent ne pas connaître. Cette rubrique en décrit quelques-uns, ainsi que la façon dont ils sont implémentés.  
@@ -63,7 +63,7 @@ Le développement de flux de travail dans [!INCLUDE[netfx_current_long](../../..
  Les activités accèdent à l'environnement d'exécution du flux de travail à l'aide de la classe dérivée <xref:System.Activities.ActivityContext> appropriée, telle que <xref:System.Activities.NativeActivityContext> ou <xref:System.Activities.CodeActivityContext>. Ils utilisent celle-ci pour la résolution d'arguments et de variables, la planification d'activités enfants et de nombreuses autres fins.  
   
 ## <a name="services"></a>Services  
- Les flux de travail offrent une façon naturelle d'implémenter les services faiblement couplés et d'y accéder, à l'aide d'activités de messagerie. Les activités de messagerie reposent sur [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] et sont le mécanisme principal utilisé pour obtenir des données dans ou hors d'un flux de travail. Vous pouvez composer des activités de messagerie ensemble pour modéliser tout type de modèle d’échange de messages que vous souhaitez. Pour plus d’informations, consultez [d’activités de messagerie](../../../docs/framework/wcf/feature-details/messaging-activities.md). Les services de flux de travail sont hébergés à l'aide de la classe <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Pour plus d’informations, consultez [d’hébergement de la vue d’ensemble des Services de Workflow](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)] services de flux de travail voir [des Services de flux de travail](../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ Les flux de travail offrent une façon naturelle d'implémenter les services faiblement couplés et d'y accéder, à l'aide d'activités de messagerie. Les activités de messagerie reposent sur [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] et sont le mécanisme principal utilisé pour obtenir des données dans ou hors d'un flux de travail. Vous pouvez composer des activités de messagerie ensemble pour modéliser tout type de modèle d’échange de messages que vous souhaitez. Pour plus d’informations, consultez [d’activités de messagerie](../../../docs/framework/wcf/feature-details/messaging-activities.md). Les services de flux de travail sont hébergés à l'aide de la classe <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Pour plus d’informations, consultez [d’hébergement de la vue d’ensemble des Services de Workflow](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md). Pour plus d’informations sur les services de flux de travail, consultez [Services de Workflow](../../../docs/framework/wcf/feature-details/workflow-services.md)  
   
 ## <a name="persistence-unloading-and-long-running-workflows"></a>Persistance, déchargement et workflows de longue durée  
  Windows Workflow simplifie la création de programmes réactifs de longue durée en fournissant les éléments suivants :  

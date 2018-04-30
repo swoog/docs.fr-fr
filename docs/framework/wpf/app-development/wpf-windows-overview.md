@@ -42,14 +42,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ae454e54abc2c8200f33bdb0bc5537806c824074
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: c379a1db6b825a8ede7866661c11bdbf43cd630c
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wpf-windows-overview"></a>Vue d'ensemble des fenêtres WPF
-Les utilisateurs interagissent avec les applications autonomes [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] par le biais de fenêtres. L’objectif principal d’une fenêtre est d’héberger du contenu qui permet aux utilisateurs de visualiser les données et d’interagir avec celles-ci. Autonome [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] applications fournissent leurs propres fenêtres à l’aide de la <xref:System.Windows.Window> classe. Cette rubrique présente les <xref:System.Windows.Window> avant de couvrir les notions de base de la création et la gestion de fenêtres dans des applications autonomes.  
+Les utilisateurs interagissent avec les applications autonomes Windows Presentation Foundation (WPF) via windows. L’objectif principal d’une fenêtre est d’héberger du contenu qui permet aux utilisateurs de visualiser les données et d’interagir avec celles-ci. Autonome [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] applications fournissent leurs propres fenêtres à l’aide de la <xref:System.Windows.Window> classe. Cette rubrique présente les <xref:System.Windows.Window> avant de couvrir les notions de base de la création et la gestion de fenêtres dans des applications autonomes.  
   
 > [!NOTE]
 >  Hébergées par un navigateur [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] applications, y compris [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] et libre [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] pages, ne fournissent pas leurs propres fenêtres. Au lieu de cela, ils sont hébergés dans des fenêtres fournies par [!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)]. Consultez [vue d’ensemble des Applications de navigateur XAML WPF](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md).  

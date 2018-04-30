@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: bce838d9584480028c7b02d1ba19547fe208bf2c
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: df603da0f4feedeacc59198c156322c78fd2f388
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="metadata-architecture-overview"></a>Vue d'ensemble de l'architecture de métadonnées
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] fournit une infrastructure riche pour exporter, publier, récupérer et importer les métadonnées de service. Les services [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilisent les métadonnées pour décrire l'interaction avec les points de terminaison d'un service afin que les outils tels que Svcutil.exe puissent générer automatiquement le code client pour accéder au service.  
@@ -59,7 +59,7 @@ ms.lasthandoff: 04/28/2018
   
  Pour ajouter des points de terminaison de métadonnées qui utilisent le protocole MEX, ajoutez des points de terminaison de service à votre hôte de service qui utilisent le contrat de service nommé IMetadataExchange.[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] définit le <xref:System.ServiceModel.Description.IMetadataExchange> interface portant ce nom de contrat de service. Les points de terminaison WS-MetadataExchange (ou points de terminaison MEX) peuvent utiliser l'une des quatre liaisons par défaut que les méthodes de fabrique statiques exposent sur la classe <xref:System.ServiceModel.Description.MetadataExchangeBindings> afin d'établir une correspondance avec les liaisons par défaut utilisées par les outils [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tels que Svcutil.exe. Vous pouvez également configurer des points de terminaison de métadonnées MEX à l’aide d’une liaison personnalisée.  
   
- <xref:System.ServiceModel.Description.ServiceMetadataBehavior> utilise <xref:System.ServiceModel.Description.WsdlExporter?displayProperty=nameWithType> pour exporter les métadonnées de tous les points de terminaison de service de votre service. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] exportation de métadonnées à partir d’un service, consultez [exportation et importation de métadonnées](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md).  
+ <xref:System.ServiceModel.Description.ServiceMetadataBehavior> utilise <xref:System.ServiceModel.Description.WsdlExporter?displayProperty=nameWithType> pour exporter les métadonnées de tous les points de terminaison de service de votre service. Pour plus d’informations sur l’exportation de métadonnées à partir d’un service, consultez [exportation et importation de métadonnées](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md).  
   
  Le <xref:System.ServiceModel.Description.ServiceMetadataBehavior> augmente votre hôte de service en ajoutant une instance <xref:System.ServiceModel.Description.ServiceMetadataExtension> sous la forme d'une extension à votre hôte de service. <xref:System.ServiceModel.Description.ServiceMetadataExtension?displayProperty=nameWithType> fournit l'implémentation pour les protocoles de publication de métadonnées. Vous pouvez également utiliser <xref:System.ServiceModel.Description.ServiceMetadataExtension?displayProperty=nameWithType> pour obtenir les métadonnées de service au moment de l'exécution en accédant à la propriété <xref:System.ServiceModel.Description.ServiceMetadataExtension.Metadata%2A>.  
   

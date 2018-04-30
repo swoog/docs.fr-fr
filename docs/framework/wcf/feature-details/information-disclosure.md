@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c603032e175fd8390abea2db625321d3e3558c1a
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 1b3da2dc36dca913c638ce269213903c2a024a04
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="information-disclosure"></a>Divulgation d'informations
 La divulgation d'informations permet à un intrus d'obtenir des informations précieuses à propos d'un système. Par conséquent, examinez toujours les informations que vous révélez et demandez-vous si elles peuvent être utilisées par un utilisateur malveillant. Vous trouverez ci-dessous la liste des attaques par divulgation d’informations possibles et les moyens d’atténuation pour chacune d’elles.  
@@ -29,7 +29,7 @@ La divulgation d'informations permet à un intrus d'obtenir des informations pr�
  Si vous utilisez la sécurité au niveau du message sur une couche transport HTTP, sachez que la sécurité au niveau du message ne protège pas les en-têtes HTTP. La seule manière de protéger les en-têtes HTTP est d'utiliser le transport HTTPS au lieu du HTTP. Le transport HTTPS entraîne le chiffrement du message entier, y compris les en-têtes HTTP, à l'aide du protocole SSL (Secure Sockets Layer).  
   
 ## <a name="policy-information"></a>Informations de stratégie  
- Il est important de sécuriser la stratégie, surtout dans les scénarios de fédération dans lesquels les spécifications sensibles des jetons émis ou les informations de l'émetteur de jetons sont exposées dans la stratégie. Dans ces cas, il est recommandé de sécuriser le point de terminaison de stratégie du service fédéré pour empêcher les intrus d'obtenir des informations à propos du service, tel que le type de revendications à placer dans le jeton émis, ou de rediriger les clients vers des émetteurs de jetons malveillants. Par exemple, un intrus pourrait découvrir des paires de nom d'utilisateur/mot de passe en reconfigurant la chaîne de confiance fédérée afin qu'elle se termine dans un émetteur qui exécute une attaque de « l'homme du milieu » (« man-in-the-middle »). Il est également recommandé que les clients fédérés qui obtiennent leurs liaisons grâce à la récupération de la stratégie vérifient qu’ils approuvent les émetteurs de la chaîne de confiance fédérée obtenue. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] les scénarios de fédération, consultez [fédération](../../../../docs/framework/wcf/feature-details/federation.md).  
+ Il est important de sécuriser la stratégie, surtout dans les scénarios de fédération dans lesquels les spécifications sensibles des jetons émis ou les informations de l'émetteur de jetons sont exposées dans la stratégie. Dans ces cas, il est recommandé de sécuriser le point de terminaison de stratégie du service fédéré pour empêcher les intrus d'obtenir des informations à propos du service, tel que le type de revendications à placer dans le jeton émis, ou de rediriger les clients vers des émetteurs de jetons malveillants. Par exemple, un intrus pourrait découvrir des paires de nom d'utilisateur/mot de passe en reconfigurant la chaîne de confiance fédérée afin qu'elle se termine dans un émetteur qui exécute une attaque de « l'homme du milieu » (« man-in-the-middle »). Il est également recommandé que les clients fédérés qui obtiennent leurs liaisons grâce à la récupération de la stratégie vérifient qu’ils approuvent les émetteurs de la chaîne de confiance fédérée obtenue. Pour plus d’informations sur les scénarios de fédération, consultez [fédération](../../../../docs/framework/wcf/feature-details/federation.md).  
   
 ## <a name="memory-dumps-can-reveal-claim-information"></a>Les images mémoire peuvent révéler des informations de revendication  
  Lorsqu'une application échoue, des fichiers journaux, tels que ceux générés par Dr. Watson, peut contenir des informations de revendication. Ces informations ne doivent pas être exportées à d’autres entités, telles que les équipes de support ; sinon, les informations de revendication qui contiennent des données privées sont également exportées. Vous pouvez atténuer cet aspect en n'envoyant pas les fichiers journaux à des entités inconnues. Pour plus d’informations, consultez [Windows Server 2003](http://go.microsoft.com/fwlink/?LinkId=89160).  
@@ -67,7 +67,7 @@ MyChannelFactory.Credentials.Windows.ClientCredential = new System.Net.NetworkCr
   
  Le code ne spécifie pas de nom de domaine, et par conséquent, NTLM sera utilisé.  
   
- Si le domaine est spécifié, mais qu’un nom de principal du service non valide est spécifié à l’aide de la fonctionnalité d’identité du point de terminaison, alors NTLM est utilisé. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] identité du point de terminaison est spécifiée, voir [l’identité du Service et l’authentification](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ Si le domaine est spécifié, mais qu’un nom de principal du service non valide est spécifié à l’aide de la fonctionnalité d’identité du point de terminaison, alors NTLM est utilisé. Pour plus d’informations sur la façon dont l’identité du point de terminaison est spécifiée, consultez [l’identité du Service et l’authentification](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Considérations relatives à la sécurité](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  

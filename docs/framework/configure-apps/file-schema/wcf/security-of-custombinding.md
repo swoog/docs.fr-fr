@@ -1,29 +1,31 @@
 ---
 title: '&lt;security&gt; de &lt;customBinding&gt;'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 243a5148-bbd1-447f-a8a5-6e7792c0a3f1
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: e35f10071f8931c551645d4d07ca0f2113c52002
-ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 15f2dd3eac33a54e53a609fc706397eef5e7dbe2
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="ltsecuritygt-of-ltcustombindinggt"></a>&lt;security&gt; de &lt;customBinding&gt;
 Spécifie les options de sécurité d’une liaison personnalisée.  
   
- \<system.serviceModel >  
+ \<system.serviceModel>  
 \<liaisons >  
 \<customBinding >  
 \<liaison >  
@@ -103,7 +105,7 @@ messageProtectionOrder="SignBeforeEncrypt/SignBeforeEncryptAndEncryptSignature/E
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<issuedTokenParameters >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|Spécifie un jeton émis en cours. Cet élément est de type <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement>.|  
+|[\<issuedTokenParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|Spécifie un jeton émis en cours. Cet élément est de type <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement>.|  
 |[\<localClientSettings >](../../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md)|Spécifie les paramètres de sécurité d’un client local pour cette liaison. Cet élément est de type <xref:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement>.|  
 |[\<localServiceSettings >](../../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md)|Spécifie les paramètres de sécurité d’un service local pour cette liaison. Cet élément est de type <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>.|  
 |[\<secureConversationBootstrap >](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)|Spécifie les valeurs par défaut utilisées pour initialiser un service de conversation sécurisé.|  
@@ -115,7 +117,7 @@ messageProtectionOrder="SignBeforeEncrypt/SignBeforeEncryptAndEncryptSignature/E
 |[\<liaison >](../../../../../docs/framework/misc/binding.md)|Définit toutes les fonctions de liaison d’une liaison personnalisée.|  
   
 ## <a name="remarks"></a>Notes  
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]à l’aide de cet élément, consultez [Modes d’authentification SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md) et [Comment : créer un personnalisé de liaison à l’aide de SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).  
+ Pour plus d’informations sur l’utilisation de cet élément, consultez [Modes d’authentification SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md) et [Comment : créer un personnalisé de liaison à l’aide de SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant montre comment configurer la sécurité à l’aide d’une liaison personnalisée. Il indique également comment utiliser une liaison personnalisée afin d'activer la sécurité de niveau message à l'aide d'un transport sécurisé. Cette configuration est utile lorsqu'un transport sécurisé est requis pour la transmission des messages entre le client et le service et que ces messages doivent en même temps bénéficier d'une sécurité de niveau message. Cette configuration n'est pas prise en charge par les liaisons fournies par le système.  
@@ -185,6 +187,6 @@ messageProtectionOrder="SignBeforeEncrypt/SignBeforeEncryptAndEncryptSignature/E
  [Liaisons](../../../../../docs/framework/wcf/bindings.md)  
  [Extension de liaisons](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [Liaisons personnalisées](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
+ [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
  [Guide pratique pour créer une liaison personnalisée à l’aide de SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
  [Sécurité de liaison personnalisée](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

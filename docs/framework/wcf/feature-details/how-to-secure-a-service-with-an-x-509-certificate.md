@@ -19,16 +19,16 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 31028b6fe2cc34a9ae5cabe410bef0d753fd9436
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 89ad47ad898184b99f32743855091c0985722f77
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-secure-a-service-with-an-x509-certificate"></a>Comment : sécuriser un service avec un certificat X.509
 La sécurisation d'un service avec un certificat X.509 est une technique de base que la plupart des liaisons dans [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] utilisent. Cette rubrique décrit les étapes de la configuration d'un service auto-hébergé avec un certificat X.509.  
   
- L'une des conditions préalables est de disposer d'un certificat valide pouvant être utilisé pour authentifier le serveur. Le certificat doit être envoyé au serveur par une autorité de certification approuvée. Si le certificat n'est pas valide, les clients qui essayeront d'utiliser le service ne lui feront pas confiance, et par conséquent aucune connexion ne sera établie. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] l’utilisation de certificats, consultez [utilisation des certificats](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
+ L'une des conditions préalables est de disposer d'un certificat valide pouvant être utilisé pour authentifier le serveur. Le certificat doit être envoyé au serveur par une autorité de certification approuvée. Si le certificat n'est pas valide, les clients qui essayeront d'utiliser le service ne lui feront pas confiance, et par conséquent aucune connexion ne sera établie. Pour plus d’informations sur l’utilisation de certificats, consultez [utilisation des certificats](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
 ### <a name="to-configure-a-service-with-a-certificate-using-code"></a>Pour configurer un service avec un certificat à l'aide du code  
   

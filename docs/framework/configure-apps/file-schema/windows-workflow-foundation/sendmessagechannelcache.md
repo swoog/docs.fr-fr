@@ -1,30 +1,31 @@
 ---
 title: '&lt;sendMessageChannelCache&gt;'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 241e428e-5030-4b13-8a0a-69f05288d3d9
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0a2fe2fbeb82ea4412a85a4503a5ae950639a659
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 739115dfdf26dd184d4fc217a1819dda7d7c73a0
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="ltsendmessagechannelcachegt"></a>&lt;sendMessageChannelCache&gt;
 Un comportement de service qui permet de personnaliser le partage du cache niveaux, les paramètres du cache de fabrique de canal et les paramètres du cache de canal pour le flux de travail qui envoient des messages aux points de terminaison de service à l’aide d’envoi d’activités de messagerie.  
   
-\<système. ServiceModel >  
+\<system.ServiceModel>  
 \<comportements >  
-\<serviceBehaviors >  
+\<serviceBehaviors>  
 \<comportement >  
 \<sendMessageChannelCache >  
   
@@ -74,7 +75,7 @@ Un comportement de service qui permet de personnaliser le partage du cache nivea
   
  Par défaut, dans un flux de travail hébergé par un <xref:System.ServiceModel.WorkflowServiceHost>, le cache utilisé par les activités de messagerie <xref:System.ServiceModel.Activities.Send> est partagé entre toutes les instances de flux de travail dans <xref:System.ServiceModel.WorkflowServiceHost> (mise en cache au niveau de l'hôte). Pour un flux de travail client non hébergé par un objet  <xref:System.ServiceModel.WorkflowServiceHost>, le cache est uniquement disponible pour l'instance de flux de travail (mise en cache au niveau de l'instance). La mise en cache est désactivée par défaut pour toute activité d'envoi dans votre flux de travail qui a des points de terminaison définis dans la configuration.  
   
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]comment modifier le niveaux de partage de cache par défaut et les paramètres de cache pour la fabrication de canal et le cache de canaux, consultez [changement des niveaux de partage du Cache pour les activités d’envoi](../../../../../docs/framework/wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md).  
+ Pour plus d’informations sur la modification des niveaux et les paramètres de cache pour la fabrication de canal et le cache de canaux de partage de cache par défaut, consultez [changement des niveaux de partage du Cache pour les activités d’envoi](../../../../../docs/framework/wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md).  
   
 ## <a name="example"></a>Exemple  
  Dans un service de flux de travail hébergé, vous pouvez spécifier les paramètres du cache de la fabrique et du cache de canaux dans le fichier de configuration de l'application. Pour cela, ajoutez un comportement de service qui contient les paramètres des caches de la fabrique et de canaux et ajoutez-le à votre service. L’exemple suivant montre le contenu d’un fichier de configuration qui contient la **MyChannelCacheBehavior** comportement de service avec les paramètres du cache du cache et le canal de fabrique personnalisée. Ce comportement de service est ajouté au service via la **behaviorConfiguarion** attribut.  

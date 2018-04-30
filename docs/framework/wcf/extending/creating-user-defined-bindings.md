@@ -1,33 +1,33 @@
 ---
-title: "Création de liaisons définies par l’utilisateur"
-ms.custom: 
+title: Création de liaisons définies par l’utilisateur
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - user-defined bindings [WCF]
 ms.assetid: c4960675-d701-4bc9-b400-36a752fdd08b
-caps.latest.revision: 
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: fe9be6ed74569875fd26f9a4913756e0366d757a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 05476adccca0deb5fd82b62f99f06939664cc876
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="creating-user-defined-bindings"></a>Création de liaisons définies par l’utilisateur
 Il existe plusieurs méthodes pour créer des liaisons non fournies par le système :  
   
--   Créez une liaison personnalisée basés sur la classe <xref:System.ServiceModel.Channels.CustomBinding> qui est un conteneur que vous remplissez avec les éléments de liaison. La liaison personnalisée est ensuite ajoutée à un point de terminaison de service. Vous pouvez créer la liaison personnalisée soit par programmation soit dans un fichier de configuration d'application. Pour utiliser un élément de liaison d'un fichier de configuration d'application, l'élément doit étendre les liaisons personnalisées <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]liaisons personnalisées, consultez [des liaisons personnalisées](../../../../docs/framework/wcf/extending/custom-bindings.md) et <xref:System.ServiceModel.Channels.CustomBinding>.  
+-   Créez une liaison personnalisée basés sur la classe <xref:System.ServiceModel.Channels.CustomBinding> qui est un conteneur que vous remplissez avec les éléments de liaison. La liaison personnalisée est ensuite ajoutée à un point de terminaison de service. Vous pouvez créer la liaison personnalisée soit par programmation soit dans un fichier de configuration d'application. Pour utiliser un élément de liaison d'un fichier de configuration d'application, l'élément doit étendre les liaisons personnalisées <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>. Pour plus d’informations sur les liaisons personnalisées, consultez [des liaisons personnalisées](../../../../docs/framework/wcf/extending/custom-bindings.md) et <xref:System.ServiceModel.Channels.CustomBinding>.  
   
 -   Vous pouvez créer une classe qui dérive d’une liaison standard. Par exemple, vous pouvez dériver une classe de <xref:System.ServiceModel.WSHttpBinding> et remplacer la méthode <xref:System.ServiceModel.Channels.CustomBinding.CreateBindingElements%2A> pour obtenir les éléments de liaison et insérer un élément de liaison personnalisé ou établir une valeur particulière pour la sécurité.  
   

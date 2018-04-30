@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4d5caa913a49205c387c22a615b2b8da2dba0a77
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 2343ebe5a2a029ddb40da98d28f5c442aa7b6962
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="serialization-and-deserialization"></a>Sérialisation et désérialisation
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] comprend un nouveau moteur de sérialisation, le <xref:System.Runtime.Serialization.DataContractSerializer>. Le <xref:System.Runtime.Serialization.DataContractSerializer> traduit des objets [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] en langage XML et inversement. Cette rubrique explique comment le sérialiseur fonctionne.  
@@ -54,7 +54,7 @@ ms.lasthandoff: 04/28/2018
  [!code-vb[c_StandaloneDataContractSerializer#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_standalonedatacontractserializer/vb/source.vb#2)]  
   
 ### <a name="specifying-known-types"></a>Spécification de types connus  
- Si le polymorphisme affecte les types qui sont sérialisés et n'est pas déjà géré par l'attribut <xref:System.Runtime.Serialization.KnownTypeAttribute> ou un autre mécanisme, une liste de types connus possibles doit être passée au constructeur du sérialiseur à l'aide du paramètre `knownTypes` . [!INCLUDE[crabout](../../../../includes/crabout-md.md)] les types connus, consultez [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
+ Si le polymorphisme affecte les types qui sont sérialisés et n'est pas déjà géré par l'attribut <xref:System.Runtime.Serialization.KnownTypeAttribute> ou un autre mécanisme, une liste de types connus possibles doit être passée au constructeur du sérialiseur à l'aide du paramètre `knownTypes` . Pour plus d’informations sur les types connus, consultez [Types connus de contrat de données](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
   
  L'exemple suivant affiche une classe, `LibraryPatron`, qui inclut une collection d'un type spécifique, le `LibraryItem`. La deuxième classe définit le type `LibraryItem` . Les troisième et quatrième classes (`Book` et `Newspaper`) héritent de la classe `LibraryItem` .  
   
@@ -267,7 +267,7 @@ ms.lasthandoff: 04/28/2018
   
 -   Les méthodes <xref:System.Runtime.Serialization.NetDataContractSerializer.Serialize%2A> et <xref:System.Runtime.Serialization.NetDataContractSerializer.Deserialize%2A> sont des alias pour les méthodes <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObject%2A> et <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> . Elles existent pour fournir un modèle de programmation plus cohérent avec la sérialisation binaire ou SOAP.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Ces fonctionnalités, consultez [sérialisation binaire](../../../../docs/standard/serialization/binary-serialization.md).  
+ Pour plus d’informations sur ces fonctionnalités, consultez [sérialisation binaire](../../../../docs/standard/serialization/binary-serialization.md).  
   
  Les formats XML utilisés par `NetDataContractSerializer` et `DataContractSerializer` ne sont pas normalement compatibles. Autrement dit, toute tentative de sérialiser avec l'un de ces sérialiseurs et de désérialiser avec l'autre n'est pas prise en charge.  
   

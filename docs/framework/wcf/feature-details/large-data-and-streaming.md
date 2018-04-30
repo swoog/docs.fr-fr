@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b37af67a3deeed4e55939ff1c1baf73752233e94
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: e367c11b48e6f4034afb1f42ded3498d748848a7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="large-data-and-streaming"></a>Données volumineuses et diffusion en continu
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] est une infrastructure de communication basée sur XML. Étant donné que les données XML sont souvent codées au format texte standard défini dans le [spécification XML 1.0](http://go.microsoft.com/fwlink/?LinkId=94838)et connectées, les architectes et développeurs de systèmes sont généralement concerne l’encombrement du câble (ou taille) de messages envoyés entre le réseau et l’encodage de texte XML pose des défis particuliers pour le transfert efficace de données binaires.  
@@ -246,7 +246,7 @@ public class UploadStreamMessage
   
  Par conséquent, la restriction de la taille maximale des messages entrants n'est pas suffisante dans ce cas. La propriété `MaxBufferSize` est requise pour contraindre la mémoire que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] met en tampon. Il est important d'affecter à cette propriété une valeur sûre (ou de conserver sa valeur par défaut) lors de la diffusion en continu. Par exemple, supposez que votre service doive recevoir des fichiers d'une taille allant jusqu'à 4 Go afin de les stocker sur le disque local. Supposez également que votre mémoire soit contrainte de sorte à ce que vous puissiez uniquement mettre en mémoire tampon 64 Ko de données à la fois. Vous devez alors affecter la valeur 4 Go à `MaxReceivedMessageSize` et la valeur 64 Ko à `MaxBufferSize`. En outre, dans votre implémentation de service, vous devez veiller à lire uniquement à partir du flux entrant par segment de 64 Ko et à ne pas lire le segment suivant avant que le précédent ne soit écrit sur le disque et qu'il soit effacé de la mémoire.  
   
- Il est également important de comprendre que ce quota limite uniquement la mise en mémoire tampon effectuée par [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] et qu'il ne vous protège pas contre toute mise en mémoire tampon que vous effectuez dans votre propre service ou implémentation cliente. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Considérations de sécurité supplémentaires, consultez [considérations de sécurité pour les données](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).  
+ Il est également important de comprendre que ce quota limite uniquement la mise en mémoire tampon effectuée par [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] et qu'il ne vous protège pas contre toute mise en mémoire tampon que vous effectuez dans votre propre service ou implémentation cliente. Pour plus d’informations sur les considérations de sécurité supplémentaires, consultez [considérations de sécurité pour les données](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).  
   
 > [!NOTE]
 >  La décision d'utiliser des transferts mis en mémoire tampon ou diffusés en continu est une décision locale du point de terminaison. Pour les transports HTTP, le mode de transfert ne se propage pas sur une connexion ou sur des serveurs proxy et d'autres intermédiaires. La description de l'interface de service ne reflète pas le mode de transfert défini. Après avoir généré un client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sur un service, vous devez modifier le fichier de configuration des services destinés à être utilisés avec des transferts en continu pour définir le mode. Pour les transports TCP et les transports de canal nommé, le mode de transfert est propagé sous forme d'assertion de stratégie.  

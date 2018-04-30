@@ -1,24 +1,26 @@
 ---
-title: "Sécurité de transport HTTP"
-ms.custom: 
+title: Sécurité de transport HTTP
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: f81a95546d593cd5a0acb6a89edf2f6c763f07df
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2787c38603fd0f88878596a809d7e3c5cfdfb350
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="http-transport-security"></a>Sécurité de transport HTTP
 Lors de l'utilisation du protocole HTTP comme transport, la sécurité est fournie par une implémentation SSL (Secure Sockets Layer). SSL est largement utilisé sur Internet pour authentifier un service auprès d'un client, puis pour fournir la confidentialité (chiffrement) au canal. Cette rubrique explique comment fonctionne le protocole SSL et comment il est implémenté dans [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -61,7 +63,7 @@ Lors de l'utilisation du protocole HTTP comme transport, la sécurité est fourn
 ### <a name="using-httpcfg-for-ssl"></a>Utilisation de HttpCfg pour SSL  
  Si vous créez un auto-hébergé [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] application, téléchargez l’outil HttpCfg.exe, disponible sur le [site des outils de Support de Windows XP Service Pack 2](http://go.microsoft.com/fwlink/?LinkId=29002).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]à l’aide de l’outil HttpCfg.exe pour configurer un port avec un certificat X.509, consultez [Comment : configurer un Port avec un certificat SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
+ Pour plus d’informations sur l’utilisation de l’outil HttpCfg.exe pour configurer un port avec un certificat X.509, consultez [Comment : configurer un Port avec un certificat SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Sécurité de transport](../../../../docs/framework/wcf/feature-details/transport-security.md)  

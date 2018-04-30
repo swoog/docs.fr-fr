@@ -1,24 +1,26 @@
 ---
-title: "Contrôle de la consommation des ressources et amélioration des performances"
-ms.custom: 
+title: Contrôle de la consommation des ressources et amélioration des performances
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9a829669-5f76-4c88-80ec-92d0c62c0660
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ecb8ae5edfb35ccaffecbfb4e960d3f4a46bad0e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6e864e0a90dbb46f440e2eba2b676413c72e0da9
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="controlling-resource-consumption-and-improving-performance"></a>Contrôle de la consommation des ressources et amélioration des performances
 Cette rubrique décrit différentes propriétés dans différentes zones de l'architecture [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] qui fonctionnent pour contrôler la consommation des ressources et affecter les mesures de performances.  
@@ -55,7 +57,7 @@ Cette rubrique décrit différentes propriétés dans différentes zones de l'ar
  Le [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) peut améliorer les performances de démarrage de ces applications en générant le code de sérialisation nécessaires à partir des assemblys compilés pour l’application. Pour plus d’informations, consultez [Comment : améliorer le démarrage du temps des Applications clientes WCF à l’aide de XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md).  
   
 ## <a name="performance-issues-when-hosting-wcf-services-under-aspnet"></a>Problèmes de performances lors de l'hébergement de services WCF sous ASP.NET  
- Lorsqu'un service WCF est hébergé sous IIS et ASP.NET, les paramètres de configuration d'IIS et ASP.NET peuvent affecter le débit et l'encombrement mémoire du service WCF.  [!INCLUDE[crabout](../../../includes/crabout-md.md)]Performances d’ASP.NET, consultez [amélioration des performances ASP.NET](http://go.microsoft.com/fwlink/?LinkId=186462).  Un paramètre qui peut avoir des conséquences inattendues est <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A>, qui est une propriété de <xref:System.Web.Configuration.ProcessModelSection>. Si votre application dispose d'un nombre fixe ou faible de clients, l'affectation de la valeur 2 à <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A> peut fournir une relance de débit sur un ordinateur multiprocesseur dont l'utilisation de l'UC est proche de 100 %. Cette augmentation des performances a un coût : elle entraînera également une augmentation de l'utilisation de la mémoire, ce qui pourrait réduire l'évolutivité.  
+ Lorsqu'un service WCF est hébergé sous IIS et ASP.NET, les paramètres de configuration d'IIS et ASP.NET peuvent affecter le débit et l'encombrement mémoire du service WCF.  Pour plus d’informations sur les performances d’ASP.NET, consultez [amélioration des performances ASP.NET](http://go.microsoft.com/fwlink/?LinkId=186462).  Un paramètre qui peut avoir des conséquences inattendues est <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A>, qui est une propriété de <xref:System.Web.Configuration.ProcessModelSection>. Si votre application dispose d'un nombre fixe ou faible de clients, l'affectation de la valeur 2 à <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A> peut fournir une relance de débit sur un ordinateur multiprocesseur dont l'utilisation de l'UC est proche de 100 %. Cette augmentation des performances a un coût : elle entraînera également une augmentation de l'utilisation de la mémoire, ce qui pourrait réduire l'évolutivité.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Administration et diagnostics](../../../docs/framework/wcf/diagnostics/index.md)  

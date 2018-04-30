@@ -1,12 +1,13 @@
 ---
-title: "Comment : définir la propriété ProtectionLevel"
-ms.custom: 
+title: 'Comment : définir la propriété ProtectionLevel'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,19 +16,20 @@ helpviewer_keywords:
 - WCF, security
 - ProtectionLevel property
 ms.assetid: 3d4e8f80-0f9e-4a26-9899-beb6584e78df
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a9b90df85259dfe48f071ca2b4b8404cfe8e673e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: abb1d3cc64b7992b9983e81c5f8a5c30c2343f30
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-set-the-protectionlevel-property"></a>Comment : définir la propriété ProtectionLevel
-Vous pouvez définir le niveau de protection en appliquant un attribut approprié et en définissant la propriété. Vous pouvez définir la protection au niveau du service afin d'affecter toutes les parties de chaque message, ou vous pouvez la définir à des niveaux de plus en plus spécifiques, des méthodes aux parties du message. [!INCLUDE[crabout](../../../includes/crabout-md.md)]le `ProtectionLevel` propriété, consultez [au niveau de Protection de présentation](../../../docs/framework/wcf/understanding-protection-level.md).  
+Vous pouvez définir le niveau de protection en appliquant un attribut approprié et en définissant la propriété. Vous pouvez définir la protection au niveau du service afin d'affecter toutes les parties de chaque message, ou vous pouvez la définir à des niveaux de plus en plus spécifiques, des méthodes aux parties du message. Pour plus d’informations sur la `ProtectionLevel` propriété, consultez [au niveau de Protection de présentation](../../../docs/framework/wcf/understanding-protection-level.md).  
   
 > [!NOTE]
 >  Vous pouvez définir des niveaux de protection dans le code uniquement, mais pas dans la configuration.  
@@ -53,7 +55,7 @@ Vous pouvez définir le niveau de protection en appliquant un attribut appropri�
      [!code-vb[C_ProtectionLevel#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#2)]  
   
 ## <a name="protecting-fault-messages"></a>Protection des messages d'erreur  
- Les exceptions levées sur un service peuvent être envoyées à un client en tant qu'erreurs SOAP. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Création de fortement typée erreurs, consultez [spécification et gestion des erreurs dans les contrats et les Services](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md) et [Comment : déclarer des erreurs dans les contrats de Service](../../../docs/framework/wcf/how-to-declare-faults-in-service-contracts.md).  
+ Les exceptions levées sur un service peuvent être envoyées à un client en tant qu'erreurs SOAP. Pour plus d’informations sur la création de fortement typées des erreurs, consultez [spécification et gestion des erreurs dans les contrats et les Services](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md) et [Comment : déclarer des erreurs dans les contrats de Service](../../../docs/framework/wcf/how-to-declare-faults-in-service-contracts.md).  
   
 #### <a name="to-protect-a-fault-message"></a>Pour protéger un message d'erreur  
   
@@ -72,7 +74,7 @@ Vous pouvez définir le niveau de protection en appliquant un attribut appropri�
      [!code-vb[C_ProtectionLevel#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#4)]  
   
 ## <a name="protecting-message-parts"></a>Protection de parties de message  
- Utilisez un contrat de message pour protéger des parties d'un message. [!INCLUDE[crabout](../../../includes/crabout-md.md)]contrats de message, consultez [à l’aide de contrats de Message](../../../docs/framework/wcf/feature-details/using-message-contracts.md).  
+ Utilisez un contrat de message pour protéger des parties d'un message. Pour plus d’informations sur les contrats de message, consultez [à l’aide de contrats de Message](../../../docs/framework/wcf/feature-details/using-message-contracts.md).  
   
 #### <a name="to-protect-a-message-body"></a>Pour protéger le corps d'un message  
   

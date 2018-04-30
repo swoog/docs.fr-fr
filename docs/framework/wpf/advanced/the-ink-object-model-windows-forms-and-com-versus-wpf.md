@@ -1,8 +1,9 @@
 ---
-title: "Modèle objet encre : Windows Forms et COM ou WPF"
+title: 'Modèle objet encre : Windows Forms et COM ou WPF'
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.technology: dotnet-wpf
+ms.technology:
+- dotnet-wpf
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,20 +16,21 @@ helpviewer_keywords:
 - ink [WPF], enabling
 - events [WPF], tablet pen
 ms.assetid: 577835be-b145-4226-8570-1d309e9b3901
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 38c7692d433fb91584718984ef2ad81e563517db
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 06a2c2049ec7fe7046bd6dae2711fe8e46592fcf
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="the-ink-object-model-windows-forms-and-com-versus-wpf"></a>Modèle objet encre : Windows Forms et COM ou WPF
 
-Il existe essentiellement trois plateformes qui prennent en charge de l’encre numérique : la plateforme Tablet PC Windows Forms, la plateforme Tablet PC COM et le [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] plateforme.  Le partage de plateformes Windows Forms et COM, un modèle objet semblable, mais le modèle objet pour la [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] plate-forme est très différente.  Cette rubrique explique les différences à un niveau élevé pour que les développeurs qui ont travaillé avec un modèle objet peuvent de mieux comprendre l’autre.  
+Il existe essentiellement trois plateformes qui prennent en charge de l’encre numérique : la plateforme Tablet PC Windows Forms, la plateforme Tablet PC COM et la plateforme Windows Presentation Foundation (WPF).  Le partage de plateformes Windows Forms et COM, un modèle objet semblable, mais le modèle objet pour la [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] plate-forme est très différente.  Cette rubrique explique les différences à un niveau élevé pour que les développeurs qui ont travaillé avec un modèle objet peuvent de mieux comprendre l’autre.  
   
 ## <a name="enabling-ink-in-an-application"></a>Activation d’encre dans une Application  
  Les trois plateformes fournissent des objets et des contrôles qui permettent à une application recevoir une entrée d’un stylet.  Les plateformes de COM et Windows Forms sont fournis avec [Microsoft.Ink.InkPicture](https://msdn.microsoft.com/library/aa514604.aspx), [Microsoft.Ink.InkEdit](https://msdn.microsoft.com/library/ms835842.aspx), [Microsoft.Ink.InkOverlay](https://msdn.microsoft.com/library/ms833057.aspx) et [ Microsoft.Ink.InkCollector](https://msdn.microsoft.com/library/ms836493.aspx) classes.  [Microsoft.Ink.InkPicture](https://msdn.microsoft.com/library/aa514604.aspx) et [Microsoft.Ink.InkEdit](https://msdn.microsoft.com/library/ms835842.aspx) sont des contrôles que vous pouvez ajouter à une application pour collecter de l’encre.  Le [Microsoft.Ink.InkOverlay](https://msdn.microsoft.com/library/ms833057.aspx) et [Microsoft.Ink.InkCollector](https://msdn.microsoft.com/library/ms836493.aspx) peuvent être attachés à une fenêtre existante pour activer la prise en charge windows et des contrôles personnalisés.  
@@ -49,7 +51,7 @@ Il existe essentiellement trois plateformes qui prennent en charge de l’encre 
   
  La paire d’illustrations suivante compare les modèles d’objet de données d’encre.  Sur les Windows Forms et les plateformes de COM, le [Microsoft.Ink.Ink](https://msdn.microsoft.com/library/aa515768.aspx?displayProperty=nameWithType) objet contraint la durée de vie de la [Microsoft.Ink.Stroke](https://msdn.microsoft.com/library/ms827842.aspx?displayProperty=nameWithType) objets et les paquets de stylet appartiennent aux traits individuels.  Deux ou plusieurs traits peuvent référencer le même [Microsoft.Ink.DrawingAttributes](https://msdn.microsoft.com/library/ms837931.aspx?displayProperty=nameWithType) de l’objet, comme indiqué dans l’illustration suivante.  
   
- ![Diagramme du modèle d’objet manuscrit pour COM &#47; WinForms. ] (../../../../docs/framework/wpf/advanced/media/ink-inkownsstrokes.png "Ink_InkOwnsStrokes")  
+ ![Diagramme du modèle d’objet manuscrit pour COM&#47;Winforms. ] (../../../../docs/framework/wpf/advanced/media/ink-inkownsstrokes.png "Ink_InkOwnsStrokes")  
   
  Sur le [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], chaque <xref:System.Windows.Ink.Stroke?displayProperty=nameWithType> est un objet du common language runtime qui existe tant que quelque chose a une référence à celui-ci.  Chaque <xref:System.Windows.Ink.Stroke> références un <xref:System.Windows.Input.StylusPointCollection> et <xref:System.Windows.Ink.DrawingAttributes?displayProperty=nameWithType> objet, qui sont également des objets common language runtime.  
   
@@ -64,7 +66,7 @@ Il existe essentiellement trois plateformes qui prennent en charge de l’encre 
 |Test de positionnement|<xref:System.Windows.Ink.StrokeCollection.HitTest%2A>|[Microsoft.Ink.Ink.HitTest](https://msdn.microsoft.com/library/aa515934.aspx)|  
 |Copier l’entrée manuscrite|<xref:System.Windows.Controls.InkCanvas.CopySelection%2A>|[Microsoft.Ink.Ink.ClipboardCopy](https://msdn.microsoft.com/library/microsoft.ink.ink.clipboardcopy(v=vs.100).aspx)|  
 |Collez une entrée manuscrite|<xref:System.Windows.Controls.InkCanvas.Paste%2A>|[Microsoft.Ink.Ink.ClipboardPaste](https://msdn.microsoft.com/library/microsoft.ink.ink.clipboardpaste(v=vs.100).aspx)|  
-|Propriétés personnalisées de l’accès sur une collection de traits|<xref:System.Windows.Ink.StrokeCollection.AddPropertyData%2A>(les propriétés sont stockées en interne et accessibles via <xref:System.Windows.Ink.StrokeCollection.AddPropertyData%2A>, <xref:System.Windows.Ink.StrokeCollection.RemovePropertyData%2A>, et <xref:System.Windows.Ink.StrokeCollection.ContainsPropertyData%2A>)|Utilisez [Microsoft.Ink.Ink.ExtendedProperties](https://msdn.microsoft.com/library/microsoft.ink.ink.extendedproperties(v=vs.100).aspx)|  
+|Propriétés personnalisées de l’accès sur une collection de traits|<xref:System.Windows.Ink.StrokeCollection.AddPropertyData%2A> (les propriétés sont stockées en interne et accessibles via <xref:System.Windows.Ink.StrokeCollection.AddPropertyData%2A>, <xref:System.Windows.Ink.StrokeCollection.RemovePropertyData%2A>, et <xref:System.Windows.Ink.StrokeCollection.ContainsPropertyData%2A>)|Utilisez [Microsoft.Ink.Ink.ExtendedProperties](https://msdn.microsoft.com/library/microsoft.ink.ink.extendedproperties(v=vs.100).aspx)|  
   
 ### <a name="sharing-ink-between-platforms"></a>Partage d’encre entre les plateformes  
  Bien que les plateformes aient des modèles objet différents pour les données de l’encre, il est très facile de partager les données entre les plateformes. Les exemples suivants enregistrent l’encre d’une application Windows Forms et chargent l’encre dans une application Windows Presentation Foundation.  

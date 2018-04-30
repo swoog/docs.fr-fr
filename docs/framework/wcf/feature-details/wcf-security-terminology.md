@@ -1,35 +1,35 @@
 ---
-title: "Terminologie relative à la sécurité dans WCF"
-ms.custom: 
+title: Terminologie relative à la sécurité dans WCF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - security [WCF], terminology
 - security glossary [WCF]
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
-caps.latest.revision: 
+caps.latest.revision: 14
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 352615238d95cf02788cf88ef412a11ffd2faf37
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 46f70ad623d852e051ff69fb68690114f8c39381
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wcf-security-terminology"></a>Terminologie relative à la sécurité dans WCF
 La terminologie utilisée pour aborder la sécurité peut vous sembler peu familière. Cette rubrique explique rapidement certains des termes relatifs à la sécurité, mais ne fournit pas d'informations complètes pour chaque élément.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] les termes utilisés dans [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] plus d’informations, consultez [Concepts fondamentaux Windows Communication Foundation](../../../../docs/framework/wcf/fundamental-concepts.md).  
+ Pour plus d’informations sur les termes utilisés dans [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] plus d’informations, consultez [Concepts fondamentaux Windows Communication Foundation](../../../../docs/framework/wcf/fundamental-concepts.md).  
   
  liste de contrôle d'accès (ACL, Access Control List)  
  Liste des protections de sécurité qui s'appliquent à un objet. (Un objet peut être un fichier, un processus, un événement ou tout autre objet doté d'un descripteur de sécurité.) Une entrée dans une liste de contrôle d'accès (ACL) est une entrée de contrôle d'accès (ACE). Il y a deux types de listes ACL : discrétionnaire et système.  

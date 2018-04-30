@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2ad8a3a79967c42b8e8afdd9b9d796a7a1dfdd79
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 23dbf9808976496686dfe9d595487110da41730b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="configuring-tracing"></a>Configuration du traçage
 Cette rubrique décrit comment activer le suivi, configurer des sources de suivi pour émettre des suivis et définir des niveaux de suivi, définir le suivi et la propagation d'activité afin de prendre en charge la corrélation de suivi de bout en bout, et définir des écouteurs de suivi pour accéder aux suivis.  
@@ -146,7 +146,7 @@ Cette rubrique décrit comment activer le suivi, configurer des sources de suivi
 </system.diagnostics>  
 ```  
   
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] Création définie par l’utilisateur des sources de trace, consultez [extension suivi](../../../../../docs/framework/wcf/samples/extending-tracing.md).  
+ Pour plus d’informations sur la création de sources de trace défini par l’utilisateur, consultez [extension suivi](../../../../../docs/framework/wcf/samples/extending-tracing.md).  
   
 ## <a name="configuring-trace-listeners-to-consume-traces"></a>Configuration d'écouteurs de suivi pour consommer des suivis  
  Au moment de l'exécution, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] fournit des données de suivi aux écouteurs qui traitent les données. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] fournit plusieurs écouteurs prédéfinis pour <xref:System.Diagnostics>, qui diffèrent quant au format utilisé pour la sortie. Vous pouvez également ajouter des types d'écouteurs personnalisés.  
@@ -187,7 +187,7 @@ Cette rubrique décrit comment activer le suivi, configurer des sources de suivi
   
  L'attribut `propagateActivity` indique si l'activité doit être propagée vers d'autres points de terminaison qui participent à l'échange de messages. En affectant à cet attribut la valeur `true`, vous pouvez prendre des fichiers de suivi générés par deux points de terminaison quelconque et observer comment un ensemble de suivis sur un point de terminaison a été transféré vers un ensemble de suivis sur un autre point de terminaison.  
   
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] le suivi des activités et propagation, consultez [Propagation](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md).  
+ Pour plus d’informations sur le suivi des activités et de propagation, consultez [Propagation](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md).  
   
  Les deux `propagateActivity` et `ActivityTracing` valeurs booléennes s’appliquent à la System.ServiceModel TraceSource. Le `ActivityTracing` valeur s’applique également à toutes les sources de trace, y compris [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] ou défini par l’utilisateur.  
   

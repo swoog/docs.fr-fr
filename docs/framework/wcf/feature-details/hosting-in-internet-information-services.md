@@ -1,28 +1,28 @@
 ---
-title: "Hébergement dans les services IIS (Internet Information Services)"
-ms.custom: 
+title: Hébergement dans les services IIS (Internet Information Services)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - hosting services [WCF], IIS
 ms.assetid: ddae14e8-143c-442d-b660-2046809b2d43
-caps.latest.revision: 
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 988216447e47345b6d863de6e46d0de9a025f068
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b933626c2f3f5ee7121d141d3704376efeb54ba5
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="hosting-in-internet-information-services"></a>Hébergement dans les services IIS (Internet Information Services)
 L'une des solutions pour héberger les services [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] consiste à les inclure dans les services IIS (Internet Information Services). Ce modèle d'hébergement est semblable au modèle utilisé par [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] et les services Web ASP.NET (ASMX).  
@@ -34,7 +34,7 @@ L'une des solutions pour héberger les services [!INCLUDE[indigo1](../../../../i
   
 -   [!INCLUDE[iis601](../../../../includes/iis601-md.md)] sur [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]. [!INCLUDE[iis601](../../../../includes/iis601-md.md)] fournit un modèle de processus avancé qui offre une évolutivité, une fiabilité et une isolation d'application améliorées. Cet environnement est approprié pour le déploiement de la production des services [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] qui utilisent la communication HTTP exclusivement.  
   
--   IIS 7.0 sur [!INCLUDE[wv](../../../../includes/wv-md.md)] et [!INCLUDE[lserver](../../../../includes/lserver-md.md)]. ISS 7.0 fournit le même modèle de processus avancé que [!INCLUDE[iis601](../../../../includes/iis601-md.md)], mais il utilise le service d'activation de processus de Windows (WAS) pour autoriser l'activation et la communication réseau sur des protocoles autres que HTTP. Cet environnement est adapté au développement de services [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] qui communiquent sur tous les protocoles réseau pris en charge par [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] (y compris HTTP, net.tcp, net.pipe et net.msmq). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]A été, consultez [hébergement dans le Service d’Activation des processus Windows](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).  
+-   IIS 7.0 sur [!INCLUDE[wv](../../../../includes/wv-md.md)] et [!INCLUDE[lserver](../../../../includes/lserver-md.md)]. ISS 7.0 fournit le même modèle de processus avancé que [!INCLUDE[iis601](../../../../includes/iis601-md.md)], mais il utilise le service d'activation de processus de Windows (WAS) pour autoriser l'activation et la communication réseau sur des protocoles autres que HTTP. Cet environnement est adapté au développement de services [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] qui communiquent sur tous les protocoles réseau pris en charge par [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] (y compris HTTP, net.tcp, net.pipe et net.msmq). Pour plus d’informations sur WAS, consultez [hébergement dans le Service d’Activation des processus Windows](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).  
   
 -   [Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkId=196496) fonctionne avec [!INCLUDE[iisver](../../../../includes/iisver-md.md)] et le Service de l’Activation des processus Windows (WAS) pour fournir une environnement de services aux services NET4 WCF et WF d’hébergement d’application riche. Ces avantages incluent la gestion du cycle de vie de processus, le recyclage de processus, l'hébergement partagé, la protection rapide contre les incidents, les processus parallèles, l'activation à la demande et le contrôle d'état. Pour plus d’informations, consultez [fonctionnalités d’hébergement AppFabric](http://go.microsoft.com/fwlink/?LinkId=196494) et [Concepts d’hébergement AppFabric](http://go.microsoft.com/fwlink/?LinkId=196495).  
   
@@ -49,7 +49,7 @@ L'une des solutions pour héberger les services [!INCLUDE[indigo1](../../../../i
   
 -   Les services [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hébergés dans IIS utilisent le même modèle de compilation dynamique qu'[!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)], ce qui simplifie le développement et le déploiement des services hébergés.  
   
- Lorsque vous décidez d'héberger des services [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dans IIS, rappelez-vous que IIS 5.1 et [!INCLUDE[iis601](../../../../includes/iis601-md.md)] sont limités uniquement à la communication HTTP. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]choix d’un environnement d’hébergement, consultez [Services d’hébergement](../../../../docs/framework/wcf/hosting-services.md).  
+ Lorsque vous décidez d'héberger des services [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dans IIS, rappelez-vous que IIS 5.1 et [!INCLUDE[iis601](../../../../includes/iis601-md.md)] sont limités uniquement à la communication HTTP. Pour plus d’informations sur le choix d’un environnement d’hébergement, consultez [Services d’hébergement](../../../../docs/framework/wcf/hosting-services.md).  
   
 ## <a name="deploying-an-iis-hosted-wcf-service"></a>Déploiement d'un service WCF hébergé par IIS  
  Le développement et le déploiement d'un service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hébergé par IIS impliquent les tâches suivantes :  

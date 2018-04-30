@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1a0a11d613ffb8f71437edd73a8be64fb5f55a4c
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 4d3c7234c25b0a968ca67b58a560e8c8b55bb73d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="stand-alone-json-serialization"></a>Sérialisation JSON autonome
 JSON (JavaScript Object Notation) est un format de données spécialement conçu pour être utilisé par du code JavaScript exécuté sur les pages web dans le navigateur. Il s'agit du format de données par défaut utilisé par les services ASP.NET AJAX créés dans [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -53,7 +53,7 @@ JSON (JavaScript Object Notation) est un format de données spécialement conçu
 |Valeur `Null` pour tout type|Null|Les types Nullable sont également pris en charge et mappés à JSON de la même manière que les types non Nullable.|  
   
 ### <a name="enumerations-and-json"></a>Énumérations et JSON  
- Les valeurs de membre de l'énumération sont traitées comme des nombres dans JSON, ce qui diffère de la manière dont elles sont traitées dans les contrats de données, où elles sont incluses comme noms de membres. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] le contrat de données de traitement, consultez [Types énumération dans les contrats de données](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md).  
+ Les valeurs de membre de l'énumération sont traitées comme des nombres dans JSON, ce qui diffère de la manière dont elles sont traitées dans les contrats de données, où elles sont incluses comme noms de membres. Pour plus d’informations sur le traitement de contrat de données, consultez [Types énumération dans les contrats de données](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md).  
   
 -   Par exemple, si vous avez `public enum Color {red, green, blue, yellow, pink}`, `yellow` produit le nombre 3 et pas la chaîne "yellow".  
   

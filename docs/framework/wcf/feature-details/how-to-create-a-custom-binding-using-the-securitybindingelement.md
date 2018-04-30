@@ -21,14 +21,14 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3dc83697a27bf99a63305bf89a57fbcb4d459b45
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 80fd6163db1b7b168be4e19b01c8eb9f15865f04
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Comment : créer une liaison personnalisée à l’aide de SecurityBindingElement
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] contient plusieurs liaisons fournies par le système qui peuvent être configurées mais qui n'offrent pas une souplesse complète lors de la configuration de toutes les options de sécurité prises en charge par [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Cette rubrique montre comment créer une liaison personnalisée directement à partir d’éléments de liaison individuels et met en évidence certains des paramètres de sécurité qui peuvent être spécifiés lors de la création d’une liaison de ce type. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Création de liaisons personnalisées, consultez [extension de liaisons](../../../../docs/framework/wcf/extending/extending-bindings.md).  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] contient plusieurs liaisons fournies par le système qui peuvent être configurées mais qui n'offrent pas une souplesse complète lors de la configuration de toutes les options de sécurité prises en charge par [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Cette rubrique montre comment créer une liaison personnalisée directement à partir d’éléments de liaison individuels et met en évidence certains des paramètres de sécurité qui peuvent être spécifiés lors de la création d’une liaison de ce type. Pour plus d’informations sur la création de liaisons personnalisées, consultez [extension de liaisons](../../../../docs/framework/wcf/extending/extending-bindings.md).  
   
 > [!WARNING]
 >  <xref:System.ServiceModel.Channels.SecurityBindingElement> ne prend pas en charge la forme de canal <xref:System.ServiceModel.Channels.IDuplexSessionChannel>, qui est la forme de canal par défaut utilisée par le transport TCP lorsque <xref:System.ServiceModel.TransferMode> a la valeur <xref:System.ServiceModel.TransferMode.Buffered>. Vous devez définir <xref:System.ServiceModel.TransferMode> à <xref:System.ServiceModel.TransferMode.Streamed> pour utiliser <xref:System.ServiceModel.Channels.SecurityBindingElement> dans ce scénario.  

@@ -20,11 +20,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 754915d5ba596b5121c47be3533ee679b4f9594b
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 998920e4c1d7e0524da1c9843378e92517f4ee96
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="web-services-protocols-supported-by-system-provided-interoperability-bindings"></a>Protocoles de services Web pris en charge par des liaisons d’interopérabilité fournies par le système
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] a été conçu pour interagir avec les services Web qui prennent en charge un ensemble de spécifications connues sous le nom de spécifications de services Web. Pour simplifier la configuration de service afin d'obtenir les meilleures pratiques d'interopérabilité, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] introduit trois liaisons interopérables fournies par le système : <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>, <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType>et <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>. Afin de permettre l'interopérabilité avec les standards OASIS (Organization for the Advancement of Structured Information Standards), [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] inclut une liaison interopérable fournie par le système : <xref:System.ServiceModel.WS2007HttpBinding?displayProperty=nameWithType>. Pour la publication des métadonnées, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] inclut deux liaisons interopérables fournies par le système : [ \<mexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md) et [ \<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md). Cette rubrique répertorie les spécifications prises en charge par les liaisons interopérable fournies par le système.  
@@ -102,7 +102,7 @@ ms.lasthandoff: 04/28/2018
  Les tableaux suivants décrivent les protocoles pris en charge par les liaisons de métadonnées interopérables fournies par le système exposées par la classe <xref:System.ServiceModel.Description.MetadataExchangeBindings?displayProperty=nameWithType>.  
   
 ### <a name="mexhttpbinding"></a>mexHttpBinding  
- Le [ \<mexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md) liaison prend en charge les protocoles suivants. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] à l’aide de cette liaison, consultez [publication des métadonnées](../../../../docs/framework/wcf/feature-details/publishing-metadata.md).  
+ Le [ \<mexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md) liaison prend en charge les protocoles suivants. Pour plus d’informations sur l’utilisation de cette liaison, consultez [publication des métadonnées](../../../../docs/framework/wcf/feature-details/publishing-metadata.md).  
   
 |Category|Protocole|Spécification et utilisation|  
 |--------------|--------------|-----------------------------|  
@@ -112,7 +112,7 @@ ms.lasthandoff: 04/28/2018
 |Métadonnées|WS-MetadataExchange|[WS-MetadataExchange](http://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implémente WS-MetadataExchange pour récupérer XML Schema, WSDL et WS-Policy.|  
   
 ### <a name="mexhttpsbinding"></a>mexHttpsBinding  
- [\<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md) prend en charge les protocoles suivants. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] à l’aide de cette liaison, consultez [publication des métadonnées](../../../../docs/framework/wcf/feature-details/publishing-metadata.md).  
+ [\<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md) prend en charge les protocoles suivants. Pour plus d’informations sur l’utilisation de cette liaison, consultez [publication des métadonnées](../../../../docs/framework/wcf/feature-details/publishing-metadata.md).  
   
 |Category|Protocole|Spécification et utilisation|  
 |--------------|--------------|-----------------------------|  

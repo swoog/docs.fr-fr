@@ -1,34 +1,36 @@
 ---
-title: "Utilisation de l'emprunt d'identité avec la sécurité de transport"
-ms.custom: 
+title: Utilisation de l'emprunt d'identité avec la sécurité de transport
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 426df8cb-6337-4262-b2c0-b96c2edf21a9
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 57b40493d0e9bcbbaaf1366c74ff116343f6ee96
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d5610a107a198a3d8fd0517dca6ca7e2f4d22cbb
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-impersonation-with-transport-security"></a>Utilisation de l'emprunt d'identité avec la sécurité de transport
-*L’emprunt d’identité* désigne la capacité d’une application serveur pour prendre l’identité du client. Les services utilisent couramment l'emprunt d'identité lors de la validation de l'accès aux ressources. L'application serveur s'exécute à l'aide d'un compte de service, mais lorsque le serveur accepte une connexion cliente, il emprunte l'identité du client afin d'exécuter des contrôles d'accès à l'aide des informations d'identification du client. La sécurité de transport est un mécanisme permettant à la fois de passer des informations d'identification et sécuriser les communications à l'aide de ces informations. Cette rubrique décrit l'utilisation de la sécurité de transport dans [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] avec la fonctionnalité d'emprunt d'identité. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]l’emprunt d’identité à l’aide de la sécurité des messages, consultez [délégation et emprunt d’identité](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+*L’emprunt d’identité* désigne la capacité d’une application serveur pour prendre l’identité du client. Les services utilisent couramment l'emprunt d'identité lors de la validation de l'accès aux ressources. L'application serveur s'exécute à l'aide d'un compte de service, mais lorsque le serveur accepte une connexion cliente, il emprunte l'identité du client afin d'exécuter des contrôles d'accès à l'aide des informations d'identification du client. La sécurité de transport est un mécanisme permettant à la fois de passer des informations d'identification et sécuriser les communications à l'aide de ces informations. Cette rubrique décrit l'utilisation de la sécurité de transport dans [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] avec la fonctionnalité d'emprunt d'identité. Pour plus d’informations sur l’emprunt d’identité à l’aide de la sécurité des messages, consultez [délégation et emprunt d’identité](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
 ## <a name="five-impersonation-levels"></a>Les cinq niveaux d'emprunt d'identité  
  La sécurité de transport utilise cinq niveaux d'emprunt d'identité, comme le décrit le tableau suivant.  
   
 |Niveau d'emprunt d'identité|Description|  
 |-------------------------|-----------------|  
-|Aucun.|L'application serveur n'essaie pas d'emprunter l'identité du client.|  
+|Aucun|L'application serveur n'essaie pas d'emprunter l'identité du client.|  
 |Anonymous|L'application serveur peut exécuter les contrôles d'accès à partir des informations d'identification du client, mais ne reçoit pas d'informations à propos de l'identité du client. Ce niveau d'emprunt d'identité n'est utile que pour les communications sur ordinateur, telles que les canaux nommés. L'utilisation de `Anonymous` avec une connexion à distance fait passer le niveau d'emprunt d'identité à Identifier.|  
 |Identifier|L'application serveur connaît l'identité du client et peut exécuter les contrôles d'accès à partir des informations d'identification du client, mais ne peut pas emprunter l'identité du client. Le niveau Identifier est le niveau d'emprunt d'identité par défaut utilisé avec les informations d'identification SSPI dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] à moins que le fournisseur de jetons ne propose un niveau d'emprunt d'identité différent.|  
 |Impersonate|L'application serveur peut accéder aux ressources de l'ordinateur serveur en tant que client en plus d'exécuter des contrôles d'accès. L'application serveur ne peut pas accéder aux ressources des ordinateurs distants à l'aide de l'identité du client parce que le jeton personnifié ne possède pas d'informations d'identification réseau.|  
@@ -48,7 +50,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Les canaux nommés ne peuvent pas être utilisés avec les niveaux d'emprunt d'identité `Impersonate` ou `Delegate`. Le canal nommé ne peut pas mettre en vigueur la garantie sur ordinateur à ces niveaux d'emprunt d'identité.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]canaux nommés, consultez [choisir un Transport](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
+ Pour plus d’informations sur les canaux nommés, consultez [choisir un Transport](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
   
 ### <a name="http-transport"></a>Transport HTTP  
  Les liaisons qui utilisent le transport HTTP (<xref:System.ServiceModel.WSHttpBinding> et <xref:System.ServiceModel.BasicHttpBinding>) prend en charge plusieurs schémas d’authentification, comme expliqué dans [compréhension de l’authentification HTTP](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md). Le niveau d'emprunt d'identité pris en charge dépend du schéma d'authentification. Les éléments suivants sont utilisés avec le transport http :  
@@ -63,7 +65,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Le schéma d'authentification Kerberos, qui ne peut être sélectionné que par négociation, peut être utilisé avec tout niveau d'emprunt d'identité pris en charge.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]le transport HTTP, consultez [choisir un Transport](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
+ Pour plus d’informations sur le transport HTTP, consultez [choisir un Transport](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Délégation et emprunt d’identité](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)  

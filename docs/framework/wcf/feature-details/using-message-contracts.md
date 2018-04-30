@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e9f6d0e9d64c510b47b0697d02178f1c0a95f61b
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 600d938b8981ddfabcb79028ae66b5b9d02107b7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-message-contracts"></a>Utilisation de contrats de message
 En général lors de la génération d'applications [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], les développeurs accordent une attention particulière aux structures de données et aux problèmes de sérialisation, et n'ont pas à se soucier de la structure des messages dans lesquels les données sont stockées. Pour ces applications, créer des contrats de données pour les paramètres ou les valeurs de retour est une procédure simple. (Pour plus d’informations, consultez [spécification de transfert de données dans les contrats de Service](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  
@@ -44,7 +44,7 @@ En général lors de la génération d'applications [!INCLUDE[indigo1](../../../
 public BankingTransactionResponse PostBankingTransaction(BankingTransaction bt);  
 ```  
   
- Habituellement, un contrat de données est suffisant pour définir le schéma des messages. Par exemple, cela est suffisant pour la plupart des applications dans l'exemple précédent si `BankingTransaction` et `BankingTransactionResponse` ont des contrats de données pour définir le contenu des messages SOAP sous-jacents. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] contrats de données, consultez [à l’aide de contrats de données](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
+ Habituellement, un contrat de données est suffisant pour définir le schéma des messages. Par exemple, cela est suffisant pour la plupart des applications dans l'exemple précédent si `BankingTransaction` et `BankingTransactionResponse` ont des contrats de données pour définir le contenu des messages SOAP sous-jacents. Pour plus d’informations sur les contrats de données, consultez [à l’aide de contrats de données](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
  Toutefois, il peut parfois s'avérer nécessaire de contrôler de manière précise la façon dont la structure du message SOAP est transmise sur le réseau. Le scénario le plus courant dans ce cas consiste à insérer des en-têtes SOAP personnalisés. Un autre consiste à définir des propriétés de sécurité pour le corps et les en-têtes du message, c'est à-dire, à déterminer si ces éléments sont chiffrés et signés numériquement. Enfin, certaines piles SOAP tiers requièrent que les messages soient dans un format spécifique. Les opérations de style de messagerie fournissent ce contrôle.  
   

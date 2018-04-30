@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2a9c34f67de6f4f8b4a8d22dac7e8bf1c9555498
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 5e477b11893d2b74ebe1674225e05b13cb9f67ca
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="implementing-service-contracts"></a>Implémentation de contrats de service
 Un service est une classe qui expose les fonctionnalités disponibles aux clients à un ou plusieurs points de terminaison. Pour créer un service, écrivez une classe qui implémente un contrat [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. Vous pouvez le faire de deux façons. Vous pouvez définir séparément le contrat comme une interface, puis créer une classe qui implémente cette interface. Vous pouvez également créer la classe et le contrat directement en plaçant l'attribut <xref:System.ServiceModel.ServiceContractAttribute> sur la classe elle-même et l'attribut <xref:System.ServiceModel.OperationContractAttribute> sur les méthodes qui sont à la disposition des clients du service.  
@@ -68,7 +68,7 @@ class MathService
   
  Vous pouvez définir quelques éléments au niveau de l'implémentation du service et des opérations, tels que l'accès concurrentiel et l'instanciation. Pour plus d’informations, consultez [conception et implémentation de Services](../../../docs/framework/wcf/designing-and-implementing-services.md).  
   
- Après avoir implémenté un contrat de service, vous devez créer un ou plusieurs points de terminaison pour le service. Pour plus d’informations, consultez [vue d’ensemble de la création de point de terminaison](../../../docs/framework/wcf/endpoint-creation-overview.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)] comment exécuter un service, consultez [Services d’hébergement](../../../docs/framework/wcf/hosting-services.md).  
+ Après avoir implémenté un contrat de service, vous devez créer un ou plusieurs points de terminaison pour le service. Pour plus d’informations, consultez [vue d’ensemble de la création de point de terminaison](../../../docs/framework/wcf/endpoint-creation-overview.md). Pour plus d’informations sur l’exécution d’un service, consultez [Services d’hébergement](../../../docs/framework/wcf/hosting-services.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Conception et implémentation de services](../../../docs/framework/wcf/designing-and-implementing-services.md)  

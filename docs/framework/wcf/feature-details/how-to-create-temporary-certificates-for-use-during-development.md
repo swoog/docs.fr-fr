@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ccbc8c6fa638c674dea28c312b2dedbc9d41968a
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: f5a096fd6e052fc744af5cee1ab0d322e1daafe6
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Comment : créer des certificats temporaires à utiliser au cours du développement
 Lors du développement d'un service ou d'un client sécurisé à l'aide de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], il est souvent nécessaire de fournir un certificat X.509 à utiliser comme informations d'identification. Le certificat fait en général partie d'une chaîne de certificats dont l'autorité racine est présente dans le magasin d'Autorités de certification racines de confiance de l'ordinateur. Une chaîne de certificats vous permet de définir la portée d'un jeu de certificats où en général l'autorité racine provient de votre organisation ou votre division. Pour émuler ce scénario au moment du développement, vous pouvez créer deux certificats pour satisfaire les conditions de sécurité. Le premier est un certificat auto-signé placé dans le magasin d'Autorités de certification racines de confiance. Le deuxième certificat est créé à partir du premier et placé dans le magasin personnel de l'emplacement de l'ordinateur local ou dans le magasin personnel de l'emplacement de l'utilisateur actif. Cette rubrique décrit les étapes permettant de créer ces deux certificats à l’aide de l’ [outil de création de certificat (MakeCert.exe)](http://go.microsoft.com/fwlink/?LinkId=248185), fourni par le Kit de développement logiciel (SDK) [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] .  
@@ -33,7 +33,7 @@ Lors du développement d'un service ou d'un client sécurisé à l'aide de [!INC
 >   
 >  Par défaut, le [Makecert.exe (outil de création de certificat)](http://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d) crée des certificats dont l’autorité racine est appelée « agence de racine **. »** Comme celle-ci ne figure pas dans le magasin d'Autorités de certification racines de confiance, ces certificats ne sont pas sécurisés. La création d'un certificat auto-signé placé dans le magasin d'Autorités de certification racines de confiance vous permet de créer un environnement de développement qui reproduit plus fidèlement votre environnement de déploiement.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] la création et l’utilisation de certificats, consultez [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] l’utilisation d’un certificat en tant qu’informations d’identification, consultez [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md). Pour obtenir un didacticiel à propos de l’utilisation de la technologie Authenticode de Microsoft, consultez [Authenticode Overviews and Tutorials](http://go.microsoft.com/fwlink/?LinkId=88919)(Vues d’ensemble et didacticiels relatifs à Authenticode).  
+ Pour plus d’informations sur la création et l’utilisation de certificats, consultez [utilisation des certificats](../../../../docs/framework/wcf/feature-details/working-with-certificates.md). Pour plus d’informations sur l’utilisation d’un certificat comme informations d’identification, consultez [sécurisation des Services et les Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md). Pour obtenir un didacticiel à propos de l’utilisation de la technologie Authenticode de Microsoft, consultez [Authenticode Overviews and Tutorials](http://go.microsoft.com/fwlink/?LinkId=88919)(Vues d’ensemble et didacticiels relatifs à Authenticode).  
   
 ### <a name="to-create-a-self-signed-root-authority-certificate-and-export-the-private-key"></a>Pour créer un certificat d'autorité racine auto-signé et exporter la clé privée  
   

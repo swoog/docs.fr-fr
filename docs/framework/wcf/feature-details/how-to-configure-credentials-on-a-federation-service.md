@@ -22,20 +22,20 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ffb33ea70f67e209648e470656a2719404dd7f2d
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 063f4da3ca920f17f77b3cc53f7c5903fc89b8cf
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-configure-credentials-on-a-federation-service"></a>Comment : configurer des informations d'identification sur un service FS (Federation Service)
 Dans [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], la création d'un service fédéré implique les principales procédures suivantes :  
   
-1.  Configuration d'un <xref:System.ServiceModel.WSFederationHttpBinding> ou d'une liaison personnalisée similaire. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Création d’une liaison appropriée, consultez [Comment : créer une liaison WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md).  
+1.  Configuration d'un <xref:System.ServiceModel.WSFederationHttpBinding> ou d'une liaison personnalisée similaire. Pour plus d’informations sur la création d’une liaison appropriée, consultez [Comment : créer une liaison WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md).  
   
 2.  Configuration de <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> qui contrôle la manière dont les jetons émis présentés au service sont authentifiés.  
   
- Cette rubrique fournit des détails sur la deuxième étape. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] fonctionnement d’un service fédéré, voir [fédération](../../../../docs/framework/wcf/feature-details/federation.md).  
+ Cette rubrique fournit des détails sur la deuxième étape. Pour plus d’informations sur le fonctionne d’un service fédéré, voir [fédération](../../../../docs/framework/wcf/feature-details/federation.md).  
   
 ### <a name="to-set-the-properties-of-issuedtokenservicecredential-in-code"></a>Pour définir les propriétés de IssuedTokenServiceCredential dans le code  
   
@@ -80,7 +80,7 @@ Dans [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], la création d'un 
   
 -   Lorsque la signature du jeton émis utilise un numéro de série d'émetteur X.509, un identificateur de clé du sujet X.509 ou un identificateur de sécurité d'empreinte numérique X.509, le jeton émis doit être signé par un certificat de la collection retournée par la propriété <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> de la classe <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>.  
   
--   Lorsque le jeton émis est signé à l'aide d'un certificat X.509, le certificat doit valider suivant la sémantique spécifiée par la valeur de la propriété <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A>, indépendamment du fait que le certificat a été envoyé à la partie de confiance en tant que <xref:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause> ou qu'il a été obtenu à partir de la propriété <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A>. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Validation du certificat X.509, consultez [utilisation des certificats](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
+-   Lorsque le jeton émis est signé à l'aide d'un certificat X.509, le certificat doit valider suivant la sémantique spécifiée par la valeur de la propriété <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A>, indépendamment du fait que le certificat a été envoyé à la partie de confiance en tant que <xref:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause> ou qu'il a été obtenu à partir de la propriété <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A>. Pour plus d’informations sur la validation du certificat X.509, consultez [utilisation des certificats](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
  Par exemple, si vous affectez <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> à <xref:System.ServiceModel.Security.X509CertificateValidationMode.PeerTrust>, les jetons émis dont le certificat de signature se trouve dans le magasin de certificats `TrustedPeople` sont authentifiés. Dans ce cas, affectez <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.TrustedStoreLocation%2A> ou <xref:System.Security.Cryptography.X509Certificates.StoreLocation.CurrentUser> à la propriété <xref:System.Security.Cryptography.X509Certificates.StoreLocation.LocalMachine>. Vous pouvez sélectionner d'autres modes, dont <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>. Lorsque `Custom` est sélectionné, vous devez assigner une instance de la classe <xref:System.IdentityModel.Selectors.X509CertificateValidator> à la propriété <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CustomCertificateValidator%2A>. Le validateur personnalisé peut valider des certificats à l'aide de n'importe quel critère. Pour plus d’informations, consultez [Comment : créer un Service qui utilise un validateur de certificat personnalisé](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md).  
   

@@ -18,18 +18,18 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 948ff11cf1b7ecacc6f9f5fdebfc3a0cbd1ef5b1
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 69b013389511ac2cfb31e22f7a39e98eb22fb977
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="auditing-security-events"></a>Audit des événements de sécurité
 Les applications créées avec [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] peuvent enregistrer des événements de sécurité (succès, échec, ou les deux) à l'aide de la fonctionnalité d'audit. Les événements sont écrits dans le journal des événements système Windows et peuvent être examinés à l'aide de l'Observateur d'événements.  
   
  L'audit permet à un administrateur de détecter une attaque que s'est déjà produite ou qui est en cours. En outre, l'audit permet de déboguer des problèmes relatifs à la sécurité. Par exemple, si une erreur dans la configuration de la stratégie d'autorisation ou de vérification refuse accidentellement l'accès à un utilisateur autorisé, un développeur peut la détecter rapidement et en isoler la cause en examinant le journal des événements.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] la sécurité, consultez [vue d’ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] programmation [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], consultez [programmation WCF de base](../../../../docs/framework/wcf/basic-wcf-programming.md).  
+ Pour plus d’informations sur [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sécurité, consultez [vue d’ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md). Pour plus d’informations sur la programmation [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], consultez [programmation WCF de base](../../../../docs/framework/wcf/basic-wcf-programming.md).  
   
 ## <a name="audit-level-and-behavior"></a>Niveau et comportement d'audit  
  Il existe deux niveaux d'audit de sécurité :  

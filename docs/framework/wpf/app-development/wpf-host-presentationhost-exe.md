@@ -1,40 +1,42 @@
 ---
-title: "Hôte WPF (PresentationHost.exe)"
-ms.custom: 
+title: Hôte WPF (PresentationHost.exe)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WPF Host application [WPF]
 - PresentationHost.exe
 ms.assetid: 3215bfa1-722c-4ac8-a7c5-bdd02d30afbd
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1c5a9df438353701932a3e732d6df28b08402ee8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1cd9586564d79d3c4ef1425eec1499b9b3143ff3
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wpf-host-presentationhostexe"></a>Hôte WPF (PresentationHost.exe)
-L’hôte [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] (PresentationHost.exe) est l’application qui permet aux applications [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] d’être hébergées par des navigateurs compatibles (notamment [!INCLUDE[TLA#tla_ie6](../../../../includes/tlasharptla-ie6-md.md)] et les versions ultérieures). Par défaut, l’hôte [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] est inscrit en tant qu’interpréteur de commandes et gestionnaire [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] pour le contenu [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] hébergé par les navigateurs, ce qui inclut :  
+Windows Presentation Foundation (WPF) hôte (PresentationHost.exe) est une application qui permet de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aux applications d’être hébergées dans des navigateurs compatibles (y compris [!INCLUDE[TLA#tla_ie6](../../../../includes/tlasharptla-ie6-md.md)] et versions ultérieures). Par défaut, les hôtes de Windows Presentation Foundation (WPF) est inscrit en tant que l’interpréteur de commandes et [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] gestionnaire pour hébergées par un navigateur [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] contenu, qui inclut :  
   
 -   les fichiers [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] (.xaml) libre (non compilés) ;  
   
 -   l’application [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] (.xbap).  
   
- Pour les fichiers de ce type, l’hôte [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] :  
+ Pour les fichiers de ces types, l’hôte de Windows Presentation Foundation (WPF) :  
   
--   lance le gestionnaire [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] inscrit pour héberger le contenu [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] ;  
+-   Lance l’inscrit [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] gestionnaire pour héberger le contenu Windows Presentation Foundation (WPF).  
   
--   charge les versions appropriées des assemblys [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] et [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] ;  
+-   Charge les bonnes versions requis [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] et assemblys de Windows Presentation Foundation (WPF).  
   
 -   vérifie la mise en place des niveaux d’autorisation appropriés pour la zone de déploiement.  
   

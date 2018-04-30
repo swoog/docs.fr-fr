@@ -1,24 +1,26 @@
 ---
 title: Gestion des erreurs HTTP Web WCF
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 02891563-0fce-4c32-84dc-d794b1a5c040
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3c5f397d50a5a97801241afd8e64abf2e56b05dd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: bcd0e6d1e6318404eb47741dc61ccf2ff9358b47
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wcf-web-http-error-handling"></a>Gestion des erreurs HTTP Web WCF
 La gestion des erreurs HTTP Web [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] vous permet de retourner des erreurs provenant des services HTTP Web [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] qui spécifient un code d'état HTTP et retournent les détails d'une erreur en utilisant le même format que l'opération (par exemple, XML ou JSON).  
@@ -56,7 +58,7 @@ Public string Operation2()
   
 -   la valeur de la propriété <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> en accédant à l'objet <xref:System.ServiceModel.Web.OutgoingWebResponseContext>.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]comment ces valeurs affectent la mise en forme de l’opération, consultez [mise en forme de WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md).  
+ Pour plus d’informations sur la façon dont ces valeurs affectent la mise en forme de l’opération, consultez [mise en forme de WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md).  
   
  <xref:System.ServiceModel.Web.WebFaultException> est un <xref:System.ServiceModel.FaultException> et par conséquent peut être utilisé comme le modèle de programmation d'exception d'erreur pour les services qui exposent des points de terminaison SOAP, ainsi que des points de terminaison HTTP Web.  
   

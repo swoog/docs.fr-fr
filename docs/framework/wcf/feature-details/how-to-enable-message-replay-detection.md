@@ -24,16 +24,16 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 55cd4b928c640f506e058f6a441189842bc9b8a3
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: cada24098f5800f56d7dd50119c3fe3394ba14cd
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-enable-message-replay-detection"></a>Comment : activer la détection de relecture des messages
 Une attaque par relecture se produit lorsqu'un intrus copie un flux de messages entre deux correspondants et relit le flux à l'un ou plusieurs des correspondants. Sauf atténuation, les ordinateurs sujets à l'attaque traiteront le flux comme messages légitimes, ce qui a des conséquences néfastes telles que des ordres redondants d'un élément.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] la détection de relecture de message, consultez [détection de relecture de Message](http://go.microsoft.com/fwlink/?LinkId=88536).  
+ Pour plus d’informations sur la détection de relecture de message, consultez [détection de relecture de Message](http://go.microsoft.com/fwlink/?LinkId=88536).  
   
  La procédure suivante illustre différentes propriétés que vous pouvez utiliser pour contrôler la détection de relecture à l'aide de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
   

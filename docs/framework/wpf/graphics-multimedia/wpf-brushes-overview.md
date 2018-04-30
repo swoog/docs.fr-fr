@@ -1,13 +1,13 @@
 ---
 title: Vue d'ensemble des pinceaux WPF
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - brushes [WPF], about brushes
 ms.assetid: ecea1955-420b-45c6-bf43-c1404c072c41
-caps.latest.revision: 
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ec7e566e6f56c215bbaeafdfb5c5e97cc0add0bf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1ef53da1febd6a49af8404e5889a728a1b7c649b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wpf-brushes-overview"></a>Vue d'ensemble des pinceaux WPF
 Tous les éléments visibles sur votre écran sont visible, car il a été peint par un pinceau. Par exemple, un pinceau est utilisé pour décrire l’arrière-plan d’un bouton, le premier plan du texte et le remplissage de la forme. Cette rubrique présente les concepts de la peinture avec [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] de pinceaux et fournit des exemples. Les pinceaux permettent de peindre des objets de l’[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] aussi bien avec de simples couleurs unies qu’avec des ensembles complexes de modèles et d’images.  
@@ -142,7 +142,7 @@ Rectangle peint avec un VisualBrush
   
 <a name="paintwithpredefinedbrushesandsystemcolors"></a>   
 ## <a name="paint-using-predefined-and-system-brushes"></a>Peinture à l’aide de pinceaux système et prédéfinis  
- Pour plus de commodité, [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] fournit un ensemble de système et pinceaux prédéfinis que vous pouvez utiliser pour peindre des objets.  
+ Pour plus de commodité, Windows Presentation Foundation (WPF) fournit un ensemble de système et pinceaux prédéfinis que vous pouvez utiliser pour peindre des objets.  
   
 -   Pour obtenir la liste des pinceaux prédéfinis disponibles, consultez la <xref:System.Windows.Media.Brushes> classe. Pour obtenir un exemple montrant comment utiliser un pinceau prédéfini, consultez [peindre une zone avec une couleur unie](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-solid-color.md).  
   
@@ -150,7 +150,7 @@ Rectangle peint avec un VisualBrush
   
 <a name="commonbrushfeatures"></a>   
 ## <a name="common-brush-features"></a>Fonctionnalités communes de pinceau  
- <xref:System.Windows.Media.Brush>objets fournissent une <xref:System.Windows.Media.Brush.Opacity%2A> propriété qui peut être utilisée pour rendre un pinceau totalement ou partiellement transparent. Un <xref:System.Windows.Media.Brush.Opacity%2A> la valeur 0 rend le pinceau complètement transparent, tandis qu’un <xref:System.Windows.Media.Brush.Opacity%2A> la valeur 1 indique un pinceau est complètement opaque. L’exemple suivant utilise le <xref:System.Windows.Media.Brush.Opacity%2A> propriété pour rendre un <xref:System.Windows.Media.SolidColorBrush> opaque à 25 %.  
+ <xref:System.Windows.Media.Brush> objets fournissent une <xref:System.Windows.Media.Brush.Opacity%2A> propriété qui peut être utilisée pour rendre un pinceau totalement ou partiellement transparent. Un <xref:System.Windows.Media.Brush.Opacity%2A> la valeur 0 rend le pinceau complètement transparent, tandis qu’un <xref:System.Windows.Media.Brush.Opacity%2A> la valeur 1 indique un pinceau est complètement opaque. L’exemple suivant utilise le <xref:System.Windows.Media.Brush.Opacity%2A> propriété pour rendre un <xref:System.Windows.Media.SolidColorBrush> opaque à 25 %.  
   
  [!code-xaml[BrushOverviewExamples_snip#OpacityExample1XAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/OpacityExample.xaml#opacityexample1xaml)]  
   

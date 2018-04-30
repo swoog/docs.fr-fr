@@ -1,27 +1,29 @@
 ---
 title: Prise en charge POCO
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3846ca73-2819-4ca2-8367-dc739dde5a5b
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c471a6726d8f7e621d666e014b2363c088e2b0e0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9c67b39c8d3c48281eb0ec9c360de7eaff1cfad6
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="poco-support"></a>Prise en charge POCO
-Cet exemple illustre la prise en charge de la sérialisation pour les types non marqués, c'est-à-dire les types auxquels aucun attribut de sérialisation n'a été appliqué. Ces types sont parfois appelés types POCO (Plain Old CLR Object). <xref:System.Runtime.Serialization.DataContractSerializer> déduit un contrat de données pour tous les types non marqués publics qui possèdent un constructeur par défaut. Les contrats de données vous permettent de transférer des données structurées vers des services et à partir de ceux-ci. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]les types non marqués, consultez [Types sérialisables](../../../../docs/framework/wcf/feature-details/serializable-types.md).  
+Cet exemple illustre la prise en charge de la sérialisation pour les types non marqués, c'est-à-dire les types auxquels aucun attribut de sérialisation n'a été appliqué. Ces types sont parfois appelés types POCO (Plain Old CLR Object). <xref:System.Runtime.Serialization.DataContractSerializer> déduit un contrat de données pour tous les types non marqués publics qui possèdent un constructeur par défaut. Les contrats de données vous permettent de transférer des données structurées vers des services et à partir de ceux-ci. Pour plus d’informations sur les types non marqués, consultez [Types sérialisables](../../../../docs/framework/wcf/feature-details/serializable-types.md).  
   
  Cet exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md), mais utilise des nombres complexes au lieu de types numériques primitifs. Il est similaire à la [contrat de données de base](../../../../docs/framework/wcf/samples/basic-data-contract.md) exemple, à ceci près que le <xref:System.Runtime.Serialization.DataContractAttribute> et <xref:System.Runtime.Serialization.DataMemberAttribute> attributs ne sont pas utilisés.  
   

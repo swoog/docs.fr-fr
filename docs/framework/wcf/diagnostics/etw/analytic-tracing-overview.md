@@ -18,16 +18,16 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c29065ebe03617e288d7ebde3dc6b42cbfcf6061
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 530f6ce3d253cfc50818c82fc70e401382b50b85
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="analytic-tracing-overview"></a>Vue d'ensemble du traçage analytique
 Le traçage analytique dans [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] est une fonctionnalité de suivi très performante et à faible niveau de commentaires, définie au-dessus du suivi d'événements Windows (ETW). ETW s'exécute au niveau du noyau pour diminuer considérablement les surcharges des opérations de suivi. Il met efficacement en mémoire tampon les événements en mode utilisateur et noyau, et permet l'activation dynamique de la journalisation, sans que le service ait besoin de redémarrer. Les données de suivi sont disponibles dans les journaux des événements, une fois qu'elles ont été émises et reçues.  
   
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] ETW, consultez [Improve Debugging and Performance Tuning with ETW](http://go.microsoft.com/fwlink/?LinkId=164781)(Améliorer le débogage et le réglage des performances à l’aide d’ETW).  
+ Pour plus d’informations sur le suivi ETW, consultez [Améliorez le débogage et l’optimisation des performances avec ETW](http://go.microsoft.com/fwlink/?LinkId=164781).  
   
  En plus d'utiliser les journaux d'événements du système Windows, de la sécurité et de l'application pour analyser l'application, [!INCLUDE[wv](../../../../../includes/wv-md.md)] et [!INCLUDE[lserver](../../../../../includes/lserver-md.md)] ont introduit des journaux supplémentaires sous le nœud de niveau supérieur des journaux des applications et des services. L'objectif de ces nouveaux journaux est de stocker les événements d'une application particulière ou d'un composant spécifique, au lieu d'événements globaux qui ont un impact sur l'ensemble du système (tels le type d'événements enregistrés par le journal des événements de sécurité). [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)] unifie et met en corrélation l'enregistrement des événements de trace [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] , des journaux de messages [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] , et les enregistrements de suivi [!INCLUDE[wf1](../../../../../includes/wf1-md.md)] avec les journaux des applications et des services.  
   
@@ -57,7 +57,7 @@ Le traçage analytique dans [!INCLUDE[netfx_current_long](../../../../../include
  L'infrastructure ETW permet d'activer le suivi et de le configurer de manière dynamique, à l'aide d'outils Windows standard. Pour plus d’informations, consultez [dynamiquement l’activation de traçage analytique](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md).  
   
 ### <a name="message-flow-tracing"></a>Suivi de flux de messages  
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] la manière d’activer le suivi de flux de messages, consultez [Configuring Message Flow Tracing](../../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md)(Améliorer le débogage et le réglage des performances à l’aide d’ETW).  
+ Pour plus d’informations sur la façon d’activer le suivi de flux de messages, consultez [configurer le suivi de flux de Message](../../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md).  
   
 ### <a name="keywords"></a>Mots clés  
  Les mots clés sont utilisés pour filtrer les messages de trace et définir quel composant du [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] a émis l'événement. Pour plus d’informations, consultez [dynamiquement l’activation de traçage analytique](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md).

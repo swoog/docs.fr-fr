@@ -1,34 +1,36 @@
 ---
 title: Protocoles de transaction version 1.0
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 034679af-0002-402e-98a8-ef73dcd71bb6
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e616f989416fcee77caa9b9a5d87cfa6812eab32
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 60867daa7b8519f745c37371604807c51aa1cbb9
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="transaction-protocols-version-10"></a>Protocoles de transaction version 1.0
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] version 1 implémente la version 1.0 des protocoles WS-Atomic Transaction et WS-Coordination. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]la version 1.1, consultez [protocoles de Transaction](../../../../docs/framework/wcf/feature-details/transaction-protocols.md).  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] version 1 implémente la version 1.0 des protocoles WS-Atomic Transaction et WS-Coordination. Pour plus d’informations sur la version 1.1, consultez [protocoles de Transaction](../../../../docs/framework/wcf/feature-details/transaction-protocols.md).  
   
 |Spécification/Document|Link|  
 |-----------------------------|----------|  
 |WS-Coordination|http://msdn.microsoft.com/ws/2005/08/ws-coordination/|  
 |WS-AtomicTransaction|http://msdn.microsoft.com/ws/2005/08/ws-atomictransaction/|  
   
- L'interopérabilité sur ces spécifications de protocole est requise à deux niveaux : entre les applications et entre les gestionnaires de transactions (consultez la figure suivante). Les spécifications décrivent de manière très détaillée les formats de message et l'échange de messages pour les deux niveaux d'interopérabilité. Une certain niveau de sécurité, de fiabilité et des encodages pour l'échange interapplication s'appliquent de la même manière que pour l'échange entre applications normal. Toutefois, l'interopérabilité réussie entre les gestionnaires de transactions requiert un contrat sur la liaison spécifique, car il n'est généralement pas configuré par l'utilisateur.  
+ L’interopérabilité sur ces spécifications de protocole est requise à deux niveaux : entre les applications et entre les gestionnaires de transactions (consultez la figure suivante). Les spécifications décrivent de manière très détaillée les formats de message et l'échange de messages pour les deux niveaux d'interopérabilité. Une certain niveau de sécurité, de fiabilité et des encodages pour l'échange interapplication s'appliquent de la même manière que pour l'échange entre applications normal. Toutefois, l'interopérabilité réussie entre les gestionnaires de transactions requiert un contrat sur la liaison spécifique, car il n'est généralement pas configuré par l'utilisateur.  
   
  Cette rubrique décrit une composition de la spécification WS-AT (WS-Atomic Transaction) avec sécurité et décrit la liaison sécurisée utilisée pour la communication entre les gestionnaires de transactions. L'approche décrite dans ce document a été testée avec succès avec d'autres implémentations de WS-AT et WS-Coordination, dont IBM, IONA, Sun Microsystems, etc.  
   
@@ -71,7 +73,7 @@ ms.lasthandoff: 12/22/2017
 |Préfixe|URI d'espace de noms|  
 |------------|-------------------|  
 |s11|http://schemas.xmlsoap.org/soap/envelope|  
-|wsa|http://www.w3.org/2004/08/Addressing|  
+|wsa|http://www.w3.org/2004/08/addressing|  
 |wscoor|http://schemas.xmlsoap.org/ws/2004/10/wscoor|  
 |wsat|http://schemas.xmlsoap.org/ws/2004/10/wsat|  
 |t|http://schemas.xmlsoap.org/ws/2005/02/trust|  

@@ -1,36 +1,38 @@
 ---
-title: "Comment : héberger un service WCF dans une application managée"
-ms.custom: 
+title: 'Comment : héberger un service WCF dans une application managée'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5eb29db0-b6dc-4e77-8c68-0a62f79d743b
-caps.latest.revision: "42"
+caps.latest.revision: 42
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6491faa6134c1e80e07294d8f888200c04fa8704
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5f2671dc381e0d3ef8f55ced01268de6205fcb7d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-application"></a>Comment : héberger un service WCF dans une application managée
 Pour héberger un service à l'intérieur d'une application managée, incorporez le code du service à l'intérieur du code de l'application managée, définissez un point de terminaison pour le service soit de manière impérative dans le code, soit de façon déclarative par le biais de la configuration ou à l'aide des points de terminaison par défaut, puis créez une instance de <xref:System.ServiceModel.ServiceHost>.  
   
  Pour commencer à recevoir des messages, appelez <xref:System.ServiceModel.ICommunicationObject.Open%2A><xref:System.ServiceModel.ServiceHost>. De cette manière, vous créez et ouvrez l'écouteur pour le service. L'hébergement d'un service selon cette méthode est souvent appelé « auto-hébergement » parce que l'application managée effectue le travail d'hébergement elle-même. Pour fermer le service, appelez <xref:System.ServiceModel.Channels.CommunicationObject.Close%2A?displayProperty=nameWithType> sur <xref:System.ServiceModel.ServiceHost>.  
   
- Un service peut également être hébergé dans un service Windows managé, dans le service IIS (Internet Information Services), ou le service WAS (Windows Process Activation Service). [!INCLUDE[crabout](../../../includes/crabout-md.md)]options pour un service d’hébergement, consultez [Services d’hébergement](../../../docs/framework/wcf/hosting-services.md).  
+ Un service peut également être hébergé dans un service Windows managé, dans le service IIS (Internet Information Services), ou le service WAS (Windows Process Activation Service). Pour plus d’informations sur les options pour un service d’hébergement, consultez [Services d’hébergement](../../../docs/framework/wcf/hosting-services.md).  
   
- L'hébergement d'un service dans une application managée constitue l'option d'hébergement la plus flexible parce qu'il requiert le déploiement de moins d'infrastructure. [!INCLUDE[crabout](../../../includes/crabout-md.md)]hébergement des services dans les applications managées, consultez [hébergement dans une Application gérée](../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md).  
+ L'hébergement d'un service dans une application managée constitue l'option d'hébergement la plus flexible parce qu'il requiert le déploiement de moins d'infrastructure. Pour plus d’informations sur l’hébergement de services dans les applications managées, consultez [hébergement dans une Application gérée](../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md).  
   
  La procédure suivante montre comment implémenter un service auto-hébergé dans une application console.  
   
@@ -58,7 +60,7 @@ Pour héberger un service à l'intérieur d'une application managée, incorporez
      [!code-vb[CFX_SelfHost4#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#2)]  
   
     > [!NOTE]
-    >  [!INCLUDE[crabout](../../../includes/crabout-md.md)]comment définir et implémenter une interface de service, consultez [Comment : définir un contrat de Service](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md) et [Comment : implémenter un contrat de Service](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md).  
+    >  Pour plus d’informations sur la façon de définir et implémenter une interface de service, consultez [Comment : définir un contrat de Service](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md) et [Comment : implémenter un contrat de Service](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md).  
   
 7.  En tête de la méthode `Main`, créez une instance de la classe <xref:System.Uri> avec l'adresse de base du service.  
   
@@ -71,7 +73,7 @@ Pour héberger un service à l'intérieur d'une application managée, incorporez
      [!code-vb[CFX_SelfHost4#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#4)]       
   
     > [!NOTE]
-    >  Cet exemple utilise les points de terminaison par défaut et aucun fichier de configuration n'est requis pour ce service. Si aucun point de terminaison n'est configuré, le runtime en crée un pour chaque adresse de base pour chaque contrat de service implémenté par le service. [!INCLUDE[crabout](../../../includes/crabout-md.md)]par défaut des points de terminaison, consultez [Configuration simplifiée](../../../docs/framework/wcf/simplified-configuration.md) et [simplifié la Configuration des Services WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+    >  Cet exemple utilise les points de terminaison par défaut et aucun fichier de configuration n'est requis pour ce service. Si aucun point de terminaison n'est configuré, le runtime en crée un pour chaque adresse de base pour chaque contrat de service implémenté par le service. Pour plus d’informations sur les points de terminaison par défaut, consultez [Configuration simplifiée](../../../docs/framework/wcf/simplified-configuration.md) et [simplifié la Configuration des Services WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 9. Appuyez sur Ctrl+Maj+B pour générer la solution.  
   

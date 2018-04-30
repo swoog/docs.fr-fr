@@ -1,24 +1,26 @@
 ---
 title: Files d'attente et sessions fiables
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7e794d03-141c-45ed-b6b1-6c0e104c1464
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a9a78bab9f7c4af23cf01c44e1d22a41a87a96f1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: dbbaa432f7f1e137fc6cbd47ecd8e24d9eab97c3
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="queues-and-reliable-sessions"></a>Files d'attente et sessions fiables
 Les files d'attente et les sessions fiables correspondent aux fonctionnalités [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] qui implémentent la messagerie fiable. Les rubriques contenues de cette section traitent des fonctionnalités de messagerie fiable de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
@@ -40,14 +42,14 @@ Les files d'attente et les sessions fiables correspondent aux fonctionnalités [
 ## <a name="reliable-sessions"></a>Sessions fiables  
  À l'aide du protocole de messagerie WS-Reliable, les sessions fiables assurent un transfert fiable des messages de bout en bout entre source et destination quels que soient les nombre et type d'intermédiaires figurant entre les points de terminaison (source et destination) de la messagerie. Au rang de ces intermédiaires figurent notamment tous les transports qui n'utilisent pas le protocole SOAP (par exemple, les proxys HTTP) ou les intermédiaires qui utilisent SOAP (par exemple, les routeurs ou les ponts SOAP), nécessaires à la circulation des messages entre les points de terminaison. Les sessions fiables utilisent une fenêtre de transfert en mémoire pour masquer les défaillances survenant au niveau des messages SOAP et rétablir les connexions en cas de défaillance des transports.  
   
- Les sessions fiables assurent le transfert fiable à faible latence des messages. Elles accomplissent pour les messages SOAP sur tous proxys ou intermédiaires, ce que le service TCP accomplit pour les paquets sur les ponts IP. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]les sessions fiables, consultez [des Sessions fiables](../../../../docs/framework/wcf/feature-details/reliable-sessions.md).  
+ Les sessions fiables assurent le transfert fiable à faible latence des messages. Elles accomplissent pour les messages SOAP sur tous proxys ou intermédiaires, ce que le service TCP accomplit pour les paquets sur les ponts IP. Pour plus d’informations sur les sessions fiables, consultez [des Sessions fiables](../../../../docs/framework/wcf/feature-details/reliable-sessions.md).  
   
 ### <a name="queues"></a>Files d'attente  
  Les files d'attente dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] permettent à la fois le transfert fiable des messages et la séparation entre source et destination mais à haute latence. Les communications [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] mises en file d'attente sont construites en haut de la couche Message Queuing (également appelée MSMQ).  
   
  MSMQ est incluse en tant qu'option dans Windows et s'exécute comme un service NT. Elle capture, au nom de la source, les messages à transmettre figurant dans la file d'attente de transmission, puis les remet à la file d'attente cible. La file d'attente cible accepte ces messages au nom de la destination pour les lui remettre ultérieurement dès qu'elle en fera la demande. Les Gestionnaires des files d'attente MSMQ implémentent un protocole de transfert de message fiable qui empêche la perte de messages au cours de la transmission. Il peut s'agir d'un protocole natif ou d'un protocole basé sur SOAP, comme le protocole SRMP (SOAP, Reliable Messaging Protocole).  
   
- La séparation, associée aux transferts fiables de messages entre les files d'attente, permet aux applications faiblement couplées de communiquer de manière fiable. À la différence des sessions fiables, dans le cadre d'une séparation, la source et la destination n'ont pas besoin de s'exécuter simultanément. Cela permet, de manière indirecte, d'utiliser les files d'attente comme dispositif de régulation de la charge lorsqu'il y a un écart entre le taux de production de messages de la source et le taux de consommation de messages de la destination. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]les files d’attente, consultez [les files d’attente dans WCF](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md).  
+ La séparation, associée aux transferts fiables de messages entre les files d'attente, permet aux applications faiblement couplées de communiquer de manière fiable. À la différence des sessions fiables, dans le cadre d'une séparation, la source et la destination n'ont pas besoin de s'exécuter simultanément. Cela permet, de manière indirecte, d'utiliser les files d'attente comme dispositif de régulation de la charge lorsqu'il y a un écart entre le taux de production de messages de la source et le taux de consommation de messages de la destination. Pour plus d’informations sur les files d’attente, consultez [les files d’attente dans WCF](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Files d’attente dans WCF](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)  

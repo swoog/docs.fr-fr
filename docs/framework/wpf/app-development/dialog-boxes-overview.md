@@ -1,12 +1,13 @@
 ---
-title: "Vue d'ensemble des boîtes de dialogue"
-ms.custom: 
+title: Vue d'ensemble des boîtes de dialogue
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - message boxes [WPF]
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 112a9badaf9a64b2c6d3f73d64c27fbc36ec48a3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: dfe22dec0827f0ceb880b9410b64668f219a422f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="dialog-boxes-overview"></a>Vue d'ensemble des boîtes de dialogue
 Les applications autonomes ont généralement une fenêtre principale qui affiche les données principales sur lesquelles l’application fonctionne et expose les fonctionnalités pour traiter ces données via [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] mécanismes tels que les barres de menus, barres d’outils et barres d’état. Une application non triviale peut également afficher des fenêtres supplémentaires pour effectuer les opérations suivantes :  
@@ -43,7 +45,7 @@ Les applications autonomes ont généralement une fenêtre principale qui affich
   
  A *non modale* boîte de dialogue, en revanche, n’empêche pas un utilisateur d’activer d’autres fenêtres lorsqu’il est ouvert. Par exemple, si un utilisateur souhaite rechercher des occurrences d’un mot particulier dans un document, une fenêtre principale peut ouvrir une boîte de dialogue pour l’inviter à spécifier le mot qu’il recherche. Puisque rechercher un mot n’empêche pas l’utilisateur de modifier le document, la boîte de dialogue n’a pas besoin d’être modale. Une boîte de dialogue non modale fournit au moins un **fermer** bouton pour fermer la boîte de dialogue et peut fournir des boutons supplémentaires pour exécuter des fonctions spécifiques, comme un **suivant** bouton pour rechercher la prochaine les mots correspond aux critères de recherche d’une recherche de mots.  
   
- [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] vous permet de créer plusieurs types de boîtes de dialogue, notamment des boîtes de message, des boîtes de dialogue communes et des boîtes de dialogue personnalisées. Cette rubrique présente chacune et le [exemple de boîte de dialogue](http://go.microsoft.com/fwlink/?LinkID=159984) fournit des exemples correspondants.  
+ Windows Presentation Foundation (WPF) vous permet de créer plusieurs types de boîtes de dialogue, y compris les boîtes de message, des boîtes de dialogue communes et des boîtes de dialogue personnalisées. Cette rubrique présente chacune et le [exemple de boîte de dialogue](http://go.microsoft.com/fwlink/?LinkID=159984) fournit des exemples correspondants.  
   
  
   
@@ -53,7 +55,7 @@ Les applications autonomes ont généralement une fenêtre principale qui affich
   
  ![Boîte de dialogue de traitement de texte](../../../../docs/framework/wpf/app-development/media/dialogboxesoverviewfigure1.png "DialogBoxesOverviewFigure1")  
   
- Pour créer une boîte de message, vous utilisez la <xref:System.Windows.MessageBox> classe. <xref:System.Windows.MessageBox>vous permet de configurer le texte du message, un titre, une icône et un boutons, à l’aide de code semblable au suivant.  
+ Pour créer une boîte de message, vous utilisez la <xref:System.Windows.MessageBox> classe. <xref:System.Windows.MessageBox> vous permet de configurer le texte du message, un titre, une icône et un boutons, à l’aide de code semblable au suivant.  
   
  [!code-csharp[DialogBoxesOverviewSnippets#MsgBoxConfigureCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#msgboxconfigurecodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#MsgBoxConfigureCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#msgboxconfigurecodebehind)]  
@@ -72,13 +74,13 @@ Les applications autonomes ont généralement une fenêtre principale qui affich
   
  Bien que <xref:System.Windows.MessageBox> peut offrir une expérience utilisateur de boîte dialogue simple, l’avantage d’utiliser <xref:System.Windows.MessageBox> qui est le seul type de fenêtre qui peut être affiché par les applications qui s’exécutent dans un sandbox de sécurité de confiance partielle (consultez [sécurité](../../../../docs/framework/wpf/security-wpf.md)), tel que [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)].  
   
- La plupart des boîtes de dialogue affichent et recueillent des données plus complexes que le résultat d’une boîte de message, notamment du texte, une sélection (cases à cocher), une sélection mutuellement exclusive (boutons radio) et une sélection dans une liste (zones de liste, zones de liste modifiable, zones de liste déroulante). Dans ce cas, [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] fournit plusieurs boîtes de dialogue communes et vous permet de créer vos propres boîtes de dialogue, bien que l’utilisation d’un est limitée aux applications s’exécutant avec une confiance totale.  
+ La plupart des boîtes de dialogue affichent et recueillent des données plus complexes que le résultat d’une boîte de message, notamment du texte, une sélection (cases à cocher), une sélection mutuellement exclusive (boutons radio) et une sélection dans une liste (zones de liste, zones de liste modifiable, zones de liste déroulante). Dans ce cas, Windows Presentation Foundation (WPF) fournit plusieurs boîtes de dialogue communes et vous permet de créer vos propres boîtes de dialogue, bien que l’utilisation d’un est limitée aux applications s’exécutant avec une confiance totale.  
   
 <a name="Common_Dialogs"></a>   
 ## <a name="common-dialog-boxes"></a>Boîtes de dialogue communes  
  [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] implémente diverses boîtes de dialogue réutilisables qui sont communes à toutes les applications, notamment des boîtes de dialogue pour ouvrir, enregistrer et imprimer des fichiers. Ces boîtes de dialogue étant implémentées par le système d’exploitation, elles peuvent être partagées par toutes les applications qui s’exécutent sur le système d’exploitation, ce qui favorise la cohérence de l’expérience utilisateur. Quand les utilisateurs sont habitués à utiliser une boîte de dialogue fournie par le système d’exploitation dans une application, ils n’ont pas besoin d’apprendre à utiliser cette boîte de dialogue dans d’autres applications. Étant donné que ces boîtes de dialogue sont disponibles pour toutes les applications et car ils permettent de fournir une expérience utilisateur cohérente, ils sont appelés *boîtes de dialogue communes*.  
   
- [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] encapsule les boîtes de dialogue communes d’ouverture, d’enregistrement et d’impression de fichier, et les expose en tant que classes managées pour que vous puissiez les utiliser dans des applications autonomes. Cette rubrique fournit une brève présentation de chacune de ces boîtes de dialogue.  
+ Windows Presentation Foundation (WPF) encapsule le fichier ouvert, enregistrez le fichier et imprimer des boîtes de dialogue communes et les expose des classes managées que vous pouvez utiliser dans des applications autonomes. Cette rubrique fournit une brève présentation de chacune de ces boîtes de dialogue.  
   
 <a name="Open_File_Dialog"></a>   
 ### <a name="open-file-dialog"></a>Boîte de dialogue d’ouverture de fichier  
@@ -94,7 +96,7 @@ Les applications autonomes ont généralement une fenêtre principale qui affich
  Pour plus d’informations sur la boîte de dialogue Ouvrir un fichier, consultez <xref:Microsoft.Win32.OpenFileDialog?displayProperty=nameWithType>.  
   
 > [!NOTE]
->  <xref:Microsoft.Win32.OpenFileDialog>peut servir à récupérer en toute sécurité des noms de fichiers par les applications qui s’exécutent avec une confiance partielle (consultez [sécurité](../../../../docs/framework/wpf/security-wpf.md)).  
+>  <xref:Microsoft.Win32.OpenFileDialog> peut servir à récupérer en toute sécurité des noms de fichiers par les applications qui s’exécutent avec une confiance partielle (consultez [sécurité](../../../../docs/framework/wpf/security-wpf.md)).  
   
 <a name="Save_File_Dialog"></a>   
 ### <a name="save-file-dialog-box"></a>Boîte de dialogue d’enregistrement de fichier  
@@ -124,7 +126,7 @@ Les applications autonomes ont généralement une fenêtre principale qui affich
   
 <a name="Custom_Dialog_Boxes"></a>   
 ## <a name="custom-dialog-boxes"></a>Boîtes de dialogue personnalisées  
- Bien que les boîtes de dialogue communes soient utiles (et doivent être utilisées dans la mesure du possible), elles ne prennent pas en charge les exigences des boîtes de dialogue propres au domaine. Dans ces cas-là, vous devez créer vos propres boîtes de dialogue. Comme nous allons le voir, une boîte de dialogue est une fenêtre avec des comportements spéciaux. <xref:System.Windows.Window>implémente ces comportements et, par conséquent, vous utilisez <xref:System.Windows.Window> pour créer des zones de la boîte de dialogue modales et non modales personnalisée.  
+ Bien que les boîtes de dialogue communes soient utiles (et doivent être utilisées dans la mesure du possible), elles ne prennent pas en charge les exigences des boîtes de dialogue propres au domaine. Dans ces cas-là, vous devez créer vos propres boîtes de dialogue. Comme nous allons le voir, une boîte de dialogue est une fenêtre avec des comportements spéciaux. <xref:System.Windows.Window> implémente ces comportements et, par conséquent, vous utilisez <xref:System.Windows.Window> pour créer des zones de la boîte de dialogue modales et non modales personnalisée.  
   
 <a name="Creating_a_Modal_Custom_Dialog_Box"></a>   
 ### <a name="creating-a-modal-custom-dialog-box"></a>Création d’une boîte de dialogue personnalisée modale  
@@ -307,7 +309,7 @@ Les applications autonomes ont généralement une fenêtre principale qui affich
  Contrairement aux <xref:System.Windows.Window.ShowDialog%2A>, <xref:System.Windows.Window.Show%2A> retourne immédiatement. Ainsi, la fenêtre appelante ne peut pas savoir quand la boîte de dialogue non modale est fermée, et ne sait pas quand vérifier le résultat d’une boîte de dialogue ou obtenir des données à partir de la boîte de dialogue pour un traitement ultérieur. Au lieu de cela, la boîte de dialogue doit créer un autre moyen pour retourner des données à la fenêtre appelante en vue de leur traitement.  
   
 #### <a name="processing-data-returned-from-a-modeless-dialog-box"></a>Traitement des données retournées par la boîte de dialogue non modale  
- Dans cet exemple, le `FindDialogBox` peut retourner un ou plusieurs résultats à la fenêtre principale, selon le texte recherché sans fréquence spécifique de la recherche. Comme avec une boîte de dialogue modale, une boîte de dialogue non modale peut retourner des résultats à l’aide de propriétés. Toutefois, la fenêtre propriétaire de la boîte de dialogue doit savoir quand vérifier ces propriétés. L’une des solutions consiste à ce que la boîte de dialogue implémente un événement déclenché chaque fois que le texte est trouvé. `FindDialogBox`implémente le `TextFoundEvent` à cette fin, qui requiert un délégué.  
+ Dans cet exemple, le `FindDialogBox` peut retourner un ou plusieurs résultats à la fenêtre principale, selon le texte recherché sans fréquence spécifique de la recherche. Comme avec une boîte de dialogue modale, une boîte de dialogue non modale peut retourner des résultats à l’aide de propriétés. Toutefois, la fenêtre propriétaire de la boîte de dialogue doit savoir quand vérifier ces propriétés. L’une des solutions consiste à ce que la boîte de dialogue implémente un événement déclenché chaque fois que le texte est trouvé. `FindDialogBox` implémente le `TextFoundEvent` à cette fin, qui requiert un délégué.  
   
  [!code-csharp[DialogBoxSample#TextFoundEventHandlerCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/TextFoundEventHandler.cs#textfoundeventhandlercode)]
  [!code-vb[DialogBoxSample#TextFoundEventHandlerCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/TextFoundEventHandler.vb#textfoundeventhandlercode)]  

@@ -1,24 +1,26 @@
 ---
-title: "Exécution des exemples Windows Communication Foundation"
-ms.custom: 
+title: Exécution des exemples Windows Communication Foundation
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: db8a83da-95c1-4a21-a9d2-48caeb6398ea
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 603a6dce17d527a3f14e408da19006509514df52
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2aca4555277a1b365ddee1c672a6375edfde9f34
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="running-the-windows-communication-foundation-samples"></a>Exécution des exemples Windows Communication Foundation
 Les exemples [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] peuvent être exécutés sur un ou plusieurs ordinateurs. Tels qu'ils sont fournis, les exemples sont configurés pour être exécutés sur un ordinateur unique. Pour les exécuter sur plusieurs ordinateurs, il est nécessaire de modifier les paramètres de leur fichier de configuration. Les procédures suivantes permettent d'exécuter les exemples sur un même ordinateur ou sur plusieurs ordinateurs. Notez que ces procédures ne sont pas tout à fait les mêmes pour les exemples hébergés dans les services IIS et les exemples auto-hébergés. La plupart des exemples sont hébergés dans les services IIS. Consultez les informations contenues dans leur fichier lisezmoi respectif pour connaître leurs modalités d'hébergement.  
@@ -30,7 +32,7 @@ Les exemples [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] peuvent êt
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>Pour exécuter l'exemple sur le même ordinateur  
   
-1.  Si le service est hébergé par IIS, vérifiez son accessibilité à l'aide d'un navigateur en tapant http://localhost/servicemodelsamples/service.svc dans un navigateur. Une page de confirmation doit s'afficher en réponse. Si la page de confirmation n’est pas affichée, consultez [conseils de dépannage](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+1.  Si le service est hébergé par IIS, vérifiez que vous pouvez accéder au service à l’aide d’un navigateur en entrant l’adresse suivante : http://localhost/servicemodelsamples/service.svc. Une page de confirmation doit s'afficher en réponse. Si la page de confirmation n’est pas affichée, consultez [conseils de dépannage](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 2.  Si le service est auto-hébergé, exécutez Service.exe à partir du répertoire \service\bin, situé dans le dossier correspondant à votre langue. L'activité du service s'affiche dans sa fenêtre de console.  
   
@@ -64,7 +66,7 @@ Les exemples [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] peuvent êt
   
     1.  Si le service ne s'exécute pas sous un compte de domaine, ouvrez le fichier de configuration du client, puis modifiez l'adresse du point de terminaison en fonction de la nouvelle adresse de votre service. Remplacez toutes les occurrences de « localhost » de l'adresse par un nom de domaine complet.  
   
-    2.  Si le service s'exécute sous un compte de domaine, régénérez la configuration du client en exécutant Svcutil.exe par rapport au service. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Exécutez Svcutil.exe, consultez [génération des exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md). Utilisez le fichier généré au lieu du fichier de configuration utilisé dans l'exemple. Le fichier de configuration généré contient des informations d'identité supplémentaires et contient tous les paramètres nécessaires à la connexion au point de terminaison du service bien qu'il s'agisse de paramètres par défaut. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]informations d’identité, consultez [l’identité du Service et l’authentification](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md), et [ \<identité >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md).  
+    2.  Si le service s'exécute sous un compte de domaine, régénérez la configuration du client en exécutant Svcutil.exe par rapport au service. Pour plus d’informations sur l’exécution de Svcutil.exe, consultez [génération des exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md). Utilisez le fichier généré au lieu du fichier de configuration utilisé dans l'exemple. Le fichier de configuration généré contient des informations d'identité supplémentaires et contient tous les paramètres nécessaires à la connexion au point de terminaison du service bien qu'il s'agisse de paramètres par défaut. Pour plus d’informations sur les informations d’identité, consultez [l’identité du Service et l’authentification](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md), et [ \<identité >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md).  
   
 4.  Sur l'ordinateur client, lancez Client.exe à partir d'une invite de commandes.  
   
@@ -74,7 +76,7 @@ Les exemples [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] peuvent êt
   
 2.  Si le service est hébergé par IIS :  
   
-    1.  Activez le service à l'aide d'un navigateur en tapant http://localhost/servicemodelsamples/service.svc.  
+    1.  Activer le service à l’aide d’un navigateur en entrant l’adresse http://localhost/servicemodelsamples/service.svc.  
   
     2.  Dans la solution, choisissez le **déboguer** menu et **attacher au processus** élément de menu.  
   

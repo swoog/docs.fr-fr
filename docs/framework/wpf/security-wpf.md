@@ -27,20 +27,20 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 134efba11742ab9cc8da2dfab77c233b52f1bcf1
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 51b940d4a2463be7aaea9d0ff8e48e2b9f47363a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="security-wpf"></a>Sécurité (WPF)
-<a name="introduction"></a> Lors du développement [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] autonomes et des applications hébergées par un navigateur, vous devez prendre en compte le modèle de sécurité. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] exécutent des applications autonomes avec des autorisations illimitées ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust** jeu d’autorisations), qu’il soit déployé à l’aide de Windows Installer (.msi), XCopy, ou [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]. Le déploiement d’applications WPF autonomes de confiance partielle avec ClickOnce n’est pas pris en charge. Toutefois, une application hôte de niveau de confiance totale peut créer un niveau de confiance partiel <xref:System.AppDomain> à l’aide du modèle de complément .NET Framework. Pour plus d’informations, consultez [vue d’ensemble des compléments WPF](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).  
+<a name="introduction"></a> Lorsque vous développez autonome de Windows Presentation Foundation (WPF) et les applications hébergées par un navigateur, vous devez prendre en compte le modèle de sécurité. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] exécutent des applications autonomes avec des autorisations illimitées ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust** jeu d’autorisations), qu’il soit déployé à l’aide de Windows Installer (.msi), XCopy, ou [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]. Le déploiement d’applications WPF autonomes de confiance partielle avec ClickOnce n’est pas pris en charge. Toutefois, une application hôte de niveau de confiance totale peut créer un niveau de confiance partiel <xref:System.AppDomain> à l’aide du modèle de complément .NET Framework. Pour plus d’informations, consultez [vue d’ensemble des compléments WPF](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).  
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] les applications hébergées par un navigateur sont hébergées par [!INCLUDE[TLA#tla_iegeneric](../../../includes/tlasharptla-iegeneric-md.md)] ou Firefox, et peut être [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)] ou mal [!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)] des documents pour plus d’informations, consultez [vue d’ensemble des Applications de navigateur XAML WPF](../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md).  
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] les applications hébergées par un navigateur s’exécutent dans un bac à sable de la sécurité de confiance partielle, par défaut, qui est limité à la valeur par défaut [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **Internet** jeu d’autorisations de zone. Cela permet d’isoler efficacement [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] les applications hébergées par un navigateur à partir de l’ordinateur client de la même façon que vous attendez pour des applications Web classiques. Une application XBAP peut élever des privilèges jusqu’à la confiance totale, selon la zone de sécurité de l’URL de déploiement et la configuration de sécurité du client. Pour plus d’informations, consultez [Sécurité de confiance partielle de WPF](../../../docs/framework/wpf/wpf-partial-trust-security.md).  
   
- Cette rubrique décrit le modèle de sécurité pour [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] autonomes et des applications hébergées par le navigateur.  
+ Cette rubrique décrit le modèle de sécurité pour Windows Presentation Foundation (WPF) autonome et des applications hébergées par le navigateur.  
   
  Cette rubrique contient les sections suivantes :  
   

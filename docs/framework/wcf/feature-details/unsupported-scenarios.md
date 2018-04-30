@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7738eba66619e8a312ed2f9bd43142dbb097b259
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: cfeca11f7d78e8aa2d201238e3a485576b3e0c82
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="unsupported-scenarios"></a>Scénarios non pris en charge
 Pour diverses raisons, certains modes de sécurité ne sont pas pris en charge par [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Par exemple, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Édition familiale n'implémentant pas les protocoles d'authentification SSPI ou Kerberos, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ne prend pas en charge, sur ce type de plateforme, l'exécution des services utilisant l'authentification Windows. En revanche, d'autres mécanismes d'authentification, tels que l'association nom d'utilisateur/mot de passe et l'authentification intégrée HTTP/HTTPS, sont pris en charge lorsque [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] s'exécute sous Windows XP Édition familiale.  
@@ -58,7 +58,7 @@ Pour diverses raisons, certains modes de sécurité ne sont pas pris en charge p
 >  La valeur par défaut de la propriété <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> de la classe <xref:System.ServiceModel.Security.WindowsClientCredential> est <xref:System.Security.Principal.TokenImpersonationLevel.Identification>. Dans la plupart des cas, les contextes d'emprunt d'identité de niveau identification ne disposent pas de droits leur permettant de charger d'autres assemblys. Il s'agit de la valeur par défaut. Il est donc important de garder à l'esprit ce cas très fréquent. L'emprunt d'identité de niveau identification se produit lorsque le processus d'emprunt ne dispose pas du droit `SeImpersonate`. Pour plus d’informations, consultez [délégation et emprunt d’identité](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
 ### <a name="delegation-requires-credential-negotiation"></a>La délégation nécessite la négociation des informations d'identification  
- Pour pouvoir utiliser le protocole d'authentification Kerberos avec la délégation, vous devez implémenter le protocole Kerberos en utilisant la négociation des informations d'identification (parfois appelé Kerberos multi-segment ou multi-étape). Si vous implémentez l'authentification Kerberos sans négociation d'informations d'identification (parfois appelée Kerberos « one-shot » ou Kerberos « single-leg »), une exception est levée. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] comment implémenter la négociation des informations d’identification, consultez [débogage des erreurs de l’authentification Windows](../../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md).  
+ Pour pouvoir utiliser le protocole d'authentification Kerberos avec la délégation, vous devez implémenter le protocole Kerberos en utilisant la négociation des informations d'identification (parfois appelé Kerberos multi-segment ou multi-étape). Si vous implémentez l'authentification Kerberos sans négociation d'informations d'identification (parfois appelée Kerberos « one-shot » ou Kerberos « single-leg »), une exception est levée. Pour plus d’informations sur l’implémentation de la négociation d’informations d’identification, consultez [débogage des erreurs de l’authentification Windows](../../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md).  
   
 ## <a name="cryptography"></a>Chiffrement  
   

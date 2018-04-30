@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 11e61e1d702572af10cf4e46b9d1b284022fa56e
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 60eaef2bbbb2ff7653aeac832163276c32bc696b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="sql-workflow-instance-store"></a>Magasin d'instances de workflow SQL
 Le [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] est fourni avec le magasin d'instances de workflow SQL, qui permet aux workflows de rendre les informations d'état persistantes à propos des instances de workflow dans SQL Server 2005 ou dans une base de données SQL Server 2008. Cette fonctionnalité est implémentée principalement dans le formulaire de la classe <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, qui dérive de la classe <xref:System.Runtime.DurableInstancing.InstanceStore> abstraite de l'infrastructure de persistance. La fonctionnalité de magasin d'instances de workflow SQL constitue un fournisseur de persistance SQL, qui est une implémentation concrète de l'API de persistance qu'un hôte utilise pour envoyer des commandes de persistance au magasin.  
@@ -29,7 +29,7 @@ Le [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 
   
  Les rubriques de cette section décrivent les propriétés et fonctionnalités du magasin d'instances de workflow SQL et vous fournissent des détails sur la configuration du magasin.  
   
- Windows Server AppFabric fournit son propre magasin d'instances et des outils pour simplifier la configuration et l'utilisation du magasin d'instances. Pour plus d’informations, consultez [magasin d’instances Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=201201). [!INCLUDE[crabout](../../../includes/crabout-md.md)] voir de la base de données de persistance App Fabric SQL Server [base de données de persistance App Fabric SQL Server](http://go.microsoft.com/fwlink/?LinkId=201202)  
+ Windows Server AppFabric fournit son propre magasin d'instances et des outils pour simplifier la configuration et l'utilisation du magasin d'instances. Pour plus d’informations, consultez [magasin d’instances Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=201201). Pour plus d’informations sur la base de données de persistance App Fabric SQL Server, consultez [base de données de persistance App Fabric SQL Server](http://go.microsoft.com/fwlink/?LinkId=201202)  
   
 ## <a name="in-this-section"></a>Dans cette section  
   

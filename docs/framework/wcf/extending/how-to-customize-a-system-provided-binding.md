@@ -1,34 +1,36 @@
 ---
-title: "Comment : personnaliser une liaison fournie par le système"
-ms.custom: 
+title: 'Comment : personnaliser une liaison fournie par le système'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: f8b97862-e8bb-470d-8b96-07733c21fe26
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a9b048b5c57d174ac921793ee8677622b88a0595
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1d70a4c4234047e7410ae4f631e48595a0859f37
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-customize-a-system-provided-binding"></a>Comment : personnaliser une liaison fournie par le système
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] inclut plusieurs liaisons fournies par le système qui vous permettent de configurer quelques-unes des propriétés des éléments de liaison sous-jacents, mais pas toutes les propriétés. Cette rubrique explique comment attribuer des propriétés aux éléments de liaison afin de créer une liaison personnalisée.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]comment créer directement et configurer des éléments de liaison sans utiliser les liaisons fournies par le système, consultez [liaisons personnalisées](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+ Pour plus d’informations sur comment directement créer et configurer des éléments de liaison sans utiliser les liaisons fournies par le système, consultez [liaisons personnalisées](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Création et l’extension de liaisons personnalisées, consultez [extension de liaisons](../../../../docs/framework/wcf/extending/extending-bindings.md).  
+ Pour plus d’informations sur la création et l’extension de liaisons personnalisées, consultez [extension de liaisons](../../../../docs/framework/wcf/extending/extending-bindings.md).  
   
  Dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] toutes les liaisons sont composées de *éléments de liaison*. Chaque élément de liaison dérive de la classe <xref:System.ServiceModel.Channels.BindingElement>. Les liaisons fournies par le système telles que <xref:System.ServiceModel.BasicHttpBinding> créent et configurent leurs propres éléments de liaison. Cette rubrique vous indique comment accéder aux propriétés de ces éléments de liaison qui ne sont pas exposés directement sur la liaison et comment les modifier ; il s'agit, notamment, de la classe <xref:System.ServiceModel.BasicHttpBinding>.  
   

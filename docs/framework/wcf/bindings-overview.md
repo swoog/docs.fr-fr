@@ -1,28 +1,28 @@
 ---
-title: "Vue d’ensemble des liaisons Windows Communication Foundation"
-ms.custom: 
+title: Vue d’ensemble des liaisons Windows Communication Foundation
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
-caps.latest.revision: 
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4bc4fc7559872a808c2de87e4926075614351030
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 58b3691c186dc6a33c94d9f8a1af96be488d67df
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Vue d’ensemble des liaisons Windows Communication Foundation
 Les liaisons sont des objets utilisés pour spécifier les détails de communication requis pour se connecter au point de terminaison d'un service [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. Chaque point de terminaison dans un service [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] requiert qu'une liaison soit spécifiée correctement. Cette rubrique décrit les types de détails de communication définis par les liaisons, les éléments d'une liaison, les liaisons incluses dans [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] et comment une liaison peut être spécifiée pour un point de terminaison.  
@@ -40,7 +40,7 @@ Les liaisons sont des objets utilisés pour spécifier les détails de communica
  Détermine le protocole de transport sous-jacent à utiliser (par exemple, TCP ou HTTP).  
   
 ## <a name="the-elements-of-a-binding"></a>Les éléments d'une liaison  
- Une liaison est constituée fondamentalement d'une pile ordonnée d'éléments de liaison, chacun spécifiant une partie des informations de communication requises pour se connecter à un point de terminaison de service. Les deux couches inférieures de la pile sont requises. À la base de la pile se trouve l'élément de liaison de transport, et juste au-dessus de celui-ci se trouve l'élément qui contient les spécifications d'encodage de message. Les éléments de liaison facultatifs qui spécifient les autres protocoles de communication sont disposés en couches sur ces deux éléments requis. [!INCLUDE[crabout](../../../includes/crabout-md.md)]ces éléments de liaison et de leur classement correct, consultez [liaisons personnalisées](../../../docs/framework/wcf/extending/custom-bindings.md).  
+ Une liaison est constituée fondamentalement d'une pile ordonnée d'éléments de liaison, chacun spécifiant une partie des informations de communication requises pour se connecter à un point de terminaison de service. Les deux couches inférieures de la pile sont requises. À la base de la pile se trouve l'élément de liaison de transport, et juste au-dessus de celui-ci se trouve l'élément qui contient les spécifications d'encodage de message. Les éléments de liaison facultatifs qui spécifient les autres protocoles de communication sont disposés en couches sur ces deux éléments requis. Pour plus d’informations sur ces éléments de liaison et de leur classement correct, consultez [liaisons personnalisées](../../../docs/framework/wcf/extending/custom-bindings.md).  
   
 ## <a name="system-provided-bindings"></a>Liaisons fournies par le système  
  Les informations contenues dans une liaison peuvent être complexes et certains paramètres peuvent ne pas être compatibles avec d'autres. Pour cette raison, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] inclut un ensemble de liaisons fournies par le système. Ces liaisons sont conçues pour couvrir la plupart des spécifications d'applications. Les classes suivantes représentent quelques exemples de liaisons fournies par le système :  
@@ -56,7 +56,7 @@ Les liaisons sont des objets utilisés pour spécifier les détails de communica
  Pour obtenir la liste complète, avec les descriptions, de tous les [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]-autant de liaisons, consultez [les liaisons fournies](../../../docs/framework/wcf/system-provided-bindings.md).  
   
 ## <a name="using-your-own-bindings"></a>Utilisation de vos propres liaisons  
- Si aucune des liaisons fournies par le système ne possède la bonne combinaison de fonctionnalités requise par une application de service, vous pouvez créer votre propre liaison. Il existe deux manières de procéder. Vous pouvez soit créer une liaison à partir d'éléments de liaison préexistants à l'aide d'un objet <xref:System.ServiceModel.Channels.CustomBinding>, soit créer une liaison entièrement définie par l'utilisateur en dérivant de la liaison <xref:System.ServiceModel.Channels.Binding>. [!INCLUDE[crabout](../../../includes/crabout-md.md)]créer votre propre liaison à l’aide de ces deux approches, consultez [liaisons personnalisées](../../../docs/framework/wcf/extending/custom-bindings.md) et [Creating liaisons](../../../docs/framework/wcf/extending/creating-user-defined-bindings.md).  
+ Si aucune des liaisons fournies par le système ne possède la bonne combinaison de fonctionnalités requise par une application de service, vous pouvez créer votre propre liaison. Il existe deux manières de procéder. Vous pouvez soit créer une liaison à partir d'éléments de liaison préexistants à l'aide d'un objet <xref:System.ServiceModel.Channels.CustomBinding>, soit créer une liaison entièrement définie par l'utilisateur en dérivant de la liaison <xref:System.ServiceModel.Channels.Binding>. Pour plus d’informations sur la création de votre propre liaison à l’aide de ces deux approches, consultez [liaisons personnalisées](../../../docs/framework/wcf/extending/custom-bindings.md) et [Creating liaisons](../../../docs/framework/wcf/extending/creating-user-defined-bindings.md).  
   
 ## <a name="using-bindings"></a>Utilisation des liaisons  
  L'utilisation des liaisons implique deux étapes simples :  

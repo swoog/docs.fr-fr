@@ -29,14 +29,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 740146bffe869dc30bbf8e8472c30be317ce6f7c
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 023de9e20206411f7dd6774553ae39eefaa508a0
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wpf-partial-trust-security"></a>Sécurité de confiance partielle de WPF
-<a name="introduction"></a> En général, les applications Internet doivent disposer d’un accès direct limité aux ressources système critiques, afin d’éviter des dommages dus à des actes de malveillance. Par défaut, [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] et langages de script côté client ne sont pas en mesure d’accéder aux ressources système critiques. Étant donné que [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] applications hébergées par le navigateur peuvent être lancées à partir du navigateur, elles doivent se conformer à un jeu de restrictions similaires. Pour appliquer ces restrictions, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] s’appuie sur les deux [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)] et [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] (consultez [stratégie de sécurité de WPF - sécurité de la plate-forme](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)). Par défaut, les applications hébergées par le navigateur demandent la zone Internet [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] jeu d’autorisations, indépendamment de si elles sont lancées à partir d’Internet, intranet local ou l’ordinateur local. Les applications qui sont exécutées sans jeu d’autorisations complet sont exécutées avec une confiance dite partielle.  
+<a name="introduction"></a> En général, les applications Internet doivent disposer d’un accès direct limité aux ressources système critiques, afin d’éviter des dommages dus à des actes de malveillance. Par défaut, [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] et langages de script côté client ne sont pas en mesure d’accéder aux ressources système critiques. Étant donné que les applications hébergées par un navigateur Windows Presentation Foundation (WPF) peuvent être lancées à partir du navigateur, elles doivent se conformer à un jeu de restrictions similaires. Pour appliquer ces restrictions, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] s’appuie sur les deux [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)] et [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] (consultez [stratégie de sécurité de WPF - sécurité de la plate-forme](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)). Par défaut, les applications hébergées par le navigateur demandent la zone Internet [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] jeu d’autorisations, indépendamment de si elles sont lancées à partir d’Internet, intranet local ou l’ordinateur local. Les applications qui sont exécutées sans jeu d’autorisations complet sont exécutées avec une confiance dite partielle.  
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] fournit un large éventail de prise en charge pour garantir qu’autant de fonctionnalités que possible peut être utilisé en toute sécurité avec une confiance partielle et avec [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)], fournit la prise en charge supplémentaire pour la programmation de la confiance partielle.  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 04/26/2018
   
 <a name="WPF_Feature_Partial_Trust_Support"></a>   
 ## <a name="wpf-feature-partial-trust-support"></a>Prise en charge de la confiance partielle avec des fonctionnalités WPF  
- Le tableau suivant répertorie les principales fonctionnalités de [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] qui sont sécurisés à utiliser dans les limites du jeu d’autorisations de zone Internet.  
+ Le tableau suivant répertorie les fonctionnalités principales de Windows Presentation Foundation (WPF) qui sont sécurisées à utiliser dans les limites du jeu d’autorisations de zone Internet.  
   
  Tableau 1 : Fonctionnalités WPF pouvant être utilisées en toute sécurité avec une confiance partielle  
   

@@ -1,28 +1,28 @@
 ---
 title: Configuration de la prise en charge WS-Atomic Transaction
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
-caps.latest.revision: 
+caps.latest.revision: 31
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 922b2048a262e722a11ee77c41e96dddec411326
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b2d94c96b8cc225344300540d9fc406a4742db2a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="configuring-ws-atomic-transaction-support"></a>Configuration de la prise en charge WS-Atomic Transaction
 Cette rubrique décrit comment configurer la prise en charge WS-AtomicTransaction (WS-AT) à l'aide de l'utilitaire de configuration WS-AT.  
@@ -34,11 +34,11 @@ Cette rubrique décrit comment configurer la prise en charge WS-AtomicTransactio
   
  La fenêtre de ligne de commande est accessible à l'emplacement d'installation du Kit de développement logiciel (SDK) Windows « %WINDIR%\Microsoft.NET\Framework\v3.0\Windows Communication Foundation ».  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]l’outil de ligne de commande, consultez [l’utilitaire de Configuration WS-AtomicTransaction (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md).  
+ Pour plus d’informations sur l’outil de ligne de commande, consultez [l’utilitaire de Configuration WS-AtomicTransaction (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md).  
   
  Si vous exécutez [!INCLUDE[wxp](../../../../includes/wxp-md.md)] ou [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], vous pouvez accéder dans le composant logiciel enfichable MMC en naviguant jusqu’au **contrôle de panneau de configuration/Administrative Tools/Services de composants**, avec le bouton droit **poste de travail**, et en sélectionnant **propriétés**. Il s’agit du même emplacement que celui où vous pouvez configurer Microsoft Distributed Transaction Coordinator (MSDTC). Les options disponibles pour la configuration sont groupées sous la **WS-AT** onglet. Si vous exécutez Windows Vista ou [!INCLUDE[lserver](../../../../includes/lserver-md.md)], le composant logiciel enfichable MMC sont accessibles en cliquant sur le **Démarrer** bouton et en entrant `dcomcnfg.exe` dans les **recherche** boîte. Lorsque la console MMC est ouverte, accédez à la **poste de travail\distributed Transaction Coordinator\Local DTC** nœud, cliquez droit et sélectionnez **propriétés**. Les options disponibles pour la configuration sont groupées sous la **WS-AT** onglet.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]les, composant logiciel enfichable, consultez le [le composant logiciel enfichable MMC de Configuration WS-AtomicTransaction](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md).  
+ Pour plus d’informations sur le composant logiciel enfichable, consultez le [le composant logiciel enfichable MMC de Configuration WS-AtomicTransaction](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md).  
   
  Pour activer l’interface utilisateur de l’outil, vous devez tout d’abord inscrire le fichier WsatUI.dll, qui se trouve à l’emplacement suivant  
   
@@ -88,7 +88,7 @@ Cette rubrique décrit comment configurer la prise en charge WS-AtomicTransactio
 ### <a name="configuring-msdtc-to-use-certificates"></a>Configuration de MSDTC pour utiliser des certificats  
  Le service de protocole WS-AT agissant à la fois comme client et comme serveur, il doit à la fois écouter les connexions entrantes et initier les connexions sortantes. Par conséquent, vous devez configurer MSDTC de sorte qu'il sache quel certificat utiliser lors des communications avec les correspondants externes, et quels certificats autoriser lors de l'acceptation des communications entrantes.  
   
- Vous pouvez configurer cela à l'aide du composant logiciel enfichable MMC WS-AT. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Cet outil, consultez le [le composant logiciel enfichable MMC de Configuration WS-AtomicTransaction](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md) rubrique. Les étapes suivantes décrivent comment établir la confiance entre deux ordinateurs qui exécutent MSDTC.  
+ Vous pouvez configurer cela à l'aide du composant logiciel enfichable MMC WS-AT. Pour plus d’informations sur cet outil, consultez le [le composant logiciel enfichable MMC de Configuration WS-AtomicTransaction](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md) rubrique. Les étapes suivantes décrivent comment établir la confiance entre deux ordinateurs qui exécutent MSDTC.  
   
 1.  Configurez les paramètres de l'ordinateur A. Pour « Certificat de point de terminaison », sélectionnez certA. Pour « Certificats autorisés », sélectionnez certB.  
   

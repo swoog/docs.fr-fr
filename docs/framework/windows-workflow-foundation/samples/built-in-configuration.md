@@ -1,23 +1,24 @@
 ---
-title: "Configuration intégrée"
-ms.custom: 
+title: Configuration intégrée
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 34e85c9b-088d-4347-816c-0f77cb73ef2f
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3ddf9b316074a69a88f08a0d7f519533f2db0002
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0c414f34da0cd4bbf484c0a439f8832f02a5ae58
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="built-in-configuration"></a>Configuration intégrée
 Cet exemple illustre l'utilisation et la configuration du magasin d'instances de workflow SQL. Le magasin d'instances de workflow SQL est une implémentation basée sur SQL d'un magasin d'instances. Il permet à une instance d'enregistrer et de charger son état vers et à partir d'une base de données SQL Server ou SQL Server Express.  
@@ -36,7 +37,7 @@ Cet exemple illustre l'utilisation et la configuration du magasin d'instances de
   
  Le workflow de comptage est auto-hébergé par un hôte de service de workflow. La méthode `Main` du programme crée une instance de l'hôte de service de workflow qui héberge le workflow de comptage. Elle définit les points de terminaison sous lesquels le workflow de comptage peut être atteint. Après cela, il définit un comportement de magasin d'instances de workflow SQL, lequel est utilisé pour configurer le magasin d'instances de workflow SQL. Ensuite, le programme crée un client qui appelle la méthode de démarrage du workflow de comptage.  
   
- Une fois le programme démarré, le compteur commence automatiquement le comptage. Notez que le chargement de l'instance et la configuration du magasin d'instances de workflow SQL peut prendre quelques secondes. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]le magasin d’instances de flux de travail, consultez [magasin d’instances de flux de travail de SQL](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md).  
+ Une fois le programme démarré, le compteur commence automatiquement le comptage. Notez que le chargement de l'instance et la configuration du magasin d'instances de workflow SQL peut prendre quelques secondes. Pour plus d’informations sur le magasin d’instances de flux de travail, consultez [magasin d’instances de flux de travail de SQL](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md).  
   
  Cet exemple est composé de deux parties :  
   

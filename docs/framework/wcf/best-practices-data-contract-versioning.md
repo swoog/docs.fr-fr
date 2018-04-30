@@ -21,14 +21,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: dfb3d781a570db6a929a7d984aa45c224dda66bd
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 6ea139f6b854a299760df4c7cb8c315b58701ab8
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="best-practices-data-contract-versioning"></a>Meilleures pratiques : contrôle de version des contrats de données
-Cette rubrique répertorie les méthodes conseillées pour créer des contrats de données qui peuvent évoluer facilement avec le temps. [!INCLUDE[crabout](../../../includes/crabout-md.md)] contrats de données, consultez les rubriques de [à l’aide de contrats de données](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
+Cette rubrique répertorie les méthodes conseillées pour créer des contrats de données qui peuvent évoluer facilement avec le temps. Pour plus d’informations sur les contrats de données, consultez les rubriques de [à l’aide de contrats de données](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
 ## <a name="note-on-schema-validation"></a>Note sur la validation de schéma  
  Lorsqu'il est question du contrôle de version des contrats de données, il est important de noter que le schéma de contrat de données exporté par [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] n'offre pas d'autre prise en charge du contrôle de version que de marquer les éléments par défaut comme facultatifs.  
@@ -56,7 +56,7 @@ Cette rubrique répertorie les méthodes conseillées pour créer des contrats d
   
 -   Appliquez un attribut <xref:System.ServiceModel.ServiceBehaviorAttribute> à votre contrat de service en affectant à la propriété <xref:System.ServiceModel.ServiceBehaviorAttribute.IgnoreExtensionDataObject%2A> la valeur `true`.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] aller-retour, consultez [les contrats de données de compatibilité ascendante](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
+ Pour plus d’informations sur l’aller-retour, consultez [les contrats de données de compatibilité ascendante](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
   
 ## <a name="versioning-when-schema-validation-is-not-required"></a>Contrôle de version lorsque la validation de schéma n’est pas requise  
  La conformité stricte de schéma est rarement requise. De nombreuses plateformes tolèrent des éléments supplémentaires non décrits par un schéma. Tant que cela est tolérée, l’ensemble complet des fonctionnalités décrites dans [contrôle de version de contrat de données](../../../docs/framework/wcf/feature-details/data-contract-versioning.md) et [les contrats de données de compatibilité ascendante](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md) peut être utilisé. Les instructions suivantes sont recommandées.  
@@ -69,7 +69,7 @@ Cette rubrique répertorie les méthodes conseillées pour créer des contrats d
   
 3.  Pour la première version d'un contrat de données, implémentez toujours <xref:System.Runtime.Serialization.IExtensibleDataObject> pour permettre l'aller-retour. Pour plus d’informations, consultez [Contrats de données compatibles avec des versions ultérieures](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md). Si vous avez publié une ou plusieurs versions d’un type sans implémenter cette interface, implémentez-la dans la version suivante du type.  
   
-4.  Dans les versions ultérieures, ne modifiez pas le nom ou l'espace de noms de contrat de données. Si vous modifiez le nom ou l'espace de noms du type qui sous tend le contrat de données, veillez à conserver le nom et l'espace de noms de contrat de données en utilisant les mécanismes appropriés, tels que la propriété <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> du <xref:System.Runtime.Serialization.DataContractAttribute>. [!INCLUDE[crabout](../../../includes/crabout-md.md)] attribution de noms, consultez [les noms de contrat de données](../../../docs/framework/wcf/feature-details/data-contract-names.md).  
+4.  Dans les versions ultérieures, ne modifiez pas le nom ou l'espace de noms de contrat de données. Si vous modifiez le nom ou l'espace de noms du type qui sous tend le contrat de données, veillez à conserver le nom et l'espace de noms de contrat de données en utilisant les mécanismes appropriés, tels que la propriété <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> du <xref:System.Runtime.Serialization.DataContractAttribute>. Pour plus d’informations sur l’appellation, consultez [les noms de contrat de données](../../../docs/framework/wcf/feature-details/data-contract-names.md).  
   
 5.  Dans les versions ultérieures, ne modifiez pas les noms de membres de données. Si vous modifiez le nom du champ, de la propriété ou de l'événement qui sous-tend le membre de données, utilisez la propriété `Name` du <xref:System.Runtime.Serialization.DataMemberAttribute> pour conserver le nom du membre de données existant.  
   
@@ -81,7 +81,7 @@ Cette rubrique répertorie les méthodes conseillées pour créer des contrats d
   
     1.  La propriété <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> doit toujours conserver sa valeur par défaut de `false`.  
   
-    2.  Si le membre ne peut pas avoir de valeur par défaut `null` ou zéro, une méthode de rappel doit être fournie à l'aide de <xref:System.Runtime.Serialization.OnDeserializingAttribute> pour fournir une valeur par défaut acceptable au cas où le membre ne serait pas présent dans le flux de données entrant. [!INCLUDE[crabout](../../../includes/crabout-md.md)] le rappel, consultez [des rappels de sérialisation avec tolérance de Version](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md).  
+    2.  Si le membre ne peut pas avoir de valeur par défaut `null` ou zéro, une méthode de rappel doit être fournie à l'aide de <xref:System.Runtime.Serialization.OnDeserializingAttribute> pour fournir une valeur par défaut acceptable au cas où le membre ne serait pas présent dans le flux de données entrant. Pour plus d’informations sur le rappel, consultez [des rappels de sérialisation avec tolérance de Version](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md).  
   
     3.  La propriété `Order` sur le `DataMemberAttribute` doit être utilisée pour garantir que les membres de données ajoutés récemment apparaissent à la suite des membres de données existants. Pour cela, la méthode recommandée consiste à ne pas définir la propriété `Order` des membres de données dans la première version du contrat de données. La propriété `Order` de tous les membres de données ajoutés à la version 2 du contrat de données doit avoir la valeur 2. La propriété `Order` de tous les membres de données ajoutés à la version 3 du contrat de données doit avoir la valeur 3, etc. Il est possible que plusieurs membres de données aient le même numéro d'`Order`.  
   

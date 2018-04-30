@@ -23,11 +23,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8489c0bf20d3d62501db269c5a72de657bcbbc97
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: fe4ef5b17013bf1a9abf5fd1ca0807fe4d335df4
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="schema-import-and-export"></a>Importation et exportation de schémas
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] comprend un nouveau moteur de sérialisation, le <xref:System.Runtime.Serialization.DataContractSerializer>. Le moteur de sérialisation `DataContractSerializer` traduit des objets [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] en langage XML et inversement. Outre le sérialiseur lui-même, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] intègre un système lui permettant d'importer et d'exporter les schémas afférents. *Schéma* est une description formelle et précise lisible de la forme de XML par le sérialiseur ou que le désérialiseur peut accéder. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilise le langage de définition de schéma XSD, inspiré du langage XML et défini par le consortium World Wide Web Consortium (W3C). Ce format est compatible avec de nombreuses plateformes tierces.  
@@ -68,9 +68,9 @@ ms.lasthandoff: 04/28/2018
   
  L'exportateur `XsdDataContractExporter` prend en charge tous les types [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] qui peuvent être sérialisés à l'aide du moteur de sérialisation `DataContractSerializer`. Pour plus d’informations, consultez [Types pris en charge par le sérialiseur de contrat de données](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md). Remarque : le schéma généré à l'aide de `XsdDataContractExporter` contient en principe des données utilisables par l'importateur `XsdDataContractImporter`, sauf si <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> est utilisé afin de personnaliser ce schéma).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] à l’aide de la <xref:System.Runtime.Serialization.XsdDataContractImporter>, consultez [l’importation de schéma pour générer des Classes](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md).  
+ Pour plus d’informations sur l’utilisation de la <xref:System.Runtime.Serialization.XsdDataContractImporter>, consultez [l’importation de schéma pour générer des Classes](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] à l’aide de la <xref:System.Runtime.Serialization.XsdDataContractExporter>, consultez [exportation de schémas à partir des Classes](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md).  
+ Pour plus d’informations sur l’utilisation de la <xref:System.Runtime.Serialization.XsdDataContractExporter>, consultez [exportation de schémas à partir des Classes](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.Runtime.Serialization.DataContractSerializer>  

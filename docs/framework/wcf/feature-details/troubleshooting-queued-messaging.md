@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: d7de2912029efb61135d5329f186ed2c1ca95840
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 1342f2383e7cf2aa15ea60be03c93044e4332612
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="troubleshooting-queued-messaging"></a>Résolution des problèmes de messagerie en file d'attente
 Cette section contient les questions courantes et l'aide à la résolution des problèmes relatifs à l'utilisation des files d'attente dans [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -125,7 +125,7 @@ Cette section contient les questions courantes et l'aide à la résolution des p
   
  **Q :** où trouver des réponses aux questions courantes sur MSMQ ?  
   
- **R :** [!INCLUDE[crabout](../../../../includes/crabout-md.md)] MSMQ, consultez [Microsoft Message Queuing](http://go.microsoft.com/fwlink/?LinkId=87810).  
+ **R :** pour plus d’informations sur MSMQ, consultez [Microsoft Message Queuing](http://go.microsoft.com/fwlink/?LinkId=87810).  
   
  **Q :** Pourquoi mon service lève une `ProtocolException` lorsque la lecture à partir d’une file d’attente qui contient à la fois en file d’attente de messages de session et en file d’attente de messages de datagramme ?  
   

@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c7abf272cb1d069b0fbdcd561256580de5a82c29
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: d9427d091855a4f658cc971ceca1116cfd74e2ab
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="nettcp-port-sharing"></a>Partage de ports Net.TCP
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] fournit un nouveau protocole réseau basé sur TCP (net.tcp://) pour une communication hautes performances. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] introduit également un nouveau composant système, le Service de partage de ports Net.TCP, qui permet le partage de ports net.tcp à travers plusieurs processus utilisateur.  
@@ -56,7 +56,7 @@ ms.lasthandoff: 04/28/2018
 ## <a name="using-nettcp-port-sharing-in-an-application"></a>Utilisation du partage de ports Net.tcp dans une application  
  La façon la plus simple d'utiliser le partage de ports net.tcp:// dans votre application [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] est d'exposer un service à l'aide de <xref:System.ServiceModel.NetTcpBinding>, puis d'activer le Service de partage de ports Net.TCP à l'aide de la propriété <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A>.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] comment procéder, consultez [Comment : configurer un Service WCF à utiliser le partage de Port](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md).  
+ Pour plus d’informations, consultez [Comment : configurer un Service WCF à utiliser le partage de Port](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md).  
   
 ## <a name="security-implications-of-port-sharing"></a>Conséquences sur la sécurité du partage de ports  
  Bien que le Service de partage de ports Net.TCP fournisse une couche de traitement entre les applications et le réseau, les applications qui utilisent ce service doivent néanmoins être sécurisées comme si elles écoutaient directement le réseau. Spécifiquement, les applications qui utilisent le partage de ports doivent évaluer les privilèges de processus sous lesquels elles s'exécutent. Envisagez d'exécuter votre application à l'aide du compte de service réseau intégré, qui s'exécute avec le jeu minime de privilèges de processus requis pour la communication réseau.  

@@ -1,24 +1,26 @@
 ---
-title: "Sécurité des messages dans WCF"
-ms.custom: 
+title: Sécurité des messages dans WCF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a80efb59-591a-4a37-bb3c-8fffa6ca0b7d
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 92422e40742909dbf338ec2660e5494ffcdd31cc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3ef96dd25903076fedc59ad1507674dd40dcfcc5
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="message-security-in-wcf"></a>Sécurité des messages dans WCF
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] possède deux principaux modes de sécurité (`Transport` et `Message`) et un troisième mode (`TransportWithMessageCredential`) qui associe les deux premiers. Cette rubrique présente la sécurité des messages et les raisons de l'employer.  
@@ -37,7 +39,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Prise en charge de plusieurs transports. Vous pouvez envoyer des messages sécurisés sur de nombreux transports différents, tels que les canaux nommés et le protocole TCP, sans devoir compter sur le protocole pour la sécurité. Avec la sécurité au niveau du transport, toutes les informations de sécurité sont étendues à une connexion de transport particulière unique et elles ne sont pas disponibles à partir du contenu du message lui-même. La sécurité des messages sécurise le message indépendamment du transport utilisé pour transmettre le message et le contexte de sécurité est directement incorporé à l'intérieur du message.  
   
--   Prise en charge d'un large jeu d'informations d'identification et de revendications. La sécurité des messages se base sur la spécification WS-Security, qui fournit un cadre extensible capable de transmettre tout type de revendication à l'intérieur du message SOAP. Contrairement à la sécurité du transport, le jeu de mécanismes d'authentification, ou les revendications, que vous pouvez utiliser ne sont pas limités par les fonctions de transport. La sécurité des messages [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] inclut plusieurs types d'authentifications et de transmissions de revendications et peut être étendue pour prendre en charge des types supplémentaires selon vos besoins. Pour ces raisons, par exemple, un scénario d'informations d'identification fédérées n'est pas possible sans la sécurité des messages. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]les scénarios de fédération WCF prend en charge, consultez [fédération et les jetons émis](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
+-   Prise en charge d'un large jeu d'informations d'identification et de revendications. La sécurité des messages se base sur la spécification WS-Security, qui fournit un cadre extensible capable de transmettre tout type de revendication à l'intérieur du message SOAP. Contrairement à la sécurité du transport, le jeu de mécanismes d'authentification, ou les revendications, que vous pouvez utiliser ne sont pas limités par les fonctions de transport. La sécurité des messages [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] inclut plusieurs types d'authentifications et de transmissions de revendications et peut être étendue pour prendre en charge des types supplémentaires selon vos besoins. Pour ces raisons, par exemple, un scénario d'informations d'identification fédérées n'est pas possible sans la sécurité des messages. Pour plus d’informations sur la prise en charge de fédération scénarios WCF, consultez [fédération et les jetons émis](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
   
 ## <a name="how-message-and-transport-security-compare"></a>Comparaison de la sécurité des messages et du transport  
   

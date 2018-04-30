@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9a215be76002b9e8fca8ac4a9073885b3b30a97b
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: a36b8a6bdf1a024f4ddee91bd937afac516e391f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="serializing-workflows-and-activities-to-and-from-xaml"></a>Sérialisation de workflows et d'activités vers et à partir de XAML
 Outre le fait d'être compilées en types qui sont contenus dans des assemblys, les définitions de workflow peuvent également être sérialisées en XAML. Ces définitions sérialisées peuvent être rechargées pour la modification ou l'inspection, passées à un système de génération pour la compilation, ou bien chargées et appelées. Cette rubrique fournit une vue d'ensemble de la sérialisation de définitions de workflow et de l'utilisation de définitions de workflow XAML.  
@@ -84,7 +84,7 @@ sw.Close();
  **25 + 15**  
 **40**    
 > [!NOTE]
->  [!INCLUDE[crabout](../../../includes/crabout-md.md)] appel de flux de travail avec des arguments d’entrée et de sortie, consultez [à l’aide de WorkflowInvoker et WorkflowApplication](../../../docs/framework/windows-workflow-foundation/using-workflowinvoker-and-workflowapplication.md) et <xref:System.Activities.WorkflowInvoker.Invoke%2A>.  
+>  Pour plus d’informations sur l’appel de flux de travail avec des arguments d’entrée et de sortie, consultez [à l’aide de WorkflowInvoker et WorkflowApplication](../../../docs/framework/windows-workflow-foundation/using-workflowinvoker-and-workflowapplication.md) et <xref:System.Activities.WorkflowInvoker.Invoke%2A>.  
   
  Si le workflow sérialisé contient des expressions c#, alors un <xref:System.Activities.XamlIntegration.ActivityXamlServicesSettings> de l’instance avec son <xref:System.Activities.XamlIntegration.ActivityXamlServicesSettings.CompileExpressions%2A> propriété la valeur `true` doit être passé en tant que paramètre à <xref:System.Activities.XamlIntegration.ActivityXamlServices.Load%2A?displayProperty=nameWithType>, sinon un <xref:System.NotSupportedException> sera levée avec un message semblable à la suivant : `Expression Activity type 'CSharpValue`1' requiert une compilation pour pouvoir pour s’exécuter.  Veuillez vous assurer que le flux de travail a été compilé. »  
   

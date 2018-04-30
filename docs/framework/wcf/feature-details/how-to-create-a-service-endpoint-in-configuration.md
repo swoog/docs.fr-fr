@@ -1,24 +1,26 @@
 ---
-title: "Comment : créer un point de terminaison de service dans la configuration."
-ms.custom: 
+title: 'Comment : créer un point de terminaison de service dans la configuration.'
+ms.custom: ''
 ms.date: 06/16/2016
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f474e25d-2a27-4f31-84c5-395c442b8e70
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b96ccdb7e80faa35748a41947ed97f273cb330e9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ecb7345dbbff04388edb39dae9e5c05f2c40fd75
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-a-service-endpoint-in-configuration"></a>Comment : créer un point de terminaison de service dans la configuration.
 Les points de terminaison fournissent aux clients l'accès aux fonctionnalités offertes par un service [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Vous pouvez définir un ou plusieurs points de terminaison pour un service en utilisant une combinaison d'adresses de point de terminaison relative et absolue. Si vous ne définissez aucun point de terminaison de service, le runtime vous en fournit automatiquement par défaut. Cette rubrique montre comment ajouter des points de terminaison en utilisant un fichier de configuration qui contient à la fois des adresses absolues et relatives.  
@@ -94,7 +96,7 @@ Les points de terminaison fournissent aux clients l'accès aux fonctionnalités 
 ```  
   
 ## <a name="example"></a>Exemple  
- La première définition de point de terminaison affichée dans l'exemple suivant spécifie une adresse relative, ce qui signifie que l'adresse de point de terminaison est une combinaison de l'adresse de base et de l'adresse relative selon les règles de composition de l'URI (Uniform Resource Identifier). L'adresse relative est vide (""), donc l'adresse de point de terminaison est la même que l'adresse de base. La véritable adresse de point de terminaison est http://localhost:8000/servicemodelsamples/service.  
+ La première définition de point de terminaison affichée dans l'exemple suivant spécifie une adresse relative, ce qui signifie que l'adresse de point de terminaison est une combinaison de l'adresse de base et de l'adresse relative selon les règles de composition de l'URI (Uniform Resource Identifier). L'adresse relative est vide (""), donc l'adresse de point de terminaison est la même que l'adresse de base. L’adresse de point de terminaison réel est http://localhost:8000/servicemodelsamples/service.  
   
 ```xml  
 <endpoint address=""   
@@ -103,7 +105,7 @@ Les points de terminaison fournissent aux clients l'accès aux fonctionnalités 
 ```  
   
 ## <a name="example"></a>Exemple  
- La deuxième définition de point de terminaison spécifie également une adresse relative, comme affiché dans l'exemple de configuration suivant. L'adresse relative, "test", est ajoutée à l'adresse de base. La véritable adresse de point de terminaison est http://localhost:8000/servicemodelsamples/service/test.  
+ La deuxième définition de point de terminaison spécifie également une adresse relative, comme affiché dans l'exemple de configuration suivant. L'adresse relative, "test", est ajoutée à l'adresse de base. L’adresse de point de terminaison réel est http://localhost:8000/servicemodelsamples/service/test.  
   
 ```xml  
 <endpoint address="/test"  
@@ -112,7 +114,7 @@ Les points de terminaison fournissent aux clients l'accès aux fonctionnalités 
 ```  
   
 ## <a name="example"></a>Exemple  
- La troisième définition de point de terminaison spécifie une adresse absolue, comme affiché dans l'exemple de configuration suivant. L'adresse de base ne joue aucun rôle dans l'adresse. La véritable adresse de point de terminaison est http://localhost:8001/hello/servicemodelsamples.  
+ La troisième définition de point de terminaison spécifie une adresse absolue, comme affiché dans l'exemple de configuration suivant. L'adresse de base ne joue aucun rôle dans l'adresse. L’adresse de point de terminaison réel est http://localhost:8001/hello/servicemodelsamples.  
   
 ```xml  
 <endpoint address="http://localhost:8001/hello/servicemodelsamples"  
@@ -130,7 +132,7 @@ Les points de terminaison fournissent aux clients l'accès aux fonctionnalités 
 ```  
   
 ## <a name="example"></a>Exemple  
- Pour utiliser les points de terminaison par défaut fournis par le runtime, ne spécifiez aucun point de terminaison de service dans le code ou dans le fichier de configuration. Dans cet exemple, le runtime crée les points de terminaison par défaut lors de l'ouverture du service. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]points de terminaison par défaut, les liaisons et comportements, consultez [Configuration simplifiée](../../../../docs/framework/wcf/simplified-configuration.md) et [simplifié la Configuration des Services WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+ Pour utiliser les points de terminaison par défaut fournis par le runtime, ne spécifiez aucun point de terminaison de service dans le code ou dans le fichier de configuration. Dans cet exemple, le runtime crée les points de terminaison par défaut lors de l'ouverture du service. Pour plus d’informations sur les points de terminaison par défaut, les liaisons et comportements, consultez [Configuration simplifiée](../../../../docs/framework/wcf/simplified-configuration.md) et [simplifié la Configuration des Services WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ```xml  
 <configuration>  

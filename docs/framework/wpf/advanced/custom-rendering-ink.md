@@ -1,12 +1,13 @@
 ---
-title: "Encre de rendu personnalisé"
-ms.custom: 
+title: Encre de rendu personnalisé
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - ink [WPF], custom-rendering
 - classes [WPF], InkCanvas
 ms.assetid: 65c978a7-0ee0-454f-ac7f-b1bd2efecac5
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 481990acdf2f5b8f798144d36434569b9e2cd481
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e8f7288d9d3b729ab9c38bc6b2afd603b4d6d1aa
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="custom-rendering-ink"></a>Encre de rendu personnalisé
-Le <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> propriété d’un trait vous permet de spécifier l’apparence d’un trait, telles que sa taille, la couleur et la forme, mais il peut arriver que vous souhaitez personnaliser l’apparence au-delà <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> autoriser. Vous souhaiterez peut-être personnaliser l’apparence de l’encre en appliquant des effets tels qu’aérographe, peinture à l’huile et autres. Le [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] permet vous personnalisé encre de rendu en implémentant un personnalisé <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> et <xref:System.Windows.Ink.Stroke> objet.  
+Le <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> propriété d’un trait vous permet de spécifier l’apparence d’un trait, telles que sa taille, la couleur et la forme, mais il peut arriver que vous souhaitez personnaliser l’apparence au-delà <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> autoriser. Vous souhaiterez peut-être personnaliser l’apparence de l’encre en appliquant des effets tels qu’aérographe, peinture à l’huile et autres. Windows Presentation Foundation (WPF) vous permet de personnalisé rendu encre en implémentant un personnalisé <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> et <xref:System.Windows.Ink.Stroke> objet.  
   
  Cette rubrique contient les sous-sections suivantes :  
   

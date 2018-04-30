@@ -21,23 +21,23 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5eb1019694f6228edbe3656849b85dfa7611ef18
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 440bbcf03eef8f32a28073bfc9f5aeeb824a50fd
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="bindings-and-security"></a>Liaisons et sécurité
 Les liaisons fournies par le système incluses avec [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] permettent de programmer rapidement des applications [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. À une exception près, la méthode de sécurité par défaut de toutes les liaisons est activée. Cette rubrique vous permet de sélectionner la liaison appropriée à vos besoins de sécurité.  
   
- Pour une vue d’ensemble de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sécurité, consultez [vue d’ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] programmation [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] à l’aide de liaisons, consultez [de programmation de sécurité de WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md).  
+ Pour une vue d’ensemble de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sécurité, consultez [vue d’ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md). Pour plus d’informations sur la programmation [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] à l’aide de liaisons, consultez [de programmation de sécurité de WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md).  
   
  Si vous avez déjà sélectionné une liaison, vous pouvez trouver plus d’informations sur les comportements d’exécution qui sont associés à la sécurité dans [comportements de sécurité](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md).  
   
  Certaines fonctions de sécurité ne sont pas programmables à l’aide des liaisons fournies par le système. Pour plus de contrôle à l’aide d’une liaison personnalisée, consultez [les fonctionnalités de sécurité avec des liaisons personnalisées](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md).  
   
 ## <a name="security-functions-of-bindings"></a>Fonctions de sécurité des liaisons  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] inclut un certain nombre de liaisons fournies par le système qui répondent à la plupart des besoins. Si une liaison spécifique ne suffit pas, vous pouvez également créer une liaison personnalisée. Pour obtenir la liste des liaisons fournies par le système, consultez [les liaisons fournies](../../../../docs/framework/wcf/system-provided-bindings.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] liaisons personnalisées, consultez [des liaisons personnalisées](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] inclut un certain nombre de liaisons fournies par le système qui répondent à la plupart des besoins. Si une liaison spécifique ne suffit pas, vous pouvez également créer une liaison personnalisée. Pour obtenir la liste des liaisons fournies par le système, consultez [les liaisons fournies](../../../../docs/framework/wcf/system-provided-bindings.md). Pour plus d’informations sur les liaisons personnalisées, consultez [des liaisons personnalisées](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
  Chaque liaison dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] comporte deux formulaires : l'un en tant qu'API et l'autre en tant qu'élément XML utilisé dans un fichier de configuration. Par exemple, le `WSHttpBinding` (API) possède un équivalent le [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
   

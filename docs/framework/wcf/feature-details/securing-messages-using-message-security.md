@@ -16,11 +16,11 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: be9d55e508308f23e70be81ac0d4fe0dfd0ea9cd
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 088b01151d0471527bbfc2ffa04b5b5064700081
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="securing-messages-using-message-security"></a>Sécurisation des messages à l'aide de la sécurité de message
 Cette section présente la sécurité de message [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] lors de l'utilisation de <xref:System.ServiceModel.NetMsmqBinding>.  
@@ -54,7 +54,7 @@ Cette section présente la sécurité de message [!INCLUDE[indigo2](../../../../
   
  Étant donné la nature déconnectée des files d'attente, le client et le service peuvent ne pas être en ligne au même moment. Par conséquent, le client et le service doivent échanger des certificats hors bande. En particulier, le client, du fait qu'il détient le certificat du service (lequel peut être chaîné à une autorité de certification) dans son magasin approuvé, doit croire qu'il communique avec le service correct. Pour authentifier le client, le service utilise le certificat X.509 joint au message pour le mettre en correspondance avec le certificat dans son magasin afin de vérifier l'authenticité du client. De nouveau, le certificat doit être chaîné à une autorité de certification.  
   
- Sur un ordinateur exécutant Windows, les certificats sont conservés dans plusieurs types de magasins. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] les magasins différents, consultez [des magasins de certificats](http://go.microsoft.com/fwlink/?LinkId=87787).  
+ Sur un ordinateur exécutant Windows, les certificats sont conservés dans plusieurs types de magasins. Pour plus d’informations sur les magasins différents, consultez [des magasins de certificats](http://go.microsoft.com/fwlink/?LinkId=87787).  
   
 ### <a name="windows"></a>Windows  
  Le type d'informations d'identification de message Windows utilise le protocole Kerberos.  

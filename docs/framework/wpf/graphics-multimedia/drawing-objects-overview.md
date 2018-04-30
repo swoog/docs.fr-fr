@@ -1,12 +1,13 @@
 ---
 title: Vue d'ensemble des objets Drawing
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ImageDrawing objects [WPF]
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 9b5ce5c0-e204-4320-a7a8-0b2210d62f88
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c9b77b47a3f3ade27f2ba86304b1868a8d388482
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3672e4b1deacd8fb50a5318270854daae9c74761
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="drawing-objects-overview"></a>Vue d'ensemble des objets Drawing
 Cette rubrique présente les <xref:System.Windows.Media.Drawing> des objets et décrit comment les utiliser pour dessiner efficacement des formes, les images bitmap, le texte et support. Utilisez <xref:System.Windows.Media.Drawing> peindre des objets lorsque vous créez une image clipart, avec un <xref:System.Windows.Media.DrawingBrush>, ou utilisez <xref:System.Windows.Media.Visual> objets.  
@@ -36,17 +38,17 @@ Cette rubrique présente les <xref:System.Windows.Media.Drawing> des objets et d
 ## <a name="what-is-a-drawing-object"></a>Qu’est-ce qu’un objet Drawing ?  
  A <xref:System.Windows.Media.Drawing> objet décrit le contenu visible, comme une forme, bitmap, vidéo ou une ligne de texte. Différents types de dessins décrivent différents types de contenus. La liste suivante répertorie les différents types d’objets Drawing.  
   
--   <xref:System.Windows.Media.GeometryDrawing>– Dessine une forme.  
+-   <xref:System.Windows.Media.GeometryDrawing> – Dessine une forme.  
   
--   <xref:System.Windows.Media.ImageDrawing>– Dessine une image.  
+-   <xref:System.Windows.Media.ImageDrawing> – Dessine une image.  
   
--   <xref:System.Windows.Media.GlyphRunDrawing>– Dessine du texte.  
+-   <xref:System.Windows.Media.GlyphRunDrawing> – Dessine du texte.  
   
--   <xref:System.Windows.Media.VideoDrawing>– Lit un fichier audio ou vidéo.  
+-   <xref:System.Windows.Media.VideoDrawing> – Lit un fichier audio ou vidéo.  
   
--   <xref:System.Windows.Media.DrawingGroup>– Dessine d’autres dessins. Utilisez un groupe de dessins pour faire de plusieurs dessins un seul et même dessin composite.  
+-   <xref:System.Windows.Media.DrawingGroup> – Dessine d’autres dessins. Utilisez un groupe de dessins pour faire de plusieurs dessins un seul et même dessin composite.  
   
- <xref:System.Windows.Media.Drawing>les objets sont polyvalents. Il existe plusieurs façons, vous pouvez utiliser un <xref:System.Windows.Media.Drawing> objet.  
+ <xref:System.Windows.Media.Drawing> les objets sont polyvalents. Il existe plusieurs façons, vous pouvez utiliser un <xref:System.Windows.Media.Drawing> objet.  
   
 -   Vous pouvez l’afficher en tant qu’image en utilisant un <xref:System.Windows.Media.DrawingImage> et un <xref:System.Windows.Controls.Image> contrôle.  
   
@@ -86,7 +88,7 @@ GeometryDrawing
   
  L’exemple suivant dessine une image dans un rectangle situé à (75,75), de 100 par 100 pixels. L’illustration suivante montre le <xref:System.Windows.Media.ImageDrawing> créé par l’exemple. Une bordure grise a été ajoutée pour montrer les limites de la <xref:System.Windows.Media.ImageDrawing>.  
   
- ![Un ImageDrawing 100 par 100 dessiné à &#40; 75,75 &#41; ] (../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-simple-imagedrawing-offset.png "graphicsmm_simple_imagedrawing_offset")  
+ ![Un ImageDrawing 100 par 100 dessiné à &#40;75,75&#41;](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-simple-imagedrawing-offset.png "graphicsmm_simple_imagedrawing_offset")  
 ImageDrawing 100 par 100  
   
  [!code-csharp[DrawingMiscSnippets_snip#ImageDrawing100by100Inline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/ImageDrawingExample.cs#imagedrawing100by100inline)]
@@ -180,7 +182,7 @@ Un dessin composite
  [!code-csharp[DrawingMiscSnippets_snip#GraphicsMMSimpleDrawingGroupExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/DrawingGroupExample.cs#graphicsmmsimpledrawinggroupexample)]
  [!code-xaml[DrawingMiscSnippets_snip#GraphicsMMSimpleDrawingGroupExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/DrawingGroupExample.xaml#graphicsmmsimpledrawinggroupexample)]  
   
- A <xref:System.Windows.Media.DrawingGroup> vous permet également d’appliquer des masques d’opacité, des transformations, des effets bitmap et d’autres opérations à son contenu. <xref:System.Windows.Media.DrawingGroup>les opérations sont appliquées dans l’ordre suivant : <xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>, <xref:System.Windows.Media.DrawingGroup.Opacity%2A>, <xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>, <xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>, <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>, puis <xref:System.Windows.Media.DrawingGroup.Transform%2A>.  
+ A <xref:System.Windows.Media.DrawingGroup> vous permet également d’appliquer des masques d’opacité, des transformations, des effets bitmap et d’autres opérations à son contenu. <xref:System.Windows.Media.DrawingGroup> les opérations sont appliquées dans l’ordre suivant : <xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>, <xref:System.Windows.Media.DrawingGroup.Opacity%2A>, <xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>, <xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>, <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>, puis <xref:System.Windows.Media.DrawingGroup.Transform%2A>.  
   
  L’illustration suivante montre l’ordre dans lequel <xref:System.Windows.Media.DrawingGroup> les opérations sont appliquées.  
   
@@ -232,7 +234,7 @@ GeometryDrawing utilisé avec un DrawingBrush
 ## <a name="drawingcontext-objects"></a>Objets DrawingContext  
  Le <xref:System.Windows.Media.DrawingContext> classe vous permet de remplir un <xref:System.Windows.Media.Visual> ou un <xref:System.Windows.Media.Drawing> avec un contenu visuel. Nombre d’objets graphiques de niveau inférieur utilisent un <xref:System.Windows.Media.DrawingContext> , car il décrit le contenu graphique très efficacement.  
   
- Bien que le <xref:System.Windows.Media.DrawingContext> les méthodes de dessin ressembler aux méthodes de dessin de le <xref:System.Drawing.Graphics?displayProperty=nameWithType> type, elles sont en réalité très différentes. <xref:System.Windows.Media.DrawingContext>est utilisé avec un système graphique à mode conservé, tandis que le <xref:System.Drawing.Graphics?displayProperty=nameWithType> type est utilisé avec un système de graphique en mode exécution. Lorsque vous utilisez un <xref:System.Windows.Media.DrawingContext> commandes de dessin de l’objet, vous stockez réellement un jeu d’instructions de rendu (bien que le mécanisme de stockage exact varie selon le type d’objet qui fournit le <xref:System.Windows.Media.DrawingContext>) qui sera utilisée ultérieurement par les graphiques système ; ne dessinez pas à l’écran en temps réel. Pour plus d’informations sur la façon dont le système de graphismes [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] fonctionne, consultez la [Vue d’ensemble du rendu des graphismes WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md).  
+ Bien que le <xref:System.Windows.Media.DrawingContext> les méthodes de dessin ressembler aux méthodes de dessin de le <xref:System.Drawing.Graphics?displayProperty=nameWithType> type, elles sont en réalité très différentes. <xref:System.Windows.Media.DrawingContext> est utilisé avec un système graphique à mode conservé, tandis que le <xref:System.Drawing.Graphics?displayProperty=nameWithType> type est utilisé avec un système de graphique en mode exécution. Lorsque vous utilisez un <xref:System.Windows.Media.DrawingContext> commandes de dessin de l’objet, vous stockez réellement un jeu d’instructions de rendu (bien que le mécanisme de stockage exact varie selon le type d’objet qui fournit le <xref:System.Windows.Media.DrawingContext>) qui sera utilisée ultérieurement par les graphiques système ; ne dessinez pas à l’écran en temps réel. Pour plus d’informations sur le fonctionne du système graphique de Windows Presentation Foundation (WPF), consultez le [vue d’ensemble de rendu des graphiques WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md).  
   
  Vous instanciez jamais directement un <xref:System.Windows.Media.DrawingContext>; vous pouvez toutefois acquérir un contexte de dessin de certaines méthodes, telles que <xref:System.Windows.Media.DrawingGroup.Open%2A?displayProperty=nameWithType> et <xref:System.Windows.Media.DrawingVisual.RenderOpen%2A?displayProperty=nameWithType>.  
   

@@ -1,27 +1,29 @@
 ---
 title: "Comment : spécifier la chaîne de certificats d'autorité de certification utilisée pour vérifier des signatures (WCF)"
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - certificates [WCF], specifying the certificate authority certificate chain
 - certificates [WCF], verifying signatures
 ms.assetid: 7c719355-aa41-4567-80d0-5115a8cf73fd
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f0ea15e8fe9580f561eedf048ed2aaf2e2ed248f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 29637ea7f0a1e533a6735ebfa6f428fe20039e48
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-specify-the-certificate-authority-certificate-chain-used-to-verify-signatures-wcf"></a>Comment : spécifier la chaîne de certificats d'autorité de certification utilisée pour vérifier des signatures (WCF)
 Lorsque [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] reçoit un message SOAP signé à l'aide d'un certificat X.509, par défaut il vérifie que le certificat X.509 a été publié par une autorité de certification approuvée. Il consulte pour cela un magasin de certificats et détermine si le certificat de cette autorité de certification a été désigné comme approuvé. Pour que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] puisse effectuer cette détermination, la chaîne de certificats d'autorité de certification doit être installée dans le magasin de certificats correct.  
@@ -42,7 +44,7 @@ Lorsque [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] reçoit un messa
   
          Dans la console MMC (Microsoft Management Console), ouvrez le composant logiciel enfichable Certificats. Pour le certificat de magasin de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] est configuré pour récupérer des certificats X.509 dans, sélectionnez le **racine de confiance** **autorités de Certification**dossier. Sous le **autorités de Certification racines de confiance** dossier, avec le bouton droit le **certificats**dossier, pointez sur **toutes les tâches**, puis cliquez sur **importation** . Fournissez le fichier exporté à l'étape a.  
   
-         [!INCLUDE[crabout](../../../../includes/crabout-md.md)]à l’aide du composant logiciel enfichable Certificats à la console MMC, consultez [Comment : afficher les certificats avec le composant logiciel enfichable MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
+         Pour plus d’informations sur l’utilisation du composant logiciel enfichable Certificats à la console MMC, consultez [Comment : afficher les certificats avec le composant logiciel enfichable MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Utilisation des certificats](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

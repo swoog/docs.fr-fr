@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 09a3bf2d552b49e36375210e3036e344a9702405
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 99fdfad6c06e74a92d7fffb7c7a5e14284757e12
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="specifying-an-endpoint-address"></a>Spécification d'une adresse de point de terminaison
 Toute communication avec un service [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] a lieu par l'intermédiaire de ses points de terminaison. Chaque <xref:System.ServiceModel.Description.ServiceEndpoint> contient un <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>, un <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A> et un <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>. Le contrat spécifie quelles opérations sont disponibles. La liaison spécifie comment communiquer avec le service et l'adresse spécifie où rechercher le service. Chaque point de terminaison doit avoir une adresse unique. L'adresse de point de terminaison est représentée par la classe <xref:System.ServiceModel.EndpointAddress>, qui contient un URI (Uniform Resource Identifier) représentant l'adresse du service, un <xref:System.ServiceModel.EndpointAddress.Identity%2A> représentant l'identité de sécurité du service et une collection de <xref:System.ServiceModel.EndpointAddress.Headers%2A> facultative. Les en-têtes facultatifs fournissent des informations d'adressage plus détaillées pour identifier ou interagir avec le point de terminaison. Par exemple, les en-tête peuvent indiquer comment traiter un message entrant, où le point de terminaison doit envoyer un message de réponse ou quelle instance d'un service utiliser pour traiter un message entrant d'un utilisateur particulier lorsque plusieurs instances sont disponibles.  
@@ -93,7 +93,7 @@ Toute communication avec un service [!INCLUDE[indigo1](../../../includes/indigo1
 ## <a name="using-default-endpoints"></a>Utilisation des points de terminaison par défaut  
  Si aucun point de terminaison n'est spécifié dans le code ou dans la configuration, le runtime fournit les points de terminaison par défaut en ajoutant un point de terminaison par défaut sur chaque adresse de base pour chaque contrat de service implémenté par le service. L'adresse de base peut être spécifiée dans le code ou dans la configuration, et les points de terminaison par défaut sont ajoutés lors de l'appel de <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> sur le <xref:System.ServiceModel.ServiceHost>.  
   
- Si des points de terminaison sont fournis explicitement, les points de terminaison par défaut peuvent toujours être ajoutés en appelant <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> sur le <xref:System.ServiceModel.ServiceHost> avant d'appeler <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>. [!INCLUDE[crabout](../../../includes/crabout-md.md)] les points de terminaison, les liaisons et les comportements par défaut, consultez [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) et [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+ Si des points de terminaison sont fournis explicitement, les points de terminaison par défaut peuvent toujours être ajoutés en appelant <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> sur le <xref:System.ServiceModel.ServiceHost> avant d'appeler <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>. Pour plus d’informations sur les points de terminaison par défaut, les liaisons et comportements, consultez [Configuration simplifiée](../../../docs/framework/wcf/simplified-configuration.md) et [simplifié la Configuration des Services WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.ServiceModel.EndpointAddress>  

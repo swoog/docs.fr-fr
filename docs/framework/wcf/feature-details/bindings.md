@@ -1,31 +1,33 @@
 ---
 title: Liaisons Windows Communication Foundation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WCF [WCF], bindings
 - Windows Communication Foundation [WCF], bindings
 - bindings [WCF]
 ms.assetid: 83639133-89f7-43f0-b4ef-8d9e57c08d25
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 494869985f14dc9562b8d98a7d68cd9639cca97b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 926cdab8b835aa170fc0cdc0046c3fef579c3fec
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="windows-communcation-foundation-bindings"></a>Liaisons Windows Communication Foundation
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] effectue la distinction entre la manière dont le logiciel pour une application est écrit et la manière dont il communique avec d'autres logiciels. Les liaisons sont utilisées pour spécifier le transport, l'encodage et les détails de protocole requis pour que les clients et les services puissent communiquer l'un avec l'autre. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilise des liaisons pour générer la représentation de câble sous-jacente du point de terminaison ; par conséquent, la plupart des détails de liaison doivent être convenus par les parties qui communiquent. Pour cela, le plus simple est que les clients d’un service utilisent la même liaison que celle utilisée par le point de terminaison du service. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]comment procéder, consultez [à l’aide de liaisons pour configurer les Services Windows Communication Foundation et les Clients](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb).  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] effectue la distinction entre la manière dont le logiciel pour une application est écrit et la manière dont il communique avec d'autres logiciels. Les liaisons sont utilisées pour spécifier le transport, l'encodage et les détails de protocole requis pour que les clients et les services puissent communiquer l'un avec l'autre. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilise des liaisons pour générer la représentation de câble sous-jacente du point de terminaison ; par conséquent, la plupart des détails de liaison doivent être convenus par les parties qui communiquent. Pour cela, le plus simple est que les clients d’un service utilisent la même liaison que celle utilisée par le point de terminaison du service. Pour plus d’informations, consultez [à l’aide de liaisons pour configurer les Services Windows Communication Foundation et les Clients](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb).  
   
  Une liaison est composée d’une collection d’éléments de liaison. Chaque élément décrit un aspect de la façon dont le point de terminaison communique avec les clients. Une liaison doit inclure au moins un élément de liaison de transport, au moins un élément de liaison d'encodage de message (que l'élément de liaison de transport peut fournir par défaut) et un nombre quelconque d'autres éléments de liaison de protocole. Le processus qui génère une exécution à partir de cette description permet à chaque élément de liaison de contribuer du code à cette exécution.  
   

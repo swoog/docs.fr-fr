@@ -1,27 +1,29 @@
 ---
 title: "Comment : publier les métadonnées d'un service à l'aide de code"
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 51407e6d-4d87-42d5-be7c-9887b8652006
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 455929144f771128ca070cd02e65c919ce4c741f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c3d2fd1222539ec8017846069e7eda9a2c503f22
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-code"></a>Comment : publier les métadonnées d'un service à l'aide de code
 C'est l'une des deux rubriques de procédure qui traitent de la publication de métadonnées pour un service [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Il y a deux façons de spécifier comment un service doit publier des métadonnées : à l'aide d'un fichier de configuration et à l'aide du code. Cette rubrique montre comment publier les métadonnées d'un service à l'aide d'un code.  
@@ -29,7 +31,7 @@ C'est l'une des deux rubriques de procédure qui traitent de la publication de m
 > [!CAUTION]
 >  Cette rubrique indique comment publier des métadonnées de manière non sécurisée. Tout client peut récupérer les métadonnées du service. Si votre service doit publier les métadonnées de manière sécurisée. consultez [personnalisé sécuriser les métadonnées de point de terminaison](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]publication de métadonnées dans un fichier de configuration, consultez [Comment : publier les métadonnées pour un Service à l’aide d’un fichier de Configuration](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md). La publication des métadonnées permet aux clients de récupérer les métadonnées via une requête WS-Transfer GET ou une requête HTTP/GET à l'aide de la chaîne de requête `?wsdl`. Pour être sûr que le code fonctionne, vous devez créer un service WCF de base. Un service auto-hébergé de base est fourni dans le code suivant.  
+ Pour plus d’informations sur la publication des métadonnées dans un fichier de configuration, consultez [Comment : publier les métadonnées pour un Service à l’aide d’un fichier de Configuration](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md). La publication des métadonnées permet aux clients de récupérer les métadonnées via une requête WS-Transfer GET ou une requête HTTP/GET à l'aide de la chaîne de requête `?wsdl`. Pour être sûr que le code fonctionne, vous devez créer un service WCF de base. Un service auto-hébergé de base est fourni dans le code suivant.  
   
  [!code-csharp[htPublishMetadataCode#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/htpublishmetadatacode/cs/program.cs#0)]
  [!code-vb[htPublishMetadataCode#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htpublishmetadatacode/vb/program.vb#0)]  
@@ -80,7 +82,7 @@ C'est l'une des deux rubriques de procédure qui traitent de la publication de m
      [!code-vb[htPublishMetadataCode#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htpublishmetadatacode/vb/program.vb#9)]  
   
     > [!NOTE]
-    >  Si vous n'ajoutez pas de points de terminaison au service, le runtime ajoute les points de terminaison par défaut. Dans cet exemple, étant donné que le service a un <xref:System.ServiceModel.Description.ServiceMetadataBehavior> défini sur la valeur `true`, la publication des métadonnées est activée pour le service. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]par défaut des points de terminaison, consultez [Configuration simplifiée](../../../../docs/framework/wcf/simplified-configuration.md) et [simplifié la Configuration des Services WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+    >  Si vous n'ajoutez pas de points de terminaison au service, le runtime ajoute les points de terminaison par défaut. Dans cet exemple, étant donné que le service a un <xref:System.ServiceModel.Description.ServiceMetadataBehavior> défini sur la valeur `true`, la publication des métadonnées est activée pour le service. Pour plus d’informations sur les points de terminaison par défaut, consultez [Configuration simplifiée](../../../../docs/framework/wcf/simplified-configuration.md) et [simplifié la Configuration des Services WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 9. Ouvrez l'hôte de service et attendez les appels entrants. Lorsque l'utilisateur appuie sur ENTRÉE, fermez l'hôte de service.  
   
@@ -89,7 +91,7 @@ C'est l'une des deux rubriques de procédure qui traitent de la publication de m
   
 10. Créez et exécutez l'application console.  
   
-11. Utilisez Internet Explorer pour naviguer jusqu'à l'adresse de base du service (http://localhost:8001/MetadataSample dans cet exemple) et vérifiez que la publication des métadonnées est activée. Vous devriez voir s'afficher une page Web qui indique "Service simple" en haut et plus bas "Vous a créé un service". Dans la négative, un message s'affiche en haut de la page résultante : "La publication des métadonnées pour ce service est actuellement désactivée".  
+11. Utilisez Internet Explorer pour accéder à l’adresse de base du service (http://localhost:8001/MetadataSample dans cet exemple) et vérifiez que la publication des métadonnées est activée. Vous devriez voir s’afficher une page web qui indique "Service simple" en haut et plus bas "Vous a créé un service". Dans la négative, un message s'affiche en haut de la page résultante : "La publication des métadonnées pour ce service est actuellement désactivée".  
   
 ## <a name="example"></a>Exemple  
  L'exemple de code suivant affiche l'implémentation d'un service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] de base qui publie les métadonnées pour le service dans le code.  

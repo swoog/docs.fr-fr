@@ -1,31 +1,33 @@
 ---
-title: "Comment : utiliser la configuration pour ajouter un point de terminaison AJAX ASP.NET"
-ms.custom: 
+title: 'Comment : utiliser la configuration pour ajouter un point de terminaison AJAX ASP.NET'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7cd0099e-dc3a-47e4-a38c-6e10f997f6ea
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e1b46239366c38b54a38e3ce62b59c81eeb3316c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 28051dbed626dc0073a38e72f2cdc21ea108a32e
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-use-configuration-to-add-an-aspnet-ajax-endpoint"></a>Comment : utiliser la configuration pour ajouter un point de terminaison AJAX ASP.NET
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] vous permet de créer un service qui rend disponible un point de terminaison compatible ASP.NET AJAX pouvant être appelé à partir de JavaScript sur un site Web client. Pour créer ce point de terminaison, vous pouvez utiliser un fichier de configuration, comme pour tous les autres points de terminaison [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], ou utiliser une méthode qui ne requiert aucun élément de configuration. Cette rubrique décrit l'approche utilisant le fichier de configuration.  
   
  La partie de la procédure qui permet le service point de terminaison compatible ASP.NET AJAX consiste à configurer le point de terminaison à utiliser le <xref:System.ServiceModel.WebHttpBinding> et ajouter la [ \<enableWebScript >](../../../../docs/framework/configure-apps/file-schema/wcf/enablewebscript.md) comportement de point de terminaison. Après avoir configuré le point de terminaison, les étapes pour implémenter et héberger le service sont semblables à celles utilisée pour tout service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Pour obtenir un exemple, consultez la [AJAX Service utilisant HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]comment configurer un point de terminaison ASP.NET AJAX sans utiliser de configuration, consultez [Comment : ajouter un point de terminaison du AJAX ASP.NET sans Configuration à l’aide de](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md).  
+ Pour plus d’informations sur la façon de configurer un point de terminaison ASP.NET AJAX sans utiliser de configuration, consultez [Comment : ajouter un point de terminaison du AJAX ASP.NET sans Configuration à l’aide de](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md).  
   
 ### <a name="to-create-a-basic-wcf-service"></a>Pour créer un service WCF de base  
   
@@ -109,7 +111,7 @@ ms.lasthandoff: 12/22/2017
     %>  
     ```  
   
-2.  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]hébergement dans IIS, consultez [Comment : héberger un Service WCF dans IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md).  
+2.  Pour plus d’informations sur l’hébergement dans IIS, consultez [Comment : héberger un Service WCF dans IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md).  
   
 ### <a name="to-call-the-service"></a>Pour appeler le service  
   

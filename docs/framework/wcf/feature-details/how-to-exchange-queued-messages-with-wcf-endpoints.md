@@ -1,27 +1,29 @@
 ---
 title: "Comment : échanger des messages en file d'attente avec des points de terminaison WCF"
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 938e7825-f63a-4c3d-b603-63772fabfdb3
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ba057a0b96d393a5efbaf054e75c34f446c7dde6
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2f44f3a58e0a8283753cb682f25cf2f167450724
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>Comment : échanger des messages en file d'attente avec des points de terminaison WCF
 Les files d'attente garantissent une messagerie fiable entre un client et un service [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], même si le service n'est pas disponible au moment de la communication. Les procédures ci-dessous indiquent comment garantir une communication durable entre un client et un service en utilisant la liaison mise en file d'attente standard lors de l'implémentation du service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
@@ -52,7 +54,7 @@ Les files d'attente garantissent une messagerie fiable entre un client et un ser
      [!code-csharp[S_Msmq_Transacted#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/hostapp.cs#4)]
      [!code-vb[S_Msmq_Transacted#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/hostapp.vb#4)]  
   
-5.  Définissez un <xref:System.ServiceModel.Description.ServiceEndpoint> dans la configuration qui spécifie l'adresse de service et utilise la liaison <xref:System.ServiceModel.NetMsmqBinding> standard. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]à l’aide de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] configuration, consultez [configuration d’Applications Windows Communication Foundation](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a).  
+5.  Définissez un <xref:System.ServiceModel.Description.ServiceEndpoint> dans la configuration qui spécifie l'adresse de service et utilise la liaison <xref:System.ServiceModel.NetMsmqBinding> standard. Pour plus d’informations sur l’utilisation de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] configuration, consultez [configuration d’Applications Windows Communication Foundation](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a).  
   
   
   

@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 24dfd6c7eb2c1df6605d03bfb99cc82c0a489377
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 1eb5d8e0b19bc32ea5158d1614447b76f4924440
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="streaming-feeds-sample"></a>Streaming Feeds, exemple
 Cet exemple indique comment gérer des flux de syndication qui contiennent de grandes quantités d'éléments. Sur le serveur, l'exemple décrit comment différer la création d'objets <xref:System.ServiceModel.Syndication.SyndicationItem> individuels dans le flux jusqu'au moment précédant immédiatement l'écriture de l'élément dans le flux de données réseau.  
@@ -29,7 +29,7 @@ Cet exemple indique comment gérer des flux de syndication qui contiennent de gr
   
  Pour mieux illustrer la fonction de diffusion en continu de l'API de syndication, cet exemple utilise un scénario quelque peu improbable dans lequel le serveur expose un flux qui contient un nombre infini d'éléments. Dans ce cas, le serveur continue à générer de nouveaux éléments dans le flux jusqu'à ce qu'il détermine que le client a lu un nombre spécifié d'éléments du flux (10 par défaut). Pour plus de simplicité, le client et le serveur sont tous deux implémentés dans le même processus et utilisent un objet `ItemCounter` partagé pour assurer le suivi du nombre d'éléments que le client a générés. Le type `ItemCounter` existe uniquement pour permettre à l'exemple de scénario de se terminer convenablement et n'est pas un élément essentiel du modèle qui est illustré.  
   
- La démonstration se sert de Visual C# itérateurs (à l’aide de la `yield``return` mot clé). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] les itérateurs, consultez la rubrique « Utilisation d'itérateurs » sur MSDN.  
+ La démonstration se sert de Visual C# itérateurs (à l’aide de la `yield``return` mot clé). Pour plus d’informations sur les itérateurs, consultez la rubrique « Utilisation d’itérateurs » sur MSDN.  
   
 ## <a name="service"></a>Service  
  Le service implémente un contrat <xref:System.ServiceModel.Web.WebGetAttribute> de base qui se compose d'une opération, comme l'illustre le code suivant.  

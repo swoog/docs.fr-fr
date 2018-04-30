@@ -1,12 +1,13 @@
 ---
-title: "Optimisation des performances : autres recommandations"
-ms.custom: 
+title: 'Optimisation des performances : autres recommandations'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -18,16 +19,17 @@ helpviewer_keywords:
 - ScrollBarVisibility enumeration [WPF]
 - brushes [WPF], performance
 ms.assetid: d028cc65-7e97-4a4f-9859-929734eaf40d
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e45296befd51af5e4b03f123241efba030fd3754
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: afe0e93706089e1893d46316b33c2568df83ffd3
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="optimizing-performance-other-recommendations"></a>Optimisation des performances : autres recommandations
 <a name="introduction"></a> Cette rubrique fournit des recommandations pour améliorer les performances en plus de celles abordées dans les rubriques de la section [Optimisation des performances des applications WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md).  
@@ -81,7 +83,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="FontCache"></a>   
 ## <a name="configure-font-cache-service-to-reduce-start-up-time"></a>Configurer le service de mise en cache de polices pour réduire le temps de démarrage  
- Le service de mise en cache de polices [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] partage les données de police entre les applications [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. La première application [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] que vous exécutez démarre ce service s’il n’est pas déjà en cours d’exécution. Si vous utilisez [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], vous pouvez remplacer la valeur « Manuel » (valeur par défaut) du service « [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] Font Cache 3.0.0.0 » par « Automatique (début différé) » pour réduire le temps de démarrage initial des applications [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
+ Le service de mise en cache de polices [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] partage les données de police entre les applications [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. La première application [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] que vous exécutez démarre ce service s’il n’est pas déjà en cours d’exécution. Si vous utilisez [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], vous pouvez définir le service « Windows Presentation Foundation (WPF) police Cache 3.0.0.0 » à partir de « Manuel » (la valeur par défaut) sur « Automatique (début différé) » afin de réduire le temps de démarrage initial de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] applications.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Planification des performances des applications](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)  

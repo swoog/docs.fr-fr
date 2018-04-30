@@ -1,12 +1,13 @@
 ---
-title: "Comment : obtenir et définir la fenêtre principale de l’Application"
-ms.custom: 
+title: 'Comment : obtenir et définir la fenêtre principale de l’Application'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,22 +18,23 @@ helpviewer_keywords:
 - windows objects [WPF], getting
 - getting windows objects [WPF]
 ms.assetid: ec902bc4-4a59-46f5-8ec1-963b46789356
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9aa02b0d5ff4456cf5ef86fa0d4f8431fe3d846b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9bdc96c509f88650edd93ba4a7f595e2b161db39
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-get-and-set-the-main-application-window"></a>Comment : obtenir et définir la fenêtre principale de l’Application
 Cet exemple montre comment obtenir et définir la fenêtre d’application principale.  
   
 ## <a name="example"></a>Exemple  
- La première <xref:System.Windows.Window> qui est instancié dans un [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] application est automatiquement définie par <xref:System.Windows.Application> en tant que fenêtre d’application principale. La première <xref:System.Windows.Window> pour être instancié sera certainement la fenêtre qui est spécifiée comme le démarrage [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] (voir <xref:System.Windows.Application.StartupUri%2A>).  
+ La première <xref:System.Windows.Window> qui est instancié dans un Windows Presentation Foundation (WPF) application est automatiquement définie par <xref:System.Windows.Application> en tant que fenêtre d’application principale. La première <xref:System.Windows.Window> pour être instancié sera certainement la fenêtre qui est spécifiée comme le démarrage [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] (voir <xref:System.Windows.Application.StartupUri%2A>).  
   
  Le premier <xref:System.Windows.Window> peut également être instancié à l’aide de code. Par exemple ouvre une fenêtre pendant le démarrage de l’application, comme suit :  
   

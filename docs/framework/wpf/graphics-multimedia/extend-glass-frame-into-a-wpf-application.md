@@ -18,20 +18,20 @@ helpviewer_keywords:
 - extending glass frames into applications [WPF]
 - glass frames [WPF], extending into applications
 ms.assetid: 74388a3a-4b69-4a9d-ba1f-e107636bd660
-caps.latest.revision: ''
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: aad070bca408fc608eb000948c1b942d08f02018
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 03a2b8c6184a6cb79d1e42598a65972a08718e10
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="extend-glass-frame-into-a-wpf-application"></a>Étendre le cadre de transparence dans une application WPF
-Cette rubrique montre comment étendre le cadre de transparence [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] dans la zone cliente d’une application [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)].  
+Cette rubrique montre comment étendre le [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] cadre de transparence dans la zone cliente d’une application Windows Presentation Foundation (WPF).  
   
 > [!NOTE]
 >  Cet exemple fonctionne uniquement sur une machine [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] exécutant le Gestionnaire de fenêtres du Bureau (DWM) avec transparence activée. La version Home Basic [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] ne prend pas en charge l’effet de transparence. Les zones qui affichent généralement un effet de transparence sur les autres versions de [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] offrent un rendu opaque.  

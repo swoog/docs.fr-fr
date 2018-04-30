@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: a730daeadbed0f7453b8312612c096846d4e2cda
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 5b8171f382812480078b76588089871233bdf9ca
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="diagnosing-transactional-applications"></a>Diagnostic d’applications transactionnelles
 Cette rubrique décrit comment utiliser la fonctionnalité de diagnostic et de gestion [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] pour dépanner une application transactionnelle.  
@@ -58,7 +58,7 @@ Cette rubrique décrit comment utiliser la fonctionnalité de diagnostic et de g
 |Transactions passées par seconde|Nombre de transactions passées à des opérations au niveau de ce point de terminaison par seconde. Ce compteur est incrémenté chaque fois qu'une transaction est présente dans le message envoyé au point de terminaison.|  
   
 ## <a name="windows-management-instrumentation"></a>Windows Management Instrumentation  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] expose au moment de l'exécution les données d'inspection d'un service par l'intermédiaire d'un fournisseur WMI (Windows Management Instrumentation) de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] l’accès aux données WMI, consultez [à l’aide de Windows Management Instrumentation pour les Diagnostics](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] expose au moment de l'exécution les données d'inspection d'un service par l'intermédiaire d'un fournisseur WMI (Windows Management Instrumentation) de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Pour plus d’informations sur l’accès aux données WMI, consultez [à l’aide de Windows Management Instrumentation pour les Diagnostics](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
   
  Un certain nombre de propriétés WMI en lecture seule indiquent les paramètres de transaction appliqués pour un service. Les tableaux suivants répertorient l'ensemble de ces paramètres.  
   

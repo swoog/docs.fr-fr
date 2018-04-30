@@ -1,28 +1,28 @@
 ---
 title: Utilisation de liaisons pour configurer des services et des clients
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - bindings [WCF], using
 ms.assetid: c39479c3-0766-4a17-ba4c-97a74607f392
-caps.latest.revision: 
+caps.latest.revision: 33
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e63bb0b44e19ec9186096a819801ea05195b5523
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 68c8c2c93ce29147247c332848025fd931bf7854
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-bindings-to-configure-services-and-clients"></a>Utilisation de liaisons pour configurer des services et des clients
 Les liaisons sont des objets qui spécifient les détails de communication requis pour se connecter à un point de terminaison. Plus spécifiquement, les liaisons contiennent des informations de configuration utilisées pour créer l'exécution du client ou du service en définissant les caractéristiques des transports, les formats de transmission (encodage de message) et les protocoles à utiliser pour le point de terminaison ou canal client respectif. Pour créer un service [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] opérationnel, chaque point de terminaison dans le service requiert une liaison. Cette rubrique explique ce que sont les liaisons, comment elles sont définies et comment une liaison particulière est spécifiée pour un point de terminaison.  
@@ -53,7 +53,7 @@ Les liaisons sont des objets qui spécifient les détails de communication requi
  Pour obtenir la liste complète des liaisons fournies par le système, avec les descriptions, consultez [les liaisons fournies](../../../docs/framework/wcf/system-provided-bindings.md).  
   
 ## <a name="custom-bindings"></a>Liaisons personnalisées  
- Si la collection de liaisons fournie par le système n'a pas la combinaison correcte de fonctionnalités requises par une application de service, vous pouvez créer une liaison <xref:System.ServiceModel.Channels.CustomBinding>. [!INCLUDE[crabout](../../../includes/crabout-md.md)]les éléments d’un <xref:System.ServiceModel.Channels.CustomBinding> de liaison, consultez [ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) et [liaisons personnalisées](../../../docs/framework/wcf/extending/custom-bindings.md).  
+ Si la collection de liaisons fournie par le système n'a pas la combinaison correcte de fonctionnalités requises par une application de service, vous pouvez créer une liaison <xref:System.ServiceModel.Channels.CustomBinding>. Pour plus d’informations sur les éléments d’un <xref:System.ServiceModel.Channels.CustomBinding> de liaison, consultez [ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) et [liaisons personnalisées](../../../docs/framework/wcf/extending/custom-bindings.md).  
   
 ## <a name="using-bindings"></a>Utilisation des liaisons  
  L'utilisation des liaisons implique deux étapes simples :  

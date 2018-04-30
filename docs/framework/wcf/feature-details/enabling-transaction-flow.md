@@ -1,28 +1,28 @@
 ---
 title: Activation du flux de transaction
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - transactions [WCF], enabling flow
 ms.assetid: a03f5041-5049-43f4-897c-e0292d4718f7
-caps.latest.revision: 
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 814df9ff4fb11b0aa59270ac251b5dbd9ed7fe96
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ffc7a1af9c9a021e93c0fca14c0d7d2826f8af6a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="enabling-transaction-flow"></a>Activation du flux de transaction
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] fournit des options très flexibles pour contrôler le flux de transaction. Les paramètres de flux de transaction d'un service peuvent être exprimés à l'aide d'une combinaison d'attributs et de configuration.  
@@ -78,7 +78,7 @@ ms.lasthandoff: 12/22/2017
   
  Si le flux de transaction est désactivé pour la liaison, alors qu’une des opérations sur un contrat de service requiert une transaction entrante, une exception de validation est levée au démarrage du service.  
   
- La plupart des liaisons standard que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fournit contiennent les attributs `transactionFlow` et `transactionProtocol` qui vous permettent de configurer la liaison spécifique pour accepter les transactions entrantes. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]les éléments de configuration, consultez [ \<liaison >](../../../../docs/framework/misc/binding.md).  
+ La plupart des liaisons standard que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fournit contiennent les attributs `transactionFlow` et `transactionProtocol` qui vous permettent de configurer la liaison spécifique pour accepter les transactions entrantes. Pour plus d’informations sur les éléments de configuration, consultez [ \<liaison >](../../../../docs/framework/misc/binding.md).  
   
  Un administrateur ou un responsable du déploiement peuvent utiliser le flux de transaction au niveau du point de terminaison pour configurer des spécifications ou des contraintes de flux de transaction au moment du déploiement, à l’aide du fichier de configuration.  
   

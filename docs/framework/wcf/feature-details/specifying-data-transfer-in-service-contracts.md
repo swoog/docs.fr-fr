@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: fc64ff14c321bd2053b0a97b3cf1ac075b02e973
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 852519dc1edc499511652f4027f4cd4eed6eef98
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="specifying-data-transfer-in-service-contracts"></a>Spécification du transfert de données dans des contrats de service
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] peut être considéré comme une infrastructure de messagerie. Les opérations de service peuvent recevoir des messages, les traiter et leur envoyer des messages. Les messages sont décrits à l'aide de contrats d'opérations. Par exemple, considérons le contrat suivant.  
@@ -453,7 +453,7 @@ End Class
  Vous pouvez effectuer plusieurs actions pour personnaliser la manière dont les données sont sérialisées.  
   
 ### <a name="changing-server-serialization-settings"></a>Modification des paramètres de sérialisation du serveur  
- Lorsque le <xref:System.Runtime.Serialization.DataContractSerializer> par défaut est en cours d'utilisation, vous pouvez contrôler certains aspects du processus de sérialisation sur le service en appliquant l'attribut <xref:System.ServiceModel.ServiceBehaviorAttribute> au service. Spécifiquement, vous pouvez utiliser la propriété `MaxItemsInObjectGraph` pour définir le quota qui limite le nombre maximal d'objets que le <xref:System.Runtime.Serialization.DataContractSerializer> désérialise. Vous pouvez utiliser la propriété `IgnoreExtensionDataObject` pour désactiver la fonctionnalité de suivi des versions aller-retour. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] quotas, consultez [considérations de sécurité pour les données](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] aller-retour, consultez [les contrats de données de compatibilité ascendante](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
+ Lorsque le <xref:System.Runtime.Serialization.DataContractSerializer> par défaut est en cours d'utilisation, vous pouvez contrôler certains aspects du processus de sérialisation sur le service en appliquant l'attribut <xref:System.ServiceModel.ServiceBehaviorAttribute> au service. Spécifiquement, vous pouvez utiliser la propriété `MaxItemsInObjectGraph` pour définir le quota qui limite le nombre maximal d'objets que le <xref:System.Runtime.Serialization.DataContractSerializer> désérialise. Vous pouvez utiliser la propriété `IgnoreExtensionDataObject` pour désactiver la fonctionnalité de suivi des versions aller-retour. Pour plus d’informations sur les quotas, consultez [considérations de sécurité pour les données](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md). Pour plus d’informations sur l’aller-retour, consultez [les contrats de données de compatibilité ascendante](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
   
 ```csharp  
 [ServiceBehavior(MaxItemsInObjectGraph=100000)]  
@@ -585,7 +585,7 @@ Dim serviceHost As ServiceHost = New ServiceHost(GetType(IDataService))
   
 3.  Avant d'ouvrir l'hôte de service ou de créer un canal client, supprimez le comportement <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> existant et branchez la classe dérivée personnalisée que vous avez créée aux étapes précédentes.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Advanced concepts de sérialisation, consultez [sérialisation et désérialisation](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
+ Pour plus d’informations sur les concepts avancés de sérialisation, consultez [sérialisation et désérialisation](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Utilisation de la classe XmlSerializer](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)  

@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 70f8c1f89a5570f5b77eaba1bf72c42706d88947
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 00b3687169aa2e5521a3e3348be2a45738e97093
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="specifying-and-handling-faults-in-contracts-and-services"></a>Spécification et gestion des erreurs dans les contrats et les services
 Les applications [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] gèrent les situations d'erreur en mappant les objets exception managés aux objets erreur SOAP et les objets erreur SOAP aux objets exception managés. Les rubriques de cette section expliquent comment concevoir des contrats pour exposer des conditions d'erreur en tant qu'erreurs SOAP personnalisées, comment retourner de telles erreurs dans le cadre de l'implémentation du service et comment les clients interceptent de telles erreurs.  
@@ -47,7 +47,7 @@ Les applications [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] gèrent le
 ## <a name="map-exceptions-to-soap-faults"></a>Mappage d'exceptions aux erreurs SOAP  
  La première étape pour créer une opération qui gère des conditions d'erreur consiste à décider à quelles conditions une application cliente doit être informée des erreurs. Certaines opérations ont des conditions d'erreur spécifiques à leurs fonctionnalités. Par exemple, une opération `PurchaseOrder` peut retourner des informations spécifiques aux clients qui ne sont plus autorisés à initialiser une commande fournisseur. Dans d'autres cas, comme pour un service `Calculator`, une erreur SOAP `MathFault` plus générale peut-être en mesure de décrire toutes les conditions d'erreur à travers un service entier. Une fois les conditions d'erreur des clients de votre service identifiées, une erreur SOAP personnalisée peut être construite et l'opération peut être marquée comme retournant cette erreur SOAP lorsque la condition d'erreur correspondante se produit.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] Cette étape du développement de votre service ou client, consultez [définition et en spécifiant les erreurs](../../../docs/framework/wcf/defining-and-specifying-faults.md).  
+ Pour plus d’informations sur cette étape du développement de votre service ou client, consultez [définition et en spécifiant les erreurs](../../../docs/framework/wcf/defining-and-specifying-faults.md).  
   
 ## <a name="clients-and-services-handle-soap-faults-as-exceptions"></a>Clients et services gérant les erreurs SOAP en tant qu'exceptions  
  Identifier les conditions d'erreur d'opération, définir des erreurs SOAP personnalisées et les marquer pour qu'elles retournent ces erreurs constituent les premières étapes d'une gestion des erreurs réussie dans les applications [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. L'étape suivante consiste à implémenter correctement l'émission et la réception de ces erreurs. En général les services envoient des erreurs pour signaler aux applications clientes des conditions d'erreur, mais les clients duplex peuvent également envoyer des erreurs SOAP aux services.  

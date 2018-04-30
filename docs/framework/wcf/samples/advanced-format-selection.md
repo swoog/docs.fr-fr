@@ -1,24 +1,26 @@
 ---
-title: "Sélection avancée du format"
-ms.custom: 
+title: Sélection avancée du format
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e02d9082-4d55-41d8-9329-98f6d1c77f06
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 124bf59f29ff04e643200edf686f79f573937a03
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 93d7fe0742e16abd92682094ca20d51488516e6e
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="advanced-format-selection"></a>Sélection avancée du format
 Cet exemple montre comment étendre le modèle de programmation REST [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] afin de prendre en charge de nouveaux formats pour les réponses sortantes. En outre, l'exemple utilise un modèle T4 pour retourner la réponse sous forme de page XHTML et ainsi montrer comment un modèle de programmation de style d'affichage peut être implémenté.  
@@ -32,7 +34,7 @@ Cet exemple montre comment étendre le modèle de programmation REST [!INCLUDE[i
   
  Notez le type de retour de l'opération. Le modèle de programmation REST [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ne prend en charge en natif que les formats de réponse XML et JSON lorsqu'une opération retourne un type autre que <xref:System.ServiceModel.Channels.Message>. Toutefois, lorsqu'il utilise <xref:System.ServiceModel.Channels.Message> comme type de retour, le développeur peut entièrement contrôler la façon dont le message doit être mis en forme.  
   
- L'exemple utilise les méthodes <xref:System.ServiceModel.Web.WebOperationContext.CreateXmlResponse%2A>, <xref:System.ServiceModel.Web.WebOperationContext.CreateJsonResponse%2A> et <xref:System.ServiceModel.Web.WebOperationContext.CreateAtom10Response%2A> pour sérialiser la liste de chaînes en messages XML, JSON et ATOM, respectivement. Pour le format de réponse jpeg, la méthode <xref:System.ServiceModel.Web.WebOperationContext.CreateStreamResponse%2A> est utilisée et l'image est enregistrée dans le flux de données. Pour la réponse XHTML, la méthode <xref:System.ServiceModel.Web.WebOperationContext.CreateTextResponse%2A> est utilisée avec un modèle T4 prétraité, qui se compose d'un fichier .tt et d'un fichier .cs généré automatiquement. Le fichier .tt permet à un développeur d'écrire une réponse sous forme de modèle contenant des variables et des structures de contrôle. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]T4, consultez [génération d’artefacts à l’aide de modèles de texte](http://go.microsoft.com/fwlink/?LinkId=166023).  
+ L'exemple utilise les méthodes <xref:System.ServiceModel.Web.WebOperationContext.CreateXmlResponse%2A>, <xref:System.ServiceModel.Web.WebOperationContext.CreateJsonResponse%2A> et <xref:System.ServiceModel.Web.WebOperationContext.CreateAtom10Response%2A> pour sérialiser la liste de chaînes en messages XML, JSON et ATOM, respectivement. Pour le format de réponse jpeg, la méthode <xref:System.ServiceModel.Web.WebOperationContext.CreateStreamResponse%2A> est utilisée et l'image est enregistrée dans le flux de données. Pour la réponse XHTML, la méthode <xref:System.ServiceModel.Web.WebOperationContext.CreateTextResponse%2A> est utilisée avec un modèle T4 prétraité, qui se compose d'un fichier .tt et d'un fichier .cs généré automatiquement. Le fichier .tt permet à un développeur d'écrire une réponse sous forme de modèle contenant des variables et des structures de contrôle. Pour plus d’informations sur T4, consultez [génération d’artefacts à l’aide de modèles de texte](http://go.microsoft.com/fwlink/?LinkId=166023).  
   
  L'exemple est constitué d'un service auto-hébergé et d'un client qui s'exécute dans une application console. Lorsque l'application console s'exécute, le client adresse des requêtes au service et affiche les informations pertinentes des réponses dans la fenêtre de console.  
   

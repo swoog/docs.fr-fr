@@ -1,28 +1,30 @@
 ---
-title: "Schéma d'annotations"
-ms.custom: 
+title: Schéma d'annotations
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - XML schema definition (XSD)
 - Microsoft Annotations Framework [WPF]
 - documents [WPF], annotations
 ms.assetid: a893442b-e220-4603-bf6a-b01fefcb4b37
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7989269e8076eda1deef6384b7efdb51c2d279ec
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a78e287065fb714878d4d97b037d44440d063a5a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="annotations-schema"></a>Schéma d'annotations
 Cette rubrique décrit la définition XSD (définition de schéma XML) utilisée par Microsoft Annotations Framework pour enregistrer et récupérer les données d’annotation de l’utilisateur.  
@@ -37,7 +39,7 @@ Cette rubrique décrit la définition XSD (définition de schéma XML) utilisée
   
  Le schéma principal définit la structure XML primaire d’une <xref:System.Windows.Annotations.Annotation>.  La plupart des éléments XML définis dans le schéma principal correspondent aux types dans les <xref:System.Windows.Annotations> espace de noms.  Le schéma principal expose trois points d’extension qui permettent aux applications d’ajouter leurs propres données XML.  Ces points d’extension incluent le <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>et « Content ».  (Contenu d’éléments sont fournis sous la forme d’un <xref:System.Xml.XmlElement> liste.)  
   
- Le schéma de Base décrites dans cette rubrique définit les extensions pour le <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>et les types de contenu inclus avec l’initiale [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] release.  
+ Le schéma de Base décrites dans cette rubrique définit les extensions pour le <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>et les types de contenu inclus avec la version initiale de Windows Presentation Foundation (WPF).  
   
 <a name="CoreSchema"></a>   
 ## <a name="annotations-xml-core-schema"></a>Schéma principal XML des annotations  

@@ -1,27 +1,29 @@
 ---
-title: "Sécurité de message avec un client Windows sans négociation d'informations d'identification"
-ms.custom: 
+title: Sécurité de message avec un client Windows sans négociation d'informations d'identification
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: fc07a26c-cbee-41c5-8fb0-329085fef749
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: f069ff100a2fba1f6bace1d9a81ed69314261eae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 056e743ff1849457f8a0e8ee509a56475f09435c
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="message-security-with-a-windows-client-without-credential-negotiation"></a>Sécurité de message avec un client Windows sans négociation d'informations d'identification
 Le scénario suivant montre un client et un service [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] sécurisés par le protocole Kerberos.  
@@ -61,7 +63,7 @@ Le scénario suivant montre un client et un service [!INCLUDE[indigo1](../../../
   
 2.  Utilisez un compte de domaine Active Directory arbitraire pour exécuter votre service. Dans ce cas, vous devez établir un nom de principal du service pour ce compte de domaine. Une façon de procéder consiste à faire appel à l'utilitaire Setspn.exe. Une fois que le nom de principal du service du compte du service a été créé, configurez [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] pour publier ce nom de principal du service sur les clients du service par le biais de ses métadonnées (WSDL). Cette opération s'effectue en définissant l'identité de point de terminaison pour le point de terminaison exposé, par le biais d'un fichier de configuration de l'application ou du code. L'exemple suivant publie l'identité par programme.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Noms principaux de service, le protocole Kerberos et Active Directory, voir [Kerberos supplément technique pour Windows](http://go.microsoft.com/fwlink/?LinkId=88330). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]identité du point de terminaison, consultez [Modes d’authentification SecurityBindingElement](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md).  
+ Pour plus d’informations sur les SPN, le protocole Kerberos et Active Directory, consultez [Kerberos supplément technique pour Windows](http://go.microsoft.com/fwlink/?LinkId=88330). Pour plus d’informations sur les identités de point de terminaison, consultez [Modes d’authentification SecurityBindingElement](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md).  
   
  [!code-csharp[C_SecurityScenarios#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#12)]
  [!code-vb[C_SecurityScenarios#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#12)]  
@@ -117,9 +119,9 @@ Le scénario suivant montre un client et un service [!INCLUDE[indigo1](../../../
  Le code ci-dessous configure le client. Le mode de sécurité a la valeur Message, et le type d'informations d'identification du client a la valeur Windows. Notez que les propriétés <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> et <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> ont la valeur `false`.  
   
 > [!NOTE]
->  Pour utiliser le type d'informations d'identification Windows sans négociation, le client doit être configuré avec le compte SPN du service avant de commencer la communication avec le service. Le client utilise le nom de principal du service pour obtenir le jeton Kerberos afin d'authentifier et de sécuriser la communication avec le service. L'exemple suivant montre comment configurer le client avec le nom principal du service. Si vous utilisez la [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) pour générer le client, le SPN du service n’est automatiquement propagé vers le client dans les métadonnées du service (WSDL), si les métadonnées du service contient Ces informations. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] la configuration du service pour inclure son SPN dans ses métadonnées, consultez la section « Service » plus loin dans cette rubrique.  
+>  Pour utiliser le type d'informations d'identification Windows sans négociation, le client doit être configuré avec le compte SPN du service avant de commencer la communication avec le service. Le client utilise le nom de principal du service pour obtenir le jeton Kerberos afin d'authentifier et de sécuriser la communication avec le service. L'exemple suivant montre comment configurer le client avec le nom principal du service. Si vous utilisez la [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) pour générer le client, le SPN du service n’est automatiquement propagé vers le client dans les métadonnées du service (WSDL), si les métadonnées du service contient Ces informations. Pour plus d’informations sur la façon de configurer le service pour inclure son SPN dans les métadonnées du service, consultez la section « Service » plus loin dans cette rubrique.  
 >   
->  Pour plus d’informations sur les SPN, Kerberos et Active Directory, consultez [Kerberos supplément technique pour Windows](http://go.microsoft.com/fwlink/?LinkId=88330). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]identité du point de terminaison, consultez [Modes d’authentification SecurityBindingElement](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md) rubrique.  
+>  Pour plus d’informations sur les SPN, Kerberos et Active Directory, consultez [Kerberos supplément technique pour Windows](http://go.microsoft.com/fwlink/?LinkId=88330). Pour plus d’informations sur les identités de point de terminaison, consultez [Modes d’authentification SecurityBindingElement](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md) rubrique.  
   
  [!code-csharp[C_SecurityScenarios#19](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#19)]
  [!code-vb[C_SecurityScenarios#19](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#19)]  

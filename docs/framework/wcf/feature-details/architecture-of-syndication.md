@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: bcb64a4e03cae5e6186754dacb87e17a22d13001
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 2516a80f8d92b4e64372be140d2ee3d5db4c7b54
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="architecture-of-syndication"></a>Architecture de syndication
 L'API de syndication est conçue pour fournir un modèle de programmation neutre en ce qui concerne le format qui autorise l'écriture du contenu syndiqué sur le fil dans divers formats. Le modèle de données abstrait inclut les classes suivantes :  
@@ -43,7 +43,7 @@ L'API de syndication est conçue pour fournir un modèle de programmation neutre
   
  [!code-csharp[S_UE_SyndicationBoth#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_syndicationboth/cs/service.cs#0)]  
   
- La prise en charge de la syndication est construite sur le modèle de programmation REST de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] qui définit la liaison <xref:System.ServiceModel.WebHttpBinding> utilisée conjointement à <xref:System.ServiceModel.Description.WebHttpBehavior> pour rendre les flux disponibles en tant que services. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] le [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modèle de programmation REST, consultez [HTTP Web WCF Programming Model Overview](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md).  
+ La prise en charge de la syndication est construite sur le modèle de programmation REST de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] qui définit la liaison <xref:System.ServiceModel.WebHttpBinding> utilisée conjointement à <xref:System.ServiceModel.Description.WebHttpBehavior> pour rendre les flux disponibles en tant que services. Pour plus d’informations sur la [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modèle de programmation REST, consultez [HTTP Web WCF Programming Model Overview](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md).  
   
 > [!NOTE]
 >  La spécification Atom 1.0 permet de spécifier des fractions de seconde dans l'un de ses constructeurs Date. Lors de la sérialisation et de la désérialisation, l'implémentation [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]  ignore les fractions de seconde.  

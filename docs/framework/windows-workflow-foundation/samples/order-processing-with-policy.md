@@ -1,23 +1,24 @@
 ---
-title: "Traitement des commandes avec une stratégie"
-ms.custom: 
+title: Traitement des commandes avec une stratégie
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 66833724-dc36-4fad-86b0-59ffeaa3ba6a
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d86c7890af651ba9f0ee0ec2a1763f9c579bac89
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f99db44a636a5255990f734d34266b3b2e4a678b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="order-processing-with-policy"></a>Traitement des commandes avec une stratégie
 L'exemple de stratégie du traitement des commandes présente quelques-unes des fonctionnalités clés contenues dans le [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] de Windows Workflow Foundation (WF). Les fonctionnalités suivantes du moteur de règles WF sont nouvelles :  
@@ -34,7 +35,7 @@ L'exemple de stratégie du traitement des commandes présente quelques-unes des 
  L'exemple présente un projet `OrderProcessingPolicy` contenant une commande client composée d'une liste numérotée d'éléments disponibles et d'un code postal. Le traitement de cette commande aboutit si les deux entrées sont correctes ; dans le cas contraire, la stratégie crée des objets d'erreur en utilisant un opérateur `+` surchargé et une méthode d'extension prédéfinie afin d'informer l'utilisateur de ces erreurs.  
   
 > [!NOTE]
->  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]méthodes d’extension, consultez [spécification c# Version 3.0](http://go.microsoft.com/fwlink/?LinkId=95402).  
+>  Pour plus d’informations sur les méthodes d’extension, consultez [spécification c# Version 3.0](http://go.microsoft.com/fwlink/?LinkId=95402).  
   
  Cet exemple est composé des projets suivants :  
   

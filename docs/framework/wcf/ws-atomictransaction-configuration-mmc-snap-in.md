@@ -1,24 +1,26 @@
 ---
 title: Composant logiciel enfichable MMC Configuration WS-AtomicTransaction
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 23592973-1d51-44cc-b887-bf8b0d801e9e
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 73db4b201aba6e07891803aa86c56403f135f863
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2e8b127e0d3c241a1e37ac2161d9fadcea990425
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="ws-atomictransaction-configuration-mmc-snap-in"></a>Composant logiciel enfichable MMC Configuration WS-AtomicTransaction
 Le composant logiciel enfichable MMC Configuration WS-AtomicTransaction est utilisé pour configurer une partie des paramètres WS-AtomicTransaction sur les ordinateurs locaux et distants.  
@@ -28,7 +30,7 @@ Le composant logiciel enfichable MMC Configuration WS-AtomicTransaction est util
   
  Si vous exécutez Windows Vista ou [!INCLUDE[lserver](../../../includes/lserver-md.md)], le composant logiciel enfichable MMC sont accessibles en cliquant sur le **Démarrer** bouton, puis en tapant `dcomcnfg.exe` dans les **recherche** boîte. Lorsque la console MMC est ouverte, accédez à la **poste de travail\distributed Transaction Coordinator\Local DTC** nœud, cliquez droit et sélectionnez **propriétés**. Les options disponibles pour la configuration sont groupées sous la **WS-AT** onglet.  
   
- Les étapes précédentes sont utilisées pour lancer le composant logiciel enfichable afin de configurer un ordinateur local. Si vous souhaitez configurer un ordinateur distant, vous devez rechercher le nom de l’ordinateur distant dans **contrôle Panneau de configuration/Administrative Tools/Services de composants /**et effectuer des étapes similaires, si vous exécutez [!INCLUDE[wxp](../../../includes/wxp-md.md)] ou [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]. Si vous exécutez Windows Vista ou [!INCLUDE[lserver](../../../includes/lserver-md.md)], suivez les étapes précédentes pour Vista et [!INCLUDE[lserver](../../../includes/lserver-md.md)], mais utilisez le **Distributed Transaction Coordinator\Local DTC** nœud sous le nœud de l’ordinateur distant.  
+ Les étapes précédentes sont utilisées pour lancer le composant logiciel enfichable afin de configurer un ordinateur local. Si vous souhaitez configurer un ordinateur distant, vous devez rechercher le nom de l’ordinateur distant dans **contrôle Panneau de configuration/Administrative Tools/Services de composants /** et effectuer des étapes similaires, si vous exécutez [!INCLUDE[wxp](../../../includes/wxp-md.md)] ou [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]. Si vous exécutez Windows Vista ou [!INCLUDE[lserver](../../../includes/lserver-md.md)], suivez les étapes précédentes pour Vista et [!INCLUDE[lserver](../../../includes/lserver-md.md)], mais utilisez le **Distributed Transaction Coordinator\Local DTC** nœud sous le nœud de l’ordinateur distant.  
   
  Pour utiliser l’interface utilisateur fournie par l’outil, vous devez enregistrer le fichier WsatUI.dll, situé à l’emplacement suivant :  
   
@@ -42,9 +44,9 @@ regasm.exe /codebase WsatUI.dll
   
  Vous pouvez utiliser cet outil pour modifier les paramètres de base WS-AtomicTransaction. Par exemple, vous pouvez activer et désactiver le support de protocole de WS-AtomicTransaction, configurer les ports HTTP pour WS-AT, lier un certificat SSL au port HTTP, configurer des certificats en spécifiant les noms de sujet correspondants, sélectionner le mode de suivi et définir la valeur par défaut et les délais d’attente maximum.  
   
- Si vous devez configurer uniquement le support WS-AtomicTransaction sur l'ordinateur local, vous pouvez utiliser la version de ligne de commande de cet outil. [!INCLUDE[crabout](../../../includes/crabout-md.md)]l’outil de ligne de commande, consultez le [l’utilitaire de Configuration WS-AtomicTransaction (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md) rubrique.  
+ Si vous devez configurer uniquement le support WS-AtomicTransaction sur l'ordinateur local, vous pouvez utiliser la version de ligne de commande de cet outil. Pour plus d’informations sur l’outil de ligne de commande, consultez le [l’utilitaire de Configuration WS-AtomicTransaction (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md) rubrique.  
   
- Sachez que le composant logiciel enfichable MMC et l'outil de ligne de commande ne prennent pas en charge la configuration de tous les paramètres WS-AT. Ces paramètres ne peuvent être modifiés qu'en modifiant directement le registre. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Ces paramètres de Registre, consultez [configuration prise en charge de WS-Atomic Transaction](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md).  
+ Sachez que le composant logiciel enfichable MMC et l'outil de ligne de commande ne prennent pas en charge la configuration de tous les paramètres WS-AT. Ces paramètres ne peuvent être modifiés qu'en modifiant directement le registre. Pour plus d’informations sur ces paramètres de Registre, consultez [configuration prise en charge de WS-Atomic Transaction](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md).  
   
 ### <a name="user-interface-description"></a>Description de l'interface utilisateur  
  **Activer la prise en charge du réseau WS-Atomic Transaction**:  
@@ -95,7 +97,7 @@ regasm.exe /codebase WsatUI.dll
 > [!NOTE]
 >  Lorsqu'un autre consommateur de suivi utilise le fournisseur de suivi WS-AT, vous ne pouvez pas créer de nouvelle session de journalisation pour les événements de suivi. Toute tentative de configuration de la journalisation pendant cette période aboutit à l'affichage du message d'erreur suivant : Impossible d'activer le fournisseur. Code d'erreur :1  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]le suivi et la journalisation, consultez [Administration et Diagnostics](../../../docs/framework/wcf/diagnostics/index.md).  
+ Pour plus d’informations sur le suivi et la journalisation, consultez [Administration et Diagnostics](../../../docs/framework/wcf/diagnostics/index.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Configuration de la prise en charge WS-Atomic Transaction](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)  

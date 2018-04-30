@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9626905dbcec6bd40570e4188e9a188fca164144
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: fceb0f2ab7caa2bf3ab34ff957e3ed5f300e557c
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wcf-visual-studio-templates"></a>Modèles Visual Studio WCF
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Modèles Visual Studio sont des modèles de projet et d’élément prédéfinis, vous pouvez utiliser dans Visual Studio pour générer rapidement [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] services et applications s’y rapportant.  
@@ -72,7 +72,7 @@ ms.lasthandoff: 04/27/2018
  Un fichier d'hôte de service (service1.svc) est également créé si le projet existant est un projet Web.  
   
 ### <a name="wcf-wf-service-project-and-item-template"></a>Modèles d'élément et de projet de service WF WCF.  
- Ces modèles créent des services [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] qui hébergent un service de workflow, dont l'accès est identique à celui d'un service Web. Différents modèles existent pour les XAML et les modèles de programmation impératifs. À l'aide des modèles, vous pouvez créer des workflows séquentiels ou des workflows de l'ordinateur d'état. Pour plus d’informations sur ces types de flux de travail, consultez [Windows Workflow Foundation didacticiels](http://msdn.microsoft.com/library/e9705654-bd96-4b56-8d98-f1f118112d97). [!INCLUDE[crabout](../../../includes/crabout-md.md)] créer des projets de flux de travail, consultez [création de projets de Workflow hérité](/visualstudio/workflow-designer/creating-legacy-workflow-projects).  
+ Ces modèles créent des services [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] qui hébergent un service de workflow, dont l'accès est identique à celui d'un service Web. Différents modèles existent pour les XAML et les modèles de programmation impératifs. À l'aide des modèles, vous pouvez créer des workflows séquentiels ou des workflows de l'ordinateur d'état. Pour plus d’informations sur ces types de flux de travail, consultez [Windows Workflow Foundation didacticiels](http://msdn.microsoft.com/library/e9705654-bd96-4b56-8d98-f1f118112d97). Pour plus d’informations sur la création de projets de workflow, consultez [création de projets de Workflow hérité](/visualstudio/workflow-designer/creating-legacy-workflow-projects).  
   
  Concepteur de Visual Studio est plus réactif lorsque type XOML workflows sont utilisés à la place du code basés sur le. Le workflow XOML est le type de workflow par défaut à créer.  
   

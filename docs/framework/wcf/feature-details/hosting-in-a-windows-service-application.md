@@ -1,27 +1,29 @@
 ---
-title: "Hébergement dans une application de service Windows"
-ms.custom: 
+title: Hébergement dans une application de service Windows
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f4199998-27f3-4dd9-aee4-0a4addfa9f24
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d1a39162097c21f20c0dd04f3911442602871436
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c1f0d2336c2682bd525a66c6e5b12ce2d17ad219
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="hosting-in-a-windows-service-application"></a>Hébergement dans une application de service Windows
-Les services Windows (autrefois connus comme services Windows NT) fournissent un modèle de processus particulièrement adapté aux applications qui doivent exister dans un exécutable à durée d’exécution longue et n’affichent aucune forme d’interface utilisateur. La durée de vie de processus d'une application de service Windows est gérée par le gestionnaire de contrôle des services (SCM) qui vous autorise à démarrer, arrêter et suspendre les applications de service Windows. Vous pouvez configurer un processus de service Windows pour démarrer automatiquement au démarrage de l’ordinateur, rendant un environnement d’hébergement approprié pour les applications « always on ». [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Applications de service Windows, consultez [Applications de Service Windows](http://go.microsoft.com/fwlink/?LinkId=89450).  
+Les services Windows (autrefois connus comme services Windows NT) fournissent un modèle de processus particulièrement adapté aux applications qui doivent exister dans un exécutable à durée d’exécution longue et n’affichent aucune forme d’interface utilisateur. La durée de vie de processus d'une application de service Windows est gérée par le gestionnaire de contrôle des services (SCM) qui vous autorise à démarrer, arrêter et suspendre les applications de service Windows. Vous pouvez configurer un processus de service Windows pour démarrer automatiquement au démarrage de l’ordinateur, rendant un environnement d’hébergement approprié pour les applications « always on ». Pour plus d’informations sur les applications de service Windows, consultez [Applications de Service Windows](http://go.microsoft.com/fwlink/?LinkId=89450).  
   
  Les applications qui hébergent des services [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] à durée d'exécution longue partagent de nombreuses caractéristiques avec les services Windows. Notamment, les services [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sont des exécutables du serveur à durée d'exécution longue qui n'interagissent pas directement avec l'utilisateur et, par conséquent, n'implémentent aucune forme d'interface utilisateur. Par conséquent, l'hébergement de services [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dans une application de service Windows est l'une des solutions pour construire des applications [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] à durée d'exécution longue solides.  
   

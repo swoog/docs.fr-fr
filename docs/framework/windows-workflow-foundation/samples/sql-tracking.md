@@ -14,14 +14,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2eeb5cf57e6efac77de4a76fe8131189273d5438
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 4153ed905fc9c5c67ce1743fa76497f76b7398cc
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="sql-tracking"></a>Suivi SQL
-Cet exemple montre comment écrire un participant de suivi SQL personnalisé, qui écrit des enregistrements de suivi dans une base de données SQL. Windows Workflow Foundation (WF) fournit des flux de travail de suivi pour gagner en visibilité dans l’exécution d’une instance de workflow. Le runtime de suivi émet des enregistrements de suivi de workflow lors de l'exécution du workflow. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] flux de travail de suivi, consultez [suivi et traçage de Workflow](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md).  
+Cet exemple montre comment écrire un participant de suivi SQL personnalisé, qui écrit des enregistrements de suivi dans une base de données SQL. Windows Workflow Foundation (WF) fournit des flux de travail de suivi pour gagner en visibilité dans l’exécution d’une instance de workflow. Le runtime de suivi émet des enregistrements de suivi de workflow lors de l'exécution du workflow. Pour plus d’informations sur le suivi de flux de travail, consultez [suivi et traçage de Workflow](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md).  
   
 #### <a name="to-use-this-sample"></a>Pour utiliser cet exemple  
   
@@ -52,7 +52,7 @@ Cet exemple montre comment écrire un participant de suivi SQL personnalisé, qu
   
 10. Dans le client test WCF, double-cliquez sur **GetStockPrice**. Cette opération ouvre le `GetStockPrice` opération qui prend un paramètre, tapez la valeur `Contoso` et cliquez sur **Invoke**.  
   
-11. Les enregistrements de suivi émis sont écrits dans une base de données SQL. Pour afficher les enregistrements de suivi, ouvrez la base de données TrackingSample dans SQL Management Studio et naviguez jusqu'aux tables. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] SQL Server Management Studio, consultez [présentation de SQL Server Management Studio](http://go.microsoft.com/fwlink/?LinkId=165645). SQL Server 2008 Management Studio Express peut être téléchargé [ici](http://go.microsoft.com/fwlink/?LinkId=180520). L'exécution d'une requête Sélection dans les tables affiche les données dans les enregistrements de suivi stockés dans les tables respectives.  
+11. Les enregistrements de suivi émis sont écrits dans une base de données SQL. Pour afficher les enregistrements de suivi, ouvrez la base de données TrackingSample dans SQL Management Studio et naviguez jusqu'aux tables. Pour plus d’informations sur SQL Server Management Studio, consultez [présentation de SQL Server Management Studio](http://go.microsoft.com/fwlink/?LinkId=165645). SQL Server 2008 Management Studio Express peut être téléchargé [ici](http://go.microsoft.com/fwlink/?LinkId=180520). L'exécution d'une requête Sélection dans les tables affiche les données dans les enregistrements de suivi stockés dans les tables respectives.  
   
 #### <a name="to-uninstall-the-sample"></a>Pour désinstaller l'exemple  
   
