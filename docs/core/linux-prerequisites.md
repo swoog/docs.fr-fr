@@ -1,643 +1,396 @@
 ---
-title: "Prérequis pour .NET Core sur Linux"
-description: "Versions Linux et dépendances .NET Core prises en charge pour développer, déployer et exécuter des applications .NET Core sur des ordinateurs Linux."
+title: Prérequis pour .NET Core sur Linux
+description: Versions Linux et dépendances .NET Core prises en charge pour développer, déployer et exécuter des applications .NET Core sur des ordinateurs Linux.
 keywords: .NET, .NET Core, Linux, debian, ubuntu, RHEL, centOS,
 author: jralexander
 ms.author: johalex
-ms.date: 12/06/2017
-ms.topic: article
+ms.date: 04/19/2018
+ms.topic: conceptual
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c33b1241-ab66-4583-9eba-52cf51146f5a
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 913d3869559b10af508e695a06d06021f8f90175
-ms.sourcegitcommit: adcf9bdafeaa6bc243af7bf70b45f3df954f256a
+ms.openlocfilehash: 7ce13af00a43e1ce84f7c8af70155d0c4a5bed4c
+ms.sourcegitcommit: 68b60d38043e50104ccc90c76f8599b1ffe18346
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/20/2018
 ---
-# <a name="prerequisites-for-net-core-on-linux"></a><span data-ttu-id="549c4-104">Prérequis pour .NET Core sur Linux</span><span class="sxs-lookup"><span data-stu-id="549c4-104">Prerequisites for .NET Core on Linux</span></span>
+# <a name="prerequisites-for-net-core-on-linux"></a><span data-ttu-id="1475e-104">Prérequis pour .NET Core sur Linux</span><span class="sxs-lookup"><span data-stu-id="1475e-104">Prerequisites for .NET Core on Linux</span></span>
 
-<span data-ttu-id="549c4-105">Cet article montre les dépendances nécessaires pour développer des applications .NET Core sur Linux.</span><span class="sxs-lookup"><span data-stu-id="549c4-105">This article shows the dependencies needed to develop .NET Core applications on Linux.</span></span> <span data-ttu-id="549c4-106">Les distributions/versions Linux et les dépendances prises en charge ci-après s’appliquent aux deux façons de développer des applications .NET Core sur Linux :</span><span class="sxs-lookup"><span data-stu-id="549c4-106">The supported Linux distributions/versions, and dependencies that follow apply to the two ways of developing .NET Core apps on Linux:</span></span>
+<span data-ttu-id="1475e-105">Cet article montre les dépendances nécessaires pour développer des applications .NET Core sur Linux.</span><span class="sxs-lookup"><span data-stu-id="1475e-105">This article shows the dependencies needed to develop .NET Core applications on Linux.</span></span> <span data-ttu-id="1475e-106">Les distributions/versions Linux et les dépendances prises en charge ci-après s’appliquent aux deux façons de développer des applications .NET Core sur Linux :</span><span class="sxs-lookup"><span data-stu-id="1475e-106">The supported Linux distributions/versions, and dependencies that follow apply to the two ways of developing .NET Core apps on Linux:</span></span>
 
-* [<span data-ttu-id="549c4-107">Ligne de commande avec votre éditeur favori</span><span class="sxs-lookup"><span data-stu-id="549c4-107">Command-line with your favorite editor</span></span>](tutorials/using-with-xplat-cli.md)
-* [<span data-ttu-id="549c4-108">Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="549c4-108">Visual Studio Code</span></span>](https://code.visualstudio.com/)
+* [<span data-ttu-id="1475e-107">Ligne de commande avec votre éditeur favori</span><span class="sxs-lookup"><span data-stu-id="1475e-107">Command-line with your favorite editor</span></span>](tutorials/using-with-xplat-cli.md)
+* [<span data-ttu-id="1475e-108">Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="1475e-108">Visual Studio Code</span></span>](https://code.visualstudio.com/)
 
-## <a name="supported-linux-versions"></a><span data-ttu-id="549c4-109">Versions de Linux prises en charge</span><span class="sxs-lookup"><span data-stu-id="549c4-109">Supported Linux versions</span></span>
+> [!NOTE]
+> <span data-ttu-id="1475e-109">Le kit SDK .NET Core n’est pas nécessaire pour les environnements/serveurs de production.</span><span class="sxs-lookup"><span data-stu-id="1475e-109">The .NET Core SDK package is not required for production servers/environments.</span></span> <span data-ttu-id="1475e-110">Seul le package du Runtime .NET Core est nécessaire pour les applications déployées dans des environnements de production.</span><span class="sxs-lookup"><span data-stu-id="1475e-110">Only the .NET Core runtime package is needed for apps deployed to production environments.</span></span> <span data-ttu-id="1475e-111">Le Runtime .NET Core est déployé avec les applications dans le cadre d’un déploiement autonome, mais il doit être déployé séparément pour des applications déployées qui dépendent du framework.</span><span class="sxs-lookup"><span data-stu-id="1475e-111">The .NET Core runtime is deployed with apps as part of a self-contained deployment, however, it must be deployed for Framework-dependent deployed apps separately.</span></span> <span data-ttu-id="1475e-112">Pour plus d’informations sur les types de déploiements autonomes et dépendants du framework, consultez [Déploiement d’applications .NET Core](./deploying/index.md).</span><span class="sxs-lookup"><span data-stu-id="1475e-112">For more information about framework-dependent and self-contained deployment types, see [.NET Core application deployment](./deploying/index.md).</span></span> <span data-ttu-id="1475e-113">Consultez également [Self-contained Linux applications](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md) pour obtenir des instructions spécifiques.</span><span class="sxs-lookup"><span data-stu-id="1475e-113">Also see [Self-contained Linux applications](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md) for specific guidelines.</span></span>
 
-# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="549c4-110">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="549c4-110">.NET Core 2.x</span></span>](#tab/netcore2x)
+## <a name="supported-linux-versions"></a><span data-ttu-id="1475e-114">Versions de Linux prises en charge</span><span class="sxs-lookup"><span data-stu-id="1475e-114">Supported Linux versions</span></span>
 
-<span data-ttu-id="549c4-111">.NET Core 2.0 traite Linux comme un seul système d’exploitation.</span><span class="sxs-lookup"><span data-stu-id="549c4-111">.NET Core 2.0 treats Linux as a single operating system.</span></span> <span data-ttu-id="549c4-112">Il existe une seule version Linux (par architecture de puce) pour les distributions Linux prises en charge.</span><span class="sxs-lookup"><span data-stu-id="549c4-112">There is a single Linux build (per chip architecture) for supported Linux distros.</span></span>
+# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="1475e-115">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="1475e-115">.NET Core 2.x</span></span>](#tab/netcore2x)
 
-<span data-ttu-id="549c4-113">NET Core 2.x est pris en charge sur les distributions/versions Linux 64 bits suivantes (`x86_64` ou `amd64`) :</span><span class="sxs-lookup"><span data-stu-id="549c4-113">NET Core 2.x is supported on the following Linux 64-bit (`x86_64` or `amd64`) distributions/versions:</span></span>
+<span data-ttu-id="1475e-116">.NET Core 2.x traite Linux comme un seul système d’exploitation.</span><span class="sxs-lookup"><span data-stu-id="1475e-116">.NET Core 2.x treats Linux as a single operating system.</span></span> <span data-ttu-id="1475e-117">Il existe une seule version Linux (par architecture de puce) pour les distributions Linux prises en charge.</span><span class="sxs-lookup"><span data-stu-id="1475e-117">There is a single Linux build (per chip architecture) for supported Linux distributions.</span></span>
 
- * <span data-ttu-id="549c4-114">Red Hat Enterprise Linux 7</span><span class="sxs-lookup"><span data-stu-id="549c4-114">Red Hat Enterprise Linux 7</span></span>
- * <span data-ttu-id="549c4-115">CentOS 7</span><span class="sxs-lookup"><span data-stu-id="549c4-115">CentOS 7</span></span>
- * <span data-ttu-id="549c4-116">Oracle Linux 7</span><span class="sxs-lookup"><span data-stu-id="549c4-116">Oracle Linux 7</span></span>
- * <span data-ttu-id="549c4-117">Fedora 25, Fedora 26</span><span class="sxs-lookup"><span data-stu-id="549c4-117">Fedora 25, Fedora 26</span></span>
- * <span data-ttu-id="549c4-118">Debian 8.7 ou versions ultérieures</span><span class="sxs-lookup"><span data-stu-id="549c4-118">Debian 8.7 or later versions</span></span> 
- * <span data-ttu-id="549c4-119">Ubuntu 17.04, Ubuntu 16.04, Ubuntu 14.04</span><span class="sxs-lookup"><span data-stu-id="549c4-119">Ubuntu 17.04, Ubuntu 16.04, Ubuntu 14.04</span></span>
- * <span data-ttu-id="549c4-120">Linux Mint 18, Linux Mint 17</span><span class="sxs-lookup"><span data-stu-id="549c4-120">Linux Mint 18, Linux Mint 17</span></span>
- * <span data-ttu-id="549c4-121">openSUSE 42.2 ou versions ultérieures</span><span class="sxs-lookup"><span data-stu-id="549c4-121">openSUSE 42.2 or later versions</span></span>
- * <span data-ttu-id="549c4-122">SUSE Enterprise Linux (SLES) 12 SP2 ou versions ultérieures</span><span class="sxs-lookup"><span data-stu-id="549c4-122">SUSE Enterprise Linux (SLES) 12 SP2 or later versions</span></span>
+<span data-ttu-id="1475e-118">NET Core 2.x est pris en charge sur les distributions/versions Linux 64 bits suivantes (`x86_64` ou `amd64`) :</span><span class="sxs-lookup"><span data-stu-id="1475e-118">NET Core 2.x is supported on the following Linux 64-bit (`x86_64` or `amd64`) distributions/versions:</span></span>
 
-<span data-ttu-id="549c4-123">Consultez [.NET Core 2.x - Versions des systèmes d’exploitation prises en charge](https://github.com/dotnet/core/blob/master/release-notes/2.0/2.0-supported-os.md) pour obtenir la liste complète des systèmes d’exploitation pris en charge par .NET Core 2.x, les systèmes d’exploitation non pris en charge et des liens sur la politique concernant le cycle de vie.</span><span class="sxs-lookup"><span data-stu-id="549c4-123">See [.NET Core 2.x Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/2.0/2.0-supported-os.md) for the complete list of .NET Core 2.x supported operating systems, out of support OS versions, and lifecycle policy links.</span></span>
+* <span data-ttu-id="1475e-119">Red Hat Enterprise Linux 7</span><span class="sxs-lookup"><span data-stu-id="1475e-119">Red Hat Enterprise Linux 7</span></span>
+* <span data-ttu-id="1475e-120">CentOS 7</span><span class="sxs-lookup"><span data-stu-id="1475e-120">CentOS 7</span></span>
+* <span data-ttu-id="1475e-121">Oracle Linux 7</span><span class="sxs-lookup"><span data-stu-id="1475e-121">Oracle Linux 7</span></span>
+* <span data-ttu-id="1475e-122">Fedora 27, 26</span><span class="sxs-lookup"><span data-stu-id="1475e-122">Fedora 27, 26</span></span>
+* <span data-ttu-id="1475e-123">Debian 9, 8.7 ou versions ultérieures</span><span class="sxs-lookup"><span data-stu-id="1475e-123">Debian 9, 8.7 or later versions</span></span>
+* <span data-ttu-id="1475e-124">Ubuntu 17.10, 16.04, 14.04</span><span class="sxs-lookup"><span data-stu-id="1475e-124">Ubuntu 17.10, 16.04, 14.04</span></span>
+* <span data-ttu-id="1475e-125">Linux Mint 18, 17</span><span class="sxs-lookup"><span data-stu-id="1475e-125">Linux Mint 18, 17</span></span>
+* <span data-ttu-id="1475e-126">openSUSE 42.3 ou versions ultérieures</span><span class="sxs-lookup"><span data-stu-id="1475e-126">openSUSE 42.3 or later versions</span></span>
+* <span data-ttu-id="1475e-127">SUSE Enterprise Linux (SLES) 12 Service Pack 2 ou ultérieur</span><span class="sxs-lookup"><span data-stu-id="1475e-127">SUSE Enterprise Linux (SLES) 12 Service Pack 2 or later</span></span>
 
-# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="549c4-124">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="549c4-124">.NET Core 1.x</span></span>](#tab/netcore1x)
+<span data-ttu-id="1475e-128">Consultez [.NET Core 2.x - Versions des systèmes d’exploitation prises en charge](https://github.com/dotnet/core/blob/master/release-notes/2.0/2.0-supported-os.md) pour obtenir la liste complète des systèmes d’exploitation, distributions et versions pris en charge par .NET Core 2.x, les systèmes d’exploitation non pris en charge et des liens sur la politique concernant le cycle de vie.</span><span class="sxs-lookup"><span data-stu-id="1475e-128">See [.NET Core 2.x Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/2.0/2.0-supported-os.md) for the complete list of .NET Core 2.x supported operating systems, distributions and versions, out of support OS versions, and lifecycle policy links.</span></span>
 
-<span data-ttu-id="549c4-125">.NET Core 1.x est pris en charge sur les distributions/versions Linux 64 bits suivantes (`x86_64` ou `amd64`) :</span><span class="sxs-lookup"><span data-stu-id="549c4-125">.NET Core 1.x is supported on the following Linux 64-bit (`x86_64` or `amd64`) distributions/versions:</span></span>
+# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="1475e-129">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="1475e-129">.NET Core 1.x</span></span>](#tab/netcore1x)
 
-* <span data-ttu-id="549c4-126">Red Hat Enterprise Linux 7</span><span class="sxs-lookup"><span data-stu-id="549c4-126">Red Hat Enterprise Linux 7</span></span>
-* <span data-ttu-id="549c4-127">CentOS 7</span><span class="sxs-lookup"><span data-stu-id="549c4-127">CentOS 7</span></span>
-* <span data-ttu-id="549c4-128">Oracle Linux 7</span><span class="sxs-lookup"><span data-stu-id="549c4-128">Oracle Linux 7</span></span>
-* <span data-ttu-id="549c4-129">Fedora 24</span><span class="sxs-lookup"><span data-stu-id="549c4-129">Fedora 24</span></span>
-* <span data-ttu-id="549c4-130">Debian 8.2 ou versions ultérieures</span><span class="sxs-lookup"><span data-stu-id="549c4-130">Debian 8.2 or later versions</span></span>
-* <span data-ttu-id="549c4-131">Ubuntu 14.04, Ubuntu 16.04, Ubuntu 16.10\*</span><span class="sxs-lookup"><span data-stu-id="549c4-131">Ubuntu 14.04, Ubuntu 16.04, Ubuntu 16.10\*</span></span>
- * <span data-ttu-id="549c4-132">Ubuntu 16.10 est pris en charge par la dernière version de correctif logiciel de .NET Core 1.1</span><span class="sxs-lookup"><span data-stu-id="549c4-132">Ubuntu 16.10 is supported by the latest patch release of .NET Core 1.1</span></span>
-* <span data-ttu-id="549c4-133">Linux Mint 17</span><span class="sxs-lookup"><span data-stu-id="549c4-133">Linux Mint 17</span></span>
-* <span data-ttu-id="549c4-134">openSUSE 42.1 ou versions ultérieures (.NET Core 1.1)</span><span class="sxs-lookup"><span data-stu-id="549c4-134">openSUSE 42.1 or later versions (.NET Core 1.1)</span></span>
+<span data-ttu-id="1475e-130">.NET Core 1.x est pris en charge sur les distributions/versions Linux 64 bits suivantes (`x86_64` ou `amd64`) :</span><span class="sxs-lookup"><span data-stu-id="1475e-130">.NET Core 1.x is supported on the following Linux 64-bit (`x86_64` or `amd64`) distributions/versions:</span></span>
 
-<span data-ttu-id="549c4-135">Consultez [.NET Core 1.x - Versions des systèmes d’exploitation prises en charge](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md) pour obtenir la liste complète des systèmes d’exploitation pris en charge par .NET Core 1.x, les systèmes d’exploitation non pris en charge et des liens sur la politique concernant le cycle de vie.</span><span class="sxs-lookup"><span data-stu-id="549c4-135">See [.NET Core 1.x Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md) for the complete list of .NET Core 1.x supported operating systems, out of support OS versions, and lifecycle policy links.</span></span>
+* <span data-ttu-id="1475e-131">Red Hat Enterprise Linux 7</span><span class="sxs-lookup"><span data-stu-id="1475e-131">Red Hat Enterprise Linux 7</span></span>
+* <span data-ttu-id="1475e-132">CentOS 7</span><span class="sxs-lookup"><span data-stu-id="1475e-132">CentOS 7</span></span>
+* <span data-ttu-id="1475e-133">Oracle Linux 7</span><span class="sxs-lookup"><span data-stu-id="1475e-133">Oracle Linux 7</span></span>
+* <span data-ttu-id="1475e-134">Fedora 26</span><span class="sxs-lookup"><span data-stu-id="1475e-134">Fedora 26</span></span>
+* <span data-ttu-id="1475e-135">Debian 8.2 ou versions ultérieures</span><span class="sxs-lookup"><span data-stu-id="1475e-135">Debian 8.2 or later versions</span></span>
+* <span data-ttu-id="1475e-136">Ubuntu 16.04, 14.04</span><span class="sxs-lookup"><span data-stu-id="1475e-136">Ubuntu 16.04, 14.04</span></span>
+* <span data-ttu-id="1475e-137">Linux Mint 18, 17</span><span class="sxs-lookup"><span data-stu-id="1475e-137">Linux Mint 18, 17</span></span>
+* <span data-ttu-id="1475e-138">openSUSE 42.3 ou versions ultérieures (.NET Core 1.1)</span><span class="sxs-lookup"><span data-stu-id="1475e-138">openSUSE 42.3 or later versions (.NET Core 1.1)</span></span>
+
+<span data-ttu-id="1475e-139">Consultez [.NET Core 1.x - Versions des systèmes d’exploitation prises en charge](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md) pour obtenir la liste complète des systèmes d’exploitation pris en charge par .NET Core 1.x, les systèmes d’exploitation non pris en charge et des liens sur la politique concernant le cycle de vie.</span><span class="sxs-lookup"><span data-stu-id="1475e-139">See [.NET Core 1.x Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md) for the complete list of .NET Core 1.x supported operating systems, out of support OS versions, and lifecycle policy links.</span></span>
 
 ---
 
-## <a name="linux-distribution-dependencies"></a><span data-ttu-id="549c4-136">Dépendances des distributions Linux</span><span class="sxs-lookup"><span data-stu-id="549c4-136">Linux distribution dependencies</span></span>
+## <a name="linux-distribution-dependencies"></a><span data-ttu-id="1475e-140">Dépendances des distributions Linux</span><span class="sxs-lookup"><span data-stu-id="1475e-140">Linux distribution dependencies</span></span>
 
-<span data-ttu-id="549c4-137">Les éléments suivants sont destinés à être des exemples.</span><span class="sxs-lookup"><span data-stu-id="549c4-137">The following are intended to be examples.</span></span> <span data-ttu-id="549c4-138">Les versions et les noms exacts peuvent varier légèrement sur la distribution Linux que vous choisissez.</span><span class="sxs-lookup"><span data-stu-id="549c4-138">The exact versions and names may vary slightly on your Linux distribution of choice.</span></span>
+<span data-ttu-id="1475e-141">Les éléments suivants sont destinés à être des exemples.</span><span class="sxs-lookup"><span data-stu-id="1475e-141">The following are intended to be examples.</span></span> <span data-ttu-id="1475e-142">Les versions et les noms exacts peuvent varier légèrement sur la distribution Linux que vous choisissez.</span><span class="sxs-lookup"><span data-stu-id="1475e-142">The exact versions and names may vary slightly on your Linux distribution of choice.</span></span>
 
-### <a name="ubuntu"></a><span data-ttu-id="549c4-139">Ubuntu</span><span class="sxs-lookup"><span data-stu-id="549c4-139">Ubuntu</span></span>
+### <a name="ubuntu"></a><span data-ttu-id="1475e-143">Ubuntu</span><span class="sxs-lookup"><span data-stu-id="1475e-143">Ubuntu</span></span>
 
-<span data-ttu-id="549c4-140">Les distributions Ubuntu nécessitent l’installation des bibliothèques suivantes :</span><span class="sxs-lookup"><span data-stu-id="549c4-140">Ubuntu distributions require the following libraries installed:</span></span>
+<span data-ttu-id="1475e-144">Les distributions Ubuntu nécessitent l’installation des bibliothèques suivantes :</span><span class="sxs-lookup"><span data-stu-id="1475e-144">Ubuntu distributions require the following libraries installed:</span></span>
 
-* <span data-ttu-id="549c4-141">libunwind8</span><span class="sxs-lookup"><span data-stu-id="549c4-141">libunwind8</span></span>
-* <span data-ttu-id="549c4-142">liblttng-ust0</span><span class="sxs-lookup"><span data-stu-id="549c4-142">liblttng-ust0</span></span>
-* <span data-ttu-id="549c4-143">libcurl3</span><span class="sxs-lookup"><span data-stu-id="549c4-143">libcurl3</span></span>
-* <span data-ttu-id="549c4-144">libssl1.0.0</span><span class="sxs-lookup"><span data-stu-id="549c4-144">libssl1.0.0</span></span>
-* <span data-ttu-id="549c4-145">libuuid1</span><span class="sxs-lookup"><span data-stu-id="549c4-145">libuuid1</span></span>
-* <span data-ttu-id="549c4-146">libkrb5-3</span><span class="sxs-lookup"><span data-stu-id="549c4-146">libkrb5-3</span></span>
-* <span data-ttu-id="549c4-147">zlib1g</span><span class="sxs-lookup"><span data-stu-id="549c4-147">zlib1g</span></span>
-* <span data-ttu-id="549c4-148">libicu52 (pour 14.X)</span><span class="sxs-lookup"><span data-stu-id="549c4-148">libicu52 (for 14.X)</span></span>
-* <span data-ttu-id="549c4-149">libicu55 (pour 16.X)</span><span class="sxs-lookup"><span data-stu-id="549c4-149">libicu55 (for 16.X)</span></span>
-* <span data-ttu-id="549c4-150">libicu57 (pour 17.X)</span><span class="sxs-lookup"><span data-stu-id="549c4-150">libicu57 (for 17.X)</span></span>
+* <span data-ttu-id="1475e-145">libunwind8</span><span class="sxs-lookup"><span data-stu-id="1475e-145">libunwind8</span></span>
+* <span data-ttu-id="1475e-146">liblttng-ust0</span><span class="sxs-lookup"><span data-stu-id="1475e-146">liblttng-ust0</span></span>
+* <span data-ttu-id="1475e-147">libcurl3</span><span class="sxs-lookup"><span data-stu-id="1475e-147">libcurl3</span></span>
+* <span data-ttu-id="1475e-148">libssl1.0.0</span><span class="sxs-lookup"><span data-stu-id="1475e-148">libssl1.0.0</span></span>
+* <span data-ttu-id="1475e-149">libuuid1</span><span class="sxs-lookup"><span data-stu-id="1475e-149">libuuid1</span></span>
+* <span data-ttu-id="1475e-150">libkrb5-3</span><span class="sxs-lookup"><span data-stu-id="1475e-150">libkrb5-3</span></span>
+* <span data-ttu-id="1475e-151">zlib1g</span><span class="sxs-lookup"><span data-stu-id="1475e-151">zlib1g</span></span>
+* <span data-ttu-id="1475e-152">libicu52 (pour 14.x)</span><span class="sxs-lookup"><span data-stu-id="1475e-152">libicu52 (for 14.x)</span></span>
+* <span data-ttu-id="1475e-153">libicu55 (pour 16.x)</span><span class="sxs-lookup"><span data-stu-id="1475e-153">libicu55 (for 16.x)</span></span>
+* <span data-ttu-id="1475e-154">libicu57 (pour 17.x)</span><span class="sxs-lookup"><span data-stu-id="1475e-154">libicu57 (for 17.x)</span></span>
 
-### <a name="centos"></a><span data-ttu-id="549c4-151">CentOS</span><span class="sxs-lookup"><span data-stu-id="549c4-151">CentOS</span></span>
+### <a name="centos"></a><span data-ttu-id="1475e-155">CentOS</span><span class="sxs-lookup"><span data-stu-id="1475e-155">CentOS</span></span>
 
-<span data-ttu-id="549c4-152">Les distributions CentOS nécessitent l’installation des bibliothèques suivantes :</span><span class="sxs-lookup"><span data-stu-id="549c4-152">CentOS distributions require the following libraries installed:</span></span>
+<span data-ttu-id="1475e-156">Les distributions CentOS nécessitent l’installation des bibliothèques suivantes :</span><span class="sxs-lookup"><span data-stu-id="1475e-156">CentOS distributions require the following libraries installed:</span></span>
 
-* <span data-ttu-id="549c4-153">libunwind</span><span class="sxs-lookup"><span data-stu-id="549c4-153">libunwind</span></span>
-* <span data-ttu-id="549c4-154">lttng-ust</span><span class="sxs-lookup"><span data-stu-id="549c4-154">lttng-ust</span></span>
-* <span data-ttu-id="549c4-155">libcurl</span><span class="sxs-lookup"><span data-stu-id="549c4-155">libcurl</span></span>
-* <span data-ttu-id="549c4-156">openssl-libs</span><span class="sxs-lookup"><span data-stu-id="549c4-156">openssl-libs</span></span>
-* <span data-ttu-id="549c4-157">libuuid</span><span class="sxs-lookup"><span data-stu-id="549c4-157">libuuid</span></span>
-* <span data-ttu-id="549c4-158">krb5-libs</span><span class="sxs-lookup"><span data-stu-id="549c4-158">krb5-libs</span></span>
-* <span data-ttu-id="549c4-159">libicu</span><span class="sxs-lookup"><span data-stu-id="549c4-159">libicu</span></span>
-* <span data-ttu-id="549c4-160">zlib</span><span class="sxs-lookup"><span data-stu-id="549c4-160">zlib</span></span>
+* <span data-ttu-id="1475e-157">libunwind</span><span class="sxs-lookup"><span data-stu-id="1475e-157">libunwind</span></span>
+* <span data-ttu-id="1475e-158">lttng-ust</span><span class="sxs-lookup"><span data-stu-id="1475e-158">lttng-ust</span></span>
+* <span data-ttu-id="1475e-159">libcurl</span><span class="sxs-lookup"><span data-stu-id="1475e-159">libcurl</span></span>
+* <span data-ttu-id="1475e-160">openssl-libs</span><span class="sxs-lookup"><span data-stu-id="1475e-160">openssl-libs</span></span>
+* <span data-ttu-id="1475e-161">libuuid</span><span class="sxs-lookup"><span data-stu-id="1475e-161">libuuid</span></span>
+* <span data-ttu-id="1475e-162">krb5-libs</span><span class="sxs-lookup"><span data-stu-id="1475e-162">krb5-libs</span></span>
+* <span data-ttu-id="1475e-163">libicu</span><span class="sxs-lookup"><span data-stu-id="1475e-163">libicu</span></span>
+* <span data-ttu-id="1475e-164">zlib</span><span class="sxs-lookup"><span data-stu-id="1475e-164">zlib</span></span>
 
-<span data-ttu-id="549c4-161">Pour plus d’informations sur les dépendances, consultez [Applications Linux autonomes](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md) (en anglais).</span><span class="sxs-lookup"><span data-stu-id="549c4-161">For more information about the dependencies, see [Self-contained Linux applications](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md).</span></span>
+<span data-ttu-id="1475e-165">Pour plus d’informations sur les dépendances, consultez [Applications Linux autonomes](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md) (en anglais).</span><span class="sxs-lookup"><span data-stu-id="1475e-165">For more information about the dependencies, see [Self-contained Linux applications](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md).</span></span>
 
-## <a name="installing-net-core-dependencies-with-the-native-installers"></a><span data-ttu-id="549c4-162">Installation des dépendances .NET Core avec les programmes d’installation natifs</span><span class="sxs-lookup"><span data-stu-id="549c4-162">Installing .NET Core dependencies with the native installers</span></span>
+## <a name="installing-net-core-dependencies-with-the-native-installers"></a><span data-ttu-id="1475e-166">Installation des dépendances .NET Core avec les programmes d’installation natifs</span><span class="sxs-lookup"><span data-stu-id="1475e-166">Installing .NET Core dependencies with the native installers</span></span>
 
-<span data-ttu-id="549c4-163">Les programmes d’installation natifs .NET Core sont disponibles pour les distributions/versions Linux prises en charge.</span><span class="sxs-lookup"><span data-stu-id="549c4-163">.NET Core native installers are available for supported Linux distributions/versions.</span></span> <span data-ttu-id="549c4-164">Les programmes d’installation natifs requièrent un accès administrateur (sudo) au serveur.</span><span class="sxs-lookup"><span data-stu-id="549c4-164">The native installers require admin (sudo) access to the server.</span></span> <span data-ttu-id="549c4-165">L’avantage d’utiliser un programme d’installation natif est que toutes les dépendances natives .NET Core sont installées.</span><span class="sxs-lookup"><span data-stu-id="549c4-165">The advantage of using a native installer is that all of the .NET Core native dependencies are installed.</span></span> <span data-ttu-id="549c4-166">En outre, les programmes d’installation natifs installent le SDK .NET Core à l’échelle du système.</span><span class="sxs-lookup"><span data-stu-id="549c4-166">Native installers also install the .NET Core SDK system-wide.</span></span>
+<span data-ttu-id="1475e-167">Les programmes d’installation natifs .NET Core sont disponibles pour les distributions/versions Linux prises en charge.</span><span class="sxs-lookup"><span data-stu-id="1475e-167">.NET Core native installers are available for supported Linux distributions/versions.</span></span> <span data-ttu-id="1475e-168">Les programmes d’installation natifs requièrent un accès administrateur (sudo) au serveur.</span><span class="sxs-lookup"><span data-stu-id="1475e-168">The native installers require admin (sudo) access to the server.</span></span> <span data-ttu-id="1475e-169">L’avantage d’utiliser un programme d’installation natif est que toutes les dépendances natives .NET Core sont installées.</span><span class="sxs-lookup"><span data-stu-id="1475e-169">The advantage of using a native installer is that all of the .NET Core native dependencies are installed.</span></span> <span data-ttu-id="1475e-170">En outre, les programmes d’installation natifs installent le SDK .NET Core à l’échelle du système.</span><span class="sxs-lookup"><span data-stu-id="1475e-170">Native installers also install the .NET Core SDK system-wide.</span></span>
 
-<span data-ttu-id="549c4-167">Sur Linux, il existe deux choix pour le package de programme d’installation :</span><span class="sxs-lookup"><span data-stu-id="549c4-167">On Linux, there are two installer package choices:</span></span>
+<span data-ttu-id="1475e-171">Sur Linux, il existe deux choix pour le package de programme d’installation :</span><span class="sxs-lookup"><span data-stu-id="1475e-171">On Linux, there are two installer package choices:</span></span>
 
-* <span data-ttu-id="549c4-168">Utilisation d’un gestionnaire de package basé sur le flux, tel qu’apt-get pour Ubuntu, ou yum pour CentOS/RHEL.</span><span class="sxs-lookup"><span data-stu-id="549c4-168">Using a feed-based package manager, such as apt-get for Ubuntu, or yum for CentOS/RHEL.</span></span>
-* <span data-ttu-id="549c4-169">Utilisation des packages eux-mêmes, DEB ou RPM</span><span class="sxs-lookup"><span data-stu-id="549c4-169">Using the packages themselves, DEB or RPM.</span></span>
+* <span data-ttu-id="1475e-172">Utilisation d’un gestionnaire de package basé sur le flux, tel qu’apt-get pour Ubuntu, ou yum pour CentOS/RHEL.</span><span class="sxs-lookup"><span data-stu-id="1475e-172">Using a feed-based package manager, such as apt-get for Ubuntu, or yum for CentOS/RHEL.</span></span>
+* <span data-ttu-id="1475e-173">Utilisation des packages eux-mêmes, DEB ou RPM</span><span class="sxs-lookup"><span data-stu-id="1475e-173">Using the packages themselves, DEB or RPM.</span></span>
 
-### <a name="scripting-installs-with-the-net-core-installer-script"></a><span data-ttu-id="549c4-170">Script d’installation avec le script de programme d’installation de .NET Core</span><span class="sxs-lookup"><span data-stu-id="549c4-170">Scripting Installs with the .NET Core installer script</span></span>
+### <a name="scripting-installs-with-the-net-core-installer-script"></a><span data-ttu-id="1475e-174">Script d’installation avec le script de programme d’installation de .NET Core</span><span class="sxs-lookup"><span data-stu-id="1475e-174">Scripting Installs with the .NET Core installer script</span></span>
 
-<span data-ttu-id="549c4-171">Les scripts `dotnet-install` sont utilisés pour effectuer une installation non administrateur de la chaîne d’outils CLI et du runtime partagé.</span><span class="sxs-lookup"><span data-stu-id="549c4-171">The `dotnet-install` scripts are used to perform a non-admin install of the CLI toolchain and the shared runtime.</span></span> <span data-ttu-id="549c4-172">Vous pouvez télécharger le script à partir de : https://dot.net/v1/dotnet-install.sh</span><span class="sxs-lookup"><span data-stu-id="549c4-172">You can download the script from: https://dot.net/v1/dotnet-install.sh</span></span>
+<span data-ttu-id="1475e-175">Les [scripts dotnet-install](./tools/dotnet-install-script.md) sont utilisés pour effectuer une installation non administrateur de la chaîne d’outils CLI et du runtime partagé.</span><span class="sxs-lookup"><span data-stu-id="1475e-175">The [dotnet-install scripts](./tools/dotnet-install-script.md) are used to perform a non-admin install of the CLI toolchain and the shared runtime.</span></span> <span data-ttu-id="1475e-176">Vous pouvez télécharger le script à partir de [https://dot.net/v1/dotnet-install.sh](https://dot.net/v1/dotnet-install.sh).</span><span class="sxs-lookup"><span data-stu-id="1475e-176">You can download the script from [https://dot.net/v1/dotnet-install.sh](https://dot.net/v1/dotnet-install.sh).</span></span>
 
-<span data-ttu-id="549c4-173">Le script bash du programme d’installation est utilisé dans les scénarios d’automatisation et dans les installations non administratives.</span><span class="sxs-lookup"><span data-stu-id="549c4-173">The installer bash script is used in automation scenarios and non-admin installations.</span></span> <span data-ttu-id="549c4-174">Comme ce script lit également les commutateurs PowerShell, ces derniers peuvent être utilisés avec le script sur les systèmes Linux/OS X.</span><span class="sxs-lookup"><span data-stu-id="549c4-174">This script also reads PowerShell switches, so they can be used with the script on Linux/OS X systems.</span></span>
+<span data-ttu-id="1475e-177">Le script bash du programme d’installation est utilisé dans les scénarios d’automatisation et dans les installations non administratives.</span><span class="sxs-lookup"><span data-stu-id="1475e-177">The installer bash script is used in automation scenarios and non-admin installations.</span></span> <span data-ttu-id="1475e-178">Comme ce script lit également les commutateurs PowerShell, ces derniers peuvent être utilisés avec le script sur les systèmes Linux/OS X.</span><span class="sxs-lookup"><span data-stu-id="1475e-178">This script also reads PowerShell switches, so they can be used with the script on Linux/OS X systems.</span></span>
+
+## <a name="install-net-core-for-supported-red-hat-enterprise-linux-rhel-versions"></a><span data-ttu-id="1475e-179">Installer .NET Core pour les versions prises en charge de Red Hat Enterprise Linux (RHEL)</span><span class="sxs-lookup"><span data-stu-id="1475e-179">Install .NET Core for supported Red Hat Enterprise Linux (RHEL) versions</span></span>
+
+<span data-ttu-id="1475e-180">Pour installer .NET Core sur des versions de RHEL prises en charge :</span><span class="sxs-lookup"><span data-stu-id="1475e-180">To install .NET Core on supported RHEL versions:</span></span>
+
+# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="1475e-181">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="1475e-181">.NET Core 2.x</span></span>](#tab/netcore2x)
+
+<span data-ttu-id="1475e-182">Pour être sûr d’avoir les dernières informations d’installation, consultez les [instructions d’installation du Runtime et du SDK .NET Core 2.x](https://www.microsoft.com/net/download/linux-package-manager/rhel/sdk-current) pour les versions de RHEL prises en charge.</span><span class="sxs-lookup"><span data-stu-id="1475e-182">To ensure you have the latest installation information, follow the [.NET Core 2.x SDK and Runtime Installer instructions](https://www.microsoft.com/net/download/linux-package-manager/rhel/sdk-current) for supported RHEL versions.</span></span>
+
+# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="1475e-183">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="1475e-183">.NET Core 1.x</span></span>](#tab/netcore1x)
+
+<span data-ttu-id="1475e-184">**.NET Core 1.1**</span><span class="sxs-lookup"><span data-stu-id="1475e-184">**.NET Core 1.1**</span></span>
+
+1. <span data-ttu-id="1475e-185">Supprimez du système toute **version antérieure** de .NET Core.</span><span class="sxs-lookup"><span data-stu-id="1475e-185">Remove any **previous preview** versions of .NET Core from your system.</span></span>
+
+2.  <span data-ttu-id="1475e-186">Pour obtenir les dernières informations sur l’installation de .NET Core 1.1 sur Red Hat Enterprise Linux, consultez le [Guide de démarrage rapide de .NET Core 1.1](https://access.redhat.com/documentation/en-us/net_core/1.1/html/getting_started_guide/)</span><span class="sxs-lookup"><span data-stu-id="1475e-186">For the latest .NET Core 1.1 on Red Hat Enterprise Linux installation information, see [the .NET Core 1.1 Getting Started Guide](https://access.redhat.com/documentation/en-us/net_core/1.1/html/getting_started_guide/)</span></span>
+     
+<span data-ttu-id="1475e-187">**.NET Core 1.0**</span><span class="sxs-lookup"><span data-stu-id="1475e-187">**.NET Core 1.0**</span></span>
+
+1. <span data-ttu-id="1475e-188">Supprimez du système toute **version antérieure** de .NET Core.</span><span class="sxs-lookup"><span data-stu-id="1475e-188">Remove any **previous preview** versions of .NET Core from your system.</span></span>
+
+2.  <span data-ttu-id="1475e-189">Pour obtenir les dernières informations sur l’installation de .NET Core 1.0 sur Red Hat Enterprise Linux, consultez le [Guide de démarrage rapide de .NET Core 1.0](https://access.redhat.com/documentation/en-us/net_core/1.0/html/getting_started_guide/)</span><span class="sxs-lookup"><span data-stu-id="1475e-189">For the latest .NET Core 1.0 on Red Hat Enterprise Linux installation information, see [the .NET Core 1.0 Getting Started Guide](https://access.redhat.com/documentation/en-us/net_core/1.0/html/getting_started_guide/)</span></span>
+
+<span data-ttu-id="1475e-190">Pour obtenir de l’aide sur l’inscription à l’accès au canal Red Hat .NET, consultez le [chapitre 1 du guide de prise en main de .NET Core 1.1](https://access.redhat.com/documentation/en/net-core/1.1/paged/getting-started-guide/) sur Red Hat.</span><span class="sxs-lookup"><span data-stu-id="1475e-190">For Red Hat .NET channel access registration help, see [Chapter 1 of the .NET Core 1.1 Getting Started Guide](https://access.redhat.com/documentation/en/net-core/1.1/paged/getting-started-guide/) at Red Hat.</span></span>
+
+---
+
+## <a name="install-net-core-for-supported-ubuntu-and-linux-mint-distributionsversions-64-bit"></a><span data-ttu-id="1475e-191">Installer .NET Core pour les versions/distributions (64 bits) prises en charge d’Ubuntu et de Linux Mint</span><span class="sxs-lookup"><span data-stu-id="1475e-191">Install .NET Core for supported Ubuntu and Linux Mint distributions/versions (64 bit)</span></span>
+
+# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="1475e-192">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="1475e-192">.NET Core 2.x</span></span>](#tab/netcore2x)
+
+1. <span data-ttu-id="1475e-193">Supprimez du système toute **version antérieure** de .NET Core.</span><span class="sxs-lookup"><span data-stu-id="1475e-193">Remove any **previous preview** versions of .NET Core from your system.</span></span>
+
+2. <span data-ttu-id="1475e-194">Installer .NET Core 2.x sur des versions/distributions (64 bits) prises en charge d’Ubuntu et de Linux Mint :</span><span class="sxs-lookup"><span data-stu-id="1475e-194">Install .NET Core 2.x on supported Ubuntu and Linux Mint distributions/versions (64 bit):</span></span>
+
+<span data-ttu-id="1475e-195">**.NET Core 2.0**</span><span class="sxs-lookup"><span data-stu-id="1475e-195">**.NET Core 2.0**</span></span>
+
+|<span data-ttu-id="1475e-196">Runtimes / SDK</span><span class="sxs-lookup"><span data-stu-id="1475e-196">Runtimes / SDKs</span></span>          |<span data-ttu-id="1475e-197">Ubuntu 17.10</span><span class="sxs-lookup"><span data-stu-id="1475e-197">Ubuntu 17.10</span></span>  |<span data-ttu-id="1475e-198">Ubuntu 16.04 / Linux Mint 18</span><span class="sxs-lookup"><span data-stu-id="1475e-198">Ubuntu 16.04 / Linux Mint 18</span></span>|<span data-ttu-id="1475e-199">Ubuntu 14.04 / Linux Mint 17</span><span class="sxs-lookup"><span data-stu-id="1475e-199">Ubuntu 14.04 / Linux Mint 17</span></span>|
+|-------------------------|--------------|----------------------------|----------------------------|
+|<span data-ttu-id="1475e-200">Runtime .NET Core 2.0.6</span><span class="sxs-lookup"><span data-stu-id="1475e-200">.NET Core Runtime 2.0.6</span></span>  |[<span data-ttu-id="1475e-201">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-201">Install link</span></span>](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.0.6)|[<span data-ttu-id="1475e-202">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-202">Install link</span></span>](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.0.6)          |[<span data-ttu-id="1475e-203">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-203">Install link</span></span>](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.0.6)            |
+|<span data-ttu-id="1475e-204">Runtime .NET Core 2.0.5</span><span class="sxs-lookup"><span data-stu-id="1475e-204">.NET Core Runtime 2.0.5</span></span>  |[<span data-ttu-id="1475e-205">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-205">Install link</span></span>](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.0.5)|[<span data-ttu-id="1475e-206">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-206">Install link</span></span>](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.0.5)          |[<span data-ttu-id="1475e-207">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-207">Install link</span></span>](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.0.5)            |
+|<span data-ttu-id="1475e-208">SDK .NET Core 2.1.103</span><span class="sxs-lookup"><span data-stu-id="1475e-208">.NET Core SDK 2.1.103</span></span>    |[<span data-ttu-id="1475e-209">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-209">Install link</span></span>](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.1.103)|[<span data-ttu-id="1475e-210">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-210">Install link</span></span>](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.1.103)            |[<span data-ttu-id="1475e-211">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-211">Install link</span></span>](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.1.103)            |
+|<span data-ttu-id="1475e-212">SDK .NET Core 2.0.3</span><span class="sxs-lookup"><span data-stu-id="1475e-212">.NET Core SDK 2.0.3</span></span>      |[<span data-ttu-id="1475e-213">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-213">Install link</span></span>](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.0.3)|[<span data-ttu-id="1475e-214">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-214">Install link</span></span>](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.0.3)          |[<span data-ttu-id="1475e-215">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-215">Install link</span></span>](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.0.3)            |
+
+<span data-ttu-id="1475e-216">**.NET Core 2.1**</span><span class="sxs-lookup"><span data-stu-id="1475e-216">**.NET Core 2.1**</span></span>
+
+>[!IMPORTANT]
+> <span data-ttu-id="1475e-217">Pour utiliser .NET Core 2.1 avec Visual Studio, vous devez [installer Visual Studio 2017 15.7 Preview 1 ou une version ultérieure](https://www.visualstudio.com/vs/preview).</span><span class="sxs-lookup"><span data-stu-id="1475e-217">To use .NET Core 2.1 with Visual Studio, you need to [install Visual Studio 2017 15.7 Preview 1 or newer](https://www.visualstudio.com/vs/preview).</span></span>
+
+|<span data-ttu-id="1475e-218">Runtimes / SDK</span><span class="sxs-lookup"><span data-stu-id="1475e-218">Runtimes / SDKs</span></span>                  |<span data-ttu-id="1475e-219">Ubuntu 17.10</span><span class="sxs-lookup"><span data-stu-id="1475e-219">Ubuntu 17.10</span></span>    |<span data-ttu-id="1475e-220">Ubuntu 16.04 / Linux Mint 18</span><span class="sxs-lookup"><span data-stu-id="1475e-220">Ubuntu 16.04 / Linux Mint 18</span></span>|<span data-ttu-id="1475e-221">Ubuntu 14.04 / Linux Mint 17</span><span class="sxs-lookup"><span data-stu-id="1475e-221">Ubuntu 14.04 / Linux Mint 17</span></span>|
+|---------------------------------|----------------|----------------------------|----------------------------|
+|<span data-ttu-id="1475e-222">Runtime .NET Core 2.1.0 Preview 2</span><span class="sxs-lookup"><span data-stu-id="1475e-222">.NET Core Runtime 2.1.0-preview2</span></span> |[<span data-ttu-id="1475e-223">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-223">Install link</span></span>](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.1.0-preview2)|[<span data-ttu-id="1475e-224">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-224">Install link</span></span>](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.1.0-preview2)            |[<span data-ttu-id="1475e-225">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-225">Install link</span></span>](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.1.0-preview2)            |
+|<span data-ttu-id="1475e-226">Runtime .NET Core 2.1.0 Preview 1</span><span class="sxs-lookup"><span data-stu-id="1475e-226">.NET Core Runtime 2.1.0-preview1</span></span> |[<span data-ttu-id="1475e-227">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-227">Install link</span></span>](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.1.0-preview1)|[<span data-ttu-id="1475e-228">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-228">Install link</span></span>](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.1.0-preview1)            |[<span data-ttu-id="1475e-229">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-229">Install link</span></span>](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.1.0-preview1)            |
+|<span data-ttu-id="1475e-230">SDK .NET Core 2.1.300 Preview 2</span><span class="sxs-lookup"><span data-stu-id="1475e-230">.NET Core SDK 2.1.300-preview2</span></span>   |[<span data-ttu-id="1475e-231">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-231">Install link</span></span>](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.1.300-preview2)|[<span data-ttu-id="1475e-232">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-232">Install link</span></span>](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.1.300-preview2)            |[<span data-ttu-id="1475e-233">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-233">Install link</span></span>](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.1.300-preview2)
+|<span data-ttu-id="1475e-234">SDK .NET Core 2.1.300 Preview 1</span><span class="sxs-lookup"><span data-stu-id="1475e-234">.NET Core SDK 2.1.300-preview1</span></span>   |[<span data-ttu-id="1475e-235">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-235">Install link</span></span>](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.1.300-preview1)|[<span data-ttu-id="1475e-236">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-236">Install link</span></span>](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.1.300-preview1)            |[<span data-ttu-id="1475e-237">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-237">Install link</span></span>](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.1.300-preview1)            |
+
+
+# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="1475e-238">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="1475e-238">.NET Core 1.x</span></span>](#tab/netcore1x)
+
+1. <span data-ttu-id="1475e-239">Supprimez du système toute **version antérieure** de .NET Core.</span><span class="sxs-lookup"><span data-stu-id="1475e-239">Remove any **previous preview** versions of .NET Core from your system.</span></span>
+
+2. <span data-ttu-id="1475e-240">Installer .NET Core 1.x sur des versions/distributions (64 bits) prises en charge d’Ubuntu et de Linux Mint :</span><span class="sxs-lookup"><span data-stu-id="1475e-240">Install .NET Core 1.x on supported Ubuntu and Linux Mint distributions/versions (64 bit):</span></span>
+
+| <span data-ttu-id="1475e-241">Runtimes / SDK</span><span class="sxs-lookup"><span data-stu-id="1475e-241">Runtimes / SDKs</span></span>         |<span data-ttu-id="1475e-242">Ubuntu 16.04 / Linux Mint 18</span><span class="sxs-lookup"><span data-stu-id="1475e-242">Ubuntu 16.04 / Linux Mint 18</span></span>|<span data-ttu-id="1475e-243">Ubuntu 14.04 / Linux Mint 17</span><span class="sxs-lookup"><span data-stu-id="1475e-243">Ubuntu 14.04 / Linux Mint 17</span></span>|
+|-------------------------|----------------------------|----------------------------|
+|<span data-ttu-id="1475e-244">Runtime .NET Core 1.1.7</span><span class="sxs-lookup"><span data-stu-id="1475e-244">.NET Core Runtime 1.1.7</span></span>  |[<span data-ttu-id="1475e-245">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-245">Install link</span></span>](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.7-linux-ubuntu-16.04-x64-binaries)            |[<span data-ttu-id="1475e-246">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-246">Install link</span></span>](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.7-linux-ubuntu-14.04-x64-binaries)            |
+|<span data-ttu-id="1475e-247">Runtime .NET Core 1.1.6</span><span class="sxs-lookup"><span data-stu-id="1475e-247">.NET Core Runtime 1.1.6</span></span>  |[<span data-ttu-id="1475e-248">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-248">Install link</span></span>](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.6-linux-ubuntu-16.04-x64-binaries)            |[<span data-ttu-id="1475e-249">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-249">Install link</span></span>](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.6-linux-ubuntu-14.04-x64-binaries)            |
+|<span data-ttu-id="1475e-250">Runtime .NET Core 1.0.10</span><span class="sxs-lookup"><span data-stu-id="1475e-250">.NET Core Runtime 1.0.10</span></span> |[<span data-ttu-id="1475e-251">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-251">Install link</span></span>](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.0.10-linux-ubuntu-16.04-x64-binaries)            |[<span data-ttu-id="1475e-252">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-252">Install link</span></span>](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.0.10-linux-ubuntu-14.04-x64-binaries)            |
+|<span data-ttu-id="1475e-253">Runtime .NET Core 1.0.9</span><span class="sxs-lookup"><span data-stu-id="1475e-253">.NET Core Runtime 1.0.9</span></span>  |[<span data-ttu-id="1475e-254">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-254">Install link</span></span>](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.0.9-linux-ubuntu-16.04-x64-binaries)            |[<span data-ttu-id="1475e-255">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-255">Install link</span></span>](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.0.9-linux-ubuntu-14.04-x64-binaries)            |
+|<span data-ttu-id="1475e-256">SDK .NET Core 1.1.8</span><span class="sxs-lookup"><span data-stu-id="1475e-256">.NET Core SDK 1.1.8</span></span>      |[<span data-ttu-id="1475e-257">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-257">Install link</span></span>](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.8-linux-ubuntu-16.04-x64-binaries)            |[<span data-ttu-id="1475e-258">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-258">Install link</span></span>](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.8-linux-ubuntu-14.04-x64-binaries)            |
+|<span data-ttu-id="1475e-259">SDK .NET Core 1.1.7</span><span class="sxs-lookup"><span data-stu-id="1475e-259">.NET Core SDK 1.1.7</span></span>      |[<span data-ttu-id="1475e-260">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-260">Install link</span></span>](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.7-linux-ubuntu-16.04-x64-binaries)            |[<span data-ttu-id="1475e-261">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-261">Install link</span></span>](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.7-linux-ubuntu-14.04-x64-binaries)            |
+|<span data-ttu-id="1475e-262">SDK .NET Core 1.0.4</span><span class="sxs-lookup"><span data-stu-id="1475e-262">.NET Core SDK 1.0.4</span></span>      |[<span data-ttu-id="1475e-263">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-263">Install link</span></span>](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.0.4-linux-ubuntu-16.04-x64-binaries)            |[<span data-ttu-id="1475e-264">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-264">Install link</span></span>](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.0.4-linux-ubuntu-14.04-x64-binaries)            |
+|<span data-ttu-id="1475e-265">SDK .NET Core 1.0.1</span><span class="sxs-lookup"><span data-stu-id="1475e-265">.NET Core SDK 1.0.1</span></span>      |[<span data-ttu-id="1475e-266">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-266">Install link</span></span>](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.0.1-linux-ubuntu-16.04-x64-binaries)            |[<span data-ttu-id="1475e-267">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-267">Install link</span></span>](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.0.1-linux-ubuntu-14.04-x64-binaries)            |
+
+---
+
+## <a name="install-net-core-for-supported-debian-versions-64-bit"></a><span data-ttu-id="1475e-268">Installer .NET Core pour les versions (64 bits) prises en charge de Debian</span><span class="sxs-lookup"><span data-stu-id="1475e-268">Install .NET Core for supported Debian versions (64 bit)</span></span>
+
+<span data-ttu-id="1475e-269">Pour installer .NET Core sur des versions (64 bits) prises en charge de Debian :</span><span class="sxs-lookup"><span data-stu-id="1475e-269">To install .NET Core on supported Debian versions (64 bit):</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="1475e-270">Un répertoire contrôlé par l’utilisateur est requis pour les installations du système Linux système depuis tar.gz.</span><span class="sxs-lookup"><span data-stu-id="1475e-270">A user-controlled directory is required for Linux system installs from tar.gz.</span></span>
+
+# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="1475e-271">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="1475e-271">.NET Core 2.x</span></span>](#tab/netcore2x)
+
+1. <span data-ttu-id="1475e-272">Supprimez du système toute **version antérieure** de .NET Core.</span><span class="sxs-lookup"><span data-stu-id="1475e-272">Remove any **previous preview** versions of .NET Core from your system.</span></span>
+
+2. <span data-ttu-id="1475e-273">Installer .NET Core 2.x sur des versions (64 bits) prises en charge de Debian :</span><span class="sxs-lookup"><span data-stu-id="1475e-273">Install .NET Core 2.x on supported Debian versions (64 bit):</span></span>
+
+<span data-ttu-id="1475e-274">**.NET Core 2.0**</span><span class="sxs-lookup"><span data-stu-id="1475e-274">**.NET Core 2.0**</span></span>
+
+|<span data-ttu-id="1475e-275">Runtimes / SDK</span><span class="sxs-lookup"><span data-stu-id="1475e-275">Runtimes / SDKs</span></span>          |<span data-ttu-id="1475e-276">Debian 9</span><span class="sxs-lookup"><span data-stu-id="1475e-276">Debian 9</span></span>       |<span data-ttu-id="1475e-277">Debian 8</span><span class="sxs-lookup"><span data-stu-id="1475e-277">Debian 8</span></span>       |
+|-------------------------|---------------|---------------|
+|<span data-ttu-id="1475e-278">Runtime .NET Core 2.0.6</span><span class="sxs-lookup"><span data-stu-id="1475e-278">.NET Core Runtime 2.0.6</span></span>  |[<span data-ttu-id="1475e-279">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-279">Install link</span></span>](https://www.microsoft.com/net/download/linux-package-manager/debian9/runtime-2.0.6)   |[<span data-ttu-id="1475e-280">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-280">Install link</span></span>](https://www.microsoft.com/net/download/linux-package-manager/debian8/runtime-2.0.6)   |
+|<span data-ttu-id="1475e-281">Runtime .NET Core 2.0.5</span><span class="sxs-lookup"><span data-stu-id="1475e-281">.NET Core Runtime 2.0.5</span></span>  |[<span data-ttu-id="1475e-282">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-282">Install link</span></span>](https://www.microsoft.com/net/download/linux-package-manager/debian9/runtime-2.0.5)   |[<span data-ttu-id="1475e-283">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-283">Install link</span></span>](https://www.microsoft.com/net/download/linux-package-manager/debian8/runtime-2.0.5)   |
+|<span data-ttu-id="1475e-284">SDK .NET Core 2.1.103</span><span class="sxs-lookup"><span data-stu-id="1475e-284">.NET Core SDK 2.1.103</span></span>    |[<span data-ttu-id="1475e-285">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-285">Install link</span></span>](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.1.103)   |[<span data-ttu-id="1475e-286">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-286">Install link</span></span>](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.1.103)   |
+|<span data-ttu-id="1475e-287">SDK .NET Core 2.0.3</span><span class="sxs-lookup"><span data-stu-id="1475e-287">.NET Core SDK 2.0.3</span></span>      |[<span data-ttu-id="1475e-288">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-288">Install link</span></span>](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.0.3)   |[<span data-ttu-id="1475e-289">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-289">Install link</span></span>](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.0.3)   |
+
+<span data-ttu-id="1475e-290">**.NET Core 2.1**</span><span class="sxs-lookup"><span data-stu-id="1475e-290">**.NET Core 2.1**</span></span>
+
+>[!IMPORTANT]
+> <span data-ttu-id="1475e-291">Pour utiliser .NET Core 2.1 avec Visual Studio, vous devez [installer Visual Studio 2017 15.7 Preview 1 ou une version ultérieure](https://www.visualstudio.com/vs/preview).</span><span class="sxs-lookup"><span data-stu-id="1475e-291">To use .NET Core 2.1 with Visual Studio, you need to [install Visual Studio 2017 15.7 Preview 1 or newer](https://www.visualstudio.com/vs/preview).</span></span>
+
+|<span data-ttu-id="1475e-292">Runtimes / SDK</span><span class="sxs-lookup"><span data-stu-id="1475e-292">Runtimes / SDKs</span></span>                  |<span data-ttu-id="1475e-293">Debian 9</span><span class="sxs-lookup"><span data-stu-id="1475e-293">Debian 9</span></span>       |<span data-ttu-id="1475e-294">Debian 8</span><span class="sxs-lookup"><span data-stu-id="1475e-294">Debian 8</span></span>       |
+|---------------------------------|---------------|---------------|
+|<span data-ttu-id="1475e-295">Runtime .NET Core 2.1.0 Preview 2</span><span class="sxs-lookup"><span data-stu-id="1475e-295">.NET Core Runtime 2.1.0-preview2</span></span> |[<span data-ttu-id="1475e-296">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-296">Install link</span></span>](https://www.microsoft.com/net/download/linux-package-manager/debian9/runtime-2.1.0-preview2)   |[<span data-ttu-id="1475e-297">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-297">Install link</span></span>](https://www.microsoft.com/net/download/linux-package-manager/debian8/runtime-2.1.0-preview2)   |
+|<span data-ttu-id="1475e-298">Runtime .NET Core 2.1.0 Preview 1</span><span class="sxs-lookup"><span data-stu-id="1475e-298">.NET Core Runtime 2.1.0-preview1</span></span> |[<span data-ttu-id="1475e-299">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-299">Install link</span></span>](https://www.microsoft.com/net/download/linux-package-manager/debian9/runtime-2.1.0-preview1)   |[<span data-ttu-id="1475e-300">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-300">Install link</span></span>](https://www.microsoft.com/net/download/linux-package-manager/debian8/runtime-2.1.0-preview1)   |
+|<span data-ttu-id="1475e-301">SDK .NET Core 2.1.300 Preview 2</span><span class="sxs-lookup"><span data-stu-id="1475e-301">.NET Core SDK 2.1.300-preview2</span></span>   |[<span data-ttu-id="1475e-302">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-302">Install link</span></span>](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.1.300-preview2)   |[<span data-ttu-id="1475e-303">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-303">Install link</span></span>](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.1.300-preview2)   |
+|<span data-ttu-id="1475e-304">SDK .NET Core 2.1.300 Preview 1</span><span class="sxs-lookup"><span data-stu-id="1475e-304">.NET Core SDK 2.1.300-preview1</span></span>   |[<span data-ttu-id="1475e-305">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-305">Install link</span></span>](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.1.300-preview1)   |[<span data-ttu-id="1475e-306">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-306">Install link</span></span>](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.1.300-preview1)   |
+
+# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="1475e-307">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="1475e-307">.NET Core 1.x</span></span>](#tab/netcore1x)
+
+1. <span data-ttu-id="1475e-308">Supprimez du système toute **version antérieure** de .NET Core.</span><span class="sxs-lookup"><span data-stu-id="1475e-308">Remove any **previous preview** versions of .NET Core from your system.</span></span>
+
+2. <span data-ttu-id="1475e-309">Installer .NET Core 1.x sur Debian 9 ou Debian 8 :</span><span class="sxs-lookup"><span data-stu-id="1475e-309">Install .NET Core 1.x on Debian 9 or Debian 8:</span></span>
+
+* <span data-ttu-id="1475e-310">[Lien d’installation](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.7-linux-debian-x64-binaries) du Runtime .NET Core 1.1.7</span><span class="sxs-lookup"><span data-stu-id="1475e-310">.NET Core Runtime 1.1.7 [install link](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.7-linux-debian-x64-binaries)</span></span>
+* <span data-ttu-id="1475e-311">[Lien d’installation](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.6-linux-debian-x64-binaries) du Runtime .NET Core 1.1.6</span><span class="sxs-lookup"><span data-stu-id="1475e-311">.NET Core Runtime 1.1.6 [install link](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.6-linux-debian-x64-binaries)</span></span>
+* <span data-ttu-id="1475e-312">[Lien d’installation](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.0.10-linux-debian-x64-binaries) du Runtime .NET Core 1.0.10</span><span class="sxs-lookup"><span data-stu-id="1475e-312">.NET Core Runtime 1.0.10 [install link](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.0.10-linux-debian-x64-binaries)</span></span>
+* <span data-ttu-id="1475e-313">[Lien d’installation](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.0.9-linux-debian-x64-binaries) du Runtime .NET Core 1.0.9</span><span class="sxs-lookup"><span data-stu-id="1475e-313">.NET Core Runtime 1.0.9 [install link](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.0.9-linux-debian-x64-binaries)</span></span>
+* <span data-ttu-id="1475e-314">[Lien d’installation](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.8-linux-debian-x64-binaries) du SDK .NET Core 1.1.8</span><span class="sxs-lookup"><span data-stu-id="1475e-314">.NET Core SDK 1.1.8 [install link](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.8-linux-debian-x64-binaries)</span></span>
+* <span data-ttu-id="1475e-315">[Lien d’installation](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.7-linux-debian-x64-binaries) du SDK .NET Core 1.1.7</span><span class="sxs-lookup"><span data-stu-id="1475e-315">.NET Core SDK 1.1.7 [install link](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.7-linux-debian-x64-binaries)</span></span>
+* <span data-ttu-id="1475e-316">[Lien d’installation](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.0.4-linux-debian-x64-binaries) du SDK .NET Core 1.0.4</span><span class="sxs-lookup"><span data-stu-id="1475e-316">.NET Core SDK 1.0.4 [install link](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.0.4-linux-debian-x64-binaries)</span></span>
+* <span data-ttu-id="1475e-317">[Lien d’installation](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.0.1-linux-debian-x64-binaries) du SDK .NET Core 1.0.1</span><span class="sxs-lookup"><span data-stu-id="1475e-317">.NET Core SDK 1.0.1 [install link](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.0.1-linux-debian-x64-binaries)</span></span>
+
+---
+
+## <a name="install-net-core-for-supported-fedora-versions-64-bit"></a><span data-ttu-id="1475e-318">Installer .NET Core pour les versions (64 bits) prises en charge de Fedora</span><span class="sxs-lookup"><span data-stu-id="1475e-318">Install .NET Core for supported Fedora versions (64 bit)</span></span>
+
+<span data-ttu-id="1475e-319">Pour installer .NET Core sur des versions prises en charge de Fedora :</span><span class="sxs-lookup"><span data-stu-id="1475e-319">To install .NET Core on supported Fedora versions:</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="1475e-320">Un répertoire contrôlé par l’utilisateur est requis pour les installations du système Linux système depuis tar.gz.</span><span class="sxs-lookup"><span data-stu-id="1475e-320">A user-controlled directory is required for Linux system installs from tar.gz.</span></span>
+
+# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="1475e-321">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="1475e-321">.NET Core 2.x</span></span>](#tab/netcore2x)
+
+1. <span data-ttu-id="1475e-322">Supprimez du système toute **version antérieure** de .NET Core.</span><span class="sxs-lookup"><span data-stu-id="1475e-322">Remove any **previous preview** versions of .NET Core from your system.</span></span>
+
+2. <span data-ttu-id="1475e-323">Installer .NET Core 2.x sur des versions (64 bits) prises en charge de Fedora :</span><span class="sxs-lookup"><span data-stu-id="1475e-323">Install .NET Core 2.x on supported Fedora versions (64 bit):</span></span>
+
+<span data-ttu-id="1475e-324">**.NET Core 2.0**</span><span class="sxs-lookup"><span data-stu-id="1475e-324">**.NET Core 2.0**</span></span>
+
+|<span data-ttu-id="1475e-325">Runtimes / SDK</span><span class="sxs-lookup"><span data-stu-id="1475e-325">Runtimes / SDKs</span></span>          |<span data-ttu-id="1475e-326">Fedora 26 ou version ultérieure</span><span class="sxs-lookup"><span data-stu-id="1475e-326">Fedora 26 or later</span></span> |<span data-ttu-id="1475e-327">Fedora 25 ou version antérieure</span><span class="sxs-lookup"><span data-stu-id="1475e-327">Fedora 25 or previous</span></span> |
+|-------------------------|-------------------|----------------------|
+|<span data-ttu-id="1475e-328">Runtime .NET Core 2.0.6</span><span class="sxs-lookup"><span data-stu-id="1475e-328">.NET Core Runtime 2.0.6</span></span>  |[<span data-ttu-id="1475e-329">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-329">Install link</span></span>](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.0.6)       |[<span data-ttu-id="1475e-330">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-330">Install link</span></span>](https://www.microsoft.com/net/download/linux-package-manager/fedora25/runtime-2.0.6)           |
+|<span data-ttu-id="1475e-331">Runtime .NET Core 2.0.5</span><span class="sxs-lookup"><span data-stu-id="1475e-331">.NET Core Runtime 2.0.5</span></span>  |[<span data-ttu-id="1475e-332">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-332">Install link</span></span>](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.0.5)       |[<span data-ttu-id="1475e-333">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-333">Install link</span></span>](https://www.microsoft.com/net/download/linux-package-manager/fedora25/runtime-2.0.5)           |
+|<span data-ttu-id="1475e-334">SDK .NET Core 2.1.103</span><span class="sxs-lookup"><span data-stu-id="1475e-334">.NET Core SDK 2.1.103</span></span>    |[<span data-ttu-id="1475e-335">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-335">Install link</span></span>](https://www.microsoft.com/net/download/linux-package-manager/fedora26/sdk-2.1.103)       |[<span data-ttu-id="1475e-336">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-336">Install link</span></span>](https://www.microsoft.com/net/download/linux-package-manager/fedora25/sdk-2.1.103)           |
+|<span data-ttu-id="1475e-337">SDK .NET Core 2.0.3</span><span class="sxs-lookup"><span data-stu-id="1475e-337">.NET Core SDK 2.0.3</span></span>      |[<span data-ttu-id="1475e-338">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-338">Install link</span></span>](https://www.microsoft.com/net/download/linux-package-manager/fedora26/sdk-2.0.3)       |[<span data-ttu-id="1475e-339">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-339">Install link</span></span>](https://www.microsoft.com/net/download/linux-package-manager/fedora25/sdk-2.0.3)           |
+
+<span data-ttu-id="1475e-340">**.NET Core 2.1**</span><span class="sxs-lookup"><span data-stu-id="1475e-340">**.NET Core 2.1**</span></span>
+
+>[!IMPORTANT]
+> <span data-ttu-id="1475e-341">Pour utiliser .NET Core 2.1 avec Visual Studio, vous devez [installer Visual Studio 2017 15.7 Preview 1 ou une version ultérieure](https://www.visualstudio.com/vs/preview).</span><span class="sxs-lookup"><span data-stu-id="1475e-341">To use .NET Core 2.1 with Visual Studio, you need to [install Visual Studio 2017 15.7 Preview 1 or newer](https://www.visualstudio.com/vs/preview).</span></span>
+
+|<span data-ttu-id="1475e-342">Runtimes / SDK</span><span class="sxs-lookup"><span data-stu-id="1475e-342">Runtimes / SDKs</span></span>                  |<span data-ttu-id="1475e-343">Fedora 26 ou version ultérieure</span><span class="sxs-lookup"><span data-stu-id="1475e-343">Fedora 26 or later</span></span> |<span data-ttu-id="1475e-344">Fedora 25 ou version antérieure</span><span class="sxs-lookup"><span data-stu-id="1475e-344">Fedora 25 or previous</span></span> |
+|---------------------------------|-------------------|----------------------|
+|<span data-ttu-id="1475e-345">Runtime .NET Core 2.1.0 Preview 2</span><span class="sxs-lookup"><span data-stu-id="1475e-345">.NET Core Runtime 2.1.0-preview2</span></span> |[<span data-ttu-id="1475e-346">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-346">Install link</span></span>](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.1.0-preview2)       |[<span data-ttu-id="1475e-347">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-347">Install link</span></span>](https://www.microsoft.com/net/download/linux-package-manager/fedora25/runtime-2.1.0-preview2)           |
+|<span data-ttu-id="1475e-348">Runtime .NET Core 2.1.0 Preview 1</span><span class="sxs-lookup"><span data-stu-id="1475e-348">.NET Core Runtime 2.1.0-preview1</span></span> |[<span data-ttu-id="1475e-349">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-349">Install link</span></span>](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.1.0-preview1)       |[<span data-ttu-id="1475e-350">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-350">Install link</span></span>](https://www.microsoft.com/net/download/linux-package-manager/fedora25/runtime-2.1.0-preview1)           |
+|<span data-ttu-id="1475e-351">SDK .NET Core 2.1.300 Preview 2</span><span class="sxs-lookup"><span data-stu-id="1475e-351">.NET Core SDK 2.1.300-preview2</span></span>   |[<span data-ttu-id="1475e-352">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-352">Install link</span></span>](https://www.microsoft.com/net/download/linux-package-manager/fedora26/sdk-2.1.300-preview2)       |[<span data-ttu-id="1475e-353">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-353">Install link</span></span>](https://www.microsoft.com/net/download/linux-package-manager/fedora25/sdk-2.1.300-preview2)           |
+|<span data-ttu-id="1475e-354">SDK .NET Core 2.1.300 Preview 1</span><span class="sxs-lookup"><span data-stu-id="1475e-354">.NET Core SDK 2.1.300-preview1</span></span>   |[<span data-ttu-id="1475e-355">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-355">Install link</span></span>](https://www.microsoft.com/net/download/linux-package-manager/fedora26/sdk-2.1.300-preview1)       |[<span data-ttu-id="1475e-356">Lien d’installation</span><span class="sxs-lookup"><span data-stu-id="1475e-356">Install link</span></span>](https://www.microsoft.com/net/download/linux-package-manager/fedora25/sdk-2.1.300-preview1)           |
+
+# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="1475e-357">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="1475e-357">.NET Core 1.x</span></span>](#tab/netcore1x)
+
+1. <span data-ttu-id="1475e-358">Supprimez du système toute **version antérieure** de .NET Core.</span><span class="sxs-lookup"><span data-stu-id="1475e-358">Remove any **previous preview** versions of .NET Core from your system.</span></span>
+
+2. <span data-ttu-id="1475e-359">Installer .NET Core 1.x sur des versions (64 bits) prises en charge de Fedora :</span><span class="sxs-lookup"><span data-stu-id="1475e-359">Install .NET Core 1.x supported Fedora versions (64 bit):</span></span>
+
+<span data-ttu-id="1475e-360">**Fedora 24**</span><span class="sxs-lookup"><span data-stu-id="1475e-360">**Fedora 24**</span></span>
+
+* <span data-ttu-id="1475e-361">[Lien d’installation](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.7-linux-fedora-24-x64-binaries) du Runtime .NET Core 1.1.7</span><span class="sxs-lookup"><span data-stu-id="1475e-361">.NET Core Runtime 1.1.7 [install link](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.7-linux-fedora-24-x64-binaries)</span></span>
+* <span data-ttu-id="1475e-362">[Lien d’installation](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.6-linux-fedora-24-x64-binaries) du Runtime .NET Core 1.1.6</span><span class="sxs-lookup"><span data-stu-id="1475e-362">.NET Core Runtime 1.1.6 [install link](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.6-linux-fedora-24-x64-binaries)</span></span>
+* <span data-ttu-id="1475e-363">[Lien d’installation](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.8-linux-fedora-24-x64-binaries) du SDK .NET Core 1.1.8</span><span class="sxs-lookup"><span data-stu-id="1475e-363">.NET Core SDK 1.1.8 [install link](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.8-linux-fedora-24-x64-binaries)</span></span>
+* <span data-ttu-id="1475e-364">[Lien d’installation](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.7-linux-fedora-24-x64-binaries) du SDK .NET Core 1.1.7</span><span class="sxs-lookup"><span data-stu-id="1475e-364">.NET Core SDK 1.1.7 [install link](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.7-linux-fedora-24-x64-binaries)</span></span>
+* <span data-ttu-id="1475e-365">[Lien d’installation](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.0.1-linux-debian-x64-binaries) du SDK .NET Core 1.0.1</span><span class="sxs-lookup"><span data-stu-id="1475e-365">.NET Core SDK 1.0.1 [install link](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.0.1-linux-debian-x64-binaries)</span></span>
+
+<span data-ttu-id="1475e-366">**Fedora 23**</span><span class="sxs-lookup"><span data-stu-id="1475e-366">**Fedora 23**</span></span>
+
+* <span data-ttu-id="1475e-367">[Lien d’installation](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.0.9-linux-fedora-23-x64-binaries) du Runtime .NET Core 1.0.9</span><span class="sxs-lookup"><span data-stu-id="1475e-367">.NET Core Runtime 1.0.9 [install link](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.0.9-linux-fedora-23-x64-binaries)</span></span>
+* <span data-ttu-id="1475e-368">[Lien d’installation](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.0.4-linux-fedora-23-x64-binaries) du SDK .NET Core 1.0.4</span><span class="sxs-lookup"><span data-stu-id="1475e-368">.NET Core SDK 1.0.4 [install link](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.0.4-linux-fedora-23-x64-binaries)</span></span>
+* <span data-ttu-id="1475e-369">[Lien d’installation](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.0.1-linux-fedora-23-x64-binaries) du SDK .NET Core 1.0.1</span><span class="sxs-lookup"><span data-stu-id="1475e-369">.NET Core SDK 1.0.1 [install link](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.0.1-linux-fedora-23-x64-binaries)</span></span>
+
+---
+
+## <a name="install-net-core-for-supported-centos-and-oracle-linux-distributionsversions-64-bit"></a><span data-ttu-id="1475e-370">Installer .NET Core pour les versions/distributions (64 bits) prises en charge de CentOS et d’Oracle Linux</span><span class="sxs-lookup"><span data-stu-id="1475e-370">Install .NET Core for supported CentOS and Oracle Linux distributions/versions (64 bit)</span></span>
+
+<span data-ttu-id="1475e-371">Pour installer .NET Core pour les versions/distributions (64 bits) prises en charge de CentOS et d’Oracle Linux :</span><span class="sxs-lookup"><span data-stu-id="1475e-371">To install .NET Core for supported CentOS and Oracle Linux distributions/versions (64 bit):</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="1475e-372">Un répertoire contrôlé par l’utilisateur est requis pour les installations du système Linux système depuis tar.gz.</span><span class="sxs-lookup"><span data-stu-id="1475e-372">A user-controlled directory is required for Linux system installs from tar.gz.</span></span>
+
+# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="1475e-373">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="1475e-373">.NET Core 2.x</span></span>](#tab/netcore2x)
+
+1. <span data-ttu-id="1475e-374">Supprimez du système toute **version antérieure** de .NET Core.</span><span class="sxs-lookup"><span data-stu-id="1475e-374">Remove any **previous preview** versions of .NET Core from your system.</span></span>
+
+2. <span data-ttu-id="1475e-375">Installer .NET Core 2.x sur des versions/distributions (64 bits) prises en charge de CentOS et d’Oracle Linux :</span><span class="sxs-lookup"><span data-stu-id="1475e-375">Install .NET Core 2.x on supported CentOS and Oracle Linux distributions/versions (64 bit):</span></span>
+
+<span data-ttu-id="1475e-376">**.NET Core 2.0**</span><span class="sxs-lookup"><span data-stu-id="1475e-376">**.NET Core 2.0**</span></span>
+
+* <span data-ttu-id="1475e-377">[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.0.6) du Runtime .NET Core 2.0.6</span><span class="sxs-lookup"><span data-stu-id="1475e-377">.NET Core Runtime 2.0.6 [install link](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.0.6)</span></span>
+* <span data-ttu-id="1475e-378">[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.0.5) du Runtime .NET Core 2.0.5</span><span class="sxs-lookup"><span data-stu-id="1475e-378">.NET Core Runtime 2.0.5 [install link](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.0.5)</span></span>
+* <span data-ttu-id="1475e-379">[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.1.103) du SDK .NET Core 2.1.103</span><span class="sxs-lookup"><span data-stu-id="1475e-379">.NET Core SDK 2.1.103 [install link](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.1.103)</span></span>
+* <span data-ttu-id="1475e-380">[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.0.3) du SDK .NET Core 2.0.3</span><span class="sxs-lookup"><span data-stu-id="1475e-380">.NET Core SDK 2.0.3 [install link](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.0.3)</span></span>
+ 
+<span data-ttu-id="1475e-381">**.NET Core 2.1**</span><span class="sxs-lookup"><span data-stu-id="1475e-381">**.NET Core 2.1**</span></span>
+
+>[!IMPORTANT]
+> <span data-ttu-id="1475e-382">Pour utiliser .NET Core 2.1 avec Visual Studio, vous devez [installer Visual Studio 2017 15.7 Preview 1 ou une version ultérieure](https://www.visualstudio.com/vs/preview/).</span><span class="sxs-lookup"><span data-stu-id="1475e-382">To use .NET Core 2.1 with Visual Studio, you need to [install Visual Studio 2017 15.7 Preview 1 or newer](https://www.visualstudio.com/vs/preview/).</span></span>
+
+* <span data-ttu-id="1475e-383">[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.1.0-preview2) du Runtime .NET Core 2.1.0 Preview 2</span><span class="sxs-lookup"><span data-stu-id="1475e-383">.NET Core Runtime 2.1.0-preview2 [install link](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.1.0-preview2)</span></span>
+* <span data-ttu-id="1475e-384">[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.1.0-preview1) du Runtime .NET Core 2.1.0 Preview 1</span><span class="sxs-lookup"><span data-stu-id="1475e-384">.NET Core Runtime 2.1.0-preview1 [install link](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.1.0-preview1)</span></span>
+* <span data-ttu-id="1475e-385">[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.1.300-preview2) du SDK .NET Core 2.1.300 Preview 2</span><span class="sxs-lookup"><span data-stu-id="1475e-385">.NET Core SDK 2.1.300-preview2 [install link](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.1.300-preview2)</span></span>
+* <span data-ttu-id="1475e-386">[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.1.300-preview1) du SDK .NET Core 2.1.300 Preview 1</span><span class="sxs-lookup"><span data-stu-id="1475e-386">.NET Core SDK 2.1.300-preview1 [install link](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.1.300-preview1)</span></span>
+
+# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="1475e-387">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="1475e-387">.NET Core 1.x</span></span>](#tab/netcore1x)
+
+1. <span data-ttu-id="1475e-388">Supprimez du système toute **version antérieure** de .NET Core.</span><span class="sxs-lookup"><span data-stu-id="1475e-388">Remove any **previous preview** versions of .NET Core from your system.</span></span>
+
+2. <span data-ttu-id="1475e-389">Installer .NET Core 1.x sur des versions/distributions (64 bits) prises en charge de CentOS et d’Oracle Linux :</span><span class="sxs-lookup"><span data-stu-id="1475e-389">Install .NET Core 1.x on supported CentOS and Oracle Linux distributions/versions (64 bit):</span></span>
+
+* <span data-ttu-id="1475e-390">[Lien d’installation](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.7-linux-centos-x64-binaries) du Runtime .NET Core 1.1.7</span><span class="sxs-lookup"><span data-stu-id="1475e-390">.NET Core Runtime 1.1.7 [install link](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.7-linux-centos-x64-binaries)</span></span>
+* <span data-ttu-id="1475e-391">[Lien d’installation](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.6-linux-centos-x64-binaries) du Runtime .NET Core 1.1.6</span><span class="sxs-lookup"><span data-stu-id="1475e-391">.NET Core Runtime 1.1.6 [install link](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.6-linux-centos-x64-binaries)</span></span>
+* <span data-ttu-id="1475e-392">[Lien d’installation](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.0.10-linux-centos-x64-binaries) du Runtime .NET Core 1.0.10</span><span class="sxs-lookup"><span data-stu-id="1475e-392">.NET Core Runtime 1.0.10 [install link](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.0.10-linux-centos-x64-binaries)</span></span>
+* <span data-ttu-id="1475e-393">[Lien d’installation](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.0.9-linux-centos-x64-binaries) du Runtime .NET Core 1.0.9</span><span class="sxs-lookup"><span data-stu-id="1475e-393">.NET Core Runtime 1.0.9 [install link](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.0.9-linux-centos-x64-binaries)</span></span>
+* <span data-ttu-id="1475e-394">[Lien d’installation](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.8-linux-centos-x64-binaries) du SDK .NET Core 1.1.8</span><span class="sxs-lookup"><span data-stu-id="1475e-394">.NET Core SDK 1.1.8 [install link](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.8-linux-centos-x64-binaries)</span></span>
+* <span data-ttu-id="1475e-395">[Lien d’installation](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.7-linux-centos-x64-binaries) du SDK .NET Core 1.1.7</span><span class="sxs-lookup"><span data-stu-id="1475e-395">.NET Core SDK 1.1.7 [install link](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.7-linux-centos-x64-binaries)</span></span>
+* <span data-ttu-id="1475e-396">[Lien d’installation](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.0.4-linux-centos-x64-binaries) du SDK .NET Core 1.0.4</span><span class="sxs-lookup"><span data-stu-id="1475e-396">.NET Core SDK 1.0.4 [install link](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.0.4-linux-centos-x64-binaries)</span></span>
+* <span data-ttu-id="1475e-397">[Lien d’installation](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.0.1-linux-centos-x64-binaries) du SDK .NET Core 1.0.1</span><span class="sxs-lookup"><span data-stu-id="1475e-397">.NET Core SDK 1.0.1 [install link](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.0.1-linux-centos-x64-binaries)</span></span>
+
+---
+
+## <a name="install-net-core-for-supported-suse-linux-enterprise-server-and-opensuse-distributionsversions-64-bit"></a><span data-ttu-id="1475e-398">Installer .NET Core pour des versions/distributions (64 bits) prises en charge de SUSE Linux Enterprise Server et d’OpenSUSE</span><span class="sxs-lookup"><span data-stu-id="1475e-398">Install .NET Core for supported SUSE Linux Enterprise Server and OpenSUSE distributions/versions (64 bit)</span></span>
+
+<span data-ttu-id="1475e-399">Pour installer .NET Core 2.x sur des versions/distributions (64 bits) prises en charge de SUSE Linux Enterprise Server et d’OpenSUSE :</span><span class="sxs-lookup"><span data-stu-id="1475e-399">To install .NET Core 2.x for supported SUSE Linux Enterprise Server and OpenSUSE distributions/versions (64 bit):</span></span>
+
+# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="1475e-400">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="1475e-400">.NET Core 2.x</span></span>](#tab/netcore2x)
+
+1. <span data-ttu-id="1475e-401">Supprimez du système toute **version antérieure** de .NET Core.</span><span class="sxs-lookup"><span data-stu-id="1475e-401">Remove any **previous preview** versions of .NET Core from your system.</span></span>
+
+2. <span data-ttu-id="1475e-402">Installer .NET Core 2.x sur des versions/distributions (64 bits) prises en charge de SUSE Linux Enterprise Server et d’OpenSUSE :</span><span class="sxs-lookup"><span data-stu-id="1475e-402">Install .NET Core 2.x on supported SUSE Linux Enterprise Server and OpenSUSE distributions/versions (64 bit):</span></span>
+
+<span data-ttu-id="1475e-403">**.NET Core 2.0**</span><span class="sxs-lookup"><span data-stu-id="1475e-403">**.NET Core 2.0**</span></span>
+
+* <span data-ttu-id="1475e-404">[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.0.6) du Runtime .NET Core 2.0.6</span><span class="sxs-lookup"><span data-stu-id="1475e-404">.NET Core Runtime 2.0.6 [install link](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.0.6)</span></span>
+* <span data-ttu-id="1475e-405">[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.0.5) du Runtime .NET Core 2.0.5</span><span class="sxs-lookup"><span data-stu-id="1475e-405">.NET Core Runtime 2.0.5 [install link](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.0.5)</span></span>
+* <span data-ttu-id="1475e-406">[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/opensuse/sdk-2.1.103) du SDK .NET Core 2.1.103</span><span class="sxs-lookup"><span data-stu-id="1475e-406">.NET Core SDK 2.1.103 [install link](https://www.microsoft.com/net/download/linux-package-manager/opensuse/sdk-2.1.103)</span></span>
+* <span data-ttu-id="1475e-407">[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/opensuse/sdk-2.0.3) du SDK .NET Core 2.0.3</span><span class="sxs-lookup"><span data-stu-id="1475e-407">.NET Core SDK 2.0.3 [install link](https://www.microsoft.com/net/download/linux-package-manager/opensuse/sdk-2.0.3)</span></span>
+ 
+<span data-ttu-id="1475e-408">**.NET Core 2.1**</span><span class="sxs-lookup"><span data-stu-id="1475e-408">**.NET Core 2.1**</span></span>
+
+>[!IMPORTANT]
+> <span data-ttu-id="1475e-409">Pour utiliser .NET Core 2.1 avec Visual Studio, vous devez [installer Visual Studio 2017 15.7 Preview 1 ou une version ultérieure](https://www.visualstudio.com/vs/preview).</span><span class="sxs-lookup"><span data-stu-id="1475e-409">To use .NET Core 2.1 with Visual Studio, you need to [install Visual Studio 2017 15.7 Preview 1 or newer](https://www.visualstudio.com/vs/preview).</span></span>
+
+* <span data-ttu-id="1475e-410">[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.1.0-preview2) du Runtime .NET Core 2.1.0 Preview 2</span><span class="sxs-lookup"><span data-stu-id="1475e-410">.NET Core Runtime 2.1.0-preview2 [install link](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.1.0-preview2)</span></span>
+* <span data-ttu-id="1475e-411">[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.1.0-preview1) du Runtime .NET Core 2.1.0 Preview 1</span><span class="sxs-lookup"><span data-stu-id="1475e-411">.NET Core Runtime 2.1.0-preview1  [install link](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.1.0-preview1)</span></span>
+* <span data-ttu-id="1475e-412">[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/opensuse/sdk-2.1.300-preview2) du SDK .NET Core 2.1.300 Preview 2</span><span class="sxs-lookup"><span data-stu-id="1475e-412">.NET Core SDK 2.1.300-preview2 [install link](https://www.microsoft.com/net/download/linux-package-manager/opensuse/sdk-2.1.300-preview2)</span></span>
+* <span data-ttu-id="1475e-413">[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/opensuse/sdk-2.1.300-preview1) du SDK .NET Core 2.1.300 Preview 1</span><span class="sxs-lookup"><span data-stu-id="1475e-413">.NET Core SDK 2.1.300-preview1 [install link](https://www.microsoft.com/net/download/linux-package-manager/opensuse/sdk-2.1.300-preview1)</span></span>
+
+# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="1475e-414">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="1475e-414">.NET Core 1.x</span></span>](#tab/netcore1x)
+
+1. <span data-ttu-id="1475e-415">Supprimez du système toute **version antérieure** de .NET Core.</span><span class="sxs-lookup"><span data-stu-id="1475e-415">Remove any **previous preview** versions of .NET Core from your system.</span></span>
+
+2. <span data-ttu-id="1475e-416">Installer .NET Core 1.x sur des versions/distributions (64 bits) prises en charge de SUSE Linux Enterprise Server et d’OpenSUSE :</span><span class="sxs-lookup"><span data-stu-id="1475e-416">Install .NET Core 1.x on supported SUSE Linux Enterprise Server and OpenSUSE distributions/versions (64 bit):</span></span>
+
+<span data-ttu-id="1475e-417">**SUSE Linux Enterprise Server 13.2**</span><span class="sxs-lookup"><span data-stu-id="1475e-417">**SUSE Linux Enterprise Server 13.2**</span></span>
+
+* <span data-ttu-id="1475e-418">[Lien d’installation](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.7-linux-opensuse-13.2-x64-binaries) du Runtime .NET Core 1.1.7</span><span class="sxs-lookup"><span data-stu-id="1475e-418">.NET Core Runtime 1.1.7 [install link](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.7-linux-opensuse-13.2-x64-binaries)</span></span>
+* <span data-ttu-id="1475e-419">[Lien d’installation](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.6-linux-opensuse-13.2-x64-binaries) du Runtime .NET Core 1.1.6</span><span class="sxs-lookup"><span data-stu-id="1475e-419">.NET Core Runtime 1.1.6 [install link](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.6-linux-opensuse-13.2-x64-binaries)</span></span>
+* <span data-ttu-id="1475e-420">[Lien d’installation](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.7-linux-opensuse-13.2-x64-binaries) du SDK .NET Core 1.1.7</span><span class="sxs-lookup"><span data-stu-id="1475e-420">.NET Core SDK 1.1.7 [install link](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.7-linux-opensuse-13.2-x64-binaries)</span></span>
+
+<span data-ttu-id="1475e-421">**openSUSE 24**</span><span class="sxs-lookup"><span data-stu-id="1475e-421">**openSUSE 24**</span></span>
+
+* <span data-ttu-id="1475e-422">[Lien d’installation](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.0.4-linux-opensuse-24-x64-binaries) du SDK .NET Core 1.0.4</span><span class="sxs-lookup"><span data-stu-id="1475e-422">.NET Core SDK 1.0.4 [install link](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.0.4-linux-opensuse-24-x64-binaries)</span></span>
+* <span data-ttu-id="1475e-423">[Lien d’installation](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.0.1-linux-opensuse-24-x64-binaries) du SDK .NET Core 1.0.1</span><span class="sxs-lookup"><span data-stu-id="1475e-423">.NET Core SDK 1.0.1 [install link](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.0.1-linux-opensuse-24-x64-binaries)</span></span>
+
+---
 
 > [!IMPORTANT]
-> <span data-ttu-id="549c4-175">Avant d’exécuter le script, installez les [dépendances](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md) nécessaires.</span><span class="sxs-lookup"><span data-stu-id="549c4-175">Before running the script, install the required [dependencies](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md).</span></span>
-
-## <a name="install-net-core-for-red-hat-enterprise-linux-rhel-7"></a><span data-ttu-id="549c4-176">Installer .NET Core pour Red Hat Enterprise Linux (RHEL) 7</span><span class="sxs-lookup"><span data-stu-id="549c4-176">Install .NET Core for Red Hat Enterprise Linux (RHEL) 7</span></span>
-
-<span data-ttu-id="549c4-177">Pour installer .NET Core sur RHEL 7 :</span><span class="sxs-lookup"><span data-stu-id="549c4-177">To install .NET Core on RHEL 7:</span></span>
-
-1. <span data-ttu-id="549c4-178">Activez le canal Red Hat .NET, disponible dans votre abonnement RHEL 7.</span><span class="sxs-lookup"><span data-stu-id="549c4-178">Enable the Red Hat .NET channel, available under your RHEL 7 subscription.</span></span>
-    * <span data-ttu-id="549c4-179">Pour Red Hat Enterprise Server 7, utilisez :</span><span class="sxs-lookup"><span data-stu-id="549c4-179">For Red Hat Enterprise 7 Server, use:</span></span>
-    
-         ```bash
-         subscription-manager repos --enable=rhel-7-server-dotnet-rpms
-         ```
-    
-    * <span data-ttu-id="549c4-180">Pour Red Hat Enterprise 7 Workstation, utilisez :</span><span class="sxs-lookup"><span data-stu-id="549c4-180">For Red Hat Enterprise 7 Workstation, use:</span></span>
-    
-        ```bash
-        subscription-manager repos --enable=rhel-7-workstation-dotnet-rpms
-         ```
-    
-    * <span data-ttu-id="549c4-181">Pour Red Hat Enterprise 7 HPC Compute Node, utilisez :</span><span class="sxs-lookup"><span data-stu-id="549c4-181">For Red Hat Enterprise 7 HPC Compute Node, use:</span></span>
-    
-        ```bash
-        subscription-manager repos --enable=rhel-7-hpc-node-dotnet-rpms
-        ```
-
-2. <span data-ttu-id="549c4-182">Installez l’outil scl.</span><span class="sxs-lookup"><span data-stu-id="549c4-182">Install the scl tool.</span></span>
-
-    ```bash
-    yum install scl-utils
-    ```
-    
-3. <span data-ttu-id="549c4-183">Installer .NET Core</span><span class="sxs-lookup"><span data-stu-id="549c4-183">Install .NET Core</span></span>
-
-# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="549c4-184">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="549c4-184">.NET Core 2.x</span></span>](#tab/netcore2x)
-
-<span data-ttu-id="549c4-185">Installez le runtime et le kit SDK .NET Core 2.0 :</span><span class="sxs-lookup"><span data-stu-id="549c4-185">Install .NET Core 2.0 SDK and Runtime:</span></span>
-
-   ```bash
-   yum install rh-dotnet20
-   ```
-
-<span data-ttu-id="549c4-186">Activez le runtime/kit SDK .NET Core 2.0 pour votre environnement :</span><span class="sxs-lookup"><span data-stu-id="549c4-186">Enable .NET Core 2.0 SDK/Runtime for your environment:</span></span>
-
-   ```bash
-   scl enable rh-dotnet20 bash
-   ```
-
-# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="549c4-187">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="549c4-187">.NET Core 1.x</span></span>](#tab/netcore1x)
-
-<span data-ttu-id="549c4-188">**.NET Core 1.1**</span><span class="sxs-lookup"><span data-stu-id="549c4-188">**.NET Core 1.1**</span></span>
-
-<span data-ttu-id="549c4-189">Installez le runtime et le kit SDK .NET Core 1.1 :</span><span class="sxs-lookup"><span data-stu-id="549c4-189">Install .NET Core 1.1 SDK and Runtime:</span></span>
-
-   ```bash
-   yum install rh-dotnetcore11
-   ```
-
-<span data-ttu-id="549c4-190">Activez le runtime et le kit SDK .NET Core 1.1 pour votre environnement :</span><span class="sxs-lookup"><span data-stu-id="549c4-190">Enable .NET Core 1.1 SDK and Runtime for your environment:</span></span>
-
-   ```bash
-   scl enable rh-dotnetcore11 bash
-   ```
-
-<span data-ttu-id="549c4-191">**.NET Core 1.0**</span><span class="sxs-lookup"><span data-stu-id="549c4-191">**.NET Core 1.0**</span></span>
-
-<span data-ttu-id="549c4-192">Installez le runtime et le kit SDK .NET Core 1.0 :</span><span class="sxs-lookup"><span data-stu-id="549c4-192">Install .NET Core 1.0 SDK and Runtime:</span></span>
-
-   ```bash
-   yum install rh-dotnetcore10
-   ```
-
-<span data-ttu-id="549c4-193">Activez le runtime et le kit SDK .NET Core 1.0 pour votre environnement :</span><span class="sxs-lookup"><span data-stu-id="549c4-193">Enable .NET Core 1.0 SDK and Runtime for your environment:</span></span>
-
-   ```bash
-   scl enable rh-dotnetcore10 bash
-   ```
-
----
-4. <span data-ttu-id="549c4-194">Exécutez la commande `dotnet --version` pour vérifier que l’installation a réussi.</span><span class="sxs-lookup"><span data-stu-id="549c4-194">Run the `dotnet --version` command to prove the installation succeeded.</span></span>
-
-     ```bash
-     dotnet --version
-     ```
-
-<span data-ttu-id="549c4-195">Pour obtenir de l’aide sur l’inscription à l’accès au canal Red Hat .NET, consultez le [chapitre 1 du guide de prise en main de .NET Core 1.1](https://access.redhat.com/documentation/en/net-core/1.1/paged/getting-started-guide/) sur Red Hat.</span><span class="sxs-lookup"><span data-stu-id="549c4-195">For Red Hat .NET channel access registration help, see [Chapter 1 of the .NET Core 1.1 Getting Started Guide](https://access.redhat.com/documentation/en/net-core/1.1/paged/getting-started-guide/) at Red Hat.</span></span>
-
-## <a name="install-net-core-for-ubuntu-1404-ubuntu-1604-ubuntu-1610--linux-mint-17-linux-mint-18-64-bit"></a><span data-ttu-id="549c4-196">Installer .NET Core pour Ubuntu 14.04, Ubuntu 16.04, Ubuntu 16.10, Linux Mint 17 et Linux Mint 18 (64 bits)</span><span class="sxs-lookup"><span data-stu-id="549c4-196">Install .NET Core for Ubuntu 14.04, Ubuntu 16.04, Ubuntu 16.10 & Linux Mint 17, Linux Mint 18 (64 bit)</span></span>
-
-1. <span data-ttu-id="549c4-197">Supprimez du système toute **version antérieure** de .NET Core.</span><span class="sxs-lookup"><span data-stu-id="549c4-197">Remove any **previous preview** versions of .NET Core from your system.</span></span>
-
-# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="549c4-198">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="549c4-198">.NET Core 2.x</span></span>](#tab/netcore2x)
-
-2. <span data-ttu-id="549c4-199">Enregistrez la clé de produit Microsoft approuvée.</span><span class="sxs-lookup"><span data-stu-id="549c4-199">Register the Microsoft Product key as trusted.</span></span>
-
-   ```bash
-   curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
-   sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
-   ```
-
-3. <span data-ttu-id="549c4-200">Configurez le flux de package hôte de version souhaité.</span><span class="sxs-lookup"><span data-stu-id="549c4-200">Set up the desired version host package feed.</span></span>
-
-   <span data-ttu-id="549c4-201">**Ubuntu 17.10**</span><span class="sxs-lookup"><span data-stu-id="549c4-201">**Ubuntu 17.10**</span></span>
-
-   ```bash
-   sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-ubuntu-artful-prod artful main" > /etc/apt/sources.list.d/dotnetdev.list'
-   sudo apt-get update
-   ```
-   <span data-ttu-id="549c4-202">**Ubuntu 17.04**</span><span class="sxs-lookup"><span data-stu-id="549c4-202">**Ubuntu 17.04**</span></span>
-
-   ```bash
-   sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-ubuntu-zesty-prod zesty main" > /etc/apt/sources.list.d/dotnetdev.list'
-   sudo apt-get update
-   ```
-
-   <span data-ttu-id="549c4-203">**Ubuntu 16.04 / Linux Mint 18**</span><span class="sxs-lookup"><span data-stu-id="549c4-203">**Ubuntu 16.04 / Linux Mint 18**</span></span>
-
-   ```bash
-   sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-ubuntu-xenial-prod xenial main" > /etc/apt/sources.list.d/dotnetdev.list'
-   sudo apt-get update
-   ```
-
-   <span data-ttu-id="549c4-204">**Ubuntu 14.04 / Linux Mint 17**</span><span class="sxs-lookup"><span data-stu-id="549c4-204">**Ubuntu 14.04 / Linux Mint 17**</span></span>
-
-   ```bash
-   sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-ubuntu-trusty-prod trusty main" > /etc/apt/sources.list.d/dotnetdev.list'
-   sudo apt-get update
-   ```
-
-4. <span data-ttu-id="549c4-205">Installez .NET Core.</span><span class="sxs-lookup"><span data-stu-id="549c4-205">Install .NET Core.</span></span>
-
-   ```bash
-   sudo apt-get install dotnet-sdk-2.1.4
-   ```
-
-4. <span data-ttu-id="549c4-206">Exécutez la commande `dotnet --version` pour vérifier que l’installation a réussi.</span><span class="sxs-lookup"><span data-stu-id="549c4-206">Run the `dotnet --version` command to prove the installation succeeded.</span></span>
-
-   ```bash
-   dotnet --version
-   ```
-
-# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="549c4-207">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="549c4-207">.NET Core 1.x</span></span>](#tab/netcore1x)
-
-2. <span data-ttu-id="549c4-208">Configurez le flux de package hôte de version souhaité.</span><span class="sxs-lookup"><span data-stu-id="549c4-208">Set up the desired version host package feed.</span></span>
-
-   <span data-ttu-id="549c4-209">**Ubuntu 16.10**</span><span class="sxs-lookup"><span data-stu-id="549c4-209">**Ubuntu 16.10**</span></span>
-   
-   ```bash
-   sudo sh -c 'echo "deb [arch=amd64] https://apt-mo.trafficmanager.net/repos/dotnet-release/ yakkety main" > /etc/apt/sources.list.d/dotnetdev.list'
-   sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys B02C46DF417A0893
-   sudo apt-get update
-   ```
-
-  <span data-ttu-id="549c4-210">**Ubuntu 16.04 / Linux Mint 18**</span><span class="sxs-lookup"><span data-stu-id="549c4-210">**Ubuntu 16.04 / Linux Mint 18**</span></span>
-
-   ```bash
-   sudo sh -c 'echo "deb [arch=amd64] https://apt-mo.trafficmanager.net/repos/dotnet-release/ xenial main" > /etc/apt/sources.list.d/dotnetdev.list'
-   sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys B02C46DF417A0893
-   sudo apt-get update
-   ```
-    
-   <span data-ttu-id="549c4-211">**Ubuntu 14.04 / Linux Mint 17**</span><span class="sxs-lookup"><span data-stu-id="549c4-211">**Ubuntu 14.04 / Linux Mint 17**</span></span>
-
-   ```bash
-   sudo sh -c 'echo "deb [arch=amd64] https://apt-mo.trafficmanager.net/repos/dotnet-release/ trusty main" > /etc/apt/sources.list.d/dotnetdev.list'
-   sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys B02C46DF417A0893
-   sudo apt-get update
-   ```
-
-3. <span data-ttu-id="549c4-212">Installez .NET Core 1.x sur Ubuntu ou Linux Mint :</span><span class="sxs-lookup"><span data-stu-id="549c4-212">Install .NET Core 1.x on Ubuntu or Linux Mint:</span></span>
-
-   ```bash
-   sudo apt-get install dotnet-dev-1.0.4
-   ```
-
-4. <span data-ttu-id="549c4-213">Exécutez la commande `dotnet --version` pour vérifier que l’installation a réussi.</span><span class="sxs-lookup"><span data-stu-id="549c4-213">Run the `dotnet --version` command to prove the installation succeeded.</span></span>
-
-   ```bash
-   dotnet --version
-   ```
-
----
-
- ## <a name="install-net-core-for-debian-8-or-debian-9-64-bit"></a><span data-ttu-id="549c4-214">Installer .NET Core pour Debian 8 ou Debian 9 (64 bits)</span><span class="sxs-lookup"><span data-stu-id="549c4-214">Install .NET Core for Debian 8 or Debian 9 (64 bit)</span></span>
-
-<span data-ttu-id="549c4-215">Pour installer .NET Core sur Debian 8 ou Debian 9 (64 bits) :</span><span class="sxs-lookup"><span data-stu-id="549c4-215">To install .NET Core on Debian 8 or Debian 9 (64 bit):</span></span>
-
-1. <span data-ttu-id="549c4-216">Supprimez du système toute **version antérieure** de .NET Core.</span><span class="sxs-lookup"><span data-stu-id="549c4-216">Remove any **previous preview** versions of .NET Core from your system.</span></span>
-
-> [!NOTE]
-> <span data-ttu-id="549c4-217">Un répertoire contrôlé par l’utilisateur est requis pour les installations du système Linux système depuis tar.gz.</span><span class="sxs-lookup"><span data-stu-id="549c4-217">A user-controlled directory is required for Linux system installs from tar.gz.</span></span>
-
-# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="549c4-218">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="549c4-218">.NET Core 2.x</span></span>](#tab/netcore2x)
-
-2. <span data-ttu-id="549c4-219">Installez les composants du système.</span><span class="sxs-lookup"><span data-stu-id="549c4-219">Install system components.</span></span>
-
-   ```bash
-   sudo apt-get update
-   sudo apt-get install curl libunwind8 gettext apt-transport-https
-   ```
-   
-3. <span data-ttu-id="549c4-220">Enregistrez la clé de produit Microsoft approuvée.</span><span class="sxs-lookup"><span data-stu-id="549c4-220">Register the trusted Microsoft Product key.</span></span>
-
-   ```bash
-   curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
-   sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
-   ```
-   
-4. <span data-ttu-id="549c4-221">Enregistrez le flux de produit Microsoft approuvé.</span><span class="sxs-lookup"><span data-stu-id="549c4-221">Register the Microsoft Product feed.</span></span>
-
-   <span data-ttu-id="549c4-222">**Debian 9 (Stretch)**</span><span class="sxs-lookup"><span data-stu-id="549c4-222">**Debian 9 (Stretch)**</span></span>
-
-   ```bash
-   sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-debian-stretch-prod stretch main" > /etc/apt/sources.list.d/dotnetdev.list'
-   ```
-   
-   <span data-ttu-id="549c4-223">**Debian 8 (Jessie)**</span><span class="sxs-lookup"><span data-stu-id="549c4-223">**Debian 8 (Jessie)**</span></span>
-   
-   ```bash
-   sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-debian-jessie-prod jessie main" > /etc/apt/sources.list.d/dotnetdev.list'
-   ```
-   
-5. <span data-ttu-id="549c4-224">Installez le SDK .NET Core.</span><span class="sxs-lookup"><span data-stu-id="549c4-224">Install .NET Core SDK.</span></span>
-
-   ```bash
-   sudo apt-get update
-   sudo apt-get install dotnet-sdk-2.0.0
-   ```
-
-6. <span data-ttu-id="549c4-225">Ajoutez dotnet au chemin.</span><span class="sxs-lookup"><span data-stu-id="549c4-225">Add dotnet to your PATH.</span></span>
-
-   ```bash
-   export PATH=$PATH:$HOME/dotnet
-   ```
-   
-7. <span data-ttu-id="549c4-226">Exécutez la commande `dotnet --version` pour vérifier que l’installation a réussi.</span><span class="sxs-lookup"><span data-stu-id="549c4-226">Run the `dotnet --version` command to prove the installation succeeded.</span></span>
-
-   ```bash
-   dotnet --version
-   ```   
-  
-
-# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="549c4-227">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="549c4-227">.NET Core 1.x</span></span>](#tab/netcore1x)
-
-2. <span data-ttu-id="549c4-228">Vérifier les prérequis.</span><span class="sxs-lookup"><span data-stu-id="549c4-228">Get the prerequisites.</span></span>
-
-   ```bash
-   sudo apt-get install curl libunwind8 gettext
-   ```
-
-3. <span data-ttu-id="549c4-229">Téléchargez les fichiers binaires du SDK .NET Core (tarball).</span><span class="sxs-lookup"><span data-stu-id="549c4-229">Download the .NET Core SDK binaries (tarball).</span></span>
-
-   ```bash
-   curl -sSL -o dotnet.tar.gz https://go.microsoft.com/fwlink/?linkid=848826
-   ```
-
-4. <span data-ttu-id="549c4-230">Extrayez les fichiers binaires du SDK .NET Core.</span><span class="sxs-lookup"><span data-stu-id="549c4-230">Extract the .NET Core SDK binaries.</span></span>
-
-   ```bash
-   sudo mkdir -p /opt/dotnet && sudo tar zxf dotnet.tar.gz -C /opt/dotnet
-   ```
-
-5. <span data-ttu-id="549c4-231">Ajoutez dotnet au chemin.</span><span class="sxs-lookup"><span data-stu-id="549c4-231">Add dotnet to your PATH.</span></span>
-
-   ```bash
-   sudo ln -s /opt/dotnet/dotnet /usr/local/bin
-   ```
-
-6. <span data-ttu-id="549c4-232">Exécutez la commande `dotnet --version` pour vérifier que l’installation a réussi.</span><span class="sxs-lookup"><span data-stu-id="549c4-232">Run the `dotnet --version` command to prove the installation succeeded.</span></span>
-
-   ```bash
-   dotnet --version
-   ```
-
----
-
-## <a name="install-net-core-for-fedora-24-fedora-25-or-fedora-26-64-bit"></a><span data-ttu-id="549c4-233">Installer .NET Core pour Fedora 24, Fedora 25 ou Fedora 26 (64 bits)</span><span class="sxs-lookup"><span data-stu-id="549c4-233">Install .NET Core for Fedora 24, Fedora 25, or Fedora 26 (64 bit)</span></span>
-
-<span data-ttu-id="549c4-234">Pour installer .NET Core 2.x sur Fedora 26 ou Fedora 25, ou .NET Core 1.x sur Fedora 24 :</span><span class="sxs-lookup"><span data-stu-id="549c4-234">To install .NET Core 2.x on Fedora 26 or Fedora 25, or .NET Core 1.x on Fedora 24:</span></span>
-
-1. <span data-ttu-id="549c4-235">Supprimez du système toute **version antérieure** de .NET Core.</span><span class="sxs-lookup"><span data-stu-id="549c4-235">Remove any **previous preview** versions of .NET Core from your system.</span></span>
-
-> [!NOTE]
-> <span data-ttu-id="549c4-236">Un répertoire contrôlé par l’utilisateur est requis pour les installations du système Linux système depuis tar.gz.</span><span class="sxs-lookup"><span data-stu-id="549c4-236">A user-controlled directory is required for Linux system installs from tar.gz.</span></span>
-
-# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="549c4-237">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="549c4-237">.NET Core 2.x</span></span>](#tab/netcore2x)
-
-<span data-ttu-id="549c4-238">**Fedora 26 ou Fedora 25**</span><span class="sxs-lookup"><span data-stu-id="549c4-238">**Fedora 26 or Fedora 25**</span></span>
-
-2. <span data-ttu-id="549c4-239">Enregistrez la clé de signature Microsoft approuvée.</span><span class="sxs-lookup"><span data-stu-id="549c4-239">Register the Microsoft signature key.</span></span>
-
-   ```bash
-   sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-   ```
-
-3. <span data-ttu-id="549c4-240">Ajoutez le flux de produit dotnet.</span><span class="sxs-lookup"><span data-stu-id="549c4-240">Add the dotnet product feed.</span></span>
-
-   ```bash
-   sudo sh -c 'echo -e "[packages-microsoft-com-prod]\nname=packages-microsoft-com-prod \nbaseurl=https://packages.microsoft.com/yumrepos/microsoft-rhel7.3-prod\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/dotnetdev.repo'
-   ```
-
-4. <span data-ttu-id="549c4-241">Installez le SDK .NET Core.</span><span class="sxs-lookup"><span data-stu-id="549c4-241">Install the .NET Core SDK.</span></span>
-
-   ```bash
-   sudo dnf update
-   sudo dnf install libunwind libicu
-   sudo dnf install dotnet-sdk-2.0.0
-   ```
-
-5. <span data-ttu-id="549c4-242">Ajoutez dotnet au chemin.</span><span class="sxs-lookup"><span data-stu-id="549c4-242">Add dotnet to your PATH.</span></span>
-
-   ```bash
-   export PATH=$PATH:$HOME/dotnet
-   ```
-
-# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="549c4-243">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="549c4-243">.NET Core 1.x</span></span>](#tab/netcore1x)
-
-<span data-ttu-id="549c4-244">**Fedora 24**</span><span class="sxs-lookup"><span data-stu-id="549c4-244">**Fedora 24**</span></span>
-
-2. <span data-ttu-id="549c4-245">Vérifier les prérequis.</span><span class="sxs-lookup"><span data-stu-id="549c4-245">Get the prerequisites.</span></span>
-
-   ```bash
-   sudo dnf install libunwind libicu
-   ```
-
-3. <span data-ttu-id="549c4-246">Téléchargez le fichier binaire du SDK .NET Core (tarball).</span><span class="sxs-lookup"><span data-stu-id="549c4-246">Download the .NET Core SDK binary  (tarball).</span></span>
-
-   ```bash
-   curl -sSL -o dotnet.tar.gz https://go.microsoft.com/fwlink/?linkid=848833
-   ```
-
-4. <span data-ttu-id="549c4-247">Extrayez les fichiers binaires du SDK .NET Core.</span><span class="sxs-lookup"><span data-stu-id="549c4-247">Extract the .NET Core SDK binaries.</span></span>
-
-   ```bash
-   sudo mkdir -p /opt/dotnet && sudo tar zxf dotnet.tar.gz -C /opt/dotnet
-   ```
-
-5. <span data-ttu-id="549c4-248">Ajoutez dotnet au chemin.</span><span class="sxs-lookup"><span data-stu-id="549c4-248">Add dotnet to your PATH.</span></span>
-
-   ```bash
-   sudo ln -s /opt/dotnet/dotnet /usr/local/bin
-   ```
-   
----
-
-6. <span data-ttu-id="549c4-249">Exécutez la commande `dotnet --version` pour vérifier que l’installation a réussi.</span><span class="sxs-lookup"><span data-stu-id="549c4-249">Run the `dotnet --version` command to prove the installation succeeded.</span></span>
-
-   ```bash
-   dotnet --version
-   ```
-
-## <a name="install-net-core-for-centos-71-64-bit--oracle-linux-71-64-bit"></a><span data-ttu-id="549c4-250">Installer .NET Core pour CentOS 7.1 (64 bits) et Oracle Linux 7.1 (64 bits)</span><span class="sxs-lookup"><span data-stu-id="549c4-250">Install .NET Core for CentOS 7.1 (64 bit) & Oracle Linux 7.1 (64 bit)</span></span>
-
-<span data-ttu-id="549c4-251">Pour installer .NET Core pour CentOS 7.1 (64 bits) et Oracle Linux 7.1 (64 bits) :</span><span class="sxs-lookup"><span data-stu-id="549c4-251">To install .NET Core for CentOS 7.1 (64 bit) & Oracle Linux 7.1 (64 bit):</span></span>
-
-1. <span data-ttu-id="549c4-252">Supprimez du système toute **version antérieure** de .NET Core.</span><span class="sxs-lookup"><span data-stu-id="549c4-252">Remove any **previous preview** versions of .NET Core from your system.</span></span>
-
-> [!NOTE]
-> <span data-ttu-id="549c4-253">Un répertoire contrôlé par l’utilisateur est requis pour les installations du système Linux système depuis tar.gz.</span><span class="sxs-lookup"><span data-stu-id="549c4-253">A user-controlled directory is required for Linux system installs from tar.gz.</span></span>
-
-# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="549c4-254">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="549c4-254">.NET Core 2.x</span></span>](#tab/netcore2x)
-
-2. <span data-ttu-id="549c4-255">Enregistrez la clé de signature Microsoft approuvée.</span><span class="sxs-lookup"><span data-stu-id="549c4-255">Register the Microsoft signature key.</span></span>
-
-   ```bash
-   sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-   ```
-
-3. <span data-ttu-id="549c4-256">Ajoutez le flux de produit Microsoft.</span><span class="sxs-lookup"><span data-stu-id="549c4-256">Add the Microsoft Product feed.</span></span>
-
-   ```bash
-   sudo sh -c 'echo -e "[packages-microsoft-com-prod]\nname=packages-microsoft-com-prod \nbaseurl=https://packages.microsoft.com/yumrepos/microsoft-rhel7.3-prod\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/dotnetdev.repo'
-   ```
-
-4. <span data-ttu-id="549c4-257">Installez le SDK .NET Core.</span><span class="sxs-lookup"><span data-stu-id="549c4-257">Install the .NET Core SDK.</span></span>
-
-   ```bash
-   sudo yum update
-   sudo yum install libunwind libicu
-   sudo yum install dotnet-sdk-2.0.0
-   ```
-
-5. <span data-ttu-id="549c4-258">Ajoutez dotnet au chemin.</span><span class="sxs-lookup"><span data-stu-id="549c4-258">Add dotnet to your PATH</span></span>
-
-   ```bash
-   export PATH=$PATH:$HOME/dotnet
-   ```
-
-# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="549c4-259">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="549c4-259">.NET Core 1.x</span></span>](#tab/netcore1x)
-
-2. <span data-ttu-id="549c4-260">Vérifier les prérequis.</span><span class="sxs-lookup"><span data-stu-id="549c4-260">Get the prerequisites.</span></span>
-
-   ```bash
-   sudo yum install libunwind libicu
-   ```
-   
-3. <span data-ttu-id="549c4-261">Téléchargez le fichier binaire du SDK .NET Core (tarball).</span><span class="sxs-lookup"><span data-stu-id="549c4-261">Download the .NET Core SDK binary (tarball).</span></span>
-
-   ```bash
-   curl -sSL -o dotnet.tar.gz https://go.microsoft.com/fwlink/?linkid=848821
-   ```
-
-4. <span data-ttu-id="549c4-262">Extrayez les fichiers binaires du SDK .NET Core.</span><span class="sxs-lookup"><span data-stu-id="549c4-262">Extract the .NET Core SDK binaries.</span></span>
-
-   ```bash
-   sudo mkdir -p /opt/dotnet && sudo tar zxf dotnet.tar.gz -C /opt/dotnet
-   ```
-
-5. <span data-ttu-id="549c4-263">Ajoutez dotnet au chemin.</span><span class="sxs-lookup"><span data-stu-id="549c4-263">Add dotnet to your PATH.</span></span>
-
-   ```bash
-   sudo ln -s /opt/dotnet/dotnet /usr/local/bin
-   ```
-
----
-
-6. <span data-ttu-id="549c4-264">Exécutez la commande `dotnet --version` pour vérifier que l’installation a réussi.</span><span class="sxs-lookup"><span data-stu-id="549c4-264">Run the `dotnet --version` command to prove the installation succeeded.</span></span>
-
-   ```bash
-   dotnet --version
-   ```
-
-## <a name="install-net-core-for-suse-linux-enterprise-server-64-bit"></a><span data-ttu-id="549c4-265">Installer .NET Core pour SUSE Linux Enterprise Server (64 bits)</span><span class="sxs-lookup"><span data-stu-id="549c4-265">Install .NET Core for SUSE Linux Enterprise Server (64 bit)</span></span>
-
-<span data-ttu-id="549c4-266">Pour installer .NET Core 2.x pour SUSE Linux Enterprise Server (SLES) 12 SP2 (64 bits) :</span><span class="sxs-lookup"><span data-stu-id="549c4-266">To install .NET Core 2.x for SUSE Linux Enterprise Server (SLES) 12 SP2 (64 bit):</span></span>
-
-1. <span data-ttu-id="549c4-267">Supprimez du système toute **version antérieure** de .NET Core.</span><span class="sxs-lookup"><span data-stu-id="549c4-267">Remove any **previous preview** versions of .NET Core from your system.</span></span>
-
-2. <span data-ttu-id="549c4-268">Ajoutez le flux de produit dotnet.</span><span class="sxs-lookup"><span data-stu-id="549c4-268">Add the dotnet product feed.</span></span>
-
-   ```bash
-   sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-   sudo sh -c 'echo -e "[packages-microsoft-com-prod]\nname=packages-microsoft-com-prod \nbaseurl=https://packages.microsoft.com/yumrepos/microsoft-rhel7.3-prod\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/zypp/repos.d/dotnetdev.repo'
-   ```
-
-3. <span data-ttu-id="549c4-269">Installez le SDK .NET Core.</span><span class="sxs-lookup"><span data-stu-id="549c4-269">Install the .NET Core SDK.</span></span>
-
-   ```bash
-   sudo zypper update
-   sudo zypper install libunwind libicu
-   sudo zypper install dotnet-sdk-2.0.0
-   ```
-
-4. <span data-ttu-id="549c4-270">Ajoutez dotnet au chemin.</span><span class="sxs-lookup"><span data-stu-id="549c4-270">Add dotnet to your PATH.</span></span>
-
-   ```bash
-   export PATH=$PATH:$HOME/dotnet
-   ```
-
-5. <span data-ttu-id="549c4-271">Exécutez la commande `dotnet --version` pour vérifier que l’installation a réussi.</span><span class="sxs-lookup"><span data-stu-id="549c4-271">Run the `dotnet --version` command to prove the installation succeeded.</span></span>
-
-   ```bash
-   dotnet --version
-   ```
-   
-## <a name="install-net-core-for-opensuse-64-bit"></a><span data-ttu-id="549c4-272">Installer .NET Core pour openSUSE (64 bits)</span><span class="sxs-lookup"><span data-stu-id="549c4-272">Install .NET Core for openSUSE (64 bit)</span></span>
-
-<span data-ttu-id="549c4-273">Pour installer .NET Core 2.x pour openSUSE ou .NET Core 1.x pour openSUSE (64 bits) :</span><span class="sxs-lookup"><span data-stu-id="549c4-273">To install .NET Core 2.x for openSUSE or .NET Core 1.x for openSUSE (64 bit):</span></span>
-
-1. <span data-ttu-id="549c4-274">Supprimez du système toute **version antérieure** de .NET Core.</span><span class="sxs-lookup"><span data-stu-id="549c4-274">Remove any **previous preview** versions of .NET Core from your system.</span></span>
-
-> [!NOTE]
-> <span data-ttu-id="549c4-275">Un répertoire contrôlé par l’utilisateur est requis pour les installations du système Linux système depuis tar.gz.</span><span class="sxs-lookup"><span data-stu-id="549c4-275">A user-controlled directory is required for Linux system installs from tar.gz.</span></span>
-
-# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="549c4-276">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="549c4-276">.NET Core 2.x</span></span>](#tab/netcore2x)
-
-2. <span data-ttu-id="549c4-277">Enregistrez la clé de signature Microsoft approuvée.</span><span class="sxs-lookup"><span data-stu-id="549c4-277">Register the Microsoft signature key.</span></span>
-
-   ```bash
-   sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-   ```
-
-3. <span data-ttu-id="549c4-278">Ajoutez le flux de produit dotnet.</span><span class="sxs-lookup"><span data-stu-id="549c4-278">Add the dotnet product feed.</span></span>
-
-   ```bash
-   sudo sh -c 'echo -e "[packages-microsoft-com-prod]\nname=packages-microsoft-com-prod \nbaseurl=https://packages.microsoft.com/yumrepos/microsoft-rhel7.3-prod\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/zypp/repos.d/dotnetdev.repo'
-   ``` 
-
-4. <span data-ttu-id="549c4-279">Installez le SDK .NET Core.</span><span class="sxs-lookup"><span data-stu-id="549c4-279">Install the .NET Core SDK.</span></span>
-
-   ```bash
-   sudo zypper update
-   sudo zypper install libunwind libicu
-   sudo zypper install dotnet-sdk-2.0.0
-   ```
-
-5. <span data-ttu-id="549c4-280">Ajoutez dotnet au chemin.</span><span class="sxs-lookup"><span data-stu-id="549c4-280">Add dotnet to your PATH.</span></span>
-
-   ```bash
-   export PATH=$PATH:$HOME/dotnet
-   ```
-
-# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="549c4-281">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="549c4-281">.NET Core 1.x</span></span>](#tab/netcore1x)
-
-2. <span data-ttu-id="549c4-282">Vérifier les prérequis.</span><span class="sxs-lookup"><span data-stu-id="549c4-282">Get the prerequisites.</span></span>
-
-   ```bash
-   sudo zypper install libunwind libicu
-   ```
-
-3. <span data-ttu-id="549c4-283">Téléchargez le fichier binaire du SDK .NET Core (tarball).</span><span class="sxs-lookup"><span data-stu-id="549c4-283">Download the .NET Core SDK binary (tarball).</span></span>
-
-   ```bash
-   curl -sSL -o dotnet.tar.gz https://go.microsoft.com/fwlink/?linkid=848824
-   ```
-
-4. <span data-ttu-id="549c4-284">Extrayez les fichiers binaires du SDK .NET Core.</span><span class="sxs-lookup"><span data-stu-id="549c4-284">Extract the .NET Core SDK binaries.</span></span>
-   
-   ```bash
-   sudo mkdir -p /opt/dotnet && sudo tar zxf dotnet.tar.gz -C /opt/dotnet
-   ```
-
-5. <span data-ttu-id="549c4-285">Ajoutez dotnet au chemin.</span><span class="sxs-lookup"><span data-stu-id="549c4-285">Add dotnet to your PATH.</span></span>
-
-   ```bash
-   sudo ln -s /opt/dotnet/dotnet /usr/local/bin
-   ```
-   
----
-
-6. <span data-ttu-id="549c4-286">Exécutez la commande `dotnet --version` pour vérifier que l’installation a réussi.</span><span class="sxs-lookup"><span data-stu-id="549c4-286">Run the `dotnet --version` command to prove the installation succeeded.</span></span>
-
-   ```bash
-   dotnet --version
-   ```
-
-> [!IMPORTANT]
-> <span data-ttu-id="549c4-287">En cas de problème avec l’installation de .NET Core 2.x sur une distribution/version Linux prise en charge, consultez la rubrique correspondante traitant des [problèmes connus avec la version 2.0](https://github.com/dotnet/core/tree/master/release-notes/2.0).</span><span class="sxs-lookup"><span data-stu-id="549c4-287">If you have problems with the .NET Core 2.x installation on a supported Linux distribution/version, consult the [2.0 Known issues](https://github.com/dotnet/core/tree/master/release-notes/2.0) topic for your installed distributions/versions.</span></span> 
->
-> <span data-ttu-id="549c4-288">En cas de problème avec l’installation de .NET Core 1.x sur une distribution/version Linux prise en charge, consultez la rubrique correspondante traitant des [problèmes connus avec la version 1.0.0](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.0-known-issues.md) ou des [problèmes connus avec la version 1.0.1](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.1-known-issues.md).</span><span class="sxs-lookup"><span data-stu-id="549c4-288">If you have problems with the .NET Core 1.x installation on a supported Linux distribution/version, consult the [1.0.0 Known Issues](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.0-known-issues.md) and [1.0.1 Known Issues](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.1-known-issues.md) topics for your installed distributions/versions.</span></span>
+> <span data-ttu-id="1475e-424">En cas de problème avec une installation de .NET Core sur une distribution/version de Linux prise en charge, consultez les rubriques suivantes correspondant à vos distributions/versions installées :</span><span class="sxs-lookup"><span data-stu-id="1475e-424">If you have problems with a .NET Core installation on a supported Linux distribution/version, consult the following topics for your installed distributions/versions:</span></span>
+> * [<span data-ttu-id="1475e-425">Problèmes connus avec .NET Core 2.1</span><span class="sxs-lookup"><span data-stu-id="1475e-425">.NET Core 2.1 known issues</span></span>](https://github.com/dotnet/core/tree/master/release-notes/2.1)
+> * [<span data-ttu-id="1475e-426">Problèmes connus avec .NET Core 2.0</span><span class="sxs-lookup"><span data-stu-id="1475e-426">.NET Core 2.0 known issues</span></span>](https://github.com/dotnet/core/tree/master/release-notes/2.0)
+> * [<span data-ttu-id="1475e-427">Problèmes connus avec .NET Core 1.1</span><span class="sxs-lookup"><span data-stu-id="1475e-427">.NET Core 1.1 known issues</span></span>](https://github.com/dotnet/core/blob/master/release-notes/1.1)
+> * [<span data-ttu-id="1475e-428">Problèmes connus avec .NET Core 1.0</span><span class="sxs-lookup"><span data-stu-id="1475e-428">.NET Core 1.0 known issues</span></span>](https://github.com/dotnet/core/blob/master/release-notes/1.0)
