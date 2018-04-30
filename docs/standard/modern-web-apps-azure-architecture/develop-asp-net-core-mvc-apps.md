@@ -6,14 +6,15 @@ ms.author: wiwagn
 ms.date: 10/07/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c10bf66dd37f0d99c038db7f95999d84986152fa
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c5e2d603062095c02af500ae74a9ea708cf9aefa
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Développer des applications ASP.NET Core MVC
 
@@ -74,14 +75,14 @@ Pour les API web, ASP.NET Core MVC prend en charge la [*négociation de contenu*
 > ### <a name="references--mapping-requests-to-responses"></a>Références – Mappage des requêtes aux réponses
 > - **Routage vers les actions du contrôleur**
 > <https://docs.microsoft.com/aspnet/core/mvc/controllers/routing>
-> - **Liaison de données** https://docs.microsoft.com/aspnet/core/mvc/models/model-binding
+> - **Liaison de modèle**https://docs.microsoft.com/aspnet/core/mvc/models/model-binding
 > - **Validation du modèle**
 > <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
 > - **Filtres** https://docs.microsoft.com/aspnet/core/mvc/controllers/filters
 
 ## <a name="working-with-dependencies"></a>Utilisation de dépendances
 
-ASP.NET Core intègre la prise en charge d’une technique appelée « [injection de dépendances](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection) » qu’il utilise en interne. L’injection de dépendances est une technique permettant un couplage faible entre différentes parties d’une application. Un couplage faible est un objectif souhaitable dans la mesure où il facilite l’isolation des parties d’une application à des fins de test ou de remplacement. Il réduit aussi le risque qu’un changement apporté à une partie de l’application ait un impact inattendu à un autre endroit de l’application. Basée sur le principe d’inversion de dépendances, l’injection de dépendances joue souvent un rôle clé dans la réalisation du principe ouvert/fermé. Quand vous évaluez le fonctionnement de votre application avec ses dépendances, prenez garde au « code smell » [Static Cling](http://deviq.com/static-cling/) (adhésion statique), et n’oubliez pas l’aphorisme « [New is Glue](http://ardalis.com/new-is-glue) » (couplage du code résultant de l’utilisation du mot clé new).
+ASP.NET Core intègre la prise en charge d’une technique appelée « [injection de dépendances](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection) » qu’il utilise en interne. L’injection de dépendances est une technique permettant un couplage faible entre différentes parties d’une application. Un couplage faible est un objectif souhaitable dans la mesure où il facilite l’isolation des parties d’une application à des fins de test ou de remplacement. Il réduit aussi le risque qu’un changement apporté à une partie de l’application ait un impact inattendu à un autre endroit de l’application. Basée sur le principe d’inversion de dépendances, l’injection de dépendances joue souvent un rôle clé dans la réalisation du principe ouvert/fermé. Quand vous évaluez le fonctionnement de votre application avec ses dépendances, prenez garde au « code smell » [Static Cling](http://deviq.com/static-cling/) (adhésion statique), et n’oubliez pas l’aphorisme « [New is Glue](https://ardalis.com/new-is-glue) » (couplage du code résultant de l’utilisation du mot clé new).
 
 Le phénomène de « static cling » se produit quand vos classes appellent des méthodes statiques ou accèdent à des propriétés statiques qui ont des effets secondaires ou des dépendances sur l’infrastructure. Par exemple, si vous avez une méthode qui appelle une méthode statique qui à son tour écrit dans une base de données, votre méthode est alors étroitement couplée à la base de données. Tout problème interrompant cet appel de base de données arrête donc votre méthode. Les procédures à mettre en œuvre pour tester ces méthodes sont notoirement difficiles, car elles nécessitent des bibliothèques de simulation commerciale pour simuler les appels statiques ou la mise en place d’une base de données de test. Les appels statiques qui ne dépendent pas de l’infrastructure, en particulier ceux sans état, ne posent pas de problèmes et n’ont aucun impact sur le couplage ou la testabilité (au-delà du couplage du code à l’appel statique proprement dit).
 
@@ -281,11 +282,11 @@ public async Task<IActionResult> Put(int id, [FromBody]Author author)
 Pour découvrir plus en détail les filtres d’implémentation et télécharger un exemple fonctionnel, consultez l’article [Real World ASP.NET Core MVC Filters](https://msdn.microsoft.com/magazine/mt767699.aspx) sur MSDN.
 
 > ### <a name="references--structuring-applications"></a>Références – Structuration des Applications
-> - **Zones**  
+> - **Les zones (areas)**  
 > <https://docs.microsoft.com/aspnet/core/mvc/controllers/areas>
-> - **MSDN – Feature Slices for ASP.NET Core MVC**
+> - **MSDN – Séparation des fonctionnalités pour ASP.NET Core MVC**
 >  <https://msdn.microsoft.com/magazine/mt763233.aspx>
-> - **Filtres**  
+> - **Les filtres**  
 > <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
 > - **MSDN – Real World ASP.NET Core MVC Filters**  
 > <https://msdn.microsoft.com/magazine/mt767699.aspx>

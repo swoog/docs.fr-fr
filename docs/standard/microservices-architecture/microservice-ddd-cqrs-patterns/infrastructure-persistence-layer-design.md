@@ -11,15 +11,15 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 76db5388c75d4eb3b5cc23c1e57cc391a15f2934
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: cab12426308be258134e0385c5a6eb6cdb5d544b
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="designing-the-infrastructure-persistence-layer"></a>Conception de la couche de persistance de l’infrastructure
 
-Les composants de persistance des données fournissent l’accès aux données hébergées dans les limites d’un microservice (autrement dit, la base de données d’un microservice). Ils contiennent l’implémentation réelle des composants tels que les dépôts et les classes d’[unité de travail](http://martinfowler.com/eaaCatalog/unitOfWork.html), comme les DBContexts EF personnalisés.
+Les composants de persistance des données fournissent l’accès aux données hébergées dans les limites d’un microservice (autrement dit, la base de données d’un microservice). Ils contiennent l’implémentation réelle des composants tels que les dépôts et les classes d’[unité de travail](https://martinfowler.com/eaaCatalog/unitOfWork.html), comme les DBContexts EF personnalisés.
 
 ## <a name="the-repository-pattern"></a>Le modèle Dépôt
 
@@ -90,7 +90,7 @@ Un objet d’accès aux données exécute directement des opérations d’accès
 
 Une unité de travail est définie comme une transaction unique qui implique plusieurs opérations d’insertion, de mise à jour ou de suppression. En termes simples, cela signifie que, pour une action utilisateur spécifique (par exemple, une inscription sur un site web), toutes les transactions d’insertion, de mise à jour et de suppression sont gérées dans une transaction unique. Une telle gestion est plus efficace que de gérer plusieurs transactions de base de données d’une manière plus bavarde.
 
-Ces multiples opérations de persistance sont effectuées ultérieurement en une seule action quand votre code de la couche Application la commande. La décision d’appliquer les modifications en mémoire au stockage réel de la base de données se base généralement sur le [modèle Unité de travail](http://martinfowler.com/eaaCatalog/unitOfWork.html). Dans EF, le modèle Unité de travail est implémenté en tant que DBContext.
+Ces multiples opérations de persistance sont effectuées ultérieurement en une seule action quand votre code de la couche Application la commande. La décision d’appliquer les modifications en mémoire au stockage réel de la base de données se base généralement sur le [modèle Unité de travail](https://martinfowler.com/eaaCatalog/unitOfWork.html). Dans EF, le modèle Unité de travail est implémenté en tant que DBContext.
 
 Dans de nombreux cas, ce modèle ou cette façon d’appliquer des opérations dans le stockage peut augmenter les performances de l’application et réduire le risque d’incohérences. De plus, cela réduit le blocage des transactions dans les tables de base de données, car toutes les opérations prévues sont validées dans le cadre d’une seule transaction. Ce modèle est plus efficace que l’exécution de nombreuses opérations isolées sur la base de données. Par conséquent, l’ORM sélectionné est en mesure d’optimiser l’exécution sur la base de données en regroupant plusieurs actions de mise à jour au sein de la même transaction, au lieu d’exécuter de nombreuses transactions distinctes de petite taille.
 
@@ -138,21 +138,21 @@ Dans les sections ci-après, la manière d’implémenter le modèle Spécificat
 
 ### <a name="the-repository-pattern"></a>Le modèle Dépôt
 
--   **Edward Hieatt et Rob Mee. Modèle de référentiel.**
-    [*http://martinfowler.com/eaaCatalog/repository.html*](http://martinfowler.com/eaaCatalog/repository.html)
+-   **Edward Hieatt et Rob Mee. Repository pattern.**
+    [*https://martinfowler.com/eaaCatalog/repository.html*](https://martinfowler.com/eaaCatalog/repository.html)
 
--   **Le modèle de référentiel**
+-   **The Repository pattern**
     [*https://msdn.microsoft.com/library/ff649690.aspx*](https://msdn.microsoft.com/library/ff649690.aspx)
 
--   **Modèle de référentiel : Une persistance abstraction de données**
+-   **Repository Pattern: A data persistence abstraction**
     [*http://deviq.com/repository-pattern/*](http://deviq.com/repository-pattern/)
 
--   **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software.** (Livre et en savoir plus sur le modèle de référentiel) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+-   **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software.** (Book; includes a discussion of the Repository pattern) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
 ### <a name="unit-of-work-pattern"></a>Modèle Unité de travail
 
--   **Martin Fowler. Unité de modèle de travail.**
-    [*http://martinfowler.com/eaaCatalog/unitOfWork.html*](http://martinfowler.com/eaaCatalog/unitOfWork.html)
+-   **Martin Fowler. Unit of Work pattern.**
+    [*https://martinfowler.com/eaaCatalog/unitOfWork.html*](https://martinfowler.com/eaaCatalog/unitOfWork.html)
 
 <!-- -->
 
@@ -161,7 +161,7 @@ Dans les sections ci-après, la manière d’implémenter le modèle Spécificat
 
 ### <a name="the-specification-pattern"></a>Le modèle Spécification
 
--   **Le modèle de spécification.**
+-   **The Specification pattern.**
     [*http://deviq.com/specification-pattern/*](http://deviq.com/specification-pattern/)
 
 -   **Evans, Eric (2004). Domain Driven Design. Addison-Wesley. p. 224.**
