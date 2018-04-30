@@ -1,37 +1,37 @@
 ---
 title: Services et transactions
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - service contracts [WCF], designing services and transactions
 ms.assetid: 864813ff-2709-4376-912d-f5c8d318c460
-caps.latest.revision: 
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f6256db06825a79b5235b92e2ed205608f04aac7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c39c9f6e56dc4c2bf2feb5340d7d1bb1b96f5ab6
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
-# <a name="services-and-transactions"></a><span data-ttu-id="4483d-102">Services et transactions</span><span class="sxs-lookup"><span data-stu-id="4483d-102">Services and Transactions</span></span>
-<span data-ttu-id="4483d-103">Les applications [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] peuvent initier une transaction à partir d'un client et coordonner la transaction dans l'opération de service.</span><span class="sxs-lookup"><span data-stu-id="4483d-103">[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] applications can initiate a transaction from within a client and coordinate the transaction within the service operation.</span></span> <span data-ttu-id="4483d-104">Les clients peuvent initier une transaction et appeler plusieurs opérations de service et s’assurer que les opérations de service sont validées ou annulées en tant qu’unité unique.</span><span class="sxs-lookup"><span data-stu-id="4483d-104">Clients can initiate a transaction and invoke several service operations and ensure that the service operations are either committed or rolled back as a single unit.</span></span>  
+# <a name="services-and-transactions"></a><span data-ttu-id="21b6a-102">Services et transactions</span><span class="sxs-lookup"><span data-stu-id="21b6a-102">Services and Transactions</span></span>
+<span data-ttu-id="21b6a-103">Les applications [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] peuvent initier une transaction à partir d'un client et coordonner la transaction dans l'opération de service.</span><span class="sxs-lookup"><span data-stu-id="21b6a-103">[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] applications can initiate a transaction from within a client and coordinate the transaction within the service operation.</span></span> <span data-ttu-id="21b6a-104">Les clients peuvent initier une transaction et appeler plusieurs opérations de service et s’assurer que les opérations de service sont validées ou annulées en tant qu’unité unique.</span><span class="sxs-lookup"><span data-stu-id="21b6a-104">Clients can initiate a transaction and invoke several service operations and ensure that the service operations are either committed or rolled back as a single unit.</span></span>  
   
- <span data-ttu-id="4483d-105">Vous pouvez activer le comportement de transaction dans le contrat de service en spécifiant un <xref:System.ServiceModel.ServiceBehaviorAttribute> et en définissant ses propriétés <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A> et <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> pour les opérations de service qui requièrent des transactions clientes.</span><span class="sxs-lookup"><span data-stu-id="4483d-105">You can enable the transaction behavior in the service contract by specifying a <xref:System.ServiceModel.ServiceBehaviorAttribute> and setting its <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A> and <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> properties for service operations that require client transactions.</span></span> <span data-ttu-id="4483d-106">Le paramètre <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> spécifie si la transaction dans laquelle la méthode s'exécute est automatiquement effectuée si aucune exception non prise en charge n'est levée.</span><span class="sxs-lookup"><span data-stu-id="4483d-106">The <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> parameter specifies whether the transaction in which the method executes is automatically completed if no unhandled exceptions are thrown.</span></span> [!INCLUDE[crabout](../../../includes/crabout-md.md)]<span data-ttu-id="4483d-107">Ces attributs, consultez [attributs de Transaction ServiceModel](../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md).</span><span class="sxs-lookup"><span data-stu-id="4483d-107"> these attributes, see [ServiceModel Transaction Attributes](../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md).</span></span>  
+ <span data-ttu-id="21b6a-105">Vous pouvez activer le comportement de transaction dans le contrat de service en spécifiant un <xref:System.ServiceModel.ServiceBehaviorAttribute> et en définissant ses propriétés <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A> et <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> pour les opérations de service qui requièrent des transactions clientes.</span><span class="sxs-lookup"><span data-stu-id="21b6a-105">You can enable the transaction behavior in the service contract by specifying a <xref:System.ServiceModel.ServiceBehaviorAttribute> and setting its <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A> and <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> properties for service operations that require client transactions.</span></span> <span data-ttu-id="21b6a-106">Le paramètre <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> spécifie si la transaction dans laquelle la méthode s'exécute est automatiquement effectuée si aucune exception non prise en charge n'est levée.</span><span class="sxs-lookup"><span data-stu-id="21b6a-106">The <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> parameter specifies whether the transaction in which the method executes is automatically completed if no unhandled exceptions are thrown.</span></span> <span data-ttu-id="21b6a-107">Pour plus d’informations sur ces attributs, consultez [attributs de Transaction ServiceModel](../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md).</span><span class="sxs-lookup"><span data-stu-id="21b6a-107">For more information about these attributes, see [ServiceModel Transaction Attributes](../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md).</span></span>  
   
- <span data-ttu-id="4483d-108">Le travail effectué dans les opérations de service et géré par un gestionnaire de ressources, tel que l’enregistrement des mises à jour de base de données, fait partie de la transaction du client.</span><span class="sxs-lookup"><span data-stu-id="4483d-108">The work that is performed in the service operations and managed by a resource manager, such as logging database updates, is part of the client’s transaction.</span></span>  
+ <span data-ttu-id="21b6a-108">Le travail effectué dans les opérations de service et géré par un gestionnaire de ressources, tel que l’enregistrement des mises à jour de base de données, fait partie de la transaction du client.</span><span class="sxs-lookup"><span data-stu-id="21b6a-108">The work that is performed in the service operations and managed by a resource manager, such as logging database updates, is part of the client’s transaction.</span></span>  
   
- <span data-ttu-id="4483d-109">L'exemple suivant illustre l'utilisation des attributs <xref:System.ServiceModel.ServiceBehaviorAttribute> et <xref:System.ServiceModel.OperationBehaviorAttribute> pour contrôler le comportement de transaction du côté service.</span><span class="sxs-lookup"><span data-stu-id="4483d-109">The following sample demonstrates usage of the <xref:System.ServiceModel.ServiceBehaviorAttribute> and <xref:System.ServiceModel.OperationBehaviorAttribute> attributes to control service-side transaction behavior.</span></span>  
+ <span data-ttu-id="21b6a-109">L'exemple suivant illustre l'utilisation des attributs <xref:System.ServiceModel.ServiceBehaviorAttribute> et <xref:System.ServiceModel.OperationBehaviorAttribute> pour contrôler le comportement de transaction du côté service.</span><span class="sxs-lookup"><span data-stu-id="21b6a-109">The following sample demonstrates usage of the <xref:System.ServiceModel.ServiceBehaviorAttribute> and <xref:System.ServiceModel.OperationBehaviorAttribute> attributes to control service-side transaction behavior.</span></span>  
   
 ```  
 [ServiceBehavior(TransactionIsolationLevel = System.Transactions.IsolationLevel.Serializable)]  
@@ -72,7 +72,7 @@ public class CalculatorService: ICalculatorLog
 }  
 ```  
   
- <span data-ttu-id="4483d-110">Vous pouvez activer les transactions et les transactions passent en configurant le client et que les liaisons pour utiliser le protocole WS-AtomicTransaction et paramètre de service le [ \<transactionFlow >](../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md) élément `true`, comme indiqué dans l’exemple de configuration.</span><span class="sxs-lookup"><span data-stu-id="4483d-110">You can enable transactions and transaction flow by configuring the client and service bindings to use the WS-AtomicTransaction protocol, and setting the [\<transactionFlow>](../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md) element to `true`, as shown in the following sample configuration.</span></span>  
+ <span data-ttu-id="21b6a-110">Vous pouvez activer les transactions et les transactions passent en configurant le client et que les liaisons pour utiliser le protocole WS-AtomicTransaction et paramètre de service le [ \<transactionFlow >](../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md) élément `true`, comme indiqué dans l’exemple de configuration.</span><span class="sxs-lookup"><span data-stu-id="21b6a-110">You can enable transactions and transaction flow by configuring the client and service bindings to use the WS-AtomicTransaction protocol, and setting the [\<transactionFlow>](../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md) element to `true`, as shown in the following sample configuration.</span></span>  
   
 ```xml  
 <client>  
@@ -91,7 +91,7 @@ public class CalculatorService: ICalculatorLog
 </bindings>  
 ```  
   
- <span data-ttu-id="4483d-111">Les clients peuvent commencer une transaction en créant un <xref:System.Transactions.TransactionScope> et en appelant des opérations de service dans la portée de la transaction.</span><span class="sxs-lookup"><span data-stu-id="4483d-111">Clients can begin a transaction by creating a <xref:System.Transactions.TransactionScope> and invoking service operations within the scope of the transaction.</span></span>  
+ <span data-ttu-id="21b6a-111">Les clients peuvent commencer une transaction en créant un <xref:System.Transactions.TransactionScope> et en appelant des opérations de service dans la portée de la transaction.</span><span class="sxs-lookup"><span data-stu-id="21b6a-111">Clients can begin a transaction by creating a <xref:System.Transactions.TransactionScope> and invoking service operations within the scope of the transaction.</span></span>  
   
 ```  
 using (TransactionScope ts = new TransactionScope(TransactionScopeOption.RequiresNew))  
@@ -101,7 +101,7 @@ using (TransactionScope ts = new TransactionScope(TransactionScopeOption.Require
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="4483d-112">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="4483d-112">See Also</span></span>  
- [<span data-ttu-id="4483d-113">Prise en charge transactionnelle dans System.ServiceModel</span><span class="sxs-lookup"><span data-stu-id="4483d-113">Transactional Support in System.ServiceModel</span></span>](../../../docs/framework/wcf/feature-details/transactional-support-in-system-servicemodel.md)  
- [<span data-ttu-id="4483d-114">Modèles de transaction</span><span class="sxs-lookup"><span data-stu-id="4483d-114">Transaction Models</span></span>](../../../docs/framework/wcf/feature-details/transaction-models.md)  
- [<span data-ttu-id="4483d-115">Flux de transaction WS</span><span class="sxs-lookup"><span data-stu-id="4483d-115">WS Transaction Flow</span></span>](../../../docs/framework/wcf/samples/ws-transaction-flow.md)
+## <a name="see-also"></a><span data-ttu-id="21b6a-112">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="21b6a-112">See Also</span></span>  
+ [<span data-ttu-id="21b6a-113">Prise en charge transactionnelle dans System.ServiceModel</span><span class="sxs-lookup"><span data-stu-id="21b6a-113">Transactional Support in System.ServiceModel</span></span>](../../../docs/framework/wcf/feature-details/transactional-support-in-system-servicemodel.md)  
+ [<span data-ttu-id="21b6a-114">Modèles de transaction</span><span class="sxs-lookup"><span data-stu-id="21b6a-114">Transaction Models</span></span>](../../../docs/framework/wcf/feature-details/transaction-models.md)  
+ [<span data-ttu-id="21b6a-115">Flux de transaction WS</span><span class="sxs-lookup"><span data-stu-id="21b6a-115">WS Transaction Flow</span></span>](../../../docs/framework/wcf/samples/ws-transaction-flow.md)
