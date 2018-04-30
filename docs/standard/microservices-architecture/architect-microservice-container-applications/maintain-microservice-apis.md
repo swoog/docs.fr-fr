@@ -1,6 +1,6 @@
 ---
-title: "Création, évolution et version des contrats et des API de microservices"
-description: "Architecture en microservices .NET pour les applications .NET en conteneur | Création, évolution et version des contrats et des API de microservices"
+title: Création, évolution et version des contrats et des API de microservices
+description: Architecture en microservices .NET pour les applications .NET en conteneur | Création, évolution et version des contrats et des API de microservices
 keywords: Docker, microservices, ASP.NET, conteneur
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 3aaa7eaa8bc535874369cf08414f2211cae1bed9
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 7a80405f0a206cfaa0462392eddfc95878353cd7
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="creating-evolving-and-versioning-microservice-apis-and-contracts"></a>Création, évolution et version des contrats et des API de microservices
 
@@ -34,9 +34,9 @@ Enfin, si vous utilisez une architecture REST, [Hypermedia](https://www.infoq.co
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
 -   **Scott Hanselman. ASP.NET Core RESTful Web API versioning made easy**
-    <http://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx>
+    <https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx>
 
--   **Gestion de version d’une API web RESTful**
+-   **Contrôle de version d’une API web RESTful**
     [*https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api*](https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
 
 -   **Roy Fielding. Versioning, Hypermedia, and REST**

@@ -1,6 +1,6 @@
 ---
-title: "Problématiques et solutions pour la gestion des données distribuées"
-description: "Architecture de microservices .NET pour les applications .NET en conteneur | Problématiques et solutions pour la gestion des données distribuées"
+title: Problématiques et solutions pour la gestion des données distribuées
+description: Architecture de microservices .NET pour les applications .NET en conteneur | Problématiques et solutions pour la gestion des données distribuées
 keywords: Docker, microservices, ASP.NET, conteneur
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: b0252586a508c059099885991b87c79346e0d809
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: a26f4243acee52e493a10f13ff18899823fd03ba
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>Problématiques et solutions pour la gestion des données distribuées
 
@@ -89,7 +89,7 @@ L’utilisation d’une communication asynchrone est expliquée plus en détails
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
--   **Théorème CAP**
+-   **CAP theorem**
     [*https://en.wikipedia.org/wiki/CAP\_theorem*](https://en.wikipedia.org/wiki/CAP_theorem)
 
 -   **Eventual consistency**
@@ -99,15 +99,15 @@ L’utilisation d’une communication asynchrone est expliquée plus en détails
     [*https://msdn.microsoft.com/library/dn589800.aspx*](https://msdn.microsoft.com/library/dn589800.aspx)
 
 -   **Martin Fowler. CQRS (Command and Query Responsibility Segregation)**
-    [*http://martinfowler.com/bliki/CQRS.html*](http://martinfowler.com/bliki/CQRS.html)
+    [*https://martinfowler.com/bliki/CQRS.html*](https://martinfowler.com/bliki/CQRS.html)
 
--   **Modèle de vue matérialisée**
+-   **Vue matérialisée**
     [*https://docs.microsoft.com/azure/architecture/patterns/materialized-view*](https://docs.microsoft.com/azure/architecture/patterns/materialized-view)
 
 -   **Charles Row. ACID vs. BASE: The Shifting pH of Database Transaction Processing**
     [*http://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/*](http://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/)
 
--   **Modèle de transaction de compensation**
+-   **Transaction de compensation**
     [*https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction*](https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction)
 
 -   **Udi Dahan. Service Oriented Composition**

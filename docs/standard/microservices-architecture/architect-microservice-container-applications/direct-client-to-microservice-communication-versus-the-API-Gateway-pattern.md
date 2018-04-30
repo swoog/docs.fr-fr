@@ -1,7 +1,7 @@
 ---
-title: "Communication directe de client à microservice et modèle de passerelle d’API"
-description: "Architecture de microservices .NET pour les applications .NET en conteneur | Communication directe de client à microservice et modèle de passerelle d’API"
-keywords: "Docker, Microservices, ASP.NET, Conteneur, Passerelle d’API"
+title: Communication directe de client à microservice et modèle de passerelle d’API
+description: Architecture de microservices .NET pour les applications .NET en conteneur | Communication directe de client à microservice et modèle de passerelle d’API
+keywords: Docker, Microservices, ASP.NET, Conteneur, Passerelle d’API
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 96a02958ef5750aec7a92ff0dd145edc15a5953a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: fa3f4bb97cf942ee7698b1efa1dcd09b3f2ca571
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="direct-client-to-microservice-communication-versus-the-api-gateway-pattern"></a>Communication directe de client à microservice et modèle de passerelle d’API
 
@@ -57,7 +57,7 @@ L’API de plusieurs microservices peut ne pas être bien conçue pour les besoi
 
 ## <a name="using-an-api-gateway"></a>Utilisation d’une passerelle d’API
 
-Quand vous concevez et que vous créez des applications de grande taille ou complexes basées sur des microservices avec plusieurs applications clientes, une [passerelle d’API](http://microservices.io/patterns/apigateway.html) peut être une bonne approche à considérer. Il s’agit d’un service qui fournit un point d’entrée unique pour certains groupes de microservices. Il est similaire au [modèle Façade](https://en.wikipedia.org/wiki/Facade_pattern) de la conception orientée objet, mais dans ce cas, il fait partie d’un système distribué. Le modèle Passerelle d’API est également parfois appelé « backend for frontend » [(BFF)](http://samnewman.io/patterns/architectural/bff/), car vous le créez en pensant aux besoins de l’application cliente.
+Quand vous concevez et que vous créez des applications de grande taille ou complexes basées sur des microservices avec plusieurs applications clientes, une [passerelle d’API](https://microservices.io/patterns/apigateway.html) peut être une bonne approche à considérer. Il s’agit d’un service qui fournit un point d’entrée unique pour certains groupes de microservices. Il est similaire au [modèle Façade](https://en.wikipedia.org/wiki/Facade_pattern) de la conception orientée objet, mais dans ce cas, il fait partie d’un système distribué. Le modèle Passerelle d’API est également parfois appelé « backend for frontend » [(BFF)](https://samnewman.io/patterns/architectural/bff/), car vous le créez en pensant aux besoins de l’application cliente.
 
 La figure 4-13 montre comment une passerelle d’API personnalisée peut s’intégrer dans une architecture basée sur les microservices.
 Il est important de souligner que dans ce diagramme, vous utilisez un seul service de passerelle d’API personnalisée faisant face à plusieurs applications clientes différentes. Ceci peut présenter un risque important, car votre service de passerelle d’API va croître et évoluer en fonction des nombreuses exigences différentes des applications clientes. Au final, il deviendra trop étendu en raison de ces différents besoins et sera effectivement très similaire à une application monolithique ou à un service monolithique. C’est pourquoi il est vivement recommandé de diviser la passerelle d’API en plusieurs services ou en plusieurs passerelles d’API plus petites, par exemple une par type de facteur de forme.
@@ -110,8 +110,8 @@ Dans ce guide et dans l’exemple d’application de référence (eShopOnContain
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
--   **Charles Richardson. Pattern: API Gateway / Backend for Front-End**
-    [*http://microservices.io/patterns/apigateway.html*](http://microservices.io/patterns/apigateway.html)
+-   **Charles Richardson. Modèle : Passerelle /backend d’API pour serveur frontal**
+    [*https://microservices.io/patterns/apigateway.html*](https://microservices.io/patterns/apigateway.html)
 
 -   **Gestion des API Azure**
     [*https://azure.microsoft.com/services/api-management/*](https://azure.microsoft.com/services/api-management/)
@@ -119,7 +119,7 @@ Dans ce guide et dans l’exemple d’application de référence (eShopOnContain
 -   **Udi Dahan. Service Oriented Composition**\
     [*http://udidahan.com/2014/07/30/service-oriented-composition-with-video/*](http://udidahan.com/2014/07/30/service-oriented-composition-with-video/)
 
--   **Clemens Vasters. Messagerie et microservices à GOTO 2016** (vidéo) [*https://www.youtube.com/watch?v=rXi5CLjIQ9k*](https://www.youtube.com/watch?v=rXi5CLjIQ9k)
+-   **Clemens Vasters. Messaging and Microservices at GOTO 2016** (vidéo) [*https://www.youtube.com/watch?v=rXi5CLjIQ9k*](https://www.youtube.com/watch?v=rXi5CLjIQ9k)
 
 
 >[!div class="step-by-step"]

@@ -1,6 +1,6 @@
 ---
-title: "Communication basée sur des messages asynchrones"
-description: "Architecture en microservices .NET pour les applications .NET en conteneur | Communication basée sur des messages asynchrones"
+title: Communication basée sur des messages asynchrones
+description: Architecture en microservices .NET pour les applications .NET en conteneur | Communication basée sur des messages asynchrones
 keywords: Docker, microservices, ASP.NET, conteneur
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 7469c41afa16bf96bc81a36c571e3e005c50d904
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 7c216dba3b763c310fe17e6294ae5f2b091f71f9
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="asynchronous-message-based-communication"></a>Communication basée sur des messages asynchrones
 
@@ -59,7 +59,7 @@ Si un système utilise la cohérence à terme pilotée par les événements d’
 
 Comme indiqué précédemment dans la section [Défis et solutions pour la gestion de données distribuée](#challenges-and-solutions-for-distributed-data-management), vous pouvez utiliser des événements d’intégration pour implémenter des tâches d’entreprise qui s’étendent sur plusieurs microservices. Vous bénéficierez ainsi d’une cohérence à terme entre ces services. Une transaction cohérente à terme se compose d’une collection d’actions distribuées. À chaque action, le microservice connexe met à jour une entité de domaine et publie un autre événement d’intégration qui déclenche l’action suivante au sein de la même tâche d’entreprise de bout en bout.
 
-Il est important de noter qu’il est possible de communiquer avec plusieurs microservices qui sont abonnés au même événement. Pour ce faire, vous pouvez utiliser la messagerie par publication/abonnement basée sur la communication pilotée par les événements, comme le montre la figure 4-19. Ce mécanisme de publication/abonnement n’est pas exclusif à l’architecture en microservices. Il est similaire à la façon dont les [contextes délimités](http://martinfowler.com/bliki/BoundedContext.html) dans DDD doivent communiquer, ou à la façon dont vous propagez des mises à jour à partir de la base de données en écriture à la base de données en lecture dans le modèle d’architecture [CQRS (Command and Query Responsibility Segregation)](http://martinfowler.com/bliki/CQRS.html). L’objectif est d’obtenir une cohérence à terme entre plusieurs sources de données dans votre système distribué.
+Il est important de noter qu’il est possible de communiquer avec plusieurs microservices qui sont abonnés au même événement. Pour ce faire, vous pouvez utiliser la messagerie par publication/abonnement basée sur la communication pilotée par les événements, comme le montre la figure 4-19. Ce mécanisme de publication/abonnement n’est pas exclusif à l’architecture en microservices. Il est similaire à la façon dont les [contextes délimités](https://martinfowler.com/bliki/BoundedContext.html) dans DDD doivent communiquer, ou à la façon dont vous propagez des mises à jour à partir de la base de données en écriture à la base de données en lecture dans le modèle d’architecture [CQRS (Command and Query Responsibility Segregation)](https://martinfowler.com/bliki/CQRS.html). L’objectif est d’obtenir une cohérence à terme entre plusieurs sources de données dans votre système distribué.
 
 ![](./media/image19.png)
 
@@ -81,7 +81,7 @@ L’implémentation d’une architecture pilotée par les événements sur plusi
 
 -   Utilisation d’une file d’attente transactionnelle, basée sur DTC, comme MSMQ. (Toutefois, il s’agit d’une approche héritée.)
 
--   Utilisation de [l’exploration des données du journal des transactions](http://www.scoop.it/t/sql-server-transaction-log-mining).
+-   Utilisation de [l’exploration des données du journal des transactions](https://www.scoop.it/t/sql-server-transaction-log-mining).
 
 -   Utilisation de la version complète du [modèle d’approvisionnement en événements](https://msdn.microsoft.com/library/dn589792.aspx).
 
@@ -103,7 +103,7 @@ Si vous envisagez d’utiliser la communication asynchrone, veillez également �
 -   **Modèle de séparation des responsabilités en matière de commande et de requête (CQRS)**
     [*https://docs.microsoft.com/azure/architecture/patterns/cqrs*](https://docs.microsoft.com/azure/architecture/patterns/cqrs)
 
--   **Communication entre contextes délimités**
+-   **Communicating Between Bounded Contexts**
     [*https://msdn.microsoft.com/library/jj591572.aspx*](https://msdn.microsoft.com/library/jj591572.aspx)
 
 -   **Eventual consistency**

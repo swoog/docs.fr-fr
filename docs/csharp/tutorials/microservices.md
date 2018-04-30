@@ -1,6 +1,6 @@
 ---
-title: "Microservices hébergés dans Docker - C#"
-description: "Apprenez à créer des services ASP.NET Core qui s’exécutent dans des conteneurs Docker"
+title: Microservices hébergés dans Docker - C#
+description: Apprenez à créer des services principaux ASP.NET qui s’exécutent dans des conteneurs Docker
 keywords: .NET, .NET Core, Docker, C#, ASP.NET, Microservice
 author: BillWagner
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.devlang: csharp
 ms.assetid: 87e93838-a363-4813-b859-7356023d98ed
-ms.openlocfilehash: d399cdce81350356b71e21d879a4f5b5079f98d8
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: 253b622618ef62c28ac13a287c34b9d9049dd066
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="microservices-hosted-in-docker"></a>Microservices hébergés dans Docker
 
@@ -32,7 +32,7 @@ Au passage, vous verrez également certaines fonctionnalités du langage C# :
 * Traitement des demandes HTTP entrantes et création de la réponse HTTP
 * Guide pratique de travail avec les types valeur Nuallable
 
-Vous pouvez [afficher ou télécharger l’exemple d’application](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/WeatherMicroservice) de cette rubrique. Pour obtenir des instructions de téléchargement, consultez [Exemples et didacticiels](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Vous pouvez [afficher ou télécharger l’exemple d’application](https://github.com/dotnet/samples/tree/master/csharp/getting-started/WeatherMicroservice) de cette rubrique. Pour obtenir des instructions de téléchargement, consultez [Exemples et didacticiels](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 ### <a name="why-docker"></a>Pourquoi Docker ?
 
@@ -98,7 +98,7 @@ Et une fois que vous générez l’application, vous l’exécutez à partir de 
 dotnet run
 ```
 
-La configuration par défaut écoute le port http://localhost:5000. Vous pouvez ouvrir un navigateur et accéder à cette page pour voir un « Hello World! » « Operation Not Found! ».
+La configuration par défaut écoute le port `http://localhost:5000`. Vous pouvez ouvrir un navigateur et accéder à cette page pour voir un « Hello World! » « Operation Not Found! ».
 
 ### <a name="anatomy-of-an-aspnet-core-application"></a>Anatomie d’une application ASP.NET Core
 

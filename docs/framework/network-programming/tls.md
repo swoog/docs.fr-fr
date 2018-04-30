@@ -1,6 +1,6 @@
 ---
-title: Meilleures pratiques du protocole TLS (Transport Layer Security) avec .NET Framework
-description: Décrit les meilleures pratiques à l’aide du protocole TLS (Transport Layer Security) avec .NET Framework
+title: Bonnes pratiques du protocole TLS (Transport Layer Security) avec .NET Framework
+description: Décrit les bonnes pratiques à l’aide du protocole TLS (Transport Layer Security) avec .NET Framework
 ms.date: 03/15/2018
 ms.prod: .net-framework
 ms.topic: article
@@ -19,13 +19,13 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 64829eee5b21a44acb18cbec9b901d77d49cab90
-ms.sourcegitcommit: 32172ca05d5dcce7ef3d327b9c8639c736e0fe2b
+ms.openlocfilehash: 7298c87c3e61103577d4262ab2dc2645d7e6265a
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/09/2018
 ---
-# <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Meilleures pratiques du protocole TLS (Transport Layer Security) avec .NET Framework
+# <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Bonnes pratiques du protocole TLS (Transport Layer Security) avec .NET Framework
 
 Le protocole TLS (Transport Layer Security) est une norme industrielle conçue pour aider à protéger la confidentialité des informations communiquées sur Internet. [TLS 1.2](https://tools.ietf.org/html/rfc5246) est la norme mise en production la plus récente et fournit des améliorations de sécurité par rapport aux versions précédentes. TLS 1.2 sera finalement remplacée par [TLS 1.3](https://tools.ietf.org/html/draft-ietf-tls-tls13-22). Cet article présente les recommandations visant à sécuriser les applications .NET Framework qui utilisent le protocole TLS.
 
@@ -78,7 +78,7 @@ Le reste de cet article ne s’applique pas lorsque vous ciblez .NET Framework 4
 
 ### <a name="for-tcp-sockets-networking"></a>Pour la mise en réseau des sockets TCP
 
-<xref:System.Net.Security.SslStream>, à l’aide de .NET Framework 4.7 et versions ultérieures, la valeur par défaut est le système d’exploitation en choisissant le meilleur protocole de sécurité et la meilleure version. Pour obtenir le meilleur système d’exploitation par défaut, si possible, n’utilisez pas les surcharges de méthode de <xref:System.Net.Security.SslStream> qui accepte un paramètre <xref:System.Security.Authentication.SslProtocols> explicite. Sinon, passez <xref:System.Security.Authentication.SslProtocols.None?displayProperty=nameWithType>. Nous vous recommandons de ne pas utiliser <xref:System.Security.Authentication.SslProtocols.Default> ; le paramètre `SslProtocols.Default` force l’utilisation de SSL 3.0 /TLS 1.0 et empêche TLS 1.2.
+<xref:System.Net.Security.SslStream>, à l’aide de .NET Framework 4.7 et versions ultérieures, la valeur par défaut est le système d’exploitation en choisissant le meilleur protocole de sécurité et la meilleure version. Pour obtenir le meilleur système d’exploitation par défaut, si possible, n’utilisez pas les surcharges de méthode de <xref:System.Net.Security.SslStream> qui accepte un paramètre <xref:System.Security.Authentication.SslProtocols> explicite. Sinon, passez <xref:System.Security.Authentication.SslProtocols.None?displayProperty=nameWithType>. Nous vous recommandons de ne pas utiliser <xref:System.Security.Authentication.SslProtocols.Default> ; le paramètre `SslProtocols.Default` force l’utilisation de SSL 3.0 /TLS 1.0 et empêche celle de TLS 1.2.
 
 Ne définissez pas une valeur pour la propriété <xref:System.Net.ServicePointManager.SecurityProtocol> (pour la mise en réseau HTTP).
 
@@ -114,7 +114,7 @@ Si vous n’utilisez **pas** de liaison personnalisée **et** que vous définiss
 
 Auditez votre code pour vérifier que vous ne définissez pas une version spécifique de SSL ou TLS à l’aide des sections suivantes :
 
-### <a name="for-net-framework-46---462-and-not-wfc"></a>Pour .NET Framework 4.6 - 4.6.2 et pas WFC
+### <a name="for-net-framework-46---462-and-not-wcf"></a>Pour le .NET Framework 4.6 - 4.6.2 et pas pour WCF
 
 Définissez le commutateur `DontEnableSystemDefaultTlsVersions` `AppContext` sur `false`. Consultez [Configuration de la sécurité via des commutateurs AppContext](#configuring-security-via-appcontext-switches).
 

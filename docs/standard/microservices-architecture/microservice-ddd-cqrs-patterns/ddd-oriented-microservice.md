@@ -1,6 +1,6 @@
 ---
-title: "Conception d’un microservice orienté DDD"
-description: "Architecture des microservices .NET pour les applications .NET en conteneur | Conception d’un microservice orienté DDD"
+title: Conception d’un microservice orienté DDD
+description: Architecture des microservices .NET pour les applications .NET en conteneur | Conception d’un microservice orienté DDD
 keywords: Docker, microservices, ASP.NET, conteneur
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 38b65bc6752dd8b6ed4083c0bc5a5eccabcffbcc
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: d2d07abe55f30e0b12a7f0cba937abd1b7e32629
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="designing-a-ddd-oriented-microservice"></a>Conception d’un microservice orienté DDD
 
@@ -57,7 +57,7 @@ Vous souhaitez concevoir le système afin que chaque couche communique uniquemen
 
 ### <a name="the-domain-model-layer"></a>Couche de modèle de domaine
 
-L’excellent livre d’Eric Evans [Domain Driven Design](http://domainlanguage.com/ddd/) affirme ce qui suit à propos de la couche de modèle de domaine et de la couche d’application.
+L’excellent livre d’Eric Evans [Domain Driven Design](https://domainlanguage.com/ddd/) affirme ce qui suit à propos de la couche de modèle de domaine et de la couche d’application.
 
 **Couche de modèle de domaine** : chargée de représenter les concepts de l’entreprise, des informations sur sa situation ainsi que ses règles. L’état qui reflète la situation de l’entreprise est contrôlé et utilisé ici, même si les détails techniques du stockage sont délégués à l’infrastructure. Cette couche est au cœur des logiciels d’entreprise.
 
@@ -75,7 +75,7 @@ En outre, cela ne signifie pas que vous pouvez prendre un modèle conçu pour un
 
 ### <a name="the-application-layer"></a>Couche d’application
 
-En passant à la couche d’application, nous pouvons à nouveau citer le livre d’Eric Evans [Domain Driven Design](http://domainlanguage.com/ddd/) :
+En passant à la couche d’application, nous pouvons à nouveau citer le livre d’Eric Evans [Domain Driven Design](https://domainlanguage.com/ddd/) :
 
 **Couche d’application :** définit les travaux que le logiciel est supposé effectuer et dirige les objets de domaine expressifs pour résoudre les problèmes. Les tâches dont cette couche est responsable sont significatives pour l’entreprise ou nécessaires pour l’interaction avec les couches d’application d’autres systèmes. Cette couche reste mince. Elle ne contient pas de règles métier ni de connaissances métier, mais coordonne uniquement les tâches et le travail des délégués pour les collaborations des objets de domaine dans la couche suivante. Elle ne présente pas d’état reflétant la situation de l’entreprise, mais peut avoir un état qui reflète la progression d’une tâche pour l’utilisateur ou le programme.
 
@@ -101,7 +101,7 @@ Cette conception de couche doit être indépendante pour chaque microservice. Co
 
 #### <a name="additional-resources"></a>Ressources supplémentaires
 
--   **DevIQ. Principe d’ignorance de la persistance**
+-   **DevIQ. Persistence Ignorance principle**
     [*http://deviq.com/persistence-ignorance/*](http://deviq.com/persistence-ignorance/)
 
 -   **Oren Eini. Infrastructure Ignorance**

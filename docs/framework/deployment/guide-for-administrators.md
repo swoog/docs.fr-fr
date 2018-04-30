@@ -1,7 +1,7 @@
 ---
 title: Guide de déploiement du .NET Framework pour les administrateurs
 ms.custom: ''
-ms.date: 03/30/2017
+ms.date: 04/10/2018
 ms.prod: .net-framework
 ms.reviewer: ''
 ms.suite: ''
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - administrator's guide, deploying .NET Framework
 - deployment [.NET Framework], administrator's guide
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
-caps.latest.revision: ''
+caps.latest.revision: 40
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f57b5db5c03030d8cb930355586d0253cae13319
-ms.sourcegitcommit: 6f967c86dde55472440f0c8669b0e910ee3c53ba
+ms.openlocfilehash: 67efb04fc0d86a20fdf10c0e84bb00ae57383bb1
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Guide de déploiement du .NET Framework pour les administrateurs
 Cet article explique étape par étape comment un administrateur système peut déployer [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] et ses dépendances système dans un réseau à l'aide de Microsoft System Center Configuration Manager (SCCM). Cet article suppose que tous les ordinateurs clients cibles ont la configuration minimale requise pour le .NET Framework. Pour obtenir la liste des configurations logicielle et matérielle requises pour installer le [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], consultez [Configuration système requise](../../../docs/framework/get-started/system-requirements.md).  
@@ -165,7 +165,7 @@ Cet article explique étape par étape comment un administrateur système peut d
   
 8.  Effectuez toutes les étapes de l'Assistant.  
   
- Le package contient désormais toutes les informations nécessaires au déploiement sans assistance du .Net Framework 4.5. Avant de déployer le package et le programme, vérifiez qu’il a été installé sur le point de distribution ; consultez la section « Surveiller le contenu » de la page [Opérations et maintenance de la gestion de contenu dans Configuration Manager](http://technet.microsoft.com/library/gg712694.aspx#BKMK_MonitorContent) dans la bibliothèque de la documentation Configuration Manager.  
+ Le package contient désormais toutes les informations nécessaires au déploiement sans assistance de .Net Framework 4.5. Avant de déployer le package et le programme, vérifiez qu’il a été installé sur le point de distribution ; consultez la section « Surveiller le contenu » de la page [Opérations et maintenance de la gestion de contenu dans Configuration Manager](http://technet.microsoft.com/library/gg712694.aspx#BKMK_MonitorContent) dans la bibliothèque de la documentation Configuration Manager.  
   
 <a name="deploying_package"></a>   
 ### <a name="deploy-the-package"></a>Déployer le package  
@@ -230,11 +230,16 @@ Cet article explique étape par étape comment un administrateur système peut d
 ## <a name="troubleshooting"></a>Résolution des problèmes  
   
 ### <a name="log-file-locations"></a>Emplacements des fichiers journaux  
- Les fichiers journaux suivants sont générés pendant l'installation du [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] :  
+ Les fichiers journaux suivants sont générés lors de l’installation du .NET Framework :  
   
- %temp%\Microsoft .NET Framework 4.5*.txt %temp%\Microsoft .NET Framework 4.5*.html  
+ %temp%\Microsoft .NET Framework *version*\*.txt  
+ %temp%\Microsoft .NET Framework *version*\*.html  
   
- Vous pouvez utiliser l’[outil de collecte des journaux](http://www.microsoft.com/download/details.aspx?id=12493) pour collecter les fichiers journaux [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] et créer un fichier CAB compressé (.cab) afin de réduire la taille des fichiers.  
+ où *version* est la version du .NET Framework que vous installez, comme 4.5 ou 4.7.2.  
+ 
+ Vous pouvez également spécifier le répertoire où les fichiers journaux sont écrits avec l’option de ligne de commande `/log` dans la commande d’installation du .NET Framework. Pour plus d’informations, consultez [Guide de déploiement du .NET Framework pour les développeurs](deployment-guide-for-developers.md#command-line-options). 
+ 
+ Vous pouvez utiliser [l’outil de collecte des journaux](https://www.microsoft.com/download/details.aspx?id=12493) pour collecter les fichiers journaux du .NET Framework et créer un fichier CAB compressé (.cab) afin de réduire la taille des fichiers.  
   
 <a name="return_codes"></a>   
 ### <a name="return-codes"></a>Codes de retour  

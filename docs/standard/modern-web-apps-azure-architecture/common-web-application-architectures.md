@@ -6,16 +6,17 @@ ms.author: wiwagn
 ms.date: 10/06/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: dc5580d38ac29a5e923a4b7d84f9d7e077d5cdb2
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 911935379fd126ccbafe825a6ce4049c2e9b5cde
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
-#<a name="common-web-application-architectures"></a>Architectures courantes des applications web
+# <a name="common-web-application-architectures"></a>Architectures courantes des applications web
 
 > « Si vous pensez qu’une bonne architecture est coûteuse, faites l’expérience d’une mauvaise architecture. »  
 > _- Brian Foote et Joseph Yoder_
@@ -226,7 +227,7 @@ L’utilisation de Docker peut être utile pour les applications monolithiques, 
 > <http://deviq.com/repository-pattern/>
 > - **Exemple d’une solution d’architecture propre**  
 > <https://github.com/ardalis/cleanarchitecture>
-> - **Livre électronique sur l’architecture des microservices** <http://aka.ms/MicroservicesEbook>
+> - **Architecting Microservices (livre électronique)** <http://aka.ms/MicroservicesEbook>
 
 >[!div class="step-by-step"]
 [Previous] (architectural-principles.md) [Next] (common-client-side-web-technologies.md)

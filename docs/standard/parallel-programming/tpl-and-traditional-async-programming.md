@@ -21,11 +21,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 50c4f9cfeb135f1046fbb427585897ca99248afd
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 2acfb9a564f3a7bc96ed303f49349afe56ca7fe4
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="tpl-and-traditional-net-framework-asynchronous-programming"></a>Bibliothèque parallèle de tâches (TPL) et programmation asynchrone .NET Framework
 Le .NET Framework fournit les deux modèles standard suivants pour l’exécution d’opérations asynchrones liées aux E/S et orientées calculs :  
@@ -127,7 +127,7 @@ Le .NET Framework fournit les deux modèles standard suivants pour l’exécutio
  [!code-vb[FromAsync#09](../../../samples/snippets/visualbasic/VS_Snippets_Misc/fromasync/vb/module1.vb#09)]  
   
 ## <a name="using-the-streamextensions-sample-code"></a>Utilisation de l'exemple de code StreamExtensions  
- Le fichier Streamextensions.cs, dans [Exemples de programmation parallèle avec .NET Framework 4](http://go.microsoft.com/fwlink/?LinkID=165717) sur le site web MSDN, contient plusieurs implémentations de référence qui utilisent des objets de la tâche pour les opérations d’E/S réseau ou de fichier asynchrones.  
+ Le fichier Streamextensions.cs, dans [Exemples de programmation parallèle avec .NET Framework 4](https://code.msdn.microsoft.com/ParExtSamples), contient plusieurs implémentations de référence qui utilisent des objets Task pour des opérations d’E/S réseau ou de fichier asynchrones.  
   
 ## <a name="see-also"></a>Voir aussi  
  [La bibliothèque parallèle de tâches](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)

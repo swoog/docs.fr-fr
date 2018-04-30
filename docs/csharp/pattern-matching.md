@@ -1,6 +1,6 @@
 ---
-title: "Critères spéciaux - Guide C#"
-description: "En savoir plus sur les expressions de critères spéciaux en langage C#"
+title: Critères spéciaux - Guide C#
+description: En savoir plus sur les expressions de critères spéciaux en langage C#
 keywords: .NET, .NET Core, C#
 ms.date: 01/24/2017
 ms.author: wiwagn
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: 0c77c3c3da9983d20cdd86db18f60f83b86b07ea
-ms.sourcegitcommit: 281070dee88db86ec3bb4634d5f558d1a4e159dd
+ms.openlocfilehash: c3fbc617f742e8dd5db4b2ac46b38958cdc30007
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="pattern-matching"></a>Critères spéciaux #
 
@@ -112,27 +112,27 @@ Enfin, vous pouvez ajouter une expression case `null` pour garantir que l’argu
 
 Le comportement spécial pour le modèle `null` est intéressant, car la constante `null` du modèle n’a pas de type, mais elle peut être convertie en un type référence ou un type Nullable. Plutôt que de convertir une valeur `null` en un type quelconque, le langage définit qu’une valeur `null` ne correspond à aucun modèle de type, quel que soit le type de la variable au moment de la compilation. En raison de ce comportement, le nouveau modèle de type basé sur `switch` est cohérent par rapport à l’instruction `is` : les instructions `is` retournent toujours `false` quand la valeur vérifiée est `null`. Il s’avère aussi plus simple : une fois que vous avez vérifié le type, vous n’avez pas besoin d’effectuer de contrôle de valeur null supplémentaire. Vous pouvez le constater par le fait qu’aucun contrôle de valeur null ne figure dans les blocs d’expression case des exemples ci-dessus : ces contrôles ne sont pas nécessaires dans la mesure où la correspondance du modèle de type est l’assurance d’une valeur non null.
 
-## <a name="var-declarations-in-case-expressions"></a>`var`les déclarations dans `case` expressions
+## <a name="var-declarations-in-case-expressions"></a>Déclarations `var` dans les expressions `case`
 
-L’introduction de `var` comme l’une des expressions de correspondance présente de nouvelles règles pour la correspondance au modèle.
+L’introduction de `var` comme l’une des expressions de correspondance fournit de nouvelles règles pour les critères spéciaux.
 
-La première règle est que le `var` déclaration suit les règles d’inférence de type normal : le type est déduit que le type statique de l’expression de switch. À partir de cette règle, le type correspond toujours.
+La première règle est que la déclaration `var` suit les règles standard d’inférence de type, à savoir que le type est supposé être le type statique de l’expression switch. Avec cette règle, il y a toujours correspondance du type.
 
-La deuxième règle est qu’un `var` déclaration n’a pas le contrôle de valeur null qui incluent d’autres expressions de modèle de type. Cela signifie que la variable peut être null, et un contrôle de valeur null est nécessaire dans ce cas.
+La deuxième règle est qu’une déclaration `var` n’a pas la vérification de valeur Null que d’autres expressions de modèle de type incluent. La variable peut donc être Null, et une vérification de valeur Null est alors nécessaire.
 
-Ces deux règles signifient que dans de nombreux cas, un `var` déclaration dans un `case` les mêmes conditions que correspond à l’expression une `default` expression.
-Étant donné que tous les cas non définis par défaut sont préférée à la `default` cas, le `default` cas ne sera jamais exécutée.
+Ces deux règles signifient que, dans de nombreux cas, une déclaration `var` dans une expression `case` remplit les mêmes conditions qu’une expression `default`.
+Étant donné qu’une expression case non définie par défaut est toujours préférée à l’expression case `default`, l’expression case `default` n’est jamais exécutée.
 
 > [!NOTE]
-> Le compilateur n’émet pas d’un avertissement dans les cas où un `default` cas a été écrit, mais ne sera jamais exécutée. Cela est cohérent avec actuel `switch` comportement de l’instruction où tous les cas possibles ont été répertoriés.
+> Le compilateur n’émet pas d’avertissement pour signaler qu’une expression case `default` écrite ne peut pas s’exécuter. Cela est cohérent avec le comportement actuel de l’instruction `switch` où tous les cas possibles ont été répertoriés.
 
-La troisième règle présente utilise où un `var` cas peut être utile. Imaginez que vous effectuez une correspondance de modèle où l’entrée est une chaîne et que vous recherchez des valeurs de la commande connue. Vous pouvez écrire quelque chose comme :
+La troisième règle présente les cas où l’utilisation d’une expression case `var` peut être appropriée. Imaginez que vous utilisez des critères spéciaux où l’entrée est une chaîne et que vous recherchez des valeurs de commande connues. Vous pouvez écrire un code similaire à celui-ci :
 
 [!code-csharp[VarCaseExpression](../../samples/csharp/PatternMatching/Program.cs#VarCaseExpression "use a var case expression to filter white space")]
 
-Le `var` correspond à la casse `null`, une chaîne vide ou n’importe quelle chaîne qui contient uniquement des espaces. Notez que le code précédent utilise la `?.` opérateur pour vous assurer qu’elle ne lève pas accidentellement un <xref:System.NullReferenceException>. Le `default` cas gère toutes les autres valeurs de chaîne qui ne sont pas compris par cet analyseur de la commande.
+L’instruction case `var` correspond à une valeur `null`, une chaîne vide ou une chaîne composée uniquement d’espaces blancs. Dans le code ci-dessus, l’utilisation de l’opérateur `?.` empêche la levée accidentelle d’une exception <xref:System.NullReferenceException>. L’instruction case `default` gère toutes les autres valeurs de chaîne qui ne sont pas comprises par cet analyseur de commande.
 
-Il s’agit d’un exemple où vous souhaitez prendre en compte un `var` expression qui est différent de celui à partir de cas un `default` expression.
+Il s’agit d’un exemple où vous pouvez envisager d’utiliser une expression case `var` différente d’une expression `default`.
 
 ## <a name="conclusions"></a>Conclusions
 

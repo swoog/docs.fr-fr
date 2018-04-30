@@ -1,6 +1,6 @@
 ---
-title: "Seedwork (interfaces et classes de base réutilisables pour votre modèle de domaine)"
-description: "Architecture des microservices .NET pour les applications .NET en conteneur | Seedwork (interfaces et classes de base réutilisables pour votre modèle de domaine)"
+title: Seedwork (interfaces et classes de base réutilisables pour votre modèle de domaine)
+description: Architecture des microservices .NET pour les applications .NET en conteneur | Seedwork (interfaces et classes de base réutilisables pour votre modèle de domaine)
 keywords: Docker, microservices, ASP.NET, conteneur
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -11,15 +11,15 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: aba336676a558f50a2669eb3ca096effb8387916
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: 641439267d7fcb504965487aeed165188b2cf123
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork (interfaces et classes de base réutilisables pour votre modèle de domaine)
 
-Le dossier solution contient un dossier *SeedWork*. Le dossier *SeedWork* contient des classes de base personnalisées que vous pouvez utiliser comme base pour vos entités de domaine et objets de valeur. Utilisez ces classes de base pour ne pas avoir de code redondant dans la classe d’objets de chaque domaine. Le dossier de ces types de classes s’appelle *SeedWork* et non pas *Framework*. Il s’appelle *SeedWork* car le dossier contient juste un petit sous-ensemble de classes réutilisables qui ne peut pas être vraiment considéré comme un framework. *Seedwork* est un terme introduit par [Michael Feathers](http://www.artima.com/forums/flat.jsp?forum=106&thread=8826) que [Martin Fowler](https://martinfowler.com/bliki/Seedwork.html) a rendu populaire, mais vous pouvez également donner à ce dossier le nom Common, SharedKernel ou un autre nom similaire.
+Le dossier solution contient un dossier *SeedWork*. Le dossier *SeedWork* contient des classes de base personnalisées que vous pouvez utiliser comme base pour vos entités de domaine et objets de valeur. Utilisez ces classes de base pour ne pas avoir de code redondant dans la classe d’objets de chaque domaine. Le dossier de ces types de classes s’appelle *SeedWork* et non pas *Framework*. Il s’appelle *SeedWork* car le dossier contient juste un petit sous-ensemble de classes réutilisables qui ne peut pas être vraiment considéré comme un framework. *Seedwork* est un terme introduit par [Michael Feathers](https://www.artima.com/forums/flat.jsp?forum=106&thread=8826) que [Martin Fowler](https://martinfowler.com/bliki/Seedwork.html) a rendu populaire, mais vous pouvez également donner à ce dossier le nom Common, SharedKernel ou un autre nom similaire.
 
 La figure 9-12 montre les classes qui constituent le seedwork du modèle de domaine dans le microservice de commande. Il comporte quelques classes de base personnalisées comme Entity, ValueObject et Enumeration, ainsi que quelques interfaces. Ces interfaces (IRepository et IUnitOfWork) informent la couche d’infrastructure sur ce qui doit être implémenté. Elles sont également utilisées par injection de dépendances à partir de la couche Application.
 
@@ -119,7 +119,7 @@ Les contrats de dépôt sont simplement des interfaces .NET qui expriment les sp
 
 Les dépôts eux-mêmes, avec le code EF Core ou d’autres dépendances d’infrastructure et code (Linq, SQL, etc.), ne doivent pas être implémentés au sein du modèle de domaine ; ils doivent uniquement implémenter les interfaces que vous définissez. 
 
-Le modèle lié à cette pratique (placer les interfaces de dépôt dans la couche du modèle de domaine) est le modèle Interface séparée. Comme l’[explique](http://www.martinfowler.com/eaaCatalog/separatedInterface.html) Martin Fowler, « utilisez une interface séparée pour définir une interface dans un premier paquet mais l’implémenter dans un autre. De cette manière, un client qui a besoin de la dépendance vis-à-vis de l’interface peut ne pas en connaître du tout l’implémentation ».
+Le modèle lié à cette pratique (placer les interfaces de dépôt dans la couche du modèle de domaine) est le modèle Interface séparée. Comme l’[explique](https://www.martinfowler.com/eaaCatalog/separatedInterface.html) Martin Fowler, « utilisez une interface séparée pour définir une interface dans un premier paquet mais l’implémenter dans un autre. De cette manière, un client qui a besoin de la dépendance vis-à-vis de l’interface peut ne pas en connaître du tout l’implémentation ».
 
 Avec le modèle Interface séparée, la couche Application (dans ce cas, le projet d’API web pour le microservice) comporte une dépendance vis-à-vis des spécifications définies dans le modèle de domaine, mais pas une dépendance directe vis-à-vis de la couche d’infrastructure/de persistance. De plus, vous pouvez utiliser l’injection de dépendances pour isoler l’implémentation, qui est implémentée dans la couche d’infrastructure/de persistance à l’aide de dépôts.
 
@@ -146,7 +146,7 @@ public interface IRepository<T> where T : IAggregateRoot
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
 -   **Martin Fowler. Separated Interface.**
-    [*http://www.martinfowler.com/eaaCatalog/separatedInterface.html*](http://www.martinfowler.com/eaaCatalog/separatedInterface.html)
+    [*https://www.martinfowler.com/eaaCatalog/separatedInterface.html*](https://www.martinfowler.com/eaaCatalog/separatedInterface.html)
 
 
 >[!div class="step-by-step"]

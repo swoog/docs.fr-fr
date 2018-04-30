@@ -1,12 +1,12 @@
 ---
-title: "Indépendance du langage et composants indépendants du langage"
-ms.custom: 
+title: Indépendance du langage et composants indépendants du langage
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -19,18 +19,18 @@ helpviewer_keywords:
 - runtime, language interoperability
 - common language runtime, language interoperability
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
-caps.latest.revision: 
+caps.latest.revision: 35
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 81ccf70482c8b7f4acb0b18381ed4cf07edc06af
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: f64f39f91ccea7319f395e852b4535f5cba6b0a6
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="language-independence-and-language-independent-components"></a>Indépendance du langage et composants indépendants du langage
 Le .NET Framework est indépendant du langage. Cela signifie qu'en tant que développeur, vous pouvez développer dans l'un des nombreux langages qui ciblent le .NET Framework, tels que C#, C++/CLI, Eiffel, F#, IronPython, IronRuby, PowerBuilder, Visual Basic, Visual COBOL et Windows PowerShell. Vous pouvez accéder aux types et aux membres des bibliothèques de classes développées pour le .NET Framework sans avoir à connaître le langage dans lequel ils ont été initialement écrits ni à suivre les conventions du langage d'origine. Si vous développez des composants, votre composant est accessible par toute application .NET Framework, indépendamment de son langage.  
@@ -144,7 +144,7 @@ Le .NET Framework est indépendant du langage. Cela signifie qu'en tant que dév
 |Membres|[Membres de types en général](#members)|Les méthodes et les champs static globaux ne sont pas conformes CLS.|36|  
 |Membres|--|La valeur d'un champ statique littéral est spécifiée via l'utilisation de métadonnées d'initialisation de champ. Un littéral conforme à CLS doit avoir une valeur spécifiée dans les métadonnées d'initialisation de champ qui est exactement du même type que le littéral (ou du type sous-jacent, si ce littéral est une `enum`).|13|  
 |Membres|[Membres de types en général](#members)|La contrainte vararg ne fait pas partie de la spécification CLS, et la seule convention d’appel prise en charge par la spécification CLS est la convention d’appel managée standard.|15|  
-|Conventions d'attribution d'un nom|[Conventions d’attribution d’un nom](#naming)|Les assemblys suivront l'Annexe 7 du Rapport technique 15 de la norme Unicode 3.0 régissant l'ensemble des caractères autorisés pour lancer les identificateurs et être inclus dans ces derniers. Cette annexe est disponible en ligne à l'adresse : http://www.unicode.org/unicode/reports/tr15/tr15-18.html. Les identificateurs seront au format canonique défini par le formulaire de normalisation Unicode C. Dans le cadre de la spécification CLS, deux identificateurs sont les mêmes si leurs mappages en minuscules (comme spécifié par les mappages en minuscules un-à-un indépendants des paramètres régionaux Unicode) sont identiques. Autrement dit, pour que deux identificateurs soient considérés comme différents dans le cadre de la spécification CLS, ils doivent être différents de par d'autres éléments que leur casse. Toutefois, pour remplacer une définition héritée, l'interface de ligne de commande requiert l'utilisation de l'encodage exact de la déclaration d'origine.|4|  
+|Conventions d'attribution d'un nom|[Conventions d’attribution d’un nom](#naming)|Les assemblys doivent suivre l’Annexe 7 du Rapport technique 15 du standard Unicode 3.0 régissant l’ensemble des caractères autorisés au début et dans les identificateurs. Cette annexe est disponible en ligne à l’adresse http://www.unicode.org/unicode/reports/tr15/tr15-18.html. Les identificateurs seront au format canonique défini par le formulaire de normalisation Unicode C. Dans le cadre de la spécification CLS, deux identificateurs sont les mêmes si leurs mappages en minuscules (comme spécifié par les mappages en minuscules un-à-un indépendants des paramètres régionaux Unicode) sont identiques. Autrement dit, pour que deux identificateurs soient considérés comme différents dans le cadre de la spécification CLS, ils doivent être différents de par d'autres éléments que leur casse. Toutefois, pour remplacer une définition héritée, l'interface de ligne de commande requiert l'utilisation de l'encodage exact de la déclaration d'origine.|4|  
 |Surcharge|[Conventions d’attribution d’un nom](#naming)|Tous les noms introduits dans une portée conforme à CLS devront être distincts indépendamment de leur type, sauf quand les noms sont identiques et résolus via la surcharge. Par exemple, alors que CTS autorise un type à utiliser le même nom pour une méthode et un champ, CLS ne l'autorise pas.|5|  
 |Surcharge|[Conventions d’attribution d’un nom](#naming)|Les champs et les types imbriqués seront distincts par comparaison d'identificateurs seule, même si CTS autorise la distinction de signatures différentes. Les méthodes, les propriétés et les événements qui portent le même nom (par comparaison d'identificateurs) devront différer par d'autres éléments que le seul type de retour, sauf dans les cas spécifiés dans la règle 39 de la spécification CLS.|6|  
 |Surcharge|[Overloads](#overloads)|Seules les propriétés et les méthodes peuvent être surchargées.|37|  
@@ -236,7 +236,7 @@ Le .NET Framework est indépendant du langage. Cela signifie qu'en tant que dév
   
  [!code-csharp[Conceptual.CLSCompliant#16](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/naming1.cs#16)]  
   
- Les identificateurs de langage de programmation, comme les noms d’espaces de noms, de types et de membres, doivent être conformes au document [Unicode Standard 3.0, Technical Report 15, Annex 7](http://www.unicode.org/reports/tr15/tr15-18.html) (Norme Unicode 3.0, Rapport technique 15, Annexe 7). Cela signifie que :  
+ Les identificateurs de langage de programmation, comme les noms d’espaces de noms, de types et de membres, doivent être conformes au document [Unicode Standard 3.0, Technical Report 15, Annex 7](https://www.unicode.org/reports/tr15/tr15-18.html) (Norme Unicode 3.0, Rapport technique 15, Annexe 7). Cela signifie que :  
   
 -   Le premier caractère d'un identificateur peut être une lettre majuscule, une lettre minuscule, une initiale majuscule, une lettre de modificateur, une autre lettre ou un nombre sous forme de lettre, Unicode. Pour plus d'informations sur les catégories de caractères Unicode, consultez l'énumération <xref:System.Globalization.UnicodeCategory?displayProperty=nameWithType>.  
   
@@ -372,7 +372,7 @@ Le .NET Framework est indépendant du langage. Cela signifie qu'en tant que dév
  [!code-csharp[Conceptual.CLSCompliant#29](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/nestedgenerics2.cs#29)]
  [!code-vb[Conceptual.CLSCompliant#29](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/nestedgenerics2.vb#29)]  
   
- Les noms des types génériques sont encodés sous la forme *nom\`n*, où *nom* est le nom du type, \` est un caractère littéral et *n* est le nombre de paramètres déclarés sur le type ou, pour les types génériques imbriqués, le nombre de paramètres de type récemment introduits. Cet encodage de noms de types génériques intéresse principalement les développeurs qui utilisent la réflexion pour accéder aux types génériques conformes à CLS dans une bibliothèque.  
+ Les noms des types génériques sont encodés sous la forme *nom\`n*, où *nom* est le nom du type, \` est un caractère littéral et *n* est le nombre de paramètres déclarés sur le type ou, pour les types génériques imbriqués, le nombre de paramètres de type nouvellement introduits. Cet encodage de noms de types génériques intéresse principalement les développeurs qui utilisent la réflexion pour accéder aux types génériques conformes à CLS dans une bibliothèque.  
   
  Si les contraintes sont appliquées à un type générique, tous les types utilisés en tant que contraintes doivent également être conformes à CLS. L'exemple suivant définit une classe nommée `BaseClass` qui n'est pas conforme à CLS et une classe générique nommée `BaseCollection` dont le paramètre de type doit dériver de `BaseClass`. Toutefois, comme `BaseClass` n'est pas conforme à CLS, le compilateur émet un avertissement.  
   
@@ -572,7 +572,7 @@ csc /t:module NumberUtil.cs
   
  Pour plus d’informations sur la syntaxe de la ligne de commande du compilateur C#, consultez [Génération à partir de la ligne de commande avec csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).  
   
- Vous utilisez ensuite l’[outil de liaison (Link.exe)](http://msdn.microsoft.com/library/c1d51b8a-bd23-416d-81e4-900e02b2c129) pour compiler les deux modules en un assembly :  
+ Vous utilisez ensuite l’[outil de liaison (Link.exe)](https://msdn.microsoft.com/library/c1d51b8a-bd23-416d-81e4-900e02b2c129) pour compiler les deux modules en un assembly :  
   
 ```  
 link numberutil.netmodule stringutil.netmodule /out:UtilityLib.dll /dll   

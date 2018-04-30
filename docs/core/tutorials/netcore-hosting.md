@@ -1,7 +1,7 @@
 ---
-title: "Hébergement de .NET Core"
-description: "Hébergement du runtime .NET Core à partir du code natif"
-keywords: ".NET, .NET Core, Hébergement, Hébergement de .NET Core"
+title: Hébergement de .NET Core
+description: Hébergement du runtime .NET Core à partir du code natif
+keywords: .NET, .NET Core, Hébergement, Hébergement de .NET Core
 author: mjrousos
 ms.author: mikerou
 ms.date: 2/3/2017
@@ -11,11 +11,11 @@ ms.devlang: dotnet
 ms.assetid: 13edec8b-614d-47ed-9e95-ed6d3b94ec0c
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 3c358ab9173032b1f76d30b756ee6290233b2702
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 5ff2e8e4da12b2a9822b595abbb2bdb0f583cf02
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="hosting-net-core"></a>Hébergement de .NET Core
 
@@ -35,7 +35,7 @@ Ce didacticiel et son exemple associé génèrent un hôte Windows, mais nous vo
 
 ## <a name="creating-the-host"></a>Création de l'hôte
 
-Un [exemple d’hôte](https://github.com/dotnet/docs/tree/master/samples/core/hosting) illustrant les étapes décrites dans cet article est disponible dans le dépôt GitHub dotnet/docs. Les commentaires du fichier *host.cpp* de l’exemple associent clairement les étapes numérotées de ce didacticiel à l’endroit où elles sont exécutées dans l’exemple. Pour obtenir des instructions de téléchargement, consultez [Exemples et didacticiels](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Un [exemple d’hôte](https://github.com/dotnet/samples/tree/master/core/hosting) illustrant les étapes décrites dans cet article est disponible dans le dépôt GitHub dotnet/samples. Les commentaires du fichier *host.cpp* de l’exemple associent clairement les étapes numérotées de ce didacticiel à l’endroit où elles sont exécutées dans l’exemple. Pour obtenir des instructions de téléchargement, consultez [Exemples et didacticiels](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 N’oubliez pas que l’exemple d’hôte est destiné à être utilisé dans un contexte d’apprentissage, il ne s’attarde donc pas sur la vérification des erreurs et privilégie la lisibilité par rapport à l’efficacité. D’autres exemples d’hôtes réels sont disponibles dans le dépôt [dotnet/coreclr](https://github.com/dotnet/coreclr/tree/master/src/coreclr/hosts). L’[hôte CoreRun](https://github.com/dotnet/coreclr/tree/master/src/coreclr/hosts/corerun), en particulier, est un bon exemple d’hôte généraliste à étudier après avoir parcouru l’exemple simple.
 
@@ -90,7 +90,7 @@ Propriétés AppDomain courantes :
 *  `PLATFORM_RESOURCE_ROOTS` Cette liste inclut des chemins où rechercher les assemblys satellites de ressources (dans les sous-répertoires spécifiques de la culture).
 *  `AppDomainCompatSwitch` Cette chaîne spécifie les particularités de compatibilité qui doivent être utilisées pour les assemblys sans moniker de framework cible explicite (attribut de niveau assembly indiquant le framework dans lequel doit s’exécuter un assembly). En général, elle doit être définie sur `"UseLatestBehaviorWhenTFMNotSpecified"`, mais certains hôtes peuvent préférer obtenir d’anciennes particularités de compatibilité Silverlight ou Windows Phone à la place.
 
-Dans notre [exemple d’hôte simple](https://github.com/dotnet/docs/tree/master/samples/core/hosting), ces propriétés sont configurées de la façon suivante :
+Dans notre [exemple d’hôte simple](https://github.com/dotnet/samples/tree/master/core/hosting), ces propriétés sont configurées de la façon suivante :
 
 [!code-cpp[NetCoreHost#6](../../../samples/core/hosting/host.cpp#6)]
 

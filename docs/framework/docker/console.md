@@ -1,6 +1,6 @@
 ---
-title: "Exécution d’applications console dans Docker"
-description: "Découvrez comment prendre une application console .NET Framework existante et l’exécuter dans un conteneur Docker Windows."
+title: Exécution d’applications console dans Docker
+description: Découvrez comment prendre une application console .NET Framework existante et l’exécuter dans un conteneur Docker Windows.
 author: spboyer
 keywords: .NET, Conteneur, Console, Applications
 ms.date: 09/28/2016
@@ -9,11 +9,11 @@ ms.prod: .net-framework
 ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
-ms.openlocfilehash: 037d94452dd62c06fe6d8ac7aea1143f52b96d32
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 7990ed03028ea9361a8b1760b237b8ed2f9d204d
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="running-console-applications-in-windows-containers"></a>Exécution d’applications console dans des conteneurs Windows
 
@@ -25,7 +25,7 @@ L’exemple d’application console est un exemple simple qui prend un argument,
 
 `Environment.MachineName` a été ajouté à la réponse pour afficher la différence entre l’exécution de l’application localement et son exécution dans un conteneur Windows. Selon que vous exécutez l’application localement ou dans un conteneur Windows, c’est le nom de votre ordinateur local ou l’ID de session du conteneur qui est retourné.
 
-L’exemple complet est disponible dans le [dépôt dotnet / docs sur GitHub](https://github.com/dotnet/docs/tree/master/samples/framework/docker/ConsoleRandomAnswerGenerator). Pour obtenir des instructions de téléchargement, consultez [Exemples et didacticiels](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+[L’exemple terminé](https://github.com/dotnet/samples/tree/master/framework/docker/ConsoleRandomAnswerGenerator) est disponible dans le dépôt dotnet/samples sur GitHub. Pour obtenir des instructions de téléchargement, consultez [Exemples et didacticiels](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 Vous devez être familiarisé avec certains termes Docker avant de procéder au déplacement de votre application vers un conteneur.
 
@@ -141,5 +141,5 @@ Pour ce faire, ouvrez PowerShell et utilisez la commande suivante :
 .\run.ps1 "Is this easy or what?"
 ```
 
-## <a name="summary"></a>Résumé
+## <a name="summary"></a>Récapitulatif
 Simplement en ajoutant un fichier Dockerfile et en publiant l’application, vous pouvez exécuter vos applications console .NET Framework dans des conteneurs et tirer enfin parti de l’exécution de plusieurs instances, d’un démarrage/arrêt propre et d’autres fonctionnalités de Windows Server 2016 sans apporter de modification au code de l’application.

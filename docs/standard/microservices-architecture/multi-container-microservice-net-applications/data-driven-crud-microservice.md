@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: be8644e45be8db88c99332476e74c5c968764c74
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: ca4bfd31b505754b508555ff2771a6380ae023b4
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Création d’un microservice CRUD simple piloté par les données
 
@@ -35,7 +35,7 @@ Il peut s’agir, par exemple, du microservice de catalogue de l’exemple d’a
 
 **Figure 8-5**. Conception d’un microservice CRUD simple piloté par les données
 
-Lorsque vous développez ce type de service, vous avez seulement besoin [d’ASP.NET Core](https://docs.microsoft.com/aspnet/core/) et d’une API ou d’un outil ORM d’accès aux données, comme, par exemple, [Entity Framework Core](https://docs.microsoft.com/ef/core/index). Vous pouvez également générer automatiquement des métadonnées [Swagger](http://swagger.io/) par le biais de [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore), afin de fournir une description de votre service, comme l’explique la section suivante.
+Lorsque vous développez ce type de service, vous avez seulement besoin [d’ASP.NET Core](https://docs.microsoft.com/aspnet/core/) et d’une API ou d’un outil ORM d’accès aux données, comme, par exemple, [Entity Framework Core](https://docs.microsoft.com/ef/core/index). Vous pouvez également générer automatiquement des métadonnées [Swagger](https://swagger.io/) par le biais de [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore), afin de fournir une description de votre service, comme l’explique la section suivante.
 
 Notez que les serveurs de base de données, tels que SQL Server, qui sont situés dans un conteneur Docker constituent la solution idéale pour les environnements de développement. En effet, vous pouvez utiliser directement toutes vos dépendances, sans avoir à provisionner une base de données locale ou cloud. Ceci est très utile lorsque vous effectuez des tests d’intégration. Toutefois, pour les environnements de production, l’exécution d’un serveur de base de données dans un conteneur est déconseillée, car elle ne permet pas d’obtenir une haute disponibilité. Pour un environnement de production Azure, il est recommandé d’utiliser Azure SQL DB ou une autre technologie de base de données capable de fournir une haute disponibilité et une scalabilité importante. Par exemple, pour une approche NoSQL, vous pourriez utiliser DocumentDB.
 
@@ -220,7 +220,7 @@ public void ConfigureServices(IServiceCollection services)
 -   **Interrogation des données**
     [*https://docs.microsoft.com/ef/core/querying/index*](https://docs.microsoft.com/ef/core/querying/index)
 
--   **L’enregistrement de données**
+-   **Enregistrement de données**
     [*https://docs.microsoft.com/ef/core/saving/index*](https://docs.microsoft.com/ef/core/saving/index)
 
 ## <a name="the-db-connection-string-and-environment-variables-used-by-docker-containers"></a>Chaîne de connexion de la base de données et variables d’environnement utilisées par les conteneurs Docker
@@ -293,30 +293,30 @@ Ce mécanisme de gestion de version est simple et dépend du serveur qui achemin
 
 ### <a name="additional-resources"></a>Ressources supplémentaires
 
--   **Scott Hanselman. Contrôle de version des API Web RESTful ASP.NET Core simplifiée**
-    [*http://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx*](http://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx)
+-   **Scott Hanselman. ASP.NET Core RESTful Web API versioning made easy**
+    [*https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx*](https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx)
 
--   **Contrôle de version une API RESTful web**
+-   **Contrôle de version d’une API web RESTful**
     [*https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api*](https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
 
--   **Roy Fielding. Le contrôle de version et hypermédia REST**
+-   **Roy Fielding. Versioning, Hypermedia, and REST**
     [*https://www.infoq.com/articles/roy-fielding-on-versioning*](https://www.infoq.com/articles/roy-fielding-on-versioning)
 
 ## <a name="generating-swagger-description-metadata-from-your-aspnet-core-web-api"></a>Génération de métadonnées de description Swagger à partir de votre API web ASP.NET Core 
 
-[Swagger](http://swagger.io/) est un framework open source couramment utilisé qui s’appuie sur un large écosystème d’outils permettant de concevoir, de générer, de documenter et de consommer vos API RESTful. C’est désormais une référence dans le domaine des métadonnées de description d’API. Vous devez ajouter des métadonnées de description Swagger à tous les microservices, qu’il s’agisse de microservices pilotés par les données ou de microservices plus avancés pilotés par le domaine (comme expliqué dans la section suivante).
+[Swagger](https://swagger.io/) est un framework open source couramment utilisé qui s’appuie sur un large écosystème d’outils permettant de concevoir, de générer, de documenter et de consommer vos API RESTful. C’est désormais une référence dans le domaine des métadonnées de description d’API. Vous devez ajouter des métadonnées de description Swagger à tous les microservices, qu’il s’agisse de microservices pilotés par les données ou de microservices plus avancés pilotés par le domaine (comme expliqué dans la section suivante).
 
 Le principal intérêt de Swagger est la spécification Swagger, c’est-à-dire les métadonnées de description d’API contenues dans un fichier JSON ou YAML. La spécification crée le contrat RESTful pour votre API, en détaillant toutes ses ressources et opérations dans un format lisible par l’homme et par la machine, pour un développement, une découverte et une intégration facilités.
 
 Cette spécification est la base de la spécification OpenAPI (OAS). Elle a été développée par une communauté ouverte, transparente et collaborative pour normaliser la façon dont les interfaces RESTful sont définies.
 
-La spécification permet de définir la façon dont un service peut être découvert et la façon dont ses fonctionnalités sont comprises. Pour plus d’informations, notamment un éditeur web et des exemples de spécifications de Swagger d’entreprises comme Spotify, Uber, la marge et Microsoft, consultez le site Swagger (<http://swagger.io>).
+La spécification permet de définir la façon dont un service peut être découvert et la façon dont ses fonctionnalités sont comprises. Pour plus d’informations, notamment sur l’éditeur web Swagger, et pour obtenir les exemples de spécifications Swagger d’entreprises comme Spotify, Uber, Slack et Microsoft, consultez le site Swagger (<https://swagger.io/>).
 
 ### <a name="why-use-swagger"></a>Pourquoi utiliser Swagger ?
 
 Voici pourquoi il est utile de générer des métadonnées Swagger pour votre API.
 
-**Les autres produits peuvent consommer et intégrer automatiquement vos API**. Swagger est pris en charge par des dizaines de produits et [d’outils professionnels](http://swagger.io/commercial-tools/), ainsi que par un grand nombre de [bibliothèques et de frameworks](http://swagger.io/open-source-integrations/). Microsoft propose des produits et des outils de niveau supérieur qui peuvent consommer automatiquement les API Swagger, comme celles qui suivent :
+**Les autres produits peuvent consommer et intégrer automatiquement vos API**. Swagger est pris en charge par des dizaines de produits et [d’outils professionnels](https://swagger.io/commercial-tools/), ainsi que par un grand nombre de [bibliothèques et de frameworks](https://swagger.io/open-source-integrations/). Microsoft propose des produits et des outils de niveau supérieur qui peuvent consommer automatiquement les API Swagger, comme celles qui suivent :
 
 -   [AutoRest](https://github.com/Azure/AutoRest). Vous pouvez générer automatiquement des classes client .NET pour appeler Swagger. Cet outil peut être utilisé à partir de l’interface CLI. En outre, il s’intègre à Visual Studio pour une utilisation facilitée via l’interface utilisateur graphique.
 
@@ -415,7 +415,7 @@ C’est aussi simple que cela. Et parce qu’elles sont générées automatiquem
 
 ### <a name="additional-resources"></a>Ressources supplémentaires
 
--   **API aide des Pages Web ASP.NET à l’aide de Swagger**
+-   **Pages d’aide d’API web ASP.NET Core à l’aide de Swagger**
     [*https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger*](https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger)
 
 

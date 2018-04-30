@@ -3,16 +3,16 @@ title: Les valeurs de retour de référence et variables locales ref (Guide C#)
 description: Découvrir comment définir et utiliser des valeurs de retour de référence et des variables locales ref
 author: rpetrusha
 ms.author: ronpet
-ms.date: 01/23/2017
+ms.date: 04/04/2018
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.openlocfilehash: c37c6dd61ae02813bcc467982f3b175da9136e4a
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 57fa8f52320b30a1cb228b41e3f5e6655c235561
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ref-returns-and-ref-locals"></a>Retours ref et variables locales ref
 
@@ -20,21 +20,21 @@ ms.lasthandoff: 03/23/2018
 
 ## <a name="what-is-a-reference-return-value"></a>Qu’est-ce qu’une valeur de retour de référence ?
 
-La plupart des développeurs sont familiarisés avec le passage d’un argument à une méthode appelée *par référence*. La liste d’arguments d’une méthode appelée comprend une variable passée par référence, et toute modification apportée à sa valeur par la méthode appelée est observée par l’appelant. Une *valeur de retour de référence* signifie qu’une méthode retourne une *référence* (ou un alias) à une variable dont l’étendue inclut la méthode et dont la durée de vie doit s’étendre au-delà du retour de la méthode. Des modifications apportées par l’appelant à la valeur de retour de la méthode portent sur la variable qui est retournée par la méthode.
+La plupart des développeurs sont familiarisés avec le passage d’un argument à une méthode appelée *par référence*. La liste d’arguments d’une méthode appelée inclut une variable passée par référence. Chaque modification de sa valeur par la méthode appelée est respectée par l’appelant. Une *valeur de retour de référence* signifie qu’une méthode retourne une *référence* (ou un alias) à une variable. L’étendue de cette variable doit inclure la méthode. La durée de vie de cette variable doit s’étendre au-delà du retour de la méthode. Des modifications apportées par l’appelant à la valeur de retour de la méthode portent sur la variable qui est retournée par la méthode.
 
 La déclaration qu’une méthode retourne une *valeur de retour de référence* indique que la méthode retourne un alias vers une variable. L’intention de conception est souvent que le code appelant ait accès à cette variable à travers l’alias, et qu’il puisse également la modifier. C’est pourquoi les méthodes de retour par référence ne peuvent pas avoir le type de retour `void`.
 
-Certaines restrictions s’appliquent à l’expression qu’une méthode peut retourner comme valeur de retour de référence. Elles incluent notamment :
+Certaines restrictions s’appliquent à l’expression qu’une méthode peut retourner comme valeur de retour de référence. Les restrictions sont les suivantes :
 
 - La valeur de retour doit avoir une durée de vie qui s’étend au-delà de l’exécution de la méthode. En d’autres termes, il ne peut pas s’agir d’une variable locale dans la méthode qui la retourne. Il peut s’agir d’un champ d’instance ou statique d’une classe, ou bien un argument passé à la méthode. Une tentative de retour d’une variable locale génère l’erreur du compilateur CS8168, « Impossible de retourner la variable locale 'obj' par référence, car il ne s’agit pas d’une variable locale de référence ».
 
-- La valeur de retour ne peut pas être le littéral `null`. Une tentative de retour de `null` génère l’erreur du compilateur CS8156, « Impossible d’utiliser une expression dans ce contexte, car elle ne peut pas être retournée par référence ».
+- La valeur de retour ne peut pas être le littéral `null`. Le retour de `null` génère l’erreur de compilateur CS8156, « Impossible d’utiliser une expression dans ce contexte, car elle ne peut pas être retournée par référence ».
 
    Une méthode avec un retour de référence peut retourner un alias vers une variable dont la valeur est actuellement la valeur (non instanciée) null ou un [type nullable](../nullable-types/index.md) pour un type valeur.
  
-- La valeur de retour ne peut pas être une constante, un membre d’énumération, la valeur de retour par valeur d’une propriété, ou une méthode d’une `class` ou d’un `struct`. Une tentative de retour de ces éléments génère l’erreur du compilateur CS8156, « Impossible d’utiliser une expression dans ce contexte, car elle ne peut pas être retournée par référence ».
+- La valeur de retour ne peut pas être une constante, un membre d’énumération, la valeur de retour par valeur d’une propriété, ou une méthode d’une `class` ou d’un `struct`. Le non-respect de cette règle génère l’erreur de compilateur CS8156, « Impossible d’utiliser une expression dans ce contexte, car elle ne peut pas être retournée par référence ».
 
-De plus, étant donné qu’une méthode asynchrone peut retourner une valeur avant que son exécution soit terminée, alors que sa valeur de retour est toujours inconnue, les valeurs de retour de référence ne sont pas autorisées sur les méthodes async.
+En outre, les valeurs de retour de référence ne sont pas autorisées sur les méthodes asynchrones. Une méthode asynchrone peut être retournée avant la fin de son exécution, même si sa valeur de retour est encore inconnue.
  
 ## <a name="defining-a-ref-return-value"></a>Définition d’une valeur de retour de référence
 
@@ -85,7 +85,7 @@ ref Person p = ref contacts.GetContactInformation("Brandie", "Best");
 
 L’utilisation ultérieure de `p` revient à utiliser la variable retournée par `GetContactInformation`, car `p` est un alias de cette variable. Les modifications apportées à `p` modifient également la variable retournée à partir de `GetContactInformation`.
 
-Notez que le mot clé `ref` est utilisé à la fois avant la déclaration de la variable locale *et* avant l’appel de la méthode. 
+Le mot clé `ref` est utilisé à la fois avant la déclaration de la variable locale *et* avant l’appel de la méthode. 
 
 Vous pouvez accéder à une valeur par référence de la même façon. Dans certains cas, l’accès à une valeur par référence augmente les performances en évitant une opération de copie potentiellement coûteuse. Par exemple, l’instruction suivante montre comment il est possible de définir une valeur locale ref qui est utilisée pour référencer une valeur.
 
@@ -93,20 +93,35 @@ Vous pouvez accéder à une valeur par référence de la même façon. Dans cert
 ref VeryLargeStruct reflocal = ref veryLargeStruct;
 ```
 
-Notez que le mot clé `ref` est utilisé à la fois avant la déclaration de la variable locale *et* avant la valeur du second exemple. Si les deux mots clés `ref` ne sont pas inclus dans la déclaration et l’affectation de la variable dans les deux exemples, l’erreur du compilateur CS8172, « Impossible d’initialiser une variable par référence avec une valeur » est générée. 
- 
+Le mot clé `ref` est utilisé à la fois avant la déclaration de la variable locale *et* avant la valeur du second exemple. Si les deux mots clés `ref` ne sont pas inclus dans la déclaration et l’affectation de la variable dans les deux exemples, l’erreur du compilateur CS8172, « Impossible d’initialiser une variable par référence avec une valeur » est générée. 
+
+Dans les versions antérieures à C# 7.3, les variables locales ref ne pouvaient pas être réassignées pour référencer un stockage différent après avoir été initialisées. Cette restriction a été supprimée. L’exemple suivant illustre une réassignation :
+
+```csharp
+ref VeryLargeStruct reflocal = ref veryLargeStruct; // initialization
+refLocal = ref anotherVeryLargeStruct; // reassigned, refLocal refers to different storage.
+```
+
+ Les variables locales ref doivent toujours être initialisées quand elles sont déclarées.
+
 ## <a name="ref-returns-and-ref-locals-an-example"></a>Retours ref et variables locales ref : exemple
 
 L’exemple suivant définit une classe `NumberStore` qui stocke un tableau de valeurs entières. La méthode `FindNumber` retourne par référence le premier nombre supérieur ou égal au nombre passé comme argument. Si aucun nombre n’est supérieur ou égal à l’argument, la méthode retourne le nombre se trouvant à l’index 0. 
 
-[!code-csharp[ref-returns](../../../../samples/snippets/csharp/programming-guide/ref-returns/ref-returns1.cs#1)]
+[!code-csharp[ref-returns](../../../../samples/snippets/csharp/programming-guide/ref-returns/NumberStore.cs#1)]
 
-L’exemple suivant appelle la méthode `NumberStore.FindNumber` pour récupérer la première valeur supérieure ou égale à 16. L’appelant multiplie ensuite par deux la valeur retournée par la méthode. Comme le montre la sortie de l’exemple, cette modification est reflétée dans la valeur des éléments de tableau de l’instance `NumberStore`.
+L’exemple suivant appelle la méthode `NumberStore.FindNumber` pour récupérer la première valeur supérieure ou égale à 16. L’appelant multiplie ensuite par deux la valeur retournée par la méthode. La sortie de l’exemple montre comment la modification est reflétée dans la valeur des éléments de tableau de l’instance `NumberStore`.
 
-[!code-csharp[ref-returns](../../../../samples/snippets/csharp/programming-guide/ref-returns/ref-returns1.cs#2)]
+[!code-csharp[ref-returns](../../../../samples/snippets/csharp/programming-guide/ref-returns/NumberStore.cs#2)]
 
-Si les valeurs de retour de référence ne sont pas prises en charge, une telle opération est généralement effectuée en retournant l’index de l’élément de tableau ainsi que sa valeur de retour. L’appelant peut ensuite utiliser cet index pour modifier la valeur dans un appel de méthode distinct. Toutefois, l’appelant peut également modifier l’index pour accéder à d’autres valeurs de tableau et éventuellement les modifier.  
- 
+Si les valeurs de retour de référence ne sont pas prises en charge, une telle opération est effectuée en retournant l’index de l’élément de tableau ainsi que sa valeur de retour. L’appelant peut ensuite utiliser cet index pour modifier la valeur dans un appel de méthode distinct. Toutefois, l’appelant peut également modifier l’index pour accéder à d’autres valeurs de tableau et éventuellement les modifier.  
+
+L’exemple suivant montre comment réécrire la méthode `FindNumber` à compter de C# 7.3 pour utiliser la réassignation des variables locales ref :
+
+[!code-csharp[ref-returns](../../../../samples/snippets/csharp/programming-guide/ref-returns/NumberStoreUpdated.cs#1)]
+
+Cette deuxième version est plus efficace avec des séquences plus longues dans les scénarios où le nombre recherché est proche de la fin du tableau.
+
 ## <a name="see-also"></a>Voir aussi
 
 [ref, mot clé](../../language-reference/keywords/ref.md)  

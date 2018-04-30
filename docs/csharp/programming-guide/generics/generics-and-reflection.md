@@ -1,21 +1,22 @@
 ---
-title: "Génériques et réflexion (Guide de programmation C#)"
+title: Génériques et réflexion (Guide de programmation C#)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - generics [C#], reflection
 - reflection [C#], generic types
 ms.assetid: 162fd9b4-dd5b-4abb-8c9b-e44e21e2f451
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: cc2363eea7d5c601fc73f5f9eb14b4b07ad14cb8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3048cb6a9b333107f6ea37edf31ead96f9fe2057
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="generics-and-reflection-c-programming-guide"></a>Génériques et réflexion (Guide de programmation C#)
 Étant donné que le common language runtime (CLR) a accès aux informations concernant les types génériques au moment de l’exécution, vous pouvez utiliser la réflexion pour obtenir des informations sur les types génériques de la même manière que pour les types non génériques. Pour plus d’informations, consultez [Génériques dans le runtime](../../../csharp/programming-guide/generics/generics-in-the-run-time.md).  
@@ -38,15 +39,15 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.Type.DeclaringMethod%2A>|Retourne la méthode générique qui a défini le paramètre de type générique actuel, ou Null si le paramètre de type n’a pas été défini par une méthode générique.|  
 |<xref:System.Type.MakeGenericType%2A>|Substitue les éléments d’un tableau de types aux paramètres de type de la définition du type générique actuel et retourne un objet <xref:System.Type> qui représente le type construit résultant.|  
   
- De plus, de nouveaux membres ont été ajoutés à la classe <xref:System.Reflection.MethodInfo> pour générer des informations d’exécution pour les types génériques. Pour obtenir la liste des conditions indifférentes des termes utilisés pour réfléchir les méthodes génériques, consultez les notes relatives à la propriété <xref:System.Reflection.MethodInfo.IsGenericMethod%2A>.  
+ De plus, les membres de la classe <xref:System.Reflection.MethodInfo> permettent la génération d’informations d’exécution pour les méthodes génériques. Pour obtenir la liste des conditions indifférentes des termes utilisés pour réfléchir les méthodes génériques, consultez les notes relatives à la propriété <xref:System.Reflection.MethodBase.IsGenericMethod%2A>.  
   
 |Nom de membre System.Reflection.MemberInfo|Description|  
 |----------------------------------------------|-----------------|  
-|<xref:System.Reflection.MethodInfo.IsGenericMethod%2A>|Retourne la valeur true si une méthode est générique.|  
+|<xref:System.Reflection.MethodBase.IsGenericMethod%2A>|Retourne la valeur true si une méthode est générique.|  
 |<xref:System.Reflection.MethodInfo.GetGenericArguments%2A>|Retourne un tableau d’objets de type qui représentent les arguments de type d’une méthode générique construite, ou les paramètres de type d’une définition de méthode générique.|  
 |<xref:System.Reflection.MethodInfo.GetGenericMethodDefinition%2A>|Retourne la définition de méthode générique sous-jacente pour la méthode construite actuelle.|  
-|<xref:System.Reflection.MethodInfo.ContainsGenericParameters%2A>|Retourne la valeur true si la méthode ou l’un de ses types englobants contient des paramètres de type pour lesquels des types spécifiques n’ont pas été fournis.|  
-|<xref:System.Reflection.MethodInfo.IsGenericMethodDefinition%2A>|Retourne la valeur true si le <xref:System.Reflection.MethodInfo> actuel représente la définition d’une méthode générique.|  
+|<xref:System.Reflection.MethodBase.ContainsGenericParameters%2A>|Retourne la valeur true si la méthode ou l’un de ses types englobants contient des paramètres de type pour lesquels des types spécifiques n’ont pas été fournis.|  
+|<xref:System.Reflection.MethodBase.IsGenericMethodDefinition%2A>|Retourne la valeur true si le <xref:System.Reflection.MethodInfo> actuel représente la définition d’une méthode générique.|  
 |<xref:System.Reflection.MethodInfo.MakeGenericMethod%2A>|Substitue les éléments d'un tableau de types aux paramètres de type de la définition de méthode générique actuelle et retourne un objet <xref:System.Reflection.MethodInfo> représentant la méthode construite résultante.|  
   
 ## <a name="see-also"></a>Voir aussi  

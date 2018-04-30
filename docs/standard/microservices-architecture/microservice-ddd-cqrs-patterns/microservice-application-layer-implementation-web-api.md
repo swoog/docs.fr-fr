@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: cfca93dca0ec9d05936f4be676e27135c581de94
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: bdb080369c26a3d7ffab97f93ba3419d6bd84754
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="implementing-the-microservice-application-layer-using-the-web-api"></a>Implémentation de la couche Application de microservices à l’aide de l’API web
 
@@ -117,8 +117,8 @@ Quand vous utilisez l’injection de dépendances dans .NET Core, vous pouvez av
 
 #### <a name="additional-resources"></a>Ressources supplémentaires
 
--   **Matthew King. Inscription des services avec Scrutor**
-    [*https://mking.io/blog/registering-services-with-scrutor*](https://mking.io/blog/registering-services-with-scrutor)
+-   **Matthew King. Registering services with Scrutor**
+    [*https://mking.net/blog/registering-services-with-scrutor*](https://mking.net/blog/registering-services-with-scrutor)
 
 <!-- -->
 
@@ -172,13 +172,13 @@ Le type d’étendue d’instance détermine la façon dont une instance est par
 
 #### <a name="additional-resources"></a>Ressources supplémentaires
 
--   **Introduction à l’Injection de dépendances dans ASP.NET Core**
+-   **Injection de dépendance dans ASP.NET Core**
     [*https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection*](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection)
 
 -   **Autofac.** Documentation officielle.
     [*http://docs.autofac.org/en/latest/*](http://docs.autofac.org/en/latest/)
 
--   **Comparaison des durées de vie du service ASP.NET Core IoC conteneur avec des étendues d’instance Autofac IoC conteneur - Cesar de la Torre.**
+-   **Comparing ASP.NET Core IoC container service lifetimes with Autofac IoC container instance scopes - Cesar de la Torre.**
     [*https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/*](https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/)
 
 ## <a name="implementing-the-command-and-command-handler-patterns"></a>Implémentation des modèles Commande et Gestionnaire de commandes
@@ -398,19 +398,19 @@ Il s’agit des étapes supplémentaires que doit suivre un gestionnaire de comm
 
 #### <a name="additional-resources"></a>Ressources supplémentaires
 
--   **Mark Seemann. Dans les limites, les Applications sont orientés objet pas**
-    [*http://blog.ploeh.dk/2011/05/31/AttheBoundariesApplicationsareNotObject et orienté /*](http://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/)
+-   **Mark Seemann. At the Boundaries, Applications are Not Object-Oriented**
+    [*http://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/*](http://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/)
 
--   **Commandes et les événements**
+-   **Commands and events**
     [*http://cqrs.nu/Faq/commands-and-events*](http://cqrs.nu/Faq/commands-and-events)
 
--   **À quoi un gestionnaire de commandes ?**
+-   **What does a command handler do?**
     [*http://cqrs.nu/Faq/command-handlers*](http://cqrs.nu/Faq/command-handlers)
 
--   **Jimmy Bogard. Modèles de commande du domaine – gestionnaires**
+-   **Jimmy Bogard. Domain Command Patterns – Handlers**
     [*https://jimmybogard.com/domain-command-patterns-handlers/*](https://jimmybogard.com/domain-command-patterns-handlers/)
 
--   **Jimmy Bogard. Modèles de commande de domaine : la Validation**
+-   **Jimmy Bogard. Domain Command Patterns – Validation**
     [*https://jimmybogard.com/domain-command-patterns-validation/*](https://jimmybogard.com/domain-command-patterns-validation/)
 
 ## <a name="the-command-process-pipeline-how-to-trigger-a-command-handler"></a>Pipeline du processus de commande : comment déclencher un gestionnaire de commandes
@@ -833,38 +833,38 @@ De la même façon, vous pouvez implémenter d’autres comportements pour d’a
 
 ##### <a name="the-mediator-pattern"></a>Le modèle Médiateur
 
--   **Modèle de médiateur**
-    [*https://en.wikipedia.org/wiki/Mediator\_modèle*](https://en.wikipedia.org/wiki/Mediator_pattern)
+-   **Mediator pattern**
+    [*https://en.wikipedia.org/wiki/Mediator\_pattern*](https://en.wikipedia.org/wiki/Mediator_pattern)
 
 ##### <a name="the-decorator-pattern"></a>Le modèle Élément décoratif
 
--   **Modèle d’élément décoratif**
-    [*https://en.wikipedia.org/wiki/Decorator\_modèle*](https://en.wikipedia.org/wiki/Decorator_pattern)
+-   **Decorator pattern**
+    [*https://en.wikipedia.org/wiki/Decorator\_pattern*](https://en.wikipedia.org/wiki/Decorator_pattern)
 
 ##### <a name="mediatr-jimmy-bogard"></a>MediatR (Jimmy Bogard)
 
 -   **MediatR.** Dépôt GitHub
     [*https://github.com/jbogard/MediatR*](https://github.com/jbogard/MediatR)
 
--   **CQRS avec MediatR et AutoMapper**
+-   **CQRS with MediatR and AutoMapper**
     [*https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/*](https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/)
 
--   **Placer vos contrôleurs un régime : publications et les commandes.**
+-   **Put your controllers on a diet: POSTs and commands.**
     [*https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/*](https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/)
 
--   **Problèmes de transversaux abordant le problème avec un pipeline médiateur**
+-   **Tackling cross-cutting concerns with a mediator pipeline**
     [*https://lostechies.com/jimmybogard/2014/09/09/tackling-cross-cutting-concerns-with-a-mediator-pipeline/*](https://lostechies.com/jimmybogard/2014/09/09/tackling-cross-cutting-concerns-with-a-mediator-pipeline/)
 
--   **CQRS et reste : la solution idéale**
+-   **CQRS and REST: the perfect match**
     [*https://lostechies.com/jimmybogard/2016/06/01/cqrs-and-rest-the-perfect-match/*](https://lostechies.com/jimmybogard/2016/06/01/cqrs-and-rest-the-perfect-match/)
 
--   **Exemples de Pipeline de MediatR**
+-   **MediatR Pipeline Examples**
     [*https://lostechies.com/jimmybogard/2016/10/13/mediatr-pipeline-examples/*](https://lostechies.com/jimmybogard/2016/10/13/mediatr-pipeline-examples/)
 
--   **Contextes de Test de tranche verticale pour MediatR et ASP.NET Core**
+-   **Vertical Slice Test Fixtures for MediatR and ASP.NET Core**
     *<https://lostechies.com/jimmybogard/2016/10/24/vertical-slice-test-fixtures-for-mediatr-and-asp-net-core/> *
 
--   **Extensions MediatR pour l’Injection de dépendance de Microsoft publié**
+-   **MediatR Extensions for Microsoft Dependency Injection Released**
     [*https://lostechies.com/jimmybogard/2016/07/19/mediatr-extensions-for-microsoft-dependency-injection-released/*](https://lostechies.com/jimmybogard/2016/07/19/mediatr-extensions-for-microsoft-dependency-injection-released/)
 
 ##### <a name="fluent-validation"></a>Validation fluide

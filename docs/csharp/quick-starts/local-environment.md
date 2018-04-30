@@ -1,6 +1,6 @@
 ---
-title: "Didacticiel sur l’environnement local - Guides de démarrage rapide local en C#"
-description: "Ce guide de démarrage rapide fournit les notions de base pour exécuter des démarrages rapides localement"
+title: Didacticiel sur l’environnement local - Guides de démarrage rapide local en C#
+description: Ce guide de démarrage rapide fournit les notions de base pour exécuter des démarrages rapides localement
 author: billwagner
 ms.topic: article
 ms.date: 12/07/2017
@@ -8,11 +8,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 9957f524e04f8ff64d4f640cf085b16cf9a2c0c6
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: ec70b6bca55d370d90e912793cfec82a45141c51
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="local-environment"></a>Environnement local
 
@@ -35,19 +35,25 @@ Vous pouvez commencer par l’un des guides de démarrage rapide suivants :
 
 Dans le guide de démarrage rapide [Nombres en C#](numbers-in-csharp-local.md), vous allez apprendre comment les ordinateurs stockent les nombres et comment effectuer des calculs avec différents types numériques. Vous apprendrez les bases de l’arrondi et comment effectuer des calculs mathématiques à l’aide de C#. 
 
-Ce guide de démarrage rapide part du principe que vous avez terminé le didacticiel [Hello world](hello-world.yml).
+Ce guide de démarrage rapide part du principe que vous avez fini la leçon [Hello world](hello-world.yml).
 
 ## <a name="branches-and-loopsbranches-and-loops-localmd"></a>[Branches et boucles](branches-and-loops-local.md)
 
 Le guide de démarrage rapide [Branches et boucles](branches-and-loops-local.md) explique les bases de la sélection de différents chemins d’exécution de code en fonction des valeurs stockées dans des variables. Vous allez apprendre les principes fondamentaux du flux de contrôle, sur la base duquel les programmes prennent des décisions et choisissent différentes actions. 
 
-Cette leçon prend pour acquis que vous avez terminé les leçons [Hello World](hello-world.yml) et [Nombres en C#](numbers-in-csharp-local.md).
+Ce guide de démarrage rapide part du principe que vous avez fini les leçons [Hello world](hello-world.yml) et [Nombres en C#](numbers-in-csharp-local.md).
+
+## <a name="string-interpolationinterpolated-strings-localmd"></a>[Interpolation de chaîne](interpolated-strings-local.md)
+
+Le guide de démarrage rapide [Interpolation de chaîne](interpolated-strings-local.md) vous montre comment insérer des valeurs dans une chaîne. Vous allez apprendre à créer une chaîne interpolée avec des expressions C# incorporées, et à contrôler l’apparence du texte des résultats des expressions dans la chaîne de résultat.
+
+Ce guide de démarrage rapide part du principe que vous avez fini les leçons [Hello world](hello-world.yml), [Nombres en C#](numbers-in-csharp-local.md) et [Branches et boucles](branches-and-loops-local.md).
 
 ## <a name="list-collectionarrays-and-collectionsmd"></a>[Collection de listes](arrays-and-collections.md)
 
 La leçon [Collection de listes](arrays-and-collections.md) vous présente le type Collection de listes qui stocke les séquences de données. Vous apprendrez à ajouter et à supprimer des éléments, à rechercher des éléments et à trier des listes. Vous découvrirez différents types de listes. 
 
-Ce guide de démarrage rapide prend pour acquis que vous avez terminé les guides de démarrage rapide répertoriés ci-dessus.
+Ce guide de démarrage rapide part du principe que vous avez fini les leçons listées ci-dessus.
 
 ## <a name="introduction-to-classesintroduction-to-classesmd"></a>[Présentation des classes](introduction-to-classes.md)
 

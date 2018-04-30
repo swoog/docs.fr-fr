@@ -1,6 +1,6 @@
 ---
-title: "Didacticiel sur les branches et les boucles - Guides de démarrage rapide local en C#"
-description: "Dans ce guide de démarrage rapide sur les branches et les boucles, vous écrivez du code en C# pour explorer la syntaxe de langage qui prend en charge les branches et boucles conditionnelles pour exécuter des instructions de manière répétée."
+title: Didacticiel sur les branches et les boucles - Guides de démarrage rapide local en C#
+description: Dans ce guide de démarrage rapide sur les branches et les boucles, vous écrivez du code en C# pour explorer la syntaxe de langage qui prend en charge les branches et boucles conditionnelles pour exécuter des instructions de manière répétée.
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/31/2017
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 7d69b2b9bb02e2999bcd785da653bd4a13ed947c
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: ea9fb2322202dfa19344e6119e748827535b0739
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="branches-and-loops"></a>Branches et boucles
 
@@ -249,11 +249,11 @@ Maintenant que vous avez vu l’instruction `if` et la création de boucles en l
 - L’instruction `if` vous donne la condition pour vérifier si un nombre doit être inclus dans la somme.
 - La boucle `for` peut vous aider à répéter une série d’étapes pour tous les nombres de 1 à 20.
 
-Essayez par vous-même et vérifiez le résultat. Vous devriez obtenir 63 comme réponse. Vous pouvez voir une réponse possible en [consultant le code terminé sur GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/branches-quickstart/Program.cs#L46-L54).
+Essayez par vous-même et vérifiez le résultat. Vous devriez obtenir 63 comme réponse. Vous pouvez voir une réponse possible en [consultant le code terminé sur GitHub](https://github.com/dotnet/samples/tree/master/csharp/branches-quickstart/Program.cs#L46-L54).
 
 Vous avez terminé le guide de démarrage rapide « Branches et boucles ».
 
-Vous pouvez passer au guide de démarrage rapide [Chaînes interpolées](interpolated-strings-local.md) dans votre propre environnement de développement.
+Vous pouvez maintenant suivre le guide de démarrage rapide [Interpolation de chaîne](interpolated-strings-local.md) dans votre propre environnement de développement.
 
 Pour en savoir plus sur ces concepts, consultez les rubriques suivantes :
 
