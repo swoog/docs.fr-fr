@@ -1,5 +1,5 @@
 ---
-title: "byte (référence C#)"
+title: byte (référence C#)
 ms.date: 03/14/2017
 ms.prod: .net
 ms.technology:
@@ -11,26 +11,26 @@ f1_keywords:
 helpviewer_keywords:
 - byte keyword [C#]
 ms.assetid: 111f1db9-ca32-4f0e-b497-4783517eda47
-caps.latest.revision: 
+caps.latest.revision: 19
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 231a491914071b1d43b5a8938e677be531726e75
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 59cddbb11ec89fe42dffbfae183186b412a9db93
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="byte-c-reference"></a>byte (référence C#)
 
 `byte` désigne un type intégral qui stocke des valeurs comme indiqué dans le tableau suivant.  
   
-|Type|Plage|Taille|Type .NET Framework|  
+|Type|Plage|Size|Type .NET Framework|  
 |----------|-----------|----------|-------------------------|  
 |`byte`|0 à 255|Entier 8 bits non signé|<xref:System.Byte?displayProperty=nameWithType>|  
   
 ## <a name="literals"></a>Littéraux  
 
- Vous pouvez déclarer et initialiser une variable `byte` en lui assignant un littéral décimal, un littéral hexadécimal ou un littéral binaire (à compter de C# 7). Si le littéral entier est en dehors de la plage autorisée pour le type `byte` (autrement dit, s’il est inférieur à <xref:System.Byte.MinValue?displayProperty=nameWithType> ou supérieur à <xref:System.Byte.MaxValue?displayProperty=nameWithType>), une erreur de compilation se produit.
+ Vous pouvez déclarer et initialiser une variable `byte` en lui assignant un littéral décimal, hexadécimal ou binaire (à compter de C# 7.0). Si le littéral entier est en dehors de la plage autorisée pour le type `byte` (autrement dit, s’il est inférieur à <xref:System.Byte.MinValue?displayProperty=nameWithType> ou supérieur à <xref:System.Byte.MaxValue?displayProperty=nameWithType>), une erreur de compilation se produit.
 
 Dans l’exemple suivant, les entiers égaux à 201 représentés comme des littéraux décimaux, hexadécimaux et binaires sont implicitement convertis des valeurs [int](../../../csharp/language-reference/keywords/int.md) en `byte`.    
   
@@ -39,11 +39,11 @@ Dans l’exemple suivant, les entiers égaux à 201 représentés comme des lit
 > [!NOTE] 
 > Vous utilisez le préfixe `0x` ou `0X` pour désigner un littéral hexadécimal, et le préfixe `0b` ou `0B` pour désigner un littéral binaire. Les littéraux décimaux n’ont pas de préfixe.
 
-À partir de C# 7, quelques fonctionnalités ont été ajoutées améliorer la lisibilité. 
- - C# 7.0 permet l’utilisation d’un caractère de soulignement `_`, comme un séparateur de chiffre.
- - 7.2 c# permet `_` à utiliser comme séparateur de chiffres pour un littéral binaire ou en hexadécimal, après le préfixe. Un littéral décimal n’est pas autorisé à avoir un trait de soulignement.
+À compter de C# 7.0, des fonctionnalités ont été ajoutées pour améliorer la lisibilité. 
+ - C# 7.0 prend en charge l’utilisation du caractère de soulignement (`_`) comme séparateur numérique.
+ - C# 7.2 prend en charge l’utilisation de `_` comme séparateur de chiffres pour un littéral binaire ou hexadécimal, après le préfixe. Un trait de soulignement n’est pas autorisé au début d’un littéral décimal.
 
-Certains exemples sont présentés ci-dessous.
+Voici quelques exemples.
 
 [!code-csharp[Byte](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#ByteS)]  
  
@@ -78,7 +78,7 @@ int m = x + y;
 long n = x + y;  
 ```  
   
- Il n’y a pas non plus de conversion implicite en `byte` pour les types virgule flottante. Par exemple, l’instruction suivante génère une erreur du compilateur à moins qu’un cast explicite soit utilisé :  
+ Il n’y a pas non plus de conversion implicite en `byte` pour les types virgule flottante. Par exemple, l’instruction suivante génère une erreur du compilateur, sauf si vous utilisez un cast explicite :  
   
 ```  
 // Error: no implicit conversion from double:  

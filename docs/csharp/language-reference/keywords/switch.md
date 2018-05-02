@@ -1,8 +1,9 @@
 ---
-title: "switch, mot clé (référence C#)"
+title: switch, mot clé (référence C#)
 ms.date: 03/07/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - switch_CSharpKeyword
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-caps.latest.revision: "47"
+caps.latest.revision: 47
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 1c345d0c6c935271600a386752e18c19a25cc389
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6506278edb782f61b83cecfccba3126282c0ecf8
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="switch-c-reference"></a>switch (référence C#)
 `switch` est une instruction de sélection qui choisit une *section de commutation* unique à exécuter à partir d’une liste de candidats en fonction d’une mise en correspondance de modèle avec l’*expression de correspondance*. 
@@ -53,7 +54,7 @@ En C# 6, l’expression de correspondance doit être une expression qui retourn
 - valeur intégrale, telle que [int](int.md) ou [long](long.md),
 - ou valeur [enum](enum.md).
 
-À compter de C# 7, l’expression de correspondance peut être toute expression non Null.
+À compter de C# 7.0, l’expression de correspondance peut être toute expression non Null.
  
 ## <a name="the-switch-section"></a>Section de commutation
  
@@ -91,7 +92,7 @@ Si cela est nécessaire, il est possible de procéder en quittant explicitement 
 
  Étant donné que C# 6 prend en charge uniquement le modèle de constante et n’autorise pas la répétition des valeurs constantes, les étiquettes case définissent des valeurs qui s’excluent mutuellement, et un seul modèle peut correspondre à l’expression de correspondance. Par conséquent, l’ordre dans lequel les instructions `case` apparaissent n’a pas d’importance.
 
- Dans C# 7, toutefois, comme d’autres modèles sont pris en charge, les étiquettes case ne sont pas tenues de définir des valeurs s’excluant mutuellement et plusieurs modèles peuvent correspondre à l’expression de correspondance. Comme seules les instructions de la section de commutation contenant le premier modèle correspondant sont exécutées, l’ordre dans lequel les instructions `case` apparaissent est désormais important. Si C# détecte une section de commutation dont la ou les instructions case sont équivalentes aux instructions précédentes, ou en sont des sous-ensembles, C# génère une erreur du compilateur, CS8120, « Le switch case a déjà été pris en charge par un case antérieur ». 
+ Dans C# 7.0, toutefois, comme d’autres modèles sont pris en charge, les étiquettes case ne sont pas tenues de définir des valeurs s’excluant mutuellement et plusieurs modèles peuvent correspondre à l’expression de correspondance. Comme seules les instructions de la section de commutation contenant le premier modèle correspondant sont exécutées, l’ordre dans lequel les instructions `case` apparaissent est désormais important. Si C# détecte une section de commutation dont la ou les instructions case sont équivalentes aux instructions précédentes, ou en sont des sous-ensembles, C# génère une erreur du compilateur, CS8120, « Le switch case a déjà été pris en charge par un case antérieur ». 
 
  L’exemple suivant illustre une instruction `switch` qui utilise divers modèles ne s’excluant pas mutuellement. Si vous déplacez la section de commutation `case 0:` pour qu’elle ne soit plus la première section dans l’instruction `switch`, C# génère une erreur du compilateur, car un entier dont la valeur est égale à zéro est un sous-ensemble de tous les entiers, ce qui est le modèle défini par l’instruction `case int val`.
 
@@ -111,7 +112,7 @@ L’étiquette case `default` peut apparaître à n’importe quelle position da
 
 ## <a name="a-namepattern--pattern-matching-with-the-switch-statement"></a><a name="pattern" /> Critères spéciaux avec l’instruction `switch`
   
-Chaque instruction `case` définit un modèle qui, s’il correspond à l’expression de correspondance, entraîne l’exécution de la section de commutation qui le contient. Toutes les versions de C# prennent en charge le modèle de constante. Les autres modèles sont pris en charge à compter de C# 7. 
+Chaque instruction `case` définit un modèle qui, s’il correspond à l’expression de correspondance, entraîne l’exécution de la section de commutation qui le contient. Toutes les versions de C# prennent en charge le modèle de constante. Les autres modèles sont pris en charge à compter de C# 7.0. 
   
 ### <a name="constant-pattern"></a>Modèle de constante 
 
@@ -181,7 +182,7 @@ Sans critères spéciaux, ce code peut être écrit comme suit. L’utilisation 
 
 ## <a name="the-case-statement-and-the-when-clause"></a>Instruction `case` et clause `when`
 
-À compter de C# 7, comme les instructions case ne s’excluent pas nécessairement mutuellement, vous pouvez ajouter une clause `when` pour spécifier une condition supplémentaire qui doit être satisfaite pour que l’instruction case soit évaluée à true. La clause `when` peut être toute expression qui retourne une valeur booléenne. Le plus souvent, la clause `when` est utilisée pour empêcher l’exécution d’une section de commutation quand la valeur d’une expression de correspondance est `null`. 
+À compter de C# 7.0, comme les instructions case ne s’excluent pas nécessairement mutuellement, vous pouvez ajouter une clause `when` pour spécifier une condition supplémentaire qui doit être satisfaite pour que l’instruction case soit évaluée à true. La clause `when` peut être toute expression qui retourne une valeur booléenne. Le plus souvent, la clause `when` est utilisée pour empêcher l’exécution d’une section de commutation quand la valeur d’une expression de correspondance est `null`. 
 
  L’exemple suivant définit une classe `Shape` de base, une classe `Rectangle` qui dérive de `Shape` et une classe `Square` qui dérive de `Rectangle`. Il utilise la clause `when` pour garantir que le `ShowShapeInfo` traite un objet `Rectangle` qui s’est vu assigner des longueurs et des largeurs égales comme celles d’un objet `Square` même s’il n’a pas été instancié comme objet `Square`. La méthode ne tente pas d’afficher des informations sur un objet `null` ou sur une forme dont l’aire est nulle. 
 

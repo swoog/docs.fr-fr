@@ -1,5 +1,5 @@
 ---
-title: "Procédure pas à pas : utilisation de flux de données dans une application Windows Forms"
+title: 'Procédure pas à pas : utilisation de flux de données dans une application Windows Forms'
 ms.date: 03/30/2017
 ms.prod: .net
 ms.technology: dotnet-standard
@@ -15,11 +15,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 8c0d44ca7933626c95603ccc81102889ba4c23cb
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: f28e103d6241d954dd6ac4f7e9c7fcb20a06ea0b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>Procédure pas à pas : utilisation de flux de données dans une application Windows Forms
 Ce document montre comment créer un réseau de blocs de flux de données qui effectuent un traitement des images dans une application Windows Forms.  
@@ -48,9 +48,9 @@ Ce document montre comment créer un réseau de blocs de flux de données qui ef
   
 #### <a name="to-create-the-windows-forms-application"></a>Pour créer une Application Windows Forms  
   
-1.  Dans [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], créez un projet [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] ou un projet d’**application Windows Forms** Visual Basic. Dans ce document, le projet est nommé `CompositeImages`.  
+1.  Dans [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], créez un projet **Application Windows Forms** en Visual C# ou Visual Basic. Dans ce document, le projet est nommé `CompositeImages`.  
   
-2.  Dans le concepteur de formulaires du formulaire principal, Form1.cs (Form1.vb pour [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]), ajoutez un contrôle <xref:System.Windows.Forms.ToolStrip>.  
+2.  Dans le concepteur de formulaires pour le formulaire principal, Form1.cs (Form1.vb pour Visual Basic), ajoutez un contrôle <xref:System.Windows.Forms.ToolStrip>.  
   
 3.  Ajoutez un contrôle <xref:System.Windows.Forms.ToolStripButton> au contrôle <xref:System.Windows.Forms.ToolStrip>. Définissez la propriété <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> sur <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text> et la propriété <xref:System.Windows.Forms.ToolStripItem.Text%2A> sur **Choisir un dossier**.  
   
@@ -66,7 +66,7 @@ Ce document montre comment créer un réseau de blocs de flux de données qui ef
   
 1.  Dans votre projet, ajoutez une référence à System.Threading.Tasks.Dataflow.dll.  
   
-2.  Vérifiez que Form1.cs (Form1.vb pour [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) contient les instructions `using` suivantes (`Using` dans [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) :  
+2.  Vérifiez que Form1.cs (Form1.vb pour Visual Basic) contient les instructions `using` suivantes (`Using`en Visual Basic) :  
   
      [!code-csharp[TPLDataflow_CompositeImages#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#1)]  
   
@@ -87,7 +87,7 @@ Ce document montre comment créer un réseau de blocs de flux de données qui ef
      [!code-csharp[TPLDataflow_CompositeImages#5](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#5)]  
   
     > [!NOTE]
-    >  La version C# de la méthode `CreateCompositeBitmap` utilise des pointeurs pour permettre un traitement efficace des objets <xref:System.Drawing.Bitmap?displayProperty=nameWithType>. Par conséquent, vous devez activer l’option **Autoriser les blocs de code unsafe** dans votre projet pour pouvoir utiliser le mot-clé [unsafe](~/docs/csharp/language-reference/keywords/unsafe.md). Pour plus d’informations sur l’activation de code unsafe dans un projet [!INCLUDE[csprcs](../../../includes/csprcs-md.md)], consultez [Générer, page du Concepteur de projets (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).  
+    >  La version C# de la méthode `CreateCompositeBitmap` utilise des pointeurs pour permettre un traitement efficace des objets <xref:System.Drawing.Bitmap?displayProperty=nameWithType>. Par conséquent, vous devez activer l’option **Autoriser les blocs de code unsafe** dans votre projet pour pouvoir utiliser le mot-clé [unsafe](~/docs/csharp/language-reference/keywords/unsafe.md). Pour plus d’informations sur l’activation de code unsafe dans un projet Visual C#, consultez [Générer, page du Concepteur de projets (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).  
   
  Le tableau ci-dessous décrit les membres du réseau.  
   
@@ -98,7 +98,7 @@ Ce document montre comment créer un réseau de blocs de flux de données qui ef
 |`displayCompositeBitmap`|<xref:System.Threading.Tasks.Dataflow.ActionBlock%601>|Affiche l’image bitmap composite sur le formulaire.|  
 |`operationCancelled`|<xref:System.Threading.Tasks.Dataflow.ActionBlock%601>|Affiche une image pour indiquer que l’opération est annulée et permet à l’utilisateur de sélectionner un autre dossier.|  
   
- Pour connecter les blocs de flux de données afin de former un réseau, cet exemple utilise la méthode <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A>. <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A> Celle-ci contient une version surchargée qui prend un objet <xref:System.Predicate%601> définissant si le bloc cible accepte ou rejette un message. Ce mécanisme de filtrage permet aux blocs de messages de ne recevoir que certaines valeurs. Dans cet exemple, le réseau peut créer une branche de deux manières. La branche principale charge les images à partir du disque, crée l’image composite et affiche cette image sur le formulaire. L’autre branche annule l’opération en cours. Les objets <xref:System.Predicate%601> permettent aux blocs de flux de données de la branche principale de basculer vers l’autre branche en rejetant certains messages. Par exemple, si l’utilisateur annule l’opération, le bloc de flux de données `createCompositeBitmap` produit `null` (`Nothing` dans [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) comme sortie. Le bloc de flux de données `displayCompositeBitmap` rejette les valeurs d’entrée `null`. Par conséquent, le message est proposé aux `operationCancelled`. Le bloc de flux de données `operationCancelled` accepte tous les messages. Par conséquent, il affiche une image pour indiquer que l’opération est annulée.  
+ Pour connecter les blocs de flux de données afin de former un réseau, cet exemple utilise la méthode <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A>. <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A> Celle-ci contient une version surchargée qui prend un objet <xref:System.Predicate%601> définissant si le bloc cible accepte ou rejette un message. Ce mécanisme de filtrage permet aux blocs de messages de ne recevoir que certaines valeurs. Dans cet exemple, le réseau peut créer une branche de deux manières. La branche principale charge les images à partir du disque, crée l’image composite et affiche cette image sur le formulaire. L’autre branche annule l’opération en cours. Les objets <xref:System.Predicate%601> permettent aux blocs de flux de données de la branche principale de basculer vers l’autre branche en rejetant certains messages. Par exemple, si l’utilisateur annule l’opération, le bloc de flux de données `createCompositeBitmap` produit `null` (`Nothing` en Visual Basic) comme sortie. Le bloc de flux de données `displayCompositeBitmap` rejette les valeurs d’entrée `null`. Par conséquent, le message est proposé aux `operationCancelled`. Le bloc de flux de données `operationCancelled` accepte tous les messages. Par conséquent, il affiche une image pour indiquer que l’opération est annulée.  
   
  L'illustration suivante montre le réseau de traitement des images.  
   

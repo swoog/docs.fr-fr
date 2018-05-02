@@ -1,13 +1,13 @@
 ---
 title: "Procédure pas à pas : utilisation des services d'application cliente"
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,17 +16,17 @@ helpviewer_keywords:
 - application services host [client application services]
 - client application services, walkthroughs
 ms.assetid: bb7c8950-4517-4dae-b705-b74a14059b26
-caps.latest.revision: 
+caps.latest.revision: 47
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 71eac85d07ac54cf15edcfcc3a86de58afef5004
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: fe0e446a0005ffcbf296c2728fd93056c3e38f2a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-using-client-application-services"></a>Procédure pas à pas : utilisation des services d'application cliente
 Cette rubrique décrit comment créer une application Windows qui utilise des services d'application cliente pour authentifier les utilisateurs et récupérer des rôles d'utilisateur et des paramètres.  
@@ -75,7 +75,7 @@ Cette rubrique décrit comment créer une application Windows qui utilise des se
   
 7.  Vérifiez que l’option **Utiliser l’authentification par formulaire** est sélectionnée, puis affectez à **Emplacement du service d’authentification**, **Emplacement des services de rôles**et **Emplacement des services de paramètres web** la valeur `http://localhost:55555/AppServices`.  
   
-8.  Pour [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)], sous l'onglet **Application** , affectez à **Mode d'authentification** la valeur **Défini au niveau de l'application**.  
+8.  Pour Visual Basic, sous l’onglet **Application**, affectez à **Mode d’authentification** la valeur **Défini au niveau de l’application**.  
   
  Le concepteur stocke les paramètres spécifiés dans le fichier app.config de l'application.  
   
@@ -315,7 +315,7 @@ Cette rubrique décrit comment créer une application Windows qui utilise des se
 ### <a name="creating-a-login-form"></a>Création d'un formulaire de connexion  
  Un fournisseur d'informations d'identification est une classe qui implémente l'interface <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider> . Cette interface a une méthode unique nommée <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> qui retourne un objet <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationCredentials> . Les procédures suivantes décrivent comment créer une boîte de dialogue de connexion qui implémente <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> pour s'afficher et retourner les informations d'identification spécifiées par l'utilisateur.  
   
- Des procédures distinctes sont fournies pour [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] et C#, car [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] fournit un modèle **Formulaire de connexion** . Cela permet d'économiser du temps et des efforts de codage.  
+ Des procédures distinctes sont fournies pour Visual Basic et C#, car Visual Basic fournit un modèle **Formulaire de connexion**. Cela permet d'économiser du temps et des efforts de codage.  
   
 ##### <a name="to-create-a-login-dialog-box-as-a-credentials-provider-in-visual-basic"></a>Pour créer une boîte de dialogue de connexion comme fournisseur d'informations d'identification dans Visual Basic  
   
@@ -407,7 +407,7 @@ Cette rubrique décrit comment créer une application Windows qui utilise des se
  Vous pouvez maintenant exécuter l'application et ouvrir une session en tant qu'employé pour constater que le bouton n'apparaît pas, puis ouvrir une session en tant que responsable (« manager ») pour voir le bouton.  
   
 ## <a name="accessing-web-settings"></a>Accès aux paramètres web  
- Dans la procédure suivante, vous ajoutez une zone de texte au formulaire et vous la liez à un paramètre web. Comme le code précédent qui utilise l'authentification et les rôles, votre code de paramètres n'accède pas directement au fournisseur de paramètres. À la place, il utilise la classe `Settings` fortement typée (accessible en tant que `Properties.Settings.Default` en C# et en tant que `My.Settings` en [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) générée pour votre projet par [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
+ Dans la procédure suivante, vous ajoutez une zone de texte au formulaire et vous la liez à un paramètre web. Comme le code précédent qui utilise l'authentification et les rôles, votre code de paramètres n'accède pas directement au fournisseur de paramètres. À la place, il utilise la classe `Settings` fortement typée (accessible en tant que `Properties.Settings.Default` en C# et `My.Settings` en Visual Basic) générée pour votre projet par [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
   
 #### <a name="to-use-web-settings-in-your-user-interface"></a>Pour utiliser des paramètres web dans votre interface utilisateur  
   
@@ -527,7 +527,7 @@ Cette rubrique décrit comment créer une application Windows qui utilise des se
     > [!NOTE]
     >  La méthode <xref:System.Web.ClientServices.ClientFormsIdentity.RevalidateUser%2A> est fournie pour des raisons pratiques uniquement. Étant donné qu'elle n'a pas de valeur de retour, elle ne peut pas indiquer si la revalidation a échoué. La revalidation peut, par exemple, échouer si les informations d'identification de l'utilisateur ont été modifiées sur le serveur. Dans ce cas, vous souhaitez peut-être inclure du code qui valide explicitement les utilisateurs après l'échec d'un appel de service. Pour plus d'informations, consultez la section Accès aux paramètres web, précédemment dans cette procédure pas à pas.  
   
-     Après la revalidation, ce code enregistre toutes les modifications apportées aux paramètres web locaux en appelant la méthode `SaveSettings` que vous avez ajoutée précédemment. Il extrait ensuite toutes les nouvelles valeurs sur le serveur en appelant la méthode <xref:System.Configuration.ApplicationSettingsBase.Reload%2A> de la classe `Settings` du projet (accessible en tant que `Properties.Settings.Default` en C# et en tant que `My.Settings` en [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]).  
+     Après la revalidation, ce code enregistre toutes les modifications apportées aux paramètres web locaux en appelant la méthode `SaveSettings` que vous avez ajoutée précédemment. Il récupère ensuite toutes les nouvelles valeurs sur le serveur en appelant la méthode <xref:System.Configuration.ApplicationSettingsBase.Reload%2A> de la classe `Settings` du projet (accessible en tant que `Properties.Settings.Default` en C# et `My.Settings` en Visual Basic).  
   
      [!code-csharp[ClientApplicationServices#080](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#080)]
      [!code-vb[ClientApplicationServices#080](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#080)]  

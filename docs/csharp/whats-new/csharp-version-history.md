@@ -9,11 +9,11 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.openlocfilehash: d24d190eab5896121231543e6696b6a4861b5bb8
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 0a24e8cf22bb8350777879a3adfd2757b89cd305
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="the-history-of-c"></a>Histoire du langage C# #
 
@@ -48,7 +48,7 @@ Pourtant, C# était toujours en train de courir derrière Java. Java avait déj�
 
 ## <a name="c-version-30"></a>C# version 3.0
 
-C# version 3.0 est apparu à la fin de l’année 2007, en même temps que Visual Studio 2008, même si l’éventail complet des fonctionnalités du langage n’allaient réellement voir le jour qu’avec C# version 3.5. Cette version a insufflé un changement majeur dans l’évolution de C#. Elle a imposé C# en tant que langage de programmation vraiment formidable. Examinons certaines fonctionnalités importantes dans cette version :
+C# version 3.0 est apparu fin 2007, en même temps que Visual Studio 2008, même si l’éventail complet des fonctionnalités du langage n’a réellement voir le jour qu’avec le .NET Framework version 3.5. Cette version a insufflé un changement majeur dans l’évolution de C#. Elle a imposé C# en tant que langage de programmation vraiment formidable. Examinons certaines fonctionnalités importantes dans cette version :
 
 - [Propriétés implémentées automatiquement](../programming-guide/classes-and-structs/auto-implemented-properties.md)
 - [Types anonymes](../programming-guide/classes-and-structs/anonymous-types.md)

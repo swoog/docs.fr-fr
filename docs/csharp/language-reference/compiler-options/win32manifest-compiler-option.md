@@ -1,5 +1,5 @@
 ---
-title: "-win32manifest (Options du compilateur C#)"
+title: -win32manifest (Options du compilateur C#)
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - win32manifest compiler option [C#]
 - -win32manifest compiler option [C#]
 ms.assetid: 9460ea1b-6c9f-44b8-8f73-301b30a01de1
-caps.latest.revision: 
+caps.latest.revision: 13
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 36a16f1ee037a1379399c7ee2e2c67427eb9d1b2
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: cb05f4f01dd7e19d2034de89ac47304b0731ca01
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="-win32manifest-c-compiler-options"></a>-win32manifest (Options du compilateur C#)
 Utilisez l’option **-win32manifest** pour spécifier un fichier manifeste d’application Win32 défini par l’utilisateur à incorporer dans le fichier exécutable portable (PE) d’un projet.  
@@ -35,7 +35,7 @@ Utilisez l’option **-win32manifest** pour spécifier un fichier manifeste d’
  Nom et emplacement du fichier manifeste personnalisé.  
   
 ## <a name="remarks"></a>Notes  
- Par défaut, le compilateur [!INCLUDE[csharp_current_short](~/includes/csharp-current-short-md.md)] incorpore un manifeste d’application qui spécifie le niveau d’exécution requis « asInvoker ». Il crée le manifeste dans le même dossier que celui dans lequel l’exécutable est généré, normalement le dossier bin\Debug ou bin\Release quand vous utilisez Visual Studio. Pour fournir un manifeste personnalisé, par exemple pour spécifier le niveau d’exécution requis « highestAvailable » ou « requireAdministrator », utilisez cette option pour indiquer le nom du fichier.  
+ Par défaut, le compilateur Visual C# incorpore un manifeste d’application qui spécifie le niveau d’exécution requis « asInvoker ». Il crée le manifeste dans le même dossier que celui dans lequel l’exécutable est généré, normalement le dossier bin\Debug ou bin\Release quand vous utilisez Visual Studio. Pour fournir un manifeste personnalisé, par exemple pour spécifier le niveau d’exécution requis « highestAvailable » ou « requireAdministrator », utilisez cette option pour indiquer le nom du fichier.  
   
 > [!NOTE]
 >  Cette option et l’option [-win32res (Options du compilateur C#)](../../../csharp/language-reference/compiler-options/win32res-compiler-option.md) s’excluent mutuellement. Si vous tentez d’utiliser ces deux options dans la même ligne de commande, une erreur de build se produira.  

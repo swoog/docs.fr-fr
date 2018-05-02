@@ -1,27 +1,29 @@
 ---
 title: Vue d'ensemble des services d'application cliente
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - client application services, classes
 - client application services, about client application services
 ms.assetid: f0a2da13-e282-4fd7-88a1-f9102c9aeab1
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 55b4ab154f9f3a9b17274697c30ca826218322ab
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9ddc1b505146e7ca31bca5acc5e9d19d258a860d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="client-application-services-overview"></a>Vue d'ensemble des services d'application cliente
 Les services d’application cliente fournissent un accès simplifié aux services de connexion, de rôles et de profil [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] à partir des applications Windows Forms et WPF (Windows Presentation Foundation). Les services d'application [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] sont compris dans les extensions AJAX Microsoft ASP.NET 2.0, qui sont incluses avec [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)] et [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]. Ces services permettent à plusieurs applications web et Windows de partager des informations utilisateur et fonctionnalités de gestion des utilisateurs à partir d'un seul serveur.  
@@ -59,7 +61,7 @@ Les services d’application cliente fournissent un accès simplifié aux servic
  Pour plus d'informations sur la façon de configurer le service de rôles [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)], consultez [Utilisation d'informations sur les rôles avec Microsoft Ajax](http://msdn.microsoft.com/library/280f6ad9-ba1a-4fc9-b0cc-22e39e54a82d).  
   
 ## <a name="settings"></a>Paramètres  
- Vous pouvez utiliser les services d'application cliente pour récupérer des paramètres d'application utilisateur d'un service de profil [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] existant. La fonctionnalité des paramètres web des services d’application cliente s’intègre à la fonctionnalité de paramètres d’application fournie dans [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]. Pour récupérer des paramètres web, commencez par générer une classe `Settings` (accessible en tant que `Properties.Settings.Default` dans C# et `My.Settings` dans [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) pour votre projet à l'aide de l'onglet **Paramètres** du Concepteur de projets [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]. Sous l'onglet **Paramètres**, vous pouvez utiliser le bouton **Charger** les paramètres web pour récupérer des paramètres web et les ajouter à la classe `Settings` générée. Vous pouvez utiliser les paramètres web configurés pour une utilisation par tous les utilisateurs authentifiés ou par tous les utilisateurs anonymes.  
+ Vous pouvez utiliser les services d'application cliente pour récupérer des paramètres d'application utilisateur d'un service de profil [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] existant. La fonctionnalité des paramètres web des services d’application cliente s’intègre à la fonctionnalité de paramètres d’application fournie dans [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]. Pour récupérer des paramètres web, commencez par générer une classe `Settings` (accessible en tant que `Properties.Settings.Default` en C# et `My.Settings` en Visual Basic) pour votre projet à l’aide de l’onglet **Paramètres** du Concepteur de projets [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]. Sous l'onglet **Paramètres**, vous pouvez utiliser le bouton **Charger** les paramètres web pour récupérer des paramètres web et les ajouter à la classe `Settings` générée. Vous pouvez utiliser les paramètres web configurés pour une utilisation par tous les utilisateurs authentifiés ou par tous les utilisateurs anonymes.  
   
  Pour plus d'informations sur les paramètres d'application, consultez [Vue d'ensemble des paramètres d'application](../../../docs/framework/winforms/advanced/application-settings-overview.md). Pour plus d'informations sur la façon d'implémenter votre propre classe de paramètres au lieu d'en générer une dans [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], consultez [Comment : créer des paramètres d'application](../../../docs/framework/winforms/advanced/how-to-create-application-settings.md). Pour plus d'informations sur la façon de configurer le service de profil [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)], consultez [Utilisation d'informations sur les profils avec Microsoft Ajax](http://msdn.microsoft.com/library/91239ae6-d01c-4f4e-a433-eb9040dbed61).  
   

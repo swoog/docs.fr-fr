@@ -1,5 +1,5 @@
 ---
-title: "Comment : spécifier un planificateur de tâches dans un bloc de flux de données"
+title: 'Comment : spécifier un planificateur de tâches dans un bloc de flux de données'
 ms.date: 03/30/2017
 ms.prod: .net
 ms.technology: dotnet-standard
@@ -18,11 +18,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 592b6c5c92a2c752fa0d2694cdb477423b15eb0d
-ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
+ms.openlocfilehash: 15b1168c34a22394424f250e8ab1887ec8ee1a5e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-specify-a-task-scheduler-in-a-dataflow-block"></a>Comment : spécifier un planificateur de tâches dans un bloc de flux de données
 Ce document montre comment associer un planificateur de tâches spécifique lorsque vous utilisez le flux de données dans votre application. L'exemple utilise la classe <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair?displayProperty=nameWithType> dans une application Windows Forms pour indiquer lorsque les tâches de lecture sont actives et lorsqu'une tâche d'écriture est active. Il utilise également la méthode <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> pour permettre à un bloc de flux de données de s'exécuter sur le thread de l'interface utilisateur.
@@ -31,9 +31,9 @@ Ce document montre comment associer un planificateur de tâches spécifique lors
 
 ## <a name="to-create-the-windows-forms-application"></a>Pour créer une Application Windows Forms  
   
-1.  Créez un projet [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] ou une **Application Windows Forms** Visual Basic. Dans les étapes suivantes, le projet est nommé `WriterReadersWinForms`.  
+1.  Créez un projet **Application Windows Forms** en Visual C# ou Visual Basic. Dans les étapes suivantes, le projet est nommé `WriterReadersWinForms`.  
   
-2.  Dans le concepteur de formulaires pour le formulaire principal, Form1.cs (Form1.vb pour [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]), ajoutez quatre contrôles <xref:System.Windows.Forms.CheckBox>. Définissez la propriété <xref:System.Windows.Forms.Control.Text%2A> sur **Lecteur 1** pour `checkBox1`, **Lecteur 2** pour `checkBox2`, **Lecteur 3** pour `checkBox3`, et **Enregistreur** pour `checkBox4`. Définissez la propriété <xref:System.Windows.Forms.Control.Enabled%2A> pour chaque contrôle sur `False`.  
+2.  Dans le concepteur de formulaires pour le formulaire principal, Form1.cs (Form1.vb pour Visual Basic), ajoutez quatre contrôles <xref:System.Windows.Forms.CheckBox>. Définissez la propriété <xref:System.Windows.Forms.Control.Text%2A> sur **Lecteur 1** pour `checkBox1`, **Lecteur 2** pour `checkBox2`, **Lecteur 3** pour `checkBox3`, et **Enregistreur** pour `checkBox4`. Définissez la propriété <xref:System.Windows.Forms.Control.Enabled%2A> pour chaque contrôle sur `False`.  
   
 3.  Ajoutez un contrôle <xref:System.Windows.Forms.Timer> au formulaire. Affectez à la propriété <xref:System.Windows.Forms.Timer.Interval%2A> la valeur `2500`.  
   
@@ -44,7 +44,7 @@ Ce document montre comment associer un planificateur de tâches spécifique lors
   
 1.  Dans votre projet, ajoutez une référence à System.Threading.Tasks.Dataflow.dll.  
   
-2.  Vérifiez que Form1.cs (Form1.vb pour [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) contient les `using` instructions (`Imports` dans les instructions [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]).  
+2.  Vérifiez que Form1.cs (Form1.vb pour Visual Basic) contient les instructions `using` suivantes (`Imports` en Visual Basic).  
   
      [!code-csharp[TPLDataflow_WriterReadersWinForms#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_writerreaderswinforms/cs/writerreaderswinforms/form1.cs#1)]
      [!code-vb[TPLDataflow_WriterReadersWinForms#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_writerreaderswinforms/vb/writerreaderswinforms/form1.vb#1)]  
@@ -81,7 +81,7 @@ Ce document montre comment associer un planificateur de tâches spécifique lors
  Cet exemple utilise également une classe <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair> pour permettre à des blocs de flux de données d'agir simultanément, et à un autre bloc de flux de données d'agir de façon exclusive par rapport à tous les autres blocs de flux de données qui s'exécutent sur le même objet <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair>. Cette technique est utile lorsque plusieurs blocs de flux de données partagent une ressource et que certains requièrent un accès exclusif à cette ressource, car elle élimine le besoin de synchroniser manuellement l'accès à cette ressource. L’élimination de la synchronisation manuelle peut rendre le code plus efficace.  
   
 ## <a name="example"></a>Exemple  
- L'exemple suivant montre le code complet pour Form1.cs (Form1.vb pour [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]).  
+ L’exemple suivant montre le code complet pour Form1.cs (Form1.vb pour Visual Basic).  
   
  [!code-csharp[TPLDataflow_WriterReadersWinForms#100](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_writerreaderswinforms/cs/writerreaderswinforms/form1.cs#100)]
  [!code-vb[TPLDataflow_WriterReadersWinForms#100](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_writerreaderswinforms/vb/writerreaderswinforms/form1.vb#100)]  

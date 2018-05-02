@@ -1,8 +1,9 @@
 ---
-title: "throw (référence C#)"
+title: throw (référence C#)
 ms.date: 03/02/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - throw
@@ -12,14 +13,14 @@ helpviewer_keywords:
 - throw expression [C#]
 - throw keyword [C#]
 ms.assetid: 5ac4feef-4b1a-4c61-aeb4-61d549e5dd42
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e56bd8f8b6bfcc7c8f1eb2df6ac157e28adac331
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 088a8e70c5aaaae6f833f12cad1052c30fbb6bfa
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="throw-c-reference"></a>throw (référence C#)
 Signale l’occurrence d’une exception pendant l’exécution du programme.  
@@ -50,9 +51,9 @@ Les appelants de méthode utilisent alors un bloc `try-catch` ou `try-catch-fina
  
 ## <a name="the-throw-expression"></a>Expression `throw`
 
-À compter de C# 7, `throw` peut être utilisé en tant qu’expression et en tant qu’instruction. Ainsi, une exception peut être levée dans des contextes qui n’étaient précédemment pas pris en charge. à savoir :
+À compter de C# 7.0, `throw` peut être utilisé comme expression et comme instruction. Ainsi, une exception peut être levée dans des contextes qui n’étaient précédemment pas pris en charge. Elles incluent notamment :
 
-- [l’opérateur conditionnel](../operators/conditional-operator.md) : l’exemple suivant utilise une expression `throw` pour lever une exception <xref:System.ArgumentException> si une méthode reçoit un tableau de chaînes vide. Avant C# 7, cette logique devait figurer dans une instruction `if`/`else`.
+- [l’opérateur conditionnel](../operators/conditional-operator.md) : l’exemple suivant utilise une expression `throw` pour lever une exception <xref:System.ArgumentException> si une méthode reçoit un tableau de chaînes vide. Avant C# 7.0, cette logique devait figurer dans une instruction `if`/`else`.
 
    [!code-csharp[csrefKeyword#4](../../../../samples/snippets/csharp/language-reference/keywords/throw/conditional.cs#1)]  
   
@@ -72,7 +73,7 @@ Les appelants de méthode utilisent alors un bloc `try-catch` ou `try-catch-fina
  [Référence C#](../../../csharp/language-reference/index.md)  
  [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
  [try-catch](../../../csharp/language-reference/keywords/try-catch.md)  
- [Try, catch et throw instructions en C++](../../../csharp/language-reference/keywords/try-catch.md)  
+ [Instructions try, catch et throw en C++](../../../csharp/language-reference/keywords/try-catch.md)  
  [Mots clés C#](../../../csharp/language-reference/keywords/index.md)  
  [Instructions de gestion des exceptions](../../../csharp/language-reference/keywords/exception-handling-statements.md)  
  [Guide pratique pour lever explicitement des exceptions](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)

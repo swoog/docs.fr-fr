@@ -1,6 +1,6 @@
 ---
-title: "Éléments ignorés - Guide C#"
-description: "Décrit la prise en charge par C# des éléments ignorés, qui sont des variables qui peuvent être ignorées, et les différentes façons dont les éléments ignorés peuvent être utilisés."
+title: Éléments ignorés - Guide C#
+description: Décrit la prise en charge par C# des éléments ignorés, qui sont des variables qui peuvent être ignorées, et les différentes façons dont les éléments ignorés peuvent être utilisés.
 keywords: .NET,.NET Core
 author: rpetrusha
 ms.author: ronpet
@@ -9,23 +9,23 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.openlocfilehash: 800a27d2d186c738dceb6838aa669377a0c07b01
-ms.sourcegitcommit: 882e02b086d7cb9c75f748494cf7a8d3377c5874
+ms.openlocfilehash: 94badd78485ee4d3928b170d81a80743bf84102f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="discards---c-guide"></a>Éléments ignorés - Guide C#
 
-À compter de C# 7, les éléments ignorés sont pris en charge. Il s’agit de variables temporaires factices, qui sont inutilisées de façon intentionnelle dans le code d’une application. Les éléments ignorés sont équivalents à des variables non affectées : elles n’ont pas de valeur. Comme il n’existe qu’une seule variable d’élément ignoré et qu’un stockage ne peut même pas lui être alloué, les éléments ignorés peuvent réduire les allocations de mémoire. Dans la mesure où elles éclairent l’intention de votre code, elles améliorent sa lisibilité et sa maintenabilité.
+À compter de C# 7.0, les éléments ignorés sont pris en charge. Il s’agit de variables temporaires factices, qui sont inutilisées de façon intentionnelle dans le code d’une application. Les éléments ignorés sont équivalents à des variables non affectées : elles n’ont pas de valeur. Comme il n’existe qu’une seule variable d’élément ignoré et qu’un stockage ne peut même pas lui être alloué, les éléments ignorés peuvent réduire les allocations de mémoire. Dans la mesure où elles éclairent l’intention de votre code, elles améliorent sa lisibilité et sa maintenabilité.
 
-Vous indiquez qu’une variable est un élément ignoré en lui affectant comme nom le trait de soulignement (`_`). Par exemple, l’appel de méthode suivant retourne un objet de 3 tuples dans lequel les valeurs des premier et deuxième sont ignore et *zone* est une variable déclarée précédemment, à définir pour le troisième composant correspondant retourné par  *GetCityInformation*:
+Vous indiquez qu’une variable est un élément ignoré en lui affectant comme nom le trait de soulignement (`_`). Par exemple, l’appel de méthode suivant retourne un tuple de 3 éléments dans lequel les première et deuxième valeurs sont ignorées et dans lequel *area* est une variable précédemment déclarée à laquelle vous devez affecter le troisième composant correspondant retourné par *GetCityInformation* :
 
 ```csharp
 (_, _, area) = city.GetCityInformation(cityName);
 ```
 
-Dans C# 7, les éléments ignorés sont pris en charge dans les affectations dans les contextes suivants :
+Dans C# 7.0, les éléments ignorés sont pris en charge dans les affectations dans les contextes suivants :
 
 - Déconstruction de [tuple et d’objet](deconstruct.md).
 - Critères spéciaux avec [is](language-reference/keywords/is.md) et [switch](language-reference/keywords/switch.md).

@@ -1,29 +1,29 @@
 ---
 title: Garbage Collection et niveau de performance
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - garbage collection, troubleshooting
 - garbage collection, performance
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
-caps.latest.revision: 
+caps.latest.revision: 35
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: e1cf3475ded3582cdf0754e68d13c97bd87b06a8
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: daf70cdb7344f895059d0bc8b986edddbf7d53bc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="garbage-collection-and-performance"></a>Garbage Collection et niveau de performance
 <a name="top"></a> Cette rubrique décrit les problèmes liés au garbage collection et à l’utilisation de la mémoire. Elle apporte des solutions aux problèmes concernant les tas managés et explique comment réduire l’effet du garbage collection sur vos applications. Chaque problème contient des liens vers des procédures à suivre pour résoudre le problème.  
@@ -48,9 +48,9 @@ ms.lasthandoff: 01/09/2018
   
 <a name="sos"></a>   
 ### <a name="debugging-with-sos"></a>Débogage avec l'extension SOS  
- Vous pouvez utiliser le [Débogueur Windows (WinDbg)](/windows-hardware/drivers/debugger/index) pour inspecter les objets du tas managé.  
-  
- Pour installer WinDbg, installez les outils de débogage pour Windows depuis le site web [WDK et outils pour développeurs](http://go.microsoft.com/fwlink/?LinkID=103787).  
+ Vous pouvez utiliser le [Débogueur Windows (WinDbg)](/windows-hardware/drivers/debugger/index) pour inspecter les objets du tas managé.
+ 
+ Pour installer WinDbg, installez les outils de débogage pour Windows à partir de la page [Outils de débogage pour Windows](/windows-hardware/drivers/debugger/debugger-download-tools).
   
 <a name="etw"></a>   
 ### <a name="garbage-collection-etw-events"></a>Événements ETW de garbage collection  

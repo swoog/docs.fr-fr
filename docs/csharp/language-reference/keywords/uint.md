@@ -1,5 +1,5 @@
 ---
-title: "uint (référence C#)"
+title: uint (référence C#)
 ms.date: 03/14/2017
 ms.prod: .net
 ms.technology:
@@ -11,20 +11,20 @@ f1_keywords:
 helpviewer_keywords:
 - uint keyword [C#]
 ms.assetid: e93e42c6-ec72-4b0b-89df-2fd8d36f7a7b
-caps.latest.revision: 
+caps.latest.revision: 18
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: d32f7146d1f9e13d8cf0f275f4fd78b693b09d31
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4a4f3439888ad3744be1633bb39e1c241343343a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="uint-c-reference"></a>uint (référence C#)
 
 Le mot clé `uint` désigne un type intégral qui stocke des valeurs en fonction de la taille et de la plage indiquées dans le tableau suivant.  
   
-|Type|Plage|Taille|Type .NET Framework|  
+|Type|Plage|Size|Type .NET Framework|  
 |----------|-----------|----------|-------------------------|  
 |`uint`|de 0 à 4 294 967 295|Entier 32 bits non signé|<xref:System.UInt32?displayProperty=nameWithType>|  
   
@@ -32,7 +32,7 @@ Le mot clé `uint` désigne un type intégral qui stocke des valeurs en fonction
   
 ## <a name="literals"></a>Littéraux  
 
-Vous pouvez déclarer et initialiser une variable `uint` en lui assignant un littéral décimal, un littéral hexadécimal ou un littéral binaire (à compter de C# 7). Si le littéral entier est en dehors de la plage autorisée pour le type `uint` (autrement dit, s’il est inférieur à <xref:System.UInt32.MinValue?displayProperty=nameWithType> ou supérieur à <xref:System.UInt32.MaxValue?displayProperty=nameWithType>), une erreur de compilation se produit.
+Vous pouvez déclarer et initialiser une variable `uint` en lui assignant un littéral décimal, hexadécimal ou binaire (à compter de C# 7.0). Si le littéral entier est en dehors de la plage autorisée pour le type `uint` (autrement dit, s’il est inférieur à <xref:System.UInt32.MinValue?displayProperty=nameWithType> ou supérieur à <xref:System.UInt32.MaxValue?displayProperty=nameWithType>), une erreur de compilation se produit.
 
 Dans l’exemple suivant, les entiers égaux à 3 000 000 000 représentés comme des littéraux décimaux, hexadécimaux et binaires sont assignés aux valeurs `uint`.  
   
@@ -41,11 +41,11 @@ Dans l’exemple suivant, les entiers égaux à 3 000 000 000 représentés c
 > [!NOTE] 
 > Vous utilisez le préfixe `0x` ou `0X` pour désigner un littéral hexadécimal, et le préfixe `0b` ou `0B` pour désigner un littéral binaire. Les littéraux décimaux n’ont pas de préfixe. 
 
-À partir de C# 7, quelques fonctionnalités ont été ajoutées améliorer la lisibilité. 
- - C# 7.0 permet l’utilisation d’un caractère de soulignement `_`, comme un séparateur de chiffre.
- - 7.2 c# permet `_` à utiliser comme séparateur de chiffres pour un littéral binaire ou en hexadécimal, après le préfixe. Un littéral décimal n’est pas autorisé à avoir un trait de soulignement.
+À compter de C# 7.0, des fonctionnalités ont été ajoutées pour améliorer la lisibilité. 
+ - C# 7.0 prend en charge l’utilisation du caractère de soulignement (`_`) comme séparateur numérique.
+ - C# 7.2 prend en charge l’utilisation de `_` comme séparateur de chiffres pour un littéral binaire ou hexadécimal, après le préfixe. Un trait de soulignement n’est pas autorisé au début d’un littéral décimal.
 
-Certains exemples sont présentés ci-dessous.
+Voici quelques exemples.
 
 [!code-csharp[uint](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#UIntS)]  
  
@@ -77,7 +77,7 @@ uint uInt1 = aLong;
 uint uInt2 = (uint)aLong;  
 ```  
   
- Remarquez également qu’il n’existe pas de conversion implicite des types virgule flottante en `uint`. Par exemple, l’instruction suivante génère une erreur du compilateur à moins qu’un cast explicite soit utilisé :  
+ Remarquez également qu’il n’existe pas de conversion implicite des types virgule flottante en `uint`. Par exemple, l’instruction suivante génère une erreur du compilateur, sauf si vous utilisez un cast explicite :  
   
 ```csharp  
 // Error -- no implicit conversion from double:  

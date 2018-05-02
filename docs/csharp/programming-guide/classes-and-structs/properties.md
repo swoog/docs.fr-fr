@@ -14,11 +14,11 @@ ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
 caps.latest.revision: 38
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 6f40bea2c7d39d88839a70e73e391113bee86f14
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 186384c0a251d72b8726b3ae2f8f3faf0e6e008f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="properties-c-programming-guide"></a>Propriétés (Guide de programmation C#)
 
@@ -51,7 +51,7 @@ L’exemple suivant illustre ce modèle. Dans cet exemple, la classe `TimePeriod
 
  [!code-csharp[Properties#2](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-2.cs)]  
 
- À partir de C# 7, l’accesseur `get` et l’accesseur `set` peuvent être implémentés en tant que membres expression-bodied. Dans ce cas, les mots clés `get` et `set` doivent être spécifiés. L’exemple suivant illustre l’utilisation de définitions de corps d’expression pour les deux accesseurs. Notez que le mot clé `return` n’est pas utilisé avec l’accesseur `get`.
+ À compter de C# 7.0, les accesseurs `get` et `set` peuvent être implémentés comme membres expression-bodied. Dans ce cas, les mots clés `get` et `set` doivent être spécifiés. L’exemple suivant illustre l’utilisation de définitions de corps d’expression pour les deux accesseurs. Notez que le mot clé `return` n’est pas utilisé avec l’accesseur `get`.
  
   [!code-csharp[Properties#3](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-3.cs)]  
 

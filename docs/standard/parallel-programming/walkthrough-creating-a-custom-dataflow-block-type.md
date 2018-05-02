@@ -18,11 +18,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 54882ce5f646e9e790703e0951459a9fceac3bb6
-ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
+ms.openlocfilehash: fdb6bde99ac5e15fb07010f3a73aba7c09bd4834
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-creating-a-custom-dataflow-block-type"></a>Procédure pas à pas : création d'un type de bloc de flux de données personnalisé
 Bien que la bibliothèque de flux de données TPL fournisse plusieurs types de blocs de flux de données offrant une large gamme de fonctionnalités, vous pouvez aussi créer des types de blocs personnalisés. Ce document décrit comment créer un type de bloc de flux de données qui implémente un comportement personnalisé.  
@@ -58,13 +58,13 @@ Bien que la bibliothèque de flux de données TPL fournisse plusieurs types de b
  [!code-vb[TPLDataflow_SlidingWindowBlock#100](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_slidingwindowblock/vb/slidingwindowblock.vb#100)]  
   
 ## <a name="compiling-the-code"></a>Compilation du code  
- Copiez l’exemple de code et collez-le dans un projet Visual Studio, ou collez-le dans un fichier nommé `SlidingWindowBlock.cs` (`SlidingWindowBlock.vb` pour [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]), puis exécutez la commande suivante dans une fenêtre d’invite de commandes Visual Studio.  
+ Copiez l’exemple de code et collez-le dans un projet Visual Studio, ou collez-le dans un fichier nommé `SlidingWindowBlock.cs` (`SlidingWindowBlock.vb` pour Visual Basic), puis exécutez la commande suivante dans une fenêtre d’invite de commandes Visual Studio.  
   
- [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]  
+ Visual C#  
   
  **csc.exe /r:System.Threading.Tasks.Dataflow.dll SlidingWindowBlock.cs**  
   
- [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]  
+ Visual Basic  
   
  **vbc.exe /r:System.Threading.Tasks.Dataflow.dll SlidingWindowBlock.vb**  
 

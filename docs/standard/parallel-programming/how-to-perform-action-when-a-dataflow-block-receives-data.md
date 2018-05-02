@@ -17,14 +17,14 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4aee0462e641e755830b63d3d708bf51b22cd797
-ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
+ms.openlocfilehash: 99f2f7184f869902f89eb0ac0fc8427533978cc3
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-perform-action-when-a-dataflow-block-receives-data"></a>Comment : exécuter des actions lorsqu'un bloc de flux de données reçoit des données
-Les types de *Bloc de flux de données d’exécution* appellent un délégué fourni par l’utilisateur lorsqu’ils reçoivent des données. Les classes <xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType>, et <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType> sont des types de bloc de flux de données d'exécution. Vous pouvez utiliser le mot clé `delegate` (`Sub` dans [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]), <xref:System.Action%601>, <xref:System.Func%602>, ou une expression lambda lorsque vous fournissez une fonction de travail dans un bloc de flux de données d'exécution. Ce document explique comment utiliser <xref:System.Func%602> et les expressions lambda pour effectuer l'action dans des blocs d'exécution.  
+Les types de *Bloc de flux de données d’exécution* appellent un délégué fourni par l’utilisateur lorsqu’ils reçoivent des données. Les classes <xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType>, et <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType> sont des types de bloc de flux de données d'exécution. Vous pouvez utiliser le mot clé `delegate` (`Sub` en Visual Basic), <xref:System.Action%601>, <xref:System.Func%602> ou une expression lambda quand vous fournissez une fonction de travail dans un bloc de flux de données d’exécution. Ce document explique comment utiliser <xref:System.Func%602> et les expressions lambda pour effectuer l'action dans des blocs d'exécution.  
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
 
@@ -39,18 +39,18 @@ Les types de *Bloc de flux de données d’exécution* appellent un délégué f
  La section Résumé des types délégués du document [Flux de données](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) récapitule les types délégués qui peuvent être attribués aux objets <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> et <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602>. La table indique également si le type délégué fonctionne de façon synchrone ou asynchrone.  
   
 ## <a name="compiling-the-code"></a>Compilation du code  
- Copiez l’exemple de code et collez-le dans un projet Visual Studio, ou collez-le dans un fichier nommé `DataflowExecutionBlocks.cs` (`DataflowExecutionBlocks.vb` pour [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]), puis exécutez la commande suivante dans une fenêtre d’invite de commandes Visual Studio.  
+ Copiez l’exemple de code et collez-le dans un projet Visual Studio, ou collez-le dans un fichier nommé `DataflowExecutionBlocks.cs` (`DataflowExecutionBlocks.vb` pour Visual Basic), puis exécutez la commande suivante dans une fenêtre d’invite de commandes Visual Studio.  
   
- [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]  
+ Visual C#  
   
  **csc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowExecutionBlocks.cs**  
   
- [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]  
+ Visual Basic  
   
  **vbc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowExecutionBlocks.vb**  
   
 ## <a name="robust-programming"></a>Programmation fiable  
- Cet exemple fournit un délégué de type <xref:System.Func%602> à l'objet <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> pour effectuer la tâche du bloc de flux de données de façon synchrone. Pour permettre au bloc de flux de données de se comporter de façon asynchrone, fournissez un délégué de type <xref:System.Func%601> au bloc de flux de données. Lorsqu'un bloc de flux de données se comporte de façon asynchrone, la tâche du bloc de flux de données se termine uniquement lorsque l'objet <xref:System.Threading.Tasks.Task%601> retourné s'achève. L’exemple suivant modifie la méthode `CountBytes` et utilise les opérateurs [async](~/docs/csharp/language-reference/keywords/async.md) et [await](~/docs/csharp/language-reference/keywords/await.md) ([Async](~/docs/visual-basic/language-reference/modifiers/async.md) et [Await](~/docs/visual-basic/language-reference/operators/await-operator.md) dans [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) pour calculer de façon asynchrone le nombre total d’octets qui sont nuls dans le fichier fourni. La méthode <xref:System.IO.FileStream.ReadAsync%2A> effectue de façon asynchrone des opérations de lecture de fichiers.  
+ Cet exemple fournit un délégué de type <xref:System.Func%602> à l'objet <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> pour effectuer la tâche du bloc de flux de données de façon synchrone. Pour permettre au bloc de flux de données de se comporter de façon asynchrone, fournissez un délégué de type <xref:System.Func%601> au bloc de flux de données. Lorsqu'un bloc de flux de données se comporte de façon asynchrone, la tâche du bloc de flux de données se termine uniquement lorsque l'objet <xref:System.Threading.Tasks.Task%601> retourné s'achève. L’exemple suivant modifie la méthode `CountBytes` et utilise les opérateurs [async](~/docs/csharp/language-reference/keywords/async.md) et [await](~/docs/csharp/language-reference/keywords/await.md) ([Async](~/docs/visual-basic/language-reference/modifiers/async.md) et [Await](~/docs/visual-basic/language-reference/operators/await-operator.md) en Visual Basic) pour calculer de façon asynchrone le nombre total d’octets qui sont égaux à zéro dans le fichier fourni. La méthode <xref:System.IO.FileStream.ReadAsync%2A> effectue de façon asynchrone des opérations de lecture de fichiers.  
   
  [!code-csharp[TPLDataflow_ExecutionBlocks#2](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_executionblocks/cs/dataflowexecutionblocks.cs#2)]
  [!code-vb[TPLDataflow_ExecutionBlocks#2](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_executionblocks/vb/dataflowexecutionblocks.vb#2)]  

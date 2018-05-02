@@ -1,12 +1,12 @@
 ---
-title: 'Comment : effectuer un aller-retour de valeurs de date et d''heure'
-ms.custom: 
+title: "Comment : effectuer un aller-retour de valeurs de date et d'heure"
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - time [.NET Framework], round-trip values
 - formatting strings [.NET Framework], round-trip values
 ms.assetid: b609b277-edc6-4c74-b03e-ea73324ecbdb
-caps.latest.revision: 
+caps.latest.revision: 12
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 68667369e1c7541313a166a1066e1ad9d69b6b71
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6ded0a08970e55b7f1267cb229eaf668313392c6
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-round-trip-date-and-time-values"></a>Comment : effectuer un aller-retour de valeurs de date et d'heure
 Dans de nombreuses applications, une valeur de date et d’heure est destinée à identifier clairement un point unique dans le temps. Cette rubrique montre comment enregistrer et restaurer une valeur <xref:System.DateTime>, une valeur <xref:System.DateTimeOffset> et une valeur de date et d’heure avec des informations de fuseau horaire pour que la valeur restaurée identifie la même heure que la valeur enregistrée.  
@@ -93,7 +93,7 @@ Dans de nombreuses applications, une valeur de date et d’heure est destinée �
 ## <a name="compiling-the-code"></a>Compilation du code  
  Ces exemples nécessitent :  
   
--   Que les espaces de noms suivants soient importés avec les instructions `using` C# ou les instructions [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] `Imports` :  
+-   Que les espaces de noms suivants soient importés avec les instructions `using` en C# ou les instructions `Imports` en Visual Basic :  
   
     -   <xref:System> (C# uniquement).  
   

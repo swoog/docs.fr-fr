@@ -1,5 +1,5 @@
 ---
-title: "short (référence C#)"
+title: short (référence C#)
 ms.date: 03/14/2017
 ms.prod: .net
 ms.technology:
@@ -11,26 +11,26 @@ f1_keywords:
 helpviewer_keywords:
 - short keyword [C#]
 ms.assetid: 04c10688-e51a-4a87-bfec-83f7fb42ff11
-caps.latest.revision: 
+caps.latest.revision: 17
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 8ca3c5444c4fa7a49b7169be3e2a5b15d1a72207
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6f73189891ecb52b81cfc1861a19194113ab2c32
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="short-c-reference"></a>short (référence C#)
 
 `short` désigne un type de données intégral qui stocke des valeurs en fonction de la taille et de la plage indiquées dans le tableau suivant.  
   
-|Type|Plage|Taille|Type .NET Framework|  
+|Type|Plage|Size|Type .NET Framework|  
 |----------|-----------|----------|-------------------------|  
 |`short`|de -32 768 à 32 767|Entier 16 bits signé|<xref:System.Int16?displayProperty=nameWithType>|  
   
 ## <a name="literals"></a>Littéraux  
 
-Vous pouvez déclarer et initialiser une variable `short` en lui assignant un littéral décimal, un littéral hexadécimal ou un littéral binaire (à compter de C# 7).  Si le littéral entier est en dehors de la plage autorisée pour le type `short` (autrement dit, s’il est inférieur à <xref:System.Int16.MinValue?displayProperty=nameWithType> ou supérieur à <xref:System.Int16.MaxValue?displayProperty=nameWithType>), une erreur de compilation se produit. 
+Vous pouvez déclarer et initialiser une variable `short` en lui assignant un littéral décimal, hexadécimal ou binaire (à compter de C# 7.0).  Si le littéral entier est en dehors de la plage autorisée pour le type `short` (autrement dit, s’il est inférieur à <xref:System.Int16.MinValue?displayProperty=nameWithType> ou supérieur à <xref:System.Int16.MaxValue?displayProperty=nameWithType>), une erreur de compilation se produit. 
 
 Dans l’exemple suivant, les entiers égaux à 1 034 représentés comme des littéraux décimaux, hexadécimaux et binaires sont implicitement convertis à partir de valeurs [int](../../../csharp/language-reference/keywords/int.md) en `short`.  
   
@@ -39,11 +39,11 @@ Dans l’exemple suivant, les entiers égaux à 1 034 représentés comme des 
 > [!NOTE] 
 > Vous utilisez le préfixe `0x` ou `0X` pour désigner un littéral hexadécimal, et le préfixe `0b` ou `0B` pour désigner un littéral binaire. Les littéraux décimaux n’ont pas de préfixe.
 
-À partir de C# 7, quelques fonctionnalités ont été ajoutées améliorer la lisibilité. 
- - C# 7.0 permet l’utilisation d’un caractère de soulignement `_`, comme un séparateur de chiffre.
- - 7.2 c# permet `_` à utiliser comme séparateur de chiffres pour un littéral binaire ou en hexadécimal, après le préfixe. Un littéral décimal n’est pas autorisé à avoir un trait de soulignement.
+À compter de C# 7.0, des fonctionnalités ont été ajoutées pour améliorer la lisibilité. 
+ - C# 7.0 prend en charge l’utilisation du caractère de soulignement (`_`) comme séparateur numérique.
+ - C# 7.2 prend en charge l’utilisation de `_` comme séparateur de chiffres pour un littéral binaire ou hexadécimal, après le préfixe. Un trait de soulignement n’est pas autorisé au début d’un littéral décimal.
 
-Certains exemples sont présentés ci-dessous.
+Voici quelques exemples.
 
 [!code-csharp[Short](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#ShortS)]  
  
@@ -92,7 +92,7 @@ int m = x + y;
 long n = x + y;  
 ```  
   
- Il n’existe pas de conversion implicite des types virgule flottante en `short`. Par exemple, l’instruction suivante génère une erreur du compilateur à moins qu’un cast explicite soit utilisé :  
+ Il n’existe pas de conversion implicite des types virgule flottante en `short`. Par exemple, l’instruction suivante génère une erreur du compilateur, sauf si vous utilisez un cast explicite :  
   
 ```csharp  
 short x = 3.0;          // Error: no implicit conversion from double  

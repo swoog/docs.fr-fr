@@ -1,6 +1,6 @@
 ---
-title: "Méthodes - Guide du C#"
-description: "Vue d’ensemble des méthodes, des paramètres de méthode et des valeurs de retour des méthodes"
+title: Méthodes - Guide du C#
+description: Vue d’ensemble des méthodes, des paramètres de méthode et des valeurs de retour des méthodes
 keywords: .NET, .NET Core, C#
 author: rpetrusha
 ms.author: ronpet
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 48127d5168ace7733f29f78dc3f72d9c0d051e4e
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 526cd6d269c7c089f6547fcf243b43e411037d13
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="methods"></a>Méthodes #
 
@@ -263,7 +263,7 @@ Si vous marquez une méthode avec le modificateur [async](language-reference/key
 > [!NOTE]
 > Une méthode async retourne à l'appelant quand elle rencontre le premier objet await qui n'est pas encore terminé ou quand elle atteint la fin de la méthode async, selon la première éventualité.
 
-Une méthode async peut avoir un type de retour <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task> ou `void`. Le type de retour `void` est essentiellement utilisé pour définir les gestionnaires d’événements, où un type de retour `void` est obligatoire. Une méthode async qui retourne `void` ne peut pas être attendue, et l’appelant d’une méthode retournant void ne peut intercepter aucune exception levée par la méthode. C# 7, une fois publié, facilitera cette restriction pour permettre à une méthode async de [retourner n’importe quel type similaire à une tâche](https://github.com/ljw1004/roslyn/blob/features/async-return/docs/specs/feature%20-%20arbitrary%20async%20returns.md).
+Une méthode async peut avoir un type de retour <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task> ou `void`. Le type de retour `void` est essentiellement utilisé pour définir les gestionnaires d’événements, où un type de retour `void` est obligatoire. Une méthode async qui retourne `void` ne peut pas être attendue, et l’appelant d’une méthode retournant void ne peut intercepter aucune exception levée par la méthode. C# 7.0, une fois publié, facilitera cette restriction pour permettre à une méthode async de [retourner n’importe quel type similaire à une tâche](https://github.com/ljw1004/roslyn/blob/features/async-return/docs/specs/feature%20-%20arbitrary%20async%20returns.md).
 
 Dans l’exemple suivant, `DelayAsync` est une méthode async contenant une instruction return qui retourne un entier. Comme il s’agit d’une méthode async, la déclaration de sa méthode doit avoir un type de retour `Task<int>`. Comme le type de retour est `Task<int>`, l’évaluation de l’expression `await` dans `DoSomethingAsync` produit un entier, comme l’instruction `int result = await delayTask` suivante le montre.
 

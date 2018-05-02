@@ -1,11 +1,12 @@
 ---
-title: "Concepts de base du système de fichiers et des E/S de fichier du .NET Framework (Visual Basic)"
-ms.custom: 
+title: Concepts de base du système de fichiers et des E/S de fichier du .NET Framework (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - file access, file I/O in Visual Basic
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - streams
 - streams, definition
 ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: d6cfdb939bd4bf84fafbffceefccd5cd522018c2
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 02eaa98b8a52a2b9efa2b273b2a58158a5848b86
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>Concepts de base du système de fichiers et des E/S de fichier du .NET Framework (Visual Basic)
 Les classes de l’espace de noms <xref:System.IO> sont utilisées pour travailler avec les lecteurs, les fichiers et les répertoires.  
@@ -30,7 +31,7 @@ Les classes de l’espace de noms <xref:System.IO> sont utilisées pour travaill
  L’espace de noms <xref:System.IO> contient les classes <xref:System.IO.File> et <xref:System.IO.Directory>, qui fournissent la fonctionnalité [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] permettant de manipuler des fichiers et des répertoires. Les méthodes de ces objets étant des membres statiques ou partagés, vous pouvez les utiliser directement sans créer d’abord une instance de la classe. Les classes <xref:System.IO.FileInfo> et <xref:System.IO.DirectoryInfo>, familières aux utilisateurs de la fonctionnalité `My`, sont associées à ces classes. Pour utiliser ces classes, vous devez qualifier complètement les noms ou importer les espaces de noms appropriés en incluant les instructions `Imports` au début du code affecté. Pour plus d’informations, consultez [Instruction Imports (espace de noms et type .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
   
 > [!NOTE]
->  Les autres rubriques de cette section utilisent l’objet `My.Computer.FileSystem` au lieu des classes `System.IO` pour travailler avec des lecteurs, des fichiers et des répertoires. L’objet `My.Computer.FileSystem` est destiné principalement à une utilisation dans des programmes [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Les classes `System.IO` sont destinées à tout langage qui prend en charge le [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], notamment [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+>  Les autres rubriques de cette section utilisent l’objet `My.Computer.FileSystem` au lieu des classes `System.IO` pour travailler avec des lecteurs, des fichiers et des répertoires. L’objet `My.Computer.FileSystem` est destiné principalement à une utilisation dans des programmes Visual Basic. Les classes `System.IO` sont destinées à tout langage qui prend en charge le [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], notamment Visual Basic.  
   
 ## <a name="definition-of-a-stream"></a>Définition d’un flux  
  Le [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] utilise des flux pour prendre en charge la lecture et l’écriture dans des fichiers. Vous pouvez considérer un flux comme un ensemble unidimensionnel de données contiguës, ayant un début et une fin, et où le curseur indique la position actuelle dans le flux.  

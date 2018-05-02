@@ -1,5 +1,5 @@
 ---
-title: "ushort (référence C#)"
+title: ushort (référence C#)
 ms.date: 03/14/2017
 ms.prod: .net
 ms.technology:
@@ -11,26 +11,26 @@ f1_keywords:
 helpviewer_keywords:
 - ushort keyword [C#]
 ms.assetid: 1a7dbaae-b7a0-4111-872a-c88a6d3981ac
-caps.latest.revision: 
+caps.latest.revision: 16
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 83fa657303e8392997b04b7d80cdbcdbf39de887
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ee624433975df79ed5709bf40d146160c5e633b0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ushort-c-reference"></a>ushort (référence C#)
 
 Le mot clé `ushort` indique un type de données intégral qui stocke des valeurs selon la taille et la plage indiquées dans le tableau suivant.  
   
-|Type|Plage|Taille|Type .NET Framework|  
+|Type|Plage|Size|Type .NET Framework|  
 |----------|-----------|----------|-------------------------|  
 |`ushort`|0 à 65 535|Entier 16 bits non signé|<xref:System.UInt16?displayProperty=nameWithType>|  
   
 ## <a name="literals"></a>Littéraux  
 
-Vous pouvez déclarer et initialiser une variable `ushort` en lui assignant un littéral décimal, un littéral hexadécimal ou un littéral binaire (à compter de C# 7). Si le littéral entier est en dehors de la plage autorisée pour le type `ushort` (autrement dit, s’il est inférieur à <xref:System.UInt16.MinValue?displayProperty=nameWithType> ou supérieur à <xref:System.UInt16.MaxValue?displayProperty=nameWithType>), une erreur de compilation se produit.
+Vous pouvez déclarer et initialiser une variable `ushort` en lui assignant un littéral décimal, hexadécimal ou binaire (à compter de C# 7.0). Si le littéral entier est en dehors de la plage autorisée pour le type `ushort` (autrement dit, s’il est inférieur à <xref:System.UInt16.MinValue?displayProperty=nameWithType> ou supérieur à <xref:System.UInt16.MaxValue?displayProperty=nameWithType>), une erreur de compilation se produit.
 
 Dans l’exemple suivant, les entiers égaux à 65 034 représentés comme des littéraux décimaux, hexadécimaux et binaires sont implicitement convertis à partir de valeurs [int](../../../csharp/language-reference/keywords/int.md) en `ushort`.    
   
@@ -39,11 +39,11 @@ Dans l’exemple suivant, les entiers égaux à 65 034 représentés comme des
 > [!NOTE] 
 > Vous utilisez le préfixe `0x` ou `0X` pour désigner un littéral hexadécimal, et le préfixe `0b` ou `0B` pour désigner un littéral binaire. Les littéraux décimaux n’ont pas de préfixe.
 
-À partir de C# 7, quelques fonctionnalités ont été ajoutées améliorer la lisibilité. 
- - C# 7.0 permet l’utilisation d’un caractère de soulignement `_`, comme un séparateur de chiffre.
- - 7.2 c# permet `_` à utiliser comme séparateur de chiffres pour un littéral binaire ou en hexadécimal, après le préfixe. Un littéral décimal n’est pas autorisé à avoir un trait de soulignement.
+À compter de C# 7.0, des fonctionnalités ont été ajoutées pour améliorer la lisibilité. 
+ - C# 7.0 prend en charge l’utilisation du caractère de soulignement (`_`) comme séparateur numérique.
+ - C# 7.2 prend en charge l’utilisation de `_` comme séparateur de chiffres pour un littéral binaire ou hexadécimal, après le préfixe. Un trait de soulignement n’est pas autorisé au début d’un littéral décimal.
 
-Certains exemples sont présentés ci-dessous.
+Voici quelques exemples.
 
 [!code-csharp[UShort](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#UShortS)]  
  
@@ -68,7 +68,7 @@ SampleMethod((ushort)5);
 ## <a name="conversions"></a>Conversions  
  Il existe une conversion implicite prédéfinie de `ushort` en [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [long](../../../csharp/language-reference/keywords/long.md), [ulong](../../../csharp/language-reference/keywords/ulong.md), [float](../../../csharp/language-reference/keywords/float.md), [double](../../../csharp/language-reference/keywords/double.md) ou [decimal](../../../csharp/language-reference/keywords/decimal.md).  
   
- Il existe une conversion implicite prédéfinie de [byte](../../../csharp/language-reference/keywords/byte.md) ou [char](../../../csharp/language-reference/keywords/char.md) en `ushort`. Sinon, vous devez utiliser un cast pour effectuer une conversion explicite. Prenez l’exemple des deux variables `ushort``x` et `y` suivantes :  
+ Il existe une conversion implicite prédéfinie de [byte](../../../csharp/language-reference/keywords/byte.md) ou [char](../../../csharp/language-reference/keywords/char.md) en `ushort`. Sinon, vous devez utiliser un cast pour effectuer une conversion explicite. Considérons, par exemple, les deux variables `ushort` `x` et `y` suivantes :  
   
 ```csharp 
 ushort x = 5, y = 12;  
@@ -93,7 +93,7 @@ int m = x + y;
 long n = x + y;  
 ```  
   
- Notez aussi qu’il n’existe pas de conversion implicite des types virgule flottante en `ushort`. Par exemple, l’instruction suivante génère une erreur du compilateur à moins qu’un cast explicite soit utilisé :  
+ Notez aussi qu’il n’existe pas de conversion implicite des types virgule flottante en `ushort`. Par exemple, l’instruction suivante génère une erreur du compilateur, sauf si vous utilisez un cast explicite :  
   
 ```csharp  
 // Error -- no implicit conversion from double:  

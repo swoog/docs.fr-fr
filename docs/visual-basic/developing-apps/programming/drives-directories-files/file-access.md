@@ -1,11 +1,12 @@
 ---
-title: "Accès au fichier avec Visual Basic"
-ms.custom: 
+title: Accès au fichier avec Visual Basic
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - file access
@@ -20,17 +21,17 @@ helpviewer_keywords:
 - I/O [Visual Basic]
 - sequential access
 ms.assetid: 231533bf-d049-4345-befa-3fb78fe6517d
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9929061feeccee31028056bc93f0f0a2f119eb4e
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: 2aabea79e3c7a6dabf47647c7e27b072738ba363
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="file-access-with-visual-basic"></a>Accès au fichier avec Visual Basic
-L’objet `My.Computer.FileSystem` fournit des outils pour l’utilisation des fichiers et des dossiers. Ses propriétés, méthodes et événements permettent de créer, copier, déplacer, examiner et supprimer des fichiers et des dossiers. `My.Computer.FileSystem` offre de meilleures performances que les fonctions héritées (`FileOpen`, `FileClose`, `Input`, `InputString`, `LineInput`, etc.) qui sont fournies par [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] pour une compatibilité descendante.  
+L’objet `My.Computer.FileSystem` fournit des outils pour l’utilisation des fichiers et des dossiers. Ses propriétés, méthodes et événements permettent de créer, copier, déplacer, examiner et supprimer des fichiers et des dossiers. `My.Computer.FileSystem` offre de meilleures performances que les fonctions héritées (`FileOpen`, `FileClose`, `Input`, `InputString`, `LineInput`, etc.) qui sont fournies par Visual Basic pour une compatibilité descendante.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Lecture à partir de fichiers](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  

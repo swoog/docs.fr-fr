@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 42872caa1a9306187daeefd35feb9bec3fae60af
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: adbe63a2d2f93819b5b29c6dd8d8089cd35ad2f3
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="official-net-docker-images"></a>Images officielles .NET Docker
 
@@ -41,7 +41,7 @@ Pourquoi plusieurs images ? En règle générale, vos propriétés varient selo
 
 ### <a name="during-development-and-build"></a>En phase de développement et de génération
 
-En phase de développement, il importe d’itérer rapidement les modifications et de pouvoir les déboguer. La taille de l’image est moins importante que la possibilité d’apporter des modifications à votre code et de voir rapidement ces modifications. Certains outils et « conteneurs d’agent de build » utilisent l’image de développement ASP.NET Core (microsoft/aspnetcore-build) pendant les processus de développement et de génération. Ce qui importe au moment de générer à l’intérieur d’un conteneur Docker, ce sont les éléments nécessaires à la compilation de l’application. Il s’agit notamment du compilateur et des autres dépendances .NET éventuelles, mais aussi des dépendances de développement web comme npm, Gulp et Bower.
+En phase de développement, il importe d’itérer rapidement les modifications et de pouvoir les déboguer. La taille de l’image est moins importante que la possibilité d’apporter des modifications à votre code et de voir rapidement ces modifications. Certains outils et « conteneurs d’agent de build » utilisent l’image de développement ASP.NET Core (microsoft/aspnetcore-build) pendant les processus de développement et de génération. Ce qui importe au moment de générer à l’intérieur d’un conteneur Docker, ce sont les éléments nécessaires à la compilation de l’application. Il s’agit notamment du compilateur et des autres dépendances .NET éventuelles, mais aussi des dépendances de développement web comme npm, Gulp et Bower.
 
 Pourquoi ce type d’image de build est-il important ? Vous ne déployez pas cette image en production. En effet, il s’agit d’une image que vous utilisez pour générer le contenu que vous placez dans une image de production. Cette image est destinée à être utilisée dans votre environnement d’intégration continue (CI) ou votre environnement de génération. Par exemple, au lieu d’installer manuellement toutes vos dépendances d’application directement sur un hôte d’agent de build (par exemple, une machine virtuelle), l’agent de build instancie une image de build .NET Core avec toutes les dépendances nécessaires à la génération de l’application. L’agent de build doit seulement savoir comment exécuter cette image Docker. Votre environnement d’intégration continue s’en trouve simplifié et nettement plus prévisible.
 

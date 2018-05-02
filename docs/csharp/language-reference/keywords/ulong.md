@@ -1,5 +1,5 @@
 ---
-title: "ulong (référence C#)"
+title: ulong (référence C#)
 ms.date: 03/14/2017
 ms.prod: .net
 ms.technology:
@@ -11,26 +11,26 @@ f1_keywords:
 helpviewer_keywords:
 - ulong keyword [C#]
 ms.assetid: f2ece624-837a-40cf-92c5-343e7f33397c
-caps.latest.revision: 
+caps.latest.revision: 16
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 2058d9f6a228b13938fe08d7e2fb11e3b9f4600a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 049d1cc4b30e16535f20cee8e0ad80e5c80b4a49
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ulong-c-reference"></a>ulong (référence C#)
 
 Le mot clé `ulong` désigne un type intégral qui stocke des valeurs en fonction de la taille et de la plage indiquées dans le tableau suivant.  
   
-|Type|Plage|Taille|Type .NET Framework|  
+|Type|Plage|Size|Type .NET Framework|  
 |----------|-----------|----------|-------------------------|  
 |`ulong`|de 0 à 18 446 744 073 709 551 615|Entier 64 bits non signé|<xref:System.UInt64?displayProperty=nameWithType>|  
   
 ## <a name="literals"></a>Littéraux  
 
-Vous pouvez déclarer et initialiser une variable `ulong` en lui assignant un littéral décimal, un littéral hexadécimal ou un littéral binaire (à compter de C# 7).  Si le littéral entier est en dehors de la plage autorisée pour le type `ulong` (autrement dit, s’il est inférieur à <xref:System.UInt64.MinValue?displayProperty=nameWithType> ou supérieur à <xref:System.UInt64.MaxValue?displayProperty=nameWithType>), une erreur de compilation se produit. 
+Vous pouvez déclarer et initialiser une variable `ulong` en lui affectant un littéral décimal, un littéral ou binaire (à compter de C# 7.0).  Si le littéral entier est en dehors de la plage autorisée pour le type `ulong` (autrement dit, s’il est inférieur à <xref:System.UInt64.MinValue?displayProperty=nameWithType> ou supérieur à <xref:System.UInt64.MaxValue?displayProperty=nameWithType>), une erreur de compilation se produit. 
 
 Dans l’exemple suivant, les entiers égaux à 7 934 076 125 représentés comme des littéraux décimaux, hexadécimaux et binaires sont assignés aux valeurs `ulong`.  
   
@@ -39,11 +39,11 @@ Dans l’exemple suivant, les entiers égaux à 7 934 076 125 représentés c
 > [!NOTE] 
 > Vous utilisez le préfixe `0x` ou `0X` pour désigner un littéral hexadécimal, et le préfixe `0b` ou `0B` pour désigner un littéral binaire. Les littéraux décimaux n’ont pas de préfixe. 
 
-À partir de C# 7, quelques fonctionnalités ont été ajoutées améliorer la lisibilité. 
- - C# 7.0 permet l’utilisation d’un caractère de soulignement `_`, comme un séparateur de chiffre.
- - 7.2 c# permet `_` à utiliser comme séparateur de chiffres pour un littéral binaire ou en hexadécimal, après le préfixe. Un littéral décimal n’est pas autorisé à avoir un trait de soulignement.
+À compter de C# 7.0, des fonctionnalités ont été ajoutées pour améliorer la lisibilité. 
+ - C# 7.0 prend en charge l’utilisation du caractère de soulignement (`_`) comme séparateur numérique.
+ - C# 7.2 prend en charge l’utilisation de `_` comme séparateur de chiffres pour un littéral binaire ou hexadécimal, après le préfixe. Un trait de soulignement n’est pas autorisé au début d’un littéral décimal.
 
-Certains exemples sont présentés ci-dessous.
+Voici quelques exemples.
 
 [!code-csharp[long](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#LongS)]  
  
@@ -85,7 +85,7 @@ long long1 = 8UL;   // Error: no implicit conversion from ulong
   
  Il existe une conversion implicite prédéfinie de [byte](../../../csharp/language-reference/keywords/byte.md), [ushort](../../../csharp/language-reference/keywords/ushort.md), [uint](../../../csharp/language-reference/keywords/uint.md) ou [char](../../../csharp/language-reference/keywords/char.md) en `ulong`.  
   
- De plus, il n’existe pas de conversion implicite des types virgule flottante en `ulong`. Par exemple, l’instruction suivante génère une erreur du compilateur à moins qu’un cast explicite soit utilisé :  
+ De plus, il n’existe pas de conversion implicite des types virgule flottante en `ulong`. Par exemple, l’instruction suivante génère une erreur du compilateur, sauf si vous utilisez un cast explicite :  
   
 ```csharp  
 // Error -- no implicit conversion from double:  

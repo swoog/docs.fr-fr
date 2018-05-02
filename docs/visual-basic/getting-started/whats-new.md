@@ -15,11 +15,11 @@ ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
 caps.latest.revision: 145
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4641041657e99fa64bf1b7eb5317a43660ac7e2b
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 34c7e7147ce7ae43926de1796bee433667f08331
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="whats-new-for-visual-basic"></a>Nouveautés de Visual Basic
 
@@ -129,7 +129,7 @@ Pour plus d’informations, consultez la section « Affectations de littéraux�
 
 **Prise en charge des valeurs de retour de référence C#**
 
-Depuis C# 7, C# prend en charge les valeurs de retour de référence. Autrement dit, quand la méthode d’appel reçoit une valeur retournée par référence, elle peut modifier la valeur de la référence. Visual Basic ne vous autorise pas à créer des méthodes avec des valeurs de retour de référence, mais vous permet d’utiliser et de modifier ces valeurs.
+À compter de C# 7.0, C# prend en charge les valeurs de retour de référence. Autrement dit, quand la méthode d’appel reçoit une valeur retournée par référence, elle peut modifier la valeur de la référence. Visual Basic ne vous autorise pas à créer des méthodes avec des valeurs de retour de référence, mais vous permet d’utiliser et de modifier ces valeurs.
 
 Par exemple, la classe `Sentence` suivante écrite en C# inclut une méthode `FindNext` qui recherche le mot suivant dans une phrase qui commence par une sous-chaîne spécifiée. La chaîne est retournée comme valeur de retour de référence et une variable `Boolean` passée par référence à la méthode indique si la recherche a réussi. Cela signifie que l’appelant peut non seulement lire la valeur retournée, mais il peut également la modifier et cette modification est répercutée dans la classe `Sentence`.
 

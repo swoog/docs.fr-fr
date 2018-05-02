@@ -1,6 +1,6 @@
 ---
-title: "Déconstruction de tuples et d’autres types"
-description: "Découvrez comment déconstruire des tuples et d’autres types."
+title: Déconstruction de tuples et d’autres types
+description: Découvrez comment déconstruire des tuples et d’autres types.
 keywords: .NET,.NET Core,C#
 author: rpetrusha
 ms-author: ronpet
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0b0c4b0f-4a47-4f66-9b8e-f5c63b195960
-ms.openlocfilehash: e626eeb1f3de2716e1ffe4fcbec1c16558e5bf0e
-ms.sourcegitcommit: a3ba258f7a8cab5c6d19a3743dd95e904ecebc44
+ms.openlocfilehash: 5a119f935b1cc80fe5cf738f03057c68c7eb5ba5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="deconstructing-tuples-and-other-types"></a>Déconstruction de tuples et d’autres types #
 
@@ -24,7 +24,7 @@ Un tuple offre un moyen léger de récupérer plusieurs valeurs à partir d’un
 
 La récupération de plusieurs valeurs de champs et de propriétés d’un objet peut également être assez fastidieuse : vous devez affecter une valeur de champ ou de propriété à une variable membre par membre. 
 
-À compter de C# 7, vous pouvez récupérer plusieurs éléments d’un tuple ou récupérer plusieurs valeurs de champ et de propriété, ainsi que des valeurs calculées, à partir d’un objet en une seule opération de *déconstruction*. Quand vous déconstruisez un tuple, vous affectez ses éléments à des variables individuelles. Quand vous déconstruisez un objet, vous affectez des valeurs sélectionnées à des variables individuelles. 
+À compter de C# 7.0, vous pouvez récupérer plusieurs éléments d’un tuple ou récupérer plusieurs valeurs de champ et de propriété, ainsi que des valeurs calculées, à partir d’un objet en une seule opération de *déconstruction*. Quand vous déconstruisez un tuple, vous affectez ses éléments à des variables individuelles. Quand vous déconstruisez un objet, vous affectez des valeurs sélectionnées à des variables individuelles. 
 
 ## <a name="deconstructing-a-tuple"></a>Déconstruction d’un tuple
 
@@ -34,7 +34,7 @@ Des fonctionnalités C# intégrées prennent en charge la déconstruction des tu
 var (name, address, city, zip) = contact.GetAddressInfo();
 ```
 
-Il existe trois façons de décomposer un tuple :
+Il existe trois façons de déconstruire un tuple :
 
 - Vous pouvez déclarer explicitement le type de chaque champ entre des parenthèses. L’exemple suivant utilise cette approche pour déconstruire un tuple de 3 éléments retourné par la méthode `QueryCityData`.
 
@@ -50,7 +50,7 @@ Il existe trois façons de décomposer un tuple :
 
     Ceci est assez fastidieux et n’est pas recommandé.
 
-- Enfin, vous pouvez décomposer le tuple dans les variables qui ont déjà été déclarés.
+- Enfin, vous pouvez déconstruire le tuple dans des variables qui ont déjà été déclarées.
 
     [!code-csharp[Deconstruction-Declared](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple5.cs#1)]
 
@@ -58,11 +58,11 @@ Notez que vous ne pouvez pas spécifier un type spécifique en dehors des parent
 
 Notez que vous devez également affecter chaque élément du tuple à une variable. Si vous omettez des éléments, le compilateur génère l’erreur CS8132, « Impossible de déconstruire un tuple de « x » éléments en « y » variables ».
 
-Notez que vous ne pouvez pas mélanger des déclarations et des assignations aux variables existantes sur le côté gauche d’un déploiement. Le compilateur génère l’erreur CS8184, « une destruction Impossible de mélanger les déclarations et les expressions sur la partie gauche. » Lorsque les membres incluent des variables qui vient d’être déclarés et existantes.
+Notez que vous ne pouvez pas mélanger des déclarations et des affectations à des variables existantes sur le côté gauche d’une déconstruction. Le compilateur génère l’erreur CS8184, « Une déconstruction ne peut pas contenir à la fois des déclarations et des expressions à gauche », quand les membres incluent des variables nouvellement déclarées et des variables existantes.
 
 ## <a name="deconstructing-tuple-elements-with-discards"></a>Déconstruction d’éléments d’un tuple en ignorant des éléments
 
-Souvent, lors de la déconstruction d’un tuple, vous êtes intéressé seulement par les valeurs de certains éléments. À compter de C# 7, vous pouvez tirer parti de la prise en charge des *éléments ignorés*, qui sont des variables en écriture seule dont vous avez choisi d’ignorer les valeurs. Un élément ignoré est désigné par un caractère de soulignement (« \_ ») dans une affectation. Vous pouvez ignorer autant de valeurs que vous le souhaitez ; pour représenter toutes les valeurs, utilisez l’élément ignoré unique, `_`.
+Souvent, lors de la déconstruction d’un tuple, vous êtes intéressé seulement par les valeurs de certains éléments. À compter de C# 7.0, vous pouvez tirer parti de la prise en charge des *éléments ignorés*, qui sont des variables en écriture seule dont vous avez choisi d’ignorer les valeurs. Un élément ignoré est désigné par un caractère de soulignement (« \_ ») dans une affectation. Vous pouvez ignorer autant de valeurs que vous le souhaitez ; pour représenter toutes les valeurs, utilisez l’élément ignoré unique, `_`.
 
 L’exemple suivant illustre l’utilisation de tuples avec des éléments ignorés. La méthode `QueryCityDataForYears` retourne un tuple de 6 éléments avec le nom d’une ville, sa région, une année, la population de la ville pour cette année, une seconde année et la population de la ville pour cette seconde année. L’exemple montre la différence de population entre ces deux années. Parmi les données disponibles dans le tuple, nous ne sommes pas intéressés par la région de la ville, et nous connaissons le nom de la ville et les deux dates au moment du design. Par conséquent, nous sommes intéressés seulement par les deux valeurs de la population stockées dans le tuple et nous pouvons gérer ses valeurs restantes comme éléments ignorés.  
 

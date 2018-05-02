@@ -1,5 +1,5 @@
 ---
-title: "Comment : utiliser JoinBlock pour lire des données issues de plusieurs sources"
+title: 'Comment : utiliser JoinBlock pour lire des données issues de plusieurs sources'
 ms.date: 03/30/2017
 ms.prod: .net
 ms.technology: dotnet-standard
@@ -18,11 +18,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f7d4e552404f99580bceafe7f900db4607201c3d
-ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
+ms.openlocfilehash: ba353a34306b06e0f1df4696af5545799e7a5b37
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-use-joinblock-to-read-data-from-multiple-sources"></a>Comment : utiliser JoinBlock pour lire des données issues de plusieurs sources
 Ce document explique comment utiliser la classe <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> pour effectuer une opération lorsque des données sont disponibles à partir de plusieurs sources. Il présente aussi comment utiliser le mode non gourmand pour permettre à plusieurs blocs de jointure de partager plus efficacement une source de données.
@@ -38,13 +38,13 @@ Ce document explique comment utiliser la classe <xref:System.Threading.Tasks.Dat
  Pour permettre l'utilisation efficace du pool partagé des objets `MemoryResource`, cet exemple spécifie un objet <xref:System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions> qui contient le jeu de propriétés <xref:System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions.Greedy%2A> à `False` pour créer les objets <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> qui agissent en mode non gourmand. Un bloc de jointure non-gourmand remet les messages entrants jusqu'à ce qu'il y en ait un disponible à partir de chaque source. Si n'importe quel message remis à plus tard a été reçu par un autre bloc, le bloc de jointure redémarre le processus. Le mode non gourmand permet aux blocs de jointure qui partagent un ou plusieurs blocs sources d'avancer quand les autres blocs attendent des données. Dans cet exemple, si un objet `MemoryResource` est ajouté au pool `memoryResources`, le premier bloc de jointure peut progresser pour recevoir sa deuxième source de données. Si cet exemple visait à utiliser le mode gourmand, qui est la valeur par défaut, un bloc de jointure peut prendre l'objet `MemoryResource` et attendre que la deuxième ressource soit disponible. Toutefois, si l'autre bloc de jointure a sa deuxième source de données disponible, il ne peut pas avancer car l'objet `MemoryResource` a été pris par l'autre bloc de jointure.  
   
 ## <a name="compiling-the-code"></a>Compilation du code  
- Copiez l’exemple de code et collez-le dans un projet Visual Studio, ou collez-le dans un fichier nommé `DataflowNonGreedyJoin.cs` (`DataflowNonGreedyJoin.vb` pour [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]), puis exécutez la commande suivante dans une fenêtre d’invite de commandes Visual Studio.  
+ Copiez l’exemple de code et collez-le dans un projet Visual Studio, ou collez-le dans un fichier nommé `DataflowNonGreedyJoin.cs` (`DataflowNonGreedyJoin.vb` pour Visual Basic), puis exécutez la commande suivante dans une fenêtre d’invite de commandes Visual Studio.  
   
- [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]  
+ Visual C#  
   
  **csc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowNonGreedyJoin.cs**  
   
- [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]  
+ Visual Basic  
   
  **vbc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowNonGreedyJoin.vb**  
   

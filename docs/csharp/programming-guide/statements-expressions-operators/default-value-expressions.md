@@ -1,31 +1,46 @@
 ---
-title: "Expressions de valeur par défaut (Guide de programmation C#)"
-description: "Les expressions de valeur par défaut produisent la valeur par défaut des types référence et des types valeur"
-ms.date: 08/23/2017
+title: Expressions de valeur par défaut (Guide de programmation C#)
+description: Les expressions de valeur par défaut produisent la valeur par défaut des types référence et des types valeur
+ms.date: 04/25/2018
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - generics [C#], default keyword
 - default keyword [C#], generic programming
-ms.assetid: b9daf449-4e64-496e-8592-6ed2c8875a98
-caps.latest.revision: "22"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c2bb1c269e5347d615c47ab828506aef538c4761
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 174ac79c9e2c4a4e628816b1178d420ec7cfc809
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="default-value-expressions-c-programming-guide"></a>Expressions de valeur par défaut (Guide de programmation C#)
 
-Une expression de valeur par défaut produit la valeur par défaut d’un type. Les expressions de valeur par défaut sont particulièrement utiles dans les méthodes et classes génériques. Le problème qui se pose avec l’utilisation des génériques est de savoir comment assigner une valeur par défaut à un type paramétrable `T` quand vous ne connaissez pas les éléments suivants à l’avance :
+Une expression de valeur par défaut `default(T)` produit la valeur par défaut d’un type `T`. Le tableau suivant montre les valeurs qui sont produites pour différents types :
+
+|Type|Valeur par défaut|
+|---------|---------|
+|tout type référence ;|`null`|
+|Type de valeur numérique|Zéro|
+|[bool](../../language-reference/keywords/bool.md)|`false`|
+|[char](../../language-reference/keywords/char.md)|`'\0'`|
+|[enum](../../language-reference/keywords/enum.md)|Valeur produite par l’expression `(E)0`, où `E` est l’identificateur de l’enum.|
+|[struct](../../language-reference/keywords/struct.md)|Valeur produite en affectant à tous les champs de type valeur leur valeur par défaut et à tous les champs de type référence la valeur `null`.|
+|Types Nullable|Instance pour laquelle la propriété <xref:System.Nullable%601.HasValue%2A> a la valeur `false` et la propriété <xref:System.Nullable%601.Value%2A> n’est pas définie.|
+
+Les expressions de valeur par défaut sont particulièrement utiles dans les méthodes et classes génériques. Le problème qui se pose avec l’utilisation des génériques est de savoir comment assigner une valeur par défaut à un type paramétrable `T` quand vous ne connaissez pas les éléments suivants à l’avance :
 
 - Si `T` est un type référence ou un type valeur.
-- Si `T` est un type valeur, s’il s’agit d’une valeur numérique ou d’un struct défini par l’utilisateur.
+- Si `T` est un type valeur, qu’il s’agisse d’une valeur numérique ou d’un struct.
 
- Avec une variable `t` d’un type paramétré `T`, l’instruction `t = null` est valide uniquement si `T` est un type référence. L’affectation de `t = 0` fonctionne uniquement pour les types valeur numériques mais pas pour les structs. La solution consiste à utiliser une expression de valeur par défaut, qui retourne `null` pour les types référence (types de classes et types interface) et zéro pour les types valeur numériques. Pour des structs définis par l’utilisateur, elle retourne le struct initialisé sur le modèle de bit zéro qui produit 0 ou `null` pour chaque membre, selon que ce membre est un type valeur ou référence. Pour les types valeur Nullable, `default` retourne <xref:System.Nullable%601?displayProperty=nameWithType>, initialisé comme n’importe quel struct.
+ Avec une variable `t` d’un type paramétré `T`, l’instruction `t = null` est valide uniquement si `T` est un type référence. L’affectation de `t = 0` fonctionne uniquement pour les types valeur numériques mais pas pour les structs. Pour résoudre ce problème, utilisez une expression de valeur par défaut :
+
+```csharp
+T t = default(T);
+```
 
 L’expression `default(T)` n’est pas limitée aux classes et aux méthodes génériques. Vous pouvez utiliser les expressions de valeur par défaut avec n’importe quel type managé. Toutes ces expressions sont valides :
 
@@ -51,7 +66,9 @@ L’exemple suivant illustre plusieurs utilisations du littéral `default` dans 
 
 ## <a name="see-also"></a>Voir aussi
 
- <xref:System.Collections.Generic>[Guide de programmation c#](../index.md)  
- [Génériques](../generics/index.md)  
+ <xref:System.Collections.Generic>  
+ [Guide de programmation C#](../index.md)  
+ [Génériques (guide de programmation C#)](../generics/index.md)  
  [Méthodes génériques](../generics/generic-methods.md)  
- [Génériques](~/docs/standard/generics/index.md)  
+ [Génériques en .NET](~/docs/standard/generics/index.md)  
+ [Tableau des valeurs par défaut](../../language-reference/keywords/default-values-table.md)

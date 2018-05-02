@@ -1,28 +1,29 @@
 ---
-title: "Introduction au langage C# et au .NET Framework"
-description: "Apprenez les concepts de base de C# et .NET. Découvrez une vue d’ensemble du langage C# et de l’écosystème .NET."
+title: Introduction au langage C# et au .NET Framework
+description: Apprenez les concepts de base de C# et .NET. Découvrez une vue d’ensemble du langage C# et de l’écosystème .NET.
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: get-started-article
 helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: b2ffb641f436a41c97a94a6ec117f6087851d482
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.openlocfilehash: 9713b61e9af25e6acba2d6b11b46f2e99f1f1800
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>Introduction au langage C# et au .NET Framework
 C# est un langage élégant et de type sécurisé orienté objet qui permet aux développeurs de créer toute une gamme d'applications sûres et solides exécutées sur [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Vous pouvez utiliser C# pour créer des applications clientes Windows, services Web XML, composants distribués, applications client-serveur, applications de base de données et bien plus encore. Visual C# fournit un éditeur de code avancé, des concepteurs d’interface utilisateur pratiques, un débogueur intégré et de nombreux autres outils pour faciliter le développement d’applications basées sur le langage C# et le [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
   
 > [!NOTE]
-> La documentation de [!INCLUDE[csprcs](~/includes/csprcs-md.md)] suppose que vous avez une compréhension des concepts de base de la programmation. Si vous êtes un débutant complet, vous souhaiterez peut-être consulter [!INCLUDE[csprcsxpr](~/includes/csprcsxpr-md.md)], qui est disponible sur le Web. Vous pouvez également tirer parti de la documentation et des ressources Web sur C# pour acquérir des compétences de programmation pratiques.  
+> La documentation de Visual C# suppose que vous avez une compréhension des concepts de base de la programmation. Si vous êtes un débutant complet, vous souhaiterez peut-être consulter Visual C# Express, qui est disponible sur le web. Vous pouvez également tirer parti de la documentation et des ressources Web sur C# pour acquérir des compétences de programmation pratiques.  
   
 ## <a name="c-language"></a>Langage C#  
  La syntaxe C# est très expressive, mais elle est également simple et facile à apprendre. La syntaxe avec accolades de C# sera facile à reconnaître pour toute personne familiarisée avec C, C++ ou Java. Les développeurs qui connaissent un de ces langages peuvent généralement commencer à travailler efficacement en C# en très peu de temps. La syntaxe C# simplifie beaucoup des complexités de C++ et fournit des fonctionnalités puissantes, comme les types valeur Nullable, les énumérations, les délégués, les expressions lambda et l’accès direct à la mémoire, qui ne figurent pas dans Java. C# prend en charge des méthodes et types génériques qui fournissent de meilleures performances et plus de sécurité pour les types, et des itérateurs, qui permettent aux implémenteurs de classes de collection de définir des comportements d’itération personnalisés qui peuvent être utilisés facilement par le code client. Les expressions [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] font des requêtes fortement typées une construction de première classe du langage.  

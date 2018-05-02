@@ -18,11 +18,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2d0c886a443263897330dbd46a7f6f194bb20857
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: e6471de1a6231f114f6967bb6f777a8dc4d39b82
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-creating-a-dataflow-pipeline"></a>Procédure pas à pas : création d'un pipeline de flux de données
 Bien que vous puissiez utiliser les méthodes <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A?displayProperty=nameWithType> et <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A?displayProperty=nameWithType> pour recevoir des messages des blocs sources, vous pouvez également connecter des blocs de messages pour former un *pipeline de flux de données*. Un pipeline de flux de données est une série de composants, ou de *blocs de flux de données*, qui effectuent chacun une tâche spécifique qui contribue à un plus grand objectif. Chaque bloc de flux de données d'un pipeline de flux de données effectue un travail lorsqu'il reçoit un message d'un autre bloc de flux de données. Ce processus s'apparente à une chaîne de montage en construction automobile. Comme chaque véhicule passe via la ligne de montage, un poste assemble le châssis, le suivant installe le moteur, et ainsi de suite. Étant donné qu'une ligne d'assemblage permet à plusieurs véhicules d'être assemblés en même temps, cela fournit une productivité supérieure à l'assemblage un par un des véhicules.
@@ -45,7 +45,7 @@ Bien que vous puissiez utiliser les méthodes <xref:System.Threading.Tasks.Dataf
  Lisez la rubrique [Flux de données](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) avant de démarrer cette procédure pas à pas.  
   
 ## <a name="creating-a-console-application"></a>Création d'une application console  
- Dans [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], créez un projet d'application console [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] ou [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]. Installez le package NuGet System.Threading.Tasks.Dataflow.
+ Dans [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], créez un projet Application console en Visual C# ou Visual Basic. Installez le package NuGet System.Threading.Tasks.Dataflow.
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
 

@@ -1,6 +1,6 @@
 ---
-title: "Tuples - Guide C#"
-description: "En savoir plus sur les types tuple nommés et sans nom en C#"
+title: Tuples - Guide C#
+description: En savoir plus sur les types tuple nommés et sans nom en C#
 keywords: .NET, .NET Core, C#
 author: BillWagner
 ms-author: wiwagn
@@ -10,17 +10,17 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 58f76332a8f3717fe10788382552598d6693e7e3
-ms.sourcegitcommit: 882e02b086d7cb9c75f748494cf7a8d3377c5874
+ms.openlocfilehash: 1d1fc450503dc905e6b260a2b984e3ce2315fd45
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="c-tuple-types"></a>Types tuple C# #
 
-Les tuples C# sont des types que vous définissez à l’aide d’une syntaxe simplifiée. Les avantages incluent une syntaxe simplifiée, des règles de conversion basées sur le nombre (appelé « cardinalité ») et les types d’éléments, ainsi que des règles cohérentes pour les copies et les affectations. En échange, les tuples ne prennent pas en charge certains idiomes orientés objet associés à l’héritage. Vous pouvez bénéficier d’une présentation des tuples dans la section correspondante de la rubrique [Nouveautés de C# 7](whats-new/csharp-7.md#tuples).
+Les tuples C# sont des types que vous définissez à l’aide d’une syntaxe simplifiée. Les avantages incluent une syntaxe simplifiée, des règles de conversion basées sur le nombre (appelé « cardinalité ») et les types d’éléments, ainsi que des règles cohérentes pour les copies et les affectations. En échange, les tuples ne prennent pas en charge certains idiomes orientés objet associés à l’héritage. Vous pouvez bénéficier d’une présentation des tuples dans la section correspondante de la rubrique [Nouveautés de C# 7.0](whats-new/csharp-7.md#tuples).
 
-Dans cette rubrique, vous allez apprendre les règles de langage régissant les tuples dans C# 7, voir différentes façons de les utiliser et bénéficier de conseils de base sur l’utilisation des tuples.
+Dans cette rubrique, vous allez apprendre les règles de langage régissant les tuples dans C# 7.0 et ultérieur, découvrir différentes façons de les utiliser et bénéficier de conseils de base sur l’utilisation des tuples.
 
 > [!NOTE]
 > Les nouvelles fonctionnalités des tuples exigent les types <xref:System.ValueTuple>.
@@ -77,7 +77,7 @@ Si un nom explicite est fourni, il est prioritaire sur n’importe quel nom proj
 
 [!code-csharp[ExplicitNamedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectionExample_Explicit "Explicitly named tuple")]
 
-Pour tous les champs où un nom explicite n’est pas spécifié, un nom implicite applicable est projeté. Notez qu’il n’existe aucune obligation de fournir des noms sémantiques, explicitement ou implicitement. L’initialiseur suivante ont des noms de champ `Item1`, dont la valeur est `42` et `StringContent`, dont la valeur est « La réponse à tous les éléments » :
+Pour tous les champs où un nom explicite n’est pas spécifié, un nom implicite applicable est projeté. Notez qu’il n’existe aucune obligation de fournir des noms sémantiques, explicitement ou implicitement. L’initialiseur suivant a des noms de champ `Item1` dont la valeur est `42`, et `StringContent` dont la valeur est « The answer to everything » :
 
 [!code-csharp[MixedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#MixedTuple "mixed tuple")]
 
@@ -143,7 +143,7 @@ Mettons à jour cette méthode afin de stocker dans un tuple les trois valeurs c
 
 [!code-csharp[TupleVersion](../../samples/snippets/csharp/tuples/tuples/statistics.cs#07_TupleVersion "Refactor to use tuples")]
 
-Prise en charge de la refactorisation de Visual Studio facilite l’extraire les fonctionnalités pour les statistiques de base dans une méthode privée. Cela vous donne une méthode `private static` qui retourne le type tuple avec les trois valeurs de `Sum`, `SumOfSquares` et `Count` :
+La prise en charge de la refactorisation par Visual Studio facilite l’extraction des fonctionnalités pour les statistiques principales dans une méthode privée. Cela vous donne une méthode `private static` qui retourne le type tuple avec les trois valeurs de `Sum`, `SumOfSquares` et `Count` :
 
 [!code-csharp[TupleMethodVersion](../../samples/snippets/csharp/tuples/tuples/statistics.cs#08_TupleMethodVersion "After extracting utility method")]
  
@@ -198,7 +198,7 @@ Le tuple nommé peut faire partie de la signature. Il permet au compilateur et a
 
 ## <a name="deconstruction"></a>Déconstruction
 
-Vous pouvez désassembler tous les éléments d’un tuple en *déconstruisant* le tuple retourné par une méthode. Il existe trois approches différentes de Déconstruction de tuples.  Tout d’abord, vous pouvez déclarer explicitement le type de chacun des champs à l’intérieur des parenthèses afin de créer des variables discrètes pour tous les éléments du tuple :
+Vous pouvez désassembler tous les éléments d’un tuple en *déconstruisant* le tuple retourné par une méthode. Il existe trois approches différentes de la déconstruction des tuples.  Tout d’abord, vous pouvez déclarer explicitement le type de chacun des champs à l’intérieur des parenthèses afin de créer des variables discrètes pour tous les éléments du tuple :
 
 [!code-csharp[Deconstruct](../../samples/snippets/csharp/tuples/tuples/statistics.cs#10_Deconstruct "Deconstruct")]
 
@@ -214,7 +214,7 @@ Il est également possible d’utiliser le mot clé `var` avec une ou toutes les
 
 Notez que vous ne pouvez pas utiliser un type spécifique en dehors des parenthèses, même si tous les champs du tuple ont le même type.
 
-Vous pouvez décomposer tuple avec des déclarations existantes ainsi :
+Vous pouvez également déconstruire des tuple avec des déclarations existantes :
 
 ```csharp
 public class Point
@@ -227,7 +227,7 @@ public class Point
 ```
 
 > [!WARNING]
->  Vous ne pouvez pas mélanger des déclarations existantes avec les déclarations dans les parenthèses. Par exemple, ce qui suit n’est pas autorisée : `(var x, y) = MyMethod();`. Cela génère l’erreur CS8184 car *x* est déclarée à l’intérieur des parenthèses et *y* est déclaré précédemment ailleurs.
+>  Vous ne pouvez pas mélanger des déclarations existantes avec des déclarations à l’intérieur des parenthèses. Par exemple, ce qui suit n’est pas autorisé : `(var x, y) = MyMethod();`. L’erreur CS8184 est générée, car *x* est déclaré à l’intérieur des parenthèses et *y* a été précédemment déclaré ailleurs.
 
 ### <a name="deconstructing-user-defined-types"></a>Déconstruction des types définis par l’utilisateur
 

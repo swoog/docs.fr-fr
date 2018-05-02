@@ -1,12 +1,13 @@
 ---
-title: "SqlMetal.exe (outil de génération de code)"
-ms.custom: 
+title: SqlMetal.exe (outil de génération de code)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQLMetal [LINQ to SQL]
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-caps.latest.revision: "43"
+caps.latest.revision: 43
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c14c01c670eccbc7f13210d3c0bb7df7bec07679
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5c21c08cf76143959d11498594fbc94fb1dac55c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (outil de génération de code)
 L'outil en ligne de commande SqlMetal génère le code et le mappage du composant [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] du [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. En appliquant les options qui apparaissent ultérieurement dans cette rubrique, vous pouvez ordonner à SqlMetal d'exécuter plusieurs actions différentes, dont les suivantes :  
@@ -88,7 +90,7 @@ sqlmetal [options] [<input file>]
 |**/context:** *\<type>*|Spécifie le nom de la classe du contexte de données. Valeur par défaut : Dérivé du nom de la base de données.|  
 |**/entitybase:** *\<type>*|Spécifie la classe de base des classes d'entité du code généré. Valeur par défaut : Les entités n'ont pas de classe de base.|  
 |**/pluralize**|Pluralise ou singularise automatiquement des noms de membre et de classe.<br /><br /> Cette option est disponible uniquement dans la version Anglais américain.|  
-|**/serialization:** *\<option>*|Génère des classes sérialisables.<br /><br /> *\<option>*valide : None, Unidirectional. Valeur par défaut : Aucun.<br /><br /> Pour plus d’informations, consultez [Sérialisation](../../../docs/framework/data/adonet/sql/linq/serialization.md).|  
+|**/serialization:** *\<option>*|Génère des classes sérialisables.<br /><br /> *\<option>* valide : None, Unidirectional. Valeur par défaut : Aucun.<br /><br /> Pour plus d’informations, consultez [Sérialisation](../../../docs/framework/data/adonet/sql/linq/serialization.md).|  
   
  **Fichier d'entrée**  
   
@@ -103,7 +105,7 @@ sqlmetal [options] [<input file>]
   
 -   Génération d'un fichier de sortie de code.  
   
-     En utilisant les options de ligne de commande appropriées, vous pouvez produire [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] ou du code source C#, ou encore un fichier de mappage XML.  
+     En utilisant les options de ligne de commande appropriées, vous pouvez produire du code source en Visual Basic ou C#, ou encore un fichier de mappage en XML.  
   
  Pour extraire les métadonnées d'un fichier .mdf, vous devez spécifier le nom du fichier .mdf après toutes les autres options.  
   

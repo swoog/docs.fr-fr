@@ -1,11 +1,12 @@
 ---
-title: "Manipulation de fichiers et de répertoires en Visual Basic"
-ms.custom: 
+title: Manipulation de fichiers et de répertoires en Visual Basic
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - files [Visual Basic], reading text
@@ -21,19 +22,19 @@ helpviewer_keywords:
 - writing to files [Visual Basic], walkthroughs
 - I/O [Visual Basic], reading text from files
 ms.assetid: cae77565-9f78-4e46-8e42-eb2f9f8e1ffd
-caps.latest.revision: "49"
+caps.latest.revision: 49
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: bd1e61503394741e7943d30d383f2e7c5ea35f68
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bff2e66b1a196117117370f7620f3f55576ad19b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>Procédure pas à pas : manipulation de fichiers et de répertoires en Visual Basic
-Cette procédure pas à pas présente les notions de base d’E/S de fichier dans [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Elle décrit comment créer une petite application qui répertorie et examine des fichiers texte dans un répertoire. Pour chaque fichier texte sélectionné, l’application fournit des attributs de fichier et la première ligne de contenu. Elle comprend une option pour écrire des informations dans un fichier journal.  
+Cette procédure pas à pas présente les notions de base d’E/S de fichier dans Visual Basic. Elle décrit comment créer une petite application qui répertorie et examine des fichiers texte dans un répertoire. Pour chaque fichier texte sélectionné, l’application fournit des attributs de fichier et la première ligne de contenu. Elle comprend une option pour écrire des informations dans un fichier journal.  
   
- Cette procédure pas à pas utilise des membres de `My.Computer.FileSystem Object`, qui sont disponibles dans [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Pour plus d'informations, voir <xref:Microsoft.VisualBasic.FileIO.FileSystem>. À la fin de la procédure pas à pas, un exemple équivalent est fourni, qui utilise des classes de l’espace de noms <xref:System.IO>.  
+ Cette procédure pas à pas utilise des membres de `My.Computer.FileSystem Object`, qui sont disponibles dans Visual Basic. Pour plus d'informations, voir <xref:Microsoft.VisualBasic.FileIO.FileSystem>. À la fin de la procédure pas à pas, un exemple équivalent est fourni, qui utilise des classes de l’espace de noms <xref:System.IO>.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -51,13 +52,13 @@ Cette procédure pas à pas présente les notions de base d’E/S de fichier dan
   
 4.  Ajoutez au formulaire les contrôles répertoriés dans le tableau ci-après et définissez les valeurs de propriété correspondantes.  
   
-    |Contrôle|Propriété|Valeur|  
+    |Contrôle|Propriété|Value|  
     |-------------|--------------|-----------|  
-    |**ListBox**|**Nom**|`filesListBox`|  
-    |**Button**|**Nom**<br /><br /> **Texte**|`browseButton`<br /><br /> **Parcourir**|  
-    |**Button**|**Nom**<br /><br /> **Texte**|`examineButton`<br /><br /> **Examiner**|  
-    |**CheckBox**|**Nom**<br /><br /> **Texte**|`saveCheckBox`<br /><br /> **Enregistrer les résultats**|  
-    |**FolderBrowserDialog**|**Nom**|`FolderBrowserDialog1`|  
+    |**ListBox**|**Name**|`filesListBox`|  
+    |**Button**|**Name**<br /><br /> **Text**|`browseButton`<br /><br /> **Parcourir**|  
+    |**Button**|**Name**<br /><br /> **Text**|`examineButton`<br /><br /> **Examiner**|  
+    |**CheckBox**|**Name**<br /><br /> **Text**|`saveCheckBox`<br /><br /> **Enregistrer les résultats**|  
+    |**FolderBrowserDialog**|**Name**|`FolderBrowserDialog1`|  
   
 ### <a name="to-select-a-folder-and-list-files-in-a-folder"></a>Pour sélectionner un dossier et répertorier les fichiers dans un dossier  
   

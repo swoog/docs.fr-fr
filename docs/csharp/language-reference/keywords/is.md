@@ -15,15 +15,15 @@ ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
 caps.latest.revision: 20
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 9f0242439caa21268a6c314409f41587890c4126
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 44c15eb9d65adf10904f8777847b0653ff1dbc99
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="is-c-reference"></a>is (référence C#) #
 
-Vérifie si un objet est compatible avec un type donné, ou (avec C# 7) teste une expression par rapport à un modèle.
+Vérifie si un objet est compatible avec un type donné, ou (avec C# 7.0) teste une expression par rapport à un modèle.
 
 ## <a name="testing-for-type-compatibility"></a>Test de compatibilité de type ##
 
@@ -60,11 +60,11 @@ Le mot clé `is` génère un avertissement au moment de la compilation si l’ex
 `expr` peut correspondre à toute expression qui retourne une valeur, à l’exception des méthodes anonymes et des expressions lambda. L’exemple suivant utilise `is` pour évaluer la valeur de retour d’un appel de méthode.   
 [!code-csharp[is#4](../../../../samples/snippets/csharp/language-reference/keywords/is/is4.cs#4)]
 
-Avec C# 7, vous pouvez utiliser les critères spéciaux avec le [modèle de type](#type) pour écrire du code plus concis qui utilise l’instruction `is`.
+Avec C# 7.0, vous pouvez utiliser les critères spéciaux avec le [modèle de type](#type) pour écrire du code plus concis qui utilise l’instruction `is`.
 
 ## <a name="pattern-matching-with-is"></a>Utilisation des critères spéciaux avec `is` ##
 
-Avec C# 7, les instructions `is` et [switch](../../../csharp/language-reference/keywords/switch.md) prennent en charge les critères spéciaux. Le mot clé `is` prend en charge les modèles suivants :
+À compter de C# 7.0, les instructions `is` et [switch](../../../csharp/language-reference/keywords/switch.md) prennent en charge les critères spéciaux. Le mot clé `is` prend en charge les modèles suivants :
 
 - [Modèle de type](#type) : permet de tester si une expression peut être convertie en un type spécifié et, si tel est le cas, caste l’expression en une variable de ce type.
 
@@ -112,7 +112,7 @@ Le code équivalent sans critères spéciaux nécessite une attribution distinct
 
 ### <a name="a-nameconstant--constant-pattern"></a><a name="constant" /> Modèle de constante ###
 
-Lorsque vous utilisez des critères spéciaux avec le modèle de constante, `is` teste si une expression est égale à une constante spécifiée. Avec C# 6 et les versions antérieures, le modèle de constante est pris en charge par l’instruction [switch](switch.md). À compter de C# 7, ce modèle est également pris en charge par l’instruction `is`. Sa syntaxe est la suivante :
+Lorsque vous utilisez des critères spéciaux avec le modèle de constante, `is` teste si une expression est égale à une constante spécifiée. Avec C# 6 et les versions antérieures, le modèle de constante est pris en charge par l’instruction [switch](switch.md). À compter de C# 7.0, ce modèle est également pris en charge par l’instruction `is`. Sa syntaxe est la suivante :
 
 ```csharp
    expr is constant

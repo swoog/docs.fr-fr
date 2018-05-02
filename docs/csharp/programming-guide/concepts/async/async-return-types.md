@@ -1,21 +1,22 @@
 ---
 title: Types de retour async (C#)
-ms.custom: 
+ms.custom: ''
 ms.date: 05/29/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 7aee1ebdf24a2ac564268e1f36d3aac707dea463
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: 4927d6324b6bda5a897ce81928fc13cae303a99a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="async-return-types-c"></a>Types de retour async (C#)
 Les méthodes async peuvent avoir les types de retour suivants :
@@ -26,7 +27,7 @@ Les méthodes async peuvent avoir les types de retour suivants :
 
 - `void`, pour un gestionnaire d’événements. 
 
-- À compter de C# 7, tout type ayant une méthode `GetAwaiter` accessible. L’objet retourné par la méthode `GetAwaiter` doit implémenter l’interface <xref:System.Runtime.CompilerServices.ICriticalNotifyCompletion?displayProperty=nameWithType>.
+- À compter de C# 7.0, tout type ayant une méthode `GetAwaiter` accessible. L’objet retourné par la méthode `GetAwaiter` doit implémenter l’interface <xref:System.Runtime.CompilerServices.ICriticalNotifyCompletion?displayProperty=nameWithType>.
   
 Pour plus d’informations sur les méthodes async, consultez [Programmation asynchrone avec async et await (C#)](../../../../csharp/programming-guide/concepts/async/index.md).  
   
@@ -76,7 +77,7 @@ L’exemple suivant définit un gestionnaire d’événements asynchrones.
  
 ## <a name="generalized-async-return-types-and-valuetaskt"></a>Types de retour async généralisés et ValueTask<T>
 
-À compter de C# 7, une méthode async peut retourner tout type ayant une méthode `GetAwaiter` accessible.
+À compter de C# 7.0, une méthode async peut retourner tout type ayant une méthode `GetAwaiter` accessible.
  
 Étant donné que <xref:System.Threading.Tasks.Task> et <xref:System.Threading.Tasks.Task%601> sont des types référence, l’allocation de mémoire dans des chemins critiques pour les performances, en particulier quand les allocations se produisent dans des boucles serrées, peuvent nuire aux performances. La prise en charge de types de retour généralisés signifie que vous pouvez retourner un type valeur léger au lieu d’un type référence pour éviter des allocations de mémoire supplémentaires. 
 

@@ -1,5 +1,5 @@
 ---
-title: "Méthodes (Guide de programmation C#)"
+title: Méthodes (Guide de programmation C#)
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-caps.latest.revision: 
+caps.latest.revision: 41
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 5390ee08ddd0f4725bb42bbdf7240bb99bd25301
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: dad1be88e39b708d34f454875e2cfb3ec100c430
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="methods-c-programming-guide"></a>Méthodes (Guide de programmation C#)
 Une méthode est un bloc de code qui contient une série d'instructions. Un programme provoque l'exécution des instructions en appelant la méthode et en spécifiant les éventuels arguments de méthode requis. En C#, chaque instruction exécutée est effectuée dans le contexte d'une méthode. La méthode Main est le point d'entrée de chaque application C# et elle est appelée par le Common Language Runtime (CLR) au démarrage du programme.  
@@ -64,7 +64,7 @@ Une méthode est un bloc de code qui contient une série d'instructions. Un prog
 ## <a name="return-values"></a>Valeurs de retour  
 Les méthodes peuvent retourner une valeur à l'appelant. Si le type de retour, le type répertorié avant le nom de la méthode, n'est pas `void`, la méthode peut retourner la valeur à l'aide du mot clé `return` . Une instruction avec le mot clé `return` suivi d'une valeur qui correspond au type de retour retourne cette valeur à l'appelant de la méthode. 
 
-La valeur peut être retournée à l’appelant par valeur ou, à partir de C# 7, [par référence](ref-returns.md). Les valeurs sont retournées à l’appelant par référence si le mot clé `ref` est utilisé dans la signature de méthode et s’il suit chaque mot clé `return`. Par exemple, la signature de méthode suivante et l’instruction de retour indiquent que la méthode retourne un nom de variable `estDistance` par référence à l’appelant.
+La valeur peut être retournée à l’appelant par valeur ou, à compter de C# 7.0, [par référence](ref-returns.md). Les valeurs sont retournées à l’appelant par référence si le mot clé `ref` est utilisé dans la signature de méthode et s’il suit chaque mot clé `return`. Par exemple, la signature de méthode suivante et l’instruction de retour indiquent que la méthode retourne un nom de variable `estDistance` par référence à l’appelant.
 
 ```csharp
 public ref double GetEstimatedDistance()

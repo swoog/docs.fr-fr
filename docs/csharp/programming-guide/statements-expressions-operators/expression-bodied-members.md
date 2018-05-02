@@ -2,18 +2,19 @@
 title: Membres expression-bodied (Guide de programmation C#)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - expression-bodied members[C#]
 - C# language, expresion-bodied members
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ead1e474fe87bd9fbd0f972bc0f2fc4fefc12ecf
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: 5690a2ddb9127bb0c9b06d3607e3d105fca9a2e8
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="expression-bodied-members-c-programming-guide"></a>Membres expression-bodied (Guide de programmation C#)
 Les définitions de corps d’expression vous permettent de fournir l’implémentation d’un membre sous une forme lisible et très concise. Vous pouvez utiliser une définition de corps d’expression chaque fois que la logique d’un membre pris en charge, comme une méthode ou une propriété, se compose d’une seule expression. La syntaxe générale d’une définition de corps d’expression est la suivante :
@@ -24,16 +25,16 @@ member => expression;
 
 où *expression* est une expression valide. 
 
-La prise en charge des définitions de corps d’expression a été introduite pour les méthodes et les accesseurs get de propriétés dans C# 6, et a été étendue dans C# 7. Vous pouvez utiliser des définitions de corps d’expression avec les membres de type listés dans le tableau suivant : 
+La prise en charge des définitions de corps d’expression a été introduite pour les méthodes et les accesseurs get de propriétés dans C# 6, et a été étendue dans C# 7.0. Vous pouvez utiliser des définitions de corps d’expression avec les membres de type listés dans le tableau suivant : 
 
 |Membre  |Prise en charge à compter de |
 |---------|---------|
 |[Méthode](#methods)  |C# 6 |
-|[Constructeur](#constructors)   |C# 7 |
-|[Finaliseur](#finalizers)     |C# 7 |
+|[Constructeur](#constructors)   |C# 7.0 |
+|[Finaliseur](#finalizers)     |C# 7.0 |
 |[Accesseur get de propriété](#property-get-statements)  |C# 6 |
-|[Accesseur set de propriété](#property-set-statements)  |C# 7 |
-|[Indexeur](#indexers)       |C# 7 |
+|[Accesseur set de propriété](#property-set-statements)  |C# 7.0 |
+|[Indexeur](#indexers)       |C# 7.0 |
 
 ## <a name="methods"></a>Méthodes
 

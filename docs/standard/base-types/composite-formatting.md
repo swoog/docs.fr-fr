@@ -26,11 +26,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 156ef0f063219f5e78084dd664b64699d33e6593
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 473669b4aaa0782fec32fb0e2d89875c4ab7a838
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="composite-formatting"></a>Mise en forme composite
 La fonctionnalité de mise en forme composite du .NET utilise une liste d’objets et une chaîne de format composite comme entrée. Une chaîne de format composite se compose de texte fixe mélangé à des espaces réservés indexés, appelés éléments de format, qui correspondent aux objets de la liste. L'opération de mise en forme produit une chaîne résultante qui se compose du texte fixe d'origine mélangé à la représentation sous forme de chaîne des objets de la liste.  
@@ -74,7 +74,7 @@ La fonctionnalité de mise en forme composite du .NET utilise une liste d’obje
  [!code-csharp[Formatting.Composite#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#7)]
  [!code-vb[Formatting.Composite#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/index1.vb#7)]  
   
- Plusieurs éléments de format peuvent faire référence au même élément de la liste d'objets en indiquant le même spécificateur de paramètre. Par exemple, vous pouvez mettre en forme la même valeur numérique au format hexadécimal, scientifique et numérique en spécifiant une chaîne de format composite comme "0x{0:X} {0:E} {0:N}", comme dans l'exemple suivant.  
+ Plusieurs éléments de format peuvent faire référence au même élément de la liste d'objets en indiquant le même spécificateur de paramètre. Par exemple, vous pouvez mettre en forme la même valeur numérique au format hexadécimal, scientifique et numérique en spécifiant une chaîne de format composite comme « 0x{0:X} {0:E} {0:N} », comme dans l'exemple suivant.  
   
  [!code-csharp[Formatting.Composite#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#10)]
  [!code-vb[Formatting.Composite#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/index1.vb#10)]  
@@ -137,7 +137,7 @@ La fonctionnalité de mise en forme composite du .NET utilise une liste d’obje
   
     -   Pour une valeur de date et d'heure, si une méthode de mise en forme composite avec l'argument non null <xref:System.IFormatProvider> est appelée, le runtime demande un objet <xref:System.Globalization.DateTimeFormatInfo> de sa méthode <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>. S'il ne peut pas en fournir un, si la valeur de l'argument est `null`, ou si la méthode de mise en forme composite n'a pas de paramètre <xref:System.IFormatProvider>, l'objet <xref:System.Globalization.DateTimeFormatInfo> de la culture actuelle du thread est utilisé.  
   
-    -   Pour les objets d'autres types, si la mise en forme composite est appelée avec un argument <xref:System.IFormatProvider>, sa valeur (y compris un `null`, si aucun objet <xref:System.IFormatProvider> n'est fourni) est transmise directement à l'implémentation de <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType>.  Sinon, un objet <xref:System.Globalization.CultureInfo> qui représente la culture actuelle du thread est passé à l'implémentation de <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType>.  
+    -   Pour les objets d'autres types, si une méthode de mise en forme composite est appelée avec un argument <xref:System.IFormatProvider>, sa valeur est transmise directement à l'implémentation de <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType>. Dans le cas contraire, `null` est transmis à l’implémentation de <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType>.  
   
 4.  La méthode `ToString` sans paramètre du type, qui remplace <xref:System.Object.ToString?displayProperty=nameWithType> ou hérite du comportement de la classe de base, est appelée. Dans ce cas, la chaîne de format spécifiée par le composant *formatString* dans l’élément de mise en forme, si elle est présente, est ignorée.  
   
