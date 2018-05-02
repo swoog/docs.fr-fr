@@ -1,6 +1,6 @@
 ---
 title: Types pointeur (Guide de programmation C#)
-ms.date: 07/20/2015
+ms.date: 04/20/2018
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -8,138 +8,98 @@ ms.topic: article
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.assetid: 3319faf9-336d-4148-9af2-1da2579cdd1e
-caps.latest.revision: ''
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: fe7b926bdf9f662d25f2fe960b51fc8254b7aa3a
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: 1dce99af2f0f5fdab28058c7f56e79625af84500
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="pointer-types-c-programming-guide"></a><span data-ttu-id="205b1-102">Types pointeur (Guide de programmation C#)</span><span class="sxs-lookup"><span data-stu-id="205b1-102">Pointer types (C# Programming Guide)</span></span>
-<span data-ttu-id="205b1-103">Dans un contexte unsafe, un type peut être un type pointeur, un type valeur ou un type référence.</span><span class="sxs-lookup"><span data-stu-id="205b1-103">In an unsafe context, a type may be a pointer type, a value type, or a reference type.</span></span> <span data-ttu-id="205b1-104">La déclaration d'un type pointeur peut prendre l'une des formes suivantes :</span><span class="sxs-lookup"><span data-stu-id="205b1-104">A pointer type declaration takes one of the following forms:</span></span>  
-  
-```  
-type* identifier;  
-void* identifier; //allowed but not recommended  
-```  
-  
- <span data-ttu-id="205b1-105">Chacun des types suivants peut être un type pointeur :</span><span class="sxs-lookup"><span data-stu-id="205b1-105">Any of the following types may be a pointer type:</span></span>  
-  
--   <span data-ttu-id="205b1-106">[sbyte](../../../csharp/language-reference/keywords/sbyte.md), [byte](../../../csharp/language-reference/keywords/byte.md), [short](../../../csharp/language-reference/keywords/short.md), [ushort](../../../csharp/language-reference/keywords/ushort.md), [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [long](../../../csharp/language-reference/keywords/long.md), [ulong](../../../csharp/language-reference/keywords/ulong.md), [char](../../../csharp/language-reference/keywords/char.md), [float](../../../csharp/language-reference/keywords/float.md), [double](../../../csharp/language-reference/keywords/double.md), [decimal](../../../csharp/language-reference/keywords/decimal.md) ou [bool](../../../csharp/language-reference/keywords/bool.md).</span><span class="sxs-lookup"><span data-stu-id="205b1-106">[sbyte](../../../csharp/language-reference/keywords/sbyte.md), [byte](../../../csharp/language-reference/keywords/byte.md), [short](../../../csharp/language-reference/keywords/short.md), [ushort](../../../csharp/language-reference/keywords/ushort.md), [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [long](../../../csharp/language-reference/keywords/long.md), [ulong](../../../csharp/language-reference/keywords/ulong.md), [char](../../../csharp/language-reference/keywords/char.md), [float](../../../csharp/language-reference/keywords/float.md), [double](../../../csharp/language-reference/keywords/double.md), [decimal](../../../csharp/language-reference/keywords/decimal.md), or [bool](../../../csharp/language-reference/keywords/bool.md).</span></span>  
-  
--   <span data-ttu-id="205b1-107">Tout type [enum](../../../csharp/language-reference/keywords/enum.md).</span><span class="sxs-lookup"><span data-stu-id="205b1-107">Any [enum](../../../csharp/language-reference/keywords/enum.md) type.</span></span>  
-  
--   <span data-ttu-id="205b1-108">Tout type pointeur.</span><span class="sxs-lookup"><span data-stu-id="205b1-108">Any pointer type.</span></span>  
-  
--   <span data-ttu-id="205b1-109">Tout type struct défini par l'utilisateur qui contient des champs de types unmanaged uniquement.</span><span class="sxs-lookup"><span data-stu-id="205b1-109">Any user-defined struct type that contains fields of unmanaged types only.</span></span>  
-  
- <span data-ttu-id="205b1-110">Les types pointeur n’héritent pas de [object](../../../csharp/language-reference/keywords/object.md), et aucune conversion n’est possible entre les types pointeur et `object`.</span><span class="sxs-lookup"><span data-stu-id="205b1-110">Pointer types do not inherit from [object](../../../csharp/language-reference/keywords/object.md) and no conversions exist between pointer types and `object`.</span></span> <span data-ttu-id="205b1-111">Par ailleurs, le boxing et l'unboxing ne prennent pas en charge les pointeurs.</span><span class="sxs-lookup"><span data-stu-id="205b1-111">Also, boxing and unboxing do not support pointers.</span></span> <span data-ttu-id="205b1-112">Cependant, vous pouvez effectuer des conversions entre différents types pointeur ainsi qu'entre des types pointeur et des types intégraux.</span><span class="sxs-lookup"><span data-stu-id="205b1-112">However, you can convert between different pointer types and between pointer types and integral types.</span></span>  
-  
- <span data-ttu-id="205b1-113">Lorsque vous déclarez plusieurs pointeurs dans la même déclaration, l'astérisque (\*) est écrit conjointement au type sous-jacent uniquement, il n'est pas utilisé en tant que préfixe de chaque nom de pointeur.</span><span class="sxs-lookup"><span data-stu-id="205b1-113">When you declare multiple pointers in the same declaration, the asterisk (\*) is written together with the underlying type only; it is not used as a prefix to each pointer name.</span></span> <span data-ttu-id="205b1-114">Exemple :</span><span class="sxs-lookup"><span data-stu-id="205b1-114">For example:</span></span>  
-  
-```  
-int* p1, p2, p3;   // Ok  
-int *p1, *p2, *p3;   // Invalid in C#  
-```  
-  
- <span data-ttu-id="205b1-115">Un pointeur ne peut pas pointer vers une référence ou vers un [struct](../../../csharp/language-reference/keywords/struct.md) qui contient des références, car une référence d’objet peut être collectée par le récupérateur de mémoire, même si un pointeur pointe vers elle.</span><span class="sxs-lookup"><span data-stu-id="205b1-115">A pointer cannot point to a reference or to a [struct](../../../csharp/language-reference/keywords/struct.md) that contains references, because an object reference can be garbage collected even if a pointer is pointing to it.</span></span> <span data-ttu-id="205b1-116">Le récupérateur de mémoire ne se préoccupe pas de savoir si un objet est pointé par des types pointeur.</span><span class="sxs-lookup"><span data-stu-id="205b1-116">The garbage collector does not keep track of whether an object is being pointed to by any pointer types.</span></span>  
-  
- <span data-ttu-id="205b1-117">La valeur de la variable pointeur de type `myType*` est l'adresse d'une variable de type `myType`.</span><span class="sxs-lookup"><span data-stu-id="205b1-117">The value of the pointer variable of type `myType*` is the address of a variable of type `myType`.</span></span> <span data-ttu-id="205b1-118">Les éléments suivants sont des exemples de déclarations de type pointeur :</span><span class="sxs-lookup"><span data-stu-id="205b1-118">The following are examples of pointer type declarations:</span></span>  
-  
-|<span data-ttu-id="205b1-119">Exemple</span><span class="sxs-lookup"><span data-stu-id="205b1-119">Example</span></span>|<span data-ttu-id="205b1-120">Description</span><span class="sxs-lookup"><span data-stu-id="205b1-120">Description</span></span>|  
-|-------------|-----------------|  
-|`int* p`|<span data-ttu-id="205b1-121">`p` est un pointeur vers un entier.</span><span class="sxs-lookup"><span data-stu-id="205b1-121">`p` is a pointer to an integer.</span></span>|  
-|`int** p`|<span data-ttu-id="205b1-122">`p` est un pointeur vers un pointeur vers un entier.</span><span class="sxs-lookup"><span data-stu-id="205b1-122">`p` is a pointer to a pointer to an integer.</span></span>|  
-|`int*[] p`|<span data-ttu-id="205b1-123">`p` est un tableau unidimensionnel de pointeurs vers des entiers.</span><span class="sxs-lookup"><span data-stu-id="205b1-123">`p` is a single-dimensional array of pointers to integers.</span></span>|  
-|`char* p`|<span data-ttu-id="205b1-124">`p` est un pointeur vers un caractère.</span><span class="sxs-lookup"><span data-stu-id="205b1-124">`p` is a pointer to a char.</span></span>|  
-|`void* p`|<span data-ttu-id="205b1-125">`p` est un pointeur vers un type inconnu.</span><span class="sxs-lookup"><span data-stu-id="205b1-125">`p` is a pointer to an unknown type.</span></span>|  
-  
- <span data-ttu-id="205b1-126">L'opérateur d'indirection de pointeur \* peut être utilisé pour accéder au contenu à l'emplacement vers lequel pointe la variable pointeur.</span><span class="sxs-lookup"><span data-stu-id="205b1-126">The pointer indirection operator \* can be used to access the contents at the location pointed to by the pointer variable.</span></span> <span data-ttu-id="205b1-127">Observez par exemple la déclaration suivante :</span><span class="sxs-lookup"><span data-stu-id="205b1-127">For example, consider the following declaration:</span></span>  
-  
-```  
-int* myVariable;  
-```  
-  
- <span data-ttu-id="205b1-128">L'expression `*myVariable` désigne la variable `int` trouvée à l'adresse contenue dans `myVariable`.</span><span class="sxs-lookup"><span data-stu-id="205b1-128">The expression `*myVariable` denotes the `int` variable found at the address contained in `myVariable`.</span></span>  
-  
- <span data-ttu-id="205b1-129">Plusieurs exemples de pointeurs sont présentés dans les rubriques [fixed, instruction](../../../csharp/language-reference/keywords/fixed-statement.md) et [Conversions de pointeur](../../../csharp/programming-guide/unsafe-code-pointers/pointer-conversions.md).</span><span class="sxs-lookup"><span data-stu-id="205b1-129">There are several examples of pointers in the topics [fixed Statement](../../../csharp/language-reference/keywords/fixed-statement.md) and [Pointer Conversions](../../../csharp/programming-guide/unsafe-code-pointers/pointer-conversions.md).</span></span>  <span data-ttu-id="205b1-130">L'exemple suivant montre la nécessité d'un pointeur intérieur pour le mot clé `unsafe` et les instructions `fixed`, et comment l'incrémenter.</span><span class="sxs-lookup"><span data-stu-id="205b1-130">The following example shows the need for the `unsafe` keyword and the `fixed` statement, and how to increment an interior pointer.</span></span>  <span data-ttu-id="205b1-131">Vous pouvez coller ce code dans la fonction Main d'une application console pour l'exécuter.</span><span class="sxs-lookup"><span data-stu-id="205b1-131">You can paste this code into the Main function of a console application to run it.</span></span> <span data-ttu-id="205b1-132">(N’oubliez pas d’autoriser le code unsafe dans le **Concepteur de projet**. Pour cela, choisissez **Projet**, **Propriétés** dans la barre de menus, puis sélectionnez **Autoriser le code unsafe** dans l’onglet **Générer**.)</span><span class="sxs-lookup"><span data-stu-id="205b1-132">(Remember to enable unsafe code in the **Project Designer**; choose **Project**, **Properties** on the menu bar, and then select **Allow unsafe code** in the **Build** tab.)</span></span>  
-  
-```  
-// Normal pointer to an object.  
-int[] a = new int[5] {10, 20, 30, 40, 50};  
-// Must be in unsafe code to use interior pointers.  
-unsafe  
-{  
-    // Must pin object on heap so that it doesn't move while using interior pointers.  
-    fixed (int* p = &a[0])  
-    {  
-        // p is pinned as well as object, so create another pointer to show incrementing it.  
-        int* p2 = p;  
-        Console.WriteLine(*p2);  
-        // Incrementing p2 bumps the pointer by four bytes due to its type ...  
-        p2 += 1;  
-        Console.WriteLine(*p2);  
-        p2 += 1;  
-        Console.WriteLine(*p2);  
-        Console.WriteLine("--------");  
-        Console.WriteLine(*p);  
-        // Deferencing p and incrementing changes the value of a[0] ...  
-        *p += 1;  
-        Console.WriteLine(*p);  
-        *p += 1;  
-        Console.WriteLine(*p);  
-    }  
-}  
-  
-Console.WriteLine("--------");  
-Console.WriteLine(a[0]);  
-Console.ReadLine();  
-  
-// Output:  
-//10  
-//20  
-//30  
-//--------  
-//10  
-//11  
-//12  
-//--------  
-//12  
-```  
-  
- <span data-ttu-id="205b1-133">L'opérateur d'indirection ne peut pas être appliqué à un pointeur de type `void*`.</span><span class="sxs-lookup"><span data-stu-id="205b1-133">You cannot apply the indirection operator to a pointer of type `void*`.</span></span> <span data-ttu-id="205b1-134">Toutefois, vous pouvez utiliser un cast pour convertir un pointeur void en n'importe quel autre type pointeur, et inversement.</span><span class="sxs-lookup"><span data-stu-id="205b1-134">However, you can use a cast to convert a void pointer to any other pointer type, and vice versa.</span></span>  
-  
- <span data-ttu-id="205b1-135">Un pointeur peut être `null`.</span><span class="sxs-lookup"><span data-stu-id="205b1-135">A pointer can be `null`.</span></span> <span data-ttu-id="205b1-136">Le fait d'appliquer un opérateur d'indirection à un pointeur Null donne lieu à un comportement défini par l'implémentation.</span><span class="sxs-lookup"><span data-stu-id="205b1-136">Applying the indirection operator to a null pointer causes an implementation-defined behavior.</span></span>  
-  
- <span data-ttu-id="205b1-137">Sachez que le passage de pointeurs entre méthodes peut engendrer un comportement non défini.</span><span class="sxs-lookup"><span data-stu-id="205b1-137">Be aware that passing pointers between methods can cause undefined behavior.</span></span> <span data-ttu-id="205b1-138">Supposons une méthode qui retourne un pointeur à une variable locale par le biais d’un paramètre `in`, `out` ou `ref`, ou comme résultat de fonction.</span><span class="sxs-lookup"><span data-stu-id="205b1-138">Consider a method that returns a pointer to a local variable through an `in`, `out` or `ref` parameter or as the function result.</span></span> <span data-ttu-id="205b1-139">Si le pointeur a été défini dans un bloc fixed, la variable vers laquelle il pointe peut ne plus être fixed.</span><span class="sxs-lookup"><span data-stu-id="205b1-139">If the pointer was set in a fixed block, the variable to which it points may no longer be fixed.</span></span>  
-  
- <span data-ttu-id="205b1-140">Le tableau suivant répertorie les opérateurs et les instructions qui peuvent fonctionner sur des pointeurs dans un contexte unsafe :</span><span class="sxs-lookup"><span data-stu-id="205b1-140">The following table lists the operators and statements that can operate on pointers in an unsafe context:</span></span>  
-  
-|<span data-ttu-id="205b1-141">Opérateur/Instruction</span><span class="sxs-lookup"><span data-stu-id="205b1-141">Operator/Statement</span></span>|<span data-ttu-id="205b1-142">Utilisez</span><span class="sxs-lookup"><span data-stu-id="205b1-142">Use</span></span>|  
-|-------------------------|---------|  
-|*|<span data-ttu-id="205b1-143">Exécute l'indirection de pointeur.</span><span class="sxs-lookup"><span data-stu-id="205b1-143">Performs pointer indirection.</span></span>|  
-|->|<span data-ttu-id="205b1-144">Accède à un membre d'un struct via un pointeur.</span><span class="sxs-lookup"><span data-stu-id="205b1-144">Accesses a member of a struct through a pointer.</span></span>|  
-|<span data-ttu-id="205b1-145">[]</span><span class="sxs-lookup"><span data-stu-id="205b1-145">[]</span></span>|<span data-ttu-id="205b1-146">Indexe un pointeur.</span><span class="sxs-lookup"><span data-stu-id="205b1-146">Indexes a pointer.</span></span>|  
-|`&`|<span data-ttu-id="205b1-147">Obtient l'adresse d'une variable.</span><span class="sxs-lookup"><span data-stu-id="205b1-147">Obtains the address of a variable.</span></span>|  
-|<span data-ttu-id="205b1-148">++ et --</span><span class="sxs-lookup"><span data-stu-id="205b1-148">++ and --</span></span>|<span data-ttu-id="205b1-149">Incrémente et décrémente les pointeurs.</span><span class="sxs-lookup"><span data-stu-id="205b1-149">Increments and decrements pointers.</span></span>|  
-|<span data-ttu-id="205b1-150">+ et -</span><span class="sxs-lookup"><span data-stu-id="205b1-150">+ and -</span></span>|<span data-ttu-id="205b1-151">Exécute des opérations arithmétiques sur les pointeurs.</span><span class="sxs-lookup"><span data-stu-id="205b1-151">Performs pointer arithmetic.</span></span>|  
-|<span data-ttu-id="205b1-152">==, !=, \<, >, \<= et >=</span><span class="sxs-lookup"><span data-stu-id="205b1-152">==, !=, \<, >, \<=, and >=</span></span>|<span data-ttu-id="205b1-153">Compare des pointeurs.</span><span class="sxs-lookup"><span data-stu-id="205b1-153">Compares pointers.</span></span>|  
-|`stackalloc`|<span data-ttu-id="205b1-154">Alloue de la mémoire sur la pile.</span><span class="sxs-lookup"><span data-stu-id="205b1-154">Allocates memory on the stack.</span></span>|  
-|<span data-ttu-id="205b1-155">Instruction `fixed`</span><span class="sxs-lookup"><span data-stu-id="205b1-155">`fixed` statement</span></span>|<span data-ttu-id="205b1-156">Résout temporairement une variable afin de pouvoir rechercher son adresse.</span><span class="sxs-lookup"><span data-stu-id="205b1-156">Temporarily fixes a variable so that its address may be found.</span></span>|  
-  
-## <a name="c-language-specification"></a><span data-ttu-id="205b1-157">Spécification du langage C#</span><span class="sxs-lookup"><span data-stu-id="205b1-157">C# Language Specification</span></span>  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a><span data-ttu-id="205b1-158">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="205b1-158">See Also</span></span>  
- [<span data-ttu-id="205b1-159">Guide de programmation C#</span><span class="sxs-lookup"><span data-stu-id="205b1-159">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="205b1-160">Pointeurs et code unsafe</span><span class="sxs-lookup"><span data-stu-id="205b1-160">Unsafe Code and Pointers</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/index.md)  
- [<span data-ttu-id="205b1-161">Conversions de pointeurs</span><span class="sxs-lookup"><span data-stu-id="205b1-161">Pointer Conversions</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/pointer-conversions.md)  
- [<span data-ttu-id="205b1-162">Expressions de pointeur</span><span class="sxs-lookup"><span data-stu-id="205b1-162">Pointer Expressions</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
- [<span data-ttu-id="205b1-163">Types</span><span class="sxs-lookup"><span data-stu-id="205b1-163">Types</span></span>](../../../csharp/language-reference/keywords/types.md)  
- [<span data-ttu-id="205b1-164">unsafe</span><span class="sxs-lookup"><span data-stu-id="205b1-164">unsafe</span></span>](../../../csharp/language-reference/keywords/unsafe.md)  
- [<span data-ttu-id="205b1-165">fixed, instruction</span><span class="sxs-lookup"><span data-stu-id="205b1-165">fixed Statement</span></span>](../../../csharp/language-reference/keywords/fixed-statement.md)  
- [<span data-ttu-id="205b1-166">stackalloc</span><span class="sxs-lookup"><span data-stu-id="205b1-166">stackalloc</span></span>](../../../csharp/language-reference/keywords/stackalloc.md)  
- [<span data-ttu-id="205b1-167">Conversion boxing et unboxing</span><span class="sxs-lookup"><span data-stu-id="205b1-167">Boxing and Unboxing</span></span>](../../../csharp/programming-guide/types/boxing-and-unboxing.md)
+# <a name="pointer-types-c-programming-guide"></a><span data-ttu-id="4d82d-102">Types pointeur (Guide de programmation C#)</span><span class="sxs-lookup"><span data-stu-id="4d82d-102">Pointer types (C# Programming Guide)</span></span>
+
+<span data-ttu-id="4d82d-103">Dans un contexte unsafe, un type peut être un type pointeur, un type valeur ou un type référence.</span><span class="sxs-lookup"><span data-stu-id="4d82d-103">In an unsafe context, a type may be a pointer type, a value type, or a reference type.</span></span> <span data-ttu-id="4d82d-104">La déclaration d'un type pointeur peut prendre l'une des formes suivantes :</span><span class="sxs-lookup"><span data-stu-id="4d82d-104">A pointer type declaration takes one of the following forms:</span></span>
+
+``` csharp
+type* identifier;
+void* identifier; //allowed but not recommended
+```
+
+<span data-ttu-id="4d82d-105">Le type spécifié avant le caractère `*` dans un type de pointeur est appelé le **type référent**.</span><span class="sxs-lookup"><span data-stu-id="4d82d-105">The type specified before the `*` in a pointer type is called the **referrent type**.</span></span> <span data-ttu-id="4d82d-106">Chacun des types suivants peut être un type référent :</span><span class="sxs-lookup"><span data-stu-id="4d82d-106">Any of the following types may be a referrent type:</span></span>
+
+- <span data-ttu-id="4d82d-107">Tout type intégral : [sbyte](../../language-reference/keywords/sbyte.md), [byte](../../language-reference/keywords/byte.md), [short](../../language-reference/keywords/short.md), [ushort](../../language-reference/keywords/ushort.md), [int](../../language-reference/keywords/int.md), [uint](../../language-reference/keywords/uint.md), [long](../../language-reference/keywords/long.md), [ulong](../../language-reference/keywords/ulong.md).</span><span class="sxs-lookup"><span data-stu-id="4d82d-107">Any integral type: [sbyte](../../language-reference/keywords/sbyte.md), [byte](../../language-reference/keywords/byte.md), [short](../../language-reference/keywords/short.md), [ushort](../../language-reference/keywords/ushort.md), [int](../../language-reference/keywords/int.md), [uint](../../language-reference/keywords/uint.md), [long](../../language-reference/keywords/long.md), [ulong](../../language-reference/keywords/ulong.md).</span></span>
+- <span data-ttu-id="4d82d-108">Tout type à virgule flottante : [float](../../language-reference/keywords/float.md), [double](../../language-reference/keywords/double.md).</span><span class="sxs-lookup"><span data-stu-id="4d82d-108">Any floating point type: [float](../../language-reference/keywords/float.md), [double](../../language-reference/keywords/double.md).</span></span>
+- <span data-ttu-id="4d82d-109">[char](../../language-reference/keywords/char.md).</span><span class="sxs-lookup"><span data-stu-id="4d82d-109">[char](../../language-reference/keywords/char.md).</span></span>
+- <span data-ttu-id="4d82d-110">[bool](../../language-reference/keywords/bool.md).</span><span class="sxs-lookup"><span data-stu-id="4d82d-110">[bool](../../language-reference/keywords/bool.md).</span></span>
+- <span data-ttu-id="4d82d-111">[decimal](../../language-reference/keywords/decimal.md).</span><span class="sxs-lookup"><span data-stu-id="4d82d-111">[decimal](../../language-reference/keywords/decimal.md).</span></span>
+- <span data-ttu-id="4d82d-112">Tout type [enum](../../language-reference/keywords/enum.md).</span><span class="sxs-lookup"><span data-stu-id="4d82d-112">Any [enum](../../language-reference/keywords/enum.md) type.</span></span>
+- <span data-ttu-id="4d82d-113">Tout type pointeur.</span><span class="sxs-lookup"><span data-stu-id="4d82d-113">Any pointer type.</span></span> <span data-ttu-id="4d82d-114">Des expressions comme `void**` sont ainsi autorisées.</span><span class="sxs-lookup"><span data-stu-id="4d82d-114">This allows expressions such as `void**`.</span></span>
+- <span data-ttu-id="4d82d-115">Tout type struct défini par l'utilisateur qui contient des champs de types unmanaged uniquement.</span><span class="sxs-lookup"><span data-stu-id="4d82d-115">Any user-defined struct type that contains fields of unmanaged types only.</span></span>
+
+<span data-ttu-id="4d82d-116">Les types pointeur n’héritent pas de [object](../../language-reference/keywords/object.md), et aucune conversion n’est possible entre les types pointeur et `object`.</span><span class="sxs-lookup"><span data-stu-id="4d82d-116">Pointer types do not inherit from [object](../../language-reference/keywords/object.md) and no conversions exist between pointer types and `object`.</span></span> <span data-ttu-id="4d82d-117">Par ailleurs, le boxing et l'unboxing ne prennent pas en charge les pointeurs.</span><span class="sxs-lookup"><span data-stu-id="4d82d-117">Also, boxing and unboxing do not support pointers.</span></span> <span data-ttu-id="4d82d-118">Cependant, vous pouvez effectuer des conversions entre différents types pointeur ainsi qu'entre des types pointeur et des types intégraux.</span><span class="sxs-lookup"><span data-stu-id="4d82d-118">However, you can convert between different pointer types and between pointer types and integral types.</span></span>
+
+<span data-ttu-id="4d82d-119">Lorsque vous déclarez plusieurs pointeurs dans la même déclaration, l'astérisque (\*) est écrit conjointement au type sous-jacent uniquement, il n'est pas utilisé en tant que préfixe de chaque nom de pointeur.</span><span class="sxs-lookup"><span data-stu-id="4d82d-119">When you declare multiple pointers in the same declaration, the asterisk (\*) is written together with the underlying type only; it is not used as a prefix to each pointer name.</span></span> <span data-ttu-id="4d82d-120">Exemple :</span><span class="sxs-lookup"><span data-stu-id="4d82d-120">For example:</span></span>
+
+```csharp
+int* p1, p2, p3;   // Ok
+int *p1, *p2, *p3;   // Invalid in C#
+```
+
+<span data-ttu-id="4d82d-121">Un pointeur ne peut pas pointer vers une référence ou vers un [struct](../../language-reference/keywords/struct.md) qui contient des références, car une référence d’objet peut être collectée par le récupérateur de mémoire, même si un pointeur pointe vers elle.</span><span class="sxs-lookup"><span data-stu-id="4d82d-121">A pointer cannot point to a reference or to a [struct](../../language-reference/keywords/struct.md) that contains references, because an object reference can be garbage collected even if a pointer is pointing to it.</span></span> <span data-ttu-id="4d82d-122">Le récupérateur de mémoire ne se préoccupe pas de savoir si un objet est pointé par des types pointeur.</span><span class="sxs-lookup"><span data-stu-id="4d82d-122">The garbage collector does not keep track of whether an object is being pointed to by any pointer types.</span></span>
+
+<span data-ttu-id="4d82d-123">La valeur de la variable pointeur de type `myType*` est l'adresse d'une variable de type `myType`.</span><span class="sxs-lookup"><span data-stu-id="4d82d-123">The value of the pointer variable of type `myType*` is the address of a variable of type `myType`.</span></span> <span data-ttu-id="4d82d-124">Les éléments suivants sont des exemples de déclarations de type pointeur :</span><span class="sxs-lookup"><span data-stu-id="4d82d-124">The following are examples of pointer type declarations:</span></span>
+
+|<span data-ttu-id="4d82d-125">Exemple</span><span class="sxs-lookup"><span data-stu-id="4d82d-125">Example</span></span>|<span data-ttu-id="4d82d-126">Description</span><span class="sxs-lookup"><span data-stu-id="4d82d-126">Description</span></span>|
+|-------------|-----------------|
+|`int* p`|<span data-ttu-id="4d82d-127">`p` est un pointeur vers un entier.</span><span class="sxs-lookup"><span data-stu-id="4d82d-127">`p` is a pointer to an integer.</span></span>|
+|`int** p`|<span data-ttu-id="4d82d-128">`p` est un pointeur vers un pointeur vers un entier.</span><span class="sxs-lookup"><span data-stu-id="4d82d-128">`p` is a pointer to a pointer to an integer.</span></span>|
+|`int*[] p`|<span data-ttu-id="4d82d-129">`p` est un tableau unidimensionnel de pointeurs vers des entiers.</span><span class="sxs-lookup"><span data-stu-id="4d82d-129">`p` is a single-dimensional array of pointers to integers.</span></span>|
+|`char* p`|<span data-ttu-id="4d82d-130">`p` est un pointeur vers un caractère.</span><span class="sxs-lookup"><span data-stu-id="4d82d-130">`p` is a pointer to a char.</span></span>|
+|`void* p`|<span data-ttu-id="4d82d-131">`p` est un pointeur vers un type inconnu.</span><span class="sxs-lookup"><span data-stu-id="4d82d-131">`p` is a pointer to an unknown type.</span></span>|
+
+<span data-ttu-id="4d82d-132">L'opérateur d'indirection de pointeur \* peut être utilisé pour accéder au contenu à l'emplacement vers lequel pointe la variable pointeur.</span><span class="sxs-lookup"><span data-stu-id="4d82d-132">The pointer indirection operator \* can be used to access the contents at the location pointed to by the pointer variable.</span></span> <span data-ttu-id="4d82d-133">Observez par exemple la déclaration suivante :</span><span class="sxs-lookup"><span data-stu-id="4d82d-133">For example, consider the following declaration:</span></span>
+
+```csharp
+int* myVariable;
+```
+
+<span data-ttu-id="4d82d-134">L'expression `*myVariable` désigne la variable `int` trouvée à l'adresse contenue dans `myVariable`.</span><span class="sxs-lookup"><span data-stu-id="4d82d-134">The expression `*myVariable` denotes the `int` variable found at the address contained in `myVariable`.</span></span>
+
+<span data-ttu-id="4d82d-135">Plusieurs exemples de pointeurs sont présentés dans les rubriques [fixed, instruction](../../language-reference/keywords/fixed-statement.md) et [Conversions de pointeur](../../programming-guide/unsafe-code-pointers/pointer-conversions.md).</span><span class="sxs-lookup"><span data-stu-id="4d82d-135">There are several examples of pointers in the topics [fixed Statement](../../language-reference/keywords/fixed-statement.md) and [Pointer Conversions](../../programming-guide/unsafe-code-pointers/pointer-conversions.md).</span></span> <span data-ttu-id="4d82d-136">L’exemple suivant utilise le mot clé `unsafe` et les instructions `fixed`, et montre comment incrémenter un pointeur intérieur.</span><span class="sxs-lookup"><span data-stu-id="4d82d-136">The following example uses the `unsafe` keyword and the `fixed` statement, and shows how to increment an interior pointer.</span></span>  <span data-ttu-id="4d82d-137">Vous pouvez coller ce code dans la fonction Main d'une application console pour l'exécuter.</span><span class="sxs-lookup"><span data-stu-id="4d82d-137">You can paste this code into the Main function of a console application to run it.</span></span> <span data-ttu-id="4d82d-138">Ces exemples doivent être compilés avec l’ensemble d’options de compilateur [-unsafe](../../language-reference/compiler-options/unsafe-compiler-option.md).</span><span class="sxs-lookup"><span data-stu-id="4d82d-138">These examples must be compiled with the [-unsafe](../../language-reference/compiler-options/unsafe-compiler-option.md) compiler option set.</span></span>
+
+[!code-csharp[Using pointer types](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#5)]
+
+<span data-ttu-id="4d82d-139">L'opérateur d'indirection ne peut pas être appliqué à un pointeur de type `void*`.</span><span class="sxs-lookup"><span data-stu-id="4d82d-139">You cannot apply the indirection operator to a pointer of type `void*`.</span></span> <span data-ttu-id="4d82d-140">Toutefois, vous pouvez utiliser un cast pour convertir un pointeur void en n'importe quel autre type pointeur, et inversement.</span><span class="sxs-lookup"><span data-stu-id="4d82d-140">However, you can use a cast to convert a void pointer to any other pointer type, and vice versa.</span></span>
+
+<span data-ttu-id="4d82d-141">Un pointeur peut être `null`.</span><span class="sxs-lookup"><span data-stu-id="4d82d-141">A pointer can be `null`.</span></span> <span data-ttu-id="4d82d-142">Le fait d'appliquer un opérateur d'indirection à un pointeur Null donne lieu à un comportement défini par l'implémentation.</span><span class="sxs-lookup"><span data-stu-id="4d82d-142">Applying the indirection operator to a null pointer causes an implementation-defined behavior.</span></span>
+
+<span data-ttu-id="4d82d-143">Le passage de pointeurs entre méthodes peut engendrer un comportement non défini.</span><span class="sxs-lookup"><span data-stu-id="4d82d-143">Passing pointers between methods can cause undefined behavior.</span></span> <span data-ttu-id="4d82d-144">Supposons une méthode qui retourne un pointeur à une variable locale par le biais d’un paramètre `in`, `out` ou `ref`, ou comme résultat de fonction.</span><span class="sxs-lookup"><span data-stu-id="4d82d-144">Consider a method that returns a pointer to a local variable through an `in`, `out`, or `ref` parameter or as the function result.</span></span> <span data-ttu-id="4d82d-145">Si le pointeur a été défini dans un bloc fixed, la variable vers laquelle il pointe peut ne plus être fixed.</span><span class="sxs-lookup"><span data-stu-id="4d82d-145">If the pointer was set in a fixed block, the variable to which it points may no longer be fixed.</span></span>
+
+<span data-ttu-id="4d82d-146">Le tableau suivant répertorie les opérateurs et les instructions qui peuvent fonctionner sur des pointeurs dans un contexte unsafe :</span><span class="sxs-lookup"><span data-stu-id="4d82d-146">The following table lists the operators and statements that can operate on pointers in an unsafe context:</span></span>
+
+|<span data-ttu-id="4d82d-147">Opérateur/Instruction</span><span class="sxs-lookup"><span data-stu-id="4d82d-147">Operator/Statement</span></span>|<span data-ttu-id="4d82d-148">Utilisez</span><span class="sxs-lookup"><span data-stu-id="4d82d-148">Use</span></span>|
+|-------------------------|---------|
+|*|<span data-ttu-id="4d82d-149">Exécute l'indirection de pointeur.</span><span class="sxs-lookup"><span data-stu-id="4d82d-149">Performs pointer indirection.</span></span>|
+|->|<span data-ttu-id="4d82d-150">Accède à un membre d'un struct via un pointeur.</span><span class="sxs-lookup"><span data-stu-id="4d82d-150">Accesses a member of a struct through a pointer.</span></span>|
+|<span data-ttu-id="4d82d-151">[]</span><span class="sxs-lookup"><span data-stu-id="4d82d-151">[]</span></span>|<span data-ttu-id="4d82d-152">Indexe un pointeur.</span><span class="sxs-lookup"><span data-stu-id="4d82d-152">Indexes a pointer.</span></span>|
+|`&`|<span data-ttu-id="4d82d-153">Obtient l'adresse d'une variable.</span><span class="sxs-lookup"><span data-stu-id="4d82d-153">Obtains the address of a variable.</span></span>|
+|<span data-ttu-id="4d82d-154">++ et --</span><span class="sxs-lookup"><span data-stu-id="4d82d-154">++ and --</span></span>|<span data-ttu-id="4d82d-155">Incrémente et décrémente les pointeurs.</span><span class="sxs-lookup"><span data-stu-id="4d82d-155">Increments and decrements pointers.</span></span>|
+|<span data-ttu-id="4d82d-156">+ et -</span><span class="sxs-lookup"><span data-stu-id="4d82d-156">+ and -</span></span>|<span data-ttu-id="4d82d-157">Exécute des opérations arithmétiques sur les pointeurs.</span><span class="sxs-lookup"><span data-stu-id="4d82d-157">Performs pointer arithmetic.</span></span>|
+|<span data-ttu-id="4d82d-158">==, !=, \<, >, \<= et >=</span><span class="sxs-lookup"><span data-stu-id="4d82d-158">==, !=, \<, >, \<=, and >=</span></span>|<span data-ttu-id="4d82d-159">Compare des pointeurs.</span><span class="sxs-lookup"><span data-stu-id="4d82d-159">Compares pointers.</span></span>|
+|`stackalloc`|<span data-ttu-id="4d82d-160">Alloue de la mémoire sur la pile.</span><span class="sxs-lookup"><span data-stu-id="4d82d-160">Allocates memory on the stack.</span></span>|
+|<span data-ttu-id="4d82d-161">Instruction `fixed`</span><span class="sxs-lookup"><span data-stu-id="4d82d-161">`fixed` statement</span></span>|<span data-ttu-id="4d82d-162">Résout temporairement une variable afin de pouvoir rechercher son adresse.</span><span class="sxs-lookup"><span data-stu-id="4d82d-162">Temporarily fixes a variable so that its address may be found.</span></span>|
+
+## <a name="c-language-specification"></a><span data-ttu-id="4d82d-163">Spécification du langage C#</span><span class="sxs-lookup"><span data-stu-id="4d82d-163">C# Language Specification</span></span>
+
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+
+## <a name="see-also"></a><span data-ttu-id="4d82d-164">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="4d82d-164">See Also</span></span>
+ [<span data-ttu-id="4d82d-165">Guide de programmation C#</span><span class="sxs-lookup"><span data-stu-id="4d82d-165">C# Programming Guide</span></span>](../index.md)  
+ [<span data-ttu-id="4d82d-166">Pointeurs et code unsafe</span><span class="sxs-lookup"><span data-stu-id="4d82d-166">Unsafe Code and Pointers</span></span>](index.md)  
+ [<span data-ttu-id="4d82d-167">Conversions de pointeurs</span><span class="sxs-lookup"><span data-stu-id="4d82d-167">Pointer Conversions</span></span>](pointer-conversions.md)  
+ [<span data-ttu-id="4d82d-168">Expressions de pointeur</span><span class="sxs-lookup"><span data-stu-id="4d82d-168">Pointer Expressions</span></span>](pointer-expressions.md)  
+ [<span data-ttu-id="4d82d-169">Types</span><span class="sxs-lookup"><span data-stu-id="4d82d-169">Types</span></span>](../../language-reference/keywords/types.md)  
+ [<span data-ttu-id="4d82d-170">unsafe</span><span class="sxs-lookup"><span data-stu-id="4d82d-170">unsafe</span></span>](../../language-reference/keywords/unsafe.md)  
+ [<span data-ttu-id="4d82d-171">fixed, instruction</span><span class="sxs-lookup"><span data-stu-id="4d82d-171">fixed Statement</span></span>](../../language-reference/keywords/fixed-statement.md)  
+ [<span data-ttu-id="4d82d-172">stackalloc</span><span class="sxs-lookup"><span data-stu-id="4d82d-172">stackalloc</span></span>](../../language-reference/keywords/stackalloc.md)  
+ [<span data-ttu-id="4d82d-173">Conversion boxing et unboxing</span><span class="sxs-lookup"><span data-stu-id="4d82d-173">Boxing and Unboxing</span></span>](../types/boxing-and-unboxing.md)
