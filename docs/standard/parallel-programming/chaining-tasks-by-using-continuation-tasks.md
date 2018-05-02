@@ -21,11 +21,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 64a6fd2f5cbaee17ac35d7b4bd6f08326eafac64
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: ff475259d1835a048d6260cabf4f1d46d2436954
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>Chaînage des tâches à l’aide de tâches de continuation
 En programmation asynchrone, il est très courant pour une opération asynchrone, une fois terminée, d'appeler une deuxième opération et de lui passer des données. Habituellement, cela se fait à l'aide des méthodes de rappel. Dans la bibliothèque parallèle de tâches, les mêmes fonctionnalités sont fournies par les *tâches de continuation*. Une tâche de continuation (également appelée continuation) est une tâche asynchrone appelée par une autre tâche, appelée *antécédent*, quand ce dernier est terminé.  
@@ -130,7 +130,7 @@ En programmation asynchrone, il est très courant pour une opération asynchrone
   
  L'état de continuation est utile quand vous convertissez du code existant qui recourt au [modèle de programmation asynchrone (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) pour utiliser la bibliothèque parallèle de tâches. Dans l'APM, on indique généralement l'état de l'objet dans la méthode **Begin***Method*, puis on y accède à l'aide de la propriété <xref:System.IAsyncResult.AsyncState%2A?displayProperty=nameWithType>. À l'aide de la méthode <xref:System.Threading.Tasks.Task.ContinueWith%2A> , vous pouvez conserver cet état quand vous convertissez du code qui recourt à l'APM pour utiliser la bibliothèque parallèle de tâches.  
   
- L'état de continuation peut également être utile si vous employez des objets <xref:System.Threading.Tasks.Task> dans le débogueur [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] . Par exemple, dans la fenêtre **Tâches parallèles** , la colonne **Tâche** affiche la représentation sous forme de chaîne de l'objet d'état pour chaque tâche. Pour plus d’informations sur la fenêtre **Tâches parallèles**, consultez [Utilisation de la fenêtre Tâches](/visualstudio/debugger/using-the-tasks-window).  
+ L'état de continuation peut également être utile si vous employez des objets <xref:System.Threading.Tasks.Task> dans le débogueur Visual Studio. Par exemple, dans la fenêtre **Tâches parallèles** , la colonne **Tâche** affiche la représentation sous forme de chaîne de l'objet d'état pour chaque tâche. Pour plus d’informations sur la fenêtre **Tâches parallèles**, consultez [Utilisation de la fenêtre Tâches](/visualstudio/debugger/using-the-tasks-window).  
   
  L'exemple suivant montre comment utiliser l'état de continuation. Il crée une chaîne de tâches de continuation. Chaque tâche fournit l'heure actuelle, sous la forme d'un objet <xref:System.DateTime> , pour le paramètre `state` de la méthode <xref:System.Threading.Tasks.Task.ContinueWith%2A> . Chaque objet <xref:System.DateTime> représente l'heure de création de la tâche de continuation. Chaque tâche génère un deuxième objet <xref:System.DateTime> qui représente l'heure à laquelle la tâche se termine. Une fois toutes les tâches terminées, cet exemple affiche les heures de création et de fin de chaque tâche de continuation.  
   

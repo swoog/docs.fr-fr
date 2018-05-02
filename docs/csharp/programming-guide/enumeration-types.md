@@ -1,8 +1,9 @@
 ---
-title: "Types énumération (Guide de programmation C#)"
+title: Types énumération (Guide de programmation C#)
 ms.date: 09/10/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - enumerations [C#]
@@ -10,14 +11,14 @@ helpviewer_keywords:
 - C# Language, enums
 - bit flags [C#]
 ms.assetid: 64a9b731-9e3c-4336-8a09-018db2aa10b7
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 13ec7d5d2a44cddb2b7f440c8d811c2e4060d432
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cdaa609acfa34f3b0b3073d88f09fe735d48e9a2
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="enumeration-types-c-programming-guide"></a>Types énumération (Guide de programmation C#)
 
@@ -47,7 +48,7 @@ Voici les avantages qu’offre l’utilisation d’un enum par rapport à un typ
 
 - Vous spécifiez clairement pour le code client les valeurs qui sont valides pour la variable.
 
-- Dans [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], IntelliSense répertorie les valeurs définies.
+- Dans Visual Studio, IntelliSense liste les valeurs définies.
 
 Quand vous ne spécifiez pas de valeurs pour les éléments dans la liste d’énumérateurs, les valeurs sont automatiquement incrémentées de 1. Dans l’exemple précédent, `Day.Sunday` a la valeur 0, `Day.Monday` a la valeur 1 et ainsi de suite. Quand vous créez un objet `Day`, il a la valeur par défaut `Day.Sunday` (0) si vous ne lui assignez pas une valeur explicitement. Quand vous créez un enum, sélectionnez la valeur par défaut la plus logique et affectez-lui une valeur égale à zéro. Ainsi, tous les enums auront cette valeur par défaut si aucune valeur ne leur est assignée explicitement lors de leur création.
 

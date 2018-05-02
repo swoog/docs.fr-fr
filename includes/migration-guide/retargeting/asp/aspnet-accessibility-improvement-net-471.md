@@ -1,0 +1,9 @@
+### <a name="aspnet-accessibility-improvement-in-net-471"></a>Amélioration de l’accessibilité ASP.NET dans .NET 4.7.1
+
+|   |   |
+|---|---|
+|Détails|ASP.NET améliore le fonctionnement des contrôles web ASP.NET avec la technologie d’accessibilité de Visual Studio pour une meilleure prise en charge des clients ASP.NET.  Citons notamment les changements suivants :<ul><li>Changements visant à implémenter les modèles d’accessibilité manquants de l’interface utilisateur dans les contrôles, comme la boîte de dialogue Ajouter un champ de l’Assistant de la vue Détails.</li><li>Changements visant à améliorer l’affichage en mode de contraste élevé, comme l’éditeur de champs du pagineur de données.</li><li>Changements visant à améliorer la navigation au clavier pour les commandes, comme la fenêtre Configurer le contexte d’objet ou la fenêtre Configurer la source de données.</li></ul>|
+|Suggestion|**Comment accepter ou refuser ces changements** Pour que le concepteur Visual Studio tire parti de ces changements, il doit s’exécuter sur .NET Framework 4.7.1 ou ultérieur. Pour que l’application web tire parti de ces changements, procédez de l’une des manières suivantes :<ul><li>Installez Visual Studio 2017 15.3 ou une version ultérieure, qui prend en charge les nouvelles fonctionnalités d’accessibilité avec le commutateur AppContext suivant par défaut.</li><li>Refusez les comportements d’accessibilité hérités en ajoutant le commutateur AppContext **Switch.UseLegacyAccessibility** dans la section `<runtime>` du fichier devenv.exe.config et en lui affectant la valeur `false`, comme indiqué dans l’exemple suivant.</li></ul><pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;<br />&lt;configuration&gt;<br />&lt;runtime&gt;<br />...</code></pre>|
+|Portée|Mineur|
+|Version|4.7.1|
+|Type|Reciblage|

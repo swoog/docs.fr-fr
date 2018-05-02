@@ -1,12 +1,12 @@
 ---
-title: "Comment : afficher des dates dans des calendriers non grégoriens"
-ms.custom: 
+title: 'Comment : afficher des dates dans des calendriers non grégoriens'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - calendars [.NET Framework], displaying dates
 - displaying date and time data
 ms.assetid: ed324eff-4aff-4a76-b6c0-04e6c0d8f5a9
-caps.latest.revision: 
+caps.latest.revision: 7
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1a9e45fe43e38be3c618df37a639d63a6a0a5349
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8b0af7aad0efc63518291292b0d0b4ca4872956c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-display-dates-in-non-gregorian-calendars"></a>Comment : afficher des dates dans des calendriers non grégoriens
 Les types <xref:System.DateTime> et <xref:System.DateTimeOffset> utilisent le calendrier grégorien comme calendrier par défaut. Cela signifie que l’appel de la méthode `ToString` d’une valeur de date et d’heure affiche la représentation sous forme de chaîne de la date et de l’heure dans le calendrier grégorien, même si ces date et heure ont été créées à l’aide d’un autre calendrier. Cela est illustré dans l’exemple suivant, qui utilise deux méthodes différentes pour créer une valeur de date et d’heure avec le calendrier persan, mais affiche toujours ces valeurs de date et d’heure dans le calendrier grégorien quand il appelle la méthode <xref:System.DateTime.ToString%2A>. Cet exemple reflète deux techniques couramment utilisées, mais incorrectes, pour l’affichage de la date dans un calendrier particulier.  
@@ -98,7 +98,7 @@ Les types <xref:System.DateTime> et <xref:System.DateTimeOffset> utilisent le ca
 ## <a name="compiling-the-code"></a>Compilation du code  
  Cet exemple nécessite une référence à System.Core.dll.  
   
- Compilez le code sur la ligne de commande à l’aide de csc.exe ou vb.exe. Pour compiler le code dans [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], placez-le dans un modèle de projet d’application console.  
+ Compilez le code sur la ligne de commande à l’aide de csc.exe ou vb.exe. Pour compiler le code dans Visual Studio, mettez-le dans un modèle de projet d’application console.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Exécution d’opérations de mise en forme](../../../docs/standard/base-types/performing-formatting-operations.md)

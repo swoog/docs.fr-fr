@@ -1,25 +1,26 @@
 ---
 title: Utilisation des journaux des applications dans Visual Basic
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - logs, application
 - application event logs, Visual Basic
 - application event logs
 ms.assetid: 2581afd1-5791-4bc4-86b2-46244e9fe468
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: ea5f3699ca5a1b6b0859ac266656deb933839d3d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 40cad53cd9283a99a93cde79616151e77489e7bb
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="working-with-application-logs-in-visual-basic"></a>Utilisation des journaux des applications dans Visual Basic
 Les objets `My.Applicaton.Log` et `My.Log` facilitent l’écriture des informations de journalisation et de traçage dans les journaux.  
@@ -38,7 +39,7 @@ Les objets `My.Applicaton.Log` et `My.Log` facilitent l’écriture des informat
 ## <a name="where-messages-are-logged"></a>Emplacement d’enregistrement des messages  
  Si l’assembly n’a pas de fichier de configuration, les objets `My.Application.Log` et `My.Log` écrivent dans la sortie de débogage de l’application (via la classe <xref:System.Diagnostics.DefaultTraceListener> ). En outre, l’objet `My.Application.Log` écrit dans le fichier journal de l’assembly (par l’intermédiaire de la classe <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener>), tandis que l’objet `My.Log` écrit dans la sortie de la page web ASP.NET (par l’intermédiaire de la classe <xref:System.Web.WebPageTraceListener>).  
   
- La sortie de débogage peut être affichée dans la fenêtre [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] **Output** window when running your application in debug mode. Pour ouvrir la fenêtre **Sortie** , cliquez sur l’élément de menu **Déboguer** , pointez sur **Windows**, puis cliquez sur **Sortie**. Dans la fenêtre **Sortie** , sélectionnez **Déboguer** dans la zone **Afficher la sortie à partir de** .  
+ Vous pouvez voir la sortie de débogage dans la fenêtre **Sortie** de Visual Studio lors de l’exécution de votre application en mode débogage. Pour ouvrir la fenêtre **Sortie** , cliquez sur l’élément de menu **Déboguer** , pointez sur **Windows**, puis cliquez sur **Sortie**. Dans la fenêtre **Sortie** , sélectionnez **Déboguer** dans la zone **Afficher la sortie à partir de** .  
   
  Par défaut, `My.Application.Log` écrit le fichier journal dans le chemin des données d’application de l’utilisateur. Vous pouvez obtenir le chemin dans la propriété <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.FullLogFileName%2A> de l’objet <xref:Microsoft.VisualBasic.Logging.Log.DefaultFileLogWriter%2A> . Le format de ce chemin est le suivant :  
   

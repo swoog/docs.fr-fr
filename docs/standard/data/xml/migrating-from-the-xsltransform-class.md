@@ -19,11 +19,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 09d982105d8cf1297a53bd755003e3ef2b089293
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 07b90baf64ad00509cf5cadea4b9a3008237759b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="migrating-from-the-xsltransform-class"></a>Migration depuis la classe XslTransform
 L’architecture XSLT a été repensée dans la version [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)]. La classe <xref:System.Xml.Xsl.XslTransform> a été remplacée par la classe <xref:System.Xml.Xsl.XslCompiledTransform>.  
@@ -73,7 +73,7 @@ writer.Close();
 ```  
   
 ### <a name="debug-option"></a>Option de débogage  
- La classe <xref:System.Xml.Xsl.XslCompiledTransform> peut générer des informations de débogage, ce qui vous permet de déboguer la feuille de style à l'aide du Débogueur Microsoft [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]. Pour plus d'informations, voir <xref:System.Xml.Xsl.XslCompiledTransform.%23ctor%28System.Boolean%29>.  
+ La classe <xref:System.Xml.Xsl.XslCompiledTransform> peut générer des informations de débogage, ce qui vous permet de déboguer la feuille de style à l’aide du Débogueur Microsoft Visual Studio. Pour plus d'informations, voir <xref:System.Xml.Xsl.XslCompiledTransform.%23ctor%28System.Boolean%29>.  
   
 ## <a name="behavioral-differences"></a>Différences comportementales  
   

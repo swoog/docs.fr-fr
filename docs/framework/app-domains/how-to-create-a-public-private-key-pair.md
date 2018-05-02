@@ -1,12 +1,13 @@
 ---
-title: "Guide pratique pour créer une paire de clés publique/privée"
-ms.custom: 
+title: Guide pratique pour créer une paire de clés publique/privée
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,22 +23,23 @@ helpviewer_keywords:
 - .snk files
 - strong-named assemblies, key pairs
 ms.assetid: 05026813-f3bd-4d7c-9e0b-fc588eb3d114
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b8076f5ed713c88f8f538959855408a8c542705a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 991affd7074cd69c1c56c37ab2d0a55f8b3af148
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-create-a-public-private-key-pair"></a>Guide pratique pour créer une paire de clés publique/privée
 Pour signer un assembly avec un nom fort, vous devez disposer d’une paire de clés publique/privée. Cette paire de clés de chiffrement public et privé est utilisée lors de la compilation pour créer un assembly avec nom fort. Vous pouvez créer une paire de clés à l’aide de l’[outil Strong Name (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md). Les fichiers de paire de clés ont généralement une extension .snk.  
   
 > [!NOTE]
->  Dans [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], les pages de propriétés de projet c# et Visual Basic incluent un onglet **Signature** qui vous permet de sélectionner les fichiers de clé existants ou de générer de nouveaux fichiers de clé sans utiliser Sn.exe. Dans Visual C++, vous pouvez spécifier l’emplacement d’un fichier de clés existant dans la page de propriétés **Avancé** de la section **Éditeur de liens**, dans la section **Propriétés de Configuration** de la fenêtre **Pages de propriétés**. L’utilisation de l’attribut <xref:System.Reflection.AssemblyKeyFileAttribute> pour identifier les paires de fichiers de clés est devenue obsolète à partir de [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)].  
+>  Dans Visual Studio, les pages de propriétés de projet C# et Visual Basic présentent un onglet **Signature** qui vous permet de sélectionner les fichiers de clé existants ou de générer de nouveaux fichiers de clé sans utiliser Sn.exe. Dans Visual C++, vous pouvez spécifier l’emplacement d’un fichier de clés existant dans la page de propriétés **Avancé** de la section **Éditeur de liens**, dans la section **Propriétés de Configuration** de la fenêtre **Pages de propriétés**. L’utilisation de l’attribut <xref:System.Reflection.AssemblyKeyFileAttribute> pour identifier les paires de fichiers de clés est devenue obsolète à partir de [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)].  
   
 ### <a name="to-create-a-key-pair"></a>Pour créer une paire de clés  
   
@@ -69,7 +71,7 @@ sn -p keypair.snk public.snk
   
  Lorsque vous signez un assembly avec un nom fort, l’utilitaire [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) recherche le fichier de clés par rapport au répertoire en cours et au répertoire de sortie. Lorsque vous utilisez des compilateurs de ligne de commande, vous pouvez vous contenter de copier la clé dans le répertoire en cours contenant vos modules de code.  
   
- Si vous utilisez une version antérieure de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] qui ne dispose pas d’onglet **Signature** dans les propriétés du projet, l’emplacement du fichier de clés recommandé est le répertoire du projet avec l’attribut de fichier spécifié comme suit :  
+ Si vous utilisez une version antérieure de Visual Studio qui ne dispose pas d’onglet **Signature** dans les propriétés du projet, l’emplacement du fichier de clés recommandé est le répertoire du projet avec l’attribut de fichier spécifié comme suit :  
   
  [!code-cpp[AssemblyName_KeyPair#21](../../../samples/snippets/cpp/VS_Snippets_CLR/AssemblyName_KeyPair/CPP/keyfileattrib.cpp#21)]
  [!code-csharp[AssemblyName_KeyPair#21](../../../samples/snippets/csharp/VS_Snippets_CLR/AssemblyName_KeyPair/CS/keyfileattrib.cs#21)]

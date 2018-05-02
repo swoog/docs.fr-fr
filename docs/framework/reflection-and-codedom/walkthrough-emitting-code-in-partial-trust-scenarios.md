@@ -1,12 +1,13 @@
 ---
-title: "Procédure pas à pas : émission de code dans des scénarios de confiance partielle"
-ms.custom: 
+title: 'Procédure pas à pas : émission de code dans des scénarios de confiance partielle'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -21,16 +22,17 @@ helpviewer_keywords:
 - reflection emit, dynamic methods
 - dynamic methods
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 835483d740b60f98c3170a590edbfbfbe970d783
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: cbdbf8a391235fc03140e032b35eb674a74dc88a
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Procédure pas à pas : émission de code dans des scénarios de confiance partielle
 L’émission de réflexion utilise le même ensemble d’API en confiance totale ou partielle, mais certaines fonctionnalités nécessitent des autorisations spéciales dans le code avec confiance partielle. En outre, l’émission de réflexion a une fonctionnalité, des méthodes dynamiques hébergées anonymement, qui est conçue pour être utilisée avec une confiance partielle et par les assemblys transparents de sécurité.  
@@ -144,7 +146,7 @@ L’émission de réflexion utilise le même ensemble d’API en confiance total
      La méthode <xref:System.AppDomain.CreateInstanceAndUnwrap%2A> crée l’objet dans le domaine d’application cible et retourne un proxy qui peut être utilisé pour appeler les propriétés et les méthodes de l’objet.  
   
     > [!NOTE]
-    >  Si vous utilisez ce code dans [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], vous devez changer le nom de la classe pour y inclure l’espace de noms. Par défaut, l’espace de noms est le nom du projet. Par exemple, si le projet est « PartialTrust », le nom de la classe doit être « PartialTrust.Worker ».  
+    >  Si vous utilisez ce code dans Visual Studio, vous devez changer le nom de la classe pour y inclure l’espace de noms. Par défaut, l’espace de noms est le nom du projet. Par exemple, si le projet est « PartialTrust », le nom de la classe doit être « PartialTrust.Worker ».  
   
 6.  Ajoutez le code pour appeler la méthode `SimpleEmitDemo`. L’appel est marshalé à travers la limite du domaine d’application et le code est exécuté dans le domaine d’application sandbox.  
   
@@ -218,7 +220,7 @@ L’émission de réflexion utilise le même ensemble d’API en confiance total
   
 ## <a name="compiling-the-code"></a>Compilation du code  
   
--   Si vous générez cet exemple de code dans [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], vous devez modifier le nom de la classe pour inclure l’espace de noms quand vous le passez à la méthode <xref:System.AppDomain.CreateInstanceAndUnwrap%2A>. Par défaut, l’espace de noms est le nom du projet. Par exemple, si le projet est « PartialTrust », le nom de la classe doit être « PartialTrust.Worker ».  
+-   Si vous générez cet exemple de code dans Visual Studio, vous devez changer le nom de la classe pour inclure l’espace de noms quand vous le passez à la méthode <xref:System.AppDomain.CreateInstanceAndUnwrap%2A>. Par défaut, l’espace de noms est le nom du projet. Par exemple, si le projet est « PartialTrust », le nom de la classe doit être « PartialTrust.Worker ».  
   
 ## <a name="see-also"></a>Voir aussi  
  [Problèmes de sécurité dans l’émission de réflexion](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)  
