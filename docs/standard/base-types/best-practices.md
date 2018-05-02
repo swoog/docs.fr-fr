@@ -1,12 +1,12 @@
 ---
-title: "Bonnes pratiques pour les expressions régulières dans .NET"
-ms.custom: 
+title: Bonnes pratiques pour les expressions régulières dans .NET
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - .NET Framework regular expressions, best practices
 - regular expressions, best practices
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
-caps.latest.revision: 
+caps.latest.revision: 15
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c665dfbf8c3b6609a934aae027ba40e0462498db
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: 59ec9ead0fd010baccaadb1eda0f469b7b4dcb46
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>Bonnes pratiques pour les expressions régulières dans .NET
 <a name="top"></a> Le moteur d’expressions régulières de .NET est un outil puissant et complet. Il traite le texte en fonction de correspondances de modèles plutôt qu’en comparant et en confrontant le texte littéral. Dans la plupart des cas, il exécute les critères spéciaux de façon rapide et efficace. Toutefois, dans certains cas, le moteur des expressions régulières peut sembler très lent. Dans des cas extrêmes, il semble même cesser de répondre. Il traite en effet peu d'entrées sur une période de plusieurs heures ou même de plusieurs jours.  
@@ -208,7 +208,7 @@ ms.lasthandoff: 02/27/2018
  Dans de nombreux cas, la rétroaction est essentielle pour faire correspondre un modèle d’expression régulière à un texte d’entrée. Toutefois, une rétroaction excessive risque d'altérer considérablement les performances et de donner l'impression qu'une application a cessé de répondre. Cela se produit notamment lorsque les quantificateurs sont imbriqués et que le texte correspondant à la sous-expression externe est un sous-ensemble du texte correspondant à la sous-expression interne.  
   
 > [!WARNING]
->  En plus d’éviter une rétroaction excessive, vous devez utiliser la fonctionnalité de délai d’attente pour garantir qu’une rétroaction excessive n’altère pas considérablement les performances des expressions régulières. Pour plus d’informations, consultez la section [Utilisation de valeurs de délai d’attente](#Timeouts).  
+>  En plus d’éviter une rétroaction excessive, vous devez utiliser la fonctionnalité de délai d’attente pour garantir qu’une rétroaction excessive n’altère pas considérablement les performances des expressions régulières. Pour plus d’informations, consultez la section [Utiliser des valeurs de délai d’attente](#Timeouts).  
   
  Par exemple, le modèle d'expression régulière `^[0-9A-Z]([-.\w]*[0-9A-Z])*\$$` est conçu pour mettre en correspondance un numéro de référence composé d'au moins un caractère alphanumérique. Tous les caractères supplémentaires peuvent être composés d'un caractère alphanumérique, d'un trait d'union, d'un trait de soulignement ou d'un point. Toutefois, le dernier caractère doit impérativement être alphanumérique. Un signe dollar termine le numéro de référence. Dans certains cas, ce modèle d'expression régulière peut présenter des performances médiocres, si les quantificateurs sont imbriqués et que la sous-expression `[0-9A-Z]` est un sous-ensemble de la sous-expression `[-.\w]*`.  
   
