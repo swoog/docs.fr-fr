@@ -1,1 +1,0 @@
-Ce membre prend en charge l'infrastructure .NET Framework et n'est pas destiné à être utilisé directement à partir de votre code.

@@ -1,1 +1,0 @@
-Pour obtenir un exemple de
