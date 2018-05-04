@@ -1,29 +1,17 @@
 ---
 title: '&lt;add&gt; de &lt;transportConfigurationType&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 03d79db9-571d-4534-acef-d05e5467b257
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2b52345ae30ab56a6f34d2aa46f9836d67555b15
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5d13ef51444e1600b0cea5d55a1b5e332e440bc6
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaddgt-of-lttransportconfigurationtypegt"></a>&lt;add&gt; de &lt;transportConfigurationType&gt;
 Cet élément est une paire clé/valeur, qui identifie le type d'un transport particulier.  
   
- \<système. ServiceModel >  
+ \<system.ServiceModel>  
 \<ServiceHostingEnvironment >  
 \<transportConfigurationTypes >  
 \<add>  
@@ -50,7 +38,7 @@ Cet élément est une paire clé/valeur, qui identifie le type d'un transport pa
 |transportConfigurationType|Chaîne contenant le type qui implémente le transport spécifique.|  
   
 ### <a name="child-elements"></a>Éléments enfants  
- Aucun.  
+ Aucun  
   
 ### <a name="parent-elements"></a>Éléments parents  
   
@@ -73,4 +61,4 @@ Cet élément est une paire clé/valeur, qui identifie le type d'un transport pa
  <xref:System.ServiceModel.Configuration.TransportConfigurationTypeElement>  
  <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>  
  <xref:System.ServiceModel.ServiceHostingEnvironment>  
- [Hébergement d’applications WPF](../../../../../docs/framework/wcf/feature-details/hosting.md)
+ [Hébergement](../../../../../docs/framework/wcf/feature-details/hosting.md)

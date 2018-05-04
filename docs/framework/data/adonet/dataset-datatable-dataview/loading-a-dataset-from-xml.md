@@ -1,27 +1,15 @@
 ---
-title: "Chargement d'un DataSet à partir de XML"
-ms.custom: 
+title: Chargement d'un DataSet à partir de XML
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 49c083b7-a5ed-41cf-aabc-5aaba96f00e6
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 1d17bb97811bb3a2ae979e5a05b8d39baf2b9c63
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 0b74480209c8d06f38ea39e7a89741fc5a89512b
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="loading-a-dataset-from-xml"></a>Chargement d'un DataSet à partir de XML
 Le contenu d'un objet <xref:System.Data.DataSet> ADO.NET peut être recréé à partir d'un flux ou d'un document XML. En outre, le .NET Framework vous offre une grande souplesse en ce qui concerne les informations qui seront chargées à partir de XML et le mode de création du schéma ou de la structure relationnelle de l'objet <xref:System.Data.DataSet>.  
@@ -111,7 +99,7 @@ foreach (DataTable dataTable in dataSet.Tables)
 ```  
   
 > [!NOTE]
->  Si le schéma XSD de votre <xref:System.Data.DataSet> inclut un **targetNamespace**, les données ne peuvent pas être lues et vous pouvez rencontrer des exceptions, lors de l’appel **ReadXml** pour charger le <xref:System.Data.DataSet> XML qui contient éléments sans espace de noms qualifiant. Pour lire des éléments non qualifiés dans ce cas, définissez **elementFormDefault** égal sur « qualified » dans votre schéma XSD. Exemple :  
+>  Si le schéma XSD de votre <xref:System.Data.DataSet> inclut un **targetNamespace**, les données ne peuvent pas être lues et vous pouvez rencontrer des exceptions, lors de l’appel **ReadXml** pour charger le <xref:System.Data.DataSet> XML qui contient éléments sans espace de noms qualifiant. Pour lire des éléments non qualifiés dans ce cas, définissez **elementFormDefault** égal sur « qualified » dans votre schéma XSD. Par exemple :  
   
 ```xml  
 <xsd:schema id="customDataSet"   

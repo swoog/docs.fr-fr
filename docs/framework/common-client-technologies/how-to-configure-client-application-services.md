@@ -18,14 +18,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e7c6d31293109a0d778136235ccfc894aeba8574
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: f8a6c6be6874c1a90c9e40b5b82d833aeaa9b63a
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-configure-client-application-services"></a>Comment : configurer les services d'application cliente
-Cette rubrique décrit comment utiliser le [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] **Concepteur de projet** pour activer et configurer les services d’application cliente. Vous pouvez utiliser les services d'application cliente pour valider des utilisateurs et extraire des rôles d'utilisateur ainsi que des paramètres d'un service d'application [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] existant. Une fois la configuration effectuée, vous pouvez accéder aux services actifs dans votre code d’application comme décrit dans [Vue d’ensemble des services d’application cliente](../../../docs/framework/common-client-technologies/client-application-services-overview.md). Pour plus d’informations sur les services d’application [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)], consultez [Vue d’ensemble des services d’application ASP.NET](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
+Cette rubrique décrit comment utiliser le **Concepteur de projet** Visual Studio pour activer et configurer les services d’applications clientes. Vous pouvez utiliser les services d'application cliente pour valider des utilisateurs et extraire des rôles d'utilisateur ainsi que des paramètres d'un service d'application [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] existant. Une fois la configuration effectuée, vous pouvez accéder aux services actifs dans votre code d’application comme décrit dans [Vue d’ensemble des services d’application cliente](../../../docs/framework/common-client-technologies/client-application-services-overview.md). Pour plus d’informations sur les services d’application [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)], consultez [Vue d’ensemble des services d’application ASP.NET](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
   
  Vous pouvez activer et configurer les services d’application cliente dans la page **Services** du **Concepteur de projet**. La page **Services** met à jour les valeurs dans le fichier App.config de votre projet. Pour accéder au **Concepteur de projet**, utilisez la commande **Propriétés** du menu **Projet**. Pour plus d’informations sur la page **Services**, consultez [Services, page du Concepteur de projet](https://msdn.microsoft.com/library/bb398109).  
   
@@ -100,7 +100,7 @@ Cette rubrique décrit comment utiliser le [!INCLUDE[vsprvs](../../../includes/v
   
      La valeur par défaut de `Data Source = |SQL/CE|` apparaît dans la zone de texte.  
   
-3.  Pour générer et utiliser une base de données SQL Server Compact, conservez la valeur de chaîne de connexion par défaut. [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] génère un fichier de base de données et le place dans le répertoire indiqué par la propriété <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType>.  
+3.  Pour générer et utiliser une base de données SQL Server Compact, conservez la valeur de chaîne de connexion par défaut. Visual Studio génère un fichier de base de données et le place dans le répertoire indiqué par la propriété <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType>.  
   
 4.  Pour générer et utiliser une base de données [!INCLUDE[ssEW](../../../includes/ssew-md.md)] chiffrée, ajoutez les valeurs `password` et `encrypt database` à la chaîne de connexion comme indiqué dans l'exemple suivant.  
   

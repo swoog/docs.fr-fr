@@ -22,18 +22,18 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: fe0e446a0005ffcbf296c2728fd93056c3e38f2a
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: e67d4297ca0fe7028380b6d862f9f86c93bcaa61
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-using-client-application-services"></a>Procédure pas à pas : utilisation des services d'application cliente
 Cette rubrique décrit comment créer une application Windows qui utilise des services d'application cliente pour authentifier les utilisateurs et récupérer des rôles d'utilisateur et des paramètres.  
   
  Lors de cette procédure pas à pas, vous allez exécuter les tâches suivantes :  
   
--   créer une application Windows Forms et utiliser le concepteur de projets [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] pour activer et configurer les services d'application cliente ;  
+-   créer une application Windows Forms et utiliser le concepteur de projets Visual Studio pour activer et configurer les services d'applications clientes ;  
   
 -   créer une application de service web ASP.NET simple pour héberger les services d'application et tester votre configuration client ;  
   
@@ -57,7 +57,7 @@ Cette rubrique décrit comment créer une application Windows qui utilise des se
   
 #### <a name="to-create-a-client-application-and-enable-client-application-services"></a>Pour créer une application cliente et activer les services d'application cliente  
   
-1.  Dans [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], sélectionnez l’option de menu **Fichier &#124; Nouveau &#124; Projet**.  
+1.  Dans Visual Studio, sélectionnez l’option de menu **Fichier &#124; Nouveau &#124; Projet**.  
   
 2.  Dans le volet **Types de projets** de la boîte de dialogue **Nouveau projet**, développez le nœud **Visual Basic** ou **Visual C#**, puis sélectionnez le type de projet **Windows**.  
   
@@ -65,7 +65,7 @@ Cette rubrique décrit comment créer une application Windows qui utilise des se
   
 4.  Remplacez le **Nom** du projet par `ClientAppServicesDemo`, puis cliquez sur **OK**.  
   
-     Un nouveau projet Windows Forms est ouvert dans [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
+     Un nouveau projet Windows Forms est ouvert dans Visual Studio.  
   
 5.  Dans le menu **Projet** , sélectionnez **Propriétés ClientAppServicesDemo**.  
   
@@ -250,7 +250,7 @@ Cette rubrique décrit comment créer une application Windows qui utilise des se
   
 1.  Dans l’**Explorateur de solutions**, ajoutez au projet ClientAppServicesDemo une référence à l’assembly System.Web.  
   
-2.  Sélectionnez le fichier Form1, puis sélectionnez **Afficher | Code** dans le menu principal de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
+2.  Sélectionnez le fichier Form1, puis sélectionnez **Afficher | Code** dans le menu principal de Visual Studio.  
   
 3.  Dans l'éditeur de code, ajoutez les instructions suivantes en haut du fichier Form1.  
   
@@ -331,7 +331,7 @@ Cette rubrique décrit comment créer une application Windows qui utilise des se
   
 5.  Dans la fenêtre **Propriétés**, spécifiez la valeur **(Nom)** `rememberMeCheckBox` et la valeur **Texte** `&Remember me`.  
   
-6.  Sélectionnez **Afficher | Code** dans le menu principal de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
+6.  Sélectionnez **Afficher | Code** dans le menu principal de Visual Studio.  
   
 7.  Dans l'éditeur de code, ajoutez le code suivant en haut du fichier.  
   
@@ -371,7 +371,7 @@ Cette rubrique décrit comment créer une application Windows qui utilise des se
   
 #### <a name="to-change-the-user-interface-based-on-user-role"></a>Pour modifier l'interface utilisateur selon le rôle de l'utilisateur  
   
-1.  Dans l’**Explorateur de solutions**, sélectionnez Form1 dans le projet ClientAppServicesDemo, puis sélectionnez **Afficher | Concepteur** dans le menu principal de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
+1.  Dans l’**Explorateur de solutions**, sélectionnez Form1 dans le projet ClientAppServicesDemo, puis sélectionnez **Afficher | Concepteur** dans le menu principal de Visual Studio.  
   
 2.  Dans le concepteur, ajoutez un contrôle <xref:System.Windows.Forms.Button> au formulaire à partir de la **Boîte à outils**.  
   
@@ -407,7 +407,7 @@ Cette rubrique décrit comment créer une application Windows qui utilise des se
  Vous pouvez maintenant exécuter l'application et ouvrir une session en tant qu'employé pour constater que le bouton n'apparaît pas, puis ouvrir une session en tant que responsable (« manager ») pour voir le bouton.  
   
 ## <a name="accessing-web-settings"></a>Accès aux paramètres web  
- Dans la procédure suivante, vous ajoutez une zone de texte au formulaire et vous la liez à un paramètre web. Comme le code précédent qui utilise l'authentification et les rôles, votre code de paramètres n'accède pas directement au fournisseur de paramètres. À la place, il utilise la classe `Settings` fortement typée (accessible en tant que `Properties.Settings.Default` en C# et `My.Settings` en Visual Basic) générée pour votre projet par [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
+ Dans la procédure suivante, vous ajoutez une zone de texte au formulaire et vous la liez à un paramètre web. Comme le code précédent qui utilise l'authentification et les rôles, votre code de paramètres n'accède pas directement au fournisseur de paramètres. À la place, il utilise la classe `Settings` fortement typée (accessible en tant que `Properties.Settings.Default` en C# et en tant que `My.Settings` en Visual Basic) générée pour votre projet par Visual Studio.  
   
 #### <a name="to-use-web-settings-in-your-user-interface"></a>Pour utiliser des paramètres web dans votre interface utilisateur  
   
@@ -425,7 +425,7 @@ Cette rubrique décrit comment créer une application Windows qui utilise des se
   
      Le paramètre `WebSettingsTestText` apparaît dans le concepteur avec la valeur par défaut `DefaultText`. En outre, une classe `Settings` contenant une propriété `WebSettingsTestText` est générée pour votre projet.  
   
-5.  Dans l’**Explorateur de solutions**, sélectionnez Form1 dans le projet ClientAppServicesDemo, puis sélectionnez **Afficher | Concepteur** dans le menu principal de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
+5.  Dans l’**Explorateur de solutions**, sélectionnez Form1 dans le projet ClientAppServicesDemo, puis sélectionnez **Afficher | Concepteur** dans le menu principal de Visual Studio.  
   
 6.  Dans le concepteur, ajoutez un contrôle <xref:System.Windows.Forms.TextBox> au formulaire.  
   
@@ -510,7 +510,7 @@ Cette rubrique décrit comment créer une application Windows qui utilise des se
   
 #### <a name="to-enable-offline-mode-in-your-application"></a>Pour activer le mode hors connexion dans votre application  
   
-1.  Dans l’**Explorateur de solutions**, sélectionnez Form1 dans le projet ClientAppServicesDemo, puis sélectionnez **Afficher | Concepteur** dans le menu principal de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
+1.  Dans l’**Explorateur de solutions**, sélectionnez Form1 dans le projet ClientAppServicesDemo, puis sélectionnez **Afficher | Concepteur** dans le menu principal de Visual Studio.  
   
 2.  Dans le concepteur, ajoutez un contrôle <xref:System.Windows.Forms.CheckBox> au formulaire.  
   

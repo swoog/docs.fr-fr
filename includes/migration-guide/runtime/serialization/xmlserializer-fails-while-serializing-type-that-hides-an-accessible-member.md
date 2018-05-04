@@ -3,7 +3,7 @@
 |   |   |
 |---|---|
 |Détails|Lors de la sérialisation d’un type dérivé, <xref:System.Xml.Serialization.XmlSerializer?displayProperty=name> peut échouer si le type contient un champ ou une propriété inaccessible qui masque (via le mot clé 'new') un champ ou une propriété portant le même nom précédemment accessible (public, par exemple) sur le type de base.|
-|Suggestion|Ce problème peut être résolu en rendant le nouveau membre qui masque accessible à <xref:System.Xml.Serialization.XmlSerializer?displayProperty=name> (en le marquant comme public, par exemple). Vous pouvez également utiliser le paramètre de configuration suivant qui rétablira le comportement de <xref:System.Xml.Serialization.XmlSerializer?displayProperty=name> de la version 4.0, ce qui permet de résoudre le problème :<pre><code class="language-xml">&lt;system.xml.serialization&gt;&#13;&#10;&lt;xmlSerializer useLegacySerializerGeneration=&quot;true&quot; /&gt;&#13;&#10;&lt;/system.xml.serialization&gt;&#13;&#10;</code></pre>|
+|Suggestion|Ce problème peut être résolu en rendant le nouveau membre qui masque accessible à <xref:System.Xml.Serialization.XmlSerializer?displayProperty=name> (en le marquant comme public, par exemple). Vous pouvez également utiliser le paramètre de configuration suivant qui rétablira le comportement de <xref:System.Xml.Serialization.XmlSerializer?displayProperty=name> de la version 4.0, ce qui permet de résoudre le problème :<pre><code class="lang-xml">&lt;system.xml.serialization&gt;&#13;&#10;&lt;xmlSerializer useLegacySerializerGeneration=&quot;true&quot; /&gt;&#13;&#10;&lt;/system.xml.serialization&gt;&#13;&#10;</code></pre>|
 |Portée|Mineur|
 |Version|4.5|
 |Type|Runtime|

@@ -1,30 +1,18 @@
 ---
-title: '&lt;service&gt;'
-ms.custom: 
+title: '&lt;Service&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 13123dd6-c4a9-4a04-a984-df184b851788
-caps.latest.revision: "27"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 689dfae90baffa3e9895258d1635c7840d8df6b2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a73e4699e0998338f09e1ed0504f5b1cfd73b225
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltservicegt"></a>&lt;service&gt;
+# <a name="ltservicegt"></a>&lt;Service&gt;
 L'élément `service` contient les paramètres d'un service Windows Communication Foundation (WCF). Il contient également les points de terminaison qui exposent le service.  
   
- \<système. ServiceModel >  
-\<Services >  
+ \<system.ServiceModel>  
+\<services>  
 \<service >  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -49,14 +37,14 @@ L'élément `service` contient les paramètres d'un service Windows Communicatio
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<point de terminaison >](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md)|Collection d'éléments `endpoint` qui exposent ce service.|  
+|[\<endpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md)|Collection d'éléments `endpoint` qui exposent ce service.|  
 |[\<hôte >](../../../../../docs/framework/configure-apps/file-schema/wcf/host.md)|Spécifie l'hôte de cette instance de service. Cet élément est de type <xref:System.ServiceModel.Configuration.HostElement>.|  
   
 ### <a name="parent-elements"></a>Éléments parents  
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<Services >](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md)|Élément racine de tous les éléments de configuration WCF.|  
+|[\<services>](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md)|Élément racine de tous les éléments de configuration WCF.|  
   
 ## <a name="remarks"></a>Notes  
  Les services sont définis dans la section `services` du fichier de configuration. Un assembly peut contenir n'importe quel nombre de services. Chacun dispose de sa propre section de configuration de `service`. Cette section et son contenu définissent le contrat de service, le comportement et les points de terminaison de ce service en particulier.  

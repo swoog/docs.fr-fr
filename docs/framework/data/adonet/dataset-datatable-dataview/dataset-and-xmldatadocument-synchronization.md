@@ -1,27 +1,15 @@
 ---
 title: Synchronisation DataSet et XmlDataDocument
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0ce3793d-54b2-47e4-8cf7-b0591cc4dd21
-caps.latest.revision: "5"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 9cdfdf01b950d13ba77f76b126fe6d2ff430ef07
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: cb16d4fae5dc153361fe2cb31cfd6af9b4b83c68
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dataset-and-xmldatadocument-synchronization"></a>Synchronisation DataSet et XmlDataDocument
 L'objet <xref:System.Data.DataSet> ADO.NET vous propose une représentation relationnelle des données. Pour un accès hiérarchique aux données, vous pouvez utiliser les classes XML disponibles dans le .NET Framework. Pour des raisons historiques, ces deux représentations des données ont jusqu'à présent été utilisées séparément. Toutefois, le .NET Framework permet un accès synchrone et en temps réel aux représentations relationnelles et hiérarchiques des données via le **DataSet** objet et le <xref:System.Xml.XmlDataDocument> de l’objet, respectivement.  
@@ -30,7 +18,7 @@ L'objet <xref:System.Data.DataSet> ADO.NET vous propose une représentation rela
   
  Il existe plusieurs méthodes que vous pouvez synchroniser un **DataSet** avec un **XmlDataDocument**. Vous pouvez :  
   
--   Remplir un **DataSet** avec un schéma (c'est-à-dire une structure relationnelle) et des données, puis le synchroniser avec un nouveau **XmlDataDocument**. Vous obtenez ainsi une vue hiérarchique des données relationnelles existantes. Exemple :  
+-   Remplir un **DataSet** avec un schéma (c'est-à-dire une structure relationnelle) et des données, puis le synchroniser avec un nouveau **XmlDataDocument**. Vous obtenez ainsi une vue hiérarchique des données relationnelles existantes. Par exemple :  
   
     ```vb  
     Dim dataSet As DataSet = New DataSet  

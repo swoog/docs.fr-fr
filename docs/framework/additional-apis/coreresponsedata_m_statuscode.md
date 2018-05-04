@@ -1,9 +1,6 @@
 ---
-title: CoreResponseData.m_StatusCode Field
+title: Champ de CoreResponseData.m_StatusCode
 ms.date: 01/29/2018
-ms.prod: .net-framework
-ms.technology: 
-ms.topic: reference
 topic_type:
 - apiref
 api_name:
@@ -13,19 +10,15 @@ api_location:
 api_type:
 - Assembly
 author: stevewhims
-ms.author: stwhi
-manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1630fe66152925120f5459276899b1d3e581f05e
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 53338c75d31cef3ab89879632710dba3e52091ad
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="coreresponsedatamstatuscode-field"></a>CoreResponseData.m\_StatusCode champ
 
-`CoreResponseData.m_StatusCode`est un <xref:System.Net.HttpStatusCode> contenant l’état de la réponse.
+`CoreResponseData.m_StatusCode` est un <xref:System.Net.HttpStatusCode> contenant l’état de la réponse.
 
 ## <a name="syntax"></a>Syntaxe
   
@@ -38,9 +31,9 @@ public HttpStatusCode m_StatusCode
 > 
 > Microsoft ne prend pas en charge l’utilisation de cette classe dans une application de production en toutes circonstances.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**Namespace :**<xref:System.Net>
+**Namespace :** <xref:System.Net>
 
 **Assembly :** système (dans System.dll)
 

@@ -1,24 +1,12 @@
 ---
-title: "Collections de schémas Oracle"
-ms.custom: 
+title: Collections de schémas Oracle
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 89a75de8-dee8-45e2-a97f-254d7e62e7e1
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 4f199a0fc0939bd5fae4fefb7440c46bd471e4b6
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: b86de542e425d6fdc56f238f90063988bee95ffa
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="oracle-schema-collections"></a>Collections de schémas Oracle
 Le fournisseur de données Microsoft .NET Framework pour Oracle prend en charge les collections de schémas spécifiques suivantes en plus des collections de schémas courantes.  
@@ -112,10 +100,10 @@ Le fournisseur de données Microsoft .NET Framework pour Oracle prend en charge 
 |LAST_ANALYZED|DateTime|Date à laquelle cet index a été analysé pour la dernière fois.|  
 |DEGREE|Chaîne|Nombre de threads par instance pour l'analyse de l'index.|  
 |INSTANCES|Chaîne|Nombre d'instances via lesquelles les index doivent être analysés.|  
-|PARTITIONED|Chaîne|Indique si l’index est partitionné (YES &#124; (NON).|  
+|PARTITIONED|Chaîne|Indique si l’index est partitionné (YES &#124; non).|  
 |TEMPORARY|Chaîne|Indique si l'index figure dans une table temporaire.|  
-|GENERATED|Chaîne|Si le nom de l’index est système généré (O &#124; N).|  
-|SECONDARY|Chaîne|Indique si l’index est un objet secondaire créé par la méthode ODCIIndexCreate de la cartouche de données Oracle9i (Y &#124; N).|  
+|GENERATED|Chaîne|Si le nom de l’index est générée par le système (Y&#124;N).|  
+|SECONDARY|Chaîne|Indique si l’index est un objet secondaire créé par la méthode ODCIIndexCreate de la cartouche de données Oracle9i (Y&#124;N).|  
 |BUFFER_POOL|Chaîne|Nom du pool de tampons par défaut à utiliser pour les blocs d'index.|  
 |USER_STATS|Chaîne|Indique si les statistiques ont été entrées directement par l'utilisateur.|  
 |DURATION|Chaîne|Indique la durée d'une table temporaire : 1)SYS$SESSION : les lignes sont préservées pour la durée de la session, 2) SYS$TRANSACTION : les lignes sont supprimées après COMMIT, 3) Null pour une table permanente.|  
@@ -156,7 +144,7 @@ Le fournisseur de données Microsoft .NET Framework pour Oracle prend en charge 
 |TIMESTAMP|Chaîne|Horodateur de la spécification de l'objet (données de type caractère).|  
 |STATUT|Chaîne|État de l'objet (VALID, INVALID ou N/A).|  
 |TEMPORARY|Chaîne|Indique si l'objet est temporaire (la session actuelle ne peut voir que les données placées dans cet objet proprement dit).|  
-|GENERATED|Chaîne|Le nom de cet objet a-t-il été généré par le système ? (Y &#124; N).|  
+|GENERATED|Chaîne|Le nom de cet objet a-t-il été généré par le système ? (Y &AMP;#124; N).|  
 |SECONDARY|Chaîne|S’il s’agit d’un objet secondaire créé par la méthode ODCIIndexCreate de la cartouche de données Oracle9i (Y &#124; N).|  
 |CREATED|DateTime|Date à laquelle l'objet a été créé.|  
   
@@ -231,7 +219,7 @@ Le fournisseur de données Microsoft .NET Framework pour Oracle prend en charge 
 |TIMESTAMP|Chaîne|Horodateur de la spécification de l'objet (données de type caractère).|  
 |STATUT|Chaîne|État de l'objet (VALID, INVALID ou N/A).|  
 |TEMPORARY|Chaîne|Indique si l'objet est temporaire (la session actuelle ne peut voir que les données placées dans cet objet proprement dit).|  
-|GENERATED|Chaîne|Le nom de cet objet a-t-il été généré par le système ? (Y &#124; N).|  
+|GENERATED|Chaîne|Le nom de cet objet a-t-il été généré par le système ? (Y &AMP;#124; N).|  
 |SECONDARY|Chaîne|S’il s’agit d’un objet secondaire créé par la méthode ODCIIndexCreate de la cartouche de données Oracle9i (Y &#124; N).|  
   
 ## <a name="packages"></a>Packages  
@@ -247,7 +235,7 @@ Le fournisseur de données Microsoft .NET Framework pour Oracle prend en charge 
 |TIMESTAMP|Chaîne|Horodateur de la spécification de l'objet (données de type caractère).|  
 |STATUT|Chaîne|État de l'objet (VALID, INVALID ou N/A).|  
 |TEMPORARY|Chaîne|Indique si l'objet est temporaire (la session actuelle ne peut voir que les données placées dans cet objet proprement dit).|  
-|GENERATED|Chaîne|Le nom de cet objet a-t-il été généré par le système ? (Y &#124; N).|  
+|GENERATED|Chaîne|Le nom de cet objet a-t-il été généré par le système ? (Y &AMP;#124; N).|  
 |SECONDARY|Chaîne|S’il s’agit d’un objet secondaire créé par la méthode ODCIIndexCreate de la cartouche de données Oracle9i (Y &#124; N).|  
 |CREATED|DateTime|Date à laquelle l'objet a été créé.|  
   
@@ -264,7 +252,7 @@ Le fournisseur de données Microsoft .NET Framework pour Oracle prend en charge 
 |TIMESTAMP|Chaîne|Horodateur de la spécification de l'objet (données de type caractère).|  
 |STATUT|Chaîne|État de l'objet (VALID, INVALID ou N/A).|  
 |TEMPORARY|Chaîne|Indique si l'objet est temporaire (la session actuelle ne peut voir que les données placées dans cet objet proprement dit).|  
-|GENERATED|Chaîne|Le nom de cet objet a-t-il été généré par le système ? (Y &#124; N).|  
+|GENERATED|Chaîne|Le nom de cet objet a-t-il été généré par le système ? (Y &AMP;#124; N).|  
 |SECONDARY|Chaîne|S’il s’agit d’un objet secondaire créé par la méthode ODCIIndexCreate de la cartouche de données Oracle9i (Y &#124; N).|  
 |CREATED|DateTime|Date à laquelle l'objet a été créé.|  
   

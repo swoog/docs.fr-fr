@@ -1,29 +1,17 @@
 ---
-title: "Liaison de données et LINQ to DataSet"
-ms.custom: 
+title: Liaison de données et LINQ to DataSet
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 310bff4a-32dd-4f20-a271-6dbd82912631
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 2da2bc39fc1a2df7dd440292b2abc8e7113c8033
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: e82cc5ecfc1272cfb4594cb556fa9455a7ea7813
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-binding-and-linq-to-dataset"></a>Liaison de données et LINQ to DataSet
 *Liaison de données* est le processus qui établit une connexion entre l’interface utilisateur d’application et la logique métier. Si la liaison est correctement paramétrée et si les données fournissent les notifications appropriées, lorsque les données changent de valeur, les éléments qui sont liés aux données reflètent automatiquement ces changements. Le <xref:System.Data.DataSet> est une représentation de données résidente en mémoire qui propose un modèle de programmation relationnel cohérent, quelle que soit la source des données qu'il contient. Le <xref:System.Data.DataView> ADO.NET 2.0 vous permet de trier et de filtrer les données stockées dans un <xref:System.Data.DataTable>. Cette fonctionnalité est souvent utilisée dans les applications de liaison de données. En utilisant un <xref:System.Data.DataView>, vous pouvez présenter les données d'une table en appliquant différents ordres de tri et filtrer les données en fonction d'un état de ligne ou d'une expression de filtre. Pour plus d’informations sur la <xref:System.Data.DataView> d’objets, consultez [DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md).  
   
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]permet aux développeurs de créer des requêtes complexes et puissantes sur un <xref:System.Data.DataSet> à l’aide de [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]. Toutefois, un [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] requête retourne une énumération de <xref:System.Data.DataRow> objets, qui n’est pas facilement utilisé dans un scénario de liaison. Pour simplifier la liaison, vous pouvez créer un <xref:System.Data.DataView> d’un [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] requête. Cela <xref:System.Data.DataView> utilise le filtrage et tri spécifiées dans la requête, mais est mieux adapté pour la liaison de données. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]étend les fonctionnalités de la <xref:System.Data.DataView> en fournissant [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] basé sur une expression de filtrage et de tri, ce qui permet de beaucoup plus complexes et puissantes que le filtrage et tri des opérations que le filtrage et le tri basé sur chaîne.  
+ [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] permet aux développeurs de créer des requêtes complexes et puissantes sur un <xref:System.Data.DataSet> à l’aide de [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]. Toutefois, un [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] requête retourne une énumération de <xref:System.Data.DataRow> objets, qui n’est pas facilement utilisé dans un scénario de liaison. Pour simplifier la liaison, vous pouvez créer un <xref:System.Data.DataView> d’un [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] requête. Cela <xref:System.Data.DataView> utilise le filtrage et tri spécifiées dans la requête, mais est mieux adapté pour la liaison de données. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] étend les fonctionnalités de la <xref:System.Data.DataView> en fournissant [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] basé sur une expression de filtrage et de tri, ce qui permet de beaucoup plus complexes et puissantes que le filtrage et tri des opérations que le filtrage et le tri basé sur chaîne.  
   
  Notez que le <xref:System.Data.DataView> représente la requête elle-même et n'est pas une vue au-dessus de la requête. Le <xref:System.Data.DataView> est lié à un contrôle d'interface utilisateur, tel qu'un <xref:System.Windows.Forms.DataGrid> ou un <xref:System.Windows.Forms.DataGridView>, fournissant ainsi un modèle de liaison de données simple. Un <xref:System.Data.DataView> peut également être créé à partir d'un <xref:System.Data.DataTable>, fournissant ainsi une vue par défaut de cette table.  
   

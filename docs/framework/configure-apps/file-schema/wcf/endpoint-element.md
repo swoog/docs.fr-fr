@@ -1,29 +1,17 @@
 ---
-title: "&lt;endpoint&gt;, élément"
-ms.custom: 
+title: '&lt;endpoint&gt;, élément'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2fc8fedc-78d0-4e87-8142-fbfd26c15a4e
-caps.latest.revision: "23"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7175cf55df6bb735367effa8f806a472b9ce5ea6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ef436acca40eaac135a54042b62abd76ec55febf
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltendpointgt-element"></a>&lt;endpoint&gt;, élément
 Spécifie la liaison, le contrat et les propriétés d’adresse d’un point de terminaison de service, utilisé pour exposer des services.  
   
- \<système. ServiceModel >  
+ \<system.ServiceModel>  
 \<service >  
 \<point de terminaison >  
   
@@ -74,7 +62,7 @@ Spécifie la liaison, le contrat et les propriétés d’adresse d’un point de
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<service >](../../../../../docs/framework/configure-apps/file-schema/wcf/service.md)|Section de configuration qui définit une liste des points de terminaison auxquels un client peut se connecter.|  
+|[\<service>](../../../../../docs/framework/configure-apps/file-schema/wcf/service.md)|Section de configuration qui définit une liste des points de terminaison auxquels un client peut se connecter.|  
   
 ## <a name="example"></a>Exemple  
  Il s'agit d'un exemple de configuration de point de terminaison de service.  

@@ -1,29 +1,19 @@
 ---
-title: '&lt;met en cache&gt;'
-ms.custom: 
+title: '&lt;Caches&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4651091b-3a20-40d8-b293-4408c0710143
-caps.latest.revision: "7"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: b9dfa7b2f0952f3f9e224ad51fd4d9c0c263ce04
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2a9766b826eb7a708b4b4e99b6bd984f9fc76812
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltcachesgt"></a>&lt;met en cache&gt;
+# <a name="ltcachesgt"></a>&lt;Caches&gt;
 Inscrit le met en cache utilisés pour les jetons de session et de la détection de relecture de jetons.  
   
- \<system.identityModel >  
+ \<system.identityModel>  
 \<identityConfiguration >  
 \<met en cache >  
   
@@ -42,7 +32,7 @@ Inscrit le met en cache utilisés pour les jetons de session et de la détection
  Les sections suivantes décrivent des attributs, des éléments enfants et des éléments parents.  
   
 ### <a name="attributes"></a>Attributs  
- Aucun.  
+ Aucun  
   
 ### <a name="child-elements"></a>Éléments enfants  
   

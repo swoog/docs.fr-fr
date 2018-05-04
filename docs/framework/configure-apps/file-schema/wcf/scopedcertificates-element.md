@@ -1,33 +1,21 @@
 ---
-title: "&lt;scopedCertificates&gt;, élément"
-ms.custom: 
+title: '&lt;scopedCertificates&gt;, élément'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c7b6fc35-d4b2-4c18-98bd-83e09591f1d3
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 719a52fb1a0f558bda2b337e1402f8aecafc6b8d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d95e608fa9b94086dac72341eb599f258dae6097
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltscopedcertificatesgt-element"></a>&lt;scopedCertificates&gt;, élément
 Représente une collection de certificats X.509 fournie par les services spécifiques (étendus) à des fins d’authentification. Cette collection est utilisée en général pour spécifier les certificats de service pour les services d’émission de jeton de sécurité dans un scénario fédéré.  
   
- \<système. ServiceModel >  
+ \<system.ServiceModel>  
 \<comportements >  
 section d’endpointBehaviors  
 \<comportement >  
-\<clientCredentials >  
+\<clientCredentials>  
 \<serviceCertificate >  
 \<scopedCertificates > élément  
 \<Ajouter >, élément pour \<scopedCertificates >  
@@ -70,7 +58,7 @@ section d’endpointBehaviors
  Pour plus d’informations, consultez la section « Portée des certificats » de [Comment : créer un Client fédéré](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md).  
   
 ## <a name="example"></a>Exemple  
- L'exemple suivant spécifie un certificat de service que le client utilise au cours de communications avec les points de terminaison dont le nom de domaine est http://www.contoso.com sur le protocole HTTP.  
+ L’exemple suivant spécifie un certificat de service pour le client à utiliser lors de la communication avec les points de terminaison dont nom de domaine est http://www.contoso.com via le protocole HTTP.  
   
 ```xml  
 <serviceCertificate>  

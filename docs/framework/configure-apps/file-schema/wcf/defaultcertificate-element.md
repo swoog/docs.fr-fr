@@ -1,33 +1,21 @@
 ---
-title: "&lt;defaultCertificate&gt;, élément"
-ms.custom: 
+title: '&lt;defaultCertificate&gt;, élément'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f1ddf364-9a00-45d3-b989-ff381c154ce6
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: eeb4c1b010e2d446303e780966668fc8a6f5ddb7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a4af1c6ec452b24634fa50162fa71f069e2451f5
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltdefaultcertificategt-element"></a>&lt;defaultCertificate&gt;, élément
 Spécifie un certificat X.509 à utiliser lorsqu'un service ou un service d'émission de jeton de sécurité n'en fournit pas un via un protocole de négociation.  
   
- \<système. ServiceModel >  
+ \<system.ServiceModel>  
 \<comportements >  
 section d’endpointBehaviors  
 \<comportement >  
-\<clientCredentials >  
+\<clientCredentials>  
 \<serviceCertificate >  
 \<defaultCertificate >  
   
@@ -89,7 +77,7 @@ x509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/
  Pour les liaisons qui utilisent la sécurité de message basée sur des certificats, le certificat spécifié par cet élément de configuration est utilisé pour chiffrer les messages au service et doit être utilisé par le service pour signer les réponses au client. Il stocke un certificat unique à utiliser lorsqu'aucun certificat n'est spécifié par un service.  
   
 ## <a name="example"></a>Exemple  
- L'exemple suivant spécifie un certificat à utiliser pour les points de terminaison dont l'URI commence par http://www.contoso.com et un certificat à utiliser pour tous les autres points de terminaison qui n'exécutent pas la négociation de certificat.  
+ L’exemple suivant spécifie un certificat à utiliser pour les points de terminaison dont l’URI commence par http://www.contoso.com et un certificat à utiliser pour tous les autres points de terminaison qui n’effectuent pas de négociation de certificat.  
   
 ```xml  
 <serviceCertificate>  
@@ -112,6 +100,6 @@ x509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/
  <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>  
  <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.DefaultCertificate%2A>  
  [Utilisation des certificats](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [\<authentification >](../../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)  
+ [\<authentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)  
  [Sécurisation des clients](../../../../../docs/framework/wcf/securing-clients.md)  
  [Sécurisation des services et des clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

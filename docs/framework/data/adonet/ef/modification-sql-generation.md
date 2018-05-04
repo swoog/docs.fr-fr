@@ -1,24 +1,12 @@
 ---
-title: "Génération SQL de modification"
-ms.custom: 
+title: Génération SQL de modification
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 6696d80246d61cc2eac47266837d79661141b9b0
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: b7bb390fd4e221c70d5ed8da5873c557fcde3c98
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="modification-sql-generation"></a>Génération SQL de modification
 Cette section décrit la manière de développer un module de génération SQL de modification pour votre fournisseur (base de données conforme SQL:1999). Ce module doit traduire une arborescence de commandes de modification en instructions SQL INSERT, UPDATE ou DELETE appropriées.  
@@ -38,7 +26,7 @@ Cette section décrit la manière de développer un module de génération SQL d
   
  DbModificationCommandTree et ses implémentations produites par le [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] représentent toujours une opération de ligne unique. Cette section décrit ces types avec leurs contraintes dans .NET Framework version 3.5.  
   
- ![Diagram](../../../../../docs/framework/data/adonet/ef/media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")  
+ ![Diagramme](../../../../../docs/framework/data/adonet/ef/media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")  
   
  DbModificationCommandTree a une propriété Target qui représente le jeu de cibles pour l'opération de modification. La propriété d'expression de la cible, qui définit le jeu de données d'entrée, est toujours DbScanExpression.  Un DbScanExpression peut représenter une table ou une vue ou un jeu de données définies avec une requête si la propriété de métadonnées « Defining Query » de la cible est non null.  
   
@@ -115,7 +103,7 @@ The elements of the list are specified as type DbModificationClause, which speci
 ## <a name="generating-an-insert-sql-command"></a>Génération d'une commande SQL d'insertion  
  Pour un DbInsertCommandTree donné dans le fournisseur d'exemples, la commande d'insertion générée suit l'un des deux modèles d'insertion ci-dessous.  
   
- Le premier modèle possède une commande pour effectuer l'insertion selon les valeurs de la liste de SetClauses et une instruction SELECT pour retourner les propriétés spécifiées dans la propriété Returning pour la ligne insérée, si la propriété Returning n'a pas la valeur null. L’élément de prédicat « @@ROWCOUNT > 0 » a la valeur true si une ligne a été insérée. L’élément de prédicat « keyMemberI = keyValueI &#124; SCOPE_IDENTITY() » prend la forme « keyMemberI = scope_identity() » uniquement si Keymemberi est une clé générée par le magasin, parce que scope_identity() retourne la dernière valeur identity insérée dans une colonne d’identité (générée par le magasin).  
+ Le premier modèle possède une commande pour effectuer l'insertion selon les valeurs de la liste de SetClauses et une instruction SELECT pour retourner les propriétés spécifiées dans la propriété Returning pour la ligne insérée, si la propriété Returning n'a pas la valeur null. L’élément de prédicat « @@ROWCOUNT > 0 » a la valeur true si une ligne a été insérée. L’élément de prédicat « keyMemberI = keyValueI &#124; scope_identity() » prend la forme « keyMemberI = scope_identity() » uniquement si Keymemberi est une clé générée par le magasin, parce que scope_identity() retourne la dernière valeur identity insérée dans une (identité) colonne générée par le magasin).  
   
 ```  
 -- first insert Template  

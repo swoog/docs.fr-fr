@@ -1,29 +1,17 @@
 ---
 title: '&lt;add&gt; de &lt;baseAddressPrefixFilter&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b226bede-8459-4de9-b2ac-3d39604ce2bc
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ad6ad6f71ef015ad97a2688a7334e8a0c6e5af44
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 549574d0d6585a857f3e0979e814c827139c7536
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaddgt-of-ltbaseaddressprefixfiltergt"></a>&lt;add&gt; de &lt;baseAddressPrefixFilter&gt;
-Représente un élément de configuration spécifiant un filtre direct qui fournit un mécanisme permettant de sélectionner les liaisons des services IIS appropriées lors de l'hébergement d'une application [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] dans IIS.  
+Représente un élément de configuration qui spécifie un filtre direct qui fournit un mécanisme permettant de sélectionner les liaisons de Internet Information Services (IIS) appropriées lors de l’hébergement d’une application Windows Communication Foundation (WCF) dans IIS.  
   
- \<système. ServiceModel >  
+ \<system.ServiceModel>  
 \<ServiceHostingEnvironment >  
 \<baseAddressPrefixFilters >  
 \<add>  
@@ -54,7 +42,7 @@ Représente un élément de configuration spécifiant un filtre direct qui fourn
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<baseAddressPrefixFilters >](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md)|Collection d'éléments de configuration spécifiant des filtres directs qui fournissent un mécanisme permettant de sélectionner les liaisons de services IIS appropriées lors de l'hébergement d'une l'application [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] dans IIS.|  
+|[\<baseAddressPrefixFilters >](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md)|Une collection d’éléments de configuration qui spécifient des filtres directs qui fournissent un mécanisme permettant de sélectionner les liaisons IIS appropriées lors de l’hébergement d’une application Windows Communication Foundation (WCF) dans IIS.|  
   
 ## <a name="remarks"></a>Notes  
  Un filtre de préfixe permet aux fournisseurs d'hébergement partagé de spécifier les URI que le service doit utiliser. Il permet aux hôtes partagés d'héberger plusieurs applications avec différentes adresses de base pour la même méthode sur le même site.  
@@ -94,4 +82,4 @@ http://test2.fabrikam.com/Service.svc
  <xref:System.ServiceModel.Configuration.BaseAddressPrefixFilterElement>  
  <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>  
  <xref:System.ServiceModel.ServiceHostingEnvironment>  
- [Hébergement d’applications WPF](../../../../../docs/framework/wcf/feature-details/hosting.md)
+ [Hébergement](../../../../../docs/framework/wcf/feature-details/hosting.md)

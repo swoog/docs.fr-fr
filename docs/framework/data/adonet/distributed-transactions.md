@@ -1,24 +1,12 @@
 ---
-title: "Transactions distribuées"
-ms.custom: 
+title: Transactions distribuées
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 718b257c-bcb2-408e-b004-a7b0adb1c176
-caps.latest.revision: "7"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c2de777dbd8bf6ac18db95a1cf647d259a252f8d
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 7792a719a73ca5183d57bcecc5d346153d824570
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="distributed-transactions"></a>Transactions distribuées
 Une transaction est un ensemble de tâches liées entre elles qui échouent (abort) ou sont validées (commit) globalement, entre autres choses. A *distributed transaction* est une transaction qui affecte plusieurs ressources. Pour qu’une transaction distribuée soit validée, l’ensemble des participants doivent garantir que tout changement apporté aux données sera permanent. Ces modifications doivent persister même en cas de panne du système ou de tout autre événement imprévu. Il suffit qu'un seul des participants n'apporte pas cette garantie pour que l'ensemble de la transaction échoue et toutes les modifications apportées aux données dans le cadre de la transaction sont annulées.  
@@ -44,7 +32,7 @@ Une transaction est un ensemble de tâches liées entre elles qui échouent (abo
   
  L'inscription dans des transactions distribuées s'applique en particulier lors du regroupement d'objets métier. Si un objet métier est regroupé avec une connexion ouverte, l'inscription automatique dans la transaction se produit uniquement lorsque cette connexion est ouverte. Si plusieurs transactions sont effectuées à l'aide de l'objet métier regroupé, la connexion ouverte pour cet objet n'est pas automatiquement inscrite dans les nouvelles transactions lancées. Dans ce cas, vous pouvez désactiver l'inscription de transaction automatique pour la connexion et inscrire la connexion dans des transactions à l'aide de `EnlistTransaction`.  
   
- `EnlistTransaction`accepte un seul argument de type <xref:System.Transactions.Transaction> qui est une référence à la transaction existante. Après avoir appelé la méthode `EnlistTransaction` de la connexion, toutes les modifications apportées à la source de données à l'aide de la connexion sont incluses dans la transaction. Le fait de passer une valeur null désinscrit la connexion de l'inscription de transaction distribuée actuelle. Notez que la connexion doit être ouverte avant l'appel de `EnlistTransaction`.  
+ `EnlistTransaction` accepte un seul argument de type <xref:System.Transactions.Transaction> qui est une référence à la transaction existante. Après avoir appelé la méthode `EnlistTransaction` de la connexion, toutes les modifications apportées à la source de données à l'aide de la connexion sont incluses dans la transaction. Le fait de passer une valeur null désinscrit la connexion de l'inscription de transaction distribuée actuelle. Notez que la connexion doit être ouverte avant l'appel de `EnlistTransaction`.  
   
 > [!NOTE]
 >  Une fois qu'une connexion est explicitement inscrite sur une transaction, il n'est plus possible de la désinscrire ou de l'inscrire dans une autre transaction tant que la première transaction n'est pas terminée.  

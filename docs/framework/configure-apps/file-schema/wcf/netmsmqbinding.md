@@ -1,30 +1,18 @@
 ---
 title: '&lt;netMsmqBinding&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a68b44d7-7799-43a3-9e63-f07c782810a6
-caps.latest.revision: "35"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e8f18988568d9b634b3ae5ec92d746c08ff00e77
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: d4d28a799acecd335d8155a7ae67b6365b3f0023
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltnetmsmqbindinggt"></a>&lt;netMsmqBinding&gt;
 Définit une liaison mise en file d’attente adaptée à la communication entre ordinateurs.  
   
  \<system.ServiceModel>  
-\<bindings>  
+\<liaisons >  
 \<netMsmqBinding>  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -90,7 +78,7 @@ Définit une liaison mise en file d’attente adaptée à la communication entre
 |`retryCycleDelay`|Valeur TimeSpan qui spécifie l'intervalle entre les cycles de nouvelles tentatives de remise d'un message n'ayant pas pu être remis immédiatement. Cette valeur définit uniquement le délai d'attente minimum, car le temps d'attente réel peut être plus long. La valeur par défaut est 00:10:00. Pour plus d'informations, consultez <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A>.|  
 |`sendTimeout`|<xref:System.TimeSpan> qui spécifie l'intervalle de temps prévu pour la réalisation d'une opération d'envoi. Cette valeur doit être supérieure ou égale à <xref:System.TimeSpan.Zero>. La valeur par défaut est 00:01:00.|  
 |`timeToLive`|Valeur TimeSpan qui spécifie la durée de validité des messages avant leur expiration et leur déplacement dans la file d'attente de lettres mortes. La valeur par défaut est 1.00:00:00.<br /><br /> Cet attribut est configuré de façon à garantir que les messages dépendants de l'heure n'expirent pas avant d'être traités par les applications de réception. Un message dans une file d'attente qui n'est pas consommé par l'application de réception dans l'intervalle de temps spécifié est considéré comme ayant expiré. Les messages ayant expiré sont envoyés dans une file d'attente spéciale appelée file d'attente de lettres mortes. L'emplacement de cette file d'attente est défini par l'attribut `DeadLetterQueue` ou par la valeur par défaut appropriée, en fonction des garanties utilisées.|  
-|`usingActiveDirectory`|Valeur booléenne qui spécifie si les adresses mises en file d'attente doivent être converties à l'aide d'Active Directory.<br /><br /> Les adresses de file d'attente MSMQ peuvent se composer de noms de chemin d'accès ou de noms de format direct. Avec un nom de format direct, MSMQ résout le nom de l'ordinateur à l'aide de DNS, NetBIOS ou IP. Avec un nom de chemin d'accès, MSMQ résout le nom de l'ordinateur à l'aide d'Active Directory.<br /><br /> Par défaut, le transport de mise en file d'attente [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] convertit l'URI d'une file d'attente de messages en nom de format direct. En affectant la valeur true à la propriété `UseActiveDirectory`, une application peut spécifier que le transport de mise en file d'attente doit résoudre le nom de l'ordinateur à l'aide d'Active Directory plutôt qu'à l'aide de DNS, NetBIOS ou IP.|  
+|`usingActiveDirectory`|Valeur booléenne qui spécifie si les adresses mises en file d'attente doivent être converties à l'aide d'Active Directory.<br /><br /> Les adresses de file d'attente MSMQ peuvent se composer de noms de chemin d'accès ou de noms de format direct. Avec un nom de format direct, MSMQ résout le nom de l'ordinateur à l'aide de DNS, NetBIOS ou IP. Avec un nom de chemin d’accès, MSMQ résout le nom de l’ordinateur à l’aide d’Active Directory.<br /><br /> Par défaut, Windows Communication Foundation (WCF) en file d’attente de transport convertit l’URI d’une file d’attente de message pour un nom de format direct. En affectant la valeur true à la propriété `UseActiveDirectory`, une application peut spécifier que le transport de mise en file d'attente doit résoudre le nom de l'ordinateur à l'aide d'Active Directory plutôt qu'à l'aide de DNS, NetBIOS ou IP.|  
 |`useMsmqTracing`|Valeur booléenne indiquant si les messages traités par cette liaison doivent être suivis. La valeur par défaut est `false`. Lorsque le suivi est activé, des messages de rapport sont créés et envoyés à la file d'attente de rapports chaque fois que le message quitte ou atteint un ordinateur Message Queuing.|  
 |`useSourceJournal`|Valeur booléenne qui spécifie si les copies de messages traitées par cette liaison doivent être stockées dans le journal source. La valeur par défaut est `false`.<br /><br /> Les applications en file d'attente souhaitant conserver une trace des messages qui ont quitté la file d'attente sortante de l'ordinateur peuvent copier les messages dans une file d'attente de journal. Une fois qu'un message quitte la file d'attente sortante et qu'un accusé de réception est envoyé par l'ordinateur de destination, une copie du message est conservée dans la file d'attente du journal système de l'ordinateur émetteur.|  
   
@@ -99,13 +87,13 @@ Définit une liaison mise en file d’attente adaptée à la communication entre
 |Élément|Description|  
 |-------------|-----------------|  
 |[\<readerQuotas>](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Définit les contraintes sur la complexité des messages SOAP pouvant être traités par les points de terminaison configurés avec cette liaison. Cet élément est de type <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netmsmqbinding.md)|Définit les paramètres de sécurité de la liaison. Cet élément est de type <xref:System.ServiceModel.Configuration.NetMsmqSecurityElement>.|  
+|[\<sécurité >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netmsmqbinding.md)|Définit les paramètres de sécurité de la liaison. Cet élément est de type <xref:System.ServiceModel.Configuration.NetMsmqSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Éléments parents  
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Cet élément conserve une collection de liaisons standard et personnalisées.|  
+|[\<liaisons >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Cet élément conserve une collection de liaisons standard et personnalisées.|  
   
 ## <a name="remarks"></a>Notes  
  La liaison `netMsmqBinding` fournit la prise en charge de la mise en file d'attente en utilisant MSMQ (Microsoft Message Queuing) comme transport et active la prise en charge des applications faiblement couplées, de l'isolation de défaillance, du nivellement de charge et des opérations hors circuit. Pour une description de ces fonctionnalités, consultez [les files d’attente dans WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md).  
@@ -147,7 +135,7 @@ Définit une liaison mise en file d’attente adaptée à la communication entre
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.ServiceModel.NetMsmqBinding>  
  <xref:System.ServiceModel.Configuration.NetMsmqBindingElement>  
- [\<binding>](../../../../../docs/framework/misc/binding.md)  
+ [\<liaison >](../../../../../docs/framework/misc/binding.md)  
  [Liaisons](../../../../../docs/framework/wcf/bindings.md)  
  [Configuration des liaisons fournies par le système](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [Utilisation de liaisons pour configurer les Clients et les Services Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  

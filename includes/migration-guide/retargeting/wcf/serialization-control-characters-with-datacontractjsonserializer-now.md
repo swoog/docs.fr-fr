@@ -3,7 +3,7 @@
 |   |   |
 |---|---|
 |Détails|Dans .NET Framework 4.6.2 et antérieur, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=name> ne sérialisait pas certains caractères de contrôle spéciaux, comme \b, \f et \t, d’une manière compatible avec les normes ECMAScript V6 et V8. À compter de .NET Framework 4.7, la sérialisation de ces caractères de contrôle est compatible avec ECMAScript V6 et V8.|
-|Suggestion|Pour les applications qui ciblent .NET. Framework 4.7, cette fonctionnalité est activée par défaut. Si ce comportement n’est pas souhaitable, vous pouvez désactiver cette fonctionnalité en ajoutant la ligne suivante à la section <code>&lt;runtime&gt;</code> du fichier app.config ou au fichier web.config :<pre><code class="language-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Runtime.Serialization.DoNotUseECMAScriptV6EscapeControlCharacter=false&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>|
+|Suggestion|Pour les applications qui ciblent .NET. Framework 4.7, cette fonctionnalité est activée par défaut. Si ce comportement n’est pas souhaitable, vous pouvez désactiver cette fonctionnalité en ajoutant la ligne suivante à la section <code>&lt;runtime&gt;</code> du fichier app.config ou au fichier web.config :<pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Runtime.Serialization.DoNotUseECMAScriptV6EscapeControlCharacter=false&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>|
 |Portée|Microsoft Edge|
 |Version|4.7|
 |Type|Reciblage|

@@ -1,26 +1,12 @@
 ---
 title: Différences entre Entity SQL et Transact-SQL
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 9c9ee36d-f294-4c8b-a196-f0114c94f559
-caps.latest.revision: ''
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3f80ec1ac51dded1f91d1a18c4d4e24836cf92cd
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: d34c6933e0f19c73b954446fdf18cea7243eae0d
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-entity-sql-differs-from-transact-sql"></a>Différences entre Entity SQL et Transact-SQL
 Cette rubrique décrit les différences entre [!INCLUDE[esql](../../../../../../includes/esql-md.md)] et [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)].  
@@ -31,7 +17,7 @@ Cette rubrique décrit les différences entre [!INCLUDE[esql](../../../../../../
  Lors de l’utilisation de l’héritage, il est souvent utile de sélectionner des instances d’un sous-type à partir d’une collection d’instances de supertype. Le [oftype](../../../../../../docs/framework/data/adonet/ef/language-reference/oftype-entity-sql.md) opérateur dans [!INCLUDE[esql](../../../../../../includes/esql-md.md)] (semblable à `oftype` dans les séquences c#) fournit cette fonctionnalité.  
   
 ## <a name="support-for-collections"></a>Prise en charge des collections  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] traite les collections en tant qu’entités de première classe. Exemple :  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] traite les collections en tant qu’entités de première classe. Par exemple :  
   
 -   Les expressions de collection sont valides dans une clause `from`.  
   

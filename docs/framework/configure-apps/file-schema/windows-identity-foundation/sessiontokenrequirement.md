@@ -1,31 +1,21 @@
 ---
 title: '&lt;sessionTokenRequirement&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 496a1735-cbb7-49d5-a6aa-dd5550462073
-caps.latest.revision: "3"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 5a141dd83cb7ef1271906871097eb68da174d22f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6c40948633eaf892db06e9bba756158dfc3c4a2e
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsessiontokenrequirementgt"></a>&lt;sessionTokenRequirement&gt;
 Fournit la configuration pour la <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> classe ou les classes dérivées.  
   
- \<system.identityModel >  
+ \<system.identityModel>  
 \<identityConfiguration >  
-\<securityTokenHandlers >  
+\<securityTokenHandlers>  
 \<add>  
 \<sessionTokenRequirement >  
   
@@ -54,7 +44,7 @@ Fournit la configuration pour la <xref:System.IdentityModel.Tokens.SessionSecuri
 |durée de vie|Spécifie la durée de vie des jetons de session.|  
   
 ### <a name="child-elements"></a>Éléments enfants  
- Aucun.  
+ Aucun  
   
 ### <a name="parent-elements"></a>Éléments parents  
   

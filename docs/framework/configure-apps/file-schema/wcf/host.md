@@ -1,30 +1,18 @@
 ---
-title: "&lt;ordinateur hôte&gt;"
-ms.custom: 
+title: '&lt;Ordinateur hôte&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: be566d55-9d50-4b2e-985d-52a5cc26cbbb
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7177c62af8501258ad8709bff88cb85488b56727
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9c48fff7473449192887bfd8cc201dd87cb4e7f7
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="lthostgt"></a>&lt;ordinateur hôte&gt;
+# <a name="lthostgt"></a>&lt;Ordinateur hôte&gt;
 Spécifie les paramètres d'un hôte de service.  
   
- \<système. ServiceModel >  
-\<Services >  
+ \<system.ServiceModel>  
+\<services>  
 \<service >  
 \<hôte >  
   
@@ -60,9 +48,9 @@ Spécifie les paramètres d'un hôte de service.
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<service >](../../../../../docs/framework/configure-apps/file-schema/wcf/service.md)|Spécifie les paramètres d'un service [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].|  
+|[\<service>](../../../../../docs/framework/configure-apps/file-schema/wcf/service.md)|Spécifie les paramètres pour un service Windows Communication Foundation (WCF).|  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.ServiceModel.Configuration.HostElement>  
  <xref:System.ServiceModel.ServiceHost>  
- [Hébergement d’applications WPF](../../../../../docs/framework/wcf/feature-details/hosting.md)
+ [Hébergement](../../../../../docs/framework/wcf/feature-details/hosting.md)

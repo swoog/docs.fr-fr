@@ -1,33 +1,21 @@
 ---
-title: "&lt;message&gt;, élément de &lt;netTcpBinding&gt;"
-ms.custom: 
+title: '&lt;message&gt;, élément de &lt;netTcpBinding&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1d71edd9-c085-4c2e-b6d3-980c313366f9
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ab40ab1cd889665829e42072803010ad49e717a9
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 4e05182d40348b215f39bb85e0848ed608dcdf16
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltmessagegt-element-of-ltnettcpbindinggt"></a>&lt;message&gt;, élément de &lt;netTcpBinding&gt;
 Définit le type d’exigences de sécurité au niveau du message pour un point de terminaison configuré avec la [ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).  
   
  \<system.ServiceModel>  
-\<bindings>  
+\<liaisons >  
 \<netTcpBinding>  
-\<binding>  
-\<security>  
+\<liaison >  
+\<sécurité >  
 \<message>  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -80,13 +68,13 @@ Définit le type d’exigences de sécurité au niveau du message pour un point 
 |IssuedToken|Spécifie un jeton personnalisé, généralement émis par un service de jeton de sécurité (STS).|  
   
 ### <a name="child-elements"></a>Éléments enfants  
- Aucun.  
+ Aucun  
   
 ### <a name="parent-elements"></a>Éléments parents  
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)|Définit les fonctionnalités de sécurité pour le <xref:System.ServiceModel.Configuration.NetTcpBindingElement>.|  
+|[\<sécurité >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)|Définit les fonctionnalités de sécurité pour le <xref:System.ServiceModel.Configuration.NetTcpBindingElement>.|  
   
 ## <a name="remarks"></a>Notes  
  Le message utilise la sécurité au niveau du message pour l'intégrité et la confidentialité du message SOAP, ainsi que pour l'authentification mutuelle des homologues de communication. Si ce mode de sécurité est sélectionné sur une liaison, la pile de canaux est configurée avec les éléments de liaison de sécurité du message et les messages SOAP sont sécurisés conformément aux normes WS-Security*.  
@@ -100,4 +88,4 @@ Définit le type d’exigences de sécurité au niveau du message pour un point 
  [Liaisons](../../../../../docs/framework/wcf/bindings.md)  
  [Configuration des liaisons fournies par le système](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [Utilisation de liaisons pour configurer les Clients et les Services Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)
+ [\<liaison >](../../../../../docs/framework/misc/binding.md)

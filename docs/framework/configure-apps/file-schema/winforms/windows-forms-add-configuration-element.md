@@ -1,26 +1,17 @@
 ---
-title: "Windows Forms ajoutent l’élément de Configuration"
-ms.custom: 
+title: Windows Forms ajoutent l’élément de Configuration
 ms.date: 04/07/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms Add configuration element
 - configuring Windows Forms applications
 ms.assetid: 3e3e04de-99d1-4658-b716-44cb669d9589
-caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 331b2238ae87776938422484d34bb68b4653a56e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 529dbccd5ddb4dd1f1456fb9a6043f3c5f7b378d
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="windows-forms-add-configuration-element"></a>Windows Forms ajoutent l’élément de Configuration
 
@@ -45,19 +36,19 @@ Les sections suivantes décrivent des attributs, des éléments enfants et des �
 | `key`     | Attribut requis. Nom de clé prédéfini qui correspond à une fonctionnalité personnalisable particulière de Windows Forms. |
 | `value`   | Attribut requis. La valeur à affecter au `key`. |
 
-### <a name="key-attribute-names-and-associated-values"></a>`key`noms d’attributs et valeurs associées
+### <a name="key-attribute-names-and-associated-values"></a>`key` noms d’attributs et valeurs associées
 
 | Nom `key` | Valeurs | Description |
 | ---------- | ------ | ----------- |
-| « AnchorLayout.DisableSinglePassControlScaling » | « true » &#124; » False » | Indique si les contrôles ancrés sont mis à l’échelle en un seul passage. passer des « true » pour désactiver la seule mise à l’échelle ; Sinon, false. Consultez la section « Unique pass mise à l’échelle » dans le [remarques](#Remarks) pour plus d’informations. |
-| « DpiAwareness » | « PerMonitorV2 » &#124; » False » | Indique si une application prend en charge DPI. Définir la clé « PerMonitorV2 » pour prendre en charge une reconnaissance de résolution ; Sinon, affectez-lui la valeur « false ». Reconnaissance de résolution est une fonctionnalité d’abonnement ; Pour tirer parti de la prise en charge DPI élevée de Windows Forms, vous devez définir sa valeur sur « PerMonitorV2 ». Consultez le [notes](#remarks) section pour plus d’informations. |
-| « CheckedListBox.DisableHighDpiImprovements » | « true » &#124; » False » | Indique si le <xref:System.Windows.Forms.CheckedListBox> contrôle tire parti de la mise à l’échelle et la disposition des améliorations introduites dans le 4.7 Framework .NET. « true » pour ne pas les améliorations de mise en page et caling ; Sinon, « false ». |
-| « DataGridView.DisableHighDpiImprovements » | « true » &#124; » False » | Indique si le <xref:System.Windows.Forms.DataGridView> contrôler la mise à l’échelle et la disposition des améliorations introduites dans le 4.7 Framework .NET. « true » pour quitter la reconnaissance de résolution ; « false » dans le cas contraire. |
-| « DisableDpiChangedMessageHandling » | « true » &#124; » False » | « true » pour refuser de recevoir des messages relatifs à l’échelle des modifications ; résolution « false » dans le cas contraire. Consultez le [notes](#remarks) section pour plus d’informations. |
-| « EnableWindowsFormsHighDpiAutoResizing » | « true » &#124; » False » | Indique si une application Windows Forms est automatiquement redimensionnée en raison de modifications de mise à l’échelle PPP. « true » pour activer le redimensionnement automatique ; Sinon, false. |
-| « Form.DisableSinglePassControlScaling » | « true » &#124; » False » | Indique si le <xref:System.Windows.Forms.Form> est mis à l’échelle en un seul passage. simple-pass « true » pour désactiver la mise à l’échelle ; Sinon, false. Consultez la section « Unique pass mise à l’échelle » dans le [remarques](#Remarks) pour plus d’informations. |
-| « MonthCalendar.DisableSinglePassControlScaling » | « true » &#124; » False » | Indique si le <xref:System.Windows.Forms.MonthCalendar> contrôle est mis à l’échelle en un seul passage. simple-pass « true » pour désactiver la mise à l’échelle ; Sinon, false. Consultez la section « Unique pass mise à l’échelle » dans le [remarques](#Remarks) pour plus d’informations. |
-| « Toolstrip.DisableHighDpiImprovements » | « true » &#124; » False » | Indique si le <xref:System.Windows.Forms.ToolStrip> contrôle tire parti de la mise à l’échelle et la disposition des améliorations introduites dans le 4.7 Framework .NET. « true » pour quitter la reconnaissance de résolution ; « false » dans le cas contraire. |
+| « AnchorLayout.DisableSinglePassControlScaling » | « true »&#124;« false » | Indique si les contrôles ancrés sont mis à l’échelle en un seul passage. passer des « true » pour désactiver la seule mise à l’échelle ; Sinon, false. Consultez la section « Unique pass mise à l’échelle » dans le [remarques](#Remarks) pour plus d’informations. |
+| « DpiAwareness » | « PerMonitorV2 »&#124;« false » | Indique si une application prend en charge DPI. Définir la clé « PerMonitorV2 » pour prendre en charge une reconnaissance de résolution ; Sinon, affectez-lui la valeur « false ». Reconnaissance de résolution est une fonctionnalité d’abonnement ; Pour tirer parti de la prise en charge DPI élevée de Windows Forms, vous devez définir sa valeur sur « PerMonitorV2 ». Consultez le [notes](#remarks) section pour plus d’informations. |
+| « CheckedListBox.DisableHighDpiImprovements » | « true »&#124;« false » | Indique si le <xref:System.Windows.Forms.CheckedListBox> contrôle tire parti de la mise à l’échelle et la disposition des améliorations introduites dans le 4.7 Framework .NET. « true » pour ne pas les améliorations de mise en page et caling ; Sinon, « false ». |
+| « DataGridView.DisableHighDpiImprovements » | « true »&#124;« false » | Indique si le <xref:System.Windows.Forms.DataGridView> contrôler la mise à l’échelle et la disposition des améliorations introduites dans le 4.7 Framework .NET. « true » pour quitter la reconnaissance de résolution ; « false » dans le cas contraire. |
+| « DisableDpiChangedMessageHandling » | « true »&#124;« false » | « true » pour refuser de recevoir des messages relatifs à l’échelle des modifications ; résolution « false » dans le cas contraire. Consultez le [notes](#remarks) section pour plus d’informations. |
+| « EnableWindowsFormsHighDpiAutoResizing » | « true »&#124;« false » | Indique si une application Windows Forms est automatiquement redimensionnée en raison de modifications de mise à l’échelle PPP. « true » pour activer le redimensionnement automatique ; Sinon, false. |
+| « Form.DisableSinglePassControlScaling » | « true »&#124;« false » | Indique si le <xref:System.Windows.Forms.Form> est mis à l’échelle en un seul passage. simple-pass « true » pour désactiver la mise à l’échelle ; Sinon, false. Consultez la section « Unique pass mise à l’échelle » dans le [remarques](#Remarks) pour plus d’informations. |
+| « MonthCalendar.DisableSinglePassControlScaling » | « true »&#124;« false » | Indique si le <xref:System.Windows.Forms.MonthCalendar> contrôle est mis à l’échelle en un seul passage. simple-pass « true » pour désactiver la mise à l’échelle ; Sinon, false. Consultez la section « Unique pass mise à l’échelle » dans le [remarques](#Remarks) pour plus d’informations. |
+| « Toolstrip.DisableHighDpiImprovements » | « true »&#124;« false » | Indique si le <xref:System.Windows.Forms.ToolStrip> contrôle tire parti de la mise à l’échelle et la disposition des améliorations introduites dans le 4.7 Framework .NET. « true » pour quitter la reconnaissance de résolution ; « false » dans le cas contraire. |
 
 ### <a name="child-elements"></a>Éléments enfants
 
@@ -69,7 +60,7 @@ Aucun.
 | ------- | ----------- |
 | [`<System.Windows.Forms.ApplicationConfigurationSection>`](../../../../../docs/framework/configure-apps/file-schema/winforms/index.md) | Configure la prise en charge des nouvelles fonctionnalités d’application Windows Forms. |
 
-## <a name="a-nameremarks--remarks"></a><a name="remarks" />Section Notes
+## <a name="a-nameremarks--remarks"></a><a name="remarks" /> Section Notes
 
 À compter du .NET Framework 4.7, l’élément `<System.Windows.Forms.ApplicationConfigurationSection>` vous permet de configurer des applications Windows Forms pour tirer parti des fonctionnalités ajoutées dans les dernières versions du .NET Framework. 
 

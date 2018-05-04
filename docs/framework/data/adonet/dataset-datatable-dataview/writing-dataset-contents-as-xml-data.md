@@ -1,27 +1,15 @@
 ---
-title: "Écriture du contenu d'un DataSet comme données XML"
-ms.custom: 
+title: Écriture du contenu d'un DataSet comme données XML
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: fd15f8a5-3b4c-46d0-a561-4559ab2a4705
-caps.latest.revision: "5"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 9b1250d616ad5835fccd1a3acbf0b8a759c34181
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 44afa79d715ef62bcbd1c242a533876d911345c8
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="writing-dataset-contents-as-xml-data"></a>Écriture du contenu d'un DataSet comme données XML
 Dans ADO.NET, vous pouvez écrire une représentation XML d'un objet<xref:System.Data.DataSet>, avec ou sans son schéma. Si les informations de schéma sont incluses inline avec le XML, elles sont écrites à l'aide du langage XSD (XML Schema Definition). Le schéma contient les définitions des tables de l'objet <xref:System.Data.DataSet>, ainsi que les définitions des relations et des contraintes.  
@@ -79,9 +67,9 @@ xmlSW.Close();
   
 |Valeur MappingType|Description|  
 |-----------------------|-----------------|  
-|**Élément**|Il s'agit de la valeur par défaut. La colonne est écrite sous la forme d'un élément XML, où ColumnName représente le nom de l'élément et le contenu de la colonne est écrit en tant que texte de l'élément. Exemple :<br /><br /> `<ColumnName>Column Contents</ColumnName>`|  
-|**Attribut**|La colonne est écrite sous la forme d'un attribut XML de l'élément XML de la ligne actuelle, où ColumnName représente le nom de l'attribut et le contenu de la colonne est écrit en tant que valeur de l'attribut. Exemple :<br /><br /> `<RowElement ColumnName="Column Contents" />`|  
-|**SimpleContent**|Le contenu de la colonne est écrit sous forme de texte dans l'élément XML de la ligne actuelle. Exemple :<br /><br /> `<RowElement>Column Contents</RowElement>`<br /><br /> Notez que **SimpleContent** ne peut pas être définie pour une colonne d’une table qui a **élément** colonnes ou des relations imbriquées.|  
+|**Élément**|Il s'agit de la valeur par défaut. La colonne est écrite sous la forme d'un élément XML, où ColumnName représente le nom de l'élément et le contenu de la colonne est écrit en tant que texte de l'élément. Par exemple :<br /><br /> `<ColumnName>Column Contents</ColumnName>`|  
+|**Attribut**|La colonne est écrite sous la forme d'un attribut XML de l'élément XML de la ligne actuelle, où ColumnName représente le nom de l'attribut et le contenu de la colonne est écrit en tant que valeur de l'attribut. Par exemple :<br /><br /> `<RowElement ColumnName="Column Contents" />`|  
+|**SimpleContent**|Le contenu de la colonne est écrit sous forme de texte dans l'élément XML de la ligne actuelle. Par exemple :<br /><br /> `<RowElement>Column Contents</RowElement>`<br /><br /> Notez que **SimpleContent** ne peut pas être définie pour une colonne d’une table qui a **élément** colonnes ou des relations imbriquées.|  
 |**Masqué**|La colonne n'est pas écrite dans la sortie XML.|  
   
 ## <a name="see-also"></a>Voir aussi  

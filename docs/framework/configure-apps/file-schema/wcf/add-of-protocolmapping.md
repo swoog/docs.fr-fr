@@ -1,29 +1,17 @@
 ---
 title: '&lt;add&gt; de &lt;protocolMapping&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 08e62249-1641-41d1-91b1-66d7b46244e4
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6a254b8a4de8f66cb0d051d246be2d07e905615a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: b9559a6921bdededf760f54f58abadb46612b174
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaddgt-of-ltprotocolmappinggt"></a>&lt;add&gt; de &lt;protocolMapping&gt;
-Représente un mappage de protocole par défaut entre un schéma de protocole de transport (par exemple, http, net.tcp, net.pipe, etc.) et un [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] liaison. Lors de la création de points de terminaison par défaut au moment de l'exécution, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] examine les mappages configurés et sélectionne une liaison à utiliser en tant qu'adresse de base.  
+Représente un mappage de protocole par défaut entre un schéma de protocole de transport (par exemple, http, net.tcp, net.pipe, etc.) et une liaison Windows Communication Foundation (WCF). Lors de la création de points de terminaison par défaut au moment de l'exécution, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] examine les mappages configurés et sélectionne une liaison à utiliser en tant qu'adresse de base.  
   
- \<system.serviceModel >  
+ \<system.serviceModel>  
 \<protocolMapping >  
 \<add>  
   
@@ -51,7 +39,7 @@ Représente un mappage de protocole par défaut entre un schéma de protocole de
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<protocolMapping >](../../../../../docs/framework/configure-apps/file-schema/wcf/protocolmapping.md)|Représente une section de configuration pour définir les mappages de protocole par défaut entre des schémas de protocole de transport (par exemple, http, net.tcp, net.pipe, etc.) et [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] liaisons.|  
+|[\<protocolMapping >](../../../../../docs/framework/configure-apps/file-schema/wcf/protocolmapping.md)|Représente une section de configuration pour définir les mappages de protocole par défaut entre les schémas de protocole de transport (par exemple, http, net.tcp, net.pipe, etc.) et les liaisons Windows Communication Foundation (WCF).|  
   
 ## <a name="example"></a>Exemple  
  L'exemple de configuration suivant montre le mappage de protocole par défaut dans le fichier machine.config. Vous pouvez remplacer ce mappage par défaut au niveau de l'ordinateur en modifiant le fichier machine.config. Ou, si vous souhaitez uniquement le remplacer dans la portée d'une application, vous pouvez remplacer cette section dans le fichier de configuration de votre application et modifier le mappage pour les schémas de protocole individuels.  

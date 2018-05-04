@@ -1,13 +1,6 @@
 ---
-title: "Développement de pipeline"
-ms.custom: 
+title: Développement de pipeline
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - add-in pipeline [.NET Framework], segments
 - activation path for add-ins [.NET Framework]
@@ -16,23 +9,20 @@ helpviewer_keywords:
 - add-in pipeline [.NET Framework], about
 - add-ins [.NET Framework], pipeline development
 ms.assetid: 932788f2-b87d-44cf-82f9-04492a8b2722
-caps.latest.revision: "31"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 33646bbd7b0043cb5fc036b9b11aa4cf37cd537f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 2d889b7de4bc766deda9b91877ceefb4aebfc551
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pipeline-development"></a>Développement de pipeline
 Le pipeline de complément est le chemin d’accès des segments de pipeline que l’application hôte et son complément doivent utiliser pour communiquer entre eux.  
   
  L’illustration suivante montre le pipeline de communication et ses segments.  
   
- ![Ajouter &#45; dans le modèle de pipeline. ] (../../../docs/framework/add-ins/media/addin1.png "AddIn1")  
+ ![Ajoutez&#45;dans le modèle de pipeline. ] (../../../docs/framework/add-ins/media/addin1.png "AddIn1")  
 Pipeline de complément  
   
  L’application hôte est à une extrémité du pipeline et le complément est à l’autre extrémité. À partir de chaque extrémité et le déplacement vers le milieu, l’application hôte et le complément ont une classe de base abstraite qui définit une vue du modèle d’objet qu’ils partagent. Ces types (classes) constituent le segment de pipeline de complément, la vue et la vue hôte du segment de pipeline de complément. Le segment de pipeline de complément, la vue contient souvent plus d’une classe abstraite, mais la classe héritant de la macro complémentaire est connue en tant que la base de complément.  
@@ -45,7 +35,7 @@ Pipeline de complément
   
  L’illustration suivante montre les types qui composent les segments de pipeline. Les noms des types indiqués dans l’illustration sont arbitraires, mais tous les types à l’exception de l’hôte et l’ordinateur hôte permet d’afficher les attributs du complément, requièrent afin qu’ils puissent être détectés par les méthodes qui génèrent une banque d’informations.  
   
- ![Ajouter &#45; dans le modèle avec des attributs requis sur les types. ] (../../../docs/framework/add-ins/media/addin-model.png "AddIn_Model")  
+ ![Ajoutez&#45;dans le modèle avec des attributs requis sur les types. ] (../../../docs/framework/add-ins/media/addin-model.png "AddIn_Model")  
 Pipeline de complément avec types  
   
  Le tableau suivant décrit les segments de pipeline pour l’activation d’un complément. Pour plus d’informations sur ces segments, consultez [contrats, les vues et les adaptateurs](http://msdn.microsoft.com/library/a6460173-9507-4b87-8c07-d4ee245d715c).  
@@ -63,7 +53,7 @@ Pipeline de complément avec types
 ## <a name="pipeline-activation-path"></a>Chemin d’Activation du pipeline  
  L’illustration suivante montre l’activation de types lorsqu’un complément est activé. Il montre également le passage d’objets à l’hôte, telles que les résultats d’un calcul ou une collection d’objets. Il s’agit du scénario le plus courant.  
   
- ![Ajouter &#45; dans le modèle avec le chemin d’accès d’activation. ] (../../../docs/framework/add-ins/media/addin6.png "AddIn6")  
+ ![Ajoutez&#45;dans le modèle avec le chemin d’accès d’activation. ] (../../../docs/framework/add-ins/media/addin6.png "AddIn6")  
 Chemin d’activation du complément à l’hôte  
   
  Le chemin d’accès de l’activation du pipeline se présente comme suit :  

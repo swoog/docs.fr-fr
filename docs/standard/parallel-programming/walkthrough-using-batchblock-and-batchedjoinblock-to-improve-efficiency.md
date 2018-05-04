@@ -17,11 +17,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c9ea53fb186551a24f678d905d35caaaa0c26494
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: e9305fd2a0e61a71f6875d6061f835e9cdae5dd1
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>Procédure pas à pas : utilisation de BatchBlock et de BatchedJoinBlock pour améliorer l'efficacité
 La bibliothèque de flux de données TPL comporte les classes <xref:System.Threading.Tasks.Dataflow.BatchBlock%601?displayProperty=nameWithType> et <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602?displayProperty=nameWithType>, qui permettent de recevoir et de mettre en mémoire tampon des données provenant d’une ou plusieurs sources, puis de les propager sous la forme d’une seule et même collection. Ce mécanisme de traitement par lot est utile pour collecter des données provenant d’une ou plusieurs sources, puis pour traiter par lot plusieurs éléments de données. Prenons par exemple une application qui utilise un flux de données pour insérer des enregistrements dans une base de données. Cette opération est plus efficace si plusieurs éléments sont insérés en même temps, plutôt qu’un à la fois successivement. Ce document explique comment utiliser la classe <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> afin d’améliorer l’efficacité de ces opérations d’insertion en base de données. Il montre également comment se servir de la classe <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> pour capturer les résultats et toutes les exceptions qui se produisent quand le programme lit des données à partir d’une base de données.
@@ -35,7 +35,7 @@ La bibliothèque de flux de données TPL comporte les classes <xref:System.Threa
 2.  Vérifiez que vous disposez d’une copie de la base de données Northwind, Northwind.sdf, sur votre ordinateur. Ce fichier se trouve généralement dans le dossier %Program Files%\Microsoft SQL Server Compact Edition\v3.5\Samples\\.  
   
     > [!IMPORTANT]
-    >  Dans certaines versions de Windows, il n’est pas possible de se connecter à Northwind.sdf si [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] est en mode non administrateur. Pour vous connecter à Northwind.sdf, démarrez [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ou une invite de commandes [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] en mode **Exécuter en tant qu’administrateur**.  
+    >  Dans certaines versions de Windows, il n’est pas possible de se connecter à Northwind.sdf si Visual Studio est en mode non administrateur. Pour vous connecter à Northwind.sdf, démarrez Visual Studio ou une invite de commandes Visual Studio en mode **Exécuter en tant qu’administrateur**.  
   
  Cette procédure pas à pas contient les sections suivantes :  
   
@@ -57,7 +57,7 @@ La bibliothèque de flux de données TPL comporte les classes <xref:System.Threa
 ## <a name="creating-the-console-application"></a>Créer l'application console  
   
 <a name="consoleApp"></a>   
-1.  Dans [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], créez un projet **Application console** Visual Basic ou Visual C#. Dans ce document, le projet est nommé `DataflowBatchDatabase`.  
+1.  Dans Visual Studio, créez un projet **Application console** en Visual C# ou en Visual Basic. Dans ce document, le projet est nommé `DataflowBatchDatabase`.  
   
 2.  Dans votre projet, ajoutez une référence à System.Data.SqlServerCe.dll et une autre à System.Threading.Tasks.Dataflow.dll.  
   

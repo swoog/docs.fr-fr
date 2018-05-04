@@ -15,11 +15,11 @@ ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
 caps.latest.revision: 43
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 58538b690958e11b1590c13e6709cac4109ef49d
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 51a92f89415fd3750d8d2e1880be0d9c2867600d
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>Vue d'ensemble de l'interopérabilité (Guide de programmation C#)
 Cette rubrique décrit les méthodes qui permettent une interopérabilité entre le code managé C# et le code non managé.  
@@ -42,7 +42,7 @@ Cette rubrique décrit les méthodes qui permettent une interopérabilité entre
   
 2.  Ajoutez au projet une référence au composant COM ou à la bibliothèque de types.  
   
-     Quand vous ajoutez la référence, [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] utilise le fichier [Tlbimp.exe (Type Library Importer)](../../../../docs/framework/tools/tlbimp-exe-type-library-importer.md), qui prend comme entrée une bibliothèque de types, pour générer un assembly d’interopérabilité .NET Framework. L’assembly, également appelé wrapper RCW, contient des classes et des interfaces managées qui encapsulent les classes et les interfaces COM qui se trouvent dans la bibliothèque de types. [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] ajoute au projet une référence à l’assembly généré.  
+     Quand vous ajoutez la référence, Visual Studio utilise le fichier [Tlbimp.exe (Type Library Importer)](../../../../docs/framework/tools/tlbimp-exe-type-library-importer.md), qui prend comme entrée une bibliothèque de types, pour générer un assembly d’interopérabilité .NET Framework. L’assembly, également appelé wrapper RCW, contient des classes et des interfaces managées qui encapsulent les classes et les interfaces COM qui se trouvent dans la bibliothèque de types. Visual Studio ajoute au projet une référence à l’assembly généré.  
   
 3.  Créez une instance d’une classe qui est définie dans le wrapper RCW. Une instance de l’objet COM est ainsi créée.  
   
@@ -59,7 +59,7 @@ Cette rubrique décrit les méthodes qui permettent une interopérabilité entre
   
 2.  Générez une bibliothèque de types COM et inscrivez-la pour l’utilisation de COM.  
   
-     Vous pouvez modifier les propriétés de projet Visual C# pour inscrire automatiquement l’assembly C# pour COM Interop. [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] utilise le fichier [Regasm.exe (outil Assembly Registration Tool)](../../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md) avec le commutateur de ligne de commande `/tlb`, qui prend comme entrée un assembly managé pour générer une bibliothèque de types. Cette bibliothèque de types décrit les types `public` de l’assembly et ajoute les entrées du Registre pour que les clients COM puissent créer des classes managées.  
+     Vous pouvez modifier les propriétés de projet Visual C# pour inscrire automatiquement l’assembly C# pour COM Interop. Visual Studio utilise le fichier [Regasm.exe (outil d’inscription de l’assembly)](../../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md) avec le commutateur de ligne de commande `/tlb`, qui prend comme entrée un assembly managé pour générer une bibliothèque de types. Cette bibliothèque de types décrit les types `public` de l’assembly et ajoute les entrées du Registre pour que les clients COM puissent créer des classes managées.  
   
  Pour plus d’informations, consultez [Exposition de composants .NET Framework à COM](../../../../docs/framework/interop/exposing-dotnet-components-to-com.md) et [Exemple de classe COM](../../../csharp/programming-guide/interop/example-com-class.md).  
   

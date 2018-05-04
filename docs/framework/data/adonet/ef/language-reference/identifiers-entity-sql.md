@@ -1,27 +1,15 @@
 ---
 title: Identificateurs (Entity SQL)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d58a5edd-7b5c-48e1-b5d7-a326ff426aa4
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 18bfb654a6f116f87ae7eeb6059fe994b9084c19
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 55b9ac101c7849c5b348ba8e48c695c0fa328105
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="identifiers-entity-sql"></a>Identificateurs (Entity SQL)
-Les identificateurs sont utilisés dans [!INCLUDE[esql](../../../../../../includes/esql-md.md)] pour représenter des alias d'expression de requête, des références de variables, des propriétés d'objets, des fonctions, etc. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]fournit deux types d’identificateurs : les identificateurs simples et les identificateurs entre guillemets.  
+Les identificateurs sont utilisés dans [!INCLUDE[esql](../../../../../../includes/esql-md.md)] pour représenter des alias d'expression de requête, des références de variables, des propriétés d'objets, des fonctions, etc. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] fournit deux types d’identificateurs : les identificateurs simples et les identificateurs entre guillemets.  
   
 ## <a name="simple-identifiers"></a>Identificateurs simples  
  Un identificateur simple dans [!INCLUDE[esql](../../../../../../includes/esql-md.md)] est une séquence d’alphanumériques et les traits de soulignement. Le premier caractère de l'identificateur doit être un caractère alphabétique (a-z ou A-Z).  
@@ -97,7 +85,7 @@ SELECT 1 AS X, 2 AS X …
 ```  
   
 ## <a name="scoping-rules"></a>Règles de portée  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]définit les règles de portée qui déterminent quand des variables particulières sont visibles dans le langage de requête. Certaines expressions ou instructions introduisent de nouveaux noms. Les règles de portée déterminent où ces noms peuvent être utilisés, ainsi que quand et où une nouvelle déclaration du même nom qu'une autre peut masquer son prédécesseur.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] définit les règles de portée qui déterminent quand des variables particulières sont visibles dans le langage de requête. Certaines expressions ou instructions introduisent de nouveaux noms. Les règles de portée déterminent où ces noms peuvent être utilisés, ainsi que quand et où une nouvelle déclaration du même nom qu'une autre peut masquer son prédécesseur.  
   
  Lorsque les noms sont définis dans un [!INCLUDE[esql](../../../../../../includes/esql-md.md)] requête, ils sont considérés comme définis dans une étendue. Une étendue couvre une région entière de la requête. Toutes les expressions ou les références de nom dans une certaine étendue peuvent voir les noms définis dans cette étendue. Avant le début d'une étendue et après sa fin, il n'est pas possible de référencer les noms définis dans l'étendue.  
   
@@ -125,7 +113,7 @@ SELECT 1 AS X, 2 AS X …
 -   L'ordre d'évaluation des clauses au sein de l'expression SELECT détermine l'ordre dans lequel les noms sont introduits dans l'étendue. La clause FROM est évaluée en premier, suivie de la clause WHERE, de la clause GROUP BY, de la clause HAVING, de la clause SELECT et enfin de la clause ORDER BY.  
   
 ### <a name="aggregate-handling"></a>Gestion des agrégats  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]prend en charge deux formes d’agrégats : les agrégats basés sur une collection et les agrégats basés sur le groupe. Les agrégats basés sur les collections correspondent à la construction privilégiée dans [!INCLUDE[esql](../../../../../../includes/esql-md.md)], alors que les agrégats basés sur les groupes sont pris en charge pour la compatibilité avec SQL.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] prend en charge deux formes d’agrégats : les agrégats basés sur une collection et les agrégats basés sur le groupe. Les agrégats basés sur les collections correspondent à la construction privilégiée dans [!INCLUDE[esql](../../../../../../includes/esql-md.md)], alors que les agrégats basés sur les groupes sont pris en charge pour la compatibilité avec SQL.  
   
  Lors de la résolution d’un agrégat, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tente d’abord de le traiter comme un agrégat basé sur la collection. En cas d’échec, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] transforme l’entrée de l’agrégat en une référence à l’agrégat d’imbrication et essaie de résoudre cette nouvelle expression, comme illustré dans l’exemple suivant.  
   

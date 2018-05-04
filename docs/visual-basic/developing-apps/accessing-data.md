@@ -12,11 +12,11 @@ ms.assetid: 3086ab38-3be5-4b22-9385-7d0e16b04f6a
 caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 306a618f193f9223443938ae2a9e0996c1b5295c
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: fb6645279a71252ff0ac81348c460b8981771797
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="accessing-data-in-visual-basic-applications"></a>Accès aux données dans les applications Visual Basic
 Visual Basic inclut plusieurs nouvelles fonctionnalités conçues pour vous aider à développer des applications qui accèdent à des données. Vous pouvez créer des formulaires liés aux données pour des applications Windows en faisant glisser des éléments de la [fenêtre Sources de données](/visualstudio/data-tools/add-new-data-sources) sur les formulaires. Vous pouvez également lier des contrôles aux données en faisant glisser des éléments de la **fenêtre Sources de données** sur des contrôles existants.  
@@ -26,7 +26,7 @@ Visual Basic inclut plusieurs nouvelles fonctionnalités conçues pour vous aide
  Fournit des liens vers des pages qui décrivent comment incorporer des fonctionnalités d’accès aux données dans vos applications.
 
  [Outils de données Visual Studio pour .NET](/visualstudio/data-tools/visual-studio-data-tools-for-dotnet)  
- Fournit des liens vers des pages décrivant la création d’applications qui utilisent des données, à l’aide de [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
+ Fournit des liens vers des pages décrivant la création d’applications qui utilisent des données, à l’aide de Visual Studio.  
   
  [LINQ](../../visual-basic/programming-guide/language-features/linq/index.md)  
  Fournit des liens vers des rubriques qui expliquent comment utiliser LINQ avec Visual Basic.  
@@ -41,7 +41,7 @@ Visual Basic inclut plusieurs nouvelles fonctionnalités conçues pour vous aide
  Fournit des liens vers des rubriques qui expliquent comment créer des applications de données multicouches.  
      
  [Ajouter de nouvelles connexions](/visualstudio/data-tools/add-new-connections)  
- Fournit des liens vers des pages qui décrivent comment connecter votre application aux données avec des outils de conception et des objets de connexion ADO.NET, à l’aide de [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
+ Fournit des liens vers des pages qui décrivent comment connecter votre application aux données avec des outils de conception et des objets de connexion ADO.NET, à l’aide de Visual Studio.  
 
  [Outils de dataset dans Visual Studio](/visualstudio/data-tools/dataset-tools-in-visual-studio)  
  Fournit des liens vers des pages qui décrivent comment charger des données dans des datasets et comment exécuter des procédures stockées et instructions SQL.  

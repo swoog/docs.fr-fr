@@ -1,30 +1,18 @@
 ---
 title: '&lt;adresses de base&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 78918102-2898-46e0-9ea8-6b8afe65603e
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 69a049e1daacce901685050ab9fbe99a9c4d3428
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8de962cc70e1399dd1e9459473055651f9aca5fb
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltbaseaddressesgt"></a>&lt;adresses de base&gt;
 Représente une collection d'éléments `baseAddress`, qui sont les adresses de base d'un hôte de service dans un environnement auto-hébergé. Si une adresse de base est présente, les points de terminaison peuvent être configurés avec des adresses relatives à l'adresse de base.  
   
- \<système. ServiceModel >  
-\<client >  
+ \<system.ServiceModel>  
+\<client>  
 \<point de terminaison >  
 \<hôte >  
 \<baseAddresses >  
@@ -62,4 +50,4 @@ Représente une collection d'éléments `baseAddress`, qui sont les adresses de 
  <xref:System.ServiceModel.Configuration.HostElement>  
  <xref:System.ServiceModel.ServiceHost>  
  <xref:System.ServiceModel.ServiceHostBase.BaseAddresses%2A>  
- [Hébergement d’applications WPF](../../../../../docs/framework/wcf/feature-details/hosting.md)
+ [Hébergement](../../../../../docs/framework/wcf/feature-details/hosting.md)

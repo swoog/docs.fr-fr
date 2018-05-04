@@ -1,34 +1,22 @@
 ---
 title: '&lt;serviceSecurityAudit&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ba517369-a034-4f8e-a2c4-66517716062b
-caps.latest.revision: 
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 25355acfd7bc82ccff33f68a690f3f02d1235438
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 293cd3118ace2e073933e4c124664c775902e7d8
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltservicesecurityauditgt"></a>&lt;serviceSecurityAudit&gt;
 Spécifie des paramètres qui activent l'audit d'événements de sécurité pendant des opérations de service.  
   
  \<system.ServiceModel>  
-\<behaviors>  
+\<comportements >  
 \<serviceBehaviors>  
-\<behavior>  
+\<comportement >  
 \<serviceSecurityAudit>  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -63,7 +51,7 @@ Spécifie des paramètres qui activent l'audit d'événements de sécurité pend
 |[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Spécifie un élément de comportement.|  
   
 ## <a name="remarks"></a>Notes  
- Cet élément de configuration sert à effectuer un audit des événements d'authentification [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]. Lorsque l'audit est activé, il est possible de réaliser l'audit des tentatives d'authentification réussies ou échouées (ou les deux). Les événements sont écrits dans l'un des trois journaux des événements : application, sécurité ou journal par défaut de la version du système d'exploitation. Les journaux des événements peuvent être consultés à l'aide de l'Observateur d'événements Windows.  
+ Cet élément de configuration est utilisé pour auditer les événements de l’authentification Windows Communication Foundation (WCF). Lorsque l'audit est activé, il est possible de réaliser l'audit des tentatives d'authentification réussies ou échouées (ou les deux). Les événements sont écrits dans l'un des trois journaux des événements : application, sécurité ou journal par défaut de la version du système d'exploitation. Les journaux des événements peuvent être consultés à l'aide de l'Observateur d'événements Windows.  
   
  Pour obtenir un exemple détaillé de l’utilisation de cet élément de configuration, consultez [comportement de l’audit du Service](../../../../../docs/framework/wcf/samples/service-auditing-behavior.md).  
   

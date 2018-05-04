@@ -1,32 +1,20 @@
 ---
 title: '&lt;remove&gt;'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 4058e2f1-7db4-4d1a-84dd-1b52836f2ae6
-caps.latest.revision: 5
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: fb62bbe8b52032708dddd62dd895e61ba8c1c5e9
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: dfea0b0eb4b133308f10b523a659cc00f87252b8
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltremovegt"></a>&lt;remove&gt;
 Supprime le Gestionnaire de jetons de sécurité spécifié de la collection de gestionnaires de jetons.  
   
  \<system.identityModel>  
-\<identityConfiguration>  
+\<identityConfiguration >  
 \<securityTokenHandlers>  
 \<remove>  
   
@@ -53,7 +41,7 @@ Supprime le Gestionnaire de jetons de sécurité spécifié de la collection de 
 |type|Le nom de type CLR du Gestionnaire de jetons à supprimer. Pour plus d’informations sur la façon de spécifier le `type` d’attribut, consultez [références de Type personnalisé](http://msdn.microsoft.com/library/7286d2e3-c63d-49fd-abdc-ce2705f22c24). Obligatoire.|  
   
 ### <a name="child-elements"></a>Éléments enfants  
- Aucun.  
+ Aucun  
   
 ### <a name="parent-elements"></a>Éléments parents  
   

@@ -1,31 +1,19 @@
 ---
 title: '&lt;serviceDebug&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6d7ea986-f232-49fe-842c-f934d9966889
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8cdd5d8a05354ad6f0df8343d546fd6cd1e8eac4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 1e9a8a310a2b3154568b20ea225faead1c71d64f
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltservicedebuggt"></a>&lt;serviceDebug&gt;
-Spécifie les fonctionnalités de débogage et d'informations d'aide pour un service [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].  
+Spécifie les fonctionnalités d’informations de débogage et de l’aide d’un service Windows Communication Foundation (WCF).  
   
- \<système. ServiceModel >  
+ \<system.ServiceModel>  
 \<comportements >  
-\<serviceBehaviors >  
+\<serviceBehaviors>  
 \<comportement >  
 \<serviceDebug >  
   
@@ -65,7 +53,7 @@ Spécifie les fonctionnalités de débogage et d'informations d'aide pour un ser
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<comportement >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Spécifie un élément de comportement.|  
+|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Spécifie un élément de comportement.|  
   
 ## <a name="remarks"></a>Notes  
  Paramètre `includeExceptionDetailInFaults` à `true` permet au service de retourner toute exception qui est levée par le code d’application même si l’exception n’est pas déclarée à l’aide de la <xref:System.ServiceModel.FaultContractAttribute>. Ce paramètre est utile lors du débogage de cas où le serveur lève une exception inattendue. Avec cet attribut, un formulaire sérialisé de l'exception inconnue est retourné et vous pouvez consulter plus de détails de l'exception.  
