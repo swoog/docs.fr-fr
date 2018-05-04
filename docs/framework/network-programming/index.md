@@ -1,29 +1,20 @@
 ---
 title: Programmation réseau dans le .NET Framework
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Networking
 - Internet
 - Internet, .NET Framework Internet services
 - Network Resources
 ms.assetid: 8d455610-67a0-4fa8-a62f-7747064a9256
-caps.latest.revision: 24
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: e51f4464eb39dc12ea50f4a94e55030895866f08
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: efecd4f2858843a2401e3d69538d87f92475b816
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="network-programming-in-the-net-framework"></a>Programmation réseau dans le .NET Framework
 Microsoft .NET Framework fournit une implémentation en couche, extensible et managée des services Internet que vous pouvez intégrer rapidement et facilement à vos applications. Les applications réseau peuvent générer des protocoles enfichables pour tirer parti automatiquement de nouveaux protocoles Internet, ou elles peuvent utiliser une implémentation managée de l'interface Windows Socket pour fonctionner au niveau du socket.  

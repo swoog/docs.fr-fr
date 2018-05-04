@@ -1,33 +1,23 @@
 ---
 title: '&lt;security&gt; de &lt;netMsmqBinding&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 001d11a9-7439-498c-b09d-fca20eaf8cd3
-caps.latest.revision: "15"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: fb381d6970d72cc1ff88ed1238d8d8541c40a40d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 0ed1021bdc45d0d64a20ff19410ad56e0d304ed3
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsecuritygt-of-ltnetmsmqbindinggt"></a>&lt;security&gt; de &lt;netMsmqBinding&gt;
 Définit les paramètres de sécurité pour une liaison MSMQ. Elle spécifie si le transport ou la sécurité SOAP sont activés et, si c'est le cas, le mode d'authentification et les niveaux de protection utilisés.  
   
  \<system.ServiceModel>  
-\<bindings>  
+\<liaisons >  
 \<netMsmqBinding>  
-\<binding>  
-\<security>  
+\<liaison >  
+\<sécurité >  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -74,5 +64,5 @@ Définit les paramètres de sécurité pour une liaison MSMQ. Elle spécifie si 
  [Liaisons](../../../../../docs/framework/wcf/bindings.md)  
  [Configuration des liaisons fournies par le système](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [Utilisation de liaisons pour configurer les Clients et les Services Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)  
+ [\<liaison >](../../../../../docs/framework/misc/binding.md)  
  [Files d’attente dans WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)

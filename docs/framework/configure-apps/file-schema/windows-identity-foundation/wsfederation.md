@@ -1,24 +1,14 @@
 ---
 title: '&lt;wsFederation&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c537f770-68bd-4f82-96ad-6424ad91369f
-caps.latest.revision: "8"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 7fd4e12d77380942204d37b59644c46aed3a0148
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: de7be463403b675e5f03786e85807e6685348680
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltwsfederationgt"></a>&lt;wsFederation&gt;
 Fournit la configuration pour le <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM).  
@@ -78,7 +68,7 @@ Fournit la configuration pour le <xref:System.IdentityModel.Services.WSFederatio
 |signOutReply|Spécifie l’URL à laquelle le client doit être redirigé par le service de jeton de sécurité (STS) au cours de la déconnexion via le protocole WS-Federation de passif. Définit le paramètre wreply sur une demande de déconnexion WS-Federation. Facultatif. La valeur par défaut est une chaîne vide, ce qui indique que des paramètres supplémentaires doivent être inclus dans la demande.|  
   
 ### <a name="child-elements"></a>Éléments enfants  
- Aucun.  
+ Aucun  
   
 ### <a name="parent-elements"></a>Éléments parents  
   

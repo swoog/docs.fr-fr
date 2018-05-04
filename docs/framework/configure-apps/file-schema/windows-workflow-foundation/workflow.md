@@ -1,33 +1,23 @@
 ---
-title: '&lt;workflow&gt;'
-ms.custom: 
+title: '&lt;flux de travail&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 560aa9b6-9cf3-460e-b798-f87d14b1d2de
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7130a918f5a0d879fa07e0d6c055aa600e1635c6
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: dc7c693fb2d8b47c0b968eb51cc59327fe43bcc0
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltworkflowgt"></a>&lt;workflow&gt;
-Un élément de configuration qui contient toutes les requêtes pour un flux de travail spécifique identifié par le **un lien hypertexte « http://msdn.microsoft.com/library/ System.ServiceModel.Activities.Tracking.Configuration.profileworkflowelement.activitydefinitionid (VS.100) .aspx » ctivityDefinitionId** propriété.  
+# <a name="ltworkflowgt"></a>&lt;flux de travail&gt;
+Un élément de configuration qui contient toutes les requêtes pour un flux de travail spécifique identifié par le **un lien hypertexte «http://msdn.microsoft.com/library/system.servicemodel.activities.tracking.configuration.profileworkflowelement.activitydefinitionid(VS.100).aspx» ctivityDefinitionId** propriété.  
   
  Pour plus d’informations dans le suivi de workflow et sa configuration, consultez [suivi et traçage de Workflow](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) et [modèles de suivi](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  
   
 \<system.serviceModel>  
-\<tracking>  
-\<trackingProfile>  
-\<workflow>  
+\<suivi >  
+\<trackingProfile >  
+\<flux de travail >  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -112,7 +102,7 @@ Un élément de configuration qui contient toutes les requêtes pour un flux de 
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<trackingProfile>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/trackingprofile.md)|Représente une section de configuration pour la création d’un abonnement pour le suivi des enregistrements dans un participant de suivi de workflow. Un modèle de suivi contient des requêtes de suivi qui permettent à un participant au suivi de s'abonner à des événements de flux de travail émis lorsque l'état d'une instance de flux de travail change au moment de l'exécution. Les requêtes définies dans la section de modèle de suivi déterminent les types d'événements retournés par l'abonnement.|  
+|[\<trackingProfile >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/trackingprofile.md)|Représente une section de configuration pour la création d’un abonnement pour le suivi des enregistrements dans un participant de suivi de workflow. Un modèle de suivi contient des requêtes de suivi qui permettent à un participant au suivi de s'abonner à des événements de flux de travail émis lorsque l'état d'une instance de flux de travail change au moment de l'exécution. Les requêtes définies dans la section de modèle de suivi déterminent les types d'événements retournés par l'abonnement.|  
   
 ## <a name="remarks"></a>Notes  
  Les modèles de suivi contiennent des requêtes de suivi qui permettent à un participant au suivi de s'abonner à des événements de flux de travail émis lorsque l'état d'une instance de flux de travail particulière change au moment de l'exécution. L'instance de flux de travail faisant l'objet d'un suivi est identifiée par cet élément de configuration.  

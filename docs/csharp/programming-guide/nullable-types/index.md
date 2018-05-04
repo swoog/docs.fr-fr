@@ -1,23 +1,16 @@
 ---
 title: Types Nullable (Guide de programmation C#)
 ms.date: 05/15/2017
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - nullable types [C#]
 - C# language, nullable types
 - types [C#], nullable
 ms.assetid: e473cb01-28ca-42be-9cea-f717055d72c6
-caps.latest.revision: 44
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 9b874b265f4adb131a056ea1ef6fb5ffc820343f
-ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
+ms.openlocfilehash: 10a2d4ab248276d9fdbe9d2bba40ccdd02a77408
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="nullable-types-c-programming-guide"></a>Types Nullable (Guide de programmation C#)
 Les types Nullable sont des instances du struct <xref:System.Nullable%601?displayProperty=nameWithType>. Un type Nullable peut représenter la plage correcte de valeurs de son type valeur sous-jacent, plus une valeur `null` supplémentaire. Par exemple, un `Nullable<Int32>`, prononcé « Nullable d’Int32 », peut se voir affecter n’importe quelle valeur entre -2147483648 et 2147483647, ou la valeur `null`. Un `Nullable<bool>` peut se voir affecter les valeurs [true](../../../csharp/language-reference/keywords/true.md), [false](../../../csharp/language-reference/keywords/false.md) ou [null](../../../csharp/language-reference/keywords/null.md). La capacité à affecter `null` aux types numériques et booléens est particulièrement utile lorsque l’on travaille avec des bases de données et d’autres types de données qui contiennent des éléments potentiellement sans valeur. Par exemple, un champ booléen dans une base de données peut stocker la valeur `true` ou `false`, ou être indéfini. 

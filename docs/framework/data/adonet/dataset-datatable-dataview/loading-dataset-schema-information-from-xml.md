@@ -1,27 +1,15 @@
 ---
-title: "Chargement des informations de schéma de DataSet à partir de XML"
-ms.custom: 
+title: Chargement des informations de schéma de DataSet à partir de XML
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 43dfb23b-5cef-46f2-8d87-78f0fba1eb8c
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 8b814715782710994f18163ccfcd3db342199145
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 4b212a7233e6eec93cdce3e521b58e08745e35e0
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="loading-dataset-schema-information-from-xml"></a>Chargement des informations de schéma de DataSet à partir de XML
 Le schéma d’un <xref:System.Data.DataSet> (ses tables, colonnes, relations et contraintes) peuvent être définis par programme, créé par le **remplir** ou **FillSchema** méthodes d’un <xref:System.Data.Common.DataAdapter>, ou chargé à partir d’un Document XML. Pour charger **DataSet** informations de schéma à partir d’un document XML, vous pouvez utiliser la **ReadXmlSchema** ou **InferXmlSchema** méthode de la **DataSet**. **ReadXmlSchema** vous permet de charger ou de déduire **DataSet** les informations de schéma à partir du document contenant le schéma de langage (XSD XML) de définition de schéma XML ou un document XML avec le schéma XML inline. **InferXmlSchema** vous permet de déduire le schéma à partir du document XML tout en ignorant certains espaces de noms XML que vous spécifiez.  
@@ -65,7 +53,7 @@ xmlStream.Close();
 ```  
   
 ## <a name="inferxmlschema"></a>InferXmlSchema  
- Vous pouvez également demander à le **DataSet** déduise son schéma à partir d’un document XML à l’aide du **InferXmlSchema** méthode de la **DataSet**. **InferXmlSchema** fonctionne de la même manière que **ReadXml** avec un **XmlReadMode** de **InferSchema** (charge les données comme déduit le schéma) et  **ReadXmlSchema** si le document lu ne contient pas de schéma inline. Toutefois, **InferXmlSchema** fournit la plus la possibilité de vous permet de spécifier des espaces de noms XML qui doivent être ignorés lorsque le schéma est déduit. **InferXmlSchema** prend deux arguments requis : l’emplacement du document XML, spécifié par un nom de fichier, un flux de données, ou un **XmlReader**; un tableau de chaînes d’espaces de noms XML doivent être ignorés par l’opération.  
+ Vous pouvez également demander à le **DataSet** déduise son schéma à partir d’un document XML à l’aide du **InferXmlSchema** méthode de la **DataSet**. **InferXmlSchema** fonctionne de la même manière que **ReadXml** avec un **XmlReadMode** de **InferSchema** (charge les données comme déduit le schéma) et **ReadXmlSchema** si le document lu ne contient pas de schéma inline. Toutefois, **InferXmlSchema** fournit la plus la possibilité de vous permet de spécifier des espaces de noms XML qui doivent être ignorés lorsque le schéma est déduit. **InferXmlSchema** prend deux arguments requis : l’emplacement du document XML, spécifié par un nom de fichier, un flux de données, ou un **XmlReader**; un tableau de chaînes d’espaces de noms XML doivent être ignorés par l’opération.  
   
  Examinons, par exemple, le code XML suivant :  
   

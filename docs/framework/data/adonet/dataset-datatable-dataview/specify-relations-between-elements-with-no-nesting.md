@@ -1,24 +1,12 @@
 ---
-title: "Spécifier les relations entre éléments sans imbrication"
-ms.custom: 
+title: Spécifier les relations entre éléments sans imbrication
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e31325da-7691-4d33-acf4-99fccca67006
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: cf17031dd6e562d365ff94ab94b3b99a0dd6f747
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 1d178287150dfca4c379cf6e934370434c3cfc98
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specify-relations-between-elements-with-no-nesting"></a>Spécifier les relations entre éléments sans imbrication
 Lorsque des éléments ne sont pas imbriqués, aucune relation implicite n'est créée. Toutefois, vous pouvez spécifier explicitement des relations entre des éléments qui ne sont pas imbriqués à l’aide de la **msdata : Relationship** annotation.  

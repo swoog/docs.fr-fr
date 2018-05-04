@@ -1,19 +1,13 @@
 ---
 title: Kit SDK .NET Compiler Platform (API Roslyn)
 description: Apprenez à utiliser le Kit de développement logiciel (SDK) .NET Compiler Platform (également appelé API Roslyn) pour comprendre le code .NET, identifier les erreurs et les corriger.
-keywords: roslyn, analyseur, correctif de code
-author: billwagner
-ms.author: wiwagn
 ms.date: 10/10/2017
-ms.topic: conceptual
-ms.prod: .net
-ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: aad6b06748b02e2ea3003ca339d8a5a0b15583f8
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: e524cb8f2fcb5c59550932243b6586019ea7139b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="the-net-compiler-platform-sdk"></a>Kit SDK .NET Compiler Platform
 
@@ -40,7 +34,7 @@ Il existe trois grands scénarios d’écriture d’analyseurs et de correctifs 
 
 ## <a name="enforce-team-coding-standards"></a>Appliquer des normes de codage pour l’équipe
 
-De nombreuses équipes ont des normes de codage, qui sont appliquées par le biais des revues de code effectuées avec d’autres membres de l’équipe. Les analyseurs et les correctifs de code peuvent rendre ce processus beaucoup plus efficace. Les revues de code se produisent quand un développeur partage son travail avec d’autres membres de l’équipe. Le développeur aura investi tout le temps nécessaire pour terminer une nouvelle fonctionnalité avant de recevoir le moindre commentaire. Plusieurs semaines peuvent s’écouler, au cours desquelles le développeur renforce des habitudes qui ne correspondent pas aux pratiques de l’équipe.
+De nombreuses équipes ont des normes de codage, qui sont appliquées par le biais des révisions du code effectuées avec d’autres membres de l’équipe. Les analyseurs et les correctifs de code peuvent rendre ce processus beaucoup plus efficace. Les revues de code se produisent quand un développeur partage son travail avec d’autres membres de l’équipe. Le développeur aura investi tout le temps nécessaire pour terminer une nouvelle fonctionnalité avant de recevoir le moindre commentaire. Plusieurs semaines peuvent s’écouler, au cours desquelles le développeur renforce des habitudes qui ne correspondent pas aux pratiques de l’équipe.
 
 Les analyseurs s’exécutent au moment même où il écrit du code. Le développeur obtient immédiatement des commentaires qui l’encouragent à suivre les instructions sans attendre. Le développeur prend l’habitude d’écrire du code conforme dès qu’il commence le prototypage. Lorsque la fonctionnalité est prête à être révisée par des humains, toutes les instructions standard ont été appliquées.
 

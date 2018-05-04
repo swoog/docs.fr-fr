@@ -1,27 +1,18 @@
 ---
-title: "Autorisation de sécurité pour la redirection de liaison d’assembly"
-ms.custom: 
+title: Autorisation de sécurité pour la redirection de liaison d’assembly
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 24a5cdff-7ed9-4195-93f3-edf6899019fc
-caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: d2593df04b93db17f9ca61a98b21aaec1d534d46
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: ef9295028aeb7bfcc6df88e9c8bb7f80e2a31368
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="assembly-binding-redirection-security-permission"></a>Autorisation de sécurité pour la redirection de liaison d’assembly
 La redirection de liaison d’assembly explicite dans un fichier de configuration de l’application nécessite une autorisation de sécurité. Cela s'applique à la redirection des assemblys .NET Framework et des assemblys tiers. L’autorisation est accordée en définissant le <xref:System.Security.Permissions.SecurityPermissionFlag> indicateur sur le <xref:System.Security.Permissions.SecurityPermission>. Les assemblys managés ne possèdent aucuns autorisations par défaut.  
@@ -36,8 +27,8 @@ La redirection de liaison d’assembly explicite dans un fichier de configuratio
 |----------|-----------------------------------|  
 |Zone de confiance (ordinateur local)|**ON**|  
 |Zone intranet|**ON**|  
-|Zone Internet|**OFF**|  
-|Zones non fiables|**OFF**|  
+|Zone Internet|**DÉSACTIVÉ**|  
+|Zones non fiables|**DÉSACTIVÉ**|  
   
  Un administrateur peut modifier ces paramètres de sécurité pour prendre en charge ou restreindre des scénarios spécifiques sur un ordinateur donné. Aucun outil permettant de modifier le **BindingRedirects** indicateur de définition à partir de la valeur par défaut ; un administrateur doit modifier manuellement le fichier Security.config sur l’ordinateur d’un utilisateur.  
   

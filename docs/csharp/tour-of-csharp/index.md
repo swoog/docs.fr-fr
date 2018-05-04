@@ -1,20 +1,13 @@
 ---
 title: Visite guidée du langage C# - Guide du langage C#
 description: Novice en matière de langage C# ? Découvrez les principes de base du langage.
-keywords: .NET, .NET Core, C#, Abécédaire du langage C#, Guide du langage C#
-author: BillWagner
-ms.author: wiwagn
 ms.date: 08/10/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: ebc727cd-8112-42e7-b59c-3c2873ad661c
-ms.openlocfilehash: 0fa7f9f906ba72b114fc59c8026b4b6c79586dd2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: bdb8a84083b391c27d39f5c566a01b2db318123f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="a-tour-of-the-c-language"></a>Présentation rapide du langage C#  
 
@@ -68,7 +61,7 @@ Il y a beaucoup d’autres choses à apprendre sur C#.  Les rubriques suivantes 
     - On utilise des ***instructions*** pour exprimer les actions d’un programme.
 * [Classes et objets](classes-and-objects.md)
     - Les ***classes*** représentent le type le plus fondamental de C#. Les ***objets*** sont des instances d’une classe. Les classes sont générées à l’aide de ***membres***, qui sont également traités dans cette rubrique.
-* [Structures](structs.md)
+* [Structs](structs.md)
     - Les ***structures*** sont des structures de données qui, contrairement aux classes, sont des types valeur.
 * [Tableaux](arrays.md)
     - Un ***tableau*** est une structure de données contenant un certain nombre de variables accessibles par le biais d’indices calculés.
@@ -82,4 +75,4 @@ Il y a beaucoup d’autres choses à apprendre sur C#.  Les rubriques suivantes 
     * Les ***attributs*** permettent aux programmes de spécifier des informations déclaratives supplémentaires sur les types, les membres et d’autres entités.
 
 >[!div class="step-by-step"]
-[Suivant](program-structure.md)
+[Next](program-structure.md)

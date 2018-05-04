@@ -1,33 +1,21 @@
 ---
 title: '&lt;byteStreamMessageEncoding&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: bbadd8dd-60a2-4007-b959-89373a8a7d60
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1996a33666ac6b92f1b7bca8c2e2e0ef51456dea
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3493588d4613131ad9526a8d26912ecdb601ea25
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltbytestreammessageencodinggt"></a>&lt;byteStreamMessageEncoding&gt;
 Spécifie l'encodage de message sous forme de flux d'octets, avec l'option permettant de spécifier l'encodage de caractères.  
   
- \<system.serviceModel >  
+ \<system.serviceModel>  
 \<liaisons >  
 \<customBinding >  
 \<liaison >  
-\<binaryMessageEncoding >  
+\<binaryMessageEncoding>  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,7 +36,7 @@ Spécifie l'encodage de message sous forme de flux d'octets, avec l'option perme
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<readerQuotas >](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Définit les contraintes sur la complexité des messages SOAP pouvant être traités par les points de terminaison configurés avec cette liaison. Cet élément est de type <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
+|[\<readerQuotas>](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Définit les contraintes sur la complexité des messages SOAP pouvant être traités par les points de terminaison configurés avec cette liaison. Cet élément est de type <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
   
 ### <a name="parent-elements"></a>Éléments parents  
   
@@ -66,4 +54,4 @@ Spécifie l'encodage de message sous forme de flux d'octets, avec l'option perme
  [Liaisons](../../../../../docs/framework/wcf/bindings.md)  
  [Extension de liaisons](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [Liaisons personnalisées](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+ [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

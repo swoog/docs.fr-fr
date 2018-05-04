@@ -1,29 +1,17 @@
 ---
 title: '&lt;behavior&gt; de &lt;endpointBehaviors&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b90ca3bc-3c22-4174-b903-e3a39898bd27
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: aed43e76b817c9a2eded6c1e5daee183625ecc0d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 0619d14444d835ed959a1a1db7cd37aaf0429728
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltbehaviorgt-of-ltendpointbehaviorsgt"></a>&lt;behavior&gt; de &lt;endpointBehaviors&gt;
 L'élément `behavior` contient une collection de paramètres concernant le comportement d'un point de terminaison. Chaque comportement est indexé en fonction de son `name`. Les points de terminaison peuvent être liés à chaque comportement à travers ce nom. Depuis [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], les liaisons et les comportements ne sont pas obligés d'avoir un nom. Pour plus d’informations sur la configuration par défaut et nommées liaisons et comportements, consultez [Configuration simplifiée](../../../../../docs/framework/wcf/simplified-configuration.md) et [simplifié la Configuration des Services WCF](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
- \<système. ServiceModel >  
+ \<system.ServiceModel>  
 \<comportements >  
 \<endpointBehaviors >  
 \<comportement >  
@@ -53,8 +41,8 @@ L'élément `behavior` contient une collection de paramètres concernant le comp
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|Indique les informations d'identification utilisées pour authentifier le client auprès d'un service.|  
-|[\<callbackDebug >](../../../../../docs/framework/configure-apps/file-schema/wcf/callbackdebug.md)|Spécifie le débogage de service pour un objet de rappel [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].|  
+|[\<clientCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|Indique les informations d'identification utilisées pour authentifier le client auprès d'un service.|  
+|[\<callbackDebug >](../../../../../docs/framework/configure-apps/file-schema/wcf/callbackdebug.md)|Spécifie le débogage de service pour un objet de rappel Windows Communication Foundation (WCF).|  
 |[\<callbackTimeouts >](../../../../../docs/framework/configure-apps/file-schema/wcf/callbacktimeouts.md)|Spécifie le délai d'attente pour le rappel du client.|  
 |[\<clientVia >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientvia.md)|Spécifie l'itinéraire qu'un message doit suivre.|  
 |[\<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer.md)|Contient les données de configuration pour DataContractSerializer.|  

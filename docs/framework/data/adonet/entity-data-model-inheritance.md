@@ -1,24 +1,12 @@
 ---
-title: "Entity Data Model : héritage"
-ms.custom: 
+title: 'Entity Data Model : héritage'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 42c7ef24-710a-4af9-8493-cd41c399ecb0
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 6e6207087524a1ec1201511a91a810f02449e610
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: c5c1b385ea72e48fd70ed5ec0cf8d1c42c1284e4
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="entity-data-model-inheritance"></a>Entity Data Model : héritage
 Le modèle EDM (Entity Data Model) prend en charge l’héritage pour [types d’entités](../../../../docs/framework/data/adonet/entity-type.md). L'héritage dans le modèle EDM est semblable à l'héritage pour les classes dans les langages de programmation orientés objet. Comme avec les classes dans les langages orientés objet, dans un modèle conceptuel vous pouvez définir un type d’entité (un *type dérivé*) qui hérite d’un autre type d’entité (la *type de base*). Toutefois, contrairement aux classes de programmation orientée objet, dans un modèle conceptuel au type dérivé hérite toujours l’ensemble du [propriétés](../../../../docs/framework/data/adonet/property.md) et [propriétés de navigation](../../../../docs/framework/data/adonet/navigation-property.md) du type de base. Vous ne pouvez pas remplacer les propriétés héritées dans un type dérivé.  
@@ -30,7 +18,7 @@ Le modèle EDM (Entity Data Model) prend en charge l’héritage pour [types d�
 ## <a name="example"></a>Exemple  
  Le diagramme suivant montre un modèle conceptuel avec quatre types d'entité : `Book`, `FictionBook`, `Publisher` et `Author`. Le type d'entité `FictionBook` est un type dérivé qui hérite du type d'entité `Book`. Le type `FictionBook` hérite les propriétés `ISBN (Key)`, `Title` et `Revision`, et définit une propriété supplémentaire appelée `Genre`.  
   
- ![Inheritance](../../../../docs/framework/data/adonet/media/inheritanceexample.gif "InheritanceExample")  
+ ![L’héritage](../../../../docs/framework/data/adonet/media/inheritanceexample.gif "InheritanceExample")  
   
  Le [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) utilise un langage spécifique à un domaine (DSL) appelé conceptual schema definition language ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) pour définir des modèles conceptuels. Le CSDL suivant définit un type d'entité, `FictionBook`, qui hérite du type `Book` (comme dans le diagramme ci-dessus) :  
   

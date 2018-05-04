@@ -1,22 +1,12 @@
 ---
 title: Assemblys et le Global Assembly Cache (C#)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-csharp
-ms.topic: article
 ms.assetid: 149f5ca5-5b34-4746-9542-1ae43b2d0256
-caps.latest.revision: 3
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 923a64e98fde3ab11f4e3feb6c91507ae8886151
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 994498525aed3ebb08f2de7926c7adc2d3d95f56
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="assemblies-and-the-global-assembly-cache-c"></a>Assemblys et le Global Assembly Cache (C#)
 Les assemblys constituent l’unité fondamentale dans le déploiement, la gestion de version, la portée d’activation et les autorisations de sécurité d’une application .NET. Les assemblys prennent la forme d’un fichier exécutable (.exe) ou d’un fichier de bibliothèque de liens dynamiques (.dll) et sont les blocs de construction du .NET Framework. Ils fournissent au Common Language Runtime les informations dont il a besoin pour connaître les implémentations de type. Vous pouvez comparer un assembly à une collection de types et de ressources conçus pour opérer ensemble et former une unité logique de fonctionnalité.  

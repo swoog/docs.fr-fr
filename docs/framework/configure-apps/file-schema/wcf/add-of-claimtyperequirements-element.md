@@ -1,34 +1,22 @@
 ---
-title: "&lt;add&gt;, élément de &lt;claimTypeRequirements&gt;"
-ms.custom: 
+title: '&lt;add&gt;, élément de &lt;claimTypeRequirements&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 3234cd45-1478-468e-8b19-5c50815c4786
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6a6a0cc78cad2ccbc8dca6097227ef22f45dbc63
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 88e78db824d969c303fc5d494d4884c4d00284e1
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaddgt-of-ltclaimtyperequirementsgt-element"></a>&lt;add&gt;, élément de &lt;claimTypeRequirements&gt;
 Spécifie les types de revendications requis et facultatifs censés apparaître dans les informations d'identification fédérées. Par exemple, les services déclarent les exigences relatives aux informations d’identification entrantes devant posséder un certain jeu de types de revendications.  
   
- \<système. ServiceModel >  
+ \<system.ServiceModel>  
 \<liaisons >  
 \<wsFederatedBinding >  
 \<liaison >  
 \<sécurité >  
-\<message >  
+\<message>  
 \<claimTypeRequirements >  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -57,7 +45,7 @@ Spécifie les types de revendications requis et facultatifs censés apparaître 
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<claimTypeRequirements >](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-for-message.md)|Spécifie une collection de types de revendications requis. Chaque élément est de type <xref:System.ServiceModel.Configuration.ClaimTypeElement>.<br /><br /> Dans un scénario fédéré, les services déclarent les spécifications relatives aux informations d'identification entrantes. Par exemple, ces informations d'identification doivent posséder un jeu de types de revendications défini. Chaque élément de la collection indique les types de revendications requis et facultatifs censés apparaître dans les informations d’identification fédérées.|  
+|[\<claimTypeRequirements>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-for-message.md)|Spécifie une collection de types de revendications requis. Chaque élément est de type <xref:System.ServiceModel.Configuration.ClaimTypeElement>.<br /><br /> Dans un scénario fédéré, les services déclarent les spécifications relatives aux informations d'identification entrantes. Par exemple, ces informations d'identification doivent posséder un jeu de types de revendications défini. Chaque élément de la collection indique les types de revendications requis et facultatifs censés apparaître dans les informations d’identification fédérées.|  
   
 ## <a name="remarks"></a>Notes  
  Dans un scénario fédéré, les services déclarent les exigences relatives aux informations d’identification entrantes. Par exemple, ces informations d'identification doivent posséder un jeu de types de revendications défini. Cette spécification est explicitée dans une stratégie de sécurité. Lorsqu’un client requiert des informations d’identification à partir d’un service fédéré (CardSpace, par exemple), il indique ces exigences dans une demande de jeton (RequestSecurityToken) afin que le service fédéré puisse publier ces informations et répondre aux exigences.  

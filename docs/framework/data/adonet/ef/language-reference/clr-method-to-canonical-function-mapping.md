@@ -1,24 +1,12 @@
 ---
-title: "Mappage de la méthode CLR aux fonctions de chaînes canoniques"
-ms.custom: 
+title: Mappage de la méthode CLR aux fonctions de chaînes canoniques
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e3363261-2cb8-4b54-9555-2870be99b929
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 29f0c8e663dad2eaa849137e1d02d24b9cef398b
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 07d488eb8caba8309857ef7fba42e67e155363e2
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clr-method-to-canonical-function-mapping"></a>Mappage de la méthode CLR aux fonctions de chaînes canoniques
 Entity Framework fournit un ensemble de fonctions canoniques chargées d’implémenter des fonctionnalités communes à de nombreux systèmes de base de données, notamment la manipulation de chaînes et les fonctions mathématiques. Cela permet aux développeurs de cibler un large éventail de systèmes de base de données. Lorsqu'elles sont appelées via une technologie de requête comme LINQ to Entities, ces fonctions canoniques sont traduites dans la fonction de magasin correspondante du fournisseur utilisé. Les appels de fonction peuvent ainsi être exprimés sous une forme commune dans toutes les sources de données, ce qui procure une expérience de requête cohérente. Les opérateurs au niveau du bit AND, OR, NOT et XOR sont également mappés à des fonctions canoniques lorsque l’opérande est de type numérique. Dans le cas des opérandes booléens, les opérateurs au niveau du bit AND, OR, NOT et XOR calculent les opérations logiques AND, OR, NOT et XOR de leurs opérandes. Pour plus d’informations, consultez [fonctions canoniques](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md).  
@@ -51,7 +39,7 @@ Entity Framework fournit un ensemble de fonctions canoniques chargées d’impl�
 |Méthode System.String (d'instance)|Fonction canonique|Remarques|  
 |---------------------------------------|------------------------|-----------|  
 |Boolean Contains(String `value`)|`this` LIKE '%`value`%'|Si `value` n'est pas une constante, cela mappe à IndexOf (`this`, `value`) > 0.|  
-|Boolean EndsWith(String `value`)|`this`COMME `'` % `value`'|Si `value` n'est pas une constante, cela mappe à Right (`this`, length(`value`)) = `value`.|  
+|Boolean EndsWith(String `value`)|`this` COMME `'` % `value`'|Si `value` n'est pas une constante, cela mappe à Right (`this`, length(`value`)) = `value`.|  
 |Boolean StartsWith(String `value`)|`this` LIKE '`value`%'|Si `value` n'est pas une constante, cela mappe à IndexOf (`this`, `value`) = 1.|  
 |Longueur|Length(`this`)||  
 |Int32 IndexOf(String `value`)|IndexOf(`this`, `value`) - 1||  
@@ -60,7 +48,7 @@ Entity Framework fournit un ensemble de fonctions canoniques chargées d’impl�
 |System.String Remove(Int32 `startIndex`, Int32 `count`)|Concat (sous-chaîne (`this`, 1, `startIndex`), Substring (`this`, `startIndex`  +  `count` + 1, la longueur (`this`)-(`startIndex` + `count`)))|La méthode Remove(`startIndex`, `count`) n'est prise en charge que si `count` est un entier supérieur ou égal à 0.|  
 ystème. Remplacement de chaîne (String `oldValue`, chaîne `newValue`)|Replace(`this`, `oldValue`, `newValue`)||  
 |System.String Substring(Int32 `startIndex`)|Substring(`this`, `startIndex` +1, Length(`this`) - `startIndex`)||  
-|System.String Substring(Int32 `startIndex`, Int32 `length`)|Substring(`this`, `startIndex` +1, `length`)||  
+|System.String Substring(Int32 `startIndex`, Int32 `length`)|SUBSTRING (`this`, `startIndex` + 1, `length`)||  
 |System.String ToLower()|ToLower(`this`)||  
 |System.String ToUpper()|ToUpper(`this`)||  
 |System.String Trim()|Trim(`this`)||  
@@ -79,13 +67,13 @@ ystème. Remplacement de chaîne (String `oldValue`, chaîne `newValue`)|Replace
 |Boolean op_GreaterThan(DateTime `t1`, DateTime `t2`)|> (opérateur)||  
 |Boolean op_GreaterThanOrEqual(DateTime `t1`, DateTime `t2`)|>= (opérateur)||  
 |Boolean op_Inequality(DateTime `t1`, DateTime `t2`)|!= (opérateur)||  
-|Boolean op_LessThan(DateTime `t1`, DateTime `t2`)|< (opérateur)||  
+|Op_LessThan Boolean (DateTime `t1`, DateTime `t2`)|< (opérateur)||  
 |Boolean op_LessThanOrEqual(DateTime `t1`, DateTime `t2`)|<= (opérateur)||  
-|Microsoft.VisualBasic.DateAndTime.DatePart( _<br /><br /> ByVal `Interval` comme DateInterval,\_<br /><br /> ByVal `DateValue` en tant que DateTime,\_<br /><br /> ByVal facultatif `FirstDayOfWeekValue` comme FirstDayOfWeek = VbSunday,\_<br /><br /> ByVal facultatif `FirstWeekOfYearValue` comme FirstWeekOfYear = VbFirstJan1\_<br /><br /> ) As Integer||Consultez la section concernant la fonction DatePart pour plus d'informations.|  
+|Microsoft.VisualBasic.DateAndTime.DatePart( _<br /><br /> ByVal `Interval` comme DateInterval, \_<br /><br /> ByVal `DateValue` en tant que DateTime, \_<br /><br /> ByVal facultatif `FirstDayOfWeekValue` comme FirstDayOfWeek = VbSunday, \_<br /><br /> ByVal facultatif `FirstWeekOfYearValue` comme FirstWeekOfYear = VbFirstJan1 \_<br /><br /> ) As Integer||Consultez la section concernant la fonction DatePart pour plus d'informations.|  
 |Microsoft.VisualBasic.DateAndTime.Now|CurrentDateTime()||  
 |Microsoft.VisualBasic.DateAndTime.Year(DateTime `TimeValue`)|Year()||  
 |Microsoft.VisualBasic.DateAndTime.Month(DateTime `TimeValue`)|Month()||  
-icrosoft.VisualBasic.DateAndTime.Day(DateTime `TimeValue`)|Day()||  
+Microsoft. VisualBasic.DateAndTime.Day (DateTime `TimeValue`)|Day()||  
 |Microsoft.VisualBasic.DateAndTime.Hour(DateTime `TimeValue`)|Hour()||  
 |Microsoft.VisualBasic.DateAndTime.Minute(DateTime `TimeValue`)|Minute()||  
 |Microsoft.VisualBasic.DateAndTime.Second(DateTime `TimeValue`)|Second()||  

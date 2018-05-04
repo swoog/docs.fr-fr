@@ -1,27 +1,15 @@
 ---
-title: "Sécurité d'accès du code et ADO.NET"
-ms.custom: 
+title: Sécurité d'accès du code et ADO.NET
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e69073f757c07c5dd262900d4d8f7ad2cc83cdc4
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: ea5dbcc128f97ebbec72273378adb042bbe34e1e
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="code-access-security-and-adonet"></a>Sécurité d'accès du code et ADO.NET
 Le .NET Framework offre une sécurité basée sur les rôles ainsi qu'une sécurité d'accès du code (CAS, Code Access Security) implémentées à l'aide d'une infrastructure commune fournie par le Common Language Runtime (CLR). Dans l'univers du code non managé, la plupart des applications s'exécutent avec les autorisations de l'utilisateur ou d'une principal de sécurité. C'est pourquoi les systèmes informatiques peuvent être endommagés et des données privées compromises lorsqu'un utilisateur bénéficiant de privilèges élevés exécute des logiciels malveillants ou remplis d'erreurs.  

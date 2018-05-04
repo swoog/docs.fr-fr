@@ -1,27 +1,15 @@
 ---
 title: Contraintes de DataTable
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 27c9f2fd-f64d-4b4e-bbf6-1d24f47067cb
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 500dad1699843bae04aea6d5c16a1ccf53bb102a
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 95bbba30bc9cd75d1694d7d8062bc9a6e6105084
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="datatable-constraints"></a>Contraintes de DataTable
 Vous pouvez utiliser des contraintes pour appliquer des restrictions sur les données dans un objet <xref:System.Data.DataTable> afin de conserver l'intégrité des données. Une contrainte est une règle automatique, appliquée à une ou plusieurs colonnes en relation, qui détermine l'action à réaliser lorsque la valeur d'une ligne est modifiée. Les contraintes sont appliquées lors de la `System.Data.DataSet.EnforceConstraints` propriété de la <xref:System.Data.DataSet> est **true**. Pour obtenir un exemple de code montrant comment définir la propriété `EnforceConstraints`, consultez la rubrique de référence <xref:System.Data.DataSet.EnforceConstraints%2A>.  
@@ -36,7 +24,7 @@ Vous pouvez utiliser des contraintes pour appliquer des restrictions sur les don
 |Paramètre de règle|Description|  
 |------------------|-----------------|  
 |**Cascade**|Supprime ou met à jour les lignes connexes.|  
-|**SetNull**|Définir les valeurs des lignes connexes **DBNull**.|  
+|**setNull**|Définir les valeurs des lignes connexes **DBNull**.|  
 |**SetDefault**|Définit les valeurs des lignes connexes sur la valeur par défaut.|  
 |**Aucun**|N'effectue aucune action sur les lignes connexes. Il s'agit de la valeur par défaut.|  
   

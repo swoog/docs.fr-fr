@@ -1,33 +1,23 @@
 ---
 title: '&lt;security&gt; de &lt;webHttpBinding&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 727cf3d2-6f56-48ad-a59f-ba423edb9c83
-caps.latest.revision: "9"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: dc7edf528f509c725672036329989f9b7a9bfec2
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: dd65b488a2d3f18f2e19191f143243204c4303d4
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsecuritygt-of-ltwebhttpbindinggt"></a>&lt;security&gt; de &lt;webHttpBinding&gt;
 Spécifie les exigences de sécurité pour un point de terminaison configuré avec un [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
   
  \<system.ServiceModel>  
-\<bindings>  
+\<liaisons >  
 \<webHttpBinding>  
-\<binding>  
-\<security>  
+\<liaison >  
+\<sécurité >  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -74,7 +64,7 @@ Spécifie les exigences de sécurité pour un point de terminaison configuré av
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<webHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|Élément de liaison utilisé pour configurer des points de terminaison pour les services Web [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] qui répondent aux requêtes HTTP au lieu des messages SOAP.|  
+|[\<webHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|Un élément de liaison qui est utilisé pour configurer des points de terminaison pour le Web de Windows Communication Foundation (WCF) des services qui répondent aux requêtes HTTP au lieu de messages SOAP.|  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.ServiceModel.Configuration.WebHttpBindingElement>  
@@ -87,5 +77,5 @@ Spécifie les exigences de sécurité pour un point de terminaison configuré av
  [Liaisons](../../../../../docs/framework/wcf/bindings.md)  
  [Configuration des liaisons fournies par le système](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [Utilisation de liaisons pour configurer les Clients et les Services Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)  
+ [\<liaison >](../../../../../docs/framework/misc/binding.md)  
  [Modèle de programmation HTTP web WCF](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

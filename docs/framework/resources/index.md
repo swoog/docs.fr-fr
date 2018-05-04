@@ -1,14 +1,6 @@
 ---
 title: Ressources dans des applications de bureau
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-bcl
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - deploying applications [.NET Framework], resources
 - application resources
@@ -18,17 +10,13 @@ helpviewer_keywords:
 - packaging application resources
 - localizing resources
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
-caps.latest.revision: 19
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d8fa1521a5516a4be18352c1bce6abf93e40287f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 023099adeeebf21b7dba631bde75332524eb0cc3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="resources-in-desktop-apps"></a>Ressources dans des applications de bureau
 Presque toutes les applications d'une qualité de niveau "production" doivent utiliser des ressources. Une ressource est une donnée non exécutable qui est déployée logiquement avec une application. Une ressource peut être affichée dans une application sous la forme de messages d'erreur ou comme faisant partie de l'interface utilisateur. Les ressources peuvent contenir des données sous plusieurs formes, telles que des chaînes, des images et des objets rendus persistants. (Pour écrire des objets persistants dans un fichier de ressources, les objets doivent être sérialisables.) Le stockage de vos données dans un fichier de ressources vous permet de changer les données sans avoir à recompiler l'intégralité de votre application. Il vous permet également de stocker des données dans un emplacement unique, et élimine la nécessité d'avoir recours à des données codées en dur stockées dans plusieurs emplacements.  

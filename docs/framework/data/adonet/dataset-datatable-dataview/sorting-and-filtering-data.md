@@ -1,34 +1,22 @@
 ---
-title: "Tri et filtre de données"
-ms.custom: 
+title: Tri et filtre de données
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: fdd9c753-39df-48cd-9822-2781afe76200
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 2411307623c714ae521d00dcffca05d3569a656e
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 02a67a490eb8339663aac08c97c665ffee09f0df
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sorting-and-filtering-data"></a>Tri et filtre de données
 L'objet <xref:System.Data.DataView> offre plusieurs méthodes de tri et de filtrage de données dans un objet <xref:System.Data.DataTable> :  
   
 -   Vous pouvez utiliser la propriété <xref:System.Data.DataView.Sort%2A> pour spécifier un ordre de tri en fonction d'une ou de plusieurs colonnes et inclure des paramètres ASC (ordre croissant) et DESC (ordre décroissant).  
   
--   Vous pouvez utiliser la propriété <xref:System.Data.DataView.ApplyDefaultSort%2A> pour créer automatiquement un ordre de tri, croissant, basé sur la ou les colonnes de clé primaire de la table. <xref:System.Data.DataView.ApplyDefaultSort%2A>s’applique uniquement lorsque le **tri** propriété est une référence null ou une chaîne vide, et lorsque la table a une clé primaire définie.  
+-   Vous pouvez utiliser la propriété <xref:System.Data.DataView.ApplyDefaultSort%2A> pour créer automatiquement un ordre de tri, croissant, basé sur la ou les colonnes de clé primaire de la table. <xref:System.Data.DataView.ApplyDefaultSort%2A> s’applique uniquement lorsque le **tri** propriété est une référence null ou une chaîne vide, et lorsque la table a une clé primaire définie.  
   
 -   Vous pouvez utiliser la propriété <xref:System.Data.DataView.RowFilter%2A> pour spécifier des sous-ensembles de lignes basés sur les valeurs de colonne. Pour plus d’informations sur les expressions valides pour la **RowFilter** propriété, consultez les informations de référence pour le <xref:System.Data.DataColumn.Expression%2A> propriété de la <xref:System.Data.DataColumn> classe.  
   
@@ -42,7 +30,7 @@ L'objet <xref:System.Data.DataView> offre plusieurs méthodes de tri et de filtr
     |------------------------------|-----------------|  
     |**CurrentRows**|Le **actuel** version de ligne de toutes les **Unchanged**, **Added**, et **modifié** lignes. Il s'agit de la valeur par défaut.|  
     |**Ajouté**|Le **actuel** version de ligne de toutes les **Added** lignes.|  
-    |**Deleted**|Le **d’origine** version de ligne de toutes les **Deleted** lignes.|  
+    |**supprimé**|Le **d’origine** version de ligne de toutes les **Deleted** lignes.|  
     |**ModifiedCurrent**|Le **actuel** version de ligne de toutes les **modifié** lignes.|  
     |**ModifiedOriginal**|Le **d’origine** version de ligne de toutes les **modifié** lignes.|  
     |**Aucun**|Aucune ligne.|  

@@ -1,31 +1,19 @@
 ---
 title: '&lt;udpBinding&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: fa291901-8340-45c6-9c44-5d9281c70bc3
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a476a2a6f3b5814803323ca5cb3072f16aa7041e
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 1d9535f60bca101e53b678da25915ac9afb41aab
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltudpbindinggt"></a>&lt;udpBinding&gt;
 Élément de configuration utilisé pour configurer la liaison <xref:System.ServiceModel.UdpBinding>.  
   
  \<system.ServiceModel>  
-\<bindings>  
-\<udpBinding>  
+\<liaisons >  
+\<udpBinding >  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -84,7 +72,7 @@ ms.lasthandoff: 01/19/2018
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Cet élément conserve une collection de liaisons standard et personnalisées.|  
+|[\<liaisons >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Cet élément conserve une collection de liaisons standard et personnalisées.|  
   
 ## <a name="remarks"></a>Notes  
  UdpBinding permet aux services WCF de communiquer sur le transport UDP. Il permet des échanges de messages « fire and forget » où un client envoie un message à un service et attend pas de réponse.  
@@ -120,4 +108,4 @@ ms.lasthandoff: 01/19/2018
  [Liaisons](../../../../../docs/framework/wcf/bindings.md)  
  [Configuration des liaisons fournies par le système](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [Utilisation de liaisons pour configurer les Clients et les Services Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)
+ [\<liaison >](../../../../../docs/framework/misc/binding.md)

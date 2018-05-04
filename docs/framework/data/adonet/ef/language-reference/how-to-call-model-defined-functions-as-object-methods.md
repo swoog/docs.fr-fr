@@ -1,27 +1,15 @@
 ---
 title: "Comment : appeler des fonctions définies par modèle comme méthodes d'objet"
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 33bae8a8-4ed8-4a1f-85d1-c62ff288cc61
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 81b9f8099f98915ec0b0f83dbe0f90e506cb2a79
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 055b77697a525fd2d94192ff5b1586c885b22f94
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-call-model-defined-functions-as-object-methods"></a>Comment : appeler des fonctions définies par modèle comme méthodes d'objet
 Cette rubrique décrit comment appeler une fonction définie par modèle comme une méthode sur un objet <xref:System.Data.Objects.ObjectContext> ou comme une méthode statique sur une classe personnalisée. A *fonction définie par modèle* est une fonction qui est définie dans le modèle conceptuel. Les procédures décrites dans cette rubrique montrent comment appeler directement ces fonctions au lieu de les appeler à partir de requêtes LINQ to Entities. Pour plus d’informations sur l’appel de fonctions définies par le modèle de LINQ aux requêtes d’entités, consultez [Comment : Call Model-Defined des fonctions dans les requêtes](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-in-queries.md).  

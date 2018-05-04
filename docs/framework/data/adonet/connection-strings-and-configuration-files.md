@@ -1,27 +1,15 @@
 ---
-title: "Chaînes de connexion et fichiers de configuration"
-ms.custom: 
+title: Chaînes de connexion et fichiers de configuration
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 447b2d6c0e5eeafeaff89aa1d6430eec72d59a4d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a4876d3b794282852b364f58cc84b58546567d80
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connection-strings-and-configuration-files"></a>Chaînes de connexion et fichiers de configuration
 L'incorporation de chaînes de connexion dans le code de votre application peut entraîner des vulnérabilités de sécurité et des problèmes de maintenance. Les chaînes de connexion non chiffrée compilés dans le code source d’une application peuvent être affichées à l’aide de la [Ildasm.exe (désassembleur IL)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) outil. En outre, si la chaîne de connexion change, votre application doit être recompilée. Pour ces raisons, nous vous recommandons de stocker les chaînes de connexion dans un fichier de configuration de l'application.  

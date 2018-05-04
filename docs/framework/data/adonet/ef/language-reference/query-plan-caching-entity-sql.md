@@ -1,24 +1,12 @@
 ---
-title: "Mise en cache d'un plan de requête (Entity SQL)"
-ms.custom: 
+title: Mise en cache d'un plan de requête (Entity SQL)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 90b0c685-5ef2-461b-98b4-c3c0a2b253c7
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: f3ff908102671e2b22cb3ebb5af55e86bd791c43
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 0e00d7f9382fca2af630a8e1d50a5cde5178da05
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="query-plan-caching-entity-sql"></a>Mise en cache d'un plan de requête (Entity SQL)
 À chaque tentative d'exécution d'une requête, le pipeline de la requête recherche son cache de plan de requête pour voir si la requête exacte est déjà compilée et disponible. Si tel est le cas, il réutilise le plan mis en cache plutôt que d'en générer un nouveau. Si aucune correspondance n'est trouvée dans le cache du plan de requête, la requête est compilée et mise en cache. Une requête est identifiée par son texte [!INCLUDE[esql](../../../../../../includes/esql-md.md)] et sa collection de paramètres (noms et types). Toutes les comparaisons de texte respectent la casse.  
