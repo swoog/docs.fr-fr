@@ -1,14 +1,6 @@
 ---
-title: "INotifySink2::OnSyncCallOut, méthode"
-ms.custom: 
+title: INotifySink2::OnSyncCallOut, méthode
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - INotifySink2.OnSyncCallOut
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 97f15656-8677-4079-8553-a1d8603355d6
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 484027fe0ab8e5e416059678d2603080ed730be3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0a38c35f0acd47c9183c043e1c436413a309b138
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="inotifysink2onsynccallout-method"></a>INotifySink2::OnSyncCallOut, méthode
 Appelée lorsqu’un appel est sortant.  
@@ -62,7 +50,7 @@ HRESULT OnSyncCallOut
 ## <a name="return-value"></a>Valeur de retour  
  S_OK si la méthode réussit.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** ProtocolNotify2.idl  
   
 ## <a name="see-also"></a>Voir aussi  

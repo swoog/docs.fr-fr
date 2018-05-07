@@ -1,13 +1,6 @@
 ---
-title: "Traçage et instrumentation d'applications"
-ms.custom: 
+title: Traçage et instrumentation d'applications
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,16 +13,13 @@ helpviewer_keywords:
 - performance monitoring, tracing code
 - Trace class, instrumentation for .NET applications
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
-caps.latest.revision: "21"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 20eea5ed6f69c17466aeb33617f418ac71a3e1b2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 33d940a051c3185d8a3a04e77ea5899de0475ffc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tracing-and-instrumenting-applications"></a>Traçage et instrumentation d'applications
 Le traçage vous permet de surveiller le fonctionnement de votre application pendant son exécution. Vous pouvez ajouter l'instrumentation de traçage et de débogage à votre application .NET Framework au moment du développement, et utiliser cette instrumentation pendant le développement de l'application et après son déploiement. Utilisez les classes <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug?displayProperty=nameWithType> et <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> pour enregistrer les informations relatives aux erreurs et à l'exécution de l'application dans des journaux, des fichiers texte ou d'autres appareils en vue d'une analyse ultérieure.  
@@ -53,7 +43,7 @@ Le traçage vous permet de surveiller le fonctionnement de votre application pen
  Avec les classes <xref:System.Diagnostics.Trace> et <xref:System.Diagnostics.Debug>, vous pouvez surveiller et analyser les performances d'une application pendant le développement ou après le déploiement. Par exemple, utilisez la classe <xref:System.Diagnostics.Trace> pour suivre des actions particulières au fur et à mesure qu'elles se produisent dans une application déployée (comme la création de nouvelles connexions de base de données) et ainsi surveiller les performances de l'application.  
   
 ## <a name="code-tracing-and-debugging"></a>Traçage et débogage de code  
- Pendant la phase de développement, utilisez les méthodes de sortie de la classe <xref:System.Diagnostics.Debug> pour afficher des messages dans la fenêtre Sortie de l'environnement de développement intégré (IDE) de Visual Studio. Exemple :  
+ Pendant la phase de développement, utilisez les méthodes de sortie de la classe <xref:System.Diagnostics.Debug> pour afficher des messages dans la fenêtre Sortie de l'environnement de développement intégré (IDE) de Visual Studio. Par exemple :  
   
 ```vb  
 Trace.WriteLine("Hello World!")  

@@ -1,24 +1,12 @@
 ---
 title: WSAT_TraceEvent
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 142aa03f-781c-4ca4-bc21-0e64b1ff9b6a
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 662fd137b32a8799359d58936aad848687bf9594
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4cbb2ce1b6090b907104a416e635951499912946
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wsattraceevent"></a>WSAT_TraceEvent
 WSAT_TraceEvent  
@@ -34,7 +22,7 @@ class WSAT_TraceEvent : WSAT_TraceProvider
 ## <a name="methods"></a>Méthodes  
  La classe WSAT_TraceEvent hérite de WSAT_TraceProvider mais ne définit pas de méthode ou de propriété supplémentaire.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
 |MOF|Déclaré dans Servicemodel.mof.|  
 |---------|-----------------------------------|  

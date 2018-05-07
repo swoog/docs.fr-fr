@@ -1,33 +1,21 @@
 ---
-title: "Trier les éléments d'une séquence"
-ms.custom: 
+title: Trier les éléments d'une séquence
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d59b93a9-50c8-4770-a114-d902f6a0ea76
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: f296565beb284095dce2520cd545f8af61dc6b48
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 00c7a7a62890aced4c480e2653084c0b7cfe7f45
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sort-elements-in-a-sequence"></a>Trier les éléments d'une séquence
 Utilisez l'opérateur <xref:System.Linq.Enumerable.OrderBy%2A> pour trier une séquence selon une ou plusieurs clés.  
   
 > [!NOTE]
->  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]est conçu pour prendre en charge le classement par types primitifs simples, tels que `string`, `int`, et ainsi de suite. Il ne prend pas en charge le classement des classes complexes à valeurs multiples, telles que les types anonymes. Il ne prend pas non plus en charge de types de données `byte`.  
+>  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] est conçu pour prendre en charge le classement par types primitifs simples, tels que `string`, `int`, et ainsi de suite. Il ne prend pas en charge le classement des classes complexes à valeurs multiples, telles que les types anonymes. Il ne prend pas non plus en charge de types de données `byte`.  
   
 ## <a name="example"></a>Exemple  
  L'exemple suivant trie `Employees` par date d'embauche.  

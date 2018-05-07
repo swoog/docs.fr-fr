@@ -1,14 +1,6 @@
 ---
-title: "EndMerge, méthode"
-ms.custom: 
+title: EndMerge, méthode
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IALink.EndMerge
 - EndMerge
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 1d03bb15-a2c8-4a04-8fc6-b126c89c3778
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 58e9cecae43fb69f1ce2e90eb9d6551d287ca7b3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e8f9eecd6d6d74717eb7c1e389bfa24e40afc950
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="endmerge-method"></a>EndMerge, méthode
 Indique que tous les attributs personnalisés ont été fusionnées dans la portée d’émission.  
@@ -53,7 +41,7 @@ HRESULT EndMerge(
 ## <a name="return-value"></a>Valeur de retour  
  Retourne S_OK si la méthode réussit.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  Requiert alink.h  
   
 ## <a name="see-also"></a>Voir aussi  

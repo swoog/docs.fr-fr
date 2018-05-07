@@ -1,27 +1,15 @@
 ---
 title: Activation de MARS (Multiple Active Result Sets)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: b2b1e3ccfe162b6d4903aaf162673ba476296d8b
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: ab866356e979ec6c041d12620cfb6abfc8928668
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="enabling-multiple-active-result-sets"></a>Activation de MARS (Multiple Active Result Sets)
 MARS est une fonctionnalité qui opère avec SQL Server pour permettre l’exécution de plusieurs lots sur une seule connexion. Lorsque MARS est activé pour une utilisation avec SQL Server, chaque objet de commande utilisé ajoute une session à la connexion.  
@@ -79,7 +67,7 @@ string connectionString = "Data Source=MSSQL1;" +
  Les opérations MARS ne sont pas thread-safe.  
   
 ### <a name="connection-pooling"></a>Regroupement de connexions  
- Les connexions de type MARS sont regroupées comme toute autre connexion. Si une application ouvre deux connexions, l'une avec MARS activé et l'autre avec MARS désactivé, les deux connexions se trouvent dans des pools séparés. Pour plus d’informations, consultez [le regroupement de connexion SQL Server (ADO.NET)](../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md).  
+ Les connexions de type MARS sont regroupées comme toute autre connexion. Si une application ouvre deux connexions, l'une avec MARS activé et l'autre avec MARS désactivé, les deux connexions se trouvent dans des pools séparés. Pour plus d’informations, consultez [Regroupement de connexions SQL Server (ADO.NET)](../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md).  
   
 ### <a name="sql-server-batch-execution-environment"></a>Environnement d'exécution par lots SQL Server  
  Lors de l'ouverture d'une connexion, un environnement par défaut est défini. Cet environnement est ensuite copié dans une session MARS logique.  

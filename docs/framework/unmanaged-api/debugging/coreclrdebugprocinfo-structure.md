@@ -1,14 +1,6 @@
 ---
 title: Structure CoreClrDebugProcInfo
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CoreClrDebugProcInfo
 api_location:
@@ -24,17 +16,13 @@ helpviewer_keywords:
 ms.assetid: 4ddc37da-5c94-4beb-b61c-b54071c0e749
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d341b875f9f64b9aa1fcdcf21668dafea0beac12
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b9d4b27ca0bf454b42f15b849008e5a3019bb09a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coreclrdebugprocinfo-structure"></a>Structure CoreClrDebugProcInfo
 Représente un processus qui s'exécute sur un ordinateur distant.  
@@ -57,7 +45,7 @@ struct  CoreClrDebugProcInfo {
 |`m_dwInternalID`|Identificateur de processus affecté par le proxy de débogage distant en cours d'exécution sur l'ordinateur cible. Cet identificateur est moins souvent recyclé que l'identificateur de système d'exploitation.|  
 |`m_wszName`|Ligne de commande du processus. Ce membre peut être tronqué.|  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CoreClrRemoteDebuggingInterfaces.h  

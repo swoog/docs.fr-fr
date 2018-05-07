@@ -1,27 +1,15 @@
 ---
-title: "Comment : gérer les clés composites dans les requêtes"
-ms.custom: 
+title: 'Comment : gérer les clés composites dans les requêtes'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: ce2f14fd-1038-458a-91e3-a078c61f0d10
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 0267cba0d20ac77a938c64cfa87e750f690471f8
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 26c281445b84d3b3f85980de6ae4076411bb4fba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-handle-composite-keys-in-queries"></a>Comment : gérer les clés composites dans les requêtes
 Certains opérateurs ne peuvent prendre qu’un seul argument. Si votre argument doit inclure plusieurs colonnes de la base de données, vous devez créer un type anonyme pour représenter la combinaison.  

@@ -1,26 +1,14 @@
 ---
-title: "Modèle d’identité basée sur les revendications"
-ms.custom: 
+title: Modèle d’identité basée sur les revendications
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4a96a9af-d980-43be-bf91-341a23401431
-caps.latest.revision: 
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: f675f75d6dfd51b5259748316864048562ee0452
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: dadcc397783e003574d417aa6253ebc561ed28db
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="claims-based-identity-model"></a>Modèle d’identité basée sur les revendications
 Lorsque vous créez des applications qui prennent en charge les revendications, l'identité de l'utilisateur est représentée dans votre application comme un ensemble de revendications. Une revendication peut être le nom d’utilisateur, une autre peut être une adresse de messagerie. L'idée est qu'un système d'identité externe soit configuré pour fournir à votre application tout ce qu'elle doit savoir à propos de l'utilisateur avec chaque demande effectuée, ainsi que l'assurance de chiffrement que les données d'identité que vous recevez proviennent d'une source approuvée.  
@@ -47,7 +35,7 @@ Lorsque vous créez des applications qui prennent en charge les revendications, 
 ## <a name="introduction-to-claims-based-identity"></a>Présentation de l'identité basée sur les revendications  
  La terminologie et les concepts suivants peuvent vous aider à comprendre cette nouvelle architecture de l'identité.  
   
-### <a name="identity"></a>identité  
+### <a name="identity"></a>Identité  
  Pour les besoins de description du modèle de programmation dans Windows Identity Foundation (WIF), nous utiliserons le terme « identité » pour représenter un jeu d’attributs qui décrit un utilisateur ou une autre entité dans un système à sécuriser.  
   
 ### <a name="claim"></a>Revendication  

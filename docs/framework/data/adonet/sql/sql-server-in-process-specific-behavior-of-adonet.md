@@ -1,24 +1,12 @@
 ---
-title: "Comportement SQL Server spécifique au processus d'ADO.NET"
-ms.custom: 
+title: Comportement SQL Server spécifique au processus d'ADO.NET
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4f223948-ae8f-4c16-bdc2-4acc6debed3f
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: a71d450753fca7d2b3535233f7528c442ec0532a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 2e89a902bbe7f25586bc4e6574932c8da3e67d40
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sql-server-in-process-specific-behavior-of-adonet"></a>Comportement SQL Server spécifique au processus d'ADO.NET
 Il existe quatre extensions fonctionnelles principales propres à ADO.NET, figurant dans l'espace de noms <xref:Microsoft.SqlServer.Server>, qui sont spécifiquement destinées à une utilisation en mode in-process : <xref:Microsoft.SqlServer.Server.SqlContext>, <xref:Microsoft.SqlServer.Server.SqlPipe>, <xref:Microsoft.SqlServer.Server.SqlTriggerContext> et <xref:Microsoft.SqlServer.Server.SqlDataRecord>.  

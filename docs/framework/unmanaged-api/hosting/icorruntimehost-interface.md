@@ -1,14 +1,6 @@
 ---
 title: ICorRuntimeHost, interface
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorRuntimeHost
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 4369533d-7834-4497-bc37-bfea0ad737b1
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1280c49c2eea6a06eca10ebd8896b0722e321547
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: facc756061e7eb381abecc544ca4b15bfdde6343
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorruntimehost-interface"></a>ICorRuntimeHost, interface
 Fournit des méthodes qui permettent à l’hôte démarrer et arrêter le common language runtime (CLR) explicitement, pour créer et configurer des domaines d’application, pour accéder au domaine par défaut et d’énumérer tous les domaines en cours d’exécution dans le processus.  
@@ -46,7 +34,7 @@ Fournit des méthodes qui permettent à l’hôte démarrer et arrêter le commo
 |[CloseEnum, méthode](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-closeenum-method.md)|Réinitialise un énumérateur de domaine au début de la liste des domaines.|  
 |[CreateDomain, méthode](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md)|Crée un domaine d’application. L’appelant reçoit un pointeur d’interface de type <xref:System._AppDomain> à une instance de type <xref:System.AppDomain?displayProperty=nameWithType>.|  
 |[CreateDomainEx, méthode](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md)|Crée un domaine d’application. Cette méthode permet à l’appelant de passer une instance IAppDomainSetup pour configurer des fonctionnalités supplémentaires de retourné <xref:System._AppDomain> instance.|  
-|[CreateDomainSetup, méthode](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainsetup-method.md)|Obtient un pointeur d’interface de type `IAppDomainSetup` à un <xref:System.AppDomainSetup> instance. `IAppDomainSetup`Fournit des méthodes pour configurer les aspects d’un domaine d’application avant qu’il est créé.|  
+|[CreateDomainSetup, méthode](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainsetup-method.md)|Obtient un pointeur d’interface de type `IAppDomainSetup` à un <xref:System.AppDomainSetup> instance. `IAppDomainSetup` Fournit des méthodes pour configurer les aspects d’un domaine d’application avant qu’il est créé.|  
 |[CreateEvidence, méthode](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createevidence-method.md)|Obtient un pointeur d’interface de type <xref:System.Security.Principal.IIdentity>, ce qui permet à l’hôte de créer la preuve de sécurité à passer à [CreateDomain](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md) ou [CreateDomainEx](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md).|  
 |[CreateLogicalThreadState, méthode](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createlogicalthreadstate-method.md)|Ne pas utiliser.|  
 |[CurrentDomain, méthode](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-currentdomain-method.md)|Obtient un pointeur d’interface de type <xref:System._AppDomain> qui représente le domaine chargé sur le thread actuel.|  
@@ -63,7 +51,7 @@ Fournit des méthodes qui permettent à l’hôte démarrer et arrêter le commo
 |[SwitchOutLogicalThreadState, méthode](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-switchoutlogicalthreadstate-method.md)|Ne pas utiliser.|  
 |[UnloadDomain, méthode](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-unloaddomain-method.md)|Décharge le domaine d’application du processus en cours.|  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** MSCorEE.h  
@@ -74,7 +62,7 @@ Fournit des méthodes qui permettent à l’hôte démarrer et arrêter le commo
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.AppDomain>  
- [Hébergement d’applications WPF](../../../../docs/framework/unmanaged-api/hosting/index.md)  
+ [Hébergement](../../../../docs/framework/unmanaged-api/hosting/index.md)  
  [ICLRRuntimeHost, interface](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)  
  [Hôtes de runtime](http://msdn.microsoft.com/library/99d9246a-b994-4fe5-985c-8588d1d59998)  
  [Interfaces d’hébergement](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  

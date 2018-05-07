@@ -1,10 +1,6 @@
 ---
-title: "&lt;Désactivez&gt; , élément pour &lt;appSettings&gt;"
+title: '&lt;Désactivez&gt; , élément pour &lt;appSettings&gt;'
 ms.date: 05/01/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/appSettings/clear
 helpviewer_keywords:
@@ -13,14 +9,11 @@ helpviewer_keywords:
 ms.assetid: 6d18c7be-27db-438b-8fb5-765d396b0b7b
 author: guardrex
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 54479cab9abc2c1a107cd055341404c0fe1308fa
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 525818309ddc142fdb3ad65ce841ea58c1d635a2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clear-element-for-appsettings"></a>\<Désactivez >, élément pour \<appSettings >
 
@@ -40,7 +33,7 @@ Efface les paramètres d’application personnalisés.
 
 ## <a name="attributes"></a>Attributs
 
-Aucun.
+Aucun
 
 ## <a name="parent-element"></a>Élément parent
 
@@ -50,7 +43,7 @@ Aucun.
 
 ## <a name="child-elements"></a>Éléments enfants
 
-Aucun.
+Aucun
 
 ## <a name="example"></a>Exemple
 

@@ -1,14 +1,6 @@
 ---
 title: ICeeFileGen, classe
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICeeFileGen
 api_location:
@@ -22,23 +14,19 @@ helpviewer_keywords:
 ms.assetid: 90368606-506e-40df-be1f-8d595159203f
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 04d0dc0d4ab53c17e818d17aa9c07f94bd05f703
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9f0ab07377b9e5db36ca9e4f1fd93aacd3464df4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iceefilegen-class"></a>ICeeFileGen, classe
 Fournit des fonctionnalités pour la création d’un fichier exécutable portable natif (PE). L’interface sera généralement être utilisée par les compilateurs pour générer leur fichier exécutable de sortie compilé.  
   
 > [!NOTE]
->  `ICeeFileGen`prend en charge l’infrastructure .NET Framework et n’est pas destinée à être utilisée directement depuis votre code.  
+>  `ICeeFileGen` prend en charge l’infrastructure .NET Framework et n’est pas destinée à être utilisée directement depuis votre code.  
   
  Cette interface a été déconseillée et sera supprimée dans une version ultérieure.  
   
@@ -247,7 +235,7 @@ public:
 };  
 ```  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** ICeeFileGen.h  

@@ -1,28 +1,19 @@
 ---
-title: "Implémentation du modèle de contrôle ExpandCollapse d'UI Automation"
-ms.custom: 
+title: Implémentation du modèle de contrôle ExpandCollapse d'UI Automation
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - UI Automation, ExpandCollapse control pattern
 - ExpandCollapse control pattern
 - control patterns, ExpandCollapse
 ms.assetid: 1dbabb8c-0d68-47c1-a35e-1c01cb01af26
-caps.latest.revision: "25"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 8e956008c6b80e0b2184adcf0a45b70efa21d752
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f593fb09e8c1056c28d351bfdf0218a0161fd9e4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-the-ui-automation-expandcollapse-control-pattern"></a>Implémentation du modèle de contrôle ExpandCollapse d’UI Automation
 > [!NOTE]
@@ -61,9 +52,9 @@ ms.lasthandoff: 12/22/2017
   
 |Membres requis|Type de membre|Notes|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A>|Propriété|Aucun.|  
-|<xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A>|Méthode|Aucun.|  
-|<xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A>|Méthode|Aucun.|  
+|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A>|Propriété|Aucun|  
+|<xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A>|Méthode|Aucun|  
+|<xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A>|Méthode|Aucun|  
 |<xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>|événement|Aucun événement n'est associé à ce contrôle ; utilisez ce délégué générique.|  
   
 <a name="Exceptions"></a>   

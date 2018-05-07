@@ -2,11 +2,11 @@
 title: '&lt;soapProcessing&gt;'
 ms.date: 03/30/2017
 ms.assetid: e8707027-e6b8-4539-893d-3cd7c13fbc18
-ms.openlocfilehash: 780c0e9a1d88c9f00883753091b102fbe9d41aa5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: cc720c9e3a8ab934ffa8d3cb0c6eceb47a708fb1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltsoapprocessinggt"></a>&lt;soapProcessing&gt;
 
@@ -48,7 +48,7 @@ Aucun
 
 Le traitement SOAP est le processus par lequel les messages sont convertis entre des versions de message.
 
-Le Service de routage de Windows Communication Foundation (WCF) peut convertir des messages à partir d’un protocole à un autre. Si les versions des messages entrant et sortant sont différentes, un nouveau message est créé dans la version correcte. Le traitement des messages à partir d’un <!--zz <xref:System.ServiceModel.Channel.MessageVersion> --> `MessageVersion` à un autre s’effectue en créant un nouveau [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] message qui contient la partie de corps et en-têtes pertinents entrant [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] message. Les en-têtes spécifiques à l'adressage ou reconnus au niveau du routeur ne sont pas utilisés pendant la création du nouveau message WCF car ils sont de versions différentes (dans le cas d'en-têtes d'adressage) ou ont été traités dans le cadre de la communication entre le client et le routeur.
+Le Service de routage de Windows Communication Foundation (WCF) peut convertir des messages à partir d’un protocole à un autre. Si les versions des messages entrant et sortant sont différentes, un nouveau message est créé dans la version correcte. Le traitement des messages à partir d’un <!--zz <xref:System.ServiceModel.Channel.MessageVersion> --> `MessageVersion` à un autre s’effectue en créant un nouveau message WCF qui contient la partie de corps et en-têtes pertinents du message WCF entrant. Les en-têtes spécifiques à l'adressage ou reconnus au niveau du routeur ne sont pas utilisés pendant la création du nouveau message WCF car ils sont de versions différentes (dans le cas d'en-têtes d'adressage) ou ont été traités dans le cadre de la communication entre le client et le routeur.
 
 Le placement d'un en-tête dans le message sortant dépend de son balisage comme étant compris au moment où il traverse la couche du canal entrant. Les en-têtes non reconnus (tels que les en-têtes personnalisés) ne sont pas supprimés et traversent donc le service de routage en étant copiés dans le message sortant. Le corps du message est copié dans le message sortant. Le message est ensuite envoyé via le canal de sortie ; les en-têtes et autres données d'enveloppe spécifiques à ce protocole de communication/transport sont alors créés et ajoutés.
 

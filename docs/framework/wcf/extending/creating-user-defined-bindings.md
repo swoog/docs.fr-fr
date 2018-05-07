@@ -1,28 +1,14 @@
 ---
 title: Création de liaisons définies par l’utilisateur
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - user-defined bindings [WCF]
 ms.assetid: c4960675-d701-4bc9-b400-36a752fdd08b
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 05476adccca0deb5fd82b62f99f06939664cc876
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 82fe3baada73b89291311a891069c6ee3f19cf20
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-user-defined-bindings"></a>Création de liaisons définies par l’utilisateur
 Il existe plusieurs méthodes pour créer des liaisons non fournies par le système :  
@@ -38,9 +24,9 @@ Il existe plusieurs méthodes pour créer des liaisons non fournies par le syst�
   
  Il y a trois types principaux d'éléments de liaison : les éléments de liaison de protocole, les éléments de liaison d'encodage et les éléments de liaison de transport.  
   
- Éléments de liaison de protocole – Ces éléments représentent des étapes de traitement de niveau supérieur qui agissent sur les messages. Les canaux et les écouteurs créés par ces éléments de liaison peuvent ajouter, supprimer ou modifier le contenu du message. Une liaison donnée peut avoir un nombre arbitraire d'éléments de liaison de protocole, chacun héritant d'un objet <xref:System.ServiceModel.Channels.BindingElement>. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] inclut plusieurs éléments de liaison de protocole, dont les objets <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> et <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.  
+ Éléments de liaison de protocole – Ces éléments représentent des étapes de traitement de niveau supérieur qui agissent sur les messages. Les canaux et les écouteurs créés par ces éléments de liaison peuvent ajouter, supprimer ou modifier le contenu du message. Une liaison donnée peut avoir un nombre arbitraire d'éléments de liaison de protocole, chacun héritant d'un objet <xref:System.ServiceModel.Channels.BindingElement>. Windows Communication Foundation (WCF) inclut plusieurs éléments de liaison de protocole, y compris le <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> et <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.  
   
- Élément de liaison d'encodage – Ces éléments représentent des transformations entre un message et un encodage prêt pour la transmission sur le fil. Les liaisons [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] typiques incluent exactement un élément de liaison d'encodage. Des exemples d'éléments de liaison d'encodage incluent <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>, <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement> et <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>. Si un élément de liaison d'encodage n'est pas spécifié pour une liaison, un encodage par défaut est utilisé. La valeur par défaut est Text lorsque le transport est HTTP, sinon la valeur est Binary.  
+ Élément de liaison d’encodage – Ces éléments représentent des transformations entre un message et un encodage prêt pour la transmission sur le fil. Les liaisons [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] typiques incluent exactement un élément de liaison d'encodage. Des exemples d'éléments de liaison d'encodage incluent <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>, <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement> et <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>. Si un élément de liaison d'encodage n'est pas spécifié pour une liaison, un encodage par défaut est utilisé. La valeur par défaut est Text lorsque le transport est HTTP, sinon la valeur est Binary.  
   
  Élément de liaison de transport – Ces éléments représentent la transmission d'un message d'encodage sur un protocole de transport. Les liaisons [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] typiques incluent exactement un élément de liaison de transport, qui hérite de <xref:System.ServiceModel.Channels.TransportBindingElement>. Des exemples d'éléments de liaison de transport incluent <xref:System.ServiceModel.Channels.TcpTransportBindingElement>, <xref:System.ServiceModel.Channels.HttpTransportBindingElement> et <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>.  
   

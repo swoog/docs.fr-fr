@@ -1,32 +1,20 @@
 ---
-title: "Interrogation de DataSets typés"
-ms.custom: 
+title: Interrogation de DataSets typés
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: ad712fa1-2baf-462a-b163-574cce6d376a
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: fff678a54416e72f4be8c3fdfdcacec5a7d90af7
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 30a6512202615590a4b399b8ce7173b213a8873c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="querying-typed-datasets"></a>Interrogation de DataSets typés
 Si le schéma du <xref:System.Data.DataSet> est connu au moment du design de l'application, nous vous recommandons d'utiliser un <xref:System.Data.DataSet> typé lors de l'utilisation de [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. Typé <xref:System.Data.DataSet> est une classe qui dérive d’un <xref:System.Data.DataSet>. De ce fait, il hérite de l'ensemble des méthodes, événements et propriétés d'un <xref:System.Data.DataSet>. En outre, un typé <xref:System.Data.DataSet> fournit des méthodes fortement typées, propriétés et événements. Cela signifie que vous pouvez accéder à des tables et à des colonnes par leur nom au lieu d’utiliser les méthodes associées à des collections. Cela rend les requêtes plus simples et plus lisibles. Pour plus d’informations, consultez [typés](../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md).  
   
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]prend en charge l’interrogation sur typé également <xref:System.Data.DataSet>. Avec un typé <xref:System.Data.DataSet>, vous n’avez pas à utiliser le type générique <xref:System.Data.DataRowExtensions.Field%2A> méthode ou <xref:System.Data.DataRowExtensions.SetField%2A> méthode pour accéder aux données de colonne.  Noms de propriété sont disponibles au moment de la compilation, car les informations de type sont incluses dans le <xref:System.Data.DataSet>. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]fournit l’accès aux valeurs de colonne avec le type approprié, afin que les erreurs d’incompatibilité de type sont interceptées lorsque le code est compilé à la place de l’exécution.  
+ [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] prend en charge l’interrogation sur typé également <xref:System.Data.DataSet>. Avec un typé <xref:System.Data.DataSet>, vous n’avez pas à utiliser le type générique <xref:System.Data.DataRowExtensions.Field%2A> méthode ou <xref:System.Data.DataRowExtensions.SetField%2A> méthode pour accéder aux données de colonne.  Noms de propriété sont disponibles au moment de la compilation, car les informations de type sont incluses dans le <xref:System.Data.DataSet>. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] fournit l’accès aux valeurs de colonne avec le type approprié, afin que les erreurs d’incompatibilité de type sont interceptées lorsque le code est compilé à la place de l’exécution.  
   
  Avant de procéder à l'interrogation d'un <xref:System.Data.DataSet> typé, vous devez générer la classe à l'aide du Concepteur de DataSet dans [!INCLUDE[vs_orcas_long](../../../../includes/vs-orcas-long-md.md)].  Pour plus d’informations, consultez [Créer et configurer des datasets](/visualstudio/data-tools/create-and-configure-datasets-in-visual-studio).  
   

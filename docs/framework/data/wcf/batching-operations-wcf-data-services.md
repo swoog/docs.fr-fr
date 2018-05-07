@@ -1,28 +1,14 @@
 ---
-title: "Opérations de traitement par lots (services de données WCF)"
-ms.custom: 
+title: Opérations de traitement par lots (services de données WCF)
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, client library
 ms.assetid: 962a49d1-cc11-4b96-bc7d-071dd6607d6c
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 65bf6bfd0bd437848137506605a958f5f2e8d750
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5284d1a3c2ea95e26eddd9c5617f09f299bda4f3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="batching-operations-wcf-data-services"></a>Opérations de traitement par lots (services de données WCF)
 Le [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] du lot prend en charge le traitement des demandes à un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-en fonction du service. Pour plus d’informations, consultez [OData : traitement par lot](http://go.microsoft.com/fwlink/?LinkId=186075). Dans [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], chaque opération qui utilise le <xref:System.Data.Services.Client.DataServiceContext>, tels que l’exécution d’une requête ou d’enregistrer les modifications, les résultats dans une demande distincte qui est envoyé au service de données. Pour maintenir une étendue logique pour les jeux d'opérations, vous pouvez définir explicitement des lots opérationnels. Cela garantit que toutes les opérations dans le lot sont envoyées au service de données dans une requête HTTP unique permet au serveur de traiter les opérations de manière atomique et réduit le nombre d’allers-retours au service de données.  

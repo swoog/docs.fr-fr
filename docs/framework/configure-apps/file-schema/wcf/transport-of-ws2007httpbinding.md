@@ -1,34 +1,22 @@
 ---
 title: '&lt;transport&gt; de &lt;ws2007HttpBinding&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 692befa3-8b0b-4ec5-b601-755874e98eb0
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d3a0aa0e4dacafc4c81fa324529dfa3551fcc9c8
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 3be9d4e64e63b32156cb64257f5bed8230cee3aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="lttransportgt-of-ltws2007httpbindinggt"></a>&lt;transport&gt; de &lt;ws2007HttpBinding&gt;
 Définit les paramètres d'authentification correspondant au transport HTTP.  
   
  \<system.serviceModel>  
-\<bindings>  
+\<liaisons >  
 \<ws2007HttpBinding>  
-\<binding>  
-\<security>  
-\<transport>  
+\<liaison >  
+\<sécurité >  
+\<transport >  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -76,13 +64,13 @@ transport clientCredentialType =
 |Certificat|Utilise des certificats X.509 pour authentifier le client.|  
   
 ### <a name="child-elements"></a>Éléments enfants  
- Aucun.  
+ Aucun  
   
 ### <a name="parent-elements"></a>Éléments parents  
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-ws2007httpbinding.md)|Représente les fonctionnalités de sécurité de le [ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md) élément.|  
+|[\<sécurité >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-ws2007httpbinding.md)|Représente les fonctionnalités de sécurité de le [ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md) élément.|  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.ServiceModel.HttpTransportSecurity>  
@@ -93,4 +81,4 @@ transport clientCredentialType =
  [Liaisons](../../../../../docs/framework/wcf/bindings.md)  
  [Configuration des liaisons fournies par le système](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [Utilisation de liaisons pour configurer les Clients et les Services Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)
+ [\<liaison >](../../../../../docs/framework/misc/binding.md)

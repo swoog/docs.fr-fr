@@ -1,14 +1,6 @@
 ---
-title: "ICLRPolicyManager::SetActionOnFailure, méthode"
-ms.custom: 
+title: ICLRPolicyManager::SetActionOnFailure, méthode
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRPolicyManager.SetActionOnFailure
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 4664033f-db97-4388-b988-2ec470796e58
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4440b36485ed900b5e64adcead2525dbb7d5206e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bc3616b2cec0fa951df745e3c5f0468f74ab82bb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrpolicymanagersetactiononfailure-method"></a>ICLRPolicyManager::SetActionOnFailure, méthode
 Spécifie l’action de stratégie que le common language runtime (CLR) doit prendre en cas d’échec spécifié.  
@@ -58,7 +46,7 @@ HRESULT SetActionOnFailure (
   
 |HRESULT|Description|  
 |-------------|-----------------|  
-|S_OK|`SetActionOnFailure`retourné avec succès.|  
+|S_OK|`SetActionOnFailure` retourné avec succès.|  
 |HOST_E_CLRNOTAVAILABLE|Le CLR n’a pas été chargé dans un processus ou le CLR est dans un état dans lequel il ne peut pas exécuter du code managé ou traiter l’appel avec succès.|  
 |HOST_E_TIMEOUT|L’appel a expiré.|  
 |HOST_E_NOT_OWNER|L’appelant ne possède pas le verrou.|  
@@ -67,7 +55,7 @@ HRESULT SetActionOnFailure (
 |E_INVALIDARG|Impossible de définir une action de la stratégie pour l’opération spécifiée, ou une action de stratégie non valide a été spécifiée pour l’opération.|  
   
 ## <a name="remarks"></a>Notes  
- Par défaut, le CLR lève une exception lorsqu’il ne peut pas allouer une ressource, telles que la mémoire. `SetActionOnFailure`permet à l’hôte de substituer ce comportement en spécifiant l’action de stratégie à appliquer en cas d’échec. Le tableau suivant montre les combinaisons de [EClrFailure](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md) et [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) valeurs prises en charge. (Le préfixe FAIL_ est omis de [EClrFailure](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md) valeurs.)  
+ Par défaut, le CLR lève une exception lorsqu’il ne peut pas allouer une ressource, telles que la mémoire. `SetActionOnFailure` permet à l’hôte de substituer ce comportement en spécifiant l’action de stratégie à appliquer en cas d’échec. Le tableau suivant montre les combinaisons de [EClrFailure](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md) et [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) valeurs prises en charge. (Le préfixe FAIL_ est omis de [EClrFailure](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md) valeurs.)  
   
 ||NonCriticalResource|CriticalResource|FatalRuntime|OrphanedLock|Dépassement de capacité|AccessViolation|CodeContract|  
 |-|-------------------------|----------------------|------------------|------------------|-------------------|---------------------|------------------|  
@@ -82,14 +70,14 @@ HRESULT SetActionOnFailure (
 |`eRudeExitProcess`|X|X|X|X|X|N/A||  
 |`eDisableRuntime`|X|X|X|X|X|N/A||  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** MSCorEE.h  
   
  **Bibliothèque :** inclus en tant que ressource dans MSCorEE.dll  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [EClrFailure, énumération](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md)  

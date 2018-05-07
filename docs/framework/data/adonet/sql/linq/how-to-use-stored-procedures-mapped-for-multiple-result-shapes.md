@@ -1,27 +1,15 @@
 ---
-title: "Comment : utiliser des procédures stockées mappées pour plusieurs formes de résultats"
-ms.custom: 
+title: 'Comment : utiliser des procédures stockées mappées pour plusieurs formes de résultats'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c2b84dfe-7fec-489a-92de-45215cec4518
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: fde4dd9044ff2bc6d781d7ceafec2bde3df7e14d
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 03a003bd5b09ae19b01dcc9880137661ba6fccae
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-stored-procedures-mapped-for-multiple-result-shapes"></a>Comment : utiliser des procédures stockées mappées pour plusieurs formes de résultats
 Lorsqu’une procédure stockée peut retourner plusieurs formes de résultats, le type de retour ne peut pas être fortement typé en une forme de projection unique. Bien que [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] peut générer tous les types de projection possibles, il ne peut pas connaître l’ordre dans lequel ils seront retournés.  

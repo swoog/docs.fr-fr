@@ -1,27 +1,15 @@
 ---
-title: "Matérialisation d'objet (services de données WCF)"
-ms.custom: 
+title: Matérialisation d'objet (services de données WCF)
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, querying
 ms.assetid: f0dbf7b0-0292-4e31-9ae4-b98288336dc1
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b093fce50de6a0437456f4fb0e025e3c853777e4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 54f8cc876b373fcfa8e8e514abf50111942de88c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="object-materialization-wcf-data-services"></a>Matérialisation d'objet (services de données WCF)
 Lorsque vous utilisez la **ajouter une référence de Service** boîte de dialogue pour consommer un [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] de flux dans une application cliente .NET Framework, les classes de données équivalentes sont générées pour chaque type d’entité dans le modèle de données exposé par le flux. Pour plus d’informations, consultez [génération de la bibliothèque de Client de Service de données](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md). Les données d'entité retournées par une requête sont matérialisées dans une instance de l'une de ces classes de service de données client générées. Pour plus d’informations sur les options de fusion et résolution d’identité pour les objets suivis, consultez [gérer le contexte de Service de données](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md).  

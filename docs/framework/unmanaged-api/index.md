@@ -1,14 +1,6 @@
 ---
 title: Informations de référence sur les API non managées
-ms.custom: ''
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: reference
 helpviewer_keywords:
 - runtime, unmanaged APIs
 - common language runtime, unmanaged APIs
@@ -17,14 +9,11 @@ helpviewer_keywords:
 ms.assetid: 9aa000ee-c04c-492c-ae4f-83ecdf4fdbbe
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d86cf65dfb3637dbacfeff0cf2b5f48b12c49212
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: d9a716244c779a25ad75c9db37aade0524e9e740
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="unmanaged-api-reference"></a>Informations de référence sur les API non managées
 Cette section contient des informations sur les API non managées qui peuvent être utilisées par les applications associées à du code managé, comme les hôtes de runtime, les compilateurs, les désassembleurs, les obscurcisseurs, les débogueurs et les profileurs.  
@@ -54,7 +43,7 @@ Cette section contient des informations sur les API non managées qui peuvent ê
  [Fusion](../../../docs/framework/unmanaged-api/fusion/index.md)  
  Décrit l'API de fusion, qui permet à un hôte de runtime d'accéder aux propriétés des ressources d'une application pour pouvoir localiser les versions correctes de ces ressources pour l'application.  
   
- [Hébergement d’applications WPF](../../../docs/framework/unmanaged-api/hosting/index.md)  
+ [Hébergement](../../../docs/framework/unmanaged-api/hosting/index.md)  
  Décrit l'API d'hébergement, qui permet à des hôtes non managés d'intégrer le CLR dans leurs applications.  
   
  [Métadonnées](../../../docs/framework/unmanaged-api/metadata/index.md)  

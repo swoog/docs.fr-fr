@@ -1,31 +1,19 @@
 ---
 title: Contrats de code
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - Code contracts
 ms.assetid: 84526045-496f-489d-8517-a258cf76f040
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4a7f6dd2f97f7d57cdaa59d1420a34409804f9dd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 09bfa08589bda68258883e6f080392f534e8c5df
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="code-contracts"></a>Contrats de code
 Les contrats de code offrent un moyen de spécifier des conditions préalables, des post-conditions et des invariants d'objet dans votre code. Les conditions préalables sont des exigences qui doivent être satisfaites à l'entrée d'une méthode ou d'une propriété. Les post-conditions décrivent les attentes à la sortie de la méthode ou de la propriété. Les invariants d'objet décrivent l'état attendu pour une classe présentant un état correct.  

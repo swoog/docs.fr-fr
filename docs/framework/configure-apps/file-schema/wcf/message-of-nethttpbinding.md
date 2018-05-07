@@ -2,11 +2,11 @@
 title: '&lt;message&gt; of &lt;netHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9def5a35-475d-40d6-b716-ccdbd93863c7
-ms.openlocfilehash: 6e4cd2c000d577e26b54e09f24279e0fd74afcf1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: be96306b61b3eb6bfb8d3305ccbb05bb3ec4549d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltmessagegt-of-ltnethttpbindinggt"></a>&lt;message&gt; of &lt;netHttpBinding&gt;
 Définit les paramètres de sécurité au niveau du message de la [ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).  
@@ -40,7 +40,7 @@ Définit les paramètres de sécurité au niveau du message de la [ \<basicHttpB
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|UserName|-Requiert le client soit authentifié au serveur avec une information d’identification de nom d’utilisateur. Ces informations d'identification doivent être spécifiées à l'aide de l'élément <`clientCredentials`>.<br />-   [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] ne gère pas l’envoi d’un condensat de mot de passe ou la dérivation de clés à l’aide de mots de passe et de l’utilisation de telles clés pour la sécurité de message. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] s'assure ainsi que le transport est sécurisé lors de l'utilisation d'informations d'identification UserName. Pour le `basicHttpBinding`, cela requiert la configuration d'un canal SSL.|  
+|UserName|-Requiert le client soit authentifié au serveur avec une information d’identification de nom d’utilisateur. Ces informations d'identification doivent être spécifiées à l'aide de l'élément <`clientCredentials`>.<br />-WCF ne prend pas en charge l’envoi d’un condensat de mot de passe ou la dérivation de clés à l’aide de mots de passe et de l’utilisation de telles clés pour la sécurité de message. WCF applique donc que le transport est sécurisé lors de l’utilisation des informations d’identification UserName. Pour le `basicHttpBinding`, cela requiert la configuration d'un canal SSL.|  
 |Certificat|Requiert que le client soit authentifié auprès du serveur à l'aide d'un certificat. Les informations d'identification du client dans ce cas doivent être spécifiées à l'aide de <`clientCredentials`> et de <`clientCertificate`>. De plus, lors de l'utilisation du mode de sécurité du message, le client doit être configuré avec le certificat du service. Les informations d’identification de service dans ce cas doivent être spécifiées à l’aide <xref:System.ServiceModel.Description.ClientCredentials> classe ou `ClientCredentials` élément de comportement et en spécifiant le service de certificats à l’aide de la \<serviceCertificate > élément de serviceCredentials.|  
   
 ### <a name="child-elements"></a>Éléments enfants  

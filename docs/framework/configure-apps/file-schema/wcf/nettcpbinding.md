@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - netTcpBinding Element
 ms.assetid: 5c5104a7-8754-4335-8233-46a45322503e
-ms.openlocfilehash: f6cbdbb7c5569851055102cfe5d413e0b94376f3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 0be428ef3b37222e1e8472591d2b54d950bef59f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltnettcpbindinggt"></a>&lt;netTcpBinding&gt;
 Spécifie une liaison sécurisée, fiable et optimisée, adaptée à la communication entre ordinateurs. Par défaut, elle génère une pile de communication du runtime avec Windows Security pour la sécurité et l'authentification des messages, TCP pour la remise de messages et un encodage de message binaire.  
@@ -92,7 +92,7 @@ algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes
 ## <a name="remarks"></a>Notes  
  Par défaut, cette liaison génère une pile de communication au moment de l’exécution, qui utilise la sécurité de transport, le protocole TCP pour la remise des messages et un encodage de message binaire. Cette liaison est un choix de fournie par le système de Windows Communication Foundation (WCF) approprié pour communiquer via un Intranet.  
   
- La configuration par défaut de `netTcpBinding` est plus rapide que la configuration proposée par `wsHttpBinding`, mais elle n'est destinée qu'à la communication de [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] à [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]. Le comportement de sécurité est configurable à l'aide de l'attribut facultatif `securityMode`. L'utilisation de WS-ReliableMessaging peut être configurée à l'aide de l'attribut facultatif `reliableSessionEnabled`. Mais les fonctionnalités de messagerie fiable sont désactivées par défaut. Plus généralement, les liaisons fournies par le système HTTP telles que `wsHttpBinding` et `basicHttpBinding` sont configurées pour activer certains éléments par défaut, alors que la liaison `netTcpBinding` en désactive par défaut. Par conséquent, vous devez demander de l'aide explicitement, par exemple pour les spécifications WS - *. Ainsi, la configuration TCP par défaut permet d’échanger des messages entre points de terminaison plus rapidement que ceux configurés par défaut pour les liaisons HTTP.  
+ La configuration par défaut pour le `netTcpBinding` est plus rapide que la configuration fournie par le `wsHttpBinding`, mais il est conçu uniquement pour la communication de WCF. Le comportement de sécurité est configurable à l'aide de l'attribut facultatif `securityMode`. L'utilisation de WS-ReliableMessaging peut être configurée à l'aide de l'attribut facultatif `reliableSessionEnabled`. Mais les fonctionnalités de messagerie fiable sont désactivées par défaut. Plus généralement, les liaisons fournies par le système HTTP telles que `wsHttpBinding` et `basicHttpBinding` sont configurées pour activer certains éléments par défaut, alors que la liaison `netTcpBinding` en désactive par défaut. Par conséquent, vous devez demander de l'aide explicitement, par exemple pour les spécifications WS - *. Ainsi, la configuration TCP par défaut permet d’échanger des messages entre points de terminaison plus rapidement que ceux configurés par défaut pour les liaisons HTTP.  
   
 ## <a name="example"></a>Exemple  
  La liaison est spécifiée dans les fichiers de configuration pour le client et le service. Le type de liaison est spécifié dans l'attribut `binding` de l'élément `<endpoint>`. Si vous souhaitez configurer la liaison netTcpBinding et modifier quelques-uns de ses paramètres, il est nécessaire de définir une configuration de liaison. Le point de terminaison doit référencer la configuration de liaison avec un attribut `bindingConfiguration`. Dans l’exemple suivant, une configuration de liaison est définie.  

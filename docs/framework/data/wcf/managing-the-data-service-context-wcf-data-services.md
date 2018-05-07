@@ -1,24 +1,12 @@
 ---
-title: "Gérer le contexte du service de données (WCF Data Services)"
-ms.custom: 
+title: Gérer le contexte du service de données (WCF Data Services)
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 15b19d09-7de7-4638-9556-6ef396cc45ec
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c993a4f09a7187b45331f6beb71a9637da87d20f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9b2b0bb709081ca7b0b2a1367f10e1f7a08c98c9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="managing-the-data-service-context-wcf-data-services"></a>Gérer le contexte du service de données (WCF Data Services)
 La classe <xref:System.Data.Services.Client.DataServiceContext> encapsule des opérations prises en charge sur un service de données spécifié. Même si les services [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] sont sans état, ce n'est pas le cas du contexte. Par conséquent, vous pouvez utiliser la <xref:System.Data.Services.Client.DataServiceContext> classe pour gérer l’état sur le client entre des interactions avec le service de données pour prendre en charge des fonctionnalités telles que la gestion des modifications. Cette classe gère également des identités et suit les modifications.  
@@ -29,7 +17,7 @@ La classe <xref:System.Data.Services.Client.DataServiceContext> encapsule des op
  Par défaut, le client ne matérialise qu'une seule entrée du flux de réponse en un objet pour les entités qui ne sont pas déjà suivies par l'objet <xref:System.Data.Services.Client.DataServiceContext>. Cela signifie que les modifications apportées à des objets déjà dans le cache ne sont pas remplacées. Ce comportement est contrôlé en spécifiant une valeur <xref:System.Data.Services.Client.MergeOption> pour les requêtes et les opérations de chargement. Cette option est spécifiée en définissant la propriété <xref:System.Data.Services.Client.DataServiceContext.MergeOption%2A> sur l'objet <xref:System.Data.Services.Client.DataServiceContext>. La valeur de l'option de fusion par défaut est <xref:System.Data.Services.Client.MergeOption.AppendOnly>. Cela ne matérialise les objets que pour les entités qui ne sont pas déjà suivies, ce qui signifie que les objets existants ne sont pas remplacés. Il existe un autre moyen d'empêcher que les modifications apportées aux objets sur le client ne soient remplacées par les mises à jour provenant du service de données. Il consiste à spécifier <xref:System.Data.Services.Client.MergeOption.PreserveChanges>. Lorsque vous spécifiez <xref:System.Data.Services.Client.MergeOption.OverwriteChanges>, les valeurs des objets sur le client sont remplacées par les valeurs les plus récentes à partir des entrées du flux de réponse, même si les modifications ont déjà été apportées à ces objets. Lorsqu'une option de fusion <xref:System.Data.Services.Client.MergeOption.NoTracking> est utilisée, l'objet <xref:System.Data.Services.Client.DataServiceContext> ne peut pas transmettre au service de données les modifications apportées aux objets clients. Avec cette option, les modifications sont toujours remplacées par les valeurs du service de données.  
   
 ## <a name="managing-concurrency"></a>Gestion de l'accès concurrentiel  
- [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]prend en charge l’accès concurrentiel optimiste qui permet au service de données détecter les conflits de mise à jour. Le fournisseur de services de données peut être configuré de telle façon que le service de données recherche les modifications apportées aux entités à l'aide d'un jeton d'accès concurrentiel. Ce jeton comprend une ou plusieurs propriétés d'un type d'entité qui sont validées par le service de données afin de déterminer si une ressource a changé. Les jetons d’accès concurrentiel, qui sont inclus dans l’en-tête eTag des demandes et réponses du service de données, sont gérées pour vous par le [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] client. Pour plus d’informations, consultez [mise à jour du Service de données](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).  
+ [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] prend en charge l’accès concurrentiel optimiste qui permet au service de données détecter les conflits de mise à jour. Le fournisseur de services de données peut être configuré de telle façon que le service de données recherche les modifications apportées aux entités à l'aide d'un jeton d'accès concurrentiel. Ce jeton comprend une ou plusieurs propriétés d'un type d'entité qui sont validées par le service de données afin de déterminer si une ressource a changé. Les jetons d’accès concurrentiel, qui sont inclus dans l’en-tête eTag des demandes et réponses du service de données, sont gérées pour vous par le [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] client. Pour plus d’informations, consultez [mise à jour du Service de données](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).  
   
  L'objet <xref:System.Data.Services.Client.DataServiceContext> suit les modifications apportées aux objets signalées manuellement à l'aide des méthodes <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A>, <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> et <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A>, ou à l'aide d'un objet <xref:System.Data.Services.Client.DataServiceCollection%601>. Lorsque la méthode <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> est appelée, le client renvoie les modifications au service de données. La méthode <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> peut échouer lorsque les modifications apportées aux données dans le client entrent en conflit avec les modifications du service de données. Lorsque cela se produit, vous devez redemander la ressource de l'entité pour recevoir les données de mise à jour. Pour supprimer les modifications du service de données, exécutez cette requête à l'aide de l'option de fusion <xref:System.Data.Services.Client.MergeOption.PreserveChanges>. Lorsque vous rappelez la méthode<xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>, les modifications conservées sur le client sont rendues persistantes sur le service de données à condition que d'autres modifications n'aient pas déjà été apportées à la ressource dans le service de données.  
   

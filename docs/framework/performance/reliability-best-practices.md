@@ -1,13 +1,6 @@
 ---
-title: "Meilleures pratiques pour la fiabilité"
-ms.custom: 
+title: Meilleures pratiques pour la fiabilité
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - marking locks
 - rebooting databases
@@ -45,16 +38,13 @@ helpviewer_keywords:
 - STA-dependent features
 - fibers
 ms.assetid: cf624c1f-c160-46a1-bb2b-213587688da7
-caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ad218e8f87c2a04a9df6f67a918097de20296d0c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d6f29d15297fc7faff6bb3bb07ee535647c2bb7a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reliability-best-practices"></a>Meilleures pratiques pour la fiabilité
 Même si les règles de fiabilité suivantes concernent plus spécialement SQL Server, elles peuvent également s’appliquer à n’importe quelle application serveur basée sur l’hôte. Il est extrêmement important d’éviter que les serveurs, tels que les serveurs SQL Server, soient victimes de fuite de ressources ou de panne.  Toutefois, il est impossible de le faire en écrivant du code réécrit pour chaque méthode qui modifie l’état d’un objet.  Le but n’est pas ici d’écrire du code managé totalement fiable et capable de récupérer des erreurs partout où elles se produisent avec du code réécrit.  Cette tâche relèverait pratiquement de l’impossible.  Le Common Language Runtime (CLR) ne peut offrir suffisamment de garanties quant à la possibilité d’écrire du code managé parfait.  Notez qu’à la différence d’ASP.NET, SQL Server utilise un seul processus qui ne peut pas être recyclé sans mettre une base de données hors connexion pendant une durée inacceptable.  
@@ -258,7 +248,7 @@ public static MyClass SingletonProperty
  Envisagez de changer tous les emplacements qui interceptent toutes les exceptions pour qu’ils n’interceptent plus qu’un type spécifique d’exception dont vous prévoyez la levée, par exemple une exception <xref:System.FormatException> provenant des méthodes de mise en forme de chaînes.  Cela empêche le bloc catch de s’exécuter sur des exceptions inattendues et garantit que le code ne masque pas de bogues en interceptant des exceptions inattendues.  En règle générale, ne gérez jamais une exception dans du code de bibliothèque (du code exigeant que vous interceptiez une exception peut indiquer un défaut de conception dans le code que vous appelez).  Dans certains cas, vous pouvez souhaiter intercepter une exception et lever un type d’exception différent pour fournir plus de données.  Utilisez dans ce cas des exceptions imbriquées, en stockant la vraie cause de l’échec dans la propriété <xref:System.Exception.InnerException%2A> de la nouvelle exception.  
   
 #### <a name="code-analysis-rule"></a>Règle d’analyse du code  
- Examinez tous les blocs catch dans le code managé qui interceptent tous les objets ou toutes les exceptions.  En C#, cela revient à marquer `catch` {} et `catch(Exception)` {}.  Envisagez de définir un type d’exception très spécifique ou effectuez une revue du code pour garantir qu’il ne se comporte pas de façon incorrecte s’il intercepte un type d’exception inattendu.  
+ Examinez tous les blocs catch dans le code managé qui interceptent tous les objets ou toutes les exceptions.  En c#, cela revient à marquer `catch` {} et `catch(Exception)` {}.  Envisagez de définir un type d’exception très spécifique ou effectuez une revue du code pour garantir qu’il ne se comporte pas de façon incorrecte s’il intercepte un type d’exception inattendu.  
   
 ### <a name="do-not-assume-a-managed-thread-is-a-win32-thread--it-is-a-fiber"></a>Ne supposez pas qu’un thread managé est un thread Win32 alors qu’il s’agit d’une fibre  
  L’utilisation du stockage local des threads managés fonctionne, mais vous ne pourrez peut-être pas utiliser le stockage local des threads non managés ou supposer que le code se réexécutera sur le thread du système d’exploitation actuel.  Ne changez pas des paramètres tels que les paramètres régionaux du thread.  N’appelez pas `InitializeCriticalSection` ou `CreateMutex` via un appel de code non managé, car ils exigent que le thread du système d’exploitation qui est verrouillé puisse aussi être déverrouillé.  Comme cela n’est pas le cas pendant l’utilisation de fibres, des mutex et des sections critiques Win32 ne peuvent pas être utilisés directement dans SQL.  Notez que la classe <xref:System.Threading.Mutex> managée ne gère pas ces problèmes d’affinité de thread.  

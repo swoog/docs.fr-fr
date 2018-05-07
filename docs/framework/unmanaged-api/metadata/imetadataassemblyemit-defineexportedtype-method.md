@@ -1,14 +1,6 @@
 ---
-title: "IMetaDataAssemblyEmit::DefineExportedType, méthode"
-ms.custom: 
+title: IMetaDataAssemblyEmit::DefineExportedType, méthode
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataAssemblyEmit.DefineExportedType
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: fad01d7a-3178-4c8c-9f0a-4641e3701c9b
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 59aae188e404ebc717a140fb7918e3fbf69f3f70
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a2eb894a8bac702c30826d1e965c91cae9b259ee
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataassemblyemitdefineexportedtype-method"></a>IMetaDataAssemblyEmit::DefineExportedType, méthode
 Crée une structure `ExportedType` contenant les métadonnées pour le type exporté spécifié et retourne le jeton de métadonnées associé.  
@@ -57,13 +45,13 @@ HRESULT DefineExportedType (
  `tkImplementation`  
  [in] Un jeton qui spécifie où le type exporté est implémenté. Les valeurs valides et leurs significations associées sont :  
   
--   `mdFile`Le type est implémenté dans un fichier différent au sein de cet assembly.  
+-   `mdFile` Le type est implémenté dans un fichier différent au sein de cet assembly.  
   
--   `mdAssemblyRef`Le type est implémenté dans un assembly différent.  
+-   `mdAssemblyRef` Le type est implémenté dans un assembly différent.  
   
--   `mdExportedTYpe`Le type est imbriqué dans un autre type.  
+-   `mdExportedTYpe` Le type est imbriqué dans un autre type.  
   
--   `mdFileNil`Le type est dans le même fichier que le manifeste et n’est pas un type imbriqué.  
+-   `mdFileNil` Le type est dans le même fichier que le manifeste et n’est pas un type imbriqué.  
   
  `tkTypeDef`  
  [in] Un jeton de métadonnées qui spécifie le type doit être exporté. Cette valeur est entrée dans le `TypeDef` table dans le fichier qui implémente le type et ne s’applique uniquement si ce fichier se trouve dans cet assembly.  
@@ -77,14 +65,14 @@ HRESULT DefineExportedType (
 ## <a name="remarks"></a>Notes  
  Un `ExportedType` structure de métadonnées doit être définie pour chaque type qui est exposé par cet assembly et qui est implémentée dans un module autre que celui contenant le manifeste.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateforme :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Cor.h  
   
  **Bibliothèque :** utilisé en tant que ressource dans MsCorEE.dll  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [IMetaDataAssemblyEmit, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

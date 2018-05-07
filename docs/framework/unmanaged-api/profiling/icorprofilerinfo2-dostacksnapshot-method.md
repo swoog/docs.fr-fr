@@ -1,14 +1,6 @@
 ---
-title: "ICorProfilerInfo2::DoStackSnapshot, méthode"
-ms.custom: 
+title: ICorProfilerInfo2::DoStackSnapshot, méthode
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerInfo2.DoStackSnapshot
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 287b11e9-7c52-4a13-ba97-751203fa97f4
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5548254eb160547643a874fd2e31a085ec6f3ecb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 338120932b0bcbe390332515856aaeaa3bc34a56
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilerinfo2dostacksnapshot-method"></a>ICorProfilerInfo2::DoStackSnapshot, méthode
 Parcourt les frames managés sur la pile pour le thread spécifié et envoie des informations au profileur via un rappel.  
@@ -110,14 +98,14 @@ HRESULT DoStackSnapshot(
   
  Il existe également un risque d’interblocage si vous appelez `DoStackSnapshot` à partir d’un thread que votre profileur a créé afin que vous pouvez parcourir la pile d’un thread cible distinct. La première fois que le thread que vous avez créé entre certaines `ICorProfilerInfo*` méthodes (y compris `DoStackSnapshot`), le CLR exécute une initialisation par thread, spécifique au CLR sur ce thread. Si votre profileur a interrompu le thread cible dont vous essayez de parcourir la pile, et si ce thread cible est produit qu’il possède un verrou nécessaires pour effectuer cette initialisation par thread, un interblocage se produit. Pour éviter cet interblocage, faites un appel initial à `DoStackSnapshot` depuis votre thread créés par le profileur pour parcourir thread cible distinct, mais n’interrompez pas le thread cible au préalable. Cet appel initial garantit que l’initialisation par thread peut s’effectuer sans blocage. Si `DoStackSnapshot` réussit et signale au moins une frame, après ce point, il sera sécurisé pour interrompre tout thread cible et l’appel de ce thread créés par le Générateur de profils `DoStackSnapshot` pour parcourir la pile de ce thread cible.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorProf.idl, CorProf.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [ICorProfilerInfo, interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  

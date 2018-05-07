@@ -1,14 +1,6 @@
 ---
 title: Importation d'une bibliothèque de types sous la forme d'un assembly
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - importing type library
 - type metadata
@@ -23,17 +15,13 @@ helpviewer_keywords:
 - COM interop, importing type library
 - COM interop, exposing COM components
 ms.assetid: d1898229-cd40-426e-a275-f3eb65fbc79f
-caps.latest.revision: 14
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0299ef58d58318714b8f0eb8082928f8da565d2f
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 89479ca4a41f761d4aacaf6d8d962bfba62be811
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>Importation d'une bibliothèque de types sous la forme d'un assembly
 Les définitions des types COM résident généralement dans une bibliothèque de types. Les compilateurs conformes CLS produisent quant à eux les métadonnées des types dans un assembly. Ces deux sources d’informations sur les types sont assez différentes. Cette rubrique décrit des techniques permettant de générer des métadonnées à partir d’une bibliothèque de types. L’assembly résultant est appelé assembly d’interopérabilité, et les informations de type qu’il contient permettent aux applications .NET Framework d’utiliser des types COM.  

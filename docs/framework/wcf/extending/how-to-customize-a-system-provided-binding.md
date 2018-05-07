@@ -1,32 +1,18 @@
 ---
 title: 'Comment : personnaliser une liaison fournie par le système'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: f8b97862-e8bb-470d-8b96-07733c21fe26
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1d70a4c4234047e7410ae4f631e48595a0859f37
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 40efa49836561351dc14c2cb49d906a6d344a5bc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-customize-a-system-provided-binding"></a>Comment : personnaliser une liaison fournie par le système
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] inclut plusieurs liaisons fournies par le système qui vous permettent de configurer quelques-unes des propriétés des éléments de liaison sous-jacents, mais pas toutes les propriétés. Cette rubrique explique comment attribuer des propriétés aux éléments de liaison afin de créer une liaison personnalisée.  
+Windows Communication Foundation (WCF) inclut plusieurs liaisons fournies par le système qui vous permettent de configurer certaines propriétés des éléments de liaison sous-jacente, mais pas toutes les propriétés. Cette rubrique explique comment attribuer des propriétés aux éléments de liaison afin de créer une liaison personnalisée.  
   
  Pour plus d’informations sur comment directement créer et configurer des éléments de liaison sans utiliser les liaisons fournies par le système, consultez [liaisons personnalisées](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   

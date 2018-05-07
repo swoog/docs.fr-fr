@@ -1,24 +1,14 @@
 ---
 title: Compilation et .NET natif
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
-caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d86d8a740aa0597a21c6665ee722f4a601dec9bf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 046b71a8f1d948a785a15cfc148b93292bf673f7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="net-native-and-compilation"></a>Compilation et .NET natif
 Les applications Windows 8.1 et les applications de bureau Windows qui ciblent le .NET Framework sont écrites dans un langage de programmation particulier et compilées dans un langage intermédiaire. Lors de l'exécution, un compilateur juste-à-temps (JIT) est chargé de compiler du langage intermédiaire en code natif pour l'ordinateur local, juste avant qu'une méthode ne soit exécutée pour la première fois. À l'inverse, la chaîne d'outils .NET Native convertit le code source en code natif au moment de la compilation. Cette rubrique compare .NET Native avec d'autres technologies de compilation disponibles pour les applications .NET Framework. Elle explique également de façon pratique comment .NET Native génère le code natif qui peut vous aider à comprendre pourquoi les exceptions qui se produisent dans le code compilé avec .NET Native ne se produisent pas dans le code compilé par le compilateur JIT.  

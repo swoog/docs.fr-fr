@@ -1,14 +1,6 @@
 ---
-title: "CorRefToDefCheck, énumération"
-ms.custom: 
+title: CorRefToDefCheck, énumération
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CorRefToDefCheck
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: f9a80f1a-55af-4459-b095-8441aae16119
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 366110eca3c4621866213b2c9fc4bcf99103d0a8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5caf432b5de7cb0c8ff0e6f53b3e79a64ecf802e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="correftodefcheck-enumeration"></a>CorRefToDefCheck, énumération
 Spécifie des indicateurs pour contrôler les éléments référencés qui sont convertis en définitions afin d'optimiser le code.  
@@ -59,12 +47,12 @@ typedef enum CorRefToDefCheck {
 |`MDTypeRefToDef`|Spécifie que seules les références de type doivent être convertis en définitions de type.|  
 |`MDMemberRefToDef`|Spécifie que seules les références de membre doivent être convertis aux définitions. Autrement dit, les références de membre doivent être converties à des définitions de méthode ou de définitions de champ.|  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorHdr.h  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [Énumérations de métadonnées](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

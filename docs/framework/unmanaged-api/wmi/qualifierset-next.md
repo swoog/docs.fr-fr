@@ -1,11 +1,7 @@
 ---
-title: "QualifierSet_Next (fonction) (référence des API non managées)"
-description: "La fonction QualifierSet_Next récupère le qualificateur suivant dans une énumération."
+title: QualifierSet_Next (fonction) (référence des API non managées)
+description: La fonction QualifierSet_Next récupère le qualificateur suivant dans une énumération.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - QualifierSet_Next
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 01a9c9d162039547849597aaa9c8a6fa38a31455
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a8232691c697c51b5a480a68c6d952f294a63460
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="qualifiersetnext-function"></a>QualifierSet_Next (fonction)
 Récupère le qualificateur suivant dans une énumération démarrée avec un appel à la [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) (fonction).   
@@ -87,12 +80,12 @@ Vous appelez le `QualifierSet_Next` fonction à plusieurs reprises pour énumér
 
 L’ordre des qualificateurs retournée lors de l’énumération n’est pas défini.
 
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** WMINet_Utils.idl  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versions du .NET framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
 [WMI et les compteurs de Performance (référence des API non managées)](index.md)

@@ -1,34 +1,20 @@
 ---
-title: "Fournisseurs de services de données (services de données WCF)"
-ms.custom: 
+title: Fournisseurs de services de données (services de données WCF)
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: a0160b1b-3d9c-4cc8-8391-cb0986a60a41
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6f25f1f9137206c1adb3ab3f89b7c6a783aeccf0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7be6578f0b237f986bcb68a3ace10ba04cf06474
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-services-providers-wcf-data-services"></a>Fournisseurs de services de données (services de données WCF)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]prend en charge plusieurs modèles de fournisseur pour exposer des données comme un [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] flux. Cette rubrique fournit les informations pour vous permettre de choisir le meilleur fournisseur [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] pour votre source de données.  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] prend en charge plusieurs modèles de fournisseur pour exposer des données comme un [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] flux. Cette rubrique fournit les informations pour vous permettre de choisir le meilleur fournisseur [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] pour votre source de données.  
   
 ## <a name="data-source-providers"></a>Fournisseurs de sources de données  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]prend en charge les fournisseurs suivants pour définir le modèle de données d’un service de données.  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] prend en charge les fournisseurs suivants pour définir le modèle de données d’un service de données.  
   
 |Fournisseur|Description|  
 |--------------|-----------------|  
@@ -37,7 +23,7 @@ ms.lasthandoff: 12/22/2017
 |Fournisseurs de services de données personnalisés|[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] inclut un jeu de fournisseurs qui vous permet de définir dynamiquement  un modèle de données basé sur des types de données à liaison tardive. Vous devez implémenter ces interfaces lorsque les données exposées sont inconnues au moment de la conception de l’application ou lorsque les fournisseurs d’Entity Framework ou de réflexion ne sont pas suffisants. Pour plus d’informations, consultez [fournisseurs de services de données personnalisé](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md).|  
   
 ## <a name="other-data-service-providers"></a>Autres fournisseurs de services de données  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]possède le fournisseur de service des données supplémentaire suivant qui améliore les performances d’une source de données définie à l’aide d’un des autres fournisseurs.  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] possède le fournisseur de service des données supplémentaire suivant qui améliore les performances d’une source de données définie à l’aide d’un des autres fournisseurs.  
   
 |Fournisseur|Description|  
 |--------------|-----------------|  

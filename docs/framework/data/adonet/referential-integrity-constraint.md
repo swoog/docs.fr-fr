@@ -1,24 +1,12 @@
 ---
-title: "contrainte d'intégrité référentielle"
-ms.custom: 
+title: contrainte d'intégrité référentielle
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 3d3ba44b-4302-40d8-a7a9-62932e0395e5
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c343a0eba2478e041186f7bef18a85400c54bb5c
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: a4d63e07da0c75b8a0369933fccfc0cc66fcc40b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="referential-integrity-constraint"></a>contrainte d'intégrité référentielle
 A *contrainte d’intégrité référentielle* dans le modèle EDM (Entity Data Model) est similaire à une contrainte d’intégrité référentielle dans une base de données relationnelle. De la même façon qu’une colonne (ou les colonnes) à partir d’une table de base de données peuvent faire référence à la clé primaire d’une autre table, un [propriété](../../../../docs/framework/data/adonet/property.md) (ou propriétés) d’un [type d’entité](../../../../docs/framework/data/adonet/entity-type.md) peut faire référence à la [clé d’entité ](../../../../docs/framework/data/adonet/entity-key.md) d’un autre type d’entité. Le type d’entité référencé est appelé le *fin principal* de la contrainte. Le type d’entité qui fait référence à la terminaison principale est appelé le *terminaison dépendante* de la contrainte.  

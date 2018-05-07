@@ -2,11 +2,11 @@
 title: '&lt;httpTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8b30c065-b32a-4fa3-8eb4-5537a9c6b897
-ms.openlocfilehash: cd3a17eee9d4eebbefa880e14aadbc4715a18ac1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 77400348e9adc31d8121fc75f46d75d757af270f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="lthttptransportgt"></a>&lt;httpTransport&gt;
 Spécifie un transport HTTP pour la transmission des messages SOAP d’une liaison personnalisée.  
@@ -66,7 +66,7 @@ IntegratedWindowsAuthentication: Specifies Windows authentication"
 |[\<liaison >](../../../../../docs/framework/misc/binding.md)|Définit toutes les fonctions de liaison d’une liaison personnalisée.|  
   
 ## <a name="remarks"></a>Notes  
- L'élément `httpTransport` constitue le point de départ pour créer une liaison personnalisée qui implémente le protocole de transport HTTP. HTTP est le principal transport utilisé à des fins d'interopérabilité. Ce transport est pris en charge par Windows Communication Foundation (WCF) pour garantir l’interopérabilité avec d’autres non -[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] piles de services Web.  
+ L'élément `httpTransport` constitue le point de départ pour créer une liaison personnalisée qui implémente le protocole de transport HTTP. HTTP est le principal transport utilisé à des fins d'interopérabilité. Ce transport est pris en charge par Windows Communication Foundation (WCF) pour garantir l’interopérabilité avec d’autres piles de services Web non - WCF.  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.ServiceModel.Configuration.HttpTransportElement>  
