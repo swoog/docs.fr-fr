@@ -1,14 +1,6 @@
 ---
-title: "Vue d'ensemble du contrôle ListView (Windows Forms)"
-ms.custom: 
+title: Vue d'ensemble du contrôle ListView (Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - ListView
 helpviewer_keywords:
@@ -16,17 +8,11 @@ helpviewer_keywords:
 - ListView control [Windows Forms], about ListView control
 - list views
 ms.assetid: c9ef56c1-3bb1-4101-9f4e-e95e720f2756
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b79fecb0a537f4c568b4a57e9ce2bfab8d8e1005
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: f92b5f5ae40287c95da10ef96aad0fa764fa00e2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="listview-control-overview-windows-forms"></a>Vue d'ensemble du contrôle ListView (Windows Forms)
 Le contrôle <xref:System.Windows.Forms.ListView> Windows Forms affiche une liste d'éléments avec des icônes. Vous pouvez utiliser un affichage de liste pour créer une interface utilisateur comme le volet droit de l'Explorateur Windows. Le contrôle possède quatre modes d’affichage : LargeIcon, SmallIcon, liste et détails.  
@@ -46,17 +32,17 @@ Le contrôle <xref:System.Windows.Forms.ListView> Windows Forms affiche une list
 |Propriété <xref:System.Windows.Forms.ListView.AutoArrange%2A>|<xref:System.Windows.Forms.View.SmallIcon> ou <xref:System.Windows.Forms.View.LargeIcon>|  
 |Méthode <xref:System.Windows.Forms.ListView.AutoResizeColumn%2A>|<xref:System.Windows.Forms.View.Details>|  
 |Propriété <xref:System.Windows.Forms.ListView.Columns%2A>|<xref:System.Windows.Forms.View.Details> ou <xref:System.Windows.Forms.View.Tile>|  
-|<xref:System.Windows.Forms.ListView.DrawSubItem>événement|<xref:System.Windows.Forms.View.Details>|  
+|<xref:System.Windows.Forms.ListView.DrawSubItem> Événement|<xref:System.Windows.Forms.View.Details>|  
 |Méthode <xref:System.Windows.Forms.ListView.FindItemWithText%2A>|<xref:System.Windows.Forms.View.Details>, <xref:System.Windows.Forms.View.List>ou <xref:System.Windows.Forms.View.Tile>|  
 |Méthode <xref:System.Windows.Forms.ListView.FindNearestItem%2A>|<xref:System.Windows.Forms.View.SmallIcon> ou <xref:System.Windows.Forms.View.LargeIcon>|  
 |Méthode <xref:System.Windows.Forms.ListView.GetItemAt%2A>|<xref:System.Windows.Forms.View.Details> ou <xref:System.Windows.Forms.View.Tile>|  
-|Propriété <xref:System.Windows.Forms.ListView.Groups%2A>|Toutes les vues à l’exception<xref:System.Windows.Forms.View.List>|  
+|Propriété <xref:System.Windows.Forms.ListView.Groups%2A>|Toutes les vues à l’exception <xref:System.Windows.Forms.View.List>|  
 |Propriété <xref:System.Windows.Forms.ListView.HeaderStyle%2A>|<xref:System.Windows.Forms.View.Details>.|  
 |Propriété <xref:System.Windows.Forms.ListView.InsertionMark%2A>|<xref:System.Windows.Forms.View.LargeIcon>, <xref:System.Windows.Forms.View.SmallIcon>ou <xref:System.Windows.Forms.View.Tile>|  
   
  La propriété de clé de la <xref:System.Windows.Forms.ListView> contrôle est <xref:System.Windows.Forms.ListView.Items%2A>, qui contient les éléments affichés par le contrôle. Le <xref:System.Windows.Forms.ListView.SelectedItems%2A> propriété contient une collection des éléments actuellement sélectionnés dans le contrôle. L’utilisateur peut sélectionner plusieurs éléments, par exemple pour glisser -déplacer plusieurs éléments à la fois à un autre contrôle, si le <xref:System.Windows.Forms.ListView.MultiSelect%2A> est définie sur `true`. Le <xref:System.Windows.Forms.ListView> contrôle peut afficher des cases à cocher en regard des éléments, si le <xref:System.Windows.Forms.ListView.CheckBoxes%2A> est définie sur `true`.  
   
- Le <xref:System.Windows.Forms.ListView.Activation%2A> propriété détermine le type d’action que l’utilisateur doit effectuer pour activer un élément dans la liste : les options sont <xref:System.Windows.Forms.ItemActivation.Standard>, <xref:System.Windows.Forms.ItemActivation.OneClick>, et <xref:System.Windows.Forms.ItemActivation.TwoClick>. <xref:System.Windows.Forms.ItemActivation.OneClick>l’activation requiert un simple clic pour activer l’élément. <xref:System.Windows.Forms.ItemActivation.TwoClick>l’activation oblige l’utilisateur double-clic pour activer l’élément ; un simple clic modifie la couleur du texte de l’élément. <xref:System.Windows.Forms.ItemActivation.Standard>l’activation oblige l’utilisateur double-clique pour activer un élément, mais l’élément ne modifie pas l’apparence.  
+ Le <xref:System.Windows.Forms.ListView.Activation%2A> propriété détermine le type d’action que l’utilisateur doit effectuer pour activer un élément dans la liste : les options sont <xref:System.Windows.Forms.ItemActivation.Standard>, <xref:System.Windows.Forms.ItemActivation.OneClick>, et <xref:System.Windows.Forms.ItemActivation.TwoClick>. <xref:System.Windows.Forms.ItemActivation.OneClick> l’activation requiert un simple clic pour activer l’élément. <xref:System.Windows.Forms.ItemActivation.TwoClick> l’activation oblige l’utilisateur double-clic pour activer l’élément ; un simple clic modifie la couleur du texte de l’élément. <xref:System.Windows.Forms.ItemActivation.Standard> l’activation oblige l’utilisateur double-clique pour activer un élément, mais l’élément ne modifie pas l’apparence.  
   
  Le <xref:System.Windows.Forms.ListView> contrôle prend également en charge les styles visuels et les autres fonctionnalités disponibles sur la plateforme Windows XP, y compris le regroupement, l’affichage en mosaïque et marques d’insertion. Pour plus d’informations, consultez [fonctionnalités de Windows XP et contrôles Windows Forms](http://msdn.microsoft.com/library/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0).  
   

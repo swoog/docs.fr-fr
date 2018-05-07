@@ -1,28 +1,14 @@
 ---
 title: Configuration de HTTP et HTTPS
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - configuring HTTP [WCF]
 ms.assetid: b0c29a86-bc0c-41b3-bc1e-4eb5bb5714d4
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8d3317cd4bba7c9935bd7555f16599dc94725fbd
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 70c947724abf8da68ec8f7e6d858e26fec62dce5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-http-and-https"></a>Configuration de HTTP et HTTPS
 Les services et les clients WCF peuvent communiquer sur HTTP et HTTPS. Les paramètres HTTP/HTTPS sont configurés à l'aide d'IIS (Internet Information Services) ou d'un outil de ligne de commande. Lorsqu'un service WCF est hébergé sous IIS, des paramètres HTTP ou HTTPS peuvent être configurés dans IIS (avec l'outil inetmgr.exe). Si un service WCF est auto-hébergé, les paramètres HTTP ou HTTPS sont configurés à l'aide d'un outil de ligne de commande.  
@@ -79,7 +65,7 @@ netsh http add urlacl url=http://+:80/MyUri user=DOMAIN\user
  Pour obtenir des instructions, consultez [Comment : configurer un Port avec un certificat SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
   
 ## <a name="configuring-the-ip-listen-list"></a>Configuration de la liste d'écoutes IP  
- L'API du serveur HTTP crée une liaison uniquement avec une adresse IP et un port lorsqu'un utilisateur inscrit une URL. Par défaut, l'API du serveur HTTP crée une liaison avec le port dans l'URL pour toutes les adresses IP de l'ordinateur. Un conflit survient si une application qui n'utilise pas l'API du serveur HTTP a créé précédemment une liaison avec cette combinaison d'adresse IP et de port. La liste d'écoutes IP permet aux services [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] de coexister avec les applications qui utilisent un port pour certaines adresses IP de l'ordinateur. Si la liste d'écoutes IP contient une entrée, l'API du serveur HTTP crée seulement une liaison avec les adresses IP spécifiées dans la liste. La modification de la liste d'écoutes IP requiert des privilèges d'administrateur.  
+ L'API du serveur HTTP crée une liaison uniquement avec une adresse IP et un port lorsqu'un utilisateur inscrit une URL. Par défaut, l'API du serveur HTTP crée une liaison avec le port dans l'URL pour toutes les adresses IP de l'ordinateur. Un conflit survient si une application qui n'utilise pas l'API du serveur HTTP a créé précédemment une liaison avec cette combinaison d'adresse IP et de port. La liste d’écoutes IP permet aux services WCF coexister avec les applications qui utilisent un port pour certaines des adresses IP de l’ordinateur. Si la liste d'écoutes IP contient une entrée, l'API du serveur HTTP crée seulement une liaison avec les adresses IP spécifiées dans la liste. La modification de la liste d'écoutes IP requiert des privilèges d'administrateur.  
   
 ### <a name="running-windows-xp-or-server-2003"></a>Exécution de Windows XP ou Server 2003  
  Utilisez l'outil httpcfg pour modifier la liste d'écoute IP, comme illustré dans l'exemple suivant. Le [documentation des outils de Support Windows](http://go.microsoft.com/fwlink/?LinkId=94840) explique la syntaxe de l’outil httpcfg.exe.  
@@ -101,7 +87,7 @@ netsh http add iplisten ipaddress=0.0.0.0:8000
  L'API du serveur HTTP inclut un certain nombre de paramètres de configuration avancés qui ne sont pas disponibles via HttpCfg. Ces paramètres sont maintenus dans le registre et s'appliquent à toutes les applications exécutées sur les systèmes utilisant les API de serveur HTTP. Pour plus d’informations sur ces paramètres, consultez [les paramètres de Registre Http.sys pour IIS](http://go.microsoft.com/fwlink/?LinkId=94843). La plupart des utilisateurs n'ont pas besoin de modifier ces paramètres.  
   
 ## <a name="issues-specific-to-windows-xp"></a>Problèmes spécifiques à Windows XP  
- IIS ne prend pas en charge le partage de ports sur [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. Si IIS est exécuté et un service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tente d'utiliser un espace de noms avec le même port, le service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ne peut pas démarrer. Par défaut, IIS et [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilisent tous les deux le port 80. Vous devez soit changer l'affectation de port de l'un des deux services, soit utiliser la liste d'écoutes IP pour assigner le service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] à une carte réseau non utilisée par IIS. IIS 6.0 et ses versions ultérieures ont été redessinés pour utiliser les API du serveur HTTP.  
+ IIS ne prend pas en charge le partage de ports sur [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. Si IIS est en cours d’exécution et un service WCF essaie d’utiliser un espace de noms avec le même port, le service WCF ne démarre pas. IIS et WCF par défaut à utiliser le port 80. Modifiez l’affectation de port pour un des services ou utilisez la liste d’écoutes IP pour affecter le service WCF à une carte réseau non utilisée par IIS. IIS 6.0 et ses versions ultérieures ont été redessinés pour utiliser les API du serveur HTTP.  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.ServiceModel.WSDualHttpBinding>  

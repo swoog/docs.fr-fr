@@ -1,34 +1,20 @@
 ---
 title: Outil Éditeur de configuration (SvcConfigEditor.exe)
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - configuration files, creating
 - configuration files
 - Configuration file
 - configuration file schema
 ms.assetid: 2db21a57-5f64-426f-89df-fb0dc2d2def5
-caps.latest.revision: 45
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1531c68bdbb3b28436d0701536ef274f34513b19
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: MT
+ms.openlocfilehash: ab6e3a99f951d2977a079f49e4aa3eff250ee8d5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuration-editor-tool-svcconfigeditorexe"></a>Outil Éditeur de configuration (SvcConfigEditor.exe)
-L'Éditeur de configuration de service [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] (SvcConfiEditor.exe) permet aux administrateurs et aux développeurs de créer et de modifier des paramètres de configuration pour les services [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] à l'aide d'une interface graphique utilisateur. Grâce à cet outil, vous pouvez gérer les paramètres des liaisons, des comportements, des services et des diagnostics [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] sans modifier directement les fichiers de configuration XML.  
+L’éditeur de Configuration de Service Windows Communication Foundation (WCF) (SvcConfigEditor.exe) permet aux administrateurs et les développeurs créer et modifier les paramètres de configuration pour [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] services à l’aide d’une interface utilisateur graphique. Grâce à cet outil, vous pouvez gérer les paramètres des liaisons, des comportements, des services et des diagnostics [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] sans modifier directement les fichiers de configuration XML.  
   
  L’Éditeur de configuration de service se trouve dans le dossier C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin.  
   

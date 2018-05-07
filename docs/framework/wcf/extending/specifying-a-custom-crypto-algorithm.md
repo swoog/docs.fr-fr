@@ -1,24 +1,12 @@
 ---
-title: "Spécification d'un algorithme de chiffrement personnalisé"
-ms.custom: 
+title: Spécification d'un algorithme de chiffrement personnalisé
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d662a305-8e09-451d-9a59-b0f12b012f1d
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 965f121faa851722e6e2e7f92e805252f7e927c5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d8fb22daac66c3ef80f148db03703fc5024d3438
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="specifying-a-custom-crypto-algorithm"></a>Spécification d'un algorithme de chiffrement personnalisé
 WCF vous permet de spécifier un algorithme de chiffrement personnalité pour le chiffrement des données ou le calcul de signatures numériques. Voici les étapes qui permettent d'effectuer cette opération :  
@@ -116,7 +104,7 @@ public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite
 </configuration>  
 ```  
   
- La section sous le <`cryptoClasses`> élément crée le mappage entre le SHA256CryptoServiceProvider et l’alias « SHA256CSP ». Le <`nameEntry`> élément crée le mappage entre l’alias « SHA256CSP » et l’URL spécifiée (http://constoso.com/CustomAlgorithms/CustomHashAlgorithm).  
+ La section sous le <`cryptoClasses`> élément crée le mappage entre le SHA256CryptoServiceProvider et l’alias « SHA256CSP ». Le <`nameEntry`> élément crée le mappage entre l’alias « SHA256CSP » et l’URL spécifiée (http://constoso.com/CustomAlgorithms/CustomHashAlgorithm ).  
   
  Pour enregistrer l'algorithme personnalisé en code, utilisez la méthode <xref:System.Security.Cryptography.CryptoConfig.AddAlgorithm(System.Type,System.String[])>. Cette méthode crée ces deux mappages. L'exemple suivant illustre l'appel de cette méthode :  
   

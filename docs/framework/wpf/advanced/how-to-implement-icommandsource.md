@@ -1,39 +1,25 @@
 ---
-title: "Comment : implémenter ICommandSource"
-ms.custom: 
+title: 'Comment : implémenter ICommandSource'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - ICommandSource interfaces [WPF], implementing
 ms.assetid: 7452dd39-6e11-44bf-806a-31d87f3772ac
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d82a211f59fbdecdc932b7e57b242274e91cd5b2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9308bfbbb7fff86ca5e93c1155cc29e4ee0d05f2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-implement-icommandsource"></a>Comment : implémenter ICommandSource
-Cet exemple montre comment créer une source de commande en implémentant <xref:System.Windows.Input.ICommandSource>.  Une source de commande est un objet qui sait comment appeler une commande.  Le <xref:System.Windows.Input.ICommandSource> interface expose trois membres : <xref:System.Windows.Input.ICommandSource.Command%2A>, <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>, et <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>.  <xref:System.Windows.Input.ICommandSource.Command%2A>est la commande qui sera invoquée. Le <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> est un type de données défini par l’utilisateur qui est passé à partir de la source de commande à la méthode qui gère la commande. Le <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> est l’objet qui est en cours d’exécution sur la commande.  
+Cet exemple montre comment créer une source de commande en implémentant <xref:System.Windows.Input.ICommandSource>.  Une source de commande est un objet qui sait comment appeler une commande.  Le <xref:System.Windows.Input.ICommandSource> interface expose trois membres : <xref:System.Windows.Input.ICommandSource.Command%2A>, <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>, et <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>.  <xref:System.Windows.Input.ICommandSource.Command%2A> est la commande qui sera invoquée. Le <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> est un type de données défini par l’utilisateur qui est passé à partir de la source de commande à la méthode qui gère la commande. Le <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> est l’objet qui est en cours d’exécution sur la commande.  
   
  Dans cet exemple, une classe est créée qui sous-classe le <xref:System.Windows.Controls.Slider> contrôle et met en œuvre <xref:System.Windows.Input.ICommandSource>.  
   
 ## <a name="example"></a>Exemple  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]fournit un certain nombre de classes qui implémentent <xref:System.Windows.Input.ICommandSource>, tel que <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.MenuItem>, et <xref:System.Windows.Controls.ListBoxItem>.  Une source de commande définit comment appeler une commande.   <xref:System.Windows.Controls.Button>et <xref:System.Windows.Controls.MenuItem> appeler une commande lorsque vous cliquiez dessus.  A <xref:System.Windows.Controls.ListBoxItem> appelle une commande lorsque le double-clic sur. Ces classes ne deviennent une commande source quand leur <xref:System.Windows.Input.ICommandSource.Command%2A> est définie.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fournit un certain nombre de classes qui implémentent <xref:System.Windows.Input.ICommandSource>, tel que <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.MenuItem>, et <xref:System.Windows.Controls.ListBoxItem>.  Une source de commande définit comment appeler une commande.   <xref:System.Windows.Controls.Button> et <xref:System.Windows.Controls.MenuItem> appeler une commande lorsque vous cliquiez dessus.  A <xref:System.Windows.Controls.ListBoxItem> appelle une commande lorsque le double-clic sur. Ces classes ne deviennent une commande source quand leur <xref:System.Windows.Input.ICommandSource.Command%2A> est définie.  
   
  Pour cet exemple, nous appellerons la commande lorsque le curseur est déplacé, ou plus précisément, lorsque le <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> propriété est modifiée.  
   

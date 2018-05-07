@@ -1,23 +1,14 @@
 ---
 title: Variable objet ou variable bloc With non définie
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrID91
 ms.assetid: 2f03e611-f0ed-465c-99a2-a816e034faa3
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 9e1f587e194acf744b6ec9b8f1bede3acef7b753
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b2bd1be83f57dbdc7a64b407dc1052074e19c74b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="object-variable-or-with-block-variable-not-set"></a>Variable objet ou variable bloc With non définie
 Une variable objet non valide est référencée.   Cette erreur peut se produire pour plusieurs raisons :  
@@ -29,7 +20,7 @@ Une variable objet non valide est référencée.   Cette erreur peut se produire
     > [!TIP]
     >  Le `Option Strict` instruction n’autorise pas le typage implicite qui entraîne une `Object` type. Si vous omettez le type, une erreur de compilation se produit. Consultez [Option Strict, instruction](../../../visual-basic/language-reference/statements/option-strict-statement.md).  
   
--   Vous tentez de référencer un objet qui a été défini sur`Nothing`  
+-   Vous tentez de référencer un objet qui a été défini sur `Nothing`  
   
      .  
   

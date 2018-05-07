@@ -1,11 +1,6 @@
 ---
 title: Declare Statement
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Declare
 - vb.Lib
@@ -32,14 +27,11 @@ helpviewer_keywords:
 - Visual Basic code, Sub procedures
 - Function procedures [Visual Basic], declaring
 ms.assetid: d3f21fb0-b804-4c99-97ed-583b23894cf1
-caps.latest.revision: "30"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2560f34a5130ef7453b50ffb4495b67bf1dfa4c8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bc6949c7b52e87b7b39dd2690cac915a5f0d15aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="declare-statement"></a>Declare Statement
 Déclare une référence à une procédure implémentée dans un fichier externe.  
@@ -70,11 +62,11 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 |`Lib`|Obligatoire. Introduit un `Lib` clause qui identifie le fichier externe (DLL ou ressource de code) qui contient une procédure externe.|  
 |`libname`|Obligatoire. Nom du fichier qui contient la procédure déclarée.|  
 |`Alias`|Facultatif. Indique que la procédure déclarée ne peut pas être identifiée dans son fichier par le nom spécifié dans `name`. Vous spécifiez son identification dans `aliasname`.|  
-|`aliasname`|Requis si vous utilisez le `Alias` (mot clé). Chaîne qui identifie la procédure de deux manières :<br /><br /> Le nom de point d’entrée de la procédure dans son fichier, entre guillemets (`""`)<br /><br /> ou<br /><br /> Un signe dièse (`#`) suivi d’un entier spécifiant le nombre ordinal du point d’entrée de la procédure dans son fichier|  
+|`aliasname`|Requis si vous utilisez le `Alias` (mot clé). Chaîne qui identifie la procédure de deux manières :<br /><br /> Le nom de point d’entrée de la procédure dans son fichier, entre guillemets (`""`)<br /><br /> - ou -<br /><br /> Un signe dièse (`#`) suivi d’un entier spécifiant le nombre ordinal du point d’entrée de la procédure dans son fichier|  
 |`parameterlist`|Requis si la procédure accepte des paramètres. Consultez [liste de paramètres](../../../visual-basic/language-reference/statements/parameter-list.md).|  
 |`returntype`|Obligatoire si `Function` est spécifié et `Option Strict` est `On`. Type de données de la valeur retournée par la procédure.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Vous avez parfois besoin d’appeler une procédure définie dans un fichier (par exemple, une DLL ou ressource de code) à l’extérieur de votre projet. Dans ce cas, le compilateur Visual Basic n’a pas accès aux informations nécessaires appeler la procédure correctement, tels qu’où se trouve la procédure, comment il est identifié, sa séquence d’appel et type de retour et le jeu de caractères de chaîne qu’il utilise. La `Declare` instruction crée une référence à une procédure externe et fournit ces informations nécessaires.  
   
  Vous pouvez utiliser `Declare` seulement au niveau du module. Cela signifie que la *contexte de déclaration* pour une référence externe doit être une classe, une structure ou un module et qu’il ne peut pas être un fichier source, un espace de noms, une interface, une procédure ou un bloc. Pour plus d’informations, consultez [Contextes de déclaration et niveaux d’accès par défaut](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
@@ -125,7 +117,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
   
 -   **Jeux de caractères.** Vous pouvez spécifier dans `charsetmodifier` comment Visual Basic doit marshaler les chaînes lorsqu’il appelle la procédure externe. Le `Ansi` modificateur dirige Visual Basic de marshaler toutes les chaînes en valeurs ANSI et le `Unicode` modificateur lui indique de marshaler toutes les chaînes en valeurs Unicode. Le `Auto` modificateur dirige Visual Basic pour marshaler des chaînes en fonction de .NET Framework des règles en fonction de la référence externe `name`, ou `aliasname` si spécifié. La valeur par défaut est `Ansi`.  
   
-     `charsetmodifier`Spécifie également comment Visual Basic doit rechercher la procédure externe dans son fichier externe. `Ansi`et `Unicode` à la fois demander à Visual Basic pour rechercher sans modifier son nom lors de la recherche. `Auto`dirige Visual Basic pour déterminer le jeu de caractères de base de la plateforme d’exécution et éventuellement modifier le nom de la procédure externe, comme suit :  
+     `charsetmodifier` Spécifie également comment Visual Basic doit rechercher la procédure externe dans son fichier externe. `Ansi` et `Unicode` à la fois demander à Visual Basic pour rechercher sans modifier son nom lors de la recherche. `Auto` dirige Visual Basic pour déterminer le jeu de caractères de base de la plateforme d’exécution et éventuellement modifier le nom de la procédure externe, comme suit :  
   
     -   Sur une plateforme ANSI, tels que Windows 95, Windows 98 ou Windows Millennium Edition, recherchez d’abord la procédure externe sans modifier son nom. En cas d’échec, ajoutez « A » à la fin du nom de la procédure externe et recherchez-la à nouveau.  
   

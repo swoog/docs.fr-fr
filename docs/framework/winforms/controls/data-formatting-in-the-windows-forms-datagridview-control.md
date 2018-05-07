@@ -1,28 +1,16 @@
 ---
-title: "Mise en forme de données dans le contrôle DataGridView Windows Forms"
-ms.custom: 
+title: Mise en forme de données dans le contrôle DataGridView Windows Forms
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DataGridView control [Windows Forms], formatting data
 - data [Windows Forms], formatting in grids
 - data grids [Windows Forms], formatting data
 ms.assetid: 07bf558d-3748-42ba-8ba0-37fdef924081
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f6ff3452a60d9cb80a71dacd5841b120b5efbf82
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ae1947cf7c3825553837fa5f1ee288114988d28f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-formatting-in-the-windows-forms-datagridview-control"></a>Mise en forme de données dans le contrôle DataGridView Windows Forms
 Le <xref:System.Windows.Forms.DataGridView> contrôle fournit une conversion automatique entre les valeurs de cellule et les types de données que les colonnes parentes affichent. Colonnes de zone de texte, par exemple, affichent des représentations de chaîne des valeurs d’énumération, nombre, date et heure et convertissent des valeurs de chaîne d’entrée par l’utilisateur pour les types requis par le magasin de données.  

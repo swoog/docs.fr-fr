@@ -1,30 +1,17 @@
 ---
 title: "Comment : utiliser l'outil XML Schema Definition pour générer des classes et des documents de schéma XML"
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - generating XML classes using XML Schema Definition tool
 - generating XML Schema Document using XML Schema Definition tool
 - XML Schema Definition tool, using to generate classes that conform to specific schema
 - XML Schema Definition tool, using to generate XML Schema Document
 ms.assetid: 51f0edc3-993d-4051-b7f2-77753694d3d1
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 0e390b808f9eaa5d6b305284e1abe28f45f4d104
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c169a3068b240e8d4d1cdb1d307938ee113066fb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-the-xml-schema-definition-tool-to-generate-classes-and-xml-schema-documents"></a>Comment : utiliser l'outil XML Schema Definition pour générer des classes et des documents de schéma XML
 L'outil XML Schema Definition (Xsd.exe) vous permet de générer un schéma XML qui décrit une classe ou de générer la classe définie par un schéma XML. Les procédures suivantes indiquent comment exécuter ces opérations.  
@@ -39,7 +26,7 @@ L'outil XML Schema Definition (Xsd.exe) vous permet de générer un schéma XM
     xsd mySchema.xsd  
     ```  
   
-     L'outil ne peut traiter que les schémas qui référencent la spécification XML du W3C (World Wide Web Consortium) du 16 mars 2001. Autrement dit, l'espace de noms du schéma XML doit être http://www.w3.org/2001/XMLSchema, tel qu'illustré par l'exemple suivant.  
+     L'outil ne peut traiter que les schémas qui référencent la spécification XML du W3C (World Wide Web Consortium) du 16 mars 2001. En d’autres termes, l’espace de noms du schéma XML doit être «http://www.w3.org/2001/XMLSchema» comme indiqué dans l’exemple suivant.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8"?>  

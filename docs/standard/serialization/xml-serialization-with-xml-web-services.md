@@ -1,12 +1,6 @@
 ---
 title: Sérialisation XML avec les services Web XML
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -23,18 +17,11 @@ helpviewer_keywords:
 - literal XML serialization
 - serialization, attributes
 ms.assetid: a416192f-8102-458e-bc0a-0b8f3f784da9
-caps.latest.revision: 5
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: b07d86bbcc646141e067342d5e4340bdc4b39757
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: fdf984cd52441fd2bbe38499f981542386bd56ef
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xml-serialization-with-xml-web-services"></a>Sérialisation XML avec les services Web XML
 La sérialisation XML est le mécanisme de transport sous-jacent utilisé dans l'architecture de services Web XML, exécutée par la classe <xref:System.Xml.Serialization.XmlSerializer>. Pour contrôler le code XML généré par un service web XML, vous pouvez appliquer les attributs répertoriés dans [Attributs qui contrôlent la sérialisation XML](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md) et [Attributs qui contrôlent la sérialisation encodée selon le protocole SOAP](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md) aux classes, valeurs de retour, paramètres et champs d’un fichier utilisé pour créer un service web XML (.asmx). Pour plus d’informations sur la création d’un service web XML, consultez [Création de services web XML à l’aide d’ASP.NET](https://msdn.microsoft.com/library/01dfc27c-c68e-4910-a0aa-5e4c2a766b0c).  

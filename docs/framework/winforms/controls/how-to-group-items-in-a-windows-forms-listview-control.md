@@ -1,13 +1,6 @@
 ---
-title: "Comment : grouper des éléments dans un contrôle ListView Windows Forms"
-ms.custom: 
+title: 'Comment : grouper des éléments dans un contrôle ListView Windows Forms'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,16 +12,11 @@ helpviewer_keywords:
 - groups
 - groups [Windows Forms], in Windows Forms controls
 ms.assetid: 610416a1-8da4-436c-af19-5f19e654769b
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0f9596d5a344b2e14ea73120a4d2412917eba365
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: d59ddae4b45da8611638bb26d98c73e263dff064
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-group-items-in-a-windows-forms-listview-control"></a>Comment : grouper des éléments dans un contrôle ListView Windows Forms
 Avec la fonctionnalité de regroupement du <xref:System.Windows.Forms.ListView> (contrôle), vous pouvez afficher des jeux d’éléments liés dans les groupes. Ces groupes sont séparés sur l’écran par des en-têtes de groupe horizontal qui contiennent les titres de groupe. Vous pouvez utiliser <xref:System.Windows.Forms.ListView> groupes pour faciliter la navigation dans les longues listes en regroupant les éléments par ordre alphabétique, par date, ou par tout autre regroupement logique. L’illustration suivante montre certains éléments groupés.  
@@ -39,7 +27,7 @@ Avec la fonctionnalité de regroupement du <xref:System.Windows.Forms.ListView> 
  Pour activer le regroupement, vous devez d’abord créer un ou plusieurs groupes dans le concepteur ou par programme. Après avoir défini un groupe, vous pouvez affecter <xref:System.Windows.Forms.ListView> éléments à des groupes. Vous pouvez également déplacer des éléments d’un groupe à un autre par programmation.  
   
 > [!NOTE]
->  <xref:System.Windows.Forms.ListView>les groupes sont disponibles uniquement sur [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)] lorsque votre application appelle la <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> (méthode). Sur les systèmes d’exploitation antérieurs, tout code concernant les groupes n’a aucun effet et les groupes n’apparaîtront pas. Pour plus d'informations, consultez <xref:System.Windows.Forms.ListView.Groups%2A?displayProperty=nameWithType>.  
+>  <xref:System.Windows.Forms.ListView> les groupes sont disponibles uniquement sur [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)] lorsque votre application appelle la <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> (méthode). Sur les systèmes d’exploitation antérieurs, tout code concernant les groupes n’a aucun effet et les groupes n’apparaîtront pas. Pour plus d'informations, consultez <xref:System.Windows.Forms.ListView.Groups%2A?displayProperty=nameWithType>.  
   
 ### <a name="to-add-groups"></a>Pour ajouter des groupes  
   

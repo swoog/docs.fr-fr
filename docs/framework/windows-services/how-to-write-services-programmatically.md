@@ -1,13 +1,6 @@
 ---
-title: "Comment : écrire les services par programmation"
-ms.custom: 
+title: 'Comment : écrire les services par programmation'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,13 @@ helpviewer_keywords:
 - services, creating
 - Windows Service applications, creating
 ms.assetid: 3abbb2ec-78d2-41e6-b9f9-6662d4e2cdc7
-caps.latest.revision: "21"
 author: ghogen
-ms.author: ghogen
 manager: douge
-ms.workload: dotnet
-ms.openlocfilehash: cdb9c7bba564b71bfba86076218e48610cf73076
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 99fd44723bba21127e2a5e0ba3e9bfc4b90b52d7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-write-services-programmatically"></a>Comment : écrire les services par programmation
 Si vous choisissez de ne pas utiliser le modèle de projet de Service Windows, vous pouvez écrire vos propres services en définissant l’héritage et autres éléments d’infrastructure vous-même. Lorsque vous créez un service par programme, vous devez effectuer plusieurs étapes qui prendrait autrement en charge le modèle pour vous :  

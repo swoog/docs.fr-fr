@@ -1,32 +1,20 @@
 ---
 title: Sécurité des transports avec un client anonyme
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 056653a5-384e-4a02-ae3c-1b0157d2ccb4
-caps.latest.revision: 14
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2b52a32db1f1ac02f9204198a4cda5d4cb157486
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: ad22abe84289cac8f57bebb564ee129bcc2334c3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transport-security-with-an-anonymous-client"></a>Sécurité des transports avec un client anonyme
-Dans cette situation, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] utilise la sécurité de transport (HTTPS) pour garantir l'intégrité et la confidentialité des données. Le serveur doit être authentifié à l'aide d'un certificat SSL (Secure Sockets Layer). Les clients doivent ensuite faire confiance à ce certificat. Aucun mécanisme n'authentifie les clients, ceux-ci restent donc anonymes.  
+Ce scénario de Windows Communication Foundation (WCF) utilise la sécurité de transport (HTTPS) pour garantir la confidentialité et l’intégrité. Le serveur doit être authentifié à l'aide d'un certificat SSL (Secure Sockets Layer). Les clients doivent ensuite faire confiance à ce certificat. Aucun mécanisme n'authentifie les clients, ceux-ci restent donc anonymes.  
   
  Pour un exemple d’application, consultez [sécurité du Transport WS](../../../../docs/framework/wcf/samples/ws-transport-security.md). Pour plus d’informations sur la sécurité de transport, consultez [vue d’ensemble de sécurité de Transport](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).  
   
@@ -38,7 +26,7 @@ Dans cette situation, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ut
 |--------------------|-----------------|  
 |Mode de sécurité|Transport|  
 |Interopérabilité|Avec les services Web et les clients existants|  
-|Authentification (serveur)<br /><br /> Authentification (client)|Oui<br /><br /> Niveau application (pas de prise en charge [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)])|  
+|Authentification (serveur)<br /><br /> Authentification (client)|Oui<br /><br /> Niveau de l’application (aucune prise en charge WCF)|  
 |Intégrité|Oui|  
 |Confidentialité|Oui|  
 |Transport|HTTPS|  

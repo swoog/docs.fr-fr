@@ -1,26 +1,12 @@
 ---
 title: Two-Way Communication
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: fb64192d-b3ea-4e02-9fb3-46a508d26c60
-caps.latest.revision: 24
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9eb37e7e307bc9748113e5580ee96c8863d3ef89
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: dfc332533b714083d149b2c1c4892626d2990fb0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="two-way-communication"></a>Two-Way Communication
 Cet exemple montre comment effectuer une communication en file d'attente bidirectionnelle sur MSMQ. Cet exemple utilise la liaison `netMsmqBinding`. Dans le cas présent, le service est une application console auto-hébergée qui permet d'observer le service qui reçoit les messages mis en file d'attente.  
@@ -86,7 +72,7 @@ public void SubmitPurchaseOrder(PurchaseOrder po, string reportOrderStatusTo)
  Le nom de la file d'attente MSMQ est spécifié dans la section appSettings de ce fichier de configuration. Le point de terminaison du service est défini dans la section System.ServiceModel du fichier de configuration.  
   
 > [!NOTE]
->  Le nom de la file d'attente MSMQ et l'adresse du point de terminaison utilisent des conventions d'adressage légèrement différentes. Le nom de la file d'attente MSMQ utilise un point (.) pour l'ordinateur local et des barres obliques inverses comme séparateur dans son chemin d'accès. L'adresse du point de terminaison [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] spécifie un schéma net.msmq:, utilise « localhost » pour l'ordinateur local et des barres obliques dans son chemin d'accès. Pour lire une file d'attente hébergée sur un ordinateur distant, remplacez « . » et « localhost » par le nom de cet ordinateur.  
+>  Le nom de la file d'attente MSMQ et l'adresse du point de terminaison utilisent des conventions d'adressage légèrement différentes. Le nom de la file d’attente MSMQ utilise un point (.) pour l’ordinateur local et des barres obliques inverses comme séparateur dans son chemin d’accès. L’adresse de point de terminaison Windows Communication Foundation (WCF) spécifie un modèle net.msmq : schéma, utilise « localhost » pour l’ordinateur local et utilise des barres obliques dans son chemin d’accès. Pour lire une file d'attente hébergée sur un ordinateur distant, remplacez « . » et « localhost » par le nom de cet ordinateur.  
   
  Le service est auto-hébergé. Lors de l'utilisation du transport MSMQ, la file d'attente utilisée doit être créée au préalable. Cela peut s'effectuer manuellement ou via le code. Dans cet exemple, le service vérifie l'existence de la file d'attente et la crée, si nécessaire. Le nom de la file d'attente est lu depuis le fichier de configuration. L’adresse de base est utilisée par le [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) pour générer le proxy pour le service.  
 
@@ -340,7 +326,7 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à la page [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les exemples [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Binding\Net\MSMQ\Two-Way`  
   

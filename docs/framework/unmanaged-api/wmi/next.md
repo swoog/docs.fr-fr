@@ -1,11 +1,7 @@
 ---
-title: "Fonction Next (référence des API non managées)"
-description: "La fonction suivante retireves la propriété suivante dans une énumération."
+title: Fonction Next (référence des API non managées)
+description: La fonction suivante retireves la propriété suivante dans une énumération.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - Next
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e59ef3f65b75a91708dc65f7d4e3d811dc2d3f9d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e945930a9a668d0a1c1e4c26bf3add9cc574c261
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="next-function"></a>Fonction Next
 Récupère la propriété suivante dans une énumération qui commence par un appel à [BeginEnumeration](beginenumeration.md).  
@@ -101,12 +94,12 @@ Si `plFlavor` n’est pas `null`, le `LONG` valeur reçoit des informations sur 
 | `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0 x 20 | Pour une classe : la propriété est héritée de la classe parente. </br> Pour une instance : la propriété, tandis que héritée de la classe parente, n'a pas été modifiée par l’instance.  |
 | `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | Pour une classe : la propriété appartient à la classe dérivée. </br> Pour une instance : cette propriété est modifiée par l’instance ; Autrement dit, une valeur a été fournie, ou un qualificateur a été ajouté ou modifié. |
 
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** WMINet_Utils.idl  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versions du .NET framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
 [WMI et les compteurs de Performance (référence des API non managées)](index.md)

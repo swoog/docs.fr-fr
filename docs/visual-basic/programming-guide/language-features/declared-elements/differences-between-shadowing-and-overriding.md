@@ -1,24 +1,15 @@
 ---
-title: "Différences entre l'occultation et la substitution (Visual Basic)"
-ms.custom: 
+title: Différences entre l'occultation et la substitution (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - shadowing, vs. overriding
 - overriding, vs. shadowing
 ms.assetid: 2d014a0b-7630-407d-8f4e-24bd87987923
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2d67486d9c6af96d314abad7142ba86779d74f5d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 94ce3e7fe25b7942730e6e89a53654b03d91c42b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="differences-between-shadowing-and-overriding-visual-basic"></a>Différences entre l'occultation et la substitution (Visual Basic)
 Lorsque vous définissez une classe qui hérite d’une classe de base, vous souhaitez parfois redéfinir une ou plusieurs des éléments de la classe de base dans la classe dérivée. Occultation et substitution sont disponibles à cet effet.  
@@ -36,8 +27,8 @@ Lorsque vous définissez une classe qui hérite d’une classe de base, vous sou
 |Élément redéfinissant|Un type d’élément déclaré|Seulement une procédure ou une propriété avec la séquence d’appel identiques<sup>1</sup>|  
 |Niveau d’accès de l’élément redéfinissant|Niveau d’accès|Impossible de modifier le niveau d’accès de l’élément substitué|  
 |Lecture et écriture de l’élément redéfinissant|N’importe quelle combinaison|Impossible de changer la lisibilité ou écriture de la propriété substituée|  
-|Contrôle sur la redéfinition|Élément de la classe de base ne peut pas appliquer ou interdire l’occultation|Élément de la classe de base peut spécifier `MustOverride`, `NotOverridable`, ou`Overridable`|  
-|Utilisation du mot clé|`Shadows`recommandé dans la classe dérivée ; `Shadows` pris par défaut si aucune `Shadows` ni `Overrides` spécifié<sup>2</sup>|`Overridable`ou `MustOverride` requis dans la classe de base ; `Overrides` requis dans la classe dérivée|  
+|Contrôle sur la redéfinition|Élément de la classe de base ne peut pas appliquer ou interdire l’occultation|Élément de la classe de base peut spécifier `MustOverride`, `NotOverridable`, ou `Overridable`|  
+|Utilisation du mot clé|`Shadows` recommandé dans la classe dérivée ; `Shadows` pris par défaut si aucune `Shadows` ni `Overrides` spécifié<sup>2</sup>|`Overridable` ou `MustOverride` requis dans la classe de base ; `Overrides` requis dans la classe dérivée|  
 |Héritage de l’élément redéfinissant par les classes dérivées de votre classe dérivée|Occultation d’élément héritée en plus des classes dérivées ; élément occulté toujours masqué<sup>3</sup>|Élément substituant hérité en plus des classes dérivées ; élément substitué toujours substitué|  
   
  <sup>1</sup> le *la séquence d’appel* se compose du type d’élément (`Function`, `Sub`, `Operator`, ou `Property`), nom de la liste de paramètres et type de retour. Vous ne pouvez pas substituer une procédure avec une propriété ou l’autre sens. Vous ne pouvez pas remplacer un genre de procédure (`Function`, `Sub`, ou `Operator`) avec un autre type.  

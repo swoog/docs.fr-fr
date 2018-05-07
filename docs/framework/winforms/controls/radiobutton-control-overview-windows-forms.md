@@ -1,14 +1,6 @@
 ---
-title: "Vue d'ensemble du contrôle RadioButton (Windows Forms)"
-ms.custom: 
+title: Vue d'ensemble du contrôle RadioButton (Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - RadioButton
 helpviewer_keywords:
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - radio buttons [Windows Forms], determining state
 - radio buttons [Windows Forms], about radio buttons
 ms.assetid: cd11f0c2-d098-4022-adf9-1455bc166a13
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 67befd973dec38628f97a0d3153c399d48c18305
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 397808c055fd5ba5e8a73d47dfc7fee6c0cf2975
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="radiobutton-control-overview-windows-forms"></a>Vue d'ensemble du contrôle RadioButton (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.RadioButton> contrôle présente un ensemble de deux ou plusieurs choix mutuellement exclusifs à l’utilisateur. Tandis que les cases à cocher et des cases d’option peut sembler fonctionner de la même façon, il existe une différence importante : lorsqu’un utilisateur sélectionne une case d’option, les autres cases d’option dans le même groupe ne peut pas être sélectionnée. En revanche, vous pouvez sélectionner autant de cases à cocher. Définition d’un groupe de cases d’option indique à l’utilisateur, « Voici un ensemble de choix à partir de laquelle vous pouvez choisir un seul et unique ».  

@@ -1,23 +1,17 @@
 ---
 title: Création et implémentation d’Interfaces (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - interfaces [Visual Basic], walkthroughs
 - interfaces [Visual Basic], testing
 - interface implementation [Visual Basic], walkthrough
 - interfaces [Visual Basic], creating
 ms.assetid: ded82af2-9f52-4232-98ef-fe458180f112
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 0368207e0bda6e0e003ecd7988b77d765c7edc37
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: af9305deb60637b642d091501e743f2c7a57ccad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-creating-and-implementing-interfaces-visual-basic"></a>Procédure pas à pas : création et implémentation d'interfaces (Visual Basic)
 
@@ -32,7 +26,7 @@ Interfaces décrivent les caractéristiques des propriétés, méthodes et évé
   
 ## <a name="to-define-an-interface"></a>Pour définir une interface
   
-1.  Ouvrez un nouveau projet d’Application Windows Visual Basic.  
+1.  Ouvrez un nouveau projet d’application Windows Visual Basic.  
   
 2.  Ajoutez un nouveau module au projet en cliquant sur **ajouter un Module** sur la **projet** menu.  
   

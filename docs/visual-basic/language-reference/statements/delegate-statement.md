@@ -1,24 +1,17 @@
 ---
 title: Delegate, instruction
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Delegate
 helpviewer_keywords:
 - delegate keyword [Visual Basic]
 - Delegate statement [Visual Basic]
 ms.assetid: f799c518-0817-40cc-ad0b-4da846fdba57
-caps.latest.revision: 27
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 7e79a261f74cbc7aa067af63629e31bedf65d163
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fb9d8b2c2647ba8fd3b7cee4781f1574b6679b0f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="delegate-statement"></a>Delegate, instruction
 Utilisé pour déclarer un délégué. Un délégué est un type référence qui fait référence à un `Shared` d’un type ou à une méthode d’instance d’un objet de méthode. Toute procédure ayant des types de paramètres et de retour correspondants peut être utilisé pour créer une instance de cette classe déléguée. La procédure peut ensuite être appelée ultérieurement au moyen de l’instance de délégué.  
@@ -44,7 +37,7 @@ Utilisé pour déclarer un délégué. Un délégué est un type référence qui
 |`parameterlist`|Facultatif. Liste des paramètres qui sont passés à la procédure lorsqu’elle est appelée. Vous devez placer le [liste de paramètres](../../../visual-basic/language-reference/statements/parameter-list.md) entre parenthèses.|  
 |`type`|Obligatoire si vous spécifiez un `Function` procédure. Type de données de la valeur de retour.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La `Delegate` instruction définit les types de paramètres et de retour d’une classe déléguée. Toute procédure ayant des paramètres et types de retour correspondants peut être utilisé pour créer une instance de cette classe déléguée. La procédure peut ensuite être appelée ultérieurement au moyen de l’instance de délégué, en appelant du délégué `Invoke` (méthode).  
   
  Délégués peuvent être déclarés au niveau de l’espace de noms, un module, une classe ou un niveau de la structure, mais pas dans une procédure.  

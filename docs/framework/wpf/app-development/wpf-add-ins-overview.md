@@ -1,13 +1,6 @@
 ---
-title: "Vue d'ensemble des compléments WPF"
-ms.custom: 
+title: Vue d'ensemble des compléments WPF
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - add-ins and XAML browser applications [WPF]
 - add-ins overview [WPF]
@@ -19,16 +12,11 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-caps.latest.revision: "36"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ffd45957b41cdfd8488aedd865aa70ef5b2634b2
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 942f5706a83a9f9e9cd969701ed5625c57b76f83
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wpf-add-ins-overview"></a>Vue d'ensemble des compléments WPF
 <a name="Introduction"></a> Le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] inclut un modèle de complément que les développeurs peuvent utiliser pour créer des applications prenant en charge l’extensibilité des compléments. Ce modèle de complément permet de créer des compléments qui s’intègrent aux applications et étendent leurs fonctionnalités. Dans certains scénarios, les applications doivent également afficher les [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] fournies par les compléments. Cette rubrique montre comment [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] optimise le modèle de complément du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pour prendre en charge ces scénarios, l’architecture sur laquelle il repose, ainsi que ses avantages et ses limitations.  
@@ -115,7 +103,7 @@ ms.lasthandoff: 01/19/2018
   
  Les types d’[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ne sont pas accessibles à distance. Pour résoudre ce problème, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] étend le modèle de complément du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] afin de permettre l’affichage de l’[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] créée par les compléments à partir des applications hôtes. Cette prise en charge est fournie par [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] par deux types : les <xref:System.AddIn.Contract.INativeHandleContract> interface et les deux méthodes statiques implémentées par le <xref:System.AddIn.Pipeline.FrameworkElementAdapters> classe : <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> et <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. À un niveau élevé, ces types et méthodes sont utilisés de la manière suivante :  
   
-1.  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]requiert que [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] fournies par les compléments sont des classes qui dérivent directement ou indirectement de <xref:System.Windows.FrameworkElement>, tels que des formes, des contrôles, des contrôles utilisateur, des panneaux de disposition et des pages.  
+1.  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] requiert que [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] fournies par les compléments sont des classes qui dérivent directement ou indirectement de <xref:System.Windows.FrameworkElement>, tels que des formes, des contrôles, des contrôles utilisateur, des panneaux de disposition et des pages.  
   
 2.  Chaque fois que le contrat déclare qu’une interface utilisateur sera transmise entre le complément et l’application hôte, elle doit être déclarée comme une <xref:System.AddIn.Contract.INativeHandleContract> (pas un <xref:System.Windows.FrameworkElement>) ; <xref:System.AddIn.Contract.INativeHandleContract> est une représentation accessible à distance de la macro complémentaire [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] qui peuvent être passés entre les limites d’isolation.  
   
@@ -230,7 +218,7 @@ ms.lasthandoff: 01/19/2018
   
 -   Du côté application hôte, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Repackage le <xref:System.Windows.Interop.HwndSource> en tant que [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] classe qui dérive de <xref:System.Windows.Interop.HwndHost> et consomme <xref:System.AddIn.Contract.INativeHandleContract>. Une instance de cette classe est retournée par <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> à l’application hôte.  
   
- <xref:System.Windows.Interop.HwndHost>existe pour afficher [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)], identifiée par les handles de fenêtre, à partir de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]. Pour plus d’informations, consultez [Interopérabilité WPF et Win32](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md).  
+ <xref:System.Windows.Interop.HwndHost> existe pour afficher [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)], identifiée par les handles de fenêtre, à partir de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]. Pour plus d’informations, consultez [Interopérabilité WPF et Win32](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md).  
   
  En résumé, <xref:System.AddIn.Contract.INativeHandleContract>, <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>, et <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> existent pour autoriser le handle de fenêtre pour un [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] à passer à partir d’un complément à une application hôte, où il est encapsulé par un <xref:System.Windows.Interop.HwndHost> et affiche l’hôte l’application [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
   

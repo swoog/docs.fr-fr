@@ -1,12 +1,6 @@
 ---
-title: "Comment : masquer une variable portant le même nom que votre variable (Visual Basic)"
-ms.custom: 
+title: 'Comment : masquer une variable portant le même nom que votre variable (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - qualification [Visual Basic], of element names
 - declarations [Visual Basic], elements
@@ -18,14 +12,11 @@ helpviewer_keywords:
 - declared elements [Visual Basic], referencing
 - declared elements [Visual Basic], about declared elements
 ms.assetid: e39c0752-f19f-4d2e-a453-00df1b5fc7ee
-caps.latest.revision: "25"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: af031f3ef134b2a509922e6ada28aa5b2b80d641
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a7ebc4eb44592800decd5ef943750f0cd845afb4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-hide-a-variable-with-the-same-name-as-your-variable-visual-basic"></a>Comment : masquer une variable portant le même nom que votre variable (Visual Basic)
 Vous pouvez masquer une variable par *occultation* il, autrement dit, en le redéfinissant avec une variable du même nom. Vous pouvez occulter la variable que vous souhaitez masquer de deux manières :  

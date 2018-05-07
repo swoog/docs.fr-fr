@@ -1,28 +1,14 @@
 ---
-title: "Architecture du contrôle DataGridView (Windows Forms)"
-ms.custom: 
+title: Architecture du contrôle DataGridView (Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DataGridView control [Windows Forms], architecture
 ms.assetid: 1c6cabf0-02ee-4bbc-9574-b54bb7f5b19e
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3b3e51b87cdd766adcc10aa3f682647b28fbbe4d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a9fc1707b1691266d1844c411a08e7e8f35514ce
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="datagridview-control-architecture-windows-forms"></a>Architecture du contrôle DataGridView (Windows Forms)
 Le <xref:System.Windows.Forms.DataGridView> contrôle et ses classes connexes sont conçus pour être un système flexible et extensible pour afficher et modifier des données tabulaires. Ces classes sont toutes contenues dans le <xref:System.Windows.Forms?displayProperty=nameWithType> espace de noms et elles portent toutes le préfixe « DataGridView ».  
@@ -67,9 +53,9 @@ Modèle objet DataGridViewElement
  ![Modèle objet DataGridViewCell](../../../../docs/framework/winforms/controls/media/datagridviewcell.gif "DataGridViewCell")  
 Modèle objet DataGridViewCell  
   
- Le <xref:System.Windows.Forms.DataGridViewCell> type est une classe de base abstraite de laquelle dérivent tous les types de cellules. <xref:System.Windows.Forms.DataGridViewCell>et ses types dérivés ne sont pas des contrôles Windows Forms, mais certains contrôles Windows Forms de hôte. Toutes les fonctionnalités d’édition prise en charge par une cellule sont généralement gérée par un contrôle hébergé.  
+ Le <xref:System.Windows.Forms.DataGridViewCell> type est une classe de base abstraite de laquelle dérivent tous les types de cellules. <xref:System.Windows.Forms.DataGridViewCell> et ses types dérivés ne sont pas des contrôles Windows Forms, mais certains contrôles Windows Forms de hôte. Toutes les fonctionnalités d’édition prise en charge par une cellule sont généralement gérée par un contrôle hébergé.  
   
- <xref:System.Windows.Forms.DataGridViewCell>objets ne contrôlent pas de leur propre apparence et les fonctionnalités de peinture de la même façon que les contrôles Windows Forms. Au lieu de cela, le <xref:System.Windows.Forms.DataGridView> est responsable de l’apparence de son <xref:System.Windows.Forms.DataGridViewCell> objets. Vous pouvez affecter de manière significative l’apparence et le comportement des cellules en interagissant avec le <xref:System.Windows.Forms.DataGridView> événements et les propriétés du contrôle. Lorsque vous avez des spécifications spéciales pour les personnalisations qui sont au-delà des capacités de la <xref:System.Windows.Forms.DataGridView> (contrôle), vous pouvez implémenter votre propre classe qui dérive de <xref:System.Windows.Forms.DataGridViewCell> ou l’une de ses classes enfants.  
+ <xref:System.Windows.Forms.DataGridViewCell> objets ne contrôlent pas de leur propre apparence et les fonctionnalités de peinture de la même façon que les contrôles Windows Forms. Au lieu de cela, le <xref:System.Windows.Forms.DataGridView> est responsable de l’apparence de son <xref:System.Windows.Forms.DataGridViewCell> objets. Vous pouvez affecter de manière significative l’apparence et le comportement des cellules en interagissant avec le <xref:System.Windows.Forms.DataGridView> événements et les propriétés du contrôle. Lorsque vous avez des spécifications spéciales pour les personnalisations qui sont au-delà des capacités de la <xref:System.Windows.Forms.DataGridView> (contrôle), vous pouvez implémenter votre propre classe qui dérive de <xref:System.Windows.Forms.DataGridViewCell> ou l’une de ses classes enfants.  
   
  La liste suivante présente les classes dérivées de <xref:System.Windows.Forms.DataGridViewCell>:  
   

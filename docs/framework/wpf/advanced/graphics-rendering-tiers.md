@@ -1,13 +1,6 @@
 ---
 title: Couches de rendu graphiques
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - graphics [WPF], performance
 - rendering graphics [WPF]
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-caps.latest.revision: "44"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 457b7e76b16e42c71d1e2d1986d58b2708396e22
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4f9de7736851027c9f6b851984953e37b96d456a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="graphics-rendering-tiers"></a>Couches de rendu graphiques
 Une couche de rendu définit un niveau des capacités et des performances du matériel graphique pour un appareil qui exécute une application [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -98,8 +86,8 @@ Une couche de rendu définit un niveau des capacités et des performances du mat
 |Fonctionnalité|Notes|  
 |-------------|-----------|  
 |Contenu imprimé|Tout le contenu imprimé est restitué à l’aide du pipeline logiciel [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].|  
-|Contenu rastérisé qui utilise<xref:System.Windows.Media.Imaging.RenderTargetBitmap>|Tout le contenu restitué à l’aide de la <xref:System.Windows.Media.Imaging.RenderTargetBitmap.Render%2A> méthode <xref:System.Windows.Media.Imaging.RenderTargetBitmap>.|  
-|Contenu en mosaïque qui utilise<xref:System.Windows.Media.TileBrush>|Tout en mosaïque contenu dans lequel le <xref:System.Windows.Media.TileBrush.TileMode%2A> propriété de la <xref:System.Windows.Media.TileBrush> a la valeur <xref:System.Windows.Media.TileMode.Tile>.|  
+|Contenu rastérisé qui utilise <xref:System.Windows.Media.Imaging.RenderTargetBitmap>|Tout le contenu restitué à l’aide de la <xref:System.Windows.Media.Imaging.RenderTargetBitmap.Render%2A> méthode <xref:System.Windows.Media.Imaging.RenderTargetBitmap>.|  
+|Contenu en mosaïque qui utilise <xref:System.Windows.Media.TileBrush>|Tout en mosaïque contenu dans lequel le <xref:System.Windows.Media.TileBrush.TileMode%2A> propriété de la <xref:System.Windows.Media.TileBrush> a la valeur <xref:System.Windows.Media.TileMode.Tile>.|  
 |Surfaces qui dépassent la taille de texture maximale du matériel graphique|Pour la plupart des matériels graphiques, les grandes surfaces ont une taille de 2048 x 2048 ou 4096 x 4096 pixels.|  
 |Toute opération dont la spécification de RAM vidéo dépasse la mémoire du matériel graphique|Vous pouvez surveiller l’utilisation de la RAM vidéo par l’application à l’aide de l’outil Perforator compris dans la suite [WPF Performance Suite](http://msdn.microsoft.com/library/67cafaad-57ad-4ecb-9c08-57fac144393e) du SDK Windows.|  
 |Fenêtres superposées|Les fenêtres superposées permettent aux applications [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] de restituer le contenu à l’écran dans une fenêtre non rectangulaire. Sur les systèmes d’exploitation qui prennent en charge WDDM (Windows Display Driver Model), tels que [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] et [!INCLUDE[win7](../../../../includes/win7-md.md)], les fenêtres superposées sont à accélération matérielle. Sur d’autres systèmes, tels que [!INCLUDE[winxp](../../../../includes/winxp-md.md)], les fenêtres superposées sont restituées par logiciel sans accélération matérielle.<br /><br /> Vous pouvez activer des fenêtres superposées dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] en définissant les éléments suivants <xref:System.Windows.Window> propriétés :<br /><br /> -   <xref:System.Windows.Window.WindowStyle%2A> = <xref:System.Windows.WindowStyle.None><br />-   <xref:System.Windows.Window.AllowsTransparency%2A> = `true`<br />-   <xref:System.Windows.Controls.Control.Background%2A> = <xref:System.Windows.Media.Brushes.Transparent%2A>|  

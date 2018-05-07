@@ -1,11 +1,6 @@
 ---
 title: ReDim, instruction (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.ReDim
 - vb.Preserve
@@ -31,14 +26,11 @@ helpviewer_keywords:
 - declaration statements [Visual Basic]
 - scalar variables [Visual Basic]
 ms.assetid: ad1c5e07-dcd7-4ae1-a79e-ad3f2dcc2083
-caps.latest.revision: "25"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 8cec66ee33bfd82b3abd623a0130f5635aa3d1d9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9536ea8a6274e0b4a2589caf5aefa271a3567d32
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="redim-statement-visual-basic"></a>ReDim, instruction (Visual Basic)
 Réalloue l'espace de stockage d'une variable tableau.  
@@ -57,7 +49,7 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
 |`name`|Obligatoire. Nom de la variable de tableau. Consultez [noms d’éléments déclarés](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
 |`boundlist`|Obligatoire. Liste des limites de chaque dimension du tableau redéfini.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Vous pouvez utiliser l'instruction `ReDim` pour modifier la taille d'une ou plusieurs dimensions d'un tableau qui a déjà été déclaré. Si vous possédez un grand tableau et que vous n'avez plus besoin de certains de ses éléments, `ReDim` peut libérer de la mémoire en réduisant la taille du tableau. En revanche, si votre tableau a besoin d'éléments supplémentaires, `ReDim` peut les ajouter.  
   
  L'instruction `ReDim` est destinée uniquement aux tableaux. Il n'est pas valide sur les scalaires (variables contenant une seule valeur), les collections ou les structures. Notez que si vous déclarez une variable de type `Array`, l'instruction `ReDim` ne dispose pas d'informations de type suffisantes pour créer le tableau.  
@@ -74,7 +66,7 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
 -   **Types de données.** L'instruction `ReDim` ne peut pas modifier le type de données d'une variable tableau ou de ses éléments.  
   
--   **Initialisation.** L'instruction `ReDim` ne peut pas fournir de nouvelles valeurs d'initialisation pour les éléments du tableau.  
+-   **initialisation.** L'instruction `ReDim` ne peut pas fournir de nouvelles valeurs d'initialisation pour les éléments du tableau.  
   
 -   **Rang.** L'instruction `ReDim` ne peut pas modifier le rang (nombre de dimensions) du tableau.  
   
@@ -86,7 +78,7 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
 ## <a name="behavior"></a>Comportement  
   
--   **Remplacement de tableau.** `ReDim`Libère le tableau existant et crée un nouveau tableau avec le même rang. Le nouveau tableau remplace le tableau libéré dans la variable tableau.  
+-   **Remplacement de tableau.** `ReDim` Libère le tableau existant et crée un nouveau tableau avec le même rang. Le nouveau tableau remplace le tableau libéré dans la variable tableau.  
   
 -   **Initialisation sans Preserve.** Si vous ne spécifiez pas `Preserve`, `ReDim` initialise les éléments du nouveau tableau à l'aide de la valeur par défaut de leur type de données.  
   

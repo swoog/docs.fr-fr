@@ -1,14 +1,6 @@
 ---
 title: StrongNameSignatureGeneration, fonction
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - StrongNameSignatureGeneration
 api_location:
@@ -21,17 +13,13 @@ f1_keywords:
 helpviewer_keywords:
 - StrongNameSignatureGeneration function [.NET Framework strong naming]
 ms.assetid: 839b765c-3e41-44ce-bf1b-dc10453db18e
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c26e230f2bc0b115d898a34742fe3e637f934fd4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c0555299779aebc6cc37c3863e8b5504b357b262
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strongnamesignaturegeneration-function"></a>StrongNameSignatureGeneration, fonction
 Génère une signature de nom fort pour l’assembly spécifié.  
@@ -79,7 +67,7 @@ BOOLEAN StrongNameSignatureGeneration (
  [out] La taille, en octets, de la signature retournée.  
   
 ## <a name="return-value"></a>Valeur de retour  
- `true`de réussite ; dans le cas contraire, `false`.  
+ `true` de réussite ; dans le cas contraire, `false`.  
   
 ## <a name="remarks"></a>Notes  
  Spécifiez null pour `wszFilePath` pour calculer la taille de la signature sans créer la signature.  
@@ -88,14 +76,14 @@ BOOLEAN StrongNameSignatureGeneration (
   
  Si le `StrongNameSignatureGeneration` (fonction) ne pas aboutir, appelez le [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) fonction pour récupérer la dernière erreur générée.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** StrongName.h  
   
  **Bibliothèque :** inclus en tant que ressource dans MsCorEE.dll  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [StrongNameSignatureGeneration, méthode](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegeneration-method.md)  

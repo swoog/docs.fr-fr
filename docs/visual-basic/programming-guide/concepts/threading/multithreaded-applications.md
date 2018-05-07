@@ -1,22 +1,12 @@
 ---
 title: Applications multithread (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 02b0444b-2e68-4f2c-bc28-28c046004017
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 19a4fe40e27a9edf8515e2734914aaf02d5e48b2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ab4b8d1c77ae75aee6f2cf459258766f88d86abe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="multithreaded-applications-visual-basic"></a>Applications multithread (Visual Basic)
 Avec Visual Basic, vous pouvez écrire des applications qui effectuent plusieurs tâches en même temps. Les tâches présentant le risque d’accaparer les ressources d’autres tâches peuvent s’exécuter sur des threads distincts : ce processus est appelé *multithreading* ou *threading libre*.  
@@ -65,7 +55,7 @@ newThread.Abort()
 ### <a name="thread-properties"></a>Propriétés du thread  
  Les threads contiennent également plusieurs propriétés utiles, qui sont répertoriées dans le tableau suivant :  
   
-|Propriété|Valeur|  
+|Propriété|Value|  
 |--------------|-----------|  
 |<xref:System.Threading.Thread.IsAlive%2A>|Contient la valeur `True` si un thread est actif.|  
 |<xref:System.Threading.Thread.IsBackground%2A>|Obtient ou définit une valeur booléenne qui indique si un thread est ou doit être un thread d’arrière-plan. Les threads d’arrière-plan ressemblent aux threads de premier plan, excepté qu’un thread d’arrière-plan n’empêche pas un processus de s’arrêter. Une fois que tous les threads de premier plan appartenant à un processus sont arrêtés, le common language runtime met fin au processus en appelant la méthode <xref:System.Threading.Thread.Abort%2A> sur les threads d’arrière-plan encore actifs.|  

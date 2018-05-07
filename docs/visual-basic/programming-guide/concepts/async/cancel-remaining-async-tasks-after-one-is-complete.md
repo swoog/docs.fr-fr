@@ -1,22 +1,12 @@
 ---
-title: "Annuler les tâches Asynch restantes, une fois qu’un est terminée (Visual Basic)"
-ms.custom: 
+title: Annuler les tâches Asynch restantes, une fois qu’un est terminée (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c928b5a1-622f-4441-8baf-adca1dde197f
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 698ccf5901a77438368b9bf768b88ca6f90fdcbe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 86fb56d9a6d6a6c491b35797c7459c701a339341
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cancel-remaining-async-tasks-after-one-is-complete-visual-basic"></a>Annuler les tâches Asynch restantes, une fois qu’un est terminée (Visual Basic)
 Utilisez la méthode <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> avec un <xref:System.Threading.CancellationToken> pour annuler toutes les tâches restantes quand une tâche est terminée. La méthode `WhenAny` accepte un argument qui est une collection de tâches. La méthode démarre toutes les tâches et retourne une tâche unique. Cette dernière est terminée une fois que toutes les tâches de la collection sont terminées.  
@@ -24,7 +14,7 @@ Utilisez la méthode <xref:System.Threading.Tasks.Task.WhenAny%2A?displayPropert
  Cet exemple montre comment utiliser un jeton d’annulation avec `WhenAny` pour attendre la fin de la première tâche de la collection et annuler les tâches restantes. Chaque tâche télécharge le contenu d’un site web. L’exemple affiche la longueur du contenu du premier téléchargement terminé et annule les autres téléchargements.  
   
 > [!NOTE]
->  Pour exécuter les exemples, Visual Studio 2012 ou ultérieur et le .NET Framework 4.5 ou ultérieur doivent être installés sur votre ordinateur.  
+>  Pour exécuter les exemples, Visual Studio version 2012 ou ultérieure et le .NET Framework version 4.5 ou ultérieure doivent être installés sur votre ordinateur.  
   
 ## <a name="downloading-the-example"></a>Téléchargement de l'exemple  
  Téléchargez l’intégralité du projet Windows Presentation Foundation (WPF) à partir de la page [Exemple Async : réglage de votre application](http://go.microsoft.com/fwlink/?LinkId=255046), puis procédez comme suit.  

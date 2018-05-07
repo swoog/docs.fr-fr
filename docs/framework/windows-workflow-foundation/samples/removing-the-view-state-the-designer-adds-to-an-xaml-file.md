@@ -1,23 +1,12 @@
 ---
-title: "Suppression de l'état d'affichage que le concepteur ajoute à un fichier XAML"
-ms.custom: 
+title: Suppression de l'état d'affichage que le concepteur ajoute à un fichier XAML
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a801ce22-8699-483c-a392-7bb3834aae4f
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5da4423b5f6106bde106de739a8a33e351d17c3d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f63723c29c76854602308ba3e8d7e6dd65d9fb94
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="removing-the-view-state-the-designer-adds-to-an-xaml-file"></a>Suppression de l'état d'affichage que le concepteur ajoute à un fichier XAML
 Cet exemple montre comment créer une classe qui dérive de <xref:System.Windows.Markup.XamlWriter> et supprime l'état d'affichage d'un fichier XAML. [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] écrit des informations dans le document XAML, qui est désigné sous le nom d'état d'affichage. L'état d'affichage fait référence aux informations qui sont requises au moment du design, telles que le positionnement, et qui ne le sont pas au moment de l'exécution. [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] insère ces informations dans le document XAML pendant qu'il est modifié. [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] écrit l'état d'affichage dans le fichier XAML à l'aide de l'attribut `mc:Ignorable`, ces informations ne sont pas chargées lorsque le runtime charge le fichier XAML. Cet exemple montre comment créer une classe qui supprime ces informations d'état d'affichage lors du traitement des nœuds XAML.  
@@ -129,6 +118,6 @@ XamlServices.Save(new ViewStateCleaningWriter(ActivityXamlServices.CreateBuilder
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Si ce répertoire n’existe pas, accédez à la page [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les exemples [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Cet exemple se trouve dans le répertoire suivant.  
+> Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\ViewStateCleaningWriter`

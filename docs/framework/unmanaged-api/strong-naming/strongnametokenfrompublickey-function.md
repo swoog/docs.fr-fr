@@ -1,14 +1,6 @@
 ---
 title: StrongNameTokenFromPublicKey, fonction
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - StrongNameTokenFromPublicKey
 api_location:
@@ -26,17 +18,13 @@ helpviewer_keywords:
 ms.assetid: 997e9e57-abb2-4217-bf20-1df621a75add
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0cb649f43bfea2e11c986aa3fff5a702e2b58c25
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: eb8ff76da288975ef291d226bb1f205e73a64252
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strongnametokenfrompublickey-function"></a>StrongNameTokenFromPublicKey, fonction
 Obtient un jeton représentant une clé publique. Un jeton de nom fort est la forme abrégée d’une clé publique.  
@@ -68,21 +56,21 @@ BOOLEANStrongNameTokenFromPublicKey (
  [out] La taille, en octets, du jeton de nom fort retourné.  
   
 ## <a name="return-value"></a>Valeur de retour  
- `true`de réussite ; dans le cas contraire, `false`.  
+ `true` de réussite ; dans le cas contraire, `false`.  
   
 ## <a name="remarks"></a>Notes  
  Un jeton de nom fort est la forme abrégée d’une clé publique utilisée pour économiser de l’espace lorsque vous stockez des informations de clé dans les métadonnées. Plus précisément, les jetons de nom fort sont utilisés dans les références d’assembly pour faire référence à l’assembly dépendant.  
   
  Si le `StrongNameTokenFromPublicKey` (fonction) ne pas aboutir, appelez le [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) fonction pour récupérer la dernière erreur générée.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** StrongName.h  
   
  **Bibliothèque :** inclus en tant que ressource dans mscoree.dll  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [StrongNameTokenFromPublicKey, méthode](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md)  

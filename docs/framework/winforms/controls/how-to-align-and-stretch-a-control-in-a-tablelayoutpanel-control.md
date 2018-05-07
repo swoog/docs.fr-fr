@@ -1,14 +1,6 @@
 ---
-title: "Comment : aligner et étirer un contrôle dans un contrôle TableLayoutPanel"
-ms.custom: 
+title: 'Comment : aligner et étirer un contrôle dans un contrôle TableLayoutPanel'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - net.ComponentModel.StyleCollectionEditor.TLP.AlignStretchCtrl
 helpviewer_keywords:
@@ -16,17 +8,11 @@ helpviewer_keywords:
 - controls [Windows Forms], stretching
 - controls [Windows Forms], aligning
 ms.assetid: 7dc1a157-6fee-4995-8ebc-b65bdc0909a8
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bfc1c64bc0bd9cbebad44193fb5adbe529877487
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 5abe233a240e74e41d4defad060383aec155ea71
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control"></a>Comment : aligner et étirer un contrôle dans un contrôle TableLayoutPanel
 Vous pouvez aligner et étirer des contrôles dans un <xref:System.Windows.Forms.TableLayoutPanel> avec la <xref:System.Windows.Forms.Control.Anchor%2A> et <xref:System.Windows.Forms.Control.Dock%2A> propriétés.  

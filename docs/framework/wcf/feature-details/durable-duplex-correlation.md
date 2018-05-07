@@ -1,26 +1,12 @@
 ---
 title: Corrélation duplex durable
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 8eb0e49a-6d3b-4f7e-a054-0d4febee2ffb
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ceb5cbedf30c8ec53bc815f9cd52f7bcb8a6e327
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 5bef3e243afc0ea9a51f474bfed98320134ec043
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="durable-duplex-correlation"></a>Corrélation duplex durable
 La corrélation duplex durable, également appelée corrélation de rappel, est utile lorsqu’un service de workflow a besoin d’envoyer un rappel à l’appelant initial. Contrairement au duplex WCF, le rappel peut arriver à n'importe quel moment du futur et n'est pas lié au même canal ni à la durée de vie du canal ; la seule condition est que l'appelant ait un point de terminaison actif qui écoute le message de rappel. Cela permet à deux services de workflow de communiquer dans une conversation de longue durée. Cette rubrique présente une vue d'ensemble de la corrélation duplex durable.  
@@ -214,4 +200,4 @@ WF1 - Items Received
  Dans cet exemple, les deux workflows gèrent explicitement la corrélation à l'aide d'un objet <xref:System.ServiceModel.Activities.CallbackCorrelationInitializer>. Étant donné qu'il n'y avait qu'une seule corrélation dans ces exemples de workflows, la gestion <xref:System.ServiceModel.Activities.CorrelationHandle> par défaut aurait suffi.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Durable Duplex &#91;WF Samples&#93;](../../../../docs/framework/windows-workflow-foundation/samples/durable-duplex.md)
+ [Corrélation Duplex durable &#91;exemples WF&#93;](../../../../docs/framework/windows-workflow-foundation/samples/durable-duplex.md)

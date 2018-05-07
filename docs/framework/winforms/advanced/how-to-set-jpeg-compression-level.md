@@ -1,13 +1,6 @@
 ---
-title: "Guide pratique pour définir le niveau de compression JPEG"
-ms.custom: 
+title: Guide pratique pour définir le niveau de compression JPEG
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - images [Windows Forms], changing encoder parameters
 - JPEG images [Windows Forms], setting quality level
 ms.assetid: 4b9a74e3-9504-43c1-9f28-ace651d0772e
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 02e417fbcdb68e114ea0fc7afad7c22f6b2fdae9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5f12f0ed8bae7b6cfb6f3162848e3c3761f7dbbd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-set-jpeg-compression-level"></a>Guide pratique pour définir le niveau de compression JPEG
 Vous pouvez modifier les paramètres d’une image quand vous enregistrez l’image sur disque de façon à réduire la taille du fichier ou améliorer sa qualité. Vous pouvez ajuster la qualité d’une image JPEG en changeant son niveau de compression. Pour spécifier le niveau de compression lorsque vous enregistrez une image JPEG, vous devez créer un <xref:System.Drawing.Imaging.EncoderParameters> de l’objet et le passer à la <xref:System.Drawing.Image.Save%2A> méthode de la <xref:System.Drawing.Image> classe. Initialiser le <xref:System.Drawing.Imaging.EncoderParameters> objet afin qu’il possède un tableau qui se compose d’une <xref:System.Drawing.Imaging.EncoderParameter>. Lorsque vous créez le <xref:System.Drawing.Imaging.EncoderParameter>, spécifiez la <xref:System.Drawing.Imaging.Encoder.Quality> encodeur et le niveau de compression souhaité.  

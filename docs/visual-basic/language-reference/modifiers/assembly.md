@@ -1,10 +1,6 @@
 ---
 title: Assembly (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Assembly
 - vb.AssemblyAttribute
@@ -14,19 +10,16 @@ helpviewer_keywords:
 - Assembly keyword [Visual Basic]
 - attribute blocks, Assembly keyword
 ms.assetid: 925e7471-3bdf-4b51-bb93-cbcfc6efc52f
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ef4434f0bc520abfc621567fc68e0b8bcfd6e381
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7ee6cddefd5955ee76510ffeb23335f05460657b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="assembly-visual-basic"></a>Assembly (Visual Basic)
 Spécifie qu’un attribut situé au début d’un fichier source s’applique à la totalité de l’assembly.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Nombre d’attributs se rapport à un élément de programmation individuel, tel qu’une classe ou une propriété. Vous appliquez ce type d’attribut en attachant le bloc d’attributs, entre crochets (`< >`), directement à l’instruction de déclaration.  
   
  Si un attribut applique non seulement à l’élément suivant, mais aussi à la totalité de l’assembly, vous placez le bloc d’attributs au début du fichier source et identifiez l’attribut avec le `Assembly` (mot clé). Si elle s’applique à l’assembly actuel, vous utilisez la [Module](../../../visual-basic/language-reference/modifiers/module-keyword.md) (mot clé).  

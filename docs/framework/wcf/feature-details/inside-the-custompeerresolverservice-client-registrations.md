@@ -1,24 +1,12 @@
 ---
-title: "Dans CustomPeerResolverService : Inscriptions des clients"
-ms.custom: 
+title: 'Dans CustomPeerResolverService : Inscriptions des clients'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 40236953-a916-4236-84a6-928859e1331a
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9c979922bf8c7b786fd0a671c22289fb148a883c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1f8b6f5ac3a41fdc7f817553693b0621ee0ea3de
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="inside-the-custompeerresolverservice-client-registrations"></a>Dans CustomPeerResolverService : Inscriptions des clients
 Chaque nœud de la maille publie ses informations sur le point de terminaison sur le service de résolution par le biais de la fonction `Register`. Le service de résolution stocke ces informations comme un enregistrement d'inscription. Cet enregistrement contient un identificateur unique (RegistrationID) et les informations sur le point de terminaison (PeerNodeAddress) concernant le nœud.  

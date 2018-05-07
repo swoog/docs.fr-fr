@@ -1,38 +1,24 @@
 ---
 title: 'Comment : accéder aux services ayant un contrat duplex'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - duplex contracts [WCF]
 ms.assetid: 746a9d64-f21c-426c-b85d-972e916ec6c5
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c80980ff5a5b1011c021bcaf0688747178ec5b9b
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: c0022e6ce3a63c1f497eeee82ca959cec1046cec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-access-services-with-a-duplex-contract"></a>Comment : accéder aux services ayant un contrat duplex
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] dispose d'une fonctionnalité qui permet de créer un service utilisant un modèle de messagerie duplex. Ce modèle permet à un service de communiquer avec un client via un rappel. Cette rubrique contient la procédure permettant de créer un client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dans une classe client qui implémente une interface de rappel.  
+Une fonctionnalité de Windows Communication Foundation (WCF) est la possibilité de créer un service qui utilise un modèle de messagerie duplex. Ce modèle permet à un service de communiquer avec un client via un rappel. Cette rubrique décrit les étapes pour créer un client WCF dans une classe de client qui implémente l’interface de rappel.  
   
  Une liaison double expose l’adresse IP du client au service. Ce client doit utiliser un mode de sécurité afin de garantir sa connexion à un service fiable.  
   
- Pour obtenir un didacticiel sur la création d’un base [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service et le client, consultez [Getting Started Tutorial](../../../../docs/framework/wcf/getting-started-tutorial.md).  
+ Pour obtenir un didacticiel sur la création d’un service WCF de base et un client, consultez [Getting Started Tutorial](../../../../docs/framework/wcf/getting-started-tutorial.md).  
   
 ### <a name="to-access-a-duplex-service"></a>Pour accéder à un service duplex  
   
@@ -80,7 +66,7 @@ ms.lasthandoff: 04/30/2018
     Dim site As InstanceContext = New InstanceContext(new CallbackHandler())  
     ```  
   
-6.  Créez une instance de client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] à l'aide du constructeur qui nécessite un objet <xref:System.ServiceModel.InstanceContext>. Le second paramètre du constructeur correspond au nom du point de terminaison trouvé dans le fichier de configuration.  
+6.  Créez une instance du client WCF à l’aide du constructeur qui nécessite une <xref:System.ServiceModel.InstanceContext> objet. Le second paramètre du constructeur correspond au nom du point de terminaison trouvé dans le fichier de configuration.  
   
     ```csharp  
     CalculatorDuplexClient wcfClient =   
@@ -91,7 +77,7 @@ ms.lasthandoff: 04/30/2018
     Dim wcfClient As New CalculatorDuplexClient(site, "default")  
     ```  
   
-7.  Appelez la méthode du client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] comme requis.  
+7.  Appelez les méthodes du client WCF en fonction des besoins.  
   
 ## <a name="example"></a>Exemple  
  L'exemple de code suivant illustre comment créer une classe client qui accède à un contrat duplex.  

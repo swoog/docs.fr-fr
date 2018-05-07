@@ -1,12 +1,6 @@
 ---
 title: Class, instruction (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Class
 helpviewer_keywords:
@@ -19,14 +13,11 @@ helpviewer_keywords:
 - classes [Visual Basic], data members
 - data members [Visual Basic], of classes
 ms.assetid: f2664f38-eb5a-4d4b-a374-1d041521fb6c
-caps.latest.revision: 29
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: df86ef0eec67d96f2f997dc5dac7ee2357c6362b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2346823e7b774c21171bd81023cc5b920d34d19a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="class-statement-visual-basic"></a>Class, instruction (Visual Basic)
 Déclare le nom d’une classe et introduit la définition des variables, propriétés, événements et procédures contenus dans la classe.  
@@ -62,7 +53,7 @@ End Class
 |`statements`|Facultatif. Instructions qui définissent les membres de cette classe.|  
 |`End Class`|Obligatoire. Met fin à la `Class` définition.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  A `Class` instruction définit un type de données. A *classe* est un bloc de construction fondamental de la programmation orientée objet (OOP). Pour plus d’informations, consultez [objets et Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).  
   
  Vous pouvez utiliser `Class` uniquement au niveau de l’espace de noms ou module. Cela signifie que la *contexte de déclaration* pour une classe doit être un fichier source, espace de noms, classe, structure, module ou interface et ne peut pas être une procédure ou un bloc. Pour plus d’informations, consultez [Contextes de déclaration et niveaux d’accès par défaut](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  

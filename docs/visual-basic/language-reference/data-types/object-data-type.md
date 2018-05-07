@@ -1,10 +1,6 @@
 ---
 title: Object Data Type
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Object
 - vb.Variant
@@ -14,19 +10,16 @@ helpviewer_keywords:
 - Object data type
 - Object data type [Visual Basic], reference
 ms.assetid: 61ea4a7c-3b3d-48d4-adc4-eacfa91779b2
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 847f2b50296ad1a1ba6f0009d1d6afced27f9abe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e9b1da5a88c12e0d883c3afe63be98c3fa3e9173
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="object-data-type"></a>Object Data Type
 Contient les adresses qui font référence aux objets. Vous pouvez affecter à n’importe quel type référence (chaîne, tableau, classe ou interface) à une `Object` variable. Un `Object` variable peut également faire référence à des données de n’importe quel type valeur (numérique, `Boolean`, `Char`, `Date`, structure ou énumération).  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le `Object` type de données peut pointer vers des données de n’importe quel type de données, y compris toute instance d’objet que votre application reconnaît. Utilisez `Object` lorsque vous ne connaissez pas au moment de la compilation, le type de données la variable peut pointer vers.  
   
  La valeur par défaut `Object` est `Nothing` (une référence null).  
@@ -58,7 +51,7 @@ datTyp = Type.GetTypeCode(myObject.GetType())
   
      Toutefois, si vous convertissez entre les types valeur et `Object`, Visual Basic exécute des opérations appelées *boxing* et *unboxing*, qui vous ralentit l’exécution.  
   
--   **Caractères de type.** `Object`n’a aucun caractère de type littéral ou un caractère de type identificateur.  
+-   **Caractères de type.** `Object` n’a aucun caractère de type littéral ou un caractère de type identificateur.  
   
 -   **Type .NET Framework.** Le type correspondant dans le .NET Framework est la <xref:System.Object?displayProperty=nameWithType> classe.  
   

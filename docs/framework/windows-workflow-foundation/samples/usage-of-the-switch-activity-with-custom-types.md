@@ -1,23 +1,12 @@
 ---
-title: "Utilisation de l'activité Switch avec des types personnalisés"
-ms.custom: 
+title: Utilisation de l'activité Switch avec des types personnalisés
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 482a48c4-eb83-40c3-a4e2-2f9a8af88b75
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 61485a59ae3af17bef58c0fccbe062c8b9171a34
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2b6f3109324064cb5e746de9c61e5a70c4c4d60b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="usage-of-the-switch-activity-with-custom-types"></a>Utilisation de l'activité Switch avec des types personnalisés
 Cet exemple montre comment permettre à une activité <xref:System.Activities.Statements.Switch%601> d'évaluer un type complexe défini par l'utilisateur au moment de l'exécution. Dans les langages de programmation procéduraux traditionnels, un [commutateur](http://go.microsoft.com/fwlink/?LinkId=180521) instruction sélectionne une logique d’exécution en fonction de l’évaluation conditionnelle d’une variable. D'ordinaire, une instruction `switch` opère sur une expression qui peut être évaluée statiquement. Par exemple, en C#, cela signifie que seuls des types primitifs, tels que <xref:System.Boolean>, <xref:System.Int32>, <xref:System.String>, et des types énumération sont pris en charge.  
@@ -136,7 +125,7 @@ Cet exemple montre comment permettre à une activité <xref:System.Activities.St
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à la page [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les exemples [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\Switch`  
   

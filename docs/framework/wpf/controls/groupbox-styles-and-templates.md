@@ -1,13 +1,6 @@
 ---
-title: "Styles et modèles GroupBox"
-ms.custom: 
+title: Styles et modèles GroupBox
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ControlTemplate [WPF], GroupBox
 - parts [WPF], GroupBox
@@ -16,19 +9,14 @@ helpviewer_keywords:
 - styles [WPF], GroupBox
 - templates [WPF], GroupBox
 ms.assetid: 33df7037-0a1b-476f-b9d0-41566a777699
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 99150de10fcbd45d3617621a916793ad5cfe72db
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 57f5411f880ae7bafe852e9e84db1995ccd70e68
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="groupbox-styles-and-templates"></a>Styles et modèles GroupBox
-<a name="introduction"></a>Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Controls.GroupBox> contrôle. Vous pouvez modifier la valeur par défaut <xref:System.Windows.Controls.ControlTemplate> pour donner une apparence unique au contrôle. Pour plus d’informations, consultez [Personnalisation de l’apparence d’un contrôle existant en créant un ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+<a name="introduction"></a> Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Controls.GroupBox> contrôle. Vous pouvez modifier la valeur par défaut <xref:System.Windows.Controls.ControlTemplate> pour donner une apparence unique au contrôle. Pour plus d’informations, consultez [Personnalisation de l’apparence d’un contrôle existant en créant un ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
   
 <a name="groupbox_parts"></a>   
 ## <a name="groupbox-parts"></a>Parties de la zone de groupe  

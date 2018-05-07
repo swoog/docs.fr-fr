@@ -1,22 +1,12 @@
 ---
-title: "Comment : remplir une arborescence XML avec un XmlWriter (LINQ to XML) (Visual Basic)"
-ms.custom: 
+title: 'Comment : remplir une arborescence XML avec un XmlWriter (LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 5792a0eb-94ee-440d-b601-58cca8c0ee0b
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 548e931a120a319bbd45885e6d1b60685d983c01
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bc17b84b945e93443ab6d9f337e852feba5b0662
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-populate-an-xml-tree-with-an-xmlwriter-linq-to-xml-visual-basic"></a>Comment : remplir une arborescence XML avec un XmlWriter (LINQ to XML) (Visual Basic)
 L'une des manières de remplir une arborescence XML consiste à utiliser <xref:System.Xml.Linq.XContainer.CreateWriter%2A> pour créer un objet <xref:System.Xml.XmlWriter>, puis à écrire dans l'objet <xref:System.Xml.XmlWriter>. L'arborescence XML est remplie avec tous les nœuds écrits dans l'objet <xref:System.Xml.XmlWriter>.  

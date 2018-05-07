@@ -1,12 +1,6 @@
 ---
 title: Skip, clause (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.QuerySkip
 helpviewer_keywords:
@@ -14,14 +8,11 @@ helpviewer_keywords:
 - Skip statement [Visual Basic]
 - Skip clause [Visual Basic]
 ms.assetid: f00eb172-3907-4c43-9745-d8546ab86234
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 508f3c094df4c834305bcb4a78223c1cee82b1c8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1810bf4a6573c6fa36f1d8149bf341d45cfd6f52
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="skip-clause-visual-basic"></a>Skip, clause (Visual Basic)
 Ignore un nombre spécifié d’éléments dans une collection, puis retourne les éléments restants.  
@@ -36,7 +27,7 @@ Skip count
  `count`  
  Obligatoire. Une valeur ou une expression qui donne le nombre d’éléments de la séquence à ignorer.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le `Skip` clause entraîne une requête à ignorer des éléments au début d’une liste de résultats et retourner les éléments restants. Le nombre d’éléments à ignorer est identifié par le `count` paramètre.  
   
  Vous pouvez utiliser la `Skip` clause avec la `Take` clause pour retourner une plage de données à partir de n’importe quel segment d’une requête. Pour ce faire, passez à l’index du premier élément de la plage à la `Skip` clause et la taille de la plage à la `Take` clause.  

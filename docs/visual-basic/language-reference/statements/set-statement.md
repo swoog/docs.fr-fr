@@ -1,12 +1,6 @@
 ---
 title: Set, instruction (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Set
 helpviewer_keywords:
@@ -16,14 +10,11 @@ helpviewer_keywords:
 - write-only properties
 - properties [Visual Basic], write-only
 ms.assetid: 9ecc27b4-df84-420d-9075-db25455fb3cd
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 3b18e6c858e64e78d7ab85fdaafd70e510f7a02f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: dbc48d14bac54809e4ddd12c87429bf407169950
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="set-statement-visual-basic"></a>Set, instruction (Visual Basic)
 Déclare un `Set` procédure de propriété utilisée pour affecter une valeur à une propriété.  
@@ -65,7 +56,7 @@ End Set
  `End Set`  
  Obligatoire. Termine la définition de la `Set` procédure de propriété.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Chaque propriété doit avoir un `Set` procédure de propriété, sauf si la propriété est marquée `ReadOnly`. Le `Set` procédure est utilisée pour définir la valeur de la propriété.  
   
  Visual Basic appelle automatiquement d’une propriété `Set` procédure lors d’une instruction d’assignation fournit une valeur à stocker dans la propriété.  
@@ -86,7 +77,7 @@ End Set
   
 -   **Retour d’une procédure de propriété.** Lorsque le `Set` procédure retourne au code appelant, l’exécution se poursuit après l’instruction qui a fourni la valeur à stocker.  
   
-     `Set`procédures de propriété peuvent retourner à l’aide du [instruction Return](../../../visual-basic/language-reference/statements/return-statement.md) ou [instruction Exit](../../../visual-basic/language-reference/statements/exit-statement.md).  
+     `Set` procédures de propriété peuvent retourner à l’aide du [instruction Return](../../../visual-basic/language-reference/statements/return-statement.md) ou [instruction Exit](../../../visual-basic/language-reference/statements/exit-statement.md).  
   
      Le `Exit Property` et `Return` instructions provoquent la sortie immédiate d’une procédure de propriété. Un nombre quelconque de `Exit Property` et `Return` instructions peuvent apparaître n’importe où dans la procédure, et vous pouvez mélanger `Exit Property` et `Return` instructions.  
   

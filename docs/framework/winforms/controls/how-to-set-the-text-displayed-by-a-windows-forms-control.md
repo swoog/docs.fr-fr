@@ -1,13 +1,6 @@
 ---
-title: "Comment : définir le texte affiché par un contrôle Windows Forms"
-ms.custom: 
+title: 'Comment : définir le texte affiché par un contrôle Windows Forms'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -28,16 +21,11 @@ helpviewer_keywords:
 - controls [Windows Forms], captions
 - forms [Windows Forms], captions
 ms.assetid: 36b95bff-8780-479d-b86a-f1a0673653aa
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 858d1d9b80af89be3e029ce59c521fa6e4d24c29
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d39b0b7ccf95f0da22086a72aa2cee424d7ea8ae
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a>Comment : définir le texte affiché par un contrôle Windows Forms
 Généralement, les contrôles Windows Forms affichent du texte en rapport avec la fonction principale du contrôle. Par exemple, un contrôle <xref:System.Windows.Forms.Button> affiche habituellement une légende indiquant l'action à exécuter quand le bouton est activé. Pour tous les contrôles, vous pouvez définir ou retourner le texte à l'aide de la propriété <xref:System.Windows.Forms.Control.Text%2A>. Vous pouvez modifier la police en utilisant la propriété <xref:System.Windows.Forms.Control.Font%2A>. Vous pouvez également définir le texte à l'aide du concepteur.  Consultez également [Comment : créer accès clés pour Windows Forms contrôles à l’aide du concepteur](http://msdn.microsoft.com/library/ms233673\(v=vs.110\)), [Comment : définir le texte affiché par un contrôle Windows Forms à l’aide du concepteur](http://msdn.microsoft.com/library/ms233665\(v=vs.110\)), [Comment : définir l’Image Affiché par un contrôle à l’aide du Concepteur Windows Forms](http://msdn.microsoft.com/library/ms233656\(v=vs.110\)).  

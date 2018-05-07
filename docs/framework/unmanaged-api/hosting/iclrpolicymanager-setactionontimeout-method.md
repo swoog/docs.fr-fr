@@ -1,14 +1,6 @@
 ---
-title: "ICLRPolicyManager::SetActionOnTimeout, méthode"
-ms.custom: 
+title: ICLRPolicyManager::SetActionOnTimeout, méthode
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRPolicyManager.SetActionOnTimeout
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 38439fa1-2b99-4fa8-a6ec-08afc0f83b9c
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: db0918272a315e78191624cbe6420863285620c6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cc1d16a2d57fea27c1c26fc55fbbfa9b74c25495
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrpolicymanagersetactionontimeout-method"></a>ICLRPolicyManager::SetActionOnTimeout, méthode
 Spécifie l’action de stratégie que le common language runtime (CLR) doit entreprendre lorsque l’opération spécifiée arrive à expiration.  
@@ -66,7 +54,7 @@ HRESULT SetActionOnTimeout (
   
 |HRESULT|Description|  
 |-------------|-----------------|  
-|S_OK|`SetActionOnTimeout`retourné avec succès.|  
+|S_OK|`SetActionOnTimeout` retourné avec succès.|  
 |HOST_E_CLRNOTAVAILABLE|Le CLR n’a pas été chargé dans un processus ou le CLR est dans un état dans lequel il ne peut pas exécuter du code managé ou traiter l’appel avec succès.|  
 |HOST_E_TIMEOUT|L’appel a expiré.|  
 |HOST_E_NOT_OWNER|L’appelant ne possède pas le verrou.|  
@@ -77,22 +65,22 @@ HRESULT SetActionOnTimeout (
 ## <a name="remarks"></a>Notes  
  La valeur de délai d’attente peut être soit le délai d’attente par défaut défini par le CLR, soit une valeur spécifiée par l’hôte dans un appel à la [ICLRPolicyManager::SetTimeout](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-settimeout-method.md) (méthode).  
   
- Toutes les valeurs d’action de stratégie peuvent être spécifiés comme comportement de délai d’attente pour les opérations CLR. `SetActionOnTimeout`est généralement utilisé uniquement pour transmettre le comportement. Par exemple, un hôte peut spécifier que les abandons de thread soit transformé en brutal abandons de threads, mais ne peut pas spécifier le contraire. Le tableau ci-dessous décrit les valide `action` des valeurs valides `operation` valeurs.  
+ Toutes les valeurs d’action de stratégie peuvent être spécifiés comme comportement de délai d’attente pour les opérations CLR. `SetActionOnTimeout` est généralement utilisé uniquement pour transmettre le comportement. Par exemple, un hôte peut spécifier que les abandons de thread soit transformé en brutal abandons de threads, mais ne peut pas spécifier le contraire. Le tableau ci-dessous décrit les valide `action` des valeurs valides `operation` valeurs.  
   
-|Valeur de`operation`|Valeurs valides pour`action`|  
+|Valeur de `operation`|Valeurs valides pour `action`|  
 |---------------------------|-------------------------------|  
 |OPR_ThreadRudeAbortInNonCriticalRegion<br /><br /> OPR_ThreadRudeAbortInCriticalRegion|-eRudeAbortThread<br />-eUnloadAppDomain<br />-eRudeUnloadAppDomain<br />-eExitProcess<br />-eFastExitProcess<br />-eRudeExitProcess<br />-eDisableRuntime|  
 |OPR_AppDomainUnload|-eUnloadAppDomain<br />-eRudeUnloadAppDomain<br />-eExitProcess<br />-eFastExitProcess<br />-eRudeExitProcess<br />-eDisableRuntime|  
 |OPR_ProcessExit|-eExitProcess<br />-eFastExitProcess<br />-eRudeExitProcess<br />-eDisableRuntime|  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** MSCorEE.h  
   
  **Bibliothèque :** inclus en tant que ressource dans MSCorEE.dll  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [EClrOperation, énumération](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)  

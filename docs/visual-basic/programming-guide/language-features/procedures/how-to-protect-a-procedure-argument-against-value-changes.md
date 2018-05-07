@@ -1,13 +1,6 @@
 ---
 title: 'Comment : protéger un argument de procédure contre les modifications de valeur (Visual Basic)'
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - procedures [Visual Basic], arguments
 - procedures [Visual Basic], parameters
@@ -21,14 +14,11 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: d2b7c766-ce16-4d2c-8d79-3fc0e7ba2227
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 59c0486bd9543167e4c17a3109c4b89b3502e80e
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: d2e131b770d8498a634d946a5900f9b373ca7e56
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-protect-a-procedure-argument-against-value-changes-visual-basic"></a>Comment : protéger un argument de procédure contre les modifications de valeur (Visual Basic)
 Si une procédure déclare un paramètre comme [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic donne le code de procédure une référence directe à l’élément de programmation sous-jacent à l’argument dans le code appelant. Cela permet à la procédure pour modifier la valeur sous-jacente à l’argument dans le code appelant. Dans certains cas, le code appelant souhaiteriez pour vous protéger contre une telle modification.  

@@ -1,13 +1,6 @@
 ---
-title: "Comment : lier un ornement à un élément"
-ms.custom: 
+title: 'Comment : lier un ornement à un élément'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - UIElements [WPF], binding adorners to
 - adorners [WPF], binding to specified UIElements
 ms.assetid: b2101611-a0ee-4137-bdb8-9b3673d2e6b9
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b3c657cde9da19f8ebc6b6d4d05077ed027781b0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fb419ee5a57e81e7e3bc72ae04fd200703b80cd3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-bind-an-adorner-to-an-element"></a>Comment : lier un ornement à un élément
 Cet exemple montre comment lier par programmation un ornement spécifié <xref:System.Windows.UIElement>.  
@@ -32,7 +20,7 @@ Cet exemple montre comment lier par programmation un ornement spécifié <xref:S
 ## <a name="example"></a>Exemple  
  Pour lier un ornement à un emplacement donné <xref:System.Windows.UIElement>, procédez comme suit :  
   
-1.  Appeler le `static` méthode <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> pour obtenir un <xref:System.Windows.Documents.AdornerLayer> de l’objet pour le <xref:System.Windows.UIElement> à orner. <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A>parcourt l’arborescence d’éléments visuels, en commençant à la position spécifiée **UIElement**et retourne la première couche d’ornement qu’il trouve. (Si aucune couche d’ornement n’est trouvée, la méthode retourne Null.)  
+1.  Appeler le `static` méthode <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> pour obtenir un <xref:System.Windows.Documents.AdornerLayer> de l’objet pour le <xref:System.Windows.UIElement> à orner. <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> parcourt l’arborescence d’éléments visuels, en commençant à la position spécifiée **UIElement**et retourne la première couche d’ornement qu’il trouve. (Si aucune couche d’ornement n’est trouvée, la méthode retourne Null.)  
   
 2.  Appelez le <xref:System.Windows.Documents.AdornerLayer.Add%2A> méthode à laquelle lier l’ornement à la cible **UIElement**.  
   

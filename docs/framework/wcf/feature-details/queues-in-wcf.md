@@ -1,31 +1,17 @@
 ---
 title: Files d'attente dans Windows Communication Foundation
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - queues [WCF]
 ms.assetid: 43008409-1bb4-4bd4-85d7-862c8f10ae20
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 82eb421b86f57cfe7c9a23de3ab24de2d4c470cb
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 96dfee3304369c300c40d595860898c51ff728aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Files d'attente dans Windows Communication Foundation
-Les rubriques de cette section traitent de la prise en charge des files d'attente par [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] prend en charge la mise en file d'attente en utilisant Microsoft Message Queuing (anciennement connu sous le nom MSMQ) comme un transport et active les scénarios suivants :  
+Les rubriques de cette section traitent de prise en charge de Windows Communication Foundation (WCF) pour les files d’attente. WCF prend en charge queuing par exploitant Microsoft Message Queuing (anciennement appelé MSMQ) comme transport et permet les scénarios suivants :  
   
 -   Applications faiblement couplées. Les applications émettrices peuvent envoyer des messages aux files d'attente sans avoir besoin de savoir si l'application réceptrice est disponible pour traiter le message. La file d'attente permet l'indépendance du traitement, ce qui signifie que l'application émettrice peut envoyer des messages à la file d'attente à un taux de qui ne dépend pas de la rapidité avec laquelle les applications réceptrices peuvent traiter les messages. La disponibilité globale du système augmente lorsque l'envoi de messages à une file d'attente n'est pas fortement couplé au traitement du message.  
   
@@ -35,20 +21,20 @@ Les rubriques de cette section traitent de la prise en charge des files d'attent
   
 -   Opérations hors circuit. L'envoi, la réception et le traitement d'opérations peut se faire hors circuit en cas de communication sur des réseaux à forte latence ou à disponibilité limitée, comme dans le cas des appareils mobiles. Les files d'attente permettent à ces opérations de se poursuivre, même lorsque les points de terminaison sont déconnectés. Lorsque la connexion est rétablie, la file d'attente envoie des messages à l'application réceptrice.  
   
- Pour utiliser la fonctionnalité de file d'attente dans une application [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], vous pouvez utiliser l'une des liaisons standard, ou vous pouvez créer une liaison personnalisée si aucune des liaisons standard ne correspond à vos spécifications. Pour plus d’informations sur les liaisons standard appropriés et comment choisir l’une, consultez [Comment : échanger des Messages avec les points de terminaison WCF et les Applications Message Queuing](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md). Pour plus d’informations sur la création de liaisons personnalisées, consultez [des liaisons personnalisées](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+ Pour utiliser la fonctionnalité de files d’attente dans une application WCF, vous pouvez utiliser l’une des liaisons standard, ou vous pouvez créer une liaison personnalisée si une des liaisons standard ne correspond pas à vos spécifications. Pour plus d’informations sur les liaisons standard appropriés et comment choisir l’une, consultez [Comment : échanger des Messages avec les points de terminaison WCF et les Applications Message Queuing](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md). Pour plus d’informations sur la création de liaisons personnalisées, consultez [des liaisons personnalisées](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Vue d’ensemble des files d’attente](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
  Vue d'ensemble des concepts de la mise en file d'attente des messages.  
   
  [Mise en file d’attente dans WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
- Vue d'ensemble de la prise en charge des files d'attente par [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Vue d’ensemble de la prise en charge de la file d’attente WCF.  
   
  [Guide pratique pour échanger des messages en file d’attente avec des points de terminaison WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
- Explique comment utiliser la classe <xref:System.ServiceModel.NetMsmqBinding> pour communiquer entre un client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] et un service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Explique comment utiliser la <xref:System.ServiceModel.NetMsmqBinding> classe pour la communication entre un client WCF et d’un service WCF.  
   
  [Guide pratique pour échanger des messages avec des points de terminaison WCF et des applications Message Queuing](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
- Explique comment utiliser la <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> pour communiquer entre [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] et des applications Message Queuing.  
+ Explique comment utiliser le <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> pour communiquer entre les applications WCF et Message Queuing.  
   
  [Regroupement de messages mis en file d’attente dans une session](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)  
  Explique comment grouper des messages dans une file d'attente pour faciliter le traitement des messages corrélés par une application réceptrice unique.  
@@ -63,7 +49,7 @@ Les rubriques de cette section traitent de la prise en charge des files d'attent
  Explique comment gérer les messages incohérents (messages qui ont dépassé le nombre maximal de tentatives de livraison à l'application réceptrice).  
   
  [Différences entre les fonctionnalités de mise en file d’attente dans Windows Vista, Windows Server 2003 et Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)  
- Résume les différences des files d'attente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dans [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] et [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+ Résume les différences dans la fonctionnalité de files d’attente WCF entre [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], et [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
  [Sécurisation des messages à l’aide de la sécurité de transport](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)  
  Décrit comment utiliser la sécurité de transport pour sécuriser des messages mis en file d'attente.  
@@ -75,7 +61,7 @@ Les rubriques de cette section traitent de la prise en charge des files d'attent
  Explique comment résoudre les problèmes courants de mise en file d'attente.  
   
  [Bonnes pratiques pour les communications mises en file d’attente](../../../../docs/framework/wcf/feature-details/best-practices-for-queued-communication.md)  
- Explique les meilleures pratiques pour utiliser les communications [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] mises en file d'attente.  
+ Décrit les meilleures pratiques pour l’utilisation de WCF en file d’attente de communication.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Message Queuing](http://msdn.microsoft.com/library/ff917e87-05d5-478f-9430-0f560675ece1)

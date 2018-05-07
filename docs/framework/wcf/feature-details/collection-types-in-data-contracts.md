@@ -1,14 +1,6 @@
 ---
 title: Types de collections dans les contrats de données
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - data contracts [WCF], collection types
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c771d78c5e78feabcfe883934ed7ea3589c938d2
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: dccc53f13889e2073579af19e86459fe56b069e7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="collection-types-in-data-contracts"></a>Types de collections dans les contrats de données
 Une *collection* est une liste d'éléments d'un certain type. Dans le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], ces listes peuvent être représentées à l'aide de tableaux ou de divers autres types (liste générique, <xref:System.ComponentModel.BindingList%601>, <xref:System.Collections.Specialized.StringCollection>ou <xref:System.Collections.ArrayList>générique). Par exemple, une collection peut contenir une liste d'adresses pour un client donné. Ces collections sont appelées *collections liste*, indépendamment de leur type réel.  
@@ -86,7 +72,7 @@ Une *collection* est une liste d'éléments d'un certain type. Dans le [!INCLUDE
   
  Pendant la sérialisation, lorsque le type déclaré est une interface, le type d'instance réel utilisé peut être tout type qui implémente cette interface. Les restrictions présentées précédemment (avoir un constructeur par défaut et une méthode `Add`) ne s'appliquent pas. Par exemple, vous pouvez définir les adresses dans Customer2 sur une instance de <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> générique d'adresse, bien que vous ne puissiez pas déclarer directement un membre de données de type <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>générique.  
   
- Pendant la désérialisation, lorsque le type déclaré est une interface, le moteur de sérialisation choisit un type qui implémente l'interface déclarée, et ce type est instancié. Le mécanisme des types connus (décrit dans [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)) n’a aucun effet ici ; le choix du type est intégré dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Pendant la désérialisation, lorsque le type déclaré est une interface, le moteur de sérialisation choisit un type qui implémente l'interface déclarée, et ce type est instancié. Les types connus utilisés mécanisme (décrites dans [Types connus de contrat de données](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)) n’a aucun effet ici ; le choix du type est intégré à WCF.  
   
 ## <a name="customizing-collection-types"></a>Personnalisation des types de collections  
  Vous pouvez personnaliser les types de collections à l'aide de l'attribut <xref:System.Runtime.Serialization.CollectionDataContractAttribute> , qui présente plusieurs utilisations.  
@@ -235,7 +221,7 @@ Une *collection* est une liste d'éléments d'un certain type. Dans le [!INCLUDE
 ## <a name="collections-and-schema"></a>Collections et schéma  
  Toutes les collections équivalentes ont la même représentation dans le schéma XSD (XML Schema Definition). C'est pourquoi vous n'obtiendrez normalement pas le même type de collection dans le code client généré que sur le serveur. Par exemple, le serveur peut utiliser un contrat de données avec un membre de données <xref:System.Collections.Generic.List%601> générique d'éléments Integer, alors que, dans le code client généré, le même membre de données peut devenir un tableau d'entiers.  
   
- Les collections dictionnaire sont marquées avec une annotation de schéma spécifique à [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]qui indique qu'il s'agit de dictionnaires ; dans le cas contraire, il ne serait pas possible de les distinguer de listes ordinaires contenant des entrées composées d'une clé et d'une valeur. Pour une description exacte de la façon dont les collections sont représentées dans le schéma de contrat de données, consultez [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
+ Collections dictionnaire sont marquées avec une annotation de schéma spécifique au WCF qui indiquent qu’il s’agit de dictionnaires ; Sinon, elles sont impossibles à distinguer de listes ordinaires contenant des entrées avec une clé et une valeur. Pour une description exacte de la façon dont les collections sont représentées dans le schéma de contrat de données, consultez [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
   
  Par défaut, les types ne sont pas générés pour les collections non personnalisées dans le code importé. Les membres de données des types de collections liste sont importés en tant que tableaux, alors que les membres de données des types de collections dictionnaire sont importés en tant que dictionnaire générique.  
   

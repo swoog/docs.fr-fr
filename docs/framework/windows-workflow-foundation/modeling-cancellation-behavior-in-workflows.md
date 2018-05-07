@@ -1,24 +1,12 @@
 ---
 title: Modélisation du comportement d'annulation dans les workflows
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: d48f6cf3-cdde-4dd3-8265-a665acf32a03
-caps.latest.revision: 11
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e455bf4d74f77c6cd87301dc9a21f56117777ecf
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 08687f8c2e06a459714d934713fddfe3f3536774
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="modeling-cancellation-behavior-in-workflows"></a>Modélisation du comportement d'annulation dans les workflows
 Les activités peuvent être annulées à l'intérieur d'un workflow, par exemple par une activité <xref:System.Activities.Statements.Parallel> qui annule des branches incomplètes lorsque son <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> a la valeur `true`, ou à l'extérieur du workflow, si l'hôte appelle <xref:System.Activities.WorkflowApplication.Cancel%2A>. Pour fournir la gestion des annulations, les auteurs de workflow peuvent utiliser l'activité <xref:System.Activities.Statements.CancellationScope>, l'activité <xref:System.Activities.Statements.CompensableActivity> ou créer des activités personnalisées qui fournissent la logique d'annulation. Cette rubrique fournit une vue d'ensemble de l'annulation dans les workflows.  

@@ -1,30 +1,18 @@
 ---
-title: "Procédure : créer un service Web HTTP WCF de base"
-ms.custom: 
+title: 'Procédure : créer un service Web HTTP WCF de base'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 877662d3-d372-4e08-b417-51f66a0095cd
-caps.latest.revision: "26"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4dc60bbb51bc573840d0d45356f0cd84fd32db2a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d147286fd2f8fe3f4f5e822598a07b51ae6d9791
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-basic-wcf-web-http-service"></a>Procédure : créer un service Web HTTP WCF de base
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] vous permet de créer un service qui expose un point de terminaison Web. Les points de terminaison Web envoient des données par XML ou JSON, il n'y a aucune enveloppe SOAP. Cette rubrique explique comment exposer un tel point de terminaison.  
+Windows Communication Foundation (WCF) vous permet de créer un service qui expose un point de terminaison Web. Les points de terminaison Web envoient des données par XML ou JSON, il n'y a aucune enveloppe SOAP. Cette rubrique explique comment exposer un tel point de terminaison.  
   
 > [!NOTE]
 >  La seule méthode pour sécuriser un point de terminaison Web est de l'exposer à travers HTTPS, à l'aide de la sécurité de transport. Lors de l'utilisation de la sécurité basée sur message, les informations de sécurité sont placées habituellement dans les en-têtes SOAP, et comme les messages envoyés aux points de terminaison non-SOAP ne contiennent aucune enveloppe SOAP, on ne peut placer les informations de sécurité nulle part et vous devez compter sur la sécurité de transport.  
@@ -59,7 +47,7 @@ ms.lasthandoff: 12/22/2017
     > [!NOTE]
     >  Si vous n'ajoutez pas de point de terminaison, <xref:System.ServiceModel.Web.WebServiceHost> crée automatiquement un point de terminaison par défaut. <xref:System.ServiceModel.Web.WebServiceHost> ajoute également <xref:System.ServiceModel.Description.WebHttpBehavior> et désactive la page d'aide HTTP et la fonctionnalité WSDL (Web Services Description Language) GET afin que le point de terminaison des métadonnées n'interfère pas avec le point de terminaison HTTP par défaut.  
     >   
-    >  Ajouter un point de terminaison non-SOAP avec une URL "" provoque un comportement inattendu en cas de tentative d'appeler une opération sur le point de terminaison. Cela est dû au fait que l'URI d'écoute du point de terminaison est le même que l'URI de la page d'aide (la page affichée lorsque vous naviguez jusqu'à l'adresse de base d'un service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]).  
+    >  Ajouter un point de terminaison non-SOAP avec une URL "" provoque un comportement inattendu en cas de tentative d'appeler une opération sur le point de terminaison. La raison en est l’URI du point de terminaison est identique à l’URI de la page d’aide (la page qui s’affiche lorsque vous accédez à l’adresse de base d’un service WCF) d’écoute.  
   
      Vous pouvez recourir à l'une des actions suivantes pour l'empêcher :  
   
@@ -87,7 +75,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="to-call-service-operations-mapped-to-get-in-internet-explorer"></a>Pour appeler des opérations de service mappées à GET dans Internet Explorer  
   
-1.  Ouvrez Internet Explorer et tapez «`http://localhost:8000/EchoWithGet?s=Hello, world!`» et appuyez sur ENTRÉE. L'URL contient l'adresse de base du service ("http://localhost:8000/"), l'adresse relative du point de terminaison (""), l'opération de service à appeler ("EchoWithGet") et un point d'interrogation suivi d'une liste de paramètres séparés par une esperluette (&).  
+1.  Ouvrez Internet Explorer et tapez «`http://localhost:8000/EchoWithGet?s=Hello, world!`» et appuyez sur ENTRÉE. L’URL contient l’adresse de base du service («http://localhost:8000/»), l’adresse relative du point de terminaison (« »), l’opération de service à appeler (« EchoWithGet ») et un point d’interrogation suivi d’une liste de paramètres séparés par une esperluette (&).  
   
 ### <a name="to-call-service-operations-in-code"></a>Pour appeler des opérations de service dans le code  
   

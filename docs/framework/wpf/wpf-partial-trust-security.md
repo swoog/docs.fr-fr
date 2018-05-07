@@ -1,14 +1,6 @@
 ---
 title: Sécurité de confiance partielle de WPF
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -23,17 +15,11 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-caps.latest.revision: 40
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 023de9e20206411f7dd6774553ae39eefaa508a0
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 27934f782d6c1efde69794c73d653b57b287341f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wpf-partial-trust-security"></a>Sécurité de confiance partielle de WPF
 <a name="introduction"></a> En général, les applications Internet doivent disposer d’un accès direct limité aux ressources système critiques, afin d’éviter des dommages dus à des actes de malveillance. Par défaut, [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] et langages de script côté client ne sont pas en mesure d’accéder aux ressources système critiques. Étant donné que les applications hébergées par un navigateur Windows Presentation Foundation (WPF) peuvent être lancées à partir du navigateur, elles doivent se conformer à un jeu de restrictions similaires. Pour appliquer ces restrictions, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] s’appuie sur les deux [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)] et [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] (consultez [stratégie de sécurité de WPF - sécurité de la plate-forme](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)). Par défaut, les applications hébergées par le navigateur demandent la zone Internet [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] jeu d’autorisations, indépendamment de si elles sont lancées à partir d’Internet, intranet local ou l’ordinateur local. Les applications qui sont exécutées sans jeu d’autorisations complet sont exécutées avec une confiance dite partielle.  

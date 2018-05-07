@@ -1,13 +1,6 @@
 ---
-title: "Dépannage des applications hybrides"
-ms.custom: 
+title: Dépannage des applications hybrides
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - overlapping controls [WPF]
 - Windows Forms [WPF], interoperability with
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - message loops [WPF]
 ms.assetid: f440c23f-fa5d-4d5a-852f-ba61150e6405
-caps.latest.revision: "26"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0a23f439b9b14d16a5440fa3b757b972304fdfa3
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 878761c030d4950e53ee24b76f7e29101584143a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="troubleshooting-hybrid-applications"></a>Dépannage des applications hybrides
 <a name="introduction"></a> Cette rubrique répertorie certains problèmes courants qui peuvent se produire lors de la création d’applications hybrides qui utilisent à la fois les technologies [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] et [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].  
@@ -38,7 +26,7 @@ ms.lasthandoff: 01/19/2018
   
  Un contrôle [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] hébergé dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] apparaît toujours par-dessus le contenu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]le contenu hébergé dans un <xref:System.Windows.Forms.Integration.ElementHost> contrôle apparaît au niveau de l’ordre de plan de la <xref:System.Windows.Forms.Integration.ElementHost> contrôle. Il est possible de se chevaucher <xref:System.Windows.Forms.Integration.ElementHost> contrôles mais hébergé [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contenu ne pas combiner ou d’interaction.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] le contenu hébergé dans un <xref:System.Windows.Forms.Integration.ElementHost> contrôle apparaît au niveau de l’ordre de plan de la <xref:System.Windows.Forms.Integration.ElementHost> contrôle. Il est possible de se chevaucher <xref:System.Windows.Forms.Integration.ElementHost> contrôles mais hébergé [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contenu ne pas combiner ou d’interaction.  
   
 <a name="child_property"></a>   
 ## <a name="child-property"></a>Propriété enfant  
@@ -95,7 +83,7 @@ ms.lasthandoff: 01/19/2018
   
 <a name="dispose"></a>   
 ## <a name="dispose"></a>Suppression  
- Le fait de ne pas supprimer correctement les classes peut entraîner une fuite des ressources. Dans vos applications hybrides, vérifiez que le <xref:System.Windows.Forms.Integration.WindowsFormsHost> et <xref:System.Windows.Forms.Integration.ElementHost> classes sont supprimés, ou vous pourriez entraîner une fuite de ressources. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]Supprime <xref:System.Windows.Forms.Integration.ElementHost> contrôle le moment où son non modale <xref:System.Windows.Forms.Form> parent se ferme. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Supprime <xref:System.Windows.Forms.Integration.WindowsFormsHost> éléments lorsque votre application s’arrête. Il est possible d’afficher un <xref:System.Windows.Forms.Integration.WindowsFormsHost> élément dans une <xref:System.Windows.Window> dans un [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] boucle de message. Dans ce cas, votre code peut ne pas être averti que votre application s’arrête.  
+ Le fait de ne pas supprimer correctement les classes peut entraîner une fuite des ressources. Dans vos applications hybrides, vérifiez que le <xref:System.Windows.Forms.Integration.WindowsFormsHost> et <xref:System.Windows.Forms.Integration.ElementHost> classes sont supprimés, ou vous pourriez entraîner une fuite de ressources. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Supprime <xref:System.Windows.Forms.Integration.ElementHost> contrôle le moment où son non modale <xref:System.Windows.Forms.Form> parent se ferme. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Supprime <xref:System.Windows.Forms.Integration.WindowsFormsHost> éléments lorsque votre application s’arrête. Il est possible d’afficher un <xref:System.Windows.Forms.Integration.WindowsFormsHost> élément dans une <xref:System.Windows.Window> dans un [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] boucle de message. Dans ce cas, votre code peut ne pas être averti que votre application s’arrête.  
   
 <a name="enabling_visual_styles"></a>   
 ## <a name="enabling-visual-styles"></a>Activation des styles visuels  

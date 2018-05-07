@@ -1,34 +1,20 @@
 ---
 title: Mécanismes de contrôle d'accès
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - WCF security
 - access control [WCF]
 ms.assetid: 9d576122-3f55-4425-9acf-b23d0781e966
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 89606d1e02b58f5f627d28b7354def848cd5a350
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 57ead53dd9e6bc1b2e3624791c7cc0c7d437cd7d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="access-control-mechanisms"></a>Mécanismes de contrôle d'accès
-Vous pouvez contrôler l'accès de plusieurs façons avec [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Cette rubrique présente brièvement les différents mécanismes et suggère quand utiliser chacun ; elle a pour objectif de vous aider à sélectionner le mécanisme approprié à utiliser. Les technologies d'accès sont répertoriées par ordre de complexité. La plus simple est le <xref:System.Security.Permissions.PrincipalPermissionAttribute> ; la plus complexe est le modèle d'identité.  
+Vous pouvez contrôler l’accès de plusieurs façons avec Windows Communication Foundation (WCF). Cette rubrique présente brièvement les différents mécanismes et suggère quand utiliser chacun ; elle a pour objectif de vous aider à sélectionner le mécanisme approprié à utiliser. Les technologies d'accès sont répertoriées par ordre de complexité. La plus simple est le <xref:System.Security.Permissions.PrincipalPermissionAttribute> ; la plus complexe est le modèle d'identité.  
   
- En plus de ces mécanismes, l’emprunt d’identité et la délégation contrainte avec [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] est expliquée dans [délégation et emprunt d’identité](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+ En plus de ces mécanismes, l’emprunt d’identité et de délégation avec WCF est expliquée dans [délégation et emprunt d’identité](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
 ## <a name="principalpermissionattribute"></a>PrincipalPermissionAttribute  
  <xref:System.Security.Permissions.PrincipalPermissionAttribute> permet de restreindre l'accès à une méthode de service. Lorsque l'attribut est appliqué à une méthode, il permet de demander l'identité d'un appelant spécifique ou son appartenance à un groupe Windows ou à un rôle [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Si le client est authentifié à l'aide d'un certificat X.509, il bénéficie d'une identité principale qui se compose du nom du sujet auquel s'ajoute l'empreinte numérique du certificat.  
@@ -41,16 +27,16 @@ Vous pouvez contrôler l'accès de plusieurs façons avec [!INCLUDE[indigo1](../
  Une des fonctionnalités d'[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] est le fournisseur d'appartenances. Bien que le fournisseur d'appartenances ne soit pas techniquement un mécanisme de contrôle d'accès, il permet de contrôler l'accès au service en limitant le jeu d'identités possibles qui peuvent accéder au point de terminaison du service. La fonctionnalité d’appartenance inclut une base de données qui peut être remplie avec des associations nom d’utilisateur/mot de passe qui permettent aux utilisateurs d’un site web d’établir des comptes avec le site. Pour accéder à un service qui utilise le fournisseur d'appartenances, un utilisateur doit se connecter avec son nom d'utilisateur et son mot de passe.  
   
 > [!NOTE]
->  Vous devez remplir la base de données à l'aide de la fonctionnalité [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] pour qu'un service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] puisse l'utiliser à des fins d'autorisation.  
+>  Vous devez remplir la base de données à l’aide de la [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] fonctionnalité un service WCF pour pouvoir l’utiliser à des fins d’autorisation.  
   
  Vous pouvez également utiliser la fonctionnalité d'appartenance si vous avez déjà une base de données d'appartenance provenant d'un site Web [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] existant et que vous souhaitez permettre aux mêmes utilisateurs d'utiliser votre service en utilisant les mêmes noms d'utilisateur et mots de passe.  
   
- Pour plus d’informations sur l’utilisation de la fonctionnalité d’appartenance dans un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] de service, consultez [Comment : utiliser le fournisseur d’appartenances ASP.NET](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md).  
+ Pour plus d’informations sur l’utilisation de la fonctionnalité d’appartenance dans un service WCF, consultez [Comment : utiliser le fournisseur d’appartenances ASP.NET](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md).  
   
 ## <a name="aspnet-role-provider"></a>Fournisseur de rôle ASP.NET  
- Une autre fonctionnalité d'[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] est la capacité à gérer l'autorisation à l'aide de rôles. Le fournisseur de rôle [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] permet à un développeur de créer des rôles pour les utilisateurs et d'assigner chaque utilisateur à un ou plusieurs rôles. Comme avec le fournisseur d'appartenances, les rôles et les assignations sont stockés dans une base de données et peuvent être remplis à l'aide d'outils fournis par une implémentation particulière du fournisseur de rôle [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Comme avec la fonctionnalité d'appartenance, les développeurs [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] peuvent utiliser les informations dans la base de données pour autoriser les utilisateurs du service au moyen des rôles. Par exemple, ils peuvent utiliser le fournisseur de rôle en association avec le mécanisme de contrôle d'accès `PrincipalPermissionAttribute` décrit précédemment.  
+ Une autre fonctionnalité d'[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] est la capacité à gérer l'autorisation à l'aide de rôles. Le fournisseur de rôle [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] permet à un développeur de créer des rôles pour les utilisateurs et d'assigner chaque utilisateur à un ou plusieurs rôles. Comme avec le fournisseur d'appartenances, les rôles et les assignations sont stockés dans une base de données et peuvent être remplis à l'aide d'outils fournis par une implémentation particulière du fournisseur de rôle [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Comme avec la fonctionnalité d’appartenance, WCF développeurs peuvent utiliser les informations dans la base de données pour autoriser les utilisateurs du service par les rôles. Par exemple, ils peuvent utiliser le fournisseur de rôle en association avec le mécanisme de contrôle d'accès `PrincipalPermissionAttribute` décrit précédemment.  
   
- Vous pouvez également utiliser le fournisseur de rôle [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] si vous avez une base de données de fournisseur de rôle [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] existante et souhaitez utiliser le même ensemble de règles et d'assignations utilisateur dans votre service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Vous pouvez également utiliser le [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] fournisseur de rôle si vous disposez d’un [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] base de données du fournisseur de rôle et que vous souhaitez utiliser le même ensemble de règles et d’assignations utilisateur dans votre service WCF.  
   
  Pour plus d’informations sur l’utilisation de la fonctionnalité de fournisseur de rôle, consultez [Comment : utiliser le fournisseur de rôle ASP.NET avec un Service](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md).  
   
@@ -59,7 +45,7 @@ Vous pouvez contrôler l'accès de plusieurs façons avec [!INCLUDE[indigo1](../
   
  Vous pouvez également utiliser AzMan et le fournisseur de rôle [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] si vous avez déjà accès à une installation AzMan existante et souhaitez autoriser les utilisateurs de votre service à utiliser les fonctionnalités combinées d'AzMan et du fournisseur de rôle.  
   
- Pour plus d’informations sur AzMan et le [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] fournisseur de rôles, consultez [comment faire : utiliser le Gestionnaire d’autorisations (AzMan) avec ASP.NET 2.0](http://go.microsoft.com/fwlink/?LinkId=88951). Pour plus d’informations sur l’utilisation d’AzMan et le fournisseur de rôles [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services, consultez [Comment : utiliser le fournisseur de rôles du Gestionnaire d’autorisations ASP.NET avec un Service](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md).  
+ Pour plus d’informations sur AzMan et le [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] fournisseur de rôles, consultez [comment faire : utiliser le Gestionnaire d’autorisations (AzMan) avec ASP.NET 2.0](http://go.microsoft.com/fwlink/?LinkId=88951). Pour plus d’informations sur l’utilisation d’AzMan et le fournisseur de rôle des services WCF, consultez [Comment : utiliser le fournisseur de rôles du Gestionnaire d’autorisations ASP.NET avec un Service](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md).  
   
 ## <a name="identity-model"></a>Modèle d'identité  
  Le modèle d'identité est un ensemble d'API qui vous permettent de gérer des revendications et des stratégies pour autoriser des clients. Le modèle d'identité vous permet d'examiner chaque revendication incluse dans les informations d'identification que l'appelant a utilisée pour s'authentifier auprès du service, de comparer les revendications au jeu de stratégies pour le service et d'accorder ou de refuser l'accès en fonction de cette comparaison.  

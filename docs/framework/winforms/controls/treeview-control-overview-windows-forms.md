@@ -1,30 +1,16 @@
 ---
-title: "Vue d’ensemble du contrôle TreeView (Windows Forms)"
-ms.custom: 
+title: Vue d’ensemble du contrôle TreeView (Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - TreeView
 helpviewer_keywords:
 - TreeView control [Windows Forms], about TreeView control
 ms.assetid: 0ece823a-9508-478a-bbdb-7d7c3bae51d5
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9bbe8549268c2b67b67184966e938f7d62b766a1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6326f8976e20b5b72e1b6690ab323c8581411156
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="treeview-control-overview-windows-forms"></a>Vue d’ensemble du contrôle TreeView (Windows Forms)
 Avec le contrôle Windows Forms <xref:System.Windows.Forms.TreeView>, vous pouvez présenter une hiérarchie de nœuds aux utilisateurs, un peu comme les fichiers et dossiers sont affichés dans le volet gauche de l'Explorateur Windows du système d'exploitation Windows. Chaque nœud dans l’arborescence peut contenir d’autres nœuds, appelés *nœuds enfants*. Vous pouvez afficher les nœuds parents ou les nœuds qui contiennent des nœuds enfants, sous forme développée ou réduite. Vous pouvez également afficher une arborescence avec des cases à cocher en regard des nœuds en affectant la valeur `true` à la propriété <xref:System.Windows.Forms.TreeView.CheckBoxes%2A> de l'arborescence. Vous pouvez ensuite sélectionner ou désélectionner des nœuds par programmation en affectant la valeur `true` ou `false` à la propriété <xref:System.Windows.Forms.TreeNode.Checked%2A> du nœud.  

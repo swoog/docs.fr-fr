@@ -1,28 +1,16 @@
 ---
-title: "Fonctionnement des concepts et structures du flux de nœud XAML"
-ms.custom: 
+title: Fonctionnement des concepts et structures du flux de nœud XAML
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - XAML node streams [XAML Services]
 - nodes [XAML Services], XAML node stream
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
-caps.latest.revision: "14"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b5bce62b03b97f182d314a379c9532fc05148050
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fc27426e4d48ae519fc743c8a4f7eb3d1e6a4e81
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>Fonctionnement des concepts et structures du flux de nœud XAML
 Les lecteurs et writers XAML tels qu'ils sont implémentés dans les services XAML .NET Framework sont basés sur le concept d'un flux de nœud XAML. Le flux de nœud XAML est une conceptualisation d'un ensemble de nœuds XAML. Dans cette conceptualisation, un processeur XAML parcourt la structure des relations de nœud dans le code XAML une par une. À tout moment, il n'existe qu'un seul enregistrement actuel ou position actuelle dans un flux de nœud XAML ouvert, et de nombreux aspects de l'API ne signalent que les informations disponibles à partir de cette position. Le nœud actuel dans un flux de nœud XAML peut être un objet, un membre ou une valeur. Si les lecteurs XAML traitent le XAML en tant que flux de nœud XAML, ils peuvent communiquer avec les writers XAML et activer un programme qui permet d'afficher, de manipuler ou de modifier le contenu d'un flux de nœud XAML pendant une opération de chemin de chargement ou d'enregistrement impliquant du code XAML. La conception de l'API des lecteurs et writers XAML et le concept de flux de nœud XAML sont similaires aux conceptions et concepts des lecteurs et writers associés précédents, tels que le [!INCLUDE[TLA#tla_xmldom](../../../includes/tlasharptla-xmldom-md.md)] et les classes <xref:System.Xml.XmlReader> et <xref:System.Xml.XmlWriter> . Cette rubrique aborde les concepts de flux de nœud XAML et décrit comment écrire des routines qui interagissent avec des représentations XAML au niveau des nœuds XAML.  
@@ -211,7 +199,7 @@ public class GameBoard {
   
 -   **Contenu inconnu :** le nom de ce nœud membre est `_UnknownContent`. Proprement dit, il s'agit d'une directive <xref:System.Xaml.XamlDirective>définie dans l'espace de noms XAML du langage XAML. Cette directive est utilisée comme sentinelle au cas où  un élément objet XAML contient le contenu de la source XAML, mais qu'aucune propriété de contenu ne peut être déterminée dans le contexte de schéma XAML actuellement disponible. Vous pouvez détecter ce cas dans un flux de nœud XAML en recherchant les membres nommés `_UnknownContent`. Si aucune autre action n'est effectuée dans un flux de nœud XAML de chemin de chargement, le nœud <xref:System.Xaml.XamlObjectWriter> par défaut lève une exception sur une tentative de `WriteEndObject` quand il rencontre le membre `_UnknownContent` sur un objet. Le writer <xref:System.Xaml.XamlXmlWriter> par défaut ne lève pas d'exception et traite le membre comme s'il était implicite. Vous pouvez obtenir une entité statique pour `_UnknownContent` à partir de <xref:System.Xaml.XamlLanguage.UnknownContent%2A>.  
   
--   **Propriété Collection d'une collection :**bien que le type CLR de stockage d'une classe collection utilisée pour XAML possède habituellement une propriété nommée dédiée qui détient les éléments de la collection, cette propriété n'est pas connue du système de type XAML avant la résolution de type de stockage. Au lieu de cela, le flux de nœud XAML présente un espace réservé `Items` en tant que membre du type XAML de la collection. Dans l'implémentation des services XAML .NET Framework, le nom de cette directive/ce membre dans le flux de nœud est `_Items`. Une constante pour cette directive peut être obtenue à partir de <xref:System.Xaml.XamlLanguage.Items%2A>.  
+-   **Propriété Collection d'une collection :** bien que le type CLR de stockage d'une classe collection utilisée pour XAML possède habituellement une propriété nommée dédiée qui détient les éléments de la collection, cette propriété n'est pas connue du système de type XAML avant la résolution de type de stockage. Au lieu de cela, le flux de nœud XAML présente un espace réservé `Items` en tant que membre du type XAML de la collection. Dans l'implémentation des services XAML .NET Framework, le nom de cette directive/ce membre dans le flux de nœud est `_Items`. Une constante pour cette directive peut être obtenue à partir de <xref:System.Xaml.XamlLanguage.Items%2A>.  
   
      Notez qu'un flux de nœud XAML peut contenir une propriété Items avec des éléments qui ne sont pas analysables selon la résolution de type de stockage et le contexte de schéma XAML. Par exemple,  
   

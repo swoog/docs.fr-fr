@@ -1,11 +1,6 @@
 ---
 title: Auto (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Auto
 helpviewer_keywords:
@@ -14,14 +9,11 @@ helpviewer_keywords:
 - Auto keyword [Visual Basic]
 - Auto keyword [Visual Basic], marshaling strings
 ms.assetid: bf79ba95-a62c-48a5-916f-0ac7a52c13ec
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 1e32c4c910567829a4f5c59b48020db4dfbbeb7b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 414998b4bef526060e7ba4f584fa071fbd0acaa5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="auto-visual-basic"></a>Auto (Visual Basic)
 Spécifie que Visual Basic doit marshaler les chaînes selon les règles de .NET Framework basées sur le nom externe de la procédure externe déclarée.  
@@ -32,7 +24,7 @@ Spécifie que Visual Basic doit marshaler les chaînes selon les règles de .NET
   
  Si aucun modificateur de jeu de caractères n’est spécifiée, `Ansi` est la valeur par défaut.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le `Auto` modificateur peut être utilisé dans ce contexte :  
   
  [Declare (instruction)](../../../visual-basic/language-reference/statements/declare-statement.md)  

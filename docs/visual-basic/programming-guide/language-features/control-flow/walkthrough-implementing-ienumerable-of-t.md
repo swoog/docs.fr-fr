@@ -1,27 +1,17 @@
 ---
 title: Implémentation d’IEnumerable dans Visual Basic
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - control flow [Visual Basic]
 - enumerable interfaces
 - loop structures [Visual Basic], optimizing performance
 - control flow [Visual Basic]
 ms.assetid: c60d7589-51f2-4463-a2d5-22506bbc1554
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4645153f9c830bc96b7ec55367f46f09098eb78d
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 2c2012261f38bccb704fe1a0300d496785e2129c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-implementing-ienumerableof-t-in-visual-basic"></a>Procédure pas à pas : implémentation d'IEnumerable(Of T) en Visual Basic
 Le <xref:System.Collections.Generic.IEnumerable%601> interface est implémentée par les classes qui peuvent retourner une séquence de valeurs élément par élément à la fois. L’avantage de retourner des données d’un élément à la fois est que vous n’avez pas à charger l’ensemble complet des données en mémoire pour l’utiliser. Vous devez uniquement utiliser suffisamment de mémoire pour le chargement d’un élément unique à partir des données. Classes qui implémentent la `IEnumerable(T)` interface peut être utilisée avec `For Each` boucles ou les requêtes LINQ.  

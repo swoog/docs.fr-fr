@@ -1,14 +1,6 @@
 ---
-title: "IMetaDataAssemblyImport::EnumAssemblyRefs, méthode"
-ms.custom: 
+title: IMetaDataAssemblyImport::EnumAssemblyRefs, méthode
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataAssemblyImport.EnumAssemblyRefs
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 8844d0dd-730e-4592-8a7b-c1462d312c70
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 18dda94ac9a19a7cabbaa2a9c4cc83badb079f92
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0a56d874e5e7ef491c24b0aef2ace700087de677
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataassemblyimportenumassemblyrefs-method"></a>IMetaDataAssemblyImport::EnumAssemblyRefs, méthode
 Énumère les `mdAssemblyRef` instances définies dans le manifeste d’assembly.  
@@ -66,17 +54,17 @@ HRESULT EnumAssemblyRefs (
   
 |HRESULT|Description|  
 |-------------|-----------------|  
-|`S_OK`|`EnumAssemblyRefs`retourné avec succès.|  
+|`S_OK`|`EnumAssemblyRefs` retourné avec succès.|  
 |`S_FALSE`|Il n’existe pas de jetons à énumérer. Dans ce cas, `pcTokens` est définie sur zéro.|  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Cor.h  
   
  **Bibliothèque :** utilisé en tant que ressource dans MsCorEE.dll  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [IMetaDataAssemblyImport, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

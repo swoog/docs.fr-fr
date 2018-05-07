@@ -1,27 +1,15 @@
 ---
 title: "Procédure : créer un service qui retourne des données arbitraires à l'aide du modèle de programmation Web HTTP WCF"
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 829e9f2bcf909bee41f53b4b7cabbb0803e77963
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 763d62750380f025ae369e1e917b46d4e51874e8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>Procédure : créer un service qui retourne des données arbitraires à l'aide du modèle de programmation Web HTTP WCF
-Les développeurs doivent parfois avoir le contrôle total de la manière dont les données sont retournées à partir d'une opération de service. C’est le cas lorsqu’une opération de service doit retourner des données dans un format non pris en charge par [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Cette rubrique décrit l'utilisation du modèle de programmation Web HTTP [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] pour créer un tel service. Ce service a une opération qui retourne un flux de données.  
+Les développeurs doivent parfois avoir le contrôle total de la manière dont les données sont retournées à partir d'une opération de service. C’est le cas lorsqu’une opération de service doit retourner des données dans un format non pris en charge par WCF. Cette rubrique explique à l’aide du modèle de programmation WCF WEB HTTP pour créer un tel service. Ce service a une opération qui retourne un flux de données.  
   
 ### <a name="to-implement-the-service-contract"></a>Pour implémenter le contrat de service  
   
@@ -36,7 +24,7 @@ Les développeurs doivent parfois avoir le contrôle total de la manière dont l
         }  
     ```  
   
-     La méthode retournant un <xref:System.IO.Stream>, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] suppose que l'opération a un contrôle complet sur les octets retournés à partir de l'opération de service et elle n'applique aucune mise en forme aux données retournées.  
+     Étant donné que la méthode retourne un <xref:System.IO.Stream>, WCF suppose que l’opération a un contrôle complet sur le nombre d’octets retournés par l’opération de service et s’applique sans mise en forme aux données qui sont retournées.  
   
 2.  Implémentez le contrat de service. Le contrat a une seule opération (`GetImage`). Cette méthode génère une image bitmap, puis l'enregistre dans un <xref:System.IO.MemoryStream> au format .jpg. L'opération retourne ensuite ce flux de données à l'appelant.  
   

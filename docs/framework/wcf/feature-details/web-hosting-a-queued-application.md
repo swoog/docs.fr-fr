@@ -1,29 +1,15 @@
 ---
 title: Hébergement sur le Web d'une application en file d'attente
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: c7a539fa-e442-4c08-a7f1-17b7f5a03e88
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7b7168d5283a0dbe1001631f855e493335576a80
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: f396ffadeca81d86d867842b63cad3c63d67ff3a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="web-hosting-a-queued-application"></a>Hébergement sur le Web d'une application en file d'attente
-Le service d'activation de processus de Windows (WAS, Windows Process Activation Service) gère l'activation et la durée de vie des processus de travail qui contiennent des applications qui hébergent des services [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Le modèle de processus WAS généralise le modèle de processus [!INCLUDE[iis601](../../../../includes/iis601-md.md)] pour le serveur HTTP en supprimant la dépendance envers le protocole HTTP. Cela permet aux services [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] d'utiliser à la fois les protocoles HTTP et non-HTTP, tels que net.msmq et msmq.formatname, dans un environnement d'hébergement qui prend en charge l'activation basée sur message et offre la capacité d'héberger un grand nombre d'applications sur un ordinateur donné.  
+Le Service de l’Activation des processus Windows (WAS) gère l’activation et la durée de vie des processus de travail qui contiennent des applications héberger des services de Windows Communication Foundation (WCF). Le modèle de processus WAS généralise le modèle de processus [!INCLUDE[iis601](../../../../includes/iis601-md.md)] pour le serveur HTTP en supprimant la dépendance envers le protocole HTTP. Ainsi, les services WCF à utiliser à la fois HTTP et les protocoles non-HTTP, tels que net.msmq et msmq.formatname, dans un environnement d’hébergement qui prend en charge l’activation basée sur le message et offre la capacité d’héberger un grand nombre d’applications sur un ordinateur donné.  
   
  WAS inclut un service d'activation Message Queuing (MSMQ) qui active une application en file d'attente lorsqu'un ou plusieurs messages sont placés dans l'une des files d'attente utilisée par l'application. Le service d'activation MSMQ est un service NT démarré automatiquement par défaut.  
   
@@ -49,7 +35,7 @@ Le service d'activation de processus de Windows (WAS, Windows Process Activation
  Le service d'activation MSMQ s'exécute comme Service réseau. Il s'agit du service qui contrôle les files d'attente pour activer des applications. Pour que ce service active des applications à partir de la file d'attente, celle-ci doit autoriser le Service réseau à lire les messages dans sa liste de contrôle d'accès.  
   
 ### <a name="poison-messaging"></a>Messagerie empoisonnée  
- La gestion des message empoisonnés dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] est effectuée par le canal, qui détecte non seulement qu'un message est empoisonné, mais sélectionne également une disposition basée sur la configuration utilisateur. En conséquence, il n'y a qu'un seul message dans la file d'attente. L'application hébergée sur le Web abandonne de manière répétée et le message est déplacé vers une file d'attente des nouvelles tentatives. À un point dicté par le délai de cycle de nouvelle tentative, le message est déplacé de la file d'attente des nouvelles tentatives vers la file d'attente principale, pour une nouvelle tentative. Mais cela requiert que le canal en file d'attente soit actif. Si l'application est recyclée par le service WAS, le message reste dans la file d'attente des nouvelles tentatives jusqu'à ce qu'un autre message arrive dans la file d'attente principale pour activer l'application en file d'attente. La solution de contournement dans ce cas consiste à déplacer manuellement le message de la file d'attente des nouvelles tentatives vers la file d'attente principale afin de réactiver l'application.  
+ Gestion dans WCF de messages incohérents sont géré par le canal, qui détecte non seulement qu’un message est incohérent mais qu’il sélectionne une disposition basée sur la configuration de l’utilisateur. En conséquence, il n'y a qu'un seul message dans la file d'attente. L'application hébergée sur le Web abandonne de manière répétée et le message est déplacé vers une file d'attente des nouvelles tentatives. À un point dicté par le délai de cycle de nouvelle tentative, le message est déplacé de la file d'attente des nouvelles tentatives vers la file d'attente principale, pour une nouvelle tentative. Mais cela requiert que le canal en file d'attente soit actif. Si l'application est recyclée par le service WAS, le message reste dans la file d'attente des nouvelles tentatives jusqu'à ce qu'un autre message arrive dans la file d'attente principale pour activer l'application en file d'attente. La solution de contournement dans ce cas consiste à déplacer manuellement le message de la file d'attente des nouvelles tentatives vers la file d'attente principale afin de réactiver l'application.  
   
 ### <a name="subqueue-and-system-queue-caveat"></a>Limitations relatives aux sous-files d'attente et aux files d'attente système  
  Une application hébergée par le service WAS ne peut pas être activée sur la base des messages présents dans une file d'attente système, telle que la file d'attente de lettres mortes à l'échelle du système, ou dans des sous-files d'attente, telles que les sous-files d'attente de poison. Il s'agit d'une limitation pour cette version du produit.  

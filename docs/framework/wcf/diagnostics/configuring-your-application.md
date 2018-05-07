@@ -1,29 +1,15 @@
 ---
 title: Configuration de votre application
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: a2f995b0-669d-4721-b00f-4561ec7eb6a4
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 170583239ed357904e723aebdaef9809938b5123
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 7dfd662fafa636e0fa97f118217ad1786d5aa444
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-your-application"></a>Configuration de votre application
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] utilise le système de configuration .NET et vous permet de configurer des services à la fois au niveau de l'ordinateur et au niveau de l'application.  
+Windows Communication Foundation (WCF) utilise le système de configuration .NET et vous permet de configurer les services dans l’étendue des ordinateurs et de l’application.  
   
  Les paramètres de configuration définis par [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] se trouvent dans le groupe de sections `<system.serviceModel>`. Pour plus d’informations sur la façon de configurer un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] de service, consultez les rubriques suivantes :  
   

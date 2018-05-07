@@ -1,10 +1,6 @@
 ---
-title: "Type de données défini par l'utilisateur"
+title: Type de données défini par l'utilisateur
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - UserDefined
 - UDT
@@ -27,21 +23,18 @@ helpviewer_keywords:
 - user-defined data types
 - types [Visual Basic], user-defined
 ms.assetid: be913dca-a364-4a51-96a1-549a1b390b0a
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 7e1876d61a2ce89b04c6e5061b868f0be365639f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 07f04fb111863ca18d4966a7f0f967f11719aeec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="user-defined-data-type"></a>Type de données défini par l'utilisateur
 Contient des données dans un format que vous définissez. La `Structure` instruction définit le format.  
   
  Les versions précédentes de Visual Basic prennent en charge le type défini par l’utilisateur (UDT). La version actuelle développe l’UDT pour un *structure*. Une structure est une concaténation d’une ou plusieurs *membres* de différents types de données. Visual Basic traite une structure comme une unité unique, bien que vous pouvez également accéder à ses membres individuellement.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Définir et utiliser un type de données de structure lorsque vous devez combiner les différents types de données en une seule unité, ou lorsque aucun des types de données élémentaires répond à vos besoins.  
   
  La valeur par défaut d’un type de données de structure se compose de la combinaison des valeurs par défaut de chacun de ses membres.  

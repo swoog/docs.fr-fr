@@ -1,12 +1,6 @@
 ---
 title: Let, clause (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.QueryLet
 helpviewer_keywords:
@@ -14,14 +8,11 @@ helpviewer_keywords:
 - Let clause [Visual Basic]
 - Let statement [Visual Basic]
 ms.assetid: 981aa516-16eb-4c53-b1f1-5aa3e82f316e
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 70e47517a62f58dcababd31c26277417b62eab66
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6484da5329c8240735b7c35f506637dd01cbeda4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="let-clause-visual-basic"></a>Let, clause (Visual Basic)
 Calcule une valeur et l’assigne à une variable dans la requête.  
@@ -39,7 +30,7 @@ Let variable = expression [, ...]
 |`variable`|Obligatoire. Un alias qui peut être utilisé pour référencer les résultats de l’expression fournie.|  
 |`expression`|Obligatoire. Une expression qui sera évaluée et assignée à la variable spécifiée.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le `Let` clause vous permet de calculer des valeurs pour chaque résultat de la requête et y fait référence à l’aide d’un alias. L’alias peut être utilisé dans d’autres clauses, telles que le `Where` clause. Le `Let` clause vous permet de créer une instruction de requête qui est plus facile à lire, car vous pouvez spécifier un alias pour une clause d’expression incluse dans la requête et substituer l’alias chaque fois que la clause d’expression est utilisée.  
   
  Vous pouvez inclure un nombre quelconque de `variable` et `expression` les affectations dans la `Let` clause. Séparez chaque assignation par une virgule (,).  

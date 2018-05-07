@@ -1,14 +1,6 @@
 ---
 title: Importation et exportation de schémas
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,20 +9,14 @@ helpviewer_keywords:
 - XsdDataContractExporter class
 - XsdDataContractImporter class
 ms.assetid: 0da32b50-ccd9-463a-844c-7fe803d3bf44
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fe4ef5b17013bf1a9abf5fd1ca0807fe4d335df4
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: c9bb0d6df362380a37ae3079694ab91e9577741d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="schema-import-and-export"></a>Importation et exportation de schémas
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] comprend un nouveau moteur de sérialisation, le <xref:System.Runtime.Serialization.DataContractSerializer>. Le moteur de sérialisation `DataContractSerializer` traduit des objets [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] en langage XML et inversement. Outre le sérialiseur lui-même, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] intègre un système lui permettant d'importer et d'exporter les schémas afférents. *Schéma* est une description formelle et précise lisible de la forme de XML par le sérialiseur ou que le désérialiseur peut accéder. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilise le langage de définition de schéma XSD, inspiré du langage XML et défini par le consortium World Wide Web Consortium (W3C). Ce format est compatible avec de nombreuses plateformes tierces.  
+Windows Communication Foundation (WCF) inclut un nouveau moteur de sérialisation, le <xref:System.Runtime.Serialization.DataContractSerializer>. Le moteur de sérialisation `DataContractSerializer` traduit des objets [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] en langage XML et inversement. Outre le sérialiseur lui-même, WCF inclut l’importation de schéma associé et d’exporter les schémas afférents. *Schéma* est une description formelle et précise lisible de la forme de XML par le sérialiseur ou que le désérialiseur peut accéder. WCF utilise le langage de définition du World Wide Web Consortium (W3C) XML Schema (XSD) en tant que sa représentation sous forme de schéma, qui est largement interopérable avec de nombreuses plateformes tierces.  
   
  L'importateur de schémas, <xref:System.Runtime.Serialization.XsdDataContractImporter>, utilise un document de schéma XSD pour générer des classes [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] (il s'agit en principe de classes de contrat de données) et faire correspondre les formes sérialisées générées au schéma donné.  
   

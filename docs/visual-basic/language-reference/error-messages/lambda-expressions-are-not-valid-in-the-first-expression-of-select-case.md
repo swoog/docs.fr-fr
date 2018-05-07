@@ -1,28 +1,19 @@
 ---
-title: Expressions lambda ne sont pas valides dans la première expression d’une &#39; Sélectionnez le cas &#39; instruction
+title: Expressions lambda ne sont pas valides dans la première expression d’une &#39;Select Case&#39; instruction
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc36635
 - vbc36635
 helpviewer_keywords:
 - BC36635
 ms.assetid: 74609979-9c03-4864-bbce-f588aa2e0917
-caps.latest.revision: 6
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: e91401d6891d4e38014bb716a337560885cf73a2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c492615850ec089fe35c1ae4eaba90a741e30f42
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="lambda-expressions-are-not-valid-in-the-first-expression-of-a-39select-case39-statement"></a>Expressions lambda ne sont pas valides dans la première expression d’une &#39; Sélectionnez le cas &#39; instruction
+# <a name="lambda-expressions-are-not-valid-in-the-first-expression-of-a-39select-case39-statement"></a>Expressions lambda ne sont pas valides dans la première expression d’une &#39;Select Case&#39; instruction
 Vous ne pouvez pas utiliser une expression lambda pour l’expression de test dans un `Select Case` instruction. Définitions d’expression lambda retournent des fonctions et l’expression de test d’un `Select Case` instruction doit être un type de données élémentaire.  
   
  Le code suivant génère cette erreur :  

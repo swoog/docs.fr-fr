@@ -1,24 +1,14 @@
 ---
-title: "Point de terminaison de métadonnées sécurisé personnalisée"
-ms.custom: 
+title: Point de terminaison de métadonnées sécurisé personnalisée
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9e369e99-ea4a-49ff-aed2-9fdf61091a48
-caps.latest.revision: "19"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: b4ec6efa2a2b0993f7088e4424de86b3d3ad6c8b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 2baa99ddaf5de60407b233b5a6ea013ad87401f3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-secure-metadata-endpoint"></a>Point de terminaison de métadonnées sécurisé personnalisée
 Cet exemple montre comment implémenter un service avec un point de terminaison de métadonnées sécurisé qui utilise l’une des liaisons non-metadata exchange et comment configurer [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) ou aux clients d’extraire le métadonnées à partir de ce un point de terminaison de métadonnées. Il existe deux liaisons fournies par le système pour exposer des points de terminaison de métadonnées : mexHttpBinding et mexHttpsBinding. mexHttpBinding est utilisé pour exposer un point de terminaison de métadonnées sur HTTP de façon non sécurisée. mexHttpsBinding est utilisé pour exposer un point de terminaison de métadonnées sur HTTPS de façon sécurisée. Cet exemple montre comment exposer un point de terminaison de métadonnées sécurisé à l'aide du <xref:System.ServiceModel.WSHttpBinding>. Cette opération peut être utile lorsque vous souhaitez modifier les paramètres de sécurité de la liaison sans devoir utiliser HTTPS. Si vous utilisez mexHttpsBinding, votre point de terminaison de métadonnées sera sécurisé, mais il n'existe aucun moyen de modifier les paramètres de la liaison.  
@@ -186,14 +176,14 @@ ChannelFactory<ICalculator> cf = new    ChannelFactory<ICalculator>(endpoint.Bin
 -   Exécutez Cleanup.bat dans le dossier d'exemples après avoir exécuté l'exemple.  
   
     > [!NOTE]
-    >  Ce script ne supprime pas les certificats de service figurant sur le client lorsque l'exemple est exécuté sur plusieurs ordinateurs. Si vous avez exécuté des exemples [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] qui utilisent des certificats sur plusieurs ordinateurs, assurez-vous d'effacer les certificats de service installés dans le magasin CurrentUser - TrustedPeople. Pour ce faire, utilisez la ligne de commande suivante : `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`. Par exemple : `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
+    >  Ce script ne supprime pas les certificats de service figurant sur le client lorsque l'exemple est exécuté sur plusieurs ordinateurs. Si vous avez exécuté les exemples Windows Communication Foundation (WCF) qui utilisent des certificats sur plusieurs ordinateurs, veillez à désactiver les certificats de service qui ont été installés dans le magasin CurrentUser - TrustedPeople. Pour ce faire, utilisez la ligne de commande suivante : `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`. Par exemple : `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
   
 > [!IMPORTANT]
 >  Les exemples peuvent déjà être installés sur votre ordinateur. Recherchez le répertoire (par défaut) suivant avant de continuer.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à la page [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les exemples [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Metadata\CustomMexEndpoint`  
   

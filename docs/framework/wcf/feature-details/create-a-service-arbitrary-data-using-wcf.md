@@ -1,27 +1,15 @@
 ---
 title: "Procédure : créer un service qui accepte des données arbitraires à l'aide du modèle de programmation REST WCF"
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e566c15a-b600-4e4a-be3a-4af43e767dae
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 170149f5a6c495b3f22b9fd30f79ecdda87789b4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bc2643672743971da14c8bc4c75ac113f691bf4a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a>Procédure : créer un service qui accepte des données arbitraires à l'aide du modèle de programmation REST WCF
-Les développeurs doivent parfois avoir le contrôle total de la manière dont les données sont retournées à partir d'une opération de service. C'est le cas lorsqu'une opération de service doit retourner des données dans un format non pris en charge par [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Cette rubrique décrit l'utilisation du modèle de programmation REST [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] pour créer un service qui reçoit des données arbitraires.  
+Les développeurs doivent parfois avoir le contrôle total de la manière dont les données sont retournées à partir d'une opération de service. C’est le cas lorsqu’une opération de service doit retourner les données dans un format non pris en charge que byWCF. Cette rubrique explique à l’aide du modèle de programmation WCF REST pour créer un service qui reçoit des données arbitraires.  
   
 ### <a name="to-implement-the-service-contract"></a>Pour implémenter le contrat de service  
   

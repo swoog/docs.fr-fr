@@ -1,24 +1,14 @@
 ---
 title: Exemple Discovery Security
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-caps.latest.revision: "13"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: f50334c8477b8823ef1dfb6abcae640e439d5ddd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a701a516a93cf94f76950b7b1b1c7f3a9b41214e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="discovery-security-sample"></a>Exemple Discovery Security
 La spécification Discovery n'exige pas que les points de terminaison participant au processus de découverte soient sécurisés. L'ajout de la sécurité aux messages de découverte atténue divers types d'attaques (altération de messages, déni de service, relecture, usurpation). Cet exemple implémente des canaux personnalisés qui calculent et vérifient des signatures de message utilisant le format de signature compact (décrit dans la section 8.2 de la spécification WS-Discovery). L’exemple prend en charge la [spécification Discovery 2005](http://go.microsoft.com/fwlink/?LinkId=177912) et [version 1.1](http://go.microsoft.com/fwlink/?LinkId=179677).  
@@ -48,7 +38,7 @@ La spécification Discovery n'exige pas que les points de terminaison participan
 > [!NOTE]
 >  Le `PrefixList` a été ajouté dans le protocole Discovery version 2008.  
   
- Pour calculer la signature, l'exemple identifie les éléments de signature développés. Une signature XML (`SignedInfo`) est créée, à l'aide du préfixe d'espace de noms `ds`, comme requis par la spécification WS-Discovery. Le corps et tous les en-têtes des espaces de noms de découverte et d'adressage sont référencés dans la signature et ne peuvent donc pas être falsifiés. Chaque élément référencé est transformé à l'aide de la canonicalisation exclusive (http://www.w3.org/2001/10/xml-exc-c14n#, page en anglais), puis une valeur Digest SHA-1 est calculée (http://www.w3.org/2000/09/xmldsig#sha1, page en anglais). D'après tous les éléments référencés et leur valeur Digest, la valeur de la signature est calculée à l'aide de l'algorithme RSA (http://www.w3.org/2000/09/xmldsig#rsa-sha1, page en anglais).  
+ Pour calculer la signature, l'exemple identifie les éléments de signature développés. Une signature XML (`SignedInfo`) est créée, à l'aide du préfixe d'espace de noms `ds`, comme requis par la spécification WS-Discovery. Le corps et tous les en-têtes des espaces de noms de découverte et d'adressage sont référencés dans la signature et ne peuvent donc pas être falsifiés. Chaque élément référencé est transformé à l’aide de la canonicalisation Exclusive (http://www.w3.org/2001/10/xml-exc-c14n# ), et ensuite une valeur digest SHA-1 est calculée (http://www.w3.org/2000/09/xmldsig#sha1 ). Tous les éléments référencés et leurs valeurs digest, la valeur de la signature est calculée à l’aide de l’algorithme RSA (http://www.w3.org/2000/09/xmldsig#rsa-sha1 ).  
   
  Les messages sont signés avec un certificat spécifié par le client. L'emplacement et le nom du magasin, ainsi que le nom de sujet du certificat doivent être spécifiés au moment de la création de l'élément de liaison. Le `KeyId` de la signature compacte représente l'identificateur de clé du jeton de signature et constitue l'identificateur de la clé du sujet (SKI, Subject Key Identifier) du jeton de signature ou, si le SKI n'existe pas, un hachage SHA-1 de la clé publique du jeton de signature.  
   
@@ -82,7 +72,7 @@ La spécification Discovery n'exige pas que les points de terminaison participan
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à la page [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les exemples [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DiscoveryScenario`  
   

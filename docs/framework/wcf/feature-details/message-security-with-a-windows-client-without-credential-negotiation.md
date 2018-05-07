@@ -1,32 +1,20 @@
 ---
 title: Sécurité de message avec un client Windows sans négociation d'informations d'identification
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: fc07a26c-cbee-41c5-8fb0-329085fef749
-caps.latest.revision: 18
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 056e743ff1849457f8a0e8ee509a56475f09435c
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 05ffe731a578f8b8d2cdbdf5e3c9229e2b03821c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-security-with-a-windows-client-without-credential-negotiation"></a>Sécurité de message avec un client Windows sans négociation d'informations d'identification
-Le scénario suivant montre un client et un service [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] sécurisés par le protocole Kerberos.  
+Le scénario suivant montre un client de Windows Communication Foundation (WCF) et d’un service sécurisé par le protocole Kerberos.  
   
  Le service et le client appartiennent au même domaine ou domaines approuvés.  
   
@@ -59,9 +47,9 @@ Le scénario suivant montre un client et un service [!INCLUDE[indigo1](../../../
 > [!NOTE]
 >  Pour utiliser le type d'informations d'identification Windows sans négociation, le compte d'utilisateur du service doit avoir accès au nom de principal du service (SPN) enregistré avec le domaine Active Directory. Pour cela, deux solutions s'offrent à vous :  
   
-1.  Utilisez le compte `NetworkService` ou `LocalSystem` pour exécuter votre service. Comme ces comptes ont accès à l'ordinateur SPN établi lorsque l'ordinateur joint le domaine Active Directory, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] génère automatiquement l'élément SPN correct à l'intérieur du point de terminaison du service dans les métadonnées du service (Web Services Description Language ou WSDL).  
+1.  Utilisez le compte `NetworkService` ou `LocalSystem` pour exécuter votre service. Étant donné que ces comptes ont accès à l’ordinateur SPN établi lorsque l’ordinateur rejoint le domaine Active Directory, WCF génère automatiquement l’élément SPN approprié à l’intérieur du point de terminaison du service dans les métadonnées du service (Web Services Description Language ou WSDL).  
   
-2.  Utilisez un compte de domaine Active Directory arbitraire pour exécuter votre service. Dans ce cas, vous devez établir un nom de principal du service pour ce compte de domaine. Une façon de procéder consiste à faire appel à l'utilitaire Setspn.exe. Une fois que le nom de principal du service du compte du service a été créé, configurez [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] pour publier ce nom de principal du service sur les clients du service par le biais de ses métadonnées (WSDL). Cette opération s'effectue en définissant l'identité de point de terminaison pour le point de terminaison exposé, par le biais d'un fichier de configuration de l'application ou du code. L'exemple suivant publie l'identité par programme.  
+2.  Utilisez un compte de domaine Active Directory arbitraire pour exécuter votre service. Dans ce cas, vous devez établir un nom de principal du service pour ce compte de domaine. Une façon de procéder consiste à faire appel à l'utilitaire Setspn.exe. Une fois que le SPN est créé pour le compte du service, configurer WCF pour publier ce SPN sur les clients du service via ses métadonnées (WSDL). Cette opération s'effectue en définissant l'identité de point de terminaison pour le point de terminaison exposé, par le biais d'un fichier de configuration de l'application ou du code. L'exemple suivant publie l'identité par programme.  
   
  Pour plus d’informations sur les SPN, le protocole Kerberos et Active Directory, consultez [Kerberos supplément technique pour Windows](http://go.microsoft.com/fwlink/?LinkId=88330). Pour plus d’informations sur les identités de point de terminaison, consultez [Modes d’authentification SecurityBindingElement](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md).  
   

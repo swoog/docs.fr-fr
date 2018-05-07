@@ -1,31 +1,17 @@
 ---
 title: 'Comment : récupérer des métadonnées et implémenter un service conforme'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: f6f3a2b9-c8aa-4b0b-832c-ec2927bf1163
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ac7654fa041688bbd703d564f6703df9671fbaea
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 9ae888f5a9569ef51be52b91ea019fea897597b8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-retrieve-metadata-and-implement-a-compliant-service"></a>Comment : récupérer des métadonnées et implémenter un service conforme
-Souvent, la personne qui conçoit et implémente des services n'est pas la même. Dans les environnements où l'interaction d'applications est importante, les contrats peuvent être conçus ou décrits en WSDL (Web Services Description Language) et un développeur doit implémenter un service qui se conforme au contrat fourni. Vous pouvez souhaiter également effectuer une migration d'un service existant vers [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] mais conserver le format de transmission. De plus, les contrats duplex requièrent que les appelants implémentent également un contrat de rappel.  
+Souvent, la personne qui conçoit et implémente des services n'est pas la même. Dans les environnements où l'interaction d'applications est importante, les contrats peuvent être conçus ou décrits en WSDL (Web Services Description Language) et un développeur doit implémenter un service qui se conforme au contrat fourni. Vous pouvez souhaiter également migrer un service existant pour Windows Communication Foundation (WCF), mais conserver le format de câble. De plus, les contrats duplex requièrent que les appelants implémentent également un contrat de rappel.  
   
- Dans ce cas, vous devez utiliser le [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) (ou un outil équivalent) pour générer une interface de contrat de service dans un langage managé que vous pouvez implémenter pour répondre aux exigences de la contrat. Généralement la [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) est utilisée pour acquérir un contrat de service qui est utilisé avec une fabrication de canal ou un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] type de client ainsi qu’avec un fichier de configuration de client qui permet de configurer le liaison et l’adresse. Pour utiliser le fichier de configuration généré, vous devez le remplacer par un fichier de configuration de service. Vous devrez peut-être aussi modifier le contrat de service.  
+ Dans ce cas, vous devez utiliser le [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) (ou un outil équivalent) pour générer une interface de contrat de service dans un langage managé que vous pouvez implémenter pour répondre aux exigences de la contrat. En règle générale le [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) est utilisée pour acquérir un contrat de service qui est utilisé avec une fabrication de canal ou un type de client WCF, ainsi qu’avec un fichier de configuration de client qui permet de configurer la liaison correcte et l’adresse. Pour utiliser le fichier de configuration généré, vous devez le remplacer par un fichier de configuration de service. Vous devrez peut-être aussi modifier le contrat de service.  
   
 ### <a name="to-retrieve-data-and-implement-a-compliant-service"></a>Pour récupérer des données et implémenter un service conforme  
   

@@ -1,12 +1,6 @@
 ---
-title: "Tableaux de paramètres (Visual Basic)"
-ms.custom: 
+title: Tableaux de paramètres (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - parameter arrays [Visual Basic], about parameter arrays
 - ParamArray keyword [Visual Basic], parameter arrays
@@ -16,14 +10,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], indefinite number of argument values
 - arrays [Visual Basic], parameter arrays
 ms.assetid: c43edfae-9114-4096-9ebc-8c5c957a1067
-caps.latest.revision: "26"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 8ca2b5f02ac4fb3eb613488c8a9852eb2aa4ce5d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a91da0d9e16ff11fdd4980588fee64b3e4a603c1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="parameter-arrays-visual-basic"></a>Tableaux de paramètres (Visual Basic)
 En règle générale, vous ne pouvez pas appeler une procédure avec plus d’arguments que la déclaration de procédure spécifie. Lorsque vous avez besoin d’un nombre indéfini d’arguments, vous pouvez déclarer un *tableau de paramètres*, ce qui permet d’accepter un tableau de valeurs pour un paramètre d’une procédure. Il est inutile de connaître le nombre d’éléments dans le tableau de paramètres lorsque vous définissez la procédure. La taille du tableau est déterminée individuellement par chaque appel à la procédure.  

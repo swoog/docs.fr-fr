@@ -1,14 +1,6 @@
 ---
-title: "Vue d'ensemble du contrôle BindingNavigator (Windows Forms)"
-ms.custom: 
+title: Vue d'ensemble du contrôle BindingNavigator (Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - DataNavigator
 helpviewer_keywords:
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - data [Windows Forms], navigating
 - data navigation
 ms.assetid: 4423eede-f8d1-4d02-822f-5bf8432680d0
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 921f8c7791620d51107fa2ff31a637094fc0c633
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ae1e8273c39122e094817e28379e52c19c573a3e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bindingnavigator-control-overview-windows-forms"></a>Vue d'ensemble du contrôle BindingNavigator (Windows Forms)
 Vous pouvez utiliser le contrôle <xref:System.Windows.Forms.BindingNavigator> pour créer un mécanisme normalisé permettant aux utilisateurs de rechercher et de modifier des données sur un Windows Form. Vous utilisez fréquemment <xref:System.Windows.Forms.BindingNavigator> avec le composant <xref:System.Windows.Forms.BindingSource> pour permettre aux utilisateurs de parcourir les enregistrements de données sur un formulaire et d'interagir avec eux.  

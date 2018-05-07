@@ -1,13 +1,6 @@
 ---
-title: "Accès aux frames dans le modèle objet de document HTML managé"
-ms.custom: 
+title: Accès aux frames dans le modèle objet de document HTML managé
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - HTML [Windows Forms], dOM
 - managed HTML DOM
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - frames [Windows Forms], accessing
 - DOM [Windows Forms], accessing frames in managed HTML
 ms.assetid: cdeeaa22-0be4-4bbf-9a75-4ddc79199f8d
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f9355596982025bf9834924a0de8e79e7073fc0e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a9bd6bb730ff84a48c180c7f1ac435afbf75fbc0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="accessing-frames-in-the-managed-html-document-object-model"></a>Accès aux frames dans le modèle objet de document HTML managé
 Certains documents HTML sont composés de *frames*, ou windows qui peuvent contenir leurs propres documents HTML. L'utilisation de frames simplifie la création de pages HTML dans lesquelles un ou plusieurs éléments de la page (tels qu'une barre de navigation) restent statiques, tandis que d'autres frames changent constamment de contenu.  
@@ -45,12 +33,12 @@ Certains documents HTML sont composés de *frames*, ou windows qui peuvent conte
 3.  Quand vous accédez à une balise `FRAME` ou `IFRAME` à l'aide de la propriété <xref:System.Windows.Forms.HtmlWindow.WindowFrameElement%2A> de <xref:System.Windows.Forms.HtmlWindow>, de la collection <xref:System.Windows.Forms.HtmlElement.Children%2A> ou de méthodes telles que <xref:System.Windows.Forms.HtmlElementCollection.GetElementsByName%2A> ou <xref:System.Windows.Forms.HtmlDocument.GetElementById%2A>, vous récupérez l'élément de frame. Il représente les propriétés statiques du frame, y compris l'URL spécifiée dans le fichier HTML d'origine.  
   
 ## <a name="frames-and-security"></a>Frames et sécurité  
- L’accès aux frames est compliqué par le fait que le modèle DOM HTML managé implémente une mesure de sécurité appelée *sécurité script inter-frame*. Si un document contient un `FRAMESET` avec plusieurs `FRAME` dans différents domaines, ces `FRAME` ne peuvent pas interagir. Autrement dit, un `FRAME` qui affiche du contenu de votre site web ne peut pas accéder aux informations dans un `FRAME` qui héberge un site tiers, tel que http://www.adatum.com/. Cette sécurité est implémentée au niveau de la classe <xref:System.Windows.Forms.HtmlWindow>. Vous pouvez obtenir des informations générales sur un `FRAME` qui héberge un autre site web, telles que son URL, mais vous ne pourrez pas accéder à son <xref:System.Windows.Forms.HtmlWindow.Document%2A> ni modifier la taille ou l'emplacement de son `FRAME` ou `IFRAME` hébergeur.  
+ L’accès aux frames est compliqué par le fait que le modèle DOM HTML managé implémente une mesure de sécurité appelée *sécurité script inter-frame*. Si un document contient un `FRAMESET` avec plusieurs `FRAME` dans différents domaines, ces `FRAME` ne peuvent pas interagir. En d’autres termes, un `FRAME` qu’affiche le contenu de votre site Web ne peut pas accéder aux informations dans un `FRAME` qui héberge un site tiers, tel que http://www.adatum.com/. Cette sécurité est implémentée au niveau de la classe <xref:System.Windows.Forms.HtmlWindow>. Vous pouvez obtenir des informations générales sur un `FRAME` qui héberge un autre site web, telles que son URL, mais vous ne pourrez pas accéder à son <xref:System.Windows.Forms.HtmlWindow.Document%2A> ni modifier la taille ou l'emplacement de son `FRAME` ou `IFRAME` hébergeur.  
   
  Cette règle s'applique également aux fenêtres que vous ouvrez à l'aide des méthodes <xref:System.Windows.Forms.HtmlWindow.Open%2A> et <xref:System.Windows.Forms.HtmlWindow.OpenNew%2A>. Si la fenêtre que vous ouvrez est dans un domaine différent de celui de la page hébergée dans le contrôle <xref:System.Windows.Forms.WebBrowser>, vous ne pourrez pas déplacer cette fenêtre ni examiner son contenu. Ces restrictions s'appliquent également si vous utilisez le contrôle <xref:System.Windows.Forms.WebBrowser> pour afficher un site web différent de celui utilisé pour déployer votre application Windows Forms. Si vous utilisez la technologie de déploiement [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] pour installer votre application à partir du site web A et que vous utilisez <xref:System.Windows.Forms.WebBrowser> pour afficher le site web B, vous ne pourrez pas accéder aux données du site web B.  
   
  Pour plus d’informations sur l’écriture de scripts entre sites, consultez[sur script inter-Frame et sécurité](http://msdn.microsoft.com/library/ms533028.aspx).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Élément de FRAME &#124; Objet frame](http://msdn.microsoft.com/library/ms535250.aspx)  
+ [Élément de FRAME &#124; frame, objet](http://msdn.microsoft.com/library/ms535250.aspx)  
  [Utilisation du modèle DOM HTML managé](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)

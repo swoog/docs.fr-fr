@@ -1,11 +1,6 @@
 ---
 title: End, instruction
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.End
 - End
@@ -19,14 +14,11 @@ helpviewer_keywords:
 - End statement [Visual Basic]
 - execution [Visual Basic], stopping
 ms.assetid: 0e64467c-0f34-4aab-9ddd-43f8b9d55d90
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: b692409f2895f5e9b713c57fc35ff2def40bce75
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 864ac5ef1713f8ffa93c18accede8ecd5b3b7a8c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="end-statement"></a>End, instruction
 Termine l’exécution immédiatement.  
@@ -37,8 +29,8 @@ Termine l’exécution immédiatement.
 End  
 ```  
   
-## <a name="remarks"></a>Remarques  
- Vous pouvez placer le `End` instruction n’importe où dans une procédure pour forcer l’application entière pour interrompre l’exécution. `End`Ferme tous les fichiers ouverts avec un `Open` instruction et efface toutes les variables de l’application. L’application se ferme dès qu’il n’y aucun programme contenant des références à ses objets et son code est en cours d’exécution.  
+## <a name="remarks"></a>Notes  
+ Vous pouvez placer le `End` instruction n’importe où dans une procédure pour forcer l’application entière pour interrompre l’exécution. `End` Ferme tous les fichiers ouverts avec un `Open` instruction et efface toutes les variables de l’application. L’application se ferme dès qu’il n’y aucun programme contenant des références à ses objets et son code est en cours d’exécution.  
   
 > [!NOTE]
 >  Le `End` instruction met immédiatement fin à l’exécution de code et n’appelle pas la `Dispose` ou `Finalize` (méthode), ou tout autre code Visual Basic. Références d’objet détenus par d’autres programmes sont invalidés. Si un `End` est rencontrée dans une `Try` ou `Catch` bloc, le contrôle ne passe pas correspondant `Finally` bloc.  
@@ -50,7 +42,7 @@ End
  Vous devez utiliser `End` avec parcimonie et uniquement lorsque vous devez arrêter immédiatement. Les méthodes normales pour mettre fin à une procédure ([instruction Return](../../../visual-basic/language-reference/statements/return-statement.md) et [instruction Exit](../../../visual-basic/language-reference/statements/exit-statement.md)) permettent de fermer correctement la procédure, mais également le code appelant. Par exemple, une application console, peut simplement `Return` à partir de la `Main` procédure.  
   
 > [!IMPORTANT]
->  Le `End` instruction appelle la <xref:System.Environment.Exit%2A> méthode de la <xref:System.Environment> classe dans le <xref:System> espace de noms. <xref:System.Environment.Exit%2A>exige que vous disposiez `UnmanagedCode` autorisation. Si vous ne le faites pas, un <xref:System.Security.SecurityException> erreur se produit.  
+>  Le `End` instruction appelle la <xref:System.Environment.Exit%2A> méthode de la <xref:System.Environment> classe dans le <xref:System> espace de noms. <xref:System.Environment.Exit%2A> exige que vous disposiez `UnmanagedCode` autorisation. Si vous ne le faites pas, un <xref:System.Security.SecurityException> erreur se produit.  
   
  Lorsqu’il est suivi par un mot clé supplémentaire, [fin \<mot clé > instruction](../../../visual-basic/language-reference/statements/end-keyword-statement.md) délimite la fin de la définition de la procédure appropriée ou le bloc. Par exemple, `End Function` termine la définition d’un `Function` procédure.  
   

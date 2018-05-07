@@ -1,13 +1,6 @@
 ---
-title: "Comment : ancrer des contrôles aux Windows Forms"
-ms.custom: 
+title: 'Comment : ancrer des contrôles aux Windows Forms'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Anchor property [Windows Forms], enabling resizable forms
 - Windows Forms controls, screen resolutions
@@ -19,16 +12,11 @@ helpviewer_keywords:
 - Windows Forms, resizing
 - controls [Windows Forms], positioning
 ms.assetid: 59ea914f-fbd3-427a-80fe-decd02f7ae6d
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ceaacc250d48e7199d7224f95aa91ed976c097e0
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 3d0885ac3acde6732a5c059063f992913a98b9c4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-anchor-controls-on-windows-forms"></a>Comment : ancrer des contrôles aux Windows Forms
 Si vous concevez un formulaire de l’utilisateur peut redimensionner au moment de l’exécution, les contrôles sur votre formulaire doivent redimensionner et repositionner correctement. Pour redimensionner dynamiquement les contrôles dans le formulaire, vous pouvez utiliser le <xref:System.Windows.Forms.Control.Anchor%2A> propriété des contrôles Windows Forms. Le <xref:System.Windows.Forms.Control.Anchor%2A> propriété définit la position d’ancrage d’un pour le contrôle. Lorsqu’un contrôle est ancré à un formulaire et le formulaire est redimensionné, le contrôle gère la distance entre le contrôle et les positions d’ancrage. Par exemple, si vous avez un <xref:System.Windows.Forms.TextBox> contrôle est ancré à la gauche, droite et inférieure du formulaire, comme le formulaire est redimensionné, le <xref:System.Windows.Forms.TextBox> contrôle est redimensionné horizontalement pour qu’il conserve la même distance des bords droit et gauche de l’écran. En outre, le contrôle se positionne verticalement afin que son emplacement est toujours la même distance entre le bord inférieur de l’écran. Si un contrôle n’est pas ancré et le formulaire est redimensionné, la position du contrôle par rapport aux bords du formulaire est modifiée.  

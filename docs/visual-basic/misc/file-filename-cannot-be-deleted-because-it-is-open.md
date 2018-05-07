@@ -1,23 +1,16 @@
 ---
-title: "Fichier &#39; &lt;nom de fichier&gt;&#39; ne peut pas être supprimé car il est ouvert"
+title: Fichier &#39; &lt;nom de fichier&gt; &#39; ne peut pas être supprimé car il est ouvert
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrFileSystem_FileAlreadyOpen1
 ms.assetid: e1cbc46a-1db0-412d-8109-31342ec9d327
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: de20e4d7d2169ff522a7ef17b7fa61259c7db87e
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: ceff8579a17369095352468475f426e6e7ea56a2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="file-39ltfilenamegt39-cannot-be-deleted-because-it-is-open"></a>Fichier &#39; &lt;nom de fichier&gt;&#39; ne peut pas être supprimé car il est ouvert
+# <a name="file-39ltfilenamegt39-cannot-be-deleted-because-it-is-open"></a>Fichier &#39; &lt;nom de fichier&gt; &#39; ne peut pas être supprimé car il est ouvert
 L’utilisateur a tenté de supprimer un fichier ouvert.  
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  

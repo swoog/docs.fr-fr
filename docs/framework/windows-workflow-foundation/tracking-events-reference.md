@@ -1,23 +1,12 @@
 ---
-title: "Référence des événements de suivi"
-ms.custom: 
+title: Référence des événements de suivi
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c1c1ee87-f80a-449b-acd0-50d81eef116e
-caps.latest.revision: "23"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5fba1e622a9be31f7db7bc0ccc05fda0997b12c2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 211cb1d059bbe969c4334ea995c5676b09a3846a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tracking-events-reference"></a>Référence des événements de suivi
 Pendant l'exécution, un workflow dans [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] déclenche des événements de suivi en parcourant différentes étapes de sa durée de vie. L'hôte peut s'abonner à ces événements et rester informé sur l'état de la progression du workflow pendant sa durée de vie. Les événements de suivi déclenchés sont traités dans cette section.  

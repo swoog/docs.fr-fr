@@ -1,10 +1,6 @@
 ---
 title: Overloads (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Overloads
 - Overloads
@@ -14,19 +10,16 @@ helpviewer_keywords:
 - Shadows keyword [Visual Basic]
 - signature, hiding by
 ms.assetid: 0c6820b8-25b2-4664-bc59-5ca93c99c042
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a23a6b91681cbd814ac96464e1c340be99a0ecf0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b68c13d192845fc4bedf1b34a40165ccc1a5ff75
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="overloads-visual-basic"></a>Overloads (Visual Basic)
 Spécifie qu'une propriété ou une procédure redéclare une ou plusieurs propriétés ou procédures existantes avec le même nom.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  *La surcharge* est la pratique consistant à fournir plusieurs définitions pour un nom de propriété ou procédure donné dans la même portée. La redéclaration d’une propriété ou une procédure avec une signature différente est parfois appelée *masquer par signature*.  
   
 ## <a name="rules"></a>Règles  
@@ -65,7 +58,7 @@ Spécifie qu'une propriété ou une procédure redéclare une ou plusieurs propr
   
 -   **Modificateur facultatif.** Vous n'êtes pas tenu d'utiliser le modificateur `Overloads` quand vous définissez plusieurs propriétés ou procédures surchargées dans la même classe. Toutefois, si vous utilisez `Overloads` dans l'une des déclarations, vous devez l'utiliser dans toutes.  
   
--   **Occultation et surcharge.** `Overloads`peut également être utilisé pour occulter un membre existant, ou un ensemble de membres surchargés, dans une classe de base. Quand vous utilisez `Overloads` de cette façon, vous déclarez la propriété ou la méthode avec le même nom et la même liste de paramètres que le membre de classe de base, et vous ne spécifiez pas le mot clé `Shadows`.  
+-   **Occultation et surcharge.** `Overloads` peut également être utilisé pour occulter un membre existant, ou un ensemble de membres surchargés, dans une classe de base. Quand vous utilisez `Overloads` de cette façon, vous déclarez la propriété ou la méthode avec le même nom et la même liste de paramètres que le membre de classe de base, et vous ne spécifiez pas le mot clé `Shadows`.  
   
  Si vous utilisez `Overrides`, le compilateur ajoute implicitement `Overloads` afin que vos API de bibliothèque fonctionnent plus facilement avec C#.  
   

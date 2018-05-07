@@ -1,13 +1,7 @@
 ---
-title: "Ressources d'application pour les bibliothèques qui ciblent des plateformes multiples"
-ms.custom: 
+title: Ressources d'application pour les bibliothèques qui ciblent des plateformes multiples
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,18 +12,13 @@ helpviewer_keywords:
 - resources, for multiple platforms
 - targeting multiple platforms, resources for
 ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
-caps.latest.revision: "20"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 7006c07d32a9f0adbafce1c83c1b29842f634a9a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f4682b9ffcb0edb4e54c427968c3d40c0de134d1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>Ressources d'application pour les bibliothèques qui ciblent des plateformes multiples
 Vous pouvez utiliser le .NET Framework [bibliothèque de classes portables](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) type pour vous assurer que les ressources dans vos bibliothèques de classes sont accessibles à partir de plusieurs plateformes de projet. Ce type de projet est disponible dans [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)] et cible le sous-ensemble portable de la bibliothèque de classes du .NET Framework. L'utilisation de [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] garantit l'accessibilité de votre bibliothèque à partir des applications de bureau, des [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], Silverlight et Windows Phone.  

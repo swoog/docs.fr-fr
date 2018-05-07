@@ -1,11 +1,6 @@
 ---
 title: Shared (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Shared
 helpviewer_keywords:
@@ -16,19 +11,16 @@ helpviewer_keywords:
 - shared [elements VB]
 - elements [Visual Basic], shared
 ms.assetid: 2bf7cf2c-b0dd-485e-8749-b5d674dab4cd
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: fce13c308a449e63eacc2bc4c94c274c7e25506a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b15dd08d69f372317b9140001e8072eeb66d44ab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="shared-visual-basic"></a>Shared (Visual Basic)
 Spécifie qu’un ou plusieurs éléments de programmation déclarés sont associés à une classe ou structure à grande et pas avec une instance spécifique de la classe ou structure.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
   
 ## <a name="when-to-use-shared"></a>Quand utiliser Shared  
  Partage d’un membre d’une classe ou structure le rend disponible pour chaque instance, au lieu de *non partagée*, où chaque instance conserve sa propre copie. Cela est utile, par exemple, si la valeur d’une variable s’applique à l’application entière. Si vous déclarez la variable comme étant `Shared`, puis toutes les instances accèdent au même emplacement de stockage, et si une instance modifie la valeur de la variable, toutes les instances accèdent à la valeur mise à jour.  
@@ -51,7 +43,7 @@ Spécifie qu’un ou plusieurs éléments de programmation déclarés sont assoc
   
 ## <a name="behavior"></a>Comportement  
   
--   **Stockage.** Une variable partagée ou un événement est stockée en mémoire uniquement une fois, quel que soit le nombre d’instances de sa classe ou structure. De même, une procédure partagée ou une propriété conserve uniquement un ensemble de variables locales.  
+-   **stockage.** Une variable partagée ou un événement est stockée en mémoire uniquement une fois, quel que soit le nombre d’instances de sa classe ou structure. De même, une procédure partagée ou une propriété conserve uniquement un ensemble de variables locales.  
   
 -   **L’accès via une Variable d’Instance.** Il est possible d’accéder à un élément partagé en qualifiant avec le nom d’une variable qui contient une instance spécifique de sa classe ou structure. Bien que cela ne pose généralement comme prévu, le compilateur génère un message d’avertissement et autorise l’accès via le nom de classe ou une structure au lieu de la variable.  
   

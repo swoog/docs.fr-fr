@@ -1,11 +1,6 @@
 ---
 title: Aggregate, clause (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.QueryAggregateIn
 - vb.QueryAggregate
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - Aggregate statement [Visual Basic]
 - queries [Visual Basic], Aggregate
 ms.assetid: 1315a814-5db6-4077-b34b-b141e11cc0eb
-caps.latest.revision: "25"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 47017414a92bfbca0df4ce6e2b70398a01762d37
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1db4b7fdcf9c8a38c2c49eca9d874eccea90ab1d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="aggregate-clause-visual-basic"></a>Aggregate, clause (Visual Basic)
 Applique une ou plusieurs fonctions d’agrégation à une collection.  
@@ -46,7 +38,7 @@ Aggregate element [As type] In collection _
 |`clause`|Facultatif. Une ou plusieurs clauses de requête, comme un `Where` clause, pour affiner le résultat de la requête pour appliquer l’ou les clauses d’agrégation.|  
 |`expressionList`|Obligatoire. Une ou plusieurs virgules expressions qui identifient une fonction d’agrégation à appliquer à la collection. Vous pouvez appliquer un alias à une fonction d’agrégation pour spécifier un nom de membre pour le résultat de la requête. Si aucun alias n’est fourni, le nom de la fonction d’agrégation est utilisé. Pour obtenir des exemples, consultez la section sur les fonctions d’agrégation plus loin dans cette rubrique.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le `Aggregate` clause peut être utilisée pour inclure des fonctions d’agrégation dans vos requêtes. Fonctions d’agrégation effectuent des vérifications et des calculs sur un ensemble de valeurs et retournent une valeur unique. Vous pouvez accéder à la valeur calculée à l’aide d’un membre du type du résultat de requête. Les fonctions d’agrégation standards que vous pouvez utiliser sont les `All`, `Any`, `Average`, `Count`, `LongCount`, `Max`, `Min`, et `Sum` fonctions. Ces fonctions sont familières aux développeurs qui sont familiarisés avec les agrégats dans SQL. Ils sont décrits dans la section suivante de cette rubrique.  
   
  Le résultat d’une fonction d’agrégation est inclus dans le résultat de requête en tant que champ de type de résultat de requête. Vous pouvez fournir un alias pour le résultat de la fonction d’agrégation spécifier le nom du membre du type du résultat de requête qui contiendra la valeur d’agrégation. Si aucun alias n’est fourni, le nom de la fonction d’agrégation est utilisé.  

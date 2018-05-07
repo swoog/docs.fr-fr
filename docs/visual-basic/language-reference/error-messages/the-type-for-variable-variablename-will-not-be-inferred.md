@@ -1,28 +1,19 @@
 ---
-title: Le type de variable &#39; &lt;variablename&gt;&#39; ne sera pas déduit, car il est lié à un champ dans une portée englobante
+title: Le type de variable &#39; &lt;variablename&gt; &#39; ne sera pas déduit, car il est lié à un champ dans une portée englobante
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc42110
 - bc42110
 helpviewer_keywords:
 - BC42110
 ms.assetid: ef4442eb-08d1-434f-a03b-4aa2ed4e4414
-caps.latest.revision: 33
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 39968407f4de5436df324320c99dede4d72e2808
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cb423e8dcced6956eb86d484607915030c91412b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="the-type-for-variable-39ltvariablenamegt39-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>Le type de variable &#39; &lt;variablename&gt;&#39; ne sera pas déduit, car il est lié à un champ dans une portée englobante
+# <a name="the-type-for-variable-39ltvariablenamegt39-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>Le type de variable &#39; &lt;variablename&gt; &#39; ne sera pas déduit, car il est lié à un champ dans une portée englobante
 Le type de variable '\<nom_variable >' ne sera pas déduit, car il est lié à un champ dans une portée englobante. Modifiez le nom de «\<nom_variable >', ou utilisez le nom qualifié complet (par exemple, 'Me.NomVariable' ou 'MyBase.NomVariable').  
   
  Une variable de contrôle de boucle dans votre code a le même nom qu’un champ de la classe ou une autre portée englobante. Étant donné que la variable de contrôle est utilisée sans un `As` clause, elle est liée au champ dans la portée englobante, et le compilateur ne pas créer une variable pour lui ou déduire son type.  

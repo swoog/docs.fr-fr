@@ -1,13 +1,6 @@
 ---
 title: Fusion alpha de lignes et de remplissages
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - lines [Windows Forms], adding transparency
 - examples [Windows Forms], alpha blending
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - alpha blending [Windows Forms], using with fills
 - shapes [Windows Forms], adding transparency
 ms.assetid: 5440f48c-3ac9-44c3-b170-c1c110bdbab8
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2a46efeccf9ab343ca0da07fad07138bd72e4e44
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f58fa2d105492c6c72d3d6906c3c35f89130fe91
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="alpha-blending-lines-and-fills"></a>Fusion alpha de lignes et de remplissages
 Dans [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], une couleur est une valeur 32 bits avec 8 bits pour alpha, rouge, vert et bleu. La valeur alpha indique la transparence de la couleur, le degré auquel la couleur est fusionnée avec la couleur d’arrière-plan. Plage de valeurs alpha comprise entre 0 et 255, où 0 représente une couleur entièrement transparente, et 255 représente une couleur entièrement opaque.  

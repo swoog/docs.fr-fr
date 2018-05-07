@@ -1,11 +1,6 @@
 ---
 title: Développement avec My (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - My.MyWpfExtension.Windows
 helpviewer_keywords:
@@ -14,14 +9,11 @@ helpviewer_keywords:
 - My feature
 - Visual Basic, programming in
 ms.assetid: f1d04509-5e46-4551-9f9f-94334a121fca
-caps.latest.revision: 26
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5ea802572a59a3b94508558cee97290cac67e1ac
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: f13e7348eb1c63e8256a48da7a8f5a8e357c72ae
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="development-with-my-visual-basic"></a>Développement avec My (Visual Basic)
 Visual Basic propose de nouvelles fonctionnalités pour le développement rapide d’applications qui simplifient l’utilisation et améliorent la productivité tout en renforçant les performances. Parmi ces nouvelles fonctionnalités, `My` permet d’accéder à des informations et des instances d’objet par défaut liées à l’application et à son environnement d’exécution. Ces informations sont organisées dans un format pouvant être découvert par IntelliSense et sont représentées logiquement, en fonction de l’utilisation.  

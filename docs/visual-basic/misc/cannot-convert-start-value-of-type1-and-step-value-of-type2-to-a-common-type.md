@@ -1,23 +1,16 @@
 ---
-title: "Impossible de convertir la valeur de début de type &#39; &lt;type1&gt;&#39; et la valeur de pas de type &#39;&lt; type2&gt;&#39; pour un type commun"
+title: Ne peut pas convertir la valeur de début de type &#39; &lt;type1&gt; &#39; et la valeur de pas de type &#39; &lt;type2&gt; &#39; en un type commun
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrForLoop_CommonType2
 ms.assetid: ce400fe1-5edd-4aee-94d8-530be03cfd9a
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c2636b2a94bea4a83e35865d73e0eaa2b2afed35
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 91580faa6172abc8d9b4d6d2d3e04293b6ae8245
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="cannot-convert-start-value-of-type-39lttype1gt39-and-step-value-of-type-39lttype2gt39-to-a-common-type"></a>Impossible de convertir la valeur de début de type &#39; &lt;type1&gt;&#39; et la valeur de pas de type &#39;&lt; type2&gt;&#39; pour un type commun
+# <a name="cannot-convert-start-value-of-type-39lttype1gt39-and-step-value-of-type-39lttype2gt39-to-a-common-type"></a>Ne peut pas convertir la valeur de début de type &#39; &lt;type1&gt; &#39; et la valeur de pas de type &#39; &lt;type2&gt; &#39; en un type commun
 Les valeurs de contrôle `For...Next` spécifiées ont des types différents et ne sont donc pas valides, car elles ne peuvent pas être converties en type commun.  
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  

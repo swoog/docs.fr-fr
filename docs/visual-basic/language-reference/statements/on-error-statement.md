@@ -1,12 +1,6 @@
 ---
 title: On Error, instruction (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.OnError
 helpviewer_keywords:
@@ -28,14 +22,11 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], handling
 - On Error statement [Visual Basic]
 ms.assetid: ff947930-fb84-40cf-bd66-1ea219561d5c
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 96baa5d91d0a600b84ed832fb1e3b1ed71a9d89d
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: b2e32dcca2e29a178af6dc985da536b47f0ebae6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="on-error-statement-visual-basic"></a>On Error, instruction (Visual Basic)
 Permet à une routine de gestion des erreurs et spécifie l’emplacement de la routine au sein d’une procédure ; peut également être utilisé pour désactiver une routine de gestion des erreurs.  
@@ -89,16 +80,16 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
  Notez que la `On Error GoTo` instruction intercepte toutes les erreurs, quelle que soit la classe d’exception.  
   
 ## <a name="on-error-resume-next"></a>On Error Resume Next  
- `On Error Resume Next`l’exécution continue avec l’instruction qui suit immédiatement l’instruction ayant provoqué l’erreur d’exécution, ou avec l’instruction qui suit le dernier appel de la procédure contenant la `On Error Resume Next` instruction. Cette instruction permet de continuer en dépit d’une erreur d’exécution de l’exécution. Vous pouvez placer la routine de gestion des erreurs où l’erreur peut se produire au lieu de transférer le contrôle à un autre emplacement dans la procédure. Un `On Error Resume Next` instruction devient inactive lorsqu’une autre procédure est appelée, vous devez exécuter une `On Error Resume Next` instruction dans chaque appelée routine si vous souhaitez qu’erreur inline gestion au sein de cette routine.  
+ `On Error Resume Next` l’exécution continue avec l’instruction qui suit immédiatement l’instruction ayant provoqué l’erreur d’exécution, ou avec l’instruction qui suit le dernier appel de la procédure contenant la `On Error Resume Next` instruction. Cette instruction permet de continuer en dépit d’une erreur d’exécution de l’exécution. Vous pouvez placer la routine de gestion des erreurs où l’erreur peut se produire au lieu de transférer le contrôle à un autre emplacement dans la procédure. Un `On Error Resume Next` instruction devient inactive lorsqu’une autre procédure est appelée, vous devez exécuter une `On Error Resume Next` instruction dans chaque appelée routine si vous souhaitez qu’erreur inline gestion au sein de cette routine.  
   
 > [!NOTE]
 >  Le `On Error Resume Next` construction peut être préférable `On Error GoTo` lors de la gestion des erreurs générées pendant l’accès à d’autres objets. Vérification `Err` après chaque interaction avec un objet supprime l’ambiguïté à laquelle l’objet est accessible par le code. Vous pouvez être certain objet qui a placé le code d’erreur `Err.Number`, ainsi que l’objet qui a généré l’erreur (l’objet spécifié dans `Err.Source`).  
   
 ## <a name="on-error-goto-0"></a>On Error GoTo 0  
- `On Error GoTo 0`désactive la gestion des erreurs dans la procédure en cours. Il ne spécifie pas la ligne 0 comme le début du code de gestion des erreurs, même si la procédure contient une ligne numérotée 0. Sans un `On Error GoTo 0` instruction, un gestionnaire d’erreurs est automatiquement désactivée lorsqu’une procédure se termine.  
+ `On Error GoTo 0` désactive la gestion des erreurs dans la procédure en cours. Il ne spécifie pas la ligne 0 comme le début du code de gestion des erreurs, même si la procédure contient une ligne numérotée 0. Sans un `On Error GoTo 0` instruction, un gestionnaire d’erreurs est automatiquement désactivée lorsqu’une procédure se termine.  
   
 ## <a name="on-error-goto--1"></a>On Error GoTo -1  
- `On Error GoTo -1`désactive l’exception dans la procédure en cours. Il ne spécifie pas la ligne -1 comme le début du code de gestion des erreurs, même si la procédure contienne une ligne numérotée -1. Sans un `On Error GoTo -1` instruction, une exception est automatiquement désactivée lorsqu’une procédure se termine.  
+ `On Error GoTo -1` désactive l’exception dans la procédure en cours. Il ne spécifie pas la ligne -1 comme le début du code de gestion des erreurs, même si la procédure contienne une ligne numérotée -1. Sans un `On Error GoTo -1` instruction, une exception est automatiquement désactivée lorsqu’une procédure se termine.  
   
  Pour éviter que le code de gestion des erreurs en cours d’exécution lorsque aucune erreur ne s’est produite, placez une `Exit Sub`, `Exit Function`, ou `Exit Property` instruction immédiatement avant la routine de gestion des erreurs, comme dans le fragment suivant :  
   
@@ -121,7 +112,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
   
  [!code-vb[VbVbalrErrorHandling#20](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/on-error-statement_4.vb)]  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Namespace :** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
  **Assembly :** bibliothèque Visual Basic Runtime (dans Microsoft.VisualBasic.dll)  

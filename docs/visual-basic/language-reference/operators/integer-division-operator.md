@@ -1,11 +1,6 @@
 ---
-title: "\\, opérateur (Visual Basic)"
+title: '\, opérateur (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.\
 - '\'
@@ -22,14 +17,11 @@ helpviewer_keywords:
 - quotients, integer
 - truncation [Visual Basic], integer division
 ms.assetid: 4b0ee347-950c-45c9-8e23-54bc85df208e
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 38718b109b4b3865238267039908ea1d51d06229
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ef3946e871e1dc248b54932e16f6cae6026da08e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-operator-visual-basic"></a>\, opérateur (Visual Basic)
 Divise deux nombres et retourne un résultat entier.  
@@ -57,7 +49,7 @@ expression1 \ expression2
   
  Le [/, opérateur (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) renvoie le quotient complet qui conserve le reste dans la partie fractionnaire.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Avant d’effectuer la division, Visual Basic essaie de convertir n’importe quelle expression numérique à virgule flottante `Long`. Si `Option Strict` est `On`, une erreur de compilation se produit. Si `Option Strict` est `Off`, un <xref:System.OverflowException> est possible que si la valeur est en dehors de la plage de la [Type de données Long](../../../visual-basic/language-reference/data-types/long-data-type.md). La conversion en `Long` est également soumis à *l’arrondi bancaire*. Pour plus d’informations, consultez « Parties fractionnaires » dans [les fonctions de Conversion de Type](../../../visual-basic/language-reference/functions/type-conversion-functions.md).  
   
  Si `expression1` ou `expression2` prend la valeur de [rien](../../../visual-basic/language-reference/nothing.md), il est traité en tant que zéro.  

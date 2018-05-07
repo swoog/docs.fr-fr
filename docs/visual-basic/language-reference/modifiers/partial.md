@@ -1,10 +1,6 @@
 ---
 title: Partial (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Partial
 - partial
@@ -18,14 +14,11 @@ helpviewer_keywords:
 - Partial keyword [Visual Basic]
 - type promotion
 ms.assetid: 7adaef80-f435-46e1-970a-269fff63b448
-caps.latest.revision: "36"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5129ef7737b1b07317d47f8d18e9aceb668bf05a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c94c3bf1a1e3e4c724f90690f52e97e8216cb9a7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="partial-visual-basic"></a>Partial (Visual Basic)
 Indique qu'une déclaration de type est une définition partielle du type.  
@@ -67,7 +60,7 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
 |`proceduredeclarations`|Facultatif. Instructions qui déclarent et définissent des procédures supplémentaires pour ce type.|  
 |`End Class` ou `End Structure`|Met fin à cette définition partielle de `Class` ou de `Structure`.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Visual Basic utilise des définitions de classe partielle pour séparer le code généré du code créé par l'utilisateur dans des fichiers sources distincts. Par exemple, le **Concepteur Windows Form** définit des classes partielles pour des contrôles tels que <xref:System.Windows.Forms.Form>. Vous ne devez pas modifier le code généré dans ces contrôles.  
   
  Toutes les règles de création de classes, structures, interfaces et modules, telles que celles relatives à l'héritage et à l'utilisation de modificateurs, s'appliquent lors de la création d'un type partiel.  

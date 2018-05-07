@@ -1,24 +1,12 @@
 ---
 title: Addressing
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d438e6f2-d0f3-43aa-b259-b51b5bda2e64
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 21339d071ac26f073d0495814744535bd84f3a22
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 94ac903afb27f1b87f0ca8bf05cb891d0d9ee34c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="addressing"></a>Addressing
 Cet exemple illustre les divers aspects et fonctionnalités des adresses de point de terminaison. L’exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md). Dans cet exemple, le service est auto-hébergé. Le client et le service sont tous les deux des applications console. Le service définit plusieurs points de terminaison en utilisant à la fois des adresses de point de terminaison absolues et relatives.  
@@ -51,7 +39,7 @@ Cet exemple illustre les divers aspects et fonctionnalités des adresses de poin
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- Dans ce cas de figure, l'adresse relative est vide (""). Par conséquent, l'adresse de point de terminaison correspond à l'adresse de base. La véritable adresse de point de terminaison est http://localhost:8000/servicemodelsamples/service.  
+ Dans ce cas de figure, l'adresse relative est vide (""). Par conséquent, l'adresse de point de terminaison correspond à l'adresse de base. L’adresse de point de terminaison réel est http://localhost:8000/servicemodelsamples/service.  
   
  La deuxième définition de point de terminaison spécifie également une adresse relative, comme affiché dans l'exemple de configuration suivant.  
   
@@ -64,7 +52,7 @@ Cet exemple illustre les divers aspects et fonctionnalités des adresses de poin
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- L'adresse relative, "test", est ajoutée à l'adresse de base. La véritable adresse de point de terminaison est http://localhost:8000/servicemodelsamples/service/test.  
+ L'adresse relative, "test", est ajoutée à l'adresse de base. L’adresse de point de terminaison réel est http://localhost:8000/servicemodelsamples/service/test.  
   
  La troisième définition de point de terminaison spécifie une adresse absolue, comme affiché dans l'exemple de configuration suivant.  
   
@@ -74,7 +62,7 @@ Cet exemple illustre les divers aspects et fonctionnalités des adresses de poin
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- L'adresse de base ne joue aucun rôle dans l'adresse. La véritable adresse de point de terminaison est http://localhost:8001/hello/servicemodelsamples.  
+ L'adresse de base ne joue aucun rôle dans l'adresse. L’adresse de point de terminaison réel est http://localhost:8001/hello/servicemodelsamples.  
   
  La quatrième adresse de point de terminaison spécifie une adresse absolue et un transport différent - TCP. L'adresse de base ne joue aucun rôle dans l'adresse. La véritable adresse de point de terminaison est net.tcp://localhost:9000/servicemodelsamples/service.  
   
@@ -143,7 +131,7 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à la page [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les exemples [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Addressing`  
   

@@ -1,22 +1,16 @@
 ---
 title: Options du compilateur Visual Basic par catégorie
 ms.date: 04/12/2018
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a90c54ae1bb4d89b2fbe0df62730bc55c0ceb64f
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 13aeab52cfd43aa8dfd7fda69e2eb9be798473e1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>Options du compilateur Visual Basic par catégorie
 Le compilateur de ligne de commande Visual Basic est fourni comme alternative aux programmes de compilation dans l’environnement de développement intégré (IDE) Visual Studio. Voici une liste des options du compilateur de ligne de commande Visual Basic triées par catégorie fonctionnelle.  
@@ -45,7 +39,7 @@ Le compilateur de ligne de commande Visual Basic est fourni comme alternative au
 |Option|Objectif|  
 |---|---|  
 |[-doc](../../../visual-basic/reference/command-line-compiler/doc.md)|Traite les commentaires de documentation pour les diriger vers un fichier XML.|  
-|[-déterministe](../../../visual-basic/reference/command-line-compiler/deterministic.md)|Indique au compilateur générer un assembly dont le contenu binaire est identique sur les compilations, si les entrées sont identiques.|
+|[-deterministic](../../../visual-basic/reference/command-line-compiler/deterministic.md)|Indique au compilateur de générer un assembly dont le contenu binaire est identique dans les compilations si les entrées sont identiques.|
 |[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|Configure le compilateur pour cibler le [!INCLUDE[Compact](~/includes/compact-md.md)].|  
 |[-out](../../../visual-basic/reference/command-line-compiler/out.md)|Spécifie un fichier de sortie.|  
 |[-refonly](refonly-compiler-option.md)|Génère un assembly de référence uniquement.|

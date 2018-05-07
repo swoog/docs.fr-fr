@@ -1,22 +1,12 @@
 ---
-title: "Comment : interroger des caractères dans une chaîne (LINQ) (Visual Basic)"
-ms.custom: 
+title: 'Comment : interroger des caractères dans une chaîne (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 499ebbe0-746c-4235-9dba-ce722c12b50e
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ebc832763e271cc53e9c95827c301f82e9a7578a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0953ff9152a4af1aa40379e15b2279d23ad0aac1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-query-for-characters-in-a-string-linq-visual-basic"></a>Comment : interroger des caractères dans une chaîne (LINQ) (Visual Basic)
 La classe <xref:System.String> implémente l’interface <xref:System.Collections.Generic.IEnumerable%601> générique. De ce fait, il est possible d’interroger n’importe quelle chaîne comme une séquence de caractères. Toutefois, ceci n’est pas une utilisation courante de LINQ. Pour les opérations de critères spéciaux complexes, utilisez la classe <xref:System.Text.RegularExpressions.Regex>.  

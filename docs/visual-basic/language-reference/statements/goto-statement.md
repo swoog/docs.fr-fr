@@ -1,12 +1,6 @@
 ---
 title: GoTo, instruction
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.GoTo
 helpviewer_keywords:
@@ -19,14 +13,11 @@ helpviewer_keywords:
 - conditional statements [Visual Basic], GoTo statement
 - GoTo statement [Visual Basic], syntax
 ms.assetid: 313274c2-8ab3-4b9c-9ba3-0fd6798e4f6d
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 22a6315e69cd6c797d462d0835e85bb1dde67dcc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 27ebc677bab8b7f61a02408fddb30a6ec21c43cc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="goto-statement"></a>GoTo, instruction
 Crée une branche inconditionnelle vers une ligne spécifiée d’une procédure.  
@@ -41,11 +32,11 @@ GoTo line
  `line`  
  Obligatoire. Toute étiquette de ligne.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La `GoTo` instruction peut créer une branche que vers des lignes dans la procédure dans laquelle elle apparaît. La ligne doit avoir une ligne d’étiquette qui `GoTo` peuvent faire référence. Pour plus d’informations, consultez [Comment : instructions de l’étiquette](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md).  
   
 > [!NOTE]
->  `GoTo`instructions peuvent rendre le code difficile à lire et mettre à jour. Si possible, utilisez une structure de contrôle à la place. Pour plus d’informations, consultez [flux de contrôle](../../../visual-basic/programming-guide/language-features/control-flow/index.md).  
+>  `GoTo` instructions peuvent rendre le code difficile à lire et mettre à jour. Si possible, utilisez une structure de contrôle à la place. Pour plus d’informations, consultez [flux de contrôle](../../../visual-basic/programming-guide/language-features/control-flow/index.md).  
   
  Vous ne pouvez pas utiliser un `GoTo` instruction branchement depuis l’extérieur un `For`... `Next`, `For Each`... `Next`, `SyncLock`... `End SyncLock`, `Try`... `Catch`... `Finally`, `With`... `End With`, ou `Using`... `End Using` vers une étiquette à l’intérieur.  
   
@@ -54,9 +45,9 @@ GoTo line
   
 |Bloc ou région|Création de branche à partir d’à l’extérieur|Création de branche à partir d’à l’intérieur|  
 |---------------------|-------------------------------|-------------------------------|  
-|`Try`bloc|Uniquement à partir d’un `Catch` bloc de la même construction <sup>1</sup>|Uniquement en dehors de la construction entière|  
-|`Catch`bloc|Jamais autorisé|Uniquement en dehors de la construction entière, ou à la `Try` bloc de la même construction <sup>1</sup>|  
-|`Finally`bloc|Jamais autorisé|Jamais autorisé|  
+|`Try` Bloc|Uniquement à partir d’un `Catch` bloc de la même construction <sup>1</sup>|Uniquement en dehors de la construction entière|  
+|`Catch` Bloc|Jamais autorisé|Uniquement en dehors de la construction entière, ou à la `Try` bloc de la même construction <sup>1</sup>|  
+|`Finally` Bloc|Jamais autorisé|Jamais autorisé|  
   
  <sup>1</sup> si un `Try`... `Catch`... `Finally` est imbriquée dans une autre, un `Catch` bloc peut créer de branche dans le `Try` bloc à son propre niveau d’imbrication, mais pas vers un autre `Try` bloc. Imbriquée `Try`... `Catch`... `Finally` construction doit être entièrement contenue dans un `Try` ou `Catch` bloc de la construction dans laquelle elle est imbriquée.  
   

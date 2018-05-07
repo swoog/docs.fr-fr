@@ -1,23 +1,12 @@
 ---
-title: "Activité Pick"
-ms.custom: 
+title: Activité Pick
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b3e49b7f-0285-4720-8c09-11ae18f0d53e
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ce650c931e94c76c669ee99068d2356f4b2ec32f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b6a49207c6c2e800c2e894f6223abdf0f5f6820d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="pick-activity"></a>Activité Pick
 L'activité <xref:System.Activities.Statements.Pick> simplifie la modélisation d'un jeu de déclencheurs d'événements suivis de leurs gestionnaires correspondants.  Une activité <xref:System.Activities.Statements.Pick> contient une collection d'activités <xref:System.Activities.Statements.PickBranch>, où chaque <xref:System.Activities.Statements.PickBranch> est un couplage entre une activité <xref:System.Activities.Statements.PickBranch.Trigger%2A> et une activité <xref:System.Activities.Statements.PickBranch.Action%2A>.  Au moment de l'exécution, les déclencheurs de toutes les branches sont exécutés en parallèle.  Une fois qu'un déclencheur a été exécuté, son action correspondante est exécutée, et tous les autres déclencheurs sont annulés.  L'activité [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] de <xref:System.Activities.Statements.Pick> se comporte de manière similaire à l'activité [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] de <xref:System.Workflow.Activities.ListenActivity>.  

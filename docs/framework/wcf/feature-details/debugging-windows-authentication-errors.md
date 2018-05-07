@@ -1,14 +1,6 @@
 ---
 title: Débogage d'erreurs d'authentification Windows
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,31 +8,25 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 39c033d45488b827a4aee7439904db8094795db4
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: d9226324b69e5c27738abb35bb155a43964b9127
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="debugging-windows-authentication-errors"></a>Débogage d'erreurs d'authentification Windows
-Lorsque vous utilisez l'authentification Windows comme un mécanisme de sécurité, l'interface SSPI (Security Support Provider Interface) gère les processus de sécurité. Lorsque des erreurs de sécurité se produisent au niveau de la couche SSPI, elles sont signalées par [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Cette rubrique fournit une infrastructure et un ensemble de questions permettant de diagnostiquer les erreurs.  
+Lorsque vous utilisez l'authentification Windows comme un mécanisme de sécurité, l'interface SSPI (Security Support Provider Interface) gère les processus de sécurité. En cas d’erreur de sécurité au niveau de la couche SSPI, elles sont signalées par Windows Communication Foundation (WCF). Cette rubrique fournit une infrastructure et un ensemble de questions permettant de diagnostiquer les erreurs.  
   
  Pour une vue d’ensemble du protocole Kerberos, consultez [présentation de Kerberos](http://go.microsoft.com/fwlink/?LinkID=86946); pour une vue d’ensemble de l’interface SSPI, consultez [SSPI](http://go.microsoft.com/fwlink/?LinkId=88941).  
   
- Pour l’authentification Windows, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilise généralement le *Negotiate* SSP Security Support Provider (), qui effectue l’authentification mutuelle Kerberos entre le client et le service. Si le protocole Kerberos est non disponible, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] revient par défaut à NTLM (NT LAN Manager). Toutefois, vous pouvez configurer [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] pour utiliser uniquement le protocole Kerberos (et lever une exception si Kerberos n'est pas disponible). Vous pouvez également configurer [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] pour utiliser des formulaires restreints du protocole Kerberos.  
+ Pour l’authentification Windows, WCF utilise généralement le *Negotiate* SSP Security Support Provider (), qui effectue l’authentification mutuelle Kerberos entre le client et le service. Si le protocole Kerberos n’est pas disponible, par défaut, que WCF revient à NT LAN Manager (NTLM). Toutefois, vous pouvez configurer WCF à utiliser uniquement le protocole Kerberos (et lever une exception si Kerberos n’est pas disponible). Vous pouvez également configurer WCF pour utiliser des formulaires restreints du protocole Kerberos.  
   
 ## <a name="debugging-methodology"></a>Méthodologie de débogage  
  La méthode de base est la suivante :  
   
 1.  Déterminez si vous utilisez l'authentification Windows. Si vous utilisez un autre schéma, cette rubrique ne s'applique pas.  
   
-2.  Si vous êtes certain d'utiliser l'authentification Windows, déterminez si votre configuration [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilise Kerberos direct ou Negotiate.  
+2.  Si vous êtes sûr que vous utilisez l’authentification Windows, déterminez si votre configuration WCF utilise Kerberos direct ou Negotiate.  
   
 3.  Une fois que vous avez déterminé si votre configuration utilise le protocole Kerberos ou NTLM, vous pouvez comprendre les messages d'erreur dans le contexte correct.  
   
@@ -75,7 +61,7 @@ Lorsque vous utilisez l'authentification Windows comme un mécanisme de sécurit
 ### <a name="kerberos-protocol"></a>Protocole Kerberos  
   
 #### <a name="spnupn-problems-with-the-kerberos-protocol"></a>Problèmes de SPN/UPN rencontrés avec le protocole Kerberos  
- Si vous utilisez l'authentification Windows, et que le protocole Kerberos est utilisé ou négocié par SSPI, l'URL utilisée par le point de terminaison client doit inclure le nom de domaine complet de l'hôte du service dans l'URL de service. Cela suppose que le compte sous lequel s’exécute le service a accès à la clé de nom principal (SPN) de service de l’ordinateur (par défaut) est créée lorsque l’ordinateur est ajouté au domaine Active Directory, qui est généralement effectué en exécutant le service sous le Compte de Service réseau. Si le service n'a pas accès à la clé SPN de l'ordinateur, vous devez fournir le SPN correct ou un nom d'utilisateur principal (UPN, User Principal Name) du compte sous lequel le service s'exécute dans l'identité de point de terminaison du client. Pour plus d’informations sur la façon [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fonctionne avec les SPN et UPN, consultez [l’identité du Service et l’authentification](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ Si vous utilisez l'authentification Windows, et que le protocole Kerberos est utilisé ou négocié par SSPI, l'URL utilisée par le point de terminaison client doit inclure le nom de domaine complet de l'hôte du service dans l'URL de service. Cela suppose que le compte sous lequel s’exécute le service a accès à la clé de nom principal (SPN) de service de l’ordinateur (par défaut) est créée lorsque l’ordinateur est ajouté au domaine Active Directory, qui est généralement effectué en exécutant le service sous le Compte de Service réseau. Si le service n'a pas accès à la clé SPN de l'ordinateur, vous devez fournir le SPN correct ou un nom d'utilisateur principal (UPN, User Principal Name) du compte sous lequel le service s'exécute dans l'identité de point de terminaison du client. Pour plus d’informations sur le fonctionne de WCF avec les SPN et UPN, consultez [l’identité du Service et l’authentification](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
  Dans les scénarios d'équilibrage de charge, tels que les batteries de serveurs Web ou les jardins Web, une pratique courante consiste à définir un compte unique pour chaque application, assigner un SPN à ce compte et veiller à ce que tous les services de l'application s'exécutent sous ce compte.  
   
@@ -111,7 +97,7 @@ Lorsque vous utilisez l'authentification Windows comme un mécanisme de sécurit
 ### <a name="ntlm-protocol"></a>Protocole NTLM  
   
 #### <a name="negotiate-ssp-falls-back-to-ntlm-but-ntlm-is-disabled"></a>Négociation du retour de SSP à NTLM, mais NTLM est désactivé  
- La propriété <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> a la valeur `false`, ce qui conduit [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] à déployer le meilleur effort pour lever une exception si NTLM est utilisé. Notez que l'affectation de la valeur `false` à cette propriété peut ne pas empêcher la transmission des informations d'identification NTLM.  
+ Le <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> est définie sur `false`, ce qui entraîne de Windows Communication Foundation (WCF) pour effectuer un meilleur effort pour lever une exception si NTLM est utilisé. Notez que l'affectation de la valeur `false` à cette propriété peut ne pas empêcher la transmission des informations d'identification NTLM.  
   
  La section suivante indique comment désactiver le retour à NTLM.  
   

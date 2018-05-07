@@ -1,12 +1,6 @@
 ---
-title: "Comment : convertir une chaîne en tableau de caractères en Visual Basic"
-ms.custom: 
+title: 'Comment : convertir une chaîne en tableau de caractères en Visual Basic'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - character arrays [Visual Basic], converting strings
 - arrays [Visual Basic], converting strings to
@@ -14,14 +8,11 @@ helpviewer_keywords:
 - strings [Visual Basic], converting to arrays
 - string conversion [Visual Basic], arrays
 ms.assetid: 1b54b686-ab29-413b-adce-6bd5422376eb
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 59d0da52c8f78b93c76325e6242156c106deeaf1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c109143601e304b1ec15a60c71d65fe6bd15aae8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-convert-a-string-to-an-array-of-characters-in-visual-basic"></a>Comment : convertir une chaîne en tableau de caractères en Visual Basic
 Il est parfois utile de disposer de données sur les caractères de votre chaîne ainsi que les positions de ces caractères dans la chaîne, telles que lorsque vous analysez une chaîne. Cet exemple montre comment vous pouvez obtenir un tableau de caractères dans une chaîne en appelant la chaîne <xref:System.String.ToCharArray%2A> (méthode).  

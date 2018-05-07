@@ -1,11 +1,7 @@
 ---
-title: "PutMethod (fonction) (référence des API non managées)"
-description: "La fonction PutMethod crée une méthode."
+title: PutMethod (fonction) (référence des API non managées)
+description: La fonction PutMethod crée une méthode.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - PutMethod
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7e97ffcf44a738234f67d9736382c46c42e5b61e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7f74b0d30a1a8899d3c8d0a2bf0f108ea11165cc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="putmethod-function"></a>PutMethod (fonction)
 Crée une méthode.
@@ -100,12 +93,12 @@ Chaque propriété dans un [__Parameters](https://msdn.microsoft.com/library/aa3
 
 Pour obtenir un exemple, consultez la [IWbemClassObject::PutMethod](https://msdn.microsoft.com/library/aa391456(v=vs.85).aspx) (méthode).
 
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** WMINet_Utils.idl  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versions du .NET framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
 [WMI et les compteurs de Performance (référence des API non managées)](index.md)

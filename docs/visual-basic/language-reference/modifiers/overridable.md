@@ -1,10 +1,6 @@
 ---
 title: Overridable (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - Overridable
 - vb.Overridable
@@ -20,19 +16,16 @@ helpviewer_keywords:
 - Overridable keyword [Visual Basic]
 - properties [Visual Basic], overriding
 ms.assetid: 612581e7-8a4c-4a5d-beff-3402fffa6f35
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: f7d5dd33f8591be1b4305e954e55e035882626c6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4844bf7f3ecf23335715b950a96be15e54ebc601
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="overridable-visual-basic"></a>Overridable (Visual Basic)
 Spécifie qu’une propriété ou procédure peut être remplacée par une propriété portant le même nommée ou de la procédure dans une classe dérivée.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le `Overridable` modificateur permet à une propriété ou une méthode dans une classe de substitution dans une classe dérivée. Le [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md) modificateur empêche une propriété ou méthode d’être substituée dans une classe dérivée.  Pour plus d’informations, consultez [Concepts de base de l’héritage](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md).  
   
  Si le `Overridable` ou `NotOverridable` modificateur n’est pas spécifié, le paramètre par défaut varie selon que la propriété ou méthode se substitue à une méthode ou propriété de classe de base. Si la propriété ou méthode substitue une méthode ou propriété de classe de base, le paramètre par défaut est `Overridable`; sinon, elle est `NotOverridable`.  

@@ -1,11 +1,6 @@
 ---
 title: Decimal, type de données (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Decimal
 helpviewer_keywords:
@@ -25,26 +20,23 @@ helpviewer_keywords:
 - '@ identifier type character'
 - identifier type characters [Visual Basic], @
 ms.assetid: 1d855b45-afe2-45b0-a623-96b6f63a43d5
-caps.latest.revision: 20
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 55a9293fa680a7a04cff4099654d4d66790e8d3d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9e256e93d7857c8674a1d711fa9cafd3ed9a29f5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="decimal-data-type-visual-basic"></a>Decimal, type de données (Visual Basic)
 Contient des valeurs (16 octets) de 128 bits qui représente le nombre entier de 96 bits (12 octets) mis à l’échelle par une puissance de 10 variable signés. Le facteur d’échelle spécifie le nombre de chiffres à droite de la virgule décimale ; Il est compris entre 0 et 28. Avec une échelle de 0 (pas de décimales), la plus grande valeur possible est +/-79,228,162,514,264,337,593,543,950,335 (+/-7 9228162514264337593543950335E + 28). Avec 28 décimales, la plus grande valeur est +/-7,9228162514264337593543950335 et la plus petite valeur différente de zéro est +/-0,0000000000000000000000000001 (+/-1E-28).  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le `Decimal` type de données fournit le plus grand nombre de chiffres significatifs pour un nombre. Il prend en charge jusqu'à 29 chiffres significatifs et peut représenter des valeurs dépassant 7,9228 x 10 ^ 28. Elle est particulièrement adaptée pour les calculs, tels que financier, qui requièrent un grand nombre de chiffres, mais ne peut pas tolérer les erreurs d’arrondi.  
   
  La valeur par défaut de `Decimal` est 0.  
   
 ## <a name="programming-tips"></a>Conseils de programmation  
   
--   **Précision.** `Decimal`n’est pas un type de données à virgule flottante. Le `Decimal` structure contient une valeur entière binaire, avec un bit de signe et un entier échelle spécifie quelle partie de la valeur est une fraction décimale. Pour cette raison, `Decimal` nombres ont une représentation plus précise dans la mémoire que les types à virgule flottante (`Single` et `Double`).  
+-   **Précision.** `Decimal` n’est pas un type de données à virgule flottante. Le `Decimal` structure contient une valeur entière binaire, avec un bit de signe et un entier échelle spécifie quelle partie de la valeur est une fraction décimale. Pour cette raison, `Decimal` nombres ont une représentation plus précise dans la mémoire que les types à virgule flottante (`Single` et `Double`).  
   
 -   **Performances** Le `Decimal` type de données est le plus lent de tous les types numériques. Vous devez peser l’importance de la précision par rapport aux performances avant de choisir un type de données.  
   

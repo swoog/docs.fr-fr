@@ -1,13 +1,6 @@
 ---
-title: "Comment : configurer un émetteur local"
-ms.custom: 
+title: 'Comment : configurer un émetteur local'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,23 +8,18 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 15263371-514e-4ea6-90fb-14b4939154cd
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c24b039709a013f210a42d67c744c03489e4cf73
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2b227398af3ea0dfd7cd866f1110ccc1737553c3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-configure-a-local-issuer"></a>Comment : configurer un émetteur local
 Cette rubrique décrit comment configurer un client afin d'utiliser un émetteur local pour les jetons émis.  
   
  Lorsqu'un client communique avec un service fédéré, il arrive souvent que le service spécifie l'adresse du service d'émission de jeton de sécurité qui est attendue pour émettre le jeton que le client utilisera pour s'authentifier auprès du service fédéré. Dans certains cas, le client peut être configuré pour utiliser un *émetteur local*.  
   
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] utilise un émetteur local dans les cas où l'adresse de l'émetteur d'une liaison fédérée est http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous ou `null`. Dans ce cas, vous devez configurer <xref:System.ServiceModel.Description.ClientCredentials> avec l'adresse de l'émetteur local et la liaison à utiliser pour communiquer avec celui-ci.  
+ Windows Communication Foundation (WCF) utilise un émetteur local dans les cas où l’adresse de l’émetteur d’une liaison fédérée est http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous ou `null`. Dans ce cas, vous devez configurer <xref:System.ServiceModel.Description.ClientCredentials> avec l'adresse de l'émetteur local et la liaison à utiliser pour communiquer avec celui-ci.  
   
 > [!NOTE]
 >  Si le <xref:System.ServiceModel.Description.ClientCredentials.SupportInteractive%2A> propriété de la `ClientCredentials` classe a la valeur `true`, une adresse d’émetteur local n’est pas spécifiée, et l’adresse d’émetteur spécifié par le [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) ou autres une liaison fédérée est http://schemas.xmlsoap.org/ws/2005/05/identity/issuer/self, http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous, ou est `null`, puis les fenêtres [!INCLUDE[infocard](../../../../includes/infocard-md.md)] émetteur est utilisé.  

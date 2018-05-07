@@ -1,25 +1,14 @@
 ---
-title: "Validation de la complexité de mot de passe (Visual Basic)"
-ms.custom: 
+title: Validation de la complexité de mot de passe (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - String data type [Visual Basic], validation
 ms.assetid: 5d9a918f-6c1f-41a3-a019-b5c2b8ce0381
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: bdbe5f385c6b7a0898c4907b0d8afabdaed06fa0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: acfc8ab958c8671ed7f1afd245d24a43ca12be29
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-validating-that-passwords-are-complex-visual-basic"></a>Procédure pas à pas : validation de la complexité des mots de passe (Visual Basic)
 Cette méthode vérifie certaines caractéristiques du mot de passe fort et met à jour un paramètre de chaîne avec des informations sur les vérifications le mot de passe échoue.  
@@ -36,7 +25,7 @@ Cette méthode vérifie certaines caractéristiques du mot de passe fort et met 
 ## <a name="compiling-the-code"></a>Compilation du code  
  Appelez cette méthode en passant la chaîne qui contient ce mot de passe.  
   
- Cet exemple nécessite :  
+ Cet exemple nécessite :  
   
 -   Un accès aux membres de l’espace de noms <xref:System.Text.RegularExpressions>. Ajoutez une instruction `Imports` si vous n’utilisez pas de noms de membres qualifiés complets dans votre code. Pour plus d’informations, consultez [Instruction Imports (espace de noms et type .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
   

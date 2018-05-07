@@ -1,28 +1,19 @@
 ---
-title: Le premier opérande d’un fichier binaire &#39; si &#39; l’expression doit être null ou un type référence
+title: Le premier opérande d’un fichier binaire &#39;si&#39; expression doit être nullable ou un type référence
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc33107
 - vbc33107
 helpviewer_keywords:
 - BC33107
 ms.assetid: 493c8899-3f6b-4471-8eb6-9284e8492768
-caps.latest.revision: 5
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: f66b110c02076120c55a3bff28c3d7614bf8be26
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 76078d315b2c32a2a29aa652a65b463622afec36
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="first-operand-in-a-binary-39if39-expression-must-be-nullable-or-a-reference-type"></a>Le premier opérande d’un fichier binaire &#39; si &#39; l’expression doit être null ou un type référence
+# <a name="first-operand-in-a-binary-39if39-expression-must-be-nullable-or-a-reference-type"></a>Le premier opérande d’un fichier binaire &#39;si&#39; expression doit être nullable ou un type référence
 Un `If` expression peut prendre deux ou trois arguments. Lorsque vous envoyez uniquement deux arguments, le premier argument doit être un type référence ou un type nullable. Si le premier argument évalue à une valeur autre que `Nothing`, sa valeur est retournée. Si le premier argument prend la valeur `Nothing`, le deuxième argument est évalué et retourné.  
   
  Par exemple, le code suivant contient deux `If` expressions, une avec trois arguments et l’autre avec deux arguments. Les expressions calculer et retournent la même valeur.  

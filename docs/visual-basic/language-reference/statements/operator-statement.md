@@ -1,12 +1,6 @@
 ---
 title: Operator Statement
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.operator
 helpviewer_keywords:
@@ -23,14 +17,11 @@ helpviewer_keywords:
 - Operator statement [Visual Basic]
 - CType function [Visual Basic], Operator statement
 ms.assetid: b12ec4af-1ad7-4a17-865b-c5ee96320ae5
-caps.latest.revision: 28
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 1b6be45fd0a606f43c14d57f3f8ae0955f256ba6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cb7fe7929e4b6e61ca3b39be5615e09182f2fe0f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="operator-statement"></a>Operator Statement
 Déclare le symbole d’opérateur, opérandes et le code qui définissent une procédure d’opérateur sur une classe ou structure.  
@@ -78,7 +69,7 @@ End Operator
  `operand2`  
  Obligatoire pour les opérateurs binaires. Le nom et le type de l’opérande de droite d’un opérateur binaire.  
   
- `operand1`et `operand2` ont la syntaxe et les éléments suivants :  
+ `operand1` et `operand2` ont la syntaxe et les éléments suivants :  
   
  `[ ByVal ] operandname [ As operandtype ]`  
   
@@ -98,9 +89,9 @@ End Operator
  Obligatoire. La valeur de la procédure d’opérateur retourne au code appelant.  
   
  `End` `Operator`  
- Requis. Termine la définition de cette procédure d’opérateur.  
+ Obligatoire. Termine la définition de cette procédure d’opérateur.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Vous pouvez utiliser `Operator` uniquement dans une classe ou structure. Cela signifie que la *contexte de déclaration* pour un opérateur ne peut pas être un fichier source, espace de noms, module, interface, procédure ou bloc. Pour plus d’informations, consultez [Contextes de déclaration et niveaux d’accès par défaut](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
   
  Tous les opérateurs doivent être `Public Shared`. Vous ne pouvez pas spécifier `ByRef`, `Optional`, ou `ParamArray` pour des opérandes.  
@@ -174,7 +165,7 @@ End Operator
  S’il est possible qu’une procédure de conversion ne peut pas réussir, ou qu’elle peut provoquer une exception non gérée, vous devez la déclarer comme `Narrowing`.  
   
 ## <a name="example"></a>Exemple  
- Le code suivant exemple utilise le `Operator` instruction pour définir le contour d’une structure qui inclut des procédures d’opérateur pour le `And`, `Or`, `IsFalse`, et `IsTrue` opérateurs. `And`et `Or` acceptent chacun deux opérandes de type `abc` et type de retour `abc`. `IsFalse`et `IsTrue` acceptent chacun un opérande unique de type `abc` et retourner `Boolean`. Ces définitions permettent au code appelant d’utiliser `And`, `AndAlso`, `Or`, et `OrElse` avec opérandes de type `abc`.  
+ Le code suivant exemple utilise le `Operator` instruction pour définir le contour d’une structure qui inclut des procédures d’opérateur pour le `And`, `Or`, `IsFalse`, et `IsTrue` opérateurs. `And` et `Or` acceptent chacun deux opérandes de type `abc` et type de retour `abc`. `IsFalse` et `IsTrue` acceptent chacun un opérande unique de type `abc` et retourner `Boolean`. Ces définitions permettent au code appelant d’utiliser `And`, `AndAlso`, `Or`, et `OrElse` avec opérandes de type `abc`.  
   
  [!code-vb[VbVbalrStatements#44](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/operator-statement_1.vb)]  
   

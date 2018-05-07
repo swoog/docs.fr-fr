@@ -1,21 +1,12 @@
 ---
-title: "Itérateurs (Visual Basic)"
-ms.custom: 
+title: Itérateurs (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 ms.assetid: f26b5c1e-fe9d-4004-b287-da7919d717ae
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: f02249f7f30d2cd6b43aa75530ace099286c7d7f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ecc48ad5bbddc82457a8d6cc8e60ee419fb593fa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iterators-visual-basic"></a>Itérateurs (Visual Basic)
 Un *itérateur* peut être utilisé pour parcourir des collections, comme des listes et des tableaux.  
@@ -221,7 +212,7 @@ Public Class Zoo
 End Class  
 ```  
   
-##  <a name="BKMK_TryBlocks"></a>Try (blocs)  
+##  <a name="BKMK_TryBlocks"></a> Try (blocs)  
  Visual Basic autorise un `Yield` instruction dans le `Try` bloquer d’un [essayez... Catch... Instruction finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md). A `Try` bloc qui a un `Yield` instruction peut avoir `Catch` bloque et peut avoir un `Finally` bloc.  
   
  L’exemple suivant inclut `Try`, `Catch`, et `Finally` blocs dans une fonction d’itérateur. Le `Finally` bloc dans la fonction d’itérateur s’exécute avant le `For Each` fin de l’itération.  
@@ -261,7 +252,7 @@ End Function
   
  Si le `For Each` corps (au lieu de la méthode iterator) lève une exception, une `Catch` bloc dans la fonction d’itérateur n’est pas exécutée, mais un `Finally` bloc dans la fonction d’itérateur est exécuté. A `Catch` bloc à l’intérieur d’une fonction d’itérateur intercepte uniquement les exceptions qui se produisent à l’intérieur de la fonction d’itérateur.  
   
-##  <a name="BKMK_AnonymousMethods"></a>Méthodes anonymes  
+##  <a name="BKMK_AnonymousMethods"></a> Méthodes anonymes  
  En Visual Basic, une fonction anonyme peut être une fonction d’itérateur. L'exemple suivant illustre ce comportement.  
   
 ```vb  

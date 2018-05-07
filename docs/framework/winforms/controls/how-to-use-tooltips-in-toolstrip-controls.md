@@ -1,28 +1,16 @@
 ---
-title: "Comment : utiliser des info-bulles dans des contrôles ToolStrip"
-ms.custom: 
+title: 'Comment : utiliser des info-bulles dans des contrôles ToolStrip'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ToolStrip control [Windows Forms], adding tooltips
 - toolbars [Windows Forms], adding tooltips
 - tooltips [Windows Forms], adding
 ms.assetid: c5d86024-a7c5-44ee-8b3f-2daf53d80d3e
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1d81a1936d8a6159c6225a12f712c546fe9beeb7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2b10b3fcf3930d5848f1d7a9602cfcc945bc8975
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-tooltips-in-toolstrip-controls"></a>Comment : utiliser des info-bulles dans des contrôles ToolStrip
 Vous pouvez afficher un <xref:System.Windows.Forms.ToolTip> pour le <xref:System.Windows.Forms.ToolStrip> contrôle souhaité en définissant sa <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A> propriété `true`.  

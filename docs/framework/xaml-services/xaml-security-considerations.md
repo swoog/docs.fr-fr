@@ -1,27 +1,15 @@
 ---
-title: "Considérations sur la sécurité XAML"
-ms.custom: 
+title: Considérations sur la sécurité XAML
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - security [XAML Services], .NET XAML services
 - XAML security [XAML Services]
 ms.assetid: 544296d4-f38e-4498-af49-c9f4dad28964
-caps.latest.revision: "7"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b58719f36cd911497c5cd892610330688221e7ef
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ef47e7e370082a2050406710edcb62d0967df8ef
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xaml-security-considerations"></a>Considérations sur la sécurité XAML
 Cette rubrique décrit les meilleures pratiques pour la sécurité dans les applications lorsque vous utilisez XAML et l’API des Services XAML .NET Framework.  
@@ -29,7 +17,7 @@ Cette rubrique décrit les meilleures pratiques pour la sécurité dans les appl
 ## <a name="untrusted-xaml-in-applications"></a>XAML non fiable dans les Applications  
  Dans le sens de la plus général, XAML non fiable est n’importe quelle source XAML que votre application ne pas spécifiquement inclure ou émettre des.  
   
- XAML compilé ou stocké en tant qu’un `resx`-ressource de type dans un assembly approuvé et signé n’est pas fondamentalement non fiable. Vous pouvez approuver le code XAML que vous faites confiance à l’assembly dans son ensemble. Dans la plupart des cas, vous ne sont concernés par les aspects d’approbation du XAML libre, qui est une source XAML que vous chargez à partir d’un flux de données ou autres e/s. XAML libre n’est pas un composant spécifique ou une fonctionnalité d’un modèle d’application avec une infrastructure de l’empaquetage et le déploiement. Toutefois, un assembly peut implémenter un comportement impliquant le chargement de XAML libre.  
+ XAML compilé ou stocké en tant qu’un `resx`-ressource de type dans un assembly approuvé et signé n’est pas fondamentalement non fiable. Vous pouvez approuver le code XAML que vous faites confiance à l’assembly dans son ensemble. Dans la plupart des cas, vous ne sont concernés par les aspects d’approbation du XAML libre, qui est une source XAML que vous chargez à partir d’un flux de données ou d’autres d’e/s. XAML libre n’est pas un composant spécifique ou une fonctionnalité d’un modèle d’application avec une infrastructure de l’empaquetage et le déploiement. Toutefois, un assembly peut implémenter un comportement impliquant le chargement de XAML libre.  
   
  Pour XAML non approuvé, vous devez le traiter généralement le même comme s’il s’agissait de code non fiable. Utilisez le sandboxing ou autres métaphores pour empêcher des XAML non fiable d’accéder à votre code de confiance.  
   

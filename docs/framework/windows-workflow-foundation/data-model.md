@@ -1,26 +1,14 @@
 ---
-title: "Modèle de données Windows Workflow Foundation"
-ms.custom: 
+title: Modèle de données Windows Workflow Foundation
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - programming [WF], data model
 ms.assetid: d5752e51-cfc9-4499-af71-53b6daae9879
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: dffdadf9b6896e61dfa23c17ef4d17180be99259
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a13cb699be7428080bf53ec09828b47590488852
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-workflow-foundation-data-model"></a>Modèle de données Windows Workflow Foundation
 Le modèle de données Windows Workflow Foundation est composé de trois concepts : variables, arguments et expressions. Les variables représentent le stockage de données et les arguments représentent le flux de données à l'intérieur et à l'extérieur d'une activité. Les arguments sont liés (une valeur est affectée) à l’aide d’expressions qui peuvent référencer des variables.  

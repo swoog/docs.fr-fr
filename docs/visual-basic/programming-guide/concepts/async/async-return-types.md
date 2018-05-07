@@ -1,22 +1,12 @@
 ---
 title: Types de retour Async (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 07890291-ee72-42d3-932a-fa4d312f2c60
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 1a62556fb93a3d8547d880e4ea6770b206ead900
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0c6c02efd282f8581f3dc85905149acf7b3ea6ac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="async-return-types-visual-basic"></a>Types de retour Async (Visual Basic)
 Les méthodes Async ont trois types de retournés possibles : <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task>et void. En Visual Basic, le type de retour void est écrit sous forme de procédure [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md). Pour plus d’informations sur les méthodes async, consultez [programmation asynchrone avec Async et Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md).  
@@ -107,7 +97,7 @@ Async Function Task_MethodAsync() As Task
 End Function  
 ```  
   
- `Task_MethodAsync`est appelé et attendu à l’aide d’une instruction await au lieu d’une expression await, similaire à l’instruction d’appel pour synchrone `Sub` ou méthode retournant void. L’application d’un `Await` opérateur dans ce cas ne produit pas une valeur.  
+ `Task_MethodAsync` est appelé et attendu à l’aide d’une instruction await au lieu d’une expression await, similaire à l’instruction d’appel pour synchrone `Sub` ou méthode retournant void. L’application d’un `Await` opérateur dans ce cas ne produit pas une valeur.  
   
  Le code suivant appelle et attend la méthode `Task_MethodAsync`.  
   
@@ -281,7 +271,7 @@ End Sub
     End Class  
     ```  
   
-9. Appuyez sur la touche F5 pour exécuter le programme, puis choisissez le bouton **Démarrer** .  
+9. Appuyez sur la touche F5 pour exécuter le programme, puis choisissez le bouton **Démarrer**.  
   
      La sortie suivante doit s’afficher.  
   

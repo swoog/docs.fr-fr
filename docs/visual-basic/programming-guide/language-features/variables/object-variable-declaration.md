@@ -1,13 +1,6 @@
 ---
-title: "Déclaration des variables objets (Visual Basic)"
-ms.custom: 
+title: Déclaration des variables objets (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - early binding [Visual Basic]
 - declarations [Visual Basic], class
@@ -19,14 +12,11 @@ helpviewer_keywords:
 - declaring classes [Visual Basic]
 - late binding [Visual Basic]
 ms.assetid: 2a5a41a3-1aa8-4236-b1f0-2382af7bf715
-caps.latest.revision: "33"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: cdca188d778e9884f918d97eba492a29c64af826
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f5f77b81380d997e078a9f52ac4aae6f6e975575
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="object-variable-declaration-visual-basic"></a>Déclaration des variables objets (Visual Basic)
 Vous utilisez une instruction de déclaration normale pour déclarer une variable objet. Pour le type de données, vous spécifiez `Object` (autrement dit, le [Type de données d’objet](../../../../visual-basic/language-reference/data-types/object-data-type.md)) ou une classe plus spécifique à partir duquel l’objet doit être créé.  

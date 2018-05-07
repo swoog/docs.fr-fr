@@ -1,27 +1,16 @@
 ---
 title: Création de code XML dans Visual Basic
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - XML [Visual Basic], creating
 - LINQ to XML [Visual Basic], creating XML
 - XML literals [Visual Basic], creating
 ms.assetid: 8ae29ec5-e5fb-4137-9df5-60a288df7045
-caps.latest.revision: 24
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 029ff0a2120809fd4637de5910adaffa60e3b8a7
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 46f9174e78cc67c1e352d02ac6b5038f5da01086
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-xml-in-visual-basic"></a>Création de code XML dans Visual Basic
 Visual Basic vous permet d’utiliser *littéraux XML* directement dans votre code. La syntaxe de littéral XML représente [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objets et il est similaire à la syntaxe XML 1.0. Cela rend plus facile de créer par programmation des éléments, des documents et des fragments XML, car votre code possède la même structure que le XML final.  

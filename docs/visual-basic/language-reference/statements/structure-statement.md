@@ -1,11 +1,6 @@
 ---
 title: Structure, instruction
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Structure
 - Structure
@@ -17,14 +12,11 @@ helpviewer_keywords:
 - UDT (user-defined types)
 - types [Visual Basic], user-defined
 ms.assetid: 9bd1deea-2a89-4cdc-812c-6dcbb947c391
-caps.latest.revision: "28"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 43211bb10793acf3bfe0c1d7a35791114170ee7d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6a3626706b226b0be253fd35fa60b33a71b86007
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="structure-statement"></a>Structure, instruction
 Déclare le nom d’une structure et introduit la définition des variables, propriétés, événements et procédures contenus dans la structure.  
@@ -57,7 +49,7 @@ End Structure
 |`methodmemberdeclarations`|Facultatif. Zéro ou plusieurs déclarations de `Function`, `Operator`, `Property`, ou `Sub` procédures, qui servent de *membres de la méthode* de la structure.|  
 |`End Structure`|Obligatoire. Met fin à la `Structure` définition.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La `Structure` instruction définit un type valeur composite que vous pouvez personnaliser. A *structure* est une généralisation du type défini par l’utilisateur (UDT) des versions précédentes de Visual Basic. Pour plus d’informations, consultez [Structures](../../../visual-basic/programming-guide/language-features/data-types/structures.md).  
   
  Structures prennent en charge un grand nombre de ces fonctionnalités en tant que classes. Par exemple, les structures peuvent avoir des propriétés et des procédures, peuvent implémenter des interfaces et ont des constructeurs paramétrés. Toutefois, il existe des différences significatives entre les classes et structures dans des zones telles que l’héritage, les déclarations et d’utilisation. En outre, les classes sont des types référence et les structures sont des types valeur. Pour plus d’informations, consultez [Structures et Classes](../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md).  
@@ -74,7 +66,7 @@ End Structure
   
      Vous pouvez déclarer zéro ou plusieurs variables non partagées ou des événements non personnalisés non partagées dans une structure. Vous ne pouvez avoir uniquement des constantes, des propriétés et des procédures, même si certains d'entre eux sont non partagées.  
   
--   **Initialisation.** Impossible d’initialiser la valeur d’un membre de données non partagée d’une structure dans le cadre de sa déclaration. Vous devez initialiser le membre de données au moyen d’un constructeur paramétrable sur la structure, ou attribuer une valeur au membre après avoir créé une instance de la structure.  
+-   **initialisation.** Impossible d’initialiser la valeur d’un membre de données non partagée d’une structure dans le cadre de sa déclaration. Vous devez initialiser le membre de données au moyen d’un constructeur paramétrable sur la structure, ou attribuer une valeur au membre après avoir créé une instance de la structure.  
   
 -   **Héritage.** Une structure ne peut pas hériter d’un type autre que <xref:System.ValueType>, à partir de laquelle toutes les structures héritent. En particulier, une structure ne peut pas hériter d’une autre.  
   

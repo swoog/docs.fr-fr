@@ -1,37 +1,25 @@
 ---
-title: "Différences de validation des certificats entre HTTPS, SSL sur TCP et la sécurité SOAP"
-ms.custom: 
+title: Différences de validation des certificats entre HTTPS, SSL sur TCP et la sécurité SOAP
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - certificates [WCF], validation differences
 ms.assetid: 953a219f-4745-4019-9894-c70704f352e6
-caps.latest.revision: 
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 34be2fbc5b8148d7bfdeb5e5d07e5b73ac89a97e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 744d9208f6be47965b89ddd9555b99feab9e18b7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="certificate-validation-differences-between-https-ssl-over-tcp-and-soap-security"></a>Différences de validation des certificats entre HTTPS, SSL sur TCP et la sécurité SOAP
-Vous pouvez utiliser des certificats dans [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] avec la sécurité de couche de message (SOAP) en plus de la sécurité de couche de transport (TLS) sur HTTP (HTTPS) ou TCP. Cette rubrique décrit les différences dans la façon dont ces certificats sont validés.  
+Vous pouvez utiliser des certificats dans Windows Communication Foundation (WCF) avec la sécurité de la couche de message (SOAP) en plus de la sécurité de la couche transport (TLS) sur HTTP (HTTPS) ou TCP. Cette rubrique décrit les différences dans la façon dont ces certificats sont validés.  
   
 ## <a name="validation-of-https-client-certificates"></a>Validation des certificats clients HTTPS  
- Lors de l'utilisation du protocole HTTPS pour communiquer entre un client et un service, le certificat que le client utilise pour s'authentifier auprès du service doit prendre en charge l'approbation de chaîne. Autrement dit, il doit être chaîné à une autorité de certification racine approuvée. Dans le cas contraire, la couche HTTP lève une exception <xref:System.Net.WebException> avec le message "Le serveur distant a retourné une erreur : (403) Interdit". [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] revêt cette exception en tant qu'objet <xref:System.ServiceModel.Security.MessageSecurityException>.  
+ Lors de l'utilisation du protocole HTTPS pour communiquer entre un client et un service, le certificat que le client utilise pour s'authentifier auprès du service doit prendre en charge l'approbation de chaîne. Autrement dit, il doit être chaîné à une autorité de certification racine approuvée. Dans le cas contraire, la couche HTTP lève une exception <xref:System.Net.WebException> avec le message "Le serveur distant a retourné une erreur : (403) Interdit". WCF revêt cette exception comme un <xref:System.ServiceModel.Security.MessageSecurityException>.  
   
 ## <a name="validation-of-https-service-certificates"></a>Validation des certificats de service HTTPS  
  Lors de l'utilisation du protocole HTTPS pour communiquer entre un client et un service, le certificat avec lequel le serveur effectue l'authentification doit prendre en charge l'approbation de chaîne par défaut. Autrement dit, il doit être chaîné à une autorité de certification racine approuvée. Aucun contrôle en ligne n'est effectué pour voir si le certificat a été révoqué. Vous pouvez compenser ce comportement en enregistrant un rappel <xref:System.Net.Security.RemoteCertificateValidationCallback>, comme illustré dans le code ci-dessous.  

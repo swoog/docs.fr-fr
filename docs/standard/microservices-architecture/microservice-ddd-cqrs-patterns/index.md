@@ -1,21 +1,14 @@
 ---
 title: Lutte contre la complexité d’entreprise dans un microservice disposant des modèles DDD et CQRS
 description: Architecture des Microservices .NET pour les applications .NET en conteneur | Lutte contre la complexité d’entreprise dans un microservice disposant des modèles DDD et CQRS
-keywords: Docker, microservices, ASP.NET, conteneur
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 8098c62ac18593d8044d52cb24c4cd8859972e68
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: ef8e0b08c7ba4ddb78144df54d407998cd40fc55
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tackling-business-complexity-in-a-microservice-with-ddd-and-cqrs-patterns"></a>Lutte contre la complexité d’entreprise dans un microservice disposant des modèles DDD et CQRS
 

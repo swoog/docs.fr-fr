@@ -1,13 +1,6 @@
 ---
-title: "Inférence de type local (Visual Basic)"
-ms.custom: 
+title: Inférence de type local (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - local type inference
 - vb.TypeInfer
@@ -19,14 +12,11 @@ helpviewer_keywords:
 - inference [Visual Basic]
 - type inference [Visual Basic]
 ms.assetid: b8307f18-2e56-4ab3-a45a-826873f400f6
-caps.latest.revision: "43"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d753d1fbdc60f70dcf0513d809f28a112243c111
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b33b8b2d17c240e380377528d4f5d2f511381a7d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="local-type-inference-visual-basic"></a>Inférence de type local (Visual Basic)
 Le compilateur Visual Basic utilise *l’inférence de type* pour déterminer les types de données des variables locales déclarées sans un `As` clause. Le compilateur déduit le type de la variable du type de l’expression d’initialisation. Cela vous permet de déclarer des variables sans déclarer explicitement un type, comme illustré dans l’exemple suivant. À la suite les déclarations, les deux `num1` et `num2` sont fortement typées en tant qu’entiers.  
@@ -68,7 +58,7 @@ Le compilateur Visual Basic utilise *l’inférence de type* pour déterminer le
  [!code-vb[VbVbalrTypeInference#5](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_6.vb)]  
   
 ## <a name="option-infer"></a>Option Infer  
- `Option Infer`vous permet de que spécifier si l’inférence de type local est autorisée dans un fichier particulier. Pour activer ou bloquer l’option, tapez les instructions suivantes au début du fichier.  
+ `Option Infer` vous permet de que spécifier si l’inférence de type local est autorisée dans un fichier particulier. Pour activer ou bloquer l’option, tapez les instructions suivantes au début du fichier.  
   
  `Option Infer On`  
   

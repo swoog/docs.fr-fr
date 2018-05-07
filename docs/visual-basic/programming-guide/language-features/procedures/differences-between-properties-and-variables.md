@@ -1,12 +1,6 @@
 ---
-title: "Différences entre les propriétés et les variables en Visual Basic"
-ms.custom: 
+title: Différences entre les propriétés et les variables en Visual Basic
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - property values [Visual Basic]
 - variables [Visual Basic]
@@ -20,14 +14,11 @@ helpviewer_keywords:
 - variables [Visual Basic], and properties
 - properties [Visual Basic], and variables
 ms.assetid: 7a03a8be-5381-431f-bd7c-16e887e4e07b
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: cb30972e2b49a7005749f57c0223b9fa493cde52
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 126e4baa2752ba7ccb5e8ff7b06a44839c1d0af2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="differences-between-properties-and-variables-in-visual-basic"></a>Différences entre les propriétés et les variables en Visual Basic
 Variables et propriétés représentent les valeurs auxquelles vous pouvez accéder. Toutefois, il existe des différences dans le stockage et l’implémentation.  
@@ -46,7 +37,7 @@ Variables et propriétés représentent les valeurs auxquelles vous pouvez accé
 |Déclaration|Instruction de déclaration unique|Série d’instructions dans un bloc de code|  
 |Implémentation|Emplacement de stockage unique|Code exécutable (procédures de propriété)|  
 |Stockage|Directement associée à la valeur de la variable|Est généralement pas disponible en dehors de la classe ou le module conteneur de la propriété de stockage interne<br /><br /> Valeur de propriété peut ou peut ne pas exister en tant qu’un élément stocké <sup>1</sup>|  
-|Code exécutable|None|Doit avoir au moins une procédure|  
+|Code exécutable|Aucun|Doit avoir au moins une procédure|  
 |Accès en lecture et écriture|En lecture/écriture ou en lecture seule|En lecture/écriture, en lecture seule ou en écriture seule|  
 |Actions personnalisées (en plus l’acceptation ou le renvoi de valeur)|N’est pas possible|Peut être effectuée dans le cadre de la définition ou la récupération de valeur de propriété|  
   

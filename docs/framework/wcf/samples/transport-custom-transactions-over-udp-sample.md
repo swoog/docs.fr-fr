@@ -1,27 +1,15 @@
 ---
 title: 'Transport: Custom Transactions over UDP Sample'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6cebf975-41bd-443e-9540-fd2463c3eb23
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7e26d0c25879b3b1b6ed873543f051de989ddd92
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: e395300df4cd9917b9662d4bc3b1e8d50d82914d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transport-custom-transactions-over-udp-sample"></a>Transport: Custom Transactions over UDP Sample
-Cet exemple est basé sur le [Transport : UDP](../../../../docs/framework/wcf/samples/transport-udp.md) présenté dans le [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] [Transport extensibilité](../../../../docs/framework/wcf/samples/transport-extensibility.md). Il étend l'exemple UDP Transport afin de prendre en charge le flux de transactions personnalisé et présente l'utilisation de la propriété <xref:System.ServiceModel.Channels.TransactionMessageProperty>.  
+Cet exemple est basé sur le [Transport : UDP](../../../../docs/framework/wcf/samples/transport-udp.md) sample dans Windows Communication Foundation (WCF)[Transport extensibilité](../../../../docs/framework/wcf/samples/transport-extensibility.md). Il étend l'exemple UDP Transport afin de prendre en charge le flux de transactions personnalisé et présente l'utilisation de la propriété <xref:System.ServiceModel.Channels.TransactionMessageProperty>.  
   
 ## <a name="code-changes-in-the-udp-transport-sample"></a>Modifications du code dans l'exemple UDP Transport  
  Pour illustrer le flux de transactions, l'exemple modifie le contrat de service de `ICalculatorContract` afin qu'une portée de transaction soit requise pour `CalculatorService.Add()`. L'exemple ajoute également un paramètre `System.Guid` supplémentaire au contrat de l'opération `Add`. Ce paramètre permet de transmettre l’identificateur de la transaction cliente au service.  
@@ -269,7 +257,7 @@ if (transaction != null)
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à la page [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les exemples [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transactions\TransactionMessagePropertyUDPTransport`  
   

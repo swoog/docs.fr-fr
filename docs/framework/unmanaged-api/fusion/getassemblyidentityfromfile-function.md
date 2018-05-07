@@ -1,14 +1,6 @@
 ---
 title: GetAssemblyIdentityFromFile, fonction
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - GetAssemblyIdentityFromFile
 api_location:
@@ -24,17 +16,13 @@ helpviewer_keywords:
 ms.assetid: 2c32da53-76c7-4048-84d0-d05207333004
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 56d7fb4ee74e40ecd29ee276665ff43ab9fd56be
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5ea151417a1cb53104ec29fff1e76e21f82ec9bb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getassemblyidentityfromfile-function"></a>GetAssemblyIdentityFromFile, fonction
 Obtient un pointeur vers un `IUnknown` objet `IID` dans l’assembly sur le chemin d’accès de fichier spécifié.  
@@ -59,12 +47,12 @@ HRESULT GetAssemblyIdentityFromFile (
  `ppIdentity`  
  [out] Pointeur d’interface retourné.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Fusion.h  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  <<!--zzxref:IUnknown --> `IUnknown`>  

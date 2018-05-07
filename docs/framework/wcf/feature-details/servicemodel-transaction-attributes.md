@@ -1,31 +1,17 @@
 ---
 title: Attributs de transaction ServiceModel
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - transactions [WCF], ServiceModel attributes
 ms.assetid: 1e0d2436-6ae5-439b-9765-a448d6f60000
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: aac52f3c542f88adbca40c6cbbdddc734e12903b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 79d97eee328d816281348b5b15cf779e1ee65893
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="servicemodel-transaction-attributes"></a>Attributs de transaction ServiceModel
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] fournit des propriétés sur les trois attributs <xref:System.ServiceModel> standard qui vous permettent de configurer le comportement des transactions d'un service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] :  
+Windows Communication Foundation (WCF) fournit des propriétés sur trois standard <xref:System.ServiceModel> attributs qui vous permettent de configurer le comportement des transactions pour un service WCF :  
   
 -   <xref:System.ServiceModel.TransactionFlowAttribute>  
   
@@ -50,7 +36,7 @@ ms.lasthandoff: 12/22/2017
 -   <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionTimeout%2A> spécifie le délai dans lequel une nouvelle transaction créée au niveau du service doit s'exécuter. Si au terme de ce délai la transaction n'a pas été exécutée, elle échouera. <xref:System.TimeSpan> est utilisé comme délai d'attente <xref:System.Transactions.TransactionScope> pour les opérations dont <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> a la valeur `true` et pour lesquelles une nouvelle transaction a été créée. Le délai d’attente correspond à la durée maximale autorisée entre la création de la transaction et l’exécution de la phase 1 du protocole de validation en deux phases. La valeur du délai d'attente utilisée est toujours la valeur la plus petite entre la propriété <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionTimeout%2A> et le paramètre de configuration `transactionTimeout`.  
   
 ## <a name="operationbehaviorattribute"></a>OperationBehaviorAttribute  
- L'attribut <xref:System.ServiceModel.OperationBehaviorAttribute> spécifie les comportements des méthodes dans l'implémentation de service. Vous pouvez l'utiliser pour indiquer le comportement d'exécution spécifique de l'opération. Les propriétés de cet attribut n'affectent pas la description WSDL (Web Service Description Language) du contrat de service, et sont purement des éléments du modèle de programmation [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] qui activent des fonctions courantes que les développeurs devraient sinon implémenter eux-mêmes.  
+ L'attribut <xref:System.ServiceModel.OperationBehaviorAttribute> spécifie les comportements des méthodes dans l'implémentation de service. Vous pouvez l'utiliser pour indiquer le comportement d'exécution spécifique de l'opération. Propriétés de cet attribut n’affectent pas la description de Web Service Description Language (WSDL) du contrat de service et sont purement des éléments du modèle de programmation WCF qui permettent des fonctions courantes que les développeurs devraient sinon implémenter eux-mêmes.  
   
  Cet attribut a les propriétés spécifiques aux transactions suivantes :  
   

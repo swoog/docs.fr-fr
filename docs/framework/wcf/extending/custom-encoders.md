@@ -1,31 +1,17 @@
 ---
 title: Encodeurs personnalisés
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 90926fd334eb5ccef3a63f637d5273c408c0c13e
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 4f7b011b038714ee8349e74f6be270c85aed0a7b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-encoders"></a>Encodeurs personnalisés
 Cette rubrique décrit comment créer des encodeurs personnalisés.  
   
- Dans [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], vous utilisez un *liaison* pour spécifier comment transférer des données sur un réseau entre les points de terminaison. Une liaison est composée d’une séquence de *éléments de liaison*. Une liaison inclut des éléments de liaison de protocole facultatifs tels que de la sécurité, un *encodeur de Message* élément de liaison et un élément de liaison de transport requis. Un encodeur de message est représenté par un élément de liaison d’encodage de message. Trois encodeurs de message sont inclus dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] : Binary, MTOM (Message Transmission Optimization Mechanism) et Text.  
+ Dans Windows Communication Foundation (WCF), vous utilisez un *liaison* pour spécifier comment transférer des données sur un réseau entre les points de terminaison. Une liaison est composée d’une séquence de *éléments de liaison*. Une liaison inclut des éléments de liaison de protocole facultatifs tels que de la sécurité, un *encodeur de Message* élément de liaison et un élément de liaison de transport requis. Un encodeur de message est représenté par un élément de liaison d’encodage de message. Trois encodeurs de message sont inclus dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] : Binary, MTOM (Message Transmission Optimization Mechanism) et Text.  
   
  Un élément de liaison d'encodage de message sérialise un <xref:System.ServiceModel.Channels.Message> sortant et le passe au transport ou reçoit la forme sérialisée d'un message du transport et le transmet à la couche de protocole (si celle-ci est présente), ou à l'application (dans le cas contraire).  
   

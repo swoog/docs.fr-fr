@@ -1,30 +1,20 @@
 ---
-title: "Sécurité de message avec certificats mutuels"
-ms.custom: 
+title: Sécurité de message avec certificats mutuels
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 99d7a528-7ae4-4d39-a0f9-3066ea237de0
-caps.latest.revision: "18"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: a60af220bf962e523a35bc5b8d8abca041a9fd46
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1407593bf90b28a1890a8c18564b31d0aa67e0cd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-security-with-mutual-certificates"></a>Sécurité de message avec certificats mutuels
-Le scénario ci-dessous montre un service et un client [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] sécurisés à l'aide du mode de sécurité de message. Le client et le service sont authentifiés à l'aide de certificats.  
+Le scénario suivant illustre un service Windows Communication Foundation (WCF) et un client sécurisé à l’aide du mode de sécurité de message. Le client et le service sont authentifiés à l'aide de certificats.  
   
  Ce scénario est interopérable car il utilise WS-Security avec le profil de jeton de certificat X.509.  
   

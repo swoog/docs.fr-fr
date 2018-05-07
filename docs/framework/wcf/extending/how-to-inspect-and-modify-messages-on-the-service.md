@@ -1,30 +1,18 @@
 ---
-title: "Comment : inspecter et modifier des messages sur le service"
-ms.custom: 
+title: 'Comment : inspecter et modifier des messages sur le service'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9c5b1cc7-84f3-45f8-9226-d59c278e8c42
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 64d9ccf97533be6be0da5d1e23763e8174aead3c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ec1c60bc2b3e966c576de260dfe3b06a05ab84c0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-inspect-and-modify-messages-on-the-service"></a>Comment : inspecter et modifier des messages sur le service
-Vous pouvez inspecter ou modifier les messages entrants ou sortants sur un client [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] en implémentant un <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType> et en l'insérant dans l'exécution du service. Pour plus d’informations, consultez [extension des répartiteurs](../../../../docs/framework/wcf/extending/extending-dispatchers.md). La fonctionnalité équivalente sur le service est <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>.  
+Vous pouvez inspecter ou modifier les messages entrants ou sortants sur un client Windows Communication Foundation (WCF) en implémentant un <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType> et en l’insérant dans l’exécution du service. Pour plus d’informations, consultez [extension des répartiteurs](../../../../docs/framework/wcf/extending/extending-dispatchers.md). La fonctionnalité équivalente sur le service est <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>.  
   
 ### <a name="to-inspect-or-modify-messages"></a>Pour inspecter ou modifier des messages  
   

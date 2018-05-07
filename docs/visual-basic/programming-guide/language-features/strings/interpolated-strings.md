@@ -1,17 +1,13 @@
 ---
 title: Chaînes interpolées (Visual Basic)
 ms.date: 10/31/2017
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9501c052f387a522226e957193a8866083aa4233
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 95f79c5cdff1a48da2bb0eaf92229570ced631b1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interpolated-strings-visual-basic-reference"></a>Chaînes interpolées (référence Visual Basic)
 
@@ -61,7 +57,7 @@ Trois conversions de type implicite sont possibles à partir d’une chaîne int
 
    Il s’agit du résultat final d’une interprétation de chaîne. Toutes les occurrences d’accolades doubles (« {{ » et « }} ») sont converties en une seule accolade. 
 
-2. La conversion d’une chaîne interpolée en variable <xref:System.IFormattable> qui permet de créer plusieurs chaînes de résultats avec un contenu spécifique de la culture, à partir d’une seule instance <xref:System.IFormattable>. Ce type de conversion est utile pour inclure des éléments, tels que les formats numériques et les formats de date adaptés à une culture.  Toutes les occurrences d’accolades doubles (« {{ » et « }} ») sont conservées tant que vous ne mettez pas en forme la chaîne en appelant explicitement ou implicitement la méthode <xref:System.Object.ToString>.  Toutes les expressions d’interpolation contenues sont converties en {0}, {1}, etc.  
+2. La conversion d’une chaîne interpolée en variable <xref:System.IFormattable> qui permet de créer plusieurs chaînes de résultats avec un contenu spécifique de la culture, à partir d’une seule instance <xref:System.IFormattable>. Ce type de conversion est utile pour inclure des éléments, tels que les formats numériques et les formats de date adaptés à une culture.  Toutes les occurrences d’accolades doubles (« {{ » et « }} ») sont conservées tant que vous ne mettez pas en forme la chaîne en appelant explicitement ou implicitement la méthode <xref:System.Object.ToString>.  Toutes les expressions d’interpolation contenues sont converties en {0}, {1}, et ainsi de suite.  
 
    L’exemple suivant utilise la réflexion pour afficher les membres ainsi que les valeurs de champ et de propriété d’une variable <xref:System.IFormattable> créée à partir d’une chaîne interpolée. Il passe également la variable <xref:System.IFormattable> à la méthode <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType>.
 
@@ -71,13 +67,13 @@ Trois conversions de type implicite sont possibles à partir d’une chaîne int
 
 3. Conversion d’une chaîne interpolée un <xref:System.FormattableString> variable qui représente une chaîne de format composite. L’inspection de la chaîne de format composite et de son rendu sous forme de chaîne de résultat, peut, par exemple, vous aider à réduire les risques d’attaque par injection pendant la création d’une requête. A <xref:System.FormattableString> comprend également :
 
-      - A <xref:System.FormattableString.ToString> surcharge qui produit une chaîne de résultat pour le <xref:System.Globalization.CultureInfo.CurrentCulture>.
+      - Une surcharge <xref:System.FormattableString.ToString> qui produit une chaîne de résultat pour <xref:System.Globalization.CultureInfo.CurrentCulture>.
       
       - A <xref:System.FormattableString.Invariant%2A> méthode qui produit une chaîne pour le <xref:System.Globalization.CultureInfo.InvariantCulture>.
       
-      - A <xref:System.FormattableString.ToString(System.IFormatProvider)> méthode qui produit une chaîne de résultat d’une culture spécifiée. 
+      - Une méthode <xref:System.FormattableString.ToString(System.IFormatProvider)> qui produit une chaîne de résultat pour une culture spécifiée. 
   
-    Toutes les occurrences d’accolades (« {{ » et «}} ») sont conservées en deux accolades jusqu'à ce que vous mettez en forme.  Toutes les expressions d’interpolation contenues sont converties en {0}, {1}, etc.  
+    Toutes les occurrences d’accolades (« {{ » et «}} ») sont conservées en deux accolades jusqu'à ce que vous mettez en forme.  Toutes les expressions d’interpolation contenues sont converties en {0}, {1}, et ainsi de suite.  
 
    [!code-vb[interpolated-strings3](../../../../../samples/snippets/visualbasic/programming-guide/language-features/strings/interpolated-strings3.vb)]  
 

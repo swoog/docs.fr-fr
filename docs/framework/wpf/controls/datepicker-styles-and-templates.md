@@ -1,13 +1,6 @@
 ---
-title: "Styles et modèles DatePicker"
-ms.custom: 
+title: Styles et modèles DatePicker
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ControlTemplate [WPF], DatePicker
 - DatePicker [WPF], styles and templates
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - styles [WPF], DatePicker
 - states [WPF], DatePicker
 ms.assetid: c430a657-692f-44bd-a549-2341f92d6115
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4683ebd66afb2d4ac5bfa615336787c4006b4335
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5123cf0ef78d46f5cec30109a34c17eaabe13b38
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="datepicker-styles-and-templates"></a>Styles et modèles DatePicker
 Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Controls.DatePicker> contrôle. Vous pouvez modifier la valeur par défaut <xref:System.Windows.Controls.ControlTemplate> pour donner une apparence unique au contrôle. Pour plus d’informations, consultez [Personnalisation de l’apparence d’un contrôle existant en créant un ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  

@@ -1,24 +1,12 @@
 ---
-title: "Procédure : mise à jour dynamique"
-ms.custom: 
+title: 'Procédure : mise à jour dynamique'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9b8f6e0d-edab-4a7e-86e3-8c66bebc64bb
-caps.latest.revision: "4"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 748286b4f6fa22b23423ff5c176c76d11fbe742d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 891caf2570ea4f843f20f95ac347b66ef84569f9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-dynamic-update"></a>Procédure : mise à jour dynamique
 Cette rubrique présente les étapes de base nécessaires pour créer et mettre à jour de manière dynamique la configuration de routage. Dans cet exemple, la configuration de routage initiale provient du fichier de configuration et route tous les messages vers le service de calculatrice regularCalc, mais elle est ensuite mise à jour par programme pour modifier le point de terminaison de destination du service roundingCalc.  

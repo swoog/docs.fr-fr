@@ -1,22 +1,12 @@
 ---
-title: "Comment : utiliser des arborescences d’Expression pour générer des requêtes dynamiques (Visual Basic)"
-ms.custom: 
+title: 'Comment : utiliser des arborescences d’Expression pour générer des requêtes dynamiques (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 16278787-7532-4b65-98b2-7a412406c4ee
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d09f89b0b49118d575690f577c77c5c3d2a76e92
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a2101598a083f8d0738cb531ebbaea0f7a87a577
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-expression-trees-to-build-dynamic-queries-visual-basic"></a>Comment : utiliser des arborescences d’Expression pour générer des requêtes dynamiques (Visual Basic)
 Dans LINQ, des arborescences d’expressions sont utilisées pour représenter des requêtes structurées qui ciblent des sources de données qui implémentent <xref:System.Linq.IQueryable%601>. Par exemple, le fournisseur LINQ implémente l’interface <xref:System.Linq.IQueryable%601> pour interroger des magasins de données relationnelles. Le compilateur Visual Basic compile les requêtes qui ciblent ces sources de données dans le code qui génère une arborescence d’expression lors de l’exécution. Le fournisseur de requêtes peut ensuite parcourir la structure de données de l’arborescence d’expressions et la traduire en un langage de requête qui convienne à la source de données.  

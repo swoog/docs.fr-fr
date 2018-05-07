@@ -1,10 +1,6 @@
 ---
-title: "Liste des types de données (Visual Basic)"
+title: Liste des types de données (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Boolean data type [Visual Basic], supported types in Visual Basic
 - storage [Visual Basic], order of storage
@@ -41,14 +37,11 @@ helpviewer_keywords:
 - storage order, controlling in Visual Basic
 - data types [Visual Basic], memory requirements
 ms.assetid: e975cdb6-64d8-4a4a-ae27-f3b3ed198ae0
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: f69a112718eed7bb7baaff9bdffd110865c21081
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8afeba3f88c4bfe6e1c9777f950c3b458665e340
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-type-summary-visual-basic"></a>Liste des types de données (Visual Basic)
 Le tableau suivant montre les types de données Visual Basic, leurs types du common language runtime prise en charge, leur allocation de stockage nominal et leur plage de valeurs.  
@@ -63,11 +56,11 @@ Le tableau suivant montre les types de données Visual Basic, leurs types du com
 |[Double](../../../visual-basic/language-reference/data-types/double-data-type.md) (à virgule flottante double précision)|<xref:System.Double>|8 octets|-1, 79769313486231570E + 308 à - 4, 94065645841246544E-324 <sup>†</sup> pour les valeurs négatives ;<br /><br /> 4, 94065645841246544E-324 à 1, 79769313486231570E + 308 <sup>†</sup> pour les valeurs positives|  
 |[Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md)|<xref:System.Int32>|4 octets|2,147,483,648 et 2 147 483 647 (signé)|  
 |[Long](../../../visual-basic/language-reference/data-types/long-data-type.md) (entier long)|<xref:System.Int64>|8 octets|-9,223,372,036,854,775,808 à 9,223,372,036,854,775,807 (9.2... E + 18 <sup>†</sup>) (signé)|  
-|[Objet](../../../visual-basic/language-reference/data-types/object-data-type.md)|<xref:System.Object>(classe)|4 octets sur une plateforme 32 bits<br /><br /> 8 octets sur une plateforme 64 bits|N’importe quel type peut être stocké dans une variable de type`Object`|  
+|[Objet](../../../visual-basic/language-reference/data-types/object-data-type.md)|<xref:System.Object> (classe)|4 octets sur une plateforme 32 bits<br /><br /> 8 octets sur une plateforme 64 bits|N’importe quel type peut être stocké dans une variable de type `Object`|  
 |[SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|<xref:System.SByte>|1 octet|-128 à 127 (signé)|  
 |[Short](../../../visual-basic/language-reference/data-types/short-data-type.md) (entier court)|<xref:System.Int16>|2 octets|-32 768 à 32 767 (signé)|  
 |[Seul](../../../visual-basic/language-reference/data-types/single-data-type.md) (à virgule flottante simple précision)|<xref:System.Single>|4 octets|-3,4028235E + 38 à - 1, 401298E-45 <sup>†</sup> pour les valeurs négatives ;<br /><br /> 1, 401298E-45 et 3,4028235E + 38 <sup>†</sup> pour les valeurs positives|  
-|[Chaîne](../../../visual-basic/language-reference/data-types/string-data-type.md) (de longueur variable)|<xref:System.String>(classe)|Dépend de la mise en œuvre de la plateforme|0 à environ 2 milliards de caractères Unicode|  
+|[Chaîne](../../../visual-basic/language-reference/data-types/string-data-type.md) (de longueur variable)|<xref:System.String> (classe)|Dépend de la mise en œuvre de la plateforme|0 à environ 2 milliards de caractères Unicode|  
 |[UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|<xref:System.UInt32>|4 octets|0 à 4 294 967 295 (non signé)|  
 |[ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md)|<xref:System.UInt64>|8 octets|0 et 18,446,744,073,709,551,615 (1.8... E + 19 <sup>†</sup>) (non signé)|  
 |[Défini par l’utilisateur](../../../visual-basic/language-reference/data-types/user-defined-data-type.md) (structure)|(hérite de <xref:System.ValueType>)|Dépend de la mise en œuvre de la plateforme|Chaque membre de la structure a une plage déterminée par son type de données et indépendante des plages des autres membres|  

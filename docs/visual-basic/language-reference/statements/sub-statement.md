@@ -1,12 +1,6 @@
 ---
 title: Sub, instruction (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Sub
 helpviewer_keywords:
@@ -35,14 +29,11 @@ helpviewer_keywords:
 - ByVal keyword [Visual Basic], Sub statements
 - Visual Basic code, Sub procedures
 ms.assetid: e347d700-d06c-405b-b302-e9b1edb57dfc
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 0a2d0d5ffdca857a3a5ca58cd38b0930f254526f
-ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
+ms.openlocfilehash: 9a806f2ec979699f7ccf4012c6477bee11301b0f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sub-statement-visual-basic"></a>Sub, instruction (Visual Basic)
 Déclare le nom, paramètres et le code qui définissent une `Sub` procédure.  
@@ -172,13 +163,13 @@ End Sub
   
      Termine la définition de cette procédure.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Tout le code exécutable doit être à l’intérieur d’une procédure. Utilisez un `Sub` procédure lorsque vous ne souhaitez pas retourner une valeur au code appelant. Utilisez un `Function` procédure lorsque vous souhaitez retourner une valeur.  
   
 ## <a name="defining-a-sub-procedure"></a>Définition d’une procédure Sub  
  Vous pouvez définir un `Sub` procédure uniquement au niveau du module. Le contexte de déclaration pour une procédure sub doit, par conséquent, être une classe, une structure, un module ou une interface et ne peut pas être un fichier source, un espace de noms, une procédure ou un bloc. Pour plus d’informations, consultez [Contextes de déclaration et niveaux d’accès par défaut](declaration-contexts-and-default-access-levels.md).  
   
- `Sub`les procédures par défaut d’un accès public. Vous pouvez ajuster leurs niveaux d’accès à l’aide des modificateurs d’accès.  
+ `Sub` les procédures par défaut d’un accès public. Vous pouvez ajuster leurs niveaux d’accès à l’aide des modificateurs d’accès.  
   
  Si la procédure utilise le `Implements` (mot clé), la classe ou la structure conteneur doit avoir un `Implements` instruction qui suit immédiatement sa `Class` ou `Structure` instruction. Le `Implements` instruction doit inclure chaque interface spécifiée dans `implementslist`. Toutefois, le nom par lequel une interface définit les `Sub` (dans `definedname`) ne doit pas nécessairement correspondre au nom de cette procédure (dans `name`).  
   
@@ -214,7 +205,7 @@ End Sub
   
  Vous pouvez également marquer un [Function, instruction](function-statement.md) avec la `Async` modificateur. Un `Async` fonction peut avoir un type de retour de <xref:System.Threading.Tasks.Task%601> ou <xref:System.Threading.Tasks.Task>. Un exemple plus loin dans cette rubrique montre un `Async` fonction qui a un type de retour de <xref:System.Threading.Tasks.Task%601>.  
   
- `Async``Sub` procédures sont principalement utilisés pour les gestionnaires d’événements, où une valeur ne peut pas être retournée. Un `Async``Sub` procédure ne peut pas être attendue et que l’appelant d’une `Async``Sub` procédure ne peut pas intercepter des exceptions qui le `Sub` lève une exception de la procédure.  
+ `Async` `Sub` les procédures sont principalement utilisées pour les gestionnaires d’événements, où une valeur ne peut pas être retournée. Un `Async``Sub` procédure ne peut pas être attendue et que l’appelant d’une `Async``Sub` procédure ne peut pas intercepter des exceptions qui le `Sub` lève une exception de la procédure.  
   
  Un `Async` procédure ne peut pas déclarer de [ByRef](../modifiers/byref.md) paramètres.  
   

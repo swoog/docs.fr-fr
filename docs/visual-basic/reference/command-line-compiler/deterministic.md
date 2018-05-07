@@ -1,25 +1,21 @@
 ---
-title: -déterministe
+title: -deterministic
 ms.date: 04/11/2018
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - deterministic compiler option [Visual Basic]
 - -deterministic compiler option [Visual Basic]
 - -deterministic compiler option [Visual Basic]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 273abf8811f04cd7f58599ce3421ca1f17c740d9
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: ffb1d27f614afc3b07f9d663831fc2071535236f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="-deterministic"></a>-déterministe
+# <a name="-deterministic"></a>-deterministic
 
-Indique au compilateur de produire un assembly dont la sortie octet est identique sur les compilations pour des entrées identiques. 
+Indique au compilateur de générer un assembly dont la sortie octet-pour-octet est identique dans les compilations pour les entrées identiques. 
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,31 +25,31 @@ Indique au compilateur de produire un assembly dont la sortie octet est identiqu
 
 ## <a name="remarks"></a>Notes
 
-Par défaut, les résultats de la compilation à partir d’un ensemble donné d’entrées est unique, étant donné que le compilateur ajoute un horodateur et un GUID qui est généré à partir de nombres aléatoires. Vous utilisez la `-deterministic` option pour générer un *assembly déterministe*, dont le contenu binaire est identique entre les compilations tant que l’entrée reste le même.
+Par défaut, le résultat de la compilation d’un ensemble défini d’entrées est unique, étant donné que le compilateur ajoute un horodatage et un GUID qui est généré à partir de nombres aléatoires. Utilisez l’option `-deterministic` pour générer un *assembly déterministe*, dont le contenu binaire sera identique dans les compilations tant que l’entrée restera la même.
 
-Le compilateur considère les entrées suivantes à des fins de déterminisme :
+Le compilateur considère les entrées suivantes à des fins déterministes :
 
-- La séquence de paramètres de ligne de commande.
-- Le contenu du fichier de réponse du compilateur .rsp.
-- La version précise du compilateur utilisé et ses assemblys référencés.
-- Le chemin du répertoire actuel.
-- Le contenu binaire de tous les fichiers explicitement passé au compilateur directement ou indirectement, y compris : 
+- La séquence des paramètres de ligne de commande.
+- Le contenu du fichier réponse .rsp du compilateur.
+- La version précise du compilateur utilisée et ses assemblys référencés.
+- Le chemin de répertoire actif.
+- Le contenu binaire de tous les fichiers explicitement passés au compilateur directement ou indirectement, notamment : 
     - Fichiers sources
-    - assemblys référencés
+    - Assemblys référencés
     - Modules référencés
     - Ressources
-    - Le fichier de clé de nom fort
-    - @ fichiers réponse
+    - Fichier de clé de nom fort
+    - Fichiers réponse @
     - Analyseurs
-    - Groupes de règles
-    - Fichiers supplémentaires qui peuvent être utilisées par des analyseurs
-- La culture actuelle (pour le langage dans lequel les tests de diagnostic et exception messages sont produites).
-- L’encodage par défaut (ou la page de codes en cours) si l’encodage n’est pas spécifié.
-- L’existence, la non existence et le contenu des fichiers sur les chemins de recherche du compilateur (spécifié, par exemple, en `/lib` ou `/recurse`).
-- La plateforme CLR sur lequel est exécuté le compilateur.
-- La valeur de `%LIBPATH%`, qui peut affecter le chargement de dépendance analyzer.
+    - Ensembles de règles
+    - Autres fichiers susceptibles d’être utilisés par les analyseurs
+- La culture actuelle (pour le langage dans lequel les diagnostics et les messages d’exception sont produits).
+- L’encodage par défaut (ou la page de codes active) si l’encodage n’est pas spécifié.
+- L’existence, la non-existence et le contenu des fichiers sur les chemins de recherche du compilateur (spécifiés, par exemple, par `/lib` ou `/recurse`).
+- La plateforme CLR sur laquelle est exécuté le compilateur.
+- La valeur de `%LIBPATH%`, qui peut affecter le chargement des dépendances de l’analyseur.
 
-Lorsque les sources sont accessibles, compilation déterministe peut servir pour établir si un fichier binaire est compilé à partir d’une source approuvée. Il peut également être utile dans un système de build en continu pour déterminer si les étapes de génération qui sont dépendantes des modifications apportées à un fichier binaire doivent être exécutée. 
+Quand les sources sont accessibles à tous, la compilation déterministe peut servir à établir si un fichier binaire est compilé à partir d’une source approuvée. Il peut aussi être utile dans un système de génération en continu pour déterminer si les étapes de génération qui sont dépendantes des changements apportés à un binaire doivent être exécutées. 
 
 ## <a name="see-also"></a>Voir aussi
 [Compilateur de ligne de commande de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  

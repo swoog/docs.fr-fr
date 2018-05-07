@@ -1,12 +1,6 @@
 ---
-title: "Énumérations et qualification de noms (Visual Basic)"
-ms.custom: 
+title: Énumérations et qualification de noms (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - declarations [Visual Basic], enumerations
 - Imports statement [Visual Basic], namespace declarations
@@ -23,14 +17,11 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], naming conflicts
 - declarations [Visual Basic], namespaces
 ms.assetid: 08ba2738-df52-4140-bc55-f57c871c9b73
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 3cb97d6a8f4b7e81f2b759010214e200ec63ff21
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: eb1f5653d968e81168833cd57813219e8f049b70
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="enumerations-and-name-qualification-visual-basic"></a>Énumérations et qualification de noms (Visual Basic)
 Normalement, lorsque vous faites référence à un membre d’une énumération, vous devez qualifier le nom du membre avec le nom de l’énumération. Par exemple, pour faire référence à la `Sunday` membre de votre `Days` énumération, vous utilisez la syntaxe suivante :  
@@ -46,7 +37,7 @@ Normalement, lorsque vous faites référence à un membre d’une énumération,
   
  [!code-vb[VbEnumsTask#24](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enumerations-and-name-qualification_3.vb)]  
   
- En organisant les ensembles de constantes connexes dans les énumérations, vous pouvez utiliser les mêmes noms de constantes dans des contextes différents. Par exemple, vous pouvez utiliser les mêmes noms pour les constantes de jour de la semaine dans la `Days` et `WorkDays` énumérations. Si vous utilisez la `Imports` instruction avec vos énumérations, vous devez veiller à éviter les références ambiguës. Prenons l'exemple suivant :  
+ En organisant les ensembles de constantes connexes dans les énumérations, vous pouvez utiliser les mêmes noms de constantes dans des contextes différents. Par exemple, vous pouvez utiliser les mêmes noms pour les constantes de jour de la semaine dans la `Days` et `WorkDays` énumérations. Si vous utilisez la `Imports` instruction avec vos énumérations, vous devez veiller à éviter les références ambiguës. Prenons l'exemple suivant :  
   
  [!code-vb[VbEnumsTask#22](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enumerations-and-name-qualification_2.vb)]  
   

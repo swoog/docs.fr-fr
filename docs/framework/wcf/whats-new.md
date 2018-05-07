@@ -1,32 +1,18 @@
 ---
 title: Ce que&#39;nouveauté dans Windows Communication Foundation 4.5
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - WCF [WCF], what's new
 - Windows Communication Foundation [WCF], what's new
 ms.assetid: 7e93fe73-af93-46b5-9f63-32f761ee40cf
-caps.latest.revision: 35
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3ca03c4529588964abe2d0d434bfd47b005e8d26
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
-ms.translationtype: MT
+ms.openlocfilehash: 1d4ac2fe884a3c6696dc70ea2de9967a23fc6605
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="what39s-new-in-windows-communication-foundation-45"></a>Ce que&#39;nouveauté dans Windows Communication Foundation 4.5
-Cette rubrique présente les nouvelles fonctionnalités de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].  
+Cette rubrique présente les fonctionnalités nouvelles de Windows Communication Foundation (WCF).  
   
 ## <a name="wcf-simplification-features"></a>Fonctionnalités de simplification de WCF  
  Beaucoup de travail a été effectué pour faciliter le développement et la gestion des applications WCF 4.5. Pour plus d’informations, consultez [fonctionnalités de Simplification de WCF](../../../docs/framework/wcf/wcf-simplification-features.md).  
@@ -87,7 +73,7 @@ Cette rubrique présente les nouvelles fonctionnalités de [!INCLUDE[indigo1](..
  Pour aider les développeurs de services WCF nouveaux et existants à configurer leurs services, l'Éditeur XML de Visual Studio fournit maintenant des info-bulles pour chaque élément de configuration et ses propriétés qui fait partie du fichier de configuration du service.  
   
 ## <a name="configuring-wcf-services-in-code"></a>Configuration de services WCF dans le code  
- [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] permet aux développeurs de configurer des services dans les fichiers de configuration ou du code.  Les fichiers de configuration sont utiles lorsqu'un service doit être configuré après avoir été déployé. Lorsqu'il utilise des fichiers de configuration, un professionnel de l'informatique doit uniquement mettre à jour le fichier de configuration, aucune recompilation n'est nécessaire. Les fichiers de configuration, toutefois, peuvent être complexes et difficiles à gérer. Il n'existe aucune prise en charge du débogage de fichiers de configuration et les éléments de configuration sont référencés par des noms. La création de fichiers de configuration est donc susceptible d'engendrer des erreurs et difficile. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] vous permet également de configurer des services dans le code. Dans les versions antérieures de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] (4.0 ou version antérieure) configurer des services dans le code était simple dans les scénarios auto-hébergés ; la classe <xref:System.ServiceModel.ServiceHost> vous autorisait à configurer les points de terminaison et les comportements avant d'appeler ServiceHost.Open. Dans les scénarios hébergés sur le Web, toutefois, vous n'avez pas accès à la classe <xref:System.ServiceModel.ServiceHost>. Pour configurer un service hébergé sur le Web vous deviez créer un `System.ServiceModel.ServiceHostFactory` qui créait le <xref:System.ServiceModel.Activation.ServiceHostFactory> et effectuait la configuration nécessaire. Depuis le .NET 4.5, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] offre un moyen plus simple de configurer des services auto-hébergés et hébergés sur le Web dans le code. Pour plus d’informations, consultez [configuration des Services WCF dans le Code](../../../docs/framework/wcf/configuring-wcf-services-in-code.md).  
+ Windows Communication Foundation (WCF) permet aux développeurs de configurer les services à l’aide de fichiers de configuration ou de code.  Les fichiers de configuration sont utiles lorsqu'un service doit être configuré après avoir été déployé. Lorsqu'il utilise des fichiers de configuration, un professionnel de l'informatique doit uniquement mettre à jour le fichier de configuration, aucune recompilation n'est nécessaire. Les fichiers de configuration, toutefois, peuvent être complexes et difficiles à gérer. Il n'existe aucune prise en charge du débogage de fichiers de configuration et les éléments de configuration sont référencés par des noms. La création de fichiers de configuration est donc susceptible d'engendrer des erreurs et difficile. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] vous permet également de configurer des services dans le code. Dans les versions antérieures de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] (4.0 ou version antérieure) configurer des services dans le code était simple dans les scénarios auto-hébergés ; la classe <xref:System.ServiceModel.ServiceHost> vous autorisait à configurer les points de terminaison et les comportements avant d'appeler ServiceHost.Open. Dans les scénarios hébergés sur le Web, toutefois, vous n'avez pas accès à la classe <xref:System.ServiceModel.ServiceHost>. Pour configurer un service hébergé sur le Web vous deviez créer un `System.ServiceModel.ServiceHostFactory` qui créait le <xref:System.ServiceModel.Activation.ServiceHostFactory> et effectuait la configuration nécessaire. Depuis le .NET 4.5, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] offre un moyen plus simple de configurer des services auto-hébergés et hébergés sur le Web dans le code. Pour plus d’informations, consultez [configuration des Services WCF dans le Code](../../../docs/framework/wcf/configuring-wcf-services-in-code.md).  
   
 ## <a name="channelfactory-caching"></a>Mise en cache de ChannelFactory  
  Les applications clientes WCF utilisent la classe <xref:System.ServiceModel.ChannelFactory%601> pour créer un canal de communication avec un service WCF.  La création d'instances <xref:System.ServiceModel.ChannelFactory%601> entraîne une certaine charge, car elle comporte les opérations suivantes :  

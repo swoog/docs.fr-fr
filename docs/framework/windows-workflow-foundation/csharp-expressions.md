@@ -1,24 +1,12 @@
 ---
 title: Expressions C#
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 29110be7-f4e3-407e-8dbe-78102eb21115
-caps.latest.revision: 5
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 32fb7be6f8c465994b40814a94efd95d42a481da
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: fa6ffd3b1828db03fd6850d4904aee2339df7f31
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="c-expressions"></a>Expressions C#
 En commençant par [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], les expressions c# sont prises en charge dans Windows Workflow Foundation (WF). Les nouveaux projets de workflow en C# créés dans [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] qui ciblent le [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] utilisent les expressions C# et les projets de workflow en Visual Basic utilisent les expressions Visual Basic. Les projets de workflow [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] qui utilisent des expressions Visual Basic peuvent être migrés vers [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] indépendamment du langage de projet et sont pris en charge. Cette rubrique fournit une vue d'ensemble des expressions C# dans [!INCLUDE[wf1](../../../includes/wf1-md.md)].  

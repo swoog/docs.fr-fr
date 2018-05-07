@@ -1,11 +1,6 @@
 ---
 title: -win32manifest (Visual Basic)
 ms.date: 03/13/2018
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - /win32manifest compiler option [Visual Basic]
 - win32manifest compiler option [Visual Basic]
@@ -13,11 +8,11 @@ helpviewer_keywords:
 ms.assetid: 9e3191b4-90db-41c8-966a-28036fd20005
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 901ea984a8e8e90329953a8936e68f2fc07f8847
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: f81b578c5ee3ffd830cef237fba2272eecd07642
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-win32manifest-visual-basic"></a>-win32manifest (Visual Basic)
 Identifie un fichier manifeste d'application Win32 défini par l'utilisateur à incorporer dans le fichier exécutable portable (PE) d'un projet.  
@@ -48,7 +43,7 @@ Identifie un fichier manifeste d'application Win32 défini par l'utilisateur à 
   
 2.  Vous fournissez un manifeste personnalisé qui ne spécifie pas le niveau d’exécution requis.  
   
- Visual Studio crée le fichier .manifest par défaut et le stocke dans les répertoires debug et release en même temps que le fichier exécutable. Vous pouvez afficher ou modifier le fichier App.manifest par défaut en cliquant sur **afficher les paramètres UAC** sur la **Application** onglet dans le Concepteur de projet. Pour plus d’informations, consultez [Page Application, Concepteur de projets (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
+ Visual Studio crée un fichier .manifest par défaut et le stocke dans les répertoires de débogage et de mise en production avec le fichier exécutable. Vous pouvez afficher ou modifier le fichier App.manifest par défaut en cliquant sur **afficher les paramètres UAC** sur la **Application** onglet dans le Concepteur de projet. Pour plus d’informations, consultez [Page Application, Concepteur de projets (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
   
  Vous pouvez fournir le manifeste d’application comme une étape post-build personnalisée ou en tant que partie d’un fichier de ressources Win32 à l’aide de la `-nowin32manifest` option. Utilisez cette même option pour que votre application soit soumise à la virtualisation des fichiers ou des registres dans Windows Vista. Cela empêchera le compilateur de créer et d’incorporer un manifeste par défaut dans le fichier PE.  
   

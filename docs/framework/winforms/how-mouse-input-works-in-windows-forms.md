@@ -1,27 +1,15 @@
 ---
-title: "Fonctionnement des entrées de la souris dans les Windows Forms"
-ms.custom: 
+title: Fonctionnement des entrées de la souris dans les Windows Forms
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms, mouse input
 - mouse [Windows Forms], input
 ms.assetid: 48fc5240-75a6-44bf-9fce-6aa21b49705a
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 388fd8d3e7f23dc55d46c5a097be99e9f1c34ab0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 265693eef3008362994ad04d9faaf8e20554d13e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-mouse-input-works-in-windows-forms"></a>Fonctionnement des entrées de la souris dans les Windows Forms
 Recevoir et traiter l’entrée de la souris sont une partie importante de toutes les applications Windows. Vous pouvez gérer les événements de souris pour effectuer une action dans votre application, ou utiliser les informations d’emplacement de la souris pour effectuer un test de positionnement ou d’autres actions. En outre, vous pouvez modifier la manière dont les contrôles de votre application gèrent les entrées de la souris. Cette rubrique décrit ces événements de souris en détail, et comment obtenir et modifier les paramètres de système de la souris. Pour plus d’informations sur les données fournies avec la souris sont déclenchés les événements et l’ordre dans lequel les événements de clic de souris, consultez [les événements de souris dans les Windows Forms](../../../docs/framework/winforms/mouse-events-in-windows-forms.md).  

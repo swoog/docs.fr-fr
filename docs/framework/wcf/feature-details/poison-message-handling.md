@@ -1,36 +1,22 @@
 ---
 title: Gestion des messages incohérents
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-caps.latest.revision: 29
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6fa35209b2dafc088605848a0dc96a53a2813dfd
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: b860e239d001a03da191d73de2f7b53e7073c7a6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="poison-message-handling"></a>Gestion des messages incohérents
 A *message incohérent* est un message qui a dépassé le nombre maximal de tentatives de remise à l’application. Cette situation peut survenir lorsqu'une application basée sur file d'attente ne peut pas traiter un message car des erreurs se sont produites. Pour faire face aux demandes de fiabilité, une application en file d'attente reçoit des messages sous une transaction. L'abandon de la transaction dans laquelle un message en file d'attente a été reçu laisse le message dans la file d'attente afin qu'une nouvelle tentative de remise puisse être effectuée sous une nouvelle transaction. Si le problème qui a provoqué l'abandon de la transaction n'est pas résolu, l'application réceptrice peut être bloquée dans une réception et un abandon en boucle du même message jusqu'à ce que le nombre maximal de tentatives de remise soit dépassé et qu'un message incohérent soit généré.  
   
  Un message peut devenir incohérent pour de nombreuses raisons. Les raisons les plus courantes sont spécifiques à l'application. Par exemple, si une application lit un message à partir d'une file d'attente et exécute un traitement de base de données, il est possible qu'elle ne parvienne pas à obtenir un verrou sur la base de données, provoquant ainsi l'abandon de la transaction. Parce que la transaction de base de données a été abandonnée, le message reste dans la file d'attente, ce qui conduit l'application à relire le message une deuxième fois et à tenter de nouveau d'acquérir un verrou sur la base de données. Les messages peuvent également devenir incohérents s'ils contiennent des informations non valides. Par exemple, une commande fournisseur peut contenir un numéro de client non valide. Dans ces cas-là, l'application peut abandonner volontairement la transaction et forcer le message à devenir un message incohérent.  
   
- Dans de rares occasions, des messages peuvent ne pas être distribués à l'application. La couche [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] peut détecter un problème au niveau du message, par exemple une trame incorrecte, des informations d'identification de message non valides jointes au message ou un en-tête d'action non valide. Dans ces cas-là, l'application ne reçoit jamais le message ; toutefois, ce dernier peut encore devenir un message incohérent et être traité manuellement.  
+ Dans de rares occasions, des messages peuvent ne pas être distribués à l'application. La couche de Windows Communication Foundation (WCF) peut détecter un problème avec le message, par exemple si le message a une trame incorrecte, informations d’identification de message non valide est attaché, ou un en-tête d’action non valide. Dans ces cas-là, l'application ne reçoit jamais le message ; toutefois, ce dernier peut encore devenir un message incohérent et être traité manuellement.  
   
 ## <a name="handling-poison-messages"></a>Gestion des messages incohérents  
- Dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], la gestion des messages incohérents fournit un mécanisme permettant à une application de réception de gérer les messages qui ne peuvent pas être distribués à l'application ou les messages distribués à l'application mais non traités pour des raisons spécifiques à l'application. La gestion des messages incohérents est configurée par les propriétés suivantes dans chacune des liaisons en file d'attente disponibles :  
+ Dans WCF, gestion des messages incohérents fournit un mécanisme pour une application de réception afin de traiter les messages qui ne peuvent pas être distribués à l’application ou les messages qui sont distribués à l’application mais non être traité en raison de l’application spécifique raisons. La gestion des messages incohérents est configurée par les propriétés suivantes dans chacune des liaisons en file d’attente disponibles :  
   
 -   `ReceiveRetryCount`. Valeur entière qui indique le nombre maximal de nouvelles tentatives de remise d'un message à partir de la file d'attente d'application à l'application. La valeur par défaut est 5. Elle est suffisante dans les cas où une nouvelle tentative immédiate résout le problème (par exemple, en cas d'interblocage temporaire sur une base de données).  
   
@@ -46,7 +32,7 @@ A *message incohérent* est un message qui a dépassé le nombre maximal de tent
   
 -   Reject. Cette option est disponible uniquement sur [!INCLUDE[wv](../../../../includes/wv-md.md)]. Elle fait en sorte que Message Queuing (MSMQ) renvoie un accusé de réception négatif au gestionnaire de files d'attente émetteur, signalant que l'application ne peut pas recevoir le message. Le message est placé dans la file d'attente de lettres mortes du gestionnaire de files d'attente émetteur.  
   
--   Move. Cette option est disponible uniquement sur [!INCLUDE[wv](../../../../includes/wv-md.md)]. Elle déplace le message incohérent vers une file d'attente de messages incohérents pour un traitement ultérieur par une application de gestion de messages incohérents. La file d'attente de messages incohérents est une sous-file d'attente de la file d'attente d'application. Une application de gestion de messages incohérents peut être un service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] qui lit des messages à partir de la file d'attente de messages incohérents. La file d’attente de messages incohérent est une sous-file d’attente de la file d’attente de l’application et peuvent être adressé en tant que net.msmq://\<*-nom de l’ordinateur*>/*applicationQueue*; poison, où  *nom de l’ordinateur* est le nom de l’ordinateur sur lequel réside la file d’attente et le *applicationQueue* est le nom de la file d’attente spécifique à l’application.  
+-   Move. Cette option est disponible uniquement sur [!INCLUDE[wv](../../../../includes/wv-md.md)]. Elle déplace le message incohérent vers une file d'attente de messages incohérents pour un traitement ultérieur par une application de gestion de messages incohérents. La file d'attente de messages incohérents est une sous-file d'attente de la file d'attente d'application. Une application de gestion de messages incohérents peut être un service WCF qui lit les messages à partir de la file d’attente de messages incohérent. La file d’attente de messages incohérent est une sous-file d’attente de la file d’attente de l’application et peuvent être adressé en tant que net.msmq://\<*-nom de l’ordinateur*>/*applicationQueue*; poison, où  *nom de l’ordinateur* est le nom de l’ordinateur sur lequel réside la file d’attente et le *applicationQueue* est le nom de la file d’attente spécifique à l’application.  
   
  Voici le nombre maximal de tentatives de remise effectuées pour un message :  
   
@@ -57,20 +43,20 @@ A *message incohérent* est un message qui a dépassé le nombre maximal de tent
 > [!NOTE]
 >  Aucune nouvelle tentative n'est effectuée pour un message remis avec succès.  
   
- Pour effectuer le suivi du nombre de tentatives de lecture d'un message, [!INCLUDE[wv](../../../../includes/wv-md.md)] maintient une propriété de message durable qui compte le nombre d'abandons et une propriété de compte de déplacement qui compte le nombre de déplacements du message entre la file d'attente d'application et les sous-files d'attente. Le canal [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilise ces propriétés pour calculer le nombre de nouvelles tentatives de réception et le nombre de cycles de nouvelle tentative. Sur [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] et [!INCLUDE[wxp](../../../../includes/wxp-md.md)], le nombre d'abandons est maintenu en mémoire par le canal [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] et réinitialisé si l'application échoue. De plus, le canal [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] peut détenir à tout moment en mémoire le nombre d'abandons pour 256 messages. Si un 257ème message est lu, le nombre d'abandons du message le plus ancien est réinitialisé.  
+ Pour effectuer le suivi du nombre de tentatives de lecture d'un message, [!INCLUDE[wv](../../../../includes/wv-md.md)] maintient une propriété de message durable qui compte le nombre d'abandons et une propriété de compte de déplacement qui compte le nombre de déplacements du message entre la file d'attente d'application et les sous-files d'attente. Le canal WCF les utilise pour calculer le nombre de tentatives de réception et le nombre de cycles de nouvelle tentative. Sur [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] et [!INCLUDE[wxp](../../../../includes/wxp-md.md)], le nombre d’abandons est maintenu en mémoire par le canal WCF et réinitialisé si l’application échoue. En outre, le canal WCF peut contenir que le nombre d’abandons pour 256 messages en mémoire à tout moment. Si un 257ème message est lu, le nombre d'abandons du message le plus ancien est réinitialisé.  
   
  Les propriétés de nombre d'abandons et de nombre déplacements sont accessibles à l'opération de service par le biais du contexte d'opération. L'exemple de code suivant montre comment y accéder.  
   
  [!code-csharp[S_UE_MSMQ_Poison#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_msmq_poison/cs/service.cs#1)]  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fournit deux liaisons en file d'attente standard :  
+ WCF fournit deux liaisons en file d’attente standard :  
   
--   <xref:System.ServiceModel.NetMsmqBinding>. Une liaison [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] adaptée à la communication basée sur file d'attente avec d'autres points de terminaison [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+-   <xref:System.ServiceModel.NetMsmqBinding>. A [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] liaison adaptée à la file d’attente de communication avec d’autres points de terminaison WCF.  
   
 -   <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. Une liaison adaptée à la communication avec des applications Message Queuing existantes.  
   
 > [!NOTE]
->  Vous pouvez modifier les propriétés dans ces liaisons en fonction des spécifications de votre service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. L'ensemble du mécanisme de gestion de messages incohérents est local à l'application de réception. Le processus est invisible à l'application émettrice, à moins que l'application de réception ne s'arrête finalement et ne renvoie un accusé de réception négatif à l'expéditeur. Dans ce cas, le message est déplacé vers la file d'attente de lettres mortes de l'expéditeur.  
+>  Vous pouvez modifier les propriétés dans ces liaisons en fonction des besoins de votre service WCF. L'ensemble du mécanisme de gestion de messages incohérents est local à l'application de réception. Le processus est invisible à l'application émettrice, à moins que l'application de réception ne s'arrête finalement et ne renvoie un accusé de réception négatif à l'expéditeur. Dans ce cas, le message est déplacé vers la file d'attente de lettres mortes de l'expéditeur.  
   
 ## <a name="best-practice-handling-msmqpoisonmessageexception"></a>Recommandation : Gestion de MsmqPoisonMessageException  
  Lorsque le service détermine qu'un message est incohérent, le transport de mise en file d'attente lève une <xref:System.ServiceModel.MsmqPoisonMessageException> qui contient le `LookupId` du message incohérent.  
@@ -116,7 +102,7 @@ A *message incohérent* est un message qui a dépassé le nombre maximal de tent
   
 -   Message Queuing prend en charge l'accusé de réception négatif dans [!INCLUDE[wv](../../../../includes/wv-md.md)], alors que [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] et [!INCLUDE[wxp](../../../../includes/wxp-md.md)] ne le prennent pas en charge. Un accusé de réception négatif provenant du gestionnaire de files d'attente de destination provoque le placement du message rejeté dans la file d'attente de lettres mortes par le gestionnaire de files d'attente source. Ainsi, `ReceiveErrorHandling.Reject` n'est pas autorisé avec [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] et [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
--   Message Queuing dans [!INCLUDE[wv](../../../../includes/wv-md.md)] prend en charge la propriété d'un message qui compte le nombre de tentatives de remise du message. Cette propriété du nombre d'abandons n'est pas disponible sur [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ni sur [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] conserve le nombre d'abandons en mémoire, si bien qu'il est possible que cette propriété ne contienne pas une valeur exacte lorsque le même message est lu par plusieurs services [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dans une batterie de serveurs.  
+-   Message Queuing dans [!INCLUDE[wv](../../../../includes/wv-md.md)] prend en charge la propriété d'un message qui compte le nombre de tentatives de remise du message. Cette propriété du nombre d'abandons n'est pas disponible sur [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ni sur [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. WCF gère le nombre d’abandons en mémoire, il est donc possible que cette propriété ne peut pas contenir une valeur exacte lorsque le même message est lu par plusieurs services WCF dans une batterie de serveurs.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble des files d’attente](../../../../docs/framework/wcf/feature-details/queues-overview.md)  

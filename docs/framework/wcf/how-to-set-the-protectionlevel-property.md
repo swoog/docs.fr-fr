@@ -1,14 +1,6 @@
 ---
 title: 'Comment : définir la propriété ProtectionLevel'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,17 +8,11 @@ helpviewer_keywords:
 - WCF, security
 - ProtectionLevel property
 ms.assetid: 3d4e8f80-0f9e-4a26-9899-beb6584e78df
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: abb1d3cc64b7992b9983e81c5f8a5c30c2343f30
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 50e14e1250055efcbc48597be3dcfac2e56371ca
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-set-the-protectionlevel-property"></a>Comment : définir la propriété ProtectionLevel
 Vous pouvez définir le niveau de protection en appliquant un attribut approprié et en définissant la propriété. Vous pouvez définir la protection au niveau du service afin d'affecter toutes les parties de chaque message, ou vous pouvez la définir à des niveaux de plus en plus spécifiques, des méthodes aux parties du message. Pour plus d’informations sur la `ProtectionLevel` propriété, consultez [au niveau de Protection de présentation](../../../docs/framework/wcf/understanding-protection-level.md).  

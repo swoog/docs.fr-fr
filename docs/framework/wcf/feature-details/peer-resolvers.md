@@ -1,24 +1,12 @@
 ---
-title: "Programmes de résolution d'homologue"
-ms.custom: 
+title: Programmes de résolution d'homologue
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d86d12a1-7358-450f-9727-b6afb95adb9c
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 79c26ca9e167455dfbd664ea96e574c130cdc3d2
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 760011dda4a3059a217dcfbfc3fddaa67edc9995
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="peer-resolvers"></a>Programmes de résolution d'homologue
 Pour se connecter à une maille, un nœud d'homologue requiert les adresses IP d'autres nœuds. Les adresses IP sont obtenues en contactant un service de résolution, qui prend l'ID de la maille et retourne une liste d'adresses correspondant aux nœuds enregistrés sous cet ID de maille particulier. Le programme de résolution conserve une liste des adresses inscrites, qu'il crée en inscrivant chaque nœud de la maille avec le service.  
@@ -28,7 +16,7 @@ Pour se connecter à une maille, un nœud d'homologue requiert les adresses IP d
 ## <a name="supported-peer-resolvers"></a>Programmes de résolution de pair pris en charge  
  Le canal homologue prend en charge deux types de programmes de résolution : le protocole PNRP (Peer Name Resolution Protocol) et les services de résolution personnalisés.  
   
- Par défaut, le canal homologue utilise le service de résolution de pair PNRP pour la découverte d'homologues et de voisins dans la maille. Pour les situations/plateformes où PNRP n'est pas disponible ou possible, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] fournit une alternative, à savoir le service de découverte serveur <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>. Vous pouvez également définir explicitement un service de résolution personnalisé en écrivant une classe qui implémente l'interface <xref:System.ServiceModel.PeerResolvers.IPeerResolverContract>.  
+ Par défaut, le canal homologue utilise le service de résolution de pair PNRP pour la découverte d'homologues et de voisins dans la maille. Pour les situations/plateformes où PNRP n’est pas disponible ou possible, Windows Communication Foundation (WCF) fournit un service de découverte basée sur un serveur autre - le <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>. Vous pouvez également définir explicitement un service de résolution personnalisé en écrivant une classe qui implémente l'interface <xref:System.ServiceModel.PeerResolvers.IPeerResolverContract>.  
   
 ### <a name="peer-name-resolution-protocol-pnrp"></a>Protocole PNRP (Peer Name Resolution Protocol)  
  PNRP, le programme de résolution par défaut de [!INCLUDE[wv](../../../../includes/wv-md.md)], est un service de résolution de noms distribué et sans serveur. PNRP peut également être utilisé sur [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] en installant le Pack réseau avancé. Deux clients qui exécutent la même version de PNRP peuvent se localiser mutuellement à l'aide de ce protocole, à condition qu'ils remplissent certaines conditions (telles que l'absence d'un pare-feu d'entreprise intermédiaire). Notez que la version de PNRP fournie avec [!INCLUDE[wv](../../../../includes/wv-md.md)] est plus récente que celle incluse dans le Pack réseau avancé. Reportez-vous au Centre de téléchargement Microsoft pour obtenir des mises à jour de PNRP pour [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)].  

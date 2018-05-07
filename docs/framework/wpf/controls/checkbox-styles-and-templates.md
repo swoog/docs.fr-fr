@@ -1,13 +1,6 @@
 ---
-title: "Styles et modèles CheckBox"
-ms.custom: 
+title: Styles et modèles CheckBox
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - states [WPF], CheckBox
 - templates [WPF], CheckBox
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - CheckBox [WPF], styles and templates
 - styles [WPF], CheckBox
 ms.assetid: bfdaec96-d101-4d3d-864d-c27e6b621d03
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 08b37be727c8a124ea7c4955b3eaf23d1bc9a485
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ca7033f3a9f2d8a46c9a19c0b1e4e441efb39c7a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="checkbox-styles-and-templates"></a>Styles et modèles CheckBox
 Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Controls.CheckBox> contrôle. Vous pouvez modifier la valeur par défaut <xref:System.Windows.Controls.ControlTemplate> pour donner une apparence unique au contrôle. Pour plus d’informations, consultez [Personnalisation de l’apparence d’un contrôle existant en créant un ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
@@ -46,7 +34,7 @@ Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Contr
 |Sans focus|FocusStates|Le contrôle n’a pas le focus.|  
 |Activé|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> a la valeur `true`.|  
 |elle est désactivée|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> a la valeur `false`.|  
-|Indéterminé|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsThreeState%2A>est `true`, et <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> est `null`.|  
+|Indéterminé|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsThreeState%2A> est `true`, et <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> est `null`.|  
 |Valide|ValidationStates|Le contrôle utilise le <xref:System.Windows.Controls.Validation> classe et le <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriété jointe est `false`.|  
 |InvalidUnfocused|ValidationStates|Le <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriété jointe est `true` a le contrôle a le focus.|  
 |InvalidFocused|ValidationStates|Le <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriété jointe est `true` a le contrôle n’a pas le focus.|  

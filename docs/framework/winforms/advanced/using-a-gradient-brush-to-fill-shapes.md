@@ -1,28 +1,16 @@
 ---
-title: "Utilisation d'un pinceau à dégradé pour remplir des formes"
-ms.custom: 
+title: Utilisation d'un pinceau à dégradé pour remplir des formes
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - brushes [Windows Forms], gradient brushes
 - gradient brushes
 - examples [Windows Forms], gradient brushes
 ms.assetid: 2c6037b9-05bd-44c0-a22a-19584b722524
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6a84a68f9082d00559938c2710b6574690fa6ab4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 857a9276a731ae5e69b3caa1a639d1315aba9901
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-a-gradient-brush-to-fill-shapes"></a>Utilisation d'un pinceau à dégradé pour remplir des formes
 Vous pouvez utiliser un pinceau de dégradé pour remplir une forme avec une couleur. Par exemple, vous pouvez utiliser un dégradé horizontal pour remplir une forme avec une couleur qui change progressivement à mesure que vous déplacez le bord gauche de la forme sur le bord droit. Imaginez un rectangle avec un bord gauche noirs (représenté par les composants rouges, verts et bleus 0, 0, 0) et un bord droit de couleur rouge (représenté par 255, 0, 0). Si le rectangle est 256 pixels de large, le composant rouge d’un pixel donné sera supérieure à la composante rouge du pixel situé à sa gauche. Le pixel le plus à gauche dans une ligne a des composants de couleur (0, 0, 0), le deuxième pixel a (1, 0, 0), le troisième pixel (2, 0, 0) et ainsi de suite jusqu'à ce que vous obtenez au pixel plus à droite, ce qui a RVB (255, 0, 0). Ces valeurs de couleur interpolée composent le dégradé de couleur.  

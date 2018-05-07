@@ -1,24 +1,12 @@
 ---
-title: "Extensibilité de l'hôte du service de workflow"
-ms.custom: 
+title: Extensibilité de l'hôte du service de workflow
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c0e8f7bb-cb13-49ec-852f-b85d7c23972f
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: caff90b66007310c7b3ad24f2f084cc2282a7021
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3393843e6be75e122c3993b3ccfb7c56d63cebad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="workflow-service-host-extensibility"></a>Extensibilité de l'hôte du service de workflow
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] fournit la classe <xref:System.ServiceModel.Activities.WorkflowServiceHost> pour l'hébergement de services de workflow. Cette classe est utilisée lorsque vous auto-hébergez un service de workflow dans une application managée ou un service Windows. Cette classe est également utilisée lors de l'hébergement d'un service de workflow dans les services IIS (Internet Information Services) ou WAS (Windows Process Activation Service). La classe <xref:System.ServiceModel.Activities.WorkflowServiceHost> fournit des points d'extension qui vous permettent d'ajouter des extensions personnalisées, de modifier le comportement inactif et d'héberger des workflows sans service (workflows qui n'utilisent aucune activité de messagerie).  

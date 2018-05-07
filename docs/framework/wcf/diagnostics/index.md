@@ -1,14 +1,6 @@
 ---
 title: Administration et diagnostics
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation, diagnostics
 - Windows Communication Foundation, administration
@@ -17,20 +9,14 @@ helpviewer_keywords:
 - administration [WCF]
 - WCF, administration
 ms.assetid: 34c81c08-0e0f-4fbc-9ae8-91948640ee43
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fa5256f543a99618e00dc88e085dfee4ac76ebab
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
-ms.translationtype: MT
+ms.openlocfilehash: 552ddb842e0a922493feccee1e48e7d5e74291ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="administration-and-diagnostics"></a>Administration et diagnostics
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] fournit un jeu complet de fonctionnalités vous permettant de surveiller les différentes étapes du cycle de vie d'une application. Par exemple, utilisez la configuration pour installer les services et les clients lors du déploiement. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] inclut un jeu important de compteurs de performance pour vous aider à mesurer les performances de votre application. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] expose également au moment de l'exécution les données d'inspection d'un service par l'intermédiaire d'un fournisseur WMI (Windows Management Instrumentation) de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. En cas de défaillance ou de fonctionnement incorrect de l'application, vous pouvez utiliser le journal des événements afin de vérifier si un événement significatif s'est produit. Vous pouvez également utiliser la journalisation des messages et le suivi pour afficher les événements qui se produisent sur l'ensemble de votre application. Ces fonctionnalités permettent aux développeurs et aux professionnels de l'informatique de dépanner une application [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] lorsque celle-ci ne se comporte pas correctement.  
+Windows Communication Foundation (WCF) fournit un ensemble complet de fonctionnalités qui peuvent vous aider à surveiller les différentes étapes de la durée de vie d’une application. Par exemple, utilisez la configuration pour installer les services et les clients lors du déploiement. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] inclut un jeu important de compteurs de performance pour vous aider à mesurer les performances de votre application. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] expose également au moment de l'exécution les données d'inspection d'un service par l'intermédiaire d'un fournisseur WMI (Windows Management Instrumentation) de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. En cas de défaillance ou de fonctionnement incorrect de l'application, vous pouvez utiliser le journal des événements afin de vérifier si un événement significatif s'est produit. Vous pouvez également utiliser la journalisation des messages et le suivi pour afficher les événements qui se produisent sur l'ensemble de votre application. Ces fonctionnalités permettent aux développeurs et aux professionnels de l'informatique de dépanner une application [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] lorsque celle-ci ne se comporte pas correctement.  
   
 > [!NOTE]
 >  Si vous recevez des erreurs sans aucune information de détail spécifique, vous devez activer la `includeExceptionDetailInFaults` attribut de la [ \<serviceDebug >](../../../../docs/framework/configure-apps/file-schema/wcf/servicedebug.md) élément de configuration. Cette opération indique à [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] d'envoyer des informations d'exception aux clients, ce qui vous permet de détecter un grand nombre de problèmes courants sans nécessiter un diagnostic plus élaboré. Pour plus d’informations, consultez [envoi et réception des erreurs](../../../../docs/framework/wcf/sending-and-receiving-faults.md).  

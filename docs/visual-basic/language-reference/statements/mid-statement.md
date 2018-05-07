@@ -1,11 +1,6 @@
 ---
 title: Mid, instruction
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.MidB
 - vb.Mid
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - Mid statement [Visual Basic]
 - strings [Visual Basic], replacing
 ms.assetid: 2b82d7a8-9646-4cb0-bec5-80abc98297bf
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 61d812ef91acc65728b04efc9aa99e3975e71d0c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 90b805df902dcdfebe85421583dd54e9af04bec9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mid-statement"></a>Mid, instruction
 Remplace un nombre spécifié de caractères dans un `String` variable avec des caractères d’une autre chaîne.  
@@ -42,21 +34,21 @@ Mid( _
  Obligatoire. Nom de la `String` variable à modifier.  
   
  `Start`  
- Obligatoire. `Integer`expression. Position du caractère dans `Target` où commence le remplacement de texte. `Start`utilise un index de base un.  
+ Obligatoire. `Integer` Expression. Position du caractère dans `Target` où commence le remplacement de texte. `Start` utilise un index de base un.  
   
  `Length`  
- Facultatif. `Integer`expression. Nombre de caractères à remplacer. Si omis, toutes les `String` est utilisé.  
+ Facultatif. `Integer` Expression. Nombre de caractères à remplacer. Si omis, toutes les `String` est utilisé.  
   
  `StringExpression`  
- Obligatoire. `String`Expression qui remplace une partie de `Target`.  
+ Obligatoire. `String` Expression qui remplace une partie de `Target`.  
   
 ## <a name="exceptions"></a>Exceptions  
   
 |Type d'exception|Condition|  
 |--------------------|---------------|  
-|<xref:System.ArgumentException>|`Start`< = 0 ou `Length` < 0.|  
+|<xref:System.ArgumentException>|`Start` < = 0 ou `Length` < 0.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le nombre de caractères remplacés est toujours inférieur ou égal au nombre de caractères dans `Target`.  
   
  Visual Basic propose une <xref:Microsoft.VisualBasic.Strings.Mid%2A> (fonction) et un `Mid` instruction. Ces éléments fonctionnent à la fois sur un nombre spécifié de caractères dans une chaîne, mais la `Mid` fonction retourne les caractères lors de la `Mid` instruction remplace les caractères. Pour plus d'informations, consultez <xref:Microsoft.VisualBasic.Strings.Mid%2A>.  
@@ -72,7 +64,7 @@ Mid( _
 ## <a name="requirements"></a>Spécifications  
  **Namespace :** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
- **Module :**`Strings`  
+ **Module :** `Strings`  
   
  **Assembly :** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]  
   

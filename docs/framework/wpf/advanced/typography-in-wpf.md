@@ -1,28 +1,14 @@
 ---
 title: Typographie dans WPF
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7cd424dfd936427edb855a92e54921c064c8a8fe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 45f74a4dd2164f332314ad79a18eab49efb520d6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="typography-in-wpf"></a>Typographie dans WPF
 Cette rubrique présente les principales fonctionnalités typographiques de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Ces fonctionnalités incluent l’amélioration de la qualité et des performances de rendu de texte, une prise en charge de la typographie [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)], un texte international amélioré, une prise en charge de police améliorée et de nouvelles interfaces de programmation d’applications (API, Application Programming Interface) texte.  
@@ -33,7 +19,7 @@ Cette rubrique présente les principales fonctionnalités typographiques de [!IN
 ## <a name="improved-quality-and-performance-of-text"></a>Amélioration de la qualité et des performances du texte  
  Le texte dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] est affiché à l’aide de [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)], ce qui améliore sa clarté et sa lisibilité. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] est une technologie logicielle développée par [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] qui améliore la lisibilité du texte sur les écrans LCD existants, tels que les écrans d’ordinateurs portables, les écrans de Pocket PC et les écrans plats. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] utilise un rendu d’une précision inférieure au pixel qui permet l’affichage du texte avec une fidélité supérieure à sa forme réelle en alignant les caractères sur une fraction d’un pixel. Cette résolution accrue augmente la netteté des détails dans l’affichage textuel, ce qui facilite grandement la lecture pendant des périodes prolongées. Parmi les autres améliorations de [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], citons l’anticrénelage de direction y qui lisse le haut et le bas des courbes superficielles dans les caractères de texte. Pour plus d’informations sur les fonctionnalités [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], consultez [Vue d’ensemble de ClearType](../../../../docs/framework/wpf/advanced/cleartype-overview.md).  
   
- ![Texte avec ClearType y &#45; direction anti &#45; alias](../../../../docs/framework/wpf/advanced/media/typographyinwpf02.gif "TypographyInWPF02")  
+ ![Texte avec ClearType y&#45;direction anti&#45;alias](../../../../docs/framework/wpf/advanced/media/typographyinwpf02.gif "TypographyInWPF02")  
 Texte avec anticrénelage ClearType dans la direction y  
   
  L’ensemble du pipeline de rendu de texte peut être accéléré par matériel dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], sous réserve que votre ordinateur respecte le niveau matériel minimum exigé. Un rendu ne pouvant pas être exécuté à l’aide de matériel repasse à un rendu logiciel. L’accélération matérielle affecte toutes les phases du pipeline de rendu de texte, du stockage de glyphes individuels à l’application de l’algorithme de fusion [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] à la sortie finale affichée, en passant par la constitution de glyphes en exécutions de glyphes et l’application d’effets. Pour plus d’informations sur l’accélération matérielle, consultez [Couches de rendu graphiques](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md).  

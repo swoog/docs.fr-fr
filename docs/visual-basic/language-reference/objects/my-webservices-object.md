@@ -1,30 +1,22 @@
 ---
 title: My.WebServices, objet
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - My.WebServices
 - My.MyProject.WebServices
 helpviewer_keywords:
 - My.WebServices object
 ms.assetid: f188dc05-2c75-41b6-bb68-122d1c3110a2
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a9f2c4017a1df8059f2cc57e7c30a96c474cfda0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9519638c7609b9b1d0f5e07397c46975e2696c94
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mywebservices-object"></a>My.WebServices, objet
 Fournit des propriétés pour la création et l’accès à une instance unique de chaque service Web XML référencé par le projet actuel.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  L’objet `My.WebServices` fournit une instance de chaque service web référencé par le projet actuel. Chaque instance est instanciée sur demande. Vous pouvez accéder à ces services web via les propriétés de l’objet `My.WebServices`. La propriété porte le même nom que le service web auquel elle accède. Toute classe qui hérite de <xref:System.Web.Services.Protocols.SoapHttpClientProtocol> est un service web. Pour plus d’informations sur l’ajout de services Web à un projet, consultez [l’accès aux applications Web Services](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md).  
   
  Le `My.WebServices` objet expose uniquement les services Web associés au projet actuel. Il ne fournit pas d’accès aux services Web déclarés dans les DLL référencées. Pour accéder à un service Web qui fournit d’une DLL, vous devez utiliser le nom qualifié du service Web, sous la forme *DllName*. *WebServiceName*. Pour plus d’informations, consultez [l’accès aux applications Web Services](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md).  

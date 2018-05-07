@@ -1,26 +1,12 @@
 ---
 title: DiscoveryClient et DynamicEndpoint
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 7cd418f0-0eab-48d1-a493-7eb907867ec3
-caps.latest.revision: 5
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3e7c8c5700159b5568a5a455b21f738d1be43dfe
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: d9bf5bf0032a299589292e51ad9bc273c56ced3f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="discoveryclient-and-dynamicendpoint"></a>DiscoveryClient et DynamicEndpoint
 <xref:System.ServiceModel.Discovery.DiscoveryClient> et <xref:System.ServiceModel.Discovery.DynamicEndpoint> sont deux classes utilisées sur le côté client pour rechercher des services. <xref:System.ServiceModel.Discovery.DiscoveryClient> fournit une liste de services correspondant à un jeu de critères spécifiques et permet de se connecter à ces services. <xref:System.ServiceModel.Discovery.DynamicEndpoint> effectue la même opération et, de plus, se connecte automatiquement à l'un des services trouvé dans la liste. N'importe quel point de terminaison peut être transformé en <xref:System.ServiceModel.Discovery.DynamicEndpoint>, les critères de recherche peuvent également être ajoutés par configuration, en conséquence <xref:System.ServiceModel.Discovery.DynamicEndpoint> est utile lorsque vous avez besoin de la découverte dans votre solution, mais que vous ne souhaitez pas modifier la logique cliente ; il vous suffit de modifier les points de terminaison. <xref:System.ServiceModel.Discovery.DiscoveryClient> en revanche peut être utilisé pour obtenir un contrôle plus précis de la recherche. Les utilisations et les avantages de chacun sont détaillés ci-dessous.  

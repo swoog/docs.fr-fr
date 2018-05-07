@@ -1,27 +1,15 @@
 ---
 title: Configuration du suivi de flux de messages
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 15571ca2-bee2-47fb-ba10-fcbc09152ad0
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8df32a64c07db8a45dfb41a46e7a65a92fbef434
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 7bfba8ababc6ddc0b2ddd78e879058cfa9e8ebb1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-message-flow-tracing"></a>Configuration du suivi de flux de messages
-Lorsque le suivi d'activité [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] est activé, les ID d'activité de bout en bout sont affectés à des activités logiques dans toute la pile [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]. Il existe désormais dans [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)], une version plus performante de cette fonctionnalité qui fonctionne avec ETW (Suivi d'événements Windows), appelée le suivi de flux de messages. Lorsqu'il est activé, les ID d'activité de bout en bout sont extraits des messages entrants (ou leur sont affectés, s'ils sont vides) et sont propagés à tous les événements de suivi émis une fois que le message a été décodé par le canal. Les clients peuvent utiliser cette fonctionnalité pour reconstruire des flux de messages avec les journaux de suivi de différents services après décodage.  
+Lorsque le suivi des activités Windows Communication Foundation (WCF) est activé, ID d’activité de bout en bout sont affectés à des activités logiques dans toute la [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] pile. Il existe désormais dans [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)], une version plus performante de cette fonctionnalité qui fonctionne avec ETW (Suivi d'événements Windows), appelée le suivi de flux de messages. Lorsqu'il est activé, les ID d'activité de bout en bout sont extraits des messages entrants (ou leur sont affectés, s'ils sont vides) et sont propagés à tous les événements de suivi émis une fois que le message a été décodé par le canal. Les clients peuvent utiliser cette fonctionnalité pour reconstruire des flux de messages avec les journaux de suivi de différents services après décodage.  
   
  Le suivi peut être activé lorsqu'un problème a été détecté avec l'application, puis désactivé une fois le problème résolu.  
   

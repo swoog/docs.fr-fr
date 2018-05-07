@@ -1,28 +1,14 @@
 ---
 title: Refus de service
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4734407868d9dae2acc422c0f07aad57d42d4566
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 52a22d96e981ff10d444569465d8e74ddf890836
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="denial-of-service"></a>Refus de service
 Un déni de service se produit lorsqu'un système est saturé au point que le traitement des messages est impossible ou extrêmement lent.  
@@ -62,15 +48,15 @@ Un déni de service se produit lorsqu'un système est saturé au point que le tr
 ## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-hangs"></a>Une implémentation non valide de la stratégie IAuthorizationPolicy peut provoquer le blocage du service  
  L'appel de la méthode <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> sur une implémentation défaillante de l'interface <xref:System.IdentityModel.Policy.IAuthorizationPolicy> peut provoquer le blocage du service.  
   
- Atténuation : utilisez uniquement un code de confiance. Autrement dit, utilisez uniquement un code que vous avez vous-même écrit et testé, ou qui provient d'un fournisseur approuvé. N'autorisez pas les extensions non fiables de <xref:System.IdentityModel.Policy.IAuthorizationPolicy> à s'intégrer à votre code sans prendre toutes les précautions requises. Cela s'applique à toutes les extensions utilisées dans une implémentation de service. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ne fait pas de distinction entre du code d'application et du code étranger intégré à l'aide de points d'extensibilité.  
+ Atténuation : utilisez uniquement un code de confiance. Autrement dit, utilisez uniquement un code que vous avez vous-même écrit et testé, ou qui provient d'un fournisseur approuvé. N'autorisez pas les extensions non fiables de <xref:System.IdentityModel.Policy.IAuthorizationPolicy> à s'intégrer à votre code sans prendre toutes les précautions requises. Cela s’applique à toutes les extensions utilisées dans une implémentation de service. WCF ne fait pas de distinction entre du code d’application et le code externe qui est connecté à l’aide de points d’extensibilité.  
   
 ## <a name="kerberos-maximum-token-size-may-need-resizing"></a>La taille maximale de jeton Kerberos peut devoir être redimensionnée  
- Si un client appartient à un grand nombre de groupes (approximativement 900, bien que le nombre réel varie selon les groupes), un problème peut se produire lorsque le bloc d'un en-tête de message dépasse 64 kilo-octets. Dans ce cas, vous pouvez augmenter la taille maximale de jeton Kerberos, comme décrit dans l’article du Support technique de Microsoft «[l’authentification Kerberos d’Internet Explorer ne fonctionne pas en raison d’une mémoire tampon insuffisante, se connectant à IIS](http://go.microsoft.com/fwlink/?LinkId=89176). » Vous devrez peut-être également augmenter la taille maximale des messages [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] pour l'adapter au jeton Kerberos le plus volumineux.  
+ Si un client appartient à un grand nombre de groupes (approximativement 900, bien que le nombre réel varie selon les groupes), un problème peut se produire lorsque le bloc d'un en-tête de message dépasse 64 kilo-octets. Dans ce cas, vous pouvez augmenter la taille maximale de jeton Kerberos, comme décrit dans l’article du Support technique de Microsoft «[l’authentification Kerberos d’Internet Explorer ne fonctionne pas en raison d’une mémoire tampon insuffisante, se connectant à IIS](http://go.microsoft.com/fwlink/?LinkId=89176). » Vous devrez peut-être également augmenter la taille maximale des messages WCF pour prendre en charge le jeton Kerberos supérieure.  
   
 ## <a name="autoenrollment-results-in-multiple-certificates-with-same-subject-name-for-machine"></a>L'inscription automatique provoque la création de plusieurs certificats avec le même nom de sujet pour l'ordinateur  
  *L’inscription automatique* est la capacité de [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] pour inscrire automatiquement des utilisateurs et ordinateurs pour les certificats. Lorsqu’un ordinateur se trouve sur un domaine dans lequel cette fonctionnalité est activée, un certificat X.509, dont le rôle prévu est d’authentifier les clients, est créé automatiquement et inséré dans le magasin de certificats personnels de l’ordinateur local à chaque fois qu’un nouvel ordinateur est joint au réseau. Toutefois, l'inscription automatique utilise le même nom de sujet pour tous les certificats qu'il crée dans le cache.  
   
- Par conséquent, les services [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] risquent de ne pas pouvoir s'ouvrir sur les domaines dans lesquels l'inscription automatique est activée. Cela est dû au fait que les critères de recherche d'informations d'identification X.509 du service par défaut peuvent être ambigus car il existe plusieurs certificats portant le nom DNS (Domain Name System) complet de l'ordinateur. Un certificat peut provenir de l'inscription automatique tandis qu'un autre peut être un certificat auto-publié.  
+ L’impact est que les services WCF peuvent échouer ouvrir sur les domaines dont l’inscription automatique. Cela est dû au fait que les critères de recherche d'informations d'identification X.509 du service par défaut peuvent être ambigus car il existe plusieurs certificats portant le nom DNS (Domain Name System) complet de l'ordinateur. Un certificat peut provenir de l'inscription automatique tandis qu'un autre peut être un certificat auto-publié.  
   
  Pour atténuer ce risque, référence le certificat exact à utiliser à l’aide d’un critère de recherche plus précis sur le [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md). Par exemple, utilisez l'option <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> et spécifiez le certificat par son empreinte numérique unique (hachage).  
   
@@ -82,7 +68,7 @@ Un déni de service se produit lorsqu'un système est saturé au point que le tr
 ## <a name="protect-configuration-files-with-acls"></a>Protection des fichiers de configuration avec des listes ACL  
  Vous pouvez spécifier des revendications requises et facultatives dans des fichiers de code et de configuration pour des jetons émis par [!INCLUDE[infocard](../../../../includes/infocard-md.md)]. Cette procédure entraîne l'émission d'éléments correspondants dans les messages `RequestSecurityToken` envoyés au service de jeton de sécurité. Un intrus peut modifier un code ou une configuration pour supprimer des revendications requises ou facultatives et éventuellement faire en sorte que le service de jeton de sécurité publie un jeton qui n'autorise pas l'accès au service cible.  
   
- Pour atténuer ce risque : imposez l'obligation d'accéder à l'ordinateur pour pouvoir modifier le fichier de configuration. Utilisez les listes de contrôle d'accès au fichier (ACL) pour sécuriser les fichiers de configuration. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] exige que le code soit placé dans le répertoire de l'application ou le Global Assembly Cache avant d'autoriser son chargement à partir de la configuration. Utilisez des listes ACL de répertoire pour sécuriser des répertoires.  
+ Pour atténuer ce risque : imposez l'obligation d'accéder à l'ordinateur pour pouvoir modifier le fichier de configuration. Utilisez les listes de contrôle d'accès au fichier (ACL) pour sécuriser les fichiers de configuration. WCF requiert que le code soit dans le répertoire de l’application ou du global assembly cache avant d’autoriser ce code doit être chargé à partir de la configuration. Utilisez des listes ACL de répertoire pour sécuriser des répertoires.  
   
 ## <a name="maximum-number-of-secure-sessions-for-a-service-is-reached"></a>Atteinte du nombre maximal de sessions sécurisées pour un service  
  Lorsqu'un client est correctement authentifié par un service et qu'une session sécurisée est établie avec ce dernier, le service effectue le suivi de la session jusqu'à ce qu'elle soit annulée par le client ou qu'elle expire. Chaque session établie est décomptée du nombre maximal de sessions simultanées actives pour un service. Lorsque cette limite est atteinte, les clients qui essaient de créer une session avec ce service sont rejetés jusqu'à ce qu'une ou plusieurs sessions actives expirent ou soient annulées par un client. Un client peut ouvrir plusieurs sessions sur un service, chacune de ces sessions étant décomptée du nombre limite.  

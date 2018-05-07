@@ -1,27 +1,15 @@
 ---
-title: "Émission de suivis dans du code utilisateur"
-ms.custom: 
+title: Émission de suivis dans du code utilisateur
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: fa54186a-8ffa-4332-b0e7-63867126fd49
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a71ab8d8b4f96900e6d0f83541b6ae17f09ddeee
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 120827bff85d4bc347274cad1370d291caba1c3d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="emitting-user-code-traces"></a>Émission de suivis dans du code utilisateur
-En plus de permettre le suivi dans la configuration pour rassembler des données d'instrumentation générées par [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)], vous pouvez également émettre des suivis par programme dans le code utilisateur. Ainsi, vous pouvez créer de manière proactive des données d'instrumentation que vous pouvez consulter ultérieurement à des fins de diagnostic. Cette rubrique explique comment procéder.  
+En plus de l’activation du suivi dans la configuration pour collecter des données d’instrumentation générées par Windows Communication Foundation (WCF), vous pouvez également émettre des suivis par programme dans le code utilisateur. Ainsi, vous pouvez créer de manière proactive des données d'instrumentation que vous pouvez consulter ultérieurement à des fins de diagnostic. Cette rubrique explique comment procéder.  
   
  En outre, le [extension suivi](../../../../../docs/framework/wcf/samples/extending-tracing.md) exemple inclut tout le code présenté dans les sections suivantes.  
   
@@ -134,17 +122,17 @@ ts.TraceEvent(TraceEventType.Warning, 0, "Throwing exception " + "exceptionMessa
   
  Le diagramme suivant contient aussi les traces de transfert aller/retour de l'activité de calculatrice, ainsi que deux paires de suivi de démarrage et d'arrêt par activité de demande, une pour le client et une pour le service (une pour chaque source de suivi).  
   
- ![Trace Viewer : Émission utilisateur &#45; code de traces](../../../../../docs/framework/wcf/diagnostics/tracing/media/242c9358-475a-4baf-83f3-4227aa942fcd.gif "242c9358-475a-4baf-83f3-4227aa942fcd")  
+ ![Trace Viewer : Émission utilisateur&#45;traces de code](../../../../../docs/framework/wcf/diagnostics/tracing/media/242c9358-475a-4baf-83f3-4227aa942fcd.gif "242c9358-475a-4baf-83f3-4227aa942fcd")  
 Liste des activités par heure de création (volet gauche) et leurs activités imbriquées (volet supérieur droit)  
   
  Si le code de service lève une exception qui entraîne la levée d'une exception aussi chez le client (par exemple, lorsque le client n'a pas reçu de réponse à sa demande), l'avertissement ou les messages d'erreur du client et du service se produisent dans la même activité par corrélation directe. Dans le diagramme suivant, le service lève une exception qui indique « le service refuse de traiter cette demande dans le code utilisateur. » Le client lève également une exception qui indique « le serveur n’a pas pu traiter la demande en raison d’une erreur interne. »  
   
- ![Traces de code à l’aide de la visionneuse de Trace à émettre utilisateur &#45;](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace2.gif "e2eTrace2")  
+ ![À l’aide de la visionneuse de Trace à émettre utilisateur&#45;traces de code](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace2.gif "e2eTrace2")  
 Les erreurs sur les points de terminaison pour une demande donnée apparaissent dans la même activité si l'ID d'activité de la demande a été propagé.  
   
  Un double-clic sur l'activité de multiplication sur le volet gauche affiche le graphique suivant, avec les suivis pour l'activité de multiplication pour chaque processus concerné. Le graphique affiche un avertissement survenu en premier au service (exception levée) et qui est suivi par des avertissements et des erreurs sur le client en raison de l'impossibilité de traiter la demande. Par conséquent, nous pouvons déduire la relation causale d’erreur entre des points de terminaison et en déduire la cause racine de l’erreur.  
   
- ![Traces de code à l’aide de la visionneuse de Trace à émettre utilisateur &#45;](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace3.gif "e2eTrace3")  
+ ![À l’aide de la visionneuse de Trace à émettre utilisateur&#45;traces de code](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace3.gif "e2eTrace3")  
 Vue Graphique de corrélation d'erreur  
   
  Pour obtenir les suivis précédents, nous définissons `ActivityTracing` pour les sources de suivi de l'utilisateur et `propagateActivity=true` pour la source de suivi `System.ServiceModel`. Nous n'avons pas défini `ActivityTracing` pour la source de suivi `System.ServiceModel` pour permettre la propagation d'activité du code utilisateur au code utilisateur. (Lorsque le suivi d'activité ServiceModel est activé, l'ID d'activité défini dans le client n'est pas entièrement propagé au code utilisateur de service ; les transferts, toutefois, corrèlent les activités de code utilisateur du client et du service aux activités [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] intermédiaires.)  

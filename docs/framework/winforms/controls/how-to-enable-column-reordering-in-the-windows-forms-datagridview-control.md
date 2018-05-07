@@ -1,13 +1,6 @@
 ---
-title: "Comment : activer la réorganisation des colonnes du contrôle DataGridView Windows Forms"
-ms.custom: 
+title: 'Comment : activer la réorganisation des colonnes du contrôle DataGridView Windows Forms'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], reordering columns
 - columns [Windows Forms], reordering
 ms.assetid: cc20eae3-e4db-493f-95ce-a4215e29472a
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a7a64e0ae0a04d5bb3c04a02af573ccc6442d6f1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fbcafae2cb4e4cc320c31794269355d6312b95b4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-enable-column-reordering-in-the-windows-forms-datagridview-control"></a>Comment : activer la réorganisation des colonnes du contrôle DataGridView Windows Forms
 Quand vous activez la réorganisation des colonnes dans le contrôle <xref:System.Windows.Forms.DataGridView>, les utilisateurs peuvent déplacer une colonne vers une nouvelle position en faisant glisser l'en-tête de colonne avec la souris. Dans le contrôle <xref:System.Windows.Forms.DataGridView>, la valeur de propriété <xref:System.Windows.Forms.DataGridView.AllowUserToOrderColumns%2A?displayProperty=nameWithType> détermine si les utilisateurs peuvent déplacer des colonnes vers d'autres positions.  

@@ -1,19 +1,14 @@
 ---
 title: Flux de travail de développement de la boucle interne pour les applications de Docker
 description: Cycle de vie des applications Docker en conteneur avec la plateforme et les outils Microsoft
-ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 8ee1918091fe72e8606be6e7503ecd850084a4ba
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: cda9aa77ca033dced8b6b30538f19f28a5fa63a2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Flux de travail de développement de la boucle interne pour les applications de Docker
 

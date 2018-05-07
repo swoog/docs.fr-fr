@@ -1,13 +1,6 @@
 ---
-title: "Mise à jour du service de données (services de données WCF)"
-ms.custom: 
+title: Mise à jour du service de données (services de données WCF)
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - WCF Data Services, changing data
 - WCF Data Services, client library
 ms.assetid: 00d993be-ffed-4dea-baf7-6eea982cdb54
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bc8041dee12c8300e18e6321c717cbd80b93d650
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 58bbe74fdeb0af5d7095b0b1a57fb8bd475032ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="updating-the-data-service-wcf-data-services"></a>Mise à jour du service de données (services de données WCF)
 Lorsque vous utilisez la [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] bibliothèque cliente pour consommer un [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] flux, la bibliothèque traduit les entrées dans le flux en instances des classes de service de données client. Ces classes de service de données sont suivies à l'aide de l'objet <xref:System.Data.Services.Client.DataServiceContext> auquel <xref:System.Data.Services.Client.DataServiceQuery%601> appartient. Le client suit les modifications apportées aux entités que vous signalez à l'aide des méthodes sur <xref:System.Data.Services.Client.DataServiceContext>. Ces méthodes permettent au client de suivre les entités ajoutées et supprimées, ainsi que les modifications que vous apportez aux valeurs de propriété ou aux relations entre les instances d'entités. Ces modifications suivies sont renvoyées au service de données sous forme d'opérations REST lorsque vous appelez la méthode <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>.  
@@ -78,7 +66,7 @@ Lorsque vous utilisez la [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.
 ## <a name="creating-and-modifying-relationship-links"></a>Création et modification des liens de relation  
  Lorsque vous ajoutez une nouvelle entité à l’aide la <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> approprié ou méthode *AddTo* méthode de la <xref:System.Data.Services.Client.DataServiceContext> classe qui le **ajouter une référence de Service** génère de la boîte de dialogue, toutes les relations entre la nouvelle entité et les entités associées ne sont pas définies automatiquement.  
   
- Vous pouvez créer et modifier les relations entre des instances d'entité et faire répercuter par la bibliothèque cliente ces modifications dans le service de données. Les relations entre les entités sont définies comme des associations dans le modèle, et <xref:System.Data.Services.Client.DataServiceContext> suit chaque relation comme un objet de lien dans le contexte. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]fournit les méthodes suivantes sur la <xref:System.Data.Services.Client.DataServiceContext> classe pour créer, modifier et supprimer ces liens :  
+ Vous pouvez créer et modifier les relations entre des instances d'entité et faire répercuter par la bibliothèque cliente ces modifications dans le service de données. Les relations entre les entités sont définies comme des associations dans le modèle, et <xref:System.Data.Services.Client.DataServiceContext> suit chaque relation comme un objet de lien dans le contexte. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] fournit les méthodes suivantes sur la <xref:System.Data.Services.Client.DataServiceContext> classe pour créer, modifier et supprimer ces liens :  
   
 |Méthode|Description|  
 |------------|-----------------|  

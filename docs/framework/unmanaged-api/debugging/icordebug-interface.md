@@ -1,14 +1,6 @@
 ---
 title: ICorDebug, interface
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebug
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 33f431d7-ab1a-494d-8af2-20ab15aba194
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0ed0b3a8b42157f6a4fcbc6b4a05a416da736147
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 74c5036bdc8a4a75e5711c6dc1d34d8f2c21128f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebug-interface"></a>ICorDebug, interface
 Fournit des méthodes qui permettent aux développeurs de déboguer des applications dans l’environnement du common language runtime (CLR).  
@@ -55,21 +43,21 @@ Fournit des méthodes qui permettent aux développeurs de déboguer des applicat
 |[Terminate, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebug-terminate-method.md)|Met fin à la `ICorDebug` objet.|  
   
 ## <a name="remarks"></a>Notes  
- `ICorDebug`représente une boucle de traitement d’événements pour un processus du débogueur. Le débogueur doit attendre le [ICorDebugManagedCallback::ExitProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md) rappel de tous les processus en cours de débogage avant de libérer cette interface.  
+ `ICorDebug` représente une boucle de traitement d’événements pour un processus du débogueur. Le débogueur doit attendre le [ICorDebugManagedCallback::ExitProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md) rappel de tous les processus en cours de débogage avant de libérer cette interface.  
   
  Le `ICorDebug` objet est l’objet initial pour contrôler tout débogage managé supplémentaire. Dans les versions 1.0 et 1.1 du .NET Framework, cet objet a été un `CoClass` objet créé à partir de COM. Dans le .NET Framework version 2.0, cet objet n’est plus un `CoClass` objet. Il doit être créé par le [CreateDebuggingInterfaceFromVersion](../../../../docs/framework/unmanaged-api/hosting/createdebugginginterfacefromversion-function.md) fonction, qui est plus en charge des versions. Cette nouvelle fonction de création permet aux clients d’obtenir une implémentation spécifique de `ICorDebug`, qui émule également une version spécifique de l’API de débogage.  
   
 > [!NOTE]
 >  Cette interface ne prend pas en charge l'appel à distance, que ce soit entre ordinateurs ou entre processus.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [Interfaces de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

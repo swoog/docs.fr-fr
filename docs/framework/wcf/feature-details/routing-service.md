@@ -1,31 +1,17 @@
 ---
 title: Service de routage
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: ca7c216a-5141-4132-8193-102c181d2eba
-caps.latest.revision: 13
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8ff2a99bc06ab0de2aedce98ea029f484e47053f
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: e3170108ae190c08a42cc7d80d66576a7b4f8a8e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="routing-service"></a>Service de routage
 Le service de routage est un intermédiaire SOAP générique qui agit en tant que routeur de messages. La fonctionnalité principale du service de routage est la possibilité de router des messages en fonction du contenu des messages ; un message peut ainsi être envoyé à un point de terminaison client en fonction d'une valeur située à l'intérieur du message, soit dans l'en-tête, soit dans le corps du message.  
   
- L'objet <xref:System.ServiceModel.Routing.RoutingService> est implémenté en tant que service [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] dans l'espace de noms <xref:System.ServiceModel.Routing>. Le service de routage expose un ou plusieurs points de terminaison de service qui reçoivent des messages, puis routent chaque message vers un ou plusieurs points de terminaison client en fonction du contenu du message. Le service offre les fonctionnalités suivantes :  
+ Le <xref:System.ServiceModel.Routing.RoutingService> est implémenté comme un service Windows Communication Foundation (WCF) dans le <xref:System.ServiceModel.Routing> espace de noms. Le service de routage expose un ou plusieurs points de terminaison de service qui reçoivent des messages, puis routent chaque message vers un ou plusieurs points de terminaison client en fonction du contenu du message. Le service offre les fonctionnalités suivantes :  
   
 -   Routage basé sur le contenu  
   
@@ -47,10 +33,10 @@ Le service de routage est un intermédiaire SOAP générique qui agit en tant qu
   
  Bien qu'il soit possible de créer un service intermédiaire répondant à un ou plusieurs de ces objectifs, une telle implémentation est souvent liée à un scénario ou à une solution spécifique et ne peut pas être appliquée facilement à de nouvelles applications.  
   
- Le service de routage fournit un intermédiaire SOAP générique, configurable de manière dynamique et connectable qui est compatible avec les modèles [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] de service et de canal et vous permet d'effectuer un routage en fonction du contenu des messages SOAP.  
+ Le Service de routage fournit un intermédiaire SOAP générique, configurable de manière dynamique et connectable qui est compatible avec les modèles de Service WCF et de canal et vous permet d’effectuer le routage basé sur le contenu des messages SOAP.  
   
 > [!NOTE]
->  Le service de routage ne prend pas actuellement en charge le routage de services [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST.  Pour router des appels REST, envisagez d’utiliser <xref:System.Web.Routing> ou [Application Request Routing](http://go.microsoft.com/fwlink/?LinkId=164589) (http://go.microsoft.com/fwlink/?LinkId=164589).  
+>  Le service de routage ne prend pas actuellement en charge le routage de services WCF REST.  Pour router des appels REST, envisagez d’utiliser <xref:System.Web.Routing> ou [Application Request Routing](http://go.microsoft.com/fwlink/?LinkId=164589) (http://go.microsoft.com/fwlink/?LinkId=164589).  
   
 ## <a name="content-based-routing"></a>Routage basé sur le contenu  
  Le routage basé sur le contenu est la possibilité de router un message en fonction d'une ou plusieurs valeurs contenues dans le message. Le service de routage examine chaque message et le route vers le point de terminaison de destination en fonction du contenu du message et de la logique de routage que vous créez. Le routage basé sur le contenu fournit la base de l'agrégation de service, du contrôle des versions de service et du routage par priorité.  

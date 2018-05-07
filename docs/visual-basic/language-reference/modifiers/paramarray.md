@@ -1,10 +1,6 @@
 ---
 title: ParamArray (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.ParamArray
 - ParamArray
@@ -12,20 +8,17 @@ helpviewer_keywords:
 - ParamArray keyword [Visual Basic]
 - ParamArray keyword [Visual Basic], syntax
 ms.assetid: a5f18789-92bd-488f-9c7e-cf3719963635
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 06770f05aabedcf13cc9af1970a2c511a30c73b4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: be8ddb7f9ba08535d12890d1c5c82a9b7b485f3d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="paramarray-visual-basic"></a>ParamArray (Visual Basic)
-Spécifie qu’un paramètre de procédure prend un tableau facultatif d’éléments du type spécifié. `ParamArray`peut être utilisé uniquement sur le dernier paramètre d’une liste de paramètres.  
+Spécifie qu’un paramètre de procédure prend un tableau facultatif d’éléments du type spécifié. `ParamArray` peut être utilisé uniquement sur le dernier paramètre d’une liste de paramètres.  
   
-## <a name="remarks"></a>Remarques  
- `ParamArray`vous permet de passer un nombre arbitraire d’arguments à la procédure. A `ParamArray` paramètre est toujours déclaré à l’aide de [ByVal](../../../visual-basic/language-reference/modifiers/byval.md).  
+## <a name="remarks"></a>Notes  
+ `ParamArray` vous permet de passer un nombre arbitraire d’arguments à la procédure. A `ParamArray` paramètre est toujours déclaré à l’aide de [ByVal](../../../visual-basic/language-reference/modifiers/byval.md).  
   
  Vous pouvez fournir un ou plusieurs arguments à une `ParamArray` type de paramètre en passant un tableau de données appropriés, une liste séparée par des virgules des valeurs, ou rien du tout. Pour plus d’informations, consultez « Appel d’un ParamArray » dans [tableaux de paramètres](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md).  
   

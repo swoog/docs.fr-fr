@@ -1,18 +1,12 @@
 ---
-title: "Le chemin d'accès spécifié n'existe pas"
+title: Le chemin d'accès spécifié n'existe pas
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-visual-basic
-ms.topic: article
 ms.assetid: b0855f92-03c2-446b-94c1-856c87359c54
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 40839fa3d956ca78430526086492f712e03ae425
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 8c24ee889ca011fba0fd7f2b5d2e6d07348a3c0f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="the-specified-path-does-not-exist"></a>Le chemin d'accès spécifié n'existe pas
 Un chemin spécifié n’existe pas, peut-être en raison d’une erreur associant des chaînes.  

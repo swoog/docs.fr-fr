@@ -1,10 +1,6 @@
 ---
 title: 'Comment : héberger et exécuter un service Windows Communication Foundation de base'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -12,21 +8,16 @@ helpviewer_keywords:
 - WCF services [WCF]
 - WCF services [WCF], running
 ms.assetid: 31774d36-923b-4e2d-812e-aa190127266f
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d8c9fdefd286e32b169b96065e6164a236941133
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 68e19d1decd4205f047c51456fe3f345e092a8ae
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>Comment : héberger et exécuter un service Windows Communication Foundation de base
-Il s'agit de la troisième des six tâches requises pour créer une application [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. Pour une vue d’ensemble des six tâches, consultez la [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md) rubrique.  
+Il s’agit de la troisième des six tâches requises pour créer une application Windows Communication Foundation (WCF). Pour une vue d’ensemble des six tâches, consultez la [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md) rubrique.  
   
- Cette rubrique explique comment héberger un service [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] dans une application console. Cette procédure se compose des étapes suivantes :  
+ Cette rubrique décrit comment héberger un service Windows Communication Foundation (WCF) dans une application console. Cette procédure se compose des étapes suivantes :  
   
 -   Créez un projet d'application console pour héberger le service.  
   

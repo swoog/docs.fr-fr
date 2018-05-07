@@ -1,13 +1,6 @@
 ---
-title: "Comment : afficher des lignes multiples dans le contrôle TextBox Windows Forms"
-ms.custom: 
+title: 'Comment : afficher des lignes multiples dans le contrôle TextBox Windows Forms'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - newline
 - end of line
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - TextBox control [Windows Forms], viewing multiple lines
 - carriage return
 ms.assetid: 43173201-0b74-4067-a472-605029ca5f35
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5dca8d0f869702dee50bf851a2099317c45aa842
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c826a519d8be05430eb6e2434209424514347b5e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-view-multiple-lines-in-the-windows-forms-textbox-control"></a>Comment : afficher des lignes multiples dans le contrôle TextBox Windows Forms
 Par défaut, Windows Forms <xref:System.Windows.Forms.TextBox> contrôle affiche une ligne unique de texte et n’affiche pas de barres de défilement. Si le texte est plus long que l’espace disponible, seule une partie du texte est visible. Vous pouvez modifier ce comportement par défaut en définissant le <xref:System.Windows.Forms.TextBox.Multiline%2A>, <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>, et <xref:System.Windows.Forms.TextBox.ScrollBars%2A> valeurs appropriées aux propriétés.  

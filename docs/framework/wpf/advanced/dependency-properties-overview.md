@@ -1,10 +1,7 @@
 ---
-title: "Vue d’ensemble des propriétés de dépendance"
-description: "Une propriété qui est sauvegardée par le système de propriétés WPF est appelée une propriété de dépendance. Cette vue d’ensemble décrit le système de propriétés WPF et les fonctionnalités d’une propriété de dépendance."
+title: Vue d’ensemble des propriétés de dépendance
+description: Une propriété qui est sauvegardée par le système de propriétés WPF est appelée une propriété de dépendance. Cette vue d’ensemble décrit le système de propriétés WPF et les fonctionnalités d’une propriété de dépendance.
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology: dotnet-wpf
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +14,11 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-caps.latest.revision: "30"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d90e47c400f24eb10f2d262f9cb0e757ff472f0a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 196e858c52c06c96d652209e86039bfcc81a785a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dependency-properties-overview"></a>Vue d’ensemble des propriétés de dépendance
 
@@ -43,7 +35,7 @@ Les propriétés de dépendance ont pour but de fournir un moyen de calculer la 
 Dans la référence du SDK, vous pouvez identifier quelle propriété est une propriété de dépendance par la présence de la section Informations sur les propriétés de dépendance dans la page de référence managée de cette propriété. La section d’informations sur les propriétés de dépendance inclut un lien vers le <xref:System.Windows.DependencyProperty> identificateur de champ pour cette propriété de dépendance et inclut également une liste des options de métadonnées qui sont définies pour cette propriété, les informations de substitution par classe et d’autres détails.
 
 ## <a name="dependency-properties-back-clr-properties"></a>Propriétés de dépendance sauvegarder propriétés CLR
-Les propriétés de dépendance et le système de propriétés [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] étendent la fonctionnalité de propriété en fournissant un type qui stocke une propriété, en guise d’implémentation alternative au modèle standard de stockage de la propriété avec un champ privé. Le nom de ce type est <xref:System.Windows.DependencyProperty>. L’autre type important qui définit le [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] système de propriétés est <xref:System.Windows.DependencyObject>. <xref:System.Windows.DependencyObject>définit la classe de base qui peut enregistrer et posséder une propriété de dépendance.
+Les propriétés de dépendance et le système de propriétés [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] étendent la fonctionnalité de propriété en fournissant un type qui stocke une propriété, en guise d’implémentation alternative au modèle standard de stockage de la propriété avec un champ privé. Le nom de ce type est <xref:System.Windows.DependencyProperty>. L’autre type important qui définit le [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] système de propriétés est <xref:System.Windows.DependencyObject>. <xref:System.Windows.DependencyObject> définit la classe de base qui peut enregistrer et posséder une propriété de dépendance.
 
 Voici un résumé de la terminologie employée dans cette documentation de [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)] quand il est question des propriétés de dépendance :
 

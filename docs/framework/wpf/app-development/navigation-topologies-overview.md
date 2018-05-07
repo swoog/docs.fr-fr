@@ -1,13 +1,6 @@
 ---
 title: Vue d'ensemble des topologies de navigation
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - linear topology [WPF]
 - fixed hierarchical topology [WPF]
@@ -16,19 +9,14 @@ helpviewer_keywords:
 - navigation topologies [WPF]
 - dynamically-generated topology
 ms.assetid: 5d5ee837-629a-4933-869a-186dc22ac43d
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: dbe7fe80639537293413d8fb923033909a2451e9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8976ba7973e4f53022846b98c47d5613fd6ba158
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="navigation-topologies-overview"></a>Vue d'ensemble des topologies de navigation
-<a name="introduction"></a>Cette présentation fournit une introduction aux topologies de navigation dans [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Trois topologies de navigation courantes, avec des exemples, sont abordées dans cet article.  
+<a name="introduction"></a> Cette présentation fournit une introduction aux topologies de navigation dans [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Trois topologies de navigation courantes, avec des exemples, sont abordées dans cet article.  
   
 > [!NOTE]
 >  Avant de lire cette rubrique, vous devez être familiarisé avec le concept de navigation structurée dans [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] à l’aide de fonctions de page. Pour plus d’informations sur les deux de ces rubriques, consultez [Structured Navigation Overview](../../../../docs/framework/wpf/app-development/structured-navigation-overview.md).  

@@ -1,29 +1,15 @@
 ---
 title: traçage analytique [WCF]
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 57e3ee18848031bce8ffbb54d26353fe36ee1def
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 99b28dcc1cfb32f5f6835eadee1bded14375c216
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-analytic-tracing"></a>traçage analytique [WCF]
-Cet exemple montre comment ajouter vos propres événements de suivi au flux de données des traces analytiques que [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] écrit dans le suivi des événements pour Windows dans [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Les traces analytiques permettent d'obtenir facilement une visibilité de vos services sans que cela se traduise par une lourde pénalité en termes de performances. Cet exemple montre comment utiliser les API <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> pour écrire des événements qui s'intègrent aux services [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+Cet exemple montre comment ajouter vos propres événements de traçage dans le flux de traces analytiques que Windows Communication Foundation (WCF) écrit dans ETW dans [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Les traces analytiques permettent d'obtenir facilement une visibilité de vos services sans que cela se traduise par une lourde pénalité en termes de performances. Cet exemple montre comment utiliser les API <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> pour écrire des événements qui s'intègrent aux services [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
  Pour plus d’informations sur la <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> API, consultez <xref:System.Diagnostics.Eventing?displayProperty=nameWithType>.  
   
@@ -126,7 +112,7 @@ Cet exemple montre comment ajouter vos propres événements de suivi au flux de 
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à la page [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les exemples [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ETWTrace`  
   

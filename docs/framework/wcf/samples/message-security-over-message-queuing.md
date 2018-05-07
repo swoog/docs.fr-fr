@@ -1,26 +1,14 @@
 ---
 title: Message Security over Message Queuing
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 329aea9c-fa80-45c0-b2b9-e37fd7b85b38
-caps.latest.revision: 22
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: aeb0e66c5bad2b2d03a08560e1021b57e793ad55
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 25a06ac7c13f0abe0f1e8bf27fe117aa9cf038bd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-security-over-message-queuing"></a>Message Security over Message Queuing
 Cet exemple montre comment implémenter une application qui utilise WS-Security avec l'authentification de certificat X.509v3 pour le client et requiert l'authentification de serveur à l'aide du certificat X.509v3 du serveur via MSMQ. La sécurité de message est parfois plus souhaitable pour garantir que les messages du magasin MSMQ demeurent chiffrés et que l'application peut effectuer sa propre authentification du message.  
@@ -93,7 +81,7 @@ Cet exemple montre comment implémenter une application qui utilise WS-Security 
 -   Exécutez Cleanup.bat dans le dossier d'exemples après avoir exécuté l'exemple.  
   
     > [!NOTE]
-    >  Ce script ne supprime pas de certificat de service sur un client lors de l'exécution de cet exemple sur plusieurs ordinateurs. Si vous avez exécuté des exemples [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] qui utilisent des certificats sur plusieurs ordinateurs, assurez-vous d'effacer les certificats de service installés dans le magasin CurrentUser - TrustedPeople. Pour ce faire, utilisez la commande suivante : `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`, par exemple : `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
+    >  Ce script ne supprime pas de certificat de service sur un client lors de l'exécution de cet exemple sur plusieurs ordinateurs. Si vous avez exécuté les exemples Windows Communication Foundation (WCF) qui utilisent des certificats sur plusieurs ordinateurs, veillez à désactiver les certificats de service qui ont été installés dans le magasin CurrentUser - TrustedPeople. Pour ce faire, utilisez la commande suivante : `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`, par exemple : `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
   
 ## <a name="requirements"></a>Spécifications  
  Cet exemple requiert l'installation et l'exécution de MSMQ.  
@@ -101,7 +89,7 @@ Cet exemple montre comment implémenter une application qui utilise WS-Security 
 ## <a name="demonstrates"></a>Démonstrations  
  Le client chiffre le message à l'aide de la clé publique du service et signe le message qui utilise son propre certificat. Le service qui lit le message depuis la file d'attente authentifie le certificat client avec le certificat de son magasin de personnes de confiance. Il déchiffre alors le message et distribue le message à l'opération de service.  
   
- Étant donné que le message [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] est transporté comme une charge utile dans le corps du message MSMQ, le corps reste chiffré dans le magasin MSMQ. Cela protège le message contre toute divulgation non désirée du message. Notez que MSMQ lui-même ne sait pas si le message qu'il transporte est chiffré.  
+ Étant donné que le message Windows Communication Foundation (WCF) est traité comme une charge utile dans le corps du message MSMQ, le corps reste chiffré dans le magasin MSMQ. Cela protège le message contre toute divulgation non désirée du message. Notez que MSMQ lui-même ne sait pas si le message qu'il transporte est chiffré.  
   
  L'exemple montre comment l'authentification mutuelle au niveau du message peut être utilisée avec MSMQ. Les certificats sont échangés hors bande. C'est toujours le cas avec les applications mises en file d'attente parce que le service et le client n'ont pas à être en marche en même temps.  
   
@@ -313,7 +301,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
   
 -   Installation du certificat client dans le magasin de certificats approuvés du serveur.  
   
-     La ligne suivante du fichier de commandes copie le certificat client dans le magasin TrustedPeople du serveur afin que le serveur puisse prendre les décisions d'approbation ou de non-approbation appropriées. Pour qu'un certificat installé dans le magasin TrustedPeople soit approuvé par un service [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], le mode de la validation du certificat client doit avoir la valeur `PeerOrChainTrust` ou `PeerTrust`. Pour connaître la procédure à suivre à l'aide d'un fichier de configuration, consultez l'exemple de configuration de service précédent.  
+     La ligne suivante du fichier de commandes copie le certificat client dans le magasin TrustedPeople du serveur afin que le serveur puisse prendre les décisions d'approbation ou de non-approbation appropriées. Pour un certificat installé dans le magasin TrustedPeople soit approuvé par un service Windows Communication Foundation (WCF), le mode de validation du certificat client doit être défini `PeerOrChainTrust` ou `PeerTrust` valeur. Pour connaître la procédure à suivre à l'aide d'un fichier de configuration, consultez l'exemple de configuration de service précédent.  
   
     ```bat
     echo ************  
@@ -354,7 +342,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à la page [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les exemples [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\MessageSecurity`  
   

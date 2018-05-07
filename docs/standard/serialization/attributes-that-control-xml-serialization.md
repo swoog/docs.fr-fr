@@ -1,12 +1,6 @@
 ---
-title: "Attributs qui contrôlent la sérialisation XML"
-ms.custom: 
+title: Attributs qui contrôlent la sérialisation XML
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - classes, serializing
 - XmlSerializer class, serializing
@@ -15,18 +9,11 @@ helpviewer_keywords:
 - serialization, attributes
 - XML Schema, serializing
 ms.assetid: 414b820f-a696-4206-b576-2711d85490c7
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: e93912fc221d5c76dd5a462e6141fae2d0f4ca16
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 3c6e46c97a943f1c77ffd12dd2b3bc85a64b3c11
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="attributes-that-control-xml-serialization"></a>Attributs qui contrôlent la sérialisation XML
 Vous pouvez appliquer les attributs du tableau suivant à des classes et des membres de classe pour contrôler la manière dont <xref:System.Xml.Serialization.XmlSerializer> sérialise ou désérialise une instance de la classe. Pour comprendre comment ces attributs contrôlent la sérialisation XML, consultez [Contrôle de la sérialisation XML à l’aide d’attributs](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md).  

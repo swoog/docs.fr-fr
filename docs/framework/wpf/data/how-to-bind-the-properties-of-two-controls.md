@@ -1,28 +1,16 @@
 ---
-title: "Comment : lier les propriétés de deux contrôles"
-ms.custom: 
+title: 'Comment : lier les propriétés de deux contrôles'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - data binding [WPF], binding properties of two controls
 - binding properties of two controls [WPF]
 - controls [WPF], binding properties of
 ms.assetid: 06318fac-6afd-4c7d-a277-6d7ef50f47bc
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e79b1f9f00e8c76f94bf4386a284607f526624a4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 02e71bfcc41fc3d256ea95381ed27d36b289b8f8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-bind-the-properties-of-two-controls"></a>Comment : lier les propriétés de deux contrôles
 Cet exemple montre comment lier la propriété d’un contrôle instancié à celle d’un autre à l’aide de la <xref:System.Windows.Data.Binding.ElementName%2A> propriété.  

@@ -1,22 +1,12 @@
 ---
 title: Introduction aux Transformations fonctionnelles pures (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 82bf3348-c503-4854-a91f-71f9835779ff
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 37dc4520d2ef4795ac906732b35444eeb917a814
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 8c382363c757887802ed54b565b24422d0ac7db7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="introduction-to-pure-functional-transformations-visual-basic"></a>Introduction aux Transformations fonctionnelles pures (Visual Basic)
 Cette section présente les transformations fonctionnelles, y compris les concepts sous-jacents et les constructions de prise en charge. Elle décrit le contraste qu'il existe entre la programmation orientée objet et la programmation avec transformation fonctionnelle, et fournit des conseils pour aider les programmeurs à passer de l'une à l'autre. Bien que les transformations fonctionnelles puissent être utilisées dans de nombreux scénarios de programmation, la transformation XML est utilisée ici comme exemple concret.  

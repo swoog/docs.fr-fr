@@ -1,17 +1,12 @@
 ---
 title: 'Didacticiel : Créer un fournisseur de Type (F #)'
 description: 'Découvrez comment créer vos propres fournisseurs de type F # dans F # 3.0 en examinant les fournisseurs de type simple pour illustrer les concepts de base.'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: cea71a2b71f660971c1b2dde702c9b489be48cee
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: fe2bae8c7836ac46824264f2d5f5fb1e41900407
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tutorial-create-a-type-provider"></a>Didacticiel : Créer un fournisseur de Type
 

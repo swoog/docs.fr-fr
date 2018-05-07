@@ -1,10 +1,6 @@
 ---
 title: MustInherit (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - MustInherit
 - vb.MustInherit
@@ -14,24 +10,21 @@ helpviewer_keywords:
 - abstract classes [Visual Basic], MustInherit class
 - MustInherit keyword [Visual Basic]
 ms.assetid: b8f05185-90e3-4dd7-adc2-90d852fab5b4
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 9d384986e42ee69a0f425c1590599aa2c82bc856
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5d622c1cff77a45c8de7772af7efbb73586f4400
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mustinherit-visual-basic"></a>MustInherit (Visual Basic)
 Spécifie qu’une classe peut être utilisée uniquement comme classe de base et que vous ne pouvez pas créer un objet directement à partir de celui-ci.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  L’objectif d’un *classe de base* (également appelé un *classe abstraite*) consiste à définir des fonctionnalités communes à toutes les classes dérivées. Cela permet d’économiser les classes dérivées de devoir redéfinir les éléments communs. Dans certains cas, cette fonctionnalité commune n’est pas suffisamment complète afin de rendre un objet utilisable, et chaque classe dérivée définit la fonctionnalité manquante. Dans ce cas, vous souhaitez le code de consommation pour créer des objets qu’à partir de classes dérivées. Vous utilisez `MustInherit` sur la classe de base pour appliquer ceci.  
   
  Une autre utilisation d’un `MustInherit` classe consiste à restreindre une variable à un ensemble de classes connexes. Vous pouvez définir une classe de base et dérivent toutes ces classes connexes. La classe de base ne devez pas fournir toutes les fonctionnalités communes à toutes les classes dérivées, mais il peut servir d’un filtre pour assigner des valeurs aux variables. Si votre code de consommation déclare une variable comme classe de base, Visual Basic permet de vous permettent d’attribuer uniquement à un objet à partir d’une des classes dérivées à cette variable.  
   
- Le .NET Framework définit plusieurs `MustInherit` classes <xref:System.Array>, <xref:System.Enum>, et <xref:System.ValueType>. <xref:System.ValueType>est un exemple de classe de base qui restreint une variable. Tous les types valeur dérivent <xref:System.ValueType>. Si vous déclarez une variable en tant que <xref:System.ValueType>, vous pouvez affecter uniquement des types valeur à cette variable.  
+ Le .NET Framework définit plusieurs `MustInherit` classes <xref:System.Array>, <xref:System.Enum>, et <xref:System.ValueType>. <xref:System.ValueType> est un exemple de classe de base qui restreint une variable. Tous les types valeur dérivent <xref:System.ValueType>. Si vous déclarez une variable en tant que <xref:System.ValueType>, vous pouvez affecter uniquement des types valeur à cette variable.  
   
 ## <a name="rules"></a>Règles  
   

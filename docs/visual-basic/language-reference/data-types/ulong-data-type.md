@@ -1,11 +1,6 @@
 ---
-title: "ULong, type de données (Visual Basic)"
+title: ULong, type de données (Visual Basic)
 ms.date: 01/31/2018
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.ulong
 helpviewer_keywords:
@@ -23,11 +18,11 @@ helpviewer_keywords:
 ms.assetid: 017e0702-774e-44ae-bedc-786b424ca84e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 606e0ef87b209bb2e75e28223f27d081713c1b7e
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: 1b0137f0f33abfdb3f03758323edeaa63ac60117
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ulong-data-type-visual-basic"></a>ULong, type de données (Visual Basic)
 
@@ -54,7 +49,7 @@ Dans l’exemple suivant, les entiers égaux à 7 934 076 125 représentés c
 
 [!code-vb[ULong](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#LongS)]
 
-À partir de Visual Basic 15.5, vous pouvez également utiliser le caractère de soulignement (`_`) comme séparateur de début entre le préfixe et les chiffres hexadécimaux, binaires ou octales. Exemple :
+À partir de Visual Basic 15.5, vous pouvez également utiliser le caractère de soulignement (`_`) comme séparateur de début entre le préfixe et les chiffres hexadécimaux, binaires ou octales. Par exemple :
 
 ```vb
 Dim number As ULong = &H_F9AC_0326_1489_D68C
@@ -80,7 +75,7 @@ Dim number = &H_00_00_0A_96_2F_AC_14_D7ul
   
 -   **Étendues.** Le `ULong` type de données s’étend à `Decimal`, `Single`, et `Double`. Cela signifie que vous pouvez convertir `ULong` à un de ces types sans rencontrer un <xref:System.OverflowException?displayProperty=nameWithType> erreur.  
   
--   **Caractères de type.** L’ajout de caractères de type littéral `UL` à un littéral force ce dernier à la `ULong` type de données. `ULong`n’a aucun caractère de type d’identificateur.
+-   **Caractères de type.** L’ajout de caractères de type littéral `UL` à un littéral force ce dernier à la `ULong` type de données. `ULong` n’a aucun caractère de type d’identificateur.
   
 -   **Type .NET Framework.** Le type correspondant dans le .NET Framework est la structure <xref:System.UInt64?displayProperty=nameWithType>.  
   

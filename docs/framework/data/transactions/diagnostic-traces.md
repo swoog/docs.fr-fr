@@ -1,23 +1,12 @@
 ---
 title: Traces de diagnostic
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 28e77a63-d20d-4b6a-9caf-ddad86550427
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2cb16bb2d492caca7957e6d58eadddf9bf1568b3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 56f79fb9140785188996cc413eca4dd530037ccd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="diagnostic-traces"></a>Traces de diagnostic
 Les suivis correspondent à la publication de messages spécifiques générés au cours de l'exécution de l'application. Pour utiliser le suivi, vous devez disposer d'un mécanisme de collecte et d'enregistrement des messages envoyés. Les messages de suivi sont reçus par des écouteurs. Le but d'un écouteur est de collecter, de stocker et de router les messages de suivi. Les écouteurs dirigent la sortie de suivi vers une cible appropriée, telle qu'un journal, une fenêtre ou un fichier de texte.  

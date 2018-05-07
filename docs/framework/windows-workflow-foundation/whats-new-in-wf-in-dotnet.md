@@ -1,24 +1,12 @@
 ---
 title: Ce que&#39;nouveauté dans Windows Workflow Foundation dans .NET 4.5
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 195c43a8-e0a8-43d9-aead-d65a9e6751ec
-caps.latest.revision: 32
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d862865057f9978a0b815f3026f2ba67c87eac7d
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: bf5da78e55912750b95752c79119fe00e9ae0c78
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="what39s-new-in-windows-workflow-foundation-in-net-45"></a>Ce que&#39;nouveauté dans Windows Workflow Foundation dans .NET 4.5
 Windows Workflow Foundation (WF) dans [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] introduit de nouvelles fonctionnalités, telles que de nouvelles activités, les fonctions du concepteur et les modèles de développement de flux de travail. Nombre des nouvelles fonctionnalités de workflow introduites dans [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] sont prises en charge dans le concepteur de workflow réhébergé. Pour plus d’informations sur les nouvelles fonctionnalités qui sont prises en charge, consultez [prise en charge de nouvelles Workflow Foundation 4.5 dans le Concepteur de Workflow réhébergés](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md). Pour plus d’informations sur la migration applications de workflow .NET 3.0 et 3.5 de .NET à utiliser la version la plus récente, consultez [conseils de Migration](../../../docs/framework/windows-workflow-foundation/migration-guidance.md). Cette rubrique fournit une vue d'ensemble des nouvelles fonctionnalités de workflow introduites dans [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  

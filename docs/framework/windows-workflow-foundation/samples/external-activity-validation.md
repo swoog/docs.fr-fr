@@ -1,23 +1,12 @@
 ---
-title: "Validation d’activité externe"
-ms.custom: 
+title: Validation d’activité externe
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 49619f59-9819-484a-bcd8-5596308e8551
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: da326969e622a51f6a93b9faf5f81da079ea4003
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1ceb1d2b2f7e8926479fa4c53cfb82a5cdb3a83f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="external-activity-validation"></a>Validation d’activité externe
 Cet exemple montre comment ajouter une logique de validation à une activité intégrée dont vous n’êtes pas l’auteur. La logique de validation consiste à garantir que soit la propriété <xref:System.Activities.Statements.If>, soit la propriété <xref:System.Activities.Statements.If.Then%2A> de toutes les activités <xref:System.Activities.Statements.If.Else%2A> présentes dans le workflow soit définie. De plus, la logique de validation vérifie que toutes les activités <xref:System.Activities.Statements.Pick> présentes dans le workflow ont plusieurs branches, et si ce n'est pas le cas, un avertissement est généré.  
@@ -41,6 +30,6 @@ Cet exemple montre comment ajouter une logique de validation à une activité in
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à la page [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les exemples [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Validation\ExternalActivityValidation`

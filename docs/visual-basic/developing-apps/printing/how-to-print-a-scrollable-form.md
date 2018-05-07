@@ -1,22 +1,15 @@
 ---
-title: "Comment : imprimer un formulaire à défilement variable (Visual Basic)"
+title: 'Comment : imprimer un formulaire à défilement variable (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - entire form [Visual Basic], printing
 - scrollable form [Visual Basic], printing
 ms.assetid: 1196e1cf-b77f-4928-a3e4-85b51ba3787d
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 380e0f833dc69718142809c99ed7615256dd2e73
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d43c2e0e564f6f0c37831cd3105a16c4bc4aaea0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-print-a-scrollable-form-visual-basic"></a>Comment : imprimer un formulaire à défilement variable (Visual Basic)
 Le composant <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> vous permet d’imprimer rapidement une image d’un formulaire sans utiliser un composant <xref:System.Drawing.Printing.PrintDocument> . Par défaut, seule la partie actuellement visible du formulaire est imprimée ; si un utilisateur a redimensionné le formulaire au moment de l’exécution, l’image ne peut pas être imprimée comme prévu. La procédure suivante montre comment imprimer la zone cliente complète d’un formulaire avec défilement, même si le formulaire a été redimensionné.  

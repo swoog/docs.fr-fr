@@ -1,22 +1,12 @@
 ---
-title: "Comment : générer du code XML à partir de fichiers de volume partagé de cluster (Visual Basic)"
-ms.custom: 
+title: 'Comment : générer du code XML à partir de fichiers de volume partagé de cluster (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: fe4dbc87-7b0d-40bf-88c3-5d706ee89a4d
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 9537df2ac9d3aabc61a54fdd755ed503d7ae910b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 535704cb2cb5a702c524f306e561b1154f4b2e1d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-generate-xml-from-csv-files-visual-basic"></a>Comment : générer du code XML à partir de fichiers de volume partagé de cluster (Visual Basic)
 Cet exemple montre comment utiliser [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] et [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] pour générer un fichier XML à partir d'un fichier de valeurs séparées par des virgules (CSV).  

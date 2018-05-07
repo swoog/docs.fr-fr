@@ -1,13 +1,6 @@
 ---
 title: Ressources et code
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - procedural code [WPF], accessing resources from
 - resources [WPF], creating with procedural code
 ms.assetid: c1cfcddb-e39c-41c8-a7f3-60984914dfae
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 772c44b63627204da7056a5707f2840a82053f11
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 27b72d4be9012caf388c90d52a61d9837713c71f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="resources-and-code"></a>Ressources et code
 Cette présentation décrit comment accéder aux ressources [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ou les créer à l’aide de code au lieu de la syntaxe [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Pour plus d’informations sur l’utilisation générale des ressources et sur les ressources du point de vue de la syntaxe [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], consultez [Ressources XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
@@ -36,7 +24,7 @@ Cette présentation décrit comment accéder aux ressources [!INCLUDE[TLA#tla_wi
   
 <a name="accessing"></a>   
 ## <a name="accessing-resources-from-code"></a>Accès aux ressources à partir du code  
- Les clés qui identifient les ressources, si elles sont définies en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], sont également utilisées pour récupérer des ressources spécifiques si vous demandez la ressource dans le code. La façon la plus simple de récupérer une ressource à partir du code est d’appeler une le <xref:System.Windows.FrameworkElement.FindResource%2A> ou <xref:System.Windows.FrameworkElement.TryFindResource%2A> (méthode) à partir des objets de niveau infrastructure dans votre application. La différence entre ces méthodes se situe au niveau de leur comportement quand la clé demandée est introuvable. <xref:System.Windows.FrameworkElement.FindResource%2A>lève une exception ; <xref:System.Windows.FrameworkElement.TryFindResource%2A> ne génère pas d’exception mais renvoie `null`. Chaque méthode prend la clé de ressource comme paramètre d’entrée et retourne un objet faiblement typé. Une clé de ressource est généralement une chaîne, mais il arrive que ce ne soit pas le cas. Pour plus d’informations, consultez la section [Utilisation d’objets comme clés](#objectaskey). En principe, vous castez l’objet retourné en type nécessaire pour la propriété que vous définissez quand vous demandez la ressource. La logique de recherche pour la résolution d’une ressource de code est la même que pour une référence de ressource dynamique [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. La recherche de ressources commence dans l’élément appelant, puis se poursuit dans les éléments parents successifs de l’arborescence logique. La recherche se poursuit dans les ressources d’application, les thèmes et les ressources système, si nécessaire. Une demande de code pour une ressource tient compte des changements d’exécution dans les dictionnaires de ressources qui ont pu avoir lieu à la suite du chargement du dictionnaire de ressources par [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], ainsi que des changements des ressources système en temps réel.  
+ Les clés qui identifient les ressources, si elles sont définies en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], sont également utilisées pour récupérer des ressources spécifiques si vous demandez la ressource dans le code. La façon la plus simple de récupérer une ressource à partir du code est d’appeler une le <xref:System.Windows.FrameworkElement.FindResource%2A> ou <xref:System.Windows.FrameworkElement.TryFindResource%2A> (méthode) à partir des objets de niveau infrastructure dans votre application. La différence entre ces méthodes se situe au niveau de leur comportement quand la clé demandée est introuvable. <xref:System.Windows.FrameworkElement.FindResource%2A> lève une exception ; <xref:System.Windows.FrameworkElement.TryFindResource%2A> ne génère pas d’exception mais renvoie `null`. Chaque méthode prend la clé de ressource comme paramètre d’entrée et retourne un objet faiblement typé. Une clé de ressource est généralement une chaîne, mais il arrive que ce ne soit pas le cas. Pour plus d’informations, consultez la section [Utilisation d’objets comme clés](#objectaskey). En principe, vous castez l’objet retourné en type nécessaire pour la propriété que vous définissez quand vous demandez la ressource. La logique de recherche pour la résolution d’une ressource de code est la même que pour une référence de ressource dynamique [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. La recherche de ressources commence dans l’élément appelant, puis se poursuit dans les éléments parents successifs de l’arborescence logique. La recherche se poursuit dans les ressources d’application, les thèmes et les ressources système, si nécessaire. Une demande de code pour une ressource tient compte des changements d’exécution dans les dictionnaires de ressources qui ont pu avoir lieu à la suite du chargement du dictionnaire de ressources par [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], ainsi que des changements des ressources système en temps réel.  
   
  Voici un bref exemple de code qui recherche une ressource par clé et utilise la valeur retournée pour définir une propriété implémentée comme un <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Gestionnaire d’événements.  
   

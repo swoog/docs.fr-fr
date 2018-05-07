@@ -1,13 +1,6 @@
 ---
-title: "Architecture d'entrée pour l'interopérabilité entre Windows Forms et WPF"
-ms.custom: 
+title: Architecture d'entrée pour l'interopérabilité entre Windows Forms et WPF
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - input architecture [WPF interoperability]
 - messages [WPF]
@@ -20,16 +13,11 @@ helpviewer_keywords:
 - WindowsFormsHost keyboard and messages [WPF]
 - modeless dialog boxes [WPF]
 ms.assetid: 0eb6f137-f088-4c5e-9e37-f96afd28f235
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a246a3297d212eabc31bf2ac9d000aeb56329d09
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 250f34e3e5420a613bc7b1035c62af90665e71ee
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-forms-and-wpf-interoperability-input-architecture"></a>Architecture d'entrée pour l'interopérabilité entre Windows Forms et WPF
 Interopérabilité entre le [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] et [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] requiert que les deux technologies disposent du traitement d’entrée au clavier approprié. Cette rubrique décrit comment ces technologies implémentent le clavier et traitement pour permettre l’interopérabilité régulière dans des applications hybrides de messages.  
@@ -105,7 +93,7 @@ Interopérabilité entre le [!INCLUDE[TLA2#tla_winclient](../../../../includes/t
   
 -   Touches de commande et les touches de boîte de dialogue.  
   
--   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]traitement d’accélérateur.  
+-   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] traitement d’accélérateur.  
   
  Les sections suivantes décrivent ces parties plus en détail.  
   
@@ -131,7 +119,7 @@ Interopérabilité entre le [!INCLUDE[TLA2#tla_winclient](../../../../includes/t
   
 -   Le <xref:System.Windows.Forms.Control.IsInputChar%2A?displayProperty=nameWithType> méthode est substituée pour garantir que tous les messages WM_CHAR sont envoyés aux éléments hébergés.  
   
--   Si la touche ALT est enfoncée, le message est WM_SYSCHAR. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]ne prétraite pas ce message via le <xref:System.Windows.Forms.Control.IsInputChar%2A> (méthode). Par conséquent, le <xref:System.Windows.Forms.Control.ProcessMnemonic%2A> méthode est substituée pour interroger le [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.AccessKeyManager> pour un accélérateur enregistré. Si un accélérateur enregistré est trouvé, <xref:System.Windows.Input.AccessKeyManager> traite.  
+-   Si la touche ALT est enfoncée, le message est WM_SYSCHAR. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ne prétraite pas ce message via le <xref:System.Windows.Forms.Control.IsInputChar%2A> (méthode). Par conséquent, le <xref:System.Windows.Forms.Control.ProcessMnemonic%2A> méthode est substituée pour interroger le [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.AccessKeyManager> pour un accélérateur enregistré. Si un accélérateur enregistré est trouvé, <xref:System.Windows.Input.AccessKeyManager> traite.  
   
 -   Si la touche ALT n’est pas activée, le [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.InputManager> classe traite l’entrée non gérée. Si l’entrée est un accélérateur, la <xref:System.Windows.Input.AccessKeyManager> traite. Le <xref:System.Windows.Input.InputManager.PostProcessInput> l’événement est géré pour les messages WM_CHAR qui n’ont pas été traités.  
   

@@ -1,11 +1,6 @@
 ---
 title: Event, instruction
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Event
 - vb.Custom
@@ -23,14 +18,11 @@ helpviewer_keywords:
 - ByRef keyword [Visual Basic], Event statements
 - declaring user-defined events
 ms.assetid: 306ff8ed-74dd-4b6a-bd2f-e91b17474042
-caps.latest.revision: "33"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4ba49d6582eb2ecac4846eaee570a4d92439a5d9
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 967eedcf1f4d0c9a19775f294167b915cca25a9c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="event-statement"></a>Event, instruction
 Déclare un événement défini par l'utilisateur.  
@@ -72,7 +64,7 @@ End Event
 |`eventname`|Obligatoire. Nom de l'événement. Ce nom respecte les conventions standard d'affectation de noms aux variables.|  
 |`parameterlist`|Facultatif. Liste des variables locales qui représentent les paramètres de cet événement. Vous devez placer le [liste de paramètres](../../../visual-basic/language-reference/statements/parameter-list.md) entre parenthèses.|  
 |`Implements`|Facultatif. Indique que cet événement implémente un événement d'une interface.|  
-|`implementslist`|Obligatoire si `Implements` est utilisé. Liste des procédures `Sub` en cours d'implémentation. Les procédures multiples sont séparées par des virgules :<br /><br /> *implementedprocedure* [, *implementedprocedure* ...]<br /><br /> Chaque `implementedprocedure` emploie la syntaxe et les éléments suivants :<br /><br /> `interface`.`definedname`<br /><br /> -   `interface`-Requis. Nom d'une interface que la classe ou la structure qui contient cette procédure implémente.<br />-   `Definedname`-Requis. Nom par lequel la procédure est définie dans `interface`. Il ne doit pas être identique à `name`, le nom que cette procédure utilise pour implémenter la procédure définie.|  
+|`implementslist`|Obligatoire si `Implements` est utilisé. Liste des procédures `Sub` en cours d'implémentation. Les procédures multiples sont séparées par des virgules :<br /><br /> *implementedprocedure* [, *implementedprocedure* ...]<br /><br /> Chaque `implementedprocedure` emploie la syntaxe et les éléments suivants :<br /><br /> `interface`.`definedname`<br /><br /> -   `interface` -Requis. Nom d'une interface que la classe ou la structure qui contient cette procédure implémente.<br />-   `Definedname` -Requis. Nom par lequel la procédure est définie dans `interface`. Il ne doit pas être identique à `name`, le nom que cette procédure utilise pour implémenter la procédure définie.|  
 |`Custom`|Obligatoire. Les événements déclarés comme `Custom` doivent définir des accesseurs `AddHandler`, `RemoveHandler` et `RaiseEvent` personnalisés.|  
 |`delegatename`|Facultatif. Nom d'un délégué qui spécifie la signature du gestionnaire d'événements.|  
 |`AddHandler`|Obligatoire. Déclare un accesseur `AddHandler`, qui spécifie les instructions à exécuter quand un gestionnaire d'événements est ajouté, soit explicitement en utilisant l'instruction `AddHandler`, soit implicitement en utilisant la clause `Handles`.|  

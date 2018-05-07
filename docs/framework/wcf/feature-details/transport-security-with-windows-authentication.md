@@ -1,32 +1,20 @@
 ---
 title: Sécurité de transport avec l'authentification Windows
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 96dd26e2-46e7-4de0-9a29-4fcb05bf187b
-caps.latest.revision: 17
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5effb18435241b00c3036fd23e15ef5ce485b646
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: d291cd3d00f8d0d40e0b8543d5347e1509cb8b90
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transport-security-with-windows-authentication"></a>Sécurité de transport avec l'authentification Windows
-Le scénario suivant illustre un client [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] et le service sécurisé par la sécurité Windows. Pour plus d’informations sur la programmation, consultez [Comment : sécuriser un Service avec les informations d’identification Windows](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md).  
+Le scénario suivant montre un client de Windows Communication Foundation (WCF) et d’un service sécurisé par la sécurité Windows. Pour plus d’informations sur la programmation, consultez [Comment : sécuriser un Service avec les informations d’identification Windows](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md).  
   
  Un service Web d'intranet affiche des informations de ressources humaines. Le client est une application Windows Form. L'application est déployée dans un domaine sécurisé par un contrôleur Kerberos.  
   
@@ -35,7 +23,7 @@ Le scénario suivant illustre un client [!INCLUDE[indigo1](../../../../includes/
 |Caractéristique|Description|  
 |--------------------|-----------------|  
 |Mode de sécurité|Transport|  
-|Interopérabilité|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uniquement|  
+|Interopérabilité|WCF uniquement|  
 |Authentification (serveur)<br /><br /> Authentification (client)|Oui (à l'aide de l'authentification intégrée Windows)<br /><br /> Oui (à l'aide de l'authentification intégrée Windows)|  
 |Intégrité|Oui|  
 |Confidentialité|Oui|  

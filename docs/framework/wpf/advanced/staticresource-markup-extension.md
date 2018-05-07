@@ -1,13 +1,6 @@
 ---
 title: StaticResource, extension de balisage
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - StaticResource
 - StaticResourceExtension
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - XAML [WPF], StaticResource markup extension
 - StaticResource markup extensions [WPF]
 ms.assetid: 97af044c-71f1-4617-9a94-9064b68185d2
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 97b83feb9d19760208d9cc103290c5c6293c30c3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 518a85c158c9a4472689d3c236b84278114cf3ce
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="staticresource-markup-extension"></a>StaticResource, extension de balisage
 Fournit une valeur pour tout [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] attribut de propriété en recherchant une référence à une ressource déjà définie. Comportement de recherche de cette ressource est analogue à la recherche au moment du chargement, qui recherche des ressources qui ont été précédemment chargées à partir du balisage d’actuel [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] page ainsi que d’autres sources d’application et génère cette valeur de ressource en tant que le valeur de propriété dans les objets d’exécution.  
@@ -64,7 +52,7 @@ Fournit une valeur pour tout [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2s
   
  La syntaxe d’attribut est la syntaxe la plus couramment utilisée avec cette extension de balisage. Le jeton de chaîne fourni après la chaîne d'identificateur `StaticResource` est assigné en tant que valeur <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> de la classe d'extension <xref:System.Windows.StaticResourceExtension> sous-jacente.  
   
- `StaticResource`peut être utilisé dans la syntaxe d’élément objet. Dans ce cas, en spécifiant la valeur de la <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> propriété est requise.  
+ `StaticResource` peut être utilisé dans la syntaxe d’élément objet. Dans ce cas, en spécifiant la valeur de la <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> propriété est requise.  
   
  `StaticResource` peut également être utilisé dans une utilisation d'attributs en clair qui spécifie la propriété <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> en tant que paire propriété=valeur :  
   

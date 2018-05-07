@@ -1,14 +1,6 @@
 ---
 title: 'Comment : configurer un port avec un certificat SSL'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,20 +9,14 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bbf3d4b9888d07a89d1b6a8225a7f7415e8c67cc
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: c3cede1eb90b963f4c0b567a8df48925bca9b02d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Comment : configurer un port avec un certificat SSL
-Lors de la création d'un service [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] auto-hébergé à l'aide de la classe <xref:System.ServiceModel.WSHttpBinding> qui utilise la sécurité de transport, vous devez aussi configurer un port avec un certificat X.509. Si vous ne créez pas de service auto-hébergé, vous pouvez héberger votre service sur les services Internet (IIS). Pour plus d’informations, consultez [sécurité de Transport HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
+Lors de la création d’un service auto-hébergé de Windows Communication Foundation (WCF) avec le <xref:System.ServiceModel.WSHttpBinding> utilise le transport de sécurité de classe, vous devez également configurer un port avec un certificat X.509. Si vous ne créez pas de service auto-hébergé, vous pouvez héberger votre service sur les services Internet (IIS). Pour plus d’informations, consultez [sécurité de Transport HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
  Pour configurer un port, l'outil que vous utilisez dépend du système d'exploitation qui s'exécute sur votre ordinateur.  
   

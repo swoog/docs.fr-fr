@@ -1,27 +1,15 @@
 ---
 title: Trusted Facade Service
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c34d1a8f-e45e-440b-a201-d143abdbac38
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8c0d1d0473a821510ee70e386058a2b3249221dd
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 08e115d297439910c16601051539a23a5a6bebc9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="trusted-facade-service"></a>Trusted Facade Service
-Cet exemple de scénario illustre comment transférer les informations d'identité d'un appelant d'un service à un autre à l'aide de l'infrastructure de sécurité [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] .  
+Cet exemple de scénario illustre comment transférer les informations d’identité de l’appelant à partir d’un service à un autre à l’aide de Windows Communication Foundation (WCF) infrastructure de sécurité.  
   
  Exposer les fonctionnalités fournies par un service au réseau public à l'aide d'un service de façade correspond à un modèle de conception standard. Le service de façade, qui se trouve en principe dans le réseau de périmètre (également appelé sous-réseau filtré), communique avec le service principal, lequel implémente la logique métier et l'accès aux données internes. Le canal de communication entre ces deux services traverse un pare-feu et est habituellement utilisé à une seule fin.  
   
@@ -298,7 +286,7 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à la page [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les exemples [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\TrustedFacade`  
   

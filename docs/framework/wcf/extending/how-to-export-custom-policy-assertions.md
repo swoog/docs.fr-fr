@@ -1,30 +1,18 @@
 ---
-title: "Comment : exporter des assertions de stratégie personnalisées"
-ms.custom: 
+title: 'Comment : exporter des assertions de stratégie personnalisées'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 99030386-43b0-4f7b-866d-17ea307f5cbd
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d8620dec4997947df2dc7078e337a5e421d66c55
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4182007d32ea857aa333542b4df29da18b8062df
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-export-custom-policy-assertions"></a>Comment : exporter des assertions de stratégie personnalisées
-Les assertions de stratégie décrivent les fonctions et les exigences d’un point de terminaison de service. Les applications de service peuvent utiliser des assertions de stratégie personnalisées dans les métadonnées de service pour communiquer des informations de personnalisation de point de terminaison, de liaison ou de contrat à l'application cliente. Vous pouvez utiliser [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] pour exporter des assertions dans des expressions de stratégie attachées dans les liaisons WSDL au point de terminaison, à l'opération ou aux objets de message, selon les fonctions ou les spécifications que vous communiquez.  
+Les assertions de stratégie décrivent les fonctions et les exigences d’un point de terminaison de service. Les applications de service peuvent utiliser des assertions de stratégie personnalisées dans les métadonnées de service pour communiquer des informations de personnalisation de point de terminaison, de liaison ou de contrat à l’application cliente. Vous pouvez utiliser Windows Communication Foundation (WCF) pour exporter des assertions dans des expressions de stratégie attachées dans les liaisons WSDL au point de terminaison, à l’opération ou aux objets de message, selon les fonctionnalités ou les spécifications que vous communiquez.  
   
  Les assertions de stratégie personnalisées sont exportées en implémentant l'interface <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> sur <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType> et en insérant directement l'élément de liaison dans la liaison du point de terminaison de service ou en inscrivant l'élément de liaison dans le fichier de configuration de l'application. Votre implémentation de l'exportation de la stratégie doit ajouter votre assertion de stratégie personnalisée comme une instance <xref:System.Xml.XmlElement?displayProperty=nameWithType> au <xref:System.ServiceModel.Description.PolicyAssertionCollection?displayProperty=nameWithType> approprié sur le <xref:System.ServiceModel.Description.PolicyConversionContext?displayProperty=nameWithType> qui est passé dans la méthode <xref:System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy%2A>.  
   

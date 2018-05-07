@@ -1,24 +1,16 @@
 ---
 title: Sous-expression (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - lambda expressions [Visual Basic], sub expression
 - Sub Expression [Visual Basic]
 - subroutines [Visual Basic], sub expressions
 ms.assetid: 36b6bfd1-6539-4d8f-a5eb-6541a745ffde
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 43e35bd0386bc56478603ec36437981785cc8ffb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 602212e664fa3362742fb1ba0dc033610272d3af
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sub-expression-visual-basic"></a>Sous-expression (Visual Basic)
 Déclare les paramètres et le code qui définissent une expression lambda de sous-routine.  
@@ -41,7 +33,7 @@ End Sub
 |`statement`|Obligatoire. Une instruction unique.|  
 |`statements`|Obligatoire. Une liste d’instructions.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  A *expression lambda* est une sous-routine qui n’a pas de nom et qui exécute une ou plusieurs instructions. Vous pouvez utiliser une expression lambda n’importe où que vous pouvez utiliser un type délégué, sauf en tant qu’argument à `RemoveHandler`. Pour plus d’informations sur les délégués et l’utilisation d’expressions lambda avec les délégués, consultez [instruction Delegate](../../../visual-basic/language-reference/statements/delegate-statement.md) et [Conversion souple en délégué](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).  
   
 ## <a name="lambda-expression-syntax"></a>Syntaxe d’expression lambda  

@@ -1,23 +1,16 @@
 ---
-title: "Empaquetage et déploiement des extensions My (Visual Basic) personnalisé"
+title: Empaquetage et déploiement des extensions My (Visual Basic) personnalisé
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - My namespace [Visual Basic], customizing
 - My namespace
 - My namespace [Visual Basic], extending
 ms.assetid: fd89c54b-0290-4c50-95a3-ff17d4487a21
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 94a9ea977d0add14ae9f0c9a889b008b94610ee0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 901d0b80a18d2f4d262cc65eb485dcc628bc6a08
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="packaging-and-deploying-custom-my-extensions-visual-basic"></a>Empaquetage et déploiement des extensions My (Visual Basic) personnalisé
 Visual Basic fournit un moyen simple pour vous permettre de déployer votre personnalisé `My` extensions de l’espace de noms à l’aide de modèles Visual Studio. Si vous créez un modèle de projet pour lequel votre `My` extensions font partie intégrante du nouveau type de projet, vous pouvez simplement inclure votre personnalisé `My` code d’extension avec le projet lorsque vous exportez le modèle. Pour plus d’informations sur l’exportation de modèles de projet, consultez [Comment : créer des modèles de projet](/visualstudio/ide/how-to-create-project-templates).  
@@ -101,7 +94,7 @@ Visual Basic fournit un moyen simple pour vous permettre de déployer votre pers
  Pour installer le modèle, vous pouvez copier le dossier compressé (fichier .zip) dans le dossier de modèles d’élément Visual Basic (par exemple, Mes Documents\Visual Studio 2008\Templates\Item Templates\Visual Basic). Vous pouvez également publier le modèle dans un fichier de programme d’installation de Visual Studio (.vsi).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Étendre la My Namespace en Visual Basic](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md)  
+ [Extension de l’espace de noms My dans Visual Basic](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md)  
  [Extension du modèle d’application Visual Basic](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md)  
  [Personnalisation de la disponibilité ou non des objets dans My](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)  
  [Extensions My, Page du Concepteur de projets](/visualstudio/ide/reference/my-extensions-page-project-designer-visual-basic)

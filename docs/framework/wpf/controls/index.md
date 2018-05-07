@@ -1,31 +1,17 @@
 ---
 title: Contrôles
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - controls [WPF], about WPF controls
 ms.assetid: 3f255a8a-35a8-4712-9065-472ff7d75599
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 66c6cc58423a2af8d0fd6de93b8884918888fb48
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 11c9c2cdd9e485fb87f5d8ead7790ded0428f7dd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="controls"></a>Contrôles
 <a name="introduction"></a>
@@ -37,7 +23,7 @@ ms.lasthandoff: 12/22/2017
   
  [!code-xaml[ControlsOverview#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/Window1.xaml#1)]  
   
- L’exemple suivant crée la même application dans le code. Par souci de concision, la création de la <xref:System.Windows.Controls.Grid>, `grid1`, a été exclu de l’exemple. `grid1`a les mêmes définitions de colonne et de ligne, comme indiqué dans l’exemple précédent [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] exemple.  
+ L’exemple suivant crée la même application dans le code. Par souci de concision, la création de la <xref:System.Windows.Controls.Grid>, `grid1`, a été exclu de l’exemple. `grid1` a les mêmes définitions de colonne et de ligne, comme indiqué dans l’exemple précédent [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] exemple.  
   
  [!code-csharp[ControlsOverview#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml.cs#2)]
  [!code-vb[ControlsOverview#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ControlsOverview/VisualBasic/AppInCode.xaml.vb#2)]  

@@ -1,12 +1,6 @@
 ---
-title: "Introduction à la sérialisation XML"
-ms.custom: 
+title: Introduction à la sérialisation XML
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,18 +12,11 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: 8c63200d-db63-4a03-a93d-21641623df62
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 2f0e6091528987eb6798d3880bdb2190af337f8a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 626bfa90f18bf110971d632f0a833cfa16d650a5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="introducing-xml-serialization"></a>Introduction à la sérialisation XML
 La sérialisation correspond au processus de conversion d'un objet en un formulaire facilement transportable. Par exemple, vous pouvez sérialiser un objet et le transporter par Internet via HTTP entre un client et un serveur. À l'autre extrémité, la désérialisation reconstruit l'objet du flux de données.  

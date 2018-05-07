@@ -1,13 +1,6 @@
 ---
 title: Types anonymes (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.AnonymousType
 helpviewer_keywords:
@@ -15,14 +8,11 @@ helpviewer_keywords:
 - anonymous types [Visual Basic]
 - types [Visual Basic], anonymous
 ms.assetid: 7b87532c-4b3e-4398-8503-6ea9d67574a4
-caps.latest.revision: 46
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 530e21e1595f9bbc3436280418287413e2a48111
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 451fe45c9b5efbeb64b1066d6ba8e5f9b27300c2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="anonymous-types-visual-basic"></a>Types anonymes (Visual Basic)
 Visual Basic prend en charge les types anonymes, qui vous permettent de créer des objets sans écrire de définition de classe pour le type de données. À la place, le compilateur se charge de générer une classe. La classe n’a aucun nom utilisable, hérite directement de <xref:System.Object>et contient les propriétés que vous spécifiez dans la déclaration de l’objet. Étant donné que le nom du type de données n’est pas spécifié, il est appelé un *type anonyme*.  
@@ -95,11 +85,11 @@ Visual Basic prend en charge les types anonymes, qui vous permettent de créer d
 ## <a name="anonymous-types-from-query-expressions"></a>Types anonymes à partir d’Expressions de requête  
  Les expressions de requête ne nécessitent pas toujours de la création de types anonymes. Lorsque cela est possible, ils utilisent un type existant pour contenir les données de colonne. Cela se produit lorsque la requête retourne des enregistrements entiers à partir de la source de données, ou qu’un seul champ de chaque enregistrement. Dans les exemples de code suivants, `customers` est une collection d’objets d’un `Customer` classe. La classe possède de nombreuses propriétés, et vous pouvez inclure un ou plusieurs d'entre eux dans le résultat de requête, dans n’importe quel ordre. Dans les deux premiers exemples, aucun type anonyme n’est requis, car les requêtes sélectionnent les éléments de types nommés :  
   
--   `custs1`contient une collection de chaînes, car `cust.Name` est une chaîne.  
+-   `custs1` contient une collection de chaînes, car `cust.Name` est une chaîne.  
   
      [!code-vb[VbVbalrAnonymousTypes#30](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_9.vb)]  
   
--   `custs2`contient une collection de `Customer` des objets, car chaque élément de `customers` est un `Customer` objet et l’élément entier est sélectionné par la requête.  
+-   `custs2` contient une collection de `Customer` des objets, car chaque élément de `customers` est un `Customer` objet et l’élément entier est sélectionné par la requête.  
   
      [!code-vb[VbVbalrAnonymousTypes#31](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_10.vb)]  
   

@@ -1,24 +1,15 @@
 ---
-title: "Vue d'ensemble des énumérations (Visual Basic)"
-ms.custom: 
+title: Vue d'ensemble des énumérations (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, enumerations
 - enumerations [Visual Basic], about enumerations
 ms.assetid: b42a38ee-5e77-4f99-a037-e3a127ead89c
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5d50e6bae880e5dc4dcde203708c6b07c05bb4e8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 67f1dda7031eb00f3198f15b3f79d5e513de2a91
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="enumerations-overview-visual-basic"></a>Vue d'ensemble des énumérations (Visual Basic)
 Les énumérations offrent un moyen pratique d’utiliser des ensembles de constantes associées et pour associer des valeurs constantes avec des noms. Par exemple, vous pouvez déclarer une énumération pour un ensemble de constantes entières associées aux jours de la semaine puis utiliser les noms des jours au lieu de leur valeur entière dans votre code.  

@@ -1,22 +1,12 @@
 ---
-title: "Comment : écrire un LINQ vers la méthode d’axe XML (Visual Basic)"
-ms.custom: 
+title: 'Comment : écrire un LINQ vers la méthode d’axe XML (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b676f025-a24c-4076-8713-aa809b2b8ce0
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d0c0c61514e6f51b060c3ccd431920c3a9adc418
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: b77be0d9b1f9f6c5dcfe7aed90b0e16b614f26aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-write-a-linq-to-xml-axis-method-visual-basic"></a>Comment : écrire un LINQ vers la méthode d’axe XML (Visual Basic)
 Vous pouvez écrire vos propres méthodes d’axe pour récupérer des collections à partir d’une arborescence XML. Pour cela, l'un des meilleurs moyens consiste à écrire une méthode d'extension qui retourne une collection d'éléments ou d'attributs. Vous pouvez écrire votre méthode d’extension de façon à retourner des sous-ensembles spécifiques d’éléments ou d’attributs, selon les exigences de votre application.  

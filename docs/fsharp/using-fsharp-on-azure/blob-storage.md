@@ -2,16 +2,12 @@
 title: 'Prise en main le stockage Blob Azure à l’aide de F #'
 description: Stocker des données non structurées dans le cloud avec le stockage d’objets Blob Azure.
 author: sylvanc
-ms.author: phcart
 ms.date: 09/20/2016
-ms.topic: conceptual
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: 0414f0ca4aa2c2b75e80b3fd6531be74924fb60f
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 3ab08154bd374896fce777c7c373204c9048b65c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>Prise en main le stockage Blob Azure à l’aide de F # #
 

@@ -1,34 +1,20 @@
 ---
-title: "Comment : référencer des certificats X.509 de manière cohérente"
-ms.custom: 
+title: 'Comment : référencer des certificats X.509 de manière cohérente'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - certificates [WCF], referencing X.509 certificates
 ms.assetid: a6de1c63-e450-4640-ad08-ad7302dbfbfc
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2cc313be8c3d6325630e57e0b0e845ad4902bd2a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: efc4fb399224de7f03c6bffb606178184de1d467
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-consistently-reference-x509-certificates"></a>Comment : référencer des certificats X.509 de manière cohérente
-Vous pouvez identifier un certificat de plusieurs manières : par le hachage du certificat, par l'émetteur et le numéro de série ou par l'identificateur de la clé du sujet. L'identificateur de la clé du sujet fournit une identification unique de la clé publique du sujet du certificat et sert souvent dans le cadre des signatures numériques XML. La valeur de cet identificateur fait habituellement partie du certificat X.509 sous une *extension de certificat X.509*. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]a une valeur par défaut *style de référencement* qui utilise l’émetteur et le numéro de série si l’extension SKI est manquante sur le certificat. Si le certificat contient l’extension de l’identificateur, le style de référencement utilise par défaut l’identificateur pour pointer vers le certificat. Si, au cours du développement d'une application, vous passez de certificats qui n'utilisent pas l'extension de l'identificateur à des certificats qui l'utilisent, le style de référencement utilisé dans les messages générés par [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] change également.  
+Vous pouvez identifier un certificat de plusieurs manières : par le hachage du certificat, par l'émetteur et le numéro de série ou par l'identificateur de la clé du sujet. L'identificateur de la clé du sujet fournit une identification unique de la clé publique du sujet du certificat et sert souvent dans le cadre des signatures numériques XML. La valeur de cet identificateur fait habituellement partie du certificat X.509 sous une *extension de certificat X.509*. Windows Communication Foundation (WCF) a une valeur par défaut *style de référencement* qui utilise l’émetteur et le numéro de série si l’extension SKI est manquante sur le certificat. Si le certificat contient l’extension de l’identificateur, le style de référencement utilise par défaut l’identificateur pour pointer vers le certificat. Si à mi-chemin via le développement d’une application, vous passez de certificats qui n’utilisent pas l’extension SKI pour les certificats qui utilisent l’extension SKI, le style de référencement utilisé dans les messages générés par WCF change également.  
   
  Si un style de référencement cohérent est requis indépendamment de la présence de l’extension de l’identificateur de la clé du sujet, il est possible de configurer ce style de référencement souhaité comme l’illustre le code suivant.  
   

@@ -1,25 +1,15 @@
 ---
-title: "Fonctionnalités Visual Basic prenant en charge LINQ"
-ms.custom: 
+title: Fonctionnalités Visual Basic prenant en charge LINQ
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Visual Basic, LINQ features
 - LINQ [Visual Basic], features supporting LINQ
 ms.assetid: c821bb50-b6f6-4cf9-8aba-2717e465bd3a
-caps.latest.revision: "51"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 42465dbb168b7961792aec6b3c2bb7ae8f0a3355
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: db2eff2f7c19a3c510e7b212f5bb406d7a885439
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="visual-basic-features-that-support-linq"></a>Fonctionnalités Visual Basic prenant en charge LINQ
 Le nom [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] fait référence à la technologie en Visual Basic prend en charge la syntaxe de requête et les autres constructions de langage directement dans le langage. Avec [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], vous n’avez pas à apprendre un nouveau langage de requête sur une source de données externe. Vous pouvez interroger les données dans les bases de données relationnelles, de magasins XML ou d’objets à l’aide de Visual Basic. Cette intégration de fonctions de requête dans la langue permet la vérification de la compilation pour les erreurs de syntaxe et de la sécurité de type. Cette intégration garantit également que vous connaissez déjà la majeure partie de ce que vous devez savoir pour écrire des requêtes riches et variées dans Visual Basic.  

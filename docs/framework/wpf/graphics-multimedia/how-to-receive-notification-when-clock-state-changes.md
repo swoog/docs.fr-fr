@@ -1,13 +1,6 @@
 ---
-title: "Comment : recevoir une Notification quand une horloge au format &#39; modification de l’état s"
-ms.custom: 
+title: 'Comment : recevoir une Notification quand une horloge au format&#39;s modifications d’état'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,18 +8,13 @@ helpviewer_keywords:
 - clocks [WPF], notification of state changes
 - notifications [WPF], clocks' state changes
 ms.assetid: ecb10fc9-d0c2-45c3-b0a1-7b11baa733da
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 396e2c51894ad5ed11f8953bceb1bd36899cfc62
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d0eaca4d2a05d01e686efc15dfceebb6de4f4b64
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-receive-notification-when-a-clock39s-state-changes"></a>Comment : recevoir une Notification quand une horloge au format &#39; modification de l’état s
+# <a name="how-to-receive-notification-when-a-clock39s-state-changes"></a>Comment : recevoir une Notification quand une horloge au format&#39;s modifications d’état
 D’une horloge <xref:System.Windows.Media.Animation.Clock.CurrentStateInvalidated> événement se produit lors de son <xref:System.Windows.Media.Animation.Clock.CurrentState%2A> devient non valide, par exemple lorsque l’horloge démarre ou s’arrête. Vous pouvez inscrire directement à l’aide de cet événement un <xref:System.Windows.Media.Animation.Clock>, ou vous pouvez effectuer à l’aide un <xref:System.Windows.Media.Animation.Timeline>.  
   
  Dans l’exemple suivant, un <xref:System.Windows.Media.Animation.Storyboard> et deux <xref:System.Windows.Media.Animation.DoubleAnimation> objets sont utilisés pour animer la largeur de deux rectangles. Le <xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated> événement est utilisé pour écouter les changements d’état de l’horloge.  

@@ -1,31 +1,17 @@
 ---
 title: Hébergement de services
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - hosting services [WCF]
 ms.assetid: 192be927-6be2-4fda-98f0-e513c4881acc
-caps.latest.revision: 31
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ac7de48b801036ac186ffe92117269ae86d14a10
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 6b7e94bdbec483f32fa41bb60032cca56c5e1593
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hosting-services"></a>Hébergement de services
-Pour devenir actif, un service doit être hébergé dans un environnement d'exécution qui le crée et contrôle son contexte et sa durée de vie. Les services[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] sont conçus pour s'exécuter dans tout processus Windows qui prend en charge le code managé.  
+Pour devenir actif, un service doit être hébergé dans un environnement d'exécution qui le crée et contrôle son contexte et sa durée de vie. Les services Windows Communication Foundation (WCF) sont conçus pour s’exécuter dans n’importe quel processus Windows qui prend en charge le code managé.  
   
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] est le modèle de programmation unifié de Microsoft permettant de générer des applications orientées service. Ce modèle de programmation reste cohérent et est indépendant de l'environnement d'exécution dans lequel le service est déployé. En pratique, cela signifie que le code de vos services est essentiellement le même quelle que soit l'option d'hébergement.  
   

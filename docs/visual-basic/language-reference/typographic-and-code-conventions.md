@@ -1,9 +1,6 @@
 ---
 title: Conventions typographiques (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - coding conventions [Visual Basic], Visual Basic
 - best practices [Visual Basic], coding conventions
@@ -13,14 +10,11 @@ helpviewer_keywords:
 - conventions [Visual Basic], documentation
 - Visual Basic code, conventions
 ms.assetid: 1916cd81-ea9d-4faa-81f7-4a0d864b60f4
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 7b6db5c223b0548e308b49a686cff72eaaf8da36
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: eb7a33ef21bf6beda730dffa8eb7ff9cabe599fb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="typographic-and-code-conventions-visual-basic"></a>Conventions typographiques (Visual Basic)
 Documentation de Visual Basic utilise les conventions de code suivant typographiques.  
@@ -32,7 +26,7 @@ Documentation de Visual Basic utilise les conventions de code suivant typographi
 |`Sub`, `If`, `ChDir`, `Print`, `True`, `Debug`|Mots clés spécifiques au langage et les membres du runtime ont des lettres majuscules initiales et sont mises en forme comme illustré dans cet exemple.|  
 |**SmallProject**, **ButtonCollection**|Mots et expressions que vous êtes invité à taper sont mis en forme comme illustré dans cet exemple.|  
 |[Module (instruction)](../../visual-basic/language-reference/statements/module-statement.md)|Vous pouvez cliquer pour accéder à une autre page d’aide de liens sont mises en forme comme illustré dans cet exemple.|  
-|*objet*, *variableName*,`argumentList`|Espaces réservés pour les informations que vous fournissez sont mis en forme comme illustré dans cet exemple.|  
+|*objet*, *variableName*, `argumentList`|Espaces réservés pour les informations que vous fournissez sont mis en forme comme illustré dans cet exemple.|  
 |[Ombres], [ *expressionList* ]|Dans la syntaxe, les éléments facultatifs sont placés entre crochets.|  
 |{ `Public` &#124; `Friend` &#124; `Private` }|Dans la syntaxe, lorsque vous devez faire un choix entre deux ou plusieurs éléments, les éléments sont placés entre accolades et séparés par des barres verticales.<br /><br /> Vous devez sélectionner un seul et unique, des éléments.|  
 |[ `Protected` &#124; `Friend` ]|Dans la syntaxe, lorsque vous avez la possibilité de choisir entre deux ou plusieurs éléments, les éléments sont placés entre crochets et séparés par des barres verticales.<br /><br /> Vous pouvez sélectionner n’importe quelle combinaison des éléments, ou aucun élément.|  

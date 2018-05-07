@@ -1,22 +1,12 @@
 ---
-title: "L’atomisation XName et XNamespace atomisés (LINQ to XML) (Visual Basic)"
-ms.custom: 
+title: L’atomisation XName et XNamespace atomisés (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 21ee7585-7df9-40b4-8c76-a12bb5f29bb3
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 3d3c0b1278411c41d002c546f4b1a3be9975a801
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e311de901a9a54bd4fc6ee56d425cc16b4978e8f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="atomized-xname-and-xnamespace-objects-linq-to-xml-visual-basic"></a>L’atomisation XName et XNamespace atomisés (LINQ to XML) (Visual Basic)
 Les objets <xref:System.Xml.Linq.XName> et <xref:System.Xml.Linq.XNamespace> sont *atomisés* ; autrement dit, s’ils contiennent le même nom qualifié, ils font référence au même objet. Ceci permet d'améliorer les performances des requêtes : lorsque vous comparez deux noms atomisés pour en vérifier l'égalité, le langage intermédiaire sous-jacent doit seulement déterminer si les deux références pointent vers le même objet. Le code sous-jacent ne doit pas effectuer de comparaisons de chaînes, ce qui prendrait beaucoup de temps.  

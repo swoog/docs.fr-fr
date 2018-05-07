@@ -1,14 +1,6 @@
 ---
-title: "IMetaDataImport::FindMemberRef, méthode"
-ms.custom: 
+title: IMetaDataImport::FindMemberRef, méthode
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataImport.FindMemberRef
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 1ccda329-d752-4d89-abe8-511af3c3f4c9
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a94fb09e1ff62abac9dd716257ba75542453707e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c3736d604b7e77028a2b99d462d88ae207df926c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataimportfindmemberref-method"></a>IMetaDataImport::FindMemberRef, méthode
 Obtient un pointeur vers le jeton MemberRef pour le membre de référence qui est délimitée par le texte spécifié <xref:System.Type> et qui possède la signature de nom et de métadonnées spécifiée.  
@@ -71,16 +59,16 @@ HRESULT FindMemberRef (
   
  La signature passée à `FindMemberRef` doit avoir été générée dans la portée actuelle, car les signatures sont liées à une étendue spécifique. Une signature peut incorporer un jeton qui identifie le type de valeur ou de la classe englobant. Le jeton est un index dans la table TypeDef locale. Vous ne peut pas générer une signature d’exécution en dehors du contexte de la portée actuelle et utiliser cette signature comme entrée pour `FindMemberRef`.  
   
- `FindMemberRef`recherche uniquement les références de membres qui ont été définis directement dans la classe ou interface ; Il ne trouve pas de références à des membres hérités.  
+ `FindMemberRef` recherche uniquement les références de membres qui ont été définis directement dans la classe ou interface ; Il ne trouve pas de références à des membres hérités.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Cor.h  
   
  **Bibliothèque :** inclus en tant que ressource dans MsCorEE.dll  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [IMetaDataImport, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  

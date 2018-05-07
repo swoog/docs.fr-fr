@@ -1,11 +1,6 @@
 ---
-title: "New, opérateur (Visual Basic)"
+title: New, opérateur (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.new
 - vb.NewConstraint
@@ -16,19 +11,16 @@ helpviewer_keywords:
 - New constraint
 - New keyword [Visual Basic]
 ms.assetid: d7d566d7-fe0e-4336-91f7-641a542de4d0
-caps.latest.revision: "23"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 74f0352379e861ad135ea23d31ea07d638f9e6c1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0fe511b2c16681d7bab7eeda7c121fcbbaa2f5dd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="new-operator-visual-basic"></a>New, opérateur (Visual Basic)
 Introduit un `New` clause pour créer une nouvelle instance de l’objet, spécifie une contrainte de constructeur sur un paramètre de type ou identifie une `Sub` procédure sous la forme d’un constructeur de classe.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Dans une déclaration ou une instruction d’assignation, un `New` clause doit spécifier une classe définie à partir de laquelle l’instance peut être créée. Cela signifie que la classe doit exposer un ou plusieurs constructeurs accessibles par le code appelant.  
   
  Vous pouvez utiliser un `New` clause dans une instruction de déclaration ou une instruction d’assignation. Lorsque l’instruction s’exécute, il appelle le constructeur approprié de la classe spécifiée, en passant les arguments que vous avez fournies. L’exemple suivant illustre cela en créant des instances d’un `Customer` classe qui possède deux constructeurs, qui ne prend aucun paramètre et une qui prend un paramètre de chaîne.  

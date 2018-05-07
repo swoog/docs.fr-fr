@@ -1,20 +1,12 @@
 ---
 title: Mise en forme de HTTP Web WCF
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology: dotnet-clr
-ms.topic: article
 ms.assetid: e2414896-5463-41cd-b0a6-026a713eac2c
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ab18e739b061ac6d28877eaac23c258a79f07a2d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: abbfc74f33ddb676c8ac85eb712757615a2972ab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-web-http-formatting"></a>Mise en forme de HTTP Web WCF
 Le modèle de programmation HTTP Web WCF vous permet de déterminer dynamiquement le format le plus approprié pour permettre à une opération de service de retourner sa réponse. Deux méthodes pour déterminer le format approprié sont prises en charge : automatique et explicite.  
@@ -30,7 +22,7 @@ Le modèle de programmation HTTP Web WCF vous permet de déterminer dynamiquemen
   
 4.  Paramètre de format par défaut dans le WebHttpBehavior.  
   
- Si le message de demande contient un en-tête Accept, l'infrastructure [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] recherche un type qu'elle prend en charge. Si l'en-tête `Accept` spécifie des priorités pour ses types de médias, elles sont respectées. Si aucun format approprié ne se trouve dans l'en-tête `Accept`, le type de contenu du message de demande est utilisé. Si aucun type de contenu approprié n'est spécifié, le paramètre de format par défaut de l'opération est utilisé. Le format par défaut est défini par le paramètre `ResponseFormat` des attributs <xref:System.ServiceModel.Web.WebGetAttribute> et <xref:System.ServiceModel.Web.WebInvokeAttribute>. Si aucun format par défaut n'est spécifié sur l'opération, la valeur de la propriété <xref:System.ServiceModel.Description.WebHttpBehavior.DefaultOutgoingResponseFormat%2A> est utilisée. La mise en forme automatique s'appuie sur la propriété <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A>. Lorsque cette propriété a la valeur `true`, l'infrastructure [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] détermine le meilleur format à utiliser. La sélection automatique du format est désactivée par défaut à des fins de compatibilité descendante. La sélection automatique du format peut être activée par programme ou par configuration. L'exemple suivant montre comment activer la sélection automatique du format dans le code.  
+ Si le message de demande contient un en-tête Accept l’infrastructure Windows Communication Foundation (WCF) recherche un type pris en charge. Si l'en-tête `Accept` spécifie des priorités pour ses types de médias, elles sont respectées. Si aucun format approprié ne se trouve dans l'en-tête `Accept`, le type de contenu du message de demande est utilisé. Si aucun type de contenu approprié n'est spécifié, le paramètre de format par défaut de l'opération est utilisé. Le format par défaut est défini par le paramètre `ResponseFormat` des attributs <xref:System.ServiceModel.Web.WebGetAttribute> et <xref:System.ServiceModel.Web.WebInvokeAttribute>. Si aucun format par défaut n'est spécifié sur l'opération, la valeur de la propriété <xref:System.ServiceModel.Description.WebHttpBehavior.DefaultOutgoingResponseFormat%2A> est utilisée. La mise en forme automatique s'appuie sur la propriété <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A>. Lorsque cette propriété a la valeur `true`, l'infrastructure WCF détermine le meilleur format à utiliser. La sélection automatique du format est désactivée par défaut à des fins de compatibilité descendante. La sélection automatique du format peut être activée par programme ou par configuration. L'exemple suivant montre comment activer la sélection automatique du format dans le code.  
   
 ```csharp
 // This code assumes the service name is MyService and the service contract is IMyContract     

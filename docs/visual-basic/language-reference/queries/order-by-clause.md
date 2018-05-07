@@ -1,11 +1,6 @@
 ---
 title: Order By, clause (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.QueryOrderBy
 - vb.QueryAscending
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - Order By clause [Visual Basic]
 - Order By statement [Visual Basic]
 ms.assetid: fa911282-6b81-44c7-acfa-46b5bb93df75
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 21ee21942b966668a67b14aba72b8f9fc5ee903c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7c60156ee81618530b42d5f61dbcac6f59c4f675
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="order-by-clause-visual-basic"></a>Order By, clause (Visual Basic)
 Spécifie l’ordre de tri pour un résultat de requête.  
@@ -37,7 +29,7 @@ Order By orderExp1 [ Ascending | Descending ] [, orderExp2 [...] ]
  `orderExp1`  
  Obligatoire. Un ou plusieurs champs à partir du résultat de la requête qui identifient l’ordre des valeurs renvoyées. Les noms de champ doivent être séparés par des virgules (,). Vous pouvez identifier chaque champ de tri dans l’ordre croissant ou décroissant à l’aide de la `Ascending` ou `Descending` mots clés. Si aucun `Ascending` ou `Descending` mot clé est spécifié, l’ordre de tri par défaut est croissant. Les champs d’ordre de tri prévalent de gauche à droite.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Vous pouvez utiliser la `Order By` clause pour trier les résultats d’une requête. Le `Order By` clause peut trier seulement un résultat basé sur la variable de portée de l’étendue actuelle. Par exemple, le `Select` clause introduit une nouvelle portée dans une expression de requête avec de nouvelles variables d’itération pour cette étendue. Les variables définies avant de plage un `Select` clause dans une requête ne sont pas disponibles après la `Select` clause. Par conséquent, si vous souhaitez classer vos résultats par un champ qui n’est pas disponible dans le `Select` clause, vous devez placer le `Order By` clause avant le `Select` clause. Un exemple de lorsque vous devez pour cela est lorsque vous souhaitez trier votre requête en fonction de champs qui ne sont pas retournés en tant que partie du résultat.  
   
  Ordre croissant ou décroissant pour un champ est déterminé par l’implémentation de la <xref:System.IComparable> interface pour le type de données du champ. Si le type de données n’implémente pas le <xref:System.IComparable> interface, l’ordre de tri est ignoré.  

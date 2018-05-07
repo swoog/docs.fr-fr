@@ -1,24 +1,15 @@
 ---
 title: '&lt;typeparam&gt; (Visual Basic)'
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - typeparam XML tag
 - <typeparam> XML tag
 ms.assetid: 1bb5ba78-f060-478c-905c-77a2e43639af
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: b654fe6fc93642693730256b523fee999aa55937
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 76e0e8d4757f29bb5df82ea1482beff3dd43c0e4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="lttypeparamgt-visual-basic"></a>&lt;typeparam&gt; (Visual Basic)
 Définit un nom de paramètre de type et une description.  
@@ -36,7 +27,7 @@ Définit un nom de paramètre de type et une description.
  `description`  
  Description du paramètre de type.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Utilisez le `<typeparam>` balise dans le commentaire pour un type générique ou une déclaration de membre générique décrire l’un des paramètres de type.  
   
  Compilez avec [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) pour placer les commentaires de documentation dans un fichier en vue de les traiter.  

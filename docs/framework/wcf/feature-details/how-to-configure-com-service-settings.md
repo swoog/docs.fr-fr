@@ -1,34 +1,20 @@
 ---
-title: "Comment : configurer des paramètres de service COM+"
-ms.custom: 
+title: 'Comment : configurer des paramètres de service COM+'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - COM+ [WCF], configuring service settings
 ms.assetid: f42a55a8-3af8-4394-9fdd-bf12a93780eb
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1bdbdbae857685ddb447843fd704896de018b1c1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 43964331f6728db0f094eaceb63e2c306d2dd3ac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-configure-com-service-settings"></a>Comment : configurer des paramètres de service COM+
 Lorsqu'une interface d'application est ajoutée ou supprimée en utilisant l'outil de configuration de service COM+, la configuration de service Web est mise à jour dans le fichier de configuration de l'application. Dans le mode d’hébergement COM +, le fichier Application.config est placé dans le répertoire racine de l’Application (%PROGRAMFILES%\ComPlus Applications\\{appid} est la valeur par défaut). Dans l'un ou l'autre des modes hébergés sur le Web, le fichier Web.config est placé dans le répertoire vroot spécifié.  
   
 > [!NOTE]
->  La signature du message doit être utilisée pour éviter la falsification des messages entre un client et un serveur. De plus, le chiffrement de la couche transport ou message doit être utilisé pour se protéger contre la divulgation d'informations de messages entre un client et un serveur. Comme avec les services [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], vous devez utiliser la fonctionnalité de limitation pour limiter le nombre d'appels, de connexions, d'instances simultanés et d'opérations en attente. Elle permet d'empêcher la surconsommation de ressources. La fonctionnalité de limitation est spécifiée à l'aide des paramètres de fichier de configuration de service.  
+>  La signature du message doit être utilisée pour éviter la falsification des messages entre un client et un serveur. De plus, le chiffrement de la couche transport ou message doit être utilisé pour se protéger contre la divulgation d'informations de messages entre un client et un serveur. Comme avec les services Windows Communication Foundation (WCF), vous devez utiliser la limitation pour limiter le nombre d’appels simultanés, les connexions, les instances et les opérations en attente. Elle permet d'empêcher la surconsommation de ressources. La fonctionnalité de limitation est spécifiée à l'aide des paramètres de fichier de configuration de service.  
   
 ## <a name="example"></a>Exemple  
  Prenons l'exemple d'un composant qui implémente l'interface suivante :  
@@ -62,13 +48,13 @@ public interface IFinancesContract : IDisposable
   
  Les applications clientes qui utilisent ce service doivent se conformer à ce contrat et utiliser une liaison compatible avec celui spécifié dans la configuration de l'application.  
   
- L'exemple de code suivant affiche un fichier de configuration par défaut. En tant que service Web [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], il se conforme au schéma de configuration du modèle de service standard et peut être modifié de la même façon que d'autres fichiers de configuration des services [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ L'exemple de code suivant affiche un fichier de configuration par défaut. Est un service Web de Windows Communication Foundation (WCF), cela est conforme au schéma de configuration de modèle de service standard et peut être modifiée dans la même façon que les autres fichiers de configuration de services WCF.  
   
  Les changements standard incluent :  
   
 -   Remplacer l'adresse de point de terminaison de la forme par défaut ApplicationName/ComponentName/InterfaceName par une forme plus utilisable.  
   
--   Remplacer l'espace de noms du service de la forme "http://tempuri.org/InterfaceID" par défaut par une forme plus pertinente.  
+-   Modification de l’espace de noms du service à partir de la valeur par défaut «http://tempuri.org/InterfaceID« forme à une forme plus pertinente.  
   
 -   Modifier le point de terminaison pour utiliser une liaison de transport différente.  
   

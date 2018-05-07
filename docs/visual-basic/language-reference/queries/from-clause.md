@@ -1,11 +1,6 @@
 ---
 title: From, clause (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.QueryFrom
 - vb.QueryFromIn
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - From clause [Visual Basic]
 - From statement [Visual Basic]
 ms.assetid: 83e3665e-68a0-4540-a3a3-3d777a0f95d5
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 0ecdc8b70fb1ae164a6c78998ce11db9938fbb56
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1f113444efae83de7d299db330593937c7800bb3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="from-clause-visual-basic"></a>From, clause (Visual Basic)
 Spécifie une ou plusieurs variables de plage et une collection à interroger.  
@@ -42,7 +34,7 @@ From element [ As type ] In collection [ _ ]
 |`type`|Facultatif. Type d'élément `element`. Si aucun `type` est spécifié, le type de `element` est déduit à partir de `collection`.|  
 |`collection`|Obligatoire. Fait référence à la collection à interroger. Doit être un type énumérable.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le `From` clause est utilisée pour identifier les données sources pour une requête et les variables qui sont utilisées pour faire référence à un élément dans la collection source. Ces variables sont appelées *les variables de plage*. Le `From` clause est requise pour une requête, sauf quand le `Aggregate` clause est utilisée pour identifier une requête qui retourne des résultats uniquement regroupés. Pour plus d’informations, consultez [Aggregate, Clause](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
   
  Vous pouvez spécifier plusieurs `From` clauses dans une requête pour identifier plusieurs collections à joindre. Lorsque plusieurs collections sont spécifiées, elles sont itérées indépendamment, ou vous pouvez les joindre si elles sont associées. Vous pouvez joindre implicitement des collections à l’aide de la `Select` clause, ou explicitement en utilisant la `Join` ou `Group Join` clauses. En guise d’alternative, vous pouvez spécifier des variables de portée et des collections multiples dans une seule `From` clause, avec chaque variable de portée et les collections séparées des autres par une virgule. L’exemple de code suivant montre les deux options de syntaxe pour le `From` clause.  

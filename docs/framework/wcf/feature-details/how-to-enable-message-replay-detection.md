@@ -1,14 +1,6 @@
 ---
 title: 'Comment : activer la détection de relecture des messages'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,24 +10,18 @@ helpviewer_keywords:
 - WCF, custom bindings
 - WCF, security
 ms.assetid: 8b847e91-69a3-49e1-9e5f-0c455e50d804
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: cada24098f5800f56d7dd50119c3fe3394ba14cd
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 5c761a23d2560f40a0121d684dcb411a716de5a6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-enable-message-replay-detection"></a>Comment : activer la détection de relecture des messages
 Une attaque par relecture se produit lorsqu'un intrus copie un flux de messages entre deux correspondants et relit le flux à l'un ou plusieurs des correspondants. Sauf atténuation, les ordinateurs sujets à l'attaque traiteront le flux comme messages légitimes, ce qui a des conséquences néfastes telles que des ordres redondants d'un élément.  
   
  Pour plus d’informations sur la détection de relecture de message, consultez [détection de relecture de Message](http://go.microsoft.com/fwlink/?LinkId=88536).  
   
- La procédure suivante illustre différentes propriétés que vous pouvez utiliser pour contrôler la détection de relecture à l'aide de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+ La procédure suivante montre les différentes propriétés que vous pouvez utiliser pour contrôler la détection de relecture à l’aide de Windows Communication Foundation (WCF).  
   
 ### <a name="to-control-replay-detection-on-the-client-using-code"></a>Pour contrôler la détection de relecture sur le client à l'aide du code  
   

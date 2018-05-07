@@ -1,42 +1,30 @@
 ---
 title: Audit des événements de sécurité
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-caps.latest.revision: 27
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 69b013389511ac2cfb31e22f7a39e98eb22fb977
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: e4219553f97f272577e8efdeb106b43e5f76ee59
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="auditing-security-events"></a>Audit des événements de sécurité
-Les applications créées avec [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] peuvent enregistrer des événements de sécurité (succès, échec, ou les deux) à l'aide de la fonctionnalité d'audit. Les événements sont écrits dans le journal des événements système Windows et peuvent être examinés à l'aide de l'Observateur d'événements.  
+Les applications créées avec Windows Communication Foundation (WCF) peuvent enregistrer des événements de sécurité (succès, échec ou les deux) avec la fonctionnalité d’audit. Les événements sont écrits dans le journal des événements système Windows et peuvent être examinés à l'aide de l'Observateur d'événements.  
   
  L'audit permet à un administrateur de détecter une attaque que s'est déjà produite ou qui est en cours. En outre, l'audit permet de déboguer des problèmes relatifs à la sécurité. Par exemple, si une erreur dans la configuration de la stratégie d'autorisation ou de vérification refuse accidentellement l'accès à un utilisateur autorisé, un développeur peut la détecter rapidement et en isoler la cause en examinant le journal des événements.  
   
- Pour plus d’informations sur [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sécurité, consultez [vue d’ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md). Pour plus d’informations sur la programmation [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], consultez [programmation WCF de base](../../../../docs/framework/wcf/basic-wcf-programming.md).  
+ Pour plus d’informations sur la sécurité WCF, consultez [vue d’ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md). Pour plus d’informations sur la programmation WCF, consultez [programmation WCF de base](../../../../docs/framework/wcf/basic-wcf-programming.md).  
   
 ## <a name="audit-level-and-behavior"></a>Niveau et comportement d'audit  
  Il existe deux niveaux d'audit de sécurité :  
   
 -   Niveau d'autorisation de service, dans lequel un appelant est autorisé.  
   
--   Niveau de message, dans lequel [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] vérifie la validité du message et authentifie l'appelant.  
+-   Niveau du message, dans lequel, WCF vérifie la validité du message et authentifie l’appelant.  
   
  Vous pouvez vérifier les deux niveaux d’audit pour réussite ou l’échec, ce qui est appelé le *comportement de vérification*.  
   

@@ -1,11 +1,6 @@
 ---
-title: "Opérateurs de comparaison (Visual Basic)"
+title: Opérateurs de comparaison (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.<>
 - vb.>=
@@ -35,29 +30,26 @@ helpviewer_keywords:
 - Is operator [Visual Basic]
 - comparison operators [Visual Basic], Visual Basicl
 ms.assetid: d6cb12a8-e52e-46a7-8aaf-f804d634a825
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: aa450f7978f46196663c7534b31597b04d80482a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4e37f55b4c873c3dbea22a8edf0e5e2b58824720
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="comparison-operators-visual-basic"></a>Opérateurs de comparaison (Visual Basic)
 Voici les opérateurs de comparaison définis dans Visual Basic.  
   
- `<`(opérateur)  
+ `<` (opérateur)  
   
- `<=`(opérateur)  
+ `<=` (opérateur)  
   
- `>`(opérateur)  
+ `>` (opérateur)  
   
- `>=`(opérateur)  
+ `>=` (opérateur)  
   
- `=`(opérateur)  
+ `=` (opérateur)  
   
- `<>`(opérateur)  
+ `<>` (opérateur)  
   
  [Is (opérateur)](../../../visual-basic/language-reference/operators/is-operator.md)  
   
@@ -86,7 +78,7 @@ result = string Like pattern
  Obligatoire. N’importe quel opérateur de comparaison relationnel.  
   
  `object1`, `object2`  
- Requis. Tous les noms d’objet de référence.  
+ Obligatoire. Tous les noms d’objet de référence.  
   
  `string`  
  Obligatoire. Toute expression `String`.  
@@ -94,17 +86,17 @@ result = string Like pattern
  `pattern`  
  Obligatoire. N’importe quel `String` expression ou une plage de caractères.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le tableau suivant contient une liste des opérateurs de comparaison relationnels et les conditions qui déterminent si `result` est `True` ou `False`.  
   
-|Opérateur|`True`If|`False`If|  
+|Opérateur|`True` If|`False` If|  
 |--------------|---------------|----------------|  
-|`<`(Inférieur à)|`expression1` < `expression2`|`expression1` >= `expression2`|  
-|`<=`(Inférieur ou égal à)|`expression1` <= `expression2`|`expression1` > `expression2`|  
-|`>`(Supérieur à)|`expression1` > `expression2`|`expression1` <= `expression2`|  
-|`>=`(Supérieur ou égal à)|`expression1` >= `expression2`|`expression1` < `expression2`|  
-|`=`(Égal à)|`expression1` = `expression2`|`expression1` <> `expression2`|  
-|`<>`(Différent de)|`expression1` <> `expression2`|`expression1` = `expression2`|  
+|`<` (Inférieur à)|`expression1` < `expression2`|`expression1` >= `expression2`|  
+|`<=` (Inférieur ou égal à)|`expression1` <= `expression2`|`expression1` > `expression2`|  
+|`>` (Supérieur à)|`expression1` > `expression2`|`expression1` <= `expression2`|  
+|`>=` (Supérieur ou égal à)|`expression1` >= `expression2`|`expression1` < `expression2`|  
+|`=` (Égal à)|`expression1` = `expression2`|`expression1` <> `expression2`|  
+|`<>` (Différent de)|`expression1` <> `expression2`|`expression1` = `expression2`|  
   
 > [!NOTE]
 >  Le [=, opérateur](../../../visual-basic/language-reference/operators/assignment-operator.md) est également utilisé comme un opérateur d’assignation.  
@@ -122,11 +114,11 @@ result = string Like pattern
 ## <a name="comparing-strings"></a>Comparaison de chaînes  
  Lorsque vous comparez des chaînes, les expressions de chaîne sont évaluées selon leur ordre de tri par ordre alphabétique, qui varie selon le `Option Compare` paramètre.  
   
- `Option Compare Binary`bases de comparaisons sur un ordre de tri dérivé des représentations binaires internes des caractères de chaînes. L’ordre de tri est déterminé par la page de codes. L’exemple suivant montre un ordre de tri binaire standard.  
+ `Option Compare Binary` bases de comparaisons sur un ordre de tri dérivé des représentations binaires internes des caractères de chaînes. L’ordre de tri est déterminé par la page de codes. L’exemple suivant montre un ordre de tri binaire standard.  
   
  `A < B < E < Z < a < b < e < z < À < Ê < Ø < à < ê < ø`  
   
- `Option Compare Text`bases de chaîne des comparaisons sur un ordre de tri de texte sans respecter la casse déterminé par les paramètres régionaux de votre application. Lorsque vous définissez `Option Compare Text` et triez les caractères dans l’exemple précédent, l’ordre de tri de texte suivant s’applique :  
+ `Option Compare Text` bases de chaîne des comparaisons sur un ordre de tri de texte sans respecter la casse déterminé par les paramètres régionaux de votre application. Lorsque vous définissez `Option Compare Text` et triez les caractères dans l’exemple précédent, l’ordre de tri de texte suivant s’applique :  
   
  `(A=a) < (À= à) < (B=b) < (E=e) < (Ê= ê) < (Ø = ø) < (Z=z)`  
   
@@ -138,10 +130,10 @@ result = string Like pattern
   
 |Si les opérandes sont|La comparaison est|  
 |---------------------|-------------------|  
-|Les deux`String`|Comparaison basée sur les caractéristiques de tri de chaîne de tri.|  
+|Les deux `String`|Comparaison basée sur les caractéristiques de tri de chaîne de tri.|  
 |Les deux numériques|Les objets convertis en `Double`, comparaison numérique.|  
-|Une valeur numérique et l’autre`String`|Le `String` est converti en un `Double` et une comparaison numérique est effectuée. Si le `String` ne peut pas être converti en `Double`, un <xref:System.InvalidCastException> est levée.|  
-|Les deux sont des types de référence autres que`String`|Un objet <xref:System.InvalidCastException> est levé.|  
+|Une valeur numérique et l’autre `String`|Le `String` est converti en un `Double` et une comparaison numérique est effectuée. Si le `String` ne peut pas être converti en `Double`, un <xref:System.InvalidCastException> est levée.|  
+|Les deux sont des types de référence autres que `String`|Un objet <xref:System.InvalidCastException> est levé.|  
   
  Les comparaisons numériques traitent `Nothing` en tant que 0. Comparaisons de chaînes traitent `Nothing` en tant que `""` (une chaîne vide).  
   

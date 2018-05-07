@@ -1,26 +1,12 @@
 ---
 title: Introduction au routage
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
-caps.latest.revision: 
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e0fe14f096ae0914235ea1d23b874f0aea906d9d
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: 3ee7ea8271df47354a0897434bf8f203eaf09a51
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="routing-introduction"></a>Introduction au routage
 Le service de routage fournit un intermédiaire SOAP générique connectable, capable de router des messages en fonction du contenu. Le service de routage vous permet de créer une logique de routage complexe et d'implémenter des scénarios, tels que l'agrégation de service, le contrôle des versions de service, le routage par priorité et en mode multidiffusion. Le service de routage fournit également une gestion des erreurs qui vous permet de définir des listes de points de terminaison de sauvegarde auxquels sont envoyés les messages en cas d'échec de l'envoi au point de terminaison de destination primaire.  
@@ -111,7 +97,7 @@ serviceHost.Description.Behaviors.Add(
      new RoutingBehavior(rc));  
 ```  
   
- Cet exemple configure le Service de routage pour exposer un point de terminaison avec l’adresse « http://localhost : 8000/routingservice/router », qui est utilisé pour recevoir des messages de routage. Étant donné que les messages sont routés vers des points de terminaison demande-réponse, le point de terminaison de service utilise le contrat <xref:System.ServiceModel.Routing.IRequestReplyRouter>. Cette configuration définit également un point de terminaison client unique de « http://localhost : 8000/servicemodelsample/service « messages sont routés. La table de filtres (non illustrée) nommée « routingTable1 » contient la logique de routage utilisée pour acheminer les messages et est associée au point de terminaison de service à l’aide de la **RoutingBehavior** (pour un fichier de configuration) ou  **RoutingConfiguration** (pour la configuration par programme).  
+ Cet exemple configure le Service de routage pour exposer un point de terminaison avec l’adresse «http://localhost:8000/routingservice/router», qui est utilisé pour recevoir des messages de routage. Étant donné que les messages sont routés vers des points de terminaison demande-réponse, le point de terminaison de service utilise le contrat <xref:System.ServiceModel.Routing.IRequestReplyRouter>. Cette configuration définit également un point de terminaison client unique de «http://localhost:8000/servicemodelsample/service» que les messages sont routés vers. La table de filtres (non illustrée) nommée « routingTable1 » contient la logique de routage utilisée pour acheminer les messages et est associée au point de terminaison de service à l’aide de la **RoutingBehavior** (pour un fichier de configuration) ou  **RoutingConfiguration** (pour la configuration par programme).  
   
 ### <a name="routing-logic"></a>Logique de routage  
  Pour définir la logique de routage utilisée pour router les messages, vous devez déterminer sur quelles données contenues dans les messages entrants il est possible d'agir de manière unique. Par exemple, si tous les points de terminaison de destination de votre routage partagent la même Action SOAP, la valeur de l'Action contenue dans le message ne constitue pas un bon indicateur du point de terminaison spécifique vers lequel le message doit être routé. Si vous devez router des messages uniquement vers un point de terminaison spécifique, vous devez appliquer un filtre sur des données qui identifient de manière unique le point de terminaison de destination vers lequel le message est routé.  
@@ -165,7 +151,7 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), endpointList);
 > [!NOTE]
 >  Par défaut, le service de routage évalue uniquement les en-têtes du message. Pour permettre aux filtres d'accéder au corps du message, vous devez attribuer à la propriété <xref:System.ServiceModel.Routing.RoutingConfiguration.RouteOnHeadersOnly%2A> la valeur `false`.  
   
- **Multicast**  
+ **Multidiffusion**  
   
  Alors que de nombreuses configurations de service de routage utilisent une logique de filtre exclusive qui route les messages vers un seul point de terminaison spécifique, vous aurez peut-être besoin de router un message donné vers plusieurs points de terminaison de destination. Pour envoyer un message en mode multidiffusion à des destinations multiples, les conditions suivantes doivent être remplies :  
   
@@ -173,7 +159,7 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), endpointList);
   
 -   Plusieurs filtres doivent retourner une valeur `true` lors de l'évaluation du message.  
   
- Si ces conditions sont remplies, le message est routé vers tous les points de terminaison de tous les filtres qui doivent avoir la valeur `true`. L'exemple suivant définit une configuration de routage qui permet de router les messages vers les deux points de terminaison si l'adresse du point de terminaison dans le message est http://localhost:8000/routingservice/router/rounding.  
+ Si ces conditions sont remplies, le message est routé vers tous les points de terminaison de tous les filtres qui doivent avoir la valeur `true`. L’exemple suivant définit une configuration de routage de messages acheminés vers les deux points de terminaison si l’adresse de point de terminaison dans le message est http://localhost:8000/routingservice/router/rounding.  
   
 ```xml  
 <!--ROUTING SECTION -->  

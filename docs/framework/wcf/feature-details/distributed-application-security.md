@@ -1,43 +1,31 @@
 ---
 title: Sécurité des applications distribuées
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-caps.latest.revision: 32
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8b5bc311262aae1110f7d0249be60135e318785e
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: d8f34d0c6b0269cc4837313d6613e3cee0eb26c9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="distributed-application-security"></a>Sécurité des applications distribuées
-La sécurité [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] est divisée en trois domaines fonctionnels principaux : la sécurité de transfert, le contrôle d'accès et l'audit. La sécurité de transfert fournit l'intégrité, la confidentialité et l'authentification. La sécurité de transfert est fournie par l'un des éléments suivants : sécurité de transport, sécurité de message ou `TransportWithMessageCredential`.  
+Sécurité de Windows Communication Foundation (WCF) est divisée en trois zones fonctionnelles principales : transfert de sécurité, de contrôle d’accès et de l’audit. La sécurité de transfert fournit l'intégrité, la confidentialité et l'authentification. La sécurité de transfert est fournie par l'un des éléments suivants : sécurité de transport, sécurité de message ou `TransportWithMessageCredential`.  
   
- Pour une vue d’ensemble de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] la sécurité de message, consultez [vue d’ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md). Pour plus d’informations sur les deux autres éléments de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sécurité, consultez [autorisation](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md) et [audit](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
+ Pour une vue d’ensemble de la sécurité de message WCF, consultez [vue d’ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md). Pour plus d’informations sur les deux autres éléments de la sécurité WCF, consultez [autorisation](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md) et [audit](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
   
 ## <a name="transfer-security-scenarios"></a>Scénarios de sécurité de transfert  
- Les scénarios courants qui utilisent la sécurité de transfert [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sont les suivants :  
+ Scénarios courants qui utilisent la sécurité de transfert WCF sont les suivantes :  
   
--   Transfert sécurisé à l'aide de Windows. Un service et un client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sont déployés dans un domaine Windows (ou forêt Windows). Les messages contenant des données personnelles, les spécifications incluent donc l'authentification mutuelle du client et du service, l'intégrité et la confidentialité des messages. En outre, la preuve est requise qu’une transaction spécifique s’est produite ; à titre d’exemple, le récepteur du message doit enregistrer les informations de signature.  
+-   Transfert sécurisé à l'aide de Windows. Un client WCF et un service sont déployés dans un domaine Windows (ou une forêt Windows). Les messages contenant des données personnelles, les exigences incluent donc l’authentification mutuelle du client et du service, l’intégrité et la confidentialité des messages. En outre, la preuve est requise qu’une transaction spécifique s’est produite ; à titre d’exemple, le récepteur du message doit enregistrer les informations de signature.  
   
--   Transfert sécurisé à l'aide de `UserName` et HTTPS. Un service et un client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] doivent être développés pour fonctionner sur Internet. Les informations d'identification du client permettent d'effectuer l'authentification par rapport à une base de données de paires nom d'utilisateur/mot de passe. Le service est déployé à une adresse HTTPS à l'aide d'un certificat SSL (Secure Sockets Layer) approuvé. Les messages transitant sur Internet, le client et le service doivent donc être mutuellement authentifiés, et la confidentialité et l'intégrité des messages doivent être conservées pendant le transfert.  
+-   Transfert sécurisé à l'aide de `UserName` et HTTPS. Un client WCF et le service doivent être développés pour fonctionner sur Internet. Les informations d'identification du client permettent d'effectuer l'authentification par rapport à une base de données de paires nom d'utilisateur/mot de passe. Le service est déployé à une adresse HTTPS à l'aide d'un certificat SSL (Secure Sockets Layer) approuvé. Les messages transitant sur Internet, le client et le service doivent donc être mutuellement authentifiés, et la confidentialité et l'intégrité des messages doivent être conservées pendant le transfert.  
   
--   Transfert sécurisé à l'aide de certificats. Un service et un client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] doivent être développés pour fonctionner sur Internet. Le client et le service ont tous deux des certificats qui permettent de sécuriser les messages. Le client et le service utilisent Internet pour communiquer l’un avec l’autre et exécuter des transactions à forte valeur qui requièrent l’intégrité des messages, la confidentialité et l’authentification mutuelle.  
+-   Transfert sécurisé à l'aide de certificats. Un client WCF et le service doivent être développés pour fonctionner sur l’internet public. Le client et le service ont tous deux des certificats qui permettent de sécuriser les messages. Le client et le service utilisent Internet pour communiquer l’un avec l’autre et exécuter des transactions à forte valeur qui requièrent l’intégrité des messages, la confidentialité et l’authentification mutuelle.  
   
 ## <a name="integrity-confidentiality-and-authentication"></a>Intégrité, confidentialité et authentification  
  Ces trois fonctions (intégrité, confidentialité et authentification) forment ensemble la « sécurité de transfert ». La sécurité de transfert fournit les fonctions permettant de limiter les menaces auxquelles est exposée une application distribuée. Le tableau suivant décrit brièvement les trois fonctions qui composent la sécurité de transfert.  
@@ -49,7 +37,7 @@ La sécurité [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] est divis�
 |Authentification|*Authentification* est la vérification d’une identité déclarée. Par exemple, lors de l'utilisation d'un compte bancaire, il est impératif que seul le propriétaire réel de ce compte soit autorisé à retirer des fonds. L'authentification peut être fournie par divers moyens. L'une des méthodes fréquemment utilisées est le système nom d'utilisateur/mot de passe. Une autre consiste à utiliser un certificat X.509 fourni par un tiers.|  
   
 ## <a name="security-modes"></a>Modes de sécurité  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] a plusieurs modes de sécurité de transfert décrits dans le tableau suivant.  
+ WCF a plusieurs modes de sécurité de transfert, qui sont décrites dans le tableau suivant.  
   
 |Mode|Description|  
 |----------|-----------------|  
@@ -60,11 +48,11 @@ La sécurité [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] est divis�
 |Both|Effectue la protection et l'authentification aux deux niveaux. Ce mode est disponible uniquement dans les [ \<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) élément.|  
   
 ## <a name="credentials-and-transfer-security"></a>Informations d'identification et sécurité de transfert  
- A *informations d’identification* sont des données qui sont présentées pour établir une identité déclarée ou des fonctions. La présentation d'informations d'identification implique la présentation à la fois des données et la preuve de la propriété de ces données. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] prend en charge divers types d'informations d'identification au niveau de la sécurité du transport et des messages. Vous pouvez spécifier un type d'information d'identification pour une liaison [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ A *informations d’identification* sont des données qui sont présentées pour établir une identité déclarée ou des fonctions. La présentation d'informations d'identification implique la présentation à la fois des données et la preuve de la propriété de ces données. WCF prend en charge divers types d’informations d’identification au niveau de sécurité du transport et du message. Vous pouvez spécifier un type d’informations d’identification pour une liaison WCF.  
   
  Dans de nombreux pays ou régions, le permis de conduire est un exemple d'information d'identification. Un permis contient des données qui représentent l'identité d'une personne et des fonctions. Elle contient la preuve de propriété sous la forme de la photographie du propriétaire. Le permis est délivré par une autorité approuvée, généralement un service public chargé de cette fonction. Le permis est scellé et peut contenir un hologramme qui indique qu'il n'a pas été falsifié.  
   
- Examinons par exemple deux types d'informations d'identification pris en charge dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] : informations d'identification de nom d'utilisateur et de certificat (X.509).  
+ Par exemple, considérez les deux types d’informations d’identification pris en charge dans WCF : informations d’identification de certificat (X.509) et nom d’utilisateur.  
   
  Concernant les informations d'identification de nom d'utilisateur, le nom d'utilisateur représente l'identité déclarée et le mot de passe présente la preuve de la propriété. L'autorité approuvée dans ce cas est le système qui valide le nom d'utilisateur et le mot de passe.  
   
@@ -91,16 +79,16 @@ La sécurité [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] est divis�
 |-------------|-----------------|  
 |Aucun|Autorise le service à interagir avec des clients anonymes.|  
 |Windows|Autorise les échanges de messages SOAP à se produire sous le contexte authentifié d'une information d'identification Windows. Utilise le mécanisme de négociation SSPI pour sélectionner le protocole Kerberos ou NTLM comme service d'authentification.|  
-|Utilisateur|Autorise le service à exiger que le client soit authentifié avec des informations d'identification de nom d'utilisateur. Notez que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] n'autorise pas d'opération de chiffrement avec le nom d'utilisateur, telle que la génération d'une signature ou le chiffrement de données. De ce fait, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] s'assure que le transport est sécurisé lors de l'utilisation d'informations d'identification de nom d'utilisateur.|  
+|Utilisateur|Autorise le service à exiger que le client soit authentifié avec des informations d'identification de nom d'utilisateur. Notez que WCF n’autorise pas les opérations de chiffrement avec le nom d’utilisateur, telles que la génération d’une signature ou le chiffrement des données. Par conséquent, WCF impose que le transport est sécurisé lors de l’utilisation des informations d’identification utilisateur.|  
 |Certificat|Autorise le service à exiger une authentification du client via un certificat.|  
 |[!INCLUDE[infocard](../../../../includes/infocard-md.md)]|Autorise le service à imposer que le client soit authentifié à l'aide d'un [!INCLUDE[infocard](../../../../includes/infocard-md.md)].|  
   
 ### <a name="programming-credentials"></a>Programmation d'informations d'identification  
- Pour chacun des types d'informations d'identification du client, le modèle de programmation [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] vous permet de spécifier les valeurs et validateurs d'informations d'identification en utilisant des comportements de service et de canal.  
+ Pour chacun des types d’informations d’identification du client, le modèle de programmation WCF permet de vous permet de spécifier les valeurs d’informations d’identification et de validation des informations d’identification à l’aide de comportements de service et les comportements du canal.  
   
- La sécurité [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] a deux types d'informations d'identification : comportements d'informations d'identification de service et comportements d'informations d'identification de canal. Les comportements d'informations d'identification dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] spécifient les données réelles, à savoir, les informations d'identification utilisées pour satisfaire les conditions de sécurité exprimées par les liaisons. Dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], une classe de client est le composant runtime qui effectue la conversion entre l'appel d'opération et les messages. Tous les clients héritent de la classe <xref:System.ServiceModel.ClientBase%601>. La propriété <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> sur la classe de base vous permet de spécifier différentes valeurs d'informations d'identification du client.  
+ Sécurité WCF a deux types d’informations d’identification : comportements d’informations d’identification et les comportements du canal d’informations d’identification de service. Comportements d’informations d’identification dans WCF spécifient les données réelles, à savoir, les informations d’identification utilisées pour satisfaire les exigences de sécurité exprimées par les liaisons. Dans WCF, une classe de client est le composant d’exécution qui effectue la conversion entre les messages et l’appel de l’opération. Tous les clients héritent de la classe <xref:System.ServiceModel.ClientBase%601>. La propriété <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> sur la classe de base vous permet de spécifier différentes valeurs d'informations d'identification du client.  
   
- Dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], les comportements de service sont des attributs appliqués à la classe qui implémente un contrat de service (interface) pour contrôler le service par programme. La classe <xref:System.ServiceModel.Description.ServiceCredentials> vous permet de spécifier des certificats pour les informations d'identification du service et des paramètres de validation de client pour divers types d'informations d'identification du client.  
+ Dans WCF, les comportements de service sont des attributs appliqués à la classe qui implémente un contrat de service (interface) pour le service de contrôle par programmation. La classe <xref:System.ServiceModel.Description.ServiceCredentials> vous permet de spécifier des certificats pour les informations d'identification du service et des paramètres de validation de client pour divers types d'informations d'identification du client.  
   
 ### <a name="negotiation-model-for-message-security"></a>Modèle de négociation pour la sécurité de message  
  Le mode de sécurité du message vous permet d'exécuter la sécurité de transfert afin que les informations d'identification du service soient configurées au niveau du client hors bande. Par exemple, si vous utilisez un certificat stocké dans le magasin de certificats Windows, vous devez utiliser un outil tel qu'un composant logiciel enfichable MMC (Microsoft Management Console).  

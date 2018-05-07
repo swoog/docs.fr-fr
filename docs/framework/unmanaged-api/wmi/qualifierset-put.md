@@ -1,11 +1,7 @@
 ---
-title: "QualifierSet_Put (fonction) (référence des API non managées)"
-description: "La fonction QualifierSet_Put écrit qualificateur nommé et sa valeur."
+title: QualifierSet_Put (fonction) (référence des API non managées)
+description: La fonction QualifierSet_Put écrit qualificateur nommé et sa valeur.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - QualifierSet_Put
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1bf5c6dbf0f707942d58f4d7cf155636f0532724
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7ccb0aef0e998ffccd7526f9f0554bceb892001b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="qualifiersetput-function"></a>QualifierSet_Put (fonction)
 Écrit la valeur et le qualificateur nommé. Le nouveau qualificateur remplace la valeur précédente du même nom. Si le qualificateur n’existe pas, il est créé. 
@@ -57,16 +50,16 @@ HRESULT QualifierSet_Put (
 `wszName`   
 [in] Le nom du qualificateur à écrire.
 
-`pVal`[in] Un pointeur vers un élément valide `VARIANT` qui contient le qualificateur à écrire. Ce paramètre ne peut pas être `null`.
+`pVal` [in] Un pointeur vers un élément valide `VARIANT` qui contient le qualificateur à écrire. Ce paramètre ne peut pas être `null`.
 
-`lFlavor`[in] Une des constantes suivantes qui définit les versions de qualificateur souhaité pour ce qualificateur. La valeur par défaut est `WBEM_FLAVOR_OVERRIDABLE` (0).
+`lFlavor` [in] Une des constantes suivantes qui définit les versions de qualificateur souhaité pour ce qualificateur. La valeur par défaut est `WBEM_FLAVOR_OVERRIDABLE` (0).
 
 |Constante  |Value  |Description  |
 |---------|---------|---------|
 | `WBEM_FLAVOR_OVERRIDABLE` | 0 | Le qualificateur peut être substitué dans une classe dérivée ou une instance. **Il s’agit de la valeur par défaut.** |
 | `WBEM_FLAVOR_FLAG_PROPAGATE_TO_INSTANCE` | 1 | Le qualificateur est propagé aux instances. |
 | `WBEM_FLAVOR_GLAG_PROPAGATE_TO_DERIVED_CLASS` | 2 | Le qualificateur est propagé aux classes dérivées. |
-| ' WBEM_FLAVOR_NOT_OVERRIDABLE | 0 x 10 | Le qualificateur ne peut pas être écrasé dans une classe ou une instance dérivée. |
+| ' WBEM_FLAVOR_NOT_OVERRIDABLE | 0x10 | Le qualificateur ne peut pas être écrasé dans une classe ou une instance dérivée. |
 | ' WBEM_FLAVOR_AMENDED | 0 x 80 | Le qualificateur est localisé. |
 
 ## <a name="return-value"></a>Valeur de retour
@@ -85,12 +78,12 @@ Les valeurs suivantes est retournées par cette fonction sont définies dans le 
 
 Cette fonction encapsule un appel à la [IWbemQualifierSet::Put](https://msdn.microsoft.com/library/aa391871(v=vs.85).aspx) (méthode).
 
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** WMINet_Utils.idl  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versions du .NET framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
 [WMI et les compteurs de Performance (référence des API non managées)](index.md)

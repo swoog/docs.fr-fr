@@ -1,33 +1,19 @@
 ---
 title: Introduction à l'extensibilité
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - WCF [WCF], extensibility
 - Windows Communication Foundation [WCF], extensibility
 - extensibility [WCF]
 ms.assetid: ef56c251-d63c-4b3f-944f-b0c67bfb0f68
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 991c3879990fd5b6562a2270c65e1560efadc022
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 142478352c8eb1c893d8b95b960c6079f735fa06
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="introduction-to-extensibility"></a>Introduction à l'extensibilité
-Le modèle d'application [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] est conçu pour répondre en grande partie aux spécifications de communication de toute application distribuée. Néanmoins, il existe des situations qui ne sont pas prises en charge par le modèle d'application par défaut et les implémentations fournies par le système. Le modèle d'extensibilité de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] est destiné à prendre en charge des scénarios personnalisés en vous permettant de modifier le comportement du système à tout niveau, et même de remplacer le modèle d'application dans son intégralité. Cette rubrique présente les différentes zones d'extension et fournit des informations détaillées sur chacune d'elles.  
+Le modèle d’application Windows Communication Foundation (WCF) est conçu pour répondre en grande partie aux exigences de communication de toute application distribuée. Néanmoins, il existe des situations qui ne sont pas prises en charge par le modèle d'application par défaut et les implémentations fournies par le système. Le modèle d'extensibilité de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] est destiné à prendre en charge des scénarios personnalisés en vous permettant de modifier le comportement du système à tout niveau, et même de remplacer le modèle d'application dans son intégralité. Cette rubrique présente les différentes zones d'extension et fournit des informations détaillées sur chacune d'elles.  
   
 ## <a name="areas-to-extend"></a>Zones à étendre  
  Vous pouvez étendre les zones suivantes :  

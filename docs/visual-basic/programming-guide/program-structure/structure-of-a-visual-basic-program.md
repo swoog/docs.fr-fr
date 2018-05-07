@@ -1,27 +1,17 @@
 ---
 title: Structure d'un programme Visual Basic
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - conditional compilation [Visual Basic], Visual Basic
 - program structure [Visual Basic], Visual Basic
 - procedures [Visual Basic], structure
 - Visual Basic code, program structure
 ms.assetid: ad0c6531-d762-4c77-a700-de16b07b6119
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5def0de1e22af39eb16489a2d4d27bdbd1853f2b
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 5c45cc8982a03d5bdd974434164187b03529ae05
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="structure-of-a-visual-basic-program"></a>Structure d'un programme Visual Basic
 Un programme Visual Basic est développé à partir de blocs de construction standard. A *solution* comprend un ou plusieurs projets. A *projet* à son tour peut contenir un ou plusieurs assemblys. Chaque *assembly* est compilé à partir d’un ou plusieurs fichiers de code source. A *fichier source* fournit la définition et l’implémentation de classes, structures, modules et interfaces qui contiennent l’ensemble de votre code.  

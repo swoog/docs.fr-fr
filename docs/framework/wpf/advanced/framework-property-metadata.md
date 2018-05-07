@@ -1,27 +1,15 @@
 ---
-title: "Métadonnées de propriété de framework"
-ms.custom: 
+title: Métadonnées de propriété de framework
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - metadata [WPF], framework properties
 - framework property metadata [WPF]
 ms.assetid: 9962f380-b885-4b61-a62e-457397083fea
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4fec11a973572dce9e8d6f77bf65ce31ee77eb41
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d968bc7a3033bd994590520c5cd5062d3c212b4f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="framework-property-metadata"></a>Métadonnées de propriété de framework
 Des options de métadonnées de propriété de framework sont signalées pour les propriétés des éléments objet considérés comme étant au niveau du framework WPF dans l’architecture [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. En général, la désignation niveau de framework WPF implique la gestion de fonctionnalités telles que le rendu, la liaison de données et les ajustements du système de propriétés par les fichiers exécutables et [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] de présentation [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Les métadonnées de propriété de framework sont interrogées par ces systèmes afin d’identifier les caractéristiques spécifiques aux fonctionnalités de propriétés d’un élément particulier.  
@@ -40,7 +28,7 @@ Des options de métadonnées de propriété de framework sont signalées pour le
   
 -   Propriétés de présentation qui affectent l’élément parent d’un élément (<xref:System.Windows.FrameworkPropertyMetadata.AffectsParentArrange%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsParentMeasure%2A>). Voici quelques exemples où ces indicateurs sont définis par défaut <xref:System.Windows.Documents.FixedPage.Left%2A?displayProperty=nameWithType> et <xref:System.Windows.Documents.Paragraph.KeepWithNext%2A?displayProperty=nameWithType>.  
   
--   <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>. Par défaut, les propriétés de dépendance n’héritent pas de valeurs. <xref:System.Windows.FrameworkPropertyMetadata.OverridesInheritanceBehavior%2A>permet à la voie d’héritage de se déplacer également dans une arborescence d’éléments visuels, qui est nécessaire pour certains scénarios de composition de contrôle.  
+-   <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>. Par défaut, les propriétés de dépendance n’héritent pas de valeurs. <xref:System.Windows.FrameworkPropertyMetadata.OverridesInheritanceBehavior%2A> permet à la voie d’héritage de se déplacer également dans une arborescence d’éléments visuels, qui est nécessaire pour certains scénarios de composition de contrôle.  
   
     > [!NOTE]
     >  Le terme « hérite » dans le contexte des valeurs de propriété revêt une signification spécifique pour les propriétés de dépendance ; il signifie que les éléments enfants peuvent hériter de la valeur de propriété de dépendance réelle des éléments parents grâce à une fonctionnalité au niveau du framework WPF du système de propriétés [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Cette notion est donc sans rapport direct avec le type de code managé et l’héritage de membres par le biais de types dérivés. Pour plus d’informations, consultez [Héritage de la valeur de propriété](../../../../docs/framework/wpf/advanced/property-value-inheritance.md).  
@@ -69,13 +57,13 @@ Des options de métadonnées de propriété de framework sont signalées pour le
 ## <a name="framework-property-metadata-merge-behavior"></a>Comportement de fusion des métadonnées de propriété de framework  
  Quand vous substituez des métadonnées de propriété de framework, les différentes caractéristiques des métadonnées sont fusionnées ou remplacées.  
   
--   <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>est fusionné. Si vous ajoutez un nouveau <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>, ce rappel est stocké dans les métadonnées. Si vous ne spécifiez pas un <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> dans la substitution, la valeur de <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> est promu en tant que référence de l’ancêtre le plus proche qui l’a spécifiée dans les métadonnées.  
+-   <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> est fusionné. Si vous ajoutez un nouveau <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>, ce rappel est stocké dans les métadonnées. Si vous ne spécifiez pas un <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> dans la substitution, la valeur de <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> est promu en tant que référence de l’ancêtre le plus proche qui l’a spécifiée dans les métadonnées.  
   
 -   Le comportement de système de propriété réelle pour <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> est que les implémentations de tous les propriétaires de métadonnées dans la hiérarchie sont conservées et ajoutées à une table, l’exécution par le système de propriétés qui les rappels de la classe la plus dérivée sont appelé en premier. Les rappels hérités ne sont exécutés qu’une seule fois et sont considérés comme s’ils appartenaient à la classe qui les a placés dans les métadonnées.  
   
--   <xref:System.Windows.PropertyMetadata.DefaultValue%2A>est remplacé. Si vous ne spécifiez pas un <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> dans la substitution, la valeur de <xref:System.Windows.PropertyMetadata.DefaultValue%2A> provient de l’ancêtre le plus proche qui l’a spécifiée dans les métadonnées.  
+-   <xref:System.Windows.PropertyMetadata.DefaultValue%2A> est remplacé. Si vous ne spécifiez pas un <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> dans la substitution, la valeur de <xref:System.Windows.PropertyMetadata.DefaultValue%2A> provient de l’ancêtre le plus proche qui l’a spécifiée dans les métadonnées.  
   
--   <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>les implémentations sont remplacées. Si vous ajoutez un nouveau <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>, ce rappel est stocké dans les métadonnées. Si vous ne spécifiez pas un <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> dans la substitution, la valeur de <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> est promu en tant que référence de l’ancêtre le plus proche qui l’a spécifiée dans les métadonnées.  
+-   <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> les implémentations sont remplacées. Si vous ajoutez un nouveau <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>, ce rappel est stocké dans les métadonnées. Si vous ne spécifiez pas un <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> dans la substitution, la valeur de <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> est promu en tant que référence de l’ancêtre le plus proche qui l’a spécifiée dans les métadonnées.  
   
 -   Le comportement de système de propriétés est que seules les <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> dans les métadonnées immédiates est appelé. Aucune référence à d’autres <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> implémentations dans la hiérarchie sont conservées.  
   

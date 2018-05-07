@@ -1,25 +1,16 @@
 ---
 title: Conventions de codage Visual Basic
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - coding conventions [Visual Basic], Visual Basic
 - examples [Visual Basic], coding conventions
 - Visual Basic code, conventions
 ms.assetid: c1df130b-fec6-49a5-becf-0a7e494a1d0f
-caps.latest.revision: "48"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: afea862fb8783da3e69fd9828e0ded67fb81b00e
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: b686747b46529b53b0802a7deb38b5b4949f4d5e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="visual-basic-coding-conventions"></a>Conventions de codage Visual Basic
 Microsoft développe des exemples et la documentation qui suivent les instructions de cette rubrique. Si vous suivez les mêmes conventions de codage, vous pouvez profiter des avantages suivants :  
@@ -165,7 +156,7 @@ Microsoft développe des exemples et la documentation qui suivent les instructio
   
      [!code-vb[VbVbalrGuidelines#26](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_18.vb)]  
   
--   Ne vérifient pas si un événement est `Nothing` (null) avant d’appeler le `RaiseEvent` (méthode). `RaiseEvent`vérifie les `Nothing` avant de déclencher l’événement.  
+-   Ne vérifient pas si un événement est `Nothing` (null) avant d’appeler le `RaiseEvent` (méthode). `RaiseEvent` vérifie les `Nothing` avant de déclencher l’événement.  
   
 ### <a name="using-shared-members"></a>À l’aide de membres partagés  
  Appelez `Shared` membres en utilisant le nom de classe, pas à partir d’une variable d’instance.  

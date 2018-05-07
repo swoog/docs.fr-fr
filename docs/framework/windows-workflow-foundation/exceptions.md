@@ -1,24 +1,12 @@
 ---
 title: Exceptions
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 065205cc-52dd-4f30-9578-b17d8d113136
-caps.latest.revision: 26
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9e78546a10e1a8cdff780c44898fd209ca829c6c
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: cfeefcd29dc05ed5e325950194d9f0775b1fa9fa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exceptions"></a>Exceptions
 Les flux de travail peuvent utiliser l'activité <xref:System.Activities.Statements.TryCatch> pour gérer des exceptions déclenchées lors de leur exécution. Ces exceptions peuvent être gérées ou être à nouveau levées à l'aide de l'activité <xref:System.Activities.Statements.Rethrow>. Les activités de la section <xref:System.Activities.Statements.TryCatch.Finally%2A> sont exécutées lorsque soit la section <xref:System.Activities.Statements.TryCatch.Try%2A>, soit la section <xref:System.Activities.Statements.TryCatch.Catches%2A> est terminée. Flux de travail hébergé par un <xref:System.Activities.WorkflowApplication> l’instance peut également utiliser le <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> Gestionnaire d’événements pour gérer les exceptions qui ne sont pas gérées par un <xref:System.Activities.Statements.TryCatch> activité.  

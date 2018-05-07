@@ -1,22 +1,12 @@
 ---
-title: "Comment : effectuer plusieurs requêtes Web en parallèle en utilisant Async et Await (Visual Basic)"
-ms.custom: 
+title: 'Comment : effectuer plusieurs requêtes Web en parallèle en utilisant Async et Await (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a894b99b-7cfd-4a38-adfb-20d24f986730
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a9b96e8acf9f5453ac035769ea7b279c4fedadfb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1b98a0f29409fa49af1c9c8f7c91f2170981f7cc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>Comment : effectuer plusieurs requêtes Web en parallèle en utilisant Async et Await (Visual Basic)
 Dans une méthode asynchrone, les tâches sont démarrées quand elles sont créées. Le [Await](../../../../visual-basic/language-reference/operators/await-operator.md) opérateur est appliqué à la tâche au point dans la méthode où le traitement ne peut pas continuer jusqu'à ce que la tâche se termine. Souvent, une tâche est attendue dès sa création, comme le montre l’exemple suivant.  
@@ -145,7 +135,7 @@ Dim result = Await myTask
     End Function  
     ```  
   
-5.  Appuyez sur la touche F5 pour exécuter le programme, puis choisissez le bouton **Démarrer** .  
+5.  Appuyez sur la touche F5 pour exécuter le programme, puis choisissez le bouton **Démarrer**.  
   
      Exécutez le programme plusieurs fois pour vérifier que les trois tâches ne se terminent pas toujours dans le même ordre, et que l’ordre dans lequel elles se terminent n’est pas nécessairement celui dans lequel elles sont créées et attendues.  
   

@@ -1,24 +1,12 @@
 ---
-title: "Interprétation de codes d'erreur retournés par wsatConfig.exe"
-ms.custom: 
+title: Interprétation de codes d'erreur retournés par wsatConfig.exe
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ab65f22b-0d69-4c21-9aaf-74acef0ca102
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 889a14d7d30c3c7750b38f55256ccc4ff004f10d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9df059618b45ae65ffb3e6e31a87d5531c79d947
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interpreting-error-codes-returned-by-wsatconfigexe"></a>Interprétation de codes d'erreur retournés par wsatConfig.exe
 Cette rubrique répertorie tous les codes d'erreur générés par l'utilitaire de configuration de WS-AtomicTransaction (wsatConfig.exe), et les actions recommandées.  
@@ -27,7 +15,7 @@ Cette rubrique répertorie tous les codes d'erreur générés par l'utilitaire d
   
 |Code d'erreur|Description|Action recommandée|  
 |----------------|-----------------|------------------------------------|  
-|0|L'opération a réussi.|Aucun.|  
+|0|L'opération a réussi.|Aucun|  
 |1|Erreur inattendue|Contactez Microsoft|  
 |2|Une erreur inattendue s'est produite lors de la tentative de contact de MSDTC pour récupérer les paramètres de sécurité.|Vérifiez que le service MSDTC n'est pas désactivé et traitez tous les problèmes répertoriés dans l'exception retournée.|  
 |3|Le compte via lequel WsatConfig.exe a été exécuté ne disposait pas des autorisations suffisantes pour lire les paramètres de sécurité du réseau.|Exécutez WsatConfig.exe en utilisant un compte d'administrateur.|  

@@ -1,13 +1,6 @@
 ---
 title: Vue d'ensemble de l'animation
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,20 +8,15 @@ helpviewer_keywords:
 - Storyboards [WPF], animations
 - animations [WPF], overview
 ms.assetid: bd9ce563-725d-4385-87c9-d7ee38cf79ea
-caps.latest.revision: "73"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 118d63bbbcd0cbb52d092af7002df2538df7790b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5fb9550ddce4ead900206c2ece2f976ab8b42c4b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="animation-overview"></a>Vue d'ensemble de l'animation
 <a name="introduction"></a>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]fournit un ensemble puissant de fonctionnalités de disposition et de graphiques qui vous permettent de créer des interfaces utilisateur attrayantes et des documents attrayants. L’animation peut rendre une interface utilisateur attrayante encore plus spectaculaire et conviviale. En seulement animer une couleur d’arrière-plan ou en appliquant un animé <xref:System.Windows.Media.Transform>, vous pouvez créer des transitions d’écran impressionnantes ou fournir des aides visuelles utiles.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fournit un ensemble puissant de fonctionnalités de disposition et de graphiques qui vous permettent de créer des interfaces utilisateur attrayantes et des documents attrayants. L’animation peut rendre une interface utilisateur attrayante encore plus spectaculaire et conviviale. En seulement animer une couleur d’arrière-plan ou en appliquant un animé <xref:System.Windows.Media.Transform>, vous pouvez créer des transitions d’écran impressionnantes ou fournir des aides visuelles utiles.  
   
  Cette vue d’ensemble fournit une introduction à la [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animation et système de minuterie. Il se concentre sur l’animation de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] objets à l’aide de plans conceptuels.  
 
@@ -46,7 +34,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Ensuite, le programme met à jour le rectangle avec la nouvelle valeur et le redessine.  
   
- Antérieures à [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] les développeurs devaient créer et gérer leurs propres systèmes de minuterie ou utiliser des bibliothèques personnalisées spéciales. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]inclut un système de minutage efficace exposé via du code managé et [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] et qui est profondément intégré à la [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] framework. L’animation [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] facilite l’animation de contrôles et autres objets graphiques.  
+ Antérieures à [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] les développeurs devaient créer et gérer leurs propres systèmes de minuterie ou utiliser des bibliothèques personnalisées spéciales. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] inclut un système de minutage efficace exposé via du code managé et [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] et qui est profondément intégré à la [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] framework. L’animation [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] facilite l’animation de contrôles et autres objets graphiques.  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] gère toutes les tâches en arrière-plan pour gérer un système de minutage et redessiner l’écran efficacement. Il fournit les classes de minuterie qui vous permettent de vous concentrer sur les effets que vous souhaitez créer, au lieu de la mécanique de la réalisation de ces effets. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] facilite également la création de vos propres animations en exposant les classes de base d’animation à partir desquelles vos classes peuvent hériter, pour produire des animations personnalisées. Ces animations personnalisées récupèrent nombre des avantages de performance des classes d’animation standard.  
   
@@ -62,7 +50,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Un type d’animation compatible doit être disponible. (Si [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ne fournit pas, vous pouvez créer vos propres. Consultez le [vue d’ensemble des Animations personnalisées](../../../../docs/framework/wpf/graphics-multimedia/custom-animations-overview.md).)  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]contient de nombreux objets qui ont <xref:System.Windows.Media.Animation.IAnimatable> propriétés. Les contrôles tels que <xref:System.Windows.Controls.Button> et <xref:System.Windows.Controls.TabControl>et également <xref:System.Windows.Controls.Panel> et <xref:System.Windows.Shapes.Shape> objets héritent de <xref:System.Windows.DependencyObject>. La plupart de leurs propriétés sont des propriétés de dépendance.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contient de nombreux objets qui ont <xref:System.Windows.Media.Animation.IAnimatable> propriétés. Les contrôles tels que <xref:System.Windows.Controls.Button> et <xref:System.Windows.Controls.TabControl>et également <xref:System.Windows.Controls.Panel> et <xref:System.Windows.Shapes.Shape> objets héritent de <xref:System.Windows.DependencyObject>. La plupart de leurs propriétés sont des propriétés de dépendance.  
   
  Vous pouvez utiliser des animations presque n’importe où, y compris dans les styles et modèles de contrôle. Les animations n’ont pas à être visuelles. Vous pouvez animer des objets qui ne font pas partie de l’interface utilisateur s’ils répondent aux critères décrits dans cette section.  
   
@@ -224,10 +212,10 @@ ms.lasthandoff: 12/22/2017
   
 |Type de propriété|Animation de base (From/To/By) correspondante|Animation d’image clé correspondante|Animation de tracé correspondante|Exemple d’utilisation|  
 |-------------------|----------------------------------------------------|---------------------------------------|----------------------------------|-------------------|  
-|<xref:System.Windows.Media.Color>|<xref:System.Windows.Media.Animation.ColorAnimation>|<xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>|Aucun.|Animer le <xref:System.Windows.Media.SolidColorBrush.Color%2A> d’un <xref:System.Windows.Media.SolidColorBrush> ou <xref:System.Windows.Media.GradientStop>.|  
+|<xref:System.Windows.Media.Color>|<xref:System.Windows.Media.Animation.ColorAnimation>|<xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>|Aucun|Animer le <xref:System.Windows.Media.SolidColorBrush.Color%2A> d’un <xref:System.Windows.Media.SolidColorBrush> ou <xref:System.Windows.Media.GradientStop>.|  
 |<xref:System.Double>|<xref:System.Windows.Media.Animation.DoubleAnimation>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath>|Animer le <xref:System.Windows.FrameworkElement.Width%2A> d’un <xref:System.Windows.Controls.DockPanel> ou <xref:System.Windows.FrameworkElement.Height%2A> d’un <xref:System.Windows.Controls.Button>.|  
 |<xref:System.Windows.Point>|<xref:System.Windows.Media.Animation.PointAnimation>|<xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>|<xref:System.Windows.Media.Animation.PointAnimationUsingPath>|Animer le <xref:System.Windows.Media.EllipseGeometry.Center%2A> position d’un <xref:System.Windows.Media.EllipseGeometry>.|  
-|<xref:System.String>|Aucun.|<xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>|Aucun.|Animer le <xref:System.Windows.Controls.TextBlock.Text%2A> d’un <xref:System.Windows.Controls.TextBlock> ou <xref:System.Windows.Controls.ContentControl.Content%2A> d’un <xref:System.Windows.Controls.Button>.|  
+|<xref:System.String>|Aucun|<xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>|Aucun|Animer le <xref:System.Windows.Controls.TextBlock.Text%2A> d’un <xref:System.Windows.Controls.TextBlock> ou <xref:System.Windows.Controls.ContentControl.Content%2A> d’un <xref:System.Windows.Controls.Button>.|  
   
 <a name="animationsaretimelines"></a>   
 ### <a name="animations-are-timelines"></a>Les animations sont des chronologies  
@@ -268,7 +256,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="applyanimationstoproperty"></a>   
 ## <a name="applying-an-animation-to-a-property"></a>Application d’une animation à une propriété  
- Les sections précédentes décrivent les différents types d’animations et leurs propriétés de minuterie. Cette section montre comment appliquer l’animation à la propriété que vous souhaitez animer. <xref:System.Windows.Media.Animation.Storyboard>objets fournissent un moyen d’appliquer des animations aux propriétés. A <xref:System.Windows.Media.Animation.Storyboard> est un *chronologie de conteneur* qui fournit des informations de ciblage pour les animations qu’il contient.  
+ Les sections précédentes décrivent les différents types d’animations et leurs propriétés de minuterie. Cette section montre comment appliquer l’animation à la propriété que vous souhaitez animer. <xref:System.Windows.Media.Animation.Storyboard> objets fournissent un moyen d’appliquer des animations aux propriétés. A <xref:System.Windows.Media.Animation.Storyboard> est un *chronologie de conteneur* qui fournit des informations de ciblage pour les animations qu’il contient.  
   
 ### <a name="targeting-objects-and-properties"></a>Ciblage des objets et propriétés  
  Le <xref:System.Windows.Media.Animation.Storyboard> classe fournit le <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> et <xref:System.Windows.Media.Animation.Storyboard.TargetProperty%2A> propriétés jointes. En définissant ces propriétés sur une animation, vous dites à l’animation ce qu’elle doit animer. Toutefois, avant qu’une animation puisse cibler un objet, l’objet doit généralement obtenir un nom.  

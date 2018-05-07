@@ -1,28 +1,16 @@
 ---
-title: "Comment : implémenter la validation de la liaison"
-ms.custom: 
+title: 'Comment : implémenter la validation de la liaison'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - validation of binding [WPF]
 - data binding [WPF], validation of binding
 - binding [WPF], validation of
 ms.assetid: eb98b33d-9866-49ae-b981-bc5ff20d607a
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2d57fb099fa364d34b7df5c5fce792eb42079a31
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 347e38ba036e5c1a716a9edb75572c1a49f99631
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-implement-binding-validation"></a>Comment : implémenter la validation de la liaison
 Cet exemple montre comment utiliser un <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> et un déclencheur de style pour fournir une rétroaction visuelle pour informer l’utilisateur lorsqu’une valeur non valide est entrée, basée sur une règle de validation personnalisée.  

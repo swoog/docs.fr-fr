@@ -1,11 +1,7 @@
 ---
-title: "CreateClassEnumWmi (fonction) (référence des API non managées)"
-description: "La fonction CreateClassEnumWmi retourne un énumérateur pour toutes les classes qui répondent aux critères spécifiés."
+title: CreateClassEnumWmi (fonction) (référence des API non managées)
+description: La fonction CreateClassEnumWmi retourne un énumérateur pour toutes les classes qui répondent aux critères spécifiés.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - CreateClassEnumWmi
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2058bad61af79244d211afb6a7661ca1642db070
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3f84902586a2b940d52eb6365a141af61af802dd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="createclassenumwmi-function"></a>CreateClassEnumWmi (fonction)
 Retourne un énumérateur pour toutes les classes qui répondent aux critères de sélection spécifiés.  
@@ -64,7 +57,7 @@ HRESULT CreateClassEnumWmi (
 | `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0 x 20000 | Si l’ensemble, la fonction récupère les qualificateurs stockées dans l’espace de noms localisé des paramètres régionaux de la connexion actuelle. <br/> Si ce n’est pas le cas, ensemble, la fonction récupère uniquement les qualificateurs stockées dans l’espace de noms immédiate. |
 | `WBEM_FLAG_DEEP` | 0 | L’énumération inclut toutes les sous-classes dans la hiérarchie, mais pas à cette classe. |
 | `WBEM_FLAG_SHALLOW` | 1 | L’énumération inclut uniquement les instances de cette classe pures et exclut toutes les instances de sous-classes qui fournissent des propriétés non trouvées dans cette classe. |
-| `WBEM_FLAG_RETURN_IMMEDIATELY` | 0 x 10 | L’indicateur provoque un appel semi-synchrone. |
+| `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | L’indicateur provoque un appel semi-synchrone. |
 | `WBEM_FLAG_FORWARD_ONLY` | 0 x 20 | La fonction retourne un énumérateur de type avant uniquement. En règle générale, les énumérateurs avant uniquement sont plus rapides et utilisent moins de mémoire que les énumérateurs classiques, mais ils ne permettent pas d’appels à [Clone](clone.md). |
 | `WBEM_FLAG_BIDIRECTIONAL` | 0 | WMI conserve les pointeurs vers les objets dans l’enumration jusqu'à ce qu’elles sont disponibles. | 
 
@@ -79,7 +72,7 @@ Les indicateurs recommandées sont `WBEM_FLAG_RETURN_IMMEDIATELY` et `WBEM_FLAG_
 `authLevel`  
 [in] Le niveau d’autorisation.
 
-`impLevel`[in] Le niveau d’emprunt d’identité.
+`impLevel` [in] Le niveau d’emprunt d’identité.
 
 `pCurrentNamespace`   
 [in] Un pointeur vers un [IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx) objet qui représente l’espace de noms actuel.
@@ -114,12 +107,12 @@ Cette fonction encapsule un appel à la [IWbemServices::CreateClassEnum](https:/
 
 Si l’appel de fonction échoue, vous pouvez obtenir des informations d’erreur supplémentaires en appelant le [GetErrorInfo](geterrorinfo.md) (fonction).
 
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** WMINet_Utils.idl  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versions du .NET framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
 [WMI et les compteurs de Performance (référence des API non managées)](index.md)

@@ -1,45 +1,33 @@
 ---
 title: Liaisons et sécurité
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - bindings [WCF], security
 - WCF security
 - Windows Communication Foundation, security
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-caps.latest.revision: 42
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 440bbcf03eef8f32a28073bfc9f5aeeb824a50fd
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 938b04f6c612f38be41d278273aa18d41677f84c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bindings-and-security"></a>Liaisons et sécurité
-Les liaisons fournies par le système incluses avec [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] permettent de programmer rapidement des applications [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. À une exception près, la méthode de sécurité par défaut de toutes les liaisons est activée. Cette rubrique vous permet de sélectionner la liaison appropriée à vos besoins de sécurité.  
+Les liaisons fournies par le système incluses avec Windows Communication Foundation (WCF) offrent un moyen rapide de programmer des applications WCF. À une exception près, la méthode de sécurité par défaut de toutes les liaisons est activée. Cette rubrique vous permet de sélectionner la liaison appropriée à vos besoins de sécurité.  
   
- Pour une vue d’ensemble de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sécurité, consultez [vue d’ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md). Pour plus d’informations sur la programmation [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] à l’aide de liaisons, consultez [de programmation de sécurité de WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md).  
+ Pour une vue d’ensemble de la sécurité WCF, consultez [vue d’ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md). Pour plus d’informations sur la programmation WCF à l’aide de liaisons, consultez [de programmation de sécurité de WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md).  
   
  Si vous avez déjà sélectionné une liaison, vous pouvez trouver plus d’informations sur les comportements d’exécution qui sont associés à la sécurité dans [comportements de sécurité](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md).  
   
  Certaines fonctions de sécurité ne sont pas programmables à l’aide des liaisons fournies par le système. Pour plus de contrôle à l’aide d’une liaison personnalisée, consultez [les fonctionnalités de sécurité avec des liaisons personnalisées](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md).  
   
 ## <a name="security-functions-of-bindings"></a>Fonctions de sécurité des liaisons  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] inclut un certain nombre de liaisons fournies par le système qui répondent à la plupart des besoins. Si une liaison spécifique ne suffit pas, vous pouvez également créer une liaison personnalisée. Pour obtenir la liste des liaisons fournies par le système, consultez [les liaisons fournies](../../../../docs/framework/wcf/system-provided-bindings.md). Pour plus d’informations sur les liaisons personnalisées, consultez [des liaisons personnalisées](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+ WCF inclut plusieurs liaisons fournies par le système qui répondent à la plupart des besoins. Si une liaison spécifique ne suffit pas, vous pouvez également créer une liaison personnalisée. Pour obtenir la liste des liaisons fournies par le système, consultez [les liaisons fournies](../../../../docs/framework/wcf/system-provided-bindings.md). Pour plus d’informations sur les liaisons personnalisées, consultez [des liaisons personnalisées](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
- Chaque liaison dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] comporte deux formulaires : l'un en tant qu'API et l'autre en tant qu'élément XML utilisé dans un fichier de configuration. Par exemple, le `WSHttpBinding` (API) possède un équivalent le [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
+ Chaque liaison dans WCF a deux formes : comme une API et comme un élément XML utilisé dans un fichier de configuration. Par exemple, le `WSHttpBinding` (API) possède un équivalent le [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
   
  La section suivante répertorie ces deux formulaires pour chaque de liaison et récapitule les fonctionnalités de sécurité.  
   
@@ -149,7 +137,7 @@ Les liaisons fournies par le système incluses avec [!INCLUDE[indigo1](../../../
 ### <a name="msmqintegrationbinding"></a>MsmqIntegrationBinding  
  Dans le code, utilisez la <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> classe ; dans la configuration, utilisez la [ \<msmqIntegrationBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md).  
   
- Cette liaison est optimisée pour créer des services et des clients [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] qui interagissent avec les points de terminaison MSMQ (Microsoft Message Queuing) non-[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Cette liaison est optimisée pour la création des clients WCF et les services qui interagissent avec les points de terminaison non - WCF MSMQ Microsoft Message Queuing.  
   
  Par défaut, elle utilise la sécurité de transport et fournit les caractéristiques de sécurité suivantes :  
   
@@ -162,7 +150,7 @@ Les liaisons fournies par le système incluses avec [!INCLUDE[indigo1](../../../
 ### <a name="netmsmqbinding"></a>NetMsmqBinding  
  Dans le code, utilisez la <xref:System.ServiceModel.NetMsmqBinding> classe ; dans la configuration, utilisez la [ \<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md).  
   
- Cette liaison est prévue pour être utilisée dans le cadre de la création de services [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] qui requièrent la prise en charge des message en file d'attente MSMQ.  
+ Cette liaison est prévue pour une utilisation lors de la création de services WCF nécessitant MSMQ prise en charge de message en file d’attente.  
   
  Par défaut, elle utilise la sécurité de transport et fournit les caractéristiques de sécurité suivantes :  
   
@@ -232,7 +220,7 @@ Les liaisons fournies par le système incluses avec [!INCLUDE[indigo1](../../../
 |----------|-----------------|  
 |Aucun|Autorise le service à interagir avec des clients anonymes.|  
 |Windows|Autorise les échanges de messages SOAP à se produire sous le contexte authentifié d'une information d'identification Windows.|  
-|UserName|Autorise le service à imposer que le client soit authentifié à l'aide d'une information d'identification de nom d'utilisateur. Notez que lorsque le mode de sécurité a la valeur `TransportWithMessageCredential`, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ne prend pas en charge l'envoi d'un condensé du mot de passe ou la dérivation de clés à l'aide du mot de passe, ainsi que l'utilisation de ces clés pour le mode de sécurité Message. De ce fait, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] s'assure que le transport est sécurisé lors de l'utilisation d'informations d'identification de nom d'utilisateur.|  
+|UserName|Autorise le service à imposer que le client soit authentifié à l'aide d'une information d'identification de nom d'utilisateur. Notez que lorsque le mode de sécurité a la valeur `TransportWithMessageCredential`, WCF ne prend pas en charge l’envoi d’un mot de passe digest ou la dérivation de clés à l’aide du mot de passe et de l’utilisation de telles clés pour le mode de sécurité Message. Par conséquent, WCF impose que le transport est sécurisé lors de l’utilisation des informations d’identification utilisateur.|  
 |Certificat|Autorise le service à exiger une authentification du client via un certificat.|  
 |IssuedToken|Autorise le service à utiliser un service d'émission de jeton de sécurité afin de fournir un jeton personnalisé.|  
   

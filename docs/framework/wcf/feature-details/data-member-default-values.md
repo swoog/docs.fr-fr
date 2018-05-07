@@ -1,13 +1,6 @@
 ---
-title: "Valeurs par défaut des membres de données"
-ms.custom: 
+title: Valeurs par défaut des membres de données
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - data members [WCF], default values
 - data members [WCF]
 ms.assetid: 53a3b505-4b27-444b-b079-0eb84a97cfd8
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 33f093beb022804bbdbccf1177404e128d198dd1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 477921069411bb4b7ac32a5e93cc409bc7fbdec2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-member-default-values"></a>Valeurs par défaut des membres de données
 Dans le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], types possèdent un concept de *les valeurs par défaut*. Ainsi, la valeur par défaut d'un type référence est `null`, et celle d'un type entier est zéro. Il est parfois préférable d'omettre un membre de données des données sérialisées lorsqu'il est défini à sa valeur par défaut. Le membre ayant une valeur par défaut, il n'est pas nécessaire de sérialiser une valeur réelle ; cela présente un avantage en termes de performance.  
@@ -61,11 +49,11 @@ Dans le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], types p
 ### <a name="schema-representation"></a>Représentation de schéma  
  Les détails de la représentation de schéma XML Schema definition language (XSD) des membres de données lorsque la `EmitDefaultValue` est définie sur `false` sont abordés dans [référence de schéma de contrat de données](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md). Toutefois, en voici une brève vue d'ensemble :  
   
--   Lorsque <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> a la valeur `false`, il est représenté dans le schéma sous forme d'une annotation spécifique à [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Il n'existe pas de moyen interopérable pour représenter ces informations. En particulier, l'attribut "default" dans le schéma n'est pas utilisé à cette fin, l'attribut `minOccurs` est uniquement affecté par le paramètre <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A>, et l'attribut `nillable` est uniquement affecté par le type du membre de données.  
+-   Lorsque le <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> a la valeur `false`, elle est représentée dans le schéma en tant qu’annotation spécifique à Windows Communication Foundation (WCF). Il n'existe pas de moyen interopérable pour représenter ces informations. En particulier, l'attribut "default" dans le schéma n'est pas utilisé à cette fin, l'attribut `minOccurs` est uniquement affecté par le paramètre <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A>, et l'attribut `nillable` est uniquement affecté par le type du membre de données.  
   
 -   La valeur par défaut réelle à utiliser n'est pas présente dans le schéma. C'est au point de terminaison de réception d'interpréter correctement un élément manquant.  
   
- Sur l'importation de schéma, la propriété <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> a automatiquement la valeur `false` chaque fois que l'annotation spécifique à [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] précédemment mentionnée est détectée. Elle a également la valeur `false` pour les types référence dont la propriété `nillable` a la valeur `false` afin de prendre en charge des scénarios d'interopérabilité spécifiques qui se produisent généralement lors de la consommation des services Web [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].  
+ Lors de l’importation de schéma, le <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> est automatiquement définie sur `false` chaque fois que l’annotation spécifiques à WCF mentionnée précédemment est détectée. Elle a également la valeur `false` pour les types référence dont la propriété `nillable` a la valeur `false` afin de prendre en charge des scénarios d'interopérabilité spécifiques qui se produisent généralement lors de la consommation des services Web [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A>  

@@ -1,30 +1,16 @@
 ---
 title: Sérialisation et stockage de documents
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - 'serialization of documents [WPF], , '
 - documents [WPF], storage
 - documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
-caps.latest.revision: 24
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e6b1cc63b5118280a0a06fe63961c6e54792ed09
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 8ee8acb95aa4a7c8dd80ea88594e582f05b71611
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="document-serialization-and-storage"></a>Sérialisation et stockage de documents
 Microsoft .NET Framework fournit un environnement puissant pour créer et afficher des documents de haute qualité.  Des fonctionnalités améliorées qui prennent en charge les documents fixes et documents dynamiques, advanced contrôles d’affichage associées aux puissant 2D et les fonctionnalités de graphique 3D prennent des applications .NET Framework d’un niveau de qualité et l’expérience utilisateur.  En mesure de gérer de manière flexible une représentation en mémoire d’un document est une fonctionnalité clé de .NET Framework, et pouvoir enregistrer et charger des documents à partir d’un magasin de données de façon efficace est un besoin de presque toutes les applications.  Le processus de conversion d’un document d’une représentation en mémoire interne en magasin de données externe est appelé sérialisation.  Le processus inverse consistant à lire un magasin de données et à recréer l’instance en mémoire d’origine est appelé désérialisation.  

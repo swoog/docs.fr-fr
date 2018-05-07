@@ -1,32 +1,22 @@
 ---
-title: "Méthodes d'extension (Visual Basic)"
-ms.custom: 
+title: Méthodes d'extension (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.ExtensionMethods
 helpviewer_keywords:
 - extending data types [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: b8020aae-374d-46a9-bcb7-8cc2390b93b6
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d3db3bc2b213b78ef2dceebcf56c9d5fbfa3016e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1cc2ccef09dd027c6f1e82f60ed4ac5f50db6ebe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extension-methods-visual-basic"></a>Méthodes d'extension (Visual Basic)
 Méthodes d’extension permettent aux développeurs d’ajouter des fonctionnalités personnalisées aux types de données qui sont déjà définis sans créer un type dérivé. Méthodes d’extension permettent d’écrire une méthode qui peut être appelée comme s’il s’agissait d’une méthode d’instance du type existant.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Une méthode d’extension peut uniquement être un `Sub` procédure ou un `Function` procédure. Vous ne pouvez pas définir une propriété d’extension, un champ ou un événement. Toutes les méthodes d’extension doivent être marqués avec l’attribut d’extension `<Extension()>` à partir de la <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> espace de noms.  
   
  Le premier paramètre dans une définition de méthode d’extension Spécifie le type de données que la méthode étend. Lorsque la méthode est exécutée, le premier paramètre est lié à l’instance du type de données qui appelle la méthode.  
@@ -38,7 +28,7 @@ Méthodes d’extension permettent aux développeurs d’ajouter des fonctionnal
   
  [!code-vb[VbVbalrExtensionMethods#1](./codesnippet/VisualBasic/extension-methods_1.vb)]  
   
- Notez que la définition de méthode d’extension est marquée avec l’attribut d’extension `<Extension()>`. Le marquage du module dans lequel elle est définie est facultatif, mais chaque méthode d’extension doit être marqué. <xref:System.Runtime.CompilerServices>doit être importé afin d’accéder à l’attribut d’extension.  
+ Notez que la définition de méthode d’extension est marquée avec l’attribut d’extension `<Extension()>`. Le marquage du module dans lequel elle est définie est facultatif, mais chaque méthode d’extension doit être marqué. <xref:System.Runtime.CompilerServices> doit être importé afin d’accéder à l’attribut d’extension.  
   
  Méthodes d’extension peuvent être déclarées seulement dans les modules. En règle générale, le module dans lequel une méthode d’extension est définie n’est pas le même module que celui dans lequel elle est appelée. Au lieu de cela, le module qui contient la méthode d’extension est importé, si nécessaire, pour l’afficher dans la portée. Une fois le module qui contient `Print` est dans la portée, la méthode peut être appelée comme s’il s’agissait d’une méthode d’instance ordinaire qui n’accepte aucun argument, tel que `ToUpper`:  
   
@@ -48,9 +38,9 @@ Méthodes d’extension permettent aux développeurs d’ajouter des fonctionnal
   
  [!code-vb[VbVbalrExtensionMethods#3](./codesnippet/VisualBasic/extension-methods_3.vb)]  
   
- La méthode est appelée en envoyant un argument de chaîne pour `punc`:`example.PrintAndPunctuate(".")`  
+ La méthode est appelée en envoyant un argument de chaîne pour `punc`: `example.PrintAndPunctuate(".")`  
   
- L’exemple suivant `Print` et `PrintAndPunctuate` définies et appelées. <xref:System.Runtime.CompilerServices>est importé dans le module de définition pour permettre un accès à l’attribut d’extension.  
+ L’exemple suivant `Print` et `PrintAndPunctuate` définies et appelées. <xref:System.Runtime.CompilerServices> est importé dans le module de définition pour permettre un accès à l’attribut d’extension.  
   
 ### <a name="code"></a>Code  
   

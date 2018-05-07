@@ -1,28 +1,14 @@
 ---
 title: Liaisons fournies par le système
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - bindings [WCF], system-provided
 ms.assetid: 2c243746-45ce-4588-995e-c17126a579a6
-caps.latest.revision: 60
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4ccdab56a90f4114836dd9f0a56cc495657ee9c8
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 12382b0886970bc48345107008ee449d9653ec4f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="system-provided-bindings"></a>Liaisons fournies par le système
 Les liaisons spécifient le mécanisme de communication à utiliser pour communiquer avec un point de terminaison et indiquer comment se connecter à un point de terminaison. Une liaison contient les éléments suivants :  
@@ -33,7 +19,7 @@ Les liaisons spécifient le mécanisme de communication à utiliser pour communi
   
 -   L'encodage détermine l'encodage de câble à utiliser pour les messages envoyés au point de terminaison, par exemple, texte/XML, binaire ou MTOM (Message Transmission Optimization Mechanism).  
   
- Cette rubrique présente toutes les liaisons [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] fournies par le système. Si aucune d’entre elles ne répond aux critères exacts pour votre application, créez une liaison personnalisée. Pour plus d’informations sur la création de liaisons personnalisées, consultez [des liaisons personnalisées](../../../docs/framework/wcf/extending/custom-bindings.md).  
+ Cette rubrique présente toutes les liaisons Windows Communication Foundation (WCF) fournie par le système. Si aucune d’entre elles ne répond aux critères exacts pour votre application, créez une liaison personnalisée. Pour plus d’informations sur la création de liaisons personnalisées, consultez [des liaisons personnalisées](../../../docs/framework/wcf/extending/custom-bindings.md).  
   
  Une liaison sécurisée et interopérable qui prend en charge le protocole WS-Federation permet aux organisations qui sont dans une fédération d’authentifier et d’autoriser efficacement les utilisateurs.  
   

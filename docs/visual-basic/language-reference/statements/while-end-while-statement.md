@@ -1,11 +1,6 @@
 ---
 title: While...End While, instruction (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.While
 - vb.While...EndWhile
@@ -14,14 +9,11 @@ helpviewer_keywords:
 - While statement [Visual Basic]
 - While...End While statements [Visual Basic]
 ms.assetid: b931d1ce-e8ed-44d8-a13d-92a4f5458a1e
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5f831f233eaa4f1c38d56f3a89bda9b0cf1bccaa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9f46a6ec65faef4448bdd25e30a6cc0c605cd0f2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="whileend-while-statement-visual-basic"></a>While...End While, instruction (Visual Basic)
 Exécute une série d’instructions tant qu’une condition donnée est `True`.  
@@ -42,13 +34,13 @@ End While
   
 |Terme|Définition|  
 |---|---|  
-|`condition`|Obligatoire. `Boolean`expression. Si `condition` est `Nothing`, Visual Basic traite en tant que `False`.|  
+|`condition`|Obligatoire. `Boolean` Expression. Si `condition` est `Nothing`, Visual Basic traite en tant que `False`.|  
 |`statements`|Facultatif. Une ou plusieurs instructions qui suivent `While`, lequel exécuter chaque fois `condition` est `True`.|  
 |`Continue While`|Facultatif. Transfère le contrôle à l’itération suivante de la `While` bloc.|  
 |`Exit While`|Facultatif. Transfère le contrôle de le `While` bloc.|  
 |`End While`|Obligatoire. Met fin à la définition du bloc `While`.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Utilisez un `While...End While` lorsque vous souhaitez répéter un ensemble d’instructions un nombre indéfini de fois, tant qu’une condition reste de la structure `True`. Si vous souhaitez davantage de souplesse avec où vous testez la condition ou du résultat vous tester pour, vous préférerez peut-être la [faire... Instruction de boucle](../../../visual-basic/language-reference/statements/do-loop-statement.md). Si vous souhaitez répéter les instructions un nombre défini de fois, le [pour... L’instruction suivante](../../../visual-basic/language-reference/statements/for-next-statement.md) est généralement un meilleur choix.  
   
 > [!NOTE]
@@ -63,7 +55,7 @@ End While
  Vous pouvez imbriquer des `While` en plaçant une boucle à l’intérieur d’une autre boucle. Vous pouvez également imbriquer des différents types de structures de contrôle dans un autre. Pour plus d’informations, consultez [Structures de contrôle imbriquées](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).  
   
 ## <a name="exit-while"></a>Sortie lors de la  
- Le [quitter pendant](../../../visual-basic/language-reference/statements/exit-statement.md) instruction peut fournir une autre façon de quitter une `While` boucle. `Exit While`transfère le contrôle à l’instruction qui suit immédiatement la `End While` instruction.  
+ Le [quitter pendant](../../../visual-basic/language-reference/statements/exit-statement.md) instruction peut fournir une autre façon de quitter une `While` boucle. `Exit While` transfère le contrôle à l’instruction qui suit immédiatement la `End While` instruction.  
   
  Vous utilisez généralement `Exit While` après l’évaluation de certaines conditions (par exemple, dans un `If...Then...Else` structure). Vous souhaiterez peut-être quitter une boucle si vous détectez une condition qui rend inutile ou impossible pour poursuivre l’itération, telle qu’une valeur erronée ou une demande d’arrêt. Vous pouvez utiliser `Exit While` lorsque vous testez une condition qui provoquerait une *boucle sans fin*, qui est une boucle qui pourrait exécuter un nombre de fois extrêmement volumineux ou même infini. Vous pouvez ensuite utiliser `Exit While` pour abandonner la boucle.  
   

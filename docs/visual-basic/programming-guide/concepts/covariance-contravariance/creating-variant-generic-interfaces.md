@@ -1,22 +1,12 @@
 ---
-title: "Création d’Interfaces génériques de type Variant (Visual Basic)"
-ms.custom: 
+title: Création d’Interfaces génériques de type Variant (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d4037dd2-dfe9-4811-9150-93d4e8b20113
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 380af3b29172b1fa13d42d33e574201607cb804b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9e79183cd75e3e222cfa82c6b8ca651eb99ffc02
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-variant-generic-interfaces-visual-basic"></a>Création d’Interfaces génériques de type Variant (Visual Basic)
 Vous pouvez déclarer des paramètres de type générique dans les interfaces comme covariant ou contravariant. La *covariance* permet aux méthodes d’interface d’avoir des types de retour plus dérivés que ceux définis par les paramètres de type générique. La *contravariance* permet aux méthodes d’interface d’avoir des types d’argument moins dérivés que ceux spécifiés par les paramètres génériques. Une interface générique ayant des paramètres de type générique covariant ou contravariant est appelée *variante*.  
@@ -28,7 +18,7 @@ Vous pouvez déclarer des paramètres de type générique dans les interfaces co
  Vous pouvez déclarer des interfaces génériques de type variant à l’aide des mots clés `in` et `out` pour les paramètres de type générique.  
   
 > [!IMPORTANT]
->  `ByRef`paramètres Visual Basic ne peut pas être de type variant. Les types valeur ne prennent pas non plus en charge la variance.  
+>  `ByRef` paramètres Visual Basic ne peut pas être de type variant. Les types valeur ne prennent pas non plus en charge la variance.  
   
  Vous pouvez déclarer un covariant de paramètre de type générique à l’aide du mot clé `out`. Le type covariant doit remplir les conditions suivantes :  
   

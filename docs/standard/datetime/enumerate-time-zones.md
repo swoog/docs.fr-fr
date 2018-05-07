@@ -1,13 +1,7 @@
 ---
-title: "Comment : énumérer les fuseaux horaires présents sur un ordinateur"
-ms.custom: 
+title: 'Comment : énumérer les fuseaux horaires présents sur un ordinateur'
 ms.date: 04/10/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,18 +9,13 @@ helpviewer_keywords:
 - time zones [.NET Framework], enumerating
 - enumerating time zones [.NET Framework]
 ms.assetid: bb7a42ab-6bd9-4c5c-b734-5546d51f8669
-caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 2318a42040388adfe327f9d0075754daa1aa22a6
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: dfdc3993f6658ce5dc50050ed062c2de9d4cec29
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-enumerate-time-zones-present-on-a-computer"></a>Comment : énumérer les fuseaux horaires présents sur un ordinateur
 
@@ -37,7 +26,7 @@ Pour utiliser correctement un fuseau horaire désigné, le système doit pouvoir
 
 ### <a name="to-enumerate-the-time-zones-present-on-the-local-system"></a>Pour énumérer les fuseaux horaires présents sur le système local
 
-1. Appelez la méthode <xref:System.TimeZoneInfo.GetSystemTimeZones%2A?displayProperty=nameWithType>. La méthode retourne une collection générique <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> collection de <xref:System.TimeZoneInfo> objets. Les entrées dans la collection sont triées par leur <xref:System.TimeZoneInfo.DisplayName%2A> propriété. Exemple :
+1. Appelez la méthode <xref:System.TimeZoneInfo.GetSystemTimeZones%2A?displayProperty=nameWithType>. La méthode retourne une collection générique <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> collection de <xref:System.TimeZoneInfo> objets. Les entrées dans la collection sont triées par leur <xref:System.TimeZoneInfo.DisplayName%2A> propriété. Par exemple :
 
    [!code-csharp[System.TimeZone2.Concepts#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#1)]
    [!code-vb[System.TimeZone2.Concepts#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#1)]
@@ -77,7 +66,7 @@ Cet exemple nécessite :
 
 * Que les espaces de noms suivants soient importés :
 
-  <xref:System>(en c#)
+  <xref:System> (en c#)
 
   <xref:System.Collections.ObjectModel>
 

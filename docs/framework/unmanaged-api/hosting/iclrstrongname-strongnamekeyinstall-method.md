@@ -1,14 +1,6 @@
 ---
-title: "Méthode ICLRStrongName::StrongNameKeyInstall"
-ms.custom: 
+title: Méthode ICLRStrongName::StrongNameKeyInstall
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRStrongName.StrongNameKeyInstall
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 5c15cf3b-164c-49d1-8e57-e42949d55acf
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: df1bdb5d6d6018855cb76b48d58e557a61288a51
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 572afc5eb9ec3cf52199e5ad74406c876485461c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrstrongnamestrongnamekeyinstall-method"></a>Méthode ICLRStrongName::StrongNameKeyInstall
 Importe une paire de clés publique/privée dans un conteneur.  
@@ -50,7 +38,7 @@ HRESULT StrongNameKeyInstall (
   
 #### <a name="parameters"></a>Paramètres  
  `wszKeyContainer`  
- [in] Le nom du conteneur de clé. `wszKeyContainer`doit être une chaîne non vide.  
+ [in] Le nom du conteneur de clé. `wszKeyContainer` doit être une chaîne non vide.  
   
  `pbKeyBlob`  
  [in] La paire de clés binaire.  
@@ -59,19 +47,19 @@ HRESULT StrongNameKeyInstall (
  [in] La taille, en octets, de `pbKeyBlob`.  
   
 ## <a name="return-value"></a>Valeur de retour  
- `S_OK`Si la méthode a réussi ; Sinon, une valeur HRESULT qui indique un échec (voir [valeurs HRESULT courantes](http://go.microsoft.com/fwlink/?LinkId=213878) pour obtenir la liste).  
+ `S_OK` Si la méthode a réussi ; Sinon, une valeur HRESULT qui indique un échec (voir [valeurs HRESULT courantes](http://go.microsoft.com/fwlink/?LinkId=213878) pour obtenir la liste).  
   
 ## <a name="remarks"></a>Notes  
  Utilisez le [ICLRStrongName::StrongNameKeyDelete](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeydelete-method.md) méthode pour supprimer le conteneur de clé.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** MetaHost.h  
   
  **Bibliothèque :** inclus en tant que ressource dans MSCorEE.dll  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versions du .NET framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [StrongNameKeyDelete, méthode](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeydelete-method.md)  

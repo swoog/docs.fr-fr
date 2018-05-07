@@ -1,14 +1,6 @@
 ---
-title: "IHostThreadPoolManager::SetMinThreads, méthode"
-ms.custom: 
+title: IHostThreadPoolManager::SetMinThreads, méthode
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostThreadPoolManager.SetMinThreads
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 10409db9-9fd2-4e4d-b8cd-cf6fec0afaa2
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4fccfeb616b7a1c6d797ad9d91f47e696c4f3599
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8f9852034f6d8208bdaa9b424f689adc374bae2d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostthreadpoolmanagersetminthreads-method"></a>IHostThreadPoolManager::SetMinThreads, méthode
 Définit le nombre minimal de threads inactifs que l’hôte doit gérer en anticipation des demandes.  
@@ -54,7 +42,7 @@ HRESULT SetMinThreads (
   
 |HRESULT|Description|  
 |-------------|-----------------|  
-|S_OK|`SetMinThreads`retourné avec succès.|  
+|S_OK|`SetMinThreads` retourné avec succès.|  
 |HOST_E_CLRNOTAVAILABLE|Le common language runtime (CLR) n’a pas été chargé dans un processus ou le CLR est dans un état dans lequel il ne peut pas exécuter du code managé ou traiter l’appel avec succès.|  
 |HOST_E_TIMEOUT|L’appel a expiré.|  
 |HOST_E_NOT_OWNER|L’appelant ne possède pas le verrou.|  
@@ -65,14 +53,14 @@ HRESULT SetMinThreads (
 ## <a name="remarks"></a>Notes  
  Un hôte n’est pas obligé de fournir une implémentation de `SetMinThreads`. Dans ce cas, elle doit retourner une valeur HRESULT d’E_NOTIMPL.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** MSCorEE.h  
   
  **Bibliothèque :** inclus en tant que ressource dans MSCorEE.dll  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.Threading.ThreadPool.SetMinThreads%2A>  

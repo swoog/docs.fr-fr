@@ -1,12 +1,6 @@
 ---
 title: Stop, instruction (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Stop
 helpviewer_keywords:
@@ -18,14 +12,11 @@ helpviewer_keywords:
 - processes, interrupting
 - execution [Visual Basic], stopping
 ms.assetid: c9a9fde0-d649-4662-9bef-bd0146ebc2a7
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d4b7f04214234837a86bf0c77c0d7b6934e2babd
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: 955a3b6a2f7dc1d0e9823ed6d500ab7f7f9fe5b2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="stop-statement-visual-basic"></a>Stop, instruction (Visual Basic)
 Suspend l’exécution.  
@@ -36,7 +27,7 @@ Suspend l’exécution.
 Stop  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Vous pouvez placer `Stop` instructions n’importe où dans les procédures pour suspendre l’exécution. À l’aide de la `Stop` instruction est similaire à la configuration d’un point d’arrêt dans le code.  
   
  Le `Stop` instruction interrompt l’exécution, mais contrairement à `End`, il ne pas fermer tous les fichiers ou effacer toutes les variables, sauf si elle est placée dans un fichier exécutable compilé (.exe).  

@@ -1,25 +1,16 @@
 ---
 title: Const, instruction (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Const
 helpviewer_keywords:
 - Const statement [Visual Basic]
 ms.assetid: 495b318d-b7c5-4198-94f8-0790a541b07a
-caps.latest.revision: 28
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 720a465f1459b663a1fca2a48856f51762328459
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bb4c524fa5c29efbcbe485fb5e86c8cf0fa432e8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="const-statement-visual-basic"></a>Const, instruction (Visual Basic)
 Déclare et définit une ou plusieurs constantes.  
@@ -56,7 +47,7 @@ Const constantlist
 |`datatype`|Obligatoire si `Option Strict` est `On`. Type de données de la constante.|  
 |`initializer`|Obligatoire. Expression qui est évaluée au moment de la compilation et assignée à la constante.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Si vous avez une valeur qui ne change jamais dans votre application, vous pouvez définir une constante nommée et l’utiliser à la place d’une valeur littérale. Un nom est plus facile à mémoriser à une valeur. Vous pouvez définir la constante une seule fois et l’utiliser dans de nombreux endroits dans votre code. Si dans une version ultérieure, vous devez redéfinir la valeur, la `Const` instruction est le seul endroit où vous souhaitez apporter une modification.  
   
  Vous pouvez utiliser `Const` uniquement au niveau du module ou de la procédure. Cela signifie que la *contexte de déclaration* pour une variable doit être une classe, structure, module, procédure ou un bloc et qu’il ne peut pas être un fichier source, un espace de noms ou une interface. Pour plus d’informations, consultez [Contextes de déclaration et niveaux d’accès par défaut](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
@@ -85,7 +76,7 @@ Const constantlist
   
 -   **Différents Types.** Vous pouvez spécifier différents types de données pour les constantes à l’aide de distinct `As` clause pour chaque variable que vous déclarez. Toutefois, vous ne pouvez pas déclarer plusieurs constantes comme étant du même type à l’aide d’un commun `As` clause.  
   
--   **Initialisation.** Vous devez initialiser la valeur de chaque constante dans `constantlist`. Vous utilisez `initializer` pour fournir une expression à assigner à la constante. L’expression peut être n’importe quelle combinaison de littéraux, d’autres constantes qui sont déjà définies et de membres de l’énumération qui sont déjà définis. Vous pouvez utiliser des opérateurs arithmétiques et logiques pour combiner ces éléments.  
+-   **initialisation.** Vous devez initialiser la valeur de chaque constante dans `constantlist`. Vous utilisez `initializer` pour fournir une expression à assigner à la constante. L’expression peut être n’importe quelle combinaison de littéraux, d’autres constantes qui sont déjà définies et de membres de l’énumération qui sont déjà définis. Vous pouvez utiliser des opérateurs arithmétiques et logiques pour combiner ces éléments.  
   
      Vous ne pouvez pas utiliser des variables ou des fonctions dans `initializer`. Toutefois, vous pouvez utiliser des mots clés de conversion tels que `CByte` et `CShort`. Vous pouvez également utiliser `AscW` si vous l’appelez avec une constante `String` ou `Char` argument, étant donné que qui peut être évaluée au moment de la compilation.  
   

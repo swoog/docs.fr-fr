@@ -1,32 +1,18 @@
 ---
 title: "Comment : créer un contrat Windows Communication Foundation à l'aide d'une classe"
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1ad69393-3915-4e7f-9b91-b6fc59c6f5ba
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 54d5e1328482fc7d0c1ee33918ffae6bf7195db9
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 296f500532040aaebf0f6d7d37a7a9aae99a3451
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-windows-communication-foundation-contract-with-a-class"></a>Comment : créer un contrat Windows Communication Foundation à l'aide d'une classe
-La méthode préconisée pour créer un contrat [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] consiste à utiliser une interface. Pour plus d’informations, consultez [Comment : définir un contrat de Service](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md). Une autre solution, présentée dans cette rubrique, consiste à créer une classe, à appliquer l'attribut <xref:System.ServiceModel.ServiceContractAttribute> directement sur celle-ci, puis l'attribut <xref:System.ServiceModel.OperationContractAttribute> sur chacune des méthodes de la classe qui font partie du contrat.  
+Le meilleur moyen de la création d’un contrat Windows Communication Foundation (WCF) est à l’aide d’une interface. Pour plus d’informations, consultez [Comment : définir un contrat de Service](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md). Une autre solution, présentée dans cette rubrique, consiste à créer une classe, à appliquer l'attribut <xref:System.ServiceModel.ServiceContractAttribute> directement sur celle-ci, puis l'attribut <xref:System.ServiceModel.OperationContractAttribute> sur chacune des méthodes de la classe qui font partie du contrat.  
   
 > [!WARNING]
 >  `[ServiceContract]` et `[ServiceContractAttribute]` produisent le même résultat. La même chose est vraie pour `[OperationContract]` et `[OperationContractAttribute]`. Dans chaque cas le précédent est abrégé pour le dernier.  
@@ -41,7 +27,7 @@ La méthode préconisée pour créer un contrat [!INCLUDE[indigo1](../../../../i
   
 3.  Créez des méthodes dans la classe.  
   
-4.  Appliquez la classe <xref:System.ServiceModel.OperationContractAttribute> à chaque méthode qui doit être exposée dans le cadre du contrat public [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+4.  Appliquer la <xref:System.ServiceModel.OperationContractAttribute> classe pour chaque méthode qui doit être exposé en tant que partie du contrat public WCF.  
   
 ## <a name="example"></a>Exemple  
  L'exemple de code suivant présente une classe qui définit un contrat de service.  

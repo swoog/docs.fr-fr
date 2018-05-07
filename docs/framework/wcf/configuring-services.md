@@ -1,28 +1,14 @@
 ---
 title: Configuration des services
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - configuration [WCF]
 ms.assetid: beac771e-f28e-4f84-9ff1-ad9251c726d3
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 857ec77e54d6a55bde1a94fd9fd5758ef7a24309
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: dc3aeadafd54bbd8b57a3e8c781e0cced9e7e632
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-services"></a>Configuration des services
 Une fois que vous avez conçu et implémenté votre contrat de service, vous êtes prêt à configurer votre service. C'est à ce stade que vous définissez et personnalisez la manière dont votre service est exposé aux clients, notamment l'adresse de son emplacement, l'encodage du transport et du message qu'il utilise pour envoyer et recevoir des messages, et le type de sécurité qu'il nécessite.  
@@ -34,7 +20,7 @@ Une fois que vous avez conçu et implémenté votre contrat de service, vous êt
  Depuis [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] est fourni avec un nouveau modèle de configuration par défaut qui simplifie les spécifications de configuration de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] . Si vous ne fournissez aucune configuration [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] pour un service particulier, le runtime configure automatiquement votre service à l'aide des liaisons, des comportements et des points de terminaison par défaut.  
   
  [Configuration des services à l’aide de fichiers de configuration](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)  
- Un service [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] est configurable à l'aide de la technologie de configuration [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Le plus souvent, les éléments XML sont ajoutés au fichier Web.config pour un site IIS (Internet Information Services) qui héberge un service [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Les éléments vous permettent de modifier des détails, tels que les adresses de point de terminaison (les adresses réelles qui communiquent avec le service), à partir de chaque ordinateur individuel.  
+ Un service Windows Communication Foundation (WCF) est configurable à l’aide du [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] technologie de configuration. Le plus souvent, les éléments XML sont ajoutés au fichier Web.config pour un site IIS (Internet Information Services) qui héberge un service [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] . Les éléments vous permettent de modifier des détails, tels que les adresses de point de terminaison (les adresses réelles qui communiquent avec le service), à partir de chaque ordinateur individuel.  
   
  [Liaisons](../../../docs/framework/wcf/bindings.md)  
  De plus, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] inclut plusieurs configurations fournies par le système courantes sous la forme de liaisons qui vous permettent de sélectionner rapidement les fonctionnalités les plus simples permettant à un client et à un service de communiquer, en particulier les transports, la sécurité et les encodages de message utilisés.  

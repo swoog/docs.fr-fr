@@ -1,28 +1,14 @@
 ---
 title: "Comment : gérer l'événement ContextMenuOpening"
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ContextMenuOpening properties [WPF]
 ms.assetid: 789652fb-1951-4217-934a-7843e355adf4
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5eec8646a48f94fb9ffdcad14849416732618a06
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ab4c4867981cd318738b7404d76f2f5932bb9059
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-handle-the-contextmenuopening-event"></a>Comment : gérer l'événement ContextMenuOpening
 Le <xref:System.Windows.FrameworkElement.ContextMenuOpening> événement peut être géré dans une application pour ajuster un menu contextuel existant avant son pour afficher ou supprimer un menu qui serait affiché en définissant le <xref:System.Windows.RoutedEventArgs.Handled%2A> propriété `true` dans les données d’événement. La raison par défaut pour le paramètre <xref:System.Windows.RoutedEventArgs.Handled%2A> à `true` de l’événement sont de données pour remplacer le menu entièrement avec un nouveau <xref:System.Windows.Controls.ContextMenu> de l’objet, qui requiert parfois l’annulation de l’opération et le démarrage d’une nouvelle ouverture. Si vous écrivez des gestionnaires pour les <xref:System.Windows.FrameworkElement.ContextMenuOpening> événement, vous devez être conscient des problèmes de synchronisation entre un <xref:System.Windows.Controls.ContextMenu> contrôle et le service est responsable de l’ouvrir et de positionner les menus contextuels pour les contrôles en général. Cette rubrique illustre quelques-unes des techniques de codage pour le menu contextuel de différents scénarios d’ouverture et présente un cas où le problème de synchronisation entre en jeu.  

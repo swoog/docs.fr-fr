@@ -1,12 +1,6 @@
 ---
-title: "Paramètres et arguments d’une procédure (Visual Basic)"
-ms.custom: 
+title: Paramètres et arguments d’une procédure (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - procedures [Visual Basic], arguments
 - procedures [Visual Basic], argument lists
@@ -24,14 +18,11 @@ helpviewer_keywords:
 - argument lists [Visual Basic]
 - procedures [Visual Basic], parameter lists
 ms.assetid: ff275aff-aa13-40df-bd4c-63486db8c1e9
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 726667950cfb227a0359bd6238c202883561749c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b0ab186945b456d7fb4dde3f52724b08a99e2827
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="procedure-parameters-and-arguments-visual-basic"></a>Paramètres et arguments d’une procédure (Visual Basic)
 Dans la plupart des cas, une procédure a besoin des informations sur les circonstances dans lesquelles elle a été appelée. Une procédure qui exécute des tâches répétitives ou partagées utilise des informations différentes pour chaque appel. Ces informations se composent des variables, des constantes et des expressions que vous passez à la procédure lorsque vous appelez.  

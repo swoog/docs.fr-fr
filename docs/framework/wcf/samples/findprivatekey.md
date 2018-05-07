@@ -1,23 +1,14 @@
 ---
 title: Exemple FindPrivateKey - WCF
 ms.date: 12/04/2017
-ms.prod: .net-framework
-ms.technology: dotnet-clr
-ms.topic: article
 helpviewer_keywords:
 - FindPrivateKey
 ms.assetid: 16b54116-0ceb-4413-af0c-753bb2a785a6
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 32e1a4a3de01371d67be8d19613b1f29c1ce3c29
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 72e2f49ae7c39b4a0486ec053ff1164c2d833cbe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="findprivatekey-sample"></a>Exemple de FindPrivateKey
 
@@ -68,7 +59,7 @@ Pour télécharger le projet, visitez [Windows Communication Foundation (WCF) et
 
  « {*option*} » représente un jeu obligatoire de paramètres.
 
- «*option1* &#124; *option2*« représente un choix entre des ensembles d’options.
+ «*option1* &#124; *option2*» représente un choix entre des ensembles d’options.
 
  «\<*valeur*> » représente une valeur de paramètre doit être entré.
 

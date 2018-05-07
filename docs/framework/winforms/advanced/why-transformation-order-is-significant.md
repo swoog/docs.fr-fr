@@ -1,31 +1,17 @@
 ---
 title: Importance de l'ordre des transformations
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - transformations [Windows Forms], order signficance
 ms.assetid: 37d5f9dc-a5cf-4475-aa5d-34d714e808a9
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: cd3363a1afb8658ed3bb27359259cb752464507d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 943bfa73b54a1ac5d68d21d2bb6e271133db595a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="why-transformation-order-is-significant"></a>Importance de l'ordre des transformations
 Un seul <xref:System.Drawing.Drawing2D.Matrix> objet peut stocker une seule transformation ou une séquence de transformations. Celle-ci est appelée une transformation composite. La matrice d’une transformation composite est obtenue en multipliant les matrices des différentes transformations.  
@@ -35,7 +21,7 @@ Un seul <xref:System.Drawing.Drawing2D.Matrix> objet peut stocker une seule tran
   
  Un ordre est important parce que les transformations comme la rotation et de mise à l’échelle s’effectuent par rapport à l’origine du système de coordonnées. Mise à l’échelle d’un objet qui est centré à l’origine de produit le même résultat que la mise à l’échelle d’un objet qui a été déplacé en dehors de l’origine. De même, la rotation d’un objet qui est centré à l’origine produit le même résultat que la rotation d’un objet qui a été déplacé en dehors de l’origine.  
   
- L’exemple suivant combine une mise à l’échelle, de rotation et de translation (dans cet ordre) pour former une transformation composite. L’argument <xref:System.Drawing.Drawing2D.MatrixOrder.Append> passé à la <xref:System.Drawing.Graphics.RotateTransform%2A> méthode indique que la rotation suivra la mise à l’échelle. De même, l’argument <xref:System.Drawing.Drawing2D.MatrixOrder.Append> passé à la <xref:System.Drawing.Graphics.TranslateTransform%2A> méthode indique que la traduction suivra la rotation. <xref:System.Drawing.Drawing2D.MatrixOrder.Append>et <xref:System.Drawing.Drawing2D.MatrixOrder.Prepend> sont membres de la <xref:System.Drawing.Drawing2D.MatrixOrder> énumération.  
+ L’exemple suivant combine une mise à l’échelle, de rotation et de translation (dans cet ordre) pour former une transformation composite. L’argument <xref:System.Drawing.Drawing2D.MatrixOrder.Append> passé à la <xref:System.Drawing.Graphics.RotateTransform%2A> méthode indique que la rotation suivra la mise à l’échelle. De même, l’argument <xref:System.Drawing.Drawing2D.MatrixOrder.Append> passé à la <xref:System.Drawing.Graphics.TranslateTransform%2A> méthode indique que la traduction suivra la rotation. <xref:System.Drawing.Drawing2D.MatrixOrder.Append> et <xref:System.Drawing.Drawing2D.MatrixOrder.Prepend> sont membres de la <xref:System.Drawing.Drawing2D.MatrixOrder> énumération.  
   
  [!code-csharp[System.Drawing.MiscLegacyTopics#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.MiscLegacyTopics#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#21)]  

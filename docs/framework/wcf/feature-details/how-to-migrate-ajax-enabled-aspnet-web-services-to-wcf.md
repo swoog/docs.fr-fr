@@ -1,41 +1,27 @@
 ---
 title: 'Comment : migrer des services Web ASP.NET compatibles AJAX vers WCF'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 1428df4d-b18f-4e6d-bd4d-79ab3dd5147c
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2b728e6283a2f038b7e5ef4c535da41f4eb8ebef
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 048408adf8678c243a225a233cb1173c9b7f869f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>Comment : migrer des services Web ASP.NET compatibles AJAX vers WCF
-Cette rubrique décrit les procédures de migration d'un service de base ASP.NET AJAX vers un service [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] compatible AJAX équivalent. Elle indique comment créer une version [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] d'un service ASP.NET AJAX équivalente en termes de fonctionnalités. Vous pouvez soit utiliser les deux services côte à côte, soit utiliser le service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] pour remplacer le service ASP.NET AJAX.  
+Cette rubrique décrit les procédures de migration d’un service de base ASP.NET AJAX à un service compatible AJAX Windows Communication Foundation (WCF) équivalent. Il montre comment créer une version WCF équivalente au niveau d’un service ASP.NET AJAX. Les deux services peuvent ensuite servir côte à côte, ou le service WCF peut être utilisé pour remplacer le service ASP.NET AJAX.  
   
- La migration d'un service ASP.NET AJAX existant vers un service AJAX [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] offre les avantages suivants :  
+ Migrer une existante ASP.NET AJAX service à un service AJAX WCF offre les avantages suivants :  
   
 -   Vous pouvez exposer votre service AJAX en tant que service SOAP avec une configuration supplémentaire minimale.  
   
--   Vous pouvez profiter des fonctions de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] telles que le suivi.  
+-   Vous pouvez tirer parti des fonctionnalités WCF tels que le suivi et ainsi de suite.  
   
  Les procédures suivantes partent du principe que vous utilisez [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
   
  Le code qui résulte de l'exécution des procédures mentionnées dans cette rubrique est fourni dans l'exemple qui suit les procédures.  
   
- Pour plus d’informations sur l’exposition un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] de service via un point de terminaison compatibles AJAX, consultez le [Comment : utiliser la Configuration pour ajouter un point de terminaison ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md) rubrique.  
+ Pour plus d’informations sur l’exposition d’un service WCF via un point de terminaison compatibles AJAX, consultez le [Comment : utiliser la Configuration pour ajouter un point de terminaison ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md) rubrique.  
   
 ### <a name="to-create-and-test-the-aspnet-web-service-application"></a>Pour créer et tester l'application de service Web ASP.NET  
   
@@ -62,7 +48,7 @@ Cette rubrique décrit les procédures de migration d'un service de base ASP.NET
   
 9. Cette réponse confirme que vous bénéficiez désormais d'un service ASP.NET AJAX fonctionnel et, plus précisément, que le service a exposé un point de terminaison à Service1.asmx/HelloWorld qui répond aux requêtes HTTP POST et retourne du code XML.  
   
-     Vous êtes maintenant prêt à convertir ce service pour utiliser un service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] AJAX.  
+     Vous êtes maintenant prêt à convertir ce service pour utiliser un service WCF AJAX.  
   
 ### <a name="to-create-an-equivalent-wcf-ajax-service-application"></a>Pour créer une application de service AJAX WCF équivalente  
   
@@ -190,11 +176,11 @@ namespace ASPHello
   
  Le type <xref:System.Xml.XmlDocument> n'est pas pris en charge par <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> car il n'est pas sérialisable par <xref:System.Xml.Serialization.XmlSerializer>. Vous pouvez utiliser un type <xref:System.Xml.Linq.XDocument> ou sérialiser <xref:System.Xml.XmlDocument.DocumentElement%2A> à la place.  
   
- Si les services Web ASMX font l'objet d'une mise à niveau et d'une migration côte à côte avec les services [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], évitez de mapper deux types au même nom sur le client. Cela provoque une exception dans les sérialiseurs si le même type est utilisé dans un <xref:System.Web.Services.WebMethodAttribute> et un <xref:System.ServiceModel.ServiceContractAttribute> :  
+ Si les services Web ASMX sont mis à niveau et migration côte à côte pour les services WCF, évitez de deux types de mappage pour le même nom sur le client. Cela provoque une exception dans les sérialiseurs si le même type est utilisé dans un <xref:System.Web.Services.WebMethodAttribute> et un <xref:System.ServiceModel.ServiceContractAttribute> :  
   
--   Si le service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] est ajouté en premier, l'appel de la méthode sur le service Web ASMX provoque une exception dans <xref:System.Web.UI.ObjectConverter.ConvertValue%28System.Object%2CSystem.Type%2CSystem.String%29> parce que la définition du style [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] de l'ordre dans le proxy est prioritaire.  
+-   Si le service WCF est ajouté en premier, l’appel de la méthode de Service Web ASMX provoque une exception dans <xref:System.Web.UI.ObjectConverter.ConvertValue%28System.Object%2CSystem.Type%2CSystem.String%29> parce que la définition du style de la commande dans le proxy WCF est prioritaire.  
   
--   Si le service Web ASMX est ajouté en premier, l'appel de la méthode sur le service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] provoque une exception dans <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> parce que la définition de style de service Web de l'ordre dans le proxy est prioritaire.  
+-   Si le Service Web ASMX est ajouté en premier, l’appel de méthode sur un service WCF provoque une exception dans <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> parce que la définition du style de la commande dans le proxy de Service Web est prioritaire.  
   
  Il existe des différences de comportement importantes entre le <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> et le <xref:System.Web.Script.Serialization.JavaScriptSerializer> ASP.NET AJAX. Par exemple, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> représente un dictionnaire sous la forme d'un tableau de paires clé/valeur, alors que <xref:System.Web.Script.Serialization.JavaScriptSerializer> ASP.NET AJAX représente un dictionnaire sous la forme d'objets JSON réels. Par conséquent, le code suivant est le dictionnaire représenté dans ASP.NET AJAX.  
   

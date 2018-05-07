@@ -1,13 +1,6 @@
 ---
 title: "Comment : définir une icône pour un bouton ToolBar à l'aide du concepteur"
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - toolbars [Windows Forms], adding icons to buttons
 - examples [Windows Forms], toolbars
@@ -16,22 +9,17 @@ helpviewer_keywords:
 - icons [Windows Forms], toolbar buttons
 - ToolBar control [Windows Forms], adding icons to buttons
 ms.assetid: d848f38e-67f2-49d4-8e88-01c845c06c02
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 85be18b2cbb4e0fe729c335016fa8e7348f7be13
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a6c08d33682e5e2cc936c3aa6aa109ad3389a367
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-define-an-icon-for-a-toolbar-button-using-the-designer"></a>Comment : définir une icône pour un bouton ToolBar à l'aide du concepteur
 > [!NOTE]
 >  Le contrôle <xref:System.Windows.Forms.ToolStrip> remplace le contrôle <xref:System.Windows.Forms.ToolBar> et lui ajoute des fonctionnalités ; toutefois, le contrôle <xref:System.Windows.Forms.ToolBar> est conservé pour la compatibilité descendante et l'utilisation future si tel est votre choix.  
   
- <xref:System.Windows.Forms.ToolBar>boutons sont en mesure d’afficher des icônes pour faciliter l’identification par les utilisateurs. Pour cela ajouter des images à le <xref:System.Windows.Forms.ImageList> composant et en l’associant la <xref:System.Windows.Forms.ToolBar> contrôle.  
+ <xref:System.Windows.Forms.ToolBar> boutons sont en mesure d’afficher des icônes pour faciliter l’identification par les utilisateurs. Pour cela ajouter des images à le <xref:System.Windows.Forms.ImageList> composant et en l’associant la <xref:System.Windows.Forms.ToolBar> contrôle.  
   
  La procédure suivante requiert un **Application Windows** projet avec un formulaire contenant un <xref:System.Windows.Forms.ToolBar> contrôle et une <xref:System.Windows.Forms.ImageList> composant. Pour plus d’informations sur la configuration d’un tel projet, consultez [Comment : créer un projet d’Application Windows](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) et [Comment : ajouter des contrôles aux Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
   

@@ -1,39 +1,25 @@
 ---
 title: Configuration du service d'activation de processus de Windows pour son utilisation dans Windows Communication Foundation
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 1d50712e-53cd-4773-b8bc-a1e1aad66b78
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 727ad032482829350b5cf88175c34d8ccc7b98b9
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 3a4d771c3f2d5e7e6ec4fd6a1e229548e063a6d1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-the-windows-process-activation-service-for-use-with-windows-communication-foundation"></a>Configuration du service d'activation de processus de Windows pour son utilisation dans Windows Communication Foundation
-Cette rubrique décrit les étapes requises pour configurer le service d'activation de processus de Windows (également appelé service WAS) dans [!INCLUDE[wv](../../../../includes/wv-md.md)] pour héberger des services [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] qui ne communiquent pas sur des protocoles réseau HTTP. Les sections suivantes définissent les étapes pour cette configuration :  
+Cette rubrique décrit les étapes requises pour configurer le Service d’Activation des processus Windows (également appelé WAS) dans [!INCLUDE[wv](../../../../includes/wv-md.md)] pour héberger des services Windows Communication Foundation (WCF) les protocoles de réseau de services qui ne communiquent pas sur HTTP. Les sections suivantes définissent les étapes pour cette configuration :  
   
--   Installez (ou vérifiez l'installation) les composants d'activation [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] requis.  
+-   Installer (ou vérifiez l’installation) les composants d’activation WCF requis.  
   
 -   Créez un site WAS avec les liaisons de protocole réseau que vous souhaitez utiliser ou ajoutez un nouveau protocole qui crée une liaison vers un site existant.  
   
 -   Créez une application pour héberger vos services et permettre à cette application d'utiliser les protocoles réseau requis.  
   
--   Générez un service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] qui expose un point de terminaison non http.  
+-   Créer un service WCF qui expose un point de terminaison non-HTTP.  
   
-## <a name="configuring-a-site-with-non-http-bindings"></a>Configuration d'un site avec des liaisons non HTTP  
+## <a name="configuring-a-site-with-non-http-bindings"></a>Configuration d’un site avec des liaisons non HTTP  
  Pour utiliser une liaison non HTTP avec le service WAS, la liaison de site doit être ajoutée à la configuration WAS. Le magasin de configurations pour le service WAS est le fichier applicationHost.config situé dans le répertoire %windir%\system32\inetsrv\config. Ce magasin de configurations est partagé à la fois par le service WAS et le service IIS 7.0.  
   
  applicationHost.config est un fichier texte XML qui peut être ouvert avec un éditeur de texte standard (tel que le Bloc-notes). Toutefois, l'outil de configuration de la ligne de commande [!INCLUDE[iisver](../../../../includes/iisver-md.md)] (appcmd.exe) est la meilleure méthode pour ajouter des liaisons de site non HTTP.  
@@ -107,7 +93,7 @@ appcmd.exe set app "Default Web Site/appOne" /enabledProtocols:net.tcp
 ## <a name="building-a-wcf-service-that-uses-was-for-non-http-activation"></a>Génération d'un service WCF qui utilise le service WAS pour l'activation non HTTP  
  Une fois que vous effectuez les étapes pour installer et configurer le service WAS (consultez [Comment : installer et configurer les composants d’Activation WCF](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)), configuration d’un service pour utiliser les services WAS pour l’activation est similaire à la configuration d’un service hébergé dans IIS.  
   
- Pour obtenir des instructions détaillées sur la création d’un objet activé par le service WAS [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] de service, consultez [Comment : héberger un Service WCF dans WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md).  
+ Pour obtenir des instructions détaillées sur la création d’un service WCF d’activation de WAS, consultez [Comment : héberger un Service WCF dans WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Hébergement dans le service d’activation des processus Windows](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)  

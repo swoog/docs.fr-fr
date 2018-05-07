@@ -1,12 +1,6 @@
 ---
 title: Using, instruction (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.using
 helpviewer_keywords:
@@ -15,14 +9,11 @@ helpviewer_keywords:
 - resources [Visual Basic], disposing
 - Using statement [Visual Basic]
 ms.assetid: 665d1580-dd54-4e96-a9a9-6be2a68948f1
-caps.latest.revision: 36
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ed9cc0d04c89eac1fe342a0924dd89bb1e258a11
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 725eeb42dc5462022ac1a021c537d701929398ba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-statement-visual-basic"></a>Using, instruction (Visual Basic)
 Déclare le début d’un `Using` bloquer et acquiert éventuellement les ressources système qui le bloc de contrôle.  
@@ -48,7 +39,7 @@ End Using
   
  `resourcename As New resourcetype [ ( [ arglist ] ) ]`  
   
- ou  
+ - ou -  
   
  `resourcename As resourcetype = resourceexpression`  
   
@@ -62,7 +53,7 @@ End Using
 |`arglist`|Facultatif. Liste d’arguments que vous passez au constructeur pour créer une instance de `resourcetype`. Consultez [liste de paramètres](../../../visual-basic/language-reference/statements/parameter-list.md).|  
 |`resourceexpression`|Obligatoire. Variable ou une expression faisant référence à une ressource système répondant aux exigences de `resourcetype`. Si vous utilisez la deuxième possibilité de syntaxe, vous devez acquérir la ressource avant de passer le contrôle à la `Using` instruction.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Votre code requiert parfois une ressource non managée, comme un descripteur de fichier, un wrapper COM ou une connexion SQL. A `Using` bloc garantit la suppression d’un ou plusieurs de ces ressources lorsque votre code a fini avec eux. Cela les rend disponibles pour un autre code à utiliser.  
   
  Ressources managées sont supprimées par le garbage collector (GC) de .NET Framework sans codage supplémentaire de votre part. Vous n’avez pas besoin une `Using` bloc pour les ressources managées. Toutefois, vous pouvez toujours utiliser un `Using` bloc pour forcer la suppression d’une ressource managée au lieu d’attendre le garbage collector.  

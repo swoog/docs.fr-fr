@@ -1,26 +1,17 @@
 ---
-title: "Comment : appeler des API Windows (Visual Basic)"
-ms.custom: 
+title: 'Comment : appeler des API Windows (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - API calls [Visual Basic]
 - Windows API, calling
 - API calls [Visual Basic], platform invoke
 - calls [Visual Basic], stored procedures
 ms.assetid: 27d75f0a-54ab-4ee1-b91d-43513a19b12d
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 772db789fba4552a4645d2c6a242ba01944652ee
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: de568c3273d4d040c6566136e5d59e2155b86f8b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-call-windows-apis-visual-basic"></a>Comment : appeler des API Windows (Visual Basic)
 Cet exemple définit et appelle la `MessageBox` fonction dans user32.dll et lui passe une chaîne.  
@@ -43,7 +34,7 @@ Cet exemple définit et appelle la `MessageBox` fonction dans user32.dll et lui 
 -   Le type conteneur a déjà été créé à l’aide de `CreateType`. (<xref:System.InvalidOperationException>)  
   
 ## <a name="see-also"></a>Voir aussi  
- [L’appel de plateforme plus approfondie](http://msdn.microsoft.com/library/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243)  
+ [Présentation détaillée de l’appel de code non managé](http://msdn.microsoft.com/library/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243)  
  [Exemples d'appel de code non managé](../../../framework/interop/platform-invoke-examples.md)  
  [Consommation de fonctions DLL non managées](../../../framework/interop/consuming-unmanaged-dll-functions.md)  
  [Émission de la définition d’une méthode avec la réflexion](http://msdn.microsoft.com/library/84fd3bf6-628f-41aa-83d9-b990cf926e81)  

@@ -1,13 +1,7 @@
 ---
 title: Conception d'événements
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - pre-events
 - events [.NET Framework], design guidelines
@@ -16,18 +10,13 @@ helpviewer_keywords:
 - post-events
 - signatures, event handling
 ms.assetid: 67b3c6e2-6a8f-480d-a78f-ebeeaca1b95a
-caps.latest.revision: 15
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 3d66d4e137c52310710f8b178167ceb3cca042c7
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 48d1ad0f02ae34675c0a910d7651d718c060db60
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="event-design"></a>Conception d'événements
 Les événements sont la forme couramment utilisée de rappels (les constructions qui autorisent l’infrastructure pour appeler dans du code de l’utilisateur). Autres mécanismes de rappel incluent les membres avec les délégués, les membres virtuels et basée sur l’interface de plug-ins. Les données à partir des études de convivialité indiquent que la majorité des développeurs sont plus à l’aise avec les événements qu’ils utilisent d’autres méthodes de rappel. Les événements sont bien intégrés à Visual Studio et de nombreux langages.  

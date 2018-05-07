@@ -1,11 +1,6 @@
 ---
 title: -target (Visual Basic)
 ms.date: 03/13/2018
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - target compiler options [Visual Basic]
 - -target compiler options [Visual Basic]
@@ -13,11 +8,11 @@ helpviewer_keywords:
 ms.assetid: e0954147-548b-461f-9c4b-a8f88845616c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8596cb7d43b2c54b46dedc40488ed1b4e2c31b69
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: acf47b24446656a539400c825f3332a70d211dad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-target-visual-basic"></a>-target (Visual Basic)
 Spécifie le format de sortie du compilateur.  
@@ -31,7 +26,7 @@ Spécifie le format de sortie du compilateur.
 ## <a name="remarks"></a>Notes  
  Le tableau suivant résume l’effet de la `-target` option.  
   
-|**Option**|**Behavior**|  
+|**Option**|**Comportement**|  
 |----------------|------------------|  
 |`-target:exe`|Indique au compilateur de créer une application console exécutable.<br /><br /> Cette option est la valeur par défaut lorsqu’aucun `-target` option est spécifiée. Le fichier exécutable est créé avec l’extension .exe.<br /><br /> Sauf indication contraire avec les `/out` option, le nom de fichier de sortie prend le nom du fichier d’entrée qui contient le `Sub Main` procédure.<br /><br /> Seul `Sub Main` procédure est requise dans les fichiers de code source qui sont compilés dans un fichier .exe. Utilisez le `-main` option du compilateur pour spécifier la classe qui contient le `Sub Main` procédure.|  
 |`-target:library`|Indique au compilateur créer une bibliothèque de liens dynamiques (DLL).<br /><br /> Le fichier de bibliothèque de liens dynamiques est créé avec l’extension .dll.<br /><br /> Sauf indication contraire avec les `-out` option, le nom de fichier de sortie prend le nom du premier fichier d’entrée.<br /><br /> Lorsque vous générez une DLL, un `Sub Main` procédure n’est pas nécessaire.|  

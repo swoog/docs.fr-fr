@@ -1,12 +1,6 @@
 ---
 title: With...End With, instruction (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.With
 helpviewer_keywords:
@@ -21,14 +15,11 @@ helpviewer_keywords:
 - With block
 - End keyword [Visual Basic], With...End With statements
 ms.assetid: 340d5fbb-4f43-48ec-a024-80843c137817
-caps.latest.revision: 34
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: aa1f416e1bfdf6cdb51b098c0e2bd5e9912cb309
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9c50d03454860979e3475cb381fefc2acc07cece
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="withend-with-statement-visual-basic"></a>With...End With, instruction (Visual Basic)
 Exécute une série d'instructions qui font référence à plusieurs reprises à un objet ou une structure unique afin que ces instructions puissent utiliser une syntaxe simplifiée lors de l'accès aux membres de l'objet ou de la structure.  Lorsque vous utilisez une structure, vous ne pouvez lire que les valeurs des membres ou des méthodes invoke. En outre, vous obtenez une erreur si vous tentez d'assigner des valeurs aux membres d'une structure utilisée dans une instruction `With...End With`.  
@@ -49,7 +40,7 @@ End With
 |`statements`|Facultatif. Une ou plusieurs instructions entre `With` et `End With` qui peuvent faire référence aux membres d'un objet produit par l'évaluation de `objectExpression`.|  
 |`End With`|Obligatoire. Met fin à la définition du bloc `With`.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  À l'aide de `With...End With`, vous pouvez exécuter une série d'instructions sur un objet spécifique sans avoir à spécifier plusieurs fois le nom de cet objet. Dans un bloc d'instructions `With`, vous pouvez spécifier un membre de l'objet en commençant par un point, comme si l'instruction `With` le précédait.  
   
  Par exemple, pour modifier plusieurs propriétés d'un seul objet, placez les instructions d'assignation de propriétés dans le bloc `With...End With`. Vous ne faites ainsi référence qu'une seule fois à l'objet, au lieu de le faire à chaque assignation de propriété.  

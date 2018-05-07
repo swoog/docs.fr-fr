@@ -1,25 +1,17 @@
 ---
 title: 'Procédure pas à pas : affichage de données dans un contrôle DataRepeater (Visual Studio)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - DataRepeater, walkthrough
 ms.assetid: 65dcdb95-6c3e-47cc-987d-190000f71653
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 93072bf30c8ee2a4a44c4862de0882072c298f8b
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: d02668303f61f6a22f99bd7c86c41c9c139a716f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-displaying-data-in-a-datarepeater-control-visual-studio"></a>Procédure pas à pas : affichage de données dans un contrôle DataRepeater (Visual Studio)
 Cette procédure pas à pas propose un scénario complet de base permettant d’afficher des données liées dans un contrôle <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> .  

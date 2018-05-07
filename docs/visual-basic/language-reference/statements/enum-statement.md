@@ -1,12 +1,6 @@
 ---
 title: Enum, instruction (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Enum
 helpviewer_keywords:
@@ -17,14 +11,11 @@ helpviewer_keywords:
 - variables [Visual Basic], enumeration
 - constants [Visual Basic], enumerated
 ms.assetid: a45e51f1-65ff-48e1-bf32-79130f137377
-caps.latest.revision: 44
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 7a8244318e0be8e50f3384b56cf63e59182b6cda
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 89de51f2551437d102ccdc5a0f1ff5f23b53e47f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="enum-statement-visual-basic"></a>Enum, instruction (Visual Basic)
 Déclare une énumération et définit les valeurs de ses membres.  
@@ -76,7 +67,7 @@ End Enum
   
      Obligatoire. Liste des constantes membres déclarées dans cette instruction. Plusieurs membres apparaissent sur les lignes de code source individuel.  
   
-     Chaque `member` possède la syntaxe et les éléments suivants :`[<attribute list>] member name [ = initializer ]`  
+     Chaque `member` possède la syntaxe et les éléments suivants : `[<attribute list>] member name [ = initializer ]`  
   
     |Élément|Description|  
     |---|---|  
@@ -87,7 +78,7 @@ End Enum
   
      Met fin au bloc `Enum`.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Si vous avez un ensemble de valeurs qui ne changent pas logiquement liées entre elles, vous pouvez les définir ensemble dans une énumération. Cela fournit des noms explicites pour l’énumération et ses membres, qui sont plus faciles à mémoriser que leurs valeurs. Vous pouvez ensuite utiliser les membres d’énumération dans de nombreux endroits dans votre code.  
   
  Les avantages de l’utilisation des énumérations sont les suivantes :  

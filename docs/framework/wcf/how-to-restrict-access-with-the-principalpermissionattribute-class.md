@@ -1,14 +1,6 @@
 ---
 title: "Comment : restreindre l'accès à l'aide de la classe PrincipalPermissionAttribute"
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - WCF, authorization
 - WCF, security
 ms.assetid: 5162f5c4-8781-4cc4-9425-bb7620eaeaf4
-caps.latest.revision: 23
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: dffeae6a114563ea6b030c303bd3ed3f3a27f4f5
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: a93726598b31ee57d583aca16012d615e90441f4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-restrict-access-with-the-principalpermissionattribute-class"></a>Comment : restreindre l'accès à l'aide de la classe PrincipalPermissionAttribute
 Le contrôle de l’accès aux ressources sur un ordinateur de domaine Windows est une tâche de sécurité de base. Par exemple, certains utilisateurs doivent pouvoir consulter des données sensibles, telles que les informations relatives aux salaires. Cette rubrique explique comment restreindre l'accès à une méthode en exigeant que l'utilisateur appartienne à un groupe prédéfini. Pour obtenir un exemple fonctionnel, consultez [autorisant l’accès aux opérations de Service](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md).  
@@ -52,7 +38,7 @@ Le contrôle de l’accès aux ressources sur un ordinateur de domaine Windows e
   
 ### <a name="to-demand-user-membership"></a>Pour demander l'appartenance des utilisateurs  
   
-1.  Ouvrez le fichier de code [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] qui contient le code de contrat de service implémenté. Pour plus d’informations sur l’implémentation d’un contrat, consultez [implémentation de contrats de Service](../../../docs/framework/wcf/implementing-service-contracts.md).  
+1.  Ouvrez le fichier de code Windows Communication Foundation (WCF) qui contient le code de contrat de service implémenté. Pour plus d’informations sur l’implémentation d’un contrat, consultez [implémentation de contrats de Service](../../../docs/framework/wcf/implementing-service-contracts.md).  
   
 2.  Appliquez l'attribut <xref:System.Security.Permissions.PrincipalPermissionAttribute> à chaque méthode qui doit être restreinte à un groupe spécifique. Affectez <xref:System.Security.Permissions.SecurityAttribute.Action%2A> à la propriété <xref:System.Security.Permissions.SecurityAction.Demand> et le nom du groupe à la propriété <xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A>. Par exemple :  
   

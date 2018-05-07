@@ -1,32 +1,18 @@
 ---
 title: Meilleures pratiques pour les communications mises en file d'attente
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - queues [WCF], best practices
 - best practices [WCF], queued communication
 ms.assetid: 446a6383-cae3-4338-b193-a33c14a49948
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 082fa083dbba601cefc00e40bad7b91e14a45d44
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: b54569ad3d11c3b9b1b96e2738bdf0582b63b0b7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="best-practices-for-queued-communication"></a>Meilleures pratiques pour les communications mises en file d'attente
-Cette rubrique fournit des méthodes recommandées pour les communications mises en file d'attente dans [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Les sections suivantes traitent des méthodes recommandées à partir d'un scénario.  
+Cette rubrique fournit des méthodes recommandées pour la communication en file d’attente dans Windows Communication Foundation (WCF). Les sections suivantes traitent des méthodes recommandées à partir d'un scénario.  
   
 ## <a name="fast-best-effort-queued-messaging"></a>Messagerie mise en file attente efficace et rapide  
  Pour les scénarios qui requièrent la séparation fournie par la messagerie en file d'attente et une messagerie performante avec des assurances de meilleur-effort, utilisez une file d'attente non transactionnelle et affectez à la propriété <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> la valeur `false`.  
@@ -69,7 +55,7 @@ Cette rubrique fournit des méthodes recommandées pour les communications mises
   
  Lorsque vous utilisez le traitement par lots, sachez que l'accès concurrentiel et la limitation se traduisent par des lots simultanés.  
   
- Pour obtenir un débit et une disponibilité supérieurs, utilisez une batterie de services [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] qui lisent les messages dans la file d'attente. Cela nécessite que tous ces services exposent le même contrat sur le même point de terminaison. Cette approche fonctionne le mieux pour les applications qui ont des taux élevés de production de messages parce qu'elle active plusieurs services qui lisent les messages dans la même file d'attente.  
+ Pour obtenir un débit plus élevé et la disponibilité, utilisez une batterie de serveurs de services WCF qui lisent à partir de la file d’attente. Cela nécessite que tous ces services exposent le même contrat sur le même point de terminaison. Cette approche fonctionne le mieux pour les applications qui ont des taux élevés de production de messages parce qu'elle active plusieurs services qui lisent les messages dans la même file d'attente.  
   
  Lorsque vous utilisez des batteries de services, sachez que MSMQ 3.0 ne prend pas en charge les lectures transactionnelles à distance. MSMQ 4.0 prend en charge les lectures transactionnelles à distance.  
   
@@ -84,11 +70,11 @@ Cette rubrique fournit des méthodes recommandées pour les communications mises
  Bien que les files d'attente soient en général unidirectionnelles, dans certains scénarios vous pouvez corréler une réponse reçue à une demande envoyée plus tôt. Si vous avez besoin d'une telle corrélation, il est recommandé d'insérer votre propre en-tête de message SOAP qui contient des informations de corrélation dans le message. En général, l'expéditeur joint cet en-tête avec le message, et le récepteur, en traitant le message et en y répondant avec un nouveau message sur une file d'attente de réponse, joint l'en-tête du message de l'expéditeur qui contient les informations de corrélation afin que l'expéditeur puisse identifier le message de réponse en relation avec le message de demande.  
   
 ## <a name="integrating-with-non-wcf-applications"></a>Intégration à des applications non WCF  
- Utilisez `MsmqIntegrationBinding` lors de l'intégration des services ou des clients [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] à des services ou clients non [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Non -[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] application peut être une application MSMQ écrite à l’aide de System.Messaging, COM +, Visual Basic ou C++.  
+ Utilisez `MsmqIntegrationBinding` lors de l’intégration des clients ou des services WCF avec des clients ou services non-WCF. L’application non-WCF peut être une application MSMQ écrite à l’aide de System.Messaging, COM +, Visual Basic ou C++.  
   
  Lorsque vous utilisez `MsmqIntegrationBinding`, sachez ce qui suit :  
   
--   Un corps de message [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] n'est pas identique à un corps de message MSMQ. Lors de l'envoi d'un message [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] à l'aide d'une liaison mise en file d'attente, le corps du message [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] est placé dans un message MSMQ. L'infrastructure MSMQ oublie cette information supplémentaire ; elle ne voit que le message MSMQ.  
+-   Un corps de message WCF n’est pas un corps de message MSMQ. Lorsque vous envoyez un message WCF à l’aide d’une liaison en file d’attente, le corps du message WCF est placé dans un message MSMQ. L'infrastructure MSMQ oublie cette information supplémentaire ; elle ne voit que le message MSMQ.  
   
 -   `MsmqIntegrationBinding` prend en charge les types de sérialisation les plus courants. Selon le type de sérialisation, le type de corps du message générique, <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>, prend des paramètres de type différents. Par exemple, <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.ByteArray> requiert `MsmqMessage\<byte[]>` et <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.Stream> requiert `MsmqMessage<Stream>`.  
   

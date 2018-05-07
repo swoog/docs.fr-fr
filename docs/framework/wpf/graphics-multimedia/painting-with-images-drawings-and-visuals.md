@@ -1,13 +1,6 @@
 ---
 title: Peinture avec des objets d'image, de dessin et visuels
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,16 +12,11 @@ helpviewer_keywords:
 - brushes [WPF], painting with images
 - brushes [WPF], painting with visuals
 ms.assetid: 779aac3f-8d41-49d8-8130-768244aa2240
-caps.latest.revision: "28"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 01939eb8735e6764e0f0cba811091c7fdbd6797f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: abb5733ed54ea430ba161db5ea2dcb33e99298ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="painting-with-images-drawings-and-visuals"></a>Peinture avec des objets d'image, de dessin et visuels
 Cette rubrique explique comment utiliser <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, et <xref:System.Windows.Media.VisualBrush> objets pour peindre une zone avec une image, un <xref:System.Windows.Media.Drawing>, ou un <xref:System.Windows.Media.Visual>.  
@@ -69,15 +57,15 @@ Objets peints par un élément DrawingBrush
   
  A <xref:System.Windows.Media.DrawingBrush> peint une zone avec un <xref:System.Windows.Media.Drawing> objet. A <xref:System.Windows.Media.Drawing> objet décrit le contenu visible, comme une forme, bitmap, vidéo ou une ligne de texte. Différents types de dessins décrivent différents types de contenus. La liste suivante répertorie les différents types d’objets Drawing.  
   
--   <xref:System.Windows.Media.GeometryDrawing>– Dessine une forme.  
+-   <xref:System.Windows.Media.GeometryDrawing> – Dessine une forme.  
   
--   <xref:System.Windows.Media.ImageDrawing>– Dessine une image.  
+-   <xref:System.Windows.Media.ImageDrawing> – Dessine une image.  
   
--   <xref:System.Windows.Media.GlyphRunDrawing>– Dessine du texte.  
+-   <xref:System.Windows.Media.GlyphRunDrawing> – Dessine du texte.  
   
--   <xref:System.Windows.Media.VideoDrawing>– Lit un fichier audio ou vidéo.  
+-   <xref:System.Windows.Media.VideoDrawing> – Lit un fichier audio ou vidéo.  
   
--   <xref:System.Windows.Media.DrawingGroup>– Dessine d’autres dessins. Utilisez un groupe de dessins pour faire de plusieurs dessins un seul et même dessin composite.  
+-   <xref:System.Windows.Media.DrawingGroup> – Dessine d’autres dessins. Utilisez un groupe de dessins pour faire de plusieurs dessins un seul et même dessin composite.  
   
  Pour plus d’informations sur <xref:System.Windows.Media.Drawing> , consultez la [vue d’ensemble des objets de dessin](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md).  
   
@@ -133,7 +121,7 @@ Objet Visual réfléchi
   
 <a name="tilebrush"></a>   
 ## <a name="tilebrush-features"></a>Fonctionnalités de TileBrush  
- <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, et <xref:System.Windows.Media.VisualBrush> sont des types de <xref:System.Windows.Media.TileBrush> objets. <xref:System.Windows.Media.TileBrush>objets vous permettent de contrôler la peinture d’une zone avec une image, le dessin ou le visual précisément. Par exemple, au lieu de simplement peindre une zone avec une seule image étirée, vous pouvez peindre une zone avec une série de mosaïques d’image qui créent un motif.  
+ <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, et <xref:System.Windows.Media.VisualBrush> sont des types de <xref:System.Windows.Media.TileBrush> objets. <xref:System.Windows.Media.TileBrush> objets vous permettent de contrôler la peinture d’une zone avec une image, le dessin ou le visual précisément. Par exemple, au lieu de simplement peindre une zone avec une seule image étirée, vous pouvez peindre une zone avec une série de mosaïques d’image qui créent un motif.  
   
  A <xref:System.Windows.Media.TileBrush> a trois composants principaux : le contenu, les mosaïques et la zone de sortie.  
   

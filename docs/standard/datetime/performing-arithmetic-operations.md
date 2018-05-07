@@ -1,13 +1,7 @@
 ---
-title: "Exécution d’opérations arithmétiques avec des dates et heures"
-ms.custom: 
+title: Exécution d’opérations arithmétiques avec des dates et heures
 ms.date: 04/10/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,18 +14,13 @@ helpviewer_keywords:
 - DateTime structure, arithmetic operations
 - DateTimeOffset structure, arithmetic operations
 ms.assetid: 87c7ddf2-f15e-48af-8602-b3642237e6d0
-caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: edad8fc6643b90afc8327b574e19b178270829b3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 5bbd5afb89d2b992e06583c7427c1a25a5b8f273
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="performing-arithmetic-operations-with-dates-and-times"></a>Exécution d’opérations arithmétiques avec des dates et heures
 
@@ -46,7 +35,7 @@ Le <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> propriété perme
 
 Le <xref:System.DateTime.CompareTo%28System.DateTime%29> méthode signale que l’heure locale est antérieure à (ou inférieur à) l’heure UTC et l’opération de soustraction indique que la différence entre l’heure UTC et l’heure locale pour un système aux États-Unis. du Pacifique est de sept heures. Toutefois, comme ces deux valeurs donnent des représentations différentes d’un même point dans le temps, il apparaît clairement dans ce cas que cet intervalle de temps est totalement attribuable au décalage du fuseau horaire local par rapport à l’heure UTC.
 
-En règle générale, les <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> propriété n’affecte pas les résultats retournés par <xref:System.DateTime.Kind> les méthodes de comparaison et d’arithmétique (comme indiqué dans la comparaison de deux points identiques dans le temps), bien que cela peut affecter l’interprétation de ces résultats. Exemple :
+En règle générale, les <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> propriété n’affecte pas les résultats retournés par <xref:System.DateTime.Kind> les méthodes de comparaison et d’arithmétique (comme indiqué dans la comparaison de deux points identiques dans le temps), bien que cela peut affecter l’interprétation de ces résultats. Par exemple :
 
 * Le résultat de toute opération arithmétique exécutée sur deux valeurs de date et d’heure dont <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> égale à deux propriétés <xref:System.DateTimeKind> reflète l’intervalle de temps réel entre les deux valeurs. De même, la comparaison de deux valeurs de date et d’heure de ce type indique précisément la relation entre les heures.
 

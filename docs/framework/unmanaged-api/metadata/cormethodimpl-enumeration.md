@@ -1,14 +1,6 @@
 ---
-title: "CorMethodImpl, énumération"
-ms.custom: 
+title: CorMethodImpl, énumération
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CorMethodImpl
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: ffbb3caf-20da-4a4b-8983-77376e72b990
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e82eb50e4850ffbb4d5fc67d9603a3128cf8bcf6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4bb91423b2eaeda7d945cf14553609fd33ce9b0c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cormethodimpl-enumeration"></a>CorMethodImpl, énumération
 Contient des valeurs qui décrivent les fonctionnalités d’implémentation d’une méthode.  
@@ -86,12 +74,12 @@ typedef enum CorMethodImpl {
 |`miNoOptimization`|Spécifie que la méthode ne doit pas être optimisée.|  
 |`miMaxMethodImplVal`|La valeur valide maximale pour un `CorMethodImpl`.|  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorHdr.h  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [Énumérations de métadonnées](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

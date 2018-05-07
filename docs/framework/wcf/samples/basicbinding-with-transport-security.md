@@ -1,26 +1,14 @@
 ---
 title: BasicBinding with Transport Security
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: f49b1de6-0254-4362-8ef2-fccd8ff9688b
-caps.latest.revision: 26
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4d06f7652f7366fc795cd157398bbb15ed78828c
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 9591c3556bf38d1af288c2c3c4a465af2c0722eb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="basicbinding-with-transport-security"></a>BasicBinding with Transport Security
 Cet exemple illustre l’utilisation de la sécurité de transport SSL avec la liaison de base. Cet exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md) qui implémente un service de calculatrice.  
@@ -30,7 +18,7 @@ Cet exemple illustre l’utilisation de la sécurité de transport SSL avec la l
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à la page [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les exemples [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Basic\TransportSecurity`  
   
@@ -67,7 +55,7 @@ Cet exemple illustre l’utilisation de la sécurité de transport SSL avec la l
 </system.serviceModel>  
 ```  
   
- Étant donné que le certificat utilisé dans cet exemple est un certificat de test créé avec Makecert.exe, une alerte de sécurité s’affiche lorsque vous tentez d’accéder aux HTTPS : adresse dans votre navigateur, par exemple https://localhost/servicemodelsamples/service.svc. Pour permettre au client [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] de fonctionner avec un certificat de test, du code supplémentaire est ajouté au client afin de supprimer l'alerte de sécurité. Ce code, et la classe qui l'accompagne, n'est pas nécessaire lors de l'utilisation de vrais certificats.  
+ Étant donné que le certificat utilisé dans cet exemple est un certificat de test créé avec Makecert.exe, une alerte de sécurité s’affiche lorsque vous tentez d’accéder aux HTTPS : adresse dans votre navigateur, par exemple https://localhost/servicemodelsamples/service.svc. Pour autoriser le client Windows Communication Foundation (WCF) travailler avec un certificat de test, du code supplémentaire est ajouté au client afin de supprimer l’alerte de sécurité. Ce code, et la classe qui l'accompagne, n'est pas nécessaire lors de l'utilisation de vrais certificats.  
 
 ```csharp
 // This code is required only for test certificates such as those   

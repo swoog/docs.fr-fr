@@ -1,14 +1,6 @@
 ---
-title: "IMetaDataImport::EnumUnresolvedMethods, méthode"
-ms.custom: 
+title: IMetaDataImport::EnumUnresolvedMethods, méthode
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataImport.EnumUnresolvedMethods
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: eb3187d7-74cf-44b1-aeeb-7a8d2b60e3b7
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d4e77453fc11b77b602d4a89f0d90540c06b0a08
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cfd53309b2b5e96e28e9e063a8adfda430864115
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataimportenumunresolvedmethods-method"></a>IMetaDataImport::EnumUnresolvedMethods, méthode
 Énumère les jetons MemberDef représentant les méthodes non résolues dans la portée des métadonnées actuelle.  
@@ -66,7 +54,7 @@ HRESULT EnumUnresolvedMethods (
   
 |HRESULT|Description|  
 |-------------|-----------------|  
-|`S_OK`|`EnumUnresolvedMethods`retourné avec succès.|  
+|`S_OK`|`EnumUnresolvedMethods` retourné avec succès.|  
 |`S_FALSE`|Il n’existe pas de jetons à énumérer. Dans ce cas, `pcTokens` est égal à zéro.|  
   
 ## <a name="remarks"></a>Notes  
@@ -74,14 +62,14 @@ HRESULT EnumUnresolvedMethods (
   
  L’énumération exclut toutes les méthodes qui sont définies au niveau de la portée du module (globales) ou dans des interfaces ou des classes abstraites.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Cor.h  
   
  **Bibliothèque :** inclus en tant que ressource dans MsCorEE.dll  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [IMetaDataImport, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  

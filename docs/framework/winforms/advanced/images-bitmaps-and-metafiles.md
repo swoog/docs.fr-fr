@@ -1,29 +1,17 @@
 ---
-title: "Images, bitmaps et métafichiers"
-ms.custom: 
+title: Images, bitmaps et métafichiers
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - metafiles [Windows Forms], about metafiles
 - bitmaps [Windows Forms], about bitmaps
 - images [Windows Forms], about images
 - Windows Forms, images
 ms.assetid: 7152b45b-a55c-49bc-8c78-ae002a844f71
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 67f72847e5dca20acd623c566a882e0094e94f68
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 30887cd88bc8c08c78eb37c4fe8591ac528e6f01
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="images-bitmaps-and-metafiles"></a>Images, bitmaps et métafichiers
 La classe `Image` est une classe de base abstraite qui fournit des méthodes pour utiliser des images raster (bitmaps) et des images vectorielles (métafichiers). La classe `Bitmap` et la classe <xref:System.Drawing.Imaging.Metafile> héritent toutes deux de la classe `Image`. La classe `Bitmap` étend les fonctionnalités de la classe `Image` en fournissant des méthodes supplémentaires pour le chargement, l'enregistrement et la manipulation d'images raster. La classe <xref:System.Drawing.Imaging.Metafile> étend les fonctionnalités de la classe `Image` en fournissant des méthodes supplémentaires pour l'enregistrement et l'examen d'images vectorielles.  

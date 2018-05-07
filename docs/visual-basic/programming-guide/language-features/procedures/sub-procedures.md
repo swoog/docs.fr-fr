@@ -1,13 +1,6 @@
 ---
 title: Procédures Sub (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Sub procedures [Visual Basic], about Sub procedures
 - statement blocks
@@ -18,14 +11,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], Sub
 - syntax [Visual Basic], Sub procedures
 ms.assetid: 6a0a4958-ed0a-4d3d-8d31-0772c82bda58
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 7258d57d2677042a2020097893a4f7a0adb35508
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 3286df1a5babfcf7d6b759ff5c9a920bb44f51ab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sub-procedures-visual-basic"></a>Procédures Sub (Visual Basic)
 A `Sub` procédure est une série d’instructions Visual Basic délimitée par le `Sub` et `End Sub` instructions. Le `Sub` procédure effectue une tâche, puis retourne le contrôle au code appelant, mais elle ne retourne pas de valeur au code appelant.  
@@ -39,7 +29,7 @@ A `Sub` procédure est une série d’instructions Visual Basic délimitée par 
 ## <a name="declaration-syntax"></a>Syntaxe de déclaration  
  La syntaxe de déclaration d’un `Sub` comme suit :  
   
- `[` *modificateurs* `] Sub` *nomsub* `[(` *parameterlist*  `)]`  
+ `[` *modificateurs* `] Sub` *nomsub* `[(` *parameterlist* `)]`  
   
  `' Statements of the Sub procedure.`  
   
@@ -52,11 +42,11 @@ A `Sub` procédure est une série d’instructions Visual Basic délimitée par 
   
  La syntaxe de chaque paramètre dans la liste de paramètres est la suivante :  
   
- `[Optional] [ByVal | ByRef] [ParamArray]`  *nom_paramètre*`As`*type de données*   
+ `[Optional] [ByVal | ByRef] [ParamArray]`  *nom_paramètre*`As`*type de données*  
   
  Si le paramètre est facultatif, vous devez également fournir une valeur par défaut dans le cadre de sa déclaration. La syntaxe pour spécifier une valeur par défaut est la suivante :  
   
- `Optional [ByVal | ByRef]`  *nom_paramètre*`As`*datatype*`=`*defaultvalue*   
+ `Optional [ByVal | ByRef]`  *nom_paramètre*`As`*datatype*`=`*defaultvalue*  
   
 ### <a name="parameters-as-local-variables"></a>Paramètres en tant que Variables locales  
  Lorsque le contrôle passe à la procédure, chaque paramètre est traité comme une variable locale. Cela signifie que sa durée de vie est identique à celle de la procédure et son étendue est l’ensemble de la procédure.  

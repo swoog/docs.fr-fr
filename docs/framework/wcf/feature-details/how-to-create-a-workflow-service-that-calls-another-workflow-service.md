@@ -1,24 +1,12 @@
 ---
-title: "Procédure : créer un service de workflow qui appelle un autre service de workflow"
-ms.custom: 
+title: 'Procédure : créer un service de workflow qui appelle un autre service de workflow'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 99b3ee3e-aeb7-4e6f-8321-60fe6140eb67
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c99748e77f1fccd9512c8915d0f4068d0da51a41
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fda5a7286c3d20c7cdc2093e58bfe3fbdcf1d1c1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-workflow-service-that-calls-another-workflow-service"></a>Procédure : créer un service de workflow qui appelle un autre service de workflow
 Il est parfois nécessaire pour un service de workflow d'obtenir des informations d'un autre service de workflow.  Cette rubrique montre comment appeler un service de workflow à partir d'un autre service. Dans cette rubrique, vous créerez deux services de workflow ; un qui a une méthode qui inverse la chaîne d'entrée et un autre qui convertit la chaîne d'entrée en majuscules après avoir inversé la chaîne qui utilise le premier service.  
@@ -113,7 +101,7 @@ Il est parfois nécessaire pour un service de workflow d'obtenir des information
   
     4.  **TargetType**: NestedServices.StringLibrary  
   
-8.  Vous allez maintenant appeler le premier service sur la chaîne modifiée. Cliquez sur le projet et sélectionnez **ajouter une référence de Service**. Ajoutez une référence de service à http://localhost/NestedServices/StringReverserService.xamlx et générez le projet pour créer une activité personnalisée permettant d'accéder au premier service Web.  
+8.  Vous allez maintenant appeler le premier service sur la chaîne modifiée. Cliquez sur le projet et sélectionnez **ajouter une référence de Service**. Ajouter une référence de service au service à http://localhost/NestedServices/StringReverserService.xamlx et générez le projet pour créer une activité personnalisée pour accéder au premier service Web.  
   
 9. Faites glisser une instance de la nouvelle activité sur le flux de travail entre les **InvokeMethod** activité et le **SendReplyToReceive** activités. Assignez la variable StringToReverse à la propriété InputString de la nouvelle activité, et la variable StringToReturn à la propriété StringToReturn.  
   

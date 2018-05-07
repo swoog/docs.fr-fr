@@ -1,11 +1,6 @@
 ---
-title: "Like (opérateur Visual Basic)"
+title: Like (opérateur Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - Like
 - vb.Like
@@ -27,14 +22,11 @@ helpviewer_keywords:
 - data [Visual Basic], string comparisons
 - string comparison [Visual Basic], Like operators
 ms.assetid: 966283ec-80e2-4294-baa8-c75baff804f9
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ad5729515362bfd52b0c3b401f218a49f569726e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a9c672a397510c69c9ee67358689feff80d8831a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="like-operator-visual-basic"></a>Like (opérateur Visual Basic)
 Compare une chaîne à un modèle.  
@@ -55,7 +47,7 @@ result = string Like pattern
  `pattern`  
  Obligatoire. N’importe quel `String` expression conforme aux critères spéciaux décrits dans la section « Notes ».  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Si la valeur de `string` est conforme au modèle contenu dans `pattern`, `result` est `True`. Si la chaîne ne satisfait pas le modèle, `result` est `False`. Si les deux `string` et `pattern` sont des chaînes vides, le résultat est `True`.  
   
 ## <a name="comparison-method"></a>Méthode de comparaison  
@@ -64,13 +56,13 @@ result = string Like pattern
 ## <a name="pattern-options"></a>Options de modèle  
  Intégrée des critères spéciaux de fournit un outil polyvalent pour les comparaisons de chaînes. Les fonctionnalités de mise en correspondance de modèle permettent de faire correspondre chaque caractère `string` sur un caractère spécifique, un caractère générique, une liste de caractères ou une plage de caractères. Le tableau suivant montre les caractères autorisés dans `pattern` et leur correspondance.  
   
-|Caractères dans`pattern`|Correspondances dans`string`|  
+|Caractères dans `pattern`|Correspondances dans `string`|  
 |-----------------------------|-------------------------|  
 |`?`|Tout caractère unique|  
 |`*`|Zéro ou plusieurs caractères|  
 |`#`|Tout chiffre (0 à 9)|  
-|`[charlist]`|Tout caractère unique dans`charlist`|  
-|`[!charlist]`|N’importe quel caractère ne figurant pas dans`charlist`|  
+|`[charlist]`|Tout caractère unique dans `charlist`|  
+|`[!charlist]`|N’importe quel caractère ne figurant pas dans `charlist`|  
   
 ## <a name="character-lists"></a>Listes de caractères  
  Un groupe d’un ou plusieurs caractères (`charlist`) placés entre crochets (`[ ]`) peut être utilisé pour correspondre à n’importe quel caractère unique dans `string` et peut inclure le code de presque n’importe quel caractère, y compris les chiffres.  

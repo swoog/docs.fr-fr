@@ -1,13 +1,6 @@
 ---
-title: "Rendu d'un contrôle Windows Forms"
-ms.custom: 
+title: Rendu d'un contrôle Windows Forms
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - custom controls [Windows Forms], graphics resources
 - custom controls [Windows Forms], invalidation and painting
 ms.assetid: aae8e1e6-4786-432b-a15e-f4c44760d302
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 587c9c8fb0bf634a2491acb1ae0b2f60979fa899
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a2d7a02e725e3f8065b80a6b30ea21158be43ea8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="rendering-a-windows-forms-control"></a>Rendu d'un contrôle Windows Forms
 Le rendu désigne le processus de création d’une représentation visuelle sur l’écran d’un utilisateur. Windows Forms utilise [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (la nouvelle bibliothèque de graphiques Windows) pour le rendu. Les classes managées qui donnent accès aux [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] se trouvent dans le <xref:System.Drawing?displayProperty=nameWithType> espace de noms et ses sous-espaces de noms.  
@@ -72,9 +60,9 @@ public System.Drawing.Graphics Graphics {get;}
 }  
 ```  
   
- <xref:System.Drawing.Graphics>est une classe managée qui encapsule les fonctionnalités de dessin, tel que décrit dans la discussion de [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] plus loin dans cette rubrique. Le <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> est une instance de la <xref:System.Drawing.Rectangle> structurer et définit la zone disponible dans laquelle un contrôle peut être dessiné. Un développeur de contrôles peut calculer la <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> à l’aide de la <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> propriété d’un contrôle, comme décrit dans la discussion de géométrie plus loin dans cette rubrique.  
+ <xref:System.Drawing.Graphics> est une classe managée qui encapsule les fonctionnalités de dessin, tel que décrit dans la discussion de [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] plus loin dans cette rubrique. Le <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> est une instance de la <xref:System.Drawing.Rectangle> structurer et définit la zone disponible dans laquelle un contrôle peut être dessiné. Un développeur de contrôles peut calculer la <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> à l’aide de la <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> propriété d’un contrôle, comme décrit dans la discussion de géométrie plus loin dans cette rubrique.  
   
- Un contrôle doit fournir la logique de rendu en substituant la <xref:System.Windows.Forms.Control.OnPaint%2A> méthode qu’il hérite <xref:System.Windows.Forms.Control>. <xref:System.Windows.Forms.Control.OnPaint%2A>Obtient l’accès à un objet graphics et un rectangle à dessiner via la <xref:System.Drawing.Design.PaintValueEventArgs.Graphics%2A> et <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> propriétés de la <xref:System.Windows.Forms.PaintEventArgs> instance lui est passé.  
+ Un contrôle doit fournir la logique de rendu en substituant la <xref:System.Windows.Forms.Control.OnPaint%2A> méthode qu’il hérite <xref:System.Windows.Forms.Control>. <xref:System.Windows.Forms.Control.OnPaint%2A> Obtient l’accès à un objet graphics et un rectangle à dessiner via la <xref:System.Drawing.Design.PaintValueEventArgs.Graphics%2A> et <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> propriétés de la <xref:System.Windows.Forms.PaintEventArgs> instance lui est passé.  
   
 ```vb  
 Protected Overridable Sub OnPaint(pe As PaintEventArgs)  
@@ -99,7 +87,7 @@ Protected Overridable Sub OnPaintBackground(pevent As PaintEventArgs)
 protected virtual void OnPaintBackground(PaintEventArgs pevent);  
 ```  
   
- <xref:System.Windows.Forms.Control.OnPaintBackground%2A>peint l’arrière-plan (et donc la forme) de la fenêtre et est garanti être rapide, tout en <xref:System.Windows.Forms.Control.OnPaint%2A> peint les détails et peut être plus lent, car les demandes de peinture individuelles sont combinées en une seule <xref:System.Windows.Forms.Control.Paint> événement qui couvre tous les domaines qui doivent être redessiné. Vous souhaiterez peut-être appeler le <xref:System.Windows.Forms.Control.OnPaintBackground%2A> si, par exemple, vous souhaitez dessiner un arrière-plan dégradé de couleur pour votre contrôle.  
+ <xref:System.Windows.Forms.Control.OnPaintBackground%2A> peint l’arrière-plan (et donc la forme) de la fenêtre et est garanti être rapide, tout en <xref:System.Windows.Forms.Control.OnPaint%2A> peint les détails et peut être plus lent, car les demandes de peinture individuelles sont combinées en une seule <xref:System.Windows.Forms.Control.Paint> événement qui couvre tous les domaines qui doivent être redessiné. Vous souhaiterez peut-être appeler le <xref:System.Windows.Forms.Control.OnPaintBackground%2A> si, par exemple, vous souhaitez dessiner un arrière-plan dégradé de couleur pour votre contrôle.  
   
  Alors que <xref:System.Windows.Forms.Control.OnPaintBackground%2A> possède une nomenclature de type événement et prend le même argument que la `OnPaint` (méthode), <xref:System.Windows.Forms.Control.OnPaintBackground%2A> n’est pas une véritable méthode d’événements. Il est sans `PaintBackground` événement et <xref:System.Windows.Forms.Control.OnPaintBackground%2A> n’appelle pas de délégués d’événements. Lors de la substitution du <xref:System.Windows.Forms.Control.OnPaintBackground%2A> méthode, une classe dérivée n’est pas requise pour appeler le <xref:System.Windows.Forms.Control.OnPaintBackground%2A> méthode de sa classe de base.  
   
