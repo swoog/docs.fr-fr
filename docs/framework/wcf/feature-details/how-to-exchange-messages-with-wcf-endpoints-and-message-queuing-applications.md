@@ -1,40 +1,28 @@
 ---
-title: "Comment : échanger des messages avec des points de terminaison WCF et des applications Message Queuing"
-ms.custom: 
+title: 'Comment : échanger des messages avec des points de terminaison WCF et des applications Message Queuing'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 62210fd8-a372-4d55-ab9b-c99827d1885e
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fa6f9d0b9631420013593cb44903b5451549e8c6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 807a34ac50ea317ace42ec12eddcd9ec7cf3736b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications"></a>Comment : échanger des messages avec des points de terminaison WCF et des applications Message Queuing
-Vous pouvez intégrer des applications Message Queuing (MSMQ) existantes aux applications [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] en utilisant la liaison d'intégration MSMQ qui convertit les messages MSMQ en messages [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] et vice versa. Cela vous permet d'appeler des applications réceptrices MSMQ depuis des clients [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ainsi que d'appeler les services [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] depuis des applications expéditrices MSMQ.  
+Vous pouvez intégrer des applications Message Queuing (MSMQ) existantes avec les applications Windows Communication Foundation (WCF) pour convertir des messages MSMQ en messages WCF à l’aide de la liaison d’intégration MSMQ. Cela vous permet de vous appeler dans les applications réceptrices MSMQ depuis des clients WCF ainsi que d’appeler dans les services WCF à partir d’applications expéditrices MSMQ.  
   
- De cette section, nous vous expliquons comment utiliser <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> pour les communications mises en file d'attente entre (1) un client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] et un service d'application MSMQ écrit à l'aide de System.Messaging et (2) un client d'application MSMQ et un service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Dans cette section, nous expliquons comment utiliser <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> pour la communication en file d’attente entre (1) un client WCF et un service d’application MSMQ écrit à l’aide de System.Messaging et (2) un client d’application MSMQ et un service WCF.  
   
- Pour un exemple complet qui montre comment appeler une application de récepteur MSMQ à partir un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client, consultez le [Windows Communication Foundation à Message Queuing](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md) exemple.  
+ Pour obtenir un exemple complet qui montre comment appeler une application réceptrice MSMQ à partir d’un client WCF, consultez le [Windows Communication Foundation à Message Queuing](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md) exemple.  
   
- Pour un exemple complet qui montre comment appeler un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] de service à partir d’un client MSMQ, consultez le [Message Queuing pour Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md) exemple.  
+ Pour obtenir un exemple complet qui montre comment appeler un service WCF à partir d’un client MSMQ, consultez le [Message Queuing pour Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md) exemple.  
   
 ### <a name="to-create-a-wcf-service-that-receives-messages-from-a-msmq-client"></a>Pour créer un service WCF qui reçoit des messages depuis un client MSMQ  
   
-1.  Configurez une interface qui définit le contrat de service pour le service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] qui reçoit les messages mis en file d'attente depuis une application expéditrice MSMQ, comme le montre l'exemple de code suivant.  
+1.  Définissez une interface qui définit le contrat de service pour le service WCF qui reçoit les messages en file d’attente à partir d’une application expéditrice MSMQ, comme indiqué dans l’exemple de code suivant.  
   
      [!code-csharp[S_MsmqToWcf#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmqtowcf/cs/service.cs#1)]
      [!code-vb[S_MsmqToWcf#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmqtowcf/vb/service.vb#1)]  
@@ -54,12 +42,12 @@ Vous pouvez intégrer des applications Message Queuing (MSMQ) existantes aux app
   
 ### <a name="to-create-a-wcf-client-that-sends-messages-to-a-msmq-receiver-application"></a>Pour créer un client WCF qui envoie des messages à une application réceptrice MSMQ  
   
-1.  Configurez une interface qui définit le contrat de service pour le client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] qui envoie les messages mis en file d'attente au récepteur MSMQ, comme le montre l'exemple de code suivant.  
+1.  Définissez une interface qui définit le contrat de service pour le client WCF qui envoie en attente des messages du récepteur MSMQ, comme indiqué dans l’exemple de code suivant.  
   
      [!code-csharp[S_WcfToMsmq#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_wcftomsmq/cs/proxy.cs#6)]
      [!code-vb[S_WcfToMsmq#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_wcftomsmq/vb/proxy.vb#6)]  
   
-2.  Définissez une classe de client que le client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilise pour appeler le récepteur MSMQ.  
+2.  Définissez une classe de client que le client WCF utilise pour appeler le récepteur MSMQ.  
   
      [!code-csharp[S_WcfToMsmq#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_wcftomsmq/cs/snippets.cs#2)]
      [!code-vb[S_WcfToMsmq#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_wcftomsmq/vb/snippets.vb#2)]  

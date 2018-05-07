@@ -1,13 +1,6 @@
 ---
-title: "Sources de données prises en charge par les Windows Forms"
-ms.custom: 
+title: Sources de données prises en charge par les Windows Forms
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - collections [Windows Forms], binding to
 - OLE DB providers [Windows Forms], Windows Forms
@@ -22,16 +15,11 @@ helpviewer_keywords:
 - DataSet class [Windows Forms], binding and Windows Forms
 - data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5a0a4c2bca136377b9c6812008189dae009e195f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 4705c8a7153e94fa1cd23cf6c2f622d5cd66ec77
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Sources de données prises en charge par les Windows Forms
 En règle générale, la liaison de données a été utilisée dans des applications pour tirer parti des données stockées dans les bases de données. Avec la liaison de données Windows Forms, vous pourrez accéder aux données à partir de bases de données, ainsi que les données d’autres structures, tels que les tableaux et collections, tant que certaines exigences minimales ont été remplies.  
@@ -50,13 +38,13 @@ En règle générale, la liaison de données a été utilisée dans des applicat
  tableau ou collection  
  Pour agir comme source de données, une liste doit implémenter la <xref:System.Collections.IList> interface ; un exemple serait un tableau qui est une instance de la <xref:System.Array> classe. Pour plus d’informations sur les tableaux, consultez [Comment : créer un tableau d’objets (Visual Basic)](http://msdn.microsoft.com/library/6b64e069-0387-400c-9081-3bdc581020c3).  
   
- En général, vous devez utiliser <xref:System.ComponentModel.BindingList%601> lorsque vous créez des listes d’objets pour la liaison de données. <xref:System.ComponentModel.BindingList%601>est une version générique de le <xref:System.ComponentModel.IBindingList> interface. Le <xref:System.ComponentModel.IBindingList> interface étend la <xref:System.Collections.IList> interface en ajoutant des propriétés, méthodes et événements nécessaires pour la liaison de données bidirectionnelle.  
+ En général, vous devez utiliser <xref:System.ComponentModel.BindingList%601> lorsque vous créez des listes d’objets pour la liaison de données. <xref:System.ComponentModel.BindingList%601> est une version générique de le <xref:System.ComponentModel.IBindingList> interface. Le <xref:System.ComponentModel.IBindingList> interface étend la <xref:System.Collections.IList> interface en ajoutant des propriétés, méthodes et événements nécessaires pour la liaison de données bidirectionnelle.  
   
  <xref:System.Collections.IEnumerable>  
  Contrôles Windows Forms peuvent être liés à des sources de données qui prennent en charge uniquement la <xref:System.Collections.IEnumerable> si elles sont liées par le biais de l’interface un <xref:System.Windows.Forms.BindingSource> composant.  
   
- [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]objets de données  
- [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]fournit un nombre pouvant être lié à des structures de données. Chaque varie en fonction de sa complexité et la complexité.  
+ [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] objets de données  
+ [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] fournit un nombre pouvant être lié à des structures de données. Chaque varie en fonction de sa complexité et la complexité.  
   
 -   <xref:System.Data.DataColumn>. A <xref:System.Data.DataColumn> est le bloc de construction fondamental d’un <xref:System.Data.DataTable>, dans la mesure où un nombre de colonnes comprendre une table. Chaque <xref:System.Data.DataColumn> a un <xref:System.Data.DataColumn.DataType%2A> propriété qui détermine le type de données figurant dans la colonne (par exemple, la marque d’une automobile dans une table décrivant des voitures). Vous pouvez créer une liaison simple un contrôle (comme un <xref:System.Windows.Forms.TextBox> du contrôle <xref:System.Windows.Forms.Control.Text%2A> propriété) à une colonne dans une table de données.  
   

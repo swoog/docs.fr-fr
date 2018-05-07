@@ -1,13 +1,6 @@
 ---
-title: "Modèle de thread de l'encre"
-ms.custom: 
+title: Modèle de thread de l'encre
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - application user interface thread [WPF]
 - stylus plug-in
@@ -20,16 +13,11 @@ helpviewer_keywords:
 - ink collection plug-in
 - plug-ins [WPF], for ink
 ms.assetid: c85fcad1-cb50-4431-847c-ac4145a35c89
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c8eb0cf9f1cbb1be688f228b7bbd10a3a3ca6ed0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cc0ff8a2345bd945dd2fffdfda80f00e1ab99c67
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="the-ink-threading-model"></a>Modèle de thread de l'encre
 Un des avantages de l’encre sur un Tablet PC est qu’il semble beaucoup l’écriture avec un stylet régulière et un livre.  Pour ce faire, le stylet collecte les données d’entrée à un taux beaucoup plus important que la souris et restitue l’encre lorsque l’utilisateur écrit.  Thread d’interface utilisateur de l’application utilisateur n’est pas suffisant pour collecter les données du stylet et restituer l’encre car il peut se bloquer.  Pour résoudre ce problème, un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application utilise deux threads supplémentaires lorsqu’un utilisateur écrit d’encre.  
@@ -72,11 +60,11 @@ Un des avantages de l’encre sur un Tablet PC est qu’il semble beaucoup l’�
   
  Dans le diagramme précédent, le comportement suivant se produit :  
   
-1.  `StylusPlugin1`Modifie les valeurs de x et y.  
+1.  `StylusPlugin1` Modifie les valeurs de x et y.  
   
-2.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>reçoit les points modifiés du stylet et les restitue sur le thread de rendu dynamique.  
+2.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> reçoit les points modifiés du stylet et les restitue sur le thread de rendu dynamique.  
   
-3.  `StylusPlugin2`reçoit les points modifiés du stylet, puis modifie les valeurs de x et y.  
+3.  `StylusPlugin2` reçoit les points modifiés du stylet, puis modifie les valeurs de x et y.  
   
 4.  L’application collecte les points du stylet et, lorsque l’utilisateur termine le trait, restitue le trait de manière statique.  
   
@@ -87,7 +75,7 @@ Un des avantages de l’encre sur un Tablet PC est qu’il semble beaucoup l’�
   
  Le diagramme suivant illustre la relation entre le thread du stylet et le thread d’interface utilisateur en ce qui concerne les événements de stylet d’un <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>.  
   
- ![Encre des modèles de threads &#40; L’interface utilisateur et stylet &#41; ] (../../../../docs/framework/wpf/advanced/media/inkthreading-plugincallbacks.png "InkThreading_PluginCallbacks")  
+ ![Modèles de thread d’encre &#40;l’interface utilisateur et stylet&#41;](../../../../docs/framework/wpf/advanced/media/inkthreading-plugincallbacks.png "InkThreading_PluginCallbacks")  
   
 ## <a name="rendering-ink"></a>Rendu de l’encre  
  Lorsque l’utilisateur trace un trait, <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> restitue l’encre sur un thread séparé pour que l’encre semble « couler » du stylet même lorsque le thread d’interface utilisateur est occupé.  Le <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> génère une arborescence visuelle sur le thread de rendu dynamique pendant qu’il collecte les points du stylet.  Lorsque l’utilisateur termine le trait, la <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> demande à être informé de la prochaine passe de rendu effectuée par l’application.  Une fois que l’application a terminé la passe de rendu suivante, le <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> nettoie son arborescence d’éléments visuels.  Le diagramme suivant illustre ce processus.  

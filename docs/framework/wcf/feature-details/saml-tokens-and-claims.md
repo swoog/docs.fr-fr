@@ -1,14 +1,6 @@
 ---
 title: Jetons SAML et revendications
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,20 +10,14 @@ helpviewer_keywords:
 - issued tokens
 - SAML token
 ms.assetid: 930b6e34-9eab-4e95-826c-4e06659bb977
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9bd10fe663ccb4c78af775baf3e76663ef9a91bd
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 374fde23a1bf8df704f76500b4808c16d142ddd9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="saml-tokens-and-claims"></a>Jetons SAML et revendications
-Sécurité Assertions Markup Language (SAML) *jetons* sont des représentations XML de revendications. Par défaut, les jetons SAML [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] utilise dans les scénarios de sécurité fédérée est *jetons émis*.  
+Sécurité Assertions Markup Language (SAML) *jetons* sont des représentations XML de revendications. Par défaut, les jetons SAML Windows Communication Foundation (WCF) utilise dans les scénarios de sécurité fédérée sont *jetons émis*.  
   
  Les jetons SAML comportent des instructions qui sont des ensembles de revendications générées par une entité au sujet d'une autre entité. Par exemple, dans des scénarios de sécurité fédérée, les instructions sont générées par un service de jeton de sécurité au sujet d'un utilisateur dans le système. Le service de jeton de sécurité signe le jeton SAML pour indiquer la véracité des instructions incluses dans le jeton. De plus, le jeton SAML est associé à du matériel de clé de chiffrement dont l'utilisateur du jeton SAML prouve la connaissance. Cette preuve satisfait la partie de confiance que le jeton SAML a été émis, en fait, pour cet utilisateur. Par exemple, dans un scénario classique :  
   
@@ -44,7 +30,7 @@ Sécurité Assertions Markup Language (SAML) *jetons* sont des représentations 
 4.  La signature sur le jeton SAML indique à la partie de confiance que le service de jeton de sécurité a émis le jeton. La signature de message créée avec la clé de vérification indique à la partie de confiance que le jeton a été émis pour le client.  
   
 ## <a name="from-claims-to-samlattributes"></a>Des revendications aux éléments SamlAttributes  
- Dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], les instructions incluses dans les jetons SAML sont modelées en tant qu'objets <xref:System.IdentityModel.Tokens.SamlAttribute>, qui peuvent être remplis directement à partir d'objets <xref:System.IdentityModel.Claims.Claim> à condition que l'objet <xref:System.IdentityModel.Claims.Claim> ait une propriété <xref:System.IdentityModel.Claims.Claim.Right%2A> de <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> et que la propriété <xref:System.IdentityModel.Claims.Claim.Resource%2A> soit du type <xref:System.String>. Par exemple :  
+ Dans WCF, les instructions dans les jetons SAML sont modelées en tant que <xref:System.IdentityModel.Tokens.SamlAttribute> objets qui peuvent être remplis directement à partir de <xref:System.IdentityModel.Claims.Claim> objets, fournis le <xref:System.IdentityModel.Claims.Claim> objet a un <xref:System.IdentityModel.Claims.Claim.Right%2A> propriété de <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> et <xref:System.IdentityModel.Claims.Claim.Resource%2A> propriété est de type <xref:System.String>. Par exemple :  
   
  [!code-csharp[c_CreateSTS#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#8)]
  [!code-vb[c_CreateSTS#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#8)]  

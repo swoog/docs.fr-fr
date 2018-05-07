@@ -1,14 +1,6 @@
 ---
 title: Contrôle de version des contrats de données
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - versioning [WCF]
 - data contracts [WCF], versioning
 ms.assetid: 4a0700cb-5f5f-4137-8705-3a3ecf06461f
-caps.latest.revision: 35
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fd1679bb50a0dc6ee4997f7ae427c1cbdc0948ef
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 1ba51c51f30293e05dee17f9cf78cc049e1c751f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-contract-versioning"></a>Contrôle de version des contrats de données
 À mesure que les applications évoluent, il peut s'avérer nécessaire de modifier les contrats de données utilisés par les services. Cette rubrique explique comment assigner des versions aux contrats de données. Cette rubrique décrit les mécanismes de contrôle de version des contrats de données. Pour une vue d’ensemble complète et des instructions de contrôle de version des, consultez [meilleures pratiques : contrôle de version de contrat de données](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
@@ -110,7 +96,7 @@ ms.lasthandoff: 04/30/2018
 ## <a name="schema-considerations"></a>Considérations sur le schéma  
  Pour obtenir une explication de schéma est généré pour les types de contrat de données, consultez [référence de schéma de contrat de données](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
   
- Le schéma produit par [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] pour les types de contrat de données ne prend pas de dispositions pour le contrôle de version. En d'autres termes, le schéma exporté à partir d'une version spécifique d'un type contient uniquement les membres de données présents dans cette version. L'implémentation de l'interface <xref:System.Runtime.Serialization.IExtensibleDataObject> ne modifie pas le schéma pour un type.  
+ Le schéma WCF produit pour les types de contrat de données ne prend pas de dispositions pour le contrôle de version. En d'autres termes, le schéma exporté à partir d'une version spécifique d'un type contient uniquement les membres de données présents dans cette version. L'implémentation de l'interface <xref:System.Runtime.Serialization.IExtensibleDataObject> ne modifie pas le schéma pour un type.  
   
  Les membres de données sont par défaut exportés dans le schéma en tant qu'éléments facultatifs. En d'autres termes, 0 est affecté à la valeur `minOccurs` (attribut XML). Les membres de données requis sont exportés, avec 1 étant affecté à `minOccurs`.  
   

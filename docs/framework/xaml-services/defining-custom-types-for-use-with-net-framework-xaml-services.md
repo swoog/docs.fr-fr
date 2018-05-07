@@ -1,28 +1,14 @@
 ---
-title: "Définition de types personnalisés pour une utilisation avec les services XAML .NET Framework"
-ms.custom: 
+title: Définition de types personnalisés pour une utilisation avec les services XAML .NET Framework
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - defining custom types [XAML Services]
 ms.assetid: c2667cbd-2f46-4a7f-9dfc-53696e35e8e4
-caps.latest.revision: 
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c7cce479c7c7a5f6c7112f08f1e15f3bc7e4d366
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9edc7baa1a540a71997cf5b1ed010ad5c7960d17
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="defining-custom-types-for-use-with-net-framework-xaml-services"></a>Définition de types personnalisés pour une utilisation avec les services XAML .NET Framework
 Lorsque vous définissez des types personnalisés qui sont des objets métier ou sont des types qui n’ont pas d’une dépendance sur des infrastructures spécifiques, il existe certaines meilleures pratiques pour XAML, vous pouvez suivre. Si vous suivez ces pratiques, les Services XAML .NET Framework et ses lecteurs XAML et les writers XAML peuvent découvrir les caractéristiques XAML de votre type et lui donner une représentation appropriée dans un flux de nœud XAML à l’aide du système de type XAML. Cette rubrique décrit les meilleures pratiques pour les définitions de type, définitions de membre et aux attributs CLR des types ou membres.  
@@ -103,7 +89,7 @@ Lorsque vous définissez des types personnalisés qui sont des objets métier ou
  N’oubliez pas que la valeur de cette méthode est l’entrée provenant de l’utilisation de XAML, généralement sous la forme d’attribut. À partir de la forme d’attribut doit être prise en charge de convertisseur de valeur pour une syntaxe de texte, et vous l’attribut le `Get` *PropertyName* accesseur.  
   
 ### <a name="attachable-member-stores"></a>Magasins de membres pouvant être attachés  
- Les méthodes d’accesseur ne sont généralement pas suffisamment pour fournir un moyen d’y placer les valeurs de membre pouvant être attaché un graphique d’objet, ou pour extraire des valeurs de graphique d’objet et les sérialiser correctement. Pour offrir cette fonctionnalité, le `target` objets dans les signatures d’accesseur précédentes doivent être capables de stocker des valeurs. Le mécanisme de stockage doit être conforme au principe de membre pouvant être attaché le membre est pouvant être attaché aux cibles où le membre pouvant être attaché n’est pas dans la liste des membres. Les Services XAML .NET framework fournit une technique d’implémentation pour le membre pouvant être attaché stocke via les API <xref:System.Xaml.IAttachedPropertyStore> et <xref:System.Xaml.AttachablePropertyServices>. <xref:System.Xaml.IAttachedPropertyStore>est utilisé par les writers XAML pour découvrir l’implémentation du magasin et doit être implémentée sur le type qui est la `target` des accesseurs. La méthode statique <xref:System.Xaml.AttachablePropertyServices> API sont utilisées dans le corps des accesseurs et faire référence au membre pouvant être attaché par son <xref:System.Xaml.AttachableMemberIdentifier>.  
+ Les méthodes d’accesseur ne sont généralement pas suffisamment pour fournir un moyen d’y placer les valeurs de membre pouvant être attaché un graphique d’objet, ou pour extraire des valeurs de graphique d’objet et les sérialiser correctement. Pour offrir cette fonctionnalité, le `target` objets dans les signatures d’accesseur précédentes doivent être capables de stocker des valeurs. Le mécanisme de stockage doit être conforme au principe de membre pouvant être attaché le membre est pouvant être attaché aux cibles où le membre pouvant être attaché n’est pas dans la liste des membres. Les Services XAML .NET framework fournit une technique d’implémentation pour le membre pouvant être attaché stocke via les API <xref:System.Xaml.IAttachedPropertyStore> et <xref:System.Xaml.AttachablePropertyServices>. <xref:System.Xaml.IAttachedPropertyStore> est utilisé par les writers XAML pour découvrir l’implémentation du magasin et doit être implémentée sur le type qui est la `target` des accesseurs. La méthode statique <xref:System.Xaml.AttachablePropertyServices> API sont utilisées dans le corps des accesseurs et faire référence au membre pouvant être attaché par son <xref:System.Xaml.AttachableMemberIdentifier>.  
   
 ## <a name="xaml-related-clr-attributes"></a>Attributs CLR XAML  
  Attribution correctement des types, des membres et des assemblys est importante dans l’ordre au rapport les informations de système de type XAML pour les Services XAML .NET Framework. Cela est utile si vous avez l’intention d’utiliser avec des systèmes XAML basés directement sur les lecteurs XAML des Services XAML .NET Framework et les writers XAML vos types, ou si vous définissez ou utilisez une infrastructure utilisant XAML qui est basée sur les lecteurs XAML et les writers XAML.  

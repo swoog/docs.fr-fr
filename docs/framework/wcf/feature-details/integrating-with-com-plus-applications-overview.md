@@ -1,32 +1,18 @@
 ---
 title: Vue d'ensemble de l'intégration à des applications COM+
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
-caps.latest.revision: 29
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3c723bda93feac3eef18f302ab0c8ec7c702eb7a
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 155365c72fd3f5915db12104f45a500f3176f67b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="integrating-with-com-applications-overview"></a>Vue d'ensemble de l'intégration à des applications COM+
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] fournit un environnement riche permettant de créer des applications distribuées. Si vous vous servez déjà d'une logique d'application à base de composants hébergée dans COM+, vous pouvez utiliser [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] pour étendre votre logique existante plutôt que devoir la réécrire. Un scénario courant consiste à exposer une logique métier COM+ ou Enterprise Services existante par le biais de services Web.  
+Windows Communication Foundation (WCF) fournit un environnement riche pour la création d’applications distribuées. Si vous utilisez déjà la logique d’application basée sur des composants hébergée dans COM +, vous pouvez utiliser WCF pour étendre votre logique existante plutôt que d’avoir à la réécrire. Un scénario courant consiste à exposer une logique métier COM+ ou Enterprise Services existante par le biais de services Web.  
   
  Lorsqu'une interface sur un composant COM+ est exposée comme service Web, la spécification et le contrat de ces services sont déterminés par un mappage automatique exécuté au moment de l'initialisation de l'application. La liste suivante présente le modèle conceptuel de ce mappage :  
   
@@ -84,7 +70,7 @@ ms.lasthandoff: 04/30/2018
  Dans une application cliente, les méthodes sur l'objet <xref:System.ServiceModel.ComIntegration.PersistStreamTypeWrapper> peuvent être utilisées pour passer un objet dans un service, et pour récupérer un objet de la même façon.  
   
 > [!NOTE]
->  En raison de la nature personnalisée et propre à la plateforme de la méthode de sérialisation, il est préférable de l'utiliser entre des clients [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] et des services [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+>  En raison de la nature personnalisée et spécifique à la plateforme de la méthode de sérialisation, il est préférable de l’utiliser entre les clients WCF et les services WCF.  
   
 ## <a name="selecting-the-hosting-mode"></a>Sélection du mode d'hébergement  
  COM+ expose des services Web dans l'un des modes d'hébergement suivants :  
@@ -95,18 +81,18 @@ ms.lasthandoff: 04/30/2018
   
 -   Hébergé sur le Web  
   
-     Le service Web est hébergé dans un processus de travail de serveur Web. Ce mode ne requiert pas l'activation de COM+ lorsque la demande initiale est reçue. Si l'application n'est pas active lorsque cette demande est reçue, elle est activée automatiquement avant le traitement de la demande. Ce mode fournit également un service Web et un accès DCOM à l'application serveur, mais provoque un saut de processus pour les demandes de service Web. En général, il requiert l'activation de l'emprunt d'identité par le client. Dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], cette opération peut être réalisée avec la propriété <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> de la classe <xref:System.ServiceModel.Security.WindowsClientCredential>, accessible en tant que propriété de la classe générique <xref:System.ServiceModel.ChannelFactory%601>, ainsi que la valeur d'énumération <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>.  
+     Le service Web est hébergé dans un processus de travail de serveur Web. Ce mode ne requiert pas l'activation de COM+ lorsque la demande initiale est reçue. Si l'application n'est pas active lorsque cette demande est reçue, elle est activée automatiquement avant le traitement de la demande. Ce mode fournit également un service Web et un accès DCOM à l'application serveur, mais provoque un saut de processus pour les demandes de service Web. En général, il requiert l'activation de l'emprunt d'identité par le client. Dans WCF, cela peut être fait avec le <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> propriété de la <xref:System.ServiceModel.Security.WindowsClientCredential> (classe), qui est accessible en tant que propriété de l’objet générique <xref:System.ServiceModel.ChannelFactory%601> (classe), ainsi que le <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation> valeur d’énumération.  
   
 -   Hébergé sur le Web dans un processus  
   
      Le service Web et la logique d'application COM+ sont hébergés dans le processus de travail de serveur Web. Cela permet l'activation automatique du mode Hébergé sur le Web sans provoquer de saut de processus pour les demandes de service Web. L'inconvénient est que l'application serveur n'est pas accessible par le biais de DCOM.  
   
 ### <a name="security-considerations"></a>Considérations relatives à la sécurité  
- Comme pour d'autres services [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], les paramètres de sécurité du service exposé sont administrés à l'aide des paramètres de configuration du canal [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. D'ordinaire, les paramètres de sécurité DCOM, tels que les paramètres des autorisations DCOM à l'échelle de l'ordinateur, ne sont pas appliqués. Pour appliquer des rôles d'application COM+, l'autorisation « Appliquer les vérifications d'accès au niveau du composant » doit être activée pour le composant.  
+ Comme d’autres services WCF, les paramètres de sécurité pour le service exposé sont administrés par le biais des paramètres de configuration pour le canal WCF. D'ordinaire, les paramètres de sécurité DCOM, tels que les paramètres des autorisations DCOM à l'échelle de l'ordinateur, ne sont pas appliqués. Pour appliquer des rôles d'application COM+, l'autorisation « Appliquer les vérifications d'accès au niveau du composant » doit être activée pour le composant.  
   
  L'utilisation d'une liaison non sécurisée peut exposer la communication à des risques de falsification et de divulgation d'informations. Pour éviter ce problème, il est recommandé de recourir à une liaison sécurisée.  
   
- Pour les modes Hébergé par COM+ et Hébergé sur le Web, les applications clientes doivent autoriser le processus serveur à emprunter l'identité de l'utilisateur client. Cette procédure peut s'effectuer sur les clients [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] en affectant au niveau d'emprunt d'identité la valeur <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>.  
+ Pour les modes Hébergé par COM+ et Hébergé sur le Web, les applications clientes doivent autoriser le processus serveur à emprunter l'identité de l'utilisateur client. Cela est possible dans les clients WCF en définissant l’emprunt d’identité au niveau <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>.  
   
  Lorsque les services IIS (Internet Information Services) ou le service d'activation de processus de Windows (WAS, Windows Process Activation Service) utilisent le transport HTTP, l'outil Httpcfg.exe peut être exécuté pour réserver une adresse de point de terminaison de transport. Dans d'autres configurations, il est important de se protéger contre les services non autorisés qui se comportent comme le service prévu. Pour empêcher un service non autorisé de démarrer au point de terminaison souhaité, le service légitime peut être configuré pour s'exécuter comme un service NT. Cette méthode permet au service légitime de revendiquer l'adresse du point de terminaison avant un service non autorisé.  
   

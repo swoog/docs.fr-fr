@@ -1,28 +1,16 @@
 ---
-title: "Comment : spécifier le sens de la liaison"
-ms.custom: 
+title: 'Comment : spécifier le sens de la liaison'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - direction of binding [WPF]
 - binding direction [WPF]
 - data binding [WPF], direction of binding
 ms.assetid: 37334478-028b-4514-86c9-1420709f4818
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9944ff214a9dfe12b21e005c4e1998c249bf72b2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 100130f3dc099d1cf1f216c841e7e1dc1d083f39
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-specify-the-direction-of-the-binding"></a>Comment : spécifier le sens de la liaison
 Cet exemple montre comment spécifier si la liaison met à jour uniquement la propriété de la cible de liaison (cible), uniquement la propriété de la source de liaison (source), ou bien à la fois la propriété cible et la propriété source.  
@@ -30,15 +18,15 @@ Cet exemple montre comment spécifier si la liaison met à jour uniquement la pr
 ## <a name="example"></a>Exemple  
  Vous utilisez le <xref:System.Windows.Data.Binding.Mode%2A> propriété pour spécifier la direction de la liaison. La liste d’énumération suivante affiche les options disponibles pour les mises à jour de la liaison :  
   
--   <xref:System.Windows.Data.BindingMode.TwoWay>met à jour la propriété cible ou la propriété chaque fois que la propriété cible ou la propriété source change.  
+-   <xref:System.Windows.Data.BindingMode.TwoWay> met à jour la propriété cible ou la propriété chaque fois que la propriété cible ou la propriété source change.  
   
--   <xref:System.Windows.Data.BindingMode.OneWay>met à jour la propriété cible uniquement lorsque la propriété source change.  
+-   <xref:System.Windows.Data.BindingMode.OneWay> met à jour la propriété cible uniquement lorsque la propriété source change.  
   
--   <xref:System.Windows.Data.BindingMode.OneTime>met à jour la propriété cible uniquement lorsque l’application démarre ou lorsque le <xref:System.Windows.FrameworkElement.DataContext%2A> subit une modification.  
+-   <xref:System.Windows.Data.BindingMode.OneTime> met à jour la propriété cible uniquement lorsque l’application démarre ou lorsque le <xref:System.Windows.FrameworkElement.DataContext%2A> subit une modification.  
   
--   <xref:System.Windows.Data.BindingMode.OneWayToSource>met à jour la propriété source lorsque la propriété cible change.  
+-   <xref:System.Windows.Data.BindingMode.OneWayToSource> met à jour la propriété source lorsque la propriété cible change.  
   
--   <xref:System.Windows.Data.BindingMode.Default>provoque la valeur par défaut <xref:System.Windows.Data.Binding.Mode%2A> valeur de propriété cible à utiliser.  
+-   <xref:System.Windows.Data.BindingMode.Default> provoque la valeur par défaut <xref:System.Windows.Data.Binding.Mode%2A> valeur de propriété cible à utiliser.  
   
  Pour plus d’informations, consultez l’énumération <xref:System.Windows.Data.BindingMode>.  
   

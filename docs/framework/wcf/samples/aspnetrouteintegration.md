@@ -1,29 +1,15 @@
 ---
 title: AspNetRouteIntegration
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 0638ce0e-d053-47df-a447-688e447a03fb
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 93d248030c4b32bd7725cf9c6fbbb829a19f7845
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: c2b2a47a0c817e23a06c39d622bca9c649cbadb4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="aspnetrouteintegration"></a>AspNetRouteIntegration
-Cet exemple montre comment héberger un service REST [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] à l'aide d'itinéraires ASP.NET. Le [Basic Resource Service](../../../../docs/framework/wcf/samples/basic-resource-service.md) exemple présente une version autonome de ce scénario et aborde l’implémentation de service en profondeur. Cette rubrique met l’accent sur la fonctionnalité d’intégration ASP.NET. Pour plus d’informations sur le routage ASP.NET, consultez <xref:System.Web.Routing>.  
+Cet exemple montre comment héberger un service REST de Windows Communication Foundation (WCF) à l’aide d’itinéraires ASP.NET. Le [Basic Resource Service](../../../../docs/framework/wcf/samples/basic-resource-service.md) exemple présente une version autonome de ce scénario et aborde l’implémentation de service en profondeur. Cette rubrique met l’accent sur la fonctionnalité d’intégration ASP.NET. Pour plus d’informations sur le routage ASP.NET, consultez <xref:System.Web.Routing>.  
   
 ## <a name="sample-details"></a>Détails de l'exemple  
  Le service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] expose une collection de clients d'une manière orientée ressources/REST. Tout comme un service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] SOAP, le service peut être hébergé dans ASP.NET à l'aide d'un fichier .svc. Toutefois, cette façon de procéder est rarement celle à privilégier pour les scénarios HTTP, car elle implique la présence de .svc dans l'URL du service. En outre, elle requiert le déploiement d'un fichier .svc avec la bibliothèque du service. Ces limitations peuvent être évitées en hébergeant le service à l'aide d'itinéraires ASP.NET, comme le montre cet exemple.  
@@ -70,7 +56,7 @@ Cet exemple montre comment héberger un service REST [!INCLUDE[indigo1](../../..
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à la page [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les exemples [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\AspNetRouteIntegration`  
   

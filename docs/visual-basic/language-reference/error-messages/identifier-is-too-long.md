@@ -1,26 +1,17 @@
 ---
 title: Identificateur trop long
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc30033
 - vbc30033
 helpviewer_keywords:
 - BC30033
 ms.assetid: 3d07f6d0-9a2f-49ca-94e8-1e354932e855
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 10ae608903301d7e5662de3356030d682e11fd00
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 2d1a934fa970c54430b1ea0ff3b1a7f7290a1eb1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="identifier-is-too-long"></a>Identificateur trop long
 Le nom ou l’identificateur de chaque élément de programmation est limité à 1023 caractères. En outre, un nom qualifié complet ne peut pas dépasser 1023 caractères. Cela signifie que la chaîne d’identificateur entière (`<namespace>.<...>.<namespace>.<class>.<element>`) ne peut pas être plus de 1023 caractères, y compris l’opérateur d’accès aux membres (`.`) caractères.  

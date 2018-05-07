@@ -1,26 +1,12 @@
 ---
 title: Dépannage de la corrélation
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 98003875-233d-4512-a688-4b2a1b0b5371
-caps.latest.revision: 11
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2de3a8cac6e12d898173f8181b295c3e2e461cc7
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: c597012a5ff69ecb700c51e00ac7d1218962e9ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="troubleshooting-correlation"></a>Dépannage de la corrélation
 La corrélation est utilisée pour établir une relation entre des messages de service de workflow et avec l'instance de workflow appropriée, mais si elle n'est pas proprement configurée, les messages ne seront pas reçus et les applications ne fonctionneront pas correctement. Cette rubrique fournit une vue d'ensemble de plusieurs méthodes de résolution des problèmes de corrélation et présente certains problèmes courants qui peuvent se produire lorsque vous utilisez la corrélation.  
@@ -146,7 +132,7 @@ supports the context protocol and has a valid context initialized.
  Pour plus d’informations, consultez [échange de contexte](../../../../docs/framework/wcf/feature-details/context-exchange-correlation.md).  
   
 ## <a name="common-request-reply-correlation-issues"></a>Problèmes courants rencontrés avec la corrélation demande-réponse  
- Corrélation demande-réponse est utilisée avec un <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> paire pour implémenter une opération bidirectionnelle dans un service de workflow et avec un <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> paire qui appelle une opération bidirectionnelle dans un autre site Web service. Lors de l'appel d'une opération bidirectionnelle dans un service WCF, le service peut être soit un service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] basé sur un code impératif traditionnel, soit un service de workflow. Pour utiliser la corrélation demande-réponse, une liaison bidirectionnelle doit être utilisée, telle que <xref:System.ServiceModel.BasicHttpBinding>, et les opérations doivent être bidirectionnelles.  
+ Corrélation demande-réponse est utilisée avec un <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> paire pour implémenter une opération bidirectionnelle dans un service de workflow et avec un <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> paire qui appelle une opération bidirectionnelle dans un autre site Web service. Lors de l’appel d’une opération bidirectionnelle dans un service WCF, le service peut être soit une traditionnelle des services WCF code impératif ou il peut être un service de workflow. Pour utiliser la corrélation demande-réponse, une liaison bidirectionnelle doit être utilisée, telle que <xref:System.ServiceModel.BasicHttpBinding>, et les opérations doivent être bidirectionnelles.  
   
  Si le service de workflow a des opérations bidirectionnelles en parallèle, ou qui se chevauchent <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> ou <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> paires, puis la corrélation implicite gestion fournie par <xref:System.ServiceModel.Activities.WorkflowServiceHost>peut ne pas suffire, surtout dans les scénarios de stress élevé, et les messages ne peuvent pas être routés correctement. Pour éviter la survenue de ce problème, nous vous recommandons de toujours spécifier explicitement un <xref:System.ServiceModel.Activities.CorrelationHandle> lors de l'utilisation de la corrélation demande-réponse. Lorsque vous utilisez la **SendAndReceiveReply** et **ReceiveAndSendReply** des modèles à partir de la section messagerie de le **boîte à outils** dans le Concepteur de flux de travail, un <xref:System.ServiceModel.Activities.CorrelationHandle> est explicitement configuré par défaut. Lors de la génération d'un workflow à l'aide de code, le <xref:System.ServiceModel.Activities.CorrelationHandle> est spécifié dans le <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A> de la première activité de la paire. Dans l'exemple suivant, une activité <xref:System.ServiceModel.Activities.Receive> est configurée avec un <xref:System.ServiceModel.Activities.CorrelationInitializer.CorrelationHandle%2A> explicite spécifié dans le <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer>.  
   

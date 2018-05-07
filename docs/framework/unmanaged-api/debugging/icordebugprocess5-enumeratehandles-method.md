@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugProcess5::EnumerateHandles, méthode"
-ms.custom: 
+title: ICorDebugProcess5::EnumerateHandles, méthode
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugProcess5.EnumerateHandles
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 7d7fa796-0dc6-4ee8-9d56-40166246d91d
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c9bf9f1a4d565e0af4f3ee34a2805116407027d8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2f2177702c6c5999033d0852a932e52c0725fb8a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugprocess5enumeratehandles-method"></a>ICorDebugProcess5::EnumerateHandles, méthode
 Obtient un énumérateur pour les handles d’objet dans un processus.  
@@ -53,24 +41,24 @@ HRESULT EnumerateHandles(     [in] CorGCReferenceType types,
  [out] Un pointeur vers l’adresse d’un [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) qui est un énumérateur pour les objets pour le garbage collector.  
   
 ## <a name="remarks"></a>Notes  
- `EnumerateHandles`est une fonction d’assistance qui prend en charge l’inspection de la table de handles. Il est similaire à la [ICorDebugProcess5::EnumerateGCReferences](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerategcreferences-method.md) (méthode), à ceci près qu’au lieu de remplir une [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) collection avec tous les objets par le garbage collector, il inclut uniquement les objets qui ont des descripteurs de la table de handles.  
+ `EnumerateHandles` est une fonction d’assistance qui prend en charge l’inspection de la table de handles. Il est similaire à la [ICorDebugProcess5::EnumerateGCReferences](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerategcreferences-method.md) (méthode), à ceci près qu’au lieu de remplir une [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) collection avec tous les objets par le garbage collector, il inclut uniquement les objets qui ont des descripteurs de la table de handles.  
   
- Le `types` paramètre spécifie les types de handle à inclure dans la collection. `types`peut être une des trois membres suivants de la [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) énumération :  
+ Le `types` paramètre spécifie les types de handle à inclure dans la collection. `types` peut être une des trois membres suivants de la [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) énumération :  
   
--   `CorHandleStrongOnly`(descripteurs pour les références fortes uniquement).  
+-   `CorHandleStrongOnly` (descripteurs pour les références fortes uniquement).  
   
--   `CorHandleWeakOnly`(gère uniquement les références faibles).  
+-   `CorHandleWeakOnly` (gère uniquement les références faibles).  
   
--   `CorHandleAll`(tous les handles).  
+-   `CorHandleAll` (tous les handles).  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versions du .NET framework :** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [Structures de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  

@@ -1,13 +1,6 @@
 ---
-title: "UI Automation d'un contrôle personnalisé WPF"
-ms.custom: 
+title: UI Automation d'un contrôle personnalisé WPF
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - custom controls [WPF], improving accessibility
 - UI Automation [WPF], using with custom controls
 ms.assetid: 47b310fc-fbd5-4ce2-a606-22d04c6d4911
-caps.latest.revision: "34"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1a9d17408d6fa03b267c2a22890d2e17c0441389
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fbd19591c260b0ad160339b45fd762e7a87bbc74
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ui-automation-of-a-wpf-custom-control"></a>UI Automation d'un contrôle personnalisé WPF
 [!INCLUDE[TLA#tla_uiautomation](../../../../includes/tlasharptla-uiautomation-md.md)] fournit une interface unique et généralisée que les clients Automation peuvent utiliser pour examiner ou utiliser les interfaces utilisateur de diverses plateformes et infrastructures. [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] active à la fois le code d’assurance qualité (test) et les applications d’accessibilité, par exemple les lecteurs d’écran, pour examiner les éléments de l’interface utilisateur et simuler la manière dont les utilisateurs interagissent avec ces éléments à partir d’un autre code. Pour plus d’informations sur [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] pour toutes les plateformes, consultez la rubrique d’accessibilité.  
@@ -63,7 +51,7 @@ ms.lasthandoff: 12/22/2017
  Remplacer la <xref:System.Windows.UIElement.OnCreateAutomationPeer%2A> méthode pour votre contrôle personnalisé pour qu’elle retourne votre objet fournisseur, qui doit dériver directement ou indirectement de <xref:System.Windows.Automation.Peers.AutomationPeer>.  
   
 ### <a name="override-getpattern"></a>Substituer la méthode GetPattern  
- Les homologues Automation simplifient certains aspects de l’implémentation des fournisseurs [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] côté serveur, fournisseurs, mais les homologues Automation d’un contrôle personnalisé doivent encore gérer les interfaces de modèle. Comme les fournisseurs non-WPF, homologues prend en charge les modèles de contrôle en fournissant des implémentations d’interfaces dans les <xref:System.Windows.Automation.Provider?displayProperty=nameWithType> espace de noms, tel que <xref:System.Windows.Automation.Provider.IInvokeProvider>. Les interfaces de modèle de contrôle peuvent être implémentées par l’homologue lui-même ou par un autre objet. Implémentation de l’homologue de <xref:System.Windows.Automation.Peers.AutomationPeer.GetPattern%2A> retourne l’objet qui prend en charge le modèle spécifié. [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)]code appelle la <xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A> (méthode) et spécifie un <xref:System.Windows.Automation.Peers.PatternInterface> valeur d’énumération. La substitution de <xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A> doit retourner l’objet qui implémente le modèle spécifié. Si votre contrôle ne possède pas une implémentation personnalisée d’un modèle, vous pouvez appeler implémentation du type de base de <xref:System.Windows.Automation.Peers.AutomationPeer.GetPattern%2A> pour récupérer son implémentation ou une valeur null si le modèle n’est pas pris en charge pour ce type de contrôle. Par exemple, un contrôle NumericUpDown personnalisé peut être défini à une valeur dans une plage, donc son [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] homologue implémente la <xref:System.Windows.Automation.Provider.IRangeValueProvider> interface. L’exemple suivant montre comment de l’homologue <xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A> méthode est substituée pour répondre à une <xref:System.Windows.Automation.Peers.PatternInterface.RangeValue?displayProperty=nameWithType> valeur.  
+ Les homologues Automation simplifient certains aspects de l’implémentation des fournisseurs [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] côté serveur, fournisseurs, mais les homologues Automation d’un contrôle personnalisé doivent encore gérer les interfaces de modèle. Comme les fournisseurs non-WPF, homologues prend en charge les modèles de contrôle en fournissant des implémentations d’interfaces dans les <xref:System.Windows.Automation.Provider?displayProperty=nameWithType> espace de noms, tel que <xref:System.Windows.Automation.Provider.IInvokeProvider>. Les interfaces de modèle de contrôle peuvent être implémentées par l’homologue lui-même ou par un autre objet. Implémentation de l’homologue de <xref:System.Windows.Automation.Peers.AutomationPeer.GetPattern%2A> retourne l’objet qui prend en charge le modèle spécifié. [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] code appelle la <xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A> (méthode) et spécifie un <xref:System.Windows.Automation.Peers.PatternInterface> valeur d’énumération. La substitution de <xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A> doit retourner l’objet qui implémente le modèle spécifié. Si votre contrôle ne possède pas une implémentation personnalisée d’un modèle, vous pouvez appeler implémentation du type de base de <xref:System.Windows.Automation.Peers.AutomationPeer.GetPattern%2A> pour récupérer son implémentation ou une valeur null si le modèle n’est pas pris en charge pour ce type de contrôle. Par exemple, un contrôle NumericUpDown personnalisé peut être défini à une valeur dans une plage, donc son [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] homologue implémente la <xref:System.Windows.Automation.Provider.IRangeValueProvider> interface. L’exemple suivant montre comment de l’homologue <xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A> méthode est substituée pour répondre à une <xref:System.Windows.Automation.Peers.PatternInterface.RangeValue?displayProperty=nameWithType> valeur.  
   
  [!code-csharp[CustomControlNumericUpDown#GetPattern](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp/CustomControlLibrary/NumericUpDown.cs#getpattern)]
  [!code-vb[CustomControlNumericUpDown#GetPattern](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/numericupdown.vb#getpattern)]  

@@ -1,14 +1,6 @@
 ---
-title: "IMapToken::Map, méthode"
-ms.custom: 
+title: IMapToken::Map, méthode
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMapToken.Map
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: b9b4bf2f-1098-43d6-9619-a99b4bda1940
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fe034d2bc6d70e820fa3ad5de8140afa9a19a6bf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f2633bfadaabf208a2b86fda83375c3a136b93b9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imaptokenmap-method"></a>IMapToken::Map, méthode
 Mappe une relation entre les assemblys à l’aide de signatures de métadonnées.  
@@ -57,14 +45,14 @@ HRESULT Map (
 ## <a name="remarks"></a>Notes  
  Lorsque le remappage de jetons se produit pendant une fusion, le jeton d’origine est défini dans la portée de métadonnées importée (source) et le nouveau jeton est étendu dans la portée de métadonnées émise (cible).  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Cor.h  
   
  **Bibliothèque :** utilisé en tant que ressource dans MsCorEE.dll  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [IMapToken, interface](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md)

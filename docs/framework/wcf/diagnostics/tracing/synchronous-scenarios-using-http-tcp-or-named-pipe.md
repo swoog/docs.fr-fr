@@ -1,24 +1,12 @@
 ---
-title: "Scénarios synchrones utilisant HTTP, TCP ou Canal nommé"
-ms.custom: 
+title: Scénarios synchrones utilisant HTTP, TCP ou Canal nommé
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 7e90af1b-f8f6-41b9-a63a-8490ada502b1
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 428e8852c9b1706e88b1688b4a1f2e36c167fe28
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 03f4fdcaa5fc59efe7e92d2cb900212ed5ebae77
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="synchronous-scenarios-using-http-tcp-or-named-pipe"></a>Scénarios synchrones utilisant HTTP, TCP ou Canal nommé
 Cette rubrique décrit les activités et transferts pour différents scénarios demande/réponse synchrones, avec un client à thread unique, utilisant une connexion HTTP, TCP ou de canal nommé. Consultez [scénarios asynchrones à l’aide de HTTP, TCP ou canal nommé](../../../../../docs/framework/wcf/diagnostics/tracing/asynchronous-scenarios-using-http-tcp-or-named-pipe.md) pour plus d’informations sur les requêtes multithreads.  
@@ -56,7 +44,7 @@ Cette rubrique décrit les activités et transferts pour différents scénarios 
 #### <a name="closing-a-service-host"></a>Fermeture d'un hôte de service  
  L'activité de fermeture (Z) de ServiceHost est créée à partir de l'activité ambiante.  
   
- ![Scénarios synchrones utilisant HTTP &#47; TCP &#47; Canaux nommés](../../../../../docs/framework/wcf/diagnostics/tracing/media/sync.gif "synchronisation")  
+ ![Scénarios synchrones utilisant HTTP&#47;TCP&#47; canaux nommés](../../../../../docs/framework/wcf/diagnostics/tracing/media/sync.gif "synchronisation")  
   
  Dans \<A: name >, `A` est un symbole de raccourci qui décrit l’activité dans le texte précédent et dans le tableau 3. `Name` est un nom raccourci de l'activité.  
   

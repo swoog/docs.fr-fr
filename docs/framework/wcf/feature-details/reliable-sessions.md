@@ -1,13 +1,6 @@
 ---
 title: Sessions fiables
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - Windows Communication Foundation, sessions and instances
 - WCF, sessions and instances
@@ -16,24 +9,19 @@ helpviewer_keywords:
 - instances [WCF]
 - sessions [WCF]
 ms.assetid: 143951b3-3aa0-4540-b4b7-d33e77e874a1
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 16480996b96145873b1d1f84d56af6d1aa863710
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 396c76cbdb8eada881a5c87edfc2500dcdab3ad4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reliable-sessions"></a>Sessions fiables
 
-Cette section décrit ce qu’un [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] session fiable est, qu’elle sert, comment et quand utiliser, quelles configurations de liaison prend en charge, et des pointeurs sur les meilleures pratiques. Le tableau suivant résume les détails sur les points essentiels et les rubriques connexes de cette section.
+Cette section décrit les un Windows Communication Foundation (WCF) une session fiable est qu’elle sert, comment et quand utiliser, quelles configurations de liaison prend en charge, et des pointeurs sur les meilleures pratiques. Le tableau suivant résume les détails sur les points essentiels et les rubriques connexes de cette section.
 
-La session fiable [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fournit featrues en garantissant que les messages envoyés entre des points de terminaison sont transférées via des intermédiaires SOAP ou de transport et sont remis une seule fois et, éventuellement, dans le même ordre que celui dans lequel ils ont été envoyés.
+La session fiable WCF fournit featrues en garantissant que les messages envoyés entre des points de terminaison sont transférées via des intermédiaires SOAP ou de transport et sont remis une seule fois et, éventuellement, dans le même ordre que celui dans lequel ils ont été envoyés.
 
-Pour utiliser une session fiable avec une application [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], utilisez l'une des liaisons fournies par le système dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] qui prend en charge une session fiable par défaut ou comme option, ou créez votre propre liaison personnalisée qui prend en charge la session.
+Pour utiliser une session fiable avec une application WCF, utilisez une des liaisons fournies par le système dans WCF qui prennent en charge une session fiable par défaut ou en tant qu’option ou créer votre propre liaison personnalisée qui prend en charge de la session.
 
 ## <a name="in-this-section"></a>Dans cette section
 
