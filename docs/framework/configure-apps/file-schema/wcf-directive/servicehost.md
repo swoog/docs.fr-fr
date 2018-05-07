@@ -2,11 +2,11 @@
 title: '@ServiceHost'
 ms.date: 03/30/2017
 ms.assetid: 96ba6967-00f2-422f-9aa7-15de4d33ebf3
-ms.openlocfilehash: f81c71746b6b59a51ee825b44c9e6d9f93eb5fbd
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 5498c300ab126bbc4e08cd228e3e7b48e905932e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="servicehost"></a>@ServiceHost
 Associe la fabrique utilisée pour générer l'hôte de service au service à héberger ainsi qu'à d'autres aspects de programmation requis pour compiler le code d'hébergement fourni dans le fichier .svc ou pour y accéder.  
@@ -31,9 +31,9 @@ CodeBehind = "CodeBehind"%>
  Nom de type CLR correspondant à la fabrique de l'hôte de service utilisée pour instancier l'hôte de service. Cet attribut est facultatif. S'il n'est pas spécifié, le <xref:System.ServiceModel.Activation.ServiceHostFactory> par défaut est utilisé et renvoie une instance de <xref:System.ServiceModel.ServiceHost>.  
   
 #### <a name="debug"></a>Débogage  
- Indique si le service Windows Communication Foundation (WCF) doit être compilé avec les symboles de débogage. `true` si le service [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] doit être compilé avec les symboles de débogage ; sinon, `false`.  
+ Indique si le service Windows Communication Foundation (WCF) doit être compilé avec les symboles de débogage. `true` Si le service WCF doit être compilé avec les symboles de débogage ; dans le cas contraire, `false`.  
   
-#### <a name="language"></a>Langage  
+#### <a name="language"></a>Langue  
  Spécifie le langage utilisé lors de la compilation de l'intégralité du code incorporé dans le fichier (.svc). Ces valeurs peuvent représenter tout langage pris en charge par .NET, notamment C#, VB et JS, qui font respectivement référence à C#, Visual Basic .NET et JScript .NET. Cet attribut est facultatif.  
   
 #### <a name="codebehind"></a>CodeBehind  

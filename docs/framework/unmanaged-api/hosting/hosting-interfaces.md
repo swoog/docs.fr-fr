@@ -1,28 +1,18 @@
 ---
-title: "Interfaces d'hébergement"
-ms.custom: 
+title: Interfaces d'hébergement
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 helpviewer_keywords:
 - interfaces [.NET Framework hosting]
 - hosting interfaces [.NET Framework]
 - unmanaged interfaces [.NET Framework], hosting
 ms.assetid: cc64cb05-38da-418e-815a-daac8e8e26e5
-caps.latest.revision: "23"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4fb24db8ad5b1ff92eadee139ddf10c044488f7d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: c2bef9e1671b8487a6702cce71106c84a2984317
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hosting-interfaces"></a>Interfaces d'hébergement
 Cette section décrit les interfaces non managées hôtes peuvent utiliser pour intégrer le common language runtime (CLR) dans leurs applications.  
@@ -52,6 +42,6 @@ Cette section décrit les interfaces non managées hôtes peuvent utiliser pour 
   
  [Structures d’hébergement](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)  
   
- [Hébergement d’applications WPF](../../../../docs/framework/unmanaged-api/hosting/index.md)  
+ [Hébergement](../../../../docs/framework/unmanaged-api/hosting/index.md)  
   
  [Hôtes de runtime](http://msdn.microsoft.com/library/99d9246a-b994-4fe5-985c-8588d1d59998)

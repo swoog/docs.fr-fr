@@ -1,14 +1,6 @@
 ---
-title: "IHostSyncManager::CreateCrstWithSpinCount, méthode"
-ms.custom: 
+title: IHostSyncManager::CreateCrstWithSpinCount, méthode
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostSyncManager.CreateCrstWithSpinCount
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 7280fa8c-3639-4abf-91cb-bc343da742d1
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 31830f97cff1c302ee573b8248eb1d83e696ac48
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 50f292ab39bcf77d49d8a363b43b9233f350974c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostsyncmanagercreatecrstwithspincount-method"></a>IHostSyncManager::CreateCrstWithSpinCount, méthode
 Crée un objet de section critique dont le nombre de sélection numérique pour la synchronisation.  
@@ -58,7 +46,7 @@ HRESULT CreateCrstWithSpinCount (
   
 |HRESULT|Description|  
 |-------------|-----------------|  
-|S_OK|`CreateCrstWithSpinCount`retourné avec succès.|  
+|S_OK|`CreateCrstWithSpinCount` retourné avec succès.|  
 |HOST_E_CLRNOTAVAILABLE|Le common language runtime (CLR) n’a pas été chargé dans un processus ou le CLR est dans un état dans lequel il ne peut pas exécuter du code managé ou traiter l’appel avec succès.|  
 |HOST_E_TIMEOUT|L’appel a expiré.|  
 |HOST_E_NOT_OWNER|L’appelant ne possède pas le verrou.|  
@@ -67,16 +55,16 @@ HRESULT CreateCrstWithSpinCount (
 |E_OUTOFMEMORY|Pas assez de mémoire n’était disponible pour créer la section critique demandée.|  
   
 ## <a name="remarks"></a>Notes  
- Un nombre de sélection numérique est utilisé uniquement sur un système multiprocesseur. Le compteur de rotations Spécifie le nombre de fois où qu'un thread appelant doit lancer avant d’effectuer une opération d’attente sur un sémaphore qui est associé à une section critique non disponible. Si la section critique se libère pendant l’opération de sélection numérique, le thread appelant évite l’opération d’attente. `CreateCrstWithSpinCount`reflète Win32 `InitializeCriticalSectionAndSpinCount` (fonction).  
+ Un nombre de sélection numérique est utilisé uniquement sur un système multiprocesseur. Le compteur de rotations Spécifie le nombre de fois où qu'un thread appelant doit lancer avant d’effectuer une opération d’attente sur un sémaphore qui est associé à une section critique non disponible. Si la section critique se libère pendant l’opération de sélection numérique, le thread appelant évite l’opération d’attente. `CreateCrstWithSpinCount` reflète Win32 `InitializeCriticalSectionAndSpinCount` (fonction).  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** MSCorEE.h  
   
  **Bibliothèque :** inclus en tant que ressource dans MSCorEE.dll  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [ICLRSyncManager, interface](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)  

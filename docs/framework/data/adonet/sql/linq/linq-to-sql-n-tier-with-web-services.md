@@ -1,27 +1,15 @@
 ---
 title: Applications multicouches LINQ to SQL avec les services Web
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9cb10eb8-957f-4beb-a271-5f682016fed2
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 79b9b1270f99720dec6b6369706f8a2f601d249e
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 94b00c5b9a433aa53fecef10d865db76d5577c84
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linq-to-sql-n-tier-with-web-services"></a>Applications multicouches LINQ to SQL avec les services Web
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]est conçu notamment pour une utilisation sur la couche intermédiaire dans une couche d’accès faiblement couplées de données (DAL) tel qu’un service Web. Si la couche Présentation est une page Web ASP.NET, vous utilisez le contrôle serveur Web <xref:System.Web.UI.WebControls.LinqDataSource> pour gérer le transfert de données entre l'interface utilisateur et [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sur la couche intermédiaire. Si la couche de présentation n'est pas une page ASP.NET, la couche intermédiaire et la couche de présentation doivent exécuter des tâches supplémentaires pour gérer la sérialisation et la désérialisation des données.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] est conçu notamment pour une utilisation sur la couche intermédiaire dans une couche d’accès faiblement couplées de données (DAL) tel qu’un service Web. Si la couche Présentation est une page Web ASP.NET, vous utilisez le contrôle serveur Web <xref:System.Web.UI.WebControls.LinqDataSource> pour gérer le transfert de données entre l'interface utilisateur et [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sur la couche intermédiaire. Si la couche de présentation n'est pas une page ASP.NET, la couche intermédiaire et la couche de présentation doivent exécuter des tâches supplémentaires pour gérer la sérialisation et la désérialisation des données.  
   
 ## <a name="setting-up-linq-to-sql-on-the-middle-tier"></a>Configuration de LINQ to SQL sur la couche intermédiaire  
  Dans un service Web ou une application multicouche, la couche intermédiaire contient le contexte des données et les classes d'entité. Vous pouvez créer ces classes manuellement, ou à l'aide de SQLMetal.exe ou d'[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)], comme décrit dans une autre partie de la documentation. Au moment du design, vous pouvez choisir de rendre les classes d'entité sérialisables. Pour plus d’informations, consultez [Comment : rendre les entités sérialisables](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md). Vous avez également la possibilité de créer un ensemble de classes distinct qui encapsule les données à sérialiser, puis de le projeter en types sérialisables lorsque vous retournez les données dans vos requêtes [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].  

@@ -1,27 +1,15 @@
 ---
-title: "Identité d'un objet"
-ms.custom: 
+title: Identité d'un objet
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c788f2f9-65cc-4455-9907-e8388a268e00
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 21b8dbb934b778d792ff55d54f60fca92cac8e88
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 930295073f9f75cf4101bf6fa3834561a4db8f58
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="object-identity"></a>Identité d'un objet
 Les identités des objets du runtime sont uniques. Deux variables qui font référence au même objet font en réalité référence à la même instance de l'objet. Par conséquent, les modifications que vous apportez avec un chemin d'accès via une variable sont immédiatement visibles via l'autre variable.  
@@ -34,7 +22,7 @@ Les identités des objets du runtime sont uniques. Deux variables qui font réf�
   
  Dans [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], le <xref:System.Data.Linq.DataContext> gère l'identité de l'objet. À chaque fois que vous récupérez une nouvelle ligne de la base de données, elle est entrée dans une table d'identités par sa clé primaire et un objet est créé. À chaque fois que vous récupérez cette ligne, l'instance d'objet d'origine est remise à l'application. De cette façon, le <xref:System.Data.Linq.DataContext> traduit le concept d'identité tel que la base de données l'a vu (autrement dit, des clés primaire) en concept d'identité vu par le langage (autrement dit, des instances). L'application voit uniquement l'objet dans l'état dans lequel il a été récupéré la première fois. Si les nouvelles données sont différentes, elles sont ignorées. Pour plus d’informations, consultez [récupération d’objets à partir du Cache d’identité](../../../../../../docs/framework/data/adonet/sql/linq/retrieving-objects-from-the-identity-cache.md).  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]utilise cette approche pour gérer l’intégrité des objets locaux pour prendre en charge les mises à jour optimistes. Étant donné que les seules modifications qui se produisent une fois que l'objet a été créé sont celles effectuées par l'application, le rôle de l'application est correctement défini. Si un tiers extérieur a effectué des modifications dans l'intervalle, elles sont identifiées au moment où `SubmitChanges()` est appelé.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] utilise cette approche pour gérer l’intégrité des objets locaux pour prendre en charge les mises à jour optimistes. Étant donné que les seules modifications qui se produisent une fois que l'objet a été créé sont celles effectuées par l'application, le rôle de l'application est correctement défini. Si un tiers extérieur a effectué des modifications dans l'intervalle, elles sont identifiées au moment où `SubmitChanges()` est appelé.  
   
 > [!NOTE]
 >  Si l'objet demandé par la requête est facilement identifiable comme un objet déjà récupéré, aucune requête n'est exécutée. La table d'identités agit en tant que cache de tous les objets récupérés précédemment.  

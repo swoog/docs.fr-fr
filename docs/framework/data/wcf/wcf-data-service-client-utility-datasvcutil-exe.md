@@ -1,28 +1,16 @@
 ---
-title: "Utilitaire client des services de données WCF (DataSvcUtil.exe)"
-ms.custom: 
+title: Utilitaire client des services de données WCF (DataSvcUtil.exe)
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, generating client data classes
 - WCF Data Services, client library
 - WCF Data Services, consuming
 ms.assetid: 9d0af606-929b-4c03-b307-3ef5f705afce
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fcbbbe5180acaf943956310d4837a105d8d049d7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3206947d06a1736116674b70e469c20f8f4fca86
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-data-service-client-utility-datasvcutilexe"></a>Utilitaire client des services de données WCF (DataSvcUtil.exe)
 DataSvcUtil.exe est un outil de ligne de commande fourni par [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] qui consomme un [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] flux et génère les classes de service de données client qui sont nécessaires pour accéder à un service de données à partir d’une application cliente .NET Framework. Cet utilitaire peut générer des classes de données à l'aide des sources de métadonnées suivantes :  
@@ -50,7 +38,7 @@ datasvcutil /out:file [/in:file | /uri:serviceuri] [/dataservicecollection] [/la
 |`/dataservicecollection`|Spécifie que le code nécessaire pour lier des objets aux contrôles est également généré.|  
 |`/help`<br /><br /> ou<br /><br /> `/?`|Affiche la syntaxe et les options de commande de l'outil.|  
 |`/in:` *\<fichier >*|Spécifie le fichier .csdl ou .edmx ou un répertoire qui contient le fichier.|  
-|`/language:`[VB &#124; CSharp]|Spécifie le langage des fichiers de code source générés. Le langage par défaut est C#.|  
+|`/language:`[VB&#124;CSharp]|Spécifie le langage des fichiers de code source générés. Le langage par défaut est C#.|  
 |`/nologo`|Supprime l'affichage du message de copyright.|  
 |`/out:` *\<fichier >*|Spécifie le nom du fichier de code source qui contient les classes de service de données client générées.|  
 |`/uri:` *\<chaîne >*|L’URI de la [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] de flux.|  

@@ -1,24 +1,14 @@
 ---
-title: "Comment : générer une application web ASP.NET MVC prenant en charge les revendications à l’aide de WIF"
-ms.custom: 
+title: 'Comment : générer une application web ASP.NET MVC prenant en charge les revendications à l’aide de WIF'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0efb76bc-9f7b-4afe-be1c-2a57c917010b
-caps.latest.revision: "6"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 39364f06cec35b1a5417540dfa29b0cac24fbdb6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 146724f31e1d09f09f94d102366539dc79ddfe02
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-build-claims-aware-aspnet-mvc-web-application-using-wif"></a>Comment : générer une application web ASP.NET MVC prenant en charge les revendications à l’aide de WIF
 ## <a name="applies-to"></a>S'applique à  
@@ -80,7 +70,7 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="to-configure-aspnet-mvc-application-for-claims-based-authentication"></a>Pour configurer une application ASP.NET MVC pour l’authentification basée sur les revendications  
   
-1.  Ajoutez les définitions des sections de configuration suivantes au fichier de configuration *Web.config*. Elles définissent les sections de configuration requises par Windows Identity Foundation. Ajoutez les définitions immédiatement après l’élément d’ouverture **\<configuration>** :  
+1.  Ajoutez les définitions des sections de configuration suivantes au fichier de configuration *Web.config*. Elles définissent les sections de configuration requises par Windows Identity Foundation. Ajoutez les définitions immédiatement après l’élément d’ouverture **\<configuration>**  :  
   
     ```xml  
     <configSections>  

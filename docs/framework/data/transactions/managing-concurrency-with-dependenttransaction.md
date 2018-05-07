@@ -1,23 +1,12 @@
 ---
-title: "Gestion de l'accès concurrentiel avec DependentTransaction"
-ms.custom: 
+title: Gestion de l'accès concurrentiel avec DependentTransaction
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b85a97d8-8e02-4555-95df-34c8af095148
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ffda721459ef81d148d55359362fe1aeaf9e699e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5bcf321c2c09411ddb720e2cb4be1ddb076bbe6a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="managing-concurrency-with-dependenttransaction"></a>Gestion de l'accès concurrentiel avec DependentTransaction
 L'objet <xref:System.Transactions.Transaction> est créé à l'aide de la méthode <xref:System.Transactions.Transaction.DependentClone%2A>. Il garantit que la transaction n'est pas validée tant que d'autres parties de code (par exemple, un thread de travail) travaillent encore sur la transaction. Une fois le travail sur la transaction clonée effectué et prêt pour validation, il peut informer le créateur de la transaction à l'aide de la méthode <xref:System.Transactions.DependentTransaction.Complete%2A>. Cela vous permet de conserver la cohérence et l'exactitude des données.  

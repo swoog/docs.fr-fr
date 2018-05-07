@@ -1,27 +1,15 @@
 ---
 title: Propagation
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f8181e75-d693-48d1-b333-a776ad3b382a
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 17b20b76d4932272c8e2a9e26603dc8483505242
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 5d848a2b74402d0adf125488481f5b82e0b09781
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="propagation"></a>Propagation
-Cette rubrique décrit la propagation d'activité dans le modèle de suivi [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].  
+Cette rubrique décrit la propagation d’activité dans le modèle de suivi Windows Communication Foundation (WCF).  
   
 ## <a name="using-propagation-to-correlate-activities-across-endpoints"></a>Utilisation de la propagation pour corréler des activités sur des points de terminaison  
  La propagation fournit à l'utilisateur la corrélation directe de suivi d'erreur pour la même unité de traitement sur des points de terminaison d'application, par exemple, une demande. Les erreurs émises à des points de terminaison différents pour la même unité de traitement sont groupées dans la même activité, y compris sur les domaines d'application. Cette opération s'effectue par la propagation de l'ID d'activité dans les en-têtes de message. Par conséquent, en cas d'expiration d'un client à cause d'une erreur interne dans le serveur, les deux erreurs apparaissent dans la même activité pour une corrélation directe.  
