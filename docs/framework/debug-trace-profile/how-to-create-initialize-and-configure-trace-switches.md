@@ -1,13 +1,6 @@
 ---
-title: "Comment : créer, initialiser et configurer les commutateurs de traçage"
-ms.custom: 
+title: 'Comment : créer, initialiser et configurer les commutateurs de traçage'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,13 @@ helpviewer_keywords:
 - tracing [.NET Framework], enabling or disabling
 - Web.config configuration file, trace switches
 ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
-caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 41e41f65b82061cebc52485ed08176633c45613d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4088c74d0ea8e9f2ad70aff37d99870d34b168ba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-initialize-and-configure-trace-switches"></a>Comment : créer, initialiser et configurer les commutateurs de traçage
 Les commutateurs de trace vous permettent d'activer ou de désactiver la sortie de traçage, et de la filtrer.  
@@ -88,7 +78,7 @@ Les commutateurs de trace vous permettent d'activer ou de désactiver la sortie 
   
          Le fichier de configuration de l'application est créé, puis ouvert. Il s'agit d'un document XML dont l'élément racine est `<configuration>.`  
   
-    -   **Visual C#** : dans la boîte de dialogue **Ajouter un nouvel élément**, choisissez **Fichier XML**. Nommez ce fichier **app.config**. Dans l'éditeur XML, après la déclaration XML, ajoutez les balises suivantes :  
+    -   **Visual C#**  : dans la boîte de dialogue **Ajouter un nouvel élément**, choisissez **Fichier XML**. Nommez ce fichier **app.config**. Dans l'éditeur XML, après la déclaration XML, ajoutez les balises suivantes :  
   
         ```xml  
         <configuration>  

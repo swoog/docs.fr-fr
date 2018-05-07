@@ -1,13 +1,6 @@
 ---
-title: "Comment : ajouter des contrôles à des Windows Forms"
-ms.custom: 
+title: 'Comment : ajouter des contrôles à des Windows Forms'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ab92f7a56173ec71642d0cc09f3f81e9859533b4
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 2dd048fb074d1ec5bb7bc0a67f196d5d51281545
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-add-controls-to-windows-forms"></a>Comment : ajouter des contrôles à des Windows Forms
 La plupart des formulaires sont conçus en ajoutant des contrôles à la surface de l’écran pour définir une interface utilisateur (IU). A *contrôle* est un composant d’un formulaire utilisé pour afficher des informations ou accepter l’entrée d’utilisateur. Pour plus d’informations sur les contrôles, consultez [des contrôles Windows Forms](../../../../docs/framework/winforms/controls/index.md).  

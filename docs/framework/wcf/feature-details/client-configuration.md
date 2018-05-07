@@ -1,34 +1,20 @@
 ---
 title: Configuration client
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 5da5bd3b-65d9-43b7-91b9-cc9e989b1350
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c2c0d17c7274cc9fdaf1b5080950ddb4f69f539a
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 0fd3d1a15164447275ef488ac91b9a8bd240032d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="client-configuration"></a>Configuration client
-Vous pouvez utiliser la configuration client [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] pour spécifier l'adresse, la liaison, le comportement, le contrat et les propriétés « ABC » du point de terminaison de client, que les clients utilisent pour se connecter aux points de terminaison de service. Le [ \<client >](../../../../docs/framework/configure-apps/file-schema/wcf/client.md) élément a un [ \<point de terminaison >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) élément dont les attributs sont utilisés pour configurer le point de terminaison ABC. Ces attributs sont traités dans la section « Configuration des points de terminaison » de cette rubrique.  
+Vous pouvez utiliser la configuration du client Windows Communication Foundation (WCF) pour spécifier l’adresse, liaison, comportement et contrat, les propriétés « ABC » du point de terminaison client, les clients utilisent pour se connecter aux points de terminaison de service. Le [ \<client >](../../../../docs/framework/configure-apps/file-schema/wcf/client.md) élément a un [ \<point de terminaison >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) élément dont les attributs sont utilisés pour configurer le point de terminaison ABC. Ces attributs sont traités dans la section « Configuration des points de terminaison » de cette rubrique.  
   
  Le [ \<point de terminaison >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) élément contient également un [ \<métadonnées >](../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md) élément qui est utilisé pour spécifier les paramètres pour l’importation et exportation de métadonnées, un [ \<en-têtes >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) élément qui constituée une collection d’en-têtes d’adresse personnalisés, et un [ \<identité >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) élément qui permet l’authentification d’un point de terminaison par d’autres points de terminaison échanger des messages avec lui. Le [ \<en-têtes >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) et [ \<identité >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) éléments font partie de la <xref:System.ServiceModel.EndpointAddress> et sont décrits dans le [adresses](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md) rubrique. Des liens vers les rubriques qui expliquent l’utilisation des extensions de métadonnées sont fournis dans la sous-section Configuration des métadonnées de cette rubrique.  
   
 ## <a name="configuring-endpoints"></a>Configuration des points de terminaison  
- La configuration du client est conçue pour permettre au client spécifier un ou plusieurs points de terminaison, chacun avec son propre nom, adresse et contrat, et référençant chacun les [ \<liaisons >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) et [ \< comportements >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) éléments dans la configuration du client à utiliser pour configurer ce point de terminaison. Le fichier configuration client doit être nommé « App.config » parce que c'est le nom que l'exécution [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] attend. L'exemple suivant illustre un fichier de configuration client.  
+ La configuration du client est conçue pour permettre au client spécifier un ou plusieurs points de terminaison, chacun avec son propre nom, adresse et contrat, et référençant chacun les [ \<liaisons >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) et [ \< comportements >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) éléments dans la configuration du client à utiliser pour configurer ce point de terminaison. Le fichier de configuration client doit être nommé « App.config », car c’est le nom que le runtime WCF attend. L'exemple suivant illustre un fichier de configuration client.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

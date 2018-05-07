@@ -1,11 +1,7 @@
 ---
-title: "PutClassWmi (fonction) (référence des API non managées)"
-description: "La fonction PutClassWmi crée une nouvelle classe ou met à jour un existant."
+title: PutClassWmi (fonction) (référence des API non managées)
+description: La fonction PutClassWmi crée une nouvelle classe ou met à jour un existant.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - PutClassWmi
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 219cec2096cd3d1dfe1e0d3c0903b62692e444e6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3ce887d59d02cfc2e4d8c183aa495dcc1535853c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="putclasswmi-function"></a>PutClassWmi (fonction)
 Crée une nouvelle classe, ou met à jour un existant.  
@@ -59,7 +52,7 @@ HRESULT PutClassWmi (
 | `WBEM_FLAG_CREATE_OR_UPDATE` | 0 | Créer la classe si elle n’existe pas, ou remplacer si elle existe déjà. |
 | `WBEM_FLAG_UPDATE_ONLY` | 1 | Mettre à jour de la classe. La classe doit exister pour l’appel réussisse. |
 | `WBEM_FLAG_CREATE_ONLY` | 2 | Créer la classe. L’appel échoue si la classe existe déjà. |
-| `WBEM_FLAG_RETURN_IMMEDIATELY` | 0 x 10 | L’indicateur provoque un appel semi-synchrone. |
+| `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | L’indicateur provoque un appel semi-synchrone. |
 | `WBEM_FLAG_OWNER_UPDATE` | 0 x 10000 | Les fournisseurs de push doivent spécifier cet indicateur lors de l’appel `PutClassWmi` pour indiquer que cette classe a été modifiée. |
 | `WBEM_FLAG_UPDATE_COMPATIBLE` | 0 | Permet à une classe d’être mis à jour s’il n’y aucune classe dérivée et aucune instance de cette classe. Il autorise également les mises à jour dans tous les cas si la modification est simplement de qualificateurs sans importance, tels que le qualificateur de Description. Si la classe possède des instances, ou les modifications doivent qualificateurs importants, la mise à jour échoue. |
 | `WBEM_FLAG_UPDATE_SAFE_MODE` | 0 x 20 | Autorise les mises à jour des classes même si les classes enfants tant que la modification ne provoque pas de conflit avec les classes enfants. Par exemple, cet indicateur permet une nouvelle propriété à ajouter à la classe de base qui n’était pas précédemment mentionnée dans toutes les classes enfants. Si la classe possède des instances, la mise à jour échoue. |
@@ -84,7 +77,7 @@ Les valeurs suivantes est retournées par cette fonction sont définies dans le 
 | `WBEM_E_INVALID OPERATION` | 0x80041016 | Le nom de la classe spécifiée n’est pas valid. |
 | `WBEM_E_CLASS_HAS_CHILDREN` | 0x80041025 | Une tentative a été effectuée pour apporter une modification qui invaliderait la sous-classe. |
 | `WBEM_E_ALREADY_EXISTS` | 0x80041019 | Le `WBEM_FLAG_CREATE_ONLY` indicateur a été spécifié, mais la classe existe déjà. |
-| `WBEM_E_NOT_FOUND` | 0x80041002 | `WBEM_FLAG_UPDATE_ONLY`a été spécifié dans `lFlags`, et la classe est introuvable. |
+| `WBEM_E_NOT_FOUND` | 0x80041002 | `WBEM_FLAG_UPDATE_ONLY` a été spécifié dans `lFlags`, et la classe est introuvable. |
 | `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | Les propriétés requises pour les classes ont pas toutes été définies. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Pas assez de mémoire est disponible pour terminer l’opération. |
 | `WBEM_E_SHUTTING_DOWN` | 0x80041033 | WMI s’est probablement arrêté, puis redémarrez. Appelez [ConnectServerWmi](connectserverwmi.md) à nouveau. |
@@ -99,12 +92,12 @@ L’utilisateur ne peut pas créer les classes dont les noms commencent ou finir
 
 Si l’appel de fonction échoue, vous pouvez obtenir des informations d’erreur supplémentaires en appelant le [GetErrorInfo](geterrorinfo.md) (fonction).
 
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** WMINet_Utils.idl  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versions du .NET framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
 [WMI et les compteurs de Performance (référence des API non managées)](index.md)

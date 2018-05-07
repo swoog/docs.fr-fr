@@ -1,27 +1,15 @@
 ---
-title: "Recommandations pour la conception de contrôles auxquels un style peut être appliqué"
-ms.custom: 
+title: Recommandations pour la conception de contrôles auxquels un style peut être appliqué
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - style design for controls [WPF]
 - controls [WPF], style design
 ms.assetid: c52dde45-a311-4531-af4c-853371c4d5f4
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6707a434f64838467033966c9093e1e415b1fb31
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4e807a323f6b454b1f07c8e0a9f99b17c9723df7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="guidelines-for-designing-stylable-controls"></a>Recommandations pour la conception de contrôles auxquels un style peut être appliqué
 Ce document récapitule un ensemble de meilleures pratiques à envisager lors de la conception d’un contrôle auquel vous souhaitez appliquer facilement un style et un modèle. Ces meilleures pratiques sont issues d’un long processus d’essais et d’erreurs lors de notre travail sur les styles de contrôles de thème pour le jeu de contrôles [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] intégré. Nous avons appris qu’un style réussi constitue tout autant une fonction d’un modèle d’objet bien conçu que du style lui-même. Ce document concerne l’auteur du contrôle et non l’auteur du style.  

@@ -1,14 +1,6 @@
 ---
-title: "IMetaDataImport::EnumMemberRefs, méthode"
-ms.custom: 
+title: IMetaDataImport::EnumMemberRefs, méthode
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataImport.EnumMemberRefs
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: e97c97a6-6e4f-41f5-9af1-9b3cf3bdbd6b
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ea308db566e37d10cccdc2777b5a2374408a8ea6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c148ee0b2c96f2a387dac54eaff690ab3f05ebf8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataimportenummemberrefs-method"></a>IMetaDataImport::EnumMemberRefs, méthode
 Énumère les jetons MemberRef représentant les membres du type spécifié.  
@@ -70,17 +58,17 @@ HRESULT EnumMemberRefs (
   
 |HRESULT|Description|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMemberRefs`retourné avec succès.|  
+|`S_OK`|`EnumMemberRefs` retourné avec succès.|  
 |`S_FALSE`|Il n’existe pas de jetons MemberRef à énumérer. Dans ce cas, `pcTokens` a la valeur zéro.|  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Cor.h  
   
  **Bibliothèque :** inclus en tant que ressource dans MsCorEE.dll  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [IMetaDataImport, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  

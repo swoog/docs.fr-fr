@@ -1,29 +1,15 @@
 ---
 title: Liaisons personnalisées
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation, endpoints
 - Windows Communication Foundation, configuration
 ms.assetid: 58532b6d-4eea-4a4f-854f-a1c8c842564d
-caps.latest.revision: 33
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f5fc38becb4a737ada5102c187ddeaac73aaceb1
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 6880b04a3f8a82c1e109c32674804c5241913a8a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-bindings"></a>Liaisons personnalisées
 Vous pouvez utiliser la classe <xref:System.ServiceModel.Channels.CustomBinding> lorsque l'une des liaisons fournies par le système ne répond pas aux spécifications de votre service. Toutes les liaisons sont construites à partir d’un ensemble ordonné d’éléments de liaison. Les liaisons personnalisées peuvent être construites à partir d’un jeu d’éléments de liaison fournis par le système ou peuvent inclure des éléments de liaison personnalisés définis par l’utilisateur. Vous pouvez utiliser des éléments de liaison personnalisés pour activer, par exemple, l’utilisation de nouveaux transports ou encodeurs au niveau d’un point de terminaison de service. Pour obtenir des exemples fonctionnels, consultez [exemples de liaison personnalisés](http://msdn.microsoft.com/library/657e8143-beb0-472d-9cfe-ed1a19c2ab08). Pour plus d’informations, consultez [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
@@ -55,7 +41,7 @@ Vous pouvez utiliser la classe <xref:System.ServiceModel.Channels.CustomBinding>
   
     -   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>  
   
- Au bas de la pile se trouve un élément de transport obligatoire. Vous pouvez utiliser votre propre transport ou l'un des éléments de liaison de transport suivants fournis par [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] :  
+ Au bas de la pile se trouve un élément de transport obligatoire. Vous pouvez utiliser votre propre transport ou l’un des éléments de liaison de transport suivant fournit des services Windows Communication Foundation (WCF) :  
   
 -   <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
   

@@ -1,26 +1,12 @@
 ---
 title: Recherche de découverte et FindCriteria
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
-caps.latest.revision: 6
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 17ca5e12390e33525f0223917e4c72556a2a2ec7
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 70739647ac5904159b71121e86aa98e92981d4ab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="discovery-find-and-findcriteria"></a>Recherche de découverte et FindCriteria
 Une opération de recherche de découverte est lancée par un client pour découvrir un ou plusieurs services ; il s'agit de l'une des principales actions de la découverte. Effectuer une recherche envoie un message Probe WS-Discovery sur le réseau. Les services qui correspondent aux critères spécifiés répondent avec des messages WS-Discovery ProbeMatch. Pour plus d’informations sur les messages de découverte, consultez la [spécification WS-Discovery](http://go.microsoft.com/fwlink/?LinkID=122347).  
@@ -33,7 +19,7 @@ Une opération de recherche de découverte est lancée par un client pour décou
   
  Les critères de recherche incluent :  
   
--   <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement> : facultatif. Nom de contrat du service recherché et critères habituellement utilisés lors de la recherche d'un service. Si plusieurs noms de contrat sont spécifiés, seuls les points de terminaison de service correspondant à TOUS les contrats répondent. Notez que dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] un point de terminaison ne peut prendre en charge qu'un seul contrat.  
+-   <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement> : facultatif. Nom de contrat du service recherché et critères habituellement utilisés lors de la recherche d'un service. Si plusieurs noms de contrat sont spécifiés, seuls les points de terminaison de service correspondant à TOUS les contrats répondent. Notez que dans WCF un point de terminaison peut uniquement prendre en charge un seul contrat.  
   
 -   <xref:System.ServiceModel.Discovery.Configuration.ScopeElement> : facultatif. Les étendues sont des URI absolus utilisés pour définir les catégories de points de terminaison de service individuels. Vous pouvez les utiliser dans des scénarios où plusieurs points de terminaison exposent le même contrat, lorsque vous souhaitez rechercher un sous-ensemble des points de terminaison. Si plusieurs étendues sont spécifiées, seuls les points de terminaison de service correspondant à TOUTES les étendues répondent.  
   

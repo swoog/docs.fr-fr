@@ -1,13 +1,6 @@
 ---
 title: ComponentResourceKey, extension de balisage
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - ComponentResourceKey
 - ComponentResourceKeyExtension
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - ComponentResourceKey markup extension [WPF]
 - XAML [WPF], ComponentResourceKey markup extension
 ms.assetid: d6bcdbe6-61b3-40a7-b381-4e02185b5a85
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f4bfaee35ba9f8cf60deb01c52a142433d08021c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d11c26add084165eaa9fd0b319a375c4b98c7fb9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="componentresourcekey-markup-extension"></a>ComponentResourceKey, extension de balisage
 Définit et référence des clés pour les ressources qui sont chargés à partir des assemblys externes. Cela permet une recherche de ressource spécifier un type de cible dans un assembly, plutôt qu’un dictionnaire de ressources explicite dans un assembly ou une classe.  
@@ -67,7 +55,7 @@ Définit et référence des clés pour les ressources qui sont chargés à parti
   
 -   L’accès à une ressource du thème à partir de l’assembly, lorsque vous apprêter le contrôle mais souhaitez utiliser les valeurs de propriété qui viennent de ressources fournies par les thèmes du contrôle.  
   
- Pour faire référence à des ressources de composant qui proviennent de thèmes, il est généralement recommandé d’utiliser `{DynamicResource}` plutôt que `{StaticResource}`. Cela est illustré dans les utilisations. `{DynamicResource}`est recommandée car le thème lui-même peut être modifié par l’utilisateur. Si vous souhaitez que la ressource de composant qui correspond le mieux à l’intention de l’auteur de contrôle pour un thème de prise en charge, vous devez activer votre référence de ressource de composant d’être également dynamique.  
+ Pour faire référence à des ressources de composant qui proviennent de thèmes, il est généralement recommandé d’utiliser `{DynamicResource}` plutôt que `{StaticResource}`. Cela est illustré dans les utilisations. `{DynamicResource}` est recommandée car le thème lui-même peut être modifié par l’utilisateur. Si vous souhaitez que la ressource de composant qui correspond le mieux à l’intention de l’auteur de contrôle pour un thème de prise en charge, vous devez activer votre référence de ressource de composant d’être également dynamique.  
   
  Le <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> identifie un type qui existe dans l’assembly cible où la ressource est définie. A `ComponentResourceKey` peut être définie et utilisée indépendamment de savoir exactement où le <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> est défini, mais par la suite doit résoudre le via les assemblys référencés.  
   
@@ -79,7 +67,7 @@ Définit et référence des clés pour les ressources qui sont chargés à parti
   
  Techniquement, la valeur de `targetID` peut être n’importe quel objet, il n’a pas à être une chaîne. Toutefois, l’utilisation la plus courante dans WPF est d’aligner les `targetID` valeur avec les formulaires qui sont des chaînes, et où ces chaînes sont valides dans le [XamlName, grammaire](../../../../docs/framework/xaml-services/xamlname-grammar.md).  
   
- `ComponentResourceKey`peut être utilisé dans la syntaxe d’élément objet. Dans ce cas, en spécifiant la valeur des deux le <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> et <xref:System.Windows.ComponentResourceKey.ResourceId%2A> propriétés est requis pour initialiser correctement l’extension.  
+ `ComponentResourceKey` peut être utilisé dans la syntaxe d’élément objet. Dans ce cas, en spécifiant la valeur des deux le <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> et <xref:System.Windows.ComponentResourceKey.ResourceId%2A> propriétés est requis pour initialiser correctement l’extension.  
   
  Dans le [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] implémentation de lecteur, la gestion de cette extension de balisage est définie par le <xref:System.Windows.ComponentResourceKey> classe.  
   

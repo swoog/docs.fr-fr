@@ -1,27 +1,15 @@
 ---
-title: "Outil de configuration de modèle de service COM+ (ComSvcConfig.exe)"
-ms.custom: 
+title: Outil de configuration de modèle de service COM+ (ComSvcConfig.exe)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: 7717c6c2-85fc-418b-a8ed-bad8e61cec5c
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 40e7644ade32f245772a8971cf0693683b980952
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: db4518a66c54574f498c4657e25a29676f0f720a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="com-service-model-configuration-tool-comsvcconfigexe"></a>Outil de configuration de modèle de service COM+ (ComSvcConfig.exe)
 L'outil en ligne de configuration de modèle de service COM+ (ComSvcConfig.exe) permet de configurer des interfaces COM+ à exposer en tant que services Web.  
@@ -55,11 +43,11 @@ ComSvcConfig.exe /install | /uninstall | /list [/application:<ApplicationID | Ap
   
 |Option|Description|  
 |------------|-----------------|  
-|`/application:`\< *ApplicationID* &#124; *ApplicationName*\>|Spécifie l'application COM+ à configurer.<br /><br /> Forme abrégée : `/a`.|  
-|`/contract:`\< *ClassID* &#124; *ProgID* &#124; \*,*InterfaceID* &#124; *InterfaceName* &#124;\*\>|Spécifie le composant et l'interface COM+ qui seront configurés en tant que contrat pour le service.<br /><br /> Forme abrégée : `/c`.<br /><br /> Alors que le caractère générique (\*) peut être utilisé lorsque vous spécifiez les noms de composant et d’interface, nous recommandons que vous ne l’utilisez pas, car vous pouvez exposer les interfaces que vous ne souhaitez pas.|  
-|`/hosting:`\< *complus* &#124; *a été*\>|Spécifie s'il faut utiliser le mode d'hébergement COM+ ou Web.<br /><br /> Forme abrégée : `/h`.<br /><br /> L'utilisation du mode d'hébergement COM+ requiert l'activation explicite de l'application COM+. L'utilisation du mode d'hébergement Web permet à l'application COM+ d'être activée automatiquement, de façon appropriée. Si l'application COM+ est une application de bibliothèque, elle s'exécute au cours du processus de Services Internet (IIS). Si l'application COM+ est une application serveur, elle s'exécute au cours du processus Dllhost.exe.|  
-|`/webSite:`\< *WebsiteName*\>|Spécifie le site Web à utiliser pour l'hébergement lorsque le mode d'hébergement Web est utilisé (consultez l'indicateur `/hosting` ).<br /><br /> Forme abrégée : `/w`.<br /><br /> Si aucun site web n’est spécifié, le site web par défaut est utilisé.|  
-|`/webDirectory:`\< *WebDirectoryName*\>|Spécifie le répertoire virtuel à utiliser pour l'hébergement lorsque le mode d'hébergement Web est utilisé (consultez l'indicateur `/hosting` ).<br /><br /> Forme abrégée : `/d`.|  
+|`/application:` \<*ApplicationID* &#124; *ApplicationName*\>|Spécifie l'application COM+ à configurer.<br /><br /> Forme abrégée : `/a`.|  
+|`/contract:` \<*ClassID* &#124; *ProgID* &#124; \*,*InterfaceID* &#124; *InterfaceName*    &#124; \*\>|Spécifie le composant et l'interface COM+ qui seront configurés en tant que contrat pour le service.<br /><br /> Forme abrégée : `/c`.<br /><br /> Alors que le caractère générique (\*) peut être utilisé lorsque vous spécifiez les noms de composant et d’interface, nous recommandons que vous ne l’utilisez pas, car vous pouvez exposer les interfaces que vous ne souhaitez pas.|  
+|`/hosting:` \<*ComPlus* &#124; *a été* \>|Spécifie s'il faut utiliser le mode d'hébergement COM+ ou Web.<br /><br /> Forme abrégée : `/h`.<br /><br /> L'utilisation du mode d'hébergement COM+ requiert l'activation explicite de l'application COM+. L'utilisation du mode d'hébergement Web permet à l'application COM+ d'être activée automatiquement, de façon appropriée. Si l'application COM+ est une application de bibliothèque, elle s'exécute au cours du processus de Services Internet (IIS). Si l'application COM+ est une application serveur, elle s'exécute au cours du processus Dllhost.exe.|  
+|`/webSite:` \<*Nom du site Web*\>|Spécifie le site Web à utiliser pour l'hébergement lorsque le mode d'hébergement Web est utilisé (consultez l'indicateur `/hosting` ).<br /><br /> Forme abrégée : `/w`.<br /><br /> Si aucun site web n’est spécifié, le site web par défaut est utilisé.|  
+|`/webDirectory:` \<*WebDirectoryName*\>|Spécifie le répertoire virtuel à utiliser pour l'hébergement lorsque le mode d'hébergement Web est utilisé (consultez l'indicateur `/hosting` ).<br /><br /> Forme abrégée : `/d`.|  
 |`/mex`|Ajoute un service d'échange de métadonnées (MEX, Metadata Exchange) à la configuration du service par défaut pour prendre en charge les clients qui souhaitent récupérer une définition de contrat à partir du service.<br /><br /> Forme abrégée : `/x`.|  
 |`/id`|Affiche les informations sur l'application, le composant et l'interface en tant qu'ID.<br /><br /> Forme abrégée : `/k`.|  
 |`/nologo`|Empêche ComSvcConfig.exe d'afficher son logo.<br /><br /> Forme abrégée : `/n`.|  

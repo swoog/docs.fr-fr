@@ -1,23 +1,12 @@
 ---
 title: Configuration du suivi d'un workflow
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bb64569984d71e35ef9f502c79d3a0bb8b4b8988
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 70697d82242ab0704dd67129940a6660d300bef9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>Configuration du suivi d'un workflow
 Un workflow peut s'exécuter de trois façons :  
@@ -156,7 +145,7 @@ invoker.Invoke();
 ```  
   
 ### <a name="viewing-tracking-records-in-event-viewer"></a>Affichage des enregistrements de suivi dans l'observateur d'événements  
- Il existe deux journaux de l'Observateur d'événements particulièrement intéressants à consulter lors de l'exécution de WF : le journal d'analyse et le journal de débogage. Tous deux résident sous Microsoft &#124; Windows &#124; Nœud Applications de serveur d’application.  Les journaux de cette section contiennent des événements d'une application unique plutôt que des événements qui ont un impact sur le système entier.  
+ Il existe deux journaux de l'Observateur d'événements particulièrement intéressants à consulter lors de l'exécution de WF : le journal d'analyse et le journal de débogage. Tous deux résident sous Microsoft&#124;Windows&#124;nœud de serveur d’applications-Applications.  Les journaux de cette section contiennent des événements d'une application unique plutôt que des événements qui ont un impact sur le système entier.  
   
  Les événements de trace de débogage sont écrits dans le journal de débogage. Pour collecter les événements de trace de débogage WF dans l'Observateur d'événements, activez le journal de débogage.  
   

@@ -1,14 +1,6 @@
 ---
 title: StackSnapshotCallback (fonction)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - StackSnapshotCallback
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: d0f235b2-91fe-4f82-b7d5-e5c64186eea8
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 32cf21fb5a76fdec4daa322d53a8eb218ae2f2b5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 78fdcb69e73bc7238972d1a6ffb37b5ba91c7953
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="stacksnapshotcallback-function"></a>StackSnapshotCallback (fonction)
 Fournit au profileur des informations sur chaque frame managé et chaque exécution de frames non managés sur la pile pendant un parcours de pile, qui est initié par le [ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) (méthode).  
@@ -76,14 +64,14 @@ HRESULT __stdcall StackSnapshotCallback (
   
  Le `ICorProfilerInfo2::DoStackSnapshot` les appels de méthode du `StackSnapshotCallback` fonction une fois par frame managé ou une fois par exécution de frames non managés. Si `StackSnapshotCallback` est appelée pour une exécution de frames non managés, le profileur peut utiliser le contexte de Registre (référencé par le `context` paramètre) pour effectuer son propre parcours de pile non managé. Dans ce cas, Win32 `CONTEXT` structure représente l’état de l’UC pour le frame plus récemment envoyée lors de l’exécution de frames non managés. Bien que Win32 `CONTEXT` structure inclut des valeurs pour tous les registres, vous devez compter uniquement sur les valeurs de Registre de pointeur de pile, Registre de pointeur de frame, Registre de pointeur d’instruction et la non volatile (autrement dit, préservée) registres d’entiers.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorProf.idl  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [DoStackSnapshot, méthode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)  

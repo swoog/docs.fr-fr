@@ -1,32 +1,20 @@
 ---
 title: Modes d'authentification SecurityBindingElement
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 12300bf4-c730-4405-9f65-d286f68b5a43
-caps.latest.revision: 13
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8ca854d6b0431b5fe4972972d9d39de934f64b4d
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 715c813015fdb4b52444efca0bdcfc99acc92c21
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="securitybindingelement-authentication-modes"></a>Modes d'authentification SecurityBindingElement
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] fournit plusieurs modes par lesquels les clients et services s'authentifient les uns les autres. Vous pouvez créer des éléments de liaison de sécurité pour ces modes d'authentification à l'aide des méthodes statiques sur la classe <xref:System.ServiceModel.Channels.SecurityBindingElement> ou via la configuration. Cette rubrique décrit brièvement les 18 modes d'authentification.  
+Windows Communication Foundation (WCF) fournit plusieurs modes par lesquels les clients et services s’authentifient mutuellement. Vous pouvez créer des éléments de liaison de sécurité pour ces modes d'authentification à l'aide des méthodes statiques sur la classe <xref:System.ServiceModel.Channels.SecurityBindingElement> ou via la configuration. Cette rubrique décrit brièvement les 18 modes d'authentification.  
   
  Pour obtenir un exemple d’utilisation de l’élément pour un des modes d’authentification, consultez [Comment : créer un SecurityBindingElement pour un Mode d’authentification spécifié](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md).  
   

@@ -1,23 +1,12 @@
 ---
-title: "Hôte ReadLine WorkflowApplication"
-ms.custom: 
+title: Hôte ReadLine WorkflowApplication
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f7b362be-cb42-40d7-b9ef-cfc4aed2455b
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f8426dd3835f53eeb85711a691c878ce2b877d09
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8da8a5bb4c80a86fe5ae9e133ea545c00ee17fba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="workflowapplication-readline-host"></a>Hôte ReadLine WorkflowApplication
 Cet exemple est un hôte ReadLine générique. Vous pouvez charger et exécuter tout workflow à l'aide de l'activité `ReadLine` incluse (ou d'autres activités semblables qui obtiennent des données à partir de signets repris avec les chaînes). La sortie de l'activité `WriteLine` ou de tout élément qui écrit dans l'extension <xref:System.Activities.Statements.WriteLine.TextWriter%2A> est dirigée vers la fenêtre hôte. Lorsqu'une instance est inactive, les signets disponibles pour cette instance s'affichent dans une zone de liste déroulante. Si vous sélectionnez un signet, entrez un texte et appuyez sur le bouton de reprise de signet, l'exécution du workflow continue. Vous pouvez également annuler, abandonner ou arrêter un workflow sélectionné. La persistance est activée par défaut ; vous pouvez fermer et rouvrir hôte, et la liste des instances est remplie avec les instances stockées dans la base de données. Le suivi est utilisé pour générer des événements de niveau <xref:System.Activities.WorkflowApplication> pour l'hôte avec la possibilité d'ajouter un suivi détaillé au niveau de l'activité.  
@@ -66,6 +55,6 @@ Cet exemple est un hôte ReadLine générique. Vous pouvez charger et exécuter 
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à la page [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les exemples [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Execution\ControllingWorkflowApplications`

@@ -1,24 +1,12 @@
 ---
-title: "Extensibilité de la syndication"
-ms.custom: 
+title: Extensibilité de la syndication
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4d941175-74a2-4b15-81b3-086e8a95d25f
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5322ff2c79ab5051b3a9aaaeaafe7db6c9c2f683
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8182aee9d8a526d995ab1266e5c654f29f4af3d8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="syndication-extensibility"></a>Extensibilité de la syndication
 L'API de syndication est conçue pour fournir un modèle de programmation neutre en ce qui concerne le format qui autorise l'écriture du contenu syndiqué sur le câble dans divers formats. Le modèle de données abstrait inclut les classes suivantes :  
@@ -35,7 +23,7 @@ L'API de syndication est conçue pour fournir un modèle de programmation neutre
   
  Ces classes mappent précisément aux constructions définies dans la spécification Atom 1.0, bien que certains noms soient différents.  
   
- L’une des fonctionnalités clés de protocoles de syndication est l’extensibilité. Atom 1.0 et RSS 2.0 ajoutent des attributs et des éléments aux flux de syndication des attributs et des éléments qui ne sont pas définis dans les spécifications. Le modèle de programmation de la syndication [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] offre les moyens suivants d'utiliser des attributs personnalisés et des extensions : la dérivation d'une nouvelle classe et l'accès peu typé.  
+ L’une des fonctionnalités clés de protocoles de syndication est l’extensibilité. Atom 1.0 et RSS 2.0 ajoutent des attributs et des éléments aux flux de syndication des attributs et des éléments qui ne sont pas définis dans les spécifications. Le modèle de programmation de syndication de Windows Communication Foundation (WCF) fournit les moyens suivants d’utiliser des attributs personnalisés et extensions accès faiblement typé et dériver une nouvelle classe.  
   
 ## <a name="loosely-typed-access"></a>Accès peu typé  
  L'ajout des extensions en dérivant une classe nouvelle requiert l'écriture de code supplémentaire. Une autre option accède aux extensions d’une manière peu typée. Tous les types définis dans le modèle de données abstraites de syndication contiennent des propriétés nommées `AttributeExtensions` et `ElementExtensions` (avec une exception, <xref:System.ServiceModel.Syndication.SyndicationContent> possède une propriété `AttributeExtensions` mais aucune propriété `ElementExtensions` ). Ces propriétés sont des collections d'extensions non traitées par les méthodes `TryParseAttribute` et `TryParseElement`, respectivement. Vous pouvez accéder à ces extensions non traitées en appelant <xref:System.ServiceModel.Syndication.SyndicationElementExtensionCollection.ReadElementExtensions%2A?displayProperty=nameWithType> sur la propriété `ElementExtensions` de <xref:System.ServiceModel.Syndication.SyndicationFeed>, <xref:System.ServiceModel.Syndication.SyndicationItem>, <xref:System.ServiceModel.Syndication.SyndicationLink>, <xref:System.ServiceModel.Syndication.SyndicationPerson> et <xref:System.ServiceModel.Syndication.SyndicationCategory>. Ce jeu de méthodes recherche toutes les extensions avec le nom et l'espace de noms spécifiés, les désérialise individuellement dans les instances de `TExtension` et les retourne comme une collection d'objets `TExtension`.  

@@ -1,27 +1,15 @@
 ---
-title: "Mises en forme et styles de base dans le contrôle DataGridView Windows Forms"
-ms.custom: 
+title: Mises en forme et styles de base dans le contrôle DataGridView Windows Forms
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DataGridView control [Windows Forms], formatting and styling
 - data grids [Windows Forms], formatting
 ms.assetid: b9b90836-1f56-4aa9-8db8-edc78fe830e8
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3fa5c240adaaf6512cfbd6b7bd0796bd0983a530
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d38620c321fb12b9f489fd086e222b7780337ab3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="basic-formatting-and-styling-in-the-windows-forms-datagridview-control"></a>Mises en forme et styles de base dans le contrôle DataGridView Windows Forms
 Le `DataGridView` contrôle vous permet de définir l’apparence de base des cellules et le format d’affichage des valeurs de cellule. Vous pouvez définir d’apparence et la mise en forme de styles pour les cellules individuelles, pour les cellules dans des colonnes spécifiques et des lignes ou pour toutes les cellules dans le contrôle en définissant les propriétés de la `DataGridViewCellStyle` objets accédés par divers `DataGridView` propriétés du contrôle. En outre, vous pouvez modifier ces styles de façon dynamique en fonction de facteurs tels que la valeur de cellule en gérant le `CellFormatting` événement.  

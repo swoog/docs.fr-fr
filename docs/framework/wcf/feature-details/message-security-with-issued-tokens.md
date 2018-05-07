@@ -1,27 +1,17 @@
 ---
-title: "Sécurité de message avec jetons émis"
-ms.custom: 
+title: Sécurité de message avec jetons émis
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 731fc871-54d0-4689-90fd-1c9415c45621
-caps.latest.revision: "10"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 5badab7ed0773be30ba72045ebf97974e062629c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 237c56c74afe3c1e9bbdf2002011e76a9eeec5ce
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-security-with-issued-tokens"></a>Sécurité de message avec jetons émis
-Le client de jeton émis active la sécurité fédérée dans [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+Le client de jeton émis permet le scénario de sécurité fédérée dans Windows Communication Foundation (WCF).  
   
  La sécurité fédérée permet l'établissement de relations fiables entre des domaines indépendants. Chaque domaine centralise les processus d'authentification et d'autorisation dans un service de jeton de sécurité. Lorsqu'une relation fiable est établie entre deux services de ce genre, les membres de leur domaine respectif peuvent utiliser leurs services réciproques.  
   

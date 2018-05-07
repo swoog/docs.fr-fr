@@ -1,14 +1,6 @@
 ---
-title: "ICorRuntimeHost::GetConfiguration, méthode"
-ms.custom: 
+title: ICorRuntimeHost::GetConfiguration, méthode
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorRuntimeHost.GetConfiguration
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: c431617a-b055-44a0-8730-48b7a86d9610
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 446142d8bd61d384c3b8a58d5469e27a7a512c60
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3c51ddae6aa62552bac9990b57a173c28f73bae5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorruntimehostgetconfiguration-method"></a>ICorRuntimeHost::GetConfiguration, méthode
 Obtient un objet qui permet à l’hôte spécifier la configuration du rappel du common language runtime (CLR).  
@@ -53,7 +41,7 @@ HRESULT GetConfiguration(
 ## <a name="remarks"></a>Notes  
  Le CLR doit être configuré avant son initialisation ; dans le cas contraire, la `GetConfiguration` méthode retourne un HRESULT indiquant une erreur.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** MSCorEE.h  

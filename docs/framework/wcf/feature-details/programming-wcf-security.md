@@ -1,42 +1,30 @@
 ---
 title: Programmation de la sécurité dans WCF
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - message security [WCF], programming overview
 ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
-caps.latest.revision: 25
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 63f5c2c61a374b92b018419c83c9429e6ad796d8
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 3eb645dcc5b8cc1c52818e290699ebadcd0943c6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="programming-wcf-security"></a>Programmation de la sécurité dans WCF
-Cette rubrique répertorie les principales tâches de programmation à effectuer pour créer une application [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] sécurisée. Cette rubrique couvre uniquement l’authentification, la confidentialité et l’intégrité, appelés collectivement *sécurité de transfert*. Cette rubrique ne couvre pas d’autorisation (le contrôle d’accès aux ressources ou services) ; Pour plus d’informations sur l’autorisation, consultez [autorisation](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
+Cette rubrique décrit les tâches de programmation fondamentales utilisés pour créer une application Windows Communication Foundation (WCF) sécurisée. Cette rubrique couvre uniquement l’authentification, la confidentialité et l’intégrité, appelés collectivement *sécurité de transfert*. Cette rubrique ne couvre pas d’autorisation (le contrôle d’accès aux ressources ou services) ; Pour plus d’informations sur l’autorisation, consultez [autorisation](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
   
 > [!NOTE]
->  Pour obtenir une présentation des concepts de sécurité, en particulier dans le respect des précieuse [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], consultez le jeu de modèles et meilleures pratiques de didacticiels sur MSDN à l’adresse [scénarios, les modèles et les directives d’implémentation pour Web Services Enhancements (WSE) 3.0](http://go.microsoft.com/fwlink/?LinkID=88250).  
+>  Pour obtenir une présentation des concepts de sécurité, notamment en ce qui concerne les WCF, précieuse afficher l’ensemble de modèles et meilleures pratiques de didacticiels sur MSDN à l’adresse [scénarios, les modèles et les directives d’implémentation pour Web Services Enhancements (WSE) 3.0](http://go.microsoft.com/fwlink/?LinkID=88250).  
   
- La programmation de la sécurité [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] s'effectue en trois étapes : mode de sécurité, type d'informations d'identification client et valeurs des informations d'identification. Ces étapes peuvent être effectuées au choix dans le code ou la configuration.  
+ Programmation de la sécurité WCF est basé sur les trois étapes suivantes : le mode de sécurité, un type d’informations d’identification du client et les valeurs d’informations d’identification. Ces étapes peuvent être effectuées au choix dans le code ou la configuration.  
   
 ## <a name="setting-the-security-mode"></a>Définition du mode de sécurité  
- Les explications ci-dessous portent sur les étapes générales de la programmation du mode de sécurité dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]:  
+ La section suivante présente les étapes générales pour la programmation avec le mode de sécurité dans WCF :  
   
 1.  Sélectionnez une liaison prédéfinie adaptée aux exigences de votre application. Pour obtenir la liste des options de liaison, consultez [les liaisons fournies](../../../../docs/framework/wcf/system-provided-bindings.md). Par défaut, la sécurité de pratiquement toutes les liaisons est activée. La seule exception concerne le <xref:System.ServiceModel.BasicHttpBinding> classe (à l’aide de la configuration, le [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)).  
   

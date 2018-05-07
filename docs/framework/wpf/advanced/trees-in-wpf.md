@@ -1,28 +1,16 @@
 ---
 title: Arborescences dans WPF
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - logical tree [WPF]
 - element tree [WPF]
 - visual tree [WPF]
 ms.assetid: e83f25e5-d66b-4fc7-92d2-50130c9a6649
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 363d81ff0e4262ce0c8252ada3625bb9a157f5a1
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: e7695fa94a7742d474cb998ff26a5cf009cdb6eb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="trees-in-wpf"></a>Arborescences dans WPF
 Dans de nombreuses technologies, les éléments et les composants sont organisés en une arborescence, où les développeurs manipulent directement les nœuds d’objet dans l’arborescence pour modifier le rendu ou le comportement d’une application. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] utilise également plusieurs métaphores d’arborescence pour définir des relations entre des éléments du programme. Pour la plupart, les développeurs WPF peuvent créer une application dans le code ou définir des parties de l’application en XAML, en se représentant mentalement la métaphore de l’arborescence des objets, mais en appelant pour cela une API spécifique ou en utilisant un balisage spécifique, au lieu d’utiliser une API générale de manipulation d’une arborescence d’objets, comme ce peut être le cas dans le modèle DOM XML. WPF expose deux classes d’assistance qui fournissent une vue de la métaphore de l’arborescence, <xref:System.Windows.LogicalTreeHelper> et <xref:System.Windows.Media.VisualTreeHelper>. Les termes « arborescence d’éléments visuels » et « arborescence logique » sont également utilisés dans la documentation WPF, car ils sont utiles pour comprendre le comportement de certaines fonctionnalités clés de WPF. Cette rubrique définit ce que l’arborescence d’éléments visuels et l’arborescence logique représentent, explique la relation de ces arborescences avec le concept d’arborescence d’un objet global et présente <xref:System.Windows.LogicalTreeHelper> et <xref:System.Windows.Media.VisualTreeHelper>s.  

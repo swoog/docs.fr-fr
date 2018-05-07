@@ -1,27 +1,15 @@
 ---
 title: Canal de segmentation
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d55b0085552f0baf826380340aaf9f1117ab3307
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1acb635be23b9a838abee714156d818abee6bcd5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="chunking-channel"></a>Canal de segmentation
-Lorsque vous envoyez des messages de grande taille à l'aide de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], nous vous recommandons de limiter la quantité de mémoire utilisée pour leur mise en mémoire tampon. L'une des solutions pour ce faire consiste à transmettre en continu le corps de ces messages (possible à condition que la plus grande partie des données figurent dans le corps des messages concernés). Certains protocoles, cependant, nécessitent la mise en mémoire tampon de l'intégralité des messages. Parmi ces protocoles figurent notamment ceux de la messagerie fiable et de la sécurité. L'une des autres solutions consiste à diviser les messages de grande taille en messages plus petits appelés segments, à envoyer ces segment un par un, puis à reconstituer les grands messages initiaux à partir de ces segments, côté destinataire. L'application peut effectuer ces opérations de segmentation et désegmentation elle-même ou utiliser un canal personnalisé pour ce faire. L'exemple de canal de segmentation suivant illustre la manière dont un protocole personnalisé ou un canal superposé peuvent être utilisés afin de segmenter ou désegmenter des messages de grande taille.  
+Lors de l’envoi de messages volumineux à l’aide de Windows Communication Foundation (WCF), il est souvent souhaitable de limiter la quantité de mémoire utilisée pour mettre en mémoire tampon des messages. L'une des solutions pour ce faire consiste à transmettre en continu le corps de ces messages (possible à condition que la plus grande partie des données figurent dans le corps des messages concernés). Certains protocoles, cependant, nécessitent la mise en mémoire tampon de l'intégralité des messages. Parmi ces protocoles figurent notamment ceux de la messagerie fiable et de la sécurité. L'une des autres solutions consiste à diviser les messages de grande taille en messages plus petits appelés segments, à envoyer ces segment un par un, puis à reconstituer les grands messages initiaux à partir de ces segments, côté destinataire. L'application peut effectuer ces opérations de segmentation et désegmentation elle-même ou utiliser un canal personnalisé pour ce faire. L'exemple de canal de segmentation suivant illustre la manière dont un protocole personnalisé ou un canal superposé peuvent être utilisés afin de segmenter ou désegmenter des messages de grande taille.  
   
  La segmentation doit toujours être employée uniquement une fois le message à envoyer entièrement construit. Un canal de segmentation doit toujours être disposé en couche sous un canal de sécurité et un canal de session fiable.  
   
@@ -33,7 +21,7 @@ Lorsque vous envoyez des messages de grande taille à l'aide de [!INCLUDE[indigo
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à la page [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les exemples [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\ChunkingChannel`  
   

@@ -1,13 +1,6 @@
 ---
-title: "Résolution des problèmes : Succès d’Application de Service &#39; t installation"
-ms.custom: 
+title: 'Résolution des problèmes : Succès de l’Application de Service&#39;t installation'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - troubleshooting service applications
 - services, troubleshooting
@@ -16,18 +9,15 @@ helpviewer_keywords:
 - troubleshooting NT services
 - Windows Service applications, troubleshooting
 ms.assetid: 45c48e2e-b97d-44bc-8896-14f328e0ce33
-caps.latest.revision: "8"
 author: ghogen
-ms.author: ghogen
 manager: douge
-ms.workload: dotnet
-ms.openlocfilehash: 43c973d83d2d1b614cf0ce49ba8d4af24123b47e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1f3e5674f9a52627efdc24d6c70c0ab16dcdbbbd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="troubleshooting-service-application-won39t-install"></a>Résolution des problèmes : Succès d’Application de Service &#39; t installation
+# <a name="troubleshooting-service-application-won39t-install"></a>Résolution des problèmes : Succès de l’Application de Service&#39;t installation
 Si votre application de service ne s’installe pas correctement, vérifiez que le <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> propriété pour la classe de service est définie sur la même valeur, comme indiqué dans le programme d’installation de ce service. La valeur doit être le même dans les deux instances dans l’ordre de votre service installer correctement.  
   
 > [!NOTE]

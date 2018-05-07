@@ -1,11 +1,7 @@
 ---
-title: "CloneEnumWbemClassObject (fonction) (référence des API non managées)"
-description: "La fonction CloneEnumWbemClassObject effectue une copie logique d’un énumérateur."
+title: CloneEnumWbemClassObject (fonction) (référence des API non managées)
+description: La fonction CloneEnumWbemClassObject effectue une copie logique d’un énumérateur.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - CloneEnumWbemClassObject
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 22bcf2731ff682bf538858fc66a7a94be7f5d7df
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 71e881eca541d6a987fa7d27e1d73903f843e26a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cloneenumwbemclassobject-function"></a>CloneEnumWbemClassObject (fonction)
 Effectue une copie logique d’un énumérateur, en conservant sa position actuelle dans une énumération.  
@@ -56,7 +49,7 @@ HRESULT CloneEnumWbemClassObject (
 `authLevel`  
 [in] Le niveau d’autorisation.
 
-`impLevel`[in] Le niveau d’emprunt d’identité.
+`impLevel` [in] Le niveau d’emprunt d’identité.
 
 `pCurrentEnumWbemClassObject`  
 [out] Un pointeur vers le [IEnumWbemClassObject](https://msdn.microsoft.com/library/aa390857(v=vs.85).aspx) instance à cloner.
@@ -94,12 +87,12 @@ Si l’appel de fonction échoue, vous pouvez obtenir des informations d’erreu
 
 Pour obtenir un exemple, consultez la [IEnumWbemClassObject::Clone](https://msdn.microsoft.com/library/aa390859(v=vs.85).aspx) (méthode).
 
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** WMINet_Utils.idl  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versions du .NET framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
 [WMI et les compteurs de Performance (référence des API non managées)](index.md)

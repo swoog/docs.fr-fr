@@ -1,17 +1,12 @@
 ---
 title: Espaces de noms (F#)
 description: 'Découvrez comment un espace de noms F # permet d’organiser le code dans des zones de fonctionnalités connexes en vous permettant de joindre un nom à un regroupement d’éléments de programme.'
-author: cartermp
-ms.author: phcart
 ms.date: 04/24/2017
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: 695de3b58b8567da60c8ef86900f8e78ea563e0e
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 81d1648dbdc111984ddeb77d11b2bd81cbca57cf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="namespaces"></a>Espaces de noms
 

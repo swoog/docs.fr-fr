@@ -1,13 +1,6 @@
 ---
 title: Vue d'ensemble du profilage
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 helpviewer_keywords:
 - managed code, profiling API support
 - unmanaged code, combining with managed code in profiling
@@ -34,19 +27,16 @@ helpviewer_keywords:
 - security, profiling API considerations
 - stack depth [.NET Framework profiling]
 ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
-caps.latest.revision: "27"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 84688ed80d0cb1b802290176400eb45998052a34
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b38b64e1c86174bea11086e722ed86b0a0046e2c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="profiling-overview"></a>Vue d'ensemble du profilage
-<a name="top"></a>Un profileur est un outil qui surveille l’exécution d’une autre application. Un profileur CLR (Common Language Runtime) est une bibliothèque de liens dynamiques (DLL) qui se compose de fonctions qui reçoivent des messages du CLR et qui lui en envoient à l'aide de l'API de profilage. La DLL du profileur est chargée par le CLR au moment de l'exécution.  
+<a name="top"></a> Un profileur est un outil qui surveille l’exécution d’une autre application. Un profileur CLR (Common Language Runtime) est une bibliothèque de liens dynamiques (DLL) qui se compose de fonctions qui reçoivent des messages du CLR et qui lui en envoient à l'aide de l'API de profilage. La DLL du profileur est chargée par le CLR au moment de l'exécution.  
   
  Les outils de profilage traditionnels se contentent sur la mesure de l'exécution de l'application. Autrement dit, ils mesurent le temps passé dans chaque fonction ou l'utilisation de la mémoire de l'application au fil du temps. L'API de profilage cible une classe plus large d'outils de diagnostic tels que les utilitaires de couverture du code et même des outils de débogage avancés. Ces utilisations relèvent du diagnostic de par leur nature. L'API de profilage non seulement mesure mais surveille également l'exécution d'une application. C'est pourquoi l'API de profilage ne doit jamais être utilisée par l'application elle-même et l'exécution de l'application ne doit pas dépendre du profileur (ni être affectée par lui).  
   

@@ -1,14 +1,6 @@
 ---
-title: "IHostControl::GetHostManager, méthode"
-ms.custom: 
+title: IHostControl::GetHostManager, méthode
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostControl.GetHostManager
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 0fa34bca-ed18-4626-9e78-d33684d18edb
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6701350fa9bdb51843b117b0191b677e739807a3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 355d2e259adb13da44b09e19872337c17ac20ade
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostcontrolgethostmanager-method"></a>IHostControl::GetHostManager, méthode
 Obtient un pointeur d’interface à l’implémentation de l’hôte de l’interface avec l’objet `IID`.  
@@ -58,7 +46,7 @@ HRESULT GetHostManager (
   
 |HRESULT|Description|  
 |-------------|-----------------|  
-|S_OK|`GetHostManager`retourné avec succès.|  
+|S_OK|`GetHostManager` retourné avec succès.|  
 |HOST_E_CLRNOTAVAILABLE|Le CLR n’a pas été chargé dans un processus ou le CLR est dans un état dans lequel il ne peut pas exécuter du code managé ou traiter l’appel avec succès.|  
 |HOST_E_TIMEOUT|L’appel a expiré.|  
 |HOST_E_NOT_OWNER|L’appelant ne possède pas le verrou.|  
@@ -92,14 +80,14 @@ HRESULT GetHostManager (
   
  Le CLR n’appelle pas `Release` sur les gestionnaires d’hôte, même lorsque vous l’avez arrêté.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** MSCorEE.h  
   
  **Bibliothèque :** inclus en tant que ressource dans MSCorEE.dll  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [IHostControl, interface](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)

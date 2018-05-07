@@ -1,13 +1,6 @@
 ---
-title: "Vue d'ensemble des contrôles HScrollBar et VScrollBar (Windows Forms)"
-ms.custom: 
+title: Vue d'ensemble des contrôles HScrollBar et VScrollBar (Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - HScrollBar
 - VScrollBar
@@ -18,21 +11,16 @@ helpviewer_keywords:
 - ScrollBar control [Windows Forms], about ScrollBar control
 - scroll bars [Windows Forms], about scroll bars
 ms.assetid: 8b307679-1cae-41d8-99aa-3d1efd207cd6
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8fbdb3778959d1691200cde49e485d8a63c6e645
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 572ba9f16d1c78e1825d0c9db7530c6c78175d27
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hscrollbar-and-vscrollbar-controls-overview-windows-forms"></a>Vue d'ensemble des contrôles HScrollBar et VScrollBar (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.ScrollBar> contrôles sont utilisés pour fournir une navigation facile dans une longue liste d’éléments ou une grande quantité d’informations en faisant défiler horizontalement ou verticalement dans une application ou un contrôle. Barres de défilement sont un élément courant de l’interface Windows, afin que la <xref:System.Windows.Forms.ScrollBar> contrôle est souvent utilisé avec des contrôles qui ne dérivent pas de la <xref:System.Windows.Forms.ScrollableControl> classe. De même, de nombreux développeurs choisissent d’incorporer le <xref:System.Windows.Forms.ScrollBar> contrôler lors de la création de leurs propres contrôles utilisateur.  
   
- Le <xref:System.Windows.Forms.HScrollBar> (horizontale) et <xref:System.Windows.Forms.VScrollBar> contrôles (verticales) fonctionnent indépendamment des autres contrôles et ont leur propre ensemble de méthodes, propriétés et événements. <xref:System.Windows.Forms.ScrollBar>les contrôles ne sont pas le même que les barres de défilement intégrées qui sont attachés à des zones de texte, zones de liste, zones de liste déroulante ou formulaires MDI (le <xref:System.Windows.Forms.TextBox> contrôle a un <xref:System.Windows.Forms.TextBox.ScrollBars%2A> propriété pour afficher ou masquer les barres de défilement qui sont attachés au contrôle).  
+ Le <xref:System.Windows.Forms.HScrollBar> (horizontale) et <xref:System.Windows.Forms.VScrollBar> contrôles (verticales) fonctionnent indépendamment des autres contrôles et ont leur propre ensemble de méthodes, propriétés et événements. <xref:System.Windows.Forms.ScrollBar> les contrôles ne sont pas le même que les barres de défilement intégrées qui sont attachés à des zones de texte, zones de liste, zones de liste déroulante ou formulaires MDI (le <xref:System.Windows.Forms.TextBox> contrôle a un <xref:System.Windows.Forms.TextBox.ScrollBars%2A> propriété pour afficher ou masquer les barres de défilement qui sont attachés au contrôle).  
   
  Le <xref:System.Windows.Forms.ScrollBar> contrôles utilisent le <xref:System.Windows.Forms.ScrollBar.Scroll> événement pour surveiller le mouvement de la case de défilement (parfois appelé curseur) le long de la barre de défilement. À l’aide de la <xref:System.Windows.Forms.ScrollBar.Scroll> événement fournit l’accès à la valeur de barre de défilement pendant qu’il est glissé.  
   

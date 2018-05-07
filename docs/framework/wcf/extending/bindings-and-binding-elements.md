@@ -1,28 +1,14 @@
 ---
-title: "Liaisons et éléments de liaison"
-ms.custom: 
+title: Liaisons et éléments de liaison
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - binding elements [WCF]
 ms.assetid: 765ff77b-7682-4ea3-90eb-e4d751e37379
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 232d2d23ea88c834d2e28bae99cd2e001f6efac6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 32b8b9e1fbb3ae16f4dd81620658569a9408057b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bindings-and-binding-elements"></a>Liaisons et éléments de liaison
 Les liaisons sont des collections d’éléments de configuration spéciale, appelées *éléments de liaison*, qui sont évalué par le runtime du service chaque fois qu’un client ou point de terminaison de service est en cours de construction. Le type et l’ordre des éléments de liaison dans une liaison déterminent la sélection et l’ordre d’empilement des protocoles et des canaux de transport dans la pile de canaux d’un point de terminaison.  
@@ -32,7 +18,7 @@ Les liaisons sont des collections d’éléments de configuration spéciale, app
  Une liaison doit contenir exactement un élément de liaison de transport. Chaque élément de liaison de transport implique un élément de liaison d'encodage de message par défaut, qui peut être substitué en ajoutant au plus un élément de liaison d'encodage de message à la liaison. En plus des éléments de liaison de transport et d’encodeur, la liaison peut contenir un nombre quelconque d’éléments de liaison de protocole qui, ensemble, implémentent la fonctionnalité nécessaire pour servir et envoyer un message SOAP d’un point de terminaison à un autre. Pour plus d’informations, consultez [à l’aide de liaisons pour configurer les Services et les Clients](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md).  
   
 ## <a name="extending-bindings-and-binding-elements"></a>Extension de liaisons et d’éléments de liaisons  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] inclut des liaisons fournies par le système qui couvrent une large gamme de scénarios. (Pour plus d’informations, consultez [les liaisons fournies](../../../../docs/framework/wcf/system-provided-bindings.md).) Il se peut cependant que vous deviez créer et utiliser une liaison qui n'est pas fournie dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Les scénarios suivants requièrent la création d’une nouvelle liaison.  
+ Windows Communication Foundation (WCF) inclut des liaisons fournies par le système qui couvrent une large gamme de scénarios. (Pour plus d’informations, consultez [les liaisons fournies](../../../../docs/framework/wcf/system-provided-bindings.md).) Il se peut cependant que vous deviez créer et utiliser une liaison qui n'est pas fournie dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Les scénarios suivants requièrent la création d’une nouvelle liaison.  
   
 -   Pour utiliser un nouvel élément de liaison (tel qu’un nouvel élément de liaison de transport, d’encodage ou de protocole), vous devez créer une nouvelle liaison qui inclut cet élément de liaison. Par exemple, si vous avez ajouté un `UdpTransportBindingElement` personnalisé pour le transport UDP, vous devez créer une liaison pour l'utiliser. Pour plus d’informations sur l’exécution de ce comportement à l’aide de la <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> de type, consultez [liaisons personnalisées](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   

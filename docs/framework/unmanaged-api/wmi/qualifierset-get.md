@@ -1,11 +1,7 @@
 ---
-title: "QualifierSet_Get (fonction) (référence des API non managées)"
-description: "La fonction QualifierSet_Get Obtient un qualificateur nommé."
+title: QualifierSet_Get (fonction) (référence des API non managées)
+description: La fonction QualifierSet_Get Obtient un qualificateur nommé.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - QualifierSet_Get
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 93ba4e59dda4806931ba085f8c63b63a1d8bd797
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f1bc57ab45a0452d9e3a50f0ab2de786ad73204a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="qualifiersetget-function"></a>QualifierSet_Get (fonction)
 Obtient le qualificateur nommé spécifié.  
@@ -81,12 +74,12 @@ Les valeurs suivantes est retournées par cette fonction sont définies dans le 
 
 Cette fonction encapsule un appel à la [IWbemQualifierSet::Get](https://msdn.microsoft.com/library/aa391867(v=vs.85).aspx) (méthode).
 
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** WMINet_Utils.idl  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versions du .NET framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
 [WMI et les compteurs de Performance (référence des API non managées)](index.md)

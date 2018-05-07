@@ -1,13 +1,6 @@
 ---
-title: "HScrollBar et VScrollBar, contrôles (Windows Forms)"
-ms.custom: 
+title: HScrollBar et VScrollBar, contrôles (Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - scroll bars
 - VScrollBar control [Windows Forms]
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - HScrollBar control [Windows Forms]
 - Scroll Bar control [Windows Forms]
 ms.assetid: f5e9cda7-d8f3-406b-b0e6-bdb4375d6eb0
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ce11db2d01f8938d0f97a3c0526c65a7c9740fba
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ab2182a92f2fd05d0be69c5e4d2bede5011dde37
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hscrollbar-and-vscrollbar-controls-windows-forms"></a>HScrollBar et VScrollBar, contrôles (Windows Forms)
 Les contrôles de barre de défilement Windows Forms permettent une navigation facile au sein d'une longue liste d'éléments ou d'une grande quantité d'informations grâce au défilement horizontal ou vertical du contenu d'une application ou d'un contrôle. Les barres de défilement sont des éléments courants de l'interface Windows.  

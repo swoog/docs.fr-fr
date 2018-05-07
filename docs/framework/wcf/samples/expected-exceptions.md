@@ -1,26 +1,12 @@
 ---
 title: Expected Exceptions
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 299a6987-ae6b-43c6-987f-12b034b583ae
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 28af4a374d7ff474cf313aad711a3062f56263c9
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: MT
+ms.openlocfilehash: 9552bf5178e3309d46e0f9220311c9e1a811c4b9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="expected-exceptions"></a>Expected Exceptions
 Cet exemple montre comment intercepter des exceptions attendues lors de l'utilisation d'un client typé. Cet exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md) qui implémente un service de calculatrice. Dans cet exemple, le client est une application console (.exe) et le service est hébergé par les services IIS (Internet Information Services).  
@@ -30,7 +16,7 @@ Cet exemple montre comment intercepter des exceptions attendues lors de l'utilis
   
  Cet exemple illustre l'interception et la gestion des deux types d'exception attendues que les programmes corrects doivent gérer : `TimeoutException` et `CommunicationException`.  
   
- Les exceptions levées depuis les méthodes de communication sur un client [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] sont soit attendues, soit inattendues. Les exceptions inattendues incluent les pannes catastrophiques comme `OutOfMemoryException` et les erreurs de programmation comme `ArgumentNullException` ou `InvalidOperationException`. En général, il n'y a aucune utilité à gérer des erreurs inattendues, donc vous ne devez pas les intercepter lors de l'appel à une méthode de communication du client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Les exceptions levées à partir de méthodes de communication sur un client Windows Communication Foundation (WCF) sont attendu ou inattendu. Les exceptions inattendues incluent les pannes catastrophiques comme `OutOfMemoryException` et les erreurs de programmation comme `ArgumentNullException` ou `InvalidOperationException`. En général, il n'y a aucune utilité à gérer des erreurs inattendues, donc vous ne devez pas les intercepter lors de l'appel à une méthode de communication du client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
  Les exceptions attendues depuis les méthodes de communication sur un client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] incluent `TimeoutException`, `CommunicationException` et toute classe dérivée de `CommunicationException`. Celles-ci indiquent un problème pendant la communication qui peut être géré sans risque en abandonnant le client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] et en signalant un échec de communication. Étant donné que des facteurs externes peuvent provoquer ces erreurs dans toute application, les applications correctes doivent intercepter ces exceptions et récupérer lorsqu'elles se produisent.  
   
@@ -89,7 +75,7 @@ Got System.TimeoutException
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à la page [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les exemples [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\ExpectedExceptions`  
   

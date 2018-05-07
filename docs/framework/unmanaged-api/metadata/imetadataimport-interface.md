@@ -1,14 +1,6 @@
 ---
 title: IMetaDataImport, interface
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataImport
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 0adbbd35-5e8d-4fec-8268-dc70a07c5975
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1067582b506d60092bef9639dc4a96ba41306437
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fdea4c456f04911c37acd69ced65ba841f7959ff
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataimport-interface"></a>IMetaDataImport, interface
 Fournit des méthodes pour importer et manipuler les métadonnées existantes à partir d'un fichier exécutable portable (PE) ou d'une autre source, comme une bibliothèque de types ou un fichier binaire de métadonnées autonome au moment de l'exécution.  
@@ -115,14 +103,14 @@ Fournit des méthodes pour importer et manipuler les métadonnées existantes à
   
 -   Les méthodes Get sont conçues spécifiquement pour retourner les propriétés à valeur unique d'un élément de métadonnées. Quand la propriété est une référence à un autre élément, un jeton est retourné pour cet élément. Tout type d'entrée de pointeur peut être NULL pour indiquer que la valeur particulière n'est pas demandée. Pour obtenir les propriétés qui sont essentiellement des objets de collection (par exemple, la collection des interfaces qu'une classe implémente), utilisez les méthodes d'énumération.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Cor.h  
   
  **Bibliothèque :** utilisé en tant que ressource dans MsCorEE.dll  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [Interfaces de métadonnées](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  

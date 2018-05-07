@@ -1,44 +1,32 @@
 ---
 title: Sécurisation des messages à l'aide de la sécurité de message
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
-caps.latest.revision: 16
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 088b01151d0471527bbfc2ffa04b5b5064700081
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 1ebe2526e564ef24d20f1602fd5824b44e2e2bbd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="securing-messages-using-message-security"></a>Sécurisation des messages à l'aide de la sécurité de message
-Cette section présente la sécurité de message [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] lors de l'utilisation de <xref:System.ServiceModel.NetMsmqBinding>.  
+Cette section traite de la sécurité de message WCF lors de l’utilisation <xref:System.ServiceModel.NetMsmqBinding>.  
   
 > [!NOTE]
 >  Avant de lire cette rubrique, il est recommandé de lire [Concepts de sécurité](../../../../docs/framework/wcf/feature-details/security-concepts.md).  
   
- L'illustration suivante fournit un modèle conceptuel de la communication mise en file d'attente à l'aide de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Cette illustration et la terminologie permettent d'expliquer  
+ L’illustration suivante fournit un modèle conceptuel de la communication en file d’attente à l’aide de WCF. Cette illustration et la terminologie permettent d'expliquer  
   
  les concepts de sécurité de transport.  
   
  ![Diagramme d’Application de la file d’attente](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "Figure de file d’attente distribuée")  
   
- Lors de l'envoi de messages mis en file d'attente à l'aide de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], le message [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] est joint en tant que corps du message Message Queuing (MSMQ). Alors que la sécurité de transport sécurise le message MSMQ entier, la sécurité de message (ou SOAP) sécurise uniquement le corps du message MSMQ.  
+ Lors de l’envoi de file d’attente les messages à l’aide de WCF, le message WCF est attaché en tant que corps du message Message Queuing (MSMQ). Alors que la sécurité de transport sécurise le message MSMQ entier, la sécurité de message (ou SOAP) sécurise uniquement le corps du message MSMQ.  
   
- Le concept clé de la sécurité de message est que le client sécurise le message pour l'application réceptrice (service), contrairement à la sécurité de transport où le client sécurise le message pour la file d'attente cible. Ainsi, MSMQ ne joue aucun rôle lors de la sécurisation du message [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] à l'aide de la sécurité de message.  
+ Le concept clé de la sécurité de message est que le client sécurise le message pour l'application réceptrice (service), contrairement à la sécurité de transport où le client sécurise le message pour la file d'attente cible. Par conséquent, MSMQ ne joue aucun rôle lors de la sécurisation du message WCF à l’aide de la sécurité de message.  
   
- La sécurité de message [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ajoute des en-têtes de sécurité au message [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] qui s'intègrent avec les infrastructures de sécurité existantes, telles qu'un certificat ou le protocole Kerberos.  
+ Sécurité de message WCF ajoute des en-têtes de sécurité pour le message WCF qui s’intègrent aux infrastructures de sécurité existantes, par exemple un certificat ou le protocole Kerberos.  
   
 ## <a name="message-credential-type"></a>Type d'informations d'identification de message  
  Grâce à la sécurité de message, le service et le client peuvent présenter des informations d'identification pour s'authentifier mutuellement. Vous pouvez sélectionner la sécurité de message en définissant le mode <xref:System.ServiceModel.NetMsmqBinding.Security%2A> sur `Message` ou sur `Both` (c'est-à-dire en utilisant la sécurité de transport et la sécurité de message).  

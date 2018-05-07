@@ -1,14 +1,6 @@
 ---
-title: "ICeeGen::GenerateCeeMemoryImage, méthode"
-ms.custom: 
+title: ICeeGen::GenerateCeeMemoryImage, méthode
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICeeGen.GenerateCeeMemoryImage
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: b3847495-0ae6-4a72-b496-65ce2424afc6
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 753240d4223948630a95ff9e103abfc13b435131
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 88323f50acac28f1f703a34213f46db82e67d5dd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iceegengenerateceememoryimage-method"></a>ICeeGen::GenerateCeeMemoryImage, méthode
 Génère une image dans la mémoire pour la base de code.  
@@ -52,14 +40,14 @@ HRESULT GenerateCeeMemoryImage (
  `ppImage`  
  [out] Pointeur vers l’image générée.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Cor.h  
   
  **Bibliothèque :** utilisé en tant que ressource dans MsCorEE.dll  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [ICeeGen, interface](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

@@ -1,26 +1,12 @@
 ---
 title: Infrastructure de service
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 75f60b87-f80e-4377-ba7c-8e6becaa2b28
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 67e856aff583513fa8a16d289cf5190a9698c52c
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 859e718a56ab63c8e012e1851c0730f53cb707be
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="service-framework"></a>Infrastructure de service
 Cette rubrique répertorie toutes les exceptions générées par les données d'infrastructure de service.  
@@ -49,8 +35,8 @@ Cette rubrique répertorie toutes les exceptions générées par les données d'
 |channelDoesNotHaveADuplexSession0|Le canal actuel ne prend pas en charge la fermeture de la session de sortie. Ce canal n’implémente pas ISessionChannel\<IDuplexSession >.|  
 |ClientRuntimeRequiresFormatter0|Le ClientOperation spécifié requiert un formateur car SerializeRequest et DeserializeReply ne sont pas tous les deux false.|  
 |CommunicationObjectAborted1|L'objet de communication spécifié ne peut pas être utilisé pour la communication car il a été arrêté.|  
-|CommunicationObjectAbortedStack2|L'objet de communication spécifié ne peut pas être utilisé pour la communication car il a été arrêté : {1}|  
-|CommunicationObjectBaseClassMethodNotCalled|L'objet de communication spécifié a substitué la fonction virtuelle {1} mais il n'appelle pas la version définie dans la classe de base.|  
+|CommunicationObjectAbortedStack2|L’objet de communication spécifié ne peut pas être utilisé pour la communication car il a été arrêté : {1}|  
+|CommunicationObjectBaseClassMethodNotCalled|L’objet de communication spécifié a remplacé la fonction virtuelle {1} , mais il n’appelle pas la version définie dans la classe de base.|  
 |ContractIsNotSelfConsistentItHasOneOrMore2|Le contrat spécifié contient une ou plusieurs opérations IsTerminating ou non-IsInitiating. Sa propriété SessionMode n'a pas la valeur SessionMode.Required. Les attributs IsInitiating et IsTerminating peuvent être utilisés uniquement dans le contexte d'une session.|  
 |CouldnTCreateChannelForChannelType2|Le type de canal spécifié a été demandé, mais la liaison spécifiée ne le prend pas en charge ou n'est pas configurée correctement pour cela.|  
 |DispatchRuntimeRequiresFormatter0|Le DispatchOperation spécifié requiert un formateur car DeserializeRequest et SerializeReply ne sont pas tous les deux false.|  

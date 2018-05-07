@@ -1,35 +1,21 @@
 ---
 title: Outils
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 89c907f9-313f-408c-992a-631f1eadf1da
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5badbb9142261fc1dc6c2b2d5af3c89c7af776b6
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 6c4ada74c2fc6aba84eb1fe46f4d7cdee9978d13
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tools"></a>Outils
-Cette rubrique répertorie toutes les exceptions générées par les outils [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].  
+Cette rubrique répertorie toutes les exceptions générées par les outils de Windows Communication Foundation (WCF).  
   
 ## <a name="exception-list"></a>Liste des exceptions  
   
 |Code de la ressource|Chaîne de la ressource|  
 |-------------------|---------------------|  
-|ParametersTarget|\<enum>|  
+|ParametersTarget|\<enum >|  
 |ParametersToolConfig|\<configFile>|  
 |ErrInvalidPath|Le chemin spécifié est incorrect. Vérifiez l'argument spécifié.|  
 |ParametersReference|\<chemin d’accès >|  
@@ -88,7 +74,7 @@ Cette rubrique répertorie toutes les exceptions générées par les outils [!IN
 |ErrInputConflictsWithMode|L'entrée lue à partir du spécifié est incohérente avec d'autres options.|  
 |ErrDuplicateValuePassedToTypeArg|La valeur spécifiée a été passée plusieurs fois à l'option spécifiée. Chaque type ne peut être spécifié qu'une seule fois.|  
 |ErrInputEPRFileParseError|Impossible de lire la référence du point de terminaison à partir du spécifié. Vérifiez que le XML est correctement structuré et valide.|  
-|ErrCouldNotCreateCodeProvider|Impossible de créer un fournisseur de code pour la valeur spécifiée, qui a été passée à l'argument /{1}. Vérifiez que le fournisseur de code est installé et configuré correctement.|  
+|ErrCouldNotCreateCodeProvider|Impossible de créer un fournisseur de code pour la valeur spécifiée, qui a été passée à la /{1} argument. Vérifiez que le fournisseur de code est installé et configuré correctement.|  
 |ErrPathTooLongDirOnly|Le chemin d’accès spécifié résultant est trop long. Examinez l’argument spécifié.|  
 |HelpDataContractSerializer|Générez des types de données qui utilisent le sérialiseur DataContract pour la sérialisation et la désérialisation.|  
 |ErrUnableToExportEndpoint|Une erreur s'est produite lors de l'exportation du nom de point de terminaison spécifié dans l'espace de noms spécifié dans le type de service spécifié mentionné dans le fichier de configuration chargé pour l'assembly.|  
@@ -127,7 +113,7 @@ Cette rubrique répertorie toutes les exceptions générées par les outils [!IN
 |HelpCommonOptionsCategory|- = OPTIONS COURANTES = -|  
 |ParametersServiceName|\<serviceConfigName>|  
 |ErrNoValidInputFilesSpecified|Aucun fichier d'entrée valide n'a été spécifié. Spécifiez des documents de métadonnées ou des fichiers d'assembly.|  
-|ParametersLanguage|\<language>|  
+|ParametersLanguage|\<langue >|  
 |ErrUnableToLoadMetadataDocument|Une erreur s'est produite lors de la lecture des métadonnées à partir de l'un des documents chargés. L'identificateur de document est spécifié.|  
 |ErrConflictingInputs|L’argument d’entrée spécifié est en conflit avec le spécifié car ils impliquent différents modes d’opération d’outil.|  
 |WrnUnableToLoadContractForValidation|Une erreur s'est produite lors du chargement d'un type de contrat. Le type et les détails sont spécifiés.|  

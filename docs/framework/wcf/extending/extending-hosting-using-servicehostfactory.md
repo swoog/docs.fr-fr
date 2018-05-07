@@ -1,27 +1,15 @@
 ---
-title: "Extension de l'hébergement à l'aide de ServiceHostFactory"
-ms.custom: 
+title: Extension de l'hébergement à l'aide de ServiceHostFactory
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: bcc5ae1b-21ce-4e0e-a184-17fad74a441e
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4a7bcd2e0ba68499cad63ec47918fd2bd6bd80d7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 3773ca50111f609489b95145f1005cd005922b9b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extending-hosting-using-servicehostfactory"></a>Extension de l'hébergement à l'aide de ServiceHostFactory
-L'API <xref:System.ServiceModel.ServiceHost> standard pour les services d'hébergement dans [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] est un point d'extensibilité dans l'architecture [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Les utilisateurs peuvent dériver leurs propres classes d'hôte de <xref:System.ServiceModel.ServiceHost>, habituellement pour substituer <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening> et utiliser <xref:System.ServiceModel.Description.ServiceDescription> afin d'ajouter des points de terminaison par défaut de façon impérative ou modifier des comportements, avant d'ouvrir le service.  
+La norme <xref:System.ServiceModel.ServiceHost> API d’hébergement des services Windows Communication Foundation (WCF) est un point d’extensibilité dans le [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] architecture. Les utilisateurs peuvent dériver leurs propres classes d'hôte de <xref:System.ServiceModel.ServiceHost>, habituellement pour substituer <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening> et utiliser <xref:System.ServiceModel.Description.ServiceDescription> afin d'ajouter des points de terminaison par défaut de façon impérative ou modifier des comportements, avant d'ouvrir le service.  
   
  Dans l'environnement auto-hébergé, vous ne devez pas créer un <xref:System.ServiceModel.ServiceHost> personnalisé parce que vous écrivez le code qui instancie l'hôte puis appelle <xref:System.ServiceModel.ICommunicationObject.Open> après l'avoir instancié. Entre ces deux étapes, vous pouvez faire ce que vous souhaitiez. Par exemple, vous pouvez ajouter un nouveau <xref:System.ServiceModel.Description.IServiceBehavior> :  
   

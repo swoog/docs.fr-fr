@@ -1,24 +1,12 @@
 ---
-title: "Procédure : héberger un workflow sans service dans IIS"
-ms.custom: 
+title: 'Procédure : héberger un workflow sans service dans IIS'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f362562c-767d-401b-8257-916616568fd4
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4b7ffdc00a7723fd6b514fbb5577c48da15d719c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 70fd6aca94f2addd7ee568e897171ae1da86db67
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-host-a-non-service-workflow-in-iis"></a>Procédure : héberger un workflow sans service dans IIS
 Les workflows qui ne sont pas des services de workflow peuvent être hébergés sous IIS/WAS. Cela peut s'avérer utile lorsque vous avez besoin d'héberger un workflow écrit par une autre personne. Cela peut être le cas si vous hébergez à nouveau le concepteur de workflow et permettez aux utilisateurs de créer leurs propres workflows.  L'hébergement dans IIS de workflows sans service permet la prise en charge de fonctionnalités telles que le recyclage de processus, l'arrêt en cas d'inactivité, le contrôle d'état de processus et l'activation basée sur message. Les services de workflow hébergés dans IIS contiennent des activités <xref:System.ServiceModel.Activities.Receive> et sont activés lorsque IIS reçoit un message. Les workflows sans service ne contiennent pas d'activités de messagerie et, par défaut, ne peuvent pas être activés par l'envoi d'un message.  Pour créer une instance du workflow, vous devez dériver une classe de <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> et définir un contrat de service contenant des opérations. Cette rubrique vous guide dans la création d’un workflow simple, la définition d’un contrat de service un client peut utiliser pour activer le flux de travail et la dériver une classe de <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> qui utilise le contrat de service pour écouter les demandes de création de workflow.  
@@ -332,7 +320,7 @@ Les workflows qui ne sont pas des services de workflow peuvent être hébergés 
   
 8.  Copiez le fichier web.config dans le répertoire de votre application IIS.  
   
-9. Vérifiez si le point de terminaison de création fonctionne en démarrant Internet Explorer et en accédant à http://localhost/MyCreationEndpoint/Workflow1.xamlx. Internet Explorer doit afficher l'écran suivant :  
+9. Test pour voir si le point de terminaison de création fonctionne en démarrant Internet Explorer et en accédant à http://localhost/MyCreationEndpoint/Workflow1.xamlx. Internet Explorer doit afficher l'écran suivant :  
   
      ![Test du service](../../../../docs/framework/wcf/feature-details/media/testservice.gif "TestService")  
   

@@ -1,27 +1,15 @@
 ---
-title: "Exemples d’extensibilité de la syndication"
-ms.custom: 
+title: Exemples d’extensibilité de la syndication
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b2c34ae5-62ed-4c2d-b2fa-2d4d0802099c
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 938c358f6de717ceaf05b4e6c887904a9996f2ed
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 998db813316acc5e26d2313f47dacd79df160534
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="syndication-extensibility-samples"></a>Exemples d’extensibilité de la syndication
-Cette section contient des exemples qui illustrent la syndication personnalisée dans [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+Cette section contient des exemples qui illustrent la syndication personnalisée dans Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Extensions fortement typées](../../../../docs/framework/wcf/samples/strongly-typed-extensions-sample.md)  

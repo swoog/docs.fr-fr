@@ -1,33 +1,19 @@
 ---
-title: "Extension des répartiteurs"
-ms.custom: 
+title: Extension des répartiteurs
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - dispatcher extensions [WCF]
 ms.assetid: d0ad15ac-fa12-4f27-80e8-7ac2271e5985
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4240a19401d97cd0636d13a94fd07ad4ef753388
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: bc700aefc3b50102dc0a3faabbbcd09c1c8fc4bc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extending-dispatchers"></a>Extension des répartiteurs
 Les répartiteurs sont chargés de tirer des messages entrants des canaux sous-jacents, de les traduire dans des appels de méthode dans le code d’application et de renvoyer les résultats à l’appelant. Les extensions de répartiteurs vous permettent de modifier ce traitement.  Vous pouvez implémenter des inspecteurs de messages ou de paramètres qui inspectent ou modifient le contenu des messages ou des paramètres.  Vous pouvez modifier la manière dont les messages sont acheminés vers les opérations ou fournir d'autres fonctionnalités.  
   
- Cette rubrique décrit comment utiliser les classes <xref:System.ServiceModel.Dispatcher.DispatchRuntime> et <xref:System.ServiceModel.Dispatcher.DispatchOperation> dans une application cliente [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] afin de modifier le comportement d'exécution par défaut d'un répartiteur ou d'intercepter ou de modifier des messages, des paramètres ou des valeurs de retour avant ou à la suite de leur envoi ou de leur récupération dans la couche du canal. Pour plus d’informations sur le traitement des messages client équivalent runtime, consultez [Clients d’extension](../../../../docs/framework/wcf/extending/extending-clients.md). Pour comprendre le rôle qui <xref:System.ServiceModel.IExtensibleObject%601> types lire dans l’accès à un état partagé entre les différents objets de personnalisation du runtime, consultez [objets extensibles](../../../../docs/framework/wcf/extending/extensible-objects.md).  
+ Cette rubrique explique comment utiliser le <xref:System.ServiceModel.Dispatcher.DispatchRuntime> et <xref:System.ServiceModel.Dispatcher.DispatchOperation> application pour modifier le comportement de l’exécution par défaut d’un répartiteur ou pour intercepter ou de modifier des messages, paramètres ou de retour de service de classes dans Windows Communication Foundation (WCF) valeurs avant ou après l’envoi ou de les récupérer à partir de la couche de canal. Pour plus d’informations sur le traitement des messages client équivalent runtime, consultez [Clients d’extension](../../../../docs/framework/wcf/extending/extending-clients.md). Pour comprendre le rôle qui <xref:System.ServiceModel.IExtensibleObject%601> types lire dans l’accès à un état partagé entre les différents objets de personnalisation du runtime, consultez [objets extensibles](../../../../docs/framework/wcf/extending/extensible-objects.md).  
   
 ## <a name="dispatchers"></a>Répartiteurs  
  La couche de modèle de service effectue la conversion entre le modèle de programmation du développeur et l'échange de message sous-jacent, ou communément, couche de canal. Dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] les répartiteurs de canal et de point de terminaison (<xref:System.ServiceModel.Dispatcher.ChannelDispatcher> et <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>, respectivement) sont les composants de service chargés d'accepter de nouveaux canaux, de recevoir des messages, de distribuer et d'appeler l'opération et de traiter la réponse. Les objets de répartiteur sont des objets de récepteur, mais les implémentations de contrat de rappel dans les services duplex exposent également leurs objets de répartiteur pour l'inspection, le changement ou l'extension.  

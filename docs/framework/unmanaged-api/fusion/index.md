@@ -1,30 +1,18 @@
 ---
 title: Fusion (Informations de référence sur les API non managées)
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: reference
 helpviewer_keywords:
 - unmanaged API reference [.NET Framework], fusion
 - native API reference [.NET Framework], fusion
 - fusion [.NET Framework], using the unmanaged API
 ms.assetid: f8f20967-ea17-4900-bf05-87a078095fe6
-caps.latest.revision: 8
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9860b90ad61dcd53a990235acb3924c08168782b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7bc6c9079b6f233946fa38979800e28097e849f8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="fusion-unmanaged-api-reference"></a>Fusion (Informations de référence sur les API non managées)
 L’API de fusion permet à un hôte de runtime accéder aux propriétés des ressources d’une application afin de localiser les versions correctes de ces ressources pour l’application.  

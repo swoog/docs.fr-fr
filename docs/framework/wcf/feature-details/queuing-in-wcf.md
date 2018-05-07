@@ -1,49 +1,35 @@
 ---
 title: Mise en file d'attente dans WCF
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: e98d76ba-1acf-42cd-b137-0f8214661112
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8bf4a668fe882212da1c6626b66a4f55390a562f
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 7f0a6700dba8eb844cc471704095b29c2a2c7937
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="queuing-in-wcf"></a>Mise en file d'attente dans WCF
-Cette section décrit comment utiliser la communication mise en file d'attente dans [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+Cette section décrit comment utiliser la communication en file d’attente dans Windows Communication Foundation (WCF).  
   
-## <a name="queues-as-a-wcf-transport-binding"></a>Mises en file d'attente en tant que liaison de transport WCF  
- Dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], les contrats spécifient ce qui est échangé. Les contrats sont des échanges de messages propres à une entreprise ou à une application. Le mécanisme utilisé pour échanger des messages est spécifié dans les liaisons. Dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], les liaisons encapsulent les détails de l'échange de messages. Elles exposent les boutons de configuration permettant à l'utilisateur de contrôler divers aspects du transport ou du protocole que les liaisons représentent. La mise en file d'attente dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] est traitée comme toute autre liaison de transport, ce qui représente un grand avantage pour de nombreuses applications de mise en file d'attente. Aujourd'hui, nombre de ces applications sont écrites différemment des autres applications distribuées de type appel de procédure distante, ce qui complique leur suivi et leur maintenance. Avec [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], le style pour écrire une application distribuée est quasiment identique, ce qui facilite son suivi et sa maintenance. De plus, le fait de développer le mécanisme d'échange séparément de la logique métier facilite la configuration du transport ou sa modification sans affecter le code propre à l'application. La figure qui suit illustre la structure d'un service et d'un client WCF qui utilise MSMQ comme transport.  
+## <a name="queues-as-a-wcf-transport-binding"></a>Mises en file d’attente en tant que liaison de transport WCF  
+ Dans WCF, les contrats spécifient ce qui est échangé. Les contrats sont des échanges de messages propres à une entreprise ou à une application. Le mécanisme utilisé pour échanger des messages est spécifié dans les liaisons. Les liaisons WCF encapsulent les détails de l’échange de messages. Elles exposent les boutons de configuration permettant à l’utilisateur de contrôler divers aspects du transport ou du protocole que les liaisons représentent. Queuing dans WCF est traitée comme toute autre liaison de transport, qui est un grand avantage pour de nombreuses applications de files d’attente. Aujourd'hui, nombre de ces applications sont écrites différemment des autres applications distribuées de type appel de procédure distante, ce qui complique leur suivi et leur maintenance. Avec WCF, le style d’écriture d’une application distribuée est similaire, rendant ainsi plus facile à suivre et gérer. De plus, le fait de développer le mécanisme d'échange séparément de la logique métier facilite la configuration du transport ou sa modification sans affecter le code propre à l'application. La figure qui suit illustre la structure d'un service et d'un client WCF qui utilise MSMQ comme transport.  
   
  ![Diagramme d’Application de la file d’attente](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "Figure de file d’attente distribuée")  
   
- Comme le montre la figure ci-dessus, le client et le service ne doivent définir que la sémantique de l'application ; autrement dit le contrat et l'implémentation. Le service configure une liaison mise en file d’attente avec des paramètres par défaut. Le client utilise le [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) pour générer un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client au service et pour générer un fichier de configuration qui décrit les liaisons à utiliser pour envoyer des messages au service. De ce fait, pour envoyer un message mis en file d'attente, le client instancie un client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] et appelle une opération sur ce dernier. Le message est alors envoyé dans la file d'attente de transmission, puis transféré à la file d'attente cible. L'application qui envoie et reçoit des messages est donc totalement exempte de la complexité de la communication mise en file d'attente.  
+ Comme le montre la figure ci-dessus, le client et le service ne doivent définir que la sémantique de l'application ; autrement dit le contrat et l'implémentation. Le service configure une liaison mise en file d’attente avec des paramètres par défaut. Le client utilise le [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) pour générer un client WCF pour le service et pour générer un fichier de configuration qui décrit les liaisons à utiliser pour envoyer des messages au service. Par conséquent, pour envoyer un message en file d’attente, le client instancie un client WCF et appelle une opération sur lui. Le message est alors envoyé dans la file d'attente de transmission, puis transféré à la file d'attente cible. L'application qui envoie et reçoit des messages est donc totalement exempte de la complexité de la communication mise en file d'attente.  
   
- Avertissements relatifs aux liaisons mises en file d'attente dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] :  
+ Avertissements sur la liaison en file d’attente dans WCF sont les suivantes :  
   
--   Toutes les opérations de service doivent être unidirectionnelles car la liaison mise en file d'attente par défaut dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ne prend pas en charge la communication duplex à l'aide de files d'attente. Un exemple de communication bidirectionnelle ([bidirectionnel Communication](../../../../docs/framework/wcf/samples/two-way-communication.md)) illustre l’utilisation de deux contrats unidirectionnels à implémenter la communication duplex à l’aide de files d’attente.  
+-   Service toutes les opérations doivent être unidirectionnelles car la valeur par défaut en file d’attente de la liaison dans WCF ne prend pas en charge la communication duplex à l’aide de files d’attente. Un exemple de communication bidirectionnelle ([bidirectionnel Communication](../../../../docs/framework/wcf/samples/two-way-communication.md)) illustre l’utilisation de deux contrats unidirectionnels à implémenter la communication duplex à l’aide de files d’attente.  
   
--   La génération d'un client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] à l'aide de l'échange de métadonnées requiert un point de terminaison HTTP supplémentaire sur le service afin qu'il puisse être interrogé directement en vue de générer le client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] et obtenir des informations de liaison lui permettant de configurer correctement la communication mise en file d'attente.  
+-   Pour générer un service WCF client à l’aide d’échange de métadonnées requiert un point de terminaison HTTP supplémentaire sur le service afin qu’il peut être interrogé directement pour générer le client WCF et obtenir des informations de liaison pour configurer correctement la communication en file d’attente.  
   
--   Selon la liaison mise en file d'attente, une configuration supplémentaire extérieure à [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] est requise. Par exemple, la classe <xref:System.ServiceModel.NetMsmqBinding> fournie avec [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] requiert la configuration des liaisons, mais aussi la configuration minimale de MSMQ (Message Queuing).  
+-   En fonction de la liaison en file d’attente, une configuration supplémentaire en dehors de WCF est requise. Par exemple, la <xref:System.ServiceModel.NetMsmqBinding> classe qui est fourni avec WCF, vous devez configurer les liaisons ainsi que la configuration minimale de Message Queuing (MSMQ).  
   
- Les sections qui suivent décrivent les liaisons mises en file d'attente fournies avec [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], qui reposent sur MSMQ.  
+ Les sections suivantes décrivent les liaisons en file d’attente spécifiques fournies avec WCF, qui sont basées sur MSMQ.  
   
 ### <a name="msmq"></a>MSMQ  
- Le transport de mise en file d'attente dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilise MSMQ pour sa communication mise en file d'attente.  
+ Le transport en file d’attente dans WCF utilise MSMQ pour sa communication en file d’attente.  
   
  MSMQ est fourni en tant que composant facultatif avec Windows et s'exécute en tant que service NT. Il capture les messages à transmettre dans une file d'attente de transmission et les messages à remettre dans une file d'attente cible. Les Gestionnaires des files d'attente MSMQ implémentent un protocole de transfert de message fiable qui empêche la perte de messages au cours de la transmission. Ce protocole peut être natif ou basé sur SOAP, comme le protocole SRMP (SOAP Reliable Message Protocol).  
   
@@ -54,7 +40,7 @@ Cette section décrit comment utiliser la communication mise en file d'attente d
  Pour plus d’informations sur MSMQ, consultez [l’installation de Message Queuing (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md).  
   
 ### <a name="netmsmqbinding"></a>NetMsmqBinding  
- Le [ \<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) est la liaison en file d’attente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fournit pour deux [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] points de terminaison pour communiquer à l’aide de MSMQ. Par conséquent, la liaison expose des propriétés qui sont spécifiques à MSMQ. Toutefois, toutes les fonctionnalités et propriétés MSMQ ne sont pas exposées dans le `NetMsmqBinding`. Le `NetMsmqBinding` compact regroupe un jeu optimal de fonctionnalités qui s'avère suffisant pour la majorité des clients.  
+ Le [ \<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) est la liaison en file d’attente WCF fournit deux points de terminaison WCF communiquer à l’aide de MSMQ. Par conséquent, la liaison expose des propriétés qui sont spécifiques à MSMQ. Toutefois, toutes les fonctionnalités et propriétés MSMQ ne sont pas exposées dans le `NetMsmqBinding`. Le `NetMsmqBinding` compact regroupe un jeu optimal de fonctionnalités qui s'avère suffisant pour la majorité des clients.  
   
  Le `NetMsmqBinding` illustre les concepts de mise en file d'attente clés discutés jusqu'ici sous la forme de propriétés sur les liaisons. À leur tour, ces propriétés communiquent à MSMQ comment transférer et remettre les messages. Les sections qui suivent décrivent les catégories de propriétés. Pour plus d’informations, consultez les rubriques conceptuelles qui décrivent les propriétés spécifiques plus en détail.  
   
@@ -75,7 +61,7 @@ Cette section décrit comment utiliser la communication mise en file d'attente d
   
  De nombreux systèmes de mise en file d'attente prévoient une file d'attente de lettres mortes à l'échelle du système. MSMQ propose une file d'attente de lettres mortes non transactionnelle à l'échelle du système pour les messages dont la remise à des files d'attente non transactionnelles échoue et une file d'attente de lettres mortes transactionnelle à l'échelle du système pour les messages dont la remise à des files d'attente transactionnelles échoue.  
   
- Si plusieurs clients qui envoient des messages à des files d'attente cibles différentes partagent le service MSMQ, tous les messages envoyés par les clients vont dans la même file d'attente de lettres mortes. Ceci n'est pas toujours préférable. Pour une meilleure isolation, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] et MSMQ dans [!INCLUDE[wv](../../../../includes/wv-md.md)] proposent une file d'attente de lettres mortes personnalisée (ou file d'attente de lettres mortes propre à l'application) que l'utilisateur peut spécifier pour stocker les messages dont la remise échoue. Par conséquent, des clients différents ne partagent pas la même file d'attente de lettres mortes.  
+ Si plusieurs clients qui envoient des messages à des files d'attente cibles différentes partagent le service MSMQ, tous les messages envoyés par les clients vont dans la même file d'attente de lettres mortes. Ceci n'est pas toujours préférable. Pour une meilleure isolation, WCF et MSMQ dans [!INCLUDE[wv](../../../../includes/wv-md.md)] fournissent une file d’attente de lettres mortes personnalisée (ou de la file d’attente de lettres mortes spécifiques à l’application) que l’utilisateur peut spécifier pour stocker les messages dont la remise échouent. Par conséquent, des clients différents ne partagent pas la même file d'attente de lettres mortes.  
   
  La liaison possède deux propriétés intéressantes :  
   
@@ -105,7 +91,7 @@ Cette section décrit comment utiliser la communication mise en file d'attente d
 -   `UseActiveDirectory` : valeur booléenne permettant d'indiquer si Active Directory doit être utilisé pour la résolution d'adresse de file d'attente. Par défaut, cette propriété a la valeur Off. Pour plus d’informations, consultez [points de terminaison de Service et l’adressage de file d’attente](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
   
 ### <a name="msmqintegrationbinding"></a>MsmqIntegrationBinding  
- Le `MsmqIntegrationBinding` est utilisé lorsque vous souhaitez qu'un point de terminaison [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] communique avec une application MSMQ existante écrite en C, C++, COM ou dans des API System.Messaging.  
+ Le `MsmqIntegrationBinding` est utilisé lorsque vous souhaitez qu’un point de terminaison WCF pour communiquer avec une application MSMQ existante écrite en C, C++, COM ou APIs System.Messaging.  
   
  Les propriétés de liaison sont les mêmes que pour `NetMsmqBinding`, avec, toutefois, les différences suivantes :  
   

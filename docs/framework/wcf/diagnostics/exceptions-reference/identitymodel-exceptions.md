@@ -1,24 +1,12 @@
 ---
 title: Exceptions IdentityModel
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4ef34497-8ff5-4621-b773-7731cc721231
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 26bf6cb88d77fc9890a23c482913514f1dc856aa
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ee0b5537a415e1ea53c653ae8e8485e94cc713fd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="identitymodel-exceptions"></a>Exceptions IdentityModel
 Cette rubrique répertorie toutes les exceptions générées par IdentityModel.  
@@ -91,8 +79,8 @@ Cette rubrique répertorie toutes les exceptions générées par IdentityModel.
 |SAMLSignatureAlreadyRead|La signature est déjà lue dans l'assertion SAML.|  
 |AlgorithmAndPrivateKeyMisMatch|L'algorithme spécifié et la clé privée ne correspondent pas.|  
 |EmptyTransformChainNotSupported|La chaîne de transformation vide n'est pas prise en charge.|  
-|SspiWrapperEncryptDecryptAssert1|SSPIWrapper :: EncryptDecryptHelper &#124;' Offset' est hors limites.|  
-|SspiWrapperEncryptDecryptAssert2|SSPIWrapper :: EncryptDecryptHelper &#124;' taille » est hors limites. SecurityTokenManagerCannotCreateAuthenticatorForRequirement=Le gestionnaire de jetons de sécurité ne peut pas créer d’authentificateur de jeton pour l’exigence spécifique.|  
+|SspiWrapperEncryptDecryptAssert1|SSPIWrapper :: EncryptDecryptHelper&#124;'offset' est hors limites.|  
+|SspiWrapperEncryptDecryptAssert2|SSPIWrapper :: EncryptDecryptHelper&#124;'size' est hors limites. SecurityTokenManagerCannotCreateAuthenticatorForRequirement=Le gestionnaire de jetons de sécurité ne peut pas créer d’authentificateur de jeton pour l’exigence spécifique.|  
 |UnableToCreateKeyedHashAlgorithm|Création d'un élément KeyedHashAlgorithm impossible à partir de la valeur spécifique pour l'algorithme de signature spécifique.|  
 |SAMLUnableToLoadAssertion|Le \<SAML : assertion > Échec du chargement de l’élément.|  
 |X509FindValueMismatchMulti|L’élément X509FindType spécifique requiert que le type de l’argument findValue soit l’une des 2 valeurs. L’argument findValue est d’un autre type.|  

@@ -1,27 +1,15 @@
 ---
-title: "Communications principales : Canaux de Transport HTTP-HTTPS"
-ms.custom: 
+title: 'Communications principales : Canaux de Transport HTTP-HTTPS'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6c0a23c9-a663-461c-bdab-58b4d3e23642
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7d67bb810ced381749dca0dc698ca405bb59cfb0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fbdb5b350425aad7108402dec939f036e971d053
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="core-communications-httphttps-transport-channels"></a>Communications principales : canaux de transport HTTP/HTTPS
-Cette rubrique répertorie l'ensemble des exceptions générées par les canaux de transport HTTP/HTTPS [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)].  
+Cette rubrique répertorie toutes les exceptions générées par les canaux de Windows Communication Foundation (WCF) Transport HTTP/HTTPS.  
   
 ## <a name="exception-list"></a>Liste des exceptions  
   
@@ -32,7 +20,7 @@ Cette rubrique répertorie l'ensemble des exceptions générées par les canaux 
 |Hosting_SslSettingsMisconfigured|Les paramètre SSL du service spécifié ne correspondent pas à ceux des services IIS.|  
 |HttpAuthSchemeAndClientCert|La configuration de la fabrication d'écouteur HTTPS nécessite le recours à un certificat client ainsi qu'au schéma d'authentification spécifié. Cependant, un seul mode d'authentification client peut être utilisé à la fois.|  
 |HttpReceiveFailure|Une erreur s'est produite lors de la réception de la réponse HTTP sur le spécifié. La liaison de point de terminaison de service n'utilise peut-être pas le protocole HTTP. Le serveur a peut-être également arrêté le contexte de requête HTTP à cause de la fermeture du service. Pour plus d'informations, consultez les journaux du serveur.|  
-|HttpRegistrationAccessDenied|HTTP ne parvient pas à enregistrer l'adresse URL spécifiée. Votre processus ne dispose pas des droits d'accès à cet espace de noms. Pour plus d'informations, consultez http://msdn.microsoft.com/library/default.asp?url=/library/http/http/namespace_reservations_registrations_and_routing.asp).|  
+|HttpRegistrationAccessDenied|HTTP ne parvient pas à enregistrer l'adresse URL spécifiée. Le processus n’a pas de droits d’accès à cet espace de noms (consultez http://msdn.microsoft.com/library/default.asp?url=/library/http/http/namespace_reservations_registrations_and_routing.asp pour plus d’informations).|  
 |HttpRegistrationAlreadyExists|HTTP ne parvient pas à enregistrer l'adresse URL spécifiée. Une autre application a déjà enregistré cette adresse URL avec HTTP.SYS.|  
 |HttpRegistrationPortInUse|HTTP ne parvient pas à enregistrer l'adresse URL spécifiée car le port TCP indiqué est utilisé par une autre application. .|  
 |HttpSendFailure|Une erreur s'est produite lors de la requête HTTP au spécifié. Assurez-vous qu'un éventuel problème de disparité au niveau des liaisons de sécurité n'est pas à l'origine de cette erreur. Assurez-vous également que la configuration du service ne requiert pas l'utilisation du protocole SSL.|  

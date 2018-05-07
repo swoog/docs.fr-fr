@@ -1,14 +1,6 @@
 ---
-title: "IHostSecurityManager::ImpersonateLoggedOnUser, méthode"
-ms.custom: 
+title: IHostSecurityManager::ImpersonateLoggedOnUser, méthode
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostSecurityManager.ImpersonateLoggedOnUser
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: acc49ba0-f1d9-45ad-871f-9d053a89dcbe
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bf01ca07544fcce59eef81707bb1ff2d1f375feb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: dc57c9465bfafde17156eeec65e52d65c8af9038
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostsecuritymanagerimpersonateloggedonuser-method"></a>IHostSecurityManager::ImpersonateLoggedOnUser, méthode
 Les demandes que le code exécuté à l’aide des informations d’identification de l’utilisateur actuel.  
@@ -54,7 +42,7 @@ HRESULT ImpersonateLoggedOnUser (
   
 |HRESULT|Description|  
 |-------------|-----------------|  
-|S_OK|`ImpersonateLoggedOnUser`retourné avec succès.|  
+|S_OK|`ImpersonateLoggedOnUser` retourné avec succès.|  
 |HOST_E_CLRNOTAVAILABLE|Le common language runtime (CLR) n’a pas été chargé dans un processus ou le CLR est dans un état dans lequel il ne peut pas exécuter du code managé ou traiter l’appel avec succès.|  
 |HOST_E_TIMEOUT|L’appel a expiré.|  
 |HOST_E_NOT_OWNER|L’appelant ne possède pas le verrou.|  
@@ -66,14 +54,14 @@ HRESULT ImpersonateLoggedOnUser (
   
  Le `HANDLE` type n’est pas conforme à COM, c'est-à-dire que sa taille est spécifique à un système d’exploitation et il requiert le marshaling personnalisé. Par conséquent, ce jeton est utilisé que dans le processus, entre le CLR et l’hôte.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** MSCorEE.h  
   
  **Bibliothèque :** inclus en tant que ressource dans MSCorEE.dll  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [IHostSecurityContext, interface](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md)  

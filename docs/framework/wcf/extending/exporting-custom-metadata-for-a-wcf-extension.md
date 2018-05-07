@@ -1,27 +1,15 @@
 ---
-title: "Exportation de métadonnées personnalisées pour une extension WCF"
-ms.custom: 
+title: Exportation de métadonnées personnalisées pour une extension WCF
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 53c93882-f8ba-4192-965b-787b5e3f09c0
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: dbdbef495232fb1ffaeb8d1dc739c2db1355556d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 8d9f5e223bb47fc8997f6509ec882b282e1ee8b5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exporting-custom-metadata-for-a-wcf-extension"></a>Exportation de métadonnées personnalisées pour une extension WCF
-Dans [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], le processus d'exportation de métadonnées consiste à décrire des points de terminaison de service et à les projeter dans une représentation parallèle standardisée qui permet aux clients de comprendre comment utiliser le service. Les métadonnées personnalisées sont composées d'éléments XML que les exportateurs de métadonnées fournis par le système ne peuvent pas exporter. En général, cela inclut les éléments WSDL personnalisés des comportements définis par l'utilisateur ainsi que les éléments de liaison et les assertions de stratégie relatives aux fonctions et spécifications des liaisons et contrats.  
+Dans Windows Communication Foundation (WCF), exportation de métadonnées est le processus de décrire des points de terminaison de service et à les projeter dans une représentation parallèle standardisée qui les clients peuvent utiliser pour apprendre à utiliser le service. Les métadonnées personnalisées sont composées d'éléments XML que les exportateurs de métadonnées fournis par le système ne peuvent pas exporter. En général, cela inclut les éléments WSDL personnalisés des comportements définis par l'utilisateur ainsi que les éléments de liaison et les assertions de stratégie relatives aux fonctions et spécifications des liaisons et contrats.  
   
  Cette section décrit l'exportation des éléments WSDL personnalisés ou des assertions de stratégie, mais ne traite pas du processus d'exportation lui-même. Pour plus d’informations sur comment utiliser les types d’exportent et importer des métadonnées que les métadonnées sont personnalisé ou construit système, consultez [exportation et importation de métadonnées](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md).  
   

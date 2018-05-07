@@ -1,29 +1,15 @@
 ---
 title: WMI Provider
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 462f0db3-f4a4-4a4b-ac26-41fc25c670a4
-caps.latest.revision: 35
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c1b90a5231505f7d72d10c0ab9f9f80037d48bd7
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
-ms.translationtype: MT
+ms.openlocfilehash: 202923ab1d09b0ce836dbfce7360dd22a479a900
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wmi-provider"></a>WMI Provider
-Cet exemple montre comment rassembler pendant l'exécution des données des services [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] en utilisant le fournisseur WMI (Windows Management Instrumentation) généré dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Cet exemple montre également comment ajouter un objet WMI défini par l'utilisateur à un service. L’exemple active le fournisseur WMI pour les [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md) et montre comment collecter des données à partir de la `ICalculator` service lors de l’exécution.  
+Cet exemple montre comment collecter des données à partir des services Windows Communication Foundation (WCF) lors de l’exécution en utilisant le fournisseur Windows Management Instrumentation (WMI) qui est intégré à [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Cet exemple montre également comment ajouter un objet WMI défini par l'utilisateur à un service. L’exemple active le fournisseur WMI pour les [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md) et montre comment collecter des données à partir de la `ICalculator` service lors de l’exécution.  
   
  WMI est l'implémentation de Microsoft de la norme WBEM (Web-Based Enterprise Management). Pour plus d’informations sur le SDK WMI, consultez [Windows Management Instrumentation](https://msdn.microsoft.com/library/aa394582.aspx). WBEM est une norme d'industrie qui détermine comment les applications exposent l'instrumentation de gestion aux outils de gestion externes.  
   
@@ -152,7 +138,7 @@ cscript EnumerateCustomObjects.js
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à la page [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les exemples [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\WMIProvider`  
   

@@ -1,14 +1,6 @@
 ---
 title: 'Comment : créer un jeton personnalisé'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,22 +10,16 @@ helpviewer_keywords:
 - WSSecurityTokenSerializer class
 - SecurityToken class
 ms.assetid: 6d892973-1558-4115-a9e1-696777776125
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c270b63586809044f1bb3e56841ae8cf590e7bb1
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: eb227075b1a696216e62e851aa8b10c7511ac93f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-token"></a>Comment : créer un jeton personnalisé
 Cette rubrique contient des instructions permettant de créer un jeton de sécurité personnalisé à l'aide de la classe <xref:System.IdentityModel.Tokens.SecurityToken> et de l'intégrer à un fournisseur et authentificateur de jetons de sécurité personnalisés. Pour obtenir un exemple de code complet, consultez la [jeton personnalisé](../../../../docs/framework/wcf/samples/custom-token.md) exemple.  
   
- A *jeton de sécurité* est essentiellement un élément XML qui est utilisé par le [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] infrastructure de sécurité pour représenter les revendications relatives à un expéditeur à l’intérieur du message SOAP. La sécurité [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fournit plusieurs jetons pour les modes d'authentification fournis par le système. Les exemples comprennent un jeton de sécurité de certificat X.509 représenté par la classe <xref:System.IdentityModel.Tokens.X509SecurityToken> ou un jeton de sécurité de nom d'utilisateur représenté par la classe <xref:System.IdentityModel.Tokens.UserNameSecurityToken>.  
+ A *jeton de sécurité* est essentiellement un élément XML qui est utilisé par l’infrastructure de sécurité de Windows Communication Foundation (WCF) pour représenter les revendications relatives à un expéditeur à l’intérieur du message SOAP. La sécurité [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fournit plusieurs jetons pour les modes d'authentification fournis par le système. Les exemples comprennent un jeton de sécurité de certificat X.509 représenté par la classe <xref:System.IdentityModel.Tokens.X509SecurityToken> ou un jeton de sécurité de nom d'utilisateur représenté par la classe <xref:System.IdentityModel.Tokens.UserNameSecurityToken>.  
   
  Il peut arriver qu'un mode d'authentification ou que des informations d'identification ne soient pas prises en charge par les types fournis. Dans un tel cas, il est nécessaire de créer un jeton de sécurité personnalisé permettant de fournir une représentation XML des informations d'identification personnalisées dans les messages SOAP.  
   

@@ -1,23 +1,12 @@
 ---
 title: Notions de base des transactions
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 353f4ee2-e6bf-4b1c-b1c8-385fc8a486c0
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fa26531b1d2573b4bef49ec93f4205716227e25b
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: 1189556c74c45dc7475dd872c01c1ec5eaeba111
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transaction-fundamentals"></a>Notions de base des transactions
 Les transactions servent à lier plusieurs tâches ensemble. Par exemple, imaginez qu'une application effectue deux tâches. Une table est d'abord créée dans une base de données. Un objet spécialisé est ensuite appelé pour collecter, formater et insérer des données dans la nouvelle table. Ces deux tâches sont liées et sont même interdépendantes. Cela vous évite de créer une nouvelle table sauf si vous devez y insérer des données. L'exécution des deux tâches au sein de l'étendue d'une seule transaction effectue la connexion entre les deux. Si la seconde tâche échoue, la première est restaurée à un point intervenant avant la création de la nouvelle table.  

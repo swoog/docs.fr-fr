@@ -1,14 +1,6 @@
 ---
 title: Fédération
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,25 +8,19 @@ helpviewer_keywords:
 - WCF, federation
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
-caps.latest.revision: 26
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0e7aef1f53675089ee311aa79a54abf60441b728
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: d69de8c01a23eff5314220a10a51f6487080df41
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="federation"></a>Fédération
-Cette rubrique fournit une brève vue d'ensemble du concept de sécurité fédérée. Elle décrit également la prise en charge [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] permettant de déployer des architectures de sécurité fédérée. Pour un exemple d’application qui illustre la fédération, consultez [Federation, exemple](../../../../docs/framework/wcf/samples/federation-sample.md).  
+Cette rubrique fournit une brève vue d'ensemble du concept de sécurité fédérée. Elle décrit également la prise en charge de Windows Communication Foundation (WCF) pour déployer des architectures de sécurité fédérée. Pour un exemple d’application qui illustre la fédération, consultez [Federation, exemple](../../../../docs/framework/wcf/samples/federation-sample.md).  
   
 ## <a name="definition-of-federated-security"></a>Définition de sécurité fédérée  
  La sécurité fédérée permet une séparation nette entre le service auquel un client accède et les procédures d'authentification et d'autorisation associées. La sécurité fédérée permet également la collaboration sur plusieurs systèmes, réseaux et organisations dans les différents domaines de confiance.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] prend en charge la création et le déploiement des systèmes distribués qui utilisent la sécurité fédérée.  
+ WCF fournit la prise en charge pour la création et déploiement de systèmes distribués qui utilisent la sécurité fédérée.  
   
 ### <a name="elements-of-a-federated-security-architecture"></a>Éléments d'une architecture de sécurité fédérée  
  L'architecture de sécurité fédérée a trois éléments clés, tel qu'indiqué dans le tableau suivant.  
@@ -80,7 +66,7 @@ Cette rubrique fournit une brève vue d'ensemble du concept de sécurité fédé
  Une fois que les utilisateurs obtiennent un jeton de sécurité du STS A, ils présentent le jeton au STS B. L'organisation B continue à procéder à l'autorisation des demandes des utilisateurs et leur envoie un jeton de sécurité provenant de son propre jeu. Les utilisateurs peuvent ensuite présenter leur jeton à la ressource de l'organisation B et accéder au service.  
   
 ## <a name="support-for-federated-security-in-wcf"></a>Prise en charge de la sécurité fédérée dans WCF  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Fournit la prise en charge des clés en main pour déployer des architectures de sécurité fédérée via la [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
+ WCF fournit la prise en charge des clés en main pour déployer des architectures de sécurité fédérée via la [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
   
  Le [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) élément fournit pour une liaison sécurisée, fiable et interopérable qui implique l’utilisation de HTTP comme mécanisme de transport sous-jacent pour le style de communication demande-réponse, emploi en tant que le format de câble d’encodage de texte et XML.  
   
@@ -98,10 +84,10 @@ Cette rubrique fournit une brève vue d'ensemble du concept de sécurité fédé
 -   Présentez le jeton au service pour accéder au service.  
   
 ### <a name="phase-2-run-time-phase"></a>Phase 2 : phase d'exécution  
- Pendant la phase d'exécution, le client instancie un objet de la classe de client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] et lance un appel à l'aide du client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. L'infrastructure sous-jacente de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] gère les étapes précédemment mentionnées dans le modèle de communication de sécurité fédérée et active le client pour consommer le service de façon transparente.  
+ Pendant la phase d’exécution, le client instancie un objet de la classe de client WCF et effectue un appel à l’aide du client WCF. L’infrastructure sous-jacente de WCF gère les étapes précédemment mentionnées dans le modèle de communication de sécurité fédérée et permet au client de consommer le service de façon transparente.  
   
 ## <a name="sample-implementation-using-wcf"></a>Exemple d'implémentation à l'aide de WCF  
- L'illustration suivante présente un exemple d'implémentation pour une architecture de sécurité fédérée utilisant la prise en charge native de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ L’illustration suivante montre un exemple d’implémentation d’une architecture de sécurité fédérée à l’aide de la prise en charge native de WCF.  
   
  ![Sécurité fédérée dans WCF](../../../../docs/framework/wcf/feature-details/media/federatedsecurityinwcf.gif "FederatedSecurityInWCF")  
   
@@ -300,7 +286,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
  ![Fédération](../../../../docs/framework/wcf/feature-details/media/federationclienta.gif "FederationClientA")  
   
 ## <a name="summary"></a>Récapitulatif  
- La sécurité fédérée fournit une division nette de la responsabilité et permet de générer des architectures de service sécurisées et évolutives. À l'instar d'une plateforme de génération et de déploiement d'applications distribuées, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fournit une prise en charge native permettant d'implémenter la sécurité fédérée.  
+ La sécurité fédérée fournit une division nette de la responsabilité et permet de générer des architectures de service sécurisées et évolutives. En tant que plateforme de générer et déployer des applications distribuées, WCF fournit la prise en charge native pour implémenter la sécurité fédérée.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Sécurité](../../../../docs/framework/wcf/feature-details/security.md)

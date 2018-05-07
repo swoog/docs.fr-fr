@@ -1,34 +1,20 @@
 ---
 title: Guide de l'interopérabilité des protocoles de services Web
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: f2981678-ebdb-433d-899b-467f7df95fb2
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6b962452b6127d259733418969f1fb7b5036b1e5
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 1ee8b485d8a46d2599958db2c71f4a6e84875169
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Guide de l'interopérabilité des protocoles de services Web
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] implémente plusieurs protocoles de services Web. Un grand nombre de ces protocoles incluent plusieurs options et points d'extensibilité qui sont laissés à la discrétion de l'implémenteur. Cette rubrique fournit une liste des protocoles des services Web implémentés par [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Des détails d'implémentation pour chaque protocole pris en charge sont fournis dans les autres rubriques de cette section.  
+Windows Communication Foundation (WCF) implémente plusieurs protocoles de services Web. Un grand nombre de ces protocoles incluent plusieurs options et points d'extensibilité qui sont laissés à la discrétion de l'implémenteur. Cette rubrique fournit une liste de protocoles de services Web que WCF implémente. Des détails d'implémentation pour chaque protocole pris en charge sont fournis dans les autres rubriques de cette section.  
   
 ## <a name="web-services-protocols-implemented-by-wcf"></a>Protocoles des services Web implémentés par WCF  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fournit une prise en charge des protocoles de l'infrastructure des services Web par l'intermédiaire des canaux, et des protocoles d'application de services Web par l'intermédiaire de la fonctionnalité de contrats. L'interopérabilité pour les protocoles d'application s'effectue à l'aide des langages XSD (XML Schema Description) 1.0 et WSDL (Web Services Description Language ) 1.1.  
+ WCF prend en charge pour les protocoles d’infrastructure Web services (WS) via les canaux et les protocoles d’application via la fonctionnalité de contrats de services Web. L'interopérabilité pour les protocoles d'application s'effectue à l'aide des langages XSD (XML Schema Description) 1.0 et WSDL (Web Services Description Language ) 1.1.  
   
- L'interopérabilité des protocoles d'infrastructure est fournie par la famille des spécifications WS-*. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] les canaux fournissent la prise en charge pour un nombre de WS -\* protocoles d’infrastructure. Les canaux [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sont configurés à l'aide d'éléments de liaison. Les tableaux suivants contiennent la liste complète des WS -\* implémentés par différents protocoles d’infrastructure [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] éléments de liaison.  
+ L'interopérabilité des protocoles d'infrastructure est fournie par la famille des spécifications WS-*. Canaux WCF prennent en charge un nombre de WS -\* protocoles d’infrastructure. Canaux WCF sont configurés à l’aide des éléments de liaison. Les tableaux suivants contiennent la liste complète des WS -\* protocoles d’infrastructure implémentées par les différents éléments de liaison WCF.  
   
  <xref:System.ServiceModel.Channels.HttpTransportBindingElement> prend en charge les spécifications présentées dans le tableau suivant :  
   
@@ -77,7 +63,7 @@ ms.lasthandoff: 03/26/2018
 |WSS: SAML 1.1 Token Profile 1.1|[Web Services Security SAML Token Profile 1.1](http://go.microsoft.com/fwlink/?LinkId=96694)|  
 |WS-Secure Conversation|[Langue de Conversation sécurisée de Services Web](http://go.microsoft.com/fwlink/?LinkId=95317)|  
 |WS-Trust 1.4 (page pouvant être en anglais)|[Services Web confiance Language](http://go.microsoft.com/fwlink/?LinkId=169514)|  
-|WS-SecurityPolicy 2005/07|[Langue de Conversation sécurisée de Services Web](http://go.microsoft.com/fwlink/?LinkId=95317)<br /><br /> Selon les corrections des errata soumis au comité technique OASIS WS-SX.<br /><br /> [ws-sx message](http://go.microsoft.com/fwlink/?LinkId=96700)|  
+|WS-SecurityPolicy 2005/07|[Langue de Conversation sécurisée de Services Web](http://go.microsoft.com/fwlink/?LinkId=95317)<br /><br /> Selon les corrections des errata soumis au comité technique OASIS WS-SX.<br /><br /> [message de ws-sx.](http://go.microsoft.com/fwlink/?LinkId=96700)|  
 |WS-ReliableMessaging 1.1|[Protocole de messagerie fiable version 1.1](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-1.md)|  
   
  <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> prend en charge les spécifications présentées dans le tableau suivant :  
@@ -105,7 +91,7 @@ ms.lasthandoff: 03/26/2018
   
 -   [WS-Transfer Get pour la récupération de métadonnées](http://go.microsoft.com/fwlink/?LinkId=96708)  
   
- De plus, les profils d'interopérabilité suivants sont implémentés dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ En outre, les profils d’interopérabilité suivants sont implémentés dans WCF :  
   
 -   [Basic Profile 1.1](http://go.microsoft.com/fwlink/?LinkId=69313)  
   

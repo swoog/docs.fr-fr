@@ -1,31 +1,17 @@
 ---
-title: "Métadonnées"
-ms.custom: 
+title: Métadonnées
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - metadata [WCF]
 ms.assetid: 66a61bd0-18d3-4e7e-bf8b-177a10ac2f60
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8e4b0a724653f5366d6da96f511fac9e62f64816
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7ec0ba750a692d6f2c397fd565d855ac97b59073
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="metadata"></a>Métadonnées
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] fournit une infrastructure pour exporter, publier, récupérer et importer les métadonnées de service. Les services [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilisent les métadonnées pour décrire l'interaction avec les points de terminaison d'un service afin que les outils tels que Svcutil.exe puissent générer automatiquement le code client pour accéder au service.  
+Windows Communication Foundation (WCF) fournit une infrastructure pour l’exportation, de publication, la récupération et l’importation de métadonnées de service. Les services WCF utilisent des métadonnées pour décrire l’interaction avec les points de terminaison du service afin que les outils tels que Svcutil.exe puissent générer automatiquement du code client pour l’accès au service.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Vue d’ensemble de l’architecture de métadonnées](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)  
@@ -38,7 +24,7 @@ ms.lasthandoff: 12/22/2017
  Décrit comment exporter et importer les métadonnées.  
   
  [Publication de métadonnées](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)  
- Décrit comment [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] publie les métadonnées.  
+ Décrit comment WCF publie les métadonnées.  
   
  [Récupération de métadonnées](../../../../docs/framework/wcf/feature-details/retrieving-metadata.md)  
  Décrit les différentes méthodes utilisées pour récupérer les métadonnées.  

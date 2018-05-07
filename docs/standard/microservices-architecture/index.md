@@ -1,27 +1,20 @@
 ---
 title: Microservices .NET. Architecture pour les applications .NET en conteneur
 description: Architecture des microservices .NET pour les applications .NET en conteneur | Avant-propos
-keywords: Docker, microservices, ASP.NET, conteneur
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 289f34b12cc0278212ceb737c2b9cb3f2ff986c1
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: d4499384d63f11a1d78d0aa84749aed8ea554794
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 ![](./media/cover.png)
 
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>Microservices .NET. Architecture pour les applications .NET en conteneur
 
-TÉLÉCHARGEMENT disponible à l’adresse : <https://aka.ms/microservicesebook>
+TÉLÉCHARGEMENT disponible à l’adresse suivante : <https://aka.ms/microservicesebook>
 
 PUBLIÉ PAR
 
@@ -41,7 +34,7 @@ Ce document est fourni « en l’état » et exprime les points de vue et les 
 
 Certains exemples décrits dans ce document ne sont fournis qu’à titre d’illustration et sont purement fictifs. Toute ressemblance ou tout lien avec le monde réel sont purement fortuits et involontaires.
 
-Microsoft et les marques commerciales mentionnées dans la page web « Marques » de http://www.microsoft.com sont des marques du groupe de sociétés Microsoft.
+Microsoft et les marques commerciales mentionnées dans la page web « Marques » à l’adresse http://www.microsoft.com sont des marques du groupe de sociétés Microsoft.
 
 Mac et macOS sont des marques commerciales d’Apple Inc.
 

@@ -1,35 +1,21 @@
 ---
 title: Vue d'ensemble des services de workflow
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: e536dda3-e286-441e-99a7-49ddc004b646
-caps.latest.revision: 30
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6eb5381438aa082eae8b4252bbd1cf343ba0ebf7
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: eaf5fb4b20aca0983dcbe00724ab81803834940a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="workflow-services-overview"></a>Vue d'ensemble des services de workflow
-Les services de workflow sont des services basés sur [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], implémentés à l'aide de workflows. Les services de workflow sont des workflows qui utilisent les activités de messagerie pour envoyer et recevoir des messages [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. .NET Framework 4.5 introduit plusieurs activités de messagerie qui vous permettent d'envoyer et de recevoir des messages à partir d'un workflow. Pour plus d’informations sur les activités de messagerie et comment ils peuvent être utilisés pour implémenter des modèles d’échange de messages différents, consultez [d’activités de messagerie](../../../../docs/framework/wcf/feature-details/messaging-activities.md).  
+Services de workflow sont les services WCF qui sont implémentées à l’aide de flux de travail. Services de workflow sont des flux de travail qui utilisent les activités de messagerie pour envoyer et recevoir des messages de Windows Communication Foundation (WCF). .NET Framework 4.5 introduit plusieurs activités de messagerie qui vous permettent d'envoyer et de recevoir des messages à partir d'un workflow. Pour plus d’informations sur les activités de messagerie et comment ils peuvent être utilisés pour implémenter des modèles d’échange de messages différents, consultez [d’activités de messagerie](../../../../docs/framework/wcf/feature-details/messaging-activities.md).  
   
 ## <a name="benefits-of-using-workflow-services"></a>Avantages de l'utilisation de services de workflow  
  Les applications étant de plus en plus distribuées, les services individuels sont désormais chargés d'appeler d'autres services pour alléger en partie la tâche. Implémenter ces appels en tant qu'opérations asynchrones rend le code plus complexe. La gestion des erreurs ajoute une complexité supplémentaire, sous la forme d'une gestion des exceptions et de la fourniture d'informations de suivi détaillées. Certains services ont souvent une durée d'exécution longue et peuvent consommer de précieuses ressources système à attendre une entrée. En raison de ces problèmes, les applications distribuées sont souvent très complexes, difficiles à écrire et à maintenir. Les workflows constituent une méthode naturelle pour exprimer la coordination de travail asynchrone, notamment les appels aux services externes. Les workflows sont également efficaces pour représenter des processus d'entreprise de longue durée. Ces qualités font du workflow une ressource importante pour la construction de services dans un environnement distribué.  
   
 ## <a name="implementing-a-workflow-service"></a>Implémentation d'un service de workflow  
- Lorsque vous implémentez un service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], vous définissez plusieurs contrats qui décrivent le service et les données qu'il envoie et reçoit. Les données sont représentées en tant que contrats de données et contrats de message. Les services WCF et les services de workflow utilisent tous des définitions de contrat de données et de contrat de message dans le cadre des descriptions du service. Le service lui-même expose des métadonnées (au format WSDL) pour décrire les opérations du service. Dans WCF, les contrats de service et les contrats d'opération définissent le service et les opérations qu'il prend en charge. Toutefois dans un service de workflow, ces contrats font partie du processus d'entreprise lui-même. Ils sont exposés dans les métadonnées par un processus appelé l'inférence de contrat. Lorsqu'un service de workflow est hébergé à l'aide d'un objet <xref:System.ServiceModel.Activities.WorkflowServiceHost>, la définition du workflow est examinée et un contrat est généré en fonction du jeu d'activités de messagerie qui se trouvent dans le workflow. Plus particulièrement, les activités et les propriétés suivantes sont utilisées pour générer le contrat :  
+ Lorsque vous implémentez un service WCF, vous définissez plusieurs contrats qui décrivent le service et les données qu’il envoie et reçoit. Les données sont représentées en tant que contrats de données et contrats de message. Les services WCF et les services de workflow utilisent tous des définitions de contrat de données et de contrat de message dans le cadre des descriptions du service. Le service lui-même expose des métadonnées (au format WSDL) pour décrire les opérations du service. Dans WCF, les contrats de service et les contrats d'opération définissent le service et les opérations qu'il prend en charge. Toutefois dans un service de workflow, ces contrats font partie du processus d'entreprise lui-même. Ils sont exposés dans les métadonnées par un processus appelé l'inférence de contrat. Lorsqu'un service de workflow est hébergé à l'aide d'un objet <xref:System.ServiceModel.Activities.WorkflowServiceHost>, la définition du workflow est examinée et un contrat est généré en fonction du jeu d'activités de messagerie qui se trouvent dans le workflow. Plus particulièrement, les activités et les propriétés suivantes sont utilisées pour générer le contrat :  
   
  Activité <xref:System.ServiceModel.Activities.Receive>  
   
@@ -50,7 +36,7 @@ Les services de workflow sont des services basés sur [!INCLUDE[indigo2](../../.
   
  Activité <xref:System.ServiceModel.Activities.TransactedReceiveScope>  
   
- Le résultat final de l'inférence de contrat est une description du service utilisant les mêmes structures de données que les services et contrats d'opération [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Puis ces informations sont utilisées pour exposer WSDL pour le service de workflow.  
+ Le résultat final de l’inférence de contrat est une description du service à l’aide des mêmes structures de données en tant que services WCF et des contrats d’opération. Puis ces informations sont utilisées pour exposer WSDL pour le service de workflow.  
   
 > [!NOTE]
 >  [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] ne vous permet pas d'écrire des services de workflow à l'aide d'une définition de contrat existante, sans une prise en charge d'outils supplémentaires. Les contrats du service de workflow sont créés par le processus d'inférence de contrat présenté précédemment. Les contrats de message et les contrats de données sont toutefois entièrement pris en charge.  
@@ -59,7 +45,7 @@ Les services de workflow sont des services basés sur [!INCLUDE[indigo2](../../.
  WCF définit deux liaisons <xref:System.ServiceModel.NetMsmqBinding> et <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> basées sur MSMQ.  Les liaisons basées sur MSMQ sont souvent utilisées avec les services de workflow en raison de la longue durée d'exécution de ces services. Les liaisons basées sur MSMQ ont une propriété `ValidityDuration` qui spécifie comment de temps les messages MSMQ peuvent supposer être valides. En raison de la longue durée d'exécution des services de workflow, il est possible que la durée de validité d'un message MSMQ expire avant que le service de workflow puisse le traiter. Il est donc très important d'affecter une valeur appropriée à la durée de validité d'une liaison MSMQ. Cette valeur doit être choisie en fonction du workflow et de sa manière de traiter les messages. Par exemple si vous avez un workflow avec une activité <xref:System.ServiceModel.Activities.Receive> suivie d'une activité personnalisée qui s'exécute pendant 10 minutes, elle-même suivie d'une autre activité <xref:System.ServiceModel.Activities.Receive>, la valeur correcte pour `ValidityDuration` doit être supérieure à 10 minutes.  
   
 ## <a name="hosting-a-workflow-service"></a>Hébergement d'un service de workflow  
- Comme les services [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], les services de flux de travail doivent être hébergés. Les services [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilisent la classe <xref:System.ServiceModel.ServiceHost> pour héberger les services, tandis que les services de workflow utilisent la classe <xref:System.ServiceModel.Activities.WorkflowServiceHost> pour héberger les services. Comme les services [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], les services de workflow peuvent être hébergés de diverses manières, par exemple :  
+ Tels que les services WCF, les services de workflow doivent être hébergés. Utilisation des services WCF le <xref:System.ServiceModel.ServiceHost> classe pour héberger les services et les flux de travail utilisé par les services <xref:System.ServiceModel.Activities.WorkflowServiceHost> pour héberger les services. Tels que les services WCF, services de workflow peuvent être hébergés dans un de différentes façons, par exemple :  
   
 -   dans une application managée [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] ;  
   

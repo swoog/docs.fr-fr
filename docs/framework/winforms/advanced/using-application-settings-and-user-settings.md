@@ -1,27 +1,15 @@
 ---
-title: "Utilisation de paramètres d'application et de paramètres utilisateur"
-ms.custom: 
+title: Utilisation de paramètres d'application et de paramètres utilisateur
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - user settings [Windows Forms]
 - application settings [Windows Forms], how-to topics
 ms.assetid: 54682d3b-1cbf-4683-9351-012b8b4286b5
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 310fcad07ce7cf541312ff83e41d7e5fc2643898
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f5231ecc9fb3898d60241ea8a53b509daced8a0f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-application-settings-and-user-settings"></a>Utilisation de paramètres d'application et de paramètres utilisateur
 À compter de .NET Framework 2.0, vous pouvez créer et accéder aux valeurs qui sont conservées entre les sessions d’exécution de l’application. Ces valeurs sont appelées *paramètres*. Les paramètres peuvent représenter des préférences de l’utilisateur ou des informations précieuses l’application doivent utiliser. Par exemple, vous pouvez créer une série de paramètres qui stockent les préférences utilisateur pour le jeu de couleurs d’une application. Ou bien, vous pouvez stocker la chaîne de connexion qui spécifie une base de données utilisées par votre application. Les paramètres permettent de que vous permettent de conserver les informations qui sont essentielles à l’application en dehors du code et pour créer des profils qui stockent les préférences des utilisateurs individuels.  

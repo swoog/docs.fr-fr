@@ -1,30 +1,16 @@
 ---
 title: Options de dimensionnement dans le contrôle DataGrid
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - DataGrid control [WPF], sizing
 - size [WPF], DataGrid
 - automatically size DataGrid [WPF]
 ms.assetid: 96a0e47e-b010-4302-98ef-2daac446d8db
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4219dc88a263b73aa89812a2f841a920c804796b
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 0019ac9ad82301506d2da279094b2c96e022e915
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sizing-options-in-the-datagrid-control"></a>Options de dimensionnement dans le contrôle DataGrid
 Plusieurs options sont disponibles pour contrôler comment le <xref:System.Windows.Controls.DataGrid> se redimensionne. Le <xref:System.Windows.Controls.DataGrid>et les lignes et les colonnes dans le <xref:System.Windows.Controls.DataGrid>, peut être défini sur la taille s’adapte automatiquement à leur contenu, ou peut être défini sur des valeurs spécifiques. Par défaut, le <xref:System.Windows.Controls.DataGrid> augmente et ajuster la taille de son contenu.  

@@ -1,13 +1,6 @@
 ---
 title: Empaquetage de polices avec des applications
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - typography [WPF], packaging fonts with applications
 - packaging fonts with applications [WPF]
 ms.assetid: db15ee48-4d24-49f5-8b9d-a64460865286
-caps.latest.revision: "29"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d3860aff69b0e4e7a3dc624898cc6b1daa0dd092
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 068a85a5fffd9b7463875695a4b494340ef66cd9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="packaging-fonts-with-applications"></a>Empaquetage de polices avec des applications
 Cette rubrique fournit une vue d’ensemble de la façon d’empaqueter des polices avec votre [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] application.  
@@ -40,7 +28,7 @@ Cette rubrique fournit une vue d’ensemble de la façon d’empaqueter des poli
 ## <a name="introduction-to-packaging-fonts"></a>Présentation de l’empaquetage de polices  
  Vous pouvez empaqueter facilement des polices en tant que ressources dans votre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications pour afficher le texte de l’interface utilisateur et d’autres types de texte en fonction de contenu. Les polices peuvent être séparées des fichiers d’assembly de l’application ou y être incorporées. Vous pouvez également créer une bibliothèque de polices de ressources uniquement, que votre application peut référencer.  
   
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]et [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] polices contiennent un indicateur de type (fsType) qui indique les droits d’incorporation de licence pour la police. Toutefois, cet indicateur de type concerne uniquement les polices incorporées stockées dans un document. Il ne concerne pas les polices incorporées dans une application. Vous pouvez récupérer la police de l’incorporation des droits pour une police en créant un <xref:System.Windows.Media.GlyphTypeface> objet et en référençant sa <xref:System.Windows.Media.GlyphTypeface.EmbeddingRights%2A> propriété. Reportez-vous à la section « mesures OS/2 et Windows » de la [spécification OpenType](http://www.microsoft.com/typography/otspec/os2.htm) pour plus d’informations sur l’indicateur fsType.  
+ [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] et [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] polices contiennent un indicateur de type (fsType) qui indique les droits d’incorporation de licence pour la police. Toutefois, cet indicateur de type concerne uniquement les polices incorporées stockées dans un document. Il ne concerne pas les polices incorporées dans une application. Vous pouvez récupérer la police de l’incorporation des droits pour une police en créant un <xref:System.Windows.Media.GlyphTypeface> objet et en référençant sa <xref:System.Windows.Media.GlyphTypeface.EmbeddingRights%2A> propriété. Reportez-vous à la section « mesures OS/2 et Windows » de la [spécification OpenType](http://www.microsoft.com/typography/otspec/os2.htm) pour plus d’informations sur l’indicateur fsType.  
   
  Le [Microsoft Typography](http://www.microsoft.com/typography/links/) site Web comporte des informations de contact qui peuvent vous aider à localiser un fournisseur de police particulière ou trouver un fournisseur de polices pour un.  
   

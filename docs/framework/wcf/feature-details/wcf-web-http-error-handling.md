@@ -1,29 +1,15 @@
 ---
 title: Gestion des erreurs HTTP Web WCF
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 02891563-0fce-4c32-84dc-d794b1a5c040
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bcd0e6d1e6318404eb47741dc61ccf2ff9358b47
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 228f8cdbe5ddde63f2b6afd82a27055f2241e058
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-web-http-error-handling"></a>Gestion des erreurs HTTP Web WCF
-La gestion des erreurs HTTP Web [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] vous permet de retourner des erreurs provenant des services HTTP Web [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] qui spécifient un code d'état HTTP et retournent les détails d'une erreur en utilisant le même format que l'opération (par exemple, XML ou JSON).  
+Gérer les erreurs HTTP Web Windows Communication Foundation (WCF) vous permet de retourner les erreurs à partir des services HTTP Web WCF qui spécifient un code d’état HTTP et de retournent les détails de l’erreur utilisent le même format que l’opération (par exemple, XML ou JSON).  
   
 ## <a name="wcf-web-http-error-handling"></a>Gestion des erreurs HTTP Web WCF  
  La classe <xref:System.ServiceModel.Web.WebFaultException> définit un constructeur qui vous permet de spécifier un code d'état HTTP. Ce code d'état est alors retourné au client. Une version générique de la classe <xref:System.ServiceModel.Web.WebFaultException>, <xref:System.ServiceModel.Web.WebFaultException%601>, vous permet de retourner un type défini par l'utilisateur contenant des informations sur l'erreur qui s'est produite. Cet objet personnalisé est sérialisé à l'aide du format spécifié par l'opération et retourné au client. L'exemple suivant indique comment retourner un code d'état HTTP.  

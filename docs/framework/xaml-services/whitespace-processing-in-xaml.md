@@ -1,29 +1,17 @@
 ---
 title: Traitement des espaces blancs en XAML
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - East Asian characters [XAML Services]
 - XAML [XAML Services], whitespace processing
 - whitespace processing in XAML [XAML Services]
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
-caps.latest.revision: "20"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c382be7dabca90ef201fa24cfb79472955347eef
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9f7d7ca900955b8899322533f9d69338042d88ab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="whitespace-processing-in-xaml"></a>Traitement des espaces blancs en XAML
 Selon les règles de langage XAML, un espace blanc significatif doit être traité par une implémentation du processeur [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] . Cette rubrique documente ces règles de langage XAML. Elle traite également de la gestion d'espaces blancs supplémentaires définie par l'implémentation [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] du processeur XAML et du writer XAML pour la sérialisation.  
@@ -70,7 +58,7 @@ Selon les règles de langage XAML, un espace blanc significatif doit être trait
   
 <a name="east_asian_characters"></a>   
 ## <a name="east-asian-characters"></a>Caractères d'Extrême-Orient  
- Les caractères d'Extrême-Orient sont définis comme un jeu de caractères [!INCLUDE[TLA2#tla_unicode](../../../includes/tla2sharptla-unicode-md.md)] allant de U+20000 à U+2FFFD et de U+30000 à U+3FFFD. Ce sous-ensemble est parfois également appelé « idéogrammes CJK ». Pour plus d’informations, consultez le site [http://www.unicode.org](http://www.unicode.org/).  
+ Les caractères d'Extrême-Orient sont définis comme un jeu de caractères [!INCLUDE[TLA2#tla_unicode](../../../includes/tla2sharptla-unicode-md.md)] allant de U+20000 à U+2FFFD et de U+30000 à U+3FFFD. Ce sous-ensemble est parfois également appelé « idéogrammes CJK ». Pour plus d’informations, consultez [http://www.unicode.org](http://www.unicode.org/).  
   
 <a name="whitespace_and_text_content_models"></a>   
 ## <a name="whitespace-and-text-content-models"></a>Espace blanc et modèles de contenu de texte  

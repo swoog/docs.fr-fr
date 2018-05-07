@@ -1,30 +1,18 @@
 ---
 title: Programmation au niveau du canal client
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3b787719-4e77-4e77-96a6-5b15a11b995a
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4c3d9bc1819045c8261f003cbab52dd71c4da408
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ff399a2f3a4b86404695502fb002ee6920bea758
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="client-channel-level-programming"></a>Programmation au niveau du canal client
-Cette rubrique décrit comment écrire une application cliente [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] sans utiliser la classe <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> et son modèle objet associé.  
+Cette rubrique explique comment écrire une application cliente de Windows Communication Foundation (WCF) sans utiliser le <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> classe et son modèle objet associé.  
   
 ## <a name="sending-messages"></a>Envoi des messages  
  Pour pouvoir envoyer des messages, puis recevoir et traiter les réponses, vous devez procéder comme suit :  

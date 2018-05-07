@@ -1,28 +1,14 @@
 ---
 title: TypeConverters et XAML
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - XAML [WPF], TypeConverter class
 ms.assetid: f6313e4d-e89d-497d-ac87-b43511a1ae4b
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1b7ee4b3b00a675cfafc884d41079b76656bdf49
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a6d41b5ad519302016ed7fa1d6a103af0f4f14d2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="typeconverters-and-xaml"></a>TypeConverters et XAML
 Cette rubrique présente l’objectif de la conversion de types de chaîne comme une fonctionnalité générale du langage XAML. Dans le .NET Framework, la <xref:System.ComponentModel.TypeConverter> classe a un usage particulier dans le cadre de l’implémentation pour une classe managée personnalisée qui peut être utilisée comme une valeur de propriété dans l’utilisation d’attributs XAML. Si vous écrivez une classe personnalisée, et que les instances de votre classe pour être utilisable en tant que valeurs d’attribut définissables XAML, vous devez appliquer un <xref:System.ComponentModel.TypeConverterAttribute> à votre classe, écrire une personnalisée <xref:System.ComponentModel.TypeConverter> classe, ou les deux.  
@@ -69,7 +55,7 @@ Cette rubrique présente l’objectif de la conversion de types de chaîne comme
  Dans le cadre de la création d’une référence à un objet existant, il est courant d’utiliser une extension de balisage à la place d’un convertisseur de type. Au mieux, un convertisseur de type sans état générerait uniquement une nouvelle instance, ce qui peut ne pas être souhaitable. Pour plus d’informations sur les extensions de balisage, consultez [Extensions de balisage et XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
   
 ### <a name="native-type-converters"></a>Convertisseurs de type natif  
- Dans une implémentation WPF et .NET Framework de l’analyseur XAML, certains types gèrent nativement la conversion de type ; cependant, ces types ne sont pas traditionnellement considérés comme des primitives. Un exemple d'un tel type est <xref:System.DateTime>. La raison à cela est basée sur le fonctionne de l’architecture .NET Framework : le type <xref:System.DateTime> est défini dans mscorlib, la bibliothèque de base dans .NET. <xref:System.DateTime>n’est pas autorisée à être attribué avec un attribut qui provient d’un autre assembly qui présente une dépendance (<xref:System.ComponentModel.TypeConverterAttribute> vient de System) et le mécanisme de découverte de convertisseur de type habituel par attribution ne peut pas être pris en charge. À la place, l’analyseur XAML dispose d’une liste des types qui doivent faire l’objet d’un traitement natif et traite ces types de la même façon que les véritables primitives. (Dans le cas de <xref:System.DateTime> cela implique un appel à <xref:System.DateTime.Parse%2A>.)  
+ Dans une implémentation WPF et .NET Framework de l’analyseur XAML, certains types gèrent nativement la conversion de type ; cependant, ces types ne sont pas traditionnellement considérés comme des primitives. Un exemple d'un tel type est <xref:System.DateTime>. La raison à cela est basée sur le fonctionne de l’architecture .NET Framework : le type <xref:System.DateTime> est défini dans mscorlib, la bibliothèque de base dans .NET. <xref:System.DateTime> n’est pas autorisée à être attribué avec un attribut qui provient d’un autre assembly qui présente une dépendance (<xref:System.ComponentModel.TypeConverterAttribute> vient de System) et le mécanisme de découverte de convertisseur de type habituel par attribution ne peut pas être pris en charge. À la place, l’analyseur XAML dispose d’une liste des types qui doivent faire l’objet d’un traitement natif et traite ces types de la même façon que les véritables primitives. (Dans le cas de <xref:System.DateTime> cela implique un appel à <xref:System.DateTime.Parse%2A>.)  
   
 <a name="Implementing_a_Type_Converter"></a>   
 ## <a name="implementing-a-type-converter"></a>Implémentation d'un convertisseur de type  
@@ -77,7 +63,7 @@ Cette rubrique présente l’objectif de la conversion de types de chaîne comme
 ### <a name="typeconverter"></a>TypeConverter  
  Dans le <xref:System.Windows.Point> exemple donné précédemment, la classe <xref:System.Windows.PointConverter> a été indiqué. Pour les implémentations .NET de XAML, tous les convertisseurs de type qui sont utilisés pour le langage XAML sont des classes qui dérivent de la classe de base <xref:System.ComponentModel.TypeConverter>. La <xref:System.ComponentModel.TypeConverter> classe existait dans les versions du .NET Framework qui précèdent l’existence de XAML ; une de ses utilisations d’origine consistait à fournir une conversion de chaînes pour les boîtes de dialogue de propriétés dans les concepteurs visuels. Pour XAML, le rôle de <xref:System.ComponentModel.TypeConverter> est élargie en cours de la classe de base pour les conversions en chaînes et à partir de chaînes qui permettent l’analyse d’une valeur d’attribut de chaîne et le traitement d’une valeur d’exécution d’une propriété d’objet particulier dans une chaîne pour sérialisation en tant qu’attribut.  
   
- <xref:System.ComponentModel.TypeConverter>définit quatre membres qui sont utiles pour la conversion vers et à partir de chaînes à des fins de traitement XAML :  
+ <xref:System.ComponentModel.TypeConverter> définit quatre membres qui sont utiles pour la conversion vers et à partir de chaînes à des fins de traitement XAML :  
   
 -   <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A>  
   
@@ -125,7 +111,7 @@ Cette rubrique présente l’objectif de la conversion de types de chaîne comme
 ## <a name="applying-the-typeconverterattribute"></a>Application de TypeConverterAttribute  
  Dans l’ordre de votre convertisseur de type personnalisé à utiliser comme l’agissant convertisseur de type pour une classe personnalisée par un processeur XAML, vous devez appliquer le [!INCLUDE[TLA#tla_netframewkattr](../../../../includes/tlasharptla-netframewkattr-md.md)] <xref:System.ComponentModel.TypeConverterAttribute> à votre définition de classe. La propriété <xref:System.ComponentModel.TypeConverterAttribute.ConverterTypeName%2A> que vous spécifiez via l'attribut doit être le nom de type du convertisseur de type personnalisé. Une fois cet attribut appliqué, quand un processeur XAML gère des valeurs où le type de propriété utilise votre type de classe personnalisée, il peut entrer des chaînes et retourner des instances d’objet.  
   
- Vous pouvez également fournir un convertisseur de type en fonction de la propriété. Au lieu d’appliquer un [!INCLUDE[TLA#tla_netframewkattr](../../../../includes/tlasharptla-netframewkattr-md.md)] <xref:System.ComponentModel.TypeConverterAttribute> à la définition de classe, appliquez-le à une définition de propriété (la définition principale, pas le `get` / `set` implémentations qu’il contient). Le type de la propriété doit correspondre au type traité par votre convertisseur de type personnalisé. Une fois cet attribut appliqué, quand un processeur XAML gère des valeurs de cette propriété, il peut traiter des chaînes d’entrée et retourner des instances d’objet. La technique de conversion en fonction de la propriété est particulièrement utile si vous choisissez d'utiliser un type de propriété [!INCLUDE[TLA#tla_netframewk](../../../../includes/tlasharptla-netframewk-md.md)] ou d'une autre bibliothèque où vous ne pouvez pas contrôler la définition de classe et ne pouvez pas appliquer un <xref:System.ComponentModel.TypeConverterAttribute> à cet endroit.  
+ Vous pouvez également fournir un convertisseur de type en fonction de la propriété. Au lieu d’appliquer un [!INCLUDE[TLA#tla_netframewkattr](../../../../includes/tlasharptla-netframewkattr-md.md)] <xref:System.ComponentModel.TypeConverterAttribute> à la définition de classe, appliquez-le à une définition de propriété (la définition principale, pas le `get` / `set` implémentations qu’il contient). Le type de la propriété doit correspondre au type traité par votre convertisseur de type personnalisé. Une fois cet attribut appliqué, quand un processeur XAML gère des valeurs de cette propriété, il peut traiter des chaînes d’entrée et retourner des instances d’objet. La technique de conversion de type de chaque propriété est particulièrement utile si vous choisissez d’utiliser un type de propriété à partir de Microsoft .NET Framework ou d’une autre bibliothèque où vous ne pouvez pas contrôler la définition de classe et ne peut pas appliquer un <xref:System.ComponentModel.TypeConverterAttribute> il.  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.ComponentModel.TypeConverter>  

@@ -1,26 +1,15 @@
 ---
 title: "Procédure : héberger plusieurs versions d'un workflow côte à côte"
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 09c575df-e0a3-4f3b-9e01-a7ac59d65287
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 96ae4d3e02b923187b3e0f88a7b18e84094fa584
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d8fef8523f827ab91729054ee87544879b1f1aa3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a>Procédure : héberger plusieurs versions d'un workflow côte à côte
 `WorkflowIdentity` permet aux développeurs d'applications de workflow d'associer un nom et une version à une définition de workflow, et d'associer ces informations à une instance persistante de workflow. Ces informations d'identité peuvent être utilisées par les développeurs d'applications de workflow pour activer des scénarios tels que l'exécution côte à côte de plusieurs versions d'une définition de workflow, et fournir la base d'autres fonctionnalités telles que la mise à jour dynamique. Cette étape du didacticiel explique comment utiliser `WorkflowIdentity` pour héberger plusieurs versions de workflow en même temps.  
@@ -51,7 +40,7 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  Chaque étape du didacticiel de mise en route dépend des étapes précédentes. Si vous n’avez pas effectué les étapes précédentes, vous pouvez télécharger une version complète du didacticiel à partir de [Windows Workflow Foundation (WF45) - didacticiel de mise en route](http://go.microsoft.com/fwlink/?LinkID=248976).  
   
-###  <a name="BKMK_BackupCopy"></a>Pour effectuer une copie du projet NumberGuessWorkflowActivities  
+###  <a name="BKMK_BackupCopy"></a> Pour effectuer une copie du projet NumberGuessWorkflowActivities  
   
 1.  Ouvrez le **WF45GettingStartedTutorial** solution dans [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] s’il n’est pas ouvert.  
   
@@ -74,10 +63,10 @@ ms.lasthandoff: 12/22/2017
   
 9. Ouvrez à nouveau le **WF45GettingStartedTutorial** solution dans [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].  
   
-###  <a name="BKMK_UpdateWorkflows"></a>Pour mettre à jour les flux de travail  
+###  <a name="BKMK_UpdateWorkflows"></a> Pour mettre à jour les flux de travail  
  Dans cette section, les définitions de workflow sont mises à jour. Les deux activités `WriteLine` qui fournissent des commentaires sur la proposition de l'utilisateur sont mises à jour, et une nouvelle activité `WriteLine`, qui fournit des informations supplémentaires sur le jeu une fois que le nombre est deviné, est ajoutée.  
   
-####  <a name="BKMK_UpdateStateMachine"></a>Pour mettre à jour le flux de travail  
+####  <a name="BKMK_UpdateStateMachine"></a> Pour mettre à jour le flux de travail  
   
 1.  Dans **l’Explorateur de solutions**, sous le **NumberGuessWorkflowActivities** de projet, double-cliquez sur **StateMachineNumberGuessWorkflow.xaml**.  
   
@@ -119,7 +108,7 @@ ms.lasthandoff: 12/22/2017
     Guess + " is correct. You guessed it in " + Turns + " turns."  
     ```  
   
-####  <a name="BKMK_UpdateFlowchart"></a>Pour mettre à jour le workflow d’organigramme  
+####  <a name="BKMK_UpdateFlowchart"></a> Pour mettre à jour le workflow d’organigramme  
   
 1.  Dans **l’Explorateur de solutions**, sous le **NumberGuessWorkflowActivities** de projet, double-cliquez sur **FlowchartNumberGuessWorkflow.xaml**.  
   
@@ -155,7 +144,7 @@ ms.lasthandoff: 12/22/2017
     Guess + " is correct. You guessed it in " + Turns + " turns."  
     ```  
   
-####  <a name="BKMK_UpdateSequential"></a>Pour mettre à jour le flux de travail séquentiel  
+####  <a name="BKMK_UpdateSequential"></a> Pour mettre à jour le flux de travail séquentiel  
   
 1.  Dans **l’Explorateur de solutions**, sous le **NumberGuessWorkflowActivities** de projet, double-cliquez sur **SequentialNumberGuessWorkflow.xaml**.  
   
@@ -191,7 +180,7 @@ ms.lasthandoff: 12/22/2017
     Guess + " is correct. You guessed it in " + Turns + " turns."  
     ```  
   
-###  <a name="BKMK_UpdateWorkflowVersionMap"></a>Pour mettre à jour workflowversionmap de façon à inclure les versions précédentes de flux de travail  
+###  <a name="BKMK_UpdateWorkflowVersionMap"></a> Pour mettre à jour workflowversionmap de façon à inclure les versions précédentes de flux de travail  
   
 1.  Double-cliquez sur **WorkflowVersionMap.cs** (ou **WorkflowVersionMap.vb**) sous le **NumberGuessWorkflowHost** pour l’ouvrir.  
   
@@ -559,7 +548,7 @@ ms.lasthandoff: 12/22/2017
     }  
     ```  
   
-###  <a name="BKMK_BuildAndRun"></a>Pour générer et exécuter l’application  
+###  <a name="BKMK_BuildAndRun"></a> Pour générer et exécuter l’application  
   
 1.  Appuyez sur Ctrl+Maj+B pour générer l'application, puis sur Ctrl+F5 pour démarrer.  
   

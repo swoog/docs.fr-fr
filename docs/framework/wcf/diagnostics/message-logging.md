@@ -1,27 +1,15 @@
 ---
 title: Journalisation des messages
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6bce0682-75ef-4d65-a659-b328fba4a8b5
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: da73af529a20a8d2e3e7df0ebadf2aeee4acbf1c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 473ddb3b68f6bb7a13203015a44450a92994a3b6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-logging"></a>Journalisation des messages
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] intègre une fonctionnalité permettant d'enregistrer les messages entrants et sortants afin de pouvoir les utiliser hors ligne. L'enregistrement des messages dans des journaux vous permet de voir à quoi ils ressemblent et à quoi ressemble le corps de ces messages. Ce type d’enregistrement est particulièrement utile car il vous permet de savoir quels arguments ont été passés et de connaître la manière dont le point de terminaison destinataire a perçu les arguments exprimés en langage XML. En outre, l'enregistrement des messages tels qu'ils ont été reçus vous permet d'identifier les messages erronés et de voir la manière dont les messages sont arrivés. Dans ces journaux, vous pouvez également examiner les jetons de sécurité utilisés, les parties chiffrées et signées ainsi que les parties laissées telles quelles.  
+Windows Communication Foundation (WCF) fournit la fonctionnalité permettant d’enregistrer les messages entrants et sortants pour la consommation en mode hors connexion. L'enregistrement des messages dans des journaux vous permet de voir à quoi ils ressemblent et à quoi ressemble le corps de ces messages. Ce type d’enregistrement est particulièrement utile car il vous permet de savoir quels arguments ont été passés et de connaître la manière dont le point de terminaison destinataire a perçu les arguments exprimés en langage XML. En outre, l'enregistrement des messages tels qu'ils ont été reçus vous permet d'identifier les messages erronés et de voir la manière dont les messages sont arrivés. Dans ces journaux, vous pouvez également examiner les jetons de sécurité utilisés, les parties chiffrées et signées ainsi que les parties laissées telles quelles.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Vue d’ensemble du flux de messages](../../../../docs/framework/wcf/diagnostics/message-flow-overview.md)  

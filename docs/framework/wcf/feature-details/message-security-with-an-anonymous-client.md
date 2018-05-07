@@ -1,32 +1,20 @@
 ---
 title: Sécurité de message avec un client anonyme
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: cad53e1a-b7c9-4064-bc87-508c3d1dce49
-caps.latest.revision: 15
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 25c184d32c6cedf893c79f15d77ba93ec5e9461e
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: b8cab1762a8c8c672d557c7bcccc2f339cbaefe9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-security-with-an-anonymous-client"></a>Sécurité de message avec un client anonyme
-Le scénario suivant illustre un client et le service sécurisé par la sécurité de message [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. L'un des objectifs de conception consiste à utiliser la sécurité de message plutôt que la sécurité de transport, afin qu'à l'avenir il puisse prendre en charge un modèle plus riche basé sur les revendications. Pour plus d’informations sur l’utilisation des revendications riche pour l’autorisation, consultez [la gestion des revendications et autorisation avec le modèle d’identité](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).  
+Le scénario suivant montre un client et un service sécurisé par la sécurité de message Windows Communication Foundation (WCF). L'un des objectifs de conception consiste à utiliser la sécurité de message plutôt que la sécurité de transport, afin qu'à l'avenir il puisse prendre en charge un modèle plus riche basé sur les revendications. Pour plus d’informations sur l’utilisation des revendications riche pour l’autorisation, consultez [la gestion des revendications et autorisation avec le modèle d’identité](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).  
   
  Pour un exemple d’application, consultez [Message Security Anonymous](../../../../docs/framework/wcf/samples/message-security-anonymous.md).  
   
@@ -35,7 +23,7 @@ Le scénario suivant illustre un client et le service sécurisé par la sécurit
 |Caractéristique|Description|  
 |--------------------|-----------------|  
 |Mode de sécurité|Message|  
-|Interopérabilité|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uniquement|  
+|Interopérabilité|WCF uniquement|  
 |Authentification (serveur)|La négociation initiale requiert l'authentification du serveur, mais pas l'authentification du client|  
 |Authentification (client)|None|  
 |Intégrité|Oui, à l'aide du contexte de sécurité partagé|  

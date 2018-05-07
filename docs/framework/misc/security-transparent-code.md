@@ -1,27 +1,17 @@
 ---
-title: "Code transparent de sécurité (security-transparent)"
-ms.custom: 
+title: Code transparent de sécurité (security-transparent)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - transparent code
 - security-transparent code
 ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
-caps.latest.revision: "24"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 97db1cef60af267087e86f86ecd0a77021604642
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6a491a87c896c76fa62f1702d1ef0e99fc404607
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-transparent-code"></a>Code transparent de sécurité (security-transparent)
 <a name="top"></a>
@@ -52,7 +42,7 @@ ms.lasthandoff: 12/22/2017
  La transparence a été introduite dans le .NET Framework version 2.0 pour simplifier le modèle de sécurité et faciliter l'écriture et le déploiement de bibliothèques et d'applications sécurisées. Le code transparent est aussi utilisé dans Microsoft Silverlight pour simplifier le développement d'applications de niveau de confiance partielle.  
   
 > [!NOTE]
->  Quand vous développez une application de niveau de confiance partielle, vous devez connaître les exigences d'autorisation pour vos hôtes cibles. Vous pouvez développer une application qui fasse appel à des ressources non autorisées par certains hôtes. Cette application se compilera sans erreur, mais son chargement dans l'environnement hébergé échouera. Si vous avez développé votre application l'aide de Visual Studio, vous pouvez activer le débogage en mode confiance partielle ou dans un jeu d'autorisations restreint à partir de l'environnement de développement. Pour plus d’informations, consultez [Comment : déboguer une Application ClickOnce avec des autorisations restreintes](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions). La fonctionnalité de calcul des autorisations fournie pour les applications ClickOnce est aussi accessible à n'importe quelle application de niveau de confiance partielle.  
+>  Quand vous développez une application de niveau de confiance partielle, vous devez connaître les exigences d'autorisation pour vos hôtes cibles. Vous pouvez développer une application qui fasse appel à des ressources non autorisées par certains hôtes. Cette application se compilera sans erreur, mais son chargement dans l'environnement hébergé échouera. Si vous avez développé votre application l'aide de Visual Studio, vous pouvez activer le débogage en mode confiance partielle ou dans un jeu d'autorisations restreint à partir de l'environnement de développement. Pour plus d'informations, consultez [Comment : déboguer une application ClickOnce avec des autorisations restreintes](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions). La fonctionnalité de calcul des autorisations fournie pour les applications ClickOnce est aussi accessible à n'importe quelle application de niveau de confiance partielle.  
   
  [Retour au début](#top)  
   

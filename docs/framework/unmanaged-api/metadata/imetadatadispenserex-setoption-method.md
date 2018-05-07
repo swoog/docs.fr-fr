@@ -1,14 +1,6 @@
 ---
-title: "IMetaDataDispenserEx::SetOption, méthode"
-ms.custom: 
+title: IMetaDataDispenserEx::SetOption, méthode
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataDispenserEx.SetOption
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 9f1c7ccd-7fb2-41d8-aa00-24b823376527
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 96810ba0eab99d1df58f0b68b85ef4da8ce7084e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cfe600b54eb03a07ea01375355c5ff94190e5d9d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadatadispenserexsetoption-method"></a>IMetaDataDispenserEx::SetOption, méthode
 Définit l’option spécifiée à une valeur donnée pour la portée de métadonnées actuelle. L’option contrôle la gestion des appels à la portée de métadonnées actuelle.  
@@ -57,7 +45,7 @@ HRESULT SetOption (
 ## <a name="remarks"></a>Notes  
  Le tableau suivant répertorie les GUID disponibles qui le `optionId` paramètre peut pointer vers et les valeurs valides correspondantes pour le `pValue` paramètre.  
   
-|GUID|Description|`pValue`Paramètre|  
+|GUID|Description|`pValue` Paramètre|  
 |----------|-----------------|------------------------|  
 |MetaDataCheckDuplicatesFor|Contrôle quels éléments sont activés pour les doublons. Chaque fois que vous appelez une [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) méthode qui crée un nouvel élément, vous pouvez demander à la méthode pour vérifier si l’élément existe déjà dans la portée actuelle. Par exemple, vous pouvez vérifier l’existence de `mdMethodDef` éléments ; dans ce cas, lorsque vous appelez [IMetaDataEmit::DefineMethod](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md), il vérifie que la méthode n’existe pas déjà dans la portée actuelle. Cette vérification utilise la clé qui identifie de façon unique une méthode donnée : parent de type, nom et signature.|Doit être un variant de type UI4 et doit contenir une combinaison des valeurs de la [CorCheckDuplicatesFor](../../../../docs/framework/unmanaged-api/metadata/corcheckduplicatesfor-enumeration.md) énumération.|  
 |MetaDataRefToDefCheck|Contrôle quels éléments référencés est convertis en définitions. Par défaut, le moteur de métadonnées permettra d’optimiser le code en convertissant un élément référencé à sa définition si l’élément référencé est réellement définie dans la portée actuelle.|Doit être un variant de type UI4 et doit contenir une combinaison des valeurs de la [CorRefToDefCheck](../../../../docs/framework/unmanaged-api/metadata/correftodefcheck-enumeration.md) énumération.|  
@@ -73,14 +61,14 @@ HRESULT SetOption (
 |MetaDataMergerOptions|Spécifie les options de fusion des métadonnées.|Doit être un variant de type UI4 et doit contenir une combinaison des valeurs de la `MergeFlags` énumération, qui est décrite dans le fichier CorHdr.h.|  
 |MetaDataPreserveLocalRefs|Désactive l’optimisation des références locales dans des définitions.|Doit contenir une combinaison des valeurs de la [CorLocalRefPreservation](../../../../docs/framework/unmanaged-api/metadata/corlocalrefpreservation-enumeration.md) énumération.|  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateforme :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Cor.h  
   
  **Bibliothèque :** utilisé en tant que ressource dans MsCorEE.dll  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [IMetaDataDispenserEx, interface](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)  

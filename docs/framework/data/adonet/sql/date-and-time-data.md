@@ -1,29 +1,15 @@
 ---
-title: "Données de date et d'heure"
-ms.custom: 
+title: Données de date et d'heure
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-caps.latest.revision: 
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 904b941a274cdd31485d35cf2d025f869638d448
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: 2130c79ba79ce7e327a2a1b3adccd92e52153d85
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="date-and-time-data"></a>Données de date et d'heure
 SQL Server 2008 introduit de nouveaux types de manipulation de données de date et d'heure. Ces nouveaux types de données incluent des types distincts pour la date et l'heure, ainsi que des types de données étendus prenant en charge une plage plus vaste de valeurs, la précision et les fuseaux horaires. À partir du .NET Framework version 3.5 Service Pack (SP) 1, le fournisseur de données .NET Framework pour SQL Server (<xref:System.Data.SqlClient>) assure la prise en charge complète de l'ensemble des nouvelles fonctionnalités du moteur de base de données SQL Server 2008. Vous devez installer le .NET Framework 3.5 SP1 (ou version ultérieure) pour utiliser ces nouvelles fonctionnalités avec SqlClient.  
@@ -44,7 +30,7 @@ SQL Server 2008 introduit de nouveaux types de manipulation de données de date
 |`date`|Le type de données `date` est situé dans une plage comprise entre le 1er janvier 01 et le 31 décembre 9999, avec une précision d'un jour. La valeur par défaut est le 1er janvier 1900. La taille de stockage est égale à 3 octets.|  
 |`time`|Le type de données `time` stocke les valeurs d'heure uniquement en fonction d'une horloge au format 24 heures. Le type de données `time` présente une plage comprise entre 00:00:00.0000000 et 23:59:59.9999999 avec une précision de 100 nanosecondes. La valeur par défaut est 00:00:00.0000000 (minuit). Le type de données `time` prend en charge une précision à la fraction de seconde, et la taille de stockage varie entre 3 et 6 octets selon la précision spécifiée.|  
 |`datetime2`|Le type de données `datetime2` combine la plage et la précision des types de données `date` et `time` en un seul type de données.<br /><br /> Les valeurs par défaut et les formats littéraux de chaîne sont identiques à ceux définis dans les types de données `date` et `time`.|  
-|`datetimeoffset`|Le type de données `datetimeoffset` présente toutes les fonctionnalités du type de données `datetime2` avec en plus un décalage horaire. Le décalage de fuseau horaire est représenté en tant que [+ &#124;-] HH : mm. HH correspond à 2 chiffres situés entre 00 et 24 qui représentent le nombre d'heures de décalage horaire. MM correspond à 2 chiffres situés entre 00 et 59 qui représentent le nombre de minutes supplémentaires dans le décalage horaire. Les formats d'heure sont pris en charge jusqu'à une précision de 100 nanosecondes. Le signe + ou  - obligatoire indique si le décalage est ajouté ou soustrait de l'heure universelle UTC (Universal Time Coordinate ou heure de Greenwich) pour obtenir l'heure locale.|  
+|`datetimeoffset`|Le type de données `datetimeoffset` présente toutes les fonctionnalités du type de données `datetime2` avec en plus un décalage horaire. Le décalage de fuseau horaire est représenté en tant que [+&#124;-] HH : mm. HH correspond à 2 chiffres situés entre 00 et 24 qui représentent le nombre d'heures de décalage horaire. MM correspond à 2 chiffres situés entre 00 et 59 qui représentent le nombre de minutes supplémentaires dans le décalage horaire. Les formats d'heure sont pris en charge jusqu'à une précision de 100 nanosecondes. Le signe + ou  - obligatoire indique si le décalage est ajouté ou soustrait de l'heure universelle UTC (Universal Time Coordinate ou heure de Greenwich) pour obtenir l'heure locale.|  
   
 > [!NOTE]
 >  Pour plus d'informations sur l'utilisation du mot clé `Type System Version`, consultez <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
@@ -250,7 +236,7 @@ command.Parameters.AddWithValue( _
 |-----------|-----------------|  
 |[Données de date et heure Types et fonctions (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=98360)|Fournit une vue d'ensemble des tous les types de données et fonctions de date et d'heure Transact-SQL.|  
 |[À l’aide des données de Date et heure](http://go.microsoft.com/fwlink/?LinkId=98361)|Fournit des informations sur les types de données et les fonctions de date et d'heure, ainsi que des exemples sur leur utilisation.|  
-|[Data Types (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=98362)|Décrit les types de données système dans SQL Server 2008.|  
+|[Types de données (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=98362)|Décrit les types de données système dans SQL Server 2008.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Mappages de types de données SQL Server](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  

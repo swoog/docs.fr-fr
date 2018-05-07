@@ -1,33 +1,19 @@
 ---
-title: "Comment : utiliser un client Windows Communication Foundation"
-ms.custom: 
+title: 'Comment : utiliser un client Windows Communication Foundation'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF clients [WCF], using
 ms.assetid: 190349fc-0573-49c7-bb85-8e316df7f31f
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0330c386730c6b0436196bb5b85162bc4621c214
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 6667a8e9862054d7d8d5b20e70dfbe699de02eab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-a-windows-communication-foundation-client"></a>Comment : utiliser un client Windows Communication Foundation
-Il s'agit de la dernière des six tâches requises pour créer une application de base [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. Pour une vue d’ensemble des six tâches, consultez la [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md) rubrique.  
+Il s’agit de la dernière des six tâches requises pour créer une application Windows Communication Foundation (WCF) de base. Pour une vue d’ensemble des six tâches, consultez la [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md) rubrique.  
   
- Une fois qu'un proxy [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] a été créé et configuré, une instance client peut être créée, et l'application cliente peut être compilée et utilisée pour communiquer avec le service [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Cette rubrique décrit les procédures pour l'instanciation et l'utilisation d'un client [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Cette procédure accomplit trois tâches :  
+ Une fois qu’un proxy de Windows Communication Foundation (WCF) a été créé et configuré, une instance du client peut être créée et l’application cliente peut être compilée et utilisée pour communiquer avec le [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service. Cette rubrique décrit les procédures pour l'instanciation et l'utilisation d'un client [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Cette procédure accomplit trois tâches :  
   
 1.  Instancie un client [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
   

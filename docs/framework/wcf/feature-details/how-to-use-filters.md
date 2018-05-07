@@ -1,26 +1,12 @@
 ---
-title: "Procédure : utiliser des filtres"
-ms.custom: 
+title: 'Procédure : utiliser des filtres'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
-caps.latest.revision: 
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 94d45537ca3edd5f31f1ed31898857f002312a0b
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: 2c8c5519d31d1d57c1c568599964b97043f806a9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-filters"></a>Procédure : utiliser des filtres
 Cette rubrique décrit les étapes de base requises pour créer une configuration de routage qui utilise plusieurs filtres. Dans cet exemple, les messages sont routés vers deux implémentations d'un service de calculatrice, regularCalc et roundingCalc. Les deux implémentations prennent en charge les mêmes opérations ; toutefois, l'un des services arrondit tous les calculs à la valeur entière la plus proche avant de les retourner. Une application cliente doit être en mesure d'indiquer s'il faut utiliser la version arrondie de ce service ; si aucune préférence de service n'est exprimée, le message est équilibré entre les deux services. Les opérations exposées par les deux services sont :  
@@ -145,7 +131,7 @@ Cette rubrique décrit les étapes de base requises pour créer une configuratio
             filterData="http://localhost/routingservice/router/rounding/"/>  
     ```  
   
-     Si un message est reçu à une adresse qui commence par « http://localhost/routingservice/router/rounding/ », ce filtre prend la valeur de **true**. Étant donné que l’adresse de base utilisée par cette configuration est « http://localhost/routingservice/router » et l’adresse spécifiée pour le roundingEndpoint est « rounding/calculator », l’adresse complète utilisée pour communiquer avec ce point de terminaison est « http://localhost/ routingservice/router/rounding/calculator », qui correspond à ce filtre.  
+     Si un message est reçu à une adresse qui commence par «http://localhost/routingservice/router/rounding/» ce filtre a la valeur **true**. Étant donné que l’adresse de base utilisée par cette configuration est «http://localhost/routingservice/router« et l’adresse spécifiée pour le roundingEndpoint est « rounding/calculator », l’adresse complète utilisée pour communiquer avec ce point de terminaison est »http://localhost/routingservice/router/rounding/calculator», qui correspond à ce filtre.  
   
     > [!NOTE]
     >  Le filtre PrefixEndpointAddress n'évalue pas le nom d'hôte lorsqu'il effectue une correspondance, parce qu'il peut être fait référence à un hôte unique à l'aide de divers noms d'hôte qui tous peuvent constituer des moyens valides de faire référence à l'hôte à partir de l'application cliente. Par exemple, tous les éléments suivants peuvent faire référence au même hôte :  

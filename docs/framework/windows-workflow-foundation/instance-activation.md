@@ -1,28 +1,17 @@
 ---
 title: Activation d'instance
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 134c3f70-5d4e-46d0-9d49-469a6643edd8
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 41615618857c804c37f00e9d20a031a6d17bcab3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a1b78dc62fbdc6e5551addf400ceb14dc9e822f5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="instance-activation"></a>Activation d'instance
 Le magasin d’instances de workflow SQL exécute une tâche interne qui se réveille régulièrement et détecte les instances de workflow exécutables ou activables dans la base de données de persistance. En cas de détection d'une instance de workflow exécutable, il avertit l'hôte de workflow capable d'activer l'instance. En cas de détection d'une instance de workflow activable, il avertit un hôte générique qui active un hôte de workflow qui, à son tour, exécute l'instance de workflow. Les sections suivantes de cette rubrique décrivent en détail le processus d'activation d'instance.  
   
-##  <a name="RunnableSection"></a>Détection et activation d’Instances de Workflow exécutables  
+##  <a name="RunnableSection"></a> Détection et activation d’Instances de Workflow exécutables  
  Le magasin d’instances de Workflow SQL considère qu’une instance de workflow *exécutable* si l’instance n’est pas dans l’état suspendu ou l’état terminé et satisfait les conditions suivantes :  
   
 -   L'instance est déverrouillée et a un minuteur en attente qui a expiré.  

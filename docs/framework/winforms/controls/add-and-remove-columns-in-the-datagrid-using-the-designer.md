@@ -1,31 +1,17 @@
 ---
 title: "Comment : ajouter et supprimer des colonnes dans le contrôle DataGridView Windows Forms à l'aide du concepteur"
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - vs.DataGridViewAddColumnDialog
 helpviewer_keywords:
 - DataGridView control [Windows Forms], adding columns
 - DataGridView control [Windows Forms], removing columns
 ms.assetid: 9e709f35-0a8c-4e7e-b4c4-bacb7a834077
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4fdb57cf2134ee4f221a26db61cfdcc48dc92548
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: f98d0e530f502655b9a48819d266a604581d22de
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-add-and-remove-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>Comment : ajouter et supprimer des colonnes dans le contrôle DataGridView Windows Forms à l'aide du concepteur
 Windows Forms <xref:System.Windows.Forms.DataGridView> contrôle doit contenir des colonnes pour afficher des données. Si vous envisagez de remplir le contrôle manuellement, vous devez ajouter les colonnes vous-même. Ou bien, vous pouvez lier le contrôle à une source de données, ce qui génère et remplit automatiquement les colonnes. Si la source de données contient plus de colonnes que vous souhaitez afficher, vous pouvez supprimer les colonnes inutiles.  

@@ -1,27 +1,15 @@
 ---
-title: "Comment : appliquer un dessin à un modèle 3D"
-ms.custom: 
+title: 'Comment : appliquer un dessin à un modèle 3D'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - drawings [WPF], applying to 3-D models
 - 3-D models [WPF], applying drawings to
 ms.assetid: 68357577-b7fc-446e-8be9-a8cc7df3a350
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a7437f4c8279d80d7287565a28337a3cd647e239
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 26a84d963cac3b5c23617bfaa23279021e29c07a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-apply-a-drawing-to-a-3-d-model"></a>Comment : appliquer un dessin à un modèle 3D
 Cet exemple montre comment utiliser un <xref:System.Windows.Media.DrawingBrush> comme le <xref:System.Windows.Media.Media3D.Material> appliqué à un [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] modèle.  

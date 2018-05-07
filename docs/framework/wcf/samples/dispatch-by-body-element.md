@@ -1,26 +1,12 @@
 ---
 title: Dispatch by Body Element
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: f64a3c04-62b4-47b2-91d9-747a3af1659f
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4ab8ddccafa8dbf1ecde8afbb07f0a61faa62be5
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: a59f639fc0f1adad48bfda5fd8105340ac004cef
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dispatch-by-body-element"></a>Dispatch by Body Element
 Cet exemple montre comment implémenter un autre algorithme pour l'assignation des messages entrants aux opérations.  
@@ -82,7 +68,7 @@ private Message CreateMessageCopy(Message message,
 ```  
   
 ## <a name="adding-an-operation-selector-to-a-service"></a>Ajout d'un sélecteur d'opération à un service  
- Les sélecteurs d'opération de distribution de service sont des extensions vers le répartiteur [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Pour la sélection des méthodes sur le canal de rappel de contrats duplex, il existe également des sélecteurs d'opération clients qui fonctionnent de manière semblable aux sélecteurs d'opération de distribution décrits ici, mais ne sont pas traités de manière explicite dans cet exemple.  
+ Sélecteurs d’opération de distribution de service sont des extensions pour le répartiteur de Windows Communication Foundation (WCF). Pour la sélection des méthodes sur le canal de rappel de contrats duplex, il existe également des sélecteurs d'opération clients qui fonctionnent de manière semblable aux sélecteurs d'opération de distribution décrits ici, mais ne sont pas traités de manière explicite dans cet exemple.  
   
  Comme la plupart des extensions de modèle de service, les sélecteurs d’opération de distribution sont ajoutés au répartiteur à l’aide de comportements. A *comportement* est un objet de configuration qui ajoute une ou plusieurs extensions à l’exécution du répartiteur (ou à l’exécution du client) ou bien modifie ses paramètres.  
   
@@ -187,7 +173,7 @@ public interface IDispatchedByBody
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à la page [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les exemples [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Interop\AdvancedDispatchByBody`  
   

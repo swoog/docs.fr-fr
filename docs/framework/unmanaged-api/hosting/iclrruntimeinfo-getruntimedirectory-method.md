@@ -1,14 +1,6 @@
 ---
-title: "ICLRRuntimeInfo::GetRuntimeDirectory, méthode"
-ms.custom: 
+title: ICLRRuntimeInfo::GetRuntimeDirectory, méthode
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRRuntimeInfo.GetRuntimeDirectory
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 4401546e-4d48-453f-a1fb-b2ebda54df5c
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f185ed474234a33988e1946b2f69da373096e19b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f366e736c90ffd8cf588af3a6e5f6240426b9980
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrruntimeinfogetruntimedirectory-method"></a>ICLRRuntimeInfo::GetRuntimeDirectory, méthode
 Obtient le répertoire d’installation du common language runtime (CLR) associé à cette interface.  
@@ -65,15 +53,15 @@ HRESULT GetRuntimeDirectory(
   
 ## <a name="remarks"></a>Notes  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** MetaHost.h  
   
  **Bibliothèque :** inclus en tant que ressource dans MSCorEE.dll  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versions du .NET framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [ICLRRuntimeInfo, interface](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)  
- [Hébergement d’applications WPF](../../../../docs/framework/unmanaged-api/hosting/index.md)
+ [Hébergement](../../../../docs/framework/unmanaged-api/hosting/index.md)

@@ -1,14 +1,6 @@
 ---
-title: "CorSymVarFlag, énumération"
-ms.custom: 
+title: CorSymVarFlag, énumération
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CorSymVarFlag
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: c3f7d307-4047-4f9a-be8c-f152fca42fd0
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b548a66f471eb3641da7407ed14d107c6b4fec8c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a6a9c5ff91989fc1ad7da4e23df0e80d9d74ec7c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="corsymvarflag-enumeration"></a>CorSymVarFlag, énumération
 Indique si une variable est généré par le compilateur.  
@@ -52,7 +40,7 @@ typedef enum CorSymVarFlag
 |------------|-----------------|  
 |`VAR_IS_COMP_GEN`|Indique que la variable donnée est généré par le compilateur.|  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Voir aussi  

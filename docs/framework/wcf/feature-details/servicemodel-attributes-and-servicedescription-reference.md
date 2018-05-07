@@ -1,36 +1,22 @@
 ---
 title: Attributs ServiceModel et référence ServiceDescription
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 4ab86b17-eab9-4846-a881-0099f9a7cc64
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ba8888c2a1bd3c16ab6d216c365870c0df0e499a
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: cc7c36ff7a1c81227f118ee7113be8f7f9eb2e9f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="servicemodel-attributes-and-servicedescription-reference"></a>Attributs ServiceModel et référence ServiceDescription
-Le *arborescence de description* correspond à la hiérarchie de types (commençant par la <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> classe) qui décrivent ensemble chaque aspect d’un service. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] utilise une arborescence de description pour générer une exécution du service valide, pour publier le langage WSDL (Web Services Description Language), le langage XSD (XML Schema Definition Language) et les assertions de stratégie (métadonnées) concernant le service qui permettent aux clients de s'y connecter et de l'utiliser, et pour générer diverses représentations de code et de fichier de configuration des valeurs de l'arborescence de description.  
+Le *arborescence de description* correspond à la hiérarchie de types (commençant par la <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> classe) qui décrivent ensemble chaque aspect d’un service. Windows Communication Foundation (WCF) utilise une arborescence de description pour générer une exécution de service valide, pour publier des assertions de stratégie (métadonnées) concernant le service que les clients peuvent utiliser pour Web Services Description Language (WSDL) et le langage de définition de schéma XML (XSD) se connecter à et utiliser le service et pour générer diverses représentations de fichier code et la configuration des valeurs d’arborescence de description.  
   
- Cette rubrique décrit comment obtenir les propriétés relatives au contrat à partir du contrat de service, et la manière dont elles sont implémentées et ajoutées à l'arborescence de description. Dans certains cas, les valeurs d’attribut sont converties en propriétés de comportement et le comportement est ensuite inséré dans l’arborescence de description. Pour plus d’informations sur la façon dont les valeurs d’arborescence de description sont convertis en métadonnées, consultez [ServiceDescription et WSDL référence](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md).  
+ Cette rubrique décrit comment obtenir les propriétés relatives au contrat à partir du contrat de service, et la manière dont elles sont implémentées et ajoutées à l’arborescence de description. Dans certains cas, les valeurs d’attribut sont converties en propriétés de comportement et le comportement est ensuite inséré dans l’arborescence de description. Pour plus d’informations sur la façon dont les valeurs d’arborescence de description sont convertis en métadonnées, consultez [ServiceDescription et WSDL référence](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md).  
   
 ## <a name="mapping-operations-to-the-description-tree"></a>Mappage des opérations à l’arborescence de description  
- Dans les applications [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], les contrats de service sont modélisés par les interfaces (ou classes) qui utilisent des attributs pour marquer l'interface ou la classe et ses méthodes sous forme d'un regroupement d'opérations. Lorsqu'une classe <xref:System.ServiceModel.ServiceHost> est ouverte, les implémentations et les contrats de service sont pris en compte dans, et fusionnées avec, les informations de configuration dans une arborescence de description.  
+ Dans les applications WCF, les contrats de service sont modélisés par les interfaces (ou classes) qui utilisent des attributs pour marquer l’interface ou la classe et ses méthodes sous forme de regroupement d’opérations. Lorsqu'une classe <xref:System.ServiceModel.ServiceHost> est ouverte, les implémentations et les contrats de service sont pris en compte dans, et fusionnées avec, les informations de configuration dans une arborescence de description.  
   
- Il existe deux types de modèles d’opération : le *paramètre* modèle et le *contrat de message* modèle. Le modèle de paramètre utilise des méthodes managées qui n'ont pas de type de paramètre ou de valeur de retour marqué par la classe <xref:System.ServiceModel.MessageContractAttribute?displayProperty=nameWithType>. Dans ce modèle, les développeurs contrôlent la sérialisation des paramètres et des valeurs de retour, mais [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] génère les valeurs utilisées pour remplir l'arborescence de description du service et de son contrat.  
+ Il existe deux types de modèles d’opération : le *paramètre* modèle et le *contrat de message* modèle. Le modèle de paramètre utilise des méthodes managées qui n'ont pas de type de paramètre ou de valeur de retour marqué par la classe <xref:System.ServiceModel.MessageContractAttribute?displayProperty=nameWithType>. Dans ce modèle, les développeurs contrôlent la sérialisation des paramètres et valeurs de retour, mais WCF génère les valeurs qui sont utilisés pour remplir l’arborescence de description pour le service et de son contrat.  
   
  Les liaisons spécifiées dans les fichiers de configuration sont directement chargées dans la propriété <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A?displayProperty=nameWithType>.  
   

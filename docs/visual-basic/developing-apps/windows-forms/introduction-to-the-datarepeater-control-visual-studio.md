@@ -1,23 +1,16 @@
 ---
-title: "Introduction au contrôle DataRepeater (Visual Studio)"
+title: Introduction au contrôle DataRepeater (Visual Studio)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - repeating data
 - DataRepeater, overview
 - DataRepeater
 ms.assetid: 78a52a1d-65f0-4ecb-97ff-53bc114300c5
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 699876cc568b22114e5ed8741c2fd0c053a137af
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fc0cf9c358faf3e738eb3b24ec61577b88dbce4a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="introduction-to-the-datarepeater-control-visual-studio"></a>Introduction au contrôle DataRepeater (Visual Studio)
 Le contrôle <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> de Visual Basic Power Packs est un conteneur à défilement pour les contrôles qui affichent des données répétées, par exemple des lignes dans une table de base de données. Il peut être utilisé comme alternative au contrôle <xref:System.Windows.Forms.DataGridView> quand vous avez besoin de plus de contrôle sur la disposition des données. Le <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> « répète » d’un groupe de contrôles connexes en créant plusieurs instances dans une vue de défilement. Cela permet aux utilisateurs d’afficher plusieurs enregistrements en même temps.  

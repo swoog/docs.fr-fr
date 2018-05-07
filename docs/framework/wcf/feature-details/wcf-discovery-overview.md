@@ -1,26 +1,12 @@
 ---
 title: Vue d'ensemble de la découverte WCF
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 84fad0e4-23b1-45b5-a2d4-c9cdf90bbb22
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c0ac6cec6a86b431d71534880f1a883d648c4332
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: c01ded15b3284058d7c5678409936e51fce1ea5f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-discovery-overview"></a>Vue d'ensemble de la découverte WCF
 Les API de découverte offrent un modèle de programmation unifié pour la publication et la découverte dynamiques de services Web, à l'aide du protocole WS-Discovery. Ces API permettent aux services de se publier eux-mêmes et permettent aux clients de rechercher des services publiés. Une fois un service rendu détectable, le service a la capacité d'envoyer des messages d'annonce, ainsi que d'écouter des demandes de découverte et d'y répondre. Les services détectables peuvent envoyer des messages de type Hello pour annoncer leur arrivée sur un réseau et des messages de type Bye pour annoncer leur départ d'un réseau. Pour trouver un service, les clients envoient une demande `Probe` qui contient des critères spécifiques tels que le type de contrat de service, les mots clés et l'étendue sur le réseau. Les services reçoivent la demande `Probe` et déterminent s'ils correspondent aux critères. Si un service correspond, il répond en renvoyant au client un message `ProbeMatch`, avec les informations nécessaires pour contacter le service. Les clients peuvent également envoyer des demandes `Resolve` qui leur permettent de trouver des services dont l'adresse du point de terminaison risque d'avoir été modifiée. Les services correspondants répondent aux demandes `Resolve` en renvoyant un message `ResolveMatch` au client.  

@@ -1,34 +1,22 @@
 ---
 title: Autorisation dans WCF
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - authorization [WCF]
 - security [WCF], authorization
 ms.assetid: 8ea0b552-af65-45b0-a157-c6c111b8ce5e
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ac43b2185048287d0edd4cb20561a936bce2f58b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c6bf779c7baeea1f9a253ad0bde966cea67b57aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="authorization-in-wcf"></a>Autorisation dans WCF
-L'autorisation est le processus qui consiste à contrôler l'accès et les droits aux ressources, telles que les services ou fichiers. Les rubriques de cette section vous indiquent comment effectuer cette tâche de base dans [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] de diverses manières.  
+L'autorisation est le processus qui consiste à contrôler l'accès et les droits aux ressources, telles que les services ou fichiers. Les rubriques de cette section vous montrent comment effectuer cette tâche de base dans Windows Communication Foundation (WCF) de plusieurs façons.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Mécanismes de contrôle d’accès](../../../../docs/framework/wcf/feature-details/access-control-mechanisms.md)  
- Fournit une présentation des mécanismes d'autorisation dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] et des suggestions d'utilisation.  
+ Fournit une brève description des mécanismes d’autorisation dans WCF et il utilise suggérée.  
   
  [Guide pratique pour restreindre l’accès avec la classe PrincipalPermissionAttribute](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)  
  Illustre le processus de limitation de l'accès à un service avec le <xref:System.Security.Permissions.PrincipalPermissionAttribute>.  
@@ -37,7 +25,7 @@ L'autorisation est le processus qui consiste à contrôler l'accès et les droit
  Décrit les différentes étapes de la configuration d'un service pour lui permettre d'utiliser la fonctionnalité de fournisseur de rôle de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].  
   
  [Guide pratique pour utiliser le fournisseur de rôle du Gestionnaire d’autorisations ASP.NET avec un service](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md)  
- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] peut utiliser le Gestionnaire d'autorisations pour gérer l'autorisation pour un site Web. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] peut de la même façon tirer parti de la combinaison [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]/Gestionnaire d'autorisations pour l'autorisation des clients.  
+ [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] peut utiliser le Gestionnaire d'autorisations pour gérer l'autorisation pour un site Web. WCF peut tirer parti de la même façon le [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]combinaison /Authorization Manager pour l’autorisation de clients.  
   
  [Gestion des revendications et autorisation avec le modèle d’identité](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)  
  Explique les principes de base de l'utilisation de l'infrastructure Modèle d'identité pour l'autorisation basée sur les revendications.  

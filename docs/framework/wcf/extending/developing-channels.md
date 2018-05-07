@@ -1,27 +1,15 @@
 ---
-title: "Développement de canaux"
-ms.custom: 
+title: Développement de canaux
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0513af9f-a0c2-457b-9a50-5b6bfee48513
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 42c89ae71078a3ddfbe7e85273a6f62879781c80
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: def60ec0cce8da71e7e2d98ff456420949360aed
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="developing-channels"></a>Développement de canaux
-Le développement d'un protocole ou d'un canal de transport compatible avec la couche d'application [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] s'effectue en plusieurs étapes. Cette rubrique liste ces étapes et renvoie à des rubriques spécifiques qui vous permettront d'en savoir plus. Pour comprendre le modèle de canal et les différents types qui sont mentionnés dans cette rubrique, consultez [vue d’ensemble du modèle de canal](../../../../docs/framework/wcf/extending/channel-model-overview.md). Pour voir un exemple de canal de transport terminée, [Transport : UDP](../../../../docs/framework/wcf/samples/transport-udp.md).  
+Pour développer un canal de transport ou protocole qui peut être utilisé avec Windows Communication Foundation (WCF), couche d’application nécessite plusieurs étapes. Cette rubrique liste ces étapes et renvoie à des rubriques spécifiques qui vous permettront d'en savoir plus. Pour comprendre le modèle de canal et les différents types qui sont mentionnés dans cette rubrique, consultez [vue d’ensemble du modèle de canal](../../../../docs/framework/wcf/extending/channel-model-overview.md). Pour voir un exemple de canal de transport terminée, [Transport : UDP](../../../../docs/framework/wcf/samples/transport-udp.md).  
   
 ## <a name="the-channel-development-task-list"></a>Liste des tâches à effectuer dans le cadre du développement d’un canal  
  Les étapes pour créer un canal défini par l'utilisateur sont les suivantes : Pour tous les canaux :  

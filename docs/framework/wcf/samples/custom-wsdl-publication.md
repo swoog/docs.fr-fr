@@ -1,24 +1,12 @@
 ---
-title: "Publication WSDL personnalisée"
-ms.custom: 
+title: Publication WSDL personnalisée
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 3b3e8103-2c95-4db3-a05b-46aa8e9d4d29
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ba62c44ecf72df7faaed77f54f07ecd88157c6d8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: e475a37b5c8e868cf06d7764d561755112ed943e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-wsdl-publication"></a>Publication WSDL personnalisée
 Cet exemple montre comment :  
@@ -29,7 +17,7 @@ Cet exemple montre comment :
   
 -   Implémenter <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=nameWithType> et <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=nameWithType> sur un comportement de contrat personnalisé et un comportement d'opération personnalisé, respectivement, pour écrire des annotations importées en tant que commentaires dans le CodeDom pour le contrat et l'opération importés ;  
   
--   Utiliser le <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> pour télécharger le WSDL, un <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> pour importer le WSDL à l'aide de l'importateur WSDL personnalisé, et le <xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType> pour générer le code client [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] avec les annotations WSDL en tant que commentaires /// et ''' en C# et Visual Basic.  
+-   Utilisez le <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> pour télécharger le WSDL, un <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> pour importer le WSDL à l’aide de l’importateur WSDL personnalisé et le <xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType> pour générer le code du client Windows Communication Foundation (WCF) avec les annotations WSDL en tant que / / / et ''' commentaires en c# et Visual De base.  
   
 > [!NOTE]
 >  La procédure d'installation ainsi que les instructions de génération relatives à cet exemple figurent à la fin de cette rubrique.  
@@ -311,7 +299,7 @@ public interface ICalculator
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à la page [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les exemples [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Metadata\WsdlDocumentation`  
   

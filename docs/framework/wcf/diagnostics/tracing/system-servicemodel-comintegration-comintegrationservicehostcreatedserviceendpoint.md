@@ -1,24 +1,12 @@
 ---
 title: System.ServiceModel.Channels.MsmqMoveOrDeleteAttemptFailed
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d75d39da-7502-4a6a-91b9-eaa05b8e24d5
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 87eac8f0e3949ac47c7bb2915a87043bdc205b8d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0a28eec659b48d5add4c53bc8c16972892e65099
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="systemservicemodelchannelsmsmqmoveordeleteattemptfailed"></a>System.ServiceModel.Channels.MsmqMoveOrDeleteAttemptFailed
 Impossible de déplacer ou de supprimer le message.  
@@ -26,7 +14,7 @@ Impossible de déplacer ou de supprimer le message.
 ## <a name="description"></a>Description  
  Le suivi indique qu'un échec a eu lieu lors de la tentative de déplacement, d'élimination ou de rejet d'un message MSMQ.  
   
- Les messages MSMQ sont employés par [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] (lorsque utilisé avec NetMsmqBinding ou MsmqIntegrationBinding). Ce suivi concerne la valeur choisie pour la propriété `ReceiveErrorHandling` sur NetMsmqBinding ou MsmqIntegrationBinding.  
+ Messages MSMQ sont employés par Windows Communication Foundation (WCF) (lorsque utilisé avec NetMsmqBinding ou MsmqIntegrationBinding). Ce suivi est lié à la valeur choisie le `ReceiveErrorHandling` propriété sur NetMsmqBinding ou MsmqIntegrationBinding.  
   
  Ce suivi n'indique pas une défaillance générale du système. Toutefois, il indique que la disposition de message incohérent choisie a échoué pour un message. Consultez [des messages incohérents](http://go.microsoft.com/fwlink/?LinkID=99546) pour plus d’informations sur le moment où les messages deviennent incohérents et comment configurer votre service pour gérer de façon appropriée.  
   

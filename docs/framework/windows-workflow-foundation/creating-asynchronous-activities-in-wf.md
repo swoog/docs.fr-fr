@@ -1,23 +1,12 @@
 ---
-title: "Création d'activités asynchrones dans WF"
-ms.custom: 
+title: Création d'activités asynchrones dans WF
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 497e81ed-5eef-460c-ba55-fae73c05824f
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1d06f825b96f66e35bdd30db272b99bb4e2e3e1e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8df876c9be020ece29683d1c101a4045b1c76322
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-asynchronous-activities-in-wf"></a>Création d'activités asynchrones dans WF
 <xref:System.Activities.AsyncCodeActivity> fournit aux auteurs d'activités une classe de base qui permet aux activités dérivées d'implémenter la logique d'exécution asynchrone. Les activités personnalisées peuvent ainsi effectuer un travail asynchrone sans maintenir le thread du service de planification de workflow. Elles peuvent également bloquer toute activité qui peut s'exécuter en parallèle. Cette rubrique fournit une vue d'ensemble de la méthode de création des activités asynchrones personnalisées à l'aide de l'objet <xref:System.Activities.AsyncCodeActivity>.  
@@ -26,7 +15,7 @@ ms.lasthandoff: 12/22/2017
  L'objet <xref:System.Activities?displayProperty=nameWithType> fournit aux auteurs d'activités personnalisées différentes classes de base pour différentes spécifications de création d'activité. Chacune possède une sémantique particulière et fournit à un auteur de workflow (et au runtime d'activité) un contrat correspondant. Une activité basée sur l'objet <xref:System.Activities.AsyncCodeActivity> est une activité qui effectue le travail de façon asynchrone par rapport au thread du service de planification et dont la logique d'exécution est exprimée en code managé. Du fait qu'il devienne asynchrone, un objet <xref:System.Activities.AsyncCodeActivity> peut induire un point inactif lors de l'exécution. En raison de la nature volatile du travail asynchrone, un objet <xref:System.Activities.AsyncCodeActivity> crée toujours un bloc sans persistance pour la durée d'exécution de l'activité. Cela empêche le runtime du workflow de rendre persistante l'instance de workflow au milieu du travail asynchrone, et empêche également l'instance de workflow de se décharger lors de l'exécution du code asynchrone.  
   
 ### <a name="asynccodeactivity-methods"></a>Méthodes AsyncCodeActivity  
- Les activités qui dérivent de l'objet <xref:System.Activities.AsyncCodeActivity> peuvent créer la logique d'exécution asynchrone en substituant le code personnalisé aux méthodes <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> et <xref:System.Activities.AsyncCodeActivity.EndExecute%2A>. Une fois appelées par le runtime, un <xref:System.Activities.AsyncCodeActivityContext> est passé à ces méthodes. <xref:System.Activities.AsyncCodeActivityContext>permet à l’auteur d’activité de fournir l’état partagé entre <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> /  <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> dans du contexte <xref:System.Activities.AsyncCodeActivityContext.UserState%2A> propriété. Dans l'exemple suivant, une activité `GenerateRandom` génère un nombre aléatoire de façon asynchrone.  
+ Les activités qui dérivent de l'objet <xref:System.Activities.AsyncCodeActivity> peuvent créer la logique d'exécution asynchrone en substituant le code personnalisé aux méthodes <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> et <xref:System.Activities.AsyncCodeActivity.EndExecute%2A>. Une fois appelées par le runtime, un <xref:System.Activities.AsyncCodeActivityContext> est passé à ces méthodes. <xref:System.Activities.AsyncCodeActivityContext> permet à l’auteur d’activité de fournir l’état partagé entre <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> /  <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> dans du contexte <xref:System.Activities.AsyncCodeActivityContext.UserState%2A> propriété. Dans l'exemple suivant, une activité `GenerateRandom` génère un nombre aléatoire de façon asynchrone.  
   
  [!code-csharp[CFX_ActivityExample#8](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#8)]  
   

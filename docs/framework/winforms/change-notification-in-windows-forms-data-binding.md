@@ -1,27 +1,15 @@
 ---
-title: "Notification de modifications dans la liaison de données Windows Forms"
-ms.custom: 
+title: Notification de modifications dans la liaison de données Windows Forms
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms, data binding
 - Windows Forms, adding change notification for data binding
 ms.assetid: b5b10f90-0585-41d9-a377-409835262a92
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 827e93ad779dfeb2dd398a2fc031fcb99a77a39c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 79ad52b6db8cb7be7f4e3162b8f726e8cbe22dcf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="change-notification-in-windows-forms-data-binding"></a>Notification de modifications dans la liaison de données Windows Forms
 Un des concepts plus importants de la liaison de données Windows Forms est *notification de modification*. Pour vous assurer que votre source de données et les contrôles liés ont toujours des données les plus récentes, vous devez ajouter la notification de modification pour la liaison de données. Plus précisément, vous souhaitez vous assurer que les contrôles dépendants sont avertis des modifications qui ont été apportées à leur source de données, et la source de données est informée des modifications apportées aux propriétés d’un contrôle dépendantes.  

@@ -1,13 +1,6 @@
 ---
 title: "Comment : définir l'alignement horizontal et vertical d'un TileBrush"
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - aligning [WPF], TileBrushes
 - horizontal alignment of Tilebrushes [WPF]
 ms.assetid: 65ae89bd-9246-4c9e-bde4-2fb991d4060d
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3dcbf4715c80f72178295c0b6abdc1272a055a8a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4352067f149a1af25cd0a04a12596693188445fe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-set-the-horizontal-and-vertical-alignment-of-a-tilebrush"></a>Comment : définir l'alignement horizontal et vertical d'un TileBrush
 Cet exemple montre comment contrôler l’alignement horizontal et vertical d’un contenu dans une mosaïque. Pour contrôler l’alignement horizontal et vertical d’un <xref:System.Windows.Media.TileBrush>, utilisez son <xref:System.Windows.Media.TileBrush.AlignmentX%2A> et <xref:System.Windows.Media.TileBrush.AlignmentY%2A> propriétés.  
@@ -40,7 +28,7 @@ Cet exemple montre comment contrôler l’alignement horizontal et vertical d’
 ## <a name="example"></a>Exemple  
  L’exemple suivant aligne le contenu d’un <xref:System.Windows.Media.DrawingBrush>, qui est un type de <xref:System.Windows.Media.TileBrush>, à l’angle supérieur gauche de sa mosaïque. Pour aligner le contenu, l’exemple définit le <xref:System.Windows.Media.TileBrush.AlignmentX%2A> propriété de la <xref:System.Windows.Media.DrawingBrush> à <xref:System.Windows.Media.AlignmentX.Left> et <xref:System.Windows.Media.TileBrush.AlignmentY%2A> propriété <xref:System.Windows.Media.AlignmentY.Top>. Cet exemple produit la sortie suivante.  
   
- ![TileBrush avec top &#45; alignement à gauche](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tilebrushalignmentexampletopleft.png "graphicsmm_TileBrushAlignmentExampleTopLeft")  
+ ![TileBrush avec haut&#45;alignement gauche](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tilebrushalignmentexampletopleft.png "graphicsmm_TileBrushAlignmentExampleTopLeft")  
 TileBrush avec un contenu aligné dans l’angle supérieur gauche  
   
  [!code-csharp[brushoverviewexamples_snip#TileBrushTopLeftAlignmentInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_snip/CSharp/TileBrushAlignmentExample.cs#tilebrushtopleftalignmentinline)]
@@ -50,7 +38,7 @@ TileBrush avec un contenu aligné dans l’angle supérieur gauche
 ## <a name="example"></a>Exemple  
  L’exemple suivant aligne le contenu d’un <xref:System.Windows.Media.DrawingBrush> vers le coin inférieur droit de sa mosaïque en définissant le <xref:System.Windows.Media.TileBrush.AlignmentX%2A> propriété <xref:System.Windows.Media.AlignmentX.Right> et le <xref:System.Windows.Media.TileBrush.AlignmentY%2A> propriété <xref:System.Windows.Media.AlignmentY.Bottom>. L’exemple produit le résultat suivant :  
   
- ![TileBrush avec bas &#45; alignement à droite](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tilebrushalignmentexamplebottomright.png "graphicsmm_TileBrushAlignmentExampleBottomRight")  
+ ![TileBrush avec bas&#45;avec le bouton droit alignement](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tilebrushalignmentexamplebottomright.png "graphicsmm_TileBrushAlignmentExampleBottomRight")  
 TileBrush avec un contenu aligné dans l’angle inférieur droit  
   
  [!code-csharp[brushoverviewexamples_snip#TileBrushBottomRightAlignmentInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_snip/CSharp/TileBrushAlignmentExample.cs#tilebrushbottomrightalignmentinline)]
@@ -60,7 +48,7 @@ TileBrush avec un contenu aligné dans l’angle inférieur droit
 ## <a name="example"></a>Exemple  
  L’exemple suivant aligne le contenu d’un <xref:System.Windows.Media.DrawingBrush> à l’angle supérieur gauche de sa mosaïque en définissant le <xref:System.Windows.Media.TileBrush.AlignmentX%2A> propriété <xref:System.Windows.Media.AlignmentX.Left> et le <xref:System.Windows.Media.TileBrush.AlignmentY%2A> propriété <xref:System.Windows.Media.AlignmentY.Top>. Il définit également la <xref:System.Windows.Media.TileBrush.Viewport%2A> et <xref:System.Windows.Media.TileBrush.TileMode%2A> de la <xref:System.Windows.Media.DrawingBrush> pour produire un modèle de vignette. L’exemple produit le résultat suivant :  
   
- ![TileBrush en mosaïque avec top &#45; alignement à gauche](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tilebrushalignmentexampletoplefttiled.png "graphicsmm_TileBrushAlignmentExampleTopLeftTiled")  
+ ![A affichée en mosaïque de TileBrush avec haut&#45;alignement gauche](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tilebrushalignmentexampletoplefttiled.png "graphicsmm_TileBrushAlignmentExampleTopLeftTiled")  
 Modèle de mosaïque avec contenu aligné en haut à gauche dans la mosaïque de base  
   
  L’illustration montre la mosaïque pour que vous puissiez voir comment son contenu est aligné. Notez que la <xref:System.Windows.Media.TileBrush.AlignmentX%2A> paramètre n’a aucun effet car le contenu de la <xref:System.Windows.Media.DrawingBrush> remplit horizontalement toute la mosaïque de base.  
@@ -72,7 +60,7 @@ Modèle de mosaïque avec contenu aligné en haut à gauche dans la mosaïque de
 ## <a name="example"></a>Exemple  
  Le dernier exemple aligne le contenu d’une mosaïque <xref:System.Windows.Media.DrawingBrush> à l’angle inférieur droit de sa mosaïque de base en définissant le <xref:System.Windows.Media.TileBrush.AlignmentX%2A> propriété <xref:System.Windows.Media.AlignmentX.Right> et <xref:System.Windows.Media.TileBrush.AlignmentY%2A> propriété <xref:System.Windows.Media.AlignmentY.Bottom>. L’exemple produit le résultat suivant :  
   
- ![Une mosaïque de TileBrush avec bas &#45; avec le bouton droit alignement](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tilebrushalignmentexamplebottomrighttiled.png "graphicsmm_TileBrushAlignmentExampleBottomRightTiled")  
+ ![Une mosaïque de TileBrush avec bas&#45;avec le bouton droit alignement](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tilebrushalignmentexamplebottomrighttiled.png "graphicsmm_TileBrushAlignmentExampleBottomRightTiled")  
 Modèle de mosaïque avec contenu aligné en bas à droite dans la mosaïque de base  
   
  Là encore, la <xref:System.Windows.Media.TileBrush.AlignmentX%2A> paramètre n’a aucun effet car le contenu de la <xref:System.Windows.Media.DrawingBrush> remplit horizontalement toute la mosaïque de base.  

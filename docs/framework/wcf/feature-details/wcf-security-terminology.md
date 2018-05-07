@@ -1,35 +1,23 @@
 ---
 title: Terminologie relative à la sécurité dans WCF
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - security [WCF], terminology
 - security glossary [WCF]
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
-caps.latest.revision: 14
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 46f70ad623d852e051ff69fb68690114f8c39381
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 8024abdab01b2df151a6c0c2f5760e85ae119fd4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-security-terminology"></a>Terminologie relative à la sécurité dans WCF
 La terminologie utilisée pour aborder la sécurité peut vous sembler peu familière. Cette rubrique explique rapidement certains des termes relatifs à la sécurité, mais ne fournit pas d'informations complètes pour chaque élément.  
   
- Pour plus d’informations sur les termes utilisés dans [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] plus d’informations, consultez [Concepts fondamentaux Windows Communication Foundation](../../../../docs/framework/wcf/fundamental-concepts.md).  
+ Pour plus d’informations sur les termes utilisés dans la documentation de Windows Communication Foundation (WCF), consultez [Concepts fondamentaux Windows Communication Foundation](../../../../docs/framework/wcf/fundamental-concepts.md).  
   
  liste de contrôle d'accès (ACL, Access Control List)  
  Liste des protections de sécurité qui s'appliquent à un objet. (Un objet peut être un fichier, un processus, un événement ou tout autre objet doté d'un descripteur de sécurité.) Une entrée dans une liste de contrôle d'accès (ACL) est une entrée de contrôle d'accès (ACE). Il y a deux types de listes ACL : discrétionnaire et système.  
@@ -189,7 +177,7 @@ La terminologie utilisée pour aborder la sécurité peut vous sembler peu famil
  Un nom de compte d’utilisateur (parfois appelé le *nom d’utilisateur d’ouverture de session*) et le nom de domaine identifiant le domaine dans lequel se trouve le compte d’utilisateur. Il s'agit de la méthode de connexion standard à un domaine Windows. Le format est : someone@example.com (comme pour une adresse de messagerie).  
   
 > [!NOTE]
->  En plus de la forme UPN standard, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] accepte les UPN de la forme de niveau inférieur, comme cohowinery.com\personne.  
+>  En plus de la forme UPN standard, WCF accepte les UPN sous forme de bas niveau, par exemple, cohowinery.com\someone.  
   
  X.509  
  Norme reconnue internationalement pour les certificats qui définit leurs parties requises.  

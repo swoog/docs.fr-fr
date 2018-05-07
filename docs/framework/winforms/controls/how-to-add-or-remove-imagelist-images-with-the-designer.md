@@ -1,28 +1,16 @@
 ---
-title: "Comment : ajouter ou supprimer des images ImageList avec le concepteur"
-ms.custom: 
+title: 'Comment : ajouter ou supprimer des images ImageList avec le concepteur'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ImageList component [Windows Forms], adding images
 - ImageList component [Windows Forms], removing images
 - images [Windows Forms], adding to ImageList component
 ms.assetid: 5699b244-e37c-4d20-bc35-7441e55c1e3a
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ce14d6f060482eb521e9812a127c6b27431121c0
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: c85e55b6aef45eea65e6f82269375f80acf71017
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-add-or-remove-imagelist-images-with-the-designer"></a>Comment : ajouter ou supprimer des images ImageList avec le concepteur
 Vous pouvez ajouter des images à un <xref:System.Windows.Forms.ImageList> composant de plusieurs façons différentes. Vous pouvez ajouter très rapidement des images à l’aide de la balise active associée le <xref:System.Windows.Forms.ImageList>, ou si vous définissez plusieurs autres propriétés sur le <xref:System.Windows.Forms.ImageList>, il peut s’avérer plus facile d’ajouter des images avec la fenêtre Propriétés. Vous pouvez également ajouter des images à l’aide de code. Pour plus d’informations sur la façon d’ajouter des images avec le code, consultez [Comment : ajouter ou supprimer des Images avec le composant ImageList Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md). En général, vous devez remplir le <xref:System.Windows.Forms.ImageList> composant avec des images avant qu’elle est associée à un contrôle, mais cela n’est pas nécessaire.  

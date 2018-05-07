@@ -1,14 +1,6 @@
 ---
 title: Personnalisation des flux (services de données WCF)
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,17 +10,11 @@ helpviewer_keywords:
 - Atom Publishing Protocol [WCF Data Services]
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
-caps.latest.revision: 11
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c59bfdd22125f10b8a35afc8c264b6b2869a3998
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: c398162b033fcdcb5a885fb961ca7be98a88d2f3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="feed-customization-wcf-data-services"></a>Personnalisation des flux (services de données WCF)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] utilise le [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] pour exposer des données en tant que flux. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] prend en charge les formats Atom et JavaScript Objet Notation (JSON) pour les flux de données. Lorsque vous utilisez un flux Atom, [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] fournit une méthode standard pour sérialiser les données, telles que les entités et les relations, dans un format XML qui peut être inclus dans le corps du message HTTP. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] définit un mappage de propriété d’entité par défaut entre les données contenues dans les entités et les éléments Atom. Pour plus d’informations, consultez [OData : Format Atom](http://go.microsoft.com/fwlink/?LinkID=185794).  

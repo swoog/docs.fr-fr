@@ -1,14 +1,6 @@
 ---
-title: "Vue d'ensemble du contrôle CheckedListBox (Windows Forms)"
-ms.custom: 
+title: Vue d'ensemble du contrôle CheckedListBox (Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - CheckedListBox
 helpviewer_keywords:
@@ -16,17 +8,11 @@ helpviewer_keywords:
 - check marks
 - list boxes [Windows Forms], about list boxes
 ms.assetid: e6cff3ce-e2ba-458e-851f-299e8e9c8abf
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2c606406fb47d6297e70bfa3db5fc17631969e4e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b60274a13999c5a916840e721c02210c4e5d510b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="checkedlistbox-control-overview-windows-forms"></a>Vue d'ensemble du contrôle CheckedListBox (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.CheckedListBox> contrôle s’étend la <xref:System.Windows.Forms.ListBox> contrôle. Il fait presque tout ce qu’une zone de liste, également peut afficher une case à cocher en regard des éléments dans la liste. Autres différences entre les deux contrôles sont différencient uniquement prise en charge des zones de liste <xref:System.Windows.Forms.DrawMode.Normal?displayProperty=nameWithType>; et que les zones de liste peuvent avoir uniquement un élément ou aucun sélectionné. Notez qu’un élément sélectionné s’affiche en surbrillance dans le formulaire et qu’il n’est pas identique à un élément activé.  

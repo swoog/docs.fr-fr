@@ -1,36 +1,24 @@
 ---
 title: Vue d'ensemble des sessions fiables
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a7fc4146-ee2c-444c-82d4-ef6faffccc2d
-caps.latest.revision: "30"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1d2749188214f3f68ee3ed5df87fc0aa7cac604d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1c5344c2804cf4c17fdc46a7fea5a4a360122b6e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reliable-sessions-overview"></a>Vue d'ensemble des sessions fiables
 
-La messagerie fiable SOAP de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] fournit une fiabilité de transfert de messages de bout en bout entre des points de terminaison SOAP. Elle permet cela sur des réseaux peu fiables en remédiant aux échecs de transport et aux échecs au niveau du message SOAP. Notamment, elle fournit une remise basée sur session, unique et ordonnée (facultativement) pour les messages envoyés via SOAP ou des intermédiaires de transport. La remise basée sur session fournit pour le regroupement des messages dans une session avec un ordonnancement facultatif des messages.
+Windows Communication Foundation (WCF) de messagerie fiable SOAP fournit la fiabilité de transfert de messages de bout en bout entre les points de terminaison SOAP. Elle permet cela sur des réseaux peu fiables en remédiant aux échecs de transport et aux échecs au niveau du message SOAP. Notamment, elle fournit une remise basée sur session, unique et ordonnée (facultativement) pour les messages envoyés via SOAP ou des intermédiaires de transport. La remise basée sur session fournit pour le regroupement des messages dans une session avec un ordonnancement facultatif des messages.
 
 Cette rubrique décrit des sessions fiables, comment et quand les utiliser et comment les sécuriser.
 
 ## <a name="wcf-reliable-sessions"></a>Sessions fiables WCF
 
-Les sessions fiables [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sont une implémentation de la messagerie fiable SOAP, comme défini par le protocole WS-ReliableMessaging.
+Les sessions fiables WCF est une implémentation de SOAP reliable messaging tel que défini par le protocole WS-ReliableMessaging.
 
-La messagerie fiable SOAP de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fournit une session fiable de bout en bout entre deux points de terminaison, indépendamment du nombre ou du type des intermédiaires qui séparent les points de terminaison de messagerie. Cela inclut tous les transports qui n’utilisent pas SOAP (par exemple, les proxys HTTP) ou les intermédiaires qui utilisent le protocole SOAP (par exemple, les routeurs SOAP ou ponts) sont requis pour les messages transitent entre les points de terminaison. Un canal de session fiable prend en charge *interactive* communication afin que les services connectés par ce canal s’exécuteront simultanément et échanger et traiter des messages dans des conditions de faible latence, c'est-à-dire dans relativement courtes intervalles de temps. Ce couplage signifie que ces composants progressent ensemble ou échouent ensemble, donc il n’existe aucune isolation assurée entre eux.
+Messagerie fiable SOAP WCF fournit une session fiable de bout en bout entre deux points de terminaison, quel que soit le nombre ou le type d’intermédiaires qui séparent les points de terminaison de messagerie. Cela inclut tous les transports qui n’utilisent pas SOAP (par exemple, les proxys HTTP) ou les intermédiaires qui utilisent le protocole SOAP (par exemple, les routeurs SOAP ou ponts) sont requis pour les messages transitent entre les points de terminaison. Un canal de session fiable prend en charge *interactive* communication afin que les services connectés par ce canal s’exécuteront simultanément et échanger et traiter des messages dans des conditions de faible latence, c'est-à-dire dans relativement courtes intervalles de temps. Ce couplage signifie que ces composants progressent ensemble ou échouent ensemble, donc il n’existe aucune isolation assurée entre eux.
 
 Une session fiable masque deux types d'échecs :
 
@@ -52,7 +40,7 @@ Une session fiable gère les messages SOAP de la même façon que TCP gère les 
 
 ## <a name="reliable-sessions-and-bindings"></a>Sessions et liaisons fiables
 
-Comme mentionné précédemment, une session fiable est indépendant du transport. En outre, vous pouvez établir une session fiable sur nombreux modèles d’échange de message, telles que la demande-réponse ou duplex. A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] session fiable est exposée en tant que propriété d’un ensemble de liaisons.
+Comme mentionné précédemment, une session fiable est indépendant du transport. En outre, vous pouvez établir une session fiable sur nombreux modèles d’échange de message, telles que la demande-réponse ou duplex. Une session fiable de WCF est exposée en tant que propriété d’un ensemble de liaisons.
 
 Utilisez une session fiable sur les points de terminaison qui utilisent :
 
@@ -74,23 +62,23 @@ Utiliser une session fiable sur tout autre liaison en créant une liaison person
 
 Vous pouvez empiler une session fiable sur différents types de canaux sous-jacents et la forme de canal de session fiable résultante varie. Le client et le serveur, le type de canal de session fiable pris en charge dépend du type de canal sous-jacent utilisé. Le tableau suivant répertorie les types de canaux de session pris en charge sur le client en fonction du type de canal sous-jacent.
 
-| Prise en charge des types de canaux de session fiable &#8224; | `IRequestChannel` | `IRequestSessionChannel` | `IDuplexChannel` | `IDuplexSessionChannel` |
+| Prise en charge des types de canaux de session fiable&#8224; | `IRequestChannel` | `IRequestSessionChannel` | `IDuplexChannel` | `IDuplexSessionChannel` |
 | ----------------------------------------------- | :---------------: | :----------------------: | :--------------: | :---------------------: |
 | `IOutputSessionChannel`                         | Oui               | Oui                      | Oui              | Oui                     |
 | `IRequestSessionChannel`                        | Oui               | Oui                      | Non               | Non                      |
 | `IDuplexSessionChannel`                         | Non                | Non                       | Oui              | Oui                     |
 
-&#8224; Les types de canaux pris en charge sont les valeurs disponibles pour le type générique `TChannel` valeur de paramètre est passé dans le <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.BuildChannelFactory%60%601%28System.ServiceModel.Channels.BindingContext%29> (méthode).
+&#8224;Les types de canaux pris en charge sont les valeurs disponibles pour le type générique `TChannel` valeur de paramètre est passé dans le <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.BuildChannelFactory%60%601%28System.ServiceModel.Channels.BindingContext%29> (méthode).
 
 Le tableau suivant répertorie les types de canaux de session pris en charge sur le serveur en fonction du type de canal sous-jacent.
 
-| Prise en charge des types de canaux de session fiable &#8225; | `IReplyChannel` | `IReplySessionChannel` | `IDuplexChannel` | `IDuplexSessionChannel` |
+| Prise en charge des types de canaux de session fiable&#8225; | `IReplyChannel` | `IReplySessionChannel` | `IDuplexChannel` | `IDuplexSessionChannel` |
 | ----------------------------------------------- | :-------------: | :--------------------: | :--------------: | :---------------------: |
 | `IInputSessionChannel`                          | Oui             | Oui                    | Oui              | Oui                     |
 | `IReplySessionChannel`                          | Oui             | Oui                    | Non               | Non                      |
 | `IDuplexSessionChannel`                         | Non              | Non                     | Oui              | Oui                     |
 
-&#8225; Les types de canaux pris en charge sont les valeurs disponibles pour le type générique `TChannel` valeur de paramètre est passé dans le <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.BuildChannelListener%60%601%28System.ServiceModel.Channels.BindingContext%29> (méthode).
+&#8225;Les types de canaux pris en charge sont les valeurs disponibles pour le type générique `TChannel` valeur de paramètre est passé dans le <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.BuildChannelListener%60%601%28System.ServiceModel.Channels.BindingContext%29> (méthode).
 
 ## <a name="reliable-sessions-and-security"></a>Sessions fiables et sécurité
 
@@ -102,7 +90,7 @@ La seule exception est l'utilisation du protocole HTTPS. La session de Secure So
 
 ## <a name="using-reliable-sessions"></a>À l’aide de sessions fiables
 
-Pour utiliser les sessions fiables [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], créez un point de terminaison avec une liaison prenant en charge une session fiable. Utilisez une des liaisons fournies par le système qui [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fournit avec la session fiable activée ou créer votre propre liaison personnalisée qui effectue l’opération.
+Pour utiliser des sessions fiables WCF, créez un point de terminaison avec une liaison qui prend en charge une session fiable. Utilisez une des liaisons fournies par le système WCF fournit avec la session fiable activée ou créer votre propre liaison personnalisée qui effectue l’opération.
 
 Les liaisons définies par le système qui prennent en charge et activent une session fiable par défaut incluent :
 
@@ -118,11 +106,11 @@ Les liaisons fournies par le système qui prennent en charge une session fiable 
 
 Pour obtenir un exemple montrant comment créer une liaison personnalisée, consultez [Comment : créer une liaison personnalisée de Session fiable avec HTTPS](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-reliable-session-binding-with-https.md).
 
-Pour en savoir plus sur [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] liaisons qui prennent en charge des sessions fiables, consultez [les liaisons fournies](../../../../docs/framework/wcf/system-provided-bindings.md).
+Pour en savoir plus sur les liaisons WCF qui prennent en charge les sessions fiables, consultez [les liaisons fournies](../../../../docs/framework/wcf/system-provided-bindings.md).
 
 ## <a name="when-to-use-reliable-sessions"></a>Quand utiliser des sessions fiables
 
-Il est important de comprendre quand utiliser des sessions fiables dans votre application. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] prend en charge des sessions fiables entre les points de terminaison qui sont actifs en même temps. Si votre application nécessite un des points de terminaison n’est pas disponible pour une durée donnée, puis utiliser les files d’attente pour assurer la fiabilité.
+Il est important de comprendre quand utiliser des sessions fiables dans votre application. WCF prend en charge des sessions fiables entre des points de terminaison qui sont actifs en même temps. Si votre application nécessite un des points de terminaison n’est pas disponible pour une durée donnée, puis utiliser les files d’attente pour assurer la fiabilité.
 
 Si le scénario requiert deux points de terminaison connectés sur TCP, puis TCP peut suffire à fournir les échanges de messages fiable. Bien qu’il n’est pas nécessaire d’utiliser une session fiable, étant donné que TCP garantit que les paquets arrivent dans l’ordre et une seule fois.
 

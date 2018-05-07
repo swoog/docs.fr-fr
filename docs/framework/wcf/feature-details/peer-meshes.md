@@ -1,24 +1,12 @@
 ---
 title: Mailles d'homologues
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d93e312e-ac04-40f8-baea-5da1cacb546e
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0f70c1dfba6ceb53cd674726702c471dbe508d46
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: afd9eae36f28c28b33b74c4456feb4ba8c91314d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="peer-meshes"></a>Mailles d'homologues
 A *de maillage* est une collection nommée (un graphique interconnecté) de nœuds homologues qui peuvent communiquer entre eux et qui sont identifiés par un ID de maille unique. Chaque nœud est connecté à plusieurs autres nœuds. Dans un maillage bien connecté, il existe un chemin entre chaque paire de nœuds, avec relativement peu de sauts entre les nœuds aux extrémités les plus éloignées du maillage, et le maillage reste connecté y compris si quelques nœuds ou connexions sont abandonnés. Les nœuds actifs dans la maille publient leurs informations de point de terminaison avec un ID de maille correspondant afin que d'autres homologues puissent les trouver.  

@@ -2,11 +2,11 @@
 title: '&lt;behavior&gt; de &lt;endpointBehaviors&gt;'
 ms.date: 03/30/2017
 ms.assetid: b90ca3bc-3c22-4174-b903-e3a39898bd27
-ms.openlocfilehash: 0619d14444d835ed959a1a1db7cd37aaf0429728
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: e275fbc1b14469553094a4df838930be53937de2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltbehaviorgt-of-ltendpointbehaviorsgt"></a>&lt;behavior&gt; de &lt;endpointBehaviors&gt;
 L'élément `behavior` contient une collection de paramètres concernant le comportement d'un point de terminaison. Chaque comportement est indexé en fonction de son `name`. Les points de terminaison peuvent être liés à chaque comportement à travers ce nom. Depuis [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], les liaisons et les comportements ne sont pas obligés d'avoir un nom. Pour plus d’informations sur la configuration par défaut et nommées liaisons et comportements, consultez [Configuration simplifiée](../../../../../docs/framework/wcf/simplified-configuration.md) et [simplifié la Configuration des Services WCF](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
@@ -52,7 +52,7 @@ L'élément `behavior` contient une collection de paramètres concernant le comp
 |[\<soapProcessing >](../../../../../docs/framework/configure-apps/file-schema/wcf/soapprocessing.md)|Définit le comportement de point de terminaison client utilisé pour marshaler des messages entre les versions de message et les types de liaison différents.|  
 |[\<synchronousReceive >](../../../../../docs/framework/configure-apps/file-schema/wcf/synchronousreceive-element.md)|Spécifie le comportement au moment de l'exécution pour la réception de messages dans une application de service ou cliente. Il n'a aucun attribut ou élément enfant.|  
 |[\<transactedBatching >](../../../../../docs/framework/configure-apps/file-schema/wcf/transactedbatching.md)|Spécifie si le traitement par lots de la transaction est pris en charge pour les opérations de réception.|  
-|[\<webHttp >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md)|Spécifie le WebHttpBehavior d'un point de terminaison via la configuration. Ce comportement est utilisé conjointement avec la \<webHttpBinding > permet de liaison standard, le modèle de programmation Web pour un [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] service.|  
+|[\<webHttp >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md)|Spécifie le WebHttpBehavior d'un point de terminaison via la configuration. Ce comportement est utilisé conjointement avec le \<webHttpBinding > permet de liaison standard, le modèle de programmation Web pour un service WCF.|  
   
 ### <a name="parent-elements"></a>Éléments parents  
   

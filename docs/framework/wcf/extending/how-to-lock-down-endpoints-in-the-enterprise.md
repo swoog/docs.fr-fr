@@ -1,29 +1,15 @@
 ---
 title: "Comment : verrouiller des points de terminaison dans l'entreprise"
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 1b7eaab7-da60-4cf7-9d6a-ec02709cf75d
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e5b10665e9a820c7057231c684769bddf9cb0c79
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
-ms.translationtype: MT
+ms.openlocfilehash: c91faf201c9a7cb0e5dd810059dbaa39b1e8eb05
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>Comment : verrouiller des points de terminaison dans l'entreprise
-Les entreprises de grande taille exigent souvent que les applications soient développées conformément à leurs stratégies de sécurité. La rubrique suivante explique comment développer et installer un validateur de point de terminaison client permettant de valider l'ensemble des applications clientes [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] installées sur les ordinateurs.  
+Les entreprises de grande taille exigent souvent que les applications soient développées conformément à leurs stratégies de sécurité. La rubrique suivante explique comment développer et installer un validateur de point de terminaison client qui peut être utilisé pour valider toutes les applications clientes de Windows Communication Foundation (WCF) installées sur les ordinateurs.  
   
  Dans ce cas, le validateur est un validateur client, car ce comportement de point de terminaison est ajouté au client [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) section dans le fichier machine.config. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] charge uniquement les comportements de point de terminaison communs pour les applications clientes et uniquement les comportements de service communs pour les applications de service. Pour installer ce même validateur pour les applications de service, le validateur doit être un comportement de service. Pour plus d’informations, consultez la [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) section.  
   

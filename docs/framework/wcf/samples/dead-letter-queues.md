@@ -1,26 +1,12 @@
 ---
 title: Dead Letter Queues
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-caps.latest.revision: 35
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9892579633103f1e7a6612c09865c91c559df34c
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 9f92aeb02d997820fa2955419a3cdcf1c4369b45
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dead-letter-queues"></a>Dead Letter Queues
 Cet exemple montre comment gérer et traiter des messages n'ayant pas pu être remis. Il est basé sur le [transactionnel de liaison MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) exemple. Cet exemple utilise la liaison `netMsmqBinding`. Le service est une application console auto-hébergée qui permet d'observer le service qui reçoit les messages mis en file d'attente.  
@@ -182,7 +168,7 @@ public void SubmitPurchaseOrder(PurchaseOrder po)
 }
 ```
 
- Les messages dans la file d'attente de lettres mortes sont des messages adressés au service qui est le traite le message. Par conséquent, lorsque le service de lettres mortes lit des messages de la file d'attente, la couche de canal [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] recherche l'incompatibilité dans les points de terminaison et ne distribue pas le message. Dans ce cas, le message est adressé au service de traitement des commandes mais est reçu par le service de lettres mortes. Pour recevoir un message adressé à un point de terminaison différent, un filtre d'adresse pouvant correspondre à n'importe quelle adresse est spécifié dans `ServiceBehavior`. Cela est requis pour traiter correctement les messages lus à partir de la file d'attente de lettres mortes.  
+ Les messages dans la file d'attente de lettres mortes sont des messages adressés au service qui est le traite le message. Par conséquent, lorsque le service de message de lettres mortes lit les messages de la file d’attente, la couche de canal de Windows Communication Foundation (WCF) recherche l’incompatibilité dans les points de terminaison et ne distribue pas le message. Dans ce cas, le message est adressé au service de traitement des commandes mais est reçu par le service de lettres mortes. Pour recevoir un message adressé à un point de terminaison différent, un filtre d'adresse pouvant correspondre à n'importe quelle adresse est spécifié dans `ServiceBehavior`. Cela est requis pour traiter correctement les messages lus à partir de la file d'attente de lettres mortes.  
   
  Dans cet exemple, le service de message de lettres mortes renvoie le message si la raison de l'échec est que le message a expiré. Pour toutes les autres raisons, il affiche l'échec de la remise, comme illustré dans l'exemple de code suivant :  
 
@@ -370,7 +356,7 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à la page [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les exemples [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\DeadLetter`  
   

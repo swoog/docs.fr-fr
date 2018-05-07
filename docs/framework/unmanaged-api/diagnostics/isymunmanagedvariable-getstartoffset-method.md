@@ -1,14 +1,6 @@
 ---
-title: "ISymUnmanagedVariable::GetStartOffset, méthode"
-ms.custom: 
+title: ISymUnmanagedVariable::GetStartOffset, méthode
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ISymUnmanagedVariable.GetStartOffset
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 63021fc1-9c2d-4788-811f-fe8ca077206a
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b3fa0c710eb5de8b9a92970002336de22adb2458
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2b25d072ab96b822e79c6f87f535096550e4bb53
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="isymunmanagedvariablegetstartoffset-method"></a>ISymUnmanagedVariable::GetStartOffset, méthode
 Obtient l’offset de début de cette variable dans son parent. S’il s’agit d’une variable locale dans une portée, l’offset de début est compris dans les offsets définis pour la portée.  
@@ -52,7 +40,7 @@ HRESULT GetStartOffset(
 ## <a name="return-value"></a>Valeur de retour  
  S_OK si la méthode réussit ; Sinon, E_FAIL ou un autre code d’erreur.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Voir aussi  

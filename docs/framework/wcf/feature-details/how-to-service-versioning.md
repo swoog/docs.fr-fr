@@ -1,24 +1,12 @@
 ---
-title: "Procédure : contrôle des versions du service"
-ms.custom: 
+title: 'Procédure : contrôle des versions du service'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4287b6b3-b207-41cf-aebe-3b1d4363b098
-caps.latest.revision: "6"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a4da80d264b05f9c7a1461a7298e521623a97f31
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a745a35f72722003fc98ecf14d5f39027dc141f6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-service-versioning"></a>Procédure : contrôle des versions du service
 Cette rubrique présente les étapes de base nécessaires pour créer une configuration de routage qui route les messages vers des versions différentes du même service. Dans cet exemple, les messages sont routés vers deux versions différentes d'un service de calculatrice, `roundingCalc` (v1) et `regularCalc` (v2). Les deux implémentations prennent en charge les mêmes opérations ; toutefois, le service le plus ancien, `roundingCalc`, arrondit tous les calculs à la valeur entière la plus proche avant de les retourner. Une application cliente doit être en mesure d'indiquer s'il faut utiliser le service `regularCalc` plus récent.  
@@ -105,7 +93,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     ```  
   
     > [!NOTE]
-    >  Le préfixe d’espace de noms s12 est défini par défaut dans la table de l’espace de noms et représente l’espace de noms « http://www.w3.org/2003/05/soap-envelope ».  
+    >  Le préfixe d’espace de noms s12 est défini par défaut dans la table de l’espace de noms et représente l’espace de noms «http://www.w3.org/2003/05/soap-envelope».  
   
 3.  Définissez la table de filtres, qui associe chaque filtre à un point de terminaison client. Si le message contient l’en-tête « CalcVer » avec la valeur 1, il sera envoyé au service regularCalc. Si l'en-tête contient la valeur 2, il sera envoyé au service roundingCalc. Si aucun en-tête n'est présent, le message sera routé vers regularCalc.  
   

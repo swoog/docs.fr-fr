@@ -1,34 +1,22 @@
 ---
-title: "Récupération de données et opérations CUD dans les applications multicouches (LINQ to SQL)"
-ms.custom: 
+title: Récupération de données et opérations CUD dans les applications multicouches (LINQ to SQL)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c3133d53-83ed-4a4d-af8b-82edcf3831db
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 6cdf1a859595c82b8eea60311c3c96353849e3dc
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: ea27d6406ed588f2046dc938f5167a6c0200329e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-retrieval-and-cud-operations-in-n-tier-applications-linq-to-sql"></a>Récupération de données et opérations CUD dans les applications multicouches (LINQ to SQL)
 Lorsque vous sérialisez des objets d'entité tels que Customers ou Orders vers un client sur un réseau, ces entités sont détachées de leur contexte de données. Le contexte de données ne suit plus leurs modifications ou leurs associations avec d'autres objets. Ceci ne constitue pas un problème tant que les clients lisent uniquement les données. Il est également relativement simple de permettre aux clients d'ajouter de nouvelles lignes à une base de données. Toutefois, si votre application nécessite que les clients puissent mettre à jour ou supprimer des données, vous devez attacher les entités à un nouveau contexte de données avant d'appeler <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType>. De plus, si vous utilisez un contrôle d'accès concurrentiel optimiste avec les valeurs d'origine, vous aurez également besoin de trouver une manière de fournir à la base de données à la fois l'entité d'origine et l'entité modifiée. Les méthodes `Attach` sont fournies pour vous permettre de placer des entités dans un nouveau contexte de données après qu'elles ont été détachées.  
   
  Même si vous sérialisez des objets proxy à la place de la [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] entités, vous devez quand même construire une entité sur la couche d’accès aux données (DAL) et l’attacher à un nouveau <xref:System.Data.Linq.DataContext?displayProperty=nameWithType>, afin de soumettre les données à la base de données.  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]est absolument pas comment sérialiser les entités. Pour plus d’informations sur l’utilisation de la [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] et outils de SQLMetal pour générer des classes pouvant être sérialisés à l’aide de Windows Communication Foundation (WCF), consultez [Comment : rendre les entités sérialisables](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md).  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] est absolument pas comment sérialiser les entités. Pour plus d’informations sur l’utilisation de la [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] et outils de SQLMetal pour générer des classes pouvant être sérialisés à l’aide de Windows Communication Foundation (WCF), consultez [Comment : rendre les entités sérialisables](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md).  
   
 > [!NOTE]
 >  Appelez uniquement les méthodes `Attach` sur des entités nouvelles ou désérialisées. La seule manière de détacher une entité de son contexte de données d'origine est de la sérialiser. Si vous tentez d'attacher une entité détachée à un nouveau contexte de données et que cette entité comporte encore des chargeurs différés provenant de son contexte de données précédent, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] lèvera une exception. Une entité comportant des chargeurs différés provenant de deux contextes de données différents peut produire des résultats non désirés lorsque vous exécutez des opérations d'insertion, de mise à jour et de suppression sur cette entité. Pour plus d’informations sur les chargeurs différés, consultez [différée / chargement immédiat](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md).  

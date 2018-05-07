@@ -1,23 +1,15 @@
 ---
-title: "Mise à l'échelle automatique dans les Windows Forms"
+title: Mise à l'échelle automatique dans les Windows Forms
 ms.date: 06/15/2017
-ms.prod: .net-framework
-ms.technology: dotnet-winforms
-ms.topic: article
 helpviewer_keywords:
 - scalability [Windows Forms], automatic in Windows Forms
 - Windows Forms, automatic scaling
 ms.assetid: 68fad25b-afbc-44bd-8e1b-966fc43507a4
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 519053576aac0f55dfbfa4c87dbed6096f45abca
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e27c56d9a6d745c7d1ff83986e7996aa1bebc879
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="automatic-scaling-in-windows-forms"></a>Automatique de mise à l’échelle dans les Windows Forms
 La mise à l’échelle automatique permet d’afficher correctement un formulaire et ses contrôles conçus sur un ordinateur avec une certaine police système et une certaine résolution d’affichage sur un autre ordinateur avec une police système ou une résolution d’affichage différente. Elle garantit que le formulaire et ses contrôles seront redimensionnés intelligemment et de manière cohérente avec les fenêtres natives et d'autres applications sur les ordinateurs des utilisateurs et d'autres développeurs. La prise en charge dans [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] de la mise à l'échelle automatique et des styles visuels permet aux applications [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] de conserver une apparence cohérente avec les applications Windows natives sur l'ordinateur de chaque utilisateur.

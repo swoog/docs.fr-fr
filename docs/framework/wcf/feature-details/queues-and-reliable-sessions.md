@@ -1,29 +1,15 @@
 ---
 title: Files d'attente et sessions fiables
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 7e794d03-141c-45ed-b6b1-6c0e104c1464
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: dbbaa432f7f1e137fc6cbd47ecd8e24d9eab97c3
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: a60f409a0f5c237c372fe3303d67ef979950eab4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="queues-and-reliable-sessions"></a>Files d'attente et sessions fiables
-Les files d'attente et les sessions fiables correspondent aux fonctionnalités [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] qui implémentent la messagerie fiable. Les rubriques contenues de cette section traitent des fonctionnalités de messagerie fiable de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+Les files d’attente et les sessions fiables sont les fonctionnalités de Windows Communication Foundation (WCF) qui implémentent la messagerie fiable. Les rubriques contenues dans cette section décrivent les fonctionnalités de messagerie fiables de WCF.  
   
  La messagerie fiable correspond à un dispositif selon lequel une source de messagerie fiable (appelée la source) transfère de manière fiable des messages vers une destination de messagerie fiable (appelée la destination).  
   
@@ -33,7 +19,7 @@ Les files d'attente et les sessions fiables correspondent aux fonctionnalités [
   
 -   Séparation entre source et destination, pour un échec et une récupération indépendantes de la source et de la destination et pour le transfert et la remise fiables des messages même si la source ou la destination n'est pas disponible.  
   
- La messagerie fiable présente l'inconvénient d'engendrer une latence élevée. La latence correspond au temps nécessaire au message pour parvenir à la destination depuis la source. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], par conséquent, propose les types suivants de messageries fiables :  
+ La messagerie fiable présente l'inconvénient d'engendrer une latence élevée. La latence correspond au temps nécessaire au message pour parvenir à la destination depuis la source. WCF, par conséquent, fournit les types suivants de messageries fiables :  
   
 -   [Les Sessions fiables](../../../../docs/framework/wcf/feature-details/reliable-sessions.md), qui offrent un transfert fiable sans le coût d’une latence élevée  
   
@@ -45,7 +31,7 @@ Les files d'attente et les sessions fiables correspondent aux fonctionnalités [
  Les sessions fiables assurent le transfert fiable à faible latence des messages. Elles accomplissent pour les messages SOAP sur tous proxys ou intermédiaires, ce que le service TCP accomplit pour les paquets sur les ponts IP. Pour plus d’informations sur les sessions fiables, consultez [des Sessions fiables](../../../../docs/framework/wcf/feature-details/reliable-sessions.md).  
   
 ### <a name="queues"></a>Files d'attente  
- Les files d'attente dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] permettent à la fois le transfert fiable des messages et la séparation entre source et destination mais à haute latence. Les communications [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] mises en file d'attente sont construites en haut de la couche Message Queuing (également appelée MSMQ).  
+ Files d’attente dans WCF fournissent à la fois le transfert fiable des messages et la séparation entre source et destination mais à haute latence. En file d’attente de WCF communication s’appuie sur Message Queuing (également appelé MSMQ).  
   
  MSMQ est incluse en tant qu'option dans Windows et s'exécute comme un service NT. Elle capture, au nom de la source, les messages à transmettre figurant dans la file d'attente de transmission, puis les remet à la file d'attente cible. La file d'attente cible accepte ces messages au nom de la destination pour les lui remettre ultérieurement dès qu'elle en fera la demande. Les Gestionnaires des files d'attente MSMQ implémentent un protocole de transfert de message fiable qui empêche la perte de messages au cours de la transmission. Il peut s'agir d'un protocole natif ou d'un protocole basé sur SOAP, comme le protocole SRMP (SOAP, Reliable Messaging Protocole).  
   

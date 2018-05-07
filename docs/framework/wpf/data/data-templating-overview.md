@@ -1,13 +1,6 @@
 ---
-title: "Vue d'ensemble des modèles de données"
-ms.custom: 
+title: Vue d'ensemble des modèles de données
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - templates [WPF], data
 - data templates [WPF]
 ms.assetid: 0f4d9f8c-0230-4013-bd7b-e8e7fed01b4a
-caps.latest.revision: "25"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b3f1efefa4d32e3512b0dda6eca237a5e4938bf7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: feed791ac876c13dbd637f0455d3cfdd83a86e05
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-templating-overview"></a>Vue d'ensemble des modèles de données
 Le modèle de création de modèles de données WPF offre une grande souplesse pour définir la présentation des données. Les contrôles WPF possèdent des fonctionnalités intégrées permettant de prendre en charge la personnalisation de la présentation des données. Cette rubrique montre d’abord comment définir un <xref:System.Windows.DataTemplate> et présente ensuite les autres fonctionnalités de création de modèles de données, telles que la sélection des modèles basés sur une logique personnalisée et la prise en charge pour l’affichage des données hiérarchiques.  
@@ -35,7 +23,7 @@ Le modèle de création de modèles de données WPF offre une grande souplesse p
 ## <a name="prerequisites"></a>Prérequis  
  Cette rubrique porte sur les fonctionnalités de création de modèles de données ; elle ne constitue pas une introduction aux concepts de liaison de données. Pour plus d’informations sur les concepts de base de la liaison de données, consultez la [Vue d’ensemble de la liaison de données](../../../../docs/framework/wpf/data/data-binding-overview.md).  
   
- <xref:System.Windows.DataTemplate>concerne la présentation des données et est une des nombreuses fonctionnalités fournies par le modèle de conception de styles et modèles WPF. Pour obtenir une introduction sur le modèle styles et modèles WPF, notamment comment utiliser un <xref:System.Windows.Style> pour définir des propriétés sur les contrôles, consultez la [styles et modèles](../../../../docs/framework/wpf/controls/styling-and-templating.md) rubrique.  
+ <xref:System.Windows.DataTemplate> concerne la présentation des données et est une des nombreuses fonctionnalités fournies par le modèle de conception de styles et modèles WPF. Pour obtenir une introduction sur le modèle styles et modèles WPF, notamment comment utiliser un <xref:System.Windows.Style> pour définir des propriétés sur les contrôles, consultez la [styles et modèles](../../../../docs/framework/wpf/controls/styling-and-templating.md) rubrique.  
   
  En outre, il est important de comprendre `Resources`, qui permettent essentiellement les objets tels que <xref:System.Windows.Style> et <xref:System.Windows.DataTemplate> pour être réutilisables. Pour plus d’informations sur les ressources, consultez la page [Ressources XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
   
@@ -144,7 +132,7 @@ Le modèle de création de modèles de données WPF offre une grande souplesse p
   
 <a name="what_belongs_in_datatemplate"></a>   
 ### <a name="what-belongs-in-a-datatemplate"></a>Que contient un DataTemplate ?  
- Dans l’exemple précédent, nous avons placé le déclencheur dans le <xref:System.Windows.DataTemplate> à l’aide de la <xref:System.Windows.DataTemplate>.<xref:System.Windows.DataTemplate.Triggers%2A> propriété. Le <xref:System.Windows.Setter> du déclencheur définit la valeur d’une propriété d’un élément (la <xref:System.Windows.Controls.Border> élément) qui se trouve dans le <xref:System.Windows.DataTemplate>. Toutefois, si les propriétés qui votre `Setters` concernent ne sont pas des propriétés d’éléments qui se trouvent dans le courant <xref:System.Windows.DataTemplate>, il peut être plus adapté définir les propriétés à l’aide un <xref:System.Windows.Style> qui concerne la <xref:System.Windows.Controls.ListBoxItem> classe (si le vous liez le contrôle est un <xref:System.Windows.Controls.ListBox>). Par exemple, si vous souhaitez que votre <xref:System.Windows.Trigger> pour animer la <xref:System.Windows.UIElement.Opacity%2A> valeur de l’élément lorsque la souris pointe sur un élément, vous définissez des déclencheurs dans un <xref:System.Windows.Controls.ListBoxItem> style. Vous trouverez un exemple sur la page [Présentation d’un exemple de création de style et de modèle](http://go.microsoft.com/fwlink/?LinkID=160010).  
+ Dans l’exemple précédent, nous avons placé le déclencheur dans le <xref:System.Windows.DataTemplate> à l’aide de la <xref:System.Windows.DataTemplate>.<xref:System.Windows.DataTemplate.Triggers%2A> . Le <xref:System.Windows.Setter> du déclencheur définit la valeur d’une propriété d’un élément (la <xref:System.Windows.Controls.Border> élément) qui se trouve dans le <xref:System.Windows.DataTemplate>. Toutefois, si les propriétés qui votre `Setters` concernent ne sont pas des propriétés d’éléments qui se trouvent dans le courant <xref:System.Windows.DataTemplate>, il peut être plus adapté définir les propriétés à l’aide un <xref:System.Windows.Style> qui concerne la <xref:System.Windows.Controls.ListBoxItem> classe (si le vous liez le contrôle est un <xref:System.Windows.Controls.ListBox>). Par exemple, si vous souhaitez que votre <xref:System.Windows.Trigger> pour animer la <xref:System.Windows.UIElement.Opacity%2A> valeur de l’élément lorsque la souris pointe sur un élément, vous définissez des déclencheurs dans un <xref:System.Windows.Controls.ListBoxItem> style. Vous trouverez un exemple sur la page [Présentation d’un exemple de création de style et de modèle](http://go.microsoft.com/fwlink/?LinkID=160010).  
   
  En règle générale, n’oubliez pas que le <xref:System.Windows.DataTemplate> est appliquée à chaque généré <xref:System.Windows.Controls.ListBoxItem> (pour plus d’informations sur comment et où elle est réellement appliquée, consultez le <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> page.). Votre <xref:System.Windows.DataTemplate> concerne uniquement la présentation et l’apparence des objets de données. Dans la plupart des cas, tous les autres aspects de présentation, telles que d’un élément ressemble à lorsqu’il est sélectionné ou comment le <xref:System.Windows.Controls.ListBox> disposition des éléments, n’appartiennent pas dans la définition d’un <xref:System.Windows.DataTemplate>. Vous trouverez un exemple dans la section [Création de styles et de modèles pour un ItemsControl](#DataTemplating_ItemsControl).  
   
@@ -156,7 +144,7 @@ Le modèle de création de modèles de données WPF offre une grande souplesse p
   
  [!code-xaml[DataTemplatingIntro_snip#ImportantTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#importanttemplate)]  
   
- Cet exemple utilise le <xref:System.Windows.DataTemplate>.<xref:System.Windows.FrameworkTemplate.Resources%2A> propriété. Ressources définies dans cette section sont partagées par les éléments dans le <xref:System.Windows.DataTemplate>.  
+ Cet exemple utilise le <xref:System.Windows.DataTemplate>.<xref:System.Windows.FrameworkTemplate.Resources%2A> . Ressources définies dans cette section sont partagées par les éléments dans le <xref:System.Windows.DataTemplate>.  
   
  Pour fournir une logique permettant de choisir le <xref:System.Windows.DataTemplate> à utiliser en fonction de la `Priority` valeur de l’objet de données, créez une sous-classe de <xref:System.Windows.Controls.DataTemplateSelector> et remplacez le <xref:System.Windows.Controls.DataTemplateSelector.SelectTemplate%2A> (méthode). Dans l’exemple suivant, la <xref:System.Windows.Controls.DataTemplateSelector.SelectTemplate%2A> méthode fournit la logique pour retourner le modèle approprié en fonction de la valeur de la `Priority` propriété. Le modèle à retourner est recherché dans les ressources de l’enveloppe <xref:System.Windows.Window> élément.  
   

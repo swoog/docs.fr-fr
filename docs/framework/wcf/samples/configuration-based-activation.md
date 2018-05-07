@@ -1,34 +1,22 @@
 ---
-title: "Activation basée sur la configuration"
-ms.custom: 
+title: Activation basée sur la configuration
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 21bb762e-c43e-4b0c-887b-5e434d665838
-caps.latest.revision: "26"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d520a46bc3380fc5dff76f5df866ae3411d5a6a7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 2829458d40e3efb180699122570b2775a90be9e6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuration-based-activation"></a>Activation basée sur la configuration
-Cet exemple montre comment activer des services [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] sans avoir à utiliser un fichier .svc.  
+Cet exemple montre comment activer les services Windows Communication Foundation (WCF) sans nécessiter un fichier .svc.  
   
 > [!IMPORTANT]
 >  Les exemples peuvent déjà être installés sur votre ordinateur. Recherchez le répertoire (par défaut) suivant avant de continuer.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à la page [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les exemples [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\ConfigBasedActivation`  
   
@@ -71,7 +59,7 @@ Cet exemple montre comment activer des services [!INCLUDE[indigo1](../../../../i
   
 7.  Appuyez sur CTRL+MAJ+A pour définir l'adresse du service.  
   
-8.  Définissez l'adresse http://localhost/ServiceModelSamples/Calculator.svc.  
+8.  Définissez l’adresse sur http://localhost/ServiceModelSamples/Calculator.svc.  
   
 9. Effectuez l'opération `Add`. Affectez au paramètre `n1` la valeur 10 et au paramètre `n2` la valeur 15.  
   

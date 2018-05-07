@@ -1,24 +1,12 @@
 ---
-title: "Mises à niveau de flux personnalisées"
-ms.custom: 
+title: Mises à niveau de flux personnalisées
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e3da85c8-57f3-4e32-a4cb-50123f30fea6
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 73359c293f7d29c16702e826ed6caa61149935bd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 4bcd59cb5e420c551c611c8e676289f20d4354d0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-stream-upgrades"></a>Mises à niveau de flux personnalisées
 Les transports orientés flux, tels que TCP et Canaux nommés, fonctionnent sur un flux continu d'octets entre le client et le serveur. Ce flux est réalisé par un objet <xref:System.IO.Stream>. Dans une mise à niveau de flux, le client souhaite ajouter une couche de protocole facultative à la pile de canaux et demande à l'autre extrémité du canal de communication de le faire. La mise à niveau de flux consiste à remplacer l'objet <xref:System.IO.Stream> d'origine par une version mise à niveau.  
@@ -41,7 +29,7 @@ Les transports orientés flux, tels que TCP et Canaux nommés, fonctionnent sur 
  Notez que dans le cas de plusieurs mises à niveau, l'initiateur et l'accepteur encapsulent des ordinateurs d'état pour appliquer les transitions de mise à niveau valides pour chaque initiation.  
   
 ## <a name="how-to-implement-a-stream-upgrade"></a>Comment implémenter une mise à niveau de flux  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] fournit quatre classes `abstract` que vous pouvez implémenter :  
+ Windows Communication Foundation (WCF) fournit quatre `abstract` classes que vous pouvez implémenter :  
   
 -   <xref:System.ServiceModel.Channels.StreamUpgradeInitiator?displayProperty=nameWithType>  
   

@@ -1,34 +1,20 @@
 ---
 title: Configuration des transactions ServiceModel
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - transactions [WCF], ServiceModel configuration
 ms.assetid: 5636067a-7fbd-4485-aaa2-8141c502acf3
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 96cf83be06949160cf3efa73344e4a7680d24e09
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 2c724e3f67bbf6554abffb44f101d2f28f748023
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="servicemodel-transaction-configuration"></a>Configuration des transactions ServiceModel
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] fournit trois attributs permettant de configurer des transactions pour un service : `transactionFlow`, `transactionProtocol` et `transactionTimeout`.  
+Windows Communication Foundation (WCF) fournit trois attributs pour configurer des transactions pour un service : `transactionFlow`, `transactionProtocol`, et `transactionTimeout`.  
   
 ## <a name="configuring-transactionflow"></a>Configuration de transactionFlow  
- La plupart des liaisons prédéfinies fournies par [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] contiennent les attributs `transactionFlow` et `transactionProtocol` afin de vous permettre de configurer la liaison pour qu'elle accepte des transactions entrantes pour un point de terminaison spécifique à l'aide d'un protocole de flux de transaction spécifique. Par ailleurs, l'élément `transactionFlow` et son attribut `transactionProtocol` vous permettent de générer votre propre liaison personnalisée. Pour plus d’informations sur les éléments de configuration, consultez [ \<liaison >](../../../../docs/framework/misc/binding.md) et [schéma de Configuration WCF](../../../../docs/framework/configure-apps/file-schema/wcf/index.md).  
+ La plupart des liaisons prédéfinies WCF fournit contiennent les `transactionFlow` et `transactionProtocol` des attributs, afin que vous puissiez configurer la liaison pour accepter les transactions entrantes pour un point de terminaison spécifique à l’aide d’un protocole de flux de transaction spécifique. Par ailleurs, l'élément `transactionFlow` et son attribut `transactionProtocol` vous permettent de générer votre propre liaison personnalisée. Pour plus d’informations sur les éléments de configuration, consultez [ \<liaison >](../../../../docs/framework/misc/binding.md) et [schéma de Configuration WCF](../../../../docs/framework/configure-apps/file-schema/wcf/index.md).  
   
  L'attribut `transactionFlow` spécifie si le flux de transaction est activé pour les points de terminaison de service qui utilisent la liaison.  
   
@@ -55,7 +41,7 @@ ms.lasthandoff: 04/30/2018
 ```  
   
 ## <a name="configuring-transactiontimeout"></a>Configuration de transactionTimeout  
- Vous pouvez configurer l'attribut `transactionTimeout` pour votre service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dans l'élément `behavior` du fichier de configuration. Le code suivant montre comment procéder.  
+ Vous pouvez configurer le `transactionTimeout` attribut pour votre service WCF dans le `behavior` élément du fichier de configuration. Le code suivant montre comment procéder.  
   
 ```xml  
 <configuration>  

@@ -1,31 +1,17 @@
 ---
 title: Équilibrage de charge
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - load balancing [WCF]
 ms.assetid: 148e0168-c08d-4886-8769-776d0953b80f
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fe13c4aee41cd7af188ccaea77b3c0af07603e2c
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 9ad9c9c569137534addfa3b91f412fb0c0a4b808
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="load-balancing"></a>Équilibrage de charge
-L'une des méthodes utilisées pour augmenter la capacité des applications [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] consiste à les monter en charge en les déployant dans une batterie de serveurs à charge équilibrée. Les applications [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] peuvent faire l'objet d'un équilibrage de charge à l'aide des techniques d'équilibrage de charge standard, dont notamment les programmes d'équilibrage de charge logicielle tels Windows Network Load Balancing ainsi que les appareils d'équilibrage de charge matérielle.  
+Un moyen d’augmenter la capacité des applications Windows Communication Foundation (WCF) est mise à l’échelle les en les déployant dans une batterie de serveurs à charge équilibrée. Les applications [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] peuvent faire l'objet d'un équilibrage de charge à l'aide des techniques d'équilibrage de charge standard, dont notamment les programmes d'équilibrage de charge logicielle tels Windows Network Load Balancing ainsi que les appareils d'équilibrage de charge matérielle.  
   
  Les sections suivantes traitent des considérations relatives à l'équilibrage de la charge des applications [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] construites à l'aide de diverses liaisons fournies par le système.  
   

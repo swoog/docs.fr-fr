@@ -1,28 +1,16 @@
 ---
-title: "Scénarios du contrôle DataGridView (Windows Forms)"
-ms.custom: 
+title: Scénarios du contrôle DataGridView (Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - data [Windows Forms], displaying in tabular format
 - data grids [Windows Forms], about data grids
 - DataGridView control [Windows Forms], scenarios
 ms.assetid: 09a5fd05-3447-47ec-a4ec-6082a2b7f0dd
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 38e5337f775d98f8729c62b3481c3e839bff2252
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a320b40664e4fe2254109183731db346a5d7d0b7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="datagridview-control-scenarios-windows-forms"></a>Scénarios du contrôle DataGridView (Windows Forms)
 Avec la <xref:System.Windows.Forms.DataGridView> (contrôle), vous pouvez afficher des données tabulaires provenant de diverses sources de données. Pour les utilisations simples, vous pouvez remplir manuellement un <xref:System.Windows.Forms.DataGridView> et manipuler les données directement via le contrôle. En général, toutefois, stockez vos données dans une source de données externe et la lier le contrôle à par le biais d’un <xref:System.Windows.Forms.BindingSource> composant.  
@@ -80,7 +68,7 @@ Avec la <xref:System.Windows.Forms.DataGridView> (contrôle), vous pouvez affich
   
 ### <a name="scenario-key-points"></a>Points clés du scénario  
   
--   <xref:System.Windows.Forms.DataGridViewCellStyle>objets vous permettent de fournir la couleur, la police, la mise en forme et des informations de positionnement à plusieurs niveaux et pour les éléments individuels du contrôle.  
+-   <xref:System.Windows.Forms.DataGridViewCellStyle> objets vous permettent de fournir la couleur, la police, la mise en forme et des informations de positionnement à plusieurs niveaux et pour les éléments individuels du contrôle.  
   
 -   Styles de cellules peuvent être en couches et partagés par plusieurs éléments, ce qui vous permet de réutiliser le code.  
   

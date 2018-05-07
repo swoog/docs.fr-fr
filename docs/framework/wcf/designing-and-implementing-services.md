@@ -1,33 +1,19 @@
 ---
 title: Conception et implémentation de services
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - defining service contracts [WCF]
 ms.assetid: 036fae20-7c55-4002-b71d-ac4466e167a3
-caps.latest.revision: 37
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9b954a8ac4f8507b095eb97d0724095cecc7b75b
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
-ms.translationtype: MT
+ms.openlocfilehash: 02117b95cbf5a2ee16267a7b991ea9f854b813c8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="designing-and-implementing-services"></a>Conception et implémentation de services
 Cette section vous montre comment définir et implémenter [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] contrats. Un contrat de service spécifie ce qu'un point de terminaison communique au monde extérieur. À un niveau plus concret, il s'agit d'une instruction à propos d'un ensemble de messages spécifiques organisé en modèles d'échange de messages de base, tels que les messages demande/réponse, unidirectionnels et duplex. Si un contrat de service est un ensemble d'échanges de messages liés de manière logique, une opération de service est un échange de messages unique. Par exemple, une opération `Hello` doit évidemment accepter un message (de sorte que l'appelant puisse annoncer la salutation) et peut ou non retourner un message (en fonction du niveau de courtoisie de l'opération).  
   
- Pour plus d’informations sur les contrats et d’autres principaux [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] les concepts, consultez [Concepts fondamentaux Windows Communication Foundation](../../../docs/framework/wcf/fundamental-concepts.md). Cette rubrique est consacrée au fonctionnement des contrats de service. Pour plus d’informations sur la génération de clients qui utilisent des contrats de service pour se connecter aux services, consultez [vue d’ensemble du Client WCF](../../../docs/framework/wcf/wcf-client-overview.md).  
+ Pour plus d’informations sur les contrats et d’autres concepts de Windows Communication Foundation (WCF), consultez [Concepts fondamentaux Windows Communication Foundation](../../../docs/framework/wcf/fundamental-concepts.md). Cette rubrique est consacrée au fonctionnement des contrats de service. Pour plus d’informations sur la génération de clients qui utilisent des contrats de service pour se connecter aux services, consultez [vue d’ensemble du Client WCF](../../../docs/framework/wcf/wcf-client-overview.md).  
   
 ## <a name="overview"></a>Vue d'ensemble  
  Cette rubrique contient une orientation conceptuelle de niveau supérieur permettant la conception et l'implémentation de services [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Les sous-rubriques contiennent des informations détaillées sur les particularités de ce type de conception et d'implémentation. Avant de concevoir et d'implémenter votre application [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], vous devez :  
@@ -75,9 +61,9 @@ Cette section vous montre comment définir et implémenter [!INCLUDE[indigo2](..
 ### <a name="understanding-the-hierarchy-of-requirements"></a>Présentation de la hiérarchie des exigences  
  Un contrat de service regroupe les opérations, spécifie le modèle d’échange de messages, les types de messages et les types de données transportés par ces messages et indique les catégories de comportements que l’implémentation doit pouvoir adopter en cours d’exécution pour assurer la prise en charge du contrat (il peut, par exemple, s’agir des comportements en matière de chiffrement et de signature des messages). Le contrat de service proprement dit ne spécifie pas précisément comment ces exigences sont satisfaites, mais uniquement qu’elles doivent l’être. Le type de chiffrement ou la manière dont un message doit être signé incombent à l'implémentation et à la configuration des services concernés.  
   
- Remarquez la façon dont le contrat requiert certaines choses de l'implémentation de contrat de service et de la configuration à l'exécution pour ajouter un comportement. L'ensemble de spécifications qui doivent être satisfaites pour exposer un service pour une utilisation repose sur l'ensemble de spécifications précédent. Si un contrat spécifie des exigences concernant l'implémentation, une implémentation peut requérir une plus grande partie de la configuration et des liaisons qui autorisent l'exécution du service. Pour finir, l'application hôte doit également prendre en charge les spécifications ajoutées par la configuration du service et les liaisons.  
+ Remarquez la façon dont le contrat requiert certaines choses de l'implémentation de contrat de service et de la configuration à l'exécution pour ajouter un comportement. L'ensemble de spécifications qui doivent être satisfaites pour exposer un service pour une utilisation repose sur l'ensemble de spécifications précédent. Si un contrat spécifie des exigences concernant l'implémentation, une implémentation peut requérir une plus grande partie de la configuration et des liaisons qui autorisent l'exécution du service. Pour finir, l’application hôte doit également prendre en charge les exigences ajoutées par la configuration du service et les liaisons.  
   
- N'oubliez pas ces spécifications supplémentaires lors de la conception, de l'implémentation, de la configuration et de l'hébergement d'une application de service [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. Par exemple, le contrat peut spécifier qu'il doit prendre en charge une session. Dans ce cas, vous devez configurer la liaison de façon à prendre en charge cette exigence contractuelle, sinon l’implémentation de service ne fonctionnera pas. Si votre service requiert l'authentification intégrée Windows (Windows Integrated Authentification, WIA) et qu'il est hébergé par les services IIS, l'option WIA de l'application Web dans laquelle se trouve le service doit être activée et l'option de prise en charge anonyme doit être désactivée. Pour plus d’informations sur les fonctionnalités et l’impact sur l’autre service hôte de types d’applications, consultez [Services d’hébergement](../../../docs/framework/wcf/hosting-services.md).  
+ Ce processus de spécification additif est important de garder à l’esprit lors de la conception, l’implémentation, configuration et hébergement d’une application de service Windows Communication Foundation (WCF). Par exemple, le contrat peut spécifier qu'il doit prendre en charge une session. Dans ce cas, vous devez configurer la liaison de façon à prendre en charge cette exigence contractuelle, sinon l’implémentation de service ne fonctionnera pas. Si votre service requiert l'authentification intégrée Windows (Windows Integrated Authentification, WIA) et qu'il est hébergé par les services IIS, l'option WIA de l'application Web dans laquelle se trouve le service doit être activée et l'option de prise en charge anonyme doit être désactivée. Pour plus d’informations sur les fonctionnalités et l’impact sur l’autre service hôte de types d’applications, consultez [Services d’hébergement](../../../docs/framework/wcf/hosting-services.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Conception de contrats de service](../../../docs/framework/wcf/designing-service-contracts.md)  

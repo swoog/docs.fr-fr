@@ -1,13 +1,6 @@
 ---
-title: "Gestion des revendications et autorisation avec le modèle d'identité"
-ms.custom: 
+title: Gestion des revendications et autorisation avec le modèle d'identité
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - authorization [WCF]
 - WCF security
@@ -15,19 +8,14 @@ helpviewer_keywords:
 - claims [WCF]
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: db0a304a908e906b635672eed1a84f0277284ad7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 84f4485a85f83e910cc75b04282e1ad04aee72c1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>Gestion des revendications et autorisation avec le modèle d'identité
-Une autorisation correspond au processus permettant d'identifier les entités autorisées à changer ou à consulter des ressources informatiques ou à y accéder d'une manière ou d'une autre. Par exemple, dans une entreprise, seuls les responsables peuvent avoir accès aux fichiers des employés. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] prend en charge deux mécanismes pour exécuter le traitement des autorisations. Le premier mécanisme vous permet de contrôler les processus d'autorisation à l'aide des constructions CLR (Common Language Runtime) existantes. Le deuxième est un modèle basé sur les revendications appelé le *modèle d’identité*. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilise le modèle d'identité pour créer des revendications à partir des messages entrants. Les classes de ce modèle peuvent être étendues pour assurer la prise en charge de nouveaux types de revendication lorsqu'un schéma d'autorisation personnalisé est utilisé. Cette rubrique présente les principaux concepts de programmation de la fonctionnalité modèle d’identité et répertorie les principales classes utilisées par cette fonctionnalité.  
+Une autorisation correspond au processus permettant d'identifier les entités autorisées à changer ou à consulter des ressources informatiques ou à y accéder d'une manière ou d'une autre. Par exemple, dans une entreprise, seuls les responsables peuvent avoir accès aux fichiers des employés. Windows Communication Foundation (WCF) prend en charge deux mécanismes pour effectuer le traitement des autorisations. Le premier mécanisme vous permet de contrôler les processus d'autorisation à l'aide des constructions CLR (Common Language Runtime) existantes. Le deuxième est un modèle basé sur les revendications appelé le *modèle d’identité*. WCF utilise le modèle d’identité pour créer des revendications à partir de messages entrants. Classes de modèle d’identité peuvent être étendus pour prendre en charge de nouveaux types de revendication pour les schémas d’autorisation personnalisée. Cette rubrique présente les principaux concepts de programmation de la fonctionnalité modèle d’identité et répertorie les principales classes utilisées par cette fonctionnalité.  
   
 ## <a name="identity-model-scenarios"></a>Scénarios d'utilisation du modèle d'identité  
  Les scénarios suivants présentent différents cas d'utilisation de la fonctionnalité Modèle d'identité.  
@@ -136,7 +124,7 @@ Une autorisation correspond au processus permettant d'identifier les entités au
  ![Gestion des revendications et autorisation](../../../../docs/framework/wcf/feature-details/media/xsi-recap.gif "xsi_recap")  
   
 ## <a name="wcf-and-identity-model"></a>WCF et modèle d'identité  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilise l'infrastructure du modèle d'identité pour effectuer les contrôles d'autorisation. Dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], le <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> classe vous permet de spécifier *autorisation* stratégies en tant que partie d’un service. Ces stratégies d’autorisation sont appelées *stratégies d’autorisation externes*, et ils peuvent effectuer le traitement des revendications basé sur la stratégie locale ou en interagissant avec un service distant. Le Gestionnaire d’autorisations, représenté par le <xref:System.ServiceModel.ServiceAuthorizationManager> classe évalue les stratégies d’autorisation externes ainsi que des stratégies d’autorisation reconnaissant divers types (jetons) des informations d’identification et remplit ce que l'on appelle un  *contexte d’autorisation* des revendications associées à un message entrant. Le contexte d'autorisation est représenté par la classe <xref:System.IdentityModel.Policy.AuthorizationContext>.  
+ WCF utilise l’infrastructure de modèle d’identité comme base pour l’autorisation. Dans WCF, le <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> classe vous permet de spécifier *autorisation* stratégies en tant que partie d’un service. Ces stratégies d’autorisation sont appelées *stratégies d’autorisation externes*, et ils peuvent effectuer le traitement des revendications basé sur la stratégie locale ou en interagissant avec un service distant. Le Gestionnaire d’autorisations, représenté par le <xref:System.ServiceModel.ServiceAuthorizationManager> classe évalue les stratégies d’autorisation externes ainsi que des stratégies d’autorisation reconnaissant divers types (jetons) des informations d’identification et remplit ce que l'on appelle un  *contexte d’autorisation* des revendications associées à un message entrant. Le contexte d'autorisation est représenté par la classe <xref:System.IdentityModel.Policy.AuthorizationContext>.  
   
 ## <a name="identity-model-programming"></a>Programmation du modèle d'identité  
  La table suivante décrit le modèle d’objet utilisé pour programmer les extensions du modèle d’identité. Toutes ces classes existent dans <xref:System.IdentityModel.Policy> ou dans les espaces de noms <xref:System.IdentityModel.Claims>.  

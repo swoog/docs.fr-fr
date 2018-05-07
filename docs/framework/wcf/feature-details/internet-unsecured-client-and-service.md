@@ -1,30 +1,20 @@
 ---
-title: "Service et client Internet non sécurisés"
-ms.custom: 
+title: Service et client Internet non sécurisés
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 97a10d79-3e7d-4bd1-9a99-fd9807fd70bc
-caps.latest.revision: "17"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: b202c4d67b48a9559afe035dc6b7bc95f6cc7779
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 93bf7a038a46ff6c03f89e576f3e4150cd069dba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="internet-unsecured-client-and-service"></a>Service et client Internet non sécurisés
-L'illustration ci-dessous montre un exemple d'un service et d'un client [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] publics non sécurisés.  
+L’illustration suivante montre un exemple de client de Windows Communication Foundation (WCF) publiques, non sécurisés et service.  
   
  ![Scénario non sécurisé de Internet non sécurisés et service](../../../../docs/framework/wcf/feature-details/media/publicunsecured.gif "publicUnsecured")  
   
@@ -32,7 +22,7 @@ L'illustration ci-dessous montre un exemple d'un service et d'un client [!INCLUD
 |--------------------|-----------------|  
 |Mode de sécurité|None|  
 |Transport|HTTP|  
-|Liaison|<xref:System.ServiceModel.BasicHttpBinding>dans le code, ou le [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) élément de configuration.|  
+|Liaison|<xref:System.ServiceModel.BasicHttpBinding> dans le code, ou le [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) élément de configuration.|  
 |Interopérabilité|Avec les clients de service Web et les services existants|  
 |Authentification|None|  
 |Intégrité|None|  
@@ -89,7 +79,7 @@ L'illustration ci-dessous montre un exemple d'un service et d'un client [!INCLUD
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
 ### <a name="code"></a>Code  
- Le code ci-dessous montre un client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] de base qui accède à un point de terminaison non sécurisé.  
+ Le code suivant montre un client WCF de base qui accède à un point de terminaison non sécurisé.  
   
  [!code-csharp[C_UnsecuredClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredclient/cs/source.cs#1)]
  [!code-vb[C_UnsecuredClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredclient/vb/source.vb#1)]  

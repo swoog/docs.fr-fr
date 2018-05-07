@@ -1,29 +1,15 @@
 ---
 title: UriTemplate et UriTemplateTable
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
-caps.latest.revision: 24
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b0fedb812cee5cfa1e4c2ff921a78beb2a6c1beb
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 09726af0a124723de025f29927954a2100aebcb4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate et UriTemplateTable
-Les développeurs de sites Web ont besoin de pouvoir décrire la forme et la disposition des URI auxquels leurs services répondent. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] a ajouté deux nouvelles classes pour permettre aux développeurs de mieux contrôler leurs URI. <xref:System.UriTemplate> et <xref:System.UriTemplateTable> forment la base du moteur de répartition reposant sur les URI dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Ces classes peuvent également être utilisées seules, ce qui permet aux développeurs de tirer parti des modèles et du mécanisme du mappage des URI sans avoir à implémenter un service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+Les développeurs de sites Web ont besoin de pouvoir décrire la forme et la disposition des URI auxquels leurs services répondent. Windows Communication Foundation (WCF) ajouté deux nouvelles classes pour permettre aux développeurs de contrôler leurs URI. <xref:System.UriTemplate> et <xref:System.UriTemplateTable> constituent la base du moteur de répartition reposant sur l’URI de WCF. Ces classes peuvent également être utilisées sur leur propres, ce qui permet aux développeurs de tirer parti de modèles et de l’URI de mécanisme de mappage sans avoir à implémenter un service WCF.  
   
 ## <a name="templates"></a>Modèles  
  Un modèle est un moyen de décrire un ensemble d'URI relatifs. L'ensemble de modèles URI présentés dans le tableau suivant montre comment peut être défini un système qui récupère différents types d'informations météorologiques.  
@@ -35,7 +21,7 @@ Les développeurs de sites Web ont besoin de pouvoir décrire la forme et la dis
 |Prévision par ville|météo/{état}/{ville}|  
 |Prévision par activité|météo/{état}/{ville}/{activité}|  
   
- Cette table décrit un ensemble d'URI structurellement semblables. Chaque entrée est un modèle URI. Les segments entre accolades décrivent des variables. Les segments hors accolades décrivent des chaînes littérales. Les classes de modèle [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] permettent à un développeur de prendre un URI entrant, par exemple "/météo/wa/seattle/vélo", et de le faire correspondre à un modèle qui le décrit, "/météo/{état}/{ville}/{activité}".  
+ Cette table décrit un ensemble d'URI structurellement semblables. Chaque entrée est un modèle URI. Les segments entre accolades décrivent des variables. Les segments hors accolades décrivent des chaînes littérales. Les classes de modèles WCF permettent au développeur de prendre un URI entrant, par exemple, « / météo/wa/seattle/vélo » et la faire correspondre à un modèle qui décrit, « /météo/ {état} / {ville} / {activité} ».  
   
 ## <a name="uritemplate"></a>UriTemplate  
  <xref:System.UriTemplate> est une classe qui encapsule un modèle URI. Le constructeur prend un paramètre de chaîne qui définit le modèle. Cette chaîne contient le modèle au format décrit dans la section suivante. La classe <xref:System.UriTemplate> fournit des méthodes qui vous permettent de faire correspondre un URI entrant à un modèle, de générer un URI a partir d'un modèle, de récupérer une collection de noms de variables utilisés dans le modèle, de déterminer si deux modèles sont équivalents et de retourner la chaîne du modèle.  

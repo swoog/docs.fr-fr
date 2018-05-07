@@ -1,24 +1,12 @@
 ---
 title: Custom Message Interceptor
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 73f20972-53f8-475a-8bfe-c133bfa225b0
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: acac4baa5be68d042dd1b0a11d7acfe609169e10
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 0ed34823251dcc010fc438bda1e746549b97f0f3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-message-interceptor"></a>Custom Message Interceptor
 Cet exemple montre l'utilisation du modèle d'extensibilité des canaux. Indique en particulier comment implémenter un élément de liaison personnalisé qui crée des fabrications de canaux et des écouteurs de canal pour intercepter tous les messages entrants et sortants à un point particulier dans la pile d’exécution. L'exemple inclut également un client et serveur qui montrent l'utilisation de ces fabrications personnalisées.  
@@ -33,11 +21,11 @@ Cet exemple montre l'utilisation du modèle d'extensibilité des canaux. Indique
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à la page [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les exemples [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\MessageInterceptor`  
   
- L'exemple décrit la procédure recommandée pour créer un canal superposé personnalisé dans [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], en utilisant l'infrastructure de canal et les meilleures pratiques [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] suivantes. Les étapes de la création d'un canal superposé personnalisé sont les suivantes :  
+ L’exemple décrit la procédure recommandée pour la création d’un canal superposé personnalisé dans Windows Communication Foundation (WCF), à l’aide de l’infrastructure de canal et suivant [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] meilleures pratiques. Les étapes de la création d'un canal superposé personnalisé sont les suivantes :  
   
 1.  Déterminez les formes de canal que votre fabrication et écouteur de canal prendra en charge.  
   
@@ -63,7 +51,7 @@ class InterceptingChannelListener<TChannel> : ListenerFactoryBase<TChannel>
 ```  
   
 ## <a name="adding-a-binding-element"></a>Ajout d’un élément de liaison  
- l'exemple définit un élément de liaison personnalisé : `InterceptingBindingElement`. `InterceptingBindingElement`prend un `ChannelMessageInterceptor` en tant qu’entrée et utilise ce `ChannelMessageInterceptor` pour manipuler les messages qui passent par son biais. C'est la seule classe qui doit être publique. La fabrication, l'écouteur et les canaux peuvent tous être des implémentations internes des interfaces d'exécution publiques.  
+ l'exemple définit un élément de liaison personnalisé : `InterceptingBindingElement`. `InterceptingBindingElement` prend un `ChannelMessageInterceptor` en tant qu’entrée et utilise ce `ChannelMessageInterceptor` pour manipuler les messages qui passent par son biais. C'est la seule classe qui doit être publique. La fabrication, l'écouteur et les canaux peuvent tous être des implémentations internes des interfaces d'exécution publiques.  
   
 ```  
 public class InterceptingBindingElement : BindingElement  

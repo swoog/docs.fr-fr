@@ -1,29 +1,17 @@
 ---
 title: "Comment : modifier le type d'une colonne DataGridView Windows Forms à l'aide du concepteur"
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms, columns
 - columns [Windows Forms], types
 - DataGridView control [Windows Forms], changing column type
 - data [Windows Forms], displaying
 ms.assetid: 7f994d45-600d-4190-a187-35803214b40c
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 020eca128300f964614423e3ce371c00cb437ffb
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: b5d395575ac486307625fbdf2f236b6a588cc3ed
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-change-the-type-of-a-windows-forms-datagridview-column-using-the-designer"></a>Comment : modifier le type d'une colonne DataGridView Windows Forms à l'aide du concepteur
 Parfois, vous souhaitez modifier le type d’une colonne qui a déjà été ajouté à un Windows Forms <xref:System.Windows.Forms.DataGridView> contrôle. Par exemple, vous souhaiterez modifier les types de quelques-unes des colonnes qui sont générés automatiquement lorsque vous liez le contrôle à une source de données. Cela est utile lorsque la table que vous affichez a des colonnes contenant des clés étrangères aux lignes dans une table associée. Dans ce cas, il pouvez que vous souhaitez remplacer les colonnes de zone de texte qui affichent ces clés étrangères avec des colonnes de zone de liste déroulante qui affichent des valeurs plus explicites à partir de la table associée.  

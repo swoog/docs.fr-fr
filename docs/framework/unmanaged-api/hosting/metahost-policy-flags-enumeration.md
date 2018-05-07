@@ -1,14 +1,6 @@
 ---
-title: "METAHOST_POLICY_FLAGS, énumération"
-ms.custom: 
+title: METAHOST_POLICY_FLAGS, énumération
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - METAHOST_POLICY_FLAGS
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 3bb4b526-0118-42e2-ba59-c95648528ce9
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 80abed08cc7659d4218dce445be81481bb5a665b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f980fb1336adaf43091e41b9e42ea008b00c033f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="metahostpolicyflags-enumeration"></a>METAHOST_POLICY_FLAGS, énumération
 Fournit des stratégies de liaison qui sont communes à la plupart des hôtes de runtime. Cette énumération est utilisée par le [ICLRMetaHostPolicy::GetRequestedRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) (méthode).  
@@ -60,21 +48,21 @@ typedef enum {
 |`METAHOST_POLICY_APPLY_UPGRADE_POLICY`|Applique la stratégie de mise à niveau pour le résultat de la liaison version lorsqu’une correspondance exacte est introuvable, en fonction du contenu de HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\. NETFramework\Policy\Upgrades. Cela a le même effet que [RUNTIME_INFO_UPGRADE_VERSION](../../../../docs/framework/unmanaged-api/hosting/runtime-info-flags-enumeration.md).|  
 |`METAHOST_POLICY_EMULATE_EXE_LAUNCH`|Liaison de résultats sont retournés comme si l’image fournie à l’appel a été lancée dans un nouveau processus. Actuellement, `GetRequestedRuntime` ignore le jeu de runtime chargeables et lie au jeu de runtime installés. Cet indicateur permet à un hôte déterminer à quelle exécution un EXE sera lié lorsqu’elle est lancée.|  
 |`METAHOST_POLICY_SHOW_ERROR_DIALOG`|Une boîte de dialogue d’erreur s’affiche si `GetRequestedRuntime` ne peut pas trouver un runtime qui est compatible avec les paramètres d’entrée. Compter les [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], cette boîte de dialogue d’erreur peut prendre la forme d’une boîte de dialogue fonctionnalités Windows qui vous demande si l’utilisateur souhaite activer la fonctionnalité appropriée.|  
-|`METAHOST_POLICY_USE_PROCESS_IMAGE_PATH`|`GetRequestedRuntime`utilise l’image de processus (et tout fichier de configuration correspondant) comme entrée supplémentaire au processus de liaison. Par défaut, `GetRequestedRuntime` ne tombe pas dans le chemin d’image de processus (en général, l’EXE qui a été utilisé pour lancer le processus) lors de la détermination du runtime à lier.|  
-|`METAHOST_POLICY_ENSURE_SKU_SUPPORTED`|`GetRequestedRuntime`doit vérifier si la référence appropriée est installée lorsque aucune information n’est disponible dans le fichier de configuration. Cela permet aux applications qui n’ont pas de fichiers de configuration d’échouer correctement sur des références plus petites que l’installation par défaut du .NET Framework. Par défaut, `GetRequestedRuntime` ne vérifie pas si la référence appropriée est installée, sauf si l’attribut de référence (SKU) est spécifié dans le fichier de configuration `<supportedRuntime />` élément.|  
-|`METAHOST_POLICY_ENSURE_SKU_SUPPORTED`|`GetRequestedRuntime`doit vérifier si la référence appropriée est installée lorsque aucune information n’est disponible dans le fichier de configuration. Cela permet aux applications qui n’ont pas de fichiers de configuration d’échouer correctement sur des références plus petites que l’installation par défaut du .NET Framework. Par défaut, `GetRequestedRuntime` ne vérifie pas si la référence appropriée est installée, sauf si l’attribut de référence (SKU) est spécifié dans le fichier de configuration `<supportedRuntime />` élément.|  
-|`METAHOST_POLICY_IGNORE_ERROR_MODE`|`GetRequestedRuntime`doit ignorer SEM_FAILCRITICALERRORS (qui est défini en appelant le [SetErrorMode](http://go.microsoft.com/fwlink/p/?LinkId=255242) fonction) et afficher la boîte de dialogue d’erreur. Par défaut, SEM_FAILCRITICALERRORS supprime la boîte de dialogue d’erreur. Il peut avoir hérité à partir d’un autre processus et l’erreur en mode silencieux est peut-être pas souhaitable dans votre scénario.|  
+|`METAHOST_POLICY_USE_PROCESS_IMAGE_PATH`|`GetRequestedRuntime` utilise l’image de processus (et tout fichier de configuration correspondant) comme entrée supplémentaire au processus de liaison. Par défaut, `GetRequestedRuntime` ne tombe pas dans le chemin d’image de processus (en général, l’EXE qui a été utilisé pour lancer le processus) lors de la détermination du runtime à lier.|  
+|`METAHOST_POLICY_ENSURE_SKU_SUPPORTED`|`GetRequestedRuntime` doit vérifier si la référence appropriée est installée lorsque aucune information n’est disponible dans le fichier de configuration. Cela permet aux applications qui n’ont pas de fichiers de configuration d’échouer correctement sur des références plus petites que l’installation par défaut du .NET Framework. Par défaut, `GetRequestedRuntime` ne vérifie pas si la référence appropriée est installée, sauf si l’attribut de référence (SKU) est spécifié dans le fichier de configuration `<supportedRuntime />` élément.|  
+|`METAHOST_POLICY_ENSURE_SKU_SUPPORTED`|`GetRequestedRuntime` doit vérifier si la référence appropriée est installée lorsque aucune information n’est disponible dans le fichier de configuration. Cela permet aux applications qui n’ont pas de fichiers de configuration d’échouer correctement sur des références plus petites que l’installation par défaut du .NET Framework. Par défaut, `GetRequestedRuntime` ne vérifie pas si la référence appropriée est installée, sauf si l’attribut de référence (SKU) est spécifié dans le fichier de configuration `<supportedRuntime />` élément.|  
+|`METAHOST_POLICY_IGNORE_ERROR_MODE`|`GetRequestedRuntime` doit ignorer SEM_FAILCRITICALERRORS (qui est défini en appelant le [SetErrorMode](http://go.microsoft.com/fwlink/p/?LinkId=255242) fonction) et afficher la boîte de dialogue d’erreur. Par défaut, SEM_FAILCRITICALERRORS supprime la boîte de dialogue d’erreur. Il peut avoir hérité à partir d’un autre processus et l’erreur en mode silencieux est peut-être pas souhaitable dans votre scénario.|  
   
 ## <a name="remarks"></a>Notes  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Metahost.h  
   
  **Bibliothèque :** inclus en tant que ressource dans MSCorEE.dll  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versions du .NET framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [Énumérations d’hébergement](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)  

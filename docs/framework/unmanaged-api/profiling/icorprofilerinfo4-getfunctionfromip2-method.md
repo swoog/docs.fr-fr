@@ -1,14 +1,6 @@
 ---
-title: "ICorProfilerInfo4::GetFunctionFromIP2, méthode"
-ms.custom: 
+title: ICorProfilerInfo4::GetFunctionFromIP2, méthode
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerInfo4.GetFunctionFromIP2
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 46ff70f4-13e9-40a0-802a-0a40abcfc6a0
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4f354bdc198a8060c7241a2b9bdb472bee5ed7b6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c4fe3eec4940b57001b7734c581076388f8ba0c6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilerinfo4getfunctionfromip2-method"></a>ICorProfilerInfo4::GetFunctionFromIP2, méthode
 Mappe un pointeur d’instruction de code managé vers la version recompilée juste-d’une fonction.  
@@ -58,19 +46,19 @@ HRESULT GetFunctionFromIP2(
  [out] L’identité de la version recompilée juste-de la fonction.  
   
 ## <a name="remarks"></a>Notes  
- `GetFunctionFromIP2`est semblable à `GetFunctionFromIP`, sauf qu’elle obtient l’ID recompilé juste-au lieu de l’ID de la fonction de la fonction qui contient l’adresse IP spécifiée.  
+ `GetFunctionFromIP2` est semblable à `GetFunctionFromIP`, sauf qu’elle obtient l’ID recompilé juste-au lieu de l’ID de la fonction de la fonction qui contient l’adresse IP spécifiée.  
   
 > [!NOTE]
->  `GetFunctionFromIP2`peut déclencher un garbage collection, tandis que `GetFunctionFromIP` ne seront pas.  Pour plus d’informations, consultez [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md).  
+>  `GetFunctionFromIP2` peut déclencher un garbage collection, tandis que `GetFunctionFromIP` ne seront pas.  Pour plus d’informations, consultez [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md).  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorProf.idl, CorProf.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versions du .NET framework :** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [ICorProfilerInfo, interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

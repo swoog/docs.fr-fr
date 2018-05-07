@@ -1,13 +1,6 @@
 ---
-title: "Assistant Débogage managé invalidCERCall"
-ms.custom: 
+title: Assistant Débogage managé invalidCERCall
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - invalid CER calls
 - InvalidCERCall MDA
@@ -16,16 +9,13 @@ helpviewer_keywords:
 - CER calls
 - managed debugging assistants (MDAs), CER calls
 ms.assetid: c4577410-602e-44e5-9dab-fea7c55bcdfe
-caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c77c49fef5657d5f69538285149e458209ee9b7c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 15f41ebd961f25979fe569fd89dd2135a0a6cd41
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="invalidcercall-mda"></a>Assistant Débogage managé invalidCERCall
 L’Assistant Débogage managé `invalidCERCall` est activé en cas d’appel, dans le graphique de la région d’exécution limitée, à une méthode qui ne possède aucun contrat de fiabilité ni contrat excessivement faible. Un contrat faible est un contrat qui déclare que la pire altération d’état envisageable dépasse la portée de l’instance passée à l’appel. En d’autres termes, l’<xref:System.AppDomain> ou l’état du processus peut être endommagé ou il ne sera pas toujours possible de calculer son résultat de façon déterministe lors de son appel dans une région d’exécution limitée.  

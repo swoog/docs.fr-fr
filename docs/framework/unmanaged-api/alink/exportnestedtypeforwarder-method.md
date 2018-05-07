@@ -1,14 +1,6 @@
 ---
-title: "ExportNestedTypeForwarder, méthode"
-ms.custom: 
+title: ExportNestedTypeForwarder, méthode
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IALink.ExportNestedTypeForwarder
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 886ea6c5-6b26-4b88-8bf6-448d6d191950
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: eee41e9f71d600a74cc9f74b538ad9e215f0d905
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4dfb31a2fad8a07b3821ac85bbb43b25693f11d8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exportnestedtypeforwarder-method"></a>ExportNestedTypeForwarder, méthode
 Ajoute un redirecteur de type pour un type imbriqué à la table de type de l’assembly donné.  
@@ -68,7 +56,7 @@ HRESULT ExportNestedTypeForwarder(
  Nom de type qualifié complet à exporter.  
   
  `dwFlags`  
- `ComType`indicateurs tels que `tdPublic` ou `tdNested`.  
+ `ComType` indicateurs tels que `tdPublic` ou `tdNested`.  
   
  `pType`  
  Reçoit le jeton de type d’exportation. Cela est nécessaire uniquement pour émettre des types imbriqués.  
@@ -76,7 +64,7 @@ HRESULT ExportNestedTypeForwarder(
 ## <a name="return-value"></a>Valeur de retour  
  Retourne S_OK si la méthode réussit.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  Requiert alink.h  
   
 ## <a name="see-also"></a>Voir aussi  

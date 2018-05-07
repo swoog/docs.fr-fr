@@ -1,24 +1,14 @@
 ---
-title: "Conception d'applications .NET Framework complexes et réactives"
-ms.custom: 
+title: Conception d'applications .NET Framework complexes et réactives
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
-caps.latest.revision: "25"
 author: BillWagner
 ms.author: wiwagn
-manager: wpickett
-ms.workload: wiwagn
-ms.openlocfilehash: a33e065d9daa886c27cde31c8f16f9b9eaa45938
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 51b4758690257b999cce51f3e80fd263a6d5e275
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Conception d'applications .NET Framework complexes et réactives
 Cet article fournit des conseils pour améliorer les performances d'applications .NET Framework volumineuses ou d'applications qui traitent de grandes quantités de données, telles que des fichiers ou des bases de données. Ces conseils proviennent de la réécriture des compilateurs C# et Visual Basic en code managé, et cet article inclut plusieurs exemples réels issus du compilateur C#.  
@@ -479,4 +469,4 @@ class Compilation { /*...*/
  [Rechercher des goulots d’étranglement de l’Application avec le profileur Visual Studio](http://msdn.microsoft.com/magazine/cc337887.aspx)  
  [Canal 9 didacticiels PerfView](http://channel9.msdn.com/Series/PerfView-Tutorial)  
  [Conseils de haut niveau de performances](http://curah.microsoft.com/4604/improving-your-net-apps-startup-performance)  
- [dotnet/roslyn repo on GitHub](https://github.com/dotnet/roslyn)
+ [référentiel dotnet/roslyn sur GitHub](https://github.com/dotnet/roslyn)

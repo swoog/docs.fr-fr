@@ -1,28 +1,16 @@
 ---
-title: "Comment : créer un contrôle dépendant et mettre en forme les données affichées"
-ms.custom: 
+title: 'Comment : créer un contrôle dépendant et mettre en forme les données affichées'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - data [Windows Forms], formatting
 - bound controls [Windows Forms], creating
 - bound controls [Windows Forms], formatting data
 ms.assetid: d5a56228-899d-41d9-8af8-87b3f4ec2f94
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6088048ed27b2021e297494275f4e80f7c0cb681
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 9055ec9c4b646e0c86819e4e72db8ce20086bace
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>Comment : créer un contrôle dépendant et mettre en forme les données affichées
 Liaison de données Windows Forms, vous pouvez mettre en forme les données affichées dans un contrôle lié aux données à l’aide de la **mise en forme et liaison avancée** boîte de dialogue.  
@@ -61,7 +49,7 @@ Liaison de données Windows Forms, vous pouvez mettre en forme les données affi
     |Devise|Spécifiez le nombre de décimales à l’aide de **décimales** contrôle up-down.|  
     |Date et heure|Sélectionnez comment la date et l’heure doivent être affichées en sélectionnant un des éléments dans le **Type** zone de sélection.|  
     |Scientifique|Spécifiez le nombre de décimales à l’aide de **décimales** contrôle up-down.|  
-    |Personnalisé|Spécifiez une chaîne de format personnalisée.<br /><br /> Pour plus d’informations, consultez [mise en forme des Types](../../../docs/standard/base-types/formatting-types.md). **Remarque :** chaînes de format personnalisé ne sont pas garanti que pour effectuer un aller-retour entre la source de données et le contrôle dépendant. Gérez plutôt l'événement <xref:System.Windows.Forms.Binding.Parse> ou <xref:System.Windows.Forms.Binding.Format> pour la liaison et appliquez la mise en forme personnalisée dans le code de gestion d'événements.|  
+    |Personnalisé|Spécifiez une chaîne de format personnalisée.<br /><br /> Pour plus d’informations, consultez [Mise en forme des types](../../../docs/standard/base-types/formatting-types.md). **Remarque :** chaînes de format personnalisé ne sont pas garanti que pour effectuer un aller-retour entre la source de données et le contrôle dépendant. Gérez plutôt l'événement <xref:System.Windows.Forms.Binding.Parse> ou <xref:System.Windows.Forms.Binding.Format> pour la liaison et appliquez la mise en forme personnalisée dans le code de gestion d'événements.|  
   
 8.  Cliquez sur **OK** pour fermer la **mise en forme et liaison avancée** boîte de dialogue et revenir à la fenêtre Propriétés.  
   

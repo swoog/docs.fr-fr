@@ -1,13 +1,6 @@
 ---
-title: "Hébergement du service de données (services de données WCF)"
-ms.custom: 
+title: Hébergement du service de données (services de données WCF)
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 - WCF Data Services, Windows Communication Foundation
 ms.assetid: b48f42ce-22ce-4f8d-8f0d-f7ddac9125ee
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e8819e8127d16b83d531dc6bdcd3af88245c695e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d3adf45e0876ae63b111a53461eee9aeee519b5b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hosting-the-data-service-wcf-data-services"></a>Hébergement du service de données (services de données WCF)
 À l’aide de [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], vous pouvez créer un service qui expose des données en tant qu’un [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] de flux. Ce service de données est défini comme une classe qui hérite de <xref:System.Data.Services.DataService%601>. Cette classe fournit la fonctionnalité requise pour traiter les messages de demande, effectuer des mises à jour par rapport à la source de données et générer des messages de réponses, comme requis par [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Toutefois, un service de données ne peut pas lier à et écouter sur un socket de réseau pour les requêtes HTTP entrantes. Pour ces fonctionnalités requises, le service de données s'appuie sur un composant d'hébergement.  

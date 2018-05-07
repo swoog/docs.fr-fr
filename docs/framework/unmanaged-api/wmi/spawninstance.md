@@ -1,11 +1,7 @@
 ---
-title: "SpawnInstance (fonction) (référence des API non managées)"
-description: "La fonction SpawnInstance crée une nouvelle instance d’une classe."
+title: SpawnInstance (fonction) (référence des API non managées)
+description: La fonction SpawnInstance crée une nouvelle instance d’une classe.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - SpawnInstance
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 68508f3000e7f4ac481f940ef4c715366c37125c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3f8189f0adb62aa32cd0b85ca5a653aa466c7032
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spawninstance-function"></a>SpawnInstance (fonction)
 Crée une nouvelle instance d’une classe.    
@@ -64,7 +57,7 @@ Les valeurs suivantes est retournées par cette fonction sont définies dans le 
 
 |Constante  |Value  |Description  |
 |---------|---------|---------|
-| `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | `ptr`n’est pas une définition de classe valide et ne peut pas générer de nouvelles instances. Il est incomplet ou qu’il n’a pas été inscrit avec la gestion de Windows en appelant [PutClassWmi](putclasswmi.md). |
+| `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | `ptr` n’est pas une définition de classe valide et ne peut pas générer de nouvelles instances. Il est incomplet ou qu’il n’a pas été inscrit avec la gestion de Windows en appelant [PutClassWmi](putclasswmi.md). |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Pas assez de mémoire est disponible pour terminer l’opération. |
 | `WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | `ppNewClass` a la valeur `null`. |
 | `WBEM_S_NO_ERROR` | 0 | L’appel de fonction a réussi.  |
@@ -73,19 +66,19 @@ Les valeurs suivantes est retournées par cette fonction sont définies dans le 
 
 Cette fonction encapsule un appel à la [IWbemClassObject::SpawnInstance](https://msdn.microsoft.com/library/aa391458(v=vs.85).aspx) (méthode).
 
-`ptr`doit être une définition de classe obtenue à partir de la gestion de Windows. (Notez que la génération automatique d’une instance d’une instance est prise en charge mais l’instance retournée est vide.) Vous utilisez ensuite cette définition de classe pour créer des instances. Un appel à la [PutInstanceWmi](putinstancewmi.md) fonction est obligatoire si vous envisagez d’écrire l’instance à la gestion de Windows.
+`ptr` doit être une définition de classe obtenue à partir de la gestion de Windows. (Notez que la génération automatique d’une instance d’une instance est prise en charge mais l’instance retournée est vide.) Vous utilisez ensuite cette définition de classe pour créer des instances. Un appel à la [PutInstanceWmi](putinstancewmi.md) fonction est obligatoire si vous envisagez d’écrire l’instance à la gestion de Windows.
 
 
 
 
 Le nouvel objet retourné dans `ppNewClass` devient automatiquement une sous-classe de l’objet actuel. Ce comportement ne peut pas être substitué. Il n’existe aucune autre méthode par laquelle les sous-classes (classes dérivées) peuvent être créés.
 
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** WMINet_Utils.idl  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versions du .NET framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
 [WMI et les compteurs de Performance (référence des API non managées)](index.md)

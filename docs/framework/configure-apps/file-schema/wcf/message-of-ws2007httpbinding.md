@@ -2,11 +2,11 @@
 title: '&lt;message&gt; de &lt;ws2007HttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9ffd8db6-84a8-4b38-a9fe-2cb1a87a1c97
-ms.openlocfilehash: d3449735222d02857ee11ef6d20914c1e9a018a7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 39d5ce66537fd6c94895205ccc855d7fb631284e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltmessagegt-of-ltws2007httpbindinggt"></a>&lt;message&gt; de &lt;ws2007HttpBinding&gt;
 Définit les paramètres de sécurité au niveau du message de la [ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md) élément.  
@@ -78,7 +78,7 @@ Définit les paramètres de sécurité au niveau du message de la [ \<ws2007Http
 |`None`|Permet au service d'interagir avec les clients anonymes. Au niveau du service, indique que ce dernier ne requiert pas d'informations d'identification du client. Au niveau du client, indique que ce dernier ne fournit pas d'informations d'identification du client.|  
 |`Certificate`|Autorise le service à exiger une authentification du client via un certificat. Si le mode de sécurité `message` est utilisé et si l'attribut `negotiateServiceCredential` a la valeur `false`, le client doit disposer du certificat de service.|  
 |`IssuedToken`|Spécifie un jeton personnalisé, généralement émis par un service de jeton de sécurité (STS).|  
-|`UserName`|Autorise le service à exiger une authentification du client via un certificat `UserName`. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] ne prend pas en charge l'envoi d'un mot de passe Digest ou la dérivation de clés à l'aide du mot de passe et l'utilisation de telles clés pour la sécurité de message. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] assure ainsi la sécurité du transport lors de l'utilisation d'informations d'identification `UserName`. Ce mode d'informations d'identification a pour résultat soit un échange interopérable, soit une négociation non interopérable basée sur l'attribut `negotiateServiceCredential`.|  
+|`UserName`|Autorise le service à exiger une authentification du client via un certificat `UserName`. WCF ne prend pas en charge l’envoi d’un condensat de mot de passe ou la dérivation de clés à l’aide du mot de passe et de l’utilisation de telles clés pour la sécurité de message. Par conséquent, WCF impose que le transport est sécurisé lors de l’utilisation `UserName` informations d’identification. Ce mode d'informations d'identification a pour résultat soit un échange interopérable, soit une négociation non interopérable basée sur l'attribut `negotiateServiceCredential`.|  
 |`Windows`|Permet aux échanges SOAP d'être placés dans le contexte authentifié d'informations d'identification `Windows`. Si l'attribut `negotiateServiceCredential` a la valeur `true`, une négociation SSPI ou Kerberos (norme interopérable) est exécutée.|  
   
 ### <a name="child-elements"></a>Éléments enfants  

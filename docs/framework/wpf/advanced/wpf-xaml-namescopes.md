@@ -1,13 +1,6 @@
 ---
-title: "Portées de nom XAML WPF"
-ms.custom: 
+title: Portées de nom XAML WPF
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - namescopes [WPF]
 - styles [WPF], namescopes in
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - XAML [WPF], namescopes
 - classes [WPF], FrameworkContentElement
 ms.assetid: 52bbf4f2-15fc-40d4-837b-bb4c21ead7d4
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c4caaa9453cb3cec76a8606afb5601919eba607a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c13dba48d21235c57be64d90b6547902e0428a6e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wpf-xaml-namescopes"></a>Portées de nom XAML WPF
 Les portées de nom XAML correspondent à un concept qui identifie des objets définis en XAML. Les noms dans une portée de nom XAML peuvent être utilisés pour établir des relations entre les noms définis en XAML des objets et leurs instances équivalentes dans une arborescence d’objets. En règle générale, les portées de nom XAML dans du code managé [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sont créées lors du chargement des racines d’une page XAML spécifique pour une application XAML. Portées de nom XAML en tant qu’objet de programmation sont définies par le <xref:System.Windows.Markup.INameScope> de l’interface et sont également implémentées par la classe pratique <xref:System.Windows.NameScope>.  
@@ -47,7 +35,7 @@ Les portées de nom XAML correspondent à un concept qui identifie des objets d�
 ### <a name="adding-objects-to-runtime-object-trees"></a>Ajout d’objets à des arborescences d’objets d’exécution  
  Le moment où le XAML est analysé correspond au moment une portée de nom XAML WPF est créée et définie. Si vous ajoutez un objet à une arborescence d’objets après l’analyse du code XAML ayant généré cette arborescence, une valeur `Name` ou `x:Name` sur le nouvel objet ne met pas automatiquement à jour les informations contenues dans une portée de nom XAML. Pour ajouter un nom d’un objet dans une portée de nom XAML WPF après le chargement de XAML, vous devez appeler l’implémentation appropriée de <xref:System.Windows.Markup.INameScope.RegisterName%2A> sur l’objet qui définit la portée de nom XAML, qui est généralement la racine de la page XAML. Si le nom n’est pas enregistré, l’objet ajouté ne peut pas être référencée par nom via des méthodes telles que <xref:System.Windows.FrameworkElement.FindName%2A>, et vous ne pouvez pas utiliser ce nom pour le ciblage d’animation.  
   
- Le scénario le plus courant pour les développeurs d’applications est que vous allez utiliser <xref:System.Windows.FrameworkElement.RegisterName%2A> pour enregistrer les noms dans la portée de nom XAML sur la racine actuelle de la page. <xref:System.Windows.FrameworkElement.RegisterName%2A>fait partie d’un scénario important pour les animations qui ciblent des objets pour les animations. Pour plus d’informations, consultez [Vue d’ensemble des plans conceptuels](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md).  
+ Le scénario le plus courant pour les développeurs d’applications est que vous allez utiliser <xref:System.Windows.FrameworkElement.RegisterName%2A> pour enregistrer les noms dans la portée de nom XAML sur la racine actuelle de la page. <xref:System.Windows.FrameworkElement.RegisterName%2A> fait partie d’un scénario important pour les animations qui ciblent des objets pour les animations. Pour plus d’informations, consultez [Vue d’ensemble des plans conceptuels](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md).  
   
  Si vous appelez <xref:System.Windows.FrameworkElement.RegisterName%2A> sur un objet autre que l’objet qui définit la portée de nom XAML, le nom est encore inscrite à la portée de nom XAML que l’objet appelant est conservé, comme si vous aviez appelé <xref:System.Windows.FrameworkElement.RegisterName%2A> sur la portée de nom XAML définissant l’objet.  
   
@@ -82,9 +70,9 @@ Les portées de nom XAML correspondent à un concept qui identifie des objets d�
   
 <a name="Namescopes_and_Name_related_APIs"></a>   
 ## <a name="xaml-namescopes-and-name-related-apis"></a>Portées de nom XAML et API relatives aux noms  
- <xref:System.Windows.FrameworkElement>a <xref:System.Windows.FrameworkElement.FindName%2A>, <xref:System.Windows.FrameworkElement.RegisterName%2A> et <xref:System.Windows.FrameworkElement.UnregisterName%2A> méthodes. Si l’objet sur lequel vous appelez ces méthodes a une portée de nom XAML, les méthodes font les appels au sein des méthodes de la portée de nom XAML appropriée. Sinon, l’élément parent est vérifié pour voir s’il détient une portée de nom XAML, et ce processus continue de manière récursive jusqu’à ce qu’une portée de nom XAML soit trouvée (en raison du comportement du processeur XAML, la présence d’une portée de nom XAML à la racine est garantie). <xref:System.Windows.FrameworkContentElement>a des comportements analogues, à l’exception qui aucun <xref:System.Windows.FrameworkContentElement> possédera jamais une portée de nom XAML. Les méthodes existent sur <xref:System.Windows.FrameworkContentElement> afin que les appels peuvent être transférés par la suite à un <xref:System.Windows.FrameworkElement> élément parent.  
+ <xref:System.Windows.FrameworkElement> a <xref:System.Windows.FrameworkElement.FindName%2A>, <xref:System.Windows.FrameworkElement.RegisterName%2A> et <xref:System.Windows.FrameworkElement.UnregisterName%2A> méthodes. Si l’objet sur lequel vous appelez ces méthodes a une portée de nom XAML, les méthodes font les appels au sein des méthodes de la portée de nom XAML appropriée. Sinon, l’élément parent est vérifié pour voir s’il détient une portée de nom XAML, et ce processus continue de manière récursive jusqu’à ce qu’une portée de nom XAML soit trouvée (en raison du comportement du processeur XAML, la présence d’une portée de nom XAML à la racine est garantie). <xref:System.Windows.FrameworkContentElement> a des comportements analogues, à l’exception qui aucun <xref:System.Windows.FrameworkContentElement> possédera jamais une portée de nom XAML. Les méthodes existent sur <xref:System.Windows.FrameworkContentElement> afin que les appels peuvent être transférés par la suite à un <xref:System.Windows.FrameworkElement> élément parent.  
   
- <xref:System.Windows.NameScope.SetNameScope%2A>est utilisé pour mapper une nouvelle portée de nom XAML à un objet existant. Vous pouvez appeler <xref:System.Windows.NameScope.SetNameScope%2A> plusieurs fois pour réinitialiser ou effacer le code XAML portée de nom, mais qui n’est pas une utilisation commune. En outre, <xref:System.Windows.NameScope.GetNameScope%2A> n’est pas généralement utilisé à partir du code.  
+ <xref:System.Windows.NameScope.SetNameScope%2A> est utilisé pour mapper une nouvelle portée de nom XAML à un objet existant. Vous pouvez appeler <xref:System.Windows.NameScope.SetNameScope%2A> plusieurs fois pour réinitialiser ou effacer le code XAML portée de nom, mais qui n’est pas une utilisation commune. En outre, <xref:System.Windows.NameScope.GetNameScope%2A> n’est pas généralement utilisé à partir du code.  
   
 ### <a name="xaml-namescope-implementations"></a>Implémentations de portée de nom XAML  
  Les classes suivantes implémentent <xref:System.Windows.Markup.INameScope> directement :  
@@ -97,9 +85,9 @@ Les portées de nom XAML correspondent à un concept qui identifie des objets d�
   
 -   <xref:System.Windows.FrameworkTemplate>  
   
- <xref:System.Windows.ResourceDictionary>n’utilise pas de noms XAML ou les portées de nom ; Il utilise des clés à la place, car il s’agit d’une implémentation de dictionnaire. La seule raison pour laquelle <xref:System.Windows.ResourceDictionary> implémente <xref:System.Windows.Markup.INameScope> est afin qu’il peut lever des exceptions au code utilisateur qui aident à clarifier la distinction entre une portée de nom XAML true et la manière dont un <xref:System.Windows.ResourceDictionary> gère les clés et également pour vous assurer que les portées de nom XAML ne sont pas appliquées à un <xref:System.Windows.ResourceDictionary> par des éléments parents.  
+ <xref:System.Windows.ResourceDictionary> n’utilise pas de noms XAML ou les portées de nom ; Il utilise des clés à la place, car il s’agit d’une implémentation de dictionnaire. La seule raison pour laquelle <xref:System.Windows.ResourceDictionary> implémente <xref:System.Windows.Markup.INameScope> est afin qu’il peut lever des exceptions au code utilisateur qui aident à clarifier la distinction entre une portée de nom XAML true et la manière dont un <xref:System.Windows.ResourceDictionary> gère les clés et également pour vous assurer que les portées de nom XAML ne sont pas appliquées à un <xref:System.Windows.ResourceDictionary> par des éléments parents.  
   
- <xref:System.Windows.FrameworkTemplate>et <xref:System.Windows.Style> implémenter <xref:System.Windows.Markup.INameScope> via des définitions d’interface explicite. Les implémentations explicites permettent à ces portées de nom XAML se comportent de façon conventionnelle lorsqu’ils sont accessibles via la <xref:System.Windows.Markup.INameScope> interface, qui est la manière dont les portées de nom XAML sont communiquées par [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] processus internes. Mais les définitions d’interface explicite ne font pas partie de la surface API classique de <xref:System.Windows.FrameworkTemplate> et <xref:System.Windows.Style>, car vous devrez rarement appeler le <xref:System.Windows.Markup.INameScope> méthodes sur <xref:System.Windows.FrameworkTemplate> et <xref:System.Windows.Style> directement et à la place utiliser une autre API comme <xref:System.Windows.FrameworkElement.GetTemplateChild%2A>.  
+ <xref:System.Windows.FrameworkTemplate> et <xref:System.Windows.Style> implémenter <xref:System.Windows.Markup.INameScope> via des définitions d’interface explicite. Les implémentations explicites permettent à ces portées de nom XAML se comportent de façon conventionnelle lorsqu’ils sont accessibles via la <xref:System.Windows.Markup.INameScope> interface, qui est la manière dont les portées de nom XAML sont communiquées par [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] processus internes. Mais les définitions d’interface explicite ne font pas partie de la surface API classique de <xref:System.Windows.FrameworkTemplate> et <xref:System.Windows.Style>, car vous devrez rarement appeler le <xref:System.Windows.Markup.INameScope> méthodes sur <xref:System.Windows.FrameworkTemplate> et <xref:System.Windows.Style> directement et à la place utiliser une autre API comme <xref:System.Windows.FrameworkElement.GetTemplateChild%2A>.  
   
  Les classes suivantes définissent leur propre portée de nom XAML, à l’aide de la <xref:System.Windows.NameScope?displayProperty=nameWithType> classe d’assistance et en vous connectant à son implémentation de la portée de nom XAML via la <xref:System.Windows.NameScope.NameScope%2A?displayProperty=nameWithType> propriété attachée :  
   

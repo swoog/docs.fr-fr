@@ -1,30 +1,18 @@
 ---
-title: "Comment : créer une revendication personnalisée"
-ms.custom: 
+title: 'Comment : créer une revendication personnalisée'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d619976b-eda3-475e-ac23-c7988a2dceb0
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 92420b993a1959b03090181944a34a32ab500733
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: c1e8886ab3d9d90b217ce79078633433458bbe4b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-claim"></a>Comment : créer une revendication personnalisée
-L'infrastructure de modèle d'identité dans [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] fournit un ensemble de types et droits de revendication intégrés avec des fonctions d'assistance pour créer des instances <xref:System.IdentityModel.Claims.Claim> avec ces types et droits. Ces revendications intégrées sont conçues pour modeler données trouvées dans les types d'informations d'identification du client que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] prend en charge par défaut. Dans la plupart des cas, les revendications intégrées sont suffisantes ; toutefois, certaines applications peuvent requérir des revendications personnalisées. Une revendication comporte trois volets : le type de revendication, la ressource à laquelle la revendication s'applique et le droit revendiqué sur cette ressource. Cette rubrique décrit comment créer une revendication personnalisée.  
+L’infrastructure de modèle d’identité dans Windows Communication Foundation (WCF) fournit un ensemble de types de revendication intégrés et des droits avec les fonctions d’assistance pour la création de <xref:System.IdentityModel.Claims.Claim> instances avec ces types et droits. Ces revendications intégrées sont conçues pour modeler données trouvées dans les types d'informations d'identification du client que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] prend en charge par défaut. Dans la plupart des cas, les revendications intégrées sont suffisantes ; toutefois, certaines applications peuvent requérir des revendications personnalisées. Une revendication comporte trois volets : le type de revendication, la ressource à laquelle la revendication s'applique et le droit revendiqué sur cette ressource. Cette rubrique décrit comment créer une revendication personnalisée.  
   
 ### <a name="to-create-a-custom-claim-that-is-based-on-a-primitive-data-type"></a>Pour créer une revendication personnalisée basée sur un type de données primitif  
   

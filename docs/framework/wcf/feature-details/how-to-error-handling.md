@@ -1,24 +1,12 @@
 ---
-title: "Procédure : gestion des erreurs"
-ms.custom: 
+title: 'Procédure : gestion des erreurs'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: de566e39-9358-44ff-8244-780f6b799966
-caps.latest.revision: "5"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a5b0fe57bb6a4604c86e63a154e3af5542672912
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7b173997eb53f8cf156ccb14083885a199dc8921
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-error-handling"></a>Procédure : gestion des erreurs
 Cette rubrique décrit les étapes de base requises pour créer une configuration de routage utilisant la gestion des erreurs. Dans cet exemple, les messages sont routés vers un point de terminaison de destination. Si un message ne peut pas être remis en raison d'une panne réseau ou d'une défaillance liée aux communications (<xref:System.ServiceModel.CommunicationException>), le message est renvoyé à un autre point de terminaison.  

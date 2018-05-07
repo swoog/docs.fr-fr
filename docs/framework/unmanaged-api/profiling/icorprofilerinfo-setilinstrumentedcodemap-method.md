@@ -1,14 +1,6 @@
 ---
-title: "ICorProfilerInfo::SetILInstrumentedCodeMap, méthode"
-ms.custom: 
+title: ICorProfilerInfo::SetILInstrumentedCodeMap, méthode
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerInfo.SetILInstrumentedCodeMap
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: bce1dcf8-b4ec-4e73-a917-f2df1ad49c8a
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 127f6d76e85ed30f1407d16f8d81c93dd2941960
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8ecb80de1ae46b072df4bab8357e78e7a22ae298
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilerinfosetilinstrumentedcodemap-method"></a>ICorProfilerInfo::SetILInstrumentedCodeMap, méthode
 Définit une carte de code pour la fonction spécifiée à l’aide des entrées de mappage Microsoft intermediate language (MSIL) spécifiées.  
@@ -65,7 +53,7 @@ HRESULT SetILInstrumentedCodeMap(
  [in] Tableau de structures COR_IL_MAP, dont chacun spécifie un offset MSIL.  
   
 ## <a name="remarks"></a>Notes  
- Un profileur insère souvent des instructions dans le code source d’une méthode pour instrumenter cette méthode (par exemple, pour avertir lorsqu’une ligne source donnée est atteinte). `SetILInstrumentedCodeMap`permet à un profileur de mapper les instructions MSIL d’origine vers leurs nouveaux emplacements. Un profileur peut utiliser le [ICorProfilerInfo::GetILToNativeMapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) méthode pour obtenir l’offset MSIL d’origine pour un offset natif donné.  
+ Un profileur insère souvent des instructions dans le code source d’une méthode pour instrumenter cette méthode (par exemple, pour avertir lorsqu’une ligne source donnée est atteinte). `SetILInstrumentedCodeMap` permet à un profileur de mapper les instructions MSIL d’origine vers leurs nouveaux emplacements. Un profileur peut utiliser le [ICorProfilerInfo::GetILToNativeMapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) méthode pour obtenir l’offset MSIL d’origine pour un offset natif donné.  
   
  Le débogueur suppose que chaque ancien offset fait référence à un offset MSIL dans le code MSIL non modifié d’origine, et que chaque nouvel offset fait référence à l’offset MSIL dans le nouveau code instrumenté. Le mappage doit être trié par ordre croissant. Pour exécuter pas à pas pour fonctionner correctement, suivez ces instructions :  
   
@@ -93,14 +81,14 @@ HRESULT SetILInstrumentedCodeMap(
   
     -   Un nouvel offset de 20 ou supérieur sera mappé à l’ancien offset 9.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorProf.idl, CorProf.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **Versions du .NET framework :** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [ICorProfilerInfo, interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

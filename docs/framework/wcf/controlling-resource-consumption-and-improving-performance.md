@@ -1,32 +1,18 @@
 ---
 title: Contrôle de la consommation des ressources et amélioration des performances
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 9a829669-5f76-4c88-80ec-92d0c62c0660
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6e864e0a90dbb46f440e2eba2b676413c72e0da9
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 031261f50a0615efa7227d3655c90c3423e77796
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="controlling-resource-consumption-and-improving-performance"></a>Contrôle de la consommation des ressources et amélioration des performances
-Cette rubrique décrit différentes propriétés dans différentes zones de l'architecture [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] qui fonctionnent pour contrôler la consommation des ressources et affecter les mesures de performances.  
+Cette rubrique décrit les différentes propriétés dans différents domaines de l’architecture de Windows Communication Foundation (WCF) qui contrôle la consommation des ressources de travail et qui affectent les métriques de performances.  
   
 ## <a name="properties-that-constrain-resource-consumption-in-wcf"></a>Propriétés qui contraignent la consommation des ressources dans WCF  
- [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] applique des contraintes sur certains types de processus pour des raisons de sécurité ou de performances. Ces contraintes se présentent sous deux formes principales, les quotas et les accélérateurs. *Quotas* représentent des limites lorsque atteint ou dépassé déclenchent une exception immédiate à un moment donné dans le système. *Limite* sont des limites qui ne provoquent pas immédiatement la levée d’une exception. Au lieu de cela, lorsqu'une limite d'accélérateur est atteinte, le traitement continue mais dans les limites définies par la valeur de l'accélérateur. Ce traitement limité peut déclencher une exception ailleurs, mais cela dépend de l'application.  
+ Windows Communication Foundation (WCF) applique des contraintes sur certains types de processus pour des raisons de sécurité ou de performances. Ces contraintes se présentent sous deux formes principales, les quotas et les accélérateurs. *Quotas* représentent des limites lorsque atteint ou dépassé déclenchent une exception immédiate à un moment donné dans le système. *Limite* sont des limites qui ne provoquent pas immédiatement la levée d’une exception. Au lieu de cela, lorsqu'une limite d'accélérateur est atteinte, le traitement continue mais dans les limites définies par la valeur de l'accélérateur. Ce traitement limité peut déclencher une exception ailleurs, mais cela dépend de l'application.  
   
  Outre la distinction entre les quotas et les accélérateurs, certaines propriétés contraignantes se trouvent au niveau de la sérialisation, d'autres au niveau du transport et d'autres encore au niveau de l'application. Par exemple, le quota <xref:System.ServiceModel.Channels.TransportBindingElement.MaxReceivedMessageSize%2A?displayProperty=nameWithType>, qui est implémenté par tous les éléments de liaison de transport fournis par le système a la valeur 65 536 octets par défaut afin d'empêcher des clients malveillants de prendre part à des attaques par déni de service contre un service en provoquant une consommation de mémoire excessive. (En général, vous pouvez augmenter les performances en diminuant cette valeur.)  
   

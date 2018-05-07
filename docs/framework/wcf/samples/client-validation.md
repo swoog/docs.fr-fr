@@ -1,31 +1,19 @@
 ---
 title: Client Validation
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f0c1f805-1a81-4d0d-a112-bf5e2e87a631
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bd9c698962bbca04ac05473265d95fc00517b039
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: a5c1c5f907a797bff3dff490cbc953879ab69718
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="client-validation"></a>Client Validation
 Les services publient fréquemment des métadonnées pour activer la génération et la configuration automatiques de types de proxy clients. Lorsque le service n'est pas approuvé, les applications clientes doivent valider que les métadonnées se conforment à la stratégie de l'application cliente en ce qui concerne la sécurité, les transactions, le type de contrat de service, etc. L'exemple suivant montre comment écrire un comportement de point de terminaison client qui valide le point de terminaison de service pour garantir que ce dernier est fiable.  
   
  Le service expose quatre points de terminaison de service. Le premier point de terminaison utilise WSDualHttpBinding, le deuxième utilise l'authentification NTLM, le troisième active le flux de transaction et le quatrième utilise l'authentification basée sur les certificats.  
   
- Le client utilise la classe <xref:System.ServiceModel.Description.MetadataResolver> pour récupérer les métadonnées pour le service. Le client met en vigueur une stratégie d'interdiction des liaisons duplex, d'authentification NTLM et de flux de transaction à l'aide d'un comportement de validation. Pour chaque instance <xref:System.ServiceModel.Description.ServiceEndpoint> importée à partir des métadonnées du service, l'application cliente ajoute une instance du comportement de point de terminaison `InternetClientValidatorBehavior` au <xref:System.ServiceModel.Description.ServiceEndpoint> avant d'essayer d'utiliser un client [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] pour se connecter au point de terminaison. La méthode `Validate` du comportement s'exécute avant qu'une opération sur le service soit appelée et met en vigueur la stratégie du client en levant `InvalidOperationExceptions`.  
+ Le client utilise la classe <xref:System.ServiceModel.Description.MetadataResolver> pour récupérer les métadonnées pour le service. Le client met en vigueur une stratégie d’interdiction des liaisons duplex, d’authentification NTLM et de flux de transaction à l’aide d’un comportement de validation. Pour chaque <xref:System.ServiceModel.Description.ServiceEndpoint> instance importé à partir des métadonnées du service, l’application cliente ajoute une instance de la `InternetClientValidatorBehavior` comportement de point de terminaison pour le <xref:System.ServiceModel.Description.ServiceEndpoint> avant d’utiliser un client Windows Communication Foundation (WCF) pour se connecter à le point de terminaison. La méthode `Validate` du comportement s'exécute avant qu'une opération sur le service soit appelée et met en vigueur la stratégie du client en levant `InvalidOperationExceptions`.  
   
 ### <a name="to-build-the-sample"></a>Pour générer l'exemple  
   

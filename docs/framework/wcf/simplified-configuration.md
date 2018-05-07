@@ -1,27 +1,15 @@
 ---
-title: "Configuration simplifiée"
-ms.custom: 
+title: Configuration simplifiée
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: dcbe1f84-437c-495f-9324-2bc09fd79ea9
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 334dfce44b1f0a7b6b38f509f2f0a346ef90630f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: a07ab26b19004df97f4ac65f711b03fc6a6ba445
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="simplified-configuration"></a>Configuration simplifiée
-La configuration de services [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] peut s'avérer une tâche complexe. Il existe de nombreuses options différentes et il n'est pas toujours évident de déterminer les paramètres nécessaires. Bien que les fichiers de configuration augmentent la flexibilité des services [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], ils sont également la source de nombreux problèmes difficiles à détecter. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] traite ces problèmes et permet de réduire la taille et la complexité de la configuration de service.  
+Configuration des services Windows Communication Foundation (WCF) peut être une tâche complexe. Il existe de nombreuses options différentes et il n'est pas toujours évident de déterminer les paramètres nécessaires. Bien que les fichiers de configuration augmentent la flexibilité des services [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], ils sont également la source de nombreux problèmes difficiles à détecter. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] traite ces problèmes et permet de réduire la taille et la complexité de la configuration de service.  
   
 ## <a name="simplified-configuration"></a>Configuration simplifiée  
  Dans les fichiers de configuration de service [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], la section <`system.serviceModel`> contient un élément <`service`> pour chaque service hébergé. L'élément <`service`> contient une collection d'éléments <`endpoint`> qui spécifient les points de terminaison exposés pour chaque service et éventuellement un jeu de comportements de service. Les éléments <`endpoint`> spécifient l'adresse, la liaison et le contrat exposés par le point de terminaison, et éventuellement une configuration de liaison et des comportements de point de terminaison. La section <`system.serviceModel`> contient également un élément <`behaviors`> qui vous permet de spécifier des comportements de service ou de point de terminaison. L'exemple suivant présente la section <`system.serviceModel`> d'un fichier de configuration.  

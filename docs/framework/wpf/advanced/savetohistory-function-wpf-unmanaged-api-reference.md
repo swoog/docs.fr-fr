@@ -1,14 +1,6 @@
 ---
-title: "SaveToHistory (fonction) (référence des API non managées WPF)"
-ms.custom: 
+title: SaveToHistory (fonction) (référence des API non managées WPF)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - cpp
 api_name:
@@ -16,17 +8,11 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: 6dd101a3-44ad-4143-b228-772156f9b8ff
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: af5294aad43b28bc590dd84466e133553f0ee47b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d678d632fda625420b6f66a5522229fc2ec71317
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="savetohistory-function-wpf-unmanaged-api-reference"></a>SaveToHistory (fonction) (référence des API non managées WPF)
 Cette API prend en charge l’infrastructure de Windows Presentation Foundation (WPF) et n’est pas destinée à être utilisée directement depuis votre code.  
@@ -45,9 +31,9 @@ HRESULT SaveToHistory(
  pHistoryStream  
  Pointeur vers le flux de données d’historique.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [configuration système requise du .NET Framework](../../../../docs/framework/get-started/system-requirements.md).  
   
  **DLL :**  
@@ -56,7 +42,7 @@ HRESULT SaveToHistory(
   
  Dans le .NET Framework 4 et versions ultérieures : PresentationHost_v0400.dll  
   
- **Version du .NET framework :**[!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
+ **Version du .NET framework :** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [Référence des API non managées WPF](../../../../docs/framework/wpf/advanced/wpf-unmanaged-api-reference.md)

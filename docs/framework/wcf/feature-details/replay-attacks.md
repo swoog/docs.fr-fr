@@ -1,34 +1,20 @@
 ---
 title: Attaques par relecture
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 7a17e040-93cd-4432-81b9-9f62fec78c8f
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4e827c51378b9f75835b9b98280b4995d2cae2fc
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 3139e0ea094f1f7483261ffd10026815e5d12f31
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="replay-attacks"></a>Attaques par relecture
 A *attaque par relecture* se produit lorsqu’un intrus copie un flux de messages entre deux correspondants et relit le flux à un ou plusieurs des parties. Sauf atténuation, les ordinateurs sujets à l'attaque traitent le flux comme messages légitimes, ce qui a des conséquences néfastes telles que des ordres redondants d'un élément.  
   
 ## <a name="bindings-may-be-subject-to-reflection-attacks"></a>Les liaisons peuvent être soumises aux attaques de réflexion  
- *Les attaques par réflexion* sont des relectures de messages à un expéditeur comme si elles provenaient du destinataire en tant que la réponse. La norme *la détection de relecture* dans le [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] mécanisme ne gère pas cela automatiquement.  
+ *Les attaques par réflexion* sont des relectures de messages à un expéditeur comme si elles provenaient du destinataire en tant que la réponse. La norme *la détection de relecture* dans Windows Communication Foundation (WCF) mécanisme ne gère pas cela automatiquement.  
   
- Les attaques de réflexion sont atténuées par défaut car le modèle de service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ajoute un ID de message signé aux messages de demande et attend un en-tête `relates-to` signé dans les messages de réponse. Par conséquent, le message de demande ne peut pas être relu en tant que réponse. Dans les scénarios de messages fiables sécurisés, les attaques de réflexion sont atténuées pour les raisons suivantes :  
+ Attaques de réflexion sont atténuées par défaut, car le modèle de service WCF ajoute un ID de message signé aux messages de demande et attend un signé `relates-to` en-tête sur les messages de réponse. Par conséquent, le message de demande ne peut pas être relu en tant que réponse. Dans les scénarios de messages fiables sécurisés, les attaques de réflexion sont atténuées pour les raisons suivantes :  
   
 -   Les schémas de séquence de création et de message de réponse de séquence de création sont différents.  
   

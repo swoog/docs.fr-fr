@@ -1,14 +1,6 @@
 ---
-title: "IMetaDataEmit::MergeEnd, méthode"
-ms.custom: 
+title: IMetaDataEmit::MergeEnd, méthode
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataEmit.MergeEnd
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 2d64315a-1af1-4c60-aedf-f8a781914aea
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 265fc007b5817e8dffd5846738a7a0003bbddf9d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b794a62a0ac0d253f1431be29b43101816dc7233
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataemitmergeend-method"></a>IMetaDataEmit::MergeEnd, méthode
 Fusionne dans la portée actuelle toutes les portées de métadonnées spécifiées par un ou plusieurs appels précédents à [IMetaDataEmit::Merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md).  
@@ -58,7 +46,7 @@ HRESULT MergeEnd ();
   
      Si les propriétés du module ont été déjà définies pour l’étendue actuelle, aucune propriété de module n’est importées. Toutefois, si les propriétés de module n’ont pas été définies dans la portée actuelle, ils sont importés qu’une seule fois, quand ils sont tout d’abord rencontrés. Si ces propriétés de module sont de nouveau rencontrées, ils sont des doublons. Si les valeurs de toutes les propriétés de module (sauf MVID) sont comparées et aucun doublon n’est trouvé, une erreur est générée.  
   
--   Pour les définitions de type (`TypeDef`), sans doublons sont fusionnées dans la portée actuelle. `TypeDef`vérifie les doublons sur chacun des objets *nom d’objet complet* + *GUID* + *numéro de version*. S’il existe une correspondance sur le nom ou le GUID et l’une des deux autres éléments est différent, une erreur est générée. Sinon, si les trois éléments correspondent, `MergeEnd` effectue une vérification rapide pour vérifier que les entrées sont des doublons ; sinon, une erreur est générée. Cette vérification rapide recherche :  
+-   Pour les définitions de type (`TypeDef`), sans doublons sont fusionnées dans la portée actuelle. `TypeDef` vérifie les doublons sur chacun des objets *nom d’objet complet* + *GUID* + *numéro de version*. S’il existe une correspondance sur le nom ou le GUID et l’une des deux autres éléments est différent, une erreur est générée. Sinon, si les trois éléments correspondent, `MergeEnd` effectue une vérification rapide pour vérifier que les entrées sont des doublons ; sinon, une erreur est générée. Cette vérification rapide recherche :  
   
     -   Les mêmes déclarations de membre, qui se produisent dans le même ordre. Les membres qui sont signalés en tant que `mdPrivateScope` (consultez la [CorMethodAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md) énumération) ne sont pas inclus dans ce contrôle ; ils sont fusionnés spécialement.  
   
@@ -72,14 +60,14 @@ HRESULT MergeEnd ();
   
 -   Attributs personnalisés sont fusionnés uniquement lorsque l’élément auquel ils sont associés est fusionné. Par exemple, les attributs personnalisés associés à une classe sont fusionnées lors de la classe est rencontrée pour la première fois. Si les attributs personnalisés sont associés un `TypeDef` ou `MemberDef` qui est spécifique à l’unité de compilation (par exemple, l’horodatage d’une compilation membre), ils ne sont pas fusionnées et il incombe au compilateur de les supprimer ou mettre à jour ces métadonnées.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Cor.h  
   
  **Bibliothèque :** utilisé en tant que ressource dans MSCorEE.dll  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **Versions du .NET framework :** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [IMetaDataEmit, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  

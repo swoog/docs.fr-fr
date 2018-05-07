@@ -1,29 +1,17 @@
 ---
-title: "Aperçu des événements"
-ms.custom: 
+title: Aperçu des événements
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Preview events [WPF]
 - suppressing events [WPF]
 - events [WPF], Preview
 - events [WPF], suppressing
 ms.assetid: b5032308-aa9c-4d02-af11-630ecec8df7e
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a258a0e145e9a24e6e87bb511fdbd6166422a656
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2d6c1ab32cb43730af2f935f4bd4405059994c12
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="preview-events"></a>Aperçu des événements
 Événements d’aperçu, également connus sous le tunneling forcé, les événements sont des événements routés où la direction de l’itinéraire se déplace à partir de la racine de l’application vers l’élément qui a déclenché l’événement et est signalé comme étant la source de données d’événement. Pas tous les scénarios d’événement prend en charge ou exiger des événements d’aperçu. Cette rubrique décrit les situations où les événements d’aperçu existent, comment les applications ou les composants doivent les gérer et les cas où la création d’événements d’aperçu dans des composants personnalisés ou des classes peut être appropriée.  

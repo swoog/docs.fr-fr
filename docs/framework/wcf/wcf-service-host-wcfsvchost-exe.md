@@ -1,29 +1,15 @@
 ---
 title: Hôte de service WCF (WcfSvcHost.exe)
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
-caps.latest.revision: 27
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1da8d7a08e7887e8ba3fd50a8f809e2ff551a7fd
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: MT
+ms.openlocfilehash: c000ad3ba53f103cb1a24a9a7fbc71049ba707c7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>Hôte de service WCF (WcfSvcHost.exe)
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Hôte de service (WcfSvcHost.exe) vous permet de lancer le débogueur Visual Studio (F5) pour héberger et tester un service que vous avez implémenté automatiquement. Vous pouvez ensuite tester le service à l'aide du client test [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] (WcfTestClient.exe) ou de votre propre client, afin de rechercher et de résoudre les erreurs potentielles.  
+Hôte de Service Windows Communication Foundation (WCF) (WcfSvcHost.exe) vous permet de lancer le débogueur Visual Studio (F5) pour héberger et tester un service que vous avez implémenté automatiquement. Vous pouvez ensuite tester le service à l'aide du client test [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] (WcfTestClient.exe) ou de votre propre client, afin de rechercher et de résoudre les erreurs potentielles.  
   
 ## <a name="wcf-service-host"></a>Hôte de service WCF  
  L'hôte de service [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] énumère les services contenus dans un projet de service [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], charge la configuration du projet et effectue l'instanciation d'un hôte pour chaque service trouvé. L’outil est intégré dans Visual Studio via la [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] modèle de Service et est appelé lorsque vous commencez à déboguer votre projet.  

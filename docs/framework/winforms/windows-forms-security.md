@@ -1,13 +1,6 @@
 ---
-title: "Sécurité des Windows Forms"
-ms.custom: 
+title: Sécurité des Windows Forms
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - designer access security [Windows Forms]
 - permissions [Windows Forms], Windows Forms
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - access control [Windows Forms], Windows Forms
 - security policy [Windows Forms], Windows Forms
 ms.assetid: 932d438a-5285-46d8-a958-8c93d0ad6cae
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8bd9b87fdfa54a6f9bf53e4fa897106257b4c625
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 3dc4397319d42760a1886a96377a949da6ae63be
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-forms-security"></a>Sécurité des Windows Forms
 Windows Forms comprend un modèle de sécurité qui est basée sur code (niveaux de sécurité sont définis pour le code, quel que soit l’utilisateur qui exécute le code). Il s’agit en plus de tous les schémas de sécurité qui peuvent être déjà en place sur votre système. Celles-ci peuvent inclure dans le navigateur (telles que la sécurité basée sur la zone disponible dans Internet Explorer) ou le système d’exploitation (par exemple, la sécurité basée sur les informations d’identification de Windows NT).  

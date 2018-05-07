@@ -1,30 +1,18 @@
 ---
-title: "Activité"
-ms.custom: 
+title: Activité
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 70471705-f55f-4da1-919f-4b580f172665
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cbcf33aa734cde1d2458e46cd161f9ea5197a827
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 34281647f65157484c1e732bc67a6a4b2cf58db6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activity"></a>Activité
-Cette rubrique contient des informations sur les suivis d'activité dans le modèle de suivi [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]. Les activités traitent des unités permettant à l'utilisateur de réduire la portée d'un échec. Les erreurs qui se produisent au cours d'une même activité sont directement liées entre elles. Par exemple, une opération peut échouer parce que le déchiffrement d'un message a échoué auparavant. Les suivis générés pour les échecs respectifs de l'opération et du déchiffrement apparaissent dans la même activité, dénotant l'existence d'un lien direct entre l'erreur relative au déchiffrement et celle relative à la demande.  
+Cette rubrique décrit les suivis d’activité dans le modèle de suivi Windows Communication Foundation (WCF). Les activités traitent des unités permettant à l'utilisateur de réduire la portée d'un échec. Les erreurs qui se produisent au cours d'une même activité sont directement liées entre elles. Par exemple, une opération peut échouer parce que le déchiffrement d'un message a échoué auparavant. Les suivis générés pour les échecs respectifs de l'opération et du déchiffrement apparaissent dans la même activité, dénotant l'existence d'un lien direct entre l'erreur relative au déchiffrement et celle relative à la demande.  
   
 ## <a name="configuring-activity-tracing"></a>Configuration du suivi des activités  
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]Fournit des activités prédéfinies pour les applications de traitement (consultez [liste des activités](../../../../../docs/framework/wcf/diagnostics/tracing/activity-list.md)). Vous pouvez également définir des activités par programme pour grouper des suivis utilisateur. Pour plus d’informations, consultez [l’émission de Traces de Code utilisateur](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md).  
+ [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Fournit des activités prédéfinies pour les applications de traitement (consultez [liste des activités](../../../../../docs/framework/wcf/diagnostics/tracing/activity-list.md)). Vous pouvez également définir des activités par programme pour grouper des suivis utilisateur. Pour plus d’informations, consultez [l’émission de Traces de Code utilisateur](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md).  
   
  Pour émettre des suivis d'activité pendant l'exécution, utilisez le paramètre `ActivityTracing` de la source de suivi `System.ServiceModel` ou d'autres sources de suivi personnalisées [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], comme illustré dans l'exemple de code de configuration suivant.  
   

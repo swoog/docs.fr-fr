@@ -1,13 +1,6 @@
 ---
-title: "Syntaxe XAML en détail"
-ms.custom: 
+title: Syntaxe XAML en détail
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - XML [WPF], namespaces
 - XAML [WPF], parsing of attributes
@@ -36,16 +29,11 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-caps.latest.revision: "26"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 88e66210fd8066e82a11d07ea0cfeb83808d646c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d98141c0ad96ef1bd3958ae8d3166aedde76f535
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xaml-syntax-in-detail"></a>Syntaxe XAML en détail
 Cette rubrique définit les termes qui sont utilisés pour décrire les éléments de syntaxe XAML. Ces termes sont utilisés fréquemment dans le reste de cette documentation, à la fois pour la documentation WPF spécifiquement et pour les autres infrastructures qui utilisent XAML ou les concepts XAML de base activées par la prise en charge du langage XAML au niveau de System.Xaml. Cette rubrique décrit la terminologie de base introduite dans la rubrique [vue d’ensemble du XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).  
@@ -134,7 +122,7 @@ Cette rubrique définit les termes qui sont utilisés pour décrire les élémen
 ...  
 ```  
   
- Les énumérations qui prennent en charge les attributs qui peuvent être définies en XAML sont rares dans WPF. Toutefois, une telle énumération est <xref:System.Windows.Media.StyleSimulations>. Vous pourriez, par exemple, utiliser la syntaxe d’attribut de comportant des indicateurs délimitée par des virgules pour modifier l’exemple fourni dans la section Notes pour le <xref:System.Windows.Documents.Glyphs> classe ; `StyleSimulations = "BoldSimulation"` peut devenir `StyleSimulations = "BoldSimulation,ItalicSimulation"`. <xref:System.Windows.Input.KeyBinding.Modifiers%2A?displayProperty=nameWithType>est une autre propriété où vous pouvez spécifier plusieurs valeurs d’énumération. Toutefois, cette propriété se trouve être un cas spécial, car le <xref:System.Windows.Input.ModifierKeys> énumération prend en charge son propre convertisseur de type. Le convertisseur de type pour les modificateurs utilise un signe plus (+) comme un délimiteur plutôt qu’une virgule (,). Cette conversion prend en charge la syntaxe plus traditionnelle pour représenter des combinaisons de touches dans la programmation de Microsoft Windows, tels que « Ctrl + Alt ».  
+ Les énumérations qui prennent en charge les attributs qui peuvent être définies en XAML sont rares dans WPF. Toutefois, une telle énumération est <xref:System.Windows.Media.StyleSimulations>. Vous pourriez, par exemple, utiliser la syntaxe d’attribut de comportant des indicateurs délimitée par des virgules pour modifier l’exemple fourni dans la section Notes pour le <xref:System.Windows.Documents.Glyphs> classe ; `StyleSimulations = "BoldSimulation"` peut devenir `StyleSimulations = "BoldSimulation,ItalicSimulation"`. <xref:System.Windows.Input.KeyBinding.Modifiers%2A?displayProperty=nameWithType> est une autre propriété où vous pouvez spécifier plusieurs valeurs d’énumération. Toutefois, cette propriété se trouve être un cas spécial, car le <xref:System.Windows.Input.ModifierKeys> énumération prend en charge son propre convertisseur de type. Le convertisseur de type pour les modificateurs utilise un signe plus (+) comme un délimiteur plutôt qu’une virgule (,). Cette conversion prend en charge la syntaxe plus traditionnelle pour représenter des combinaisons de touches dans la programmation de Microsoft Windows, tels que « Ctrl + Alt ».  
   
 ### <a name="properties-and-event-member-name-references"></a>Propriétés et événements les références de nom de membre  
  Lorsque vous spécifiez un attribut, vous pouvez référencer une propriété ou un événement qui existe en tant que membre du type CLR instancié pour l’élément objet contenant.  
@@ -267,7 +255,7 @@ Cette rubrique définit les termes qui sont utilisés pour décrire les élémen
   
  `<Button Style="{StaticResource MyStyle}">My button</Button>`  
   
- Ici, `StaticResource` identifie les <xref:System.Windows.StaticResourceExtension> classe qui fournit l’implémentation d’extension de balisage. La chaîne suivante `MyStyle` est utilisée comme entrée pour la non-valeur par défaut <xref:System.Windows.StaticResourceExtension> constructeur, où le paramètre récupéré à partir de la chaîne d’extension déclare demandé <xref:System.Windows.ResourceKey>. `MyStyle`est censé être le [x : Key](../../../../docs/framework/xaml-services/x-key-directive.md) valeur un <xref:System.Windows.Style> défini en tant que ressource. Le [StaticResource Markup Extension](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md) utilisation demande que la ressource soit utilisée pour fournir la <xref:System.Windows.Style> valeur de propriété par la logique de recherche de ressources statiques au moment du chargement.  
+ Ici, `StaticResource` identifie les <xref:System.Windows.StaticResourceExtension> classe qui fournit l’implémentation d’extension de balisage. La chaîne suivante `MyStyle` est utilisée comme entrée pour la non-valeur par défaut <xref:System.Windows.StaticResourceExtension> constructeur, où le paramètre récupéré à partir de la chaîne d’extension déclare demandé <xref:System.Windows.ResourceKey>. `MyStyle` est censé être le [x : Key](../../../../docs/framework/xaml-services/x-key-directive.md) valeur un <xref:System.Windows.Style> défini en tant que ressource. Le [StaticResource Markup Extension](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md) utilisation demande que la ressource soit utilisée pour fournir la <xref:System.Windows.Style> valeur de propriété par la logique de recherche de ressources statiques au moment du chargement.  
   
  Pour plus d’informations sur les extensions de balisage, consultez [Extensions de balisage et XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md). Pour obtenir une référence d’extensions de balisage et d’autres fonctionnalités activées dans l’implémentation XAML .NET générale de programmation XAML, consultez [XAML Namespace (x :)) Fonctionnalités de langage](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md). Pour les extensions de balisage de WPF spécifiques, consultez [WPF XAML Extensions](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md).  
   
@@ -309,13 +297,13 @@ Cette rubrique définit les termes qui sont utilisés pour décrire les élémen
   
  [!code-xaml[XAMLOvwSupport#TypeNameProp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page8.xaml#typenameprop)]  
   
- `Button.Background`fonctionne car la recherche qualifiée de cette propriété sur <xref:System.Windows.Controls.Button> a réussi (<xref:System.Windows.Controls.Control.Background%2A> a été héritée du contrôle de code) et <xref:System.Windows.Controls.Button> est la classe de l’élément objet ou une classe de base. `Control.Background`fonctionne parce que le <xref:System.Windows.Controls.Control> classe définit réellement <xref:System.Windows.Controls.Control.Background%2A> et <xref:System.Windows.Controls.Control> est un <xref:System.Windows.Controls.Button> classe de base.  
+ `Button.Background` fonctionne car la recherche qualifiée de cette propriété sur <xref:System.Windows.Controls.Button> a réussi (<xref:System.Windows.Controls.Control.Background%2A> a été héritée du contrôle de code) et <xref:System.Windows.Controls.Button> est la classe de l’élément objet ou une classe de base. `Control.Background` fonctionne parce que le <xref:System.Windows.Controls.Control> classe définit réellement <xref:System.Windows.Controls.Control.Background%2A> et <xref:System.Windows.Controls.Control> est un <xref:System.Windows.Controls.Button> classe de base.  
   
  Toutefois, ce qui suit *typeName*. *memberName* suivant ne fonctionne pas et, est donc commenté :  
   
  [!code-xaml[XAMLOvwSupport#TypeNameBadProp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page8.xaml#typenamebadprop)]  
   
- <xref:System.Windows.Controls.Label>est une autre classe dérivée de <xref:System.Windows.Controls.Control>, et si vous aviez spécifié `Label.Background` dans un <xref:System.Windows.Controls.Label> élément objet, cette utilisation aurait fonctionné. Toutefois, étant donné que <xref:System.Windows.Controls.Label> n’est pas la classe ou la classe de base de <xref:System.Windows.Controls.Button>, le comportement du processeur XAML spécifié consiste à traiter `Label.Background` comme une propriété jointe. `Label.Background`n’est pas une propriété jointe disponible, et cette utilisation échoue.  
+ <xref:System.Windows.Controls.Label> est une autre classe dérivée de <xref:System.Windows.Controls.Control>, et si vous aviez spécifié `Label.Background` dans un <xref:System.Windows.Controls.Label> élément objet, cette utilisation aurait fonctionné. Toutefois, étant donné que <xref:System.Windows.Controls.Label> n’est pas la classe ou la classe de base de <xref:System.Windows.Controls.Button>, le comportement du processeur XAML spécifié consiste à traiter `Label.Background` comme une propriété jointe. `Label.Background` n’est pas une propriété jointe disponible, et cette utilisation échoue.  
   
 ### <a name="basetypenamemembername-property-elements"></a>Éléments de propriété baseTypeName.memberName  
  De manière analogue à la manière dont le *typeName*. *memberName* formulaire fonctionne pour la syntaxe d’attribut, un *Nom_type_base*. *memberName* syntaxe fonctionne pour la syntaxe d’élément de propriété. Par exemple, la syntaxe suivante fonctionne :  

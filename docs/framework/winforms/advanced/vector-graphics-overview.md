@@ -1,13 +1,6 @@
 ---
 title: Vue d'ensemble des graphismes vectoriels
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,19 +9,14 @@ helpviewer_keywords:
 - coordinate systems
 - graphics [Windows Forms], vector graphics
 ms.assetid: 0195df81-66be-452d-bb53-5a582ebfdc09
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 603b76c999933f177a9e48ddb819562b8e4dd8f8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 31fec6d0d3769251d21783b4657d00b06431e942
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="vector-graphics-overview"></a>Vue d'ensemble des graphismes vectoriels
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]Dessine des lignes, rectangles et autres formes sur un système de coordonnées. Vous pouvez choisir parmi une variété de systèmes de coordonnées, mais le système de coordonnées par défaut a l’origine dans le coin supérieur gauche avec l’axe des x pointant vers la droite et l’axe des y pointant vers le bas. L’unité de mesure dans le système de coordonnées par défaut est le pixel.  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Dessine des lignes, rectangles et autres formes sur un système de coordonnées. Vous pouvez choisir parmi une variété de systèmes de coordonnées, mais le système de coordonnées par défaut a l’origine dans le coin supérieur gauche avec l’axe des x pointant vers la droite et l’axe des y pointant vers le bas. L’unité de mesure dans le système de coordonnées par défaut est le pixel.  
   
 ## <a name="the-building-blocks-of-gdi"></a>Les blocs de construction de GDI +  
  ![Graphique vectoriel](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art01.gif "AboutGdip02_Art01")  
@@ -37,7 +25,7 @@ ms.lasthandoff: 12/22/2017
   
  ![Graphique vectoriel](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art02.gif "AboutGdip02_Art02")  
   
- Lorsque vous utilisez [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] pour dessiner une ligne, un rectangle ou une courbe, vous fournissez des informations essentielles sur l’élément à dessiner. Par exemple, vous pouvez spécifier une ligne en fournissant deux points, et vous pouvez spécifier un rectangle en fournissant un point, une hauteur et une largeur. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]fonctionne en association avec le logiciel de pilote d’affichage pour déterminer quels pixels doivent être activées pour afficher la ligne, un rectangle ou une courbe. L’illustration suivante montre les pixels qui sont sous tension pour afficher une ligne à partir du point (4, 2) au point (12, 8).  
+ Lorsque vous utilisez [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] pour dessiner une ligne, un rectangle ou une courbe, vous fournissez des informations essentielles sur l’élément à dessiner. Par exemple, vous pouvez spécifier une ligne en fournissant deux points, et vous pouvez spécifier un rectangle en fournissant un point, une hauteur et une largeur. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] fonctionne en association avec le logiciel de pilote d’affichage pour déterminer quels pixels doivent être activées pour afficher la ligne, un rectangle ou une courbe. L’illustration suivante montre les pixels qui sont sous tension pour afficher une ligne à partir du point (4, 2) au point (12, 8).  
   
  ![Graphique vectoriel](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art03.gif "AboutGdip02_Art03")  
   

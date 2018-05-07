@@ -1,34 +1,20 @@
 ---
-title: "Configuration et extension de l'exécution à l'aide de comportements"
-ms.custom: 
+title: Configuration et extension de l'exécution à l'aide de comportements
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - attaching extensions using behaviors [WCF]
 ms.assetid: 149b99b6-6eb6-4f45-be22-c967279677d9
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2ea157ea1ac73a287ba39c1468e7e9a5781d40a0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 05fd96574f072f8e349f83d11aca20bc5269dfc7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-and-extending-the-runtime-with-behaviors"></a>Configuration et extension de l'exécution à l'aide de comportements
-Les comportements vous permettent de modifier le comportement par défaut et d'ajouter des extensions personnalisées qui inspectent et valident la configuration de service ou modifient le comportement d'exécution dans les applications de service et clientes [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Cette rubrique décrit les interfaces de comportement, la méthode utilisée pour les implémenter, et comment les ajouter par programme à la description de service (dans une application de service), au point de terminaison (dans une application cliente) ou dans un fichier de configuration. Pour plus d’informations sur l’utilisation des comportements fournis par le système, consultez [spécification du comportement de Service runtime](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md) et [comportement d’exécution Client spécifiant](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md).  
+Comportements permettent de modifier le comportement par défaut et ajouter des extensions personnalisées qui inspectent et valider la configuration de service ou modifient le comportement d’exécution dans les applications client et le service Windows Communication Foundation (WCF). Cette rubrique décrit les interfaces de comportement, la méthode utilisée pour les implémenter, et comment les ajouter par programme à la description de service (dans une application de service), au point de terminaison (dans une application cliente) ou dans un fichier de configuration. Pour plus d’informations sur l’utilisation des comportements fournis par le système, consultez [spécification du comportement de Service runtime](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md) et [comportement d’exécution Client spécifiant](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md).  
   
 ## <a name="behaviors"></a>comportements  
- Les types de comportements sont aux objets de description de service ou de point de terminaison de service (sur le service ou le client, respectivement) avant que ces objets ne soient utilisés par [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] pour créer une exécution qui exécute un service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ou un client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Lorsque ces comportements sont appelés pendant le processus de construction d'exécution, ils sont ensuite capables d'accéder aux méthodes et propriétés d'exécution qui modifient l'exécution construite par le contrat, les liaisons et les adresses.  
+ Les types de comportement sont ajoutés au service ou des objets de description de point de terminaison de service (sur le service ou le client, respectivement) avant que ces objets sont utilisés par Windows Communication Foundation (WCF) pour créer une exécution qui exécute un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service ou un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client. Lorsque ces comportements sont appelés pendant le processus de construction d’exécution, ils sont ensuite capables d’accéder aux méthodes et propriétés d’exécution qui modifient l’exécution construite par le contrat, les liaisons et les adresses.  
   
 ### <a name="behavior-methods"></a>Méthodes de comportement  
  Tous les comportements ont une méthode `AddBindingParameters`, une méthode `ApplyDispatchBehavior`, une méthode `Validate` et une méthode `ApplyClientBehavior` avec une exception : <xref:System.ServiceModel.Description.IServiceBehavior> ne pouvant pas s'exécuter dans un client, il n'implémente pas `ApplyClientBehavior`.  

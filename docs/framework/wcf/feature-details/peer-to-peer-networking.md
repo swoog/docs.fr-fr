@@ -1,29 +1,17 @@
 ---
-title: "Réseaux homologues"
-ms.custom: 
+title: Réseaux homologues
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ad6cb67b-fd1c-4ca1-a767-b410da2e16ca
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a26f10a323b44e7954245ab90a02f62745e84e87
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: fe3fe122e758d8460d98793cb8028ad696cb5302
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="peer-to-peer-networking"></a>Réseaux homologues
-Le canal homologue est une technologie de communication P2P (peer-to-peer) entre plusieurs parties de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Elle fournit un canal de communication P2P basé sur des messages sécurisé et évolutif pour les développeurs d'applications. Un exemple courant d'application entre plusieurs parties pouvant bénéficier du canal homologue concerne une application collaborative telle que la conversation, dans le cadre de laquelle un groupe de personnes discutent les unes avec les autres d'égal à égal sans qu'un serveur soit nécessaire. Le canal homologue permet la collaboration P2P, la distribution de contenu, l'équilibrage de charge et le traitement distribué des scénarios consommateur et d'entreprise.  
+Canal homologue est entre plusieurs parties, pair à pair (P2P) technologie de communication dans Windows Communication Foundation (WCF). Elle fournit un canal de communication P2P basé sur des messages sécurisé et évolutif pour les développeurs d'applications. Un exemple courant d'application entre plusieurs parties pouvant bénéficier du canal homologue concerne une application collaborative telle que la conversation, dans le cadre de laquelle un groupe de personnes discutent les unes avec les autres d'égal à égal sans qu'un serveur soit nécessaire. Le canal homologue permet la collaboration P2P, la distribution de contenu, l'équilibrage de charge et le traitement distribué des scénarios consommateur et d'entreprise.  
   
- Le canal homologue est activé par défaut sur [!INCLUDE[wv](../../../../includes/wv-md.md)], comme l'ensemble d'[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Pour accéder aux classes du canal homologue, ajoutez des références à System.ServiceModel.dll dans votre projet.  
+ Canal homologue est activé par défaut sur [!INCLUDE[wv](../../../../includes/wv-md.md)], comme l’ensemble de WCF. Pour accéder aux classes du canal homologue, ajoutez des références à System.ServiceModel.dll dans votre projet.  
   
  Les sections suivantes contiennent des informations sur les réseaux homologues et l'utilisation des classes du canal homologue pour créer des applications réseau adaptées aux homologues.  
   
@@ -38,4 +26,4 @@ Le canal homologue est une technologie de communication P2P (peer-to-peer) entre
  [Programme de résolution d’homologue personnalisé canal homologue](http://msdn.microsoft.com/library/5b75a2bb-7ff1-4a14-abe7-3debf0537d23)  
   
 ## <a name="peer-channel-team-blog"></a>Peer Channel Team Blog  
- [Peer Channel Team Blog](http://go.microsoft.com/fwlink/?LinkID=114530) (http://go.microsoft.com/fwlink/?LinkID=114530)
+ [Peer Channel Team Blog](http://go.microsoft.com/fwlink/?LinkID=114530) ()http://go.microsoft.com/fwlink/?LinkID=114530)

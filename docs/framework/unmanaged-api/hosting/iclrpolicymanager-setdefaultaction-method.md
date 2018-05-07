@@ -1,14 +1,6 @@
 ---
-title: "ICLRPolicyManager::SetDefaultAction, méthode"
-ms.custom: 
+title: ICLRPolicyManager::SetDefaultAction, méthode
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRPolicyManager.SetDefaultAction
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: f9411e7a-27df-451f-9f6c-d643d6a7a7ce
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 751853aaf4322c15b44bb9b912d293a081c24ba8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9a183c7491ad5d67bc2c68edba3ef2d54839da12
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrpolicymanagersetdefaultaction-method"></a>ICLRPolicyManager::SetDefaultAction, méthode
 Spécifie l’action de stratégie que le common language runtime (CLR) doit prendre lorsque l’opération spécifiée se produit.  
@@ -58,7 +46,7 @@ HRESULT SetDefaultAction (
   
 |HRESULT|Description|  
 |-------------|-----------------|  
-|S_OK|`SetDefaultAction`retourné avec succès.|  
+|S_OK|`SetDefaultAction` retourné avec succès.|  
 |HOST_E_CLRNOTAVAILABLE|Le CLR n’a pas été chargé dans un processus ou le CLR est dans un état dans lequel il ne peut pas exécuter du code managé ou traiter l’appel avec succès.|  
 |HOST_E_TIMEOUT|L’appel a expiré.|  
 |HOST_E_NOT_OWNER|L’appelant ne possède pas le verrou.|  
@@ -67,9 +55,9 @@ HRESULT SetDefaultAction (
 |E_INVALIDARG|Non valide `action` a été spécifié pour le `operation`, ou une valeur non valide a été fournie pour `operation`.|  
   
 ## <a name="remarks"></a>Notes  
- Toutes les valeurs d’action de stratégie peuvent être spécifiés en tant que le comportement par défaut pour les opérations CLR. `SetDefaultAction`peut généralement être utilisé uniquement pour transmettre le comportement. Par exemple, un hôte peut spécifier que les abandons de thread soit transformé en brutal abandons de threads, mais ne peut pas spécifier le contraire. Le tableau ci-dessous décrit les valide `action` valeurs pour chaque possible `operation` valeur.  
+ Toutes les valeurs d’action de stratégie peuvent être spécifiés en tant que le comportement par défaut pour les opérations CLR. `SetDefaultAction` peut généralement être utilisé uniquement pour transmettre le comportement. Par exemple, un hôte peut spécifier que les abandons de thread soit transformé en brutal abandons de threads, mais ne peut pas spécifier le contraire. Le tableau ci-dessous décrit les valide `action` valeurs pour chaque possible `operation` valeur.  
   
-|Valeur de`operation`|Valeurs valides pour`action`|  
+|Valeur de `operation`|Valeurs valides pour `action`|  
 |---------------------------|-------------------------------|  
 |OPR_ThreadAbort|-eAbortThread<br />-eRudeAbortThread<br />-eUnloadAppDomain<br />-eRudeUnloadAppDomain<br />-eExitProcess<br />-eFastExitProcess<br />-eRudeExitProcess<br />-eDisableRuntime|  
 |OPR_ThreadRudeAbortInNonCriticalRegion<br /><br /> OPR_ThreadRudeAbortInCriticalRegion|-eRudeAbortThread<br />-eUnloadAppDomain<br />-eRudeUnloadAppDomain<br />-eExitProcess<br />-eFastExitProcess<br />-eRudeExitProcess<br />-eDisableRuntime|  
@@ -78,14 +66,14 @@ HRESULT SetDefaultAction (
 |OPR_ProcessExit|-eExitProcess<br />-eFastExitProcess<br />-eRudeExitProcess<br />-eDisableRuntime|  
 |OPR_FinalizerRun|-eNoAction<br />-eAbortThread<br />-eRudeAbortThread<br />-eUnloadAppDomain<br />-eRudeUnloadAppDomain<br />-eExitProcess<br />-eFastExitProcess<br />-eRudeExitProcess<br />-eDisableRuntime|  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** MSCorEE.h  
   
  **Bibliothèque :** inclus en tant que ressource dans MSCorEE.dll  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [EClrOperation, énumération](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)  

@@ -1,27 +1,15 @@
 ---
-title: "Corrélation demande-réponse"
-ms.custom: 
+title: Corrélation demande-réponse
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: cf4379bf-2d08-43f3-9584-dfa30ffcb1f6
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 38f4fc436afbcc5922badda22e9a6e565bc19a0c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c38854ad42ad4dddce5171482f3ddcfe5bd16b61
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="request-reply-correlation"></a>Corrélation demande-réponse
-Corrélation demande-réponse est utilisée avec un <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> paire pour implémenter une opération bidirectionnelle dans un service de workflow et avec un <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> paire qui appelle une opération bidirectionnelle dans un autre site Web service. Lors de l'appel d'une opération bidirectionnelle dans un service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], le service peut être soit un service [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] basé sur un code impératif traditionnel, soit un service de workflow. Pour utiliser la corrélation demande-réponse, une liaison bidirectionnelle doit être utilisée, telle que <xref:System.ServiceModel.BasicHttpBinding>. Qu'il s'agisse d'appeler ou d'implémenter une opération bidirectionnelle, les étapes d'initialisation de la corrélation sont similaires ; elles sont présentées dans cette section.  
+Corrélation demande-réponse est utilisée avec un <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> paire pour implémenter une opération bidirectionnelle dans un service de workflow et avec un <xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply> paire qui appelle une opération bidirectionnelle dans un autre site Web service. Lors de l’appel d’une opération bidirectionnelle dans un service WCF, le service peut être soit une traditionnelle des services Windows Communication Foundation (WCF) code impératif ou il peut être un service de workflow. Pour utiliser la corrélation demande-réponse, une liaison bidirectionnelle doit être utilisée, telle que <xref:System.ServiceModel.BasicHttpBinding>. Qu'il s'agisse d'appeler ou d'implémenter une opération bidirectionnelle, les étapes d'initialisation de la corrélation sont similaires ; elles sont présentées dans cette section.  
   
 ## <a name="using-correlation-in-a-two-way-operation-with-receivesendreply"></a>Utilisation de la corrélation dans une opération bidirectionnelle avec Receive/SendReply  
  A <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> paire est utilisée pour implémenter une opération bidirectionnelle dans un service de workflow. L'exécution utilise la corrélation demande-réponse pour vérifier que la réponse est distribuée à l'appelant approprié. Lorsqu'un workflow est hébergé à l'aide de <xref:System.ServiceModel.Activities.WorkflowServiceHost>, ce qui est le cas des services de workflow, l'initialisation de la corrélation par défaut est suffisante. Dans ce scénario, un <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply> paire est utilisée par un flux de travail, et aucune configuration de corrélation spécifique est nécessaire.  

@@ -1,31 +1,17 @@
 ---
-title: "Validation des entrées d’utilisateur dans les Windows Forms"
-ms.custom: 
+title: Validation des entrées d’utilisateur dans les Windows Forms
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms, validating user input
 - validation [Windows Forms], Windows Forms user input
 - user input [Windows Forms], validating in Windows Forms
 - validating user input [Windows Forms], Windows Forms
 ms.assetid: 4ec07681-1dee-4bf9-be5e-718f635a33a1
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1d0e3ec867e44c4f01b239e8e243259d7c951d96
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: adc138ad1e277f69f27f9f86fc5c3ea28a8d5cce
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Validation des entrées d’utilisateur dans les Windows Forms
 Lorsque les utilisateurs entrent des données dans votre application, vous voudrez vérifier que les données sont valides avant que votre application utilise. Vous devrez peut-être que certains champs de texte ne pas de longueur nulle, qu’un champ soit au format d’un numéro de téléphone ou un autre type de données, ou qu’une chaîne ne contient pas tous les caractères non sécurisés qui peut être utilisés pour compromettre la sécurité d’une base de données. Windows Forms fournit plusieurs méthodes vous permettent de valider les entrées dans votre application.  
@@ -56,7 +42,7 @@ Lorsque les utilisateurs entrent des données dans votre application, vous voudr
  Lorsque vous utilisez la liaison de données, les données dans votre contrôle sont synchronisées avec la source de données pendant l’exécution de la <xref:System.Windows.Forms.Control.Validating> événement. Si vous annulez le <xref:System.Windows.Forms.Control.Validating> événement, les données ne seront pas synchronisées avec la source de données.  
   
 > [!IMPORTANT]
->  Si vous disposez d’une validation personnalisée a lieu après le <xref:System.Windows.Forms.Control.Validating> événement, cela n’affecte pas la liaison de données. Par exemple, si vous avez le code dans un <xref:System.Windows.Forms.Control.Validated> événement qui tente d’annuler la liaison de données, la liaison de données se produit encore. Dans ce cas, pour effectuer la validation dans le <xref:System.Windows.Forms.Control.Validated> événement, modifiez le **Mode de mise à jour de Source de données** propriété (**sous (Databindings)**\\**(Avancé)** ) à partir de **OnValidation** à **jamais**et ajoutez *contrôle*`.DataBindings["`*\<YOURFIELD >*  `"].WriteValue()` à votre code de validation.  
+>  Si vous disposez d’une validation personnalisée a lieu après le <xref:System.Windows.Forms.Control.Validating> événement, cela n’affecte pas la liaison de données. Par exemple, si vous avez le code dans un <xref:System.Windows.Forms.Control.Validated> événement qui tente d’annuler la liaison de données, la liaison de données se produit encore. Dans ce cas, pour effectuer la validation dans le <xref:System.Windows.Forms.Control.Validated> événement, modifiez le **Mode de mise à jour de Source de données** propriété (**sous (Databindings)**\\ **(Avancé)** ) à partir de **OnValidation** à **jamais**et ajoutez *contrôle*`.DataBindings["`*\<YOURFIELD >*  `"].WriteValue()` à votre code de validation.  
   
 ### <a name="implicit-and-explicit-validation"></a>Validation implicite et explicite  
  Par conséquent, lorsque les données d’un contrôle sont-elles validées ? Il vous revient, le développeur. Vous pouvez utiliser la validation implicite ou explicite, en fonction des besoins de votre application.  

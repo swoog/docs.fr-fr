@@ -1,33 +1,19 @@
 ---
 title: Mise en route Tutorial1
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - WCF [WCF], getting started
 - Windows Communication Foundation [WCF], getting started
 - getting started [WCF]
 ms.assetid: df939177-73cb-4440-bd95-092a421516a1
-caps.latest.revision: 47
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2dbf3ddb903600df6094c8486fda7183eac2abe7
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 4a095e5391f3b532211b82a190c7010f41283e31
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getting-started-tutorial"></a>Didacticiel de mise en route
-Les rubriques contenues dans cette section visent à vous donner un aperçu de la programmation de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. Elles doivent être parcourues dans l'ordre de la liste indiquée au bas de cette rubrique. En suivant ce didacticiel, vous aurez une compréhension de base des étapes requises pour créer un service et des applications clientes [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Un service expose un ou plusieurs points de terminaison, chaque point de terminaison exposant une ou plusieurs opérations de service. Le *point de terminaison* d’un service spécifie une adresse où le service peut être trouvé, une liaison qui contient les informations qui décrivent comment un client doit communiquer avec le service et un contrat qui définit les fonctionnalités fournie par le service pour ses clients.  
+Les rubriques contenues dans cette section sont destinées à vous donner l’exposition rapide pour le Windows Communication Foundation (WCF) expérience de programmation. Elles doivent être parcourues dans l'ordre de la liste indiquée au bas de cette rubrique. En suivant ce didacticiel, vous aurez une compréhension de base des étapes requises pour créer un service et des applications clientes [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Un service expose un ou plusieurs points de terminaison, chaque point de terminaison exposant une ou plusieurs opérations de service. Le *point de terminaison* d’un service spécifie une adresse où le service peut être trouvé, une liaison qui contient les informations qui décrivent comment un client doit communiquer avec le service et un contrat qui définit les fonctionnalités fournie par le service pour ses clients.  
   
  Une fois que vous aurez terminé la séquence de rubriques de ce didacticiel, vous disposerez d'un service opérationnel et d'un client qui appelle le service. Les trois premières rubriques décrivent comment définir un contrat de service, comment implémenter le contrat de service et comment héberger le service. Le service créé est auto-hébergé dans une application console. Les services peuvent également être hébergés sous IIS (Internet Information Services). Pour plus d’informations, consultez [Comment : héberger un Service WCF dans IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md). Le service est configuré dans le code ; toutefois, les services peuvent également être configurés dans un fichier de configuration. Pour plus d’informations sur l’utilisation d’un fichier de configuration, consultez [fichiers de configuration des Services à l’aide de la Configuration](../../../docs/framework/wcf/configuring-services-using-configuration-files.md).  
   

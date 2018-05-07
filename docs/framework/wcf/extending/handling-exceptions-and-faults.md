@@ -1,30 +1,18 @@
 ---
 title: Gestion des exceptions et des erreurs
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a64d01c6-f221-4f58-93e5-da4e87a5682e
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ae8d16db6fefccf01692088e29676f6bfeace0e3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: a7fb7b5dd5755b9d534d9a96af3db598a44b42b0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="handling-exceptions-and-faults"></a>Gestion des exceptions et des erreurs
 Les exceptions sont utilisées pour communiquer localement des erreurs au sein du service ou de l'implémentation cliente. Les erreurs, en revanche, sont utilisées pour communiquer des erreurs au-delà des limites du service, notamment du serveur au client ou vice versa. En plus des erreurs, les canaux de transport utilisent souvent des mécanismes propres au transport pour communiquer des erreurs de niveau transport. Par exemple, le transport HTTP utilise des codes d'état tels que 404 pour communiquer une URL de point de terminaison inexistante (il n'existe aucun point de terminaison pour renvoyer une erreur). Ce document se compose de trois sections qui fournissent des indications aux auteurs de canaux personnalisés. La première section indique quand et comment définir et lever des exceptions. La deuxième section fournir des indications sur la génération et la consommation des erreurs. La troisième section explique comment fournir des informations de suivi afin d'aider l'utilisateur de votre canal personnalisé à résoudre les problèmes des applications en cours d'exécution.  
   
 ## <a name="exceptions"></a>Exceptions  
- Il y a deux choses à ne pas oublier pour lever une exception : primo, elle doit être d'un type qui permet aux utilisateurs d'écrire le code correct pouvant réagir convenablement à l'exception. Secondo, elle doit fournir suffisamment d'informations à l'utilisateur afin qu'il comprenne ce qui ne s'est pas produit correctement, l'impact de l'échec et la manière d'y remédier. Les sections suivantes donnent des indications sur les types d'exceptions et les messages pour les canaux [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Des indications générales sur les exceptions dans .NET sont également données dans le document Règles de conception pour les exceptions.  
+ Il y a deux choses à ne pas oublier pour lever une exception : primo, elle doit être d'un type qui permet aux utilisateurs d'écrire le code correct pouvant réagir convenablement à l'exception. Secondo, elle doit fournir suffisamment d'informations à l'utilisateur afin qu'il comprenne ce qui ne s'est pas produit correctement, l'impact de l'échec et la manière d'y remédier. Les sections suivantes donnent des indications sur les types d’exceptions et des messages pour les canaux de Windows Communication Foundation (WCF). Des indications générales sur les exceptions dans .NET sont également données dans le document Règles de conception pour les exceptions.  
   
 ### <a name="exception-types"></a>Types d'exceptions  
  Toutes les exceptions levées par les canaux doivent être soit <xref:System.TimeoutException?displayProperty=nameWithType>, <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType>, soit un type dérivé de <xref:System.ServiceModel.CommunicationException>. (Les exceptions telles que <xref:System.ObjectDisposedException> peuvent également être levées, mais uniquement pour indiquer que le code appelant a utilisé le canal incorrectement. Si un canal est utilisé correctement, il doit uniquement lever les exceptions données.) [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] propose sept types d'exceptions dérivant de <xref:System.ServiceModel.CommunicationException> et conçus pour être utilisés par les canaux. Il existe d'autres exceptions dérivées de <xref:System.ServiceModel.CommunicationException> conçues pour être utilisées par d'autres parties du système. Ces types d'exceptions sont :  

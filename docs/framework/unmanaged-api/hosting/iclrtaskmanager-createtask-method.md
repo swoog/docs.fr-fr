@@ -1,14 +1,6 @@
 ---
-title: "ICLRTaskManager::CreateTask, méthode"
-ms.custom: 
+title: ICLRTaskManager::CreateTask, méthode
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRTaskManager.CreateTask
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: eea570d9-2e53-4320-9ea0-eb777bf9dcf3
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e9e78db6e43397709f913f8f79a617221f98db87
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f731e121324793a027c5977a02e1973b0d6fff20
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrtaskmanagercreatetask-method"></a>ICLRTaskManager::CreateTask, méthode
 Demande explicitement que le common language runtime (CLR) crée une nouvelle tâche.  
@@ -65,19 +53,19 @@ HRESULT CreateTask (
 ## <a name="remarks"></a>Notes  
  Le CLR crée une nouvelle tâche automatiquement lors de l’initialisation, lorsque le code utilisateur crée un thread à l’aide de types dans les <xref:System.Threading> espace de noms, ou lorsque la taille du pool de threads est augmentée. Il crée également des tâches lorsque le code non managé appelle une fonction managée.  
   
- `CreateTask`permet à l’hôte à demander explicitement que le CLR crée une nouvelle tâche. Par exemple, l’hôte peut appeler cette méthode pour préinitialiser des structures de données.  
+ `CreateTask` permet à l’hôte à demander explicitement que le CLR crée une nouvelle tâche. Par exemple, l’hôte peut appeler cette méthode pour préinitialiser des structures de données.  
   
 > [!IMPORTANT]
 >  La nouvelle tâche est retournée dans un état suspendu et reste suspendue jusqu'à ce que l’hôte appelle explicitement [IHostTask::Start](../../../../docs/framework/unmanaged-api/hosting/ihosttask-start-method.md).  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** MSCorEE.h  
   
  **Bibliothèque :** inclus en tant que ressource dans MSCorEE.dll  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [ICLRTask, interface](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  

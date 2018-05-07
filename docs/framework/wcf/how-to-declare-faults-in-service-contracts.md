@@ -1,30 +1,18 @@
 ---
-title: "Comment : déclarer des erreurs dans des contrats de service"
-ms.custom: 
+title: 'Comment : déclarer des erreurs dans des contrats de service'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: e8da98e7-d22f-4f60-ac82-3fb0928a353f
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bcf707e58586673097c89e0e0f4d72ea68ef7247
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 142ad26702f0732bc5103e29d5a44bc57ab37625
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-declare-faults-in-service-contracts"></a>Comment : déclarer des erreurs dans des contrats de service
-Dans le code managé, des exceptions sont levées en cas de conditions d'erreur. Cependant, dans les applications [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], les contrats de service spécifient les informations d'erreur à retourner aux clients en déclarant des erreurs SOAP. Pour une vue d’ensemble de la relation entre les exceptions et des erreurs, consultez [spécification et gestion des erreurs dans les contrats et les Services](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
+Dans le code managé, des exceptions sont levées en cas de conditions d'erreur. Dans les applications Windows Communication Foundation (WCF), toutefois, contrats de service spécifient les informations d’erreur sont retournées aux clients en déclarant des erreurs SOAP dans le contrat de service. Pour une vue d’ensemble de la relation entre les exceptions et des erreurs, consultez [spécification et gestion des erreurs dans les contrats et les Services](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
   
 ### <a name="create-a-service-contract-that-specifies-a-soap-fault"></a>Créer un contrat de service qui spécifie une erreur SOAP  
   

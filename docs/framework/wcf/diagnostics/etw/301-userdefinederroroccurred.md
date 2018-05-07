@@ -1,24 +1,12 @@
 ---
 title: 301 - UserDefinedErrorOccurred
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a0285d1c-550f-4c14-9c36-a96e97f1c4e4
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b24d54930a29a24dab97ce403c2808fb74b8cbfe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6eb80d6f0b20af9aae6e7de5248323088e352b26
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="301---userdefinederroroccurred"></a>301 - UserDefinedErrorOccurred
 ## <a name="properties"></a>Propriétés  
@@ -41,5 +29,5 @@ ms.lasthandoff: 12/22/2017
 |Nom d'élément de données|Type d'élément de données|Description|  
 |--------------------|--------------------|-----------------|  
 |Name|`xs:string`|Nom de l'événement défini par l'utilisateur.|  
-|HostReference|`xs:string`|Pour les services hébergés par le Web, ce champ identifie de manière unique le service dans la hiérarchie Web. Son format est défini en tant que ' chemin d’accès virtuel de Site Web de nom d’Application &#124; Chemin d’accès virtuel de service &#124; ServiceName'. Exemple : ' Default Web Site/CalculatorApplication &#124;/CalculatorService.svc &#124; CalculatorService ».|  
+|HostReference|`xs:string`|Pour les services hébergés par le Web, ce champ identifie de manière unique le service dans la hiérarchie Web. Son format est défini en tant que ' chemin d’accès virtuel de Site Web nom Application&#124;chemin d’accès virtuel du Service&#124;ServiceName'. Exemple : ' Default Web Site/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService ».|  
 |Charge utile|`xs:string`|Charge utile de l'événement définie par l'utilisateur.|

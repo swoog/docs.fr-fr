@@ -1,24 +1,12 @@
 ---
 title: Architecture d'activation WAS
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7563510fdd44336cb5f8c50705edefd732082347
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0c91ebd605fbe503dd11da7167512648afd86449
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="was-activation-architecture"></a>Architecture d'activation WAS
 Cette rubrique détaille et décrit les composants du service d'activation des processus de Windows (également appelé WAS).  
@@ -41,14 +29,14 @@ Cette rubrique détaille et décrit les composants du service d'activation des p
  ![Architecture WAS](../../../../docs/framework/wcf/feature-details/media/wasarchitecture.gif "WASArchitecture")  
   
 ### <a name="listener-adapters"></a>Adaptateurs d'écouteur  
- Les adaptateurs d'écouteur sont des services Windows individuels qui implémentent la logique de la communication réseau utilisée pour recevoir les messages à l'aide du protocole réseau sur lequel ils écoutent. Le tableau suivant répertorie les adaptateurs d'écouteur pour les protocoles [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+ Les adaptateurs d'écouteur sont des services Windows individuels qui implémentent la logique de la communication réseau utilisée pour recevoir les messages à l'aide du protocole réseau sur lequel ils écoutent. Le tableau suivant répertorie les adaptateurs d’écouteur pour les protocoles de Windows Communication Foundation (WCF).  
   
 |Nom du service d'adaptateur de l'écouteur|Protocole|Notes|  
 |-----------------------------------|--------------|-----------|  
-|W3SVC|http|Composant commun qui assure l'activation HTTP pour les protocoles IIS 7.0 et [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].|  
+|W3SVC|http|Composant commun qui fournit l’activation HTTP pour IIS 7.0 et WCF.|  
 |NetTcpActivator|net.tcp|Dépend du service NetTcpPortSharing.|  
 |NetPipeActivator|net.pipe||  
-|NetMsmqActivator|net.msmq|Utilisé avec les applications Message Queuing reposant sur [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].|  
+|NetMsmqActivator|net.msmq|Pour une utilisation avec des applications basé sur WCF Message Queuing.|  
 |NetMsmqActivator|msmq.formatname|Assure la compatibilité descendante avec les applications Message Queuing existantes.|  
   
  Les adaptateurs d'écouteur pour des protocoles spécifiques sont enregistrés lors de l'installation dans le fichier applicationHost.config, comme l'illustre l'exemple XML suivant.  

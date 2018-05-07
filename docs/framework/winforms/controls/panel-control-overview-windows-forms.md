@@ -1,31 +1,17 @@
 ---
-title: "Vue d'ensemble du contrôle Panel (Windows Forms)"
-ms.custom: 
+title: Vue d'ensemble du contrôle Panel (Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - Panel
 helpviewer_keywords:
 - grouping controls [Windows Forms], Panel control
 - Panel control [Windows Forms], about Panel control
 ms.assetid: b6b83636-2c39-4dad-89d6-f0fa41049a74
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a8855c88a0ec60cd0d44d73046e44c9614347d90
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1ba766629f923b091459531ce74d28dca4b4ea0f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="panel-control-overview-windows-forms"></a>Vue d'ensemble du contrôle Panel (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.Panel> contrôles sont utilisés pour fournir un groupement identifiable pour d’autres contrôles. En règle générale, vous utilisez les panneaux pour diviser un formulaire par fonction. Par exemple, peut avoir un bon de commande qui spécifie les options de distribution telles que le lendemain à utiliser. Toutes les options dans un volet de regroupement donne à l’utilisateur une aide visuelle logique. Au moment du design tous les contrôles peuvent être déplacés facilement — lorsque vous déplacez le <xref:System.Windows.Forms.Panel> contrôler, tous ses contrôles contenus déplacent, trop. Les contrôles regroupés dans un panneau de configuration est accessible via son <xref:System.Windows.Forms.Control.Controls%2A> propriété. Cette propriété retourne une collection de <xref:System.Windows.Forms.Control> instances, donc vous devez généralement effectuer un cast d’un contrôle récupérés qu’à son type spécifique.  

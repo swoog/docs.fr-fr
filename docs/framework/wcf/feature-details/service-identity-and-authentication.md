@@ -1,31 +1,17 @@
 ---
 title: Identité du service et authentification
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
-caps.latest.revision: 32
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5bd550b7408e9db00daf7793cd0a7f1261e21ccf
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 21184098f90be3b64cfccd5ab98a1824cee50e48
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="service-identity-and-authentication"></a>Identité du service et authentification
 D’un service *identité du point de terminaison*est une valeur générée à partir du service Web Services Description Language (WSDL). Cette valeur, propagée à tout client, est utilisée pour authentifier le service. Une fois que le client a initialisé une communication à un point de terminaison et le service s'authentifie au client, le client compare la valeur de l'identité du point de terminaison avec la valeur réelle que le processus d'authentification du point de terminaison a retournée. Si elles correspondent, le client est assuré qu'il a contacté le point de terminaison du service attendu. Cela fonctionne comme une protection contre les *hameçonnage* par un client empêche d’être redirigé vers un point de terminaison hébergé par un service malveillant.  
@@ -35,7 +21,7 @@ D’un service *identité du point de terminaison*est une valeur générée à p
 > [!NOTE]
 >  Lorsque vous utilisez NT LanMan (NTLM) pour l'authentification, l'identité du service n'est pas vérifiée parce que, sous NTLM, le client ne peut pas authentifier le serveur. NTLM est utilisé lorsque les ordinateurs font partie d'un groupe de travail Windows, ou lors de l'exécution d'une version antérieure de Windows qui ne prend pas en charge l'authentification Kerberos.  
   
- Lorsque le client initialise un canal sécurisé pour envoyer un message à un service, l'infrastructure [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] authentifie le service et envoie le message uniquement si l'identité du service correspond à l'identité spécifiée dans l'adresse du point de terminaison que le client utilise.  
+ Lorsque le client établit un canal sécurisé pour envoyer un message à un service sur celui-ci, l’infrastructure Windows Communication Foundation (WCF) authentifie le service et envoie le message uniquement si l’identité du service correspond à l’identité spécifiée dans le point de terminaison adresse du client utilise.  
   
  Le traitement de l'identité inclut les étapes suivantes :  
   
@@ -45,7 +31,7 @@ D’un service *identité du point de terminaison*est une valeur générée à p
   
  Le traitement de l'identité sur le client est analogue à l'authentification du client sur le service. Un service sécurisé n'exécute pas de code jusqu'à ce que les informations d'identification du client aient été authentifiées. De la même façon, le client n'envoie pas de messages au service jusqu'à ce que les informations d'identification du service aient été authentifiées sur la base de ce qui est déjà connu via métadonnées du service.  
   
- La propriété <xref:System.ServiceModel.EndpointAddress.Identity%2A> de la classe <xref:System.ServiceModel.EndpointAddress> représente l'identité du service appelé par le client. Le service publie <xref:System.ServiceModel.EndpointAddress.Identity%2A> dans ses métadonnées. Lorsque le développeur client exécute le [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) sur le point de terminaison de service, la configuration générée contient la valeur du service <xref:System.ServiceModel.EndpointAddress.Identity%2A> propriété. L'infrastructure [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] (en cas de configuration sécurisée) vérifie que le service possède l'identité spécifiée.  
+ La propriété <xref:System.ServiceModel.EndpointAddress.Identity%2A> de la classe <xref:System.ServiceModel.EndpointAddress> représente l'identité du service appelé par le client. Le service publie <xref:System.ServiceModel.EndpointAddress.Identity%2A> dans ses métadonnées. Lorsque le développeur client exécute le [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) sur le point de terminaison de service, la configuration générée contient la valeur du service <xref:System.ServiceModel.EndpointAddress.Identity%2A> propriété. L’infrastructure WCF (si configuré avec la sécurité) vérifie que le service possède l’identité spécifiée.  
   
 > [!IMPORTANT]
 >  Les métadonnées contiennent l'identité attendue du service, il est par conséquent recommandé d'exposer les métadonnées du service de manière sécurisée, par exemple, en créant un point de terminaison HTTPS. Pour plus d’informations, consultez [Comment : sécuriser les points de terminaison de métadonnées](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md).  
@@ -75,7 +61,7 @@ D’un service *identité du point de terminaison*est une valeur générée à p
   
   
 ## <a name="setting-identity-programmatically"></a>Définition de l'identité par programme  
- Votre service n'a pas besoin de spécifier une identité de manière explicite, car [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] la détermine automatiquement. Toutefois, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] vous permet de spécifier une identité sur un point de terminaison, le cas échéant. Le code suivant ajoute un point de terminaison de service avec une identité DNS spécifique.  
+ Votre service n’a pas explicitement spécifier une identité, étant donné que WCF détermine automatiquement. Toutefois, WCF vous permet de spécifier une identité sur un point de terminaison, si nécessaire. Le code suivant ajoute un point de terminaison de service avec une identité DNS spécifique.  
   
  [!code-csharp[C_Identity#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_identity/cs/source.cs#5)]
  [!code-vb[C_Identity#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#5)]  
@@ -99,13 +85,13 @@ D’un service *identité du point de terminaison*est une valeur générée à p
   
  Si le canal est configuré pour authentifier à l'aide du message ou d'un SSL (Secure Sockets Layer) au niveau du transport avec des certificats X.509 pour l'authentification, les valeurs d'identité suivantes sont valides :  
   
--   DNS. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] garantit que le certificat fourni pendant la négociation SSL contient un DNS un attribut `CommonName` (CN) égal à la valeur spécifiée dans l'identité DNS sur le client. Notez que ces contrôles sont complémentaires à la détermination de la validé du certificat du serveur. Par défaut, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] garantit que le certificat du serveur est publié par une autorité racine approuvée.  
+-   DNS. WCF permet de s’assurer que le certificat fourni pendant la négociation SSL contient un DNS ou `CommonName` attribut (CN) égal à la valeur spécifiée dans l’identité DNS sur le client. Notez que ces contrôles sont complémentaires à la détermination de la validé du certificat du serveur. Par défaut, WCF vérifie que le certificat de serveur émis par une autorité racine approuvée.  
   
--   certificat ;  Pendant la négociation SSL, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] garantit que le point de terminaison distant fournit la valeur de certificat exacte spécifiée dans l'identité.  
+-   certificat ;  Pendant la négociation SSL, WCF vérifie que le point de terminaison distant fournit la valeur de certificat exacte spécifiée dans l’identité.  
   
 -   Référence de certificat. Identique au certificat.  
   
--   RSA. Pendant la négociation SSL, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] garantit que le point de terminaison distant fournit la clé RSA exacte spécifiée dans l'identité.  
+-   RSA. Pendant la négociation SSL, WCF vérifie que le point de terminaison distant fournit la clé RSA exacte spécifiée dans l’identité.  
   
  Si le service authentifie en utilisant le message - ou un SSL au niveau du transport avec des informations d'identification Windows pour l'authentification, et négocie l'information d'identification, les valeurs d'identité suivantes sont valides :  
   

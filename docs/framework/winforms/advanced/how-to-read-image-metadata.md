@@ -1,13 +1,6 @@
 ---
 title: "Comment : lire des métadonnées d'image"
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,21 +8,16 @@ helpviewer_keywords:
 - metadata [Windows Forms], property item
 - metadata [Windows Forms], reading image
 ms.assetid: 72ec0b31-0be7-444a-9575-1dbcb864e0be
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b610e499ff980d2e705ad855ae98c1d54ff412e7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 92ce4eb8d51fbd25f9a129a629dc47bfb9941f34
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-read-image-metadata"></a>Comment : lire des métadonnées d'image
 Certains fichiers image contiennent des métadonnées que vous pouvez lire pour déterminer les fonctionnalités de l’image. Par exemple, une photographie numérique peut contenir des métadonnées que vous pouvez lire pour déterminer la marque et le modèle de l’appareil photo utilisé pour capturer l’image. Avec [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], vous pouvez lire des métadonnées existantes et vous pouvez également écrire de nouvelles métadonnées dans des fichiers image.  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]stocke un élément individuel de métadonnées dans un <xref:System.Drawing.Imaging.PropertyItem> objet. Vous pouvez lire la <xref:System.Drawing.Image.PropertyItems%2A> propriété d’un <xref:System.Drawing.Image> objet à récupérer toutes les métadonnées à partir d’un fichier. Le <xref:System.Drawing.Image.PropertyItems%2A> propriété retourne un tableau de <xref:System.Drawing.Imaging.PropertyItem> objets.  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] stocke un élément individuel de métadonnées dans un <xref:System.Drawing.Imaging.PropertyItem> objet. Vous pouvez lire la <xref:System.Drawing.Image.PropertyItems%2A> propriété d’un <xref:System.Drawing.Image> objet à récupérer toutes les métadonnées à partir d’un fichier. Le <xref:System.Drawing.Image.PropertyItems%2A> propriété retourne un tableau de <xref:System.Drawing.Imaging.PropertyItem> objets.  
   
  A <xref:System.Drawing.Imaging.PropertyItem> objet possède les quatre propriétés suivantes : `Id`, `Value`, `Len`, et `Type`.  
   
@@ -38,7 +26,7 @@ Certains fichiers image contiennent des métadonnées que vous pouvez lire pour 
   
 |Valeur hexadécimale|Description|  
 |-----------------------|-----------------|  
-|0x0320<br /><br /> 0x010F<br /><br /> 0 x 0110<br /><br /> 0x9003<br /><br /> 0x829A<br /><br /> 0x5090<br /><br /> 0x5091|Titre de l’image<br /><br /> Fabricant de matériel<br /><br /> Modèle de matériel<br /><br /> ExifDTOriginal<br /><br /> Temps d’exposition EXIF<br /><br /> Tableau de luminance<br /><br /> Tableau de chrominance|  
+|0x0320<br /><br /> 0x010F<br /><br /> 0x0110<br /><br /> 0x9003<br /><br /> 0x829A<br /><br /> 0x5090<br /><br /> 0x5091|Titre de l’image<br /><br /> Fabricant de matériel<br /><br /> Modèle de matériel<br /><br /> ExifDTOriginal<br /><br /> Temps d’exposition EXIF<br /><br /> Tableau de luminance<br /><br /> Tableau de chrominance|  
   
 ## <a name="value"></a>Value  
  Un tableau de valeurs. Le format des valeurs est déterminé par le <xref:System.Drawing.Imaging.PropertyItem.Type%2A> propriété.  

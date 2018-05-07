@@ -1,28 +1,19 @@
 ---
-title: '&#39; Custom &#39; modificateur n’est pas valide pour les événements déclarés sans types délégués explicites'
+title: '&#39;Personnalisé&#39; modificateur n’est pas valide pour les événements déclarés sans types délégués explicites'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc31122
 - bc31122
 helpviewer_keywords:
 - BC31122
 ms.assetid: 6911f0d1-641a-473b-906d-8ee5681194be
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 844bd033ea05e373b04a04f80777af77179c1263
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3f08bbbbbac4a01dfbac8d15cf9285c01262618a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="39custom39-modifier-is-not-valid-on-events-declared-without-explicit-delegate-types"></a>&#39; Custom &#39; modificateur n’est pas valide pour les événements déclarés sans types délégués explicites
+# <a name="39custom39-modifier-is-not-valid-on-events-declared-without-explicit-delegate-types"></a>&#39;Personnalisé&#39; modificateur n’est pas valide pour les événements déclarés sans types délégués explicites
 Contrairement à un événement non personnalisé, un `Custom Event` déclaration requiert un `As` clause après le nom de l’événement qui spécifie explicitement le type délégué pour l’événement.  
   
  Les événements non personnalisés peuvent être définis à l’aide un `As` explicite et clause type délégué, ou avec un paramètre de liste immédiatement après le nom de l’événement.  

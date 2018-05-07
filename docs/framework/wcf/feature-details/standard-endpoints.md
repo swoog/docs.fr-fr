@@ -1,24 +1,12 @@
 ---
 title: Points de terminaison standard
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 3fcb4225-addc-44f2-935d-30e4943a8812
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: de5f1c858b9018071489354441cab197bf5db6e2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 395d910ddabc553cca47dcdd038f44b1470b3455
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="standard-endpoints"></a>Points de terminaison standard
 Les points de terminaison sont définis en spécifiant une adresse, une liaison et un contrat. Les autres paramètres qui peuvent être définis sur un point de terminaison incluent la configuration du comportement, les en-têtes, et les URI d'écoute.  Pour certains types de points de terminaison, ces valeurs ne changent pas. Par exemple, les points de terminaison d'échange de métadonnées utilisent toujours le contrat <xref:System.ServiceModel.Description.IMetadataExchange>. D'autres points de terminaison, tels que <xref:System.ServiceModel.Description.WebHttpEndpoint>, requièrent toujours un comportement de point de terminaison spécifié. L'utilisation d'un point de terminaison peut être simplifiée par l'emploi de points de terminaison possédant des valeurs par défaut pour des propriétés de point de terminaison courantes. Les points de terminaison standard permettent à un développeur de définir un point de terminaison avec des valeurs par défaut ou dont une ou plusieurs propriétés de point de terminaison restent inchangées.  Les points de terminaison de ce type vous permettent d'utiliser un point de terminaison sans avoir à spécifier les informations qui sont de nature statique. Les points de terminaison standard peuvent être utilisés comme points de terminaison d'infrastructure et d'application.  

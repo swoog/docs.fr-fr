@@ -1,36 +1,22 @@
 ---
 title: Quotas de transport
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - transport quotas [WCF]
 ms.assetid: 3e71dd3d-f981-4d9c-9c06-ff8abb61b717
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5e9d7fbf42f2ed9b8f68b1faf2e2425050b62eaa
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b6322bada88c6aef65b609f43fe92dda8dbab206
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transport-quotas"></a>Quotas de transport
 Les quotas de transport sont un mécanisme stratégique permettant de déterminer lorsqu'une connexion consomme trop de ressources. Un quota est une limite imposée qui empêche l'utilisation de ressources supplémentaires une fois la valeur du quota dépassée. Les quotas de transport permettent de lutter contre les attaques par déni de service malveillantes ou non intentionnelles.  
   
- Les transports [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ont des valeurs de quota par défaut basées sur une allocation conservatrice des ressources. Ces valeurs par défaut sont adaptées aux environnements de développement et aux scénarios d'installation courts. Les administrateurs de service doivent examiner les quotas de transport et ajuster les valeurs de chaque quota si une installation manque de ressources ou si les connexions sont limitées malgré la disponibilité de ressources supplémentaires.  
+ Les transports de Windows Communication Foundation (WCF) ont des valeurs de quota par défaut qui sont basées sur une allocation conservatrice des ressources. Ces valeurs par défaut sont adaptées aux environnements de développement et aux scénarios d'installation courts. Les administrateurs de service doivent examiner les quotas de transport et ajuster les valeurs de chaque quota si une installation manque de ressources ou si les connexions sont limitées malgré la disponibilité de ressources supplémentaires.  
   
 ## <a name="types-of-transport-quotas"></a>Types de quotas de transport  
- Les transports [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] présentent trois types de quotas :  
+ Les transports WCF possèdent trois types de quotas :  
   
 -   *Délais d’attente* atténuer les attaques de déni de service qui monopolise des ressources pour une période prolongée sur.  
   
@@ -39,7 +25,7 @@ Les quotas de transport sont un mécanisme stratégique permettant de détermine
 -   *Limites de taille de collection* limitent la consommation des ressources qui indirectement allouer de la mémoire ou sont dans une offre limitée.  
   
 ## <a name="transport-quota-descriptions"></a>Description des quotas de transport  
- Cette section décrit les quotas de transport disponibles pour les transports [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] standard : HTTP(S), TCP/IP et canaux nommés. Les transports personnalisés peuvent posséder des quotas configurables propres non inclus dans cette liste. Consultez la documentation relative à un transport personnalisé pour en savoir plus sur ses quotas.  
+ Cette section décrit les quotas de transport disponibles pour les transports WCF standards : HTTP (S), TCP/IP et canaux nommés. Les transports personnalisés peuvent posséder des quotas configurables propres non inclus dans cette liste. Consultez la documentation relative à un transport personnalisé pour en savoir plus sur ses quotas.  
   
  Chaque paramètre de quota possède un type, une valeur minimale et une valeur par défaut. La valeur maximale d'un quota est limitée par son type. En raison des limites de l'ordinateur, il n'est pas toujours possible d'affecter à un quota sa valeur maximale.  
   

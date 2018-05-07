@@ -1,34 +1,22 @@
 ---
-title: "Exécution d'opérations en lot à l'aide des DataAdapter"
-ms.custom: 
+title: Exécution d'opérations en lot à l'aide des DataAdapter
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: e72ed5af-b24f-486c-8429-c8fd2208f844
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e5c584bcd825e390b24da6c95ecb159a8280c639
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: e585d8a3c21f4a256a2e706389fc9f8adc7900da
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="performing-batch-operations-using-dataadapters"></a>Exécution d'opérations en lot à l'aide des DataAdapter
 La prise en charge des lots dans ADO.NET permet à un objet <xref:System.Data.Common.DataAdapter> de grouper des opérations INSERT, UPDATE et DELETE à partir d'un objet <xref:System.Data.DataSet> ou d'un objet <xref:System.Data.DataTable> pour le serveur, au lieu d'envoyer les opérations successivement. La réduction du nombre d'allers-retours vers le serveur entraîne généralement des gains de performances importants. Les mises à jour par lots sont prises en charge pour les fournisseurs de données .NET pour SQL Server (<xref:System.Data.SqlClient>) et Oracle (<xref:System.Data.OracleClient>).  
   
  Lors de la mise à jour d'une base de données avec les modifications d'un objet <xref:System.Data.DataSet> dans les versions précédentes d'ADO.NET, la méthode `Update` d'un objet `DataAdapter` apportait des mises à jour à la base de données ligne après ligne. Comme elle effectuait une itération dans les lignes de l'objet <xref:System.Data.DataTable> spécifié, elle examinait chaque objet <xref:System.Data.DataRow> pour voir s'il avait été modifié. Si la ligne avait été modifiée, elle appelait `UpdateCommand`, `InsertCommand` ou `DeleteCommand` en fonction de la valeur de la propriété <xref:System.Data.DataRow.RowState%2A> de cette ligne. Chaque mise à jour de ligne impliquait un aller-retour sur le réseau vers la base de données.  
   
- À partir d'ADO.NET 2.0, <xref:System.Data.Common.DbDataAdapter> expose une propriété <xref:System.Data.Common.DbDataAdapter.UpdateBatchSize%2A>. L'affection d'une valeur entière positive à la propriété `UpdateBatchSize` a pour effet d'envoyer les mises à jour de la base de données sous la forme de lots de la taille spécifiée. Par exemple, l'affectation de la valeur 10 à la propriété `UpdateBatchSize` groupe 10 instructions distinctes avant de les soumettre en tant que lot. Avec `UpdateBatchSize`la valeur 0<xref:System.Data.Common.DataAdapter>, l'objet utilise la taille de lot la plus grande que le serveur peut gérer. La valeur 1 désactive les mises à jour par lots car les lignes sont envoyées les unes après les autres.  
+ À partir d'ADO.NET 2.0, <xref:System.Data.Common.DbDataAdapter> expose une propriété <xref:System.Data.Common.DbDataAdapter.UpdateBatchSize%2A>. L'affection d'une valeur entière positive à la propriété `UpdateBatchSize` a pour effet d'envoyer les mises à jour de la base de données sous la forme de lots de la taille spécifiée. Par exemple, l'affectation de la valeur 10 à la propriété `UpdateBatchSize` groupe 10 instructions distinctes avant de les soumettre en tant que lot. Avec `UpdateBatchSize` la valeur 0 <xref:System.Data.Common.DataAdapter>, l'objet utilise la taille de lot la plus grande que le serveur peut gérer. La valeur 1 désactive les mises à jour par lots car les lignes sont envoyées les unes après les autres.  
   
  L'exécution d'un lot très volumineux peut réduire les performances. Vous devez donc tester le paramètre de taille de lot optimal avant d'implémenter votre application.  
   

@@ -1,14 +1,6 @@
 ---
 title: Introduction aux applications de service Windows
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - ServiceController
 helpviewer_keywords:
@@ -29,17 +21,13 @@ helpviewer_keywords:
 - Win32ShareProcess service type
 - Windows Service applications, lifetime
 ms.assetid: 1b1b5e67-3ff3-40c0-8154-322cfd6ef0ae
-caps.latest.revision: 
 author: ghogen
-ms.author: ghogen
 manager: douge
-ms.workload:
-- dotnet
-ms.openlocfilehash: 613107a13820ad71b854dcba93f21c41f2a5fa5f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e0720b90d89e5117cbac15ce7e38a41071f1c13e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="introduction-to-windows-service-applications"></a>Introduction aux applications de service Windows
 Les services Microsoft Windows, anciennement appelés services NT, permettent de créer des applications exécutables longue qui s’exécutent dans leur propre session Windows. Ces services peuvent être démarrés automatiquement au démarrage de l’ordinateur, peut être suspendu et redémarré et n’affichent pas d’interface utilisateur. Ces fonctionnalités rendent services idéale pour une utilisation sur un serveur, ou chaque fois que vous avez besoin de fonctionnalités de durée d’exécution longue qui n’interfèrent pas avec d’autres utilisateurs qui travaillent sur le même ordinateur. Vous pouvez également exécuter des services dans le contexte de sécurité d’un compte d’utilisateur spécifique qui est différent de l’utilisateur connecté ou le compte d’ordinateur par défaut. Pour plus d’informations sur les services et les sessions Windows, consultez la documentation du Kit de développement logiciel Windows.  
@@ -86,7 +74,7 @@ Les services Microsoft Windows, anciennement appelés services NT, permettent de
   
  Pour plus d'informations, consultez <xref:System.ServiceProcess.ServiceController>.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
 -   Les services doivent être créés dans un **Service Windows** projet d’application ou un autre projet compatible .NET Framework qui génère un fichier .exe lors de la génération et hérite de la <xref:System.ServiceProcess.ServiceBase> classe.  
   

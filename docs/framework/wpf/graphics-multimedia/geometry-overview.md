@@ -1,13 +1,6 @@
 ---
 title: Vue d'ensemble de Geometry
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - geometry classes [WPF]
 - graphics [WPF], geometry classes
 ms.assetid: 9fba8934-98b7-4af6-82f6-f4ef887f963a
-caps.latest.revision: "23"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e58e3ea00a00b24e476fd158beb3b0515e607f9d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 01c460ae18c489a21c860c6d2b10f551e6e68242
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="geometry-overview"></a>Vue d'ensemble de Geometry
 Cette vue d’ensemble décrit comment utiliser le [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Media.Geometry> classes pour décrire les formes. Cette rubrique compare également les différences entre <xref:System.Windows.Media.Geometry> objets et <xref:System.Windows.Shapes.Shape> éléments.  
@@ -34,7 +22,7 @@ Cette vue d’ensemble décrit comment utiliser le [!INCLUDE[TLA#tla_winclient](
 ## <a name="what-is-a-geometry"></a>Qu’est-ce qu’une géométrie ?  
  Le <xref:System.Windows.Media.Geometry> classe et les classes qui dérivent, telles que <xref:System.Windows.Media.EllipseGeometry>, <xref:System.Windows.Media.PathGeometry>, et <xref:System.Windows.Media.CombinedGeometry>, vous permettent de décrire la géométrie d’une forme 2D. Ces descriptions géométriques ont de nombreuses utilisations, telles que la définition d’une forme à peindre à l’écran ou la définition d’un test de positionnement et de zones de découpage. Vous pouvez également utiliser une géométrie pour définir un tracé d’animation.  
   
- <xref:System.Windows.Media.Geometry>objets peuvent être simples, tels que des rectangles et des cercles ou composites, créés à partir de deux ou plusieurs objets de géométrie.  Les géométries plus complexes peuvent être créées à l’aide de la <xref:System.Windows.Media.PathGeometry> et <xref:System.Windows.Media.StreamGeometry> classes, qui vous permettent de décrire des arcs et des courbes.  
+ <xref:System.Windows.Media.Geometry> objets peuvent être simples, tels que des rectangles et des cercles ou composites, créés à partir de deux ou plusieurs objets de géométrie.  Les géométries plus complexes peuvent être créées à l’aide de la <xref:System.Windows.Media.PathGeometry> et <xref:System.Windows.Media.StreamGeometry> classes, qui vous permettent de décrire des arcs et des courbes.  
   
  Car un <xref:System.Windows.Media.Geometry> est un type de <xref:System.Windows.Freezable>, <xref:System.Windows.Media.Geometry> objets fournissent plusieurs fonctionnalités spéciales : ils peuvent être déclarés en tant que [ressources](../../../../docs/framework/wpf/advanced/xaml-resources.md), partagés entre plusieurs objets, définis en lecture seule pour améliorer les performances, clonés, et rendus thread-safe. Pour plus d’informations sur les différentes fonctionnalités fournies par <xref:System.Windows.Freezable> , consultez la [vue d’ensemble des objets Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).  
   
@@ -187,7 +175,7 @@ PathGeometry avec plusieurs figures
 ## <a name="composite-geometries"></a>Géométries composites  
  Objets de géométrie composite peuvent être créés à l’aide un <xref:System.Windows.Media.GeometryGroup>, un <xref:System.Windows.Media.CombinedGeometry>, ou en appelant la méthode statique <xref:System.Windows.Media.Geometry> méthode <xref:System.Windows.Media.Geometry.Combine%2A>.  
   
--   Le <xref:System.Windows.Media.CombinedGeometry> objet et la <xref:System.Windows.Media.Geometry.Combine%2A> méthode effectue une opération booléenne pour combiner la zone définie par deux géométries. <xref:System.Windows.Media.Geometry>les objets qui n’ont aucune zone sont ignorés. Seuls deux <xref:System.Windows.Media.Geometry> objets peuvent être combinés (bien que ces deux géométries peuvent également être composites).  
+-   Le <xref:System.Windows.Media.CombinedGeometry> objet et la <xref:System.Windows.Media.Geometry.Combine%2A> méthode effectue une opération booléenne pour combiner la zone définie par deux géométries. <xref:System.Windows.Media.Geometry> les objets qui n’ont aucune zone sont ignorés. Seuls deux <xref:System.Windows.Media.Geometry> objets peuvent être combinés (bien que ces deux géométries peuvent également être composites).  
   
 -   Le <xref:System.Windows.Media.GeometryGroup> classe crée un amalgame de la <xref:System.Windows.Media.Geometry> objets qu’il contient sans combiner leur zone. Un nombre quelconque de <xref:System.Windows.Media.Geometry> objets peuvent être ajoutés à un <xref:System.Windows.Media.GeometryGroup>. Pour obtenir un exemple, consultez [Créer une forme composite](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-shape.md).  
   
@@ -219,11 +207,11 @@ PathGeometry avec plusieurs figures
 ## <a name="other-geometry-features"></a>Autres fonctionnalités de géométrie  
  La <xref:System.Windows.Media.Geometry> classe fournit également des méthodes utilitaires utiles, telles que les éléments suivants :  
   
--   <xref:System.Windows.Media.Geometry.GetArea%2A>-Obtient la zone de la <xref:System.Windows.Media.Geometry>.  
+-   <xref:System.Windows.Media.Geometry.GetArea%2A> -Obtient la zone de la <xref:System.Windows.Media.Geometry>.  
   
--   <xref:System.Windows.Media.Geometry.FillContains%2A>-Détermine si la géométrie contient une autre <xref:System.Windows.Media.Geometry>.  
+-   <xref:System.Windows.Media.Geometry.FillContains%2A> -Détermine si la géométrie contient une autre <xref:System.Windows.Media.Geometry>.  
   
--   <xref:System.Windows.Media.Geometry.StrokeContains%2A>-Détermine si le trait d’un <xref:System.Windows.Media.Geometry> contient un point spécifié.  
+-   <xref:System.Windows.Media.Geometry.StrokeContains%2A> -Détermine si le trait d’un <xref:System.Windows.Media.Geometry> contient un point spécifié.  
   
  Consultez la <xref:System.Windows.Media.Geometry> classe pour une liste complète de ses méthodes.  
   

@@ -1,29 +1,15 @@
 ---
 title: 'Procédure : ajouter la détectabilité par programme à un service et un client WCF'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3c0da3598b115df4f135ac3fab516447df85e258
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 0685694db8f67ed690cf2a8002bf70a05695a192
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Procédure : ajouter la détectabilité par programme à un service et un client WCF
-Cette rubrique explique comment rendre un service [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] détectable. Il est basé sur le [auto-hébergement](http://go.microsoft.com/fwlink/?LinkId=145523) exemple.  
+Cette rubrique explique comment créer un service Windows Communication Foundation (WCF) pouvant être découvert. Il est basé sur le [auto-hébergement](http://go.microsoft.com/fwlink/?LinkId=145523) exemple.  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>Pour configurer l'exemple existant de service Self-Host pour la découverte  
   
@@ -105,7 +91,7 @@ Cette rubrique explique comment rendre un service [!INCLUDE[indigo1](../../../..
     }  
     ```  
   
-     Cela indique à [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] que la classe <xref:System.ServiceModel.Discovery.DiscoveryClient> doit utiliser le point de terminaison de découverte UDP standard pour envoyer et recevoir des messages de découverte.  
+     Cela indique à WCF qui la <xref:System.ServiceModel.Discovery.DiscoveryClient> classe doit-elle utiliser le point de terminaison de découverte UDP standard pour envoyer et recevoir des messages de découverte.  
   
 8.  Sur la ligne suivante, appelez la méthode <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> et spécifiez une instance <xref:System.ServiceModel.Discovery.FindCriteria> qui contient le contrat de service que vous souhaitez rechercher. Le contrat à spécifier dans le cas présent est `ICalculator`.  
   

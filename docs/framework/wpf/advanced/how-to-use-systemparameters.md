@@ -1,37 +1,23 @@
 ---
 title: Guide pratique pour utiliser SystemParameters
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - classes [WPF], SystemParameters
 ms.assetid: 02e7a5de-94eb-4953-b91c-52e6c872ad5b
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ec333fbc30374ff6f8e2e7674ab332644ff7aad0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 07b73d78a022e508f9ed8ca2e80b71bc2ab89910
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-systemparameters"></a>Guide pratique pour utiliser SystemParameters
 Cet exemple montre comment accéder à et utiliser les propriétés de <xref:System.Windows.SystemParameters> afin d’appliquer un style ou personnaliser un bouton.  
   
 ## <a name="example"></a>Exemple  
- Les ressources système exposent plusieurs paramètres système en tant que ressources pour vous aider à créer des visuels cohérents avec les paramètres système. <xref:System.Windows.SystemParameters>est une classe qui contient à la fois des propriétés de valeur de paramètre système et des clés de ressources liées aux valeurs. Par exemple, <xref:System.Windows.SystemParameters.FullPrimaryScreenHeight%2A> est un <xref:System.Windows.SystemParameters> valeur de propriété et <xref:System.Windows.SystemParameters.FullPrimaryScreenHeightKey%2A> est la clé de ressource correspondante.  
+ Les ressources système exposent plusieurs paramètres système en tant que ressources pour vous aider à créer des visuels cohérents avec les paramètres système. <xref:System.Windows.SystemParameters> est une classe qui contient à la fois des propriétés de valeur de paramètre système et des clés de ressources liées aux valeurs. Par exemple, <xref:System.Windows.SystemParameters.FullPrimaryScreenHeight%2A> est un <xref:System.Windows.SystemParameters> valeur de propriété et <xref:System.Windows.SystemParameters.FullPrimaryScreenHeightKey%2A> est la clé de ressource correspondante.  
   
  Dans [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], vous pouvez utiliser les membres de <xref:System.Windows.SystemParameters> comme utilisation de propriété statique ou un fait référence à une ressource dynamique (avec la valeur de propriété statique en tant que la clé). Utilisez une référence de ressource dynamique si vous souhaitez que la valeur système soit mise à jour automatiquement pendant que l’application s’exécute ; sinon, utilisez une référence statique. Les clés de ressources ont le suffixe `Key` ajouté au nom de propriété.  
   

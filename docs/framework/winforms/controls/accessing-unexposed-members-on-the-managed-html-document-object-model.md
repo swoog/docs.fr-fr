@@ -1,13 +1,6 @@
 ---
-title: "Accès aux membres non exposés sur le modèle objet de document HTML managé"
-ms.custom: 
+title: Accès aux membres non exposés sur le modèle objet de document HTML managé
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,22 +8,17 @@ helpviewer_keywords:
 - unexposed members
 - managed HTML DOM [Windows Forms], accessing unexposed members
 ms.assetid: 762295bd-2355-4aa7-b43c-5bff997a33e6
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 97a795930eb6965bd0ed15254969a72f45700306
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d2fbccfb3ecd7716420ca951e86f728798d25258
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="accessing-unexposed-members-on-the-managed-html-document-object-model"></a>Accès aux membres non exposés sur le modèle objet de document HTML managé
 Le managé HTML modèle DOM (Document Object) contient une classe appelée <xref:System.Windows.Forms.HtmlElement> qui expose les propriétés, méthodes et événements que tous les éléments HTML ont en commun. Dans certains cas, toutefois, vous devez accéder aux membres de l’interface managée n’expose pas directement. Cette rubrique examine deux façons d’accéder aux membres non exposés, y compris [!INCLUDE[jsprjscript](../../../../includes/jsprjscript-md.md)] et les fonctions VBScript définies à l’intérieur d’une page Web.  
   
 ## <a name="accessing-unexposed-members-through-managed-interfaces"></a>L’accès aux membres non exposés via des Interfaces managées  
- <xref:System.Windows.Forms.HtmlDocument>et <xref:System.Windows.Forms.HtmlElement> fournissent quatre méthodes qui permettent d’accéder aux membres non exposés. Le tableau suivant indique les types et leurs méthodes correspondantes.  
+ <xref:System.Windows.Forms.HtmlDocument> et <xref:System.Windows.Forms.HtmlElement> fournissent quatre méthodes qui permettent d’accéder aux membres non exposés. Le tableau suivant indique les types et leurs méthodes correspondantes.  
   
 |Type de membre|Méthode (s)|  
 |-----------------|-----------------|  

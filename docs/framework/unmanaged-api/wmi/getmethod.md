@@ -1,11 +1,7 @@
 ---
-title: "GetMethod (fonction) (référence des API non managées)"
-description: "La fonction GetMethod récupère des informations sur une méthode."
+title: GetMethod (fonction) (référence des API non managées)
+description: La fonction GetMethod récupère des informations sur une méthode.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - GetMethod
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f22a2dfa7aae411cac960cbad2017718df8057e1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 65b8cb74a028892a3494e818f2b523f75e8766a1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getmethod-function"></a>GetMethod (fonction)
 Récupère des informations sur la méthode spécifiée.
@@ -83,14 +76,14 @@ Cette fonction encapsule un appel à la [IWbemClassObject::GetMethod](https://ms
 
 Gestion de Windows peut définir le [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) pointeur vers `null` si la méthode n’a aucun paramètre dans.
 
-Dans `ppInSignature` et `ppOutSignature` décrivent respectivement en tant que propriétés dans les paramètres, in et out un `IWbemClassObject` l’instance de la classe système [_Parameters](https://msdn.microsoft.com/library/aa394667(v=vs.85).aspx). Les propriétés de `ppInsignature` sont nommés **Param***n*, où  *n*  est la position du paramètre dans la signature de méthode (par exemple, en tant que `Param1`, `Param2`, etc..). Les propriétés de `ppOutSignature` sont également appelés **Param***n*, et la valeur de retour est nommée **ReturnValue**. Pour plus d’informations et obtenir un exemple, consultez [IWbemClassObject::GetMethod méthode](https://msdn.microsoft.com/library/aa391443(v=vs.85).aspx).
+Dans `ppInSignature` et `ppOutSignature` décrivent respectivement en tant que propriétés dans les paramètres, in et out un `IWbemClassObject` l’instance de la classe système [_Parameters](https://msdn.microsoft.com/library/aa394667(v=vs.85).aspx). Les propriétés de `ppInsignature` sont nommés **Param *** n*, où *n* est la position du paramètre dans la signature de méthode (tel que `Param1`, `Param2`, etc..). Les propriétés de `ppOutSignature` sont également appelés **Param *** n*, et la valeur de retour est nommée **ReturnValue**. Pour plus d’informations et obtenir un exemple, consultez [IWbemClassObject::GetMethod méthode](https://msdn.microsoft.com/library/aa391443(v=vs.85).aspx).
 
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
 **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** WMINet_Utils.idl  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versions du .NET framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
 [WMI et les compteurs de Performance (référence des API non managées)](index.md)

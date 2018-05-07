@@ -1,33 +1,19 @@
 ---
 title: 'Comment : utiliser le fournisseur de rôle ASP.NET avec un service'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 88d33a81-8ac7-48de-978c-5c5b1257951e
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9180ebe687d61315a66160a6fc95569a0e6b8e72
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 846caf59816ee23166fb382a0c36ac0fed9df151
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-the-aspnet-role-provider-with-a-service"></a>Comment : utiliser le fournisseur de rôle ASP.NET avec un service
 Le fournisseur de rôle [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] (conjointement au fournisseur d'appartenances [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ) est une fonctionnalité qui permet aux développeurs [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] de créer des sites Web permettant aux utilisateurs de créer un compte avec un site et d'être affectés d'un rôle à des fins d'autorisation. Grâce à cette fonctionnalité, les utilisateurs peuvent établir un compte avec le site et disposer d’un accès exclusif à celui-ci et à ses services. Cette approche diffère de la sécurité Windows, qui requiert que les utilisateurs disposent de comptes dans un domaine Windows. Au lieu de cela, tout utilisateur qui fournit ses informations d'identification (combinaison nom d'utilisateur/mot de passe) peut utiliser le site et ses services.  
   
  Pour un exemple d’application, consultez [Membership and Role Provider](../../../../docs/framework/wcf/samples/membership-and-role-provider.md). Pour plus d’informations sur la [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] fonctionnalité de fournisseur d’appartenance, consultez [Comment : utiliser le fournisseur d’appartenances ASP.NET](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md).  
   
- La fonctionnalité de fournisseur de rôle utilise une base de données SQL Server pour stocker des informations utilisateur. Les développeurs [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] peuvent tirer parti de ces fonctionnalités à des fins de sécurité. En cas d'intégration dans une application [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], les utilisateurs doivent fournir une combinaison nom d'utilisateur/mot de passe à l'application cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Pour permettre à [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] d'utiliser la base de données, vous devez créer une instance de la classe <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>, affectez à sa propriété <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A> la valeur <xref:System.ServiceModel.Description.PrincipalPermissionMode.UseAspNetRoles> et ajoutez l'instance à la collection de comportements au <xref:System.ServiceModel.ServiceHost> qui héberge le service.  
+ La fonctionnalité de fournisseur de rôle utilise une base de données SQL Server pour stocker des informations utilisateur. Les développeurs de Windows Communication Foundation (WCF) peuvent tirer parti de ces fonctionnalités pour des raisons de sécurité. Quand elle est intégrée dans une application WCF, les utilisateurs doivent fournir une combinaison nom/mot de passe d’utilisateur à l’application cliente WCF. Pour permettre à la base de données WCF, vous devez créer une instance de la <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> classe, définissez son <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A> propriété <xref:System.ServiceModel.Description.PrincipalPermissionMode.UseAspNetRoles>et ajoutez l’instance à la collection de comportements à le <xref:System.ServiceModel.ServiceHost> qui héberge le service.  
   
 ### <a name="to-configure-the-role-provider"></a>Pour configurer le fournisseur de rôle  
   

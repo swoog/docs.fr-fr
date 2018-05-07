@@ -1,23 +1,12 @@
 ---
 title: Option d'encodage d'instance
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 89e4b029-4f68-438c-8117-9b21fe094ef4
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a7664eecb68ff9aec0f5e3e31aa08058700f0e92
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cfe45428f546b6f47709c321099efdf7fbb25ef4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="instance-encoding-option"></a>Option d'encodage d'instance
 Le **Option d’encodage d’Instance** propriété du magasin d’instances de Workflow SQL vous permet de spécifier si le fournisseur de persistance SQL doit compresser les informations d’état du flux de travail d’instance à l’aide de l’algorithme GZip avant d’enregistrer le informations dans la base de données de persistance. Les valeurs autorisées pour cette propriété sont : Gzip et Aucun. La valeur par défaut est None. La liste suivante décrit ces trois options.  

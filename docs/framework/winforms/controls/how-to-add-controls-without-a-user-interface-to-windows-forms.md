@@ -1,14 +1,6 @@
 ---
 title: 'Comment : ajouter des contrôles sans interface utilisateur à des Windows Forms'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -22,17 +14,11 @@ helpviewer_keywords:
 - Windows Forms controls, nonvisual
 - nonvisual controls [Windows Forms]
 ms.assetid: 52134d9c-cff6-4eed-8e2b-3d5eb3bd494e
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e900c1c34f69531a14cfa11803ef5a6afb4783c6
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 0a3e9ab5a048e085b192ffc0eb796caae1e58efe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-add-controls-without-a-user-interface-to-windows-forms"></a>Comment : ajouter des contrôles sans interface utilisateur à des Windows Forms
 Un contrôle non visuel (ou un composant) fournit des fonctionnalités à votre application. Contrairement à d’autres contrôles, les composants ne fournissent pas d’interface utilisateur à l’utilisateur et par conséquent, n’avez pas besoin être affiché sur l’aire du Concepteur Windows Forms. Lorsqu’un composant est ajouté à un formulaire, le Concepteur Windows Forms affiche une barre d’état redimensionnable au bas de l’écran où tous les composants sont affichés. Une fois qu’un contrôle a été ajouté à la barre d’état du composant, vous pouvez sélectionner le composant et définissez ses propriétés comme vous le feriez pour tout autre contrôle sur le formulaire.  

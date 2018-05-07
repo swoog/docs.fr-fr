@@ -1,11 +1,7 @@
 ---
-title: "ExecNotificationQueryWmi (fonction) (référence des API non managées)"
-description: "La fonction ExecNotificationQueryWmi exécute une requête pour recevoir les événements."
+title: ExecNotificationQueryWmi (fonction) (référence des API non managées)
+description: La fonction ExecNotificationQueryWmi exécute une requête pour recevoir les événements.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - ExecNotificationQueryWmi
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d6dd0926d2262f8d0aa125b86755017a65a95a7f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4b5c26ab9c273b134915eea39078a83f569bcd32
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="execnotificationquerywmi-function"></a>ExecNotificationQueryWmi (fonction)
 Exécute une requête pour recevoir les événements. L’appel retourne immédiatement, et l’appelant peut interroger l’énumérateur retourné pour les événements qu’elles arrivent. Libération de l’énumérateur retourné annule la requête.  
@@ -65,7 +58,7 @@ HRESULT ExecNotificationQueryWmi (
 
 | Constante | Value  | Description  |
 |---------|---------|---------|
-| `WBEM_FLAG_RETURN_IMMEDIATELY` | 0 x 10 | L’indicateur provoque un appel semi-synchrone. Si cet indicateur n’est pas défini, l’appel échoue. Il s’agit, car les événements sont reçus en continu, ce qui signifie que l’utilisateur doit interroger l’énumérateur retourné. Cet appel de blocage infini rend qui est impossible. |
+| `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | L’indicateur provoque un appel semi-synchrone. Si cet indicateur n’est pas défini, l’appel échoue. Il s’agit, car les événements sont reçus en continu, ce qui signifie que l’utilisateur doit interroger l’énumérateur retourné. Cet appel de blocage infini rend qui est impossible. |
 | `WBEM_FLAG_FORWARD_ONLY` | 0 x 20 | La fonction retourne un énumérateur de type avant uniquement. En règle générale, les énumérateurs avant uniquement sont plus rapides et utilisent moins de mémoire que les énumérateurs classiques, mais ils ne permettent pas d’appels à [Clone](clone.md). |
 
 `pCtx`  
@@ -77,7 +70,7 @@ HRESULT ExecNotificationQueryWmi (
 `authLevel`  
 [in] Le niveau d’autorisation.
 
-`impLevel`[in] Le niveau d’emprunt d’identité.
+`impLevel` [in] Le niveau d’emprunt d’identité.
 
 `pCurrentNamespace`   
 [in] Un pointeur vers un [IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx) objet qui représente l’espace de noms actuel.
@@ -122,12 +115,12 @@ Il existe des limites au nombre de `AND` et `OR` mots clés qui peuvent être ut
 
 Si l’appel de fonction échoue, vous pouvez obtenir des informations d’erreur supplémentaires en appelant le [GetErrorInfo](geterrorinfo.md) (fonction).
 
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** WMINet_Utils.idl  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versions du .NET framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
 [WMI et les compteurs de Performance (référence des API non managées)](index.md)

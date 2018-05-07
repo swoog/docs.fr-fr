@@ -1,27 +1,15 @@
 ---
 title: Stand-Alone Diagnostics Feed, exemple
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d31c6c1f-292c-4d95-8e23-ed8565970ea5
-caps.latest.revision: "26"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7cf6bb08dc6607bf6c5b9e283ce449b603cb38d3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 1edd1c2184dde368fbd16299a836f1811dd24ba6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="stand-alone-diagnostics-feed-sample"></a>Stand-Alone Diagnostics Feed, exemple
-Cet exemple illustre la création d'un flux RSS/Atom pour la syndication avec [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Il s'agit d'un programme « Hello World » de base qui affiche l'essentiel du modèle objet et indique comment l'installer sur un service [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+Cet exemple montre comment créer un flux de syndication avec Windows Communication Foundation (WCF) RSS/Atom. Il s’agit d’un programme « Hello World » de base qui montre les principes de base du modèle d’objet et comment configurer un service Windows Communication Foundation (WCF).  
   
  Les modèles de syndication [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fonctionnent comme des opérations de service qui renvoient un type de données spécifique (<xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>). Les instances de <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> peuvent sérialiser un flux aux formats RSS 2.0 et Atom 1.0. L'exemple de code suivant illustre le contrat utilisé.  
   
@@ -60,7 +48,7 @@ WebServiceHost host = new WebServiceHost(typeof(ProcessService), new Uri("http:/
 <%@ ServiceHost Language="C#|VB" Debug="true" Service="ProcessService" %>  
 ```  
   
- Ce service reçoit des demandes à l'aide d'une demande HTTP GET standard ; par conséquent, vous pouvez utiliser tout client RSS ou ATOM pour accéder au service. Par exemple, vous pouvez consulter la sortie de ce service en naviguant jusqu'à http://localhost:8000/diagnostics/feed/?format=atom ou http://localhost:8000/diagnostics/feed/?format=rss dans un navigateur RSS tel qu'Internet Explorer 7.  
+ Ce service reçoit des demandes à l'aide d'une demande HTTP GET standard ; par conséquent, vous pouvez utiliser tout client RSS ou ATOM pour accéder au service. Par exemple, vous pouvez afficher la sortie de ce service en accédant à http://localhost:8000/diagnostics/feed/?format=atom ou http://localhost:8000/diagnostics/feed/?format=rss dans un navigateur prenant en charge RSS comme Internet Explorer 7.  
   
  Vous pouvez également utiliser le [comment le WCF Syndication objet modèle est mappé à Atom et RSS](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md) pour lire des données syndiquées et traiter à l’aide du code impératif.  
   
@@ -93,14 +81,14 @@ foreach (SyndicationItem i in feed.Items)
   
 3.  Exécutez l'application console.  
   
-4.  Au cours de l'exécution de l'application console, naviguez jusqu'à http://localhost:8000/diagnostics/feed/?format=atom ou http://localhost:8000/diagnostics/feed/?format=rss à l'aide d'un navigateur RSS.  
+4.  Pendant l’exécution de l’application console, accédez à http://localhost:8000/diagnostics/feed/?format=atom ou http://localhost:8000/diagnostics/feed/?format=rss à l’aide d’un navigateur prenant en charge RSS.  
   
 > [!IMPORTANT]
 >  Les exemples peuvent déjà être installés sur votre ordinateur. Recherchez le répertoire (par défaut) suivant avant de continuer.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à la page [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les exemples [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Syndication\DiagnosticsFeed`  
   

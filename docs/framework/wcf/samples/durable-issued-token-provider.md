@@ -1,30 +1,18 @@
 ---
 title: Durable Issued Token Provider
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fc92bd92f688ae2b12889779083142e6ddd481d9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 20006f87f7ecba9c09f6c957f8b6355dec7fbd32
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="durable-issued-token-provider"></a>Durable Issued Token Provider
 Cet exemple montre comment implémenter un fournisseur de jetons émis client personnalisé.  
   
 ## <a name="discussion"></a>Discussion  
- Un fournisseur de jetons dans [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] permet de fournir des informations d'identification à l'infrastructure de sécurité. En général, le fournisseur de jetons examine la cible et publie des informations d'identification appropriées afin que l'infrastructure de sécurité puisse sécuriser le message. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] est fourni avec un fournisseur de jetons [!INCLUDE[infocard](../../../../includes/infocard-md.md)]. Les fournisseurs de jetons personnalisés sont utiles dans les cas suivants :  
+ Un fournisseur de jetons dans Windows Communication Foundation (WCF) est utilisé pour fournir des informations d’identification pour l’infrastructure de sécurité. En général, le fournisseur de jetons examine la cible et publie des informations d'identification appropriées afin que l'infrastructure de sécurité puisse sécuriser le message. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] est fourni avec un fournisseur de jetons [!INCLUDE[infocard](../../../../includes/infocard-md.md)]. Les fournisseurs de jetons personnalisés sont utiles dans les cas suivants :  
   
 -   Si vous disposez d'un magasin d'informations d'identification avec lequel le fournisseur de jetons intégré ne peut pas fonctionner.  
   
@@ -261,7 +249,7 @@ Cet exemple montre comment implémenter un fournisseur de jetons émis client pe
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à la page [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les exemples [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Security\DurableIssuedTokenProvider`  
   

@@ -1,30 +1,18 @@
 ---
 title: Programmation de service au niveau du canal
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8d8dcd85-0a05-4c44-8861-4a0b3b90cca9
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0a1a6ef03b3ee0cc68809ec6ba80a7eadbc44cb1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: e48c519f6e10be4521d75345845eb5c019ec342c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="service-channel-level-programming"></a>Programmation de service au niveau du canal
-Cette rubrique décrit comment écrire une application de service [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] sans utiliser le <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> et son modèle objet associé.  
+Cette rubrique explique comment écrire une application de service Windows Communication Foundation (WCF) sans utiliser le <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> et son modèle objet associé.  
   
 ## <a name="receiving-messages"></a>Réception des messages  
  Pour pouvoir recevoir et traiter des messages, vous devez effectuer les étapes suivantes :  

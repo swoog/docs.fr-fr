@@ -1,24 +1,14 @@
 ---
-title: "ICorDebugProcess6::GetExportStepInfo, méthode"
-ms.custom: 
+title: ICorDebugProcess6::GetExportStepInfo, méthode
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 ms.assetid: a927e0ac-f110-426d-bbec-9377a29c8f17
-caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d3c69bbc904f54636e56be6d235d1070b9fecf1c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4d0758a8603b7c31844b39c9f3beefea04e0a029
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugprocess6getexportstepinfo-method"></a>ICorDebugProcess6::GetExportStepInfo, méthode
 Fournit des informations sur les fonctions exportées du runtime pour faciliter l'exécution pas à pas du code managé.  
@@ -48,7 +38,7 @@ HRESULT GetExportStepInfo(
 |Valeur de retour|Description|  
 |------------------|-----------------|  
 |`S_OK`|L'appel de méthode a réussi.|  
-|`E_POINTER`|`pInvokeKind`ou `pInvokePurpose` est **null**.|  
+|`E_POINTER`|`pInvokeKind` ou `pInvokePurpose` est **null**.|  
 |Autres valeurs `HRESULT` indiquant un échec.|Selon le cas|  
   
 ## <a name="remarks"></a>Notes  
@@ -56,14 +46,14 @@ HRESULT GetExportStepInfo(
 > [!NOTE]
 >  Cette méthode est uniquement disponible avec .NET Native.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **Versions du .NET framework :** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [ICorDebugProcess6, interface](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-interface.md)  

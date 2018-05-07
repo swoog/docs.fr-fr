@@ -1,27 +1,15 @@
 ---
 title: HttpCookieSession
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 101cb624-8303-448a-a3af-933247c1e109
-caps.latest.revision: "31"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4c06efd7450afe93eaecca1e678eb6f8bf5de7a6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 54e2459f5b480d8f53df42a08d4ebc8ac07b128c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="httpcookiesession"></a>HttpCookieSession
-Cet exemple montre comment générer un canal de protocole personnalisé pour utiliser des cookies HTTP pour la gestion des sessions. Ce canal active la communication entre les services [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] et les clients ASMX ou entre les clients [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] et les services ASMX.  
+Cet exemple montre comment générer un canal de protocole personnalisé pour utiliser des cookies HTTP pour la gestion des sessions. Ce canal permet la communication entre les services Windows Communication Foundation (WCF) et les clients ASMX ou entre [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] les clients et les services ASMX.  
   
  Lorsqu'un client appelle une méthode Web dans un service Web ASMX basé sur une session, le moteur [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] effectue les opérations suivantes :  
   
@@ -40,7 +28,7 @@ Cet exemple montre comment générer un canal de protocole personnalisé pour ut
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à la page [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les exemples [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\HttpCookieSession`  
   

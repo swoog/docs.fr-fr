@@ -1,11 +1,7 @@
 ---
-title: "PutInstanceWmi (fonction) (référence des API non managées)"
-description: "La fonction PutInstanceWmi crée ou met à jour une instance d’une classe existante."
+title: PutInstanceWmi (fonction) (référence des API non managées)
+description: La fonction PutInstanceWmi crée ou met à jour une instance d’une classe existante.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - PutInstanceWmi
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b1996103eea87562226537f9aa90dc337c56313c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0db08ef4938a88ee657e2d65dda70edac09df8ef
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="putinstancewmi-function"></a>PutInstanceWmi (fonction)
 Crée ou met à jour une instance d’une classe existante. L’instance est écrit dans le référentiel WMI. 
@@ -59,7 +52,7 @@ HRESULT PutInstanceWmi (
 | `WBEM_FLAG_CREATE_OR_UPDATE` | 0 | Créer l’instance si elle n’existe pas, ou remplacer si elle existe déjà. |
 | `WBEM_FLAG_UPDATE_ONLY` | 1 | Mettre à jour l’instance. L’instance doit exister pour l’appel réussisse. |
 | `WBEM_FLAG_CREATE_ONLY` | 2 | Créer l’instance. L’appel échoue si l’instance existe déjà. |
-| `WBEM_FLAG_RETURN_IMMEDIATELY` | 0 x 10 | L’indicateur provoque un appel semi-synchrone. |
+| `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | L’indicateur provoque un appel semi-synchrone. |
 
 `pCtx`  
 [in] En règle générale, cette valeur est `null`. Dans le cas contraire, il est un pointeur vers un [IWbemContext](https://msdn.microsoft.com/library/aa391465(v=vs.85).aspx) instance qui peut être utilisé par le fournisseur qui fournit les classes demandées. 
@@ -80,7 +73,7 @@ Les valeurs suivantes est retournées par cette fonction sont définies dans le 
 | `WBEM_E_INVALID_OBJECT` | 0x8004100f | L’instance spécifiée n’est pas valide. (Par exemple, l’appel `PutInstanceWmi` avec une classe retourne cette valeur.) |
 | `WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | Un paramètre n’est pas valide. |
 | `WBEM_E_ALREADY_EXISTS` | 0x80041019 | Le `WBEM_FLAG_CREATE_ONLY` indicateur a été spécifié, mais l’instance existe déjà. |
-| `WBEM_E_NOT_FOUND` | 0x80041002 | `WBEM_FLAG_UPDATE_ONLY`a été spécifié dans `lFlags`, mais l’instance n’existe pas. |
+| `WBEM_E_NOT_FOUND` | 0x80041002 | `WBEM_FLAG_UPDATE_ONLY` a été spécifié dans `lFlags`, mais l’instance n’existe pas. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Pas assez de mémoire est disponible pour terminer l’opération. |
 | `WBEM_E_SHUTTING_DOWN` | 0x80041033 | WMI s’est probablement arrêté, puis redémarrez. Appelez [ConnectServerWmi](connectserverwmi.md) à nouveau. |
 | `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | Le lien de remote procedure call (RPC) entre les processus en cours et WMI a échoué. |
@@ -101,12 +94,12 @@ Appel de `PutInstanceWmi` sur une instance d’une classe abstraite n’est pas 
 
 Si l’appel de fonction échoue, vous pouvez obtenir des informations d’erreur supplémentaires en appelant le [GetErrorInfo](geterrorinfo.md) (fonction).
 
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** WMINet_Utils.idl  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versions du .NET framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
 [WMI et les compteurs de Performance (référence des API non managées)](index.md)

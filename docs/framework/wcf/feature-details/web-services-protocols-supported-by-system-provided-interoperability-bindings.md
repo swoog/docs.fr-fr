@@ -1,33 +1,19 @@
 ---
 title: Protocoles de services Web pris en charge par des liaisons d'interopérabilité fournies par le système
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - WS-protocols
 - Web services protocols
 - Windows Communication Foundation, Web service protocols
 ms.assetid: 1f7fc4ff-30fe-4e46-adda-91caad3b06c6
-caps.latest.revision: 39
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 998920e4c1d7e0524da1c9843378e92517f4ee96
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 728dba65a99d71a52551b16e5f1822104ed40ea7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="web-services-protocols-supported-by-system-provided-interoperability-bindings"></a>Protocoles de services Web pris en charge par des liaisons d’interopérabilité fournies par le système
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] a été conçu pour interagir avec les services Web qui prennent en charge un ensemble de spécifications connues sous le nom de spécifications de services Web. Pour simplifier la configuration de service afin d'obtenir les meilleures pratiques d'interopérabilité, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] introduit trois liaisons interopérables fournies par le système : <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>, <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType>et <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>. Afin de permettre l'interopérabilité avec les standards OASIS (Organization for the Advancement of Structured Information Standards), [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] inclut une liaison interopérable fournie par le système : <xref:System.ServiceModel.WS2007HttpBinding?displayProperty=nameWithType>. Pour la publication des métadonnées, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] inclut deux liaisons interopérables fournies par le système : [ \<mexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md) et [ \<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md). Cette rubrique répertorie les spécifications prises en charge par les liaisons interopérable fournies par le système.  
+Windows Communication Foundation (WCF) est conçu pour interagir avec les services Web qui prennent en charge un ensemble de spécifications appelées des spécifications de services Web. Pour simplifier la configuration de service pour les meilleures pratiques de l’interopérabilité, WCF introduit trois liaisons interopérables fournies par le système : <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>, <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType>, et <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>. Pour une interopérabilité avec l’organisation pour les normes OASIS Advancement of Structured Information Standards (), WCF inclut une liaison interopérable fournie par le système : <xref:System.ServiceModel.WS2007HttpBinding?displayProperty=nameWithType>. Pour la publication des métadonnées, WCF inclut deux liaisons interopérables fournies par le système : [ \<mexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md) et [ \<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md). Cette rubrique répertorie les spécifications prises en charge par les liaisons interopérable fournies par le système.  
   
 ## <a name="web-services-protocols-supported-by-basichttpbinding-wshttpbinding-ws2007httpbinding-and-wsdualhttpbinding-bindings"></a>Protocoles de services Web pris en charge par basicHttpBinding, wsHttpBinding, ws2007HttpBinding et wsDualHttpBinding Bindings  
   
@@ -41,11 +27,11 @@ ms.lasthandoff: 04/30/2018
 |--------------|--------------|-----------------------------|  
 |Transport|HTTP 1.1|[PROTOCOLE HTTP 1.1](http://go.microsoft.com/fwlink/?LinkId=84048)<br /><br /> `BasicHttpBinding`, `WSHttpBinding` et `WS2007HttpBinding` utilisent les transports HTTP et HTTPS.|  
 |Messagerie|MTOM|[MTOM](http://go.microsoft.com/fwlink/?LinkId=95326)<br /><br /> `basicHttpBinding`, `wsHttpBinding` et `ws2007HttpBinding` prennent en charge MTOM (Message Transmission Optimization Mechanism). Non utilisé par défaut. Pour utiliser MTOM, affectez `messageEncoding` à l'attribut `"Mtom"`.<br /><br /> Exemple :<br /><br /> `<wsHttpBinding> <binding messageEncoding="Mtom"/> </wsHttpBinding>`|  
-|Métadonnées|WSDL 1.1|[WSDL 1.1](http://go.microsoft.com/fwlink/?LinkId=94859)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilise WSDL (Web Services Description Language) pour décrire des services.|  
-|Métadonnées|WS-Policy|[WS-Policy.](http://go.microsoft.com/fwlink/?LinkId=94864)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilise la spécification WS-Policy avec des assertions spécifiques au domaine pour décrire des spécifications de service et des fonctions.|  
-|Métadonnées|WS-Policy 1.5|[WS-Policy 1.5](http://go.microsoft.com/fwlink/?LinkId=95327)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilise la spécification WS-Policy avec des assertions spécifiques au domaine pour décrire des spécifications de service et des fonctions.|  
-|Métadonnées|WS-PolicyAttachment|[WS-PolicyAttachment](http://go.microsoft.com/fwlink/?LinkId=95328)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implémente WS-PolicyAttachment pour joindre des expressions de stratégie à différentes portées dans WSDL (Web Services Description Language).|  
-|Métadonnées|WS-MetadataExchange|[WS-MetadataExchange](http://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implémente WS-MetadataExchange pour récupérer XML Schema, WSDL et WS-Policy.|  
+|Métadonnées|WSDL 1.1|[WSDL 1.1](http://go.microsoft.com/fwlink/?LinkId=94859)<br /><br /> WCF utilise Web Services Description Language (WSDL) pour décrire des services.|  
+|Métadonnées|WS-Policy|[WS-Policy.](http://go.microsoft.com/fwlink/?LinkId=94864)<br /><br /> WCF utilise la spécification de WS-Policy avec des assertions spécifiques au domaine pour décrire les fonctions et les exigences de service.|  
+|Métadonnées|WS-Policy 1.5|[WS-Policy 1.5](http://go.microsoft.com/fwlink/?LinkId=95327)<br /><br /> WCF utilise la spécification de WS-Policy avec des assertions spécifiques au domaine pour décrire les fonctions et les exigences de service.|  
+|Métadonnées|WS-PolicyAttachment|[WS-PolicyAttachment](http://go.microsoft.com/fwlink/?LinkId=95328)<br /><br /> WCF implémente WS-PolicyAttachment pour joindre des expressions de stratégie à différentes portées dans Web Services Description Language (WSDL).|  
+|Métadonnées|WS-MetadataExchange|[WS-MetadataExchange](http://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> WCF implémente WS-MetadataExchange pour récupérer XML Schema, WSDL et WS-Policy.|  
   
 ### <a name="basichttpbinding"></a>basicHttpBinding  
   
@@ -70,7 +56,7 @@ ms.lasthandoff: 04/30/2018
 |Sécurité|WS-SecureConversation|[WS-SecureConversation](http://go.microsoft.com/fwlink/?LinkId=95317)<br /><br /> Utilisé pour fournir une session sécurisée lorsque l'attribut `security/@mode` a la valeur "Message" et l'attribut `message/@establishSecurityContext` a la valeur "true" (valeur par défaut).|  
 |Sécurité|WS-Trust|[WS-Trust.](http://go.microsoft.com/fwlink/?LinkId=95318)<br /><br /> Utilisé par WS-SecureConversation (voir ci-dessus).|  
 |Messagerie fiable|WS-ReliableMessaging|[WS-ReliableMessaging.](http://go.microsoft.com/fwlink/?LinkId=95322)<br /><br /> Utilisé lorsque la liaison est configurée pour utiliser `reliableSession`.<br /><br /> `<wsHttpBinding>  <binding name="myBinding">    <reliableSession/>   </binding> </wsHttpBinding>`|  
-|Transactions|WS-AtomicTransaction|[WS-AtomicTransaction](http://go.microsoft.com/fwlink/?LinkId=95323)<br /><br /> À utiliser pour la communication entre les gestionnaires de transactions. Les clients et les services [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilisent systématiquement les gestionnaires de transactions locaux.|  
+|Transactions|WS-AtomicTransaction|[WS-AtomicTransaction](http://go.microsoft.com/fwlink/?LinkId=95323)<br /><br /> À utiliser pour la communication entre les gestionnaires de transactions. Clients et services WCF utilisent systématiquement les gestionnaires de transactions local.|  
 |Transactions|WS-Coordination|[WS-Coordination](http://go.microsoft.com/fwlink/?LinkId=95324)<br /><br /> Utilisé pour transmettre le contexte de transaction lorsque l'attribut `flowTransactions` a la valeur "Allowed" ou "Required".<br /><br /> `<wsHttpBinding>   <binding transactionFlow="true"/> </wsHttpBinding>`|  
   
 ## <a name="wsfederationhttpbinding-and-ws2007federationhttpbinding"></a>wsFederationHttpBinding et ws2007FederationHttpBinding  
@@ -109,7 +95,7 @@ ms.lasthandoff: 04/30/2018
 |Transport|HTTP 1.1|[PROTOCOLE HTTP 1.1](http://go.microsoft.com/fwlink/?LinkId=84048)|  
 |Messagerie|SOAP 1.2|[Manuel de](http://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [Infrastructure de messagerie](http://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [Compléments (y compris la liaison HTTP)](http://go.microsoft.com/fwlink/?LinkId=95329)|  
 |Messagerie|WS-Addressing 2005/08|[Web Services Addressing 1.0 - éléments principaux](http://go.microsoft.com/fwlink/?LinkId=90574)<br /><br /> [Les Services Web 1.0 - SOAP adressage](http://go.microsoft.com/fwlink/?LinkId=95330)|  
-|Métadonnées|WS-MetadataExchange|[WS-MetadataExchange](http://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implémente WS-MetadataExchange pour récupérer XML Schema, WSDL et WS-Policy.|  
+|Métadonnées|WS-MetadataExchange|[WS-MetadataExchange](http://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> WCF implémente WS-MetadataExchange pour récupérer XML Schema, WSDL et WS-Policy.|  
   
 ### <a name="mexhttpsbinding"></a>mexHttpsBinding  
  [\<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md) prend en charge les protocoles suivants. Pour plus d’informations sur l’utilisation de cette liaison, consultez [publication des métadonnées](../../../../docs/framework/wcf/feature-details/publishing-metadata.md).  
@@ -119,7 +105,7 @@ ms.lasthandoff: 04/30/2018
 |Transport|HTTP 1.1|[PROTOCOLE HTTP 1.1](http://go.microsoft.com/fwlink/?LinkId=84048)<br /><br /> La sécurité de transport est activée.|  
 |Messagerie|SOAP 1.2|[Manuel de](http://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [Infrastructure de messagerie](http://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [Compléments (y compris la liaison HTTP)](http://go.microsoft.com/fwlink/?LinkId=95329)|  
 |Messagerie|WS-Addressing 2005/08|[Web Services Addressing 1.0 - éléments principaux](http://go.microsoft.com/fwlink/?LinkId=90574)<br /><br /> [Les Services Web 1.0 - SOAP adressage](http://go.microsoft.com/fwlink/?LinkId=95330)|  
-|Métadonnées|WS-MetadataExchange|[WS-MetadataExchange](http://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implémente WS-MetadataExchange pour récupérer XML Schema, WSDL et WS-Policy.|  
+|Métadonnées|WS-MetadataExchange|[WS-MetadataExchange](http://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> WCF implémente WS-MetadataExchange pour récupérer XML Schema, WSDL et WS-Policy.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Liaisons fournies par le système](../../../../docs/framework/wcf/system-provided-bindings.md)  

@@ -1,29 +1,15 @@
 ---
 title: Transfert des messages par diffusion en continu
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 72a47a51-e5e7-4b76-b24a-299d51e0ae5a
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ed2aa57e044910ab9fd9c60dfd47eb7aaa0ce75e
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 340c903e2cb34373514ea2f739cab57dc620df5d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="streaming-message-transfer"></a>Transfert des messages par diffusion en continu
-Les transports [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] prennent en charge deux modes de transfert pour les messages :  
+Les transports de Windows Communication Foundation (WCF) prennent en charge deux modes de transfert de messages :  
   
 -   Les transferts mis en mémoire tampon conservent la totalité des messages en mémoire tampon tant que leur transfert n'est pas terminé. Un message mis en mémoire tampon doit être entièrement remis pour que son destinataire puisse le lire.  
   
@@ -52,7 +38,7 @@ Les transports [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] prennent 
   
  Le contrat des opérations intervenant sur un transport en flux continu peut contenir au maximum un paramètre d'entrée ou de sortie. Ce paramètre incarne l'intégralité du corps des messages et doit être un <xref:System.ServiceModel.Channels.Message>, un type dérivé de <xref:System.IO.Stream> ou une implémentation de <xref:System.Xml.Serialization.IXmlSerializable>. Disposer d'une valeur de retour pour une opération équivaut à disposer d'un paramètre de sortie.  
   
- Certaines fonctionnalités [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], telles que la messagerie fiable, les transactions et la sécurité de niveau message SOAP s'appuient sur les messages en mémoire tampon pour leurs transmissions. L’utilisation de ces fonctionnalités peut réduire, voire annuler les gains en termes de performances obtenus grâce au flux continu. Pour sécuriser le transport en flux continu, utilisez la sécurité de niveau transport uniquement ou la sécurité de niveau transport et le sécurité de niveau message avec authentification uniquement.  
+ Certaines fonctionnalités WCF, tels que messagerie fiable, transactions et la sécurité au niveau du message SOAP s’appuient sur la mise en mémoire tampon des messages pour les transmissions. L’utilisation de ces fonctionnalités peut réduire, voire annuler les gains en termes de performances obtenus grâce au flux continu. Pour sécuriser le transport en flux continu, utilisez la sécurité de niveau transport uniquement ou la sécurité de niveau transport et le sécurité de niveau message avec authentification uniquement.  
   
  Les en-têtes SOAP sont toujours mis en mémoire tampon, même lorsque le mode de transfert a la valeur flux continu. La taille des en-têtes de message ne doit pas dépasser la taille du quota de transport `MaxBufferSize`. Pour plus d’informations sur ce paramètre, consultez [Quotas de Transport](../../../../docs/framework/wcf/feature-details/transport-quotas.md).  
   

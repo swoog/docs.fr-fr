@@ -1,26 +1,14 @@
 ---
 title: Migration de votre application du Windows Store vers .NET Native
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
-caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ce23d66f79f94af74250cff137499f6c8b1582ac
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: a316cd8ed82f9833b23fe313b8f4c4903bd0a433
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>Migration de votre application du Windows Store vers .NET Native
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] fournit une compilation statique des applications dans le Windows Store ou sur l'ordinateur du développeur. Cela diffère de la compilation dynamique effectuée pour les applications du Windows Store par le compilateur juste-à-temps (JIT) ou le [générateur d'images natives (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) sur l'appareil. Malgré les différences, [!INCLUDE[net_native](../../../includes/net-native-md.md)] essaie d’assurer la compatibilité avec [.NET pour les applications du Windows Store](http://msdn.microsoft.com/library/windows/apps/br230302.aspx). Pour l'essentiel, les éléments qui fonctionnent sur .NET pour les applications du Windows Store fonctionnent également avec [!INCLUDE[net_native](../../../includes/net-native-md.md)].  Toutefois, dans certains cas, vous pouvez rencontrer des changements de comportement. Ce document traite de ces différences entre la version .NET standard pour les applications du Windows Store et [!INCLUDE[net_native](../../../includes/net-native-md.md)] dans les domaines suivants :  

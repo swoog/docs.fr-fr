@@ -1,31 +1,17 @@
 ---
 title: WSDL et stratégie
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: cea87440-3519-4640-8494-b8a2b0e88c84
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: dd52e36199fc2412abb003d530dd5614cda8049b
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 330a48989e9d6ca3cee0d11bf4b3fce38a25fa3d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wsdl-and-policy"></a>WSDL et stratégie
-Cette rubrique traite des détails d'implémentation de WS-Policy, WS-PolicyAttachment et WSDL 1.1 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], ainsi que des assertions WS-Policy et des extensions WSDL 1.1 supplémentaires introduites par [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+Cette rubrique traite de Windows Communication Foundation (WCF), WSDL 1.1, WS-Policy et WS-PolicyAttachment les détails d’implémentation, ainsi que les assertions de WS-Policy supplémentaires et des extensions WSDL 1.1 introduites par WCF.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implémente les spécifications WS-Policy et WS-PolicyAttachment soumises à W3C avec les contraintes et clarifications décrites dans ce document.  
+ WCF implémente les spécifications WS-Policy et WS-PolicyAttachment soumises à W3C avec les contraintes et clarifications décrites dans ce document.  
   
  Ce document utilise les préfixes et espaces de noms répertoriés dans le tableau suivant.  
   
@@ -41,19 +27,19 @@ Cette rubrique traite des détails d'implémentation de WS-Policy, WS-PolicyAtta
 |cdp|http://schemas.microsoft.com/net/2006/06/duplex|  
   
 ## <a name="wcf-wsdl11-extensions"></a>Extensions WSDL1.1 WCF  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilise les extensions WSDL1.1 suivantes pour décrire les spécifications de session de contrat.  
+ WCF utilise les extensions WSDL1.1 suivantes pour décrire les spécifications de session de contrat.  
   
  wsdl:portType/wsdl:operation/@msc:isInitiating  
- xs:boolean, indique que cette opération initie une session [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ; la valeur par défaut est `false`.  
+ xs : Boolean, indique que cette opération lance une session WCF ; la valeur par défaut est `false`.  
   
  wsdl:portType/wsdl:operation/@msc:isTerminating  
- xs:boolean, indique que cette opération met fin à une session [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ; la valeur par défaut est `false`.  
+ xs : Boolean, indique que cette opération met fin à une session WCF ; la valeur par défaut est `false`.  
   
  wsdl:portType/wsdl:operation/@msc:usingSession  
  xs:boolean, indique que ce contrat requiert l'établissement d'une session.  
   
 ### <a name="soap-1x-http-binding-transport-uris"></a>Uri de transport de liaison HTTP SOAP 1.x  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilise les URI suivants pour indiquer les transports à utiliser pour les éléments d'extension de liaison WSDL 1.1, SOAP 1.1 et SOAP 1.2.  
+ WCF utilise les URI suivants pour indiquer les transports à utiliser pour les éléments d’extension de liaison WSDL 1.1, SOAP 1.1 et SOAP 1.2.  
   
 |Transport|URI|  
 |---------------|---------|  
@@ -63,7 +49,7 @@ Cette rubrique traite des détails d'implémentation de WS-Policy, WS-PolicyAtta
 |Canaux nommés|http://schemas.microsoft.com/soap/named-pipe|  
   
 ## <a name="policy-assertions-implemented-by-wcf"></a>Assertions de stratégie implémentées par WCF  
- Outre les assertions de stratégie introduites dans les spécifications des services Web (WS-*) et mentionnées dans d'autres sections de ce document, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implémente les assertions de stratégie suivantes.  
+ Outre les assertions de stratégie introduites dans les spécifications de Services Web (WS-*) et mentionnées dans d’autres sections de ce document, WCF implémente les assertions de stratégie suivantes.  
   
 |Assertion de stratégie|Sujet de stratégie|Description|  
 |----------------------|--------------------|-----------------|  

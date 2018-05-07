@@ -1,13 +1,6 @@
 ---
-title: "Comment : répertorier les décodeurs installés"
-ms.custom: 
+title: 'Comment : répertorier les décodeurs installés'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,19 +8,14 @@ helpviewer_keywords:
 - image codecs [Windows Forms], listing
 - image decoders [Windows Forms], listing
 ms.assetid: 11417191-8c95-40ca-8024-779e61706fb6
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a7993345a39a24c770fdd717580d428968dae836
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8a9dce0e4fd833bbda7bec5d35d26ef09a1fa761
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-list-installed-decoders"></a>Comment : répertorier les décodeurs installés
-Vous souhaiterez répertorier les décodeurs d’image disponibles sur un ordinateur, pour déterminer si votre application peut lire un format de fichier d’image spécifique. Le <xref:System.Drawing.Imaging.ImageCodecInfo> classe fournit le <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageDecoders%2A> méthodes statiques afin que vous pouvez déterminer quelle image décodeurs sont disponibles. <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageDecoders%2A>Retourne un tableau de <xref:System.Drawing.Imaging.ImageCodecInfo> objets.  
+Vous souhaiterez répertorier les décodeurs d’image disponibles sur un ordinateur, pour déterminer si votre application peut lire un format de fichier d’image spécifique. Le <xref:System.Drawing.Imaging.ImageCodecInfo> classe fournit le <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageDecoders%2A> méthodes statiques afin que vous pouvez déterminer quelle image décodeurs sont disponibles. <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageDecoders%2A> Retourne un tableau de <xref:System.Drawing.Imaging.ImageCodecInfo> objets.  
   
 ## <a name="example"></a>Exemple  
  L’exemple de code suivant génère la liste des décodeurs installés et leurs valeurs de propriété.  

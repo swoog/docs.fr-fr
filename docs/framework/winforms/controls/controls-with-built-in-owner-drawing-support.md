@@ -1,13 +1,6 @@
 ---
-title: "Contrôles avec prise en charge intégrée des dessins owner-drawn"
-ms.custom: 
+title: Contrôles avec prise en charge intégrée des dessins owner-drawn
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - drawing [Windows Forms], owner
 - drawing [Windows Forms], custom
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - custom drawing
 - owner drawing
 ms.assetid: 3823d01e-9610-43e6-864d-99f9b7c2b351
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: efd297dcc11005d6b6d47bb9ce3853a757046e8f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a5cbdc733a2f1cda3e708ceaae8604297f8da58a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="controls-with-built-in-owner-drawing-support"></a>Contrôles avec prise en charge intégrée des dessins owner-drawn
 Le dessin owner-drawn dans Windows Forms, qui est également appelé dessin personnalisé, est une technique permettant de changer l’apparence visuelle de certains contrôles.  
@@ -53,7 +41,7 @@ Le dessin owner-drawn dans Windows Forms, qui est également appelé dessin pers
   
 -   <xref:System.Windows.Forms.ComboBox>  
   
--   <xref:System.Windows.Forms.MenuItem>(utilisé par <xref:System.Windows.Forms.MainMenu> et <xref:System.Windows.Forms.ContextMenu>)  
+-   <xref:System.Windows.Forms.MenuItem> (utilisé par <xref:System.Windows.Forms.MainMenu> et <xref:System.Windows.Forms.ContextMenu>)  
   
 -   <xref:System.Windows.Forms.TabControl>  
   
@@ -188,7 +176,7 @@ Le dessin owner-drawn dans Windows Forms, qui est également appelé dessin pers
 -   [Guide pratique pour personnaliser l’apparence des lignes du contrôle DataGridView Windows Forms](../../../../docs/framework/winforms/controls/customize-the-appearance-of-rows-in-the-datagrid.md)  
   
 ### <a name="toolstrip-control"></a>ToolStrip, contrôle  
- <xref:System.Windows.Forms.ToolStrip>et les contrôles dérivés vous permettent de personnaliser l’aspect de leur apparence.  
+ <xref:System.Windows.Forms.ToolStrip> et les contrôles dérivés vous permettent de personnaliser l’aspect de leur apparence.  
   
  Pour fournir un rendu personnalisé pour <xref:System.Windows.Forms.ToolStrip> contrôles, définir le `Renderer` propriété d’un <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.ToolStripManager>, <xref:System.Windows.Forms.ToolStripPanel>, ou <xref:System.Windows.Forms.ToolStripContentPanel> à un `ToolStripRenderer` de l’objet et de gérer une ou plusieurs des nombreux événements de dessin fournis par le `ToolStripRenderer` classe. Vous pouvez également définir un `Renderer` propriété à une instance de votre propre classe dérivée de `ToolStripRenderer`, <xref:System.Windows.Forms.ToolStripProfessionalRenderer>, ou <xref:System.Windows.Forms.ToolStripSystemRenderer> qui implémente ou substitue spécifique `On` *EventName* méthodes.  
   

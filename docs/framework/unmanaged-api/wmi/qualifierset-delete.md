@@ -1,11 +1,7 @@
 ---
-title: "QualifierSet_Delete (fonction) (référence des API non managées)"
+title: QualifierSet_Delete (fonction) (référence des API non managées)
 description: La fonction QualifierSet_Delete supprime un qualificateur par nom.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - QualifierSet_Delete
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4e7b5650a0b47fd8d9b64bb9d0fff3511afe2d43
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e0e96ba458edfe7261fd5857b7bcb8486f4a6636
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="qualifiersetdelete-function"></a>QualifierSet_Delete (fonction)
 Supprime un qualificateur spécifié par nom.  
@@ -73,12 +66,12 @@ Cette fonction encapsule un appel à la [IWbemQualifierSet::Delete](https://msdn
 
 En raison des règles de propagation de qualificateur, un qualificateur particulier peut ont été hérité d’un autre objet et simplement remplacé dans l’instance ou la classe actuelle. Dans ce cas, le `QualifierSet_Delete` méthode rétablit le qualificateur de la valeur héritée d’origine. Dans ce cas, la fonction retourne le code d’état `WBEM_S_RESET_TO_DEFAULT`.
 
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** WMINet_Utils.idl  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versions du .NET framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
 [WMI et les compteurs de Performance (référence des API non managées)](index.md)

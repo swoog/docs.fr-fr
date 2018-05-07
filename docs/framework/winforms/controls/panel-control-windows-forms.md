@@ -1,28 +1,16 @@
 ---
-title: "Panel, contrôle (Windows Forms)"
-ms.custom: 
+title: Panel, contrôle (Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - controls [Windows Forms], grouping
 - grouping controls
 - Panel control [Windows Forms]
 ms.assetid: 37c69803-5084-4347-b035-54cfbabdc310
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: eae4b64f2a632330b1b72f3ec5786884c272967c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d7db1d2cb5c52c6c54374d3857d1679a54e48181
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="panel-control-windows-forms"></a>Panel, contrôle (Windows Forms)
 Windows Forms `Panel` contrôles sont utilisés pour fournir un groupement identifiable pour d’autres contrôles. En règle générale, vous utilisez les panneaux pour diviser un formulaire par fonction. Le `Panel` contrôle est semblable à la <xref:System.Windows.Forms.GroupBox> contrôle ; Toutefois, uniquement les `Panel` contrôle peut avoir des barres de défilement et uniquement le <xref:System.Windows.Forms.GroupBox> contrôle affiche une légende.  

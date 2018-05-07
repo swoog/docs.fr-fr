@@ -1,13 +1,6 @@
 ---
 title: "Comment : modifier la taille ou l'emplacement d'une image au moment de l'exécution (Windows Forms)"
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - PictureBox control [Windows Forms], picture size and alignment
 - pictures [Windows Forms], controlling placement in PictureBox control [Windows Forms]
 ms.assetid: d0b332a3-fae2-4891-957c-dc3e17743326
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e02ea1cbcb1fdd86d182bfba23241acb91c4b54a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9e6e114e0a9d7e5e9c17ba21ef941703cd108784
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms"></a>Comment : modifier la taille ou l'emplacement d'une image au moment de l'exécution (Windows Forms)
 Si vous utilisez Windows Forms <xref:System.Windows.Forms.PictureBox> contrôle sur un formulaire, vous pouvez définir le <xref:System.Windows.Forms.PictureBox.SizeMode%2A> propriété dessus pour :  
@@ -44,7 +32,7 @@ Si vous utilisez Windows Forms <xref:System.Windows.Forms.PictureBox> contrôle 
   
 ### <a name="to-set-the-sizemode-property-at-run-time"></a>Pour définir la propriété SizeMode au moment de l’exécution  
   
-1.  Définissez <xref:System.Windows.Forms.PictureBox.SizeMode%2A> à <xref:System.Windows.Forms.PictureBoxSizeMode.Normal> (la valeur par défaut), <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize>, <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage>, ou <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage>. <xref:System.Windows.Forms.PictureBoxSizeMode.Normal>signifie que l’image est placée dans l’angle du coin supérieur gauche du contrôle ; Si l’image est plus grande que le contrôle, ses bords inférieurs et droit sont tronqués. <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage>signifie que l’image est centrée dans le contrôle ; Si l’image est plus grande que le contrôle, les bords extérieurs sont tronqués. <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize>signifie que la taille du contrôle est ajustée à la taille de l’image. <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage>est l’inverse et signifie que la taille de l’image est ajustée à la taille du contrôle.  
+1.  Définissez <xref:System.Windows.Forms.PictureBox.SizeMode%2A> à <xref:System.Windows.Forms.PictureBoxSizeMode.Normal> (la valeur par défaut), <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize>, <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage>, ou <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage>. <xref:System.Windows.Forms.PictureBoxSizeMode.Normal> signifie que l’image est placée dans l’angle du coin supérieur gauche du contrôle ; Si l’image est plus grande que le contrôle, ses bords inférieurs et droit sont tronqués. <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage> signifie que l’image est centrée dans le contrôle ; Si l’image est plus grande que le contrôle, les bords extérieurs sont tronqués. <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize> signifie que la taille du contrôle est ajustée à la taille de l’image. <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage> est l’inverse et signifie que la taille de l’image est ajustée à la taille du contrôle.  
   
      Dans l’exemple ci-dessous, le chemin d’accès défini pour l’emplacement de l’image est le dossier Mes Documents. Pour cela, car vous pouvez supposer que la plupart des ordinateurs exécutant le système d’exploitation Windows incluent ce répertoire. Cela permet également aux utilisateurs avec des niveaux d’accès minimum au système d’exécuter l’application en toute sécurité. L’exemple ci-dessous illustre un formulaire avec un <xref:System.Windows.Forms.PictureBox> contrôle déjà été ajouté.  
   

@@ -1,31 +1,19 @@
 ---
-title: "Comment : créer un fournisseur de jetons de sécurité personnalisé"
-ms.custom: 
+title: 'Comment : créer un fournisseur de jetons de sécurité personnalisé'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - security [WCF], providing credentials
 ms.assetid: db8cb478-aa43-478b-bf97-c6489ad7c7fd
-caps.latest.revision: 
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 37e7f9541457c475bfe187485520df63a84f7555
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 480b968a15193bccb84ba491347dbba69e16fb52
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-security-token-provider"></a>Comment : créer un fournisseur de jetons de sécurité personnalisé
 Cette rubrique montre comment créer de nouveaux types de jetons à l'aide d'un fournisseur de jetons de sécurité personnalisé et comment intégrer le fournisseur à un gestionnaire de jetons de sécurité personnalisé.  
@@ -33,7 +21,7 @@ Cette rubrique montre comment créer de nouveaux types de jetons à l'aide d'un 
 > [!NOTE]
 >  Créez un fournisseur de jetons personnalisé si les jetons fournis par le système, situés dans l'espace de noms <xref:System.IdentityModel.Tokens>, ne répondent pas à vos besoins.  
   
- Le fournisseur de jetons de sécurité crée une représentation de jeton de sécurité en fonction des informations d'identification du client ou du service. Pour utiliser le fournisseur de jetons de sécurité personnalisé dans la sécurité [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], vous devez créer des informations d'identification personnalisées et des implémentations de gestionnaire de jetons de sécurité.  
+ Le fournisseur de jetons de sécurité crée une représentation de jeton de sécurité en fonction des informations d'identification du client ou du service. Pour utiliser le fournisseur de jetons de sécurité personnalisé dans la sécurité de Windows Communication Foundation (WCF), vous devez créer des informations d’identification personnalisées et des implémentations de gestionnaire de jetons de sécurité.  
   
  Pour plus d’informations sur les informations d’identification personnalisées et le Gestionnaire de jetons de sécurité, consultez le [procédure pas à pas : création d’un Client personnalisé et les informations d’identification du Service](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
   

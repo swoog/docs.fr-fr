@@ -1,23 +1,14 @@
 ---
 title: Objets extensibles
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 helpviewer_keywords:
 - extensible objects [WCF]
 ms.assetid: bc88cefc-31fb-428e-9447-6d20a7d452af
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a1bb341d9e164b1ce232f238f8ddf4a0cf807363
-ms.sourcegitcommit: c1904b0437605a90e5aa65b4abd7e048000e349d
-ms.translationtype: MT
+ms.openlocfilehash: 4fdb3ddff6bda21ac7f9538645d92f15e0b443b9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extensible-objects"></a>Objets extensibles
 Le modèle d’objet extensible est utilisé pour étendre des classes d’exécution existantes à l’aide de nouvelles fonctionnalités ou ajouter un nouvel état à un objet. Les extensions, attachées à l’un des objets extensibles, permettent aux comportements à des étapes différentes du traitement, d’accéder à l’état partagé et aux fonctionnalités attachés à un objet extensible commun qui leur est accessible.  
@@ -57,7 +48,7 @@ where T : IExtensibleObject<T>
  L'interface <xref:System.ServiceModel.IExtensionCollection%601> est une collection d'objets <xref:System.ServiceModel.IExtension%601> qui permet la récupération de <xref:System.ServiceModel.IExtension%601> par son type. <xref:System.ServiceModel.IExtensionCollection%601.Find%2A?displayProperty=nameWithType> retourne l'objet récemment ajouté dans un <xref:System.ServiceModel.IExtension%601> de ce type.  
   
 ### <a name="extensible-objects-in-windows-communication-foundation"></a>Objets extensibles dans Windows Communication Foundation  
- Il existe quatre objets extensibles dans [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] :  
+ Il existe quatre objets extensibles dans Windows Communication Foundation (WCF) :  
   
 -   <xref:System.ServiceModel.ServiceHostBase> - Il s'agit de la classe de base pour l'hôte du service.  Les extensions de cette classe peuvent être utilisées pour étendre le comportement du <xref:System.ServiceModel.ServiceHostBase> lui-même ou pour stocker l'état pour chaque service.  
   

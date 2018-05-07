@@ -1,33 +1,21 @@
 ---
 title: Transports dans Windows Communication Foundation
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - transports [WCF]
 - WCF, transports
 - Windows Communication Foundation, transports
 ms.assetid: 005c894b-af70-48aa-a1c1-c99338083c27
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 62eb27919e762004667b3d5179c35cb04d9a9422
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6bb8e8b90c26533661684bd403b9ec439f1bb37e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transports-in-windows-communication-foundation"></a>Transports dans Windows Communication Foundation
-La couche de transport se situe au niveau le plus bas de la pile des canaux. Les principaux transports utilisés dans [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] sont HTTP, HTTPS, TCP ainsi que les canaux nommés. Les rubriques de cette section contiennent des conseils et des instructions permettant de savoir quel protocole choisir, de le configurer et de définir les propriétés de réglage afférentes.  
+La couche de transport se situe au niveau le plus bas de la pile des canaux. Les principaux transports utilisés dans Windows Communication Foundation (WCF) sont HTTP, HTTPS, TCP et canaux nommés. Les rubriques de cette section contiennent des conseils et des instructions permettant de savoir quel protocole choisir, de le configurer et de définir les propriétés de réglage afférentes.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] comporte des transports supplémentaires. Pour plus d’informations sur le transport Message Queuing (également appelé MSMQ), consultez [les files d’attente et les Sessions fiables](../../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md). Pour plus d’informations sur le transport d’homologue à homologue, consultez [mise en réseau pair à pair](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  
+ WCF inclut des transports supplémentaires. Pour plus d’informations sur le transport Message Queuing (également appelé MSMQ), consultez [les files d’attente et les Sessions fiables](../../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md). Pour plus d’informations sur le transport d’homologue à homologue, consultez [mise en réseau pair à pair](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Choix d’un transport](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
@@ -43,7 +31,7 @@ La couche de transport se situe au niveau le plus bas de la pile des canaux. Les
  Contient des instructions permettant de configurer les éléments de liaison de transport HTTP et HTTPS.  
   
  [Guide pratique pour remplacer la réservation d’URL WCF par une réservation restreinte](../../../../docs/framework/wcf/feature-details/how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation.md)  
- Décrit comment utiliser les réservations restreintes de l'URL de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Décrit comment utiliser les réservations WCFURL restreint.  
   
  [Quotas de transport](../../../../docs/framework/wcf/feature-details/transport-quotas.md)  
  Aborde les points à prendre en considération lors de la définition de quotas pour la couche de transport.  
@@ -52,7 +40,7 @@ La couche de transport se situe au niveau le plus bas de la pile des canaux. Les
  Contient des instructions permettant de configurer la couche de transport lorsque les messages envoyés ou reçus rencontrent un pare-feu ou lorsqu'un traducteur d'adresses réseau (NAT) est utilisé.  
   
  [Partage de ports Net.TCP](../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)  
- Contient des instructions permettant d'utiliser le partage de port Net.TCP de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Décrit comment utiliser le composant Partage de Port Net.TCP de WCF.  
   
 ## <a name="reference"></a>Référence  
  <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  

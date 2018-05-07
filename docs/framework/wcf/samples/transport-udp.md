@@ -1,27 +1,15 @@
 ---
 title: 'Transport: UDP'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 738705de-ad3e-40e0-b363-90305bddb140
-caps.latest.revision: "48"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b7bb9f60340915f27c451d05bfbc28e1670c9d83
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 51f445d7f53f70fa206c53835b107da68749e3c2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transport-udp"></a>Transport: UDP
-Cet exemple montre comment implémenter le mode unicast et multicast UDP en tant que transport [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] personnalisé. Il décrit la procédure recommandée pour créer un transport personnalisé dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], en utilisant l'infrastructure de canal et les meilleures pratiques [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] suivantes. Les étapes de la création d'un transport personnalisé sont les suivantes :  
+L’exemple UDP Transport montre comment implémenter la monodiffusion UDP et multidiffusion en tant qu’un transport personnalisé de Windows Communication Foundation (WCF). Il décrit la procédure recommandée pour créer un transport personnalisé dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], en utilisant l'infrastructure de canal et les meilleures pratiques [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] suivantes. Les étapes de la création d'un transport personnalisé sont les suivantes :  
   
 1.  Déterminez le canal [modèles d’échange de Message](#MessageExchangePatterns) (IOutputChannel, IInputChannel, IDuplexChannel, IRequestChannel ou IReplyChannel) ChannelFactory et ChannelListener prendront en charge. Déterminez ensuite si vous prendrez en charge les variantes de session de ces interfaces.  
   
@@ -488,6 +476,6 @@ svcutil http://localhost:8000/udpsample/ /reference:UdpTranport\bin\UdpTransport
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à la page [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les exemples [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transport\Udp`

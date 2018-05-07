@@ -1,14 +1,6 @@
 ---
 title: StrongNameKeyGenEx, fonction
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - StrongNameKeyGenEx
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 36bd10b9-9857-45f3-8d3b-0da091d6169e
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ae564f7c4e8333e33b2f2f6229034c3a1396a687
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5e65e962d099e944fe243b3acc0a7c25a3bb960c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strongnamekeygenex-function"></a>StrongNameKeyGenEx, fonction
 Génère une nouvelle paire de clés publique/privée avec la taille de clé spécifiée, pour l’utiliser avec un nom fort.  
@@ -53,7 +41,7 @@ BOOLEAN StrongNameKeyGenEx (
   
 #### <a name="parameters"></a>Paramètres  
  `wszKeyContainer`  
- [in] Le nom du conteneur de clé demandé. `wszKeyContainer`doit être une chaîne vide ou null pour générer un nom temporaire.  
+ [in] Le nom du conteneur de clé demandé. `wszKeyContainer` doit être une chaîne vide ou null pour générer un nom temporaire.  
   
  `dwFlags`  
  [in] Spécifie s’il faut laisser la clé enregistrée. Les valeurs suivantes sont prises en charge :  
@@ -72,7 +60,7 @@ BOOLEAN StrongNameKeyGenEx (
  [out] La taille, en octets, de `ppbKeyBlob`.  
   
 ## <a name="return-value"></a>Valeur de retour  
- `true`de réussite ; dans le cas contraire, `false`.  
+ `true` de réussite ; dans le cas contraire, `false`.  
   
 ## <a name="remarks"></a>Notes  
  Les versions de .NET Framework 1.0 et 1.1 requièrent un `dwKeySize` de 1 024 bits pour signer un assembly avec un nom fort ; version 2.0 ajoute la prise en charge de clés 2 048 bits.  
@@ -81,14 +69,14 @@ BOOLEAN StrongNameKeyGenEx (
   
  Si le `StrongNameKeyGenEx` (fonction) ne pas aboutir, appelez le [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) fonction pour récupérer la dernière erreur générée.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** StrongName.h  
   
  **Bibliothèque :** inclus en tant que ressource dans MsCorEE.dll  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [StrongNameKeyGenEx, méthode](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygenex-method.md)  

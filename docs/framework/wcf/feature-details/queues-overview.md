@@ -1,31 +1,17 @@
 ---
 title: Vue d'ensemble des files d'attente
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - queues [WCF], MSMQ integration
 ms.assetid: b8757992-ffce-40ad-9e9b-3243f6d0fce1
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: eb5d0f51fbbb6c8bad9bfbbfd9977368fdbd0666
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 85c8cb1fbbda9be14754174c7cb7c76513bd94c7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="queues-overview"></a>Vue d'ensemble des files d'attente
-Cette section présente les concepts généraux et principaux relatifs à la communication mise en file d'attente. Les sections suivantes fournissent des détails sur la manière dont les concepts de mise en file d'attente décrits dans cette rubrique se présentent dans [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+Cette section présente les concepts généraux et principaux relatifs à la communication mise en file d'attente. Les sections suivantes présentent dans le plus d’informations sur la façon dont les files d’attente concepts décrits ici sont affichées dans Windows Communication Foundation (WCF).  
   
 ## <a name="basic-queuing-concepts"></a>Concepts de base de la mise en file d'attente  
  Lors de la conception d'une application distribuée, le choix du bon transport pour la communication entre les services et les clients est important. Plusieurs facteurs affectent le type de transport à utiliser. Un facteur important, l'isolement entre le service, le client et le transport, détermine l'utilisation d'un transport de mise en file d'attente ou d'un transport direct, tel que TCP ou HTTP. En raison de la nature des transports directs tels que TCP et HTTP, la communication s'arrête complètement si le service ou le client cessent de fonctionner ou en cas de défaillance du réseau. Le service, le client et le réseau doivent s'exécuter en même temps pour que l'application fonctionne. Les transports de mise en file d'attente fournissent l'isolement, ce qui signifie qu'en cas de défaillance du service ou du client ou des liaisons de communication entre ces derniers, le client et le service peuvent continuer à fonctionner.  

@@ -1,13 +1,6 @@
 ---
-title: "Comment : remplir une forme avec une image"
-ms.custom: 
+title: 'Comment : remplir une forme avec une image'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - shapes [Windows Forms], tiling with images
 - bitmaps [Windows Forms], filling shapes with
 ms.assetid: 6d407891-6e5c-4495-a546-3da5604e9fb8
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d8726322e9443042b76c28e7b4b22ebc51c871bb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0905f29b0f74c72979e252cf94e677d1c7e0525d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-tile-a-shape-with-an-image"></a>Comment : remplir une forme avec une image
 Tout comme les vignettes peuvent être placés à côté des autres pour couvrir un étage, rectangulaires images peuvent être placés en regard de l’autre pour remplir une forme (mosaïque) de. Pour disposer en mosaïque de l’intérieur d’une forme, utilisez un pinceau de la texture. Lorsque vous construisez un <xref:System.Drawing.TextureBrush> de l’objet, un des arguments que vous passez au constructeur est un <xref:System.Drawing.Image> objet. Lorsque vous utilisez le pinceau de la texture pour peindre l’intérieur d’une forme, la forme est remplie avec les copies répétées de cette image.  

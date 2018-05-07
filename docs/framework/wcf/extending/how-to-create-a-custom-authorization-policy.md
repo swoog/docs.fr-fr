@@ -1,30 +1,18 @@
 ---
 title: "Comment : créer une stratégie d'autorisation personnalisée"
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 05b0549b-882d-4660-b6f0-5678543e5475
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1af5e2cbf7c124e490fea04deadd1afffcde5cbb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 83b796c76887c6ba30ddb3c985ee43ab8dce2ec9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-authorization-policy"></a>Comment : créer une stratégie d'autorisation personnalisée
-L'infrastructure de modèle d'identité dans [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] prend en charge un modèle d'autorisation basé sur les revendications. Les revendications, une fois extraites des jetons, sont traitées par une stratégie d'autorisation personnalisée lorsqu'une telle stratégie a été définie, puis placées dans un <xref:System.IdentityModel.Policy.AuthorizationContext>, lequel peut ensuite être examiné afin de délivrer ou non les autorisations. Il est possible d'utiliser une stratégie personnalisée afin de transformer les revendications émanant des jetons entrants en revendications escomptées par l'application. De cette façon, les détails des différentes revendications provenant des différents types de jetons pris en charge par [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sont épargnés à l'application. Cette rubrique contient des instructions permettant d'implémenter une stratégie d'autorisation personnalisée et d'ajouter celle-ci à la collection de stratégies utilisées par un service donné.  
+L’infrastructure de modèle d’identité dans Windows Communication Foundation (WCF) prend en charge un modèle d’autorisation basée sur les revendications. Les revendications, une fois extraites des jetons, sont traitées par une stratégie d'autorisation personnalisée lorsqu'une telle stratégie a été définie, puis placées dans un <xref:System.IdentityModel.Policy.AuthorizationContext>, lequel peut ensuite être examiné afin de délivrer ou non les autorisations. Il est possible d'utiliser une stratégie personnalisée afin de transformer les revendications émanant des jetons entrants en revendications escomptées par l'application. De cette façon, les détails des différentes revendications provenant des différents types de jetons pris en charge par [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sont épargnés à l'application. Cette rubrique contient des instructions permettant d'implémenter une stratégie d'autorisation personnalisée et d'ajouter celle-ci à la collection de stratégies utilisées par un service donné.  
   
 ### <a name="to-implement-a-custom-authorization-policy"></a>Pour implémenter une stratégie d'autorisation personnalisée  
   

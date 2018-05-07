@@ -1,31 +1,17 @@
 ---
 title: Binding, extension de balisage
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - Binding
 helpviewer_keywords:
 - Binding markup extensions [WPF]
 - XAML [WPF], Binding markup extension
 ms.assetid: 83d6e2a4-1b0c-4fc8-bd96-b5e98800ab63
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: cc6a0616c6b462ffe6aca0a9adf27ac2ac7b7828
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8fc860f52f8fde2aed3cae224c05bbcf08b864d3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="binding-markup-extension"></a>Binding, extension de balisage
 Diffère d’une valeur de propriété une valeur liée aux données, création d’un objet d’expression et interprétant le contexte de données qui s’applique à l’élément et ses liaisons au moment de l’exécution.  
@@ -125,7 +111,7 @@ Diffère d’une valeur de propriété une valeur liée aux données, création 
  Description de la liaison de données à un niveau de base n’est pas abordé dans cette rubrique. Consultez [vue d’ensemble de liaison de données](../../../../docs/framework/wpf/data/data-binding-overview.md).  
   
 > [!NOTE]
->  <xref:System.Windows.Data.MultiBinding>et <xref:System.Windows.Data.PriorityBinding> ne gèrent pas un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] syntaxe d’extension. Vous devez utiliser à la place des éléments de propriété. Consultez les rubriques de référence pour <xref:System.Windows.Data.MultiBinding> et <xref:System.Windows.Data.PriorityBinding>.  
+>  <xref:System.Windows.Data.MultiBinding> et <xref:System.Windows.Data.PriorityBinding> ne gèrent pas un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] syntaxe d’extension. Vous devez utiliser à la place des éléments de propriété. Consultez les rubriques de référence pour <xref:System.Windows.Data.MultiBinding> et <xref:System.Windows.Data.PriorityBinding>.  
   
  Des valeurs booléennes pour XAML ne sont pas la casse. Par exemple, vous pourriez spécifier `{Binding NotifyOnValidationError=true}` ou `{Binding NotifyOnValidationError=True}`.  
   
@@ -133,7 +119,7 @@ Diffère d’une valeur de propriété une valeur liée aux données, création 
   
  `Binding` est une extension de balisage. Les extensions de balisage sont généralement implémentées quand il est nécessaire pour éviter que les valeurs d’attribut pour être des noms autres que des valeurs littérales ou du gestionnaire et l’exigence est plus globale que les convertisseurs de type attribués sur certains types ou propriétés. Toutes les extensions de balisage en cours d’utilisation XAML le `{` et `}` caractères dans leur syntaxe d’attribut, qui est la convention selon laquelle un processeur XAML reconnaît qu’une extension de balisage doit traiter le contenu de la chaîne. Pour plus d’informations, consultez [Extensions de balisage et XAML WPF](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
   
- `Binding`est une extension de balisage atypique dans qui la <xref:System.Windows.Data.Binding> classe qui implémente la fonctionnalité d’extension pour l’implémentation XAML WPF implémente également plusieurs autres méthodes et propriétés qui ne sont pas liées au XAML. Les autres membres sont destinés à faire <xref:System.Windows.Data.Binding> une classe plus autonome et polyvalente que peut traiter de nombreux scénarios de liaison de données en plus de fonctionner comme une extension de balisage XAML.  
+ `Binding` est une extension de balisage atypique dans qui la <xref:System.Windows.Data.Binding> classe qui implémente la fonctionnalité d’extension pour l’implémentation XAML WPF implémente également plusieurs autres méthodes et propriétés qui ne sont pas liées au XAML. Les autres membres sont destinés à faire <xref:System.Windows.Data.Binding> une classe plus autonome et polyvalente que peut traiter de nombreux scénarios de liaison de données en plus de fonctionner comme une extension de balisage XAML.  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.Windows.Data.Binding>  

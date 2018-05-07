@@ -1,11 +1,7 @@
 ---
-title: "ConnectServerWmi (fonction) (référence des API non managées)"
-description: "La fonction ConnectServerWmi utilise DCOM pour créer une connexion à un espace de noms WMI."
+title: ConnectServerWmi (fonction) (référence des API non managées)
+description: La fonction ConnectServerWmi utilise DCOM pour créer une connexion à un espace de noms WMI.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - ConnectServerWmi
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: dc821bddf1d33ea1144fef0821b81cf027d8f92f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: de8447b9b090fc7f53df23346d61932bcb4dd6ea
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="connectserverwmi-function"></a>ConnectServerWmi (fonction)
 Crée une connexion via DCOM à un espace de noms WMI sur un ordinateur spécifié.  
@@ -52,22 +45,22 @@ HRESULT ConnectServerWmi (
 ```  
 ## <a name="parameters"></a>Paramètres
 
-`strNetworkResource`[in] Pointeur vers un élément valide `BSTR` qui contient le chemin d’accès de l’espace de noms WMI. Consultez le [notes](#remarks) section pour plus d’informations.
+`strNetworkResource` [in] Pointeur vers un élément valide `BSTR` qui contient le chemin d’accès de l’espace de noms WMI. Consultez le [notes](#remarks) section pour plus d’informations.
 
-`strUser`[in] Un pointeur vers un élément valide `BSTR` qui contient le nom d’utilisateur. A `null` valeur indique le contexte de sécurité actuel. Si l’utilisateur est dans un autre domaine que celui en cours, `strUser` peut également contenir le nom de domaine et d’utilisateur séparé par une barre oblique inverse. `strUser`peut également être utilisateur principaux (UPN) de format, suhc comme  *userName@domainName* . Consultez le [notes](#remarks) section pour plus d’informations.
+`strUser` [in] Un pointeur vers un élément valide `BSTR` qui contient le nom d’utilisateur. A `null` valeur indique le contexte de sécurité actuel. Si l’utilisateur est dans un autre domaine que celui en cours, `strUser` peut également contenir le nom de domaine et d’utilisateur séparé par une barre oblique inverse. `strUser` peut également être utilisateur principaux (UPN) de format, suhc comme *userName@domainName*. Consultez le [notes](#remarks) section pour plus d’informations.
 
-`strPassword`[in] Un pointeur vers un élément valide `BSTR` qui contient le mot de passe. A `null` indique le contexte de sécurité actuel. Une chaîne vide (« ») indique un mot de passe vide.
+`strPassword` [in] Un pointeur vers un élément valide `BSTR` qui contient le mot de passe. A `null` indique le contexte de sécurité actuel. Une chaîne vide (« ») indique un mot de passe vide.
 
-`strLocale`[in] Un pointeur vers un élément valide `BSTR` qui indique les paramètres régionaux corrects pour la récupération d’informations. Pour les identificateurs de paramètres régionaux Microsoft, le format de la chaîne est « MS\_*xxx*», où *xxx* est une chaîne au format hexadécimal qui indique l’identificateur de paramètres régionaux (LCID). Si une variable locale non valide est spécifié, la méthode retourne `WBEM_E_INVALID_PARAMETER` sauf sur Windows 7, où les paramètres régionaux par défaut du serveur sont utilisé à la place. Si ' null1, les paramètres régionaux est utilisé. 
+`strLocale` [in] Un pointeur vers un élément valide `BSTR` qui indique les paramètres régionaux corrects pour la récupération d’informations. Pour les identificateurs de paramètres régionaux Microsoft, le format de la chaîne est « MS\_*xxx*», où *xxx* est une chaîne au format hexadécimal qui indique l’identificateur de paramètres régionaux (LCID). Si une variable locale non valide est spécifié, la méthode retourne `WBEM_E_INVALID_PARAMETER` sauf sur Windows 7, où les paramètres régionaux par défaut du serveur sont utilisé à la place. Si ' null1, les paramètres régionaux est utilisé. 
  
-`lSecurityFlags`[in] Indicateurs à passer à la `ConnectServerWmi` (méthode). Une valeur de zéro (0) pour ce paramètre entraîne l’appel à `ConnectServerWmi` retournant uniquement après l’établie d’une connexion au serveur. Cela peut entraîner une application ne répond ne pas indéfiniment si le serveur est interrompue. Les autres valeurs valides sont :
+`lSecurityFlags` [in] Indicateurs à passer à la `ConnectServerWmi` (méthode). Une valeur de zéro (0) pour ce paramètre entraîne l’appel à `ConnectServerWmi` retournant uniquement après l’établie d’une connexion au serveur. Cela peut entraîner une application ne répond ne pas indéfiniment si le serveur est interrompue. Les autres valeurs valides sont :
 
 | Constante  | Value  | Description  |
 |---------|---------|---------|
 | `CONNECT_REPOSITORY_ONLY` | 0 x 40 | Réservé à un usage interne. Ne pas utiliser. |
-| `WBEM_FLAG_CONNECT_USE_MAX_WAIT` | 0 x 80 | `ConnectServerWmi`Retourne un maximum de deux minutes. |
+| `WBEM_FLAG_CONNECT_USE_MAX_WAIT` | 0 x 80 | `ConnectServerWmi` Retourne un maximum de deux minutes. |
 
-`strAuthority`[in] Le nom de domaine de l’utilisateur. Il peut afficher les valeurs suivantes :
+`strAuthority` [in] Le nom de domaine de l’utilisateur. Il peut afficher les valeurs suivantes :
 
 | Value | Description |
 |---------|---------|
@@ -104,15 +97,15 @@ Cette fonction encapsule un appel à la [IWbemLocator::ConnectServer](https://ms
 
  Pour un accès local à l’espace de noms par défaut, `strNetworkResource` peut être un chemin d’accès de l’objet simple : « root\default » ou «\\.\root\default ». Pour accéder à l’espace de noms par défaut sur un ordinateur distant à l’aide d’un réseau compatible avec Microsoft ou de COM, incluent le nom d’ordinateur : «\\myserver\root\default ». Le nom d’ordinateur peut être une adresse IP ou le nom DNS. Le `ConnectServerWmi` fonction peut également se connecter avec les ordinateurs qui exécutent IPv6 à l’aide d’une adresse IPv6.
 
-`strUser`ne peut pas être une chaîne vide. Si le domaine est spécifié dans `strAuthority`, il doit également être exclu dans `strUser`, ou la fonction retourne `WBEM_E_INVALID_PARAMETER`.
+`strUser` ne peut pas être une chaîne vide. Si le domaine est spécifié dans `strAuthority`, il doit également être exclu dans `strUser`, ou la fonction retourne `WBEM_E_INVALID_PARAMETER`.
 
 
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** WMINet_Utils.idl  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versions du .NET framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
 [WMI et les compteurs de Performance (référence des API non managées)](index.md)

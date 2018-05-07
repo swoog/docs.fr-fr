@@ -1,13 +1,6 @@
 ---
 title: "Comment : ajouter et supprimer des éléments d'un contrôle ComboBox, ListBox ou CheckedListBox Windows Forms"
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,16 +14,11 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], removing items
 - CheckedListBox control [Windows Forms], adding and removing items
 ms.assetid: 7224c8d2-4118-443e-ae1e-d7c17d1e69ee
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: faf0422db9915806442ab96759d63e15ff98b813
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f9319ffe5e9c4f06565648565ce21dec6fc672f9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-add-and-remove-items-from-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Comment : ajouter et supprimer des éléments d'un contrôle ComboBox, ListBox ou CheckedListBox Windows Forms
 Les éléments peuvent être ajoutés à une zone de liste déroulante Windows Forms, zone de liste, ou de vérifier la zone de liste de différentes façons, car ces contrôles peuvent être liés à une variété de sources de données. Toutefois, cette rubrique illustre la méthode la plus simple et ne nécessite aucune liaison de données. Les éléments affichés sont généralement des chaînes ; Toutefois, n’importe quel objet peut être utilisé. Le texte qui s’affiche dans le contrôle est la valeur retournée par l’objet `ToString` (méthode).  
@@ -102,7 +90,7 @@ Les éléments peuvent être ajoutés à une zone de liste déroulante Windows F
   
 1.  Appelez le `Remove` ou `RemoveAt` méthode pour supprimer des éléments.  
   
-     `Remove`possède un argument qui spécifie l’élément à supprimer.`RemoveAt` Supprime l’élément avec le numéro d’index spécifié.  
+     `Remove` possède un argument qui spécifie l’élément à supprimer.`RemoveAt` Supprime l’élément avec le numéro d’index spécifié.  
   
     ```vb  
     ' To remove item with index 0:  

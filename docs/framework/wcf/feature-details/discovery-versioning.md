@@ -1,24 +1,12 @@
 ---
-title: "Contrôle des versions de découverte"
-ms.custom: 
+title: Contrôle des versions de découverte
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f91c6d0a-3af2-45c5-9a5c-e75390619836
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: df5a15f740e9db4eb58ec4e410db9ef5e014fe0a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 18c160e5e08ed9b6733bed9d5e40a4dde00dfd1c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="discovery-versioning"></a>Contrôle des versions de découverte
 Cette rubrique donne une rapide vue d’ensemble de l’implémentation de nouvelles fonctionnalités de découverte. Elle donne également une vue d'ensemble de la manière de sélectionner la version de découverte à utiliser.  

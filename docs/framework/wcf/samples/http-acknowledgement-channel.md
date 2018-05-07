@@ -1,24 +1,12 @@
 ---
 title: HTTP Acknowledgement Channel
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 469f3056-5ef2-4753-8acf-b574d23d83cf
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d07a17c5ed4302657671e0247e44ac0ef6e75518
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c56b2fbe9d0bac3143ee7d234fd36a75f7b8071c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="http-acknowledgement-channel"></a>HTTP Acknowledgement Channel
 HTTP Acknowledgement Channel est un exemple d’un canal superposé qui modifie le modèle de messagerie unidirectionnel pour permettre à un service d’accepter ou de refuser des messages entrants plutôt que d’envoyer automatiquement un accusé de réception. HTTP Acknowledgement Channel permet également au service de différer l'accusé de réception jusqu'à ce qu'il puisse garantir au niveau de l'entreprise que le message sera traité.  
@@ -54,6 +42,6 @@ HTTP Acknowledgement Channel est un exemple d’un canal superposé qui modifie 
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à la page [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les exemples [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\HttpAckChannel`

@@ -1,17 +1,12 @@
 ---
 title: 'Boucles : expression for...in (F#)'
 description: 'Voir comment la boucle for) (F #... dans l’expression de construction en boucle est utilisée pour itérer sur les correspondances d’un modèle dans une collection énumérable.'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: eaf0f4fc6419d8e0bff46795120ee5e42c4efe1d
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 926f0a9940021b3dc0deefc12ea158c35975e949
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="loops-forin-expression"></a>Boucles : expression for...in
 

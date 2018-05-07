@@ -1,13 +1,6 @@
 ---
-title: "Optimisation des performances : disposition et conception"
-ms.custom: 
+title: 'Optimisation des performances : disposition et conception'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,23 +9,18 @@ helpviewer_keywords:
 - design considerations [WPF]
 - layout pass [WPF]
 ms.assetid: 005f4cda-a849-448b-916b-38d14d9a96fe
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: df87170b05f830916ef2f77fd4cb5a4abab42faa
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9c9921e664d69038480e73ee6779ca9e48b81c7a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="optimizing-performance-layout-and-design"></a>Optimisation des performances : disposition et conception
 La conception de votre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application peut influer sur ses performances en créant des charges mémoire inutiles pour calculer la disposition et valider les références d’objet. La construction d’objets, en particulier au moment de l’exécution, peut affecter les caractéristiques de performances de votre application.  
   
  Cette rubrique fournit des recommandations sur ces aspects des performances.  
   
-## <a name="layout"></a>Disposition  
+## <a name="layout"></a>Mise en page  
  Le terme « passe de disposition » décrit le processus de mesure et de réorganisation des membres d’un <xref:System.Windows.Controls.Panel>-dérivée de collection de l’objet des enfants et puis de dessin à l’écran. La passe de disposition est un processus mathématique intensif (le nombre de calculs nécessaires est proportionnel au nombre d’enfants présents dans la collection). Par exemple, chaque fois qu’un enfant <xref:System.Windows.UIElement> objet dans la collection modifie sa position, il a la possibilité de déclencher une nouvelle passe par le système de disposition. Compte tenu de la relation étroite entre les caractéristiques d’objet et le comportement de disposition, il est important de comprendre le type des événements qui peuvent appeler le système de disposition. Votre application sera d’autant plus performante que vous réduirez autant que possible les appels inutiles de la passe de disposition.  
   
  Le système de disposition effectue deux passes pour chaque membre enfant d’une collection : une passe de mesure et une passe de réorganisation. Chaque objet enfant fournit sa propre implémentation substituée de la <xref:System.Windows.UIElement.Measure%2A> et <xref:System.Windows.UIElement.Arrange%2A> méthodes afin de fournir son propre comportement de disposition spécifique. Pour schématiser, une disposition est un système récursif qui entraîne le dimensionnement, le positionnement et le tracé d’un élément à l’écran.  

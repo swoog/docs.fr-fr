@@ -1,28 +1,16 @@
 ---
 title: "Comment : effectuer une liaison à des données XML à l'aide d'un XMLDataProvider et de requêtes XPath"
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - XmlDataProvider [WPF], binding to XML data
 - data binding [WPF], binding to XML data using XmlDataProvider queries
 - binding [WPF], to XML data using XmlDataProvider queries
 ms.assetid: 7dcd018f-16aa-4870-8e47-c1b4ea31e574
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 92037be2280eaa248951ff9bad82b7a1581a4fd9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bb8eb727fb6614440721c4d34a7d1828182d2f14
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries"></a>Comment : effectuer une liaison à des données XML à l'aide d'un XMLDataProvider et de requêtes XPath
 Cet exemple montre comment lier à [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] à l’aide de données un <xref:System.Windows.Data.XmlDataProvider>.  
@@ -55,7 +43,7 @@ Cet exemple montre comment lier à [!INCLUDE[TLA#tla_xml](../../../../includes/t
   
 -   `XPath="*[position()>3]"` retournera tous les éléments d’ouvrage, à l’exception des 3 premiers.  
   
- Lorsque vous exécutez un **XPath** de requête, elle retourne un <xref:System.Xml.XmlNode> ou une liste de XmlNodes. <xref:System.Xml.XmlNode>est un [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] objet, ce qui signifie que vous pouvez utiliser la <xref:System.Windows.Data.Binding.Path%2A> propriété à lier le [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] propriétés. Regardez de nouveau l’exemple précédent. Si le reste de l’exemple reste la même et que vous modifiez le <xref:System.Windows.Controls.TextBlock> de liaison à ce qui suit, vous verrez les noms des XmlNodes retournés dans le <xref:System.Windows.Controls.ListBox>. Dans ce cas, le nom de tous les nœuds retournés est « *Book* ».  
+ Lorsque vous exécutez un **XPath** de requête, elle retourne un <xref:System.Xml.XmlNode> ou une liste de XmlNodes. <xref:System.Xml.XmlNode> est un [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] objet, ce qui signifie que vous pouvez utiliser la <xref:System.Windows.Data.Binding.Path%2A> propriété à lier le [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] propriétés. Regardez de nouveau l’exemple précédent. Si le reste de l’exemple reste la même et que vous modifiez le <xref:System.Windows.Controls.TextBlock> de liaison à ce qui suit, vous verrez les noms des XmlNodes retournés dans le <xref:System.Windows.Controls.ListBox>. Dans ce cas, le nom de tous les nœuds retournés est « *Book* ».  
   
  [!code-xaml[XmlDataSourceVariation#XmlNodePath](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSourceVariation/CS/Page1.xaml#xmlnodepath)]  
   

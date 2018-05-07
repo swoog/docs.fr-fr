@@ -1,27 +1,15 @@
 ---
-title: "Annonces de découverte et client d'annonce"
-ms.custom: 
+title: Annonces de découverte et client d'annonce
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 426c6437-f8d2-4968-b23a-18afd671aa4b
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 67eab6a5b35e29fe3df09ab286090433d25e8ca3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c32aca5e6deab01423d61c516ee924d00bc041ee
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="discovery-announcements-and-announcement-client"></a>Annonces de découverte et client d'annonce
-La fonctionnalité de découverte [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] permet aux composants d'annoncer leur disponibilité. S'il est configuré pour, un service envoie des annonces de type Hello et Bye. Les clients ou d'autres composants peuvent écouter les messages d'annonce de ce type et agir dessus. Cela offre une autre méthode aux clients pour être informés des services. Les fonctionnalités d'annonce ont plusieurs utilisations, par exemple, si les services entrent dans un réseau et le quittent fréquemment, les annonces peuvent constituer une meilleure solution que de rechercher des services. Avec cette approche, le trafic réseau est réduit et le client peut être informé de la présence ou du départ du service dès la réception des annonces.  
+La fonctionnalité de découverte WCF permet aux composants d’annoncer leur disponibilité. S'il est configuré pour, un service envoie des annonces de type Hello et Bye. Les clients ou d'autres composants peuvent écouter les messages d'annonce de ce type et agir dessus. Cela offre une autre méthode aux clients pour être informés des services. Les fonctionnalités d'annonce ont plusieurs utilisations, par exemple, si les services entrent dans un réseau et le quittent fréquemment, les annonces peuvent constituer une meilleure solution que de rechercher des services. Avec cette approche, le trafic réseau est réduit et le client peut être informé de la présence ou du départ du service dès la réception des annonces.  
   
 ## <a name="discovery-announcements"></a>Annonces de découverte  
  Lorsqu'un service configuré pour les annonces rejoint un réseau et devient détectable, il envoie un message de type Hello qui annonce sa disponibilité aux clients qui écoutent. Le message contient les informations sur le service liées à la découverte, tel que son contrat, l'adresse du point de terminaison et les étendues associées. Vous pouvez spécifier où est envoyé le message d'annonce à l'aide de la classe <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>. Si le point de terminaison d'annonce est un objet <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>, les messages de types Hello et Bye sont envoyés en mode multidiffusion de manière appropriée, ou si le point de terminaison d'annonce est en mode monodiffusion, les messages sont envoyés directement au point de terminaison spécifié.  

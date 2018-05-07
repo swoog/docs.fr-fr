@@ -1,27 +1,15 @@
 ---
-title: "Modification de données de valeurs élevées (max) dans ADO.NET"
-ms.custom: 
+title: Modification de données de valeurs élevées (max) dans ADO.NET
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e42ff73cda8fc63d9b8ae6061cfbdb9749a0a864
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 285803d92474efd3268816d1af06eb3ff4abbc79
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>Modification de données de valeurs élevées (max) dans ADO.NET
 Les types de données LOB sont ceux dont la taille maximale de ligne dépasse 8 kilo-octets (Ko). SQL Server fournit un spécificateur `max` pour les types de données `varchar`, `nvarchar` et `varbinary` pour permettre le stockage de valeurs pouvant atteindre 2^32 octets. Les colonnes de table et les variables Transact-SQL peuvent spécifier des types de données `varchar(max)`, `nvarchar(max)` ou `varbinary(max)`. Dans ADO.NET, les types de données `max` peuvent être extraits par un `DataReader` et spécifiés comme valeurs de paramètre d'entrée ou de sortie sans que cela nécessite une manipulation particulière. Pour les types de données `varchar` volumineux, il est possible d'extraire et de mettre à jour les données de façon incrémentielle.  
@@ -68,7 +56,7 @@ FROM OPENROWSET
   
  UPDATE  
   
- { *\<object>* }  
+ {  *\<objet >* }  
   
  SET  
   
@@ -78,7 +66,7 @@ FROM OPENROWSET
   
 |If|Then|  
 |--------|----------|  
-|La valeur de l'expression est NULL.|`@Length`est ignoré et la valeur dans *column_name* est tronqué à la position spécifiée `@Offset`.|  
+|La valeur de l'expression est NULL.|`@Length` est ignoré et la valeur dans *column_name* est tronqué à la position spécifiée `@Offset`.|  
 |`@Offset` a la valeur NULL|L’opération de mise à jour ajoute l’expression à la fin d’existants *column_name* valeur et `@Length` est ignoré.|  
 |`@Offset` est supérieur à la longueur de la valeur column_name.|SQL Server retourne une erreur.|  
 |`@Length` a la valeur NULL|L'opération de mise à jour supprime toutes les données à partir de `@Offset` jusqu'à la fin de la valeur `column_name`.|  

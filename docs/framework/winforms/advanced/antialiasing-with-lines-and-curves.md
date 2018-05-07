@@ -1,13 +1,6 @@
 ---
-title: "Anticrénelage avec des lignes et des courbes"
-ms.custom: 
+title: Anticrénelage avec des lignes et des courbes
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,19 +9,14 @@ helpviewer_keywords:
 - antialiasing [Windows Forms], smoothing modes
 - GDI+, antialiasing
 ms.assetid: 810da1a4-c136-4abf-88df-68e49efdd8d4
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b8552f185a93b688555dbcfab3da9d28d9bfde6d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ccc75a535d8ef21cc780ae8e20d590631306bdc9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="antialiasing-with-lines-and-curves"></a>Anticrénelage avec des lignes et des courbes
-Lorsque vous utilisez [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] pour dessiner une ligne, vous fournissez le point de départ et le point de fin de la ligne, mais il est inutile de fournir des informations sur les pixels individuels sur la ligne. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]fonctionne en association avec le logiciel de pilote d’affichage pour déterminer quels pixels seront activées pour afficher la ligne sur un périphérique d’affichage particulier.  
+Lorsque vous utilisez [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] pour dessiner une ligne, vous fournissez le point de départ et le point de fin de la ligne, mais il est inutile de fournir des informations sur les pixels individuels sur la ligne. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] fonctionne en association avec le logiciel de pilote d’affichage pour déterminer quels pixels seront activées pour afficher la ligne sur un périphérique d’affichage particulier.  
   
 ## <a name="aliasing"></a>Utilisation d’alias  
  Envisagez la ligne droite rouge qui va du point (4, 2) au point (16, 10). Supposons que le système de coordonnées a son origine dans le coin supérieur gauche et que l’unité de mesure est le pixel. Supposons également que l’axe des x point vers la droite et les points de l’axe des y vers le bas. L’illustration suivante montre une vue agrandie de la ligne rouge dessinée sur un arrière-plan multicolore.  

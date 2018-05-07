@@ -1,11 +1,6 @@
 ---
-title: "La résolution de surcharge à liaison tardive ne peut pas être appliquée à &#39; &lt;nom_procédure&gt;&#39; car l’instance d’accès est un type interface"
+title: La résolution de surcharge à liaison tardive ne peut pas être appliquée à &#39; &lt;nom_procédure&gt; &#39; , car l’instance d’accès est un type interface
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc30933
 - bc30933
@@ -13,16 +8,13 @@ helpviewer_keywords:
 - overload resolution [Visual Basic], with late-bound argument
 - BC30933
 ms.assetid: 8182eea0-dd34-4d6e-9ca0-41d8713e9dc4
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: fb7f8a9f6eadfc9fd856ea57d362b43d25ff81a1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e41cbf30f06547ef39553e31542e4e8b6df49a3b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="latebound-overload-resolution-cannot-be-applied-to-39ltprocedurenamegt39-because-the-accessing-instance-is-an-interface-type"></a>La résolution de surcharge à liaison tardive ne peut pas être appliquée à &#39; &lt;nom_procédure&gt;&#39; car l’instance d’accès est un type interface
+# <a name="latebound-overload-resolution-cannot-be-applied-to-39ltprocedurenamegt39-because-the-accessing-instance-is-an-interface-type"></a>La résolution de surcharge à liaison tardive ne peut pas être appliquée à &#39; &lt;nom_procédure&gt; &#39; , car l’instance d’accès est un type interface
 Le compilateur tente de résoudre une référence à une propriété surchargée ou une procédure, mais la référence échoue parce qu’un argument est de type `Object` et l’objet de référence a le type de données d’une interface. Le `Object` argument force le compilateur à résoudre la référence en tant qu’à liaison tardive.  
   
  Dans ces circonstances, le compilateur résout la surcharge via la classe d’implémentation à la place de l’interface sous-jacente. Si la classe renomme l’une des versions surchargées, le compilateur ne tient pas compte de cette version comme une surcharge car son nom est différent. Le compilateur ignore la version renommée lorsque le bon choix pour résoudre la référence peut avoir été alors à son tour.  

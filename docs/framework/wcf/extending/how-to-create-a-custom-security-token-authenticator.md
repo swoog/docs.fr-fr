@@ -1,36 +1,24 @@
 ---
-title: "Comment : créer un authentificateur de jetons de sécurité personnalisé"
-ms.custom: 
+title: 'Comment : créer un authentificateur de jetons de sécurité personnalisé'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - WCF, authentication
 ms.assetid: 10e245f7-d31e-42e7-82a2-d5780325d372
-caps.latest.revision: 
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4415edbe9f04cb56cefadcb3ae521994fac28ffb
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 41936b407dfdb3fecee80b2513b557016cdcfe5e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-security-token-authenticator"></a>Comment : créer un authentificateur de jetons de sécurité personnalisé
 Cette rubrique indique comment créer un authentificateur de jetons de sécurité personnalisé et comment l'intégrer à un gestionnaire de jetons de sécurité personnalisé. Un authentificateur de jetons de sécurité valide le contenu du jeton de sécurité fourni par le message entrant. Lorsque le processus de validation réussit, l'authentificateur retourne une collection d'instances <xref:System.IdentityModel.Policy.IAuthorizationPolicy> qui, après évaluation, retourne un ensemble de revendications.  
   
- Pour utiliser un authentificateur de jetons de sécurité personnalisé dans [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], vous devez d'abord créer des informations d'identification ainsi que des implémentations de gestionnaire de jetons de sécurité personnalisées. Pour plus d’informations sur la création des informations d’identification personnalisées et de sécurité Gestionnaire de jetons, consultez [procédure pas à pas : création d’un Client personnalisé et les informations d’identification du Service](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md). Pour plus d’informations sur les classes de fournisseur et un authentificateur, Gestionnaire de jetons de sécurité et informations d’identification, consultez [Architecture de sécurité](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f).  
+ Pour utiliser un authentificateur de jeton de sécurité personnalisé dans Windows Communication Foundation (WCF), vous devez d’abord créer les informations d’identification personnalisées et de la sécurité des implémentations de gestionnaire de jetons. Pour plus d’informations sur la création des informations d’identification personnalisées et de sécurité Gestionnaire de jetons, consultez [procédure pas à pas : création d’un Client personnalisé et les informations d’identification du Service](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md). Pour plus d’informations sur les classes de fournisseur et un authentificateur, Gestionnaire de jetons de sécurité et informations d’identification, consultez [Architecture de sécurité](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f).  
   
 ## <a name="procedures"></a>Procédures  
   

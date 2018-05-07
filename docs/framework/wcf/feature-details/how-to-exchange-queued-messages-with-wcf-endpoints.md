@@ -1,34 +1,20 @@
 ---
 title: "Comment : échanger des messages en file d'attente avec des points de terminaison WCF"
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 938e7825-f63a-4c3d-b603-63772fabfdb3
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2f44f3a58e0a8283753cb682f25cf2f167450724
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: ab6ca46fad8ee1ededef5cc14a9654b79b2e6a8e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>Comment : échanger des messages en file d'attente avec des points de terminaison WCF
-Les files d'attente garantissent une messagerie fiable entre un client et un service [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], même si le service n'est pas disponible au moment de la communication. Les procédures ci-dessous indiquent comment garantir une communication durable entre un client et un service en utilisant la liaison mise en file d'attente standard lors de l'implémentation du service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+Les files d’attente garantissent que la messagerie fiable peut se produire entre un client et un service Windows Communication Foundation (WCF), même si le service n’est pas disponible au moment de la communication. Les procédures suivantes montrent comment garantir une communication durable entre un client et un service à l’aide de la norme en file d’attente liaison lors de l’implémentation du service WCF.  
   
- Cette section explique comment utiliser <xref:System.ServiceModel.NetMsmqBinding> pour la communication mise en file d'attente entre un client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] et un service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Cette section explique comment utiliser <xref:System.ServiceModel.NetMsmqBinding> pour la communication en file d’attente entre un client WCF et d’un service WCF.  
   
 ### <a name="to-use-queuing-in-a-wcf-service"></a>Pour utiliser la mise en file d'attente dans un service WCF  
   
@@ -54,7 +40,7 @@ Les files d'attente garantissent une messagerie fiable entre un client et un ser
      [!code-csharp[S_Msmq_Transacted#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/hostapp.cs#4)]
      [!code-vb[S_Msmq_Transacted#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/hostapp.vb#4)]  
   
-5.  Définissez un <xref:System.ServiceModel.Description.ServiceEndpoint> dans la configuration qui spécifie l'adresse de service et utilise la liaison <xref:System.ServiceModel.NetMsmqBinding> standard. Pour plus d’informations sur l’utilisation de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] configuration, consultez [configuration d’Applications Windows Communication Foundation](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a).  
+5.  Définissez un <xref:System.ServiceModel.Description.ServiceEndpoint> dans la configuration qui spécifie l'adresse de service et utilise la liaison <xref:System.ServiceModel.NetMsmqBinding> standard. Pour plus d’informations sur l’utilisation de la configuration WCF, consultez [configuration d’Applications Windows Communication Foundation](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a).  
   
   
   
@@ -65,7 +51,7 @@ Les files d'attente garantissent une messagerie fiable entre un client et un ser
   
 ### <a name="to-create-a-client-for-the-queued-service"></a>Pour créer un client pour le service mis en file d'attente  
   
-1.  L'exemple suivant montre comment exécuter l'application d'hébergement et utiliser l'outil Svcutil.exe pour créer le client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+1.  L’exemple suivant montre comment exécuter l’application d’hébergement et utiliser l’outil Svcutil.exe pour créer le client WCF.  
   
     ```  
     svcutil http://localhost:8000/ServiceModelSamples/service  
@@ -75,7 +61,7 @@ Les files d'attente garantissent une messagerie fiable entre un client et un ser
   
   
   
-3.  Créez une étendue de transaction pour écrire dans la file d'attente transactionnelle, appelez l'opération `SubmitPurchaseOrder` et fermez le client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], comme illustré dans l'exemple suivant.  
+3.  Créer une étendue de transaction pour écrire dans la file d’attente transactionnelle, appelez le `SubmitPurchaseOrder` opération et fermer le client WCF, comme indiqué dans l’exemple suivant.  
   
      [!code-csharp[S_Msmq_Transacted#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/client.cs#8)]
      [!code-vb[S_Msmq_Transacted#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/client.vb#8)]  

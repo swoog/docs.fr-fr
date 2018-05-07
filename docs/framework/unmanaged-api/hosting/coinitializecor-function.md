@@ -1,14 +1,6 @@
 ---
 title: CoInitializeCor, fonction
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CoInitializeCor
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 9b9079fb-579e-4141-b3f0-791072dd40dc
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fe40e7ccbf944310a2afe649dc0bb967c0807bac
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 91315e8af0cc46a3450a7515b885988cffe34927
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coinitializecor-function"></a>CoInitializeCor, fonction
 `CoInitializeCor` est obsolète.  
@@ -48,7 +36,7 @@ STDAPI CoInitializeCor (
 ## <a name="remarks"></a>Notes  
  Pour initialiser le common language runtime, utilisez soit [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) ou [CorBindToCurrentRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md).  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **En-tête :** Cor.h  
   
 ## <a name="see-also"></a>Voir aussi  

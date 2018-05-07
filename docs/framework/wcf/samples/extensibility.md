@@ -1,27 +1,15 @@
 ---
-title: "Extensibilité"
-ms.custom: 
+title: Extensibilité
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: cd7ddffc-a261-44aa-bd50-33c1c74f0df0
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d1d8ea4987d918da79dcf1f69b842f19901e63a5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 7cba21715a6a0347e910300de46c1e47fd6e30bf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extensibility"></a>Extensibilité
-Cette section contient des exemples qui traitent de l'extensibilité personnalisée et d'autres fonctionnalités de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+Cette section contient des exemples qui traitent de l’extensibilité personnalisée et d’autres fonctionnalités de Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Extensibilité des canaux](../../../../docs/framework/wcf/samples/channels-extensibility.md)  
@@ -58,7 +46,7 @@ Cette section contient des exemples qui traitent de l'extensibilité personnalis
  Montre comment les points d'extensibilité peuvent consommer des formats de données de message personnalisés.  
   
  [Filtre de messages personnalisé](../../../../docs/framework/wcf/samples/custom-message-filter.md)  
- Montre comment remplacer les filtres de message que [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] utilise pour distribuer des messages aux points de terminaison.  
+ montre comment remplacer les filtres de message Windows Communication Foundation (WCF) utilise pour distribuer des messages aux points de terminaison.  
   
  [Hôte de service personnalisé](../../../../docs/framework/wcf/samples/custom-service-host.md)  
  Montre comment utiliser un dérivé personnalisé de la classe <xref:System.ServiceModel.ServiceHost> pour altérer le comportement d'exécution d'un service.  

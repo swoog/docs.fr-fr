@@ -1,24 +1,12 @@
 ---
-title: "Comment : inspecter ou modifier des messages sur le client"
-ms.custom: 
+title: 'Comment : inspecter ou modifier des messages sur le client'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b8256335-f1c2-419f-b862-9f220ccad84c
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 06f4feaa5b0b44a26e3d31b65dc465b67544482f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 3cd0cf9dd772cad5e1dc16f61ef55eb3b314858d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-inspect-or-modify-messages-on-the-client"></a>Comment : inspecter ou modifier des messages sur le client
 Vous pouvez inspecter ou modifier les messages entrants ou sortants sur un client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] en implémentant un <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> et en l'insérant dans l'exécution du client. Pour plus d’informations, consultez [Clients d’extension](../../../../docs/framework/wcf/extending/extending-clients.md). La fonctionnalité équivalente sur le service est <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>. Pour obtenir un exemple de code complet, consultez la [inspecteurs de Message](../../../../docs/framework/wcf/samples/message-inspectors.md) exemple.  
@@ -27,7 +15,7 @@ Vous pouvez inspecter ou modifier les messages entrants ou sortants sur un clien
   
 1.  Implémentez l'interface <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>.  
   
-2.  Implémentez <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> ou <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> en fonction de la portée à laquelle vous souhaitez insérer facilement l'inspecteur de message client. <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType>vous permet de modifier le comportement au niveau du point de terminaison. <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>permet de modifier le comportement au niveau du contrat.  
+2.  Implémentez <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> ou <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> en fonction de la portée à laquelle vous souhaitez insérer facilement l'inspecteur de message client. <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> vous permet de modifier le comportement au niveau du point de terminaison. <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> permet de modifier le comportement au niveau du contrat.  
   
 3.  Insérez le comportement avant d'appeler la méthode <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> ou <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> sur <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>. Pour plus d’informations, consultez [configuration et l’extension de l’exécution des comportements](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
   

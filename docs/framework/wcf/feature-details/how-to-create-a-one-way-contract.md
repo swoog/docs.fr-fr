@@ -1,32 +1,18 @@
 ---
 title: 'Comment : créer un contrat unidirectionnel'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 85084cd9-31cc-4e95-b667-42ef01336622
-caps.latest.revision: 23
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1a54b64826735d912bdf6507023da56118fb9a69
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 80cab35b14dd3b7663405038f2afdea362cdb792
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-one-way-contract"></a>Comment : créer un contrat unidirectionnel
-Cette rubrique décrit les étapes de base pour créer des méthodes qui utilisent un contrat unidirectionnel. De telles méthodes appellent des opérations sur un service [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] à partir d'un client mais n'attendent pas de réponse. Ce type de contrat peut être utilisé, par exemple, pour publier des notifications destinées à de nombreux abonnés. Vous pouvez également utiliser des contrats unidirectionnels lors de la création d'un contrat duplex (bidirectionnel), qui autorise des clients et des serveurs à communiquer l'un l'autre indépendamment, afin qu'ils puissent initialiser des appels. Notamment, cela peut permettre au serveur d'effectuer des appels unidirectionnels au client, que le client peut traiter en tant qu'événements. Pour plus d'informations à propos de la spécification de méthodes unidirectionnelles, consultez la propriété <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> et la classe <xref:System.ServiceModel.OperationContractAttribute>.  
+Cette rubrique décrit les étapes de base pour créer des méthodes qui utilisent un contrat unidirectionnel. Ces méthodes d’appeler des opérations sur un service Windows Communication Foundation (WCF) à partir d’un client, mais n’attendent pas une réponse. Ce type de contrat peut être utilisé, par exemple, pour publier des notifications destinées à de nombreux abonnés. Vous pouvez également utiliser des contrats unidirectionnels lors de la création d'un contrat duplex (bidirectionnel), qui autorise des clients et des serveurs à communiquer l'un l'autre indépendamment, afin qu'ils puissent initialiser des appels. Notamment, cela peut permettre au serveur d'effectuer des appels unidirectionnels au client, que le client peut traiter en tant qu'événements. Pour plus d'informations à propos de la spécification de méthodes unidirectionnelles, consultez la propriété <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> et la classe <xref:System.ServiceModel.OperationContractAttribute>.  
   
  Pour plus d’informations sur la création d’une application cliente pour un contrat duplex, consultez [Comment : accéder aux Services avec unidirectionnel et contrats demande-réponse](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md). Pour obtenir un exemple fonctionnel, consultez le [unidirectionnel](../../../../docs/framework/wcf/samples/one-way.md) exemple.  
   

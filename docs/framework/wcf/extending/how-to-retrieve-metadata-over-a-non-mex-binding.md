@@ -1,33 +1,19 @@
 ---
 title: 'Procédure : récupérer des métadonnées sur une liaison non-MEX'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 2292e124-81b2-4317-b881-ce9c1ec66ecb
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b469a08ad9759a2d5213f13256ec2def96107acc
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 198c343aa6f25d55e518990dc1dbd2667a8c17ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>Procédure : récupérer des métadonnées sur une liaison non-MEX
 Cette rubrique décrit comment récupérer les métadonnées d’un point de terminaison MEX sur une liaison non-MEX. Le code dans cet exemple est basé sur le [personnalisé sécuriser les métadonnées de point de terminaison](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) exemple.  
   
 ### <a name="to-retrieve-metadata-over-a-non-mex-binding"></a>Pour récupérer des métadonnées sur une liaison non-MEX  
   
-1.  Déterminez la liaison utilisée par le point de terminaison MEX. Concernant les services [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], vous pouvez déterminer la liaison MEX en accédant au fichier de configuration du service. Dans ce cas, la liaison MEX est définie dans la configuration de service suivante :  
+1.  Déterminez la liaison utilisée par le point de terminaison MEX. Pour les services Windows Communication Foundation (WCF), vous pouvez déterminer la liaison MEX en accédant au fichier de configuration du service. Dans ce cas, la liaison MEX est définie dans la configuration de service suivante :  
   
     ```xml  
     <services>  

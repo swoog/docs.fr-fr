@@ -1,27 +1,15 @@
 ---
 title: Vue d'ensemble de l'utilisation de la disposition automatique
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - layout [WPF], automatic
 - automatic layout [WPF]
 ms.assetid: 6fed9264-18bb-4d05-8867-1fe356c6f687
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 75066b59d0f3a686c66fdbdd187ba4c18e786e6d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8693150099559ca09541eb790c134ca3d5277e78
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="use-automatic-layout-overview"></a>Vue d'ensemble de l'utilisation de la disposition automatique
 Cette rubrique présente des recommandations pour les développeurs sur la façon d’écrire [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applications localisables [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]. Dans le passé, la localisation d’un [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] a été beaucoup de temps. Chaque langage qui le [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] était adaptée nécessitait un réglage pixel par pixel. Aujourd'hui, grâce à la conception et des normes de codage de droite [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] peuvent être construits afin que les traducteurs aient moins de redimensionnement et le repositionnement à effectuer. L’approche de l’écriture d’applications qui peuvent être plus faciles à redimensionner et repositionner est appelée disposition automatique et peut être obtenue à l’aide de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] conception de l’application.  
@@ -63,7 +51,7 @@ Bouton redimensionnable automatiquement
 |----------------------|-----------------|  
 |Ne pas utiliser de positions absolues|-Ne pas utiliser <xref:System.Windows.Controls.Canvas> , car il positionne les éléments de manière absolue.<br />-Utilisez <xref:System.Windows.Controls.DockPanel>, <xref:System.Windows.Controls.StackPanel>, et <xref:System.Windows.Controls.Grid> pour positionner les contrôles.<br />-Pour une discussion sur les différents types de panneaux, consultez [vue d’ensemble des panneaux](../../../../docs/framework/wpf/controls/panels-overview.md).|  
 |Ne pas définir de fenêtre à taille fixe|-Utilisez <xref:System.Windows.Window.SizeToContent%2A>.<br />- Par exemple :<br /><br /> [!code-xaml[LocalizationGrid#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#2)]|  
-|Ajoutez un <xref:System.Windows.FrameworkElement.FlowDirection%2A>|<ul><li>Ajouter un <xref:System.Windows.FrameworkElement.FlowDirection%2A> à l’élément racine de votre application.</li><li>[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] offre un moyen pratique de prendre en charge les dispositions horizontales, bidirectionnelles et verticales. Dans l’infrastructure de présentation, le <xref:System.Windows.FrameworkElement.FlowDirection%2A> propriété peut être utilisée pour définir la disposition. Les modèles de sens du déroulement sont les suivants :<br /><br /> <ul><li><xref:System.Windows.FlowDirection.LeftToRight>(LrTb) : disposition horizontale pour le Latin, Asie orientale et ainsi de suite.</li><li><xref:System.Windows.FlowDirection.RightToLeft>(RlTb) — bidirectionnelle pour l’arabe, hébreu et ainsi de suite.</li></ul></li></ul>|  
+|Ajoutez un <xref:System.Windows.FrameworkElement.FlowDirection%2A>|<ul><li>Ajouter un <xref:System.Windows.FrameworkElement.FlowDirection%2A> à l’élément racine de votre application.</li><li>[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] offre un moyen pratique de prendre en charge les dispositions horizontales, bidirectionnelles et verticales. Dans l’infrastructure de présentation, le <xref:System.Windows.FrameworkElement.FlowDirection%2A> propriété peut être utilisée pour définir la disposition. Les modèles de sens du déroulement sont les suivants :<br /><br /> <ul><li><xref:System.Windows.FlowDirection.LeftToRight> (LrTb) : disposition horizontale pour le Latin, Asie orientale et ainsi de suite.</li><li><xref:System.Windows.FlowDirection.RightToLeft> (RlTb) — bidirectionnelle pour l’arabe, hébreu et ainsi de suite.</li></ul></li></ul>|  
 |Utiliser des polices composites au lieu des polices physiques|<ul><li>Avec les polices composites, le <xref:System.Windows.Controls.Control.FontFamily%2A> propriété ne doit pas être localisés.</li><li>Les développeurs peuvent utiliser l’une des polices suivantes ou créer la leur.<br /><br /> <ul><li>Interface utilisateur globale</li><li>Sans Serif global</li><li>Serif global</li></ul></li></ul>|  
 |Ajouter xml:lang|-Ajouter le `xml:lang` attribut dans l’élément racine de votre [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], tel que `xml:lang="en-US"` pour une application en anglais.<br />-Étant donné que les polices composites utilisent `xml:lang` pour déterminer la police à utiliser, définissez cette propriété pour prendre en charge les scénarios multilingues.|  
   

@@ -1,11 +1,7 @@
 ---
-title: "ResetSecurity (fonction) (référence des API non managées)"
-description: "La fonction ResetSecurity assigne un jeton d’emprunt d’identité pour le thread actuel."
+title: ResetSecurity (fonction) (référence des API non managées)
+description: La fonction ResetSecurity assigne un jeton d’emprunt d’identité pour le thread actuel.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - ResetSecurity
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bacee65633d25e705d978d3902a6804516a88bf4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 31e42b9e39ddb43025e18888572c394d742e38cf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="resetsecurity-function"></a>ResetSecurity (fonction)
 Assigne le jeton d’emprunt d’identité fournie pour le thread actuel.   
@@ -53,12 +46,12 @@ Si la fonction réussit, la valeur de retour est `S_OK` (0).
 
 Si la fonction échoue, la valeur de retour est un code d’erreur différent de zéro. Pour obtenir des informations d’erreur plus complètes, appelez le [GetErrorInfo](geterrorinfo.md) (fonction).
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** WMINet_Utils.idl  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versions du .NET framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
 [WMI et les compteurs de Performance (référence des API non managées)](index.md)

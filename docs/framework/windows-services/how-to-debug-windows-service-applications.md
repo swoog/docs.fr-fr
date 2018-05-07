@@ -1,13 +1,6 @@
 ---
-title: "Comment : déboguer les applications de service Windows"
-ms.custom: 
+title: 'Comment : déboguer les applications de service Windows'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - debugging Windows Service applications
 - debugging [Visual Studio], Windows services
@@ -15,16 +8,13 @@ helpviewer_keywords:
 - Windows Service applications, debugging
 - services, debugging
 ms.assetid: 63ab0800-0f05-4f1e-88e6-94c73fd920a2
-caps.latest.revision: "16"
 author: ghogen
-ms.author: ghogen
 manager: douge
-ms.workload: dotnet
-ms.openlocfilehash: 86d90e4129f089a77e51e6e58233a1087fe5d0f4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2c73ccd75bdbd1298371921bababa87ba4520495
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-debug-windows-service-applications"></a>Comment : déboguer les applications de service Windows
 Un service doit être exécuté à partir du Gestionnaire de contrôle des services plutôt qu'à partir de Visual Studio. C'est pourquoi le débogage d'un service n'est pas aussi simple que le débogage d'autres types d'applications Visual Studio. Pour déboguer un service, vous devez le démarrer et attacher un débogueur au processus dans lequel il s'exécute. Vous pouvez alors déboguer votre application à l'aide de toutes les fonctionnalités de débogage standard de Visual Studio.  

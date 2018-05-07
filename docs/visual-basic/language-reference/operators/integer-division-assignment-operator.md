@@ -1,11 +1,6 @@
 ---
-title: "\\=(Opérateur)"
+title: '\= (opérateur)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - '\='
 - vb.\=
@@ -16,14 +11,11 @@ helpviewer_keywords:
 - operator \= [Visual Basic]
 - compound assignment statements [Visual Basic]
 ms.assetid: 6f39915d-e398-4045-afcc-da6885e57b9c
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5ba74f7a433687b306e8b4273f3a2a6d60583396
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4ebbf2eca7fb3cd208d979d7f3c77aa106569119
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-operator"></a>\\=, Opérateur
 Divise la valeur d’une variable ou une propriété par la valeur d’une expression et assigne le résultat de l’entier à la variable ou propriété.  
@@ -41,7 +33,7 @@ variableorproperty \= expression
  `expression`  
  Obligatoire. Toute expression numérique.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  L’élément sur le côté gauche de la `\=` opérateur peut être une simple variable scalaire, une propriété ou un élément d’un tableau. La variable ou la propriété ne peut pas être [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
   
  Le `\=` opérateur divise la valeur d’une variable ou une propriété du côté gauche par la valeur située à droite et assigne le résultat de l’entier à la variable ou propriété du côté gauche  

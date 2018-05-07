@@ -1,36 +1,22 @@
 ---
-title: "Comment : créer un service qui utilise un validateur de certificat personnalisé"
-ms.custom: 
+title: 'Comment : créer un service qui utilise un validateur de certificat personnalisé'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - WCF, authentication
 ms.assetid: bb0190ff-0738-4e54-8d22-c97d343708bf
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e0a48801b1d4674b81a0e4b54a80b69d026ce2af
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: d4a1532ed91b17cf5bed909026ace695aeba8cd9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-service-that-employs-a-custom-certificate-validator"></a>Comment : créer un service qui utilise un validateur de certificat personnalisé
 Cette rubrique décrit comment implémenter un validateur de certificat personnalisé et comment configurer les informations d’identification du service ou du client pour remplacer la logique de validation de certificat par défaut par le validateur de certificat personnalisé.  
   
- Si le certificat X.509 est utilisé pour authentifier un client ou un service, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] utilise par défaut le magasin de certificats Windows et API Crypto pour valider le certificat et garantir qu'il est approuvé. Les fonctionnalités intégrées de validation du certificat sont parfois insuffisantes et doivent être changées. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] offre un moyen simple pour modifier la logique de validation en permettant aux utilisateurs d'ajouter un validateur de certificat personnalisé. Si un validateur de certificat personnalisé est spécifié, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] n'utilise pas la logique intégrée de validation de certificat mais fait appel au validateur personnalisé.  
+ Si le certificat X.509 est utilisé pour authentifier un client ou un service, Windows Communication Foundation (WCF) par défaut utilise le magasin de certificats Windows et les API de chiffrement pour valider le certificat et pour s’assurer qu’il est approuvé. Les fonctionnalités intégrées de validation du certificat sont parfois insuffisantes et doivent être changées. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] offre un moyen simple pour modifier la logique de validation en permettant aux utilisateurs d'ajouter un validateur de certificat personnalisé. Si un validateur de certificat personnalisé est spécifié, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] n'utilise pas la logique intégrée de validation de certificat mais fait appel au validateur personnalisé.  
   
 ## <a name="procedures"></a>Procédures  
   

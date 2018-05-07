@@ -1,11 +1,7 @@
 ---
-title: "Clone (fonction) (référence des API non managées)"
-description: "La fonction de clonage retourne un nouvel objet qui est un clone complet de l’objet actuel."
+title: Clone (fonction) (référence des API non managées)
+description: La fonction de clonage retourne un nouvel objet qui est un clone complet de l’objet actuel.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - Clone
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 270150bb674ee7f9a71cf28008c663e3b833600d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c5841c89cf394502f68381dfed42593c9debdcb1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clone-function"></a>Clone, fonction
 Retourne un nouvel objet qui est un clone complet de l’objet actuel.   
@@ -62,7 +55,7 @@ Les valeurs suivantes est retournées par cette fonction sont définies dans le 
 |Constante  |Value  |Description  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0 x 80041001 | Il a été un échec général. |
-| `WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | `null`a été spécifié en tant que paramètre, et n’est pas autorisé dans ce cas. |
+| `WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | `null` a été spécifié en tant que paramètre, et n’est pas autorisé dans ce cas. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Pas assez de mémoire est disponible pour cloner l’objet. |
 | `WBEM_S_NO_ERROR` | 0 | L’appel de fonction a réussi.  |
   
@@ -72,12 +65,12 @@ Cette fonction encapsule un appel à la [IWbemClassObject::Clone](https://msdn.m
 
 L’objet cloné est un objet COM qui a un nombre de référence de 1.
 
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** WMINet_Utils.idl  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versions du .NET framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
 [WMI et les compteurs de Performance (référence des API non managées)](index.md)

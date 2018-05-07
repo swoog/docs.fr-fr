@@ -1,26 +1,15 @@
 ---
-title: "Implémentation d'une transaction implicite à l'aide de l'étendue de transaction"
-ms.custom: 
+title: Implémentation d'une transaction implicite à l'aide de l'étendue de transaction
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 49d1706a-1e0c-4c85-9704-75c908372eb9
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0b75091739b0ea97b63b35830f4946a78e49ff8f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f3184801ed6a81d65727c638ef733bc93a87c1e8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>Implémentation d'une transaction implicite à l'aide de l'étendue de transaction
 La classe <xref:System.Transactions.TransactionScope> offre un moyen simple pour indiquer qu'un bloc de code participe à une transaction, sans avoir à intervenir sur la transaction même. Une étendue de transaction peut sélectionner et gérer automatiquement la transaction ambiante. En raison de sa facilité d'utilisation et de son efficacité, il est recommandé d'utiliser la classe <xref:System.Transactions.TransactionScope> lors du développement d'une application de transaction.  
@@ -51,7 +40,7 @@ La classe <xref:System.Transactions.TransactionScope> offre un moyen simple pour
 ## <a name="rolling-back-a-transaction"></a>Restauration d'une transaction  
  Pour restaurer une transaction, n'appelez pas la méthode <xref:System.Transactions.TransactionScope.Complete%2A> dans l'étendue de transaction. Par exemple, vous pouvez lever une exception dans l'étendue. La transaction à laquelle il participe est restaurée.  
   
-##  <a name="ManageTxFlow"></a>La gestion du flux de transaction à l’aide de TransactionScopeOption  
+##  <a name="ManageTxFlow"></a> La gestion du flux de transaction à l’aide de TransactionScopeOption  
  L'étendue de transaction peut être imbriquée en appelant une méthode qui utilise une <xref:System.Transactions.TransactionScope> à partir d'une méthode utilisant sa propre étendue, comme la méthode `RootMethod` de l'exemple suivant,  
   
 ```csharp  

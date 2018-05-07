@@ -1,35 +1,23 @@
 ---
 title: Mappage entre JSON et XML
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 22ee1f52-c708-4024-bbf0-572e0dae64af
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 770be9ea5327b32286de64207a3cf07bca7449c6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: db34161ad3e2f7d2c9737e6a456b27bd70c5ebfb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mapping-between-json-and-xml"></a>Mappage entre JSON et XML
-Les lecteurs et writers produits par le <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory> fournissent une API XML sur le contenu de JavaScript Objet Notation (JSON). JSON encode des données à l’aide d’un sous-ensemble de littéraux d’objet JavaScript. Les lecteurs et writers produits par cette fabrique sont également utilisés lorsque le contenu JSON est envoyé ou reçu par les applications [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] à l'aide du <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement> ou du <xref:System.ServiceModel.WebHttpBinding>.  
+Les lecteurs et writers produits par le <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory> fournissent une API XML sur le contenu de JavaScript Objet Notation (JSON). JSON encode des données à l’aide d’un sous-ensemble de littéraux d’objet JavaScript. Les lecteurs et writers produits par cette fabrique sont également utilisés lorsque le contenu JSON est envoyé ou reçu par les applications Windows Communication Foundation (WCF) à l’aide de la <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement> ou le <xref:System.ServiceModel.WebHttpBinding>.  
   
  En cas d'initialisation avec le contenu JSON, le lecteur JSON se comporte de la même façon qu'un lecteur XML textuel sur une instance de XML. Le writer JSON, lorsqu'il reçoit une séquence d'appels qui sur un lecteur XML textuel produit une certaine instance XML, écrit un contenu JSON. Le mappage entre cette instance de XML et le contenu JSON est décrit dans cette rubrique pour une utilisation dans des scénarios avancés.  
   
- En interne, JSON est représenté comme un jeu d'informations XML lorsqu'il est traité par [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Il n'est pas nécessaire généralement de vous préoccuper de cette représentation interne étant donné que le mappage est uniquement un mappage logique : JSON n'est pas généralement converti physiquement en XML en mémoire ou converti vers JSON à partir du XML. Le mappage signifie que les API XML sont utilisées pour accéder au contenu JSON.  
+ En interne, JSON est représenté comme un infoset XML lors du traitement par WCF. Il n'est pas nécessaire généralement de vous préoccuper de cette représentation interne étant donné que le mappage est uniquement un mappage logique : JSON n'est pas généralement converti physiquement en XML en mémoire ou converti vers JSON à partir du XML. Le mappage signifie que les API XML sont utilisées pour accéder au contenu JSON.  
   
- Lorsque [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilise JSON, le scénario habituel est que le <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> est branché automatiquement par le comportement <xref:System.ServiceModel.Description.WebScriptEnablingBehavior>, ou par le comportement <xref:System.ServiceModel.Description.WebHttpBehavior> le cas échéant. Le <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> comprend le mappage entre JSON et les jeux d'informations XML et fonctionne comme s'il traite directement avec JSON. (Il est possible d'utiliser le <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> avec tout lecteur ou writer XML à condition que le XML se conforme au mappage suivant).  
+ Lorsque WCF utilise JSON, le scénario habituel est que le <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> est branché automatiquement par le <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> comportement, ou par le <xref:System.ServiceModel.Description.WebHttpBehavior> comportement lorsque cela est approprié. Le <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> comprend le mappage entre JSON et les jeux d'informations XML et fonctionne comme s'il traite directement avec JSON. (Il est possible d'utiliser le <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> avec tout lecteur ou writer XML à condition que le XML se conforme au mappage suivant).  
   
- Dans les scénarios avancés, il peut devenir nécessaire d'accéder directement au mappage suivant. Ces scénarios se produisent lorsque vous souhaitez sérialiser et désérialiser JSON de manières personnalisées, sans avoir à compter sur le <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>, ou lors d'un traitement direct avec le type <xref:System.ServiceModel.Channels.Message> pour les messages qui contiennent JSON. Le mappage JSON-XML est également utilisé pour l'enregistrement des messages. Lors de l'utilisation de la fonctionnalité d'enregistrement des messages dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], les messages JSON sont enregistrés au format XML selon le mappage décrit dans la section suivante.  
+ Dans les scénarios avancés, il peut devenir nécessaire d'accéder directement au mappage suivant. Ces scénarios se produisent lorsque vous souhaitez sérialiser et désérialiser JSON de manières personnalisées, sans avoir à compter sur le <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>, ou lors d'un traitement direct avec le type <xref:System.ServiceModel.Channels.Message> pour les messages qui contiennent JSON. Le mappage JSON-XML est également utilisé pour l'enregistrement des messages. Lorsque vous utilisez la fonctionnalité de journalisation des messages dans WCF, les messages JSON sont enregistrés au format XML selon le mappage décrit dans la section suivante.  
   
  Pour clarifier le concept d'un mappage, l'exemple suivant est celui d'un document JSON.  
   
@@ -46,7 +34,7 @@ Les lecteurs et writers produits par le <xref:System.Runtime.Serialization.Json.
 </root>  
 ```  
   
- En outre, si le message JSON dans l'exemple est reçu par [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] et enregistré, vous pouvez consulter le fragment XML dans le journal précédent.  
+ En outre, si le message JSON dans l’exemple est reçu par WCF et connecté, vous voyez le fragment XML dans le journal précédent.  
   
 ## <a name="mapping-between-json-and-the-xml-infoset"></a>Mappage entre JSON et le jeu d'informations XML  
  Bonne et due forme, le mappage est entre JSON comme décrit dans [RFC 4627](http://go.microsoft.com/fwlink/?LinkId=98808) (sauf avec certaines restrictions souples et certains autres restrictions ajoutées) et le XML infoset (et pas XML textuels) comme décrit dans [informations XML Définir](http://go.microsoft.com/fwlink/?LinkId=98809) . Consultez cette rubrique pour les définitions de *éléments d’information* et des champs entre [crochets].  
@@ -105,7 +93,7 @@ Les lecteurs et writers produits par le <xref:System.Runtime.Serialization.Json.
   
 -   L'attribut de nom de contrat de données ("__type") décrit plus loin. Cet attribut peut être présent uniquement si l'attribut de type JSON est aussi présent et sa [valeur normalisée] est "objet." Cet attribut est utilisé par le `DataContractJsonSerializer` pour conserver des informations de type de contrat de données - par exemple, dans les cas polymorphes où un type dérivé est sérialisé et où un type de base est attendu. Si vous n'utilisez le `DataContractJsonSerializer`, dans la plupart des cas, cet attribut est ignoré.  
   
--   [espaces de noms dans l’étendue] contient la liaison de "xml" vers "http://www.w3.org/XML/1998/namespace" comme mandaté par la spécification infoset.  
+-   [espaces de noms dans l’étendue] contient la liaison de « xml » à «http://www.w3.org/XML/1998/namespace» comme mandaté par la spécification infoset.  
   
 -   [enfants], [attributs] et [espaces de noms dans l'étendue] ne doivent pas avoir d'éléments autres que ceux spécifiés précédemment et [attributs d'espace de noms] ne doit pas avoir de membres, mais ne compte pas sur ces faits pour la lecture du XML mappé à partir de JSON.  
   
@@ -209,7 +197,7 @@ rayon '|0 ou plusieurs éléments EII|Un tableau ouvrant (crochet ouvrant) comme
  `{"myLocalName1":"myValue1","myLocalName2":2,"myLocalName3":{"myNestedName1":true,"myNestedName2":null}}`  
   
 > [!NOTE]
->  Il n'y a aucune étape d'encodage XML dans le mappage précédent. Par conséquent, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] prend en charge seulement des documents JSON où tous les caractères dans les noms clé sont des caractères valides dans les noms d'élément XML. Par exemple, le document JSON {"<":"a"} n'est pas pris en charge parce que < n'est pas un nom valide pour un élément XML.  
+>  Il n'y a aucune étape d'encodage XML dans le mappage précédent. Par conséquent, WCF prend uniquement en charge les documents JSON où tous les caractères dans les noms de clés sont les caractères valides dans les noms d’élément XML. Par exemple, le document JSON {"<":"a"} n'est pas pris en charge parce que < n'est pas un nom valide pour un élément XML.  
   
  La situation inverse (caractères valide dans XML mais pas dans JSON) ne provoque pas de problèmes étant donné que le mappage précédent inclut des étapes d'échappement et de non échappement JSON.  
   

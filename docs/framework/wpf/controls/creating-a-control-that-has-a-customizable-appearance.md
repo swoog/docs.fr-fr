@@ -1,13 +1,6 @@
 ---
-title: "Création d'un contrôle avec une apparence personnalisable"
-ms.custom: 
+title: Création d'un contrôle avec une apparence personnalisable
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,20 +13,15 @@ helpviewer_keywords:
 - managing control states [WPF], VisualStateManager
 - VisualStateManager [WPF], best practice
 ms.assetid: 9e356d3d-a3d0-4b01-a25f-2d43e4d53fe5
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4da96c3e33c6f7827619b408568fbbfe96c50a11
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9f539e7dbb105591375857122d738fddd87f6776
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-control-that-has-a-customizable-appearance"></a>Création d'un contrôle avec une apparence personnalisable
 <a name="introduction"></a>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]vous donne la possibilité de créer un contrôle dont l’apparence peut être personnalisée. Par exemple, vous pouvez modifier l’apparence d’un <xref:System.Windows.Controls.CheckBox> dépasse le paramètre de propriétés fera en créant un nouveau <xref:System.Windows.Controls.ControlTemplate>. L’illustration suivante montre un <xref:System.Windows.Controls.CheckBox> qui utilise une valeur par défaut <xref:System.Windows.Controls.ControlTemplate> et un <xref:System.Windows.Controls.CheckBox> qui utilise une personnalisée <xref:System.Windows.Controls.ControlTemplate>.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] vous donne la possibilité de créer un contrôle dont l’apparence peut être personnalisée. Par exemple, vous pouvez modifier l’apparence d’un <xref:System.Windows.Controls.CheckBox> dépasse le paramètre de propriétés fera en créant un nouveau <xref:System.Windows.Controls.ControlTemplate>. L’illustration suivante montre un <xref:System.Windows.Controls.CheckBox> qui utilise une valeur par défaut <xref:System.Windows.Controls.ControlTemplate> et un <xref:System.Windows.Controls.CheckBox> qui utilise une personnalisée <xref:System.Windows.Controls.ControlTemplate>.  
   
  ![Une case à cocher avec le modèle de contrôle par défaut. ] (../../../../docs/framework/wpf/controls/media/ndp-checkboxdefault.png "NDP_CheckBoxDefault")  
 Case à cocher qui utilise le modèle de contrôle par défaut  
@@ -89,7 +77,7 @@ Un contrôle NumericUpDown personnalisé
   
  [!code-xaml[VSMCustomControl#VisualStructure](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/window1.xaml#visualstructure)]  
   
- Un comportement visuel de la `NumericUpDown` contrôle est que la valeur est dans une police rouge s’il est négatif.  Si vous modifiez le <xref:System.Windows.Controls.TextBlock.Foreground%2A> de la <xref:System.Windows.Controls.TextBlock> dans le code lorsque le `Value` est négatif, la `NumericUpDown` affichent toujours une valeur négative rouge. Vous spécifiez le comportement visuel du contrôle dans le <xref:System.Windows.Controls.ControlTemplate> en ajoutant <xref:System.Windows.VisualState> des objets sur le <xref:System.Windows.Controls.ControlTemplate>.  L’exemple suivant illustre la <xref:System.Windows.VisualState> des objets pour le `Positive` et `Negative` les États.  `Positive`et `Negative` sont mutuellement exclusif (le contrôle est toujours exactement dans l’un des deux), de sorte que l’exemple place la <xref:System.Windows.VisualState> des objets dans un seul <xref:System.Windows.VisualStateGroup>.  Lorsque le contrôle passe à la `Negative` état, le <xref:System.Windows.Controls.TextBlock.Foreground%2A> de la <xref:System.Windows.Controls.TextBlock> devient rouge.  Lorsque le contrôle est dans le `Positive` état, le <xref:System.Windows.Controls.TextBlock.Foreground%2A> retrouve sa valeur d’origine.  Définition <xref:System.Windows.VisualState> des objets dans une <xref:System.Windows.Controls.ControlTemplate> est expliquée en détail dans [personnalisation de l’apparence d’un contrôle existant en créant un ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+ Un comportement visuel de la `NumericUpDown` contrôle est que la valeur est dans une police rouge s’il est négatif.  Si vous modifiez le <xref:System.Windows.Controls.TextBlock.Foreground%2A> de la <xref:System.Windows.Controls.TextBlock> dans le code lorsque le `Value` est négatif, la `NumericUpDown` affichent toujours une valeur négative rouge. Vous spécifiez le comportement visuel du contrôle dans le <xref:System.Windows.Controls.ControlTemplate> en ajoutant <xref:System.Windows.VisualState> des objets sur le <xref:System.Windows.Controls.ControlTemplate>.  L’exemple suivant illustre la <xref:System.Windows.VisualState> des objets pour le `Positive` et `Negative` les États.  `Positive` et `Negative` sont mutuellement exclusif (le contrôle est toujours exactement dans l’un des deux), de sorte que l’exemple place la <xref:System.Windows.VisualState> des objets dans un seul <xref:System.Windows.VisualStateGroup>.  Lorsque le contrôle passe à la `Negative` état, le <xref:System.Windows.Controls.TextBlock.Foreground%2A> de la <xref:System.Windows.Controls.TextBlock> devient rouge.  Lorsque le contrôle est dans le `Positive` état, le <xref:System.Windows.Controls.TextBlock.Foreground%2A> retrouve sa valeur d’origine.  Définition <xref:System.Windows.VisualState> des objets dans une <xref:System.Windows.Controls.ControlTemplate> est expliquée en détail dans [personnalisation de l’apparence d’un contrôle existant en créant un ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
   
 > [!NOTE]
 >  Veillez à définir le <xref:System.Windows.VisualStateManager.VisualStateGroups%2A?displayProperty=nameWithType> propriété jointe sur la racine <xref:System.Windows.FrameworkElement> de la <xref:System.Windows.Controls.ControlTemplate>.  
@@ -212,17 +200,17 @@ Un contrôle NumericUpDown personnalisé
   
 -   A <xref:System.Windows.Controls.Primitives.RepeatButton> appelée `UpButton`.  
   
--   A <xref:System.Windows.Controls.Primitives.RepeatButton> appelé`DownButton.`  
+-   A <xref:System.Windows.Controls.Primitives.RepeatButton> appelé `DownButton.`  
   
  Le contrôle peut être dans les états suivants :  
   
--   Dans le`ValueStates`<xref:System.Windows.VisualStateGroup>  
+-   Dans le `ValueStates`<xref:System.Windows.VisualStateGroup>  
   
     -   `Positive`  
   
     -   `Negative`  
   
--   Dans le`FocusStates`<xref:System.Windows.VisualStateGroup>  
+-   Dans le `FocusStates`<xref:System.Windows.VisualStateGroup>  
   
     -   `Focused`  
   

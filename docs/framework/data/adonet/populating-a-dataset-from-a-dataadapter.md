@@ -1,27 +1,15 @@
 ---
-title: "Remplissage d'un DataSet à partir d'un DataAdapter"
-ms.custom: 
+title: Remplissage d'un DataSet à partir d'un DataAdapter
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3fa0ac7d-e266-4954-bfac-3fbe2f913153
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c0991398a28e491d381d10dea8a14ed463c67c89
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: ced280be0fa14077be893c59596ed65b424172c3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="populating-a-dataset-from-a-dataadapter"></a>Remplissage d'un DataSet à partir d'un DataAdapter
 L’objet [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]<xref:System.Data.DataSet> est une représentation résidente en mémoire de données, qui propose un modèle de programmation relationnel cohérent, indépendant de la source de données. Le `DataSet` représente un jeu de données complet qui comprend des tables, des contraintes et des relations entre les tables. Étant donné que le `DataSet` est indépendant de la source de données, le `DataSet` peut inclure des données locales par rapport à l'application ainsi que des données provenant de plusieurs sources. L'interaction avec les sources de données existantes est contrôlée par le `DataAdapter`.  
@@ -33,7 +21,7 @@ L’objet [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]<xref:System.
 > [!NOTE]
 >  L'utilisation du `DataAdapter` pour extraire une table dans son intégralité prend du temps, particulièrement si la table contient de nombreuses lignes. Cela vient du fait qu'accéder à la base de données, localiser et traiter les données, puis transférer les données au client prend du temps. L'extraction de l'intégralité de la table vers le client verrouille également toutes les lignes sur le serveur. Pour améliorer les performances, vous pouvez utiliser la clause `WHERE` pour réduire drastiquement le nombre de lignes retournées au client. Vous pouvez également réduire la quantité de données retournées au client en répertoriant de façon explicite uniquement les colonnes requises dans l'instruction `SELECT` . Une autre solution de contournement efficace consiste à extraire les lignes par lots, par exemple plusieurs centaines de lignes à la fois, et à extraire le lot suivant uniquement lorsque le client a terminé le traitement du lot actuel.  
   
- La méthode `Fill` utilise l'objet `DataReader` de manière implicite pour retourner les noms et les types de colonnes utilisés pour créer les tables du `DataSet`ainsi que les données pour remplir les lignes des tables du `DataSet`. Les tables et les colonnes ne sont créées que si elles n'existent pas encore ; sinon `Fill` utilise le schéma `DataSet` existant. Types de colonne sont créés en tant que [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] conformément aux tableaux dans les types [des mappages de Type de données dans ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md). Les clés primaires ne sont pas créées, sauf si elles existent dans la source de données et que `DataAdapter`**.**`MissingSchemaAction` a la valeur `MissingSchemaAction`**.**`AddWithKey`. Si `Fill` détecte qu'il existe une clé primaire pour une table, elle remplace les données du `DataSet` par celles de la source de données pour les lignes dont les valeurs de colonne de clé primaire correspondent à celles de la ligne retournée par la source de données. Si aucune clé primaire n'est trouvée, les données sont ajoutées à la table dans le `DataSet`. `Fill`utilise les mappages qui peuvent exister lorsque vous remplissez le `DataSet` (consultez [mappages DataAdapter DataTable et DataColumn](../../../../docs/framework/data/adonet/dataadapter-datatable-and-datacolumn-mappings.md)).  
+ La méthode `Fill` utilise l'objet `DataReader` de manière implicite pour retourner les noms et les types de colonnes utilisés pour créer les tables du `DataSet`ainsi que les données pour remplir les lignes des tables du `DataSet`. Les tables et les colonnes ne sont créées que si elles n'existent pas encore ; sinon `Fill` utilise le schéma `DataSet` existant. Types de colonne sont créés en tant que [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] conformément aux tableaux dans les types [des mappages de Type de données dans ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md). Les clés primaires ne sont pas créées, sauf si elles existent dans la source de données et que `DataAdapter`**.**`MissingSchemaAction` a la valeur `MissingSchemaAction`**.**`AddWithKey`. Si `Fill` détecte qu'il existe une clé primaire pour une table, elle remplace les données du `DataSet` par celles de la source de données pour les lignes dont les valeurs de colonne de clé primaire correspondent à celles de la ligne retournée par la source de données. Si aucune clé primaire n'est trouvée, les données sont ajoutées à la table dans le `DataSet`. `Fill` utilise les mappages qui peuvent exister lorsque vous remplissez le `DataSet` (consultez [mappages DataAdapter DataTable et DataColumn](../../../../docs/framework/data/adonet/dataadapter-datatable-and-datacolumn-mappings.md)).  
   
 > [!NOTE]
 >  Si `SelectCommand` retourne les résultats d'une jointure externe, le `DataAdapter` ne définit pas de valeur `PrimaryKey` pour le `DataTable`obtenu. Vous devez définir vous-même la `PrimaryKey` pour garantir une résolution correcte des lignes dupliquées. Pour plus d’informations, consultez [définition des clés primaires](../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md).  

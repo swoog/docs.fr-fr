@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugChain::GetStackRange, méthode"
-ms.custom: 
+title: ICorDebugChain::GetStackRange, méthode
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugChain.GetStackRange
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 554284e7-3f6c-4d40-8da5-1c9317fbd484
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 37a9be7924a6d9c1f1d78bd10f9642fff22036bb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 226f8c431b90d53366aa5e504101e7de581ec570
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugchaingetstackrange-method"></a>ICorDebugChain::GetStackRange, méthode
 Obtient la plage d’adresses du segment de pile pour cette chaîne.  
@@ -57,11 +45,11 @@ HRESULT GetStackRange (
 ## <a name="remarks"></a>Notes  
  La plage numérique est utile uniquement pour la comparaison des emplacements de frame de pile. Vous ne pouvez pas faire d’hypothèses sur ce qui est réellement stocké dans la pile.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

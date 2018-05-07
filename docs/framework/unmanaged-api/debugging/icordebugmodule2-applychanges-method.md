@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugModule2::ApplyChanges, méthode"
-ms.custom: 
+title: ICorDebugModule2::ApplyChanges, méthode
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugModule2.ApplyChanges
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 96fa3406-6a6f-41a1-88c6-d9bc5d1a16d1
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4855b7a42d471304d000465a0437f29bdff05494
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5a406e945a67352bc7f126b40bd56f4a11dd693b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugmodule2applychanges-method"></a>ICorDebugModule2::ApplyChanges, méthode
 Applique les modifications dans les métadonnées et les modifications dans le code MSIL (intermediate language) de Microsoft pour le processus en cours d’exécution.  
@@ -65,7 +53,7 @@ HRESULT ApplyChanges (
  [in] Mémoire tampon qui contient le code MSIL mis à jour.  
   
 ## <a name="remarks"></a>Notes  
- Le `pbMetadata` paramètre est dans un format de métadonnées delta spécial (comme sortie par [IMetaDataEmit2::SaveDeltaToMemory](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-savedeltatomemory-method.md)). `pbMetadata`utilise les métadonnées précédentes comme base et décrit les différentes modifications à appliquer à cette base.  
+ Le `pbMetadata` paramètre est dans un format de métadonnées delta spécial (comme sortie par [IMetaDataEmit2::SaveDeltaToMemory](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-savedeltatomemory-method.md)). `pbMetadata` utilise les métadonnées précédentes comme base et décrit les différentes modifications à appliquer à cette base.  
   
  En revanche, le `pbIL[`] paramètre contient le nouveau code MSIL pour la méthode de mise à jour et est destiné à remplacer complètement le code MSIL précédent de cette méthode  
   
@@ -75,11 +63,11 @@ HRESULT ApplyChanges (
   
  Si le `ApplyChanges` méthode échoue, le débogage session est dans un état non valide et doit être redémarrée.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

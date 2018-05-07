@@ -1,29 +1,17 @@
 ---
 title: Architecture du composant BindingSource
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - BindingSource component [Windows Forms], architecture
 - Windows Forms, data binding
 - BindingSource component [Windows Forms], about BindingSource component
 - data binding [Windows Forms], BindingSource component
 ms.assetid: 7bc69c90-8a11-48b1-9336-3adab5b41591
-caps.latest.revision: "23"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 25a69f31d8da8638cfc92ff94d8f90dbcb327158
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b0334bd7a0bc5ff46c43fd7ee549422d98c35efe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bindingsource-component-architecture"></a>Architecture du composant BindingSource
 Avec le <xref:System.Windows.Forms.BindingSource> composant, vous pouvez lier universellement tous les contrôles Windows Forms aux sources de données.  
@@ -57,13 +45,13 @@ Avec le <xref:System.Windows.Forms.BindingSource> composant, vous pouvez lier un
   
 -   Source de données sous forme de liste.  
   
--   <xref:System.Windows.Forms.BindingSource>comme un <xref:System.ComponentModel.IBindingList>.  
+-   <xref:System.Windows.Forms.BindingSource> comme un <xref:System.ComponentModel.IBindingList>.  
   
 -   Création d’éléments personnalisés.  
   
 -   Création d’éléments transactionnels.  
   
--   <xref:System.Collections.IEnumerable>prise en charge.  
+-   <xref:System.Collections.IEnumerable> prise en charge.  
   
 -   Prise en charge de la conception.  
   
@@ -120,7 +108,7 @@ Avec le <xref:System.Windows.Forms.BindingSource> composant, vous pouvez lier un
 |Une référence null (`Nothing` en Visual Basic) avec <xref:System.Windows.Forms.BindingSource.DataMember%2A> défini|Non pris en charge ; déclenche <xref:System.ArgumentException>.|  
 |Type non-liste ou objet de type « T »|Vide <xref:System.ComponentModel.IBindingList> de type « T ».|  
 |Instance de tableau|Un <xref:System.ComponentModel.IBindingList> contenant les éléments du tableau.|  
-|<xref:System.Collections.IEnumerable>instance|Un <xref:System.ComponentModel.IBindingList> contenant le <xref:System.Collections.IEnumerable> éléments|  
+|<xref:System.Collections.IEnumerable> instance|Un <xref:System.ComponentModel.IBindingList> contenant le <xref:System.Collections.IEnumerable> éléments|  
 |Instance de liste contenant type « T »|Un <xref:System.ComponentModel.IBindingList> instance contenant le type « T ».|  
   
  En outre, <xref:System.Windows.Forms.BindingSource.DataSource%2A> peut être définie à d’autres types de liste, tels que <xref:System.ComponentModel.IListSource> et <xref:System.ComponentModel.ITypedList>et le <xref:System.Windows.Forms.BindingSource> les gérer en conséquence. Dans ce cas, le type de contenu dans la liste doit avoir un constructeur par défaut.  

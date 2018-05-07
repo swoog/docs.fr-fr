@@ -1,24 +1,12 @@
 ---
-title: "Propagation d'ID d'activité"
-ms.custom: 
+title: Propagation d'ID d'activité
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: cd1c1ae5-cc8a-4f51-90c9-f7b476bcfe70
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1f7543a79f351cf1f1e9c6d8c316684d9bfc3155
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e51970f693d9ca2d2f81bf4efc97969896de4828
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activity-id-propagation"></a>Propagation d'ID d'activité
 La propagation a lieu lorsque le suivi d'activité ServiceModel est activé (propagation ServiceModel) ou désactivé (propagation d'activité utilisateur-à-utilisateur).  

@@ -1,27 +1,15 @@
 ---
-title: "Sous-système approuvé"
-ms.custom: 
+title: Sous-système approuvé
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1f5ce46b-e259-4bc9-a0b9-89d06fc9341c
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ca07db06d4bff9660760c5abf8c9bc2f1f9f2944
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 59c44609017ab18a176624b7ef6d409005151c3f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="trusted-subsystem"></a>Sous-système approuvé
 Un client accède à un ou plusieurs services Web distribués sur un réseau. Les services Web sont conçus afin que l'accès aux ressources supplémentaires (telles que les bases de données ou autres services Web) soit encapsulé dans la logique métier du service Web. Ces ressources doivent être protégées contre tout accès non autorisé. L'illustration suivante présente un processus de sous-système approuvé.  
@@ -43,13 +31,13 @@ Un client accède à un ou plusieurs services Web distribués sur un réseau. Le
 |Caractéristique|Description|  
 |--------------------|-----------------|  
 |Mode de sécurité|Message|  
-|Interopérabilité|[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] uniquement.|  
+|Interopérabilité|Windows Communication Foundation (WCF) uniquement.|  
 |Authentification (service)|Le service de jeton de sécurité authentifie et autorise des clients.|  
 |Authentification (client)|Le sous-système approuvé authentifie le client et la ressource authentifie le service du sous-système approuvé.|  
 |Intégrité|Oui|  
 |Confidentialité|Oui|  
 |Transport|HTTP entre client et le service du sous-système approuvé.<br /><br /> NET.TCP entre le service du sous-système approuvé et la ressource (service principal).|  
-|Liaison|<xref:System.ServiceModel.WSHttpBinding>et <xref:System.ServiceModel.NetTcpBinding> [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
+|Liaison|<xref:System.ServiceModel.WSHttpBinding> et <xref:System.ServiceModel.NetTcpBinding> [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
   
 ## <a name="resource-back-end-service"></a>Ressource (service principal)  
   

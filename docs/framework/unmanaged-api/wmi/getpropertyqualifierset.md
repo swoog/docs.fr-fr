@@ -1,11 +1,7 @@
 ---
-title: "GetPropertyQualifierSet (fonction) (référence des API non managées)"
-description: "La fonction GetPropertyQualifierSet récupère le qualificateur d’une propriété."
+title: GetPropertyQualifierSet (fonction) (référence des API non managées)
+description: La fonction GetPropertyQualifierSet récupère le qualificateur d’une propriété.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - GetPropertyQualifierSet
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7ca2981c8833abaafd5d206b66d6e91f34e2c91d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d2951733211737f06cd737b20bd1537277be1be1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getpropertyqualifierset-function"></a>GetPropertyQualifierSet (fonction)
 Récupère le qualificateur définie pour une propriété particulière.
@@ -54,7 +47,7 @@ HRESULT GetPropertyQualifierSet (
 [in] Un pointeur vers un [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) instance.
 
 `wszMethod`  
-[in] Le nom de propriété. `wszProperty`doit pointer vers un valide `LPCWSTR`. 
+[in] Le nom de propriété. `wszProperty` doit pointer vers un valide `LPCWSTR`. 
 
 `ppQualSet`  
 [out] Reçoit le pointeur d’interface qui autorise l’accès pour les qualificateurs de la propriété. `ppQualSet` ne peut pas avoir la valeur `null`. Si une erreur se produit, un nouvel objet n’est pas retourné, et le pointeur est défini pour pointer vers `null`. 
@@ -82,12 +75,12 @@ Un appel à cette fonction est prise en charge uniquement si l’objet actuel es
 
 Dans la mesure où les propriétés système n’ont des qualificateurs d’aucun, la fonction retourne `WBEM_E_SYSTEM_PROPERTY` si vous tentez d’obtenir un [IWbemQualifierSet](https://msdn.microsoft.com/library/aa391860(v=vs.85).aspx) pointeur pour une propriété système.
 
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
 **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** WMINet_Utils.idl  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versions du .NET framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
 [WMI et les compteurs de Performance (référence des API non managées)](index.md)

@@ -1,27 +1,15 @@
 ---
 title: Service Trace Viewer Tool (SvcTraceViewer.exe)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-caps.latest.revision: "55"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7526f5cda302618b2f240e5ae1c126e60b9ab5e6
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: d9cd87bba52297d37683127ece3dd9c31e9a9a70
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Service Trace Viewer Tool (SvcTraceViewer.exe)
-L'outil Service Trace Viewer [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] vous aide à analyser des suivis de diagnostic générés par [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Service Trace Viewer permet de fusionner, d'afficher et de filtrer facilement des messages de suivi dans le journal afin de les diagnostiquer, de les réparer et de vérifier les problèmes des services [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+Outil Windows Communication Foundation (WCF) Service Trace Viewer vous permet d’analyser des traces de diagnostic sont générés par [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Service Trace Viewer permet de fusionner, d'afficher et de filtrer facilement des messages de suivi dans le journal afin de les diagnostiquer, de les réparer et de vérifier les problèmes des services [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
   
 ## <a name="configuring-tracing"></a>Configuration du traçage  
  Les suivis de diagnostic vous fournissent des informations qui affichent ce qui arrive pendant le fonctionnement de votre application. Comme son nom l'indique, il permet de suivre le fonctionnement de la source à la destination, ainsi qu'au niveau de points intermédiaires.  
@@ -272,7 +260,7 @@ L'outil Service Trace Viewer [!INCLUDE[indigo1](../../../includes/indigo1-md.md)
   
 4.  L'arborescence sur la gauche affiche la structure de l'enregistrement de suivi que vous avez sélectionné lors de la première étape. Naviguez jusqu'à l'élément pour lequel vous souhaitez créer une condition. Dans cet exemple, accédez à ThreadID se trouver dans l’expression XPath : /E2ETraceEvent/System/Execution/@ThreadID nœud. Double-cliquez sur l’attribut ThreadID dans l’arborescence. Cela crée à droite de la boîte de dialogue une expression pour l'attribut.  
   
-5.  Modifiez le champ de paramètre pour la condition ThreadID de Aucun à '{0}'. Cette étape permet de configurer la valeur de ThreadID lorsque le filtre est appliqué (voir la section Comment appliquer un filtre). Vous pouvez définir jusqu'à quatre paramètres. Les conditions sont associées à l'aide de l'opérateur OR.  
+5.  Modifier le champ de paramètre pour la condition ThreadID d’aucun à '{0}'. Cette étape permet de configurer la valeur de ThreadID lorsque le filtre est appliqué (voir la section Comment appliquer un filtre). Vous pouvez définir jusqu'à quatre paramètres. Les conditions sont associées à l'aide de l'opérateur OR.  
   
 6.  Cliquez sur **Ok** pour créer le filtre.  
   
@@ -297,7 +285,7 @@ L'outil Service Trace Viewer [!INCLUDE[indigo1](../../../includes/indigo1-md.md)
   
 2.  Cliquez sur **filtrer maintenant**et observez le résultat de l’opération.  
   
- Si votre filtre utilise plusieurs paramètres, entrez-les à l’aide de ';' comme séparateur dans le **rechercher** champ. Par exemple, la chaîne suivante définit trois paramètres : '1;findValue;text'. La visionneuse applique la valeur '1' au paramètre {0} du filtre. 'findValue' et 'text' sont appliqués à {1} et {2} respectivement.  
+ Si votre filtre utilise plusieurs paramètres, entrez-les à l’aide de ';' comme séparateur dans le **rechercher** champ. Par exemple, la chaîne suivante définit trois paramètres : '1;findValue;text'. La visionneuse applique '1' pour le {0} paramètre du filtre. 'findValue' et 'text' sont appliqués aux {1} et {2} respectivement.  
   
 ###### <a name="sharing-custom-filters"></a>Partage de filtres personnalisés  
  Les filtres personnalisés peuvent être partagés entre différentes sessions et différents utilisateurs. Vous pouvez exporter les filtres vers un fichier de définition et importer ce fichier vers un autre emplacement.  

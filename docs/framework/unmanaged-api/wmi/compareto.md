@@ -1,11 +1,7 @@
 ---
-title: "CompareTo (fonction) (référence des API non managées)"
-description: "La fonction CompareTo compare un objet à un autre objet WMI."
+title: CompareTo (fonction) (référence des API non managées)
+description: La fonction CompareTo compare un objet à un autre objet WMI.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - CompareTo
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 038074b5bb3adc816caa226d3167395758d2ae57
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: db4431da90842f4f96a0f09a2f28dc473d956ee3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compareto-function"></a>CompareTo (fonction)
 Compare un objet à un autre objet de gestion de Windows.  
@@ -58,7 +51,7 @@ HRESULT CompareTo (
 
 `pCompareTo`  
 
-[in] L’objet de comparaison. `pcompareTo`doit être un [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) instance ; elle ne peut pas être `null`.
+[in] L’objet de comparaison. `pcompareTo` doit être un [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) instance ; elle ne peut pas être `null`.
 
 ## <a name="return-value"></a>Valeur de retour
 
@@ -85,7 +78,7 @@ Les indicateurs qui peuvent être passés en tant que le `lEnumFlags` argument s
 | `WBEM_FLAG_IGNORE_QUALIFIERS` | 1 | Ignorer tous les qualificateurs (y compris **clé** et **dynamique**) |
 | `WBEM_FLAG_IGNORE_DEFAULT_VALUES` | 4 | Ignorer les valeurs par défaut des propriétés. Cet indicateur s’applique uniquement à la comparaison des classes. |
 | `WBEM_FLAG_IGNORE_FLAVOR` | 0 x 20 | Ignorer les versions de qualificateur. Cet indicateur toujours qualificateurs en tenant compte, mais ignore les distinctions de version tels que les règles de propagation et remplace les restrictions. |
-| `WBEM_FLAG_IGNORE_CASE` | 0 x 10 | Ignorer la casse lors de la comparaison des valeurs de chaîne. Cela s’applique à la fois pour les chaînes et valeurs de qualificateur. La comparaison des noms de propriété et le qualificateur est toujours la casse, même si cet indicateur est défini. |
+| `WBEM_FLAG_IGNORE_CASE` | 0x10 | Ignorer la casse lors de la comparaison des valeurs de chaîne. Cela s’applique à la fois pour les chaînes et valeurs de qualificateur. La comparaison des noms de propriété et le qualificateur est toujours la casse, même si cet indicateur est défini. |
 | `WBEM_FLAG_IGNORE_CLASS` | 0 x 8 | Supposons que les objets comparés sont des instances de la même classe. Par conséquent, cet indicateur compare uniquement des informations relatives aux instances. Utilisez cette indicateurs pour optimiser les performances. Si les objets ne sont pas de la même classe, les résultats sont indéfinis. |
 
 Ou vous pouvez spécifier un seul indicateur composite comme suit :
@@ -94,12 +87,12 @@ Ou vous pouvez spécifier un seul indicateur composite comme suit :
 |---------|---------|---------|
 |`WBEM_COMPARISON_INCLUDE_ALL` | 0 | Prendre en compte toutes les fonctionnalités dans la comparaison. |
 
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** WMINet_Utils.idl  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versions du .NET framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
 [WMI et les compteurs de Performance (référence des API non managées)](index.md)

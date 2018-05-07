@@ -1,14 +1,6 @@
 ---
 title: IMetaDataEmit, interface
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataEmit
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 3b48fd47-7397-4e2c-8bec-8157aa08978c
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 856b4c42b018d6b1cefe6b61e21a15e7212f9541
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4c77edfff640f796dd3f345eaeb4728830c5f4c6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataemit-interface"></a>IMetaDataEmit, interface
 Fournit des méthodes pour créer, modifier et enregistrer les métadonnées relatives à l’assembly dans la portée actuellement définie. Les métadonnées peuvent être stockées en mémoire ou enregistrées sur le disque.  
@@ -91,14 +79,14 @@ Fournit des méthodes pour créer, modifier et enregistrer les métadonnées rel
 |[SetTypeDefProps, méthode](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-settypedefprops-method.md)|Définit les fonctionnalités d’un type défini par un appel antérieur à `IMetaDataEmit::DefineTypeDef`.|  
 |[TranslateSigWithScope, méthode](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-translatesigwithscope-method.md)|Importe un assembly dans la portée actuelle et obtient une nouvelle signature de métadonnées pour la portée fusionnée.|  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Cor.h  
   
  **Bibliothèque :** utilisé en tant que ressource dans MsCorEE.dll  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [Interfaces de métadonnées](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  

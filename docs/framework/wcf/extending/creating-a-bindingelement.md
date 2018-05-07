@@ -1,27 +1,15 @@
 ---
-title: "Création d’un élément de liaison"
-ms.custom: 
+title: Création d’un élément de liaison
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 01a35307-a41f-4ef6-a3db-322af40afc99
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0184d07210322e6ed04441f7190857cf07205b15
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: fdc3ec1fef86ad31434ea372740497969c7ae6a7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-bindingelement"></a>Création d’un élément de liaison
-Les liaisons et les éléments de liaison (qui étendent respectivement les objets <xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType> et <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>) correspondent à l'emplacement où le modèle d'application [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] est associé aux fabrications de canaux ainsi qu'aux écouteurs de canal. Sans liaisons, à l’aide de canaux personnalisés nécessite une programmation au niveau du canal comme décrit dans [de programmation au niveau du canal de Service](../../../../docs/framework/wcf/extending/service-channel-level-programming.md) et [de programmation au niveau du canal de Client](../../../../docs/framework/wcf/extending/client-channel-level-programming.md). Cette rubrique décrit la configuration minimale requise pour permettre à l’aide de votre canal dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], le développement d’un <xref:System.ServiceModel.Channels.BindingElement> pour votre canal, puis activer l’utilisation de l’application, comme décrit à l’étape 4 de [développement canaux](../../../../docs/framework/wcf/extending/developing-channels.md).  
+Éléments de liaison et liaisons (objets qui étendent <xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType> et <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>, respectivement) correspondent à l’emplacement où le modèle d’application Windows Communication Foundation (WCF) est associé avec les fabriques et les écouteurs de canal. Sans liaisons, à l’aide de canaux personnalisés nécessite une programmation au niveau du canal comme décrit dans [de programmation au niveau du canal de Service](../../../../docs/framework/wcf/extending/service-channel-level-programming.md) et [de programmation au niveau du canal de Client](../../../../docs/framework/wcf/extending/client-channel-level-programming.md). Cette rubrique décrit la configuration minimale requise pour permettre à l’aide de votre canal dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], le développement d’un <xref:System.ServiceModel.Channels.BindingElement> pour votre canal, puis activer l’utilisation de l’application, comme décrit à l’étape 4 de [développement canaux](../../../../docs/framework/wcf/extending/developing-channels.md).  
   
 ## <a name="overview"></a>Vue d'ensemble  
  Créer un <xref:System.ServiceModel.Channels.BindingElement> pour votre canal permet aux développeurs de l'utiliser dans une application [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Les objets <xref:System.ServiceModel.Channels.BindingElement> peuvent être utilisés dans la classe <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> pour connecter une application [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] à votre canal sans avoir les informations de type exactes de votre canal.  

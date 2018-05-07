@@ -1,29 +1,17 @@
 ---
 title: Sécurité de workflow
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - programming [WF], workflow security
 ms.assetid: d712a566-f435-44c0-b8c0-49298e84b114
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bfd7c3e36bf28c364adf3cd230522cfc40a9503b
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 8acfd0640478cf67309fe53a99707c7d96c5a635
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="workflow-security"></a>Sécurité de workflow
-Windows Workflow Foundation (WF) est intégré à différentes technologies, telles que Microsoft SQL Server et [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. L'interaction avec ces technologies peut poser des problèmes de sécurité dans votre workflow si elle est effectuée de façon incorrecte.  
+Windows Workflow Foundation (WF) est intégré à différentes technologies, telles que Microsoft SQL Server et Windows Communication Foundation (WCF). L'interaction avec ces technologies peut poser des problèmes de sécurité dans votre workflow si elle est effectuée de façon incorrecte.  
   
 ## <a name="persistence-security-concerns"></a>Problèmes de sécurité de la persistance  
   
@@ -49,7 +37,7 @@ Windows Workflow Foundation (WF) est intégré à différentes technologies, tel
   
 ## <a name="considerations-for-workflowservicehost"></a>Considérations sur WorkflowServiceHost  
   
--   Les points de terminaison [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] utilisés dans les workflows doivent être sécurisés. Pour plus d’informations, consultez [vue d’ensemble de la sécurité WCF](http://go.microsoft.com/fwlink/?LinkID=164975).  
+-   Les points de terminaison Windows Communication Foundation (WCF) utilisés dans les workflows doivent être sécurisés. Pour plus d’informations, consultez [vue d’ensemble de la sécurité WCF](http://go.microsoft.com/fwlink/?LinkID=164975).  
   
 -   L'autorisation au niveau hôte peut être implémentée à l'aide de <xref:System.ServiceModel.ServiceAuthorizationManager>. Consultez [comment faire : créer un gestionnaire d’autorisation personnalisé pour un Service](http://go.microsoft.com/fwlink/?LinkId=192228) pour plus d’informations. Cela est également illustré dans l’exemple suivant : [sécurisation des Services de flux de travail](../../../docs/framework/windows-workflow-foundation/samples/securing-workflow-services.md).  
   

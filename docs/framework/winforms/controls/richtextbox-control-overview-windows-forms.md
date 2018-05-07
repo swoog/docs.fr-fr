@@ -1,31 +1,17 @@
 ---
-title: "Vue d'ensemble du contrôle RichTextBox (Windows Forms)"
-ms.custom: 
+title: Vue d'ensemble du contrôle RichTextBox (Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - RichTextBox
 helpviewer_keywords:
 - RichTextBox control [Windows Forms], about RichTextBox control
 - text boxes [Windows Forms], about text boxes
 ms.assetid: 95081194-3dd4-4b84-9545-dd373e491eca
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d6ed04ab478cc6c20d88ec97934f5e45528558c8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 53c4cd41cf203886c93291debc7bca4f395f9698
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="richtextbox-control-overview-windows-forms"></a>Vue d'ensemble du contrôle RichTextBox (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.RichTextBox> contrôle est utilisé pour l’affichage, la saisie et la manipulation de texte avec mise en forme. Le <xref:System.Windows.Forms.RichTextBox> contrôle effectue tout le <xref:System.Windows.Forms.TextBox> effectue, mais il peut également afficher des polices, couleurs et des liens ; charger du texte et des images incorporées à partir d’un fichier ; et rechercher les caractères spécifiés. Le <xref:System.Windows.Forms.RichTextBox> contrôle est généralement utilisé pour fournir la manipulation du texte et afficher les fonctionnalités similaires aux applications de traitement de texte tel que Microsoft Word. Comme le <xref:System.Windows.Forms.TextBox> (contrôle), le <xref:System.Windows.Forms.RichTextBox> contrôle peut afficher les barres de défilement ; mais contrairement à la <xref:System.Windows.Forms.TextBox> contrôle, sa valeur par défaut est pour afficher les barres de défilement horizontale et verticale en fonction des besoins, et il comporte des paramètres de barre de défilement supplémentaires.  

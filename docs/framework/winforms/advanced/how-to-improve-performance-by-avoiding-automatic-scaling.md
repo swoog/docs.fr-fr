@@ -1,13 +1,6 @@
 ---
 title: "Comment : améliorer les performances en évitant la mise à l'échelle automatique"
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,19 +10,14 @@ helpviewer_keywords:
 - images [Windows Forms], using without automatic scaling
 - performance [Windows Forms], improving image
 ms.assetid: 5fe2c95d-8653-4d55-bf0d-e5afa28f223b
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1f49fc4b1e59879b9ecc67295610187fa2e5e80d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e1c46f805b7ba2e2f2a1eb52042cc2ca08e63e03
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-improve-performance-by-avoiding-automatic-scaling"></a>Comment : améliorer les performances en évitant la mise à l'échelle automatique
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]peut automatiquement mettre à l’échelle une image que vous la dessinez, ce qui diminue les performances. Ou bien, vous pouvez contrôler la mise à l’échelle de l’image en passant les dimensions du rectangle de destination à le <xref:System.Drawing.Graphics.DrawImage%2A> (méthode).  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] peut automatiquement mettre à l’échelle une image que vous la dessinez, ce qui diminue les performances. Ou bien, vous pouvez contrôler la mise à l’échelle de l’image en passant les dimensions du rectangle de destination à le <xref:System.Drawing.Graphics.DrawImage%2A> (méthode).  
   
  Par exemple, l’appel suivant à la <xref:System.Drawing.Graphics.DrawImage%2A> méthode spécifie un coin supérieur gauche de (50, 30) mais ne spécifie ne pas un rectangle de destination.  
   

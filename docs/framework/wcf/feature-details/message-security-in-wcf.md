@@ -1,29 +1,15 @@
 ---
 title: Sécurité des messages dans WCF
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: a80efb59-591a-4a37-bb3c-8fffa6ca0b7d
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3ef96dd25903076fedc59ad1507674dd40dcfcc5
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 27f8354cf4d96f8da408cffa3cef42ab9609c76d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-security-in-wcf"></a>Sécurité des messages dans WCF
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] possède deux principaux modes de sécurité (`Transport` et `Message`) et un troisième mode (`TransportWithMessageCredential`) qui associe les deux premiers. Cette rubrique présente la sécurité des messages et les raisons de l'employer.  
+Windows Communication Foundation (WCF) a deux principaux modes de sécurité (`Transport` et `Message`) et un troisième mode (`TransportWithMessageCredential`) qui combine les deux. Cette rubrique présente la sécurité des messages et les raisons de l'employer.  
   
 ## <a name="what-is-message-security"></a>Qu'est ce que la sécurité des messages ?  
  La sécurité des messages utilise la spécification WS-Security pour sécuriser les messages. La spécification Ws-Security décrit les améliorations apportées à la messagerie SOAP afin de garantir la confidentialité, l'intégrité et l'authentification au niveau du message SOAP (plutôt qu'au niveau du transport).  
@@ -35,11 +21,11 @@ ms.lasthandoff: 04/30/2018
   
 -   Sécurité de bout en bout. La sécurité du transport, telle que le protocole SSL (Secure Sockets Layer), ne sécurise les messages que lorsqu'il s'agit d'une communication point à point. Si le message est routé vers un ou plusieurs intermédiaires SOAP (par exemple, un routeur) avant d'atteindre le dernier destinataire, il n'est lui-même pas protégé une fois qu'un intermédiaire l'a lu depuis le câble. En outre, les informations d'authentification du client sont uniquement disponibles pour le premier intermédiaire et doivent être retransmises au dernier destinataire de manière hors bande, si nécessaire. Cela s'applique même si l'itinéraire entier utilise la sécurité SSL entre des sauts individuels. Étant donné que la sécurité des messages fonctionne directement avec le message et sécurise le XML qu'il contient, la sécurité reste avec le message indépendamment du nombre d'intermédiaires impliqué avec le message avant qu'il n'atteigne le dernier destinataire. Il s'agit donc d'un vrai scénario de sécurité de bout en bout.  
   
--   Flexibilité augmentée. Vous pouvez signer ou chiffrer des parties du message, au lieu du message entier. Cela signifie que les intermédiaires peuvent consulter les parties du message qui leur sont destinées. Si l'expéditeur a besoin de rendre une partie des informations du message visible aux intermédiaires mais qu'il souhaite empêcher sa falsification, il peut juste la signer et la laisser déchiffrée. Puisque la signature fait partie du message, le dernier destinataire peut vérifier que les informations du message ont été reçues intactes. Un autre scénario peut impliquer un service d'intermédiaire SOAP qui route un message en fonction de la valeur d'en-tête Action. Par défaut, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ne chiffre pas la valeur Action mais la signe si la sécurité des messages est utilisée. Par conséquent, ces informations sont disponibles à tous les intermédiaires, mais personne ne peut les modifier.  
+-   Flexibilité augmentée. Vous pouvez signer ou chiffrer des parties du message, au lieu du message entier. Cela signifie que les intermédiaires peuvent consulter les parties du message qui leur sont destinées. Si l'expéditeur a besoin de rendre une partie des informations du message visible aux intermédiaires mais qu'il souhaite empêcher sa falsification, il peut juste la signer et la laisser déchiffrée. Puisque la signature fait partie du message, le dernier destinataire peut vérifier que les informations du message ont été reçues intactes. Un autre scénario peut impliquer un service d'intermédiaire SOAP qui route un message en fonction de la valeur d'en-tête Action. Par défaut, WCF ne chiffre pas la valeur de l’Action mais la signe si la sécurité de message est utilisée. Par conséquent, ces informations sont disponibles à tous les intermédiaires, mais personne ne peut les modifier.  
   
 -   Prise en charge de plusieurs transports. Vous pouvez envoyer des messages sécurisés sur de nombreux transports différents, tels que les canaux nommés et le protocole TCP, sans devoir compter sur le protocole pour la sécurité. Avec la sécurité au niveau du transport, toutes les informations de sécurité sont étendues à une connexion de transport particulière unique et elles ne sont pas disponibles à partir du contenu du message lui-même. La sécurité des messages sécurise le message indépendamment du transport utilisé pour transmettre le message et le contexte de sécurité est directement incorporé à l'intérieur du message.  
   
--   Prise en charge d'un large jeu d'informations d'identification et de revendications. La sécurité des messages se base sur la spécification WS-Security, qui fournit un cadre extensible capable de transmettre tout type de revendication à l'intérieur du message SOAP. Contrairement à la sécurité du transport, le jeu de mécanismes d'authentification, ou les revendications, que vous pouvez utiliser ne sont pas limités par les fonctions de transport. La sécurité des messages [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] inclut plusieurs types d'authentifications et de transmissions de revendications et peut être étendue pour prendre en charge des types supplémentaires selon vos besoins. Pour ces raisons, par exemple, un scénario d'informations d'identification fédérées n'est pas possible sans la sécurité des messages. Pour plus d’informations sur la prise en charge de fédération scénarios WCF, consultez [fédération et les jetons émis](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
+-   Prise en charge d'un large jeu d'informations d'identification et de revendications. La sécurité des messages se base sur la spécification WS-Security, qui fournit un cadre extensible capable de transmettre tout type de revendication à l'intérieur du message SOAP. Contrairement à la sécurité du transport, le jeu de mécanismes d'authentification, ou les revendications, que vous pouvez utiliser ne sont pas limités par les fonctions de transport. Sécurité de message WCF inclut plusieurs types de revendication d’authentification et de transmission et peut être étendue pour prendre en charge les types supplémentaires selon les besoins. Pour ces raisons, par exemple, un scénario d'informations d'identification fédérées n'est pas possible sans la sécurité des messages. Pour plus d’informations sur la prise en charge de fédération scénarios WCF, consultez [fédération et les jetons émis](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
   
 ## <a name="how-message-and-transport-security-compare"></a>Comparaison de la sécurité des messages et du transport  
   

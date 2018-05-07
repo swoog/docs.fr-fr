@@ -1,24 +1,12 @@
 ---
 title: Supporting Tokens
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 65a8905d-92cc-4ab0-b6ed-1f710e40784e
-caps.latest.revision: "29"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8b6838f6914ed7430fc420705af2ff461ccde8e4
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 4f8cf62220955bef3f341c43b3c615f873387b2e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="supporting-tokens"></a>Supporting Tokens
 Cet exemple montre comment ajouter des jetons supplémentaires à un message qui utilise WS-Security. L'exemple ajoute un jeton de sécurité binaire X.509 outre un jeton de sécurité de nom d'utilisateur. Le jeton est passé dans un en-tête de message WS-Security du client au service et une partie du message est signée avec la clé privée associée au jeton de sécurité X.509 pour prouver la possession du certificat X.509 au récepteur. Cela s'avère utile dans le cas où plusieurs revendications doivent être associées à un message pour authentifier ou autoriser l'expéditeur. Le service implémente un contrat qui définit un modèle de communication demande-réponse.  
@@ -294,7 +282,7 @@ public class EchoService : IEchoService
 ```  
   
 ## <a name="displaying-callers-information"></a>Affichage des informations sur les appelants  
- Pour afficher les informations sur l'appelant, vous pouvez utiliser `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets`, tel qu'indiqué dans le code suivant. `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` contient les revendications d'autorisation associées à l'appelant actuel. Ces revendications sont automatiquement fournies par [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] pour chaque jeton reçu dans le message.  
+ Pour afficher les informations sur l'appelant, vous pouvez utiliser `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets`, tel qu'indiqué dans le code suivant. `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` contient les revendications d'autorisation associées à l'appelant actuel. Ces revendications sont fournies automatiquement par Windows Communication Foundation (WCF) pour chaque jeton reçu dans le message.  
   
 ```  
 bool TryGetClaimValue<TClaimResource>(ClaimSet claimSet, string   

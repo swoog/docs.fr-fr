@@ -1,38 +1,24 @@
 ---
 title: Compatibilité des fonctionnalités dans un environnement de confiance partielle
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
-caps.latest.revision: 75
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 20cb6c1cd7a3b06b57bce02d5c3caacc7e2e42b7
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: f8c63079161e6be16e2d36f721aeb98937f72097
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="partial-trust-feature-compatibility"></a>Compatibilité des fonctionnalités dans un environnement de confiance partielle
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] prend en charge un sous-ensemble limité de fonctionnalités lors de son exécution dans un environnement de confiance partielle. Les fonctionnalités de confiance partielle prises en charge sont conçues autour d’un ensemble spécifique de scénarios, comme décrit dans la rubrique [Supported Deployment Scenarios](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) .  
+Windows Communication Foundation (WCF) prend en charge un sous-ensemble limité de fonctionnalités lors de l’exécution dans un environnement de confiance partielle. Les fonctionnalités de confiance partielle prises en charge sont conçues autour d’un ensemble spécifique de scénarios, comme décrit dans la rubrique [Supported Deployment Scenarios](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) .  
   
 ## <a name="minimum-permission-requirements"></a>Autorisations minimales requises  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] prend en charge un sous-ensemble de fonctionnalités dans les applications qui s'exécutent sous les jeux d'autorisations nommés standard suivants :  
+ WCF prend en charge un sous-ensemble de fonctionnalités dans les applications qui s’exécutent sous des jeux d’autorisations nommés standard suivants :  
   
 -   Autorisations de confiance moyenne  
   
 -   Autorisations de la zone Internet  
   
- Toute tentative d'utilisation de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dans des applications de confiance partielle avec des autorisations plus restrictives peut provoquer des exceptions de sécurité au cours de l'exécution.  
+ Toute tentative d’utilisation de WCF dans les applications de confiance partielle avec des autorisations plus restrictives peut entraîner des exceptions de sécurité lors de l’exécution.  
   
 ## <a name="contracts"></a>Contrats  
  Les contrats sont soumis aux restrictions suivantes lors de leur exécution dans un environnement de confiance partielle :  
@@ -66,7 +52,7 @@ ms.lasthandoff: 04/27/2018
  Les encodeurs MTOM (Message Transmission Optimization Mechanism) ne sont pas pris en charge.  
   
 ### <a name="security"></a>Sécurité  
- Les applications de confiance partielle peuvent utiliser les fonctionnalités de sécurité au niveau du transport de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]pour sécuriser leur communication. La sécurité au niveau message n'est pas prise en charge. La configuration d'une liaison pour utiliser la sécurité au niveau message entraîne une exception pendant l'exécution.  
+ Applications de confiance partielle peuvent utiliser les fonctionnalités de sécurité au niveau du transport WCF pour sécuriser leur communication. La sécurité au niveau message n'est pas prise en charge. La configuration d'une liaison pour utiliser la sécurité au niveau message entraîne une exception pendant l'exécution.  
   
 ### <a name="unsupported-bindings"></a>Liaisons non prises en charge  
  Les liaisons qui utilisent une messagerie fiable, des transactions ou une sécurité au niveau du message ne sont pas prises en charge.  
@@ -76,7 +62,7 @@ ms.lasthandoff: 04/27/2018
   
 -   Tous les types `[DataContract]` sérialisables doivent être `public`.  
   
--   Tous les champs ou les propriétés `[DataMember]` sérialisables dans un type `[DataContract]` doivent être "public" et en lecture/écriture. La sérialisation et la désérialisation des champs en [lecture seule](http://go.microsoft.com/fwlink/?LinkID=98854) n’est pas prise en charge lors de l’exécution de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dans une application partiellement fiable.  
+-   Tous les champs ou les propriétés `[DataMember]` sérialisables dans un type `[DataContract]` doivent être "public" et en lecture/écriture. La sérialisation et désérialisation de [readonly](http://go.microsoft.com/fwlink/?LinkID=98854) champs n’est pas pris en charge lors de l’exécution de WCF dans une application de confiance partielle.  
   
 -   Le modèle de programmation `[Serializable]`/ISerializable n'est pas pris en charge dans un environnement de confiance partielle.  
   
@@ -89,7 +75,7 @@ ms.lasthandoff: 04/27/2018
 ### <a name="collection-types"></a>Types de collection  
  Certains types de collection implémentent <xref:System.Collections.Generic.IEnumerable%601> et <xref:System.Collections.IEnumerable>. Les exemples incluent des types qui implémentent <xref:System.Collections.Generic.ICollection%601>. Ces types peuvent mettre en œuvre une implémentation `public` de `GetEnumerator()`et une implémentation explicite de `GetEnumerator()`. Dans ce cas, <xref:System.Runtime.Serialization.DataContractSerializer> appelle l'implémentation `public` de `GetEnumerator()`et non l'implémentation explicite de `GetEnumerator()`. Si aucune des implémentations de `GetEnumerator()` n’est `public` et que toutes sont des implémentations explicites, <xref:System.Runtime.Serialization.DataContractSerializer> appelle `IEnumerable.GetEnumerator()`.  
   
- Pour les types de collection, lorsque [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] s'exécute dans un environnement de confiance partielle, si aucune des implémentations `GetEnumerator()` n'est `public`ou si aucune n'est une implémentation d'interface explicite, une exception de sécurité est levée.  
+ Pour les types de collection lorsque WCF s’exécute dans un environnement de confiance partielle, si aucun de la `GetEnumerator()` sont des implémentations `public`, ou aucun d'entre eux sont des implémentations d’interface explicite, puis une exception de sécurité est levée.  
   
 ### <a name="netdatacontractserializer"></a>NetDataContractSerializer  
  De nombreux types de collection .NET Framework, tels que <xref:System.Collections.Generic.List%601>, <xref:System.Collections.ArrayList>, <xref:System.Collections.Generic.Dictionary%602> et <xref:System.Collections.Hashtable> ne sont pas pris en charge par le <xref:System.Runtime.Serialization.NetDataContractSerializer> dans l'environnement de confiance partielle. L'attribut `[Serializable]` de ces types est défini et, comme indiqué précédemment à la section Sérialisation, cet attribut n'est pas pris en charge dans un environnement de confiance partielle. Le <xref:System.Runtime.Serialization.DataContractSerializer> traite les collections de manière spéciale et peut ainsi contourner cette restriction ; en revanche, le <xref:System.Runtime.Serialization.NetDataContractSerializer> n'a pas de tel mécanisme pour contourner cette restriction.  
@@ -108,7 +94,7 @@ ms.lasthandoff: 04/27/2018
  Pour obtenir un exemple d’un comportement commun, consultez [Comment : verrouiller bas points de terminaison de l’entreprise](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).  
   
 ## <a name="configuration"></a>Configuration  
- À une exception, le code d'un niveau de confiance partielle ne peut charger que les sections de configuration [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dans le fichier `app.config` local. Pour charger des sections de configuration [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] qui référencent des sections [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dans machine.config ou dans une racine, le fichier web.config requiert une autorisation ConfigurationPermission(Unrestricted). Sans cette autorisation, les références aux sections de configuration [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] (comportements, liaisons) en dehors des résultats de fichier de configuration local aboutissent à une exception lorsque la configuration est chargée.  
+ Une exception, code de confiance partielle peut charger uniquement des sections de configuration WCF local `app.config` fichier. Pour charger des sections de configuration WCF qui font référence à des sections WCF dans le fichier machine.config ou dans une racine du fichier web.config requiert ConfigurationPermission(Unrestricted). Sans cette autorisation, les références aux sections de configuration WCF (comportements, liaisons) en dehors de la configuration locale fichier entraîne une exception lors du chargement de la configuration.  
   
  L'unique exception est la configuration de type connu pour la sérialisation, comme décrit à la section Sérialisation de cette rubrique.  
   
@@ -121,7 +107,7 @@ ms.lasthandoff: 04/27/2018
  La journalisation des événements limitée est prise en charge dans un environnement de confiance partielle. Seul les échecs d'activation de service et les échecs de suivi/journalisation de message sont consignés dans le journal des événements. Le nombre d'événements maximal qui peuvent être enregistrés par un processus est égal à 5, pour éviter d'écrire un trop grand nombre de messages dans le journal des événements.  
   
 ### <a name="message-logging"></a>Journalisation des messages  
- L'enregistrement des messages ne fonctionne pas lorsque [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] est exécuté dans un environnement de confiance partielle. En cas d'activation avec un niveau de confiance partiel, il ne met pas en échec l'activation du service, mais aucun message n'est enregistré.  
+ Enregistrement des messages ne fonctionne pas lors de l’exécution de WCF dans un environnement de confiance partielle. En cas d'activation avec un niveau de confiance partiel, il ne met pas en échec l'activation du service, mais aucun message n'est enregistré.  
   
 ### <a name="tracing"></a>Traçage  
  Des fonctionnalités de traçage restreintes sont disponibles lors de l'exécution dans un environnement de confiance partielle. Dans l’élément <`listeners`> du fichier de configuration, les seuls types que vous pouvez ajouter sont <xref:System.Diagnostics.TextWriterTraceListener> et le nouveau <xref:System.Diagnostics.EventSchemaTraceListener>. L'utilisation de <xref:System.Diagnostics.XmlWriterTraceListener> standard peut provoquer des journaux incomplets ou incorrects.  
@@ -151,13 +137,13 @@ ms.lasthandoff: 04/27/2018
  Lors de l'utilisation du traçage dans un environnement de confiance partielle, assurez-vous que l'application dispose des autorisations nécessaires pour stocker la sortie de l'écouteur de trace. Par exemple, lors de l'utilisation de <xref:System.Diagnostics.TextWriterTraceListener> pour écrire le résultat du traçage dans un fichier texte, assurez-vous que l'application bénéficie de l'autorisation FileIOPermission requise pour écrire dans le fichier de trace.  
   
 > [!NOTE]
->  Pour éviter de saturer les fichiers de trace avec des erreurs en double, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] désactive le traçage de la ressource ou de l'action après le premier échec de sécurité. Une trace d'exception est créée pour chaque échec de l'accès aux ressources lors de la première tentative d'accès à la ressource ou d'accomplissement de l'action.  
+>  Pour éviter de saturer les fichiers de trace avec des erreurs en double, WCF désactive le suivi de la ressource ou l’action après le premier échec de sécurité. Une trace d'exception est créée pour chaque échec de l'accès aux ressources lors de la première tentative d'accès à la ressource ou d'accomplissement de l'action.  
   
 ## <a name="wcf-service-host"></a>Hôte de service WCF  
- L'hôte de service[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ne prend pas en charge la confiance partielle. Si vous souhaitez utiliser un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] de service avec une confiance partielle, n’utilisez pas le [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modèle de projet bibliothèque du Service dans Visual Studio pour générer votre service. Au lieu de cela, créez un nouveau site Web dans Visual Studio en choisissant le [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modèle de site Web de service, qui peut héberger le service sur un serveur Web sur lequel [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] confiance partielle est prise en charge.  
+ Hôte de service WCF ne prend pas en charge la confiance partielle. Si vous souhaitez utiliser un service WCF avec une confiance partielle, n’utilisez pas le modèle de projet de bibliothèque de Service WCF dans Visual Studio pour générer votre service. Au lieu de cela, créez un nouveau site Web dans Visual Studio en choisissant le modèle de site Web de service WCF, qui peut héberger le service sur un serveur Web sur lequel une confiance partielle WCF est pris en charge.  
   
 ## <a name="other-limitations"></a>Autres limitations  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] est en général limité par les considérations de sécurité imposées par l'application d'hébergement. Par exemple, si [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] est hébergé dans une application du navigateur XAML (XBAP), il est soumis aux limitations XBAP, comme décrit dans [Sécurité de confiance partielle de WPF](http://go.microsoft.com/fwlink/?LinkId=89138).  
+ WCF est généralement limitée pour les considérations de sécurité imposées par l’application d’hébergement. Par exemple, si WCF est hébergé dans une Application de navigateur XAML (XBAP), il est soumis aux limitations de l’application XBAP, comme décrit dans [sécurité de confiance partielle de Windows Presentation Foundation](http://go.microsoft.com/fwlink/?LinkId=89138).  
   
  Les fonctionnalités supplémentaires suivantes ne sont pas activées en cas d’exécution d’indigo2 dans un environnement de confiance partielle :  
   
@@ -167,10 +153,10 @@ ms.lasthandoff: 04/27/2018
   
 -   Compteurs de performance  
   
- L'utilisation des fonctionnalités [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] qui ne sont pas prises en charge dans un environnement de confiance partielle peut provoquer des exceptions pendant l'exécution.  
+ Utilisation des fonctionnalités de WCF qui ne sont pas pris en charge dans un environnement de confiance partielle peut entraîner des exceptions lors de l’exécution.  
   
 ## <a name="unlisted-features"></a>Fonctionnalités non répertoriées  
- La meilleure méthode pour découvrir qu'une information ou qu'une action n'est pas disponible en cas d'exécution dans un environnement de confiance partielle est d'essayer d'accéder à la ressource ou d'exécuter l'action dans un bloc `try` , puis d'intercepter l'échec via `catch` . Pour éviter de saturer les fichiers de trace avec des erreurs en double, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] désactive le traçage de la ressource ou de l'action après le premier échec de sécurité. Une trace d'exception est créée pour chaque échec de l'accès aux ressources lors de la première tentative d'accès à la ressource ou d'accomplissement de l'action.  
+ La meilleure méthode pour découvrir qu'une information ou qu'une action n'est pas disponible en cas d'exécution dans un environnement de confiance partielle est d'essayer d'accéder à la ressource ou d'exécuter l'action dans un bloc `try` , puis d'intercepter l'échec via `catch` . Pour éviter de saturer les fichiers de trace avec des erreurs en double, WCF désactive le suivi de la ressource ou l’action après le premier échec de sécurité. Une trace d'exception est créée pour chaque échec de l'accès aux ressources lors de la première tentative d'accès à la ressource ou d'accomplissement de l'action.  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  

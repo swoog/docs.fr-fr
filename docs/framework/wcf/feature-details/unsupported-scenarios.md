@@ -1,29 +1,15 @@
 ---
 title: Scénarios non pris en charge
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-caps.latest.revision: 43
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: cfeca11f7d78e8aa2d201238e3a485576b3e0c82
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 5cc4e65ce4f93a352b651203757a484a9d90a85d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="unsupported-scenarios"></a>Scénarios non pris en charge
-Pour diverses raisons, certains modes de sécurité ne sont pas pris en charge par [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Par exemple, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Édition familiale n'implémentant pas les protocoles d'authentification SSPI ou Kerberos, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ne prend pas en charge, sur ce type de plateforme, l'exécution des services utilisant l'authentification Windows. En revanche, d'autres mécanismes d'authentification, tels que l'association nom d'utilisateur/mot de passe et l'authentification intégrée HTTP/HTTPS, sont pris en charge lorsque [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] s'exécute sous Windows XP Édition familiale.  
+Pour diverses raisons, Windows Communication Foundation (WCF) ne prend pas en charge certains scénarios de sécurité spécifiques. Par exemple, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Édition familiale n’implémentant pas les protocoles d’authentification SSPI ou Kerberos, et par conséquent soit WCF ne prend pas en charge l’exécutant un service avec l’authentification Windows sur cette plateforme. Autres mécanismes d’authentification, telles que le nom d’utilisateur/mot de passe et l’authentification intégrée HTTP/HTTPS sont pris en charge lors de l’exécution WCF sous Windows XP Édition familiale.  
   
 ## <a name="impersonation-scenarios"></a>Emprunt d'identité  
   
@@ -31,7 +17,7 @@ Pour diverses raisons, certains modes de sécurité ne sont pas pris en charge p
  Lorsqu'un client WCF passe des appels asynchrones à un service WCF à l'aide de l'authentification Windows sous un emprunt d'identité, l'authentification peut se produire avec l'identité du processus client au lieu de l'identité empruntée.  
   
 ### <a name="windows-xp-and-secure-context-token-cookie-enabled"></a>Windows XP avec le cookie de jeton de contexte sécurisé activé  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ne prend pas en charge l'emprunt d'identité et une exception <xref:System.InvalidOperationException> est levée dans les cas suivants :  
+ WCF ne prend pas en charge l’emprunt d’identité et une <xref:System.InvalidOperationException> est levée lorsque les conditions suivantes sont réunies :  
   
 -   Le système d'exploitation correspond à [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
@@ -49,7 +35,7 @@ Pour diverses raisons, certains modes de sécurité ne sont pas pris en charge p
 >  Les exigences précédentes sont spécifiques. Par exemple, l'élément <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> crée un élément de liaison qui aboutit à une identité Windows, mais cet élément ne définit pas de jeton de contexte de sécurité avec état. Vous pouvez donc utiliser cet élément avec l'option `Required` de [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
 ### <a name="possible-aspnet-conflict"></a>Éventuel conflit avec ASP.NET  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] et [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] permettent l'activation ou la désactivation de l'emprunt d'identité. Lorsque [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] héberge une application [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], un conflit peut survenir entre les paramètres de la configuration [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] et [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. En cas de conflit, le paramètre [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] est prioritaire, sauf si la propriété <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> a la valeur <xref:System.ServiceModel.ImpersonationOption.NotAllowed>, auquel cas c'est le paramètre d'emprunt d'identité de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] qui est prioritaire.  
+ WCF et [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] peut activer ou désactiver l’emprunt d’identité. Lorsque [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] héberge une application WCF, un conflit peut survenir entre WCF et [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] les paramètres de configuration. En cas de conflit, le paramètre de WCF est prioritaire, sauf si le <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> est définie sur <xref:System.ServiceModel.ImpersonationOption.NotAllowed>, auquel cas la [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] paramètre d’emprunt d’identité est prioritaire.  
   
 ### <a name="assembly-loads-may-fail-under-impersonation"></a>Les chargements d'assembly risquent d'échouer lorsque l'emprunt d'identité est activé  
  Si le contexte emprunté ne dispose de droits d'accès permettant le chargement d'un assembly et que l'objet CLR tente pour la première fois de le charger pour AppDomain, <xref:System.AppDomain> met l'échec en mémoire cache. Les tentatives suivantes pour charger cet assembly échoueront également, même après restauration de l'emprunt d'identité et même si le contexte restauré dispose cette fois de droits d'accès permettant de charger cet assembly. Ces échecs successifs se produisent car l'objet CLR ne tente pas une nouvelle fois de charger l'assembly après la modification du contexte utilisateur. Vous devez redémarrer le domaine d'application pour résoudre ce problème.  
@@ -63,13 +49,13 @@ Pour diverses raisons, certains modes de sécurité ne sont pas pris en charge p
 ## <a name="cryptography"></a>Chiffrement  
   
 ### <a name="sha-256-supported-only-for-symmetric-key-usages"></a>SHA-256 uniquement pris en charge lorsque des clés symétriques sont utilisées  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] prend en charge différents algorithmes Digest de création de chiffrement et de signature que vous pouvez spécifier à l'aide de la suite algorithmique figurant dans les liaisons fournies par le système. Afin d'améliorer la sécurité, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] prend en charge les algorithmes Secure Hash Algorithm (SHA) 2 et plus particulièrement les algorithmes SHA-256, lesquels permettent la création de signatures hachées Digest. Cette version prend uniquement en charge SHA-256 lorsque des clés symétriques, telles que les clés Kerberos sont utilisées et lorsque les messages ne sont pas signés par les certificats X.509. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ne prend pas en charge les signatures RSA (utilisées dans les certificats X.509) à l'aide du hachage SHA-256 en raison de l'absence de prise en charge de RSA-SHA256 dans [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)].  
+ WCF prend en charge une variété de chiffrement et signature algorithmes digest de création que vous pouvez spécifier à l’aide de la suite algorithmique figurant dans les liaisons fournies par le système. Pour améliorer la sécurité, WCF prend en charge les algorithmes Secure Hash Algorithm (SHA) 2, SHA-256 en particulier, pour la création de hachages de condensat de signature. Cette mise en production prend uniquement en charge SHA-256 lorsque des clés symétriques, telles que les clés Kerberos sont utilisées et lorsque les messages ne sont pas signés par les certificats X.509. WCF ne prend pas en charge les signatures RSA (utilisées dans les certificats X.509) à l’aide du hachage SHA-256 en raison de l’absence de prise en charge de RSA-SHA256 dans la [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)].  
   
 ### <a name="fips-compliant-sha-256-hashes-not-supported"></a>Hachage SHA-256 conforme FIPS non pris en charge  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ne prenant pas en charge les hachages SHA-256 conformes FIPS, les suites algorithmiques qui utilisent SHA-256 ne sont pas prises en charge par [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sur les systèmes nécessitant l'utilisation d'algorithmes conformes FIPS.  
+ WCF ne prend pas en charge les hachages SHA-256 conformes FIPS, suites algorithmiques qui utilisent SHA-256 ne sont pas prises en charge par WCF sur les systèmes où l’utilisation d’algorithmes conformes FIPS.  
   
 ### <a name="fips-compliant-algorithms-may-fail-if-registry-is-edited"></a>Les algorithmes conformes FIPS risquent d'échouer si le registre est modifié  
- Vous pouvez activer ou désactiver les algorithmes conformes FIPS en utilisant les paramètres de sécurité locale de l'outil enfichable MMC. Ces paramètres sont également accessibles à partir du registre. Remarque : [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ne prend pas en charge l'utilisation du registre pour modifier ces paramètres. Si vous affectez à ces paramètres une valeur autre que 1 ou 0, cela risque de générer des résultats incohérents entre CLR et le système d'exploitation.  
+ Vous pouvez activer ou désactiver les algorithmes conformes FIPS en utilisant les paramètres de sécurité locale de l'outil enfichable MMC. Ces paramètres sont également accessibles à partir du registre. Notez, toutefois, que WCF ne prend pas en charge le Registre pour modifier ces paramètres. Si vous affectez à ces paramètres une valeur autre que 1 ou 0, cela risque de générer des résultats incohérents entre CLR et le système d'exploitation.  
   
 ### <a name="fips-compliant-aes-encryption-limitation"></a>Limites d'utilisation concernant le chiffrement AES conforme FIPS  
  Le chiffrement AES conforme FIPS n'est pas compatible avec les rappels duplex dans le cadre des emprunts d'identité de niveau identification.  
@@ -86,7 +72,7 @@ Pour diverses raisons, certains modes de sécurité ne sont pas pris en charge p
 -   Utilisez la `certutil` commande à partir de la ligne de commande pour interroger des certificats. Pour plus d’informations, consultez [Tâches Certutil pour le dépannage des certificats](http://go.microsoft.com/fwlink/?LinkId=120056).  
   
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>La sécurité de message échouera si l'emprunt d'identité ASP.NET est utilisé et si la compatibilité ASP.NET est requise  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ne prend pas en charge l'utilisation combinée des paramètres suivants, une telle utilisation pouvant empêcher l'authentification client :  
+ WCF ne prend pas en charge la combinaison suivante de paramètres, car ils peuvent également empêcher l’authentification du client ne se produise :  
   
 -   L'emprunt d'identité [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] est activé. Cette opération est effectuée dans le fichier Web.config en définissant le `impersonate` attribut de la <`identity`> élément `true`.  
   
@@ -94,7 +80,7 @@ Pour diverses raisons, certains modes de sécurité ne sont pas pris en charge p
   
 -   Le mode de sécurité de niveau message est utilisé.  
   
- Pour contourner cette difficulté, il suffit de désactiver le mode de compatibilité [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Si le mode de compatibilité [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] est requis, désactivez la fonctionnalité d'emprunt d'identité [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] et utilisez la fonctionnalité d'emprunt d'identité fournie par [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] à la place. Pour plus d’informations, consultez [délégation et emprunt d’identité](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+ Pour contourner cette difficulté, il suffit de désactiver le mode de compatibilité [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Ou, si le [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] le mode de compatibilité est requis, désactivez le [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] l’emprunt d’identité de fonctionnalité et utilisez à la place de l’emprunt d’identité fournie par WCF. Pour plus d’informations, consultez [délégation et emprunt d’identité](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
 ## <a name="ipv6-literal-address-failure"></a>Échec d'adresse littérale IPv6  
  Les demandes de sécurité échouent si le client et le service s'exécutent sur le même ordinateur et les adresses littérales IPv6 sont utilisées pour le service.  
@@ -102,7 +88,7 @@ Pour diverses raisons, certains modes de sécurité ne sont pas pris en charge p
  L'utilisation d'adresses littérales IPv6 est possible à condition que le client et le service ne s'exécutent pas sur le même ordinateur.  
   
 ## <a name="wsdl-retrieval-failures-with-federated-trust"></a>Échecs de récupération WSDL avec approbation fédérée  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] requiert exactement un document WSDL pour chaque nœud dans la chaîne d'approbation fédérée. Veillez à ne pas définir de boucle lors de la spécification des points de terminaison. Des boucles peuvent résulter de l'utilisation d'un téléchargement WSDL de chaînes d'approbation fédérée avec au moins deux liens dans le même document WSDL. Un scénario courant pouvant induire ce problème est un service fédéré où le serveur de jeton de sécurité et le service sont contenus dans le même ServiceHost.  
+ WCF requiert exactement un document WSDL pour chaque nœud dans la chaîne d’approbation fédérée. Veillez à ne pas définir de boucle lors de la spécification des points de terminaison. Des boucles peuvent résulter de l'utilisation d'un téléchargement WSDL de chaînes d'approbation fédérée avec au moins deux liens dans le même document WSDL. Un scénario courant pouvant induire ce problème est un service fédéré où le serveur de jeton de sécurité et le service sont contenus dans le même ServiceHost.  
   
  Un service comportant les trois adresses de point de terminaison suivantes est un exemple illustrant cette situation :  
   

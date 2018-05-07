@@ -1,24 +1,12 @@
 ---
-title: "Exécution côte à côte dans ADO.NET"
-ms.custom: 
+title: Exécution côte à côte dans ADO.NET
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9f9ba96d-9f89-4f65-bb2f-6860879f4393
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: bdb12ce6f697bbc42052e35c252c9cad6a5e962e
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 793a48966192326e2a1273c6ea4b9c9eddda76fa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="side-by-side-execution-in-adonet"></a>Exécution côte à côte dans ADO.NET
 L'exécution côte à côte dans le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] représente la capacité à exécuter une application sur un ordinateur sur lequel plusieurs versions du[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] sont installées, en utilisant exclusivement la version pour laquelle l'application a été compilée. Pour plus d’informations sur la configuration de l’exécution de côte à côte, consultez [côte-à-côte exécution](../../../../docs/framework/deployment/side-by-side-execution.md).  
@@ -67,7 +55,7 @@ SELECT * FROM dbo.Customers;
   
  Ce changement peut avoir une incidence sur la compatibilité descendante et ascendante de votre application si vous dépendez du comportement de la méthode <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A> pour l'une ou l'autre version du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
   
- Pour les applications qui s'exécutent sur des versions antérieures ou ultérieures du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], vous pouvez écrire du code pour garantir que le comportement restera le même, quelle que soit la version utilisée. Si vous souhaitez vous assurer qu'une commande modifie l'état de la connexion pour toutes les commandes suivantes, nous vous recommandons d'exécuter votre commande à l'aide de la méthode <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A>. Si vous souhaitez vous assurer qu'une commande ne modifie pas la connexion pour toutes les commandes suivantes, nous vous recommandons d'inclure les commandes qui rétablissent l'état de la connexion dans votre commande. Exemple :  
+ Pour les applications qui s'exécutent sur des versions antérieures ou ultérieures du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], vous pouvez écrire du code pour garantir que le comportement restera le même, quelle que soit la version utilisée. Si vous souhaitez vous assurer qu'une commande modifie l'état de la connexion pour toutes les commandes suivantes, nous vous recommandons d'exécuter votre commande à l'aide de la méthode <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A>. Si vous souhaitez vous assurer qu'une commande ne modifie pas la connexion pour toutes les commandes suivantes, nous vous recommandons d'inclure les commandes qui rétablissent l'état de la connexion dans votre commande. Par exemple :  
   
 ```  
 SET NOCOUNT ON;  

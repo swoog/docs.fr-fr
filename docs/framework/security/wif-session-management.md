@@ -1,24 +1,14 @@
 ---
 title: Gestion de session WIF
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 98bce126-18a9-401b-b20d-67ee462a5f8a
-caps.latest.revision: "7"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 7703d9fb612ead13140d010b1670abb209c5acb7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f97406ccf826bfa5b7c3ed87bdb58478b272a216
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wif-session-management"></a>Gestion de session WIF
 Quand un client tente d’abord d’accéder à une ressource protégée qui est hébergée par une partie de confiance, il doit d’abord s’authentifier auprès d’un service d’émission de jeton de sécurité (STS) qui est approuvé par la partie de confiance. Le service STS fournit ensuite un jeton de sécurité au client. Le client présente ce jeton à la partie de confiance, qui accorde l’accès client à la ressource protégée. Toutefois, vous souhaitez éviter au client d’avoir à s’authentifier de nouveau auprès du service STS pour chaque demande, en particulier car il peut même ne pas se trouver sur le même ordinateur ou dans le même domaine que la partie de confiance. Au lieu de cela, avec WIF (Windows Identity Foundation), le client et la partie de confiance établissent une session dans laquelle le client utilise un jeton de sécurité de session pour s’authentifier auprès de la partie de confiance pour toutes les demandes après la première. La partie de confiance peut utiliser ce jeton de sécurité de session, qui est stocké à l’intérieur d’un cookie, afin de reconstruire le <xref:System.Security.Claims.ClaimsPrincipal?displayProperty=nameWithType> du client.  
@@ -39,4 +29,4 @@ Quand un client tente d’abord d’accéder à une ressource protégée qui est
 ## <a name="extensibility"></a>Extensibilité  
  Vous pouvez étendre le mécanisme de gestion de session, par exemple dans le but d’améliorer les performances. Vous pouvez notamment créer un gestionnaire de cookie personnalisé qui transforme ou optimise le jeton de sécurité de session entre son état en mémoire et ce qui entre dans le cookie. Pour ce faire, vous pouvez configurer la propriété <xref:System.IdentityModel.Services.SessionAuthenticationModule.CookieHandler%2A?displayProperty=nameWithType> de <xref:System.IdentityModel.Services.SessionAuthenticationModule?displayProperty=nameWithType> pour utiliser un gestionnaire de cookie personnalisé qui dérive de <xref:System.IdentityModel.Services.CookieHandler?displayProperty=nameWithType>. <xref:System.IdentityModel.Services.ChunkedCookieHandler?displayProperty=nameWithType> est le gestionnaire de cookie par défaut, car les cookies dépassent la taille autorisée pour le protocole HTTP (Hypertext Transfer Protocol) ; si vous utilisez plutôt un gestionnaire de cookie personnalisé, vous devez implémenter la segmentation.  
   
- Pour plus d’informations, consultez l’exemple [ClaimsAwareWebFarm](http://go.microsoft.com/fwlink/?LinkID=248408) (http://go.microsoft.com/fwlink/?LinkID=248408). Cet exemple montre un cache de sessions prêt pour une batterie de serveurs (par opposition à un tokenreplycache) afin que vous puissiez utiliser des sessions par référence au lieu d’échanger des cookies de grande taille. Cet exemple illustre également un moyen plus simple de sécuriser des cookies dans une batterie de serveurs. Le cache de sessions est basé sur WCF. En ce qui concerne la sécurisation de session, l’exemple illustre une nouvelle fonction dans WIF 4.5 d’une transformation de cookie basée sur MachineKey, qui peut être activée en collant simplement l’extrait approprié dans le fichier web.config. L’exemple lui-même n’est pas « en batterie de serveurs », mais il montre ce dont vous avez besoin pour que votre application soit prête pour une batterie de serveurs.
+ Pour plus d’informations, consultez [ClaimsAwareWebFarm](http://go.microsoft.com/fwlink/?LinkID=248408) (http://go.microsoft.com/fwlink/?LinkID=248408) exemple. Cet exemple montre un cache de sessions prêt pour une batterie de serveurs (par opposition à un tokenreplycache) afin que vous puissiez utiliser des sessions par référence au lieu d’échanger des cookies de grande taille. Cet exemple illustre également un moyen plus simple de sécuriser des cookies dans une batterie de serveurs. Le cache de sessions est basé sur WCF. En ce qui concerne la sécurisation de session, l’exemple illustre une nouvelle fonction dans WIF 4.5 d’une transformation de cookie basée sur MachineKey, qui peut être activée en collant simplement l’extrait approprié dans le fichier web.config. L’exemple lui-même n’est pas « en batterie de serveurs », mais il montre ce dont vous avez besoin pour que votre application soit prête pour une batterie de serveurs.

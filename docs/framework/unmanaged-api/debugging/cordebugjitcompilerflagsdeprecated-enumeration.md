@@ -1,14 +1,6 @@
 ---
-title: "CorDebugJITCompilerFlagsDeprecated, énumération"
-ms.custom: 
+title: CorDebugJITCompilerFlagsDeprecated, énumération
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CorDebugJITCompilerFlagsDeprecated
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: af15e2ca-6be1-472b-bd36-03644a1e3ddd
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4cb7836ec572a5c9df4e6a52fce1cefd02d647f5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ca206f0da69eddd3e98b599f2813fa7985daf057
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cordebugjitcompilerflagsdeprecated-enumeration"></a>CorDebugJITCompilerFlagsDeprecated, énumération
 Cette énumération est obsolète. Utilisez le `CORDEBUG_JIT_DEFAULT` membre de la [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) énumération à la place.  
@@ -51,7 +39,7 @@ typedef enum CorDebugJITCompilerFlagsDeprecated {
 |------------|-----------------|  
 |`CORDEBUG_JIT_TRACK_DEBUG_INFO`|Utilisez plutôt `CORDEBUG_JIT_DEFAULT`.|  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  

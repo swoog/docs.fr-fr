@@ -1,24 +1,12 @@
 ---
-title: "Sélection d’un modèle d’échange de messages"
-ms.custom: 
+title: Sélection d’un modèle d’échange de messages
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0f502ca1-6a8e-4607-ba15-59198c0e6146
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 961f5e84fb46a791127a9d80c0f03d2b87fdea77
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 3466be98522eef0ebec6f6613f51566700a7cdb7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="choosing-a-message-exchange-pattern"></a>Sélection d’un modèle d’échange de messages
 La première étape de l’écriture d’un transport personnalisé consiste à décider quels *modèles d’échange de messages* (ou MEP) sont requis pour le canal que vous développez. Cette rubrique contient des explications sur les options disponibles ainsi que sur les différentes exigences. C’est la première tâche dans la liste de tâches de développement channel décrite dans [développement canaux](../../../../docs/framework/wcf/extending/developing-channels.md).  

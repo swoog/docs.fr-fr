@@ -1,24 +1,14 @@
 ---
-title: "Problèmes de sécurité relatifs à la journalisation des messages"
-ms.custom: 
+title: Problèmes de sécurité relatifs à la journalisation des messages
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
-caps.latest.revision: "17"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 87815be1f0951d54a8d9eedbfdcaca038fa6fe09
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: c8b2fe3300bacc76e63f9d533c613171d03600d7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-concerns-for-message-logging"></a>Problèmes de sécurité relatifs à la journalisation des messages
 Cette rubrique contient des instructions permettant de protéger des données sensibles afin d'éviter qu'elles ne soient visibles dans les journaux des messages et de protéger les événements générés par l'enregistrement des messages.  
@@ -26,7 +16,7 @@ Cette rubrique contient des instructions permettant de protéger des données se
 ## <a name="security-concerns"></a>Problèmes de sécurité  
   
 ### <a name="logging-sensitive-information"></a>Enregistrement des informations sensibles  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] ne modifie pas les données contenues dans le corps et les en-têtes spécifiques aux applications. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] n'effectue pas non plus le suivi des informations personnelles présentes dans les en-têtes spécifiques à l'application ou les données relatives au corps.  
+ Windows Communication Foundation (WCF) ne modifie pas les données dans les en-têtes spécifiques à l’application et le corps. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] n'effectue pas non plus le suivi des informations personnelles présentes dans les en-têtes spécifiques à l'application ou les données relatives au corps.  
   
  Lorsque la journalisation des messages est activée, les informations personnelles contenues dans les en-têtes spécifiques aux applications (par exemple, une chaîne de requête) et les données relatives au corps (par exemple, un numéro de carte de crédit) peuvent être visibles dans les journaux. Le responsable du déploiement d'applications est chargé d'appliquer le contrôle d'accès sur les fichiers journaux et de configuration. Si vous ne souhaitez pas que ce type d'informations soit visible, vous devez désactiver la journalisation, ou filtrer une partie des données en cas de partage des journaux.  
   

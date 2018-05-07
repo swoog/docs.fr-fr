@@ -1,28 +1,16 @@
 ---
-title: "Emprunt de l'identité du client"
-ms.custom: 
+title: Emprunt de l'identité du client
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - service behaviors, impersonation sample
 - Impersonating the Client Sample [Windows Communication Foundation]
 - impersonation, Windows Communication Foundation sample
 ms.assetid: 8bd974e1-90db-4152-95a3-1d4b1a7734f8
-caps.latest.revision: "25"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a17a3631b781e6a96eb8aec17b20e8ddca52890d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4c5d911bfbfcd33248e15b9fc822abdc9cf4046c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="impersonating-the-client"></a>Emprunt de l'identité du client
 Cet exemple montre comment emprunter l'identité de l'application de l'appelant au niveau du service afin que ce dernier puisse accéder aux ressources système pour le compte de l'appelant.  
@@ -113,7 +101,7 @@ client.ClientCredentials.Windows.AllowedImpersonationLevel = TokenImpersonationL
  Lorsque vous exécutez l'exemple, les requêtes et réponses de l'opération s'affichent dans les fenêtres de console du service et du client. Appuyez sur ENTER dans chaque fenêtre de console pour arrêter le service et le client.  
   
 > [!NOTE]
->  Le service doit s'exécuter sous un compte d'administrateur ou le compte sous lequel il s'exécute doit disposer des droits pour enregistrer l'URI http://localhost:8000/ServiceModelSamples avec la couche HTTP. Ces droits peuvent être accordés en configurant un [Namespace réservation](http://go.microsoft.com/fwlink/?LinkId=95012) à l’aide de la [outil Httpcfg.exe](http://go.microsoft.com/fwlink/?LinkId=95010).  
+>  Le service doit exécuter sous un compte d’administrateur ou le compte qu’il s’exécute sous doit disposer des autorisations pour enregistrer le http://localhost:8000/ServiceModelSamples URI avec la couche HTTP. Ces droits peuvent être accordés en configurant un [Namespace réservation](http://go.microsoft.com/fwlink/?LinkId=95012) à l’aide de la [outil Httpcfg.exe](http://go.microsoft.com/fwlink/?LinkId=95010).  
   
 > [!NOTE]
 >  Sur les ordinateurs qui exécutent [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], l'emprunt d'identité est uniquement pris en charge si l'application Host.exe dispose du privilège d'emprunt d'identité. (Par défaut, seuls les administrateurs disposent de cette autorisation.) Pour ajouter ce privilège à un compte que le service s’exécute en tant que, accédez à **outils d’administration**, ouvrez **stratégie de sécurité locale**, ouvrez **stratégies locales**, cliquez sur **Attribution des droits utilisateur**, puis sélectionnez **emprunter l’identité d’un Client après authentification** et double-cliquez sur **propriétés** pour ajouter un utilisateur ou un groupe.  

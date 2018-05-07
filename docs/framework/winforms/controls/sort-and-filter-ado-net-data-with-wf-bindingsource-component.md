@@ -1,13 +1,6 @@
 ---
-title: "Comment : trier et filtrer des données ADO.NET avec le composant BindingSource Windows Forms"
-ms.custom: 
+title: 'Comment : trier et filtrer des données ADO.NET avec le composant BindingSource Windows Forms'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,16 +13,11 @@ helpviewer_keywords:
 - data [Windows Forms], sorting
 - ADO.NET [Windows Forms]
 ms.assetid: 6c206daf-d706-4602-9dbe-435343052063
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 310f90c7b95d74f1fab8ab2e9871d6c1a0937c52
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3b58c4f3a53156ab01fb0c0c46b9a9b8d3fea84b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-sort-and-filter-adonet-data-with-the-windows-forms-bindingsource-component"></a>Comment : trier et filtrer des données ADO.NET avec le composant BindingSource Windows Forms
 Vous pouvez exposer le tri et filtrage de <xref:System.Windows.Forms.BindingSource> contrôler via le <xref:System.Windows.Forms.BindingSource.Sort%2A> et <xref:System.Windows.Forms.BindingSource.Filter%2A> propriétés. Vous pouvez appliquer un tri simple lorsque la source de données sous-jacente est une <xref:System.ComponentModel.IBindingList>, et vous pouvez appliquer le filtrage et tri avancé lorsque la source de données est un <xref:System.ComponentModel.IBindingListView>. Le <xref:System.Windows.Forms.BindingSource.Sort%2A> propriété requiert standard [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] syntaxe : une chaîne représentant le nom d’une colonne de données dans la source de données suivie `ASC` ou `DESC` pour indiquer si la liste doit être triée dans l’ordre croissant ou décroissant. Vous pouvez définir le tri avancé ou un tri sur plusieurs colonnes en séparant chaque colonne avec un séparateur de virgule. Le <xref:System.Windows.Forms.BindingSource.Filter%2A> propriété prend une expression de chaîne.  

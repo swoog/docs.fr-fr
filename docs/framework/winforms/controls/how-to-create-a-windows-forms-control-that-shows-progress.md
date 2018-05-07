@@ -1,13 +1,6 @@
 ---
-title: "Comment : créer un contrôle Windows Forms qui affiche la progression"
-ms.custom: 
+title: 'Comment : créer un contrôle Windows Forms qui affiche la progression'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - progress [Windows Forms], reporting [Windows Forms]
 - FlashTrackBar custom control
 ms.assetid: 24c5a2e3-058c-4b8d-a217-c06e6a130c2f
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 76ce5cd67b66dea47f5bd12e78bb27179b391257
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5773181b8883f0f94ff451808c8c97ce3407970e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-windows-forms-control-that-shows-progress"></a>Comment : créer un contrôle Windows Forms qui affiche la progression
 L’exemple de code suivant illustre un contrôle personnalisé appelé `FlashTrackBar` qui peut être utilisé pour afficher le niveau ou la progression d’une application. Il utilise un dégradé pour représenter visuellement la progression.  
@@ -66,7 +54,7 @@ L’exemple de code suivant illustre un contrôle personnalisé appelé `FlashTr
 |`OnValueChanged`|Méthode qui déclenche l’événement `ValueChanged`.|  
   
 > [!NOTE]
->  `FlashTrackBar`utilise le <xref:System.EventArgs> classe pour les données d’événement et <xref:System.EventHandler> pour le délégué d’événement.  
+>  `FlashTrackBar` utilise le <xref:System.EventArgs> classe pour les données d’événement et <xref:System.EventHandler> pour le délégué d’événement.  
   
  Pour gérer le correspondant *EventName* événements, `FlashTrackBar` substitue les méthodes suivantes qu’il hérite <xref:System.Windows.Forms.Control?displayProperty=nameWithType>:  
   

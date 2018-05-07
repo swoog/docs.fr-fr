@@ -1,14 +1,6 @@
 ---
-title: "ImportFile2, méthode"
-ms.custom: 
+title: ImportFile2, méthode
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IALink.ImportFile2
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 9a6be861-c260-4a35-acea-3372ea515a0f
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ce7433745bb76a6c12e60e11e02cd1e7ef156614
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 61bc7783823408164ae2b073e097a0e85e193be6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="importfile2-method"></a>ImportFile2, méthode
 Importe les assemblys et modules indépendants. Cette méthode ressemble [méthode ImportFile](../../../../docs/framework/unmanaged-api/alink/importfile-method.md), mais fonctionne même si le fichier importé n’existe pas sur le disque.  
@@ -76,7 +64,7 @@ HRESULT ImportFile2(
 ## <a name="return-value"></a>Valeur de retour  
  Retourne S_OK si la méthode réussit.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  Requiert alink.h.  
   
 ## <a name="see-also"></a>Voir aussi  

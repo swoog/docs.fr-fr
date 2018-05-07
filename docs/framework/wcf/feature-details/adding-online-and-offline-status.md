@@ -1,24 +1,12 @@
 ---
-title: "Ajout d'états en ligne et hors connexion"
-ms.custom: 
+title: Ajout d'états en ligne et hors connexion
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 05e5f51d-81b6-4c17-b364-9dda447a5fce
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: adb767d3b7a7b991ebcfd8c44e55edb8726cb627
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fb19614c1975c5634a81ca2f40edb145b724cd1d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adding-online-and-offline-status"></a>Ajout d'états en ligne et hors connexion
 Dans de nombreux cas, il est important qu'une application surveille les informations relatives à l'état d'une connexion de canal homologue. Vous pouvez obtenir ces informations en appelant la méthode `GetProperty` depuis une implémentation de l'interface <xref:System.ServiceModel.IOnlineStatus>. Un objet implémenté sur cette interface peut en effet surveiller l'état de la connexion ou s'inscrire à des gestionnaires d'événements, tels que `OnOnline` et `OnOffline`. Cet objet réagira immédiatement à toutes modifications de l'état en ligne.  

@@ -1,14 +1,6 @@
 ---
 title: Délégation et emprunt d'identité avec WCF
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,17 +8,11 @@ helpviewer_keywords:
 - impersonation [WCF]
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
-caps.latest.revision: 40
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8fc08c442813991b425b2bed3a0047fc5efa0d83
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 811ab308b881b5209d44612b29fb51d1c79e8bf1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>Délégation et emprunt d'identité avec WCF
 L'*emprunt d'identité* est une technique courante utilisée par les services pour restreindre l'accès du client aux ressources d'un domaine de service. Les ressources de domaine de service peuvent être des ressources d'ordinateur, telles que des fichiers locaux (emprunt d'identité), ou une ressource sur un autre ordinateur, tel qu'un partage de fichiers (délégation). Pour obtenir un exemple d'application, consultez [Impersonating the Client](../../../../docs/framework/wcf/samples/impersonating-the-client.md). Pour obtenir un exemple sur l’utilisation de l’emprunt d’identité, consultez [Comment : emprunter l'identité d'un client sur un service](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md).  
@@ -40,12 +26,12 @@ L'*emprunt d'identité* est une technique courante utilisée par les services po
  L'emprunt d'identité et la délégation nécessitent que le client possède une identité Windows. Si ce n'est pas le cas, la seule option consiste à transmettre l'identité du client au second service.  
   
 ## <a name="impersonation-basics"></a>Principes de base de l'emprunt d'identité  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] prend en charge l'emprunt d'identité pour diverses informations d'identification du client. Cette rubrique décrit la prise en charge de modèle de service permettant d'emprunter l'identité de l'appelant pendant l'implémentation d'une méthode de service. Elle présente également des scénarios de déploiement courants impliquant l'emprunt d'identité et la sécurité SOAP, ainsi que les options [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilisées dans ces scénarios.  
+ Windows Communication Foundation (WCF) prend en charge l’emprunt d’identité pour diverses informations d’identification du client. Cette rubrique décrit la prise en charge de modèle de service permettant d'emprunter l'identité de l'appelant pendant l'implémentation d'une méthode de service. Elle présente également des scénarios de déploiement courants impliquant l’emprunt d’identité et la sécurité SOAP et les options de WCF dans ces scénarios.  
   
- Cette rubrique se concentre sur l'emprunt d'identité et la délégation dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] lors de l'utilisation de la sécurité SOAP. Vous pouvez également utiliser l’emprunt d’identité et la délégation avec [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] lors de l’utilisation de la sécurité de transport, tel que décrit dans [Using Impersonation with Transport Security](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md).  
+ Cette rubrique se concentre sur l’emprunt d’identité et de délégation dans WCF lors de l’utilisation de la sécurité SOAP. Vous pouvez également utiliser l’emprunt d’identité et de délégation avec WCF lors de l’utilisation de sécurité du transport, comme décrit dans [à l’aide de l’emprunt d’identité avec la sécurité de Transport](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md).  
   
 ## <a name="two-methods"></a>Deux méthodes  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] La sécurité SOAP a deux méthodes distinctes d'exécution de l'emprunt d'identité. La méthode utilisée dépend de la liaison. L'une concerne l'emprunt d'identité à partir d'un jeton Windows fourni par l'authentification SSPI (Security Support Provider Interface) ou Kerberos, qui est ensuite mis en cache sur le service. La deuxième concerne l'emprunt d'identité à partir d'un jeton Windows fourni par les extensions Kerberos, collectivement appelées *S4U* (Service-for-User).  
+ Sécurité WCF SOAP a deux méthodes distinctes pour effectuer l’emprunt d’identité. La méthode utilisée dépend de la liaison. L'une concerne l'emprunt d'identité à partir d'un jeton Windows fourni par l'authentification SSPI (Security Support Provider Interface) ou Kerberos, qui est ensuite mis en cache sur le service. La deuxième concerne l'emprunt d'identité à partir d'un jeton Windows fourni par les extensions Kerberos, collectivement appelées *S4U* (Service-for-User).  
   
 ### <a name="cached-token-impersonation"></a>Emprunt d'identité avec jeton mis en cache  
  Vous pouvez effectuer l'emprunt d'identité avec jeton mis en cache à l'aide des éléments suivants :  
@@ -73,7 +59,7 @@ L'*emprunt d'identité* est une technique courante utilisée par les services po
 >  Lorsque le client et le service s'exécutent sur le même ordinateur et que le client s'exécute sous un compte système (par exemple, `Local System` ou `Network Service`), il n'est pas possible d'emprunter l'identité du client lorsqu'une session sécurisée est établie avec les jetons de contexte de sécurité avec état. Une application Windows Forms ou console s'exécute en général sous le compte actuellement connecté, afin que l'emprunt d'identité du compte puisse être effectué par défaut. Toutefois, lorsque le client est une page [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] et que celle-ci est hébergée dans [!INCLUDE[iis601](../../../../includes/iis601-md.md)] ou [!INCLUDE[iisver](../../../../includes/iisver-md.md)], le client ne s'exécute pas par défaut sous le compte `Network Service` . Toutes les liaisons fournies par le système qui prennent en charge des sessions sécurisées utilisent par défaut un jeton de contexte de sécurité sans état. Toutefois, si le client est une page [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] , et que des sessions sécurisées avec jetons de sécurité avec état sont utilisées, l'emprunt de l'identité du client est impossible. Pour plus d’informations sur l’utilisation des SCT avec état dans une session sécurisée, consultez [Comment : créer un jeton de contexte de sécurité pour une Session sécurisée](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
   
 ## <a name="impersonation-in-a-service-method-declarative-model"></a>Emprunt d'identité dans une méthode de service : modèle déclaratif  
- La plupart des scénarios d'emprunt d'identité impliquent l'exécution de la méthode de service dans le contexte de l'appelant. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fournit une fonctionnalité d'emprunt d'identité qui facilite cette procédure en permettant à l'utilisateur d'indiquer la spécification d'emprunt d'identité dans l'attribut <xref:System.ServiceModel.OperationBehaviorAttribute> . Par exemple, dans le code suivant, l'infrastructure [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] emprunte l'identité de l'appelant avant d'exécuter la méthode `Hello` . Toute tentative d'accès aux ressources natives à l'intérieur de la méthode `Hello` réussit uniquement si la liste de contrôle d'accès (ACL, Access Control List) de la ressource autorise les privilèges d'accès de l'appelant. Pour activer l'emprunt d'identité, affectez l'une des valeurs d'énumération <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> (<xref:System.ServiceModel.ImpersonationOption> ou <xref:System.ServiceModel.ImpersonationOption.Required?displayProperty=nameWithType>) à la propriété <xref:System.ServiceModel.ImpersonationOption.Allowed?displayProperty=nameWithType>, tel qu'indiqué dans l'exemple suivant.  
+ La plupart des scénarios d'emprunt d'identité impliquent l'exécution de la méthode de service dans le contexte de l'appelant. WCF fournit une fonctionnalité d’emprunt d’identité qui facilite cette procédure en permettant à l’utilisateur d’indiquer la spécification d’emprunt d’identité dans le <xref:System.ServiceModel.OperationBehaviorAttribute> attribut. Par exemple, dans le code suivant, l’infrastructure WCF emprunte l’identité de l’appelant avant d’exécuter le `Hello` (méthode). Toute tentative d'accès aux ressources natives à l'intérieur de la méthode `Hello` réussit uniquement si la liste de contrôle d'accès (ACL, Access Control List) de la ressource autorise les privilèges d'accès de l'appelant. Pour activer l'emprunt d'identité, affectez l'une des valeurs d'énumération <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> (<xref:System.ServiceModel.ImpersonationOption> ou <xref:System.ServiceModel.ImpersonationOption.Required?displayProperty=nameWithType>) à la propriété <xref:System.ServiceModel.ImpersonationOption.Allowed?displayProperty=nameWithType>, tel qu'indiqué dans l'exemple suivant.  
   
 > [!NOTE]
 >  Lorsqu'un service a des informations d'identification plus élevées que le client distant, celles-ci sont utilisées si la propriété <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> a la valeur <xref:System.ServiceModel.ImpersonationOption.Allowed>. En d'autres termes, si un utilisateur à privilèges faibles fournit ses informations d'identification, un service à privilèges plus élevés exécute la méthode avec les informations d'identification du service, et peut utiliser des ressources que l'utilisateur à privilèges faibles n'aurait pas pu utiliser sinon.  
@@ -81,7 +67,7 @@ L'*emprunt d'identité* est une technique courante utilisée par les services po
  [!code-csharp[c_ImpersonationAndDelegation#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_impersonationanddelegation/cs/source.cs#1)]
  [!code-vb[c_ImpersonationAndDelegation#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_impersonationanddelegation/vb/source.vb#1)]  
   
- L'infrastructure [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] peut emprunter l'identité de l'appelant uniquement si celui-ci est authentifié avec des informations d'identification qui peuvent être mappées à un compte d'utilisateur Windows. Si le service est configuré pour authentifier l'utilisation d'une information d'identification qui ne peut pas être mappée à un compte Windows, la méthode de service n'est pas exécutée.  
+ L’infrastructure WCF peut emprunter l’identité de l’appelant uniquement si l’appelant est authentifié avec les informations d’identification qui peuvent être mappées à un compte d’utilisateur Windows. Si le service est configuré pour authentifier l'utilisation d'une information d'identification qui ne peut pas être mappée à un compte Windows, la méthode de service n'est pas exécutée.  
   
 > [!NOTE]
 >  Sur [!INCLUDE[wxp](../../../../includes/wxp-md.md)], l'emprunt d'identité échoue si un jeton de contexte de sécurité avec état est créé, ce qui génère un <xref:System.InvalidOperationException>. Pour plus d’informations, consultez [scénarios non pris en charge](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md).  
@@ -101,14 +87,14 @@ L'*emprunt d'identité* est une technique courante utilisée par les services po
  [!code-csharp[c_ImpersonationAndDelegation#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_impersonationanddelegation/cs/source.cs#3)]
  [!code-vb[c_ImpersonationAndDelegation#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_impersonationanddelegation/vb/source.vb#3)]  
   
- Le tableau suivant décrit le comportement [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] de toutes les combinaisons possibles de `ImpersonationOption` et `ImpersonateCallerForAllServiceOperations`.  
+ Le tableau suivant décrit le comportement WCF pour toutes les combinaisons possibles de `ImpersonationOption` et `ImpersonateCallerForAllServiceOperations`.  
   
 |`ImpersonationOption`|`ImpersonateCallerForAllServiceOperations`|Comportement|  
 |---------------------------|------------------------------------------------|--------------|  
-|Obligatoire|N/A|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] emprunte l'identité de l'appelant|  
-|Allowed|False|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] n'emprunte par l'identité de l'appelant|  
-|Allowed|true|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] emprunte l'identité de l'appelant|  
-|NotAllowed|False|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] n'emprunte par l'identité de l'appelant|  
+|Obligatoire|N/A|WCF emprunte l’identité de l’appelant|  
+|Allowed|False|WCF n’emprunte pas l’identité de l’appelant|  
+|Allowed|true|WCF emprunte l’identité de l’appelant|  
+|NotAllowed|False|WCF n’emprunte pas l’identité de l’appelant|  
 |NotAllowed|true|Non autorisé. (Une exception <xref:System.InvalidOperationException> est levée.)|  
   
 ## <a name="impersonation-level-obtained-from-windows-credentials-and-cached-token-impersonation"></a>Niveau d'emprunt d'identité obtenu à partir des informations d'identification Windows et emprunt d'identité avec jeton mis en cache  
@@ -136,7 +122,7 @@ L'*emprunt d'identité* est une technique courante utilisée par les services po
 |Delegation|Non|N/A|Identification|  
   
 ## <a name="impersonation-level-obtained-from-user-name-credentials-and-cached-token-impersonation"></a>Niveau d'emprunt d'identité obtenu à partir des informations d'identification de nom d'utilisateur et emprunt d'identité avec jeton mis en cache  
- En passant son nom d'utilisateur et son mot de passe au service, un client permet à [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] d'ouvrir une session sous cet utilisateur, ce qui revient à affecter `AllowedImpersonationLevel` à la propriété <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>. (`AllowedImpersonationLevel` est disponible sur les classes <xref:System.ServiceModel.Security.WindowsClientCredential> et <xref:System.ServiceModel.Security.HttpDigestClientCredential>.) Le tableau suivant indique le niveau d'emprunt d'identité obtenu lorsque le service reçoit des informations d'identification de nom d'utilisateur.  
+ En passant au service, son nom d’utilisateur et un mot de passe, un client permet à WCF de session en tant qu’utilisateur, ce qui revient à affecter la `AllowedImpersonationLevel` propriété <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>. (`AllowedImpersonationLevel` est disponible sur les classes <xref:System.ServiceModel.Security.WindowsClientCredential> et <xref:System.ServiceModel.Security.HttpDigestClientCredential>.) Le tableau suivant indique le niveau d'emprunt d'identité obtenu lorsque le service reçoit des informations d'identification de nom d'utilisateur.  
   
 |`AllowedImpersonationLevel`|Le Service a `SeImpersonatePrivilege`|Le Service et le client sont capables de délégation|Jeton `ImpersonationLevel`mis en cache|  
 |---------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  

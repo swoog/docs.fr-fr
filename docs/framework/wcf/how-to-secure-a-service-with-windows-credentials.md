@@ -1,34 +1,22 @@
 ---
 title: "Comment : sécuriser un service à l'aide d'informations d'identification Windows"
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - WCF, security
 ms.assetid: d171b5ca-96ef-47ff-800c-c138023cf76e
-caps.latest.revision: 26
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2828b6b9df313bab5a904712ad4e97cc7062f387
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 5ed09947350a284dd7701b37bad93912f79f7e3c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-secure-a-service-with-windows-credentials"></a>Comment : sécuriser un service à l'aide d'informations d'identification Windows
-Cette rubrique montre comment activer la sécurité de transport sur un [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] service qui réside dans un domaine Windows et est appelée par les clients dans le même domaine. Pour plus d’informations sur ce scénario, consultez [sécurité de Transport avec l’authentification Windows](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md). Pour un exemple d’application, consultez la [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) exemple.  
+Cette rubrique montre comment activer la sécurité de transport sur un service Windows Communication Foundation (WCF) qui réside dans un domaine Windows et est appelée par les clients dans le même domaine. Pour plus d’informations sur ce scénario, consultez [sécurité de Transport avec l’authentification Windows](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md). Pour un exemple d’application, consultez la [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) exemple.  
   
  Cette rubrique suppose que vous avez une interface de contrat existante et que l'implémentation est déjà définie et s'ajoute à cela. Vous pouvez également modifier un service et un client existants.  
   

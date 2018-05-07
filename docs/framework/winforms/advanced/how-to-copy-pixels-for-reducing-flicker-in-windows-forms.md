@@ -1,13 +1,6 @@
 ---
-title: "Comment : copier des pixels pour réduire le scintillement dans les Windows Forms"
-ms.custom: 
+title: 'Comment : copier des pixels pour réduire le scintillement dans les Windows Forms'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,16 +13,11 @@ helpviewer_keywords:
 - flicker
 - bit-block transfer
 ms.assetid: 33b76910-13a3-4521-be98-5c097341ae3b
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 17253e21739911d4aa0541fde9ae205b0be1c5a2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 65428132c885191b62c3b4a76c8937bf8f3f6732
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a>Comment : copier des pixels pour réduire le scintillement dans les Windows Forms
 Lorsque vous animez un graphique simple, les utilisateurs peuvent parfois être scintillement ou autres effets visuels indésirables. Un pour limiter ce problème consiste à utiliser un processus « bitblt » sur le graphique. BitBlt représente le « bloc de bits transfert » des données de couleur à partir d’un rectangle d’origine de pixels à un rectangle de destination de pixels.  

@@ -1,34 +1,22 @@
 ---
 title: "Comment : spécifier des informations d'identification pour la sécurité des canaux"
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-caps.latest.revision: ''
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: e2aedb06ec694f6c7dfb12b70ab919ae23eed17e
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: f25089f7f5ffa16bb46e0833b15b4cbc4a7735ac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>Comment : spécifier des informations d'identification pour la sécurité des canaux
-Le moniker de service [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] permet aux applications COM d'appeler des services [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. La plupart des services [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] requièrent que le client spécifie des informations d'identification pour l'authentification et l'autorisation. Lorsque vous appelez un service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] d'un client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], vous pouvez spécifier ces informations d'identification en code managé ou dans un fichier de configuration de l'application. Lorsque vous appelez un service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] depuis une application COM, vous pouvez utiliser l'interface <xref:System.ServiceModel.ComIntegration.IChannelCredentials> pour spécifier les informations d'identification. Cette rubrique illustre diverses méthodes pour spécifier des informations d'identification à l'aide de l'interface <xref:System.ServiceModel.ComIntegration.IChannelCredentials>.  
+Le Moniker de Service Windows Communication Foundation (WCF) permet aux applications COM appeler les services WCF. La plupart des services WCF requiert que le client spécifier les informations d’identification pour l’authentification et d’autorisation. Lorsque vous appelez un service WCF à partir d’un client WCF, vous pouvez spécifier ces informations d’identification dans le code managé ou dans un fichier de configuration d’application. Lorsque vous appelez un service WCF à partir d’une application COM, vous pouvez utiliser la <xref:System.ServiceModel.ComIntegration.IChannelCredentials> interface afin de spécifier les informations d’identification. Cette rubrique illustre diverses méthodes pour spécifier des informations d'identification à l'aide de l'interface <xref:System.ServiceModel.ComIntegration.IChannelCredentials>.  
   
 > [!NOTE]
 >  <xref:System.ServiceModel.ComIntegration.IChannelCredentials> est une interface basée sur IDispatch et vous ne rencontrerez pas de fonctionnalités IntelliSense dans l'environnement Visual Studio.  
   
- Cet article utilisera le [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service défini dans le [Message Security, exemple](../../../../docs/framework/wcf/samples/message-security-sample.md).  
+ Cet article utilise le service WCF défini dans le [Message Security, exemple](../../../../docs/framework/wcf/samples/message-security-sample.md).  
   
 ### <a name="to-specify-a-client-certificate"></a>Pour spécifier un certificat client  
   
@@ -40,7 +28,7 @@ Le moniker de service [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] pe
   
 4.  Ajouter `bindingNamespace=``http://Microsoft.ServiceModel.Samples` à la balise de point de terminaison dans le fichier App.config pour le service.  
   
-5.  Générez l'exemple de la sécurité de message et exécutez Service.exe. Utilisez Internet Explorer et naviguez jusqu'à l'URI du service (http://localhost:8000/ServiceModelSamples/Service) pour vérifier que le service fonctionne.  
+5.  Générez l'exemple de la sécurité de message et exécutez Service.exe. Utilisez Internet Explorer et accédez à l’URI du service (http://localhost:8000/ServiceModelSamples/Service) pour vous assurer que le service fonctionne.  
   
 6.  Ouvrez Visual Basic 6.0 et créez un nouveau fichier .exe standard. Ajoutez un bouton au formulaire et double-cliquez dessus pour ajouter le code suivant au gestionnaire Click :  
   

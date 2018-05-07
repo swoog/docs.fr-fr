@@ -1,26 +1,12 @@
 ---
 title: Exemple SystemWebRouting Integration
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f1c94802-95c4-49e4-b1e2-ee9dd126ff93
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: de8869956a59cb47623dbc4d84763e19d6f181bf
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
-ms.translationtype: MT
+ms.openlocfilehash: 43785f84cb3852a35f1ed3bd555287842455a89b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="systemwebrouting-integration-sample"></a>Exemple SystemWebRouting Integration
 Cet exemple illustre l'intégration de la couche d'hébergement avec les classes de l'espace de noms <xref:System.Web.Routing>. Les classes de l'espace de noms <xref:System.Web.Routing> permettent à une application d'utiliser des URL qui ne correspondent pas directement à une ressource physique. L'utilisation du routage Web permet au développeur de créer des adresses virtuelles pour HTTP qui sont ensuite remappées aux véritables services [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Cela peut être utile lorsqu'un service WCF doit être hébergé sans requérir de fichier ou ressource physique, ou lorsque des services doivent être accessibles via des URL qui ne contiennent pas de fichiers tels que .html ou .aspx. Cet exemple montre comment utiliser la classe <xref:System.Web.Routing.RouteTable> pour créer des URI virtuels qui mappent aux services en cours d'exécution définis dans global.asax. 
@@ -39,7 +25,7 @@ Cet exemple peut-être déjà être installé sur votre ordinateur. Recherchez l
    
 `<InstallDrive>:\WF_WCF_Samples`  
    
- Si ce répertoire n’existe pas, accédez à la page [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les exemples [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Cet exemple se trouve dans le répertoire suivant.  
+ Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
    
 `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WebRoutingIntegration`  
   
@@ -51,11 +37,11 @@ Cet exemple peut-être déjà être installé sur votre ordinateur. Recherchez l
   
      Une liste des répertoires de l'exemple s'affiche. Notez l’absence de fichiers ayant l’extension .svc.  
   
-3.  Dans la barre d’adresses, ajoutez `movies` à l’URL, par conséquent, qu’il lit http://localhost : [port] /Movies et appuyez sur ENTRÉE.  
+3.  Dans la barre d’adresses, ajoutez `movies` à l’URL, par conséquent, qu’il lit http://localhost:[port] /Movies et appuyez sur ENTRÉE.  
   
      Le flux movies s'affiche dans le navigateur.  
   
-4.  Dans la barre d'adresses, ajoutez `channels` à l'URL, pour obtenir http://localhost:[port]/channels et appuyez sur ENTRÉE.  
+4.  Dans la barre d’adresses, ajoutez `channels` à l’URL, qui est donc lectures http://localhost:[port] /Channels et appuyez sur ENTRÉE.  
   
      Le flux channels s'affiche dans le navigateur.  
   
@@ -81,11 +67,11 @@ Cet exemple peut-être déjà être installé sur votre ordinateur. Recherchez l
   
 4.  Démarrer l’application, en double-cliquant sur l’application Web et en sélectionnant **gérer l’Application** , puis **Parcourir**.  
   
-5.  Dans la barre d'adresses, ajoutez `movies` à l'URL, pour obtenir http://localhost:[port]/movies et appuyez sur ENTRÉE.  
+5.  Dans la barre d’adresses, ajoutez `movies` à l’URL, qui est donc lectures http://localhost:[port] /Movies et appuyez sur ENTRÉE.  
   
      Le flux movies s'affiche dans le navigateur.  
   
-6.  Dans la barre d'adresses, ajoutez `channels` à l'URL, pour obtenir http://localhost:[port]/channels et appuyez sur ENTRÉE.  
+6.  Dans la barre d’adresses, ajoutez `channels` à l’URL, qui est donc lectures http://localhost:[port] /Channels et appuyez sur ENTRÉE.  
   
      Le flux channels s'affiche dans le navigateur.  
   

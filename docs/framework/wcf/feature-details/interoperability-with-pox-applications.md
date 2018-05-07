@@ -1,35 +1,21 @@
 ---
 title: Interopérabilité avec les applications POX
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 449276b8-4633-46f0-85c9-81f01d127636
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 42f6bbb1a5605bd0a604f5cfe31ce5ea48d9bb10
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 7522233723b6b91d5a7b27d3f82ca328e29ce3f7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interoperability-with-pox-applications"></a>Interopérabilité avec les applications POX
-« Plain Old XML » les applications (POX) communiquent en échangeant des messages HTTP bruts qui contiennent uniquement les données d’application XML qui ne sont pas comprises dans une enveloppe SOAP. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] peut fournir les services et les clients qui utilisent des messages POX. Sur le service, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] peut être utilisé pour implémenter des services qui exposent des points de terminaison à des clients tels que les navigateurs Web et les langages de script qui envoient et reçoivent des messages POX. Sur le client, le modèle de programmation [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] peut être utilisé pour implémenter des clients qui communiquent avec des services reposant sur POX.  
+« Plain Old XML » les applications (POX) communiquent en échangeant des messages HTTP bruts qui contiennent uniquement les données d’application XML qui ne sont pas comprises dans une enveloppe SOAP. Windows Communication Foundation (WCF) peut fournir des services et les clients qui utilisent des messages POX. Sur le service, WCF peut être utilisé pour implémenter des services qui exposent des points de terminaison clients tels que des navigateurs Web et langages de script qui envoient et reçoivent des messages POX. Sur le client, le modèle de programmation WCF peut être utilisé pour implémenter des clients qui communiquent avec les services POX.  
   
 > [!NOTE]
 >  À l'origine, ce document a été écrit pour [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.0.  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.5 dispose d'une prise en charge intégrée pour une utilisation avec des applications POX. Pour plus d’informations sur, consultez [modèle de programmation WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
   
 ## <a name="pox-programming-with-wcf"></a>Programmation POX avec WCF  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] les services qui communiquent via HTTP à l’aide d’utilisation de messages POX un [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
+ Les services WCF qui communiquent par HTTP à l’aide d’utilisation de messages POX un [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
   
 ```xml  
 <customBinding>  
@@ -46,9 +32,9 @@ ms.lasthandoff: 04/30/2018
   
 -   Le [ \<textMessageEncoding >](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md).  
   
- L'encodeur de message texte [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] standard est configuré spécialement pour utiliser la valeur <xref:System.ServiceModel.Channels.MessageVersion.None%2A>, ce qui lui permet de traiter des charges utiles de messages XML qui n'arrivent pas encapsulés dans une enveloppe SOAP.  
+ La norme d’encodeur de Message texte WCF est spécialement configuré pour utiliser le <xref:System.ServiceModel.Channels.MessageVersion.None%2A> valeur, ce qui lui permet de traiter le XML charges de message qui n’arrivent pas encapsulés dans une enveloppe SOAP.  
   
- Les clients [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] qui communiquent par HTTP à l'aide de messages POX utilisent une liaison semblable (illustrée dans le code impératif suivant).  
+ Les clients WCF qui communiquent par HTTP à l’aide de messages POX utilisent une liaison semblable (illustrée dans le code impératif suivant).  
   
 ```  
 private static Binding CreatePoxBinding()  
@@ -63,7 +49,7 @@ private static Binding CreatePoxBinding()
   
  Étant donné que les clients POX doivent spécifier explicitement les URI auxquels ils envoient des messages, ils doivent généralement configurer le <xref:System.ServiceModel.Channels.HttpTransportBindingElement> avec un mode d'adressage manuel en affectant à la propriété <xref:System.ServiceModel.Channels.TransportBindingElement.ManualAddressing%2A> la valeur `true` sur l'élément. Cela permet aux messages d'être adressés explicitement par le code d'application et il n'est pas nécessaire de créer une <xref:System.ServiceModel.ChannelFactory> chaque fois qu'une application envoie un message à un URI HTTP différent.  
   
- Étant donné que les messages POX n'utilisent pas d'en-tête SOAP pour acheminer des informations de protocole importantes, les clients et les services POX doivent souvent traiter des parties de la requête HTTP sous-jacente utilisée pour envoyer ou recevoir un message. Les informations de protocole spécifiques à HTTP, telles que les en-têtes et codes d'état HTTP, sont signalées dans le modèle de programmation [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] à travers deux classes :  
+ Étant donné que les messages POX n'utilisent pas d'en-tête SOAP pour acheminer des informations de protocole importantes, les clients et les services POX doivent souvent traiter des parties de la requête HTTP sous-jacente utilisée pour envoyer ou recevoir un message. Les informations de protocole HTTP spécifiques tels que les en-têtes HTTP et les codes d’état sont signalées dans le modèle de programmation WCF à travers deux classes :  
   
 -   <xref:System.ServiceModel.Channels.HttpRequestMessageProperty>, qui contient des informations à propos de la requête HTTP, telles que la méthode HTTP et les en-têtes de demande.  
   

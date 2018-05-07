@@ -1,13 +1,6 @@
 ---
 title: Architecture de programmation d'une application de service
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,25 +14,22 @@ helpviewer_keywords:
 - ServiceProcessInstaller class, service application code model
 - Windows Service applications, states
 ms.assetid: 83230026-d068-4174-97ff-e264c896eb2f
-caps.latest.revision: "15"
 author: ghogen
-ms.author: ghogen
 manager: douge
-ms.workload: dotnet
-ms.openlocfilehash: 2d44ee323040346437261b51fddb707a30d1de6c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f0c760d0f9b65fc9b612a8bee8abb68fa5b4ecae
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="service-application-programming-architecture"></a>Architecture de programmation d'une application de service
 Applications de Service Windows sont basées sur une classe qui hérite de la <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> classe. Vous substituez les méthodes de cette classe et définissez des fonctionnalités pour pouvoir déterminer le comporte de votre service.  
   
  Les principales classes impliquées dans la création du service sont :  
   
--   <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType>— Vous substituez les méthodes de la <xref:System.ServiceProcess.ServiceBase> classe lors de la création d’un service et de définir le code pour déterminer le fonctionnement de votre service dans cette classe héritée.  
+-   <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> — Vous substituez les méthodes de la <xref:System.ServiceProcess.ServiceBase> classe lors de la création d’un service et de définir le code pour déterminer le fonctionnement de votre service dans cette classe héritée.  
   
--   <xref:System.ServiceProcess.ServiceProcessInstaller?displayProperty=nameWithType>et <xref:System.ServiceProcess.ServiceInstaller?displayProperty=nameWithType> , vous utilisez ces classes pour installer et désinstaller votre service.  
+-   <xref:System.ServiceProcess.ServiceProcessInstaller?displayProperty=nameWithType> et <xref:System.ServiceProcess.ServiceInstaller?displayProperty=nameWithType> , vous utilisez ces classes pour installer et désinstaller votre service.  
   
  En outre, une classe nommée <xref:System.ServiceProcess.ServiceController> peut être utilisé pour manipuler le service. Cette classe n’est pas impliquée dans la création d’un service, mais il peut être utilisée pour démarrer et arrêter le service, passer des commandes et retourner une série d’énumérations.  
   

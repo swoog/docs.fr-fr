@@ -1,27 +1,15 @@
 ---
-title: "Formateurs de messages personnalisés"
-ms.custom: 
+title: Formateurs de messages personnalisés
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c07435f3-5214-4791-8961-2c2b61306d71
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ea32656db90907ae523502fc1796466442ef4a4d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 301c508a0c639985e226dc55f62431ad8bb9c12b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-message-formatters"></a>Formateurs de messages personnalisés
-Le contenu d'un message est souvent au format XML, ce qui n'est pas généralement un format pratique pour une application. Les applications manipulent des objets, obtiennent et définissent leurs propriétés. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]utilise le *contrat de données* pour convertir un <xref:System.ServiceModel.Channels.Message> objet dans un objet facilement géré par une application. Ces processus sont appelés sérialisation et désérialisation. Notez que ces mêmes termes sont utilisés pour décrire la sérialisation et la désérialisation effectuées par la couche transport en direction et à partir du format de transmission de message, qui est un processus non apparenté.  
+Le contenu d'un message est souvent au format XML, ce qui n'est pas généralement un format pratique pour une application. Les applications manipulent des objets, obtiennent et définissent leurs propriétés. Windows Communication Foundation (WCF) utilise le *contrat de données* pour convertir un <xref:System.ServiceModel.Channels.Message> objet dans un objet facilement géré par une application. Ces processus sont appelés sérialisation et désérialisation. Notez que ces mêmes termes sont utilisés pour décrire la sérialisation et la désérialisation effectuées par la couche transport en direction et à partir du format de transmission de message, qui est un processus non apparenté.  
   
  Vous pouvez utiliser un formateur de messages personnalisés si vous devez implémenter une conversion spécialisée entre des messages et des objets que vous ne pouvez pas accomplir au moyen d'un contrat de données. Pour ce faire, modifiez ou étendez le comportement d'exécution d'une opération de contrat spécifique sur un client ou un service.  
   

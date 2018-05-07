@@ -1,27 +1,17 @@
 ---
-title: "Extensibilité de la sécurité"
-ms.custom: 
+title: Extensibilité de la sécurité
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2afe044d-df4a-49a4-9865-38700474c3dd
-caps.latest.revision: "7"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: eb9038ee6e28cdb5fbf213d56542419e7cdf36c6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8f68d842b305c37a9e23bf23429c0bfb66a8eae4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-extensibility"></a>Extensibilité de la sécurité
-Cette section contient des exemples qui illustrent la sécurité personnalisée dans [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+Cette section contient des exemples qui illustrent la sécurité personnalisée dans Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Fournisseur de jetons émis durables](../../../../docs/framework/wcf/samples/durable-issued-token-provider.md)  
@@ -49,7 +39,7 @@ Cette section contient des exemples qui illustrent la sécurité personnalisée 
  Montre comment implémenter une stratégie d'autorisation de revendication personnalisée et un gestionnaire d'autorisations de service personnalisé associé.  
   
  [Jeton personnalisé](../../../../docs/framework/wcf/samples/custom-token.md)  
- Illustre comment ajouter une implémentation de jeton personnalisé à une application [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+ Montre comment ajouter une implémentation personnalisée de jeton dans une application Windows Communication Foundation (WCF).  
   
  [Validation du client](../../../../docs/framework/wcf/samples/client-validation.md)  
  Montre comment écrire un comportement de point de terminaison client qui valide le point de terminaison de service pour garantir que le point de terminaison de service est sûr à utiliser.

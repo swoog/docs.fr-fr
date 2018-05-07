@@ -1,27 +1,18 @@
 ---
 title: "Comment : authentifier à l'aide d'un nom d'utilisateur et d'un mot de passe"
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 helpviewer_keywords:
 - authentication [WCF], user name and password
 ms.assetid: a5415be2-0ef3-464c-9f76-c255cb8165a4
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 194a84ef7c2af3bfce6af3625eabf07d4d0b06fb
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: b37d296312be4c7694a2db55d85dd618e3252f14
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-authenticate-with-a-user-name-and-password"></a>Comment : authentifier à l'aide d'un nom d'utilisateur et d'un mot de passe
 
-Cette rubrique montre comment permettre à un service [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] d'authentifier un client à l'aide d'un nom d'utilisateur et d'un mot de passe Windows. Elle suppose que vous disposez d'un service WCF auto-hébergé fonctionnel. Pour obtenir un exemple de création d’un base consultez de service WCF auto-hébergé, [Getting Started Tutorial](../../../../docs/framework/wcf/getting-started-tutorial.md). Cette rubrique suppose que le service est configuré dans le code. Si vous souhaitez voir un exemple de configuration d’un service similaire à l’aide d’un fichier de configuration voir [nom d’utilisateur de sécurité de Message](../../../../docs/framework/wcf/samples/message-security-user-name.md)  
+Cette rubrique montre comment permettre à un service Windows Communication Foundation (WCF) authentifier un client avec un nom d’utilisateur de domaine Windows et un mot de passe. Elle suppose que vous disposez d'un service WCF auto-hébergé fonctionnel. Pour obtenir un exemple de création d’un base consultez de service WCF auto-hébergé, [Getting Started Tutorial](../../../../docs/framework/wcf/getting-started-tutorial.md). Cette rubrique suppose que le service est configuré dans le code. Si vous souhaitez voir un exemple de configuration d’un service similaire à l’aide d’un fichier de configuration voir [nom d’utilisateur de sécurité de Message](../../../../docs/framework/wcf/samples/message-security-user-name.md)  
   
  Pour configurer un service afin d'authentifier ses clients à l'aide du nom d'utilisateur et du mot de passe de domaine Windows, utilisez <xref:System.ServiceModel.WSHttpBinding> et affectez la valeur `Security.Mode` à sa propriété `Message`. En outre, vous devez spécifier un certificat X509 qui sera utilisé pour chiffrer le nom d'utilisateur et le mot de passe lors de leur envoi du client au service.  
   
