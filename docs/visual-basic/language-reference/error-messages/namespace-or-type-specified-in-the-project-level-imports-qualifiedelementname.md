@@ -1,28 +1,19 @@
 ---
-title: Namespace ou le type spécifié dans les Imports au niveau du projet &#39; &lt;nom_élément_qualifié&gt;&#39; n &#39; t contient aucun membre public ou est introuvable
+title: Namespace ou le type spécifié dans les Imports au niveau du projet &#39; &lt;nom_élément_qualifié&gt; &#39; ne&#39;t contient aucun membre public ou est introuvable
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc40057
 - bc40057
 helpviewer_keywords:
 - BC40057
 ms.assetid: 4ae3506e-2ebe-4ff3-995d-14ac60db5e9f
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 0d0a164562524af239b3b130f681dbc6eff23814
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d6d0c931262d892ec3e65888a76f25218b23d868
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="namespace-or-type-specified-in-the-project-level-imports-39ltqualifiedelementnamegt39-doesn39t-contain-any-public-member-or-cannot-be-found"></a>Namespace ou le type spécifié dans les Imports au niveau du projet &#39; &lt;nom_élément_qualifié&gt;&#39; n &#39; t contient aucun membre public ou est introuvable
+# <a name="namespace-or-type-specified-in-the-project-level-imports-39ltqualifiedelementnamegt39-doesn39t-contain-any-public-member-or-cannot-be-found"></a>Namespace ou le type spécifié dans les Imports au niveau du projet &#39; &lt;nom_élément_qualifié&gt; &#39; ne&#39;t contient aucun membre public ou est introuvable
 Namespace ou le type spécifié dans les Imports' au niveau du projet\<nom_élément_qualifié >' ne contient aucun membre public ou est introuvable. Assurez-vous que l’espace de noms ou le type est défini et qu’il contient au moins un membre public. Assurez-vous que le nom d’alias ne contient d’autres alias.  
   
  Une propriété de l’importation d’un projet spécifie un élément conteneur qui ne peut pas être trouvé ou ne définit pas `Public` membres.  
@@ -46,7 +37,7 @@ Namespace ou le type spécifié dans les Imports' au niveau du projet\<nom_élé
 3.  Vérifiez que l’élément conteneur expose au moins un `Public` membre.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Page Références, Concepteur de projet (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic)  
+ [Page Références, Concepteur de projets (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic)  
  [Gestion des propriétés des projets et des solutions](/visualstudio/ide/managing-project-and-solution-properties)  
  [Public](../../../visual-basic/language-reference/modifiers/public.md)  
  [Espaces de noms dans Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)  

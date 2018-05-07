@@ -1,11 +1,6 @@
 ---
 title: Select...Case, instruction (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Select
 - vb.Case
@@ -26,14 +21,11 @@ helpviewer_keywords:
 - End keyword [Visual Basic], Select Case statements
 - Case statement [Visual Basic], Select...Case
 ms.assetid: 68877b65-5419-4bf0-a465-20cd0e4c7d44
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a7527763a05ec32af88c6ba66ef717d839c33154
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9d24b455d92cbd00b268df26283aab082b7703a1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="selectcase-statement-visual-basic"></a>Select...Case, instruction (Visual Basic)
 Exécute l’une des multiples groupes d’instructions, en fonction de la valeur d’une expression.  
@@ -59,7 +51,7 @@ End Select
 |`elsestatements`|Facultatif. Une ou plusieurs instructions qui suivent `Case Else` s’exécutent si `testexpression` ne correspond pas à une clause dans la `expressionlist` de toutes les `Case` instructions.|  
 |`End Select`|Termine la définition de la `Select`... `Case` construction.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Si `testexpression` correspond à un `Case` `expressionlist` clause, les instructions qui suivent `Case` instruction s’exécutent dans la prochaine `Case`, `Case Else`, ou `End Select` instruction. Contrôle passe alors à l’instruction qui suit `End Select`. Si `testexpression` correspond à un `expressionlist` clause dans plusieurs `Case` clause, seules les instructions qui suivent la première correspondance exécutent.  
   
  Le `Case Else` instruction permet de présenter le `elsestatements` à exécuter si aucune correspondance n’est trouvée entre la `testexpression` et un `expressionlist` clause dans toute autre `Case` instructions. Mais non obligatoire, il est judicieux d’avoir un `Case Else` instruction dans votre `Select Case` construction gérer imprévus `testexpression` valeurs. Si aucun `Case` `expressionlist` clause correspond à `testexpression` et il n’est pas `Case Else` instruction, le contrôle passe à l’instruction qui suit `End Select`.  
@@ -82,7 +74,7 @@ End Select
   
  Si le code dans un `Case` ou `Case Else` bloc d’instructions ne doit-elle pas exécuter d’autres instructions dans le bloc, il peut quitter le bloc à l’aide de la `Exit Select` instruction. Il transfère le contrôle immédiatement à l’instruction qui suit `End Select`.  
   
- `Select Case`constructions peuvent être imbriquées. Chaque imbriqués `Select Case` construction doit avoir une correspondance `End Select` instruction et doit être entièrement contenue dans un seul `Case` ou `Case Else` bloc d’instructions d’externe `Select Case` construction dans laquelle elle est imbriquée.  
+ `Select Case` constructions peuvent être imbriquées. Chaque imbriqués `Select Case` construction doit avoir une correspondance `End Select` instruction et doit être entièrement contenue dans un seul `Case` ou `Case Else` bloc d’instructions d’externe `Select Case` construction dans laquelle elle est imbriquée.  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant utilise un `Select Case` construction pour écrire une ligne correspondant à la valeur de la variable `number`. La seconde `Case` instruction contient la valeur qui correspond à la valeur actuelle de `number`, de sorte que l’instruction qui écrit « entre 6 et 8, inclusif » s’exécute.  

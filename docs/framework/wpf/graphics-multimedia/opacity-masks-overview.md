@@ -1,28 +1,16 @@
 ---
-title: "Vue d'ensemble des masques d'opacité"
-ms.custom: 
+title: Vue d'ensemble des masques d'opacité
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - brushes [WPF], opacity masks
 - masks [WPF], opacity
 - opacity [WPF], masks
 ms.assetid: 22367fab-5f59-4583-abfd-db2bf86eaef7
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2f34fbf48328ea24815615345e855144b8b42d2b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 680d7441301b425c088d549f9e0e0d2b976cc69f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="opacity-masks-overview"></a>Vue d'ensemble des masques d'opacité
 Les masques d’opacité vous permettent de rendre les parties d’un élément ou d’un visuel totalement ou partiellement transparentes. Pour créer un masque d’opacité, vous appliquez un <xref:System.Windows.Media.Brush> à la <xref:System.Windows.UIElement.OpacityMask%2A> propriété d’un élément ou <xref:System.Windows.Media.Visual>.  Le pinceau est mappé à l’élément ou à l’objet visuel, et la valeur d’opacité de chaque pixel de pinceau est utilisée pour déterminer l’opacité obtenu pour chaque pixel correspondant de l’élément ou de l’objet visuel.  

@@ -1,25 +1,15 @@
 ---
-title: "Comment : créer une variable qui ne change pas de valeur (Visual Basic)"
-ms.custom: 
+title: 'Comment : créer une variable qui ne change pas de valeur (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - variables [Visual Basic], read-only
 - variables [Visual Basic], constant value
 ms.assetid: 86b59266-25df-4635-ae15-9b59c411d036
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d1475553e64fef92ec3f3bb7e1b4fbfb357dbec8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d63c254abe6d12c094e0d1252c9721f668947f09
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-variable-that-does-not-change-in-value-visual-basic"></a>Comment : créer une variable qui ne change pas de valeur (Visual Basic)
 La notion d’une variable qui ne modifie pas sa valeur peut sembler être contradictoires. Mais il existe des situations lorsqu’une constante n’est pas possible et il est utile de disposer d’une variable avec une valeur fixe. Dans ce cas, vous pouvez définir une variable membre avec le [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) (mot clé).  

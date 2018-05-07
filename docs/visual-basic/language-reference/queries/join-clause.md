@@ -1,11 +1,6 @@
 ---
 title: Join, clause (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.QueryJoinIn
 - vb.QueryJoin
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - Join statement [Visual Basic]
 - Join clause [Visual Basic]
 ms.assetid: 6dd37936-b27c-4e00-98ad-154b23f4de64
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2bb25c9dac8994e7f975539c1d036f0f0d9d239e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2186954ab6536988271629c4feba0a40563bfc3f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="join-clause-visual-basic"></a>Join, clause (Visual Basic)
 Combine deux collections en une collection unique. L’opération de jointure est basée sur les clés correspondantes et utilise le `Equals` opérateur.  
@@ -50,11 +42,11 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
  Facultatif. Un ou plus supplémentaires `Group Join` clauses pour davantage affiner la requête.  
   
  `key1` `Equals` `key2`  
- Requis. Identifie les clés pour les collections qui sont jointes. Vous devez utiliser le `Equals` pour comparer les clés des collections qui sont jointes. Vous pouvez combiner des conditions de jointure à l’aide de la `And` opérateur afin d’identifier plusieurs clés. `key1`doit être de la collection sur le côté gauche de la `Join` opérateur. `key2`doit être de la collection sur le côté droit de la `Join` opérateur.  
+ Obligatoire. Identifie les clés pour les collections qui sont jointes. Vous devez utiliser le `Equals` pour comparer les clés des collections qui sont jointes. Vous pouvez combiner des conditions de jointure à l’aide de la `And` opérateur afin d’identifier plusieurs clés. `key1` doit être de la collection sur le côté gauche de la `Join` opérateur. `key2` doit être de la collection sur le côté droit de la `Join` opérateur.  
   
  Les clés utilisées dans la condition de jointure peuvent être des expressions incluant plusieurs éléments de la collection. Toutefois, chaque expression clé peut contenir uniquement les éléments à partir de sa collection respective.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le `Join` clause combine deux collections en fonction des valeurs de clés correspondantes des collections qui sont jointes. La collection résultante peut contenir n’importe quelle combinaison de valeurs de la collection identifiée sur le côté gauche de la `Join` opérateur et la collection identifiée dans la `Join` clause. La requête retourne uniquement les résultats pour lesquels la condition spécifiée par la `Equals` opérateur est remplie. Cela équivaut à un `INNER JOIN` dans SQL.  
   
  Vous pouvez utiliser plusieurs `Join` clauses dans une requête pour joindre deux collections ou plus en une collection unique.  

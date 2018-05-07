@@ -1,22 +1,12 @@
 ---
 title: Synchronisation de threads (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 04f485d1-8333-4510-9e72-c334e7427e7e
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 643dbb6fdceb4e1cfd074d3a532787562dbfd03b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9922230e1c7f2bd30c575bd66387feb4850a298b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="thread-synchronization-visual-basic"></a>Synchronisation de threads (Visual Basic)
 Les sections suivantes décrivent les fonctionnalités et les classes qui peuvent être utilisées pour synchroniser l’accès aux ressources dans les applications multithread.  
@@ -38,7 +28,7 @@ Les sections suivantes décrivent les fonctionnalités et les classes qui peuven
 ## <a name="the-lock-and-synclock-keywords"></a>Les mots-clés lock et SyncLock  
  Visual Basic `SyncLock` instruction peut être utilisée pour garantir qu’un bloc de code s’exécute jusqu'à son achèvement sans interruption par d’autres threads. Pour cela, elle obtient un verrou d’exclusion mutuelle pour un objet donné pour la durée du bloc de code.  
   
- Une instruction `SyncLock` se voit attribuer un objet comme argument et est suivie par un bloc de code qui doit être exécuté par un seul thread à la fois. Exemple :  
+ Une instruction `SyncLock` se voit attribuer un objet comme argument et est suivie par un bloc de code qui doit être exécuté par un seul thread à la fois. Par exemple :  
   
 ```vb  
 Public Class TestThreading  
@@ -63,7 +53,7 @@ End Class
 -   <xref:System.Threading.Monitor>  
   
 ## <a name="monitors"></a>Analyses  
- Comme le mot clé `SyncLock`, les moniteurs empêchent l’exécution simultanée de blocs de code par plusieurs threads. La méthode <xref:System.Threading.Monitor.Enter%2A> permet à un seul thread de passer aux instructions suivantes ; tous les autres threads sont bloqués jusqu’à ce que le thread d’exécution appelle <xref:System.Threading.Monitor.Exit%2A>. Cela équivaut à utiliser le mot clé `SyncLock`. Exemple :  
+ Comme le mot clé `SyncLock`, les moniteurs empêchent l’exécution simultanée de blocs de code par plusieurs threads. La méthode <xref:System.Threading.Monitor.Enter%2A> permet à un seul thread de passer aux instructions suivantes ; tous les autres threads sont bloqués jusqu’à ce que le thread d’exécution appelle <xref:System.Threading.Monitor.Exit%2A>. Cela équivaut à utiliser le mot clé `SyncLock`. Par exemple :  
   
 ```vb  
 SyncLock x  

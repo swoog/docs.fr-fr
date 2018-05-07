@@ -1,12 +1,6 @@
 ---
 title: Function, instruction (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Function
 helpviewer_keywords:
@@ -34,14 +28,11 @@ helpviewer_keywords:
 - End keyword [Visual Basic], Function statements
 - Handles keyword [Visual Basic], Function statements
 ms.assetid: a4497077-0f46-4ede-a27f-9e8670df52b9
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 52e9210f9e715b6055e6ed199ef1aa4b919c6dd6
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: b4a0c33d6d466975ca5dde1bd20ad2e1a9f560e4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="function-statement-visual-basic"></a>Function, instruction (Visual Basic)
 Déclare le nom, paramètres et le code qui définissent une `Function` procédure.  
@@ -183,7 +174,7 @@ End Function
 ## <a name="defining-a-function"></a>Définition d’une fonction  
  Vous pouvez définir un `Function` procédure uniquement au niveau du module. Par conséquent, le contexte de déclaration pour une fonction doit être une classe, une structure, un module ou une interface et ne peut pas être un fichier source, un espace de noms, une procédure ou un bloc. Pour plus d’informations, consultez [Contextes de déclaration et niveaux d’accès par défaut](declaration-contexts-and-default-access-levels.md).  
   
- `Function`les procédures par défaut d’un accès public. Vous pouvez ajuster leurs niveaux d’accès avec les modificateurs d’accès.  
+ `Function` les procédures par défaut d’un accès public. Vous pouvez ajuster leurs niveaux d’accès avec les modificateurs d’accès.  
   
  A `Function` procédure peut déclarer le type de données de la valeur de retour de la procédure. Vous pouvez spécifier n’importe quel type de données ou le nom d’une énumération, une structure, une classe ou une interface. Si vous ne spécifiez pas le `returntype` , la procédure retourne `Object`.  
   

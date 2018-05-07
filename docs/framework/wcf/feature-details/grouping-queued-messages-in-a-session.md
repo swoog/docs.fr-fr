@@ -1,37 +1,23 @@
 ---
 title: Regroupement de messages mis en file d'attente dans une session
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - queues [WCF]. grouping messages
 ms.assetid: 63b23b36-261f-4c37-99a2-cc323cd72a1a
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: aba045456d61b5ad687f1030dca3c26b083cdb58
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 62aa269d138d436824d3c825de9f722490d3b5bd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="grouping-queued-messages-in-a-session"></a>Regroupement de messages mis en file d'attente dans une session
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] fournit une session qui vous permet de regrouper un ensemble de messages connexes à traiter par une application de réception unique. Les messages qui font partie d'une session doivent faire partie de la même transaction. Étant donné que tous les messages font partie de la même transaction, si un message n’est pas traité, la session entière est restaurée. Les sessions ont des comportements semblables en ce qui concerne les files d'attente de lettres mortes et les files d'attente de messages incohérents. La propriété Durée de vie (Time to Live ou TTL) définie sur une liaison mise en file d’attente configurée pour les sessions est appliquée à la session dans son ensemble. Si seulement quelques-uns des messages de la session sont envoyés avant l'expiration de la durée de vie, la session entière est placée dans la file d'attente de lettres mortes. De même, lorsque les messages d'une session ne parviennent pas à être envoyés à une application depuis la file d'attente de l'application, la session entière est placée dans la file d'attente de messages incohérents (si disponible).  
+Windows Communication Foundation (WCF) fournit une session qui vous permet de regrouper un ensemble de messages connexes à traiter par une application réceptrice unique. Les messages qui font partie d’une session doivent faire partie de la même transaction. Étant donné que tous les messages font partie de la même transaction, si un message n’est pas traité, la session entière est restaurée. Les sessions ont des comportements semblables en ce qui concerne les files d'attente de lettres mortes et les files d'attente de messages incohérents. La propriété Durée de vie (Time to Live ou TTL) définie sur une liaison mise en file d’attente configurée pour les sessions est appliquée à la session dans son ensemble. Si seulement quelques-uns des messages de la session sont envoyés avant l'expiration de la durée de vie, la session entière est placée dans la file d'attente de lettres mortes. De même, lorsque les messages d'une session ne parviennent pas à être envoyés à une application depuis la file d'attente de l'application, la session entière est placée dans la file d'attente de messages incohérents (si disponible).  
   
 ## <a name="message-grouping-example"></a>Exemple de regroupement de messages  
- Le regroupement de messages peut être utile lors de l'implémentation d'une application de traitement de commandes en tant que service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Par exemple, un client soumet à cette application une commande qui contient plusieurs éléments. Pour chaque élément, le client passe un appel au service, ce qui provoque l'envoi d'un message séparé. Il est possible que le serveur A reçoive le premier élément et que le serveur B reçoive le deuxième élément. Chaque fois qu'un élément est ajouté, le serveur qui traite cet élément doit rechercher la commande appropriée et lui ajouter l'élément, ce qui est peu efficace. Vous rencontrez également de telles inefficacités avec un seul serveur gérant toutes les demandes, parce que le serveur doit faire le suivi de toutes les commandes en cours de traitement et déterminer à quelle commande le nouvel élément appartient. Le regroupement de toutes les demandes pour une commande unique simplifie grandement l'implémentation d'une telle application. L'application cliente envoie tous les éléments d'une commande unique dans une session, donc lorsque le service traite la commande, il traite la session entière en une fois. \  
+ Où le regroupement de messages est utile par exemple, lors de l’implémentation d’une application de traitement des commandes en tant qu’un service WCF. Par exemple, un client soumet à cette application une commande qui contient plusieurs éléments. Pour chaque élément, le client passe un appel au service, ce qui provoque l'envoi d'un message séparé. Il est possible que le serveur A reçoive le premier élément et que le serveur B reçoive le deuxième élément. Chaque fois qu'un élément est ajouté, le serveur qui traite cet élément doit rechercher la commande appropriée et lui ajouter l'élément, ce qui est peu efficace. Vous rencontrez également de telles inefficacités avec un seul serveur gérant toutes les demandes, parce que le serveur doit faire le suivi de toutes les commandes en cours de traitement et déterminer à quelle commande le nouvel élément appartient. Le regroupement de toutes les demandes pour une commande unique simplifie grandement l'implémentation d'une telle application. L'application cliente envoie tous les éléments d'une commande unique dans une session, donc lorsque le service traite la commande, il traite la session entière en une fois. \  
   
 ## <a name="procedures"></a>Procédures  
   
@@ -75,16 +61,16 @@ ms.lasthandoff: 12/22/2017
   
 1.  Créez une étendue de transaction pour écrire dans la file d’attente transactionnelle.  
   
-2.  Créer le [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client à l’aide de la [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) outil.  
+2.  Créer le client WCF à l’aide de la [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) outil.  
   
 3.  Passez la commande.  
   
-4.  Fermez le client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+4.  Fermez le client WCF.  
   
 ## <a name="example"></a>Exemple  
   
 ### <a name="description"></a>Description  
- L'exemple suivant fournit le code pour le service `IProcessOrder` et pour un client qui utilise ce service. Il montre comment [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilise des sessions mises en file d'attente pour fournir le comportement de regroupement.  
+ L'exemple suivant fournit le code pour le service `IProcessOrder` et pour un client qui utilise ce service. Il montre comment WCF utilise les sessions en file d’attente pour fournir le comportement de regroupement.  
   
 ### <a name="code-for-the-service"></a>Code du service  
  [!code-csharp[S_Msmq_Session#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_session/cs/service.cs#1)]

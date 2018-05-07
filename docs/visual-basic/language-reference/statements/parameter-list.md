@@ -1,11 +1,6 @@
 ---
-title: "Liste de paramètres (Visual Basic)"
+title: Liste de paramètres (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, procedures
 - parameters [Visual Basic], Visual Basic
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - arguments [Visual Basic], Visual Basic
 - procedures [Visual Basic], parameter lists
 ms.assetid: 5d737319-0c34-4df9-a23d-188fc840becd
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2c7190b618aa98c91b826ca7c065660d3b19c31a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 147a2501219db9f1f1c10f9cf1a81aa395b5ec2b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="parameter-list-visual-basic"></a>Liste de paramètres (Visual Basic)
 Spécifie les paramètres de qu'une procédure attend lorsqu’elle est appelée. Plusieurs paramètres sont séparés par des virgules. Voici la syntaxe pour un paramètre.  
@@ -59,7 +51,7 @@ parametername[( )] [ As parametertype ] [ = defaultvalue ]
  `defaultvalue`  
  Requis pour `Optional` paramètres. Toute constante ou une expression constante qui correspond au type de données du paramètre. Si le type est `Object`, ou une classe, interface, tableau ou une structure, la valeur par défaut peut uniquement être `Nothing`.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Les paramètres sont placés entre parenthèses et séparés par des virgules. Un paramètre peut être déclaré avec n’importe quel type de données. Si vous ne spécifiez pas `parametertype`, la valeur par défaut `Object`.  
   
  Lorsque le code appelant appelle la procédure, il transmet une *argument* à chaque paramètre requis. Pour plus d’informations, consultez [les différences entre les paramètres et Arguments](../../../visual-basic/programming-guide/language-features/procedures/differences-between-parameters-and-arguments.md).  

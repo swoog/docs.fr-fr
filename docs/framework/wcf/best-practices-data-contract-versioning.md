@@ -1,37 +1,23 @@
 ---
 title: 'Meilleures pratiques : contrôle de version des contrats de données'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - data contracts
 - service contracts
 - best practices [WCF], data contract versioning
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
-caps.latest.revision: 24
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6ea139f6b854a299760df4c7cb8c315b58701ab8
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: a578235a0db0ba769cae0b2ade93edbfd72b5508
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="best-practices-data-contract-versioning"></a>Meilleures pratiques : contrôle de version des contrats de données
 Cette rubrique répertorie les méthodes conseillées pour créer des contrats de données qui peuvent évoluer facilement avec le temps. Pour plus d’informations sur les contrats de données, consultez les rubriques de [à l’aide de contrats de données](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
 ## <a name="note-on-schema-validation"></a>Note sur la validation de schéma  
- Lorsqu'il est question du contrôle de version des contrats de données, il est important de noter que le schéma de contrat de données exporté par [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] n'offre pas d'autre prise en charge du contrôle de version que de marquer les éléments par défaut comme facultatifs.  
+ En traitant les versions des contrats de données, il est important de noter que le schéma de contrat de données exporté par Windows Communication Foundation (WCF) ne dispose pas d’une prise en charge le contrôle de version, autre que le fait que les éléments sont marqués comme facultatifs par défaut.  
   
  Cela signifie que même le scénario le plus courant de contrôle de version, tel que l'ajout d'un nouveau membre de données, ne peut pas être implémenté d'une manière transparente par rapport à un schéma donné. Les versions plus récentes d'un contrat de données (avec un nouveau membre de données, par exemple) ne valident pas l'utilisation de l'ancien schéma.  
   

@@ -1,51 +1,37 @@
 ---
 title: Publication de métadonnées
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - meatadata [WCF], publishing
 ms.assetid: 3a56831a-cabc-45c0-bd02-12e2e9bd7313
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 031a80c52c194f300d7785f05e73eabeebb296b7
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 6e6c6d10eb0cd03ea2665f1787dba4e09528a141
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="publishing-metadata"></a>Publication de métadonnées
-Les services [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] publient les métadonnées à l'aide d'un ou de plusieurs points de terminaison. La publication de métadonnées de service permet d'accéder à celles-ci à l'aide de protocoles standardisés, tels que WS-MetadataExchange (MEX) et les requêtes HTTP/GET. Les points de terminaison de métadonnées sont semblables aux autres points de terminaison de service dans le sens où ils ont une adresse, une liaison et un contrat, et qu'ils peuvent être ajoutés à un hôte de service via la configuration ou du code impératif.  
+Les services Windows Communication Foundation (WCF) publient les métadonnées en publiant un ou plusieurs points de terminaison de métadonnées. La publication de métadonnées de service permet d'accéder à celles-ci à l'aide de protocoles standardisés, tels que WS-MetadataExchange (MEX) et les requêtes HTTP/GET. Les points de terminaison de métadonnées sont semblables aux autres points de terminaison de service dans le sens où ils ont une adresse, une liaison et un contrat, et qu'ils peuvent être ajoutés à un hôte de service via la configuration ou du code impératif.  
   
 ## <a name="publishing-metadata-endpoints"></a>Publication de points de terminaison de métadonnées  
- Pour publier des points de terminaison de métadonnées pour un service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], vous devez dans un premier temps ajouter le comportement de service <xref:System.ServiceModel.Description.ServiceMetadataBehavior> au service. L'ajout d'une instance <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> permet à votre service d'exposer des points de terminaison de métadonnées. Après avoir ajouté le comportement de service <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType>, vous pouvez ensuite exposer les points de terminaison de métadonnées qui prennent en charge le protocole MEX ou qui répondent aux requêtes HTTP/GET.  
+ Pour publier des points de terminaison de métadonnées pour un service WCF, vous devez d’abord ajouter le <xref:System.ServiceModel.Description.ServiceMetadataBehavior> comportement au service de service. L'ajout d'une instance <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> permet à votre service d'exposer des points de terminaison de métadonnées. Après avoir ajouté le comportement de service <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType>, vous pouvez ensuite exposer les points de terminaison de métadonnées qui prennent en charge le protocole MEX ou qui répondent aux requêtes HTTP/GET.  
   
  <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> utilise <xref:System.ServiceModel.Description.WsdlExporter> pour exporter les métadonnées de tous les points de terminaison de service de votre service. Pour plus d’informations sur l’exportation de métadonnées à partir d’un service, consultez [exportation et importation de métadonnées](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md).  
   
  <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> ajoute une instance <xref:System.ServiceModel.Description.ServiceMetadataExtension> comme extension à votre hôte de service. <xref:System.ServiceModel.Description.ServiceMetadataExtension?displayProperty=nameWithType> fournit l'implémentation pour les protocoles de publication de métadonnées. Vous pouvez également utiliser <xref:System.ServiceModel.Description.ServiceMetadataExtension?displayProperty=nameWithType> pour obtenir les métadonnées de service au moment de l'exécution en accédant à la propriété <xref:System.ServiceModel.Description.ServiceMetadataExtension.Metadata%2A?displayProperty=nameWithType>.  
   
 ### <a name="mex-metadata-endpoints"></a>Points de terminaison de métadonnées MEX  
- Pour ajouter des points de terminaison de métadonnées qui utilisent le protocole MEX, ajoutez des points de terminaison de service à votre hôte de service qui utilisent le contrat de service nommé `IMetadataExchange`. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] inclut une interface <xref:System.ServiceModel.Description.IMetadataExchange> avec ce nom de contrat de service que vous pouvez utiliser dans le cadre du modèle de programmation [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Les points de terminaison WS-MetadataExchange (ou points de terminaison MEX) peuvent utiliser l'une des quatre liaisons par défaut que les méthodes de fabrique statiques exposent sur la classe <xref:System.ServiceModel.Description.MetadataExchangeBindings> afin d'établir une correspondance avec les liaisons par défaut utilisées par les outils [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tels que Svcutil.exe. Vous pouvez également configurer des points de terminaison de métadonnées MEX à l'aide de votre propre liaison personnalisée.  
+ Pour ajouter des points de terminaison de métadonnées qui utilisent le protocole MEX, ajoutez des points de terminaison de service à votre hôte de service qui utilisent le contrat de service nommé `IMetadataExchange`. WCF inclut un <xref:System.ServiceModel.Description.IMetadataExchange> interface portant ce nom de contrat de service que vous pouvez utiliser en tant que partie du modèle de programmation WCF. Points de terminaison WS-MetadataExchange ou de points de terminaison MEX, utilisez une des liaisons par quatre défaut que les méthodes de fabrique statiques exposent sur la <xref:System.ServiceModel.Description.MetadataExchangeBindings> classe pour faire correspondre les liaisons par défaut utilisés par les outils WCF tels que Svcutil.exe. Vous pouvez également configurer des points de terminaison de métadonnées MEX à l’aide de votre propre liaison personnalisée.  
   
 ### <a name="http-get-metadata-endpoints"></a>Points de terminaison de métadonnées HTTP GET  
  Pour ajouter un point de terminaison de métadonnées à votre service qui répond aux requêtes HTTP/GET, affectez <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> à la propriété <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> sur `true`. Vous pouvez également configurer un point de terminaison de métadonnées qui utilise HTTPS en affectant <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> à la propriété <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> sur `true`.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Guide pratique pour publier les métadonnées d’un service à l’aide d’un fichier de configuration](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)  
- Indique comment configurer un service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] afin de publier les métadonnées et permettre ainsi aux clients de les récupérer à l'aide d'un échange WS-MetadataExchange ou d'une requête HTTP/GET en utilisant la chaîne de requête `?wsdl`.  
+ Montre comment configurer un service WCF pour publier les métadonnées afin que les clients peuvent récupérer les métadonnées à l’aide d’un échange WS-MetadataExchange ou une requête HTTP/GET en utilisant le `?wsdl` chaîne de requête.  
   
  [Guide pratique pour publier les métadonnées d’un service à l’aide de code](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)  
- Indique comment activer la publication de métadonnées pour un service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dans le code afin que les clients puissent les récupérer à l'aide d'un échange WS-MetadataExchange ou d'une requête HTTP/GET en utilisant la chaîne de requête `?wsdl`.  
+ Montre comment activer la publication de métadonnées pour un service WCF dans le code afin que les clients peuvent récupérer les métadonnées à l’aide d’un échange WS-MetadataExchange ou une requête HTTP/GET en utilisant le `?wsdl` chaîne de requête.  
   
 ## <a name="reference"></a>Référence  
  <xref:System.ServiceModel.Description.ServiceMetadataBehavior>  

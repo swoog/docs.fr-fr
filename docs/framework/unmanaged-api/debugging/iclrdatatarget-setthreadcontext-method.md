@@ -1,14 +1,6 @@
 ---
-title: "ICLRDataTarget::SetThreadContext, méthode"
-ms.custom: 
+title: ICLRDataTarget::SetThreadContext, méthode
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRDataTarget.SetThreadContext
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 103c8502-81fe-40d7-9c1e-9008d8fb19e1
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 02b77bbb721a44ff24734499011402f2b9165ef4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 73697fdd19f2492aabdc0d76e8c1a27c917c85f1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrdatatargetsetthreadcontext-method"></a>ICLRDataTarget::SetThreadContext, méthode
 Définit le contexte actuel du thread spécifié dans le processus cible. Cette méthode est appelée par les services d’accès données common language runtime (CLR).  
@@ -64,14 +52,14 @@ HRESULT SetThreadContext (
 ## <a name="remarks"></a>Notes  
  Cette méthode est implémentée par le writer de l'application de débogage.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** ClrData.idl, ClrData.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [ICLRDataTarget, interface](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

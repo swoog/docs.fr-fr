@@ -1,28 +1,16 @@
 ---
 title: x:FactoryMethod, directive
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - XAML. x:FactoryMethod directive [XAML Services]
 - FactoryMethod directive in XAML [XAML Services]
 - x:FactoryMethod directive [XAML Services]
 ms.assetid: 829bcbdf-5318-4afb-9a03-c310e0d2f23d
-caps.latest.revision: "8"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 58349c5440d0062c64346933e48b64de6c4c7b60
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 75225e624abdd3dc0862a04fae409da48b3f0d1e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xfactorymethod-directive"></a>x:FactoryMethod, directive
 Spécifie une méthode autre qu’un constructeur qu’un processeur XAML doit utiliser pour initialiser un objet après avoir résolu son type de stockage.  
@@ -61,11 +49,11 @@ Spécifie une méthode autre qu’un constructeur qu’un processeur XAML doit u
   
  La méthode de fabrique doit retourner une instance ne peut être assignée à l’objet correspondant. Méthodes de fabrique ne doivent jamais retourner null.  
   
- `x:Arguments`fonctionne sur un principe de meilleure correspondance pour les signatures des méthodes de fabrique. Mise en correspondance évalue d’abord le nombre de paramètres. S’il existe plusieurs correspondances possibles pour un nombre de paramètres, le type de paramètre est évaluée et la meilleure correspondance est déterminée. S’il reste une ambiguïté après cette phase d’évaluation, le comportement du processeur XAML est non défini.  
+ `x:Arguments` fonctionne sur un principe de meilleure correspondance pour les signatures des méthodes de fabrique. Mise en correspondance évalue d’abord le nombre de paramètres. S’il existe plusieurs correspondances possibles pour un nombre de paramètres, le type de paramètre est évaluée et la meilleure correspondance est déterminée. S’il reste une ambiguïté après cette phase d’évaluation, le comportement du processeur XAML est non défini.  
   
- Le `x:FactoryMethod` utilisation de l’élément n’est pas utilisation des éléments de propriété dans le sens classique, étant donné que le balisage de la directive ne référence pas de type de l’élément objet contenant. Il est probable que l’utilisation d’élément est moins courant que l’utilisation d’attributs. `x:Arguments`(utilisation d’attribut ou élément) peut être utilisée avec `x:FactoryMethod` utilisation de l’élément, mais ce n’est pas affiché spécifiquement dans les sections d’utilisation.  
+ Le `x:FactoryMethod` utilisation de l’élément n’est pas utilisation des éléments de propriété dans le sens classique, étant donné que le balisage de la directive ne référence pas de type de l’élément objet contenant. Il est probable que l’utilisation d’élément est moins courant que l’utilisation d’attributs. `x:Arguments` (utilisation d’attribut ou élément) peut être utilisée avec `x:FactoryMethod` utilisation de l’élément, mais ce n’est pas affiché spécifiquement dans les sections d’utilisation.  
   
- `x:FactoryMethod`comme un élément doit précéder tous les autres éléments de propriété, doit précéder tout `x:Arguments` également fourni en tant qu’éléments et doit précéder tout contenu/interne texte/texte d’initialisation.  
+ `x:FactoryMethod` comme un élément doit précéder tous les autres éléments de propriété, doit précéder tout `x:Arguments` également fourni en tant qu’éléments et doit précéder tout contenu/interne texte/texte d’initialisation.  
   
 ## <a name="see-also"></a>Voir aussi  
  [x:Arguments (directive)](../../../docs/framework/xaml-services/x-arguments-directive.md)

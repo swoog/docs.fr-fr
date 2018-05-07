@@ -1,24 +1,15 @@
 ---
 title: '&lt;inclure&gt; (Visual Basic)'
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - include XML tag
 - <include> XML tag
 ms.assetid: ba8e9173-82cd-460b-8938-a075a2dfb36d
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 22eebaa8da8ef082e132cfdf8cb68498bfe16d73
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 65bc0439696612cd8331a9c0718efcfee83af574
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltincludegt-visual-basic"></a>&lt;inclure&gt; (Visual Basic)
 Fait référence à un autre fichier qui décrit les types et membres dans votre code source.  
@@ -37,12 +28,12 @@ Fait référence à un autre fichier qui décrit les types et membres dans votre
  Obligatoire. Chemin des balises contenues dans `filename` qui mène à la balise `name`. Placez le chemin d’accès entre guillemets doubles ( » «).  
   
  `name`  
- Obligatoire. Le spécificateur de nom dans la balise qui précède les commentaires. `Name`aura un `id`.  
+ Obligatoire. Le spécificateur de nom dans la balise qui précède les commentaires. `Name` aura un `id`.  
   
  `id`  
  Obligatoire. ID de la balise qui précède les commentaires. Mettez l’ID entre guillemets simples (' ').  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Utilisez le `<include>` balise pour faire référence à des commentaires dans un autre fichier qui décrivent les types et membres dans votre code source. Il s’agit d’une solution alternative au placement direct des commentaires de la documentation dans votre fichier de code source.  
   
  Le `<include>` balise utilise la recommandation du W3C XML Path Language (XPath) Version 1.0. Plus d’informations sur les façons de personnaliser votre `<include>` utilisation est disponible à l’adresse http://www.w3.org/TR/xpath.  

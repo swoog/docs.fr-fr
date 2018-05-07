@@ -2,10 +2,6 @@
 title: Get, fonction (référence des API non managées)
 description: La fonction Get récupère la valeur de propriété spécifiée.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - Get
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 69312030689ab1b87e3aadd040395f06e1c94ac8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2f837a526879f80177bc9979e1d7671edfcd8d4f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="get-function"></a>Get, fonction
 Récupère la valeur de propriété spécifiée si elle existe.
@@ -59,13 +52,13 @@ HRESULT Get (
 `wszName`  
 [in] Le nom de la propriété.
 
-`lFlags`[in] Réservé. Ce paramètre doit être 0.
+`lFlags` [in] Réservé. Ce paramètre doit être 0.
 
-`pVal`[out] Si la fonction réussit, contient la valeur de la `wszName` propriété. Le `pval` argument reçoit le type correct et la valeur du qualificateur.
+`pVal` [out] Si la fonction réussit, contient la valeur de la `wszName` propriété. Le `pval` argument reçoit le type correct et la valeur du qualificateur.
 
-`pvtType`[out] Si la fonction réussit, contient un [constante de type CIM](https://msdn.microsoft.com/library/aa386309(v=vs.85).aspx) qui indique le type de propriété. Sa valeur peut également être `null`. 
+`pvtType` [out] Si la fonction réussit, contient un [constante de type CIM](https://msdn.microsoft.com/library/aa386309(v=vs.85).aspx) qui indique le type de propriété. Sa valeur peut également être `null`. 
 
-`plFlavor`[out] Si la fonction est retournée avec succès, reçoit des informations sur l’origine de la propriété. Sa valeur peut être `null`, ou l’une des constantes WBEM_FLAVOR_TYPE suivantes définies dans le *WbemCli.h* fichier d’en-tête : 
+`plFlavor` [out] Si la fonction est retournée avec succès, reçoit des informations sur l’origine de la propriété. Sa valeur peut être `null`, ou l’une des constantes WBEM_FLAVOR_TYPE suivantes définies dans le *WbemCli.h* fichier d’en-tête : 
 
 |Constante  |Value  |Description  |
 |---------|---------|---------|
@@ -93,12 +86,12 @@ Le `Get` fonction peut également renvoyer les propriétés système.
 
 Le `pVal` argument reçoit le type correct et la valeur pour le qualificateur et le modèle COM [VariantInit](https://msdn.microsoft.com/library/ms221402(v=vs.85).aspx) (fonction)
 
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** WMINet_Utils.idl  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versions du .NET framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
 [WMI et les compteurs de Performance (référence des API non managées)](index.md)

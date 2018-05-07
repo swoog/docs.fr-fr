@@ -1,13 +1,6 @@
 ---
 title: "Comment : utiliser la vérification de l'orthographe avec un menu contextuel"
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - reenabling spell checking in a text box [WPF]
 - spell checking with a context menu [WPF]
 ms.assetid: 61f69a20-2ff3-4056-9060-e32f4483ec5e
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8a85426dc526e1e8560f494bcde5247fc394f7bc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 966e3adbcb57c30a55d606f6d6b8b51523ee30ed
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-spell-checking-with-a-context-menu"></a>Comment : utiliser la vérification de l'orthographe avec un menu contextuel
 Par défaut, lorsque vous activez la vérification orthographique dans un contrôle d’édition, tels que <xref:System.Windows.Controls.TextBox> ou <xref:System.Windows.Controls.RichTextBox>, vous obtenez les options de vérification orthographique dans le menu contextuel. Par exemple, les utilisateurs le droit d’un mot mal orthographié, ils obtiennent un ensemble de suggestions orthographiques ou l’option **ignorer tout**. Toutefois, lorsque vous remplacez le menu de contexte par défaut avec votre propre menu contextuel personnalisé, cette fonctionnalité n’est perdue, et vous devez écrire du code pour réactiver la fonctionnalité de vérification orthographique dans le menu contextuel. L’exemple suivant montre comment activer cette fonctionnalité sur un <xref:System.Windows.Controls.TextBox>.  

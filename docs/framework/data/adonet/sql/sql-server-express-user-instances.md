@@ -1,27 +1,15 @@
 ---
 title: Instances utilisateur SQL Server Express
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
-caps.latest.revision: "5"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 4b8b795454ab038b9e992c5e1187a0c4dcb46c76
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 0af929de17a29d497ce6cf6c8cb055d416ab8761
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sql-server-express-user-instances"></a>Instances utilisateur SQL Server Express
 Microsoft SQL Server Express Edition (SQL Server Express) prend en charge une nouvelle fonctionnalité, l'instance utilisateur, disponible uniquement avec le fournisseur de données .NET Framework pour SQL Server (`SqlClient`). Une instance utilisateur est une instance séparée du moteur de base de données SQL Server Express qui est générée par une instance parente. Les instances utilisateur permettent aux utilisateurs qui ne sont pas des administrateurs système sur leur ordinateur local de s'attacher et de se connecter aux bases de données SQL Server Express. Chaque instance s'exécute dans le contexte de sécurité de l'utilisateur individuel, sur la base d'une instance par utilisateur.  
@@ -71,7 +59,7 @@ Initial Catalog=InstanceDB;
 > [!NOTE]
 >  Vous pouvez également utiliser le <xref:System.Data.SqlClient.SqlConnectionStringBuilder> <xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A> et <xref:System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A> propriétés pour générer une chaîne de connexion au moment de l’exécution.  
   
-### <a name="using-the-124datadirectory124-substitution-string"></a>À l’aide de le &#124; DataDirectory &#124; Chaîne de substitution  
+### <a name="using-the-124datadirectory124-substitution-string"></a>À l’aide de la &#124;DataDirectory&#124; chaîne de Substitution  
  `AttachDbFileName` a été étendu dans ADO.NET 2.0 avec l'introduction de la chaîne de substitution `|DataDirectory|` (dans les symboles de barre verticale). `DataDirectory` est utilisé conjointement à `AttachDbFileName` pour indiquer un chemin d'accès relatif à un fichier de données, ce qui permet aux développeurs de créer des chaînes de connexion basées sur un chemin d'accès relatif à la source de données au lieu de devoir spécifier un chemin d'accès complet.  
   
  L'emplacement physique que désigne `DataDirectory` varie en fonction du type d'application. Dans cet exemple, le fichier Northwind.mdf à joindre se trouve dans le dossier \app_data de l'application.  

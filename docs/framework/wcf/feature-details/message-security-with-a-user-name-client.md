@@ -1,30 +1,20 @@
 ---
-title: "Sécurité de message avec un client de type Nom d'utilisateur"
-ms.custom: 
+title: Sécurité de message avec un client de type Nom d'utilisateur
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 36335cb9-76b8-4443-92c7-44f081eabb21
-caps.latest.revision: "15"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: dfda34c6bf165ebcecfd6d9a3710e785586d6cb1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7bda1bc18e2b5af1365c799c6f2be9d8d220e9ed
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-security-with-a-user-name-client"></a>Sécurité de message avec un client de type Nom d'utilisateur
-L'illustration suivante présente un service [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] et le client sécurisé à l'aide de la sécurité au niveau du message. Le service est authentifié à l'aide d'un certificat X.509. Le client s'authentifie à l'aide d'un nom d'utilisateur et d'un mot de passe.  
+L’illustration suivante montre un service Windows Communication Foundation (WCF) et un client sécurisé à l’aide de la sécurité au niveau du message. Le service est authentifié à l'aide d'un certificat X.509. Le client s'authentifie à l'aide d'un nom d'utilisateur et d'un mot de passe.  
   
  Pour un exemple d’application, consultez [nom d’utilisateur de sécurité de Message](../../../../docs/framework/wcf/samples/message-security-user-name.md).  
   
@@ -33,7 +23,7 @@ L'illustration suivante présente un service [!INCLUDE[indigo1](../../../../incl
 |Caractéristique|Description|  
 |--------------------|-----------------|  
 |Mode de sécurité|Message|  
-|Interopérabilité|[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] uniquement|  
+|Interopérabilité|Windows Communication Foundation (WCF) uniquement|  
 |Authentification (serveur)|La négociation initiale requiert l'authentification du serveur|  
 |Authentification (client)|Nom d'utilisateur/mot de passe|  
 |Intégrité|Oui, à l'aide du contexte de sécurité partagé|  

@@ -1,14 +1,6 @@
 ---
 title: COR_IL_MAP, structure
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - COR_IL_MAP
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 534ebc17-963d-4b26-8375-8cd940281db3
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2e2772833d75ced2209896ca37cf6cf37fb965f1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9676730a4f11ed77996b7a4aab4e538aba9b53c4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="corilmap-structure"></a>COR_IL_MAP, structure
 Spécifie des modifications dans le décalage relatif d'une fonction.  
@@ -53,7 +41,7 @@ typedef struct _COR_IL_MAP {
 |------------|-----------------|  
 |`oldOffset`|L’ancien Microsoft offset intermediate language (MSIL) par rapport au début de la fonction.|  
 |`newOffset`|Nouvel offset MSIL par rapport au début de la fonction.|  
-|`fAccurate`|`true`Si le mappage est avéré précis ; dans le cas contraire, `false`.|  
+|`fAccurate`|`true` Si le mappage est avéré précis ; dans le cas contraire, `false`.|  
   
 ## <a name="remarks"></a>Notes  
  Le format de la carte est le suivant : le débogueur suppose que `oldOffset` fait référence à un offset MSIL dans le code MSIL non modifié d’origine. Le `newOffset` paramètre fait référence à l’offset MSIL correspondant dans le nouveau code instrumenté.  
@@ -92,14 +80,14 @@ typedef struct _COR_IL_MAP {
   
 -   Un nouvel offset de 20 ou supérieur sera mappé à l’ancien offset 9.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorProf.idl  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [Structures de débogage](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  

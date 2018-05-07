@@ -1,12 +1,6 @@
 ---
-title: "Caractéristiques d'éléments déclarés (Visual Basic)"
-ms.custom: 
+title: Caractéristiques d'éléments déclarés (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - declared elements [Visual Basic], lifetime
 - access levels, declared elements
@@ -19,14 +13,11 @@ helpviewer_keywords:
 - data types [Visual Basic], declared elements
 - declared elements [Visual Basic], visibility
 ms.assetid: 1bc40fb8-b67c-4428-90a4-76b630ae2583
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 26ee27d3a1d085c6ab45ae850dbdac700aa208a9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 26c9ec247a0b848d46df063bc7b85ceec30d81c3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="declared-element-characteristics-visual-basic"></a>Caractéristiques d'éléments déclarés (Visual Basic)
 A *caractéristique* d’un élément déclaré est un aspect de cet élément qui détermine comment le code peut interagir avec lui. Chaque élément déclaré a un ou plusieurs des caractéristiques suivantes associées :  
@@ -56,8 +47,8 @@ A *caractéristique* d’un élément déclaré est un aspect de cet élément q
 |Opérateur|Oui|Non|Oui|Oui|  
 |Interface|Non|Non|Oui|Oui|  
 |Classe|Non|Non|Oui|Oui|  
-|Événement|Non|Non|Oui|Oui|  
-|Délégué|Non|Non|Oui|Oui|  
+|événement|Non|Non|Oui|Oui|  
+|délégué|Non|Non|Oui|Oui|  
   
  <sup>1</sup> étendue est parfois appelée *visibilité*.  
   

@@ -1,17 +1,12 @@
 ---
 title: Fonctionnalités de l’environnement de développement F#
 description: 'Découvrez les fonctionnalités de Visual Studio 2012 sont pris en charge en F #.'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: dd5c3165a73bd4f821a26d183094829dab7eaeae
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 0ea2bfa439692045647efa29b2a051eb11f9f1dc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="visual-f-development-environment-features"></a>Fonctionnalités de l’environnement de développement Visual F#
 
@@ -26,7 +21,7 @@ Le tableau suivant résume les modèles qui sont disponibles pour une utilisatio
 |Type de modèle|Description|Modèles pris en charge|
 |-------------|-----------|-------------------|
 |Modèles de projet|Types de projets disponibles dans le **nouveau projet** boîte de dialogue.|<ul><li>Application F #<br /></li><li>Bibliothèque F #<br /></li><li>Didacticiel F #<br /></li><li>Bibliothèque de F # Portable<br /></li><ul/>|
-|Modèles d’élément|Types de fichiers disponibles dans le **ajouter un nouvel élément** boîte de dialogue.|<ul><li>Fichier source F # (.fs)<br /></li><li>Script F # (.fsx)<br /></li><li>Fichier de signature F # (.fsi)<br /></li><li>Fichier de configuration (.config)<br /></li><li>Connexion de base de données SQL (fournisseur de type LINQ to SQL)<br /></li><li>Connexion de base de données SQL (fournisseur LINQ to Entities type)<br /></li><li>Connexion au Service OData (fournisseur de type LINQ)<br /></li><li>Connexion au Service WSDL (fournisseur de type)<br /></li><li>Fichier XML (.xml)<br /></li><li>Fichier texte<br /></li><ul/>|
+|Modèles d'élément|Types de fichiers disponibles dans le **ajouter un nouvel élément** boîte de dialogue.|<ul><li>Fichier source F # (.fs)<br /></li><li>Script F # (.fsx)<br /></li><li>Fichier de signature F # (.fsi)<br /></li><li>Fichier de configuration (.config)<br /></li><li>Connexion de base de données SQL (fournisseur de type LINQ to SQL)<br /></li><li>Connexion de base de données SQL (fournisseur LINQ to Entities type)<br /></li><li>Connexion au Service OData (fournisseur de type LINQ)<br /></li><li>Connexion au Service WSDL (fournisseur de type)<br /></li><li>Fichier XML (.xml)<br /></li><li>Fichier texte<br /></li><ul/>|
 Pour créer une application qui peut fonctionner comme un exécutable autonome, choisissez le type de projet Application F #. Pour créer une bibliothèque (autrement dit, un assembly managé ou. Fichier DLL) pour une utilisation sur la plateforme de bureau Windows, choisissez la bibliothèque F #. Pour créer une bibliothèque portable qui peut être utilisée sur n’importe quelle plateforme prise en charge, choisissez la bibliothèque F # Portable. Les projets de bibliothèque F # Portable référencent une version de FSharp.Core.dll est appropriée créer une bibliothèque F # qui peut être utilisée avec les applications qui s’exécutent sur des plateformes, telles que les applications du Windows Store, le .NET Framework 4.5, Xamarin.iOS et Xamarin.Android.
 
 Pour plus d’informations sur les modèles d’élément pour accéder aux données, consultez [fournisseurs de Type](../tutorials/type-providers/index.md).

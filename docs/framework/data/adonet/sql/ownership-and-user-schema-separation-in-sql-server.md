@@ -1,24 +1,12 @@
 ---
-title: "Propriété et séparation des schémas utilisateur dans SQL Server"
-ms.custom: 
+title: Propriété et séparation des schémas utilisateur dans SQL Server
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 242830c1-31b5-4427-828c-cc22ff339f30
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 8f78cd816be7a4c68853a25f89859bbe2452bb9c
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 69d0c0dee6141b80908c8cdc36dfe21ff318f423
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ownership-and-user-schema-separation-in-sql-server"></a>Propriété et séparation des schémas utilisateur dans SQL Server
 Il existe un concept essentiel relative à la sécurité de SQL Server, selon lequel les propriétaires d'objets disposent d'autorisations irrévocables pour les administrer. Vous ne pouvez pas supprimer les privilèges d'un propriétaire d'objets et vous ne pouvez pas supprimer des utilisateurs d'une base de données dans laquelle se trouvent des objets qui leur appartiennent.  

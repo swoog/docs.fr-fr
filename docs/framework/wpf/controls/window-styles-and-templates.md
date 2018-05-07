@@ -1,13 +1,6 @@
 ---
-title: "Styles et modèles Window"
-ms.custom: 
+title: Styles et modèles Window
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - parts [WPF], Window
 - templates [WPF], Window
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - Window [WPF], styles and templates
 - states [WPF], Window
 ms.assetid: 2dfdf025-347b-4342-bf28-95206c273f35
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e1e623d9150f4848127cf662f583873e8e85f022
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e30347393fe8b2593ce4941f4c396de25d1b7320
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="window-styles-and-templates"></a>Styles et modèles Window
 Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Window> contrôle. Vous pouvez modifier la valeur par défaut <xref:System.Windows.Controls.ControlTemplate> pour donner une apparence unique au contrôle. Pour plus d’informations, consultez [Personnalisation de l’apparence d’un contrôle existant en créant un ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  

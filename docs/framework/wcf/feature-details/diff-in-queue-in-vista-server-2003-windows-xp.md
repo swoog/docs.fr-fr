@@ -1,31 +1,17 @@
 ---
-title: "Différences entre les fonctionnalités de mise en file d’attente dans Windows Vista, Windows Server 2003 et Windows XP"
-ms.custom: 
+title: Différences entre les fonctionnalités de mise en file d’attente dans Windows Vista, Windows Server 2003 et Windows XP
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - queues [WCF], differences in operating systems
 ms.assetid: aa809d93-d0a3-4ae6-a726-d015cca37c04
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8f30ad7819a570f0149868502261f986f4dd8c0b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d956a72c9413384176c10effefc0307b09744c4c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="differences-in-queuing-features-in-windows-vista-windows-server-2003-and-windows-xp"></a>Différences entre les fonctionnalités de mise en file d’attente dans Windows Vista, Windows Server 2003 et Windows XP
-Cette rubrique liste les différences des files d'attente [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] dans [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] et [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+Cette rubrique résume les différences dans la fonctionnalité de files d’attente de Windows Communication Foundation (WCF) entre [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], et [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
 ## <a name="application-specific-dead-letter-queue"></a>File d'attente de lettres mortes spécifique à l'application  
  Les messages mis en file d'attente peuvent rester indéfiniment dans la file d'attente si l'application réceptrice ne les lit pas en temps voulu. Ce comportement n'est pas recommandé si les messages sont dépendants de l'heure. Les messages dépendants de l'heure ont une propriété `TimeToLive` affectée dans la liaison mise en file d'attente. Cette propriété indique la durée de vie possible des messages dans la file d'attente avant qu'ils n'expirent. Les messages ayant expiré sont envoyés dans une file d'attente spéciale appelée file d'attente de lettres mortes. Un message peut également finir dans une file d'attente de lettres mortes pour d'autres raisons, telles que le dépassement d'un quota de file d'attente ou un échec d'authentification.  
@@ -43,7 +29,7 @@ Cette rubrique liste les différences des files d'attente [!INCLUDE[indigo1](../
   
 -   MSMQ prend en charge l'accusé de réception négatif dans [!INCLUDE[wv](../../../../includes/wv-md.md)], alors que [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] et [!INCLUDE[wxp](../../../../includes/wxp-md.md)] ne le prenne pas en charge. Un accusé de réception négatif provenant du gestionnaire de files d'attente de destination provoque le placement du message rejeté dans la file d'attente de lettres mortes par le gestionnaire de files d'attente source. Ainsi, `ReceiveErrorHandling.Reject` n'est pas autorisé avec [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] et [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
--   Dans [!INCLUDE[wv](../../../../includes/wv-md.md)], MSMQ prend en charge la propriété d'un message qui compte le nombre de tentatives de remise du message. Cette propriété du nombre d'abandons n'est pas disponible sur [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ni sur [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] conserve le nombre d'abandons en mémoire, si bien qu'il est possible que cette propriété ne contienne pas une valeur exacte lorsque le même message est lu par plusieurs services [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dans une batterie de serveurs Web.  
+-   Dans [!INCLUDE[wv](../../../../includes/wv-md.md)], MSMQ prend en charge la propriété d'un message qui compte le nombre de tentatives de remise du message. Cette propriété du nombre d'abandons n'est pas disponible sur [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ni sur [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. WCF gère le nombre d’abandons en mémoire, il est donc possible que cette propriété ne peut pas contenir une valeur exacte lorsque le même message est lu par plusieurs services WCF dans une batterie de serveurs Web.  
   
 ## <a name="remote-transactional-read"></a>Lecture transactionnelle distante  
  MSMQ sur [!INCLUDE[wv](../../../../includes/wv-md.md)] prend en charge les lectures transactionnelles distantes. Cette prise en charge permet à une application qui lit à partir d'une file d'attente d'être hébergée sur un ordinateur différent de l'ordinateur sur lequel la file d'attente est hébergée. Cela garantit la possibilité d'avoir une batterie de services qui lit à partir d'une file d'attente centrale, ce qui augmente le débit total du système. Cela garantit également que, si une défaillance se produit lors de la lecture et du traitement du message, la transaction est restaurée et le message est conservé dans la file d’attente afin d’y être traité ultérieurement.  

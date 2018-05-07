@@ -1,28 +1,14 @@
 ---
 title: Tracing and Message Logging
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Tracing and logging
 ms.assetid: a4f39bfc-3c5e-4d51-a312-71c5c3ce0afd
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: cae7d806ce68f6804f97195c9bf2571328af6dff
-ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
-ms.translationtype: MT
+ms.openlocfilehash: 5f0cca66798a9d84b01c9fde1147c28f14a953db
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tracing-and-message-logging"></a>Tracing and Message Logging
 Cet exemple illustre comment activer l'enregistrement des suivis et des messages. Les suivis résultants et les journaux de messages sont affichés à l’aide de la [outil Service Trace Viewer (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Cet exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -31,7 +17,7 @@ Cet exemple illustre comment activer l'enregistrement des suivis et des messages
 >  La procédure d'installation ainsi que les instructions de génération relatives à cet exemple figurent à la fin de cette rubrique.  
   
 ## <a name="tracing"></a>Traçage  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] utilise le mécanisme de suivi défini dans l'espace de noms <xref:System.Diagnostics>. Dans ce modèle de suivi, les données de suivi sont générées par les sources de suivi implémentées par les applications. Chacune de ces sources est identifiée à l'aide d'un nom. Les consommateurs de suivis créent des écouteurs pour les sources de suivi à partir desquelles ils souhaitent récupérer des informations. Pour recevoir des données de suivi d'une source, vous devez créer un écouteur pour cette source. Dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], l'une des solutions pour ce faire consiste à ajouter le code suivant au fichier de configuration du service ou du client en définissant la source de suivi du modèle de service `switchValue` :  
+ Windows Communication Foundation (WCF) utilise le mécanisme de suivi définis dans le <xref:System.Diagnostics> espace de noms. Dans ce modèle de suivi, les données de suivi sont générées par les sources de suivi implémentées par les applications. Chacune de ces sources est identifiée à l'aide d'un nom. Les consommateurs de suivis créent des écouteurs pour les sources de suivi à partir desquelles ils souhaitent récupérer des informations. Pour recevoir des données de suivi d'une source, vous devez créer un écouteur pour cette source. Dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], l'une des solutions pour ce faire consiste à ajouter le code suivant au fichier de configuration du service ou du client en définissant la source de suivi du modèle de service `switchValue` :  
   
 ```xml  
 <system.diagnostics>  
@@ -141,7 +127,7 @@ Cet exemple illustre comment activer l'enregistrement des suivis et des messages
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à la page [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les exemples [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\TracingAndLogging`  
   

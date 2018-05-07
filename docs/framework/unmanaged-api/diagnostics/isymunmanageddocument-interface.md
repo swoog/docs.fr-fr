@@ -1,14 +1,6 @@
 ---
 title: ISymUnmanagedDocument, interface
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ISymUnmanagedDocument
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 5c26b366-6e81-467c-9dd0-02dd26fee0a3
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2e176679b4fdb4d0a2c5c4fbcbc09403e45f1ad1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f75e517890275b90523dc42cdac3a83d871beac7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="isymunmanageddocument-interface"></a>ISymUnmanagedDocument, interface
 Représente un document référencé par un magasin de symboles. Un document est défini par un localisateur de ressource uniforme (URL) et un GUID de type de document. Vous pouvez localiser le document, quelle que soit la façon dont elle est stockée à l’aide de l’URL et le GUID de type de document. Vous pouvez stocker la source de document dans le magasin de symboles et en la récupérant via cette interface.  

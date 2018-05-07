@@ -1,13 +1,7 @@
 ---
 title: Remplacement d'un objet Principal
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,18 +10,13 @@ helpviewer_keywords:
 - security [.NET Framework], replacing principal objects
 - security [.NET Framework], principals
 ms.assetid: c323687e-b196-487b-beba-f38f9b3f961b
-caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: c53064ae12889df09b5259fbb7c8159cfdcd07aa
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 94391471fecd92aeadec4da39cdd5b6f80bb6949
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="replacing-a-principal-object"></a>Remplacement d'un objet Principal
 Les applications qui fournissent des services d’authentification doivent pouvoir remplacer l’objet **Principal** (<xref:System.Security.Principal.IPrincipal>) d’un thread donné. En outre, le système de sécurité doit permettre de protéger la possibilité de remplacer les objets **Principal** si un **Principal** malveillant et incorrect attaché compromet la sécurité de votre application en simulant une fausse identité ou un faux rôle. Par conséquent, les applications qui requièrent la possibilité de remplacer **Principal** objets doivent être accordées les <xref:System.Security.Permissions.SecurityPermission?displayProperty=nameWithType> objet pour le contrôle de l’entité. (Notez que cette autorisation n’est pas obligatoire pour effectuer des vérifications de sécurité basée sur les rôles ou créer des objets **Principal** .)  

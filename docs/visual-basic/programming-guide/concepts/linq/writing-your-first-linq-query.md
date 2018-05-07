@@ -1,34 +1,24 @@
 ---
-title: "Écriture de votre première requête LINQ (Visual Basic)"
-ms.custom: 
+title: Écriture de votre première requête LINQ (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], writing
 - LINQ queries [Visual Basic]
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
-caps.latest.revision: "56"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c16bb28189d5525654328da2dc80d868bbe61bf5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f426aac5358837563081d2bf9783f6d4fe04d853
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>Écriture de votre première requête LINQ (Visual Basic)
 Une *requête* est une expression qui récupère des données d’une source de données. Les requêtes sont exprimées dans un langage de requête dédié. Au fil du temps, différents langages ont été développés pour différents types de sources de données, par exemple, SQL pour les bases de données relationnelles et XQuery pour XML. Il est donc nécessaire pour le développeur d’applications à apprendre un nouveau langage de requête pour chaque type de source de données ou format de données qui est pris en charge.  
   
- [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]simplifie la situation en proposant un modèle cohérent pour travailler avec des données entre les différents types de sources de données et les formats. Dans une requête [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], vous travaillez toujours avec des objets. Vous utilisez les mêmes modèles de codage de base pour interroger et transformer des données dans des documents XML, bases de données SQL, groupes de données ADO.NET et entités, les collections du .NET Framework et n’importe quel autre source ou le format pour lequel un [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] fournisseur n’est disponible. Ce document décrit les trois phases de la création et l’utilisation de base [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] requêtes.  
+ [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] simplifie la situation en proposant un modèle cohérent pour travailler avec des données entre les différents types de sources de données et les formats. Dans une requête [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], vous travaillez toujours avec des objets. Vous utilisez les mêmes modèles de codage de base pour interroger et transformer des données dans des documents XML, bases de données SQL, groupes de données ADO.NET et entités, les collections du .NET Framework et n’importe quel autre source ou le format pour lequel un [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] fournisseur n’est disponible. Ce document décrit les trois phases de la création et l’utilisation de base [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] requêtes.  
   
 ## <a name="three-stages-of-a-query-operation"></a>Trois phases d’une opération de requête  
- [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]opérations de requête se composent de trois actions :  
+ [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] opérations de requête se composent de trois actions :  
   
 1.  Obtenir la source de données ou les sources.  
   

@@ -1,24 +1,12 @@
 ---
 title: Meilleures pratiques pour les sessions fiables
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b94f6e01-8070-40b6-aac7-a2cb7b4cb4f2
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c022db62103826aa89e9035fd36c050d1f7c0f84
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1d9671e7e3124d535b66de8cd8468f76dcb32b10
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="best-practices-for-reliable-sessions"></a>Meilleures pratiques pour les sessions fiables
 
@@ -26,7 +14,7 @@ Cette rubrique décrit les meilleures pratiques des sessions fiables.
 
 ## <a name="setting-maxtransferwindowsize"></a>Définition de MaxTransferWindowSize
 
-Les sessions fiables dans [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] utilisent une fenêtre de transfert pour contenir des messages sur le client et sur le service. La propriété configurable <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.MaxTransferWindowSize%2A> indique combien de messages la fenêtre de transfert peut contenir.
+Les sessions fiables dans Windows Communication Foundation (WCF) utilisent une fenêtre de transfert pour stocker des messages sur le client et le service. La propriété configurable <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.MaxTransferWindowSize%2A> indique combien de messages la fenêtre de transfert peut contenir.
 
 Sur l’expéditeur, cela indique combien de messages la fenêtre de transfert peut contenir en attendant des accusés de réception ; pour le récepteur, il indique le nombre de messages en mémoire tampon pour le service.
 
@@ -56,7 +44,7 @@ Nous vous recommandons d’utiliser le même `MaxTransferWindowSize` sur l’exp
 
 *Contrôle de flux* est un mécanisme qui garantit que l’expéditeur et récepteur au même rythme entre eux, autrement dit, les messages sont consommés et traités aussi rapidement qu’ils sont générés. La taille de la fenêtre de transfert sur le client et sur le service garantit que l’expéditeur et le récepteur respectent une fenêtre de synchronisation raisonnable.
 
-Il est vivement recommandé de définir la propriété <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.FlowControlEnabled%2A> à `true` lorsque vous utilisez une session fiable entre un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client et un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service.
+Il est vivement recommandé de définir la propriété <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.FlowControlEnabled%2A> à `true` lorsque vous utilisez une session fiable entre un client WCF et d’un service WCF.
 
 ## <a name="setting-maxpendingchannels"></a>Définition de MaxPendingChannels
 

@@ -1,22 +1,12 @@
 ---
-title: "Persistance d’un objet dans Visual Studio (Visual Basic)"
-ms.custom: 
+title: Persistance d’un objet dans Visual Studio (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
 ms.assetid: f1d0b562-e349-4dce-ab5f-c05108467030
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 9a7abe74b76b2b7d0b4b2d45894e2cd4940f989a
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 2523aefc90e22fe79f22e90d8da68c35c8dd24b0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>Procédure pas à pas : persistance d’un objet dans Visual Studio (Visual Basic)
 Bien qu’il soit possible de définir des valeur par défaut pour les propriétés d’un objet au moment du design, les valeurs entrées lors de l’exécution sont perdues en cas de destruction de l’objet. Vous pouvez utiliser la sérialisation pour rendre les données d’un objet persistantes entre les instances, ce qui vous permet de stocker des valeurs et de les récupérer lors de la prochaine instanciation de l’objet.  

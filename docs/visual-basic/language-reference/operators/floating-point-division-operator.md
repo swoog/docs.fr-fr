@@ -1,12 +1,6 @@
 ---
 title: /, opérateur (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb./
 helpviewer_keywords:
@@ -22,14 +16,11 @@ helpviewer_keywords:
 - / operator [Visual Basic]
 - math operators [Visual Basic]
 ms.assetid: 335e97f2-c434-439e-9064-76973a051101
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2f221e863725b9aeb0b3fa3219b3a881541e2be0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 17eb3eddfae3cf7c818514a2fee20f646876a6ec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-operator-visual-basic"></a>/, opérateur (Visual Basic)
 Divise deux nombres et retourne un résultat à virgule flottante.  
@@ -55,7 +46,7 @@ expression1 / expression2
   
  Le [\, opérateur (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md) renvoie le quotient entier, ce qui supprime le reste.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le type de données du résultat dépend des types des opérandes. Le tableau suivant présente la manière dont le type de données du résultat est déterminé.  
   
 |Types de données d’opérande|Type de données de résultat|  
@@ -75,8 +66,8 @@ expression1 / expression2
 |Types de données d’opérande|Comportement si `expression2` est égal à zéro|  
 |------------------------|---------------------------------------|  
 |À virgule flottante (`Single` ou `Double`)|Retourne l’infini (<xref:System.Double.PositiveInfinity> ou <xref:System.Double.NegativeInfinity>), ou <xref:System.Double.NaN> (pas un nombre) si `expression1` est également égal à zéro|  
-|`Decimal`|Lève une exception<xref:System.DivideByZeroException>|  
-|Type intégral (signé ou non signé)|Tentative de conversion en type intégral lève <xref:System.OverflowException> , car les types intégraux ne peut pas accepter <xref:System.Double.PositiveInfinity>, <xref:System.Double.NegativeInfinity>, ou<xref:System.Double.NaN>|  
+|`Decimal`|Lève une exception <xref:System.DivideByZeroException>|  
+|Type intégral (signé ou non signé)|Tentative de conversion en type intégral lève <xref:System.OverflowException> , car les types intégraux ne peut pas accepter <xref:System.Double.PositiveInfinity>, <xref:System.Double.NegativeInfinity>, ou <xref:System.Double.NaN>|  
   
 > [!NOTE]
 >  Le `/` opérateur peut être *surchargé*, ce qui signifie qu’une classe ou structure peut redéfinir son comportement lorsqu’un opérande a le type de cette classe ou structure. Si votre code utilise cet opérateur sur une telle classe ou structure, assurez-vous que vous comprenez son comportement redéfini. Pour plus d’informations, consultez [procédures d’opérateur](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  

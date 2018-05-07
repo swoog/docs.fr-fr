@@ -1,13 +1,6 @@
 ---
-title: "Caractères de type (Visual Basic)"
-ms.custom: 
+title: Caractères de type (Visual Basic)
 ms.date: 01/31/2018
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - '&H prefix for hexadecimal values'
 - hexadecimal literals [Visual Basic]
@@ -45,12 +38,11 @@ helpviewer_keywords:
 ms.assetid: 6353cb9b-6ee4-4af6-a5a8-88ce39f90cc5
 author: rpetrusha
 ms.author: ronpet
-ms.manager: wpickett
-ms.openlocfilehash: 20a9a30689fb62a6956987b06470e76eeb42ebab
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: 9262c57c5773b947f18fd9e8cf9087bb8e02de7a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="type-characters-visual-basic"></a>Tapez les caractères (Visual Basic)
 
@@ -141,7 +133,7 @@ Dim flags As UShort = &H8000US
 
 Dans l’exemple précédent, `counter` a la valeur décimale-32 768 et `flags` a la valeur décimale + 32 768.
 
-À partir de Visual Basic 15.5, vous pouvez également utiliser le caractère de soulignement (`_`) comme séparateur de début entre le préfixe et les chiffres hexadécimaux, binaires ou octales. Exemple :
+À partir de Visual Basic 15.5, vous pouvez également utiliser le caractère de soulignement (`_`) comme séparateur de début entre le préfixe et les chiffres hexadécimaux, binaires ou octales. Par exemple :
 
 ```vb
 Dim number As Integer = &H_C305_F860

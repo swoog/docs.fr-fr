@@ -1,30 +1,16 @@
 ---
 title: Bien démarrer (WPF)
-ms.custom: ''
 ms.date: 01/26/2018
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - getting started [WPF]
 - introduction [WPF]
 - WPF [WPF], getting started
 ms.assetid: 04f91da8-708c-46c7-8172-f1695ec847cd
-caps.latest.revision: 60
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: eded6de5de269e7b49a87da31590267a5350f161
-ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
+ms.openlocfilehash: 0bb339d9343cd7ccca0f1f97d2d15b2afa5fdab0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getting-started-wpf"></a>Bien démarrer (WPF)
 Windows Presentation Foundation (WPF) est un framework d’interface utilisateur qui permet de créer des applications de bureau clientes. La plateforme de développement WPF prend en charge un large éventail de fonctionnalités de développement d’applications, notamment un modèle d’application, des ressources, des contrôles, des graphiques, une disposition, la liaison de données, des documents et la sécurité. S’agissant d’un sous-ensemble du .NET Framework, si vous avez déjà créé des applications avec le .NET Framework à l’aide d’ASP.NET ou de Windows Forms, l’environnement de programmation doit vous être familier. WPF utilise le langage XAML (Extensible Application Markup Language) pour fournir un modèle déclaratif à des fins de programmation d’applications. Cette section contient des rubriques de présentation et d’aide à la prise en main de WPF.  

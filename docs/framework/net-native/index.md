@@ -1,14 +1,6 @@
 ---
 title: Compilation d'applications avec .NET Native
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - native compilation
 - .NET and native code
@@ -16,20 +8,16 @@ helpviewer_keywords:
 - .NET Native
 - C# and native compilation
 ms.assetid: 47cd5648-9469-4b1d-804c-43cc04384045
-caps.latest.revision: 27
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: dec4d465b53f939f8fa711950ba6a000bd304e13
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: 1ecc707bb07d6d17ae4115b483cc8f52083f3933
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiling-apps-with-net-native"></a>Compilation d'applications avec .NET Native
-[!INCLUDE[net_native](../../../includes/net-native-md.md)]est une technologie de précompilation pour générer et déployer des applications Windows qui est fournie avec Visual Studio 2015 et versions ultérieures. Elle compile automatiquement la version commerciale des applications écrites en code managé (C# ou Visual Basic) et qui ciblent .NET Framework et Windows 10 en code natif.  
+[!INCLUDE[net_native](../../../includes/net-native-md.md)] est une technologie de précompilation pour générer et déployer des applications Windows qui est fournie avec Visual Studio 2015 et versions ultérieures. Elle compile automatiquement la version commerciale des applications écrites en code managé (C# ou Visual Basic) et qui ciblent .NET Framework et Windows 10 en code natif.  
   
  En règle générale, les applications qui ciblent .NET Framework sont compilées en langage intermédiaire (IL). Au moment de l'exécution, le compilateur juste-à-temps (JIT) traduit le langage intermédiaire en code natif. En revanche, [!INCLUDE[net_native](../../../includes/net-native-md.md)] compile les applications Windows directement en code natif. Pour les développeurs, cela signifie les points suivants :  
   

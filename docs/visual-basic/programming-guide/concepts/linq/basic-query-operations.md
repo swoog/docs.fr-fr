@@ -1,13 +1,6 @@
 ---
-title: "Opérations de requête de base (Visual Basic)"
-ms.custom: 
+title: Opérations de requête de base (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - data sources [LINQ in Visual Basic]
 - Join clause [LINQ in Visual Basic]
@@ -22,14 +15,11 @@ helpviewer_keywords:
 - grouping data [LINQ in Visual Basic]
 - Select clause [LINQ in Visual Basic]
 ms.assetid: 1146f6d0-fcb8-4f4d-8223-c9db52620d21
-caps.latest.revision: "37"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 794d77a18b50cc1667fddbad17c46735ae91be26
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5587a60e97464324659b325e38a18ac25488d30d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="basic-query-operations-visual-basic"></a>Opérations de requête de base (Visual Basic)
 Cette rubrique fournit une brève introduction aux [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] expressions en Visual Basic et certains types d’opérations que vous effectuez dans une requête classiques. Pour plus d’informations, consultez les rubriques suivantes :  
@@ -96,7 +86,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
      [!code-vb[VbLINQBasicOps#6](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_6.vb)]  
   
-     ou  
+     - ou -  
   
 -   Définissez un type nommé qui contient les champs spécifiques que vous souhaitez inclure dans le résultat et créer et initialiser les instances du type dans le `Select` clause. Utilisez cette option uniquement si vous devez utiliser des résultats individuels en dehors de la collection dans lequel ils sont retournés, ou si vous devez les passer en tant que paramètres dans les appels de méthode. Le type de `londonCusts5` dans l’exemple suivant est IEnumerable (Of NamePhone).  
   
@@ -118,7 +108,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  [!code-vb[VbLINQBasicOps#10](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_10.vb)]  
   
- `Group Join`combine des collections en une collection hiérarchique unique, tout comme un `LEFT JOIN` dans SQL. Pour plus d’informations, consultez [Clause Join](../../../../visual-basic/language-reference/queries/join-clause.md) et [Group Join, Clause](../../../../visual-basic/language-reference/queries/group-join-clause.md).  
+ `Group Join` combine des collections en une collection hiérarchique unique, tout comme un `LEFT JOIN` dans SQL. Pour plus d’informations, consultez [Clause Join](../../../../visual-basic/language-reference/queries/join-clause.md) et [Group Join, Clause](../../../../visual-basic/language-reference/queries/group-join-clause.md).  
   
 ## <a name="grouping-data-group-by"></a>Regrouper des données (Group By)  
  Vous pouvez ajouter un `Group By` clause pour regrouper les éléments d’un résultat de requête en fonction d’un ou plusieurs champs des éléments. Par exemple, le code suivant regroupe les étudiants par année de classe.  

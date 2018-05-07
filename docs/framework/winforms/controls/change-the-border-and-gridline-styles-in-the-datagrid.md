@@ -1,13 +1,6 @@
 ---
-title: "Comment : modifier les styles de bordures et de quadrillage dans le contrôle DataGridView Windows Forms"
-ms.custom: 
+title: 'Comment : modifier les styles de bordures et de quadrillage dans le contrôle DataGridView Windows Forms'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], changing border styles
 - DataGridView control [Windows Forms], gridline styles
 ms.assetid: 2f413c7a-4025-4171-8e3a-66ef908ea583
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a31bfc6fb3fa8a3c549a10fd0db017abde66539f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 94e5ae11d7fb2b67e028f368183246f8d8543a08
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-change-the-border-and-gridline-styles-in-the-windows-forms-datagridview-control"></a>Comment : modifier les styles de bordures et de quadrillage dans le contrôle DataGridView Windows Forms
 Avec la <xref:System.Windows.Forms.DataGridView> (contrôle), vous pouvez personnaliser l’apparence de bordure du contrôle et des quadrillages pour améliorer l’expérience utilisateur. Vous pouvez modifier la couleur du quadrillage principal et le style de bordure de contrôle en plus des styles de bordure des cellules dans le contrôle. Vous pouvez également appliquer des styles de bordure de cellule différentes pour les cellules ordinaires, les cellules d’en-tête de ligne et les cellules d’en-tête de colonne.  

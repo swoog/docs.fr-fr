@@ -1,28 +1,14 @@
 ---
 title: Configuration du traçage
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-caps.latest.revision: 53
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 23dbf9808976496686dfe9d595487110da41730b
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 2f84254a993df35ef999ee6cdd36c4f6b256a89f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-tracing"></a>Configuration du traçage
 Cette rubrique décrit comment activer le suivi, configurer des sources de suivi pour émettre des suivis et définir des niveaux de suivi, définir le suivi et la propagation d'activité afin de prendre en charge la corrélation de suivi de bout en bout, et définir des écouteurs de suivi pour accéder aux suivis.  
@@ -33,7 +19,7 @@ Cette rubrique décrit comment activer le suivi, configurer des sources de suivi
 >  Sur Windows 8 vous devez exécuter votre application avec élévation de privilèges (Exécuter en tant qu'administrateur) pour que votre application génère des journaux de traces.  
   
 ## <a name="enabling-tracing"></a>Activation du suivi  
- [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] génère les données suivantes pour le suivi de diagnostic :  
+ Windows Communication Foundation (WCF) génère les données suivantes pour le suivi de diagnostic :  
   
 -   Suivis des jalons de processus dans l'ensemble des composants des applications, tels que les appels d'opération, les exceptions de code, les avertissements et d'autres événements de traitement significatifs.  
   

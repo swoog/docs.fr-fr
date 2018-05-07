@@ -1,29 +1,18 @@
 ---
 title: Modèles de design courants
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - design patterns in class libraries
 - class library design guidelines [.NET Framework], design patterns
 ms.assetid: f7bd1361-4ab2-4132-972d-a044b8f197e1
-caps.latest.revision: 8
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 8ce4a80501868bde2082d0ea65ffd033d8783935
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 29dd2e2ab097c38f81143e717e5f76f3ba284f96
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="common-design-patterns"></a>Modèles de design courants
 Il existe de nombreux ouvrages sur les modèles de logiciels, les langages de modèle et les antipatterns permettant de traiter l’objet très large de modèles. Par conséquent, ce chapitre fournit des instructions et la discussion liée à un ensemble très limité de modèles qui sont fréquemment utilisées dans la conception de l’API .NET Framework.  

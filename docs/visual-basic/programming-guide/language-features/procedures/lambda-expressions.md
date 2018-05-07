@@ -1,13 +1,6 @@
 ---
 title: Expressions lambda (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.LambdaFunction
 helpviewer_keywords:
@@ -16,14 +9,11 @@ helpviewer_keywords:
 - expressions [Visual Basic], lambda
 - inline functions [Visual Basic]
 ms.assetid: 137064b0-3928-4bfa-ba71-c3f9cbd951e2
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 69ac88d295420277e99058d0f80a5ae1c2ce2e39
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c45500dc7a1e59a7ac83d43b826ca4cbfca6efb3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="lambda-expressions-visual-basic"></a>Expressions lambda (Visual Basic)
 A *expression lambda* est une fonction ou une sous-routine sans nom qui peut être utilisé partout où un délégué est valid. Expressions lambda peuvent être des fonctions ou sous-routines et peuvent être une ou plusieurs lignes. Vous pouvez passer des valeurs de l’étendue actuelle à une expression lambda.  
@@ -70,7 +60,7 @@ A *expression lambda* est une fonction ou une sous-routine sans nom qui peut êt
   
 -   Vous pouvez spécifier le type de données d’un paramètre d’expression lambda à l’aide de la `As` (mot clé), ou le type de données du paramètre peut être déduit. Tous les paramètres doivent avoir indiqué les types de données ou de l’ensemble doit être déduit.  
   
--   `Optional`et `Paramarray` les paramètres ne sont pas autorisés.  
+-   `Optional` et `Paramarray` les paramètres ne sont pas autorisés.  
   
 -   Paramètres génériques ne sont pas autorisées.  
   
@@ -118,7 +108,7 @@ End Class
   
  Pour plus d’informations sur la façon de créer et utiliser des méthodes asynchrones, consultez [programmation asynchrone avec Async et Await](../../../../visual-basic/programming-guide/concepts/async/index.md).  
   
-##  <a name="context"></a>Contexte  
+##  <a name="context"></a> Contexte  
  Une expression lambda partage son contexte avec la portée dans laquelle il est défini. Il possède les droits d’accès que tout code écrit dans la portée contenante. Cela inclut l’accès à des variables membres, des fonctions et des sous-routines, `Me`, des paramètres et variables locales dans la portée contenante.  
   
  Accès aux variables locales et les paramètres dans la portée contenante peut s’étendre au-delà de la durée de vie de cette étendue. Tant qu’un délégué qui fait référence à une expression lambda n’est pas disponible pour le garbage collection, l’accès aux variables d’environnement d’origine est conservé. Dans l’exemple suivant, la variable `target` local `makeTheGame`, la méthode dans laquelle l’expression lambda `playTheGame` est défini. Notez que l’expression lambda retournée, assignée à `takeAGuess` dans `Main`, a encore accès à la variable locale `target`.  
@@ -127,15 +117,15 @@ End Class
   
  L’exemple suivant montre la large gamme de droits d’accès de l’expression lambda imbriquée. Lorsque l’expression lambda retournée est exécutée à partir de `Main` comme `aDel`, il accède aux éléments suivants :  
   
--   Un champ de la classe dans laquelle il est défini :`aField`  
+-   Un champ de la classe dans laquelle il est défini : `aField`  
   
--   Une propriété de la classe dans laquelle il est défini :`aProp`  
+-   Une propriété de la classe dans laquelle il est défini : `aProp`  
   
--   Un paramètre de méthode `functionWithNestedLambda`, dans lequel il est défini :`level1`  
+-   Un paramètre de méthode `functionWithNestedLambda`, dans lequel il est défini : `level1`  
   
--   Une variable locale de `functionWithNestedLambda`:`localVar`  
+-   Une variable locale de `functionWithNestedLambda`: `localVar`  
   
--   Un paramètre de l’expression lambda dans laquelle elle est imbriquée :`level2`  
+-   Un paramètre de l’expression lambda dans laquelle elle est imbriquée : `level2`  
   
  [!code-vb[VbVbalrLambdas#9](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_6.vb)]  
   

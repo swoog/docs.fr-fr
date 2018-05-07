@@ -1,22 +1,12 @@
 ---
 title: Assemblys friend (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9b3d5716-e6e4-47a7-a3e9-084d7fba5c28
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d3a37629582e4fc2606afaf606735464c0d247a4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 91bc33f33c4fc34c6e0f3ae197ecd2b876161de3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="friend-assemblies-visual-basic"></a>Assemblys friend (Visual Basic)
 A *assembly friend* est un assembly qui peut accéder à un autre assembly [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) types et membres. Si vous identifiez un assembly comme étant un assembly friend, vous n’avez plus à marquer ses types et ses membres comme publics pour qu’ils soient accessibles aux autres assemblys. Ceci est particulièrement utile dans les scénarios suivants :  
@@ -25,7 +15,7 @@ A *assembly friend* est un assembly qui peut accéder à un autre assembly [Frie
   
 -   Lorsque vous développez une bibliothèque de classes et ajouts à la bibliothèque de contenus dans des assemblys séparés, mais nécessitent l’accès aux membres des assemblys existants qui sont marqués comme `Friend`.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Vous pouvez utiliser l’attribut <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> pour identifier un ou plusieurs assemblys friend pour un assembly donné. L’exemple suivant utilise l’attribut <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> dans l’assembly A et spécifie l’assembly `AssemblyB` comme assembly friend. De cette façon, l’assembly `AssemblyB` a accès à tous les types et membres de l’assembly A qui sont marqués comme `Friend`.  
   
 > [!NOTE]

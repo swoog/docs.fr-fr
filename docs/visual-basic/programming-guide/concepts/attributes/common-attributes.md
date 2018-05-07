@@ -1,22 +1,12 @@
 ---
 title: Attributs courants (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 11fe4894-1bf9-4525-a36b-cddcd3a5d22b
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 9528b7dcfa52c30954929d714bd098eb51886ebd
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 5a91b0aa48a22db4ea7fb56a9c632ff0cb44dce5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="common-attributes-visual-basic"></a>Attributs courants (Visual Basic)
 Cette rubrique décrit les attributs qui sont couramment utilisés dans les programmes Visual Basic.  
@@ -84,7 +74,7 @@ Cette rubrique décrit les attributs qui sont couramment utilisés dans les prog
 |<xref:System.Reflection.AssemblyDefaultAliasAttribute>|Définit un alias par défaut convivial pour un manifeste d’assembly.|  
   
 ##  <a name="Obsolete"></a> Attribut Obsolete  
- L’attribut `Obsolete` est utilisé pour marquer une entité de programme comme étant une entité dont l’utilisation n’est plus recommandée. Chaque utilisation d’une entité marquée comme obsolète génère par la suite un avertissement ou une erreur, selon la façon dont l’attribut est configuré. Exemple :  
+ L’attribut `Obsolete` est utilisé pour marquer une entité de programme comme étant une entité dont l’utilisation n’est plus recommandée. Chaque utilisation d’une entité marquée comme obsolète génère par la suite un avertissement ou une erreur, selon la façon dont l’attribut est configuré. Par exemple :  
   
 ```vb  
 <System.Obsolete("use class B")>   
@@ -231,7 +221,7 @@ End Class
   
  Pour plus d’informations sur les attributs d’informations de l’appelant, consultez [les informations de l’appelant (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).  
   
-##  <a name="VB"></a>Attributs (Visual Basic)  
+##  <a name="VB"></a> Attributs (Visual Basic)  
  Le tableau suivant répertorie les attributs qui sont spécifiques à Visual Basic.  
   
 |Attribut|Objectif|  

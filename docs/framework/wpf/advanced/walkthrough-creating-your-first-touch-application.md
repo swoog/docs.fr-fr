@@ -1,13 +1,6 @@
 ---
-title: "Procédure pas à pas : création de votre première application Touch"
-ms.custom: 
+title: 'Procédure pas à pas : création de votre première application Touch'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,19 +10,14 @@ helpviewer_keywords:
 - touch-sensitive applications [WPF], creating
 - creating a touchscreen application [WPF]
 ms.assetid: d69e602e-9a25-4e24-950b-e89eaa2a906b
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 08f4004329d15b527a889cd7b437a7f18278fc79
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 94a97c30179f7a8231426e31b8cacc364629ffc3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-creating-your-first-touch-application"></a>Procédure pas à pas : création de votre première application Touch
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]permet aux applications réponde aux entrées tactiles. Par exemple, vous pouvez interagir avec une application en utilisant l’une ou plusieurs doigts sur un périphérique tactile, par exemple un écran tactile que cette procédure pas à pas crée une application qui permet à l’utilisateur à déplacer, redimensionnement ou faire pivoter un objet unique à l’aide des fonctions tactiles.  
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] permet aux applications réponde aux entrées tactiles. Par exemple, vous pouvez interagir avec une application en utilisant l’une ou plusieurs doigts sur un périphérique tactile, par exemple un écran tactile que cette procédure pas à pas crée une application qui permet à l’utilisateur à déplacer, redimensionnement ou faire pivoter un objet unique à l’aide des fonctions tactiles.  
   
 ## <a name="prerequisites"></a>Prérequis  
  Pour exécuter cette procédure pas à pas, vous devez disposer des composants suivants :  

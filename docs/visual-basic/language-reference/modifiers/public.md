@@ -1,11 +1,6 @@
 ---
 title: Public (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Public
 helpviewer_keywords:
@@ -13,19 +8,16 @@ helpviewer_keywords:
 - Public keyword [Visual Basic], syntax
 - Public access modifier
 ms.assetid: 284c9e1b-ed23-499b-9bc9-ad87c11485a5
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: e6cd70adf6ec31c56f39d0443d320dd1b00b00d3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f6c18ecb748f62dd47a9689edb23089ca306dbe2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="public-visual-basic"></a>Public (Visual Basic)
 Spécifie ne qu’aucune restriction d’accès à un ou plusieurs éléments de programmation déclarés.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Si vous publiez un composant ou un ensemble de composants, tels que d’une bibliothèque de classes, vous souhaitez généralement les éléments de programmation accessibles par tout code qui interagit avec votre assembly. Pour octroyer cet accès illimité sur un élément, vous pouvez déclarer avec `Public`.  
   
  Accès public est le niveau normal pour un élément de programmation lorsque vous n’avez pas besoin de restreindre l’accès. Notez que le niveau d’accès d’un élément déclaré dans une interface, un module, une classe ou une structure de valeur par défaut est `Public` si vous ne déclarez pas une dans le cas contraire.  

@@ -1,14 +1,6 @@
 ---
 title: FUSION_INSTALL_REFERENCE, structure
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - FUSION_INSTALL_REFERENCE
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: ae181ec8-36bf-4ed1-9a02-ca27d417c80b
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 36321606fe208233fb6114fe9568b655f0e1b400
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4685d1a23fdf1874817522a16ccd428d81acd1ac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="fusioninstallreference-structure"></a>FUSION_INSTALL_REFERENCE, structure
 Représente une référence qu’une application à un assembly de l’application est installée dans le global assembly cache.  
@@ -59,12 +47,12 @@ typedef struct _FUSION_INSTALL_REFERENCE_ {
 |`szIdentifier`|Une chaîne unique qui identifie l’application qui a installé l’assembly dans le global assembly cache. Sa valeur dépend de la valeur de la `guidScheme` champ.|  
 |`szNonCanonicalData`|Chaîne qui est comprise uniquement par l’entité qui ajoute la référence. Le global assembly cache stocke cette chaîne, mais ne l’utilise pas.|  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Fusion.h  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [Structures de fusion](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)  

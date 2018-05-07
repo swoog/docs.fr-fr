@@ -1,11 +1,6 @@
 ---
-title: "Opérateur AndAlso (Visual Basic)"
+title: Opérateur AndAlso (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.AndAlso
 - AndAlso
@@ -16,14 +11,11 @@ helpviewer_keywords:
 - operators [Visual Basic], conjunction
 - short-circuit evaluation
 ms.assetid: bbc15191-b374-495b-9b8f-7b8c2f4388eb
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5f92f4ed226c2923c3d95a7b80db3872b7ac33dc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 549d14cc35d285ac2e4a02a37dd201cc669c5627
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="andalso-operator-visual-basic"></a>Opérateur AndAlso (Visual Basic)
 Effectue une conjonction logique sur deux expressions de court-circuit.  
@@ -42,7 +34,7 @@ result = expression1 AndAlso expression2
 |`expression1`|Obligatoire. Toute expression `Boolean`.|  
 |`expression2`|Obligatoire. Toute expression `Boolean`.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Une opération logique est dite *de court-circuit* si le code compilé peut ignorer l’évaluation d’une expression en fonction du résultat d’une autre expression. Si le résultat de la première expression évaluée détermine le résultat final de l’opération, il n’est pas besoin d’évaluer la seconde expression, car elle ne peut pas changer le résultat final. Court-circuit peut améliorer les performances si l’expression ignorée est complexe, ou si elle implique des appels de procédure.  
   
  Si les deux expressions ont `True`, `result` est `True`. Le tableau suivant illustre comment `result` est déterminée.  

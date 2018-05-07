@@ -1,22 +1,12 @@
 ---
-title: "Procédure pas à pas : accès au web avec Async et Await (Visual Basic)"
-ms.custom: 
+title: 'Procédure pas à pas : accès au web avec Async et Await (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: de1219de72be5ddc022d898c904663bf92ca5ab6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7154ea12f2660074e3ad8251b9baaa3eeb3d453c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>Procédure pas à pas : accès au web avec Async et Await (Visual Basic)
 Vous pouvez écrire des programmes asynchrones plus facilement et intuitivement en utilisant les fonctionnalités async/await. Vous pouvez écrire du code asynchrone qui ressemble au code synchrone et laisser le compilateur gérer les difficiles fonctions de rappel et continuations qu’implique généralement le code asynchrone.  
@@ -53,7 +43,7 @@ Vous pouvez écrire des programmes asynchrones plus facilement et intuitivement 
   
 -   [Exemple](#BKMK_CompleteCodeExamples)  
   
-## <a name="prerequisites"></a>Conditions préalables  
+## <a name="prerequisites"></a>Prérequis  
  Visual Studio 2012 ou version ultérieure doit être installé sur votre ordinateur. Pour plus d’informations, consultez le [site web de Microsoft](http://go.microsoft.com/fwlink/?LinkId=235233).  
   
 ###  <a name="CreateWPFApp"></a> Pour créer une application WPF  
@@ -117,7 +107,7 @@ Vous pouvez écrire des programmes asynchrones plus facilement et intuitivement 
 6.  Choisissez le bouton **OK** pour fermer la boîte de dialogue.  
   
 ##  <a name="BKMK_AddStatesandDirs"></a>   
-###  <a name="ImportsState"></a>Pour ajouter les instructions Imports nécessaires  
+###  <a name="ImportsState"></a> Pour ajouter les instructions Imports nécessaires  
   
 1.  Dans **l’Explorateur de solutions**, ouvrez le menu contextuel pour MainWindow.XAML, puis choisissez **afficher le Code**.  
   
@@ -233,7 +223,7 @@ Vous pouvez écrire des programmes asynchrones plus facilement et intuitivement 
 ##  <a name="BKMK_TestSynchSol"></a>   
 ###  <a name="testSynch"></a> Pour tester la solution synchrone  
   
-1.  Appuyez sur la touche F5 pour exécuter le programme, puis choisissez le bouton **Démarrer** .  
+1.  Appuyez sur la touche F5 pour exécuter le programme, puis choisissez le bouton **Démarrer**.  
   
      Une sortie semblable à la liste suivante doit apparaître.  
   
@@ -427,7 +417,7 @@ Vous pouvez écrire des programmes asynchrones plus facilement et intuitivement 
 ##  <a name="BKMK_testAsynchSolution"></a>   
 ###  <a name="testAsynch"></a> Pour tester la solution asynchrone  
   
-1.  Appuyez sur la touche F5 pour exécuter le programme, puis choisissez le bouton **Démarrer** .  
+1.  Appuyez sur la touche F5 pour exécuter le programme, puis choisissez le bouton **Démarrer**.  
   
 2.  Une sortie semblable à la sortie de la solution synchrone doit apparaître. En revanche, observez les différences ci-après.  
   
@@ -683,11 +673,11 @@ End Class
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exemple Async : L’accès à la procédure Web (c# et Visual Basic)](http://go.microsoft.com/fwlink/?LinkId=255191)  
+ [Exemple Async : accès à la procédure web (C# et Visual Basic)](http://go.microsoft.com/fwlink/?LinkId=255191)  
  [Await (opérateur)](../../../../visual-basic/language-reference/operators/await-operator.md)  
  [Async](../../../../visual-basic/language-reference/modifiers/async.md)  
  [Programmation asynchrone avec Async et Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  
  [Types de retour Async (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)  
- [Programmation asynchrone basé sur des tâches (TAP)](http://go.microsoft.com/fwlink/?LinkId=204847)  
+ [Programmation asynchrone basée sur les tâches](http://go.microsoft.com/fwlink/?LinkId=204847)  
  [Guide pratique : étendre la procédure pas à pas Async à l’aide de Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)  
  [Guide pratique : effectuer plusieurs requêtes web en parallèle avec Async et Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)

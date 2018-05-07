@@ -1,24 +1,14 @@
 ---
-title: "Guide pratique pour déboguer les applications prenant en charge les revendications et les services utilisant le suivi WIF"
-ms.custom: 
+title: Guide pratique pour déboguer les applications prenant en charge les revendications et les services utilisant le suivi WIF
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 3d51ba59-3adb-4ca4-bd33-5027531af687
-caps.latest.revision: "7"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 4243313d88b22aa9f755a3586ea0c5fbe08cd891
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0f2126a83e6a5638eb492bb2a529dbf4cdab1714
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-debug-claims-aware-applications-and-services-using-wif-tracing"></a>Guide pratique pour déboguer les applications prenant en charge les revendications et les services utilisant le suivi WIF
 ## <a name="applies-to"></a>S'applique à  
@@ -114,7 +104,7 @@ ms.lasthandoff: 12/22/2017
   
 |**ID d’erreur**|**Message d'erreur**|**Mesure à prendre pour corriger l’erreur**|  
 |-|-|-|  
-|ID4175|L'émetteur du jeton de sécurité n'a pas été reconnu par IssuerNameRegistry.  Pour accepter les jetons de sécurité en provenance de cet émetteur, configurez IssuerNameRegistry pour qu'il retourne un nom valide pour cet émetteur.|Cette erreur peut être provoquée par la copie d’une empreinte numérique à partir du composant logiciel enfichable MMC et par son collage dans le fichier *Web.config*. Plus précisément, vous pouvez obtenir un caractère non imprimable supplémentaire dans la chaîne de texte en effectuant une copie à partir de la fenêtre de propriétés du certificat. Ce caractère supplémentaire entraîne l’échec de la correspondance de l’empreinte numérique. La procédure correcte de copie de l’empreinte numérique se trouve ici : [http://msdn.microsoft.com/library/ff359102.aspx](http://msdn.microsoft.com/library/ff359102.aspx)|  
+|ID4175|L'émetteur du jeton de sécurité n'a pas été reconnu par IssuerNameRegistry.  Pour accepter les jetons de sécurité en provenance de cet émetteur, configurez IssuerNameRegistry pour qu'il retourne un nom valide pour cet émetteur.|Cette erreur peut être provoquée par la copie d’une empreinte numérique à partir du composant logiciel enfichable MMC et par son collage dans le fichier *Web.config*. Plus précisément, vous pouvez obtenir un caractère non imprimable supplémentaire dans la chaîne de texte en effectuant une copie à partir de la fenêtre de propriétés du certificat. Ce caractère supplémentaire entraîne l’échec de la correspondance de l’empreinte numérique. Vous trouverez ici la procédure de copie correctement de l’empreinte numérique : [http://msdn.microsoft.com/library/ff359102.aspx](http://msdn.microsoft.com/library/ff359102.aspx)|  
   
 ## <a name="related-items"></a>Éléments associés  
   

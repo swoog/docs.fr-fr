@@ -1,24 +1,12 @@
 ---
 title: Concepts Windows Workflow fondamentaux
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 0e930e80-5060-45d2-8a7a-95c0690105d4
-caps.latest.revision: 27
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2c55d88eb6c3b41c703bddfd09e6224f3a6aefe2
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 8ffa1bd1cdcc0347691032885fb929784045bf8a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="fundamental-windows-workflow-concepts"></a>Concepts Windows Workflow fondamentaux
 Le développement de flux de travail dans [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] fait appel à des concepts que certains développeurs peuvent ne pas connaître. Cette rubrique en décrit quelques-uns, ainsi que la façon dont ils sont implémentés.  

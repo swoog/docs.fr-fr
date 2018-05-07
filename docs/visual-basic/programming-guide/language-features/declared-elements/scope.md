@@ -1,12 +1,6 @@
 ---
-title: "Portée dans Visual Basic"
-ms.custom: 
+title: Portée dans Visual Basic
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - module scope [Visual Basic]
 - scope [Visual Basic], levels
@@ -21,14 +15,11 @@ helpviewer_keywords:
 - scope [Visual Basic], Visual Basic
 - procedure scope [Visual Basic]
 ms.assetid: 208106fe-79c9-4eec-93c6-55f08548895f
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a9bfda19b9f5ee96d45a0322541b35dfab7635d7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d6692379626d787b728d6e92bd447c4a96e6680e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="scope-in-visual-basic"></a>Portée dans Visual Basic
 Le *étendue* d’un élément déclaré est l’ensemble du code qui peut faire référence à ce dernier sans qualifier son nom ou le rendre disponible via une [Imports, instruction (.NET Namespace et Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md). Un élément peut avoir la portée à un des niveaux suivants :  
@@ -61,7 +52,7 @@ Le *étendue* d’un élément déclaré est l’ensemble du code qui peut faire
   
 -   `Do` et `Loop`  
   
--   `For`[`Each`] et`Next`  
+-   `For` [`Each`] et `Next`  
   
 -   `If` et `End If`  
   
@@ -127,7 +118,7 @@ Public strMsg As String
   
  Namespace étendue inclut des espaces de noms imbriqués. Un élément disponible dans un espace de noms est également accessible à partir de n’importe quel espace de noms imbriqué dans cet espace de noms.  
   
- Si votre projet ne contient pas de [Namespace instruction](../../../../visual-basic/language-reference/statements/namespace-statement.md), tous les éléments dans le projet se trouve dans le même espace de noms. Dans ce cas, la portée espace de noms peut être considérée comme la portée du projet. `Public`les éléments dans un module, une classe ou une structure sont également accessibles à tout projet qui fait référence à son projet.  
+ Si votre projet ne contient pas de [Namespace instruction](../../../../visual-basic/language-reference/statements/namespace-statement.md), tous les éléments dans le projet se trouve dans le même espace de noms. Dans ce cas, la portée espace de noms peut être considérée comme la portée du projet. `Public` les éléments dans un module, une classe ou une structure sont également accessibles à tout projet qui fait référence à son projet.  
   
 ## <a name="choice-of-scope"></a>Choix de la portée  
  Lorsque vous déclarez une variable, vous devez conserver à l’esprit les points suivants lors du choix de sa portée.  

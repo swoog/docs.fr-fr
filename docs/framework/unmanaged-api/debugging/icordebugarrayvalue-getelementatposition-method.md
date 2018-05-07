@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugArrayValue::GetElementAtPosition, méthode"
-ms.custom: 
+title: ICorDebugArrayValue::GetElementAtPosition, méthode
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugArrayValue.GetElementAtPosition
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 6fd5eaa4-1997-4910-82f5-3887480db764
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c26a55815e57126895902275148940c5271c235b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 580c7b4dcd63f83e113a5317c242b7e66cfb3f5a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugarrayvaluegetelementatposition-method"></a>ICorDebugArrayValue::GetElementAtPosition, méthode
 Obtient l’élément à la position donnée, en traitant le tableau comme un tableau unidimensionnel de base zéro.  
@@ -57,11 +45,11 @@ HRESULT GetElementAtPosition (
 ## <a name="remarks"></a>Notes  
  La disposition d’un tableau multidimensionnel suit le style C++ de disposition de tableau.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -1,22 +1,12 @@
 ---
-title: "Sérialisation vers un XmlReader (appel de XSLT) (Visual Basic)"
-ms.custom: 
+title: Sérialisation vers un XmlReader (appel de XSLT) (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 8b64f95a-e8f6-40f7-99f9-a8002c63af96
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ea4a8a17e938b22d6e307ebe307c69481e44e6d9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 05754593f4f30683ffabecaa8e16c35bf836a3f8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="serializing-to-an-xmlreader-invoking-xslt-visual-basic"></a>Sérialisation vers un XmlReader (appel de XSLT) (Visual Basic)
 Quand vous exploitez les fonctionnalités d’interopérabilité <xref:System.Xml?displayProperty=nameWithType> de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], vous pouvez utiliser <xref:System.Xml.Linq.XNode.CreateReader%2A> pour créer un objet <xref:System.Xml.XmlReader>. Le module qui lit à partir de cet objet <xref:System.Xml.XmlReader> lit les nœuds à partir de l’arborescence XML et les traite en conséquence.  

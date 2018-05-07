@@ -1,28 +1,16 @@
 ---
 title: "Comment : masquer des ToolStripMenuItems à l'aide du concepteur"
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ToolStripMenuItems [Windows Forms], hiding menu items in designer
 - MenuStrip control [Windows Forms], hiding menu items in designer
 - menu items [Windows Forms], hiding
 ms.assetid: 8f1b057e-3d8a-4f11-88df-935f7b29a836
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 06a95581e156a7027c8fa0bda6e5fbc4babdb85b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: b0018516b9ac337cea3716c4b2eddc6eb859dbb0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-hide-toolstripmenuitems-using-the-designer"></a>Comment : masquer des ToolStripMenuItems à l'aide du concepteur
 Le masquage des éléments de menu est un moyen de contrôler l’interface utilisateur (IU) de votre application et de limiter les commandes de l’utilisateur. Souvent, vous devez masquer un menu quand tous les éléments de menu ne sont pas disponibles. Cela pose moins distractions pour l’utilisateur. En outre, vous souhaiterez peut-être cacher et désactiver le menu ou un élément de menu, comme simple masquage n’empêche pas l’utilisateur d’accéder à une commande de menu à l’aide d’une touche de raccourci. Pour plus d’informations sur la désactivation des éléments de menu, consultez [Comment : désactiver des ToolStripMenuItems à l’aide du concepteur](../../../../docs/framework/winforms/controls/how-to-disable-toolstripmenuitems-using-the-designer.md).  

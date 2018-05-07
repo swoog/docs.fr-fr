@@ -1,14 +1,6 @@
 ---
 title: ICorProfilerInfo2, interface
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerInfo2
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 91bd49b6-4d12-494f-a8f1-2f251e8c65e3
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 47ce316765117108da8e26d92a72febd0efb124d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8cec2a622a1a30881949ad5a9f2050077e195015
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilerinfo2-interface"></a>ICorProfilerInfo2, interface
 Fournit des méthodes que les profileurs de code utilisent pour communiquer avec le common language runtime (CLR) pour contrôler la surveillance des événements et les informations de demande. Le `ICorProfilerInfo2` interface est une extension de la [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) interface. Autrement dit, il fournit les nouvelles méthodes prises en charge dans le .NET Framework version 2.0 et versions ultérieures.  
@@ -70,14 +58,14 @@ Fournit des méthodes que les profileurs de code utilisent pour communiquer avec
   
  Le CLR passe une `ICorProfilerInfo2` interface à chaque profileur de code pendant l’initialisation, à l’aide de l’implémentation du profileur de [ICorProfilerCallback::Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md). Un profileur de code peut ensuite appeler méthodes de la `ICorProfilerInfo2` interface pour obtenir des informations sur le code managé en cours d’exécution sous le contrôle du CLR.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorProf.idl, CorProf.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [Interfaces de profilage](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  

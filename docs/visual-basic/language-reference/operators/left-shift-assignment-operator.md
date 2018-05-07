@@ -1,12 +1,6 @@
 ---
 title: '&lt;&lt;=, Opérateur (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.<<=
 helpviewer_keywords:
@@ -17,14 +11,11 @@ helpviewer_keywords:
 - operator<<=
 - compound assignment statements [Visual Basic]
 ms.assetid: 8ad26613-faff-4e2f-89ee-63feee33bfda
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5c5c36e4f91155c09d01b448777483941d018d9a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 559624f7097f90d374ee83e3c0a9ac97d9f93444
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltlt-operator-visual-basic"></a>&lt;&lt;=, Opérateur (Visual Basic)
 Effectue un décalage arithmétique vers la gauche de la valeur d’une variable ou propriété et assigne le résultat à la variable ou propriété.  
@@ -42,7 +33,7 @@ variableorproperty <<= amount
  `amount`  
  Obligatoire. Expression numérique d’un type de données qui s’étend à `Integer`.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  L’élément sur le côté gauche de la `<<=` opérateur peut être une simple variable scalaire, une propriété ou un élément d’un tableau. La variable ou la propriété ne peut pas être [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
   
  Le `<<=` opérateur effectue tout d’abord un décalage arithmétique vers la gauche sur la valeur de la variable ou propriété. L’opérateur assigne ensuite le résultat de cette opération à cette variable ou une propriété.  

@@ -1,37 +1,27 @@
 ---
-title: "Sécurité de message avec un client Windows"
-ms.custom: 
+title: Sécurité de message avec un client Windows
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 01e7d0b8-10f9-45c3-a4c5-53d44dc61eb8
-caps.latest.revision: "13"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: c480706fee27e7023eae5b493b0ca007b4757e97
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 185edce5bd8a4772545ec966a6b3f74b204aa2b0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-security-with-a-windows-client"></a>Sécurité de message avec un client Windows
-Dans le scénario suivant, le client [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] et le serveur sont sécurisés à l'aide du mode de sécurité de niveau message. Le client et le service sont authentifiés à l'aide des informations d'identification Windows.  
+Ce scénario montre un client de Windows Communication Foundation (WCF) et un serveur sécurisé par le mode de sécurité de message. Le client et le service sont authentifiés à l'aide des informations d'identification Windows.  
   
  ![Message de sécurité avec un client Windows](../../../../docs/framework/wcf/feature-details/media/1c8618d4-0005-4022-beb6-32fd087a8c3c.gif "1c8618d4-0005-4022-beb6-32fd087a8c3c")  
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
 |Mode de sécurité|Message|  
-|Interopérabilité|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uniquement|  
+|Interopérabilité|WCF uniquement|  
 |Authentification (serveur)|Authentification mutuelle du serveur et du client|  
 |Authentification (client)|Authentification mutuelle du serveur et du client|  
 |Intégrité|Oui, à l'aide du contexte de sécurité partagé|  

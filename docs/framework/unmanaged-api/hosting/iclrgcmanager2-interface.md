@@ -1,14 +1,6 @@
 ---
 title: ICLRGCManager2, interface
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRGCManager2
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 4b5ffd7b-9ad7-41cd-9bba-34030ae3da7e
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4a8b51cf4297c1ccadbef8730c06148263d310e2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fb6cff796a6a7b866357d51350b7b026b019745e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrgcmanager2-interface"></a>ICLRGCManager2, interface
 Fournit des méthodes qui permettent à un hôte d’interagir avec le système de garbage collection du common language runtime.  
@@ -48,14 +36,14 @@ Fournit des méthodes qui permettent à un hôte d’interagir avec le système 
   
  Le common language runtime (CLR) implémente son mécanisme de garbage collection avec managé <xref:System.GC> type. Pour plus d’informations sur le système de garbage collection, consultez [le Garbage Collection](../../../../docs/standard/garbage-collection/index.md).  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** MSCorEE.h  
   
  **Bibliothèque :** inclus en tant que ressource dans MSCorEE.dll  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versions du .NET framework :** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [Gestion automatique de la mémoire](../../../../docs/standard/automatic-memory-management.md)  
@@ -63,4 +51,4 @@ Fournit des méthodes qui permettent à un hôte d’interagir avec le système 
  [ICLRControl, interface](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)  
  [Interfaces d’hébergement CLR ajoutées dans .NET Framework 4 et 4.5](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)  
  [Interfaces d’hébergement](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
- [Hébergement d’applications WPF](../../../../docs/framework/unmanaged-api/hosting/index.md)
+ [Hébergement](../../../../docs/framework/unmanaged-api/hosting/index.md)

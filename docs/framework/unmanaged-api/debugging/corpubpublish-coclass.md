@@ -1,14 +1,6 @@
 ---
 title: CorpubPublish (coclasse)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CorpubPublish Coclass
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 191015da-f54a-4bac-a28a-1de7ab3c3428
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f3dec1175715bdbddc3c975924e91e238fa6d5f3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9941a9be7d9f68255636b405db29a623be8d37e8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="corpubpublish-coclass"></a>CorpubPublish (coclasse)
 Fournit les interfaces pour la publication d'informations sur les domaines d'application et les processus.  
@@ -62,7 +50,7 @@ coclass CorpubPublish {
 ## <a name="remarks"></a>Notes  
  Un scénario classique de publication implique un développeur qui souhaite déboguer du code managé qui s’exécute sur un ordinateur dans un domaine d’application. L’environnement d’hébergement peut exécuter plusieurs domaines d’application dans un processus. Le développeur souhaite utiliser une interface utilisateur graphique ou autres moyens pour répertorier tous les processus qui sont exécutent sur l’ordinateur et choisir un processus spécifique. La liste doit inclure tous les domaines d’application dans les processus qui sont en cours d’exécution du code managé. Le développeur peut ensuite identifier le domaine d’application spécifique et joindre un débogueur à ce domaine.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorPub.idl  

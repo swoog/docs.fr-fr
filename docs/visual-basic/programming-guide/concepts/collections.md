@@ -1,21 +1,12 @@
 ---
 title: Collections (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: get-started-article
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d0ea3b45803bc37f35d516260a57db422827f1e1
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 563cef59c0e52d41dcdeaa51b5bc4d7b8f9554f9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="collections-visual-basic"></a>Collections (Visual Basic)
 Pour de nombreuses applications, vous voulez créer et gérer des groupes d’objets connexes. Il existe deux manières de grouper des objets : en créant des tableaux d’objets ou des collections d’objets.  
@@ -585,7 +576,7 @@ End Function
  [LINQ to Objects (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
  [Parallel LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)  
  [Collections et structures de données](../../../standard/collections/index.md)  
- [Création et manipulation de Collections](http://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)  
+ [Création et manipulation de collections](http://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)  
  [Sélection d’une classe de collection](../../../standard/collections/selecting-a-collection-class.md)  
  [Comparaisons et tris dans les collections](../../../standard/collections/comparisons-and-sorts-within-collections.md)  
  [Quand utiliser les collections génériques](../../../standard/collections/when-to-use-generic-collections.md)

@@ -1,14 +1,6 @@
 ---
-title: "ICorRuntimeHost::CreateDomainSetup, méthode"
-ms.custom: 
+title: ICorRuntimeHost::CreateDomainSetup, méthode
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorRuntimeHost.CreateDomainSetup
 api_location:
@@ -23,20 +15,16 @@ helpviewer_keywords:
 ms.assetid: c21dab60-fb65-47d9-8a94-7fd47ca53b48
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e15f40402b222037f7ed8b23be3df36acafc73c9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bf3aff2c3c4d10c4ee805a6110561d6fdcd63a55
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorruntimehostcreatedomainsetup-method"></a>ICorRuntimeHost::CreateDomainSetup, méthode
-Obtient un pointeur d’interface de type IAppDomainSetup à un <xref:System.AppDomainSetup?displayProperty=nameWithType> instance. `IAppDomainSetup`Fournit des méthodes pour configurer les aspects d’un domaine d’application avant qu’il est créé.  
+Obtient un pointeur d’interface de type IAppDomainSetup à un <xref:System.AppDomainSetup?displayProperty=nameWithType> instance. `IAppDomainSetup` Fournit des méthodes pour configurer les aspects d’un domaine d’application avant qu’il est créé.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -62,7 +50,7 @@ HRESULT CreateDomainSetup (
 ## <a name="remarks"></a>Notes  
  Le pointeur retourné par cette méthode est généralement passé en tant que paramètre à la [CreateDomainEx](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md) (méthode).  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** MSCorEE.h  

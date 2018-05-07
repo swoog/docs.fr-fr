@@ -1,26 +1,16 @@
 ---
-title: "Comment : déterminer si deux objets sont liés (Visual Basic)"
-ms.custom: 
+title: 'Comment : déterminer si deux objets sont liés (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - inheritance [Visual Basic], Visual Basic objects
 - objects [Visual Basic], inheritance
 - object variables [Visual Basic], determining relation
 ms.assetid: da002e3f-6616-4bad-a229-f842d06652bb
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 7824742459fca355c0043ad8ed20a26330402c05
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2041f89ffd954e479046eb85c6dd82de1f8793ca
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-determine-whether-two-objects-are-related-visual-basic"></a>Comment : déterminer si deux objets sont liés (Visual Basic)
 Vous pouvez comparer deux objets pour déterminer la relation, le cas échéant, entre les classes à partir de laquelle ils sont créés. Le <xref:System.Type.IsInstanceOfType%2A> méthode de la <xref:System.Type?displayProperty=nameWithType> classe retourne `True` si la classe actuelle hérite de la classe spécifiée, ou si le type actuel est une interface prise en charge par la classe spécifiée.  
@@ -33,7 +23,7 @@ Vous pouvez comparer deux objets pour déterminer la relation, le cas échéant,
   
 3.  Dans la liste d’arguments <xref:System.Type.IsInstanceOfType%2A>, spécifiez l’objet que vous pensez être du type dérivé.  
   
-     <xref:System.Type.IsInstanceOfType%2A>Retourne `True` si son type d’argument hérite le <xref:System.Type?displayProperty=nameWithType> type d’objet.  
+     <xref:System.Type.IsInstanceOfType%2A> Retourne `True` si son type d’argument hérite le <xref:System.Type?displayProperty=nameWithType> type d’objet.  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant détermine si un objet représente une classe dérivée de la classe d’un autre objet.  

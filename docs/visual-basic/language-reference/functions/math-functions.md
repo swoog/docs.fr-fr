@@ -1,29 +1,22 @@
 ---
-title: "Fonctions mathématiques (Visual Basic)"
+title: Fonctions mathématiques (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - math functions, Visual Basic
 - arithmetic operations, math functions
 - math routines
 - Atn function
 ms.assetid: 4d2d82e7-6924-42fe-a4a7-b4dd5bebbd0c
-caps.latest.revision: "23"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4d67df44e5f4ea89475ea34e87fd5041ee6cb44f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9c55b48cbc285ab5ed8742a23af43d3a017a35e3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="math-functions-visual-basic"></a>Fonctions mathématiques (Visual Basic)
 Les méthodes de la <xref:System.Math?displayProperty=nameWithType> classe fournissent des fonctions trigonométriques, logarithmiques et d’autres fonctions mathématiques courantes.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le tableau suivant répertorie les méthodes de la <xref:System.Math?displayProperty=nameWithType> classe. Vous pouvez les utiliser dans un programme Visual Basic.  
   
 |Méthode .NET framework|Description|  
@@ -166,9 +159,9 @@ End Function
 ```  
   
 ## <a name="requirements"></a>Spécifications  
- **Classe :**<xref:System.Math>  
+ **Classe :** <xref:System.Math>  
   
- **Namespace :**<xref:System>  
+ **Namespace :** <xref:System>  
   
  **Assembly :** mscorlib (dans mscorlib.dll)  
   

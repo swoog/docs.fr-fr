@@ -1,10 +1,6 @@
 ---
-title: "Comment : dessiner des formes avec les contrôles OvalShape et RectangleShape (Visual Studio)"
+title: 'Comment : dessiner des formes avec les contrôles OvalShape et RectangleShape (Visual Studio)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -13,14 +9,11 @@ helpviewer_keywords:
 - shapes, drawing
 - RectangleShape control [Visual Basic]
 ms.assetid: 0275b4c6-7a13-46c8-90f3-61db308c6b5d
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 53d91d10cc4735bbae521d17d05045cc7ea75fbc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f87865ba3aebe5739b87d6ae6bfeaa957af726d8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-draw-shapes-with-the-ovalshape-and-rectangleshape-controls-visual-studio"></a>Comment : dessiner des formes avec les contrôles OvalShape et RectangleShape (Visual Studio)
 Vous pouvez utiliser le contrôle <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> pour tracer des cercles ou des ellipses sur un formulaire ou un conteneur au moment de la conception comme au moment de l'exécution. Vous pouvez utiliser le contrôle <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> pour tracer des carrés, des rectangles ou des rectangles à angles arrondis sur un formulaire ou un conteneur. Ce contrôle vous permet aussi de tracer des formes au moment de la conception ou au moment de l'exécution.  

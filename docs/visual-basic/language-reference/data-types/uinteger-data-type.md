@@ -1,11 +1,6 @@
 ---
-title: "UInteger, type de données"
+title: UInteger, type de données
 ms.date: 01/31/2018
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.uinteger
 helpviewer_keywords:
@@ -23,11 +18,11 @@ helpviewer_keywords:
 ms.assetid: db7ddd34-4f23-46f5-84dd-8b0f83bb8729
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ea6d42a604e5a50fab62644034afc82e089792c7
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: a1c734578abd55270dd6feb9060d02691a6aaf8d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="uinteger-data-type"></a>UInteger (type de données)
 
@@ -54,7 +49,7 @@ Dans l’exemple suivant, les entiers égaux à 3 000 000 000 représentés c
 
 [!code-vb[UInteger](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#UIntS)]  
 
-À partir de Visual Basic 15.5, vous pouvez également utiliser le caractère de soulignement (`_`) comme séparateur de début entre le préfixe et les chiffres hexadécimaux, binaires ou octales. Exemple :
+À partir de Visual Basic 15.5, vous pouvez également utiliser le caractère de soulignement (`_`) comme séparateur de début entre le préfixe et les chiffres hexadécimaux, binaires ou octales. Par exemple :
 
 ```vb
 Dim number As UInteger = &H_0F8C_0326
@@ -80,7 +75,7 @@ Dim number = &H_0FAC_14D7ui
   
 -   **Étendues.** Le `UInteger` type de données s’étend à `Long`, `ULong`, `Decimal`, `Single`, et `Double`. Cela signifie que vous pouvez convertir `UInteger` à un de ces types sans rencontrer un <xref:System.OverflowException?displayProperty=nameWithType> erreur.  
   
--   **Caractères de type.** L’ajout de caractères de type littéral `UI` à un littéral force ce dernier à la `UInteger` type de données. `UInteger`n’a aucun caractère de type d’identificateur.  
+-   **Caractères de type.** L’ajout de caractères de type littéral `UI` à un littéral force ce dernier à la `UInteger` type de données. `UInteger` n’a aucun caractère de type d’identificateur.  
   
 -   **Type .NET Framework.** Le type correspondant dans le .NET Framework est la structure <xref:System.UInt32?displayProperty=nameWithType>.  
   

@@ -1,28 +1,16 @@
 ---
-title: "Scénarios de sécurité courants"
-ms.custom: 
+title: Scénarios de sécurité courants
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - security [WCF], scenarios
 ms.assetid: 201923b5-5162-4a8a-8d4c-e7bd242748d5
-caps.latest.revision: 
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: d8881768d66e95ce1391ce1be1663bdc3107a347
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0fb51ea0624c4fa686e4e99ffb9c30decedfea10
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="common-security-scenarios"></a>Scénarios de sécurité courants
 Les rubriques de cette section présentent un certain nombre de configurations de sécurité de service et client possibles. Les configurations varient selon un certain nombre de facteurs. Par exemple, si un service ou un client est sur un intranet, ou si la sécurité est fournie par Windows ou un transport (tel que HTTPS).  
@@ -32,7 +20,7 @@ Les rubriques de cette section présentent un certain nombre de configurations d
  Exemple de client/service public non sécurisé.  
   
  [Service et client intranet non sécurisés](../../../../docs/framework/wcf/feature-details/intranet-unsecured-client-and-service.md)  
- Service [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] de base développé pour fournir des informations sur un réseau privé sécurisé à une application [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Un service Windows Communication Foundation (WCF) de base développé pour fournir des informations sur un réseau privé sécurisé à une application WCF.  
   
  [Sécurité de transport avec authentification de base](../../../../docs/framework/wcf/feature-details/transport-security-with-basic-authentication.md)  
  L'application autorise les clients à se connecter à l'aide de l'authentification personnalisée.  
@@ -47,7 +35,7 @@ Les rubriques de cette section présentent un certain nombre de configurations d
  Présente un client/service sécurisé par un certificat.  
   
  [Sécurité de message avec un client anonyme](../../../../docs/framework/wcf/feature-details/message-security-with-an-anonymous-client.md)  
- Présente un client/service sécurisé par la sécurité de message [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Montre un client et un service sécurisé par la sécurité de message WCF.  
   
  [Sécurité de message avec un client de type Nom d’utilisateur](../../../../docs/framework/wcf/feature-details/message-security-with-a-user-name-client.md)  
  Le client est une application Windows Forms qui autorise les clients à se connecter à l’aide d’un mot de passe et d’un nom d’utilisateur de domaine.  

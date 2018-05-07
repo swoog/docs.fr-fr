@@ -1,31 +1,19 @@
 ---
 title: Sécurisation des clients
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - clients [WCF], security considerations
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
-caps.latest.revision: 22
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7d06df1a9c4ef5a7cb64f71d2f7afc77c41a0e6f
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 34e7a3721fc70b5c418f0e473e09d9dacc8d9f15
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="securing-clients"></a>Sécurisation des clients
-Dans [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], le service dicte les conditions de sécurité pour les clients. Autrement dit, le service spécifie quel mode de sécurité utiliser, et si le client doit fournir ou non une information d'identification. Le processus de la sécurisation d'un client, par conséquent, est simple : utilisez les métadonnées obtenues depuis le service (s'il est publié) et générez un client. Les métadonnées spécifient comment configurer le client. Si le service exige que le client fournisse une information d’identification, vous devez obtenir une information d’identification qui correspond à l’exigence. Cette rubrique décrit en détail le processus. Pour plus d’informations sur la création d’un service sécurisé, consultez [sécurisation des Services](../../../docs/framework/wcf/securing-services.md).  
+Dans Windows Communication Foundation (WCF), le service dicte les exigences de sécurité pour les clients. Autrement dit, le service spécifie quel mode de sécurité utiliser, et si le client doit fournir ou non une information d'identification. Le processus de la sécurisation d'un client, par conséquent, est simple : utilisez les métadonnées obtenues depuis le service (s'il est publié) et générez un client. Les métadonnées spécifient comment configurer le client. Si le service exige que le client fournisse une information d’identification, vous devez obtenir une information d’identification qui correspond à l’exigence. Cette rubrique décrit en détail le processus. Pour plus d’informations sur la création d’un service sécurisé, consultez [sécurisation des Services](../../../docs/framework/wcf/securing-services.md).  
   
 ## <a name="the-service-specifies-security"></a>Le service spécifie la sécurité  
  Par défaut, les fonctionnalités de sécurité des liaisons [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] sont activées. (Exception : <xref:System.ServiceModel.BasicHttpBinding>.) Par conséquent, si le service a été créé à l'aide de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], il est plus probable qu'il implémente la sécurité pour garantir l'identification, la confidentialité et l'intégrité. Dans ce cas, les métadonnées que le service fournit indiqueront ce qu'il faut pour établir un canal de communication sécurisé. Si les métadonnées du service n'incluent pas de conditions de sécurité, il n'y a aucun moyen d'imposer une méthode de sécurité, telle que SSL (Secure Sockets Layer) sur HTTP, sur un service. Toutefois, si le service exige que le client fournisse une information d'identification, le développeur, le responsable du déploiement ou l'administrateur client doit fournir l'information d'identification réelle que le client utilisera pour s'identifier auprès du service.  

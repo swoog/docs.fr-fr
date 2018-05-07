@@ -1,24 +1,12 @@
 ---
-title: "Gestion des autorisations avec les procédures stockées dans SQL Server"
-ms.custom: 
+title: Gestion des autorisations avec les procédures stockées dans SQL Server
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 08fa34e8-2ffa-470d-ba62-e511a5f8558e
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 38bdc4d41e4b42f2dccaf059d84f6b8b45967ff5
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 2472481156f44b55726243e9d939522e46796070
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="managing-permissions-with-stored-procedures-in-sql-server"></a>Gestion des autorisations avec les procédures stockées dans SQL Server
 Une méthode pour créer plusieurs lignes de défense autour de votre base de données consiste à implémenter tous les accès aux données à l'aide de procédures stockées ou de fonctions définies par l'utilisateur. Vous révoquez ou refusez toutes les autorisations sur les objets sous-jacents, tels que les tables, et accordez les autorisations EXECUTE sur les procédures stockées De cette manière, vous créez un périmètre de sécurité autour vos objets de données et de base de données.  

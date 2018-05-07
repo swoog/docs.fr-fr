@@ -1,31 +1,17 @@
 ---
-title: "Comment : répondre aux modifications de jeu de polices dans une application Windows Forms"
-ms.custom: 
+title: 'Comment : répondre aux modifications de jeu de polices dans une application Windows Forms'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - Windows Forms, font scheme changes
 ms.assetid: 4db27702-22e7-43bf-a07d-9a004549853c
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: aac8d56c87ff03b313565a3d04cd3f3cc4e85f72
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 455609ea602f450803718f5be34618b087560d21
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-respond-to-font-scheme-changes-in-a-windows-forms-application"></a>Comment : répondre aux modifications de jeu de polices dans une application Windows Forms
 Dans les systèmes d’exploitation Windows, un utilisateur peut modifier les paramètres de police de l’échelle du système pour que la police par défaut s’affiche plus ou moins volumineux. La modification de ces paramètres de police est critique pour les utilisateurs malvoyants et requièrent un type plus grand lire le texte à l’écran. Vous pouvez ajuster votre application Windows Forms pour réagir à ces modifications en augmentant ou en réduisant la taille du formulaire et tous ses chaque fois que le jeu de polices change. Si vous souhaitez que votre formulaire pour prendre en compte les modifications dans les tailles de police dynamiquement, vous pouvez ajouter le code à votre formulaire.  

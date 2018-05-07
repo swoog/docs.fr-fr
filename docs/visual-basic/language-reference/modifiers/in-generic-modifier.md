@@ -1,29 +1,22 @@
 ---
 title: In (modificateur générique) (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.VarianceIn
 helpviewer_keywords:
 - contravariance, In keyword [Visual Basic]
 - In keyword [Visual Basic]
 ms.assetid: 59bb13c5-fe96-42b8-8286-86293d1661c5
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 83e9aab4fc361754cfd750ae68f04b36dce13d0a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d1d9209cd583ac96ece59660ad29c76a66d3395a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="in-generic-modifier-visual-basic"></a>In (modificateur générique) (Visual Basic)
 Pour les paramètres de type générique, le mot clé `In` spécifie que le paramètre de type est contravariant.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La contravariance permet d’utiliser un type moins dérivé que celui spécifié par le paramètre générique. Cela permet la conversion implicite des classes qui implémentent des interfaces variantes, ainsi que la conversion implicite des types délégués.  
   
  Pour plus d’informations, consultez [Covariance et contravariance](../../programming-guide/concepts/covariance-contravariance/index.md).  
@@ -31,7 +24,7 @@ Pour les paramètres de type générique, le mot clé `In` spécifie que le para
 ## <a name="rules"></a>Règles  
  Vous pouvez utiliser le mot clé `In` dans les interfaces et délégués génériques.  
   
- Un paramètre de type peut être déclaré contravariant dans une interface générique ou un délégué si elle est utilisée uniquement en tant que type d’arguments de méthode et pas utilisé comme type de retour de méthode. `ByRef`les paramètres ne peuvent pas être covariants ou contravariants.  
+ Un paramètre de type peut être déclaré contravariant dans une interface générique ou un délégué si elle est utilisée uniquement en tant que type d’arguments de méthode et pas utilisé comme type de retour de méthode. `ByRef` les paramètres ne peuvent pas être covariants ou contravariants.  
   
  Covariance et contravariance sont pris en charge pour les types référence et non pris en charge pour les types valeur.  
   

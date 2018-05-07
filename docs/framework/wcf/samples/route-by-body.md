@@ -1,24 +1,12 @@
 ---
 title: Route by Body
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 07a6fc3b-c360-42e0-b663-3d0f22cf4502
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: defd3a3e9df273739aaf3440fd34fad2cad44cd4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e9a0c947a1dd7ac2a6c7af74baaa072aae67358c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="route-by-body"></a>Route by Body
 Cet exemple montre comment implémenter un service qui accepte des objets de message avec toute action SOAP. Cet exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md) qui implémente un service de calculatrice. Le service implémente une opération `Calculate` unique qui accepte un paramètre de demande <xref:System.ServiceModel.Channels.Message> et retourne une réponse <xref:System.ServiceModel.Channels.Message>.  
@@ -28,7 +16,7 @@ Cet exemple montre comment implémenter un service qui accepte des objets de mes
 > [!NOTE]
 >  La procédure d'installation ainsi que les instructions de génération relatives à cet exemple figurent à la fin de cette rubrique.  
   
- L'exemple illustre la distribution des messages selon le contenu du corps. Le modèle de service [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] intégré de distribution des messages est basé sur les actions de message. Toutefois, il existe de nombreux services Web qui définissent toutes leurs opérations avec l'action="". Il est impossible de générer un service reposant sur WSDL qui continue à distribuer des messages de demande selon les informations d'action. Cet exemple montre un contrat de service basé sur WSDL (WSDL est contenu dans Service.wsdl, lui-même inclus dans l'exemple). Le contrat de service est la Calculatrice, similaire à celui utilisé dans [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md). Toutefois, le `[OperationContract]` spécifie `Action=""` pour toutes les opérations.  
+ L'exemple illustre la distribution des messages selon le contenu du corps. Le mécanisme de distribution message intégré Windows Communication Foundation (WCF) service modèle est basé sur les Actions de message. Toutefois, il existe de nombreux services Web qui définissent toutes leurs opérations avec l'action="". Il est impossible de générer un service reposant sur WSDL qui continue à distribuer des messages de demande selon les informations d'action. Cet exemple montre un contrat de service basé sur WSDL (WSDL est contenu dans Service.wsdl, lui-même inclus dans l'exemple). Le contrat de service est la Calculatrice, similaire à celui utilisé dans [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md). Toutefois, le `[OperationContract]` spécifie `Action=""` pour toutes les opérations.  
   
 ```  
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples"),    
@@ -80,7 +68,7 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à la page [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les exemples [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Interop\RouteByBody`  
   

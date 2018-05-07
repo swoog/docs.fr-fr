@@ -1,13 +1,6 @@
 ---
-title: "Vue d'ensemble de la peinture avec des couleurs unies ou des dégradés"
-ms.custom: 
+title: Vue d'ensemble de la peinture avec des couleurs unies ou des dégradés
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - solid colors [WPF], painting with
 - painting with gradients [WPF]
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - brushes [WPF], painting with gradients
 - painting with solid colors [WPF]
 ms.assetid: f5b182f3-c5c7-4cbe-9f2f-65e690d08255
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bb71a1ae52b35b421474954410869f20fa004eb7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cea4b2dbd17178a6943b0f4a84182e65232330fb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="painting-with-solid-colors-and-gradients-overview"></a>Vue d'ensemble de la peinture avec des couleurs unies ou des dégradés
 Cette rubrique explique comment utiliser <xref:System.Windows.Media.SolidColorBrush>, <xref:System.Windows.Media.LinearGradientBrush>, et <xref:System.Windows.Media.RadialGradientBrush> objets à peindre avec des couleurs unies, des dégradés linéaires et des dégradés radiaux.  
@@ -44,7 +32,7 @@ Cette rubrique explique comment utiliser <xref:System.Windows.Media.SolidColorBr
   
      [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushNamedColor1XAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushnamedcolor1xaml)]  
   
--   Choisissez une couleur dans la palette de couleurs 32 bits en spécifiant les quantités de rouge, de vert et de bleu à combiner en une seule couleur unie.  Le format pour spécifier une couleur de la palette 32 bits est « *#rrggbb* », où *rr* est un nombre hexadécimal à deux chiffres spécifiant la quantité relative de rouge, où *gg* spécifie la quantité de vert et où *bb* spécifie la quantité de bleu.  En outre, la couleur peut être spécifiée sous la forme « #*aarrggbb* » où *aa* spécifie la valeur *alpha*, ou transparence, de la couleur. Cette approche vous permet de créer des couleurs qui sont partiellement transparentes.  Dans l’exemple suivant, la <xref:System.Windows.Controls.Control.Background%2A> d’un <xref:System.Windows.Controls.Button> est défini sur rouge entièrement opaque à l’aide de la notation hexadécimale.  
+-   Choisissez une couleur dans la palette de couleurs 32 bits en spécifiant les quantités de rouge, de vert et de bleu à combiner en une seule couleur unie.  Le format pour spécifier une couleur de la palette 32 bits est «  *#rrggbb* », où *rr* est un nombre hexadécimal à deux chiffres spécifiant la quantité relative de rouge, où *gg* spécifie la quantité de vert et où *bb* spécifie la quantité de bleu.  En outre, la couleur peut être spécifiée sous la forme « #*aarrggbb* » où *aa* spécifie la valeur *alpha*, ou transparence, de la couleur. Cette approche vous permet de créer des couleurs qui sont partiellement transparentes.  Dans l’exemple suivant, la <xref:System.Windows.Controls.Control.Background%2A> d’un <xref:System.Windows.Controls.Button> est défini sur rouge entièrement opaque à l’aide de la notation hexadécimale.  
   
      [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushHex1XAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushhex1xaml)]  
   
@@ -74,7 +62,7 @@ Cette rubrique explique comment utiliser <xref:System.Windows.Media.SolidColorBr
   
 <a name="gradient"></a>   
 ## <a name="painting-an-area-with-a-gradient"></a>Peindre une zone avec un dégradé  
- Un pinceau de dégradé peint une zone avec plusieurs couleurs qui se mélangent le long d’un axe. Vous pouvez les utiliser pour créer des impressions de lumière et d’ombre et ainsi donner à vos contrôles une apparence 3D. Vous pouvez également les utiliser pour simuler le verre, le chrome, l’eau et d’autres surfaces lisses.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]fournit deux types de pinceaux de dégradé : <xref:System.Windows.Media.LinearGradientBrush> et <xref:System.Windows.Media.RadialGradientBrush>.  
+ Un pinceau de dégradé peint une zone avec plusieurs couleurs qui se mélangent le long d’un axe. Vous pouvez les utiliser pour créer des impressions de lumière et d’ombre et ainsi donner à vos contrôles une apparence 3D. Vous pouvez également les utiliser pour simuler le verre, le chrome, l’eau et d’autres surfaces lisses.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fournit deux types de pinceaux de dégradé : <xref:System.Windows.Media.LinearGradientBrush> et <xref:System.Windows.Media.RadialGradientBrush>.  
   
 <a name="lineargradientbrush"></a>   
 ## <a name="linear-gradients"></a>Dégradés linéaires  

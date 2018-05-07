@@ -1,12 +1,6 @@
 ---
-title: "Paramètres facultatifs (Visual Basic)"
-ms.custom: 
+title: Paramètres facultatifs (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - parameters [Visual Basic], optional
 - Visual Basic code, procedures
@@ -18,14 +12,11 @@ helpviewer_keywords:
 - arguments [Visual Basic], optional
 - optional arguments [Visual Basic], and named arguments
 ms.assetid: 398d2845-1069-4e94-b934-a73b545c8b87
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: e57023f594cfe4cd79d59cc8541fcf18018de0ee
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a438455668310769c5267a6d42a2e694bb7b01dc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="optional-parameters-visual-basic"></a>Paramètres facultatifs (Visual Basic)
 Vous pouvez spécifier qu’un paramètre de procédure est facultatif et qu’il n’est pas nécessaire de fournir un argument lorsque la procédure est appelée. *Paramètres facultatifs* sont indiquées par le `Optional` mot clé dans la définition de procédure. Les règles suivantes s'appliquent :  
@@ -43,9 +34,9 @@ Sub name(ByVal parameter1 As datatype1, Optional ByVal parameter2 As datatype2 =
 ```  
   
 ## <a name="calling-procedures-with-optional-parameters"></a>Appel de procédures à l'aide de paramètres facultatifs  
- Lorsque vous appelez une procédure à l'aide d'un paramètre facultatif, vous pouvez choisir de fournir l'argument ou non. Dans le cas contraire, la procédure utilise la valeur par défaut déclarée pour ce paramètre.  
+ Lorsque vous appelez une procédure à l’aide d’un paramètre facultatif, vous pouvez choisir de fournir l’argument ou non. Dans le cas contraire, la procédure utilise la valeur par défaut déclarée pour ce paramètre.  
   
- Pour omettre un ou plusieurs arguments facultatifs dans la liste des arguments, utilisez des virgules successives afin de marquer leurs positions. L'exemple d'appel suivant fournit le premier et le quatrième argument, mais pas le deuxième ni le troisième :  
+ Pour omettre un ou plusieurs arguments facultatifs dans la liste des arguments, utilisez des virgules successives afin de marquer leurs positions. L’exemple d’appel suivant fournit le premier et le quatrième argument, mais pas le deuxième ni le troisième :  
   
 ```vb  
 Sub name(argument 1, , , argument 4)  
@@ -53,7 +44,7 @@ Sub name(argument 1, , , argument 4)
   
  L'exemple suivant effectue plusieurs appels à la fonction `MsgBox`. `MsgBox` comporte un paramètre obligatoire et deux paramètres facultatifs.  
   
- Le premier appel à `MsgBox` fournit les trois arguments dans l'ordre dans lequel `MsgBox` les définit. Le deuxième appel fournit uniquement l'argument requis. Le troisième et le quatrième appel fournissent le premier et le troisième argument. Le troisième appel le fait par position et le quatrième appel le fait par nom.  
+ Le premier appel à `MsgBox` fournit les trois arguments dans l'ordre dans lequel `MsgBox` les définit. Le deuxième appel fournit uniquement l’argument requis. Le troisième et le quatrième appel fournissent le premier et le troisième argument. Le troisième appel le fait par position et le quatrième appel le fait par nom.  
   
  [!code-vb[VbVbcnProcedures#47](./codesnippet/VisualBasic/optional-parameters_1.vb)]  
   

@@ -1,27 +1,15 @@
 ---
 title: Operation Formatter and Operation Selector
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1c27e9fe-11f8-4377-8140-828207b98a0e
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a10be10687f03b5de45846faa9ca832ead193e19
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 469b7f2c99652cb6fceb2e8f12f1c74f0140b5ec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="operation-formatter-and-operation-selector"></a>Operation Formatter and Operation Selector
-Cet exemple montre comment les points d'extensibilité [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] peuvent être utilisés pour autoriser l'utilisation des données de message dans un format différent de celui que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] attend. Par défaut, les formateurs [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] s'attendent à ce que des paramètres de méthode soient inclus sous l'élément `soap:body`. L'exemple montre comment implémenter à la place un formateur d'opération personnalisé qui analyse les données de paramètre d'une chaîne de requête HTTP GET chaîne et appelle des méthodes à l'aide de ces données.  
+Cet exemple illustre l’utilisation des points d’extensibilité de Windows Communication Foundation (WCF) pour autoriser les données du message dans un format différent de celui que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] attend. Par défaut, les formateurs [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] s'attendent à ce que des paramètres de méthode soient inclus sous l'élément `soap:body`. L'exemple montre comment implémenter à la place un formateur d'opération personnalisé qui analyse les données de paramètre d'une chaîne de requête HTTP GET chaîne et appelle des méthodes à l'aide de ces données.  
   
  L’exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md), qui implémente le `ICalculator` contrat de service. Il montre comment les messages d'ajout, de soustraction, de multiplication et de division peuvent être modifiés pour utiliser HTTP GET pour les demandes de client à serveur et HTTP POST avec messages POX pour les réponses de serveur à client.  
   
@@ -177,7 +165,7 @@ void ReplaceFormatterBehavior(OperationDescription operationDescription, Endpoin
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à la page [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les exemples [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Formatters\QuieryStringFormatter`  
   

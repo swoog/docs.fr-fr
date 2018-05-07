@@ -1,24 +1,12 @@
 ---
 title: ASP.NET Caching Integration
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f581923a-8a72-42fc-bd6a-46de2aaeecc1
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0d56c435088be383821d17250e230cae848d2bab
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 420ff192caf41a37b6229bf36e32124f3646d69c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="aspnet-caching-integration"></a>ASP.NET Caching Integration
 Cet exemple montre comment utiliser le cache de sortie ASP.NET avec le modèle de programmation HTTP Web WCF. Consultez le [Basic Resource Service](../../../../docs/framework/wcf/samples/basic-resource-service.md) sample pour une version autonome de ce scénario présente l’implémentation de service en profondeur. Cette rubrique met l’accent sur la fonctionnalité d’intégration du cache de sortie ASP.NET.  
@@ -31,12 +19,12 @@ Cet exemple montre comment utiliser le cache de sortie ASP.NET avec le modèle d
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à la page [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les exemples [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\AspNetCachingIntegration`  
   
 ## <a name="discussion"></a>Discussion  
- L'exemple emploie l'<xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> pour utiliser la mise en cache de sortie ASP.NET avec le service [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. L'<xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> est appliqué aux opérations de service et fournit le nom d'un profil de cache dans un fichier de configuration qui doit être appliqué aux réponses de l'opération donnée.  
+ L’exemple utilise le <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> pour utiliser ASP.NET la sortie mise en cache avec le service Windows Communication Foundation (WCF). L'<xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> est appliqué aux opérations de service et fournit le nom d'un profil de cache dans un fichier de configuration qui doit être appliqué aux réponses de l'opération donnée.  
   
  Dans le fichier Service.cs de l’exemple de projet de Service, à la fois le `GetCustomer` et `GetCustomers` opérations sont marquées avec le <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>, qui fournit le nom de profil de cache « CacheFor60Seconds ». Dans le fichier Web.config du projet de Service, le profil de cache « CacheFor60Seconds » est fourni sous la <`caching`> élément de <`system.web`>. Pour ce profil de cache, la valeur de la `duration` attribut étant « 60 », les réponses associées à ce profil sont mises en cache dans le cache de sortie ASP.NET pendant 60 secondes. En outre, pour ce profil de cache, le `varmByParam` attribut est défini sur « format » demande avec des valeurs différentes pour le `format` requête paramètre de chaîne ont leurs réponses mises en cache séparément. D’Enfin, le profil de cache `varyByHeader` attribut est défini sur « Accepter », pour que les demandes avec différentes valeurs d’en-tête Accept aient leurs réponses mises en cache séparément.  
   

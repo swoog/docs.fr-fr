@@ -1,30 +1,18 @@
 ---
-title: "Comment le modèle objet Syndication WCF est mappé à Atom et RSS"
-ms.custom: 
+title: Comment le modèle objet Syndication WCF est mappé à Atom et RSS
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0365eb37-98cc-4b13-80fb-f1e78847a748
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 01030ed226a5cdc384db56933325d7c4eeade989
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7baf77b4923cff4320d657b3024ab2a286e40c2b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-the-wcf-syndication-object-model-maps-to-atom-and-rss"></a>Comment le modèle objet Syndication WCF est mappé à Atom et RSS
-Lorsque vous développez un service de syndication [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], vous créez des flux et des éléments à l'aide des classes suivantes :  
+Lors du développement d’un service de syndication de Windows Communication Foundation (WCF), vous créez des flux et des éléments à l’aide des classes suivantes :  
   
 -   <xref:System.ServiceModel.Syndication.SyndicationFeed>  
   
@@ -42,9 +30,9 @@ Lorsque vous développez un service de syndication [!INCLUDE[indigo1](../../../.
   
 -   <xref:System.ServiceModel.Syndication.XmlSyndicationContent>  
   
- <xref:System.ServiceModel.Syndication.SyndicationFeed> peut être sérialisé dans n'importe quel format de syndication pour lequel un formateur est défini. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] est fourni avec deux formateurs : <xref:System.ServiceModel.Syndication.Atom10FeedFormatter> et <xref:System.ServiceModel.Syndication.Rss20FeedFormatter>.  
+ <xref:System.ServiceModel.Syndication.SyndicationFeed> peut être sérialisé dans n'importe quel format de syndication pour lequel un formateur est défini. WCF est fourni avec deux formateurs : <xref:System.ServiceModel.Syndication.Atom10FeedFormatter> et <xref:System.ServiceModel.Syndication.Rss20FeedFormatter>.  
   
- Le modèle objet autour de <xref:System.ServiceModel.Syndication.SyndicationFeed> et <xref:System.ServiceModel.Syndication.SyndicationItem> est aligné plus étroitement avec la spécification Atom 1.0 que la spécification RSS 2.0. En effet, Atom 1.0 est une spécification plus substantielle qui définit des éléments qui sont ambigus ou omis de la spécification RSS 2.0. De ce fait, de nombreux éléments dans le modèle objet de syndication [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] n'ont aucune représentation directe dans la spécification RSS 2.0. Lors de la sérialisation des objets <xref:System.ServiceModel.Syndication.SyndicationFeed> et <xref:System.ServiceModel.Syndication.SyndicationItem> dans RSS 2.0, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] vous permet de sérialiser des éléments de données spécifiques à Atom sous la forme d'éléments d'extension qualifiés par un espace de noms qui se conforment à la spécification Atom. Vous pouvez contrôler cette opération avec un paramètre passé au constructeur <xref:System.ServiceModel.Syndication.Rss20FeedFormatter>.  
+ Le modèle objet autour de <xref:System.ServiceModel.Syndication.SyndicationFeed> et <xref:System.ServiceModel.Syndication.SyndicationItem> est aligné plus étroitement avec la spécification Atom 1.0 que la spécification RSS 2.0. En effet, Atom 1.0 est une spécification plus substantielle qui définit des éléments qui sont ambigus ou omis de la spécification RSS 2.0. Pour cette raison, le nombre d’éléments dans le modèle objet de syndication WCF ont aucune représentation directe dans la spécification RSS 2.0. Lors de la sérialisation <xref:System.ServiceModel.Syndication.SyndicationFeed> et <xref:System.ServiceModel.Syndication.SyndicationItem> d’objets en RSS 2.0, WCF vous permet de sérialiser des éléments de données spécifiques à Atom sous la forme d’éléments d’extension qualifiés par un espace de noms qui se conforment à la spécification Atom. Vous pouvez contrôler cette opération avec un paramètre passé au constructeur <xref:System.ServiceModel.Syndication.Rss20FeedFormatter>.  
   
  Les exemples de code dans cette rubrique utilisent une des deux méthodes définies dans cette section pour effectuer la sérialisation à proprement dite.  
   

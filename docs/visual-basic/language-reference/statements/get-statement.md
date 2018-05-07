@@ -1,12 +1,6 @@
 ---
 title: Get, instruction
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Get
 helpviewer_keywords:
@@ -17,14 +11,11 @@ helpviewer_keywords:
 - Get keyword [Visual Basic]
 - property procedures [Visual Basic], Get statements
 ms.assetid: 56b05cdc-bd64-4dfd-bb12-824eacec6f94
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c1ff062a5e3bf41794bd5b4c90f1e188d6d97480
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d6a6fdfd191de76871619dea3bd1794b487698aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="get-statement"></a>Get, instruction
 Déclare un `Get` procédure de propriété utilisée pour récupérer la valeur d’une propriété.  
@@ -46,7 +37,7 @@ End Get
 |`statements`|Facultatif. Une ou plusieurs instructions qui s’exécutent lorsque le `Get` procédure de propriété est appelée.|  
 |`End Get`|Obligatoire. Termine la définition de la `Get` procédure de propriété.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Chaque propriété doit avoir un `Get` procédure de propriété, sauf si la propriété est marquée `WriteOnly`. Le `Get` procédure est utilisée pour retourner la valeur actuelle de la propriété.  
   
  Visual Basic appelle automatiquement d’une propriété `Get` procédure lorsqu’une expression demande la valeur de propriété.  
@@ -69,7 +60,7 @@ End Get
   
 -   **Retour d’une procédure.** Lorsque le `Get` procédure retourne au code appelant, l’exécution se poursuit au sein de l’instruction qui a demandé la valeur de propriété.  
   
-     `Get`procédures de propriété peuvent retourner une valeur en utilisant le [instruction Return](../../../visual-basic/language-reference/statements/return-statement.md) ou en affectant la valeur de retour au nom de propriété. Pour plus d’informations, consultez « Valeur de retour » dans [Function, instruction](../../../visual-basic/language-reference/statements/function-statement.md).  
+     `Get` procédures de propriété peuvent retourner une valeur en utilisant le [instruction Return](../../../visual-basic/language-reference/statements/return-statement.md) ou en affectant la valeur de retour au nom de propriété. Pour plus d’informations, consultez « Valeur de retour » dans [Function, instruction](../../../visual-basic/language-reference/statements/function-statement.md).  
   
      Le `Exit Property` et `Return` instructions provoquent la sortie immédiate d’une procédure de propriété. Un nombre quelconque de `Exit Property` et `Return` instructions peuvent apparaître n’importe où dans la procédure, et vous pouvez mélanger `Exit Property` et `Return` instructions.  
   

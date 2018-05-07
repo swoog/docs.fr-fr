@@ -1,36 +1,22 @@
 ---
 title: Utilisation des certificats
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-caps.latest.revision: 26
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3c023b27ace10919c51aa13e2635040d9d5b812b
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: f5566eacaabb5d3eb5579d015fad8149a2ed4f3c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="working-with-certificates"></a>Utilisation des certificats
-Dans le cadre de la programmation de la sécurité [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], les certificats numériques X.509 sont fréquemment utilisés pour authentifier les clients et les serveurs, chiffrer les messages et signer numériquement ces derniers. Cette rubrique contient des explications sur les fonctionnalités de certificat numérique X.509 ainsi que des instructions permettant de les utiliser dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Elle renvoie également à d'autres rubriques qui abordent plus en détail ces différents concepts ou contiennent des instructions permettant d'effectuer des tâches courantes à l'aide de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] et des certificats.  
+Pour programmer la sécurité de Windows Communication Foundation (WCF), les certificats numériques X.509 sont couramment utilisés pour authentifier les clients et serveurs, chiffrer et signer numériquement les messages. Cette rubrique explique les fonctionnalités de certificat numérique X.509 et comment les utiliser dans WCF brièvement et inclut des liens vers des rubriques qui expliquent ces concepts davantage ou qui montrent comment accomplir des tâches courantes à l’aide de WCF et les certificats.  
   
- En bref, un certificat numérique fait partie d’un *infrastructure à clé publique* (PKI), qui est un système de certificats numériques, d’autorités de certification et d’autres autorités d’immatriculation qui vérifient et authentifient la validité de chaque partie impliquée dans une transaction électronique via l’utilisation du chiffrement à clé publique. Une autorité de certification émet des certificats et de chaque certificat possède un ensemble de champs qui contiennent des données, tels que *sujet* (l’entité à laquelle le certificat est émis), dates de validité (lorsque le certificat est valid), l’émetteur (le entité qui a émis le certificat) et une clé publique. Dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], chacune de ces propriétés est traitée comme une revendication <xref:System.IdentityModel.Claims.Claim>, chaque revendication étant divisée en deux types supplémentaires : identité et droits. Pour plus d’informations sur la norme X.509 certificats Voir [des certificats de clé publique X.509](http://go.microsoft.com/fwlink/?LinkId=209952)pour plus d’informations sur les revendications et l’autorisation de voir WCF [la gestion des revendications et autorisation avec le modèle d’identité](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md). Pour plus d’informations sur l’implémentation d’une infrastructure à clé publique, consultez [Windows Server 2008 R2 - Services de certificats](http://go.microsoft.com/fwlink/?LinkId=209949).  
+ En bref, un certificat numérique fait partie d’un *infrastructure à clé publique* (PKI), qui est un système de certificats numériques, d’autorités de certification et d’autres autorités d’immatriculation qui vérifient et authentifient la validité de chaque partie impliquée dans une transaction électronique via l’utilisation du chiffrement à clé publique. Une autorité de certification émet des certificats et de chaque certificat possède un ensemble de champs qui contiennent des données, tels que *sujet* (l’entité à laquelle le certificat est émis), dates de validité (lorsque le certificat est valid), l’émetteur (le entité qui a émis le certificat) et une clé publique. Dans WCF, chacune de ces propriétés est traité comme un <xref:System.IdentityModel.Claims.Claim>, et chaque revendication étant divisée en deux types : identité et droite. Pour plus d’informations sur la norme X.509 certificats Voir [des certificats de clé publique X.509](http://go.microsoft.com/fwlink/?LinkId=209952)pour plus d’informations sur les revendications et l’autorisation de voir WCF [la gestion des revendications et autorisation avec le modèle d’identité](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md). Pour plus d’informations sur l’implémentation d’une infrastructure à clé publique, consultez [Windows Server 2008 R2 - Services de certificats](http://go.microsoft.com/fwlink/?LinkId=209949).  
   
  La principale fonction d'un certificat consiste à authentifier l'identité du propriétaire du certificat auprès des autres parties. Un certificat contient la *clé publique* du propriétaire, tandis que le propriétaire conserve la clé privée. Les clés publiques peuvent être utilisées pour chiffrer les messages envoyés au propriétaire du certificat. Cependant, seul le propriétaire de la clé privée pourra déchiffrer ces messages.  
   
@@ -46,7 +32,7 @@ Dans le cadre de la programmation de la sécurité [!INCLUDE[indigo1](../../../.
   
 -   **Le magasin de l’utilisateur actuel**. Les applications interactives stockent en principe les certificats à cet emplacement pour l'utilisateur en train d'utiliser l'ordinateur. Si vous créer des applications clientes, c'est également l'emplacement que vous utiliserez en principe pour stocker les certificats qui authentifient les utilisateurs auprès des services.  
   
- Ces deux magasins sont divisés en sous-magasins. Les plus importants d'entre eux lors de la programmation avec [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sont notamment :  
+ Ces deux magasins sont divisés en sous-magasins. Le plus important lorsque la programmation avec WCF incluent :  
   
 -   **Autorités de Certification racine**. Vous pouvez utiliser les certificats stockés dans ce magasin pour créer une chaîne de certificats, dont l'origine remontera à un certificat d'autorité de certification figurant dans ce magasin.  
   
@@ -99,7 +85,7 @@ Dans le cadre de la programmation de la sécurité [!INCLUDE[indigo1](../../../.
  Lorsque vous créez un authentificateur personnalisé, la méthode la plus importante à substituer correspond à la méthode <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%2A>. Pour obtenir un exemple d’authentification personnalisée, consultez le [validateur de certificat X.509](../../../../docs/framework/wcf/samples/x-509-certificate-validator.md) exemple. Pour plus d’informations, consultez [informations d’identification personnalisées et Validation des informations d’identification](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md).  
   
 ## <a name="using-makecertexe-to-build-a-certificate-chain"></a>Utilisation de l'outil Makecert.exe pour construire une chaîne de certificat  
- L'outil de création de certificat (Makecert.exe) crée des certificats X.509 ainsi que des paires de clés publique/privée. Vous pouvez enregistre les clés privées sur votre disque, puis les utiliser pour émettre et signer de nouveaux certificats, instaurant ainsi une hiérarchie de certificats sous forme de chaîne. Cet outil est conçu uniquement pour vous assister lors du développement des services et ne doit en aucun cas être utilisé pour créer des certificats devant être effectivement déployés. Lorsque vous développez un service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], effectuez les étapes suivantes afin de construire une chaîne d'approbation à l'aide de l'outil Makecert.exe.  
+ L'outil de création de certificat (Makecert.exe) crée des certificats X.509 ainsi que des paires de clés publique/privée. Vous pouvez enregistre les clés privées sur votre disque, puis les utiliser pour émettre et signer de nouveaux certificats, instaurant ainsi une hiérarchie de certificats sous forme de chaîne. Cet outil est conçu uniquement pour vous assister lors du développement des services et ne doit en aucun cas être utilisé pour créer des certificats devant être effectivement déployés. Lorsque vous développez un service WCF, procédez comme suit pour générer une chaîne d’approbation avec Makecert.exe.  
   
 #### <a name="to-build-a-chain-of-trust-with-makecertexe"></a>Pour construire une chaîne d'approbation à l'aide de l'outil Makecert.exe  
   
@@ -137,7 +123,7 @@ Dans le cadre de la programmation de la sécurité [!INCLUDE[indigo1](../../../.
  Vous pouvez également définir le mode de configuration à l’aide du `revocationMode` attribut des deux le [ \<authentification >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md) (de la [ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)) et le [ \<authentification >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md) (de la [ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)).  
   
 ## <a name="the-setcertificate-method"></a>Méthode SetCertificate  
- Dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], vous devez fréquemment spécifier le certificat ou l'ensemble de certificats que les services ou clients doivent utiliser pour authentifier, chiffrer ou signer numériquement les messages. Pour ce faire, il vous suffit de rédiger un programme à l'aide de la méthode `SetCertificate` des diverses classes représentant les certificats X.509. Les classes suivantes utilisent la méthode `SetCertificate` pour spécifier un certificat.  
+ Dans WCF, vous devez souvent spécifier un certificat ou l’ensemble de certificats d’un service ou client consiste à utiliser pour s’authentifier, chiffrer ou signer numériquement un message. Pour ce faire, il vous suffit de rédiger un programme à l'aide de la méthode `SetCertificate` des diverses classes représentant les certificats X.509. Les classes suivantes utilisent la méthode `SetCertificate` pour spécifier un certificat.  
   
 |Classe|Méthode|  
 |-----------|------------|  
@@ -179,9 +165,9 @@ Dans le cadre de la programmation de la sécurité [!INCLUDE[indigo1](../../../.
   
  Le mappage d'un certificat X.509 au jeton représentant le compte utilisateur Windows est considéré comme un rehaussement des droits de ce compte. Une fois mappé, le jeton Windows peut en effet être utilisé pour accéder à des ressources protégées. C'est pourquoi la stratégie de domaine spécifie que le certificat X.509 doit être conforme aux règles qu'elle contient avant de pouvoir être mappé. Le *SChannel* package de sécurité applique cette exigence.  
   
- Lorsque vous utilisez le [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] ou version ultérieure, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] s'assure que le certificat se conforme à la stratégie de domaine avant d'être mappé à un compte Windows.  
+ Lorsque vous utilisez [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] ou une version ultérieure, WCF vérifie le certificat se conforme à la stratégie de domaine avant d’être mappé à un compte Windows.  
   
- Dans la première version de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], le mappage du certificat est effectué sans prendre en compte la stratégie de domaine. Par conséquent, avec d’anciennes applications habituées à s’exécuter sous la première mise en production, il est possible que le mappage échoue si la fonctionnalité de mappage est activée et si le certificat X.509 n’est pas conforme à la stratégie de domaine.  
+ Dans la première version de WCF, le mappage est effectué sans prendre en compte la stratégie de domaine. Par conséquent, avec d’anciennes applications habituées à s’exécuter sous la première mise en production, il est possible que le mappage échoue si la fonctionnalité de mappage est activée et si le certificat X.509 n’est pas conforme à la stratégie de domaine.  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.ServiceModel.Channels>  

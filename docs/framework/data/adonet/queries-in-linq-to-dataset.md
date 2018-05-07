@@ -1,27 +1,15 @@
 ---
-title: "Requêtes dans LINQ to DataSet"
-ms.custom: 
+title: Requêtes dans LINQ to DataSet
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c1a78fa8-9f0c-40bc-a372-5575a48708fe
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 7e07da38f7a75226d48ef84cc8d2dafd48f6e795
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: ef9334eec92ef06e5be07dae4391cdac43fed778
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="queries-in-linq-to-dataset"></a>Requêtes dans LINQ to DataSet
 Une requête est une expression qui récupère des données d'une source de données. En général, les requêtes sont exprimées dans un langage de requête spécialisé, tel que SQL pour les bases de données relationnelles et Xquery pour XML. Par conséquent, les développeurs ont dû apprendre un nouveau langage de requête pour chaque type de source de données ou format de données qu'ils interrogent. [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] offre un modèle simplifié et cohérent qui permet d'utiliser des données de types de sources et de formats diversifiés. Dans une requête [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)], vous travaillez toujours avec des objets de programmation.  
@@ -37,7 +25,7 @@ Une requête est une expression qui récupère des données d'une source de donn
  Contrairement aux requêtes différées qui retournent une séquence de valeurs, les requêtes qui retournent une valeur singleton sont exécutées immédiatement. Les requêtes <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Average%2A> et <xref:System.Linq.Enumerable.First%2A> en sont quelques exemples. Elles s'exécutent immédiatement parce que les résultats de la requête sont nécessaires pour calculer le résultat singleton. Par exemple, pour trouver la moyenne des résultats, la requête doit être exécutée pour que la fonction de moyenne dispose de données sur lesquelles effectuer ses calculs. Vous pouvez également utiliser les méthodes <xref:System.Linq.Enumerable.ToList%2A> ou <xref:System.Linq.Enumerable.ToArray%2A> sur une requête pour forcer l'exécution immédiate d'une requête qui ne produit pas de valeur singleton. Ces techniques peuvent être utiles lorsque vous souhaitez mettre en cache les résultats d'une requête. Pour plus d’informations sur l’exécution de requête différée et immédiate, consultez [mise en route de LINQ](http://msdn.microsoft.com/library/6cc9af04-950a-4cc3-83d4-2aeb4abe4de9).  
   
 ## <a name="queries"></a>Requêtes  
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]les requêtes peuvent être formulées dans deux syntaxes différentes : syntaxe d’expression et la syntaxe de requête fondée sur une méthode de requête.  
+ [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] les requêtes peuvent être formulées dans deux syntaxes différentes : syntaxe d’expression et la syntaxe de requête fondée sur une méthode de requête.  
   
 ### <a name="query-expression-syntax"></a>Syntaxe d'expression de requête  
  Les expressions de requête utilisent une syntaxe de requête déclarative. Cette syntaxe permet au développeur d'écrire des requêtes en C# ou Visual Basic dans un format similaire à SQL. En utilisant la syntaxe d'expression de requête, vous pouvez même effectuer des opérations de filtrage, de classement et de regroupement complexes sur des sources de données avec un minimum de code. Pour plus d’informations, consultez [Expressions de requête LINQ](http://msdn.microsoft.com/library/40638f19-fb46-4d26-a2d9-a383b48f5ed4) et [base des opérations de requête (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/linq/basic-query-operations.md).  

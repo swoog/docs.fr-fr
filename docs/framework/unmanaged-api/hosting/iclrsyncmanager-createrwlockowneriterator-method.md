@@ -1,14 +1,6 @@
 ---
-title: "ICLRSyncManager::CreateRWLockOwnerIterator, méthode"
-ms.custom: 
+title: ICLRSyncManager::CreateRWLockOwnerIterator, méthode
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRSyncManager.CreateRWLockOwnerIterator
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: b5535b87-9439-424e-b9b3-7d6fafb9819e
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3f74a15bb58f0ee62b56204e2b145ae64ff7dd59
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: eda20543c28a7b97979463928ce307df9b830103
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrsyncmanagercreaterwlockowneriterator-method"></a>ICLRSyncManager::CreateRWLockOwnerIterator, méthode
 Demande que le common language runtime (CLR) crée un itérateur pour l’hôte à utiliser pour déterminer l’ensemble de tâches attendant un verrou de lecteur-writer.  
@@ -58,13 +46,13 @@ HRESULT CreateRWLockOwnerIterator (
   
 |HRESULT|Description|  
 |-------------|-----------------|  
-|S_OK|`CreateRWLockOwnerIterator`retourné avec succès.|  
+|S_OK|`CreateRWLockOwnerIterator` retourné avec succès.|  
 |HOST_E_CLRNOTAVAILABLE|Le CLR n’a pas été chargé dans un processus ou le CLR est dans un état dans lequel il ne peut pas exécuter du code managé ou traiter l’appel avec succès.|  
 |HOST_E_TIMEOUT|L’appel a expiré.|  
 |HOST_E_NOT_OWNER|L’appelant ne possède pas le verrou.|  
 |HOST_E_ABANDONED|Un événement a été annulé alors qu’un thread bloqué ou une fibre l’attendait.|  
 |E_FAIL|Une défaillance grave et inconnue s’est produite. Lorsqu’une méthode retourne E_FAIL, le CLR n’est plus utilisable dans le processus. Les appels suivants aux méthodes d’hébergement retournent HOST_E_CLRNOTAVAILABLE.|  
-|HOST_E_INVALIDOPERATION|`CreateRWLockOwnerIterator`a été appelé sur un thread en cours d’exécution du code managé.|  
+|HOST_E_INVALIDOPERATION|`CreateRWLockOwnerIterator` a été appelé sur un thread en cours d’exécution du code managé.|  
   
 ## <a name="remarks"></a>Notes  
  Les hôtes appellent généralement la `CreateRWLockOwnerIterator`, `DeleteRWLockOwnerIterator`, et `GetRWLockOwnerNext` méthodes lors de la détection de blocage. L’hôte est chargé de s’assurer que le verrou de lecteur-writer est toujours valide, car le CLR n’effectue aucune tentative afin de maintenir le verrou de lecteur-writer. Plusieurs stratégies sont disponibles pour l’ordinateur hôte garantir la validité du verrou :  
@@ -74,16 +62,16 @@ HRESULT CreateRWLockOwnerIterator (
 -   L’hôte peut empêcher la sortie d’attendre l’objet d’événement associé au verrou de lecteur-writer, à nouveau vous être assuré que ce bloc ne provoque pas d’interblocage.  
   
 > [!NOTE]
->  `CreateRWLockOwnerIterator`doit être appelé uniquement sur des threads qui exécutent du code non managé.  
+>  `CreateRWLockOwnerIterator` doit être appelé uniquement sur des threads qui exécutent du code non managé.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** MSCorEE.h  
   
  **Bibliothèque :** inclus en tant que ressource dans MSCorEE.dll  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [ICLRSyncManager, interface](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)  

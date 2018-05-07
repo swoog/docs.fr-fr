@@ -1,34 +1,20 @@
 ---
-title: "Comment : implémenter PriorityBinding"
-ms.custom: 
+title: 'Comment : implémenter PriorityBinding'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - data binding [WPF], PriorityBinding class
 ms.assetid: d63b65ab-b3e9-4322-9aa8-1450f8d89532
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0e6ab8826f2298a8660a85d739fbe3456374b476
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: cf0ed5c2b55358d3a583ac89e307b23b3ab08a9a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-implement-prioritybinding"></a>Comment : implémenter PriorityBinding
-<xref:System.Windows.Data.PriorityBinding>dans [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fonctionne en spécifiant une liste de liaisons. La liste de liaisons est classée de priorité la plus élevée à la priorité la plus faible. Si la liaison de priorité la plus élevée retourne une valeur avec succès lorsqu’il est traité puis il est jamais nécessaire pour traiter les autres liaisons dans la liste. Il peut être le cas de la liaison de priorité la plus élevée prend beaucoup de temps à évaluer, la priorité la plus élevée suivante qui retourne une valeur avec succès est utilisée jusqu'à ce qu’une liaison d’une priorité plus élevée retourne une valeur avec succès.  
+<xref:System.Windows.Data.PriorityBinding> dans [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fonctionne en spécifiant une liste de liaisons. La liste de liaisons est classée de priorité la plus élevée à la priorité la plus faible. Si la liaison de priorité la plus élevée retourne une valeur avec succès lorsqu’il est traité puis il est jamais nécessaire pour traiter les autres liaisons dans la liste. Il peut être le cas de la liaison de priorité la plus élevée prend beaucoup de temps à évaluer, la priorité la plus élevée suivante qui retourne une valeur avec succès est utilisée jusqu'à ce qu’une liaison d’une priorité plus élevée retourne une valeur avec succès.  
   
 ## <a name="example"></a>Exemple  
  Pour illustrer comment <xref:System.Windows.Data.PriorityBinding> fonctionne, le `AsyncDataSource` objet a été créé avec les trois propriétés suivantes : `FastDP`, `SlowerDP`, et `SlowestDP`.  
@@ -40,7 +26,7 @@ ms.lasthandoff: 01/19/2018
  L’accesseur get de `SlowestDP` attend 5 secondes avant de retourner la valeur de la `_slowestDP` membre de données.  
   
 > [!NOTE]
->  Cet exemple est uniquement à des fins de démonstration. Le [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] recommandé par rapport à la définition des propriétés qui sont beaucoup plus lente qu’un ensemble de champs. Pour plus d’informations, consultez [NIB : choix entre les propriétés et méthodes](http://msdn.microsoft.com/library/55825e8f-7e2e-448a-9505-7217cc91b1af).  
+>  L’exemple est uniquement fourni à des fins de démonstration. Le [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] recommandé par rapport à la définition des propriétés qui sont beaucoup plus lente qu’un ensemble de champs. Pour plus d’informations, consultez [NIB : choix entre les propriétés et méthodes](http://msdn.microsoft.com/library/55825e8f-7e2e-448a-9505-7217cc91b1af).  
   
  [!code-csharp[PriorityBinding#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PriorityBinding/CSharp/Window1.xaml.cs#1)]
  [!code-vb[PriorityBinding#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PriorityBinding/VisualBasic/AsyncDataSource.vb#1)]  
