@@ -1,24 +1,12 @@
 ---
-title: "Collections de schémas SQL Server"
-ms.custom: 
+title: Collections de schémas SQL Server
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c6403cc3-d78b-4f85-bab1-ada7a3446ec5
-caps.latest.revision: "5"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e95c6dc6bceb367000f4aa174a368bf046bc1b93
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 248e5f4caf47f09742358240fa43f46169f0b1e5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sql-server-schema-collections"></a>Collections de schémas SQL Server
 Le fournisseur de données Microsoft .NET Framework pour SQL Server prend en charge d’autres collections de schémas en plus des collections de schémas courantes. Les collections de schémas varient légèrement selon la version de SQL Server que vous utilisez. Pour déterminer la liste des collections de schémas prises en charge, appelez le **GetSchema** méthode sans argument ou avec le nom de collection de schémas « MetaDataCollections ». Cette opération retourne un <xref:System.Data.DataTable> avec une liste des collections de schémas prises en charge, le nombre de restrictions qu'elles prennent en charge et le nombre d'éléments d'identification qu'elles utilisent.  
@@ -62,7 +50,7 @@ Le fournisseur de données Microsoft .NET Framework pour SQL Server prend en cha
   
 |Nom de colonne|Type de données|Description|  
 |----------------|--------------|-----------------|  
-|type_desc|Chaîne|Le type de l'index est l'un des suivants :<br /><br /> -HEAP<br />-EN CLUSTER<br />-NON ORDONNÉS EN CLUSTERS<br />-   XML<br />-   SPATIAL|  
+|type_desc|Chaîne|Le type de l'index est l'un des suivants :<br /><br /> -HEAP<br />-EN CLUSTER<br />-NON ORDONNÉS EN CLUSTERS<br />-XML<br />-SPATIALE|  
   
 ## <a name="indexcolumns"></a>IndexColumns  
   
@@ -223,7 +211,7 @@ Le fournisseur de données Microsoft .NET Framework pour SQL Server prend en cha
 |Nom de colonne|Type de données|Description|  
 |----------------|--------------|-----------------|  
 |uid|Int16|ID d'utilisateur, unique dans cette base de données. 1 est le propriétaire de base de données.|  
-|user_name|Chaîne|Nom d'utilisateur ou nom de groupe, unique dans cette base de données.|  
+|nom_utilisateur|Chaîne|Nom d'utilisateur ou nom de groupe, unique dans cette base de données.|  
 |createdate|DateTime|Date d'ajout du compte.|  
 |updatedate|DateTime|Date à laquelle le compte a été modifié pour la dernière fois.|  
   

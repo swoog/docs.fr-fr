@@ -1,28 +1,19 @@
 ---
-title: "Implémentation du modèle de contrôle Window d'UI Automation"
-ms.custom: 
+title: Implémentation du modèle de contrôle Window d'UI Automation
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - control patterns, Window
 - UI Automation, Window control pattern
 - Window control pattern
 ms.assetid: a28cb286-296e-4a62-b4cb-55ad636ebccc
-caps.latest.revision: "21"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 3f1b44184f1a241943d9fa9d60a62a703dbaf0d8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 73a484ea6165b4e38901630730c7ba985a5608ba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-the-ui-automation-window-control-pattern"></a>Implémentation du modèle de contrôle Window d’UI Automation
 > [!NOTE]
@@ -52,17 +43,17 @@ ms.lasthandoff: 12/22/2017
   
 |Membre obligatoire|Type de membre|Notes|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.InteractionState%2A>|Propriété|Aucun.|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.IsModal%2A>|Propriété|Aucun.|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.IsTopmost%2A>|Propriété|Aucun.|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Maximizable%2A>|Propriété|Aucun.|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Minimizable%2A>|Propriété|Aucun.|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.VisualState%2A>|Propriété|Aucun.|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Close%2A>|Méthode|Aucun.|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A>|Méthode|Aucun.|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|Méthode|Aucun.|  
-|<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|événement|Aucun.|  
-|<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|événement|Aucun.|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.InteractionState%2A>|Propriété|Aucun|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.IsModal%2A>|Propriété|Aucun|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.IsTopmost%2A>|Propriété|Aucun|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Maximizable%2A>|Propriété|Aucun|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Minimizable%2A>|Propriété|Aucun|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.VisualState%2A>|Propriété|Aucun|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Close%2A>|Méthode|Aucun|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A>|Méthode|Aucun|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|Méthode|Aucun|  
+|<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|événement|Aucun|  
+|<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|événement|Aucun|  
 |<xref:System.Windows.Automation.WindowInteractionState>|événement|N’est pas nécessairement défini sur <xref:System.Windows.Automation.WindowInteractionState.ReadyForUserInteraction>|  
   
 <a name="Exceptions"></a>   
