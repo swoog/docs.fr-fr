@@ -1,13 +1,6 @@
 ---
-title: "Procédure Main dans Visual Basic"
-ms.custom: 
+title: Procédure Main dans Visual Basic
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Main
 helpviewer_keywords:
@@ -15,19 +8,16 @@ helpviewer_keywords:
 - Main method [Visual Basic]
 - main function
 ms.assetid: f0db283e-f283-4464-b521-b90858cc1b44
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 6de98ad4e470cd0becaf25f5a9a00c8095e44b15
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 109bf94eb91292cfca700a9e456c8ab53e83d68f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="main-procedure-in-visual-basic"></a>Procédure Main dans Visual Basic
 Toutes les applications Visual Basic doivent contenir une procédure appelée `Main`. Cette procédure sert de point de départ et contrôle général pour votre application. Le .NET Framework appelle votre `Main` procédure lorsqu’il a chargé votre application et est prêt à passer le contrôle. Sauf si vous créez une application Windows Forms, vous devez écrire le `Main` procédure pour les applications qui s’exécutent sur leurs propres.  
   
- `Main`contient le code qui s’exécute en premier. Dans `Main`, vous pouvez déterminer quel formulaire doit d’abord être chargé au démarrage du programme, savoir si une copie de votre application est déjà en cours d’exécution sur le système, définir un ensemble de variables pour votre application ou ouvrir une base de données requise par l’application.  
+ `Main` contient le code qui s’exécute en premier. Dans `Main`, vous pouvez déterminer quel formulaire doit d’abord être chargé au démarrage du programme, savoir si une copie de votre application est déjà en cours d’exécution sur le système, définir un ensemble de variables pour votre application ou ouvrir une base de données requise par l’application.  
   
 ## <a name="requirements-for-the-main-procedure"></a>Configuration requise pour la procédure principale  
  Un fichier qui s’exécute sur sa propre (généralement avec l’extension .exe) doit contenir un `Main` procédure. Une bibliothèque (par exemple avec l’extension .dll) ne s’exécute pas son propre et ne requiert pas un `Main` procédure. La configuration requise pour les différents types de projets que vous pouvez créer est les suivantes :  
@@ -56,7 +46,7 @@ Toutes les applications Visual Basic doivent contenir une procédure appelée `M
     End Module  
     ```  
   
--   `Main`peut également retourner un `Integer` valeur, que le système d’exploitation utilise comme code de sortie de votre programme. Autres programmes peuvent tester ce code en examinant la valeur ERRORLEVEL Windows. Pour retourner un code de sortie, vous devez déclarer `Main` comme un `Function` procédure au lieu d’un `Sub` procédure.  
+-   `Main` peut également retourner un `Integer` valeur, que le système d’exploitation utilise comme code de sortie de votre programme. Autres programmes peuvent tester ce code en examinant la valeur ERRORLEVEL Windows. Pour retourner un code de sortie, vous devez déclarer `Main` comme un `Function` procédure au lieu d’un `Sub` procédure.  
   
     ```  
     Module mainModule  
@@ -73,7 +63,7 @@ Toutes les applications Visual Basic doivent contenir une procédure appelée `M
     End Module  
     ```  
   
--   `Main`peut également prendre une `String` tableau en tant qu’argument. Chaque chaîne dans le tableau contient un des arguments de ligne de commande utilisés pour appeler votre programme. Vous pouvez effectuer des actions différentes en fonction de leurs valeurs.  
+-   `Main` peut également prendre une `String` tableau en tant qu’argument. Chaque chaîne dans le tableau contient un des arguments de ligne de commande utilisés pour appeler votre programme. Vous pouvez effectuer des actions différentes en fonction de leurs valeurs.  
   
     ```  
     Module mainModule  

@@ -1,24 +1,14 @@
 ---
-title: "Comment : créer une collection utilisée par un initialiseur de collection (Visual Basic)"
-ms.custom: 
+title: 'Comment : créer une collection utilisée par un initialiseur de collection (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - collection initializers [Visual Basic]
 ms.assetid: c858db10-424d-47e0-92cd-e08087cc5ebc
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: cff862f16530bc268628d9406ae81d23f2761926
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6158b6f02d95260e2955e77d732fae8b8d9d5e04
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-collection-used-by-a-collection-initializer-visual-basic"></a>Comment : créer une collection utilisée par un initialiseur de collection (Visual Basic)
 Lorsque vous utilisez un initialiseur de collection pour créer une collection, le compilateur Visual Basic cherche un `Add` méthode du type de collection pour laquelle les paramètres de la `Add` méthode correspondent aux types des valeurs dans l’initialiseur de collection. Cela `Add` méthode est utilisée pour remplir la collection avec les valeurs de l’initialiseur de collection.  

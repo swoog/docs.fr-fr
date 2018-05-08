@@ -1,22 +1,12 @@
 ---
-title: "Comment : utiliser un Pool de threads (Visual Basic)"
-ms.custom: 
+title: 'Comment : utiliser un Pool de threads (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 90a0bb24-39f8-41f5-a217-b52a7d4fed0b
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 42a4120900203eb7eb5ad8463fba4491636882b1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a61defc2e40662d7fdadb40693e757fa559adb6a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-a-thread-pool-visual-basic"></a>Comment : utiliser un Pool de threads (Visual Basic)
 Le *regroupement de threads* est une forme de multithreading dans lequel les tâches sont ajoutées à une file d’attente et sont automatiquement lancées lorsque les threads sont créés. Pour plus d’informations, consultez [(Visual Basic) le regroupement de threads](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md).  

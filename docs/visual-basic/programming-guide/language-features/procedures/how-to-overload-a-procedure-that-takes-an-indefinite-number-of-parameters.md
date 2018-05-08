@@ -1,13 +1,6 @@
 ---
 title: 'Comment : surcharger une procédure qui accepte un nombre indéfini de paramètres (Visual Basic)'
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - procedures [Visual Basic], parameters
 - procedure overloading [Visual Basic], indefinite number of parameters
@@ -17,14 +10,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], overloading
 - procedures [Visual Basic], multiple versions
 ms.assetid: c7042de2-2422-4039-94e8-ac298896af69
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 8cb4faa2dfd01f854dcc3bf8c2a330adf5acdcac
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 026dd59db135e8b195ae014aaff5e3a6a7846fc7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters-visual-basic"></a>Comment : surcharger une procédure qui accepte un nombre indéfini de paramètres (Visual Basic)
 Si une procédure a un [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) paramètre, vous ne pouvez pas définir une version surchargée acceptant un tableau unidimensionnel pour le tableau de paramètres. Pour plus d’informations, consultez « Implicite surcharges pour un paramètre ParamArray » dans [considérations relatives à la surcharge de procédures](./considerations-in-overloading-procedures.md).  

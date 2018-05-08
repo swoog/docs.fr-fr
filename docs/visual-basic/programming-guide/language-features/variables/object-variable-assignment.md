@@ -1,13 +1,6 @@
 ---
 title: Assignation des variables objets (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Nothing keyword [Visual Basic], object variable assignment
 - object variables [Visual Basic], initializing
@@ -20,14 +13,11 @@ helpviewer_keywords:
 - assignment statements [Visual Basic], object variable assignment
 - Me keyword [Visual Basic], as object variable
 ms.assetid: 3706811d-fd40-44fe-8727-d692e8e55d6d
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: eb6b53bebddc1c9cf1b9088e96ded36a5e1c5242
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f20a03c4d9a0e33203629ae066686f4c9f25c105
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="object-variable-assignment-visual-basic"></a>Assignation des variables objets (Visual Basic)
 Vous utilisez une instruction d’assignation normale pour assigner un objet à une variable objet. Vous pouvez affecter une expression d’objet ou le [rien](../../../../visual-basic/language-reference/nothing.md) (mot clé), comme l’exemple suivant illustre.  
@@ -40,7 +30,7 @@ thisObject = Form1
 thisObject = Nothing  
 ```  
   
- `Nothing`signifie aucun objet actuellement assigné à la variable.  
+ `Nothing` signifie aucun objet actuellement assigné à la variable.  
   
 ## <a name="initialization"></a>Initialisation  
  Lorsque votre code commence à s’exécuter, votre objet variables sont initialisées à `Nothing`. Ceux dont les déclarations incluent l’initialisation sont réinitialisées avec les valeurs que vous spécifiez lorsque les instructions de déclaration sont exécutées.  

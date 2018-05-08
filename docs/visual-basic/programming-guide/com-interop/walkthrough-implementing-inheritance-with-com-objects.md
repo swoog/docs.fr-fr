@@ -1,27 +1,17 @@
 ---
 title: "Procédure pas à pas : implémentation de l'héritage avec les objets COM (Visual Basic)"
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - inheritance [Visual Basic], COM reusability
 - base classes [Visual Basic], COM reusability
 - inheritance [Visual Basic], walkthroughs
 - derived classes [Visual Basic], COM reusability
 ms.assetid: f8e7263a-de13-48d1-b67c-ca1adf3544d9
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: b03b81c9e04e79f8ce7763ecf8a489d248ff480b
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: a1c1b7c247d3277c6614a4774395650c4c069c2f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>Procédure pas à pas : implémentation de l'héritage avec les objets COM (Visual Basic)
 Vous pouvez dériver des classes Visual Basic à partir de `Public` classes dans les objets COM, même ceux créés dans les versions antérieures de Visual Basic. Les propriétés et méthodes des classes héritées d’objets COM peuvent être substituées ou surchargées comme les propriétés et méthodes de toute autre classe de base peuvent être remplacées ou surchargés. L’héritage à partir des objets COM est utile lorsque vous disposez d’une bibliothèque de classe existante que vous ne souhaitez pas recompiler.  
@@ -85,7 +75,7 @@ Vous pouvez dériver des classes Visual Basic à partir de `Public` classes dans
   
 #### <a name="to-use-a-com-object-with-visual-basic-2005-and-later-versions"></a>Pour utiliser un objet COM avec Visual Basic 2005 et versions ultérieures  
   
-1.  Ouvrez un nouveau projet d’Application Windows Visual Basic.  
+1.  Ouvrez un nouveau projet d’application Windows Visual Basic.  
   
 2.  Dans le menu **Projet**, cliquez sur **Ajouter une référence**.  
   
