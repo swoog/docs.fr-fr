@@ -1,24 +1,12 @@
 ---
-title: "Fonctionnement des modifications d'état"
-ms.custom: 
+title: Fonctionnement des modifications d'état
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a79ed2aa-e49a-47a8-845a-c9f436ec9987
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ce0d3be43b8e50367d1cdd9b4e486a4154001624
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5bfee392053d9f3fd529d68b533a046e53f20dd1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="understanding-state-changes"></a>Fonctionnement des modifications d'état
 Cette rubrique présente les états et transitions des canaux, les types utilisés pour structurer les états des canaux et la manière de les implémenter.  
@@ -42,7 +30,7 @@ Cette rubrique présente les états et transitions des canaux, les types utilis�
  ![Transition d’état de canal](../../../../docs/framework/wcf/extending/media/channelstatetranitionshighleveldiagram.gif "ChannelStateTranitionsHighLevelDiagram")  
 Figure 1. Ordinateur d'état ICommunicationObject.  
   
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] fournit une classe de base abstraite nommée <xref:System.ServiceModel.Channels.CommunicationObject> qui implémente <xref:System.ServiceModel.ICommunicationObject> et l'ordinateur d'état des canaux. Le graphique suivant est un diagramme d'état modifié qui est spécifique à <xref:System.ServiceModel.Channels.CommunicationObject>. Outre l'ordinateur d'état <xref:System.ServiceModel.ICommunicationObject>, il présente la temporisation lorsque des méthodes <xref:System.ServiceModel.Channels.CommunicationObject> supplémentaires sont appelées.  
+ Windows Communication Foundation (WCF) fournit une classe de base abstraite nommée <xref:System.ServiceModel.Channels.CommunicationObject> qui implémente <xref:System.ServiceModel.ICommunicationObject> et l’ordinateur d’état de canal. Le graphique suivant est un diagramme d'état modifié qui est spécifique à <xref:System.ServiceModel.Channels.CommunicationObject>. Outre l'ordinateur d'état <xref:System.ServiceModel.ICommunicationObject>, il présente la temporisation lorsque des méthodes <xref:System.ServiceModel.Channels.CommunicationObject> supplémentaires sont appelées.  
   
  ![Modifications d’état](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigure5statetransitionsdetailsc.gif "wcfc_WCFChannelsigure5StateTransitionsDetailsc")  
 Figure 2. Implémentation CommunicationObject de l'ordinateur d'état ICommunicationObject comprenant les appels d'événements et de méthodes protégées.  

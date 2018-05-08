@@ -1,31 +1,17 @@
 ---
 title: Utilisation de liaisons pour configurer des services et des clients
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - bindings [WCF], using
 ms.assetid: c39479c3-0766-4a17-ba4c-97a74607f392
-caps.latest.revision: 33
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 68c8c2c93ce29147247c332848025fd931bf7854
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 39866d7cdd871c6450e0864848c7a3197779045a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-bindings-to-configure-services-and-clients"></a>Utilisation de liaisons pour configurer des services et des clients
-Les liaisons sont des objets qui spécifient les détails de communication requis pour se connecter à un point de terminaison. Plus spécifiquement, les liaisons contiennent des informations de configuration utilisées pour créer l'exécution du client ou du service en définissant les caractéristiques des transports, les formats de transmission (encodage de message) et les protocoles à utiliser pour le point de terminaison ou canal client respectif. Pour créer un service [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] opérationnel, chaque point de terminaison dans le service requiert une liaison. Cette rubrique explique ce que sont les liaisons, comment elles sont définies et comment une liaison particulière est spécifiée pour un point de terminaison.  
+Les liaisons sont des objets qui spécifient les détails de communication requis pour se connecter à un point de terminaison. Plus spécifiquement, les liaisons contiennent des informations de configuration utilisées pour créer l’exécution du client ou du service en définissant les caractéristiques des transports, les formats de transmission (encodage de message) et les protocoles à utiliser pour le point de terminaison ou canal client respectif. Pour créer un service Windows Communication Foundation (WCF) fonctionnel, chaque point de terminaison dans le service requiert une liaison. Cette rubrique explique ce que sont les liaisons, comment elles sont définies et comment une liaison particulière est spécifiée pour un point de terminaison.  
   
 ## <a name="what-a-binding-defines"></a>Ce que définit une liaison  
  Les informations contenues dans une liaison peuvent être basiques ou très complexes. La liaison la plus basique spécifie uniquement le protocole de transport (par exemple HTTP) qui doit être utilisé pour se connecter au point de terminaison. Plus généralement, les informations d'une liaison relatives à la procédure de connexion à un point de terminaison appartiennent à l'une des catégories répertoriées dans le tableau suivant.  

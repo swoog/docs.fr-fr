@@ -1,13 +1,6 @@
 ---
-title: "Meilleures pratiques pour la mise à l'échelle du contrôle DataGridView Windows Forms"
-ms.custom: 
+title: Meilleures pratiques pour la mise à l'échelle du contrôle DataGridView Windows Forms
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DataGridView control [Windows Forms], row sharing
 - data grids [Windows Forms], best practices
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - best practices [Windows Forms], dataGridView control
 - DataGridView control [Windows Forms], scaling
 ms.assetid: 8321a8a6-6340-4fd1-b475-fa090b905aaf
-caps.latest.revision: "31"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ecd629bd38e08c8d6909ee4ad771f17b1554fc80
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 91153df539871de571375d7bf6d49d712a0c43b2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="best-practices-for-scaling-the-windows-forms-datagridview-control"></a>Meilleures pratiques pour la mise à l'échelle du contrôle DataGridView Windows Forms
 Le <xref:System.Windows.Forms.DataGridView> contrôle est conçu pour offrir une évolutivité maximale. Si vous avez besoin afficher de grandes quantités de données, vous devez suivre les instructions décrites dans cette rubrique afin d’éviter de consommer de grandes quantités de mémoire ou d’affecter la réactivité de l’interface utilisateur (IU). Cette rubrique présente les problèmes suivants :  
@@ -124,7 +112,7 @@ Le <xref:System.Windows.Forms.DataGridView> contrôle est conçu pour offrir une
   
  Pour empêcher les lignes de devenir non partagées, suivez les indications suivantes :  
   
--   Évitez d’indexer le <xref:System.Windows.Forms.DataGridView.Rows%2A> collection ou itérer avec un `foreach` boucle. Il est généralement inutile accéder directement aux lignes. <xref:System.Windows.Forms.DataGridView>les méthodes qui fonctionnent sur les lignes prennent des arguments d’index de ligne plutôt que des instances de la ligne. En outre, gestionnaires d’événements de ligne de recevoir des objets d’argument d’événement avec des propriétés de ligne que vous pouvez utiliser pour manipuler des lignes sans qu’elles deviennent non partagées.  
+-   Évitez d’indexer le <xref:System.Windows.Forms.DataGridView.Rows%2A> collection ou itérer avec un `foreach` boucle. Il est généralement inutile accéder directement aux lignes. <xref:System.Windows.Forms.DataGridView> les méthodes qui fonctionnent sur les lignes prennent des arguments d’index de ligne plutôt que des instances de la ligne. En outre, gestionnaires d’événements de ligne de recevoir des objets d’argument d’événement avec des propriétés de ligne que vous pouvez utiliser pour manipuler des lignes sans qu’elles deviennent non partagées.  
   
 -   Si vous avez besoin pour accéder à un objet de ligne, utilisez le <xref:System.Windows.Forms.DataGridViewRowCollection.SharedRow%2A?displayProperty=nameWithType> (méthode) et passez l’index réel de la ligne. Toutefois, notez que la modification d’un objet de ligne partagé récupéré via cette méthode va modifier toutes les lignes qui partagent cet objet. La ligne pour les nouveaux enregistrements n'est pas partagée avec d’autres lignes, toutefois, pour qu’elle ne sera pas affectée lorsque vous modifiez des autres lignes. Notez également que différentes lignes représentées par une ligne partagée peuvent avoir des menus contextuels différents. Pour récupérer le menu contextuel correct à partir d’une instance de ligne partagée, utilisez la <xref:System.Windows.Forms.DataGridViewRow.GetContextMenuStrip%2A> (méthode) et passez l’index réel de la ligne. Si vous accédez à la ligne partagée <xref:System.Windows.Forms.DataGridViewRow.ContextMenuStrip%2A> propriété au lieu de cela, il utilisera l’index de ligne partagé-1 et ne récupère pas le menu contextuel correct.  
   

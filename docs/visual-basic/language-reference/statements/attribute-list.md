@@ -1,23 +1,15 @@
 ---
 title: Liste d'attributs (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - attribute list
 - attributes [Visual Basic], applying
 ms.assetid: 5880073a-68a4-4b6b-8a07-ace32959a4e2
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: adfb980380bb787280715ca0185950657e174eb1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 35d031722a5eddd6adce5e32df62b86c500d305b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="attribute-list-visual-basic"></a>Liste d'attributs (Visual Basic)
 Spécifie les attributs à appliquer à un élément de programmation déclaré. Les attributs multiples sont séparés par des virgules. Voici la syntaxe pour un attribut.  
@@ -41,7 +33,7 @@ Spécifie les attributs à appliquer à un élément de programmation déclaré.
  `attributeinitializer`  
  Facultatif. Liste d’initialiseurs de variable ou une propriété pour cet attribut. Les initialiseurs multiples sont séparées par des virgules.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Vous pouvez appliquer un ou plusieurs attributs à quasiment n’importe quel élément de programmation (types, procédures, propriétés et ainsi de suite). Les attributs apparaissent dans les métadonnées de votre assembly, et ils peuvent vous aider à annoter votre code ou de spécifier l’utilisation d’un élément de programmation particulier. Vous pouvez appliquer des attributs définis par Visual Basic et .NET Framework, et vous pouvez définir vos propres attributs.  
 
  Pour plus d’informations sur l’utilisation d’attributs, consultez [vue d’ensemble des attributs](../../../visual-basic/programming-guide/concepts/attributes/index.md). Pour plus d’informations sur les noms d’attributs, consultez [noms d’élément déclaré](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
@@ -63,7 +55,7 @@ Spécifie les attributs à appliquer à un élément de programmation déclaré.
   
  [!code-vb[VbVbalrStatements#1](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/attribute-list_1.vb)]  
   
- <xref:System.Runtime.InteropServices.DllImportAttribute>Indique que la procédure attribuée représente un point d’entrée dans une bibliothèque de liens dynamiques (DLL) non managée. L’attribut fournit le nom de la DLL comme argument positionnel et l’autre information comme initialiseurs de variable.  
+ <xref:System.Runtime.InteropServices.DllImportAttribute> Indique que la procédure attribuée représente un point d’entrée dans une bibliothèque de liens dynamiques (DLL) non managée. L’attribut fournit le nom de la DLL comme argument positionnel et l’autre information comme initialiseurs de variable.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md)  

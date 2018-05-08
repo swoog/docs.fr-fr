@@ -1,27 +1,15 @@
 ---
 title: Configuration de services WCF dans le code
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 193c725d-134f-4d31-a8f8-4e575233bff6
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 202214a6c9279eb61db560321a8f36943ce5d635
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 2046ee00bef0f3e84a61151474c777d64005a30c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-wcf-services-in-code"></a>Configuration de services WCF dans le code
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] permet aux développeurs de configurer des services dans les fichiers de configuration ou du code.  Les fichiers de configuration sont utiles lorsqu'un service doit être configuré après avoir été déployé. Lorsqu'il utilise des fichiers de configuration, un professionnel de l'informatique doit uniquement mettre à jour le fichier de configuration, aucune recompilation n'est nécessaire. Les fichiers de configuration, toutefois, peuvent être complexes et difficiles à gérer. Il n'existe aucune prise en charge du débogage de fichiers de configuration et les éléments de configuration sont référencés par des noms. La création de fichiers de configuration est donc susceptible d'engendrer des erreurs et difficile. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] vous permet également de configurer des services dans le code. Dans les versions antérieures de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] (4.0 ou version antérieure) configurer des services dans le code était simple dans les scénarios auto-hébergés ; la classe <xref:System.ServiceModel.ServiceHost> vous autorisait à configurer les points de terminaison et les comportements avant d'appeler ServiceHost.Open. Dans les scénarios hébergés sur le Web, toutefois, vous n'avez pas accès direct à la classe <xref:System.ServiceModel.ServiceHost>. Pour configurer un service hébergé sur le Web vous deviez créer un `System.ServiceModel.ServiceHostFactory` qui créait le <xref:System.ServiceModel.Activation.ServiceHostFactory> et effectuait la configuration nécessaire. Depuis le .NET 4.5, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] offre un moyen plus simple de configurer des services auto-hébergés et hébergés sur le Web dans le code.  
+Windows Communication Foundation (WCF) permet aux développeurs de configurer les services à l’aide de fichiers de configuration ou de code.  Les fichiers de configuration sont utiles lorsqu'un service doit être configuré après avoir été déployé. Lorsqu'il utilise des fichiers de configuration, un professionnel de l'informatique doit uniquement mettre à jour le fichier de configuration, aucune recompilation n'est nécessaire. Les fichiers de configuration, toutefois, peuvent être complexes et difficiles à gérer. Il n'existe aucune prise en charge du débogage de fichiers de configuration et les éléments de configuration sont référencés par des noms. La création de fichiers de configuration est donc susceptible d'engendrer des erreurs et difficile. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] vous permet également de configurer des services dans le code. Dans les versions antérieures de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] (4.0 ou version antérieure) configurer des services dans le code était simple dans les scénarios auto-hébergés ; la classe <xref:System.ServiceModel.ServiceHost> vous autorisait à configurer les points de terminaison et les comportements avant d'appeler ServiceHost.Open. Dans les scénarios hébergés sur le Web, toutefois, vous n'avez pas accès direct à la classe <xref:System.ServiceModel.ServiceHost>. Pour configurer un service hébergé sur le Web vous deviez créer un `System.ServiceModel.ServiceHostFactory` qui créait le <xref:System.ServiceModel.Activation.ServiceHostFactory> et effectuait la configuration nécessaire. Depuis le .NET 4.5, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] offre un moyen plus simple de configurer des services auto-hébergés et hébergés sur le Web dans le code.  
   
 ## <a name="the-configure-method"></a>Méthode Configure  
  Il suffit de définir une méthode statique publique appelée `Configure` avec la signature suivante dans votre classe d'implémentation de service :  

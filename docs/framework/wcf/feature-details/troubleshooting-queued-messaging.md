@@ -1,38 +1,24 @@
 ---
 title: Résolution des problèmes de messagerie en file d'attente
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1342f2383e7cf2aa15ea60be03c93044e4332612
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 45a3bf82662fcc01b732428d1ca351e4ae8ddca0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="troubleshooting-queued-messaging"></a>Résolution des problèmes de messagerie en file d'attente
-Cette section contient les questions courantes et l'aide à la résolution des problèmes relatifs à l'utilisation des files d'attente dans [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+Cette section contient des questions et résolution des problèmes pour l’utilisation de files d’attente dans Windows Communication Foundation (WCF).  
   
 ## <a name="common-questions"></a>Questions courantes  
- **Q :** j’ai utilisé [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bêta 1 et installé le correctif logiciel MSMQ. Est-ce que je dois supprimer le correctif logiciel ?  
+ **Q :** j’ai utilisé la version bêta 1 de WCF et j’ai installé le correctif logiciel MSMQ. Est-ce que je dois supprimer le correctif logiciel ?  
   
- **R :** Oui. Ce correctif logiciel n'est plus pris en charge. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fonctionne maintenant sur MSMQ sans spécification de correctif logiciel.  
+ **R :** Oui. Ce correctif logiciel n'est plus pris en charge. WCF fonctionne maintenant sur MSMQ sans exigence de correctif logiciel.  
   
  **Q :** il existe deux liaisons pour MSMQ : <xref:System.ServiceModel.NetMsmqBinding> et <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. Laquelle dois-je utiliser et à quel moment ?  
   
- **R :** utiliser le <xref:System.ServiceModel.NetMsmqBinding> lorsque vous souhaitez utiliser MSMQ comme transport pour la communication en file d’attente entre deux [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] applications. Utilisez <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> lorsque vous souhaitez utiliser des applications MSMQ existantes pour communiquer avec les nouvelles applications [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ **R :** utiliser le <xref:System.ServiceModel.NetMsmqBinding> lorsque vous souhaitez utiliser MSMQ comme transport pour la communication en file d’attente entre deux applications WCF. Utilisez le <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> lorsque vous souhaitez utiliser des applications MSMQ existantes pour communiquer avec les nouvelles applications WCF.  
   
  **Q :** ai-je besoin de mettre à niveau MSMQ pour utiliser le <xref:System.ServiceModel.NetMsmqBinding> et `MsmqIntegration` liaisons ?  
   
@@ -54,7 +40,7 @@ Cette section contient les questions courantes et l'aide à la résolution des p
   
  **R :** Oui.  
   
- **Q :** je souhaite intégrer des applications MSMQ existantes avec new [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] clients ou serveurs. Est-ce que je dois mettre à niveau les deux côtés de mon infrastructure MSMQ ?  
+ **Q :** je souhaite intégrer des applications MSMQ existantes avec nouveaux clients WCF ou les serveurs. Est-ce que je dois mettre à niveau les deux côtés de mon infrastructure MSMQ ?  
   
  **R :** non. Vous n'êtes pas obligé d'effectuer la mise à niveau vers MSMQ 4.0 sur l'un ou l'autre des côtés.  
   
@@ -145,9 +131,9 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
   
  **Q :** lorsque vous utilisez un nom de format public ou privé, que vous ouvrez l’hôte de service sur [!INCLUDE[wv](../../../../includes/wv-md.md)], j’obtiens une erreur. Pourquoi ?  
   
- **R :** le [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] canal d’intégration sur [!INCLUDE[wv](../../../../includes/wv-md.md)] vérifie si une sous-file d’attente peut être ouverte pour la file d’attente de l’application principale pour la gestion des messages incohérents. Le nom de la sous-file d'attente est dérivé d'un URI msmq.formatname transmis à l'écouteur. Le nom de la sous-file d'attente dans MSMQ peut uniquement être un nom de format direct. Donc vous obtenez l'erreur. Remplacez l'URI de la file d'attente par un nom de format direct.  
+ **R :** canal d’intégration WCF le sur [!INCLUDE[wv](../../../../includes/wv-md.md)] vérifie si une sous-file d’attente peut être ouverte pour la file d’attente de l’application principale pour la gestion des messages incohérents. Le nom de la sous-file d'attente est dérivé d'un URI msmq.formatname transmis à l'écouteur. Le nom de la sous-file d'attente dans MSMQ peut uniquement être un nom de format direct. Donc vous obtenez l'erreur. Remplacez l'URI de la file d'attente par un nom de format direct.  
   
- **Q :** lors de la réception d’une application MSMQ, le message se trouve dans la file d’attente et n’est pas lu par la réception [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] application. Pourquoi ?  
+ **Q :** lors de la réception d’une application MSMQ, le message se trouve dans la file d’attente et n’est pas lu par l’application de réception WCF. Pourquoi ?  
   
  **R :** vérifie si le message a un corps. Si le message n'a aucun corps, le canal d'intégration MSMQ l'ignore. Implémentez `IErrorHandler` pour être averti des exceptions et vérifiez les suivis.  
   
@@ -193,7 +179,7 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
  **R :** vérifier la configuration de liaison. Pour la liaison par défaut, la sécurité de transport MSMQ est activée afin de signer le message. Désactivez-la.  
   
 ### <a name="remote-transacted-receives"></a>Réceptions avec transactions distantes  
- **Q :** lorsque j’ai une file d’attente sur l’ordinateur A et un [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service qui lit les messages à partir d’une file d’attente sur l’ordinateur B (scénario de réception transactionnel distant), les messages ne sont pas lus à partir de la file d’attente. Informations de suivi indique la réception a échoué avec le message « Transaction ne peut pas être importé. » Que puis-je faire pour résoudre ce problème ?  
+ **Q :** lorsque j’ai une file d’attente sur l’ordinateur A, et un service WCF qui lit les messages à partir d’une file d’attente sur l’ordinateur B (scénario de réception transactionnel distant), les messages ne sont pas lus à partir de la file d’attente. Informations de suivi indique la réception a échoué avec le message « Transaction ne peut pas être importé. » Que puis-je faire pour résoudre ce problème ?  
   
  **R :** il existe trois raisons possibles :  
   

@@ -1,32 +1,18 @@
 ---
 title: Diagnostic d’applications transactionnelles
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 4a993492-1088-4d10-871b-0c09916af05f
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5b8171f382812480078b76588089871233bdf9ca
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 4fa85fea0651d7a31c5a50bbc9c1226421b976b7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="diagnosing-transactional-applications"></a>Diagnostic d’applications transactionnelles
-Cette rubrique décrit comment utiliser la fonctionnalité de diagnostic et de gestion [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] pour dépanner une application transactionnelle.  
+Cette rubrique décrit comment utiliser la gestion de Windows Communication Foundation (WCF) et la fonctionnalité de diagnostic pour dépanner une application transactionnelle.  
   
 ## <a name="performance-counters"></a>Compteurs de performance  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fournit un jeu standard de compteurs de performance vous permettant de mesurer la performance de votre application transactionnelle. Pour plus d’informations, consultez [Compteurs de performance](../../../../docs/framework/wcf/diagnostics/performance-counters/index.md).  
+ WCF fournit un ensemble standard de compteurs de performance pour mesurer les performances de votre application transactionnelle. Pour plus d’informations, consultez [Compteurs de performance](../../../../docs/framework/wcf/diagnostics/performance-counters/index.md).  
   
  Les compteurs de performance sont définis à trois niveaux différents : service, point de terminaison et opération, tel que décrit dans les tableaux suivants.  
   
@@ -58,7 +44,7 @@ Cette rubrique décrit comment utiliser la fonctionnalité de diagnostic et de g
 |Transactions passées par seconde|Nombre de transactions passées à des opérations au niveau de ce point de terminaison par seconde. Ce compteur est incrémenté chaque fois qu'une transaction est présente dans le message envoyé au point de terminaison.|  
   
 ## <a name="windows-management-instrumentation"></a>Windows Management Instrumentation  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] expose au moment de l'exécution les données d'inspection d'un service par l'intermédiaire d'un fournisseur WMI (Windows Management Instrumentation) de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Pour plus d’informations sur l’accès aux données WMI, consultez [à l’aide de Windows Management Instrumentation pour les Diagnostics](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
+ WCF expose des données d’inspection d’un service en cours d’exécution via un fournisseur de services WCF Windows Management Instrumentation (WMI). Pour plus d’informations sur l’accès aux données WMI, consultez [à l’aide de Windows Management Instrumentation pour les Diagnostics](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
   
  Un certain nombre de propriétés WMI en lecture seule indiquent les paramètres de transaction appliqués pour un service. Les tableaux suivants répertorient l'ensemble de ces paramètres.  
   
@@ -100,13 +86,13 @@ Cette rubrique décrit comment utiliser la fonctionnalité de diagnostic et de g
 ## <a name="tracing"></a>Traçage  
  Les suivis vous permettent de surveiller et d'analyser les erreurs dans vos applications transactionnelles. Pour activer le suivi, procédez comme suit :  
   
--   Suivi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] standard  
+-   Suivi WCF standard  
   
-     Ce type de suivi est identique à celui des applications [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Pour plus d'informations, consultez [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).  
+     Ce type de suivi est identique à celui des applications WCF. Pour plus d'informations, consultez [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).  
   
 -   Suivi WS-AtomicTransaction  
   
-     Le suivi de WS-AtomicTransaction peut être activé à l’aide de la [l’utilitaire de Configuration WS-AtomicTransaction (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md). Un suivi de ce type permet de connaître l’état des transactions et des participants d’un système. Pour activer également le suivi du modèle de service interne, affectez une valeur valide de l'énumération `HKLM\SOFTWARE\Microsoft\WSAT\3.0\ServiceModelDiagnosticTracing` à la clé de registre <xref:System.Diagnostics.SourceLevels>. Vous pouvez activer la journalisation des messages de la même façon que pour les autres applications [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+     Le suivi de WS-AtomicTransaction peut être activé à l’aide de la [l’utilitaire de Configuration WS-AtomicTransaction (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md). Un suivi de ce type permet de connaître l’état des transactions et des participants d’un système. Pour activer également le suivi du modèle de service interne, affectez une valeur valide de l'énumération `HKLM\SOFTWARE\Microsoft\WSAT\3.0\ServiceModelDiagnosticTracing` à la clé de registre <xref:System.Diagnostics.SourceLevels>. Vous pouvez activer la journalisation des messages de la même façon que d’autres applications WCF.  
   
 -   Suivi `System.Transactions`  
   
@@ -131,7 +117,7 @@ Cette rubrique décrit comment utiliser la fonctionnalité de diagnostic et de g
     </configuration>  
     ```  
   
-     Cela active par ailleurs le suivi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], car [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilise également l'infrastructure <xref:System.Transactions>.  
+     Cela permet également le suivi WCF, WCF utilise également le <xref:System.Transactions> infrastructure.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Administration et diagnostics](../../../../docs/framework/wcf/diagnostics/index.md)  

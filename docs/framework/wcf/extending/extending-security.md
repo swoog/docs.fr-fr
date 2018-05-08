@@ -1,31 +1,19 @@
 ---
-title: "Extension de la sécurité"
-ms.custom: 
+title: Extension de la sécurité
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - security [WCF], extending
 ms.assetid: a015a040-9fdf-4147-9ea9-f83b570be1d4
-caps.latest.revision: 
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: cdd9b91ba7ff9b1e431f7d9107e72df084ba8af3
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 6ba6df24163064ee65c563253fa56a1ec574cffc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extending-security"></a>Extension de la sécurité
-Pour vous adapter aux nouveaux types de revendications et jetons personnalisés, vous pouvez étendre l'infrastructure de sécurité de [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Les rubriques de cette section vous montrent comment procéder.  
+Pour prendre en compte les nouveaux types de revendications et jetons personnalisés, vous pouvez étendre l’infrastructure de sécurité de Windows Communication Foundation (WCF). Les rubriques de cette section vous montrent comment procéder.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Architecture de sécurité](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)  
@@ -50,7 +38,7 @@ Pour vous adapter aux nouveaux types de revendications et jetons personnalisés,
  Les messages sont généralement signés et chiffrés à l'aide d'un certificat unique. Cette rubrique explique comment deux certificats peuvent être utilisés, s'ils sont requis.  
   
  [Guide pratique pour remplacer le fournisseur de services de chiffrement par la clé privée d’un certificat X.509](../../../../docs/framework/wcf/extending/change-cryptographic-provider-x509-certificate-private-key.md)  
- Explique comment modifier le fournisseur de services de chiffrement utilisé pour fournir la clé privée d'un certificat X.509 et comment intégrer ce fournisseur dans l'infrastructure [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
+ Explique comment modifier le fournisseur de services de chiffrement utilisé pour fournir la clé privée d’un certificat X.509 et comment intégrer le fournisseur dans le cadre de Windows Communication Foundation (WCF).  
   
 ## <a name="reference"></a>Référence  
  <xref:System.ServiceModel.ServiceAuthorizationManager>  

@@ -1,30 +1,22 @@
 ---
 title: My.Settings, objet
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - My.MySettingsProperty.Settings
 - My.Settings
 helpviewer_keywords:
 - My.Settings object
 ms.assetid: 41f30dc1-202a-4273-b9b7-5728941f996c
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2f744460f8ea6c6c7f5c8c5e1658bd357e910def
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 54176ae6706311b17227c7dc21a5060c9b369753
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mysettings-object"></a>My.Settings, objet
 Fournit des propriétés et méthodes pour accéder aux paramètres de l’application.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le `My.Settings` objet fournit l’accès aux paramètres de l’application et vous permet de stocker et récupérer des paramètres de propriété et d’autres informations pour votre application de manière dynamique. Pour plus d'informations, consultez [Gestion des paramètres d’une application (.NET)](/visualstudio/ide/managing-application-settings-dotnet).  
   
 ## <a name="properties"></a>Propriétés  
@@ -52,7 +44,7 @@ Fournit des propriétés et méthodes pour accéder aux paramètres de l’appli
 ## <a name="tasks"></a>Tâches  
  Le tableau suivant répertorie des exemples de tâches impliquant la `My.Settings` objet.  
   
-|Pour|Voir|  
+|À|Voir|  
 |---|---|  
 |Lire un paramètre d’application|[Guide pratique pour lire des paramètres d’application dans Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)|  
 |Modifier un paramètre utilisateur|[Guide pratique pour modifier les paramètres utilisateur dans Visual Basic](../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)|  

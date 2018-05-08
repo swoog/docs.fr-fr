@@ -1,11 +1,6 @@
 ---
 title: String, type de données (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.String
 helpviewer_keywords:
@@ -23,19 +18,16 @@ helpviewer_keywords:
 - String literals [Visual Basic]
 - identifier type characters [Visual Basic], $
 ms.assetid: 15ac03f5-cabd-42cc-a754-1df3893c25d9
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 90f126a5cca36969617446e81a8d13434e39df75
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 894638bbe50dad2cae1f74a2f7b7fe006f029d1b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="string-data-type-visual-basic"></a>String, type de données (Visual Basic)
 Contient des séquences de points de code de non signé 16 bits (2 octets) cette plage dans une valeur comprise entre 0 et 65 535. Chaque *point de code*, ou le code de caractère, représente un caractère Unicode. Une chaîne peut contenir de 0 à environ deux milliards (2 ^ 31) caractères Unicode.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Utilisez le `String` type de données pour contenir plusieurs caractères sans les charges de gestion tableau de `Char()`, un tableau de `Char` éléments.  
   
  La valeur par défaut `String` est `Nothing` (une référence null). Notez que cela n’est pas identique à la chaîne vide (valeur `""`).  
@@ -81,7 +73,7 @@ S = Microsoft.VisualBasic.Left(S, 4)
   
 -   **Considérations sur l’interopérabilité.** Si vous utilisez des composants non écrits pour le .NET Framework, par exemple des objets Automation ou COM, n’oubliez pas que les chaînes de caractères possèdent une largeur de données différente (8 bits) dans d’autres environnements. Si vous passez un argument de chaîne de caractères 8 bits à un tel composant, déclarez-le en tant que `Byte()`, un tableau de `Byte` éléments, au lieu de `String` dans votre nouveau code Visual Basic.  
   
--   **Caractères de type.** L’ajout du caractère de type identificateur `$` à n’importe quel identificateur force ce dernier à la `String` type de données. `String`n’a aucun caractère de type de littéral. Toutefois, le compilateur traite les littéraux compris entre guillemets (`" "`) en tant que `String`.  
+-   **Caractères de type.** L’ajout du caractère de type identificateur `$` à n’importe quel identificateur force ce dernier à la `String` type de données. `String` n’a aucun caractère de type de littéral. Toutefois, le compilateur traite les littéraux compris entre guillemets (`" "`) en tant que `String`.  
   
 -   **Type .NET Framework.** Le type correspondant dans le .NET Framework est la <xref:System.String?displayProperty=nameWithType> classe.  
   

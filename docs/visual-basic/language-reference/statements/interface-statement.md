@@ -1,24 +1,17 @@
 ---
 title: Interface, instruction (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Interface
 helpviewer_keywords:
 - interface statement [Visual Basic]
 - interfaces [Visual Basic], interface definition
 ms.assetid: 8997af73-bda3-4f79-bd41-ca396b610260
-caps.latest.revision: 26
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 9418dc86ac6947ae951cb8fb757aed6e092a6668
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f4282778db2d95f701cadb8bb98ec8ca982ba663
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interface-statement-visual-basic"></a>Interface, instruction (Visual Basic)
 Déclare le nom d’une interface et introduit les définitions des membres qui se compose de l’interface.  
@@ -62,7 +55,7 @@ End Interface
 |`membername`|Obligatoire pour chaque propriété, procédure, événement, interface, classe ou structure définie en tant que membre de l’interface. Nom du membre.|  
 |`End Interface`|Met fin à la `Interface` définition.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Un *interface* définit un jeu de membres, tels que les propriétés et les procédures que les classes et les structures peuvent implémenter. L’interface définit uniquement les signatures des membres et pas leur fonctionnement interne.  
   
  Une classe ou structure implémente l’interface en fournissant un code pour chaque membre défini par l’interface. Enfin, lorsque l’application crée une instance de cette classe ou structure, un objet existe et s’exécute en mémoire. Pour plus d’informations, consultez [objets et Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md) et [Interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md).  

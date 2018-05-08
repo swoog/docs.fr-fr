@@ -1,31 +1,19 @@
 ---
-title: "Fédération et jetons émis"
-ms.custom: 
+title: Fédération et jetons émis
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF, federation
 - issued tokens [WCF]
 - federation [WCF], issued tokens
 ms.assetid: 4c31ee7d-a820-4067-8b84-a83049021bb6
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 017d3e51022ad9980dc8f058415697c80a2a6b35
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b6a5411b74b53cb5e3b18cced7fd8fc09e9a9676
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="federation-and-issued-tokens"></a>Fédération et jetons émis
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] vous permet de créer des clients qui communiquent de manière sécurisée avec les services qui implémentent les spécifications WS-Federation et WS-Trust. Ces spécifications utilisent XML, SOAP et WSDL (Web Services Description Language) pour fournir des mécanismes permettant d'activer l'authentification et l'autorisation sur différents domaines de confiance.  
+Avec Windows Communication Foundation (WCF), vous pouvez créer des clients qui communiquent en toute sécurité avec les services qui implémentent les spécifications WS-Federation et WS-Trust. Ces spécifications utilisent XML, SOAP et WSDL (Web Services Description Language) pour fournir des mécanismes permettant d'activer l'authentification et l'autorisation sur différents domaines de confiance.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Fédération](../../../../docs/framework/wcf/feature-details/federation.md)  
@@ -35,7 +23,7 @@ ms.lasthandoff: 12/22/2017
  Répertorie les problèmes de conception dont il convient d'être informé lors de la création de services ou de clients fédérés.  
   
  [Guide pratique pour créer un client fédéré](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
- Décrit les concepts de base de la création d'un client fédéré à l'aide de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Décrit les principes fondamentaux de la création d’un client fédéré avec WCF.  
   
  [Guide pratique pour configurer des informations d’identification sur un service FS (Federation Service)](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
  Décrit les étapes de création d'un service fédéré.  

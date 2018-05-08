@@ -1,11 +1,7 @@
 ---
-title: "DeleteMethod (fonction) (référence des API non managées)"
-description: "La fonction DeleteMethod supprime la méthode spécifiée à partir d’une définition de classe CIM."
+title: DeleteMethod (fonction) (référence des API non managées)
+description: La fonction DeleteMethod supprime la méthode spécifiée à partir d’une définition de classe CIM.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - DeleteMethod
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 03b147d2fd76e34c6152a0b41ee14319811e9300
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fd862910d0c9bb0274158c2c516211cef598a553
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deletemethod-function"></a>DeleteMethod (fonction)
 Supprime la méthode spécifiée à partir d’une définition de classe CIM.
@@ -53,7 +46,7 @@ HRESULT Delete (
 [in] Un pointeur vers un [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) instance.
 
 `wszName`  
-[in] Le nom de la méthode à supprimer de la table de la classe. `wszName`doit être un pointeur vers une valide `LPCWSTR`.
+[in] Le nom de la méthode à supprimer de la table de la classe. `wszName` doit être un pointeur vers une valide `LPCWSTR`.
 
 ## <a name="return-value"></a>Valeur de retour
 
@@ -71,12 +64,12 @@ Cette fonction encapsule un appel à la [IWbemClassObject::DeleteMethod](https:/
 
 Suppression de la méthode n’est pas prise en charge pour [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) pointeurs qui pointent vers les instances CIM.
 
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** WMINet_Utils.idl  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versions du .NET framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
 [WMI et les compteurs de Performance (référence des API non managées)](index.md)

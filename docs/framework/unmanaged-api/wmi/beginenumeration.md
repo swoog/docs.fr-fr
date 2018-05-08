@@ -1,11 +1,7 @@
 ---
-title: "BeginEnumeration (fonction) (référence des API non managées)"
-description: "La fonction BeginEnumeration réinitialise l’énumérateur au début de l’énumération"
+title: BeginEnumeration (fonction) (référence des API non managées)
+description: La fonction BeginEnumeration réinitialise l’énumérateur au début de l’énumération
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - BeginEnumeration
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 90c3e8448a61145290ea4a75b1d38f7ae010cb9f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9699f0cfc4e9fdb989337681b164cc1e703c1e60
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="beginenumeration-function"></a>BeginEnumeration (fonction)
 Réinitialise l’énumérateur au début de l’énumération.  
@@ -49,7 +42,7 @@ HRESULT BeginEnumeration (
 `vFunc`  
 [in] Ce paramètre est inutilisé.
 
-`ptr`[in] Un pointeur vers un [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) instance.
+`ptr` [in] Un pointeur vers un [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) instance.
 
 `lEnumFlags`  
 [in] Une combinaison au niveau du bit des indicateurs ou des valeurs décrites dans le [notes](#remarks) section qui contrôle les propriétés incluses dans l’énumération.
@@ -92,23 +85,23 @@ Constante  |Value  |Description  |
 |`WBEM_FLAG_CLASS_OVERRIDES_ONLY` | 0 x 100 | Limiter l’énumération de propriétés de substitution dans la définition de classe. |
 |`WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES` | 0 x 100 | Limiter l’énumération de propriétés de substitution dans la définition de classe en cours et de nouvelles propriétés sont définies dans la classe. |
 | `WBEM_MASK_CLASS_CONDITION` | 0 x 300 | Un masque (au lieu d’un indicateur) à appliquer par rapport à un `lEnumFlags` valeur à vérifier si le paramètre `WBEM_FLAG_CLASS_OVERRIDES_ONLY` ou `WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES` est définie. |
-| `WBEM_FLAG_LOCAL_ONLY` | 0 x 10 | Limiter l’énumération de propriétés définies ou modifiées dans la classe elle-même. |
+| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Limiter l’énumération de propriétés définies ou modifiées dans la classe elle-même. |
 | `WBEM_FLAG_PROPAGATED_ONLY` |  0 x 20 | Limiter l’énumération de propriétés qui sont héritées de classes de base. |
 
 Pour les instances :
 
 Constante  |Value  |Description  |
 |---------|---------|---------|
-| `WBEM_FLAG_LOCAL_ONLY` | 0 x 10 | Limiter l’énumération de propriétés définies ou modifiées dans la classe elle-même. |
+| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Limiter l’énumération de propriétés définies ou modifiées dans la classe elle-même. |
 | `WBEM_FLAG_PROPAGATED_ONLY` |  0 x 20 | Limiter l’énumération de propriétés qui sont héritées de classes de base. |
 
 
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** WMINet_Utils.idl  
   
- **Versions du .NET framework :**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versions du .NET framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
 [WMI et les compteurs de Performance (référence des API non managées)](index.md)

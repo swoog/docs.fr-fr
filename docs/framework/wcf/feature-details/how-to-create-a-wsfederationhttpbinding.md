@@ -1,14 +1,6 @@
 ---
 title: 'Comment : créer une liaison WSFederationHttpBinding'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,20 +8,14 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: e54897d7-aa6c-46ec-a278-b2430c8c2e10
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f43b95df73b35b7dc7c34c2e16364dfa7bbdbee4
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 41fa1e7c0430f4723123b03f04d4fc74f9bfc589
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-wsfederationhttpbinding"></a>Comment : créer une liaison WSFederationHttpBinding
-Dans [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], le <xref:System.ServiceModel.WSFederationHttpBinding> classe ([\<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) dans la configuration) fournit un mécanisme qui permet d’exposer un service fédéré. autrement dit, un service qui oblige les clients à s'authentifier à l'aide d'un jeton de sécurité émis par un service de jeton de sécurité. Cette rubrique montre comment installer <xref:System.ServiceModel.WSFederationHttpBinding> dans le code et la configuration. Une fois la liaison créée, vous pouvez installer un point de terminaison pour utiliser cette liaison.  
+Dans Windows Communication Foundation (WCF), le <xref:System.ServiceModel.WSFederationHttpBinding> classe ([\<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) dans la configuration) fournit un mécanisme qui permet d’exposer un service fédéré. autrement dit, un service qui oblige les clients à s'authentifier à l'aide d'un jeton de sécurité émis par un service de jeton de sécurité. Cette rubrique montre comment installer <xref:System.ServiceModel.WSFederationHttpBinding> dans le code et la configuration. Une fois la liaison créée, vous pouvez installer un point de terminaison pour utiliser cette liaison.  
   
  Les étapes de base sont les suivantes :  
   
@@ -38,7 +24,7 @@ Dans [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], le <xref:System.Se
     > [!NOTE]
     >  <xref:System.ServiceModel.WSFederationHttpBinding> prend également en charge `None` comme mode de sécurité. Ce mode, non sécurisé, est fourni à des fins de débogage uniquement. Si un point de terminaison de service est déployé avec un <xref:System.ServiceModel.WSFederationHttpBinding> avec son mode de sécurité la valeur `None`, la liaison du client qui en résulte (généré par le [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)) est un <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> avec un mode de sécurité de `None`.  
   
-     Contrairement à d'autres liaisons fournies par le système, il n'est pas nécessaire de sélectionner un type d'informations d'identification du client lors de l'utilisation de `WSFederationHttpBinding`. Cela est dû au fait que le type d'informations d'identification du client est toujours un jeton émis. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] acquiert un jeton d'un émetteur spécifié et présente ce jeton au service pour authentifier le client.  
+     Contrairement à d'autres liaisons fournies par le système, il n'est pas nécessaire de sélectionner un type d'informations d'identification du client lors de l'utilisation de `WSFederationHttpBinding`. Cela est dû au fait que le type d'informations d'identification du client est toujours un jeton émis. WCF acquiert un jeton d’un émetteur spécifié et présente ce jeton au service pour authentifier le client.  
   
 2.  Sur les clients fédérés, affectez à la propriété <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerAddress%2A> l'URL du service de jeton de sécurité. Affectez au <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerBinding%2A> la liaison à utiliser pour communiquer avec le service de jeton de sécurité.  
   
@@ -65,7 +51,7 @@ Dans [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], le <xref:System.Se
   
 4.  Définir le <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedKeyType%2A> propriété <xref:System.IdentityModel.Tokens.SecurityKeyType> `SymmetricKey` ou.`AsymmetricKey` selon les besoins.  
   
-5.  Affectez la valeur appropriée à la propriété <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedTokenType%2A>. Si aucune valeur n’est définie, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] par défaut est «http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1», ce qui indique des jetons SAML 1.1.  
+5.  Affectez la valeur appropriée à la propriété <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedTokenType%2A>. Si aucune valeur n’est définie, WCF par défaut est «http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1», ce qui indique des jetons SAML 1.1.  
   
 6.  Requis sur le client si aucun émetteur local n'est spécifié ; facultatif sur le service. Créez un <xref:System.ServiceModel.EndpointAddress> qui contient les informations d'adresse et d'identité du service de jeton de sécurité et assignez l'instance <xref:System.ServiceModel.EndpointAddress> à la propriété <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerAddress%2A>.  
   

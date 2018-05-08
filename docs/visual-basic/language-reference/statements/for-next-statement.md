@@ -1,11 +1,6 @@
 ---
 title: For...Next, instruction (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Step
 - vb.Next
@@ -28,14 +23,11 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For...Next statements
 - For statement [Visual Basic]
 ms.assetid: f5fc0d51-67ce-4c36-9f09-31c9a91c94e9
-caps.latest.revision: "64"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 8a50f44a167952c735c6ed2830ca87105413401b
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 8c54189499b7d5b52cf93b4a0ae6cc47356bf57e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="fornext-statement-visual-basic"></a>For...Next, instruction (Visual Basic)
 Répète un groupe d’instructions un nombre spécifié de fois.  
@@ -103,7 +95,7 @@ Next [ counter ]
   
  Vous pouvez placer n’importe quel nombre de `Exit For` instructions dans un `For`...`Next` boucle. Lorsqu’il est utilisé dans imbriqués `For`...`Next` boucles, `Exit For` quitte la boucle la plus profonde et transfère le contrôle au niveau d’imbrication supérieur suivant.  
   
- `Exit For`est souvent utilisé après l’évaluation d’une condition (par exemple, dans un `If`... `Then`... `Else` structure). Vous souhaiterez peut-être utiliser `Exit For` dans les cas suivants :  
+ `Exit For` est souvent utilisé après l’évaluation d’une condition (par exemple, dans un `If`... `Then`... `Else` structure). Vous souhaiterez peut-être utiliser `Exit For` dans les cas suivants :  
   
 -   Pour continuer à effectuer une itération est inutile ou impossible. Une valeur erronée ou une demande d’arrêt peut créer cette condition.  
   
@@ -132,7 +124,7 @@ Next [ counter ]
   
  La valeur par défaut de `step` est 1.  
   
-###  <a name="BKMK_Counter"></a>Argument de compteur  
+###  <a name="BKMK_Counter"></a> Argument de compteur  
  Le tableau suivant indique si `counter` définit une nouvelle variable locale qui s’étend à l’ensemble `For…Next` boucle. Cela dépend de si `datatype` est présent et si `counter` est déjà défini.  
   
 |Est `datatype` présent ?|Est `counter` déjà défini ?|Résultat (si `counter` définit une nouvelle variable locale qui s’étend à l’ensemble `For...Next` boucle)|  

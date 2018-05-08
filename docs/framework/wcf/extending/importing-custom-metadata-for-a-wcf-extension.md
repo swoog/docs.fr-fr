@@ -1,27 +1,15 @@
 ---
-title: "Importation de métadonnées personnalisées pour une extension WCF"
-ms.custom: 
+title: Importation de métadonnées personnalisées pour une extension WCF
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 78beb28f-408a-4c75-9c3c-caefe9595b1a
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9208a73f6a35e4c05ab9be612491f3f7db792a5b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: bb7124cbce3fa38d00446b6568c85fc3136ee180
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="importing-custom-metadata-for-a-wcf-extension"></a>Importation de métadonnées personnalisées pour une extension WCF
-Dans [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], l'importation de métadonnées est le processus de génération d'une représentation abstraite d'un service ou de ses composants à partir de ses métadonnées. Par exemple, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] peut importer des instances <xref:System.ServiceModel.Description.ServiceEndpoint>, des instances <xref:System.ServiceModel.Channels.Binding> ou des instances <xref:System.ServiceModel.Description.ContractDescription> à partir d'un document WSDL pour un service. Pour importer des métadonnées de service dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], utilisez une implémentation de la classe abstraite <xref:System.ServiceModel.Description.MetadataImporter?displayProperty=nameWithType>. Les types qui dérivent de la classe <xref:System.ServiceModel.Description.MetadataImporter> implémentent la prise en charge de l'importation des formats de métadonnées qui tirent parti de la logique d'importation WS-Policy dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+Dans Windows Communication Foundation (WCF), l’importation de métadonnées est le processus de génération d’une représentation abstraite d’un service ou de ses composants à partir de ses métadonnées. Par exemple, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] peut importer des instances <xref:System.ServiceModel.Description.ServiceEndpoint>, des instances <xref:System.ServiceModel.Channels.Binding> ou des instances <xref:System.ServiceModel.Description.ContractDescription> à partir d'un document WSDL pour un service. Pour importer des métadonnées de service dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], utilisez une implémentation de la classe abstraite <xref:System.ServiceModel.Description.MetadataImporter?displayProperty=nameWithType>. Les types qui dérivent de la classe <xref:System.ServiceModel.Description.MetadataImporter> implémentent la prise en charge de l'importation des formats de métadonnées qui tirent parti de la logique d'importation WS-Policy dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
  Les métadonnées personnalisées sont composées d'éléments XML que les importateurs de métadonnées fournis par le système ne peuvent pas importer. En général, cela inclut des extensions WSDL personnalisées et des assertions de stratégie personnalisées.  
   

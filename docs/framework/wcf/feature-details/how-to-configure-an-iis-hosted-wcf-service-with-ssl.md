@@ -1,24 +1,12 @@
 ---
-title: "Procédure : configurer un service WCF hébergé par IIS avec SSL"
-ms.custom: 
+title: 'Procédure : configurer un service WCF hébergé par IIS avec SSL'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: df2fe31f-a4bb-4024-92ca-b74ba055e038
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b16ca5b4cfe615eedd9e532b12f61394806829bd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e739eb47611e5b73e7f1d62191a5aa61ad77abe2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-configure-an-iis-hosted-wcf-service-with-ssl"></a>Procédure : configurer un service WCF hébergé par IIS avec SSL
 Cette rubrique décrit comment installer un service WCF hébergé par IIS pour utiliser la sécurité de transport HTTP. La sécurité de transport HTTP requiert un certificat SSL à enregistrer avec IIS. Si vous n'avez pas de certificat SSL, vous pouvez utiliser IIS pour générer un certificat de test. Vous devez ensuite ajouter une liaison SSL au site Web et configurer les propriétés d'authentification du site Web. Enfin, vous devez configurer le service WCF pour utiliser HTTPS.  
@@ -31,11 +19,11 @@ Cette rubrique décrit comment installer un service WCF hébergé par IIS pour u
   
 2.  Dans la fenêtre certificats de serveur, cliquez sur le **créer un certificat auto-signé...** Lien.  
   
-     ![Création d’un libre-service &#45; signé le certificat avec IIS](../../../../docs/framework/wcf/feature-details/media/mg-createselfsignedcert.jpg "mg_CreateSelfSignedCert")  
+     ![Création d’un libre-service&#45;signé le certificat avec IIS](../../../../docs/framework/wcf/feature-details/media/mg-createselfsignedcert.jpg "mg_CreateSelfSignedCert")  
   
 3.  Entrez un nom convivial pour le certificat auto-signé et cliquez sur **OK**.  
   
-     ![Créer auto &#45; Boîte de dialogue certificat de signature](../../../../docs/framework/wcf/feature-details/media/mg-mycert.jpg "mg_MyCert")  
+     ![Créer Self&#45;boîte de dialogue certificat signé](../../../../docs/framework/wcf/feature-details/media/mg-mycert.jpg "mg_MyCert")  
   
      Les détails du certificat auto-signé nouvellement créé sont maintenant affichés dans le **des certificats de serveur** fenêtre.  
   

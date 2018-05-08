@@ -1,29 +1,15 @@
 ---
 title: Génération des exemples Windows Communication Foundation
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 2899e7a5-9cb2-4e8d-b8d2-f31391549198
-caps.latest.revision: 33
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fcc57d28c109801cc5f995bebd31c49fcbdbe19c
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 5493972306092fc3309b0993d595f22c74c8603a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="building-the-windows-communication-foundation-samples"></a>Génération des exemples Windows Communication Foundation
-Le [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] exemples peuvent être construites à l’aide de Visual Studio 2010 ou à l’aide de la **msbuild** commande à partir de la ligne de commande. Les deux procédures sont décrites dans cette rubrique.  
+Les exemples Windows Communication Foundation (WCF) peuvent être construites à l’aide de Visual Studio 2010 ou à l’aide de la **msbuild** commande à partir de la ligne de commande. Les deux procédures sont décrites dans cette rubrique.  
   
 > [!NOTE]
 >  Avant la construction ou d’exécution de toute la [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] exemples, assurez-vous d’avoir effectué la [procédure d’installation d’à usage unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
@@ -52,7 +38,7 @@ Le [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] exemples peuvent êtr
  Les fichiers de commandes Setup.exe et Cleanup.exe et les scripts doivent être exécutés à partir d'une invite de commandes de Visual Studio. Plusieurs fichiers d’installation et de nettoyage effectuent des tâches qui requièrent des privilèges d’administrateur et doivent être lancés avec des privilèges d’administrateur.  
   
 ## <a name="important-security-information-about-metadata-endpoints"></a>Informations de sécurité importantes à propos des points de terminaison de métadonnées  
- Pour empêcher la divulgation involontaire de métadonnées de service potentiellement sensibles, la publication de métadonnées est désactivée par défaut dans la configuration des services [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Ce comportement est sécurisé par défaut, mais il signifie également que vous ne pouvez pas utiliser d'outil d'importation de métadonnées (tel que Svcutil.exe) pour générer le code client requis pour appeler le service, à moins que le comportement de publication des métadonnées du service soit activé explicitement dans la configuration. Pour faciliter l’utilisation des exemples, pratiquement tous les exemples exposent un point de terminaison de publication de métadonnées non sécurisé. De tels points de terminaison sont potentiellement disponibles aux consommateurs non authentifiés anonymes et il est nécessaire de se montrer vigilant et de s'assurer que la divulgation publique des métadonnées d'un service est appropriée avant de déployer de tels points de terminaison. Pour plus d’informations sur la publication des métadonnées de service, consultez le [comportement de publication de métadonnées](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md) exemple. Consultez le [personnalisé sécuriser les métadonnées de point de terminaison](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) sample pour obtenir un exemple de sécurisation d’un point de terminaison de métadonnées.  
+ Pour empêcher la divulgation involontaire de métadonnées de service potentiellement sensibles, la configuration par défaut pour les services Windows Communication Foundation (WCF) désactive la publication des métadonnées. Ce comportement est sécurisé par défaut, mais il signifie également que vous ne pouvez pas utiliser d'outil d'importation de métadonnées (tel que Svcutil.exe) pour générer le code client requis pour appeler le service, à moins que le comportement de publication des métadonnées du service soit activé explicitement dans la configuration. Pour faciliter l’utilisation des exemples, pratiquement tous les exemples exposent un point de terminaison de publication de métadonnées non sécurisé. De tels points de terminaison sont potentiellement disponibles aux consommateurs non authentifiés anonymes et il est nécessaire de se montrer vigilant et de s'assurer que la divulgation publique des métadonnées d'un service est appropriée avant de déployer de tels points de terminaison. Pour plus d’informations sur la publication des métadonnées de service, consultez le [comportement de publication de métadonnées](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md) exemple. Consultez le [personnalisé sécuriser les métadonnées de point de terminaison](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) sample pour obtenir un exemple de sécurisation d’un point de terminaison de métadonnées.  
   
 ## <a name="exception-handling"></a>Gestion des exceptions  
  En général, ces exemples n'incluent pas la gestion des exceptions pour que le code reste axé sur le sujet de l'exemple. Pour plus d’informations sur la gestion des exceptions, consultez la [attendu des Exceptions](../../../../docs/framework/wcf/samples/expected-exceptions.md) exemple.  

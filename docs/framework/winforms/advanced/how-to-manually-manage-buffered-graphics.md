@@ -1,13 +1,6 @@
 ---
-title: "Comment : gérer manuellement des graphiques mis en mémoire tampon"
-ms.custom: 
+title: 'Comment : gérer manuellement des graphiques mis en mémoire tampon'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - flicker [Windows Forms], reducing by manually managing graphics
 - graphics [Windows Forms], managing buffered
 ms.assetid: 4c2a90ee-bbbe-4ff6-9170-1b06c195c918
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4f545cf4689a2c8058e77f4b4721788ffb0e7247
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f8675582fe6bafefd94d6a740c3263e407dfd4e7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-manually-manage-buffered-graphics"></a>Comment : gérer manuellement des graphiques mis en mémoire tampon
 Pour des scénarios de doubles mise en mémoire tampon plus avancés, vous pouvez utiliser la [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] classes à implémenter votre propre logique de mécanisme de double tampon. La classe chargée de l’allocation et la gestion des mémoires tampon de graphiques individuelles est la <xref:System.Drawing.BufferedGraphicsContext> classe. Chaque application possède sa propre valeur par défaut <xref:System.Drawing.BufferedGraphicsContext> qui gère toutes la valeur par défaut est de double tampon pour cette application. Vous pouvez récupérer une référence à cette instance en appelant le <xref:System.Drawing.BufferedGraphicsManager.Current%2A>.  

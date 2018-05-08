@@ -1,13 +1,6 @@
 ---
-title: "Comment : créer un dégradé linéaire"
-ms.custom: 
+title: 'Comment : créer un dégradé linéaire'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,19 +10,14 @@ helpviewer_keywords:
 - colors [Windows Forms], creating linear gradients
 - gradients
 ms.assetid: 6c88e1cc-1217-4399-ac12-cb37592b9f01
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 33979decf37e9adb29d94a6602a43f992d93aaa1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9eeedf1ef92bdf6e5e2724eeca5060765b0778f3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-linear-gradient"></a>Comment : créer un dégradé linéaire
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]Fournit des dégradés linéaires horizontales, verticales et diagonales. Par défaut, la couleur d’un dégradé linéaire varie de façon régulière. Toutefois, vous pouvez personnaliser un dégradé linéaire afin que la couleur change de façon non uniforme.  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Fournit des dégradés linéaires horizontales, verticales et diagonales. Par défaut, la couleur d’un dégradé linéaire varie de façon régulière. Toutefois, vous pouvez personnaliser un dégradé linéaire afin que la couleur change de façon non uniforme.  
   
  L’exemple suivant remplit une ligne, une ellipse et un rectangle avec un pinceau de dégradé linéaire horizontal.  
   
@@ -50,7 +38,7 @@ ms.lasthandoff: 12/22/2017
   
  Dans l’exemple précédent, les composants de couleur changent linéairement lorsque vous passez de la coordonnée horizontale de 0 à une coordonnée horizontale de 200. Par exemple, un point dont la première coordonnée se trouve à mi-chemin entre 0 et 200 aura un composant bleu qui se trouve à mi-chemin entre 0 et 255.  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]vous permet d’ajuster la façon dont une couleur varie d’un bord d’un dégradé à l’autre. Supposons que vous souhaitez créer un pinceau de dégradé change de couleur rouge conformément au tableau suivant.  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] vous permet d’ajuster la façon dont une couleur varie d’un bord d’un dégradé à l’autre. Supposons que vous souhaitez créer un pinceau de dégradé change de couleur rouge conformément au tableau suivant.  
   
 |Coordonnée horizontale|Composants RVB|  
 |---------------------------|--------------------|  

@@ -1,24 +1,12 @@
 ---
 title: Configuration du service de partage de ports Net.TCP
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b6dd81fa-68b7-4e1b-868e-88e5901b7ea0
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 942b48ff6887e079beb7c0c24c6542a774eafe33
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 99585bb05364b6b0b3ee093823dc599519c8a12a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-the-nettcp-port-sharing-service"></a>Configuration du service de partage de ports Net.TCP
 Les services auto-hébergés qui utilisent le transport Net.TCP peuvent contrôler plusieurs paramètres avancés, tels que `ListenBacklog` et `MaxPendingAccepts`, qui gouvernent le comportement du socket TCP sous-jacent utilisé pour la communication réseau. Toutefois, pour chaque socket, ces paramètres ne s'appliquent qu'au niveau de la liaison si la liaison de transport a désactivé le partage de port, activé par défaut.  

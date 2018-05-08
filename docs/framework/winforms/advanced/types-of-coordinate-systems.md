@@ -1,13 +1,6 @@
 ---
-title: "Types de systèmes de coordonnées"
-ms.custom: 
+title: Types de systèmes de coordonnées
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -22,19 +15,14 @@ helpviewer_keywords:
 - coordinate systems
 - transformations [Windows Forms], world
 ms.assetid: c61ff50a-eb1d-4e6c-83cd-f7e9764cfa9f
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 287b1c9eddef882041d9e4eac44a06190f3585a4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ff53942cb90721d5411f99b261f90366d039e151
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="types-of-coordinate-systems"></a>Types de systèmes de coordonnées
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]utilise trois espaces de coordonnées : monde, page et périphérique. Coordonnées universelles sont les coordonnées utilisées pour modéliser un environnement graphique particulier et les coordonnées que vous passez aux méthodes dans le .NET Framework. Les coordonnées de page font référence au système de coordonnées utilisé par une surface de dessin, comme un formulaire ou un contrôle. Coordonnées de périphérique sont les coordonnées utilisées par le périphérique physique qui est dessiné, tel qu’un écran ou une feuille de papier. Lorsque vous effectuez l’appel `myGraphics.DrawLine(myPen, 0, 0, 160, 80)`, les points que vous passez à la <xref:System.Drawing.Graphics.DrawLine%2A> méthode —`(0, 0)` et `(160, 80)`, se trouvent dans l’espace de coordonnées universelles. Avant de [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] peut dessiner la ligne à l’écran, les coordonnées passent par une séquence de transformations. Une transformation, appelée la transformation universelle, convertit les coordonnées universelles en coordonnées de page, et une autre transformation, appelée la transformation de page, convertit les coordonnées de page en coordonnées de périphérique.  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] utilise trois espaces de coordonnées : monde, page et périphérique. Coordonnées universelles sont les coordonnées utilisées pour modéliser un environnement graphique particulier et les coordonnées que vous passez aux méthodes dans le .NET Framework. Les coordonnées de page font référence au système de coordonnées utilisé par une surface de dessin, comme un formulaire ou un contrôle. Coordonnées de périphérique sont les coordonnées utilisées par le périphérique physique qui est dessiné, tel qu’un écran ou une feuille de papier. Lorsque vous effectuez l’appel `myGraphics.DrawLine(myPen, 0, 0, 160, 80)`, les points que vous passez à la <xref:System.Drawing.Graphics.DrawLine%2A> méthode —`(0, 0)` et `(160, 80)`, se trouvent dans l’espace de coordonnées universelles. Avant de [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] peut dessiner la ligne à l’écran, les coordonnées passent par une séquence de transformations. Une transformation, appelée la transformation universelle, convertit les coordonnées universelles en coordonnées de page, et une autre transformation, appelée la transformation de page, convertit les coordonnées de page en coordonnées de périphérique.  
   
 ## <a name="transforms-and-coordinate-systems"></a>Les transformations et les systèmes de coordonnées  
  Supposons que vous souhaitez travailler avec un système de coordonnées qui a son origine dans le corps de la zone cliente plutôt que dans le coin supérieur gauche. Imaginons, par exemple, que vous vouliez d’origine située à 100 pixels du bord gauche de la zone cliente et à 50 pixels à partir du haut de la zone cliente. L’illustration suivante montre un système de coordonnées.  

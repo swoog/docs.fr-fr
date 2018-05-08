@@ -1,33 +1,19 @@
 ---
 title: "Procédure : remplacer la réservation d'URL WCF par une réservation restreinte"
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 2754d223-79fc-4e2b-a6ce-989889f2abfa
-caps.latest.revision: 6
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b1f17a5c21888a9fc778d9649f62478d43ba0e86
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 823a59f53823a2480655c4f8720504dd4199d0bc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation"></a>Procédure : remplacer la réservation d'URL WCF par une réservation restreinte
 Une réservation d'URL vous permet de limiter les personnes qui reçoivent les messages d'une URL ou d'un jeu d'URL. Une réservation se compose d'un modèle d'URL, d'une liste de contrôle d'accès (ACL) et d'un jeu d'indicateurs. Le modèle d'URL définit les URL affectées par la réservation. Pour plus d’informations sur le traitement des modèles d’URL, consultez [le routage des demandes entrantes](http://go.microsoft.com/fwlink/?LinkId=136764). L'ACL contrôle quel utilisateur ou groupe d'utilisateurs est autorisé à recevoir des messages en provenance des URL spécifiées. Les indicateurs spécifient si la réservation consiste à donner directement à un utilisateur ou à un groupe l'autorisation d'écouter l'URL ou à déléguer l'autorisation d'écouter à d'autres processus.  
   
- Dans le cadre de la configuration du système d'exploitation par défaut, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] crée une réservation accessible globalement pour le port 80, afin de permettre à tous les utilisateurs d'exécuter des applications qui utilisent une double liaison HTTP pour la communication en duplex. Étant donné que l'ACL sur cette réservation concerne tous les utilisateurs, les administrateurs ne peuvent pas explicitement accorder ou refuser l'autorisation d'écouter une URL ou un jeu d'URL. Cette rubrique explique comment supprimer cette réservation et comment la recréer avec une ACL restreinte.  
+ Dans le cadre de la configuration du système d’exploitation par défaut, Windows Communication Foundation (WCF) crée une réservation accessible globalement pour le port 80 pour activer tous les utilisateurs d’exécuter des applications qui utilisent une double liaison HTTP pour la communication duplex. Étant donné que l'ACL sur cette réservation concerne tous les utilisateurs, les administrateurs ne peuvent pas explicitement accorder ou refuser l'autorisation d'écouter une URL ou un jeu d'URL. Cette rubrique explique comment supprimer cette réservation et comment la recréer avec une ACL restreinte.  
   
- Sur [!INCLUDE[wv](../../../../includes/wv-md.md)] ou [!INCLUDE[lserver](../../../../includes/lserver-md.md)], vous pouvez consulter toutes les réservations d'URL HTTP d'une invite de commandes de niveau élevé en tapant `netsh http show urlacl`.  L'exemple suivant montre ce à quoi une réservation d'URL [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] doit ressembler.  
+ Sur [!INCLUDE[wv](../../../../includes/wv-md.md)] ou [!INCLUDE[lserver](../../../../includes/lserver-md.md)], vous pouvez consulter toutes les réservations d'URL HTTP d'une invite de commandes de niveau élevé en tapant `netsh http show urlacl`.  L’exemple suivant montre ce qui peut ressembler à une réservation d’URL de WCF.  
   
 ```  
 Reserved URL : http://+:80/Temporary_Listen_Addresses/  
@@ -37,7 +23,7 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
             SDDL: D:(A;;GX;;;WD)  
 ```  
   
- La réservation se compose d'un modèle d'URL utilisé lorsqu'une application [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilise une double liaison HTTP pour la communication en duplex. Les URL de cette forme sont utilisées pour qu'un service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] renvoie des messages au client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] lors de la communication sur une double liaison HTTP. Tous les utilisateurs sont autorisés à écouter l'URL, mais pas à déléguer l'écoute à un autre processus. Enfin, l'ACL est décrite en langage SDDL (Security Descriptor Definition Language). Pour plus d’informations sur le langage SSDL, consultez [SSDL](http://go.microsoft.com/fwlink/?LinkId=136789)  
+ La réservation se compose d’un modèle d’URL utilisé lorsqu’une application WCF utilise une double liaison HTTP pour la communication duplex. URL de ce formulaire sont utilisées pour un service WCF pour renvoyer des messages au client WCF lors de la communication sur une double liaison HTTP. Tous les utilisateurs sont autorisés à écouter l'URL, mais pas à déléguer l'écoute à un autre processus. Enfin, l'ACL est décrite en langage SDDL (Security Descriptor Definition Language). Pour plus d’informations sur le langage SSDL, consultez [SSDL](http://go.microsoft.com/fwlink/?LinkId=136789)  
   
 ### <a name="to-delete-the-wcf-url-reservation"></a>Pour supprimer la réservation d'URL WCF  
   
@@ -48,7 +34,7 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
 3.  Si la réservation est supprimée avec succès, le message suivant s'affiche. **Réservation d’URL a été supprimée**  
   
 ## <a name="creating-a-new-security-group-and-new-restricted-url-reservation"></a>Création d'un nouveau groupe de sécurité et d'une nouvelle réservation d'URL restreinte  
- Pour remplacer la réservation d'URL [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] par une réservation restreinte, vous devez d'abord créer un groupe de sécurité. Pour ce faire, deux méthodes s'offrent à vous : à partir d'une invite de commandes ou de la console de gestion de l'ordinateur. L'utilisation d'une seule de ces méthodes suffit.  
+ Pour remplacer la réservation d’URL WCF par une réservation restreinte, vous devez tout d’abord créer un nouveau groupe de sécurité. Pour ce faire, deux méthodes s'offrent à vous : à partir d'une invite de commandes ou de la console de gestion de l'ordinateur. L'utilisation d'une seule de ces méthodes suffit.  
   
 #### <a name="to-create-a-new-security-group-from-a-command-prompt"></a>Pour créer un groupe de sécurité à partir d'une invite de commandes  
   

@@ -1,29 +1,17 @@
 ---
 title: Processus d'embauche
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8cfa23ab5f36b3a40de107a546dd4700a4523595
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 87327692e35e9386dab4cf906ab33cbe08d73fdd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hiring-process"></a>Processus d'embauche
 Cet exemple montre comment implémenter un processus d'entreprise à l'aide d'activités de messagerie et de deux workflows hébergés en tant que services de workflow. Ces workflows font partie de l'infrastructure informatique d'une société fictive nommée Contoso, Inc.  
   
- Le processus de workflow `HiringRequest` (implémenté en tant que <xref:System.Activities.Statements.Flowchart>) demande l'autorisation de plusieurs responsables de la société. Pour atteindre cet objectif, le workflow utilise d'autres services existants dans la société (dans ce cas, un service de boîte de réception et un service de données organisationnelles qui sont implémentés en tant que services ordinaires [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]).  
+ Le processus de workflow `HiringRequest` (implémenté en tant que <xref:System.Activities.Statements.Flowchart>) demande l'autorisation de plusieurs responsables de la société. Pour atteindre cet objectif, le workflow utilise d’autres services existants de l’organisation (dans notre cas, un service de boîte de réception et un service de données organisationnelles implémentés en tant que les services Windows Communication Foundation (WCF) brut).  
   
  Le workflow `ResumeRequest` (implémenté en tant que <xref:System.Activities.Statements.Sequence>) publie une offre d'emploi sur le site Web externe Careers de Contoso et gère l'acquisition de CV. Une offre d'emploi est disponible sur le site Web externe pour une durée fixe (jusqu'à son expiration) ou jusqu'à ce qu'un employé de Contoso décide de la supprimer.  
   
@@ -64,7 +52,7 @@ Cet exemple montre comment implémenter un processus d'entreprise à l'aide d'ac
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à la page [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les exemples [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Application\HiringProcess`  
   
@@ -111,7 +99,7 @@ Cet exemple montre comment implémenter un processus d'entreprise à l'aide d'ac
 |ContosoHR|Contient les contrats de données, les objets métiers et les classes de référentiel.|  
 |HiringRequestService|Contient la définition du workflow Processus de demande d'embauche.<br /><br /> Ce projet est implémenté en tant qu'application console qui héberge automatiquement le workflow (fichier xaml) en tant service.|  
 |ResumeRequestService|Service de workflow qui collecte les CV des candidats jusqu'à ce qu'un délai expire ou que quelqu'un décide que le processus doit être arrêté.<br /><br /> Ce projet est implémenté en tant que service de workflow déclaratif (xamlx).|  
-|OrgService|Service qui expose les informations organisationnelles (Employees, Positions, PositionTypes et Departments). Ce service s'apparente au module Organigramme d'un projet ERP classique.<br /><br /> Ce projet est implémenté en tant qu'application console qui expose un service [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].|  
+|OrgService|Service qui expose les informations organisationnelles (Employees, Positions, PositionTypes et Departments). Ce service s'apparente au module Organigramme d'un projet ERP classique.<br /><br /> Ce projet est implémenté comme une application console qui expose un service Windows Communication Foundation (WCF).|  
 |InboxService|Boîte de réception qui contient des tâches interactives pour les employés.<br /><br /> Ce projet est implémenté en tant qu'application console qui expose un service WCF.|  
 |InternalClient|Application Web pour l'interaction avec le processus. Les utilisateurs peuvent démarrer et afficher les workflows HiringProcess et y participer. Cette application leur permet également de démarrer et surveiller les processus ResumeRequest.<br /><br /> Ce site est implémenté de manière à se situer sur l'intranet de Contoso. Ce projet est implémenté en tant que site Web ASP.NET.|  
 |CareersWebSite|Site Web externe qui expose les postes ouverts chez Contoso. Les candidats potentiels peuvent accéder à ce site et envoyer un CV.|  

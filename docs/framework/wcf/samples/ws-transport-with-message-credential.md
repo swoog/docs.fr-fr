@@ -1,31 +1,17 @@
 ---
 title: WS Transport With Message Credential
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 0d092f3a-b309-439b-920b-66d8f46a0e3c
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7b954e2d19f601476876beef6482ca10eb3f113b
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: MT
+ms.openlocfilehash: acb2960fe3d563a05b0bdeee70af0d4093aae6f0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ws-transport-with-message-credential"></a>WS Transport With Message Credential
 Cet exemple montre l'utilisation de la sécurité de transport SSL en association avec les informations d'identification du client contenues dans le message. Cet exemple utilise la liaison `wsHttpBinding`.  
   
- Par défaut, la liaison `wsHttpBinding` assure la communication HTTP. En cas de configuration pour la sécurité du transport, la liaison prend en charge la communication HTTPS. HTTPS assure la protection de la confidentialité et de l'intégrité des messages transmis sur le réseau. Toutefois l'ensemble des mécanismes d'authentification qui peuvent être utilisés pour authentifier le client auprès du service est limité à ceux pris en charge par le protocole HTTPS. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] offre un mode de sécurité `TransportWithMessageCredential` conçu pour passer outre cette limitation. Lorsque ce mode de sécurité est configuré, la sécurité du transport est utilisée pour assurer la confidentialité et l'intégrité des messages transmis et procéder à l'authentification du service. Toutefois, l’authentification du client est effectuée en plaçant les informations d’identification client directement dans le message. Cela vous permet d’utiliser n’importe quel type d’informations d’identification qui est pris en charge par le mode de sécurité de message pour l’authentification du client tout en conservant l’avantage du mode de sécurité de transport.  
+ Par défaut, la liaison `wsHttpBinding` assure la communication HTTP. En cas de configuration pour la sécurité du transport, la liaison prend en charge la communication HTTPS. HTTPS assure la protection de la confidentialité et de l'intégrité des messages transmis sur le réseau. Toutefois l'ensemble des mécanismes d'authentification qui peuvent être utilisés pour authentifier le client auprès du service est limité à ceux pris en charge par le protocole HTTPS. Windows Communication Foundation (WCF) propose un `TransportWithMessageCredential` mode de sécurité qui est conçu pour passer outre cette limitation. Lorsque ce mode de sécurité est configuré, la sécurité du transport est utilisée pour assurer la confidentialité et l'intégrité des messages transmis et procéder à l'authentification du service. Toutefois, l’authentification du client est effectuée en plaçant les informations d’identification client directement dans le message. Cela vous permet d’utiliser n’importe quel type d’informations d’identification qui est pris en charge par le mode de sécurité de message pour l’authentification du client tout en conservant l’avantage du mode de sécurité de transport.  
   
  Dans cet exemple, un type d'information d'identification `UserName` est utilisé pour authentifier le client auprès du service.  
   
