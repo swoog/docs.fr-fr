@@ -1,13 +1,6 @@
 ---
 title: Vue d'ensemble de l'alignement, des marges et du remplissage
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - padding [WPF]
 - aligning [WPF]
 ms.assetid: 9c6a2009-9b86-4e40-8605-0a2664dc3973
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9d53ec57bdd6126aa1b82e3fa34d01b8907ca169
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 70eff35db638c5bfbc9c164dc381e3f58e18957b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="alignment-margins-and-padding-overview"></a>Vue d'ensemble de l'alignement, des marges et du remplissage
 La <xref:System.Windows.FrameworkElement> classe expose plusieurs propriétés qui sont utilisées pour positionner des éléments enfants. Cette rubrique présente quatre des propriétés plus importantes : <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, <xref:System.Windows.FrameworkElement.Margin%2A>, <xref:System.Windows.Controls.Border.Padding%2A>, et <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>. Il est important de comprendre les effets de ces propriétés, car elles servent de base au contrôle de la position des éléments dans les applications [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -67,7 +55,7 @@ La <xref:System.Windows.FrameworkElement> classe expose plusieurs propriétés q
 |<xref:System.Windows.HorizontalAlignment.Left>|Les éléments enfants sont alignés à gauche de l’espace de disposition alloué par l’élément parent.|  
 |<xref:System.Windows.HorizontalAlignment.Center>|Les éléments enfants sont alignés au centre de l’espace de disposition alloué par l’élément parent.|  
 |<xref:System.Windows.HorizontalAlignment.Right>|Les éléments enfants sont alignés à droite de l’espace de disposition alloué par l’élément parent.|  
-|<xref:System.Windows.HorizontalAlignment.Stretch>(Par défaut)|Les éléments enfants sont étirés pour remplir l’espace de disposition alloué par l’élément parent. Explicite <xref:System.Windows.FrameworkElement.Width%2A> et <xref:System.Windows.FrameworkElement.Height%2A> valeurs sont prioritaires.|  
+|<xref:System.Windows.HorizontalAlignment.Stretch> (Par défaut)|Les éléments enfants sont étirés pour remplir l’espace de disposition alloué par l’élément parent. Explicite <xref:System.Windows.FrameworkElement.Width%2A> et <xref:System.Windows.FrameworkElement.Height%2A> valeurs sont prioritaires.|  
   
  L’exemple suivant montre comment appliquer le <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> propriété <xref:System.Windows.Controls.Button> éléments. Chaque valeur d’attribut est présentée pour mieux illustrer les différents comportements de rendu.  
   
@@ -87,7 +75,7 @@ La <xref:System.Windows.FrameworkElement> classe expose plusieurs propriétés q
 |<xref:System.Windows.VerticalAlignment.Top>|Les éléments enfants sont alignés en haut de l’espace de disposition alloué par l’élément parent.|  
 |<xref:System.Windows.VerticalAlignment.Center>|Les éléments enfants sont alignés au centre de l’espace de disposition alloué par l’élément parent.|  
 |<xref:System.Windows.VerticalAlignment.Bottom>|Les éléments enfants sont alignés en bas de l’espace de disposition alloué par l’élément parent.|  
-|<xref:System.Windows.VerticalAlignment.Stretch>(Par défaut)|Les éléments enfants sont étirés pour remplir l’espace de disposition alloué par l’élément parent. Explicite <xref:System.Windows.FrameworkElement.Width%2A> et <xref:System.Windows.FrameworkElement.Height%2A> valeurs sont prioritaires.|  
+|<xref:System.Windows.VerticalAlignment.Stretch> (Par défaut)|Les éléments enfants sont étirés pour remplir l’espace de disposition alloué par l’élément parent. Explicite <xref:System.Windows.FrameworkElement.Width%2A> et <xref:System.Windows.FrameworkElement.Height%2A> valeurs sont prioritaires.|  
   
  L’exemple suivant montre comment appliquer le <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> propriété <xref:System.Windows.Controls.Button> éléments. Chaque valeur d’attribut est présentée pour mieux illustrer les différents comportements de rendu. Pour les besoins de cet exemple, un <xref:System.Windows.Controls.Grid> élément avec un quadrillage visible est utilisé en tant que parent pour mieux illustrer le comportement de disposition de chaque valeur de propriété.  
   
@@ -101,7 +89,7 @@ La <xref:System.Windows.FrameworkElement> classe expose plusieurs propriétés q
   
 <a name="wcpsdk_layout_amp_margin_properties"></a>   
 ## <a name="understanding-margin-properties"></a>Présentation des propriétés de marge  
- Le <xref:System.Windows.FrameworkElement.Margin%2A> propriété décrit la distance entre un élément et ses enfants ou les homologues. <xref:System.Windows.FrameworkElement.Margin%2A>les valeurs peuvent être uniformes, à l’aide d’une syntaxe comme `Margin="20"`. Avec cette syntaxe, un uniforme <xref:System.Windows.FrameworkElement.Margin%2A> d’appareil 20 pixels indépendants peuvent être appliquées à l’élément. <xref:System.Windows.FrameworkElement.Margin%2A>les valeurs peuvent également prendre la forme de quatre valeurs distinctes, chaque valeur décrivant une marge distincte à appliquer à la gauche, haut, droite et en bas (dans cet ordre), comme `Margin="0,10,5,25"`. Utilisation correcte de la <xref:System.Windows.FrameworkElement.Margin%2A> propriété permet un contrôle très précis de la position de rendu d’un élément et la position de rendu de ses éléments voisins et ses enfants.  
+ Le <xref:System.Windows.FrameworkElement.Margin%2A> propriété décrit la distance entre un élément et ses enfants ou les homologues. <xref:System.Windows.FrameworkElement.Margin%2A> les valeurs peuvent être uniformes, à l’aide d’une syntaxe comme `Margin="20"`. Avec cette syntaxe, un uniforme <xref:System.Windows.FrameworkElement.Margin%2A> d’appareil 20 pixels indépendants peuvent être appliquées à l’élément. <xref:System.Windows.FrameworkElement.Margin%2A> les valeurs peuvent également prendre la forme de quatre valeurs distinctes, chaque valeur décrivant une marge distincte à appliquer à la gauche, haut, droite et en bas (dans cet ordre), comme `Margin="0,10,5,25"`. Utilisation correcte de la <xref:System.Windows.FrameworkElement.Margin%2A> propriété permet un contrôle très précis de la position de rendu d’un élément et la position de rendu de ses éléments voisins et ses enfants.  
   
 > [!NOTE]
 >  Une marge non nulle applique un espace en dehors de l’élément <xref:System.Windows.FrameworkElement.ActualWidth%2A> et <xref:System.Windows.FrameworkElement.ActualHeight%2A>.  
@@ -135,7 +123,7 @@ La <xref:System.Windows.FrameworkElement> classe expose plusieurs propriétés q
 ## <a name="using-alignment-margins-and-padding-in-an-application"></a>Utilisation de l’alignement, des marges et du remplissage dans une application  
  <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, <xref:System.Windows.FrameworkElement.Margin%2A>, <xref:System.Windows.Controls.Border.Padding%2A>, et <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> fournissent le contrôle de positionnement nécessaire pour créer un type complexe [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. Vous pouvez utiliser les effets de chaque propriété pour changer le positionnement d’un élément enfant. Cela vous apporte une plus grande souplesse pour créer des applications dynamiques et une expérience utilisateur saisissante.  
   
- L’exemple suivant illustre chacun des concepts détaillés dans cette rubrique. Reposant sur l’infrastructure trouvé dans le premier exemple dans cette rubrique, cet exemple ajoute un <xref:System.Windows.Controls.Grid> élément en tant qu’enfant de le <xref:System.Windows.Controls.Border> dans le premier exemple. <xref:System.Windows.Controls.Border.Padding%2A>est appliqué au parent <xref:System.Windows.Controls.Border> élément. Le <xref:System.Windows.Controls.Grid> est utilisé pour partitionner l’espace entre les trois enfants <xref:System.Windows.Controls.StackPanel> éléments. <xref:System.Windows.Controls.Button>éléments sont encore utilisés pour afficher les différents effets de <xref:System.Windows.FrameworkElement.Margin%2A> et <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>. <xref:System.Windows.Controls.TextBlock>les éléments sont ajoutés à chaque <xref:System.Windows.Controls.ColumnDefinition> pour mieux définir les différentes propriétés appliquées à la <xref:System.Windows.Controls.Button> éléments dans chaque colonne.  
+ L’exemple suivant illustre chacun des concepts détaillés dans cette rubrique. Reposant sur l’infrastructure trouvé dans le premier exemple dans cette rubrique, cet exemple ajoute un <xref:System.Windows.Controls.Grid> élément en tant qu’enfant de le <xref:System.Windows.Controls.Border> dans le premier exemple. <xref:System.Windows.Controls.Border.Padding%2A> est appliqué au parent <xref:System.Windows.Controls.Border> élément. Le <xref:System.Windows.Controls.Grid> est utilisé pour partitionner l’espace entre les trois enfants <xref:System.Windows.Controls.StackPanel> éléments. <xref:System.Windows.Controls.Button> éléments sont encore utilisés pour afficher les différents effets de <xref:System.Windows.FrameworkElement.Margin%2A> et <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>. <xref:System.Windows.Controls.TextBlock> les éléments sont ajoutés à chaque <xref:System.Windows.Controls.ColumnDefinition> pour mieux définir les différentes propriétés appliquées à la <xref:System.Windows.Controls.Button> éléments dans chaque colonne.  
   
  [!code-cpp[MarginPaddingAlignmentSample#4](../../../../samples/snippets/cpp/VS_Snippets_Wpf/MarginPaddingAlignmentSample/CPP/Margin_Padding_Alignment_Sample.cpp#4)]
  [!code-csharp[MarginPaddingAlignmentSample#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MarginPaddingAlignmentSample/CSharp/Margin_Padding_Alignment_Sample.cs#4)]

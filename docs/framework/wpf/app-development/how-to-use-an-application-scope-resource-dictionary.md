@@ -1,13 +1,6 @@
 ---
-title: "Guide pratique pour utiliser un dictionnaire de ressources de portée application"
-ms.custom: 
+title: Guide pratique pour utiliser un dictionnaire de ressources de portée application
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,22 +9,17 @@ helpviewer_keywords:
 - resource dictionaries [WPF], application-scope
 - application-scope resource dictionaries
 ms.assetid: 53857682-bd2c-4f2c-8f25-1307d0b451a2
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 04dbcfb0fa16ceb4d6778ef611e926894d7840e9
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a42fee8ad31dcc02459711fc51e8611e0e8cd012
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-an-application-scope-resource-dictionary"></a>Guide pratique pour utiliser un dictionnaire de ressources de portée application
 Cet exemple montre comment définir et utiliser un dictionnaire de ressources personnalisé de portée application.  
   
 ## <a name="example"></a>Exemple  
- <xref:System.Windows.Application>expose un magasin de portée application pour les ressources partagées : <xref:System.Windows.Application.Resources%2A>. Par défaut, le <xref:System.Windows.Application.Resources%2A> propriété est initialisée avec une instance de la <xref:System.Windows.ResourceDictionary> type. Vous utilisez cette instance lorsque vous obtenez et définissez les propriétés de l’étendue de l’application à l’aide de <xref:System.Windows.Application.Resources%2A>. Pour plus d’informations, consultez [Comment : obtenir et définir une ressource de portée Application](http://msdn.microsoft.com/library/39e0420c-c9fc-47dc-8956-fdd95b214095).
+ <xref:System.Windows.Application> expose un magasin de portée application pour les ressources partagées : <xref:System.Windows.Application.Resources%2A>. Par défaut, le <xref:System.Windows.Application.Resources%2A> propriété est initialisée avec une instance de la <xref:System.Windows.ResourceDictionary> type. Vous utilisez cette instance lorsque vous obtenez et définissez les propriétés de l’étendue de l’application à l’aide de <xref:System.Windows.Application.Resources%2A>. Pour plus d’informations, consultez [Comment : obtenir et définir une ressource de portée Application](http://msdn.microsoft.com/library/39e0420c-c9fc-47dc-8956-fdd95b214095).
   
  Si vous avez plusieurs ressources que vous définissez à l’aide de <xref:System.Windows.Application.Resources%2A>, vous pouvez utiliser à la place d’un dictionnaire de ressources personnalisé pour stocker ces ressources et définir <xref:System.Windows.Application.Resources%2A> avec lui à la place. L’exemple suivant montre comment vous déclarez un dictionnaire de ressources personnalisé à l’aide de XAML.
   

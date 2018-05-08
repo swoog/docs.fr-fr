@@ -1,13 +1,6 @@
 ---
-title: "Comment : sélectionner du texte dans le contrôle TextBox Windows Forms"
-ms.custom: 
+title: 'Comment : sélectionner du texte dans le contrôle TextBox Windows Forms'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - text boxes [Windows Forms], selecting text programmatically
 - text [Windows Forms], selecting in text boxes programmatically
 ms.assetid: 8c591546-6a01-45c7-8e03-f78431f903b1
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 535ee9e7359782f24d48d895f094afbe47e1023b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8fd1cfb0764d16b86cd639d8266d1cceff874932
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-select-text-in-the-windows-forms-textbox-control"></a>Comment : sélectionner du texte dans le contrôle TextBox Windows Forms
 Vous pouvez sélectionner le texte par programmation dans les Windows Forms <xref:System.Windows.Forms.TextBox> contrôle. Par exemple, si vous créez une fonction qui recherche du texte pour une chaîne particulière, vous pouvez sélectionner le texte afin d’alerter visuellement le lecteur de la position de la chaîne trouvée.  

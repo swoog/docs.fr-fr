@@ -1,28 +1,16 @@
 ---
-title: "FocusVisualStyle et application d'un style au focus dans les contrôles"
-ms.custom: 
+title: FocusVisualStyle et application d'un style au focus dans les contrôles
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - keyboard focus [WPF]
 - focus [WPF], visual styling
 - styles [WPF], focus visual style
 ms.assetid: 786ac576-011b-4d72-913b-558deccb9b35
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4d29fda788aa4ec79ad4278beefa16ee14208832
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6c73c8bbfcf7631094ddf89641de9af38f86f88e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="styling-for-focus-in-controls-and-focusvisualstyle"></a>FocusVisualStyle et application d'un style au focus dans les contrôles
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] propose deux mécanismes parallèles permettant de changer l’apparence visuelle d’un contrôle lorsqu’il reçoit le focus clavier. Le premier consiste à utiliser des accesseurs Set de propriété pour les propriétés telles que <xref:System.Windows.UIElement.IsKeyboardFocused%2A> dans le style ou le modèle est appliqué au contrôle. Le deuxième mécanisme consiste à fournir un style distinct comme valeur de la <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> propriété ; le « style de focus visuel » crée une arborescence d’éléments visuels distincte pour un ornement qui est dessiné sur le contrôle, plutôt que d’en modifier l’arborescence d’éléments visuels du contrôle ou de toute autre interface utilisateur élément à remplacer. Cette rubrique décrit les scénarios où chacun de ces mécanismes convient.  

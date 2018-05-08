@@ -1,9 +1,6 @@
 ---
 title: Liste de types (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - StructureConstraint
 - vb.StructureConstraint
@@ -27,14 +24,11 @@ helpviewer_keywords:
 - type parameters
 - constraints, Class keyword
 ms.assetid: 56db947a-2ae8-40f2-a70a-960764e9d0db
-caps.latest.revision: "33"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 35e72414b236615dc230b654ccfeed290841fb31
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5fbb07154fce27feb257b431c1726446b42fbfe0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="type-list-visual-basic"></a>Liste de types (Visual Basic)
 Spécifie le *les paramètres de type* pour un *générique* élément de programmation. Plusieurs paramètres sont séparés par des virgules. Voici la syntaxe pour un paramètre de type.  
@@ -53,7 +47,7 @@ Spécifie le *les paramètres de type* pour un *générique* élément de progra
 |`typename`|Obligatoire. Nom du paramètre de type. Il s’agit d’un espace réservé, à remplacer par un type défini fourni par l’argument de type correspondant.|  
 |`constraintlist`|Facultatif. Liste des conditions requises qui contraignent le type de données qui peut être fourni pour `typename`. Si vous avez plusieurs contraintes, placez-les entre accolades (`{ }`) en les séparant par des virgules. Vous devez introduire la liste de contraintes avec le [comme](../../../visual-basic/language-reference/statements/as-clause.md) (mot clé). Vous utilisez `As` une seule fois, au début de la liste.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Chaque élément de programmation générique doit avoir au moins un paramètre de type. Un paramètre de type est un espace réservé pour un type spécifique (un *élément construit*) que le code client spécifie lorsqu’il crée une instance du type générique. Vous pouvez définir une classe générique, structure, interface, une procédure ou délégué.  
   
  Pour plus d’informations sur le moment de définir un type générique, consultez [des Types génériques en Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md). Pour plus d’informations sur les noms de paramètre de type, consultez [noms d’élément déclaré](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  

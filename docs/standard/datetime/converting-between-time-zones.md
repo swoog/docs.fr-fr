@@ -1,13 +1,7 @@
 ---
-title: "Conversion d’heures entre fuseaux horaires"
-ms.custom: 
+title: Conversion d’heures entre fuseaux horaires
 ms.date: 04/10/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,18 +12,13 @@ helpviewer_keywords:
 - converting times
 - local time conversions
 ms.assetid: a51e1a3b-c983-4320-b31a-1f9fa3cf824a
-caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: eabe0c1511e6fd42798f1a879e9e8d526d543a29
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: 7547f0c2dd3651e478bb52106640a7b4525afc29
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="converting-times-between-time-zones"></a>Conversion d’heures entre fuseaux horaires
 
@@ -135,5 +124,6 @@ Le <xref:System.TimeZoneInfo> classe inclut également une surcharge de la <xref
 
 ## <a name="see-also"></a>Voir aussi
 
-<xref:System.TimeZoneInfo>[Dates, heures et fuseaux horaires](../../../docs/standard/datetime/index.md)
+<xref:System.TimeZoneInfo>
+[Dates, heures et fuseaux horaires](../../../docs/standard/datetime/index.md)
 [recherche des fuseaux horaires définis sur un système local](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md)

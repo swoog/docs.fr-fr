@@ -1,31 +1,17 @@
 ---
-title: "Vue d'ensemble du contrôle WebBrowser"
-ms.custom: 
+title: Vue d'ensemble du contrôle WebBrowser
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - WebBrowser
 helpviewer_keywords:
 - WebBrowser control [Windows Forms], about
 - Web pages [Windows Forms], displaying in applications
 ms.assetid: 6e3e1cc2-9c48-4136-9659-e99e4e60b7e9
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d2c1ed93769cc91d9622a86ea2d894cea57f5bcd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2e69b71b3e354101d950d6f7011b13fc7c0de030
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="webbrowser-control-overview"></a>Vue d'ensemble du contrôle WebBrowser
 Le <xref:System.Windows.Forms.WebBrowser> contrôle fournit un wrapper managé pour le contrôle WebBrowser ActiveX. Le wrapper managé vous permet d’afficher des pages Web dans vos applications clientes Windows Forms. Vous pouvez utiliser la <xref:System.Windows.Forms.WebBrowser> contrôle de dupliquer les fonctionnalités de navigation Web d’Internet Explorer dans votre application, ou vous peut désactiver la fonctionnalité d’Internet Explorer par défaut et utiliser le contrôle comme une simple visionneuse de documents HTML. Vous pouvez également utiliser le contrôle à ajouter des éléments d’interface utilisateur DHTML à votre formulaire et masquer le fait qu’ils sont hébergés dans le <xref:System.Windows.Forms.WebBrowser> contrôle. Cette approche vous permet de combiner de façon transparente les contrôles Web avec des contrôles Windows Forms dans une application unique.  
@@ -40,13 +26,13 @@ Le <xref:System.Windows.Forms.WebBrowser> contrôle fournit un wrapper managé p
 |Name|Description|  
 |----------|-----------------|  
 |Propriété <xref:System.Windows.Forms.WebBrowser.Document%2A>|Obtient un objet qui fournit l’accès managé pour le modèle objet de document HTML (DOM) de la page Web actuelle.|  
-|<xref:System.Windows.Forms.WebBrowser.DocumentCompleted>événement|Se produit lorsqu’une page Web est chargée.|  
+|<xref:System.Windows.Forms.WebBrowser.DocumentCompleted> Événement|Se produit lorsqu’une page Web est chargée.|  
 |Propriété <xref:System.Windows.Forms.WebBrowser.DocumentText%2A>|Obtient ou définit le contenu de la page Web HTML.|  
 |Propriété <xref:System.Windows.Forms.WebBrowser.DocumentTitle%2A>|Obtient le titre de la page Web actuelle.|  
 |Méthode <xref:System.Windows.Forms.WebBrowser.GoBack%2A>|Navigue vers la page précédente dans l’historique.|  
 |Méthode <xref:System.Windows.Forms.WebBrowser.GoForward%2A>|Navigue vers la page suivante dans l’historique.|  
 |Méthode <xref:System.Windows.Forms.WebBrowser.Navigate%2A>|Navigue vers l’URL spécifiée.|  
-|<xref:System.Windows.Forms.WebBrowser.Navigating>événement|Se produit avant le début de la navigation, l’activation de l’action doit être annulée.|  
+|<xref:System.Windows.Forms.WebBrowser.Navigating> Événement|Se produit avant le début de la navigation, l’activation de l’action doit être annulée.|  
 |Propriété <xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A>|Obtient ou définit un objet de code de script de page Web peuvent utiliser pour communiquer avec votre application.|  
 |Méthode <xref:System.Windows.Forms.WebBrowser.Print%2A>|Permet d’imprimer la page Web actuelle.|  
 |Méthode <xref:System.Windows.Forms.WebBrowser.Refresh%2A>|Recharge la page Web actuelle.|  

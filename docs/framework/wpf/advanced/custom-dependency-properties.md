@@ -1,13 +1,6 @@
 ---
-title: "Propriétés de dépendance personnalisées"
-ms.custom: 
+title: Propriétés de dépendance personnalisées
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,16 +14,11 @@ helpviewer_keywords:
 - wrappers [WPF], implementing
 - dependency properties [WPF], custom
 ms.assetid: e6bfcfac-b10d-4f58-9f77-a864c2a2938f
-caps.latest.revision: "25"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 588ab00d61a701dc43e2af5978a6023a93f367f4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2623f34418aad7a0b29c52d1310fdc79afced790
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-dependency-properties"></a>Propriétés de dépendance personnalisées
 Cette rubrique décrit les raisons pour lesquelles les développeurs d’applications et les auteurs de composants [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] peuvent souhaiter créer une propriété de dépendance personnalisée, et décrit les étapes d’implémentation ainsi que certaines options d’implémentation susceptibles d’améliorer les performances, l’utilisation ou la souplesse de la propriété.  
@@ -134,11 +122,11 @@ Cette rubrique décrit les raisons pour lesquelles les développeurs d’applica
   
 -   Si votre propriété (ou les modifications de sa valeur) affecte la [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], et en particulier, la manière dont le système de disposition doit dimensionner ou rendre l’élément dans une page, définissez une ou plusieurs des indicateurs suivants : <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure>, <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsArrange>, <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender>.  
   
-    -   <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure>Indique qu’une modification de cette propriété requiert une modification [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] rendu où l’objet conteneur peut nécessiter plus ou moins d’espace dans le parent. Par exemple, cet indicateur doit être défini pour une propriété « Width ».  
+    -   <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure> Indique qu’une modification de cette propriété requiert une modification [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] rendu où l’objet conteneur peut nécessiter plus ou moins d’espace dans le parent. Par exemple, cet indicateur doit être défini pour une propriété « Width ».  
   
-    -   <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsArrange>Indique qu’une modification de cette propriété requiert une modification [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] généralement de rendu qui ne nécessite pas une modification dans l’espace dédié, mais n’indique que le positionnement dans l’espace a été modifié. Par exemple, cet indicateur doit être défini pour une propriété « Alignment ».  
+    -   <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsArrange> Indique qu’une modification de cette propriété requiert une modification [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] généralement de rendu qui ne nécessite pas une modification dans l’espace dédié, mais n’indique que le positionnement dans l’espace a été modifié. Par exemple, cet indicateur doit être défini pour une propriété « Alignment ».  
   
-    -   <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender>Indique qu’une autre modification s’est produite et n’affecte pas de présentation et la mesure, mais qu’un autre rendu est nécessaire. Un exemple serait une propriété qui change une couleur d’un élément existant, telle que « Background ».  
+    -   <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender> Indique qu’une autre modification s’est produite et n’affecte pas de présentation et la mesure, mais qu’un autre rendu est nécessaire. Un exemple serait une propriété qui change une couleur d’un élément existant, telle que « Background ».  
   
     -   Ces indicateurs sont souvent utilisés comme protocole dans les métadonnées pour vos propres implémentations de substitution de rappels de disposition ou de système de propriétés. Par exemple, vous pouvez avoir un <xref:System.Windows.DependencyObject.OnPropertyChanged%2A> rappel appellera <xref:System.Windows.UIElement.InvalidateArrange%2A> si n’importe quelle propriété de l’instance signale une modification de valeur et qu’il a <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A> comme `true` dans ses métadonnées.  
   
@@ -148,7 +136,7 @@ Cette rubrique décrit les raisons pour lesquelles les développeurs d’applica
   
 -   Par défaut, la liaison de données <xref:System.Windows.Data.Binding.Mode%2A> pour les propriétés de dépendance est <xref:System.Windows.Data.BindingMode.OneWay>. Vous pouvez toujours modifier la liaison à <xref:System.Windows.Data.BindingMode.TwoWay> par instance de liaison ; pour plus d’informations, consultez [spécifier le sens de la liaison](../../../../docs/framework/wpf/data/how-to-specify-the-direction-of-the-binding.md). Mais en tant que créateur de propriété de dépendance, vous pouvez choisir d’utiliser la propriété <xref:System.Windows.Data.BindingMode.TwoWay> mode de liaison par défaut. Est un exemple d’une propriété de dépendance existante <xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A?displayProperty=nameWithType>; le scénario de cette propriété est que le <xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A> définition logique et la composition de <xref:System.Windows.Controls.MenuItem> interagir avec le style de thème par défaut. Le <xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A> logique de propriété utilise la liaison de données en mode natif pour maintenir l’état de la propriété conformément à d’autres propriétés de l’état et les appels de méthode. Un autre exemple de propriété qui lie <xref:System.Windows.Data.BindingMode.TwoWay> par défaut est <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType>.  
   
--   Vous pouvez également activer l’héritage de propriété dans une propriété de dépendance personnalisée en définissant le <xref:System.Windows.FrameworkPropertyMetadataOptions.Inherits> indicateur. L’héritage de propriété est utile pour un scénario où des éléments parents et des éléments enfants ont une propriété en commun, et où il est logique que les éléments enfants aient la même valeur de propriété que le parent. Un exemple de propriété pouvant être héritées est <xref:System.Windows.FrameworkElement.DataContext%2A>, qui est utilisé pour la liaison des opérations pour activer le scénario maître / détail important pour la présentation des données. En rendant <xref:System.Windows.FrameworkElement.DataContext%2A> pouvant être héritées, tous les éléments enfants héritent de ce contexte de données également. En raison de l’héritage de valeur de propriété, vous pouvez spécifier un contexte de données à la racine de la page ou de l’application, et vous n’avez pas besoin de le respécifier pour les liaisons dans tous les éléments enfants possibles. <xref:System.Windows.FrameworkElement.DataContext%2A>est également un bon exemple pour illustrer que l’héritage remplace la valeur par défaut, mais il peut toujours être défini localement sur un élément enfant ; Pour plus d’informations, consultez [utiliser le modèle maître / détail avec des données hiérarchiques](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md). L’héritage de valeur de propriété peut avoir un impact sur les performances, et doit donc être utilisé avec modération. Pour plus d’informations, consultez [Héritage de la valeur de propriété](../../../../docs/framework/wpf/advanced/property-value-inheritance.md).  
+-   Vous pouvez également activer l’héritage de propriété dans une propriété de dépendance personnalisée en définissant le <xref:System.Windows.FrameworkPropertyMetadataOptions.Inherits> indicateur. L’héritage de propriété est utile pour un scénario où des éléments parents et des éléments enfants ont une propriété en commun, et où il est logique que les éléments enfants aient la même valeur de propriété que le parent. Un exemple de propriété pouvant être héritées est <xref:System.Windows.FrameworkElement.DataContext%2A>, qui est utilisé pour la liaison des opérations pour activer le scénario maître / détail important pour la présentation des données. En rendant <xref:System.Windows.FrameworkElement.DataContext%2A> pouvant être héritées, tous les éléments enfants héritent de ce contexte de données également. En raison de l’héritage de valeur de propriété, vous pouvez spécifier un contexte de données à la racine de la page ou de l’application, et vous n’avez pas besoin de le respécifier pour les liaisons dans tous les éléments enfants possibles. <xref:System.Windows.FrameworkElement.DataContext%2A> est également un bon exemple pour illustrer que l’héritage remplace la valeur par défaut, mais il peut toujours être défini localement sur un élément enfant ; Pour plus d’informations, consultez [utiliser le modèle maître / détail avec des données hiérarchiques](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md). L’héritage de valeur de propriété peut avoir un impact sur les performances, et doit donc être utilisé avec modération. Pour plus d’informations, consultez [Héritage de la valeur de propriété](../../../../docs/framework/wpf/advanced/property-value-inheritance.md).  
   
 -   Définir le <xref:System.Windows.FrameworkPropertyMetadataOptions.Journal> indicateur pour indiquer si votre propriété de dépendance doit être détectée ou utilisée par les services de journalisation de navigation. Par exemple le <xref:System.Windows.Controls.Primitives.Selector.SelectedIndex%2A> propriété ; tout élément sélectionné dans une sélection de contrôle doit être persistante une fois que l’historique de journalisation est accédé.  
   
