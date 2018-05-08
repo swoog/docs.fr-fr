@@ -1,22 +1,12 @@
 ---
-title: "Variance dans les délégués (Visual Basic)"
-ms.custom: 
+title: Variance dans les délégués (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 38e9353f-74f8-4211-a8f0-7a495414df4a
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 9fe76a32f76f760497021289ec1c6ce673cec1b8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d857f120be0fe810489ba69edb55af9cc0dd6940
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="variance-in-delegates-visual-basic"></a>Variance dans les délégués (Visual Basic)
 .NET framework 3.5 a introduit la prise en charge de la variance pour la correspondance des signatures de méthode avec des types de délégués dans tous les délégués en c# et Visual Basic. Cela signifie que vous pouvez assigner aux délégués non seulement les méthodes ayant des signatures correspondantes, mais également des méthodes qui retournent des types plus dérivés (covariance) ou qui acceptent des paramètres ayant des types moins dérivés (contravariance) que ceux spécifiés par le type délégué. Cela inclut à la fois des délégués génériques et non génériques.  
@@ -157,7 +147,7 @@ Public Delegate Sub DContravariant(Of In A)(ByVal a As A)
 ```  
   
 > [!IMPORTANT]
->  `ByRef`paramètres Visual Basic ne peut pas être marquées en tant que variant.  
+>  `ByRef` paramètres Visual Basic ne peut pas être marquées en tant que variant.  
   
  Il est également possible de prendre en charge à la fois la variance et la covariance dans le même délégué, mais pour des paramètres de type différents. L'exemple suivant le démontre.  
   
