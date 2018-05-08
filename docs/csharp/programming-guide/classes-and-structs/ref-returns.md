@@ -8,15 +8,15 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.openlocfilehash: 57fa8f52320b30a1cb228b41e3f5e6655c235561
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 98c58d083cb806a92e28c1c9d27effa1124fd153
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ref-returns-and-ref-locals"></a>Retours ref et variables locales ref
 
-À compter de C# 7, C# prend en charge les valeurs de retour de référence (retours ref). Une valeur de retour de référence permet à une méthode de retourner à un appelant une référence à une variable, plutôt qu’à une valeur. L’appelant peut alors choisir de traiter la variable retournée comme si elle était retournée par valeur ou par référence. L’appelant peut créer une nouvelle variable qui est elle-même une référence à la valeur retournée, appelée variable locale ref.
+À compter de C# 7.0, C# prend en charge les valeurs de retour de référence (retours ref). Une valeur de retour de référence permet à une méthode de retourner à un appelant une référence à une variable, plutôt qu’à une valeur. L’appelant peut alors choisir de traiter la variable retournée comme si elle était retournée par valeur ou par référence. L’appelant peut créer une nouvelle variable qui est elle-même une référence à la valeur retournée, appelée variable locale ref.
 
 ## <a name="what-is-a-reference-return-value"></a>Qu’est-ce qu’une valeur de retour de référence ?
 

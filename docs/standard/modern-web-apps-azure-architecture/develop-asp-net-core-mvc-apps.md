@@ -10,11 +10,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c5e2d603062095c02af500ae74a9ea708cf9aefa
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 1a97bd393a4df080d9e2f9fc049165e4efbff852
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Développer des applications ASP.NET Core MVC
 
@@ -135,7 +135,7 @@ Le modèle objet et les interfaces de l’application doivent être placés dans
 
 Les détails de l’implémentation, notamment la façon dont la persistance est effectuée ou la manière dont les notifications peuvent être envoyées à un utilisateur, sont conservés dans le projet Infrastructure. Ce projet référence des packages spécifiques à l’implémentation comme Entity Framework Core, mais il ne doit pas exposer de détails sur ces implémentations en dehors du projet. Les référentiels et services d’infrastructure doivent implémenter les interfaces définies dans le projet ApplicationCore, et ses implémentations de persistance sont responsables de la récupération et du stockage des entités définies dans ApplicationCore.
 
-Le projet ASP.NET Core lui-même est responsable des préoccupations au niveau de l’interface utilisateur, mais il ne doit inclure ni logique métier ni détails d’infrastructure. En fait, dans l’idéal, il ne doit pas même pas dépendre du projet Infrastructure, et ce pour éviter qu’une dépendance entre les deux projets ne soit introduite accidentellement. Pour y parvenir, vous pouvez utiliser un conteneur d’injection de dépendances tiers comme StructureMap. Celui-ci vous permet de définir des règles d’injection de dépendances dans les classes de Registre de chaque projet.
+Le projet d’interface utilisateur ASP.NET Core est responsable des problèmes d’interface utilisateur, mais il ne doit inclure ni logique métier ni détails d’infrastructure. En fait, dans l’idéal, il ne doit pas même pas dépendre du projet Infrastructure, et ce pour éviter qu’une dépendance entre les deux projets ne soit introduite accidentellement. Pour y parvenir, vous pouvez utiliser un conteneur d’injection de dépendances tiers comme StructureMap. Celui-ci vous permet de définir des règles d’injection de dépendances dans les classes de Registre de chaque projet.
 
 Une autre approche pour découpler l’application des détails d’implémentation consiste à configurer l’application de manière à ce qu’elle appelle des microservices (ceux-ci étant éventuellement déployés dans des conteneurs Docker individuels). Si les résultats en matière de séparation des préoccupations et de découplage sont encore meilleurs que ceux obtenus par l’injection de dépendances entre deux projets, le niveau de complexité est plus élevé.
 

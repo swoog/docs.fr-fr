@@ -1,40 +1,35 @@
 ---
 title: Pour obtenir des informations supplémentaires (programmation parallèle)
-ms.custom: ''
-ms.date: 03/30/2017
+ms.date: 04/26/2018
 ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - tasks, further reading
-ms.assetid: 98aee307-dde6-4cad-bb58-078497b8064f
-caps.latest.revision: 7
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f09cbe788efb3baddf7b144c178e42a22c17bf95
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 87106f1d9b75775dd401cd856ccb50ceb733b944
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="for-further-reading-parallel-programming"></a>Pour obtenir des informations supplémentaires (programmation parallèle)
-Les ressources suivantes contiennent des informations supplémentaires sur la programmation parallèle dans .NET Framework :  
-  
--   Le [centre de développement sur le calcul parallèle](https://msdn.microsoft.com/vstudio/bb964701), disponible sur le site web MSDN, propose des liens vers des posts de forum et du contenu sur la programmation parallèle dans le .NET Framework et en C++ natif.  
-  
--   Le [blog sur la programmation parallèle avec .NET](https://blogs.msdn.microsoft.com/pfxteam/), disponible sur le site des blogs de MSDN, contient de nombreux articles détaillés sur la programmation parallèle dans .NET Framework.  
-  
--   Le [forum sur les extensions parallèles](https://social.msdn.microsoft.com/Forums/en-US/home?forum=parallelextensions), disponible sur le site des forums MSDN, est un lieu de consultation invitant à poser et répondre à des questions sur la programmation parallèle.  
-  
--   La page d’[exemples d’extensions parallèles](https://code.msdn.microsoft.com/ParExtSamples) sur le site web de MSDN Code Gallery contient de nombreux exemples qui illustrent les techniques intermédiaires et avancées de programmation parallèle.  
-  
+
+Les ressources suivantes contiennent des informations supplémentaires sur la programmation parallèle dans .NET :
+
+- Le document [Patterns for Parallel Programming: Understanding and Applying Parallel Patterns with the .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=19222) décrit les modèles parallèles courants et les bonnes pratiques pour développer des composants parallèles avec ces modèles.
+
+- Le manuel [Design Patterns for Decomposition and Coordination on Multicore Architectures](https://msdn.microsoft.com/library/ff963553.aspx) décrit les modèles pour la programmation parallèle qui utilisent la prise en charge de la programmation parallèle introduite dans .NET Framework 4.
+
+- Le blog [sur la programmation parallèle avec .NET](https://blogs.msdn.microsoft.com/pfxteam/) contient de nombreux articles détaillés sur la programmation parallèle dans .NET.
+
+- La page [Samples for Parallel Programming with the .NET Framework](https://code.msdn.microsoft.com/ParExtSamples) contient de nombreux exemples qui illustrent les techniques de programmation parallèle intermédiaires et avancées.
+
 ## <a name="see-also"></a>Voir aussi  
- [Programmation parallèle](../../../docs/standard/parallel-programming/index.md)  
- [Modèles de programmation parallèle : présentation et application des modèles parallèles avec le .NET Framework 4 (page éventuellement en anglais)](https://www.microsoft.com/download/details.aspx?id=19222)
+ [Parallel Computing Developer Center](https://msdn.microsoft.com/vstudio/bb964701)  
+ [Programmation parallèle en Visual C++](/cpp/parallel/parallel-programming-in-visual-cpp)  
