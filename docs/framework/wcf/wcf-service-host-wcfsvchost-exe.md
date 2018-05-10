@@ -2,44 +2,44 @@
 title: Hôte de service WCF (WcfSvcHost.exe)
 ms.date: 03/30/2017
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
-ms.openlocfilehash: c000ad3ba53f103cb1a24a9a7fbc71049ba707c7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e1e258015adc34edd4a109f3bc5a32b4bf6f0296
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>Hôte de service WCF (WcfSvcHost.exe)
-Hôte de Service Windows Communication Foundation (WCF) (WcfSvcHost.exe) vous permet de lancer le débogueur Visual Studio (F5) pour héberger et tester un service que vous avez implémenté automatiquement. Vous pouvez ensuite tester le service à l'aide du client test [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] (WcfTestClient.exe) ou de votre propre client, afin de rechercher et de résoudre les erreurs potentielles.  
+Hôte de Service Windows Communication Foundation (WCF) (WcfSvcHost.exe) vous permet de lancer le débogueur Visual Studio (F5) pour héberger et tester un service que vous avez implémenté automatiquement. Vous pouvez ensuite tester le service en utilisant le Client Test WCF (WcfTestClient.exe) ou votre propre client, pour rechercher et corriger les erreurs potentielles.  
   
 ## <a name="wcf-service-host"></a>Hôte de service WCF  
- L'hôte de service [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] énumère les services contenus dans un projet de service [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], charge la configuration du projet et effectue l'instanciation d'un hôte pour chaque service trouvé. L’outil est intégré dans Visual Studio via la [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] modèle de Service et est appelé lorsque vous commencez à déboguer votre projet.  
+ Hôte de Service WCF énumère les services dans un projet de service WCF, charge la configuration du projet et instancie un hôte pour chaque service qu’il trouve. L’outil est intégré à Visual Studio via le modèle de Service WCF et est appelé lorsque vous commencez à déboguer votre projet.  
   
- Grâce à l'utilisation de l'hôte de service [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], vous pouvez héberger un service [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] (dans un projet de bibliothèque du service [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]) sans écrire de code supplémentaire ou se limiter à un hôte spécifique pendant le développement.  
+ En utilisant l’hôte de Service WCF, vous pouvez héberger un service WCF (dans un projet de bibliothèque du service WCF) sans écrire de code supplémentaire ou se limiter à un hôte spécifique pendant le développement.  
   
 > [!NOTE]
->  L'Hôte de service [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] ne prend pas en charge la confiance partielle. Si vous souhaitez utiliser un [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Service en confiance partielle, n’utilisez pas le [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] modèle de projet bibliothèque du Service dans Visual Studio pour générer votre service. Au lieu de cela, créez un nouveau site Web dans Visual Studio en choisissant le [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] modèle de site Web du Service, qui peut héberger le service dans un serveur Web sur lequel [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] de confiance partielle est prise en charge.  
+>  Hôte de Service WCF ne prend pas en charge le mode de confiance partielle. Si vous souhaitez utiliser un Service WCF avec une confiance partielle, n’utilisez pas le modèle de projet de bibliothèque de Service WCF dans Visual Studio pour générer votre service. Au lieu de cela, créez un nouveau site Web dans Visual Studio en choisissant le modèle de site Web de Service WCF, qui peut héberger le service dans un serveur Web sur lequel WCF de confiance partielle est prise en charge.  
   
 ## <a name="project-types-hosted-by-wcf-service-host"></a>Types de projet hébergés par l'hôte de service WCF  
- L'Hôte de service [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] peut héberger les types de projets Bibliothèque du service [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] suivants : Bibliothèque du service [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], Bibliothèque du service de workflow séquentiel, Bibliothèque du service de workflow de l'ordinateur d'état et Bibliothèque du service de syndication. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Hôte de service peut également héberger les services qui peuvent être ajoutés à un projet de bibliothèque de service à l’aide du **ajouter un élément** fonctionnalité. Parmi ces services, on compte le service [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], le service de l'ordinateur d'état WF, le service séquentiel WF, le service de l'ordinateur d'état WF XAML et le service séquentiel WF XAML.  
+ Hôte de Service WCF peut héberger les types de projet de bibliothèque de service WCF suivants : bibliothèque du Service WCF, bibliothèque de Service de Workflow séquentiel, bibliothèque Service Workflow ordinateur d’état et bibliothèque du Service de Syndication. Hôte de Service WCF peut également héberger les services qui peuvent être ajoutés à un projet de bibliothèque de service à l’aide du **ajouter un élément** fonctionnalité. Cela inclut le Service WCF, le Service de Machine d’état WF, Service séquentiel WF, Service de Machine état WF XAML et Service séquentiel WF XAML.  
   
  Toutefois, il est à noter que l'outil ne vous aidera pas à configurer un hôte. Pour cette tâche, vous devez modifier le fichier App.config manuellement. L'outil ne permet pas non plus de valider les fichiers de configuration définis par l'utilisateur.  
   
 > [!CAUTION]
->  Vous ne devez pas utiliser l'Hôte de service [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] pour héberger des services au sein d'un environnement de production, car il n'a pas été conçu dans ce but.  L'Hôte de service [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] ne prend pas en charge la fiabilité, la sécurité et les exigences de facilité de gestion propres à ce type d'environnement. Utilisez plutôt IIS car cette solution présente une fiabilité et des fonctionnalités de surveillance plus élevées ; elle constitue en outre la solution recommandée pour les services d'hébergement. Une fois que vous avez terminé le développement de vos services, vous devez effectuer une migration de ceux-ci depuis l'Hôte de service [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] vers IIS.  
+>  Vous ne devez pas utiliser hôte de Service WCF pour héberger les services dans un environnement de production, car il n’était pas conçu dans ce but.  Hôte de Service WCF ne prend pas en charge la fiabilité, la sécurité et les exigences de facilité de gestion de ce type d’environnement. Utilisez plutôt IIS car cette solution présente une fiabilité et des fonctionnalités de surveillance plus élevées ; elle constitue en outre la solution recommandée pour les services d’hébergement. Une fois le développement de vos services, vous devez migrer les services à partir de l’hôte de Service WCF dans IIS.  
   
 ## <a name="scenarios-for-using-wcf-service-host-inside-visual-studio"></a>Scénarios d'utilisation de l'hôte de service WCF dans Visual Studio  
- Le tableau suivant répertorie tous les paramètres dans le **arguments de ligne de commande** boîte de dialogue, qui se trouve en double-cliquant sur votre projet dans **l’Explorateur de Solutions** dans Visual Studio, en sélectionnant **Propriétés**, puis en sélectionnant le **déboguer** onglet et en cliquant sur **démarrer le projet**. Ces paramètres sont utiles pour configurer l'Hôte de service [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+ Le tableau suivant répertorie tous les paramètres dans le **arguments de ligne de commande** boîte de dialogue, qui se trouve en double-cliquant sur votre projet dans **l’Explorateur de Solutions** dans Visual Studio, en sélectionnant **Propriétés**, puis en sélectionnant le **déboguer** onglet et en cliquant sur **démarrer le projet**. Ces paramètres sont utiles pour configurer l’hôte de Service WCF.  
   
 |Paramètre|Signification|  
 |---------------|-------------|  
-|`/client`|Paramètre facultatif qui spécifie le chemin d’accès à un fichier exécutable à utiliser une fois les services hébergés. Il permet de lancer le client test [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] une fois l'hébergement effectué.|  
+|`/client`|Paramètre facultatif qui spécifie le chemin d’accès à un fichier exécutable à utiliser une fois les services hébergés. Cette opération lance le Client Test WCF hébergement effectué.|  
 |`/clientArg`|Spécifie une chaîne en tant qu’argument passé à l’application cliente personnalisée.|  
 |`/?`|Affiche le texte de l'aide.|  
   
 #### <a name="using-wcf-test-client"></a>Utilisation du client test WCF  
- Après avoir créé un projet de service [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] et appuyé sur la touche F5 pour démarrer le débogueur, l'Hôte de service [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] commence à héberger tous les services trouvés dans votre projet. Ensuite, le client test [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] ouvre et affiche automatiquement une liste de points de terminaison de service définis dans le fichier de configuration. Dans la fenêtre principale, vous pouvez tester les paramètres et appeler votre service.  
+ Une fois que vous créez un projet de service WCF et appuyez sur F5 pour démarrer le débogueur, hôte de Service WCF démarre tous les services qu’elle trouve dans votre projet d’hébergement. Client Test WCF s’ouvre automatiquement et affiche la liste des points de terminaison de service définis dans le fichier de configuration. Dans la fenêtre principale, vous pouvez tester les paramètres et appeler votre service.  
   
- Pour vous assurer que [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Client de Test est utilisé, avec le bouton droit de votre projet dans **l’Explorateur de Solutions** dans Visual Studio, sélectionnez **propriétés**, puis sélectionnez le **déboguer**onglet. Cliquez sur **démarrer le projet** et assurez-vous que les éléments suivants apparaissent dans le **arguments de ligne de commande** boîte de dialogue.  
+ Pour vous assurer que le Client Test WCF est utilisé, cliquez sur votre projet dans **l’Explorateur de Solutions** dans Visual Studio, sélectionnez **propriétés**, puis sélectionnez le **déboguer** onglet. Cliquez sur **démarrer le projet** et assurez-vous que les éléments suivants apparaissent dans le **arguments de ligne de commande** boîte de dialogue.  
   
  `/client:WcfTestClient.exe`  
   
@@ -48,7 +48,7 @@ Hôte de Service Windows Communication Foundation (WCF) (WcfSvcHost.exe) vous pe
   
  `/client:"path/CustomClient.exe"`  
   
- Lorsque vous appuyez sur la touche F5 pour redémarrer le service, l'Hôte de service [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] démarre automatiquement votre client personnalisé quand vous lancez le débogueur.  
+ Lorsque vous appuyez sur F5 pour redémarrer le service, hôte de Service WCF démarre automatiquement votre client personnalisé lorsque vous lancez le débogueur.  
   
  Vous pouvez également utiliser le paramètre `/clientArg:` pour spécifier une chaîne en tant qu'argument qui est passé à l'application cliente personnalisée, comme indiqué dans l'exemple suivant.  
   
@@ -59,19 +59,19 @@ Hôte de Service Windows Communication Foundation (WCF) (WcfSvcHost.exe) vous pe
  `/client:iexplore.exe /clientArgs:http://localhost:8731/Design_Time_Addresses/Feed1/`  
   
 #### <a name="specifying-no-client"></a>Spécification d'aucun client  
- Pour spécifier qu’aucun client ne sera utilisé après [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] d’hébergement du service, avec le bouton droit de votre projet dans **l’Explorateur de Solutions** dans Visual Studio, sélectionnez **propriétés**, puis sélectionnez le  **Déboguer** onglet. Cliquez sur **démarrer le projet** et laisser le **arguments de ligne de commande** boîte de dialogue.  
+ Pour spécifier qu’aucun client ne sera utilisé après l’hébergement de services WCF, cliquez sur votre projet dans **l’Explorateur de Solutions** dans Visual Studio, sélectionnez **propriétés**, puis sélectionnez le **dedébogage** onglet. Cliquez sur **démarrer le projet** et laisser le **arguments de ligne de commande** boîte de dialogue.  
   
 #### <a name="using-a-custom-host"></a>Utilisation d'un hôte personnalisé  
  Pour utiliser un hôte personnalisé, cliquez sur votre projet dans **l’Explorateur de Solutions** dans Visual Studio, sélectionnez **propriétés**, puis sélectionnez le **déboguer** onglet. Cliquez sur **démarrer le programme externe** et entrez le chemin d’accès complet à l’hôte personnalisé. Vous pouvez également utiliser le **arguments de ligne de commande** boîte de dialogue pour spécifier des arguments à passer à l’ordinateur hôte.  
   
 ## <a name="wcf-service-host-user-interface"></a>Interface utilisateur de l'Hôte de service WCF  
- Quand vous appelez initialement [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hôte de Service (en appuyant sur F5 dans Visual Studio), le **hôte de Service WCF** fenêtre s’ouvre automatiquement. Lorsque l'Hôte de service [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] est en cours d'exécution, l'icône du programme apparaît dans la zone de notification. Double-cliquez sur l’icône pour ouvrir la **hôte de Service WCF** fenêtre  
+ Quand vous appelez initialement hôte de Service WCF (en appuyant sur F5 dans Visual Studio), le **hôte de Service WCF** fenêtre s’ouvre automatiquement. Lorsque l’hôte de Service WCF est en cours d’exécution, l’icône du programme apparaît dans la zone de notification. Double-cliquez sur l’icône pour ouvrir la **hôte de Service WCF** fenêtre  
   
- Lorsque des erreurs surviennent pendant l'hébergement de service, la boîte de dialogue de l'Hôte de service [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] s'ouvre et affiche les informations correspondantes.  
+ Lorsque des erreurs surviennent lors de l’hébergement de services, boîte de dialogue hôte de Service WCF s’ouvre et affiche des informations pertinentes.  
   
  Le **hôte de Service WCF** fenêtre principale contient deux menus :  
   
--   **Fichier**: contient le **fermer** et **Exit** commandes. Lorsque vous cliquez sur **fermer**, le **hôte de Service WCF** boîte de dialogue se ferme, mais les services continuent d’être hébergés. Lorsque vous cliquez sur **Exit**, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hôte de Service est également arrêté. Cela arrête également tous les services hébergés.  
+-   **Fichier**: contient le **fermer** et **Exit** commandes. Lorsque vous cliquez sur **fermer**, le **hôte de Service WCF** boîte de dialogue se ferme, mais les services continuent d’être hébergés. Lorsque vous cliquez sur **Exit**, hôte de Service WCF est également arrêté. Cela arrête également tous les services hébergés.  
   
 -   **Aide**: contient le **sur** commande qui contient les informations de version. Il contient également le **aide** commande capable d’ouvrir un fichier d’aide.  
   
@@ -88,18 +88,18 @@ Hôte de Service Windows Communication Foundation (WCF) (WcfSvcHost.exe) vous pe
 -   La deuxième zone est **des informations supplémentaires**. Il affiche une explication détaillée de l’état du service lorsque la ligne de service spécifique est sélectionnée dans le **Service** zone. Si l'état est Erreur, vous pouvez consulter le message d'erreur complet qui s'affiche à l'écran.  
   
 ## <a name="stopping-wcf-service-host"></a>Arrêt de l'Hôte de service WCF  
- Vous pouvez arrêter l'Hôte de service [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] en utilisant l'une des quatre méthodes suivantes :  
+ Vous pouvez arrêter hôte de Service WCF quatre manières suivantes :  
   
 -   Arrêter la session de débogage dans Visual Studio.  
   
 -   Sélectionnez **Exit** à partir de la **fichier** menu dans le **hôte de Service WCF** fenêtre.  
   
--   Sélectionnez **Exit** à partir du menu contextuel de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] icône hôte de Service dans la zone de notification système.  
+-   Sélectionnez **Exit** à partir du menu contextuel de l’icône de barre d’état d’hôte de Service WCF dans la zone de notification système.  
   
--   Quittez le client test [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] s'il est en cours d'utilisation.  
+-   Quitter le Client Test WCF s’il est utilisé.  
   
 ## <a name="using-service-host-without-administrator-privilege"></a>Utilisation de l'hôte de service sans privilège d'administrateur  
- Pour permettre aux utilisateurs sans privilèges d’administrateur de développer [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] services, une liste ACL (Access Control List) est créée pour l’espace de noms «http://+:8731/Design_Time_Addresses» lors de l’installation de Visual Studio. La liste ACL a la valeur (UI), qui inclut tous les utilisateurs interactifs ayant ouvert une session sur l'ordinateur. Les administrateurs peuvent ajouter ou supprimer des utilisateurs de cette liste ou ouvrir des ports supplémentaires. Cette liste ACL permet aux utilisateurs d'exécuter l'hôte de service auto [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] (wcfSvcHost.exe) sans devoir obtenir au préalable des privilèges d'administrateur.  
+ Pour permettre aux utilisateurs sans privilège d’administrateur développer des services WCF, une liste ACL (Access Control List) est créée pour l’espace de noms «http://+:8731/Design_Time_Addresses» lors de l’installation de Visual Studio. La liste ACL a la valeur (UI), qui inclut tous les utilisateurs interactifs ayant ouvert une session sur l'ordinateur. Les administrateurs peuvent ajouter ou supprimer des utilisateurs dans cette liste ACL ou ouvrir des ports supplémentaires. Cette liste ACL permet aux utilisateurs d’utiliser l’hôte de Service WCF (wcfSvcHost.exe) sans leur accorder des privilèges d’administrateur.  
   
  Vous pouvez modifier l'accès grâce à l'outil netsh.exe dans [!INCLUDE[wv](../../../includes/wv-md.md)], via le compte d'administrateur avec élévation de privilèges. Ceci est un exemple d'utilisation de netsh.exe .  
   

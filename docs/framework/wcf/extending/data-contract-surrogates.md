@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], surrogates
 ms.assetid: 8c31134c-46c5-4ed7-94af-bab0ac0dfce5
-ms.openlocfilehash: 455900b1ac5d10c02e6b1341e737eb6874c874f4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b06cb45d6075c8de1da973a11e2edec6792df304
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="data-contract-surrogates"></a>Substituts de contrats de données
 Le contrat de données *substitut* est une fonctionnalité avancée reposant sur le modèle de contrat de données. Cette fonctionnalité est destinée à la personnalisation et à la substitution de type dans les situations où les utilisateurs souhaitent changer la manière dont un type est sérialisé, désérialisé ou projeté dans des métadonnées. On peut par exemple utiliser un substitut lorsque aucun contrat de données n'a été spécifié pour le type, que les champs et propriétés ne sont pas marqués avec l'attribut <xref:System.Runtime.Serialization.DataMemberAttribute> ou que les utilisateurs souhaitent créer des variations de schéma de manière dynamique.  
@@ -133,7 +133,7 @@ Le contrat de données *substitut* est une fonctionnalité avancée reposant sur
  La méthode est appelée au début de l'exportation et de l'importation de schéma. Elle retourne les types de données personnalisés utilisés dans le schéma exporté ou importé. Un <xref:System.Collections.ObjectModel.Collection%601> (le paramètre `customDataTypes`), qui est une collection de types, est passé à la méthode. La méthode doit ajouter des types connus supplémentaires à cette collection. Les types de données personnalisés connus sont nécessaires pour activer la sérialisation et la désérialisation des données personnalisées à l'aide du <xref:System.Runtime.Serialization.DataContractSerializer>. Pour plus d’informations, consultez [Types connus de contrat de données](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
   
 ## <a name="implementing-a-surrogate"></a>Implémentation d'un substitut  
- Pour utiliser le substitut de contrat de données dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], vous devez suivre certaines procédures spéciales.  
+ Pour utiliser le substitut de contrat de données dans WCF, vous devez suivre certaines procédures spéciales.  
   
 ### <a name="to-use-a-surrogate-for-serialization-and-deserialization"></a>Pour utiliser un substitut pour la sérialisation et la désérialisation  
  Utilisez le <xref:System.Runtime.Serialization.DataContractSerializer> pour effectuer la sérialisation et la désérialisation des données avec le substitut. Le <xref:System.Runtime.Serialization.DataContractSerializer> est créé par le <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>. Le substitut doit également être spécifié.  
@@ -174,7 +174,7 @@ Le contrat de données *substitut* est une fonctionnalité avancée reposant sur
      [!code-csharp[C_IDataContractSurrogate#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#9)]  
   
 ### <a name="to-use-a-surrogate-for-metadata-export"></a>Pour utiliser un substitut pour l'exportation de métadonnées  
- Par défaut, lors de l'exportation de métadonnées à partir de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] pour un service, des schémas WSDL et XSD doivent être générés. Le substitut doit être ajouté au composant responsable de la génération du schéma XSD pour les types de contrat de données, <xref:System.Runtime.Serialization.XsdDataContractExporter>. Pour cela, utilisez un comportement qui implémente <xref:System.ServiceModel.Description.IWsdlExportExtension> pour modifier le <xref:System.ServiceModel.Description.WsdlExporter> ou modifiez directement le <xref:System.ServiceModel.Description.WsdlExporter> utilisé pour exporter les métadonnées.  
+ Par défaut, lors de l’exportation des métadonnées à partir de WCF pour un service, les schémas WSDL et XSD doit être généré. Le substitut doit être ajouté au composant responsable de la génération du schéma XSD pour les types de contrat de données, <xref:System.Runtime.Serialization.XsdDataContractExporter>. Pour cela, utilisez un comportement qui implémente <xref:System.ServiceModel.Description.IWsdlExportExtension> pour modifier le <xref:System.ServiceModel.Description.WsdlExporter> ou modifiez directement le <xref:System.ServiceModel.Description.WsdlExporter> utilisé pour exporter les métadonnées.  
   
 ##### <a name="to-use-a-surrogate-for-metadata-export"></a>Pour utiliser un substitut pour l'exportation de métadonnées  
   

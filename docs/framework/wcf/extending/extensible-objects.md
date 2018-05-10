@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - extensible objects [WCF]
 ms.assetid: bc88cefc-31fb-428e-9447-6d20a7d452af
-ms.openlocfilehash: 4fdb3ddff6bda21ac7f9538645d92f15e0b443b9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 95bd354e3aed8e0968debcac160383eb9c26cd0a
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="extensible-objects"></a>Objets extensibles
 Le modèle d’objet extensible est utilisé pour étendre des classes d’exécution existantes à l’aide de nouvelles fonctionnalités ou ajouter un nouvel état à un objet. Les extensions, attachées à l’un des objets extensibles, permettent aux comportements à des étapes différentes du traitement, d’accéder à l’état partagé et aux fonctionnalités attachés à un objet extensible commun qui leur est accessible.  
@@ -56,7 +56,7 @@ where T : IExtensibleObject<T>
   
 -   <xref:System.ServiceModel.OperationContext> - Cette classe représente les informations d'opération que l'exécution rassemble pour chaque opération.  Cela inclut des informations telles que les en-têtes de message entrant, les propriétés de message entrant, l'identité de sécurité entrante et d'autres informations.  Les extensions de cette classe peuvent étendre le comportement de <xref:System.ServiceModel.OperationContext> ou stocker l'état pour chaque opération.  
   
--   <xref:System.ServiceModel.IContextChannel> - Cette interface tient compte de l'inspection de chaque état pour les canaux et les proxys construits par l'exécution [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  Les extensions de cette classe peuvent étendre le comportement de <xref:System.ServiceModel.IClientChannel> ou peuvent l'utiliser pour stocker l'état pour chaque canal.  
+-   <xref:System.ServiceModel.IContextChannel> – Cette interface permet l’inspection de chaque état pour les canaux et les proxys construits par le runtime WCF.  Les extensions de cette classe peuvent étendre le comportement de <xref:System.ServiceModel.IClientChannel> ou peuvent l'utiliser pour stocker l'état pour chaque canal.  
   
 -  
   

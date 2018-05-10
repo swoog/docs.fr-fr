@@ -2,11 +2,11 @@
 title: Expected Exceptions
 ms.date: 03/30/2017
 ms.assetid: 299a6987-ae6b-43c6-987f-12b034b583ae
-ms.openlocfilehash: 9552bf5178e3309d46e0f9220311c9e1a811c4b9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6c4af62e0870cdd670c46ead169033ff72902fc0
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="expected-exceptions"></a>Expected Exceptions
 Cet exemple montre comment intercepter des exceptions attendues lors de l'utilisation d'un client typé. Cet exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md) qui implémente un service de calculatrice. Dans cet exemple, le client est une application console (.exe) et le service est hébergé par les services IIS (Internet Information Services).  
@@ -16,9 +16,9 @@ Cet exemple montre comment intercepter des exceptions attendues lors de l'utilis
   
  Cet exemple illustre l'interception et la gestion des deux types d'exception attendues que les programmes corrects doivent gérer : `TimeoutException` et `CommunicationException`.  
   
- Les exceptions levées à partir de méthodes de communication sur un client Windows Communication Foundation (WCF) sont attendu ou inattendu. Les exceptions inattendues incluent les pannes catastrophiques comme `OutOfMemoryException` et les erreurs de programmation comme `ArgumentNullException` ou `InvalidOperationException`. En général, il n'y a aucune utilité à gérer des erreurs inattendues, donc vous ne devez pas les intercepter lors de l'appel à une méthode de communication du client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Les exceptions levées à partir de méthodes de communication sur un client Windows Communication Foundation (WCF) sont attendu ou inattendu. Les exceptions inattendues incluent les pannes catastrophiques comme `OutOfMemoryException` et les erreurs de programmation comme `ArgumentNullException` ou `InvalidOperationException`. En général, il n’existe aucun moyen de gérer des erreurs inattendues, par conséquent, en général, que vous ne devez pas intercepter les lors de l’appel d’une méthode de communication du client WCF.  
   
- Les exceptions attendues depuis les méthodes de communication sur un client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] incluent `TimeoutException`, `CommunicationException` et toute classe dérivée de `CommunicationException`. Celles-ci indiquent un problème pendant la communication qui peut être géré sans risque en abandonnant le client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] et en signalant un échec de communication. Étant donné que des facteurs externes peuvent provoquer ces erreurs dans toute application, les applications correctes doivent intercepter ces exceptions et récupérer lorsqu'elles se produisent.  
+ Doit incluent des exceptions à partir des méthodes de communication sur un client WCF `TimeoutException`, `CommunicationException`, et toute classe dérivée de `CommunicationException`. Celles-ci indiquent un problème lors de la communication qui peut être gérée sans risque en abandonnant le client WCF et en signalant un échec de communication. Étant donné que des facteurs externes peuvent provoquer ces erreurs dans toute application, les applications correctes doivent intercepter ces exceptions et récupérer lorsqu'elles se produisent.  
   
  Il existe plusieurs classes dérivées de `CommunicationException` qu'un client peut lever. Dans certains cas, les applications en interceptent et procèdent à un traitement spécial, mais laissent les autres être traitées comme `CommunicationException`. Cela peut être accompli en interceptant le type d'exception plus spécifique en premier, puis en interceptant `CommunicationException` dans une clause « catch » ultérieure.  
   

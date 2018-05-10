@@ -2,11 +2,11 @@
 title: Custom Token
 ms.date: 03/30/2017
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-ms.openlocfilehash: 5850f97d6d3a66aacf82ab1cb2338240a75a00fb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c7219b94861cd23f27b331d1d3e5509654263430
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-token"></a>Custom Token
 Cet exemple montre comment ajouter une implémentation personnalisée de jeton dans une application Windows Communication Foundation (WCF). Cet exemple utilise un `CreditCardToken` pour transmettre de manière sécurisée les informations de carte de crédit du client au service. Le jeton est transmis dans l'en-tête de message WS-Security. Il est signé et chiffré à l'aide de l'élément de liaison de sécurité symétrique en même temps que le corps du message et que les autres en-têtes de message. Cette particularité est utile lorsque les jetons intégrés ne sont pas suffisants. Cet exemple illustre comment fournir un jeton de sécurité personnalisé à un service au lieu d'utiliser l'un des jetons intégrés. Le service implémente un contrat qui définit un modèle de communication demande-réponse.  
@@ -20,7 +20,7 @@ Cet exemple montre comment ajouter une implémentation personnalisée de jeton d
   
 -   Comment le service peut consommer et valider un jeton de sécurité personnalisé.  
   
--   Comment le code de service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] peut obtenir les informations relatives aux jetons de sécurité reçus, notamment aux jetons de sécurité personnalisés.  
+-   Comment le code de service WCF peut obtenir les informations sur les jetons de sécurité reçu incluant le jeton de sécurité personnalisé.  
   
 -   Comment le certificat X.509 du serveur permet de protéger la clé symétrique utilisée pour la signature et le chiffrement des messages.  
   
@@ -114,9 +114,9 @@ channelFactory.Close();
 ```  
   
 ## <a name="custom-security-token-implementation"></a>Implémentation du jeton de sécurité personnalisé  
- Pour activer un jeton de sécurité personnalisé dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], créez une représentation d'objet du jeton de sécurité personnalisé. Dans l'exemple, cette représentation figure dans la classe `CreditCardToken`. La représentation d'objet est chargée de conserver toutes les informations de jeton de sécurité pertinentes et de fournir la liste des clés de sécurité contenues dans le jeton de sécurité. Dans ce cas de figure, le jeton de sécurité de carte de crédit ne contient pas de clé de sécurité.  
+ Pour activer un jeton de sécurité personnalisé dans WCF, créez une représentation d’objet du jeton de sécurité personnalisé. Dans l'exemple, cette représentation figure dans la classe `CreditCardToken`. La représentation d'objet est chargée de conserver toutes les informations de jeton de sécurité pertinentes et de fournir la liste des clés de sécurité contenues dans le jeton de sécurité. Dans ce cas de figure, le jeton de sécurité de carte de crédit ne contient pas de clé de sécurité.  
   
- La section suivante présente la procédure à suivre pour activer un jeton personnalisé qui sera ensuite transmis sur le câble et consommé par un point de terminaison [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ La section suivante décrit ce qui doit être fait pour permettre un jeton personnalisé d’être transmises sur le câble et consommé par un point de terminaison WCF.  
   
 ```  
 class CreditCardToken : SecurityToken  
@@ -154,7 +154,7 @@ class CreditCardToken : SecurityToken
 ```  
   
 ## <a name="getting-the-custom-credit-card-token-to-and-from-the-message"></a>Obtention du jeton de carte de crédit personnalisé au niveau du message  
- Les sérialiseurs de jeton de sécurité dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sont chargés de créer une représentation d'objet des jetons de sécurité à partir des données au format XML figurant dans les messages et de générer des formulaires XML pour ces mêmes jetons. D'autres tâches telles que la lecture et l'écriture des identificateurs de clé renvoyant aux jetons de sécurité leur incombent également, mais dans cet exemple, seule la fonctionnalité concernant les jetons de sécurité est utilisée. Pour activer un jeton personnalisé, vous devez implémenter votre propre sérialiseur de jeton de sécurité. Cette exemple utilise la classe `CreditCardSecurityTokenSerializer` à cette fin.  
+ Sérialiseurs de jeton de sécurité dans WCF sont responsables de la création d’une représentation d’objet de jetons de sécurité à partir du XML dans le message et la création d’un formulaire XML des jetons de sécurité. D'autres tâches telles que la lecture et l'écriture des identificateurs de clé renvoyant aux jetons de sécurité leur incombent également, mais dans cet exemple, seule la fonctionnalité concernant les jetons de sécurité est utilisée. Pour activer un jeton personnalisé, vous devez implémenter votre propre sérialiseur de jeton de sécurité. Cette exemple utilise la classe `CreditCardSecurityTokenSerializer` à cette fin.  
   
  Côté service, le sérialiseur personnalisé lit le formulaire XML du jeton personnalisé et crée sa représentation d'objet à partir de ce dernier.  
   

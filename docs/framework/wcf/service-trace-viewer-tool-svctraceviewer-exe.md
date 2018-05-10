@@ -2,14 +2,14 @@
 title: Service Trace Viewer Tool (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: d9cd87bba52297d37683127ece3dd9c31e9a9a70
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 215e34a3e7b075463ceeaa15386d3a347ffff064
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Service Trace Viewer Tool (SvcTraceViewer.exe)
-Outil Windows Communication Foundation (WCF) Service Trace Viewer vous permet d’analyser des traces de diagnostic sont générés par [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Service Trace Viewer permet de fusionner, d'afficher et de filtrer facilement des messages de suivi dans le journal afin de les diagnostiquer, de les réparer et de vérifier les problèmes des services [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+Outil Windows Communication Foundation (WCF) Service Trace Viewer vous permet d’analyser des traces de diagnostic sont générés par WCF. Service Trace Viewer fournit un moyen facile de fusion, afficher et filtrer les messages de trace dans le journal afin que vous pouvez diagnostiquer, réparer et vérifier les problèmes de service WCF.  
   
 ## <a name="configuring-tracing"></a>Configuration du traçage  
  Les suivis de diagnostic vous fournissent des informations qui affichent ce qui arrive pendant le fonctionnement de votre application. Comme son nom l'indique, il permet de suivre le fonctionnement de la source à la destination, ainsi qu'au niveau de points intermédiaires.  
@@ -55,7 +55,7 @@ Outil Windows Communication Foundation (WCF) Service Trace Viewer vous permet d�
 ### <a name="opening-and-viewing-wcf-trace-files"></a>Ouverture et consultation de fichiers de suivi WCF  
  Service Trace Viewer prend en charge trois types de fichier :  
   
--   [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Fichier de suivi (.svcLog)  
+-   WCF (.svcLog) les fichiers de suivi  
   
 -   Les fichiers de suivi d'événement (.etl)  
   
@@ -65,7 +65,7 @@ Outil Windows Communication Foundation (WCF) Service Trace Viewer vous permet d�
   
 ##### <a name="to-open-a-trace-file"></a>Pour ouvrir un fichier de suivi  
   
-1.  Démarrez le Service Trace Viewer à l’aide d’une fenêtre de commande pour accéder à votre [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] emplacement d’installation (C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin), puis tapez `SvcTraceViewer.exe`.  
+1.  Démarrez le Service Trace Viewer à l’aide d’une fenêtre de commande et accédez à votre emplacement d’installation de WCF (C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin), puis tapez `SvcTraceViewer.exe`.  
   
 > [!NOTE]
 >  L'outil Service Trace Viewer peut être associé à deux types de fichier : .svclog et .stvproj. Vous pouvez utiliser deux paramètres dans la ligne de commande pour inscrire et supprimer l’inscription des extensions de fichier.  
@@ -87,7 +87,7 @@ Outil Windows Communication Foundation (WCF) Service Trace Viewer vous permet d�
 >  Il n'est pas recommandé de charger un fichier journal de suivi dont la taille est supérieure à 200 Mo. Si vous essayez de charger un fichier plus volumineux, le processus de chargement peut durer longtemps, selon vos ressources informatiques. L'outil Service Trace Viewer peut ne peut pas être réactif pendant une longue période, ou épuiser la mémoire de l'ordinateur. Pour éviter cela, il est recommandé de configurer un chargement partiel. Pour plus d'informations sur la méthode à utiliser, consultez la section consacrée au chargement des fichiers de suivi volumineux.  
   
 #### <a name="event-tracing-and-crimson-tracing"></a>Suivi de fichier d'événement et de fichier Crimson  
- Le format natif de Viewer correspond au format de suivi d'activité que [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] émet. Les suivis émis dans un format différent doivent être convertis avant que Viewer les affiche. Actuellement, Viewer prend en charge le format de suivi d'activité mais également de fichiers d'événement et de fichiers Crimson.  
+ Le format natif de la visionneuse est le format de suivi d’activité que WCF émet. Les suivis émis dans un format différent doivent être convertis avant que Viewer les affiche. Actuellement, Viewer prend en charge le format de suivi d'activité mais également de fichiers d'événement et de fichiers Crimson.  
   
  Lorsque vous ouvrez un fichier qui ne contient pas de suivis d'activité, Viewer essaie de convertir le fichier. Vous devez préciser le nom et emplacement du fichier qui contiendra les données de suivi converties. Une fois que les données ont été converties, Viewer affiche le contenu du nouveau fichier.  
   
@@ -104,7 +104,7 @@ Outil Windows Communication Foundation (WCF) Service Trace Viewer vous permet d�
 -   Dans le **projet** onglet, vous pouvez ajouter des fichiers à un projet.  
   
 ### <a name="viewing-wcf-traces"></a>Consultation de fichiers de suivi WCF  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] émet des fichiers de suivi à l'aide du format de suivi d'activité. Dans le modèle de suivi d'activité, les suivis individuels sont regroupés par activité en fonction de leur but. Le flux de contrôle logique est transféré entre les activités. Par exemple, pendant la durée de vie d'une application, de nombreuses activités d'envoi de messages apparaissent et disparaissent. Pour plus d’informations sur l’affichage des traces et activités et l’interface utilisateur de Service Trace Viewer trop, consultez [à l’aide de Service Trace Viewer pour afficher les suivis corrélés et dépannage](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md).  
+ WCF émet des suivis à l’aide du format de suivi d’activité. Dans le modèle de suivi d'activité, les suivis individuels sont regroupés par activité en fonction de leur but. Le flux de contrôle logique est transféré entre les activités. Par exemple, pendant la durée de vie d'une application, de nombreuses activités d'envoi de messages apparaissent et disparaissent. Pour plus d’informations sur l’affichage des traces et activités et l’interface utilisateur de Service Trace Viewer trop, consultez [à l’aide de Service Trace Viewer pour afficher les suivis corrélés et dépannage](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md).  
   
 #### <a name="switching-to-different-views"></a>Basculer vers des vues différentes  
  Service Trace Viewer propose les différentes vues suivantes. Ils sont affichés sous forme d’onglets dans le volet gauche de la visionneuse et sont également accessibles à partir de la **vue** menu.  
@@ -217,7 +217,7 @@ Outil Windows Communication Foundation (WCF) Service Trace Viewer vous permet d�
   
 -   La barre d'outils de filtre permet d'accéder aux filtres prédéfinis et personnalisés. Il peut être activé via le **vue** menu.  
   
--   Le filtre prédéfini de Viewer peut être utilisé pour filtrer des parties des suivis d'infrastructure [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Par défaut, il est configuré pour permettre à tous les suivis d'infrastructure de passer. Les paramètres de ce filtre sont définis dans le **Options de filtre** sous-menu sous **vue** menu.  
+-   Le filtre prédéfini de viewer peut servir à filtrer des parties des suivis WCF. Par défaut, il est configuré pour permettre à tous les suivis d'infrastructure de passer. Les paramètres de ce filtre sont définis dans le **Options de filtre** sous-menu sous **vue** menu.  
   
 -   Les filtres XPath personnalisés permettent aux utilisateurs de contrôler entièrement les filtres. Ils peuvent être définis dans le **filtre personnalisé** sous **vue** menu.  
   
@@ -237,7 +237,7 @@ Outil Windows Communication Foundation (WCF) Service Trace Viewer vous permet d�
  Le **clair** bouton réinitialise les filtres prédéfinis et personnalisés pour autoriser tous les suivis de passer.  
   
 #### <a name="filter-options"></a>Options du filtre  
- Viewer peut supprimer automatiquement les suivis [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] de la vue. Il peut sélectionner les suivis émis en fonction des zones spécifiques de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], par exemple, en supprimant de la vue les suivis liés aux transactions.  
+ Trace Viewer peut supprimer automatiquement les suivis WCF de la vue. Il est possible de sélectionner les suivis émis en fonction des zones spécifiques de WCF, par exemple, en supprimant de la vue les suivis liés aux transactions.  
   
  Les paramètres de ce filtre sont définis dans le **Options de filtre** sous-menu sous **vue** menu.  
   
@@ -347,7 +347,7 @@ Outil Windows Communication Foundation (WCF) Service Trace Viewer vous permet d�
 -   Étape précédente : Utilisez le **activité** menu ou appuyez sur « F9 ». Vous pouvez également utiliser une touche de direction « vers le haut » dans le volet de suivi.  
   
 > [!NOTE]
->  Une activité peut ainsi se produire dans un processus différent ou même sur un autre ordinateur, parce que les messages [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] peuvent contenir des ID d'activité applicables à différents ordinateurs.  
+>  Cela peut prendre vous à une activité qui se produisent dans un autre processus ou même sur un autre ordinateur, car les messages WCF peuvent contenir d’ID qui s’étendent sur des ordinateurs d’activité.  
   
 #### <a name="follow-transfer"></a>Suivre le transfert  
  Les suivi de transfert sont des suivis spéciaux dans le fichier de suivi. Il est possible d'effectuer un transfert d'une activité vers une autre activité par le biais d'un suivi de transfert. Par exemple, « Activité A » peut transférer vers « Activité B ». Dans ce cas, il est un suivi de transfert de l’icône « Activité A » avec le nom « À l’activité : » et le transfert. Ce suivi de transfert est un lien entre les deux suivis. Dans « Activité B », il peut également être un suivi de transfert à la fin de l’activité à transférer vers « Activité A ». Ce processus est identique aux appels de fonctions dans les programmes: A appelle B, puis B retourne l'appel.  
@@ -417,9 +417,9 @@ Outil Windows Communication Foundation (WCF) Service Trace Viewer vous permet d�
   
 |Icône|Description|  
 |----------|-----------------|  
-|![Suivi du journal des messages](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|Suivi du journal des messages : suivi émis lorsqu'un message [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] est enregistré par la fonctionnalité de journalisation des messages lorsque la source du suivi `System.ServiceModel.MessageLogging` est activée. Un clic sur ce suivi permet d'afficher le message. Il existe quatre points d'enregistrement configurables pour un message : ServiceLevelSendRequest, TransportSend, TransportReceive et ServiceLevelReceiveRequest, qui peut également être spécifié par l'attribut `messageSource` dans le suivi du journal des messages.|  
-|![Suivi de message reçu](../../../docs/framework/wcf/media/de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c.gif "de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c")|Suivi de message reçu : suivi émis lorsqu'un message [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] est reçu, si la source de suivi `System.ServiceModel` est activée au niveau Informations ou Commentaires. Ce suivi est essentiel pour consulter la flèche de corrélation du message dans l’activité **graphique** vue.|  
-|![Suivi de message envoyé](../../../docs/framework/wcf/media/558943c4-17cf-4c12-9405-677e995ac387.gif "558943c4-17cf-4c12-9405-677e995ac387")|Suivi de message envoyé : suivi émis lorsqu'un message [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] est envoyé, si la source de suivi `System.ServiceModel` est activée au niveau Informations ou Commentaires. Ce suivi est essentiel pour consulter la flèche de corrélation du message dans l’activité **graphique** vue.|  
+|![Suivi du journal des messages](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|Suivi du journal des messages : suivi est émis lorsqu’un message WCF est enregistré par la fonctionnalité de journalisation de message lorsque le `System.ServiceModel.MessageLogging` source de suivi est activé. Un clic sur ce suivi permet d'afficher le message. Il existe quatre points d'enregistrement configurables pour un message : ServiceLevelSendRequest, TransportSend, TransportReceive et ServiceLevelReceiveRequest, qui peut également être spécifié par l'attribut `messageSource` dans le suivi du journal des messages.|  
+|![Suivi de message reçu](../../../docs/framework/wcf/media/de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c.gif "de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c")|Suivi de message reçu : suivi émis lorsqu’un message WCF est reçu, si le `System.ServiceModel` source de suivi est activé au niveau informations ou commentaires. Ce suivi est essentiel pour consulter la flèche de corrélation du message dans l’activité **graphique** vue.|  
+|![Suivi de message envoyé](../../../docs/framework/wcf/media/558943c4-17cf-4c12-9405-677e995ac387.gif "558943c4-17cf-4c12-9405-677e995ac387")|Suivi de message envoyé : suivi qui est émis lorsqu’un message WCF est envoyé si le `System.ServiceModel` source de suivi est activé au niveau informations ou commentaires. Ce suivi est essentiel pour consulter la flèche de corrélation du message dans l’activité **graphique** vue.|  
   
 ### <a name="activities"></a>Activités  
   
@@ -432,11 +432,11 @@ Outil Windows Communication Foundation (WCF) Service Trace Viewer vous permet d�
   
 |Icône|Description|  
 |----------|-----------------|  
-|![Activité d’environnement](../../../docs/framework/wcf/media/29fa00ac-cf78-46e5-822d-56222fff61d1.gif "29fa00ac-cf78-46e5-822d-56222fff61d1")|Activité d'environnement : activité qui crée, ouvre ou ferme un hôte ou un client [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Les erreurs qui se sont produites pendant ces phases apparaîtront dans cette activité.|  
+|![Activité d’environnement](../../../docs/framework/wcf/media/29fa00ac-cf78-46e5-822d-56222fff61d1.gif "29fa00ac-cf78-46e5-822d-56222fff61d1")|Activité d’environnement : activité qui crée, ouvre ou ferme un hôte de WCF ou un client. Les erreurs qui se sont produites pendant ces phases apparaîtront dans cette activité.|  
 |![Activité d’écoute](../../../docs/framework/wcf/media/d7b135f6-ec7d-45d7-9913-037ab30e4c26.gif "d7b135f6-ec7d-45d7-9913-037ab30e4c26")|Activité d'écoute : activité qui enregistre les suivis relatifs à un écouteur. À l'intérieur de cette activité, vous pouvez consulter des informations et des demandes de connexion relatives à l'écouteur.|  
 |![Activité recevoir des octets](../../../docs/framework/wcf/media/2f628580-b80f-45a7-925b-616c96426c0e.gif "2f628580-b80f-45a7-925b-616c96426c0e")|Activité Recevoir des octets : activité qui regroupe toutes les traces en rapport avec les octets entrants et sortants sur une connexion entre deux points de terminaison. Cette activité est essentielle pour la corrélation avec les activités de transport qui propagent leur ID d'activité tel que http.sys. Les erreurs de connexion telles que les abandons apparaîtront dans cette activité.|  
-|![Activité traiter le Message](../../../docs/framework/wcf/media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|Activité Traiter le message : activité qui regroupe les suivis en rapport avec la création d'un message [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Les erreurs dues à une mauvaise enveloppe ou à un message erroné apparaîtront dans cette activité. À l'intérieur de cette activité, vous pouvez contrôler les en-têtes de message à afficher si un ID d'activité a été propagé à partir de l'appelant. Si cela se vérifie, lors du transfert vers l'activité Traiter l'action (l'icône suivante), vous pouvez également assigner à cette activité l'ID d'activité propagé pour la corrélation entre l'appelant et les suivis d'appelé.|  
-|![Suivi du journal des messages](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|Activité Traiter l'action : activité qui regroupe tous les suivis en rapport avec une demande [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] entre deux points de terminaison. Si `propagateActivity` a la valeur `true` sur les deux points de terminaison de la configuration, tous les suivis des deux points de terminaison sont fusionnés au sein d'une activité, à des fins de corrélation directe. Cette activité contiendra des erreurs en raison du traitement du transport ou de la sécurité, au niveau de la limite du code utilisateur (si une réponse existe).|  
+|![Activité traiter le Message](../../../docs/framework/wcf/media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|Activité traiter le Message : activité qui regroupe les suivis liés à la création d’un message WCF. Les erreurs dues à une mauvaise enveloppe ou à un message erroné apparaîtront dans cette activité. À l'intérieur de cette activité, vous pouvez contrôler les en-têtes de message à afficher si un ID d'activité a été propagé à partir de l'appelant. Si cela se vérifie, lors du transfert vers l'activité Traiter l'action (l'icône suivante), vous pouvez également assigner à cette activité l'ID d'activité propagé pour la corrélation entre l'appelant et les suivis d'appelé.|  
+|![Suivi du journal des messages](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|Activité traiter l’Action : activité qui regroupe tous les suivis liés à une demande WCF entre deux points de terminaison. Si `propagateActivity` a la valeur `true` sur les deux points de terminaison de la configuration, tous les suivis des deux points de terminaison sont fusionnés au sein d'une activité, à des fins de corrélation directe. Cette activité contiendra des erreurs en raison du traitement du transport ou de la sécurité, au niveau de la limite du code utilisateur (si une réponse existe).|  
 |![Activité traiter le Message](../../../docs/framework/wcf/media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|Activité Exécuter le code utilisateur : activité qui regroupe les suivis de code utilisateur pour le traitement d'une demande.|  
   
 ## <a name="troubleshooting"></a>Résolution des problèmes  

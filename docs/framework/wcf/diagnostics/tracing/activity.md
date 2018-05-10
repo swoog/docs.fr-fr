@@ -2,19 +2,19 @@
 title: Activité
 ms.date: 03/30/2017
 ms.assetid: 70471705-f55f-4da1-919f-4b580f172665
-ms.openlocfilehash: 34281647f65157484c1e732bc67a6a4b2cf58db6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3100d5bb60dc1b11d23b0705f4d6f23a3675ac51
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="activity"></a>Activité
 Cette rubrique décrit les suivis d’activité dans le modèle de suivi Windows Communication Foundation (WCF). Les activités traitent des unités permettant à l'utilisateur de réduire la portée d'un échec. Les erreurs qui se produisent au cours d'une même activité sont directement liées entre elles. Par exemple, une opération peut échouer parce que le déchiffrement d'un message a échoué auparavant. Les suivis générés pour les échecs respectifs de l'opération et du déchiffrement apparaissent dans la même activité, dénotant l'existence d'un lien direct entre l'erreur relative au déchiffrement et celle relative à la demande.  
   
 ## <a name="configuring-activity-tracing"></a>Configuration du suivi des activités  
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Fournit des activités prédéfinies pour les applications de traitement (consultez [liste des activités](../../../../../docs/framework/wcf/diagnostics/tracing/activity-list.md)). Vous pouvez également définir des activités par programme pour grouper des suivis utilisateur. Pour plus d’informations, consultez [l’émission de Traces de Code utilisateur](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md).  
+ WCF fournit des activités prédéfinies pour les applications de traitement (consultez [liste des activités](../../../../../docs/framework/wcf/diagnostics/tracing/activity-list.md)). Vous pouvez également définir des activités par programme pour grouper des suivis utilisateur. Pour plus d’informations, consultez [l’émission de Traces de Code utilisateur](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md).  
   
- Pour émettre des suivis d'activité pendant l'exécution, utilisez le paramètre `ActivityTracing` de la source de suivi `System.ServiceModel` ou d'autres sources de suivi personnalisées [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], comme illustré dans l'exemple de code de configuration suivant.  
+ Pour émettre des suivis de l’activité en cours d’exécution, utilisez la `ActivityTracing` définition pour le `System.ServiceModel` de trace source, ou d’autres WCF ou sources de suivi personnalisé, comme illustré dans le code de configuration suivant.  
   
 ```xml  
 <source name="System.ServiceModel" switchValue="Verbose,ActivityTracing">  
@@ -88,7 +88,7 @@ traceSource.TraceEvent(TraceEventType.Warning, eventId, "Information");
   
 -   Une activité désigne une limite de traitement qui peut être explicite pour l'administrateur du système ou pour la supportabilité.  
   
--   Chaque méthode [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], côtés client et serveur, est délimitée par le démarrage d'une nouvelle activité et (une fois la tâche effectuée) par la fin de cette activité qui marque également le retour à l'activité ambiante.  
+-   Chaque méthode WCF, à la fois sur le client et le serveur est limitée par le démarrage d’une nouvelle activité, puis (une fois que le travail est effectué) se terminant par la nouvelle activité et de retourner à l’activité ambiante.  
   
 -   Les activités à long terme, telles que l'écoute des connexions ou l'attente des messages, sont représentées par leurs marqueurs de début/fin respectifs.  
   

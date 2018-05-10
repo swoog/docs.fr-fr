@@ -8,16 +8,16 @@ helpviewer_keywords:
 - cryptographic provider [WCF], changing
 - cryptographic provider [WCF]
 ms.assetid: b4254406-272e-4774-bd61-27e39bbb6c12
-ms.openlocfilehash: be6033efc03e25967af8bbb3266b0f60df02eaba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 633e87bca302adc0963e1bf52d2470c9dbae81a5
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-change-the-cryptographic-provider-for-an-x509-certificate39s-private-key"></a>Comment : modifier le fournisseur de services de chiffrement pour un certificat X.509&#39;clé privée de s
 Cette rubrique montre comment modifier le fournisseur de services de chiffrement utilisé pour fournir la clé privée d’un certificat X.509 et comment intégrer le fournisseur de l’infrastructure de sécurité Windows Communication Foundation (WCF). Pour plus d’informations sur l’utilisation de certificats, consultez [utilisation des certificats](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
- Le [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] infrastructure de sécurité offre un moyen d’introduire de nouveaux types de jetons de sécurité comme décrit dans [Comment : créer un jeton personnalisé](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md). Vous pouvez aussi utiliser un jeton personnalisé pour remplacer les types de jeton existants fournis par le système.  
+ L’infrastructure de sécurité WCF fournit un moyen d’introduire de nouveaux types de jetons de sécurité comme décrit dans [Comment : créer un jeton personnalisé](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md). Vous pouvez aussi utiliser un jeton personnalisé pour remplacer les types de jeton existants fournis par le système.  
   
  Dans cette rubrique, le jeton de sécurité X.509 fourni par le système est remplacé par un jeton X.509 personnalisé qui fournit une implémentation différente pour la clé privée de certificat. Cette opération est utile dans les scénarios où la clé privée à proprement dite est fournie par un fournisseur de services de chiffrement différent du fournisseur Windows par défaut. Parmi les exemples d'un autre fournisseur de services de chiffrement figure un module de la sécurité du matériel qui effectue toutes les opérations de chiffrement liées à la clé privée sans stocker les clés privées en mémoire, ce qui améliore la sécurité du système.  
   
@@ -32,9 +32,9 @@ Cette rubrique montre comment modifier le fournisseur de services de chiffrement
   
 2.  Substituez la propriété en lecture seule <xref:System.IdentityModel.Tokens.SecurityKey.KeySize%2A>. Cette propriété retourne la taille de clé réelle de la paire de clés publique/privée du certificat.  
   
-3.  Remplacez la méthode <xref:System.IdentityModel.Tokens.SecurityKey.DecryptKey%2A>. Cette méthode est appelée par l'infrastructure de la sécurité [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] pour déchiffrer une clé symétrique avec la clé privée du certificat. (La clé a été chiffrée précédemment avec la clé publique du certificat.)  
+3.  Remplacez la méthode <xref:System.IdentityModel.Tokens.SecurityKey.DecryptKey%2A>. Cette méthode est appelée par l’infrastructure de sécurité WCF pour déchiffrer une clé symétrique avec la clé du certificat privé. (La clé a été chiffrée précédemment avec la clé publique du certificat.)  
   
-4.  Remplacez la méthode <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetAsymmetricAlgorithm%2A>. Cette méthode est appelée par l'infrastructure de la sécurité [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] pour obtenir une instance de la classe <xref:System.Security.Cryptography.AsymmetricAlgorithm> qui représente le fournisseur de services de chiffrement pour la clé privée ou publique du certificat selon les paramètres passés à la méthode.  
+4.  Remplacez la méthode <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetAsymmetricAlgorithm%2A>. Cette méthode est appelée par l’infrastructure de sécurité WCF pour obtenir une instance de la <xref:System.Security.Cryptography.AsymmetricAlgorithm> classe qui représente le fournisseur de services de chiffrement pour soit la clé du certificat privé ou public, selon les paramètres passés à la méthode.  
   
 5.  Facultatif. Remplacez la méthode <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetHashAlgorithmForSignature%2A>. Substituez cette méthode si une implémentation différente de la classe <xref:System.Security.Cryptography.HashAlgorithm> est requise.  
   
@@ -45,7 +45,7 @@ Cette rubrique montre comment modifier le fournisseur de services de chiffrement
      [!code-csharp[c_CustomX509Token#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customx509token/cs/source.cs#1)]
      [!code-vb[c_CustomX509Token#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customx509token/vb/source.vb#1)]  
   
- La procédure suivante indique comment intégrer l'implémentation de la clé de sécurité asymétrique personnalisée X.509 créée au cours de la procédure précédente à l'aide de l'infrastructure de la sécurité [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] afin de remplacer le jeton de sécurité X.509 fourni par le système.  
+ La procédure suivante montre comment intégrer le X.509 sécurité asymétrique clée implémentation personnalisée créée dans la procédure précédente avec l’infrastructure de sécurité WCF afin de remplacer la sécurité X.509 fourni par le système jeton.  
   
 #### <a name="to-replace-the-system-provided-x509-security-token-with-a-custom-x509-asymmetric-security-key-token"></a>Pour remplacer le jeton de sécurité X.509 fourni par le système par un jeton de clé de sécurité asymétrique X.509 personnalisé  
   

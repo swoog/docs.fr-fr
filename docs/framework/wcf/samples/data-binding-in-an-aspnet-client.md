@@ -2,11 +2,11 @@
 title: Data Binding in an ASP.NET Client
 ms.date: 03/30/2017
 ms.assetid: 68b49fa6-94e7-4d4c-a34e-902a2b3770b6
-ms.openlocfilehash: c0f3cbb08f0078bf364ef720635f7afda3257611
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8fdebec272fbedf23233e03ba7c6fe2d64cb18cc
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="data-binding-in-an-aspnet-client"></a>Data Binding in an ASP.NET Client
 Cet exemple montre comment lier des données retournées par un service Windows Communication Foundation (WCF) classique dans une application Web Forms.  
@@ -14,11 +14,11 @@ Cet exemple montre comment lier des données retournées par un service Windows 
 > [!NOTE]
 >  La procédure d'installation ainsi que les instructions de génération relatives à cet exemple figurent à la fin de cette rubrique.  
   
- Cet exemple contient un service qui implémente un contrat définissant un modèle de communication demande-réponse. Il se compose d'une application Web Forms cliente accessible à partir d'un navigateur, et d'un service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hébergé par les services Internet (IIS).  
+ Cet exemple contient un service qui implémente un contrat définissant un modèle de communication demande-réponse. L’exemple se compose d’un client application Web Forms accessible à partir d’un navigateur et un service WCF hébergé par Internet Information Services (IIS).  
   
  Le service implémente un contrat qui définit un modèle de communication demande-réponse. Le contrat est défini par l'interface `IWeatherService`, laquelle expose une opération nommée `GetWeatherData`. Cette opération accepte un tableau de villes et retourne un tableau d'objets `WeatherData` qui représente les prévisions de températures maximales et minimales d'une ville.  
   
- Sur la page .aspx du client [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], un contrôle Web DataGrid est défini et contient la représentation graphique des données retournées par le service. Le code sur la page .aspx appelle le service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] et retourne les données météorologiques dans un tableau d'objets `WeatherData`. DataGrid indique où obtenir ses données en affectant ce tableau à sa propriété `DataSource`. La liaison de données se produit avec un appel à la méthode `DataBind` de DataGrid. Tout ce code est contenu dans le.`aspx` la page `Page_Load` méthode chaque fois que l’utilisateur actualise la page du navigateur, les données est mise à jour dans la grille de données.  
+ Sur la page .aspx du client [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], un contrôle Web DataGrid est défini et contient la représentation graphique des données retournées par le service. Code de la page .aspx appelle le service WCF pour les données météorologiques et retourne les données vers un tableau de `WeatherData` objets. DataGrid indique où obtenir ses données en affectant ce tableau à sa propriété `DataSource`. La liaison de données se produit avec un appel à la méthode `DataBind` de DataGrid. Tout ce code est contenu dans le.`aspx` la page `Page_Load` méthode chaque fois que l’utilisateur actualise la page du navigateur, les données est mise à jour dans la grille de données.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Pour configurer, générer et exécuter l'exemple  
   

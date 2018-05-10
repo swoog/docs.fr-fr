@@ -2,11 +2,11 @@
 title: Publication et récupération de métadonnées sur une liaison personnalisée
 ms.date: 03/30/2017
 ms.assetid: 904e11b4-d90e-45c6-9ee5-c3472c90008c
-ms.openlocfilehash: 607cf70e8e226e6c97a785f2478ad3a655b21a7c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 528f7662ee3a1f956427e5e42f540816f55027f8
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="publishing-and-retrieving-metadata-over-a-custom-binding"></a>Publication et récupération de métadonnées sur une liaison personnalisée
 Le <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> fournit la prise en charge de l'ajout de points de terminaison de métadonnées à un service. Ces points de terminaison de métadonnées peuvent répondre aux demandes HTTP GET à l’URL qui a un `?wsdl` querystring et aux demandes WS-Transfer GET tel que défini dans la spécification WS-MetadataExchange (MEX). Les points de terminaison MEX implémentent le contrat <xref:System.ServiceModel.Description.IMetadataExchange?displayProperty=nameWithType>.  
@@ -19,7 +19,7 @@ Le <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty
 ## <a name="retrieving-metadata-over-a-custom-binding"></a>Récupération de métadonnées sur une liaison personnalisée  
  Les métadonnées peuvent être récupérées à partir de points de terminaison de métadonnées Get HTTP et Get HTTPS à l'aide de demandes GET HTTP ou HTTPS standard.  
   
- Pour récupérer des métadonnées à partir d'un point de terminaison de métadonnées MEX, vous pouvez utiliser en général l'une des liaisons MEX standard prises en charge par [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Pour plus d'informations, consultez <xref:System.ServiceModel.Description.MetadataExchangeBindings?displayProperty=nameWithType>. Le type <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> et l'outil Svcutil.exe sélectionnent automatiquement l'une de ces liaisons MEX standard en fonction de l'adresse du point de terminaison de métadonnées spécifié.  
+ Pour récupérer des métadonnées à partir d’un point de terminaison de métadonnées MEX que vous pouvez généralement utiliser l’une des liaisons MEX standard prises en charge par WCF. Pour plus d'informations, consultez <xref:System.ServiceModel.Description.MetadataExchangeBindings?displayProperty=nameWithType>. Le type <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> et l'outil Svcutil.exe sélectionnent automatiquement l'une de ces liaisons MEX standard en fonction de l'adresse du point de terminaison de métadonnées spécifié.  
   
  Si un point de terminaison de métadonnées MEX utilise une liaison différente de l'une des liaisons MEX standard, vous pouvez configurer la liaison utilisée par le <xref:System.ServiceModel.Description.MetadataExchangeClient> à l'aide de code ou en fournissant une configuration de point de terminaison de client <xref:System.ServiceModel.Description.IMetadataExchange>. L'outil Svcutil.exe charge automatiquement à partir de son fichier de configuration une configuration de point de terminaison de client <xref:System.ServiceModel.Description.IMetadataExchange> qui a le même nom que le modèle d'URI pour l'adresse du point de terminaison de métadonnées.  
   

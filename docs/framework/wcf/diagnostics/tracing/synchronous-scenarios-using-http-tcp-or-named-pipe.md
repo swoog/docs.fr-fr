@@ -2,11 +2,11 @@
 title: Scénarios synchrones utilisant HTTP, TCP ou Canal nommé
 ms.date: 03/30/2017
 ms.assetid: 7e90af1b-f8f6-41b9-a63a-8490ada502b1
-ms.openlocfilehash: 03f4fdcaa5fc59efe7e92d2cb900212ed5ebae77
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 11a5d8f43d12d35728c65c7a60ad8a4fa2fc1b3a
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="synchronous-scenarios-using-http-tcp-or-named-pipe"></a>Scénarios synchrones utilisant HTTP, TCP ou Canal nommé
 Cette rubrique décrit les activités et transferts pour différents scénarios demande/réponse synchrones, avec un client à thread unique, utilisant une connexion HTTP, TCP ou de canal nommé. Consultez [scénarios asynchrones à l’aide de HTTP, TCP ou canal nommé](../../../../../docs/framework/wcf/diagnostics/tracing/asynchronous-scenarios-using-http-tcp-or-named-pipe.md) pour plus d’informations sur les requêtes multithreads.  
@@ -54,7 +54,7 @@ Cette rubrique décrit les activités et transferts pour différents scénarios 
  La seule différence avec le scénario précédent est qu'un message d'erreur SOAP est retourné en tant que message de réponse. Si `propagateActivity` = `true`, l’ID d’activité du message de demande est ajoutée au message d’erreur SOAP.  
   
 ## <a name="synchronous-one-way-without-errors"></a>Unidirectionnel synchrone sans erreurs  
- La seule différence avec le premier scénario est qu'aucun message n'est retourné au serveur. Pour les protocoles basés sur HTTP, un état (valide ou erreur) est encore retourné au client. Cela est dû au fait que le protocole HTTP est le seul protocole avec une sémantique de demande/réponse qui fait partie de la pile de protocole [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]. Le traitement TCP étant masqué de la vue de [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], aucun accusé de réception n'est envoyé au client.  
+ La seule différence avec le premier scénario est qu'aucun message n'est retourné au serveur. Pour les protocoles basés sur HTTP, un état (valide ou erreur) est encore retourné au client. Il s’agit, car le protocole HTTP est le seul protocole avec une sémantique de requête-réponse qui fait partie de la pile de protocole WCF. Étant donné que WCF est masqué pour le traitement TCP, aucun accusé de réception n’est envoyé au client.  
   
 ## <a name="synchronous-one-way-with-errors"></a>Unidirectionnel synchrone avec erreurs  
  Si une erreur se produit lors du traitement du message (Q ou au-delà), aucune notification n'est retournée au client. Cela est identique au scénario « Unidirectionnel synchrone sans erreurs ». Vous ne devez pas utiliser de scénario unidirectionnel si vous souhaitez recevoir un message d'erreur.  

@@ -5,11 +5,11 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8d8dcd85-0a05-4c44-8861-4a0b3b90cca9
-ms.openlocfilehash: e48c519f6e10be4521d75345845eb5c019ec342c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4d1ee0671a45b12e70f8f43ed2ea83b0a22d6c98
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="service-channel-level-programming"></a>Programmation de service au niveau du canal
 Cette rubrique explique comment écrire une application de service Windows Communication Foundation (WCF) sans utiliser le <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> et son modèle objet associé.  
@@ -28,7 +28,7 @@ Cette rubrique explique comment écrire une application de service Windows Commu
 5.  Fermer tous les objets de canal.  
   
 #### <a name="creating-a-binding"></a>Création d’une liaison  
- La première étape pour écouter et recevoir des messages consiste à créer une liaison. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] est fourni avec plusieurs liaisons intégrées ou fournies par le système qui peuvent être utilisées directement ou par instanciation. Vous pouvez également créer votre propre liaison personnalisée en instanciant une classe CustomBinding, comme dans le code n°1.  
+ La première étape pour écouter et recevoir des messages consiste à créer une liaison. WCF est fourni avec plusieurs liaisons intégrées ou fournies par le système qui peuvent être utilisés directement par l’instanciation d’un d’eux. Vous pouvez également créer votre propre liaison personnalisée en instanciant une classe CustomBinding, comme dans le code n°1.  
   
  L'exemple de code suivant crée une instance de <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> et ajoute un <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType> à sa collection Elements qui est une collection d'éléments de liaison utilisés pour générer la pile de canaux. Dans cet exemple, la collection d'éléments ayant uniquement le <xref:System.ServiceModel.Channels.HttpTransportBindingElement>, la pile de canaux résultante dispose uniquement du canal de transport HTTP.  
   

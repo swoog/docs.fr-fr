@@ -6,14 +6,14 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], extensibility
 - extensibility [WCF]
 ms.assetid: ef56c251-d63c-4b3f-944f-b0c67bfb0f68
-ms.openlocfilehash: 142478352c8eb1c893d8b95b960c6079f735fa06
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7b302a7d0643ed61d12cfedf26348590d40d18f3
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="introduction-to-extensibility"></a>Introduction à l'extensibilité
-Le modèle d’application Windows Communication Foundation (WCF) est conçu pour répondre en grande partie aux exigences de communication de toute application distribuée. Néanmoins, il existe des situations qui ne sont pas prises en charge par le modèle d'application par défaut et les implémentations fournies par le système. Le modèle d'extensibilité de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] est destiné à prendre en charge des scénarios personnalisés en vous permettant de modifier le comportement du système à tout niveau, et même de remplacer le modèle d'application dans son intégralité. Cette rubrique présente les différentes zones d'extension et fournit des informations détaillées sur chacune d'elles.  
+Le modèle d’application Windows Communication Foundation (WCF) est conçu pour répondre en grande partie aux exigences de communication de toute application distribuée. Néanmoins, il existe des situations qui ne sont pas prises en charge par le modèle d'application par défaut et les implémentations fournies par le système. Le modèle d’extensibilité WCF est destiné à prendre en charge des scénarios personnalisés en vous permettant de modifier le comportement du système à chaque niveau, même pour le point de remplacer le modèle d’application dans son intégralité. Cette rubrique présente les différentes zones d’extension et fournit des informations détaillées sur chacune d’elles.  
   
 ## <a name="areas-to-extend"></a>Zones à étendre  
  Vous pouvez étendre les zones suivantes :  
@@ -25,7 +25,7 @@ Le modèle d’application Windows Communication Foundation (WCF) est conçu pou
 -   Le runtime de l'hôte. Cela permet d'étendre la relation du domaine de l'application d'hébergement avec le runtime du canal de l'application.  
   
 ### <a name="extending-the-application-runtime"></a>Extension du runtime de l'application  
- Dans les applications [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], les messages destinés à un canal correspondant doivent être distingués des messages destinés à l'application elle-même. Les messages de canaux prennent en charge des fonctionnalités relatives aux canaux, comme l'établissement d'une conversation sécurisée ou d'une session fiable. Ces messages ne sont pas disponibles pour le runtime de l'application. Ils sont traités avant que la couche Application ne soit impliquée.  
+ Dans les applications WCF, il existe une distinction entre les messages destinés à un canal correspondant et les messages qui sont destinés à l’application elle-même. Les messages de canaux prennent en charge des fonctionnalités relatives aux canaux, comme l'établissement d'une conversation sécurisée ou d'une session fiable. Ces messages ne sont pas disponibles pour le runtime de l'application. Ils sont traités avant que la couche Application ne soit impliquée.  
   
  Les messages d'application contiennent des données destinées à une opération de client ou de service que vous ou votre client a créée. Ces messages sont disponibles pour le système d'extension de niveau application sous la forme de message ou d'objet, en fonction de vos besoins.  
   

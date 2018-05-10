@@ -5,14 +5,14 @@ helpviewer_keywords:
 - WCF, tools
 - Windows Communication Foundation, tools
 ms.assetid: 399a47b4-bfea-434b-8e83-f76b5063d79d
-ms.openlocfilehash: 7d42ab9711a8d0b46ec3d35eec979e276a8c74a7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 27a18d436d4ee63cb6e65ed5981b65d55aadf036
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="windows-communication-foundation-tools"></a>Outils de Windows Communication Foundation
-Outils de Microsoft Windows Communication Foundation (WCF) sont conçus pour faciliter la créer, déployer et gérer [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] applications. Cette section contient des informations détaillées sur ces outils. Notez que ces outils ne sont pas pris en charge.  
+Outils de Microsoft Windows Communication Foundation (WCF) sont conçus pour faciliter la créer, déployer et gérer des applications WCF. Cette section contient des informations détaillées sur ces outils. Notez que ces outils ne sont pas pris en charge.  
   
  Vous pouvez exécuter tous les outils à partir de la ligne de commande.  
   
@@ -29,7 +29,7 @@ Outils de Microsoft Windows Communication Foundation (WCF) sont conçus pour fac
 |[Utilitaire de configuration WS-AtomicTransaction (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)|Configure les paramètres de base de WS-AtomicTransaction à l'aide de l'outil de ligne de commande.|  
 |[Composant logiciel enfichable MMC Configuration WS-AtomicTransaction](../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)|Configure les paramètres de base de prise en charge de WS-AtomicTransaction à l'aide d'un composant logiciel enfichable MMC.|  
 |[Outil WorkFlow Service Registration (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md)|Enregistre un service Windows Workflow.|  
-|[WCF Service Host (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)|Héberge des services [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] contenus dans des fichiers de bibliothèques (*.dll).|  
+|[WCF Service Host (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)|Héberge des services WCF contenues dans des bibliothèques (*.dll) fichiers|  
 |[Client test WCF (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)|Outil GUI qui permet d'entrer des paramètres de types arbitraires, d'envoyer ces entrées au service et d'afficher la réponse que le service renvoie.|  
 |[Outil « Contrat en premier »](../../../docs/framework/wcf/contract-first-tool.md)|Tâche de génération Visual Studio qui crée des classes de code à partir des contrats de données XSD.|  
   

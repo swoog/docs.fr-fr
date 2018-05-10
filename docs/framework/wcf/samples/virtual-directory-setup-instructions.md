@@ -2,11 +2,11 @@
 title: Instructions d'installation du répertoire virtuel
 ms.date: 03/30/2017
 ms.assetid: 3c62cab5-81a4-48b6-ac8c-9ce33a85a157
-ms.openlocfilehash: a6fc8309563e78f919fe1e2009c1f46801c32913
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3ff578b69590071ef2135e777b3105e7c226563e
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="virtual-directory-setup-instructions"></a>Instructions d'installation du répertoire virtuel
 Les exemples Windows Communication Foundation (WCF) sont conçus pour partager un répertoire virtuel commun nommé servicemodelsamples, mappé au dossier %SystemDrive%\inetpub\wwwroot\servicemodelsamples.  
@@ -35,12 +35,12 @@ Les exemples Windows Communication Foundation (WCF) sont conçus pour partager u
 7.  Cliquez sur **OK**. L'application Web est créée pour les exemples WCF.  
   
     > [!NOTE]
-    >  Cette tâche doit être exécutée une seule fois, car les exemples [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilisent tous la même application Web (servicemodelsamples).  
+    >  Cette tâche doit être exécutée qu’une seule fois, étant donné que tous les exemples WCF utilisent l’application Web même (servicemodelsamples).  
   
     > [!NOTE]
     >  Dans cette documentation, le terme `virtual directory` est synonyme du terme `Web application`.  
   
-     Après avoir créé le répertoire virtuel, vous devez définir ses propriétés pour que les services [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] puissent être exécutés. Pour plus d'informations, consultez ce qui suit.  
+     Outre la création du répertoire virtuel, vous devez également définir ses propriétés pour permettre l’exécution des services WCF. Pour plus d'informations, consultez ce qui suit.  
   
 #### <a name="to-create-a-virtual-directory-in-iis-51-or-60"></a>Pour créer un répertoire virtuel dans IIS 5.1 ou 6.0 :  
   
@@ -52,7 +52,7 @@ Les exemples Windows Communication Foundation (WCF) sont conçus pour partager u
   
 4.  Dans l’Assistant, tapez `servicemodelsamples` comme alias pour le répertoire virtuel que vous créez.  
   
-5.  Affectez la valeur %SystemDrive%\inetpub\wwwroot\servicemodelsamples au chemin. La plupart des exemples [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] copient les fichiers exécutables de service dans cet emplacement une fois générés.  
+5.  Affectez la valeur %SystemDrive%\inetpub\wwwroot\servicemodelsamples au chemin. La plupart des exemples WCF copient les fichiers exécutables de service dans cet emplacement une fois générés.  
   
 6.  Cliquez sur **Suivant**.  
   
@@ -65,7 +65,7 @@ Les exemples Windows Communication Foundation (WCF) sont conçus pour partager u
 8.  Cliquez sur **suivant**, puis cliquez sur **Terminer** pour terminer l’Assistant.  
   
     > [!NOTE]
-    >  Cette tâche doit être exécutée une seule fois, car les exemples [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilisent tous le même répertoire virtuel (servicemodelsamples).  
+    >  Cette tâche doit être exécutée qu’une seule fois, car tous les exemples WCF utilisent le même répertoire virtuel servicemodelsamples.  
   
 #### <a name="to-set-additional-virtual-directory-properties-in-iis-70-or-75"></a>Pour définir les propriétés du répertoire virtuel supplémentaire dans IIS 7.0 ou 7.5  
   

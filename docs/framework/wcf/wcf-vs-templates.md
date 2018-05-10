@@ -2,34 +2,34 @@
 title: Modèles Visual Studio WCF
 ms.date: 03/30/2017
 ms.assetid: 6a608575-3535-4190-89da-911e24c8374f
-ms.openlocfilehash: 873e728b72529fb5153913c44cac0abd77f1f7c8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6c37974f93f10870b238617bc196b37c6dbb6dd5
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wcf-visual-studio-templates"></a>Modèles Visual Studio WCF
-Modèles Visual Studio de Windows Communication Foundation (WCF) sont des modèles de projet et d’élément prédéfinis, vous pouvez utiliser dans Visual Studio pour générer rapidement [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] services et applications s’y rapportant.  
+Modèles Visual Studio de Windows Communication Foundation (WCF) sont prédéfinis et des modèles d’élément que vous pouvez utiliser dans Visual Studio pour générer rapidement des services WCF et les applications s’y rapportant.  
   
 ## <a name="using-the-wcf-templates"></a>Utilisation des modèles WCF  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Modèles Visual Studio fournissent une structure de classe de base pour le développement du service. Spécifiquement, ces modèles fournissent les définitions de base pour les contrats de service, les contrats de données, les implémentations de services et les configurations. Vous pouvez utiliser ces modèles pour créer un service simple avec une interaction minimale du code, ainsi qu'un bloc de création pour des services plus avancés.  
+ Modèles WCF Visual Studio fournissent une structure de classe de base pour le développement du service. Spécifiquement, ces modèles fournissent les définitions de base pour les contrats de service, les contrats de données, les implémentations de services et les configurations. Vous pouvez utiliser ces modèles pour créer un service simple avec une interaction minimale du code, ainsi qu'un bloc de création pour des services plus avancés.  
   
 ### <a name="wcf-service-library-project-template"></a>Modèle de projet Bibliothèque du service WCF  
- Le [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] modèle de projet bibliothèque du Service est disponible dans la boîte de dialogue Nouveau projet sous **Visual C# \WCF** et **Visual Basic\WCF**.  
+ Le modèle de projet bibliothèque du Service WCF est disponible dans la boîte de dialogue Nouveau projet sous **Visual C# \WCF** et **Visual Basic\WCF**.  
   
  Lorsque vous créez un projet à l’aide du **Service WCF** modèle, le nouveau projet inclut automatiquement les trois fichiers suivants :  
   
--   Fichier de contrat de service (IService1.cs ou IService1.vb). Le fichier de contrat de service est une interface qui possède des attributs de service [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Ce fichier contient la définition d'un service simple destinée à vous aider à définir vos services et inclut des opérations basées des paramètres, ainsi qu'un exemple de contrat de données simple. Il s'agit du fichier par défaut qui s'affiche dans l'éditeur de code après la création d'un projet de service [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+-   Fichier de contrat de service (IService1.cs ou IService1.vb). Le fichier de contrat de service est une interface qui possède les attributs de service WCF appliqués. Ce fichier contient la définition d'un service simple destinée à vous aider à définir vos services et inclut des opérations basées des paramètres, ainsi qu'un exemple de contrat de données simple. Il s’agit du fichier par défaut affiché dans l’éditeur de code après la création d’un projet de service WCF.  
   
 -   Fichier d'implémentation de service (Service1.cs ou Service1.vb). Le fichier d'implémentation de service implémente le contrat défini dans le fichier de contrat de service.  
   
--   Fichier de configuration de l'application (App.config). Le fichier de configuration fournit les éléments de base d'un modèle de service [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] avec une liaison http sécurisée. Il inclut également un point de terminaison applicable au service et active l'échange de métadonnées.  
+-   Fichier de configuration de l'application (App.config). Le fichier de configuration fournit les éléments de base d’un modèle de service WCF avec une liaison HTTP sécurisée. Il inclut également un point de terminaison applicable au service et active l'échange de métadonnées.  
   
 > [!NOTE]
 >  Visual Studio est configuré pour reconnaître le fichier App.config comme fichier de configuration pour le projet lorsqu’il est exécuté à l’aide de la [hôte de Service WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md), qui est la configuration par défaut. Si la bibliothèque de services se trouve dans un fichier exécutable, vous devez déplacer le code de configuration vers le fichier de configuration du fichier exécutable : en effet, les fichiers de configuration des DLL ne sont pas valides.  
   
 ### <a name="wcf-service-application-template"></a>Modèle d'application de service WCF  
- Le [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] modèle d’Application de Service est disponible dans la boîte de dialogue Nouveau projet sous **Visual C# \WCF** et **Visual Basic\WCF**.  
+ Le modèle d’Application de Service WCF est disponible dans la boîte de dialogue Nouveau projet sous **Visual C# \WCF** et **Visual Basic\WCF**.  
   
  Lorsque vous créez un projet à l’aide du **Service d’Application Web WCF** modèle, le projet inclut les quatre fichiers suivants :  
   
@@ -44,10 +44,10 @@ Modèles Visual Studio de Windows Communication Foundation (WCF) sont des modèl
  Le modèle crée automatiquement un site Web (à déployer dans un répertoire virtuel) et y héberge un service.  
   
 ### <a name="wcf-web-site-template"></a>Modèle de site web WCF  
- Le [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] modèle de Site Web est disponible dans la boîte de dialogue Nouveau projet sous **Visual C# \Web Site\WCF Service** et **Visual Basic\Web Site\WCF Service**. Cela crée les mêmes fichiers que ceux du modèle d’application de service WCF, mais les classe comme s’il s’agissait d’un site web ASP.NET. Les dossiers App_Code et App_Data sont créés.  
+ Le modèle de Site Web de WCF est disponible dans la boîte de dialogue Nouveau projet sous **Visual C# \Web Site\WCF Service** et **Visual Basic\Web Site\WCF Service**. Cela crée les mêmes fichiers que ceux du modèle d’application de service WCF, mais les classe comme s’il s’agissait d’un site web ASP.NET. Les dossiers App_Code et App_Data sont créés.  
   
 ### <a name="wcf-service-item-template"></a>Modèle d'élément de service WCF  
- Le [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] modèle d’élément de Service est un modèle personnalisé qui fournit un moyen rapide d’ajouter [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] services à vos projets Visual Studio existants.  
+ Le modèle d’élément de Service WCF est un modèle personnalisé qui offre un moyen rapide pour ajouter des services WCF à vos projets Visual Studio existants.  
   
  Pour utiliser ce modèle, accédez à la **l’Explorateur de solutions** volet, cliquez sur le nom de votre projet, pointez sur **ajouter**, puis cliquez sur **un nouvel élément** pour lancer le **Ajouter nouveau Élément** boîte de dialogue.  
   
@@ -58,12 +58,12 @@ Modèles Visual Studio de Windows Communication Foundation (WCF) sont des modèl
  Un fichier d'hôte de service (service1.svc) est également créé si le projet existant est un projet Web.  
   
 ### <a name="wcf-wf-service-project-and-item-template"></a>Modèles d'élément et de projet de service WF WCF.  
- Ces modèles créent des services [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] qui hébergent un service de workflow, dont l'accès est identique à celui d'un service Web. Différents modèles existent pour les XAML et les modèles de programmation impératifs. À l'aide des modèles, vous pouvez créer des workflows séquentiels ou des workflows de l'ordinateur d'état. Pour plus d’informations sur ces types de flux de travail, consultez [Windows Workflow Foundation didacticiels](http://msdn.microsoft.com/library/e9705654-bd96-4b56-8d98-f1f118112d97). Pour plus d’informations sur la création de projets de workflow, consultez [création de projets de Workflow hérité](/visualstudio/workflow-designer/creating-legacy-workflow-projects).  
+ Ces modèles créent les services WCF qui hébergent un Service de flux de travail, qui est un flux de travail qui sont accessibles comme un service web. Différents modèles existent pour les XAML et les modèles de programmation impératifs. À l'aide des modèles, vous pouvez créer des workflows séquentiels ou des workflows de l'ordinateur d'état. Pour plus d’informations sur ces types de flux de travail, consultez [Windows Workflow Foundation didacticiels](http://msdn.microsoft.com/library/e9705654-bd96-4b56-8d98-f1f118112d97). Pour plus d’informations sur la création de projets de workflow, consultez [création de projets de Workflow hérité](/visualstudio/workflow-designer/creating-legacy-workflow-projects).  
   
  Concepteur de Visual Studio est plus réactif lorsque type XOML workflows sont utilisés à la place du code basés sur le. Le workflow XOML est le type de workflow par défaut à créer.  
   
 ### <a name="wcf-syndication-service-library-template"></a>Modèle de la bibliothèque du service de syndication WCF  
- Ce modèle permet d'exposer votre flux au format RSS ou ATOM en tant que service [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Pour plus d’informations, consultez [Syndication WCF](../../../docs/framework/wcf/feature-details/wcf-syndication.md).  
+ Ce modèle vous permet d’exposer votre flux au format RSS ou ATOM en tant qu’un service WCF. Pour plus d’informations, consultez [Syndication WCF](../../../docs/framework/wcf/feature-details/wcf-syndication.md).  
   
 #### <a name="changing-the-address-of-the-feed"></a>Modification de l'adresse du flux  
  Le modèle de syndication utilise Internet Explorer au cours de l'exécution. Lorsque vous cliquez sur votre projet dans **l’Explorateur de Solutions** dans Visual Studio, sélectionnez **propriétés**, puis sélectionnez le **déboguer** onglet et vous pouvez voir l’adresse par défaut de la modèle. Internet Explorer tente d'ouvrir le flux à cette adresse.  
@@ -71,10 +71,10 @@ Modèles Visual Studio de Windows Communication Foundation (WCF) sont des modèl
  Si vous modifiez l’adresse de votre flux, vous devez également modifier l’adresse dans le **déboguer** onglet. Sinon, Internet Explorer tente d'ouvrir le flux à l'adresse par défaut et échoue.  
   
 ### <a name="ajax-enabled-wcf-service-item-template"></a>Modèle d'élément de service WCF AJAX  
- Ce modèle expose un contrôle AJAX en tant que service [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Pour plus d’informations sur les contrôles d’AJAX, consultez le [documentation sur le contrôle AJAX](http://go.microsoft.com/fwlink/?LinkId=96717).  
+ Ce modèle expose un contrôle AJAX en tant qu’un service WCF. Pour plus d’informations sur les contrôles d’AJAX, consultez le [documentation sur le contrôle AJAX](http://go.microsoft.com/fwlink/?LinkId=96717).  
   
 ### <a name="silverlight-enabled-wcf-service-item-template"></a>Modèle d'élément de service WCF compatible Silverlight  
- Ce modèle crée un service Web qui fournit des données à un client Silverlight ou frontal. Il peut être ajouté à un site Web ou à un projet d'application Web pour créer un service [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], qui inclut le code et la configuration du service prenant en charge la communication avec un client Silverlight. Vous pouvez ensuite utiliser **ajouter une référence de Service** pour ajouter un proxy client du service au client et échanger des données entre le client Silverlight et le service WCF compatible Silverlight.  
+ Ce modèle crée un service Web qui fournit des données à un client Silverlight ou frontal. Le modèle peut être ajouté à un projet d’application Web ou le site Web pour créer un service WCF, qui inclut le code de service et de configuration qui prennent en charge la communication avec un client Silverlight. Vous pouvez ensuite utiliser **ajouter une référence de Service** pour ajouter un proxy client du service au client et échanger des données entre le client Silverlight et le service WCF compatible Silverlight.  
   
  Pour accéder à ce modèle, cliquez sur un projet d’application Web ou le site Web dans **l’Explorateur de solutions**, cliquez sur **ajouter un nouvel élément**, puis cliquez sur **Service WCF compatible Silverlight**.  
   

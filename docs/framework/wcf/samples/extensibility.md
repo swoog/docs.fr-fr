@@ -2,11 +2,11 @@
 title: Extensibilité
 ms.date: 03/30/2017
 ms.assetid: cd7ddffc-a261-44aa-bd50-33c1c74f0df0
-ms.openlocfilehash: 7cba21715a6a0347e910300de46c1e47fd6e30bf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 010d6d7b17d3cb39e19c23550ca3522d6ea73a21
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="extensibility"></a>Extensibilité
 Cette section contient des exemples qui traitent de l’extensibilité personnalisée et d’autres fonctionnalités de Windows Communication Foundation (WCF).  
@@ -55,10 +55,10 @@ Cette section contient des exemples qui traitent de l’extensibilité personnal
  Montre comment des processus tels que la sérialisation, la désérialisation, l’exportation de schéma et l’importation de schéma peuvent être personnalisés à l’aide d’une classe de substitution d’un contrat de données.  
   
  [Extension du contrôle à la gestion des erreurs et au rapport d’erreurs](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  
- Montre comment étendre le contrôle à la gestion des erreurs et au rapport d'erreurs dans un service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] à l'aide de l'interface <xref:System.ServiceModel.Dispatcher.IErrorHandler>.  
+ Montre comment étendre le contrôle à la gestion des erreurs et de signaler les erreurs dans un service WCF à l’aide du <xref:System.ServiceModel.Dispatcher.IErrorHandler> interface.  
   
  [Inspecteurs de messages](../../../../docs/framework/wcf/samples/message-inspectors.md)  
  Montre comment implémenter et configurer des inspecteurs de message de service et de client.  
   
  [WebContentTypeMapper](../../../../docs/framework/wcf/samples/webcontenttypemapper-sample.md)  
- Montre comment mapper de nouveaux types de contenu aux formats du corps du message [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].
+ Montre comment mapper les nouveaux types de contenu aux formats du corps de message WCF.

@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - load balancing [WCF]
 ms.assetid: 148e0168-c08d-4886-8769-776d0953b80f
-ms.openlocfilehash: 9ad9c9c569137534addfa3b91f412fb0c0a4b808
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c9d554dfd8d21b6e0e5f4aef0f4402e16485c2e8
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="load-balancing"></a>Équilibrage de charge
-Un moyen d’augmenter la capacité des applications Windows Communication Foundation (WCF) est mise à l’échelle les en les déployant dans une batterie de serveurs à charge équilibrée. Les applications [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] peuvent faire l'objet d'un équilibrage de charge à l'aide des techniques d'équilibrage de charge standard, dont notamment les programmes d'équilibrage de charge logicielle tels Windows Network Load Balancing ainsi que les appareils d'équilibrage de charge matérielle.  
+Un moyen d’augmenter la capacité des applications Windows Communication Foundation (WCF) est mise à l’échelle les en les déployant dans une batterie de serveurs à charge équilibrée. Les applications WCF peuvent être équilibrée à l’aide de techniques, y compris les équilibreurs de charge logicielle tels Windows Network Load Balancing d’équilibrage de charge standard, ainsi que des appareils d’équilibrage de la charge matérielle.  
   
- Les sections suivantes traitent des considérations relatives à l'équilibrage de la charge des applications [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] construites à l'aide de diverses liaisons fournies par le système.  
+ Les sections suivantes traitent de considérations sur les applications WCF générées à l’aide de diverses liaisons fournies par le système d’équilibrage de charge.  
   
 ## <a name="load-balancing-with-the-basic-http-binding"></a>Équilibrage de charge avec la liaison HTTP de base  
- Du point de vue de l'équilibrage de charge, les applications [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] qui communiquent à l'aide de <xref:System.ServiceModel.BasicHttpBinding> sont identiques à celles d'autres types communs de trafic réseau HTTP (contenu HTML statique, pages ASP.NET ou services Web ASMX). Les canaux [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] qui utilisent cette liaison sont fondamentalement sans état et terminent leurs connexions lorsque le canal se ferme. C'est la raison pour laquelle <xref:System.ServiceModel.BasicHttpBinding> fonctionne bien avec les techniques d'équilibrage de charge HTTP existantes.  
+ Du point de vue de l’équilibrage de charge, les applications WCF qui communiquent à l’aide de la <xref:System.ServiceModel.BasicHttpBinding> sont identiques à celles des autres types communs de HTTP trafic réseau (statique contenu HTML, pages ASP.NET ou Services Web ASMX). Canaux WCF qui utilisent cette liaison sont fondamentalement sans état et terminent leurs connexions lorsque le canal se ferme. C'est la raison pour laquelle <xref:System.ServiceModel.BasicHttpBinding> fonctionne bien avec les techniques d'équilibrage de charge HTTP existantes.  
   
  Par défaut, <xref:System.ServiceModel.BasicHttpBinding> envoie un en-tête HTTP de connexion dans les messages contenant une valeur `Keep-Alive`, ce qui permet aux clients d'établir des connexions persistantes aux services qui les prennent en charge. Cette configuration offre un débit supérieur car les connexions précédemment établies peuvent être réutilisées pour envoyer les messages suivants au même serveur. Toutefois, la réutilisation des connexions peut provoquer une forte association des clients à un serveur spécifique dans la batterie à charge équilibrée, ce qui réduit l'efficacité de l'équilibrage de charge tourniquet. Si vous ne souhaitez pas ce type de comportement, `Keep-Alive` HTTP peut être désactivé sur le serveur à l'aide de la propriété <xref:System.ServiceModel.Channels.HttpTransportBindingElement.KeepAliveEnabled%2A> avec <xref:System.ServiceModel.Channels.CustomBinding> ou <xref:System.ServiceModel.Channels.Binding> défini par l'utilisateur. L'exemple suivant montre comment procéder à l'aide de la configuration :  
   

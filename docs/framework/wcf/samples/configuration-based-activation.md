@@ -2,11 +2,11 @@
 title: Activation basée sur la configuration
 ms.date: 03/30/2017
 ms.assetid: 21bb762e-c43e-4b0c-887b-5e434d665838
-ms.openlocfilehash: 2829458d40e3efb180699122570b2775a90be9e6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3ac4edd2a51e4ed8a5c0b7e73d7d1afa31334c33
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="configuration-based-activation"></a>Activation basée sur la configuration
 Cet exemple montre comment activer les services Windows Communication Foundation (WCF) sans nécessiter un fichier .svc.  
@@ -21,7 +21,7 @@ Cet exemple montre comment activer les services Windows Communication Foundation
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\ConfigBasedActivation`  
   
 ## <a name="sample-details"></a>Détails de l'exemple  
- Dans cet exemple, le client est le client de test [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] et le service est hébergé dans IIS.  
+ Dans cet exemple, le client est le client test WCF, et le service est hébergé dans IIS.  
   
 > [!NOTE]
 >  Les instructions d'installation et de génération correspondant à cet exemple figurent en fin de rubrique.  

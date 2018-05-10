@@ -2,11 +2,11 @@
 title: Sélection d’un modèle d’échange de messages
 ms.date: 03/30/2017
 ms.assetid: 0f502ca1-6a8e-4607-ba15-59198c0e6146
-ms.openlocfilehash: 3466be98522eef0ebec6f6613f51566700a7cdb7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ac5ff841eb4e314c1c9d04c895d7a22766da003e
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="choosing-a-message-exchange-pattern"></a>Sélection d’un modèle d’échange de messages
 La première étape de l’écriture d’un transport personnalisé consiste à décider quels *modèles d’échange de messages* (ou MEP) sont requis pour le canal que vous développez. Cette rubrique contient des explications sur les options disponibles ainsi que sur les différentes exigences. C’est la première tâche dans la liste de tâches de développement channel décrite dans [développement canaux](../../../../docs/framework/wcf/extending/developing-channels.md).  
@@ -47,7 +47,7 @@ Les trois modèles d’échange de messages de base. De haut en bas : datagramm
 >  Pour le transport UDP, le seul MEP pris en charge est datagramme, le protocole UDP, de part sa nature même, permettant uniquement l'échange de messages de type « déclenché et oublié ».  
   
 ## <a name="sessions-and-sessionful-channels"></a>Sessions et canaux de session  
- En matière de réseaux, il existe des protocoles orientés connexion (par exemple, le protocole TCP) et des protocoles sans connexion (par exemple, le protocole UDP). [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilise le terme « session » à la place du terme « connexion » à des fins d'abstraction logique. Les protocoles de session WCF s'apparentent aux protocoles de réseau orientés connexion et les protocoles sans session WCF aux protocoles de réseau sans connexion.  
+ En matière de réseaux, il existe des protocoles orientés connexion (par exemple, le protocole TCP) et des protocoles sans connexion (par exemple, le protocole UDP). WCF utilise la session de terme pour signifier une abstraction logique du type de connexion. Les protocoles de session WCF s'apparentent aux protocoles de réseau orientés connexion et les protocoles sans session WCF aux protocoles de réseau sans connexion.  
   
  Dans le modèle d'objet de canal, chaque session logique se manifeste sous forme d'instance de canal de session. Par conséquent, chaque nouvelle session créée par le client et acceptée par le service correspond à un nouveau canal de session de part et d'autre. Le diagramme suivant contient, dans sa partie supérieure, la structure des canaux sans session et, dans sa partie inférieure, la structure des canaux de session.  
   

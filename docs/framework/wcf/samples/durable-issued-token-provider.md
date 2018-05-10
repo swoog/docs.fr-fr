@@ -2,21 +2,21 @@
 title: Durable Issued Token Provider
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: 20006f87f7ecba9c09f6c957f8b6355dec7fbd32
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 145faaae709119708240863f85eb5352fb2c5a1b
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="durable-issued-token-provider"></a>Durable Issued Token Provider
 Cet exemple montre comment implémenter un fournisseur de jetons émis client personnalisé.  
   
 ## <a name="discussion"></a>Discussion  
- Un fournisseur de jetons dans Windows Communication Foundation (WCF) est utilisé pour fournir des informations d’identification pour l’infrastructure de sécurité. En général, le fournisseur de jetons examine la cible et publie des informations d'identification appropriées afin que l'infrastructure de sécurité puisse sécuriser le message. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] est fourni avec un fournisseur de jetons [!INCLUDE[infocard](../../../../includes/infocard-md.md)]. Les fournisseurs de jetons personnalisés sont utiles dans les cas suivants :  
+ Un fournisseur de jetons dans Windows Communication Foundation (WCF) est utilisé pour fournir des informations d’identification pour l’infrastructure de sécurité. En général, le fournisseur de jetons examine la cible et publie des informations d'identification appropriées afin que l'infrastructure de sécurité puisse sécuriser le message. WCF est fourni avec un [!INCLUDE[infocard](../../../../includes/infocard-md.md)] fournisseur de jetons. Les fournisseurs de jetons personnalisés sont utiles dans les cas suivants :  
   
 -   Si vous disposez d'un magasin d'informations d'identification avec lequel le fournisseur de jetons intégré ne peut pas fonctionner.  
   
--   Si vous souhaitez fournir votre propre mécanisme personnalisé permettant de transformer les informations d'identification entre le moment où l'utilisateur fournit les détails et celui où le client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] les utilise.  
+-   Si vous souhaitez fournir votre propre mécanisme personnalisé pour transformer les informations d’identification à partir du point lorsque l’utilisateur fournit les détails lorsque le client WCF utilise les informations d’identification.  
   
 -   si vous générez un jeton personnalisé.  
   
@@ -26,7 +26,7 @@ Cet exemple montre comment implémenter un fournisseur de jetons émis client pe
   
 -   la façon dont un client peut être configuré avec un fournisseur de jetons personnalisé ;  
   
--   la façon dont des jetons émis peuvent être mis en cache et fournis au client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ;  
+-   Comment les jetons émis peuvent être mis en cache et fournis au client WCF.  
   
 -   la façon dont le serveur est authentifié auprès du client à l'aide du certificat X.509 du serveur.  
   
@@ -109,7 +109,7 @@ Cet exemple montre comment implémenter un fournisseur de jetons émis client pe
  Le service d'émission de jeton de sécurité expose un point de terminaison unique à l'aide du wsHttpBinding standard. Le service d'émission de jeton de sécurité répond pour demander des jetons aux clients et, à la condition que le client s'authentifie à l'aide d'un compte Windows, il émet un jeton qui contient le nom d'utilisateur du client comme revendication dans le jeton émis. Dans le cadre de la création du jeton, le service d'émission de jeton de sécurité le signe à l'aide de la clé privée associée au certificat CN=STS. Par ailleurs, il crée une clé symétrique et la chiffre à l'aide de la clé publique associée au certificat CN=localhost. Lors du retour du jeton au client, le service d'émission de jeton de sécurité retourne également la clé symétrique. Le client présente le jeton émis au service de calculatrice et prouve qu'il connaît la clé symétrique en signant le message à l'aide de celle-ci.  
   
 ## <a name="custom-client-credentials-and-token-provider"></a>Informations d'identification client personnalisées et fournisseur de jetons personnalisé  
- Les étapes suivantes indiquent comment développer un fournisseur de jetons personnalisé qui met en cache des jetons émis et comment l'intégrer à la sécurité [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Les étapes suivantes montrent comment développer un fournisseur de jeton personnalisé que les caches des jetons émis et l’intégrer à WCF : sécurité.  
   
 #### <a name="to-develop-a-custom-token-provider"></a>Pour développer un fournisseur de jetons personnalisé  
   

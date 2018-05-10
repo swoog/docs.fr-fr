@@ -2,11 +2,11 @@
 title: Regroupement de connexions OLE DB, ODBC et Oracle Connection
 ms.date: 03/30/2017
 ms.assetid: 2bd83b1e-3ea9-43c4-bade-d9cdb9bbbb04
-ms.openlocfilehash: 2e42b52bb75008fd34f3e4bef1788626d96368bc
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5b70f6aeeae565684158aeb135d0d3e765e694d1
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ole-db-odbc-and-oracle-connection-pooling"></a>Regroupement de connexions OLE DB, ODBC et Oracle Connection
 Le regroupement de connexions peut considérablement améliorer les performances et l'évolutivité de votre application. Cette section traite du regroupement de connexions pour les fournisseurs de données .NET Framework pour OLE DB, ODBC et Oracle.  
@@ -26,8 +26,6 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
  Le regroupement de connexions du fournisseur de données .NET Framework pour ODBC est géré par le gestionnaire de pilotes ODBC utilisé pour la connexion et n'est pas affecté par le fournisseur de données .NET Framework pour ODBC.  
   
  Pour activer ou désactiver le regroupement de connexions, ouvrez **administrateur de sources de données ODBC** dans le dossier Outils d’administration du Panneau de configuration. Le **le regroupement de connexions** onglet vous permet de spécifier des paramètres pour chaque pilote ODBC installé de regroupement de connexions. Notez que les modifications apportées au regroupement de connexions d'un pilote ODBC affectent toutes les applications qui utilisent ce pilote.  
-  
- Pour plus d’informations sur le regroupement de connexions ODBC, consultez [INFO : Forum aux Questions sur regroupement de connexions ODBC](http://support.microsoft.com/kb/169470).  
   
 ## <a name="connection-pooling-for-oracleclient"></a>Regroupement de connexions pour OracleClient  
  Le fournisseur de données .NET Framework pour Oracle assure automatiquement le regroupement de connexions pour votre application cliente ADO.NET. Vous pouvez aussi fournir plusieurs modificateurs de chaîne de connexion afin de contrôler le comportement du pool de connexions (voir la section sur le contrôle des pools de connexions avec les mots clés des chaînes de connexion, plus loin dans cette rubrique).  

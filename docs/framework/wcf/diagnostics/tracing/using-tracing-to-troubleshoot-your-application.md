@@ -2,11 +2,11 @@
 title: Utilisation du suivi pour résoudre les problèmes posés par votre application
 ms.date: 03/30/2017
 ms.assetid: 7676b9bb-cbd1-41fd-9a93-cc615af6e2d0
-ms.openlocfilehash: 7613ff24161fd7dc159838fb232e2fc6742ab1a4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 684fd79e2aa8062ddeb183576cb449bf838aa6c3
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-tracing-to-troubleshoot-your-application"></a>Utilisation du suivi pour résoudre les problèmes posés par votre application
 Cette section contient différentes rubriques qui décrivent comment vous pouvez utiliser le suivi pour dépanner votre application.  
@@ -19,13 +19,13 @@ Cette section contient différentes rubriques qui décrivent comment vous pouvez
  Décrit comment utiliser l'outil Service Trace Viewer pour visualiser, corréler et analyser les données de suivi.  
   
  [Suivis principaux](../../../../../docs/framework/wcf/diagnostics/tracing/significant-traces.md)  
- Liste des principaux suivis émis par [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)].  
+ Une liste des principaux suivis émis par WCF.  
   
  [Débogage sur le client](../../../../../docs/framework/wcf/diagnostics/tracing/debugging-on-the-client.md)  
  Permet aux clients de déboguer une application.  
   
  [Scénarios de suivi de bout en bout](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
- Décrit les suivis utilisés pour les scénarios [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] E2E, par exemple, les demandes-réponses wsHttp synchrones, et les demandes unidirectionnelles TCP.  
+ Décrit les suivis utilisés pour les scénarios de WCF de E2E, par exemple, les demandes-réponses wsHttp synchrones et les demandes unidirectionnelles TCP.  
   
  [Émission de suivis dans du code utilisateur](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)  
  Décrit comment émettre des suivis via la programmation du code utilisateur, afin que vous puissiez créer de manière proactive des données d'instrumentation qui seront ultérieurement utilisées pour le diagnostic et en corrélation avec les suivis WCF.  

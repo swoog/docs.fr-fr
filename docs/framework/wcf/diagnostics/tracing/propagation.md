@@ -2,11 +2,11 @@
 title: Propagation
 ms.date: 03/30/2017
 ms.assetid: f8181e75-d693-48d1-b333-a776ad3b382a
-ms.openlocfilehash: 5d848a2b74402d0adf125488481f5b82e0b09781
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f4e92c6dec163d191c507dd80bb0d9dc129c6e96
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="propagation"></a>Propagation
 Cette rubrique décrit la propagation d’activité dans le modèle de suivi Windows Communication Foundation (WCF).  
@@ -20,7 +20,7 @@ Cette rubrique décrit la propagation d’activité dans le modèle de suivi Win
 <source name="System.ServiceModel" switchValue="Verbose,ActivityTracing" propagateActivity="true" >  
 ```  
   
- La propagation d'activité est une fonction configurable qui entraîne l'ajout par [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] d'un en-tête aux messages sortants et qui inclut l'ID d'activité sur le TLS. En incluant ces informations dans les suivis ultérieurs sur le côté serveur, il est possible de mettre en corrélation les activités de client et de serveur.  
+ La propagation d’activité est une fonction configurable qui entraîne de WCF ajouter un en-tête aux messages sortants, qui inclut l’ID d’activité sur le TLS. En incluant ces informations dans les suivis ultérieurs sur le côté serveur, il est possible de mettre en corrélation les activités de client et de serveur.  
   
 ## <a name="propagation-definition"></a>Définition de la propagation  
  Le gAId de l'activité M est propagé à l'activité N si toutes les conditions suivantes s'appliquent.  

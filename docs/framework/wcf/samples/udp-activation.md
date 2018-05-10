@@ -2,11 +2,11 @@
 title: UDP Activation
 ms.date: 03/30/2017
 ms.assetid: 4b0ccd10-0dfb-4603-93f9-f0857c581cb7
-ms.openlocfilehash: 6dd1ee02b51dc969af0ba1bc418b7fb20f6f0ed6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9f7600bff17c015f28c3fb94ed5360561d45c65b
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="udp-activation"></a>UDP Activation
 Cet exemple est basé sur le [Transport : UDP](../../../../docs/framework/wcf/samples/transport-udp.md) exemple. Il étend le [Transport : UDP](../../../../docs/framework/wcf/samples/transport-udp.md) exemple pour prendre en charge l’activation de processus à l’aide du Service de l’Activation des processus Windows (WAS).  
@@ -20,7 +20,7 @@ Cet exemple est basé sur le [Transport : UDP](../../../../docs/framework/wcf/s
 -   Un service (hébergé dans un processus de travail activé par WAS) qui reçoit des messages sur le transport UDP personnalisé.  
   
 ## <a name="udp-protocol-activator"></a>Activateur de protocole UDP  
- L'activateur de protocole UDP est un pont entre le client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] et le service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Il assure la communication des données à travers le protocole UDP au niveau de la couche de transport. Il possède deux fonctionnalités majeures :  
+ L’activateur de protocole UDP est un pont entre le client WCF et le service WCF. Il assure la communication des données à travers le protocole UDP au niveau de la couche de transport. Il possède deux fonctionnalités majeures :  
   
 -   L'adaptateur d'écouteur (LA) WAS, qui collabore avec WAS pour activer des processus en réponse à des messages entrants ;  
   
@@ -55,7 +55,7 @@ Cet exemple est basé sur le [Transport : UDP](../../../../docs/framework/wcf/s
  L'écouteur de protocole d'UDP est un module interne à l'activateur de protocole qui écoute un point de terminaison UDP au nom de l'application virtuelle. Il est implémenté dans la classe `UdpSocketListener`. Le point de terminaison est représenté comme un `IPEndpoint` pour lequel le numéro de port est extrait de la liaison du protocole pour le site.  
   
 ### <a name="control-service"></a>Service de contrôle  
- Dans cet exemple, nous utilisons [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] pour communiquer entre l'activateur et le processus de travail WAS. Le service qui réside dans l'activateur est appelé le service de contrôle.  
+ Dans cet exemple, nous utilisons WCF pour la communication entre l’activateur et le processus de travail WAS. Le service qui réside dans l'activateur est appelé le service de contrôle.  
   
 ## <a name="protocol-handlers"></a>Gestionnaires de protocoles  
  Après que l'adaptateur d'écouteur a appelé `WebhostOpenListenerChannelInstance`, le gestionnaire de processus WAS démarre le processus de travail s'il n'est pas démarré. Le gestionnaire d'application à l'intérieur du processus de travail charge ensuite le gestionnaire de protocole du processus (PPH) UDP avec la demande pour ce `ListenerChannelId`. Le PPH appelle `IAdphManager`.`StartAppDomainProtocolListenerChannel` Pour démarrer le Gestionnaire de protocole AppDomain (ADPH) UDP.  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - extensibility [WCF]
 - Windows Communication Foundation, extensibility
 ms.assetid: c145e2f6-f402-41f5-8b5a-eee03978737b
-ms.openlocfilehash: 4990f14178551d9dccaca0f2899d8dbc4416cdc4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 24ad74f04a3ac31d0b0d0d87f0d74f88c0521f50
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="extending-wcf"></a>Extension de WCF
 Windows Communication Foundation (WCF) vous permet de modifier et d’étendre des composants d’exécution pour contrôler avec précision et d’étendre des applications basées sur le service. Les rubriques de cette section approfondissent le concept d'architecture d'extensibilité. Pour plus d’informations sur la programmation de base, consultez [programmation WCF de base](../../../../docs/framework/wcf/basic-wcf-programming.md).  
@@ -26,10 +26,10 @@ Windows Communication Foundation (WCF) vous permet de modifier et d’étendre d
  La couche du canal repose sous la couche du modèle de service et est chargée de l'échange des messages entre les clients et les services. Les extensions de canal peuvent implémenter des nouvelles fonctionnalités de protocole, telles que la sécurité. Les extensions de canal contiennent aussi des fonctionnalités, telles que l’implémentation d’un nouveau transport réseau pour transporter les messages SOAP.  
   
  [Extension de la sécurité](../../../../docs/framework/wcf/extending/extending-security.md)  
- La sécurité dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] contient la sécurité de transfert (intégrité, confidentialité et authentification), le contrôle d'accès (autorisation) et l'audit. Les classes recherchées dans l'espace de noms `IdentityModel` sont utilisées par [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] pour le contrôle d'accès. La maîtrise du fonctionnement de l'architecture de sécurité vous permet de créer des types de revendication personnalisée afin d'accommoder des systèmes de contrôle d'accès personnalisés.  
+ Sécurité dans WCF se compose de transfert de sécurité (intégrité, confidentialité et authentification), contrôle d’accès (autorisation) et l’audit. Les classes trouvent dans le `IdentityModel` espace de noms sont utilisés par WCF pour le contrôle d’accès. La maîtrise du fonctionnement de l'architecture de sécurité vous permet de créer des types de revendication personnalisée afin d'accommoder des systèmes de contrôle d'accès personnalisés.  
   
  [Extension du système de métadonnées](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)  
- Le système des métadonnées [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] est un groupe de classes et d'interfaces qui représentent les métadonnées requises pour implémenter des applications basées sur un service. Modifiez ou étendez les classes ou implémentez et configurez les interfaces pour exporter et importer des métadonnées personnalisées telles que les extensions WSDL (Web Services Description Language) ou des assertions WS-PolicyAttachments personnalisées.  
+ Le système de métadonnées WCF est un groupe de classes et interfaces qui représentent les métadonnées requises pour implémenter des applications basées sur le service. Modifiez ou étendez les classes ou implémentez et configurez les interfaces pour exporter et importer des métadonnées personnalisées telles que les extensions WSDL (Web Services Description Language) ou des assertions WS-PolicyAttachments personnalisées.  
   
  [Extension des encodeurs et des sérialiseurs](../../../../docs/framework/wcf/extending/extending-encoders-and-serializers.md)  
  Les encodeurs et les sérialiseurs traduisent les données d'un format à l'autre. Les rubriques de cette section expliquent comment étendre les classes fournies pour satisfaire des exigences particulières.  

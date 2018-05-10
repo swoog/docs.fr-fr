@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], system-provided
 ms.assetid: 2c243746-45ce-4588-995e-c17126a579a6
-ms.openlocfilehash: 12382b0886970bc48345107008ee449d9653ec4f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 97a8e9fd8f0e2c906f14556fcdccd7ef0d3c8033
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="system-provided-bindings"></a>Liaisons fournies par le système
 Les liaisons spécifient le mécanisme de communication à utiliser pour communiquer avec un point de terminaison et indiquer comment se connecter à un point de terminaison. Une liaison contient les éléments suivants :  
@@ -30,7 +30,7 @@ Les liaisons spécifient le mécanisme de communication à utiliser pour communi
 >  N'utilisez jamais des contrats duplex avec les liaisons qui ne prennent pas en charge la sécurité ou dont la sécurité est désactivée sauf si vous sécurisez les données d'un moyen ou un autre.  
   
 ## <a name="system-provided-bindings"></a>Liaisons fournies par le système  
- Les liaisons suivantes sont fournies avec [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+ Les liaisons suivantes sont fournies avec WCF.  
   
 |Liaison|Élément de configuration|Description|  
 |-------------|---------------------------|-----------------|  
@@ -40,14 +40,14 @@ Les liaisons spécifient le mécanisme de communication à utiliser pour communi
 |<xref:System.ServiceModel.WSFederationHttpBinding>|[\<wsFederationHttpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|Une liaison sécurisée et interopérable qui prend en charge le protocole WS-Federation qui permet aux organisations dans une fédération d’authentifier et d’autoriser efficacement les utilisateurs.|  
 |<xref:System.ServiceModel.NetHttpBinding>|\<netHttpBinding>|Liaison conçue pour consommer des services HTTP ou WebSocket qui utilise l’encodage binaire par défaut.|  
 |<xref:System.ServiceModel.NetHttpsBinding>|\<netHttpsBinding >|Liaison sécurisée conçue pour consommer des services HTTP ou WebSocket qui utilise l’encodage binaire par défaut.|  
-|<xref:System.ServiceModel.NetTcpBinding>|[\<netTcpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)|Une liaison sécurisée et optimisée appropriée pour la communication entre ordinateurs entre des applications [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].|  
-|<xref:System.ServiceModel.NetNamedPipeBinding>|[\<netNamedPipeBinding >](../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md)|Une liaison sécurisée, fiable, optimisée appropriée pour la communication sur les ordinateurs entre des applications [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].|  
-|<xref:System.ServiceModel.NetMsmqBinding>|[\<netMsmqBinding >](../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)|Une liaison mise en file d'attente qui est appropriée pour la communication entre ordinateurs entre des applications [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].|  
+|<xref:System.ServiceModel.NetTcpBinding>|[\<netTcpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)|Une liaison sécurisée et optimisée appropriée pour la communication entre ordinateurs entre les applications WCF.|  
+|<xref:System.ServiceModel.NetNamedPipeBinding>|[\<netNamedPipeBinding >](../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md)|Une liaison sécurisée, fiable et optimisée qui convient pour la communication sur l’ordinateur entre les applications WCF.|  
+|<xref:System.ServiceModel.NetMsmqBinding>|[\<netMsmqBinding >](../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)|Une liaison en file d’attente, qui est appropriée pour la communication entre ordinateurs entre les applications WCF.|  
 |<xref:System.ServiceModel.NetPeerTcpBinding>|[\<netPeerTcpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)|Une liaison qui permet la communication sécurisée entre plusieurs ordinateurs.|  
-|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|[\<msmqIntegrationBinding>](../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)|Une liaison appropriée pour la communication entre ordinateurs entre une application [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] et des applications Message Queuing existantes.|  
+|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|[\<msmqIntegrationBinding>](../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)|Une liaison qui est appropriée pour la communication entre ordinateurs entre une application de WCF et d’un existant Message Queuing d’applications.|  
 |<xref:System.ServiceModel.BasicHttpContextBinding>|[\<basicHttpContextBinding >](../../../docs/framework/configure-apps/file-schema/wcf/basichttpcontextbinding.md)|Une liaison qui est appropriée pour communiquer avec les services Web conformes avec WS-Basic Profile, qui active des cookies HTTP en vue de leur utilisation pour échanger le contexte.|  
-|<xref:System.ServiceModel.NetTcpContextBinding>|[\<netTcpContextBinding >](../../../docs/framework/configure-apps/file-schema/wcf/nettcpcontextbinding.md)|Une liaison sécurisée et optimisée qui convient à la communication entre ordinateurs entre les applications [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], qui active des en-têtes SOAP à utiliser pour échanger le contexte.|  
-|<xref:System.ServiceModel.WebHttpBinding>|[\<webHttpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|Une liaison utilisée pour configurer des points de terminaison pour les services Web [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] exposés par le biais de requêtes HTTP au lieu de messages SOAP.|  
+|<xref:System.ServiceModel.NetTcpContextBinding>|[\<netTcpContextBinding >](../../../docs/framework/configure-apps/file-schema/wcf/nettcpcontextbinding.md)|Une liaison sécurisée et optimisée appropriée pour la communication entre ordinateurs entre les applications WCF qui permet d’en-têtes SOAP à utiliser pour échanger le contexte.|  
+|<xref:System.ServiceModel.WebHttpBinding>|[\<webHttpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|Une liaison permet de configurer des points de terminaison pour les services Web WCF qui sont exposées via des requêtes HTTP au lieu des messages SOAP.|  
 |<xref:System.ServiceModel.WSHttpContextBinding>|[\<wsHttpContextBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpcontextbinding.md)|Sécurisée et |<xref:System.ServiceModel.UdpBinding>|\<udpBinding >|Liaison à utiliser lors de l’envoi d’une rafale de messages simples à un grand nombre de clients simultanément.|  
   
  Le tableau suivant affiche les fonctionnalités de chacune des liaisons fournies par le système. Les liaisons figurent dans les colonnes du tableau ; les fonctionnalités sont répertoriées dans les lignes et décrites dans un deuxième tableau. Le tableau suivant fournit une clé pour les abréviations de liaison utilisées. Pour sélectionner une liaison, déterminez quelle colonne satisfait toutes les fonctionnalités de ligne dont vous avez besoin.  

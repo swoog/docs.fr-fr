@@ -7,11 +7,11 @@ helpviewer_keywords:
 - best practices [WCF], data contract versioning
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
-ms.openlocfilehash: a578235a0db0ba769cae0b2ade93edbfd72b5508
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 33db8749656a8bb001f0a1797c77451476a126f2
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="best-practices-data-contract-versioning"></a>Meilleures pratiques : contrôle de version des contrats de données
 Cette rubrique répertorie les méthodes conseillées pour créer des contrats de données qui peuvent évoluer facilement avec le temps. Pour plus d’informations sur les contrats de données, consultez les rubriques de [à l’aide de contrats de données](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
@@ -21,7 +21,7 @@ Cette rubrique répertorie les méthodes conseillées pour créer des contrats d
   
  Cela signifie que même le scénario le plus courant de contrôle de version, tel que l'ajout d'un nouveau membre de données, ne peut pas être implémenté d'une manière transparente par rapport à un schéma donné. Les versions plus récentes d'un contrat de données (avec un nouveau membre de données, par exemple) ne valident pas l'utilisation de l'ancien schéma.  
   
- Toutefois, de nombreux scénarios existent où la stricte conformité de schéma n'est pas nécessaire. De nombreuses plateformes de services Web, notamment les services Web XML et [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] créés à l'aide d'ASP.NET, n'exécutent pas de validation de schéma par défaut et par conséquent acceptent des éléments supplémentaires non décrits par le schéma. L'utilisation de ces plateformes simplifie l'implémentation d'un grand nombre de scénarios de contrôle de version.  
+ Toutefois, de nombreux scénarios existent où la stricte conformité de schéma n'est pas nécessaire. Nombreuses plateformes de services Web, y compris les services Web XML et WCF créés à l’aide d’ASP.NET, ne pas effectuer la validation de schéma par défaut et par conséquent acceptent des éléments supplémentaires non décrits par le schéma. L'utilisation de ces plateformes simplifie l'implémentation d'un grand nombre de scénarios de contrôle de version.  
   
  Par conséquent, il existe deux jeux d'instructions relatives au contrôle de version des contrats de données : un jeu pour les scénarios où la validation stricte de schéma est importante, et un autre jeu pour les scénarios où elle ne l'est pas.  
   
@@ -36,7 +36,7 @@ Cette rubrique répertorie les méthodes conseillées pour créer des contrats d
   
  Pour plus d’informations, consultez les meilleures pratiques : [le Service de contrôle de version](../../../docs/framework/wcf/service-versioning.md).  
   
- Parfois, il est nécessaire de garantir la conformité stricte de schéma pour les messages envoyés par votre application, sans pouvoir compter sur la conformité stricte des messages entrants. Dans ce cas, il est possible qu'un message entrant contienne des données étrangères. Les valeurs étrangères sont stockées et retournées par [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] et entraînent donc l'envoi de messages dont l'étendue du schéma n'est pas valide. Pour éviter ce problème, la fonctionnalité d'aller-retour doit être désactivée. Il existe deux manières de procéder.  
+ Parfois, il est nécessaire de garantir la conformité stricte de schéma pour les messages envoyés par votre application, sans pouvoir compter sur la conformité stricte des messages entrants. Dans ce cas, il est possible qu'un message entrant contienne des données étrangères. Les valeurs étrangères sont stockées et retournées par WCF et entraînent donc l’envoi de messages de schéma non valide. Pour éviter ce problème, la fonctionnalité d’aller-retour doit être désactivée. Il existe deux manières de procéder.  
   
 -   N'implémentez l'interface <xref:System.Runtime.Serialization.IExtensibleDataObject> sur aucun de vos types.  
   

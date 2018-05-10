@@ -2,17 +2,17 @@
 title: Transférer
 ms.date: 03/30/2017
 ms.assetid: dfcfa36c-d3bb-44b4-aa15-1c922c6f73e6
-ms.openlocfilehash: 7daa486286e022b24be32df7335ddbd5db7233f0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: aa7535aa393544077a9802b5c3255d6e5f6accda
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="transfer"></a>Transférer
 Cette rubrique décrit le transfert dans le modèle de suivi d’activité Windows Communication Foundation (WCF).  
   
 ## <a name="transfer-definition"></a>Définition d'un transfert  
- Les transferts entre activités représentent des liens de causalité entre événements dans les activités connexes dans des points de terminaison. Deux activités sont liées à des transferts lorsqu'un contrôle circule entre ces activités, par exemple, un appel de méthode qui traverse des limites d'activité. Dans [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], lorsque des octets sont entrants sur le service, l'activité Écouter est transférée à l'activité Recevoir des octets où l'objet de message est créé. Pour obtenir la liste de scénarios de suivi de bout en bout et leur activité correspondante et le suivi de conception, consultez [les scénarios de suivi de bout en bout](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md).  
+ Les transferts entre activités représentent des liens de causalité entre événements dans les activités connexes dans des points de terminaison. Deux activités sont liées à des transferts lorsqu'un contrôle circule entre ces activités, par exemple, un appel de méthode qui traverse des limites d'activité. Dans WCF, octets sont entrants sur le service, l’activité écouter est transférée vers l’activité de réception des octets où l’objet de message est créé. Pour obtenir la liste de scénarios de suivi de bout en bout et leur activité correspondante et le suivi de conception, consultez [les scénarios de suivi de bout en bout](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md).  
   
  Pour émettre des suivis de transfert, appliquez le paramètre `ActivityTracing` sur la source de suivi, tel que le montre le code de configuration suivant.  
   

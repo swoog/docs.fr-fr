@@ -2,30 +2,30 @@
 title: Services2
 ms.date: 03/30/2017
 ms.assetid: 462a2218-f8c6-4fb7-95bc-64765459c429
-ms.openlocfilehash: ef5de3fc51e43a88adb021b66732492f03d9d912
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2b6d8322caa32246d6171af50c7773342ac11de2
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="services"></a>Services
 Cette section contient des exemples qui illustrent les services de Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Hébergement](../../../../docs/framework/wcf/feature-details/hosting.md)  
- Illustre l'hébergement des services [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Illustre les services d’hébergement de WCF.  
   
  [Interopérabilité des services](../../../../docs/framework/wcf/samples/service-interoperability.md)  
- Illustre l'interaction entre [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] et d'autres technologies de service.  
+ Illustre l’interaction entre WCF et d’autres technologies de service.  
   
  [Comportements](../../../../docs/framework/wcf/samples/behaviors.md)  
- Illustre des comportements de service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Illustre des comportements de service WCF.  
   
  [Sécurité du service](../../../../docs/framework/wcf/samples/service-security.md)  
- Illustre la sécurité des services [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Illustre la sécurité du service WCF.  
   
  [Configuration simplifiée pour les services WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)  
- Montre comment implémenter et configurer un service et un client classiques à l'aide de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Montre comment implémenter et configurer un service classique et le client à l’aide de WCF.  
   
  [Utilisation de points de terminaison standard](../../../../docs/framework/wcf/samples/usage-of-standard-endpoints.md)  
  Montre comment utiliser des points de terminaison standard dans des fichiers de configuration de service.  
@@ -55,7 +55,7 @@ Cette section contient des exemples qui illustrent les services de Windows Commu
  Présente un service qui héberge plusieurs points de terminaison au niveau d'un `ListenUri` unique.  
   
  [OperationContextScope](../../../../docs/framework/wcf/samples/operationcontextscope.md)  
- Indique comment envoyer des informations supplémentaires sur un appel [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] en utilisant des en-têtes.  
+ Montre comment envoyer des informations supplémentaires sur un appel WCF à l’aide d’en-têtes.  
   
  [Description du service](../../../../docs/framework/wcf/samples/service-description.md)  
  Illustre comment un service peut récupérer les informations relatives à sa description pendant l'exécution.  

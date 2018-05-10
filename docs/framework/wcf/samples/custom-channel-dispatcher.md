@@ -2,11 +2,11 @@
 title: Custom Channel Dispatcher
 ms.date: 03/30/2017
 ms.assetid: 813acf03-9661-4d57-a3c7-eeab497321c6
-ms.openlocfilehash: 7cd27d485efe7fe91e7c59627bf14e188e85f386
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2f7bb67f45c3aa9eb0cb58fa2f30744d5500fab0
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-channel-dispatcher"></a>Custom Channel Dispatcher
 Cet exemple montre comment générer la pile de canaux de façon personnalisée en implémentant <xref:System.ServiceModel.ServiceHostBase> directement et comment créer un répartiteur de canal personnalisé dans un environnement avec hôte Web. Le répartiteur de canal interagit avec <xref:System.ServiceModel.Channels.IChannelListener> pour accepter des canaux et récupère des messages de la pile de canaux. Cet exemple fournit également un exemple de base pour montrer comment construire une pile de canaux dans un environnement avec hôte Web à l'aide de <xref:System.ServiceModel.Activation.VirtualPathExtension>.  
@@ -22,13 +22,13 @@ Cet exemple montre comment générer la pile de canaux de façon personnalisée 
  Le répartiteur ouvre d'abord l'écouteur de canal, puis accepte le canal de réponse singleton. Avec le canal, il commence à envoyer des messages (demandes) dans une boucle infinie. Pour chaque demande, il crée un message de réponse qu'il renvoie au client.  
   
 ## <a name="creating-a-response-message"></a>Création d'un message de réponse  
- Le traitement des messages est implémenté dans le type `MyServiceManager`. Dans la méthode `HandleRequest`, l'en-tête `Action` du message est vérifié en premier pour voir si la demande est prise en charge. Action SOAP prédéfinie «http://tempuri.org/HelloWorld/Hello» est définie pour assurer le filtrage des messages. Ce concept est similaire à celui du contrat de service dans l'implémentation [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] de <xref:System.ServiceModel.ServiceHost>.  
+ Le traitement des messages est implémenté dans le type `MyServiceManager`. Dans la méthode `HandleRequest`, l'en-tête `Action` du message est vérifié en premier pour voir si la demande est prise en charge. Action SOAP prédéfinie «http://tempuri.org/HelloWorld/Hello» est définie pour assurer le filtrage des messages. Cela est similaire au concept de contrat de service dans l’implémentation de WCF de <xref:System.ServiceModel.ServiceHost>.  
   
  Pour le cas de l'action SOAP appropriée, l'exemple récupère les données de message demandées et génère une réponse correspondante à la demande similaire à celle du cas <xref:System.ServiceModel.ServiceHost>.  
   
  Vous avez géré le verbe HTTP-GET de manière spéciale en retournant un message HTML personnalisé dans ce cas, aussi pouvez-vous parcourir le service à partir d'un navigateur et vérifier qu'il est correctement compilé. Si l'action SOAP ne correspond pas, renvoyez un message d'erreur pour indiquer que la demande n'est pas prise en charge.  
   
- Le client de cet exemple est un client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] normal qui n'effectue aucune supposition relativement au service. Le service est donc conçu spécialement pour correspondre à ce que vous obtenez d'une implémentation [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] normale de <xref:System.ServiceModel.ServiceHost>. Par conséquent, seul un contrat de service est obligatoire sur le client.  
+ Le client de cet exemple est un client WCF normal qui n’effectue aucune supposition à partir du service. Par conséquent, le service est conçu spécialement pour correspondre à ce que vous obtenez à partir d’un service WCF normal<xref:System.ServiceModel.ServiceHost> implémentation. Par conséquent, seul un contrat de service est obligatoire sur le client.  
   
 ## <a name="using-the-sample"></a>Utilisation de l'exemple  
  L'exécution de l'application cliente produit directement la sortie suivante.  

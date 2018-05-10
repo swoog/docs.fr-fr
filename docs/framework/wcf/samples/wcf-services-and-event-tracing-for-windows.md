@@ -2,18 +2,18 @@
 title: WCF Services et suivi d'événements Windows
 ms.date: 03/30/2017
 ms.assetid: eda4355d-0bd0-4dc9-80a2-d2c832152272
-ms.openlocfilehash: ef98cb14b5f1ee6a2ce11c35627456459d3215b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ea917ee87b598fc3ad01df70d9aedfadfd1396a4
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wcf-services-and-event-tracing-for-windows"></a>WCF Services et suivi d'événements Windows
-Cet exemple montre comment utiliser le traçage analytique dans Windows Communication Foundation (WCF) pour émettre des événements dans Event Tracing pour Windows (ETW). Les traces analytiques sont des événements émis à des points clés dans la pile [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] qui permettent de résoudre des problèmes liés aux services [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dans un environnement de production.  
+Cet exemple montre comment utiliser le traçage analytique dans Windows Communication Foundation (WCF) pour émettre des événements dans Event Tracing pour Windows (ETW). Les traces analytiques sont des événements émis à des points clés dans la pile WCF qui autorisent la résolution des problèmes des services WCF dans un environnement de production.  
   
- La trace analytique des services [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] est un suivi qui peut être activé dans un environnement de production avec un impact minime sur les performances. Ces traces sont émises en tant qu'événements dans une session de suivi ETW.  
+ Trace analytique des services WCF est suivi qui peuvent être activés dans un environnement de production avec un impact minimal sur les performances. Ces traces sont émises en tant qu'événements dans une session de suivi ETW.  
   
- Cet exemple inclut un service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] de base dans lequel des événements sont émis du service au journal des événements, lequel peut être consulté à l'aide de l'Observateur d'événements. Il est également possible de démarrer une session de suivi ETW dédiée qui écoute les événements du service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. L'exemple comprend un script permettant de créer une session de suivi ETW dédiée qui stocke des événements dans un fichier binaire pouvant être lu à l'aide de l'Observateur d'événements.  
+ Cet exemple inclut un service WCF de base dans lequel les événements sont émis à partir du service dans le journal des événements, qui peuvent être affiché à l’aide de l’Observateur d’événements. Il est également possible de démarrer une session ETW dédiée qui écoute les événements du service WCF. L'exemple comprend un script permettant de créer une session de suivi ETW dédiée qui stocke des événements dans un fichier binaire pouvant être lu à l'aide de l'Observateur d'événements.  
   
 #### <a name="to-use-this-sample"></a>Pour utiliser cet exemple  
   
@@ -27,17 +27,17 @@ Cet exemple montre comment utiliser le traçage analytique dans Windows Communic
   
      Par défaut, le service commence à écouter les demandes sur le port 1378 (http://localhost:1378/Calculator.svc).  
   
-4.  Exécutez le client test [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] (WcfTestClient.exe).  
+4.  Exécutez le client de test WCF (WcfTestClient.exe).  
   
-     Le [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client de test (WcfTestClient.exe) se trouve dans le \< [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Répertoire_installation_ > \Common7\IDE\ WcfTestClient.exe (valeur par défaut [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] est C:\Program Files\Microsoft Visual Studio 10.0).  
+     Le client de test WCF (WcfTestClient.exe) se trouve dans le \< [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Répertoire_installation_ > \Common7\IDE\ WcfTestClient.exe (valeur par défaut [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] est C:\Program Files\Microsoft Visual Studio 10.0).  
   
-5.  Dans le [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client de test, ajoutez le service en sélectionnant **fichier**, puis **ajouter un Service**.  
+5.  Dans le client test WCF, ajoutez le service en sélectionnant **fichier**, puis **ajouter un Service**.  
   
      Ajoutez l'adresse du point de terminaison dans la zone d'entrée. La valeur par défaut est http://localhost:1378/Calculator.svc.  
   
 6.  Ouvrez l'application Observateur d'événements.  
   
-     Avant d'appeler le service, démarrez l'Observateur d'événements et vérifiez que le journal des événements écoute les événements de suivi émis à partir du service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+     Avant d’appeler le service, démarrez l’Observateur d’événements et vérifiez que le journal des événements écoute les événements de suivi émis à partir du service WCF.  
   
 7.  À partir de la **Démarrer** menu, sélectionnez **outils d’administration**, puis **Observateur d’événements**.  Activer la **analyse** et **déboguer** journaux.  
   
@@ -51,7 +51,7 @@ Cet exemple montre comment utiliser le traçage analytique dans Windows Communic
   
 #### <a name="to-test-the-service"></a>Pour tester le service  
   
-1.  Revenez au client test [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], double-cliquez sur `Divide` et conservez les valeurs par défaut, qui spécifient le dénominateur 0.  
+1.  Revenez au client test WCF et double-cliquez sur `Divide` et conservez les valeurs par défaut, qui spécifient le dénominateur 0.  
   
      Si le dénominateur est 0, le service génère une erreur.  
   

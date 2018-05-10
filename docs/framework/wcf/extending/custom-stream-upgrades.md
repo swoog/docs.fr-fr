@@ -2,11 +2,11 @@
 title: Mises à niveau de flux personnalisées
 ms.date: 03/30/2017
 ms.assetid: e3da85c8-57f3-4e32-a4cb-50123f30fea6
-ms.openlocfilehash: 4bcd59cb5e420c551c611c8e676289f20d4354d0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 84edac7a4dbaaf1a01332f5c0af29319c279dd1b
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-stream-upgrades"></a>Mises à niveau de flux personnalisées
 Les transports orientés flux, tels que TCP et Canaux nommés, fonctionnent sur un flux continu d'octets entre le client et le serveur. Ce flux est réalisé par un objet <xref:System.IO.Stream>. Dans une mise à niveau de flux, le client souhaite ajouter une couche de protocole facultative à la pile de canaux et demande à l'autre extrémité du canal de communication de le faire. La mise à niveau de flux consiste à remplacer l'objet <xref:System.IO.Stream> d'origine par une version mise à niveau.  
@@ -66,7 +66,7 @@ Les transports orientés flux, tels que TCP et Canaux nommés, fonctionnent sur 
 ## <a name="security-upgrades"></a>Mises à niveau de sécurité  
  L'ajout d'une mise à niveau de sécurité est une version spécialisée du processus de mise à niveau de flux général.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fournit déjà deux éléments de liaison pour mettre à niveau la sécurité de flux. La configuration de sécurité au niveau du transport est encapsulée par <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement> et <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement> qui peuvent être configurés et ajoutés à une liaison personnalisée. Ces éléments de liaison étendent la classe <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement> qui génère les fournisseurs de mise à niveau de flux client et serveur. Ces éléments de liaison ont des méthodes qui créent les classes de fournisseur de mise à niveau de flux de sécurité spécialisées, qui ne sont pas `public` ; par conséquent, dans ces deux cas, il vous suffit d'ajouter l'élément de liaison à la liaison.  
+ WCF fournit déjà deux éléments de liaison pour la mise à niveau de sécurité de flux de données. La configuration de sécurité au niveau du transport est encapsulée par <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement> et <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement> qui peuvent être configurés et ajoutés à une liaison personnalisée. Ces éléments de liaison étendent la classe <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement> qui génère les fournisseurs de mise à niveau de flux client et serveur. Ces éléments de liaison ont des méthodes qui créent les classes de fournisseur de mise à niveau de flux de sécurité spécialisées, qui ne sont pas `public` ; par conséquent, dans ces deux cas, il vous suffit d'ajouter l'élément de liaison à la liaison.  
   
  Pour les scénarios de sécurité incompatibles avec les deux éléments de liaison précités, trois classes `abstract` relatives à la sécurité sont dérivées des classes de base d'initiateur, d'accepteur et de fournisseur précitées :  
   

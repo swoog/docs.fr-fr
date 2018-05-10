@@ -2,11 +2,11 @@
 title: ASP.NET Compatibility
 ms.date: 03/30/2017
 ms.assetid: c8b51f1e-c096-4c42-ad99-0519887bbbc5
-ms.openlocfilehash: 35d9362fde21faf4998051e85f66fc4ddfb8b94b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f621a3f13fafee67a015d463898a10aaf9104008
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="aspnet-compatibility"></a>ASP.NET Compatibility
 Cet exemple montre comment activer [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] le mode de compatibilité dans Windows Communication Foundation (WCF). Les services qui s'exécutent dans le mode de compatibilité [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] participent pleinement au pipeline de l'application [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] et peuvent utiliser des fonctionnalités [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] telles que l'autorisation de fichier/d'URL, l'état de session et la classe <xref:System.Web.HttpContext>. La classe <xref:System.Web.HttpContext> permet l'accès aux cookies, aux sessions ainsi qu'à d'autres fonctionnalités [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Dans ce mode, les liaisons doivent utiliser le transport HTTP et le service lui-même doit être hébergé dans les services IIS.  
@@ -59,7 +59,7 @@ public interface ICalculatorSession
  Le service utilise la session [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] pour stocker le résultat de chaque session de client. Cela lui permet de conserver le résultat d'exécution de chaque client tandis qu'il reçoit plusieurs appels.  
   
 > [!NOTE]
->  L'état de session [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] et les sessions [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sont deux fonctionnalités très différentes l'une de l'autre.  Consultez le [Session](../../../../docs/framework/wcf/samples/session.md) pour plus d’informations sur [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sessions.  
+>  [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] état de session et les sessions WCF sont des aspects très différents.  Consultez le [Session](../../../../docs/framework/wcf/samples/session.md) pour plus d’informations sur les sessions de WCF.  
   
  Le service dépend étroitement de l'état de session [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] et nécessite que le mode de compatibilité [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] fonctionne correctement. Ces spécifications sont définies de manière déclarative en appliquant l'attribut `AspNetCompatibilityRequirements`.  
   

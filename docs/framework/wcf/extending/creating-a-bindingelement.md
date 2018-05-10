@@ -2,17 +2,17 @@
 title: Création d’un élément de liaison
 ms.date: 03/30/2017
 ms.assetid: 01a35307-a41f-4ef6-a3db-322af40afc99
-ms.openlocfilehash: fdc3ec1fef86ad31434ea372740497969c7ae6a7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 96924e97ad3fcc121ef7b28125301060d8448514
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="creating-a-bindingelement"></a>Création d’un élément de liaison
-Éléments de liaison et liaisons (objets qui étendent <xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType> et <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>, respectivement) correspondent à l’emplacement où le modèle d’application Windows Communication Foundation (WCF) est associé avec les fabriques et les écouteurs de canal. Sans liaisons, à l’aide de canaux personnalisés nécessite une programmation au niveau du canal comme décrit dans [de programmation au niveau du canal de Service](../../../../docs/framework/wcf/extending/service-channel-level-programming.md) et [de programmation au niveau du canal de Client](../../../../docs/framework/wcf/extending/client-channel-level-programming.md). Cette rubrique décrit la configuration minimale requise pour permettre à l’aide de votre canal dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], le développement d’un <xref:System.ServiceModel.Channels.BindingElement> pour votre canal, puis activer l’utilisation de l’application, comme décrit à l’étape 4 de [développement canaux](../../../../docs/framework/wcf/extending/developing-channels.md).  
+Éléments de liaison et liaisons (objets qui étendent <xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType> et <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>, respectivement) correspondent à l’emplacement où le modèle d’application Windows Communication Foundation (WCF) est associé avec les fabriques et les écouteurs de canal. Sans liaisons, à l’aide de canaux personnalisés nécessite une programmation au niveau du canal comme décrit dans [de programmation au niveau du canal de Service](../../../../docs/framework/wcf/extending/service-channel-level-programming.md) et [de programmation au niveau du canal de Client](../../../../docs/framework/wcf/extending/client-channel-level-programming.md). Cette rubrique décrit la configuration minimale requise pour permettre à l’aide de votre canal dans WCF, le développement d’un <xref:System.ServiceModel.Channels.BindingElement> pour votre canal, puis activer l’utilisation de l’application, comme décrit à l’étape 4 de [développement canaux](../../../../docs/framework/wcf/extending/developing-channels.md).  
   
 ## <a name="overview"></a>Vue d'ensemble  
- Créer un <xref:System.ServiceModel.Channels.BindingElement> pour votre canal permet aux développeurs de l'utiliser dans une application [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Les objets <xref:System.ServiceModel.Channels.BindingElement> peuvent être utilisés dans la classe <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> pour connecter une application [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] à votre canal sans avoir les informations de type exactes de votre canal.  
+ Création d’un <xref:System.ServiceModel.Channels.BindingElement> pour votre canal permet aux développeurs d’utiliser dans une application WCF. <xref:System.ServiceModel.Channels.BindingElement> objets peuvent être utilisés à partir de la <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> classe pour connecter une application WCF pour votre canal sans les informations de type précis de votre canal.  
   
  Une fois un <xref:System.ServiceModel.Channels.BindingElement> a été créé, vous pouvez activer des fonctionnalités en fonction de vos besoins en suivant les étapes de développement de canal restantes décrites dans [développement canaux](../../../../docs/framework/wcf/extending/developing-channels.md).  
   

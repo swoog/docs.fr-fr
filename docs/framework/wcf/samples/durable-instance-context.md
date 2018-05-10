@@ -2,11 +2,11 @@
 title: Durable Instance Context
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
-ms.openlocfilehash: 75516bfa0cf5ac7bfb27eb5ee2c51d04c30bc9a5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fb331fc0e5f384f0ffb268c1c6f7a5ffc99478ec
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="durable-instance-context"></a>Durable Instance Context
 Cet exemple montre comment personnaliser l’exécution de Windows Communication Foundation (WCF) pour activer des contextes d’instance fiables. Il utilise SQL Server 2005 comme magasin de sauvegarde (SQL Server 2005 Express dans ce cas précis). Toutefois, il permet également d'accéder aux mécanismes de stockage personnalisés.  
@@ -14,7 +14,7 @@ Cet exemple montre comment personnaliser l’exécution de Windows Communication
 > [!NOTE]
 >  La procédure d'installation ainsi que les instructions de génération relatives à cet exemple figurent à la fin de cette rubrique.  
   
- Cet exemple implique l'extension de la couche de canal et de la couche de modèle de service de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Par conséquent, il est nécessaire de comprendre les concepts sous-jacents avant d'aborder les détails de l'implémentation.  
+ Cet exemple implique l’extension de la couche de canal et de la couche de modèle de service de WCF. Par conséquent, il est nécessaire de comprendre les concepts sous-jacents avant d'aborder les détails de l'implémentation.  
   
  Les contextes d'instance fiables se trouvent souvent dans des scénarios réels. Une application de panier d'achat par exemple, permet de suspendre le processus d'achat et de le poursuivre ultérieurement. De cette façon, lorsque nous visitons le panier d'achat le jour suivant, le contexte d'origine est restauré. Il est important de noter que l'application de panier d'achat (sur le serveur) ne conserve pas l'instance correspondante en cas de déconnexion. À la place, elle rend son état persistant dans un média de stockage fiable et l'utilise lors de la construction d'une nouvelle instance pour le contexte restauré. Par conséquent l'instance de service qui peut servir pour le même contexte n'est pas la même que l'instance précédente (autrement dit, elle n'a pas la même adresse mémoire).  
   
@@ -119,7 +119,7 @@ if (isFirstMessage)
 }  
 ```  
   
- Ces implémentations de canal sont ensuite ajoutées de manière appropriée à l'exécution du canal [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] par les classes `DurableInstanceContextBindingElement` et `DurableInstanceContextBindingElementSection`. Consultez le [HttpCookieSession](../../../../docs/framework/wcf/samples/httpcookiesession.md) exemple de documentation pour plus d’informations sur les éléments de liaison et de sections d’élément de liaison de canal.  
+ Ces implémentations de canal sont ensuite ajoutées à l’exécution de canal WCF par le `DurableInstanceContextBindingElement` classe et `DurableInstanceContextBindingElementSection` manière appropriée. Consultez le [HttpCookieSession](../../../../docs/framework/wcf/samples/httpcookiesession.md) exemple de documentation pour plus d’informations sur les éléments de liaison et de sections d’élément de liaison de canal.  
   
 ## <a name="service-model-layer-extensions"></a>Extensions de la couche de modèle de service  
  Maintenant que l'ID de contexte a traversé la couche de canal, le comportement de service peut être implémenté afin de personnaliser l'instanciation. Dans cet exemple, un gestionnaire de stockage est utilisé pour charger et enregistrer l'état à partir de ou vers le magasin persistant. Comme expliqué précédemment, cet exemple fournit un gestionnaire de stockage qui utilise le SQL Server 2005 comme magasin de sauvegarde. Toutefois, il est également possible d'ajouter des mécanismes de stockage personnalisés à cette extension. Pour ce faire, une interface publique est déclarée et doit être implémentée par tous les gestionnaires de stockage.  
@@ -228,9 +228,9 @@ else
   
  L'infrastructure nécessaire pour lire et écrire des instances à partir du stockage persistant est implémentée. Les étapes nécessaires pour modifier le comportement de service doivent maintenant être effectuées.  
   
- La première étape de ce processus consiste à enregistrer l'ID de contexte, qui a traversé la couche de canal jusqu'au InstanceContext actuel. InstanceContext est un composant d'exécution qui sert de lien entre le répartiteur [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] et l'instance de service. Il permet de fournir un comportement et un état supplémentaires à l'instance de service. Cet aspect est essentiel car dans la communication de session, l'ID de contexte est envoyé uniquement avec le premier message.  
+ La première étape de ce processus consiste à enregistrer l'ID de contexte, qui a traversé la couche de canal jusqu'au InstanceContext actuel. InstanceContext est un composant runtime qui sert de lien entre le répartiteur WCF et l’instance de service. Il permet de fournir un comportement et un état supplémentaires à l'instance de service. Cet aspect est essentiel car dans la communication de session, l'ID de contexte est envoyé uniquement avec le premier message.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] permet d'étendre son composant d'exécution InstanceContext en ajoutant un nouvel état et un nouveau comportement à l'aide de son modèle d'objet extensible. Le modèle d'objet extensible est utilisé dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] pour étendre des classes d'exécution existantes avec de nouvelles fonctionnalités ou pour ajouter de nouvelles fonctionnalités d'état à un objet. Il existe trois interfaces dans le modèle d’objet extensible - IExtensibleObject\<T >, IExtension\<T > et IExtensionCollection\<T > :  
+ WCF permet d’étendre son composant d’exécution InstanceContext en ajoutant un nouvel état et le comportement à l’aide de son modèle d’objet extensible. Le modèle d’objet extensible est utilisé dans WCF pour étendre des classes d’exécution existantes avec de nouvelles fonctionnalités ou pour ajouter de nouvelles fonctionnalités d’état à un objet. Il existe trois interfaces dans le modèle d’objet extensible - IExtensibleObject\<T >, IExtension\<T > et IExtensionCollection\<T > :  
   
 -   Le IExtensibleObject\<T > interface est implémentée par des objets permettant des extensions qui personnalisent leurs fonctionnalités.  
   
@@ -278,7 +278,7 @@ public void Initialize(InstanceContext instanceContext, Message message)
   
  Comme décrit précédemment, l'ID de contexte est lu à partir de la collection `Properties` de la classe `Message`, puis il est passé au constructeur de la classe d'extension. Cette étape montre comment les informations peuvent être échangées entre les couches de façon cohérente.  
   
- L'étape importante suivante consiste à substituer le processus de création d'instance de service. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] permet d'implémenter des comportements d'instanciation personnalisés et de les raccorder à l'exécution à l'aide de l'interface IInstanceProvider. Pour ce faire, la nouvelle classe `InstanceProvider` est implémentée. Dans le constructeur, le type de service attendu du fournisseur d'instances est accepté. Il est par la suite utilisé pour créer des instances. Dans l'implémentation `GetInstance`, une instance d'un gestionnaire de stockage est créée afin de rechercher une instance persistante. Si elle retourne `null`, une nouvelle instance du type de service est instanciée et retournée à l'appelant.  
+ L'étape importante suivante consiste à substituer le processus de création d'instance de service. WCF permet l’implémentation de comportements d’instanciation personnalisés et de les raccorder à l’exécution à l’aide de l’interface IInstanceProvider. Pour ce faire, la nouvelle classe `InstanceProvider` est implémentée. Dans le constructeur, le type de service attendu du fournisseur d'instances est accepté. Il est par la suite utilisé pour créer des instances. Dans l'implémentation `GetInstance`, une instance d'un gestionnaire de stockage est créée afin de rechercher une instance persistante. Si elle retourne `null`, une nouvelle instance du type de service est instanciée et retournée à l'appelant.  
   
 ```  
 public object GetInstance(InstanceContext instanceContext, Message message)  
@@ -349,9 +349,9 @@ foreach (ChannelDispatcherBase cdb in serviceHostBase.ChannelDispatchers)
   
  En résumé des étapes effectuées jusqu'à présent, cet exemple a produit un canal qui a activé le protocole de câble personnalisé pour l'échange d'ID de contexte personnalisé et il remplace également le comportement d'instanciation par défaut afin de charger les instances à partir du stockage persistant.  
   
- Il reste donc à enregistrer l'instance de service dans le stockage persistant. Comme indiqué précédemment, les fonctionnalités requises pour enregistrer l'état dans une implémentation `IStorageManager` existent déjà. Nous devons maintenant les intégrer à l'exécution [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Un autre attribut est requis et est applicable aux méthodes de la classe d'implémentation de service. Cet attribut est supposé s'appliquer aux méthodes qui modifient l'état de l'instance de service.  
+ Il reste donc à enregistrer l'instance de service dans le stockage persistant. Comme indiqué précédemment, les fonctionnalités requises pour enregistrer l'état dans une implémentation `IStorageManager` existent déjà. Nous devons maintenant les intégrer avec le runtime WCF. Un autre attribut est requis et est applicable aux méthodes de la classe d'implémentation de service. Cet attribut est supposé s'appliquer aux méthodes qui modifient l'état de l'instance de service.  
   
- La classe `SaveStateAttribute` implémente ces fonctionnalités. Elle implémente également la classe `IOperationBehavior` afin de modifier l'exécution [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] pour chaque opération. Lorsqu'une méthode est marquée avec cet attribut, l'exécution [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] appelle la méthode `ApplyBehavior` pendant la construction du `DispatchOperation` approprié. Cette implémentation de méthode comporte une seule ligne de code :  
+ La classe `SaveStateAttribute` implémente ces fonctionnalités. Il implémente également `IOperationBehavior` classe à modifier l’exécution WCF pour chaque opération. Lorsqu’une méthode est marquée avec cet attribut, le runtime WCF appelle les `ApplyBehavior` méthode approprié lors de la `DispatchOperation` est en cours de construction. Cette implémentation de méthode comporte une seule ligne de code :  
   
 ```  
 dispatch.Invoker = new OperationInvoker(dispatch.Invoker);  
@@ -372,8 +372,8 @@ extension.StorageManager.SaveInstance(extension.ContextId, instance);
 return result;  
 ```  
   
-## <a name="using-the-extension"></a>Utilisation de l'extension  
- Les extensions de la couche de canal et de la couche de modèle de service étant effectuées, elles peuvent maintenant être utilisées dans les applications [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Les services doivent ajouter le canal dans la pile de canaux à l'aide d'une liaison personnalisée, puis marquer les classes d'implémentation de service avec les attributs appropriés.  
+## <a name="using-the-extension"></a>Utilisation de l’extension  
+ À la fois la couche de canal et les extensions de couche de modèle de service sont effectuées, et elles peuvent maintenant être utilisées dans les applications WCF. Les services doivent ajouter le canal dans la pile de canaux à l’aide d’une liaison personnalisée, puis marquer les classes d’implémentation de service avec les attributs appropriés.  
   
 ```  
 [DurableInstanceContext]  

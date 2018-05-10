@@ -2,11 +2,11 @@
 title: Sécurisation des services de workflow
 ms.date: 03/30/2017
 ms.assetid: 53f84ad5-1ed1-4114-8d0d-b12e8a021c6e
-ms.openlocfilehash: ac02b5ffcfc14ea4aab9e8aafd5f6a4cbcdef3b4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5dbd724f3a2f8febfc74719584f4d69cbf75b567
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="securing-workflow-services"></a>Sécurisation des services de workflow
 L'exemple de service de workflow sécurisé présente les procédures suivantes :  
@@ -21,7 +21,7 @@ L'exemple de service de workflow sécurisé présente les procédures suivantes�
  Utilisation de la sécurité WCF pour sécuriser la communication entre le client et service de workflow. Autorisation basée sur des revendications  
   
 ## <a name="discussion"></a>Discussion  
- Cet exemple illustre l'utilisation de l'infrastructure de sécurité [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] pour sécuriser un service de workflow exactement comme vous le feriez avec un service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] normal. Plus particulièrement, il utilise une revendication personnalisée pour spécifier l'autorisation. Dans ce cas, il utilise <xref:System.ServiceModel.WSHttpBinding> et la sécurité en mode de message avec les informations d'identification Windows.  
+ Cet exemple illustre l’utilisation de l’infrastructure de sécurité WCF pour sécuriser un service de flux de travail, comme vous le feriez avec un service WCF normal. Plus particulièrement, il utilise une revendication personnalisée pour spécifier l'autorisation. Dans ce cas, il utilise <xref:System.ServiceModel.WSHttpBinding> et la sécurité en mode de message avec les informations d'identification Windows.  
   
  L'<xref:System.IdentityModel.Policy.IAuthorizationPolicy> personnalisé (`CustomNameCheckerPolicy`) vérifie le nom d'utilisateur Windows du client et recherche un caractère spécifique. Si ce caractère est présent, il crée et ajoute la revendication à <xref:System.IdentityModel.Policy.EvaluationContext>. Ainsi, la stratégie personnalisée établit le constat selon lequel le nom d'utilisateur du client contient ce caractère. Cette revendication peut être faire l'objet d'une requête pendant toute la durée de vie de l'appel. Vous trouverez ce caractère dans `Constants.cs`.  
   

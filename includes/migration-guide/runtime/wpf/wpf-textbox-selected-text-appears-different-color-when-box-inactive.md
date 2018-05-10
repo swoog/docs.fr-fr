@@ -2,8 +2,8 @@
 
 |   |   |
 |---|---|
-|Détails|Dans le .NET 4.5, lorsqu’un contrôle de zone de texte WPF est inactif (c’est-à-dire qu’il n’a pas le focus), le texte sélectionné dans la zone s’affiche dans une couleur différente de celle utilisée lorsque le contrôle est actif.|
-|Suggestion|Vous pouvez restaurer le comportement précédent (.NET 4.0) en définissant la propriété <xref:System.Windows.FrameworkCompatibilityPreferences.AreInactiveSelectionHighlightBrushKeysSupported> sur <code>false</code>.|
+|Détails|Dans .NET Framework 4.5, quand un contrôle de zone de texte WPF est inactif (c’est-à-dire qu’il n’a pas le focus), le texte sélectionné dans la zone s’affiche dans une couleur différente de celle utilisée quand le contrôle est actif.|
+|Suggestion|Vous pouvez restaurer le comportement précédent (.NET Framework 4.0) en affectant la valeur <code>false</code> à la propriété <xref:System.Windows.FrameworkCompatibilityPreferences.AreInactiveSelectionHighlightBrushKeysSupported>.|
 |Portée|Microsoft Edge|
 |Version|4.5|
 |Type|Runtime|

@@ -7,19 +7,19 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], overview
 ms.assetid: f4dce0fb-6f54-47e6-8054-86d7f574b91c
-ms.openlocfilehash: 91e5e45d380ec6a8229a7272c841e1a345423c7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 46ca6294d68537e86a319b55d8c11e3ae0084738
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="endpoint-creation-overview"></a>Vue d'ensemble de la création de points de terminaison
-Toutes les communications avec un service Windows Communication Foundation (WCF) s’effectue via le *points de terminaison* du service. Les points de terminaison fournissent aux clients l'accès aux fonctionnalités offertes par un service [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Cette section décrit la structure d'un point de terminaison et explique comment définir un point de terminaison dans la configuration et dans le code.  
+Toutes les communications avec un service Windows Communication Foundation (WCF) s’effectue via le *points de terminaison* du service. Points de terminaison fournissent l’accès aux fonctionnalités qu’un service WCF offre les clients. Cette section décrit la structure d'un point de terminaison et explique comment définir un point de terminaison dans la configuration et dans le code.  
   
 ## <a name="the-structure-of-an-endpoint"></a>Structure d'un point de terminaison  
  Chaque point de terminaison contient une adresse qui indique où rechercher le point de terminaison, une liaison qui spécifie le mode de communication d’un client avec le point de terminaison, et un contrat qui identifie les méthodes disponibles.  
   
--   **Adresse**. L'adresse identifie le point de terminaison de manière unique et indique aux consommateurs potentiels l'emplacement du service. Elle est représentée dans le modèle objet [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] par l'adresse <xref:System.ServiceModel.EndpointAddress> qui contient un URI (Uniform Resource Identifier) et les propriétés d'adresse qui incluent une identité, certains éléments WSDL (Web Services Description Language) et une collection d'en-têtes facultatifs. Les en-têtes facultatifs fournissent des données d'adressage détaillées supplémentaires pour identifier ou interagir avec le point de terminaison. Pour plus d’informations, consultez [spécification d’une adresse de point de terminaison](../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
+-   **Adresse**. L'adresse identifie le point de terminaison de manière unique et indique aux consommateurs potentiels l'emplacement du service. Elle est représentée dans le modèle d’objet WCF par le <xref:System.ServiceModel.EndpointAddress> adresse, qui contient un identificateur de ressource uniforme (URI) et les propriétés d’adresse qui incluent une identité, certains éléments Web Services Description Language (WSDL) et une collection de facultatif en-têtes. Les en-têtes facultatifs fournissent des données d'adressage détaillées supplémentaires pour identifier ou interagir avec le point de terminaison. Pour plus d’informations, consultez [spécification d’une adresse de point de terminaison](../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
   
 -   **Liaison**. La liaison spécifie le mode de communication avec le point de terminaison. La liaison spécifie comment le point de terminaison communique avec le monde, y compris quel protocole de transport utiliser (par exemple, TCP ou HTTP), quel encodage utiliser pour les messages (par exemple, texte ou binaire), et quelles exigences de sécurité sont nécessaires (par exemple, SSL [Secure Sockets Layer] ou la sécurité des messages SOAP). Pour plus d’informations, consultez [à l’aide de liaisons pour configurer les Services et les Clients](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md).  
   

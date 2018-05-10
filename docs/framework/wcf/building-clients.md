@@ -5,24 +5,24 @@ helpviewer_keywords:
 - clients [WCF], building
 - clients [WCF]
 ms.assetid: 28dfff47-d95b-4cc2-9d5c-b3b9ba71fd50
-ms.openlocfilehash: 431f62c7de8161d0e687d8f1ee554c6d59ca69b6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b5661c5aaa08d91c3944c4c108b23b03b012439a
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="building-clients"></a>Génération de clients
 Les rubriques de cette section montrent comment créer et utiliser un client Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Vue d’ensemble d’un client WCF](../../../docs/framework/wcf/wcf-client-overview.md)  
- Fournit une vue d'ensemble des clients [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] et de leur fonctionnement.  
+ Fournit une vue d’ensemble des clients WCF et comment ils fonctionnent.  
   
  [Accès aux services à l’aide d’un client WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)  
- Présente la méthode de base de création d'un objet client [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] destiné à être utilisé dans une application cliente.  
+ Décrit la méthode de base de la création d’un objet de client WCF à utiliser dans une application cliente.  
   
  [Sécurisation des clients](../../../docs/framework/wcf/securing-clients.md)  
- Décrit comment configurer la sécurité des clients [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+ Décrit comment configurer la sécurité pour les clients WCF.  
   
 ## <a name="reference"></a>Référence  
  <xref:System.ServiceModel.ClientBase%601>  

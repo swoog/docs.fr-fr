@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - message logging [WCF]
 ms.assetid: 0ff4c857-8f09-4b85-9dc0-89084706e4c9
-ms.openlocfilehash: 4c75b0f27e82b8cfe9327a9911d27d4e435ddf81
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cea307b4e3920ff6413d6db28c2ce1e640b673f9
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="configuring-message-logging"></a>Configuration de la journalisation des messages
 Cette rubrique contient des instructions permettant de configurer l'enregistrement des messages en fonction de différentes situations.  
@@ -66,7 +66,7 @@ Cette rubrique contient des instructions permettant de configurer l'enregistreme
   
  Pour les messages sortants, leur enregistrement intervient immédiatement après leur départ du code utilisateur et immédiatement avant leur transmission.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] enregistre des messages à deux niveaux différents, au niveau du service et au niveau du transport. Les messages erronés sont également enregistrés. Ces trois niveaux sont indépendants les uns des autres et peuvent être activés séparément dans la configuration.  
+ WCF journalise les messages à deux niveaux différents, service et transport. Les messages erronés sont également enregistrés. Ces trois niveaux sont indépendants les uns des autres et peuvent être activés séparément dans la configuration.  
   
  Vous pouvez contrôler le niveau d'enregistrement en définissant les attributs `logMessagesAtServiceLevel`, `logMalformedMessages` et `logMessagesAtTransportLevel` de l'élément `messageLogging`.  
   
@@ -77,7 +77,7 @@ Cette rubrique contient des instructions permettant de configurer l'enregistreme
  Les messages enregistrés à ce niveau sont prêts à être encodés ou décodés pour ou après transmission. Si des filtres ont été définis, seuls les messages respectant les critères définis par ces filtres seront enregistrés. Dans le cas contraire, tous les messages de niveau transport seront enregistrés. Tous les messages d'infrastructure sont enregistrés à ce niveau, notamment les messages de messagerie fiable. Pour les messages transmis en flux continu, seuls les en-têtes sont enregistrés. Les messages sécurisés sont également enregistrés à ce niveau sous leur forme chiffrée, sauf si un transport sécurisé tel qu'HTTPS est utilisé.  
   
 ### <a name="malformed-level"></a>Niveau erreurs  
- Les messages erronés sont des messages qui sont rejetés par la pile [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], quelle que soit la phase de traitement dans laquelle ils se trouvent. Les messages mal formés sont enregistrés en l'état : sous leur forme chiffrée lorsqu'ils le sont, dans un langage XML incorrect et ainsi de suite. `maxSizeOfMessageToLog` définit la taille du message à enregistrer sous forme de CDATA. Par défaut, `maxSizeOfMessageToLog` est égal à 256K. Pour plus d’informations sur cet attribut, consultez la section autres Options.  
+ Messages malformés sont des messages qui sont rejetées par la pile WCF à n’importe quel stade du traitement. Les messages mal formés sont enregistrés en l'état : sous leur forme chiffrée lorsqu'ils le sont, dans un langage XML incorrect et ainsi de suite. `maxSizeOfMessageToLog` définit la taille du message à enregistrer sous forme de CDATA. Par défaut, `maxSizeOfMessageToLog` est égal à 256K. Pour plus d’informations sur cet attribut, consultez la section autres Options.  
   
 ### <a name="other-options"></a>Autres options  
  Outre les niveaux d'enregistrement, l'utilisateur peut spécifier les options suivantes :  

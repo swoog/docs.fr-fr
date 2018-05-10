@@ -6,18 +6,18 @@ helpviewer_keywords:
 ms.assetid: a015a040-9fdf-4147-9ea9-f83b570be1d4
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 6ba6df24163064ee65c563253fa56a1ec574cffc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 94aefe80674c5b4ec6fcce6a41d9b68e093f4262
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="extending-security"></a>Extension de la sécurité
 Pour prendre en compte les nouveaux types de revendications et jetons personnalisés, vous pouvez étendre l’infrastructure de sécurité de Windows Communication Foundation (WCF). Les rubriques de cette section vous montrent comment procéder.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Architecture de sécurité](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)  
- Présente en détail l'architecture du système de sécurité [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Décrit l’architecture du système de sécurité WCF.  
   
  [Informations d’identification personnalisées et validation d’informations d’identification](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md)  
  Explique comment le modèle d'identité est utilisé lors de la validation d'informations d'identification personnalisées.  

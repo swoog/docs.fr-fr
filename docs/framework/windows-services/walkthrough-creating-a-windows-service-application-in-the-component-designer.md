@@ -303,7 +303,7 @@ Cet article explique comment créer, dans Visual Studio, une application de serv
     > [!IMPORTANT]
     >  Le compte <xref:System.ServiceProcess.ServiceAccount.LocalSystem> dispose d'autorisations générales, y compris la possibilité d'écrire dans le journal des événements. Utilisez ce compte avec précaution car il peut augmenter le risque d'attaques par des logiciels malveillants. Pour les autres tâches, utilisez le compte <xref:System.ServiceProcess.ServiceAccount.LocalService>, qui se comporte comme un utilisateur non privilégié de l'ordinateur local et présente des informations d'identification anonymes à tout serveur distant. Cet exemple échoue si vous essayez d'utiliser le compte <xref:System.ServiceProcess.ServiceAccount.LocalService>, car il doit disposer d'une autorisation pour écrire dans le journal des événements.  
   
-     Pour plus d’informations sur les programmes d’installation, consultez [How to: Add Installers to Your Service Application](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
+     Pour plus d’informations sur les programmes d’installation, consultez [Comment : ajouter des programmes d'installation à votre application de service](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
   
 <a name="BK_StartupParameters"></a>   
 ## <a name="set-startup-parameters"></a>Définition de paramètres de démarrage  

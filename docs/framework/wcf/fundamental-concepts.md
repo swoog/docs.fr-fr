@@ -7,31 +7,31 @@ helpviewer_keywords:
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-ms.openlocfilehash: 44b36fc917ceb30141d7d2235b8bb364d3b998c9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 41bef6bf5a69a51738c6848050972a1a4e01c153
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Concepts fondamentaux concernant Windows Communication Foundation
-Ce document fournit une vue d’ensemble de l’architecture de Windows Communication Foundation (WCF). Il vise à vous expliquer des concepts clés et la manière dont ils se combinent. Pour obtenir un didacticiel sur la création de la version la plus simple d’un [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service et le client, consultez [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md). Pour en savoir plus [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] de programmation, consultez [programmation WCF de base](../../../docs/framework/wcf/basic-wcf-programming.md).  
+Ce document fournit une vue d’ensemble de l’architecture de Windows Communication Foundation (WCF). Il vise à vous expliquer des concepts clés et la manière dont ils se combinent. Pour obtenir un didacticiel sur la création de la version la plus simple d’un service WCF et un client, consultez [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md). Pour plus de programmation WCF, consultez [programmation WCF de base](../../../docs/framework/wcf/basic-wcf-programming.md).  
   
 ## <a name="wcf-fundamentals"></a>Principes de base de WCF  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] est un moteur d'exécution et un jeu d'API pour créer des systèmes qui transmettent des messages entre des services et des clients. La même infrastructure et les mêmes API sont utilisées pour créer des applications qui communiquent avec d'autres applications sur le même système informatique ou sur un système qui réside dans une autre société et accessible sur Internet.  
+ WCF est un runtime et un ensemble d’API pour créer des systèmes qui envoient des messages entre les services et les clients. La même infrastructure et les mêmes API sont utilisées pour créer des applications qui communiquent avec d'autres applications sur le même système informatique ou sur un système qui réside dans une autre société et accessible sur Internet.  
   
 ### <a name="messaging-and-endpoints"></a>Messagerie et points de terminaison  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] repose sur la notion de communication basée sur des messages, et tout ce qui peut être mis sous la forme de message (par exemple, une requête HTTP ou un message MSMQ) peut être représenté de la même manière dans le modèle de programmation. Cela permet d'avoir une API unifiée à travers des mécanismes de transport différents.  
+ WCF est basé sur la notion de communication basée sur le message et tout ce qui peut être modélisée comme un message (par exemple, une demande HTTP ou un message Message Queuing (également appelé MSMQ)) peut être représenté de façon uniforme dans le modèle de programmation. Cela permet d'avoir une API unifiée à travers des mécanismes de transport différents.  
   
  Le modèle fait la distinction entre *clients*, qui sont des applications qui initialisent la communication, et *services*, qui sont des applications qui attendent que les clients de communiquer avec eux et répondre communications. Une application peut agir à la fois comme un client et comme un service. Pour obtenir des exemples, consultez [Services Duplex](../../../docs/framework/wcf/feature-details/duplex-services.md) et [mise en réseau pair à pair](../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  
   
  Les messages sont envoyés d'un point de terminaison à un autre. *Points de terminaison* sont les endroits où les messages sont envoyés ou reçus (ou les deux), et elles définissent toutes les informations requises pour l’échange de messages. Un service expose un ou plusieurs points de terminaison d'application (ainsi que zéro ou plusieurs points de terminaison d'infrastructure), et le client génère un point de terminaison compatible avec l'un des points de terminaison du service.  
   
- Un *point de terminaison* décrit de manière repose sur des normes où les messages doivent être envoyés, comment ils doivent être envoyés, et les messages qui doivent ressembler à. Un service peut exposer ces informations en tant que métadonnées que les clients peuvent traiter pour générer approprié [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] les clients et la communication *piles*.  
+ Un *point de terminaison* décrit de manière repose sur des normes où les messages doivent être envoyés, comment ils doivent être envoyés, et les messages qui doivent ressembler à. Un service peut exposer ces informations en tant que métadonnées que les clients peuvent traiter pour générer des clients WCF appropriés et communication *piles*.  
   
 ### <a name="communication-protocols"></a>Protocoles de communication  
- Un requis de l’élément de la pile de communication est la *protocole de transport*. Les messages peuvent être envoyés sur des intranets et sur Internet à l'aide de transports communément utilisés, tels que le HTTP et le TCP. D'autres transports inclus prennent en charge la communication avec les applications et les nœuds Message Queuing sur une maille de réseau homologue. D'autres mécanismes de transport peuvent être ajoutés à l'aide des points d'extension intégrés de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+ Un requis de l’élément de la pile de communication est la *protocole de transport*. Les messages peuvent être envoyés sur des intranets et sur Internet à l'aide de transports communément utilisés, tels que le HTTP et le TCP. D'autres transports inclus prennent en charge la communication avec les applications et les nœuds Message Queuing sur une maille de réseau homologue. D’autres mécanismes de transport peuvent être ajoutés à l’aide de points d’extension intégrés de WCF.  
   
- Autre élément requis dans la pile de communication : l'encodage qui spécifie comment un message donné est mis en forme. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] fournit les encodages suivants :  
+ Autre élément requis dans la pile de communication : l'encodage qui spécifie comment un message donné est mis en forme. WCF fournit les encodages suivants :  
   
 -   L'encodage de texte, un encodage interopérable.  
   
@@ -39,13 +39,13 @@ Ce document fournit une vue d’ensemble de l’architecture de Windows Communic
   
 -   L'encodage binaire pour un transfert efficace.  
   
- D'autres mécanismes d'encodage (un encodage de compression, par exemple) peuvent être ajoutés à l'aide des points d'extension intégrés de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+ Mécanismes d’encodage plus (par exemple, un encodage de compression) peuvent être ajoutés à l’aide de points d’extension intégrés de WCF.  
   
 ### <a name="message-patterns"></a>Modèles de messages  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] prend en charge plusieurs modèles de messagerie, y compris les communications demande-réponse, unidirectionnelles et duplex. Les différents transports prennent en charge des modèles de messagerie différents, ce qui affecte les types d'interactions qu'ils prennent en charge. Les API et le moteur d'exécution [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] vous aident également à envoyer des messages de manière sécurisée et fiable.  
+ WCF prend en charge plusieurs modèles de messagerie, y compris la demande-réponse, unidirectionnel et la communication duplex. Les différents transports prennent en charge des modèles de messagerie différents, ce qui affecte les types d’interactions qu’ils prennent en charge. L’API WCF et exécution également vous aident à envoyer des messages fiable et sécurisée.  
   
 ## <a name="wcf-terms"></a>Termes de WCF  
- Vous trouverez ci-dessous d'autres concepts et termes utilisés dans la documentation de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+ Autres concepts et termes utilisés dans la documentation WCF sont les suivantes.  
   
  message  
  Unité autonome de données qui peut se composer de plusieurs parties, y compris d'un corps et d'un en-tête.  
@@ -54,9 +54,9 @@ Ce document fournit une vue d’ensemble de l’architecture de Windows Communic
  Construction qui expose un ou plusieurs points de terminaison, chacun de ces derniers exposant une ou plusieurs opérations de service.  
   
  Point de terminaison (endpoint)  
- Construction à laquelle les messages sont envoyés ou de laquelle ils sont reçus (ou les deux). Il comprend un emplacement (une adresse) qui définit où les messages peuvent être envoyés, une spécification du mécanisme de communication (une liaison) qui décrit la façon dont les messages doivent être envoyés, ainsi qu'une définition de l'ensemble de messages pouvant être envoyés ou reçus (ou les deux) à cet emplacement (un contrat de service) et qui décrit les messages pouvant être envoyés.  
+ Construction à laquelle les messages sont envoyés ou de laquelle ils sont reçus (ou les deux). Il comprend un emplacement (une adresse) qui définit où les messages peuvent être envoyés, une spécification du mécanisme de communication (une liaison) qui décrit la façon dont les messages doivent être envoyés, ainsi qu’une définition de l’ensemble de messages pouvant être envoyés ou reçus (ou les deux) à cet emplacement (un contrat de service) et qui décrit les messages pouvant être envoyés.  
   
- Un service [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] est exposé au monde comme une collection de points de terminaison.  
+ Un service WCF est exposé au monde extérieur comme une collection de points de terminaison.  
   
  Point de terminaison d'application (application endpoint)  
  Point de terminaison exposé par l'application et qui correspond à un contrat de service implémenté par l'application.  
@@ -83,13 +83,13 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  Composant qui contrôle plusieurs aspects de l'exécution d'un service, d'un point de terminaison, d'une opération particulière ou d'un client. Les comportements sont groupés en fonction de leur portée : les comportements courants affectent tous les points de terminaison globalement, les comportements de service affectent uniquement des aspects relatifs à un service, les comportements de point de terminaison affectent uniquement des propriétés connexes à un point de terminaison, et les comportements au niveau de l'opération affectent des opérations particulières. Par exemple, le comportement de service « limitation » spécifie comment un service réagit lorsqu'un trop grand nombre de messages menace de submerger ses fonctions de traitement. Un comportement de point de terminaison, en revanche, contrôle uniquement les aspects pertinents aux points de terminaison, par exemple comment et où rechercher une information d'identification de sécurité.  
   
  Liaisons fournies par le système (system-provided bindings)  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] inclut plusieurs liaisons fournies par le système. Il s’agit de collections d’éléments de liaison optimisés pour des scénarios spécifiques. Par exemple, <xref:System.ServiceModel.WSHttpBinding> a été conçue à des fins d'interopérabilité avec les services qui implémentent les diverses spécifications WS-*. Ces liaisons prédéfinies vous font gagner du temps en vous présentant uniquement les options qui peuvent être appliquées correctement au scénario spécifique. Si une liaison prédéfinie ne satisfait pas vos spécifications, vous pouvez créer votre propre liaison personnalisée.  
+ WCF inclut plusieurs liaisons fournies par le système. Il s’agit de collections d’éléments de liaison optimisés pour des scénarios spécifiques. Par exemple, <xref:System.ServiceModel.WSHttpBinding> a été conçue à des fins d'interopérabilité avec les services qui implémentent les diverses spécifications WS-*. Ces liaisons prédéfinies vous font gagner du temps en vous présentant uniquement les options qui peuvent être appliquées correctement au scénario spécifique. Si une liaison prédéfinie ne satisfait pas vos spécifications, vous pouvez créer votre propre liaison personnalisée.  
   
  configuration contre encodage  
  Le contrôle d'une application peut être réalisé par l'encodage, par la configuration, ou par les deux. La configuration a l'avantage de permettre à quelqu'un d'autre que le développeur (par exemple, un administrateur réseau) de définir les paramètres de client et de service après que le code a été écrit et sans devoir le recompiler. La configuration vous permet non seulement de définir des valeurs comme des adresses de point de terminaison, mais aussi de procéder à un contrôle approfondi en vous permettant d'ajouter des points de terminaison, des liaisons et des comportements. L'encodage permet au développeur de conserver un contrôle étroit sur tous les composants du service ou client, et tous les paramètres définis par la configuration peuvent être inspectés et si besoin être remplacés par le code.  
   
  opération de service  
- Procédure définie dans le code d'un service qui implémente les fonctionnalités d'une opération. Cette opération est exposée aux clients en tant que méthodes sur un client [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. La méthode peut renvoyer une valeur et accepter un nombre facultatif d'arguments, ou n'accepter aucun argument et ne renvoyer aucune réponse. Par exemple, une opération qui fonctionne comme un simple « Bonjour » peut être utilisée comme notification de la présence d'un client et pour commencer une série d'opérations.  
+ Procédure définie dans le code d'un service qui implémente les fonctionnalités d'une opération. Cette opération est exposée aux clients de la même manière que le sont les méthodes sur un client WCF. La méthode peut renvoyer une valeur et accepter un nombre facultatif d’arguments, ou n’accepter aucun argument et ne renvoyer aucune réponse. Par exemple, une opération qui fonctionne comme un simple « Bonjour » peut être utilisée comme notification de la présence d'un client et pour commencer une série d'opérations.  
   
  Contrat de service (service contract)  
  Joint plusieurs opérations connexes dans une unité fonctionnelle unique. Il peut définir des paramètres au niveau du service, tels que l'espace de noms du service, un contrat de rappel correspondant et d'autres paramètres de ce type. Dans la plupart des cas, le contrat est défini en créant une interface dans le langage de programmation de votre choix et en appliquant l'attribut <xref:System.ServiceModel.ServiceContractAttribute> à l'interface. Le code de service réel résulte de l'implémentation de l'interface.  
@@ -119,25 +119,25 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  Un service dispose d'un modèle d'instanciation. Il existe trois modèles d'instanciation : « unique », dans lequel un objet CLR unique prend en charge tous les clients ; « par appel », dans lequel un nouvel objet CLR est créé pour gérer chaque appel du client ; et « par session », dans lequel un ensemble d'objets CLR est créé, un pour chaque session. Le choix d’un modèle d’instanciation dépend des exigences de l’application et du modèle d’utilisation attendu du service.  
   
  Application cliente (client application)  
- Programme qui échange des messages avec un ou plusieurs points de terminaison. L'application cliente commence par créer l'instance d'un client [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] et appelle les méthodes du client [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Il est important de noter qu'une même application peut être à la fois un client et un service.  
+ Programme qui échange des messages avec un ou plusieurs points de terminaison. L'application cliente commence par créer l'instance d'un client WCF et appelle les méthodes de ce client. Il est important de noter qu'une même application peut être à la fois un client et un service.  
   
  Canal (channel)  
- Implémentation concrète d'un élément de liaison. La liaison représente la configuration, et le canal est l'implémentation associée à cette configuration. Par conséquent, un canal est associé à chaque élément de liaison. Les canaux s'empilent les uns sur les autres pour créer l'implémentation concrète de la liaison : la pile de canaux.  
+ Implémentation concrète d'un élément de liaison. La liaison représente la configuration, et le canal est l'implémentation associée à cette configuration. Par conséquent, un canal est associé à chaque élément de liaison. Les canaux s’empilent les uns sur les autres pour créer l’implémentation concrète de la liaison : la pile de canaux.  
   
- client [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]  
- Construction d'application cliente qui expose les opérations de service en tant que méthodes (dans le langage de programmation [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] de votre choix, tel que Visual Basic ou Visual C#). N'importe quelle application peut accueillir un client [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], y compris une application qui héberge un service. Par conséquent, il est possible de créer un service qui inclut des clients [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] d'autres services.  
+ Client WCF (WCF client)  
+ Construction d'application cliente qui expose les opérations de service en tant que méthodes (dans le langage de programmation [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] de votre choix, tel que Visual Basic ou Visual C#). N'importe quelle application peut accueillir un client WCF, y compris une application hébergeant un service. Par conséquent, il est possible de créer un service qui inclut des clients WCF d'autres services.  
   
- A [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] client peut être généré automatiquement à l’aide de la [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) et faites-le pointer vers un service en cours d’exécution qui publie les métadonnées.  
+ Un client WCF peut être généré automatiquement à l’aide de la [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) et faites-le pointer vers un service en cours d’exécution qui publie les métadonnées.  
   
  métadonnées  
- Dans un service, décrivent les caractéristiques du service qu'une entité externe doit comprendre pour communiquer avec ce service. Les métadonnées peuvent être utilisées par le [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) pour générer un [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] client et configuration qui l’accompagne une application cliente peut utiliser pour interagir avec le service.  
+ Dans un service, décrivent les caractéristiques du service qu'une entité externe doit comprendre pour communiquer avec ce service. Les métadonnées peuvent être utilisées par le [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) pour générer un client WCF et la configuration qui l’accompagne une application cliente peut utiliser pour interagir avec le service.  
   
  Les métadonnées exposées par le service incluent des documents de schéma XML qui définissent le contrat de données du service, et des documents WSDL qui décrivent les méthodes du service.  
   
- En cas d'activation, les métadonnées du service sont générées automatiquement par [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] par inspection du service et de ses points de terminaison. Pour publier les métadonnées d'un service, vous devez explicitement activer le comportement des métadonnées.  
+ En cas d'activation, les métadonnées du service sont générées automatiquement par WCF par inspection du service et de ses points de terminaison. Pour publier les métadonnées d'un service, vous devez explicitement activer le comportement des métadonnées.  
   
  security  
- Dans [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], inclut la confidentialité (le chiffrement des messages pour éviter l'espionnage), l'intégrité (la détection de la falsification des messages), l'authentification (la validation des serveurs et des clients) et l'autorisation (le contrôle de l'accès aux ressources). Ces fonctions sont fournies en tirant parti de mécanismes de sécurité existants, tels que TLS sur HTTP (également connu sous le nom de HTTPS), ou en implémentant une ou plusieurs spécifications de sécurité WS-*.  
+ Dans WCF, inclut la confidentialité (chiffrement des messages pour éviter l’espionnage), l’intégrité (la détection de falsification des messages), l’authentification (la validation des serveurs et clients) et autorisation (le contrôle d’accès ressources). Ces fonctions sont fournies en tirant parti de mécanismes de sécurité existants, tels que TLS sur HTTP (également connu sous le nom de HTTPS), ou en implémentant une ou plusieurs spécifications de sécurité WS-*.  
   
  mode de sécurité du transport  
  Spécifie que la confidentialité, l'intégrité et l'authentification sont assurées par les mécanismes de la couche de transport (tels que HTTPS). Lors de l'utilisation d'un transport comme le HTTPS, ce mode a l'avantage d'être efficace en termes de performances, et d'être bien compris grâce à sa prédominance sur Internet. L'inconvénient est que ce type de sécurité est appliqué séparément sur chaque saut dans la voie de communication, et rend la communication susceptible d'être victime d'une attaque de « l'homme du milieu ».  
@@ -149,7 +149,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  Spécifie l'utilisation de la couche de transport pour assurer la confidentialité, l'authentification et l'intégrité des messages, tandis que chacun des messages peut contenir plusieurs informations d'identification (revendications) requises par les récepteurs du message.  
   
  WS-*  
- Abrégé pour l'ensemble croissant des spécifications de services Web (WS), telles que WS-Security, WS-ReliableMessaging et ainsi de suite, implémentées dans [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+ Abrégé pour l'ensemble croissant des spécifications de services Web (WS), telles que WS-Security, WS-ReliableMessaging et ainsi de suite, implémentées dans WCF.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Présentation de Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  

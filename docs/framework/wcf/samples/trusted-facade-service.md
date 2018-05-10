@@ -2,11 +2,11 @@
 title: Trusted Facade Service
 ms.date: 03/30/2017
 ms.assetid: c34d1a8f-e45e-440b-a201-d143abdbac38
-ms.openlocfilehash: 08e115d297439910c16601051539a23a5a6bebc9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d5a4cfe63f2fc6facbe4ce78d1c0047349e303fd
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="trusted-facade-service"></a>Trusted Facade Service
 Cet exemple de scénario illustre comment transférer les informations d’identité de l’appelant à partir d’un service à un autre à l’aide de Windows Communication Foundation (WCF) infrastructure de sécurité.  
@@ -21,7 +21,7 @@ Cet exemple de scénario illustre comment transférer les informations d’ident
   
 -   Service principal de calculatrice  
   
- Le service de façade est chargé de valider la demande et d'authentifier l'appelant. Après authentification de l'appelant et validation de la demande, il transfert celle-ci au service principal à l'aide du canal de communication contrôlé depuis le réseau de périmètre vers le réseau interne. Le service de façade ajoute à la demande transférée des informations relatives à l'identité de l'appelant que le service principal pourra utiliser à des fins de traitement. L'identité de l'appelant est transmise à l'aide d'un jeton de sécurité `Username` figurant dans l'en-tête `Security` du message. L'exemple utilise l'infrastructure de sécurité [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] pour transmettre et extraire cette information de l'en-tête `Security` .  
+ Le service de façade est chargé de valider la demande et d'authentifier l'appelant. Après authentification de l'appelant et validation de la demande, il transfert celle-ci au service principal à l'aide du canal de communication contrôlé depuis le réseau de périmètre vers le réseau interne. Le service de façade ajoute à la demande transférée des informations relatives à l'identité de l'appelant que le service principal pourra utiliser à des fins de traitement. L'identité de l'appelant est transmise à l'aide d'un jeton de sécurité `Username` figurant dans l'en-tête `Security` du message. L’exemple utilise l’infrastructure de sécurité WCF pour transmettre et extraire ces informations à partir de la `Security` en-tête.  
   
 > [!IMPORTANT]
 >  Le service principal approuve le service de façade pour authentifier l'appelant. C'est pourquoi le service principal n'authentifie pas à nouveau l'appelant. Il utilise, en revanche, les informations d'identité fournies par le service de façade dans la demande transférée. Dans le cadre de cette relation de confiance, il est essentiel que le service principal authentifie le service de façade afin de garantir la provenance depuis une source fiable (dans ce cas, le service de façade) du message transféré.  
@@ -110,7 +110,7 @@ public class MyUserNamePasswordValidator : UserNamePasswordValidator
   
  Le [ \<sécurité >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) élément de liaison prend en charge de la transmission du nom d’utilisateur et d’extraction de l’appelant initial. Le [ \<windowsStreamSecurity >](../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md) et [ \<tcpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/tcptransport.md) prendre en charge l’authentification des services de façade et le serveur principal et la protection des messages.  
   
- L'implémentation du service de façade doit fournir le nom d'utilisateur de l'appelant initial afin que l'infrastructure de sécurité [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] puisse intégrer cette information au message transféré et permettre ainsi le transfert de la demande. Pour que l'implémentation du service de façade puisse fournir ce nom d'utilisateur, ce dernier doit être défini dans la propriété `ClientCredentials` de l'instance de proxy de client utilisée par ce service pour communiquer avec le service principal.  
+ Pour transférer la demande, l’implémentation de service de façade doit fournir le nom d’utilisateur de l’appelant initial pour cette infrastructure de sécurité WCF puisse intégrer cette information au message transféré. Pour que l'implémentation du service de façade puisse fournir ce nom d'utilisateur, ce dernier doit être défini dans la propriété `ClientCredentials` de l'instance de proxy de client utilisée par ce service pour communiquer avec le service principal.  
   
  Le code suivant illustre la manière dont la méthode `GetCallerIdentity` est implémentée sur le service de façade. Ce même modèle est utilisé par d'autres méthodes.  
   
@@ -125,9 +125,9 @@ public string GetCallerIdentity()
 }  
 ```  
   
- Comme illustré dans le code précédent, le mot de passe n'est pas défini dans la propriété' `ClientCredentials` , seul le nom d'utilisateur est défini. L'infrastructure de la sécurité[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] crée alors un jeton de sécurité de nom d'utilisateur ne contenant pas de mot de passe, ce qui répond parfaitement aux exigences de ce scénario.  
+ Comme illustré dans le code précédent, le mot de passe n'est pas défini dans la propriété' `ClientCredentials` , seul le nom d'utilisateur est défini. Infrastructure de sécurité WCF crée un jeton de sécurité de nom d’utilisateur sans mot de passe dans ce cas, ce qui est exactement ce qui est requis dans ce scénario.  
   
- Sur le service principal, les informations contenues dans le jeton de sécurité de nom d'utilisateur doivent être authentifiées. Par défaut, la sécurité [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] essaie de mapper l'utilisateur à un compte Windows à l'aide du mot de passe fourni. Dans ce cas, aucun mot de passe n'est communiqué et le service principal n'est pas obligé d'authentifier le nom d'utilisateur, le service de façade ayant déjà procédé à cette authentification. Pour implémenter cette fonctionnalité dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], un validateur `UserNamePasswordValidator` personnalisé, exigeant uniquement la définition d'un nom d'utilisateur dans le jeton et ne procédant à aucune authentification supplémentaire, est spécifié.  
+ Sur le service principal, les informations contenues dans le jeton de sécurité de nom d'utilisateur doivent être authentifiées. Par défaut, sécurité WCF tente de mapper l’utilisateur à un compte Windows à l’aide du mot de passe fourni. Dans ce cas, aucun mot de passe n'est communiqué et le service principal n'est pas obligé d'authentifier le nom d'utilisateur, le service de façade ayant déjà procédé à cette authentification. Pour implémenter cette fonctionnalité dans WCF, personnalisé `UserNamePasswordValidator` exigeant uniquement qu’un nom d’utilisateur est spécifié dans le jeton et n’effectue pas d’authentification supplémentaire.  
   
 ```  
 public class MyUserNamePasswordValidator : UserNamePasswordValidator  
@@ -148,7 +148,7 @@ public class MyUserNamePasswordValidator : UserNamePasswordValidator
 }  
 ```  
   
- Le validateur personnalisé est configuré pour être utilisé à l'intérieur du comportement `serviceCredentials`, dans le fichier de configuration du service de façade.  
+ Le validateur personnalisé est configuré pour être utilisé à l'intérieur du comportement `serviceCredentials` , dans le fichier de configuration du service de façade.  
   
 ```xml  
 <behaviors>  
@@ -208,7 +208,7 @@ public string GetCallerIdentity()
 }  
 ```  
   
- Les informations relatives au compte du service de façade sont extraites à l'aide de la propriété `ServiceSecurityContext.Current.WindowsIdentity` . Pour accéder aux informations de l'appelant initial, le service principal utilise la propriété `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` . Le service recherche une revendication `Identity` ayant le type `Name`. Cette revendication est générée automatiquement par l'infrastructure de sécurité [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] à partir des informations contenues dans le jeton de sécurité `Username` .  
+ Les informations relatives au compte du service de façade sont extraites à l'aide de la propriété `ServiceSecurityContext.Current.WindowsIdentity` . Pour accéder aux informations de l'appelant initial, le service principal utilise la propriété `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` . Le service recherche une revendication `Identity` ayant le type `Name`. Cette revendication est générée automatiquement par l’infrastructure de sécurité WCF à partir des informations contenues dans le `Username` jeton de sécurité.  
   
 ## <a name="running-the-sample"></a>Exécution de l'exemple  
  Lorsque vous exécutez l'exemple, les demandes et réponses d'opération s'affichent dans la fenêtre de console du client. Appuyez sur Entrée dans la fenêtre du client pour l'arrêter. Vous pouvez appuyer sur le bouton ENTER de la fenêtre du service de façade ou de la fenêtre du service principal pour arrêter ces derniers.  

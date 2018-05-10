@@ -2,11 +2,11 @@
 title: Instancing Initialization
 ms.date: 03/30/2017
 ms.assetid: 154d049f-2140-4696-b494-c7e53f6775ef
-ms.openlocfilehash: 75b8d2a2696d5900fd7bffe42dbaf62b9f6ce694
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ae01254760219f2b408ef9d9663c4158e2802be8
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="instancing-initialization"></a>Instancing Initialization
 Cet exemple étend le [Pooling](../../../../docs/framework/wcf/samples/pooling.md) exemple en définissant une interface, `IObjectControl`, qui personnalise l’initialisation d’un objet à activer et désactiver. Le client appelle des méthodes qui retournent l'objet au pool et d'autres qui ne retournent pas l'objet au pool.  
@@ -15,12 +15,12 @@ Cet exemple étend le [Pooling](../../../../docs/framework/wcf/samples/pooling.m
 >  La procédure d'installation ainsi que les instructions de génération relatives à cet exemple figurent à la fin de cette rubrique.  
   
 ## <a name="extensibility-points"></a>Points d'extensibilité  
- La première étape dans la création d’une extension de Windows Communication Foundation (WCF) consiste à déterminer le point d’extensibilité à utiliser. Dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], le terme *EndpointDispatcher* fait référence à un composant runtime chargé de convertir des messages entrants en appels de méthode sur le service de l’utilisateur et pour convertir des valeurs de retour de cette méthode à un message sortant. Un service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] crée un EndpointDispatcher pour chaque point de terminaison.  
+ La première étape dans la création d’une extension de Windows Communication Foundation (WCF) consiste à déterminer le point d’extensibilité à utiliser. Dans WCF, le terme *EndpointDispatcher* fait référence à un composant runtime chargé de convertir des messages entrants en appels de méthode sur le service de l’utilisateur et pour convertir des valeurs de retour de cette méthode à un message sortant . Un service WCF crée un EndpointDispatcher pour chaque point de terminaison.  
   
  L'EndpointDispatcher permet l'extensibilité de l'étendue du point de terminaison (pour tous les messages reçus ou envoyés par le service) à l'aide de la classe <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>. Cette classe vous permet de personnaliser différentes propriétés qui contrôlent le comportement de l'EndpointDispatcher. Cet exemple se concentre sur la propriété <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> qui pointe sur l'objet qui fournit les instances de la classe de service.  
   
 ## <a name="iinstanceprovider"></a>IInstanceProvider  
- Dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], l'EndpointDispatcher crée des instances d'une classe de service à l'aide d'un fournisseur d'instances qui implémente l'interface <xref:System.ServiceModel.Dispatcher.IInstanceProvider>. Cette interface possède uniquement deux méthodes :  
+ Dans WCF, l’EndpointDispatcher crée des instances d’une classe de service à l’aide d’un fournisseur d’instance qui implémente le <xref:System.ServiceModel.Dispatcher.IInstanceProvider> interface. Cette interface possède uniquement deux méthodes :  
   
 -   <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> : lorsqu'un message arrive, le répartiteur appelle la méthode <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> afin de créer une instance de la classe de service pour traiter le message. La fréquence des appels à cette méthode est déterminée par la propriété <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A>. Par exemple, si la propriété <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> a la valeur <xref:System.ServiceModel.InstanceContextMode.PerCall?displayProperty=nameWithType>, une nouvelle instance de la classe de service est créée pour traiter chaque message qui arrive, et <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> est donc appelée chaque fois qu'un message arrive.  
   
@@ -153,7 +153,7 @@ if (activeObjectsCount == 0)
   
  Cet exemple utilise un attribut personnalisé. Lorsque <xref:System.ServiceModel.ServiceHost> est généré, il examine les attributs utilisés dans la définition de type du service et ajoute les comportements disponibles à la collection de comportements de la description de service.  
   
- Le <xref:System.ServiceModel.Description.IServiceBehavior> interface a trois méthodes : <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> `,` <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> `,` et <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>. Ces méthodes sont appelées par [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] lors de l'initialisation de <xref:System.ServiceModel.ServiceHost>. l'<xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A?displayProperty=nameWithType> est appelée en premier ; elle autorise l'inspection du service pour retrouver les éventuelles incohérences. l'<xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A?displayProperty=nameWithType> est appelée ensuite ; cette méthode est requise uniquement dans les scénarios très avancés. l'<xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType> est appelée en dernier ; elle est responsable de la configuration de l'exécution. Les paramètres suivants sont passés dans <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType> :  
+ Le <xref:System.ServiceModel.Description.IServiceBehavior> interface a trois méthodes : <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> `,` <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> `,` et <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>. Ces méthodes sont appelées par WCF lorsque le <xref:System.ServiceModel.ServiceHost> est en cours d’initialisation. l'<xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A?displayProperty=nameWithType> est appelée en premier ; elle autorise l'inspection du service pour retrouver les éventuelles incohérences. l'<xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A?displayProperty=nameWithType> est appelée ensuite ; cette méthode est requise uniquement dans les scénarios très avancés. l'<xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType> est appelée en dernier ; elle est responsable de la configuration de l'exécution. Les paramètres suivants sont passés dans <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType> :  
   
 -   `Description` : ce paramètre fournit la description de service pour le service entier. Il permet d'inspecter les données de description des points de terminaison, des contrats et des liaisons, et les autres données associées au service.  
   
@@ -189,7 +189,7 @@ public void ApplyDispatchBehavior(ServiceDescription description, ServiceHostBas
   
  Outre une implémentation <xref:System.ServiceModel.Description.IServiceBehavior>, la classe `ObjectPoolingAttribute` a plusieurs membres pour personnaliser le mise en pool d’objets à l'aide des arguments d'attribut. Ces membres incluent `MaxSize`, `MinSize`, `Enabled` et `CreationTimeout`, pour faire correspondre le jeu de fonctionnalités de mise en mise en pool d’objets fourni par .NET Enterprise Services.  
   
- Le comportement de mise en pool d’objets peut maintenant être ajouté à un service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] en annotant l'implémentation de service avec l'attribut `ObjectPooling` personnalisé récemment créé.  
+ L’objet de comportement de regroupement peut maintenant être ajouté à un service WCF en annotant l’implémentation de service avec le personnalisé récemment créé `ObjectPooling` attribut.  
   
 ```  
 [ObjectPooling(MaxSize=1024, MinSize=10, CreationTimeout=30000]      

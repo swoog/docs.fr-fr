@@ -2,11 +2,11 @@
 title: Surveillance des échecs d'opération de service
 ms.date: 03/30/2017
 ms.assetid: 59472ba3-8ebf-4479-bd7b-f440d5e636cb
-ms.openlocfilehash: 16ed779f77836fb68cf1edf1e01dbb3c0df01d45
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3d708b537789c8d0decf75df780300c1e185c4c8
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="monitoring-service-operation-failures"></a>Surveillance des échecs d'opération de service
 Si le traçage analytique est activé pour une application, les échecs de service peuvent facilement être surveillés dans l'Observateur d'événements.  Cette rubrique montre comment déterminer quand une opération de service échoue et comment déterminer la cause de cet échec.  
@@ -17,7 +17,7 @@ Si le traçage analytique est activé pour une application, les échecs de servi
   
 2.  Si vous n’avez pas activé le traçage analytique, développez **journaux des Applications et Services**, **Microsoft**, **Windows**, **serveur d’applications-Applications** . Sélectionnez **vue**, **afficher d’analyse et les journaux de débogage**. Avec le bouton droit **analyse** et sélectionnez **activer le journal**. Laissez l'Observateur d'événements ouvert afin que les traces soient visibles après l'échec de l'opération de service.  
   
-3.  Ensuite, ouvrez l’exemple créé dans le [Getting Started Tutorial](../../../../../docs/framework/wcf/getting-started-tutorial.md) dans [!INCLUDE[vs_current_long](../../../../../includes/vs-current-long-md.md)] Remarque : vous devez exécuter [!INCLUDE[vs_current_long](../../../../../includes/vs-current-long-md.md)] en tant qu’administrateur afin que le service peut être créé. Si vous avez le [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] exemples installés, vous pouvez ouvrir le [mise en route](../../../../../docs/framework/wcf/samples/getting-started-sample.md), qui contient le projet terminé, créé dans le didacticiel.  
+3.  Ensuite, ouvrez l’exemple créé dans le [Getting Started Tutorial](../../../../../docs/framework/wcf/getting-started-tutorial.md) dans [!INCLUDE[vs_current_long](../../../../../includes/vs-current-long-md.md)] Remarque : vous devez exécuter [!INCLUDE[vs_current_long](../../../../../includes/vs-current-long-md.md)] en tant qu’administrateur afin que le service peut être créé. Si vous avez installés exemples WCF, vous pouvez ouvrir le [mise en route](../../../../../docs/framework/wcf/samples/getting-started-sample.md), qui contient le projet terminé, créé dans le didacticiel.  
   
 4.  Dans le fichier Program.cs du projet serveur, ajoutez la ligne de code suivante au début de la méthode `Divide` dans la classe `CalculatorService` :  
   

@@ -2,11 +2,11 @@
 title: Extending Tracing
 ms.date: 03/30/2017
 ms.assetid: 2b971a99-16ec-4949-ad2e-b0c8731a873f
-ms.openlocfilehash: 685ba85dc240bc2fdefdf02d9ece2279e3507abc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 59291b6a57ba602e5fea84dcd571a8d767b7cc04
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="extending-tracing"></a>Extending Tracing
 Cet exemple montre comment étendre la fonctionnalité de traçage de Windows Communication Foundation (WCF) en écrivant les suivis d’activité définis par l’utilisateur dans le code client et le service. Cela permet à l'utilisateur de créer des activités de suivi et de regrouper les suivis dans des unités de travail logiques. Il est également possible de mettre en corrélation des activités à travers des transferts (au sein du même point de terminaison) et la propagation (sur plusieurs points de terminaison). Dans cet exemple, le suivi est activé à la fois pour le client et pour le service. Pour plus d’informations sur la façon d’activer le suivi dans les fichiers de configuration client et le service, consultez [Tracing and Message Logging](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md).  
@@ -26,7 +26,7 @@ Cet exemple montre comment étendre la fonctionnalité de traçage de Windows Co
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ExtendingTracing`  
   
 ## <a name="tracing-and-activity-propagation"></a>Suivi et propagation d'activité  
- Le suivi d'activité défini par l'utilisateur permet à l'utilisateur de créer ses propres activités de suivi pour regrouper les suivis dans les unités de travail logiques, mettre en corrélation des activités par transfert et propagation et amoindrir les coûts de performance du suivi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] (le coût en espace disque d'un fichier journal, par exemple).  
+ Le suivi d’activité définis par l’utilisateur permet à l’utilisateur créer leurs propres activités de suivi pour grouper des suivis dans des unités logiques de travail, de mettre en corrélation les activités par transfert et propagation et de réduire le coût de performances de suivi WCF (par exemple, l’espace disque de coût d’un fichier journal).  
   
 ### <a name="adding-custom-sources"></a>Ajout de sources personnalisées  
  Les suivis définis par l'utilisateur peuvent être ajoutés à la fois au code du client et du service. Ajout de sources de suivi pour les fichiers de configuration client ou un service permettant à ces traces personnalisées à être enregistré et affiché dans le [outil Service Trace Viewer (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Le code suivant montre comment ajouter une source de suivi définie par l'utilisateur nommée `ServerCalculatorTraceSource` au fichier de configuration.  
@@ -67,7 +67,7 @@ Cet exemple montre comment étendre la fonctionnalité de traçage de Windows Co
 ```  
   
 ### <a name="correlating-activities"></a>Mise en corrélation des activités  
- Pour mettre directement en corrélation des activités sur plusieurs points de terminaison, l'attribut `propagateActivity` doit avoir la valeur `true` dans la source du suivi `System.ServiceModel`. En outre, le suivi d'activité ServiceModel doit être désactivé pour propager des suivis sans traverser des activités [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. C'est ce qu'illustre l'exemple de code suivant.  
+ Pour mettre directement en corrélation des activités sur plusieurs points de terminaison, l'attribut `propagateActivity` doit avoir la valeur `true` dans la source du suivi `System.ServiceModel`. En outre, pour propager des suivis sans traverser des activités de WCF, suivi d’activité ServiceModel doit être désactivé. C'est ce qu'illustre l'exemple de code suivant.  
   
 > [!NOTE]
 >  La désactivation du suivi d'activité ServiceModel n'équivaut pas à désactiver le niveau de suivi, dénoté par la propriété `switchValue`.  
@@ -85,7 +85,7 @@ Cet exemple montre comment étendre la fonctionnalité de traçage de Windows Co
 ```  
   
 ### <a name="lessening-performance-cost"></a>Réduction des coûts de performance  
- Le fait de désactiver `ActivityTracing` dans la source de suivi `System.ServiceModel` génère un fichier de suivi qui contient uniquement les suivis d'activité définis par l'utilisateur, sans inclure les suivis d'activité ServiceModel. Ainsi, le fichier journal est beaucoup moins volumineux. Toutefois, la possibilité de mettre en corrélation les suivis de traitement [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] est perdue.  
+ Le fait de désactiver `ActivityTracing` dans la source de suivi `System.ServiceModel` génère un fichier de suivi qui contient uniquement les suivis d'activité définis par l'utilisateur, sans inclure les suivis d'activité ServiceModel. Ainsi, le fichier journal est beaucoup moins volumineux. Toutefois, la possibilité de mettre en corrélation les suivis de traitement de WCF est perdue.  
   
 ##### <a name="to-set-up-build-and-run-the-sample"></a>Pour configurer, générer et exécuter l'exemple  
   

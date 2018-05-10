@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-ms.openlocfilehash: 2f84254a993df35ef999ee6cdd36c4f6b256a89f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f9603f79992c31ad1af3b6c672b448ab031ba78d
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="configuring-tracing"></a>Configuration du traçage
 Cette rubrique décrit comment activer le suivi, configurer des sources de suivi pour émettre des suivis et définir des niveaux de suivi, définir le suivi et la propagation d'activité afin de prendre en charge la corrélation de suivi de bout en bout, et définir des écouteurs de suivi pour accéder aux suivis.  
@@ -25,11 +25,11 @@ Cette rubrique décrit comment activer le suivi, configurer des sources de suivi
   
 -   Événements d’erreur Windows en cas de dysfonctionnement de la fonctionnalité de suivi. Consultez [la journalisation des événements](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
   
- Le suivi [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] est construit sur <xref:System.Diagnostics>. Pour utiliser le traçage, vous devez définir des sources de trace dans le fichier de configuration ou dans le code. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] définit une source de suivi pour chaque assembly [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]. La source de suivi `System.ServiceModel` est la source de suivi [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] la plus générale ; elle enregistre des jalons de traitement dans la pile de communication [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], de l'entrée/sortie de transport à l'entrée/sortie de code utilisateur. La source de suivi `System.ServiceModel.MessageLogging` enregistre tous les messages qui circulent dans le système.  
+ Le suivi WCF est construit sur <xref:System.Diagnostics>. Pour utiliser le traçage, vous devez définir des sources de trace dans le fichier de configuration ou dans le code. WCF définit une source de suivi pour chaque assembly WCF. Le `System.ServiceModel` source de trace est la source de suivi WCF plus générale et enregistre des jalons de traitement dans la pile de communication WCF, à partir de l’entrée/sortie de transport pour l’entrée/sortie de code utilisateur. La source de suivi `System.ServiceModel.MessageLogging` enregistre tous les messages qui circulent dans le système.  
   
- Le suivi est désactivé par défaut. Pour activer le suivi, vous devez créer un écouteur de suivi et définir un niveau de suivi autre que « Désactivé » pour la source de suivi sélectionnée dans la configuration ; autrement, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] ne génère pas de suivi. Si vous ne spécifiez pas d'écouteur, le suivi est automatiquement désactivé. Si un écouteur est défini mais qu'aucun niveau n'est spécifié, le niveau a la valeur « Désactivé » par défaut, ce qui signifie qu'aucun suivi n'est émis.  
+ Le suivi est désactivé par défaut. Pour activer le suivi, vous devez créer un écouteur de suivi et définir un niveau de suivi autre que « Off » pour la source de suivi sélectionnée dans la configuration ; dans le cas contraire, WCF ne génère pas de suivi. Si vous ne spécifiez pas d'écouteur, le suivi est automatiquement désactivé. Si un écouteur est défini mais qu'aucun niveau n'est spécifié, le niveau a la valeur « Désactivé » par défaut, ce qui signifie qu'aucun suivi n'est émis.  
   
- Si vous utilisez des points d'extensibilité [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], tels que des demandeurs d'opérations personnalisés, vous devez émettre vos propres suivis. En effet, si vous implémentez un point d'extensibilité, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] n'est plus en mesure d'émettre les suivis standard dans le chemin d'accès par défaut. Si vous n'implémentez par la prise en charge du suivi manuel à l'aide de l'émission de suivis, les suivis peuvent ne pas s'afficher comme prévu.  
+ Si vous utilisez des points d’extensibilité WCF tels que les appelants d’opération personnalisé, vous devez émettre vos propres suivis. Il s’agit, car si vous implémentez un point d’extensibilité, WCF ne peut ne plus émettre les suivis standard dans le chemin d’accès par défaut. Si vous n'implémentez par la prise en charge du suivi manuel à l'aide de l'émission de suivis, les suivis peuvent ne pas s'afficher comme prévu.  
   
  Vous pouvez configurer le suivi en modifiant le fichier de configuration de l'application : Web.config pour les applications hébergées sur le Web, ou Appname.exe.config pour les applications auto-hébergées. Vous trouverez ci-dessous un exemple de ce type de modification : Pour plus d’informations sur ces paramètres, consultez la section « Configuration de Trace écouteurs pour consommer des suivis ».  
   
@@ -52,12 +52,12 @@ Cette rubrique décrit comment activer le suivi, configurer des sources de suivi
 ```  
   
 > [!NOTE]
->  Pour modifier le fichier de configuration d’un [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] service de projet dans Visual Studio, cliquez avec le bouton droit sur le fichier de configuration application : Web.config pour les applications hébergées par le Web, ou Appname.exe.config pour les applications auto-hébergées dans  **L’Explorateur de solutions**. Puis choisissez le **modifier la Configuration WCF** élément de menu contextuel. Cette opération lance le [l’outil Éditeur de Configuration (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md), ce qui vous permet de modifier les paramètres de configuration de [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] services à l’aide d’une interface utilisateur graphique.  
+>  Pour modifier le fichier de configuration d’un projet de service WCF dans Visual Studio, cliquez avec le bouton droit sur le fichier de configuration application : Web.config pour les applications hébergées par le Web, ou Appname.exe.config pour les applications auto-hébergées dans **l’Explorateur de solutions** . Puis choisissez le **modifier la Configuration WCF** élément de menu contextuel. Cette opération lance le [l’outil Éditeur de Configuration (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md), qui vous permet de modifier les paramètres de configuration pour les services WCF à l’aide d’une interface utilisateur graphique.  
   
 ## <a name="configuring-trace-sources-to-emit-traces"></a>Configuration de sources de suivi de façon à émettre des suivis  
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] définit une source de suivi pour chaque assembly. Les écouteurs définis pour cette source accèdent aux suivis générés dans un assembly. Les sources de suivi suivantes sont définies :  
+ WCF définit une source de suivi pour chaque assembly. Les écouteurs définis pour cette source accèdent aux suivis générés dans un assembly. Les sources de suivi suivantes sont définies :  
   
--   System.ServiceModel : enregistre toutes les phases de traitement [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], chaque lecture de la configuration, chaque message traité dans le transport, le traitement de sécurité, chaque envoi d'un message dans le code utilisateur, etc.  
+-   System.ServiceModel : Enregistre toutes les étapes de traitement de WCF, chaque fois que de lecture de la configuration, un message est traité dans le transport, sécurité de traitement, un message est distribuée dans le code utilisateur et ainsi de suite.  
   
 -   System.ServiceModel.MessageLogging : enregistre tous les messages qui circulent dans le système.  
   
@@ -135,7 +135,7 @@ Cette rubrique décrit comment activer le suivi, configurer des sources de suivi
  Pour plus d’informations sur la création de sources de trace défini par l’utilisateur, consultez [extension suivi](../../../../../docs/framework/wcf/samples/extending-tracing.md).  
   
 ## <a name="configuring-trace-listeners-to-consume-traces"></a>Configuration d'écouteurs de suivi pour consommer des suivis  
- Au moment de l'exécution, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] fournit des données de suivi aux écouteurs qui traitent les données. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] fournit plusieurs écouteurs prédéfinis pour <xref:System.Diagnostics>, qui diffèrent quant au format utilisé pour la sortie. Vous pouvez également ajouter des types d'écouteurs personnalisés.  
+ Lors de l’exécution, WCF de flux de données de trace dans les écouteurs qui traitent les données. WCF fournit plusieurs écouteurs prédéfinis pour <xref:System.Diagnostics>, qui diffèrent dans le format qu’ils utilisent pour la sortie. Vous pouvez également ajouter des types d'écouteurs personnalisés.  
   
  Vous pouvez utiliser `add` pour indiquer les nom et type de l'écouteur de suivi à utiliser. Dans notre exemple de configuration, nous avons nommé l'écouteur `traceListener` et ajouté l'écouteur de suivi standard .NET Framework (`System.Diagnostics.XmlWriterTraceListener`) comme type à utiliser. Vous pouvez ajouter un nombre quelconque d'écouteurs de suivi pour chaque source. Si l'écouteur de suivi émet le suivi dans un fichier, vous devez spécifier le nom et l'emplacement du fichier de sortie dans le fichier de configuration. Pour cela, vous devez affecter à `initializeData` le nom du fichier pour cet écouteur. Si vous ne spécifiez pas de nom de fichier, un nom de fichier aléatoire est généré en fonction du type d'écouteur utilisé. Si <xref:System.Diagnostics.XmlWriterTraceListener> est utilisé, un nom de fichier sans extension est généré. Si vous implémentez un écouteur personnalisé, vous pouvez également utiliser cet attribut pour recevoir des données d'initialisation autres qu'un nom de fichier. Par exemple, vous pouvez spécifier un identificateur de base de données pour cet attribut.  
   
@@ -169,13 +169,13 @@ Cette rubrique décrit comment activer le suivi, configurer des sources de suivi
  La valeur `activityTracing` spécifiée pour l'attribut `switchValue` est utilisée pour activer le suivi d'activité, qui émet des suivis pour les transferts et limites d'activité dans les points de terminaison.  
   
 > [!NOTE]
->  Lorsque vous utilisez certaines fonctionnalités d'extensibilité dans [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], vous pouvez obtenir un <xref:System.NullReferenceException> lorsque le suivi d'activité est activé. Pour résoudre ce problème, vérifiez le fichier de configuration de votre application et assurez-vous que l'attribut `switchValue` de votre source de suivi n'a pas la valeur `activityTracing`.  
+>  Lorsque vous utilisez certaines fonctionnalités d’extensibilité dans WCF, vous pouvez obtenir un <xref:System.NullReferenceException> lorsque le suivi des activités est activé. Pour résoudre ce problème, vérifiez le fichier de configuration de votre application et assurez-vous que l'attribut `switchValue` de votre source de suivi n'a pas la valeur `activityTracing`.  
   
  L'attribut `propagateActivity` indique si l'activité doit être propagée vers d'autres points de terminaison qui participent à l'échange de messages. En affectant à cet attribut la valeur `true`, vous pouvez prendre des fichiers de suivi générés par deux points de terminaison quelconque et observer comment un ensemble de suivis sur un point de terminaison a été transféré vers un ensemble de suivis sur un autre point de terminaison.  
   
  Pour plus d’informations sur le suivi des activités et de propagation, consultez [Propagation](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md).  
   
- Les deux `propagateActivity` et `ActivityTracing` valeurs booléennes s’appliquent à la System.ServiceModel TraceSource. Le `ActivityTracing` valeur s’applique également à toutes les sources de trace, y compris [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] ou défini par l’utilisateur.  
+ Les deux `propagateActivity` et `ActivityTracing` valeurs booléennes s’appliquent à la System.ServiceModel TraceSource. Le `ActivityTracing` valeur s’applique également à toutes les sources de trace, y compris WCF ou ceux de défini par l’utilisateur.  
   
  Vous ne pouvez pas utiliser l'attribut `propagateActivity` avec des sources de suivi définies par l'utilisateur. Pour la propagation d'ID d'activité de code utilisateur, assurez-vous de ne pas définir ServiceModel `ActivityTracing`, tout en ayant encore l'attribut `propagateActivity` ServiceModel défini à `true`.  
   

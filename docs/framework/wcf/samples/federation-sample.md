@@ -2,17 +2,17 @@
 title: Federation, exemple
 ms.date: 03/30/2017
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
-ms.openlocfilehash: 38581c7003c30038ee1a3438caa96b7f2782a23e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a9c2b91f7d8bdf24476c76fcd479b7f2fb44c90f
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="federation-sample"></a>Federation, exemple
 Cet exemple présente la sécurité fédérée :  
   
 ## <a name="sample-details"></a>Détails de l'exemple  
- Windows Communication Foundation (WCF) fournit la prise en charge pour déployer des architectures de sécurité fédérée via la `wsFederationHttpBinding`. `wsFederationHttpBinding` fournit une liaison sécurisée, fiable et interopérable qui implique l'utilisation de HTTP comme mécanisme de transport sous-jacent pour la communication demande/réponse, le format de câble d'encodage étant Text/XML. Pour plus d’informations sur la fédération dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], consultez [fédération](../../../../docs/framework/wcf/feature-details/federation.md).  
+ Windows Communication Foundation (WCF) fournit la prise en charge pour déployer des architectures de sécurité fédérée via la `wsFederationHttpBinding`. `wsFederationHttpBinding` fournit une liaison sécurisée, fiable et interopérable qui implique l'utilisation de HTTP comme mécanisme de transport sous-jacent pour la communication demande/réponse, le format de câble d'encodage étant Text/XML. Pour plus d’informations sur la fédération dans WCF, consultez [fédération](../../../../docs/framework/wcf/feature-details/federation.md).  
   
  Le scénario comporte 4 parties :  
   

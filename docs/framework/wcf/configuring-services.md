@@ -4,32 +4,32 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuration [WCF]
 ms.assetid: beac771e-f28e-4f84-9ff1-ad9251c726d3
-ms.openlocfilehash: dc3aeadafd54bbd8b57a3e8c781e0cced9e7e632
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7718edaefbad18afa11b3e3680fac39da585a610
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="configuring-services"></a>Configuration des services
 Une fois que vous avez conçu et implémenté votre contrat de service, vous êtes prêt à configurer votre service. C'est à ce stade que vous définissez et personnalisez la manière dont votre service est exposé aux clients, notamment l'adresse de son emplacement, l'encodage du transport et du message qu'il utilise pour envoyer et recevoir des messages, et le type de sécurité qu'il nécessite.  
   
- La configuration utilisée dans ce scénario comprend toutes les méthodes, de manière impérative dans le code ou à l'aide d'un fichier de configuration, permettant de définir et de personnaliser les divers aspects d'un service, tels que la spécification de ses adresses de point de terminaison, les transports utilisés et ses méthodes de sécurité. Dans la pratique, l'écriture de la configuration est une partie importante de la programmation des applications [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] .  
+ La configuration utilisée dans ce scénario comprend toutes les méthodes, de manière impérative dans le code ou à l'aide d'un fichier de configuration, permettant de définir et de personnaliser les divers aspects d'un service, tels que la spécification de ses adresses de point de terminaison, les transports utilisés et ses méthodes de sécurité. Dans la pratique, configuration de l’écriture est une majeure partie de la programmation d’applications WCF.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Configuration simplifiée](../../../docs/framework/wcf/simplified-configuration.md)  
- Depuis [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] est fourni avec un nouveau modèle de configuration par défaut qui simplifie les spécifications de configuration de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] . Si vous ne fournissez aucune configuration [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] pour un service particulier, le runtime configure automatiquement votre service à l'aide des liaisons, des comportements et des points de terminaison par défaut.  
+ En commençant par [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], WCF est fourni avec un nouveau modèle de configuration par défaut qui simplifie les exigences de configuration WCF. Si vous ne fournissez pas toute la configuration WCF pour un service particulier, le runtime configure automatiquement votre service avec les points de terminaison par défaut, les liaisons et les comportements.  
   
  [Configuration des services à l’aide de fichiers de configuration](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)  
- Un service Windows Communication Foundation (WCF) est configurable à l’aide du [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] technologie de configuration. Le plus souvent, les éléments XML sont ajoutés au fichier Web.config pour un site IIS (Internet Information Services) qui héberge un service [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] . Les éléments vous permettent de modifier des détails, tels que les adresses de point de terminaison (les adresses réelles qui communiquent avec le service), à partir de chaque ordinateur individuel.  
+ Un service Windows Communication Foundation (WCF) est configurable à l’aide du [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] technologie de configuration. En règle générale, les éléments XML sont ajoutés au fichier Web.config pour un site Internet Information Services (IIS) qui héberge un service WCF. Les éléments vous permettent de modifier des détails, tels que les adresses de point de terminaison (les adresses réelles qui communiquent avec le service), à partir de chaque ordinateur individuel.  
   
  [Liaisons](../../../docs/framework/wcf/bindings.md)  
- De plus, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] inclut plusieurs configurations fournies par le système courantes sous la forme de liaisons qui vous permettent de sélectionner rapidement les fonctionnalités les plus simples permettant à un client et à un service de communiquer, en particulier les transports, la sécurité et les encodages de message utilisés.  
+ En outre, WCF inclut plusieurs configurations courantes fournies par le système sous la forme de liaisons qui vous permettent de sélectionner rapidement les principales fonctionnalités de base pour un client et le service de communiquer, tels que les transports, la sécurité et utilisé des encodages de message.  
   
  [Points de terminaison](../../../docs/framework/wcf/endpoints.md)  
- Toutes les communications avec un [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service s’effectue via le *points de terminaison* du service. Les points de terminaison contiennent le contrat, les informations de configuration spécifiées dans les liaisons, et les adresses qui indiquent où rechercher le service ou comment obtenir des informations sur le service.  
+ Toutes les communications avec un service WCF s’effectue via le *points de terminaison* du service. Les points de terminaison contiennent le contrat, les informations de configuration spécifiées dans les liaisons, et les adresses qui indiquent où rechercher le service ou comment obtenir des informations sur le service.  
   
  [Sécurisation de services](../../../docs/framework/wcf/securing-services.md)  
- À l'aide de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] et des mécanismes de sécurité existants, vous pouvez implémenter la confidentialité, l'intégrité, l'authentification et l'autorisation dans tout service. Vous pouvez aussi auditer les succès et les défaillances de la sécurité.  
+ L’utilisation de WCF et existant mécanismes de sécurité, vous pouvez implémenter la confidentialité, l’intégrité, l’authentification et l’autorisation dans n’importe quel service. Vous pouvez aussi auditer les succès et les défaillances de la sécurité.  
   
  [Création de services interopérables avec le profil WS-I Basic Profile 1.1](../../../docs/framework/wcf/creating-ws-i-basic-profile-1-1-interoperable-services.md)  
  Les exigences pour déployer un service interopérable avec les services et les clients sur n’importe quelle autre plateforme ou système d’exploitation sont définies dans la spécification WS-I Basic Profile 1.1.  

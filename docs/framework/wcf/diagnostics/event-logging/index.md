@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - event logging [WCF]
 ms.assetid: aac0530d-f44c-45a1-bada-e30e0677b41f
-ms.openlocfilehash: 78ad80188b8428bb718251045ef04ab803862a0f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ea0e6f3dc66bf40d631077c0dce20ea46f3a6688
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="event-logging-in-wcf"></a>Journalisation des événements dans WCF
 Windows Communication Foundation (WCF) effectue le suivi des événements internes dans le journal des événements Windows.  
   
 ## <a name="viewing-event-logs"></a>Consultation des journaux des événements  
- La journalisation des événements est activée automatiquement par défaut et il n'existe aucun mécanisme pour la désactiver. Les événements journalisés par [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] peuvent être consultés à l'aide de l'Observateur d'événements. Pour lancer cet outil, cliquez sur **Démarrer**, cliquez sur **le panneau de configuration**, double-cliquez sur **outils d’administration**, puis double-cliquez sur **Observateur d’événements**.  
+ La journalisation des événements est activée automatiquement par défaut et il n'existe aucun mécanisme pour la désactiver. Événements consignés par WCF peuvent être affichés à l’aide de l’Observateur d’événements. Pour lancer cet outil, cliquez sur **Démarrer**, cliquez sur **le panneau de configuration**, double-cliquez sur **outils d’administration**, puis double-cliquez sur **Observateur d’événements**.  
   
 ### <a name="application-event-log"></a>Journal des événements de l'application  
- Le **journal des événements Application** contient la plupart des événements générés par [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]. La plupart des entrées indiquent qu’une fonctionnalité particulière n’a pas réussi à démarrer pour une application. Voici quelques exemples :  
+ Le **journal des événements Application** contient la plupart des événements générés par WCF. La plupart des entrées indiquent qu’une fonctionnalité particulière n’a pas réussi à démarrer pour une application. En voici quelques exemples :  
   
--   Journalisation/Suivi des messages : [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] écrit un événement dans le journal des événements lorsque la journalisation du suivi et des messages échoue. Toutefois, tous les échecs de suivi ne déclenchent pas un événement. Pour empêcher le journal des événements de regorger d'échecs de suivi, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] implémente une période d'indisponibilité de 10 minutes pour un tel événement. Cela signifie que si [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] écrit un échec de suivi dans le journal des événements, aucun autre échec de suivi ne sera écrit pendant au moins 10 minutes.  
+-   Journalisation/suivi des messages : WCF écrit un événement dans le journal des événements lors de la trace et que la journalisation des messages échoue. Toutefois, tous les échecs de suivi ne déclenchent pas un événement. Pour éviter que le journal des événements complètement remplie avec des erreurs de traces, WCF implémente une période d’indisponibilité de 10 minutes pour un tel événement. Cela signifie que si WCF écrit une erreur de trace dans le journal des événements, il ne produit pas encore une fois au moins 10 minutes.  
   
 -   Écouteur partagé : le service de partage de ports TCP WCF journalise un événement lorsqu'il ne réussit pas à démarrer.  
   

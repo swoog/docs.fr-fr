@@ -2,11 +2,11 @@
 title: Exportation de métadonnées personnalisées pour une extension WCF
 ms.date: 03/30/2017
 ms.assetid: 53c93882-f8ba-4192-965b-787b5e3f09c0
-ms.openlocfilehash: 8d9f5e223bb47fc8997f6509ec882b282e1ee8b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c2ae547f10e96a1fdc16fc428e98145fc81c59d5
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="exporting-custom-metadata-for-a-wcf-extension"></a>Exportation de métadonnées personnalisées pour une extension WCF
 Dans Windows Communication Foundation (WCF), exportation de métadonnées est le processus de décrire des points de terminaison de service et à les projeter dans une représentation parallèle standardisée qui les clients peuvent utiliser pour apprendre à utiliser le service. Les métadonnées personnalisées sont composées d'éléments XML que les exportateurs de métadonnées fournis par le système ne peuvent pas exporter. En général, cela inclut les éléments WSDL personnalisés des comportements définis par l'utilisateur ainsi que les éléments de liaison et les assertions de stratégie relatives aux fonctions et spécifications des liaisons et contrats.  
@@ -14,7 +14,7 @@ Dans Windows Communication Foundation (WCF), exportation de métadonnées est le
  Cette section décrit l'exportation des éléments WSDL personnalisés ou des assertions de stratégie, mais ne traite pas du processus d'exportation lui-même. Pour plus d’informations sur comment utiliser les types d’exportent et importer des métadonnées que les métadonnées sont personnalisé ou construit système, consultez [exportation et importation de métadonnées](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md).  
   
 ## <a name="overview"></a>Vue d'ensemble  
- Lorsque les métadonnées sont publiés à l'aide de <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType>, <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> est examiné, et XSD et WSDL, y compris les assertions de stratégie, sont générés pour l'ensemble des contrats et des liaisons que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] peut prendre en charge à l'aide des liaisons et des attributs fournis par le système. Toutefois, les éléments de liaison ou les attributs de comportement personnalisés requièrent une prise en charge pour pouvoir être exportés correctement.  
+ Lorsque les métadonnées sont publiées à l’aide de la <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType>, le <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> est examiné et XSD et WSDL, y compris les assertions de stratégie, sont générés pour tous les contrats et les liaisons WCF peut prendre en charge à l’aide de liaisons et des attributs fournis par le système. Toutefois, les éléments de liaison ou les attributs de comportement personnalisés requièrent une prise en charge pour pouvoir être exportés correctement.  
   
  Cette section décrit :  
   

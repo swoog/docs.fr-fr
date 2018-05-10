@@ -6,14 +6,14 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], getting started
 - getting started [WCF]
 ms.assetid: df939177-73cb-4440-bd95-092a421516a1
-ms.openlocfilehash: 4a095e5391f3b532211b82a190c7010f41283e31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 64d9fc09d56c417c2226d030ef6f5ee7204c4eb6
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="getting-started-tutorial"></a>Didacticiel de mise en route
-Les rubriques contenues dans cette section sont destinées à vous donner l’exposition rapide pour le Windows Communication Foundation (WCF) expérience de programmation. Elles doivent être parcourues dans l'ordre de la liste indiquée au bas de cette rubrique. En suivant ce didacticiel, vous aurez une compréhension de base des étapes requises pour créer un service et des applications clientes [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Un service expose un ou plusieurs points de terminaison, chaque point de terminaison exposant une ou plusieurs opérations de service. Le *point de terminaison* d’un service spécifie une adresse où le service peut être trouvé, une liaison qui contient les informations qui décrivent comment un client doit communiquer avec le service et un contrat qui définit les fonctionnalités fournie par le service pour ses clients.  
+Les rubriques contenues dans cette section sont destinées à vous donner l’exposition rapide pour le Windows Communication Foundation (WCF) expérience de programmation. Elles doivent être parcourues dans l'ordre de la liste indiquée au bas de cette rubrique. Ce didacticiel vous donne une compréhension de base des étapes requises pour créer des applications client et le service WCF. Un service expose un ou plusieurs points de terminaison, chaque point de terminaison exposant une ou plusieurs opérations de service. Le *point de terminaison* d’un service spécifie une adresse où le service peut être trouvé, une liaison qui contient les informations qui décrivent comment un client doit communiquer avec le service et un contrat qui définit les fonctionnalités fournie par le service pour ses clients.  
   
  Une fois que vous aurez terminé la séquence de rubriques de ce didacticiel, vous disposerez d'un service opérationnel et d'un client qui appelle le service. Les trois premières rubriques décrivent comment définir un contrat de service, comment implémenter le contrat de service et comment héberger le service. Le service créé est auto-hébergé dans une application console. Les services peuvent également être hébergés sous IIS (Internet Information Services). Pour plus d’informations, consultez [Comment : héberger un Service WCF dans IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md). Le service est configuré dans le code ; toutefois, les services peuvent également être configurés dans un fichier de configuration. Pour plus d’informations sur l’utilisation d’un fichier de configuration, consultez [fichiers de configuration des Services à l’aide de la Configuration](../../../docs/framework/wcf/configuring-services-using-configuration-files.md).  
   
@@ -30,7 +30,7 @@ Les rubriques contenues dans cette section sont destinées à vous donner l’ex
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Guide pratique pour définir un contrat de service](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)  
- Décrit comment créer un contrat [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] à l'aide d'une interface définie par l'utilisateur. Le contrat définit les fonctionnalités exposées par le service.  
+ Décrit comment créer un contrat WCF à l’aide d’une interface définie par l’utilisateur. Le contrat définit les fonctionnalités exposées par le service.  
   
  [Guide pratique pour implémenter un contrat de service](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)  
  Décrit comment implémenter un contrat de service. Une fois qu'un contrat est défini, il doit être implémenté avec une classe de service.  
@@ -39,13 +39,13 @@ Les rubriques contenues dans cette section sont destinées à vous donner l’ex
  Décrit comment configurer un point de terminaison pour le service dans du code et comment héberger le service dans une application console. Pour qu'il devienne actif, un service doit être configuré et hébergé dans un environnement d'exécution. Cet environnement crée le service et contrôle son contexte et sa durée de vie.  
   
  [Guide pratique pour créer un client](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
- Décrit comment extraire les métadonnées utilisées pour créer un proxy client [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] à partir d'un service [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Ce processus utilise la fonctionnalité Ajouter une référence de service dans Visual Studio 2011.  
+ Décrit comment extraire les métadonnées utilisées pour créer un proxy de client WCF à partir d’un service WCF. Ce processus utilise la fonctionnalité Ajouter une référence de service dans Visual Studio 2011.  
   
  [Guide pratique pour configurer un client](../../../docs/framework/wcf/how-to-configure-a-basic-wcf-client.md)  
  Décrit comment configurer un client WCF. La configuration du client nécessite la spécification du point de terminaison que le client utilise pour accéder au service.  
   
  [Guide pratique pour utiliser un client](../../../docs/framework/wcf/how-to-use-a-wcf-client.md)  
- Décrit comment utiliser le proxy client [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] pour appeler des opérations de service.  
+ Décrit comment utiliser le proxy client WCF pour appeler des opérations de service.  
   
 ## <a name="reference"></a>Référence  
  <xref:System.ServiceModel.ServiceContractAttribute>  

@@ -2,17 +2,17 @@
 title: Modèle de configuration hiérarchique
 ms.date: 03/30/2017
 ms.assetid: 28dcc698-226c-4b77-9e51-8bf45a36216c
-ms.openlocfilehash: 4debeaf0bfd2558552a7943f3767a4f9b53ce550
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 233a8d4ba36835ab26e0c4a8cd044cf60d497a0b
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="hierarchical-configuration-model"></a>Modèle de configuration hiérarchique
 Cet exemple montre comment implémenter une hiérarchie de fichiers de configuration pour les services. Il montre également comment les liaisons, comportements de service et comportements de point de terminaison sont hérités des niveaux supérieurs de la hiérarchie.  
   
 ## <a name="sample-details"></a>Détails de l'exemple  
- L'une des fonctionnalités développées pour [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dans [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] est l'amélioration du modèle de configuration hiérarchique. Un exemple de modèle de configuration hiérarchique pourrait être celui que définit Machine.config -> Rootweb.config -> Web.config. Dans [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)], les liaisons et comportements définis dans les niveaux supérieurs de la hiérarchie de configuration sont ajoutés à vos services sans configuration explicite. Cet exemple montre comment il est possible de simplifier votre configuration de services en vous appuyant sur les éléments de configuration définis au niveau de l'ordinateur ou de l'application.  
+ Une des fonctionnalités développées pour WCF dans [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] est l’amélioration du modèle de configuration hiérarchique. Un exemple de modèle de configuration hiérarchique pourrait être celui que définit Machine.config -> Rootweb.config -> Web.config. Dans [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)], les liaisons et comportements définis dans les niveaux supérieurs de la hiérarchie de configuration sont ajoutés à vos services sans configuration explicite. Cet exemple montre comment il est possible de simplifier votre configuration de services en vous appuyant sur les éléments de configuration définis au niveau de l'ordinateur ou de l'application.  
   
  Cet exemple se compose de neuf services, définis dans trois niveaux de la hiérarchie. `Service1` se trouve à la racine. `Service2` et `Service3` héritent des éléments par défaut de `Service1`. `Service4`, `Service5`, `Service6` et `Service7` sont définis à un troisième niveau de la hiérarchie et héritent des éléments par défaut de `Service3`. Enfin, `Service10` et `Service11` se situent à un quatrième niveau de la hiérarchie.  
   

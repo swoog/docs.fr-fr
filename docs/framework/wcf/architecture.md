@@ -1,31 +1,19 @@
 ---
 title: Architecture Windows Communication Foundation
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation [WCF], architecture
 - WCF [WCF], architecture
 - architecture [WCF]
 ms.assetid: a3bcb0a1-56ea-4ba6-9736-d260d90dade5
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1bc7383c5b93203b144c965f06fa7365c864de27
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1514010ca573be364e54a53ae047a2ff49cdad82
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="windows-communication-foundation-architecture"></a>Architecture Windows Communication Foundation
-Le graphique suivant illustre les principales couches de l'architecture [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].  
+Le graphique suivant illustre les principales couches de l’architecture de Windows Communication Foundation (WCF).  
   
 ## <a name="wcf-architecture"></a>Architecture WCF  
  ![Architecture WCF](../../../docs/framework/wcf/media/wcf-architecture.gif "WCF_Architecture")  
@@ -36,7 +24,7 @@ Le graphique suivant illustre les principales couches de l'architecture [!INCLUD
  Les stratégies et liaisons stipulent les conditions requises pour communiquer avec un service.  Par exemple, la liaison doit spécifier (au minimum) le transport utilisé (par exemple, HTTP ou TCP) et un encodage. Les stratégies incluent des spécifications de sécurité et d'autres conditions qui doivent être remplies pour communiquer avec un service.  
   
 ### <a name="service-runtime"></a>Exécution du service  
- La couche d'exécution du service contient les comportements qui se produisent uniquement pendant le fonctionnement du service, autrement dit, les comportements au moment de l'exécution du service. La limitation contrôle le nombre de messages traités, qui peut varier si la demande pour le service atteint une limite prédéfinie. Un comportement d'erreur spécifie ce qui se passe lorsqu'une erreur interne se produit sur le service, par exemple, en contrôlant les informations communiquées au client. (Trop d'informations peuvent donner un avantage à un utilisateur malveillant pour mettre en œuvre une attaque.) Un comportement de métadonnées détermine si les métadonnées sont mises à la disposition du monde extérieur et comment elles le sont. Un comportement d'instance définit le nombre d'instances du service qui peuvent être exécutées (par exemple, un singleton spécifie une seule instance pour traiter tous les messages). Un comportement de transaction permet de restaurer les opérations traitées en cas de défaillance. Un comportement de répartition permet de contrôler la manière dont un message est traité par l'infrastructure [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+ La couche d'exécution du service contient les comportements qui se produisent uniquement pendant le fonctionnement du service, autrement dit, les comportements au moment de l'exécution du service. La limitation contrôle le nombre de messages traités, qui peut varier si la demande pour le service atteint une limite prédéfinie. Un comportement d'erreur spécifie ce qui se passe lorsqu'une erreur interne se produit sur le service, par exemple, en contrôlant les informations communiquées au client. (Trop d'informations peuvent donner un avantage à un utilisateur malveillant pour mettre en œuvre une attaque.) Un comportement de métadonnées détermine si les métadonnées sont mises à la disposition du monde extérieur et comment elles le sont. Un comportement d'instance définit le nombre d'instances du service qui peuvent être exécutées (par exemple, un singleton spécifie une seule instance pour traiter tous les messages). Un comportement de transaction permet de restaurer les opérations traitées en cas de défaillance. Comportement de répartition est le contrôle de la manière dont un message est traité par l’infrastructure WCF.  
   
  L'extensibilité permet la personnalisation des processus d'exécution. Par exemple, l'inspection de message est la fonctionnalité qui permet d'inspecter des parties d'un message, et le filtrage de paramètre permet d'exécuter des actions prédéfinies en fonction de filtres appliqués aux en-têtes de message.  
   
@@ -54,7 +42,7 @@ Le graphique suivant illustre les principales couches de l'architecture [!INCLUD
 ### <a name="hosting-and-activation"></a>Hébergement et activation  
  Sous sa forme définitive, un service est un programme. Comme tout autre programme, un service doit être exécuté dans un fichier exécutable. Il s’agit comme un *auto-hébergé* service.  
   
- Services peuvent également être *hébergé*, ou s’exécuter dans un fichier exécutable géré par un agent externe, telles que les services IIS ou le Service d’Activation Windows (WAS). Le service WAS permet d'activer automatiquement les applications [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] lorsqu'elles sont déployées sur un ordinateur WAS. Les services peuvent également être exécutés manuellement comme des fichiers exécutables (fichiers .exe). Un service peut également être exécuté automatiquement en tant que service Windows. Les composants COM+ peuvent également être hébergés en tant que services [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+ Services peuvent également être *hébergé*, ou s’exécuter dans un fichier exécutable géré par un agent externe, telles que les services IIS ou le Service d’Activation Windows (WAS). ÉTAIT permet aux applications de WCF d’être activé automatiquement lors du déploiement sur un ordinateur en cours d’exécution. Les services peuvent également être exécutés manuellement comme des fichiers exécutables (fichiers .exe). Un service peut également être exécuté automatiquement en tant que service Windows. Les composants COM + peuvent également être hébergés en tant que services WCF.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Présentation de Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  

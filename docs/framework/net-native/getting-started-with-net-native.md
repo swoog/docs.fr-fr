@@ -22,7 +22,7 @@ Que vous écriviez une nouvelle application Windows pour Windows 10 ou que vous 
 4.  [Résolvez manuellement les métadonnées manquantes](#Step4) et répétez l’[étape 3](#Step3) jusqu’à ce que tous les problèmes soient résolus.  
   
 > [!NOTE]
->  Si vous migrez une application du Windows Store existante vers [!INCLUDE[net_native](../../../includes/net-native-md.md)], veillez à consulter [Migrating Your Windows Store App to .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md).  
+>  Si vous migrez une application du Windows Store existante vers [!INCLUDE[net_native](../../../includes/net-native-md.md)], veillez à consulter [Migration de votre application du Windows Store vers .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md).  
   
 <a name="Step1"></a>   
 ## <a name="step-1-develop-and-test-debug-builds-of-your-uwp-app"></a>Étape 1 : développer et tester les versions Debug de votre application UWP  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-ms.openlocfilehash: 5a6ea4f3ba121f419d1a8c46fc2534988a93d554
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e752f6f4428d01474d643f1571935cb7d96d41ca
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>Démarrage rapide de la résolution des problèmes WCF
 Cette rubrique décrit quelques problèmes connus rencontrés par les clients lorsqu'ils développement des clients et services WCF. Si le problème que vous rencontrez n'est pas répertorié dans la liste, nous vous recommandons de configurer le traçage de votre service. Vous allez ainsi générer un fichier de suivi que vous pourrez consulter à l'aide de la visionneuse dédiée pour obtenir des informations détaillées sur les exceptions pouvant se produire au sein du service. Pour plus d’informations sur la configuration du traçage, consultez [Configuring Tracing](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md). Pour plus d’informations sur la visionneuse de fichier de traçage, consultez [Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
@@ -153,7 +153,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BKMK_q6"></a>   
 ## <a name="it-seems-like-one-way-and-request-reply-operations-return-at-roughly-the-same-speed-when-the-reply-contains-no-data-whats-happening"></a>Il semble que les opérations monodirectionnelles et demande-réponse reviennent quasiment à la même vitesse lorsque la réponse ne contient pas de données. Que se passe-t-il ?  
- Spécifier qu'une opération est monodirectionnelle signifie uniquement que le contrat de l'opération accepte un message d'entrée et ne renvoie pas de message de sortie. Dans [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], tous les appels clients sont renvoyés lorsque les données sortantes ont été écrites sur le fil ou qu'une exception est levée. Les opérations monodirectionnelles fonctionnent de la même façon et elles peuvent lever si le service ne peut pas être localisé ou bloquer si le service n'est pas préparé à accepter les données du réseau. En général, dans [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], cela provoque des appels monodirectionnels renvoyés au client plus rapidement qu'une demande-réponse ; mais toute condition qui ralentit l'envoi des données sortantes sur le réseau ralentit les opérations monodirectionnelles ainsi que les opérations demande-réponse. Pour plus d’informations, consultez [unidirectionnel Services](../../../docs/framework/wcf/feature-details/one-way-services.md) et [les Services de l’accès à l’aide d’un Client WCF](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md).  
+ Spécifier qu'une opération est monodirectionnelle signifie uniquement que le contrat de l'opération accepte un message d'entrée et ne renvoie pas de message de sortie. Dans WCF, tous les appels de clients sont renvoyés lorsque les données sortantes ont été écrites sur le câble ou d’une exception est levée. Les opérations monodirectionnelles fonctionnent de la même façon et elles peuvent lever si le service ne peut pas être localisé ou bloquer si le service n'est pas préparé à accepter les données du réseau. Dans WCF, cela se produit généralement des appels monodirectionnels au client plus rapidement qu’une demande-réponse ; mais toute condition qui ralentit l’envoi des données sortantes sur le réseau ralentit les opérations monodirectionnelles ainsi que des opérations de demande-réponse. Pour plus d’informations, consultez [unidirectionnel Services](../../../docs/framework/wcf/feature-details/one-way-services.md) et [les Services de l’accès à l’aide d’un Client WCF](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md).  
   
 <a name="BKMK_q77"></a>   
 ## <a name="im-using-an-x509-certificate-with-my-service-and-i-get-a-systemsecuritycryptographycryptographicexception-whats-happening"></a>J'utilise un certificat X.509 avec mon service et j'obtiens une System.Security.Cryptography.CryptographicException. Que se passe-t-il ?  
@@ -168,8 +168,8 @@ public class MyServiceHost : ServiceHost
  La valeur des noms de paramètre dans la signature de l'opération fait partie du contrat et respecte la casse. Utilisez l'attribut <xref:System.ServiceModel.MessageParameterAttribute?displayProperty=nameWithType> lorsque vous devez distinguer le nom du paramètre local et les métadonnées qui décrivent l'opération pour les applications clientes.  
   
 <a name="BKMK_q99"></a>   
-## <a name="im-using-one-of-my-tracing-tools-and-i-get-an-endpointnotfoundexception-whats-happening"></a>J'utilise l'un de mes outils de suivi et j'obtiens une EndpointNotFoundException. Que se passe-t-il ?  
- Si vous utilisez un outil de suivi qui n'est pas le mécanisme de suivi [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] fourni par le système et que vous recevez une <xref:System.ServiceModel.EndpointNotFoundException> qui indique une incompatibilité du filtre d'adresse, vous devez utiliser la classe <xref:System.ServiceModel.Description.ClientViaBehavior> pour diriger les messages vers l'utilitaire de suivi et faire rediriger ces messages par l'utilitaire vers l'adresse du service. La classe <xref:System.ServiceModel.Description.ClientViaBehavior> altère l'en-tête d'adressage `Via` pour spécifier l'adresse réseau suivante séparément du dernier destinataire, indiqué par l'en-tête d'adressage `To` . Ce faisant, en revanche, ne modifiez pas l'adresse du point de terminaison, utilisée pour établir la valeur `To` .  
+## <a name="im-using-one-of-my-tracing-tools-and-i-get-an-endpointnotfoundexception-whats-happening"></a>J'utilise l'un de mes outils de suivi et j'obtiens une EndpointNotFoundException. Que se passe-t-il ?  
+ Si vous utilisez un outil de suivi qui n’est pas le mécanisme de suivi WCF fournie par le système et que vous recevez un <xref:System.ServiceModel.EndpointNotFoundException> qui indique une incompatibilité de filtre d’adresse, vous devez utiliser le <xref:System.ServiceModel.Description.ClientViaBehavior> classe pour diriger les messages vers l’utilitaire de suivi et que l’utilitaire de rediriger ces messages à l’adresse du service. La classe <xref:System.ServiceModel.Description.ClientViaBehavior> altère l'en-tête d'adressage `Via` pour spécifier l'adresse réseau suivante séparément du dernier destinataire, indiqué par l'en-tête d'adressage `To` . Ce faisant, en revanche, ne modifiez pas l'adresse du point de terminaison, utilisée pour établir la valeur `To` .  
   
  L'exemple de code suivant présente un exemple de fichier de configuration d'un client.  
   

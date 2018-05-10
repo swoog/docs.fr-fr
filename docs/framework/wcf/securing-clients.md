@@ -6,17 +6,17 @@ helpviewer_keywords:
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 34e7a3721fc70b5c418f0e473e09d9dacc8d9f15
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: dfbe1fcce8a3b860e88dae4f5af43adfedbe9890
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="securing-clients"></a>Sécurisation des clients
 Dans Windows Communication Foundation (WCF), le service dicte les exigences de sécurité pour les clients. Autrement dit, le service spécifie quel mode de sécurité utiliser, et si le client doit fournir ou non une information d'identification. Le processus de la sécurisation d'un client, par conséquent, est simple : utilisez les métadonnées obtenues depuis le service (s'il est publié) et générez un client. Les métadonnées spécifient comment configurer le client. Si le service exige que le client fournisse une information d’identification, vous devez obtenir une information d’identification qui correspond à l’exigence. Cette rubrique décrit en détail le processus. Pour plus d’informations sur la création d’un service sécurisé, consultez [sécurisation des Services](../../../docs/framework/wcf/securing-services.md).  
   
 ## <a name="the-service-specifies-security"></a>Le service spécifie la sécurité  
- Par défaut, les fonctionnalités de sécurité des liaisons [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] sont activées. (Exception : <xref:System.ServiceModel.BasicHttpBinding>.) Par conséquent, si le service a été créé à l'aide de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], il est plus probable qu'il implémente la sécurité pour garantir l'identification, la confidentialité et l'intégrité. Dans ce cas, les métadonnées que le service fournit indiqueront ce qu'il faut pour établir un canal de communication sécurisé. Si les métadonnées du service n'incluent pas de conditions de sécurité, il n'y a aucun moyen d'imposer une méthode de sécurité, telle que SSL (Secure Sockets Layer) sur HTTP, sur un service. Toutefois, si le service exige que le client fournisse une information d'identification, le développeur, le responsable du déploiement ou l'administrateur client doit fournir l'information d'identification réelle que le client utilisera pour s'identifier auprès du service.  
+ Par défaut, les liaisons WCF ont des fonctionnalités de sécurité activées. (Exception : <xref:System.ServiceModel.BasicHttpBinding>.) Par conséquent, si le service a été créé à l’aide de WCF, il est plus probable qu’il implémente la sécurité pour garantir l’intégrité, la confidentialité et l’authentification. Dans ce cas, les métadonnées que le service fournit indiqueront ce qu'il faut pour établir un canal de communication sécurisé. Si les métadonnées du service n'incluent pas de conditions de sécurité, il n'y a aucun moyen d'imposer une méthode de sécurité, telle que SSL (Secure Sockets Layer) sur HTTP, sur un service. Toutefois, si le service exige que le client fournisse une information d'identification, le développeur, le responsable du déploiement ou l'administrateur client doit fournir l'information d'identification réelle que le client utilisera pour s'identifier auprès du service.  
   
 ## <a name="obtaining-metadata"></a>Obtention des métadonnées  
  Lors de la création d'un client, la première étape est d'obtenir les métadonnées pour le service avec lequel le client communiquera. Cette opération peut être effectuée de deux façons. Tout d’abord, si le service publie un point de terminaison de métadonnées (MEX) d’exchange ou la disposition de ses métadonnées via HTTP ou HTTPS, vous pouvez télécharger les métadonnées à l’aide de la [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), ce qui génère à la fois fichiers de code pour un client, ainsi que d’un fichier de configuration. (Pour plus d’informations sur l’utilisation de l’outil, consultez [les Services de l’accès à l’aide d’un Client WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md).) Si le service ne publie pas de point de terminaison MEX et ne rend pas ses métadonnées disponibles sur HTTP ou HTTPS, vous devez contacter le créateur du service pour obtenir la documentation qui décrit les exigences de sécurité et les métadonnées.  

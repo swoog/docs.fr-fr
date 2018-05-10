@@ -2,17 +2,17 @@
 title: Utilisation de Service Trace Viewer pour afficher les suivis corrélés et résoudre les problèmes
 ms.date: 03/30/2017
 ms.assetid: 05d2321c-8acb-49d7-a6cd-8ef2220c6775
-ms.openlocfilehash: bfc0d2c10bfdca253f2ce410a4cd38218b3f5cfe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cfa1ec0e486943d196ec016be87544f17a0114e6
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a>Utilisation de Service Trace Viewer pour afficher les suivis corrélés et résoudre les problèmes
 Cette rubrique décrit le format des données de suivi, leur mode de consultation, et les approches qui utilisent Service Trace Viewer pour résoudre les problèmes posés par votre application.  
   
 ## <a name="using-the-service-trace-viewer-tool"></a>Utilisation de l'outil Service Trace Viewer  
- L’outil Windows Communication Foundation (WCF) Service Trace Viewer vous permet de mettre en corrélation les suivis de diagnostic produits par [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] provoquent des écouteurs pour localiser l’origine d’une erreur. L'outil vous permet de consulter, regrouper et filtrer facilement les suivis afin de pouvoir diagnostiquer, réparer et vérifier les problèmes liés aux services [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]. Pour plus d’informations sur l’utilisation de cet outil, consultez [outil Service Trace Viewer (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
+ L’outil Windows Communication Foundation (WCF) Service Trace Viewer vous permet de mettre en corrélation les suivis de diagnostic produits par les écouteurs de WCF pour localiser la cause racine d’une erreur. L’outil vous permet de facilement consulter, regrouper et filtrer des traces afin que vous pouvez diagnostiquer, réparer et vérifier les problèmes avec les services WCF. Pour plus d’informations sur l’utilisation de cet outil, consultez [outil Service Trace Viewer (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
   
  Cette rubrique contient des captures d’écran de suivis générés en exécutant la [Tracing and Message Logging](../../../../../docs/framework/wcf/samples/tracing-and-message-logging.md) exemple, lorsqu’ils sont affichés à l’aide de la [outil Service Trace Viewer (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Cette rubrique explique comment interpréter le contenu, les activités de suivi, et leur corrélation, et comment analyser un grand nombre de suivis au cours de la résolution des problèmes.  
   
@@ -104,11 +104,11 @@ Cette rubrique décrit le format des données de suivi, leur mode de consultatio
 ```  
   
 ## <a name="servicemodel-e2e-tracing"></a>Suivi de ServiceModel E2E  
- Lorsque la source de suivi `System.ServiceModel` est définie avec un `switchValue` différent de « Désactivé » et `ActivityTracing`, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] crée des activités et des transferts pour le traitement [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)].  
+ Lorsque le `System.ServiceModel` source de trace est définie avec un `switchValue` autre que « désactivé » et `ActivityTracing`, WCF crée des activités et transferts pour le traitement de WCF.  
   
- Une activité est une unité logique de traitement qui regroupe tous les suivis liés à cette unité de traitement. Par exemple, vous pouvez définir une activité pour chaque demande. Les transferts créent une relation causale entre des activités dans des points de terminaison. Propager l'ID d'activité vous permet de lier des activités sur des points de terminaison. Cela est possible en définissant `propagateActivity` = `true` dans la configuration à chaque point de terminaison. Les activités, les transferts et la propagation vous permettent d'effectuer la corrélation d'erreur. De cette manière, vous pouvez rechercher plus rapidement l'origine d'une erreur.  
+ Une activité est une unité logique de traitement qui regroupe tous les suivis liés à cette unité de traitement. Par exemple, vous pouvez définir une activité pour chaque demande. Les transferts créent une relation causale entre des activités dans des points de terminaison. Propager l'ID d'activité vous permet de lier des activités sur des points de terminaison. Cela est possible en définissant `propagateActivity` = `true` dans la configuration à chaque point de terminaison. Les activités, les transferts et la propagation vous permettent d'effectuer la corrélation d'erreur. De cette manière, vous pouvez rechercher plus rapidement la cause racine d’une erreur.  
   
- Sur le client, une activité [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] est créée pour chaque appel de modèle objet (par exemple, Ouvrir ChannelFactory, Ajouter, Diviser, et ainsi de suite.) Chacun des appels d’opération est traité dans une activité « Action de processus ».  
+ Sur le client, une activité WCF est créée pour chaque appel de modèle objet (par exemple, Ouvrir ChannelFactory, ajouter, diviser et ainsi de suite.) Chacun des appels d’opération est traité dans une activité « Action de processus ».  
   
  Dans la capture d’écran suivante, extraite à partir de la [Tracing and Message Logging](../../../../../docs/framework/wcf/samples/tracing-and-message-logging.md) exemple, le volet gauche affiche la liste des activités créées dans le processus client, trié par date de création. Vous trouverez ci-dessous une liste chronologique des activités :  
   
@@ -127,14 +127,14 @@ Cette rubrique décrit le format des données de suivi, leur mode de consultatio
  Les messages d'infrastructure de sécurité s'affichent à cause de l'élément wsHttpBinding.  
   
 > [!NOTE]
->  Dans [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)], nous affichons des messages de réponse qui sont traités initialement dans une activité séparée (Traiter le message) avant de les corréler à l'activité Traiter l'action correspondante qui inclut le message de demande, par le biais d'un transfert. Cette opération a lieu pour les messages d'infrastructure et les demandes asynchrones et tient au fait que nous devons inspecter le message, lire l'en-tête activityId et identifier l'activité Traiter l'action existante avec cet ID pour le corréler. Pour les demandes synchrones, nous attendons la réponse et donc nous savons à quelle activité de traitement d’action se rapporte la réponse.  
+>  Dans WCF, nous affichons des messages de réponse qui sont traités initialement dans une activité séparée (traiter le message) avant de les corréler à l’activité traiter l’Action correspondante qui inclut le message de demande, via un transfert. Cette opération a lieu pour les messages d'infrastructure et les demandes asynchrones et tient au fait que nous devons inspecter le message, lire l'en-tête activityId et identifier l'activité Traiter l'action existante avec cet ID pour le corréler. Pour les demandes synchrones, nous attendons la réponse et donc nous savons à quelle activité de traitement d’action se rapporte la réponse.  
   
  ![À l’aide de la visionneuse de Trace](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace4.gif "e2eTrace4")  
 Activités clientes WCF répertoriées selon l'heure de création (volet gauche) et leurs activités et suivis imbriqués (volet supérieur droit)  
   
  Lorsque nous sélectionnons une activité dans le volet gauche, le volet supérieur droit affiche des activités et des suivis imbriqués. Par conséquent, il s'agit d'une vue hiérarchique réduite de la liste des activités de gauche basées sur l'activité parente sélectionnée. Comme l'activité « Traiter l'action Add » sélectionnée est la première demande effectuée, cette activité contient l'activité Configurer une session sécurisée (transférer vers, transférer en retour) et les suivis du traitement réel de l'action Ajouter.  
   
- En double-cliquant sur l'activité « Traiter l'action Add » dans le volet gauche, une représentation graphique des activités [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] clientes liées à l'activité Ajouter est affichée. La première activité à gauche est l'activité racine (0000), l'activité par défaut. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] transfère l'activité ambiante. Si celle-ci n'est pas définie, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] transfère hors de 0000. Dans ce contexte, la deuxième activité (« Traiter l'action Add ») transfère hors de 0. Elle est suivie de Configurer la session sécurisée.  
+ En double-cliquant sur l’action de processus ajouter une activité dans le volet gauche, nous pouvons voir une représentation graphique des activités WCF client liés à ajouter. La première activité à gauche est l'activité racine (0000), l'activité par défaut. WCF transfère l’activité ambiante. Si ce n’est pas défini, WCF transfère hors de 0000. Dans ce contexte, la deuxième activité (« Traiter l'action Add ») transfère hors de 0. Elle est suivie de Configurer la session sécurisée.  
   
  ![À l’aide de la visionneuse de Trace](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace5.gif "e2eTrace5")  
 Vue graphique des activités clientes de WCF : activité ambiante (ici 0), Traiter l'action et Configurer une session sécurisée  
@@ -146,7 +146,7 @@ Liste de suivis pour l'activité Traiter l'action : nous envoyons la demande et
   
  Ici, nous charger suivis clients uniquement par souci de clarté, mais les suivis de service (message de demande reçu et message de réponse envoyé) apparaissent dans la même activité si elles sont également chargés dans l’outil et `propagateActivity` a été défini sur `true.` cela est illustré plus loin.  
   
- Sur le service, le modèle d'activité est mappé aux concepts [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] comme suit :  
+ Sur le service, le modèle d’activité mappe aux concepts WCF comme suit :  
   
 1.  Nous construisons et ouvrons un ServiceHost (cela peut créer plusieurs activités associées à l'hôte, par exemple, dans le cas de la sécurité).  
   
@@ -154,11 +154,11 @@ Liste de suivis pour l'activité Traiter l'action : nous envoyons la demande et
   
 3.  Lorsque l’écouteur détecte une demande de communication initiée par le client, elle transfère à une activité « Recevoir des octets », dans lequel tous les octets envoyés par le client sont traités. Dans cette activité, nous pouvons voir les erreurs de connexion qui se sont produites pendant l'interaction du service et du client.  
   
-4.  Pour chaque ensemble d’octets reçu qui correspond à un message, nous traitons ces octets dans une activité « Traiter le Message », où nous créons le [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] objet Message. Dans cette activité, nous constatons des erreurs dues à un message erroné ou à une enveloppe incorrecte.  
+4.  Pour chaque ensemble d’octets reçu qui correspond à un message, nous traitons ces octets dans une activité « Traiter le Message », où nous créons l’objet Message WCF. Dans cette activité, nous constatons des erreurs dues à un message erroné ou à une enveloppe incorrecte.  
   
-5.  Une fois que le message est formé, nous transférons à une activité Traiter l'action. Si `propagateActivity` a la valeur `true` sur le client et le service, cette activité a le même identificateur que celui défini dans le client et décrit précédemment. À partir de cette étape, nous commençons à bénéficier de la corrélation directe sur des points de terminaison, car tous les suivis émis dans [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] liés à la demande appartiennent à cette même activité, y compris le traitement du message de réponse.  
+5.  Une fois que le message est formé, nous transférons à une activité Traiter l'action. Si `propagateActivity` a la valeur `true` sur le client et le service, cette activité a le même identificateur que celui défini dans le client et décrit précédemment. À partir de cette étape nous commençons à bénéficier de la corrélation directe entre les points de terminaison, car tous les suivis émis dans WCF qui sont liées à la demande sont dans cette même activité, y compris le traitement du message de réponse.  
   
-6.  Pour l’action d’out-of-process, nous créons une activité « Exécuter le code utilisateur » pour isoler les suivis émis dans le code utilisateur à partir de ceux émis dans [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]. Dans l’exemple précédent, le suivi de « Service envoie la réponse ajouter » est émis dans l’activité « Exécuter le code utilisateur », pas dans l’activité propagée par le client, le cas échéant.  
+6.  Pour l’action d’out-of-process, nous créer une activité « Exécuter le code utilisateur » pour isoler les suivis émis dans le code utilisateur à partir de ceux émis dans WCF. Dans l’exemple précédent, le suivi de « Service envoie la réponse ajouter » est émis dans l’activité « Exécuter le code utilisateur », pas dans l’activité propagée par le client, le cas échéant.  
   
  Dans l'illustration suivante, la première activité à gauche est l'activité racine (0000), l'activité par défaut. Les trois activités suivantes consistent à ouvrir le ServiceHost. L'activité dans la colonne 5 est l'écouteur, et les activités restantes (6 à 8) décrivent le traitement WCF d'un message, du traitement des octets à l'activation du code utilisateur.  
   

@@ -5,22 +5,22 @@ helpviewer_keywords:
 - clients [WCF], running
 - WCF clients [WCF], running
 ms.assetid: a67884cc-1c4b-416b-8c96-5c954099f19f
-ms.openlocfilehash: 962f1255f3c759d623850678005eff138353cc80
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d2932293536f875d8986d8d49842cddc196ced0f
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-create-a-windows-communication-foundation-client"></a>Comment : créer un client Windows Communication Foundation
 Il s’agit de la quatrième des six tâches requises pour créer une application Windows Communication Foundation (WCF). Pour une vue d’ensemble des six tâches, consultez la [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md) rubrique.  
   
- Cette rubrique décrit comment extraire les métadonnées d'un service [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] et les utiliser pour créer un proxy [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] qui peut accéder au service. Cette tâche prend fin en utilisant la fonctionnalité Ajouter une référence de service fournie par Visual Studio. Cet outil obtient les métadonnées du point de terminaison MEX du service et génère un fichier de code source managé pour un proxy client dans le langage que vous avez choisi (C# par défaut). L'outil crée non seulement le proxy client, mais également le fichier de configuration (ou le met à jour) pour le client qui permet à l'application cliente de se connecter au service au niveau de l'un de ses points de terminaison.  
+ Cette rubrique décrit comment récupérer les métadonnées d’un service WCF et l’utiliser pour créer un proxy WCF qui peut accéder au service. Cette tâche prend fin en utilisant la fonctionnalité Ajouter une référence de service fournie par Visual Studio. Cet outil obtient les métadonnées du point de terminaison MEX du service et génère un fichier de code source managé pour un proxy client dans le langage que vous avez choisi (C# par défaut). L'outil crée non seulement le proxy client, mais également le fichier de configuration (ou le met à jour) pour le client qui permet à l'application cliente de se connecter au service au niveau de l'un de ses points de terminaison.  
   
 > [!NOTE]
 >  Vous pouvez également utiliser le [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) outil pour générer la classe de proxy et la configuration au lieu d’utiliser Ajouter une référence de Service à l’intérieur de Visual Studio.  
   
 > [!WARNING]
->  Lors de l'appel d'un service [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] à partir d'un projet de bibliothèque de classes dans [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)], vous pouvez utiliser la fonctionnalité Ajouter une référence de service pour générer automatiquement un proxy et le fichier de configuration associé.  Le fichier de configuration ne sera pas utilisé par le projet de bibliothèque de classes. Vous devez ajouter les paramètres dans le fichier de configuration généré dans le fichier app.config pour le fichier exécutable qui appelle la bibliothèque de classes.  
+>  Lors de l’appel d’un service WCF à partir d’un projet de bibliothèque de classes dans [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] vous pouvez utiliser la fonctionnalité Ajouter une référence de Service pour générer automatiquement un proxy et un fichier de configuration associé.  Le fichier de configuration ne sera pas utilisé par le projet de bibliothèque de classes. Vous devez ajouter les paramètres dans le fichier de configuration généré dans le fichier app.config pour le fichier exécutable qui appelle la bibliothèque de classes.  
   
  L'application cliente utilise la classe proxy générée pour communiquer avec le service. Cette procédure est décrite dans [Comment : utiliser un Client](../../../docs/framework/wcf/how-to-use-a-wcf-client.md).  
   

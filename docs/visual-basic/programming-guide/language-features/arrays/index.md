@@ -1,11 +1,6 @@
 ---
 title: Tableaux dans Visual Basic
-ms.custom: ''
 ms.date: 12/06/2017
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Array
 helpviewer_keywords:
@@ -14,12 +9,11 @@ helpviewer_keywords:
 ms.assetid: dbf29737-b589-4443-bee6-a27588d9c67e
 author: rpetrusha
 ms.author: ronpet
-ms.manager: wpickett
-ms.openlocfilehash: d223ca8b0ff59a13c31fa777e5cb6a97918421c6
-ms.sourcegitcommit: 01ea3686e74ff05e4f6de3d8d46dc603d051ec00
+ms.openlocfilehash: 3b6c1db0131f2a150dc1b00dd5e6dafc3a418f05
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="arrays-in-visual-basic"></a>Tableaux dans Visual Basic
 Un tableau est un ensemble de valeurs, qui sont appelés *éléments*, qui sont logiquement liés entre eux. Par exemple, un tableau peut contenir le nombre d’étudiants de chaque niveau scolaire dans une école primaire ; chaque élément du tableau est le nombre d’élèves d’un niveau unique. De même, un tableau peut se composer de notes d’un étudiant pour une classe ; chaque élément du tableau est un niveau unique.    
@@ -165,7 +159,7 @@ Comme vous le faites pour les tableaux unidimensionnels, vous pouvez compter sur
   
  [!code-vb[iterate-one-dimensional-array](../../../../../samples/snippets/visualbasic/programming-guide/language-features/arrays/iterate1d.vb)]  
   
- L’exemple suivant effectue une itération dans un tableau multidimensionnel en utilisant un [ `For...Next` ](../../../../visual-basic/language-reference/statements/for-next-statement.md) instruction. La méthode <xref:System.Array.GetUpperBound%2A> dispose d’un paramètre qui spécifie la dimension. `GetUpperBound(0)`Retourne l’index le plus élevé de la première dimension et `GetUpperBound(1)` retourne l’index le plus élevé de la deuxième dimension.
+ L’exemple suivant effectue une itération dans un tableau multidimensionnel en utilisant un [ `For...Next` ](../../../../visual-basic/language-reference/statements/for-next-statement.md) instruction. La méthode <xref:System.Array.GetUpperBound%2A> dispose d’un paramètre qui spécifie la dimension. `GetUpperBound(0)` Retourne l’index le plus élevé de la première dimension et `GetUpperBound(1)` retourne l’index le plus élevé de la deuxième dimension.
   
  [!code-vb[iterate-two-dimensional-array](../../../../../samples/snippets/visualbasic/programming-guide/language-features/arrays/iterate2d.vb)]  
   
@@ -246,12 +240,12 @@ Un tableau en escalier est un tableau unidimensionnel dont les éléments contie
 [!code-vb[jagged-array-size](../../../../../samples/snippets/visualbasic/programming-guide/language-features/arrays/jagged-length.vb)] 
 
 ## <a name="zero-length-arrays"></a>Tableaux de longueur zéro  
-Visual Basic fait la distinction entre un tableau sans être initialisé (un tableau dont la valeur est `Nothing`) et un *tableau de longueur zéro* ou tableau vide (un tableau qui ne comporte aucun élément.) Un tableau non initialisé est une tâche qui n’a pas été dimensionnée ou avaient des valeurs affecté à ce dernier. Exemple :
+Visual Basic fait la distinction entre un tableau sans être initialisé (un tableau dont la valeur est `Nothing`) et un *tableau de longueur zéro* ou tableau vide (un tableau qui ne comporte aucun élément.) Un tableau non initialisé est une tâche qui n’a pas été dimensionnée ou avaient des valeurs affecté à ce dernier. Par exemple :
 
 ```vb
 Dim arr() As String
 ```
-Un tableau de longueur zéro est déclaré avec une dimension de -1. Exemple :
+Un tableau de longueur zéro est déclaré avec une dimension de -1. Par exemple :
 
 ```vb
 Dim arrZ(-1) As String
@@ -312,7 +306,7 @@ L’exemple suivant utilise la deuxième approche pour ajouter les quatre tablea
   
  Lorsque vous utilisez `ReDim` pour redimensionner un tableau, Visual Basic crée un tableau et libère le précédent. Cela prend du temps d’exécution. Par conséquent, si le nombre d’éléments que vous utilisez change régulièrement ou si vous ne pouvez pas prédire le nombre maximal d’éléments dont vous avez besoin, vous allez obtenir généralement de meilleures performances à l’aide d’une collection.  
   
- Pour certaines collections, vous pouvez assigner une clé à un objet que vous placez dans la collection pour vous permettre de récupérer rapidement l’objet à l’aide de la clé.  
+ Pour certaines collections, vous pouvez affecter une clé à tout objet que vous placez dans la collection de sorte à pouvoir récupérer rapidement l’objet à l’aide de la clé.  
   
  Si votre collection contient des éléments d’un seul type de données, vous pouvez utiliser l’une des classes de l’espace de noms <xref:System.Collections.Generic?displayProperty=nameWithType> . Une collection générique applique la cohérence des types pour éviter qu’un autre type puisse y être ajouté.  
   

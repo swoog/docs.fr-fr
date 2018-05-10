@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - binding configuration [WCF]
 ms.assetid: 99a85fd8-f7eb-4a84-a93e-7721b37d415c
-ms.openlocfilehash: 8fcb2fbf49984ce2b6aaf1f112575d05a3d7d038
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b91c8ff5a78ef2b2b2db5ea26ae7a1733a97ffd0
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="configuring-bindings-for-windows-communication-foundation-services"></a>Configuration de liaisons pour les services Windows Communication Foundation
 Lorsque vous créez une application, vous souhaitez souvent confier des décisions à l'administrateur après le déploiement de l'application. Par exemple, il n'existe souvent aucune façon de savoir à l'avance ce que sera une adresse de service ou un URI (Uniform Resource Identifier). Au lieu de d'encoder de manière irréversible une adresse, il est préférable de permettre à un administrateur de le faire après avoir créé un service. Cette souplesse est obtenue par le biais de la configuration.  
@@ -39,9 +39,9 @@ Lorsque vous créez une application, vous souhaitez souvent confier des décisio
   
  Par exemple, en spécifiant le [ \<basicHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) élément indique l’utilisation de HTTP comme transport pour un point de terminaison. Cela permet de rattacher le point de terminaison au moment de l'exécution lorsque le service qui utilise ce point de terminaison est ouvert.  
   
- Il existe deux types de liaisons : les liaisons prédéfinies et les liaisons personnalisées. Les liaisons prédéfinies contiennent des combinaisons utiles d’éléments utilisés dans des scénarios courants. Pour les types de liste de liaison prédéfinie qui [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] fournit, consultez [les liaisons fournies](../../../docs/framework/wcf/system-provided-bindings.md). Si aucune collection de liaison prédéfinie n’a la combinaison correcte de fonctionnalités dont une application de service a besoin, vous pouvez construire des liaisons personnalisées pour satisfaire les exigences de l’application. Pour plus d’informations sur les liaisons personnalisées, consultez [ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
+ Il existe deux types de liaisons : les liaisons prédéfinies et les liaisons personnalisées. Les liaisons prédéfinies contiennent des combinaisons utiles d’éléments utilisés dans des scénarios courants. Pour obtenir la liste des types de liaison prédéfinie qui fournit de WCF, consultez [les liaisons fournies](../../../docs/framework/wcf/system-provided-bindings.md). Si aucune collection de liaison prédéfinie n’a la combinaison correcte de fonctionnalités dont une application de service a besoin, vous pouvez construire des liaisons personnalisées pour satisfaire les exigences de l’application. Pour plus d’informations sur les liaisons personnalisées, consultez [ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
   
- Les quatre exemples ci-dessous illustrent les configurations de liaison les plus courantes utilisées pour configurer un service [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+ Les quatre exemples ci-dessous illustrent des configurations de liaison les plus courantes utilisées pour configurer un service WCF.  
   
 #### <a name="specifying-an-endpoint-to-use-a-binding-type"></a>Spécification d’un point de terminaison pour utiliser un type de liaison  
  Le premier exemple montre comment spécifier un point de terminaison configuré avec une adresse, un contrat et une liaison.  

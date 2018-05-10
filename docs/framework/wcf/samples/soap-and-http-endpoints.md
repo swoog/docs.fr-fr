@@ -2,24 +2,24 @@
 title: Points de terminaison SOAP et HTTP
 ms.date: 03/30/2017
 ms.assetid: e3c8be75-9dda-4afa-89b6-a82cb3b73cf8
-ms.openlocfilehash: bf11563b937426c3c1701e7fed79e82e4e4669ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4c8a4695dbcaee2f0e7584418fbeac12815fa967
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="soap-and-http-endpoints"></a>Points de terminaison SOAP et HTTP
-Cet exemple montre comment implémenter un service RPC et l’exposer aux formats SOAP et mettre en forme le « Plain Old XML » (POX) à l’aide de la [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modèle de programmation Web. Consultez le [Service HTTP de base](../../../../docs/framework/wcf/samples/basic-http-service.md) sample pour plus d’informations sur la liaison HTTP pour le service. Cet exemple se concentre sur les détails ayant trait à l’exposition du même service sur SOAP et HTTP au moyen de différentes liaisons.  
+Cet exemple montre comment implémenter un service RPC et l’exposer aux formats SOAP et le format « Plain Old XML » (POX) à l’aide du modèle de programmation Web WCF. Consultez le [Service HTTP de base](../../../../docs/framework/wcf/samples/basic-http-service.md) sample pour plus d’informations sur la liaison HTTP pour le service. Cet exemple se concentre sur les détails ayant trait à l’exposition du même service sur SOAP et HTTP au moyen de différentes liaisons.  
   
 ## <a name="demonstrates"></a>Démonstrations  
- Exposition d'un service RPC sur SOAP et HTTP à l'aide de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Exposition d’un service RPC sur SOAP et HTTP à l’aide de WCF.  
   
 ## <a name="discussion"></a>Discussion  
- Cet exemple est constitué de deux composants : un projet d'application Web (Service) qui contient un service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] et une application console (Client) qui appelle des opérations de service à l'aide de  liaisons SOAP et HTTP.  
+ Cet exemple se compose de deux composants : un projet d’Application Web (Service) qui contient un service WCF et une application console (Client) qui appelle des opérations de service à l’aide de liaisons SOAP et HTTP.  
   
- Le service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] expose 2 opérations, `GetData` et `PutData`, qui renvoient la chaîne passée en entrée. Les opérations de service sont annotées avec <xref:System.ServiceModel.Web.WebGetAttribute> et <xref:System.ServiceModel.Web.WebInvokeAttribute>. Ces attributs contrôlent la projection HTTP de ces opérations. Elles sont aussi annotées avec <xref:System.ServiceModel.OperationContractAttribute>, ce qui permet leur exposition sur des liaisons SOAP. La méthode `PutData` du service lève un <xref:System.ServiceModel.Web.WebFaultException>, qui est renvoyé sur HTTP avec le code d'état HTTP et sur SOAP en tant qu'erreur SOAP.  
+ Le service WCF expose 2 opérations,`GetData` et `PutData` – qui renvoient la chaîne qui a été passée en tant qu’entrée. Les opérations de service sont annotées avec <xref:System.ServiceModel.Web.WebGetAttribute> et <xref:System.ServiceModel.Web.WebInvokeAttribute>. Ces attributs contrôlent la projection HTTP de ces opérations. Elles sont aussi annotées avec <xref:System.ServiceModel.OperationContractAttribute>, ce qui permet leur exposition sur des liaisons SOAP. La méthode `PutData` du service lève un <xref:System.ServiceModel.Web.WebFaultException>, qui est renvoyé sur HTTP avec le code d'état HTTP et sur SOAP en tant qu'erreur SOAP.  
   
- Le fichier Web.config configure le service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] avec 3 points de terminaison :  
+ Le fichier Web.config configure le service WCF avec 3 points de terminaison :  
   
 -   le point de terminaison ~/service.svc/mex qui expose les métadonnées du service pour l'accès des clients SOAP ;  
   

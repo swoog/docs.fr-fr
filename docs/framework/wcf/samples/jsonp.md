@@ -2,11 +2,11 @@
 title: JSONP
 ms.date: 03/30/2017
 ms.assetid: c13b4d7b-dac7-4ffd-9f84-765c903511e1
-ms.openlocfilehash: 614b651d02b511927eda3909a40d1382c0842512
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9002597ef662c78b6519ab0c04700cddf7ee3714
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="jsonp"></a>JSONP
 Cet exemple montre comment prendre en charge JSON with Padding (JSONP) dans les services WCF REST. JSONP est une convention servant à appeler des scripts entre domaines en générant des balises de script dans le document actif. Le résultat est retourné dans une fonction de rappel spécifiée. JSONP repose sur le principe que les balises telles que `<script src="http://..." >` peuvent évaluer des scripts à partir de n’importe quel domaine, et le script récupéré par ces balises est évalué dans une portée dans laquelle d’autres fonctions peuvent déjà être définies.  
@@ -36,7 +36,7 @@ proxy.GetCustomer(onSuccess, onFail, null);
 </system.serviceModel>  
 ```  
   
- ScriptManager gère l'interaction avec le service et cache la complexité de l'implémentation manuelle de l'accès JSONP. Lorsque `crossDomainScriptAccessEnabled` a la valeur `true` et que le format de réponse d'une opération est JSON, l'infrastructure [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] recherche dans l'URI de la demande un paramètre de chaîne de requête de rappel et inclut la réponse JSON dans un wrapper avec la valeur du paramètre de chaîne de requête de rappel. Dans l'exemple, la page Web appelle le service WCF REST avec l'URI suivant.  
+ ScriptManager gère l'interaction avec le service et cache la complexité de l'implémentation manuelle de l'accès JSONP. Lorsque `crossDomainScriptAccessEnabled` a la valeur `true` et le format de réponse pour une opération est JSON, l’infrastructure WCF inspecte l’URI de la demande pour un paramètre de chaîne de requête de rappel et encapsule la réponse JSON avec la valeur de la chaîne de requête de rappel paramètre. Dans l’exemple, la page web appelle le service WCF REST avec l’URI suivant.  
   
 ```  
 http://localhost:33695/CustomerService/GetCustomer?callback=Sys._json0  
@@ -48,9 +48,9 @@ http://localhost:33695/CustomerService/GetCustomer?callback=Sys._json0
 Sys._json0({"__type":"Customer:#Microsoft.Samples.Jsonp","Address":"1 Example Way","Name":"Bob"});  
 ```  
   
- Cette réponse JSONP inclut les données client mises au format JSON et encapsulées avec le nom de la fonction de rappel que la page Web a demandée. ScriptManager exécute ce rappel à l'aide d'une balise de script pour effectuer la demande entre domaines, puis passe le résultat au gestionnaire onSuccess qui a été passé à l'opération GetCustomer du proxy ASP.NET AJAX.  
+ Cette réponse JSONP inclut les données client mises au format JSON et encapsulées avec le nom de la fonction de rappel que la page Web a demandée. ScriptManager exécute ce rappel à l’aide d’une étiquette de script pour effectuer la demande entre domaines, puis passe le résultat au gestionnaire onSuccess qui a été passé à l’opération GetCustomer du proxy ASP.NET AJAX.  
   
- L'exemple se compose de deux applications Web ASP.NET : l'une contient juste un service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ; l'autre contient la page Web .aspx qui appelle le service. Lors de l'exécution de la solution, [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] héberge les deux sites Web sur des ports différents, ce qui crée un environnement où le service et le client résident dans des domaines différents.  
+ L’exemple se compose de deux applications web ASP.NET : un contient seulement un service WCF, et une autre la page Web .aspx, qui appelle le service. Lors de l'exécution de la solution, [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] héberge les deux sites Web sur des ports différents, ce qui crée un environnement où le service et le client résident dans des domaines différents.  
   
 > [!IMPORTANT]
 >  Les exemples peuvent déjà être installés sur votre ordinateur. Recherchez le répertoire (par défaut) suivant avant de continuer.  
@@ -67,4 +67,4 @@ Sys._json0({"__type":"Customer:#Microsoft.Samples.Jsonp","Address":"1 Example Wa
   
 2.  Appuyez sur F5 pour lancer `http://localhost:26648/JSONPClientPage.aspx` dans le navigateur.  
   
-3.  Notez qu’après le chargement de la page, les entrées de texte pour le « Nom » et « Address » sont remplies par les valeurs.  Ces valeurs ont été fournies à partir d'un appel au service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] alors que le navigateur avait effectué le rendu de la page.
+3.  Notez qu’après le chargement de la page, les entrées de texte pour le « Nom » et « Address » sont remplies par les valeurs.  Ces valeurs ont été fournies à partir d’un appel au service WCF après le rendu de la page du navigateur.

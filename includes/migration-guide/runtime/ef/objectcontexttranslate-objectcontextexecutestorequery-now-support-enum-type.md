@@ -2,8 +2,8 @@
 
 |   |   |
 |---|---|
-|Détails|Dans le .NET 4.0, le paramètre générique <code>T</code> des méthodes <code>ObjectContext.Translate</code> et <code>ObjectContext.ExecuteStoreQuery</code> ne pouvait pas être une énumération. Ce scénario est désormais pris en charge.|
-|Suggestion|Si Translate ou ExecuteStoreQuery était appelé sur un type enum dans le .NET 4.0, la valeur « 0 » était retournée. Si ce comportement était celui souhaité, les appels devaient être remplacés par une constante 0 (ou l’équivalent enum de celle-ci).|
+|Détails|Dans .NET Framework 4.0, le paramètre générique <code>T</code> des méthodes <code>ObjectContext.Translate</code> et <code>ObjectContext.ExecuteStoreQuery</code> ne pouvait pas être une énumération. Ce scénario est désormais pris en charge.|
+|Suggestion|Si Translate ou ExecuteStoreQuery était appelé sur un type enum dans .NET Framework 4.0, la valeur « 0 » était retournée. Si ce comportement était celui souhaité, les appels devaient être remplacés par une constante 0 (ou l’équivalent enum de celle-ci).|
 |Portée|Microsoft Edge|
 |Version|4.5|
 |Type|Runtime|

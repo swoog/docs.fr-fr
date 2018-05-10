@@ -2,22 +2,22 @@
 title: SAML Token Provider
 ms.date: 03/30/2017
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
-ms.openlocfilehash: 56c432b0874f59fed87c0d892732422161d668ed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 519bde6b2849328efdeb2f295bde4749fbb652ca
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="saml-token-provider"></a>SAML Token Provider
-Cet exemple montre comment implémenter un fournisseur de jetons SAML client personnalisé. Un fournisseur de jetons dans Windows Communication Foundation (WCF) est utilisé pour fournir des informations d’identification pour l’infrastructure de sécurité. En général, le fournisseur de jetons examine la cible et publie des informations d'identification appropriées afin que l'infrastructure de sécurité puisse sécuriser le message. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] est fourni avec le fournisseur de jetons du gestionnaire d'informations d'identification par défaut. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] est également fourni avec un fournisseur de jetons [!INCLUDE[infocard](../../../../includes/infocard-md.md)]. Les fournisseurs de jetons personnalisés sont utiles dans les cas suivants :  
+Cet exemple montre comment implémenter un fournisseur de jetons SAML client personnalisé. Un fournisseur de jetons dans Windows Communication Foundation (WCF) est utilisé pour fournir des informations d’identification pour l’infrastructure de sécurité. En général, le fournisseur de jetons examine la cible et publie des informations d'identification appropriées afin que l'infrastructure de sécurité puisse sécuriser le message. WCF est fourni avec le fournisseur de jetons du Gestionnaire d’informations d’identification par défaut. WCF est également fourni avec un [!INCLUDE[infocard](../../../../includes/infocard-md.md)] fournisseur de jetons. Les fournisseurs de jetons personnalisés sont utiles dans les cas suivants :  
   
 -   si vous avez un magasin d'informations d'identification avec lequel ces fournisseurs de jetons ne peuvent pas fonctionner ;  
   
--   si vous souhaitez fournir votre propre mécanisme personnalisé permettant de transformer les informations d'identification entre le moment où l'utilisateur fournit les détails et celui où l'infrastructure cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] les utilise ;  
+-   Si vous souhaitez fournir votre propre mécanisme personnalisé pour transformer les informations d’identification à partir du point lorsque l’utilisateur fournit les détails lorsque l’infrastructure de client WCF utilise les informations d’identification.  
   
 -   si vous générez un jeton personnalisé.  
   
- Cet exemple indique comment générer un fournisseur de jetons personnalisé qui autorise l'utilisation d'un jeton SAML obtenu hors de l'infrastructure cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Cet exemple montre comment créer un fournisseur de jetons personnalisé qui permet à un jeton SAML obtenu en dehors de l’infrastructure de client WCF à utiliser.  
   
  En résumé, cet exemple montre :  
   
@@ -25,7 +25,7 @@ Cet exemple montre comment implémenter un fournisseur de jetons SAML client per
   
 -   la façon dont un jeton SAML peut être transmis aux informations d'identification du client personnalisées ;  
   
--   la façon dont le jeton SAML est fourni à l'infrastructure cliente [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ;  
+-   Comment le jeton SAML est fourni à l’infrastructure de client WCF.  
   
 -   la façon dont le serveur est authentifié auprès du client à l'aide du certificat X.509 du serveur.  
   
@@ -110,7 +110,7 @@ Cet exemple montre comment implémenter un fournisseur de jetons SAML client per
 </system.serviceModel>  
 ```  
   
- Les étapes suivantes indiquent comment développer un fournisseur de jetons SAML personnalisé et l'intégrer à l'infrastructure de sécurité [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] :  
+ Les étapes suivantes montrent comment développer un fournisseur de jetons SAML personnalisé et l’intégrer à WCF : infrastructure de sécurité :  
   
 1.  Écrivez un fournisseur de jetons SAML personnalisé.  
   

@@ -1,14 +1,6 @@
 ---
 title: Les profileurs CLR et les applications du Windows Store
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 applies_to:
@@ -20,17 +12,13 @@ helpviewer_keywords:
 - profiling managed code
 - profiling managed code [Windows Store Apps]
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d884b80ba8ccc42d1b6acc671db408305a095a7d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 20a1ed9b6b613b1e4d3e5363ab9995cc81295091
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>Les profileurs CLR et les applications du Windows Store
 Cette rubrique explique ce que vous devez tenir compte lorsque les outils de diagnostic de l’écriture qui analysent géré du code exécuté dans une application Windows Store.  Il fournit également des instructions pour modifier vos outils de développement existants afin qu’ils continuer de fonctionner lorsque vous les exécutiez sur les applications du Windows Store.  Pour comprendre ces informations, il est préférable de que si vous êtes familiarisé avec l’API de profilage de Common Language Runtime, vous avez déjà utilisé cette API dans un outil de diagnostic que s’exécute correctement sur les applications de bureau Windows et que vous êtes maintenant intéressé par la modification de l’outil Pour exécuter correctement sur les applications du Windows Store.  
@@ -64,7 +52,7 @@ Cette rubrique explique ce que vous devez tenir compte lorsque les outils de dia
   
 <a name="Intro"></a>   
 ## <a name="introduction"></a>Introduction  
- Si vous l’avez fait après le paragraphe d’introduction, vous êtes familiarisé avec l’API de profilage CLR.  Vous avez déjà écrit un outil de diagnostic qui fonctionne correctement sur les applications de bureau managées.  Vous pouvez désormais obtenir des informations que faire pour que votre outil fonctionne avec une application gérée par Windows Store.  Vous avez peut-être déjà essayé résoudre ce problème et a découvert qu’il n’est pas une tâche simple.  En effet, il existe des considérations qui ne soit pas évident pour tous les développeurs d’outils.  Exemple :  
+ Si vous l’avez fait après le paragraphe d’introduction, vous êtes familiarisé avec l’API de profilage CLR.  Vous avez déjà écrit un outil de diagnostic qui fonctionne correctement sur les applications de bureau managées.  Vous pouvez désormais obtenir des informations que faire pour que votre outil fonctionne avec une application gérée par Windows Store.  Vous avez peut-être déjà essayé résoudre ce problème et a découvert qu’il n’est pas une tâche simple.  En effet, il existe des considérations qui ne soit pas évident pour tous les développeurs d’outils.  Par exemple :  
   
 -   Applications du Windows Store s’exécutent dans un contexte avec autorisations réduites gravement.  
   
@@ -154,7 +142,7 @@ NET Runtime version 4.0.30319.17929 - Loading profiler failed during CoCreateIns
  **Choix d’une application du Windows Store au profil**  
  Tout d’abord, que vous souhaitez demander des applications du Windows Store pour lancer votre utilisateur du Générateur de profils.  Pour les applications de bureau, par exemple, vous affichez une boîte de dialogue Parcourir et l’utilisateur aurait rechercher et sélectionner un fichier .exe.  Mais les applications du Windows Store sont différents, et à l’aide d’une boîte de dialogue Parcourir n’a aucune signification.  Au lieu de cela, il est préférable d’afficher la liste des applications du Windows Store installée pour cet utilisateur à sélectionner à partir de l’utilisateur.  
   
- Vous pouvez utiliser la [PackageManager classe](https://msdn.microsoft.com/library/windows/apps/windows.management.deployment.packagemanager.aspx) pour générer cette liste.  `PackageManager`est une classe Windows Runtime qui est disponible pour les applications de bureau, et il est en fait *uniquement* disponibles pour les applications de bureau.  
+ Vous pouvez utiliser la [PackageManager classe](https://msdn.microsoft.com/library/windows/apps/windows.management.deployment.packagemanager.aspx) pour générer cette liste.  `PackageManager` est une classe Windows Runtime qui est disponible pour les applications de bureau, et il est en fait *uniquement* disponibles pour les applications de bureau.  
   
  L’exemple suivant d’ode à partir d’une interface de profileur hypothétique écrite sous la forme d’une application de bureau dans c# yses le `PackageManager` pour générer une liste des applications Windows :  
   
@@ -178,9 +166,9 @@ pkgDebugSettings.EnableDebugging(packgeFullName, debuggerCommandLine,
   
  Il existe deux éléments, que vous devez correctement :  
   
--   `packageFullName`peut être déterminée lors de l’itération sur les packages et en saisissant `package.Id.FullName`.  
+-   `packageFullName` peut être déterminée lors de l’itération sur les packages et en saisissant `package.Id.FullName`.  
   
--   `debuggerCommandLine`est un peu plus intéressante.  Pour transmettre le bloc environnement personnalisé à l’application du Windows Store, vous devez écrire votre propre, débogueur factice simpliste.  Génère de Windows l’application du Windows Store suspendu, puis l’attache le débogueur en lançant votre débogueur de ligne de commande, comme dans cet exemple :  
+-   `debuggerCommandLine` est un peu plus intéressante.  Pour transmettre le bloc environnement personnalisé à l’application du Windows Store, vous devez écrire votre propre, débogueur factice simpliste.  Génère de Windows l’application du Windows Store suspendu, puis l’attache le débogueur en lançant votre débogueur de ligne de commande, comme dans cet exemple :  
   
     ```Output  
     MyDummyDebugger.exe -p 1336 -tid 1424  
@@ -326,7 +314,7 @@ tempDir = appData.TemporaryFolder.Path;
  **Communiquant via des événements**  
  Si vous souhaitez la sémantique de signalisation simple entre votre interface utilisateur du Générateur de profils et de la DLL de profileur, vous pouvez utiliser des événements dans les applications du Windows Store, ainsi que des applications de bureau.  
   
- À partir de votre DLL de profileur, vous pouvez simplement appeler le [CreateEventEx](https://msdn.microsoft.com/library/windows/desktop/ms682400\(v=vs.85\).aspx) fonction permettant de créer un événement nommé avec n’importe quel nom de votre choix.  Exemple :  
+ À partir de votre DLL de profileur, vous pouvez simplement appeler le [CreateEventEx](https://msdn.microsoft.com/library/windows/desktop/ms682400\(v=vs.85\).aspx) fonction permettant de créer un événement nommé avec n’importe quel nom de votre choix.  Par exemple :  
   
 ```cpp  
 // Profiler DLL in Windows Store app (C++).  
@@ -341,7 +329,7 @@ CreateEventEx(
   
  `AppContainerNamedObjects\<acSid>\MyNamedEvent`  
   
- `<acSid>`est AppContainer SID de l’application du Windows Store.  Une section précédente de cette rubrique vous a montré comment itérer sur les packages installés pour l’utilisateur actuel.  Dans cet exemple de code, vous pouvez obtenir l’ID de package.  Et à partir de l’ID de package, vous pouvez obtenir le `<acSid>` avec du code semblable au suivant :  
+ `<acSid>` est AppContainer SID de l’application du Windows Store.  Une section précédente de cette rubrique vous a montré comment itérer sur les packages installés pour l’utilisateur actuel.  Dans cet exemple de code, vous pouvez obtenir l’ID de package.  Et à partir de l’ID de package, vous pouvez obtenir le `<acSid>` avec du code semblable au suivant :  
   
 ```csharp  
 IntPtr acPSID;  

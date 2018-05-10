@@ -2,11 +2,11 @@
 title: Processus d'approbation des documents
 ms.date: 03/30/2017
 ms.assetid: 9b240937-76a7-45cd-8823-7f82c34d03bd
-ms.openlocfilehash: b1ef35f5a96399b669f0cda039bf1f6dd0fde979
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c28dafd3b0a1cb6dbee37fed2b3df8923ccd82c8
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="document-approval-process"></a>Processus d'approbation des documents
 Cet exemple montre l’utilisation de nombreuses fonctionnalités de Windows Workflow Foundation (WF) et Windows Communication Foundation (WCF) ensemble. Ensemble, elles implémentent un scénario de processus d'approbation des documents. Une application cliente peut soumettre des documents pour approbation et approuver des documents. Une application du responsable des approbations existe pour faciliter les communications entre les clients et mettre en vigueur les règles du processus d'approbation. Le processus d'approbation est un workflow qui peut exécuter plusieurs types d'approbation. Il existe des activités pour obtenir une approbation unique, une approbation de quorum (pourcentage de l'ensemble d'approbateurs) et un processus d'approbation complexe qui se compose d'une approbation unique et de quorum dans une séquence.  
@@ -29,7 +29,7 @@ Cet exemple montre l’utilisation de nombreuses fonctionnalités de Windows Wor
   
 1.  Un client s'abonne pour être un utilisateur dans le système du processus d'approbation.  
   
-2.  Un client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] envoie à un service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hébergé par l'application du responsable des approbations.  
+2.  Un client WCF envoie à un service WCF hébergé par l’application du Gestionnaire de réception.  
   
 3.  Un ID d'utilisateur unique est retourné au client. Le client peut maintenant participer aux processus d'approbation.  
   
@@ -47,19 +47,19 @@ Cet exemple montre l’utilisation de nombreuses fonctionnalités de Windows Wor
   
 10. Un client peut recevoir une demande d'approbation et y répondre à tout moment.  
   
-11. Un service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] hébergé sur le client peut recevoir une demande d'approbation de l'application du responsable des approbations.  
+11. Un service WCF hébergé sur le client peut recevoir une demande d’approbation de l’application du Gestionnaire de réception.  
   
-12. Les informations concernant les documents sont présentées sur le client à des fins de révision.  
+12. Les informations concernant les documents sont présentées sur le client à des fins de revue.  
   
 13. L'utilisateur peut approuver ou rejeter le document.  
   
-14. Un client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] est utilisé pour renvoyer une réponse d'approbation à l'application du responsable des approbations.  
+14. Un client WCF permet d’envoyer une réponse d’approbation à l’application du Gestionnaire de réception.  
   
  Du point de vue de l'application du responsable des approbations, le processus d'approbation fonctionne comme suit :  
   
 1.  Un client demande à participer au système du processus d'approbation.  
   
-2.  Un service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sur le responsable des approbations reçoit une demande de faire partie du système du processus d'approbation.  
+2.  Un service WCF dans le Gestionnaire de réception reçoit une demande de faire partie du système du processus d’approbation.  
   
 3.  Un ID unique est généré pour le client. Les informations utilisateur sont stockées dans une base de données.  
   

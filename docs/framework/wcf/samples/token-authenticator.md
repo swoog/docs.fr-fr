@@ -2,11 +2,11 @@
 title: Token Authenticator
 ms.date: 03/30/2017
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
-ms.openlocfilehash: 35bba0b6a81ff11164636e906440db7e9b2ca25b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4681dea4fd39b039346d22c02c478323ff53e240
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="token-authenticator"></a>Token Authenticator
 Cet exemple montre comment implémenter un authentificateur de jetons personnalisé. Un authentificateur de jetons dans Windows Communication Foundation (WCF) est utilisé pour valider le jeton utilisé avec le message, vérifier qu’il est cohérent, et l’authentification de l’identité associé au jeton.  
@@ -23,11 +23,11 @@ Cet exemple montre comment implémenter un authentificateur de jetons personnali
   
 -   Comment le serveur peut valider les informations d'identification du client à l'aide d'un authentificateur de jetons personnalisé.  
   
--   Comment le code de service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] s'intègre à l'authentificateur de jetons personnalisé.  
+-   Comment le code de service WCF s’intègre à l’authentificateur de jetons personnalisé.  
   
 -   Comment le serveur peut être authentifié à l'aide de son certificat X.509.  
   
- Cet exemple montre également comment l'identité de l'appelant est accessible à partir de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] après le processus d'authentification du jeton personnalisé.  
+ Cet exemple montre également comment l’identité l’appelant est accessible à partir de WCF après le processus d’authentification du jeton personnalisé.  
   
  Le service expose un point de terminaison unique permettant de communiquer avec le service, défini à l'aide du fichier de configuration App.config. Le point de terminaison se compose d’une adresse, d’une liaison et d’un contrat. La liaison est configurée avec un `wsHttpBinding` standard, avec le mode de sécurité du message (mode par défaut de `wsHttpBinding`). Cet exemple définit le `wsHttpBinding` standard pour permettre l'authentification du client à l'aide du nom d'utilisateur. Le service configure également le certificat de service à l'aide du comportement `serviceCredentials`. Le comportement `securityCredentials` vous permet de spécifier un certificat de service. Un certificat de service est utilisé par un client pour authentifier le service et fournir la protection des messages. La configuration suivante référence le certificat localhost installé pendant l'installation de l'exemple, tel que décrit dans les instructions d'installation suivantes.  
   

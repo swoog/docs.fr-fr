@@ -7,17 +7,17 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], addressing
 ms.assetid: ac24f5ad-9558-4298-b168-c473c68e819b
-ms.openlocfilehash: 784b0fe3e2b23287d458f9aa4d8276e10dd6ed97
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f7e2253c527cbb2b6f21b222b1e9691c2ecff01f
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="specifying-an-endpoint-address"></a>Spécification d'une adresse de point de terminaison
 Toutes les communications avec un service Windows Communication Foundation (WCF) s’effectue via ses points de terminaison. Chaque <xref:System.ServiceModel.Description.ServiceEndpoint> contient un <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>, un <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A> et un <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>. Le contrat spécifie quelles opérations sont disponibles. La liaison spécifie comment communiquer avec le service et l'adresse spécifie où rechercher le service. Chaque point de terminaison doit avoir une adresse unique. L'adresse de point de terminaison est représentée par la classe <xref:System.ServiceModel.EndpointAddress>, qui contient un URI (Uniform Resource Identifier) représentant l'adresse du service, un <xref:System.ServiceModel.EndpointAddress.Identity%2A> représentant l'identité de sécurité du service et une collection de <xref:System.ServiceModel.EndpointAddress.Headers%2A> facultative. Les en-têtes facultatifs fournissent des informations d'adressage plus détaillées pour identifier ou interagir avec le point de terminaison. Par exemple, les en-tête peuvent indiquer comment traiter un message entrant, où le point de terminaison doit envoyer un message de réponse ou quelle instance d'un service utiliser pour traiter un message entrant d'un utilisateur particulier lorsque plusieurs instances sont disponibles.  
   
 ## <a name="definition-of-an-endpoint-address"></a>Définition d'une adresse de point de terminaison  
- Dans [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], un <xref:System.ServiceModel.EndpointAddress> modèle une référence de point de terminaison (EPR) comme défini dans le standard WS-Addressing.  
+ Dans WCF, une <xref:System.ServiceModel.EndpointAddress> modélise une référence de point de terminaison (EPR) comme défini dans la norme WS-Addressing.  
   
  L'URI d'adresse de la plupart des transports se compose de quatre parties. Par exemple, cet URI, «http://www.fabrikam.com:322/mathservice.svc/secureEndpoint» a quatre parties suivantes :  
   
@@ -29,11 +29,11 @@ Toutes les communications avec un service Windows Communication Foundation (WCF)
   
 -   Chemin d'accès : /mathservice.svc/secureEndpoint  
   
- Une partie du modèle ERP établit que chaque référence de point de terminaison peut contenir des paramètres de référence qui ajoutent des informations d'identification supplémentaires. Dans [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], ces paramètres de référence sont modélisés sous forme d'instances de la classe <xref:System.ServiceModel.Channels.AddressHeader>.  
+ Une partie du modèle ERP établit que chaque référence de point de terminaison peut contenir des paramètres de référence qui ajoutent des informations d'identification supplémentaires. Dans WCF, ces paramètres de référence sont modélisés comme des instances de la <xref:System.ServiceModel.Channels.AddressHeader> classe.  
   
  L'adresse du point de terminaison pour un service peut être spécifiée de manière impérative en utilisant le code ou de façon déclarative par la configuration. La définition de points de terminaison dans le code est généralement peu pratique car les liaisons et les adresses pour un service déployé sont en général différentes de celles utilisées au cours du développement du service. En général, il est plus pratique de définir des points de terminaison de service à l'aide de la configuration plutôt que du code. Le fait de conserver les informations de liaison et d’adressage hors du code leur permet de changer sans devoir recompiler ou de redéployer l’application. Si aucun point de terminaison n'est spécifié dans le code ou dans la configuration, le runtime ajoute un point de terminaison par défaut sur chaque adresse de base pour chaque contrat implémenté par le service.  
   
- Il y a deux façons de spécifier des adresses de point de terminaison pour un service dans [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Vous pouvez spécifier une adresse absolue pour chaque point de terminaison associé au service ou vous pouvez fournir une adresse de base pour le <xref:System.ServiceModel.ServiceHost> d'un service puis spécifier une adresse pour chaque point de terminaison associé à ce service défini comme relatif à cette adresse de base. Vous pouvez utiliser chacune de ces procédures pour spécifier les adresses de point de terminaison pour un service dans la configuration ou le code. Si vous ne spécifiez pas d'adresse relative, le service utilise l'adresse de base. Vous pouvez également avoir plusieurs adresses de base pour un service, mais une seule adresse de base pour chaque transport est autorisée pour chaque service. Si vous avez plusieurs points de terminaison, chacun configuré avec une liaison différente, leurs adresses doivent être uniques. Les points de terminaison qui utilisent la même liaison mais des contrats différents peuvent utiliser la même adresse.  
+ Il existe deux façons de spécifier les adresses de point de terminaison pour un service dans WCF. Vous pouvez spécifier une adresse absolue pour chaque point de terminaison associé au service ou vous pouvez fournir une adresse de base pour le <xref:System.ServiceModel.ServiceHost> d'un service puis spécifier une adresse pour chaque point de terminaison associé à ce service défini comme relatif à cette adresse de base. Vous pouvez utiliser chacune de ces procédures pour spécifier les adresses de point de terminaison pour un service dans la configuration ou le code. Si vous ne spécifiez pas d'adresse relative, le service utilise l'adresse de base. Vous pouvez également avoir plusieurs adresses de base pour un service, mais une seule adresse de base pour chaque transport est autorisée pour chaque service. Si vous avez plusieurs points de terminaison, chacun configuré avec une liaison différente, leurs adresses doivent être uniques. Les points de terminaison qui utilisent la même liaison mais des contrats différents peuvent utiliser la même adresse.  
   
  Lorsque vous hébergez avec les services IIS, vous ne gérez pas l'instance <xref:System.ServiceModel.ServiceHost> vous-même. L'adresse de base est toujours l'adresse spécifiée dans le fichier .svc pour le service lors de l'hébergement dans IIS. Par conséquent, vous devez toujours utiliser des adresses de point de terminaison relatives pour les points de terminaison de service hébergés dans IIS. Fournir une adresse de point de terminaison qualifiée complète peut entraîner des erreurs lors du déploiement du service. Pour plus d’informations, consultez [déploiement d’un Service WCF de sujet](../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md).  
   

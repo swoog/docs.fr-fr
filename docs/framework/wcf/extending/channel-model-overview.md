@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - channel model [WCF]
 ms.assetid: 07a81e11-3911-4632-90d2-cca99825b5bd
-ms.openlocfilehash: df2993d9ba25c043aa66029aa00fae945d5cec9d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 13fe07d1521832ed12ba5770e0bd069ff9b917d2
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="channel-model-overview"></a>Vue d'ensemble du modèle de canal
-La pile de canal de Windows Communication Foundation (WCF) est une pile de communication superposée avec un ou plusieurs canaux qui traitent les messages. Le canal de transport, qui figure tout en bas de la pile, est chargé d'adapter la pile de canaux au transport sous-jacent (par exemple, au transport TCP, HTTP, SMTP ainsi qu'à d'autres types de transports). Les canaux fournissent un modèle de programmation de bas niveau pour l'envoi et la réception des messages. Ce modèle de programmation s'appuie sur plusieurs interfaces et autres types désignés collectivement par le terme « modèle de canal [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ». Cette rubrique aborde les thèmes suivants : formes de canal, construction d'un écouteur de canal de base (côté service) et fabrication de canal (côté client).  
+La pile de canal de Windows Communication Foundation (WCF) est une pile de communication superposée avec un ou plusieurs canaux qui traitent les messages. Le canal de transport, qui figure tout en bas de la pile, est chargé d'adapter la pile de canaux au transport sous-jacent (par exemple, au transport TCP, HTTP, SMTP ainsi qu'à d'autres types de transports). Les canaux fournissent un modèle de programmation de bas niveau pour l'envoi et la réception des messages. Ce modèle de programmation s’appuie sur plusieurs interfaces et d’autres types appelés collectivement le modèle de canal WCF. Cette rubrique aborde les thèmes suivants : formes de canal, construction d'un écouteur de canal de base (côté service) et fabrication de canal (côté client).  
   
 ## <a name="channel-stack"></a>Pile de canaux  
- Les points de terminaison [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] communiquent avec le reste du monde à l'aide d'une pile de communication appelée pile de canaux. Le diagramme suivant compare la pile de canaux avec d'autres piles de communication, notamment avec la pile TCP/IP.  
+ Points de terminaison WCF de communiquer avec le monde à l’aide d’une pile de communication appelée pile de canaux. Le diagramme suivant compare la pile de canaux avec d'autres piles de communication, notamment avec la pile TCP/IP.  
   
  ![Modèle de canal](../../../../docs/framework/wcf/extending/media/wcfc-channelstackhighlevelc.gif "wcfc_ChannelStackHighLevelc")  
   

@@ -2,20 +2,20 @@
 title: Exemple Discovery Binding Element
 ms.date: 03/30/2017
 ms.assetid: af513015-85bf-417b-8729-1bdff77ff6d6
-ms.openlocfilehash: 7dc38acbe91e03f579414294da07bff5cc53cc4c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 853f5cebfd745b3413d605dcfbf0e395e103b4f1
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="discovery-binding-element-sample"></a>Exemple Discovery Binding Element
 Cet exemple montre comment utiliser l’élément de liaison du client de découverte pour découvrir un service. Cette fonctionnalité permet aux développeurs d'ajouter un canal client de découverte à leur pile de canaux clients existante, ce qui rend le modèle de programmation très intuitif. Lorsque le canal associé est ouvert, l'adresse du service est résolue à l'aide de la découverte. Cet exemple est composé des projets suivants :  
   
--   **CalculatorService**: un détectable [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service.  
+-   **CalculatorService**: un service WCF détectable.  
   
--   **CalculatorClient**: A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] application cliente qui utilise le canal client de découverte pour rechercher et appeler le CalculatorService.  
+-   **CalculatorClient**: application cliente WCF qui utilise le canal client de découverte pour rechercher et appeler le CalculatorService.  
   
--   **DynamicCalculatorClient**: A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] application cliente qui utilise un point de terminaison dynamique pour rechercher et appeler le CalculatorService.  
+-   **DynamicCalculatorClient**: application cliente WCF qui utilise un point de terminaison dynamique pour rechercher et appeler le CalculatorService.  
   
 > [!IMPORTANT]
 >  Les exemples peuvent déjà être installés sur votre ordinateur. Recherchez le répertoire (par défaut) suivant avant de continuer.  

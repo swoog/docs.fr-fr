@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Tracing and logging
 ms.assetid: a4f39bfc-3c5e-4d51-a312-71c5c3ce0afd
-ms.openlocfilehash: 5f0cca66798a9d84b01c9fde1147c28f14a953db
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 13d23c0f69c65dd3bd6b2714dd710eb7f97a1c07
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="tracing-and-message-logging"></a>Tracing and Message Logging
 Cet exemple illustre comment activer l'enregistrement des suivis et des messages. Les suivis résultants et les journaux de messages sont affichés à l’aide de la [outil Service Trace Viewer (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Cet exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -17,7 +17,7 @@ Cet exemple illustre comment activer l'enregistrement des suivis et des messages
 >  La procédure d'installation ainsi que les instructions de génération relatives à cet exemple figurent à la fin de cette rubrique.  
   
 ## <a name="tracing"></a>Traçage  
- Windows Communication Foundation (WCF) utilise le mécanisme de suivi définis dans le <xref:System.Diagnostics> espace de noms. Dans ce modèle de suivi, les données de suivi sont générées par les sources de suivi implémentées par les applications. Chacune de ces sources est identifiée à l'aide d'un nom. Les consommateurs de suivis créent des écouteurs pour les sources de suivi à partir desquelles ils souhaitent récupérer des informations. Pour recevoir des données de suivi d'une source, vous devez créer un écouteur pour cette source. Dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], l'une des solutions pour ce faire consiste à ajouter le code suivant au fichier de configuration du service ou du client en définissant la source de suivi du modèle de service `switchValue` :  
+ Windows Communication Foundation (WCF) utilise le mécanisme de suivi définis dans le <xref:System.Diagnostics> espace de noms. Dans ce modèle de suivi, les données de suivi sont générées par les sources de suivi implémentées par les applications. Chacune de ces sources est identifiée à l'aide d'un nom. Les consommateurs de suivis créent des écouteurs pour les sources de suivi à partir desquelles ils souhaitent récupérer des informations. Pour recevoir des données de suivi d'une source, vous devez créer un écouteur pour cette source. Dans WCF, cela est possible en ajoutant le code suivant au fichier de configuration du client ou du service en définissant la source de suivi du modèle de Service `switchValue`:  
   
 ```xml  
 <system.diagnostics>  
@@ -55,12 +55,12 @@ Cet exemple illustre comment activer l'enregistrement des suivis et des messages
   
 -   De mettre en relation les activités à l'aide du transfert et de la propagation.  
   
--   D'atténuer les pertes en termes de performances du suivi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] (par exemple, de diminuer l'espace disque occupé par le stockage des journaux).  
+-   Réduire le coût de performances de suivi WCF (par exemple, le coût de l’espace disque d’un fichier journal).  
   
  Pour plus d’informations sur la trace de l’activité défini par l’utilisateur, consultez la [extension suivi](../../../../docs/framework/wcf/samples/extending-tracing.md) exemple.  
   
 ## <a name="message-logging"></a>Journalisation des messages  
- L'enregistrement des messages peut être activé à la fois sur le client et le service de toute application [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Pour activer l'enregistrement des messages, vous devez ajouter le code suivant au client ou au service :  
+ Enregistrement des messages peut être activé à la fois sur le client et le service de toute application WCF. Pour activer l'enregistrement des messages, vous devez ajouter le code suivant au client ou au service :  
   
 ```xml  
 <configuration>  

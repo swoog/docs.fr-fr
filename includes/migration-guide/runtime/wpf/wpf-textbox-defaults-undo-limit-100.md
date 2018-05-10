@@ -2,7 +2,7 @@
 
 |   |   |
 |---|---|
-|Détails|Dans le .NET 4.5, le nombre maximal d’annulations d’opérations pour une zone de texte WPF est de 100 par défaut (dans le .NET 4.0, ce nombre était illimité).|
+|Détails|Dans .NET Framework 4.5, le nombre maximal d’annulations d’opérations pour une zone de texte WPF est de 100 par défaut (dans .NET Framework 4.0, ce nombre était illimité).|
 |Suggestion|Si ce nombre n’est pas suffisant, vous pouvez définir explicitement cette valeur avec <xref:System.Windows.Controls.Primitives.TextBoxBase.UndoLimit>|
 |Portée|Microsoft Edge|
 |Version|4.5|

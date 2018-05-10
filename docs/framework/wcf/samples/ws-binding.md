@@ -2,11 +2,11 @@
 title: Liaison WS
 ms.date: 03/30/2017
 ms.assetid: 629945b2-d771-46d7-a87b-5df3b2e460da
-ms.openlocfilehash: 67102c7c2925c2ac032d9defccdd5e187e76d608
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 11480b91c6ac6a5501029dfdf10cd81d3fa18820
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ws-binding"></a>Liaison WS
 Cette section contient des exemples qui illustrent la liaison de Service Windows dans Windows Communication Foundation (WCF).  
@@ -25,7 +25,7 @@ Cette section contient des exemples qui illustrent la liaison de Service Windows
  Illustre l'encodage des messages du mécanisme d'optimisation de la transmission des messages (Message Transmission Optimization Mechanism, MTOM) à l'aide de la liaison WSHttpBinding.  
   
  [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md)  
- Indique comment implémenter un service et un client standard à l'aide de [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Montre comment implémenter un service et un client standard à l’aide de WCF.  
   
  [Session fiable WS](../../../../docs/framework/wcf/samples/ws-reliable-session.md)  
  Montre l'utilisation des sessions fiables.  
@@ -34,7 +34,7 @@ Cette section contient des exemples qui illustrent la liaison de Service Windows
  Illustre l'utilisation de la sécurité de transport SSL avec la liaison <xref:System.ServiceModel.WSHttpBinding>.  
   
  [Liaison de sécurité de message](../../../../docs/framework/wcf/samples/message-security-binding.md)  
- Illustre l'utilisation de la sécurité de message dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ Illustre l’utilisation de la sécurité des messages dans WCF.  
   
  [Transport WS avec informations d’identification de message](../../../../docs/framework/wcf/samples/ws-transport-with-message-credential.md)  
  Cet exemple montre l'utilisation de la sécurité de transport SSL en association avec les informations d'identification du client contenues dans le message.

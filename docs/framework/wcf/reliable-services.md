@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], reliable sessions
 - service contracts [WCF], reliable services
 ms.assetid: 07814ed0-0775-47f2-987b-d8134fdd5099
-ms.openlocfilehash: 02e0b8822c29490462fe74803a34222188afc910
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f98da5db34686e3bf09cc14c42a2ff6b693201f6
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="reliable-services"></a>Services fiables
-Les files d’attente et les sessions fiables sont les fonctionnalités de Windows Communication Foundation (WCF) qui implémentent la messagerie fiable. Cette rubrique contient des explications sur les fonctionnalités de messagerie fiable de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+Les files d’attente et les sessions fiables sont les fonctionnalités de Windows Communication Foundation (WCF) qui implémentent la messagerie fiable. Cette rubrique explique les fonctionnalités de messagerie fiables de WCF.  
   
  *Messagerie fiable* est la manière dont une source de messagerie fiable (appelée la *source*) transfère de manière fiable des messages vers une destination de messagerie fiable (appelée la *destination*).  
   
@@ -25,7 +25,7 @@ Les files d’attente et les sessions fiables sont les fonctionnalités de Windo
   
 -   Elle sépare la source de la destination. Ceci garantit l'indépendance des systèmes de défaillance et de récupération de la source et de la destination ainsi que le transfert et la remise fiables des messages même en cas d'indisponibilité de l'une ou de l'autre.  
   
- La messagerie fiable présente l'inconvénient d'engendrer une latence élevée. *Latence* est le temps nécessaire pour le message atteindre la destination de la source. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], par conséquent, propose les types suivants de messageries fiables :  
+ La messagerie fiable présente l'inconvénient d'engendrer une latence élevée. *Latence* est le temps nécessaire pour le message atteindre la destination de la source. WCF, par conséquent, fournit les types suivants de messageries fiables :  
   
 -   [Les Sessions fiables](../../../docs/framework/wcf/feature-details/reliable-sessions.md), qui offre un transfert fiable sans le coût d’une latence élevée.  
   
@@ -37,7 +37,7 @@ Les files d’attente et les sessions fiables sont les fonctionnalités de Windo
  Les sessions fiables assurent le transfert fiable à faible latence des messages. Elles accomplissent pour les messages SOAP sur tous proxys ou intermédiaires, ce que le service TCP accomplit pour les paquets sur les ponts IP. Pour plus d’informations sur les sessions fiables, consultez [des Sessions fiables](../../../docs/framework/wcf/feature-details/reliable-sessions.md).  
   
 ### <a name="queues"></a>Files d'attente  
- Les files d'attente dans [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] permettent à la fois le transfert fiable des messages et la séparation entre source et destination mais à haute latence. La communication en file d'attente [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] est créée par-dessus Message Queuing (MSMQ).  
+ Files d’attente dans WCF fournissent à la fois le transfert fiable des messages et la séparation entre source et destination mais à haute latence. En file d’attente de WCF communication repose sur Message Queuing (MSMQ).  
   
  Le service MSMQ est un composant en option de Windows. Ce service s'exécute en tant que service Windows. Elle capture, au nom de la source, les messages à transmettre figurant dans la file d'attente de transmission, puis les remet à la file d'attente cible. La file d'attente cible accepte ces messages au nom de la destination pour les lui remettre ultérieurement dès qu'elle en fera la demande. Les gestionnaires MSMQ implémentent un protocole de transfert de message fiable afin d'éviter que les messages ne soient égarés pendant leur transmission. Il peut s'agir d'un protocole natif ou du protocole SOAP appelé protocole SRMP (SOAP Reliable Messaging Protocole).  
   

@@ -2,16 +2,16 @@
 title: Stand-Alone Diagnostics Feed, exemple
 ms.date: 03/30/2017
 ms.assetid: d31c6c1f-292c-4d95-8e23-ed8565970ea5
-ms.openlocfilehash: 1edd1c2184dde368fbd16299a836f1811dd24ba6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 730cf011208ea1b57929fff4a1953fd3a935335c
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="stand-alone-diagnostics-feed-sample"></a>Stand-Alone Diagnostics Feed, exemple
 Cet exemple montre comment créer un flux de syndication avec Windows Communication Foundation (WCF) RSS/Atom. Il s’agit d’un programme « Hello World » de base qui montre les principes de base du modèle d’objet et comment configurer un service Windows Communication Foundation (WCF).  
   
- Les modèles de syndication [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] fonctionnent comme des opérations de service qui renvoient un type de données spécifique (<xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>). Les instances de <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> peuvent sérialiser un flux aux formats RSS 2.0 et Atom 1.0. L'exemple de code suivant illustre le contrat utilisé.  
+ WCF modélise les flux de syndication en tant qu’opérations de service qui retournent un type de données spécial <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>. Les instances de <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> peuvent sérialiser un flux aux formats RSS 2.0 et Atom 1.0. L'exemple de code suivant illustre le contrat utilisé.  
   
 ```  
 [ServiceContract(Namespace = "")]  
@@ -31,9 +31,9 @@ Cet exemple montre comment créer un flux de syndication avec Windows Communicat
     }  
 ```  
   
- L'opération `GetProcesses` est annotée avec l'attribut <xref:System.ServiceModel.Web.WebGetAttribute>, qui permet de contrôler la façon dont [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] distribue les demandes HTTP GET pour effectuer les opérations et spécifier le format des messages envoyés.  
+ Le `GetProcesses` opération est annotée avec le <xref:System.ServiceModel.Web.WebGetAttribute> demande d’attribut qui vous permet de contrôler comment WCF distribue HTTP GET pour les opérations de service et de spécifier le format des messages envoyés.  
   
- Comme pour tout service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], les flux de syndication peuvent être auto-hébergés dans toute application managée. Les services de syndication nécessitent une liaison spécifique (<xref:System.ServiceModel.WebHttpBinding>) et un comportement de point de terminaison spécifique (<xref:System.ServiceModel.Description.WebHttpBehavior>) afin de fonctionner correctement. La nouvelle classe <xref:System.ServiceModel.Web.WebServiceHost> fournit une API pratique pour créer ces points de terminaison sans configuration spécifique.  
+ Comme n’importe quel service WCF, flux de syndication peuvent être auto-hébergé dans toute application managée. Les services de syndication nécessitent une liaison spécifique (<xref:System.ServiceModel.WebHttpBinding>) et un comportement de point de terminaison spécifique (<xref:System.ServiceModel.Description.WebHttpBehavior>) afin de fonctionner correctement. La nouvelle classe <xref:System.ServiceModel.Web.WebServiceHost> fournit une API pratique pour créer ces points de terminaison sans configuration spécifique.  
   
 ```  
 WebServiceHost host = new WebServiceHost(typeof(ProcessService), new Uri("http://localhost:8000/diagnostics"));  

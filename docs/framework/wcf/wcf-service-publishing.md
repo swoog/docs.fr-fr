@@ -2,19 +2,19 @@
 title: Publication du service WCF
 ms.date: 03/30/2017
 ms.assetid: c806b253-cd47-4b96-b831-e73cbf08808f
-ms.openlocfilehash: 9f76ab11e9697fc5af5c507d4dc9d944c433c918
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 258c7e65b69648477e58880f35b100a9378dc9c0
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wcf-service-publishing"></a>Publication du service WCF
-Publication de Service Windows Communication Foundation (WCF) vous aide à la progression de l’environnement de développement anticipée fournie par [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hôte de Service et [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Client de Test pour déployer l’application de production environnement à des fins de test. Avant de vous engager dans un plan de déploiement final, vous pouvez utiliser Windows Communication Foundation (WCF) Service de publication pour vérifier que votre [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service s’exécute correctement et est prêt à être publié. Vous pouvez également choisir de déployer vos bibliothèques de services [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] à différents emplacements cibles en vue de les tester.  
+Publication de Service Windows Communication Foundation (WCF) vous aide à la progression de l’environnement de développement anticipée fourni par l’hôte de Service WCF et le Client Test WCF pour déployer l’application dans un environnement de production à des fins de test. Avant de vous engager dans un plan de déploiement final, vous pouvez utiliser Windows Communication Foundation (WCF) Service de publication pour vérifier que votre service WCF fonctionne correctement et est prêt à être publié. Vous pouvez également choisir de déployer vos bibliothèques de service WCF à différents emplacements cibles pour le test.  
   
 ## <a name="supported-services-and-target-locations"></a>Services pris en charge et emplacements cibles  
- La Publication de service [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] prend en charge la publication des services [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] créés à partir du jeu de modèles de la bibliothèque du service [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] et leurs modèles d'élément correspondants, dont :  
+ Publication de Service WCF prend en charge la publication des services WCF créés à partir de l’ensemble des modèles de bibliothèque de service WCF et leurs modèles d’élément correspondants, qui sont les suivantes :  
   
--   [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Modèle de bibliothèque du service avec le modèle d'élément.  
+-   Modèle de bibliothèque du Service WCF avec le modèle d’élément.  
   
 -   Bibliothèque du service de syndication.  
   
@@ -43,31 +43,31 @@ Publication de Service Windows Communication Foundation (WCF) vous aide à la pr
   
  Vous pouvez utiliser **publier** pour spécifier si vous souhaitez copier l’assembly, la configuration et le fichier .svc pour tous les services définis dans le projet à l’emplacement cible et remplace les fichiers existants dans la destination.  
   
- Si vous choisissez de déployer votre application sur le serveur IIS local, vous pouvez rencontrer des erreurs liées à l'installation d'IIS. Vérifiez que IIS est installé correctement. Vous pouvez taper « Lien hypertexte »http://localhost« http://localhost» dans votre navigateur, puis vérifiez si la page par défaut IIS ne s’affichent.  Dans certains cas, les problèmes peuvent aussi être causés par l'inscription incorrecte d'ASP.NET ou de [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] dans IIS. Vous pouvez ouvrir l’invite de commandes Visual Studio et exécutez la commande « aspnet_regiis.exe - ir » pour résoudre les problèmes d’inscription ASP.NET ou exécuter la commande « ServiceModelReg.exe – ia » pour corriger les problèmes de l’inscription WCF.  
+ Si vous choisissez de déployer votre application sur le serveur IIS local, vous pouvez rencontrer des erreurs liées à l'installation d'IIS. Vérifiez que IIS est installé correctement. Vous pouvez taper « Lien hypertexte »http://localhost« http://localhost» dans votre navigateur, puis vérifiez si la page par défaut IIS ne s’affichent.  Dans certains cas, les problèmes peuvent également être causés par un enregistrement incorrect ASP.NET ou WCF dans IIS. Vous pouvez ouvrir l’invite de commandes Visual Studio et exécutez la commande « aspnet_regiis.exe - ir » pour résoudre les problèmes d’inscription ASP.NET ou exécuter la commande « ServiceModelReg.exe – ia » pour corriger les problèmes de l’inscription WCF.  
   
 ## <a name="files-generated-for-publishing"></a>Fichiers générés en vue de leur publication  
- Avant qu'une bibliothèque de service [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] puisse être hébergée sur le Web, les fichiers suivants sont générés par l'outil : fichiers d'assembly, fichier Web.config et fichier .svc. Tous les fichiers sont copiés à l'emplacement cible. Le service est ensuite publié.  
+ Avant d’une bibliothèque de service WCF peut être hébergé sur le Web, les fichiers suivants sont générés par l’outil : fichiers d’assembly, fichier Web.config et fichier .svc. Tous les fichiers sont copiés à l'emplacement cible. Le service est ensuite publié.  
   
 ### <a name="assembly-files"></a>Fichiers d'assembly  
- Lorsque vous publiez un service [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] à l'aide de cet outil, il est construit automatiquement dans un premier temps, puis les fichiers d'assembly sont générés dans le projet de service.  
+ Lorsque vous publiez un service WCF à l’aide de cet outil, le service est automatiquement créé en premier et les fichiers d’assembly sont générés dans le projet de service après sa création.  
   
 ### <a name="svc-file"></a>Fichier .SVC  
- L'opération de publication génère un fichier *.svc pour chaque service [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], que le fichier existe ou non, pour vérifier la validité de la version. Il existe deux types de fichiers svc différents : un pour la bibliothèque du service de syndication et la bibliothèque du service [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] et un autre pour la bibliothèque du service de workflow séquentiel et de l'ordinateur d'état. Le texte généré \*fichier .svc est copié dans le dossier racine dans l’emplacement cible.  
+ L’opération de publication génère un fichier *.svc pour chaque service WCF, si le fichier existe ou non, pour garantir la validité de la version. Il existe deux types de fichiers svc différents : un pour la bibliothèque du Service WCF et de la bibliothèque du Service de Syndication et une autre pour séquentiel et de bibliothèque de Service ordinateur d’état du flux de travail. Le texte généré \*fichier .svc est copié dans le dossier racine dans l’emplacement cible.  
   
 ### <a name="webconfig-file"></a>Fichier Web.config  
  Chaque fois qu'un projet de service est publié à un emplacement cible spécifique, un fichier Web.config est créé.  
   
- Le fichier Web.config généré contient des sections Web qui sont utiles pour l'hébergement Web et le contenu d'App.config pour la bibliothèque du service [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] avec les modifications suivantes :  
+ Le fichier Web.config généré contient des sections Web qui sont utiles pour l’hébergement Web et le contenu du fichier App.config pour la bibliothèque de service WCF avec les modifications suivantes :  
   
 -   L'adresse de base est exclue.  
   
 -   Les paramètres dans l'élément `<diagnostics>` sont exclus pour préserver les paramètres de suivi de la plateforme cible.  
   
 ## <a name="publishing-wcf-services-with-non-http-bindings-to-iis"></a>Publication sur IIS de services WCF avec des liaisons non-HTTP  
- Si vous utilisez IIS 7.0 ou version ultérieure, vous pouvez publier sur IIS des services [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] avec des liaisons non-HTTP. Vous devez effectuer plusieurs tâches de préconfiguration. Pour plus d’informations, consultez les rubriques à [hébergement dans le Service d’Activation des processus Windows](../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).  
+ Si vous utilisez IIS 7.0 ou version ultérieure, vous pouvez publier des services WCF avec des liaisons non-HTTP à IIS. Vous devez effectuer plusieurs tâches de préconfiguration. Pour plus d’informations, consultez les rubriques à [hébergement dans le Service d’Activation des processus Windows](../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).  
   
 ## <a name="security"></a>Sécurité  
- La publication sur le serveur IIS local requiert des privilèges d'administrateur car IIS doit être exécuté sous un compte Administrateur. Si un utilisateur sans privilège d'administrateur ouvre la Publication de service [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], IIS n'est pas disponible parmi les emplacements cibles. La publication sur le système de fichiers ou le FTP Site fonctionne sans privilège d’administrateur.  
+ La publication sur le serveur IIS local requiert des privilèges d'administrateur car IIS doit être exécuté sous un compte Administrateur. Si un utilisateur sans privilège d’administrateur ouvre la publication de Service WCF, IIS n’est pas disponible en tant qu’un emplacement cible. La publication sur le système de fichiers ou le FTP Site fonctionne sans privilège d’administrateur.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Modèles Visual Studio WCF](../../../docs/framework/wcf/wcf-vs-templates.md)  

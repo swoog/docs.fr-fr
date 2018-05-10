@@ -2,11 +2,11 @@
 title: Durable Duplex
 ms.date: 03/30/2017
 ms.assetid: 4e76d1a1-f3d8-4a0f-8746-4a322cdff6eb
-ms.openlocfilehash: 91490eb3ee6c11f29bb49d8343b807e74e8d3bc2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3df5ba962ef33594df1eaebc20789fa9e2d35244
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="durable-duplex"></a>Durable Duplex
 Cet exemple montre comment installer et configurer un échange de messages duplex durable à l’aide des activités de messagerie dans Windows Workflow Foundation (WF). Un échange de messages duplex durable est un échange de messages bidirectionnel qui a lieu sur une longue période de temps. La durée de vie de l'échange de messages peut être plus longue que la durée de vie du canal de communication et la durée de vie en mémoire des instances de service.  
@@ -41,7 +41,7 @@ Cet exemple montre comment installer et configurer un échange de messages duple
 >  La liaison utilisée par cet exemple n'est pas sécurisée. Lors du déploiement de votre application, vous devez configurer votre liaison en fonction des spécifications de sécurité de votre application.  
   
 > [!NOTE]
->  Les files d’attente utilisées dans cet exemple ne sont pas transactionnelles. Pour obtenir un exemple qui montre comment configurer [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] à l’aide de files d’attente de transaction des échanges de messages, consultez le [d’Activation MSMQ](../../../../docs/framework/wcf/samples/msmq-activation.md) exemple.  
+>  Les files d’attente utilisées dans cet exemple ne sont pas transactionnelles. Pour voir un exemple qui montre comment configurer les échanges de messages WCF à l’aide de files d’attente de transaction, le [d’Activation MSMQ](../../../../docs/framework/wcf/samples/msmq-activation.md) exemple.  
   
  L’envoi du message de Service1.xamlx à Service2.xamlx s’effectue à l’aide d’un point de terminaison client configuré avec l’adresse de Service2.xamlx et la liaison personnalisée définie précédemment. Le rappel de Service2.xamlx à Service1.xamlx est envoyé à l'aide d'un point de terminaison client sans adresse explicitement configurée car l'adresse provient du contexte de rappel envoyé par Service1.xamlx. L'exemple de code suivant définit les points de terminaison clients.  
   

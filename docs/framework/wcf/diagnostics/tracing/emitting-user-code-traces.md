@@ -2,11 +2,11 @@
 title: Émission de suivis dans du code utilisateur
 ms.date: 03/30/2017
 ms.assetid: fa54186a-8ffa-4332-b0e7-63867126fd49
-ms.openlocfilehash: 120827bff85d4bc347274cad1370d291caba1c3d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 18b424139f4c1656193f80cf76c704af2b2887e3
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="emitting-user-code-traces"></a>Émission de suivis dans du code utilisateur
 En plus de l’activation du suivi dans la configuration pour collecter des données d’instrumentation générées par Windows Communication Foundation (WCF), vous pouvez également émettre des suivis par programme dans le code utilisateur. Ainsi, vous pouvez créer de manière proactive des données d'instrumentation que vous pouvez consulter ultérieurement à des fins de diagnostic. Cette rubrique explique comment procéder.  
@@ -65,9 +65,9 @@ Trace.CorrelationManager.ActivityId = oldID;
  Si vous affectez à l'attribut `propagateActivity` la valeur `true` pour la source de suivi `System.ServiceModel` dans les fichiers de configuration de client et de service, le traitement de service pour la demande Ajouter se produit dans la même activité que celle définie dans le client. Si le service définit ses propres activités et transferts, les suivis de service n'apparaissent pas dans l'activité propagée par le client. À la place, ils apparaissent dans une activité corrélée par les suivis de transfert à l'activité dont l'ID est propagé par le client.  
   
 > [!NOTE]
->  Si l'attribut `propagateActivity` a la valeur `true` sur le client et le service, l'activité ambiante dans la portée d'opération du service est définie par [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)].  
+>  Si le `propagateActivity` attribut a la valeur `true` sur le client et le service, l’activité ambiante dans la portée de l’opération du service est définie par WCF.  
   
- Vous pouvez utiliser le code suivant pour vérifier si une activité a été définie dans la portée par [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)].  
+ Vous pouvez utiliser le code suivant pour vérifier si une activité a été définie dans la portée par WCF.  
   
 ```  
 // Check if an activity was set in scope by WCF, if it was   
@@ -135,7 +135,7 @@ Les erreurs sur les points de terminaison pour une demande donnée apparaissent 
  ![À l’aide de la visionneuse de Trace à émettre utilisateur&#45;traces de code](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace3.gif "e2eTrace3")  
 Vue Graphique de corrélation d'erreur  
   
- Pour obtenir les suivis précédents, nous définissons `ActivityTracing` pour les sources de suivi de l'utilisateur et `propagateActivity=true` pour la source de suivi `System.ServiceModel`. Nous n'avons pas défini `ActivityTracing` pour la source de suivi `System.ServiceModel` pour permettre la propagation d'activité du code utilisateur au code utilisateur. (Lorsque le suivi d'activité ServiceModel est activé, l'ID d'activité défini dans le client n'est pas entièrement propagé au code utilisateur de service ; les transferts, toutefois, corrèlent les activités de code utilisateur du client et du service aux activités [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] intermédiaires.)  
+ Pour obtenir les suivis précédents, nous définissons `ActivityTracing` pour les sources de suivi de l'utilisateur et `propagateActivity=true` pour la source de suivi `System.ServiceModel`. Nous n'avons pas défini `ActivityTracing` pour la source de suivi `System.ServiceModel` pour permettre la propagation d'activité du code utilisateur au code utilisateur. (Lorsque le suivi d’activité ServiceModel est activé, l’ID d’activité défini dans le client n’est pas propagée vers le code utilisateur du service ; Les transferts, toutefois, mettre en corrélation les activités de code utilisateur client et le service aux activités WCF intermédiaires.)  
   
  La définition d'activités et la propagation de l'ID d'activité nous permettent d'effectuer une corrélation directe d'erreur sur des points de terminaison. De cette manière, il est possible de localiser plus rapidement la cause racine d’une erreur.  
   

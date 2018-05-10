@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], using
 ms.assetid: c39479c3-0766-4a17-ba4c-97a74607f392
-ms.openlocfilehash: 39866d7cdd871c6450e0864848c7a3197779045a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8271f51885c0d7800d26018b94942a7d832bf4a5
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-bindings-to-configure-services-and-clients"></a>Utilisation de liaisons pour configurer des services et des clients
 Les liaisons sont des objets qui spécifient les détails de communication requis pour se connecter à un point de terminaison. Plus spécifiquement, les liaisons contiennent des informations de configuration utilisées pour créer l’exécution du client ou du service en définissant les caractéristiques des transports, les formats de transmission (encodage de message) et les protocoles à utiliser pour le point de terminaison ou canal client respectif. Pour créer un service Windows Communication Foundation (WCF) fonctionnel, chaque point de terminaison dans le service requiert une liaison. Cette rubrique explique ce que sont les liaisons, comment elles sont définies et comment une liaison particulière est spécifiée pour un point de terminaison.  
@@ -26,15 +26,15 @@ Les liaisons sont des objets qui spécifient les détails de communication requi
  Détermine l'encodage de message, par exemple texte/XML, binaire ou MTOM (Message Transmission Optimization Mechanism), qui détermine la façon dont les messages sont représentés comme flux d'octets sur le câble.  
   
 ## <a name="system-provided-bindings"></a>Liaisons fournies par le système  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] inclut un ensemble de liaisons fournies par le système conçues pour répondre à la plupart des conditions et des scénarios de l'application. Les classes suivantes représentent quelques exemples de liaisons fournies par le système :  
+ WCF inclut un jeu de liaisons fournies par le système qui sont conçues pour couvrir la plupart des scénarios et exigences de l’application. Les classes suivantes représentent quelques exemples de liaisons fournies par le système :  
   
 -   <xref:System.ServiceModel.BasicHttpBinding> : liaison de protocole HTTP adaptée à la connexion à des services Web conformes à la spécification WS-I Basic Profile 1.1 (par exemple, services basés sur les services Web ASP.NET [ASMX]).  
   
 -   <xref:System.ServiceModel.WSHttpBinding> : liaison de protocole HTTP adaptée à la connexion à des points de terminaison conformes aux protocoles de spécification des services Web.  
   
--   <xref:System.ServiceModel.NetNamedPipeBinding> : utilise les technologies d'encodage binaire .NET et de tramage conjointement au transport de canal nommé Windows pour se connecter à d'autres points de terminaison [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] sur le même ordinateur.  
+-   <xref:System.ServiceModel.NetNamedPipeBinding>: Utilise l’encodage binaire .NET et tramage technologies conjointement au transport de canal nommé Windows pour se connecter à d’autres points de terminaison WCF sur le même ordinateur.  
   
--   <xref:System.ServiceModel.NetMsmqBinding> : utilise les technologies d'encodage binaire .NET et de tramage conjointement à Message Queuing (également appelée MSMQ) pour créer des connexions de message en file d'attente avec d'autres points de terminaison [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
+-   <xref:System.ServiceModel.NetMsmqBinding>: Utilise l’encodage binaire .NET et de tramage conjointement à Message Queuing (également appelé MSMQ), les technologies pour créer des connexions de message en file d’attente avec d’autres points de terminaison WCF.  
   
  Pour obtenir la liste complète des liaisons fournies par le système, avec les descriptions, consultez [les liaisons fournies](../../../docs/framework/wcf/system-provided-bindings.md).  
   
@@ -49,7 +49,7 @@ Les liaisons sont des objets qui spécifient les détails de communication requi
 2.  Créer un point de terminaison qui utilise cette liaison.  
   
 ## <a name="code-and-configuration"></a>Code et configuration  
- Vous pouvez définir ou configurer des liaisons par le biais de code ou de configuration. Ces deux approches sont indépendantes du type de liaison utilisé, par exemple si vous utilisez une liaison <xref:System.ServiceModel.Channels.CustomBinding> ou fournie par le système. En général, l'utilisation de code permet de bénéficier d'un contrôle total sur la définition d'une liaison lorsque vous compilez. L'utilisation de configuration, en revanche, permet à un administrateur système ou à l'utilisateur d'un service ou client [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] de modifier les paramètres des liaisons. Cette souplesse est souvent souhaitable car il n'existe aucune méthode pour prévoir les exigences matérielles et conditions réseau spécifiques dans lesquelles une application [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] sera déployée. Le fait de séparer les informations de liaison (et d'adressage) du code permet aux administrateurs de modifier les détails de liaison sans avoir à recompiler ou à redéployer l'application. Notez que si la liaison est définie dans du code, elle remplace toute définition basée sur la configuration effectuée dans le fichier de configuration. Pour obtenir des exemples de ces approches, consultez les rubriques suivantes :  
+ Vous pouvez définir ou configurer des liaisons par le biais de code ou de configuration. Ces deux approches sont indépendantes du type de liaison utilisé, par exemple si vous utilisez une liaison <xref:System.ServiceModel.Channels.CustomBinding> ou fournie par le système. En général, l’utilisation de code permet de bénéficier d’un contrôle total sur la définition d’une liaison lorsque vous compilez. À l’aide de la configuration, en revanche, permet à un administrateur système ou l’utilisateur d’un service WCF ou du client pour modifier les paramètres des liaisons. Cette souplesse est souvent souhaitable car il n’existe aucun moyen de prévoir les exigences matérielles spécifiques et les conditions dans lesquelles une application WCF doit être déployée du réseau. Le fait de séparer les informations de liaison (et d’adressage) du code permet aux administrateurs de modifier les détails de liaison sans avoir à recompiler ou à redéployer l’application. Notez que si la liaison est définie dans du code, elle remplace toute définition basée sur la configuration effectuée dans le fichier de configuration. Pour obtenir des exemples de ces approches, consultez les rubriques suivantes :  
   
 -   [Comment : héberger un Service WCF dans une Application managée](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md) fournit un exemple de création d’une liaison dans le code.  
   
