@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring HTTP [WCF]
 ms.assetid: b0c29a86-bc0c-41b3-bc1e-4eb5bb5714d4
-ms.openlocfilehash: 70c947724abf8da68ec8f7e6d858e26fec62dce5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ed9c7a444018e7c5e9ac00de82133cce633fac93
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="configuring-http-and-https"></a>Configuration de HTTP et HTTPS
 Les services et les clients WCF peuvent communiquer sur HTTP et HTTPS. Les paramètres HTTP/HTTPS sont configurés à l'aide d'IIS (Internet Information Services) ou d'un outil de ligne de commande. Lorsqu'un service WCF est hébergé sous IIS, des paramètres HTTP ou HTTPS peuvent être configurés dans IIS (avec l'outil inetmgr.exe). Si un service WCF est auto-hébergé, les paramètres HTTP ou HTTPS sont configurés à l'aide d'un outil de ligne de commande.  
@@ -19,7 +19,7 @@ Les services et les clients WCF peuvent communiquer sur HTTP et HTTPS. Les param
   
  Lors de l’exécution [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ou [!INCLUDE[wxp](../../../../includes/wxp-md.md)], utilisez l’outil HttpCfg.exe. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] installe automatiquement cet outil. Lors de l’exécution [!INCLUDE[wxp](../../../../includes/wxp-md.md)], vous pouvez télécharger l’outil à [outils de prise en charge de Windows XP Service Pack 2](http://go.microsoft.com/fwlink/?LinkId=88606). Pour plus d’informations, consultez [vue d’ensemble de Httpcfg](http://go.microsoft.com/fwlink/?LinkId=88605).  
   
- Lorsque vous exécutez [!INCLUDE[wv](../../../../includes/wv-md.md)] ou Windows 7, ces paramètres doivent être configurés avec l'outil Netsh.exe.  
+ Lors de l’exécution [!INCLUDE[wv](../../../../includes/wv-md.md)] ou Windows 7, vous configurez ces paramètres avec l’outil Netsh.exe.  
   
 ## <a name="configuring-namespace-reservations"></a>Configuration de réservations d'espace de noms  
  La réservation d'espace de noms assigne les droits d'une partie de l'espace de noms de l'URL HTTP à un groupe d'utilisateurs particulier. Une réservation leur donne le droit de créer des services qui écoutent sur cette partie de l'espace de noms. Les réservations sont des préfixes d'URL, autrement dit, la réservation couvre tous les sous-chemins d'accès du chemin d'accès de la réservation. Les réservations d'espace de noms autorisent deux façons d'utiliser des caractères génériques. La documentation de l’API du serveur HTTP décrit le [ordre de résolution entre les déclarations d’espace de noms qui impliquent des caractères génériques](http://go.microsoft.com/fwlink/?LinkId=94841).  
