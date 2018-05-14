@@ -2,11 +2,11 @@
 title: Signatures (F#)
 description: 'Découvrez comment utiliser un fichier de signature F # pour conserver les informations sur les signatures publiques d’un jeu de F # d’éléments de programme, telles que des types, des espaces de noms et des modules.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 04539a871dda9eedd1495e0e5b1f3f5026bae037
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6e182a1a0ac7f3f9fab27026e582d83ee737822e
+ms.sourcegitcommit: e5bb395ec86f536e114314184288f40a8c745e2e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="signatures"></a>Signatures
 
@@ -64,6 +64,9 @@ Les signatures de valeur obéissent aux règles suivantes :
 
 
 - Le modèle de paramètres (aussi appelé *arité*) des signatures et des implémentations doit être cohérent.
+
+
+- Si le fichier d’implémentation correspondant diffèrent des noms de paramètre dans un fichier de signature, le nom dans le fichier de signature servira à la place, ce qui peut provoquer des problèmes lors du débogage ou de profilage. Si vous souhaitez être averti de telles incompatibilités, activer avertissement 3218 dans votre fichier projet, ou lors de l’appel du compilateur (consultez `--warnon` sous [Options du compilateur](compiler-options.md)).
 
 
 Le code suivant illustre un exemple de fichier de signature contenant des signatures d’espace de noms, de module, de valeur de fonction et de type avec les attributs appropriés. Il indique également le fichier d’implémentation correspondant.

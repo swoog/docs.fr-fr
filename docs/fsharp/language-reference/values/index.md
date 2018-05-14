@@ -2,11 +2,11 @@
 title: Valeurs (F#)
 description: 'Découvrez comment les valeurs en F # sont les quantités qui ont un type spécifique.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 610ff6cfc6d33cd22a175ca928bfb6e9f8974a36
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d2874a694d9c39048a28827be858cba499dca87
+ms.sourcegitcommit: e5bb395ec86f536e114314184288f40a8c745e2e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="values"></a>Valeurs
 
@@ -20,6 +20,7 @@ Le terme *liaison* signifie l’association d’un nom à une définition. Le mo
 
 Le type d’une valeur est déduit de la définition. Pour un type primitif, tel qu’un nombre intégral ou à virgule flottante, le type est déterminé à partir du type du littéral. Par conséquent, dans l’exemple précédent, le compilateur déduit que le type de `b` est `unsigned int`, alors qu’il déduit que le type de `a` est `int`. Le type d’une valeur de fonction est déterminé à partir de la valeur de retour dans le corps de la fonction. Pour plus d’informations sur les types de valeurs de fonction, consultez [Fonctions](../functions/index.md). Pour plus d’informations sur les types de littéraux, consultez [Littéraux](../literals.md).
 
+Le compilateur n’émet pas de diagnostics sur les liaisons par défaut. Pour recevoir ces messages, activez avertissement 1182 dans votre fichier projet, ou lors de l’appel du compilateur (consultez `--warnon` sous [Options du compilateur](../compiler-options.md)).
 
 ## <a name="why-immutable"></a>Pourquoi immuables ?
 Des valeurs immuables sont des valeurs qui ne peuvent pas être modifiées durant toute l’exécution d’un programme. Si vous travaillez d’habitude avec des langages tels que C++, Visual Basic ou C#, vous pourrez être surpris de constater que F# donne la primauté aux valeurs immuables, et non aux variables auxquelles de nouvelles valeurs peuvent être assignées pendant l’exécution d’un programme. Les données immuables sont un élément important de la programmation fonctionnelle. Dans un environnement multithread, des variables mutables partagées qui peuvent être modifiées par différents threads sont difficiles à gérer. Par ailleurs, avec des variables mutables, il peut parfois être difficile de savoir si une variable peut être modifiée quand elle est passée à une autre fonction.
@@ -35,6 +36,8 @@ Vous pouvez utiliser le mot clé `mutable` pour spécifier une variable pouvant 
 Vous pouvez assigner une valeur initiale à une variable mutable à l’aide du mot clé `let`, de la même façon que vous définissez une valeur. Toutefois, la différence est que vous pouvez assigner par la suite de nouvelles valeurs à des variables mutables à l’aide de l’opérateur `<-`, comme dans l’exemple suivant.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet602.fs)]
+
+Les valeurs marquées `mutable` peut être promue automatiquement en `'a ref` si capturé par une fermeture, y compris les formulaires qui créent des clôtures, comme `seq` générateurs. Si vous souhaitez être averti lorsque cela se produit, activez l’avertissement 3180 dans votre fichier projet, ou lorsque le compilateur est appelé.
     
 ## <a name="related-topics"></a>Rubriques connexes
 

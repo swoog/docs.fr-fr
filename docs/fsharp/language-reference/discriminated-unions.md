@@ -2,11 +2,11 @@
 title: Unions discriminées (F#)
 description: 'Découvrez comment utiliser F # unions discriminées.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 7949fd1685ca128f19dd0d0d4aec7236169cd375
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 617c659e26df52819a98294bcbfa081ab82fed03
+ms.sourcegitcommit: e5bb395ec86f536e114314184288f40a8c745e2e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="discriminated-unions"></a>Unions discriminées
 
@@ -16,14 +16,16 @@ Les unions discriminées prennent en charge pour les valeurs qui peuvent s’agi
 
 ```fsharp
 [ attributes ]
-type type-name =
+type [accessibility-modifier] type-name =
     | case-identifier1 [of [ fieldname1 : ] type1 [ * [ fieldname2 : ] type2 ...]
     | case-identifier2 [of [fieldname3 : ]type3 [ * [ fieldname4 : ]type4 ...]
 ...
 ```
 
 ## <a name="remarks"></a>Notes
-Les unions discriminées sont semblables aux types union dans d’autres langages, mais il existe des différences. Comme avec un type union en C++ ou un type variant en Visual Basic, les données stockées dans la valeur ne sont pas fixe ; Il peut être une des options distinctes. Contrairement aux unions de ces autres langages, toutefois, chacune des options possibles reçoit un *identificateur de cas*. Les identificateurs de cas sont des noms pour les différents types de valeurs susceptibles d’entraîner des objets de ce type ; les valeurs sont facultatives. Si les valeurs ne sont pas présents, le cas est équivalent à un cas d’énumération. Si les valeurs sont présentes, chaque valeur peut être une valeur unique d’un type spécifié, ou un tuple qui regroupe plusieurs champs des mêmes ou de types différents. À compter de F # 3.1, vous pouvez nommer un champ individuel, mais le nom est facultatif, même si d’autres champs dans la même casse sont nommés.
+Les unions discriminées sont semblables aux types union dans d’autres langages, mais il existe des différences. Comme avec un type union en C++ ou un type variant en Visual Basic, les données stockées dans la valeur ne sont pas fixe ; Il peut être une des options distinctes. Contrairement aux unions de ces autres langages, toutefois, chacune des options possibles reçoit un *identificateur de cas*. Les identificateurs de cas sont des noms pour les différents types de valeurs susceptibles d’entraîner des objets de ce type ; les valeurs sont facultatives. Si les valeurs ne sont pas présents, le cas est équivalent à un cas d’énumération. Si les valeurs sont présentes, chaque valeur peut être une valeur unique d’un type spécifié, ou un tuple qui regroupe plusieurs champs des mêmes ou de types différents. Vous pouvez nommer un champ individuel, mais le nom est facultatif, même si d’autres champs dans la même casse sont nommés.
+
+Accessibilité pour les unions discriminées par défaut est `public`.
 
 Par exemple, considérez la déclaration suivante d’un type de forme.
 
