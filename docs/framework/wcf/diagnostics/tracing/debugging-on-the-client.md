@@ -1,24 +1,12 @@
 ---
-title: "Débogage sur le client"
-ms.custom: 
+title: Débogage sur le client
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 56f9ad05-ea1b-4ef6-85f2-890f7ed71567
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5fbe48bc3b6bc3c932abd52bcfb2d50dcc8ab4a1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 21598b84d0d493bad29a77adf31b85f4989afdc7
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/07/2018
 ---
-# <a name="debugging-on-the-client"></a><span data-ttu-id="8540d-102">Débogage sur le client</span><span class="sxs-lookup"><span data-stu-id="8540d-102">Debugging on the Client</span></span>
-<span data-ttu-id="8540d-103">Pour faciliter l’écriture d’applications client pour votre [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] service, vous pouvez ajouter la [ \<serviceDebug >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicedebug.md) comportement dans le fichier de configuration de votre service de service.</span><span class="sxs-lookup"><span data-stu-id="8540d-103">To make it easier for users to write client applications for your [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] service, you can add the [\<serviceDebug>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicedebug.md) service behavior to the configuration file of your service.</span></span> <span data-ttu-id="8540d-104">Ce comportement permet de publier des pages d'aide et de retourner des informations d'exception gérées dans les détails des erreurs SOAP renvoyées au client.</span><span class="sxs-lookup"><span data-stu-id="8540d-104">This behavior can be used to publish help pages, and return managed exception information in the details of SOAP faults returned to the client.</span></span>
+# <a name="debugging-on-the-client"></a><span data-ttu-id="c1523-102">Débogage sur le client</span><span class="sxs-lookup"><span data-stu-id="c1523-102">Debugging on the Client</span></span>
+<span data-ttu-id="c1523-103">Pour faciliter aux utilisateurs d’écrire des applications clientes pour votre service WCF, vous pouvez ajouter la [ \<serviceDebug >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicedebug.md) comportement dans le fichier de configuration de votre service de service.</span><span class="sxs-lookup"><span data-stu-id="c1523-103">To make it easier for users to write client applications for your WCF service, you can add the [\<serviceDebug>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicedebug.md) service behavior to the configuration file of your service.</span></span> <span data-ttu-id="c1523-104">Ce comportement permet de publier des pages d'aide et de retourner des informations d'exception gérées dans les détails des erreurs SOAP renvoyées au client.</span><span class="sxs-lookup"><span data-stu-id="c1523-104">This behavior can be used to publish help pages, and return managed exception information in the details of SOAP faults returned to the client.</span></span>

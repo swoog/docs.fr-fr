@@ -1,29 +1,17 @@
 ---
-title: "Limitations des inférences"
-ms.custom: 
+title: Limitations des inférences
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 78517994-5d57-44f8-9d20-38812977de09
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: af344055e511a2657007e216e1df304e2243362c
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: b3ad1e66a6a1a4cb2a2aab7b2f86f38e5c784876
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="inference-limitations"></a><span data-ttu-id="cd882-102">Limitations des inférences</span><span class="sxs-lookup"><span data-stu-id="cd882-102">Inference Limitations</span></span>
-<span data-ttu-id="cd882-103">Le processus d'inférence d'un schéma de l'objet <xref:System.Data.DataSet> à partir de XML peut aboutir à des schémas différents en fonction des éléments XML figurant dans chaque document.</span><span class="sxs-lookup"><span data-stu-id="cd882-103">The process of inferring a <xref:System.Data.DataSet> schema from XML can result in different schemas depending on the XML elements in each document.</span></span> <span data-ttu-id="cd882-104">Examinons, par exemple, les documents XML suivants.</span><span class="sxs-lookup"><span data-stu-id="cd882-104">For example, consider the following XML documents.</span></span>  
+# <a name="inference-limitations"></a><span data-ttu-id="d9b12-102">Limitations des inférences</span><span class="sxs-lookup"><span data-stu-id="d9b12-102">Inference Limitations</span></span>
+<span data-ttu-id="d9b12-103">Le processus d'inférence d'un schéma de l'objet <xref:System.Data.DataSet> à partir de XML peut aboutir à des schémas différents en fonction des éléments XML figurant dans chaque document.</span><span class="sxs-lookup"><span data-stu-id="d9b12-103">The process of inferring a <xref:System.Data.DataSet> schema from XML can result in different schemas depending on the XML elements in each document.</span></span> <span data-ttu-id="d9b12-104">Examinons, par exemple, les documents XML suivants.</span><span class="sxs-lookup"><span data-stu-id="d9b12-104">For example, consider the following XML documents.</span></span>  
   
- <span data-ttu-id="cd882-105">Document1 :</span><span class="sxs-lookup"><span data-stu-id="cd882-105">Document1:</span></span>  
+ <span data-ttu-id="d9b12-105">Document1 :</span><span class="sxs-lookup"><span data-stu-id="d9b12-105">Document1:</span></span>  
   
 ```xml  
 <DocumentElement>  
@@ -32,7 +20,7 @@ ms.lasthandoff: 01/17/2018
 </DocumentElement>  
 ```  
   
- <span data-ttu-id="cd882-106">Document2 :</span><span class="sxs-lookup"><span data-stu-id="cd882-106">Document2:</span></span>  
+ <span data-ttu-id="d9b12-106">Document2 :</span><span class="sxs-lookup"><span data-stu-id="d9b12-106">Document2:</span></span>  
   
 ```xml  
 <DocumentElement>  
@@ -40,35 +28,35 @@ ms.lasthandoff: 01/17/2018
 </DocumentElement>  
 ```  
   
- <span data-ttu-id="cd882-107">Pour « Document1 », le processus d’inférence produit un **DataSet** nommé « DocumentElement » et une table nommée « Element1 » car « Element1 » est un élément répétitif.</span><span class="sxs-lookup"><span data-stu-id="cd882-107">For "Document1," the inference process produces a **DataSet** named "DocumentElement" and a table named "Element1," because "Element1" is a repeating element.</span></span>  
+ <span data-ttu-id="d9b12-107">Pour « Document1 », le processus d’inférence produit un **DataSet** nommé « DocumentElement » et une table nommée « Element1 » car « Element1 » est un élément répétitif.</span><span class="sxs-lookup"><span data-stu-id="d9b12-107">For "Document1," the inference process produces a **DataSet** named "DocumentElement" and a table named "Element1," because "Element1" is a repeating element.</span></span>  
   
- <span data-ttu-id="cd882-108">**DataSet :** DocumentElement</span><span class="sxs-lookup"><span data-stu-id="cd882-108">**DataSet:** DocumentElement</span></span>  
+ <span data-ttu-id="d9b12-108">**DataSet :** DocumentElement</span><span class="sxs-lookup"><span data-stu-id="d9b12-108">**DataSet:** DocumentElement</span></span>  
   
- <span data-ttu-id="cd882-109">**Table :** Element1</span><span class="sxs-lookup"><span data-stu-id="cd882-109">**Table:** Element1</span></span>  
+ <span data-ttu-id="d9b12-109">**Table :** Element1</span><span class="sxs-lookup"><span data-stu-id="d9b12-109">**Table:** Element1</span></span>  
   
-|<span data-ttu-id="cd882-110">Element1_Text</span><span class="sxs-lookup"><span data-stu-id="cd882-110">Element1_Text</span></span>|  
+|<span data-ttu-id="d9b12-110">Element1_Text</span><span class="sxs-lookup"><span data-stu-id="d9b12-110">Element1_Text</span></span>|  
 |--------------------|  
-|<span data-ttu-id="cd882-111">Text1</span><span class="sxs-lookup"><span data-stu-id="cd882-111">Text1</span></span>|  
-|<span data-ttu-id="cd882-112">Text2</span><span class="sxs-lookup"><span data-stu-id="cd882-112">Text2</span></span>|  
+|<span data-ttu-id="d9b12-111">Text1</span><span class="sxs-lookup"><span data-stu-id="d9b12-111">Text1</span></span>|  
+|<span data-ttu-id="d9b12-112">Text2</span><span class="sxs-lookup"><span data-stu-id="d9b12-112">Text2</span></span>|  
   
- <span data-ttu-id="cd882-113">Toutefois, pour « Document2 », le processus d’inférence produit un **DataSet** nommé « NewDataSet » et une table nommée « DocumentElement ».</span><span class="sxs-lookup"><span data-stu-id="cd882-113">However, for "Document2," the inference process produces a **DataSet** named "NewDataSet" and a table named "DocumentElement."</span></span> <span data-ttu-id="cd882-114">« Element1 » est déduit en tant que colonne car il n'a ni attribut, ni élément enfant.</span><span class="sxs-lookup"><span data-stu-id="cd882-114">"Element1" is inferred as a column because it has no attributes and no child elements.</span></span>  
+ <span data-ttu-id="d9b12-113">Toutefois, pour « Document2 », le processus d’inférence produit un **DataSet** nommé « NewDataSet » et une table nommée « DocumentElement ».</span><span class="sxs-lookup"><span data-stu-id="d9b12-113">However, for "Document2," the inference process produces a **DataSet** named "NewDataSet" and a table named "DocumentElement."</span></span> <span data-ttu-id="d9b12-114">« Element1 » est déduit en tant que colonne car il n'a ni attribut, ni élément enfant.</span><span class="sxs-lookup"><span data-stu-id="d9b12-114">"Element1" is inferred as a column because it has no attributes and no child elements.</span></span>  
   
- <span data-ttu-id="cd882-115">**DataSet :** NewDataSet</span><span class="sxs-lookup"><span data-stu-id="cd882-115">**DataSet:** NewDataSet</span></span>  
+ <span data-ttu-id="d9b12-115">**DataSet :** NewDataSet</span><span class="sxs-lookup"><span data-stu-id="d9b12-115">**DataSet:** NewDataSet</span></span>  
   
- <span data-ttu-id="cd882-116">**Table :** DocumentElement</span><span class="sxs-lookup"><span data-stu-id="cd882-116">**Table:** DocumentElement</span></span>  
+ <span data-ttu-id="d9b12-116">**Table :** DocumentElement</span><span class="sxs-lookup"><span data-stu-id="d9b12-116">**Table:** DocumentElement</span></span>  
   
-|<span data-ttu-id="cd882-117">Element1</span><span class="sxs-lookup"><span data-stu-id="cd882-117">Element1</span></span>|  
+|<span data-ttu-id="d9b12-117">Element1</span><span class="sxs-lookup"><span data-stu-id="d9b12-117">Element1</span></span>|  
 |--------------|  
-|<span data-ttu-id="cd882-118">Text1</span><span class="sxs-lookup"><span data-stu-id="cd882-118">Text1</span></span>|  
+|<span data-ttu-id="d9b12-118">Text1</span><span class="sxs-lookup"><span data-stu-id="d9b12-118">Text1</span></span>|  
   
- <span data-ttu-id="cd882-119">Ces deux documents XML peuvent avoir été conçus de manière à produire le même schéma, mais le processus d'inférence donne des résultats très différents en fonction des éléments contenus dans chaque document.</span><span class="sxs-lookup"><span data-stu-id="cd882-119">These two XML documents may have been intended to produce the same schema, but the inference process produces very different results based on the elements contained in each document.</span></span>  
+ <span data-ttu-id="d9b12-119">Ces deux documents XML peuvent avoir été conçus de manière à produire le même schéma, mais le processus d'inférence donne des résultats très différents en fonction des éléments contenus dans chaque document.</span><span class="sxs-lookup"><span data-stu-id="d9b12-119">These two XML documents may have been intended to produce the same schema, but the inference process produces very different results based on the elements contained in each document.</span></span>  
   
- <span data-ttu-id="cd882-120">Pour éviter les différences qui peuvent se produire lors de la génération de schéma à partir d’un document XML, nous vous recommandons de spécifier explicitement un schéma à l’aide du langage de définition de schéma XML (XSD) ou (XML-Data Reduced) lors du chargement d’un **DataSet** à partir de XML.</span><span class="sxs-lookup"><span data-stu-id="cd882-120">To avoid the discrepancies that can occur when generating schema from an XML document, we recommend that you explicitly specify a schema using XML Schema definition language (XSD) or XML-Data Reduced (XDR) when loading a **DataSet** from XML.</span></span> <span data-ttu-id="cd882-121">Pour plus d’informations sur la spécification explicite un **DataSet** schéma avec le schéma XML, consultez [dérivant Structure relationnelle des DataSet à partir de XSD (XML Schema)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md).</span><span class="sxs-lookup"><span data-stu-id="cd882-121">For more information about explicitly specifying a **DataSet** schema with XML Schema, see [Deriving DataSet Relational Structure from XML Schema (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md).</span></span>  
+ <span data-ttu-id="d9b12-120">Pour éviter les différences qui peuvent se produire lors de la génération de schéma à partir d’un document XML, nous vous recommandons de spécifier explicitement un schéma à l’aide du langage de définition de schéma XML (XSD) ou (XML-Data Reduced) lors du chargement d’un **DataSet** à partir de XML.</span><span class="sxs-lookup"><span data-stu-id="d9b12-120">To avoid the discrepancies that can occur when generating schema from an XML document, we recommend that you explicitly specify a schema using XML Schema definition language (XSD) or XML-Data Reduced (XDR) when loading a **DataSet** from XML.</span></span> <span data-ttu-id="d9b12-121">Pour plus d’informations sur la spécification explicite un **DataSet** schéma avec le schéma XML, consultez [dérivant Structure relationnelle des DataSet à partir de XSD (XML Schema)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md).</span><span class="sxs-lookup"><span data-stu-id="d9b12-121">For more information about explicitly specifying a **DataSet** schema with XML Schema, see [Deriving DataSet Relational Structure from XML Schema (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cd882-122">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="cd882-122">See Also</span></span>  
- [<span data-ttu-id="cd882-123">Inférence de la structure relationnelle d’un DataSet à partir de XML</span><span class="sxs-lookup"><span data-stu-id="cd882-123">Inferring DataSet Relational Structure from XML</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)  
- [<span data-ttu-id="cd882-124">Chargement d’un DataSet à partir de XML</span><span class="sxs-lookup"><span data-stu-id="cd882-124">Loading a DataSet from XML</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)  
- [<span data-ttu-id="cd882-125">Chargement des informations de schéma de DataSet à partir de XML</span><span class="sxs-lookup"><span data-stu-id="cd882-125">Loading DataSet Schema Information from XML</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)  
- [<span data-ttu-id="cd882-126">Utilisation de XML dans un DataSet</span><span class="sxs-lookup"><span data-stu-id="cd882-126">Using XML in a DataSet</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
- [<span data-ttu-id="cd882-127">DataSets, DataTables et DataViews</span><span class="sxs-lookup"><span data-stu-id="cd882-127">DataSets, DataTables, and DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [<span data-ttu-id="cd882-128">Fournisseurs managés ADO.NET et centre de développement DataSet</span><span class="sxs-lookup"><span data-stu-id="cd882-128">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="d9b12-122">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="d9b12-122">See Also</span></span>  
+ [<span data-ttu-id="d9b12-123">Inférence de la structure relationnelle d’un DataSet à partir de XML</span><span class="sxs-lookup"><span data-stu-id="d9b12-123">Inferring DataSet Relational Structure from XML</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)  
+ [<span data-ttu-id="d9b12-124">Chargement d’un DataSet à partir de XML</span><span class="sxs-lookup"><span data-stu-id="d9b12-124">Loading a DataSet from XML</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)  
+ [<span data-ttu-id="d9b12-125">Chargement des informations de schéma de DataSet à partir de XML</span><span class="sxs-lookup"><span data-stu-id="d9b12-125">Loading DataSet Schema Information from XML</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)  
+ [<span data-ttu-id="d9b12-126">Utilisation de XML dans un DataSet</span><span class="sxs-lookup"><span data-stu-id="d9b12-126">Using XML in a DataSet</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
+ [<span data-ttu-id="d9b12-127">DataSets, DataTables et DataViews</span><span class="sxs-lookup"><span data-stu-id="d9b12-127">DataSets, DataTables, and DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [<span data-ttu-id="d9b12-128">Fournisseurs managés ADO.NET et centre de développement DataSet</span><span class="sxs-lookup"><span data-stu-id="d9b12-128">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

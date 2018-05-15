@@ -1,74 +1,67 @@
 ---
 title: Génériques (guide de programmation C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - C# language, generics
 - generics [C#]
 ms.assetid: 75ea8509-a4ea-4e7a-a2b3-cf72482e9282
-caps.latest.revision: 23
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 026b8350a75794cf1101bef69d1bf15f474f103d
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 8f412366072c81b8aaca94829e0aa214f356200d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="generics-c-programming-guide"></a><span data-ttu-id="594c4-102">Génériques (guide de programmation C#)</span><span class="sxs-lookup"><span data-stu-id="594c4-102">Generics (C# Programming Guide)</span></span>
-<span data-ttu-id="594c4-103">Les génériques ont été ajoutés à la version 2.0 du langage C# et du Common Language Runtime (CLR).</span><span class="sxs-lookup"><span data-stu-id="594c4-103">Generics were added to version 2.0 of the C# language and the common language runtime (CLR).</span></span> <span data-ttu-id="594c4-104">Les génériques introduisent le concept des paramètres de type dans .NET Framework, qui permettent de concevoir des classes et des méthodes qui diffèrent la spécification d’un ou de plusieurs types jusqu’à ce que la classe ou la méthode soit déclarée et instanciée par le code client.</span><span class="sxs-lookup"><span data-stu-id="594c4-104">Generics introduce to the .NET Framework the concept of type parameters, which make it possible to design classes and methods that defer the specification of one or more types until the class or method is declared and instantiated by client code.</span></span> <span data-ttu-id="594c4-105">Par exemple, à l’aide d’un paramètre de type générique T, vous pouvez écrire une seule classe qui peut être utilisée par un autre code client sans impliquer le coût ou le risque des casts ou des opérations de boxing à l’exécution, comme illustré ici :</span><span class="sxs-lookup"><span data-stu-id="594c4-105">For example, by using a generic type parameter T you can write a single class that other client code can use without incurring the cost or risk of runtime casts or boxing operations, as shown here:</span></span>  
+# <a name="generics-c-programming-guide"></a><span data-ttu-id="03758-102">Génériques (guide de programmation C#)</span><span class="sxs-lookup"><span data-stu-id="03758-102">Generics (C# Programming Guide)</span></span>
+<span data-ttu-id="03758-103">Les génériques ont été ajoutés à la version 2.0 du langage C# et du Common Language Runtime (CLR).</span><span class="sxs-lookup"><span data-stu-id="03758-103">Generics were added to version 2.0 of the C# language and the common language runtime (CLR).</span></span> <span data-ttu-id="03758-104">Les génériques introduisent le concept des paramètres de type dans .NET Framework, qui permettent de concevoir des classes et des méthodes qui diffèrent la spécification d’un ou de plusieurs types jusqu’à ce que la classe ou la méthode soit déclarée et instanciée par le code client.</span><span class="sxs-lookup"><span data-stu-id="03758-104">Generics introduce to the .NET Framework the concept of type parameters, which make it possible to design classes and methods that defer the specification of one or more types until the class or method is declared and instantiated by client code.</span></span> <span data-ttu-id="03758-105">Par exemple, à l’aide d’un paramètre de type générique T, vous pouvez écrire une seule classe qui peut être utilisée par un autre code client sans impliquer le coût ou le risque des casts ou des opérations de boxing à l’exécution, comme illustré ici :</span><span class="sxs-lookup"><span data-stu-id="03758-105">For example, by using a generic type parameter T you can write a single class that other client code can use without incurring the cost or risk of runtime casts or boxing operations, as shown here:</span></span>  
   
  [!code-csharp[csProgGuideGenerics#1](../../../csharp/programming-guide/generics/codesnippet/CSharp/index_1.cs)]  
   
-## <a name="generics-overview"></a><span data-ttu-id="594c4-106">Vue d’ensemble des génériques</span><span class="sxs-lookup"><span data-stu-id="594c4-106">Generics Overview</span></span>  
+## <a name="generics-overview"></a><span data-ttu-id="03758-106">Vue d’ensemble des génériques</span><span class="sxs-lookup"><span data-stu-id="03758-106">Generics Overview</span></span>  
   
--   <span data-ttu-id="594c4-107">Utilisez des types génériques pour optimiser la réutilisation de code, la sécurité des types et les performances.</span><span class="sxs-lookup"><span data-stu-id="594c4-107">Use generic types to maximize code reuse, type safety, and performance.</span></span>  
+-   <span data-ttu-id="03758-107">Utilisez des types génériques pour optimiser la réutilisation de code, la sécurité des types et les performances.</span><span class="sxs-lookup"><span data-stu-id="03758-107">Use generic types to maximize code reuse, type safety, and performance.</span></span>  
   
--   <span data-ttu-id="594c4-108">L’utilisation la plus courante des génériques est de créer des classes de collection.</span><span class="sxs-lookup"><span data-stu-id="594c4-108">The most common use of generics is to create collection classes.</span></span>  
+-   <span data-ttu-id="03758-108">L’utilisation la plus courante des génériques est de créer des classes de collection.</span><span class="sxs-lookup"><span data-stu-id="03758-108">The most common use of generics is to create collection classes.</span></span>  
   
--   <span data-ttu-id="594c4-109">La bibliothèque de classes du .NET Framework contient plusieurs nouvelles classes de collection génériques dans l’espace de noms <xref:System.Collections.Generic>.</span><span class="sxs-lookup"><span data-stu-id="594c4-109">The .NET Framework class library contains several new generic collection classes in the <xref:System.Collections.Generic> namespace.</span></span> <span data-ttu-id="594c4-110">Celles-ci doivent être utilisées chaque fois que c’est possible, à la place de classes comme <xref:System.Collections.ArrayList> dans l’espace de noms <xref:System.Collections>.</span><span class="sxs-lookup"><span data-stu-id="594c4-110">These should be used whenever possible instead of classes such as <xref:System.Collections.ArrayList> in the <xref:System.Collections> namespace.</span></span>  
+-   <span data-ttu-id="03758-109">La bibliothèque de classes du .NET Framework contient plusieurs nouvelles classes de collection génériques dans l’espace de noms <xref:System.Collections.Generic>.</span><span class="sxs-lookup"><span data-stu-id="03758-109">The .NET Framework class library contains several new generic collection classes in the <xref:System.Collections.Generic> namespace.</span></span> <span data-ttu-id="03758-110">Celles-ci doivent être utilisées chaque fois que c’est possible, à la place de classes comme <xref:System.Collections.ArrayList> dans l’espace de noms <xref:System.Collections>.</span><span class="sxs-lookup"><span data-stu-id="03758-110">These should be used whenever possible instead of classes such as <xref:System.Collections.ArrayList> in the <xref:System.Collections> namespace.</span></span>  
   
--   <span data-ttu-id="594c4-111">Vous pouvez créer vos propres interfaces, classes, méthodes, événements et délégués génériques.</span><span class="sxs-lookup"><span data-stu-id="594c4-111">You can create your own generic interfaces, classes, methods, events and delegates.</span></span>  
+-   <span data-ttu-id="03758-111">Vous pouvez créer vos propres interfaces, classes, méthodes, événements et délégués génériques.</span><span class="sxs-lookup"><span data-stu-id="03758-111">You can create your own generic interfaces, classes, methods, events and delegates.</span></span>  
   
--   <span data-ttu-id="594c4-112">Les classes génériques peuvent être contraintes pour permettre l’accès à des méthodes sur des types de données particuliers.</span><span class="sxs-lookup"><span data-stu-id="594c4-112">Generic classes may be constrained to enable access to methods on particular data types.</span></span>  
+-   <span data-ttu-id="03758-112">Les classes génériques peuvent être contraintes pour permettre l’accès à des méthodes sur des types de données particuliers.</span><span class="sxs-lookup"><span data-stu-id="03758-112">Generic classes may be constrained to enable access to methods on particular data types.</span></span>  
   
--   <span data-ttu-id="594c4-113">Des informations sur les types qui sont utilisés dans un type de données générique peuvent être obtenues à l’exécution à l’aide de la réflexion.</span><span class="sxs-lookup"><span data-stu-id="594c4-113">Information on the types that are used in a generic data type may be obtained at run-time by using reflection.</span></span>  
+-   <span data-ttu-id="03758-113">Des informations sur les types qui sont utilisés dans un type de données générique peuvent être obtenues à l’exécution à l’aide de la réflexion.</span><span class="sxs-lookup"><span data-stu-id="03758-113">Information on the types that are used in a generic data type may be obtained at run-time by using reflection.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="594c4-114">Rubriques connexes</span><span class="sxs-lookup"><span data-stu-id="594c4-114">Related Sections</span></span>  
- <span data-ttu-id="594c4-115">Pour plus d'informations :</span><span class="sxs-lookup"><span data-stu-id="594c4-115">For more information:</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="03758-114">Rubriques connexes</span><span class="sxs-lookup"><span data-stu-id="03758-114">Related Sections</span></span>  
+ <span data-ttu-id="03758-115">Pour plus d'informations :</span><span class="sxs-lookup"><span data-stu-id="03758-115">For more information:</span></span>  
   
--   [<span data-ttu-id="594c4-116">Introduction aux génériques</span><span class="sxs-lookup"><span data-stu-id="594c4-116">Introduction to Generics</span></span>](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
+-   [<span data-ttu-id="03758-116">Introduction aux génériques</span><span class="sxs-lookup"><span data-stu-id="03758-116">Introduction to Generics</span></span>](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
   
--   [<span data-ttu-id="594c4-117">Avantages des génériques</span><span class="sxs-lookup"><span data-stu-id="594c4-117">Benefits of Generics</span></span>](../../../csharp/programming-guide/generics/benefits-of-generics.md)  
+-   [<span data-ttu-id="03758-117">Avantages des génériques</span><span class="sxs-lookup"><span data-stu-id="03758-117">Benefits of Generics</span></span>](../../../csharp/programming-guide/generics/benefits-of-generics.md)  
   
--   [<span data-ttu-id="594c4-118">Paramètres de type générique</span><span class="sxs-lookup"><span data-stu-id="594c4-118">Generic Type Parameters</span></span>](../../../csharp/programming-guide/generics/generic-type-parameters.md)  
+-   [<span data-ttu-id="03758-118">Paramètres de type générique</span><span class="sxs-lookup"><span data-stu-id="03758-118">Generic Type Parameters</span></span>](../../../csharp/programming-guide/generics/generic-type-parameters.md)  
   
--   [<span data-ttu-id="594c4-119">Contraintes sur les paramètres de type</span><span class="sxs-lookup"><span data-stu-id="594c4-119">Constraints on Type Parameters</span></span>](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md)  
+-   [<span data-ttu-id="03758-119">Contraintes sur les paramètres de type</span><span class="sxs-lookup"><span data-stu-id="03758-119">Constraints on Type Parameters</span></span>](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md)  
   
--   [<span data-ttu-id="594c4-120">Classes génériques</span><span class="sxs-lookup"><span data-stu-id="594c4-120">Generic Classes</span></span>](../../../csharp/programming-guide/generics/generic-classes.md)  
+-   [<span data-ttu-id="03758-120">Classes génériques</span><span class="sxs-lookup"><span data-stu-id="03758-120">Generic Classes</span></span>](../../../csharp/programming-guide/generics/generic-classes.md)  
   
--   [<span data-ttu-id="594c4-121">Interfaces génériques</span><span class="sxs-lookup"><span data-stu-id="594c4-121">Generic Interfaces</span></span>](../../../csharp/programming-guide/generics/generic-interfaces.md)  
+-   [<span data-ttu-id="03758-121">Interfaces génériques</span><span class="sxs-lookup"><span data-stu-id="03758-121">Generic Interfaces</span></span>](../../../csharp/programming-guide/generics/generic-interfaces.md)  
   
--   [<span data-ttu-id="594c4-122">Méthodes génériques</span><span class="sxs-lookup"><span data-stu-id="594c4-122">Generic Methods</span></span>](../../../csharp/programming-guide/generics/generic-methods.md)  
+-   [<span data-ttu-id="03758-122">Méthodes génériques</span><span class="sxs-lookup"><span data-stu-id="03758-122">Generic Methods</span></span>](../../../csharp/programming-guide/generics/generic-methods.md)  
   
--   [<span data-ttu-id="594c4-123">Délégués génériques</span><span class="sxs-lookup"><span data-stu-id="594c4-123">Generic Delegates</span></span>](../../../csharp/programming-guide/generics/generic-delegates.md)  
+-   [<span data-ttu-id="03758-123">Délégués génériques</span><span class="sxs-lookup"><span data-stu-id="03758-123">Generic Delegates</span></span>](../../../csharp/programming-guide/generics/generic-delegates.md)  
   
--   [<span data-ttu-id="594c4-124">Différences entre les modèles C++ et les génériques C#</span><span class="sxs-lookup"><span data-stu-id="594c4-124">Differences Between C++ Templates and C# Generics</span></span>](../../../csharp/programming-guide/generics/differences-between-cpp-templates-and-csharp-generics.md)  
+-   [<span data-ttu-id="03758-124">Différences entre les modèles C++ et les génériques C#</span><span class="sxs-lookup"><span data-stu-id="03758-124">Differences Between C++ Templates and C# Generics</span></span>](../../../csharp/programming-guide/generics/differences-between-cpp-templates-and-csharp-generics.md)  
   
--   [<span data-ttu-id="594c4-125">Génériques et réflexion</span><span class="sxs-lookup"><span data-stu-id="594c4-125">Generics and Reflection</span></span>](../../../csharp/programming-guide/generics/generics-and-reflection.md)  
+-   [<span data-ttu-id="03758-125">Génériques et réflexion</span><span class="sxs-lookup"><span data-stu-id="03758-125">Generics and Reflection</span></span>](../../../csharp/programming-guide/generics/generics-and-reflection.md)  
   
--   [<span data-ttu-id="594c4-126">Génériques dans le runtime</span><span class="sxs-lookup"><span data-stu-id="594c4-126">Generics in the Run Time</span></span>](../../../csharp/programming-guide/generics/generics-in-the-run-time.md)  
+-   [<span data-ttu-id="03758-126">Génériques dans le runtime</span><span class="sxs-lookup"><span data-stu-id="03758-126">Generics in the Run Time</span></span>](../../../csharp/programming-guide/generics/generics-in-the-run-time.md)  
   
-## <a name="c-language-specification"></a><span data-ttu-id="594c4-127">Spécification du langage C#</span><span class="sxs-lookup"><span data-stu-id="594c4-127">C# Language Specification</span></span>  
- <span data-ttu-id="594c4-128">Pour plus d'informations, voir la [spécification du langage C#](../../../csharp/language-reference/language-specification/index.md).</span><span class="sxs-lookup"><span data-stu-id="594c4-128">For more information, see the [C# Language Specification](../../../csharp/language-reference/language-specification/index.md).</span></span>  
+## <a name="c-language-specification"></a><span data-ttu-id="03758-127">Spécification du langage C#</span><span class="sxs-lookup"><span data-stu-id="03758-127">C# Language Specification</span></span>  
+ <span data-ttu-id="03758-128">Pour plus d'informations, voir la [spécification du langage C#](../../../csharp/language-reference/language-specification/index.md).</span><span class="sxs-lookup"><span data-stu-id="03758-128">For more information, see the [C# Language Specification](../../../csharp/language-reference/language-specification/index.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="594c4-129">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="594c4-129">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="03758-129">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="03758-129">See Also</span></span>  
  <xref:System.Collections.Generic>  
- [<span data-ttu-id="594c4-130">Guide de programmation C#</span><span class="sxs-lookup"><span data-stu-id="594c4-130">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="594c4-131">Types</span><span class="sxs-lookup"><span data-stu-id="594c4-131">Types</span></span>](../../../csharp/programming-guide/types/index.md)  
- [<span data-ttu-id="594c4-132">\<typeparam></span><span class="sxs-lookup"><span data-stu-id="594c4-132">\<typeparam></span></span>](../../../csharp/programming-guide/xmldoc/typeparam.md)  
- [<span data-ttu-id="594c4-133">\<typeparamref></span><span class="sxs-lookup"><span data-stu-id="594c4-133">\<typeparamref></span></span>](../../../csharp/programming-guide/xmldoc/typeparamref.md)  
- [<span data-ttu-id="594c4-134">Génériques en .NET</span><span class="sxs-lookup"><span data-stu-id="594c4-134">Generics in .NET</span></span>](../../../standard/generics/index.md)  
+ [<span data-ttu-id="03758-130">Guide de programmation C#</span><span class="sxs-lookup"><span data-stu-id="03758-130">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="03758-131">Types</span><span class="sxs-lookup"><span data-stu-id="03758-131">Types</span></span>](../../../csharp/programming-guide/types/index.md)  
+ [<span data-ttu-id="03758-132">\<typeparam></span><span class="sxs-lookup"><span data-stu-id="03758-132">\<typeparam></span></span>](../../../csharp/programming-guide/xmldoc/typeparam.md)  
+ [<span data-ttu-id="03758-133">\<typeparamref></span><span class="sxs-lookup"><span data-stu-id="03758-133">\<typeparamref></span></span>](../../../csharp/programming-guide/xmldoc/typeparamref.md)  
+ [<span data-ttu-id="03758-134">Génériques en .NET</span><span class="sxs-lookup"><span data-stu-id="03758-134">Generics in .NET</span></span>](../../../standard/generics/index.md)  

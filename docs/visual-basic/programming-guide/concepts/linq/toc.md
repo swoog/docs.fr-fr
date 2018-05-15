@@ -87,7 +87,6 @@
 ## [Guide pratique : contrôler les préfixes d'espaces de noms (C#) (LINQ to XML)](how-to-control-namespace-prefixes-linq-to-xml.md)
 ## [Portée des espaces de noms par défaut](scope-of-default-namespaces.md)
 ## [Utilisation des espaces de noms globaux (VB)](working-with-global-namespaces-linq-to-xml.md)
-## [Espaces de noms (LINQ to XML)](namespaces-linq-to-xml.md)
 ## [Guide pratique : écrire des requêtes sur du code XML dans des espaces de noms](how-to-write-queries-on-xml-in-namespaces.md)
 
 # [Sérialisation d'arborescences XML](serializing-xml-trees.md)

@@ -1,29 +1,15 @@
 ---
-title: '&lt;extensions&gt;'
-ms.custom: ''
+title: '&lt;Extensions&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: bcfe5c44-04ef-4a20-96a5-90bfadf39623
-caps.latest.revision: 2
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 13d79a52690f8262b08c8510e1f78b7efbf3adab
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9f25c5f99eafe0f87123d8c8c3f5c182220e8c58
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltextensionsgt"></a><span data-ttu-id="e7870-102">&lt;extensions&gt;</span><span class="sxs-lookup"><span data-stu-id="e7870-102">&lt;extensions&gt;</span></span>
-<span data-ttu-id="e7870-103">Cet élément de configuration contient une collection d'éléments XML contenant des métadonnées personnalisées à publier avec les métadonnées détectables standard (EPR, ContractTypeName, BindingName, Scope et ListenURI).</span><span class="sxs-lookup"><span data-stu-id="e7870-103">This configuration element contains a collection of XML elements that contain custom metadata to be published along with the standard discoverable metadata (EPR, ContractTypeName, BindingName, Scope and ListenURI).</span></span> <span data-ttu-id="e7870-104">Voici un exemple d'utilisation de cet élément de configuration.</span><span class="sxs-lookup"><span data-stu-id="e7870-104">The following is an example of using this configuration element.</span></span>  
+# <a name="ltextensionsgt"></a><span data-ttu-id="319e0-102">&lt;Extensions&gt;</span><span class="sxs-lookup"><span data-stu-id="319e0-102">&lt;extensions&gt;</span></span>
+<span data-ttu-id="319e0-103">Cet élément de configuration contient une collection d'éléments XML contenant des métadonnées personnalisées à publier avec les métadonnées détectables standard (EPR, ContractTypeName, BindingName, Scope et ListenURI).</span><span class="sxs-lookup"><span data-stu-id="319e0-103">This configuration element contains a collection of XML elements that contain custom metadata to be published along with the standard discoverable metadata (EPR, ContractTypeName, BindingName, Scope and ListenURI).</span></span> <span data-ttu-id="319e0-104">Voici un exemple d'utilisation de cet élément de configuration.</span><span class="sxs-lookup"><span data-stu-id="319e0-104">The following is an example of using this configuration element.</span></span>  
   
 ```xml  
 <services>  
@@ -58,5 +44,5 @@ ms.lasthandoff: 12/22/2017
 </behaviors>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="e7870-105">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="e7870-105">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="319e0-105">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="319e0-105">See Also</span></span>  
  <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>

@@ -1,44 +1,46 @@
 ---
 title: IIS Hosting Using Inline Code
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Web hosted service
 - IIS Hosting Using Inline Code Sample [Windows Communication Foundation]
 ms.assetid: 56fe3687-a34b-4661-8e30-b33770f413fa
-caps.latest.revision: "40"
+caps.latest.revision: 40
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fc1e17d027aece31bf6313a23799dc2d18af3ee7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1d1c7fe2d239b129944119fab5393ee31cc377a2
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="iis-hosting-using-inline-code"></a><span data-ttu-id="ed18c-102">IIS Hosting Using Inline Code</span><span class="sxs-lookup"><span data-stu-id="ed18c-102">IIS Hosting Using Inline Code</span></span>
-<span data-ttu-id="ed18c-103">Cet exemple montre comment implémenter un service hébergé par les services IIS (Internet Information Services), où le code de service est contenu en ligne dans un fichier .svc et est compilé à la demande.</span><span class="sxs-lookup"><span data-stu-id="ed18c-103">This sample demonstrates how to implement a service hosted by Internet Information Services (IIS), where the service code is contained in-line in a .svc file and is compiled on demand.</span></span> <span data-ttu-id="ed18c-104">Le code de service peut également être implémenté directement dans les fichiers de code source localisés dans le répertoire de \App_Code de l'application, ou être compilé dans l'assembly déployé dans \bin.</span><span class="sxs-lookup"><span data-stu-id="ed18c-104">Service code can also be implemented directly in source code files located in the application's \App_Code directory, or compiled into assembly deployed in \bin.</span></span> <span data-ttu-id="ed18c-105">Cet exemple ne présente pas ces techniques.</span><span class="sxs-lookup"><span data-stu-id="ed18c-105">This sample does not demonstrate these techniques.</span></span>  
+# <a name="iis-hosting-using-inline-code"></a><span data-ttu-id="11802-102">IIS Hosting Using Inline Code</span><span class="sxs-lookup"><span data-stu-id="11802-102">IIS Hosting Using Inline Code</span></span>
+<span data-ttu-id="11802-103">Cet exemple montre comment implémenter un service hébergé par les services IIS (Internet Information Services), où le code de service est contenu en ligne dans un fichier .svc et est compilé à la demande.</span><span class="sxs-lookup"><span data-stu-id="11802-103">This sample demonstrates how to implement a service hosted by Internet Information Services (IIS), where the service code is contained in-line in a .svc file and is compiled on demand.</span></span> <span data-ttu-id="11802-104">Le code de service peut également être implémenté directement dans les fichiers de code source localisés dans le répertoire de \App_Code de l'application, ou être compilé dans l'assembly déployé dans \bin.</span><span class="sxs-lookup"><span data-stu-id="11802-104">Service code can also be implemented directly in source code files located in the application's \App_Code directory, or compiled into assembly deployed in \bin.</span></span> <span data-ttu-id="11802-105">Cet exemple ne présente pas ces techniques.</span><span class="sxs-lookup"><span data-stu-id="11802-105">This sample does not demonstrate these techniques.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="ed18c-106">La procédure d'installation ainsi que les instructions de génération correspondant à cet exemple figurent en fin de rubrique.</span><span class="sxs-lookup"><span data-stu-id="ed18c-106">The set-up procedure and build instructions for this sample are located at the end of this topic.</span></span>  
+>  <span data-ttu-id="11802-106">La procédure d'installation ainsi que les instructions de génération correspondant à cet exemple figurent en fin de rubrique.</span><span class="sxs-lookup"><span data-stu-id="11802-106">The set-up procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="ed18c-107">Les exemples peuvent déjà être installés sur votre ordinateur.</span><span class="sxs-lookup"><span data-stu-id="ed18c-107">The samples may already be installed on your computer.</span></span> <span data-ttu-id="ed18c-108">Recherchez le répertoire (par défaut) suivant avant de continuer.</span><span class="sxs-lookup"><span data-stu-id="ed18c-108">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="11802-107">Les exemples peuvent déjà être installés sur votre ordinateur.</span><span class="sxs-lookup"><span data-stu-id="11802-107">The samples may already be installed on your computer.</span></span> <span data-ttu-id="11802-108">Recherchez le répertoire (par défaut) suivant avant de continuer.</span><span class="sxs-lookup"><span data-stu-id="11802-108">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="ed18c-109">Si ce répertoire n’existe pas, accédez à la page [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les exemples [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="ed18c-109">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="ed18c-110">Cet exemple se trouve dans le répertoire suivant.</span><span class="sxs-lookup"><span data-stu-id="ed18c-110">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="11802-109">Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples.</span><span class="sxs-lookup"><span data-stu-id="11802-109">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="11802-110">Cet exemple se trouve dans le répertoire suivant.</span><span class="sxs-lookup"><span data-stu-id="11802-110">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WebHost\InlineCode`  
   
- <span data-ttu-id="ed18c-111">L’exemple présente un service standard qui implémente un contrat définissant un modèle de communication demande-réponse.</span><span class="sxs-lookup"><span data-stu-id="ed18c-111">The sample demonstrates a typical service that implements a contract that defines a request-reply communication pattern.</span></span> <span data-ttu-id="ed18c-112">Le service est hébergé dans IIS et le code de service est entièrement contenu dans le fichier Service.svc.</span><span class="sxs-lookup"><span data-stu-id="ed18c-112">The service is hosted in IIS and the service code is entirely contained in the Service.svc file.</span></span> <span data-ttu-id="ed18c-113">Le service est activé par l'hôte et est compilé à la demande par le premier message envoyé au service.</span><span class="sxs-lookup"><span data-stu-id="ed18c-113">The service is host-activated and compiled on-demand by the first message sent to the service.</span></span> <span data-ttu-id="ed18c-114">Aucune précompilation n'est nécessaire.</span><span class="sxs-lookup"><span data-stu-id="ed18c-114">There is no pre-compilation necessary.</span></span> <span data-ttu-id="ed18c-115">Le service implémente un contrat `ICalculator` tel que défini dans le code suivant :</span><span class="sxs-lookup"><span data-stu-id="ed18c-115">The service implements an `ICalculator` contract as defined in the following code:</span></span>  
+ <span data-ttu-id="11802-111">L’exemple présente un service standard qui implémente un contrat définissant un modèle de communication demande-réponse.</span><span class="sxs-lookup"><span data-stu-id="11802-111">The sample demonstrates a typical service that implements a contract that defines a request-reply communication pattern.</span></span> <span data-ttu-id="11802-112">Le service est hébergé dans IIS et le code de service est entièrement contenu dans le fichier Service.svc.</span><span class="sxs-lookup"><span data-stu-id="11802-112">The service is hosted in IIS and the service code is entirely contained in the Service.svc file.</span></span> <span data-ttu-id="11802-113">Le service est activé par l'hôte et est compilé à la demande par le premier message envoyé au service.</span><span class="sxs-lookup"><span data-stu-id="11802-113">The service is host-activated and compiled on-demand by the first message sent to the service.</span></span> <span data-ttu-id="11802-114">Aucune précompilation n'est nécessaire.</span><span class="sxs-lookup"><span data-stu-id="11802-114">There is no pre-compilation necessary.</span></span> <span data-ttu-id="11802-115">Le service implémente un contrat `ICalculator` tel que défini dans le code suivant :</span><span class="sxs-lookup"><span data-stu-id="11802-115">The service implements an `ICalculator` contract as defined in the following code:</span></span>  
   
 ```  
 // Define a service contract.  
@@ -56,7 +58,7 @@ ms.lasthandoff: 12/22/2017
 }  
 ```  
   
- <span data-ttu-id="ed18c-116">L'implémentation de service calcule et retourne le résultat approprié.</span><span class="sxs-lookup"><span data-stu-id="ed18c-116">The service implementation calculates and returns the appropriate result.</span></span>  
+ <span data-ttu-id="11802-116">L'implémentation de service calcule et retourne le résultat approprié.</span><span class="sxs-lookup"><span data-stu-id="11802-116">The service implementation calculates and returns the appropriate result.</span></span>  
   
 ```  
 <%@ServiceHost language=c# Debug="true" Service="Microsoft.ServiceModel.Samples.CalculatorService" %>   
@@ -83,7 +85,7 @@ public class CalculatorService : ICalculator
 }  
 ```  
   
- <span data-ttu-id="ed18c-117">Lorsque vous exécutez l'exemple, les demandes et réponses d'opération s'affichent dans la fenêtre de console du client.</span><span class="sxs-lookup"><span data-stu-id="ed18c-117">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="ed18c-118">Appuyez sur Entrée dans la fenêtre du client pour l'arrêter.</span><span class="sxs-lookup"><span data-stu-id="ed18c-118">Press ENTER in the client window to shut down the client.</span></span>  
+ <span data-ttu-id="11802-117">Lorsque vous exécutez l'exemple, les demandes et réponses d'opération s'affichent dans la fenêtre de console du client.</span><span class="sxs-lookup"><span data-stu-id="11802-117">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="11802-118">Appuyez sur Entrée dans la fenêtre du client pour l'arrêter.</span><span class="sxs-lookup"><span data-stu-id="11802-118">Press ENTER in the client window to shut down the client.</span></span>  
   
 ```  
 Add(100,15.99) = 115.99  
@@ -94,15 +96,15 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="ed18c-119">Pour configurer, générer et exécuter l'exemple</span><span class="sxs-lookup"><span data-stu-id="ed18c-119">To set up, build, and run the sample</span></span>  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="11802-119">Pour configurer, générer et exécuter l'exemple</span><span class="sxs-lookup"><span data-stu-id="11802-119">To set up, build, and run the sample</span></span>  
   
-1.  <span data-ttu-id="ed18c-120">Assurez-vous d’avoir effectué la [procédure d’installation d’à usage unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="ed18c-120">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+1.  <span data-ttu-id="11802-120">Assurez-vous d’avoir effectué la [procédure d’installation d’à usage unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="11802-120">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  <span data-ttu-id="ed18c-121">Pour générer l’édition C# ou Visual Basic .NET de la solution, conformez-vous aux instructions figurant dans [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="ed18c-121">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+2.  <span data-ttu-id="11802-121">Pour générer l’édition C# ou Visual Basic .NET de la solution, conformez-vous aux instructions figurant dans [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="11802-121">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  <span data-ttu-id="ed18c-122">Une fois la solution générée, exécutez setup.bat pour installer l'application ServiceModelSamples dans [!INCLUDE[iisver](../../../../includes/iisver-md.md)].</span><span class="sxs-lookup"><span data-stu-id="ed18c-122">After the solution has been built, run setup.bat to set up the ServiceModelSamples Application in [!INCLUDE[iisver](../../../../includes/iisver-md.md)].</span></span> <span data-ttu-id="ed18c-123">Le répertoire ServiceModelSamples doit maintenant apparaître en tant qu'application [!INCLUDE[iisver](../../../../includes/iisver-md.md)].</span><span class="sxs-lookup"><span data-stu-id="ed18c-123">The ServiceModelSamples directory should now appear as an [!INCLUDE[iisver](../../../../includes/iisver-md.md)] Application.</span></span>  
+3.  <span data-ttu-id="11802-122">Une fois la solution générée, exécutez setup.bat pour installer l'application ServiceModelSamples dans [!INCLUDE[iisver](../../../../includes/iisver-md.md)].</span><span class="sxs-lookup"><span data-stu-id="11802-122">After the solution has been built, run setup.bat to set up the ServiceModelSamples Application in [!INCLUDE[iisver](../../../../includes/iisver-md.md)].</span></span> <span data-ttu-id="11802-123">Le répertoire ServiceModelSamples doit maintenant apparaître en tant qu'application [!INCLUDE[iisver](../../../../includes/iisver-md.md)].</span><span class="sxs-lookup"><span data-stu-id="11802-123">The ServiceModelSamples directory should now appear as an [!INCLUDE[iisver](../../../../includes/iisver-md.md)] Application.</span></span>  
   
-4.  <span data-ttu-id="ed18c-124">Pour exécuter l’exemple dans une configuration à un ou plusieurs ordinateurs, suivez les instructions de [en cours d’exécution les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="ed18c-124">To run the sample in a single- or cross-computer configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span> <span data-ttu-id="ed18c-125">Pour obtenir un exemple sur la façon de créer une application cliente qui peut appeler ce service, consultez [Comment : créer un Client](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).</span><span class="sxs-lookup"><span data-stu-id="ed18c-125">For an example on how to create a client application that can call this service, see [How to: Create a Client](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).</span></span>  
+4.  <span data-ttu-id="11802-124">Pour exécuter l’exemple dans une configuration à un ou plusieurs ordinateurs, suivez les instructions de [en cours d’exécution les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="11802-124">To run the sample in a single- or cross-computer configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span> <span data-ttu-id="11802-125">Pour obtenir un exemple sur la façon de créer une application cliente qui peut appeler ce service, consultez [Comment : créer un Client](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).</span><span class="sxs-lookup"><span data-stu-id="11802-125">For an example on how to create a client application that can call this service, see [How to: Create a Client](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ed18c-126">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="ed18c-126">See Also</span></span>  
- [<span data-ttu-id="ed18c-127">Hébergement de AppFabric et exemples de persistance</span><span class="sxs-lookup"><span data-stu-id="ed18c-127">AppFabric Hosting and Persistence Samples</span></span>](http://go.microsoft.com/fwlink/?LinkId=193961)
+## <a name="see-also"></a><span data-ttu-id="11802-126">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="11802-126">See Also</span></span>  
+ [<span data-ttu-id="11802-127">Hébergement de AppFabric et exemples de persistance</span><span class="sxs-lookup"><span data-stu-id="11802-127">AppFabric Hosting and Persistence Samples</span></span>](http://go.microsoft.com/fwlink/?LinkId=193961)
