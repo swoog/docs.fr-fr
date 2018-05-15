@@ -22,7 +22,7 @@ Si vous le souhaitez, vous pouvez ajouter **l’éditeur DGML** pour afficher de
 1. Exécutez **Visual Studio Installer**. 
 1. Sélectionnez **Modifier**. 
 1. Sélectionnez l’onglet **Composants individuels**. 
-1. Cochez la case pour **SDK .NET Compiler Platform**. Il se trouve en dernier sous la section **Compilateurs, outils de génération et runtimes**.
+1. Cochez la case pour **SDK .NET Compiler Platform**. Il se trouve en haut de la liste, sous la section **Compilateurs, outils de génération et runtimes**.
 
 Si vous le souhaitez, vous pouvez ajouter **l’éditeur DGML** pour afficher des graphes dans le visualiseur :
 
