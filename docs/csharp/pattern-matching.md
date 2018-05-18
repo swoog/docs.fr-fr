@@ -1,19 +1,13 @@
 ---
 title: Critères spéciaux - Guide C#
 description: En savoir plus sur les expressions de critères spéciaux en langage C#
-keywords: .NET, .NET Core, C#
 ms.date: 01/24/2017
-ms.author: wiwagn
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: a0f80fc2c019cefa81506d9dcdeabc57a1e98c2b
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 0f95ac8b16939173e6cfd7304b9cbe52526b5169
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="pattern-matching"></a>Critères spéciaux #
 
@@ -51,7 +45,7 @@ Dans cette version mise à jour, l’expression `is` teste la variable et l’as
 
 Les règles de langage des expressions de critères spéciaux vous aident à éviter une utilisation incorrecte des résultats d’une expression de correspondance. Dans l’exemple ci-dessus, les variables `s`, `c` et `r` sont uniquement dans la portée et assignées de manière définitive quand les expressions de critères spéciaux respectives retournent le résultat `true`. Si vous essayez d’utiliser l’une de ces variables à un autre emplacement, votre code génère des erreurs de compilateur.
 
-Examinons ces deux règles en détail, en commençant par la portée. La variable `c` est dans la portée uniquement dans la branche `else` de la première instruction `if`. La variable `s` est dans la portée dans la méthode `ComputeArea`. Cela est dû au fait que chaque branche d’une instruction `if` établit une portée distincte pour les variables, ce que ne fait pas l’instruction `if` proprement dite. Cela signifie que les variables déclarées dans l’instruction `if` sont dans la même portée que l’instruction `if` (la méthode, dans le cas présent). Ce comportement n’est pas propre aux critères spéciaux. C’est le comportement défini pour les portées de variables et pour les instructions `if` et `else`.
+Examinons ces deux règles en détail, en commençant par la portée. La variable `c` est dans la portée uniquement dans la branche `else` de la première instruction `if`. La variable `s` est dans la portée dans la méthode `ComputeAreaModernIs`. Cela est dû au fait que chaque branche d’une instruction `if` établit une portée distincte pour les variables, ce que ne fait pas l’instruction `if` proprement dite. Cela signifie que les variables déclarées dans l’instruction `if` sont dans la même portée que l’instruction `if` (la méthode, dans le cas présent). Ce comportement n’est pas propre aux critères spéciaux. C’est le comportement défini pour les portées de variables et pour les instructions `if` et `else`.
 
 Les variables `c` et `s` sont assignées quand les instructions `if` respectives ont la valeur true, selon la règle d’assignation définitive quand le résultat est true.
 

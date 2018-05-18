@@ -1,23 +1,16 @@
 ---
 title: '#line (informations de référence sur C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - '#line'
 helpviewer_keywords:
 - '#line directive [C#]'
 ms.assetid: 6439e525-5dd5-4acb-b8ea-efabb32ff95b
-caps.latest.revision: 13
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 3d2f42915d214349eebff40949482d7f603c0c2c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 08ba94ec3f1799f858e098bd2c0e059b7f45af2e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="line-c-reference"></a>#line (référence C#)
 `#line` vous permet de modifier le numéro de ligne du compilateur et (éventuellement) la sortie du nom de fichier pour les erreurs et les avertissements. Cet exemple montre comment signaler deux avertissements associés à des numéros de ligne. La directive `#line 200` affecte de force la valeur 200 au numéro de ligne (bien que la valeur par défaut soit #7) et jusqu’à la prochaine directive #line, le nom de fichier indiqué est « Special ». La directive par défaut #line rétablit la numérotation de lignes par défaut, qui compte le nombre de lignes qui ont été renumérotés par la directive précédente.  
@@ -40,7 +33,7 @@ class MainClass
 }  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La directive `#line` peut être utilisée dans une étape intermédiaire automatisée du processus de génération. Par exemple, si des lignes ont été supprimées du fichier de code source d’origine, mais que vous voulez que le compilateur continue de générer une sortie sur la base de la numérotation de lignes d’origine du fichier, vous pouvez supprimer les lignes et simuler ensuite la numérotation de lignes d’origine avec `#line`.  
   
  La directive `#line hidden` masque les lignes successives du débogueur, de sorte que quand le développeur parcourt le code, les lignes situées entre une directive `#line hidden` et la directive `#line` suivante (en supposant qu’il ne s’agit pas d’une autre directive `#line hidden`) sont ignorées. Cette option peut aussi être utilisée pour permettre à ASP.NET de différencier le code défini par l’utilisateur du code généré par l’ordinateur. Même si ASP.NET est le principal utilisateur de cette fonctionnalité, il est probable que d’autres générateurs de code source pourront l’utiliser.  

@@ -1,21 +1,14 @@
 ---
-title: "Points importants à retenir"
-description: "Architecture de microservices .NET pour les applications .NET en conteneur | Points importants à retenir"
-keywords: Docker, microservices, ASP.NET, conteneur
+title: Points importants à retenir
+description: Architecture de microservices .NET pour les applications .NET en conteneur | Points importants à retenir
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 2dbcfbe28f5461b7a40e8b0b49dbcf5e31490d70
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 880f99228dbfe7374878b497582ccf540658fc12
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="key-takeaways"></a>Points importants à retenir
 
@@ -25,7 +18,7 @@ En guise de récapitulatif et de conclusion, voici les principaux points importa
 
 **Omniprésence annoncée des conteneurs** : les conteneurs Docker sont en passe de devenir de facto le standard dans le domaine du conteneur, recueillant l’adhésion des éditeurs les plus en vue dans les écosystèmes Windows et Linux. Parmi ceux-ci : Microsoft, Amazon AWS, Google et IBM. Dans un avenir proche, Docker sera probablement omniprésent dans les centres de données cloud et locaux.
 
-**Des conteneurs comme unité de déploiement** : le conteneur Docker est en passe de devenir l’unité de déploiement standard des applications ou services basés sur un serveur.
+**Des conteneurs comme unité de déploiement** : Le conteneur Docker est en passe de devenir l’unité standard de déploiement d’une application ou d’un service basé sur un serveur.
 
 **Microservices** : l’architecture de microservices est en passe de devenir l’approche privilégiée pour les applications stratégiques distribuées de nature complexe ou de grande ampleur basées sur divers sous-systèmes indépendants, qui prennent la forme de services autonomes. Dans une architecture basée sur des microservices, l’application s’appuie sur un ensemble de services qui peuvent être développés, testés, versionnés, déployés et mis à l’échelle de manière indépendante ; cela peut inclure n’importe quelle base de données autonome connexe.
 

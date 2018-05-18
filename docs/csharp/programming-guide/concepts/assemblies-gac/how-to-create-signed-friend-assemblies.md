@@ -1,21 +1,12 @@
 ---
-title: "Guide pratique pour créer des assemblys friend signés (C#)"
-ms.custom: 
+title: Guide pratique pour créer des assemblys friend signés (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: bab62063-61e6-453f-905f-77673df9534e
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: d3d9d4c549654341c0739cc8132d953623482d62
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 34243a65f57f41c358439baac82a1ce169233259
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-signed-friend-assemblies-c"></a>Guide pratique pour créer des assemblys friend signés (C#)
 Cet exemple montre comment utiliser des assemblys friend avec des assemblys ayant des noms forts. Les deux assemblys doivent avoir des noms forts. Bien que les deux assemblys dans cet exemple utilisent les mêmes clés, vous pouvez utiliser des clés différentes pour deux assemblys.  
@@ -99,7 +90,7 @@ Cet exemple montre comment utiliser des assemblys friend avec des assemblys ayan
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
  [Assemblys et le Global Assembly Cache (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
- [Assemblys friend (C++)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
+ [Assemblys friend (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
  [Guide pratique pour créer des assemblys friend non signés (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)  
  [/keyfile](../../../../visual-basic/reference/command-line-compiler/keyfile.md)  
  [Sn.exe (outil Strong Name)](https://msdn.microsoft.com/library/k5b5tt23)  

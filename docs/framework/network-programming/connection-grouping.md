@@ -1,12 +1,6 @@
 ---
 title: Regroupement de connexions
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Internet, connections
 - connections [.NET Framework], grouping
@@ -14,16 +8,14 @@ helpviewer_keywords:
 - network resources, connections
 - connection pooling
 ms.assetid: 2ec502e8-4ba0-4c22-9410-f28eaf4eee63
-caps.latest.revision: "7"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 924123fcfc441b6a3a41fa29746f00185bff3662
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: bbf34f1e653e95ea30a3e9945fc74c99cfdc3a45
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="connection-grouping"></a>Regroupement de connexions
 Le regroupement de connexions associe des requêtes spécifiques au sein d’une application unique à un pool de connexions défini. Cela peut être requis par une application de couche intermédiaire qui se connecte à un serveur principal pour le compte d’un utilisateur et qui utilise un protocole d’authentification prenant en charge la délégation, tel que Kerberos, ou par une application de couche intermédiaire qui fournit ses propres informations d’identification, comme dans l’exemple ci-dessous. Par exemple, supposez qu’un utilisateur (Jean) visite un site web interne qui affiche des informations sur son salaire. Après avoir authentifié Jean, le serveur d’applications de couche intermédiaire utilise ses informations d’identification pour se connecter au serveur principal afin de récupérer des informations sur son salaire. Ensuite, Suzanne accède au site et demande à consulter les informations relatives à son salaire. Étant donné que l’application de couche intermédiaire a déjà établi une connexion à l’aide des informations d’identification de Jean, le serveur principal répond avec les informations relatives à Jean. Toutefois, si l’application assigne chaque requête envoyée au serveur principal à un groupe de connexions formé à partir du nom d’utilisateur, alors chaque utilisateur appartient à un pool de connexions distinct et ne peut pas partager accidentellement des informations d’authentification avec un autre utilisateur.  

@@ -1,13 +1,6 @@
 ---
 title: Versioning des assemblys
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - informational versions
 - version numbers, assemblies
@@ -15,16 +8,13 @@ helpviewer_keywords:
 - resolving assembly binding requests
 - versioning, assemblies
 ms.assetid: 775ad4fb-914f-453c-98ef-ce1089b6f903
-caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 327ef282c23fc02791eb7c531fd1ae25c6700fd4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fd2714b8220b6c4255a08d09275a015ba3966fa9
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="assembly-versioning"></a>Versioning des assemblys
 Tout le versioning des assemblys qui utilisent le Common Language Runtime est effectué au niveau de l'assembly. La version spécifique d'un assembly et les versions des assemblys dépendants sont enregistrées dans le manifeste d'assembly. La stratégie de version par défaut du runtime est la suivante : les applications s'exécutent uniquement avec les versions dans lesquelles elles ont été générées et testées, sauf en cas de substitution par une stratégie de version explicite dans des fichiers de configuration (le fichier de configuration de l'application, le fichier de stratégie de l'éditeur et le fichier de configuration de l'administrateur de l'ordinateur).  

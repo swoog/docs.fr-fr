@@ -1,21 +1,14 @@
 ---
 title: Utilisation d'indexeurs (Guide de programmation C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - indexers [C#], about indexers
 ms.assetid: df70e1a2-3ce3-4aba-ad80-4b2f3538699f
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 17bbfabe8a53fc51e81434d0a2bd9fb2b29c4695
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 82de2841a74f58905d3089bb0b320e7501a77045
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-indexers-c-programming-guide"></a>Utilisation d'indexeurs (Guide de programmation C#)
 Les indexeurs simplifient, d’un point de vue syntaxique, la création d’une [classe](../../../csharp/language-reference/keywords/class.md), d’un [struct](../../../csharp/language-reference/keywords/struct.md) ou d’une [interface](../../../csharp/language-reference/keywords/interface.md) auxquels les applications clientes peuvent accéder exactement comme à un tableau. Le plus souvent, les indexeurs sont implémentés dans les types dont l’objectif premier est d’encapsuler une collection ou un tableau interne. Par exemple, supposons que vous avez une classe nommée TempRecord qui représente la température, en Farenheit, enregistrée à 10 moments différents sur une période de 24 heures. La classe contient un tableau de type float nommé « temps » pour représenter les températures, et un <xref:System.DateTime> qui représente la date à laquelle les températures ont été enregistrées. En implémentant un indexeur dans cette classe, les clients peuvent accéder aux températures dans une instance TempRecord sous la forme `float temp = tr[4]` et non sous la forme `float temp = tr.temps[4]`. La notation d’indexeur simplifie non seulement la syntaxe pour les applications clientes, mais elle permet également aux autres développeurs de comprendre de façon plus intuitive l’objectif de la classe.  

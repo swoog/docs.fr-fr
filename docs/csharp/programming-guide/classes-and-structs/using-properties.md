@@ -1,23 +1,16 @@
 ---
-title: "Utilisation de propriétés (Guide de programmation C#)"
+title: Utilisation de propriétés (Guide de programmation C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - set accessor [C#]
 - get accessor [C#]
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 36345748e514f0e0a4c945d8ead149c7d8ca9a19
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: f0d470d2c38a07db9a936fc645b7a97aa12a7f84
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-properties-c-programming-guide"></a>Utilisation de propriétés (Guide de programmation C#)
 Les propriétés allient des caractéristiques des champs et des méthodes. Pour l’utilisateur d’un objet, une propriété s’apparente à un champ. Pour accéder à celle-ci, il doit utiliser la même syntaxe. Pour l’implémenteur d’une classe, une propriété est constituée d’un ou deux blocs de code, représentant un accesseur [get](../../../csharp/language-reference/keywords/get.md) et/ou un accesseur [set](../../../csharp/language-reference/keywords/set.md). Le bloc de code correspondant à l’accesseur `get` est exécuté à la lecture de la propriété ; le bloc de code correspondant à l’accesseur `set` est exécuté au moment où une nouvelle valeur est assignée à la propriété. Une propriété sans accesseur `set` est considérée comme étant en lecture seule. Une propriété sans accesseur `get` est considérée comme étant en écriture seule. Une propriété qui possède les deux accesseurs est en lecture-écriture.  

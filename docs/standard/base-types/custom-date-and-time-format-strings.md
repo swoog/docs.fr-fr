@@ -1,9 +1,7 @@
 ---
 title: Chaînes de format de date et d'heure personnalisées
 ms.date: 03/30/2017
-ms.prod: .net
 ms.technology: dotnet-standard
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,18 +14,13 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-caps.latest.revision: 79
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 51c16e8c1cd031e4f2b8a207c8d288b7691e7a84
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 665c90ca9950424be21539a83992e1c36dc51ba7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-date-and-time-format-strings"></a>Chaînes de format de date et d'heure personnalisées
 Une chaîne de format de date et d'heure définit la représentation textuelle d'une valeur <xref:System.DateTime> ou <xref:System.DateTimeOffset> qui résulte d'une opération de mise en forme. Elle peut également définir la représentation d'une valeur de date et d'heure qui est requise dans une opération d'analyse afin de convertir correctement la chaîne sous forme de date et d'heure. Une chaîne de format personnalisée se compose d'un ou de plusieurs spécificateurs de format de date et d'heure personnalisés. Toute chaîne autre qu’une [chaîne de format de date et d’heure standard](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) est interprétée comme une chaîne de format de date et d’heure personnalisée.  

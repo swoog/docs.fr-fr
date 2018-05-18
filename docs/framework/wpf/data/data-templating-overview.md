@@ -10,11 +10,11 @@ helpviewer_keywords:
 - templates [WPF], data
 - data templates [WPF]
 ms.assetid: 0f4d9f8c-0230-4013-bd7b-e8e7fed01b4a
-ms.openlocfilehash: feed791ac876c13dbd637f0455d3cfdd83a86e05
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7aed418fe5e2c7d8a217f3016655f39c99300d53
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="data-templating-overview"></a>Vue d'ensemble des modèles de données
 Le modèle de création de modèles de données WPF offre une grande souplesse pour définir la présentation des données. Les contrôles WPF possèdent des fonctionnalités intégrées permettant de prendre en charge la personnalisation de la présentation des données. Cette rubrique montre d’abord comment définir un <xref:System.Windows.DataTemplate> et présente ensuite les autres fonctionnalités de création de modèles de données, telles que la sélection des modèles basés sur une logique personnalisée et la prise en charge pour l’affichage des données hiérarchiques.  
@@ -132,7 +132,8 @@ Le modèle de création de modèles de données WPF offre une grande souplesse p
   
 <a name="what_belongs_in_datatemplate"></a>   
 ### <a name="what-belongs-in-a-datatemplate"></a>Que contient un DataTemplate ?  
- Dans l’exemple précédent, nous avons placé le déclencheur dans le <xref:System.Windows.DataTemplate> à l’aide de la <xref:System.Windows.DataTemplate>.<xref:System.Windows.DataTemplate.Triggers%2A> . Le <xref:System.Windows.Setter> du déclencheur définit la valeur d’une propriété d’un élément (la <xref:System.Windows.Controls.Border> élément) qui se trouve dans le <xref:System.Windows.DataTemplate>. Toutefois, si les propriétés qui votre `Setters` concernent ne sont pas des propriétés d’éléments qui se trouvent dans le courant <xref:System.Windows.DataTemplate>, il peut être plus adapté définir les propriétés à l’aide un <xref:System.Windows.Style> qui concerne la <xref:System.Windows.Controls.ListBoxItem> classe (si le vous liez le contrôle est un <xref:System.Windows.Controls.ListBox>). Par exemple, si vous souhaitez que votre <xref:System.Windows.Trigger> pour animer la <xref:System.Windows.UIElement.Opacity%2A> valeur de l’élément lorsque la souris pointe sur un élément, vous définissez des déclencheurs dans un <xref:System.Windows.Controls.ListBoxItem> style. Vous trouverez un exemple sur la page [Présentation d’un exemple de création de style et de modèle](http://go.microsoft.com/fwlink/?LinkID=160010).  
+
+Dans l’exemple précédent, nous avons placé le déclencheur dans le <xref:System.Windows.DataTemplate> à l’aide de la <xref:System.Windows.DataTemplate>.<xref:System.Windows.DataTemplate.Triggers%2A> . Le <xref:System.Windows.Setter> du déclencheur définit la valeur d’une propriété d’un élément (la <xref:System.Windows.Controls.Border> élément) qui se trouve dans le <xref:System.Windows.DataTemplate>. Toutefois, si les propriétés qui votre `Setters` concernent ne sont pas des propriétés d’éléments qui se trouvent dans le courant <xref:System.Windows.DataTemplate>, il peut être plus adapté définir les propriétés à l’aide un <xref:System.Windows.Style> qui concerne la <xref:System.Windows.Controls.ListBoxItem> classe (si le vous liez le contrôle est un <xref:System.Windows.Controls.ListBox>). Par exemple, si vous souhaitez que votre <xref:System.Windows.Trigger> pour animer la <xref:System.Windows.UIElement.Opacity%2A> valeur de l’élément lorsque la souris pointe sur un élément, vous définissez des déclencheurs dans un <xref:System.Windows.Controls.ListBoxItem> style. Vous trouverez un exemple sur la page [Présentation d’un exemple de création de style et de modèle](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).
   
  En règle générale, n’oubliez pas que le <xref:System.Windows.DataTemplate> est appliquée à chaque généré <xref:System.Windows.Controls.ListBoxItem> (pour plus d’informations sur comment et où elle est réellement appliquée, consultez le <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> page.). Votre <xref:System.Windows.DataTemplate> concerne uniquement la présentation et l’apparence des objets de données. Dans la plupart des cas, tous les autres aspects de présentation, telles que d’un élément ressemble à lorsqu’il est sélectionné ou comment le <xref:System.Windows.Controls.ListBox> disposition des éléments, n’appartiennent pas dans la définition d’un <xref:System.Windows.DataTemplate>. Vous trouverez un exemple dans la section [Création de styles et de modèles pour un ItemsControl](#DataTemplating_ItemsControl).  
   
@@ -164,9 +165,9 @@ Le modèle de création de modèles de données WPF offre une grande souplesse p
  Avec le sélecteur de modèle en place, le <xref:System.Windows.Controls.ListBox> se présente comme suit :  
   
  ![Capture d’écran de l’exemple de création de modèles de données](../../../../docs/framework/wpf/data/media/datatemplatingintro-fig7.png "DataTemplatingIntro_fig7")  
-  
- Ainsi se conclut notre étude de cet exemple. Vous trouverez l’exemple complet sur la page [Présentation d’un exemple de création de modèles de données](http://go.microsoft.com/fwlink/?LinkID=160009).  
-  
+
+Ainsi se conclut notre étude de cet exemple. Vous trouverez l’exemple complet sur la page [Présentation d’un exemple de création de modèles de données](https://github.com/Microsoft/WPF-Samples/tree/master/Data%20Binding/DataTemplatingIntro).
+
 <a name="DataTemplating_ItemsControl"></a>   
 ## <a name="styling-and-templating-an-itemscontrol"></a>Création de styles et de modèles pour un ItemsControl  
  Bien que le <xref:System.Windows.Controls.ItemsControl> n’est pas le seul type de contrôle que vous pouvez utiliser un <xref:System.Windows.DataTemplate> , il est un scénario très courant pour lier une <xref:System.Windows.Controls.ItemsControl> à une collection. Dans le [ce qui appartient à un DataTemplate](#what_belongs_in_datatemplate) section, nous avons indiqué que la définition de votre <xref:System.Windows.DataTemplate> doit uniquement être concernés par la présentation des données. Afin de déterminer quand il n’est pas recommandé d’utiliser un <xref:System.Windows.DataTemplate> qu’il est important de comprendre les différentes propriétés de style et de modèle fournies par le <xref:System.Windows.Controls.ItemsControl>. L’exemple suivant est conçu pour illustrer la fonction de chacune de ces propriétés. Le <xref:System.Windows.Controls.ItemsControl> dans cet exemple est lié à la même `Tasks` collection, comme dans l’exemple précédent. À des fins de démonstration, les styles et les modèles de cet exemple sont tous déclarés inline.  

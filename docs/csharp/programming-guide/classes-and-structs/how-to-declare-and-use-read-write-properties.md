@@ -1,9 +1,6 @@
 ---
-title: "Comment : déclarer et utiliser des propriétés en lecture-écriture (Guide de programmation C#)"
+title: 'Comment : déclarer et utiliser des propriétés en lecture-écriture (Guide de programmation C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - get accessor [C#], declaring properties
 - set accessor [C#]
@@ -11,14 +8,11 @@ helpviewer_keywords:
 - read/write properties [C#]
 - accessors [C#], declaring properties with
 ms.assetid: a4962fef-af7e-4c4b-a929-4ae4d646ab8a
-caps.latest.revision: "19"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: c17bdd05196f834b491c69f648bec0b7cb6e3cd9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1930d6c50c176ae1765bdb41af2c7484fb908328
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-declare-and-use-read-write-properties-c-programming-guide"></a>Comment : déclarer et utiliser des propriétés en lecture-écriture (Guide de programmation C#)
 Les propriétés offrent la commodité des membres de données publics sans les risques liés à un accès non protégé, non contrôlé et non vérifié aux données d’un objet. Cela se fait au moyen d’*accesseurs*, lesquels sont des méthodes spéciales qui affectent et récupèrent des valeurs du membre de données sous-jacent. L’accesseur [set](../../../csharp/language-reference/keywords/set.md) permet aux membres de données d’être affectés, et l’accesseur [get](../../../csharp/language-reference/keywords/get.md) récupère des valeurs de membres de données.  

@@ -1,21 +1,14 @@
 ---
 title: Limitations sur l'utilisation des niveaux d'accessibilité (référence C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - access modifiers [C#], accessibility level restrictions
 ms.assetid: 987e2f22-46bf-4fea-80ee-270b9cd01045
-caps.latest.revision: 21
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 44d065429f67d717d7c50e3877294eadd462a99d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bbe358822e885e5ddaba4cb9d982e89cefe1921e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="restrictions-on-using-accessibility-levels-c-reference"></a>Limitations sur l'utilisation des niveaux d'accessibilité (référence C#)
 Lorsque vous spécifiez un type dans une déclaration, vérifiez si le niveau d’accessibilité du type dépend du niveau d’accessibilité d’un membre ou d’un autre type. Par exemple, la classe de base directe doit être au moins aussi accessible que la classe dérivée. Les déclarations suivantes entraînent une erreur du compilateur, car la classe de base `BaseClass` est moins accessible que `MyClass` :  
@@ -27,7 +20,7 @@ public class MyClass: BaseClass {...} // Error
   
  Le tableau suivant résume les limitations sur les niveaux d’accessibilité déclarés.  
   
-|Contexte|Remarques|  
+|Contexte|Notes|  
 |-------------|-------------|  
 |[Classes](../../../csharp/programming-guide/classes-and-structs/classes.md)|La classe de base directe d’un type de classe doit être au moins aussi accessible que le type de classe lui-même.|  
 |[Interfaces](../../../csharp/programming-guide/interfaces/index.md)|Les interfaces de base explicites d’un type d’interface doivent être au moins aussi accessibles que le type d’interface lui-même.|  

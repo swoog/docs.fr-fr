@@ -1,12 +1,6 @@
 ---
 title: Enregistrement d'informations provenant de l'application (Visual Basic)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Log object
 - My.Log object
@@ -15,14 +9,11 @@ helpviewer_keywords:
 - My.Application.Log object
 - examples [Visual Basic], logging application information
 ms.assetid: 8bf4f047-22d6-48d6-aec5-93b98ad5b8e8
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4e52aaf4c26b4fa60ee04d7df6aa96980ebbf491
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 68ec09dac026e46716ff18dce88acf9d60635026
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="logging-information-from-the-application-visual-basic"></a>Enregistrement d'informations provenant de l'application (Visual Basic)
 Cette section contient des rubriques sur l’enregistrement d’informations provenant de l’application à l’aide de l’objet `My.Application.Log` ou `My.Log`, et sur l’extension des fonctionnalités de journalisation de l’application.  
@@ -33,7 +24,7 @@ Cette section contient des rubriques sur l’enregistrement d’informations pro
   
 ## <a name="tasks"></a>Tâches  
   
-|Pour|Voir|  
+|À|Voir|  
 |--------|---------|  
 |Écrire des informations sur les événements dans les journaux de l’application.|[Guide pratique : écrire des messages de journal](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)|  
 |Écrire des informations sur les exceptions dans les journaux de l’application.|[Guide pratique : enregistrer des exceptions](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)|  

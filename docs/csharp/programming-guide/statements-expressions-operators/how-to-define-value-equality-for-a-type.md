@@ -1,9 +1,6 @@
 ---
-title: "Guide pratique pour définir une égalité de valeurs pour un type (Guide de programmation C#)"
+title: Guide pratique pour définir une égalité de valeurs pour un type (Guide de programmation C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - overriding Equals method [C#]
 - object equivalence [C#]
@@ -11,14 +8,11 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-caps.latest.revision: "15"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 933be6aa27b5720a9a9d8d7b45e1eed73f9cd60b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c0105371bd39c3999aafca867a7bb7a59fd367c1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>Guide pratique pour définir une égalité de valeurs pour un type (Guide de programmation C#)
 Quand vous définissez une classe ou un struct, vous décidez s’il est judicieux de créer une définition personnalisée de l’égalité des valeurs (ou équivalence) pour le type. En général, vous implémentez l’égalité des valeurs quand des objets du type sont supposés être ajoutés à une collection quelconque, ou quand leur objectif principal est de stocker un ensemble de champs ou propriétés. Vous pouvez baser votre définition de l’égalité des valeurs sur une comparaison de tous les champs et propriétés du type, ou vous pouvez la baser sur un sous-ensemble. Dans les deux cas, et dans les classes et les structs, votre implémentation doit respecter les cinq garanties d’équivalence :  

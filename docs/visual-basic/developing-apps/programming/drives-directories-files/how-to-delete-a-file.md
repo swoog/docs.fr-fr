@@ -1,26 +1,17 @@
 ---
 title: Guide pratique pour supprimer un fichier dans Visual Basic
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Delete method [Visual Basic]
 - files [Visual Basic], deleting
 - files [Visual Basic], manipulating
 - File object
 ms.assetid: 4b721769-3e45-4be7-b7fe-b08dc4141b44
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 536c10070ef51044b801fc6a5805741896586dff
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2918b756d5f37de2489042a9eabfe7312841af81
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-delete-a-file-in-visual-basic"></a>Guide pratique pour supprimer un fichier dans Visual Basic
 La méthode `DeleteFile` de l’objet `My.Computer.FileSystem` vous permet de supprimer un fichier. Elle offre entre autres les options suivantes : envoyer ou non le fichier supprimé à la **Corbeille**, demander ou non à l’utilisateur de confirmer que le fichier doit être supprimé et l’action à effectuer quand l’utilisateur annule l’opération.  
@@ -50,7 +41,7 @@ La méthode `DeleteFile` de l’objet `My.Computer.FileSystem` vous permet de su
   
 -   Le chemin n’est pas valide, car il a la valeur `Nothing` (<xref:System.ArgumentNullException>).  
   
--   Le chemin d'accès dépasse la longueur maximale définie par le système (<xref:System.IO.PathTooLongException>).  
+-   Le chemin dépasse la longueur maximale définie par le système (<xref:System.IO.PathTooLongException>).  
   
 -   Un nom de fichier ou de dossier dans le chemin contient un signe deux-points (:) ou n’a pas un format correct (<xref:System.NotSupportedException>).  
   

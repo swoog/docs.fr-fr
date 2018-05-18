@@ -1,26 +1,21 @@
 ---
-title: "Héritage dans C#"
-description: "Apprenez à utiliser l’héritage dans les bibliothèques et applications C#."
-keywords: "Héritage (C#), classes de base, classes dérivées, classes de base abstraites"
+title: Héritage dans C#
+description: Apprenez à utiliser l’héritage dans les bibliothèques et applications C#.
 author: rpetrusha
-manager: wpickett
 ms.author: ronpet
 ms.date: 08/16/2017
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 39de8879fd902c714a58cf59c70f0a4914b2ff6e
-ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
+ms.openlocfilehash: 1476425594e55531fdb56de531ee61808dccd7db
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="inheritance-in-c-and-net"></a>Héritage dans C# et .NET
 
 Ce didacticiel vous présente l’héritage dans C#. L’héritage est une fonctionnalité des langages de programmation orientés objet qui vous permet de définir une classe de base qui fournit des fonctionnalités spécifiques (données et comportement) et de définir des classes dérivées qui héritent ou substituent cette fonctionnalité.
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Prérequis
 
 Ce didacticiel suppose que vous avez installé .NET Core. Pour des instructions d'installation, consultez le [Guide d’installation de .NET Core](https://www.microsoft.com/net/core). Il vous faut également un éditeur de code. Ce didacticiel utilise [Visual Studio Code](https://code.visualstudio.com), mais vous pouvez utiliser l’éditeur de code de votre choix.
 

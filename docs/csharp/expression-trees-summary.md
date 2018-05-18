@@ -1,20 +1,13 @@
 ---
-title: "Récapitulatif concernant les arborescences d’expressions"
-description: "Récapitule la façon dont vous pouvez utiliser des arborescences d’expressions pour créer des programmes dynamiques qui interprètent du code en tant que données et génèrent de nouvelles fonctionnalités en fonction de ce code."
-keywords: .NET, .NET Core
-author: BillWagner
-ms.author: wiwagn
+title: Récapitulatif concernant les arborescences d’expressions
+description: Récapitule la façon dont vous pouvez utiliser des arborescences d’expressions pour créer des programmes dynamiques qui interprètent du code en tant que données et génèrent de nouvelles fonctionnalités en fonction de ce code.
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: eb687ebd-1149-4453-9fc1-12a084495a66
-ms.openlocfilehash: d2754493c782c2550a8b0bd0de274cb8100c78af
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: e0d46aa67b61fd4e1d2bcc20b4a567524bb00301
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="expression-trees-summary"></a>Récapitulatif concernant les arborescences d’expressions
 

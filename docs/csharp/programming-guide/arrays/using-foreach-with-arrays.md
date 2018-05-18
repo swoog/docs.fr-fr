@@ -1,21 +1,15 @@
 ---
 title: Utilisation de foreach avec des tableaux (Guide de programmation C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - arrays [C#], foreach
 - foreach statement [C#], using with arrays
 ms.assetid: 5f2da2a9-1f56-4de5-94cc-e07f4f7a0244
-caps.latest.revision: "14"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 797cb9a63a5e1009b170b2afda8634bd21a50035
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8511d9dd3b7155d2f6bca229f264071b54ed173b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-foreach-with-arrays-c-programming-guide"></a>Utilisation de foreach avec des tableaux (Guide de programmation C#)
 C# fournit également l’instruction [foreach](../../../csharp/language-reference/keywords/foreach-in.md). Cette instruction offre une méthode simple et appropriée pour itérer au sein des éléments d’un tableau ou de toute collection énumérable. L'instruction `foreach` traite les éléments dans l'ordre retourné par la tableau ou l'énumérateur du type de collection, en général, du 0e élément au dernier. Par exemple, le code suivant crée un tableau intitulé `numbers` et itère au sein de ce dernier avec l'instruction `foreach` :  

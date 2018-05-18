@@ -1,22 +1,12 @@
 ---
-title: "Flux de contrôle dans les programmes Async (C#)"
-ms.custom: 
+title: Flux de contrôle dans les programmes Async (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-csharp
-ms.topic: article
 ms.assetid: fc92b08b-fe1d-4d07-84ab-5192fafe06bb
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 8b975b75f9ff31f43e722d3ceb28d08ed3b6ce11
-ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
+ms.openlocfilehash: 7367b55a665a911a4d94f7b235cdc559a69854cd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="control-flow-in-async-programs-c"></a>Flux de contrôle dans les programmes Async (C#)
 Vous pouvez écrire et tenir à jour des programmes asynchrones plus facilement à l’aide des mots clés `async` et `await`. Toutefois, les résultats peuvent vous étonner si vous ne comprenez pas le fonctionnement de votre programme. Cette rubrique suit le flux de contrôle par le biais d’un programme asynchrone simple pour vous montrer quand le contrôle se déplace d’une méthode à une autre et quelles informations sont transférées à chaque fois.  

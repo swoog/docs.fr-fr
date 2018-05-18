@@ -1,9 +1,6 @@
 ---
-title: "select, clause (Référence C#)"
+title: select, clause (Référence C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 f1_keywords:
 - select_CSharpKeyword
 - select
@@ -11,14 +8,11 @@ helpviewer_keywords:
 - select keyword [C#]
 - select clause [C#]
 ms.assetid: df01e266-5781-4aaa-80c4-67cf28ea093f
-caps.latest.revision: "19"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f40bc26d1812e76ac618c5a0ddf23c4cef2700d0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6e7277b5d714e48059fe1ed7e8b85e46a14a840c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="select-clause-c-reference"></a>select, clause (Référence C#)
 Dans une expression de requête, la clause `select` spécifie le type de valeurs qui sont générées quand la requête est exécutée. Le résultat est basé sur l’évaluation de toutes les clauses précédentes et sur toutes les expressions de la clause `select` elle-même. Une expression de requête doit se terminer par une clause `select` ou par une clause [group](../../../csharp/language-reference/keywords/group-clause.md).  
@@ -36,14 +30,14 @@ Dans une expression de requête, la clause `select` spécifie le type de valeurs
   
  Comme indiqué dans `studentQuery8` dans l’exemple précédent, vous pouvez parfois souhaiter que les éléments de la séquence retournée contiennent uniquement un sous-ensemble des propriétés des éléments sources. En limitant au maximum la séquence retournée, vous pouvez réduire les besoins en ressources mémoire et augmenter la vitesse d’exécution de la requête. Pour ce faire, créez un type anonyme dans la clause `select` et utilisez un initialiseur d’objet pour l’initialiser avec les propriétés appropriées de l’élément source. Pour obtenir un exemple de la procédure à suivre, consultez [Initialiseurs d’objet et de collection](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Au moment de la compilation, la clause `select` traduite en un appel de méthode à l’opérateur de requête standard <xref:System.Linq.Enumerable.Select%2A>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Référence C#](../../../csharp/language-reference/index.md)  
  [Mots clés de requête (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)  
  [from, clause](../../../csharp/language-reference/keywords/from-clause.md)  
- [partial (méthode) (référence c#)](../../../csharp/language-reference/keywords/partial-method.md)  
+ [partial, méthode (Référence C#)](../../../csharp/language-reference/keywords/partial-method.md)  
  [Types anonymes](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
  [Expressions de requête LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)  
  [Bien démarrer avec LINQ en C#](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)

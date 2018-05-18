@@ -1,28 +1,21 @@
 ---
 title: Conversions de pointeur (Guide de programmation C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - pointers [C#], conversions
 ms.assetid: f0e87502-477a-4ede-a31f-7a3e262e46fb
-caps.latest.revision: 17
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 36589d139c91e04d9e3d8b31281a91c26b85a5d5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e0c3a409d76468a6e214a96e8bb326a9d906fe18
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="pointer-conversions-c-programming-guide"></a>Conversions de pointeur (Guide de programmation C#)
 Le tableau suivant présente les conversions de pointeur implicites prédéfinies. Les conversions implicites peuvent se produire dans de nombreuses situations, comme les appels de méthode et les instructions d’assignation.  
   
 ## <a name="implicit-pointer-conversions"></a>Conversions de pointeur implicites  
   
-|De|Pour|  
+|From|À|  
 |----------|--------|  
 |Tout type pointeur|void*|  
 |null|Tout type pointeur|  
@@ -31,7 +24,7 @@ Le tableau suivant présente les conversions de pointeur implicites prédéfinie
   
 ## <a name="explicit-pointer-conversions"></a>Conversions de pointeur explicites  
   
-|De|Pour|  
+|From|À|  
 |----------|--------|  
 |Tout type pointeur|Tout autre type pointeur|  
 |sbyte, byte, short, ushort, int, uint, long ou ulong|Tout type pointeur|  

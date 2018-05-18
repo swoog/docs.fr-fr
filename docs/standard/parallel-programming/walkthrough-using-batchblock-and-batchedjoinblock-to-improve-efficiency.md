@@ -1,9 +1,7 @@
 ---
 title: "Procédure pas à pas : utilisation de BatchBlock et de BatchedJoinBlock pour améliorer l'efficacité"
 ms.date: 03/30/2017
-ms.prod: .net
 ms.technology: dotnet-standard
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -13,15 +11,11 @@ helpviewer_keywords:
 ms.assetid: 5beb4983-80c2-4f60-8c51-a07f9fd94cb3
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: e9305fd2a0e61a71f6875d6061f835e9cdae5dd1
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: bcd12d5c3cfe341b22a5421930a22c272878006b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>Procédure pas à pas : utilisation de BatchBlock et de BatchedJoinBlock pour améliorer l'efficacité
 La bibliothèque de flux de données TPL comporte les classes <xref:System.Threading.Tasks.Dataflow.BatchBlock%601?displayProperty=nameWithType> et <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602?displayProperty=nameWithType>, qui permettent de recevoir et de mettre en mémoire tampon des données provenant d’une ou plusieurs sources, puis de les propager sous la forme d’une seule et même collection. Ce mécanisme de traitement par lot est utile pour collecter des données provenant d’une ou plusieurs sources, puis pour traiter par lot plusieurs éléments de données. Prenons par exemple une application qui utilise un flux de données pour insérer des enregistrements dans une base de données. Cette opération est plus efficace si plusieurs éléments sont insérés en même temps, plutôt qu’un à la fois successivement. Ce document explique comment utiliser la classe <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> afin d’améliorer l’efficacité de ces opérations d’insertion en base de données. Il montre également comment se servir de la classe <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> pour capturer les résultats et toutes les exceptions qui se produisent quand le programme lit des données à partir d’une base de données.

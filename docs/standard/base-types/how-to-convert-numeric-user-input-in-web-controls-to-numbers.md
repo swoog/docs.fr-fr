@@ -1,13 +1,7 @@
 ---
 title: "Comment : convertir des entrées d'utilisateur numériques figurant dans des contrôles Web en nombres"
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,18 +13,13 @@ helpviewer_keywords:
 - converting numeric user input to number
 - numbers [.NET Framework], converting numeric user input to number
 ms.assetid: f27ddfb8-7479-4b79-8879-02a3bd8402d4
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: c93f1cda765b5f25fccddcfc27442b857262605f
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 24016ea68e17aa66432928c43d1de970fc13a55b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>Comment : convertir des entrées d'utilisateur numériques figurant dans des contrôles Web en nombres
 Étant donné qu’une page web peut être affichée n’importe où dans le monde, les utilisateurs peuvent entrer des données numériques dans un contrôle <xref:System.Web.UI.WebControls.TextBox> dans un nombre de formats pratiquement illimité. Il est par conséquent très important de déterminer les paramètres régionaux et la culture de l’utilisateur d’une page web. Après avoir analysé une entrée d’utilisateur, vous pouvez appliquer les conventions de mise en forme définies par les paramètres régionaux et la culture de l’utilisateur.  

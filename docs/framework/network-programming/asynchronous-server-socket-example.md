@@ -1,12 +1,6 @@
 ---
 title: Exemple de sockets serveur asynchrones
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +9,14 @@ helpviewer_keywords:
 - sockets, code examples
 - asynchronous server sockets
 ms.assetid: 13624cd3-f5c5-4950-8cda-31273b1fa6d1
-caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 57922a9f0ca431a2e2f070f34670d6f7f6d76635
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 9a8b7d4ef356c5d763f3ed90763bf74702938056
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="asynchronous-server-socket-example"></a>Exemple de sockets serveur asynchrones
 L’exemple de programme suivant crée un serveur qui reçoit des demandes de connexion de clients. Le serveur est créé avec un socket asynchrone. L’exécution de l’application serveur n’est pas suspendue pendant l’attente d’une connexion à partir d’un client. L’application reçoit une chaîne du client, affiche la chaîne sur la console, puis renvoie la chaîne de réponse au client. La chaîne reçue du client doit contenir la chaîne « \<EOF> » qui indique la fin du message.  

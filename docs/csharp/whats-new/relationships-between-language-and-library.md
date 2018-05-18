@@ -1,18 +1,12 @@
 ---
-title: "Relations entre les fonctionnalités de langage et les types de bibliothèque | Microsoft Docs"
-description: "Les fonctionnalités de langage se basent souvent sur les types de bibliothèque pour l’implémentation. Vous devez donc bien comprendre ces relations."
-keywords: "conception du langage C#, bibliothèque standard"
-author: billwagner
-ms.author: wiwagn
+title: Relations entre les fonctionnalités de langage et les types de bibliothèque | Microsoft Docs
+description: Les fonctionnalités de langage se basent souvent sur les types de bibliothèque pour l’implémentation. Vous devez donc bien comprendre ces relations.
 ms.date: 07/20/2017
-ms.topic: article
-ms.prod: .net
-ms.devlang: devlang-csharp
-ms.openlocfilehash: b7de4fdb4356e8822dba6aaaf67d615980ff09cd
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: dfae7972af0a251a92700d7d33bd6f971eb1870e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="relationships-between-language-features-and-library-types"></a>Relations entre les fonctionnalités de langage et les types de bibliothèque
 

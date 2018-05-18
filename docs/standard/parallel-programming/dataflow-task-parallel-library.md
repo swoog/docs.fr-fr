@@ -1,9 +1,7 @@
 ---
 title: Flux de données (bibliothèque parallèle de tâches)
 ms.date: 03/30/2017
-ms.prod: .net
 ms.technology: dotnet-standard
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -13,15 +11,11 @@ helpviewer_keywords:
 ms.assetid: 643575d0-d26d-4c35-8de7-a9c403e97dd6
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 386d7a4ce7168fbe70d9037254a1540b7bf00478
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 5581f825a23104ff005f3557de26420ee45b5c27
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dataflow-task-parallel-library"></a>Flux de données (bibliothèque parallèle de tâches)
 <a name="top"></a> La bibliothèque parallèle de tâches (TPL) fournit des composants de flux de données destinés à augmenter la robustesse des applications prenant en charge l’accès concurrentiel. Ces composants de flux de données sont regroupés sous le nom de *bibliothèque de flux de données TPL*. Ce modèle de flux de données favorise la programmation basée sur les acteurs en fournissant une transmission de messages in-process pour les flux de données à granularité grossière et les tâches de traitement "pipeline". Les composants de flux de données reposent sur les types et l'infrastructure de planification de la bibliothèque parallèle de tâches, et s'intègrent à la prise en charge des langages C#, Visual Basic et F# de la programmation asynchrone. Ces composants de flux de données sont utiles quand vous avez plusieurs opérations qui doivent communiquer entre elles de façon asynchrone ou quand vous voulez traiter les données à mesure qu'elles deviennent disponibles. Prenons par exemple une application qui traite les données d'image d'une webcam. En utilisant le modèle de flux de données, l'application peut traiter les trames d'images à mesure qu'elles deviennent disponibles. Si l’application améliore les trames d’images, par exemple, en effectuant la correction de la lumière ou des yeux rouges, vous pouvez créer un *pipeline* de composants de flux de données. Chaque étape du pipeline peut utiliser plusieurs fonctionnalités de parallélisme à granularité grossière, telles que les fonctionnalités fournies par la bibliothèque TPL qui permettent de transformer les images.  

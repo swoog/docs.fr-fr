@@ -1,21 +1,12 @@
 ---
 title: Applications multithread (C#)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: b7015cfb-d506-4eac-b2f8-b2caaa9cc977
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 48b056172e3260952155eb40a1a393d86da78344
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ee4d92ae0ad3dadf6568b367522817484cb7337f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="multithreaded-applications-c"></a>Applications multithread (C#)
 Avec C#, vous pouvez écrire des applications qui effectuent plusieurs tâches en même temps. Les tâches présentant le risque d’accaparer les ressources d’autres tâches peuvent s’exécuter sur des threads distincts : ce processus est appelé *multithreading* ou *threading libre*.  
@@ -65,7 +56,7 @@ newThread.Abort();
 ### <a name="thread-properties"></a>Propriétés du thread  
  Les threads contiennent également plusieurs propriétés utiles, qui sont répertoriées dans le tableau suivant :  
   
-|Propriété|Valeur|  
+|Propriété|Value|  
 |--------------|-----------|  
 |<xref:System.Threading.Thread.IsAlive%2A>|Contient la valeur `True` si un thread est actif.|  
 |<xref:System.Threading.Thread.IsBackground%2A>|Obtient ou définit une valeur booléenne qui indique si un thread est ou doit être un thread d’arrière-plan. Les threads d’arrière-plan ressemblent aux threads de premier plan, excepté qu’un thread d’arrière-plan n’empêche pas un processus de s’arrêter. Une fois que tous les threads de premier plan appartenant à un processus sont arrêtés, le common language runtime met fin au processus en appelant la méthode <xref:System.Threading.Thread.Abort%2A> sur les threads d’arrière-plan encore actifs.|  

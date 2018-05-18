@@ -1,24 +1,14 @@
 ---
 title: Fonctionnalités C# qui prennent en charge LINQ
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
-caps.latest.revision: 23
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 2f5accb188e54e0d3e2b941832637ec33afc26b2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: f1c045ffe311dfad851c7cace37966d8d42a22cc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="c-features-that-support-linq"></a>Fonctionnalités C# qui prennent en charge LINQ
 La section suivante présente de nouvelles constructions de langage qui sont apparues avec C# 3.0. Même si ces nouvelles fonctionnalités sont toutes plus ou moins utilisées avec les requêtes [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], elles ne sont pas limitées à [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] et peuvent être utilisées dans n’importe quel contexte.  

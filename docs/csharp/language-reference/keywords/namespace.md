@@ -1,9 +1,6 @@
 ---
-title: "namespace (référence C#)"
+title: namespace (référence C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 f1_keywords:
 - namespace_CSharpKeyword
 - namespace
@@ -11,21 +8,18 @@ helpviewer_keywords:
 - namespace keyword [C#]
 - scope [C#]
 ms.assetid: 0a788423-9110-42e0-97d9-bda41ca4870f
-caps.latest.revision: "28"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 76cc1adc21f6cfadc93da58250336705e43e333a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 343cce85dd235532fbe3fc90af0a785f48518db7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="namespace-c-reference"></a>namespace (référence C#)
 Le mot clé `namespace` est utilisé pour déclarer une portée qui contient un ensemble d’objets connexes. Vous pouvez utiliser un espace de noms pour organiser les éléments de code et créer des types globaux uniques.  
   
  [!code-csharp[csrefKeywordsNamespace#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/namespace_1.cs)]  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Dans un espace de noms, vous pouvez déclarer un ou plusieurs des types suivants :  
   
 -   autre espace de noms  

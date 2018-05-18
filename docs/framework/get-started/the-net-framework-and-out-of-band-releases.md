@@ -1,26 +1,14 @@
 ---
 title: Versions finales hors plage de .NET Framework
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 721f10fa-3189-4124-a00d-56ddabd889b3
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 83c3688afb3fe509d9a57eba8765cbd13bf581c8
-ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
+ms.openlocfilehash: 6c0ea6590a53748c9ed85a6d13f67b260ce23af5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="the-net-framework-and-out-of-band-releases"></a>Versions finales hors plage de .NET Framework
 .NET Framework évolue pour s'adapter aux différentes plateformes telles que les applications Windows Phone et Windows Store, ainsi qu'aux applications bureautiques et web traditionnelles, et pour optimiser la réutilisation du code. En plus de nos versions .NET Framework classiques, nous diffuserons de nouvelles fonctionnalités hors plage (OOB) pour améliorer le développement multiplateforme ou pour introduire une nouvelle fonctionnalité. Cette rubrique décrit l'orientation future de .NET Framework et de ses versions OOB.  
@@ -61,7 +49,7 @@ Les versions OOB des principaux composants du Common Langage Runtime (CLR) sont 
 ## <a name="types-of-oob-releases"></a>Types de versions OOB  
  En général, un package OOB a une ou plusieurs versions préliminaires et une version stable. La licence qui accompagne une version préliminaire n'autorise généralement pas la redistribution, mais vous permet de tester un package et de fournir des commentaires. Les commentaires sont incorporés dans toutes les mises à jour apportées au package. Une version finale est distribuée comme package stable avec NuGet et inclut une licence qui vous permet de redistribuer le package NuGet avec votre application. Les packages stables sont pris en charge par Microsoft. Microsoft fournit la prise en charge IntelliSense, ainsi que d'autres types de documentation tels que les publications de blog et les réponses de forum pour tous les packages. De plus, le code source peut ne pas être disponible avec tous les packages. Pour être tenu informé sur les packages nouveaux et mis à jour, inscrivez-vous sur le [blog du .NET Framework](http://blogs.msdn.com/b/dotnet/).  
   
- Pour rechercher à la fois les versions préliminaires et les packages stables, choisissez **Inclure la version préliminaire** dans le Gestionnaire de package NuGet.  
+ Pour rechercher à la fois les versions préliminaires et les packages stables, choisissez **Include Prerelease (Inclure les versions préliminaires)** dans le Gestionnaire de package NuGet.  
   
  Si vous voulez être informé de la publication de packages stables, abonnez-vous au [flux .NET Framework](https://nuget.org/api/v2/curated-feeds/dotnetframework/Packages/).  
   

@@ -1,12 +1,6 @@
 ---
-title: "Utilisation d’un socket client asynchrone"
-ms.custom: 
+title: Utilisation d’un socket client asynchrone
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -23,16 +17,14 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: fd85bc88-e06c-467d-a30d-9fd7cffcfca1
-caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: abb262f58d611bdb4ef27d3391a2d0d9d221f005
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 59d7e30bfa9bbaf2308e78f47de03bb7be69c44d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-an-asynchronous-client-socket"></a>Utilisation d’un socket client asynchrone
 Un socket client asynchrone n’interrompt pas l’exécution de l’application durant les opérations réseau. Au lieu de cela, il utilise le modèle de programmation asynchrone standard de .NET Framework pour traiter la connexion réseau sur un thread pendant que l’application continue de s’exécuter sur le thread d’origine. Les sockets asynchrones sont appropriés pour les applications qui utilisent le réseau de manière intensive ou qui ne peuvent pas être interrompues en attendant la fin des opérations réseau.  

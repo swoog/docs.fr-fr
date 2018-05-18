@@ -1,9 +1,6 @@
 ---
 title: '&lt;permission&gt; (Guide de programmation C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 f1_keywords:
 - permission
 - <permission>
@@ -11,14 +8,11 @@ helpviewer_keywords:
 - <permission> C# XML tag
 - permission C# XML tag
 ms.assetid: 769e93fe-8404-443f-bf99-577aa42b6a49
-caps.latest.revision: "12"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 37bb37ea14edc1f91225f9b04b18b354d99579b6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 815d303c9cfbf01588f5f2877e9f87a7ebbea9a8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltpermissiongt-c-programming-guide"></a>&lt;permission&gt; (Guide de programmation C#)
 ## <a name="syntax"></a>Syntaxe  
@@ -36,7 +30,7 @@ ms.lasthandoff: 11/21/2017
  `description`  
  Description de l’accès au membre.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La balise \<permission> vous permet de documenter l’accès d’un membre. La classe <xref:System.Security.PermissionSet> vous permet de spécifier l’accès à un membre.  
   
  Compilez avec [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) pour placer les commentaires de documentation dans un fichier en vue de les traiter.  

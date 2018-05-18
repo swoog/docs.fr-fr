@@ -1,13 +1,7 @@
 ---
-title: "Comment : copier des répertoires"
-ms.custom: 
+title: 'Comment : copier des répertoires'
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,18 +12,13 @@ helpviewer_keywords:
 - copying directories
 - directories [.NET Framework], copying
 ms.assetid: 5a969765-e5f8-4b4e-977e-90e2b0a1fe3c
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 43e9027c1dbfc831f598991374c22434e01fe7ff
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 1cfe07af216da1c35b093a1ca23e4d48c60a7bfe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-copy-directories"></a>Comment : copier des répertoires
 Cet exemple montre comment utiliser les classes d’E/S pour copier de manière synchrone le contenu d’un répertoire vers un autre emplacement. Dans cet exemple, l’utilisateur peut spécifier s’il veut aussi copier les sous-répertoires. Si les sous-répertoires sont copiés, la méthode utilisée dans cet exemple le fait de manière récursive en s’appelant elle-même sur chaque sous-répertoire suivant jusqu’à ce qu’il n’y ait plus rien à copier.  

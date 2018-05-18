@@ -1,22 +1,15 @@
 ---
-title: "Énumérations C# - Visite guidée du langage C#"
-description: "Découvrir les enums, constantes nommées discrètes en C#"
-keywords: .NET, csharp
-author: BillWagner
-ms.author: wiwagn
+title: Énumérations C# - Visite guidée du langage C#
+description: Découvrir les enums, constantes nommées discrètes en C#
 ms.date: 08/10/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 7faba1cc-6ea9-4a19-adb9-0335e4b132e5
-ms.openlocfilehash: 77d315dd87d9cab32605de415674d146eb9115fa
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 7fe2626381cb90e55842e3be17dd450eb73d5a5b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="enums"></a>Énumérations
+# <a name="enums"></a>Enums
 
 Un ***type enum*** est un type valeur distinct avec un ensemble de constantes nommées. Vous définissez les enums lorsque vous devez définir un type qui peut avoir un ensemble de valeurs discrètes. Ils utilisent un des types entier comme stockage sous-jacent. Ils apportent une signification sémantique aux valeurs discrètes.
 

@@ -1,28 +1,18 @@
 ---
-title: "Exécution d'applications intranet de confiance totale"
-ms.custom: 
+title: Exécution d'applications intranet de confiance totale
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - full trust, running intranet applications in
 - intranet applications, running in full trust
 - running intranet applications in full trust
 ms.assetid: ee13c0a8-ab02-49f7-b8fb-9eab16c6c4f0
-caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 51a9b9ee938d6a03330d53c25fdf0468781e02a8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3c6f58ef5bd96d8a74ce27bb53acd36af005c335
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="running-intranet-applications-in-full-trust"></a>Exécution d'applications intranet de confiance totale
 À compter du .NET Framework version 3.5 Service Pack 1 (SP1), les applications et leurs assemblys de bibliothèque peuvent être exécutés comme des assemblys de confiance totale à partir d’un partage réseau. La preuve de zone <xref:System.Security.SecurityZone.MyComputer> est ajoutée automatiquement aux assemblys chargés sur l’intranet à partir d’un partage. Cette preuve fournit à ces assemblys le même jeu accordé (qui est généralement de confiance totale) qu’aux assemblys qui résident sur l’ordinateur. Cette fonctionnalité ne s’applique pas aux applications ClickOnce ou aux applications conçues pour s’exécuter sur un hôte.  

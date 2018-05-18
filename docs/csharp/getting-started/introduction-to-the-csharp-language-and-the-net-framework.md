@@ -2,22 +2,15 @@
 title: Introduction au langage C# et au .NET Framework
 description: Apprenez les concepts de base de C# et .NET. Découvrez une vue d’ensemble du langage C# et de l’écosystème .NET.
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: get-started-article
 helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-caps.latest.revision: 32
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 9713b61e9af25e6acba2d6b11b46f2e99f1f1800
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: ab2d3042aff51e85b50296ce6f4382f588e1af71
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>Introduction au langage C# et au .NET Framework
 C# est un langage élégant et de type sécurisé orienté objet qui permet aux développeurs de créer toute une gamme d'applications sûres et solides exécutées sur [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Vous pouvez utiliser C# pour créer des applications clientes Windows, services Web XML, composants distribués, applications client-serveur, applications de base de données et bien plus encore. Visual C# fournit un éditeur de code avancé, des concepteurs d’interface utilisateur pratiques, un débogueur intégré et de nombreux autres outils pour faciliter le développement d’applications basées sur le langage C# et le [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  

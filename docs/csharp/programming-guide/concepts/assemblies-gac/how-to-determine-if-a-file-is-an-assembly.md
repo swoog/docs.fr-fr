@@ -1,21 +1,12 @@
 ---
-title: "Guide pratique pour déterminer si un fichier est un assembly (C#)"
-ms.custom: 
+title: Guide pratique pour déterminer si un fichier est un assembly (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: ea5186bb-5bff-4dcb-bde9-d6ba4e2edd00
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 09e56f3c0310a519594d0a53d8094275e1accec6
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 0557f42d42e42606c3d1b2a2ad71bd797a159e8c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-determine-if-a-file-is-an-assembly-c"></a>Guide pratique pour déterminer si un fichier est un assembly (C#)
 Un fichier est un assembly si et seulement s’il est managé et s’il contient une entrée d’assembly dans ses métadonnées. Pour plus d’informations sur les assemblys et les métadonnées, consultez la rubrique [Manifeste d’assembly](../../../../../docs/framework/app-domains/assembly-manifest.md).  

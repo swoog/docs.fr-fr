@@ -1113,7 +1113,7 @@
 # [Guide ML.NET](machine-learning/index.md)
 ## [Didacticiels](machine-learning/tutorials/index.md)
 ### [Analyse des sentiments (classification)](machine-learning/tutorials/sentiment-analysis.md)
-### [Prévision du délai de stationnement (régression)](machine-learning/tutorials/taxi-fare.md)
+### [Prévision du tarif de stationnement (régression)](machine-learning/tutorials/taxi-fare.md)
 ## [Ressources](machine-learning/resources/index.md)
 ### [Glossaire Machine Learning](machine-learning/resources/glossary.md)
 ### [Notions de base de Machine Learning](machine-learning/resources/basics.md)

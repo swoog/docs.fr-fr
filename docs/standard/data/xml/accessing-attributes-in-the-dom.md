@@ -1,29 +1,18 @@
 ---
-title: "Accès aux attributs dans le DOM"
-ms.custom: 
+title: Accès aux attributs dans le DOM
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: ce2df341-a1a4-4e97-8e1b-cd45b8e3e71e
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 4f134761c4dadcef4692194293c8c99899bb6be2
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6b295c94fda22d4a17fb485add13ec67f1e9ae8a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="accessing-attributes-in-the-dom"></a>Accès aux attributs dans le DOM
 Les attributs sont des propriétés de l'élément, pas des enfants de l'élément. Cette distinction est importante en raison des méthodes utilisées pour accéder aux nœuds frères, parents et enfants du DOM (Document Object Model) XML. Par exemple, les méthodes **PreviousSibling** et **NextSibling** ne sont pas utilisées pour naviguer d'un élément à un attribut ou entre des attributs. À la place, un attribut est une propriété d'un élément et appartient à un élément, cet attribut possède une propriété **OwnerElement** et pas de propriété **parentNode**, il possède des méthodes distinctes de navigation.  

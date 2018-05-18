@@ -1,21 +1,12 @@
 ---
-title: "Vue d’ensemble des axes LINQ to XML (C#)"
-ms.custom: 
+title: Vue d’ensemble des axes LINQ to XML (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 516792fb-461d-40a8-8a50-9993a51258fc
-caps.latest.revision: "4"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 3472a6deefd8d4c3cafec2c538c8d0a8b9f2e470
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 0fe8766e3bcde17b59d78f0659043b8d4f017066
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linq-to-xml-axes-overview-c"></a>Vue d’ensemble des axes LINQ to XML (C#)
 Après avoir créé une arborescence XML ou chargé un document XML dans une arborescence XML, vous pouvez l'interroger pour rechercher des éléments et des attributs et récupérer leurs valeurs. Vous pouvez récupérer des collections via les *méthodes d’axe*, également appelées *axes*. Certains des axes sont des méthodes dans les classes <xref:System.Xml.Linq.XElement> et <xref:System.Xml.Linq.XDocument> qui retournent des collections <xref:System.Collections.Generic.IEnumerable%601>. Certains axes sont des méthodes d'extension dans la classe <xref:System.Xml.Linq.Extensions>. Les axes qui sont implémentés en tant que méthodes d’extension opèrent sur des collections et retournent des collections.  

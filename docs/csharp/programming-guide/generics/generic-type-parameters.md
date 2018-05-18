@@ -1,21 +1,15 @@
 ---
-title: "Paramètres de type générique (guide de programmation C#)"
+title: Paramètres de type générique (guide de programmation C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - generics [C#], type parameters
 - type parameters [C#]
 ms.assetid: a03b0ab2-0606-4b41-b7bf-e64d5bb4d18f
-caps.latest.revision: "23"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: b32db7eb6e7788167e110a91726e9dbfe19f31ba
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 35029b90fb7b905a87055596cf8dcd6a84ef9d36
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="generic-type-parameters-c-programming-guide"></a>Paramètres de type générique (guide de programmation C#)
 Dans une définition de méthode ou un type générique, les paramètres de type représentent un espace réservé pour un type spécifique qu’un client indique quand il instancie une variable du type générique. Une classe générique, telle que `GenericList<T>` répertoriée dans [Introduction aux génériques](../../../csharp/programming-guide/generics/introduction-to-generics.md), ne peut pas être utilisée en l’état car il ne s’agit pas vraiment d’un type, mais plutôt d’un modèle pour un type. Pour utiliser `GenericList<T>`, le code client doit déclarer et instancier un type construit en spécifiant un argument de type à l’intérieur de crochets pointus. L’argument de type pour cette classe particulière peut être tout type reconnu par le compilateur. Il est possible de créer un nombre quelconque d’instances de type construit, chacune avec un argument de type différent, comme suit :  

@@ -1,9 +1,6 @@
 ---
 title: Cast et conversions de types (Guide de programmation C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - type conversion [C#]
 - data type conversion [C#]
@@ -12,14 +9,11 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-caps.latest.revision: "52"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 1361a7f115e2bae4b2d1f6271fa9020706581691
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 0c17fc89d93bdbb01bdef7935e72f8a7d96b0a55
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>Cast et conversions de types (Guide de programmation C#)
 C# est typé statiquement au moment de la compilation. Ainsi, quand une variable est déclarée, elle ne peut plus être redéclarée ou utilisée pour stocker des valeurs d’un autre type, sauf si ce type peut être converti au type de la variable. Par exemple, il est impossible de convertir un entier en chaîne arbitraire. Après avoir déclaré `i` comme entier, vous ne pouvez donc pas lui assigner la chaîne « Hello » comme le montre le code suivant.  
@@ -33,7 +27,7 @@ i = "Hello"; // Error: "Cannot implicitly convert type 'string' to 'int'"
   
 -   **Conversions implicites** : aucune syntaxe spéciale n’est requise, car la conversion est de type sécurisé et les données ne sont pas perdues. Citons par exemple les conversions de types intégraux en d’autres plus importants, et les conversions de classes dérivées en classes de base.  
   
--   **Conversions explicites (casts)** : les conversions explicites nécessitent un opérateur de cast. Un cast est exigé quand les informations peuvent être perdues durant la conversion, ou quand la conversion peut échouer pour d’autres raisons.  Exemples classiques : conversion numérique en type qui a moins de précision ou une plus petite plage, et conversion d’une instance de classe de base en classe dérivée.  
+-   **Conversions explicites (casts)**  : les conversions explicites nécessitent un opérateur de cast. Un cast est exigé quand les informations peuvent être perdues durant la conversion, ou quand la conversion peut échouer pour d’autres raisons.  Exemples classiques : conversion numérique en type qui a moins de précision ou une plus petite plage, et conversion d’une instance de classe de base en classe dérivée.  
   
 -   **Conversions définies par l’utilisateur** : les conversions définies par l’utilisateur sont effectuées par des méthodes spéciales que vous pouvez définir pour permettre des conversions explicites ou implicites entre des types personnalisés qui n’ont pas de relation classe de base/classe dérivée. Pour plus d’informations, consultez [Conversion, opérateurs](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md).  
   

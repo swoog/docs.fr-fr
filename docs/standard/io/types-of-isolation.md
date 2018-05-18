@@ -1,13 +1,7 @@
 ---
 title: Types d'isolation
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -24,18 +18,13 @@ helpviewer_keywords:
 - isolated storage, types
 - user authentication, isolated storage
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 6a7e9b28601970aecd139d2027bc0ebc73e869fc
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: c0c888181b5f2150c37a87957cd932e10a36f7f4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="types-of-isolation"></a>Types d'isolation
 L’accès au stockage isolé est toujours limité à l’utilisateur qui l’a créé. Pour implémenter ce type d’isolation, le Common Language Runtime utilise la même notion d’identité de l’utilisateur reconnue par le système d’exploitation, c’est-à-dire l’identité associée au processus par lequel le code s’exécute lorsque le magasin est ouvert. Cette identité est l’identité d’un utilisateur, mais l’emprunt d’identité peut provoquer un changement dynamique de l’identité actuelle de l’utilisateur.  

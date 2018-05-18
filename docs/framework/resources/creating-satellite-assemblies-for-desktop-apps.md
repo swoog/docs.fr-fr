@@ -1,14 +1,6 @@
 ---
 title: Création d'assemblys satellites pour les applications bureautiques
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-bcl
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -31,17 +23,13 @@ helpviewer_keywords:
 - compiling satellite assemblies
 - re-signing assemblies
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
-caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2f75da3332c8172a6a888e6f40c66383866799ea
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: c308c7e16f106d00e5fd1b5ad820f8b330f4bbbf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>Création d'assemblys satellites pour les applications bureautiques
 Les fichiers de ressources jouent un rôle central dans les applications localisées. Ils permettent à une application d’afficher des chaînes, des images et d’autres données dans la langue et la culture de l’utilisateur, et de fournir des données de remplacement si les ressources relatives à la langue et la culture de l’utilisateur ne sont pas disponibles. Le .NET Framework utilise un modèle Hub and Spoke pour localiser et récupérer les ressources localisées. Le hub est l’assembly principal qui contient le code exécutable non localisable et les ressources pour une culture unique, appelée culture neutre ou par défaut. La culture par défaut est la culture de secours de l’application ; elle est utilisée quand aucune ressource localisée n’est disponible. Vous utilisez l’attribut <xref:System.Resources.NeutralResourcesLanguageAttribute> pour désigner la culture de la culture par défaut de l’application. Chaque spoke se connecte à un assembly satellite qui contient les ressources d’une culture localisée unique, mais ne contient pas de code. Dans la mesure où les assemblys satellites ne font pas partie de l’assembly principal, vous pouvez facilement remplacer ou mettre à jour les ressources correspondant à une culture spécifique sans remplacer l’assembly principal de l’application.  
@@ -87,11 +75,11 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
   
 |Option|Description|  
 |------------|-----------------|  
-|**-target:**lib|Spécifie que votre assembly satellite est compilé dans un fichier de bibliothèque (.dll). Comme un assembly satellite ne contient pas de code exécutable et n’est pas l’assembly principal d’une application, vous devez enregistrer les assemblys satellites en tant que DLL.|  
-|**-embed:**strings.de.resources|Spécifie le nom du fichier de ressources à incorporer quand Al.exe compile l’assembly. Vous pouvez incorporer plusieurs fichiers .resources dans un assembly satellite mais, si vous suivez le modèle Hub and Spoke, vous devez compiler un assembly satellite pour chaque culture. Toutefois, vous pouvez créer des fichiers .resources séparés pour les chaînes et les objets.|  
-|**-culture:**de|Spécifie la culture de la ressource à compiler. Le Common Language Runtime utilise ces informations lors de la recherche des ressources pour une culture spécifiée. Si vous omettez cette option, Al.exe compile quand même la ressource, mais le runtime n’est pas en mesure de la trouver quand un utilisateur la demande.|  
-|**-out:**Example.resources.dll|Spécifie le nom du fichier de sortie. Le nom doit respecter la norme d’appellation *baseName*.resources. *extension*, où *baseName* est le nom de l’assembly principal et *extension* est une extension valide (par exemple, .dll). Notez que le runtime n’est pas en mesure de déterminer la culture d’un assembly satellite en fonction du nom de son fichier de sortie ; vous devez utiliser l’option **/culture** pour la spécifier.|  
-|**-template:**Example.dll|Spécifie un assembly à partir duquel l’assembly satellite va hériter de toutes les métadonnées de l’assembly, à l’exception du champ de culture. Cette option affecte les assemblys satellites uniquement si vous spécifiez un assembly qui a un [nom fort](../../../docs/framework/app-domains/strong-named-assemblies.md).|  
+|**-target:** lib|Spécifie que votre assembly satellite est compilé dans un fichier de bibliothèque (.dll). Comme un assembly satellite ne contient pas de code exécutable et n’est pas l’assembly principal d’une application, vous devez enregistrer les assemblys satellites en tant que DLL.|  
+|**-embed:** strings.de.resources|Spécifie le nom du fichier de ressources à incorporer quand Al.exe compile l’assembly. Vous pouvez incorporer plusieurs fichiers .resources dans un assembly satellite mais, si vous suivez le modèle Hub and Spoke, vous devez compiler un assembly satellite pour chaque culture. Toutefois, vous pouvez créer des fichiers .resources séparés pour les chaînes et les objets.|  
+|**-culture:** de|Spécifie la culture de la ressource à compiler. Le Common Language Runtime utilise ces informations lors de la recherche des ressources pour une culture spécifiée. Si vous omettez cette option, Al.exe compile quand même la ressource, mais le runtime n’est pas en mesure de la trouver quand un utilisateur la demande.|  
+|**-out:** Example.resources.dll|Spécifie le nom du fichier de sortie. Le nom doit respecter la norme d’appellation *baseName*.resources. *extension*, où *baseName* est le nom de l’assembly principal et *extension* est une extension valide (par exemple, .dll). Notez que le runtime n’est pas en mesure de déterminer la culture d’un assembly satellite en fonction du nom de son fichier de sortie ; vous devez utiliser l’option **/culture** pour la spécifier.|  
+|**-template:** Example.dll|Spécifie un assembly à partir duquel l’assembly satellite va hériter de toutes les métadonnées de l’assembly, à l’exception du champ de culture. Cette option affecte les assemblys satellites uniquement si vous spécifiez un assembly qui a un [nom fort](../../../docs/framework/app-domains/strong-named-assemblies.md).|  
   
  Pour obtenir une liste complète des options disponibles avec Al.exe, consultez [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md).  
   

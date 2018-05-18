@@ -1,13 +1,6 @@
 ---
-title: "Considérations sur la sécurité de la réflexion"
-ms.custom: 
+title: Considérations sur la sécurité de la réflexion
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - permissions [.NET Framework], reflection
 - MethodInfo parameters
@@ -17,16 +10,13 @@ helpviewer_keywords:
 - reflection,partial trust
 - link demands
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
-caps.latest.revision: "21"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ef0f9aac9222badb43e19c2901ff705485d5cf3a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9dc7bec2023e3ee0db9987e053dd54647ab2e94f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-considerations-for-reflection"></a>Considérations sur la sécurité de la réflexion
 La réflexion permet d'obtenir des informations sur les types et les membres, et d'accéder aux membres (c'est-à-dire appeler des méthodes et des constructeurs, obtenir et définir des valeurs de propriétés, ajouter et supprimer des gestionnaires d'événements, etc.). L'utilisation de la réflexion pour obtenir des informations sur les types et les membres n'est pas limitée. Tout code peut utiliser la réflexion pour effectuer les tâches suivantes :  

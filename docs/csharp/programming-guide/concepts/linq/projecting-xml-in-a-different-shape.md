@@ -1,21 +1,12 @@
 ---
 title: Projection de code XML en une autre forme (C#)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 4cb6b14a-32dc-4a2a-813e-bf9368fa8d86
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 54eb890e37634362af715c132bfe43b7addb20b4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e9d555dadea1ddd8720ef2548136f9bf9fb833c9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="projecting-xml-in-a-different-shape-c"></a>Projection de code XML en une autre forme (C#)
 Cette rubrique illustre un exemple de projection de code XML dont la forme est différente du code XML source.  
@@ -25,7 +16,7 @@ Cette rubrique illustre un exemple de projection de code XML dont la forme est d
 ## <a name="example"></a>Exemple  
  Cet exemple traite un document WordprocessingML et récupère les nœuds de paragraphes à partir d'un document WordprocessingML. Il identifie également le style et le texte de chaque paragraphe. Pour finir, l'exemple projette le code XML sous une forme différente. Cet exemple se base sur les exemples précédents de ce didacticiel. Dans le code ci-dessous, la nouvelle instruction qui effectue la projection figure dans des commentaires.  
   
- Pour obtenir des instructions sur la création du document source utilisé dans cet exemple, consultez [Création du document Office Open XML source (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Afin d’obtenir des instructions pour créer le document source utilisé dans cet exemple, consultez [Création du document Office Open XML source (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   
  Cet exemple utilise des classes de l'assembly WindowsBase. Il utilise des types dans l'espace de noms <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   

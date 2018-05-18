@@ -1,18 +1,12 @@
 ---
-title: "-target:winmdobj (Options du compilateur C#)"
+title: -target:winmdobj (Options du compilateur C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 1819a045-659d-498a-9457-c466e902986f
-caps.latest.revision: "15"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 444fcd69db327ea9d9c3dc739b42520bb9472c4d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: b0b1ec0bed174484e9ed7b9ecddbe82b0c705325
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-targetwinmdobj-c-compiler-options"></a>-target:winmdobj (Options du compilateur C#)
 Si vous utilisez l’option du compilateur **-target:winmdobj**, le compilateur crée un fichier .winmdobj intermédiaire que vous pouvez convertir en fichier binaire (.winmd) Windows Runtime. Le fichier .winmd peut ensuite être consommé par des programmes JavaScript et C++, en plus des programmes en langage managé.  

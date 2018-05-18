@@ -1,26 +1,17 @@
 ---
-title: "Guide pratique pour copier un répertoire vers un autre répertoire en Visual Basic"
-ms.custom: 
+title: Guide pratique pour copier un répertoire vers un autre répertoire en Visual Basic
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - I/O [Visual Basic], copying directories
 - I/O [Visual Basic], copying folders
 - folders [Visual Basic], copying
 - directories [Visual Basic], copying
 ms.assetid: 2a370bd7-10ba-4219-afc4-4519d031eb6c
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 72f20ee767902395439f420f14fc2e352297ad31
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9b6e095d061619cf9d2e2d87a7247cbdbc51cbe2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-copy-a-directory-to-another-directory-in-visual-basic"></a>Guide pratique pour copier un répertoire vers un autre répertoire en Visual Basic
 Utilisez la méthode <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A> pour copier un répertoire vers un autre répertoire. Cette méthode copie le contenu du répertoire, ainsi que le répertoire lui-même. Si le répertoire cible n’existe pas, il est créé. Si un répertoire portant le même nom existe à l’emplacement cible et que `overwrite` a la valeur `False`, le contenu des deux répertoires est fusionné. Vous pouvez spécifier un nouveau nom pour le répertoire pendant l’opération.  
@@ -64,7 +55,7 @@ Utilisez la méthode <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory
   
 -   Un nom de fichier ou de dossier dans le chemin contient un signe deux-points (:) ou n’a pas un format correct (<xref:System.NotSupportedException>).  
   
--   L'utilisateur n'a pas les autorisations nécessaires pour afficher le chemin (<xref:System.Security.SecurityException>).  
+-   L'utilisateur n'a pas les autorisations nécessaires pour afficher le chemin d'accès (<xref:System.Security.SecurityException>).  
   
 -   Un fichier de destination existe mais n’est pas accessible (<xref:System.UnauthorizedAccessException>).  
   

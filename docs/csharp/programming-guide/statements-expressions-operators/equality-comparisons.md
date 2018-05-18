@@ -1,21 +1,14 @@
 ---
-title: "Comparaisons d'égalité (Guide de programmation C#)"
+title: Comparaisons d'égalité (Guide de programmation C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - object equality [C#]
 ms.assetid: 10b865ea-4e7b-4127-9242-c9b8f57d9f04
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 199257b1fe371dea3e4ee1eedcf11f3bdce02366
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: c1abee8636cf540d42d92eb7496fb078f06e6e0f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>Comparaisons d'égalité (Guide de programmation C#)
 Il est parfois nécessaire de comparer l’égalité de deux valeurs. Dans certains cas, vous testez *l’égalité de valeur*, également appelée *équivalence*, qui signifie que les valeurs contenues dans les deux variables sont égales. Dans d’autres cas, vous devez déterminer si deux variables référencent le même objet sous-jacent en mémoire. Ce type d’égalité est appelée *l’égalité de référence* ou *identité*. Cette rubrique décrit ces deux genres d’égalité et fournit des liens vers d’autres rubriques pour obtenir plus d’informations.  

@@ -1,29 +1,18 @@
 ---
-title: "Transformations XSLT avec la classe XslTransform"
-ms.custom: 
+title: Transformations XSLT avec la classe XslTransform
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 500335af-f9b5-413b-968a-e6d9a824478c
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 5795824a00b6949d5637ca3c75bd311d522c15f5
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: ece159b35cfbc83e05432b93ce7df06a5ca9fcac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xslt-transformations-with-the-xsltransform-class"></a>Transformations XSLT avec la classe XslTransform
 > [!NOTE]
@@ -44,7 +33,7 @@ Architecture de transformation
 |<xref:System.Xml.XPath.XPathNavigator>|API qui fournit un modèle de style curseur pour naviguer dans un magasin ainsi qu'une prise en charge de requête XPath. Elle ne permet pas de modifier le magasin sous-jacent. Pour le modifier, utilisez la classe <xref:System.Xml.XmlDocument>.|  
 |<xref:System.Xml.XPath.IXPathNavigable>|Interface qui fournit une méthode `CreateNavigator` à un objet <xref:System.Xml.XPath.XPathNavigator> pour le magasin.|  
 |<xref:System.Xml.XmlDocument>|Permet la modification de ce document. Cette classe implémente l'objet <xref:System.Xml.XPath.IXPathNavigable>, autorisant des scénarios de modification de documents où des transformations XSLT sont ultérieurement requises. Pour plus d'informations, consultez [Entrée XmlDocument dans XslTransform](../../../../docs/standard/data/xml/xmldocument-input-to-xsltransform.md).|  
-|<xref:System.Xml.XmlDataDocument>|Classe dérivée de l'objet <xref:System.Xml.XmlDocument>. Elle établit une passerelle entre les mondes relationnels et XML en utilisant un objet <xref:System.Data.DataSet> pour optimiser le stockage de données structurées dans le document XML selon les mappages spécifiés sur l'objet <xref:System.Data.DataSet>. Elle implémente l'interface <xref:System.Xml.XPath.IXPathNavigable>, autorisant des scénarios où des transformations XSLT peuvent être effectuées sur des données relationnelles extraites d'une base de données. Pour plus d'informations, consultez [Intégration de XML aux données relationnelles et à ADO.NET](../../../../docs/standard/data/xml/xml-integration-with-relational-data-and-adonet.md).|  
+|<xref:System.Xml.XmlDataDocument>|Classe dérivée de l'objet <xref:System.Xml.XmlDocument>. Elle établit une passerelle entre les mondes relationnels et XML en utilisant un objet <xref:System.Data.DataSet> pour optimiser le stockage de données structurées dans le document XML selon les mappages spécifiés sur l'objet <xref:System.Data.DataSet>. Elle implémente l'interface <xref:System.Xml.XPath.IXPathNavigable>, autorisant des scénarios où des transformations XSLT peuvent être effectuées sur des données relationnelles extraites d'une base de données. Pour plus d'informations, voir [Intégration de XML aux données relationnelles et à ADO.NET](../../../../docs/standard/data/xml/xml-integration-with-relational-data-and-adonet.md).|  
 |<xref:System.Xml.XPath.XPathDocument>|Classe optimisée pour le traitement de l'objet <xref:System.Xml.Xsl.XslTransform> et les requêtes XPath, elle fournit un cache très performant en lecture seule. Elle implémente l'interface <xref:System.Xml.XPath.IXPathNavigable> et représente le magasin par défaut à utiliser pour les transformations XSLT.|  
 |<xref:System.Xml.XPath.XPathNodeIterator>|Permet la navigation dans des collections de nœuds XPath. Toutes les méthodes de sélection XPath sur l'objet <xref:System.Xml.XPath.XPathNavigator> retournent une classe <xref:System.Xml.XPath.XPathNodeIterator>. Plusieurs objets <xref:System.Xml.XPath.XPathNodeIterator> peuvent être créés sur le même magasin, chacune représentant une collection de nœuds sélectionnée.|  
   

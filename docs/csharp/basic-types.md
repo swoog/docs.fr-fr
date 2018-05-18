@@ -1,20 +1,13 @@
 ---
-title: "Types de base - Guide C#"
-description: "Découvrez les types de base (numérique, chaîne et objet) disponibles dans tous les programmes C#"
-keywords: .NET, .NET Core, C#
-author: BillWagner
-ms.author: wiwagn
+title: Types de base - Guide C#
+description: Découvrez les types de base (numérique, chaîne et objet) disponibles dans tous les programmes C#
 ms.date: 10/10/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: 398a73f72a9a31c6b2a19a626f704f65564f4fbd
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.openlocfilehash: 2e62a461e41f4172bd6dd512a71babb998924978
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="types-variables-and-values"></a>Types, variables et valeurs  
 C# est un langage fortement typé. Chaque variable et chaque constante ont un type, tout comme chaque expression qui fournit une valeur. Chaque signature de méthode spécifie un type pour chaque paramètre d’entrée et pour la valeur de retour. La bibliothèque de classes .NET Framework définit un ensemble de types numériques intégrés, ainsi que des types plus complexes qui représentent un large éventail de constructions logiques, telles que le système de fichiers, les connexions réseau, les collections et tableaux d’objets, et les dates. Un programme C# classique utilise des types fournis dans la bibliothèque de classes, mais aussi des types définis par l’utilisateur qui modélisent les concepts propres au domaine du problème du programme.  

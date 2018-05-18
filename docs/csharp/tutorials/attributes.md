@@ -1,20 +1,14 @@
 ---
 title: Attributs - C#
 description: Découvrez comment les attributs fonctionnent en C#.
-keywords: .NET, .NET Core, C#, attribut
 author: mgroves
-ms.author: wiwagn
 ms.date: 03/06/2017
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: b152cf36-76e4-43a5-b805-1a1952e53b79
-ms.openlocfilehash: dad02c64d22fe0f127057202c082680f13261d7b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: db6db50ac59e804225bdc11c435fef3d53fa685e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-attributes-in-c"></a>Utilisation d’attributs en C# #
 
@@ -24,7 +18,7 @@ Considérez l’attribut `[Obsolete]`. Vous pouvez l’appliquer aux classes, st
 
 Dans ce didacticiel, vous allez voir comment ajouter des attributs à votre code, comment créer et utiliser vos propres attributs et comment utiliser des attributs qui sont intégrés à .NET Core.
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Prérequis
 Vous devez configurer votre ordinateur pour exécuter .NET Core. Vous trouverez les instructions d’installation sur la page de [.NET Core](https://www.microsoft.com/net/core).
 Vous pouvez exécuter cette application sur Windows, Ubuntu Linux, Mac OS ou dans un conteneur Docker. Vous devez installer l’éditeur de code de votre choix. Les descriptions ci-dessous utilisent [Visual Studio Code](https://code.visualstudio.com/), un éditeur open source et multiplateforme. Cependant, vous pouvez utiliser les outils avec lesquels vous êtes le plus à l’aise.
 
@@ -88,9 +82,9 @@ Les attributs peuvent être utilisés sur plusieurs « cibles ». Les exemples
 * Assembly
 * Classe
 * Constructeur
-* Délégué
+* délégué
 * Enum
-* Événement
+* événement
 * Champ
 * GenericParameter
 * Interface
@@ -150,6 +144,6 @@ Si cette chaîne correspond à une directive `#define`, alors tous les appels à
 
 Dans le code ci-dessus, il est inutile d’avoir une chaîne littérale `"Name"`. Cela peut vous aider à éviter les bogues liés aux fautes de frappe et rend également plus simple la refactorisation/les changements de nom.
 
-## <a name="summary"></a>Résumé
+## <a name="summary"></a>Récapitulatif
 
 Les attributs apportent la puissance déclarative dans C#. Mais ils constituent une forme de code en tant que métadonnées et n’agissent pas par eux-mêmes.

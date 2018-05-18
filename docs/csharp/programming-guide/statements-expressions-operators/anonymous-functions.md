@@ -1,22 +1,16 @@
 ---
-title: "Fonctions anonymes (Guide de programmation C#)"
+title: Fonctions anonymes (Guide de programmation C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - lambda expressions [C#], as anonymus functions
 - anonymous functions [C#]
 - anonymous methods [C#]
 ms.assetid: 6ce3f04d-0c71-4728-9127-634c7e9a8365
-caps.latest.revision: "14"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 888743bb1c49df123b57b4d09e0251dbe1e049d3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 51a3c2e8399fdaae19ebe33f0d9ecc4bfd598799
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="anonymous-functions-c-programming-guide"></a>Fonctions anonymes (Guide de programmation C#)
 Une fonction anonyme est une instruction ou expression « inline » qui peut être utilisée partout où un type délégué est attendu. Vous pouvez l’utiliser pour initialiser un délégué nommé ou la passer à la place d’un type délégué nommé comme paramètre de méthode.  
@@ -44,4 +38,4 @@ Une fonction anonyme est une instruction ou expression « inline » qui peut �
  [Instructions, expressions et opérateurs](../../../csharp/programming-guide/statements-expressions-operators/index.md)  
  [Expressions lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
  [Délégués](../../../csharp/programming-guide/delegates/index.md)  
- [Arborescences de l’expression](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)
+ [Arborescences d’expressions](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)

@@ -1,13 +1,7 @@
 ---
-title: "Exécution de changements de casse indépendants de la culture"
-ms.custom: 
+title: Exécution de changements de casse indépendants de la culture
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,18 +15,13 @@ helpviewer_keywords:
 - String.ToUpper method
 - culture parameter
 ms.assetid: 822d551c-c69a-4191-82f4-183d82c9179c
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: e65eb85e1355d3aa98e04e7bd73f0194243dcdb1
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8f560e3b080f6355d4e0c433c2a2218fbcbc6d72
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="performing-culture-insensitive-case-changes"></a>Exécution de changements de casse indépendants de la culture
 Les méthodes <xref:System.String.ToUpper%2A?displayProperty=nameWithType>, <xref:System.String.ToLower%2A?displayProperty=nameWithType>, <xref:System.Char.ToUpper%2A?displayProperty=nameWithType> et <xref:System.Char.ToLower%2A?displayProperty=nameWithType> fournissent des surcharges qui n’acceptent pas de paramètres. Par défaut, ces surcharges sans paramètres effectuent des changements de casse basés sur la valeur de la <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>. Cela produit des résultats de la casse qui peuvent varier selon la culture. Pour indiquer clairement si vous souhaitez que les changements de casse soient ou non dépendants de la culture, vous devez utiliser les surcharges de ces méthodes qui vous demandent de spécifier explicitement un paramètre `culture`. Pour les changements de casse dépendants de la culture, spécifiez `CultureInfo.CurrentCulture` pour le paramètre `culture`. Pour les changements de casse indépendants de la culture, spécifiez `CultureInfo.InvariantCulture` pour le paramètre `culture`.  

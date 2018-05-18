@@ -1,22 +1,16 @@
 ---
-title: "Guide pratique pour gérer une exception à l’aide de try/catch (Guide de programmation C#)"
+title: Guide pratique pour gérer une exception à l’aide de try/catch (Guide de programmation C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - exception handling [C#], try/catch blocks
 - exceptions [C#], try/catch blocks
 - try/catch blocks [C#]
 ms.assetid: ca8e3773-980e-4767-8633-7408540e9818
-caps.latest.revision: "14"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 9098bbcf5cefb85211f9d3bb9cac15943ba02172
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b67a3d7b6d2e10519363a273b7dd1d8b61317d1c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-handle-an-exception-using-trycatch-c-programming-guide"></a>Guide pratique pour gérer une exception à l'aide de try/catch (Guide de programmation C#)
 L’objectif d’un bloc [try-catch](../../../csharp/language-reference/keywords/try-catch.md) est d’intercepter et de gérer une exception générée par du code opérationnel. Certaines exceptions peuvent être gérées dans un bloc `catch` et le problème résolu sans que l’exception soit levée à nouveau, mais le plus souvent la seule chose que vous puissiez faire est de vous assurer que l’exception appropriée est levée.  

@@ -1,12 +1,6 @@
 ---
 title: Configuration du proxy
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Networking
 - adaptive proxies
@@ -17,16 +11,14 @@ helpviewer_keywords:
 - network, proxy configuration
 - proxies, configuring
 ms.assetid: 353c0a8b-4cee-44f6-8e65-60e286743df9
-caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 41f7cfe76acfb4b6bbf66207685935c190a51901
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 41e1dcee90531de605b6bddc1eedc1c44235d8eb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="proxy-configuration"></a>Configuration du proxy
 Un serveur proxy gère les demandes du client pour les ressources. Un proxy peut retourner une ressource demandée à partir de son cache ou transférer la demande au serveur sur lequel réside la ressource. Les proxies peuvent améliorer les performances réseau en réduisant le nombre de demandes envoyées aux serveurs distants. Les proxies peuvent également être utilisés pour restreindre l'accès aux ressources.  
@@ -52,7 +44,7 @@ Un serveur proxy gère les demandes du client pour les ressources. Un proxy peut
   
 |Attribut, propriété ou paramètre de fichier de configuration|Description|  
 |--------------------------------------------------------|-----------------|  
-|`scriptDownloadInterval`|Temps écoulé, en secondes, entre les téléchargements du script.|  
+|`scriptDownloadInterval`|Durée calendaire, en secondes, entre les téléchargements du script.|  
 |`scriptDownloadTimeout`|Délai d'attente (en secondes) pour que le script se télécharge.|  
 |`useDefaultCredentials` ou <xref:System.Net.WebProxy.UseDefaultCredentials>|Détermine si le système utilise les informations d'identification réseau par défaut pour accéder à un proxy.|  
 |`useDefaultCredentialForScriptDownload`|Détermine si le système utilise les informations d'identification réseau par défaut pour télécharger le script de configuration.|  

@@ -1,13 +1,7 @@
 ---
-title: "Présentation des bibliothèques de classes .NET"
-ms.custom: 
+title: Présentation des bibliothèques de classes .NET
 ms.date: 02/08/2018
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - classes [.NET Framework], library overview
 - classes [.NET Core], library overview
@@ -45,15 +39,11 @@ helpviewer_keywords:
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: ffa64d3a1f9ade7a97b15edfdecbad566c871c12
-ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
+ms.openlocfilehash: c6c61e4721e6daa548db2fffccc75606e98f71cc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="net-class-library-overview"></a>Présentation des bibliothèques de classes .NET
 Les implémentations .NET incluent des classes, des interfaces, des délégués et des types valeur qui permettent d'accélérer et d'optimiser le processus de développement et de fournir l'accès aux fonctions du système. Pour faciliter l'interopérabilité entre les langages, la plupart des types .NET sont conformes CLS (Common Language Specification) et peuvent, par conséquent, être utilisés à partir de n'importe quel langage de programmation dont le compilateur est conforme CLS.  
@@ -74,16 +64,16 @@ Les implémentations .NET incluent des classes, des interfaces, des délégués 
   
  .NET fournit un ensemble complet d'interfaces, ainsi que des classes abstraites et concrètes (non abstraites). Vous pouvez utiliser les classes concrètes telles quelles ou, dans de nombreux cas, en dériver vos propres classes. Pour utiliser les fonctionnalités d'une interface, vous pouvez créer une classe qui implémente l'interface ou dériver une classe d'une de celles du .NET Framework qui implémente l'interface.  
   
-## <a name="naming-conventions"></a>Conventions de nommage  
+## <a name="naming-conventions"></a>Conventions d'affectation de noms  
  Les types .NET utilisent un schéma de nommage dans lequel les points indiquent une hiérarchie. Cette technique regroupe les types associés en espaces de noms de sorte qu'ils peuvent être recherchés et référencés plus facilement. La première partie du nom complet (jusqu'au point le plus à droite) constitue le nom de l'espace de noms. La dernière partie du nom est le nom du type. Par exemple, **System.Collections.ArrayList** représente le type **ArrayList**, qui appartient à l’espace de noms **System.Collections**. Les types qui se trouvent dans **System.Collections** peuvent être utilisés pour manipuler les collections d’objets.  
   
- Pour les développeurs de bibliothèques qui étendent le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], ce schéma de nommage facilite la création de groupes hiérarchiques de types et l'attribution d'un nom cohérent et descriptif. Il permet également d'identifier clairement les types par leur nom complet (autrement dit, par leur espace de noms et nom de type) et d'empêcher les collisions de nom de type. Les développeurs de bibliothèques sont censés utiliser la convention suivante lors de la création des noms des nouveaux espaces de noms :  
+ Pour les développeurs de bibliothèques qui étendent le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], ce schéma d'affectation de noms facilite la création de groupes hiérarchiques de types et l'attribution d'un nom cohérent et descriptif. Il permet également d'identifier clairement les types par leur nom complet (autrement dit, par leur espace de noms et nom de type) et d'empêcher les collisions de nom de type. Les développeurs de bibliothèques sont censés utiliser la convention suivante lors de l'affectation de noms aux nouveaux espaces de noms :  
   
  *NomSociété*.*NomTechnologie*  
   
  Par exemple, l'espace de noms Microsoft.Word est conforme à cette indication.  
   
- L’utilisation de modèles de nommage pour regrouper des types associés en espaces de noms est très utile pour générer et documenter les bibliothèques de classes. Cependant, ce schéma de nommage n’a pas d’effet sur la visibilité, l’accès aux membres, l’héritage, la sécurité ou la liaison. Un espace de noms peut être partitionné en plusieurs assemblys et un seul assembly peut contenir des types provenant de plusieurs espaces de noms. L'assembly fournit la structure formelle pour le versioning, le déploiement, la sécurité, le chargement et la visibilité dans le Common Language Runtime.  
+ L’utilisation de modèles d’affectation de noms pour regrouper des types associés en espaces de noms est très utile pour générer et documenter les bibliothèques de classes. Cependant, ce schéma d’affectation de noms n’a pas d’effet sur la visibilité, l’accès aux membres, l’héritage, la sécurité ou la liaison. Un espace de noms peut être partitionné en plusieurs assemblys et un seul assembly peut contenir des types provenant de plusieurs espaces de noms. L'assembly fournit la structure formelle pour le versioning, le déploiement, la sécurité, le chargement et la visibilité dans le Common Language Runtime.  
   
  Pour plus d’informations sur les espaces de noms et les noms des types, consultez [Système de type commun (CTS, Common Type System)](../../docs/standard/base-types/common-type-system.md).  
   
@@ -92,7 +82,7 @@ Les implémentations .NET incluent des classes, des interfaces, des délégués 
   
  Le tableau suivant énumère les types de base fournis par .NET, décrit brièvement chaque type et indique le type correspondant en Visual Basic, C#, C++ et F#.  
   
-|Catégorie|Nom de classe|Description|Type de données Visual Basic|Type de données C#|Type de données C++/CLI|Type de données F#|  
+|Category|Nom de classe|Description|Type de données Visual Basic|Type de données C#|Type de données C++/CLI|Type de données F#|  
 |--------------|----------------|-----------------|----------------------------|-------------------|---------------------|-----------------------|  
 |Entier|<xref:System.Byte>|Entier non signé 8 bits.|**Byte**|**byte**|**unsigned char**|**byte**|  
 ||<xref:System.SByte>|Entier signé 8 bits.<br /><br /> Non conforme CLS.|**SByte**|**sbyte**|**char**<br /> - ou -<br /> **signed** **char**|**sbyte**|  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Help, Visual C# documentation
 - C# language
 - Visual C#
-ms.openlocfilehash: 598ddfbe16a1a09326d811b4eafcf87f3ca6e971
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d349f8aff5e3d48a2bc738e848d2a251805e260
+ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="c-guide"></a>Guide C#
 
@@ -43,8 +43,8 @@ Il y a plusieurs sections dans le Guide de C#. Vous pouvez les lire dans l’ord
 * [Présentation de C#](tour-of-csharp/index.md)
   * Cette section présente une vue d’ensemble du langage. Elle présente les éléments qui composent les programmes C# et les fonctionnalités du langage. Vous y découvrirez également de petits exemples de tous les éléments de syntaxe du langage C# et des discussions sur ses principaux sujets.
 
-* [Dernières fonctionnalités](whats-new/index.md)
-  * Découvrez les nouvelles fonctionnalités du langage. Découvrez les nouveaux outils tels que C# Interactive (REPL de C#) et le kit SDK .NET Compiler Platform. Cette section montre comment le langage est en constante évolution et comment les nouveaux outils peuvent améliorer votre productivité.
+* [Nouveautés de C#](whats-new/index.md)
+  * Fournit une vue d’ensemble des nouvelles fonctionnalités ajoutées dans les dernières versions du langage et de l’historique du langage C#.
 
 <!--
 * [.NET Compiler Platform SDK](roslyn-sdk/index.md)

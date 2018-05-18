@@ -1,24 +1,15 @@
 ---
-title: "Syntaxe de requête et syntaxe de méthode dans LINQ (C#)"
-ms.custom: 
+title: Syntaxe de requête et syntaxe de méthode dans LINQ (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - LINQ [C#], query syntax vs. method syntax
 - queries [LINQ in C#], syntax comparisons
 ms.assetid: eedd6dd9-fec2-428c-9581-5b8783810ded
-caps.latest.revision: "30"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 0127ee0815c4ba6a697456fe45bd373bcf9ba4e4
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: 6b943da442d2ec1210911cb9f4b6a0d56c7216d7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="query-syntax-and-method-syntax-in-linq-c"></a>Syntaxe de requête et syntaxe de méthode dans LINQ (C#)
 La plupart des requêtes de la documentation de présentation de Langage Integrated Query ([!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]) sont écrites à l’aide de la syntaxe de requête déclarative de LINQ. Toutefois, la syntaxe de requête doit être traduite en appels de méthode pour le Common Langage Runtime (CLR) .NET lorsque le code est compilé. Ces appels de méthode appellent les opérateurs de requête standard, qui ont des noms tels que `Where`, `Select`, `GroupBy`, `Join`, `Max` et `Average`. Vous pouvez les appeler directement en utilisant la syntaxe de méthode à la place de la syntaxe de requête.  

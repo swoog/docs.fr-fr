@@ -1,29 +1,18 @@
 ---
-title: "Opérations de chaînes de base dans .NET Framework"
-ms.custom: 
+title: Opérations de chaînes de base dans .NET Framework
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - strings [.NET Framework], basic string operations
 - custom strings
 ms.assetid: 8133d357-90b5-4b62-9927-43323d99b6b6
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 1ee53343a68a2c2169baefaebc68a817159d0313
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 3f7692251a00c712f93b649d4cd6fc153bb248f3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="basic-string-operations-in-net"></a>Opérations de chaînes de base dans .NET
 Les applications répondent souvent aux utilisateurs en construisant des messages selon l’entrée d’utilisateur. Par exemple, il n’est pas rare pour les sites web de répondre à un utilisateur qui vient de se connecter par un message d’accueil spécialisé qui inclut le nom de cet utilisateur. Plusieurs méthodes dans les classes <xref:System.String?displayProperty=nameWithType> et <xref:System.Text.StringBuilder?displayProperty=nameWithType> vous permettent de construire de façon dynamique des chaînes personnalisées à afficher dans votre interface utilisateur. Ces méthodes vous aident également à effectuer plusieurs opérations de chaînes de base telles que la création de chaînes à partir de tableaux d’octets, la comparaison des valeurs de chaînes et la modification des chaînes existantes.  

@@ -1,9 +1,6 @@
 ---
-title: "Tableau des conversions numériques explicites (référence C#)"
+title: Tableau des conversions numériques explicites (référence C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - conversions [C#], explicit numeric
 - numeric conversions [C#], explicit
@@ -12,21 +9,18 @@ helpviewer_keywords:
 - types [C#], explicit numeric conversions
 - type conversion [C#], explicit numeric
 ms.assetid: f3bb9e76-6b92-4df7-bc36-f866c24e1dfd
-caps.latest.revision: "14"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: e7a366328035b205b93a50ff6d212a06576ee801
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7363df3e4b2449924222745de409fd68349b93de
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="explicit-numeric-conversions-table-c-reference"></a>Tableau des conversions numériques explicites (référence C#)
 Une conversion numérique explicite permet de convertir, à l’aide d’une expression de cast, n’importe quel type numérique en un autre type numérique quand il n’existe pas de conversion implicite. Le tableau suivant liste ces conversions.  
   
  Pour plus d’informations sur les conversions, consultez [Cast et conversions de types](../../../csharp/programming-guide/types/casting-and-type-conversions.md).  
   
-|De|À|  
+|From|À|  
 |----------|--------|  
 |[sbyte](../../../csharp/language-reference/keywords/sbyte.md)|`byte`, `ushort`, `uint`, `ulong` ou `char`|  
 |[byte](../../../csharp/language-reference/keywords/byte.md)|`Sbyte` ou `char`|  
@@ -41,7 +35,7 @@ Une conversion numérique explicite permet de convertir, à l’aide d’une exp
 |[double](../../../csharp/language-reference/keywords/double.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float` ou `decimal`|  
 |[decimal](../../../csharp/language-reference/keywords/decimal.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float` ou `double`|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
   
 -   La conversion numérique explicite peut produire un résultat de moindre précision ou entraîner la levée d’exceptions.  
   

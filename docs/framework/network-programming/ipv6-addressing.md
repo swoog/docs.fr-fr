@@ -1,12 +1,6 @@
 ---
 title: Adressage IPv6
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Internet Protocol version 6, addresses in
 - Neighbor Discovery
@@ -32,16 +26,14 @@ helpviewer_keywords:
 - IPv6, addresses in
 - IPv6, disabling
 ms.assetid: 20a104ae-1649-4649-a005-531a5cf74c93
-caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 01d4fd0fbeeb0f111505fde0f8154c54b2bdcc38
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 532928118df9784198eada6f6a2f1e7a1b808ee9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ipv6-addressing"></a>Adressage IPv6
 Dans le protocole IPv6, les adresses ont une longueur de 128 bits. Une telle taille d’espace d’adressage permet de subdiviser les adresses disponibles en une hiérarchie de domaines de routage qui reflète la topologie d’Internet. Elle permet également de mapper les adresses des cartes réseau (ou des interfaces) qui connectent les appareils au réseau. IPv6 contient une fonctionnalité inhérente permettant de résoudre les adresses au niveau le plus bas, c’est-à-dire au niveau de l’interface réseau, et contient également des fonctionnalités de configuration automatique.  

@@ -1,20 +1,13 @@
 ---
-title: "Modèles courants pour les délégués"
-description: "Découvrez les modèles courants pour l’utilisation de délégués dans votre code afin d’éviter un couplage important entre vos composants."
-keywords: .NET, .NET Core
-author: BillWagner
-ms.author: wiwagn
+title: Modèles courants pour les délégués
+description: Découvrez les modèles courants pour l’utilisation de délégués dans votre code afin d’éviter un couplage important entre vos composants.
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 0ff8fdfd-6a11-4327-b061-0f2526f35b43
-ms.openlocfilehash: 83214800fb997e9274cacfd1bae85ab07c4515a2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: fceab2b9c6bbd1d687566820366459ec57ae7a2d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="common-patterns-for-delegates"></a>Modèles courants pour les délégués
 
@@ -242,4 +235,4 @@ Nous venons de voir le début d’un composant de journal qui peut être étendu
 
 La classe Logger peut apporter des améliorations ou des modifications sans introduire de modifications avec rupture. Comme toute classe, vous ne pouvez pas modifier l’API publique sans risque de modifications avec rupture. Toutefois, le couplage entre l’enregistreur d’événements et les moteurs de sortie étant uniquement par l’intermédiaire du délégué, aucun autre type (tel que les interfaces ou classes de base) n’est appelé. Le couplage est aussi réduit que possible.
 
-[Suivant](events-overview.md)
+[Next](events-overview.md)

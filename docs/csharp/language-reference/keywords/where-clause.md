@@ -1,24 +1,17 @@
 ---
 title: where, clause (Référence C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - whereclause_CSharpKeyword
 helpviewer_keywords:
 - where keyword [C#]
 - where clause [C#]
 ms.assetid: 7f9bf952-7744-4f91-b676-cddb55d107c3
-caps.latest.revision: 16
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 0324346ee5e214bf467fcb522ef781c91fa1b76f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bc040e17f5c612b9fc43a9ef24fb6f15f0942b8e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="where-clause-c-reference"></a>where, clause (Référence C#)
 La clause `where` est utilisée dans une expression de requête pour spécifier les éléments de la source de données qui seront retournés dans l’expression de requête. Elle applique une condition booléenne (un *prédicat*) à chaque élément source (référencé par la variable de portée) et retourne ceux pour lesquels la condition spécifiée est remplie. Une expression de requête unique peut contenir plusieurs clauses `where` et une clause unique peut contenir plusieurs sous-expressions de prédicat.  
@@ -38,7 +31,7 @@ La clause `where` est utilisée dans une expression de requête pour spécifier 
   
  [!code-csharp[cscsrefQueryKeywords#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/where-clause_3.cs)]  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La clause `where` est un mécanisme de filtrage. Elle peut être placée à presque n’importe quel endroit d’une expression de requête, sauf qu’elle ne peut pas être la première ni la dernière clause. Une clause `where` peut apparaître avant ou après une clause [group](../../../csharp/language-reference/keywords/group-clause.md) selon que vous devez filtrer les éléments sources avant ou après leur regroupement.  
   
  Si un prédicat spécifié n’est pas valide pour les éléments de la source de données, une erreur de compilation est générée. C’est l’un des avantages de la vérification de type fort fourni par [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].  

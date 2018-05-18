@@ -1,26 +1,15 @@
 ---
 title: Copie de nœuds existants d'un document à un autre
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 3caa78c1-3448-4b7b-b83c-228ee857635e
-caps.latest.revision: ''
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 958dccfc184857b0edd12cd1d9afe7b3b468b1e6
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: ca36ffdd2eb5eb3acfbacbd543eebf17cfffb5d3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="copying-existing-nodes-from-one-document-to-another"></a>Copie de nœuds existants d'un document à un autre
 La méthode **ImportNode** est le mécanisme par lequel un nœud ou un sous-arbre de nœuds entier est copié d'un **XmlDocument** à un autre. Le nœud retourné par l'appel est une copie du nœud issu du document source, y compris sur le plan des valeurs d'attribut, du nom du nœud, du type de nœud et de tous les attributs associés à l'espace de noms tels que le préfixe, le nom local et l'URI (Uniform Resource Identifier) d'espace de noms. Le document source n'est pas modifié. À l'issue de l'importation du nœud, il vous reste encore à l'ajouter à l'arborescence à l'aide d'une des méthodes d'insertion de nœuds.  

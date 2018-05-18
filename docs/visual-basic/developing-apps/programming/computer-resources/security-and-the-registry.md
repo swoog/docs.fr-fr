@@ -1,24 +1,15 @@
 ---
-title: "Sécurité et Registre (Visual Basic)"
-ms.custom: 
+title: Sécurité et Registre (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - security [Visual Basic], registry
 - registry [Visual Basic], security issues
 ms.assetid: 9980aff7-2f69-492b-8f66-29a9a76d3df5
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 0961d21417cbb5efcd9f38112c4e8ecb393faccd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ddfe8f88763ee2db78d25d72e6c9cb3456ccd13f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-and-the-registry-visual-basic"></a>Sécurité et Registre (Visual Basic)
 Cette page décrit les implications en matière de sécurité du stockage des données dans le Registre.  
@@ -32,7 +23,7 @@ Cette page décrit les implications en matière de sécurité du stockage des do
   
  Les valeurs des autorisations d’accès au Registre sont définies par l’énumération <xref:System.Security.Permissions.RegistryPermissionAccess>. Le tableau suivant détaille ses membres.  
   
-|Valeur|Accès aux variables de Registre|  
+|Value|Accès aux variables de Registre|  
 |-----------|----------------------------------|  
 |`AllAccess`|Créer, lire et écrire|  
 |`Create`|Créer|  

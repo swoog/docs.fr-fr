@@ -1,14 +1,6 @@
 ---
 title: Récupération de ressources dans des applications de bureau
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-bcl
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -26,17 +18,13 @@ helpviewer_keywords:
 - translating resources into languages
 - localizing resources
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
-caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a02d9efcadcc4c7066dba4e55268ab898b6790e8
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 40eec7c03de616b22ae7b20c56cd5a05237ec759
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>Récupération de ressources dans des applications de bureau
 Quand vous utilisez des ressources localisées dans des applications de bureau du .NET Framework, vous devez, dans l’idéal, empaqueter les ressources pour la culture neutre ou par défaut avec l’assembly principal et créer un assembly satellite séparé pour chaque langue ou culture prise en charge par votre application. Vous pouvez ensuite utiliser la classe <xref:System.Resources.ResourceManager> pour accéder aux ressources nommées, comme indiqué dans la section suivante. Si vous choisissez de ne pas incorporer les ressources dans l’assembly principal et les assemblys satellites, vous pouvez également accéder directement aux fichiers .resources binaires, comme cela est expliqué dans la section [Récupération de ressources de fichiers .resources](#from_file) , plus loin dans cet article.  Pour récupérer des ressources dans des applications du [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] , consultez [Création et récupération de ressources dans les applications du Windows Store](http://go.microsoft.com/fwlink/p/?LinkID=241674) dans le Centre de développement Windows.  

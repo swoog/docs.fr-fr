@@ -1,24 +1,15 @@
 ---
-title: "Guide pratique pour rechercher des sous-répertoires avec un modèle spécifique en Visual Basic"
-ms.custom: 
+title: Guide pratique pour rechercher des sous-répertoires avec un modèle spécifique en Visual Basic
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - pattern matching
 - folders, finding
 ms.assetid: c9265fd1-7483-4150-8b7f-ff642caa939d
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 0c4549f417e86e82897ca32d8d7cf22aaf462c90
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b3c80fccea06a48c78f37dc7d1c8dcc88e143de4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-find-subdirectories-with-a-specific-pattern-in-visual-basic"></a>Guide pratique pour rechercher des sous-répertoires avec un modèle spécifique en Visual Basic
 La méthode <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetDirectories%2A> retourne une collection en lecture seule de chaînes représentant les noms de chemin des sous-répertoires d’un répertoire. Vous pouvez utiliser le paramètre `wildCards` pour indiquer un modèle spécifique. Si vous souhaitez inclure le contenu des sous-répertoires dans la recherche, affectez la valeur `SearchOption.SearchAllSubDirectories` au paramètre `searchType`.  
@@ -44,7 +35,7 @@ La méthode <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetDirectories%2A> ret
   
 -   `directory` pointe vers un fichier existant (<xref:System.IO.IOException>).  
   
--   Le chemin d'accès dépasse la longueur maximale définie par le système (<xref:System.IO.PathTooLongException>).  
+-   Le chemin dépasse la longueur maximale définie par le système (<xref:System.IO.PathTooLongException>).  
   
 -   Un nom de fichier ou de dossier dans le chemin contient un signe deux-points (:) ou n’a pas un format correct (<xref:System.NotSupportedException>).  
   

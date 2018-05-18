@@ -1,22 +1,15 @@
 ---
 title: Méthodes (Guide de programmation C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-caps.latest.revision: 41
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: dad1be88e39b708d34f454875e2cfb3ec100c430
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: d3fc4107c10d098d40e4021bef9f6acd06311fab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="methods-c-programming-guide"></a>Méthodes (Guide de programmation C#)
 Une méthode est un bloc de code qui contient une série d'instructions. Un programme provoque l'exécution des instructions en appelant la méthode et en spécifiant les éventuels arguments de méthode requis. En C#, chaque instruction exécutée est effectuée dans le contexte d'une méthode. La méthode Main est le point d'entrée de chaque application C# et elle est appelée par le Common Language Runtime (CLR) au démarrage du programme.  

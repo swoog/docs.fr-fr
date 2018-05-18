@@ -1,31 +1,20 @@
 ---
 title: "Guide pratique : ajouter et supprimer des éléments d'un ConcurrentDictionary"
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - thread-safe collections, concurrent dictionary
 ms.assetid: 81b64b95-13f7-4532-9249-ab532f629598
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 4ef7c8050b26cffeed03cc394193116f8f6797a9
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6aa309f2c6c44934f491229ac43003a05301bacb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>Comment : ajouter et supprimer des éléments d'un ConcurrentDictionary
 Cet exemple montre comment ajouter, extraire, mettre à jour et supprimer des éléments dans un <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>. Cette classe de collection est une implémentation thread-safe. Nous vous recommandons de l’utiliser chaque fois que plusieurs threads tentent d’accéder aux éléments de façon simultanée.  

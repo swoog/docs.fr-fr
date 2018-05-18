@@ -1,13 +1,7 @@
 ---
 title: "Comment : afficher des informations de date et d'heure localisées pour les utilisateurs du Web"
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - formatting [.NET Framework], dates
 - parsing strings [.NET Framework], date and time strings
@@ -16,18 +10,13 @@ helpviewer_keywords:
 - displaying date and time data
 - localized date displays [.NET Framework]
 ms.assetid: 377fe93c-32be-421a-a30a-be639a46ede8
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: b6c68ddd29b8221a073b00ade87e3b9d3dc870b8
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 63775d48ca2e11cfa121f3b7aeaff708d86e50de
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>Comment : afficher des informations de date et d'heure localisées pour les utilisateurs du Web
 Une page Web pouvant être affichée n’importe où dans le monde, les opérations qui analysent et mettent en forme les valeurs de date et d’heure ne doivent pas s’appuyer sur un format par défaut (généralement le format de la culture locale du serveur Web) lors de l’interaction avec l’utilisateur. Au lieu de cela, les formulaires Web qui gèrent les chaînes de date et d’heure saisies par l’utilisateur doivent analyser les chaînes en utilisant la culture préférée de l’utilisateur. De même, les données de date et d’heure doivent être affichées à l’utilisateur dans un format conforme à sa culture. Cette rubrique montre comment procéder.  
@@ -42,9 +31,9 @@ Une page Web pouvant être affichée n’importe où dans le monde, les opérati
   
 4.  Appelez la méthode `TryParse` ou `Parse` de type <xref:System.DateTime> ou <xref:System.DateTimeOffset> pour tester la conversion. Utilisez une surcharge de la méthode `TryParse` ou `Parse` avec un paramètre `provider` et transférez-y un des éléments suivants :  
   
-    -   L’objet <xref:System.Globalization.CultureInfo> créé à l’étape 3.  
+    -   L’objet <xref:System.Globalization.CultureInfo> créé à l’étape 3  
   
-    -   L’objet <xref:System.Globalization.DateTimeFormatInfo> retourné par la propriété <xref:System.Globalization.CultureInfo.DateTimeFormat%2A> de l’objet <xref:System.Globalization.CultureInfo> créé à l’étape 3.  
+    -   L’objet <xref:System.Globalization.DateTimeFormatInfo> retourné par la propriété <xref:System.Globalization.CultureInfo.DateTimeFormat%2A> de l’objet <xref:System.Globalization.CultureInfo> créé à l’étape 3  
   
 5.  Si la conversion échoue, répétez les étapes 2 à 4 pour chaque élément restant dans le tableau de chaînes retourné par la propriété <xref:System.Web.HttpRequest.UserLanguages%2A>.  
   
@@ -94,11 +83,11 @@ Une page Web pouvant être affichée n’importe où dans le monde, les opérati
   
  Le script côté client appelle la méthode JavaScript `toLocaleString`. Il génère une chaîne qui suit les conventions de mise en forme des paramètres régionaux de l’utilisateur, les plus susceptibles d’être correctement analysés sur le serveur.  
   
- La propriété <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> est remplie par les noms de la culture qui figurent dans les en-têtes `Accept-Language` inclus dans une requête HTTP. Toutefois, certains navigateurs n’incluent pas les en-têtes `Accept-Language` dans leurs demandes, et les utilisateurs peuvent également supprimer totalement ces en-têtes. Il est donc important de disposer d’une culture de secours lorsque vous analysez l’entrée de l’utilisateur. En général, la culture de secours est la culture invariante retournée par <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>. Les utilisateurs peuvent également fournir à Internet Explorer des noms de cultures qu’ils entrent dans une zone de texte, avec la possibilité que ces noms de cultures ne sont pas valides. Il est donc important d’utiliser la gestion des exceptions lorsque vous instanciez un objet <xref:System.Globalization.CultureInfo>.  
+ La propriété <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> est remplie par les noms de la culture qui figurent dans les en-têtes `Accept-Language` inclus dans une requête HTTP. Toutefois, certains navigateurs n’incluent pas les en-têtes `Accept-Language` dans leurs demandes, et les utilisateurs peuvent également supprimer totalement ces en-têtes. Il est donc important de disposer d’une culture de secours lorsque vous analysez l’entrée de l’utilisateur. En général, la culture de secours est la culture invariante retournée par <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>. Les utilisateurs peuvent également fournir à Internet Explorer des noms de cultures qu’ils entrent dans une zone de texte, avec la possibilité que ces noms de cultures ne sont pas valides. Il est donc important d’utiliser la gestion des exceptions quand vous instanciez un objet <xref:System.Globalization.CultureInfo>.  
   
- Lorsqu’il est extrait d’une requête HTTP soumise par Internet Explorer, le tableau <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> est rempli selon l’ordre de préférence de l’utilisateur. Le premier élément du tableau contient le nom de la culture/région principale de l’utilisateur. Si le tableau contient d’autres éléments, Internet Explorer leur assigne arbitrairement un spécificateur de qualité, séparé du nom de culture par un point virgule. Par exemple, une entrée pour la culture fr-FR peut prendre la forme `fr-FR;q=0.7`.  
+ Quand il est extrait d’une requête HTTP soumise par Internet Explorer, le tableau <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> est rempli selon l’ordre de préférence de l’utilisateur. Le premier élément du tableau contient le nom de la culture/région principale de l’utilisateur. Si le tableau contient d’autres éléments, Internet Explorer leur assigne arbitrairement un spécificateur de qualité, séparé du nom de culture par un point virgule. Par exemple, une entrée pour la culture fr-FR peut prendre la forme `fr-FR;q=0.7`.  
   
- L’exemple appelle le constructeur <xref:System.Globalization.CultureInfo.%23ctor%2A> avec son `useUserOverride` paramètre défini sur `false` pour créer un nouvel objet <xref:System.Globalization.CultureInfo>. Cela garantit que, si le nom de la culture est le nom de la culture par défaut sur le serveur, le nouvel objet <xref:System.Globalization.CultureInfo> créé par le constructeur de classe contient les paramètres par défaut d’une culture et ne reflète pas les paramètres substitués en utilisant l’application **Options régionales et linguistiques** du serveur. Les valeurs des paramètres substitués sur le serveur sont peu susceptibles d’exister sur le système de l’utilisateur ou d’apparaître dans l’entrée de l’utilisateur.  
+ L’exemple appelle le constructeur <xref:System.Globalization.CultureInfo.%23ctor%2A> avec son paramètre `useUserOverride` défini sur `false` pour créer un nouvel objet <xref:System.Globalization.CultureInfo>. Cela garantit que, si le nom de la culture est le nom de la culture par défaut sur le serveur, le nouvel objet <xref:System.Globalization.CultureInfo> créé par le constructeur de classe contient les paramètres par défaut d’une culture et ne reflète pas les paramètres substitués en utilisant l’application **Options régionales et linguistiques du serveur**. Les valeurs des paramètres substitués sur le serveur sont peu susceptibles d’exister sur le système de l’utilisateur ou d’apparaître dans l’entrée de l’utilisateur.  
   
  Comme cet exemple analyse deux représentations d’une chaîne de date et d’heure (une entrée par l’utilisateur, et l’autre stockée dans le champ masqué), il définit les objets <xref:System.Globalization.CultureInfo> qui peuvent être nécessaires par avance. Il crée un tableau d’objets <xref:System.Globalization.CultureInfo> supérieur d’une unité au nombre d’éléments retournés par la propriété <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType>. Il instancie ensuite un objet <xref:System.Globalization.CultureInfo> pour chaque chaîne de langue/région, ainsi qu’un objet <xref:System.Globalization.CultureInfo> représentant <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>.  
   
@@ -107,11 +96,11 @@ Une page Web pouvant être affichée n’importe où dans le monde, les opérati
 ## <a name="compiling-the-code"></a>Compilation du code  
  Pour compiler le code, créez une page Web [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] sans code-behind. Copiez ensuite l’exemple dans la page Web pour qu’il remplace tout le code existant. La page Web [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] doit contenir les contrôles suivants :  
   
--   Un contrôle <xref:System.Web.UI.WebControls.Label>, qui n’est pas référencé dans le code. Définissez sa propriété <xref:System.Web.UI.WebControls.TextBox.Text%2A> sur « Entrez un nombre : ».  
+-   Un contrôle <xref:System.Web.UI.WebControls.Label>, qui n’est pas référencé dans le code. Définissez sa propriété <xref:System.Web.UI.WebControls.TextBox.Text%2A> sur « Entrez un nombre : ».  
   
 -   un contrôle <xref:System.Web.UI.WebControls.TextBox> nommé `DateString` ;  
   
--   un contrôle <xref:System.Web.UI.WebControls.Button> nommé `OKButton` ; Définissez sa propriété <xref:System.Web.UI.WebControls.Button.Text%2A> sur « OK ».  
+-   un contrôle <xref:System.Web.UI.WebControls.Button> nommé `OKButton` ; Définissez sa propriété <xref:System.Web.UI.WebControls.Button.Text%2A> sur « OK ».  
   
 -   un contrôle <xref:System.Web.UI.WebControls.HiddenField> nommé `DateInfo` ;  
   

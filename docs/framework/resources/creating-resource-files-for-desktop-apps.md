@@ -1,14 +1,6 @@
 ---
 title: Création de fichiers de ressources pour les applications bureautiques
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-bcl
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,17 +10,13 @@ helpviewer_keywords:
 - application resources, creating files
 - resource files, creating
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
-caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b73520dfc3d5123aedce77254f738a61a27ccd95
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: b8d5c151c728002ede0e29be77fa6e23aa2c1b3d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-resource-files-for-desktop-apps"></a>Création de fichiers de ressources pour les applications bureautiques
 Vous pouvez inclure des ressources, telles que des chaînes, des images ou des données d’objet, dans les fichiers de ressources pour les rendre facilement accessibles à votre application. Le .NET Framework propose cinq façons de créer des fichiers de ressources :  

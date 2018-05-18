@@ -1,13 +1,7 @@
 ---
 title: Fichiers mappés en mémoire
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,18 +9,13 @@ helpviewer_keywords:
 - memory-mapped files
 - inter-process communiation
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
-caps.latest.revision: 24
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 99aefdaf3d38dc5506bf785c8ba4a9b457cc7bf7
-ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
+ms.openlocfilehash: ec4f3f8df0478c1fc881358ae8e220220fbedf17
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="memory-mapped-files"></a>Fichiers mappés en mémoire
 Un fichier mappé en mémoire comporte le contenu d'un fichier en mémoire virtuelle. Ce mappage entre un fichier et un espace mémoire permet à une application incluant plusieurs processus de modifier le fichier en lisant et en écrivant directement dans la mémoire. En commençant par [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], vous pouvez utiliser du code managé pour accéder aux fichiers mappés en mémoire de la même façon que les fonctions Windows natives accèdent à des fichiers mappés en mémoire, comme décrit dans [Managing Memory-Mapped Files](https://msdn.microsoft.com/library/ms810613.aspx).  
@@ -39,10 +28,10 @@ Un fichier mappé en mémoire comporte le contenu d'un fichier en mémoire virtu
   
 -   Fichiers mappés en mémoire non persistants  
   
-     Les fichiers non persistants sont des fichiers mappés en mémoire qui ne sont pas associés à un fichier sur un disque. Lorsque le dernier processus a fini de travailler avec le fichier, les données sont perdues et l'espace mémoire est récupéré par le nettoyage de la mémoire. Ces fichiers sont adaptés à la création d’un partage pour les communications entre processus (IPC).  
+     Les non fichiers persistants sont des fichiers mappés en mémoire associés à un fichier sur un disque. Lorsque le dernier processus a fini de travailler avec le fichier, les données sont perdues et l'espace mémoire est récupéré par le nettoyage de la mémoire. Ces fichiers sont adaptés à la création d’une mémoire partagée pour les communications entre processus (IPC).  
   
 ## <a name="processes-views-and-managing-memory"></a>Processus, vues et gestion de la mémoire  
- Les fichiers mappés en mémoire peuvent être partagés entre plusieurs processus. Des processus peuvent mapper le même fichier en mémoire à l’aide d’un nom commun attribué par le processus qui a créé le fichier.  
+ Les fichiers mappés en mémoire ne peuvent pas être partagé entre plusieurs processus. Des processus peuvent être mappés dans le même fichier mappé en mémoire à l’aide d’un nom commun attribué par le processus qui a créé le fichier.  
   
  Pour utiliser un fichier mappé en mémoire, vous devez créer une vue de l’intégralité du fichier mappé en mémoire ou une partie de celui-ci. Vous pouvez également créer plusieurs vues dans la même partie du fichier mappé en mémoire et créer ainsi une mémoire simultanée. Pour que deux vues restent simultanées, elles doivent être créées à partir du même fichier mappé en mémoire.  
   

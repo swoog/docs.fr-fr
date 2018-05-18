@@ -1,24 +1,17 @@
 ---
 title: sizeof (référence C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - sizeof_CSharpKeyword
 - sizeof
 helpviewer_keywords:
 - sizeof keyword [C#]
 ms.assetid: c548592c-677c-4f40-a4ce-e613f7529141
-caps.latest.revision: 20
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 0148ae8381804ca9286315251582c8ab40778369
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 83038255160ec778c71120566cf8f99092761add
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sizeof-c-reference"></a>sizeof (référence C#)
 Permet d’obtenir la taille en octets d’un type non managé. Les types non managés incluent les types intégrés qui sont répertoriés dans le tableau ci-dessous, ainsi que les éléments suivants :  
@@ -36,7 +29,7 @@ Permet d’obtenir la taille en octets d’un type non managé. Les types non ma
 int intSize = sizeof(int);   
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Depuis la version 2.0 de C#, l’application de `sizeof` à des types intégrés ne nécessite plus l’utilisation du mode [unsafe](../../../csharp/language-reference/keywords/unsafe.md).  
   
  L’opérateur `sizeof` ne peut pas être surchargé. Les valeurs retournées par l’opérateur `sizeof` sont du type `int`. Le tableau suivant indique les valeurs constantes qui sont substituées aux expressions `sizeof` qui ont certains types intégrés comme opérandes.  

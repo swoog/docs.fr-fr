@@ -1,13 +1,6 @@
 ---
 title: .NET Framework Client Profile
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WPF [.NET Framework Client Profile]
 - WCF [.NET Framework Client Profile]
@@ -16,16 +9,13 @@ helpviewer_keywords:
 - profile [.NET Framework Client Profile]
 - .NET Framework Client Profile
 ms.assetid: f0219919-1f02-4588-8704-327a62fd91f1
-caps.latest.revision: "44"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1f05290486b107f325e61cfffad052311258eee3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0ac78e6a2952761632edb95bc3d73d75a7675711
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="net-framework-client-profile"></a>.NET Framework Client Profile
 .NET Client Profile est un sous-ensemble du .NET Framework fourni avec [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] et les versions antérieures, et optimisé pour les applications clientes. Le .NET Framework est une plateforme de développement pour Windows Phone et Microsoft Azure qui fournit un environnement managé d'exécution d'applications et la bibliothèque de classes .NET Framework. Le [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] et les versions antérieures fournissaient deux options de déploiement : le .NET Framework complet et Client Profile. Client Profile a permis d'accélérer le déploiement et de réduire les packages d'installation par rapport au .NET Framework complet.  

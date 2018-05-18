@@ -1,13 +1,6 @@
 ---
-title: "Mpgo.exe (Outil d'optimisation guidée par profil managé)"
-ms.custom: 
+title: Mpgo.exe (Outil d'optimisation guidée par profil managé)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Mpgo.exe
 - training scenarios, generating profiles with
@@ -15,16 +8,13 @@ helpviewer_keywords:
 - Ngen.exe
 - Ngen.exe, profilers and native images
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
-caps.latest.revision: "31"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 49d2154b1af4350c3145f2cb9be30505e0967a4e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 42e1fb080ac0af34c621cef3a991cad7bcf603ac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe (Outil d'optimisation guidée par profil managé)
 L’outil d’optimisation guidée par profil managé (Mpgo.exe) est un outil en ligne de commande qui utilise des scénarios d’utilisateurs finaux communs afin d’optimiser les assemblys d’images natives créés par le [générateur d’images natives (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md). Cet outil vous permet d’exécuter les scénarios de formation qui génèrent des données de profil. Le [générateur d’images natives (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) utilise ces données pour optimiser ses assemblys d’applications d’images natives générées. Un scénario de formation est une tentative d’exécution d’une utilisation prévue de votre application. Mpgo.exe est disponible dans Visual Studio Ultimate 2012 Ultimate et versions ultérieures. En commençant par [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)], vous pouvez également utiliser Mpgo.exe pour optimiser les applications [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  

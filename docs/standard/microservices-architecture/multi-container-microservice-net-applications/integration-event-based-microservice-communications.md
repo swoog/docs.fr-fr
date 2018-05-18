@@ -1,21 +1,14 @@
 ---
-title: "Implémentation de la communication basée sur les événements entre les microservices (événements d’intégration)"
-description: "Architecture des microservices .NET pour les applications .NET en conteneur | Implémentation de la communication basée sur les événements entre les microservices (événements d’intégration)"
-keywords: Docker, microservices, ASP.NET, conteneur
+title: Implémentation de la communication basée sur les événements entre les microservices (événements d’intégration)
+description: Architecture des microservices .NET pour les applications .NET en conteneur | Implémentation de la communication basée sur les événements entre les microservices (événements d’intégration)
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 50ab0be6b92304eee4bc46643c867ee2827fc805
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 5d7037f91cb338721f91d35567246ebbca018a3c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>Implémentation de la communication basée sur les événements entre les microservices (événements d’intégration)
 

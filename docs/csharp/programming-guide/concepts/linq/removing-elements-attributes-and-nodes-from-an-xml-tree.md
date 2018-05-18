@@ -1,25 +1,19 @@
 ---
-title: "Suppression d’éléments, d’attributs et de nœuds d’une arborescence XML (C#)"
+title: Suppression d’éléments, d’attributs et de nœuds d’une arborescence XML (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 07dd06d6-1117-4077-bf98-9120cf51176e
-caps.latest.revision: "4"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 1745b1ce84b33a67d54f5e752da2ecf9bbfdbc17
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 85c1adc06321abf90fe478abf5375882069f11ec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="removing-elements-attributes-and-nodes-from-an-xml-tree-c"></a>Suppression d’éléments, d’attributs et de nœuds d’une arborescence XML (C#)
 Vous pouvez modifier une arborescence XML en supprimant des éléments, des attributs et d’autres types de nœuds.  
   
  La suppression d'un seul élément ou attribut d'un document XML est simple. Toutefois, lors de la suppression de collections d'éléments ou d'attributs, vous devez tout d'abord matérialiser une collection dans une liste, puis supprimer les éléments ou attributs de la liste. La meilleure approche consiste à utiliser la méthode d'extension <xref:System.Xml.Linq.Extensions.Remove%2A>, qui effectuera cette tâche pour vous.  
   
- Cette opération est nécessaire car la plupart des collections que vous récupérez à partir d'une arborescence XML sont produites à l'aide de l'exécution différée. Si vous ne les matérialisez pas tout d’abord dans une liste, ou si vous n’utilisez pas les méthodes d’extension, vous risquez de rencontrer une certaine classe de bogues. Pour plus d’informations, consultez [Bogues liés à l’utilisation combinée de code déclaratif et de code impératif (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/mixed-declarative-code-imperative-code-bugs-linq-to-xml.md).  
+ Cette opération est nécessaire car la plupart des collections que vous récupérez à partir d’une arborescence XML sont produites à l’aide de l’exécution différée. Si vous ne les matérialisez pas tout d’abord dans une liste, ou si vous n’utilisez pas les méthodes d’extension, vous risquez de rencontrer une certaine classe de bogues. Pour plus d’informations, consultez [Bogues liés à l’utilisation combinée de code déclaratif et de code impératif (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/mixed-declarative-code-imperative-code-bugs-linq-to-xml.md).  
   
  Les méthodes suivantes suppriment des nœuds et des attributs d’une arborescence XML.  
   

@@ -1,23 +1,15 @@
 ---
 title: protocole PNRP
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 11940511-c124-4d91-ae31-d4ed6e81ee58
-caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: ba38c7e42126bb70161dcb72ffdd6965e8def044
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 01e0bd36b35319c90fc46d8f5f97161147852c7f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="peer-name-resolution-protocol"></a>protocole PNRP
 Dans les environnements pair à pair, les pairs utilisent des systèmes de résolution de noms spécifiques pour résoudre les emplacements réseau les uns des autres (adresses, protocoles et ports) à partir de noms et d’autres types d’identificateurs. Dans le passé, la résolution des noms de pairs était compliquée en raison de la nature transitoire de la connectivité, et d’autres défauts du système DNS.  

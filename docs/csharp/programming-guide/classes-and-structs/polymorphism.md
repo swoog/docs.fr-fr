@@ -1,26 +1,20 @@
 ---
 title: Polymorphisme (Guide de programmation C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-caps.latest.revision: "31"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 601c8cf626c846ca6c5d6bc2338e271e6b93544a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8bbf93d14a16b06441ba48b9d4e19cfd249e9146
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="polymorphism-c-programming-guide"></a>Polymorphisme (Guide de programmation C#)
 Le polymorphisme est souvent considéré comme le troisième pilier d'une programmation orientée objet, après l'encapsulation et l'héritage. Le polymorphisme est le mot grec qui signifie « plusieurs formes » et il prend deux aspects distincts :  
   
--   Au moment de l'exécution, les objets d'une classe dérivée peuvent être traités comme des objets d'une classe de base dans les paramètres de méthode et les collections ou les tableaux. Lorsque cela se passe, le type déclaré de l'objet n'est plus identique à son type au moment de l'exécution.  
+-   Au moment de l’exécution, les objets d’une classe dérivée peuvent être traités comme des objets d’une classe de base dans les paramètres de méthode et les collections ou les tableaux. Lorsque cela se passe, le type déclaré de l'objet n'est plus identique à son type au moment de l'exécution.  
   
 -   Les classes de base peuvent définir et implémenter des *méthodes* [virtuelles](../../../csharp/language-reference/keywords/virtual.md), et les classes dérivées peuvent les [substituer](../../../csharp/language-reference/keywords/override.md), ce qui signifie qu’elles fournissent leur propre définition et implémentation. Au moment de l'exécution, quand le code client appelle la méthode, le CLR recherche le type au moment de l'exécution et appelle cette substitution de la méthode virtuelle. C'est pourquoi, dans le code source vous pouvez appeler une méthode dans une classe de base, et provoquer l'exécution d'une version de la classe dérivée de la méthode.  
   
@@ -51,18 +45,18 @@ Le polymorphisme est souvent considéré comme le troisième pilier d'une progra
   
  [!code-csharp[csProgGuideInheritance#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_2.cs)]  
   
- Les champs ne peuvent pas être virtuels ; seuls les méthodes, propriétés, événements et indexeurs peuvent être virtuels. Quand une classe dérivée est substituée à un membre virtuel, ce membre est appelé lors de l'accès à une instance de cette classe en tant qu'instance de la classe de base. Le code suivant est fourni à titre d'exemple :  
+ Les champs ne peuvent pas être virtuels ; seuls les méthodes, propriétés, événements et indexeurs peuvent être virtuels. Quand une classe dérivée est substituée à un membre virtuel, ce membre est appelé lors de l'accès à une instance de cette classe en tant qu'instance de la classe de base. Le code suivant est fourni à titre d'exemple :  
   
  [!code-csharp[csProgGuideInheritance#21](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_3.cs)]  
   
  Les méthodes et propriétés virtuelles permettent aux classes dérivées d'étendre une classe de base sans avoir besoin d'utiliser l'implémentation de classe de base d'une méthode. Pour plus d’informations, consultez [Versioning avec les mots clés override et new](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md). Une interface fournit un autre moyen pour définir une méthode ou un ensemble de méthodes dont l'implémentation est confiée aux classes dérivées. Pour plus d’informations, consultez [Interfaces](../../../csharp/programming-guide/interfaces/index.md).  
   
 ### <a name="hiding-base-class-members-with-new-members"></a>Masquage des membres de classe de base par de nouveaux membres  
- Si vous voulez que votre membre dérivé ait le même nom qu’un membre d’une classe de base, mais que vous ne voulez pas qu’il participe à l’appel virtuel, vous pouvez utiliser le mot clé [new](../../../csharp/language-reference/keywords/new.md). Le mot clé `new` est placé avec le type de retour d'un membre de classe qui est remplacé. Le code suivant est fourni à titre d'exemple :  
+ Si vous voulez que votre membre dérivé ait le même nom qu’un membre d’une classe de base, mais que vous ne voulez pas qu’il participe à l’appel virtuel, vous pouvez utiliser le mot clé [new](../../../csharp/language-reference/keywords/new.md). Le mot clé `new` est placé avec le type de retour d'un membre de classe qui est remplacé. Le code suivant est fourni à titre d'exemple :  
   
  [!code-csharp[csProgGuideInheritance#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_4.cs)]  
   
- Les membres de classe de base masqués sont toujours accessibles à partir du code client en effectuant un cast de l'instance de la classe dérivée vers une instance de la classe de base. Par exemple :  
+ Les membres de classe de base masqués sont toujours accessibles à partir du code client en effectuant un cast de l'instance de la classe dérivée vers une instance de la classe de base. Exemple :  
   
  [!code-csharp[csProgGuideInheritance#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_5.cs)]  
   

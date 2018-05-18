@@ -1,12 +1,6 @@
 ---
-title: "Comment : envoyer des données à l’aide de la classe WebRequest"
-ms.custom: 
+title: 'Comment : envoyer des données à l’aide de la classe WebRequest'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -14,16 +8,14 @@ helpviewer_keywords:
 - WebRequest class, sending data to a host
 - Sending data to a host, using WebRequest class
 ms.assetid: 66686878-38ac-4aa6-bf42-ffb568ffc459
-caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: b4cc524b3b3c1dbe42f3fe3926ed44c1e917e871
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: a40ab63e0fbac4227d74999c8c83f02e3c9e4b4d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-send-data-using-the-webrequest-class"></a>Comment : envoyer des données à l’aide de la classe WebRequest
 La procédure suivante décrit les étapes nécessaires pour envoyer des données à un serveur. Cette procédure est couramment utilisée pour publier des données sur une page web.  

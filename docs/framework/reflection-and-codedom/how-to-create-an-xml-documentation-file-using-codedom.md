@@ -1,13 +1,6 @@
 ---
-title: "Guide pratique pour créer un fichier de documentation XML à l’aide de CodeDOM"
-ms.custom: 
+title: Guide pratique pour créer un fichier de documentation XML à l’aide de CodeDOM
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,13 @@ helpviewer_keywords:
 - XML documentation, creating using CodeDOM
 - Code Document Object Model, generating XML documentation
 ms.assetid: e3b80484-36b9-41dd-9d21-a2f9a36381dc
-caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 88792aeef4e1a18807267334b6c9ef722cb48d24
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 81d09188ade29b0cac8985da218494f5373980cf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-an-xml-documentation-file-using-codedom"></a>Guide pratique pour créer un fichier de documentation XML à l’aide de CodeDOM
 Vous pouvez utiliser CodeDOM pour créer du code qui génère de la documentation XML. Le processus implique la création du graphique CodeDOM qui contient les commentaires de documentation XML, la génération du code et la compilation du code généré avec l’option du compilateur qui crée la sortie de documentation XML.  

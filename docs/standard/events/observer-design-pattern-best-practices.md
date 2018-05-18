@@ -1,29 +1,18 @@
 ---
-title: "Meilleures pratiques du modèle de design observateur"
-ms.custom: 
+title: Meilleures pratiques du modèle de design observateur
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - observer design pattern [.NET Framework], best practices
 - best practices [.NET Framework], observer design pattern
 ms.assetid: c834760f-ddd4-417f-abb7-a059679d5b8c
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: dc42ccd425b52719b2b69525d2bbbe4607a19982
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 030b62688ba8985a2659769fe20b6ae527471df5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="observer-design-pattern-best-practices"></a>Meilleures pratiques du modèle de design observateur
 Dans le .NET Framework, le modèle de conception observateur est implémenté comme un ensemble d’interfaces. L'interface <xref:System.IObservable%601?displayProperty=nameWithType> représente le fournisseur de données, qui est également chargé de fournir une implémentation <xref:System.IDisposable> permettant aux observateurs d'annuler leur abonnement aux notifications. L'interface <xref:System.IObserver%601?displayProperty=nameWithType> représente l'observateur. Cette rubrique décrit les meilleures pratiques que les développeurs doivent suivre quand ils implémentent le modèle de conception observateur à l'aide de ces interfaces.  

@@ -1,9 +1,6 @@
 ---
-title: "join, clause (référence C#)"
+title: join, clause (référence C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 f1_keywords:
 - join
 - join_CSharpKeyword
@@ -11,14 +8,11 @@ helpviewer_keywords:
 - join clause [C#]
 - join keyword [C#]
 ms.assetid: 76e9df84-092c-41a6-9537-c3f1cbd7f0fb
-caps.latest.revision: "29"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 17c8f7f5ff6d1266421cdb87ae562028c61ae97f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a868c52cf753b1e4285586ec41c1993f519299d7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="join-clause-c-reference"></a>join, clause (référence C#)
 La clause `join` est utile pour associer des éléments de différentes séquences sources qui n’ont pas de relation directe dans le modèle objet. Le seul impératif est que les éléments de chaque source partagent une valeur dont l’égalité peut être comparée. Par exemple, un distributeur de produits alimentaires peut avoir une liste de fournisseurs d’un certain produit et une liste d’acheteurs. Une clause `join` peut être utilisée par exemple pour créer une liste des fournisseurs et des acheteurs de ce produit qui se trouvent tous dans la même région spécifiée.  
@@ -81,7 +75,7 @@ La clause `join` est utile pour associer des éléments de différentes séquenc
   
  [!code-csharp[cscsrefQueryKeywords#23](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_5.cs)]  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Une clause `join` qui n’est pas suivie de `into` se traduit par l’appel de la méthode <xref:System.Linq.Enumerable.Join%2A>. Une clause `join` qui n’est pas suivie de `into` se traduit par l’appel de la méthode <xref:System.Linq.Enumerable.GroupJoin%2A>.  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -1,14 +1,6 @@
 ---
 title: Empaquetage et déploiement de ressources dans des applications de bureau
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-bcl
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -34,17 +26,13 @@ helpviewer_keywords:
 - localizing resources
 - neutral cultures
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
-caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 479ab530ddf02fa3701a7f6f3699258d0eab727e
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 0a6e6219d6449fedabe6e7cb0b349efb6fc74ee6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="packaging-and-deploying-resources-in-desktop-apps"></a>Empaquetage et déploiement de ressources dans des applications de bureau
 Les applications s’appuient sur le gestionnaire des ressources du .NET Framework, représenté par la classe <xref:System.Resources.ResourceManager>, pour récupérer des ressources localisées. Le gestionnaire des ressources suppose qu’un modèle Hub and Spoke est utilisé pour empaqueter et déployer des ressources. Le hub est l’assembly principal qui contient le code exécutable non localisable et les ressources pour une culture unique, appelée culture neutre ou par défaut. La culture par défaut est la culture de secours de l’application ; il s’agit de la culture dont les ressources sont utilisées si aucune ressource localisée ne peut être trouvée. Chaque spoke se connecte à un assembly satellite qui contient les ressources d’une culture unique, mais ne contient pas de code.  

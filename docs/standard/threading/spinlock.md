@@ -1,28 +1,17 @@
 ---
 title: SpinLock
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - synchronization primitives, SpinLock
 ms.assetid: f9af93bb-7a0d-4ba5-afe8-74f48b6b6958
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: e83505a36252457d286bc7fbc6bbe442732229a4
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f7d1d95030d2bc9f9288ae134471c150a37291b9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spinlock"></a>SpinLock
 La structure <xref:System.Threading.SpinLock> est une primitive de synchronisation de bas niveau à exclusion mutuelle qui tourne en attendant d’acquérir un verrou. Sur les ordinateurs multicœurs, lorsque les temps d’attente sont supposés être courts et que la contention est minimale, <xref:System.Threading.SpinLock> peut être plus performant que d’autres types de verrous. Toutefois, nous vous recommandons d’utiliser <xref:System.Threading.SpinLock> uniquement lorsque vous déterminez par profilage que la <xref:System.Threading.Monitor?displayProperty=nameWithType> méthode ou <xref:System.Threading.Interlocked> méthodes ralentissent considérablement les performances de votre programme.  

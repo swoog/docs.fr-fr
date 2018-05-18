@@ -1,29 +1,22 @@
 ---
 title: '&lt;&lt;, opérateur (Informations de référence sur C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - <<_CSharpKeyword
 helpviewer_keywords:
 - left shift operator (<<) [C#]
 - << operator [C#]
 ms.assetid: a654eb56-1ff7-4bf3-9064-b631be0cdccc
-caps.latest.revision: 18
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 400dbc799c68bb9e1bc00695954115f2eb6af7c6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bacb444c08b1f9d6e18278337015d8a427fdbe46
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltlt-operator-c-reference"></a>&lt;&lt;, opérateur (Informations de référence sur C#)
 L’opérateur de décalage vers la gauche (`<<`) décale son premier opérande vers la gauche du nombre de bits spécifié par son deuxième opérande. Le deuxième opérande doit être de type [int](../../../csharp/language-reference/keywords/int.md) ou d’un type pour lequel une conversion numérique implicite vers `int` est prédéfinie.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Si le premier opérande est de type [int](../../../csharp/language-reference/keywords/int.md) ou [uint](../../../csharp/language-reference/keywords/uint.md) (quantité de 32 bits), la valeur du décalage est donnée par les cinq bits de poids faible du second opérande. Autrement dit, la valeur réelle du décalage est comprise entre 0 et 31 bits.  
   
  Si le premier opérande est de type [long](../../../csharp/language-reference/keywords/long.md) ou [ulong](../../../csharp/language-reference/keywords/ulong.md) (quantité de 64 bits), la valeur du décalage est donnée par les six bits de poids faible du second opérande. Autrement dit, la valeur réelle du décalage est comprise entre 0 et 63 bits.  

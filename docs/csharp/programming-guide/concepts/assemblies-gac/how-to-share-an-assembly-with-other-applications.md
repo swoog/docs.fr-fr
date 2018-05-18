@@ -1,21 +1,12 @@
 ---
-title: "Guide pratique pour partager un assembly avec d’autres applications (C#)"
-ms.custom: 
+title: Guide pratique pour partager un assembly avec d’autres applications (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: c30e972b-1693-4e05-b115-c31831fdf9f2
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 2317b608c57b4883d1e892e9419cd735fefbb3d9
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: beadd6adb176c3fd4e6dde94d95194aea790a2fe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-share-an-assembly-with-other-applications-c"></a>Guide pratique pour partager un assembly avec d’autres applications (C#)
 Les assemblys peuvent être privés ou partagés. Par défaut, la plupart des programmes simples se composent d’un assembly privé, car ils ne sont pas destinés à être utilisés par d’autres applications.  

@@ -1,21 +1,12 @@
 ---
-title: "Guide pratique pour rechercher des phrases qui contiennent un groupe de mots spécifié (LINQ) (C#)"
-ms.custom: 
+title: Guide pratique pour rechercher des phrases qui contiennent un groupe de mots spécifié (LINQ) (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 0724b429-4b87-4d26-a7b1-409358f3fc20
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: befc93a21388a87fdfd2416349b1310e82378f18
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 736078ccf97ba3e61748932c3e48fb436b2c5564
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-c"></a>Guide pratique pour rechercher des phrases qui contiennent un groupe de mots spécifié (LINQ) (C#)
 Cet exemple montre comment rechercher dans un fichier texte les phrases qui contiennent des correspondances pour chaque ensemble de mots spécifié. Même si le tableau des termes de recherche est codé en dur dans cet exemple, il pourrait aussi être rempli dynamiquement lors de l’exécution. Dans cet exemple, la requête retourne les phrases qui contiennent les mots « Historically », « data » et « integrated ».  

@@ -1,27 +1,17 @@
 ---
 title: Noms d'assemblys
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - names [.NET Framework], assemblies
 - assemblies [.NET Framework], names
 ms.assetid: 8f8c2c90-f15d-400e-87e7-a757e4f04d0e
-caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: da2137a9ab979d9e610d033324a87939a9777a97
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2e1ab9609fe6b2c1e232f188db8306fc05828285
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="assembly-names"></a>Noms d'assemblys
 Le nom d’un assembly est stocké dans des métadonnées, et il a un impact significatif sur l’étendue de l’assembly et sur son utilisation dans une application. Un assembly avec nom fort a un nom qualifié complet qui inclut le nom, la culture, la clé publique et le numéro de version de l’assembly. Ceci est fréquemment appelé le nom d’affichage et, pour les assemblys chargés, il peut être obtenu avec la propriété <xref:System.Reflection.Assembly.FullName%2A>.  

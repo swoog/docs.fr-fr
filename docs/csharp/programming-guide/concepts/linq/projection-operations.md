@@ -1,21 +1,12 @@
 ---
-title: "Opérations de projection (C#)"
-ms.custom: 
+title: Opérations de projection (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 98df573a-aad9-4b8c-9a71-844be2c4fb41
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 4a05a4f228e64405ba24d967193d9e7a487ae473
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a044982c21246fd4e8c1cbdbb9801ae7b29d05c6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="projection-operations-c"></a>Opérations de projection (C#)
 La projection désigne l’opération de transformation d’un objet en une nouvelle forme qui se compose souvent uniquement des propriétés à utiliser ensuite. À l'aide de la projection, vous pouvez créer un nouveau type qui est généré à partir de chaque objet. Vous pouvez projeter une propriété et effectuer une fonction mathématique sur celle-ci. Vous pouvez également projeter l’objet d’origine sans le modifier.  
@@ -26,12 +17,12 @@ La projection désigne l’opération de transformation d’un objet en une nouv
   
 |Nom de la méthode|Description|Syntaxe d'expression de requête C#|Informations complémentaires|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|Select|Projette les valeurs qui sont basées sur une fonction de transformation.|`select`|<xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType>|  
+|Sélectionner|Projette les valeurs qui sont basées sur une fonction de transformation.|`select`|<xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType>|  
 |SelectMany|Projette les séquences de valeurs qui sont basées sur une fonction de transformation, puis les aplatit en une seule séquence.|Utilisation de plusieurs clauses `from`|<xref:System.Linq.Enumerable.SelectMany%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SelectMany%2A?displayProperty=nameWithType>|  
   
 ## <a name="query-expression-syntax-examples"></a>Exemples de syntaxe d'expression de requête  
   
-### <a name="select"></a>Select  
+### <a name="select"></a>Sélectionner  
  L’exemple suivant utilise la clause `select` pour projeter la première lettre de chaque chaîne dans une liste de chaînes.  
   
 ```csharp  

@@ -1,21 +1,12 @@
 ---
-title: "Recherche du style de paragraphe par défaut (C#)"
-ms.custom: 
+title: Recherche du style de paragraphe par défaut (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: be102177-8ab0-444a-b671-7023e555ffdb
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: e2664620127e6e3ed9f723a7c23012905be3781b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e29ca281e1867a72a76a28765912c39675ca0f27
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="finding-the-default-paragraph-style-c"></a>Recherche du style de paragraphe par défaut (C#)
 La première tâche du didacticiel Manipulation d’informations dans un document WordprocessingML consiste à rechercher le style par défaut des paragraphes dans le document.  

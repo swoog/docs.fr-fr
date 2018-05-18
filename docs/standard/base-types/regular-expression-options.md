@@ -1,13 +1,7 @@
 ---
-title: "Options des expressions régulières"
-ms.custom: 
+title: Options des expressions régulières
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,18 +12,13 @@ helpviewer_keywords:
 - inline option constructs
 - options parameter
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: cc32a98930c4c1243f53fc9c5d2a10f339b4de11
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: f3c229b0fc463863b7113c7ba73890b84e86553b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="regular-expression-options"></a>Options des expressions régulières
 <a name="Top"></a> Par défaut, la comparaison d’une chaîne d’entrée avec des caractères littéraux dans un modèle d’expression régulière respecte la casse, l’espace blanc dans un modèle d’expression régulière est interprété comme un espace blanc littéral et les groupes de capture dans une expression régulière sont nommés de manière implicite aussi bien qu’explicite. Vous pouvez modifier ces aspects, ainsi que d'autres, du comportement par défaut des expressions régulières en spécifiant des options d'expression régulière. Ces options, qui sont répertoriées dans le tableau suivant, peuvent être incluses inline dans le cadre du modèle d'expression régulière ou fournies à un constructeur de classe <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> ou à une méthode de mise en correspondance de modèle statique en tant que valeur d'énumération <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>.  
@@ -285,7 +274,7 @@ ms.lasthandoff: 03/15/2018
   
 -   L'espace blanc dans une classe de caractères est toujours interprété de façon littérale. Par exemple, le modèle d'expression régulière `[ .,;:]` met en correspondance n'importe quel espace blanc, point, virgule, point-virgule ou symbole deux-points unique.  
   
--   L’espace blanc n’est pas autorisé dans un quantificateur entre accolades, comme `{`*n*`}`, `{`*n*`,}` et `{`*n*`,`*m*`}`. Par exemple, le modèle d'expression régulière `\d{1. 3}` ne peut pas mettre en correspondance les séquences d'un à trois chiffres, car il contient un espace blanc.  
+-   L’espace blanc n’est pas autorisé dans un quantificateur entre accolades, comme `{`*n*`}`, `{`*n*`,}`, and `{`*n*`,`*m*`}`. Par exemple, le modèle d'expression régulière `\d{1. 3}` ne peut pas mettre en correspondance les séquences d'un à trois chiffres, car il contient un espace blanc.  
   
 -   L'espace blanc n'est pas autorisé dans une séquence de caractères qui introduit un élément de langage. Exemple :  
   

@@ -1,13 +1,7 @@
 ---
-title: "Chaînes de format TimeSpan personnalisées"
-ms.custom: 
+title: Chaînes de format TimeSpan personnalisées
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,18 +13,13 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - custom TimeSpan format strings
 ms.assetid: a63ebf55-7269-416b-b4f5-286f6c03bf0e
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: f86aeab5a024c463dbfbf0a0d0ff198cef80f7ac
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 354b9fe1171e8e41702db001ab3c0e5daa65431e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-timespan-format-strings"></a>Chaînes de format TimeSpan personnalisées
 Une chaîne de format <xref:System.TimeSpan> définit la représentation sous forme de chaîne d’une valeur <xref:System.TimeSpan> qui résulte d’une opération de mise en forme. Une chaîne de format personnalisée se compose d’un ou de plusieurs spécificateurs de format <xref:System.TimeSpan> personnalisé et d’un nombre quelconque de caractères littéraux. Toute chaîne autre qu’une [chaîne de format TimeSpan standard](../../../docs/standard/base-types/standard-timespan-format-strings.md) est interprétée comme une chaîne de format <xref:System.TimeSpan> personnalisée.  
@@ -77,7 +66,7 @@ Une chaîne de format <xref:System.TimeSpan> définit la représentation sous fo
 |"FFFFFF"|Millionièmes de seconde dans un intervalle de temps. Tous les zéros de fin fractionnaires ne sont pas affichés.<br /><br /> Informations supplémentaires : [Spécificateur de format personnalisé "FFFFFF"](#F6_Specifier).|`TimeSpan.Parse("00:00:06.3291791")`:<br /><br /> `FFFFFF`: 329179<br /><br /> `TimeSpan.Parse("0:0:3.1000009")`:<br /><br /> `ss\.FFFFFF`: 03.1|  
 |"FFFFFFF"|Dix millionièmes de seconde dans un intervalle de temps. Tous les zéros de fin fractionnaires ou sept zéros ne sont pas affichés.<br /><br /> Informations supplémentaires : [Spécificateur de format personnalisé "FFFFFFF"](#F7_Specifier).|`TimeSpan.Parse("00:00:06.3291791")`:<br /><br /> `FFFFFF`: 3291791<br /><br /> `TimeSpan.Parse("0:0:3.1900000")`:<br /><br /> `ss\.FFFFFF`: 03.19|  
 |*'string*'|Délimiteur de chaîne littérale.<br /><br /> Informations supplémentaires : [Autres caractères](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh':'mm':'ss` --> "14:32:17"|  
-|\|Caractère d'échappement.<br /><br /> Informations supplémentaires : [Autres caractères](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|  
+|Caractère d’échappement \|.<br /><br /> Informations supplémentaires : [Autres caractères](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|  
 |N'importe quel autre caractère|Tout autre caractère sans séquence d’échappement est interprété comme un spécificateur de format personnalisé.<br /><br /> Informations supplémentaires : [Autres caractères](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|  
   
 <a name="dSpecifier"></a>   

@@ -1,30 +1,19 @@
 ---
 title: Bibliothèque parallèle de tâches
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - .NET, concurrency in
 - .NET, parallel programming in
 - Parallel Programming
 ms.assetid: b8f99f43-9104-45fd-9bff-385a20488a23
-caps.latest.revision: 37
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 8f63237e139e4be1d8cbb13e1534c894626fd72d
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: f1c261928981399722373d826bcc60726ec3f8ce
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="task-parallel-library-tpl"></a>Bibliothèque parallèle de tâches
 La bibliothèque parallèle de tâches est un ensemble de types publics et d'API dans les espaces de noms <xref:System.Threading?displayProperty=nameWithType> et <xref:System.Threading.Tasks?displayProperty=nameWithType>. L'objectif de la bibliothèque parallèle de tâches est d'accroître la productivité des développeurs en simplifiant le processus d'ajout du parallélisme et de l'accès concurrentiel aux applications. La bibliothèque parallèle de tâches met à l'échelle dynamiquement le degré d'accès concurrentiel pour utiliser plus efficacement tous les processeurs disponibles. De plus, la bibliothèque parallèle de tâches gère le partitionnement du travail, la planification de threads sur le <xref:System.Threading.ThreadPool>, la prise en charge de l'annulation, la gestion d'état et d'autres détails de bas niveau. L'utilisation de la bibliothèque parallèle de tâches vous permet de maximiser les performances de votre code tout en vous concentrant sur le travail que votre programme doit accomplir.  

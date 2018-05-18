@@ -1,21 +1,12 @@
 ---
-title: "Guide pratique pour modifier des arborescences d’expressions (C#)"
-ms.custom: 
+title: Guide pratique pour modifier des arborescences d’expressions (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 9b0cd8c2-457e-4833-9e36-31e79545f442
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 4db0abec0df2bc4a17dca0ed1ee88b8a38b8ca8a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3a43e2365475644d5081ced7bfec11e1a2b5121e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-modify-expression-trees-c"></a>Guide pratique pour modifier des arborescences d’expressions (C#)
 Cette rubrique montre comment modifier une arborescence d’expressions. Les arborescences d’expressions sont immuables, ce qui signifie qu’elles ne peuvent pas être modifiées directement. Pour changer une arborescence d’expressions, vous devez créer une copie d’une arborescence d’expressions existante et, quand vous créez la copie, apporter les modifications nécessaires. Vous pouvez utiliser la classe <xref:System.Linq.Expressions.ExpressionVisitor> pour parcourir une arborescence d’expressions existante et copier chaque nœud visité.  
@@ -79,5 +70,5 @@ Cette rubrique montre comment modifier une arborescence d’expressions. Les arb
 6.  Compilez et exécutez l'application.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Comment : exécuter des arborescences d’Expression (c#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)  
+ [Guide pratique pour exécuter des arborescences d’expressions (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)  
  [Arborescences d’expressions (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)

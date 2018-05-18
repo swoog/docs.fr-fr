@@ -1,27 +1,17 @@
 ---
-title: "Programmation à l'aide d'assemblys"
-ms.custom: 
+title: Programmation à l'aide d'assemblys
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - assemblies [.NET Framework], programming
 - programming assemblies
 ms.assetid: 25918b15-701d-42c7-95fc-c290d08648d6
-caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 46cc7d1be867ff94ca25d0d6ffaaf46a6dc9514b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f6a20a2e678c10157fed7da6f5de9f3ffee0c9ad
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="programming-with-assemblies"></a>Programmation à l'aide d'assemblys
 Les assemblys sont les éléments de base du .NET Framework. Ils forment l’unité fondamentale de déploiement, de gestion de version, de réutilisation, de portée d’activation et des autorisations de sécurité. Un assembly fournit au Common Language Runtime les informations dont il a besoin pour connaître les implémentations de type. Il s’agit d’une collection de types et de ressources conçus pour opérer ensemble et former une unité logique de fonctionnalité. Pour le runtime, un type n'existe pas en dehors du contexte d'un assembly.  

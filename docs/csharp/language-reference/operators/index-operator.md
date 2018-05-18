@@ -1,10 +1,6 @@
 ---
 title: '[], opérateur (référence C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - '[]_CSharpKeyword'
 helpviewer_keywords:
@@ -13,19 +9,16 @@ helpviewer_keywords:
 - '[] operator [C#]'
 - indexing operator [C#]
 ms.assetid: 5c16bb45-88f7-45ff-b42c-1af1972b042c
-caps.latest.revision: 20
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 03664f5604bb7d7dce9e8ae2ff0ec045c6a203b1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 65908bb3bcd8912ef81fc094e5958ae8dc4ae1f1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-operator-c-reference"></a>[], opérateur (référence C#)
 Les crochets (`[]`) sont utilisés pour les tableaux, les indexeurs et les attributs. Ils peuvent également être utilisés avec les pointeurs.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Un type tableau est un type suivi de `[]` :  
   
  [!code-csharp[csRefOperators#43](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_1.cs)]  

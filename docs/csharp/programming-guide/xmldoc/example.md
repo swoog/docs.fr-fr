@@ -1,9 +1,6 @@
 ---
-title: "&lt;example&gt; (Guide de programmation C#)"
+title: '&lt;example&gt; (Guide de programmation C#)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 f1_keywords:
 - <example>
 - example
@@ -11,14 +8,11 @@ helpviewer_keywords:
 - <example> C# XML tag
 - example C# XML tag
 ms.assetid: 32d6e73b-2554-4abb-83ee-a1e321334fd2
-caps.latest.revision: "13"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: c1e08789b8ea7afaa549229968bf53758ce24be3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: eb78d39633529ab1272b499e0a90343f27dd6faf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltexamplegt-c-programming-guide"></a>&lt;example&gt; (Guide de programmation C#)
 ## <a name="syntax"></a>Syntaxe  
@@ -31,7 +25,7 @@ ms.lasthandoff: 11/21/2017
  `description`  
  Description de l’exemple de code.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La balise \<example> vous permet de spécifier un exemple d’utilisation d’une méthode ou de tout autre membre de bibliothèque. Cela implique généralement l’utilisation de la balise [\<code>](../../../csharp/programming-guide/xmldoc/code.md).  
   
  Compilez avec [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) pour placer les commentaires de documentation dans un fichier en vue de les traiter.  

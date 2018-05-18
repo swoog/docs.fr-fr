@@ -1,19 +1,13 @@
 ---
 title: Histoire du langage C# | Guide C#
 description: À quoi ressemblait le langage dans ses versions antérieures et comment a-t-il évolué depuis ?
-keywords: C#, .NET, .NET Core, Nouveautés, Histoire du langage C#
 author: erikdietrich
-ms.author: wiwagn
 ms.date: 09/20/2017
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
-ms.openlocfilehash: 0a24e8cf22bb8350777879a3adfd2757b89cd305
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 1c7b91a3a5c77059ca8d7acef95252b4a3557b28
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="the-history-of-c"></a>Histoire du langage C# #
 

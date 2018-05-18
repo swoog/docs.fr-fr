@@ -1,21 +1,15 @@
 ---
-title: "Délégués génériques (guide de programmation C#)"
+title: Délégués génériques (guide de programmation C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - generics [C#], delegates
 - delegates [C#], generic
 ms.assetid: bdea509c-44c1-4309-aaa9-15c7aee009df
-caps.latest.revision: "16"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 1377723f18d6dd0e984538b530acbc7aa8d52feb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a9f06dcf608a83b53e894310f20810182cf6daa4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="generic-delegates-c-programming-guide"></a>Délégués génériques (guide de programmation C#)
 Un [délégué](../../../csharp/language-reference/keywords/delegate.md) peut définir ses propres paramètres de type. Le code qui référence le délégué générique peut spécifier l’argument de type pour créer un type construit fermé, comme lors de l’instanciation d’une classe générique ou d’un appel d’une méthode générique, ainsi que l’illustre l’exemple ci-dessous :  

@@ -1,9 +1,6 @@
 ---
-title: "group, clause (Référence C#)"
+title: group, clause (Référence C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 f1_keywords:
 - group
 - group_CSharpKeyword
@@ -11,14 +8,11 @@ helpviewer_keywords:
 - group keyword [C#]
 - group clause [C#]
 ms.assetid: c817242e-b12c-4baa-a57e-73ee138f34d1
-caps.latest.revision: "24"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: a2f67b2c90e1cced92d6fc7d47768b58bf155360
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2674986013afccf0a61267e49ca186d2ccb380e5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="group-clause-c-reference"></a>group, clause (Référence C#)
 La clause `group` retourne une séquence d’objets <xref:System.Linq.IGrouping%602> qui contient zéro, un ou plusieurs éléments qui correspondent à la valeur de clé du groupe. Par exemple, vous pouvez regrouper une séquence de chaînes en fonction de la première lettre de chaque chaîne. Dans ce cas, la première lettre est la clé, elle a le type [char](../../../csharp/language-reference/keywords/char.md) et elle est stockée dans la propriété `Key` de chaque objet <xref:System.Linq.IGrouping%602>. Le compilateur déduit le type de la clé.  
@@ -77,7 +71,7 @@ group person by new {name = person.surname, city = person.city};
   
  [!code-csharp[cscsrefQueryKeywords#17](../../../csharp/language-reference/keywords/codesnippet/CSharp/group-clause_8.cs)]  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Lors de la compilation, les clauses `group` sont traduites en appels à la méthode <xref:System.Linq.Enumerable.GroupBy%2A>.  
   
 ## <a name="see-also"></a>Voir aussi  

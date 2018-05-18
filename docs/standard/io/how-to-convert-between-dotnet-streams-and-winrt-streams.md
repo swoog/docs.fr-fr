@@ -1,29 +1,18 @@
 ---
 title: 'Comment : effectuer une conversion entre les flux .NET Framework et les flux Windows Runtime'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 23a763ea-8348-4244-9f8c-a4280b870b47
-caps.latest.revision: 15
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 25df0b363e5c9b44ae51d14ef0c2286cbb80ced8
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: f67f88cd7f690e56664fa45878d1c9ac1f8a6b6b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-convert-between-net-framework-streams-and-windows-runtime-streams"></a>Comment : effectuer une conversion entre les flux .NET Framework et les flux Windows Runtime
 Le .Net Framework pour les applications Windows Store est un sous-ensemble du .NET Framework complet. En raison de la sécurité et d'autres spécifications des applications Windows Store, vous ne pouvez pas utiliser l'ensemble d'API .NET Framework pour ouvrir et lire des fichiers. Pour plus d’informations, consultez [Vue d’ensemble de .NET pour les applications du Windows Store](http://msdn.microsoft.com/library/windows/apps/br230302.aspx). Toutefois, vous pouvez utiliser des API .NET Framework pour les autres opérations de manipulation des flux. Pour manipuler ces flux, il peut s’avérer nécessaire d’effectuer une conversion entre un type de flux .NET Framework tel que <xref:System.IO.MemoryStream> ou <xref:System.IO.FileStream>, et un flux Windows Runtime tel que [IInputStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.iinputstream.aspx), [IOutputStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ioutputstream.aspx)ou [IRandomAccessStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.irandomaccessstream.aspx).  

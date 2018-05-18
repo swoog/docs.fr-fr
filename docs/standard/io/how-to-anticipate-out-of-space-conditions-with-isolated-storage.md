@@ -1,13 +1,7 @@
 ---
 title: "Comment : anticiper des conditions d'espace insuffisant avec le stockage isolé"
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -28,18 +22,13 @@ helpviewer_keywords:
 - isolated storage, out of space conditions
 - data storage using isolated storage, out of space conditions
 ms.assetid: e35d4535-3732-421e-b1a3-37412e036145
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: e04b4b85b9a14e842c94226017fcd903ad1cbb40
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 9b99803970b205e3dbbb1d78c9bdaf0fefa73a04
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-anticipate-out-of-space-conditions-with-isolated-storage"></a>Comment : anticiper des conditions d'espace insuffisant avec le stockage isolé
 Le code qui utilise le stockage isolé est limité par un [quota](../../../docs/standard/io/isolated-storage.md#quotas) qui spécifie la taille maximale du compartiment de données dans lequel des fichiers et répertoires de stockage isolé existent. Le quota est défini par la stratégie de sécurité et peut être configuré par les administrateurs. Si la taille maximale autorisée est dépassée lorsque vous tenez d’écrire des données, une exception <xref:System.IO.IsolatedStorage.IsolatedStorageException> est levée et l’opération échoue. Cela permet d’éviter des attaques malveillantes par déni de service, qui pourraient amener l’application à refuser des requêtes parce que le stockage des données est rempli.  

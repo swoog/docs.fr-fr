@@ -1,31 +1,20 @@
 ---
-title: "Comment : écrire une boucle Parallel.For avec des variables locales de thread"
-ms.custom: 
+title: 'Comment : écrire une boucle Parallel.For avec des variables locales de thread'
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - parallel for loops, how to use local state
 ms.assetid: 68384064-7ee7-41e2-90e3-71f00bde01bb
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 004998a8891d92e2d1f805b3353fbe93864dcf1d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: a70b8e3d1f56eafc04b97a19a1582d9c664e587d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>Comment : écrire une boucle Parallel.For avec des variables locales de thread
 Cet exemple montre comment utiliser des variables de thread local pour stocker et récupérer l'état de chaque tâche créée par une boucle <xref:System.Threading.Tasks.Parallel.For%2A>. En utilisant des données de thread local, vous pouvez éviter la surcharge liée à la synchronisation d'un grand nombre d'accès à un état partagé. Au lieu d'écrire dans une ressource partagée à chaque itération, vous calculez et stockez la valeur jusqu'à ce que toutes les itérations de la tâche soient terminées. Vous pouvez ensuite écrire une fois le résultat final dans la ressource partagée ou le transmettre à une autre méthode.  

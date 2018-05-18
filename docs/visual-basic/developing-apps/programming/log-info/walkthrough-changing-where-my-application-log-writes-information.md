@@ -1,29 +1,20 @@
 ---
-title: "Modification de l’emplacement des informations My.Application.Log (Visual Basic)"
-ms.custom: 
+title: Modification de l’emplacement des informations My.Application.Log (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - My.Application.Log object, walkthroughs
 - event logs, changing output location
 ms.assetid: ecc74f95-743c-450d-93f6-09a30db0fe4a
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c4cd2e675bf1be4f065ee116795a95dae64d13d9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ab46f192f2e9549d0568737236742a366ce7b3a0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-changing-where-myapplicationlog-writes-information-visual-basic"></a>Procédure pas à pas : modification de l'emplacement des informations My.Application.Log (Visual Basic)
 Vous pouvez utiliser les objets `My.Application.Log` et `My.Log` pour enregistrer des informations sur les événements qui se produisent dans votre application. Cette procédure pas à pas montre comment remplacer les paramètres par défaut et faire en sorte que l’objet `Log` écrive dans d’autres écouteurs de journalisation.  
   
-## <a name="prerequisites"></a>Conditions préalables  
+## <a name="prerequisites"></a>Prérequis  
  L’objet `Log` peut écrire des informations dans plusieurs écouteurs de journalisation. Vous devez déterminer la configuration actuelle des écouteurs de journalisation avant de modifier les configurations. Pour plus d’informations, consultez [Procédure pas à pas : détermination de l’emplacement des informations My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).  
   
  Vous pouvez passer en revue [Guide pratique pour écrire des informations sur les événements dans un fichier texte](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md) ou [Guide pratique pour écrire dans le journal des événements d’une application](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md).  
@@ -94,7 +85,7 @@ Vous pouvez utiliser les objets `My.Application.Log` et `My.Log` pour enregistre
          initializeData="true" />  
     ```  
   
-7.  Le contenu du fichier app.config doit être similaire au code XML suivant :  
+7.  Le contenu du fichier app.config doit être similaire au code XML suivant :  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -159,7 +150,7 @@ Vous pouvez utiliser les objets `My.Application.Log` et `My.Log` pour enregistre
   
 2.  L’attribut `type` donne le nom du type d’écouteur. Ce type doit être hérité de la classe <xref:System.Diagnostics.TraceListener> . Utilisez le nom de type avec un nom fort pour être sûr que le type correct est utilisé. Pour plus d’informations, consultez la section « Pour référencer un type avec un nom fort » ci-dessous.  
   
-     Voici quelques-uns des types que vous pouvez utiliser :  
+     Voici quelques-uns des types que vous pouvez utiliser :  
   
     -   Un écouteur <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType>, qui écrit dans un fichier journal.  
   

@@ -1,13 +1,7 @@
 ---
-title: "Nettoyage de ressources non managées"
-ms.custom: 
+title: Nettoyage de ressources non managées
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Close method
 - Dispose method
@@ -18,18 +12,13 @@ helpviewer_keywords:
 - unmanaged resource cleanup
 - Finalize method
 ms.assetid: a17b0066-71c2-4ba4-9822-8e19332fc213
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: fea76042bb603889764a9d42b5a7836d704fcd48
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 5e32d2d4424d05b95af1eda400974da3293b8499
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cleaning-up-unmanaged-resources"></a>Nettoyage de ressources non managées
 Pour la majorité des objets créés par votre application, vous pouvez laisser au Garbage collector .NET le soin de gérer les tâches de gestion de mémoire. Lorsque vous créez des objets qui incluent des ressources non managées, vous devez libérer explicitement ces ressources lorsque vous avez fini de les utiliser dans votre application. Les types les plus courants de ressources non managées sont des objets qui encapsulent les ressources du système d'exploitation, telles que les fichiers, les fenêtres, les connexions réseau ou les connexions de bases de données. Bien que le récupérateur de mémoire puisse assurer le suivi de la durée de vie d'un objet qui encapsule une ressource non managée, il ne sait pas comment libérer et nettoyer la ressource non managée.  

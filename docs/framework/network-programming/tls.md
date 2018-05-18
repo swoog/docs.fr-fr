@@ -1,9 +1,7 @@
 ---
-title: Bonnes pratiques du protocole TLS (Transport Layer Security) avec .NET Framework
-description: Décrit les bonnes pratiques à l’aide du protocole TLS (Transport Layer Security) avec .NET Framework
+title: Meilleures pratiques du protocole TLS (Transport Layer Security) avec .NET Framework
+description: Décrit les meilleures pratiques à l’aide du protocole TLS (Transport Layer Security) avec .NET Framework
 ms.date: 03/15/2018
-ms.prod: .net-framework
-ms.topic: article
 helpviewer_keywords:
 - sending data, Internet security
 - protocols, Internet security
@@ -15,17 +13,13 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
 author: blowdart
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7298c87c3e61103577d4262ab2dc2645d7e6265a
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 41814129d038f8cb1ab98db0c7a4e0cbd7e7cd54
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Bonnes pratiques du protocole TLS (Transport Layer Security) avec .NET Framework
+# <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Meilleures pratiques du protocole TLS (Transport Layer Security) avec .NET Framework
 
 Le protocole TLS (Transport Layer Security) est une norme industrielle conçue pour aider à protéger la confidentialité des informations communiquées sur Internet. [TLS 1.2](https://tools.ietf.org/html/rfc5246) est la norme mise en production la plus récente et fournit des améliorations de sécurité par rapport aux versions précédentes. TLS 1.2 sera finalement remplacée par [TLS 1.3](https://tools.ietf.org/html/draft-ietf-tls-tls13-22). Cet article présente les recommandations visant à sécuriser les applications .NET Framework qui utilisent le protocole TLS.
 

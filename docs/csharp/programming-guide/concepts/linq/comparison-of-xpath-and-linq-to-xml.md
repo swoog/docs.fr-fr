@@ -1,21 +1,12 @@
 ---
 title: Comparaison de XPath et LINQ to XML2
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 87d361b1-daa9-4fd4-a53a-cbfa40111ad3
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 0890bd7d8edb19a16c864d0b845558d3302d6139
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 64860ab538105e7e3826b29f83b8e713ca525e21
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="comparison-of-xpath-and-linq-to-xml"></a>Comparaison de XPath et LINQ to XML
 XPath et [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] offrent certaines fonctionnalités similaires. Tous deux peuvent être utilisés pour interroger une arborescence XML et retourner des résultats tels qu'une collection d'élément, une collection d'attributs, une collection de nœuds ou la valeur d'un élément ou attribut. Il existe toutefois certaines différences.  
@@ -32,7 +23,7 @@ XPath et [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] offrent certaines
   
  Toutefois, lors de l'itération d'une collection retournée par une méthode d'axe XPath [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], les nœuds de la collection sont retournés dans l'ordre du document. Cela est valable même lors de l'accès à des axes XPath où les prédicats sont exprimés dans l'ordre inverse du document, par exemple `preceding` et `preceding-sibling`.  
   
- Par contraste, la plupart des axes [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] retournent les collections dans l'ordre du document, mais deux d'entre eux, <xref:System.Xml.Linq.XNode.Ancestors%2A> et <xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A>, retournent les collections dans l'ordre inverse du document. Le tableau suivant énumère les axes et indique l'ordre de collection pour chacun d'eux :  
+ Par contraste, la plupart des axes [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] retournent les collections dans l'ordre du document, mais deux d'entre eux, <xref:System.Xml.Linq.XNode.Ancestors%2A> et <xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A>, retournent les collections dans l'ordre inverse du document. Le tableau suivant énumère les axes et indique l’ordre de collection pour chacun d’eux :  
   
 |Axe LINQ to XML|Classement|  
 |----------------------|--------------|  

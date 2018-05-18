@@ -1,31 +1,20 @@
 ---
-title: "Fonctionnement de l'accélération dans PLINQ"
-ms.custom: 
+title: Fonctionnement de l'accélération dans PLINQ
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - PLINQ queries, performance tuning
 ms.assetid: 53706c7e-397d-467a-98cd-c0d1fd63ba5e
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 7d94a1fa4c559552a32140fd172c0c62e033f7a8
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 2c2e7d5ce170feecaf69aa5dd9785346de0375d2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="understanding-speedup-in-plinq"></a>Fonctionnement de l'accélération dans PLINQ
 Le principal objectif de PLINQ est d’accélérer l’exécution de requêtes LINQ to Objects en exécutant parallèlement les délégués de requête sur des ordinateurs multicœurs. PLINQ accomplit les meilleures performances lorsque le traitement de chaque élément dans une collection source est indépendant, sans aucun état partagé parmi les délégués individuels. Ces opérations sont courantes dans LINQ to Objects et PLINQ et sont souvent appelées « *délicieusement parallèles* », car elles se prêtent facilement à la planification sur plusieurs threads. Toutefois, toutes les requêtes ne sont pas entièrement constituées d’opérations délicieusement parallèles ; dans la plupart des cas, une requête concerne certains opérateurs qui ne peuvent pas être parallélisés, ou qui ralentissent l’exécution parallèle. Et même dans le cas de requêtes qui sont entièrement délicieusement parallèles, PLINQ doit encore partitionner la source de données et planifier le travail sur les threads et, généralement, fusionner les résultats lorsque la requête est terminée. Toutes ces opérations ajoutent au coût de calcul de la parallélisation ; ces coûts d’ajout de parallélisation sont appelés *surcharge*. Pour optimiser les performances dans une requête PLINQ, l’objectif est d’augmenter les parties délicieusement parallèles et de réduire au minimum les parties qui nécessitent une surcharge. Cet article fournit des informations qui vous aideront à écrire des requêtes PLINQ aussi efficaces que possible, tout en produisant des résultats corrects.  

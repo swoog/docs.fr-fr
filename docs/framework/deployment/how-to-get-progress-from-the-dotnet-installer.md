@@ -1,31 +1,19 @@
 ---
-title: "Guide pratique pour obtenir la progression à partir du programme d’installation du .NET Framework 4.5"
-ms.custom: 
+title: Guide pratique pour obtenir la progression à partir du programme d’installation du .NET Framework 4.5
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - cpp
 helpviewer_keywords:
 - progress information, .NET Framework installer
 - .NET Framework, installing
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c11d1c3469100b8bd0eb530a59bb3a01b152f3f1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 84bd96f27e8276546bef0dd9994163ccd843ac20
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Guide pratique pour obtenir la progression à partir du programme d’installation du .NET Framework 4.5
 Le [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] est un runtime redistribuable. Si vous développez des applications pour cette version du .NET Framework, vous pouvez inclure (chaîner) le programme d’installation du [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] en tant que composant requis du programme d’installation de votre application. Pour présenter une expérience d’installation unifiée ou personnalisée, vous souhaiterez peut-être lancer le programme d’installation du [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] en mode silencieux et suivre sa progression tout en affichant la progression de l’installation de votre application. Pour activer le suivi en mode silencieux, le programme d’installation du [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] (qui peut être observé) définit un protocole en utilisant un segment d’E/S mappées en mémoire (MMIO) pour communiquer avec votre programme d’installation (l’observateur ou programme de chaînage). Ce protocole définit un moyen pour un programme de chaînage d’obtenir des informations sur la progression, d’obtenir des résultats détaillés, de répondre aux messages et d’annuler l’installation du [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  

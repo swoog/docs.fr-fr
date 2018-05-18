@@ -15,11 +15,11 @@ helpviewer_keywords:
 - styles [WPF], triggers
 - styles [WPF], event triggers
 ms.assetid: 481765e5-5467-4a75-9f7b-e10e2ac410d9
-ms.openlocfilehash: e39afea9fe11cdab9e5a6623499a96468aa9d091
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 85911647c089d51bafe2d65d1c5db907599b06d4
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="styling-and-templating"></a>Application d'un style et création de modèles
 L’application d'un style et la création de modèles [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] font référence à une suite de fonctionnalités (styles, modèles, déclencheurs et tables de montage séquentiel) qui permettent aux développeurs et aux concepteurs de créer des effets visuellement attrayants et un aspect cohérent pour leur produit. Bien que les développeurs et/ou les concepteurs puissent largement personnaliser une à une l’apparence de leur application, il est essentiel d’utiliser un modèle de création de style et de modèle suffisamment robuste pour conserver et partager l’apparence dans une même application et entre différentes applications. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fournit ce modèle.  
@@ -38,7 +38,7 @@ L’application d'un style et la création de modèles [!INCLUDE[TLA#tla_winclie
   
  ![Styled ListView](../../../../docs/framework/wpf/controls/media/stylingintro-triggers.png "StylingIntro_triggers")  
   
- Cet exemple de photo simple utilise des styles et des modèles pour créer une expérience utilisateur visuellement attrayante. L’exemple a deux <xref:System.Windows.Controls.TextBlock> éléments et un <xref:System.Windows.Controls.ListBox> contrôle qui est lié à une liste d’images. Pour accéder à l’exemple complet, consultez la page [Introduction to Styling and Templating Sample](http://go.microsoft.com/fwlink/?LinkID=160010) (Présentation d’un exemple de création de style et de modèle).  
+ Cet exemple de photo simple utilise des styles et des modèles pour créer une expérience utilisateur visuellement attrayante. L’exemple a deux <xref:System.Windows.Controls.TextBlock> éléments et un <xref:System.Windows.Controls.ListBox> contrôle qui est lié à une liste d’images. Pour accéder à l’exemple complet, consultez la page [Introduction to Styling and Templating Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating) (Présentation d’un exemple de création de style et de modèle).  
   
 <a name="styling_basics"></a>   
 ## <a name="style-basics"></a>Principes de base d’un style  

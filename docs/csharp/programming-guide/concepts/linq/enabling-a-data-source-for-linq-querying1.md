@@ -1,21 +1,12 @@
 ---
-title: "Activation d’une source de données pour l’interrogation LINQ"
-ms.custom: 
+title: Activation d’une source de données pour l’interrogation LINQ
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: d2ef04a5-31a6-45cb-af9a-a5ce7732662c
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: bbb21c5cc0367e0bdc0dd935a5c91538c18c071b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5b67995f40bc0cb703003aa80b511268f21da8b8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>Activation d'une source de données pour l'interrogation LINQ
 Il y a différentes méthodes pour étendre [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] pour permettre l’interrogation de toute source de données dans le modèle [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. La source de données peut être une structure de données, un service Web, un système de fichiers ou une base de données, par exemple. Le modèle [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] permet aux clients d'interroger facilement une source de données pour laquelle l'interrogation [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] est activée, car la syntaxe et le modèle de la requête ne changent pas. Il existe différentes manières d’étendre [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] à ces sources de données, dont les suivantes :  

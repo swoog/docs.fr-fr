@@ -4,17 +4,11 @@ description: Découvrez comment étendre les outils de l’interface de ligne de
 author: blackdwarf
 ms.author: mairaw
 ms.date: 04/12/2017
-ms.topic: conceptual
-ms.prod: dotnet-core
-ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.workload:
-- dotnetcore
-ms.openlocfilehash: 11cf9843f5c10ed7114d45a8c6be0ffeff2b6bad
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 6cabd3959a29878788916ae26589be408c12e0ca
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="net-core-cli-tools-extensibility-model"></a>Modèle d’extensibilité des outils CLI .NET Core
 
@@ -26,15 +20,15 @@ Vous pouvez étendre les outils CLI de trois façons :
 
 1. [Par le biais des packages NuGet, par projet](#per-project-based-extensibility)
 
-  Les outils par projet sont contenus dans le contexte du projet, mais ils permettent une installation rapide grâce à une restauration.
+   Les outils par projet sont contenus dans le contexte du projet, mais ils permettent une installation rapide grâce à une restauration.
 
 2. [Par le biais des packages NuGet avec des cibles personnalisées](#custom-targets)
 
-  Les cibles personnalisées vous permettent d’étendre facilement le processus de génération avec des tâches personnalisées.
+   Les cibles personnalisées vous permettent d’étendre facilement le processus de génération avec des tâches personnalisées.
 
 3. [Par le biais du chemin (PATH) du système](#path-based-extensibility)
 
-  Les outils basés sur le chemin sont efficaces pour les outils généraux multiprojets qui sont utilisables sur un seul ordinateur.
+   Les outils basés sur le chemin sont efficaces pour les outils généraux multiprojets qui sont utilisables sur un seul ordinateur.
 
 Les trois mécanismes d’extensibilité présentés ci-dessus ne sont pas exclusifs. Vous pouvez utiliser un seul, une partie ou la totalité d’entre eux. Le choix de la méthode dépend en grande partie de l’objectif de votre extension.
 

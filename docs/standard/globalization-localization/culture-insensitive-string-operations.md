@@ -1,13 +1,7 @@
 ---
-title: "Opérations de chaînes indépendantes de la culture"
-ms.custom: 
+title: Opérations de chaînes indépendantes de la culture
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - culture, culture-insensitive string operations
 - case-sensitive comparisons
@@ -18,18 +12,13 @@ helpviewer_keywords:
 - culture-sensitive string operations
 - culture-insensitive string operations
 ms.assetid: e6e2bb94-a95d-44e2-b68c-cfdd1db77784
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 697d3ec32af6b704fbb1787bbb9ba1de57a0632e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 212aa3f00967c04631b80305289c46d818106c44
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="culture-insensitive-string-operations"></a>Opérations de chaînes indépendantes de la culture
 Les opérations de chaînes dépendantes de la culture peuvent présenter un avantage si vous créez des applications conçues pour afficher des résultats en fonction de la culture des utilisateurs. Par défaut, les méthodes dépendantes de la culture obtiennent la culture à utiliser à partir de la propriété <xref:System.Globalization.CultureInfo.CurrentCulture%2A> du thread.  

@@ -1,13 +1,6 @@
 ---
 title: Ilasm.exe (Assembleur IL)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - MSIL generators
 - metadata, MSIL Assembler
@@ -18,16 +11,13 @@ helpviewer_keywords:
 - Ilasm.exe
 - verifying MSIL performance
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
-caps.latest.revision: "41"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2507acc7ddf41d921af0b86622b1e85208191767
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4009fe4910af81c685ee015c7801b040a90c25aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (Assembleur IL)
 
@@ -74,7 +64,7 @@ ilasm [options] filename [[options]filename...]
 |**/noautoinherit**|Désactive l'héritage par défaut de <xref:System.Object> lorsque aucune classe de base n'est spécifiée.|
 |**/nocorstub**|Supprime la génération du stub CORExeMain.|
 |**/nologo**|Supprime l'affichage de la bannière de démarrage Microsoft.|
-|**/output:** `file.ext`|Spécifie le nom du fichier de sortie et son extension. Le nom du fichier de sortie est, par défaut, le même que le nom du premier fichier source. L’extension par défaut est *.exe*. Si vous spécifiez l'option **/dll**, l'extension par défaut est *.dll*. **Remarque :** La spécification de **/output:**myfile.dll ne définit pas l’option **/dll**. Si vous ne spécifiez pas l’option **/dll**, il en résultera un fichier exécutable nommé *myfile.dll*.|
+|**/output:** `file.ext`|Spécifie le nom du fichier de sortie et son extension. Le nom du fichier de sortie est, par défaut, le même que le nom du premier fichier source. L’extension par défaut est *.exe*. Si vous spécifiez l'option **/dll**, l'extension par défaut est *.dll*. **Remarque :** La spécification de **/output:** myfile.dll ne définit pas l’option **/dll**. Si vous ne spécifiez pas l’option **/dll**, il en résultera un fichier exécutable nommé *myfile.dll*.|
 |**/optimize**|Optimise les instructions allongées en instructions abrégées. Par exemple, `br` en `br.s`.|
 |**/pe64**|Crée une image 64 bits (PE32+).<br /><br /> Si aucun processeur cible n'est spécifié, la valeur par défaut est `/itanium`.|
 |**/pdb**|Crée un fichier PDB sans activer le suivi des informations de débogage.|
@@ -88,7 +78,7 @@ ilasm [options] filename [[options]filename...]
 |**/?**|Affiche la syntaxe et les options de commande de l'outil.|
 
 > [!NOTE]
-> Aucune option d’*Ilasm.exe* ne respecte la casse et toutes se reconnaissent à leurs trois premières lettres. Par exemple, **/lis** équivaut à **/listing** et **/res:**myresfile.res équivaut à **/resource:**myresfile.res. Les options spécifiant des arguments prennent en charge les deux-points (:) ou le signe égal (=) en tant que séparateur entre l'option et l'argument. Par exemple, **/output**:*file.ext* équivaut à **/output**=*file.ext*.
+> Aucune option d’*Ilasm.exe* ne respecte la casse et toutes se reconnaissent à leurs trois premières lettres. Par exemple, **/lis** équivaut à **/listing** et **/res:** myresfile.res équivaut à **/resource:** myresfile.res. Les options spécifiant des arguments prennent en charge les deux-points (:) ou le signe égal (=) en tant que séparateur entre l'option et l'argument. Par exemple, **/output**:*file.ext* équivaut à **/output**=*file.ext*.
 
 ## <a name="remarks"></a>Notes
 

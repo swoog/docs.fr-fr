@@ -1,14 +1,6 @@
 ---
 title: Méthode de localisation des assemblys par le runtime
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - app.config files, assembly locations
 - deploying applications [.NET Framework], assembly locations
@@ -17,17 +9,13 @@ helpviewer_keywords:
 - locating assemblies
 - assemblies [.NET Framework], location
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
-caps.latest.revision: 20
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6e154e0658534018ccd1086631cad6d350528b5d
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: d34de754d551a97178de2d4f9c6558170f58fe27
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Méthode de localisation des assemblys par le runtime
 Pour déployer correctement votre application .NET Framework, il est important de bien comprendre comment le common language runtime localise les assemblys qui composent votre application et comment il établit des liaisons à ces assemblys. Par défaut, le runtime essaie d'établir une liaison avec la version exacte d'un assembly avec lequel l'application a été générée. Ce comportement par défaut peut être substitué par les paramètres du fichier de configuration.  

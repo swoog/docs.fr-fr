@@ -1,31 +1,20 @@
 ---
-title: "Partitionneurs personnalisés pour PLINQ et la bibliothèque parallèle de tâches (TPL)"
-ms.custom: 
+title: Partitionneurs personnalisés pour PLINQ et la bibliothèque parallèle de tâches (TPL)
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - tasks, partitioners
 ms.assetid: 96153688-9a01-47c4-8430-909cee9a2887
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: bc409a528dd095d3defb0026a48430b10a3ba6f3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 0868ce76f82ed0575154744d9ab02814a0bd990a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-partitioners-for-plinq-and-tpl"></a>Partitionneurs personnalisés pour PLINQ et la bibliothèque parallèle de tâches (TPL)
 Pour paralléliser une opération sur une source de données, l’une des étapes essentielles consiste à *partitionner* la source en plusieurs sections accessibles simultanément par plusieurs threads. PLINQ et la bibliothèque parallèle de tâches (TPL) fournissent des partitionneurs par défaut qui fonctionnent de façon transparente lorsque vous écrivez une requête parallèle ou une boucle <xref:System.Threading.Tasks.Parallel.ForEach%2A>. Pour des scénarios plus élaborés, vous pouvez incorporer votre propre partitionneur.  

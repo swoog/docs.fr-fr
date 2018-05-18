@@ -1,13 +1,6 @@
 ---
-title: "Définition des attributs d'assembly"
-ms.custom: 
+title: Définition des attributs d'assembly
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,13 @@ helpviewer_keywords:
 - assembly binding, attributes
 - assembly manifest, attributes
 ms.assetid: 36a98a81-b5b5-4c19-912a-11f91eff7f4e
-caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f95d8c5f78dfa9ec388cfa63b81857ffe580abf3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: af1db244f02701e6da1604ec406f4fb2940f8f78
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="setting-assembly-attributes"></a>Définition des attributs d'assembly
 Les attributs d’assembly sont des valeurs qui fournissent des informations sur un assembly. Les attributs sont répartis selon les ensembles d’informations suivants :  

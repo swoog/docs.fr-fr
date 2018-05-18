@@ -1,26 +1,20 @@
 ---
-title: "Mots clés d'instruction (Référence C#)"
+title: Mots clés d'instruction (Référence C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - keywords [C#], statements
 - statements [C#]
 ms.assetid: fad0c004-e282-4ec8-a127-bca7fd7a0b6f
-caps.latest.revision: "12"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 0a882d7c0e88f325d4a0bf471b5b38844b2b13f3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2485a6258913b1dae04c093fa74a8acf1aaa3ca3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="statement-keywords-c-reference"></a>Mots clés d'instruction (Référence C#)
 Les instructions sont des instructions de programme. Sauf mention contraire dans les rubriques référencées dans le tableau suivant, les instructions sont exécutées en séquence. Le tableau suivant répertorie les mots clés d’instructions C#. Pour plus d’informations sur les instructions exprimées sans mots clés, consultez [Instructions](../../../csharp/programming-guide/statements-expressions-operators/statements.md).  
   
-|Catégorie|Mots clés C#|  
+|Category|Mots clés C#|  
 |--------------|------------------|  
 |[Instructions de sélection](../../../csharp/language-reference/keywords/selection-statements.md)|[if](../../../csharp/language-reference/keywords/if-else.md), [else](../../../csharp/language-reference/keywords/if-else.md), [switch](../../../csharp/language-reference/keywords/switch.md), [case](../../../csharp/language-reference/keywords/switch.md)|  
 |[Instructions d’itération](../../../csharp/language-reference/keywords/iteration-statements.md)|[do](../../../csharp/language-reference/keywords/do.md), [for](../../../csharp/language-reference/keywords/for.md), [foreach](../../../csharp/language-reference/keywords/foreach-in.md), [in](../../../csharp/language-reference/keywords/foreach-in.md), [while](../../../csharp/language-reference/keywords/while.md)|  

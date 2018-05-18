@@ -1,29 +1,18 @@
 ---
-title: "Accès à des données XML fortement typées à l’aide de XPathNavigator"
-ms.custom: 
+title: Accès à des données XML fortement typées à l’aide de XPathNavigator
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 898e0f52-8a7c-4d1f-afcd-6ffb28b050b4
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 651a8e11b5782227cdf5ffcc3d53cf2c75def031
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 040a137f9b7c26c4484a69313e1f405699a19b64
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="accessing-strongly-typed-xml-data-using-xpathnavigator"></a>Accès à des données XML fortement typées à l’aide de XPathNavigator
 En tant qu'instance du modèle de données XPath 2.0, la classe <xref:System.Xml.XPath.XPathNavigator> peut contenir des données fortement typées correspondant aux types CLR (Common Language Runtime) courants. Conformément au modèle de données XPath 2.0, seuls les éléments et les attributs peuvent contenir des données fortement typées. La classe <xref:System.Xml.XPath.XPathNavigator> offre des mécanismes d'accès aux données dans un objet <xref:System.Xml.XPath.XPathDocument> ou <xref:System.Xml.XmlDocument> sous la forme de données fortement typées et des mécanismes de conversion d'un type de données en un autre.  

@@ -1,22 +1,15 @@
 ---
-title: "Structs - Guide C#"
-description: "En savoir plus sur le type struct et la manière de le créer"
-keywords: .NET, .NET Core, C#
-author: BillWagner
-ms.author: wiwagn
+title: Structs - Guide C#
+description: En savoir plus sur le type struct et la manière de le créer
 ms.date: 10/12/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: a7094b8c-7229-4b6f-82fc-824d0ea0ec40
-ms.openlocfilehash: 4c12e886ec388671fc47f08f8df6d6f2af8aac62
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.openlocfilehash: 9fe4e0278ecf46f762a93aa489030c0a9e5563b3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="structs"></a>Structures
+# <a name="structs"></a>Structs
 Un *struct* est un type valeur. Lorsqu'un struct est créé, la variable à laquelle le struct est assigné contient les données réelles du struct. Lorsque le struct est affecté à une nouvelle variable, il est copié. La nouvelle variable et la variable d’origine contiennent par conséquent deux copies distinctes des mêmes données. Les modifications apportées à une copie n’affectent pas l’autre copie.
 
 Les variables de type valeur contiennent directement leurs valeurs, ce qui signifie que la mémoire est allouée inline dans le contexte où la variable est déclarée. Aucune allocation des tas ni surcharge de garbage collection distincte n’a lieu pour les variables de type valeur.  
@@ -69,7 +62,7 @@ Les deux derniers exemples illustrent les fonctionnalités de langage introduite
 Le second illustre les *littéraux binaires*, qui vous permettent de spécifier des modèles de bits directement au lieu d’utiliser la notation hexadécimale.
 
 ## <a name="nullable-types"></a>Types Nullable  
-Les types valeur ordinaires ne peuvent pas avoir la valeur [Null](./language-reference/keywords/null.md). Toutefois, vous pouvez créer des types valeur Nullable en apposant un **?** après le type. Par exemple, **int?** est un type **int** qui peut également avoir la valeur [null](./language-reference/keywords/null.md). Dans le CTS, les types Nullable sont des instances du type struct générique <xref:System.Nullable%601>. Les types Nullable sont particulièrement utiles lorsque vous passez des données vers et à partir de bases de données dans lesquelles les valeurs numériques peuvent être Null. Pour plus d’informations, consultez [Types Nullable (Guide de programmation C#)](./programming-guide/nullable-types/index.md).
+Les types valeur ordinaires ne peuvent pas avoir la valeur [Null](./language-reference/keywords/null.md). Toutefois, vous pouvez créer des types valeur Nullable en apposant un  **?** après le type. Par exemple, **int?** est un type **int** qui peut également avoir la valeur [null](./language-reference/keywords/null.md). Dans le CTS, les types Nullable sont des instances du type struct générique <xref:System.Nullable%601>. Les types Nullable sont particulièrement utiles lorsque vous passez des données vers et à partir de bases de données dans lesquelles les valeurs numériques peuvent être Null. Pour plus d’informations, consultez [Types Nullable (Guide de programmation C#)](./programming-guide/nullable-types/index.md).
 
 ## <a name="see-also"></a>Voir aussi
 [Classes](classes.md)
