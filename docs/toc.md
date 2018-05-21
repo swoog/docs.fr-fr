@@ -285,7 +285,12 @@
 ### [Bien démarrer avec Visual Studio pour Mac](fsharp/get-started/get-started-with-visual-studio-for-mac.md)
 ### [Bien démarrer avec Visual Studio Code et Ionide](fsharp/get-started/get-started-vscode.md)
 ### [Bien démarrer avec l’interface de ligne de commande de .NET Core](fsharp/get-started/get-started-command-line.md)
-<!--## [Tutorials](fsharp/tutorials/index.md)-->
+
+## [Guide de style F#](fsharp/style-guide/index.md)
+### [Indications pour la mise en forme du code F#](fsharp/style-guide/formatting.md)
+### [Conventions de codage F#](fsharp/style-guide/conventions.md)
+### [Indications pour la conception de composants F#](fsharp/style-guide/component-design-guidelines.md)
+
 ## Didacticiels
 ### [F# Interactive](fsharp/tutorials/fsharp-interactive/index.md)
 ### [Fournisseurs de type](fsharp/tutorials/type-providers/index.md)
@@ -1113,7 +1118,7 @@
 # [Guide ML.NET](machine-learning/index.md)
 ## [Didacticiels](machine-learning/tutorials/index.md)
 ### [Analyse des sentiments (classification)](machine-learning/tutorials/sentiment-analysis.md)
-### [Prévision du délai de stationnement (régression)](machine-learning/tutorials/taxi-fare.md)
+### [Prévision du tarif de stationnement (régression)](machine-learning/tutorials/taxi-fare.md)
 ## [Ressources](machine-learning/resources/index.md)
 ### [Glossaire Machine Learning](machine-learning/resources/glossary.md)
 ### [Notions de base de Machine Learning](machine-learning/resources/basics.md)
