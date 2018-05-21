@@ -1,21 +1,14 @@
 ---
-title: "À propos de l’autorisation dans les microservices .NET et les applications web"
-description: "Architecture de microservices .NET pour les applications .NET en conteneur | À propos de l’autorisation dans les microservices .NET et les applications web"
-keywords: Docker, microservices, ASP.NET, conteneur
+title: À propos de l’autorisation dans les microservices .NET et les applications web
+description: Architecture de microservices .NET pour les applications .NET en conteneur | À propos de l’autorisation dans les microservices .NET et les applications web
 author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 6cd7be9bc8216aecf85f99a76e859b411a8735b0
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 2ea56f5a28d115fc5d91a98604b82565c8bf5c78
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="about-authorization-in-net-microservices-and-web-applications"></a>À propos de l’autorisation dans les microservices .NET et les applications web
 
@@ -119,16 +112,16 @@ Un exemple de condition d’autorisation personnalisée et de gestionnaire desti
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
--   **Authentification ASP.NET Core**
+-   **Authentification dans ASP.NET Core**
     [*https://docs.microsoft.com/aspnet/core/security/authentication/identity*](https://docs.microsoft.com/aspnet/core/security/authentication/identity)
 
--   **Autorisation ASP.NET Core**
+-   **Autorisation dans ASP.NET Core**
     [*https://docs.microsoft.com/aspnet/core/security/authorization/introduction*](https://docs.microsoft.com/aspnet/core/security/authorization/introduction)
 
 -   **Autorisation basée sur les rôles**
     [*https://docs.microsoft.com/aspnet/core/security/authorization/roles*](https://docs.microsoft.com/aspnet/core/security/authorization/roles)
 
--   **Autorisation basée sur la stratégie personnalisée**
+-   **Autorisation basée sur une stratégie personnalisée**
     [*https://docs.microsoft.com/aspnet/core/security/authorization/policies*](https://docs.microsoft.com/aspnet/core/security/authorization/policies)
 
 

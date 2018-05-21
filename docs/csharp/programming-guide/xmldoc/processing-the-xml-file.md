@@ -1,22 +1,15 @@
 ---
 title: Traitement du fichier XML (Guide de programmation C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-caps.latest.revision: 16
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 1e6e983d4fc07aaadc294bc67e146ac600f4c5bc
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: b95101d2f8e12f7c6fee5b410e7801f9d890182d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="processing-the-xml-file-c-programming-guide"></a>Traitement du fichier XML (Guide de programmation C#)
 Le compilateur génère une chaîne d’ID pour chaque construction de votre code qui est marquée pour générer la documentation. (Pour plus d’informations sur la façon de baliser votre code, consultez [Balises recommandées pour les commentaires de documentation](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md).) La chaîne d’ID identifie de façon unique la construction. Les programmes qui traitent le fichier XML peuvent utiliser la chaîne d’identification pour identifier l’élément de métadonnées/réflexion .NET Framework correspondant auquel s’applique la documentation.  
@@ -77,7 +70,7 @@ Le compilateur génère une chaîne d’ID pour chaque construction de votre cod
   
 -   Pour les types génériques, le nom du type est suivi d’un accent grave, puis d’un chiffre qui indique le nombre de paramètres de type générique.  Par exemple :  
   
-     `<member name="T:SampleClass`2">` is the tag for a type that is defined as `public class SampleClass\<T, U>`.  
+     ``<member name="T:SampleClass`2">`` est l’étiquette pour un type qui est défini en tant que `public class SampleClass<T, U>`.  
   
      Pour les méthodes qui prennent des types génériques en tant que paramètres, les paramètres de types génériques sont spécifiés sous forme de chiffres précédés d’accents graves (par exemple \`0,`1).  Chaque chiffre représente une notation de tableau de base zéro pour les paramètres génériques du type.  
   

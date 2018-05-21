@@ -1,10 +1,7 @@
 ---
-title: "Éléments obsolètes dans la bibliothèque de classes .NET Framework"
+title: Éléments obsolètes dans la bibliothèque de classes .NET Framework
 ms.custom: updateeachrelease
-ms.date: 10/17/2017
-ms.prod: .net-framework
-ms.technology: dotnet-clr
-ms.topic: article
+ms.date: 04/10/2018
 helpviewer_keywords:
 - obsolete [.NET Framework]
 - what's obsolete [.NET Framework]
@@ -12,13 +9,11 @@ helpviewer_keywords:
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d5fc41473c4a3ea812013ee7e5204c22d0a694d7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 01969eff86e5b1e8e4e2bdc4950df9fb5291f5b6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="what39s-obsolete-in-the-net-framework-class-library"></a>Éléments obsolètes dans la bibliothèque de classes .NET Framework
 Le .NET Framework évolue. Chaque nouvelle version comporte de nouveaux types et membres de type qui fournissent de nouvelles fonctionnalités. Les types existants et leurs membres évoluent aussi. Par exemple, certains types deviennent moins importants quand la technologie qu'ils prennent en charge est remplacée par une nouvelle, tandis que certaines méthodes sont remplacées par de nouvelles méthodes qui sont soit plus pratiques, soit plus complètes.  
@@ -62,7 +57,7 @@ Le .NET Framework évolue. Chaque nouvelle version comporte de nouveaux types et
   
 |Version du .NET Framework|Chaîne `version`|
 |-|-|  
-|4.7 (avec 4.7.1)|v4.0|  
+|4.7 (y compris 4.7.1 et 4.7.2)|v4.0|  
 |4.6 (y compris 4.6.1 et 4.6.2)|v4.0|  
 |4.5 (y compris 4.5.1 et 4.5.2)|v4.0|  
 |4|v4.0|  
@@ -71,7 +66,7 @@ Le .NET Framework évolue. Chaque nouvelle version comporte de nouveaux types et
 |1.1|v1.1.4322|  
 |1.0|v1.0.3705|  
   
-## <a name="obsolete-lists-for-the-net-framework-45-and-46"></a>Listes des éléments obsolètes pour le .NET Framework 4.5 et 4.6  
+## <a name="obsolete-lists-for-the-net-framework-45-and-later-versions"></a>Listes des éléments obsolètes pour .NET Framework 4.5 et versions ultérieures  
  [Types obsolètes](../../../docs/framework/whats-new/obsolete-types.md)  
   
  [Membres obsolètes](../../../docs/framework/whats-new/obsolete-members.md)  

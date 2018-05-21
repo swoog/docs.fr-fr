@@ -11,11 +11,11 @@ helpviewer_keywords:
 - variables [Visual Basic], enumeration
 - constants [Visual Basic], enumerated
 ms.assetid: a45e51f1-65ff-48e1-bf32-79130f137377
-ms.openlocfilehash: 89de51f2551437d102ccdc5a0f1ff5f23b53e47f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7cac4d5bde9ec617a1877a0605dc6dbab67ddf7f
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="enum-statement-visual-basic"></a>Enum, instruction (Visual Basic)
 Déclare une énumération et définit les valeurs de ses membres.  
@@ -49,8 +49,10 @@ End Enum
   
     -   [Private](../../../visual-basic/language-reference/modifiers/private.md)  
   
-     Vous pouvez spécifier `Protected``Friend` pour autoriser l’accès à partir du code au sein classe de l’énumération, une classe dérivée ou le même assembly.  
-  
+    - [Protected Friend](../../language-reference/modifiers/protected-friend.md)
+    
+    - [Protégé privé](../../language-reference/modifiers/private-protected.md)
+
 -   `Shadows`  
   
      Facultatif. Spécifie que cette énumération redéclare et masque un élément de programmation portant le même nom ou un ensemble d’éléments surchargés, dans une classe de base. Vous pouvez spécifier [ombres](../../../visual-basic/language-reference/modifiers/shadows.md) uniquement sur l’énumération elle-même, et non sur un de ses membres.  

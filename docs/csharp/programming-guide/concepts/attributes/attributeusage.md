@@ -1,155 +1,89 @@
 ---
 title: AttributeUsage (C#)
-ms.custom: 
-ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
-ms.assetid: 22c45568-9a6a-4c2f-8480-f38c1caa0a99
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: e9351ee10b523145ace1249bf17388da0cdba277
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.date: 04/25/2018
+ms.openlocfilehash: 869e6509e55268767915a783a8652f7f950d7137
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="attributeusage-c"></a>AttributeUsage (C#)
-Détermine de quelle manière une classe d’attributs personnalisés peut être utilisée. `AttributeUsage` est un attribut qui peut être appliqué à des définitions d’attributs personnalisés pour contrôler le mode d’application du nouvel attribut. Voici le code quand les paramètres par défaut sont appliqués de manière explicite :  
-  
-```csharp  
-[System.AttributeUsage(System.AttributeTargets.All,  
-                   AllowMultiple = false,  
-                   Inherited = true)]  
-class NewAttribute : System.Attribute { }  
-```  
-  
- Dans cet exemple, la classe `NewAttribute` peut être appliquée à toutes les entités de code acceptant un attribut, mais uniquement une fois par entité. Elle est héritée par les classes dérivées quand elle est appliquée à une classe de base.  
-  
- Les arguments `AllowMultiple` et `Inherited` étant facultatifs, ce code produit le même résultat :  
-  
-```csharp  
-[System.AttributeUsage(System.AttributeTargets.All)]  
-class NewAttribute : System.Attribute { }  
-```  
-  
- Le premier argument `AttributeUsage` doit correspondre à un ou plusieurs éléments de l’énumération <xref:System.AttributeTargets>. Plusieurs types de cibles peuvent être liés avec l’opérateur OR, comme suit :  
-  
-```csharp  
-using System;  
 
-[AttributeUsage(AttributeTargets.Property | AttributeTargets.Field)]  
-class NewPropertyOrFieldAttribute : Attribute { }  
-```  
-  
- Si l’argument `AllowMultiple` est défini sur `true`, l’attribut qui en résulte peut être appliqué plusieurs fois à une même entité, comme suit :  
-  
-```csharp  
-using System;  
+Détermine de quelle manière une classe d’attributs personnalisés peut être utilisée. <xref:System.AttributeUsageAttribute> est un attribut que vous appliquez à des définitions d’attribut personnalisé. L’attribut `AttributeUsage` vous permet de contrôler :
 
-[AttributeUsage(AttributeTargets.Class, AllowMultiple = true)]  
-class MultiUseAttr : Attribute { }  
-  
-[MultiUseAttr]  
-[MultiUseAttr]  
-class Class1 { }  
-  
-[MultiUseAttr, MultiUseAttr]  
-class Class2 { }  
-```  
-  
- Dans ce cas, `MultiUseAttr` peut être appliqué à plusieurs reprises, car `AllowMultiple` est défini sur `true`. Les deux formats indiqués pour appliquer plusieurs attributs sont valides.  
-  
- Si `Inherited` est défini sur `false`, l’attribut n’est pas hérité par les classes qui sont dérivées d’une classe avec attributs. Exemple :  
-  
-```csharp  
-using System;  
+- À quels éléments de programme les attributs peuvent être appliqués. Sauf si vous en limitez l’utilisation, un attribut peut être appliqué aux éléments de programme suivants :
+  - assembly
+  - module
+  - champ
+  - événement
+  - méthode
+  - param
+  - propriété
+  - return
+  - type
+- Si un attribut peut être appliqué plusieurs fois à un même élément de programme.
+- Si les attributs sont hérités dans les classes dérivées.
 
-[AttributeUsage(AttributeTargets.Class, Inherited = false)]  
-class Attr1 : Attribute { }  
-  
-[Attr1]  
-class BClass { }  
-  
-class DClass : BClass { }  
-```  
-  
- Dans ce cas, `Attr1` n’est pas appliqué à `DClass` par héritage.  
-  
-## <a name="remarks"></a>Remarques  
- L’attribut `AttributeUsage` est un attribut à usage unique : il ne peut pas être appliqué plusieurs fois à la même classe. `AttributeUsage` est un alias pour <xref:System.AttributeUsageAttribute>.  
-  
- Pour plus d’informations, consultez [Accès à des attributs à l’aide de la réflexion (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md).  
-  
-## <a name="example"></a>Exemple  
- L’exemple suivant illustre l’effet des arguments `Inherited` et `AllowMultiple` sur l’attribut `AttributeUsage`, et la manière dont les attributs personnalisés appliqués à une classe peuvent être énumérés.  
-  
-```csharp  
-using System;  
+L’exemple suivant montre des paramètres par défaut quand ils sont appliqués explicitement :
 
-// Create some custom attributes:  
-[AttributeUsage(System.AttributeTargets.Class, Inherited = false)]  
-class A1 : System.Attribute { }  
-  
-[AttributeUsage(System.AttributeTargets.Class)]  
-class A2 : System.Attribute { }  
-  
-[AttributeUsage(System.AttributeTargets.Class, AllowMultiple = true)]  
-class A3 : System.Attribute { }  
-  
-// Apply custom attributes to classes:  
-[A1, A2]  
-class BaseClass { }  
-  
-[A3, A3]  
-class DerivedClass : BaseClass { }  
-  
-public class TestAttributeUsage  
-{  
-    static void Main()  
-    {  
-        BaseClass b = new BaseClass();  
-        DerivedClass d = new DerivedClass();  
-  
-        // Display custom attributes for each class.  
-        Console.WriteLine("Attributes on Base Class:");  
-        object[] attrs = b.GetType().GetCustomAttributes(true);  
-        foreach (Attribute attr in attrs)  
-        {  
-            Console.WriteLine(attr);  
-        }  
-  
-        Console.WriteLine("Attributes on Derived Class:");  
-        attrs = d.GetType().GetCustomAttributes(true);  
-        foreach (Attribute attr in attrs)  
-        {  
-            Console.WriteLine(attr);  
-        }  
-    }  
-}  
-```  
-  
-## <a name="sample-output"></a>Résultat de l'exemple  
-  
-```  
-Attributes on Base Class:  
-A1  
-A2  
-Attributes on Derived Class:  
-A3  
-A3  
-A2  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
+[!code-csharp[Define a new attribute](../../../../../samples/snippets/csharp/attributes/NewAttribute.cs#1)]
+
+Dans cet exemple, la classe `NewAttribute` peut être appliquée à n’importe quel élément de programme pris en charge. Elle ne peut cependant être appliquée qu’une seule fois à chaque entité. L’attribut est hérité par les classes dérivées quand il est appliqué à une classe de base.
+
+Les arguments <xref:System.AttributeUsageAttribute.AllowMultiple> et <xref:System.AttributeUsageAttribute.Inherited> étant facultatifs, le code suivant a le même effet :
+
+[!code-csharp[Omit optional attributes](../../../../../samples/snippets/csharp/attributes/NewAttribute.cs#2)]
+
+Le premier argument <xref:System.AttributeUsageAttribute> doit correspondre à un ou plusieurs éléments de l’énumération <xref:System.AttributeTargets>. Vous pouvez lier ensemble plusieurs types de cibles avec l’opérateur OR, comme dans l’exemple suivant :
+
+[!code-csharp[Create an attribute for fields or properties](../../../../../samples/snippets/csharp/attributes/NewPropertyOrFieldAttribute.cs#1)]
+
+À compter de C# 7.3, les attributs peuvent être appliqués à la propriété ou au champ de stockage pour une propriété implémentée automatiquement. L’attribut s’applique à la propriété, sauf si vous spécifiez le spécificateur `field` sur l’attribut. Les deux cas sont illustrés dans l’exemple suivant :
+
+[!code-csharp[Create an attribute for fields or properties](../../../../../samples/snippets/csharp/attributes/NewPropertyOrFieldAttribute.cs#2)]
+
+Si l’argument <xref:System.AttributeUsageAttribute.AllowMultiple> est défini sur `true`, l’attribut résultant peut être appliqué plusieurs fois à une même entité, comme illustré dans l’exemple suivant :
+
+[!code-csharp[Create and use an attribute that can be applied multiple times](../../../../../samples/snippets/csharp/attributes/MultiUseAttribute.cs#1)]
+
+Dans ce cas, `MultiUseAttribute` peut être appliqué à plusieurs reprises, car `AllowMultiple` est défini sur `true`. Les deux formats indiqués pour appliquer plusieurs attributs sont valides.
+
+Si <xref:System.AttributeUsageAttribute.Inherited> est `false`, l’attribut n’est pas hérité par les classes dérivées d’une classe avec attributs. Exemple :
+
+[!code-csharp[Create and use an attribute that can be applied multiple times](../../../../../samples/snippets/csharp/attributes/NonInheritedAttribute.cs#1)]
+
+Dans ce cas, `NonInheritedAttribute` n’est pas appliqué à `DClass` via l’héritage.
+
+## <a name="remarks"></a>Notes
+
+L’attribut `AttributeUsage` est un attribut à usage unique : il ne peut pas être appliqué plusieurs fois à la même classe. `AttributeUsage` est un alias pour <xref:System.AttributeUsageAttribute>.
+
+Pour plus d’informations, consultez [Accès à des attributs à l’aide de la réflexion (C#)](accessing-attributes-by-using-reflection.md).
+
+## <a name="example"></a>Exemple
+
+L’exemple suivant illustre l’effet des arguments <xref:System.AttributeUsageAttribute.Inherited> et <xref:System.AttributeUsageAttribute.AllowMultiple> sur l’attribut <xref:System.AttributeUsageAttribute>, et la manière dont les attributs personnalisés appliqués à une classe peuvent être énumérés.
+
+[!code-csharp[Applying and querying attributes](../../../../../samples/snippets/csharp/attributes/Program.cs#1)]
+
+## <a name="sample-output"></a>Résultat de l'exemple
+
+```text
+Attributes on Base Class:
+FirstAttribute
+SecondAttribute
+Attributes on Derived Class:
+ThirdAttribute
+ThirdAttribute
+SecondAttribute
+```
+
+## <a name="see-also"></a>Voir aussi
  <xref:System.Attribute>  
  <xref:System.Reflection>  
- [Guide de programmation C#](../../../../csharp/programming-guide/index.md)  
- [Attributs](../../../../../docs/standard/attributes/index.md)  
- [Réflexion (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
- [Attributs](../../../../csharp/programming-guide/concepts/attributes/index.md)  
- [Création d’attributs personnalisés (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)  
- [Accès à des attributs à l’aide de la réflexion (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+ [Guide de programmation C#](../..//index.md)  
+ [Attributs](../../../..//standard/attributes/index.md)  
+ [Réflexion (C#)](../reflection.md)  
+ [Attributs](index.md)  
+ [Création d’attributs personnalisés (C#)](creating-custom-attributes.md)  
+ [Accès à des attributs à l’aide de la réflexion (C#)](accessing-attributes-by-using-reflection.md)

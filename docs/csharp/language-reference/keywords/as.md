@@ -8,11 +8,11 @@ helpviewer_keywords:
 - type conversion [C#], as keyword
 - as keyword [C#]
 ms.assetid: a9be126b-cbf4-4990-a70d-d0e1983cad0e
-ms.openlocfilehash: 6ea5346119259d70ac1a42f3f72a8b2746b8f536
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 092c30a858df7baeb35bdf28bae53802fb0916d4
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="as-c-reference"></a>as (référence C#)
 Vous pouvez utiliser l’opérateur `as` pour effectuer certains types de conversions entre des types référence ou des [types Nullable](../../../csharp/programming-guide/nullable-types/index.md) compatibles. Le code suivant fournit un exemple.  
@@ -22,13 +22,13 @@ Vous pouvez utiliser l’opérateur `as` pour effectuer certains types de conver
 ## <a name="remarks"></a>Notes  
  L’opérateur `as` est semblable à une opération de cast. Toutefois, si la conversion n’est pas possible, `as` retourne `null` au lieu de lever une exception. Prenons l'exemple suivant :  
   
-```  
+```csharp  
 expression as type  
 ```  
   
  Le code est équivalent à l’expression suivante, à la différence que la variable `expression` n’est évaluée qu’une seule fois.  
   
-```  
+```csharp  
 expression is type ? (type)expression : (type)null  
 ```  
   

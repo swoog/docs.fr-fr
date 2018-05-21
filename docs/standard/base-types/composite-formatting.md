@@ -1,13 +1,7 @@
 ---
 title: Mise en forme composite
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,18 +13,13 @@ helpviewer_keywords:
 - composite formatting
 - objects [.NET Framework], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
-caps.latest.revision: 36
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 473669b4aaa0782fec32fb0e2d89875c4ab7a838
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 4922470633f3dec8e2e2f898bdf544f5aa4deded
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="composite-formatting"></a>Mise en forme composite
 La fonctionnalité de mise en forme composite du .NET utilise une liste d’objets et une chaîne de format composite comme entrée. Une chaîne de format composite se compose de texte fixe mélangé à des espaces réservés indexés, appelés éléments de format, qui correspondent aux objets de la liste. L'opération de mise en forme produit une chaîne résultante qui se compose du texte fixe d'origine mélangé à la représentation sous forme de chaîne des objets de la liste.  
@@ -123,19 +112,19 @@ La fonctionnalité de mise en forme composite du .NET utilise une liste d’obje
  [!code-vb[Formatting.Composite#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Escaping1.vb#2)]  
   
 ### <a name="processing-order"></a>Ordre de traitement  
- Si l'appel à la méthode de mise en forme composite comprend un argument <xref:System.IFormatProvider> dont la valeur n'est pas `null`, le runtime appelle sa méthode <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> pour demander une implémentation de <xref:System.ICustomFormatter>. Si la méthode peut retourner une implémentation de <xref:System.ICustomFormatter>, elle est mise en cache pour une utilisation ultérieure.  
+ Si l'appel à la méthode de mise en forme composite comprend un argument <xref:System.IFormatProvider> dont la valeur n'est pas `null`, le runtime appelle sa méthode <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> pour demander une implémentation de <xref:System.ICustomFormatter>. Si la méthode est en mesure de retourner une implémentation de <xref:System.ICustomFormatter>, elle est mise en cache durant l’appel de la méthode de mise en forme composite.
   
- Chaque valeur de la liste de paramètres qui correspond à un élément de mise en forme peut être convertie en une chaîne en exécutant les étapes suivantes. Si une condition présente dans l'une des trois premières étapes est remplie, la représentation sous forme de chaîne de la valeur est retournée dans cette étape et les étapes suivantes ne sont pas effectuées.  
+ Chaque valeur de la liste de paramètres qui correspond à un élément de mise en forme est convertie en une chaîne de la manière suivante :  
   
-1.  Si la valeur à mettre en forme est `null`, une chaîne vide ("") est retournée.  
+1.  Si la valeur à mettre en forme est `null`, une chaîne vide <xref:System.String.Empty?displayProperty=nameWithType> est retournée.  
   
-2.  Si une implémentation de <xref:System.ICustomFormatter> est disponible, le runtime appelle sa méthode <xref:System.ICustomFormatter.Format%2A>. Il passe à la méthode la valeur *formatString* de l'élément de mise en forme, s'il en existe un, ou `null` si ce n'est pas le cas, ainsi que l'implémentation de <xref:System.IFormatProvider>.  
+2.  Si une implémentation de <xref:System.ICustomFormatter> est disponible, le runtime appelle sa méthode <xref:System.ICustomFormatter.Format%2A>. Il passe à la méthode la valeur *formatString* de l’élément de mise en forme, s’il en existe une, ou `null` si ce n’est pas le cas, ainsi que l’implémentation de <xref:System.IFormatProvider>. Si l’appel à la méthode <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> retourne `null`, l’exécution se poursuit à l’étape suivante. Sinon, le résultat de l’appel à <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> est retourné.
   
-3.  Si la valeur implémente l'interface <xref:System.IFormattable>, la méthode de l'interface <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29> est appelée. La valeur *formatString*, s’il en existe une dans l’élément de mise en forme, est passée à la méthode, ou bien la valeur `null` dans le cas contraire. L'argument <xref:System.IFormatProvider> est déterminé comme suit :  
+3.  Si la valeur implémente l'interface <xref:System.IFormattable>, la méthode de l'interface <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29> est appelée. La valeur *formatString*, s’il en existe une dans l’élément de mise en forme, est passée à la méthode, ou bien la valeur `null` si ce n’est pas le cas. L'argument <xref:System.IFormatProvider> est déterminé comme suit :  
   
-    -   Pour une valeur numérique, si une méthode de mise en forme composite avec l'argument non null <xref:System.IFormatProvider> est appelée, le runtime demande un objet <xref:System.Globalization.NumberFormatInfo> de sa méthode <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>. S'il ne peut pas en fournir un, si la valeur de l'argument est `null`, ou si la méthode de mise en forme composite n'a pas de paramètre <xref:System.IFormatProvider>, l'objet <xref:System.Globalization.NumberFormatInfo> de la culture actuelle du thread est utilisé.  
+    -   Pour une valeur numérique, si une méthode de mise en forme composite avec l'argument non null <xref:System.IFormatProvider> est appelée, le runtime demande un objet <xref:System.Globalization.NumberFormatInfo> de sa méthode <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>. S’il ne peut pas en fournir un, si la valeur de l’argument est `null` ou si la méthode de mise en forme composite n’a pas de paramètre <xref:System.IFormatProvider>, l’objet <xref:System.Globalization.NumberFormatInfo> de la culture actuelle du thread est utilisé.  
   
-    -   Pour une valeur de date et d'heure, si une méthode de mise en forme composite avec l'argument non null <xref:System.IFormatProvider> est appelée, le runtime demande un objet <xref:System.Globalization.DateTimeFormatInfo> de sa méthode <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>. S'il ne peut pas en fournir un, si la valeur de l'argument est `null`, ou si la méthode de mise en forme composite n'a pas de paramètre <xref:System.IFormatProvider>, l'objet <xref:System.Globalization.DateTimeFormatInfo> de la culture actuelle du thread est utilisé.  
+    -   Pour une valeur de date et d'heure, si une méthode de mise en forme composite avec l'argument non null <xref:System.IFormatProvider> est appelée, le runtime demande un objet <xref:System.Globalization.DateTimeFormatInfo> de sa méthode <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>. S’il ne peut pas en fournir un, si la valeur de l’argument est `null` ou si la méthode de mise en forme composite n’a pas de paramètre <xref:System.IFormatProvider>, l’objet <xref:System.Globalization.DateTimeFormatInfo> de la culture actuelle du thread est utilisé.  
   
     -   Pour les objets d'autres types, si une méthode de mise en forme composite est appelée avec un argument <xref:System.IFormatProvider>, sa valeur est transmise directement à l'implémentation de <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType>. Dans le cas contraire, `null` est transmis à l’implémentation de <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType>.  
   

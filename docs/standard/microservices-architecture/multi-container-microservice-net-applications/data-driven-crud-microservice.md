@@ -1,21 +1,14 @@
 ---
 title: Création d’un microservice CRUD simple piloté par les données
 description: Architecture des microservices .NET pour les applications .NET en conteneur | Création d’un microservice CRUD simple piloté par les données
-keywords: Docker, microservices, ASP.NET, conteneur
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: ca4bfd31b505754b508555ff2771a6380ae023b4
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 85694cbfe8c30b8430200f0ffbd01379f11b3f9d
+ms.sourcegitcommit: c03eef711abe961a85db2b4d0715257d1524aef6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Création d’un microservice CRUD simple piloté par les données
 
@@ -258,11 +251,11 @@ catalog.api:
     - "5101:80"
 ```
 
-Les fichiers docker-compose.yml situés au niveau de la solution ne sont pas seulement plus flexibles que les fichiers de configuration situés au niveau du projet ou microservice. Ils sont également plus sécurisés si vous remplacez les variables d’environnement déclarées dans les fichiers docker-compose par des valeurs définies dans vos outils de déploiement (par exemple, lors de tâches de déploiement VSTS Docker). 
+Les fichiers docker-compose.yml situés au niveau de la solution non seulement sont plus flexibles que les fichiers de configuration situés au niveau du projet ou microservice, mais ils sont aussi plus sécurisés si vous remplacez les variables d’environnement déclarées dans les fichiers docker-compose par des valeurs définies dans vos outils de déploiement (par exemple, dans les tâches de déploiement VSTS Docker). 
 
 Enfin, vous pouvez obtenir cette valeur à partir de votre code à l’aide de Configuration\["ConnectionString"\], comme illustré dans la méthode ConfigureServices de l’exemple de code précédent.
 
-Toutefois, pour les environnements de production, vous devrez sans doute explorer d’autres moyens de stocker des secrets, comme les chaînes de connexion. Ceci est généralement géré par l’orchestrateur de votre choix, comme pour la [gestion de secrets Docker Swarm](https://docs.docker.com/engine/swarm/secrets/).
+Toutefois, pour les environnements de production, vous pouvez explorer d’autres moyens de stocker des secrets, comme les chaînes de connexion. Ceci est généralement géré par l’orchestrateur de votre choix, comme pour la [gestion de secrets Docker Swarm](https://docs.docker.com/engine/swarm/secrets/).
 
 ### <a name="implementing-versioning-in-aspnet-web-apis"></a>Implémentation de la gestion de version dans les API web ASP.NET
 

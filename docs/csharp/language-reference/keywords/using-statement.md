@@ -1,21 +1,14 @@
 ---
 title: using, instruction (référence C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - using statement [C#]
 ms.assetid: afc355e6-f0b9-4240-94dd-0d93f17d9fc3
-caps.latest.revision: 31
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 1fdf37e1bfc57bf850b332f167e57d3e05d23e78
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fa27039e8444090c8a516b92ba5ab62c7f93c51a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-statement-c-reference"></a>using, instruction (référence C#)
 Fournit une syntaxe pratique qui garantit l’utilisation correcte d’objets <xref:System.IDisposable>.  
@@ -25,10 +18,10 @@ Fournit une syntaxe pratique qui garantit l’utilisation correcte d’objets <x
   
  [!code-csharp[csrefKeywordsNamespace#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/using-statement_1.cs)]  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  <xref:System.IO.File> et <xref:System.Drawing.Font> sont des exemples de types managés qui accèdent à des ressources non managées (dans le cas présent, des handles de fichiers et des contextes d’appareil). Beaucoup d’autres types de ressources non managées et de bibliothèques de classes peuvent les encapsuler. Tous les types de cette sorte doivent implémentent l’interface <xref:System.IDisposable>.  
   
-Lorsque la durée de vie d’un `IDisposable` objet est limité à une méthode unique, vous devez déclarer et instancier dans un `using` instruction. L’instruction `using` appelle la méthode <xref:System.IDisposable.Dispose%2A> correctement sur l’objet et, quand vous l’utilisez comme indiqué précédemment, elle met également l’objet lui-même hors de portée dès que <xref:System.IDisposable.Dispose%2A> est appelée. Dans le bloc `using`, l’objet est en lecture seule et ne peut être ni modifié ni réassigné.  
+Quand la durée de vie d’un objet `IDisposable` est limitée à une seule méthode, vous devez le déclarer et l’instancier dans une instruction `using`. L’instruction `using` appelle la méthode <xref:System.IDisposable.Dispose%2A> correctement sur l’objet et, quand vous l’utilisez comme indiqué précédemment, elle met également l’objet lui-même hors de portée dès que <xref:System.IDisposable.Dispose%2A> est appelée. Dans le bloc `using`, l’objet est en lecture seule et ne peut être ni modifié ni réassigné.  
   
  L’instruction `using` garantit que la méthode <xref:System.IDisposable.Dispose%2A> est appelée même si une exception se produit lors de l’appel de méthodes sur l’objet. Vous pouvez obtenir le même résultat en plaçant l’objet dans un bloc try, puis en appelant <xref:System.IDisposable.Dispose%2A> dans un bloc finally ; c’est d’ailleurs ainsi que l’instruction `using` est traduite par le compilateur. L’exemple de code précédent se développe pour donner le code suivant au moment de la compilation (notez les accolades supplémentaires pour créer la portée limitée de l’objet) :  
   
@@ -42,7 +35,7 @@ Lorsque la durée de vie d’un `IDisposable` objet est limité à une méthode 
   
  [!code-csharp[csrefKeywordsNamespace#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/using-statement_4.cs)]  
   
-Pour plus d’informations sur la suppression de `IDisposable` , consultez [à l’aide des objets qui implémentent IDisposable](../../../standard/garbage-collection/using-objects.md).
+Pour plus d’informations sur la suppression d’objets `IDisposable`, consultez [Utilisation d’objets qui implémentent IDisposable](../../../standard/garbage-collection/using-objects.md).
 
 ## <a name="c-language-specification"></a>Spécification du langage C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

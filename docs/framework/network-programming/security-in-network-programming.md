@@ -1,8 +1,6 @@
 ---
-title: "Sécurité dans la programmation réseau - .NET Framework"
+title: 'Sécurité dans la programmation réseau : .NET Framework'
 ms.date: 03/14/2018
-ms.prod: .net-framework
-ms.topic: article
 helpviewer_keywords:
 - sending data, Internet security
 - protocols, Internet security
@@ -17,13 +15,11 @@ ms.assetid: afb07899-2707-49ab-a57f-e0caf20d0171
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2dd4133c31cf0595c06485a76490d78d469a0d38
-ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
-ms.translationtype: MT
+ms.openlocfilehash: a684fd1a7ce8cce52e00511b114cb4905ed0a42b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-in-network-programming"></a>Sécurité dans la programmation réseau
 
@@ -31,8 +27,8 @@ Les classes de l’espace de noms <xref:System.Net> de .NET Framework intègrent
   
 ## <a name="in-this-section"></a>Dans cette section
 
-[Transport Layer Security (TLS) meilleures pratiques avec .NET Framework](tls.md)  
-Décrit les meilleures pratiques TLS avec le .NET Framework.
+[Bonnes pratiques du protocole TLS (Transport Layer Security) avec le .NET Framework](tls.md)  
+Décrit les bonnes pratiques d’utilisation du protocole TLS avec le .NET Framework.
  
 [Utilisation de SSL (Secure Sockets Layer)](../../../docs/framework/network-programming/using-secure-sockets-layer.md)  
 Décrit comment utiliser des connexions SSL (Secure Sockets Layer).  

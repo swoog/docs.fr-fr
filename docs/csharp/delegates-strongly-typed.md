@@ -1,20 +1,13 @@
 ---
-title: "Délégués fortement typés"
-description: "Découvrez comment utiliser des types délégués génériques pour déclarer des types personnalisés lors de la création d’une fonctionnalité nécessitant des délégués."
-keywords: .NET, .NET Core
-author: BillWagner
-ms.author: wiwagn
+title: Délégués fortement typés
+description: Découvrez comment utiliser des types délégués génériques pour déclarer des types personnalisés lors de la création d’une fonctionnalité nécessitant des délégués.
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 564a683d-352b-4e57-8bac-b466529daf6b
-ms.openlocfilehash: 467ba18f8e032b9b3b8f480d4b10c92d0d7ba3b9
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.openlocfilehash: 2e4cc1c7bfa0aaa90f3aaefa0da64c5486a9d10f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strongly-typed-delegates"></a>Délégués fortement typés
 
@@ -39,7 +32,7 @@ public delegate void Action<in T1, in T2>(T1 arg1, T2 arg2);
 
 Le modificateur `in` sur l’argument de type générique est traité dans l’article sur la covariance.
 
-Il existe des variations de la `Action` délégué contenant jusqu'à 16 arguments comme <xref:System.Action%6016>.
+Il existe des variantes du délégué `Action` qui contiennent jusqu’à 16 arguments, comme <xref:System.Action%6016>.
 Il est important que ces définitions utilisent différents arguments génériques pour chacun des arguments de délégués : cela offre une flexibilité maximale. Les arguments de méthode ne doivent pas obligatoirement être du même type, mais il peuvent l’être.
 
 Utilisez l’un des types `Action` pour tout type délégué ayant un type de retour void.
@@ -55,12 +48,12 @@ public delegate TResult Func<in T1, in T2, out TResult>(T1 arg1, T2 arg2);
 
 Le modificateur `out` sur l’argument de type générique de résultat est traité dans l’article sur la covariance.
 
-Il existe des variations de la `Func` délégué avec les arguments d’entrée jusqu'à 16, tel que <xref:System.Func%6017>.
+Il existe des variantes du délégué `Func` qui contiennent jusqu’à 16 arguments d’entrée, comme <xref:System.Func%6017>.
 Par convention, le type du résultat est toujours le dernier paramètre de type dans toutes les déclarations `Func`.
 
 Utilisez l’un des types `Func` pour tout type délégué qui retourne une valeur.
 
-Il est également spécialisé <xref:System.Predicate%601> type pour un délégué qui retourne un test sur une valeur unique :
+Il existe aussi un type <xref:System.Predicate%601> spécialisé pour un délégué qui retourne un test sur une seule valeur :
 
 ```csharp
 public delegate bool Predicate<in T>(T obj);
@@ -82,4 +75,4 @@ Cela devrait vous procurer un gain de temps et réduire le nombre de nouveaux ty
 
 Dans l’article suivant, vous verrez plusieurs schémas d’utilisation courants des délégués.
 
-[Suivant](delegates-patterns.md)
+[Next](delegates-patterns.md)

@@ -1,21 +1,14 @@
 ---
 title: Quand choisir .NET Framework pour les conteneurs Docker
 description: Architecture de microservices .NET pour les applications .NET en conteneur | Quand choisir .NET Framework pour les conteneurs Docker
-keywords: Docker, microservices, ASP.NET, conteneur
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: eec258ff01bcfeb834fa7a1138fdf822fd00c996
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: e707c8f0e721915e829e41628891928594010b92
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Quand choisir .NET Framework pour les conteneurs Docker
 
@@ -61,7 +54,7 @@ En attendant, si une plateforme ou un service Azure ne prend toujours pas en cha
 -   **Portage vers .NET Core à partir du .NET Framework**
     [*https://docs.microsoft.com/dotnet/core/porting/index*](../../../core/porting/index.md)
 
--   **Guide de .NET Framework sur Docker**
+-   **Guide du .NET Framework sur Docker**
     [*https://docs.microsoft.com/dotnet/framework/docker/*](../../../framework/docker/index.md)
 
 -   **Vue d’ensemble des composants .NET**

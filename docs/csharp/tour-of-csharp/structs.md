@@ -1,20 +1,13 @@
 ---
-title: "Structs C# - Visite guidée du langage C#"
-description: "Apprendre les bases des types valeur de C#, appelés structs"
-keywords: .NET, C#, struct, type valeur
-author: BillWagner
-ms.author: wiwagn
+title: Structs C# - Visite guidée du langage C#
+description: Apprendre les bases des types valeur de C#, appelés structs
 ms.date: 08/10/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 88a74571-f741-4a31-a2b5-1ccf165535b8
-ms.openlocfilehash: fa840d80bba98889f75863db2612f196d78bd3c5
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: dac0952e6a55a16ecefec79f9789f9e2d44aada1
+ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="structs"></a>Structs
 
@@ -30,7 +23,7 @@ Une alternative consiste à faire du Point une struct.
 
 Maintenant, un seul objet est instancié, celui du tableau, et les instances `Point` sont stockées à la suite dans le tableau.
 
-Vous appelez les constructeurs de struct avec l’opérateur new, mais cela n’implique pas que la mémoire est allouée. Au lieu d’allouer dynamiquement un objet et de renvoyer une référence à cet objet, un constructeur de struct retourne simplement la valeur du struct (généralement dans un emplacement temporaire sur la pile), et cette valeur est ensuite copiée si nécessaire.
+Vous appelez les constructeurs de struct avec l’opérateur `new`, mais cela n’implique pas que de la mémoire soit allouée. Au lieu d’allouer dynamiquement un objet et de renvoyer une référence à cet objet, un constructeur de struct retourne simplement la valeur du struct (généralement dans un emplacement temporaire sur la pile), et cette valeur est ensuite copiée si nécessaire.
 
 Avec les classes, deux variables peuvent faire référence au même objet et, par conséquent, les opérations sur une variable peuvent affecter le même objet référencé par l'autre variable. Avec les structs, les variables disposent chacune de leur propre copie des données, et il n’est pas possible pour les opérations sur une d’affecter les autres. Par exemple, la sortie générée par le code suivant varie selon que Point est une classe ou une structure.
 

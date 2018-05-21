@@ -1,12 +1,6 @@
 ---
-title: "Guide pratique pour configurer le suivi réseau"
-ms.custom: 
+title: Guide pratique pour configurer le suivi réseau
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - formatting [.NET Framework], network tracing
 - network tracing, configuring
@@ -17,21 +11,19 @@ helpviewer_keywords:
 - application configuration files, network tracing
 - sockets, trace output
 ms.assetid: 5ef9fe4b-8d3d-490e-9259-1d014b2181af
-caps.latest.revision: "23"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: b58887dc2614ab31a422eb74ce8d0805cf8153bf
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 77eb199e5e8bbfb0874f8189a8daa2904b31d48e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-configure-network-tracing"></a>Guide pratique pour configurer le suivi réseau
 Le fichier de configuration de l'application ou de l'ordinateur contient les paramètres qui déterminent le format et le contenu des traces réseau. Avant d'effectuer cette procédure, assurez-vous que le traçage est activé. Pour plus d’informations sur l’activation du suivi, consultez [Activation du suivi réseau](../../../docs/framework/network-programming/enabling-network-tracing.md).  
   
- Le fichier de configuration de l’ordinateur, machine.config, est stocké dans le dossier %Windir%\Microsoft.NET\Framework dans le répertoire dans lequel Windows a été installé. Il est un fichier machine.config distinct dans les dossiers sous %Windir%\Microsoft.NET\Framework pour chaque version du .NET Framework sont installées sur l’ordinateur (par exemple, C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\machine.config ou C:\Windows\ Microsoft.NET\Framework64\v4.0.30319\Config\machine.config.).  
+ Le fichier de configuration de l’ordinateur, machine.config, est stocké dans le dossier %Windir%\Microsoft.NET\Framework dans le répertoire dans lequel Windows a été installé. Il y a un fichier machine.config distinct dans les dossiers sous %Windir%\Microsoft.NET\Framework pour chaque version de .NET Framework installée sur l’ordinateur (par exemple, C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\machine.config ou C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config\machine.config).  
   
  Ces paramètres peuvent également être effectués dans le fichier de configuration de l'application, qui est prioritaire sur le fichier de configuration de votre ordinateur.  
   

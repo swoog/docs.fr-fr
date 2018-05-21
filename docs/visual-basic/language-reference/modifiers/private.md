@@ -7,20 +7,23 @@ helpviewer_keywords:
 - Private keyword [Visual Basic]
 - Private keyword [Visual Basic], syntax
 ms.assetid: aba74a2e-5824-4613-bf63-b9ec7787f4e6
-ms.openlocfilehash: d7935cf691d961591ff5e3d2a290afb88de9165a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 40b64b8d2b6306d458b7a9cc657c5b7dc4270eb2
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="private-visual-basic"></a>Private (Visual Basic)
 Spécifie qu’un ou plusieurs éléments de programmation déclarés sont accessibles uniquement à partir de leur contexte de déclaration, y compris à partir des types contenus.  
   
 ## <a name="remarks"></a>Notes  
  Si un élément de programmation représente des fonctionnalités exclusives ou contient des données confidentielles, vous souhaitez généralement limiter son accès aussi strictement que possible. Vous obtenez une limitation maximale en autorisant uniquement le module, classe ou structure qui le définit pour y accéder. Pour limiter l’accès à un élément de cette façon, vous pouvez déclarer avec `Private`.  
-  
+
+> [!NOTE]
+> Vous pouvez également utiliser le [protégé privé](private-protected.md) modificateur d’accès, ce qui rend un membre accessible à partir de dans la classe et de classes dérivées, situés dans son assembly conteneur.
+
 ## <a name="rules"></a>Règles  
-  
+
 -   **Contexte de déclaration.** Vous pouvez utiliser `Private` seulement au niveau du module. Cela signifie que le contexte de déclaration pour un `Private` élément doit être un module, classe ou structure et ne peut pas être un fichier source, un espace de noms, une interface ou une procédure.  
   
 ## <a name="behavior"></a>Comportement  
@@ -59,7 +62,8 @@ Spécifie qu’un ou plusieurs éléments de programmation déclarés sont acces
  [Public](../../../visual-basic/language-reference/modifiers/public.md)  
  [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
  [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
- [Niveaux d’accès dans Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
+ [Protégé privé](./private-protected.md)   
+ [Protected Friend](./protected-friend.md)[accéder aux niveaux en Visual Basic    ](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
  [Procédures](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
  [Structures](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
  [Objets et classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

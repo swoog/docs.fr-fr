@@ -1,21 +1,14 @@
 ---
-title: "Recommandations générales"
-description: "Architecture de microservices .NET pour les applications .NET en conteneur | Recommandations générales"
-keywords: Docker, microservices, ASP.NET, conteneur
+title: Recommandations générales
+description: Architecture de microservices .NET pour les applications .NET en conteneur | Recommandations générales
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: fa58d1d81b2d1523baf123d4963db2ca00fee15d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: ccaae99f4c46fe739041f9b9e907a702303e62f6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="general-guidance"></a>Recommandations générales
 
@@ -23,7 +16,7 @@ Cette section indique brièvement dans quels cas choisir .NET Core ou .NET Frame
 
 Vous avez tout intérêt à utiliser .NET Core, avec des conteneurs Windows ou Linux, pour votre application serveur Docker en conteneur dans les cas suivants :
 
--   Vous avez des besoins multiplateformes. Par exemple, vous souhaitez utiliser à la fois des conteneurs Linux et Windows.
+-   vous avez des besoins multiplateformes ; Par exemple, vous souhaitez utiliser à la fois des conteneurs Linux et Windows.
 
 -   L’architecture de votre application est basée sur des microservices.
 
@@ -45,10 +38,10 @@ Le fait d’utiliser le .NET Framework sur Docker peut améliorer vos expérienc
 
 ### <a name="additional-resources"></a>Ressources supplémentaires
 
--   **Livre électronique : Modernize existing .NET Framework applications with Azure and Windows Containers**
+-   **Livre électronique : Moderniser des applications .NET Framework existantes avec Azure et les conteneurs Windows**
     [*https://aka.ms/liftandshiftwithcontainersebook*](https://aka.ms/liftandshiftwithcontainersebook)
 
--   **Exemples d’applications : Modernization of legacy ASP.NET web apps by using Windows Containers**
+-   **Exemples d’application : Modernisation d’applications web ASP.NET héritées à l’aide de conteneurs Windows**
     [*https://aka.ms/eshopmodernizing*](https://aka.ms/eshopmodernizing)
 
 

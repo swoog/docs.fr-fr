@@ -9,13 +9,13 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  nextTutorialHref: list-collection
+  nextTutorialHref: list-collection.yml
   nextTutorialTitle: Collections en C#
-  ms.openlocfilehash: 03d46a90033d480046b63bdec3c4c83ab39c2f56
-  ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+  ms.openlocfilehash: ac9c8488c787b1dc9b4fb60b18834d328faa4e83
+  ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
   ms.translationtype: HT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 04/18/2018
+  ms.lasthandoff: 05/10/2018
 items:
 - durationInMinutes: 2
   content: >
@@ -95,4 +95,4 @@ items:
     > [!NOTE]
 
     > Cette expérience de codage en ligne est en mode d’aperçu. Si vous rencontrez des problèmes, veuillez les signaler [sur le référentiel dotnet/try](https://github.com/dotnet/try/issues).
-- content: "Vous avez terminé le guide de démarrage rapide sur l’interpolation de chaîne. \n\nVous pouvez poursuivre ces guides de démarrage rapide dans votre propre environnement de développement local. Découvrez les principes fondamentaux du [développement local](local-environment.md), puis choisissez un guide de démarrage rapide. Vous pouvez suivre ce même guide de démarrage, passer directement au guide de démarrage rapide suivant ou recommencer le guide de démarrage rapide [Nombres en C#](numbers-in-csharp-local.md).\n\nPour plus d’informations sur l’interpolation de chaîne, consultez la rubrique [Interpolation de chaîne](../language-reference/tokens/interpolated.md) dans les informations de référence sur C#."
+- content: "Vous avez terminé le guide de démarrage rapide sur l’interpolation de chaîne. \n\nVous pouvez poursuivre ces guides de démarrage rapide dans votre propre environnement de développement local. Découvrez les principes fondamentaux du [développement local](local-environment.md), puis choisissez un guide de démarrage rapide. Vous pouvez suivre ce même guide de démarrage, passer directement au guide de démarrage rapide suivant ou recommencer le guide de démarrage rapide [Nombres en C#](numbers-in-csharp-local.md).\n\nPour plus d’informations, consultez la rubrique [Interpolation de chaîne](../language-reference/tokens/interpolated.md) et le tutoriel [Interpolation de chaîne en C#](../tutorials/string-interpolation.md)."

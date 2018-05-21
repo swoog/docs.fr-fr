@@ -5,11 +5,11 @@ helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
-ms.openlocfilehash: 7407d18c58dd3d12337c6845627d83f02eaf7fa0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 120347e5bff7f0d6c7120af0cb250936ca39ea16
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="built-in-types-table-c-reference"></a>Tableau des types intégrés (référence C#)
 Le tableau suivant liste les mots clés des types C# intégrés, qui sont des alias des types prédéfinis de l’espace de noms <xref:System>.  
@@ -37,14 +37,14 @@ Le tableau suivant liste les mots clés des types C# intégrés, qui sont des 
   
  Les mots clés des types C# et leurs alias sont interchangeables. Par exemple, vous pouvez déclarer une variable de type entier à l’aide de l’une des deux déclarations suivantes :  
   
-```  
+```csharp  
 int x = 123;  
 System.Int32 x = 123;  
 ```  
   
  Pour afficher le type réel d’un type C#, utilisez la méthode système `GetType()`. Par exemple, l’instruction ci-après affiche l’alias système qui représente le type de `myVariable` :  
   
-```  
+```csharp  
 Console.WriteLine(myVariable.GetType());  
 ```  
   

@@ -1,10 +1,7 @@
 ---
-title: "Compatibilité de versions dans le .NET Framework"
+title: Compatibilité de versions dans le .NET Framework
 ms.custom: updateeachrelease
-ms.date: 10/17/2017
-ms.prod: .net-framework
-ms.technology: dotnet-clr
-ms.topic: article
+ms.date: 04/10/2018
 helpviewer_keywords:
 - .NET Framework, version compatibility
 - .NET Framework 4.5, compatibility with earlier versions
@@ -12,13 +9,11 @@ helpviewer_keywords:
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 45bb0174bd4c757b6e51621f36b25eb5f4354c94
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 15c5455bd604765ebcd78aa418d2f74f4141628d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="version-compatibility-in-the-net-framework"></a>Compatibilité de versions dans le .NET Framework
 La compatibilité descendante signifie qu'une application développée pour une version particulière d'une plateforme s'exécutera sur les versions ultérieures de cette plateforme. Le .NET Framework essaie d'optimiser la compatibilité descendante : le code source écrit pour une version du .NET Framework doit se compiler sur les versions ultérieures du .NET Framework, et les fichiers binaires qui s'exécutent sur une version du .NET Framework doivent se comporter de la même manière sur les versions ultérieures du .NET Framework.  
@@ -50,7 +45,7 @@ La compatibilité descendante signifie qu'une application développée pour une 
   
  Dans la pratique, cette compatibilité peut être arrêtée par des modifications apparemment sans importance du .NET Framework et des modifications des techniques de programmation. Par exemple, les améliorations des performances dans le .NET Framework 4.5 peuvent exposer une condition de concurrence critique qui ne se produit pas sur les versions antérieures. De la même façon, l’utilisation d’un chemin d’accès codé en dur aux assemblys .NET Framework, la comparaison d’égalité avec une version particulière du .NET Framework, et l’obtention de la valeur d’un champ privé à l’aide de la réflexion ne sont pas des pratiques à compatibilités descendante. De plus, chaque version du .NET Framework inclut des résolutions de bogue et des modifications relatives à la sécurité qui peuvent affecter la compatibilité de certains composants et applications.  
   
- Si votre application ou composant ne fonctionne pas comme prévu sur .NET Framework 4.5 (avec ses versions intermédiaires, [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7 ou 4.7.1), utilisez les listes de vérification suivantes :  
+ Si votre application ou composant ne fonctionne pas comme prévu sur .NET Framework 4.5 (avec ses versions intermédiaires, [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1 ou 4.7.2), utilisez les listes de vérification suivantes :  
   
 -  Si votre application a été développée pour s’exécuter sur n’importe quelle version du .NET Framework en commençant par .NET Framework 4.0, consultez [Compatibilité des applications dans le .NET Framework](application-compatibility.md) pour générer des listes de modifications entre votre version du .NET Framework ciblée et la version sur laquelle votre application est en cours d’exécution.  
 
@@ -64,7 +59,7 @@ La compatibilité descendante signifie qu'une application développée pour une 
   
 -   Si vous déterminez qu’une modification du [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] a endommagé votre application, consultez le [schéma des paramètres d’exécution](../../../docs/framework/configure-apps/file-schema/runtime/index.md) pour déterminer si vous pouvez utiliser un paramètre d’exécution dans le fichier de configuration de votre application afin de restaurer le comportement précédent.  
   
--   Si vous rencontrez un problème qui n’est pas documenté, classez un bogue [Microsoft Connect](http://go.microsoft.com/fwlink/?LinkID=154815) et envoyez le numéro de bogue à [netfxcf@microsoft.com](mailto:netfxcf@microsoft.com).  
+-   Si vous rencontrez un problème qui n’est pas documenté, ouvrez un problème sur le [site de la communauté des développeurs pour .NET](https://developercommunity.visualstudio.com/spaces/61/index.html) ou ouvrez un problème dans le [dépôt GitHub de Microsoft/dotnet](https://github.com/microsoft/dotnet/issues).
   
 ## <a name="compatibility-and-side-by-side-execution"></a>Compatibilité et exécution côte à côte  
  Si vous ne trouvez pas de solution de contournement appropriée pour votre problème, souvenez-vous que le .NET Framework 4.5, et ses versions intermédiaires, s’exécutent côte à côte avec les versions 1.1, 2.0 et 3.5, et qu’ils constituent une mise à jour intégrée qui remplace la version 4. Pour les applications ciblant les versions 1.1, 2.0 et 3.5, vous pouvez installer la version appropriée du .NET Framework sur l'ordinateur cible pour exécuter l'application dans l'environnement idéal. Pour plus d’informations sur l’exécution côte à côte, consultez [Exécution côte à côte](../../../docs/framework/deployment/side-by-side-execution.md).  

@@ -7,11 +7,11 @@ f1_keywords:
 helpviewer_keywords:
 - enum keyword [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: 72feb6ee25070a6930b01b69e0a726041d34b0c7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9714277f87095b709e37b582cd3435374d9a1555
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="enum-c-reference"></a>enum (référence C#)
 Le mot clé `enum` est utilisé pour déclarer une énumération. Il s’agit d’un type distinct qui se compose d’un ensemble de constantes nommées, appelé liste d’énumérateurs.  
@@ -20,13 +20,13 @@ Le mot clé `enum` est utilisé pour déclarer une énumération. Il s’agit d�
   
  Par défaut, le premier énumérateur a la valeur 0 et chaque énumérateur successif est augmenté de 1. Par exemple, dans l’énumération suivante, `Sat` est `0`, `Sun` est `1`, `Mon` est `2`, et ainsi de suite.  
   
-```  
+```csharp  
 enum Day {Sat, Sun, Mon, Tue, Wed, Thu, Fri};  
 ```  
   
  Les énumérateurs peuvent utiliser des initialiseurs pour remplacer les valeurs par défaut, comme illustré dans l’exemple suivant.  
   
-```  
+```csharp  
 enum Day {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};  
 ```  
   
@@ -34,7 +34,7 @@ enum Day {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
   
  Chaque type énumération a un type sous-jacent qui peut être tout type intégral sauf [char](../../../csharp/language-reference/keywords/char.md). Le type sous-jacent par défaut des éléments de l’énumération est [int](../../../csharp/language-reference/keywords/int.md). Pour déclarer une énumération d’un autre type intégral, comme [byte](../../../csharp/language-reference/keywords/byte.md), utilisez un signe deux-points après l’identificateur, suivi du type, comme illustré dans l’exemple suivant.  
   
-```  
+```csharp  
 enum Day : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};  
 ```  
   
@@ -49,7 +49,7 @@ enum Day : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
   
  Le type sous-jacent spécifie la quantité de stockage allouée pour chaque énumérateur. Cependant, un cast explicite est nécessaire pour convertir du type `enum` en un type intégral. Par exemple, l’instruction suivante affecte l’énumérateur `Sun` à une variable du type [int](../../../csharp/language-reference/keywords/int.md) en utilisant un cast pour convertir de `enum` en `int`.  
   
-```  
+```csharp  
 int x = (int)Day.Sun;  
 ```  
   

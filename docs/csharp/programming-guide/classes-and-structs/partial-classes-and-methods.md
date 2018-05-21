@@ -6,11 +6,11 @@ helpviewer_keywords:
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: 97d0f23177fae68792034c33366e57a445d62217
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d257846821f14a377c505099e38971dd5d8a297a
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Classes et méthodes partielles (Guide de programmation C#)
 Il est possible de fractionner la définition d’une [classe](../../../csharp/language-reference/keywords/class.md), d’un [struct](../../../csharp/language-reference/keywords/struct.md), d’une [interface](../../../csharp/language-reference/keywords/interface.md) ou d’une méthode entre deux fichiers sources ou plus. Chaque fichier source contient une section de la définition de méthode ou de type, et toutes les parties sont combinées au moment où l’application est compilée.  
@@ -131,7 +131,7 @@ Il est possible de fractionner la définition d’une [classe](../../../csharp/l
   
  Une déclaration de méthode partielle se compose de deux parties : la définition et l’implémentation. Celles-ci peuvent être situées dans des parties distinctes ou dans la même partie d’une classe partielle. En l’absence de déclaration d’implémentation, le compilateur optimise à la fois la déclaration de définition et tous les appels à la méthode.  
   
-```  
+```csharp  
 // Definition in file1.cs  
 partial void onNameChanged();  
   

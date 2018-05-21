@@ -1,24 +1,17 @@
 ---
 title: class (référence C#)
 ms.date: 07/18/2017
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - class_CSharpKeyword
 - class
 helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-caps.latest.revision: 30
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: ae4b019ee88b6f331a76c750ab94fc76a3343adb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 20968d2f72195db6d16de1b726c6e946b91ffcd5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="class-c-reference"></a>class (référence C#)
 
@@ -32,7 +25,7 @@ class TestClass
 }
 ```
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 Le langage C# ne permet qu'un seul héritage. Cela signifie qu’une classe peut uniquement hériter de l’implémentation d’une seule classe de base. Toutefois, une classe peut implémenter plusieurs interfaces. Le tableau suivant répertorie des exemples d’héritage de classe et d’implémentation d’interface :
 
 |Héritage|Exemple|
@@ -44,9 +37,9 @@ Le langage C# ne permet qu'un seul héritage. Cela signifie qu’une classe peut
 
 Les classes que vous déclarez directement dans un espace de noms, non imbriquées dans d’autres classes, peuvent être [public](../../../csharp/language-reference/keywords/public.md) ou [internal](../../../csharp/language-reference/keywords/internal.md). Par défaut, les classes sont `internal`.
 
-Membres de classe, y compris les classes imbriquées, peuvent être [public](../../../csharp/language-reference/keywords/public.md), `protected internal`, [protégé](../../../csharp/language-reference/keywords/protected.md), [interne](../../../csharp/language-reference/keywords/internal.md), [privé](../../../csharp/language-reference/keywords/private.md), ou `private protected`. Par défaut, les membres sont [private](../../../csharp/language-reference/keywords/private.md).
+Les membres de classe, notamment les classes imbriquées, peuvent être [public](../../../csharp/language-reference/keywords/public.md), `protected internal`, [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md), [private](../../../csharp/language-reference/keywords/private.md) ou `private protected`. Par défaut, les membres sont [private](../../../csharp/language-reference/keywords/private.md).
 
-Pour plus d’informations, consultez [Modificateurs d’accès](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).
+Pour plus d’informations, consultez la page [Modificateurs d’accès](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).
 
 Vous pouvez déclarer des classes génériques qui ont des paramètres de type. Pour plus d’informations, consultez [Classes génériques](../../../csharp/programming-guide/generics/generic-classes.md).
 
@@ -76,7 +69,7 @@ Une classe peut contenir les déclarations des membres suivants :
 
 - [Interfaces](../../../csharp/programming-guide/interfaces/index.md)
 
-- [Structures](../../../csharp/programming-guide/classes-and-structs/structs.md)
+- [Structs](../../../csharp/programming-guide/classes-and-structs/structs.md)
 
 ## <a name="example"></a>Exemple
 L’exemple suivant explique comment déclarer des champs, des constructeurs et des méthodes de classe. Il illustre également l’instanciation d’un objet et l’impression des données d’une instance. Dans cet exemple, deux classes sont déclarées. La première, `Child`, contient deux champs privés (`name` et `age`), deux constructeurs publics et une méthode publique. La deuxième, `StringTest`, contient `Main`.

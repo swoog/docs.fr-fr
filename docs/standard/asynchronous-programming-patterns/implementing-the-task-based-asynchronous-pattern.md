@@ -1,10 +1,6 @@
 ---
-title: "Implémentation du modèle asynchrone basé sur des tâches"
+title: Implémentation du modèle asynchrone basé sur des tâches
 ms.date: 06/14/2017
-ms.prod: .net
-ms.technology:
-- dotnet-clr
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,18 +11,13 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: fab6bd41-91bd-44ad-86f9-d8319988aa78
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 238f164fec78fe5e6dae9e7880fabc0a386bf399
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 0ed73e8d7279d5371c305e7bd29c08ac00f6a329
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-the-task-based-asynchronous-pattern"></a>Implémentation du modèle asynchrone basé sur des tâches
 Vous pouvez implémenter le modèle asynchrone basé sur des tâches (TAP) de trois façons : à l’aide des compilateurs C# et Visual Basic dans Visual Studio, manuellement, ou par une combinaison des méthodes du compilateur et des méthodes manuelles. Les sections suivantes abordent chacune de ces méthodes en détail. Vous pouvez utiliser le modèle TAP pour implémenter à la fois des opérations asynchrones liées aux calculs et liées aux E/S. La section [Charges de travail](#workloads) aborde chacun des types d'opérations.

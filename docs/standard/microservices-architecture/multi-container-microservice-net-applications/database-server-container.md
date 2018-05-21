@@ -1,21 +1,14 @@
 ---
-title: "Utilisation d’un serveur de base de données s’exécutant en tant que conteneur"
-description: "Architecture des microservices .NET pour les applications .NET en conteneur | Utilisation d’un serveur de base de données s’exécutant en tant que conteneur"
-keywords: Docker, microservices, ASP.NET, conteneur
+title: Utilisation d’un serveur de base de données s’exécutant en tant que conteneur
+description: Architecture des microservices .NET pour les applications .NET en conteneur | Utilisation d’un serveur de base de données s’exécutant en tant que conteneur
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/30/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 70dd3686519fc38ae35910284948ccf95e743ef7
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8ff6afbe9618df918e0a965fa1202bbb999eee5c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-a-database-server-running-as-a-container"></a>Utilisation d’un serveur de base de données s’exécutant en tant que conteneur
 
@@ -54,10 +47,10 @@ L’exécution de SQL Server en tant que conteneur n’est pas seulement utile �
 
 #### <a name="additional-resources"></a>Ressources supplémentaires
 
--   **Exécuter l’image Docker SQL Server sur Linux, Mac ou Windows**
+-   **Exécuter l’image de SQL Server Docker sur Linux, Mac ou Windows**
     [*https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker*](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker)
 
--   **Se connecter et interroger SQL Server sur Linux avec sqlcmd**
+-   **Se connecter à SQL Server sur Linux et interroger avec sqlcmd**
     [*https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd*](https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd)
 
 ### <a name="seeding-with-test-data-on-web-application-startup"></a>Alimentation à l’aide de données de test au démarrage de l’application web

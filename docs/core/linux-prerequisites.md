@@ -3,17 +3,12 @@ title: Prérequis pour .NET Core sur Linux
 description: Versions Linux et dépendances .NET Core prises en charge pour développer, déployer et exécuter des applications .NET Core sur des ordinateurs Linux.
 author: jralexander
 ms.author: johalex
-ms.date: 04/19/2018
-ms.topic: conceptual
-ms.prod: dotnet-core
-ms.devlang: dotnet
-ms.workload:
-- dotnetcore
-ms.openlocfilehash: 9d986ed56bbc6f803988fde4b5500cd5d5364050
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.date: 05/08/2018
+ms.openlocfilehash: 41656bf8f18c2b66c35f0a65e4af0949db4464f9
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Prérequis pour .NET Core sur Linux
 
@@ -38,7 +33,7 @@ NET Core 2.x est pris en charge sur les distributions/versions Linux 64 bits sui
 * Oracle Linux 7
 * Fedora 27, 26
 * Debian 9, 8.7 ou versions ultérieures
-* Ubuntu 17.10, 16.04, 14.04
+* Ubuntu 18.04, 17.10, 16.04, 14.04
 * Linux Mint 18, 17
 * openSUSE 42.3 ou versions ultérieures
 * SUSE Enterprise Linux (SLES) 12 Service Pack 2 ou ultérieur
@@ -147,24 +142,29 @@ Pour obtenir de l’aide sur l’inscription à l’accès au canal Red Hat .NET
 
 **.NET Core 2.0**
 
-|Runtimes / SDK          |Ubuntu 17.10  |Ubuntu 16.04 / Linux Mint 18|Ubuntu 14.04 / Linux Mint 17|
-|-------------------------|--------------|----------------------------|----------------------------|
-|Runtime .NET Core 2.0.6  |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.0.6)|[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.0.6)          |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.0.6)            |
-|Runtime .NET Core 2.0.5  |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.0.5)|[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.0.5)          |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.0.5)            |
-|SDK .NET Core 2.1.103    |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.1.103)|[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.1.103)            |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.1.103)            |
-|SDK .NET Core 2.0.3      |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.0.3)|[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.0.3)          |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.0.3)            |
+|Runtimes / SDK          |Ubuntu 18.04    |Ubuntu 17.10    |Ubuntu 16.04 / Linux Mint 18|Ubuntu 14.04 / Linux Mint 17|
+|-------------------------|----------------|----------------|----------------------------|----------------------------|
+|Runtime .NET Core 2.0.7  |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/runtime-2.0.7)|[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.0.7)|[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.0.7)          |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.0.7)            |
+|Runtime .NET Core 2.0.6  |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/runtime-2.0.6)|[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.0.6)|[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.0.6)          |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.0.6)            |
+|Runtime .NET Core 2.0.5  |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/runtime-2.0.5)|[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.0.5)|[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.0.5)          |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.0.5)            |
+|SDK .NET Core 2.1.105    |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/sdk-2.1.105)|[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.1.105)|[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.1.105)            |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.1.105)            |
+|SDK .NET Core 2.1.103    |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/sdk-2.1.103)|[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.1.103)|[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.1.103)            |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.1.103)            |
+|SDK .NET Core 2.0.3      |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/sdk-2.0.3)|[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.0.3)|[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.0.3)          |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.0.3)            |
+|SDK .NET Core 2.0.0      |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/sdk-2.0.0)|[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.0.0)|[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.0.0)          |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.0.0)            |
 
 **.NET Core 2.1**
 
 >[!IMPORTANT]
 > Pour utiliser .NET Core 2.1 avec Visual Studio, vous devez [installer Visual Studio 2017 15.7 Preview 1 ou une version ultérieure](https://www.visualstudio.com/vs/preview).
 
-|Runtimes / SDK                  |Ubuntu 17.10    |Ubuntu 16.04 / Linux Mint 18|Ubuntu 14.04 / Linux Mint 17|
-|---------------------------------|----------------|----------------------------|----------------------------|
-|Runtime .NET Core 2.1.0 Preview 2 |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.1.0-preview2)|[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.1.0-preview2)            |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.1.0-preview2)            |
-|Runtime .NET Core 2.1.0 Preview 1 |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.1.0-preview1)|[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.1.0-preview1)            |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.1.0-preview1)            |
-|SDK .NET Core 2.1.300 Preview 2   |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.1.300-preview2)|[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.1.300-preview2)            |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.1.300-preview2)
-|SDK .NET Core 2.1.300 Preview 1   |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.1.300-preview1)|[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.1.300-preview1)            |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.1.300-preview1)            |
+|Runtimes / SDK                  |Ubuntu 18.04    |Ubuntu 17.10    |Ubuntu 16.04 / Linux Mint 18|Ubuntu 14.04 / Linux Mint 17|
+|---------------------------------|----------------|----------------|----------------------------|----------------------------|
+|Runtime .NET Core 2.1.0-rc1      |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/runtime-2.1.0-rc1)|[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.1.0-rc1)|[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.1.0-rc1)            |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.1.0-rc1)            |
+|Runtime .NET Core 2.1.0 Preview 2 |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/runtime-2.1.0-preview2)|[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.1.0-preview2)|[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.1.0-preview2)            |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.1.0-preview2)            |
+|Runtime .NET Core 2.1.0 Preview 1 |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/runtime-2.1.0-preview1)|[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.1.0-preview1)|[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.1.0-preview1)            |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.1.0-preview1)            |
+|SDK .NET Core 2.1.300-rc1  |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/sdk-2.1.300-rc1)|[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.1.300-rc1)|[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.1.300-rc1)            |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.1.300-rc1)            |
+|SDK .NET Core 2.1.300 Preview 2   |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/sdk-2.1.300-preview2)|[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.1.300-preview2)|[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.1.300-preview2)            |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.1.300-preview2)            |
+|SDK .NET Core 2.1.300 Preview 1   |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/sdk-2.1.300-preview1)|[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.1.300-preview1)|[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.1.300-preview1)            |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.1.300-preview1)            |
 
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
@@ -203,10 +203,13 @@ Pour installer .NET Core sur des versions (64 bits) prises en charge de Debian :
 
 |Runtimes / SDK          |Debian 9       |Debian 8       |
 |-------------------------|---------------|---------------|
+|Runtime .NET Core 2.0.7  |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/debian9/runtime-2.0.7)   |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/debian8/runtime-2.0.7)   |
 |Runtime .NET Core 2.0.6  |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/debian9/runtime-2.0.6)   |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/debian8/runtime-2.0.6)   |
 |Runtime .NET Core 2.0.5  |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/debian9/runtime-2.0.5)   |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/debian8/runtime-2.0.5)   |
+|SDK .NET Core 2.1.105    |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.1.105)   |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.1.105)   |
 |SDK .NET Core 2.1.103    |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.1.103)   |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.1.103)   |
 |SDK .NET Core 2.0.3      |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.0.3)   |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.0.3)   |
+|SDK .NET Core 2.0.0      |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.0.0)   |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.0.0)   |
 
 **.NET Core 2.1**
 
@@ -215,8 +218,10 @@ Pour installer .NET Core sur des versions (64 bits) prises en charge de Debian :
 
 |Runtimes / SDK                  |Debian 9       |Debian 8       |
 |---------------------------------|---------------|---------------|
+|Runtime .NET Core 2.1.0-rc1      |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/debian9/runtime-2.1.0-rc1)   |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/debian8/runtime-2.1.0-rc1)   |
 |Runtime .NET Core 2.1.0 Preview 2 |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/debian9/runtime-2.1.0-preview2)   |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/debian8/runtime-2.1.0-preview2)   |
 |Runtime .NET Core 2.1.0 Preview 1 |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/debian9/runtime-2.1.0-preview1)   |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/debian8/runtime-2.1.0-preview1)   |
+|SDK .NET Core 2.1.300-rc1        |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.1.300-rc1)   |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.1.300-rc1)        |
 |SDK .NET Core 2.1.300 Preview 2   |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.1.300-preview2)   |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.1.300-preview2)   |
 |SDK .NET Core 2.1.300 Preview 1   |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.1.300-preview1)   |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.1.300-preview1)   |
 
@@ -254,8 +259,10 @@ Pour installer .NET Core sur des versions prises en charge de Fedora :
 
 |Runtimes / SDK          |Fedora 26 ou version ultérieure |Fedora 25 ou version antérieure |
 |-------------------------|-------------------|----------------------|
+|Runtime .NET Core 2.0.7  |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.0.7)       |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/fedora25/runtime-2.0.7)           |
 |Runtime .NET Core 2.0.6  |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.0.6)       |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/fedora25/runtime-2.0.6)           |
 |Runtime .NET Core 2.0.5  |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.0.5)       |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/fedora25/runtime-2.0.5)           |
+|SDK .NET Core 2.1.105    |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/fedora26/sdk-2.1.105)       |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/fedora25/sdk-2.1.105)           |
 |SDK .NET Core 2.1.103    |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/fedora26/sdk-2.1.103)       |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/fedora25/sdk-2.1.103)           |
 |SDK .NET Core 2.0.3      |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/fedora26/sdk-2.0.3)       |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/fedora25/sdk-2.0.3)           |
 
@@ -264,12 +271,14 @@ Pour installer .NET Core sur des versions prises en charge de Fedora :
 >[!IMPORTANT]
 > Pour utiliser .NET Core 2.1 avec Visual Studio, vous devez [installer Visual Studio 2017 15.7 Preview 1 ou une version ultérieure](https://www.visualstudio.com/vs/preview).
 
-|Runtimes / SDK                  |Fedora 26 ou version ultérieure |Fedora 25 ou version antérieure |
+|Runtimes / SDK                  |Fedora 27          |Fedora 26             |
 |---------------------------------|-------------------|----------------------|
-|Runtime .NET Core 2.1.0 Preview 2 |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.1.0-preview2)       |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/fedora25/runtime-2.1.0-preview2)           |
-|Runtime .NET Core 2.1.0 Preview 1 |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.1.0-preview1)       |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/fedora25/runtime-2.1.0-preview1)           |
-|SDK .NET Core 2.1.300 Preview 2   |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/fedora26/sdk-2.1.300-preview2)       |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/fedora25/sdk-2.1.300-preview2)           |
-|SDK .NET Core 2.1.300 Preview 1   |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/fedora26/sdk-2.1.300-preview1)       |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/fedora25/sdk-2.1.300-preview1)           |
+|Runtime .NET Core 2.1.0-rc1      |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/fedora27/runtime-2.1.0-rc1)       |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.1.0-rc1)           |
+|Runtime .NET Core 2.1.0 Preview 2 |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/fedora27/runtime-2.1.0-preview2)       |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.1.0-preview2)           |
+|Runtime .NET Core 2.1.0 Preview 1 |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/fedora27/runtime-2.1.0-preview1)       |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.1.0-preview1)           |
+|SDK .NET Core 2.1.300-rc1        |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/fedora27/sdk-2.1.300-rc1)       |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/fedora26/sdk-2.1.300-rc1)           |
+|SDK .NET Core 2.1.300 Preview 2   |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/fedora27/sdk-2.1.300-preview2)       |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/fedora26/sdk-2.1.300-preview2))           |
+|SDK .NET Core 2.1.300 Preview 1   |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/fedora27/runtime-2.1.0-preview1)       |[Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.1.0-preview1)           |
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
@@ -308,18 +317,23 @@ Pour installer .NET Core pour les versions/distributions (64 bits) prises en cha
 
 **.NET Core 2.0**
 
+* [Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.0.6) du Runtime .NET Core 2.0.7
 * [Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.0.6) du Runtime .NET Core 2.0.6
 * [Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.0.5) du Runtime .NET Core 2.0.5
+* [Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.1.105) du SDK .NET Core 2.1.105
 * [Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.1.103) du SDK .NET Core 2.1.103
 * [Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.0.3) du SDK .NET Core 2.0.3
+* [Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.0.0) du SDK .NET Core 2.0.0
  
 **.NET Core 2.1**
 
 >[!IMPORTANT]
 > Pour utiliser .NET Core 2.1 avec Visual Studio, vous devez [installer Visual Studio 2017 15.7 Preview 1 ou une version ultérieure](https://www.visualstudio.com/vs/preview/).
 
+* [Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.1.0-rc1) du Runtime .NET Core 2.1.0-rc1
 * [Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.1.0-preview2) du Runtime .NET Core 2.1.0 Preview 2
 * [Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.1.0-preview1) du Runtime .NET Core 2.1.0 Preview 1
+* [Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.1.300-rc1) du SDK .NET Core 2.1.300-rc1
 * [Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.1.300-preview2) du SDK .NET Core 2.1.300 Preview 2
 * [Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.1.300-preview1) du SDK .NET Core 2.1.300 Preview 1
 
@@ -352,18 +366,46 @@ Pour installer .NET Core 2.x sur des versions/distributions (64 bits) prises en 
 
 **.NET Core 2.0**
 
+**SUSE Linux Enterprise Server**
+
+* [Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/sles/runtime-2.0.7) du Runtime .NET Core 2.0.7
+* [Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/sles/runtime-2.0.6) du Runtime .NET Core 2.0.6
+* [Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/sles/runtime-2.0.5) du Runtime .NET Core 2.0.5
+* [Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/sles/sdk-2.1.105) du SDK .NET Core 2.1.105
+* [Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/sles/sdk-2.1.103) du SDK .NET Core 2.1.103
+* [Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/sles/sdk-2.0.3) du SDK .NET Core 2.0.3
+* [Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/sles/sdk-2.0.0) du SDK .NET Core 2.0.0
+
+**openSUSE**
+
+* [Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.0.7) du Runtime .NET Core 2.0.7
 * [Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.0.6) du Runtime .NET Core 2.0.6
 * [Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.0.5) du Runtime .NET Core 2.0.5
+* [Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/opensuse/sdk-2.1.105) du SDK .NET Core 2.1.105
 * [Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/opensuse/sdk-2.1.103) du SDK .NET Core 2.1.103
 * [Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/opensuse/sdk-2.0.3) du SDK .NET Core 2.0.3
+* [Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/opensuse/sdk-2.0.0) du SDK .NET Core 2.0.0
  
 **.NET Core 2.1**
 
 >[!IMPORTANT]
 > Pour utiliser .NET Core 2.1 avec Visual Studio, vous devez [installer Visual Studio 2017 15.7 Preview 1 ou une version ultérieure](https://www.visualstudio.com/vs/preview).
 
+**SUSE Linux Enterprise Server**
+
+* [Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/sles/runtime-2.1.0-rc1) du Runtime .NET Core 2.1.0-rc1
+* [Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/sles/runtime-2.1.0-preview2) du Runtime .NET Core 2.1.0 Preview 2
+* [Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/sles/runtime-2.1.0-preview1) du Runtime .NET Core 2.1.0 Preview 1
+* [Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/sles/sdk-2.1.300-rc1) du SDK .NET Core 2.1.300-rc1
+* [Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/sles/sdk-2.1.300-preview2) du SDK .NET Core 2.1.300 Preview 2
+* [Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/sles/sdk-2.1.300-preview1) du SDK .NET Core 2.1.300 Preview 1
+
+**openSUSE**
+
+* [Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.1.0-rc1) du Runtime .NET Core 2.1.0-rc1
 * [Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.1.0-preview2) du Runtime .NET Core 2.1.0 Preview 2
 * [Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.1.0-preview1) du Runtime .NET Core 2.1.0 Preview 1
+* [Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/opensuse/sdk-2.1.300-rc1) du SDK .NET Core 2.1.300-rc1
 * [Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/opensuse/sdk-2.1.300-preview2) du SDK .NET Core 2.1.300 Preview 2
 * [Lien d’installation](https://www.microsoft.com/net/download/linux-package-manager/opensuse/sdk-2.1.300-preview1) du SDK .NET Core 2.1.300 Preview 1
 

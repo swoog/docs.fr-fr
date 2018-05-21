@@ -1,13 +1,6 @@
 ---
-title: "Émission d'assemblys et de méthodes dynamiques"
-ms.custom: 
+title: Émission d'assemblys et de méthodes dynamiques
 ms.date: 08/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - reflection emit
 - dynamic assemblies
@@ -16,13 +9,11 @@ helpviewer_keywords:
 - assemblies [.NET Framework], emitting dynamic assemblies
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c724620c987b2ee871dc282bca0dd3da1a5031bf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 527da43807a0dbba8f5365c92f566053f10d49f5
+ms.sourcegitcommit: c03eef711abe961a85db2b4d0715257d1524aef6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="emitting-dynamic-methods-and-assemblies"></a>Émission d'assemblys et de méthodes dynamiques
 Cette section décrit un ensemble de types managés dans l'espace de noms <xref:System.Reflection.Emit>, qui permettent à un compilateur ou à un outil d'émettre des métadonnées et du langage MSIL (Microsoft Intermediate Language) au moment de l'exécution et de générer éventuellement un fichier exécutable portable sur le disque. Les moteurs de script et les compilateurs sont les principaux utilisateurs de cet espace de noms. Dans cette section, la fonctionnalité fournies par l'espace de noms <xref:System.Reflection.Emit> est appelée émission de réflexion.  

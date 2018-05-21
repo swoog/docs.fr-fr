@@ -1,31 +1,20 @@
 ---
 title: Conservation de l'ordre en PLINQ
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - PLINQ queries, order preservation
 ms.assetid: 10d202bc-19e1-4b5c-bbf1-9a977322a9ca
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 164dce7c58e1ce44972e0e390e4f0bf2be8de548
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 0b98fdcd425ae62aca0149df5136c28edc023bf0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="order-preservation-in-plinq"></a>Conservation de l'ordre en PLINQ
 Dans PLINQ, l’objectif est d’augmenter les performances tout en préservant l’exactitude. Une requête doit s’exécuter aussi rapidement que possible, mais toujours générer des résultats corrects. Dans certains cas, l’exactitude requiert que l’ordre de la séquence source soit conservé ; toutefois, le classement peut coûter cher en calcul. Par conséquent, par défaut, PLINQ ne conserve pas l’ordre de la séquence source. À cet égard, PLINQ est similaire à [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)], mais pas à LINQ to Objects, qui conserve le classement.  
@@ -114,7 +103,7 @@ Dans PLINQ, l’objectif est d’augmenter les performances tout en préservant 
 |<xref:System.Linq.ParallelEnumerable.SequenceEqual%2A>|Comparaison classée|Comparaison non classée|  
 |<xref:System.Linq.ParallelEnumerable.Single%2A>|Non applicable|Non applicable|  
 |<xref:System.Linq.ParallelEnumerable.SingleOrDefault%2A>|Non applicable|Non applicable|  
-|<xref:System.Linq.ParallelEnumerable.Skip%2A>|Ignore les premiers éléments *n*|Ignore tous les éléments *n*|  
+|<xref:System.Linq.ParallelEnumerable.Skip%2A>|Ignore les *n* premiers éléments|Ignore les *n* éléments|  
 |<xref:System.Linq.ParallelEnumerable.SkipWhile%2A>|Résultats classés.|Non déterministe. Exécute SkipWhile dans l’ordre arbitraire actuel|  
 |<xref:System.Linq.ParallelEnumerable.Sum%2A>|Sortie non déterministe pour les opérations non associatives ou non commutatives|Sortie non déterministe pour les opérations non associatives ou non commutatives|  
 |<xref:System.Linq.ParallelEnumerable.Take%2A>|Prend les premiers éléments `n`|Prend tous les éléments `n`|  

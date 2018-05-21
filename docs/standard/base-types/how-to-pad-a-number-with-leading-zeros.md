@@ -1,13 +1,7 @@
 ---
-title: "Comment : remplir un nombre avec des zéros non significatifs"
-ms.custom: 
+title: 'Comment : remplir un nombre avec des zéros non significatifs'
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,18 +11,13 @@ helpviewer_keywords:
 - number formatting [.NET Framework]
 - numbers [.NET Framework], format strings
 ms.assetid: 0b2c2cb5-c580-4891-8d81-cb632f5ec384
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 7ea854f69e59c614d03f10ff546bd3181f5b51ff
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8ce3b59db027ffebf616a035b018629cb7aed30c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-pad-a-number-with-leading-zeros"></a>Comment : remplir un nombre avec des zéros non significatifs
 Vous pouvez ajouter des zéros non significatifs à un entier en utilisant la [chaîne de format numérique standard](../../../docs/standard/base-types/standard-numeric-format-strings.md) « D » avec un spécificateur de précision. Vous pouvez ajouter des zéros non significatifs aux nombres entiers et à virgule flottante en utilisant une [chaîne de format numérique personnalisée](../../../docs/standard/base-types/custom-numeric-format-strings.md). Cette rubrique montre comment utiliser les deux méthodes pour remplir un nombre avec des zéros non significatifs.  
@@ -39,9 +28,9 @@ Vous pouvez ajouter des zéros non significatifs à un entier en utilisant la [c
   
 2.  Déterminez si vous souhaitez afficher l'entier en tant que valeur décimale ou que valeur hexadécimale.  
   
-    -   Pour afficher l'entier en tant que valeur décimale, appelez sa méthode `ToString(String)`, puis transmettez la chaîne « D*n* » comme valeur du paramètre `format`, où *n* représente la longueur minimale de la chaîne.  
+    -   Pour afficher l’entier comme valeur décimale, appelez sa méthode `ToString(String)`, puis passez la chaîne « D*n* » comme valeur du paramètre `format`, où *n* représente la longueur minimale de la chaîne.  
   
-    -   Pour afficher l'entier en tant que valeur hexadécimale, appelez sa méthode `ToString(String)`, puis transmettez la chaîne « X*n* » comme valeur du paramètre `format`, où *n* représente la longueur minimale de la chaîne.  
+    -   Pour afficher l’entier comme valeur hexadécimale, appelez sa méthode `ToString(String)`, puis passez la chaîne « X*n* » comme valeur du paramètre `format`, où *n* représente la longueur minimale de la chaîne.  
   
      Vous pouvez également recourir à la chaîne de format dans une méthode, comme <xref:System.String.Format%2A> ou <xref:System.Console.WriteLine%2A>, qui utilise la [mise en forme composite](../../../docs/standard/base-types/composite-formatting.md).  
   
@@ -60,7 +49,7 @@ Vous pouvez ajouter des zéros non significatifs à un entier en utilisant la [c
   
 4.  Ajoutez le nombre de zéros non significatifs à inclure dans la chaîne mise en forme à la longueur de la chaîne numérique non remplie. Cette opération définit la longueur totale de la chaîne remplie.  
   
-5.  Appelez la méthode `ToString(String)` de la valeur entière, puis transmettez la chaîne « D*n* » pour les chaînes décimales et la chaîne « X*n* » pour les chaînes hexadécimales, où *n* représente la longueur totale de la chaîne remplie. Vous pouvez également utiliser la chaîne de format « D*n* » ou « X*n* » dans une méthode qui prend en charge la mise en forme composite.  
+5.  Appelez la méthode `ToString(String)` de la valeur entière, puis transmettez la chaîne « D*n* » pour les chaînes décimales et la chaîne « X*n* » pour les chaînes hexadécimales, où *n* représente la longueur totale de la chaîne remplie. Vous pouvez également utiliser la chaîne de format « D*n* » ou « X*n* » dans une méthode qui prend en charge la mise en forme composite.  
   
  L'exemple suivant remplit une valeur entière avec cinq zéros non significatifs.  
   

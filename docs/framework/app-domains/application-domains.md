@@ -14,11 +14,11 @@ helpviewer_keywords:
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04028a2b350493a3cc8f2c92bafafd9658fc7c58
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 811443dbd8e2483f7fc1b0f8c44afb4ebcd9efcf
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/18/2018
 ---
 # <a name="application-domains"></a>Domaines d'application
 Les systèmes d'exploitation et les environnements d'exécution assurent généralement une certaine forme d'isolation entre les applications. Par exemple, Windows utilise des processus pour isoler des applications. Cette isolation est nécessaire pour que le code en cours d'exécution dans une application ne puisse pas affecter de manière négative d'autres applications non liées.  
@@ -74,11 +74,11 @@ Les systèmes d'exploitation et les environnements d'exécution assurent génér
   
  Il existe trois options de chargement des assemblys indépendants du domaine :  
   
--   <xref:System.LoaderOptimization> ne charge aucun assembly comme indépendant du domaine, sauf Mscorlib, qui est toujours chargé comme indépendant du domaine. Ce paramètre est désigné par « domaine unique », car il est fréquemment utilisé lorsque l'hôte n'exécute qu'une seule application dans le processus.  
-  
--   <xref:System.LoaderOptimization> charge tous les assemblys comme indépendants du domaine. Utilisez ce paramètre lorsque plusieurs domaines d'application figurent dans le processus et qu'ils exécutent tous le même code.  
-  
--   <xref:System.LoaderOptimization> charge les assemblys avec nom fort comme indépendants du domaine s'ils ont été installés, ainsi que toutes leurs dépendances, dans le Global Assembly Cache. Les autres assemblys sont chargés et compilés juste-à-temps séparément pour chaque domaine d'application dans lequel ils sont chargés, et peuvent donc être déchargés du processus. Utilisez ce paramètre lors de l'exécution de plusieurs applications dans le même processus, ou si vous disposez d'un mélange d'assemblys partagés par de nombreux domaines d'application et d'assemblys qui doivent être déchargés du processus.  
+- <xref:System.LoaderOptimization.SingleDomain?displayProperty=nameWithType> ne charge aucun assembly comme indépendant du domaine, sauf Mscorlib, qui est toujours chargé comme indépendant du domaine. Ce paramètre est désigné par « domaine unique », car il est fréquemment utilisé lorsque l'hôte n'exécute qu'une seule application dans le processus.
+
+- <xref:System.LoaderOptimization.MultiDomain?displayProperty=nameWithType> charge tous les assemblys comme indépendants du domaine. Utilisez ce paramètre lorsque plusieurs domaines d'application figurent dans le processus et qu'ils exécutent tous le même code.
+
+- <xref:System.LoaderOptimization.MultiDomainHost?displayProperty=nameWithType> charge les assemblys avec nom fort comme indépendants du domaine s'ils ont été installés, ainsi que toutes leurs dépendances, dans le Global Assembly Cache. Les autres assemblys sont chargés et compilés juste-à-temps séparément pour chaque domaine d'application dans lequel ils sont chargés, et peuvent donc être déchargés du processus. Utilisez ce paramètre lors de l'exécution de plusieurs applications dans le même processus, ou si vous disposez d'un mélange d'assemblys partagés par de nombreux domaines d'application et d'assemblys qui doivent être déchargés du processus.
   
  Le code compilé juste-à-temps ne peut pas être partagé pour les assemblys chargés dans le contexte de chargement, à l'aide de la méthode <xref:System.Reflection.Assembly.LoadFrom%2A> de la classe <xref:System.Reflection.Assembly>, ou chargés à partir d'images à l'aide de surcharges de la méthode <xref:System.Reflection.Assembly.Load%2A> qui spécifient des tableaux d'octets.  
   

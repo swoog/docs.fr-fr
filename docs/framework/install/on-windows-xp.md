@@ -1,19 +1,15 @@
 ---
-title: "Installer le .NET Framework sur Windows XP"
-description: "Découvrez comment installer le .NET Framework sur Windows XP."
+title: Installer le .NET Framework sur Windows XP
+description: Découvrez comment installer le .NET Framework sur Windows XP.
+ms.custom: updateeachrelease
 author: rlander
 ms.author: mairaw
-keywords: .NET Framework, installer
-ms.date: 08/03/2017
-ms.topic: article
-ms.prod: .net-framework
-ms.devlang: dotnet
-ms.workload: dotnet
-ms.openlocfilehash: 83def2091cf1fdc7d3d359c98aa3116a009d465d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.date: 04/10/2018
+ms.openlocfilehash: 8ac695353e36466f05bae129ff1c37ba3d8cbb69
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="install-the-net-framework-on-windows-xp-and-windows-server-2003"></a>Installer le .NET Framework sur Windows XP et Windows Server 2003
 
@@ -24,7 +20,7 @@ Un grand nombre d’applications sur Windows nécessitent l’installation du .N
 
 ![Impossible de démarrer cette application](./media/this-application-could-not-be-started.png)
 
-Ces instructions ont pour but de vous aider à installer les versions du .NET Framework dont vous avez besoin. Le [.NET Framework 4.7.1](https://www.microsoft.com/en-us/download/details.aspx?id=56115&desc=dotnet47) est la dernière version. Cette version n’est pas prise en charge sur Windows XP et Windows Server 2003. Elle est fournie avec [Windows 10 Fall Creators Update](https://www.microsoft.com/software-download/windows10) et [Windows Server 2016 version 1709](https://docs.microsoft.com/windows-server/get-started/get-started-with-1709).
+Ces instructions ont pour but de vous aider à installer les versions du .NET Framework dont vous avez besoin. [.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) est la dernière version. Cette version n’est pas prise en charge sur Windows XP et Windows Server 2003. Elle est fournie avec la [mise à jour d’avril 2018 de Windows 10](https://www.microsoft.com/software-download/windows10).
 
 ## <a name="net-framework-403"></a>.NET Framework 4.0.3
 

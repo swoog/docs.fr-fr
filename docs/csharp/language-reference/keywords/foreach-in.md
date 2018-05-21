@@ -1,9 +1,6 @@
 ---
-title: "foreach, in (référence C#)"
+title: foreach, in (référence C#)
 ms.date: 10/11/2017
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 f1_keywords:
 - foreach
 - foreach_CSharpKeyword
@@ -12,14 +9,11 @@ helpviewer_keywords:
 - foreach statement [C#]
 - in keyword [C#]
 ms.assetid: 5a9c5ddc-5fd3-457a-9bb6-9abffcd874ec
-caps.latest.revision: "29"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: d5601682d53a01ff07aba7e416aa81ded4c03e4e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: f00ae873e615f653d3e760f82b157a57fdaef6ed
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="foreach-in-c-reference"></a>foreach, in (référence C#)
 L’instruction `foreach` répète un groupe d’instructions incorporées pour chaque élément d’un tableau ou d’une collection d’objets qui implémente l’interface <xref:System.Collections.IEnumerable?displayProperty=nameWithType> ou <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>. L’instruction `foreach` est utilisée pour itérer la collection dans le but d’obtenir les informations dont vous avez besoin. Elle ne peut pas être utilisée pour ajouter ou supprimer des éléments de la collection source pour éviter des effets secondaires imprévisibles. Si vous avez besoin d’ajouter ou de supprimer des éléments de la collection source, utilisez une boucle [for](for.md).
@@ -34,13 +28,13 @@ L’instruction `foreach` répète un groupe d’instructions incorporées pour 
 
  [Utilisation de foreach avec des tableaux](../../programming-guide/arrays/using-foreach-with-arrays.md)  
 
- [Guide pratique pour accéder à une classe de collection à l’aide de foreach](../../programming-guide/classes-and-structs/how-to-access-a-collection-class-with-foreach.md)  
+ [Comment : accéder à une classe de collection à l’aide de foreach](../../programming-guide/classes-and-structs/how-to-access-a-collection-class-with-foreach.md)  
 
 ## <a name="example"></a>Exemple
- Le code suivant présente trois exemples.
+ Le code suivant montre trois exemples.
 
 > [!TIP]
-> Vous pouvez modifier les exemples pour faire des essais avec la syntaxe et essayez différentes utilisations qui ressemblent plus à votre cas d’usage. Appuyez sur « Exécuter » pour exécuter le code, puis modifier et appuyez à nouveau sur « Exécuter ».
+> Vous pouvez modifier les exemples pour faire des essais avec la syntaxe et essayer différentes utilisations correspondant mieux à votre cas d’usage. Cliquez sur « Exécuter » pour exécuter le code, modifiez-le, puis recliquez sur « Exécuter ».
 
 -   Une boucle `foreach` typique qui affiche le contenu d’un tableau d’entiers
 

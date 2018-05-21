@@ -4,16 +4,11 @@ description: Apprendre à déployer des applications .NET Core avec les outils d
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/18/2017
-ms.topic: conceptual
-ms.prod: dotnet-core
-ms.devlang: dotnet
-ms.workload:
-- dotnetcore
-ms.openlocfilehash: 21e824e6092b0d30e0499ff05c5471a291c8d269
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 7b009068422686442ebff83b9400c365f34a3154
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a>Déploiement d’applications .NET Core avec les outils de l’interface de ligne de commande (CLI)
 
@@ -63,11 +58,15 @@ Le déploiement d’un déploiement dépendant du framework sans dépendances ti
       ```
    Ceci crée une version de publication (au lieu d’une version Debug) de votre application. Les fichiers résultants sont placés dans un répertoire nommé *publish* qui se trouve dans un sous-répertoire du répertoire *bin* de votre projet.
 
-En même temps que les fichiers de votre application, le processus de publication produit un fichier de base de données du programme (.pdb) qui contient des informations de débogage sur votre application. Le fichier est surtout utile pour le débogage d’exceptions. Vous pouvez choisir de ne pas le distribuer avec les fichiers de votre application. Vous devez toutefois l’enregistrer au cas où vous souhaiteriez déboguer la build Release de votre application.
+   En même temps que les fichiers de votre application, le processus de publication produit un fichier de base de données du programme (.pdb) qui contient des informations de débogage sur votre application. Le fichier est surtout utile pour le débogage d’exceptions. Vous pouvez choisir de ne pas le distribuer avec les fichiers de votre application. Vous devez toutefois l’enregistrer au cas où vous souhaiteriez déboguer la build Release de votre application.
 
-Vous pouvez déployer l’ensemble complet des fichiers d’application de la façon qui vous convient. Par exemple, vous pouvez les empaqueter dans un fichier Zip, utiliser une simple commande `copy` ou les déployer avec n’importe quel package d’installation de votre choix. Une fois l’installation terminée, les utilisateurs peuvent exécuter votre application en utilisant la commande `dotnet` suivie du nom de l’application. Par exemple : `dotnet fdd.dll`.
+   Vous pouvez déployer l’ensemble complet des fichiers d’application de la façon qui vous convient. Par exemple, vous pouvez les empaqueter dans un fichier Zip, utiliser une simple commande `copy` ou les déployer avec n’importe quel package d’installation de votre choix.
 
-Outre les binaires de l’application, votre programme d’installation doit également regrouper le programme d’installation du framework partagé ou vérifier qu’il est bien installé comme prérequis de l’installation de l’application.  L’installation du framework partagé nécessite un accès Administrateur/racine.
+1. Exécuter votre application
+
+   Une fois l’installation terminée, les utilisateurs peuvent exécuter votre application en utilisant la commande `dotnet` suivie du nom de l’application. Par exemple : `dotnet fdd.dll`.
+
+   Outre les binaires de l’application, votre programme d’installation doit également regrouper le programme d’installation du framework partagé ou vérifier qu’il est bien installé comme prérequis de l’installation de l’application.  L’installation du framework partagé nécessite un accès Administrateur/racine.
 
 ## <a name="framework-dependent-deployment-with-third-party-dependencies"></a>Déploiement dépendant du framework avec des dépendances tierces
 

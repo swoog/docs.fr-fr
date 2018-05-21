@@ -1,29 +1,22 @@
 ---
 title: protected (référence C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - protected
 - protected_CSharpKeyword
 helpviewer_keywords:
 - protected keyword [C#]
 ms.assetid: 05ce3794-6675-4025-bddb-eaaa0ec22892
-caps.latest.revision: 20
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 18278ed28f899d9030d6056eca9bbe83ebec04c4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a3115fe82b452f52ee75cf222302ece0fc67b330
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="protected-c-reference"></a>protected (référence C#)
 Le mot clé `protected` est un modificateur d’accès de membre. 
 
- > Cette page traite `protected` accès. Le `protected` le mot clé est également dans le cadre de la [ `protected internal` ](./protected-internal.md) et [ `private protected` ](./private-protected.md) les modificateurs d’accès. 
+ > Cette page traite de l’accès `protected`. Le mot clé `protected` fait également partie des modificateurs d’accès [`protected internal`](./protected-internal.md) et [`private protected`](./private-protected.md). 
 
 Un membre protégé est accessible dans sa classe et par les instances de la classe dérivée. 
 

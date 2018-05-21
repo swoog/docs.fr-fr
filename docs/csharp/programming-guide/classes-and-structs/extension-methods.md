@@ -6,11 +6,11 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: bf25ddda2c7e381f0b43798b28179b18338d71cb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e2e63953e130dc83ce83bcdd2f8e9a2ffc7fe5f3
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="extension-methods-c-programming-guide"></a>Méthodes d’extension (Guide de programmation C#)
 Les méthodes d'extension vous permettent d'« ajouter » des méthodes à des types existants sans créer un type dérivé, ni recompiler ou modifier le type d'origine. Les méthodes d'extension sont un type particulier de méthode statique appelées comme s'il s'agissait de méthodes d'instance sur le type étendu. Pour le code client écrit en C#, F# et Visual Basic, il n’y a aucune différence apparente lors de l’appel entre une méthode d’extension et les méthodes qui sont réellement définies dans un type.  
@@ -29,13 +29,13 @@ Les méthodes d'extension vous permettent d'« ajouter » des méthodes à des
   
  La méthode d'extension `WordCount` peut être mise à portée avec cette directive `using` :  
   
-```  
+```csharp  
 using ExtensionMethods;  
 ```  
   
  Elle peut être appelée à partir d'une application à l'aide de cette syntaxe :  
   
-```  
+```csharp  
 string s = "Hello Extension Methods";  
 int i = s.WordCount();  
 ```  
@@ -46,7 +46,7 @@ int i = s.WordCount();
   
  En général, vous appellerez probablement les méthodes d’extension beaucoup plus souvent que vous n’implémenterez vos propres méthodes. Comme les méthodes d'extension sont appelées à l'aide de la syntaxe de méthode d'instance, aucune connaissance particulière n'est requise pour les utiliser depuis le code client. Pour activer des méthodes d'extension pour un type particulier, ajoutez simplement une directive `using` pour l'espace de noms dans lequel les méthodes sont définies. Par exemple, pour utiliser les opérateurs de requête standard, ajoutez la directive `using` à votre code :  
   
-```  
+```csharp  
 using System.Linq;  
 ```  
   

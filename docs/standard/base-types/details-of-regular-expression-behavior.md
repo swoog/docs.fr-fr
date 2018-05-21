@@ -1,13 +1,7 @@
 ---
-title: "Comportement détaillé des expressions régulières"
-ms.custom: 
+title: Comportement détaillé des expressions régulières
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,18 +9,13 @@ helpviewer_keywords:
 - regular expressions, behavior
 - .NET Framework regular expressions, behavior
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 5b471cd8e934880fc8095fbad68b460174ec338c
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: bc4d8fdc39153f227e8344ea1da52a0dba2688d0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="details-of-regular-expression-behavior"></a>Comportement détaillé des expressions régulières
 Le moteur d’expression régulière du .NET Framework est un analyseur d’expression régulière rétroactive qui incorpore un moteur NFA (Nondeterministic Finite Automaton) tel que celui utilisé par Perl, Python, Emacs et Tcl. Cette particularité le distingue des moteurs d’expression régulière pure DFA (Deterministic Finite Automaton) plus rapides, mais plus limités, comme ceux d’awk, egrep ou lex. Elle le distingue également des moteurs NFA POSIX standardisés, mais plus lents. La section suivante décrit les trois types de moteurs d’expression régulière et explique pourquoi les expressions régulières dans le .NET Framework sont implémentées à l’aide d’un moteur NFA classique.  
@@ -139,7 +128,7 @@ Le moteur d’expression régulière du .NET Framework est un analyseur d’expr
      [!code-csharp[Conceptual.RegularExpressions.Design#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lookbehind1.cs#5)]
      [!code-vb[Conceptual.RegularExpressions.Design#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lookbehind1.vb#5)]  
   
-     L'expression régulière `^[A-Z0-9]([-!#$%&'.*+/=?^`{}|~\w])*(?<=[A-Z0-9])$` est définie comme indiqué dans le tableau suivant.  
+     L’expression régulière `^[A-Z0-9]([-!#$%&'.*+/=?^`{}|~\w])*(?<=[A-Z0-9])$` est définie comme indiqué dans le tableau suivant.  
   
     |Motif|Description|  
     |-------------|-----------------|  

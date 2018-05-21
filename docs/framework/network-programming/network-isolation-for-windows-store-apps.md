@@ -1,23 +1,15 @@
 ---
-title: "Isolement réseau pour les applications du Windows Store"
-ms.custom: 
+title: Isolement réseau pour les applications du Windows Store
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b064497c-d956-46b8-838d-7a0223c7e200
-caps.latest.revision: "7"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: ba7e480f50d3a339648229f17152eb28b28ec159
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: d3a26d6c3fc500691fa007abfe9c8fd069f9e812
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="network-isolation-for-windows-store-apps"></a>Isolement réseau pour les applications du Windows Store
 Les classes des espaces de noms <xref:System.Net>, <xref:System.Net.Http> et <xref:System.Net.Http.Headers> peuvent être utilisées pour développer des applications Windows Store et des applications de bureau. Lorsqu’elles sont utilisées dans une application du Windows Store, les classes de ces espaces de noms sont affectées par l’isolement réseau, qui fait partie du modèle de sécurité des applications utilisé par [!INCLUDE[win8](../../../includes/win8-md.md)]. Les fonctionnalités réseau appropriées doivent être activées dans le manifeste d’une application du Windows Store pour que le système autorise l’accès réseau.  
@@ -37,8 +29,8 @@ Les classes des espaces de noms <xref:System.Net>, <xref:System.Net.Http> et <xr
   
 ## <a name="see-also"></a>Voir aussi  
  [Connexion à un service web](http://go.microsoft.com/fwlink/?LinkID=245696)  
- [Instructions et liste de vérification pour l’isolement réseau](http://go.microsoft.com/fwlink/?LinkID=228265)  
- [Démarrage rapide : Connexion à l’aide de HttpClient](http://go.microsoft.com/fwlink/?LinkId=245697)  
- [L’utilisation des gestionnaires de HttpClient](http://go.microsoft.com/fwlink/?LinkId=245699)  
- [Comment sécuriser les connexions client HTTP](http://go.microsoft.com/fwlink/?LinkId=245698)  
+ [Consignes et liste de vérification pour l’isolement réseau](http://go.microsoft.com/fwlink/?LinkID=228265)  
+ [Démarrage rapide : connexion avec HttpClient](http://go.microsoft.com/fwlink/?LinkId=245697)  
+ [Guide pratique pour utiliser les gestionnaires HttpClient](http://go.microsoft.com/fwlink/?LinkId=245699)  
+ [Guide pratique pour sécuriser les connexions HttpClient](http://go.microsoft.com/fwlink/?LinkId=245698)  
  [Exemple HttpClient](http://go.microsoft.com/fwlink/?LinkId=242550)

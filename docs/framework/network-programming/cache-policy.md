@@ -1,12 +1,6 @@
 ---
-title: "Stratégie de cache"
-ms.custom: 
+title: Stratégie de cache
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - time-based cache policies
 - location-based cache policies
@@ -16,16 +10,14 @@ helpviewer_keywords:
 - content cache policies
 - expired content
 ms.assetid: 1a7e04ec-7872-41c2-96c6-52566dcb412b
-caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: bafad45e6b6b546707c4f805f857e85549f0f071
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 36cf61982bb5a83e6031c35a19ba8ebf0b94aa6d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cache-policy"></a>Stratégie de cache
 Une stratégie de cache définit les règles utilisées pour déterminer si une requête peut être satisfaite à l’aide d’une copie mise en cache de la ressource demandée. Les applications spécifient les exigences d’actualisation du cache du client, mais la stratégie de cache effective est déterminée par les exigences de cache du client, les exigences d’expiration du contenu du serveur, et les exigences de revalidation du serveur. L’interaction entre la stratégie de cache du client et les exigences du serveur ont toujours comme résultat la stratégie de cache la plus restrictive, afin d’aider à garantir que le contenu le plus récent est renvoyé à l’application cliente.  

@@ -7,11 +7,11 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: c6071e7a3c3bfcc96c57ecb34632a911835685fd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d2f8a2f192dc319ad806aeef4bfbaeecc44b07a3
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="readonly-c-reference"></a>readonly (référence C#)
 Le mot clé `readonly` est un modificateur que vous pouvez utiliser sur des champs. Lorsqu’une déclaration de champ inclut un modificateur `readonly`, les assignations aux champs introduites par la déclaration peuvent se produire uniquement dans le cadre de la déclaration ou dans un constructeur de la même classe.  
@@ -25,7 +25,7 @@ Le mot clé `readonly` est un modificateur que vous pouvez utiliser sur des cham
   
 -   Lorsque la variable est initialisée dans la déclaration, par exemple :  
   
-    ```  
+    ```csharp  
     public readonly int y = 5;  
     ```  
   
@@ -34,7 +34,7 @@ Le mot clé `readonly` est un modificateur que vous pouvez utiliser sur des cham
 > [!NOTE]
 >  Le mot clé `readonly` est différent du mot clé [const](../../../csharp/language-reference/keywords/const.md). Un champ `const` ne peut être initialisé qu'au moment de la déclaration du champ. Un champ `readonly` peut être initialisé dans la déclaration ou dans un constructeur. C'est pourquoi, les champs `readonly` peuvent avoir des valeurs différentes en fonction du constructeur utilisé. De même, alors qu’un champ `const` est une constante au moment de la compilation, le champ `readonly` peut être utilisé pour des constantes au moment de l’exécution, comme dans l’exemple suivant :  
   
-```  
+```csharp  
 public static readonly uint timeStamp = (uint)DateTime.Now.Ticks;  
 ```  
   

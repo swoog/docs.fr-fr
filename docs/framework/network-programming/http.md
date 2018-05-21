@@ -1,12 +1,6 @@
 ---
 title: HTTP
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - protocols, HTTP
 - sending data, HTTP
@@ -19,19 +13,17 @@ helpviewer_keywords:
 - HTTP, about HTTP
 - HttpWebRequest class, sending and receiving data
 ms.assetid: 985fe5d8-eb71-4024-b361-41fbdc1618d8
-caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: f72a77e19d04c0dd55887628033f7c975ac3ff25
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: ed61a8addd204320560c773e917613c52e56bff4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="http"></a>HTTP
-Le .NET Framework fournit la prise en charge complète pour le protocole HTTP, ce qui constitue la majeure partie du trafic Internet, avec la <xref:System.Net.HttpWebRequest> et <xref:System.Net.HttpWebResponse> classes. Ces classes, dérivées de <xref:System.Net.WebRequest> et <xref:System.Net.WebResponse>, sont retournées par défaut dès que la méthode statique <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> détecte un URI commençant par « http » ou « https ». Dans la plupart des cas, les classes **WebRequest** et **WebResponse** fournissent tous les éléments nécessaires pour effectuer une demande mais, si vous avez besoin d’un accès aux fonctionnalités spécifiques à HTTP exposées en tant que propriétés, vous pouvez effectuer un cast du type de ces classes en **HttpWebRequest** ou **HttpWebResponse**.  
+Avec les classes <xref:System.Net.HttpWebRequest> et <xref:System.Net.HttpWebResponse>, le .NET Framework offre une prise en charge complète du protocole HTTP sur lequel repose la majeure partie du trafic Internet global. Ces classes, dérivées de <xref:System.Net.WebRequest> et <xref:System.Net.WebResponse>, sont retournées par défaut dès que la méthode statique <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> détecte un URI commençant par « http » ou « https ». Dans la plupart des cas, les classes **WebRequest** et **WebResponse** fournissent tous les éléments nécessaires pour effectuer une demande mais, si vous avez besoin d’un accès aux fonctionnalités spécifiques à HTTP exposées en tant que propriétés, vous pouvez effectuer un cast du type de ces classes en **HttpWebRequest** ou **HttpWebResponse**.  
   
  **HttpWebRequest** et **HttpWebResponse** encapsulent une transaction de demande et réponse HTTP standard et fournissent l’accès aux en-têtes HTTP communs. Ces classes prennent également en charge la plupart des fonctionnalités HTTP 1.1, y compris le traitement « pipeline », l’envoi et la réception des données en bloc, l’authentification, la pré-authentification, le chiffrement, la prise en charge de proxy, la validation du certificat de serveur et la gestion des connexions. Les en-têtes personnalisés et les en-têtes non fournis par le biais de propriétés peuvent être stockés dans la propriété **Headers** qui permet d’y accéder.  
   

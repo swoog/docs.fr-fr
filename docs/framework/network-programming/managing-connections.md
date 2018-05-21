@@ -1,12 +1,6 @@
 ---
 title: Gestion des connexions
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -23,23 +17,21 @@ helpviewer_keywords:
 - downloading Internet resources, connections
 - ServicePointManager class, about ServicePointManager class
 ms.assetid: 9b3d3de7-189f-4f7d-81ae-9c29c441aaaa
-caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: a4d0ca3b6aed1213405dc24f322b53a21dbd4fbe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 8702f2329b262fc5c5965ae49365d46ba34091d6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="managing-connections"></a>Gestion des connexions
 Les applications qui utilisent HTTP pour se connecter aux ressources de données peuvent utiliser les classes <xref:System.Net.ServicePoint> et <xref:System.Net.ServicePointManager> du .NET Framework pour gérer les connexions à Internet et les aider à atteindre des performances et une évolutivité optimales.  
   
  La classe **ServicePoint** fournit une application avec un point de terminaison auquel l’application peut se connecter pour accéder aux ressources Internet. Chaque **ServicePoint** contient des informations qui vous aident à optimiser les connexions à un serveur Internet en partageant les informations d’optimisation entre les connexions pour améliorer les performances.  
   
- Chaque **ServicePoint** est identifié par un URI et est classé selon l’identificateur du schéma et les fragments d’hôte de l’URI. Par exemple, une même instance **ServicePoint** peut envoyer des requêtes aux URI http://www.contoso.com/index.htm et http://www.contoso.com/news.htm?date=today, car elles ont le même identificateur de schéma (http) et les mêmes fragments d’hôte (www.contoso.com). Si l’application a déjà une connexion permanente au serveur www.contoso.com, elle utilise cette connexion pour récupérer les deux requêtes, ce qui lui évite de créer deux connexions.  
+ Chaque **ServicePoint** est identifié par un URI et est classé selon l’identificateur du schéma et les fragments d’hôte de l’URI. Par exemple, une même instance **ServicePoint** peut envoyer des requêtes aux URI http://www.contoso.com/index.htm et http://www.contoso.com/news.htm?date=today, car ces requêtes ont le même identificateur de schéma (http) et les mêmes fragments d’hôte (www.contoso.com). Si l’application a déjà une connexion permanente au serveur www.contoso.com, elle utilise cette connexion pour récupérer les deux requêtes, ce qui lui évite de créer deux connexions.  
   
  **ServicePointManager** est une classe statique qui gère la création et la destruction des instances **ServicePoint**. **ServicePointManager** crée un **ServicePoint** lorsque l’application demande une ressource Internet qui ne figure pas dans la collection existante d’instances **ServicePoint**. Les instances **ServicePoint** sont détruites lorsqu’elles ont dépassé leur durée d’inactivité maximale ou lorsque le nombre d’instances **ServicePoint** existantes dépasse le nombre maximal d’instances **ServicePoint** de l’application. Vous pouvez contrôler la durée d’inactivité maximale par défaut et le nombre maximal d’instances **ServicePoint** en définissant les propriétés <xref:System.Net.ServicePointManager.MaxServicePointIdleTime%2A> et <xref:System.Net.ServicePointManager.MaxServicePoints%2A> du **ServicePointManager**.  
   
@@ -60,7 +52,7 @@ ServicePointManager.DefaultConnectionLimit = 4;
 ServicePointManager.DefaultConnectionLimit = 4  
 ```  
   
- La modification de la propriété **ServicePointManager.DefaultConnectionLimit** n’affecte pas les instances de **ServicePoint** précédemment initialisées. Le code suivant montre le remplacement du nombre limite de connexions d’un **ServicePoint** existant pour le serveur http://www.contoso.com par la valeur stockée dans `newLimit`.  
+ La modification de la propriété **ServicePointManager.DefaultConnectionLimit** n’affecte pas les instances de **ServicePoint** précédemment initialisées. Le code suivant change le nombre limite de connexions d’un **ServicePoint** existant pour le serveur http://www.contoso.com par la valeur stockée dans `newLimit`.  
   
 ```csharp  
 Uri uri = new Uri("http://www.contoso.com/");  

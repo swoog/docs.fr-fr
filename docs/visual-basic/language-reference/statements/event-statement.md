@@ -1,6 +1,6 @@
 ---
 title: Event, instruction
-ms.date: 07/20/2015
+ms.date: 05/12/2018
 f1_keywords:
 - vb.Event
 - vb.Custom
@@ -18,11 +18,11 @@ helpviewer_keywords:
 - ByRef keyword [Visual Basic], Event statements
 - declaring user-defined events
 ms.assetid: 306ff8ed-74dd-4b6a-bd2f-e91b17474042
-ms.openlocfilehash: 967eedcf1f4d0c9a19775f294167b915cca25a9c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d59dc8e7b01612af0e4c8f6c1018269580284c46
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="event-statement"></a>Event, instruction
 Déclare un événement défini par l'utilisateur.  
@@ -58,7 +58,7 @@ End Event
 |Élément|Description|  
 |---|---|  
 |`attrlist`|Facultatif. Liste des attributs qui s'appliquent à cet événement. Les attributs multiples sont séparés par des virgules. Vous devez placer le [liste d’attributs](../../../visual-basic/language-reference/statements/attribute-list.md) figurant entre crochets («`<`« et »`>`»).|  
-|`accessmodifier`|Facultatif. Spécifie le code pouvant accéder à l'événement. Il peut s'agir d'une des valeurs suivantes :<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md), tout code qui peut accéder à l’élément qui le déclare peut y accéder.<br />-   [Protégé](../../../visual-basic/language-reference/modifiers/protected.md): seul le code dans sa classe ou une classe dérivée peut y accéder.<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md): seul le code dans le même assembly peut y accéder.<br />-   [Privé](../../../visual-basic/language-reference/modifiers/private.md): seul le code de l’élément qui le déclare peut y accéder.<br /><br /> Vous pouvez spécifier `Protected Friend` pour autoriser l'accès à partir du code dans la classe de l'événement, dans une classe dérivée ou dans le même assembly.|  
+|`accessmodifier`|Facultatif. Spécifie le code pouvant accéder à l'événement. Il peut s'agir d'une des valeurs suivantes :<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md), tout code qui peut accéder à l’élément qui le déclare peut y accéder.<br />-   [Protégé](../../../visual-basic/language-reference/modifiers/protected.md): seul le code dans sa classe ou une classe dérivée peut y accéder.<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md): seul le code dans le même assembly peut y accéder.<br />-   [Privé](../../../visual-basic/language-reference/modifiers/private.md): seul le code de l’élément qui le déclare peut y accéder.<br /> -   [Protected Friend](../../language-reference/modifiers/protected-friend.md)-seul le code dans la classe de l’événement, une classe dérivée ou le même assembly peut y accéder. <br />- [Protégé privé](../../language-reference/modifiers/private-protected.md)-seul le code dans la classe de l’événement ou une classe dérivée dans le même assembly peut y accéder.|  
 |`Shared`|Facultatif. Spécifie que cet événement n'est pas associé à une instance spécifique d'une classe ou d'une structure.|  
 |`Shadows`|Facultatif. Indique que cet élément redéclare et masque un élément de programmation du même nom ou un ensemble d'éléments surchargés dans une classe de base. Vous pouvez occulter tout type d'élément déclaré par un autre type.<br /><br /> Un élément occulté n'est pas disponible à partir de la classe dérivée qui l'occulte, sauf à partir de l'emplacement où l'élément d'occultation est inaccessible. Par exemple, si un élément `Private` occulte un élément de la classe de base, le code qui n'est pas autorisé à accéder à l'élément `Private` accède à la place à l'élément de la classe de base.|  
 |`eventname`|Obligatoire. Nom de l'événement. Ce nom respecte les conventions standard d'affectation de noms aux variables.|  

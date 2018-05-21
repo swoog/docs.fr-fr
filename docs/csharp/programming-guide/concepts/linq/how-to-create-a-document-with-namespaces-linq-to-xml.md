@@ -1,21 +1,12 @@
 ---
-title: "Guide pratique pour créer un document avec des espaces de noms (C#) (LINQ to XML)"
-ms.custom: 
+title: Guide pratique pour créer un document avec des espaces de noms (C#) (LINQ to XML)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 37e63c57-f86d-47ac-88a7-2c2d107def30
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: d913cdf8b9018aa2bf91fd5a05b823e90ba63df2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: ab572e0af79d51205167ad60b1b80e8ba6b43707
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a>Guide pratique pour créer un document avec des espaces de noms (C#) (LINQ to XML)
 Cette rubrique montre comment créer des documents avec des espaces de noms.  
@@ -66,7 +57,7 @@ Console.WriteLine(root);
 ## <a name="example"></a>Exemple  
  L'exemple suivant illustre la création d'un document qui contient deux espaces de noms. L'un est l'espace de noms par défaut. L'autre est un espace de noms avec un préfixe.  
   
- Grâce à l'inclusion d'attributs d'espaces de noms dans l'élément racine, les espaces de noms sont sérialisés de sorte que http://www.adventure-works.com soit l'espace de noms par défaut, et www.fourthcoffee.com est sérialisé avec un préfixe de « fc ». Pour créer un attribut qui déclare un espace de noms par défaut, vous devez créer un attribut avec le nom « xmlns », sans espace de noms. La valeur de l'attribut est l'URI de l'espace de noms par défaut.  
+ Grâce à l’inclusion d’attributs d’espaces de noms dans l’élément racine, les espaces de noms sont sérialisés de façon que http://www.adventure-works.com soit l’espace de noms par défaut, et www.fourthcoffee.com est sérialisé avec le préfixe « fc ». Pour créer un attribut qui déclare un espace de noms par défaut, vous devez créer un attribut avec le nom « xmlns », sans espace de noms. La valeur de l'attribut est l'URI de l'espace de noms par défaut.  
   
 ```csharp  
 // The http://www.adventure-works.com namespace is forced to be the default namespace.  

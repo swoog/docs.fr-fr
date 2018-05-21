@@ -1,21 +1,14 @@
 ---
 title: using, directive (référence C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - using directive [C#]
 ms.assetid: b42b8e61-5e7e-439c-bb71-370094b44ae8
-caps.latest.revision: 31
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 02c50b1e7a54d776985b60570c898e7d0739c44c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 180c038987e7de6b39a8eae0e86871eea41a40bb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-directive-c-reference"></a>using, directive (référence C#)
 La directive `using` a trois utilisations :  
@@ -57,16 +50,16 @@ class Program
 }  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La portée d'une directive `using` se limite au fichier dans lequel elle apparaît.  
   
  Créez un alias `using` pour faciliter la qualification d'un identificateur pour un espace de noms ou un type. Le côté droit d'une directive d'alias using doit toujours être un type complet quelles que soient les directives using placées avant.  
   
  Créez une directive `using` pour utiliser les types dans un espace de noms sans avoir à spécifier l'espace de noms. Une directive `using` ne vous donne pas accès à des espaces de noms imbriqués dans l'espace de noms que vous spécifiez.  
   
- Les espaces de noms sont organisés en deux catégories : définis par l'utilisateur et définis par le système. Les espaces de noms définis par l'utilisateur sont des espaces de noms définis dans votre code. Pour obtenir la liste des espaces de noms définis par le système, consultez [.NET Framework Class Library Overview](../../../standard/class-library-overview.md).  
+ Les espaces de noms sont organisés en deux catégories : définis par l'utilisateur et définis par le système. Les espaces de noms définis par l'utilisateur sont des espaces de noms définis dans votre code. Pour obtenir la liste des espaces de noms définis par le système, consultez [Vue d’ensemble de la bibliothèque de classes .NET Framework](../../../standard/class-library-overview.md).  
   
- Pour obtenir des exemples de références de méthodes dans d’autres assemblys, consultez [créer et utiliser les assemblys à l’aide de la ligne de commande](../../programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md).  
+ Pour obtenir des exemples de référencement de méthodes dans d’autres assemblys, consultez [Créer et utiliser des assemblys avec la ligne de commande](../../programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md).  
   
 ## <a name="example-1"></a>Exemple 1  
   

@@ -1,6 +1,6 @@
 ---
 title: Structure, instruction
-ms.date: 07/20/2015
+ms.date: 05/12/2018
 f1_keywords:
 - vb.Structure
 - Structure
@@ -12,11 +12,11 @@ helpviewer_keywords:
 - UDT (user-defined types)
 - types [Visual Basic], user-defined
 ms.assetid: 9bd1deea-2a89-4cdc-812c-6dcbb947c391
-ms.openlocfilehash: 6a3626706b226b0be253fd35fa60b33a71b86007
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6fdc4f1d2fbd40689c76a15a5a35b25522138be6
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="structure-statement"></a>Structure, instruction
 Déclare le nom d’une structure et introduit la définition des variables, propriétés, événements et procédures contenus dans la structure.  
@@ -37,7 +37,7 @@ End Structure
 |Terme|Définition|  
 |---|---|  
 |`attributelist`|Facultatif. Consultez [liste d’attributs](../../../visual-basic/language-reference/statements/attribute-list.md).|  
-|`accessmodifier`|Facultatif. Il peut s'agir d'une des valeurs suivantes :<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Protégé](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Privé](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> Consultez [niveaux en Visual Basic d’accès](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
+|`accessmodifier`|Facultatif. Il peut s'agir d'une des valeurs suivantes :<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Protégé](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Privé](../../../visual-basic/language-reference/modifiers/private.md)<br />- [Protected Friend](../../language-reference/modifiers/protected-friend.md)<br/>- [Protégé privé](../../language-reference/modifiers/private-protected.md) <br /><br /> Consultez [niveaux en Visual Basic d’accès](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
 |`Shadows`|Facultatif. Consultez [ombres](../../../visual-basic/language-reference/modifiers/shadows.md).|  
 |`Partial`|Facultatif. Indique une définition partielle de la structure. Consultez [partielle](../../../visual-basic/language-reference/modifiers/partial.md).|  
 |`name`|Obligatoire. Nom de cette structure. Consultez [noms d’éléments déclarés](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  

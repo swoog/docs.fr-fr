@@ -1,20 +1,13 @@
 ---
-title: "System.Delegate et le mot clé 'delegate'"
-description: "En savoir plus sur les classes du .NET Framework qui prennent en charge les délégués et sur le mode de mappage de ces délégués au mot clé 'delegate'."
-keywords: .NET, .NET Core
-author: BillWagner
-ms.author: wiwagn
+title: System.Delegate et le mot clé `delegate`
+description: En savoir plus sur les classes du .NET Framework qui prennent en charge les délégués et sur le mode de mappage de ces délégués au mot clé 'delegate'.
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: 09c7da7c780389d3819cf23a533cc425b43ad5ff
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.openlocfilehash: 2265d081b884a19cda6fc9d80a0f621a30c87e2a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate et le mot clé `delegate`
 
@@ -120,7 +113,7 @@ L’exemple Sort() attache généralement une méthode cible unique au délégu�
 
 ## <a name="delegate-and-multicastdelegate-classes"></a>Classes Delegate et MulticastDelegate
 
-La prise en charge du langage décrite ci-dessus fournit les fonctionnalités et la prise en charge généralement nécessaires pour utiliser des délégués. Ces fonctionnalités reposent sur les deux classes de l’infrastructure .NET Core : <xref:System.Delegate> et <xref:System.MulticastDelegate>.
+La prise en charge du langage décrite ci-dessus fournit les fonctionnalités et la prise en charge généralement nécessaires pour utiliser des délégués. Ces fonctionnalités sont basées sur deux classes du framework .NET Core : <xref:System.Delegate> et <xref:System.MulticastDelegate>.
 
 La classe `System.Delegate` et son unique sous-classe directe, `System.MulticastDelegate`, fournissent la prise en charge du framework pour la création de délégués, l’inscription de méthodes comme cibles de délégués et l’appel de toutes les méthodes inscrites comme cible de délégué. 
 

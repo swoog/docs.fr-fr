@@ -1,24 +1,17 @@
 ---
 title: Tableau des formats des résultats numériques (référence C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - formatting [C#]
 - numeric formatting [C#]
 - String.Format method
 - Console.Write method
 ms.assetid: 120ba537-4448-4c62-8676-7a8fdd98f496
-caps.latest.revision: 14
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: d389703c2d82d74760b99059201cb634849aa433
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: cc215971d63a0ee61eb25ac45834a81fbbc50b96
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="formatting-numeric-results-table-c-reference"></a>Tableau des formats des résultats numériques (référence C#)
 Vous pouvez mettre en forme un résultat numérique à l’aide de la méthode <xref:System.String.Format%2A?displayProperty=nameWithType>, ou par l’intermédiaire des méthodes <xref:System.Console.Write%2A?displayProperty=nameWithType> ou `String.Format` qui appellent <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, ou à l’aide de [l’interpolation de chaîne](../tokens/interpolated.md). Le format est spécifié à l’aide de chaînes de format. Le tableau suivant contient les chaînes de format standard prises en charge. La chaîne de format prend la forme suivante : `Axx`, où `A` est le spécificateur de format et `xx` est le spécificateur de précision. Le spécificateur de format contrôle le type de mise en forme appliquée à la valeur numérique, tandis que le spécificateur de précision contrôle le nombre de chiffres significatifs ou de décimales de la sortie formatée. La valeur du spécificateur de précision est comprise entre 0 et 99.  

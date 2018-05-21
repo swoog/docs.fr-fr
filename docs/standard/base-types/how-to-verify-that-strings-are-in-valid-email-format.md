@@ -1,13 +1,7 @@
 ---
 title: "Comment : vérifier que des chaînes sont dans un format d'adresse de messagerie valide"
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -24,18 +18,13 @@ helpviewer_keywords:
 - email [.NET Framework], validating
 - IsMatch method
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 0400fba20e614b441eb549f39d8e831811c55e5e
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: 573a3e954bf15bdbcf8b1885c10f68a222329ac1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Comment : vérifier que des chaînes sont dans un format d'adresse de messagerie valide
 L'exemple suivant utilise une expression régulière pour vérifier qu'une chaîne est dans un format d'adresse de messagerie valide.  
@@ -69,7 +58,7 @@ L'exemple suivant utilise une expression régulière pour vérifier qu'une chaî
 |`(?("")("".+?(?<!\\)""@)`|Si le premier caractère correspond à des guillemets, établit une correspondance avec des guillemets ouvrants suivis d'au moins une occurrence d'un caractère quelconque, suivie de guillemets fermants. Les guillemets fermants ne doivent pas être précédés d'une barre oblique inverse (\\). `(?<!` est le début d'une assertion de postanalyse négative de largeur nulle. La chaîne doit se terminer par un arobase (@).|  
 |<code>&#124;(([0-9a-z]</code>|Si le premier caractère n'est pas un guillemet, établit une correspondance avec un caractère alphabétique de a à z ou de A à Z (la comparaison ne respecte pas la casse) ou un chiffre (de 0 à 9).|  
 |`(\.(?!\.))`|Si le caractère suivant est un point, établit une correspondance avec un point. Dans le cas contraire, effectue une préanalyse du caractère suivant et continue la recherche de correspondances. `(?!\.)` est une assertion de préanalyse négative de largeur nulle qui empêche deux points consécutifs de s'afficher dans la partie locale d'une adresse de messagerie.|  
-|<code>&#124;[-!#\$%&'\*\+/=\?\^\`{}\&#124;~\w]</code>|Si le caractère suivant n’est pas un point, établit une correspondance avec un caractère alphabétique quelconque ou avec un des caractères suivants : -!#$%’*+=?^\`{}&#124;~.|  
+|<code>&#124;[-!#\$%&'\*\+/=\?\^\`{}\&#124;~\w]</code>|Si le caractère suivant n’est pas un point, établit une correspondance avec un caractère alphabétique quelconque ou avec un des caractères suivants : -!#$%'*+=?^\`{}&#124;~.|  
 |<code>((\.(?!\.))&#124;[-!#\$%'\*\+/=\?\^\`{}\&#124;~\w])*</code>|Établit une correspondance avec le modèle d'alternative (un point suivi d'un autre caractère qu'un point, ou l'un des caractères) zéro, une ou plusieurs fois.|  
 |`@`|Correspond à l'arobase (@).|  
 |`(?<=[0-9a-z])`|Continue la recherche de correspondances si le caractère qui précède le caractère @ est compris entre A et Z, a et z, ou 0 et 9. La construction `(?<=[0-9a-z])` définit une assertion de postanalyse positive de largeur nulle.|  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: fdda6942c6883baaaea5e305a1e699a01e707d2b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 49043a9fe9eabbb54176a0106007ef0d26ed795f
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="value-types-c-reference"></a>Types valeur (référence C#)
 Les types valeur se composent de deux catégories principales :  
@@ -56,31 +56,31 @@ Les types valeur se composent de deux catégories principales :
 ## <a name="initializing-value-types"></a>Initialisation des types valeur  
  En C#, les variables locales doivent être initialisées avant d’être utilisées. Par exemple, vous pouvez déclarer une variable locale sans l’initialiser comme dans l’exemple suivant :  
   
-```  
+```csharp  
 int myInt;  
 ```  
   
  Vous ne pouvez pas l’utiliser avant de l’avoir initialisée. Vous pouvez l’initialiser à l’aide de l’instruction suivante :  
   
-```  
+```csharp  
 myInt = new int();  // Invoke default constructor for int type.  
 ```  
   
  Cette instruction est équivalente à l’instruction suivante :  
   
-```  
+```csharp  
 myInt = 0;         // Assign an initial value, 0 in this example.  
 ```  
   
  Bien entendu, vous pouvez intégrer la déclaration et l’initialisation dans une même instruction comme dans les exemples suivants :  
   
-```  
+```csharp  
 int myInt = new int();  
 ```  
   
  – ou –  
   
-```  
+```csharp  
 int myInt = 0;  
 ```  
   
@@ -88,7 +88,7 @@ int myInt = 0;
   
  Avec les types définis par l’utilisateur, l’opérateur [new](../../../csharp/language-reference/keywords/new.md) permet d’appeler le constructeur par défaut. Par exemple, l’instruction suivante appelle le constructeur par défaut du struct `Point` :  
   
-```  
+```csharp  
 Point p = new Point(); // Invoke default constructor for the struct.  
 ```  
   

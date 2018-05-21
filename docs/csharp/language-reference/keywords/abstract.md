@@ -1,24 +1,17 @@
 ---
-title: "abstract (référence C#)"
+title: abstract (référence C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - abstract
 - abstract_CSharpKeyword
 helpviewer_keywords:
 - abstract keyword [C#]
 ms.assetid: b0797770-c1f3-4b4d-9441-b9122602a6bb
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 9c6dbb03a05ff1c86752983d130691ce23e341d7
-ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
+ms.openlocfilehash: 78212365c4183d31bcd5f1b1628c3443d48909a8
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="abstract-c-reference"></a>abstract (référence C#)
 Le modificateur `abstract` indique que l’élément en cours de modification a une implémentation manquante ou incomplète. Le modificateur abstract peut être utilisé avec des classes, des méthodes, des propriétés, des indexeurs et des événements. Dans une déclaration de classe, utilisez le modificateur `abstract` pour indiquer qu’une classe doit uniquement servir de classe de base pour d’autres classes. Les membres définis comme abstraits, ou inclus dans une classe abstraite, doivent être implémentés par des classes dérivées de la classe abstraite.  
@@ -52,7 +45,7 @@ Le modificateur `abstract` indique que l’élément en cours de modification a 
     public abstract void MyMethod();  
     ```  
   
-     L’implémentation est fournie par une méthode de substitution ([override](../../../csharp/language-reference/keywords/override.md)), qui est membre d’une classe non abstraite.  
+     L’implémentation est fournie par une méthode [override](../../../csharp/language-reference/keywords/override.md), qui est membre d’une classe non abstraite.  
   
 -   L’utilisation des modificateurs [static](../../../csharp/language-reference/keywords/static.md) ou [virtual](../../../csharp/language-reference/keywords/virtual.md) dans une déclaration de méthode abstraite serait une erreur.  
   

@@ -1,24 +1,17 @@
 ---
-title: "double (référence C#)"
+title: double (référence C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - double
 - double_CSharpKeyword
 helpviewer_keywords:
 - double data type [C#]
 ms.assetid: 0980e11b-6004-4102-abcf-cfc280fc6991
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 232dd97e152f943137604074f24b5de779168e59
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3683b51dfd0ef653ab8bfff6705b96a37e21a10a
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="double-c-reference"></a>double (référence C#)
 Le mot clé `double` désigne un type simple qui stocke des valeurs à virgule flottante de 64 bits. Le tableau suivant montre la précision et la plage approximative pour le type `double`.  
@@ -30,7 +23,7 @@ Le mot clé `double` désigne un type simple qui stocke des valeurs à virgule f
 ## <a name="literals"></a>Littéraux  
  Par défaut, un littéral numérique réel sur le côté droit de l’opérateur d’assignation est traité comme `double`. Toutefois, si vous souhaitez qu’un nombre entier soit traité comme `double`, utilisez le suffixe d ou D, par exemple :  
   
-```  
+```csharp  
 double x = 3D;  
 ```  
   

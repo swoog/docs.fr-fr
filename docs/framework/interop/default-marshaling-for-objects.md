@@ -10,11 +10,11 @@ helpviewer_keywords:
 ms.assetid: c2ef0284-b061-4e12-b6d3-6a502b9cc558
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0fe3cfe2070516cf4c79f6af9ebcea682bf4d933
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 94377fb2079689e7b6af2c94fa24ca2214a5c729
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="default-marshaling-for-objects"></a>Marshaling par défaut pour les objets
 Les paramètres et les champs de type <xref:System.Object?displayProperty=nameWithType> peuvent être exposés à un code non managé sous la forme de l’un des types suivants :  
@@ -281,7 +281,7 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
 |**VT_BSTR**|<xref:System.String?displayProperty=nameWithType>|  
 |**VT_INT**|<xref:System.Int32?displayProperty=nameWithType>|  
 |**VT_UINT**|<xref:System.UInt32?displayProperty=nameWithType>|  
-|**VT_ARRAY** &#124; **VT_\***|<xref:System.Array?displayProperty=nameWithType>|  
+|**VT_ARRAY** &#124; **VT_**\*|<xref:System.Array?displayProperty=nameWithType>|  
 |**VT_CY**|<xref:System.Decimal?displayProperty=nameWithType>|  
 |**VT_RECORD**|Type valeur boxed correspondant.|  
 |**VT_VARIANT**|Non pris en charge.|  

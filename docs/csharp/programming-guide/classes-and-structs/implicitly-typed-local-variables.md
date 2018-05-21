@@ -5,11 +5,11 @@ helpviewer_keywords:
 - implicitly-typed local variables [C#]
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
-ms.openlocfilehash: a3cb2490247a6e9fdb51b73d405173d29263393c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c6c2bae39764e78fad2510bbc8937b0ac790bef5
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>Variables locales implicitement typées (Guide de programmation C#)
 Les variables locales peuvent être déclarées sans donner de type explicite. Le mot clé `var` indique au compilateur de déduire le type de la variable à partir de l’expression située à droite de l’instruction d’initialisation. Le type déduit peut être un type intégré, un type anonyme, un type défini par l’utilisateur ou un type défini dans la bibliothèque de classes .NET Framework. Pour plus d’informations sur l’initialisation des tableaux avec `var`, consultez [Tableaux implicitement typés](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md).  
@@ -26,19 +26,19 @@ Les variables locales peuvent être déclarées sans donner de type explicite. L
   
 -   Dans une instruction d’initialisation [for](../../../csharp/language-reference/keywords/for.md)  
   
-    ```  
+    ```csharp  
     for(var x = 1; x < 10; x++)  
     ```  
   
 -   Dans une instruction d’initialisation [foreach](../../../csharp/language-reference/keywords/foreach-in.md)  
   
-    ```  
+    ```csharp  
     foreach(var item in list){...}  
     ```  
   
 -   Dans une instruction [using](../../../csharp/language-reference/keywords/using-statement.md)  
   
-    ```  
+    ```csharp  
     using (var file = new StreamReader("C:\\myfile.txt")) {...}  
     ```  
   

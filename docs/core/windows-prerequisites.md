@@ -4,15 +4,11 @@ description: Découvrez les dépendances nécessaires sur votre machine Windows 
 author: JRAlexander
 ms.author: johalex
 ms.date: 04/24/2018
-ms.topic: conceptual
-ms.prod: dotnet-core
-ms.workload:
-- dotnetcore
-ms.openlocfilehash: 6f2ba8540a38f8e30d3d968f5e2c891c850053aa
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 7c6f39f004ebc39ca714ce419a38d842fcf8f0cb
+ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Configuration requise pour .NET Core sur Windows
 
@@ -50,7 +46,7 @@ Vous devez installer [Microsoft Visual C++ 2015 Redistributable Update 3](https:
 * Installation de .NET Core via un fichier *.zip*. Ceci peut inclure des serveurs de builds/CI/CD.
 
 > [!NOTE]
-> *Pour Windows 8.1 et versions antérieures, ou Windows Server 2012 R2 et versions antérieures :* vérifiez que votre installation de Windows est à jour et qu’elle comprend le correctif [KB2999226](https://support.microsoft.com/en-us/help/2999226/update-for-universal-c-runtime-in-windows) (que vous pouvez installer par le biais de Windows Update). Si cette mise à jour n’est pas installée, vous obtenez une erreur semblable à la suivante quand vous lancez une application .NET Core : `The program can't start because api-ms-win-crt-runtime-1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`.
+> *Pour Windows 8.1 et versions antérieures, ou Windows Server 2012 R2 et versions antérieures :* vérifiez que votre installation de Windows est à jour et qu’elle comprend le correctif [KB2999226](https://support.microsoft.com/en-us/help/2999226/update-for-universal-c-runtime-in-windows) (que vous pouvez installer par le biais de Windows Update). Si cette mise à jour n’est pas installée, quand vous lancez une application .NET Core, vous recevez une erreur comme celle-ci : `The program can't start because api-ms-win-crt-runtime-1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`
 
 ## <a name="prerequisites-with-visual-studio-2017"></a>Prérequis pour Visual Studio 2017
 

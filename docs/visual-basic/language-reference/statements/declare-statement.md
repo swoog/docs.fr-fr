@@ -27,11 +27,11 @@ helpviewer_keywords:
 - Visual Basic code, Sub procedures
 - Function procedures [Visual Basic], declaring
 ms.assetid: d3f21fb0-b804-4c99-97ed-583b23894cf1
-ms.openlocfilehash: bc6949c7b52e87b7b39dd2690cac915a5f0d15aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 75d41883aefbaa54eb836d89bbfc034d99b7bba0
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="declare-statement"></a>Declare Statement
 Déclare une référence à une procédure implémentée dans un fichier externe.  
@@ -53,7 +53,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 |Terme|Définition|  
 |---|---|  
 |`attributelist`|Facultatif. Consultez [liste d’attributs](../../../visual-basic/language-reference/statements/attribute-list.md).|  
-|`accessmodifier`|Facultatif. Il peut s'agir d'une des valeurs suivantes :<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Protégé](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Privé](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> Consultez [niveaux en Visual Basic d’accès](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
+|`accessmodifier`|Facultatif. Il peut s'agir d'une des valeurs suivantes :<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Protégé](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Privé](../../../visual-basic/language-reference/modifiers/private.md)<br />- [Protected Friend](../../language-reference/modifiers/protected-friend.md)<br />- [Protégé privé](../../language-reference/modifiers/private-protected.md)<br /><br /> Consultez [niveaux en Visual Basic d’accès](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
 |`Shadows`|Facultatif. Consultez [ombres](../../../visual-basic/language-reference/modifiers/shadows.md).|  
 |`charsetmodifier`|Facultatif. Spécifie le jeu de caractères et le fichier de rechercher des informations. Il peut s'agir d'une des valeurs suivantes :<br /><br /> -   [ANSI](../../../visual-basic/language-reference/modifiers/ansi.md) (par défaut)<br />-   [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)<br />-   [Auto](../../../visual-basic/language-reference/modifiers/auto.md)|  
 |`Sub`|Facultatif, mais `Sub` ou `Function` doit apparaître. Indique que la procédure externe ne retourne pas de valeur.|  

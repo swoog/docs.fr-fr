@@ -1,13 +1,7 @@
 ---
-title: "Modèle de programmation asynchrone"
-ms.custom: 
+title: Modèle de programmation asynchrone
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ending asynchronous operations
 - starting asynchronous operations
@@ -17,21 +11,16 @@ helpviewer_keywords:
 - stopping asynchronous operations
 - asynchronous programming, beginning operations
 ms.assetid: c9b3501e-6bc6-40f9-8efd-4b6d9e39ccf0
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 66553d18d46d94fb0febfff8460ac7764e9b62bb
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 992cc1f60ee3f08131b478d2336321bf87d7ef89
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="asynchronous-programming-model-apm"></a>Modèle de programmation asynchrone
-Une opération asynchrone qui utilise le modèle de conception <xref:System.IAsyncResult> est implémentée sous la forme de deux méthodes nommées **Begin***NomOpération* et **End***NomOpération* qui, respectivement, commencent et terminent l’opération asynchrone *NomOpération*. Par exemple, la classe <xref:System.IO.FileStream> fournit les méthodes <xref:System.IO.FileStream.BeginRead%2A> et <xref:System.IO.FileStream.EndRead%2A> pour lire les octets d’un fichier de façon asynchrone. Ces méthodes implémentent la version asynchrone de la méthode <xref:System.IO.FileStream.Read%2A> .  
+Une opération asynchrone qui utilise le modèle de conception <xref:System.IAsyncResult> est implémentée sous la forme de deux méthodes nommées **Begin***NomOpération* et **End***NomOpération* qui commencent et terminent l’opération asynchrone *NomOpération*, respectivement. Par exemple, la classe <xref:System.IO.FileStream> fournit les méthodes <xref:System.IO.FileStream.BeginRead%2A> et <xref:System.IO.FileStream.EndRead%2A> pour lire les octets d’un fichier de façon asynchrone. Ces méthodes implémentent la version asynchrone de la méthode <xref:System.IO.FileStream.Read%2A> .  
   
 > [!NOTE]
 >  À compter du .NET Framework 4, la bibliothèque parallèle de tâches propose un nouveau modèle pour la programmation asynchrone et parallèle. Pour plus d’informations, consultez [Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md) et [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md).  
@@ -50,12 +39,12 @@ Une opération asynchrone qui utilise le modèle de conception <xref:System.IAsy
   
  Une méthode **Begin***NomOpération* accepte tous les paramètres déclarés dans la signature de la version synchrone de la méthode qui sont passés par valeur ou par référence. Les paramètres de sortie éventuels ne font pas partie de la signature de la méthode **Begin***NomOpération*. La signature de la méthode **Begin***NomOpération* inclut aussi deux autres paramètres. Le premier définit un délégué <xref:System.AsyncCallback> qui fait référence à une méthode appelée à la fin de l’opération asynchrone. L’appelant peut spécifier `null` (`Nothing` en Visual Basic) s’il ne veut pas qu’une méthode soit appelée à la fin de l’opération. Le deuxième paramètre supplémentaire est un objet défini par l’utilisateur. Cet objet peut être utilisé pour passer des informations d’état spécifiques à l’application à la méthode appelée à la fin de l’opération asynchrone. Si une méthode **Begin***NomOpération* accepte d’autres paramètres spécifiques à l’opération, tels qu’un tableau d’octets pour stocker des octets lus à partir d’un fichier, <xref:System.AsyncCallback> et l’objet d’état de l’application sont les derniers paramètres dans la signature de la méthode **Begin***NomOpération*.  
   
- La méthode **Begin***NomOpération* retourne immédiatement le contrôle au thread appelant. Si la méthode **Begin***NomOpération* lève des exceptions, celles-ci le sont avant le lancement de l’opération asynchrone. Si la méthode **Begin***NomOpération* lève des exceptions, la méthode de rappel n’est pas appelée.  
+ **Begin***NomOpération* retourne immédiatement le contrôle au thread appelant. Si la méthode **Begin***NomOpération* lève des exceptions, celles-ci sont levées avant le démarrage de l’opération asynchrone. Si la méthode **Begin***NomOpération* lève des exceptions, la méthode de rappel n’est pas appelée.  
   
 ## <a name="ending-an-asynchronous-operation"></a>Fin d’une opération asynchrone  
- La méthode **End***NomOpération* met fin à l’opération asynchrone *NomOpération*. La valeur de retour de la méthode **End***NomOpération* est du même type que celui retourné par son équivalent synchrone et est spécifique à l’opération asynchrone. Par exemple, la méthode <xref:System.IO.FileStream.EndRead%2A> retourne le nombre d’octets lus à partir d’un <xref:System.IO.FileStream> et la méthode <xref:System.Net.Dns.EndGetHostByName%2A> retourne un objet <xref:System.Net.IPHostEntry> qui contient des informations sur un ordinateur hôte. La méthode **End***NomOpération* accepte les paramètres de sortie ou de référence éventuellement déclarés dans la signature de la version synchrone de la méthode. En plus des paramètres de la méthode synchrone, la méthode **End***NomOpération* inclut aussi un paramètre <xref:System.IAsyncResult>. Les appelants doivent passer l’instance retournée par l’appel correspondant à la méthode **Begin***NomOpération*.  
+ La méthode **End***NomOpération* met fin à l’opération asynchrone *NomOpération*. La valeur de retour de la méthode **End***NomOpération* est du même type que celui retourné par son équivalent synchrone et est spécifique à l’opération asynchrone. Par exemple, la méthode <xref:System.IO.FileStream.EndRead%2A> retourne le nombre d’octets lus à partir d’un <xref:System.IO.FileStream> et la méthode <xref:System.Net.Dns.EndGetHostByName%2A> retourne un objet <xref:System.Net.IPHostEntry> qui contient des informations sur un ordinateur hôte. La méthode **End***NomOpération* accepte les paramètres de sortie ou de référence éventuellement déclarés dans la signature de la version synchrone de la méthode. En plus des paramètres de la méthode synchrone, la méthode **End***NomOpération* inclut un paramètre <xref:System.IAsyncResult>. Les appelants doivent passer l’instance retournée par l’appel correspondant à la méthode **Begin***NomOpération*.  
   
- Si l’opération asynchrone représentée par l’objet <xref:System.IAsyncResult> n’est pas terminée quand la méthode **End***NomOpération* est appelée, celle-ci bloque le thread appelant jusqu’à ce que l’opération asynchrone soit terminée. Les exceptions levées par l’opération asynchrone sont levées à partir de la méthode **End***NomOpération*. Le fait d’appeler plusieurs fois la méthode **End***NomOpération* avec le même objet <xref:System.IAsyncResult> a des effets non définis. De même, l’appel de la méthode **End***NomOpération* avec un <xref:System.IAsyncResult> qui n’a pas été retourné par la méthode Begin associée n’est pas non plus défini.  
+ Si l’opération asynchrone représentée par l’objet <xref:System.IAsyncResult> n’est pas terminée quand la méthode **End***NomOpération* est appelée, **End***NomOpération* bloque le thread appelant jusqu’à ce que l’opération asynchrone soit terminée. Les exceptions levées par l’opération asynchrone sont levées à partir de la méthode **End***NomOpération*. Le fait d’appeler plusieurs fois la méthode **End***NomOpération* avec le même objet <xref:System.IAsyncResult> a des effets non définis. De même, l’appel de la méthode **End***NomOpération* avec un <xref:System.IAsyncResult> qui n’a pas été retourné par la méthode Begin associée n’est pas défini non plus.  
   
 > [!NOTE]
 >  Pour l’un ou l’autre des scénarios indéfinis, les implémenteurs doivent envisager de lever <xref:System.InvalidOperationException>.  

@@ -1,28 +1,17 @@
 ---
-title: "Tâches d’E/S courantes"
-ms.custom: 
+title: Tâches d’E/S courantes
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - I/O, common tasks
 ms.assetid: bf00c380-706a-4e38-b829-454a480629fc
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: be291265d59dca5d1f555f8a98a3d0c79235f3c3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: bf0caa0513881d5a1096478d8b29fc708ac3d3ce
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="common-io-tasks"></a>Tâches d’E/S courantes
 L'espace de noms <xref:System.IO> fournit plusieurs classes qui permettent d'exécuter différentes actions, telles que la lecture et l'écriture, sur des fichiers, des répertoires et des flux de données. Pour plus d’informations, consultez [E/S de fichier et de flux](../../../docs/standard/io/index.md).  

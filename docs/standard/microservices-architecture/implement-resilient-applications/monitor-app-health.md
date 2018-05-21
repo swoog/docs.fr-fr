@@ -1,21 +1,14 @@
 ---
-title: "Surveillance de l’intégrité"
-description: "Architecture des microservices .NET pour les applications .NET en conteneur | Surveillance de l’intégrité"
-keywords: Docker, microservices, ASP.NET, conteneur
+title: Surveillance de l’intégrité
+description: Architecture des microservices .NET pour les applications .NET en conteneur | Surveillance de l’intégrité
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 76821e27613335609527b867a6b94dac551f6235
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
-ms.translationtype: MT
+ms.openlocfilehash: 81c4fc7662212bb3c6586a590d87e731220b7b7c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="health-monitoring"></a>Surveillance de l’intégrité
 
@@ -27,7 +20,7 @@ Dans le modèle standard, les services envoient des rapports sur leur état, et 
 
 ## <a name="implementing-health-checks-in-aspnet-core-services"></a>Implémentation de vérifications d’intégrité dans les services ASP.NET Core
 
-Quand vous développez un microservice ou une application web ASP.NET Core, vous pouvez utiliser une bibliothèque nommée `HealthChecks`, fournie par l’équipe d’ASP.NET. Une préversion est mise à disposition dans ce [dépôt GitHub](https://github.com/dotnet-architecture/HealthChecks).
+Quand vous développez un microservice ou une application web ASP.NET Core, vous pouvez utiliser une bibliothèque hors bande (non officiellement intégrée à ASP.NET Core) nommée `HealthChecks`, fournie par l’équipe d’ASP.NET. Elle est disponible dans ce [dépôt GitHub](https://github.com/dotnet-architecture/HealthChecks).
 
 Cette bibliothèque est simple d’emploi. Ses fonctionnalités vous permettent de vérifier le bon fonctionnement de chaque ressource externe spécifique nécessaire pour votre application (par exemple, une base de données SQL Server ou une API distante). Avec cette bibliothèque, vous pouvez également déterminer à quel moment une ressource est considérée comme intègre, comme nous l’expliquerons plus tard.
 
@@ -37,7 +30,7 @@ Pour pouvoir utiliser cette bibliothèque, vous devez d’abord utiliser la bibl
 
 Vous pouvez voir de quelle façon la bibliothèque HealthChecks est utilisée dans l’exemple d’application eShopOnContainers. Pour commencer, vous devez définir ce qui constitue un état intègre pour chaque microservice. Dans l’exemple d’application, les microservices sont intègres si l’API du microservice est accessible via HTTP et si sa base de données SQL Server associée est également disponible.
 
-Ultérieurement, vous pourrez installer la bibliothèque HealthChecks sous forme de package NuGet. Mais à ce jour, vous devez télécharger et compiler le code au sein de votre solution. Clonage du code disponible à l’adresse https://github.com/dotnet-architecture/HealthChecks et copiez les dossiers suivants à votre solution :
+Ultérieurement, vous pourrez installer la bibliothèque HealthChecks sous forme de package NuGet. Mais à ce jour, vous devez télécharger et compiler le code au sein de votre solution. Clonez le code disponible sur https://github.com/dotnet-architecture/HealthChecks et copiez les dossiers suivants dans votre solution :
 
   - src/common
   - src/Microsoft.AspNetCore.HealthChecks
@@ -190,12 +183,12 @@ Enfin, si vous stockez tous les flux d’événements, vous pouvez utiliser Micr
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
--   **ASP.NET Core vérifications** (libération anticipée) [*https://github.com/aspnet/HealthChecks/*](https://github.com/aspnet/HealthChecks/)
+-   **ASP.NET Core HealthChecks** (préversion) [*https://github.com/aspnet/HealthChecks/*](https://github.com/aspnet/HealthChecks/)
 
--   **Introduction à la surveillance de l’infrastructure de Service d’intégrité**
+-   **Présentation du contrôle d’intégrité de Service Fabric**
     [*https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction*](https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction)
 
--   **Application Azure Insights**
+-   **Azure Application Insights**
     [*https://azure.microsoft.com/services/application-insights/*](https://azure.microsoft.com/services/application-insights/)
 
 -   **Microsoft Operations Management Suite**

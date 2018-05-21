@@ -1,21 +1,14 @@
 ---
 title: Types imbriqués (guide de programmation C#)
 ms.date: 07/10/2017
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - nested types [C#]
 ms.assetid: f2e1b315-e3d1-48ce-977f-7bae0960ba99
-caps.latest.revision: 13
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: ab13c68b638062ab89c90dbfc51b51b8d72d3bde
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 57356fbf4bff218932d1f1b4c62532f10c175757
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="nested-types-c-programming-guide"></a>Types imbriqués (guide de programmation C#)
 Un type défini dans une [classe](../../../csharp/language-reference/keywords/class.md) ou un [struct](../../../csharp/language-reference/keywords/struct.md) s’appelle un type imbriqué. Exemple :  
@@ -26,9 +19,9 @@ Que le type externe soit une classe ou un struct, les types imbriqués sont par 
 
 Vous pouvez aussi spécifier un [modificateur d’accès](../../language-reference/keywords/access-modifiers.md) pour définir l’accessibilité d’un type imbriqué, comme ceci :
 
-- Imbriqués de types d’un **classe** peut être [public](../../../csharp/language-reference/keywords/public.md), [protégé](../../../csharp/language-reference/keywords/protected.md), [interne](../../../csharp/language-reference/keywords/internal.md), [protégé interne](../../../csharp/language-reference/keywords/protected-internal.md), [privé](../../../csharp/language-reference/keywords/private.md) ou [protégé privé](../../../csharp/language-reference/keywords/private-protected.md). 
+- Les types imbriqués d’une **classe** peuvent être [public](../../../csharp/language-reference/keywords/public.md), [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md), [protected internal](../../../csharp/language-reference/keywords/protected-internal.md), [private](../../../csharp/language-reference/keywords/private.md) ou [private protected](../../../csharp/language-reference/keywords/private-protected.md). 
 
-   Toutefois, en définissant un `protected`, `protected internal` ou `private protected` imbriqués de classe à l’intérieur un [sealed classe](../../language-reference/keywords/sealed.md) génère l’avertissement du compilateur [CS0628](../../misc/cs0628.md), « nouveau membre protected déclaré dans une classe sealed. »
+   Cependant, le fait de définir une classe imbriquée `protected`, `protected internal` ou `private protected` à l’intérieur d’une [classe sealed](../../language-reference/keywords/sealed.md) a pour effet de générer l’avertissement de compilateur [CS0628](../../misc/cs0628.md), « nouveau membre protected déclaré dans une classe sealed ».
   
 - Les types imbriqués d’un **struct** peuvent être [public](../../../csharp/language-reference/keywords/public.md), [internal](../../../csharp/language-reference/keywords/internal.md) ou [private](../../../csharp/language-reference/keywords/private.md).
   

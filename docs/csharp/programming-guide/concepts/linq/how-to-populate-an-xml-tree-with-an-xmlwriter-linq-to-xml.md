@@ -1,26 +1,17 @@
 ---
 title: Guide pratique pour remplir une arborescence XML avec un XmlWriter (LINQ to XML) (C#)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: cd5674d1-5c54-4efc-ba68-e23b2875295f
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 2df0626d0376973aeaa09876c6737c93dd671da4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cc3aeb8e8fbef3b109c9bc591084f0d033f5f476
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-populate-an-xml-tree-with-an-xmlwriter-linq-to-xml-c"></a>Guide pratique pour remplir une arborescence XML avec un XmlWriter (LINQ to XML) (C#)
 L'une des manières de remplir une arborescence XML consiste à utiliser <xref:System.Xml.Linq.XContainer.CreateWriter%2A> pour créer un objet <xref:System.Xml.XmlWriter>, puis à écrire dans l'objet <xref:System.Xml.XmlWriter>. L'arborescence XML est remplie avec tous les nœuds écrits dans l'objet <xref:System.Xml.XmlWriter>.  
   
- Vous utiliserez généralement cette méthode lorsque vous utilisez [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] avec une autre classe qui s’attend à écrire dans un <xref:System.Xml.XmlWriter>, tel que <xref:System.Xml.Xsl.XslCompiledTransform>.  
+ Cette méthode est généralement utilisée quand [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] est utilisé avec une autre classe censée écrire dans un objet <xref:System.Xml.XmlWriter>, comme <xref:System.Xml.Xsl.XslCompiledTransform>.  
   
 ## <a name="example"></a>Exemple  
  Une utilisation possible de <xref:System.Xml.Linq.XContainer.CreateWriter%2A> est lors de l'appel à une transformation XSLT. Cet exemple crée une arborescence XML, crée un objet <xref:System.Xml.XmlReader> à partir de l'arborescence XML, crée un nouveau document, puis crée un objet <xref:System.Xml.XmlWriter> pour écrire dans le nouveau document. Il appelle ensuite la transformation XSLT, en passant <xref:System.Xml.XmlReader> et <xref:System.Xml.XmlWriter>. Une fois la transformation terminée avec succès, la nouvelle arborescence XML est remplie avec les résultats de la transformation.  

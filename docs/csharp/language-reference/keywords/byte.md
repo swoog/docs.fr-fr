@@ -7,11 +7,11 @@ f1_keywords:
 helpviewer_keywords:
 - byte keyword [C#]
 ms.assetid: 111f1db9-ca32-4f0e-b497-4783517eda47
-ms.openlocfilehash: 71af48f1cbfa82bafdd4888f0985cd88d44976b2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4ac913bd0d1bd178211ad26a720a80e22877c961
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="byte-c-reference"></a>byte (référence C#)
 
@@ -45,27 +45,27 @@ Voici quelques exemples.
   
  Vous ne pouvez pas convertir implicitement en type `byte` des types numériques non littéraux ayant une taille de stockage supérieure. Pour plus d’informations sur les tailles de stockage des types intégraux, consultez [Tableau des types intégraux](../../../csharp/language-reference/keywords/integral-types-table.md). Observez l’exemple suivant qui utilise deux variables `byte`, `x` et `y` :  
   
-```  
+```csharp  
 byte x = 10, y = 20;  
 ```  
   
  L’instruction d’assignation suivante entraîne une erreur de compilation, car l’expression arithmétique située à droite de l’opérateur d’assignation donne la valeur `int` par défaut.  
   
-```  
+```csharp  
 // Error: conversion from int to byte:  
 byte z = x + y;  
 ```  
   
  Pour corriger ce problème, utilisez un cast :  
   
-```  
+```csharp  
 // OK: explicit conversion:  
 byte z = (byte)(x + y);  
 ```  
   
  Il est cependant possible d’utiliser les instructions suivantes, dans lesquelles la variable de destination a une taille de stockage égale ou supérieure :  
   
-```  
+```csharp  
 int x = 10, y = 20;  
 int m = x + y;  
 long n = x + y;  
@@ -73,7 +73,7 @@ long n = x + y;
   
  Il n’y a pas non plus de conversion implicite en `byte` pour les types virgule flottante. Par exemple, l’instruction suivante génère une erreur du compilateur, sauf si vous utilisez un cast explicite :  
   
-```  
+```csharp  
 // Error: no implicit conversion from double:  
 byte x = 3.0;   
 // OK: explicit conversion:  
@@ -82,14 +82,14 @@ byte y = (byte)3.0;
   
  Quand vous appelez des méthodes surchargées, vous devez utiliser un cast. Prenons l’exemple des méthodes surchargées suivantes ayant pour paramètres `byte` et [int](../../../csharp/language-reference/keywords/int.md) :  
   
-```  
+```csharp  
 public static void SampleMethod(int i) {}  
 public static void SampleMethod(byte b) {}  
 ```  
   
  L’utilisation du cast `byte` garantit l’appel du type correct, comme dans cet exemple :  
   
-```  
+```csharp  
 // Calling the method with the int parameter:  
 SampleMethod(5);  
 // Calling the method with the byte parameter:  

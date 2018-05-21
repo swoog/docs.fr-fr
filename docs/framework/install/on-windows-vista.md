@@ -1,19 +1,15 @@
 ---
 title: Installer le .NET Framework sur Windows Vista
-description: "Découvrez comment installer le .NET Framework sur Windows Vista."
+description: Découvrez comment installer le .NET Framework sur Windows Vista.
+ms.custom: updateeachrelease
 author: rlander
 ms.author: mairaw
-keywords: .NET Framework, installer
 ms.date: 08/03/2017
-ms.topic: article
-ms.prod: .net-framework
-ms.devlang: dotnet
-ms.workload: dotnet
-ms.openlocfilehash: 5dc89529cdd3c5ab1f35e30a7ff601be88667de7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 595533b9f7c0dcc766914a1812001772d0ffa247
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="install-the-net-framework-on-windows-vista-and-windows-server-2008"></a>Installer le .NET Framework sur Windows Vista et Windows Server 2008
 
@@ -21,7 +17,7 @@ Un grand nombre d’applications sur Windows nécessitent l’installation du .N
 
 ![Impossible de démarrer cette application](./media/this-application-could-not-be-started.png)
 
-Ces instructions ont pour but de vous aider à installer les versions du .NET Framework dont vous avez besoin. Le [.NET Framework 4.7.1](https://www.microsoft.com/en-us/download/details.aspx?id=56115&desc=dotnet47) est la dernière version. Cette version n’est pas prise en charge sur Windows Vista et Windows Server 2008. Elle est fournie avec [Windows 10 Fall Creators Update](https://www.microsoft.com/software-download/windows10) et [Windows Server 2016 version 1709](https://docs.microsoft.com/windows-server/get-started/get-started-with-1709).
+Ces instructions ont pour but de vous aider à installer les versions du .NET Framework dont vous avez besoin. [.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) est la dernière version. Cette version n’est pas prise en charge sur Windows Vista et Windows Server 2008. Elle est fournie avec la [mise à jour d’avril 2018 de Windows 10](https://www.microsoft.com/software-download/windows10).
 
 ## <a name="net-framework-46"></a>.NET Framework 4.6
 

@@ -10,11 +10,11 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c6d12740333d869b2fd43914437a6f5b5f62f843
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1c0f831426762ddcb21e4c1c1191e20435a13deb
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="whats-new-in-the-net-framework"></a>Nouveautés du .NET Framework
 <a name="introduction"></a> Cet article résume les principales nouvelles fonctionnalités et améliorations des versions suivantes du .NET Framework :  
@@ -49,7 +49,7 @@ Vous pouvez télécharger .NET Framework 4.7.2 aux emplacements suivants :
 
 .NET Framework 4.7.2 peut être installé sur Windows 10, Windows 8.1, Windows 7 SP1 et les plateformes de serveur correspondantes à partir de Windows Server 2008 R2 SP1. Vous pouvez installer .NET Framework 4.7.2 à l’aide du programme d’installation web ou du programme d’installation hors connexion. Le programme d’installation web constitue la méthode recommandée pour la plupart des utilisateurs.
 
-Vous pouvez cibler .NET Framework 4.7.2 dans Visual Studio 2012 ou ultérieur en installant [.NET Framework 4.7.2 Developer Pack](http://go.microsoft.com/fwlink/?LinkId=863261). 
+Vous pouvez cibler .NET Framework 4.7.2 dans Visual Studio 2012 ou ultérieur en installant [.NET Framework 4.7.2 Developer Pack](http://go.microsoft.com/fwlink/?LinkId=874338). 
 
 ### <a name="whats-new-in-the-net-framework-472"></a>Nouveautés de .NET Framework 4.7.2
 
@@ -199,7 +199,7 @@ La prise en charge de la décompression à l’aide des API Windows est activée
 
 **API de collection supplémentaires**
 
-.NET Framework 4.7.2 ajoute de nouvelles API aux types <xref:System.Collections.Generic.SortedSet%601> et <xref:System.Collections.Generic.HashSet%601>, notamment :
+.NET Framework 4.7.2 ajoute de nouvelles API aux types <xref:System.Collections.Generic.SortedSet%601> et <xref:System.Collections.Generic.HashSet%601>, Elles incluent notamment :
 
 - Des méthodes `TryGetValue` qui étendent le modèle try utilisé dans d’autres types de collection à ces deux types. Ces méthodes sont les suivantes :
    - [`public bool HashSet<T>.TryGetValue(T equalValue, out T actualValue)](xref:System.Collections.Generic.SortedSet%601.TryGetValue%2A)
@@ -273,7 +273,7 @@ Vous pouvez ajouter SameSite pour des cookies <xref:System.Web.Security.FormsAut
 ```
 
 <a name="net472" />
-#### <a name="networking"></a>Mise en réseau
+#### <a name="networking"></a>Réseau
 
 **Implémentation des propriétés HttpClientHandler**
 
@@ -1073,9 +1073,9 @@ Pour plus d’informations sur la structure <xref:System.TimeZoneInfo> et les aj
 
 **Prise en charge de la fonctionnalité Always Encrypted pour les clés matérielles protégées**
 
- ADO.NET prend désormais en charge le stockage des clés principales de colonnes Always Encrypted en mode natif dans les modules de sécurité matériels (HSM, Hardware Security Modules). Cette prise en charge permet aux clients de tirer profit des clés asymétriques stockées dans les modules HSM sans avoir à écrire des fournisseurs de magasins de clés principales de colonnes personnalisés et sans les inscrire dans les applications.
+ ADO.NET prend désormais en charge le stockage des clés principales de colonnes Toujours chiffré en mode natif dans les modules de sécurité matériels (HSM, Hardware Security Modules). Cette prise en charge permet aux clients de tirer profit des clés asymétriques stockées dans les modules HSM sans avoir à écrire des fournisseurs de magasins de clés principales de colonnes personnalisés et sans les inscrire dans les applications.
 
- Les clients doivent installer le fournisseur CSP fourni par le fabricant des modules HSM ou les fournisseurs de magasin de clés CNG sur les serveurs d’applications ou les ordinateurs clients pour accéder aux données Always Encrypted protégées par des clés principales de colonnes stockées dans un module HSM.
+ Les clients doivent installer le fournisseur CSP fourni par le fabricant des modules HSM ou les fournisseurs de magasin de clés CNG sur les serveurs d’applications ou les ordinateurs clients pour accéder aux données Toujours chiffré protégées par des clés principales de colonnes stockées dans un module HSM.
 
  **Amélioration du comportement de connexion de <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A> pour AlwaysOn**
  

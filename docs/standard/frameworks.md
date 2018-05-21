@@ -3,19 +3,14 @@ title: Versions cibles de .NET Framework
 description: Découvrez les frameworks cibles pour les applications et bibliothèques .NET Core.
 author: richlander
 ms.author: mairaw
-ms.date: 09/22/2017
-ms.topic: article
+ms.date: 04/16/2018
 ms.custom: updateeachrelease
-ms.prod: .net
 ms.technology: dotnet-standard
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: e9f47647a1d4dc82b2df2ea8905f8d0a1e705b96
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: fa8049c9e33f0f6b2f16fd8572d6500ba1860c2e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="target-frameworks"></a>Versions cibles de .NET Framework
 
@@ -31,13 +26,13 @@ Pour les frameworks cibles basés sur le package (par exemple, .NET Standard et 
 
 ## <a name="latest-target-framework-versions"></a>Versions les plus récentes des frameworks cibles
 
-Le tableau ci-dessous définit les frameworks cibles les plus courants, la façon dont ils sont référencés et la version de [.NET Standard](~/docs/standard/net-standard.md) qu’ils implémentent. Ces versions de framework cible sont les dernières versions stables. Les préversions ne sont pas mentionnées. Un moniker du framework cible est un format de jeton standardisé pour la spécification du framework cible d’une bibliothèque ou d’une application .NET. 
+Le tableau ci-dessous définit les frameworks cibles les plus courants, la façon dont ils sont référencés et la version de [.NET Standard](~/docs/standard/net-standard.md) qu’ils implémentent. Ces versions de framework cible sont les dernières versions stables. Les préversions ne sont pas mentionnées. Un moniker du framework cible est un format de jeton standardisé pour la spécification du framework cible d’une bibliothèque ou d’une application .NET.
 
-| Framework cible      | Dernière version | Moniker du Framework cible | Implémenté <br/> Version .NET Standard |
-| :-------------------: | :------------: | :----------------------------: | :-------------------------------------: |
-| .NET Standard         | 2.0            | netstandard2.0                 | N/A                                     |
-| Application .NET Core | 2.0            | netcoreapp2.0                  | 2.0                                     |
-| .NET Framework        | 4.7.1          | net471                         | 2.0                                     |
+| Framework cible      | Dernière <br/> Version stable | Moniker du Framework cible | Implémenté <br/> Version .NET Standard |
+| :-------------------: | :-------------------------: | :----------------------------: | :-------------------------------------: |
+| .NET Standard         | 2.0                         | netstandard2.0                 | N/A                                     |
+| Application .NET Core | 2.0                         | netcoreapp2.0                  | 2.0                                     |
+| .NET Framework        | 4.7.2                       | net472                         | 2.0                                     |
 
 ## <a name="supported-target-framework-versions"></a>Versions de framework cible prises en charge
 
@@ -46,8 +41,8 @@ Un framework cible est généralement référencé par un TFM. Le tableau suivan
 | Framework cible           | TFM |
 | -------------------------- | --- |
 | .NET Standard              | netstandard1.0<br>netstandard1.1<br>netstandard1.2<br>netstandard1.3<br>netstandard1.4<br>netstandard1.5<br>netstandard1.6<br>netstandard2.0 |
-| .NET Core                  | netcoreapp1.0<br>netcoreapp1.1<br>netcoreapp2.0 |
-| .NET Framework             | net11<br>net20<br>net35<br>net40<br>net403<br>net45<br>net451<br>net452<br>net46<br>net461<br>net462<br>net47<br>net471 |
+| .NET Core                  | netcoreapp1.0<br>netcoreapp1.1<br>netcoreapp2.0<br>netcoreapp2.1 |
+| .NET Framework             | net11<br>net20<br>net35<br>net40<br>net403<br>net45<br>net451<br>net452<br>net46<br>net461<br>net462<br>net47<br>net471<br>net472 |
 | Windows Store              | netcore [netcore45]<br>netcore45 [win] [win8]<br>netcore451 [win81] |
 | .NET Micro Framework       | netmf |
 | Silverlight                | sl4<br>sl5 |
@@ -135,10 +130,10 @@ Les frameworks cibles suivants sont dépréciés. Les packages ciblant ces frame
 
 ## <a name="see-also"></a>Voir aussi
 
-[Packages, métapackages et frameworks](~/docs/core/packages.md)  
-[Développement de bibliothèques avec des outils multiplateformes](~/docs/core/tutorials/libraries.md)  
-[.NET Standard](~/docs/standard/net-standard.md)  
-[Gestion des versions de .NET Core](~/docs/core/versions/index.md)  
+[Packages, métapackages et frameworks](../core/packages.md)  
+[Développement de bibliothèques avec des outils multiplateformes](../core/tutorials/libraries.md)  
+[.NET Standard](net-standard.md)  
+[Gestion des versions de .NET Core](../core/versions/index.md)  
 [dotnet/standard GitHub repository](https://github.com/dotnet/standard) (Dépôt GitHub dotnet/standard)  
 [NuGet Tools GitHub Repository](https://github.com/joelverhagen/NuGetTools) (Dépôt GitHub des outils NuGet)  
 [Framework Profiles in .NET](https://blog.stephencleary.com/2012/05/framework-profiles-in-net.html) (Profils de framework dans .NET)

@@ -1,29 +1,19 @@
 ---
 title: Regasm.exe (outil Assembly Registration Tool)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Assembly Registration tool
 - assemblies [.NET Framework], registering
 - Regasm.exe
 - registering assemblies
 ms.assetid: e190e342-36ef-4651-a0b4-0e8c2c0281cb
-caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b2762080c66c3c9451e7c7c3d4621d8cb9d4846e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 11ccdb4c75af2b37595d9be977f2ab881ebe1184
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="regasmexe-assembly-registration-tool"></a>Regasm.exe (outil Assembly Registration Tool)
 L'outil Assembly Registration Tool (Inscription de l'assembly) lit les métadonnées figurant dans un assembly et ajoute les entrées nécessaires au Registre, ce qui permet aux clients COM de créer en toute transparence des classes .NET Framework. Une fois qu'une classe est inscrite, tout client COM peut l'utiliser comme s'il s'agissait d'une classe COM. La classe fait l'objet d'une seule inscription, lors de l'installation de l'assembly. Les instances des classes figurant dans l'assembly ne peuvent pas être créées à partir de COM tant qu'elles n'ont pas été concrètement inscrites.  
@@ -58,7 +48,7 @@ regasm assemblyFile [options]
 |**/?** ou **/help**|Affiche la syntaxe et les options de commande de l'outil.|  
   
 > [!NOTE]
->  Les options de ligne de commande de Regasm.exe ne respectent pas la casse. Il vous suffit d'indiquer les éléments de l'option nécessaires à son identification de manière unique. Par exemple, **/n** équivaut à **/nologo** et **/t:** *outfile.tlb* à **/tlb:** *outfile.tlb*.  
+>  Les options de ligne de commande de Regasm.exe ne respectent pas la casse. Il vous suffit d'indiquer les éléments de l'option nécessaires à son identification de manière unique. Par exemple, **/n** équivaut à **/nologo**, et **/t:** *outfile.tlb* à **/tlb:** *outfile.tlb*.  
   
 ## <a name="remarks"></a>Notes  
  Vous pouvez utiliser l’option **/regfile** pour générer un fichier .reg comportant les entrées du Registre plutôt que d’apporter directement les modifications au Registre. Vous pouvez mettre à jour le Registre d'un ordinateur en important le fichier .reg à l'aide de l'Éditeur du Registre (Regedit.exe). Notez que le fichier .reg ne comporte pas de mises à jour du Registre pouvant être effectuées par des fonctions de Registre définies par l'utilisateur.  Notez que l’option **/regfile** émet seulement des entrées du Registre pour les classes managées.  Cette option n'émet pas d'entrée pour `TypeLibID` ou `InterfaceID`.  

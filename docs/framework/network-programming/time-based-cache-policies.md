@@ -1,12 +1,6 @@
 ---
-title: "stratégies de cache basées sur la durée"
-ms.custom: 
+title: stratégies de cache basées sur la durée
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - time-based cache policies
 - cache synchronization date policy
@@ -23,16 +17,14 @@ helpviewer_keywords:
 - minimum freshness policy
 - age of cached resources
 ms.assetid: 74f0bcaf-5c95-40c1-9967-f3bbf1d2360a
-caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: f712f223ef5787e50ef6a0c26949ff99c13dee33
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: f25f04a144fa806297b018bf3548b8feb506f67d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="time-based-cache-policies"></a>stratégies de cache basées sur la durée
 Une stratégie de cache basée sur la durée définit l’actualisation des entrées en cache en fonction de l’heure de récupération de la ressource, des en-têtes retournés avec la ressource et de l’heure actuelle. Quand vous définissez une stratégie de cache basée sur la durée, vous pouvez utiliser la stratégie basée sur la durée <xref:System.Net.Cache.HttpRequestCacheLevel.Default> ou créer une stratégie basée sur la durée personnalisée. Si vous utilisez la stratégie basée sur la durée par défaut pour les ressources obtenues à l’aide du protocole HTTP (Hypertext Transfer Protocol), le comportement du cache est précisé par les en-têtes inclus dans la réponse en cache et par les comportements spécifiés dans les sections 13 et 14 de la norme RFC 2616, disponible à l’adresse [http://www.ietf.org](http://www.ietf.org/). Pour obtenir un exemple de code qui montre comment définir la stratégie basée sur la durée par défaut pour les ressources HTTP, consultez [Guide pratique pour définir la stratégie de cache basée sur la durée par défaut pour une application](../../../docs/framework/network-programming/how-to-set-the-default-time-based-cache-policy-for-an-application.md). Pour obtenir des exemples de code qui montrent comment créer et utiliser des stratégies de cache, consultez [Configuration de la mise en cache dans les applications réseau](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md).  

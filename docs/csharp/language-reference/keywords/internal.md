@@ -1,33 +1,26 @@
 ---
 title: internal (référence C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - internal_CSharpKeyword
 - internal
 helpviewer_keywords:
 - internal keyword [C#]
 ms.assetid: 6ee0785c-d7c8-49b8-bb72-0a4dfbcb6461
-caps.latest.revision: 23
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: a3b115022ed2b38dfcfbbfad3c5fc00e0203b255
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d2fcc19bb7bc6de373412e7728f3025647c0435d
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="internal-c-reference"></a>internal (référence C#)
 Le mot clé `internal` est un [modificateur d’accès](../../../csharp/language-reference/keywords/access-modifiers.md) pour les types et les membres de type. 
   
- > Cette page traite `internal` accès. Le `internal` le mot clé est également dans le cadre de la [ `protected internal` ](./protected-internal.md) modificateur d’accès.
+ > Cette page traite de l’accès `internal`. Le mot clé `internal` fait également partie du modificateur d’accès [`protected internal`](./protected-internal.md).
   
 Les types et les membres internes (internal) sont accessibles uniquement dans les fichiers d’un même assembly, comme dans l’exemple suivant :  
   
-```  
+```csharp  
 public class BaseClass   
 {  
     // Only accessible within the same assembly  
@@ -46,7 +39,7 @@ public class BaseClass
 ## <a name="example"></a>Exemple  
  Cet exemple contient deux fichiers : `Assembly1.cs` et `Assembly1_a.cs`. Le premier fichier contient la classe de base interne `BaseClass`. Dans le deuxième fichier, une tentative d’instanciation de `BaseClass` génère une erreur.  
   
-```  
+```csharp  
 // Assembly1.cs  
 // Compile with: /target:library  
 internal class BaseClass   
@@ -55,7 +48,7 @@ internal class BaseClass
 }  
 ```  
   
-```  
+```csharp  
 // Assembly1_a.cs  
 // Compile with: /reference:Assembly1.dll  
 class TestAccess   
@@ -70,7 +63,7 @@ class TestAccess
 ## <a name="example"></a>Exemple  
  Dans cet exemple, utilisez les mêmes fichiers que vous avez utilisés dans l’exemple 1, et remplacez le niveau d’accessibilité `BaseClass` par `public`. Remplacez également le niveau d’accessibilité du membre `IntM` par `internal`. Dans ce cas, vous pouvez instancier la classe, mais vous ne pouvez pas accéder au membre interne.  
   
-```  
+```csharp  
 // Assembly2.cs  
 // Compile with: /target:library  
 public class BaseClass   
@@ -79,7 +72,7 @@ public class BaseClass
 }  
 ```  
   
-```  
+```csharp  
 // Assembly2_a.cs  
 // Compile with: /reference:Assembly1.dll  
 public class TestAccess   

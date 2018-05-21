@@ -1,13 +1,7 @@
 ---
-title: "quantificateurs dans les expressions régulières"
-ms.custom: 
+title: quantificateurs dans les expressions régulières
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,18 +14,13 @@ helpviewer_keywords:
 - quantifiers
 - lazy quantifiers
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: ad4e8ab527ca59c21bf4771ca9d386866d9919f7
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: 374ef3e015ee477c5979e2e31574aabfdd03dd1b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="quantifiers-in-regular-expressions"></a>quantificateurs dans les expressions régulières
 Les quantificateurs spécifient le nombre d’instances d’un caractère, groupe ou classe de caractères devant être présentes dans l’entrée pour qu’une correspondance soit trouvée.  Le tableau suivant répertorie les quantificateurs pris en charge par .NET.  
@@ -43,7 +32,7 @@ Les quantificateurs spécifient le nombre d’instances d’un caractère, group
 |`?`|`??`|Mettre en correspondance zéro ou une occurrence.|  
 |`{` *n* `}`|`{` *n* `}?`|Mettre en correspondance exactement *n* occurrences.|  
 |`{` *n* `,}`|`{` *n* `,}?`|Mettre en correspondance au moins *n* occurrences.|  
-|`{` *n* `,` *m* `}`|`{` *n* `,` *m* `}?`|Mettre en correspondance de *n* à *m* occurrences.|  
+|`{` *n* `,` *m* `}`|`{` *n* `,` *m* `}?`|Mettre en correspondance entre *n* et *m* occurrences.|  
   
  Les quantités `n` et `m` sont des constantes entières. Habituellement, les quantificateurs sont gourmands ; ils obligent le moteur d’expression régulière à faire correspondre autant d’occurrences de modèles particuliers que possible. L’ajout du caractère `?` à un quantificateur le rend paresseux ; le moteur d’expression régulière fait alors correspondre aussi peu d’occurrences que possible. Pour une description complète de la différence entre quantificateurs gourmands et paresseux, consultez la section [Quantificateurs gourmands et paresseux](#Greedy) plus loin dans cette rubrique.  
   
@@ -107,7 +96,7 @@ Les quantificateurs spécifient le nombre d’instances d’un caractère, group
 |`\b`|Terminer à une limite de mot.|  
   
 ### <a name="match-exactly-n-times-n"></a>Mettre en correspondance exactement n occurrences : {n}  
- Le quantificateur `{`*n*`}` correspond à l’élément qui précède exactement *n* fois, où *n* est un entier. `{`*n*`}` est un quantificateur gourmand dont l’équivalent paresseux est `{`*n*`}?`.  
+ Le quantificateur `{`*n*`}` met en correspondance exactement *n* occurrences de l’élément qui précède, où *n* est un entier. `{`*n*`}` est un quantificateur gourmand dont l’équivalent paresseux est `{`*n*`}?`.  
   
  Par exemple, l’expression régulière `\b\d+\,\d{3}\b` tente d’établir une correspondance avec une limite de mot suivie d’un ou de plusieurs chiffres décimaux suivis de trois chiffres décimaux suivis d’une limite de mot. L’exemple suivant illustre cette expression régulière.  
   
@@ -125,7 +114,7 @@ Les quantificateurs spécifient le nombre d’instances d’un caractère, group
 |`\b`|Terminer à une limite de mot.|  
   
 ### <a name="match-at-least-n-times-n"></a>Mettre en correspondance au moins n occurrences : {n,}  
- Le quantificateur `{`*n*`,}` correspond à l’élément qui précède au moins *n* fois, où *n* est un entier. `{`*n*`,}` est un quantificateur gourmand dont l’équivalent paresseux est `{`*n*`}?`.  
+ Le quantificateur `{`*n*`,}` met en correspondance au moins *n* occurrences de l’élément qui précède, où *n* est un entier. `{`*n*`,}` est un quantificateur gourmand dont l’équivalent paresseux est `{`*n*`}?`.  
   
  Par exemple, l’expression régulière `\b\d{2,}\b\D+` tente d’établir une correspondance avec une limite de mot suivie d’au moins deux chiffres suivis d’une limite de mot et d’un caractère non numérique. L’exemple suivant illustre cette expression régulière. L’expression régulière ne peut pas établir de correspondance avec l’expression `"7 days"`, car elle ne contient qu’un chiffre. En revanche, une correspondance est établie les expressions `"10 weeks and 300 years"`.  
   
@@ -141,8 +130,8 @@ Les quantificateurs spécifient le nombre d’instances d’un caractère, group
 |`\b`|Mettre en correspondance la limite d'un mot.|  
 |`\D+`|Mettre en correspondance au moins un chiffre non décimal.|  
   
-### <a name="match-between-n-and-m-times-nm"></a>Mettre en correspondance entre n et m fois : {n, m}  
- Le quantificateur `{`*n*`,`*m*`}` correspond à l’élément qui précède au moins *n* fois, mais pas plus de *m* fois, où *n* et *m* sont des entiers. `{`*n*`,`*m*`}` est un quantificateur gourmand dont l’équivalent paresseux est `{`*n*`,`*m*`}?`.  
+### <a name="match-between-n-and-m-times-nm"></a>Mettre en correspondance entre n et m occurrences : {n, m}  
+ Le quantificateur `{`*n*`,`*m*`}` met en correspondance au moins *n* occurrences de l’élément qui précède, mais pas plus de *m* occurrences, où *n* et *m* sont des entiers. `{`*n*`,`*m*`}` est un quantificateur gourmand dont l’équivalent paresseux est `{`*n*`,`*m*`}?`.  
   
  Dans l’exemple suivant, l’expression régulière `(00\s){2,4}` tente d’établir une correspondance entre deux et quatre occurrences de deux zéros suivis d’un espace. Notez que la partie finale de la chaîne d’entrée inclut ce modèle cinq fois au lieu du maximum de quatre. Toutefois, seule la partie initiale de cette sous-chaîne (jusqu’à l’espace et la cinquième paire de zéros) correspond au modèle d’expression régulière.  
   
@@ -195,7 +184,7 @@ Les quantificateurs spécifient le nombre d’instances d’un caractère, group
 |`\(??`|Mettre en correspondance zéro occurrence, ou plus, de la parenthèse ouvrante.|  
   
 ### <a name="match-exactly-n-times-lazy-match-n"></a>Mettre en correspondance exactement n occurrences (correspondance paresseuse) : {n}?  
- Le quantificateur `{`*n*`}?` correspond à l’élément qui précède exactement `n` fois, où *n* est un entier. Il s’agit de l’équivalent paresseux du quantificateur gourmand `{`*n*`}+`.  
+ Le quantificateur `{`*n*`}?` met en correspondance exactement `n` occurrences de l’élément qui précède, où *n* est un entier. Il s’agit de l’équivalent paresseux du quantificateur gourmand `{`*n*`}+`.  
   
  Dans l’exemple suivant, l’expression régulière `\b(\w{3,}?\.){2}?\w{3,}?\b` est utilisée pour identifier une adresse de site web. Notez qu’elle établit une correspondance avec « www.microsoft.com » et « msdn.microsoft.com », mais pas avec « mywebsite » ou « mycompany.com ».  
   
@@ -212,12 +201,12 @@ Les quantificateurs spécifient le nombre d’instances d’un caractère, group
 |`\b`|Terminer la correspondance à la limite d'un mot.|  
   
 ### <a name="match-at-least-n-times-lazy-match-n"></a>Mettre en correspondance au moins n occurrences (correspondance paresseuse) : {n,}?  
- Le quantificateur `{`*n*`,}?` correspond à l’élément qui précède au moins `n` fois, où *n* est un entier, mais aussi peu de fois que possible. Il s’agit de l’équivalent paresseux du quantificateur gourmand `{`*n*`,}`.  
+ Le quantificateur `{`*n*`,}?` met en correspondance au moins `n` occurrences de l’élément qui précède, où *n* est un entier, mais le moins d’occurrences possible. Il s’agit de l’équivalent paresseux du quantificateur gourmand `{`*n*`,}`.  
   
- Consultez l’exemple du quantificateur `{`*n*`}?` dans la section précédente pour une illustration. L’expression régulière de cet exemple utilise le quantificateur `{`*n*`,}` pour établir une correspondance avec une chaîne comportant au moins trois caractères suivis d’un point.  
+ Un exemple du quantificateur `{`*n*`}?` est illustré dans la section précédente. L’expression régulière de cet exemple utilise le quantificateur `{`*n*`,}` pour établir une correspondance avec une chaîne comportant au moins trois caractères suivis d’un point.  
   
 ### <a name="match-between-n-and-m-times-lazy-match-nm"></a>Mettre en correspondance entre n et m fois (correspondance paresseuse) : {n,m}?  
- Le quantificateur `{`*n*`,`*m*`}?` correspond à l’élément qui précède entre `n` et `m` fois, où *n* et *m* sont des entiers, mais aussi peu de fois que possible. Il s’agit de l’équivalent paresseux du quantificateur gourmand `{`*n*`,`*m*`}`.  
+ Le quantificateur `{`*n*`,`*m*`}?` met en correspondance entre `n` et `m` occurrences de l’élément qui précède, où *n* et *m* sont des entiers, mais le moins d’occurrences possible. Il s’agit de l’équivalent paresseux du quantificateur gourmand `{`*n*`,`*m*`}`.  
   
  Dans l’exemple suivant, l’expression régulière `\b[A-Z](\w*\s+){1,10}?[.!?]` correspond aux phrases qui contiennent entre un et dix mots. Elle établit une correspondance avec toutes les phrases de la chaîne d’entrée à l’exception d’une phrase qui contient 18 mots.  
   
@@ -261,7 +250,7 @@ Les quantificateurs spécifient le nombre d’instances d’un caractère, group
  Dans la plupart des cas, les expressions régulières avec des quantificateurs gourmands et paresseux retournent les mêmes correspondances. Elles retournent le plus souvent des résultats différents quand elles sont utilisées avec le métacaractère (`.`) générique, qui correspond à n’importe quel caractère.  
   
 ## <a name="quantifiers-and-empty-matches"></a>Quantificateurs et correspondances vides  
- Les quantificateurs `*`, `+` et `{`*n*`,`*m*`}` et leurs équivalents paresseux s’arrêtent systématiquement après une correspondance vide quand le nombre minimal de captures a été récupéré. Cette règle empêche les quantificateurs d’entrer dans des boucles infinies sur des correspondances de sous-expressions vides quand le nombre maximal de captures de groupe possibles est infini ou proche de l’infini.  
+ Les quantificateurs `*`, `+` et `{`*n*`,`*m*`}` ainsi que leurs équivalents paresseux s’arrêtent systématiquement après une correspondance vide quand le nombre minimal de captures a été trouvé. Cette règle empêche les quantificateurs d’entrer dans des boucles infinies sur des correspondances de sous-expressions vides quand le nombre maximal de captures de groupe possibles est infini ou proche de l’infini.  
   
  Par exemple, le code suivant montre le résultat d’un appel de la méthode <xref:System.Text.RegularExpressions.Regex.Match%2A?displayProperty=nameWithType> avec le modèle d’expression régulière `(a?)*` qui correspond à zéro ou un caractère « a », zéro, une ou plusieurs fois. Notez que le seul groupe de capture capture chaque « a », ainsi que <xref:System.String.Empty?displayProperty=nameWithType>, mais qu’il n’existe aucune deuxième correspondance vide, car la première correspondance vide entraîne l’arrêt de la répétition du quantificateur.  
   

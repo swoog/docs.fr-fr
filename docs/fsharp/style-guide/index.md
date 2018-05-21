@@ -2,11 +2,11 @@
 title: 'Guide de style F #'
 description: 'Découvrez les principes de cinq du bon code F #.'
 ms.date: 05/14/2018
-ms.openlocfilehash: 317fc2c101449b0500a54dd9fea3d426757af5cd
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
-ms.translationtype: HT
+ms.openlocfilehash: 6d8c1336ca991040a8f6e13290d209cb3b70054d
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="f-style-guide"></a>Guide de style F #
 
@@ -40,8 +40,8 @@ Vous devez conserver les principes suivants à l’esprit lorsque vous entrez un
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Le [instructions de mise en forme F #](formatting.md) fournissent des conseils sur la mise en forme le code afin qu’il soit facile à lire.
+Le [les instructions de mise en forme de code F #](formatting.md) fournissent des conseils sur la mise en forme le code afin qu’il soit facile à lire.
 
 Le [F # conventions de codage](conventions.md) fournissent des conseils pour les langages qui vous aide à la maintenance à long terme de plus grande F # de programmation F # codebases.
 
-Le [règles de conception du composant F #](component-design-guidelines.md) est un ensemble complet des conseils de création de composants F #, telles que des bibliothèques.
+Le [règles de conception du composant F #](component-design-guidelines.md) fournissent des conseils pour la création de composants F #, telles que des bibliothèques.

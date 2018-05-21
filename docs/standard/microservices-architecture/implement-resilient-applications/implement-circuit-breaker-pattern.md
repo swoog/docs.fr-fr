@@ -1,21 +1,14 @@
 ---
-title: "Implémentation du modèle Disjoncteur"
-description: "Architecture des microservices .NET pour les applications .NET en conteneur | Implémentation du modèle Disjoncteur"
-keywords: Docker, microservices, ASP.NET, conteneur
+title: Implémentation du modèle Disjoncteur
+description: Architecture des microservices .NET pour les applications .NET en conteneur | Implémentation du modèle Disjoncteur
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/12/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 5d7db6899068f84f9165022cfbf17767a75e7db9
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: dea94d8eda3341cca5e3aaf6b3c8369c27381135
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-the-circuit-breaker-pattern"></a>Implémentation du modèle Disjoncteur
 
@@ -173,7 +166,7 @@ Par exemple, une fois que l’application est en cours d’exécution, vous pouv
 
 http://localhost:5103/failing?enable
 
-Vous pouvez alors vérifier l’état à l’aide de l’URI [http://localhost:5103/failing](http://localhost:5103/failing), comme illustré dans la figure 10-4.
+Vous pouvez alors vérifier l’état à l’aide de l’URI [http://localhost:5103/failing](http://localhost:5103/failing), comme illustré dans la figure 10-4.
 
 ![](./media/image4.png)
 
@@ -240,7 +233,7 @@ Policy.Handle<HttpResponseException>() // etc
 
 -   **Résilience des connexions** (Entity Framework Core) [*https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency*](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency)
 
--   **Polly** (Résilience .NET et bibliothèque de gestion des erreurs temporaires) [*https://github.com/App-vNext/Polly*](https://github.com/App-vNext/Polly)
+-   **Polly** (Résilience .NET et bibliothèque de gestion des erreurs temporaires) [*https://github.com/App-vNext/Polly*](https://github.com/App-vNext/Polly)
 
 -   **Modèle Disjoncteur**
     [*https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker*](https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker)

@@ -1,13 +1,7 @@
 ---
 title: Caractères d'échappement dans les expressions régulières
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,18 +14,13 @@ helpviewer_keywords:
 - .NET Framework regular expressions, character escapes
 - constructs, character escapes
 ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
-caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 8a4ec10bfa332c8caafce57385791d8069a7231a
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: ebdcda655a186d54065e98f8b9c5c7ae2fda4955
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="character-escapes-in-regular-expressions"></a>Caractères d'échappement dans les expressions régulières
 La barre oblique inverse (\\) dans une expression régulière indique une des possibilités suivantes :  
@@ -48,7 +37,7 @@ La barre oblique inverse (\\) dans une expression régulière indique une des po
   
 |Caractère ou séquence|Description|  
 |---------------------------|-----------------|  
-|Tous les caractères à l'exception des suivants :<br /><br /> . $ ^ { [ ( &#124; ) * + ? \|Caractères autres que ceux répertoriés dans le **caractère ou séquence** colonne n’ont aucune signification spéciale dans les expressions régulières ; ils correspondent à eux-mêmes.<br /><br /> Les caractères inclus dans la colonne **Caractère ou séquence** sont des éléments spéciaux du langage des expressions régulières. Pour les faire correspondre dans une expression régulière, ils doivent être utilisés avec un caractère d’échappement ou inclus dans un [groupe de caractères positif](../../../docs/standard/base-types/character-classes-in-regular-expressions.md). Par exemple, l'expression régulière `\$\d+` ou `[$]\d+` est en correspondance avec "$1200".|  
+|Tous les caractères à l'exception des suivants :<br /><br /> . $ ^ { [ ( &#124; ) * + ? \|Les caractères autres que ceux répertoriés dans la colonne **Caractère ou séquence** n’ont pas de signification spéciale dans les expressions régulières ; ils ne correspondent qu’à eux-mêmes.<br /><br /> Les caractères inclus dans la colonne **Caractère ou séquence** sont des éléments spéciaux du langage des expressions régulières. Pour les faire correspondre dans une expression régulière, ils doivent être utilisés avec un caractère d’échappement ou inclus dans un [groupe de caractères positif](../../../docs/standard/base-types/character-classes-in-regular-expressions.md). Par exemple, l'expression régulière `\$\d+` ou `[$]\d+` est en correspondance avec "$1200".|  
 |`\a`|Correspond à un caractère représentant une cloche (alarme), `\u0007`.|  
 |`\b`|Dans une classe de caractères `[`*groupe_caractères*`]`, correspond à un retour arrière, `\u0008`.  (Voir [Classes de caractères](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).) En dehors d'une classe de caractères, `\b` est une ancre qui correspond à une limite de mot. (Voir [Ancres](../../../docs/standard/base-types/anchors-in-regular-expressions.md).)|  
 |`\t`|Correspond à une tabulation, `\u0009`.|  
@@ -71,7 +60,7 @@ La barre oblique inverse (\\) dans une expression régulière indique une des po
   
  L'expression régulière `\G(.+)[\t|\u007c](.+)\r?\n` est interprétée comme indiqué dans le tableau suivant.  
   
-|Modèle|Description|  
+|Motif|Description|  
 |-------------|-----------------|  
 |`\G`|Commencer la correspondance là où la dernière correspondance s'est terminée.|  
 |`(.+)`|Faire correspondre à n'importe quel caractère une ou plusieurs fois. Il s'agit du premier groupe de capture.|  

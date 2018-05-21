@@ -1,12 +1,6 @@
 ---
 title: Utilisation du protocole Secure Sockets Layer
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,24 +15,21 @@ helpviewer_keywords:
 - receiving data, Secure Sockets Layer
 - Internet, Secure Sockets Layer
 ms.assetid: 6e4289e6-d1b7-4e82-ab0d-e83e3b6063ed
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: 31c8a3d22e6a7fa074eae18de8f9b2a9903457c1
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
-ms.translationtype: MT
+ms.openlocfilehash: 2baedaa445f81e3e204f7414c5142232755581ed
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-secure-sockets-layer"></a>Utilisation du protocole Secure Sockets Layer
 Les classes <xref:System.Net> utilisent le protocole SSL (Secure Sockets Layer) pour chiffrer les connexions avec différents protocoles réseau.  
   
  Pour les connexions HTTP, les classes <xref:System.Net.WebRequest> et <xref:System.Net.WebResponse> utilisent SSL pour communiquer avec les hôtes web qui prennent en charge SSL. L’utilisation du protocole SSL est déterminée par la classe <xref:System.Net.WebRequest> en fonction de l’URI fourni. Si l’URI commence par « https: », SSL est utilisé ; si l’URI commence par « http: », une connexion non chiffrée est utilisée.  
   
- Pour utiliser SSL avec le protocole FTP (File Transfer Protocol), définissez la propriété <xref:System.Net.FtpWebRequest.EnableSsl> sur true avant d’appeler <xref:System.Net.FtpWebRequest.GetResponse>. De même, pour utiliser SSL avec SMTP Simple Mail Transport Protocol (), définissez la <xref:System.Net.Mail.SmtpClient.EnableSsl> true avant d’envoyer le courrier électronique à la propriété.  
+ Pour utiliser SSL avec le protocole FTP (File Transfer Protocol), définissez la propriété <xref:System.Net.FtpWebRequest.EnableSsl> sur true avant d’appeler <xref:System.Net.FtpWebRequest.GetResponse>. De la même façon, pour utiliser SSL avec le protocole SMTP (Simple Mail Transport Protocol), définissez la propriété <xref:System.Net.Mail.SmtpClient.EnableSsl> sur true avant d’envoyer l’e-mail.  
   
  La classe <xref:System.Net.Security.SslStream> fournit une abstraction de flux de données pour le protocole SSL et offre de nombreuses façons de configurer la connexion SSL.  
   
