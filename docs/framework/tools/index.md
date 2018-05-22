@@ -9,16 +9,16 @@ helpviewer_keywords:
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 65614d906abc2dec5dc5891b16b595cf9ef9d56f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a8ec8a5b1f665196fee62a4556e59201f45a6bff
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="net-framework-tools"></a>Outils du .NET Framework
 Les outils du .NET Framework facilitent la création, le déploiement et la gestion d'applications et de composants qui ciblent le .NET Framework.  
   
- La plupart des outils .NET Framework décrits dans cette section sont installés automatiquement avec Visual Studio. (Pour plus d’informations sur l’installation, consultez les [Téléchargements Visual Studio](http://go.microsoft.com/fwlink/?LinkID=325532).)  
+La plupart des outils .NET Framework décrits dans cette section sont installés automatiquement avec Visual Studio. Pour télécharger Visual Studio, visitez la page [Téléchargements Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017).
   
  Vous pouvez exécuter tous les outils à partir de la ligne de commande, à l'exception de la visionneuse du cache d'assembly (Shfusion.dll). Vous devez accéder à Shfusion.dll à partir de l'Explorateur de fichiers.  
   
