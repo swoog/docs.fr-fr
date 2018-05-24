@@ -1,13 +1,6 @@
 ---
-title: "Styles et modèles GroupBox"
-ms.custom: 
+title: Styles et modèles GroupBox
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ControlTemplate [WPF], GroupBox
 - parts [WPF], GroupBox
@@ -16,50 +9,45 @@ helpviewer_keywords:
 - styles [WPF], GroupBox
 - templates [WPF], GroupBox
 ms.assetid: 33df7037-0a1b-476f-b9d0-41566a777699
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 99150de10fcbd45d3617621a916793ad5cfe72db
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 539bf5b0ef8772ea469123442d152726d0948be9
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/23/2018
 ---
-# <a name="groupbox-styles-and-templates"></a><span data-ttu-id="06ee5-102">Styles et modèles GroupBox</span><span class="sxs-lookup"><span data-stu-id="06ee5-102">GroupBox Styles and Templates</span></span>
-<a name="introduction"></a><span data-ttu-id="06ee5-103">Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Controls.GroupBox> contrôle.</span><span class="sxs-lookup"><span data-stu-id="06ee5-103">This topic describes the styles and templates for the <xref:System.Windows.Controls.GroupBox> control.</span></span> <span data-ttu-id="06ee5-104">Vous pouvez modifier la valeur par défaut <xref:System.Windows.Controls.ControlTemplate> pour donner une apparence unique au contrôle.</span><span class="sxs-lookup"><span data-stu-id="06ee5-104">You can modify the default <xref:System.Windows.Controls.ControlTemplate> to give the control a unique appearance.</span></span> <span data-ttu-id="06ee5-105">Pour plus d’informations, consultez [Personnalisation de l’apparence d’un contrôle existant en créant un ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).</span><span class="sxs-lookup"><span data-stu-id="06ee5-105">For more information, see [Customizing the Appearance of an Existing Control by Creating a ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).</span></span>  
+# <a name="groupbox-styles-and-templates"></a><span data-ttu-id="fa268-102">Styles et modèles GroupBox</span><span class="sxs-lookup"><span data-stu-id="fa268-102">GroupBox Styles and Templates</span></span>
+<a name="introduction"></a> <span data-ttu-id="fa268-103">Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Controls.GroupBox> contrôle.</span><span class="sxs-lookup"><span data-stu-id="fa268-103">This topic describes the styles and templates for the <xref:System.Windows.Controls.GroupBox> control.</span></span> <span data-ttu-id="fa268-104">Vous pouvez modifier la valeur par défaut <xref:System.Windows.Controls.ControlTemplate> pour donner une apparence unique au contrôle.</span><span class="sxs-lookup"><span data-stu-id="fa268-104">You can modify the default <xref:System.Windows.Controls.ControlTemplate> to give the control a unique appearance.</span></span> <span data-ttu-id="fa268-105">Pour plus d’informations, consultez [Personnalisation de l’apparence d’un contrôle existant en créant un ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).</span><span class="sxs-lookup"><span data-stu-id="fa268-105">For more information, see [Customizing the Appearance of an Existing Control by Creating a ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).</span></span>  
   
 <a name="groupbox_parts"></a>   
-## <a name="groupbox-parts"></a><span data-ttu-id="06ee5-106">Parties de la zone de groupe</span><span class="sxs-lookup"><span data-stu-id="06ee5-106">GroupBox Parts</span></span>  
- <span data-ttu-id="06ee5-107">Le <xref:System.Windows.Controls.GroupBox> contrôle n’a pas de composants nommés.</span><span class="sxs-lookup"><span data-stu-id="06ee5-107">The <xref:System.Windows.Controls.GroupBox> control does not have any named parts.</span></span>  
+## <a name="groupbox-parts"></a><span data-ttu-id="fa268-106">Parties de la zone de groupe</span><span class="sxs-lookup"><span data-stu-id="fa268-106">GroupBox Parts</span></span>  
+ <span data-ttu-id="fa268-107">Le <xref:System.Windows.Controls.GroupBox> contrôle n’a pas de composants nommés.</span><span class="sxs-lookup"><span data-stu-id="fa268-107">The <xref:System.Windows.Controls.GroupBox> control does not have any named parts.</span></span>  
   
 <a name="groupbox_states"></a>   
-## <a name="groupbox-states"></a><span data-ttu-id="06ee5-108">États de GroupBox</span><span class="sxs-lookup"><span data-stu-id="06ee5-108">GroupBox States</span></span>  
- <span data-ttu-id="06ee5-109">Le tableau suivant répertorie les états visuels pour le <xref:System.Windows.Controls.GroupBox> contrôle.</span><span class="sxs-lookup"><span data-stu-id="06ee5-109">The following table lists the visual states for the <xref:System.Windows.Controls.GroupBox> control.</span></span>  
+## <a name="groupbox-states"></a><span data-ttu-id="fa268-108">États de GroupBox</span><span class="sxs-lookup"><span data-stu-id="fa268-108">GroupBox States</span></span>  
+ <span data-ttu-id="fa268-109">Le tableau suivant répertorie les états visuels pour le <xref:System.Windows.Controls.GroupBox> contrôle.</span><span class="sxs-lookup"><span data-stu-id="fa268-109">The following table lists the visual states for the <xref:System.Windows.Controls.GroupBox> control.</span></span>  
   
-|<span data-ttu-id="06ee5-110">Nom VisualState</span><span class="sxs-lookup"><span data-stu-id="06ee5-110">VisualState Name</span></span>|<span data-ttu-id="06ee5-111">Nom VisualStateGroup</span><span class="sxs-lookup"><span data-stu-id="06ee5-111">VisualStateGroup Name</span></span>|<span data-ttu-id="06ee5-112">Description</span><span class="sxs-lookup"><span data-stu-id="06ee5-112">Description</span></span>|  
+|<span data-ttu-id="fa268-110">Nom VisualState</span><span class="sxs-lookup"><span data-stu-id="fa268-110">VisualState Name</span></span>|<span data-ttu-id="fa268-111">Nom VisualStateGroup</span><span class="sxs-lookup"><span data-stu-id="fa268-111">VisualStateGroup Name</span></span>|<span data-ttu-id="fa268-112">Description</span><span class="sxs-lookup"><span data-stu-id="fa268-112">Description</span></span>|  
 |-|-|-|  
-|<span data-ttu-id="06ee5-113">Valide</span><span class="sxs-lookup"><span data-stu-id="06ee5-113">Valid</span></span>|<span data-ttu-id="06ee5-114">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="06ee5-114">ValidationStates</span></span>|<span data-ttu-id="06ee5-115">Le contrôle utilise le <xref:System.Windows.Controls.Validation> classe et le <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriété jointe est `false`.</span><span class="sxs-lookup"><span data-stu-id="06ee5-115">The control uses the <xref:System.Windows.Controls.Validation> class and the <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `false`.</span></span>|  
-|<span data-ttu-id="06ee5-116">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="06ee5-116">InvalidFocused</span></span>|<span data-ttu-id="06ee5-117">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="06ee5-117">ValidationStates</span></span>|<span data-ttu-id="06ee5-118">Le <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriété jointe est `true` a le contrôle a le focus.</span><span class="sxs-lookup"><span data-stu-id="06ee5-118">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control has focus.</span></span>|  
-|<span data-ttu-id="06ee5-119">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="06ee5-119">InvalidUnfocused</span></span>|<span data-ttu-id="06ee5-120">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="06ee5-120">ValidationStates</span></span>|<span data-ttu-id="06ee5-121">Le <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriété jointe est `true` a le contrôle n’a pas le focus.</span><span class="sxs-lookup"><span data-stu-id="06ee5-121">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control does not have focus.</span></span>|  
+|<span data-ttu-id="fa268-113">Valide</span><span class="sxs-lookup"><span data-stu-id="fa268-113">Valid</span></span>|<span data-ttu-id="fa268-114">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="fa268-114">ValidationStates</span></span>|<span data-ttu-id="fa268-115">Le contrôle utilise le <xref:System.Windows.Controls.Validation> classe et le <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriété jointe est `false`.</span><span class="sxs-lookup"><span data-stu-id="fa268-115">The control uses the <xref:System.Windows.Controls.Validation> class and the <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `false`.</span></span>|  
+|<span data-ttu-id="fa268-116">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="fa268-116">InvalidFocused</span></span>|<span data-ttu-id="fa268-117">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="fa268-117">ValidationStates</span></span>|<span data-ttu-id="fa268-118">Le <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriété jointe est `true` a le contrôle a le focus.</span><span class="sxs-lookup"><span data-stu-id="fa268-118">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control has focus.</span></span>|  
+|<span data-ttu-id="fa268-119">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="fa268-119">InvalidUnfocused</span></span>|<span data-ttu-id="fa268-120">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="fa268-120">ValidationStates</span></span>|<span data-ttu-id="fa268-121">Le <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriété jointe est `true` a le contrôle n’a pas le focus.</span><span class="sxs-lookup"><span data-stu-id="fa268-121">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control does not have focus.</span></span>|  
   
 <a name="groupbox_controltemplate_example"></a>   
-## <a name="groupbox-controltemplate-example"></a><span data-ttu-id="06ee5-122">GroupBox ControlTemplate, exemple</span><span class="sxs-lookup"><span data-stu-id="06ee5-122">GroupBox ControlTemplate Example</span></span>  
- <span data-ttu-id="06ee5-123">L’exemple suivant montre comment définir un <xref:System.Windows.Controls.ControlTemplate> pour la <xref:System.Windows.Controls.GroupBox> contrôle.</span><span class="sxs-lookup"><span data-stu-id="06ee5-123">The following example shows how to define a <xref:System.Windows.Controls.ControlTemplate> for the <xref:System.Windows.Controls.GroupBox> control.</span></span>  
+## <a name="groupbox-controltemplate-example"></a><span data-ttu-id="fa268-122">GroupBox ControlTemplate, exemple</span><span class="sxs-lookup"><span data-stu-id="fa268-122">GroupBox ControlTemplate Example</span></span>  
+ <span data-ttu-id="fa268-123">L’exemple suivant montre comment définir un <xref:System.Windows.Controls.ControlTemplate> pour la <xref:System.Windows.Controls.GroupBox> contrôle.</span><span class="sxs-lookup"><span data-stu-id="fa268-123">The following example shows how to define a <xref:System.Windows.Controls.ControlTemplate> for the <xref:System.Windows.Controls.GroupBox> control.</span></span>  
   
  [!code-xaml[ControlTemplateExamples#GroupBox](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/groupbox.xaml#groupbox)]  
   
- <span data-ttu-id="06ee5-124">Le <xref:System.Windows.Controls.ControlTemplate> utilise un ou plusieurs des ressources suivantes.</span><span class="sxs-lookup"><span data-stu-id="06ee5-124">The <xref:System.Windows.Controls.ControlTemplate> uses one or more of the following resources.</span></span>  
+ <span data-ttu-id="fa268-124">Le <xref:System.Windows.Controls.ControlTemplate> utilise un ou plusieurs des ressources suivantes.</span><span class="sxs-lookup"><span data-stu-id="fa268-124">The <xref:System.Windows.Controls.ControlTemplate> uses one or more of the following resources.</span></span>  
   
  [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- <span data-ttu-id="06ee5-125">Pour voir l’exemple complet, consultez [Styling with ControlTemplates Sample](http://go.microsoft.com/fwlink/?LinkID=160041) (Exemple de style avec ControlTemplates).</span><span class="sxs-lookup"><span data-stu-id="06ee5-125">For the complete sample, see [Styling with ControlTemplates Sample](http://go.microsoft.com/fwlink/?LinkID=160041).</span></span>  
+ <span data-ttu-id="fa268-125">Pour voir l’exemple complet, consultez [Styling with ControlTemplates Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating) (Exemple de style avec ControlTemplates).</span><span class="sxs-lookup"><span data-stu-id="fa268-125">For the complete sample, see [Styling with ControlTemplates Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="06ee5-126">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="06ee5-126">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="fa268-126">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="fa268-126">See Also</span></span>  
  <xref:System.Windows.FrameworkElement.Style%2A>  
  <xref:System.Windows.Controls.ControlTemplate>  
- [<span data-ttu-id="06ee5-127">Styles et modèles Control</span><span class="sxs-lookup"><span data-stu-id="06ee5-127">Control Styles and Templates</span></span>](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
- [<span data-ttu-id="06ee5-128">Personnalisation des contrôles</span><span class="sxs-lookup"><span data-stu-id="06ee5-128">Control Customization</span></span>](../../../../docs/framework/wpf/controls/control-customization.md)  
- [<span data-ttu-id="06ee5-129">Application d’un style et création de modèles</span><span class="sxs-lookup"><span data-stu-id="06ee5-129">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [<span data-ttu-id="06ee5-130">Personnalisation de l’apparence d’un contrôle existant en créant un ControlTemplate</span><span class="sxs-lookup"><span data-stu-id="06ee5-130">Customizing the Appearance of an Existing Control by Creating a ControlTemplate</span></span>](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+ [<span data-ttu-id="fa268-127">Styles et modèles Control</span><span class="sxs-lookup"><span data-stu-id="fa268-127">Control Styles and Templates</span></span>](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
+ [<span data-ttu-id="fa268-128">Personnalisation des contrôles</span><span class="sxs-lookup"><span data-stu-id="fa268-128">Control Customization</span></span>](../../../../docs/framework/wpf/controls/control-customization.md)  
+ [<span data-ttu-id="fa268-129">Application d’un style et création de modèles</span><span class="sxs-lookup"><span data-stu-id="fa268-129">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [<span data-ttu-id="fa268-130">Personnalisation de l’apparence d’un contrôle existant en créant un ControlTemplate</span><span class="sxs-lookup"><span data-stu-id="fa268-130">Customizing the Appearance of an Existing Control by Creating a ControlTemplate</span></span>](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
