@@ -2,11 +2,11 @@
 title: 'Règles de conception du composant F #'
 description: 'Découvrez les instructions pour l’écriture de composants F # destinés à la consommation par les autres appelants.'
 ms.date: 05/14/2018
-ms.openlocfilehash: 7859baac76be01b2cfbdc8602b6cc417cfe5106f
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 7e71710b1bc2fe3e8d7a5a091513a1432650dc04
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="f-component-design-guidelines"></a>Règles de conception du composant F #
 
@@ -483,7 +483,7 @@ Toutefois, les opérations logiques-notation par points sur ce type ne sont pas 
 
 Lorsque vous concevez des bibliothèques pour une utilisation à partir d’autres langages .NET, il est important de respecter le [la conception de bibliothèque .NET](../../standard/design-guidelines/index.md). Dans ce document, ces bibliothèques sont étiquetés vanille bibliothèques .NET, par opposition à F #-faisant face à des bibliothèques qui utilisent F # construit sans restriction. Conception des bibliothèques .NET vanille signifie fournissant des API familière et idiomatiques cohérents avec le reste du .NET Framework en réduisant l’utilisation de F #-des constructions spécifiques dans l’API publique. Les règles sont expliquées dans les sections suivantes.
 
-### <a name="namespace-and-type-sesign-for-libraries-for-use-from-other-net-languages"></a>Sesign Namespace et Type (pour les bibliothèques à utiliser à partir d’autres langages .NET)
+### <a name="namespace-and-type-design-for-libraries-for-use-from-other-net-languages"></a>Conception Namespace et Type (pour les bibliothèques à utiliser à partir d’autres langages .NET)
 
 #### <a name="apply-the-net-naming-conventions-to-the-public-api-of-your-components"></a>Appliquer les conventions d’affectation de noms .NET à l’API publique de vos composants
 

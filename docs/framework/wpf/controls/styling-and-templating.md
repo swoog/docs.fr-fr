@@ -15,11 +15,11 @@ helpviewer_keywords:
 - styles [WPF], triggers
 - styles [WPF], event triggers
 ms.assetid: 481765e5-5467-4a75-9f7b-e10e2ac410d9
-ms.openlocfilehash: 85911647c089d51bafe2d65d1c5db907599b06d4
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 9c2c38020bb57a008d0948a360a5b2cbe401089d
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="styling-and-templating"></a>Application d'un style et création de modèles
 L’application d'un style et la création de modèles [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] font référence à une suite de fonctionnalités (styles, modèles, déclencheurs et tables de montage séquentiel) qui permettent aux développeurs et aux concepteurs de créer des effets visuellement attrayants et un aspect cohérent pour leur produit. Bien que les développeurs et/ou les concepteurs puissent largement personnaliser une à une l’apparence de leur application, il est essentiel d’utiliser un modèle de création de style et de modèle suffisamment robuste pour conserver et partager l’apparence dans une même application et entre différentes applications. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fournit ce modèle.  
@@ -28,10 +28,8 @@ L’application d'un style et la création de modèles [!INCLUDE[TLA#tla_winclie
   
  Cette présentation se concentre sur les aspects liés à la création de style et de modèle pour l’application et ne traite pas des concepts de liaison de données. Pour plus d’informations sur la liaison de données, consultez [Vue d’ensemble de la liaison de données](../../../../docs/framework/wpf/data/data-binding-overview.md).  
   
- En outre, il est important de comprendre les ressources qui permettent de réutiliser les styles et les modèles. Pour plus d’informations sur les ressources, consultez [Ressources XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
-  
- 
-  
+ En outre, il est important de comprendre les ressources qui permettent de réutiliser les styles et les modèles. Pour plus d’informations sur les ressources, consultez [Ressources XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).
+
 <a name="styling_and_templating_sample"></a>   
 ## <a name="styling-and-templating-sample"></a>Exemple de style et de modèle  
  Les exemples de code utilisés dans cette présentation s’appuient sur un exemple de photo simple affiché dans l’illustration suivante :  
@@ -183,9 +181,9 @@ L’application d'un style et la création de modèles [!INCLUDE[TLA#tla_winclie
   
  Vous pouvez définir des dictionnaires de ressources sous forme de fichiers individuels qui vous permettent de réutiliser un thème entre plusieurs applications. Vous pouvez également créer des thèmes permutables en définissant plusieurs dictionnaires de ressources qui fournissent les mêmes types de ressources mais avec des valeurs différentes. Pour définir l’apparence une application, il est recommandé de redéfinir ces styles ou d’autres ressources au niveau de l’application.  
   
- Pour partager un ensemble de ressources, y compris les styles et modèles, entre les applications, vous pouvez créer un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] de fichiers et de définir un <xref:System.Windows.ResourceDictionary>. Par exemple, observez l’illustration suivante qui montre une partie de [l’exemple de style avec ControlTemplates](http://go.microsoft.com/fwlink/?LinkID=160041) :  
-  
- ![Exemples de modèle de contrôle](../../../../docs/framework/wpf/controls/media/stylingintro-controltemplateexamples.png "StylingIntro_ControlTemplateExamples")  
+ Pour partager un ensemble de ressources, y compris les styles et modèles, entre les applications, vous pouvez créer un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] de fichiers et de définir un <xref:System.Windows.ResourceDictionary>. Par exemple, observez l’illustration suivante qui montre une partie de [l’exemple de style avec ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating) :
+
+![Exemples de modèle de contrôle](../../../../docs/framework/wpf/controls/media/stylingintro-controltemplateexamples.png "StylingIntro_ControlTemplateExamples")  
   
  Si vous examinez les fichiers [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] de l’exemple, vous remarquerez qu’ils comportent tous les éléments suivants :  
   

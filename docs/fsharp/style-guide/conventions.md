@@ -2,11 +2,11 @@
 title: 'Conventions de codage F #'
 description: 'Découvrez les recommandations générales et idiomes lors de l’écriture de code F #.'
 ms.date: 05/14/2018
-ms.openlocfilehash: d1f47f821887dabcdbc5d9406e90213fe8fafda5
-ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
+ms.openlocfilehash: f3d16f735ddc1901aeaa5ebb39e2fa2b70a3d836
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="f-coding-conventions"></a>Conventions de codage F #
 
@@ -91,7 +91,7 @@ let parsed = StringTokenization.parse s // Must qualify to use 'parse'
 
 En F #, l’ordre des déclarations est important, notamment avec `open` instructions. Contrairement à c#, où l’effet de `using` et `using static` est indépendante de l’ordre de ces instructions dans un fichier.
 
-En F #, étant donné que les éléments ouverts dans une étendue peuvent masquer d’autres déjà présent. Cela signifie que la réorganisation `open` instructions peuvent modifier la signification du code. Par conséquent, le tri par ordre alphanumérique (ou pseudorandomly) est généralement pas recommandé, moins vous générez un comportement différent que vous pouvez vous attendre.
+En F #, éléments ouverts dans une étendue peuvent occulter autres déjà présent. Cela signifie que la réorganisation `open` instructions Impossible de modifier la signification du code. Par conséquent, toute arbitraire de tri de tous les `open` instructions (par exemple, dans l’ordre alphanumérique) n’est généralement pas recommandé, moins vous générez un comportement différent que vous pouvez vous attendre.
 
 Au lieu de cela, nous vous recommandons de les trier [topologiquement](https://en.wikipedia.org/wiki/Topological_sorting); autrement dit, la commande votre `open` dans l’ordre dans lequel les instructions _couches_ de votre système sont définis. Effectuant alphanumérique de tri au sein des différentes couches topologiques peut également être considéré comme.
 

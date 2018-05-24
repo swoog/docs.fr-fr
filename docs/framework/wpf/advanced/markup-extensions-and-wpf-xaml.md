@@ -15,11 +15,11 @@ helpviewer_keywords:
 - characters [WPF], curly brace
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
-ms.openlocfilehash: f18a369157c1e37411a3c8d8b6dfcce99bc347c6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e2fb1e64f957b49743d8dfb19091bca50303e2d2
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>Extensions de balisage et XAML WPF
 Cette rubrique introduit le concept d’extensions de balisage pour XAML, notamment leurs règles de syntaxe, leur finalité et le modèle d’objet de classe sous-jacent. Les extensions de balisage sont une fonctionnalité générale du langage XAML et de l’implémentation .NET des services XAML. Cette rubrique détaille spécifiquement des extensions de balisage pour une utilisation dans le langage XAML de WPF.  
@@ -64,7 +64,7 @@ Cette rubrique introduit le concept d’extensions de balisage pour XAML, notamm
   
 -   `RelativeSource` Fournit des informations sources pour un <xref:System.Windows.Data.Binding> qui peut naviguer entre plusieurs relations possibles dans l’arborescence de l’objet d’exécution. Cela fournit une source d’approvisionnement spécialisée pour les liaisons créées dans des modèles multiusage ou dans du code sans avoir pleine connaissance de l’arborescence d’objets environnante. Pour plus d’informations, consultez [RelativeSource, extension de balisage](../../../../docs/framework/wpf/advanced/relativesource-markupextension.md).  
   
--   `TemplateBinding` permet à un modèle de contrôle d’utiliser des valeurs pour des propriétés basées sur un modèle provenant de propriétés définies par un modèle objet de la classe destinée à utiliser le modèle. En d’autres termes, la propriété au sein de la définition du modèle peut accéder à un contexte qui existe uniquement une fois que le modèle est appliqué. Pour plus d’informations, consultez [TemplateBinding, extension de balisage](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md). Pour plus d’informations sur l’utilisation pratique de `TemplateBinding`, consultez [Style avec ControlTemplates, exemple](http://go.microsoft.com/fwlink/?LinkID=160041).  
+-   `TemplateBinding` permet à un modèle de contrôle d’utiliser des valeurs pour des propriétés basées sur un modèle provenant de propriétés définies par un modèle objet de la classe destinée à utiliser le modèle. En d’autres termes, la propriété au sein de la définition du modèle peut accéder à un contexte qui existe uniquement une fois que le modèle est appliqué. Pour plus d’informations, consultez [TemplateBinding, extension de balisage](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md). Pour plus d’informations sur l’utilisation pratique de `TemplateBinding`, consultez [Style avec ControlTemplates, exemple](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 -   `ColorConvertedBitmap` prend en charge un scénario d’acquisition d’images relativement avancé. Pour plus d’informations, consultez [ColorConvertedBitmap, extension de balisage](../../../../docs/framework/wpf/advanced/colorconvertedbitmap-markup-extension.md).  
   

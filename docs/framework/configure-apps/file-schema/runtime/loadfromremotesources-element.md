@@ -7,11 +7,11 @@ helpviewer_keywords:
 ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f0d442f71a0e2fc7deacd9aaa02cfba7b66f2349
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: acd66cdff9f2c68e7d665b1fd236b18eeb9b4bac
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="ltloadfromremotesourcesgt-element"></a>&lt;loadFromRemoteSources&gt; élément
 Spécifie si les assemblys à partir de sources distantes doivent se voir accorder une confiance totale.  
@@ -69,7 +69,7 @@ Spécifie si les assemblys à partir de sources distantes doivent se voir accord
   
  Le `enabled` d’attribut pour cet élément est efficace uniquement lorsque la sécurité d’accès du code (CAS) est désactivée. Par défaut, la stratégie CAS est désactivée dans le [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] et versions ultérieures. Si vous définissez `enabled` à `true`, applications distantes sont de confiance totale.  
   
- Si `<loadFromRemoteSources>``enabled` n’est pas définie `true`, une exception est levée dans les conditions suivantes :  
+ Si `<loadFromRemoteSources>` `enabled` n’est pas définie `true`, une exception est levée dans les conditions suivantes :  
   
 -   Le comportement de bac à sable du domaine actuel est différent de son comportement dans le [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)]. Cela nécessite la stratégie CAS doit être désactivée et le domaine actuel, ne pas à sable (sandbox).  
   
