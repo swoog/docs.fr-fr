@@ -6,11 +6,11 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 1d6487f4136b5a3f8bfc2e1721ae268e06f5ba98
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b5ad639309238912aa27b58c95466b4f37052699
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Contraintes sur les paramètres de type (Guide de programmation C#)
 
@@ -18,7 +18,7 @@ Les contraintes informent le compilateur sur les fonctionnalités que doit avoir
 
 |Contrainte|Description|
 |----------------|-----------------|
-|`where T: struct`|L’argument de type doit être un type valeur. Tout type valeur, excepté <xref:System.Nullable>, peut être spécifié. Pour plus d’informations, consultez [Utilisation de types Nullable](../nullable-types/using-nullable-types.md).|
+|`where T : struct`|L’argument de type doit être un type valeur. Tout type valeur, excepté <xref:System.Nullable>, peut être spécifié. Pour plus d’informations, consultez [Utilisation de types Nullable](../nullable-types/using-nullable-types.md).|
 |`where T : class`|L’argument de type doit être un type référence. Cette contrainte s’applique également à tous les types de classe, d’interface, de délégué ou de tableau.|
 |`where T : unmanaged`|L’argument de type ne doit pas être un type référence et ne doit contenir aucun membre de type référence à tous les niveaux d’imbrication.|
 |`where T : new()`|L’argument de type doit avoir un constructeur sans paramètre public. Quand vous utilisez la contrainte `new()` avec d’autres contraintes, elle doit être spécifiée en dernier.|

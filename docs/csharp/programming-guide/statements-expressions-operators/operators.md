@@ -6,11 +6,11 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: d2eace5782b3a070a22acf751fd68340fa939a0b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 76371985e340945793310247ec48d9b0cb747aed
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="operators-c-programming-guide"></a>Opérateurs (guide de programmation C#)
 En C#, un *opérateur* est un élément de programme qui s'applique à un ou plusieurs *opérandes* dans une expression ou une instruction. Les opérateurs qui prennent un opérande, comme l'opérateur d'incrément (`++`) ou `new`, portent le nom d'opérateurs *unaires* . Les opérateurs qui prennent deux opérandes, comme les opérateurs arithmétiques (`+`,`-`,`*`,`/`) portent le nom d'opérateur *binaires* . Un opérateur, l'opérateur conditionnel (`?:`), prend trois opérandes et est le seul opérateur ternaire en C#.  
@@ -114,7 +114,7 @@ En C#, un *opérateur* est un élément de programme qui s'applique à un ou plu
 |OR logique|x [&#124;](../../../csharp/language-reference/operators/or-operator.md) y|Opération de bits entière OR, Boolean logique OR|  
 |AND conditionnel|x [&&](../../../csharp/language-reference/operators/conditional-and-operator.md) y|Évalue y uniquement si x est vrai|  
 |OR conditionnel|x [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) y|Évalue y uniquement si x est false|  
-|Fusion de Null|x [??](../../../csharp/language-reference/operators/null-conditional-operator.md) o|Prend la valeur y si x est null, sinon prend la valeur x|  
+|Fusion de Null|x [??](../../../csharp/language-reference/operators/null-coalescing-operator.md) o|Prend la valeur y si x est null, sinon prend la valeur x|  
 |Conditionnel|x [?](../../../csharp/language-reference/operators/conditional-operator.md) y : z|Prend la valeur de y si x est vrai, de z si x est false|  
   
  **Opérateurs anonymes et d’assignation**  

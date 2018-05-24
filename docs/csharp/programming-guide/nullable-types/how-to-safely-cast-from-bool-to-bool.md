@@ -5,16 +5,16 @@ helpviewer_keywords:
 - casting [C#], nullable types
 - nullable types [C#], casting bool? to bool
 ms.assetid: e06e4274-a443-422d-8ef1-9dbf9df55237
-ms.openlocfilehash: 18f44018621182427199dee56146f29b8d3068f4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e04e34abd477730f9dd01486ec6bddcde4943edc
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="how-to-safely-cast-from-bool-to-bool-c-programming-guide"></a>Comment : effectuer sans risque un cast du type bool? en bool (Guide de programmation C#)
 Le type Nullable `bool?` peut contenir trois valeurs différentes : `true`, `false` et `null`. Par conséquent, le type `bool?` ne peut pas être utilisé dans des instructions conditionnelles comme `if`, `for` ou `while`. Par exemple, le code suivant génère une erreur du compilateur.  
   
-```  
+```csharp  
 bool? b = null;  
 if (b) // Error CS0266.  
 {  
@@ -45,4 +45,4 @@ if((bool)test) //now this cast is safe
  [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
  [Mots clés littéraux](../../../csharp/language-reference/keywords/literal-keywords.md)  
  [Types Nullable](../../../csharp/programming-guide/nullable-types/index.md)  
- [?? Opérateur](../../../csharp/language-reference/operators/null-conditional-operator.md)
+ [?? Opérateur](../../../csharp/language-reference/operators/null-coalescing-operator.md)
