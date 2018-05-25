@@ -6,11 +6,11 @@ helpviewer_keywords:
 - compiler options [C#], listed by category
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
-ms.openlocfilehash: a3352b9f929382c7d5b7d0c62ef4022560caf371
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f02ae84544a60a992177332d528dd7970f84bf3f
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="c-compiler-options-listed-by-category"></a>Options du compilateur C# par catégorie
 Les options du compilateur suivantes sont triées par catégorie. Pour en obtenir la liste alphabétique, consultez [Options du compilateur C# par ordre alphabétique](listed-alphabetically.md).  
@@ -31,11 +31,11 @@ Les options du compilateur suivantes sont triées par catégorie. Pour en obteni
 |[-out](out-compiler-option.md)|Spécifie le fichier de sortie.|  
 |[/pdb](pdb-compiler-option.md)|Spécifie le nom et l'emplacement du fichier .pdb.|  
 |[-platform](platform-compiler-option.md)|Spécifie la plateforme de sortie.|  
-|[/preferreduilang](preferreduilang-compiler-option.md)|Spécifiez un langage pour les résultats de la compilation.|  
+|[/preferreduilang](preferreduilang-compiler-option.md)|Spécifie un langage pour les résultats de la compilation.|  
 |[/refout](refout-compiler-option.md)|Génère un assembly de référence en plus de l’assembly principal.|  
 |[-refonly](refonly-compiler-option.md)|Génère un assembly de référence au lieu d’un assembly principal.|  
 |[-target](target-compiler-option.md)|Spécifie le format du fichier de sortie en utilisant l’une des cinq options suivantes : [-target:appcontainerexe](target-appcontainerexe-compiler-option.md), [-target:exe](target-exe-compiler-option.md), [-target:library](target-library-compiler-option.md), [-target:module](target-module-compiler-option.md), [-target:winexe](target-winexe-compiler-option.md) ou [-target:winmdobj](target-winmdobj-compiler-option.md).|  
-|-modulename:\<string>|Spécifiez le nom du module source.|  
+|-modulename:\<string>|Spécifie le nom du module source|  
   
 ### <a name="net-framework-assemblies"></a>Assemblys .NET Framework  
   
@@ -91,7 +91,7 @@ Les options du compilateur suivantes sont triées par catégorie. Pour en obteni
 |[-codepage](codepage-compiler-option.md)|Spécifie la page de codes à utiliser pour tous les fichiers de code source inclus dans la compilation.|  
 |[-help](help-compiler-option.md)|Répertorie les options du compilateur dans stdout.|  
 |[-highentropyva](highentropyva-compiler-option.md)|Spécifie que le fichier exécutable prend en charge la randomisation du format d'espace d'adresse (ASLR).|  
-|[-langversion](langversion-compiler-option.md)|Spécifie le mode de version de langage : Default, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1 ou Latest |  
+|[-langversion](langversion-compiler-option.md)|Spécifie la version du langage : Default, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3 ou Latest |  
 |[-main](main-compiler-option.md)|Spécifie l’emplacement de la méthode **Main**.|  
 |[-noconfig](noconfig-compiler-option.md)|Indique au compilateur ne pas compiler avec csc.rsp.|  
 |[-nologo](nologo-compiler-option.md)|Supprime les informations de bannière du compilateur.|  
@@ -100,7 +100,7 @@ Les options du compilateur suivantes sont triées par catégorie. Pour en obteni
 |[unsafe](unsafe-compiler-option.md)|Active la compilation du code qui utilise le mot clé [unsafe](../../../csharp/language-reference/keywords/unsafe.md).|  
 |[-utf8output](utf8output-compiler-option.md)|Affiche les résultats de la compilation au format d'encodage UTF-8.|  
 |-parallel[+&#124;-]|Indique s'il faut utiliser la build simultanée (+).|  
-|-checksumalgorithm:\<alg>|Spécifiez l'algorithme de calcul de la somme de contrôle du fichier source stockée dans le fichier PDB.  Les valeurs prises en charge sont : SHA1 (par défaut) ou SHA256.|  
+|-checksumalgorithm:\<alg>|Spécifie l'algorithme de calcul de la somme de contrôle du fichier source stockée dans le fichier PDB.  Les valeurs prises en charge sont : SHA1 (par défaut) ou SHA256.|  
   
 ## <a name="obsolete-options"></a>Options obsolètes  
   

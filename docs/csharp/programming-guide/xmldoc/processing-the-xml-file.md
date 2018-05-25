@@ -5,11 +5,11 @@ helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-ms.openlocfilehash: b95101d2f8e12f7c6fee5b410e7801f9d890182d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 659562864ad323162f15351aa960c2a54164c77d
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="processing-the-xml-file-c-programming-guide"></a>Traitement du fichier XML (Guide de programmation C#)
 Le compilateur génère une chaîne d’ID pour chaque construction de votre code qui est marquée pour générer la documentation. (Pour plus d’informations sur la façon de baliser votre code, consultez [Balises recommandées pour les commentaires de documentation](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md).) La chaîne d’ID identifie de façon unique la construction. Les programmes qui traitent le fichier XML peuvent utiliser la chaîne d’identification pour identifier l’élément de métadonnées/réflexion .NET Framework correspondant auquel s’applique la documentation.  
@@ -40,9 +40,9 @@ Le compilateur génère une chaîne d’ID pour chaque construction de votre cod
   
     -   Les types intrinsèques (par exemple ELEMENT_TYPE_I4, ELEMENT_TYPE_OBJECT, ELEMENT_TYPE_STRING, ELEMENT_TYPE_TYPEDBYREF et ELEMENT_TYPE_VOID) sont représentés en tant que nom qualifié complet du type complet correspondant. Par exemple, System.Int32 ou System.TypedReference.  
   
-    -   ELEMENT_TYPE_PTR est représenté par un « * » après le type modifié.  
+    -   ELEMENT_TYPE_PTR est représenté par un « \* » après le type modifié.  
   
-    -   ELEMENT_TYPE_BYREF est représenté par un « @ » après le type modifié.  
+    -   ELEMENT_TYPE_BYREF est représenté par un '\@' après le type modifié.  
   
     -   ELEMENT_TYPE_PINNED est représenté par un « ^ » après le type modifié. Le compilateur C# ne génère jamais ceci.  
   
@@ -68,11 +68,11 @@ Le compilateur génère une chaîne d’ID pour chaque construction de votre cod
   
 -   Pour les opérateurs de conversion uniquement (op_Implicit et op_Explicit), la valeur de retour de la méthode est encodée en tant que « ~ » suivi du type de retour, conformément à l’encodage ci-dessus.  
   
--   Pour les types génériques, le nom du type est suivi d’un accent grave, puis d’un chiffre qui indique le nombre de paramètres de type générique.  Par exemple :  
+-   Pour les types génériques, le nom du type est suivi d’un accent grave, puis d’un chiffre qui indique le nombre de paramètres de type générique. Exemple :
   
      ``<member name="T:SampleClass`2">`` est l’étiquette pour un type qui est défini en tant que `public class SampleClass<T, U>`.  
   
-     Pour les méthodes qui prennent des types génériques en tant que paramètres, les paramètres de types génériques sont spécifiés sous forme de chiffres précédés d’accents graves (par exemple \`0,`1).  Chaque chiffre représente une notation de tableau de base zéro pour les paramètres génériques du type.  
+     Pour les méthodes qui prennent des types génériques en tant que paramètres, les paramètres de types génériques sont spécifiés sous forme de chiffres précédés d’accents graves (par exemple \`0,\`1). Chaque chiffre représente une notation de tableau de base zéro pour les paramètres génériques du type.  
   
 ## <a name="examples"></a>Exemples  
  Les exemples suivants montrent comment les chaînes d’ID pour une classe et ses membres seraient générées :  

@@ -7,25 +7,27 @@ f1_keywords:
 helpviewer_keywords:
 - for keyword [C#]
 ms.assetid: 34041a40-2c87-467a-9ffb-a0417d8f67a8
-ms.openlocfilehash: 9d7ab9e37be61384c33833381f44257169c81c31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2c099411499c6ca8396c55955bdc634e48caf621
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/18/2018
 ---
 # <a name="for-c-reference"></a>for (référence C#)
-En utilisant une boucle `for`, vous pouvez exécuter une instruction ou un bloc d’instructions de manière répétée jusqu'à ce qu’une expression spécifiée corresponde à `false`. Ce type de boucle est utile pour itérer des tableaux et d’autres applications pour lesquelles vous savez à l’avance combien de fois vous souhaitez effectuer une itération.  
+
+En utilisant une boucle `for`, vous pouvez exécuter une instruction ou un bloc d’instructions de manière répétée jusqu'à ce qu’une expression spécifiée corresponde à `false`. Ce type de boucle est utile pour itérer des tableaux et d’autres applications pour lesquelles vous savez à l’avance combien de fois vous souhaitez effectuer une itération.
   
-## <a name="example"></a>Exemple  
- Dans l’exemple suivant, la valeur de `i` est écrite dans la console et incrémentée de 1 à chaque itération de la boucle.  
+## <a name="example"></a>Exemple
+
+Dans l’exemple suivant, la valeur de `i` est écrite dans la console et incrémentée de 1 à chaque itération de la boucle :
   
- [!code-csharp[csrefKeywordsIteration#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_1.cs)]  
+[!code-csharp[csrefKeywordsIteration#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_1.cs)]
   
- L’instruction `for` de l’exemple précédent effectue les actions suivantes :  
+L’[instruction for](/dotnet/csharp/language-reference/language-specification/statements#the-for-statement) de l’exemple précédent effectue les actions suivantes :
   
-1.  Tout d’abord, la valeur initiale de la variable `i` est établie. Cette étape se produit une seule fois, quel que soit le nombre d’itérations de la boucle. Vous pouvez considérer cette initialisation comme survenant en dehors du processus de boucle.  
+1.  Tout d’abord, la valeur initiale de la variable `i` est établie. Cette étape se produit une seule fois, quel que soit le nombre d’itérations de la boucle. Vous pouvez considérer cette initialisation comme survenant en dehors du processus de boucle.
   
-2.  Pour évaluer la condition (`i <= 5`), la valeur de `i` est comparée à 5.  
+2.  Pour évaluer la condition (`i <= 5`), la valeur de `i` est comparée à 5.
   
     -   Si `i` est inférieur ou égal à 5, la condition prend la valeur `true`, et les actions suivantes se produisent.  
   
@@ -37,16 +39,18 @@ En utilisant une boucle `for`, vous pouvez exécuter une instruction ou un bloc 
   
     -   Si `i` est supérieur à 5, la condition prend la valeur `false`, et vous quittez la boucle.  
   
- Notez que, si la valeur initiale de `i` est supérieure à 5, le corps de la boucle n’est jamais exécuté.  
+Notez que, si la valeur initiale de `i` est supérieure à 5, le corps de la boucle n’est jamais exécuté.
+
+## <a name="sections-of-a-for-statement"></a>Sections d’une instruction for
   
- Chaque instruction `for` définit les sections Initialiseur, Condition et Itérateur. Ces sections déterminent généralement le nombre d’itérations de la boucle.  
+Chaque [instruction for](/dotnet/csharp/language-reference/language-specification/statements#the-for-statement) définit les sections *Initialiseur*, *Condition* et *Itérateur*. Ces sections déterminent généralement le nombre d’itérations de la boucle.  
   
 ```csharp  
 for (initializer; condition; iterator)  
     body  
 ```  
   
- Ces sections répondent aux objectifs suivants :  
+Ces sections répondent aux objectifs suivants :
   
 -   La section Initialiseur définit les conditions initiales. Les instructions de cette section ne sont exécutées qu’une seule fois, avant l’entrée dans la boucle. La section peut contenir uniquement l’une des deux options suivantes.  
   
@@ -86,29 +90,34 @@ for (initializer; condition; iterator)
   
      Vous pouvez quitter une boucle `for` à l’aide du mot clé [break](../../../csharp/language-reference/keywords/break.md), ou passer à l’itération suivante de la boucle à l’aide du mot clé [continue](../../../csharp/language-reference/keywords/continue.md). Vous pouvez quitter une boucle en utilisant une instruction [goto](../../../csharp/language-reference/keywords/goto.md), [return](../../../csharp/language-reference/keywords/return.md) ou [throw](../../../csharp/language-reference/keywords/throw.md).  
   
- Le premier exemple de cette rubrique montre le type de boucle `for` le plus courant, qui fait les choix suivants au niveau des sections :  
+Le premier exemple de cette rubrique montre le type de boucle `for` le plus courant, qui fait les choix suivants au niveau des sections :
   
 -   L’initialiseur déclare et initialise une variable de boucle locale, `i`, qui compte le nombre d’itérations de la boucle.  
   
 -   La condition compare la valeur de la variable de boucle par rapport à la valeur finale connue de 5.  
   
--   La section Itérateur utilise une instruction d’incrémentation suffixée, `i++`, pour calculer chaque itération de la boucle.  
+-   La section Itérateur utilise une instruction d’incrémentation suffixée, `i++`, pour calculer chaque itération de la boucle.
+
+## <a name="more-examples"></a>Autres exemples
   
- L’exemple suivant montre plusieurs choix moins courants : l’attribution d’une valeur à une variable de boucle externe dans la section Initialiseur, l’appel de la méthode `Console.WriteLine` dans les sections Initialiseur et Itérateur, et la modification des valeurs de deux variables dans la section Itérateur.  
+L’exemple suivant montre plusieurs choix moins courants : l’attribution d’une valeur à une variable de boucle externe dans la section Initialiseur, l’appel de la méthode `Console.WriteLine` dans les sections Initialiseur et Itérateur, et la modification des valeurs de deux variables dans la section Itérateur.
   
- [!code-csharp[csrefKeywordsIteration#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_2.cs)]  
+[!code-csharp[csrefKeywordsIteration#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_2.cs)]  
   
- Toutes les expressions qui définissent une instruction `for` sont facultatives. Par exemple, l’instruction suivante crée une boucle infinie.  
+Toutes les expressions qui définissent une instruction `for` sont facultatives. Par exemple, l’instruction suivante crée une boucle infinie :
   
- [!code-csharp[csrefKeywordsIteration#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_3.cs)]  
+[!code-csharp[csrefKeywordsIteration#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_3.cs)]  
   
-## <a name="c-language-specification"></a>Spécification du langage C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>spécification du langage C#  
+
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
   
-## <a name="see-also"></a>Voir aussi  
- [Référence C#](../../../csharp/language-reference/index.md)  
- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
- [Mots clés C#](../../../csharp/language-reference/keywords/index.md)  
- [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)  
- [for, instruction (C++)](/cpp/cpp/for-statement-cpp)  
- [Instructions d’itération](../../../csharp/language-reference/keywords/iteration-statements.md)
+## <a name="see-also"></a>Voir aussi
+
+[L’instruction for (spécification du langage C#)](/dotnet/csharp/language-reference/language-specification/statements#the-for-statement)  
+[Référence C#](../../../csharp/language-reference/index.md)  
+[Guide de programmation C#](../../../csharp/programming-guide/index.md)  
+[Mots clés C#](../../../csharp/language-reference/keywords/index.md)  
+[foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)  
+[for, instruction (C++)](/cpp/cpp/for-statement-cpp)  
+[Instructions d’itération](../../../csharp/language-reference/keywords/iteration-statements.md)

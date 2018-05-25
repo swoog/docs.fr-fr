@@ -20,14 +20,17 @@ helpviewer_keywords:
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 573a3e954bf15bdbcf8b1885c10f68a222329ac1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 02c942dea3314581ce8f758bb9ed3ce88c2fe150
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Comment : vérifier que des chaînes sont dans un format d'adresse de messagerie valide
 L'exemple suivant utilise une expression régulière pour vérifier qu'une chaîne est dans un format d'adresse de messagerie valide.  
+
+> [!NOTE]
+>  Nous vous recommandons d’utiliser la classe <xref:System.Net.Mail.MailAddress?displayProperty=nameWithType> pour vérifier qu’une chaîne est dans un format d’adresse de messagerie valide. Pour cela, passez la chaîne d’adresse de messagerie au constructeur de classe <xref:System.Net.Mail.MailAddress.%23ctor%28System.String%29?displayProperty=nameWithType>, qui lève une exception <xref:System.FormatException> si la chaîne a un format non reconnu.  
   
 ## <a name="example"></a>Exemple  
  L'exemple définit une méthode `IsValidEmail` qui retourne la valeur `true` si la chaîne contient une adresse de messagerie valide et la valeur `false` dans le cas contraire, mais qui n'effectue aucune autre action.  
@@ -67,9 +70,6 @@ L'exemple suivant utilise une expression régulière pour vérifier qu'une chaî
 |<code>&#124;(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+</code>|Si le caractère qui suit @ n'est pas un crochet ouvrant, établit une correspondance avec un caractère alphanumérique ayant une valeur comprise entre A et Z, a et z ou 0 et 9, suivi de zéro, une ou plusieurs occurrences d'un trait d'union, suivi de zéro, un ou plusieurs caractères alphanumériques ayant une valeur comprise entre A et Z, a et z ou 0 et 9, suivi d'un point. Ce modèle peut être répété une ou plusieurs fois et doit être suivi du nom de domaine de niveau supérieur.|  
 |`[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))`|Le nom de domaine de niveau supérieur doit commencer et se terminer par un caractère alphanumérique (compris entre a et z, A et Z ou 0 et 9). Il peut également comprendre entre zéro et 22 caractères ASCII (soit des caractères alphanumériques, soit des traits d'union).|  
 |`$`|Termine la correspondance à la fin de la chaîne.|  
-  
-> [!NOTE]
->  Au lieu d'utiliser une expression régulière pour valider une adresse de messagerie, vous pouvez recourir à la classe <xref:System.Net.Mail.MailAddress?displayProperty=nameWithType>. Pour déterminer si une adresse de messagerie est valide, transmettez l'adresse de messagerie au constructeur de classe <xref:System.Net.Mail.MailAddress.%23ctor%28System.String%29?displayProperty=nameWithType>.  
   
 ## <a name="compiling-the-code"></a>Compilation du code  
  Les méthodes `IsValidEmail` et `DomainMapper` peuvent être incluses dans une bibliothèque de méthodes utilitaires d'expression régulière ou peuvent être incluses en tant que méthodes d'instance ou statiques privées dans la classe d'application.  

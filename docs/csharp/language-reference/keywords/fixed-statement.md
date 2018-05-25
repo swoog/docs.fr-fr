@@ -1,20 +1,20 @@
 ---
 title: fixed, instruction (référence C#)
-ms.date: 04/20/2018
+ms.date: 05/10/2018
 f1_keywords:
 - fixed_CSharpKeyword
 - fixed
 helpviewer_keywords:
 - fixed keyword [C#]
-ms.openlocfilehash: e1664f508cb861ffa73b800eeb0da3a1f1cdc432
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e26e7e7f15dd48cf029d5f67bf5ef0de3e19b7bb
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="fixed-statement-c-reference"></a>fixed, instruction (référence C#)
 
-L’instruction `fixed` empêche le récupérateur de mémoire de déplacer une variable mobile. L’instruction `fixed` est uniquement autorisée dans un contexte [unsafe](unsafe.md). `Fixed` peut également être utilisé pour créer des [mémoires tampons de taille fixe](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md).
+L’instruction `fixed` empêche le récupérateur de mémoire de déplacer une variable mobile. L’instruction `fixed` est uniquement autorisée dans un contexte [unsafe](unsafe.md). `fixed` peut également être utilisé pour créer des [mémoires tampons de taille fixe](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md).
 
 L’instruction `fixed` définit un pointeur vers une variable managée et épingle cette variable pendant l’exécution de l’instruction. Les pointeurs vers des variables managées ne sont utiles que dans un contexte `fixed`. Sans contexte `fixed`, le garbage collection peut déplacer les variables de manière imprévisible. Le compilateur C# permet seulement d’assigner un pointeur à une variable managée dans une instruction `fixed`.
 
@@ -23,6 +23,12 @@ L’instruction `fixed` définit un pointeur vers une variable managée et épin
 Vous pouvez initialiser un pointeur à l’aide d’un tableau, d’une chaîne, d’un tampon de taille fixe ou de l’adresse d’une variable. L’exemple suivant montre l’utilisation des adresses de variables, des tableaux et des chaînes. Pour plus d’informations sur les mémoires tampons de taille fixe, consultez [Mémoires tampons de taille fixe](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md).
 
 [!code-csharp[Initializing fixed size buffers](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#2)]
+
+À compter de C# 7.3, l’instruction `fixed` s’applique à d’autres types au-delà des tableaux, chaînes, mémoires tampons de taille fixe ou variables non managées. Tout type qui implémente une méthode nommée `DangerousGetPinnableReference` peut être épinglé. `DangerousGetPinnableReference` doit retourner une variable `ref` d’un type non géré. Consultez la rubrique consacrée aux [types pointeur](../../programming-guide/unsafe-code-pointers/pointer-types.md) pour plus d’informations. Les types .NET <xref:System.Span%601?displayProperty=nameWithType> et <xref:System.ReadOnlySpan%601?displayProperty=nameWithType> introduits dans .NET Core 2.0 utilisent ce modèle et peuvent être épinglés. Ceci est illustré dans l'exemple suivant :
+
+[!code-csharp[Accessing fixed memory](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#FixedSpan)]
+
+Si vous créez des types qui doivent être inclus dans ce modèle, consultez <xref:System.Span%601.DangerousGetPinnableReference?displayProperty=nameWithType> pour obtenir un exemple d’implémentation du modèle.
 
 Plusieurs pointeurs peuvent être initialisés dans une instruction s’ils sont tous du même type :
 

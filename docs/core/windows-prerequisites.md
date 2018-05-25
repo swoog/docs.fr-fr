@@ -3,12 +3,12 @@ title: Configuration requise pour .NET Core sur Windows
 description: Découvrez les dépendances nécessaires sur votre machine Windows pour développer et exécuter des applications .NET Core.
 author: JRAlexander
 ms.author: johalex
-ms.date: 04/24/2018
-ms.openlocfilehash: 7c6f39f004ebc39ca714ce419a38d842fcf8f0cb
-ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
+ms.date: 05/18/2018
+ms.openlocfilehash: 3d172c83f0a79744afbaeeff52d7fea62d9b98b6
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Configuration requise pour .NET Core sur Windows
 
@@ -28,11 +28,13 @@ Cet article montre les dépendances nécessaires pour développer des applicatio
 * Windows Server 2008 R2 SP1 (version complète ou Server Core)
 * Windows Server 2012 SP1 (version complète ou Server Core)
 * Windows Server 2012 R2 (version complète ou Server Core)
-* Windows Server 2016 (version complète, Server Core ou Nano Server)
+* Windows Server 2016 ou versions ultérieures (version complète, Server Core ou Nano Server)
 
-Consultez [.NET Core 2.x - Versions des systèmes d’exploitation prises en charge](https://github.com/dotnet/core/blob/master/release-notes/2.0/2.0-supported-os.md) pour obtenir la liste complète des systèmes d’exploitation pris en charge par .NET Core 2.x.
+Les articles suivants dressent la liste complète des systèmes d’exploitation .NET Core pris en charge par version :
 
-Consultez [.NET Core 1.x - Versions des systèmes d’exploitation prises en charge](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md) pour obtenir la liste complète des systèmes d’exploitation pris en charge par .NET Core 1.x.
+* [.NET Core 2.1 - Versions de système d’exploitation prises en charge](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md)
+* [.NET Core 2.0 - Versions de système d’exploitation prises en charge](https://github.com/dotnet/core/blob/master/release-notes/2.0/2.0-supported-os.md)
+* [.NET Core 1.x - Versions de système d’exploitation prises en charge](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md)
 
 ## <a name="net-core-dependencies"></a>Dépendances .NET Core
 
@@ -46,7 +48,13 @@ Vous devez installer [Microsoft Visual C++ 2015 Redistributable Update 3](https:
 * Installation de .NET Core via un fichier *.zip*. Ceci peut inclure des serveurs de builds/CI/CD.
 
 > [!NOTE]
-> *Pour Windows 8.1 et versions antérieures, ou Windows Server 2012 R2 et versions antérieures :* vérifiez que votre installation de Windows est à jour et qu’elle comprend le correctif [KB2999226](https://support.microsoft.com/en-us/help/2999226/update-for-universal-c-runtime-in-windows) (que vous pouvez installer par le biais de Windows Update). Si cette mise à jour n’est pas installée, quand vous lancez une application .NET Core, vous recevez une erreur comme celle-ci : `The program can't start because api-ms-win-crt-runtime-1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`
+> **Pour Windows 8.1 et versions antérieures, ou Windows Server 2012 R2 et versions antérieures :**
+>
+> Vérifiez que votre installation Windows est à jour et comprend le correctif logiciel [KB2999226](https://support.microsoft.com/en-us/help/2999226/update-for-universal-c-runtime-in-windows), installable via Windows Update. Si cette mise à jour n’est pas installée, quand vous lancez une application .NET Core, vous recevez une erreur semblable à celle-ci : `The program can't start because api-ms-win-crt-runtime-1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`
+>
+> **Pour Windows 7 ou Windows Server 2008 R2 :**
+>
+> Outre KB2999226, vérifiez également que la mise à jour [KB2533623](https://support.microsoft.com/en-us/help/2533623/microsoft-security-advisory-insecure-library-loading-could-allow-remot) est installée. Si cette mise à jour n’est pas installée, quand vous lancez une application .NET Core, vous recevez une erreur comme celle-ci : `The library hostfxr.dll was found, but loading it from C:\<path_to_app>\hostfxr.dll failed`.
 
 ## <a name="prerequisites-with-visual-studio-2017"></a>Prérequis pour Visual Studio 2017
 
@@ -96,6 +104,6 @@ Pur développer des applications .NET Core 1.x dans Visual Studio, [télécharge
 >
 > * Dans le menu **Aide**, choisissez **À propos de Microsoft Visual Studio**.
 > * Dans la boîte de dialogue **À propos de Microsoft Visual Studio**, vérifiez le numéro de version.
->   * Pour les applications .NET Core 2.1 Preview 1, Visual Studio 2017 version 15.6 Preview 6 ou ultérieure.
+>   * Pour les applications .NET Core 2.1 RC, Visual Studio 2017 version 15.7 ou ultérieure.
 >   * Pour les applications .NET Core 2.0, Visual Studio 2017 version 15.3 ou ultérieure.
 >   * Pour les applications .NET Core 1.x, Visual Studio 2017 version 15.0 ou ultérieure.

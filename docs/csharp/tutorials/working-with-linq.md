@@ -3,11 +3,11 @@ title: Utilisation de LINQ
 description: Ce didacticiel vous apprend à générer des séquences avec LINQ, à écrire des méthodes pour les requêtes LINQ et à faire la distinction entre l’évaluation stricte et l’évaluation paresseuse.
 ms.date: 03/28/2017
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: 17c294a372a05a05d3893fce7b3adc426c6305fd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e5f9baab13cddfb9e294de1e1a6ce967ccbe0813
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="working-with-linq"></a>Utilisation de LINQ
 
@@ -200,7 +200,7 @@ Exécutez l’exemple, et regardez comment le jeu se réorganise à chaque méla
 
 ## <a name="optimizations"></a>Optimisations
 
-L’exemple que vous avez produit jusque-là exécute un *mélange intérieur*, où les cartes du haut et du bas restent les mêmes à chaque exécution. Faisons une modification, et exécutons un *mélange extérieur*, où les 52 cartes changent toutes de position. Dans le cas d’un mélange extérieur, on intercale les deux moitiés du jeu de sorte que la première carte de la moitié du dessous devienne la première carte du jeu. Cela signifie que la dernière carte de la moitié du dessus devient la carte du bas. Il n’y a qu’une ligne à modifier. Mettez à jour l’appel à la fonction de mélange pour modifier l’ordre des moitiés du dessus et du dessous du jeu :
+L’exemple que vous avez produit jusque-là exécute un *mélange extérieur*, où les cartes du haut et du bas restent les mêmes à chaque exécution. Faisons une modification, et exécutons un *mélange intérieur*, où les 52 cartes changent toutes de position. Dans le cas d’un mélange intérieur, on intercale les deux moitiés du jeu de sorte que la première carte de la moitié du dessous devienne la première carte du jeu. Cela signifie que la dernière carte de la moitié du dessus devient la carte du bas. Il n’y a qu’une ligne à modifier. Mettez à jour l’appel à la fonction de mélange pour modifier l’ordre des moitiés du dessus et du dessous du jeu :
 
 ```csharp
 shuffle = shuffle.Skip(26).InterleaveSequenceWith(shuffle.Take(26));
@@ -264,13 +264,13 @@ public static void Main(string[] args)
 }
 ```
 
-Remarquez que vous n’écrivez pas dans le journal à chaque fois que vous accédez à une requête, mais seulement lors de la création de la requête d’origine. Le programme met toujours longtemps à s’exécuter, mais vous pouvez maintenant voir pourquoi. Si vous perdez patience au cours de l’exécution du mélange extérieur avec journalisation, revenez au mélange intérieur. Vous verrez quand même les effets de l’évaluation paresseuse. Sur une itération, elle exécute 2 592 requêtes, génération de toutes les valeurs et couleurs comprise.
+Remarquez que vous n’écrivez pas dans le journal à chaque fois que vous accédez à une requête, mais seulement lors de la création de la requête d’origine. Le programme met toujours longtemps à s’exécuter, mais vous pouvez maintenant voir pourquoi. Si vous perdez patience au cours de l’exécution du mélange intérieur avec journalisation, revenez au mélange extérieur. Vous verrez quand même les effets de l’évaluation paresseuse. Sur une itération, elle exécute 2 592 requêtes, génération de toutes les valeurs et couleurs comprise.
 
 Il y a un moyen simple de mettre à jour ce programme afin d’éviter toutes ces exécutions. Les méthodes LINQ `ToArray()` et `ToList()` provoquent l’exécution de la requête et stockent les résultats respectivement dans un tableau ou dans une liste. On utilise ces méthodes pour mettre en cache les données résultant d’une requête plutôt que de réexécuter la requête source.  Ajoutez les requêtes qui génèrent les jeux de cartes avec un appel à `ToArray()` et réexécutez la requête :
 
 [!CODE-csharp[Main](../../../samples/csharp/getting-started/console-linq/Program.cs?name=snippet1)]
 
-Réexécutez-la : le mélange intérieur est descendu à 30 requêtes. Si vous repassez au mélange extérieur, vous constaterez des améliorations similaires. (Il exécute à présent 162 requêtes.)
+Réexécutez-la : le mélange extérieur est descendu à 30 requêtes. Si vous repassez au mélange intérieur, vous constaterez des améliorations similaires. (Il exécute à présent 162 requêtes.)
 
 Ne déduisez pas de cet exemple que toutes les requêtes devraient s’exécuter de façon stricte. Cet exemple est conçu pour mettre en évidence les cas d’usage où l’évaluation paresseuse peut causer des problèmes de performances. La raison en est que chaque nouvelle disposition du jeu de cartes est construite à partir de la configuration précédente. Avec l’évaluation paresseuse, chaque nouvelle configuration du jeu est générée à partir du jeu d’origine, y compris l’exécution du code qui a construit `startingDeck`, ce qui entraîne une grande quantité de travail supplémentaire. 
 
@@ -324,4 +324,4 @@ Compilez, puis réexécutez-la. La sortie est un peu plus propre, et le code est
 
 Cet exemple vous a montré quelques-unes des méthodes utilisées dans LINQ et comment créer vos propres méthodes, faciles à utiliser avec du code compatible LINQ. Il vous a également montré les différences entre l’évaluation paresseuse et l’évaluation stricte, ainsi que l’impact de cette décision sur les performances.
 
-Vous avez appris une technique de magicien. Les magiciens utilisent le mélange faro pour pouvoir contrôler le déplacement de chaque carte dans le jeu. Dans certains tours, le magicien invite un spectateur à placer une carte au-dessus du jeu et le mélange plusieurs fois, tout en sachant l’emplacement de la carte. D’autres illusions nécessitent que le jeu soit préparé d’une certaine manière. Le magicien prépare le jeu avant de réaliser le tour. Ensuite, il effectue cinq mélanges intérieurs. Sur scène, il peut montrer que le jeu paraît mélangé, le mélanger trois fois de plus et se retrouver avec le jeu organisé de la façon souhaitée.
+Vous avez appris une technique de magicien. Les magiciens utilisent le mélange faro pour pouvoir contrôler le déplacement de chaque carte dans le jeu. Dans certains tours, le magicien invite un spectateur à placer une carte au-dessus du jeu et le mélange plusieurs fois, tout en sachant l’emplacement de la carte. D’autres illusions nécessitent que le jeu soit préparé d’une certaine manière. Le magicien prépare le jeu avant de réaliser le tour. Ensuite, il effectue 5 mélanges extérieurs. Sur scène, il peut montrer que le jeu paraît mélangé, le mélanger trois fois de plus et se retrouver avec le jeu organisé de la façon souhaitée.

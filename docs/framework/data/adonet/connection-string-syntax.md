@@ -1,12 +1,12 @@
 ---
 title: Syntaxe des chaînes de connexion
-ms.date: 03/30/2017
+ms.date: 05/22/2018
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
-ms.openlocfilehash: ac7053d1b1b0865f33ae1bcd955493b4c62c7be6
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1df49a9ed5d45a1a1ee50145ff036c98ec72cca8
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="connection-string-syntax"></a>Syntaxe des chaînes de connexion
 Chaque fournisseur de données .NET Framework a un objet `Connection` qui hérite de <xref:System.Data.Common.DbConnection> et d'une propriété <xref:System.Data.Common.DbConnection.ConnectionString%2A> spécifique au fournisseur. La syntaxe de chaîne de connexion spécifique à chaque fournisseur est documentée dans sa propriété `ConnectionString`. Le tableau suivant répertorie les quatre fournisseurs de données inclus dans le .NET Framework.  
@@ -112,11 +112,11 @@ Vous pouvez également définir la propriété <xref:System.Data.SqlClient.SqlCo
 |----------------------------------------------|---------------------------------------------|-------------------------------------------------------------------|-----------------------------------------------------------|------------|  
 |Non|N/A|Non (valeur par défaut)|Ignoré|Aucun chiffrement ne se produit.|  
 |Non|N/A|Oui|Non (valeur par défaut)|Le chiffrement se produit uniquement en présence d'un certificat de serveur vérifiable, sinon la tentative de connexion échoue.|  
-|Non|N/A|Oui|Oui|Le chiffrement se produit uniquement en présence d'un certificat de serveur vérifiable, sinon la tentative de connexion échoue.|  
-|Oui|Non|Ignoré|Ignoré|Le chiffrement se produit uniquement en présence d'un certificat de serveur vérifiable, sinon la tentative de connexion échoue.|  
-|Oui|Oui|Non (valeur par défaut)|Ignoré|Le chiffrement se produit uniquement en présence d'un certificat de serveur vérifiable, sinon la tentative de connexion échoue.|  
-|Oui|Oui|Oui|Non (valeur par défaut)|Le chiffrement se produit uniquement en présence d'un certificat de serveur vérifiable, sinon la tentative de connexion échoue.|  
-|Oui|Oui|Oui|Oui|Le chiffrement se produit uniquement en présence d'un certificat de serveur vérifiable, sinon la tentative de connexion échoue.|  
+|Non|N/A|Oui|Oui|Le chiffrement se produit toujours, mais peut utiliser un certificat de serveur auto-signé.|  
+|Oui|Non|Ignoré|Ignoré|Le chiffrement se produit uniquement si un certificat de serveur vérifiable ; Sinon, la tentative de connexion échoue.|  
+|Oui|Oui|Non (valeur par défaut)|Ignoré|Le chiffrement se produit toujours, mais peut utiliser un certificat de serveur auto-signé.|  
+|Oui|Oui|Oui|Non (valeur par défaut)|Le chiffrement se produit uniquement si un certificat de serveur vérifiable ; Sinon, la tentative de connexion échoue.|  
+|Oui|Oui|Oui|Oui|Le chiffrement se produit toujours, mais peut utiliser un certificat de serveur auto-signé.|  
   
  Pour plus d’informations, consultez [à l’aide du chiffrement sans Validation](http://go.microsoft.com/fwlink/?LinkId=120500) dans la documentation en ligne de SQL Server.  
   
