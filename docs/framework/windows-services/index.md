@@ -14,38 +14,38 @@ author: ghogen
 manager: douge
 ms.openlocfilehash: af6e4bf7697b3139f6809295737fdd0d90b7f013
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
 ---
 # <a name="developing-windows-service-applications"></a>Développement des applications de service Windows
-À l’aide de Microsoft Visual Studio ou Microsoft [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK, vous pouvez facilement créer services en créant une application qui est installée en tant que service. Ce type d’application est appelé un service Windows. Avec les fonctionnalités de framework, vous pouvez créer des services, les installer, Démarrer, arrêter et contrôler leur comportement.  
+Utilisez Microsoft Visual Studio ou le SDK Microsoft [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] pour créer facilement des services. En fait, vous créez une application qui est installée comme service. Ce type d’application est appelé un service Windows. Grâce aux fonctionnalités du framework, vous pouvez non seulement créer des services, les installer, les démarrer et les arrêter, mais aussi contrôler leur comportement.  
   
 > [!WARNING]
->  Le modèle de service Windows pour C++ n’était pas inclus dans Visual Studio 2010. Pour créer un service Windows, vous pouvez créer un service dans le code managé en Visual c# ou Visual Basic, qui peut interagir avec le code C++ existant si nécessaire, ou vous pouvez créer un service Windows en C++ natif à l’aide de le [Assistant de projet ATL](/cpp/atl/reference/atl-project-wizard).  
+>  Le modèle de service Windows pour C++ n’était pas inclus dans Visual Studio 2010. Pour créer un service Windows, vous pouvez soit créer un service dans du code managé en Visual C# ou Visual Basic, celui-ci pouvant interagir avec le code C++ existant si nécessaire, soit créer un service Windows en C++ natif à l’aide de [l’Assistant Projet ATL](/cpp/atl/reference/atl-project-wizard).  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Introduction aux applications de service Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- Fournit une vue d’ensemble des applications de service Windows, la durée de vie d’un service, et comment les applications de service diffèrent des autres types de projets courants.  
+ Fournit une vue d’ensemble des applications de service Windows, de la durée de vie d’un service, et des différences entre les applications de service et les autres types de projets courants.  
   
  [Procédure pas à pas : création d’une application de service Windows dans le Concepteur de composants](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)  
- Fournit un exemple de création d’un service dans Visual Basic et Visual c#.  
+ Fournit un exemple de création d’un service en Visual Basic et Visual C#.  
   
  [Architecture de programmation d’une application de service](../../../docs/framework/windows-services/service-application-programming-architecture.md)  
- Explique les éléments de langage utilisées dans la programmation de service.  
+ Explique les éléments de langage utilisés dans la programmation d’un service.  
   
  [Guide pratique pour créer des services Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
- Décrit le processus de création et la configuration des services Windows en utilisant le modèle de projet de service Windows.  
+ Décrit le processus de création et de configuration de services Windows à l’aide du modèle de projet de service Windows.  
   
 ## <a name="related-sections"></a>Rubriques connexes  
  <xref:System.ServiceProcess.ServiceBase>  
- Décrit les principales fonctionnalités de la <xref:System.ServiceProcess.ServiceBase> (classe), qui est utilisé pour créer des services.  
+ Décrit les principales fonctionnalités de la classe <xref:System.ServiceProcess.ServiceBase> qui est utilisée pour créer des services.  
   
  <xref:System.ServiceProcess.ServiceProcessInstaller>  
- Décrit les fonctionnalités de la <xref:System.ServiceProcess.ServiceProcessInstaller> (classe), qui est utilisée avec la <xref:System.ServiceProcess.ServiceInstaller> classe pour installer et désinstaller vos services.  
+ Décrit les fonctionnalités de la classe <xref:System.ServiceProcess.ServiceProcessInstaller>. Celle-ci, utilisée avec la classe <xref:System.ServiceProcess.ServiceInstaller>, permet d’installer et de désinstaller vos services.  
   
  <xref:System.ServiceProcess.ServiceInstaller>  
- Décrit les fonctionnalités de la <xref:System.ServiceProcess.ServiceInstaller> (classe), qui est utilisée avec la <xref:System.ServiceProcess.ServiceProcessInstaller> classe pour installer et désinstaller votre service.  
+ Décrit les fonctionnalités de la classe <xref:System.ServiceProcess.ServiceInstaller>. Celle-ci, utilisée avec la classe <xref:System.ServiceProcess.ServiceProcessInstaller>, permet d’installer et de désinstaller votre service.  
   
- [NIB création de projets à partir de modèles](http://msdn.microsoft.com/library/7c36d86a-6b79-4480-8228-0f925f1204b2)  
- Décrit les projets de types utilisés dans ce chapitre et comment choisir entre eux.
+ [NIB Création de projets à partir de modèles](http://msdn.microsoft.com/library/7c36d86a-6b79-4480-8228-0f925f1204b2)  
+ Décrit les types de projets utilisés dans ce chapitre et comment faire votre choix.

@@ -1,6 +1,6 @@
 ---
-title: Projet de spécification du langage C# 6.0
-ms.date: 07/01/2017
+title: Projet de spécification du langage C# 6.0
+ms.date: 05/22/2018
 ms.topic: language-reference
 helpviewer_keywords:
 - C# language, specification
@@ -8,23 +8,24 @@ helpviewer_keywords:
 - Visual C#, C# language specification
 - language specification [C#]
 ms.assetid: e5d5a5cc-636b-4bff-b9c8-a8edc6207c22
-ms.openlocfilehash: 66ee5534d87da90fe4bce793a3841b13ff7cc04e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5ed035d5e1e524de9f86254d03e3276966293bf6
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/24/2018
 ---
-# <a name="c-60-draft-language-specification"></a>Projet de spécification du langage C# 6.0
-La spécification du langage C# est la source de référence pour la syntaxe C# et son utilisation. Cette spécification contient des informations détaillées sur tous les aspects du langage, notamment de nombreux points qui ne sont pas décrits dans la documentation pour Visual C#.
+# <a name="c-60-draft-language-specification"></a>Projet de spécification du langage C# 6.0
 
-Vous pouvez télécharger la version 5.0 de cette spécification à partir du [Centre de téléchargement Microsoft](http://www.microsoft.com/download/details.aspx?id=7029). Si vous avez installé Visual Studio 2015, cette spécification se trouve sur votre ordinateur dans le dossier Program Files (x86)/Microsoft Visual Studio 14.0/VC#/Specifications/1033. Si vous avez installé une autre version de Visual Studio ou si vous avez installé Visual Studio dans une langue autre que l’anglais, changez le chemin en conséquence.
+La spécification du langage C# est la source de référence de la syntaxe C# et de son utilisation. Cette spécification contient des informations détaillées sur tous les aspects du langage, notamment de nombreux points qui ne sont pas traités dans la documentation de C#.
+
+La version 5.0 de la spécification a été publiée en décembre 2017 dans le document [Standard ECMA-334 5th Edition](https://www.ecma-international.org/publications/files/ECMA-ST/Ecma-334.pdf).
 
 La version 6.0 de la spécification n’a pas été approuvée comme standard. Ce site contient le [*projet* de spécification C# 6.0](../../../../_csharplang/spec/introduction.md). Il est créé à partir des fichiers Markdown du [dépôt GitHub dotnet/csharplang](https://github.com/dotnet/csharplang/blob/master/spec/README.md).
 
 Les problèmes sur le projet de spécification doivent être créés dans le dépôt [dotnet/csharplang](https://github.com/dotnet/csharplang/issues). Si cela vous intéresse de corriger les erreurs que vous trouvez, vous pouvez envoyer une [demande de tirage (pull request)](https://github.com/dotnet/csharplang/pulls) à ce même dépôt.
 
-## <a name="see-also"></a>Voir aussi  
- [Référence C#](../../language-reference/index.md)  
+## <a name="see-also"></a>Voir aussi
+ [Référence C#](../index.md)  
  [Guide de programmation C#](../../programming-guide/index.md)
 
 >[!div class="step-by-step"]

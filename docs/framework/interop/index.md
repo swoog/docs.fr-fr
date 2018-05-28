@@ -14,7 +14,7 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 583cfb6e3a5145c6c0dfc82ec9ff64c6d87414ba
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
 ---
@@ -42,19 +42,19 @@ Décrit le marshaling de COM Interop et de l’appel de code non managé.
 Décrit le mappage entre les exceptions et les valeurs HRESULT.
 
 [Wrappers COM](com-wrappers.md)  
-Décrit les wrappers fournis par COM interop.
+Décrit les wrappers fournis par COM Interop.
 
 [Équivalence de type et types interop incorporés](type-equivalence-and-embedded-interop-types.md)  
-Décrit comment les informations de type pour les types COM sont incorporées dans les assemblys et comment le common language runtime détermine l’équivalence des types COM incorporés.
+Décrit comment les informations de type pour les types COM sont incorporées dans les assemblys, et comment le common language runtime détermine l’équivalence des types COM incorporés.
 
 [Comment : générer des assemblys PIA à l'aide de Tlbimp.exe](how-to-generate-primary-interop-assemblies-using-tlbimp-exe.md)  
-Décrit comment générer un assembly PIA à l’aide de *Tlbimp.exe* (importateur de bibliothèques).
+Décrit comment produire des assemblys PIA à l’aide de *Tlbimp.exe* (importateur de bibliothèques de types).
 
 [Comment : enregistrer des assemblys PIA](how-to-register-primary-interop-assemblies.md)  
-Décrit comment inscrire les assemblys PIA avant de pouvoir les référencer dans vos projets.
+Décrit comment inscrire les assemblys PIA avant de les référencer dans vos projets.
 
 [COM Interop sans inscription](registration-free-com-interop.md)  
-Décrit comment COM interop peut activer des composants sans utiliser le Registre Windows.
+Décrit comment COM Interop peut activer des composants sans utiliser le Registre Windows.
 
 [Guide pratique pour configurer les composants COM .NET Framework pour l’activation sans inscription](configure-net-framework-based-com-components-for-reg.md)  
-Décrit comment créer un manifeste d’application et comment créer et incorporer un manifeste de composant.
+Décrit comment créer un manifeste d’application, puis explique comment créer et incorporer un manifeste de composant.
