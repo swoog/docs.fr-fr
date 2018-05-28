@@ -2,11 +2,11 @@
 title: Articles de guide pratique (Guide C#)
 description: Série de petits conseils et d’exemples de code spécifiques courts
 ms.date: 12/20/2017
-ms.openlocfilehash: b8164abd84647fc9118acc6e0b84e7fd46838fe9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 209af8858de1a791997d254f5a2ddd5dd1803bff
+ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="how-to-c"></a>Guides pratiques (C#)
 
@@ -43,9 +43,8 @@ Vous créez des classes et des structs pour implémenter votre programme. Ces te
 Ces articles vous permettent d’utiliser des collections de données.
 
 - [Initialiser un dictionnaire avec un initialiseur de collection](../programming-guide/classes-and-structs/how-to-initialize-a-dictionary-with-a-collection-initializer.md).
-- [Accéder à tous les éléments d’une collection à l’aide de `foreach` ](../programming-guide/classes-and-structs/how-to-access-a-collection-class-with-foreach.md).
 
-## <a name="strings"></a>chaînes
+## <a name="working-with-strings"></a>Utilisation de chaînes
 
 Les chaînes constituent le type de données fondamental utilisé pour afficher ou manipuler du texte. Ces articles présentent les pratiques courantes avec des chaînes.
 
