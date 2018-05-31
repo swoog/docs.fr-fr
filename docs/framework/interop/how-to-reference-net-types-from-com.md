@@ -16,9 +16,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0333cd73240e685b46917d85afe0876532db3fd1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391896"
 ---
 # <a name="how-to-reference-net-types-from-com"></a>Comment : référencer des types .NET à partir de COM
 Du point de vue du code client et serveur, les différences entre COM et le .NET Framework sont largement invisibles. Les clients Microsoft Visual Basic peuvent afficher un objet .NET dans l’Explorateur d’objets, qui expose la syntaxe et les méthodes de l’objet, les propriétés et les champs exactement comme s’il s’agissait de tout autre objet COM.  
@@ -27,7 +28,7 @@ Du point de vue du code client et serveur, les différences entre COM et le .NET
   
 ### <a name="to-import-a-library"></a>Pour importer une bibliothèque  
   
--   Spécifiez l’option **raw_interfaces_only** dans la directive **#import**. Par exemple :  
+-   Spécifiez l’option **raw_interfaces_only** dans la directive **#import**. Exemple :  
   
     ```cpp  
     #import "..\LoanLib\LoanLib.tlb" raw_interfaces_only  
@@ -35,7 +36,7 @@ Du point de vue du code client et serveur, les différences entre COM et le .NET
   
      - ou -  
   
--   Ajoutez une directive #import pour Mscorlib.tlb. Par exemple :  
+-   Ajoutez une directive #import pour Mscorlib.tlb. Exemple :  
   
     ```cpp  
     #import "mscorlib.tlb"  

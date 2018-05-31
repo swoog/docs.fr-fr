@@ -21,9 +21,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b305158ac87f01044bae5455cea07ca3b3a2e491
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398207"
 ---
 # <a name="creating-prototypes-in-managed-code"></a>Création de prototypes dans du code managé
 Cette rubrique décrit comment accéder aux fonctions non managées et présente plusieurs champs d’attribut qui permettent d’annoter les définitions de méthode dans du code managé. Pour afficher des exemples montrant comment construire des déclarations .NET à utiliser avec l’appel de code non managé, consultez [Marshaling de données à l’aide de l’appel de code non managé](marshaling-data-with-platform-invoke.md).  
@@ -97,7 +98,7 @@ using namespace System::Runtime::InteropServices;
 ### <a name="platform-invoke-examples"></a>Exemples d'appel de code non managé  
  Les exemples d'appel de code non managé de cette section illustrent l'utilisation de l'attribut `RegistryPermission` avec les modificateurs de parcours de pile.  
   
- Dans l’exemple de code suivant, le <xref:System.Security.Permissions.SecurityAction> `Assert`, `Deny`, et `PermitOnly` modificateurs sont ignorés.  
+ Dans l’exemple de code suivant, les modificateurs <xref:System.Security.Permissions.SecurityAction> `Assert`, `Deny` et `PermitOnly` sont ignorés.  
   
 ```  
 [DllImport("MyClass.dll", EntryPoint = "CallRegistryPermission")]  
@@ -225,7 +226,7 @@ interface IDemandStubsItf
  [Spécification d'un point d'entrée](specifying-an-entry-point.md)  
  [Spécification d'un jeu de caractères](specifying-a-character-set.md)  
  [Exemples d'appel de code non managé](platform-invoke-examples.md)  
- [Considérations sur la sécurité d’appel de plateforme](https://msdn.microsoft.com/library/bbcc67f7-50b5-4917-88ed-cb15470409fb(v=vs.100))  
+ [Considérations relatives à la sécurité des appels de code non managé](https://msdn.microsoft.com/library/bbcc67f7-50b5-4917-88ed-cb15470409fb(v=vs.100))  
  [Identification des fonctions des DLL](identifying-functions-in-dlls.md)  
  [Création d’une classe pour contenir des fonctions DLL](creating-a-class-to-hold-dll-functions.md)  
  [Appel à une fonction DLL](calling-a-dll-function.md)

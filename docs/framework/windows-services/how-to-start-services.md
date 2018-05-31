@@ -9,71 +9,72 @@ author: ghogen
 manager: douge
 ms.openlocfilehash: 3c8382d2e425d11dc8aa8b22e361b3cc5637744f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516215"
 ---
 # <a name="how-to-start-services"></a>Comment : démarrer des services
-Une fois un service est installé, il doit être démarré. Appelez le <xref:System.ServiceProcess.ServiceBase.OnStart%2A> méthode sur la classe de service. En règle générale, le <xref:System.ServiceProcess.ServiceBase.OnStart%2A> méthode définit le travail utile effectué par le service. Après le démarrage d’un service, il reste actif jusqu'à ce qu’il est suspendu ou arrêté.  
+Une fois qu’un service est installé, il doit être démarré. Le démarrage appelle la méthode <xref:System.ServiceProcess.ServiceBase.OnStart%2A> sur la classe de service. En règle générale, la méthode <xref:System.ServiceProcess.ServiceBase.OnStart%2A> définit le travail utile effectué par le service. Une fois un service démarré, il reste actif jusqu’à ce qu’il soit suspendu ou arrêté.  
   
- Services peuvent être configurés pour démarrer automatiquement ou manuellement. Un service qui démarre automatiquement démarrera lorsque l’ordinateur sur lequel il est installé est tension ou redémarré. Un utilisateur doit démarrer un service qui démarre manuellement.  
+ Vous pouvez configurer un service pour qu’il démarre automatiquement ou manuellement. Un service à démarrage automatique démarre quand l’ordinateur sur lequel il est installé est mis en marche pour la première fois ou redémarré. Un service à démarrage manuel doit être démarré par un utilisateur.  
   
 > [!NOTE]
->  Par défaut, les services créés avec Visual Studio sont configurés pour démarrer manuellement.  
+>  Par défaut, les services créés avec Visual Studio sont définis pour démarrer manuellement.  
   
- Il existe plusieurs façons, vous pouvez démarrer manuellement un service — à partir de **l’Explorateur de serveurs**, à partir de la **Gestionnaire de contrôle des Services**, ou à partir du code à l’aide d’un composant appelé le <xref:System.ServiceProcess.ServiceController>.  
+ Vous pouvez démarrer manuellement un service de plusieurs façons : à partir de **l’Explorateur de serveurs**, à partir du **Gestionnaire de contrôle des services** ou à partir du code à l’aide d’un composant appelé <xref:System.ServiceProcess.ServiceController>.  
   
- Vous définissez la <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> propriété sur la <xref:System.ServiceProcess.ServiceInstaller> classe pour déterminer si un service doit être démarré manuellement ou automatiquement.  
+ Pour indiquer si un service doit être démarré manuellement ou automatiquement, définissez la propriété <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> sur la classe <xref:System.ServiceProcess.ServiceInstaller>.  
   
-### <a name="to-specify-how-a-service-should-start"></a>Pour spécifier la manière dont un service doit démarrer.  
+### <a name="to-specify-how-a-service-should-start"></a>Pour spécifier comment un service doit démarrer  
   
-1.  Après avoir créé votre service, ajoutez les programmes d’installation nécessaires pour celui-ci. Pour plus d’informations, consultez [Comment : ajouter des programmes d’installation à votre Application de Service](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
+1.  Après avoir créé votre service, ajoutez les programmes d’installation nécessaires à celui-ci. Pour plus d’informations, consultez [Guide pratique pour ajouter des programmes d’installation à votre application de service](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
   
-2.  Dans le concepteur, cliquez sur le programme d’installation de service pour le service que vous utilisez.  
+2.  Dans le concepteur, cliquez sur le programme d’installation du service que vous utilisez.  
   
-3.  Dans le **propriétés** , configurez le <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> propriété à une des opérations suivantes :  
+3.  Dans la fenêtre **Propriétés**, définissez la propriété <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> avec l’une des valeurs suivantes :  
   
-    |Pour installer votre service|Définissez cette valeur|  
+    |Pour que votre service s’installe|Définissez cette valeur|  
     |----------------------------------|--------------------|  
-    |Lorsque l’ordinateur est redémarré.|**Automatique**|  
-    |Lorsqu’une action explicite de l’utilisateur démarre le service|**Manuelle**|  
+    |Quand l’ordinateur redémarre|**Automatique**|  
+    |Quand une action explicite de l’utilisateur démarre le service|**Manual**|  
   
     > [!TIP]
-    >  Pour empêcher le démarrage du tout votre service, vous pouvez définir le <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> propriété **désactivé**. Vous pouvez procéder de la sorte si vous prévoyez de redémarrer un serveur plusieurs fois et que vous souhaitez gagner du temps en empêchant les services qui seraient normalement de démarrer.  
+    >  Pour que votre service ne démarre pas, définissez la propriété <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> avec la valeur **Disabled**. Procédez de la sorte si vous prévoyez de redémarrer un serveur plusieurs fois. Le fait de ne pas démarrer les services habituels vous fera gagner du temps.  
   
     > [!NOTE]
-    >  Ces autres propriétés et peuvent être modifiées après l’installation du service.  
+    >  Ces propriétés, ainsi que d’autres, peuvent être modifiées après l’installation du service.  
   
-     Il existe plusieurs façons de démarrer un service qui a son <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> processus défini sur **manuel** : à partir de **l’Explorateur de serveurs**, à partir de la **Gestionnaire de contrôle des Services Windows**, ou à partir du code. Il est important de noter que toutes ces méthodes démarrent le service dans le contexte de la **Gestionnaire de contrôle des Services**; **L’Explorateur de serveurs** et méthodes de démarrage du service par programmation agissent en réalité sur le contrôleur.  
+     Vous pouvez démarrer un service dont le processus <xref:System.ServiceProcess.ServiceInstaller.StartType%2A>a la valeur **Manual** de plusieurs façons : à partir de **l’Explorateur de serveurs**, à partir du **Gestionnaire de contrôle des services Windows** ou à partir du code. Il est important de noter que ces méthodes ne démarrent pas toutes le service dans le contexte du **Gestionnaire de contrôle des services**. En effet, **l’Explorateur de serveurs** et les méthodes de démarrage du service par programmation manipulent le contrôleur.  
   
 ### <a name="to-manually-start-a-service-from-server-explorer"></a>Pour démarrer manuellement un service à partir de l’Explorateur de serveurs  
   
-1.  Dans **l’Explorateur de serveurs**, ajoutez le serveur souhaité s’il n’est pas déjà répertorié. Pour plus d’informations, consultez Comment : accès et initialiser l’Explorateur de base de données de l’Explorateur de serveurs.  
+1.  Dans **l’Explorateur de serveurs**, ajoutez le serveur désiré s’il n’est pas déjà répertorié. Pour plus d’informations, consultez Guide pratique pour accéder à l’Explorateur de serveurs/bases de données et l’initialiser.  
   
-2.  Développez le **Services** nœud, puis recherchez le service que vous souhaitez démarrer.  
+2.  Développez le nœud **Services**, puis recherchez le service à démarrer.  
   
-3.  Cliquez sur le nom du service, puis cliquez sur **Démarrer**.  
+3.  Cliquez avec le bouton droit sur le nom du service, puis cliquez sur **Démarrer**.  
   
-### <a name="to-manually-start-a-service-from-services-control-manager"></a>Pour démarrer manuellement un service de gestionnaire de contrôle des Services  
+### <a name="to-manually-start-a-service-from-services-control-manager"></a>Pour démarrer manuellement un service à partir du Gestionnaire de contrôle des services  
   
-1.  Ouvrez le **Gestionnaire de contrôle des Services** en effectuant l’une des opérations suivantes :  
+1.  Effectuez l’une des procédures suivantes pour ouvrir le **Gestionnaire de contrôle des services** :  
   
-    -   Dans Windows XP et 2000 Professionnel, avec le bouton droit **poste** sur le bureau, puis cliquez sur **gérer**. Dans la boîte de dialogue qui s’affiche, développez le **Services et Applications** nœud.  
+    -   Dans Windows XP et Windows 2000 Professionnel, cliquez avec le bouton droit sur **Poste de travail** sur le Bureau, puis cliquez sur **Gérer**. Dans la boîte de dialogue qui s’affiche, développez le nœud **Services et applications**.  
   
          \- ou -  
   
-    -   Dans Windows Server 2003 et Windows 2000 Server, cliquez sur **Démarrer**, pointez sur **programmes**, cliquez sur **outils d’administration**, puis cliquez sur **Services**.  
+    -   Dans Windows Server 2003 et Windows 2000 Server, cliquez sur **Démarrer**, pointez sur **Programmes**, puis cliquez sur **Outils d’administration** et sur **Services**.  
   
         > [!NOTE]
-        >  Dans Windows NT version 4.0, vous pouvez ouvrir cette boîte de dialogue à partir de **le panneau de configuration**.  
+        >  Dans Windows NT version 4.0, vous pouvez ouvrir cette boîte de dialogue à partir du **Panneau de configuration**.  
   
-     Vous devez maintenant voir votre service répertorié dans le **Services** section de la fenêtre.  
+     Votre service doit maintenant être répertorié dans la section **Services** de la fenêtre.  
   
-2.  Sélectionnez votre service dans la liste, faites un clic droit, puis cliquez sur **Démarrer**.  
+2.  Sélectionnez votre service dans la liste, cliquez dessus avec le bouton droit, puis cliquez sur **Démarrer**.  
   
 ### <a name="to-manually-start-a-service-from-code"></a>Pour démarrer manuellement un service à partir du code  
   
-1.  Créez une instance de la <xref:System.ServiceProcess.ServiceController> classe et le configurer pour interagir avec le service que vous souhaitez administrer.  
+1.  Créez une instance de la classe <xref:System.ServiceProcess.ServiceController> et configurez-la pour interagir avec le service à administrer.  
   
 2.  Appelez la méthode <xref:System.ServiceProcess.ServiceController.Start%2A> pour démarrer le service.  
   

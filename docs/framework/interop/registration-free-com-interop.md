@@ -14,9 +14,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 32ee3babe054d55a45cc8826843252dba6aa2be7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33390248"
 ---
 # <a name="registration-free-com-interop"></a>COM Interop sans inscription
 COM Interop sans inscription active un composant sans utiliser le Registre Windows pour stocker les informations d'assembly. Au lieu d'inscrire un composant sur un ordinateur pendant le déploiement, vous créez des fichiers manifeste de type Win32 au moment du design qui contiennent des informations sur la liaison et l'activation. Ces fichiers manifeste, plutôt que les clés de Registre, dirigent l'activation d'un objet.  
@@ -44,11 +45,11 @@ COM Interop sans inscription active un composant sans utiliser le Registre Windo
   
 ### <a name="configuring-com-components-for-registration-free-activation"></a>Configuration des composants COM pour l'activation sans inscription  
   
-1.  Pour qu'un composant COM participe à l'activation sans inscription, il doit être déployé comme un assembly côte à côte. Les assemblys côte à côte sont non managés.  Pour plus d’informations, consultez [utilisation d’assemblys côte à côte](https://msdn.microsoft.com/library/windows/desktop/aa376618.aspx).  
+1.  Pour qu'un composant COM participe à l'activation sans inscription, il doit être déployé comme un assembly côte à côte. Les assemblys côte à côte sont non managés.  Pour plus d’informations, consultez [Utilisation d’assemblys côte à côte](https://msdn.microsoft.com/library/windows/desktop/aa376618.aspx).  
   
      Pour utiliser des assemblys COM côte à côte, un développeur d’applications .NET doit fournir un manifeste d’application contenant des informations de liaison et d’activation. La prise en charge des assemblys côte à côte non managés est intégrée au système d'exploitation Windows XP. Le runtime COM, pris en charge par le système d'exploitation, recherche les informations d'activation du manifeste d'application quand le composant en cours d'activation n'est pas dans le Registre.  
   
-     L’activation sans inscription est facultative pour les composants COM installés sur Windows XP. Pour obtenir des instructions détaillées sur l’ajout d’un assembly côte à côte dans une application, consultez [utilisation d’assemblys côte à côte](https://msdn.microsoft.com/library/windows/desktop/aa376618.aspx).  
+     L’activation sans inscription est facultative pour les composants COM installés sur Windows XP. Pour obtenir des instructions détaillées sur l’ajout d’un assembly côte à côte à une application, consultez [Utilisation d’assemblys côte à côte](https://msdn.microsoft.com/library/windows/desktop/aa376618.aspx).  
   
     > [!NOTE]
     >  L’exécution côte à côte est une fonctionnalité de .NET Framework qui permet à plusieurs versions du runtime et à plusieurs versions d’applications et de composants qui utilisent une version du runtime, de s’exécuter sur le même ordinateur en même temps. L'exécution côte à côte et les assemblys côte à côte sont deux mécanismes différents de la fonctionnalité de côte à côte.  

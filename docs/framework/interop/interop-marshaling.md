@@ -10,9 +10,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1995c367039591c086054a086f2107e4a88ecefb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395367"
 ---
 # <a name="interop-marshaling"></a>Marshaling d’interopérabilité
 <a name="top"></a> Le marshaling d’interopérabilité détermine la façon dont les données sont transmises dans les arguments de méthode et les valeurs de retour entre la mémoire managée et non managée lors des appels. Le marshaling d’interopérabilité est une activité d’exécution effectuée par le service de marshaling du common language runtime.  
@@ -79,7 +80,7 @@ Processus de marshaling dans un même cloisonnement.
 |Client .NET|Serveur COM|Configuration requise|  
 |-----------------|----------------|-----------------------------|  
 |MTA (par défaut)|MTA<br /><br /> STA|Marshaling d'interopérabilité.<br /><br /> Marshaling COM et marshaling d'interopérabilité.|  
-|STA|MTA<br /><br /> STA|Marshaling COM et marshaling d'interopérabilité.<br /><br /> Marshaling d'interopérabilité.|  
+|STA|MTA<br /><br /> STA|Marshaling COM et marshaling d’interopérabilité.<br /><br /> Marshaling d’interopérabilité.|  
   
  Quand un client managé et un serveur non managé se trouvent dans un même cloisonnement, le service de marshaling d'interopérabilité gère tout le marshaling de données. Toutefois, quand le client et le serveur sont initialisés dans des cloisonnements différents, le marshaling COM est également requis. L'illustration suivante montre les éléments d'un appel intercloisonnements.  
   
@@ -101,7 +102,7 @@ Appel intercloisonnements entre un client .NET et un objet COM
   
 <a name="marshaling_remote_calls"></a>   
 ## <a name="marshaling-remote-calls"></a>Marshaling des appels distants  
- Comme pour le marshaling intercloisonnements, le marshaling COM est impliqué dans chaque appel effectué entre du code managé et du code non managé chaque fois que les objets résident dans des processus distincts. Par exemple :  
+ Comme pour le marshaling intercloisonnements, le marshaling COM est impliqué dans chaque appel effectué entre du code managé et du code non managé chaque fois que les objets résident dans des processus distincts. Exemple :  
   
 -   Un client COM qui appelle un serveur managé sur un hôte distant utilise le modèle DCOM (Distributed COM).  
   
@@ -135,7 +136,7 @@ Références franchissant les limites d'hôtes et de processus
  ![SOAP ou TcpChannel](./media/interopremotesoap.gif "interopremotesoap")  
 Appels distants traversant des pare-feu à l'aide de SOAP ou de la classe TcpChannel  
   
- Certains appels non managés peuvent être transmis via SOAP, tels que les appels entre les composants de service et COM.  
+ Certains appels non managés peuvent être transmis par le biais de SOAP, tels que les appels entre composants pris en charge et COM.  
   
  [Retour au début](#top)  
   

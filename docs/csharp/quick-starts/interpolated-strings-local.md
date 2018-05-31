@@ -5,11 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 04/14/2018
 ms.custom: mvc
-ms.openlocfilehash: 314626e276f50178e2855b8c8a1edc104546d574
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 80b7a2c39094f1101e714b47f0e77f0a7c4907f2
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472761"
 ---
 # <a name="string-interpolation"></a>Interpolation de chaîne
 
@@ -48,13 +49,13 @@ Essayons quelques autres exemples d’interpolation de chaîne avec d’autres t
 
 Dans la section précédente, vous avez utilisé l’interpolation de chaîne pour insérer une chaîne à l’intérieur d’une autre. Le résultat d’une expression interpolée peut toutefois être de n’importe quel type de données. Nous allons insérer des valeurs de différents types de données dans une chaîne interpolée.
 
-Dans l’exemple suivant, nous commençons par définir un type de données personnalisé (`Vegetable`) qui a la [propriété](../properties.md) `Name` et la méthode `ToString`. Le code client peut utiliser cette méthode pour obtenir la représentation sous forme de chaîne d’une instance `Vegetable`. Dans l’exemple, la méthode `Vegetable.ToString` retourne la valeur de la propriété `Name` qui est initialisée sur le constructeur `Vegetable` :
+Dans l’exemple suivant, nous commençons par définir une [classe](../programming-guide/classes-and-structs/classes.md) `Vegetable` comme type de données avec la [propriété](../properties.md) `Name` et la [méthode](../methods.md) `ToString`, qui [remplace](../language-reference/keywords/override.md) le comportement de la méthode <xref:System.Object.ToString?displayProperty=nameWithType>. Le [modificateur d’accès `public`](../language-reference/keywords/public.md) permet à n’importe quel code client d’obtenir la représentation sous forme de chaîne d’une instance de `Vegetable`. Dans l’exemple, la méthode `Vegetable.ToString` retourne la valeur de la propriété `Name` qui est initialisée au niveau du [constructeur](../programming-guide/classes-and-structs/constructors.md) `Vegetable` :
 
 ```csharp
 public Vegetable(string name) => Name = name;
 ```
 
-Nous créons ensuite une instance du type `Vegetable` en utilisant le mot clé `new` et en ajoutant un paramètre name pour le constructeur `Vegetable` :
+Ensuite, nous créons une instance de la classe `Vegetable` en utilisant le [mot clé `new`](../language-reference/keywords/new-operator.md) et en ajoutant un paramètre name pour le constructeur `Vegetable` :
 
 ```csharp
 var item = new Vegetable("eggplant");
@@ -93,7 +94,7 @@ Notez que l’expression interpolée `item` dans la chaîne interpolée correspo
 
 - Si l’expression interpolée a la valeur `null`, une chaîne vide («» ou <xref:System.String.Empty?displayProperty=nameWithType>) est utilisée.
 
-- Si l’expression interpolée n’a pas la valeur `null`, en général, la méthode `ToString` du type du résultat est appelée. Vous pouvez tester cela en mettant à jour l’implémentation de la méthode `Vegetable.ToString`. Vous pouvez aussi ne pas implémenter la méthode `ToString` étant donné que chaque type de données C# a déjà une implémentation de cette méthode. Pour tester cela, commentez la définition de la méthode `Vegetable.ToString` dans l’exemple (en la faisant précéder d’un symbole de commentaire `//`). Dans la sortie, la chaîne « eggplant » (aubergines) est remplacée par le nom de type complet (« Vegetable » dans cet exemple), ce qui est le comportement par défaut de la méthode <xref:System.Object.ToString?displayProperty=nameWithType>. Le comportement par défaut de la méthode `ToString` pour un type d’énumération est de retourner la représentation sous forme de chaîne d’une valeur utilisée dans la définition de l’énumération.
+- Si l’expression interpolée n’a pas la valeur `null`, en général, la méthode `ToString` du type du résultat est appelée. Vous pouvez tester cela en mettant à jour l’implémentation de la méthode `Vegetable.ToString`. Il n’est peut-être même pas nécessaire d’implémenter la méthode `ToString` étant donné que chaque type a déjà une implémentation de cette méthode. Pour tester cela, commentez la définition de la méthode `Vegetable.ToString` dans l’exemple (en la faisant précéder d’un symbole de commentaire `//`). Dans la sortie, la chaîne « eggplant » (aubergines) est remplacée par le nom de type complet (« Vegetable » dans cet exemple), ce qui est le comportement par défaut de la méthode <xref:System.Object.ToString?displayProperty=nameWithType>. Le comportement par défaut de la méthode `ToString` pour une valeur d’énumération est de retourner la représentation sous forme de chaîne de la valeur.
 
 Dans la sortie de cet exemple, la date est trop précise (le prix des aubergines ne change pas chaque seconde) et la valeur du prix n’indique pas la devise locale. Dans la section suivante, vous découvrirez comment résoudre ces problèmes en contrôlant le format des représentations sous forme de chaînes des résultats des expressions.
 

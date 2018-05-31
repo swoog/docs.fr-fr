@@ -12,9 +12,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 744ce1f2810eee025f071cafaa71e473b6ed4c50
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392851"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Comment : configurer les composants COM .NET Framework pour l'activation sans inscription
 L’activation sans inscription des composants .NET Framework n’est que légèrement plus compliquée que pour les composants COM. L’installation requiert deux manifestes :  
@@ -36,7 +37,7 @@ L’activation sans inscription des composants .NET Framework n’est que légè
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
     ```  
   
-     Pour plus d’informations sur les éléments de manifeste et leurs attributs, consultez [manifestes d’Application](https://msdn.microsoft.com/library/windows/desktop/aa374191.aspx).  
+     Pour plus d’informations sur les éléments de manifeste et leurs attributs, consultez [Manifestes d’application](https://msdn.microsoft.com/library/windows/desktop/aa374191.aspx).  
   
 3.  Identifiez le propriétaire du manifeste. Dans l’exemple suivant, le fichier manifeste appartient à `myComApp` version 1.  
   
@@ -76,7 +77,7 @@ L’activation sans inscription des composants .NET Framework n’est que légè
   
 5.  Nommez et enregistrez le fichier manifeste. Le nom d’un manifeste d’application est le nom de l’exécutable d’assembly suivi de l’extension .manifest. Par exemple, le nom du fichier manifeste d’application de myComApp.exe est myComApp.exe.manifest.  
   
- Vous pouvez installer un manifeste d’application dans le même répertoire que l’application COM. Vous pouvez également l’ajouter en tant que ressource au fichier .exe de l’application. Pour plus d’informations, pour plus d’informations, consultez [à propos des assemblys côte à côte](https://msdn.microsoft.com/library/windows/desktop/ff951640.aspx).  
+ Vous pouvez installer un manifeste d’application dans le même répertoire que l’application COM. Vous pouvez également l’ajouter en tant que ressource au fichier .exe de l’application. Pour plus d’informations, consultez [À propos des assemblys côte à côte](https://msdn.microsoft.com/library/windows/desktop/ff951640.aspx).  
   
 #### <a name="to-create-a-component-manifest"></a>Pour créer un manifeste de composant  
   
@@ -173,6 +174,6 @@ L’activation sans inscription des composants .NET Framework n’est que légè
   
 ## <a name="see-also"></a>Voir aussi  
  [COM Interop sans inscription](registration-free-com-interop.md)  
- [Configuration requise pour COM Interop sans inscription](https://msdn.microsoft.com/library/0c43bc57-eecf-4e6c-8114-490141cce4da(v=vs.100)))  
- [Configuration des composants COM pour l’Activation sans inscription](https://msdn.microsoft.com/library/bfe9b02f-d964-4784-960e-a1f94692fbfe(v=vs.100)))  
+ [Configuration requise pour COM Interop sans inscription](https://msdn.microsoft.com/library/0c43bc57-eecf-4e6c-8114-490141cce4da(v=vs.100))  
+ [Configuration des composants COM pour l’activation sans inscription](https://msdn.microsoft.com/library/bfe9b02f-d964-4784-960e-a1f94692fbfe(v=vs.100))  
  [Activation sans inscription de composants .NET : une procédure pas à pas](https://msdn.microsoft.com/library/ms973915.aspx)

@@ -4,11 +4,12 @@ description: La commande dotnet publish publie votre projet .NET Core dans un r�
 author: mairaw
 ms.author: mairaw
 ms.date: 03/10/2018
-ms.openlocfilehash: f4c422eab20f5fe2d1b0c09133953f22a539474e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5e7ce5ce1240f03f53f6e120dfce53d15917425f
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472628"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -89,8 +90,8 @@ N’effectue pas de restauration implicite à l’exécution de la commande.
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
-Spécifie le chemin d’accès du répertoire de sortie. Si aucune valeur n’est spécifiée, il s’agit par défaut de *./bin/[configuration]/[framework]/* pour un déploiement dépendant du framework ou de *./bin/[configuration]/[framework]/[runtime]* pour un déploiement autonome.
-Si un chemin d’accès relatif est fourni, le répertoire de sortie généré est relatif à l’emplacement du fichier projet, et non au répertoire de travail actuel.
+Spécifie le chemin d’accès du répertoire de sortie. Si aucune valeur n’est spécifiée, il s’agit par défaut de *./bin/[configuration]/[framework]/publish/* pour un déploiement dépendant du framework ou de *./bin/[configuration]/[framework]/[runtime]/publish/* pour un déploiement autonome.
+Si le chemin est relatif, le répertoire de sortie généré est relatif à l’emplacement du fichier projet, et non au répertoire de travail actuel.
 
 `--self-contained`
 
@@ -128,8 +129,8 @@ Spécifie un ou plusieurs [manifestes cibles](../deploying/runtime-store.md) à 
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
-Spécifie le chemin d’accès du répertoire de sortie. Si aucune valeur n’est spécifiée, il s’agit par défaut de *./bin/[configuration]/[framework]/* pour un déploiement dépendant du framework ou de *./bin/[configuration]/[framework]/[runtime]* pour un déploiement autonome.
-Si un chemin d’accès relatif est fourni, le répertoire de sortie généré est relatif à l’emplacement du fichier projet, et non au répertoire de travail actuel.
+Spécifie le chemin d’accès du répertoire de sortie. Si aucune valeur n’est spécifiée, il s’agit par défaut de *./bin/[configuration]/[framework]/publish/* pour un déploiement dépendant du framework ou de *./bin/[configuration]/[framework]/[runtime]/publish/* pour un déploiement autonome.
+Si le chemin est relatif, le répertoire de sortie généré est relatif à l’emplacement du fichier projet, et non au répertoire de travail actuel.
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 

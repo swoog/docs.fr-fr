@@ -3,13 +3,14 @@ title: Méthodes - Guide du C#
 description: Vue d’ensemble des méthodes, des paramètres de méthode et des valeurs de retour des méthodes
 author: rpetrusha
 ms.author: ronpet
-ms.date: 10/26/2016
+ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 6a99ccc0157b044eb1a9ed7189de94ca69225d1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a9d78ecfc3911cf959333c098a66614239609c4e
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457954"
 ---
 # <a name="methods"></a>Méthodes #
 
@@ -80,7 +81,7 @@ Vous pouvez appeler une méthode en utilisant à la fois des arguments positionn
 [!code-csharp[csSnippets.Methods#46](../../samples/snippets/csharp/concepts/methods/named2.cs#46)]
 
  <a name="inherited"></a>
- ##<a name="inherited-and-overridden-methods"></a>Méthodes hérités et remplacées ##
+ ## <a name="inherited-and-overridden-methods"></a>Méthodes hérités et remplacées ##
 
 En plus des membres qui sont définis explicitement dans un type, un type hérite des membres définis dans ses classes de base. Comme tous les types du système de types managés héritent directement ou indirectement de la classe <xref:System.Object>, tous les types héritent ses membres, comme <xref:System.Object.Equals(System.Object)>, <xref:System.Object.GetType> et <xref:System.Object.ToString>. L’exemple suivant définit une classe `Person`, instancie deux objets `Person` et appelle la méthode `Person.Equals` pour déterminer si les deux objets sont égaux. La méthode `Equals` n’est cependant pas définie dans la classe `Person` ; elle est héritée de <xref:System.Object>.
 
@@ -258,7 +259,7 @@ Si vous marquez une méthode avec le modificateur [async](language-reference/key
 > [!NOTE]
 > Une méthode async retourne à l'appelant quand elle rencontre le premier objet await qui n'est pas encore terminé ou quand elle atteint la fin de la méthode async, selon la première éventualité.
 
-Une méthode async peut avoir un type de retour <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task> ou `void`. Le type de retour `void` est essentiellement utilisé pour définir les gestionnaires d’événements, où un type de retour `void` est obligatoire. Une méthode async qui retourne `void` ne peut pas être attendue, et l’appelant d’une méthode retournant void ne peut intercepter aucune exception levée par la méthode. C# 7.0, une fois publié, facilitera cette restriction pour permettre à une méthode async de [retourner n’importe quel type similaire à une tâche](https://github.com/ljw1004/roslyn/blob/features/async-return/docs/specs/feature%20-%20arbitrary%20async%20returns.md).
+Une méthode async peut avoir un type de retour <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task> ou `void`. Le type de retour `void` est essentiellement utilisé pour définir les gestionnaires d’événements, où un type de retour `void` est obligatoire. Une méthode async qui retourne `void` ne peut pas être attendue, et l’appelant d’une méthode retournant void ne peut intercepter aucune exception levée par la méthode. À compter de C# 7.0, une méthode asynchrone peut avoir [n’importe quel type de retour de type tâche](./whats-new/csharp-7.md#generalized-async-return-types).
 
 Dans l’exemple suivant, `DelayAsync` est une méthode async contenant une instruction return qui retourne un entier. Comme il s’agit d’une méthode async, la déclaration de sa méthode doit avoir un type de retour `Task<int>`. Comme le type de retour est `Task<int>`, l’évaluation de l’expression `await` dans `DoSomethingAsync` produit un entier, comme l’instruction `int result = await delayTask` suivante le montre.
 

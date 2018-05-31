@@ -8,9 +8,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d0d94223223568efe921af3a340815a966cc6c6f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33388353"
 ---
 # <a name="marshaling-data-with-com-interop"></a>marshaler des données avec COM Interop
 COM Interop prend en charge l'utilisation des objets COM à partir de code managé, ainsi que l'exposition des objets managés à COM. La prise en charge du marshaling des données vers et depuis COM est complète et fournit quasiment toujours le comportement de marshaling approprié.  
@@ -21,21 +22,21 @@ COM Interop prend en charge l'utilisation des objets COM à partir de code mana
   
 -   [Exportateur de bibliothèques de types (Tlbexp.exe)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md), qui produit une bibliothèque de types COM à partir d’un assembly et génère un wrapper qui effectue le marshaling lors des appels de méthode.  
   
- Les sections suivantes lien vers les rubriques qui décrivent les processus de personnalisation des wrappers d’interopérabilité lorsque vous pouvez (ou devez) fournir au marshaleur des informations de type supplémentaires.  
+ Les sections suivantes fournissent des liens vers des rubriques qui décrivent les processus de personnalisation des wrappers d’interopérabilité quand vous pouvez (ou devez) fournir au marshaleur des informations supplémentaires concernant les types.  
   
 ## <a name="in-this-section"></a>Dans cette section  
-[Comment : créer manuellement des Wrappers](how-to-create-wrappers-manually.md)   
-Décrit comment créer un wrapper COM manuellement dans du code source managé. 
+[Guide pratique pour créer manuellement des wrappers](how-to-create-wrappers-manually.md)   
+Décrit comment créer manuellement un wrapper COM dans du code source managé. 
  
  [Guide pratique pour migrer le modèle DCOM de code managé vers WCF](../../../docs/framework/interop/how-to-migrate-managed-code-dcom-to-wcf.md)  
- Décrit comment migrer du code DCOM managé vers WCF pour la solution la plus sécurisée.  
+ Décrit comment migrer du code DCOM managé vers WCF pour obtenir la solution la plus sécurisée.  
   
 ## <a name="related-sections"></a>Rubriques connexes  
  [Types de données COM](https://msdn.microsoft.com/library/sak564ww(v=vs.100).aspx)  
  Fournit les types de données managés et non managés correspondants.  
   
  [Personnalisation des wrappers CCW (COM Callable Wrapper)](https://msdn.microsoft.com/library/3bwc828w(v=vs.100).aspx)  
- Décrit comment marshaler explicitement des types de données à l’aide de la <xref:System.Runtime.InteropServices.MarshalAsAttribute> attribut au moment du design.  
+ Décrit comment marshaler explicitement des types de données à l’aide de l’attribut <xref:System.Runtime.InteropServices.MarshalAsAttribute> au moment du design.  
   
  [Personnalisation des wrappers RCW (Runtime Callable Wrapper)](https://msdn.microsoft.com/library/e753eftz(v=vs.100).aspx)  
  Décrit comment ajuster le comportement de marshaling des types dans un assembly d’interopérabilité et comment définir des types COM manuellement.  

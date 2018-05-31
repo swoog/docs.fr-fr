@@ -13,9 +13,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f5fef84250f9dbc10a921a6844f7020c72835cea
 ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457390"
 ---
 # <a name="default-marshaling-behavior"></a>comportement de marshaling par défaut
 Le marshaling d’interopérabilité agit sur les règles qui définissent le comportement des données associées aux paramètres de méthode quand elles sont passées de la mémoire managée à la mémoire non managée. Ces règles intégrées contrôlent les activités de marshaling telles que les transformations de types de données, le fait qu'un appelant puisse modifier les données transmises et renvoyer ces modifications à l'appelant, ainsi que les circonstances dans lesquelles le marshaleur fournit des optimisations de performances.  
@@ -43,7 +44,7 @@ BSTR MethodOne (BSTR b) {
  Le runtime utilise toujours la méthode **CoTaskMemFree** pour libérer de la mémoire. Si la mémoire que vous utilisez n’a pas été allouée avec la méthode **CoTaskMemAlloc**, vous devez utiliser un **IntPtr** et libérer la mémoire manuellement à l’aide de la méthode appropriée. De même, vous pouvez éviter la libération automatique de mémoire dans les cas où celle-ci ne doit jamais être libérée, par exemple quand vous utilisez la fonction **GetCommandLine** depuis Kernel32.dll qui retourne un pointeur à la mémoire du noyau. Pour plus d’informations sur la libération manuelle de mémoire, consultez [Mémoires tampons, exemple](http://msdn.microsoft.com/library/e30d36e8-d7c4-4936-916a-8fdbe4d9ffd5(v=vs.100)).  
   
 ## <a name="default-marshaling-for-classes"></a>Marshaling par défaut pour les classes  
- Les classes ne peuvent être marshalées que par COM Interop et sont toujours marshalées en tant qu'interfaces. Dans certains cas, l’interface utilisée pour marshaler la classe est appelée interface de classe. Pour plus d’informations sur la substitution de l’interface de classe avec une interface de votre choix, consultez [présentation de l’interface de classe](com-callable-wrapper.md#introducing-the-class-interface).  
+ Les classes ne peuvent être marshalées que par COM Interop et sont toujours marshalées en tant qu'interfaces. Dans certains cas, l’interface utilisée pour marshaler la classe est appelée interface de classe. Pour plus d’informations sur la substitution de l’interface de classe par une interface de votre choix, consultez [Présentation de l’interface de classe](com-callable-wrapper.md#introducing-the-class-interface).  
   
 ### <a name="passing-classes-to-com"></a>Passage de classes à COM  
  Quand une classe managée est passée à COM, le marshaleur d'interopérabilité encapsule automatiquement la classe avec un proxy COM et passe l'interface de classe produite par le proxy à l'appel de méthode COM. Le proxy délègue ensuite tous les appels sur l'interface de classe vers l'objet managé. Le proxy expose également d'autres interfaces qui ne sont pas explicitement implémentées par la classe. Le proxy implémente automatiquement les interfaces telles que **IUnknown** et **IDispatch** pour le compte de la classe.  
@@ -345,7 +346,7 @@ interface _Graphics {
 }  
 ```  
   
- Les règles utilisées pour marshaler des valeurs et des références aux appels de code non managé sont également utilisées lors du marshaling via les interfaces COM. Par exemple, quand une instance du type valeur `Point` est passée de .NET Framework à COM, le `Point` est passé par valeur. Si le type valeur `Point` est passé par référence, un pointeur vers un `Point` est passé sur la pile. Le marshaleur d’interopérabilité ne prend pas en charge les niveaux élevés d’indirection (**Point** \* \*) dans les deux sens.  
+ Les règles utilisées pour marshaler des valeurs et des références aux appels de code non managé sont également utilisées lors du marshaling via les interfaces COM. Par exemple, quand une instance du type valeur `Point` est passée de .NET Framework à COM, le `Point` est passé par valeur. Si le type valeur `Point` est passé par référence, un pointeur vers un `Point` est passé sur la pile. Le marshaleur d’interopérabilité ne prend pas en charge les niveaux élevés d’indirection (**Point** \*\*) dans les deux directions.  
   
 > [!NOTE]
 >  Les structures dont la valeur d’énumération <xref:System.Runtime.InteropServices.LayoutKind> est définie sur **Explicit** ne peuvent pas être utilisées dans COM Interop, car la bibliothèque de types exportée ne peut pas exprimer une disposition explicite.  

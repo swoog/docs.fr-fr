@@ -3,11 +3,12 @@ title: Nouveautés de C# 6 | Guide C#
 description: Découvrez les nouvelles fonctionnalités de C# version 6
 ms.date: 09/22/2016
 ms.assetid: 4d879f69-f889-4d3f-a781-75194e143400
-ms.openlocfilehash: 00aeb3ed940acfca748a1a9eb876fd0133baf6c0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d9f5c5ca94c04a873e4e98863f9fea3b8f477c1c
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34458003"
 ---
 # <a name="whats-new-in-c-6"></a>Nouveautés de C# 6
 
@@ -351,7 +352,7 @@ Les *initialiseurs d’index* constituent l’une des deux fonctionnalités qui 
 
 Cette fonctionnalité signifie que les conteneurs associatifs peuvent être initialisés à l’aide d’une syntaxe similaire à ce qui a été mis en place pour les conteneurs de séquence depuis plusieurs versions.
 
-### <a name="extension-add-methods-in-collection-initializers"></a>Méthodes `Add` d’extension dans des initialiseurs de collections
+## <a name="extension-add-methods-in-collection-initializers"></a>Méthodes `Add` d’extension dans des initialiseurs de collections
 
 La possibilité d’utiliser une *méthode d’extension* pour la méthode `Add` constitue une autre fonctionnalité qui simplifie l’initialisation des collections. Elle a été ajoutée à des fins de parité avec Visual Basic. 
 
@@ -370,10 +371,7 @@ C’est maintenant possible, mais uniquement si vous créez une méthode d’ext
 
 [!code-csharp[ExtensionAdd](../../../samples/snippets/csharp/new-in-6/classList.cs#ExtensionAdd)]
 
-En utilisant cette fonctionnalité, vous mappez toute méthode ajoutant des éléments à une collection à une méthode nommée `Add` en créant une méthode d’extension : 
-
-[!code-csharp[Enrollment](../../../samples/snippets/csharp/new-in-6/enrollment.cs#Enrollment)]
-[!code-csharp[ExtensionAddSample](../../../samples/snippets/csharp/new-in-6/classList.cs#ExtensionAddSample)]
+Quand vous utilisez cette fonctionnalité, vous mappez toute méthode ajoutant des éléments à une collection à une méthode nommée `Add` en créant une méthode d’extension.
 
 ## <a name="improved-overload-resolution"></a>Résolution de surcharge améliorée
 

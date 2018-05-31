@@ -20,9 +20,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f2906159c7474b42f81bdf066855072466b6be63
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392394"
 ---
 # <a name="packaging-an-assembly-for-com"></a>Empaquetage d'un assembly pour COM
 Les développeurs COM peuvent tirer parti des informations suivantes sur les types managés qu’ils prévoient d’incorporer dans leur application :  
@@ -37,7 +38,7 @@ Les développeurs COM peuvent tirer parti des informations suivantes sur les typ
   
      Les classes managées qui implémentent l’interface de classe (une interface COM générée par interop) sont soumises aux restrictions de gestion de version.  
   
-     Pour connaître les instructions sur l’utilisation de l’interface de classe [présentation de l’interface de classe](com-callable-wrapper.md#introducing-the-class-interface).  
+     Pour connaître les instructions sur l’utilisation de l’interface de classe, consultez [Présentation de l’interface de classe](com-callable-wrapper.md#introducing-the-class-interface).  
   
 -   Instructions de déploiement  
   

@@ -1,31 +1,35 @@
 ---
 title: Utilisation de foreach avec des tableaux (Guide de programmation C#)
-ms.date: 07/20/2015
+ms.date: 05/23/2018
 helpviewer_keywords:
 - arrays [C#], foreach
 - foreach statement [C#], using with arrays
 ms.assetid: 5f2da2a9-1f56-4de5-94cc-e07f4f7a0244
-ms.openlocfilehash: 8511d9dd3b7155d2f6bca229f264071b54ed173b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b858f35167e24390a729769487ce98908a3d349f
+ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/25/2018
+ms.locfileid: "34549453"
 ---
 # <a name="using-foreach-with-arrays-c-programming-guide"></a>Utilisation de foreach avec des tableaux (Guide de programmation C#)
-C# fournit également l’instruction [foreach](../../../csharp/language-reference/keywords/foreach-in.md). Cette instruction offre une méthode simple et appropriée pour itérer au sein des éléments d’un tableau ou de toute collection énumérable. L'instruction `foreach` traite les éléments dans l'ordre retourné par la tableau ou l'énumérateur du type de collection, en général, du 0e élément au dernier. Par exemple, le code suivant crée un tableau intitulé `numbers` et itère au sein de ce dernier avec l'instruction `foreach` :  
-  
- [!code-csharp[csProgGuideArrays#28](../../../csharp/programming-guide/arrays/codesnippet/CSharp/using-foreach-with-arrays_1.cs)]  
-  
- Dans le cas de tableaux multidimensionnels, il est possible d'utiliser la même méthode pour itérer au sein de tous les éléments, par exemple :  
-  
- [!code-csharp[csProgGuideArrays#29](../../../csharp/programming-guide/arrays/codesnippet/CSharp/using-foreach-with-arrays_2.cs)]  
-  
- Cependant, dans le cas de tableaux multidimensionnels, l’utilisation d’une boucle [for](../../../csharp/language-reference/keywords/for.md) imbriquée vous permet de mieux contrôler les éléments du tableau.  
-  
+
+L’instruction [foreach](../../language-reference/keywords/foreach-in.md) offre une méthode simple et appropriée pour itérer au sein des éléments d’un tableau.
+
+Pour les tableaux unidimensionnels, l’instruction `foreach` traite les éléments dans l’ordre croissant des index, en commençant par l’index 0 et en terminant par l’index `Length - 1` :
+
+[!code-csharp[csProgGuideArrays#28](./codesnippet/CSharp/using-foreach-with-arrays_1.cs)]
+
+Pour les tableaux multidimensionnels, les éléments sont traités de sorte que les index de la dimension la plus à droite sont incrémentés en premier, puis la dimension immédiatement à gauche, et ainsi de suite vers la gauche :
+
+[!code-csharp[csProgGuideArrays#29](./codesnippet/CSharp/using-foreach-with-arrays_2.cs)]
+
+Cependant, dans le cas de tableaux multidimensionnels, l’utilisation d’une boucle [for](../../language-reference/keywords/for.md) imbriquée vous permet de mieux contrôler l’ordre dans lequel les éléments du tableau sont traités.
+
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.Array>  
- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
- [Tableaux](../../../csharp/programming-guide/arrays/index.md)  
- [Tableaux unidimensionnels](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)  
- [Tableaux multidimensionnels](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)  
- [Tableaux en escalier](../../../csharp/programming-guide/arrays/jagged-arrays.md)
+ [Guide de programmation C#](../index.md)  
+ [Tableaux](index.md)  
+ [Tableaux unidimensionnels](single-dimensional-arrays.md)  
+ [Tableaux multidimensionnels](multidimensional-arrays.md)  
+ [Tableaux en escalier](jagged-arrays.md)

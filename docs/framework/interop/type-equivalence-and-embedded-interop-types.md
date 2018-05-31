@@ -11,9 +11,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e3eeba609349bb9d5b7c68e15e0e0e6ff3f1b7ea
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33390931"
 ---
 # <a name="type-equivalence-and-embedded-interop-types"></a>Équivalence des types et types interop incorporés
 
@@ -24,7 +25,7 @@ Avec l’équivalence des types, un objet COM qui est passé d’un assembly man
 > [!NOTE]
 > L’équivalence des types et les types interop incorporés simplifient le déploiement des applications et compléments qui utilisent des composants COM, car cela évite d’avoir à déployer des assemblys interop avec les applications. Les développeurs de composants COM partagés doivent continuer à créer des assemblys PIA (Primary Interop Assemblies) s’ils veulent pouvoir utiliser leurs composants dans des versions de .NET Framework antérieures.
 
-## <a name="type-equivalence"></a>Équivalence de type
+## <a name="type-equivalence"></a>Équivalence des types
 
  L’équivalence des types COM est prise en charge pour les interfaces, les structures, les énumérations et les délégués. Deux types COM sont considérés comme équivalents s’ils remplissent toutes les conditions suivantes :
 
@@ -32,9 +33,9 @@ Avec l’équivalence des types, un objet COM qui est passé d’un assembly man
 
 - Les deux types ont la même identité, comme décrit dans la section suivante.
 
-- Les deux types sont éligibles pour l’équivalence de type, comme décrit dans la [des types de marquage de COM pour l’équivalence de type](#marking-com-types-for-type-equivalence) section.
+- Les deux types sont disponibles pour l’équivalence des types, comme décrit dans la section [Marquer des types COM pour l’équivalence des types](#marking-com-types-for-type-equivalence).
 
-### <a name="type-identity"></a>Identité de type
+### <a name="type-identity"></a>Identité des types
 
 Deux types sont considérés comme ayant la même identité si leurs portées et identités correspondent ou, en d’autres termes, s’ils sont chacun définis avec l’attribut <xref:System.Runtime.InteropServices.TypeIdentifierAttribute> et si les deux attributs ont les mêmes propriétés <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Scope%2A> et <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Identifier%2A>. La comparaison de <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Scope%2A> est effectuée en respectant la casse.
 
@@ -44,7 +45,7 @@ Si un type n’est pas défini avec l’attribut <xref:System.Runtime.InteropSer
 
 - Pour les structures, les énumérations et les délégués, l’attribut <xref:System.Runtime.InteropServices.GuidAttribute> de l’assembly conteneur est utilisé au lieu de la propriété <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Scope%2A> et la propriété <xref:System.Type.FullName%2A?displayProperty=nameWithType> est utilisée au lieu de la propriété <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Identifier%2A>.
 
-### <a name="marking-com-types-for-type-equivalence"></a>Marquage de types COM pour l’équivalence de type
+### <a name="marking-com-types-for-type-equivalence"></a>Marquer des types COM pour l’équivalence des types
 
  Vous pouvez marquer un type comme étant disponible pour l’équivalence des types de deux manières :
 
@@ -55,5 +56,5 @@ Si un type n’est pas défini avec l’attribut <xref:System.Runtime.InteropSer
 ## <a name="see-also"></a>Voir aussi
 
 <xref:System.Type.IsEquivalentTo%2A>  
-[Utilisation de Types COM en Code managé](https://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66(v=vs.100))  
+[Utilisation de types COM dans du code managé](https://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66(v=vs.100))  
 [Importation d'une bibliothèque de types sous la forme d'un assembly](importing-a-type-library-as-an-assembly.md)  

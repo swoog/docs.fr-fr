@@ -12,9 +12,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: baa66f11404e2cee83b4d4b32ba02544c9438d7f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392506"
 ---
 # <a name="attributed-programming-model-overview-mef"></a>Vue d'ensemble du modèle de programmation par attributs (MEF)
 Dans Managed Extensibility Framework (MEF), un *modèle de programmation* est une méthode particulière qui permet de définir l'ensemble d'objets conceptuels sur lequel MEF fonctionne. Ces objets conceptuels incluent des composants, des importations et des exportations. MEF utilise ces objets mais ne spécifie pas comment ils doivent être représentés. Par conséquent, une grande variété de modèles de programmation sont possibles, y compris des modèles de programmation personnalisés.  
@@ -956,5 +957,5 @@ public class PartSeven
  `IPartImportsSatisfiedNotification` contient une méthode nommée `OnImportsSatisfied`. Cette méthode est appelée par le conteneur de composition sur tous les composants qui implémentent l'interface, une fois la composition terminée et les importations du composant prêtes à l'emploi. Les composants sont créés par le moteur de composition pour remplir les importations des autres composants. Avant que les importations d'un composant aient été définies, vous ne pouvez pas effectuer d'initialisation qui manipule ou s'appuie sur des valeurs importées dans le constructeur du composant, à moins que ces valeurs aient été spécifiées en tant que composants prérequis à l'aide de l'attribut `ImportingConstructor` . Ceci est normalement la méthode conseillée mais, dans certains cas, l'injection de constructeur peut ne pas être disponible. Dans ce cas, il est possible d'effectuer l'initialisation dans `OnImportsSatisfied`et le composant doit implémenter `IPartImportsSatisfiedNotification`.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vidéo Channel 9 : Ouvrir vos Applications avec Managed Extensibility Framework](http://channel9.msdn.com/events/TechEd/NorthAmerica/2009/DTL328)  
- [Vidéo Channel 9 : Managed Extensibility Framework (MEF) 2.0](http://channel9.msdn.com/posts/NET-45-Oleg-Lvovitch-and-Kevin-Ransom-Managed-Extensibility-Framework-MEF-20)
+ [Vidéo Channel 9 : Ouvrir vos applications avec Managed Extensibility Framework](http://channel9.msdn.com/events/TechEd/NorthAmerica/2009/DTL328)  
+ [Vidéo Channel 9 : Managed Extensibility Framework (MEF) 2.0](http://channel9.msdn.com/posts/NET-45-Oleg-Lvovitch-and-Kevin-Ransom-Managed-Extensibility-Framework-MEF-20)

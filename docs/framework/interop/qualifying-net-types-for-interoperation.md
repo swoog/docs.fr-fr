@@ -13,18 +13,19 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: baa5b9f250fe7117838f936b09b050ba500b7209
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389042"
 ---
 # <a name="qualifying-net-types-for-interoperation"></a>Qualification des types .NET en vue d'une interopérabilité
 Si vous envisagez d’exposer les types d’un assembly à des applications COM, prenez en compte les exigences COM Interop au moment de la conception. Les types managés (classe, interface, structure et énumération) s’intègrent parfaitement aux types COM lorsque vous respectez les consignes suivantes :  
   
 -   Les classes doivent implémenter les interfaces de manière explicite.  
   
-     Même si COM Interop fournit un mécanisme permettant de générer automatiquement une interface contenant tous les membres de la classe et de sa classe de base, il est fortement recommandé de fournir des interfaces explicites. L’interface générée automatiquement est appelée « interface de classe ». Pour connaître les instructions, consultez [présentation de l’interface de classe](com-callable-wrapper.md#introducing-the-class-interface).  
+     Même si COM Interop fournit un mécanisme permettant de générer automatiquement une interface contenant tous les membres de la classe et de sa classe de base, il est fortement recommandé de fournir des interfaces explicites. L’interface générée automatiquement est appelée « interface de classe ». Pour obtenir des instructions, consultez [Présentation de l’interface de classe](com-callable-wrapper.md#introducing-the-class-interface).  
   
-     Vous pouvez utiliser Visual Basic, c# et C++ pour incorporer des définitions d’interface dans votre code, au lieu de devoir utiliser le langage IDL (Interface Definition) ou son équivalent. Pour plus d’informations sur la syntaxe, consultez la documentation relative à votre langage.  
+     Vous pouvez utiliser Visual Basic, C# et C++ pour incorporer des définitions d’interface dans votre code, au lieu du langage IDL (ou équivalent). Pour plus d’informations sur la syntaxe, consultez la documentation relative à votre langage.  
   
 -   Les types managés doivent être publics.  
   

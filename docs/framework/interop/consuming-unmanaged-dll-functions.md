@@ -17,14 +17,15 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3166d6c95532706781188da0c56ebf9022038a50
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33388376"
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>Consommation de fonctions DLL non managées
 L'appel de code non managé est un service qui permet au code managé d'appeler des fonctions non managées implémentées dans des bibliothèques de liens dynamiques (DLL), telles que celles de l'API Win32. Il localise et appelle une fonction exportée, puis marshale ses arguments (entiers, chaînes, tableaux, structures, etc) au-delà des limites d’interopérabilité, selon les besoins.  
   
- Cette section présente les tâches liées à la consommation de fonctions DLL non managées et fournit plus d’informations sur la plateforme d’appel. Outre les tâches suivantes, cette section comprend des remarques d’ordre général, ainsi qu’un lien vers des informations supplémentaires et des exemples.  
+ Cette section présente les tâches liées à la consommation de fonctions DLL non managées et fournit plus d’informations sur l’appel de code non managé (PInvoke). Outre les tâches suivantes, cette section comprend des remarques d’ordre général, ainsi qu’un lien vers des informations supplémentaires et des exemples.  
   
 #### <a name="to-consume-exported-dll-functions"></a>Pour consommer des fonctions DLL exportées  
   
