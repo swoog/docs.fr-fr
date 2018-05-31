@@ -1,6 +1,6 @@
 ---
 title: foreach, in (référence C#)
-ms.date: 10/11/2017
+ms.date: 05/24/2018
 f1_keywords:
 - foreach
 - foreach_CSharpKeyword
@@ -9,61 +9,44 @@ helpviewer_keywords:
 - foreach statement [C#]
 - in keyword [C#]
 ms.assetid: 5a9c5ddc-5fd3-457a-9bb6-9abffcd874ec
-ms.openlocfilehash: c0b1481988a2e3199fc6d06ca30cb5194ab2f44c
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: b6b7dc0a4d3970ddfbbb6635ccebbbd5b75671e4
+ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/18/2018
+ms.lasthandoff: 05/25/2018
+ms.locfileid: "34549374"
 ---
-# <a name="foreach-in-c-reference"></a><span data-ttu-id="5196a-102">foreach, in (référence C#)</span><span class="sxs-lookup"><span data-stu-id="5196a-102">foreach, in (C# Reference)</span></span>
+# <a name="foreach-in-c-reference"></a><span data-ttu-id="77bab-102">foreach, in (référence C#)</span><span class="sxs-lookup"><span data-stu-id="77bab-102">foreach, in (C# Reference)</span></span>
 
-<span data-ttu-id="5196a-103">L’instruction `foreach` répète un groupe d’instructions incorporées pour chaque élément d’un tableau ou d’une collection d’objets qui implémente l’interface <xref:System.Collections.IEnumerable?displayProperty=nameWithType> ou <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="5196a-103">The `foreach` statement repeats a group of embedded statements for each element in an array or an object collection that implements the <xref:System.Collections.IEnumerable?displayProperty=nameWithType> or <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> interface.</span></span> <span data-ttu-id="5196a-104">L’[instruction foreach](/dotnet/csharp/language-reference/language-specification/statements#the-foreach-statement) est utilisée pour itérer la collection dans le but d’obtenir les informations dont vous avez besoin. Elle ne peut pas être utilisée pour ajouter ou supprimer des éléments de la collection source pour éviter des effets secondaires imprévisibles.</span><span class="sxs-lookup"><span data-stu-id="5196a-104">The [foreach statement](/dotnet/csharp/language-reference/language-specification/statements#the-foreach-statement) is used to iterate through the collection to get the information that you want, but can not be used to add or remove items from the source collection to avoid unpredictable side effects.</span></span> <span data-ttu-id="5196a-105">Si vous avez besoin d’ajouter ou de supprimer des éléments de la collection source, utilisez une boucle [for](for.md).</span><span class="sxs-lookup"><span data-stu-id="5196a-105">If you need to add or remove items from the source collection, use a [for](for.md) loop.</span></span>
-  
- <span data-ttu-id="5196a-106">Les instructions incorporées continuent de s’exécuter pour chaque élément de la collection ou du tableau.</span><span class="sxs-lookup"><span data-stu-id="5196a-106">The embedded statements continue to execute for each element in the array or collection.</span></span> <span data-ttu-id="5196a-107">Une fois l’itération terminée pour tous les éléments de la collection, le contrôle est transféré à l’instruction qui suit le bloc `foreach`.</span><span class="sxs-lookup"><span data-stu-id="5196a-107">After the iteration has been completed for all the elements in the collection, control is transferred to the next statement following the `foreach` block.</span></span>
-  
- <span data-ttu-id="5196a-108">Vous pouvez quitter la boucle à n’importe quel endroit du bloc `foreach` à l’aide du mot clé [break](break.md), ou passer à l’itération suivante de la boucle à l’aide du mot clé [continue](continue.md).</span><span class="sxs-lookup"><span data-stu-id="5196a-108">At any point within the `foreach` block, you can break out of the loop by using the [break](break.md) keyword, or step to the next iteration in the loop by using the [continue](continue.md) keyword.</span></span>
+<span data-ttu-id="77bab-103">L’instruction `foreach` exécute une instruction ou un bloc d’instructions pour chaque élément d’une instance du type qui implémente l’interface <xref:System.Collections.IEnumerable?displayProperty=nameWithType> ou <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="77bab-103">The `foreach` statement executes a statement or a block of statements for each element in an instance of the type that implements the <xref:System.Collections.IEnumerable?displayProperty=nameWithType> or <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> interface.</span></span> <span data-ttu-id="77bab-104">L’instruction `foreach` n’est pas limitée à ces types et peut être appliquée à une instance de n’importe quel type répondant aux conditions suivantes :</span><span class="sxs-lookup"><span data-stu-id="77bab-104">The `foreach` statement is not limited to those types and can be applied to an instance of any type that satisfies the following conditions:</span></span>
 
- <span data-ttu-id="5196a-109">Une boucle `foreach` peut également être quittée à l’aide des instructions [goto](goto.md), [return](return.md) ou [throw](throw.md).</span><span class="sxs-lookup"><span data-stu-id="5196a-109">A `foreach` loop can also be exited by the [goto](goto.md), [return](return.md), or [throw](throw.md) statements.</span></span>
+- <span data-ttu-id="77bab-105">comporte la méthode `GetEnumerator` sans paramètre publique dont le retour est de type classe, struct ou interface,</span><span class="sxs-lookup"><span data-stu-id="77bab-105">has the public parameterless `GetEnumerator` method whose return type is either class, struct, or interface type,</span></span>
+- <span data-ttu-id="77bab-106">le type de retour de la méthode `GetEnumerator` contient la propriété publique `Current` et la méthode sans paramètre publique `MoveNext`, dont le type de retour est <xref:System.Boolean>.</span><span class="sxs-lookup"><span data-stu-id="77bab-106">the return type of the `GetEnumerator` method has the public `Current` property and the public parameterless `MoveNext` method whose return type is <xref:System.Boolean>.</span></span>
 
- <span data-ttu-id="5196a-110">Pour plus d’informations sur le mot clé `foreach` et sur les exemples de code, consultez les rubriques suivantes :</span><span class="sxs-lookup"><span data-stu-id="5196a-110">For more information about the `foreach` keyword and code samples, see the following topics:</span></span>  
+<span data-ttu-id="77bab-107">Vous pouvez quitter la boucle à n’importe quel endroit du bloc d’instruction `foreach` à l’aide du mot clé [break](break.md), ou passer à l’itération suivante de la boucle à l’aide du mot clé [continue](continue.md).</span><span class="sxs-lookup"><span data-stu-id="77bab-107">At any point within the `foreach` statement block, you can break out of the loop by using the [break](break.md) keyword, or step to the next iteration in the loop by using the [continue](continue.md) keyword.</span></span> <span data-ttu-id="77bab-108">Vous pouvez également quitter une boucle `foreach` en utilisant les instructions [goto](goto.md), [return](return.md) ou [throw](throw.md).</span><span class="sxs-lookup"><span data-stu-id="77bab-108">You also can exit a `foreach` loop by the [goto](goto.md), [return](return.md), or [throw](throw.md) statements.</span></span>
 
- [<span data-ttu-id="5196a-111">Utilisation de foreach avec des tableaux</span><span class="sxs-lookup"><span data-stu-id="5196a-111">Using foreach with Arrays</span></span>](../../programming-guide/arrays/using-foreach-with-arrays.md)  
+## <a name="examples"></a><span data-ttu-id="77bab-109">Exemples</span><span class="sxs-lookup"><span data-stu-id="77bab-109">Examples</span></span>
 
- [<span data-ttu-id="5196a-112">Comment : accéder à une classe de collection à l’aide de foreach</span><span class="sxs-lookup"><span data-stu-id="5196a-112">How to: Access a Collection Class with foreach</span></span>](../../programming-guide/classes-and-structs/how-to-access-a-collection-class-with-foreach.md)  
+[!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
-## <a name="example"></a><span data-ttu-id="5196a-113">Exemple</span><span class="sxs-lookup"><span data-stu-id="5196a-113">Example</span></span>
+<span data-ttu-id="77bab-110">L’exemple suivant montre l’utilisation de l’instruction `foreach` avec une instance de type <xref:System.Collections.Generic.List%601> qui implémente l’interface <xref:System.Collections.Generic.IEnumerable%601> :</span><span class="sxs-lookup"><span data-stu-id="77bab-110">The following example shows usage of the `foreach` statement with an instance of the <xref:System.Collections.Generic.List%601> type that implements the <xref:System.Collections.Generic.IEnumerable%601> interface:</span></span>
 
-<span data-ttu-id="5196a-114">Le code suivant montre trois exemples :</span><span class="sxs-lookup"><span data-stu-id="5196a-114">The following code shows three examples:</span></span>
+[!code-csharp-interactive[list example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#1)]
 
-> [!TIP]
-> <span data-ttu-id="5196a-115">Vous pouvez modifier les exemples pour faire des essais avec la syntaxe et essayer différentes utilisations correspondant mieux à votre cas d’usage.</span><span class="sxs-lookup"><span data-stu-id="5196a-115">You can modify the examples to experiment with the syntax and try different usages that are more similar to your use case.</span></span> <span data-ttu-id="5196a-116">Cliquez sur « Exécuter » pour exécuter le code, modifiez-le, puis recliquez sur « Exécuter ».</span><span class="sxs-lookup"><span data-stu-id="5196a-116">Press "Run" to run the code, then edit and press "Run" again.</span></span>
+<span data-ttu-id="77bab-111">L’exemple suivant utilise l’instruction `foreach` avec une instance de type <xref:System.Span%601?displayProperty=nameWithType> qui n’implémente aucune interface :</span><span class="sxs-lookup"><span data-stu-id="77bab-111">The next example uses the `foreach` statement with an instance of the <xref:System.Span%601?displayProperty=nameWithType> type, which doesn't implement any interfaces:</span></span>
 
--   <span data-ttu-id="5196a-117">Une boucle `foreach` typique qui affiche le contenu d’un tableau d’entiers</span><span class="sxs-lookup"><span data-stu-id="5196a-117">a typical `foreach` loop that displays the contents of an array of integers</span></span>
+[!code-csharp-interactive[span example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#2)]
 
-[!code-csharp-interactive[csrefKeywordsIteration#4](./codesnippet/CSharp/foreach-in_1.cs#L12-L26)]
-
--   <span data-ttu-id="5196a-118">Une boucle [for](../../../csharp/language-reference/keywords/for.md) qui fait la même chose</span><span class="sxs-lookup"><span data-stu-id="5196a-118">a [for](../../../csharp/language-reference/keywords/for.md) loop that does the same thing</span></span>
-
-[!code-csharp-interactive[csrefKeywordsIteration#4](./codesnippet/CSharp/foreach-in_1.cs#L31-L46)]
-
--   <span data-ttu-id="5196a-119">Une boucle `foreach` qui compte le nombre d’éléments du tableau</span><span class="sxs-lookup"><span data-stu-id="5196a-119">a `foreach` loop that maintains a count of the number of elements in the array</span></span>
-
-[!code-csharp-interactive[csrefKeywordsIteration#4](./codesnippet/CSharp/foreach-in_1.cs#L51-L69)]
- 
-## <a name="c-language-specification"></a><span data-ttu-id="5196a-120">Spécification du langage C#</span><span class="sxs-lookup"><span data-stu-id="5196a-120">C# Language Specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="77bab-112">Spécification du langage C#</span><span class="sxs-lookup"><span data-stu-id="77bab-112">C# Language Specification</span></span>
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a><span data-ttu-id="5196a-121">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="5196a-121">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="77bab-113">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="77bab-113">See also</span></span>
 
-[<span data-ttu-id="5196a-122">L’instruction foreach (spécification du langage C#)</span><span class="sxs-lookup"><span data-stu-id="5196a-122">The foreach statement (C# language specification)</span></span>](/dotnet/csharp/language-reference/language-specification/statements#the-foreach-statement)
-
-[<span data-ttu-id="5196a-123">Référence C#</span><span class="sxs-lookup"><span data-stu-id="5196a-123">C# Reference</span></span>](../index.md)
-
-[<span data-ttu-id="5196a-124">Guide de programmation C#</span><span class="sxs-lookup"><span data-stu-id="5196a-124">C# Programming Guide</span></span>](../../programming-guide/index.md)
-
-[<span data-ttu-id="5196a-125">Mots clés C#</span><span class="sxs-lookup"><span data-stu-id="5196a-125">C# Keywords</span></span>](index.md)
-
-[<span data-ttu-id="5196a-126">Instructions d’itération</span><span class="sxs-lookup"><span data-stu-id="5196a-126">Iteration Statements</span></span>](iteration-statements.md)
-
-[<span data-ttu-id="5196a-127">for</span><span class="sxs-lookup"><span data-stu-id="5196a-127">for</span></span>](for.md)
+[<span data-ttu-id="77bab-114">L’instruction foreach (spécification du langage C#)</span><span class="sxs-lookup"><span data-stu-id="77bab-114">The foreach statement (C# language specification)</span></span>](/dotnet/csharp/language-reference/language-specification/statements#the-foreach-statement)  
+[<span data-ttu-id="77bab-115">Utilisation de foreach avec des tableaux</span><span class="sxs-lookup"><span data-stu-id="77bab-115">Using foreach with Arrays</span></span>](../../programming-guide/arrays/using-foreach-with-arrays.md)  
+[<span data-ttu-id="77bab-116">for</span><span class="sxs-lookup"><span data-stu-id="77bab-116">for</span></span>](for.md)  
+[<span data-ttu-id="77bab-117">Instructions d’itération</span><span class="sxs-lookup"><span data-stu-id="77bab-117">Iteration Statements</span></span>](iteration-statements.md)  
+[<span data-ttu-id="77bab-118">Mots clés C#</span><span class="sxs-lookup"><span data-stu-id="77bab-118">C# Keywords</span></span>](index.md)  
+[<span data-ttu-id="77bab-119">Référence C#</span><span class="sxs-lookup"><span data-stu-id="77bab-119">C# Reference</span></span>](../index.md)  
+[<span data-ttu-id="77bab-120">Guide de programmation C#</span><span class="sxs-lookup"><span data-stu-id="77bab-120">C# Programming Guide</span></span>](../../programming-guide/index.md)  

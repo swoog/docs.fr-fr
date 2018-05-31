@@ -1,37 +1,35 @@
 ---
 title: Utilisation de foreach avec des tableaux (Guide de programmation C#)
-ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
+ms.date: 05/23/2018
 helpviewer_keywords:
 - arrays [C#], foreach
 - foreach statement [C#], using with arrays
 ms.assetid: 5f2da2a9-1f56-4de5-94cc-e07f4f7a0244
-caps.latest.revision: "14"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 797cb9a63a5e1009b170b2afda8634bd21a50035
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b858f35167e24390a729769487ce98908a3d349f
+ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/25/2018
+ms.locfileid: "34549453"
 ---
-# <a name="using-foreach-with-arrays-c-programming-guide"></a><span data-ttu-id="6ce6e-102">Utilisation de foreach avec des tableaux (Guide de programmation C#)</span><span class="sxs-lookup"><span data-stu-id="6ce6e-102">Using foreach with Arrays (C# Programming Guide)</span></span>
-<span data-ttu-id="6ce6e-103">C# fournit également l’instruction [foreach](../../../csharp/language-reference/keywords/foreach-in.md).</span><span class="sxs-lookup"><span data-stu-id="6ce6e-103">C# also provides the [foreach](../../../csharp/language-reference/keywords/foreach-in.md) statement.</span></span> <span data-ttu-id="6ce6e-104">Cette instruction offre une méthode simple et appropriée pour itérer au sein des éléments d’un tableau ou de toute collection énumérable.</span><span class="sxs-lookup"><span data-stu-id="6ce6e-104">This statement provides a simple, clean way to iterate through the elements of an array or any enumerable collection.</span></span> <span data-ttu-id="6ce6e-105">L'instruction `foreach` traite les éléments dans l'ordre retourné par la tableau ou l'énumérateur du type de collection, en général, du 0e élément au dernier.</span><span class="sxs-lookup"><span data-stu-id="6ce6e-105">The `foreach` statement processes elements in the order returned by the array or collection type’s enumerator, which is usually from the 0th element to the last.</span></span> <span data-ttu-id="6ce6e-106">Par exemple, le code suivant crée un tableau intitulé `numbers` et itère au sein de ce dernier avec l'instruction `foreach` :</span><span class="sxs-lookup"><span data-stu-id="6ce6e-106">For example, the following code creates an array called `numbers` and iterates through it with the `foreach` statement:</span></span>  
-  
- [!code-csharp[csProgGuideArrays#28](../../../csharp/programming-guide/arrays/codesnippet/CSharp/using-foreach-with-arrays_1.cs)]  
-  
- <span data-ttu-id="6ce6e-107">Dans le cas de tableaux multidimensionnels, il est possible d'utiliser la même méthode pour itérer au sein de tous les éléments, par exemple :</span><span class="sxs-lookup"><span data-stu-id="6ce6e-107">With multidimensional arrays, you can use the same method to iterate through the elements, for example:</span></span>  
-  
- [!code-csharp[csProgGuideArrays#29](../../../csharp/programming-guide/arrays/codesnippet/CSharp/using-foreach-with-arrays_2.cs)]  
-  
- <span data-ttu-id="6ce6e-108">Cependant, dans le cas de tableaux multidimensionnels, l’utilisation d’une boucle [for](../../../csharp/language-reference/keywords/for.md) imbriquée vous permet de mieux contrôler les éléments du tableau.</span><span class="sxs-lookup"><span data-stu-id="6ce6e-108">However, with multidimensional arrays, using a nested [for](../../../csharp/language-reference/keywords/for.md) loop gives you more control over the array elements.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="6ce6e-109">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="6ce6e-109">See Also</span></span>  
+# <a name="using-foreach-with-arrays-c-programming-guide"></a><span data-ttu-id="2a6e2-102">Utilisation de foreach avec des tableaux (Guide de programmation C#)</span><span class="sxs-lookup"><span data-stu-id="2a6e2-102">Using foreach with Arrays (C# Programming Guide)</span></span>
+
+<span data-ttu-id="2a6e2-103">L’instruction [foreach](../../language-reference/keywords/foreach-in.md) offre une méthode simple et appropriée pour itérer au sein des éléments d’un tableau.</span><span class="sxs-lookup"><span data-stu-id="2a6e2-103">The [foreach](../../language-reference/keywords/foreach-in.md) statement provides a simple, clean way to iterate through the elements of an array.</span></span>
+
+<span data-ttu-id="2a6e2-104">Pour les tableaux unidimensionnels, l’instruction `foreach` traite les éléments dans l’ordre croissant des index, en commençant par l’index 0 et en terminant par l’index `Length - 1` :</span><span class="sxs-lookup"><span data-stu-id="2a6e2-104">For single-dimensional arrays, the `foreach` statement processes elements in increasing index order, starting with index 0 and ending with index `Length - 1`:</span></span>
+
+[!code-csharp[csProgGuideArrays#28](./codesnippet/CSharp/using-foreach-with-arrays_1.cs)]
+
+<span data-ttu-id="2a6e2-105">Pour les tableaux multidimensionnels, les éléments sont traités de sorte que les index de la dimension la plus à droite sont incrémentés en premier, puis la dimension immédiatement à gauche, et ainsi de suite vers la gauche :</span><span class="sxs-lookup"><span data-stu-id="2a6e2-105">For multi-dimensional arrays, elements are traversed such that the indices of the rightmost dimension are increased first, then the next left dimension, and so on to the left:</span></span>
+
+[!code-csharp[csProgGuideArrays#29](./codesnippet/CSharp/using-foreach-with-arrays_2.cs)]
+
+<span data-ttu-id="2a6e2-106">Cependant, dans le cas de tableaux multidimensionnels, l’utilisation d’une boucle [for](../../language-reference/keywords/for.md) imbriquée vous permet de mieux contrôler l’ordre dans lequel les éléments du tableau sont traités.</span><span class="sxs-lookup"><span data-stu-id="2a6e2-106">However, with multidimensional arrays, using a nested [for](../../language-reference/keywords/for.md) loop gives you more control over the order in which to process the array elements.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="2a6e2-107">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="2a6e2-107">See also</span></span>  
  <xref:System.Array>  
- [<span data-ttu-id="6ce6e-110">Guide de programmation C#</span><span class="sxs-lookup"><span data-stu-id="6ce6e-110">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="6ce6e-111">Tableaux</span><span class="sxs-lookup"><span data-stu-id="6ce6e-111">Arrays</span></span>](../../../csharp/programming-guide/arrays/index.md)  
- [<span data-ttu-id="6ce6e-112">Tableaux unidimensionnels</span><span class="sxs-lookup"><span data-stu-id="6ce6e-112">Single-Dimensional Arrays</span></span>](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)  
- [<span data-ttu-id="6ce6e-113">Tableaux multidimensionnels</span><span class="sxs-lookup"><span data-stu-id="6ce6e-113">Multidimensional Arrays</span></span>](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)  
- [<span data-ttu-id="6ce6e-114">Tableaux en escalier</span><span class="sxs-lookup"><span data-stu-id="6ce6e-114">Jagged Arrays</span></span>](../../../csharp/programming-guide/arrays/jagged-arrays.md)
+ [<span data-ttu-id="2a6e2-108">Guide de programmation C#</span><span class="sxs-lookup"><span data-stu-id="2a6e2-108">C# Programming Guide</span></span>](../index.md)  
+ [<span data-ttu-id="2a6e2-109">Tableaux</span><span class="sxs-lookup"><span data-stu-id="2a6e2-109">Arrays</span></span>](index.md)  
+ [<span data-ttu-id="2a6e2-110">Tableaux unidimensionnels</span><span class="sxs-lookup"><span data-stu-id="2a6e2-110">Single-Dimensional Arrays</span></span>](single-dimensional-arrays.md)  
+ [<span data-ttu-id="2a6e2-111">Tableaux multidimensionnels</span><span class="sxs-lookup"><span data-stu-id="2a6e2-111">Multidimensional Arrays</span></span>](multidimensional-arrays.md)  
+ [<span data-ttu-id="2a6e2-112">Tableaux en escalier</span><span class="sxs-lookup"><span data-stu-id="2a6e2-112">Jagged Arrays</span></span>](jagged-arrays.md)

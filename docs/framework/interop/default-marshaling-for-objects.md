@@ -12,9 +12,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 94377fb2079689e7b6af2c94fa24ca2214a5c729
 ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34312181"
 ---
 # <a name="default-marshaling-for-objects"></a><span data-ttu-id="6736c-102">Marshaling par défaut pour les objets</span><span class="sxs-lookup"><span data-stu-id="6736c-102">Default Marshaling for Objects</span></span>
 <span data-ttu-id="6736c-103">Les paramètres et les champs de type <xref:System.Object?displayProperty=nameWithType> peuvent être exposés à un code non managé sous la forme de l’un des types suivants :</span><span class="sxs-lookup"><span data-stu-id="6736c-103">Parameters and fields typed as <xref:System.Object?displayProperty=nameWithType> can be exposed to unmanaged code as one of the following types:</span></span>  
