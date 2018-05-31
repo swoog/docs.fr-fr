@@ -3,12 +3,12 @@ title: Nouveautés de C# 6 | Guide C#
 description: Découvrez les nouvelles fonctionnalités de C# version 6
 ms.date: 09/22/2016
 ms.assetid: 4d879f69-f889-4d3f-a781-75194e143400
-ms.openlocfilehash: d9f5c5ca94c04a873e4e98863f9fea3b8f477c1c
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: c23d4f45441451fbf8a2ad2f939bdb1ed6144154
+ms.sourcegitcommit: b7763f3435635850a76d4cbcf09bdce6c019208a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34458003"
+ms.lasthandoff: 05/25/2018
+ms.locfileid: "34483487"
 ---
 # <a name="whats-new-in-c-6"></a>Nouveautés de C# 6
 
@@ -342,11 +342,11 @@ Les informations d’implémentation détaillées de l’ajout de la prise en ch
 
 ## <a name="index-initializers"></a>Initialiseurs d’index.
 
-Les *initialiseurs d’index* constituent l’une des deux fonctionnalités qui améliorent la cohérence des initialiseurs. Dans les versions Release précédentes de C#, vous ne pouviez utiliser des *initialiseurs de collection* qu’avec des collections de styles de séquence :
+Les *initialiseurs d’index* constituent l’une des deux fonctionnalités qui améliorent la cohérence des initialiseurs de collection avec l’utilisation des index. Dans les versions précédentes de C#, les *initialiseurs de collection* n’étaient utilisables qu’avec des collections de styles de séquence, y compris <xref:System.Collections.Generic.Dictionary%602>, en ajoutant des accolades autour des paires clé-valeur :
 
 [!code-csharp[ListInitializer](../../../samples/snippets/csharp/new-in-6/initializers.cs#ListInitializer)]
 
-À présent, vous pouvez également les utiliser avec des collections <xref:System.Collections.Generic.Dictionary%602> et des types similaires :
+Vous pouvez à présent les utiliser avec des collections <xref:System.Collections.Generic.Dictionary%602> et des types similaires. La nouvelle syntaxe prend en charge l’affectation à l’aide d’un index dans la collection :
 
 [!code-csharp[DictionaryInitializer](../../../samples/snippets/csharp/new-in-6/initializers.cs#DictionaryInitializer)]
 
