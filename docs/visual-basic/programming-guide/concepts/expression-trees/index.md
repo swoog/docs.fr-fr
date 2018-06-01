@@ -2,11 +2,12 @@
 title: Arborescences d’expressions (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 8bbbb02d-7ffc-476b-8c25-118d82bf5d46
-ms.openlocfilehash: ac37dd63041ba0a0a8ee08651fe62334c3c30049
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: babee41f7df48f270d0c56cb2af91e463407d5c1
+ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34696940"
 ---
 # <a name="expression-trees-visual-basic"></a>Arborescences d’expressions (Visual Basic)
 Les arborescences d'expressions représentent du code dans une structure de données arborescente, où chaque nœud est une expression, par exemple un appel de méthode ou une opération binaire comme `x < y`.  
@@ -84,7 +85,7 @@ Console.WriteLine(factorial)
 ' Prints 120.  
 ```
 
-Pour plus d’informations, consultez [Génération de méthodes dynamiques avec des arborescences d’expressions dans Visual Studio 2010](http://go.microsoft.com/fwlink/p/?LinkId=169513) (ou version ultérieure).
+Pour plus d’informations, consultez [Génération de méthodes dynamiques avec des arborescences d’expressions dans Visual Studio 2010](https://blogs.msdn.microsoft.com/csharpfaq/2009/09/14/generating-dynamic-methods-with-expression-trees-in-visual-studio-2010) (ou version ultérieure).
   
 ## <a name="parsing-expression-trees"></a>Analyse des arborescences d’expressions  
  L’exemple de code suivant montre comment l’arborescence d’expressions qui représente l’expression lambda `Function(num) num < 5` peut être décomposée selon ses différentes parties.  

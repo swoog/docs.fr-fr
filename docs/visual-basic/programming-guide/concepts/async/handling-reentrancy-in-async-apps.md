@@ -2,11 +2,12 @@
 title: Gestion de la réentrance dans Async Apps (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
-ms.openlocfilehash: bf4794385019e91a25026b0d2b3c1839fc77869a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4b899a695fef0e626eb9db3d376a74acba17b086
+ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34697155"
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>Gestion de la réentrance dans Async Apps (Visual Basic)
 Quand vous incluez du code asynchrone dans votre application, vous devez prendre en compte et éventuellement empêcher la réentrance, qui fait référence à une nouvelle entrée d'une opération asynchrone avant qu'elle soit terminée. Si vous n'identifiez pas et ne gérez pas les possibilités de réentrance, les résultats peuvent être inattendus.  
@@ -103,7 +104,7 @@ TOTAL bytes returned:  890591
 ###  <a name="BKMK_DisableTheStartButton"></a> Désactiver le bouton Démarrer  
  Vous pouvez bloquer le bouton **Démarrer** pendant l’exécution d’une opération en désactivant le bouton en haut du gestionnaire d’événements `StartButton_Click`. Ensuite, vous pouvez réactiver le bouton depuis un bloc `Finally` quand l'opération se termine pour que les utilisateurs puissent exécuter à nouveau l'application.  
   
- Le code suivant illustre ces modifications, marquées par des astérisques. Vous pouvez ajouter les modifications apportées au code à la fin de cette rubrique, ou vous pouvez télécharger l’application finalisée dans la rubrique [Exemples Async : la réentrance dans les applications de bureau .NET](http://go.microsoft.com/fwlink/?LinkId=266571). Le nom du projet est DisableStartButton.  
+ Le code suivant illustre ces modifications, marquées par des astérisques. Vous pouvez ajouter les modifications apportées au code à la fin de cette rubrique, ou vous pouvez télécharger l’application finalisée dans la rubrique [Exemples Async : la réentrance dans les applications de bureau .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). Le nom du projet est DisableStartButton.  
   
 ```vb  
 Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)  
@@ -133,7 +134,7 @@ End Sub
   
  Pour plus d’informations sur l’annulation, consultez [réglage (Visual Basic) de votre Application Async](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md).  
   
- Pour configurer ce scénario, apportez les modifications suivantes au code de base fourni dans [Examen et exécution de l’exemple d’application](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645). Vous pouvez également télécharger l’application finalisée dans la rubrique [Exemples Async : la réentrance dans les applications de bureau .NET](http://go.microsoft.com/fwlink/?LinkId=266571). Le nom de ce projet est CancelAndRestart.  
+ Pour configurer ce scénario, apportez les modifications suivantes au code de base fourni dans [Examen et exécution de l’exemple d’application](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645). Vous pouvez également télécharger l’application finalisée dans la rubrique [Exemples Async : la réentrance dans les applications de bureau .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). Le nom de ce projet est CancelAndRestart.  
   
 1.  Déclarez une variable <xref:System.Threading.CancellationTokenSource>, `cts`, qui est dans la portée de toutes les méthodes.  
   
@@ -534,7 +535,7 @@ End Function
   
 ###  <a name="BKMK_DownloadingTheApp"></a> Téléchargement de l’application  
   
-1.  Téléchargez le fichier compressé dans la rubrique [Exemples Async : la réentrance dans les applications de bureau .NET](http://go.microsoft.com/fwlink/?LinkId=266571).  
+1.  Téléchargez le fichier compressé dans la rubrique [Exemples Async : la réentrance dans les applications de bureau .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06).  
   
 2.  Décompressez le fichier que vous avez téléchargé, puis démarrez Visual Studio.  
   
