@@ -1,1 +1,0 @@
-<span data-ttu-id="24647-101">Windows XP Professionnel</span><span class="sxs-lookup"><span data-stu-id="24647-101">Windows XP Professional</span></span>

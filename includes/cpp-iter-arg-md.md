@@ -1,1 +1,0 @@
-<span data-ttu-id="843f5-101">Type d'un élément dans la séquence contrôlée.</span><span class="sxs-lookup"><span data-stu-id="843f5-101">The type of an element in the controlled sequence.</span></span>
