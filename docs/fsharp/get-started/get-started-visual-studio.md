@@ -2,11 +2,12 @@
 title: 'Prise en main) (F # dans Visual Studio'
 description: 'Découvrez comment utiliser F # avec Visual Studio.'
 ms.date: 02/13/2017
-ms.openlocfilehash: d392e3a93d5b13206f654e35a266e9d9569942fc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 22fbe8086ec133605e1d9b4b28e524fe2ed8ac28
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34728532"
 ---
 # <a name="get-started-with-f-in-visual-studio"></a>Prise en main) (F # dans Visual Studio
 
@@ -71,58 +72,6 @@ Vous devez maintenant voir ce qui suit imprimé dans la fenêtre de console Visu
 ```
 
 Félicitations !  Vous avez créé votre premier projet F # dans Visual Studio, écrit qu'une fonction) (F # imprimer les résultats de l’appel de cette fonction et exécutez le projet pour afficher certains résultats.
-
-## <a name="using-f-interactive"></a>À l’aide de F # Interactive
-
-L’une des meilleures fonctionnalités de la Visual F # pour les outils dans Visual Studio est la fenêtre F # Interactive.  Il vous permet d’envoyer le code sur un processus dans lequel vous pouvez appeler ce code et afficher le résultat de manière interactive.
-
-Pour commencer à l’utiliser, mettez en surbrillance le `square` fonction définie dans votre code.  Ensuite, maintenez la **Alt** clé et appuyez sur **entrée**.  Il exécute le code dans la fenêtre F # Interactive.  Vous devriez voir la fenêtre F # Interactive par le code suivant dans celui-ci :
-
-```
->
-
-val square : x:int -> int
-
->
-```
-
-Cela montre la même signature de fonction pour le `square` (fonction), vous l’avez vu précédemment lorsque vous pointez sur la fonction.  Étant donné que `square` est maintenant défini dans le processus interactif F #, vous pouvez l’appeler avec des valeurs différentes :
-
-```
-> square 12;;
-val it : int = 144
->square 13;;
-val it : int = 169
-```
-
-Cela exécute la fonction, lie le résultat à un nouveau nom `it`et affiche le type et la valeur de `it`.  Notez que vous devez mettre fin à chaque ligne avec `;;`.  Voici comment F # Interactive sait quand votre appel de fonction est terminée.  Vous pouvez également définir de nouvelles fonctions dans F # Interactive :
-
-```
-> let isOdd x = x % 2 <> 0;;
-
-val isOdd : x:int -> bool
-
-> isOdd 12;;
-val it : bool = false
-```
-
-Ci-dessus définit une nouvelle fonction, `isOdd`, qui prend un `int` et vérifie s’il est impair ! Vous pouvez appeler cette fonction pour afficher sa valeur de retour avec des entrées différentes.  Vous pouvez appeler des fonctions dans les appels de fonction :
-
-```
-> isOdd (square 15);;
-val it : bool = true
-```
-
-Vous pouvez également utiliser le [avant de canal opérateur](../language-reference/symbol-and-operator-reference/index.md) à la valeur de pipeline dans les deux fonctions :
-
-```
-> 15 |> square |> isOdd;;
-val it : bool = true
-```
-
-L’opérateur avant de canal et bien plus encore, sont traités dans des didacticiels ultérieurs.
-
-Il s’agit uniquement d’un aperçu en ce que vous pouvez faire avec F # Interactive. Pour plus d’informations, consultez [de programmation Interactive avec F #](../tutorials/fsharp-interactive/index.md).
 
 ## <a name="next-steps"></a>Étapes suivantes
 
