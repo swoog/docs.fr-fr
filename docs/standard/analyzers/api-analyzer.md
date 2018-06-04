@@ -3,13 +3,14 @@ title: Analyseur d’API .NET
 description: Découvrez comment l’analyseur d’API .NET peut aider à détecter les problèmes de compatibilité de plateforme et les API déconseillées.
 author: oliag
 ms.author: mairaw
-ms.date: 01/30/2018
+ms.date: 05/31/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: ac0e777e1df837ff7e9fbe185c462f56765e47bf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4394bc77b499db1960d61bad5e828f77f1144c65
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696882"
 ---
 # <a name="net-api-analyzer"></a>Analyseur d’API .NET
 
@@ -70,11 +71,11 @@ La suppression globale est la méthode recommandée pour garantir une utilisatio
 
 ## <a name="discovering-cross-platform-issues"></a>Détecter des problèmes multiplateformes
 
-Tout comme les API déconseillées, l’analyseur identifie toutes les API non multiplateformes. Par exemple, <xref:System.Console.WindowWidth?displayProperty=nameWithType> fonctionne sous Windows, mais pas sous Linux ou macOS. L’ID de diagnostic apparaît dans la fenêtre **Liste d’erreurs**. Vous pouvez supprimer cet avertissement en cliquant avec le bouton droit et en sélectionnant **Actions rapides et refactorisations**. Contrairement au cas des API déconseillées, dans lequel deux options sont proposées (continuer d’utiliser le membre déconseillé et supprimer les avertissements, ou ne pas l’utiliser du tout), ici, si vous développez votre code pour certaines plateformes seulement, vous pouvez supprimer les avertissements de toutes les autres plateformes sur lesquelles vous n’envisagez pas d’exécuter votre code. Il vous suffit pour cela de modifier votre fichier projet et d’ajouter la propriété `PlatformCompatIgnore`, qui liste toutes les plateformes à ignorer. Les valeurs acceptées sont les suivantes : `Linux`, `MacOSX` et `Windows`.
+Tout comme les API déconseillées, l’analyseur identifie toutes les API non multiplateformes. Par exemple, <xref:System.Console.WindowWidth?displayProperty=nameWithType> fonctionne sous Windows, mais pas sous Linux ou macOS. L’ID de diagnostic apparaît dans la fenêtre **Liste d’erreurs**. Vous pouvez supprimer cet avertissement en cliquant avec le bouton droit et en sélectionnant **Actions rapides et refactorisations**. Contrairement au cas des API déconseillées, dans lequel deux options sont proposées (continuer d’utiliser le membre déconseillé et supprimer les avertissements, ou ne pas l’utiliser du tout), ici, si vous développez votre code pour certaines plateformes seulement, vous pouvez supprimer les avertissements de toutes les autres plateformes sur lesquelles vous n’envisagez pas d’exécuter votre code. Il vous suffit pour cela de modifier votre fichier projet et d’ajouter la propriété `PlatformCompatIgnore`, qui liste toutes les plateformes à ignorer. Les valeurs acceptées sont les suivantes : `Linux`, `macOS` et `Windows`.
 
 ```xml
 <PropertyGroup>
-    <PlatformCompatIgnore>Linux;MacOS</PlatformCompatIgnore>
+    <PlatformCompatIgnore>Linux;macOS</PlatformCompatIgnore>
 </PropertyGroup>
 ```
 

@@ -3,12 +3,12 @@ title: Didacticiel sur les branches et les boucles - Guides de démarrage rapide
 description: Dans ce guide de démarrage rapide sur les branches et les boucles, vous écrivez du code en C# pour explorer la syntaxe de langage qui prend en charge les branches et boucles conditionnelles pour exécuter des instructions de manière répétée.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: a25ea7f266405a017f6f4576659195b2ac1afbf4
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 4324e8b4704682f128e3122661fb6a0eddfe158b
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457902"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34566135"
 ---
 # <a name="branches-and-loops"></a>Branches et boucles
 

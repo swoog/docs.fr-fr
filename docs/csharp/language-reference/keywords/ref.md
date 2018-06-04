@@ -7,11 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 8b36f94e9476b857066c292feb9e77e9c2199b7e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a4d5719bccd240658880cc5c6e549e8c912ca1b9
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696392"
 ---
 # <a name="ref-c-reference"></a>ref (référence C#)
 
@@ -125,8 +126,9 @@ Quand l’appelant stocke la valeur retournée par la méthode `GetBookByTitle` 
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence C#](../../../csharp/language-reference/index.md)  
- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
- [Passage de paramètres](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)  
- [Paramètres de méthodes](../../../csharp/language-reference/keywords/method-parameters.md)  
- [Mots clés C#](../../../csharp/language-reference/keywords/index.md)
+ [Sémantique de référence avec les types valeur](../../reference-semantics-with-value-types.md)  
+ [Passage de paramètres](../../programming-guide/classes-and-structs/passing-parameters.md)  
+ [Paramètres de méthodes](method-parameters.md)  
+ [Référence C#](../index.md)  
+ [Guide de programmation C#](../../programming-guide/index.md)  
+ [Mots clés C#](index.md)

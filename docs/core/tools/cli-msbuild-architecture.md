@@ -3,11 +3,12 @@ title: Architecture des outils en ligne de commande .NET Core
 description: Découvrez les différentes couches des outils .NET Core et les changements apportés aux versions récentes.
 author: blackdwarf
 ms.date: 03/06/2017
-ms.openlocfilehash: 50ccaa490f079c62901c57eb9cf91690ee655bf2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1d96a0b1e19bf84af0ab645ebd104afc899ae656
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696541"
 ---
 # <a name="high-level-overview-of-changes-in-the-net-core-tools"></a>Vue d’ensemble générale des modifications des outils .NET Core
 
@@ -66,4 +67,5 @@ Cette commande publie une application dans un dossier `pub` à l’aide de la co
 
 La principale exception à cette règle sont les commandes `new` et `run`, car elles n’ont pas été implémentées comme cibles de MSBuild.
 
-<a name="dotnet-restore-note"></a> [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+<a name="dotnet-restore-note"></a>  
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
