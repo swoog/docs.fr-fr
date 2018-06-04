@@ -15,11 +15,12 @@ helpviewer_keywords:
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9df41a404c091bb76490d762b55580c36cf33f62
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b270559e9e73e18bebb29e36b815268d5426a940
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34728678"
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>Exemple d'expression régulière : recherche de valeurs HREF
 L’exemple suivant recherche une chaîne d’entrée et affiche toutes les valeurs href="…" et leurs emplacements dans la chaîne.  
@@ -43,9 +44,9 @@ L’exemple suivant recherche une chaîne d’entrée et affiche toutes les vale
 |`\s*`|Correspond à zéro, un ou plusieurs espaces blancs.|  
 |`=`|Correspond au signe égal.|  
 |`\s*`|Correspond à zéro, un ou plusieurs espaces blancs.|  
-|<code>(?:\["'\](?<1>\[^"'\]*)"&#124;(?<1>\S+))</code>|Correspond à l’un des éléments suivants sans assigner le résultat à un groupe capturé :<br /> <ul><li><p>Un guillemet ou une apostrophe, suivi(e) de zéro, une ou plusieurs occurrences de tout caractère autre qu’un guillemet ou une apostrophe, suivie(s) d’un guillemet ou d’une apostrophe. Le groupe nommé `1` est inclus dans ce modèle.</p></li><li><p>Un ou plusieurs caractères autres que des espaces. Le groupe nommé `1` est inclus dans ce modèle.</p></li></ul>|  
+|<code>(?:\["'\](?<1>\[^"'\]*)["']&#124;(?<1>\S+))</code>|Correspond à l’un des éléments suivants sans assigner le résultat à un groupe capturé :<br /> <ul><li><p>Un guillemet ou une apostrophe, suivi(e) de zéro, une ou plusieurs occurrences de tout caractère autre qu’un guillemet ou une apostrophe, suivie(s) d’un guillemet ou d’une apostrophe. Le groupe nommé `1` est inclus dans ce modèle.</p></li><li><p>Un ou plusieurs caractères autres que des espaces. Le groupe nommé `1` est inclus dans ce modèle.</p></li></ul>|  
 |`(?<1>[^"']*)`|Affecte zéro, une ou plusieurs occurrences de tout caractère autre qu’un guillemet ou une apostrophe au groupe de capture nommé `1`.|  
-|`"(?<1>\S+)`|Affecte un ou plusieurs caractères non espace blanc au groupe de capture nommé `1`.|  
+|`(?<1>\S+)`|Affecte un ou plusieurs caractères non espace blanc au groupe de capture nommé `1`.|  
   
 ## <a name="match-result-class"></a>Classe de résultats Match  
  Les résultats d’une recherche sont stockés dans la classe <xref:System.Text.RegularExpressions.Match>, qui donne accès à toutes les sous-chaînes extraites par la recherche. Cette classe mémorise également la chaîne recherchée et l’expression régulière utilisée, pour pouvoir appeler la méthode <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType> afin d’effectuer une nouvelle recherche qui commence là où la dernière s’est terminée.  
