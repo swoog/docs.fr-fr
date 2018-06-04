@@ -3,108 +3,104 @@ title: Commande dotnet clean - Interface CLI .NET Core
 description: La commande dotnet clean nettoie le répertoire actif.
 author: mairaw
 ms.author: mairaw
-ms.date: 08/13/2017
-ms.topic: conceptual
-ms.prod: dotnet-core
-ms.technology: dotnet-cli
-ms.workload:
-- dotnetcore
-ms.openlocfilehash: 92db35df770b1e1d2438127c4b529d4cb480c8df
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.date: 05/25/2018
+ms.openlocfilehash: 9e68781fe00590f3c8d429631a3f72d525d29fa9
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34697029"
 ---
-# <a name="dotnet-clean"></a><span data-ttu-id="1b1ae-103">dotnet-clean</span><span class="sxs-lookup"><span data-stu-id="1b1ae-103">dotnet-clean</span></span>
+# <a name="dotnet-clean"></a><span data-ttu-id="6f5bd-103">dotnet-clean</span><span class="sxs-lookup"><span data-stu-id="6f5bd-103">dotnet-clean</span></span>
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a><span data-ttu-id="1b1ae-104">Name</span><span class="sxs-lookup"><span data-stu-id="1b1ae-104">Name</span></span>
+## <a name="name"></a><span data-ttu-id="6f5bd-104">Name</span><span class="sxs-lookup"><span data-stu-id="6f5bd-104">Name</span></span>
 
-<span data-ttu-id="1b1ae-105">`dotnet clean` : Nettoie la sortie d’un projet.</span><span class="sxs-lookup"><span data-stu-id="1b1ae-105">`dotnet clean` - Cleans the output of a project.</span></span>
+<span data-ttu-id="6f5bd-105">`dotnet clean` : Nettoie la sortie d’un projet.</span><span class="sxs-lookup"><span data-stu-id="6f5bd-105">`dotnet clean` - Cleans the output of a project.</span></span>
 
-## <a name="synopsis"></a><span data-ttu-id="1b1ae-106">Résumé</span><span class="sxs-lookup"><span data-stu-id="1b1ae-106">Synopsis</span></span>
+## <a name="synopsis"></a><span data-ttu-id="6f5bd-106">Résumé</span><span class="sxs-lookup"><span data-stu-id="6f5bd-106">Synopsis</span></span>
 
-# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="1b1ae-107">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="1b1ae-107">.NET Core 2.x</span></span>](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="6f5bd-107">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="6f5bd-107">.NET Core 2.x</span></span>](#tab/netcore2x)
 ```
 dotnet clean [<PROJECT>] [-c|--configuration] [-f|--framework] [-o|--output] [-r|--runtime] [-v|--verbosity]
 dotnet clean [-h|--help]
 ```
-# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="1b1ae-108">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="1b1ae-108">.NET Core 1.x</span></span>](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="6f5bd-108">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="6f5bd-108">.NET Core 1.x</span></span>](#tab/netcore1x)
 ```
 dotnet clean [<PROJECT>] [-c|--configuration] [-f|--framework] [-o|--output] [-v|--verbosity]
 dotnet clean [-h|--help]
 ```
 ---
 
-## <a name="description"></a><span data-ttu-id="1b1ae-109">Description</span><span class="sxs-lookup"><span data-stu-id="1b1ae-109">Description</span></span>
+## <a name="description"></a><span data-ttu-id="6f5bd-109">Description</span><span class="sxs-lookup"><span data-stu-id="6f5bd-109">Description</span></span>
 
-<span data-ttu-id="1b1ae-110">La commande `dotnet clean` nettoie la sortie de la génération précédente.</span><span class="sxs-lookup"><span data-stu-id="1b1ae-110">The `dotnet clean` command cleans the output of the previous build.</span></span> <span data-ttu-id="1b1ae-111">Comme elle est implémentée en tant que [cible MSBuild](/visualstudio/msbuild/msbuild-targets), le projet est évalué lorsque la commande est exécutée.</span><span class="sxs-lookup"><span data-stu-id="1b1ae-111">It's implemented as an [MSBuild target](/visualstudio/msbuild/msbuild-targets), so the project is evaluated when the command is run.</span></span> <span data-ttu-id="1b1ae-112">Seules les sorties créées lors de la génération sont nettoyées.</span><span class="sxs-lookup"><span data-stu-id="1b1ae-112">Only the outputs created during the build are cleaned.</span></span> <span data-ttu-id="1b1ae-113">Les dossiers de sortie intermédiaire (*obj*) et de sortie finale (*bin*) sont tous deux nettoyés.</span><span class="sxs-lookup"><span data-stu-id="1b1ae-113">Both intermediate (*obj*) and final output (*bin*) folders are cleaned.</span></span>
+<span data-ttu-id="6f5bd-110">La commande `dotnet clean` nettoie la sortie de la génération précédente.</span><span class="sxs-lookup"><span data-stu-id="6f5bd-110">The `dotnet clean` command cleans the output of the previous build.</span></span> <span data-ttu-id="6f5bd-111">Comme elle est implémentée en tant que [cible MSBuild](/visualstudio/msbuild/msbuild-targets), le projet est évalué lorsque la commande est exécutée.</span><span class="sxs-lookup"><span data-stu-id="6f5bd-111">It's implemented as an [MSBuild target](/visualstudio/msbuild/msbuild-targets), so the project is evaluated when the command is run.</span></span> <span data-ttu-id="6f5bd-112">Seules les sorties créées lors de la génération sont nettoyées.</span><span class="sxs-lookup"><span data-stu-id="6f5bd-112">Only the outputs created during the build are cleaned.</span></span> <span data-ttu-id="6f5bd-113">Les dossiers de sortie intermédiaire (*obj*) et de sortie finale (*bin*) sont tous deux nettoyés.</span><span class="sxs-lookup"><span data-stu-id="6f5bd-113">Both intermediate (*obj*) and final output (*bin*) folders are cleaned.</span></span>
 
-## <a name="arguments"></a><span data-ttu-id="1b1ae-114">Arguments</span><span class="sxs-lookup"><span data-stu-id="1b1ae-114">Arguments</span></span>
+## <a name="arguments"></a><span data-ttu-id="6f5bd-114">Arguments</span><span class="sxs-lookup"><span data-stu-id="6f5bd-114">Arguments</span></span>
 
 `PROJECT`
 
-<span data-ttu-id="1b1ae-115">Le projet MSBuild à nettoyer.</span><span class="sxs-lookup"><span data-stu-id="1b1ae-115">The MSBuild project to clean.</span></span> <span data-ttu-id="1b1ae-116">Si vous ne spécifiez pas de fichier projet, MSBuild recherche dans le répertoire de travail actuel un fichier avec une extension se terminant par *proj* et l’utilise.</span><span class="sxs-lookup"><span data-stu-id="1b1ae-116">If a project file is not specified, MSBuild searches the current working directory for a file that has a file extension that ends in *proj* and uses that file.</span></span>
+<span data-ttu-id="6f5bd-115">Le projet MSBuild à nettoyer.</span><span class="sxs-lookup"><span data-stu-id="6f5bd-115">The MSBuild project to clean.</span></span> <span data-ttu-id="6f5bd-116">Si vous ne spécifiez pas de fichier projet, MSBuild recherche dans le répertoire de travail actuel un fichier avec une extension se terminant par *proj* et l’utilise.</span><span class="sxs-lookup"><span data-stu-id="6f5bd-116">If a project file is not specified, MSBuild searches the current working directory for a file that has a file extension that ends in *proj* and uses that file.</span></span>
 
-## <a name="options"></a><span data-ttu-id="1b1ae-117">Options</span><span class="sxs-lookup"><span data-stu-id="1b1ae-117">Options</span></span>
+## <a name="options"></a><span data-ttu-id="6f5bd-117">Options</span><span class="sxs-lookup"><span data-stu-id="6f5bd-117">Options</span></span>
 
-# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="1b1ae-118">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="1b1ae-118">.NET Core 2.x</span></span>](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="6f5bd-118">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="6f5bd-118">.NET Core 2.x</span></span>](#tab/netcore2x)
 
 `-c|--configuration {Debug|Release}`
 
-<span data-ttu-id="1b1ae-119">Définit la configuration de build.</span><span class="sxs-lookup"><span data-stu-id="1b1ae-119">Defines the build configuration.</span></span> <span data-ttu-id="1b1ae-120">La valeur par défaut est `Debug`.</span><span class="sxs-lookup"><span data-stu-id="1b1ae-120">The default value is `Debug`.</span></span> <span data-ttu-id="1b1ae-121">Cette option est uniquement requise durant le nettoyage si vous l’avez spécifiée au moment de la génération.</span><span class="sxs-lookup"><span data-stu-id="1b1ae-121">This option is only required when cleaning if you specified it during build time.</span></span>
+<span data-ttu-id="6f5bd-119">Définit la configuration de build.</span><span class="sxs-lookup"><span data-stu-id="6f5bd-119">Defines the build configuration.</span></span> <span data-ttu-id="6f5bd-120">La valeur par défaut est `Debug`.</span><span class="sxs-lookup"><span data-stu-id="6f5bd-120">The default value is `Debug`.</span></span> <span data-ttu-id="6f5bd-121">Cette option est uniquement requise durant le nettoyage si vous l’avez spécifiée au moment de la génération.</span><span class="sxs-lookup"><span data-stu-id="6f5bd-121">This option is only required when cleaning if you specified it during build time.</span></span>
 
 `-f|--framework <FRAMEWORK>`
 
-<span data-ttu-id="1b1ae-122">Le [framework](../../standard/frameworks.md) spécifié au moment de la génération.</span><span class="sxs-lookup"><span data-stu-id="1b1ae-122">The [framework](../../standard/frameworks.md) that was specified at build time.</span></span> <span data-ttu-id="1b1ae-123">Le framework doit être défini dans le [fichier projet](csproj.md).</span><span class="sxs-lookup"><span data-stu-id="1b1ae-123">The framework must be defined in the [project file](csproj.md).</span></span> <span data-ttu-id="1b1ae-124">Si vous avez spécifié le framework au moment de la génération, vous devez spécifier le framework lors du nettoyage.</span><span class="sxs-lookup"><span data-stu-id="1b1ae-124">If you specified the framework at build time, you must specify the framework when cleaning.</span></span>
+<span data-ttu-id="6f5bd-122">Le [framework](../../standard/frameworks.md) spécifié au moment de la génération.</span><span class="sxs-lookup"><span data-stu-id="6f5bd-122">The [framework](../../standard/frameworks.md) that was specified at build time.</span></span> <span data-ttu-id="6f5bd-123">Le framework doit être défini dans le [fichier projet](csproj.md).</span><span class="sxs-lookup"><span data-stu-id="6f5bd-123">The framework must be defined in the [project file](csproj.md).</span></span> <span data-ttu-id="6f5bd-124">Si vous avez spécifié le framework au moment de la génération, vous devez spécifier le framework lors du nettoyage.</span><span class="sxs-lookup"><span data-stu-id="6f5bd-124">If you specified the framework at build time, you must specify the framework when cleaning.</span></span>
 
 `-h|--help`
 
-<span data-ttu-id="1b1ae-125">Affiche une aide brève pour la commande.</span><span class="sxs-lookup"><span data-stu-id="1b1ae-125">Prints out a short help for the command.</span></span>
+<span data-ttu-id="6f5bd-125">Affiche une aide brève pour la commande.</span><span class="sxs-lookup"><span data-stu-id="6f5bd-125">Prints out a short help for the command.</span></span>
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
-<span data-ttu-id="1b1ae-126">Répertoire dans lequel les sorties générées sont placées.</span><span class="sxs-lookup"><span data-stu-id="1b1ae-126">Directory in which the build outputs are placed.</span></span> <span data-ttu-id="1b1ae-127">Spécifiez le commutateur `-f|--framework <FRAMEWORK>` avec le commutateur de répertoire de sortie si vous avez spécifié le framework lorsque le projet a été généré.</span><span class="sxs-lookup"><span data-stu-id="1b1ae-127">Specify the `-f|--framework <FRAMEWORK>` switch with the output directory switch if you specified the framework when the project was built.</span></span>
+<span data-ttu-id="6f5bd-126">Répertoire dans lequel les sorties générées sont placées.</span><span class="sxs-lookup"><span data-stu-id="6f5bd-126">Directory in which the build outputs are placed.</span></span> <span data-ttu-id="6f5bd-127">Spécifiez le commutateur `-f|--framework <FRAMEWORK>` avec le commutateur de répertoire de sortie si vous avez spécifié le framework lorsque le projet a été généré.</span><span class="sxs-lookup"><span data-stu-id="6f5bd-127">Specify the `-f|--framework <FRAMEWORK>` switch with the output directory switch if you specified the framework when the project was built.</span></span>
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
-<span data-ttu-id="1b1ae-128">Nettoie le dossier de sortie du runtime spécifié.</span><span class="sxs-lookup"><span data-stu-id="1b1ae-128">Cleans the output folder of the specified runtime.</span></span> <span data-ttu-id="1b1ae-129">Cette option est utilisée à la création d’un [déploiement autonome](../deploying/index.md#self-contained-deployments-scd).</span><span class="sxs-lookup"><span data-stu-id="1b1ae-129">This is used when a [self-contained deployment](../deploying/index.md#self-contained-deployments-scd) was created.</span></span>
+<span data-ttu-id="6f5bd-128">Nettoie le dossier de sortie du runtime spécifié.</span><span class="sxs-lookup"><span data-stu-id="6f5bd-128">Cleans the output folder of the specified runtime.</span></span> <span data-ttu-id="6f5bd-129">Cette option est utilisée à la création d’un [déploiement autonome](../deploying/index.md#self-contained-deployments-scd).</span><span class="sxs-lookup"><span data-stu-id="6f5bd-129">This is used when a [self-contained deployment](../deploying/index.md#self-contained-deployments-scd) was created.</span></span>
 
 `-v|--verbosity <LEVEL>`
 
-<span data-ttu-id="1b1ae-130">Définit le niveau de détail de la commande.</span><span class="sxs-lookup"><span data-stu-id="1b1ae-130">Sets the verbosity level of the command.</span></span> <span data-ttu-id="1b1ae-131">Niveaux autorisés : q[uiet], m[inimal], n[ormal], d[etailed] et diag[nostic].</span><span class="sxs-lookup"><span data-stu-id="1b1ae-131">Allowed levels are q[uiet], m[inimal], n[ormal], d[etailed], and diag[nostic].</span></span>
+<span data-ttu-id="6f5bd-130">Définit le niveau de détail de la commande.</span><span class="sxs-lookup"><span data-stu-id="6f5bd-130">Sets the verbosity level of the command.</span></span> <span data-ttu-id="6f5bd-131">Niveaux autorisés : q[uiet], m[inimal], n[ormal], d[etailed] et diag[nostic].</span><span class="sxs-lookup"><span data-stu-id="6f5bd-131">Allowed levels are q[uiet], m[inimal], n[ormal], d[etailed], and diag[nostic].</span></span>
 
-# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="1b1ae-132">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="1b1ae-132">.NET Core 1.x</span></span>](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="6f5bd-132">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="6f5bd-132">.NET Core 1.x</span></span>](#tab/netcore1x)
 
 `-c|--configuration {Debug|Release}`
 
-<span data-ttu-id="1b1ae-133">Définit la configuration de build.</span><span class="sxs-lookup"><span data-stu-id="1b1ae-133">Defines the build configuration.</span></span> <span data-ttu-id="1b1ae-134">La valeur par défaut est `Debug`.</span><span class="sxs-lookup"><span data-stu-id="1b1ae-134">The default value is `Debug`.</span></span> <span data-ttu-id="1b1ae-135">Cette option est uniquement requise durant le nettoyage si vous l’avez spécifiée au moment de la génération.</span><span class="sxs-lookup"><span data-stu-id="1b1ae-135">This option is only required when cleaning if you specified it during build time.</span></span>
+<span data-ttu-id="6f5bd-133">Définit la configuration de build.</span><span class="sxs-lookup"><span data-stu-id="6f5bd-133">Defines the build configuration.</span></span> <span data-ttu-id="6f5bd-134">La valeur par défaut est `Debug`.</span><span class="sxs-lookup"><span data-stu-id="6f5bd-134">The default value is `Debug`.</span></span> <span data-ttu-id="6f5bd-135">Cette option est uniquement requise durant le nettoyage si vous l’avez spécifiée au moment de la génération.</span><span class="sxs-lookup"><span data-stu-id="6f5bd-135">This option is only required when cleaning if you specified it during build time.</span></span>
 
 `-f|--framework <FRAMEWORK>`
 
-<span data-ttu-id="1b1ae-136">Le [framework](../../standard/frameworks.md) spécifié au moment de la génération.</span><span class="sxs-lookup"><span data-stu-id="1b1ae-136">The [framework](../../standard/frameworks.md) that was specified at build time.</span></span> <span data-ttu-id="1b1ae-137">Le framework doit être défini dans le [fichier projet](csproj.md).</span><span class="sxs-lookup"><span data-stu-id="1b1ae-137">The framework must be defined in the [project file](csproj.md).</span></span> <span data-ttu-id="1b1ae-138">Si vous avez spécifié le framework au moment de la génération, vous devez spécifier le framework lors du nettoyage.</span><span class="sxs-lookup"><span data-stu-id="1b1ae-138">If you specified the framework at build time, you must specify the framework when cleaning.</span></span>
+<span data-ttu-id="6f5bd-136">Le [framework](../../standard/frameworks.md) spécifié au moment de la génération.</span><span class="sxs-lookup"><span data-stu-id="6f5bd-136">The [framework](../../standard/frameworks.md) that was specified at build time.</span></span> <span data-ttu-id="6f5bd-137">Le framework doit être défini dans le [fichier projet](csproj.md).</span><span class="sxs-lookup"><span data-stu-id="6f5bd-137">The framework must be defined in the [project file](csproj.md).</span></span> <span data-ttu-id="6f5bd-138">Si vous avez spécifié le framework au moment de la génération, vous devez spécifier le framework lors du nettoyage.</span><span class="sxs-lookup"><span data-stu-id="6f5bd-138">If you specified the framework at build time, you must specify the framework when cleaning.</span></span>
 
 `-h|--help`
 
-<span data-ttu-id="1b1ae-139">Affiche une aide brève pour la commande.</span><span class="sxs-lookup"><span data-stu-id="1b1ae-139">Prints out a short help for the command.</span></span>
+<span data-ttu-id="6f5bd-139">Affiche une aide brève pour la commande.</span><span class="sxs-lookup"><span data-stu-id="6f5bd-139">Prints out a short help for the command.</span></span>
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
-<span data-ttu-id="1b1ae-140">Répertoire dans lequel les sorties générées sont placées.</span><span class="sxs-lookup"><span data-stu-id="1b1ae-140">Directory in which the build outputs are placed.</span></span> <span data-ttu-id="1b1ae-141">Spécifiez le commutateur `-f|--framework <FRAMEWORK>` avec le commutateur de répertoire de sortie si vous avez spécifié le framework lorsque le projet a été généré.</span><span class="sxs-lookup"><span data-stu-id="1b1ae-141">Specify the `-f|--framework <FRAMEWORK>` switch with the output directory switch if you specified the framework when the project was built.</span></span>
+<span data-ttu-id="6f5bd-140">Répertoire dans lequel les sorties générées sont placées.</span><span class="sxs-lookup"><span data-stu-id="6f5bd-140">Directory in which the build outputs are placed.</span></span> <span data-ttu-id="6f5bd-141">Spécifiez le commutateur `-f|--framework <FRAMEWORK>` avec le commutateur de répertoire de sortie si vous avez spécifié le framework lorsque le projet a été généré.</span><span class="sxs-lookup"><span data-stu-id="6f5bd-141">Specify the `-f|--framework <FRAMEWORK>` switch with the output directory switch if you specified the framework when the project was built.</span></span>
 
 `-v|--verbosity <LEVEL>`
 
-<span data-ttu-id="1b1ae-142">Définit le niveau de détail de la commande.</span><span class="sxs-lookup"><span data-stu-id="1b1ae-142">Sets the verbosity level of the command.</span></span> <span data-ttu-id="1b1ae-143">Niveaux autorisés : q[uiet], m[inimal], n[ormal], d[etailed] et diag[nostic].</span><span class="sxs-lookup"><span data-stu-id="1b1ae-143">Allowed levels are q[uiet], m[inimal], n[ormal], d[etailed], and diag[nostic].</span></span>
+<span data-ttu-id="6f5bd-142">Définit le niveau de détail de la commande.</span><span class="sxs-lookup"><span data-stu-id="6f5bd-142">Sets the verbosity level of the command.</span></span> <span data-ttu-id="6f5bd-143">Niveaux autorisés : q[uiet], m[inimal], n[ormal], d[etailed] et diag[nostic].</span><span class="sxs-lookup"><span data-stu-id="6f5bd-143">Allowed levels are q[uiet], m[inimal], n[ormal], d[etailed], and diag[nostic].</span></span>
 
 ---
 
-## <a name="examples"></a><span data-ttu-id="1b1ae-144">Exemples</span><span class="sxs-lookup"><span data-stu-id="1b1ae-144">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="6f5bd-144">Exemples</span><span class="sxs-lookup"><span data-stu-id="6f5bd-144">Examples</span></span>
 
-<span data-ttu-id="1b1ae-145">Nettoyez une génération par défaut du projet :</span><span class="sxs-lookup"><span data-stu-id="1b1ae-145">Clean a default build of the project:</span></span>
+<span data-ttu-id="6f5bd-145">Nettoyez une génération par défaut du projet :</span><span class="sxs-lookup"><span data-stu-id="6f5bd-145">Clean a default build of the project:</span></span>
 
 `dotnet clean`
 
-<span data-ttu-id="1b1ae-146">Nettoyez un projet généré à l’aide de la configuration Release :</span><span class="sxs-lookup"><span data-stu-id="1b1ae-146">Clean a project built using the Release configuration:</span></span>
+<span data-ttu-id="6f5bd-146">Nettoyez un projet généré à l’aide de la configuration Release :</span><span class="sxs-lookup"><span data-stu-id="6f5bd-146">Clean a project built using the Release configuration:</span></span>
 
 `dotnet clean --configuration Release`
