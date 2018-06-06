@@ -11,11 +11,12 @@ helpviewer_keywords:
 - operator overloading
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
-ms.openlocfilehash: 63a16163900f1b4dc7dadef6a227f56b89f4e820
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5b4641ce8509e3111a11ed803d36194d5a301bce
+ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34805709"
 ---
 # <a name="operator-procedures-visual-basic"></a>Procédures d'opérateur (Visual Basic)
 Une procédure d’opérateur est une série d’instructions Visual Basic qui définissent le comportement d’un opérateur standard (tel que `*`, `<>`, ou `And`) sur une classe ou une structure que vous avez définie. Également appelé *surcharge d’opérateur*.  
@@ -43,7 +44,7 @@ Une procédure d’opérateur est une série d’instructions Visual Basic qui d
 ## <a name="declaration-syntax"></a>Syntaxe de déclaration  
  La syntaxe de déclaration d’une procédure d’opérateur est la suivante :  
   
- `Public Shared`   `[Widening | Narrowing]`   `Operator`  *symbole_opérateur* `(` *operand1*`[,`*operand2* `]) As` *type de données*   
+ `Public Shared`   `[Widening | Narrowing]`   `Operator`  *symbole_opérateur* `(` *operand1*`[,`*operand2* `]) As` *type de données*  
   
  `' Statements of the operator procedure.`  
   
@@ -67,7 +68,7 @@ Une procédure d’opérateur est une série d’instructions Visual Basic qui d
   
  `Dim testStruct As`  *nom_structure*  
   
- `Dim testNewStruct As`  *nom_structure*`= testStruct`*symbole_opérateur*   `10`  
+ `Dim testNewStruct As`  *nom_structure*`= testStruct`*symbole_opérateur*  `10`  
   
 ### <a name="illustration-of-declaration-and-call"></a>Illustration de déclaration et d’appel  
  La structure suivante stocke une valeur entière 128 bits signée comme parties constitutives de poids fort et de poids faible. Il définit les `+` opérateur pour ajouter deux `veryLong` les valeurs et générer résultant `veryLong` valeur.  
@@ -78,7 +79,7 @@ Une procédure d’opérateur est une série d’instructions Visual Basic qui d
   
  [!code-vb[VbVbcnProcedures#24](./codesnippet/VisualBasic/operator-procedures_2.vb)]  
   
- Pour obtenir plus d’informations et des exemples, consultez [Surcharge d’opérateur dans Visual Basic 2005](http://go.microsoft.com/fwlink/?LinkId=101703).  
+ Pour obtenir plus d’informations et des exemples, consultez [Surcharge d’opérateur dans Visual Basic 2005](https://msdn.microsoft.com/library/ms379613(v=vs.80).aspx).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédures](./index.md)  
