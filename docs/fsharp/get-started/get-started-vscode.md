@@ -6,7 +6,7 @@ ms.openlocfilehash: e56274caf36be231338876ded5a6d7c7968906b0
 ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34728626"
 ---
 # <a name="get-started-with-f-in-visual-studio-code"></a>Prise en main) (F # dans Visual Studio Code

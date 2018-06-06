@@ -2,16 +2,17 @@
 title: 'Comment : récupérer des paragraphes à partir d’un Document Office Open XML (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 66053f21-9217-473c-a6f3-a0897be07756
-ms.openlocfilehash: 241971c65bb1569e4df98bc3580dea71428dbf2b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 17d8c0fb9ecd5d3cb7a4f692d25a9f1514696117
+ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753310"
 ---
 # <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-visual-basic"></a>Comment : récupérer des paragraphes à partir d’un Document Office Open XML (Visual Basic)
 Cette rubrique présente un exemple qui ouvre un document Office Open XML et récupère une collection de tous les paragraphes du document.  
   
- Pour plus d’informations sur le format Office Open XML, consultez [www.openxmldeveloper.org](http://go.microsoft.com/fwlink/?LinkID=95573).  
+ Pour plus d’informations sur Office Open XML, consultez [Eric White Blog](http://www.ericwhite.com).  
   
 ## <a name="example"></a>Exemple  
  Cet exemple ouvre un package Office Open XML et utilise les relations dans le package Open XML pour rechercher le document et les parties de style. Il interroge ensuite le document et projette une collection d'un type anonyme qui contient le nœud <xref:System.Xml.Linq.XElement> de paragraphe, le nom de style de chaque paragraphe et le texte de chaque paragraphe.  

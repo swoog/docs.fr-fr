@@ -7,11 +7,12 @@ helpviewer_keywords:
 - Async [Visual Basic]
 - Async keyword [Visual Basic]
 ms.assetid: 1be8b4b5-9689-41b5-bd33-b906bfd53bc5
-ms.openlocfilehash: 829128ff39c0c5e4f6cb140852228a028e39e69c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 244f468d9432e132c93ae8272d51098f86ad439a
+ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753342"
 ---
 # <a name="async-visual-basic"></a>Async (Visual Basic)
 Le `Async` modificateur indique que la méthode ou [expression lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md) qu’il modifie est asynchrone. Ces méthodes sont appelées *les méthodes async*.  
@@ -55,7 +56,7 @@ End Function
  Pour obtenir plus d’informations et des exemples, consultez [Types de retour Async](../../../visual-basic/programming-guide/concepts/async/async-return-types.md).  
   
 ## <a name="example"></a>Exemple  
- Les exemples suivants montrent un gestionnaire d’événements asynchrones, expression lambda async et une méthode async. Pour obtenir un exemple complet qui utilise ces éléments, consultez [procédure pas à pas : accès Web à l’aide de Async et Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Vous pouvez télécharger le code de procédure à partir des [Exemples de code du développeur](http://go.microsoft.com/fwlink/?LinkId=255191).  
+ Les exemples suivants montrent un gestionnaire d’événements asynchrones, expression lambda async et une méthode async. Pour obtenir un exemple complet qui utilise ces éléments, consultez [procédure pas à pas : accès Web à l’aide de Async et Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Vous pouvez télécharger le code de procédure à partir des [Exemples de code du développeur](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f).  
   
 ```vb  
 ' An event handler must be a Sub procedure.  

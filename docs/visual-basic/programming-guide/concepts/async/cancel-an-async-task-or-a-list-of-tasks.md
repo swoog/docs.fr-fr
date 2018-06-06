@@ -6,7 +6,7 @@ ms.openlocfilehash: 2823514bc462f198a43316b40eb05bc1ffed0e72
 ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34728665"
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>Annuler une tâche asynch ou une liste de tâches (Visual Basic)

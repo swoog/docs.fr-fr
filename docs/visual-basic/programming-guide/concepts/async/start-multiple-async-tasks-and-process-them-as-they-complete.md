@@ -2,11 +2,12 @@
 title: Démarrer plusieurs tâches Asynch et les traiter une fois terminées (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 57ffb748-af40-4794-bedd-bdb7fea062de
-ms.openlocfilehash: 54bf83e9812ee048581df4f99901edd23eaec886
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f20688e981165c8b2328556e979ad5d5126d5ba
+ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753368"
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-visual-basic"></a>Démarrer plusieurs tâches Asynch et les traiter une fois terminées (Visual Basic)
 En utilisant <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>, vous pouvez démarrer plusieurs tâches en même temps et les traiter une par une, une fois qu’elles sont terminées, au lieu de les traiter dans l’ordre dans lequel elles ont démarré.  
@@ -17,7 +18,7 @@ En utilisant <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWi
 >  Pour exécuter les exemples, Visual Studio 2012 ou version ultérieure et .NET Framework 4.5 ou version ultérieure doivent être installés sur votre ordinateur.  
   
 ## <a name="downloading-the-example"></a>Téléchargement de l'exemple  
- Téléchargez l’intégralité du projet Windows Presentation Foundation (WPF) à partir de la page [Exemple Async : réglage de votre application](http://go.microsoft.com/fwlink/?LinkId=255046), puis procédez comme suit.  
+ Téléchargez l’intégralité du projet Windows Presentation Foundation (WPF) à partir de la page [Exemple Async : réglage de votre application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea), puis procédez comme suit.  
   
 1.  Décompressez le fichier que vous avez téléchargé, puis démarrez Visual Studio.  
   
@@ -79,14 +80,14 @@ Dim downloadTasksQuery As IEnumerable(Of Task(Of Integer)) =
  Vous devez exécuter le projet plusieurs fois pour vérifier que les longueurs téléchargées n’apparaissent pas toujours dans le même ordre.  
   
 > [!CAUTION]
->  Vous pouvez utiliser `WhenAny` dans une boucle, comme décrit dans l’exemple, pour résoudre les problèmes qui impliquent un petit nombre de tâches. Cependant, d’autres approches sont plus efficaces si vous avez un grand nombre de tâches à traiter. Pour plus d’informations et d’exemples, consultez l’article relatif au [traitement des tâches une fois terminées](http://go.microsoft.com/fwlink/?LinkId=260810).  
+>  Vous pouvez utiliser `WhenAny` dans une boucle, comme décrit dans l’exemple, pour résoudre les problèmes qui impliquent un petit nombre de tâches. Cependant, d’autres approches sont plus efficaces si vous avez un grand nombre de tâches à traiter. Pour plus d’informations et d’exemples, consultez l’article relatif au [traitement des tâches une fois terminées](https://blogs.msdn.microsoft.com/pfxteam/2012/08/02/processing-tasks-as-they-complete).  
   
 ## <a name="complete-example"></a>Exemple complet  
  Le code suivant est le texte complet du fichier MainWindow.xaml.vb pour l’exemple. Des astérisques marquent les éléments ajoutés pour cet exemple.  
   
  Notez que vous devez ajouter une référence pour <xref:System.Net.Http>.  
   
- Vous pouvez télécharger le projet à partir de la page [Exemple Async : réglage de votre application](http://go.microsoft.com/fwlink/?LinkId=255046).  
+ Vous pouvez télécharger le projet à partir de la page [Exemple Async : réglage de votre application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).  
   
 ```vb  
 ' Add an Imports directive and a reference for System.Net.Http.  
@@ -208,4 +209,4 @@ End Class
  <xref:System.Threading.Tasks.Task.WhenAny%2A>  
  [Ajuster une application Async (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)  
  [Programmation asynchrone avec Async et Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  
- [Exemple Async : ajuster une application](http://go.microsoft.com/fwlink/?LinkId=255046)
+ [Exemple Async : ajuster une application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
