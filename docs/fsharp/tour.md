@@ -2,11 +2,12 @@
 title: 'Visite guidée de F #'
 description: 'Examiner certaines des fonctionnalités clés de la programmation de langage dans cette visite guidée avec des exemples de code F #.'
 ms.date: 02/28/2018
-ms.openlocfilehash: 2ce251b90d5c202996e0b1673e8f7f378a38af5f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 63c38d59376a148c439482fcf47488fc72b7b8aa
+ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753485"
 ---
 # <a name="tour-of-f"></a>Visite guidée de F # #
 
@@ -54,11 +55,11 @@ Il est important de noter que, car `struct` tuples sont des types valeur, ils ne
 
 ## <a name="pipelines-and-composition"></a>Pipelines et Composition
 
-Diriger des opérateurs (`|>`, `<|`, `||>`, `<||`, `|||>`, `<|||`) et les opérateurs de composition (`>>` et `<<`) sont largement utilisés lors du traitement des données en F #.  Ces opérateurs sont des fonctions qui vous permettent d’établir un « pipelines » des fonctions de manière flexible.  L’exemple suivant décrit comment tirer parti de ces opérateurs pour créer un pipeline fonctionnels simple.
+Diriger des opérateurs tels que `|>` sont largement utilisés lors du traitement des données en F #. Ces opérateurs sont des fonctions qui vous permettent d’établir un « pipelines » des fonctions de manière flexible. L’exemple suivant présente comment vous pouvez tirer parti de ces opérateurs pour construire le pipeline fonctionnel :
 
-[!code-fsharp[Pipelines](../../samples/snippets/fsharp/tour.fs#L227-L300)]
+[!code-fsharp[Pipelines](../../samples/snippets/fsharp/tour.fs#L227-L282)]
 
-L’exemple ci-dessus effectuée utiliser de nombreuses fonctionnalités de F #, y compris les fonctions de traitement de liste, les fonctions de première classe, et [application partielle](language-reference/functions/index.md#partial-application-of-arguments).  Bien qu’une compréhension approfondie de chacun de ces concepts peut devenir un peu avancée, il doit être clair facilement les fonctions peuvent être utilisées pour traiter les données lors de la création de pipelines.
+L’exemple précédent apportée utiliser de nombreuses fonctionnalités de F #, y compris les fonctions de traitement de liste, les fonctions de première classe, et [application partielle](language-reference/functions/index.md#partial-application-of-arguments). Bien qu’une compréhension approfondie de chacun de ces concepts peut devenir un peu avancée, il doit être clair facilement les fonctions peuvent être utilisées pour traiter les données lors de la création de pipelines.
 
 ## <a name="lists-arrays-and-sequences"></a>Listes, tableaux et séquences
 
