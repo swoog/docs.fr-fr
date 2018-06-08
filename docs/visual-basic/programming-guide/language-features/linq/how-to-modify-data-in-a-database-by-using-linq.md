@@ -12,18 +12,19 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], data changes in database
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: cf52635f-0c1b-46c3-aff1-bdf181cf19b1
-ms.openlocfilehash: c0c00c15756ab4d488096d4311bb47986a5eb25e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 617bb62f9009c507658b5d1262657cb4dfa860e9
+ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34827109"
 ---
 # <a name="how-to-modify-data-in-a-database-by-using-linq-visual-basic"></a>Comment : modifier des données dans une base de données à l'aide de LINQ (Visual Basic)
 Requêtes LINQ de requête (LINQ) permettent de facilement accéder aux informations de base de données et modifier des valeurs dans la base de données.  
   
  L’exemple suivant montre comment créer une nouvelle application qui Récupère et les informations mises à jour dans une base de données SQL Server.  
   
- Les exemples de cette rubrique utilisent la base de données Northwind. Si vous n’avez pas de la base de données Northwind sur votre ordinateur de développement, vous pouvez le télécharger à partir de la [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=98088) site Web. Pour obtenir des instructions, consultez [téléchargement d’exemples de bases de données](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+ Les exemples de cette rubrique utilisent la base de données Northwind. Si vous n’avez pas de cette base de données sur votre ordinateur de développement, vous pouvez le télécharger à partir du Microsoft Download Center. Pour obtenir des instructions, consultez [téléchargement d’exemples de bases de données](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
 ### <a name="to-create-a-connection-to-a-database"></a>Pour créer une connexion à une base de données  
   

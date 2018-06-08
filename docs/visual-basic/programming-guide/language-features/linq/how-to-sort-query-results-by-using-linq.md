@@ -11,18 +11,19 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 - query samples [Visual Basic]
 ms.assetid: 07a4584d-9fd8-4a1d-b7d9-ccf2efa5c84e
-ms.openlocfilehash: 260d9e70888e153638d56ce806f9d15cf840389c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 40baa1d7ae463b4193e4af5a9b79d29116b179b4
+ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34826904"
 ---
 # <a name="how-to-sort-query-results-by-using-linq-visual-basic"></a>Comment : trier les résultats d'une requête à l'aide de LINQ (Visual Basic)
 Language-Integrated Query (LINQ) facilite l’accès aux informations de base de données et exécuter des requêtes.  
   
  L’exemple suivant montre comment créer une application qui effectue des requêtes sur une base de données SQL Server et trie les résultats en fonction de plusieurs champs à l’aide de la `Order By` clause. L’ordre de tri pour chaque champ peut l’ordre croissant ou décroissant. Pour plus d’informations, consultez [une Clause Order By](../../../../visual-basic/language-reference/queries/order-by-clause.md).  
   
- Les exemples de cette rubrique utilisent la base de données Northwind. Si vous n’avez pas de la base de données Northwind sur votre ordinateur de développement, vous pouvez le télécharger à partir de la [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=98088) site Web. Pour obtenir des instructions, consultez [téléchargement d’exemples de bases de données](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+ Les exemples de cette rubrique utilisent la base de données Northwind. Si vous n’avez pas de cette base de données sur votre ordinateur de développement, vous pouvez le télécharger à partir du Microsoft Download Center. Pour obtenir des instructions, consultez [téléchargement d’exemples de bases de données](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
