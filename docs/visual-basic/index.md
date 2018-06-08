@@ -6,11 +6,12 @@ helpviewer_keywords:
 - Visual Basic
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce1c9aa868636181a8dd4e59e61d3ed82c89c217
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 03c9c118104f6fe3196d0a4bb13d28a6a122d859
+ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34805540"
 ---
 # <a name="visual-basic-guide"></a>Guide Visual Basic
 
@@ -51,5 +52,5 @@ Visual Basic est conçu pour la création productive d’applications de type s�
  [Bien démarrer avec le développement dans Visual Studio](/visualstudio/ide/get-started-developing-with-visual-studio)  
  Fournit des liens vers des rubriques qui vous permettent d’en savoir plus sur les principes fondamentaux de Visual Studio.  
   
- [Bibliothèque de classes .NET Framework](http://go.microsoft.com/fwlink/?LinkID=227195)  
+ [Navigateur d’API .NET](../../api/index.md)  
  Fournit l’entrée à la bibliothèque de classes, aux interfaces et aux types valeur inclus dans Microsoft [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] SDK.
