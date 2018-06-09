@@ -15,11 +15,12 @@ helpviewer_keywords:
 - characters [WPF], curly brace
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
-ms.openlocfilehash: e2fb1e64f957b49743d8dfb19091bca50303e2d2
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 907d5dcaae8f6e09902c2b3548d5ba8ac9a2b077
+ms.sourcegitcommit: 6c480773ae896f45af4671fb3e26611a50e4dd81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/09/2018
+ms.locfileid: "35251166"
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>Extensions de balisage et XAML WPF
 Cette rubrique introduit le concept d’extensions de balisage pour XAML, notamment leurs règles de syntaxe, leur finalité et le modèle d’objet de classe sous-jacent. Les extensions de balisage sont une fonctionnalité générale du langage XAML et de l’implémentation .NET des services XAML. Cette rubrique détaille spécifiquement des extensions de balisage pour une utilisation dans le langage XAML de WPF.  
@@ -88,7 +89,7 @@ Cette rubrique introduit le concept d’extensions de balisage pour XAML, notamm
 -   Si des jetons distincts ne contiennent pas de signes égal, chaque jeton est considéré comme un argument de constructeur. Chaque paramètre de constructeur doit être fourni dans le type et l’ordre correct attendus par cette signature.  
   
     > [!NOTE]
-    >  Un processeur XAML doit appeler le constructeur qui correspond au nombre d’arguments du nombre de paires. Pour cette raison, si vous implémentez une extension de balisage personnalisée, ne fournissez pas plusieurs paramètres avec le même nombre d’arguments. Bien que le comportement d’un processeur XAML en présence de plusieurs chemins d’accès de constructeur d’extension de balisage ayant le même nombre de paramètres ne soit pas défini, il est probable que le processeur XAML soit autorisé à lever une exception d’utilisation si ce cas se présente dans les définitions de type d’extension de balisage.  
+    >  Un processeur XAML doit appeler le constructeur qui correspond au nombre d’arguments du nombre de paires. Pour cette raison, si vous implémentez une extension de balisage personnalisée, ne fournissez pas plusieurs constructeurs avec le même nombre d’arguments. Bien que le comportement d’un processeur XAML en présence de plusieurs chemins d’accès de constructeur d’extension de balisage ayant le même nombre de paramètres ne soit pas défini, il est probable que le processeur XAML soit autorisé à lever une exception d’utilisation si ce cas se présente dans les définitions de type d’extension de balisage.  
   
 -   Si les différents jetons contiennent des signes égal, le processeur XAML appelle d’abord le constructeur par défaut pour l’extension de balisage. Ensuite, chaque paire nom=valeur est interprétée comme un nom de propriété existant au niveau de l’extension de balisage et une valeur à assigner à cette propriété.  
   

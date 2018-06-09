@@ -2,11 +2,12 @@
 title: 'Les instructions de mise en forme de code F #'
 description: 'Découvrez les instructions de mise en forme du code F #.'
 ms.date: 05/14/2018
-ms.openlocfilehash: 1433b6891a6a0ddcdc082c141365ae54fa40c27b
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: 6c8e4059fd4bf1e7450118a6df02609217c4f4db
+ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35231504"
 ---
 # <a name="f-code-formatting-guidelines"></a>Les instructions de mise en forme de code F #
 
@@ -29,6 +30,177 @@ Lors de la mise en retrait est requise, vous devez utiliser des espaces, tabulat
 **Nous vous recommandons 4 espaces par mise en retrait.**
 
 Ceci dit, la mise en retrait des programmes est une question subjective. Variations sont OK, mais la première règle, vous devez suivre est *la cohérence de la mise en retrait*. Choisissez un style de mise en retrait de généralement accepté et utiliser systématiquement dans l’ensemble de votre code base.
+
+## <a name="formatting-blank-lines"></a>Mise en forme des lignes vides
+
+* Distinct niveau supérieur (fonction) et la classe définitions avec deux lignes vides.
+* Les définitions de méthode à l’intérieur d’une classe sont séparées par une ligne vide.
+* Lignes vierges supplémentaires peuvent servir (avec parcimonie) pour séparer les groupes de fonctions connexes. Lignes vides peuvent être omises entre un ensemble de commandes associées à une ligne (par exemple, un ensemble d’implémentations fictives).
+* Utiliser avec parcimonie lignes vides dans les fonctions, pour indiquer les sections logiques.
+
+## <a name="formatting-comments"></a>Mise en forme de commentaires
+
+Préférez généralement plusieurs commentaires double barre oblique sur les commentaires en bloc style ML.
+
+```fsharp
+// Prefer this style of comments when you want
+// to express written ideas on multiple lines.
+
+(*
+    ML-style comments are fine, but not a .NET-ism.
+    They are useful when needing to modify multi-line comments, though.
+*)
+```
+
+Commentaires incorporés doivent mettre en majuscule la première lettre.
+
+```fsharp
+let f x = x + 1 // Increment by one.
+```
+
+## <a name="naming-conventions"></a>Conventions d'attribution d'un nom
+
+### <a name="use-camelcase-for-class-bound-expression-bound-and-pattern-bound-values-and-functions"></a>Utilisez camelCase pour les fonctions et les valeurs de limite de classe, expression-modèle liées et
+
+Il est courant et acceptée style F # à utiliser camelCase pour tous les noms lié en tant que variables locales ou dans les correspondances de modèle et les définitions de fonction.
+
+```fsharp
+// OK
+let addIAndJ i j = i + j
+
+// Bad
+let addIAndJ I J = I+J
+
+// Bad
+let AddIAndJ i j = i + j
+```
+
+Fonctions liées au localement dans les classes doivent également utiliser camelCase.
+
+```fsharp
+type MyClass() =
+
+    let doSomething () =
+
+    let firstResult = ...
+
+    let secondResult = ...
+
+    member x.Result = doSomething()
+```
+
+### <a name="use-camelcase-for-module-bound-public-functions"></a>Utilisez camelCase pour les fonctions liées au module public
+
+Lorsqu’une fonction liée au module fait partie d’une API publique, il doit utiliser camelCase :
+
+```fsharp
+module MyAPI =
+    let publicFunctionOne param1 param2 param2 = ...
+
+    let publicFunctionTwo param1 param2 param3 = ...
+```
+
+### <a name="use-camelcase-for-internal-and-private-module-bound-values-and-functions"></a>Utilisez camelCase pour les fonctions et les valeurs liées au module internes et privés
+
+Utilisez camelCase pour des valeurs liées au module privées, notamment les suivantes :
+
+* Les fonctions ad hoc dans les scripts
+
+* Valeurs constituant l’implémentation interne de type ou module
+
+```fsharp
+let emailMyBossTheLatestResults =
+    ...
+```
+
+### <a name="use-camelcase-for-parameters"></a>Utilisez camelCase pour les paramètres
+
+Tous les paramètres doivent utiliser camelCase conformément aux conventions d’affectation de noms de .NET.
+
+```fsharp
+module MyModule =
+    let myFunction paramOne paramTwo = ...
+
+type MyClass() =
+    member this.MyMethod(paramOne, paramTwo) = ...
+```
+
+### <a name="use-pascalcase-for-modules"></a>Utiliser PascalCase pour les modules
+
+Tous les modules (niveau supérieur, internes, privés, imbriquées) doivent utiliser PascalCase.
+
+```fsharp
+module MyTopLevelModule
+
+module Helpers =
+    module private SuperHelpers =
+        ...
+
+    ...
+```
+
+### <a name="use-pascalcase-for-type-declarations-members-and-labels"></a>Utilisez PascalCase pour les étiquettes, les membres et les déclarations de type
+
+Classes, interfaces, structures, énumérations, délégués, les enregistrements et les unions discriminées doivent être nommées avec PascalCase. Les membres dans les types et les étiquettes pour les enregistrements et les unions discriminées doivent également utiliser PascalCase.
+
+```fsharp
+type IMyInterface =
+    abstract Something: int
+
+type MyClass() =
+    member this.MyMethod(x, y) = x + y
+
+type MyRecord = { IntVal: int; StringVal: string }
+
+type SchoolPerson =
+    | Professor
+    | Student
+    | Advisor
+    | Administrator
+```
+
+### <a name="use-pascalcase-for-constructs-intrinsic-to-net"></a>Utilisez PascalCase pour les constructions intrinsèques pour .NET
+
+Espaces de noms, exceptions, événements et le projet /`.dll` noms doivent également utiliser PascalCase. N’est pas seulement cela rend la consommation à partir d’autres langages .NET semble plus naturel aux consommateurs, il est également cohérent avec les conventions d’affectation de noms .NET que vous êtes susceptible de rencontrer.
+
+### <a name="avoid-underscores-in-names"></a>Éviter les traits de soulignement dans les noms
+
+Historiquement, certaines bibliothèques F # ont utilisé des traits de soulignement dans les noms. Toutefois, cela est n’est plus largement accepté, car il est en conflit avec les conventions d’affectation de noms .NET. Ceci dit, certains programmeurs F # utilisent des traits de soulignement importante, en partie pour des raisons historiques, et la tolérance de panne et de respect est important. Toutefois, sachez que le style est souvent disliked par d’autres personnes ont la possibilité d’utiliser.
+
+Certaines exceptions inclut l’interopérabilité avec des composants natifs, où des traits de soulignement sont très courantes.
+
+### <a name="use-standard-f-operators"></a>Utilisez les opérateurs standard F #
+
+Les opérateurs suivants sont définis dans la bibliothèque standard) (F # et doivent être utilisées au lieu de définir des équivalents. L’utilisation de ces opérateurs est recommandée car il a tendance à rendre le code plus lisible et idiomatique. Les développeurs avec un arrière-plan dans OCaml ou autre langage de programmation fonctionnelle peuvent être habitués à différents langages. La liste suivante résume les opérateurs F # recommandées.
+
+```fsharp
+x |> f // Forward pipeline
+f >> g // Forward composition
+x |> ignore // Discard away a value
+x + y // Overloaded addition (including string concatenation)
+x - y // Overloaded subtraction
+x * y // Overloaded multiplication
+x / y // Overloaded division
+x % y // Overloaded modulus
+x && y // Lazy/short-cut "and"
+x || y // Lazy/short-cut "or"
+x <<< y // Bitwise left shift
+x >>> y // Bitwise right shift
+x ||| y // Bitwise or, also for working with “flags” enumeration
+x &&& y // Bitwise and, also for working with “flags” enumeration
+x ^^^ y // Bitwise xor, also for working with “flags” enumeration
+```
+
+### <a name="use-prefix-syntax-for-generics-foot-in-preference-to-postfix-syntax-t-foo"></a>Utilisez la syntaxe de préfixe des génériques (`Foo<T>`), plutôt que la syntaxe de suffixe (`T Foo`)
+
+F # hérite à la fois le style de ML suffixée des noms de types génériques (par exemple, `int list`), ainsi que le préfixe style .NET (par exemple, `list<int>`). Préférez le style de .NET, à l’exception des quatre types spécifiques :
+
+1. Pour F # les listes, utilisez la forme suffixée : `int list` plutôt que `list<int>`.
+2. Pour les Options F #, utilisez la forme suffixée : `int option` plutôt que `option<int>`.
+3. Pour les tableaux F #, utilisez le nom syntaxique `int[]` plutôt que `int array` ou `array<int>`.
+4. Pour les cellules de référence, utilisez `int ref` plutôt que `ref<int>` ou `Ref<int>`.
+
+Pour tous les autres types, utilisez le format de préfixe.
 
 ## <a name="formatting-discriminated-union-declarations"></a>Mise en forme discriminée déclarations d’union
 
@@ -198,7 +370,7 @@ else e4
 
 ### <a name="pattern-matching-constructs"></a>Constructions de correspondance de modèle
 
-Utilisez un `|` pour chaque clause d’une correspondance avec aucune mise en retrait. Si l’expression est courte, vous pouvez utiliser une seule ligne.
+Utilisez un `|` pour chaque clause d’une correspondance avec aucune mise en retrait. Si l’expression est courte, vous pouvez envisager d’utiliser une seule ligne si chaque sous-expression est aussi simple.
 
 ```fsharp
 // OK
@@ -212,9 +384,6 @@ match l with
     | { him = x; her = "Posh" } :: tail -> _
     | _ :: tail -> findDavid tail
     | [] -> failwith "Couldn't find David"
-
-// OK
-match l with [] -> false | _ :: _ -> true
 ```
 
 Si l’expression à droite de la flèche de mise en correspondance est trop grande, déplacez-le vers la ligne suivante, la mise en retrait d’une seule étape à partir de la `match` / `|`.
@@ -291,20 +460,23 @@ let printVolumes x =
         (convertVolumeImperialPint x)
 ```
 
-Arguments de fonction anonyme peuvent être sur la ligne suivante ou avec un non résolu `fun` sur la ligne de l’argument :
+Les mêmes règles s’appliquent pour les expressions lambda en tant qu’arguments de fonction. Si le corps d’une expression lambda, le corps peut avoir une autre ligne, la mise en retrait par une étendue
 
 ```fsharp
-// OK
 let printListWithOffset a list1 =
-    List.iter (fun elem ->
-        printfn "%d" (a + elem)) list1
+    List.iter
+        (fun elem -> printfn "%d" (a + elem))
+        list1
 
-// OK, but prefer previous
+// OK if lambda body is long enough
 let printListWithOffset a list1 =
-    List.iter (
-        fun elem ->
-            printfn "%d" (a + elem)) list1
+    List.iter
+        (fun elem ->
+            printfn "%d" (a + elem))
+        list1
 ```
+
+Toutefois, si le corps d’une expression lambda est plusieurs lignes, envisagez factorisant dans une fonction distincte plutôt que d’avoir une construction multiligne appliquée en tant qu’un seul argument à une fonction.
 
 ### <a name="formatting-infix-operators"></a>Opérateurs infix mise en forme
 
@@ -402,162 +574,3 @@ let makeStreamReader x = new System.IO.StreamReader(path=x)
 // Not OK
 let makeStreamReader x = new System.IO.StreamReader(path = x)
 ```
-
-## <a name="formatting-blank-lines"></a>Mise en forme des lignes vides
-
-* Distinct niveau supérieur (fonction) et la classe définitions avec deux lignes vides.
-* Les définitions de méthode à l’intérieur d’une classe sont séparées par une ligne vide.
-* Lignes vierges supplémentaires peuvent servir (avec parcimonie) pour séparer les groupes de fonctions connexes. Lignes vides peuvent être omises entre un ensemble de commandes associées à une ligne (par exemple, un ensemble d’implémentations fictives).
-* Utiliser avec parcimonie lignes vides dans les fonctions, pour indiquer les sections logiques.
-
-## <a name="formatting-comments"></a>Mise en forme de commentaires
-
-Préférez généralement plusieurs commentaires double barre oblique sur les commentaires en bloc style ML.
-
-```fsharp
-// Prefer this style of comments when you want
-// to express written ideas on multiple lines.
-
-(*
-    Generally avoid these kinds of comments.
-*)
-```
-
-Commentaires incorporés doivent mettre en majuscule la première lettre.
-
-```fsharp
-let f x = x + 1 // Increment by one.
-```
-
-## <a name="naming-conventions"></a>Conventions d'attribution d'un nom
-
-### <a name="use-camelcase-for-class-bound-expression-bound-and-pattern-bound-values-and-functions"></a>Utilisez camelCase pour les fonctions et les valeurs de limite de classe, expression-modèle liées et
-
-Il est courant et acceptée style F # à utiliser camelCase pour tous les noms lié en tant que variables locales ou dans les correspondances de modèle et les définitions de fonction.
-
-```fsharp
-// OK
-let addIAndJ i j = i + j
-
-// Bad
-let addIAndJ I J = I+J
-
-// Bad
-let AddIAndJ i j = i + j
-```
-
-Fonctions liées au localement dans les classes doivent également utiliser camelCase.
-
-```fsharp
-type MyClass() =
-
-    let doSomething () =
-
-    let firstResult = ...
-
-    let secondResult = ...
-
-    member x.Result = doSomething()
-```
-
-### <a name="use-camelcase-for-internal-and-private-module-bound-values-and-functions"></a>Utilisez camelCase pour les fonctions et les valeurs liées au module internes et privés
-
-Utilisez camelCase pour des valeurs liées au module privées, notamment les suivantes :
-
-* Les fonctions ad hoc dans les scripts
-
-* Valeurs constituant l’implémentation interne de type ou module
-
-```fsharp
-let emailMyBossTheLatestResults =
-    ...
-```
-
-### <a name="use-camelcase-for-parameters"></a>Utilisez camelCase pour les paramètres
-
-Tous les paramètres doivent utiliser camelCase conformément aux conventions d’affectation de noms de .NET.
-
-```fsharp
-module MyModule =
-    let myFunction paramOne paramTwo = ...
-
-type MyClass() =
-    member this.MyMethod(paramOne, paramTwo) = ...
-```
-
-### <a name="use-pascalcase-for-modules"></a>Utiliser PascalCase pour les modules
-
-Tous les modules (niveau supérieur, internes, privés, imbriquées) doivent utiliser PascalCase.
-
-```fsharp
-module MyTopLevelModule
-
-module Helpers =
-    module private SuperHelpers =
-        ...
-
-    ...
-```
-
-### <a name="use-pascalcase-for-type-declarations-members-and-labels"></a>Utilisez PascalCase pour les étiquettes, les membres et les déclarations de type
-
-Classes, interfaces, structures, énumérations, délégués, les enregistrements et les unions discriminées doivent être nommées avec PascalCase. Les membres dans les types et les étiquettes pour les enregistrements et les unions discriminées doivent également utiliser PascalCase.
-
-```fsharp
-type IMyInterface =
-    abstract Something: int
-
-type MyClass() =
-    member this.MyMethod(x, y) = x + y
-
-type MyRecord = { IntVal: int; StringVal: string }
-
-type SchoolPerson =
-    | Professor
-    | Student
-    | Advisor
-    | Administrator
-```
-
-### <a name="use-pascalcase-for-constructs-intrinsic-to-net"></a>Utilisez PascalCase pour les constructions intrinsèques pour .NET
-
-Espaces de noms, exceptions, événements et le projet /`.dll` noms doivent également utiliser PascalCase. N’est pas seulement cela rend la consommation à partir d’autres langages .NET semble plus naturel aux consommateurs, il est également cohérent avec les conventions d’affectation de noms .NET que vous êtes susceptible de rencontrer.
-
-### <a name="avoid-underscores-in-names"></a>Éviter les traits de soulignement dans les noms
-
-Historiquement, certaines bibliothèques F # ont utilisé des traits de soulignement dans les noms. Toutefois, cela est n’est plus largement accepté, car il est en conflit avec les conventions d’affectation de noms .NET. Ceci dit, certains programmeurs F # utilisent des traits de soulignement importante, en partie pour des raisons historiques, et la tolérance de panne et de respect est important. Toutefois, sachez que le style est souvent disliked par d’autres personnes ont la possibilité d’utiliser.
-
-Certaines exceptions inclut l’interopérabilité avec des composants natifs, où des traits de soulignement sont très courantes.
-
-### <a name="use-standard-f-operators"></a>Utilisez les opérateurs standard F #
-
-Les opérateurs suivants sont définis dans la bibliothèque standard) (F # et doivent être utilisées au lieu de définir des équivalents. L’utilisation de ces opérateurs est recommandée car il a tendance à rendre le code plus lisible et idiomatique. Les développeurs avec un arrière-plan dans OCaml ou autre langage de programmation fonctionnelle peuvent être habitués à différents langages. La liste suivante résume les opérateurs F # recommandées.
-
-```fsharp
-x |> f // Forward pipeline
-f >> g // Forward composition
-x |> ignore // Throwing away a value
-x + y // Overloaded addition (including string concatenation)
-x - y // Overloaded subtraction
-x * y // Overloaded multiplication
-x / y // Overloaded division
-x % y // Overloaded modulus
-x && y // Lazy/short-cut "and"
-x || y // Lazy/short-cut "or"
-x <<< y // Bitwise left shift
-x >>> y // Bitwise right shift
-x ||| y // Bitwise or, also for working with “flags” enumeration
-x &&& y // Bitwise and, also for working with “flags” enumeration
-x ^^^ y // Bitwise xor, also for working with “flags” enumeration
-```
-
-### <a name="use-prefix-syntax-for-generics-foot-in-preference-to-postfix-syntax-t-foo"></a>Utilisez la syntaxe de préfixe des génériques (`Foo<T>`), plutôt que la syntaxe de suffixe (`T Foo`)
-
-F # hérite à la fois le style de ML suffixée des noms de types génériques (par exemple, `int list`), ainsi que le préfixe style .NET (par exemple, `list<int>`). Préférez le style de .NET, à l’exception des quatre types spécifiques :
-
-1. Pour F # les listes, utilisez la forme suffixée : `int list` plutôt que `list<int>`.
-2. Pour les Options F #, utilisez la forme suffixée : `int option` plutôt que `option<int>`.
-3. Pour les tableaux F #, utilisez le nom syntaxique `int[]` plutôt que `int array` ou `array<int>`.
-4. Pour les cellules de référence, utilisez `int ref` plutôt que `ref<int>` ou `Ref<int>`.
-
-Pour tous les autres types, utilisez le format de préfixe.
