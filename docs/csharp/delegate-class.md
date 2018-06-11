@@ -3,11 +3,12 @@ title: System.Delegate et le mot clé `delegate`
 description: En savoir plus sur les classes du .NET Framework qui prennent en charge les délégués et sur le mode de mappage de ces délégués au mot clé 'delegate'.
 ms.date: 06/20/2016
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: 2265d081b884a19cda6fc9d80a0f621a30c87e2a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 39dca1053f87a5059bdc60f8b722091ba991cbd5
+ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34827298"
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate et le mot clé `delegate`
 
@@ -77,10 +78,8 @@ Les développeurs qui souhaitent utiliser la méthode `List.Sort()` doivent déf
 Supposons que vous souhaitiez trier une liste de chaînes en fonction de leur longueur. Votre fonction de comparaison peut être la suivante :
 
 ```csharp
-private static int CompareLength(string left, string right)
-{
-    return left.Length.CompareTo(right.Length);
-}
+private static int CompareLength(string left, string right) =>
+    left.Length.CompareTo(right.Length);
 ```
 
 La méthode est déclarée en tant que méthode privée. C’est parfait. Vous ne voulez peut-être pas que cette méthode fasse partie de votre interface publique. Elle peut toujours être utilisée comme méthode de comparaison quand elle est attachée à un délégué. Cette méthode est attachée à la liste cible de l’objet délégué dans le code appelant, qui peut y accéder par l’intermédiaire de ce délégué.
