@@ -18,33 +18,35 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
 ---
 # <a name="capitalization-conventions"></a>Conventions de mise en majuscules
-Les instructions de cette mise en page chapitre une méthode simple pour l’utilisation de cas qui, en cas d’application constamment, assurez-vous des identificateurs pour les types, membres et paramètres faciles à lire.  
+Les lignes directrices de ce chapitre présentent une méthode simple d'utilisation des cas qui, lorsqu'ils sont appliqués de façon uniforme, rendent les identificateurs pour les types, les membres et les paramètres faciles à lire.
   
 ## <a name="capitalization-rules-for-identifiers"></a>Règles de casse des identificateurs  
- Afin de distinguer des mots dans un identificateur, pour mettre en majuscule la première lettre de chaque mot dans l’identificateur. N’utilisez pas de traits de soulignement pour différencier des mots, ou d’ailleurs, n’importe où dans les identificateurs. Il existe deux façons appropriés pour tirer profit des identificateurs, en fonction de l’utilisation de l’identificateur :  
+Afin de distinguer des mots dans un identifiant, il faut mettre en majuscule la première lettre de chaque mot dans l’identifiant. N’utilisez pas de traits de soulignement pour différencier des mots, ainsi que n’importe où dans les identifiant. Il existe deux façons appropriés pour tirer profit des identificateurs, en fonction de l’utilisation de l’identificateur :  
   
 -   Casse Pascal  
+-   Casse Camel
   
--   casse mixte  
-  
- La convention de casse Pascal, utilisée pour tous les identificateurs à l’exception des noms de paramètres, met en majuscule le premier caractère de chaque mot (y compris les acronymes sur les deux lettres longueur), comme indiqué dans les exemples suivants :  
+ La convention de casse Pascal, utilisée pour tous les identificatiantss à l’exception des noms de paramètres, met en majuscule le premier caractère de chaque mot (y compris les acronymes sur les deux lettres longueur), comme indiqué dans les exemples suivants :  
   
  `PropertyDescriptor`  
- `HtmlTag`  
+ `HtmlTag`
   
  Un cas particulier concerne des acronymes de deux lettres correspondant à la fois des lettres sont en majuscules, comme indiqué dans l’identificateur suivant :  
   
  `IOStream`  
   
- La convention de casse mixte, utilisée uniquement pour les noms de paramètres, met en majuscule le premier caractère de chaque mot, sauf le premier mot, comme indiqué dans les exemples suivants. Comme dans l’exemple également, les acronymes de deux lettres qui commencent un identificateur à casse mixte sont en minuscules.  
+ La convention de casse Camel, utilisée uniquement pour les noms de paramètres, met en majuscule le premier caractère de chaque mot, sauf le premier mot, comme indiqué dans les exemples suivants.
   
  `propertyDescriptor`  
  `ioStream`  
+ 
+ Comme dans l’exemple également, les acronymes de deux lettres qui commencent un identifiant à casse mixte sont en minuscules.  
+ 
  `htmlTag`  
   
- **✓ FAIRE** utilisent la casse Pascal pour tous les noms de membre, le type et espace de noms publics constitué de plusieurs mots.  
+ **✓ FAIRE** utiliser la Pascal Case pour tous les noms de membre, le type et espace de noms publics constitué de plusieurs mots.  
   
- **✓ FAIRE** utilisez la casse mixte pour les noms de paramètre.  
+ **✓ FAIRE** utiliser la casse Camel pour les noms de paramètre.  
   
  Le tableau suivant décrit les règles de mise en majuscules pour différents types d’identificateurs.  
   
@@ -55,19 +57,19 @@ Les instructions de cette mise en page chapitre une méthode simple pour l’uti
 |Interface|Pascal|`public interface IEnumerable { ... }`|  
 |Méthode|Pascal|`public class Object {` <br />  `public virtual string ToString();` <br /> `}`|  
 |Propriété|Pascal|`public class String {` <br />  `public int Length { get; }` <br /> `}`|  
-|événement|Pascal|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|  
+|Événement|Pascal|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|  
 |Champ|Pascal|`public class MessageQueue {` <br />  `public static readonly TimeSpan` <br /> `InfiniteTimeout;` <br /> `}` <br /> `public struct UInt32 {` <br />  `public const Min = 0;` <br /> `}`|  
 |Valeur d’énumération|Pascal|`public enum FileMode {` <br />  `Append,` <br />  `...` <br /> `}`|  
-|Paramètre|Mixte|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|  
+|Paramètre|Camel|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|  
   
 ## <a name="capitalizing-compound-words-and-common-terms"></a>Mise en majuscule de mots composés et les termes courants  
  La plupart des termes composés sont traités comme des mots isolés pour les besoins de mise en majuscules.  
   
- **X ne sont pas** majuscule chaque soi-disant fermé mots composés.  
+ **X NE PAS FAIRE**  mettre une majuscule à chaque mot dans les mots composés dits fermés.
   
  Il s’agit de mots composés écrits comme un mot unique, comme point de terminaison. Les instructions de la casse, à des fins de traiter un mot composé fermé comme un mot unique. Utiliser un dictionnaire actuel pour déterminer si un mot composé est écrit dans une forme fermée.  
   
-|Pascal|Mixte|pas|  
+|Pascal|Camel|Pas|  
 |------------|-----------|---------|  
 |`BitFlag`|`bitFlag`|`Bitflag`|  
 |`Callback`|`callback`|`CallBack`|  
@@ -88,7 +90,7 @@ Les instructions de cette mise en page chapitre une méthode simple pour l’uti
 |`Namespace`|`namespace`|`NameSpace`|  
 |`Ok`|`ok`|`OK`|  
 |`Pi`|`pi`|`PI`|  
-|`Placeholder`|`placeholder`|`PlaceHolder`|  
+|`Placeholder`|`placeHolder`|`Placeholder`|  
 |`SignIn`|`signIn`|`SignOn`|  
 |`SignOut`|`signOut`|`SignOff`|  
 |`UserName`|`userName`|`Username`|  
@@ -96,9 +98,9 @@ Les instructions de cette mise en page chapitre une méthode simple pour l’uti
 |`Writable`|`writable`|`Writeable`|  
   
 ## <a name="case-sensitivity"></a>Respect de la casse  
- Les langues qui peuvent s’exécuter sur le CLR ne sont pas requis pour prendre en charge le respect de la casse, bien que certains. Même si votre langage prend en charge, autres langages qui peuvent accéder à votre version de framework ne le font pas. Des API qui sont accessibles de l’extérieur, par conséquent, ne peut pas vous fier cas seul pour faire la distinction entre les deux noms dans le même contexte.  
+ Les langues qui peuvent s’exécuter sur le CLR ne sont pas requis pour prendre en charge le respect de la casse, bien que certains le fassent. Même si votre langue le supporte, d'autres langues qui pourraient accéder à votre framework ne le font pas. Les API qui sont accessibles de l'extérieur ne peuvent donc pas se fier uniquement à la casse pour distinguer deux noms dans le même contexte.
   
- **X ne sont pas** supposent que tous les langages de programmation respectent la casse. mais ils ne le sont pas. Les noms ne peuvent pas différer par la casse uniquement.  
+ **X NE PAS FAIRE** supposer que tous les langages de programmation sont sensibles à la casse. Ils ne le sont pas. Les noms ne peuvent pas différer d'un cas à l'autre.  
   
  *Portions © 2005, 2009 Microsoft Corporation. Tous droits réservés.*  
   
