@@ -24,6 +24,7 @@ Les lignes directrices de ce chapitre présentent une méthode simple d'utilisat
 Afin de distinguer des mots dans un identifiant, il faut mettre en majuscule la première lettre de chaque mot dans l’identifiant. N’utilisez pas de traits de soulignement pour différencier des mots, ainsi que n’importe où dans les identifiant. Il existe deux façons appropriés pour tirer profit des identificateurs, en fonction de l’utilisation de l’identificateur :  
   
 -   Casse Pascal  
+
 -   Casse Camel
   
  La convention de casse Pascal, utilisée pour tous les identificatiantss à l’exception des noms de paramètres, met en majuscule le premier caractère de chaque mot (y compris les acronymes sur les deux lettres longueur), comme indiqué dans les exemples suivants :  
