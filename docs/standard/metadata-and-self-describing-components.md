@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579325"
 ---
 # <a name="metadata-and-self-describing-components"></a>Métadonnées et composants autodescriptifs
 Par le passé, un composant logiciel (.exe or .dll) écrit dans un langage ne pouvait pas utiliser aisément un composant logiciel écrit dans un autre langage. COM a fourni une étape vers la résolution de ce problème. Le .NET Framework facilite encore plus l'interopérabilité des composants en autorisant les compilateurs à émettre des informations déclaratives supplémentaires dans tous les modules et assemblys. Ces informations, appelées métadonnées, aident les composants à interagir de façon transparente.  

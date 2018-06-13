@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33474030"
 ---
 # <a name="message-logging"></a>Journalisation des messages
 Windows Communication Foundation (WCF) fournit la fonctionnalité permettant d’enregistrer les messages entrants et sortants pour la consommation en mode hors connexion. L'enregistrement des messages dans des journaux vous permet de voir à quoi ils ressemblent et à quoi ressemble le corps de ces messages. Ce type d’enregistrement est particulièrement utile car il vous permet de savoir quels arguments ont été passés et de connaître la manière dont le point de terminaison destinataire a perçu les arguments exprimés en langage XML. En outre, l'enregistrement des messages tels qu'ils ont été reçus vous permet d'identifier les messages erronés et de voir la manière dont les messages sont arrivés. Dans ces journaux, vous pouvez également examiner les jetons de sécurité utilisés, les parties chiffrées et signées ainsi que les parties laissées telles quelles.  

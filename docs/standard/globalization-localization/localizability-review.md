@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576127"
 ---
 # <a name="localizability-review"></a>Révision de l'adaptabilité
 La revue de l’adaptabilité est une étape intermédiaire du développement d’une application mondialisable. Il vérifie qu'une application globalisée est prête pour la localisation et identifie tout code ou tous les aspects de l'interface utilisateur qui nécessitent une gestion spéciale. Cette étape permet également de s'assurer que le processus de localisation n'introduira pas de défauts fonctionnels dans votre application. Lorsque tous les problèmes générés par l'examen de l'adaptabilité ont été traités, votre application est prête pour la localisation. Si la revue de l’adaptabilité est complète, vous n’aurez pas à modifier le code source pendant le processus de localisation.  

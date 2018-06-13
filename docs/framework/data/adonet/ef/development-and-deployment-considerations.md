@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760344"
 ---
 # <a name="development-and-deployment-considerations"></a>Points à prendre en considération pour le développement et le déploiement
 Les rubriques de cette section abordent les problèmes à prendre en compte lors du développement ou du déploiement d’une application basée sur ADO.NET Entity Framework.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364205"
 ---
 # <a name="sql-server-security"></a>Sécurité SQL Server
 SQL Server possède de nombreuses fonctionnalités qui prennent en charge la création d'applications de base de données sécurisées.  

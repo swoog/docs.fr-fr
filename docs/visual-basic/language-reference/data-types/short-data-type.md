@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590710"
 ---
 # <a name="short-data-type-visual-basic"></a>Type de données short (Visual Basic)
 Contient des entiers 16 bits (2 octets) de valeurs comprises entre-32 768 à 32 767 signés.  

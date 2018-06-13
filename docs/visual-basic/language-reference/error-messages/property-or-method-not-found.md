@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593686"
 ---
 # <a name="property-or-method-not-found"></a>Propriété ou méthode introuvable
 La méthode de l’objet référencé ou la propriété de l’objet n’est pas définie.  
