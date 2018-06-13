@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807317"
 ---
 # <a name="using-performance-counters"></a><span data-ttu-id="163bb-102">Using Performance Counters</span><span class="sxs-lookup"><span data-stu-id="163bb-102">Using Performance Counters</span></span>
 <span data-ttu-id="163bb-103">Cet exemple montre comment accéder aux compteurs de performances de Windows Communication Foundation (WCF) et comment créer des compteurs de performance définis par l’utilisateur.</span><span class="sxs-lookup"><span data-stu-id="163bb-103">This sample demonstrates how to access Windows Communication Foundation (WCF) performance counters and how to create user-defined performance counters.</span></span> <span data-ttu-id="163bb-104">Cet exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span><span class="sxs-lookup"><span data-stu-id="163bb-104">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span></span>  

@@ -5,6 +5,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33658315"
 ---
 | <span data-ttu-id="81a78-101">Versions cibles de .NET Framework</span><span class="sxs-lookup"><span data-stu-id="81a78-101">Target Frameworks</span></span> | <span data-ttu-id="81a78-102">Symboles</span><span class="sxs-lookup"><span data-stu-id="81a78-102">Symbols</span></span> |
 | ------------------| ------- |
