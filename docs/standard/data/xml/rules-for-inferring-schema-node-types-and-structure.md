@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578233"
 ---
 # <a name="rules-for-inferring-schema-node-types-and-structure"></a>Règles pour l'inférence de types et de structure de nœud de schéma
 Cette rubrique décrit comment le processus d'inférence de schéma convertit les types de nœuds d'un document XML en une structure en langage XSD (XML Schema Definition).  

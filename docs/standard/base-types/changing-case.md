@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570525"
 ---
 # <a name="changing-case-in-net"></a>Changement de casse dans .NET
 Si vous écrivez une application qui accepte l'entrée d'un utilisateur, vous ne pouvez jamais être sûr de la casse qu'il utilisera pour entrer les données. Souvent, vous voulez que les chaînes aient une casse cohérente, en particulier si vous les affichez dans l'interface utilisateur. Le tableau suivant décrit trois méthodes de changement de la casse : Les deux premières méthodes fournissent une surcharge qui accepte une culture.  

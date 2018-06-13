@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33467791"
 ---
 # <a name="endpoint-call-duration"></a>Point de terminaison : durée d'appel
 Durée moyenne des appels à ce point de terminaison.  La durée moyenne est calculée selon cette équation : (N1-N0)/(D1-D0).  

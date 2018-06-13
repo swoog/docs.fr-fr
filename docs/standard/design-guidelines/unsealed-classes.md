@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571659"
 ---
 # <a name="unsealed-classes"></a>Classes unsealed
 Classes sealed ne peut pas être héritées, et empêchent d’extensibilité. En revanche, les classes qui peuvent être héritées sont appelées classes unsealed.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570976"
 ---
 # <a name="deciding-when-to-implement-the-event-based-asynchronous-pattern"></a>Choix du moment auquel implémenter le modèle asynchrone basé sur les événements
 Le modèle asynchrone basé sur des événements fournit un modèle pour exposer le comportement asynchrone d’une classe. Avec l’introduction de ce modèle, [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] définit deux modèles pour exposer le comportement asynchrone : le modèle asynchrone basé sur l’interface <xref:System.IAsyncResult?displayProperty=nameWithType> et le modèle basé sur les événements. Cette rubrique décrit les cas où il convient d’implémenter les deux modèles.  

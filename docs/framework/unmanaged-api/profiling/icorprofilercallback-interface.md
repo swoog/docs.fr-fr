@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 96c8c9de7a6b26c9a00a0ffaf4fb50c08a80d5a1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461615"
 ---
 # <a name="icorprofilercallback-interface"></a>ICorProfilerCallback, interface
 Fournit des méthodes qui sont utilisées par le common language runtime (CLR) pour avertir un profileur de code lorsque les événements auxquels le profileur est abonné se produisent.  

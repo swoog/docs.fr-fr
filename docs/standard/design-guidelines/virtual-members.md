@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573085"
 ---
 # <a name="virtual-members"></a>Membres virtuels
 Membres virtuels peuvent être substituées, ce qui modifie le comportement de la sous-classe. Elles sont très similaires aux rappels en termes de l’extensibilité, qu'ils fournissent, mais ils sont mieux en termes de performances de l’exécution et la consommation de mémoire. En outre, les membres virtuels se sentent plus naturels dans les scénarios qui requièrent la création d’un spécial type d’un type existant (spécialisation).  

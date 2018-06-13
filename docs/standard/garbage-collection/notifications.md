@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579156"
 ---
 # <a name="garbage-collection-notifications"></a>Notifications de garbage collection
 Il existe des cas où une opération garbage collection complète (c’est-à-dire, une opération garbage collection de génération 2) par le CLR peut avoir des effets néfastes sur les performances. Cela peut être particulièrement problématique avec les serveurs qui traitent de gros volumes de requêtes. Dans ce cas, un garbage collection long peut entraîner une expiration de la requête. Pour empêcher une collection complète durant une période critique, vous pouvez être informé qu’un garbage collection complet est sur le point de se produire et agir en conséquence pour rediriger la charge de travail vers une autre instance de serveur. Vous pouvez également déclencher vous-même une collection, sous réserve que l’instance de serveur actuelle n’a pas besoin de traiter de requêtes.  

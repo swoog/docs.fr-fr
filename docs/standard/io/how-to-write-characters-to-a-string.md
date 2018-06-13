@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572032"
 ---
 # <a name="how-to-write-characters-to-a-string"></a>Comment : écrire des caractères dans une chaîne
 Les exemples de code suivants écrivent des caractères de façon synchrone et asynchrone à partir d’un tableau de caractères dans une chaîne.  

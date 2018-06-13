@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572838"
 ---
 # <a name="inputs-to-the-xslcompiledtransform-class"></a>Entrées dans la classe XslCompiledTransform
 La méthode <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> accepte trois types d'entrées pour le document source : un objet qui implémente l'interface <xref:System.Xml.XPath.IXPathNavigable>, un objet <xref:System.Xml.XmlReader> qui lit le document source ou un string URI.  
