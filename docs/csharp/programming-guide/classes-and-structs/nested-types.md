@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33319931"
 ---
 # <a name="nested-types-c-programming-guide"></a><span data-ttu-id="498cd-102">Types imbriqués (guide de programmation C#)</span><span class="sxs-lookup"><span data-stu-id="498cd-102">Nested Types (C# Programming Guide)</span></span>
 <span data-ttu-id="498cd-103">Un type défini dans une [classe](../../../csharp/language-reference/keywords/class.md) ou un [struct](../../../csharp/language-reference/keywords/struct.md) s’appelle un type imbriqué.</span><span class="sxs-lookup"><span data-stu-id="498cd-103">A type defined within a [class](../../../csharp/language-reference/keywords/class.md) or [struct](../../../csharp/language-reference/keywords/struct.md) is called a nested type.</span></span> <span data-ttu-id="498cd-104">Exemple :</span><span class="sxs-lookup"><span data-stu-id="498cd-104">For example:</span></span>  

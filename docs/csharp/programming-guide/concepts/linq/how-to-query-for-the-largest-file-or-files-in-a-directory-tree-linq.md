@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325355"
 ---
 # <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-c"></a><span data-ttu-id="d4729-102">Guide pratique pour interroger les fichiers les plus volumineux dans une arborescence de répertoires (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="d4729-102">How to: Query for the Largest File or Files in a Directory Tree (LINQ) (C#)</span></span>
 <span data-ttu-id="d4729-103">Cet exemple montre cinq requêtes liées à la taille des fichiers en octets :</span><span class="sxs-lookup"><span data-stu-id="d4729-103">This example shows five queries related to file size in bytes:</span></span>  
