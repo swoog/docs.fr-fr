@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809314"
 ---
 # <a name="tracing"></a><span data-ttu-id="4c085-102">Traçage</span><span class="sxs-lookup"><span data-stu-id="4c085-102">Tracing</span></span>
 <span data-ttu-id="4c085-103">Windows Communication Foundation (WCF) fournit l’instrumentation d’applications et les données de diagnostic pour l’analyse et de surveillance des pannes.</span><span class="sxs-lookup"><span data-stu-id="4c085-103">Windows Communication Foundation (WCF) provides application instrumentation and diagnostic data for fault monitoring and analysis.</span></span> <span data-ttu-id="4c085-104">Vous pouvez utiliser le suivi au lieu d'un débogueur pour comprendre le comportement d'une application ou la raison de sa défaillance.</span><span class="sxs-lookup"><span data-stu-id="4c085-104">You can use tracing instead of a debugger to understand how an application is behaving, or why it faults.</span></span> <span data-ttu-id="4c085-105">Vous pouvez également mettre en corrélation les erreurs et le traitement sur l'ensemble des composants afin de fournir une expérience de bout en bout.</span><span class="sxs-lookup"><span data-stu-id="4c085-105">You can also correlate faults and processing across components to provide an end-to-end experience.</span></span>  

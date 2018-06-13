@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806498"
 ---
 # <a name="specifying-and-handling-faults-in-contracts-and-services"></a><span data-ttu-id="a5630-102">Spécification et gestion des erreurs dans les contrats et les services</span><span class="sxs-lookup"><span data-stu-id="a5630-102">Specifying and Handling Faults in Contracts and Services</span></span>
 <span data-ttu-id="a5630-103">Les applications Windows Communication Foundation (WCF) gérer les situations d’erreur en mappant les objets exception managés aux objets erreur SOAP et les objets erreur SOAP aux objets exception managés.</span><span class="sxs-lookup"><span data-stu-id="a5630-103">Windows Communication Foundation (WCF) applications handle error situations by mapping managed exception objects to SOAP fault objects and SOAP fault objects to managed exception objects.</span></span> <span data-ttu-id="a5630-104">Les rubriques de cette section expliquent comment concevoir des contrats pour exposer des conditions d'erreur en tant qu'erreurs SOAP personnalisées, comment retourner de telles erreurs dans le cadre de l'implémentation du service et comment les clients interceptent de telles erreurs.</span><span class="sxs-lookup"><span data-stu-id="a5630-104">The topics in this section discuss how to design contracts to expose error conditions as custom SOAP faults, how to return such faults as part of service implementation, and how clients catch such faults.</span></span>  

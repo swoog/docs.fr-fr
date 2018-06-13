@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809425"
 ---
 # <a name="durable-duplex"></a><span data-ttu-id="07af3-102">Durable Duplex</span><span class="sxs-lookup"><span data-stu-id="07af3-102">Durable Duplex</span></span>
 <span data-ttu-id="07af3-103">Cet exemple montre comment installer et configurer un échange de messages duplex durable à l’aide des activités de messagerie dans Windows Workflow Foundation (WF).</span><span class="sxs-lookup"><span data-stu-id="07af3-103">This sample demonstrates how to set up and configure durable duplex message exchange using the messaging activities in Windows Workflow Foundation (WF).</span></span> <span data-ttu-id="07af3-104">Un échange de messages duplex durable est un échange de messages bidirectionnel qui a lieu sur une longue période de temps.</span><span class="sxs-lookup"><span data-stu-id="07af3-104">A durable duplex message exchange is a two-way message exchange that takes place over a long period of time.</span></span> <span data-ttu-id="07af3-105">La durée de vie de l'échange de messages peut être plus longue que la durée de vie du canal de communication et la durée de vie en mémoire des instances de service.</span><span class="sxs-lookup"><span data-stu-id="07af3-105">The lifetime of the message exchange may be longer than the lifetime of the communication channel and the in-memory lifetime of the service instances.</span></span>  

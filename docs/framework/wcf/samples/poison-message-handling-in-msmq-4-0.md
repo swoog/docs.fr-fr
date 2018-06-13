@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809503"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a><span data-ttu-id="c0662-102">Poison Message Handling in MSMQ 4,0</span><span class="sxs-lookup"><span data-stu-id="c0662-102">Poison Message Handling in MSMQ 4.0</span></span>
 <span data-ttu-id="c0662-103">Cet exemple montre comment assurer la gestion des messages incohérents dans un service.</span><span class="sxs-lookup"><span data-stu-id="c0662-103">This sample demonstrates how to perform poison message handling in a service.</span></span> <span data-ttu-id="c0662-104">Cet exemple est basé sur le [transactionnel de liaison MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) exemple.</span><span class="sxs-lookup"><span data-stu-id="c0662-104">This sample is based on the [Transacted MSMQ Binding](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) sample.</span></span> <span data-ttu-id="c0662-105">Cet exemple utilise `netMsmqBinding`.</span><span class="sxs-lookup"><span data-stu-id="c0662-105">This sample uses the `netMsmqBinding`.</span></span> <span data-ttu-id="c0662-106">Le service est une application console auto-hébergée qui permet d'observer le service qui reçoit les messages mis en file d'attente.</span><span class="sxs-lookup"><span data-stu-id="c0662-106">The service is a self-hosted console application to enable you to observe the service receiving queued messages.</span></span>  

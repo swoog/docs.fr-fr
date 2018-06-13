@@ -14,6 +14,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808960"
 ---
 # <a name="how-to-create-a-custom-security-token-provider"></a><span data-ttu-id="70b11-102">Comment : créer un fournisseur de jetons de sécurité personnalisé</span><span class="sxs-lookup"><span data-stu-id="70b11-102">How to: Create a Custom Security Token Provider</span></span>
 <span data-ttu-id="70b11-103">Cette rubrique montre comment créer de nouveaux types de jetons à l'aide d'un fournisseur de jetons de sécurité personnalisé et comment intégrer le fournisseur à un gestionnaire de jetons de sécurité personnalisé.</span><span class="sxs-lookup"><span data-stu-id="70b11-103">This topic shows how to create new token types with a custom security token provider and how to integrate the provider with a custom security token manager.</span></span>  

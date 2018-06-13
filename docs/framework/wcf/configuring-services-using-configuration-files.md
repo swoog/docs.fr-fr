@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807431"
 ---
 # <a name="configuring-services-using-configuration-files"></a><span data-ttu-id="3395b-102">Configuration des services à l'aide de fichiers de configuration</span><span class="sxs-lookup"><span data-stu-id="3395b-102">Configuring Services Using Configuration Files</span></span>
 <span data-ttu-id="3395b-103">Configuration d’un service Windows Communication Foundation (WCF) avec un fichier de configuration vous donne la souplesse de fournir le point de terminaison et les données de comportement de service dans la phase de déploiement et non au moment du design.</span><span class="sxs-lookup"><span data-stu-id="3395b-103">Configuring a Windows Communication Foundation (WCF) service with a configuration file gives you the flexibility of providing endpoint and service behavior data at the point of deployment instead of at design time.</span></span> <span data-ttu-id="3395b-104">Cette rubrique esquisse les principales techniques disponibles.</span><span class="sxs-lookup"><span data-stu-id="3395b-104">This topic outlines the primary techniques available.</span></span>  

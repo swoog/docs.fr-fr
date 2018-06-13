@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806131"
 ---
 # <a name="windows-communication-foundation-tools"></a><span data-ttu-id="6ffd3-102">Outils de Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="6ffd3-102">Windows Communication Foundation Tools</span></span>
 <span data-ttu-id="6ffd3-103">Outils de Microsoft Windows Communication Foundation (WCF) sont conçus pour faciliter la créer, déployer et gérer des applications WCF.</span><span class="sxs-lookup"><span data-stu-id="6ffd3-103">Microsoft Windows Communication Foundation (WCF) tools are designed to make it easier for you to create, deploy, and manage WCF applications.</span></span> <span data-ttu-id="6ffd3-104">Cette section contient des informations détaillées sur ces outils.</span><span class="sxs-lookup"><span data-stu-id="6ffd3-104">This section contains detailed information about the tools.</span></span> <span data-ttu-id="6ffd3-105">Notez que ces outils ne sont pas pris en charge.</span><span class="sxs-lookup"><span data-stu-id="6ffd3-105">Please note that the tools are not supported.</span></span>  

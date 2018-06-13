@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809155"
 ---
 # <a name="using-tracing-to-troubleshoot-your-application"></a><span data-ttu-id="d298f-102">Utilisation du suivi pour résoudre les problèmes posés par votre application</span><span class="sxs-lookup"><span data-stu-id="d298f-102">Using Tracing to Troubleshoot Your Application</span></span>
 <span data-ttu-id="d298f-103">Cette section contient différentes rubriques qui décrivent comment vous pouvez utiliser le suivi pour dépanner votre application.</span><span class="sxs-lookup"><span data-stu-id="d298f-103">This section contains various topics that describe how you can use tracing to troubleshoot your application.</span></span>  

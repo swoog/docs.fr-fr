@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807523"
 ---
 # <a name="load-balancing"></a><span data-ttu-id="8d56c-102">Équilibrage de charge</span><span class="sxs-lookup"><span data-stu-id="8d56c-102">Load Balancing</span></span>
 <span data-ttu-id="8d56c-103">Un moyen d’augmenter la capacité des applications Windows Communication Foundation (WCF) est mise à l’échelle les en les déployant dans une batterie de serveurs à charge équilibrée.</span><span class="sxs-lookup"><span data-stu-id="8d56c-103">One way to increase the capacity of Windows Communication Foundation (WCF) applications is to scale them out by deploying them into a load-balanced server farm.</span></span> <span data-ttu-id="8d56c-104">Les applications WCF peuvent être équilibrée à l’aide de techniques, y compris les équilibreurs de charge logicielle tels Windows Network Load Balancing d’équilibrage de charge standard, ainsi que des appareils d’équilibrage de la charge matérielle.</span><span class="sxs-lookup"><span data-stu-id="8d56c-104">WCF applications can be load balanced using standard load balancing techniques, including software load balancers such as Windows Network Load Balancing as well as hardware-based load balancing appliances.</span></span>  

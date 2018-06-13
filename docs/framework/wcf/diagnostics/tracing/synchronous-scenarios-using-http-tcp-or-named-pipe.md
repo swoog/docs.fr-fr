@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810172"
 ---
 # <a name="synchronous-scenarios-using-http-tcp-or-named-pipe"></a><span data-ttu-id="9b14d-102">Scénarios synchrones utilisant HTTP, TCP ou Canal nommé</span><span class="sxs-lookup"><span data-stu-id="9b14d-102">Synchronous Scenarios using HTTP, TCP or Named-Pipe</span></span>
 <span data-ttu-id="9b14d-103">Cette rubrique décrit les activités et transferts pour différents scénarios demande/réponse synchrones, avec un client à thread unique, utilisant une connexion HTTP, TCP ou de canal nommé.</span><span class="sxs-lookup"><span data-stu-id="9b14d-103">This topic describes the activities and transfers for different synchronous request/reply scenarios, with a single-threaded client, using HTTP, TCP or named pipe.</span></span> <span data-ttu-id="9b14d-104">Consultez [scénarios asynchrones à l’aide de HTTP, TCP ou canal nommé](../../../../../docs/framework/wcf/diagnostics/tracing/asynchronous-scenarios-using-http-tcp-or-named-pipe.md) pour plus d’informations sur les requêtes multithreads.</span><span class="sxs-lookup"><span data-stu-id="9b14d-104">See [Asynchronous Scenarios using HTTP, TCP, or Named-Pipe](../../../../../docs/framework/wcf/diagnostics/tracing/asynchronous-scenarios-using-http-tcp-or-named-pipe.md) for more information on multi-threaded requests.</span></span>  

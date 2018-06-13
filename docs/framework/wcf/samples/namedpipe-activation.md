@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806381"
 ---
 # <a name="namedpipe-activation"></a><span data-ttu-id="f4a2f-102">NamedPipe Activation</span><span class="sxs-lookup"><span data-stu-id="f4a2f-102">NamedPipe Activation</span></span>
 <span data-ttu-id="f4a2f-103">Cet exemple illustre l'hébergement d'un service qui utilise le service d'activation des processus Windows (WAS) pour activer un service qui communique sur des canaux nommés.</span><span class="sxs-lookup"><span data-stu-id="f4a2f-103">This sample demonstrates hosting a service that uses Windows Process Activation Service (WAS) to activate a service that communicates over names pipes.</span></span> <span data-ttu-id="f4a2f-104">Cet exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md) et nécessite [!INCLUDE[wv](../../../../includes/wv-md.md)] à exécuter.</span><span class="sxs-lookup"><span data-stu-id="f4a2f-104">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) and requires [!INCLUDE[wv](../../../../includes/wv-md.md)] to run.</span></span>  

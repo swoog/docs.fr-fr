@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807174"
 ---
 # <a name="wsstreamedhttpbinding"></a><span data-ttu-id="7d1ca-102">WSStreamedHttpBinding</span><span class="sxs-lookup"><span data-stu-id="7d1ca-102">WSStreamedHttpBinding</span></span>
 <span data-ttu-id="7d1ca-103">Cet exemple montre comment créer une liaison conçue pour prendre en charge des scénarios de diffusion en continu lorsque le transport HTTP est utilisé.</span><span class="sxs-lookup"><span data-stu-id="7d1ca-103">The sample demonstrates how to create a binding that is designed to support streaming scenarios when the HTTP transport is used.</span></span>  

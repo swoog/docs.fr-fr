@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649423"
 ---
 # <a name="type-promotion-visual-basic"></a><span data-ttu-id="65ed1-102">Promotion de type (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="65ed1-102">Type Promotion (Visual Basic)</span></span>
 <span data-ttu-id="65ed1-103">Lorsque vous déclarez un élément de programmation dans un module, Visual Basic élève sa portée vers l’espace de noms contenant le module.</span><span class="sxs-lookup"><span data-stu-id="65ed1-103">When you declare a programming element in a module, Visual Basic promotes its scope to the namespace containing the module.</span></span> <span data-ttu-id="65ed1-104">Il s’agit en tant que *promotion de type*.</span><span class="sxs-lookup"><span data-stu-id="65ed1-104">This is known as *type promotion*.</span></span>  

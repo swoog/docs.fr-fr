@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809168"
 ---
 # <a name="endpoint-creation-overview"></a><span data-ttu-id="fe4b0-102">Vue d'ensemble de la création de points de terminaison</span><span class="sxs-lookup"><span data-stu-id="fe4b0-102">Endpoint Creation Overview</span></span>
 <span data-ttu-id="fe4b0-103">Toutes les communications avec un service Windows Communication Foundation (WCF) s’effectue via le *points de terminaison* du service.</span><span class="sxs-lookup"><span data-stu-id="fe4b0-103">All communication with a Windows Communication Foundation (WCF) service occurs through the *endpoints* of the service.</span></span> <span data-ttu-id="fe4b0-104">Points de terminaison fournissent l’accès aux fonctionnalités qu’un service WCF offre les clients.</span><span class="sxs-lookup"><span data-stu-id="fe4b0-104">Endpoints provide the clients access to the functionality that a WCF service offers.</span></span> <span data-ttu-id="fe4b0-105">Cette section décrit la structure d'un point de terminaison et explique comment définir un point de terminaison dans la configuration et dans le code.</span><span class="sxs-lookup"><span data-stu-id="fe4b0-105">This section describes the structure of an endpoint and outlines how to define an endpoint in configuration and in code.</span></span>  

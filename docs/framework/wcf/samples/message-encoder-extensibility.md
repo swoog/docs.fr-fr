@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804197"
 ---
 # <a name="message-encoder-extensibility"></a><span data-ttu-id="0c9d4-102">Extensibilité de l'encodeur de message</span><span class="sxs-lookup"><span data-stu-id="0c9d4-102">Message Encoder Extensibility</span></span>
 <span data-ttu-id="0c9d4-103">Cette section contient des exemples qui illustrent l'encodage de message personnalisé.</span><span class="sxs-lookup"><span data-stu-id="0c9d4-103">This section contains samples that demonstrate custom message encoding.</span></span>  
