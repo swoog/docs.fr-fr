@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516940"
 ---
 # <a name="using-the-pick-activity"></a>Utilisation de l'activité Pick
 Cet exemple montre comment utiliser l'activité <xref:System.Activities.Statements.Pick>.  

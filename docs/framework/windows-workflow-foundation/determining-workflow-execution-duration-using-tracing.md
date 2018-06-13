@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515083"
 ---
 # <a name="determining-workflow-execution-duration-using-tracing"></a>Détermination de la durée d'exécution d'un workflow à l'aide du suivi
 Cette rubrique montre comment déterminer le temps nécessaire à l'exécution avec succès d'un workflow auto-hébergé à l'aide du suivi de workflow.  

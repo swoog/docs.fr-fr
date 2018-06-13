@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522186"
 ---
 # <a name="how-to-draw-a-line-filled-with-a-texture"></a>Comment : dessiner une ligne remplie d'une texture
 Au lieu de dessin d’une ligne avec une couleur unie, vous pouvez dessiner une ligne avec une texture. Pour dessiner des lignes et des courbes avec une texture, créez un <xref:System.Drawing.TextureBrush> de l’objet et passer <xref:System.Drawing.TextureBrush> de l’objet à un <xref:System.Drawing.Pen.%23ctor%2A> constructeur. La bitmap associée au pinceau de la texture est utilisée pour remplir le plan (de façon invisible) avec, et lorsque le stylet dessine une ligne ou une courbe, le trait du stylet débouche sur certains pixels de la texture en mosaïque.  

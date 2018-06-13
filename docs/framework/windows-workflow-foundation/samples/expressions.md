@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515966"
 ---
 # <a name="expressions"></a>Expressions
 Cet exemple montre comment utiliser des expressions de base dans un workflow. Il se compose d'un workflow qui calcule des statistiques de salaires de base pour deux employés d'une société fictive. Deux classes, `Employee` et `SalaryStats`, sont définies dans Employee.cs et SalaryStats.cs. Ces classes sont utilisées dans un workflow qui montre comment effectuer des opérations arithmétiques et de chaîne simples sur les propriétés de variables de types complexes.  

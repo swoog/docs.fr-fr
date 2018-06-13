@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520212"
 ---
 # <a name="tracking-events-reference"></a>Référence des événements de suivi
 Pendant l'exécution, un workflow dans [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] déclenche des événements de suivi en parcourant différentes étapes de sa durée de vie. L'hôte peut s'abonner à ces événements et rester informé sur l'état de la progression du workflow pendant sa durée de vie. Les événements de suivi déclenchés sont traités dans cette section.  

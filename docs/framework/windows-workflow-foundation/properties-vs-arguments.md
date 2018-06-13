@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514766"
 ---
 # <a name="properties-vs-arguments"></a>Propriétés vs. Arguments
 Plusieurs options sont disponibles pour passer des données dans une activité. En plus d'utiliser <xref:System.Activities.InArgument>, il est également possible de développer des activités qui reçoivent des données à l'aide des propriétés CLR standard ou des propriétés <xref:System.Activities.ActivityAction> publiques. Cette rubrique explique comment sélectionner le type de méthode approprié.  

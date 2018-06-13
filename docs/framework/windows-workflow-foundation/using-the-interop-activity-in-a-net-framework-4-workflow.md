@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520225"
 ---
 # <a name="using-the-interop-activity-in-a-net-framework-4-workflow"></a>Utilisation de l'activité d'interopérabilité dans un flux de travail .NET Framework 4
 Les activités créées à l'aide de [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] ou [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] peuvent être utilisées dans un flux de travail [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] en utilisant l'activité <xref:System.Activities.Statements.Interop>. Cette rubrique propose une vue d'ensemble de l'utilisation de l'activité <xref:System.Activities.Statements.Interop>.  

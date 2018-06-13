@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33512208"
 ---
 # <a name="exceptions-transactions-and-compensation"></a>Exceptions, transactions et compensation
 [!INCLUDE[wf1](../../../includes/wf1-md.md)] fournit plusieurs mécanismes différents pour gérer les conditions d'erreur d'exécution dans les workflows. Les workflows peuvent utiliser une combinaison de gestionnaires d’exceptions, transactions, annulation et compensation pour gérer et effectuer une récupération normale à partir des conditions d’erreur.  

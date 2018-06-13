@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33512039"
 ---
 # <a name="windows-workflow-foundation-data-model"></a>Modèle de données Windows Workflow Foundation
 Le modèle de données Windows Workflow Foundation est composé de trois concepts : variables, arguments et expressions. Les variables représentent le stockage de données et les arguments représentent le flux de données à l'intérieur et à l'extérieur d'une activité. Les arguments sont liés (une valeur est affectée) à l’aide d’expressions qui peuvent référencer des variables.  

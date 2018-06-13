@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525032"
 ---
 # <a name="using-a-gradient-brush-to-fill-shapes"></a>Utilisation d'un pinceau à dégradé pour remplir des formes
 Vous pouvez utiliser un pinceau de dégradé pour remplir une forme avec une couleur. Par exemple, vous pouvez utiliser un dégradé horizontal pour remplir une forme avec une couleur qui change progressivement à mesure que vous déplacez le bord gauche de la forme sur le bord droit. Imaginez un rectangle avec un bord gauche noirs (représenté par les composants rouges, verts et bleus 0, 0, 0) et un bord droit de couleur rouge (représenté par 255, 0, 0). Si le rectangle est 256 pixels de large, le composant rouge d’un pixel donné sera supérieure à la composante rouge du pixel situé à sa gauche. Le pixel le plus à gauche dans une ligne a des composants de couleur (0, 0, 0), le deuxième pixel a (1, 0, 0), le troisième pixel (2, 0, 0) et ainsi de suite jusqu'à ce que vous obtenez au pixel plus à droite, ce qui a RVB (255, 0, 0). Ces valeurs de couleur interpolée composent le dégradé de couleur.  
