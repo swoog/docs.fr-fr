@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591324"
 ---
 # <a name="threading-objects-and-features"></a>Fonctionnalités et objets de threading
 .NET Framework fournit plusieurs objets permettant de créer et de gérer des applications multithread. Les threads managés sont représentés par la classe <xref:System.Threading.Thread>. La classe <xref:System.Threading.ThreadPool> permet de créer et de gérer facilement des tâches d'arrière-plan multithread. La classe <xref:System.ComponentModel.BackgroundWorker> permet la même chose pour les tâches qui interagissent avec l'interface utilisateur. La classe <xref:System.Threading.Timer> exécute des tâches en arrière-plan à intervalles réguliers.  

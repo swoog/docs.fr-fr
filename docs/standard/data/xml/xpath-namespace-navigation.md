@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572926"
 ---
 # <a name="xpath-namespace-navigation"></a>Navigation entre espaces de noms XPath
 Pour utiliser les requêtes XPath avec des documents XML, vous devez adresser correctement les espaces de noms XML et les éléments contenus dans ces espaces de noms. Les espaces de noms empêchent toute ambiguïté pouvant survenir lorsque des noms sont utilisés dans plusieurs contextes ; par exemple, le nom `ID` peut faire référence à plusieurs identificateurs associés à différents éléments d'un document XML. La syntaxe des espaces de noms spécifie des URI, des noms et des préfixes qui distinguent les éléments d'un document XML.  

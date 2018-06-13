@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592137"
 ---
 # <a name="walkthrough-creating-a-custom-dataflow-block-type"></a>Procédure pas à pas : création d'un type de bloc de flux de données personnalisé
 Bien que la bibliothèque de flux de données TPL fournisse plusieurs types de blocs de flux de données offrant une large gamme de fonctionnalités, vous pouvez aussi créer des types de blocs personnalisés. Ce document décrit comment créer un type de bloc de flux de données qui implémente un comportement personnalisé.  

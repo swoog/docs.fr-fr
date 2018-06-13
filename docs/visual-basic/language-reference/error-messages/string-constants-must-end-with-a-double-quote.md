@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594804"
 ---
 # <a name="string-constants-must-end-with-a-double-quote"></a>Les constantes de chaîne doivent se terminer par un guillemet
 Les constantes de chaîne doivent commencer et se terminer par des guillemets doubles.  

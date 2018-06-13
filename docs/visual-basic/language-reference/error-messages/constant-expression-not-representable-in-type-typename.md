@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585767"
 ---
 # <a name="constant-expression-not-representable-in-type-39lttypenamegt39"></a>Expression constante n’est pas représentable dans le type &#39; &lt;typename&gt;&#39;
 Vous essayez d’évaluer une constante qui ne tient pas dans le type cible, généralement car elle dépasse la plage.  

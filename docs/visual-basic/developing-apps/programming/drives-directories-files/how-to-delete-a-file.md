@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588621"
 ---
 # <a name="how-to-delete-a-file-in-visual-basic"></a>Guide pratique pour supprimer un fichier dans Visual Basic
 La méthode `DeleteFile` de l’objet `My.Computer.FileSystem` vous permet de supprimer un fichier. Elle offre entre autres les options suivantes : envoyer ou non le fichier supprimé à la **Corbeille**, demander ou non à l’utilisateur de confirmer que le fichier doit être supprimé et l’action à effectuer quand l’utilisateur annule l’opération.  

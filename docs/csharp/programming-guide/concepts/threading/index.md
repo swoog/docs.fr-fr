@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335833"
 ---
 # <a name="threading-c"></a>Threads (C#)
 Les threads donnent la possibilité à votre programme C# d’effectuer des traitements simultanés, ce qui vous permet de faire plusieurs opérations à la fois. Par exemple, vous pouvez utiliser les threads pour surveiller les entrées de l’utilisateur, effectuer des tâches en arrière-plan et gérer des flux d’entrée simultanés.  

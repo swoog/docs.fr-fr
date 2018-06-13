@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568821"
 ---
 # <a name="extending-xslt-style-sheets"></a>Extension de feuilles de style XSLT
 Cette section décrit les différentes méthodes d'extension de la fonctionnalité XSLT. Vous pouvez ajouter des paramètres ou des objets d'extension à l'aide de la classe <xref:System.Xml.Xsl.XsltArgumentList>. Ces paramètres ou objets d’extension peuvent alors être appelés depuis la feuille de style. Vous pouvez en outre incorporer des blocs de script dans la feuille de style avec l'élément `msxsl:script`.  

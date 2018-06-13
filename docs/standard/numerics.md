@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588695"
 ---
 # <a name="numerics-in-the-net-framework"></a>Valeurs numériques dans le .NET Framework
 Le .NET Framework prend en charge les primitives numériques standard pour les intégraux et les nombres à virgule flottante, ainsi que <xref:System.Numerics.BigInteger>, un type intégral sans limite théorique supérieure ou inférieure, <xref:System.Numerics.Complex>, un type qui représente des nombres complexes et un ensemble de types de vecteurs compatibles SIMD dans l’espace de noms <xref:System.Numerics>.  

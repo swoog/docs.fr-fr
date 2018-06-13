@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593699"
 ---
 # <a name="sub-or-function-not-defined-visual-basic"></a>Sub ou Function non défini (Visual Basic)
 A `Sub` ou `Function` doit être défini afin d’être appelée. Cette erreur peut avoir plusieurs causes :  

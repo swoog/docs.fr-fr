@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519810"
 ---
 # <a name="persistence-participants"></a>Participants de persistance
 Un participant de persistance peut participer à une opération de persistance (enregistrement ou chargement) déclenchée par un hôte d'application. Le [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] est fourni avec deux classes abstraites, **PersistenceParticipant** et **PersistenceIOParticipant**, que vous pouvez utiliser pour créer un participant de persistance. Un participant de persistance dérive de l'une de ces classes, implémente les méthodes qui l'intéressent, puis ajoute une instance de la classe à la collection <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A> sur le <xref:System.ServiceModel.Activities.WorkflowServiceHost>. L'hôte d'application peut rechercher de telles extensions de workflow lorsqu'il rend une instance de workflow persistante et appeler les méthodes appropriées sur les participants de persistance aux moments opportuns.  

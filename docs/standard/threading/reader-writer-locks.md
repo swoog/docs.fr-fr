@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586371"
 ---
 # <a name="reader-writer-locks"></a>Verrous de lecteur-writer
 La classe <xref:System.Threading.ReaderWriterLockSlim> permet à plusieurs threads de lire simultanément une ressource, mais nécessite qu’un thread attende un verrou exclusif pour écrire dans la ressource.  

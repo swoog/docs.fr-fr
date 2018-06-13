@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592091"
 ---
 # <a name="serialization-guidelines"></a>Indications concernant la sérialisation
 Ce document répertorie les indications à prendre en compte lors de la conception d'une API à sérialiser.  

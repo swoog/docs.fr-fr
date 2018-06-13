@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590807"
 ---
 # <a name="char-data-type-visual-basic"></a>Char, type de données (Visual Basic)
 Contient les points de code de (2 octets) de 16 bits non signé compris entre 0 et 65 535. Chaque *point de code*, ou le code de caractère, représente un caractère Unicode.  

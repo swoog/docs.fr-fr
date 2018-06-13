@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597394"
 ---
 # <a name="in-clause-visual-basic"></a>In, clause (Visual Basic)
 Spécifie le groupe que la variable de boucle doit parcourir dans une `For Each` de boucle ou spécifie la collection à interroger dans un `From`, `Join`, ou `Group Join` clause.  

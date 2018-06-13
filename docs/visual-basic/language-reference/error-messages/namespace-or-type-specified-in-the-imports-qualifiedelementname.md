@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595103"
 ---
 # <a name="namespace-or-type-specified-in-the-imports-39ltqualifiedelementnamegt39-doesn39t-contain-any-public-member-or-cannot-be-found"></a>Namespace ou le type spécifié dans les Imports &#39; &lt;nom_élément_qualifié&gt; &#39; ne&#39;t contient aucun membre public ou est introuvable
 Namespace ou le type spécifié dans les Imports'\<nom_élément_qualifié >' ne contient aucun membre public ou est introuvable. Assurez-vous que l’espace de noms ou le type est défini et qu’il contient au moins un membre public. Assurez-vous que le nom d’alias ne contient d’autres alias.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589878"
 ---
 # <a name="latebound-overload-resolution-cannot-be-applied-to-39ltprocedurenamegt39-because-the-accessing-instance-is-an-interface-type"></a>La résolution de surcharge à liaison tardive ne peut pas être appliquée à &#39; &lt;nom_procédure&gt; &#39; , car l’instance d’accès est un type interface
 Le compilateur tente de résoudre une référence à une propriété surchargée ou une procédure, mais la référence échoue parce qu’un argument est de type `Object` et l’objet de référence a le type de données d’une interface. Le `Object` argument force le compilateur à résoudre la référence en tant qu’à liaison tardive.  

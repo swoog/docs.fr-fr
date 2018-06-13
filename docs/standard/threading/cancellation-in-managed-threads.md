@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592169"
 ---
 # <a name="cancellation-in-managed-threads"></a>Annulation dans les threads managés
 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] et versions ultérieures utilisent un modèle unifié pour l'annulation coopérative des opérations asynchrones ou des opérations synchrones de longue durée. Ce modèle est basé sur un objet léger appelé jeton d'annulation. L'objet qui appelle une ou plusieurs opérations annulables, par exemple en créant de nouveaux threads ou de nouvelles tâches, passe le jeton à chaque opération. Chaque opération peut, à son tour, passer des copies du jeton à d'autres opérations. Ultérieurement, l'objet qui a créé le jeton peut l'utiliser pour demander que les opérations arrêtent leur action. Seul l'objet demandeur peut émettre la demande d'annulation. Chaque écouteur est chargé d'accepter la demande et d'y répondre de manière appropriée et en temps voulu.  

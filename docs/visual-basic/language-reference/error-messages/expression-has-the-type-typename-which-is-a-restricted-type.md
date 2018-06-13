@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587571"
 ---
 # <a name="expression-has-the-type-39lttypenamegt39-which-is-a-restricted-type-and-cannot-be-used-to-access-members-inherited-from-39object39-or-39valuetype39"></a>Le type de l’expression est &#39; &lt;typename&gt; &#39; qui est un type restreint et ne peut pas être utilisé pour accéder aux membres hérités de &#39;objet&#39; ou &#39;ValueType&#39;
 Une expression est évaluée à un type qui ne peut pas être convertie (boxed) par le common language runtime (CLR) mais accède à un membre qui nécessite une conversion boxing.  

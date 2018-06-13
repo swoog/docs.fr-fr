@@ -12,6 +12,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34233910"
 ---
 # <a name="interface-statement-visual-basic"></a>Interface, instruction (Visual Basic)
 Déclare le nom d’une interface et introduit les définitions des membres qui se compose de l’interface.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636369"
 ---
 # <a name="file-information-cannot-be-queried-while-open-for-writing"></a>Impossible d’interroger les informations du fichier quand ce dernier est ouvert en écriture
 Une tentative a été effectuée pour obtenir des informations sur un fichier qui est actuellement ouvert en écriture.  

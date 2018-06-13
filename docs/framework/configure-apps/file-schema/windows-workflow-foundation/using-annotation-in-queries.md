@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767048"
 ---
 # <a name="using-annotation-in-queries"></a>Utilisation de l'annotation dans les requêtes
 Grâce aux annotations, vous pouvez baliser arbitrairement des enregistrements de suivi avec une valeur configurable après la génération. Par exemple, vous pouvez baliser des plusieurs enregistrements de suivi parmi plusieurs flux de travail en utilisant « Mail Server » == « Mail Server1 ». Lors de l’interrogation ultérieure d’enregistrements de suivi, cela facilite la recherche de tous les enregistrements ayant cette étiquette.  

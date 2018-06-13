@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597381"
 ---
 # <a name="xml-comment-exception-must-have-a-39cref39-attribute"></a>Exception de commentaire XML doit avoir un &#39;cref&#39; attribut
 Le \<exception > balise permet de documenter les exceptions qui peuvent être levées par une méthode. Requis `cref` attribut désigne le nom d’un membre qui est vérifié par le Générateur de documentation. Si le membre existe, il est converti en nom d’élément canonique dans le fichier de documentation.  

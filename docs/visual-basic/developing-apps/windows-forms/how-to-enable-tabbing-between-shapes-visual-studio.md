@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589545"
 ---
 # <a name="how-to-enable-tabbing-between-shapes-visual-studio"></a>Comment : activer la tabulation entre les formes (Visual Studio)
 Les contrôles Line et shape n’ont pas `TabStop` ou `TabIndex` , mais vous pouvez quand même activer la tabulation entre eux. Dans l’exemple suivant, en appuyant sur la touche CTRL et les touches de tabulation sera onglet entre les formes. uniquement la touche TAB sera onglet entre les boutons.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33337023"
 ---
 # <a name="cref-attribute-c-programming-guide"></a>cref, attribut (Guide de programmation C#)
 L’attribut `cref` dans une balise de documentation XML signifie « référence de code ». Il indique que le texte interne de la balise est un élément de code tel qu’un type, une méthode ou une propriété. Les outils de documentation comme [Sandcastle](https://github.com/EWSoftware/SHFB) utilisent les attributs `cref` pour générer automatiquement des liens hypertexte vers la page où le type ou le membre est documenté.  

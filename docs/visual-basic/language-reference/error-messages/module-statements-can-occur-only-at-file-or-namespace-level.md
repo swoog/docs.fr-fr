@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593163"
 ---
 # <a name="39module39-statements-can-occur-only-at-file-or-namespace-level"></a>&#39;Module&#39; instructions peuvent intervenir qu’au niveau du fichier ou l’espace de noms
 `Module` les instructions doivent apparaître en haut de votre fichier source immédiatement après `Option` et `Imports` instructions, les attributs globaux et les déclarations d’espace de noms, mais avant toutes les autres déclarations.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635643"
 ---
 # <a name="invalid-pattern-string"></a>Chaîne de modèle non valide
 La chaîne de modèle spécifiée dans l’opération `Like` d’une recherche n’est pas valide.  

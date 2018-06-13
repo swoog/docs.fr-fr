@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595018"
 ---
 # <a name="operator-declaration-must-be-one-of----amp-like-mod-and-or-xor-not-ltlt-gtgt"></a>Déclaration d’opérateur doit être de type : +,-, *,\,/, ^, &amp;, Like, Mod et, Or, Xor, pas &lt; &lt;, &gt; &gt;...
 Vous pouvez déclarer uniquement un opérateur qui n’est éligible pour la surcharge. Le tableau suivant répertorie les opérateurs que vous pouvez déclarer.  

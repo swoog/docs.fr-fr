@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593965"
 ---
 # <a name="too-many-files"></a>Trop de fichiers
 Plusieurs fichiers ont été créés dans le répertoire racine autorisés par le système d’exploitation ou d’autres fichiers que le nombre spécifié dans le **fichiers =** définissant dans votre configuration. Fichier SYS.  

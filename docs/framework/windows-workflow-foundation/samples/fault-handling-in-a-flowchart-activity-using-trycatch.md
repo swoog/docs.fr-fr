@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518061"
 ---
 # <a name="fault-handling-in-a-flowchart-activity-using-trycatch"></a>Gestion des erreurs dans une activité Flowchart à l'aide de TryCatch
 Cet exemple montre comment l'activité <xref:System.Activities.Statements.TryCatch> peut être utilisée dans une activité de flux de contrôle complexe.  

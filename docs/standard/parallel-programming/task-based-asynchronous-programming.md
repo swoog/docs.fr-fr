@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592587"
 ---
 # <a name="task-based-asynchronous-programming"></a>Programmation asynchrone basée sur les tâches
 La bibliothèque parallèle de tâches (TPL) est basée sur le concept de *tâche*, qui représente une opération asynchrone. À certains égards, une tâche ressemble à un thread ou à un élément de travail <xref:System.Threading.ThreadPool>, mais à un niveau d'abstraction supérieur. Le terme *parallélisme des tâches* fait référence à une ou plusieurs tâches indépendantes qui s’exécutent simultanément. Les tâches présentent deux grands avantages :  

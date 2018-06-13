@@ -17,6 +17,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33955951"
 ---
 # <a name="synchronous-server-socket-example"></a>Exemple de socket serveur synchrone
 L’exemple de programme suivant crée un serveur qui reçoit des demandes de connexion de clients. Le serveur est créé avec un socket synchrone. L’exécution de l’application serveur est donc suspendue jusqu’à la réception d’une connexion à partir d’un client. L’application reçoit une chaîne du client, affiche la chaîne sur la console, puis renvoie la chaîne de réponse au client. La chaîne reçue du client doit contenir la chaîne « \<EOF> » qui indique la fin du message.  

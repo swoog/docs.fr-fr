@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598125"
 ---
 # <a name="argument-ltargumentnamegt-cannot-be-an-empty-string-or-nothing"></a>Argument &lt;nom_argument&gt; ne peut pas être une chaîne vide ou Nothing
 L’argument exige une valeur autre qu’une chaîne vide ("") ou `Nothing`. Cette erreur peut être le résultat d’un calcul incorrect de la valeur.  

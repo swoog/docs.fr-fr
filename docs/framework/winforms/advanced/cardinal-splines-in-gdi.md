@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517963"
 ---
 # <a name="cardinal-splines-in-gdi"></a>Splines cardinales dans GDI+
 Une spline cardinale est une séquence de courbes reliées entre elles pour former une courbe plus grande. La spline est spécifiée par un tableau de points et un paramètre de tension. Une spline cardinale passe correctement sur chaque point dans le tableau ; Il existe des angles aigus et aucune modification brusque dans la précision de la courbe. L’illustration suivante montre un ensemble de points et une spline cardinale qui passe par chaque point dans le jeu.  

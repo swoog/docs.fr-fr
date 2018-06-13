@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594496"
 ---
 # <a name="structure-39ltstructurenamegt39-must-contain-at-least-one-instance-member-variable-or-at-least-one-instance-event-declaration-not-marked-39custom39"></a>Structure &#39; &lt;nom_structure&gt; &#39; doit contenir au moins une variable membre d’instance ou une déclaration d’événement au moins une instance non marquée comme &#39;personnalisé&#39;
 Une définition de structure n’inclut pas toutes les variables non partagées ou des événements non personnalisés non partagées.  

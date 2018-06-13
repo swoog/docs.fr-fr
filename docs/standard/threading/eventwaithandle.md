@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592195"
 ---
 # <a name="eventwaithandle"></a>EventWaitHandle
 La classe <xref:System.Threading.EventWaitHandle> permet aux threads de communiquer entre eux en signalant et en attendant des signaux. Les handles d’attente d’événement (également appelés simplement des événements) sont des handles d’attente qui peuvent être signalés pour libérer un ou plusieurs threads en attente. Une fois signalé, un handle d’attente d’événement est réinitialisé manuellement ou automatiquement. La classe <xref:System.Threading.EventWaitHandle> peut représenter un handle d’attente d’événement local (événement local) ou un handle d’attente d’événement système nommé (événement nommé ou événement système, visible par tous les processus).  
