@@ -1,46 +1,35 @@
 ---
 title: BasicBinding with Transport Security
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: f49b1de6-0254-4362-8ef2-fccd8ff9688b
-caps.latest.revision: 26
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4d06f7652f7366fc795cd157398bbb15ed78828c
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 9591c3556bf38d1af288c2c3c4a465af2c0722eb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502687"
 ---
-# <a name="basicbinding-with-transport-security"></a><span data-ttu-id="ed549-102">BasicBinding with Transport Security</span><span class="sxs-lookup"><span data-stu-id="ed549-102">BasicBinding with Transport Security</span></span>
-<span data-ttu-id="ed549-103">Cet exemple illustre l’utilisation de la sécurité de transport SSL avec la liaison de base.</span><span class="sxs-lookup"><span data-stu-id="ed549-103">This sample demonstrates the use of SSL transport security with the basic binding.</span></span> <span data-ttu-id="ed549-104">Cet exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md) qui implémente un service de calculatrice.</span><span class="sxs-lookup"><span data-stu-id="ed549-104">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) that implements a calculator service.</span></span>  
+# <a name="basicbinding-with-transport-security"></a><span data-ttu-id="e5b18-102">BasicBinding with Transport Security</span><span class="sxs-lookup"><span data-stu-id="e5b18-102">BasicBinding with Transport Security</span></span>
+<span data-ttu-id="e5b18-103">Cet exemple illustre l’utilisation de la sécurité de transport SSL avec la liaison de base.</span><span class="sxs-lookup"><span data-stu-id="e5b18-103">This sample demonstrates the use of SSL transport security with the basic binding.</span></span> <span data-ttu-id="e5b18-104">Cet exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md) qui implémente un service de calculatrice.</span><span class="sxs-lookup"><span data-stu-id="e5b18-104">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) that implements a calculator service.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="ed549-105">Les exemples peuvent déjà être installés sur votre ordinateur.</span><span class="sxs-lookup"><span data-stu-id="ed549-105">The samples may already be installed on your machine.</span></span> <span data-ttu-id="ed549-106">Recherchez le répertoire (par défaut) suivant avant de continuer.</span><span class="sxs-lookup"><span data-stu-id="ed549-106">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="e5b18-105">Les exemples peuvent déjà être installés sur votre ordinateur.</span><span class="sxs-lookup"><span data-stu-id="e5b18-105">The samples may already be installed on your machine.</span></span> <span data-ttu-id="e5b18-106">Recherchez le répertoire (par défaut) suivant avant de continuer.</span><span class="sxs-lookup"><span data-stu-id="e5b18-106">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="ed549-107">Si ce répertoire n’existe pas, accédez à la page [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les exemples [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="ed549-107">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="ed549-108">Cet exemple se trouve dans le répertoire suivant.</span><span class="sxs-lookup"><span data-stu-id="ed549-108">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="e5b18-107">Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples.</span><span class="sxs-lookup"><span data-stu-id="e5b18-107">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="e5b18-108">Cet exemple se trouve dans le répertoire suivant.</span><span class="sxs-lookup"><span data-stu-id="e5b18-108">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Basic\TransportSecurity`  
   
-## <a name="sample-details"></a><span data-ttu-id="ed549-109">Détails de l'exemple</span><span class="sxs-lookup"><span data-stu-id="ed549-109">Sample Details</span></span>  
- <span data-ttu-id="ed549-110">Par défaut, la liaison de base prend en charge la communication HTTP.</span><span class="sxs-lookup"><span data-stu-id="ed549-110">By default, the basic binding supports HTTP communication.</span></span> <span data-ttu-id="ed549-111">L'exemple indique comment activer la sécurité de transport pour la liaison  de base.</span><span class="sxs-lookup"><span data-stu-id="ed549-111">The sample shows how to enable transport security for the basic binding.</span></span> <span data-ttu-id="ed549-112">Vous devez créer un certificat et l'assigner en utilisant l'Assistant Certificat de serveur Web avant d'exécuter l'exemple.</span><span class="sxs-lookup"><span data-stu-id="ed549-112">Before you run the sample, you must create a certificate and assign it by using the Web Server Certificate Wizard.</span></span>  
+## <a name="sample-details"></a><span data-ttu-id="e5b18-109">Détails de l'exemple</span><span class="sxs-lookup"><span data-stu-id="e5b18-109">Sample Details</span></span>  
+ <span data-ttu-id="e5b18-110">Par défaut, la liaison de base prend en charge la communication HTTP.</span><span class="sxs-lookup"><span data-stu-id="e5b18-110">By default, the basic binding supports HTTP communication.</span></span> <span data-ttu-id="e5b18-111">L'exemple indique comment activer la sécurité de transport pour la liaison  de base.</span><span class="sxs-lookup"><span data-stu-id="e5b18-111">The sample shows how to enable transport security for the basic binding.</span></span> <span data-ttu-id="e5b18-112">Vous devez créer un certificat et l'assigner en utilisant l'Assistant Certificat de serveur Web avant d'exécuter l'exemple.</span><span class="sxs-lookup"><span data-stu-id="e5b18-112">Before you run the sample, you must create a certificate and assign it by using the Web Server Certificate Wizard.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="ed549-113">La procédure d'installation ainsi que les instructions de génération relatives à cet exemple figurent à la fin de cette rubrique.</span><span class="sxs-lookup"><span data-stu-id="ed549-113">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
+>  <span data-ttu-id="e5b18-113">La procédure d'installation ainsi que les instructions de génération relatives à cet exemple figurent à la fin de cette rubrique.</span><span class="sxs-lookup"><span data-stu-id="e5b18-113">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- <span data-ttu-id="ed549-114">Le code de programme dans l’exemple est identique à celui de la [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md) service.</span><span class="sxs-lookup"><span data-stu-id="ed549-114">The program code in the sample is identical to that of the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) service.</span></span> <span data-ttu-id="ed549-115">La définition du point de terminaison et la définition de la liaison dans les paramètres du fichier de configuration sont modifiées pour permettre une communication sécurisée, comme le montre l’exemple de configuration suivant.</span><span class="sxs-lookup"><span data-stu-id="ed549-115">The endpoint definition and binding definition in the configuration file settings are modified to enable secure communication, as shown in the following sample configuration.</span></span>  
+ <span data-ttu-id="e5b18-114">Le code de programme dans l’exemple est identique à celui de la [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md) service.</span><span class="sxs-lookup"><span data-stu-id="e5b18-114">The program code in the sample is identical to that of the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) service.</span></span> <span data-ttu-id="e5b18-115">La définition du point de terminaison et la définition de la liaison dans les paramètres du fichier de configuration sont modifiées pour permettre une communication sécurisée, comme le montre l’exemple de configuration suivant.</span><span class="sxs-lookup"><span data-stu-id="e5b18-115">The endpoint definition and binding definition in the configuration file settings are modified to enable secure communication, as shown in the following sample configuration.</span></span>  
   
 ```xml  
 <system.serviceModel>  
@@ -67,7 +56,7 @@ ms.lasthandoff: 04/27/2018
 </system.serviceModel>  
 ```  
   
- <span data-ttu-id="ed549-116">Étant donné que le certificat utilisé dans cet exemple est un certificat de test créé avec Makecert.exe, une alerte de sécurité s’affiche lorsque vous tentez d’accéder aux HTTPS : adresse dans votre navigateur, par exemple https://localhost/servicemodelsamples/service.svc.</span><span class="sxs-lookup"><span data-stu-id="ed549-116">Because the certificate used in this sample is a test certificate created with Makecert.exe, a security alert appears when you try to access an HTTPS: address in your browser, such as https://localhost/servicemodelsamples/service.svc.</span></span> <span data-ttu-id="ed549-117">Pour permettre au client [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] de fonctionner avec un certificat de test, du code supplémentaire est ajouté au client afin de supprimer l'alerte de sécurité.</span><span class="sxs-lookup"><span data-stu-id="ed549-117">To allow the [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] client to work with a test certificate, some additional code is added to the client to suppress the security alert.</span></span> <span data-ttu-id="ed549-118">Ce code, et la classe qui l'accompagne, n'est pas nécessaire lors de l'utilisation de vrais certificats.</span><span class="sxs-lookup"><span data-stu-id="ed549-118">This code, and the accompanying class, is not necessary when using real certificates.</span></span>  
+ <span data-ttu-id="e5b18-116">Étant donné que le certificat utilisé dans cet exemple est un certificat de test créé avec Makecert.exe, une alerte de sécurité s’affiche lorsque vous tentez d’accéder aux HTTPS : adresse dans votre navigateur, par exemple https://localhost/servicemodelsamples/service.svc.</span><span class="sxs-lookup"><span data-stu-id="e5b18-116">Because the certificate used in this sample is a test certificate created with Makecert.exe, a security alert appears when you try to access an HTTPS: address in your browser, such as https://localhost/servicemodelsamples/service.svc.</span></span> <span data-ttu-id="e5b18-117">Pour autoriser le client Windows Communication Foundation (WCF) travailler avec un certificat de test, du code supplémentaire est ajouté au client afin de supprimer l’alerte de sécurité.</span><span class="sxs-lookup"><span data-stu-id="e5b18-117">To allow the Windows Communication Foundation (WCF) client to work with a test certificate, some additional code is added to the client to suppress the security alert.</span></span> <span data-ttu-id="e5b18-118">Ce code, et la classe qui l'accompagne, n'est pas nécessaire lors de l'utilisation de vrais certificats.</span><span class="sxs-lookup"><span data-stu-id="e5b18-118">This code, and the accompanying class, is not necessary when using real certificates.</span></span>  
 
 ```csharp
 // This code is required only for test certificates such as those   
@@ -75,7 +64,7 @@ ms.lasthandoff: 04/27/2018
 PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");  
 ```
 
- <span data-ttu-id="ed549-119">Lorsque vous exécutez l'exemple, les demandes et réponses d'opération s'affichent dans la fenêtre de console du client.</span><span class="sxs-lookup"><span data-stu-id="ed549-119">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="ed549-120">Appuyez sur Entrée dans la fenêtre du client pour l'arrêter.</span><span class="sxs-lookup"><span data-stu-id="ed549-120">Press ENTER in the client window to shut down the client.</span></span>  
+ <span data-ttu-id="e5b18-119">Lorsque vous exécutez l'exemple, les demandes et réponses d'opération s'affichent dans la fenêtre de console du client.</span><span class="sxs-lookup"><span data-stu-id="e5b18-119">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="e5b18-120">Appuyez sur Entrée dans la fenêtre du client pour l'arrêter.</span><span class="sxs-lookup"><span data-stu-id="e5b18-120">Press ENTER in the client window to shut down the client.</span></span>  
   
 ```  
 Add(100,15.99) = 115.99  
@@ -86,20 +75,20 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="ed549-121">Pour configurer, générer et exécuter l'exemple</span><span class="sxs-lookup"><span data-stu-id="ed549-121">To set up, build, and run the sample</span></span>  
+#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="e5b18-121">Pour configurer, générer et exécuter l'exemple</span><span class="sxs-lookup"><span data-stu-id="e5b18-121">To set up, build, and run the sample</span></span>  
   
-1.  <span data-ttu-id="ed549-122">Installez [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 à l'aide de la commande suivante :</span><span class="sxs-lookup"><span data-stu-id="ed549-122">Install [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 using the following command:</span></span>  
+1.  <span data-ttu-id="e5b18-122">Installez [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 à l'aide de la commande suivante :</span><span class="sxs-lookup"><span data-stu-id="e5b18-122">Install [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 using the following command:</span></span>  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  <span data-ttu-id="ed549-123">Assurez-vous d’avoir effectué la [procédure d’installation d’à usage unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="ed549-123">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+2.  <span data-ttu-id="e5b18-123">Assurez-vous d’avoir effectué la [procédure d’installation d’à usage unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="e5b18-123">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-3.  <span data-ttu-id="ed549-124">Assurez-vous d’avoir effectué la [Instructions d’Installation du certificat serveur Internet Information Services (IIS)](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md).</span><span class="sxs-lookup"><span data-stu-id="ed549-124">Ensure that you have performed the [Internet Information Services (IIS) Server Certificate Installation Instructions](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md).</span></span>  
+3.  <span data-ttu-id="e5b18-124">Assurez-vous d’avoir effectué la [Instructions d’Installation du certificat serveur Internet Information Services (IIS)](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md).</span><span class="sxs-lookup"><span data-stu-id="e5b18-124">Ensure that you have performed the [Internet Information Services (IIS) Server Certificate Installation Instructions](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md).</span></span>  
   
-4.  <span data-ttu-id="ed549-125">Pour générer l’édition C# ou Visual Basic .NET de la solution, conformez-vous aux instructions figurant dans [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="ed549-125">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+4.  <span data-ttu-id="e5b18-125">Pour générer l’édition C# ou Visual Basic .NET de la solution, conformez-vous aux instructions figurant dans [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="e5b18-125">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-5.  <span data-ttu-id="ed549-126">Pour exécuter l’exemple dans une configuration à un ou plusieurs ordinateurs, suivez les instructions de [en cours d’exécution les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="ed549-126">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
+5.  <span data-ttu-id="e5b18-126">Pour exécuter l’exemple dans une configuration à un ou plusieurs ordinateurs, suivez les instructions de [en cours d’exécution les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="e5b18-126">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ed549-127">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="ed549-127">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e5b18-127">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="e5b18-127">See Also</span></span>

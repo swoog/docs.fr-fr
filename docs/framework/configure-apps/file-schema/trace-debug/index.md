@@ -19,6 +19,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745264"
 ---
 # <a name="trace-and-debug-settings-schema"></a><span data-ttu-id="523bc-102">Schéma des paramètres de traçage et de débogage</span><span class="sxs-lookup"><span data-stu-id="523bc-102">Trace and Debug Settings Schema</span></span>
 <span data-ttu-id="523bc-103">Les paramètres de traçage et débogage spécifient les écouteurs de trace qui collectent, stockent et acheminent les messages, ainsi que le niveau auquel un commutateur de trace est défini.</span><span class="sxs-lookup"><span data-stu-id="523bc-103">Trace and debug settings specify trace listeners that collect, store, and route messages, and the level where a trace switch is set.</span></span>  

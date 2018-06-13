@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766580"
 ---
 # <a name="skip-entity-sql"></a><span data-ttu-id="6139d-102">SKIP (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="6139d-102">SKIP (Entity SQL)</span></span>
 <span data-ttu-id="6139d-103">Vous pouvez effectuer une pagination physique à l'aide de la sous-clause SKIP de la clause ORDER BY.</span><span class="sxs-lookup"><span data-stu-id="6139d-103">You can perform physical paging by using the SKIP sub-clause in the ORDER BY clause.</span></span> <span data-ttu-id="6139d-104">La sous-clause SKIP ne peut pas être utilisée séparément de la clause ORDER BY.</span><span class="sxs-lookup"><span data-stu-id="6139d-104">SKIP cannot be used separately from the ORDER BY clause.</span></span>  
