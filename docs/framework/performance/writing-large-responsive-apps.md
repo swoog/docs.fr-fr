@@ -9,6 +9,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457553"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a><span data-ttu-id="cbf44-102">Conception d'applications .NET Framework complexes et réactives</span><span class="sxs-lookup"><span data-stu-id="cbf44-102">Writing Large, Responsive .NET Framework Apps</span></span>
 <span data-ttu-id="cbf44-103">Cet article fournit des conseils pour améliorer les performances d'applications .NET Framework volumineuses ou d'applications qui traitent de grandes quantités de données, telles que des fichiers ou des bases de données.</span><span class="sxs-lookup"><span data-stu-id="cbf44-103">This article provides tips for improving the performance of large .NET Framework apps, or apps that process a large amount of data such as files or databases.</span></span> <span data-ttu-id="cbf44-104">Ces conseils proviennent de la réécriture des compilateurs C# et Visual Basic en code managé, et cet article inclut plusieurs exemples réels issus du compilateur C#.</span><span class="sxs-lookup"><span data-stu-id="cbf44-104">These tips come from rewriting the C# and Visual Basic compilers in managed code, and this article includes several real examples from the C# compiler.</span></span>  

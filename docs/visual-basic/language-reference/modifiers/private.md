@@ -12,6 +12,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34234553"
 ---
 # <a name="private-visual-basic"></a><span data-ttu-id="a2fb2-102">Private (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a2fb2-102">Private (Visual Basic)</span></span>
 <span data-ttu-id="a2fb2-103">Spécifie qu’un ou plusieurs éléments de programmation déclarés sont accessibles uniquement à partir de leur contexte de déclaration, y compris à partir des types contenus.</span><span class="sxs-lookup"><span data-stu-id="a2fb2-103">Specifies that one or more declared programming elements are accessible only from within their declaration context, including from within any contained types.</span></span>  

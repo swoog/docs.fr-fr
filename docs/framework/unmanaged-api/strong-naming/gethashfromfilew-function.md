@@ -1,14 +1,6 @@
 ---
 title: GetHashFromFileW, fonction
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - GetHashFromFileW
 api_location:
@@ -22,24 +14,21 @@ helpviewer_keywords:
 ms.assetid: 97c2d7a6-5376-45a1-ba65-146a249147cc
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d7d62526a6ac9bb06a7de8287c9687933402bfb8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 00ee1139b4b8340a73740117b74208a6a1f6b639
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461589"
 ---
-# <a name="gethashfromfilew-function"></a><span data-ttu-id="4ab4a-102">GetHashFromFileW, fonction</span><span class="sxs-lookup"><span data-stu-id="4ab4a-102">GetHashFromFileW Function</span></span>
-<span data-ttu-id="4ab4a-103">Génère un hachage sur le contenu du fichier spécifié par une chaîne Unicode.</span><span class="sxs-lookup"><span data-stu-id="4ab4a-103">Generates a hash over the contents of the file specified by a Unicode string.</span></span>  
+# <a name="gethashfromfilew-function"></a><span data-ttu-id="4fcef-102">GetHashFromFileW, fonction</span><span class="sxs-lookup"><span data-stu-id="4fcef-102">GetHashFromFileW Function</span></span>
+<span data-ttu-id="4fcef-103">Génère un hachage sur le contenu du fichier spécifié par une chaîne Unicode.</span><span class="sxs-lookup"><span data-stu-id="4fcef-103">Generates a hash over the contents of the file specified by a Unicode string.</span></span>  
   
- <span data-ttu-id="4ab4a-104">Cette fonction est déconseillée.</span><span class="sxs-lookup"><span data-stu-id="4ab4a-104">This function has been deprecated.</span></span> <span data-ttu-id="4ab4a-105">Utilisez le [ICLRStrongName::GetHashFromFileW](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md) méthode à la place.</span><span class="sxs-lookup"><span data-stu-id="4ab4a-105">Use the [ICLRStrongName::GetHashFromFileW](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md) method instead.</span></span>  
+ <span data-ttu-id="4fcef-104">Cette fonction est déconseillée.</span><span class="sxs-lookup"><span data-stu-id="4fcef-104">This function has been deprecated.</span></span> <span data-ttu-id="4fcef-105">Utilisez le [ICLRStrongName::GetHashFromFileW](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md) méthode à la place.</span><span class="sxs-lookup"><span data-stu-id="4fcef-105">Use the [ICLRStrongName::GetHashFromFileW](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md) method instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4ab4a-106">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="4ab4a-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4fcef-106">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="4fcef-106">Syntax</span></span>  
   
 ```  
 HRESULT GetHashFromFileW (   
@@ -51,35 +40,35 @@ HRESULT GetHashFromFileW (
 );   
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="4ab4a-107">Paramètres</span><span class="sxs-lookup"><span data-stu-id="4ab4a-107">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="4fcef-107">Paramètres</span><span class="sxs-lookup"><span data-stu-id="4fcef-107">Parameters</span></span>  
  `wszFilePath`  
- <span data-ttu-id="4ab4a-108">[in] Le nom Unicode du fichier à hacher.</span><span class="sxs-lookup"><span data-stu-id="4ab4a-108">[in] The Unicode name of the file to hash.</span></span>  
+ <span data-ttu-id="4fcef-108">[in] Le nom Unicode du fichier à hacher.</span><span class="sxs-lookup"><span data-stu-id="4fcef-108">[in] The Unicode name of the file to hash.</span></span>  
   
  `piHashAlg`  
- <span data-ttu-id="4ab4a-109">[dans, out] L’algorithme à utiliser lors de la génération du hachage.</span><span class="sxs-lookup"><span data-stu-id="4ab4a-109">[in, out] The algorithm to use when generating the hash.</span></span> <span data-ttu-id="4ab4a-110">Les algorithmes valides sont ceux définis par le CryptoAPI Win32.</span><span class="sxs-lookup"><span data-stu-id="4ab4a-110">Valid algorithms are those defined by the Win32 CryptoAPI.</span></span> <span data-ttu-id="4ab4a-111">Si `piHashAlg` est définie sur 0, l’algorithme par défaut CALG_SHA-1 est utilisé.</span><span class="sxs-lookup"><span data-stu-id="4ab4a-111">If `piHashAlg` is set to 0, the default algorithm CALG_SHA-1 is used.</span></span>  
+ <span data-ttu-id="4fcef-109">[dans, out] L’algorithme à utiliser lors de la génération du hachage.</span><span class="sxs-lookup"><span data-stu-id="4fcef-109">[in, out] The algorithm to use when generating the hash.</span></span> <span data-ttu-id="4fcef-110">Les algorithmes valides sont ceux définis par le CryptoAPI Win32.</span><span class="sxs-lookup"><span data-stu-id="4fcef-110">Valid algorithms are those defined by the Win32 CryptoAPI.</span></span> <span data-ttu-id="4fcef-111">Si `piHashAlg` est définie sur 0, l’algorithme par défaut CALG_SHA-1 est utilisé.</span><span class="sxs-lookup"><span data-stu-id="4fcef-111">If `piHashAlg` is set to 0, the default algorithm CALG_SHA-1 is used.</span></span>  
   
  `pbHash`  
- <span data-ttu-id="4ab4a-112">[out] Tableau d’octets contenant le hachage généré.</span><span class="sxs-lookup"><span data-stu-id="4ab4a-112">[out] A byte array containing the generated hash.</span></span>  
+ <span data-ttu-id="4fcef-112">[out] Tableau d’octets contenant le hachage généré.</span><span class="sxs-lookup"><span data-stu-id="4fcef-112">[out] A byte array containing the generated hash.</span></span>  
   
  `cchHash`  
- <span data-ttu-id="4ab4a-113">[in] La taille maximale de la mémoire tampon pointée par `pbHash`.</span><span class="sxs-lookup"><span data-stu-id="4ab4a-113">[in] The maximum size of the buffer pointed to by `pbHash`.</span></span>  
+ <span data-ttu-id="4fcef-113">[in] La taille maximale de la mémoire tampon pointée par `pbHash`.</span><span class="sxs-lookup"><span data-stu-id="4fcef-113">[in] The maximum size of the buffer pointed to by `pbHash`.</span></span>  
   
  `pchHash`  
- <span data-ttu-id="4ab4a-114">[out] La taille, en octets, de `pbHash`.</span><span class="sxs-lookup"><span data-stu-id="4ab4a-114">[out] The size, in bytes, of `pbHash`.</span></span>  
+ <span data-ttu-id="4fcef-114">[out] La taille, en octets, de `pbHash`.</span><span class="sxs-lookup"><span data-stu-id="4fcef-114">[out] The size, in bytes, of `pbHash`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="4ab4a-115">Notes</span><span class="sxs-lookup"><span data-stu-id="4ab4a-115">Remarks</span></span>  
- <span data-ttu-id="4ab4a-116">Cette fonction est identique à [GetHashFromFile](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromfile-function.md), sauf que la spécification de nom de fichier est au format Unicode et non ANSI.</span><span class="sxs-lookup"><span data-stu-id="4ab4a-116">This function is the same as [GetHashFromFile](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromfile-function.md), except that the file name specification is Unicode instead of ANSI.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4fcef-115">Notes</span><span class="sxs-lookup"><span data-stu-id="4fcef-115">Remarks</span></span>  
+ <span data-ttu-id="4fcef-116">Cette fonction est identique à [GetHashFromFile](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromfile-function.md), sauf que la spécification de nom de fichier est au format Unicode et non ANSI.</span><span class="sxs-lookup"><span data-stu-id="4fcef-116">This function is the same as [GetHashFromFile](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromfile-function.md), except that the file name specification is Unicode instead of ANSI.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4ab4a-117">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="4ab4a-117">Requirements</span></span>  
- <span data-ttu-id="4ab4a-118">**Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4ab4a-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4fcef-117">Spécifications</span><span class="sxs-lookup"><span data-stu-id="4fcef-117">Requirements</span></span>  
+ <span data-ttu-id="4fcef-118">**Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4fcef-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4ab4a-119">**En-tête :** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="4ab4a-119">**Header:** StrongName.h</span></span>  
+ <span data-ttu-id="4fcef-119">**En-tête :** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="4fcef-119">**Header:** StrongName.h</span></span>  
   
- <span data-ttu-id="4ab4a-120">**Bibliothèque :** inclus en tant que ressource dans MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="4ab4a-120">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="4fcef-120">**Bibliothèque :** inclus en tant que ressource dans MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="4fcef-120">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="4ab4a-121">**Versions du .NET framework :**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4ab4a-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="4fcef-121">**Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4fcef-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4ab4a-122">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="4ab4a-122">See Also</span></span>  
- [<span data-ttu-id="4ab4a-123">GetHashFromFileW, méthode</span><span class="sxs-lookup"><span data-stu-id="4ab4a-123">GetHashFromFileW Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md)  
- [<span data-ttu-id="4ab4a-124">GetHashFromFile, méthode</span><span class="sxs-lookup"><span data-stu-id="4ab4a-124">GetHashFromFile Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfile-method.md)  
- [<span data-ttu-id="4ab4a-125">ICLRStrongName, interface</span><span class="sxs-lookup"><span data-stu-id="4ab4a-125">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="4fcef-122">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="4fcef-122">See Also</span></span>  
+ [<span data-ttu-id="4fcef-123">GetHashFromFileW, méthode</span><span class="sxs-lookup"><span data-stu-id="4fcef-123">GetHashFromFileW Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md)  
+ [<span data-ttu-id="4fcef-124">GetHashFromFile, méthode</span><span class="sxs-lookup"><span data-stu-id="4fcef-124">GetHashFromFile Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfile-method.md)  
+ [<span data-ttu-id="4fcef-125">ICLRStrongName, interface</span><span class="sxs-lookup"><span data-stu-id="4fcef-125">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

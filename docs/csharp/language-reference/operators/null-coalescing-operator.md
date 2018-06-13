@@ -13,6 +13,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34458099"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="27bb8-103">??</span><span class="sxs-lookup"><span data-stu-id="27bb8-103">??</span></span> <span data-ttu-id="27bb8-104">, opérateur (Informations de référence sur C#)</span><span class="sxs-lookup"><span data-stu-id="27bb8-104">Operator (C# Reference)</span></span>
 <span data-ttu-id="27bb8-105">L'opérateur `??` est appelé l'l'opérateur de fusion Null.</span><span class="sxs-lookup"><span data-stu-id="27bb8-105">The `??` operator is called the null-coalescing operator.</span></span>  <span data-ttu-id="27bb8-106">Il retourne l’opérande de partie gauche si ce dernier n’est pas Null ; dans le cas contraire, il retourne l’opérande de partie droite.</span><span class="sxs-lookup"><span data-stu-id="27bb8-106">It returns the left-hand operand if the operand is not null; otherwise it returns the right hand operand.</span></span>  
