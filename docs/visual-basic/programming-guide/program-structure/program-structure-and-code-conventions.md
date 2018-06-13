@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654940"
 ---
 # <a name="program-structure-and-code-conventions-visual-basic"></a>Structure de programme et conventions de codage (Visual Basic)
 Cette section présente la structure de programme Visual Basic classique, offre un programme Visual Basic simple, « Hello, World » et décrit les conventions de code Visual Basic. Conventions de code sont des suggestions qui reposent pas sur la logique d’un programme mais sur sa structure physique et son apparence. Suivant les rend plus faciles à lire, comprendre et gérer votre code. Conventions de code incluent, entre autres :  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636713"
 ---
 # <a name="one-or-more-folders-in-the-target-path-do-not-exist"></a>Un ou plusieurs dossiers dans le chemin d’accès cible n’existent pas
 Un ou plusieurs des répertoires fournis dans le chemin cible n’existent pas. Cela peut être dû à l’analyse incorrecte d’un chemin, surtout si vous fournissez un chemin relatif.  

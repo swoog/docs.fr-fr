@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636726"
 ---
 # <a name="managed-classes-derived-from-a-com-class-cannot-be-called-late-bound"></a>Les classes managées dérivées d’une classe COM ne peuvent pas être appelées à liaison tardive
 Vous avez tenté d’effectuer un appel à liaison tardive vers une classe managée dérivée d’une classe COM. Ces appels ne sont pas pris en charge.  

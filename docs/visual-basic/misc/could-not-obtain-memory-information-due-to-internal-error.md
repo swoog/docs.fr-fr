@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635833"
 ---
 # <a name="could-not-obtain-memory-information-due-to-internal-error"></a>Impossible d’obtenir des informations sur la mémoire en raison d’une erreur interne
 Un appel à l’une des propriétés d’informations sur la mémoire de l’objet `My.Computer.Info` a échoué.  

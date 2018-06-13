@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656085"
 ---
 # <a name="property-procedures-visual-basic"></a>Procédures de propriété (Visual Basic)
 Une procédure de propriété est une série d’instructions Visual Basic qui manipulent une propriété personnalisée d’un module, classe ou structure. Procédures de propriété sont également appelés *les accesseurs de propriété*.  

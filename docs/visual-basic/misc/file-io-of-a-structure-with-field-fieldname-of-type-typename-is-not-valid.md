@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33634925"
 ---
 # <a name="file-io-of-a-structure-with-field-39ltfieldnamegt39-of-type-39lttypenamegt39-is-not-valid"></a>Fichier e/s d’une structure avec un champ &#39; &lt;fieldname&gt; &#39; de type &#39; &lt;typename&gt; &#39; n’est pas valide
 La structure que vous tentez d’écrire dans un fichier contient un type non pris en charge.  

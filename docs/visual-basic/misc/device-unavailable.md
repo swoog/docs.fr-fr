@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33634844"
 ---
 # <a name="device-unavailable"></a>Périphérique non disponible
 Soit vous avez perdu votre connexion réseau, soit l’appareil auquel vous essayez d’accéder est hors connexion ou n’existe pas.  
