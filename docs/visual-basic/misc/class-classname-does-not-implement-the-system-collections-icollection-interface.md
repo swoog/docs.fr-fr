@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637385"
 ---
 # <a name="class-39ltclassnamegt39-does-not-implement-the-systemcollectionsicollection-interface"></a>Classe &#39; &lt;classname&gt; &#39; n’implémente pas l’interface System.Collections.ICollection
 La classe n’implémente pas l’interface `System.Collections.ICollection` , qui définit la taille, les énumérateurs et les méthodes de synchronisation de toutes les collections. Il peut être nécessaire de réinstaller Visual Studio.  

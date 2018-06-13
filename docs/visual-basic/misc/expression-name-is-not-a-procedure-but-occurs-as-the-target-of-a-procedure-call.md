@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637610"
 ---
 # <a name="expression-39ltnamegt39-is-not-a-procedure-but-occurs-as-the-target-of-a-procedure-call"></a>Expression &#39; &lt;nom&gt; &#39; n’est pas une procédure, mais se produit comme cible d’un appel de procédure
 Vous avez effectué un appel de procédure vers une expression qui n’est pas une procédure.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638374"
 ---
 # <a name="class-not-registered-on-local-machine"></a>La classe n’est pas inscrite sur l’ordinateur local.
 Cette erreur est généralement due à un fichier endommagé. Vous devrez peut-être réinstaller Visual Studio.  

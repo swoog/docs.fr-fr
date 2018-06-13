@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639446"
 ---
 # <a name="specified-registry-key-is-not-valid-because-it-contains-two-or-more-consecutive-backslashes"></a>La clé de Registre spécifiée n’est pas valide car elle contient au moins deux barres obliques inverses consécutives
 Une clé de Registre spécifiée avec un chemin contient au moins deux barres obliques inverses consécutives. Cela peut être dû à la combinaison de plusieurs chaînes pour former le chemin et à l’ajout involontaire d’un trop grand nombre de barres obliques inverses.  

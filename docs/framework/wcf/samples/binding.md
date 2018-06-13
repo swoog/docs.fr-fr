@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803564"
 ---
 # <a name="binding"></a>Liaison
 Cette section contient des exemples qui illustrent l’utilisation de l’attribut de liaison d’un élément de point de terminaison.  

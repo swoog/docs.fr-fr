@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637317"
 ---
 # <a name="no-method-39ltmethodnamegt39-can-accept-an-argument-of-type-39lttypenamegt39-for-parameter-39ltparameternamegt39"></a>Aucune méthode &#39; &lt;methodname&gt; &#39; peut accepter un argument de type &#39; &lt;typename&gt; &#39; pour le paramètre &#39; &lt;nom_paramètre&gt;&#39;
 Un appel de méthode contient un argument d’un type qui n’est pas valide.  

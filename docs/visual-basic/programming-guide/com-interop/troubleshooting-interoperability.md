@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643703"
 ---
 # <a name="troubleshooting-interoperability-visual-basic"></a>Dépannage des problèmes liés à l'interopérabilité (Visual Basic)
 Lorsque vous interagissez entre COM et le code managé de la [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], vous pouvez rencontrer un ou plusieurs des problèmes courants suivants.  
