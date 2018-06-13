@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767399"
 ---
 # <a name="navigation-property"></a><span data-ttu-id="37839-102">propriété de navigation</span><span class="sxs-lookup"><span data-stu-id="37839-102">navigation property</span></span>
 <span data-ttu-id="37839-103">A *propriété de navigation* est une propriété facultative sur un [type d’entité](../../../../docs/framework/data/adonet/entity-type.md) qui permet de naviguer d’une [fin](../../../../docs/framework/data/adonet/association-end.md) d’un [association](../../../../docs/framework/data/adonet/association-type.md) à l’autre extrémité.</span><span class="sxs-lookup"><span data-stu-id="37839-103">A *navigation property* is an optional property on an [entity type](../../../../docs/framework/data/adonet/entity-type.md) that allows for navigation from one [end](../../../../docs/framework/data/adonet/association-end.md) of an [association](../../../../docs/framework/data/adonet/association-type.md) to the other end.</span></span> <span data-ttu-id="37839-104">Contrairement à d’autres [propriétés](../../../../docs/framework/data/adonet/property.md), les propriétés de navigation n’acheminent pas de données.</span><span class="sxs-lookup"><span data-stu-id="37839-104">Unlike other [properties](../../../../docs/framework/data/adonet/property.md), navigation properties do not carry data.</span></span>  

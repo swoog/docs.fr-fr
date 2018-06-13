@@ -1,47 +1,34 @@
 ---
 title: Intégration d'AJAX et prise en charge de JSON
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - AJAX integration and JSON support [WCF]
 ms.assetid: 3851a8fc-d861-4ac1-873c-96af0343d3a7
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0d62da8cf67fb8f996f341018c39146b51e308c3
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 0b392044db3fbc926bf77ac305ece294880216d9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488827"
 ---
-# <a name="ajax-integration-and-json-support"></a><span data-ttu-id="3fe28-102">Intégration d'AJAX et prise en charge de JSON</span><span class="sxs-lookup"><span data-stu-id="3fe28-102">AJAX Integration and JSON Support</span></span>
-<span data-ttu-id="3fe28-103">La prise en charge [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] pour ASP.NET AJAX (Asynchronous JavaScript and XML) et le format de données JSON (JavaScript Object Notation) permet aux services [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] d'exposer des opérations aux clients AJAX.</span><span class="sxs-lookup"><span data-stu-id="3fe28-103">The [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] support for ASP.NET Asynchronous JavaScript and XML (AJAX) and the JavaScript Object Notation (JSON) data format allow [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services to expose operations to AJAX clients.</span></span> <span data-ttu-id="3fe28-104">Les clients AJAX sont les pages Web qui exécutent le code JavaScript et accèdent à ces services [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] à l'aide de demandes HTTP.</span><span class="sxs-lookup"><span data-stu-id="3fe28-104">AJAX clients are Web pages running JavaScript code and accessing these [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services using HTTP requests.</span></span> <span data-ttu-id="3fe28-105">Les rubriques de cette section fournissent des informations sur cette prise en charge et sur la manière de l'implémenter.</span><span class="sxs-lookup"><span data-stu-id="3fe28-105">The topics in this section provide information about this support and about how to implement it.</span></span>  
+# <a name="ajax-integration-and-json-support"></a><span data-ttu-id="6be4d-102">Intégration d'AJAX et prise en charge de JSON</span><span class="sxs-lookup"><span data-stu-id="6be4d-102">AJAX Integration and JSON Support</span></span>
+<span data-ttu-id="6be4d-103">La prise en charge de Windows Communication Foundation (WCF) pour ASP.NET Asynchronous JavaScript and XML (AJAX) et le format de données JavaScript Objet Notation (JSON) permettent d’exposer des opérations aux clients AJAX, les services WCF.</span><span class="sxs-lookup"><span data-stu-id="6be4d-103">The Windows Communication Foundation (WCF) support for ASP.NET Asynchronous JavaScript and XML (AJAX) and the JavaScript Object Notation (JSON) data format allow WCF services to expose operations to AJAX clients.</span></span> <span data-ttu-id="6be4d-104">Les clients AJAX sont les pages Web en cours d’exécution du code JavaScript et l’accès à ces services WCF à l’aide de requêtes HTTP.</span><span class="sxs-lookup"><span data-stu-id="6be4d-104">AJAX clients are Web pages running JavaScript code and accessing these WCF services using HTTP requests.</span></span> <span data-ttu-id="6be4d-105">Les rubriques de cette section fournissent des informations sur cette prise en charge et sur la manière de l'implémenter.</span><span class="sxs-lookup"><span data-stu-id="6be4d-105">The topics in this section provide information about this support and about how to implement it.</span></span>  
   
- <span data-ttu-id="3fe28-106">Pour plus d’informations sur ASP.NET AJAX et son intégration avec ASP.NET 2.0, consultez [vue d’ensemble de ASP.NET AJAX](http://go.microsoft.com/fwlink/?LinkId=96725).</span><span class="sxs-lookup"><span data-stu-id="3fe28-106">For more information about ASP.NET AJAX and its integration with ASP.NET 2.0, see [ASP.NET AJAX Overview](http://go.microsoft.com/fwlink/?LinkId=96725).</span></span>  
+ <span data-ttu-id="6be4d-106">Pour plus d’informations sur ASP.NET AJAX et son intégration avec ASP.NET 2.0, consultez [vue d’ensemble de ASP.NET AJAX](http://go.microsoft.com/fwlink/?LinkId=96725).</span><span class="sxs-lookup"><span data-stu-id="6be4d-106">For more information about ASP.NET AJAX and its integration with ASP.NET 2.0, see [ASP.NET AJAX Overview](http://go.microsoft.com/fwlink/?LinkId=96725).</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="3fe28-107">Dans cette section</span><span class="sxs-lookup"><span data-stu-id="3fe28-107">In This Section</span></span>  
- [<span data-ttu-id="3fe28-108">Création de services WCF pour ASP.NET AJAX</span><span class="sxs-lookup"><span data-stu-id="3fe28-108">Creating WCF Services for ASP.NET AJAX</span></span>](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md)  
- <span data-ttu-id="3fe28-109">Décrit comment un service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] peut être exposé aux clients AJAX en ajoutant le point de terminaison AJAX approprié par le biais de la configuration ou à l'aide d'une fabrique de l'hôte de service personnalisé pour générer un hôte de service qui configure automatiquement le point de terminaison AJAX.</span><span class="sxs-lookup"><span data-stu-id="3fe28-109">Describes how an [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service can be exposed to AJAX clients by adding the appropriate AJAX endpoint either through configuration or by using a service host factory customized to generate a service host that configures the AJAX endpoint automatically.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="6be4d-107">Dans cette section</span><span class="sxs-lookup"><span data-stu-id="6be4d-107">In This Section</span></span>  
+ [<span data-ttu-id="6be4d-108">Création de services WCF pour ASP.NET AJAX</span><span class="sxs-lookup"><span data-stu-id="6be4d-108">Creating WCF Services for ASP.NET AJAX</span></span>](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md)  
+ <span data-ttu-id="6be4d-109">Décrit comment un service WCF peut être exposé aux clients AJAX en ajoutant le point de terminaison AJAX approprié soit via la configuration ou à l’aide d’une fabrique d’hôte de service personnalisée pour générer un hôte de service qui configure le point de terminaison AJAX automatiquement.</span><span class="sxs-lookup"><span data-stu-id="6be4d-109">Describes how an WCF service can be exposed to AJAX clients by adding the appropriate AJAX endpoint either through configuration or by using a service host factory customized to generate a service host that configures the AJAX endpoint automatically.</span></span>  
   
- [<span data-ttu-id="3fe28-110">Création de services WCF AJAX sans ASP.NET</span><span class="sxs-lookup"><span data-stu-id="3fe28-110">Creating WCF AJAX Services without ASP.NET</span></span>](../../../../docs/framework/wcf/feature-details/creating-wcf-ajax-services-without-aspnet.md)  
- <span data-ttu-id="3fe28-111">Décrit comment créer un service [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sans utiliser ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="3fe28-111">Describes how to create an [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service without using ASP.NET.</span></span>  
+ [<span data-ttu-id="6be4d-110">Création de services WCF AJAX sans ASP.NET</span><span class="sxs-lookup"><span data-stu-id="6be4d-110">Creating WCF AJAX Services without ASP.NET</span></span>](../../../../docs/framework/wcf/feature-details/creating-wcf-ajax-services-without-aspnet.md)  
+ <span data-ttu-id="6be4d-111">Décrit comment créer un service WCF sans l’aide d’ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="6be4d-111">Describes how to create an WCF service without using ASP.NET.</span></span>  
   
- [<span data-ttu-id="3fe28-112">Prise en charge du format JSON et d’autres formats de transfert de données</span><span class="sxs-lookup"><span data-stu-id="3fe28-112">Support for JSON and Other Data Transfer Formats</span></span>](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)  
- <span data-ttu-id="3fe28-113">Décrit la prise en charge du format JSON utilisé en général (à la place de XML) pour la messagerie avec les services ASP.NET AJAX.</span><span class="sxs-lookup"><span data-stu-id="3fe28-113">Describes the support of the JSON format typically used (instead of XML) for messaging with ASP.NET AJAX services.</span></span>  
+ [<span data-ttu-id="6be4d-112">Prise en charge du format JSON et d’autres formats de transfert de données</span><span class="sxs-lookup"><span data-stu-id="6be4d-112">Support for JSON and Other Data Transfer Formats</span></span>](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)  
+ <span data-ttu-id="6be4d-113">Décrit la prise en charge du format JSON utilisé en général (à la place de XML) pour la messagerie avec les services ASP.NET AJAX.</span><span class="sxs-lookup"><span data-stu-id="6be4d-113">Describes the support of the JSON format typically used (instead of XML) for messaging with ASP.NET AJAX services.</span></span>  
   
- [<span data-ttu-id="3fe28-114">Guide pratique pour migrer des services web ASP.NET compatibles AJAX vers WCF</span><span class="sxs-lookup"><span data-stu-id="3fe28-114">How to: Migrate AJAX-Enabled ASP.NET Web Services to WCF</span></span>](../../../../docs/framework/wcf/feature-details/how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)  
- <span data-ttu-id="3fe28-115">Explique comment migrer un service Web ASP.NET compatible AJAX vers un service Web [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3fe28-115">Describes how to migrate an AJAX-enabled ASP.NET Web service to a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Web service.</span></span>  
+ [<span data-ttu-id="6be4d-114">Guide pratique pour migrer des services web ASP.NET compatibles AJAX vers WCF</span><span class="sxs-lookup"><span data-stu-id="6be4d-114">How to: Migrate AJAX-Enabled ASP.NET Web Services to WCF</span></span>](../../../../docs/framework/wcf/feature-details/how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)  
+ <span data-ttu-id="6be4d-115">Décrit comment migrer un service Web ASP.NET compatible AJAX à un service Web WCF.</span><span class="sxs-lookup"><span data-stu-id="6be4d-115">Describes how to migrate an AJAX-enabled ASP.NET Web service to a WCF Web service.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3fe28-116">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="3fe28-116">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="6be4d-116">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="6be4d-116">See Also</span></span>  
  <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>  
- [<span data-ttu-id="3fe28-117">Modèle de programmation HTTP web WCF</span><span class="sxs-lookup"><span data-stu-id="3fe28-117">WCF Web HTTP Programming Model</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+ [<span data-ttu-id="6be4d-117">Modèle de programmation HTTP web WCF</span><span class="sxs-lookup"><span data-stu-id="6be4d-117">WCF Web HTTP Programming Model</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

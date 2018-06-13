@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767139"
 ---
 # <a name="provider-manifest-specification"></a><span data-ttu-id="0fe9c-102">Spécification de manifeste du fournisseur</span><span class="sxs-lookup"><span data-stu-id="0fe9c-102">Provider Manifest Specification</span></span>
 <span data-ttu-id="0fe9c-103">Cette section explique comment un fournisseur de banques de données peut prendre en charge les types et les fonctions dans la banque de données.</span><span class="sxs-lookup"><span data-stu-id="0fe9c-103">This section discusses how a data store provider can support the types and functions in the data store.</span></span>  

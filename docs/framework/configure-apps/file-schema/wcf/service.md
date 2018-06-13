@@ -7,6 +7,7 @@ ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/11/2018
+ms.locfileid: "34059028"
 ---
 # <a name="ltservicegt"></a><span data-ttu-id="0ab12-102">&lt;Service&gt;</span><span class="sxs-lookup"><span data-stu-id="0ab12-102">&lt;service&gt;</span></span>
 <span data-ttu-id="0ab12-103">L'élément `service` contient les paramètres d'un service Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="0ab12-103">The `service` element contains the settings for a Windows Communication Foundation (WCF) service.</span></span> <span data-ttu-id="0ab12-104">Il contient également les points de terminaison qui exposent le service.</span><span class="sxs-lookup"><span data-stu-id="0ab12-104">It also contains endpoints that expose the service.</span></span>  

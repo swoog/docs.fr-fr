@@ -14,6 +14,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33955964"
 ---
 # <a name="event-c-reference"></a><span data-ttu-id="ee91e-102">event (référence C#)</span><span class="sxs-lookup"><span data-stu-id="ee91e-102">event (C# Reference)</span></span>
 <span data-ttu-id="ee91e-103">Le mot clé `event` sert à déclarer un événement dans une classe d’éditeur.</span><span class="sxs-lookup"><span data-stu-id="ee91e-103">The `event` keyword is used to declare an event in a publisher class.</span></span>  
