@@ -1,14 +1,6 @@
 ---
-title: "IMetaDataEmit::SetClassLayout, méthode"
-ms.custom: 
+title: IMetaDataEmit::SetClassLayout, méthode
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataEmit.SetClassLayout
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: 2576c449-388d-4434-a0e1-9f53991e11b6
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e0c02e615bf77a2cc9136b50efd7395585959141
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: e22cf8e540bfdb53ad243640dac110b5750e53e7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449119"
 ---
-# <a name="imetadataemitsetclasslayout-method"></a><span data-ttu-id="ce4b4-102">IMetaDataEmit::SetClassLayout, méthode</span><span class="sxs-lookup"><span data-stu-id="ce4b4-102">IMetaDataEmit::SetClassLayout Method</span></span>
-<span data-ttu-id="ce4b4-103">Exécute la disposition des champs d’une classe qui a été défini par un appel antérieur à [DefineTypeDef, méthode](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).</span><span class="sxs-lookup"><span data-stu-id="ce4b4-103">Completes the layout of fields for a class that has been defined by a prior call to [DefineTypeDef Method](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).</span></span>  
+# <a name="imetadataemitsetclasslayout-method"></a><span data-ttu-id="62903-102">IMetaDataEmit::SetClassLayout, méthode</span><span class="sxs-lookup"><span data-stu-id="62903-102">IMetaDataEmit::SetClassLayout Method</span></span>
+<span data-ttu-id="62903-103">Exécute la disposition des champs d’une classe qui a été défini par un appel antérieur à [DefineTypeDef, méthode](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).</span><span class="sxs-lookup"><span data-stu-id="62903-103">Completes the layout of fields for a class that has been defined by a prior call to [DefineTypeDef Method](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ce4b4-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="ce4b4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="62903-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="62903-104">Syntax</span></span>  
   
 ```  
 HRESULT SetClassLayout (  
@@ -49,37 +38,37 @@ HRESULT SetClassLayout (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="ce4b4-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="ce4b4-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="62903-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="62903-105">Parameters</span></span>  
  `td`  
- <span data-ttu-id="ce4b4-106">[in] Un `mdTypeDef` jeton qui spécifie la classe doivent être disposées.</span><span class="sxs-lookup"><span data-stu-id="ce4b4-106">[in] An `mdTypeDef` token that specifies the class to be laid out.</span></span>  
+ <span data-ttu-id="62903-106">[in] Un `mdTypeDef` jeton qui spécifie la classe doivent être disposées.</span><span class="sxs-lookup"><span data-stu-id="62903-106">[in] An `mdTypeDef` token that specifies the class to be laid out.</span></span>  
   
  `dwPackSize`  
- <span data-ttu-id="ce4b4-107">[in] La taille de compression : 1, 2, 4, 8 ou 16 octets.</span><span class="sxs-lookup"><span data-stu-id="ce4b4-107">[in] The packing size: 1, 2, 4, 8 or 16 bytes.</span></span> <span data-ttu-id="ce4b4-108">La taille de compression est le nombre d’octets entre des champs adjacents.</span><span class="sxs-lookup"><span data-stu-id="ce4b4-108">The packing size is the number of bytes between adjacent fields.</span></span>  
+ <span data-ttu-id="62903-107">[in] La taille de compression : 1, 2, 4, 8 ou 16 octets.</span><span class="sxs-lookup"><span data-stu-id="62903-107">[in] The packing size: 1, 2, 4, 8 or 16 bytes.</span></span> <span data-ttu-id="62903-108">La taille de compression est le nombre d’octets entre des champs adjacents.</span><span class="sxs-lookup"><span data-stu-id="62903-108">The packing size is the number of bytes between adjacent fields.</span></span>  
   
  `rFieldOffsets`  
- <span data-ttu-id="ce4b4-109">[in] Un tableau de [COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) structures, dont chacun spécifie un champ de la classe et le champ de l’offset dans la classe.</span><span class="sxs-lookup"><span data-stu-id="ce4b4-109">[in] An array of [COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) structures, each of which specifies a field of the class and the field's offset within the class.</span></span> <span data-ttu-id="ce4b4-110">Terminez le tableau avec `mdTokenNil`.</span><span class="sxs-lookup"><span data-stu-id="ce4b4-110">Terminate the array with `mdTokenNil`.</span></span>  
+ <span data-ttu-id="62903-109">[in] Un tableau de [COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) structures, dont chacun spécifie un champ de la classe et le champ de l’offset dans la classe.</span><span class="sxs-lookup"><span data-stu-id="62903-109">[in] An array of [COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) structures, each of which specifies a field of the class and the field's offset within the class.</span></span> <span data-ttu-id="62903-110">Terminez le tableau avec `mdTokenNil`.</span><span class="sxs-lookup"><span data-stu-id="62903-110">Terminate the array with `mdTokenNil`.</span></span>  
   
  `ulClassSize`  
- <span data-ttu-id="ce4b4-111">[in] La taille, en octets, de la classe.</span><span class="sxs-lookup"><span data-stu-id="ce4b4-111">[in] The size, in bytes, of the class.</span></span>  
+ <span data-ttu-id="62903-111">[in] La taille, en octets, de la classe.</span><span class="sxs-lookup"><span data-stu-id="62903-111">[in] The size, in bytes, of the class.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="ce4b4-112">Notes</span><span class="sxs-lookup"><span data-stu-id="ce4b4-112">Remarks</span></span>  
- <span data-ttu-id="ce4b4-113">La classe est définie initialement en appelant le [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md) (méthode) et en spécifiant une des trois dispositions pour les champs de la classe : automatique, séquentielle ou explicite.</span><span class="sxs-lookup"><span data-stu-id="ce4b4-113">The class is initially defined by calling the [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md) method, and specifying one of three layouts for the fields of the class: automatic, sequential, or explicit.</span></span> <span data-ttu-id="ce4b4-114">En règle générale, vous utilisez la disposition automatique et permettre au runtime de choisir la meilleure façon de disposer les champs.</span><span class="sxs-lookup"><span data-stu-id="ce4b4-114">Normally, you would use automatic layout and let the runtime choose the best way to lay out the fields.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="62903-112">Notes</span><span class="sxs-lookup"><span data-stu-id="62903-112">Remarks</span></span>  
+ <span data-ttu-id="62903-113">La classe est définie initialement en appelant le [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md) (méthode) et en spécifiant une des trois dispositions pour les champs de la classe : automatique, séquentielle ou explicite.</span><span class="sxs-lookup"><span data-stu-id="62903-113">The class is initially defined by calling the [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md) method, and specifying one of three layouts for the fields of the class: automatic, sequential, or explicit.</span></span> <span data-ttu-id="62903-114">En règle générale, vous utilisez la disposition automatique et permettre au runtime de choisir la meilleure façon de disposer les champs.</span><span class="sxs-lookup"><span data-stu-id="62903-114">Normally, you would use automatic layout and let the runtime choose the best way to lay out the fields.</span></span>  
   
- <span data-ttu-id="ce4b4-115">Toutefois, vous pourriez les champs présentés en fonction de la disposition de code non managé.</span><span class="sxs-lookup"><span data-stu-id="ce4b4-115">However, you might want the fields laid out according to the arrangement that unmanaged code uses.</span></span> <span data-ttu-id="ce4b4-116">Dans ce cas, choisissez une disposition séquentielle ou explicite et appelez `SetClassLayout` pour terminer la disposition des champs :</span><span class="sxs-lookup"><span data-stu-id="ce4b4-116">In this case, choose either sequential or explicit layout and call `SetClassLayout` to complete the layout of the fields:</span></span>  
+ <span data-ttu-id="62903-115">Toutefois, vous pourriez les champs présentés en fonction de la disposition de code non managé.</span><span class="sxs-lookup"><span data-stu-id="62903-115">However, you might want the fields laid out according to the arrangement that unmanaged code uses.</span></span> <span data-ttu-id="62903-116">Dans ce cas, choisissez une disposition séquentielle ou explicite et appelez `SetClassLayout` pour terminer la disposition des champs :</span><span class="sxs-lookup"><span data-stu-id="62903-116">In this case, choose either sequential or explicit layout and call `SetClassLayout` to complete the layout of the fields:</span></span>  
   
--   <span data-ttu-id="ce4b4-117">Une disposition séquentielle : spécifiez la taille de compression.</span><span class="sxs-lookup"><span data-stu-id="ce4b4-117">Sequential layout: Specify the packing size.</span></span> <span data-ttu-id="ce4b4-118">Un champ est aligné en fonction de sa taille naturelle ou la taille de compression, selon que le résultat dans le plus petit décalage du champ.</span><span class="sxs-lookup"><span data-stu-id="ce4b4-118">A field is aligned according to either its natural size or the packing size, whichever results in the smaller offset of the field.</span></span> <span data-ttu-id="ce4b4-119">Définissez `rFieldOffsets` et `ulClassSize` à zéro.</span><span class="sxs-lookup"><span data-stu-id="ce4b4-119">Set `rFieldOffsets` and `ulClassSize` to zero.</span></span>  
+-   <span data-ttu-id="62903-117">Une disposition séquentielle : spécifiez la taille de compression.</span><span class="sxs-lookup"><span data-stu-id="62903-117">Sequential layout: Specify the packing size.</span></span> <span data-ttu-id="62903-118">Un champ est aligné en fonction de sa taille naturelle ou la taille de compression, selon que le résultat dans le plus petit décalage du champ.</span><span class="sxs-lookup"><span data-stu-id="62903-118">A field is aligned according to either its natural size or the packing size, whichever results in the smaller offset of the field.</span></span> <span data-ttu-id="62903-119">Définissez `rFieldOffsets` et `ulClassSize` à zéro.</span><span class="sxs-lookup"><span data-stu-id="62903-119">Set `rFieldOffsets` and `ulClassSize` to zero.</span></span>  
   
--   <span data-ttu-id="ce4b4-120">Une disposition explicite : spécifiez le décalage de chaque champ ou spécifier la taille de la classe et la taille de compression.</span><span class="sxs-lookup"><span data-stu-id="ce4b4-120">Explicit layout: Either specify the offset of each field or specify the class size and the packing size.</span></span>  
+-   <span data-ttu-id="62903-120">Une disposition explicite : spécifiez le décalage de chaque champ ou spécifier la taille de la classe et la taille de compression.</span><span class="sxs-lookup"><span data-stu-id="62903-120">Explicit layout: Either specify the offset of each field or specify the class size and the packing size.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ce4b4-121">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="ce4b4-121">Requirements</span></span>  
- <span data-ttu-id="ce4b4-122">**Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ce4b4-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="62903-121">Spécifications</span><span class="sxs-lookup"><span data-stu-id="62903-121">Requirements</span></span>  
+ <span data-ttu-id="62903-122">**Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="62903-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ce4b4-123">**En-tête :** Cor.h</span><span class="sxs-lookup"><span data-stu-id="ce4b4-123">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="62903-123">**En-tête :** Cor.h</span><span class="sxs-lookup"><span data-stu-id="62903-123">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="ce4b4-124">**Bibliothèque :** utilisé en tant que ressource dans MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="ce4b4-124">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="62903-124">**Bibliothèque :** utilisé en tant que ressource dans MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="62903-124">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="ce4b4-125">**Versions du .NET framework :**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ce4b4-125">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="62903-125">**Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="62903-125">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ce4b4-126">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="ce4b4-126">See Also</span></span>  
- [<span data-ttu-id="ce4b4-127">IMetaDataEmit, interface</span><span class="sxs-lookup"><span data-stu-id="ce4b4-127">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [<span data-ttu-id="ce4b4-128">IMetaDataEmit2, interface</span><span class="sxs-lookup"><span data-stu-id="ce4b4-128">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="62903-126">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="62903-126">See Also</span></span>  
+ [<span data-ttu-id="62903-127">IMetaDataEmit, interface</span><span class="sxs-lookup"><span data-stu-id="62903-127">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
+ [<span data-ttu-id="62903-128">IMetaDataEmit2, interface</span><span class="sxs-lookup"><span data-stu-id="62903-128">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

@@ -9,6 +9,7 @@ ms.sourcegitcommit: c03eef711abe961a85db2b4d0715257d1524aef6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33848500"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a><span data-ttu-id="b2b88-103">Création d’un microservice CRUD simple piloté par les données</span><span class="sxs-lookup"><span data-stu-id="b2b88-103">Creating a simple data-driven CRUD microservice</span></span>
 
