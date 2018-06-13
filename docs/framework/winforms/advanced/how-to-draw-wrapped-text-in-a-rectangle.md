@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524971"
 ---
 # <a name="how-to-draw-wrapped-text-in-a-rectangle"></a>Comment : écrire du texte renvoyé à la ligne dans un rectangle
 Vous pouvez dessiner du texte encapsulé dans un rectangle à l’aide de la <xref:System.Drawing.Graphics.DrawString%2A> surchargées de la <xref:System.Drawing.Graphics> classe qui prend un <xref:System.Drawing.Rectangle> ou <xref:System.Drawing.RectangleF> paramètre. Vous pouvez également utiliser un <xref:System.Drawing.Brush> et un <xref:System.Drawing.Font>.  

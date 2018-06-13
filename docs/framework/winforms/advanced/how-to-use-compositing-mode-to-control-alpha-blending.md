@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527000"
 ---
 # <a name="how-to-use-compositing-mode-to-control-alpha-blending"></a>Comment : utiliser le mode de composition pour commander la fusion alpha
 Il peut arriver lorsque vous souhaitez créer une bitmap hors écran ayant les caractéristiques suivantes :  

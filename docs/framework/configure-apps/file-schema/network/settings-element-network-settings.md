@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752476"
 ---
 # <a name="ltsettingsgt-element-network-settings"></a>&lt;paramètres&gt; élément (paramètres réseau)
 Configure les options réseau de base pour l’espace de noms <xref:System.Net?displayProperty=nameWithType>.  

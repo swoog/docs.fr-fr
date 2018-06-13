@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755524"
 ---
 # <a name="connection-pooling"></a>Regroupement de connexions
 Se connecter à une source de données peut prendre beaucoup de temps. Pour réduire le coût de l’ouverture de connexions, ADO.NET utilise une technique d’optimisation nommée *le regroupement de connexions*, ce qui réduit le coût de l’ouverture et la fermeture des connexions. Le regroupement de connexions est géré différemment pour les fournisseurs de données .NET Framework.  

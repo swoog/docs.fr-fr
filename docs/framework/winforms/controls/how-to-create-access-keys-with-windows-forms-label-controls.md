@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530801"
 ---
 # <a name="how-to-create-access-keys-with-windows-forms-label-controls"></a>Comment : créer des touches d'accès rapide à l'aide des contrôles Label Windows Forms
 Windows Forms <xref:System.Windows.Forms.Label> contrôles peuvent être utilisés pour définir des touches d’accès rapide pour d’autres contrôles. Lorsque vous définissez une clé d’accès dans un contrôle label, l’utilisateur peut appuyer sur la touche ALT et le caractère que vous désignez pour déplacer le focus au contrôle qui le suit dans l’ordre de tabulation. Étant donné que les étiquettes ne peuvent pas recevoir le focus, le focus se déplace automatiquement vers le contrôle suivant dans l’ordre de tabulation. Utilisez cette technique pour affecter des clés d’accès aux zones de texte, zones de liste déroulante, zones de liste et des grilles de données.  

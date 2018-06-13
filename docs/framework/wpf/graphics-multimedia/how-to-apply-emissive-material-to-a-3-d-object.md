@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559419"
 ---
 # <a name="how-to-apply-emissive-material-to-a-3-d-object"></a>Comment : appliquer un matériau émissif à un objet 3D
 L’exemple suivant montre comment utiliser <xref:System.Windows.Media.Media3D.EmissiveMaterial> pour ajouter une couleur à un matériau existant de la couleur du pinceau du EmissiveMaterial. Le code ci-dessous montre <xref:System.Windows.Media.Media3D.DiffuseMaterial> et <xref:System.Windows.Media.Media3D.EmissiveMaterial> combinés pour ajouter du bleu à l’apparence du DiffuseMaterial.  

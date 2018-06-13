@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752635"
 ---
 # <a name="ltclientgt"></a>&lt;Client&gt;
 L'élément `client` définit une liste de points de terminaison auxquels un client peut se connecter.  

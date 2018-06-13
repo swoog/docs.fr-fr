@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530378"
 ---
 # <a name="how-to-create-toggle-buttons-in-toolstrip-controls"></a>Comment : créer des boutons bascule dans les contrôles ToolStrip
 Lorsqu’un utilisateur clique sur un bouton bascule, il apparaît enfoncé et conserve cet aspect jusqu'à ce que l’utilisateur clique sur le bouton Nouveau.  

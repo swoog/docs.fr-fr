@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560875"
 ---
 # <a name="how-to-paint-an-area-with-a-linear-gradient"></a>Comment : peindre une zone avec un dégradé linéaire
 Cet exemple montre comment utiliser la <xref:System.Windows.Media.LinearGradientBrush> classe pour peindre une zone avec un dégradé linéaire. Dans l’exemple suivant, la <xref:System.Windows.Shapes.Shape.Fill%2A> d’un <xref:System.Windows.Shapes.Rectangle> est peint avec un dégradé linéaire en diagonale qui effectue la transition du jaune au rouge au bleu au citron vert.  

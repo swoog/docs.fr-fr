@@ -32,6 +32,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759723"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>Configuration des applications à l'aide de fichiers de configuration
 Le .NET Framework, par le biais de fichiers de configuration, permet aux développeurs et administrateurs de contrôler la façon dont les applications s'exécutent avec la souplesse requise. Les fichiers de configuration sont des fichiers XML qui peuvent être modifiés selon les besoins. Un administrateur peut exercer un contrôle sur les ressources protégées auxquelles une application peut accéder, les versions d'assemblys utilisées par une application et l'endroit où sont situés les applications et objets distants. Les développeurs peuvent stocker des paramètres dans des fichiers de configuration, de façon à ce qu'il ne leur soit pas nécessaire de recompiler une application chaque fois qu'un paramètre change. Cette section décrit les éléments qui peuvent être configurés et explique en quoi la configuration d'une application peut se révéler utile.  

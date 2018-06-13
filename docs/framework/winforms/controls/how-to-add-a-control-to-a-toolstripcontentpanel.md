@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524424"
 ---
 # <a name="how-to-add-a-control-to-a-toolstripcontentpanel"></a>Comment : ajouter un contrôle à un ToolStripContentPanel
 Vous pouvez ajouter un ou plusieurs contrôles à un <xref:System.Windows.Forms.ToolStripContentPanel> par programmation.  

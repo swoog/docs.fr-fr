@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531206"
 ---
 # <a name="how-to-enable-the-tab-key-to-move-out-of-a-toolstrip-control"></a>Comment : activer la touche TAB pour sortir d'un contrôle ToolStrip
 Utilisez la procédure suivante pour activer l’utilisateur appuie sur la touche TAB pour passer d’un <xref:System.Windows.Forms.ToolStrip> sur le contrôle suivant dans l’ordre de tabulation.  

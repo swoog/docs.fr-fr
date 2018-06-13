@@ -13,6 +13,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757565"
 ---
 # <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>Comment : activer et désactiver la redirection de liaison automatique
 Depuis [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)], lorsque vous compilez des applications qui ciblent [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], des redirections de liaison peuvent être ajoutées automatiquement au fichier de configuration d'application pour remplacer l'unification d'assemblys. Les redirections de liaison sont ajoutées si votre application ou ses composants font référence à plusieurs versions du même assembly, même si vous spécifiez manuellement des redirections de liaison dans le fichier de configuration de votre application. La fonctionnalité de redirection de liaison automatique affecte les applications de bureau et les applications web traditionnelles qui ciblent [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], bien que le comportement soit légèrement différent pour une application web. Vous pouvez activer une redirection de liaison automatique si vos applications existantes ciblent des versions antérieures du .NET Framework, ou vous pouvez désactiver cette fonctionnalité si vous souhaitez conserver les redirections de liaison créées manuellement.  
