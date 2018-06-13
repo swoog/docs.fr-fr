@@ -8,6 +8,7 @@ ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/11/2018
+ms.locfileid: "34058937"
 ---
 # <a name="string-interpolation-in-c"></a><span data-ttu-id="a0fcf-103">Interpolation de chaîne en C#</span><span class="sxs-lookup"><span data-stu-id="a0fcf-103">String interpolation in C#</span></span> #
 
