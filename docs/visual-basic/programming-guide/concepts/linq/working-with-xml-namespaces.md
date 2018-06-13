@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647399"
 ---
 # <a name="working-with-xml-namespaces-visual-basic"></a>Utilisation des espaces de noms XML (Visual Basic)
 Les rubriques de cette section décrivent comment [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] prend en charge les espaces de noms.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803833"
 ---
 # <a name="data-binding-scenarios"></a>Scénarios de liaison de données
 Cette section contient des exemples qui illustrent des scénarios de liaison de données de Windows Communication Foundation (WCF).  

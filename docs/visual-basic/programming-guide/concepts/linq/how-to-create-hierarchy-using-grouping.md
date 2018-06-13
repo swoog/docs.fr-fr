@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639322"
 ---
 # <a name="how-to-create-hierarchy-using-grouping-visual-basic"></a>Comment : créer la hiérarchie à l’aide de regroupement (Visual Basic)
 Cet exemple montre comment grouper des données, puis générer du code XML basé sur le regroupement.  

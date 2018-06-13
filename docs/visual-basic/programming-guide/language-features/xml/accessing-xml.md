@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649592"
 ---
 # <a name="accessing-xml-in-visual-basic"></a>Accès au code XML dans Visual Basic
 Visual Basic fournit des propriétés d’axe XML pour accéder à et naviguer [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] structures. Ces propriétés utilisent une syntaxe spéciale pour vous permettre d’accéder aux éléments et attributs en spécifiant les noms XML.  

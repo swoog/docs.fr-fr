@@ -11,6 +11,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808443"
 ---
 # <a name="securing-clients"></a>Sécurisation des clients
 Dans Windows Communication Foundation (WCF), le service dicte les exigences de sécurité pour les clients. Autrement dit, le service spécifie quel mode de sécurité utiliser, et si le client doit fournir ou non une information d'identification. Le processus de la sécurisation d'un client, par conséquent, est simple : utilisez les métadonnées obtenues depuis le service (s'il est publié) et générez un client. Les métadonnées spécifient comment configurer le client. Si le service exige que le client fournisse une information d’identification, vous devez obtenir une information d’identification qui correspond à l’exigence. Cette rubrique décrit en détail le processus. Pour plus d’informations sur la création d’un service sécurisé, consultez [sécurisation des Services](../../../docs/framework/wcf/securing-services.md).  

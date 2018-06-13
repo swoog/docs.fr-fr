@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643507"
 ---
 # <a name="how-to-catch-parsing-errors-visual-basic"></a>Comment : intercepter l’analyse des erreurs (Visual Basic)
 Cette rubrique montre comment détecter du code XML incorrect ou non valide.  

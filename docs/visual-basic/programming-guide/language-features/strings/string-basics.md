@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654058"
 ---
 # <a name="string-basics-in-visual-basic"></a>Concepts de base des chaînes en Visual Basic
 Le type de données `String` représente une série de caractères (chacun représentant à son tour une instance du type de données `Char`). Cette rubrique présente les concepts de base des chaînes en Visual Basic.  

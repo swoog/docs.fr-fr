@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809301"
 ---
 # <a name="custom-lifetime"></a>Custom Lifetime
 Cet exemple montre comment écrire une extension de Windows Communication Foundation (WCF) pour fournir des services de durée de vie personnalisés pour les instances de service WCF partagées.  

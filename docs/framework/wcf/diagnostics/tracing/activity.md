@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806830"
 ---
 # <a name="activity"></a>Activité
 Cette rubrique décrit les suivis d’activité dans le modèle de suivi Windows Communication Foundation (WCF). Les activités traitent des unités permettant à l'utilisateur de réduire la portée d'un échec. Les erreurs qui se produisent au cours d'une même activité sont directement liées entre elles. Par exemple, une opération peut échouer parce que le déchiffrement d'un message a échoué auparavant. Les suivis générés pour les échecs respectifs de l'opération et du déchiffrement apparaissent dans la même activité, dénotant l'existence d'un lien direct entre l'erreur relative au déchiffrement et celle relative à la demande.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806219"
 ---
 # <a name="aspnet-compatibility"></a>ASP.NET Compatibility
 Cet exemple montre comment activer [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] le mode de compatibilité dans Windows Communication Foundation (WCF). Les services qui s'exécutent dans le mode de compatibilité [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] participent pleinement au pipeline de l'application [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] et peuvent utiliser des fonctionnalités [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] telles que l'autorisation de fichier/d'URL, l'état de session et la classe <xref:System.Web.HttpContext>. La classe <xref:System.Web.HttpContext> permet l'accès aux cookies, aux sessions ainsi qu'à d'autres fonctionnalités [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Dans ce mode, les liaisons doivent utiliser le transport HTTP et le service lui-même doit être hébergé dans les services IIS.  

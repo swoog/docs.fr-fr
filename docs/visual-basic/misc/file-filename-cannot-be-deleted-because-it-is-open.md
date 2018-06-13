@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638654"
 ---
 # <a name="file-39ltfilenamegt39-cannot-be-deleted-because-it-is-open"></a>Fichier &#39; &lt;nom de fichier&gt; &#39; ne peut pas être supprimé car il est ouvert
 L’utilisateur a tenté de supprimer un fichier ouvert.  

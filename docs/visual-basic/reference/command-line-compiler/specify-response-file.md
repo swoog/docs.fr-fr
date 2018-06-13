@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653622"
 ---
 # <a name="-specify-response-file-visual-basic"></a>@ (spécifier un fichier réponse) (Visual Basic)
 Spécifie un fichier qui contient les options du compilateur et les fichiers de code source à compiler.  

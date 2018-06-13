@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651754"
 ---
 # <a name="array-dimensions-in-visual-basic"></a>Dimensions du tableau dans Visual Basic
 A *dimension* est une direction dans laquelle vous pouvez varier la spécification des éléments d’un tableau. Un tableau qui contient les ventes totales pour chaque jour du mois possède une dimension (le jour du mois). Un tableau qui contient les ventes totales par service pour chaque jour du mois possède deux dimensions (le numéro de service et le jour du mois). Le nombre de dimensions dispose d’un tableau est appelé son *rang*.  

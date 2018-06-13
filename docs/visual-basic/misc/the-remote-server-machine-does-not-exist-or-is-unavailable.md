@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639250"
 ---
 # <a name="the-remote-server-machine-does-not-exist-or-is-unavailable-visual-basic"></a>Le serveur distant n’existe pas ou n’est pas disponible (Visual Basic)
 Vous essayez de vous connecter à un serveur distant qui n’est pas disponible ou qui n’existe pas. Cette erreur peut être due à l’interruption de votre connexion réseau.  

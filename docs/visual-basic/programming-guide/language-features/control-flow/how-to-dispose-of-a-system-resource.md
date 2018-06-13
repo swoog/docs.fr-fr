@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647229"
 ---
 # <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>Comment : supprimer une ressource système (Visual Basic)
 Vous pouvez utiliser un `Using` bloc pour garantir que le système supprime une ressource lorsque votre code quitte le bloc. Cela est utile si vous utilisez une ressource système qui consomme une grande quantité de mémoire ou d’autres composants également à utiliser.  

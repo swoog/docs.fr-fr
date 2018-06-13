@@ -14,6 +14,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805770"
 ---
 # <a name="how-to-restrict-access-with-the-principalpermissionattribute-class"></a>Comment : restreindre l'accès à l'aide de la classe PrincipalPermissionAttribute
 Le contrôle de l’accès aux ressources sur un ordinateur de domaine Windows est une tâche de sécurité de base. Par exemple, certains utilisateurs doivent pouvoir consulter des données sensibles, telles que les informations relatives aux salaires. Cette rubrique explique comment restreindre l'accès à une méthode en exigeant que l'utilisateur appartienne à un groupe prédéfini. Pour obtenir un exemple fonctionnel, consultez [autorisant l’accès aux opérations de Service](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md).  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650122"
 ---
 # <a name="how-to-label-statements-visual-basic"></a>Comment : étiqueter des instructions (Visual Basic)
 Blocs d’instructions sont composés de lignes de code délimitées par le signe deux-points. Lignes de code, précédé d’une chaîne ou entier identifiant sont dites *intitulé*. Les étiquettes d’instruction sont utilisées pour marquer une ligne de code pour identifier pour une utilisation avec des instructions telles que `On Error Goto`.  

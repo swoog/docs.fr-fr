@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809951"
 ---
 # <a name="how-to-inspect-or-modify-parameters"></a>Comment : inspecter ou modifier des paramètres
 Vous pouvez inspecter ou modifier les messages entrants ou sortants pour une seule opération sur un objet de client Windows Communication Foundation (WCF) ou un service WCF en implémentant le <xref:System.ServiceModel.Dispatcher.IParameterInspector?displayProperty=nameWithType> interface et en l’insérant dans l’exécution du client ou du service. En général, un comportement d'opération est utilisé pour ajouter des inspecteurs de paramètre pour une seule opération ; d'autres comportements peuvent être utilisés pour fournir un accès aisé à l'exécution à une échelle plus grande. Pour plus d’informations, consultez [étendant les Clients](../../../../docs/framework/wcf/extending/extending-clients.md) et [extension des répartiteurs](../../../../docs/framework/wcf/extending/extending-dispatchers.md).  
