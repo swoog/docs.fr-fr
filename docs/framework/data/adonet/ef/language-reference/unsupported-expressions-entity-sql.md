@@ -9,6 +9,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34234312"
 ---
 # <a name="unsupported-expressions"></a><span data-ttu-id="285e6-102">Expressions non prises en charge</span><span class="sxs-lookup"><span data-stu-id="285e6-102">Unsupported expressions</span></span>
 
