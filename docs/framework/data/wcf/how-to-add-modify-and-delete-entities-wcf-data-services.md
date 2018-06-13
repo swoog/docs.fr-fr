@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356509"
 ---
 # <a name="how-to-add-modify-and-delete-entities-wcf-data-services"></a>Comment : ajouter, modifier et supprimer des entités (services de données WCF)
 Avec la [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] les bibliothèques clientes, vous pouvez créer, mettre à jour et supprimer des données d’entité dans un service de données en effectuant des actions équivalentes sur des objets dans le <xref:System.Data.Services.Client.DataServiceContext>. Pour plus d’informations, consultez [mise à jour du Service de données](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533125"
 ---
 # <a name="how-to-split-a-window-horizontally"></a>Comment : fractionner une fenêtre horizontalement
 L’exemple de code suivant rend le séparateur qui divise le <xref:System.Windows.Forms.SplitContainer> horizontal du contrôle.  

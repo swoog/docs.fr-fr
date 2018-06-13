@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534412"
 ---
 # <a name="margin-and-padding-in-windows-forms-controls"></a>Marge et marge intérieure dans les contrôles Windows Forms
 Le positionnement précis des contrôles sur votre formulaire constitue une haute priorité pour de nombreuses applications. L'espace de noms <xref:System.Windows.Forms?displayProperty=nameWithType> propose pour cela de nombreuses fonctionnalités de disposition. Deux des plus importantes sont les propriétés <xref:System.Windows.Forms.Control.Margin%2A> et <xref:System.Windows.Forms.Control.Padding%2A>.  

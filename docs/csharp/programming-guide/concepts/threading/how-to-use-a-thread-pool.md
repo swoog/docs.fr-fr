@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340474"
 ---
 # <a name="how-to-use-a-thread-pool-c"></a>Guide pratique pour utiliser un pool de threads (C#)
 Le *regroupement de threads* est une forme de multithreading dans lequel les tâches sont ajoutées à une file d’attente et sont automatiquement lancées lorsque les threads sont créés. Pour plus d’informations, consultez [Regroupement des threads (C#)](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md).  

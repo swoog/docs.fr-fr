@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33274948"
 ---
 # <a name="how-to-return-a-query-from-a-method-c-programming-guide"></a>Guide pratique pour retourner une requête à partir d'une méthode (Guide de programmation C#)
 Cet exemple montre comment retourner une requête à partir d’une méthode en tant que valeur de retour et en tant que paramètre `out`.  

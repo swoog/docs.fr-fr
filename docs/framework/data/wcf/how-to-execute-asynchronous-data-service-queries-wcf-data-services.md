@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358711"
 ---
 # <a name="how-to-execute-asynchronous-data-service-queries-wcf-data-services"></a>Comment : exécuter les requêtes de services de données asynchrones (services de données WCF)
 En utilisant les bibliothèques clientes [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], vous pouvez effectuer de façon asynchrone des opérations client-serveur, telles que l'exécution de requêtes et l'enregistrement de modifications. Pour plus d’informations, consultez [opérations asynchrones](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md).  

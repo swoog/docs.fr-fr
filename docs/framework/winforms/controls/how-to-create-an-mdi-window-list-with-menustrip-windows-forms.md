@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530820"
 ---
 # <a name="how-to-create-an-mdi-window-list-with-menustrip-windows-forms"></a>Comment : créer une liste des fenêtres MDI avec MenuStrip (Windows Forms)
 L’interface multidocument (MDI) permet de créer des applications qui peuvent ouvrir plusieurs documents en même temps et copier et coller du contenu à partir d’un document à l’autre.  

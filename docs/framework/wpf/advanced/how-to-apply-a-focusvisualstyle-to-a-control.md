@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543730"
 ---
 # <a name="how-to-apply-a-focusvisualstyle-to-a-control"></a>Comment : appliquer un FocusVisualStyle à un contrôle
 Cet exemple vous montre comment créer un style visuel de focus dans les ressources et appliquer un style à un contrôle, à l’aide de la <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> propriété.  
