@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648357"
 ---
 # <a name="how-to-refer-to-the-current-instance-of-an-object-visual-basic"></a><span data-ttu-id="676c2-102">Comment : référencer l'instance actuelle d'un objet (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="676c2-102">How to: Refer to the Current Instance of an Object (Visual Basic)</span></span>
 <span data-ttu-id="676c2-103">Le *instance actuelle* d’un objet est l’instance dans laquelle le code est en cours d’exécution.</span><span class="sxs-lookup"><span data-stu-id="676c2-103">The *current instance* of an object is the instance in which the code is currently executing.</span></span>  
