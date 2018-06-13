@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758787"
 ---
 # <a name="dataviews"></a><span data-ttu-id="5b74a-102">DataViews</span><span class="sxs-lookup"><span data-stu-id="5b74a-102">DataViews</span></span>
 <span data-ttu-id="5b74a-103">Un objet <xref:System.Data.DataView> vous permet de créer différentes vues des données stockées dans un objet <xref:System.Data.DataTable>, possibilité qui est souvent utilisée dans les applications de liaison de données.</span><span class="sxs-lookup"><span data-stu-id="5b74a-103">A <xref:System.Data.DataView> enables you to create different views of the data stored in a <xref:System.Data.DataTable>, a capability that is often used in data-binding applications.</span></span> <span data-ttu-id="5b74a-104">À l’aide un **DataView**, vous pouvez présenter les données dans une table avec différents ordres de tri et vous pouvez filtrer les données par état de ligne ou en fonction d’une expression de filtre.</span><span class="sxs-lookup"><span data-stu-id="5b74a-104">Using a **DataView**, you can expose the data in a table with different sort orders, and you can filter the data by row state or based on a filter expression.</span></span>  
