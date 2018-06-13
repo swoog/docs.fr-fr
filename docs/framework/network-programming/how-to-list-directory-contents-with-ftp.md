@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394577"
 ---
 # <a name="how-to-list-directory-contents-with-ftp"></a>Comment : répertorier le contenu d’un répertoire avec FTP
 Cet exemple montre comment afficher le contenu d’un répertoire d’un serveur FTP.  

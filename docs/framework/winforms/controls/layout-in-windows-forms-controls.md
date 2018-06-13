@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535839"
 ---
 # <a name="layout-in-windows-forms-controls"></a>Disposition dans les contrôles Windows Forms
 Le positionnement précis des contrôles sur votre formulaire constitue une haute priorité pour de nombreuses applications. Le <xref:System.Windows.Forms?displayProperty=nameWithType> espace de noms vous offre de nombreux outils de disposition pour y parvenir.  

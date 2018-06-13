@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539787"
 ---
 # <a name="merging-menu-items-in-the-windows-forms-menustrip-control"></a>Fusion d'éléments de menu dans le contrôle MenuStrip Windows Forms
 Si vous avez une application de l’interface multidocument (MDI), vous pouvez fusionner des éléments de menu ou des menus entiers du formulaire enfant dans les menus du formulaire parent.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538710"
 ---
 # <a name="how-to-position-controls-on-windows-forms"></a>Comment : positionner des contrôles dans des Windows Forms
 Pour positionner les contrôles, utilisez le Concepteur Windows Forms ou spécifiez le <xref:System.Windows.Forms.Control.Location%2A> propriété.  

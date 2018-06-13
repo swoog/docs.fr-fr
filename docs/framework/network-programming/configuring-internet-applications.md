@@ -29,6 +29,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395058"
 ---
 # <a name="configuring-internet-applications"></a>Configuration des applications Internet
 L’[élément de configuration \<system.Net> (Paramètres réseau)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) contient des informations de configuration réseau pour les applications. Avec l’[élément \<system.Net> (Paramètres réseau)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md), vous pouvez définir des serveurs proxy, définir des paramètres de gestion de connexion, et inclure des modules de requête et d’authentification personnalisés dans votre application.  

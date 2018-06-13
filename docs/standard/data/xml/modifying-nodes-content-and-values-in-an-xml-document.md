@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571434"
 ---
 # <a name="modifying-nodes-content-and-values-in-an-xml-document"></a>Modification de nœuds, de contenu et de valeurs dans un document XML
 Il existe plusieurs façons de modifier les nœuds et le contenu d'un document. Vous pouvez :  

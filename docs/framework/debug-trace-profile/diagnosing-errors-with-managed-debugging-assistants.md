@@ -36,6 +36,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392318"
 ---
 # <a name="diagnosing-errors-with-managed-debugging-assistants"></a>Diagnostic d'erreurs avec les Assistants de débogage managés
 Les Assistants Débogage managé sont des aides au débogage qui fonctionnent conjointement avec le Common Language Runtime (CLR) pour fournir des informations sur l'état d'exécution. Les Assistants génèrent des messages d'information sur les événements du runtime que vous ne pouvez pas intercepter en temps normal. Vous pouvez utiliser les Assistants Débogage managé pour isoler les bogues d'application difficiles à déceler qui se produisent pendant les phases de transition entre un code managé et un code non managé. Vous pouvez activer ou désactiver tous les Assistants Débogage managé en ajoutant une clé au Registre Windows ou en définissant une variable d'environnement. Vous pouvez activer des Assistants Débogage managé spécifiques à l'aide de paramètres de configuration d'application. Vous pouvez définir des paramètres de configuration supplémentaires pour certains Assistants Débogage managé dans le fichier de configuration de l'application. Comme ces fichiers de configuration sont analysés au chargement du runtime, vous devez activer l'Assistant Débogage managé avant que l'application managée ne démarre. Vous ne pouvez pas l'activer pour les applications qui ont déjà démarré.  

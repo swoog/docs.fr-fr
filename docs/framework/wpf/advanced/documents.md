@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542962"
 ---
 # <a name="documents"></a>Documents
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] propose un ensemble polyvalent de composants qui permettent aux développeurs de créer des applications avec les fonctionnalités de document avancées et une expérience de lecture améliorée. En plus d’une amélioration des capacités et de la qualité, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fournit également des services de gestion simplifiée pour le packaging, la sécurité et le stockage des documents.  

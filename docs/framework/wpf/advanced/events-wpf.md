@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542585"
 ---
 # <a name="events-wpf"></a>Événements (WPF)
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] présente les événements routés pouvant appeler des gestionnaires qui existent sur plusieurs écouteurs dans l’arborescence d’éléments d’une application.  

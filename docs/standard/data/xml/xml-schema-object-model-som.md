@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570123"
 ---
 # <a name="xml-schema-object-model-som"></a>Modèle Objet du schéma (SOM) XML
 Un schéma XML est un outil puissant et complexe permettant de créer et valider une structure dans des documents XML conformes. De même que la modélisation de données dans une base de données relationnelles, un schéma permet de définir la structure de documents XML en spécifiant les éléments qui peuvent y figurer, ainsi que la structure et les types que ces éléments doivent suivre pour être valides pour le schéma en question.  

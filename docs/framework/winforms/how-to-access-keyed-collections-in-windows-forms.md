@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538725"
 ---
 # <a name="how-to-access-keyed-collections-in-windows-forms"></a>Comment : accéder à des collections à clé dans les Windows Forms
 -   Vous pouvez accéder à des éléments de collection individuels par clé. Cette fonctionnalité a été ajoutée à nombreuses classes de collection sont généralement utilisées par les applications Windows Forms. La liste suivante présente certaines des classes de collection qui ont des collections à clé accessibles :  

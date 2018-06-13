@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 87600781c90fe5e6e049af74a68859955153f3b2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33433339"
 ---
 # <a name="iclrstrongnamegethashfromfilew-method"></a>Méthode ICLRStrongName::GetHashFromFileW
 Génère un hachage sur le contenu du fichier spécifié par une chaîne Unicode.  

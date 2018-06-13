@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391649"
 ---
 # <a name="deploying-net-framework-applications"></a>Déploiement d'applications .NET Framework
 Cette section de la documentation .NET Framework fournit des informations essentielles pour le déploiement d'applications .NET Framework, notamment des instructions relatives au chargement des assemblys, à la résolution des références d'assembly et à l'amélioration des performances de votre application grâce à la génération d'images natives.  

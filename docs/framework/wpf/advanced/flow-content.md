@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542335"
 ---
 # <a name="flow-content"></a>Contenu de flux
 Éléments de flux de contenu fournissent les blocs de construction pour la création de contenu de flux approprié pour l’hébergement dans un <xref:System.Windows.Documents.FlowDocument>.  

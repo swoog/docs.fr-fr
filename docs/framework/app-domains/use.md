@@ -13,6 +13,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742469"
 ---
 # <a name="using-application-domains"></a>Utilisation des domaines d'application
 Les domaines d’application fournissent une unité d’isolation pour le common language runtime. Ils sont créés et exécutés dans un processus. Les domaines d’application sont généralement créés par un hôte de runtime, qui est une application responsable du chargement du runtime dans un processus et de l’exécution du code utilisateur dans un domaine d’application. L’hôte de runtime crée un processus et un domaine d’application par défaut et exécute le code managé dans ce domaine d’application. Les hôtes de runtime comprennent ASP.NET, Microsoft Internet Explorer et le shell Windows.  

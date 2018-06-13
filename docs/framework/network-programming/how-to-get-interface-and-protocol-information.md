@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395084"
 ---
 # <a name="how-to-get-interface-and-protocol-information"></a>Comment : obtenir des informations d’interface et de protocole
 Cet exemple montre comment lire les statistiques TCP d’une interface réseau.  

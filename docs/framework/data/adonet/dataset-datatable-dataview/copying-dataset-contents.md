@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757292"
 ---
 # <a name="copying-dataset-contents"></a>Copie de contenu de DataSet
 Vous pouvez créer une copie d’un <xref:System.Data.DataSet> afin que vous pouvez utiliser des données sans affecter les données d’origine ou travailler avec un sous-ensemble des données à partir d’un **DataSet**. Lorsque vous copiez un **DataSet**, vous pouvez :  
