@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333022"
 ---
 # <a name="instance-constructors-c-programming-guide"></a>Constructeurs d'instances (Guide de programmation C#)
 Les constructeurs d’instances sont utilisés pour créer et initialiser toutes les variables membres d’instance quand vous utilisez l’expression [new](../../../csharp/language-reference/keywords/new.md) pour créer un objet d’une [classe](../../../csharp/language-reference/keywords/class.md). Pour initialiser une classe [statique](../../../csharp/language-reference/keywords/static.md) ou des variables statiques dans une classe non statique, vous devez définir un constructeur statique. Pour plus d’informations, consultez [Constructeurs statiques](../../../csharp/programming-guide/classes-and-structs/static-constructors.md).  

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 821f524cc8ff7f9983f811f539e2badb2306be26
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33437701"
 ---
 # <a name="iclrtaskyieldtask-method"></a>ICLRTask::YieldTask, méthode
 Demande que le common language runtime (CLR) mette de côté la tâche qui en cours [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) représente l’instance et rendre le temps processeur disponible à d’autres tâches.  

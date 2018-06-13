@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33331212"
 ---
 # <a name="general-structure-of-a-c-program-c-programming-guide"></a>Structure générale d'un programme C# (guide de programmation C#)
 Les programmes C# se composent d’un ou plusieurs fichiers. Chaque fichier peut contenir zéro ou plusieurs espaces de noms. Un espace de noms peut contenir des types tels que des classes, des structs, des interfaces, des énumérations et des délégués, en plus d’autres espaces de noms. Voici la structure d’un programme C# qui contient tous ces éléments.  

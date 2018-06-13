@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754913"
 ---
 # <a name="ltcleargt"></a>&lt;clear&gt;
 Efface tous les gestionnaires de jetons de sécurité de la collection actuelle de gestionnaire de jetons.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398893"
 ---
 # <a name="claims-based-identity-model"></a>Modèle d’identité basée sur les revendications
 Lorsque vous créez des applications qui prennent en charge les revendications, l'identité de l'utilisateur est représentée dans votre application comme un ensemble de revendications. Une revendication peut être le nom d’utilisateur, une autre peut être une adresse de messagerie. L'idée est qu'un système d'identité externe soit configuré pour fournir à votre application tout ce qu'elle doit savoir à propos de l'utilisateur avec chaque demande effectuée, ainsi que l'assurance de chiffrement que les données d'identité que vous recevez proviennent d'une source approuvée.  

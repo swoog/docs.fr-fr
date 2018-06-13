@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393427"
 ---
 # <a name="ipv6-auto-configuration"></a>IPv6, configuration automatique
 Un objectif important du protocole IPv6 est de prendre en charge le Plug-and-Play des nœuds. Autrement dit, vous devez pouvoir connecter un nœud à un réseau IPv6 et obtenir sa configuration automatique sans intervention humaine.  

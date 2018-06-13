@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766905"
 ---
 # <a name="ltservicebehaviorsgt-of-workflow"></a>&lt;serviceBehaviors&gt; de workflow
 Cette section de configuration représente tous les comportements définis pour un service spécifique.  

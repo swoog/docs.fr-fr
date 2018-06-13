@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539398"
 ---
 # <a name="drag-and-drop-functionality-in-windows-forms"></a>Fonctionnalité de glisser-déposer dans les Windows Forms
 Windows Forms comprend un ensemble de méthodes, événements et classes qui implémentent le comportement de glisser-déposer. Cette rubrique offre une vue d’ensemble de la prise en charge du glisser-déposer dans Windows Forms.  Consultez également [les opérations de glisser-déplacer et prise en charge du Presse-papiers](http://msdn.microsoft.com/library/fe5ebfwe\(v=vs.110\)).  

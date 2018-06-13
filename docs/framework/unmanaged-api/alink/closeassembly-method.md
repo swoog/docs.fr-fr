@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 68698aab0fd0872c6e6f67e4ec531ab0226e784f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401951"
 ---
 # <a name="closeassembly-method"></a>CloseAssembly, méthode
 Finalise les opérations d’assembly. Appelez cette méthode avant de commencer un nouvel assembly ou un module indépendant.  

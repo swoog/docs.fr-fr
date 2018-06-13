@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766034"
 ---
 # <a name="the-shape-of-the-command-trees"></a>Forme des arborescences de commandes
 Le module de génération SQL est chargé de la génération d’une requête SQL spécifique principale basée sur une expression de l’arborescence de commandes de la requête d’entrée donnée. Cette section traite des caractéristiques, des propriétés et de la structure des arborescences de commandes de requête.  

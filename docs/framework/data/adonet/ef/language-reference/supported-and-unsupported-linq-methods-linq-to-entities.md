@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766632"
 ---
 # <a name="supported-and-unsupported-linq-methods-linq-to-entities"></a>Méthodes LINQ prises en charge et non prises en charge (LINQ to Entities)
 Cette section fournit des informations sur les opérateurs de requête standard LINQ (Language-Integrated Query) qui sont pris en charge ou non pris en charge dans les requêtes [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]. De nombreux opérateurs de requête standard LINQ ont une version surchargée qui accepte un argument entier. L’argument entier correspond à un index de base zéro de la séquence qui est traitée, une <xref:System.Collections.Generic.IEqualityComparer%601>, ou <xref:System.Collections.Generic.IComparer%601>. Sauf spécification contraire, ces versions surchargées des opérateurs de requête standard LINQ ne sont pas prises en charge et toute tentative pour les utiliser lèvera une exception.  

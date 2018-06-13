@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329866"
 ---
 # <a name="generic-methods-c-programming-guide"></a>Méthodes génériques (guide de programmation C#)
 Une méthode générique est une méthode qui est déclarée avec des paramètres de type, comme suit :  
