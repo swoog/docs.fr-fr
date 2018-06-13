@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758579"
 ---
 # <a name="ltissuertokenresolvergt"></a><span data-ttu-id="ddc4f-102">&lt;issuerTokenResolver&gt;</span><span class="sxs-lookup"><span data-stu-id="ddc4f-102">&lt;issuerTokenResolver&gt;</span></span>
 <span data-ttu-id="ddc4f-103">Inscrit le résolveur de jeton de l’émetteur qui est utilisé par les gestionnaires de la collection du Gestionnaire de jetons.</span><span class="sxs-lookup"><span data-stu-id="ddc4f-103">Registers the issuer token resolver that is used by handlers in the token handler collection.</span></span> <span data-ttu-id="ddc4f-104">Le programme de résolution de jeton de l’émetteur est utilisé pour résoudre le jeton de signature sur les jetons et les messages entrant.</span><span class="sxs-lookup"><span data-stu-id="ddc4f-104">The issuer token resolver is used to resolve the signing token on incoming tokens and messages.</span></span>  

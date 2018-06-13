@@ -1,14 +1,6 @@
 ---
-title: "ICorProfilerCallback::ThreadAssignedToOSThread, méthode"
-ms.custom: 
+title: ICorProfilerCallback::ThreadAssignedToOSThread, méthode
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerCallback.ThreadAssignedToOSThread
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: f9671e5a-7b14-4f5b-8404-58136422c8b2
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 42c23a8190ea611d0333ebd96a31428574191b23
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: e577413ea6807ea5ff8be4d668aa82f0acbb007d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33451832"
 ---
-# <a name="icorprofilercallbackthreadassignedtoosthread-method"></a><span data-ttu-id="dfa53-102">ICorProfilerCallback::ThreadAssignedToOSThread, méthode</span><span class="sxs-lookup"><span data-stu-id="dfa53-102">ICorProfilerCallback::ThreadAssignedToOSThread Method</span></span>
-<span data-ttu-id="dfa53-103">Notifie le profileur qu’un thread managé est implémenté à l’aide d’un thread de système d’exploitation particulier.</span><span class="sxs-lookup"><span data-stu-id="dfa53-103">Notifies the profiler that a managed thread is being implemented using a particular operating system thread.</span></span>  
+# <a name="icorprofilercallbackthreadassignedtoosthread-method"></a><span data-ttu-id="44188-102">ICorProfilerCallback::ThreadAssignedToOSThread, méthode</span><span class="sxs-lookup"><span data-stu-id="44188-102">ICorProfilerCallback::ThreadAssignedToOSThread Method</span></span>
+<span data-ttu-id="44188-103">Notifie le profileur qu’un thread managé est implémenté à l’aide d’un thread de système d’exploitation particulier.</span><span class="sxs-lookup"><span data-stu-id="44188-103">Notifies the profiler that a managed thread is being implemented using a particular operating system thread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="dfa53-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="dfa53-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="44188-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="44188-104">Syntax</span></span>  
   
 ```  
 HRESULT ThreadAssignedToOSThread(  
@@ -46,24 +35,24 @@ HRESULT ThreadAssignedToOSThread(
     [in] DWORD    osThreadId);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="dfa53-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="dfa53-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="44188-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="44188-105">Parameters</span></span>  
  `managedThreadId`  
- <span data-ttu-id="dfa53-106">[in] L’identificateur du thread managé.</span><span class="sxs-lookup"><span data-stu-id="dfa53-106">[in] The identifier of the managed thread.</span></span>  
+ <span data-ttu-id="44188-106">[in] L’identificateur du thread managé.</span><span class="sxs-lookup"><span data-stu-id="44188-106">[in] The identifier of the managed thread.</span></span>  
   
  `osThreadId`  
- <span data-ttu-id="dfa53-107">[in] L’identificateur du thread de système d’exploitation.</span><span class="sxs-lookup"><span data-stu-id="dfa53-107">[in] The identifier of the operating system thread.</span></span>  
+ <span data-ttu-id="44188-107">[in] L’identificateur du thread de système d’exploitation.</span><span class="sxs-lookup"><span data-stu-id="44188-107">[in] The identifier of the operating system thread.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="dfa53-108">Notes</span><span class="sxs-lookup"><span data-stu-id="dfa53-108">Remarks</span></span>  
- <span data-ttu-id="dfa53-109">Le `ThreadAssignedToOSThread` rappel existe afin que le profileur peut assurer un mappage précis entre les fibres de threads de système d’exploitation et les threads managés.</span><span class="sxs-lookup"><span data-stu-id="dfa53-109">The `ThreadAssignedToOSThread` callback exists so that the profiler can maintain an accurate mapping across fibers of operating system threads to managed threads.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="44188-108">Notes</span><span class="sxs-lookup"><span data-stu-id="44188-108">Remarks</span></span>  
+ <span data-ttu-id="44188-109">Le `ThreadAssignedToOSThread` rappel existe afin que le profileur peut assurer un mappage précis entre les fibres de threads de système d’exploitation et les threads managés.</span><span class="sxs-lookup"><span data-stu-id="44188-109">The `ThreadAssignedToOSThread` callback exists so that the profiler can maintain an accurate mapping across fibers of operating system threads to managed threads.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="dfa53-110">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="dfa53-110">Requirements</span></span>  
- <span data-ttu-id="dfa53-111">**Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="dfa53-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="44188-110">Spécifications</span><span class="sxs-lookup"><span data-stu-id="44188-110">Requirements</span></span>  
+ <span data-ttu-id="44188-111">**Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="44188-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="dfa53-112">**En-tête :** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="dfa53-112">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="44188-112">**En-tête :** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="44188-112">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="dfa53-113">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="dfa53-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="44188-113">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="44188-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="dfa53-114">**Versions du .NET framework :**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dfa53-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="44188-114">**Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="44188-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="dfa53-115">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="dfa53-115">See Also</span></span>  
- [<span data-ttu-id="dfa53-116">ICorProfilerCallback, interface</span><span class="sxs-lookup"><span data-stu-id="dfa53-116">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="44188-115">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="44188-115">See Also</span></span>  
+ [<span data-ttu-id="44188-116">ICorProfilerCallback, interface</span><span class="sxs-lookup"><span data-stu-id="44188-116">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
