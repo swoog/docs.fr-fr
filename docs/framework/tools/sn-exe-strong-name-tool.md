@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401119"
 ---
 # <a name="snexe-strong-name-tool"></a><span data-ttu-id="9fe23-102">Sn.exe (outil Strong Name Tool)</span><span class="sxs-lookup"><span data-stu-id="9fe23-102">Sn.exe (Strong Name Tool)</span></span>
 <span data-ttu-id="9fe23-103">L’outil Strong Name (Sn.exe) permet de signer des assemblys avec des [noms forts](../../../docs/framework/app-domains/strong-named-assemblies.md).</span><span class="sxs-lookup"><span data-stu-id="9fe23-103">The Strong Name tool (Sn.exe) helps sign assemblies with [strong names](../../../docs/framework/app-domains/strong-named-assemblies.md).</span></span> <span data-ttu-id="9fe23-104">Sn.exe fournit des options de gestion des clés, de génération des signatures et de vérification des signatures.</span><span class="sxs-lookup"><span data-stu-id="9fe23-104">Sn.exe provides options for key management, signature generation, and signature verification.</span></span>  

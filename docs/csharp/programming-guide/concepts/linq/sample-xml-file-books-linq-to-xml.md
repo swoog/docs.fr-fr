@@ -1,26 +1,18 @@
 ---
-title: "Exemple de fichier XML : Livres (LINQ to XML)"
-ms.custom: 
+title: 'Exemple de fichier XML : Livres (LINQ to XML)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: b75ab1a2-fb76-4df9-bd01-c45ec22a29ef
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: d7160cb5de42716f4e3b093cd767ecc1a891a9ec
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 69c1a692a5f274ed430aa1bbf3ca215a43aeac52
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334559"
 ---
-# <a name="sample-xml-file-books-linq-to-xml"></a><span data-ttu-id="a8b74-102">Exemple de fichier XML : Livres (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="a8b74-102">Sample XML File: Books (LINQ to XML)</span></span>
-<span data-ttu-id="a8b74-103">Le fichier XML suivant est utilisé dans différents exemples de la documentation [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="a8b74-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="a8b74-104">Le fichier contient des informations sur des livres.</span><span class="sxs-lookup"><span data-stu-id="a8b74-104">The file contains information about books.</span></span>  
+# <a name="sample-xml-file-books-linq-to-xml"></a><span data-ttu-id="ba7d3-102">Exemple de fichier XML : Livres (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="ba7d3-102">Sample XML File: Books (LINQ to XML)</span></span>
+<span data-ttu-id="ba7d3-103">Le fichier XML suivant est utilisé dans différents exemples dans la documentation [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="ba7d3-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="ba7d3-104">Le fichier contient des informations sur des livres.</span><span class="sxs-lookup"><span data-stu-id="ba7d3-104">The file contains information about books.</span></span>  
   
-## <a name="booksxml"></a><span data-ttu-id="a8b74-105">books.xml</span><span class="sxs-lookup"><span data-stu-id="a8b74-105">books.xml</span></span>  
+## <a name="booksxml"></a><span data-ttu-id="ba7d3-105">books.xml</span><span class="sxs-lookup"><span data-stu-id="ba7d3-105">books.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -47,5 +39,5 @@ ms.lasthandoff: 10/18/2017
 </Catalog>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="a8b74-106">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="a8b74-106">See Also</span></span>  
- [<span data-ttu-id="a8b74-107">Exemples de documents XML (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="a8b74-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="ba7d3-106">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="ba7d3-106">See Also</span></span>  
+ [<span data-ttu-id="ba7d3-107">Exemples de documents XML (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="ba7d3-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

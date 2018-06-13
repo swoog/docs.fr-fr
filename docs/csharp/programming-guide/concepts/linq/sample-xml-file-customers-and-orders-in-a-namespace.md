@@ -1,26 +1,18 @@
 ---
-title: "Exemple de fichier XML : Clients et commandes dans un espace de noms2"
-ms.custom: 
+title: 'Exemple de fichier XML : Clients et commandes dans un espace de noms2'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 2da1c474-f658-4dca-a457-c35ef5ba4aff
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: dcdcb6a9505c22eedc957995516a017b60d5f81b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 53ad3633361772dc4a9be337df7ae2e1b8a60a5a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33337208"
 ---
-# <a name="sample-xml-file-customers-and-orders-in-a-namespace"></a><span data-ttu-id="48af4-102">Exemple de fichier XML : Clients et commandes dans un espace de noms</span><span class="sxs-lookup"><span data-stu-id="48af4-102">Sample XML File: Customers and Orders in a Namespace</span></span>
-<span data-ttu-id="48af4-103">Le fichier XML suivant est utilisé dans différents exemples dans la documentation [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="48af4-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="48af4-104">Ce fichier contient des clients et des commandes.</span><span class="sxs-lookup"><span data-stu-id="48af4-104">This file contains customers and orders.</span></span> <span data-ttu-id="48af4-105">Le code XML se trouve dans un espace de noms.</span><span class="sxs-lookup"><span data-stu-id="48af4-105">The XML is in a namespace.</span></span>  
+# <a name="sample-xml-file-customers-and-orders-in-a-namespace"></a><span data-ttu-id="796cf-102">Exemple de fichier XML : Clients et commandes dans un espace de noms</span><span class="sxs-lookup"><span data-stu-id="796cf-102">Sample XML File: Customers and Orders in a Namespace</span></span>
+<span data-ttu-id="796cf-103">Le fichier XML suivant est utilisé dans différents exemples dans la documentation [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="796cf-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="796cf-104">Ce fichier contient des clients et des commandes.</span><span class="sxs-lookup"><span data-stu-id="796cf-104">This file contains customers and orders.</span></span> <span data-ttu-id="796cf-105">Le code XML se trouve dans un espace de noms.</span><span class="sxs-lookup"><span data-stu-id="796cf-105">The XML is in a namespace.</span></span>  
   
-## <a name="customersordersinnamespacexml"></a><span data-ttu-id="48af4-106">CustomersOrdersInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="48af4-106">CustomersOrdersInNamespace.xml</span></span>  
+## <a name="customersordersinnamespacexml"></a><span data-ttu-id="796cf-106">CustomersOrdersInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="796cf-106">CustomersOrdersInNamespace.xml</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -438,5 +430,5 @@ ms.lasthandoff: 10/18/2017
 </Root>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="48af4-107">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="48af4-107">See Also</span></span>  
- [<span data-ttu-id="48af4-108">Exemples de documents XML (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="48af4-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="796cf-107">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="796cf-107">See Also</span></span>  
+ [<span data-ttu-id="796cf-108">Exemples de documents XML (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="796cf-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

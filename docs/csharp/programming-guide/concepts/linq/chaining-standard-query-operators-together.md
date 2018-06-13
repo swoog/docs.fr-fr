@@ -1,37 +1,29 @@
 ---
-title: "Chaînage d’opérateurs de requête standard (C#)"
-ms.custom: 
+title: Chaînage d’opérateurs de requête standard (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 66f2b0a9-2c23-4735-988e-bbc9dfb55c7b
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 47e936bffd79784b0ee6850bfc29d1d1f5b3224d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 9e59c12873b8e8afeaad43b8ffbe400b43b55747
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326148"
 ---
-# <a name="chaining-standard-query-operators-together-c"></a><span data-ttu-id="18a52-102">Chaînage d’opérateurs de requête standard (C#)</span><span class="sxs-lookup"><span data-stu-id="18a52-102">Chaining Standard Query Operators Together (C#)</span></span>
-<span data-ttu-id="18a52-103">Il s’agit de la dernière rubrique du [Didacticiel : chaînage de requêtes (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md).</span><span class="sxs-lookup"><span data-stu-id="18a52-103">This is the final topic in the [Tutorial: Chaining Queries Together (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md) tutorial.</span></span>  
+# <a name="chaining-standard-query-operators-together-c"></a><span data-ttu-id="bf958-102">Chaînage d’opérateurs de requête standard (C#)</span><span class="sxs-lookup"><span data-stu-id="bf958-102">Chaining Standard Query Operators Together (C#)</span></span>
+<span data-ttu-id="bf958-103">Il s’agit de la dernière rubrique du [Didacticiel : chaînage de requêtes (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md).</span><span class="sxs-lookup"><span data-stu-id="bf958-103">This is the final topic in the [Tutorial: Chaining Queries Together (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md) tutorial.</span></span>  
   
- <span data-ttu-id="18a52-104">Les opérateurs de requête standard peuvent également être chaînés ensemble.</span><span class="sxs-lookup"><span data-stu-id="18a52-104">The standard query operators can also be chained together.</span></span> <span data-ttu-id="18a52-105">Par exemple, vous pouvez lancer l'opérateur <xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType> et il fonctionne également de manière différée.</span><span class="sxs-lookup"><span data-stu-id="18a52-105">For example, you can interject the <xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType> operator, and it also operates in a lazy fashion.</span></span> <span data-ttu-id="18a52-106">Aucun résultat intermédiaire n'est matérialisé par l'opérateur.</span><span class="sxs-lookup"><span data-stu-id="18a52-106">No intermediate results are materialized by it.</span></span>  
+ <span data-ttu-id="bf958-104">Les opérateurs de requête standard peuvent également être chaînés ensemble.</span><span class="sxs-lookup"><span data-stu-id="bf958-104">The standard query operators can also be chained together.</span></span> <span data-ttu-id="bf958-105">Par exemple, vous pouvez lancer l'opérateur <xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType> et il fonctionne également de manière différée.</span><span class="sxs-lookup"><span data-stu-id="bf958-105">For example, you can interject the <xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType> operator, and it also operates in a lazy fashion.</span></span> <span data-ttu-id="bf958-106">Aucun résultat intermédiaire n'est matérialisé par l'opérateur.</span><span class="sxs-lookup"><span data-stu-id="bf958-106">No intermediate results are materialized by it.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="18a52-107">Exemple</span><span class="sxs-lookup"><span data-stu-id="18a52-107">Example</span></span>  
- <span data-ttu-id="18a52-108">Dans cet exemple, la méthode <xref:System.Linq.Enumerable.Where%2A> est appelée avant `ConvertCollectionToUpperCase`.</span><span class="sxs-lookup"><span data-stu-id="18a52-108">In this example, the <xref:System.Linq.Enumerable.Where%2A> method is called before calling `ConvertCollectionToUpperCase`.</span></span> <span data-ttu-id="18a52-109">La méthode <xref:System.Linq.Enumerable.Where%2A> opère presque exactement de la même façon que les méthodes différées utilisées dans les exemples précédents de ce didacticiel, `ConvertCollectionToUpperCase` et `AppendString`.</span><span class="sxs-lookup"><span data-stu-id="18a52-109">The <xref:System.Linq.Enumerable.Where%2A> method operates in almost exactly the same way as the lazy methods used in previous examples in this tutorial, `ConvertCollectionToUpperCase` and `AppendString`.</span></span>  
+## <a name="example"></a><span data-ttu-id="bf958-107">Exemple</span><span class="sxs-lookup"><span data-stu-id="bf958-107">Example</span></span>  
+ <span data-ttu-id="bf958-108">Dans cet exemple, la méthode <xref:System.Linq.Enumerable.Where%2A> est appelée avant `ConvertCollectionToUpperCase`.</span><span class="sxs-lookup"><span data-stu-id="bf958-108">In this example, the <xref:System.Linq.Enumerable.Where%2A> method is called before calling `ConvertCollectionToUpperCase`.</span></span> <span data-ttu-id="bf958-109">La méthode <xref:System.Linq.Enumerable.Where%2A> opère presque exactement de la même façon que les méthodes différées utilisées dans les exemples précédents de ce didacticiel, `ConvertCollectionToUpperCase` et `AppendString`.</span><span class="sxs-lookup"><span data-stu-id="bf958-109">The <xref:System.Linq.Enumerable.Where%2A> method operates in almost exactly the same way as the lazy methods used in previous examples in this tutorial, `ConvertCollectionToUpperCase` and `AppendString`.</span></span>  
   
- <span data-ttu-id="18a52-110">Il existe toutefois une différence : dans le cas présent, la méthode <xref:System.Linq.Enumerable.Where%2A> itère au sein de sa collection source, détermine que le premier élément ne passe pas le prédicat et obtient l'élément suivant qui, lui, passe.</span><span class="sxs-lookup"><span data-stu-id="18a52-110">One difference is that in this case, the <xref:System.Linq.Enumerable.Where%2A> method iterates through its source collection, determines that the first item does not pass the predicate, and then gets the next item, which does pass.</span></span> <span data-ttu-id="18a52-111">Elle génère ensuite le deuxième élément.</span><span class="sxs-lookup"><span data-stu-id="18a52-111">It then yields the second item.</span></span>  
+ <span data-ttu-id="bf958-110">Il existe toutefois une différence : dans le cas présent, la méthode <xref:System.Linq.Enumerable.Where%2A> itère au sein de sa collection source, détermine que le premier élément ne passe pas le prédicat et obtient l'élément suivant qui, lui, passe.</span><span class="sxs-lookup"><span data-stu-id="bf958-110">One difference is that in this case, the <xref:System.Linq.Enumerable.Where%2A> method iterates through its source collection, determines that the first item does not pass the predicate, and then gets the next item, which does pass.</span></span> <span data-ttu-id="bf958-111">Elle génère ensuite le deuxième élément.</span><span class="sxs-lookup"><span data-stu-id="bf958-111">It then yields the second item.</span></span>  
   
- <span data-ttu-id="18a52-112">L'idée de base est néanmoins identique : les collections intermédiaires ne sont matérialisées que si elles doivent l'être.</span><span class="sxs-lookup"><span data-stu-id="18a52-112">However, the basic idea is the same: Intermediate collections are not materialized unless they have to be.</span></span>  
+ <span data-ttu-id="bf958-112">L'idée de base est néanmoins identique : les collections intermédiaires ne sont matérialisées que si elles doivent l'être.</span><span class="sxs-lookup"><span data-stu-id="bf958-112">However, the basic idea is the same: Intermediate collections are not materialized unless they have to be.</span></span>  
   
- <span data-ttu-id="18a52-113">Lorsque des expressions de requêtes sont utilisées, elles sont converties en appels aux opérateurs de requête standard et les mêmes principes sont applicables.</span><span class="sxs-lookup"><span data-stu-id="18a52-113">When query expressions are used, they are converted to calls to the standard query operators, and the same principles apply.</span></span>  
+ <span data-ttu-id="bf958-113">Lorsque des expressions de requêtes sont utilisées, elles sont converties en appels aux opérateurs de requête standard et les mêmes principes sont applicables.</span><span class="sxs-lookup"><span data-stu-id="bf958-113">When query expressions are used, they are converted to calls to the standard query operators, and the same principles apply.</span></span>  
   
- <span data-ttu-id="18a52-114">Tous les exemples de cette section qui interrogent des documents Office Open XML utilisent le même principe.</span><span class="sxs-lookup"><span data-stu-id="18a52-114">All of the examples in this section that are querying Office Open XML documents use the same principle.</span></span> <span data-ttu-id="18a52-115">L'exécution et l'évaluation différées sont deux concepts fondamentaux que vous devez comprendre pour utiliser LINQ (et LINQ to XML) de manière optimale.</span><span class="sxs-lookup"><span data-stu-id="18a52-115">Deferred execution and lazy evaluation are some of the fundamental concepts that you must understand  to use LINQ (and LINQ to XML) effectively.</span></span>  
+ <span data-ttu-id="bf958-114">Tous les exemples de cette section qui interrogent des documents Office Open XML utilisent le même principe.</span><span class="sxs-lookup"><span data-stu-id="bf958-114">All of the examples in this section that are querying Office Open XML documents use the same principle.</span></span> <span data-ttu-id="bf958-115">L'exécution et l'évaluation différées sont deux concepts fondamentaux que vous devez comprendre pour utiliser LINQ (et LINQ to XML) de manière optimale.</span><span class="sxs-lookup"><span data-stu-id="bf958-115">Deferred execution and lazy evaluation are some of the fundamental concepts that you must understand  to use LINQ (and LINQ to XML) effectively.</span></span>  
   
 ```csharp  
 public static class LocalExtensions  
@@ -81,7 +73,7 @@ class Program
 }  
 ```  
   
- <span data-ttu-id="18a52-116">Cet exemple génère la sortie suivante :</span><span class="sxs-lookup"><span data-stu-id="18a52-116">This example produces the following output:</span></span>  
+ <span data-ttu-id="bf958-116">Cet exemple génère la sortie suivante :</span><span class="sxs-lookup"><span data-stu-id="bf958-116">This example produces the following output:</span></span>  
   
 ```  
 ToUpper: source >abc<  
@@ -94,5 +86,5 @@ AppendString: source >GHI<
 Main: str >GHI!!!<  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="18a52-117">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="18a52-117">See Also</span></span>  
- [<span data-ttu-id="18a52-118">Didacticiel : chaînage de requêtes (C#)</span><span class="sxs-lookup"><span data-stu-id="18a52-118">Tutorial: Chaining Queries Together (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)
+## <a name="see-also"></a><span data-ttu-id="bf958-117">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="bf958-117">See Also</span></span>  
+ [<span data-ttu-id="bf958-118">Didacticiel : chaînage de requêtes (C#)</span><span class="sxs-lookup"><span data-stu-id="bf958-118">Tutorial: Chaining Queries Together (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)

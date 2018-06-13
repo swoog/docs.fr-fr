@@ -1,14 +1,6 @@
 ---
-title: "SetNonAssemblyFlags, méthode"
-ms.custom: 
+title: SetNonAssemblyFlags, méthode
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IALink.SetNonAssemblyFlags
 api_location:
@@ -22,22 +14,19 @@ helpviewer_keywords:
 ms.assetid: f8ba6fc8-f5aa-4066-ac96-56332758f5ec
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7e944f285ee0925b76fdd9b95c824deee38cead2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 0399a135eddfd87342db63e107c8eea59a6e54d0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401701"
 ---
-# <a name="setnonassemblyflags-method"></a><span data-ttu-id="c2994-102">SetNonAssemblyFlags, méthode</span><span class="sxs-lookup"><span data-stu-id="c2994-102">SetNonAssemblyFlags Method</span></span>
-<span data-ttu-id="c2994-103">Définit les indicateurs qui ne sont pas spécifiques à l’assembly.</span><span class="sxs-lookup"><span data-stu-id="c2994-103">Sets flags that are not assembly-specific.</span></span>  
+# <a name="setnonassemblyflags-method"></a><span data-ttu-id="35e8b-102">SetNonAssemblyFlags, méthode</span><span class="sxs-lookup"><span data-stu-id="35e8b-102">SetNonAssemblyFlags Method</span></span>
+<span data-ttu-id="35e8b-103">Définit les indicateurs qui ne sont pas spécifiques à l’assembly.</span><span class="sxs-lookup"><span data-stu-id="35e8b-103">Sets flags that are not assembly-specific.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c2994-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="c2994-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="35e8b-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="35e8b-104">Syntax</span></span>  
   
 ```  
 HRESULT SetNonAssemblyFlags(  
@@ -45,17 +34,17 @@ HRESULT SetNonAssemblyFlags(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="c2994-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="c2994-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="35e8b-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="35e8b-105">Parameters</span></span>  
  `afFlags`  
- <span data-ttu-id="c2994-106">Indicateurs de ALink.</span><span class="sxs-lookup"><span data-stu-id="c2994-106">ALink flags.</span></span>  
+ <span data-ttu-id="35e8b-106">Indicateurs de ALink.</span><span class="sxs-lookup"><span data-stu-id="35e8b-106">ALink flags.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="c2994-107">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="c2994-107">Return Value</span></span>  
- <span data-ttu-id="c2994-108">Retourne S_OK si la méthode réussit.</span><span class="sxs-lookup"><span data-stu-id="c2994-108">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="35e8b-107">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="35e8b-107">Return Value</span></span>  
+ <span data-ttu-id="35e8b-108">Retourne S_OK si la méthode réussit.</span><span class="sxs-lookup"><span data-stu-id="35e8b-108">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c2994-109">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="c2994-109">Requirements</span></span>  
- <span data-ttu-id="c2994-110">Requiert alink.h</span><span class="sxs-lookup"><span data-stu-id="c2994-110">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="35e8b-109">Spécifications</span><span class="sxs-lookup"><span data-stu-id="35e8b-109">Requirements</span></span>  
+ <span data-ttu-id="35e8b-110">Requiert alink.h</span><span class="sxs-lookup"><span data-stu-id="35e8b-110">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c2994-111">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="c2994-111">See Also</span></span>  
- [<span data-ttu-id="c2994-112">IALink, interface</span><span class="sxs-lookup"><span data-stu-id="c2994-112">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [<span data-ttu-id="c2994-113">IALink2, interface</span><span class="sxs-lookup"><span data-stu-id="c2994-113">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [<span data-ttu-id="c2994-114">API ALink</span><span class="sxs-lookup"><span data-stu-id="c2994-114">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a><span data-ttu-id="35e8b-111">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="35e8b-111">See Also</span></span>  
+ [<span data-ttu-id="35e8b-112">IALink, interface</span><span class="sxs-lookup"><span data-stu-id="35e8b-112">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
+ [<span data-ttu-id="35e8b-113">IALink2, interface</span><span class="sxs-lookup"><span data-stu-id="35e8b-113">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
+ [<span data-ttu-id="35e8b-114">API ALink</span><span class="sxs-lookup"><span data-stu-id="35e8b-114">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
