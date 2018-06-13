@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747747"
 ---
 # <a name="ltbindingelementextensionsgt"></a>&lt;bindingElementExtensions&gt;
 Cette section active l’utilisation d’un élément de liaison personnalisé à partir d’un ordinateur ou d’un fichier de configuration de l’application. Vous pouvez ajouter un élément de liaison personnalisé à cette collection en utilisant le mot clé `add` et affecter à l'attribut `type` de l'élément une extension d'élément de liaison, ainsi que l'attribut `name` à l'élément de liaison personnalisé.  

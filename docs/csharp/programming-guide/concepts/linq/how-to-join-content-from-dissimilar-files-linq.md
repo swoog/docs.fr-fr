@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33319167"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>Guide pratique pour joindre du contenu issu de fichiers non similaires (LINQ) (C#)
 Cet exemple montre comment joindre des données de deux fichiers CSV qui partagent une valeur commune utilisée comme clé correspondante. Cette technique peut être utile si vous devez combiner les données de deux feuilles de calcul, ou d’une feuille de calcul et d’un fichier qui a un autre format, dans un nouveau fichier. Vous pouvez modifier l’exemple pour qu’il fonctionne avec tout type de texte structuré.  

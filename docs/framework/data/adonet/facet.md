@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762421"
 ---
 # <a name="facet"></a>facet
 A *facette* est utilisé pour ajouter des détails à une définition de propriété de type primitif. A [propriété](../../../../docs/framework/data/adonet/property.md) définition contient des informations sur le type de propriété, mais plus de détails est souvent nécessaire. Par exemple, un type d'entité dans un modèle conceptuel peut avoir une propriété de type `String` dont la valeur ne peut pas être null. Les facettes vous permettent de spécifier ce niveau de détail.  

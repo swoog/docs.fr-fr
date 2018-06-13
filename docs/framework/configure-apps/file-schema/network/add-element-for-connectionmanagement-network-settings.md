@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753740"
 ---
 # <a name="ltaddgt-element-for-connectionmanagement-network-settings"></a>&lt;ajouter&gt; , élément pour connectionManagement (paramètres réseau)
 Ajoute une adresse IP ou un nom DNS à la liste de gestion des connexions.  

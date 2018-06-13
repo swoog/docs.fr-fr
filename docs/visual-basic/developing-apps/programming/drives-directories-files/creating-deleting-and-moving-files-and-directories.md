@@ -27,6 +27,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590944"
 ---
 # <a name="creating-deleting-and-moving-files-and-directories-in-visual-basic"></a>Création, suppression et déplacement de fichiers et de répertoires dans Visual Basic
 Cette section liste les tâches associées à la création, la suppression, le déplacement et la modification du nom de fichiers et de répertoires dans Visual Basic.  

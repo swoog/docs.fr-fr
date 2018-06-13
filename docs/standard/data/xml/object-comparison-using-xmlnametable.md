@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569276"
 ---
 # <a name="object-comparison-using-xmlnametable"></a>Comparaison d'objets à l'aide de XmlNameTable
 Durant la création d'un objet **XmlDocument**, une table de noms est spécialement créée à l'intention de ce document. Quand les données XML sont chargées dans le document ou que de nouveaux éléments ou attributs sont créés, les noms d'attributs et d'éléments sont placés dans **XmlNameTable**. Vous pouvez également créer un **XmlDocument** en utilisant un **NameTable** existant issu d'un autre document. Quand des **XmlDocument** sont créés avec le constructeur qui prend un paramètre **XmlNameTable**, le document a accès aux préfixes, aux espaces de noms et aux noms de nœud déjà stockés dans **XmlNameTable**. Quelle que soit la manière dont les noms sont chargés dans la table de noms, une fois les noms stockés dans la table, ils peuvent être comparés rapidement par la comparaison d'objets et non au moyen de la comparaison de chaînes. Des chaînes peuvent également être ajoutées à la table de noms à l'aide de la <xref:System.Xml.NameTable.Add%2A>. L'exemple de code suivant illustre la création d'une table de noms et l'ajout de la chaîne **MyString** à cette table. Un **XmlDocument** est ensuite créé au moyen de cette table, et les noms d'éléments et d'attributs de **Myfile.xml** sont ajoutés à la table de noms existante.  

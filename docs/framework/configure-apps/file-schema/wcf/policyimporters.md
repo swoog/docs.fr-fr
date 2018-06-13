@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749096"
 ---
 # <a name="ltpolicyimportersgt"></a>&lt;policyImporters&gt;
 Cet élément de configuration indique tous les importateurs de stratégie contrôlant l’importation d’assertions de stratégie personnalisées concernant les liaisons. Chaque élément enfant est un <`policyImporter`> utilisé pour rechercher des assertions de stratégie personnalisées concernant les fonctionnalités de liaison et pour joindre un élément de liaison personnalisé qui implémente les fonctionnalités requises par l'assertion.  

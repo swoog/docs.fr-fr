@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749980"
 ---
 # <a name="ltrequiredruntimegt-element"></a>&lt;requiredRuntime&gt; élément
 Spécifie que l’application prend en charge uniquement la version 1.0 du common language runtime. Cet élément est déconseillé et ne doit plus être utilisé. Le [ `supportedRuntime` ](supportedruntime-element.md) élément doit être utilisé à la place.

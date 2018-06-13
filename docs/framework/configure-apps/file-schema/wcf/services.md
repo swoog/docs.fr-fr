@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749229"
 ---
 # <a name="ltservicesgt"></a>&lt;Services&gt;
 Les services sont définis dans la section `services` du fichier de configuration. Chacun dispose de sa propre section de configuration de `service`.  

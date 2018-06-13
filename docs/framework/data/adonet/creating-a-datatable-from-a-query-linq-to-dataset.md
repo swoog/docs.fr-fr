@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758826"
 ---
 # <a name="creating-a-datatable-from-a-query-linq-to-dataset"></a>Création d'un DataTable à partir d'une requête (LINQ to DataSet)
 La liaison de données est une utilisation courante de l'objet <xref:System.Data.DataTable>. La méthode <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> prend les résultats d'une requête et copie les données dans un objet <xref:System.Data.DataTable> qui peut ensuite être utilisé pour la liaison de données. Une fois les opérations de données effectuées, le nouveau <xref:System.Data.DataTable> est refusionné dans le <xref:System.Data.DataTable> source.  

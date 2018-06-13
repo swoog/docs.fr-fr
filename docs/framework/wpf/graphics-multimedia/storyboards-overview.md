@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566897"
 ---
 # <a name="storyboards-overview"></a>Vue d'ensemble des storyboards
 Cette rubrique montre comment utiliser <xref:System.Windows.Media.Animation.Storyboard> objets pour organiser et appliquer des animations. Il explique comment manipuler de manière interactive <xref:System.Windows.Media.Animation.Storyboard> des objets et décrit la syntaxe de ciblage de propriété indirecte.  

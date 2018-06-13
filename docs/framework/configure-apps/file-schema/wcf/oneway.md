@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746720"
 ---
 # <a name="ltonewaygt"></a>&lt;oneWay&gt;
 Active le routage de paquets et l’utilisation de méthodes unidirectionnelles pour une liaison personnalisée.  
