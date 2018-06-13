@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579572"
 ---
 # <a name="globalization"></a>Globalisation
 La globalisation a trait à la conception et au développement d’applications universelles qui prennent en charge les interfaces localisées et les données régionales pour les utilisateurs de diverses cultures. Avant d’entreprendre la phase de conception, vous devez déterminer les cultures que votre application devra prendre en charge. Bien qu’une application cible par défaut une seule et même culture ou région, vous pouvez la concevoir et l’écrire de façon à faciliter son extension à d’autres cultures ou régions.  

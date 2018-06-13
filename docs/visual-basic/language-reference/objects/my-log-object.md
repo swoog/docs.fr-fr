@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596019"
 ---
 # <a name="mylog-object"></a>My.Log, objet
 Fournit une propriété et des méthodes pour écrire les informations d’événements et les exceptions dans les écouteurs de journalisation de l’application.  

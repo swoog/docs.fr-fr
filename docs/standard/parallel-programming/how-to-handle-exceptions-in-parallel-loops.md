@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580547"
 ---
 # <a name="how-to-handle-exceptions-in-parallel-loops"></a>Comment : gérer des exceptions dans des boucles parallèles
 Les surcharges <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> et <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> ne possèdent pas de mécanisme permettant de gérer les exceptions. En cela, elles sont similaires aux boucles `for` et `foreach` (`For` et `For Each` en Visual Basic). Une exception non gérée provoque l'arrêt immédiat de la boucle.  

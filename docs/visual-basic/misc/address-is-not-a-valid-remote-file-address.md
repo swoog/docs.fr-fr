@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599897"
 ---
 # <a name="ltaddressgt-is-not-a-valid-remote-file-address"></a>&lt;adresse&gt; n’est pas une adresse valide de fichier distant
 \<adresse > n’est pas une adresse valide de fichier distant. Une adresse valide doit inclure un protocole, un chemin et un nom de fichier.  

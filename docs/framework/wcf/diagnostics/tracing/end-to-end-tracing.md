@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33474218"
 ---
 # <a name="end-to-end-tracing"></a>Suivi de bout en bout
 Bout en bout (e2e) suivi permet aux développeurs de suivre l’exécution de code dans l’infrastructure Windows Communication Foundation (WCF) pour examiner pourquoi un chemin d’accès du code a échoué, ou pour assurer le suivi détaillé pour l’analyse de performances et de planification de capacité. Windows Communication Foundation (WCF) fournit trois mécanismes de corrélation pour aider à diagnostiquer la cause d’une erreur : activités, transferts et propagation.  

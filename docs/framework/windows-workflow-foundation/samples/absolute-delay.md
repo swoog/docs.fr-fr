@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518383"
 ---
 # <a name="absolute-delay"></a>Report absolu
 Le principal scénario de cet exemple consiste à définir un report jusqu'à un <xref:System.DateTime> spécifié, à l'aide de minuteurs durables dans une application de workflow. Cette opération n'est pas comparable à l'utilisation de l'activité <xref:System.Activities.Statements.Delay> intégrée, dans la mesure où elle vous permet seulement de définir un report pour un <xref:System.TimeSpan> donné (ou nombre de minutes/secondes).  

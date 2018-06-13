@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596682"
 ---
 # <a name="statement-cannot-end-a-block-outside-of-a-line-39if39-statement"></a>L’instruction ne peut pas se terminer un bloc en dehors d’une ligne &#39;si&#39; instruction
 Une seule ligne `If` instruction contient plusieurs instructions séparées par un signe deux-points ( :), y compris un `End` instruction pour un bloc de contrôle en dehors de la ligne unique `If`. Une ligne `If` instructions n’utilisent pas la `End If` instruction.  

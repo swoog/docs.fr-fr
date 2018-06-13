@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517281"
 ---
 # <a name="instance-locked-exception-action"></a>Action d'exception verrouillée d'instance
 La propriété <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore.InstanceLockedExceptionAction%2A> du Magasin d'instances de workflow SQL vous permet de spécifier quelle mesure le fournisseur de persistance SQL doit prendre lorsqu'il reçoit une <xref:System.Runtime.DurableInstancing.InstanceLockedException>. Le fournisseur de persistance reçoit cette exception lorsqu'il essaye de verrouiller une instance de service de workflow actuellement verrouillée par un autre hôte de service. Les valeurs possibles pour cette propriété sont : <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction.NoRetry>, <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction.BasicRetry> et <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction.AggressiveRetry>. La valeur par défaut est <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction.NoRetry>. La liste suivante décrit ces trois options :  

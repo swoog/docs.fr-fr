@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595837"
 ---
 # <a name="modules-visual-basic"></a>Modules (Visual Basic)
 Visual Basic fournit plusieurs modules qui vous permettent de simplifier les tâches courantes dans votre code, notamment la manipulation de chaînes, en effectuant des calculs mathématiques, l’obtention des informations système, effectuer des opérations de fichier et de répertoire et ainsi de suite. Le tableau suivant répertorie les modules fournis par Visual Basic.  

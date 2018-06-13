@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518318"
 ---
 # <a name="using-custom-activity-designers-and-templates"></a>Utilisation de concepteurs d'activités et de modèles d'activité personnalisés
 Cette section contient des rubriques qui expliquent comment créer des concepteurs d'activités personnalisés et des modèles d'activité personnalisés.  

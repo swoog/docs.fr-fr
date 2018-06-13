@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513716"
 ---
 # <a name="host-lock-renewal-period"></a>Période de renouvellement du verrou de l'hôte
 Le **Host Lock Renewal Period** propriété du magasin d’instances de Workflow SQL vous permet de spécifier la période durant laquelle l’hôte renouvelle son verrou sur une instance de workflow. Le verrou reste valide pendant la période spécifiée pour la propriété Host Lock Renewal Period + 30 secondes. Si l'hôte ne renouvelle pas le verrou (en d'autres termes, s'il étend le bail) durant cette période, le verrou expire et le fournisseur de persistance déverrouille l'instance. La valeur de cette propriété est de type TimeSpan sous la forme « hh : mm : ». La valeur minimale autorisée est « 00 : 00:01 » (1 seconde). La valeur par défaut de cette propriété est « 00 : 00:30 » (30 secondes).  
