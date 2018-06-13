@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761036"
 ---
 # <a name="entity-sql-language"></a><span data-ttu-id="42d2b-102">Langage d'Entity SQL</span><span class="sxs-lookup"><span data-stu-id="42d2b-102">Entity SQL Language</span></span>
 <span data-ttu-id="42d2b-103">Entity SQL est un langage de requête indépendant du stockage et semblable à SQL.</span><span class="sxs-lookup"><span data-stu-id="42d2b-103">Entity SQL is a storage-independent query language that is similar to SQL.</span></span> <span data-ttu-id="42d2b-104">Entity SQL vous permet d'interroger des données d'entité, en tant qu'objets ou sous une forme tabulaire.</span><span class="sxs-lookup"><span data-stu-id="42d2b-104">Entity SQL allows you to query entity data, either as objects or in a tabular form.</span></span> <span data-ttu-id="42d2b-105">Vous devez envisager d'utiliser Entity SQL dans les cas suivants :</span><span class="sxs-lookup"><span data-stu-id="42d2b-105">You should consider using Entity SQL in the following cases:</span></span>  

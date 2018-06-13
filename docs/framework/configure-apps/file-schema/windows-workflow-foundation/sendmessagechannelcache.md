@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757721"
 ---
 # <a name="ltsendmessagechannelcachegt"></a><span data-ttu-id="fe979-102">&lt;sendMessageChannelCache&gt;</span><span class="sxs-lookup"><span data-stu-id="fe979-102">&lt;sendMessageChannelCache&gt;</span></span>
 <span data-ttu-id="fe979-103">Un comportement de service qui permet de personnaliser le partage du cache niveaux, les paramètres du cache de fabrique de canal et les paramètres du cache de canal pour le flux de travail qui envoient des messages aux points de terminaison de service à l’aide d’envoi d’activités de messagerie.</span><span class="sxs-lookup"><span data-stu-id="fe979-103">A service behavior that enables the customization of the cache sharing levels, the settings of the channel factory cache, and the settings of the channel cache for workflows that send messages to service endpoints using Send messaging activities.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750607"
 ---
 # <a name="ltsystemruntimecachinggt-element-cache-settings"></a><span data-ttu-id="5ddb4-102">&lt;System.Runtime.Caching&gt; élément (paramètres de Cache)</span><span class="sxs-lookup"><span data-stu-id="5ddb4-102">&lt;system.runtime.caching&gt; Element (Cache Settings)</span></span>
 <span data-ttu-id="5ddb4-103">Fournit la configuration pour l’implémentation de <xref:System.Runtime.Caching.ObjectCache> en mémoire par défaut via l’entrée `memoryCache` dans le fichier de configuration.</span><span class="sxs-lookup"><span data-stu-id="5ddb4-103">Provides configuration for the default in-memory <xref:System.Runtime.Caching.ObjectCache> implementation through the `memoryCache` entry in the configuration file.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755186"
 ---
 # <a name="ltroleclaimtypegt"></a><span data-ttu-id="b90b2-102">&lt;roleClaimType&gt;</span><span class="sxs-lookup"><span data-stu-id="b90b2-102">&lt;roleClaimType&gt;</span></span>
 <span data-ttu-id="b90b2-103">Spécifie le type de revendication qui définit les revendications de type de rôle dans la collection de <xref:System.Security.Claims.ClaimsIdentity> objets retournés par la <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> méthode du Gestionnaire de jeton.</span><span class="sxs-lookup"><span data-stu-id="b90b2-103">Specifies the claim type that defines the role type claims in the collection of <xref:System.Security.Claims.ClaimsIdentity> objects returned by the <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> method of the token handler.</span></span>  

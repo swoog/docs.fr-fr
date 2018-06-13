@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760932"
 ---
 # <a name="canonical-functions"></a><span data-ttu-id="098e4-102">Fonctions canoniques</span><span class="sxs-lookup"><span data-stu-id="098e4-102">Canonical Functions</span></span>
 <span data-ttu-id="098e4-103">Cette section décrit les fonctions canoniques qui sont prises en charge par tous les fournisseurs de données et qui peuvent être utilisée par toutes les technologies de requête.</span><span class="sxs-lookup"><span data-stu-id="098e4-103">This section discusses canonical functions that are supported by all data providers, and can be used by all querying technologies.</span></span> <span data-ttu-id="098e4-104">Les fonctions canoniques ne peuvent pas être étendues par un fournisseur.</span><span class="sxs-lookup"><span data-stu-id="098e4-104">Canonical functions cannot be extended by a provider.</span></span>  
