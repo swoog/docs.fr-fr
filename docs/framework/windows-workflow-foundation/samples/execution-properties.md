@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513020"
 ---
 # <a name="execution-properties"></a>Propriétés d'exécution
 Cet exemple montre comment définir et utiliser une propriété d'exécution dans une activité personnalisée. Dans cet exemple, la propriété d'exécution détermine la couleur de premier plan de la console. Un exemple de workflow montre comment différents chemins logiques d'exécution (branches d'une activité <xref:System.Activities.Statements.Parallel>) peuvent maintenir des couleurs de console différentes malgré l'exécution entrelacée d'activités (à travers les branches de l'activité <xref:System.Activities.Statements.Parallel>).  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359918"
 ---
 # <a name="linq-to-sql-with-tightly-coupled-client-server-applications"></a>LINQ to SQL avec des applications client-serveur fortement couplés
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] peut être utilisé sur la couche intermédiaire avec des Clients intelligents fortement couplés sur la couche de présentation. Dans les scénarios qui impliquent l'accès aux données en lecture seule, aucun contrôle d'accès concurrentiel ni accès concurrentiel optimiste avec horodatages, la complexité n'est guère supérieure à celle des scénarios sans accès à distance. Toutefois, lorsqu'une base de données requiert des contrôles d'accès concurrentiel optimiste avec les valeurs d'origine, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ne fournit pas le niveau de prise en charge pour l'aller-retour (round-trip) de données que vous trouvez dans DataSets. Toutefois, une couche intermédiaire [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] peut échanger des données avec les clients sur toutes les plateformes.  

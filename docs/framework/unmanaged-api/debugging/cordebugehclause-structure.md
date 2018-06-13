@@ -16,9 +16,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 40820a805310786eeb0effd7c5284c1a70a6e70b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33407598"
 ---
 # <a name="cordebugehclause-structure"></a>CorDebugEHClause, structure
 [Pris en charge dans .NET Framework 4.5.2 et ultérieur]  

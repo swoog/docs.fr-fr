@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744393"
 ---
 # <a name="manipulations-and-inertia-overview"></a>Vue d'ensemble des manipulations et de l'inertie
 Les *manipulations* permettent aux utilisateurs de déplacer, de faire pivoter et de redimensionner des éléments de l’interface utilisateur à l’aide de *manipulateurs*. Un manipulateur représente une souris ou, dans le cas d'un écran tactile, un stylet ou un doigt.  

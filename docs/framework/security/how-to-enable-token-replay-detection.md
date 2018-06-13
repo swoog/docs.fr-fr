@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408058"
 ---
 # <a name="how-to-enable-token-replay-detection"></a>Guide pratique pour activer la détection de relecture de jetons
 ## <a name="applies-to"></a>S'applique à  

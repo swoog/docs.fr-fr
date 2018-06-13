@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513849"
 ---
 # <a name="application"></a>Application
 Cette section contient des exemples liés aux applications de workflow dans Windows Workflow Foundation (WF).  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33504317"
 ---
 # <a name="services-and-transactions"></a>Services et transactions
 Les applications Windows Communication Foundation (WCF) peuvent initier une transaction à partir d’un client et coordonner la transaction dans l’opération de service. Les clients peuvent initier une transaction et appeler plusieurs opérations de service et s’assurer que les opérations de service sont validées ou annulées en tant qu’unité unique.  

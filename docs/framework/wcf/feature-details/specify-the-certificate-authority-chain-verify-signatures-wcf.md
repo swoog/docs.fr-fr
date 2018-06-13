@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498073"
 ---
 # <a name="how-to-specify-the-certificate-authority-certificate-chain-used-to-verify-signatures-wcf"></a>Comment : spécifier la chaîne de certificats d'autorité de certification utilisée pour vérifier des signatures (WCF)
 Lorsque Windows Communication Foundation (WCF) reçoit un message SOAP signé à l’aide d’un certificat X.509, par défaut il vérifie que le certificat X.509 a été émis par une autorité de certification approuvée. Il consulte pour cela un magasin de certificats et détermine si le certificat de cette autorité de certification a été désigné comme approuvé. Dans l’ordre pour WCF effectuer cette détermination, chaîne de certificat de l’autorité de certification doit être installée dans le magasin de certificats correct.  

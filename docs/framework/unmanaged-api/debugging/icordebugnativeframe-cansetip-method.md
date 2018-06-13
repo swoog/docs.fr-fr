@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 93c8256ae95108f0800b56869d67570c4e42202e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33416895"
 ---
 # <a name="icordebugnativeframecansetip-method"></a>ICorDebugNativeFrame::CanSetIP, méthode
 Obtient une valeur HRESULT qui indique s’il est possible de définir le pointeur d’instruction (IP) à l’emplacement de décalage spécifié dans le code natif.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333774"
 ---
 # <a name="how-to-chain-axis-method-calls-linq-to-xml-c"></a>Guide pratique pour chaîner des appels à des méthodes d’axe (LINQ to XML) (C#)
 Un schéma courant que vous utiliserez dans votre code consiste à appeler une méthode d’axe, puis à appeler l’un des axes de méthode d’extension.  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745001"
 ---
 # <a name="ltprobinggt-element"></a>&lt;détection&gt; élément
 Spécifie les sous-répertoires de base d’application pour le common language runtime à rechercher lors du chargement d’assemblys.  

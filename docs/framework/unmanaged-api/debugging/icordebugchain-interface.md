@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 32889a8e8867fc42b48413463095dda423f26b85
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33409839"
 ---
 # <a name="icordebugchain-interface1"></a>ICorDebugChain Interface1
 Représente un segment d'une pile des appels physique ou logique.  
