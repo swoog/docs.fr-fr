@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523040"
 ---
 # <a name="how-to-improve-performance-by-avoiding-automatic-scaling"></a>Comment : améliorer les performances en évitant la mise à l'échelle automatique
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] peut automatiquement mettre à l’échelle une image que vous la dessinez, ce qui diminue les performances. Ou bien, vous pouvez contrôler la mise à l’échelle de l’image en passant les dimensions du rectangle de destination à le <xref:System.Drawing.Graphics.DrawImage%2A> (méthode).  

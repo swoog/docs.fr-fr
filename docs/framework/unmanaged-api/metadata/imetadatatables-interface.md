@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c1a11c0b697a32b184a2c4a60c2f2c88a4b47aaf
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33451534"
 ---
 # <a name="imetadatatables-interface"></a>IMetaDataTables, interface
 Fournit des méthodes pour le stockage et la récupération d'informations de métadonnées dans des tables.  

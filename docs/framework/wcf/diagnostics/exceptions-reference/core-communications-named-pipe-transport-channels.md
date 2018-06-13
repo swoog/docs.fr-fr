@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33468330"
 ---
 # <a name="core-communications-named-pipe-transport-channels"></a>Communications principales : canaux de transport du canal nommé
 Cette rubrique répertorie toutes les exceptions générées par les canaux de transport du canal nommé.  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6a1588a37891d6a73c49cb1b9ccbc81d9dcdb7e2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33420415"
 ---
 # <a name="icordebugprocess2-interface1"></a>ICorDebugProcess2 Interface1
 Extension logique de l’interface ICorDebugProcess, qui représente un processus en cours d’exécution du code managé.  

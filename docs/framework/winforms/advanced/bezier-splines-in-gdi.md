@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517571"
 ---
 # <a name="b233zier-splines-in-gdi"></a>B&#233;Bézier Splines dans GDI +
 Une spline de Bézier est une courbe spécifiée par quatre points : deux points de terminaison (p1 et p2) et deux points de contrôle (c1 et c2). La courbe commence en p1 et se termine à p2. La courbe ne passe pas par les points de contrôle, mais les points de contrôle d’agissent en tant qu’aimants, la courbe dans certaines directions et influencent la courbure de la courbe. L’illustration suivante montre une courbe de Bézier ainsi que ses points de terminaison et les points de contrôle.  

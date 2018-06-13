@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637915"
 ---
 # <a name="line-ltnumbergt-cannot-be-parsed-using-the-current-fieldwidths"></a>Ligne &lt;nombre&gt; ne peut pas être analysée à l’aide du FieldWidths actuel
 La ligne spécifiée ne peut pas être analysée, car ses champs ont des largeurs différentes de celles spécifiées.  

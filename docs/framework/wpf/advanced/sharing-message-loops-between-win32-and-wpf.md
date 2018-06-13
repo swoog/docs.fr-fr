@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548813"
 ---
 # <a name="sharing-message-loops-between-win32-and-wpf"></a>Partage de boucles de messages entre Win32 et WPF
 Cette rubrique décrit comment implémenter une boucle de messages pour l’interopérabilité avec [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], à l’aide d’existant message exposition de boucle dans <xref:System.Windows.Threading.Dispatcher> ou en créant une boucle de messages distincte sur la [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] de votre code d’interopérabilité.  

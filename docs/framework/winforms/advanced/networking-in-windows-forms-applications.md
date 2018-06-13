@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523382"
 ---
 # <a name="networking-in-windows-forms-applications"></a>Mise en réseau dans les applications Windows Forms
 Le .NET Framework fournit des classes pour afficher des pages Web, téléchargement de contenu Web, interagir avec les sites de protocole (FTP) de transfert de fichiers et consommer des Services Web, ce qui permet de générer des fonctionnalités de réseau dans votre application. Les ressources suivantes vous aideront à comprendre les technologies de mise en réseau de .NET Framework et comment vous pouvez les intégrer dans les Windows Forms.  

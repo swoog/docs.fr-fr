@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520300"
 ---
 # <a name="how-to-update-the-definition-of-a-running-workflow-instance"></a>Procédure : mettre à jour la définition d'une instance de workflow en cours d'exécution
 La mise à jour dynamique fournit un mécanisme pour permettre aux développeurs d'applications de workflow de mettre à jour la définition de workflow d'une instance de workflow persistante. Il peut s’agit de l’implémentation d’une résolution de bogue, de nouvelles exigences ou de l’adaptation à des modifications inattendues. Cette étape dans le didacticiel montre comment utiliser la mise à jour dynamique pour modifier des instances persistantes de le `v1` nombre estimation des flux de travail pour correspondre à la nouvelle fonctionnalité introduite dans [Comment : hôte de plusieurs Versions d’un Workflow côte à côte ](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).  

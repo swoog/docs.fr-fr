@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636796"
 ---
 # <a name="object-doesn39t-support-current-locale-setting-visual-basic"></a>Objet ne&#39;t prise en charge des paramètres régionaux d’actuel (Visual Basic)
 Vous avez tenté d’accéder à un objet qui ne prend pas en charge les paramètres régionaux du projet actuel.  

@@ -10,9 +10,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 194184f6ddafa1341fbb731ba51e9635ea66ffa3
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450500"
 ---
 # <a name="metadata-unmanaged-api-reference"></a>Métadonnées (Informations de référence sur les API non managées)
 L'API de métadonnées permet à un client, comme un compilateur, de générer les métadonnées d'un composant ou d'y accéder sans que le Common Language Runtime (CLR) ne charge les types.  

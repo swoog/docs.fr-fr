@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637372"
 ---
 # <a name="file-format-not-valid"></a>Format de fichier non valide
 Vous avez essayé de charger un fichier dans un composant, mais le format des données dans le fichier n’était pas compatible avec le composant, ou vous avez essayé d’enregistrer des données de composant dans un fichier, mais le format des données n’était pas compatible avec le format du fichier.  

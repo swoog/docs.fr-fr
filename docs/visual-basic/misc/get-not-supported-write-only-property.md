@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636757"
 ---
 # <a name="get-not-supported-write-only-property"></a>Get non pris en charge (propriété en écriture seule)
 Impossible de lire une propriété, car elle est en écriture seule.  

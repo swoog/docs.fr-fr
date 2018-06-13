@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521613"
 ---
 # <a name="how-to-draw-a-custom-dashed-line"></a>Comment : dessiner une ligne en pointillés personnalisée
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] fournit plusieurs styles de ligne qui sont répertoriées dans le <xref:System.Drawing.Drawing2D.DashStyle> énumération. Si ces styles de ligne standard ne répondent pas à vos besoins, vous pouvez créer un modèle de tiret personnalisé.  

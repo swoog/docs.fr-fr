@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516725"
 ---
 # <a name="collection-activities-in-wf"></a>Activités de collection dans le WF
 Les activités de collection sont utilisées pour utiliser les objets de collection dans un workflow. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] comprend des activités fournies par le système permettant d'ajouter des éléments à une collection et de les supprimer, de vérifier l'existence d'un élément dans une collection et d'effacer une collection. `ExistsInCollection` et `RemoveFromCollection` ont un <xref:System.Activities.OutArgument%601> de type <xref:System.Boolean>, qui indique le résultat.  

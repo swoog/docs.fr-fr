@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548468"
 ---
 # <a name="freezable-objects-overview"></a>Vue d'ensemble des objets Freezable
 Cette rubrique explique comment utiliser efficacement et créer <xref:System.Windows.Freezable> objets qui fournissent des fonctionnalités spéciales qui peuvent aider à améliorer les performances de l’application. Exemples d’objets freezable incluent les pinceaux, les stylets, les transformations, les géométries et les animations.  
