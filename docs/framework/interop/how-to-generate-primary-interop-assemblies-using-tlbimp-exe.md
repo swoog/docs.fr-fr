@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389991"
 ---
 # <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a><span data-ttu-id="e6a24-102">Comment : générer des assemblys PIA à l'aide de Tlbimp.exe</span><span class="sxs-lookup"><span data-stu-id="e6a24-102">How to: Generate Primary Interop Assemblies Using Tlbimp.exe</span></span>
 <span data-ttu-id="e6a24-103">Il existe deux manières de générer un assembly PIA :</span><span class="sxs-lookup"><span data-stu-id="e6a24-103">There are two ways to generate a primary interop assembly:</span></span>  

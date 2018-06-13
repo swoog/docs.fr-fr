@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33387430"
 ---
 # <a name="exposing-net-framework-components-to-com"></a><span data-ttu-id="d16e7-102">Exposition de composants .NET Framework à COM</span><span class="sxs-lookup"><span data-stu-id="d16e7-102">Exposing .NET Framework Components to COM</span></span>
 <span data-ttu-id="d16e7-103">L’écriture d’un type .NET et l’utilisation de ce type à partir de code non managé sont deux activités distinctes pour les développeurs.</span><span class="sxs-lookup"><span data-stu-id="d16e7-103">Writing a .NET type and consuming that type from unmanaged code are distinct activities for developers.</span></span> <span data-ttu-id="d16e7-104">Cette section contient plusieurs conseils pour l’écriture de code managé interagissant avec des clients COM :</span><span class="sxs-lookup"><span data-stu-id="d16e7-104">This section describes several tips for writing managed code that interoperates with COM clients:</span></span>  
