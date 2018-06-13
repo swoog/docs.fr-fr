@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b1e652588d27521a04015228e86eb9af9c53346e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440812"
 ---
 # <a name="stackoverflowinfo-structure"></a>StackOverflowInfo, structure
 Stocke le type de dépassement de capacité qui s’est produite et des informations sur l’exception qui a été levée en raison du dépassement de capacité.  

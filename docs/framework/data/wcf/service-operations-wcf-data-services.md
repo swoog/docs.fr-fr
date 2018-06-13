@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365850"
 ---
 # <a name="service-operations-wcf-data-services"></a>Opérations de service (services de données WCF)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] vous permet de définir des opérations de service sur un service de données pour exposer des méthodes sur le serveur. Comme d'autres ressources du service des données, les opérations de service sont adressées par les URI. Les opérations de service vous permettent d’exposer la logique métier dans un service de données, comme d’implémenter la logique de validation, pour appliquer la sécurité basée sur les rôles, ou exposer des fonctions d’interrogation spécialisées. Les opérations de service sont des méthodes ajoutées à la classe de service de données dérivée de <xref:System.Data.Services.DataService%601>. Comme pour toutes les autres ressources du service de données, vous pouvez fournir des paramètres à la méthode d'opération de service. Opération URI du service, par exemple, les éléments suivants (selon le [démarrage rapide](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) service de données) passe la valeur `London` à le `city` paramètre :  

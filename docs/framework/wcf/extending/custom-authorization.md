@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33487855"
 ---
 # <a name="custom-authorization"></a>Autorisation personnalisée
 Le processus d’autorisation consiste à contrôler l’accès aux ressources et aux tâches. Les rubriques de cette section vous permettent de créer et d'implémenter des types de revendications différents ou des stratégies.  

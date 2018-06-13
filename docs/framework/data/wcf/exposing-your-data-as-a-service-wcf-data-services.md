@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363562"
 ---
 # <a name="exposing-your-data-as-a-service-wcf-data-services"></a>Exposition de vos données comme service (services de données WCF)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] s’intègre à Visual Studio pour vous permettre de définir plus facilement des services permettant d’exposer vos données en tant que [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] flux. Création d’un service de données qui expose un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] flux implique les étapes de base suivantes :  

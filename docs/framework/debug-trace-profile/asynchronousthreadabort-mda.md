@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364177"
 ---
 # <a name="asynchronousthreadabort-mda"></a>Assistant Débogage managé asynchronousThreadAbort
 L’Assistant Débogage managé (MDA) `asynchronousThreadAbort` est activé quand un thread tente d’introduire un abandon asynchrone dans un autre thread. Les abandons de threads synchrones n’activent pas l’Assistant Débogage managé `asynchronousThreadAbort`.

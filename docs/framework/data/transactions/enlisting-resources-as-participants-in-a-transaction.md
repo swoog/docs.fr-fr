@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365603"
 ---
 # <a name="enlisting-resources-as-participants-in-a-transaction"></a>Inscription de ressources comme participants à une transaction
 Les ressources participant à une transaction sont managées par un gestionnaire de ressources, dont les actions sont coordonnées par un gestionnaire de transactions. La coordination s'effectue par envoi de notifications aux abonnés qui se sont inscrits à une transaction via le gestionnaire de transactions.  

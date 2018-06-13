@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365168"
 ---
 # <a name="data-binding"></a>Liaison de données
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] prend en charge la liaison aux contrôles communs, tels que les contrôles de grille. Plus précisément, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] définit les modèles de base pour la liaison à une grille de données et de gérer la liaison maître / détail en termes d’affichage et la mise à jour.  

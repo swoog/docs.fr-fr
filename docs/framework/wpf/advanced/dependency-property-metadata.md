@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541695"
 ---
 # <a name="dependency-property-metadata"></a>Métadonnées de propriété de dépendance
 Le système de propriétés [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] inclut un système de création de rapport de métadonnées allant au-delà de ce qui peut être signalé à propos d’une propriété par réflexion ou par les caractéristiques générales du [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]. Les métadonnées d’une propriété de dépendance peuvent également être affectées de manière unique par la classe qui définit une propriété de dépendance, peuvent être changées quand la propriété de dépendance est ajoutée à une autre classe, et peuvent être substituées de manière spécifique par toutes les classes dérivées qui héritent de la propriété de dépendance de la classe de base de définition.  

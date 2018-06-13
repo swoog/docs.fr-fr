@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361570"
 ---
 # <a name="boolean-data-types"></a>Types de données Boolean
 Les opérateurs booléens fonctionnent conformément aux attentes dans le Common Language Runtime (CLR) mais le comportement de court-circuit n'est pas traduit. Par exemple, l'opérateur Visual Basic `AndAlso` se comporte comme l'opérateur `And`. L'opérateur C# `&&` se comporte comme l'opérateur `&`.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33410145"
 ---
 # <a name="installutilexe-installer-tool"></a>Installutil.exe (outil Installer Tool)
 L'outil Installer est un utilitaire en ligne de commande qui vous permet d'installer et de désinstaller les ressources serveur en exécutant les composants du programme d'installation dans des assemblys spécifiés. Cet outil fonctionne conjointement avec les classes de l'espace de noms <xref:System.Configuration.Install>.  
