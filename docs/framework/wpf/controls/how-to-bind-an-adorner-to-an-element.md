@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552550"
 ---
 # <a name="how-to-bind-an-adorner-to-an-element"></a>Comment : lier un ornement à un élément
 Cet exemple montre comment lier par programmation un ornement spécifié <xref:System.Windows.UIElement>.  

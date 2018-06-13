@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4b985aeb97621e552e9e97581e67cae029d019ef
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405891"
 ---
 # <a name="setpekind-method"></a>SetPEKind, méthode
 Détermine le type exécutable portable, un ordinateur ou spécifique à indépendant de l’ordinateur.  

@@ -6,9 +6,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 78149d1f8fdad3c11fe693221888f115af84ada2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406420"
 ---
 # <a name="authenticode-unmanaged-api-reference"></a>Authenticode (Informations de référence sur les API non managées)
 Prend en charge le module de création et de vérification des licences XrML Authenticode.  

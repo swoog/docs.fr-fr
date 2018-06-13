@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538963"
 ---
 # <a name="getting-started-with-windows-forms"></a>Mise en route des Windows Forms
 Avec Windows Forms, vous pouvez créer de puissantes applications basées sur Windows. Les rubriques suivantes décrivent en détail comment exploiter la puissance des Windows Forms pour afficher des données, de gérer l’entrée d’utilisateur et de déployer vos applications facilement et en toute sécurité.  

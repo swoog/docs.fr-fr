@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555005"
 ---
 # <a name="repeatbutton"></a>RepeatButton
 Le <xref:System.Windows.Controls.Primitives.RepeatButton> est similaire à un <xref:System.Windows.Controls.Button>. Toutefois, <xref:System.Windows.Controls.Primitives.RepeatButton> éléments vous permettent de vérifier sur quand et comment la <xref:System.Windows.Controls.Primitives.ButtonBase.Click> événement se produit.  

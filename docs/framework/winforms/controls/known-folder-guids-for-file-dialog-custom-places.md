@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541562"
 ---
 # <a name="known-folder-guids-for-file-dialog-custom-places"></a>GUID de dossier connus pour des emplacements personnalisés de boîtes de dialogue Fichier
 Vous utilisez un <xref:System.Guid> pour spécifier un [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] dossier connu lorsque vous ajoutez des dossiers à un <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> collection. Connus GUID de dossier ne sont pas respecter la casse et sont définis dans le fichier KnownFolders.h dans le [!INCLUDE[winSDK](../../../../includes/winsdk-md.md)].  
