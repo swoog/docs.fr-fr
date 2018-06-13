@@ -13,6 +13,7 @@ ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472501"
 ---
 # <a name="c-reference"></a><span data-ttu-id="5e2bf-102">Référence C#</span><span class="sxs-lookup"><span data-stu-id="5e2bf-102">C# Reference</span></span>
 <span data-ttu-id="5e2bf-103">Cette section fournit des ressources de référence sur les mots clés, les opérateurs, les caractères spéciaux, les directives de préprocesseur, les options du compilateur, et les erreurs et avertissements du compilateur du langage C#.</span><span class="sxs-lookup"><span data-stu-id="5e2bf-103">This section provides reference material about C# keywords, operators, special characters, preprocessor directives, compiler options, and compiler errors and warnings.</span></span>  

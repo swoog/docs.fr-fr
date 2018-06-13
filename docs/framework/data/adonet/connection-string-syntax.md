@@ -7,6 +7,7 @@ ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472748"
 ---
 # <a name="connection-string-syntax"></a><span data-ttu-id="18230-102">Syntaxe des chaînes de connexion</span><span class="sxs-lookup"><span data-stu-id="18230-102">Connection String Syntax</span></span>
 <span data-ttu-id="18230-103">Chaque fournisseur de données .NET Framework a un objet `Connection` qui hérite de <xref:System.Data.Common.DbConnection> et d'une propriété <xref:System.Data.Common.DbConnection.ConnectionString%2A> spécifique au fournisseur.</span><span class="sxs-lookup"><span data-stu-id="18230-103">Each .NET Framework data provider has a `Connection` object that inherits from <xref:System.Data.Common.DbConnection> as well as a provider-specific <xref:System.Data.Common.DbConnection.ConnectionString%2A> property.</span></span> <span data-ttu-id="18230-104">La syntaxe de chaîne de connexion spécifique à chaque fournisseur est documentée dans sa propriété `ConnectionString`.</span><span class="sxs-lookup"><span data-stu-id="18230-104">The specific connection string syntax for each provider is documented in its `ConnectionString` property.</span></span> <span data-ttu-id="18230-105">Le tableau suivant répertorie les quatre fournisseurs de données inclus dans le .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="18230-105">The following table lists the four data providers that are included in the .NET Framework.</span></span>  

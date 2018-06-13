@@ -7,6 +7,7 @@ ms.sourcegitcommit: b7763f3435635850a76d4cbcf09bdce6c019208a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34483552"
 ---
 # <a name="client-channel-factories-and-channels"></a><span data-ttu-id="dac44-102">Client : fabrications de canaux et canaux</span><span class="sxs-lookup"><span data-stu-id="dac44-102">Client: Channel Factories and Channels</span></span>
 <span data-ttu-id="dac44-103">Cette rubrique décrit la création de fabrications de canaux et de canaux.</span><span class="sxs-lookup"><span data-stu-id="dac44-103">This topic discusses the creation of channel factories and channels.</span></span>  

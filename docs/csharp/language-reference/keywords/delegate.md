@@ -14,6 +14,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172108"
 ---
 # <a name="delegate-c-reference"></a><span data-ttu-id="0c4cc-102">delegate (référence C#)</span><span class="sxs-lookup"><span data-stu-id="0c4cc-102">delegate (C# Reference)</span></span>
 <span data-ttu-id="0c4cc-103">La déclaration d’un type délégué est semblable à une signature de méthode.</span><span class="sxs-lookup"><span data-stu-id="0c4cc-103">The declaration of a delegate type is similar to a method signature.</span></span> <span data-ttu-id="0c4cc-104">Elle a une valeur de retour et un nombre quelconque de paramètres de type quelconque :</span><span class="sxs-lookup"><span data-stu-id="0c4cc-104">It has a return value and any number of parameters of any type:</span></span>  

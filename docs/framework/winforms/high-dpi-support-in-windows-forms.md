@@ -14,6 +14,7 @@ ms.sourcegitcommit: b7763f3435635850a76d4cbcf09bdce6c019208a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34483539"
 ---
 # <a name="high-dpi-support-in-windows-forms"></a><span data-ttu-id="fcd12-102">Prise en charge de PPP élevé dans les Windows Forms</span><span class="sxs-lookup"><span data-stu-id="fcd12-102">High DPI support in Windows Forms</span></span>
 
