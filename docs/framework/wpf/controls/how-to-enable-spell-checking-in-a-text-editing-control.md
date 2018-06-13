@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550249"
 ---
 # <a name="how-to-enable-spell-checking-in-a-text-editing-control"></a>Comment : activer la vérification de l'orthographe dans un contrôle d'édition de texte
 L’exemple suivant montre comment activer la correction orthographique en temps réel une <xref:System.Windows.Controls.TextBox> à l’aide de la <xref:System.Windows.Controls.SpellCheck.IsEnabled%2A> propriété de la <xref:System.Windows.Controls.SpellCheck> classe.  

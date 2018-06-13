@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550751"
 ---
 # <a name="checkbox"></a>Case à cocher
 Vous pouvez utiliser un <xref:System.Windows.Controls.CheckBox> dans les [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] de votre application pour représenter les options qu’un utilisateur peut sélectionner ou effacer. Vous pouvez utiliser une case à cocher unique ou regrouper deux ou plusieurs cases à cocher.  

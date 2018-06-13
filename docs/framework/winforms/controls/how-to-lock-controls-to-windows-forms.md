@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534743"
 ---
 # <a name="how-to-lock-controls-to-windows-forms"></a>Comment : verrouiller des contrôles sur des Windows Forms
 Lorsque vous concevez l’interface utilisateur (IU) de votre application Windows, vous pouvez verrouiller les contrôles une fois qu’ils sont correctement placés, afin que ne pas par inadvertance déplacer ou redimensionner les lors de la définition d’autres propriétés.  

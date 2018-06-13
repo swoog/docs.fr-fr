@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524623"
 ---
 # <a name="how-to-add-menu-items-to-a-contextmenustrip"></a>Comment : ajouter des éléments de menu à un ContextMenuStrip
 Vous pouvez ajouter uniquement un élément de menu ou de plusieurs éléments à la fois à un <xref:System.Windows.Forms.ContextMenuStrip>.  
