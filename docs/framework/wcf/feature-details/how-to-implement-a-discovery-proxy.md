@@ -1,58 +1,45 @@
 ---
 title: 'Procédure : implémenter un proxy de découverte'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 78d70e0a-f6c3-4cfb-a7ca-f66ebddadde0
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2e984a55137aec0042f8de0d69aa1310ed43a0df
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: c3088da4dbd042d0022a56c28c90e2fcfbf24ba4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496710"
 ---
-# <a name="how-to-implement-a-discovery-proxy"></a><span data-ttu-id="d2101-102">Procédure : implémenter un proxy de découverte</span><span class="sxs-lookup"><span data-stu-id="d2101-102">How to: Implement a Discovery Proxy</span></span>
-<span data-ttu-id="d2101-103">Cette rubrique explique comment implémenter un proxy de découverte.</span><span class="sxs-lookup"><span data-stu-id="d2101-103">This topic explains how to implement a discovery proxy.</span></span> <span data-ttu-id="d2101-104">Pour plus d’informations sur la fonctionnalité de découverte dans [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], consultez [vue d’ensemble de la découverte WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md).</span><span class="sxs-lookup"><span data-stu-id="d2101-104">For more information about the discovery feature in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], see [WCF Discovery Overview](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md).</span></span> <span data-ttu-id="d2101-105">Un proxy de découverte peut être implémenté en créant une classe qui étend la classe abstraite <xref:System.ServiceModel.Discovery.DiscoveryProxy>.</span><span class="sxs-lookup"><span data-stu-id="d2101-105">A discovery proxy can be implemented by creating a class that extends the <xref:System.ServiceModel.Discovery.DiscoveryProxy> abstract class.</span></span> <span data-ttu-id="d2101-106">Un certain nombre d'autres classes de prise en charge sont définies et utilisées dans cet exemple.</span><span class="sxs-lookup"><span data-stu-id="d2101-106">There are a number of other support classes defined and used in this sample.</span></span> <span data-ttu-id="d2101-107">`OnResolveAsyncResult`, `OnFindAsyncResult` et `AsyncResult`.</span><span class="sxs-lookup"><span data-stu-id="d2101-107">`OnResolveAsyncResult`, `OnFindAsyncResult`, and `AsyncResult`.</span></span> <span data-ttu-id="d2101-108">Ces classes implémentent l'interface <xref:System.IAsyncResult>.</span><span class="sxs-lookup"><span data-stu-id="d2101-108">These classes implement the <xref:System.IAsyncResult> interface.</span></span> <span data-ttu-id="d2101-109">Pour plus d’informations sur <xref:System.IAsyncResult> consultez [System.IAsyncResult interface](xref:System.IAsyncResult).</span><span class="sxs-lookup"><span data-stu-id="d2101-109">For more information about <xref:System.IAsyncResult> see [System.IAsyncResult interface](xref:System.IAsyncResult).</span></span>
+# <a name="how-to-implement-a-discovery-proxy"></a><span data-ttu-id="b2b12-102">Procédure : implémenter un proxy de découverte</span><span class="sxs-lookup"><span data-stu-id="b2b12-102">How to: Implement a Discovery Proxy</span></span>
+<span data-ttu-id="b2b12-103">Cette rubrique explique comment implémenter un proxy de découverte.</span><span class="sxs-lookup"><span data-stu-id="b2b12-103">This topic explains how to implement a discovery proxy.</span></span> <span data-ttu-id="b2b12-104">Pour plus d’informations sur la fonctionnalité de découverte dans Windows Communication Foundation (WCF), consultez [vue d’ensemble de la découverte WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md).</span><span class="sxs-lookup"><span data-stu-id="b2b12-104">For more information about the discovery feature in Windows Communication Foundation (WCF), see [WCF Discovery Overview](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md).</span></span> <span data-ttu-id="b2b12-105">Un proxy de découverte peut être implémenté en créant une classe qui étend la classe abstraite <xref:System.ServiceModel.Discovery.DiscoveryProxy>.</span><span class="sxs-lookup"><span data-stu-id="b2b12-105">A discovery proxy can be implemented by creating a class that extends the <xref:System.ServiceModel.Discovery.DiscoveryProxy> abstract class.</span></span> <span data-ttu-id="b2b12-106">Un certain nombre d'autres classes de prise en charge sont définies et utilisées dans cet exemple.</span><span class="sxs-lookup"><span data-stu-id="b2b12-106">There are a number of other support classes defined and used in this sample.</span></span> <span data-ttu-id="b2b12-107">`OnResolveAsyncResult`, `OnFindAsyncResult` et `AsyncResult`.</span><span class="sxs-lookup"><span data-stu-id="b2b12-107">`OnResolveAsyncResult`, `OnFindAsyncResult`, and `AsyncResult`.</span></span> <span data-ttu-id="b2b12-108">Ces classes implémentent l'interface <xref:System.IAsyncResult>.</span><span class="sxs-lookup"><span data-stu-id="b2b12-108">These classes implement the <xref:System.IAsyncResult> interface.</span></span> <span data-ttu-id="b2b12-109">Pour plus d’informations sur <xref:System.IAsyncResult> consultez [System.IAsyncResult interface](xref:System.IAsyncResult).</span><span class="sxs-lookup"><span data-stu-id="b2b12-109">For more information about <xref:System.IAsyncResult> see [System.IAsyncResult interface](xref:System.IAsyncResult).</span></span>
   
- <span data-ttu-id="d2101-110">L'implémentation d'un proxy de découverte est divisée en trois parties principales dans cette rubrique :</span><span class="sxs-lookup"><span data-stu-id="d2101-110">Implementing a discovery proxy is broken down into three main parts in this topic:</span></span>  
+ <span data-ttu-id="b2b12-110">L'implémentation d'un proxy de découverte est divisée en trois parties principales dans cette rubrique :</span><span class="sxs-lookup"><span data-stu-id="b2b12-110">Implementing a discovery proxy is broken down into three main parts in this topic:</span></span>  
   
--   <span data-ttu-id="d2101-111">Définir une classe qui contient une banque de données et étend la classe abstraite <xref:System.ServiceModel.Discovery.DiscoveryProxy>.</span><span class="sxs-lookup"><span data-stu-id="d2101-111">Define a class that contains a data store and extends the abstract <xref:System.ServiceModel.Discovery.DiscoveryProxy> class.</span></span>  
+-   <span data-ttu-id="b2b12-111">Définir une classe qui contient une banque de données et étend la classe abstraite <xref:System.ServiceModel.Discovery.DiscoveryProxy>.</span><span class="sxs-lookup"><span data-stu-id="b2b12-111">Define a class that contains a data store and extends the abstract <xref:System.ServiceModel.Discovery.DiscoveryProxy> class.</span></span>  
   
--   <span data-ttu-id="d2101-112">Implémenter la classe d'assistance `AsyncResult`.</span><span class="sxs-lookup"><span data-stu-id="d2101-112">Implement the helper `AsyncResult` class.</span></span>  
+-   <span data-ttu-id="b2b12-112">Implémenter la classe d'assistance `AsyncResult`.</span><span class="sxs-lookup"><span data-stu-id="b2b12-112">Implement the helper `AsyncResult` class.</span></span>  
   
--   <span data-ttu-id="d2101-113">Héberger le proxy de découverte.</span><span class="sxs-lookup"><span data-stu-id="d2101-113">Host the Discovery Proxy.</span></span>  
+-   <span data-ttu-id="b2b12-113">Héberger le proxy de découverte.</span><span class="sxs-lookup"><span data-stu-id="b2b12-113">Host the Discovery Proxy.</span></span>  
   
-### <a name="to-create-a-new-console-application-project"></a><span data-ttu-id="d2101-114">Pour créer un nouveau projet d'application console</span><span class="sxs-lookup"><span data-stu-id="d2101-114">To create a new console application project</span></span>  
+### <a name="to-create-a-new-console-application-project"></a><span data-ttu-id="b2b12-114">Pour créer un nouveau projet d'application console</span><span class="sxs-lookup"><span data-stu-id="b2b12-114">To create a new console application project</span></span>  
   
-1.  <span data-ttu-id="d2101-115">Démarrez [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="d2101-115">Start [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span></span>  
+1.  <span data-ttu-id="b2b12-115">Démarrez [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b2b12-115">Start [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span></span>  
   
-2.  <span data-ttu-id="d2101-116">Créez un projet d'application console.</span><span class="sxs-lookup"><span data-stu-id="d2101-116">Create a new console application project.</span></span> <span data-ttu-id="d2101-117">Nommez le projet `DiscoveryProxy` et la solution `DiscoveryProxyExample`.</span><span class="sxs-lookup"><span data-stu-id="d2101-117">Name the project `DiscoveryProxy` and the name the solution `DiscoveryProxyExample`.</span></span>  
+2.  <span data-ttu-id="b2b12-116">Créez un projet d'application console.</span><span class="sxs-lookup"><span data-stu-id="b2b12-116">Create a new console application project.</span></span> <span data-ttu-id="b2b12-117">Nommez le projet `DiscoveryProxy` et la solution `DiscoveryProxyExample`.</span><span class="sxs-lookup"><span data-stu-id="b2b12-117">Name the project `DiscoveryProxy` and the name the solution `DiscoveryProxyExample`.</span></span>  
   
-3.  <span data-ttu-id="d2101-118">Ajoutez au projet les références suivantes.</span><span class="sxs-lookup"><span data-stu-id="d2101-118">Add the following references to the project</span></span>  
+3.  <span data-ttu-id="b2b12-118">Ajoutez au projet les références suivantes.</span><span class="sxs-lookup"><span data-stu-id="b2b12-118">Add the following references to the project</span></span>  
   
-    1.  <span data-ttu-id="d2101-119">System.ServiceModel.dll</span><span class="sxs-lookup"><span data-stu-id="d2101-119">System.ServiceModel.dll</span></span>  
+    1.  <span data-ttu-id="b2b12-119">System.ServiceModel.dll</span><span class="sxs-lookup"><span data-stu-id="b2b12-119">System.ServiceModel.dll</span></span>  
   
-    2.  <span data-ttu-id="d2101-120">System.Servicemodel.Discovery.dll</span><span class="sxs-lookup"><span data-stu-id="d2101-120">System.Servicemodel.Discovery.dll</span></span>  
+    2.  <span data-ttu-id="b2b12-120">System.Servicemodel.Discovery.dll</span><span class="sxs-lookup"><span data-stu-id="b2b12-120">System.Servicemodel.Discovery.dll</span></span>  
   
     > [!CAUTION]
-    >  <span data-ttu-id="d2101-121">Vérifiez que vous référencez la version 4.0 ou supérieure de ces assemblys.</span><span class="sxs-lookup"><span data-stu-id="d2101-121">Ensure that you reference version 4.0 or greater of these assemblies.</span></span>  
+    >  <span data-ttu-id="b2b12-121">Vérifiez que vous référencez la version 4.0 ou supérieure de ces assemblys.</span><span class="sxs-lookup"><span data-stu-id="b2b12-121">Ensure that you reference version 4.0 or greater of these assemblies.</span></span>  
   
-### <a name="to-implement-the-proxydiscoveryservice-class"></a><span data-ttu-id="d2101-122">Pour implémenter la classe ProxyDiscoveryService</span><span class="sxs-lookup"><span data-stu-id="d2101-122">To implement the ProxyDiscoveryService class</span></span>  
+### <a name="to-implement-the-proxydiscoveryservice-class"></a><span data-ttu-id="b2b12-122">Pour implémenter la classe ProxyDiscoveryService</span><span class="sxs-lookup"><span data-stu-id="b2b12-122">To implement the ProxyDiscoveryService class</span></span>  
   
-1.  <span data-ttu-id="d2101-123">Ajoutez à votre projet un nouveau fichier de code et nommez-le DiscoveryProxy.cs.</span><span class="sxs-lookup"><span data-stu-id="d2101-123">Add a new code file to your project and name it DiscoveryProxy.cs.</span></span>  
+1.  <span data-ttu-id="b2b12-123">Ajoutez à votre projet un nouveau fichier de code et nommez-le DiscoveryProxy.cs.</span><span class="sxs-lookup"><span data-stu-id="b2b12-123">Add a new code file to your project and name it DiscoveryProxy.cs.</span></span>  
   
-2.  <span data-ttu-id="d2101-124">Ajoutez les instructions `using` suivantes à DiscoveryProxy.cs.</span><span class="sxs-lookup"><span data-stu-id="d2101-124">Add the following `using` statements to DiscoveryProxy.cs.</span></span>  
+2.  <span data-ttu-id="b2b12-124">Ajoutez les instructions `using` suivantes à DiscoveryProxy.cs.</span><span class="sxs-lookup"><span data-stu-id="b2b12-124">Add the following `using` statements to DiscoveryProxy.cs.</span></span>  
   
     ```  
     using System;  
@@ -62,7 +49,7 @@ ms.lasthandoff: 04/30/2018
     using System.Xml;  
     ```  
   
-3.  <span data-ttu-id="d2101-125">Dérivez `DiscoveryProxyService` de <xref:System.ServiceModel.Discovery.DiscoveryProxy>.</span><span class="sxs-lookup"><span data-stu-id="d2101-125">Derive the `DiscoveryProxyService` from <xref:System.ServiceModel.Discovery.DiscoveryProxy>.</span></span> <span data-ttu-id="d2101-126">Appliquez l'attribut `ServiceBehavior` à la classe, comme indiqué dans l'exemple suivant.</span><span class="sxs-lookup"><span data-stu-id="d2101-126">Apply the `ServiceBehavior` attribute to the class as shown in the following example.</span></span>  
+3.  <span data-ttu-id="b2b12-125">Dérivez `DiscoveryProxyService` de <xref:System.ServiceModel.Discovery.DiscoveryProxy>.</span><span class="sxs-lookup"><span data-stu-id="b2b12-125">Derive the `DiscoveryProxyService` from <xref:System.ServiceModel.Discovery.DiscoveryProxy>.</span></span> <span data-ttu-id="b2b12-126">Appliquez l'attribut `ServiceBehavior` à la classe, comme indiqué dans l'exemple suivant.</span><span class="sxs-lookup"><span data-stu-id="b2b12-126">Apply the `ServiceBehavior` attribute to the class as shown in the following example.</span></span>  
   
     ```  
     // Implement DiscoveryProxy by extending the DiscoveryProxy class and overriding the abstract methods  
@@ -72,14 +59,14 @@ ms.lasthandoff: 04/30/2018
     }  
     ```  
   
-4.  <span data-ttu-id="d2101-127">Dans la classe `DiscoveryProxy`, définissez un dictionnaire qui contiendra les services inscrits.</span><span class="sxs-lookup"><span data-stu-id="d2101-127">Inside the `DiscoveryProxy` class define a dictionary to hold the registered services.</span></span>  
+4.  <span data-ttu-id="b2b12-127">Dans la classe `DiscoveryProxy`, définissez un dictionnaire qui contiendra les services inscrits.</span><span class="sxs-lookup"><span data-stu-id="b2b12-127">Inside the `DiscoveryProxy` class define a dictionary to hold the registered services.</span></span>  
   
     ```  
     // Repository to store EndpointDiscoveryMetadata.   
     Dictionary<EndpointAddress, EndpointDiscoveryMetadata> onlineServices;  
     ```  
   
-5.  <span data-ttu-id="d2101-128">Définissez un constructeur qui initialise le dictionnaire.</span><span class="sxs-lookup"><span data-stu-id="d2101-128">Define a constructor that initializes the dictionary.</span></span>  
+5.  <span data-ttu-id="b2b12-128">Définissez un constructeur qui initialise le dictionnaire.</span><span class="sxs-lookup"><span data-stu-id="b2b12-128">Define a constructor that initializes the dictionary.</span></span>  
   
     ```  
     public DiscoveryProxyService()  
@@ -88,9 +75,9 @@ ms.lasthandoff: 04/30/2018
             }  
     ```  
   
-### <a name="to-define-the-methods-used-to-update-the-discovery-proxy-cache"></a><span data-ttu-id="d2101-129">Pour définir les méthodes utilisées pour mettre à jour le cache du proxy de découverte</span><span class="sxs-lookup"><span data-stu-id="d2101-129">To define the methods used to update the discovery proxy cache</span></span>  
+### <a name="to-define-the-methods-used-to-update-the-discovery-proxy-cache"></a><span data-ttu-id="b2b12-129">Pour définir les méthodes utilisées pour mettre à jour le cache du proxy de découverte</span><span class="sxs-lookup"><span data-stu-id="b2b12-129">To define the methods used to update the discovery proxy cache</span></span>  
   
-1.  <span data-ttu-id="d2101-130">Implémentez la méthode `AddOnlineservice` pour ajouter des services au cache.</span><span class="sxs-lookup"><span data-stu-id="d2101-130">Implement the `AddOnlineservice` method to add services to the cache.</span></span> <span data-ttu-id="d2101-131">Cette méthode est appelée à chaque fois que le proxy reçoit un message d'annonce.</span><span class="sxs-lookup"><span data-stu-id="d2101-131">This is called every time the proxy receives an announcement message.</span></span>  
+1.  <span data-ttu-id="b2b12-130">Implémentez la méthode `AddOnlineservice` pour ajouter des services au cache.</span><span class="sxs-lookup"><span data-stu-id="b2b12-130">Implement the `AddOnlineservice` method to add services to the cache.</span></span> <span data-ttu-id="b2b12-131">Cette méthode est appelée à chaque fois que le proxy reçoit un message d'annonce.</span><span class="sxs-lookup"><span data-stu-id="b2b12-131">This is called every time the proxy receives an announcement message.</span></span>  
   
     ```  
     void AddOnlineService(EndpointDiscoveryMetadata endpointDiscoveryMetadata)  
@@ -104,7 +91,7 @@ ms.lasthandoff: 04/30/2018
             }  
     ```  
   
-2.  <span data-ttu-id="d2101-132">Implémentez la méthode `RemoveOnlineService` utilisée pour supprimer des services du cache.</span><span class="sxs-lookup"><span data-stu-id="d2101-132">Implement the `RemoveOnlineService` method that is used to remove services from the cache.</span></span>  
+2.  <span data-ttu-id="b2b12-132">Implémentez la méthode `RemoveOnlineService` utilisée pour supprimer des services du cache.</span><span class="sxs-lookup"><span data-stu-id="b2b12-132">Implement the `RemoveOnlineService` method that is used to remove services from the cache.</span></span>  
   
     ```  
     void RemoveOnlineService(EndpointDiscoveryMetadata endpointDiscoveryMetadata)  
@@ -121,7 +108,7 @@ ms.lasthandoff: 04/30/2018
             }  
     ```  
   
-3.  <span data-ttu-id="d2101-133">Implémentez les méthodes `MatchFromOnlineService` qui tentent de faire correspondre un service à un service du dictionnaire.</span><span class="sxs-lookup"><span data-stu-id="d2101-133">Implement the `MatchFromOnlineService` methods that attempt to match a service with a service in the dictionary.</span></span>  
+3.  <span data-ttu-id="b2b12-133">Implémentez les méthodes `MatchFromOnlineService` qui tentent de faire correspondre un service à un service du dictionnaire.</span><span class="sxs-lookup"><span data-stu-id="b2b12-133">Implement the `MatchFromOnlineService` methods that attempt to match a service with a service in the dictionary.</span></span>  
   
     ```  
     void MatchFromOnlineService(FindRequestContext findRequestContext)  
@@ -157,7 +144,7 @@ ms.lasthandoff: 04/30/2018
             }  
     ```  
   
-4.  <span data-ttu-id="d2101-134">Implémentez la méthode `PrintDiscoveryMetadata` qui fournit à l'utilisateur une sortie de texte de console sur ce que le proxy de découverte est en train d'effectuer.</span><span class="sxs-lookup"><span data-stu-id="d2101-134">Implement the `PrintDiscoveryMetadata` method that provides the user with console text output of what the discovery proxy is doing.</span></span>  
+4.  <span data-ttu-id="b2b12-134">Implémentez la méthode `PrintDiscoveryMetadata` qui fournit à l'utilisateur une sortie de texte de console sur ce que le proxy de découverte est en train d'effectuer.</span><span class="sxs-lookup"><span data-stu-id="b2b12-134">Implement the `PrintDiscoveryMetadata` method that provides the user with console text output of what the discovery proxy is doing.</span></span>  
   
     ```  
     void PrintDiscoveryMetadata(EndpointDiscoveryMetadata endpointDiscoveryMetadata, string verb)  
@@ -172,7 +159,7 @@ ms.lasthandoff: 04/30/2018
             }  
     ```  
   
-5.  <span data-ttu-id="d2101-135">Ajoutez les classes AsyncResult suivantes à DiscoveryProxyService.</span><span class="sxs-lookup"><span data-stu-id="d2101-135">Add the following AsyncResult classes to the DiscoveryProxyService.</span></span> <span data-ttu-id="d2101-136">Ces classes permettent de faire la distinction entre les différents résultats des opérations asynchrones.</span><span class="sxs-lookup"><span data-stu-id="d2101-136">These classes are used to differentiate between the different asynchronous operation results.</span></span>  
+5.  <span data-ttu-id="b2b12-135">Ajoutez les classes AsyncResult suivantes à DiscoveryProxyService.</span><span class="sxs-lookup"><span data-stu-id="b2b12-135">Add the following AsyncResult classes to the DiscoveryProxyService.</span></span> <span data-ttu-id="b2b12-136">Ces classes permettent de faire la distinction entre les différents résultats des opérations asynchrones.</span><span class="sxs-lookup"><span data-stu-id="b2b12-136">These classes are used to differentiate between the different asynchronous operation results.</span></span>  
   
     ```  
     sealed class OnOnlineAnnouncementAsyncResult : AsyncResult  
@@ -236,9 +223,9 @@ ms.lasthandoff: 04/30/2018
             }  
     ```  
   
-### <a name="to-define-the-methods-that-implement-the-discovery-proxy-functionality"></a><span data-ttu-id="d2101-137">Pour définir les méthodes qui implémentent les fonctionnalités du proxy de découverte</span><span class="sxs-lookup"><span data-stu-id="d2101-137">To define the methods that implement the discovery proxy functionality</span></span>  
+### <a name="to-define-the-methods-that-implement-the-discovery-proxy-functionality"></a><span data-ttu-id="b2b12-137">Pour définir les méthodes qui implémentent les fonctionnalités du proxy de découverte</span><span class="sxs-lookup"><span data-stu-id="b2b12-137">To define the methods that implement the discovery proxy functionality</span></span>  
   
-1.  <span data-ttu-id="d2101-138">Remplacez la méthode <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOnlineAnnouncement%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="d2101-138">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOnlineAnnouncement%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="d2101-139">Cette méthode est appelée lorsque le proxy de découverte reçoit un message d'annonce en ligne.</span><span class="sxs-lookup"><span data-stu-id="d2101-139">This method is called when the discovery proxy receives an online announcement message.</span></span>  
+1.  <span data-ttu-id="b2b12-138">Remplacez la méthode <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOnlineAnnouncement%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="b2b12-138">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOnlineAnnouncement%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="b2b12-139">Cette méthode est appelée lorsque le proxy de découverte reçoit un message d'annonce en ligne.</span><span class="sxs-lookup"><span data-stu-id="b2b12-139">This method is called when the discovery proxy receives an online announcement message.</span></span>  
   
     ```  
     // OnBeginOnlineAnnouncement method is called when a Hello message is received by the Proxy  
@@ -249,7 +236,7 @@ ms.lasthandoff: 04/30/2018
             }  
     ```  
   
-2.  <span data-ttu-id="d2101-140">Remplacez la méthode <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOnlineAnnouncement%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="d2101-140">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOnlineAnnouncement%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="d2101-141">Cette méthode est appelée lorsque le proxy de découverte finit un traitement de message d'annonce.</span><span class="sxs-lookup"><span data-stu-id="d2101-141">This method is called when the discovery proxy finishes processing an announcement message.</span></span>  
+2.  <span data-ttu-id="b2b12-140">Remplacez la méthode <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOnlineAnnouncement%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="b2b12-140">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOnlineAnnouncement%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="b2b12-141">Cette méthode est appelée lorsque le proxy de découverte finit un traitement de message d'annonce.</span><span class="sxs-lookup"><span data-stu-id="b2b12-141">This method is called when the discovery proxy finishes processing an announcement message.</span></span>  
   
     ```  
     protected override void OnEndOnlineAnnouncement(IAsyncResult result)  
@@ -258,7 +245,7 @@ ms.lasthandoff: 04/30/2018
             }  
     ```  
   
-3.  <span data-ttu-id="d2101-142">Remplacez la méthode <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOfflineAnnouncement%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="d2101-142">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOfflineAnnouncement%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="d2101-143">Cette méthode est appelée lorsque le proxy de découverte reçoit un message d'annonce hors connexion.</span><span class="sxs-lookup"><span data-stu-id="d2101-143">This method is called with the discovery proxy receives an offline announcement message.</span></span>  
+3.  <span data-ttu-id="b2b12-142">Remplacez la méthode <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOfflineAnnouncement%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="b2b12-142">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOfflineAnnouncement%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="b2b12-143">Cette méthode est appelée lorsque le proxy de découverte reçoit un message d'annonce hors connexion.</span><span class="sxs-lookup"><span data-stu-id="b2b12-143">This method is called with the discovery proxy receives an offline announcement message.</span></span>  
   
     ```  
     // OnBeginOfflineAnnouncement method is called when a Bye message is received by the Proxy  
@@ -269,7 +256,7 @@ ms.lasthandoff: 04/30/2018
             }  
     ```  
   
-4.  <span data-ttu-id="d2101-144">Remplacez la méthode <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOfflineAnnouncement%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="d2101-144">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOfflineAnnouncement%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="d2101-145">Cette méthode est appelée lorsque le proxy de découverte finit un traitement de message d'annonce hors connexion.</span><span class="sxs-lookup"><span data-stu-id="d2101-145">This method is called when the discovery proxy finishes processing an offline announcement message.</span></span>  
+4.  <span data-ttu-id="b2b12-144">Remplacez la méthode <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOfflineAnnouncement%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="b2b12-144">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOfflineAnnouncement%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="b2b12-145">Cette méthode est appelée lorsque le proxy de découverte finit un traitement de message d'annonce hors connexion.</span><span class="sxs-lookup"><span data-stu-id="b2b12-145">This method is called when the discovery proxy finishes processing an offline announcement message.</span></span>  
   
     ```  
     protected override void OnEndOfflineAnnouncement(IAsyncResult result)  
@@ -278,7 +265,7 @@ ms.lasthandoff: 04/30/2018
             }  
     ```  
   
-5.  <span data-ttu-id="d2101-146">Remplacez la méthode <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="d2101-146">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="d2101-147">Cette méthode est appelée lorsque le proxy de découverte reçoit une demande de recherche.</span><span class="sxs-lookup"><span data-stu-id="d2101-147">This method is called when the discovery proxy receives a find request.</span></span>  
+5.  <span data-ttu-id="b2b12-146">Remplacez la méthode <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="b2b12-146">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="b2b12-147">Cette méthode est appelée lorsque le proxy de découverte reçoit une demande de recherche.</span><span class="sxs-lookup"><span data-stu-id="b2b12-147">This method is called when the discovery proxy receives a find request.</span></span>  
   
     ```  
     // OnBeginFind method is called when a Probe request message is received by the Proxy  
@@ -297,7 +284,7 @@ ms.lasthandoff: 04/30/2018
     }  
     ```  
   
-6.  <span data-ttu-id="d2101-148">Remplacez la méthode <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="d2101-148">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="d2101-149">Cette méthode est appelée lorsque le proxy de découverte finit un traitement de demande de recherche.</span><span class="sxs-lookup"><span data-stu-id="d2101-149">This method is called when the discovery proxy finishes processing a find request.</span></span>  
+6.  <span data-ttu-id="b2b12-148">Remplacez la méthode <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="b2b12-148">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="b2b12-149">Cette méthode est appelée lorsque le proxy de découverte finit un traitement de demande de recherche.</span><span class="sxs-lookup"><span data-stu-id="b2b12-149">This method is called when the discovery proxy finishes processing a find request.</span></span>  
   
     ```  
     protected override void OnEndFind(IAsyncResult result)  
@@ -306,7 +293,7 @@ ms.lasthandoff: 04/30/2018
             }  
     ```  
   
-7.  <span data-ttu-id="d2101-150">Remplacez la méthode <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginResolve%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="d2101-150">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginResolve%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="d2101-151">Cette méthode est appelée lorsque le proxy de découverte reçoit un message de résolution.</span><span class="sxs-lookup"><span data-stu-id="d2101-151">This method is called when the discovery proxy receives a resolve message.</span></span>  
+7.  <span data-ttu-id="b2b12-150">Remplacez la méthode <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginResolve%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="b2b12-150">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginResolve%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="b2b12-151">Cette méthode est appelée lorsque le proxy de découverte reçoit un message de résolution.</span><span class="sxs-lookup"><span data-stu-id="b2b12-151">This method is called when the discovery proxy receives a resolve message.</span></span>  
   
     ```  
     // OnBeginFind method is called when a Resolve request message is received by the Proxy  
@@ -323,7 +310,7 @@ ms.lasthandoff: 04/30/2018
     }  
     ```  
   
-8.  <span data-ttu-id="d2101-152">Remplacez la méthode <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndResolve%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="d2101-152">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndResolve%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="d2101-153">Cette méthode est appelée lorsque le proxy de découverte finit un traitement de message de résolution.</span><span class="sxs-lookup"><span data-stu-id="d2101-153">This method is called when the discovery proxy finishes processing a resolve message.</span></span>  
+8.  <span data-ttu-id="b2b12-152">Remplacez la méthode <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndResolve%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="b2b12-152">Override the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndResolve%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="b2b12-153">Cette méthode est appelée lorsque le proxy de découverte finit un traitement de message de résolution.</span><span class="sxs-lookup"><span data-stu-id="b2b12-153">This method is called when the discovery proxy finishes processing a resolve message.</span></span>  
   
     ```  
     protected override EndpointDiscoveryMetadata OnEndResolve(IAsyncResult result)  
@@ -332,22 +319,22 @@ ms.lasthandoff: 04/30/2018
     }  
     ```  
   
- <span data-ttu-id="d2101-154">Les méthodes OnBegin.</span><span class="sxs-lookup"><span data-stu-id="d2101-154">The OnBegin..</span></span> <span data-ttu-id="d2101-155">/ OnEnd.</span><span class="sxs-lookup"><span data-stu-id="d2101-155">/ OnEnd..</span></span> <span data-ttu-id="d2101-156">les méthodes fournissent la logique pour les opérations de découverte ultérieures.</span><span class="sxs-lookup"><span data-stu-id="d2101-156">methods provide the logic for the subsequent discovery operations.</span></span> <span data-ttu-id="d2101-157">Par exemple, les méthodes <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A> et <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A> implémentent la logique de recherche pour le proxy de découverte.</span><span class="sxs-lookup"><span data-stu-id="d2101-157">For example the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A> and <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A> methods implement the find logic for discovery proxy.</span></span> <span data-ttu-id="d2101-158">Lorsque le proxy de découverte reçoit un message Probe, ces méthodes sont exécutées pour renvoyer une réponse au client.</span><span class="sxs-lookup"><span data-stu-id="d2101-158">When the discovery proxy receives a probe message these methods are executed to send a response back to the client.</span></span> <span data-ttu-id="d2101-159">Vous pouvez modifier la logique de recherche à votre gré, par exemple, vous pouvez incorporer dans le cadre de votre opération de recherche une étendue personnalisée de correspondance par algorithmes ou une analyse des métadonnées XML spécifiques à une application.</span><span class="sxs-lookup"><span data-stu-id="d2101-159">You may modify the find logic as you wish, for example you can incorporate custom scope matching by algorithms or application specific XML metadata parsing as part of your find operation.</span></span>  
+ <span data-ttu-id="b2b12-154">Les méthodes OnBegin.</span><span class="sxs-lookup"><span data-stu-id="b2b12-154">The OnBegin..</span></span> <span data-ttu-id="b2b12-155">/ OnEnd.</span><span class="sxs-lookup"><span data-stu-id="b2b12-155">/ OnEnd..</span></span> <span data-ttu-id="b2b12-156">les méthodes fournissent la logique pour les opérations de découverte ultérieures.</span><span class="sxs-lookup"><span data-stu-id="b2b12-156">methods provide the logic for the subsequent discovery operations.</span></span> <span data-ttu-id="b2b12-157">Par exemple, les méthodes <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A> et <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A> implémentent la logique de recherche pour le proxy de découverte.</span><span class="sxs-lookup"><span data-stu-id="b2b12-157">For example the <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A> and <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A> methods implement the find logic for discovery proxy.</span></span> <span data-ttu-id="b2b12-158">Lorsque le proxy de découverte reçoit un message Probe, ces méthodes sont exécutées pour renvoyer une réponse au client.</span><span class="sxs-lookup"><span data-stu-id="b2b12-158">When the discovery proxy receives a probe message these methods are executed to send a response back to the client.</span></span> <span data-ttu-id="b2b12-159">Vous pouvez modifier la logique de recherche à votre gré, par exemple, vous pouvez incorporer dans le cadre de votre opération de recherche une étendue personnalisée de correspondance par algorithmes ou une analyse des métadonnées XML spécifiques à une application.</span><span class="sxs-lookup"><span data-stu-id="b2b12-159">You may modify the find logic as you wish, for example you can incorporate custom scope matching by algorithms or application specific XML metadata parsing as part of your find operation.</span></span>  
   
-### <a name="to-implement-the-asyncresult-class"></a><span data-ttu-id="d2101-160">Pour implémenter la classe AsyncResult</span><span class="sxs-lookup"><span data-stu-id="d2101-160">To implement the AsyncResult class</span></span>  
+### <a name="to-implement-the-asyncresult-class"></a><span data-ttu-id="b2b12-160">Pour implémenter la classe AsyncResult</span><span class="sxs-lookup"><span data-stu-id="b2b12-160">To implement the AsyncResult class</span></span>  
   
-1.  <span data-ttu-id="d2101-161">Définissez la classe de base abstraite AsyncResult qui sera utilisée pour dériver les diverses classes de résultats asynchrones.</span><span class="sxs-lookup"><span data-stu-id="d2101-161">Define the abstract base class AsyncResult which is used to derive the various async result classes.</span></span>  
+1.  <span data-ttu-id="b2b12-161">Définissez la classe de base abstraite AsyncResult qui sera utilisée pour dériver les diverses classes de résultats asynchrones.</span><span class="sxs-lookup"><span data-stu-id="b2b12-161">Define the abstract base class AsyncResult which is used to derive the various async result classes.</span></span>  
   
-2.  <span data-ttu-id="d2101-162">Créez un nouveau fichier de code nommé AsyncResult.cs.</span><span class="sxs-lookup"><span data-stu-id="d2101-162">Create a new code file called AsyncResult.cs.</span></span>  
+2.  <span data-ttu-id="b2b12-162">Créez un nouveau fichier de code nommé AsyncResult.cs.</span><span class="sxs-lookup"><span data-stu-id="b2b12-162">Create a new code file called AsyncResult.cs.</span></span>  
   
-3.  <span data-ttu-id="d2101-163">Ajoutez les instructions `using` suivantes à AsyncResult.cs.</span><span class="sxs-lookup"><span data-stu-id="d2101-163">Add the following `using` statements to AsyncResult.cs.</span></span>  
+3.  <span data-ttu-id="b2b12-163">Ajoutez les instructions `using` suivantes à AsyncResult.cs.</span><span class="sxs-lookup"><span data-stu-id="b2b12-163">Add the following `using` statements to AsyncResult.cs.</span></span>  
   
     ```  
     using System;  
     using System.Threading;  
     ```  
   
-4.  <span data-ttu-id="d2101-164">Ajoutez la classe AsyncResult suivante.</span><span class="sxs-lookup"><span data-stu-id="d2101-164">Add the following AsyncResult class.</span></span>  
+4.  <span data-ttu-id="b2b12-164">Ajoutez la classe AsyncResult suivante.</span><span class="sxs-lookup"><span data-stu-id="b2b12-164">Add the following AsyncResult class.</span></span>  
   
     ```  
     abstract class AsyncResult : IAsyncResult  
@@ -498,11 +485,11 @@ ms.lasthandoff: 04/30/2018
         }  
     ```  
   
-### <a name="to-host-the-discoveryproxy"></a><span data-ttu-id="d2101-165">Pour héberger le DiscoveryProxy</span><span class="sxs-lookup"><span data-stu-id="d2101-165">To host the DiscoveryProxy</span></span>  
+### <a name="to-host-the-discoveryproxy"></a><span data-ttu-id="b2b12-165">Pour héberger le DiscoveryProxy</span><span class="sxs-lookup"><span data-stu-id="b2b12-165">To host the DiscoveryProxy</span></span>  
   
-1.  <span data-ttu-id="d2101-166">Ouvrez le fichier Program.cs dans le projet DiscoveryProxyExample.</span><span class="sxs-lookup"><span data-stu-id="d2101-166">Open the Program.cs file in the DiscoveryProxyExample project.</span></span>  
+1.  <span data-ttu-id="b2b12-166">Ouvrez le fichier Program.cs dans le projet DiscoveryProxyExample.</span><span class="sxs-lookup"><span data-stu-id="b2b12-166">Open the Program.cs file in the DiscoveryProxyExample project.</span></span>  
   
-2.  <span data-ttu-id="d2101-167">Ajoutez les instructions `using` suivantes.</span><span class="sxs-lookup"><span data-stu-id="d2101-167">Add the following `using` statements.</span></span>  
+2.  <span data-ttu-id="b2b12-167">Ajoutez les instructions `using` suivantes.</span><span class="sxs-lookup"><span data-stu-id="b2b12-167">Add the following `using` statements.</span></span>  
   
     ```  
     using System;  
@@ -510,7 +497,7 @@ ms.lasthandoff: 04/30/2018
     using System.ServiceModel.Discovery;  
     ```  
   
-3.  <span data-ttu-id="d2101-168">Ajoutez le code suivant dans la méthode `Main()`.</span><span class="sxs-lookup"><span data-stu-id="d2101-168">Within the `Main()` method, add the following code.</span></span> <span data-ttu-id="d2101-169">Ce code crée une instance de la classe `DiscoveryProxy`.</span><span class="sxs-lookup"><span data-stu-id="d2101-169">This creates an instance of the `DiscoveryProxy` class.</span></span>  
+3.  <span data-ttu-id="b2b12-168">Ajoutez le code suivant dans la méthode `Main()`.</span><span class="sxs-lookup"><span data-stu-id="b2b12-168">Within the `Main()` method, add the following code.</span></span> <span data-ttu-id="b2b12-169">Ce code crée une instance de la classe `DiscoveryProxy`.</span><span class="sxs-lookup"><span data-stu-id="b2b12-169">This creates an instance of the `DiscoveryProxy` class.</span></span>  
   
     ```  
     Uri probeEndpointAddress = new Uri("net.tcp://localhost:8001/Probe");  
@@ -520,7 +507,7 @@ ms.lasthandoff: 04/30/2018
                 ServiceHost proxyServiceHost = new ServiceHost(new DiscoveryProxyService());  
     ```  
   
-4.  <span data-ttu-id="d2101-170">Ensuite, ajoutez le code suivant afin d'ajouter un point de terminaison de découverte et un point de terminaison d'annonce.</span><span class="sxs-lookup"><span data-stu-id="d2101-170">Next add the following code to add a discovery endpoint and an announcement endpoint.</span></span>  
+4.  <span data-ttu-id="b2b12-170">Ensuite, ajoutez le code suivant afin d'ajouter un point de terminaison de découverte et un point de terminaison d'annonce.</span><span class="sxs-lookup"><span data-stu-id="b2b12-170">Next add the following code to add a discovery endpoint and an announcement endpoint.</span></span>  
   
     ```  
     try  
@@ -561,10 +548,10 @@ ms.lasthandoff: 04/30/2018
               }  
     ```  
   
- <span data-ttu-id="d2101-171">Vous avez terminé l'implémentation du proxy de découverte.</span><span class="sxs-lookup"><span data-stu-id="d2101-171">You have completed implementing the discovery proxy.</span></span> <span data-ttu-id="d2101-172">Continuer à [Comment : implémenter un Service détectable qui s’enregistre avec le Proxy de découverte](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md).</span><span class="sxs-lookup"><span data-stu-id="d2101-172">Continue on to [How to: Implement a Discoverable Service that Registers with the Discovery Proxy](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md).</span></span>  
+ <span data-ttu-id="b2b12-171">Vous avez terminé l'implémentation du proxy de découverte.</span><span class="sxs-lookup"><span data-stu-id="b2b12-171">You have completed implementing the discovery proxy.</span></span> <span data-ttu-id="b2b12-172">Continuer à [Comment : implémenter un Service détectable qui s’enregistre avec le Proxy de découverte](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md).</span><span class="sxs-lookup"><span data-stu-id="b2b12-172">Continue on to [How to: Implement a Discoverable Service that Registers with the Discovery Proxy](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d2101-173">Exemple</span><span class="sxs-lookup"><span data-stu-id="d2101-173">Example</span></span>  
- <span data-ttu-id="d2101-174">Les éléments suivants représentent l'intégralité du code utilisé dans cette rubrique.</span><span class="sxs-lookup"><span data-stu-id="d2101-174">This is the full listing of the code used in this topic.</span></span>  
+## <a name="example"></a><span data-ttu-id="b2b12-173">Exemple</span><span class="sxs-lookup"><span data-stu-id="b2b12-173">Example</span></span>  
+ <span data-ttu-id="b2b12-174">Les éléments suivants représentent l'intégralité du code utilisé dans cette rubrique.</span><span class="sxs-lookup"><span data-stu-id="b2b12-174">This is the full listing of the code used in this topic.</span></span>  
   
 ```  
 // DiscoveryProxy.cs  
@@ -990,8 +977,8 @@ namespace Microsoft.Samples.Discovery
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="d2101-175">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="d2101-175">See Also</span></span>  
- [<span data-ttu-id="d2101-176">Vue d’ensemble de la découverte WCF</span><span class="sxs-lookup"><span data-stu-id="d2101-176">WCF Discovery Overview</span></span>](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
- [<span data-ttu-id="d2101-177">Guide pratique pour implémenter un service détectable qui s’inscrit auprès du proxy de découverte</span><span class="sxs-lookup"><span data-stu-id="d2101-177">How to: Implement a Discoverable Service that Registers with the Discovery Proxy</span></span>](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)  
- [<span data-ttu-id="d2101-178">Guide pratique pour implémenter une application cliente qui utilise le proxy de découverte pour rechercher un service</span><span class="sxs-lookup"><span data-stu-id="d2101-178">How to: Implement a Client Application that Uses the Discovery Proxy to Find a Service</span></span>](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)  
- [<span data-ttu-id="d2101-179">Guide pratique pour tester le proxy de découverte</span><span class="sxs-lookup"><span data-stu-id="d2101-179">How to: Test the Discovery Proxy</span></span>](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)
+## <a name="see-also"></a><span data-ttu-id="b2b12-175">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="b2b12-175">See Also</span></span>  
+ [<span data-ttu-id="b2b12-176">Vue d’ensemble de la découverte WCF</span><span class="sxs-lookup"><span data-stu-id="b2b12-176">WCF Discovery Overview</span></span>](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
+ [<span data-ttu-id="b2b12-177">Guide pratique pour implémenter un service détectable qui s’inscrit auprès du proxy de découverte</span><span class="sxs-lookup"><span data-stu-id="b2b12-177">How to: Implement a Discoverable Service that Registers with the Discovery Proxy</span></span>](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)  
+ [<span data-ttu-id="b2b12-178">Guide pratique pour implémenter une application cliente qui utilise le proxy de découverte pour rechercher un service</span><span class="sxs-lookup"><span data-stu-id="b2b12-178">How to: Implement a Client Application that Uses the Discovery Proxy to Find a Service</span></span>](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)  
+ [<span data-ttu-id="b2b12-179">Guide pratique pour tester le proxy de découverte</span><span class="sxs-lookup"><span data-stu-id="b2b12-179">How to: Test the Discovery Proxy</span></span>](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)
