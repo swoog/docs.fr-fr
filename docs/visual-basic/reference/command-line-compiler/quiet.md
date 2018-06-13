@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652394"
 ---
 # <a name="-quiet"></a><span data-ttu-id="e92e4-102">-quiet</span><span class="sxs-lookup"><span data-stu-id="e92e4-102">-quiet</span></span>
 <span data-ttu-id="e92e4-103">Empêche le compilateur d'afficher le code pour les erreurs et les avertissements liés à la syntaxe.</span><span class="sxs-lookup"><span data-stu-id="e92e4-103">Prevents the compiler from displaying code for syntax-related errors and warnings.</span></span>  

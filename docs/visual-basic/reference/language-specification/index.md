@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648666"
 ---
 # <a name="visual-basic-language-specification"></a><span data-ttu-id="5de38-102">Spécification du langage Visual Basic</span><span class="sxs-lookup"><span data-stu-id="5de38-102">Visual Basic Language Specification</span></span>
 <span data-ttu-id="5de38-103">La spécification du langage Visual Basic est la source d’autorité pour obtenir des réponses à toutes les questions sur la syntaxe et la grammaire de Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="5de38-103">The Visual Basic Language Specification is the authoritative source for answers to all questions about Visual Basic grammar and syntax.</span></span> <span data-ttu-id="5de38-104">Il contient des informations détaillées sur le langage, notamment de nombreux points non couverts dans la documentation de référence de Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="5de38-104">It contains detailed information about the language, including many points not covered in the Visual Basic reference documentation.</span></span>  

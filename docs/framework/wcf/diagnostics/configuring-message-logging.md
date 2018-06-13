@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807838"
 ---
 # <a name="configuring-message-logging"></a><span data-ttu-id="33988-102">Configuration de la journalisation des messages</span><span class="sxs-lookup"><span data-stu-id="33988-102">Configuring Message Logging</span></span>
 <span data-ttu-id="33988-103">Cette rubrique contient des instructions permettant de configurer l'enregistrement des messages en fonction de différentes situations.</span><span class="sxs-lookup"><span data-stu-id="33988-103">This topic describes how you can configure message logging for different scenarios.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656315"
 ---
 # <a name="-highentropyva-visual-basic"></a><span data-ttu-id="84f28-102">-highentropyva (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="84f28-102">-highentropyva (Visual Basic)</span></span>
 <span data-ttu-id="84f28-103">Indique si un exécutable 64 bits ou qui est marquée par le [/Platform : anycpu](../../../visual-basic/reference/command-line-compiler/platform.md) option du compilateur prend en charge la randomisation du format de mise en page espace adresse (ASLR) de forte entropie.</span><span class="sxs-lookup"><span data-stu-id="84f28-103">Indicates whether a 64-bit executable or an executable that's marked by the [/platform:anycpu](../../../visual-basic/reference/command-line-compiler/platform.md) compiler option supports high entropy Address Space Layout Randomization (ASLR).</span></span>  
