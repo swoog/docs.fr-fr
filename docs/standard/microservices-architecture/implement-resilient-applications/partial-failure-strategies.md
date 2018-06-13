@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578682"
 ---
 # <a name="strategies-for-handling-partial-failure"></a><span data-ttu-id="c231a-103">Stratégies pour la gestion d’une défaillance partielle</span><span class="sxs-lookup"><span data-stu-id="c231a-103">Strategies for handling partial failure</span></span>
 
