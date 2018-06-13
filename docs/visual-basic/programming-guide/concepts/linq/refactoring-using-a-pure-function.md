@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645013"
 ---
 # <a name="refactoring-using-a-pure-function-visual-basic"></a><span data-ttu-id="3ecb9-102">Refactorisation à l’aide d’une fonction Pure (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3ecb9-102">Refactoring Using a Pure Function (Visual Basic)</span></span>
 <span data-ttu-id="3ecb9-103">L’exemple suivant refactorise l’exemple précédent, [refactorisation à l’aide d’une méthode d’Extension (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)pour utiliser une fonction pure dans cet exemple, le code pour rechercher le texte d’un paragraphe est déplacé vers la méthode statique pure `ParagraphText`.</span><span class="sxs-lookup"><span data-stu-id="3ecb9-103">The following example refactors the previous example, [Refactoring Using an Extension Method (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md), to use a pure function In this example, the code to find the text of a paragraph is moved to the pure static method `ParagraphText`.</span></span>  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457482"
 ---
 # <a name="throw-c-reference"></a><span data-ttu-id="944cd-102">throw (référence C#)</span><span class="sxs-lookup"><span data-stu-id="944cd-102">throw (C# Reference)</span></span>
 <span data-ttu-id="944cd-103">Signale l’occurrence d’une exception pendant l’exécution du programme.</span><span class="sxs-lookup"><span data-stu-id="944cd-103">Signals the occurrence of an exception during program execution.</span></span>  

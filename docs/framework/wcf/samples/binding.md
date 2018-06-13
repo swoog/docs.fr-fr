@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803564"
 ---
 # <a name="binding"></a><span data-ttu-id="5f80f-102">Liaison</span><span class="sxs-lookup"><span data-stu-id="5f80f-102">Binding</span></span>
 <span data-ttu-id="5f80f-103">Cette section contient des exemples qui illustrent l’utilisation de l’attribut de liaison d’un élément de point de terminaison.</span><span class="sxs-lookup"><span data-stu-id="5f80f-103">This section contains samples that demonstrate using the binding attribute of an endpoint element.</span></span>  
