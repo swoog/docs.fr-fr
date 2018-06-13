@@ -10,9 +10,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 581f42dc83622712dbb30ef556a481388bafe259
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33455570"
 ---
 # <a name="profiling-unmanaged-api-reference"></a>Profilage (Informations de référence sur les API non managées)
 L’API de profilage permet à un profileur de surveiller l’exécution d’un programme par le common language runtime (CLR).  

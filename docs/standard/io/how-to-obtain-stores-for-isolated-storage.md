@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576680"
 ---
 # <a name="how-to-obtain-stores-for-isolated-storage"></a>Obtention de magasins
 Un magasin isolé expose un système de fichiers virtuel dans un compartiment de données. La classe <xref:System.IO.IsolatedStorage.IsolatedStorageFile> fournit plusieurs méthodes pour interagir avec un magasin isolé. Pour créer et récupérer des magasins, <xref:System.IO.IsolatedStorage.IsolatedStorageFile> propose trois méthodes statiques :  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578305"
 ---
 # <a name="standard-timespan-format-strings"></a>Chaînes de format TimeSpan standard.
 <a name="Top"></a> Une chaîne de format <xref:System.TimeSpan> standard utilise un spécificateur de format pour définir la représentation textuelle d'une valeur <xref:System.TimeSpan> qui résulte d'une opération de mise en forme. Toute chaîne de format contenant plusieurs caractères alphabétiques, y compris un espace blanc, est interprétée comme une chaîne de format <xref:System.TimeSpan> personnalisée. Pour plus d’informations, consultez [Chaînes de format TimeSpan personnalisées](../../../docs/standard/base-types/custom-timespan-format-strings.md).  

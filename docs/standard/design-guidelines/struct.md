@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572734"
 ---
 # <a name="struct-design"></a>Conception de structures
 Le type de valeur à usage général est souvent appelé un struct, le mot clé c#. Cette section fournit des instructions pour la conception de la structure générale.  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578272"
 ---
 # <a name="parameter-design"></a>Conception de paramètres
 Cette section fournit des indications générales sur la conception de paramètres, y compris des sections avec des recommandations pour la vérification d’arguments. En outre, vous devez consulter les instructions décrites dans [d’affectation de noms de paramètres](../../../docs/standard/design-guidelines/naming-parameters.md).  

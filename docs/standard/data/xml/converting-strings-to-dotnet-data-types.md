@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576577"
 ---
 # <a name="converting-strings-to-net-framework-data-types"></a>Conversion de chaînes en types de données .NET Framework
 Si vous souhaitez convertir une chaîne en un type de données .NET Framework, utilisez la méthode **XmlConvert** conforme aux exigences de l’application. Pour une liste de toutes les méthodes de conversion disponibles dans la classe **XmlConvert**, consultez <xref:System.Xml.XmlConvert>.  

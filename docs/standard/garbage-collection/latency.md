@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573898"
 ---
 # <a name="latency-modes"></a>Modes de latence
 Pour récupérer des objets, le garbage collector doit arrêter tous les threads en cours d'exécution dans une application. Dans certaines situations, par exemple, quand une application récupère des données ou affiche du contenu, un garbage collection complet peut se produire à un moment critique et nuire aux performances. Vous pouvez ajuster le niveau d'intrusion du garbage collector en définissant la propriété <xref:System.Runtime.GCSettings.LatencyMode%2A?displayProperty=nameWithType> sur l'une des valeurs<xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType>.  
