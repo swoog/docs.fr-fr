@@ -13,6 +13,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803752"
 ---
 # <a name="reliable-services"></a><span data-ttu-id="14571-102">Services fiables</span><span class="sxs-lookup"><span data-stu-id="14571-102">Reliable Services</span></span>
 <span data-ttu-id="14571-103">Les files d’attente et les sessions fiables sont les fonctionnalités de Windows Communication Foundation (WCF) qui implémentent la messagerie fiable.</span><span class="sxs-lookup"><span data-stu-id="14571-103">Queues and reliable sessions are the Windows Communication Foundation (WCF) features that implement reliable messaging.</span></span> <span data-ttu-id="14571-104">Cette rubrique explique les fonctionnalités de messagerie fiables de WCF.</span><span class="sxs-lookup"><span data-stu-id="14571-104">This topic explains the reliable messaging features of WCF.</span></span>  

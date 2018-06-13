@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803122"
 ---
 # <a name="ole-db-odbc-and-oracle-connection-pooling"></a><span data-ttu-id="6d320-102">Regroupement de connexions OLE DB, ODBC et Oracle Connection</span><span class="sxs-lookup"><span data-stu-id="6d320-102">OLE DB, ODBC, and Oracle Connection Pooling</span></span>
 <span data-ttu-id="6d320-103">Le regroupement de connexions peut considérablement améliorer les performances et l'évolutivité de votre application.</span><span class="sxs-lookup"><span data-stu-id="6d320-103">Pooling connections can significantly enhance the performance and scalability of your application.</span></span> <span data-ttu-id="6d320-104">Cette section traite du regroupement de connexions pour les fournisseurs de données .NET Framework pour OLE DB, ODBC et Oracle.</span><span class="sxs-lookup"><span data-stu-id="6d320-104">This section discusses connection pooling for the .NET Framework data providers for OLE DB, ODBC and Oracle.</span></span>  
