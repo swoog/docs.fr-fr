@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760607"
 ---
 # <a name="sorting-and-filtering-data"></a><span data-ttu-id="32ec5-102">Tri et filtre de données</span><span class="sxs-lookup"><span data-stu-id="32ec5-102">Sorting and Filtering Data</span></span>
 <span data-ttu-id="32ec5-103">L'objet <xref:System.Data.DataView> offre plusieurs méthodes de tri et de filtrage de données dans un objet <xref:System.Data.DataTable> :</span><span class="sxs-lookup"><span data-stu-id="32ec5-103">The <xref:System.Data.DataView> provides several ways of sorting and filtering data in a <xref:System.Data.DataTable>:</span></span>  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575822"
 ---
 # <a name="how-to-define-and-use-custom-numeric-format-providers"></a><span data-ttu-id="a3051-102">Comment : définir et utiliser des fournisseurs de format numérique personnalisés</span><span class="sxs-lookup"><span data-stu-id="a3051-102">How to: Define and Use Custom Numeric Format Providers</span></span>
 <span data-ttu-id="a3051-103">[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] vous donne un contrôle étendu sur la représentation sous forme de chaîne de valeurs numériques.</span><span class="sxs-lookup"><span data-stu-id="a3051-103">The [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] gives you extensive control over the string representation of numeric values.</span></span> <span data-ttu-id="a3051-104">Il prend en charge les fonctionnalités suivantes pour personnaliser le format des valeurs numériques :</span><span class="sxs-lookup"><span data-stu-id="a3051-104">It supports the following features for customizing the format of numeric values:</span></span>  

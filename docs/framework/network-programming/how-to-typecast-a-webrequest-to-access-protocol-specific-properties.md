@@ -1,31 +1,24 @@
 ---
-title: "Comment : convertir une classe WebRequest pour accéder à des propriétés spécifiques au protocole"
-ms.custom: 
+title: 'Comment : convertir une classe WebRequest pour accéder à des propriétés spécifiques au protocole'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d9a8eae2-7454-46f9-b43b-c98477c5bcde
-caps.latest.revision: "6"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: e398fa0dce066aec735f149f20e2803e7cd5ce80
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 3e01c68bdaa0cf9d3ab38b2267b35c57ad590ca1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394070"
 ---
-# <a name="how-to-typecast-a-webrequest-to-access-protocol-specific-properties"></a><span data-ttu-id="22c6b-102">Comment : convertir une classe WebRequest pour accéder à des propriétés spécifiques au protocole</span><span class="sxs-lookup"><span data-stu-id="22c6b-102">How to: Typecast a WebRequest to Access Protocol Specific Properties</span></span>
-<span data-ttu-id="22c6b-103">Cet exemple montre comment effectuer un cast du type d’une classe WebRequest pour accéder à des propriétés spécifiques au protocole.</span><span class="sxs-lookup"><span data-stu-id="22c6b-103">This example shows how to typecast a WebRequest so that you can access protocol specific properties.</span></span>  
+# <a name="how-to-typecast-a-webrequest-to-access-protocol-specific-properties"></a><span data-ttu-id="e8a4c-102">Comment : convertir une classe WebRequest pour accéder à des propriétés spécifiques au protocole</span><span class="sxs-lookup"><span data-stu-id="e8a4c-102">How to: Typecast a WebRequest to Access Protocol Specific Properties</span></span>
+<span data-ttu-id="e8a4c-103">Cet exemple montre comment effectuer un cast du type d’une classe WebRequest pour accéder à des propriétés spécifiques au protocole.</span><span class="sxs-lookup"><span data-stu-id="e8a4c-103">This example shows how to typecast a WebRequest so that you can access protocol specific properties.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="22c6b-104">Exemple</span><span class="sxs-lookup"><span data-stu-id="22c6b-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="e8a4c-104">Exemple</span><span class="sxs-lookup"><span data-stu-id="e8a4c-104">Example</span></span>  
   
 ```csharp  
 HttpWebRequest httpreq =   
@@ -37,5 +30,5 @@ Dim httpreq As HttpWebRequest = _
    CType(WebRequest.Create("http://www.contoso.com/"), HttpWebRequest)  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="22c6b-105">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="22c6b-105">See Also</span></span>  
- [<span data-ttu-id="22c6b-106">Programmation de protocoles enfichables</span><span class="sxs-lookup"><span data-stu-id="22c6b-106">Programming Pluggable Protocols</span></span>](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
+## <a name="see-also"></a><span data-ttu-id="e8a4c-105">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="e8a4c-105">See Also</span></span>  
+ [<span data-ttu-id="e8a4c-106">Programmation de protocoles enfichables</span><span class="sxs-lookup"><span data-stu-id="e8a4c-106">Programming Pluggable Protocols</span></span>](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
