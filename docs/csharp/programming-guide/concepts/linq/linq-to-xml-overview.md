@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339379"
 ---
 # <a name="linq-to-xml-overview-c"></a><span data-ttu-id="4a6ad-102">Vue d’ensemble de LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="4a6ad-102">LINQ to XML Overview (C#)</span></span>
 <span data-ttu-id="4a6ad-103">Le langage XML a été largement adopté comme méthode pour mettre en forme des données dans de nombreux contextes.</span><span class="sxs-lookup"><span data-stu-id="4a6ad-103">XML has been widely adopted as a way to format data in many contexts.</span></span> <span data-ttu-id="4a6ad-104">Par exemple, on trouve du code XML sur le Web, dans les fichiers de configuration, dans les fichiers Microsoft Office Word et dans les bases de données.</span><span class="sxs-lookup"><span data-stu-id="4a6ad-104">For example, you can find XML on the Web, in configuration files, in Microsoft Office Word files, and in databases.</span></span>  
