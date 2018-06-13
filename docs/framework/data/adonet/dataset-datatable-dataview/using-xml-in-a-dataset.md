@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760331"
 ---
 # <a name="using-xml-in-a-dataset"></a><span data-ttu-id="68dbb-102">Utilisation de XML dans un DataSet</span><span class="sxs-lookup"><span data-stu-id="68dbb-102">Using XML in a DataSet</span></span>
 <span data-ttu-id="68dbb-103">Avec ADO.NET, vous pouvez remplir un objet <xref:System.Data.DataSet> à partir d'un flux ou d'un document XML.</span><span class="sxs-lookup"><span data-stu-id="68dbb-103">With ADO.NET you can fill a <xref:System.Data.DataSet> from an XML stream or document.</span></span> <span data-ttu-id="68dbb-104">Vous pouvez utiliser le flux ou le document XML pour fournir à l'objet <xref:System.Data.DataSet> soit des données, soit des informations de schéma ou les deux à la fois.</span><span class="sxs-lookup"><span data-stu-id="68dbb-104">You can use the XML stream or document to supply to the <xref:System.Data.DataSet> either data, schema information, or both.</span></span> <span data-ttu-id="68dbb-105">Les informations fournies à partir du flux ou du document XML peuvent être combinées aux données ou aux informations de schéma déjà présentes dans l'objet <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="68dbb-105">The information supplied from the XML stream or document can be combined with existing data or schema information already present in the <xref:System.Data.DataSet>.</span></span>  

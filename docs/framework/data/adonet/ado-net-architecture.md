@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759866"
 ---
 # <a name="adonet-architecture"></a><span data-ttu-id="edfe7-102">Architecture ADO.NET</span><span class="sxs-lookup"><span data-stu-id="edfe7-102">ADO.NET Architecture</span></span>
 <span data-ttu-id="edfe7-103">Le traitement des données repose traditionnellement sur un modèle à deux couches utilisant une connexion.</span><span class="sxs-lookup"><span data-stu-id="edfe7-103">Data processing has traditionally relied primarily on a connection-based, two-tier model.</span></span> <span data-ttu-id="edfe7-104">Le traitement des données utilisant de plus en plus des architectures multicouches, les programmeurs s'orientent vers une approche déconnectée de façon à proposer une meilleure évolutivité pour leurs applications.</span><span class="sxs-lookup"><span data-stu-id="edfe7-104">As data processing increasingly uses multi-tier architectures, programmers are switching to a disconnected approach to provide better scalability for their applications.</span></span>  

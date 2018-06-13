@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754286"
 ---
 # <a name="ltforceperformancecounteruniquesharedmemoryreadsgt-element"></a><span data-ttu-id="5c15e-102">&lt;forcePerformanceCounterUniqueSharedMemoryReads&gt; élément</span><span class="sxs-lookup"><span data-stu-id="5c15e-102">&lt;forcePerformanceCounterUniqueSharedMemoryReads&gt; Element</span></span>
 <span data-ttu-id="5c15e-103">Indique si PerfCounter.dll utilise le paramètre de Registre CategoryOptions dans une application.NET Framework version 1.1 pour déterminer s’il faut charger des données du compteur de performance à partir de la mémoire globale ou de la mémoire partagée propre à la catégorie.</span><span class="sxs-lookup"><span data-stu-id="5c15e-103">Specifies whether PerfCounter.dll uses the CategoryOptions registry setting in a .NET Framework version 1.1 application to determine whether to load performance counter data from category-specific shared memory or global memory.</span></span>  

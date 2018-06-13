@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746795"
 ---
 # <a name="ltnamedpipetransportgt"></a><span data-ttu-id="70a01-102">&lt;namedPipeTransport&gt;</span><span class="sxs-lookup"><span data-stu-id="70a01-102">&lt;namedPipeTransport&gt;</span></span>
 <span data-ttu-id="70a01-103">Définit un transport qui entraîne un canal à transférer des messages à l’aide de canaux nommés lorsqu’il est inclus dans une liaison personnalisée.</span><span class="sxs-lookup"><span data-stu-id="70a01-103">Defines a transport that causes a channel to transfer messages using named pipes when it is included in a custom binding.</span></span>  

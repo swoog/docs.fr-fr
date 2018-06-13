@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746759"
 ---
 # <a name="ltdynamicendpointgt"></a><span data-ttu-id="97b76-102">&lt;dynamicEndpoint&gt;</span><span class="sxs-lookup"><span data-stu-id="97b76-102">&lt;dynamicEndpoint&gt;</span></span>
 <span data-ttu-id="97b76-103">Cet élément de configuration définit un point de terminaison standard qui contient des informations pour permettre à une application de fonctionner en tant que programme client qui peut rechercher l'adresse du point de terminaison de manière dynamique au moment de l'exécution.</span><span class="sxs-lookup"><span data-stu-id="97b76-103">This configuration element defines a standard endpoint that contains information to enable an application to function as a client program that can find the endpoint address dynamically at runtime.</span></span>  

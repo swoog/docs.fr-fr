@@ -1,13 +1,6 @@
 ---
-title: "Comment : transformer des points et des vecteurs"
-ms.custom: 
+title: 'Comment : transformer des points et des vecteurs'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Vector objects [WPF], transforming
 - transforming Point objects [WPF]
@@ -16,19 +9,15 @@ helpviewer_keywords:
 - Point objects [WPF], transforming
 - graphics [WPF], transforming Point objects [WPF]
 ms.assetid: 9fff2742-9162-46be-bc88-310fc3900af4
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5f2dd78fdb12ed975f5463c4e3320d113e9a69dc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: be69d516451853fe4a0a66af8ec49bca51f73cb8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559965"
 ---
-# <a name="how-to-transform-points-and-vectors"></a><span data-ttu-id="8f263-102">Comment : transformer des points et des vecteurs</span><span class="sxs-lookup"><span data-stu-id="8f263-102">How to: Transform Points and Vectors</span></span>
-<span data-ttu-id="8f263-103">Cet exemple montre comment utiliser un <xref:System.Windows.Media.Matrix> pour transformer <xref:System.Windows.Point> et <xref:System.Windows.Vector> objets.</span><span class="sxs-lookup"><span data-stu-id="8f263-103">This example shows how to use a <xref:System.Windows.Media.Matrix> to transform <xref:System.Windows.Point> and <xref:System.Windows.Vector> objects.</span></span>  
+# <a name="how-to-transform-points-and-vectors"></a><span data-ttu-id="859ba-102">Comment : transformer des points et des vecteurs</span><span class="sxs-lookup"><span data-stu-id="859ba-102">How to: Transform Points and Vectors</span></span>
+<span data-ttu-id="859ba-103">Cet exemple montre comment utiliser un <xref:System.Windows.Media.Matrix> pour transformer <xref:System.Windows.Point> et <xref:System.Windows.Vector> objets.</span><span class="sxs-lookup"><span data-stu-id="859ba-103">This example shows how to use a <xref:System.Windows.Media.Matrix> to transform <xref:System.Windows.Point> and <xref:System.Windows.Vector> objects.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="8f263-104">Exemple</span><span class="sxs-lookup"><span data-stu-id="8f263-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="859ba-104">Exemple</span><span class="sxs-lookup"><span data-stu-id="859ba-104">Example</span></span>  
  [!code-csharp[MatrixExamples_snip#MatrixTransformExamples_csharp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MatrixExamples_snip/CSharp/MatrixExample.cs#matrixtransformexamples_csharp)]
