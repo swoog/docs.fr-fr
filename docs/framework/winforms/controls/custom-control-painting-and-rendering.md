@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526049"
 ---
 # <a name="custom-control-painting-and-rendering"></a>Peinture et rendu personnalisés des contrôles
 La peinture personnalisée des contrôles est une des nombreuses tâches compliquées facilitées par le .NET Framework. Lorsque vous créez un contrôle personnalisé, vous disposez de nombreuses options d’apparence de graphique de votre contrôle. Si vous êtes en train de créer un contrôle qui hérite de la `Control`, vous devez fournir le code qui permet à votre contrôle afficher sa représentation sous forme graphique. Si vous créez un contrôle utilisateur en héritant de la `UserControl`, ou sur l’un des contrôles Windows Forms, vous pouvez substituer la représentation graphique standard et fournir votre propre code graphique. Si vous souhaitez fournir un rendu personnalisé pour les contrôles constitutifs d’un `UserControl` vous êtes en train de créer, vos options sont plus limitées, mais toujours autorisant un large éventail de possibilités de graphiques pour vos applications et de contrôles.  

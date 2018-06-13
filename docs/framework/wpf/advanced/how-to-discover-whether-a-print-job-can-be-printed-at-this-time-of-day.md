@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548033"
 ---
 # <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>Comment : déterminer si un travail d'impression peut être imprimé à cette heure de la journée
 Les files d’attente d’impression ne sont pas toujours disponibles pour 24 heures par jour. Ils ont des propriétés au moment du début et de fin qui peuvent être définies pour les rendre indisponibles à certains moments de la journée. Cette fonctionnalité peut être utilisée, par exemple, pour réserver une imprimante à l’usage exclusif d’un département après 17 h 00. Ce service aurait une autre file d’attente l’imprimante que les autres services à utiliser. La file d’attente pour les autres services a la valeur n’est pas disponible après 17 h 00, alors que la file d’attente pour le département privilégié peut être définie pour être disponible à tout moment.  
