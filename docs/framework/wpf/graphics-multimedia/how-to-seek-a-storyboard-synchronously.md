@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560003"
 ---
 # <a name="how-to-seek-a-storyboard-synchronously"></a>Comment : rechercher un storyboard de façon synchrone
 L’exemple suivant montre comment utiliser le <xref:System.Windows.Media.Animation.Storyboard.SeekAlignedToLastTick%2A> méthode d’un <xref:System.Windows.Media.Animation.Storyboard> pour rechercher une position dans une animation de la table de montage séquentiel de façon synchrone.  

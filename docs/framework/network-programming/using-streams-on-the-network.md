@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397544"
 ---
 # <a name="using-streams-on-the-network"></a>Utilisation de flux sur le réseau
 Dans .NET Framework, les ressources réseau sont représentées sous forme de flux. .NET Framework traite les flux de manière générique, ce qui offre les avantages suivants :  

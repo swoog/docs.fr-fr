@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2b957642606cfcd43b6a02d64450d51174eb7768
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33439750"
 ---
 # <a name="igchostcontrol-interface"></a>IGCHostControl, interface
 Fournit une méthode qui autorise le garbage collector de demander à l’hôte de modifier les limites de mémoire virtuelle.  

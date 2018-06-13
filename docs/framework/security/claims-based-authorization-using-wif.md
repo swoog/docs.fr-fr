@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398623"
 ---
 # <a name="claims-based-authorization-using-wif"></a>Autorisation basée sur les revendications utilisant WIF
 Dans une application de partie de confiance, une autorisation détermine les ressources auxquelles une identité authentifié est autorisé à accéder et les opérations qu'elle est autorisée à exécuter sur ces ressources. Une autorisation incorrecte ou faible entraîne la divulgation d'informations et la falsification de données. Cette rubrique présente les méthodes disponibles pour implémenter une autorisation pour les applications Web ASP.NET qui prennent en charge les revendications et les services qui utilisent Windows Identity Foundation (WIF) et le service d'émission de jetons de sécurité (STS), par exemple, le service de contrôle d'accès (ACS) Microsoft Azure.  

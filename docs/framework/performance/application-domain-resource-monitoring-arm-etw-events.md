@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398181"
 ---
 # <a name="application-domain-resource-monitoring-arm-etw-events"></a>Événements ETW d'analyse de ressource de domaine d'application
 <a name="top"></a> Ces événements fournissent des informations de diagnostic détaillées sur l'état d'un domaine d'application. Vous pouvez utiliser ces événements ou la fonctionnalité ARM d'analyse de ressource de domaine d'application pour obtenir les mêmes informations.  

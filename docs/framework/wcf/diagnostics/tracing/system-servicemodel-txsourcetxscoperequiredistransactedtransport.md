@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33482483"
 ---
 # <a name="systemservicemodeltxsourcetxscoperequiredistransactedtransport"></a>System.ServiceModel.TxSourceTxScopeRequiredIsTransactedTransport
 La transaction spécifiée a été reçue pour l’opération spécifiée depuis un transport transactionnel, tel que MSMQ.  

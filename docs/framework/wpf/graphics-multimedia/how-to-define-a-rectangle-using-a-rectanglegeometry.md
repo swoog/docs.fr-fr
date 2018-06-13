@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560421"
 ---
 # <a name="how-to-define-a-rectangle-using-a-rectanglegeometry"></a>Comment : définir un rectangle à l'aide d'un RectangleGeometry
 Cet exemple explique comment utiliser la <xref:System.Windows.Media.RectangleGeometry> classe pour décrire un rectangle.  

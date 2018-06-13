@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397531"
 ---
 # <a name="proxy-configuration"></a>Configuration du proxy
 Un serveur proxy gère les demandes du client pour les ressources. Un proxy peut retourner une ressource demandée à partir de son cache ou transférer la demande au serveur sur lequel réside la ressource. Les proxies peuvent améliorer les performances réseau en réduisant le nombre de demandes envoyées aux serveurs distants. Les proxies peuvent également être utilisés pour restreindre l'accès aux ressources.  

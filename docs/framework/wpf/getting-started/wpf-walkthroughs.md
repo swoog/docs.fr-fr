@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557886"
 ---
 # <a name="wpf-walkthroughs"></a>Procédures pas à pas WPF
 Procédures pas à pas fournissent des instructions détaillées pour les scénarios courants. Elles constituent donc un bon point de départ pour vous familiariser avec le produit ou un ensemble de fonctionnalités particulier.  

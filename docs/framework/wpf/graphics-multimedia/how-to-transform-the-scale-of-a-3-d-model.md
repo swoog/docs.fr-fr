@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561096"
 ---
 # <a name="how-to-transform-the-scale-of-a-3-d-model"></a>Comment : transformer l'échelle d'un modèle 3D
 Cet exemple montre comment mettre à l’échelle un objet 3D. Pour mettre à l’échelle un objet 3D, vous devez utiliser un <xref:System.Windows.Media.Media3D.ScaleTransform3D>. Le <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleX%2A>, <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleY%2A>, et <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleZ%2A> propriétés redimensionnent l’élément selon le facteur spécifié. Par exemple, un <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleX%2A> valeur de 1.5 étire un objet à 150 % de sa largeur d’origine. A <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleY%2A> valeur de 0.5 réduit la hauteur d’un objet de 50 pour cent. Le code ci-dessous montre comment utiliser un <xref:System.Windows.Media.Media3D.ScaleTransform3D> en tant que la transformation pour un <xref:System.Windows.Media.Media3D.GeometryModel3D>.  

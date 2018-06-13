@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396105"
 ---
 # <a name="thread-pool-etw-events"></a>Événements ETW de pool de threads
 <a name="top"></a> Ces événements collectent des informations sur les threads de travail et d'E/S.  

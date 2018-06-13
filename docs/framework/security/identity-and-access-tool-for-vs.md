@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398607"
 ---
 # <a name="identity-and-access-tool-for-visual-studio-2012"></a>Outil Identité et accès pour Visual Studio 2012
 Cette rubrique décrit le nouvel outil Identité et accès pour Visual Studio 11. Vous pouvez télécharger cet outil à partir de l’URL suivante : [ http://go.microsoft.com/fwlink/?LinkID=245849 ](http://go.microsoft.com/fwlink/?LinkID=245849) ou directement à partir de Visual Studio 11 en recherchant « identité » directement dans le Gestionnaire d’Extensions.  

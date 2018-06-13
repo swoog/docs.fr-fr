@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561158"
 ---
 # <a name="how-to-use-a-matrixtransform-to-create-custom-transforms"></a>Comment : utiliser un MatrixTransform pour créer des transformations personnalisées
 Cet exemple montre comment utiliser un <xref:System.Windows.Media.MatrixTransform> pour traduire (déplacer) la position, stretch et l’inclinaison d’un <xref:System.Windows.Controls.Button>.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398025"
 ---
 # <a name="lazy-initialization"></a>Initialisation tardive
 *L’initialisation tardive* d’un objet signifie que sa création est différée jusqu’à sa première utilisation. (Pour cette rubrique, les termes *initialisation tardive* et *instanciation tardive* sont synonymes.) L’initialisation tardive est principalement utilisée pour améliorer les performances, éviter les calculs inutiles et réduire les besoins en mémoire programme. Voici les scénarios les plus courants :  

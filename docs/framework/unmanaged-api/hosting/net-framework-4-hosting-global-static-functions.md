@@ -10,9 +10,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 019a17b38eb1cfccab4537d5f27b7625fdef1268
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33441466"
 ---
 # <a name="net-framework-4-hosting-global-static-functions"></a>Fonctions statiques globales de l'hébergement .NET Framework 4
 Le [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] introduit une nouvelle méthode exportée dans MSCorEE.dll : [CLRCreateIntstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md).  

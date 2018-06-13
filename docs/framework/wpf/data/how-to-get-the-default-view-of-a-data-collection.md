@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557171"
 ---
 # <a name="how-to-get-the-default-view-of-a-data-collection"></a>Comment : obtenir la vue par défaut d'une collection de données
 Les vues permettent à la même collection de données de différentes façons, en fonction de tri, de filtrage ou de critères de regroupement. Chaque collection a un affichage par défaut partagé, qui est utilisé comme source de liaison réelle lorsqu’une liaison spécifie une collection comme sa source. Cet exemple montre comment obtenir la vue par défaut d’une collection.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561658"
 ---
 # <a name="how-to-render-on-a-per-frame-interval-using-compositiontarget"></a>Comment : effectuer une restitution par intervalle de trame à l'aide de CompositionTarget
 Le moteur d’animation [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fournit de nombreuses fonctionnalités qui permettent de créer une animation à partir d’une trame. Il existe cependant des scénarios d’application dans lesquels vous devez affiner le rendu trame par trame. Le <xref:System.Windows.Media.CompositionTarget> objet permet de créer des animations personnalisées en fonction de rappel image par image.  

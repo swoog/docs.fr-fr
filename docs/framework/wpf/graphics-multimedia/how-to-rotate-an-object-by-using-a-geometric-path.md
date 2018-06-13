@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560714"
 ---
 # <a name="how-to-rotate-an-object-by-using-a-geometric-path"></a>Comment : faire pivoter un objet à l'aide d'un tracé géométrique
 Cet exemple montre comment pivoter un objet le long d’un tracé géométrique définie par un <xref:System.Windows.Media.PathGeometry> objet.  

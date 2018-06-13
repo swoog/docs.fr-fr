@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cc8225b6612c7bf07d220b20d515f64a346b9691
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436466"
 ---
 # <a name="iclrruntimeinfo-interface"></a>ICLRRuntimeInfo, interface
 Fournit des méthodes qui retournent des informations concernant un common language runtime (CLR), spécifique, y compris la version, le répertoire et l’état de charge. Cette interface fournit également des fonctionnalités spécifiques au runtime sans l’initialisation du runtime. Il inclut le relatifs au runtime [LoadLibrary](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loadlibrary-method.md) (méthode), l’exécution du module spécifique [GetProcAddress](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getprocaddress-method.md) (méthode) et les interfaces fournies par le biais du [GetInterface](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getinterface-method.md)(méthode).  

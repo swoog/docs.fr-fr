@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557548"
 ---
 # <a name="navigation-topologies-overview"></a>Vue d'ensemble des topologies de navigation
 <a name="introduction"></a> Cette présentation fournit une introduction aux topologies de navigation dans [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Trois topologies de navigation courantes, avec des exemples, sont abordées dans cet article.  

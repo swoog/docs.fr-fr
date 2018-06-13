@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397739"
 ---
 # <a name="measuring-startup-improvement-with-net-native"></a>Mesure de l'amélioration du démarrage avec .NET Native
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] améliore de façon significative le temps de lancement des applications. Cette amélioration est particulièrement visible sur les appareils portables à basse consommation d'énergie hébergeant des applications complexes. Cette rubrique facilite la prise en main de l'instrumentation de base servant à mesurer cette amélioration du démarrage.  

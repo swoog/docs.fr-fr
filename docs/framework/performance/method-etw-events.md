@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398103"
 ---
 # <a name="method-etw-events"></a>Événements ETW de méthode
 <a name="top"></a> Ces événements collectent des informations spécifiques aux méthodes. La charge utile de ces événements est requise pour la résolution des symboles. De plus, ces événements fournissent des informations utiles telles que le nombre de fois qu'une méthode a été appelée.  

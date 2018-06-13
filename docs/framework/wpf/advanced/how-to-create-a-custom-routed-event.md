@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543704"
 ---
 # <a name="how-to-create-a-custom-routed-event"></a>Comment : créer un événement routé personnalisé
 Pour votre événement personnalisé prendre en charge le routage des événements, vous devez inscrire un <xref:System.Windows.RoutedEvent> à l’aide de la <xref:System.Windows.EventManager.RegisterRoutedEvent%2A> (méthode). Cet exemple montre les principes de base de la création d’un événement routé personnalisé.  

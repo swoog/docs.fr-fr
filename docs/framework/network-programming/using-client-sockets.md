@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395945"
 ---
 # <a name="using-client-sockets"></a>Utilisation de sockets clients
 Avant de démarrer une conversation via un <xref:System.Net.Sockets.Socket>, vous devez créer un canal de données entre votre application et l’appareil distant. Il existe d’autres protocoles et familles d’adresses réseau, mais cet exemple montre comment créer une connexion TCP/IP à un service distant.  

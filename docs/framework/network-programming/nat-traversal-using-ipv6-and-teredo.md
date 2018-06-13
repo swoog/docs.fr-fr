@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398116"
 ---
 # <a name="nat-traversal-using-ipv6-and-teredo"></a>Parcours NAT avec IPv6 et Teredo
 Des améliorations ont été apportées à la prise en charge du parcours NAT. Ces changements prévoient l’utilisation d’IPv6 et de Teredo. Toutefois, d’autres technologies de tunneling IP peuvent être utilisées. Ces améliorations affectent les classes de <xref:System.Net> et les espaces de noms qui leur sont associés.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397973"
 ---
 # <a name="dynamically-loading-and-using-types"></a>Chargement et utilisation dynamiques des types
 La réflexion fournit l’infrastructure utilisée par les compilateurs de langages tels que [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] et JScript pour implémenter la liaison tardive implicite. La liaison est le processus de localisation de la déclaration (en d’autres termes, l’implémentation) qui correspond à un type spécifié unique. Quand ce processus se produit au moment de l’exécution plutôt qu’au moment de la compilation, il est appelé liaison tardive. [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] vous permet d’utiliser la liaison tardive implicite dans votre code. Le compilateur Visual Basic appelle une méthode d’assistance qui utilise la réflexion pour obtenir le type d’objet. Les arguments passés à la méthode d’assistance entraînent l’appel de la méthode appropriée au moment de l’exécution. Ces arguments sont l’instance (un objet) sur laquelle appeler la méthode, le nom de la méthode appelée (une chaîne) et les arguments passés à la méthode appelée (un tableau d’objets).  

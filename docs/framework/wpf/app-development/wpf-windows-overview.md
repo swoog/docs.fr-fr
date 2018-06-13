@@ -33,6 +33,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558120"
 ---
 # <a name="wpf-windows-overview"></a>Vue d'ensemble des fenêtres WPF
 Les utilisateurs interagissent avec les applications autonomes Windows Presentation Foundation (WPF) via windows. L’objectif principal d’une fenêtre est d’héberger du contenu qui permet aux utilisateurs de visualiser les données et d’interagir avec celles-ci. Autonome [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] applications fournissent leurs propres fenêtres à l’aide de la <xref:System.Windows.Window> classe. Cette rubrique présente les <xref:System.Windows.Window> avant de couvrir les notions de base de la création et la gestion de fenêtres dans des applications autonomes.  

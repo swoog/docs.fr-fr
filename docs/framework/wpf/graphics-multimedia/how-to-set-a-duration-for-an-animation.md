@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561373"
 ---
 # <a name="how-to-set-a-duration-for-an-animation"></a>Comment : définir une durée pour une animation
 A <xref:System.Windows.Media.Animation.Timeline> représente un segment de temps et de la longueur de ce segment sont déterminées par la chronologie <xref:System.Windows.Duration>. Lorsqu’un <xref:System.Windows.Media.Animation.Timeline> atteint la fin de sa durée, il s’arrête. Si le <xref:System.Windows.Media.Animation.Timeline> a des chronologies enfants, ils cessent de jouer également. Dans le cas d’une animation, la <xref:System.Windows.Duration> spécifie la durée nécessaire à l’animation transition à partir de sa valeur initiale à sa valeur de fin.  

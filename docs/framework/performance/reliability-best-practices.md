@@ -45,6 +45,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397765"
 ---
 # <a name="reliability-best-practices"></a>Meilleures pratiques pour la fiabilité
 Même si les règles de fiabilité suivantes concernent plus spécialement SQL Server, elles peuvent également s’appliquer à n’importe quelle application serveur basée sur l’hôte. Il est extrêmement important d’éviter que les serveurs, tels que les serveurs SQL Server, soient victimes de fuite de ressources ou de panne.  Toutefois, il est impossible de le faire en écrivant du code réécrit pour chaque méthode qui modifie l’état d’un objet.  Le but n’est pas ici d’écrire du code managé totalement fiable et capable de récupérer des erreurs partout où elles se produisent avec du code réécrit.  Cette tâche relèverait pratiquement de l’impossible.  Le Common Language Runtime (CLR) ne peut offrir suffisamment de garanties quant à la possibilité d’écrire du code managé parfait.  Notez qu’à la différence d’ASP.NET, SQL Server utilise un seul processus qui ne peut pas être recyclé sans mettre une base de données hors connexion pendant une durée inacceptable.  

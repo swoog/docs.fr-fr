@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398168"
 ---
 # <a name="security-and-remoting-considerations"></a>Considérations sur la sécurité et la communication à distance
 La communication à distance vous permet de définir des appels transparents entre des domaines d'application, des processus ou des ordinateurs. Cependant, le parcours de pile de la sécurité d'accès du code ne peut pas traverser des processus ou des limites de machine (il s'applique pourtant entre les domaines d'application du même processus).  

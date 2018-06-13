@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397151"
 ---
 # <a name="how-to-create-an-xml-documentation-file-using-codedom"></a>Guide pratique pour créer un fichier de documentation XML à l’aide de CodeDOM
 Vous pouvez utiliser CodeDOM pour créer du code qui génère de la documentation XML. Le processus implique la création du graphique CodeDOM qui contient les commentaires de documentation XML, la génération du code et la compilation du code généré avec l’option du compilateur qui crée la sortie de documentation XML.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553366"
 ---
 # <a name="styles-and-templates"></a>Styles et modèles
 Création de modèles et de style de Windows Presentation Foundation (WPF) font référence à une suite de fonctionnalités (styles, modèles, déclencheurs et storyboards) qui permettent une application, le document ou le Concepteur d’interface (interface utilisateur) créer des applications visuellement agréables et Normaliser un aspect particulier de leurs produits.  

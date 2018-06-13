@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552917"
 ---
 # <a name="how-to-save-load-and-print-richtextbox-content"></a>Comment : enregistrer, charger et imprimer le contenu d'un RichTextBox
 L’exemple suivant montre comment enregistrer le contenu d’un <xref:System.Windows.Controls.RichTextBox> vers un fichier, charger à nouveau dans le <xref:System.Windows.Controls.RichTextBox>et imprimer le contenu.  
