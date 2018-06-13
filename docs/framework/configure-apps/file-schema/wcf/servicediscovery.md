@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751244"
 ---
 # <a name="ltservicediscoverygt"></a><span data-ttu-id="e6e6d-102">&lt;serviceDiscovery&gt;</span><span class="sxs-lookup"><span data-stu-id="e6e6d-102">&lt;serviceDiscovery&gt;</span></span>
 <span data-ttu-id="e6e6d-103">Spécifie la fonctionnalité de découverte des points de terminaison de service.</span><span class="sxs-lookup"><span data-stu-id="e6e6d-103">Specifies the discoverability of service endpoints.</span></span>  

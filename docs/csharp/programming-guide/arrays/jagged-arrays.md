@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33297366"
 ---
 # <a name="jagged-arrays-c-programming-guide"></a><span data-ttu-id="c6c02-102">Tableaux en escalier (Guide de programmation C#)</span><span class="sxs-lookup"><span data-stu-id="c6c02-102">Jagged Arrays (C# Programming Guide)</span></span>
 <span data-ttu-id="c6c02-103">Un tableau en escalier est un tableau dont les éléments sont des tableaux.</span><span class="sxs-lookup"><span data-stu-id="c6c02-103">A jagged array is an array whose elements are arrays.</span></span> <span data-ttu-id="c6c02-104">Les éléments d’un tableau en escalier peuvent être de dimensions et de tailles différentes.</span><span class="sxs-lookup"><span data-stu-id="c6c02-104">The elements of a jagged array can be of different dimensions and sizes.</span></span> <span data-ttu-id="c6c02-105">Un tableau en escalier est parfois appelé « tableau de tableaux ».</span><span class="sxs-lookup"><span data-stu-id="c6c02-105">A jagged array is sometimes called an "array of arrays."</span></span> <span data-ttu-id="c6c02-106">Les exemples suivants montrent comment déclarer, initialiser et accéder aux tableaux en escalier.</span><span class="sxs-lookup"><span data-stu-id="c6c02-106">The following examples show how to declare, initialize, and access jagged arrays.</span></span>  
