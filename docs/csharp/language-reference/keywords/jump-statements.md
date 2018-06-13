@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33265218"
 ---
 # <a name="jump-statements-c-reference"></a>Instructions de saut (référence C#)
 La création de branche s’effectue au moyen d’instructions de saut, ce qui provoque un transfert immédiat du contrôle du programme. Voici les mots clés qui sont utilisés dans les instructions de saut :  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 88f2ef8299911905d651ad5c3076dc9c74f397f8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33438917"
 ---
 # <a name="ihostcrst-interface"></a>IHostCrst, interface
 Sert de représentation sous forme de l’hôte d’une section critique pour les threads.  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9296aedf24979624c3d7357a4d51be835716a16f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33438026"
 ---
 # <a name="igcthreadcontrol-interface"></a>IGCThreadControl, interface
 Fournit des méthodes pour participer à la planification des threads qui seraient sinon bloqués pour un garbage collection.  

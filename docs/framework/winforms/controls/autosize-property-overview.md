@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529988"
 ---
 # <a name="autosize-property-overview"></a>Vue d'ensemble de la propriété AutoSize
 Le <xref:System.Windows.Forms.Control.AutoSize%2A> propriété permet à un contrôle modifier sa taille, si nécessaire, pour atteindre la valeur spécifiée par la <xref:System.Windows.Forms.Control.PreferredSize%2A> propriété. Vous ajustez le comportement de dimensionnement de contrôles spécifiques en définissant le `AutoSizeMode` propriété.  
