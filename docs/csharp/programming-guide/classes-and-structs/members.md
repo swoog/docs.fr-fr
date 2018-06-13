@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318222"
 ---
 # <a name="members-c-programming-guide"></a><span data-ttu-id="f6015-102">Membres (Guide de programmation C#)</span><span class="sxs-lookup"><span data-stu-id="f6015-102">Members (C# Programming Guide)</span></span>
 <span data-ttu-id="f6015-103">Les classes et les structs ont des membres qui représentent leurs données et leur comportement.</span><span class="sxs-lookup"><span data-stu-id="f6015-103">Classes and structs have members that represent their data and behavior.</span></span> <span data-ttu-id="f6015-104">Les membres d’une classe incluent tous les membres déclarés de la classe, ainsi que tous les membres (à l’exception des constructeurs et des finaliseurs) déclarés dans toutes les classes de sa hiérarchie d’héritage.</span><span class="sxs-lookup"><span data-stu-id="f6015-104">A class's members include all the members declared in the class, along with all members (except constructors and finalizers) declared in all classes in its inheritance hierarchy.</span></span> <span data-ttu-id="f6015-105">Les membres privés dans les classes de base sont hérités, mais ne sont pas accessibles à partir des classes dérivées.</span><span class="sxs-lookup"><span data-stu-id="f6015-105">Private members in base classes are inherited but are not accessible from derived classes.</span></span>  

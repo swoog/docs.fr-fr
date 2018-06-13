@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765098"
 ---
 # <a name="math-canonical-functions"></a><span data-ttu-id="280fe-102">Fonctions mathématiques canoniques</span><span class="sxs-lookup"><span data-stu-id="280fe-102">Math Canonical Functions</span></span>
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="280fe-103"> intègre des fonctions canoniques mathématiques.</span><span class="sxs-lookup"><span data-stu-id="280fe-103"> includes math canonical functions.</span></span>  

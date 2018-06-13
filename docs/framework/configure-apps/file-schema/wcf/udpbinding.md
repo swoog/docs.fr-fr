@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756213"
 ---
 # <a name="ltudpbindinggt"></a><span data-ttu-id="dbdcd-102">&lt;udpBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="dbdcd-102">&lt;udpBinding&gt;</span></span>
 <span data-ttu-id="dbdcd-103">Élément de configuration utilisé pour configurer la liaison <xref:System.ServiceModel.UdpBinding>.</span><span class="sxs-lookup"><span data-stu-id="dbdcd-103">A configuration element used to configure the <xref:System.ServiceModel.UdpBinding> binding.</span></span>  

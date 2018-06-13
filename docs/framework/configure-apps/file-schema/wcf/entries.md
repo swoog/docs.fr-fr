@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746707"
 ---
 # <a name="ltentriesgt"></a><span data-ttu-id="a1eff-102">&lt;Entrées&gt;</span><span class="sxs-lookup"><span data-stu-id="a1eff-102">&lt;entries&gt;</span></span>
 <span data-ttu-id="a1eff-103">Entrée de routage qui contient des mappages entre les filtres de routage et les points de terminaison cibles vers lesquels envoyer des messages lorsque le filtre correspond.</span><span class="sxs-lookup"><span data-stu-id="a1eff-103">A routing entry that contain mappings between the routing filters and the target endpoints to send messages to when the filter matches.</span></span>  

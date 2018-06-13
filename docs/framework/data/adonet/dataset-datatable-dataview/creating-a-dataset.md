@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755963"
 ---
 # <a name="creating-a-dataset"></a><span data-ttu-id="8ea95-102">Création d'un DataSet</span><span class="sxs-lookup"><span data-stu-id="8ea95-102">Creating a DataSet</span></span>
 <span data-ttu-id="8ea95-103">Pour créer une instance d'un objet <xref:System.Data.DataSet>, appelez le constructeur de l'objet <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="8ea95-103">You create an instance of a <xref:System.Data.DataSet> by calling the <xref:System.Data.DataSet> constructor.</span></span> <span data-ttu-id="8ea95-104">Vous pouvez également spécifier un argument de nom.</span><span class="sxs-lookup"><span data-stu-id="8ea95-104">Optionally specify a name argument.</span></span> <span data-ttu-id="8ea95-105">Si vous ne spécifiez pas de nom pour l'objet <xref:System.Data.DataSet>, le nom est défini sur « NewDataSet ».</span><span class="sxs-lookup"><span data-stu-id="8ea95-105">If you do not specify a name for the <xref:System.Data.DataSet>, the name is set to "NewDataSet".</span></span>  

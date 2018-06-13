@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755212"
 ---
 # <a name="ltcachesgt"></a><span data-ttu-id="412f2-102">&lt;Caches&gt;</span><span class="sxs-lookup"><span data-stu-id="412f2-102">&lt;caches&gt;</span></span>
 <span data-ttu-id="412f2-103">Inscrit le met en cache utilisés pour les jetons de session et de la détection de relecture de jetons.</span><span class="sxs-lookup"><span data-stu-id="412f2-103">Registers the caches used for session tokens and token replay detection.</span></span>  

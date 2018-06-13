@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758969"
 ---
 # <a name="ltwsdualhttpbindinggt"></a><span data-ttu-id="78f24-102">&lt;wsDualHttpBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="78f24-102">&lt;wsDualHttpBinding&gt;</span></span>
 <span data-ttu-id="78f24-103">Définit une liaison sécurisée, fiable et interopérable qui est appropriée pour les contrats de service ou les communications en duplex à travers des intermédiaires SOAP.</span><span class="sxs-lookup"><span data-stu-id="78f24-103">Defines a secure, reliable and interoperable binding that is suitable for duplex service contracts or communication through SOAP intermediaries.</span></span>  

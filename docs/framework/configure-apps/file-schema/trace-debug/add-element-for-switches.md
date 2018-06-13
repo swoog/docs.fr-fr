@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747452"
 ---
 # <a name="ltaddgt-element-for-ltswitchesgt"></a><span data-ttu-id="eb418-102">&lt;ajouter&gt; , élément pour &lt;commutateurs&gt;</span><span class="sxs-lookup"><span data-stu-id="eb418-102">&lt;add&gt; Element for &lt;switches&gt;</span></span>
 <span data-ttu-id="eb418-103">Spécifie le niveau auquel un commutateur de trace est défini.</span><span class="sxs-lookup"><span data-stu-id="eb418-103">Specifies the level where a trace switch is set.</span></span>  

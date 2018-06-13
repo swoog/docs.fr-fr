@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746421"
 ---
 # <a name="ltmailsettingsgt-element-network-settings"></a><span data-ttu-id="4a7b9-102">&lt;mailSettings&gt; élément (paramètres réseau)</span><span class="sxs-lookup"><span data-stu-id="4a7b9-102">&lt;mailSettings&gt; Element (Network Settings)</span></span>
 <span data-ttu-id="4a7b9-103">Configure les options d’envoi du courrier.</span><span class="sxs-lookup"><span data-stu-id="4a7b9-103">Configures mail sending options.</span></span>  
