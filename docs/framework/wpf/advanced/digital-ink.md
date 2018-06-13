@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537471"
 ---
 # <a name="digital-ink"></a>Encre numérique
 Cette section traite de l’utilisation de l’encre numérique dans le [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. En règle générale, trouvé uniquement dans le SDK Tablet PC, encre numérique est désormais disponible dans le noyau Windows Presentation Foundation. Cela signifie que vous pouvez désormais développer des applications Tablet PC à part entière à l’aide de la puissance de Windows Presentation Foundation.  

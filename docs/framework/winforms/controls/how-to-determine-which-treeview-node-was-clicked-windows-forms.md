@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530625"
 ---
 # <a name="how-to-determine-which-treeview-node-was-clicked-windows-forms"></a>Comment : identifier le nœud de TreeView sur lequel un clic est effectué (Windows Forms)
 Lorsque vous travaillez avec Windows Forms <xref:System.Windows.Forms.TreeView> contrôle, une tâche courante consiste à déterminer le nœud de l’utilisateur a cliqué et de réagir de façon appropriée.  

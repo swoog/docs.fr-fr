@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548336"
 ---
 # <a name="build-and-deploy-how-to-topics"></a>Rubriques "Comment" relatives à la génération et au déploiement
 Les rubriques suivantes montrent comment créer des fichiers projet pour les différentes [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] types d’applications.  

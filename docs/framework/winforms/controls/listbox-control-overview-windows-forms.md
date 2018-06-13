@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537562"
 ---
 # <a name="listbox-control-overview-windows-forms"></a>Vue d'ensemble du contrôle ListBox (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.ListBox> contrôle affiche une liste à partir de laquelle l’utilisateur peut sélectionner un ou plusieurs éléments. Si le nombre total d’éléments dépasse le nombre qui peut être affiché, une barre de défilement est automatiquement ajoutée à la <xref:System.Windows.Forms.ListBox> contrôle. Lorsque le <xref:System.Windows.Forms.ListBox.MultiColumn%2A> est définie sur `true`, la zone de liste affiche des éléments dans plusieurs colonnes et une barre de défilement horizontale s’affiche. Lorsque le <xref:System.Windows.Forms.ListBox.MultiColumn%2A> est définie sur `false`, la zone de liste affiche les éléments dans une seule colonne et une barre de défilement verticale apparaît. Lorsque <xref:System.Windows.Forms.ListBox.ScrollAlwaysVisible%2A> a la valeur `true`, la barre de défilement s’affiche quel que soit le nombre d’éléments. Le <xref:System.Windows.Forms.ListBox.SelectionMode%2A> propriété détermine le nombre d’éléments pouvant être sélectionné à la fois.  

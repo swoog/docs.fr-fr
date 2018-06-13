@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539026"
 ---
 # <a name="advanced-ink-handling"></a>Gestion avancée de l'encre
 Le [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] est fourni avec la <xref:System.Windows.Controls.InkCanvas>, et est un élément que vous pouvez placer dans votre application pour lancer immédiatement la collecte et l’affichage d’encre. Toutefois, si le <xref:System.Windows.Controls.InkCanvas> contrôle ne fournit pas un niveau assez de contrôle, vous pouvez garder le contrôle à un niveau supérieur en personnalisant votre propre collecte d’encre et les classes de rendu d’encre à l’aide de <xref:System.Windows.Input.StylusPlugIns>.  

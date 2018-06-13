@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546950"
 ---
 # <a name="planning-for-application-performance"></a>Planification des performances des applications
 La réussite d’atteindre vos objectifs de performances dépend du degré de l’élaboration de votre stratégie de performances. La planification est la première étape du développement d’un produit. Cette rubrique décrit quelques règles simples pour le développement d’une stratégie de bonnes performances.  

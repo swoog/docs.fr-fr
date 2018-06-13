@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538361"
 ---
 # <a name="user-input-in-a-windows-forms-application"></a>Entrée d’utilisateur dans une application Windows Forms
 Dans les Windows Forms, l’entrée d’utilisateur est envoyée aux applications sous la forme de messages Windows. Une série de méthodes substituables traite ces messages au niveau de l’application, du formulaire et niveau de contrôle. Lorsque ces méthodes reçoivent les messages de clavier et souris, ils déclenchent des événements qui peuvent être gérés pour obtenir des informations sur la souris ou du clavier d’entrée. Dans de nombreux cas, les applications Windows Forms seront en mesure de traiter toutes les entrées utilisateur simplement en gérant ces événements. Dans d’autres cas, une application devrez peut-être remplacer une des méthodes qui traitent les messages afin d’intercepter un message particulier avant qu’il est reçu par l’application, un formulaire ou un contrôle.  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 624db77f0db2fe374e16abae64b6bf6ad290baa5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33411432"
 ---
 # <a name="icordebugcode4-interface"></a>Interface de ICorDebugCode4
 Fournit une méthode qui permet à un débogueur énumérer les variables locales et les arguments dans une fonction.  

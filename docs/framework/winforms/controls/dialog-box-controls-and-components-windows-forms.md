@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527208"
 ---
 # <a name="dialog-box-controls-and-components-windows-forms"></a>Contrôles et composants de boîte de dialogue (Windows Forms)
 Les contrôles et les composants Windows Forms suivants présentent des boîtes de dialogue standard. Suivez les liens pour obtenir plus d'informations sur les fonctions disponibles dans chaque boîte de dialogue.  

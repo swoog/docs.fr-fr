@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546655"
 ---
 # <a name="wpf-unmanaged-api-reference"></a>Référence des API non managées de WPF
 Les bibliothèques Windows Presentation Foundation (WPF) exposent un nombre de fonctions non managées qui sont destinés à un usage interne uniquement. Ils ne doivent pas être appelées à partir du code utilisateur.  
