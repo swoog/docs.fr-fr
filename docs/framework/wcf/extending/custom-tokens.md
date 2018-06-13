@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33485362"
 ---
 # <a name="custom-tokens"></a>Jetons personnalisés
 Bien que Windows Communication Foundation (WCF) en mode natif prend en charge les certificats X.509, jetons de contexte de sécurité, les tickets Kerberos et jetons de nom d’utilisateur comme informations d’identification, il est suffisamment flexible pour vous permettre d’utiliser vos propres informations d’identification personnalisées.  

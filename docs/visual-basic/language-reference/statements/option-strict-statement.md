@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605353"
 ---
 # <a name="option-strict-statement"></a>Option Strict Statement
 Restreint les conversions de types de données implicites aux seules conversions étendues, n’autorise pas la liaison tardive et n’autorise pas le typage implicite qui entraîne une `Object` type.  

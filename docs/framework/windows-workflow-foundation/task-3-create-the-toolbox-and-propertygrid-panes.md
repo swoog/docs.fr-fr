@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519748"
 ---
 # <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a>Tâche 3 : créer les volets de PropertyGrid et boîte à outils
 Dans cette tâche, vous allez créer le **boîte à outils** et **PropertyGrid** volets et les ajouter à réhébergé [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].  

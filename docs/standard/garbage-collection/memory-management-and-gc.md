@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569906"
 ---
 # <a name="memory-management-and-garbage-collection-in-net"></a>Gestion de la mémoire et garbage collection dans .NET
 Cette section de la documentation fournit des informations sur la gestion de la mémoire dans .NET.  

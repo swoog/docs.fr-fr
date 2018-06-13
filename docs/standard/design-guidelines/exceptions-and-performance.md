@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575334"
 ---
 # <a name="exceptions-and-performance"></a>Exceptions et performances
 Un problème courant lié aux exceptions est que si les exceptions sont utilisées pour le code qui échoue régulièrement, les performances de l’implémentation sera inacceptable. Il s’agit d’un problème valid. Lorsqu’un membre lève une exception, ses performances peuvent être beaucoup plus lent. Toutefois, il est possible d’obtenir de bonnes performances tout en respectant strictement les instructions de l’exception interdire l’utilisation de codes d’erreur. Deux modèles sont décrites dans cette section proposent des solutions pour ce faire.  

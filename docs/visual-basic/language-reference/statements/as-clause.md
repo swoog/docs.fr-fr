@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604261"
 ---
 # <a name="as-clause-visual-basic"></a>As, clause (Visual Basic)
 Introduit un `As` clause qui identifie un type de données dans une instruction de déclaration ou une liste de contraintes sur un paramètre de type générique.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33219272"
 ---
 # <a name="floating-point-types-table-c-reference"></a>Tableau des types virgule flottante (référence C#)
 Le tableau suivant indique la plage de valeurs approximative et la précision pour les types virgule flottante.  

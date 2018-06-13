@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573421"
 ---
 # <a name="how-to-add-or-remove-access-control-list-entries"></a>Comment : ajouter ou supprimer des entrées dans la liste de contrôle d'accès
 Pour ajouter des entrées de liste de contrôle d'accès (ACL) dans un fichier, ou pour en supprimer, vous devez obtenir l'objet <xref:System.Security.AccessControl.FileSecurity> ou <xref:System.Security.AccessControl.DirectorySecurity> à partir du fichier ou du répertoire, le modifier et le réappliquer ensuite dans le fichier ou répertoire.  

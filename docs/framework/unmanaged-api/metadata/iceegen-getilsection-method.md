@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6025b5914d4e96d10d83fc47a6baea7aa09605d6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33445142"
 ---
 # <a name="iceegengetilsection-method"></a>ICeeGen::GetIlSection, méthode
 Obtient la section de la base de code de langage intermédiaire référencée par le handle spécifié.  
