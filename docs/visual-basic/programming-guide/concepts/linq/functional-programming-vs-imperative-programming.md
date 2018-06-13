@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644275"
 ---
 # <a name="functional-programming-vs-imperative-programming-visual-basic"></a>Comparaison de la programmation fonctionnelle et de la Programmation impérative (Visual Basic)
 Cette rubrique compare et contraste la programmation fonctionnelle avec la programmation impérative (procédurale) plus traditionnelle.  

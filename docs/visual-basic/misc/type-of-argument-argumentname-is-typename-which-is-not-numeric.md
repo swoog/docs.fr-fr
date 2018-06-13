@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639609"
 ---
 # <a name="type-of-argument-39ltargumentnamegt39-is-39lttypenamegt39-which-is-not-numeric"></a>Type d’argument &#39; &lt;nom_argument&gt; &#39; est &#39; &lt;typename&gt;&#39;, qui n’est pas numérique
 Un argument non numérique apparaît dans une situation dans laquelle un argument numérique est attendu.  

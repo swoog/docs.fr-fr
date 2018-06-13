@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803765"
 ---
 # <a name="monitoring-service-operation-failures"></a>Surveillance des échecs d'opération de service
 Si le traçage analytique est activé pour une application, les échecs de service peuvent facilement être surveillés dans l'Observateur d'événements.  Cette rubrique montre comment déterminer quand une opération de service échoue et comment déterminer la cause de cet échec.  

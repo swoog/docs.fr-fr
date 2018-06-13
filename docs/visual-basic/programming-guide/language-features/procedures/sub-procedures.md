@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652563"
 ---
 # <a name="sub-procedures-visual-basic"></a>Procédures Sub (Visual Basic)
 A `Sub` procédure est une série d’instructions Visual Basic délimitée par le `Sub` et `End Sub` instructions. Le `Sub` procédure effectue une tâche, puis retourne le contrôle au code appelant, mais elle ne retourne pas de valeur au code appelant.  

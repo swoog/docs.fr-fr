@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639495"
 ---
 # <a name="you-must-specify-a-path-that-is-under-the-current-folder-or-one-of-its-sub-folders"></a>Vous devez spécifier un chemin se trouvant sous le dossier actif ou un de ses sous-dossiers
 Le chemin spécifié n’est pas présent sous le répertoire actif. Cela peut être dû à une analyse incorrecte des chemins de fichier lors de la définition d’un chemin relatif.  

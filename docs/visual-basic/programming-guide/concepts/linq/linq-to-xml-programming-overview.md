@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645692"
 ---
 # <a name="linq-to-xml-programming-overview-visual-basic"></a>LINQ à la vue d’ensemble de programmation XML (Visual Basic)
 Ces rubriques fournissent des informations de haut niveau concernant les classes [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], ainsi que des informations détaillées sur trois des classes les plus importantes.  

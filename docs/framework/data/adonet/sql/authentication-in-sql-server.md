@@ -7,6 +7,7 @@ ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472385"
 ---
 # <a name="authentication-in-sql-server"></a>Authentification dans SQL Server
 SQL Server prend en charge deux modes d'authentification, le mode d'authentification Windows et le mode mixte.  

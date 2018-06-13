@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647928"
 ---
 # <a name="how-to-assign-one-array-to-another-array-visual-basic"></a>Comment : assigner un tableau à un autre tableau (Visual Basic)
 Étant donné que les tableaux sont des objets, vous pouvez les utiliser dans les instructions d’assignation comme les autres types d’objet. Une variable tableau conserve un pointeur vers les données constituant les éléments du tableau et les informations de classement et de longueur et une attribution de copie uniquement ce pointeur.  

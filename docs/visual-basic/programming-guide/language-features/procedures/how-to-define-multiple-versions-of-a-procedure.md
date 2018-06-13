@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649810"
 ---
 # <a name="how-to-define-multiple-versions-of-a-procedure-visual-basic"></a>Comment : définir plusieurs versions d'une procédure (Visual Basic)
 Vous pouvez définir une procédure dans plusieurs versions par *surcharge* elle, à l’aide du même nom mais une liste de paramètres différente pour chaque version. L’objectif de la surcharge consiste à définir de plusieurs versions étroitement liées d’une procédure sans avoir à les différencier par nom.  
