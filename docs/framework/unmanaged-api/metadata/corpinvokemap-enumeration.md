@@ -1,14 +1,6 @@
 ---
-title: "CorPinvokeMap, énumération"
-ms.custom: 
+title: CorPinvokeMap, énumération
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CorPinvokeMap
 api_location:
@@ -22,22 +14,19 @@ helpviewer_keywords:
 ms.assetid: f14f986e-f6ce-42bc-aa23-18150c46d28c
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0e0771ce54e7e2973525bfcf4aba4c1f7ddf0a52
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: edb45c9ceefb242e5a72e8602dc93ecd39b2df09
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33447952"
 ---
-# <a name="corpinvokemap-enumeration"></a><span data-ttu-id="1df8d-102">CorPinvokeMap, énumération</span><span class="sxs-lookup"><span data-stu-id="1df8d-102">CorPinvokeMap Enumeration</span></span>
-<span data-ttu-id="1df8d-103">Spécifie les options pour un appel PInvoke.</span><span class="sxs-lookup"><span data-stu-id="1df8d-103">Specifies options for a PInvoke call.</span></span>  
+# <a name="corpinvokemap-enumeration"></a><span data-ttu-id="8e720-102">CorPinvokeMap, énumération</span><span class="sxs-lookup"><span data-stu-id="8e720-102">CorPinvokeMap Enumeration</span></span>
+<span data-ttu-id="8e720-103">Spécifie les options pour un appel PInvoke.</span><span class="sxs-lookup"><span data-stu-id="8e720-103">Specifies options for a PInvoke call.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1df8d-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="1df8d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8e720-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="8e720-104">Syntax</span></span>  
   
 ```  
 typedef enum  CorPinvokeMap {  
@@ -74,39 +63,39 @@ typedef enum  CorPinvokeMap {
 } CorPinvokeMap;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="1df8d-105">Membres</span><span class="sxs-lookup"><span data-stu-id="1df8d-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="8e720-105">Membres</span><span class="sxs-lookup"><span data-stu-id="8e720-105">Members</span></span>  
   
-|<span data-ttu-id="1df8d-106">Membre</span><span class="sxs-lookup"><span data-stu-id="1df8d-106">Member</span></span>|<span data-ttu-id="1df8d-107">Description</span><span class="sxs-lookup"><span data-stu-id="1df8d-107">Description</span></span>|  
+|<span data-ttu-id="8e720-106">Membre</span><span class="sxs-lookup"><span data-stu-id="8e720-106">Member</span></span>|<span data-ttu-id="8e720-107">Description</span><span class="sxs-lookup"><span data-stu-id="8e720-107">Description</span></span>|  
 |------------|-----------------|  
-|`pmNoMangle`|<span data-ttu-id="1df8d-108">Utiliser chaque nom de membre spécifié.</span><span class="sxs-lookup"><span data-stu-id="1df8d-108">Use each member name as specified.</span></span>|  
-|`pmCharSetMask`|<span data-ttu-id="1df8d-109">Réservé.</span><span class="sxs-lookup"><span data-stu-id="1df8d-109">Reserved.</span></span>|  
-|`pmCharSetNotSpec`|<span data-ttu-id="1df8d-110">Réservé.</span><span class="sxs-lookup"><span data-stu-id="1df8d-110">Reserved.</span></span>|  
-|`pmCharSetAnsi`|<span data-ttu-id="1df8d-111">Marshaler des chaînes en tant que chaînes de caractères de plusieurs octets.</span><span class="sxs-lookup"><span data-stu-id="1df8d-111">Marshal strings as multiple-byte character strings.</span></span>|  
-|`pmCharSetUnicode`|<span data-ttu-id="1df8d-112">Marshaler des chaînes en tant que caractères Unicode 2 octets.</span><span class="sxs-lookup"><span data-stu-id="1df8d-112">Marshal strings as Unicode 2-byte characters.</span></span>|  
-|`pmCharSetAuto`|<span data-ttu-id="1df8d-113">Marshaler des chaînes de manière appropriée pour le système d’exploitation cible automatiquement.</span><span class="sxs-lookup"><span data-stu-id="1df8d-113">Automatically marshal strings appropriately for the target operating system.</span></span> <span data-ttu-id="1df8d-114">La valeur par défaut est Unicode sur Windows NT, Windows 2000, Windows XP et la famille Windows Server 2003. la valeur par défaut est ANSI sur Windows 98 et Windows Me.</span><span class="sxs-lookup"><span data-stu-id="1df8d-114">The default is Unicode on Windows NT, Windows 2000, Windows XP, and the Windows Server 2003 family; the default is ANSI on Windows 98 and Windows Me.</span></span>|  
-|`pmBestFitUseAssem`|<span data-ttu-id="1df8d-115">Réservé.</span><span class="sxs-lookup"><span data-stu-id="1df8d-115">Reserved.</span></span>|  
-|`pmBestFitEnabled`|<span data-ttu-id="1df8d-116">Effectuer le mappage ajusté des caractères Unicode qui ne disposent pas d’une correspondance exacte dans le jeu de caractères ANSI.</span><span class="sxs-lookup"><span data-stu-id="1df8d-116">Perform best-fit mapping of Unicode characters that lack an exact match in the ANSI character set.</span></span>|  
-|`pmBestFitDisabled`|<span data-ttu-id="1df8d-117">N’effectuez pas de mappage ajusté des caractères Unicode.</span><span class="sxs-lookup"><span data-stu-id="1df8d-117">Do not perform best-fit mapping of Unicode characters.</span></span> <span data-ttu-id="1df8d-118">Dans ce cas, tous les caractères non mappables seront remplacés par un ' ?'.</span><span class="sxs-lookup"><span data-stu-id="1df8d-118">In this case, all unmappable characters will be replaced by a ‘?’.</span></span>|  
-|`pmBestFitMask`|<span data-ttu-id="1df8d-119">Réservé.</span><span class="sxs-lookup"><span data-stu-id="1df8d-119">Reserved.</span></span>|  
-|`pmThrowOnUnmappableCharUseAssem`|<span data-ttu-id="1df8d-120">Réservé.</span><span class="sxs-lookup"><span data-stu-id="1df8d-120">Reserved.</span></span>|  
-|`pmThrowOnUnmappableCharEnabled`|<span data-ttu-id="1df8d-121">Lève une exception lorsque le marshaleur d’interopérabilité rencontre un caractère non mappable.</span><span class="sxs-lookup"><span data-stu-id="1df8d-121">Throw an exception when the interop marshaler encounters an unmappable character.</span></span>|  
-|`pmThrowOnUnmappableCharDisabled`|<span data-ttu-id="1df8d-122">Ne levez pas d’exception lorsque le marshaleur d’interopérabilité rencontre un caractère non mappable.</span><span class="sxs-lookup"><span data-stu-id="1df8d-122">Do not throw an exception when the interop marshaler encounters an unmappable character.</span></span>|  
-|`pmThrowOnUnmappableCharMask`|<span data-ttu-id="1df8d-123">Réservée</span><span class="sxs-lookup"><span data-stu-id="1df8d-123">Reserved</span></span>|  
-|`pmSupportsLastError`|<span data-ttu-id="1df8d-124">Permet à l’appelé d’appeler Win32 `SetLastError` fonction avant le retour de la méthode avec attributs.</span><span class="sxs-lookup"><span data-stu-id="1df8d-124">Allow the callee to call the Win32 `SetLastError` function before returning from the attributed method.</span></span>|  
-|`pmCallConvMask`|<span data-ttu-id="1df8d-125">Réservée</span><span class="sxs-lookup"><span data-stu-id="1df8d-125">Reserved</span></span>|  
-|`pmCallConvWinapi`|<span data-ttu-id="1df8d-126">Utilisez la convention d’appel de plateforme par défaut.</span><span class="sxs-lookup"><span data-stu-id="1df8d-126">Use the default platform calling convention.</span></span> <span data-ttu-id="1df8d-127">Par exemple, sur Windows, la valeur par défaut est `StdCall` et sur Windows CE .NET, il est `Cdecl`.</span><span class="sxs-lookup"><span data-stu-id="1df8d-127">For example, on Windows the default is `StdCall` and on Windows CE .NET it is `Cdecl`.</span></span>|  
-|`pmCallConvCdecl`|<span data-ttu-id="1df8d-128">Utilisez le `Cdecl` convention d’appel.</span><span class="sxs-lookup"><span data-stu-id="1df8d-128">Use the `Cdecl` calling convention.</span></span> <span data-ttu-id="1df8d-129">Dans ce cas, l’appelant nettoie la pile.</span><span class="sxs-lookup"><span data-stu-id="1df8d-129">In this case, the caller cleans the stack.</span></span> <span data-ttu-id="1df8d-130">Cela permet d’appeler des fonctions avec `varargs` (autrement dit, les fonctions qui acceptent un nombre variable de paramètres).</span><span class="sxs-lookup"><span data-stu-id="1df8d-130">This enables calling functions with `varargs` (that is, functions that accept a variable number of parameters).</span></span>|  
-|`pmCallConvStdcall`|<span data-ttu-id="1df8d-131">Utilisez le `StdCall` convention d’appel.</span><span class="sxs-lookup"><span data-stu-id="1df8d-131">Use the `StdCall` calling convention.</span></span> <span data-ttu-id="1df8d-132">Dans ce cas, l’appelé nettoie la pile.</span><span class="sxs-lookup"><span data-stu-id="1df8d-132">In this case, the callee cleans the stack.</span></span> <span data-ttu-id="1df8d-133">Il s’agit de la convention par défaut pour appeler des fonctions non managées dans un appel d’appel.</span><span class="sxs-lookup"><span data-stu-id="1df8d-133">This is the default convention for calling unmanaged functions with platform invoke.</span></span>|  
-|`pmCallConvThiscall`|<span data-ttu-id="1df8d-134">Utilisez le `ThisCall` convention d’appel.</span><span class="sxs-lookup"><span data-stu-id="1df8d-134">Use the `ThisCall` calling convention.</span></span> <span data-ttu-id="1df8d-135">Dans ce cas, le premier paramètre est le `this` pointeur et est stocké dans le Registre ECX.</span><span class="sxs-lookup"><span data-stu-id="1df8d-135">In this case, the first parameter is the `this` pointer and is stored in register ECX.</span></span> <span data-ttu-id="1df8d-136">Autres paramètres sont insérés dans la pile.</span><span class="sxs-lookup"><span data-stu-id="1df8d-136">Other parameters are pushed on the stack.</span></span> <span data-ttu-id="1df8d-137">Le `ThisCall` convention d’appel est utilisée pour appeler des méthodes sur des classes exportées à partir d’une DLL non managée.</span><span class="sxs-lookup"><span data-stu-id="1df8d-137">The `ThisCall` calling convention is used to call methods on classes exported from an unmanaged DLL.</span></span>|  
-|`pmCallConvFastcall`|<span data-ttu-id="1df8d-138">Réservé.</span><span class="sxs-lookup"><span data-stu-id="1df8d-138">Reserved.</span></span>|  
-|`pmMaxValue`|<span data-ttu-id="1df8d-139">Réservé.</span><span class="sxs-lookup"><span data-stu-id="1df8d-139">Reserved.</span></span>|  
+|`pmNoMangle`|<span data-ttu-id="8e720-108">Utiliser chaque nom de membre spécifié.</span><span class="sxs-lookup"><span data-stu-id="8e720-108">Use each member name as specified.</span></span>|  
+|`pmCharSetMask`|<span data-ttu-id="8e720-109">Réservé.</span><span class="sxs-lookup"><span data-stu-id="8e720-109">Reserved.</span></span>|  
+|`pmCharSetNotSpec`|<span data-ttu-id="8e720-110">Réservé.</span><span class="sxs-lookup"><span data-stu-id="8e720-110">Reserved.</span></span>|  
+|`pmCharSetAnsi`|<span data-ttu-id="8e720-111">Marshaler des chaînes en tant que chaînes de caractères de plusieurs octets.</span><span class="sxs-lookup"><span data-stu-id="8e720-111">Marshal strings as multiple-byte character strings.</span></span>|  
+|`pmCharSetUnicode`|<span data-ttu-id="8e720-112">Marshaler des chaînes en tant que caractères Unicode 2 octets.</span><span class="sxs-lookup"><span data-stu-id="8e720-112">Marshal strings as Unicode 2-byte characters.</span></span>|  
+|`pmCharSetAuto`|<span data-ttu-id="8e720-113">Marshaler des chaînes de manière appropriée pour le système d’exploitation cible automatiquement.</span><span class="sxs-lookup"><span data-stu-id="8e720-113">Automatically marshal strings appropriately for the target operating system.</span></span> <span data-ttu-id="8e720-114">La valeur par défaut est Unicode sur Windows NT, Windows 2000, Windows XP et la famille Windows Server 2003. la valeur par défaut est ANSI sur Windows 98 et Windows Me.</span><span class="sxs-lookup"><span data-stu-id="8e720-114">The default is Unicode on Windows NT, Windows 2000, Windows XP, and the Windows Server 2003 family; the default is ANSI on Windows 98 and Windows Me.</span></span>|  
+|`pmBestFitUseAssem`|<span data-ttu-id="8e720-115">Réservé.</span><span class="sxs-lookup"><span data-stu-id="8e720-115">Reserved.</span></span>|  
+|`pmBestFitEnabled`|<span data-ttu-id="8e720-116">Effectuer le mappage ajusté des caractères Unicode qui ne disposent pas d’une correspondance exacte dans le jeu de caractères ANSI.</span><span class="sxs-lookup"><span data-stu-id="8e720-116">Perform best-fit mapping of Unicode characters that lack an exact match in the ANSI character set.</span></span>|  
+|`pmBestFitDisabled`|<span data-ttu-id="8e720-117">N’effectuez pas de mappage ajusté des caractères Unicode.</span><span class="sxs-lookup"><span data-stu-id="8e720-117">Do not perform best-fit mapping of Unicode characters.</span></span> <span data-ttu-id="8e720-118">Dans ce cas, tous les caractères non mappables seront remplacés par un ' ?'.</span><span class="sxs-lookup"><span data-stu-id="8e720-118">In this case, all unmappable characters will be replaced by a ‘?’.</span></span>|  
+|`pmBestFitMask`|<span data-ttu-id="8e720-119">Réservé.</span><span class="sxs-lookup"><span data-stu-id="8e720-119">Reserved.</span></span>|  
+|`pmThrowOnUnmappableCharUseAssem`|<span data-ttu-id="8e720-120">Réservé.</span><span class="sxs-lookup"><span data-stu-id="8e720-120">Reserved.</span></span>|  
+|`pmThrowOnUnmappableCharEnabled`|<span data-ttu-id="8e720-121">Lève une exception lorsque le marshaleur d’interopérabilité rencontre un caractère non mappable.</span><span class="sxs-lookup"><span data-stu-id="8e720-121">Throw an exception when the interop marshaler encounters an unmappable character.</span></span>|  
+|`pmThrowOnUnmappableCharDisabled`|<span data-ttu-id="8e720-122">Ne levez pas d’exception lorsque le marshaleur d’interopérabilité rencontre un caractère non mappable.</span><span class="sxs-lookup"><span data-stu-id="8e720-122">Do not throw an exception when the interop marshaler encounters an unmappable character.</span></span>|  
+|`pmThrowOnUnmappableCharMask`|<span data-ttu-id="8e720-123">Réservée</span><span class="sxs-lookup"><span data-stu-id="8e720-123">Reserved</span></span>|  
+|`pmSupportsLastError`|<span data-ttu-id="8e720-124">Permet à l’appelé d’appeler Win32 `SetLastError` fonction avant le retour de la méthode avec attributs.</span><span class="sxs-lookup"><span data-stu-id="8e720-124">Allow the callee to call the Win32 `SetLastError` function before returning from the attributed method.</span></span>|  
+|`pmCallConvMask`|<span data-ttu-id="8e720-125">Réservée</span><span class="sxs-lookup"><span data-stu-id="8e720-125">Reserved</span></span>|  
+|`pmCallConvWinapi`|<span data-ttu-id="8e720-126">Utilisez la convention d’appel de plateforme par défaut.</span><span class="sxs-lookup"><span data-stu-id="8e720-126">Use the default platform calling convention.</span></span> <span data-ttu-id="8e720-127">Par exemple, sur Windows, la valeur par défaut est `StdCall` et sur Windows CE .NET, il est `Cdecl`.</span><span class="sxs-lookup"><span data-stu-id="8e720-127">For example, on Windows the default is `StdCall` and on Windows CE .NET it is `Cdecl`.</span></span>|  
+|`pmCallConvCdecl`|<span data-ttu-id="8e720-128">Utilisez le `Cdecl` convention d’appel.</span><span class="sxs-lookup"><span data-stu-id="8e720-128">Use the `Cdecl` calling convention.</span></span> <span data-ttu-id="8e720-129">Dans ce cas, l’appelant nettoie la pile.</span><span class="sxs-lookup"><span data-stu-id="8e720-129">In this case, the caller cleans the stack.</span></span> <span data-ttu-id="8e720-130">Cela permet d’appeler des fonctions avec `varargs` (autrement dit, les fonctions qui acceptent un nombre variable de paramètres).</span><span class="sxs-lookup"><span data-stu-id="8e720-130">This enables calling functions with `varargs` (that is, functions that accept a variable number of parameters).</span></span>|  
+|`pmCallConvStdcall`|<span data-ttu-id="8e720-131">Utilisez le `StdCall` convention d’appel.</span><span class="sxs-lookup"><span data-stu-id="8e720-131">Use the `StdCall` calling convention.</span></span> <span data-ttu-id="8e720-132">Dans ce cas, l’appelé nettoie la pile.</span><span class="sxs-lookup"><span data-stu-id="8e720-132">In this case, the callee cleans the stack.</span></span> <span data-ttu-id="8e720-133">Il s’agit de la convention par défaut pour appeler des fonctions non managées dans un appel d’appel.</span><span class="sxs-lookup"><span data-stu-id="8e720-133">This is the default convention for calling unmanaged functions with platform invoke.</span></span>|  
+|`pmCallConvThiscall`|<span data-ttu-id="8e720-134">Utilisez le `ThisCall` convention d’appel.</span><span class="sxs-lookup"><span data-stu-id="8e720-134">Use the `ThisCall` calling convention.</span></span> <span data-ttu-id="8e720-135">Dans ce cas, le premier paramètre est le `this` pointeur et est stocké dans le Registre ECX.</span><span class="sxs-lookup"><span data-stu-id="8e720-135">In this case, the first parameter is the `this` pointer and is stored in register ECX.</span></span> <span data-ttu-id="8e720-136">Autres paramètres sont insérés dans la pile.</span><span class="sxs-lookup"><span data-stu-id="8e720-136">Other parameters are pushed on the stack.</span></span> <span data-ttu-id="8e720-137">Le `ThisCall` convention d’appel est utilisée pour appeler des méthodes sur des classes exportées à partir d’une DLL non managée.</span><span class="sxs-lookup"><span data-stu-id="8e720-137">The `ThisCall` calling convention is used to call methods on classes exported from an unmanaged DLL.</span></span>|  
+|`pmCallConvFastcall`|<span data-ttu-id="8e720-138">Réservé.</span><span class="sxs-lookup"><span data-stu-id="8e720-138">Reserved.</span></span>|  
+|`pmMaxValue`|<span data-ttu-id="8e720-139">Réservé.</span><span class="sxs-lookup"><span data-stu-id="8e720-139">Reserved.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="1df8d-140">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="1df8d-140">Requirements</span></span>  
- <span data-ttu-id="1df8d-141">**Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1df8d-141">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8e720-140">Spécifications</span><span class="sxs-lookup"><span data-stu-id="8e720-140">Requirements</span></span>  
+ <span data-ttu-id="8e720-141">**Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8e720-141">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1df8d-142">**En-tête :** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="1df8d-142">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="8e720-142">**En-tête :** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="8e720-142">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="1df8d-143">**Versions du .NET framework :**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1df8d-143">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="8e720-143">**Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8e720-143">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1df8d-144">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="1df8d-144">See Also</span></span>  
- [<span data-ttu-id="1df8d-145">Énumérations de métadonnées</span><span class="sxs-lookup"><span data-stu-id="1df8d-145">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="8e720-144">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="8e720-144">See Also</span></span>  
+ [<span data-ttu-id="8e720-145">Énumérations de métadonnées</span><span class="sxs-lookup"><span data-stu-id="8e720-145">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
