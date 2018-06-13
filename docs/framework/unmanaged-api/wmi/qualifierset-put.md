@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7ccb0aef0e998ffccd7526f9f0554bceb892001b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33462187"
 ---
 # <a name="qualifiersetput-function"></a>QualifierSet_Put (fonction)
 Écrit la valeur et le qualificateur nommé. Le nouveau qualificateur remplace la valeur précédente du même nom. Si le qualificateur n’existe pas, il est créé. 

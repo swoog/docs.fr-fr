@@ -9,6 +9,7 @@ ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34312207"
 ---
 # <a name="object-doesnt-support-this-action-visual-basic"></a>L’objet ne prend pas en charge cette action (Visual Basic)
 Vous avez référencé une méthode ou une propriété qui n’est pas prise en charge par cet objet.  
