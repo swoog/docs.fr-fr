@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744965"
 ---
 # <a name="ltassemblyidentitygt-element-for-ltruntimegt"></a><span data-ttu-id="962a1-102">&lt;assemblyIdentity&gt; , élément pour &lt;runtime&gt;</span><span class="sxs-lookup"><span data-stu-id="962a1-102">&lt;assemblyIdentity&gt; Element for &lt;runtime&gt;</span></span>
 <span data-ttu-id="962a1-103">Contient des informations d’identification sur l’assembly.</span><span class="sxs-lookup"><span data-stu-id="962a1-103">Contains identifying information about the assembly.</span></span>  

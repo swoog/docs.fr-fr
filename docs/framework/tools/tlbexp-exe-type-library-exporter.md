@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408816"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a><span data-ttu-id="fd6c5-102">Tlbexp.exe (exportateur de bibliothèques de types)</span><span class="sxs-lookup"><span data-stu-id="fd6c5-102">Tlbexp.exe (Type Library Exporter)</span></span>
 <span data-ttu-id="fd6c5-103">L'outil Type Library Exporter (Exportateur de bibliothèques de types) génère une bibliothèque de types décrivant les types définis dans un assembly du Common Language Runtime.</span><span class="sxs-lookup"><span data-stu-id="fd6c5-103">The Type Library Exporter generates a type library that describes the types defined in a common language runtime assembly.</span></span>  
