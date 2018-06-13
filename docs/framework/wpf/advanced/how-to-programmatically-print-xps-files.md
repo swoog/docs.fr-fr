@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547584"
 ---
 # <a name="how-to-programmatically-print-xps-files"></a>Comment : imprimer des fichiers XPS par programmation
 Vous pouvez utiliser une surcharge de la <xref:System.Printing.PrintQueue.AddJob%2A> méthode pour imprimer [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] fichiers sans ouvrir une <xref:System.Windows.Controls.PrintDialog> ou, en principe, n’importe quel [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] du tout.  

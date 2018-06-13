@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546593"
 ---
 # <a name="optimizing-performance-application-resources"></a>Optimisation des performances : ressources d'application
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] vous permet de partager des ressources d’application afin que vous pouvez prendre en charge une apparence cohérente ou un comportement sur les éléments de type semblables. Cette rubrique fournit quelques recommandations dans ce domaine qui peuvent vous aider à améliorent les performances de vos applications.  

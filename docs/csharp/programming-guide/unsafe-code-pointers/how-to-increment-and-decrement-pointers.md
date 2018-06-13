@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33324283"
 ---
 # <a name="how-to-increment-and-decrement-pointers-c-programming-guide"></a>Comment : incrémenter et décrémenter des pointeurs (Guide de programmation C#)
 Utilisez les opérateurs d’incrémentation et de décrémentation, `++` et `--`, pour changer l’emplacement du pointeur de [sizeof](../../../csharp/language-reference/keywords/sizeof.md) (`pointer-type`) pour un pointeur de type pointer-type*. Les expressions d’incrémentation et de décrémentation prennent la forme suivante :  

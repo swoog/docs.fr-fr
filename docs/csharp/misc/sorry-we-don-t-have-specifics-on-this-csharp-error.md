@@ -884,9 +884,10 @@ helpviewer_keywords:
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
 ms.openlocfilehash: 5e9c0aff2df5c46e707fa9f85506758327b58d80
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33314068"
 ---
 # <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a>Désolé, nous n&#39;t pas de détails sur cette erreur c#
 Nous sommes désolés, mais nous n'avons pas d'informations spécifiques sur cette erreur. Pour plus d'informations, vous pouvez rechercher le numéro d'erreur et le texte du message sur le web. Ou vous pouvez interroger d’autres développeurs au travers des forums suivants :  

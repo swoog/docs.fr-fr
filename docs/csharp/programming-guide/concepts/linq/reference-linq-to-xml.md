@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326782"
 ---
 # <a name="reference-linq-to-xml"></a>Référence (LINQ to XML)
 Cette rubrique contient des liens vers les rubriques de référence LINQ to XML.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549368"
 ---
 # <a name="table-overview"></a>Vue d'ensemble de Table
 <xref:System.Windows.Documents.Table> est un élément de niveau bloc qui prend en charge la présentation grille du contenu de document de flux. La flexibilité de cet élément est très utile, mais rend plus difficiles sa compréhension et son utilisation.  

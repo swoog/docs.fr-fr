@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33316320"
 ---
 # <a name="adding-elements-attributes-and-nodes-to-an-xml-tree-c"></a>Ajout d’éléments, d’attributs et de nœuds à une arborescence XML (C#)
 Vous pouvez ajouter du contenu (éléments, attributs, commentaires, instructions de traitement, texte et CData) à une arborescence XML existante.  

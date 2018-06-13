@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323886"
 ---
 # <a name="how-to-find-an-element-with-a-specific-child-element-c"></a>Guide pratique pour rechercher un élément avec un élément enfant spécifique (C#)
 Cette rubrique montre comment rechercher un élément particulier qui a un élément enfant avec une valeur spécifique.  

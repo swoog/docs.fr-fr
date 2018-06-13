@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333347"
 ---
 # <a name="xdocument-class-overview-c"></a>Vue d’ensemble de la classe XDocument (C#)
 Cette rubrique présente la classe <xref:System.Xml.Linq.XDocument>.  

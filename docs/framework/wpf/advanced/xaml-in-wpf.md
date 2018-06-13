@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548121"
 ---
 # <a name="xaml-in-wpf"></a>Intégration du format XAML au format WPF
 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] est un langage de balisage pour une application déclarative de programmation. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] implémente l’implémentation du processeur XAML et fournit la prise en charge du langage XAML. Le [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] types sont implémentés, tels qu’ils puissent fournir le stockage pour une représentation XAML du type requis. En général, vous pouvez créer la majorité de vos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] interface utilisateur des applications dans le balisage XAML.  

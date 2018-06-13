@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33320572"
 ---
 # <a name="how-to-sort-elements-on-multiple-keys-c"></a>Guide pratique pour trier des éléments sur plusieurs clés (C#)
 Cette rubrique montre comment effectuer un tri sur plusieurs clés.  

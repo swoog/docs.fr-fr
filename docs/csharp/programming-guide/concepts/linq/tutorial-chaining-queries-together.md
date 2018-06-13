@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323708"
 ---
 # <a name="tutorial-chaining-queries-together-c"></a>Didacticiel : chaînage de requêtes (C#)
 Ce didacticiel illustre le modèle de traitement lorsque vous chaînez des requêtes. Le chaînage de requêtes est un aspect essentiel de l'écriture des transformations fonctionnelles. Il est important de comprendre exactement comment fonctionnent les requêtes chaînées.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547252"
 ---
 # <a name="optimizing-performance-taking-advantage-of-hardware"></a>Optimisation des performances : tirer parti du matériel
 L’architecture interne de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] a deux pipelines de rendu matériel et logiciel. Cette rubrique fournit des informations sur ces pipelines de rendu pour vous aider à prendre des décisions concernant l’optimisation des performances de vos applications.  
