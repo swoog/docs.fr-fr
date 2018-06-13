@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562360"
 ---
 # <a name="xaml-security-considerations"></a>Considérations sur la sécurité XAML
 Cette rubrique décrit les meilleures pratiques pour la sécurité dans les applications lorsque vous utilisez XAML et l’API des Services XAML .NET Framework.  

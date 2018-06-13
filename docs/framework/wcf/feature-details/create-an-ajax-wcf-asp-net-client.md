@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490628"
 ---
 # <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a>Comment : créer un service WCF compatible AJAX et un client ASP.NET qui accède à ce service
 Cette rubrique montre comment utiliser Visual Studio 2008 pour créer un service compatible AJAX Windows Communication Foundation (WCF) et un client ASP.NET qui accède au service. Le code pour le service et pour le client est fourni dans la section Exemple après les étapes de création décrites dans la section Procédures.  

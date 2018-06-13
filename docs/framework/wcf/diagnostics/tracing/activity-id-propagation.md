@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33474296"
 ---
 # <a name="activity-id-propagation"></a>Propagation d'ID d'activité
 La propagation a lieu lorsque le suivi d'activité ServiceModel est activé (propagation ServiceModel) ou désactivé (propagation d'activité utilisateur-à-utilisateur).  

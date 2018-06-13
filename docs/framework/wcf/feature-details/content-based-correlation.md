@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494213"
 ---
 # <a name="content-based-correlation"></a>Corrélation basée sur le contenu
 Lorsque les services de workflow communiquent avec des clients et d'autres services, il existe souvent des données dans les messages échangés qui servent uniquement à lier un message à une instance particulière. La corrélation basée sur le contenu utilise ces données dans les messages, par exemple un numéro de client ou un ID de commande, pour router les messages vers l'instance de workflow appropriée. Cette rubrique explique comment utiliser la corrélation basée sur le contenu dans les workflows.  

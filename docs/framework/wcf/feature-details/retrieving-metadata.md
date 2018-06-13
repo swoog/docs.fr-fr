@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493600"
 ---
 # <a name="retrieving-metadata"></a>Récupération de métadonnées
 Le processus de récupération de métadonnées consiste à demander et à récupérer les métadonnées d'un point de terminaison de métadonnées, tel que WS-MetadataExchange (MEX) ou HTTP/GET.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562178"
 ---
 # <a name="how-to-use-system-colors-in-a-gradient"></a>Comment : utiliser des couleurs système dans un dégradé
 Pour utiliser une couleur système dans un dégradé, vous utilisez la  *\<SystemColor >* couleur et  *\<SystemColor >* ColorKey des propriétés statiques de la <xref:System.Windows.SystemColors> classe pour obtenir un référence à la couleur, où  *\<SystemColor >* est le nom de la couleur système souhaitée. Utilisez le  *\<SystemColor >* ColorKey propriétés lorsque vous souhaitez créer une référence dynamique qui met à jour automatiquement en tant que les modifications de thème du système. Sinon, utilisez le  *\<SystemColor >* propriétés de couleur.  
