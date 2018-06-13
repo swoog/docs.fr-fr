@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635904"
 ---
 # <a name="file39s-open-mode-wasn39t-set-to-a-valid-value"></a>Fichier&#39;s ouvrir n’était pas en mode&#39;t une valeur valide
 La valeur fournie pour le mode d’ouverture du fichier n’était pas valide. Le tableau suivant répertorie les valeurs valides pour l’énumération <xref:Microsoft.VisualBasic.OpenMode> :  

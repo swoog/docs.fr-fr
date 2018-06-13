@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635682"
 ---
 # <a name="connection-to-type-library-or-object-library-for-remote-process-has-been-lost"></a>La connexion à la bibliothèque de types ou d’objets pour le processus distant a été perdue
 Vous avez perdu votre connexion à la bibliothèque d’objets ou à la bibliothèque de types du processus distant.  

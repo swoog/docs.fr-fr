@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646401"
 ---
 # <a name="how-to-group-related-constant-values-together-visual-basic"></a>Comment : regrouper les valeurs de constante connexes (Visual Basic)
 Une énumération est le meilleur moyen de regrouper les constantes associées. Vous créez une énumération avec la `Enum` instruction dans la section des déclarations d’une classe ou un module. Pour plus d’informations, consultez [Comment : déclarer une énumération](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md).  

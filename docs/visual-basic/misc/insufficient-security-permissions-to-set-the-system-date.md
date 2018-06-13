@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33633697"
 ---
 # <a name="insufficient-security-permissions-to-set-the-system-date"></a>Autorisations de sécurité insuffisantes pour définir la date système
 Les autorisations de sécurité sont insuffisantes pour définir la date système.  

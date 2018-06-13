@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599188"
 ---
 # <a name="argument-value-39ltpathnamegt39-contains-characters-that-are-not-valid-in-a-path-name"></a>Valeur de l’argument &#39; &lt;chemin d’accès&gt; &#39; contient des caractères qui ne sont pas valides dans un nom de chemin d’accès
 Un nom de chemin contient un ou plusieurs caractères qui ne sont pas valides.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636498"
 ---
 # <a name="locale-id-39ltnamegt39-is-not-supported-on-this-system"></a>ID de paramètres régionaux &#39; &lt;nom&gt; &#39; n’est pas pris en charge sur ce système
 Vous essayez d’utiliser `VbStrConv`, mais votre système ne prend pas en charge les paramètres régionaux spécifiés.  
