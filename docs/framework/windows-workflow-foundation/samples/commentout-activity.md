@@ -1,29 +1,19 @@
 ---
-title: "Activité CommentOut"
-ms.custom: 
+title: Activité CommentOut
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 340204c3-f827-45fb-870e-55e2ac457ca5
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 900f6647eadb04a783fe0a3a143a71d9c766a48c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7847f4e1d77c2927a27be6b83f4016a22e4e3b32
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515194"
 ---
-# <a name="commentout-activity"></a><span data-ttu-id="10a67-102">Activité CommentOut</span><span class="sxs-lookup"><span data-stu-id="10a67-102">CommentOut Activity</span></span>
-<span data-ttu-id="10a67-103">Cet exemple montre comment écrire une activité personnalisée qui supprime d’autres activités du chemin d’exécution, en les transformant en fait en commentaire.</span><span class="sxs-lookup"><span data-stu-id="10a67-103">This sample demonstrates how to write a custom activity that removes other activities from the path of execution, effectively commenting them out.</span></span>  
+# <a name="commentout-activity"></a><span data-ttu-id="362af-102">Activité CommentOut</span><span class="sxs-lookup"><span data-stu-id="362af-102">CommentOut Activity</span></span>
+<span data-ttu-id="362af-103">Cet exemple montre comment écrire une activité personnalisée qui supprime d’autres activités du chemin d’exécution, en les transformant en fait en commentaire.</span><span class="sxs-lookup"><span data-stu-id="362af-103">This sample demonstrates how to write a custom activity that removes other activities from the path of execution, effectively commenting them out.</span></span>  
   
-## <a name="the-commentout-activity"></a><span data-ttu-id="10a67-104">Activité CommentOut</span><span class="sxs-lookup"><span data-stu-id="10a67-104">The CommentOut Activity</span></span>  
- <span data-ttu-id="10a67-105">Pour atteindre son objectif, l'activité CommentOut dérive de la classe de base <xref:System.Activities.CodeActivity> et implémente une méthode <xref:System.Activities.CodeActivity.Execute%2A> vide.</span><span class="sxs-lookup"><span data-stu-id="10a67-105">To achieve its goal, the CommentOut activity derives from the <xref:System.Activities.CodeActivity> base class and implements an empty <xref:System.Activities.CodeActivity.Execute%2A> method.</span></span>  
+## <a name="the-commentout-activity"></a><span data-ttu-id="362af-104">Activité CommentOut</span><span class="sxs-lookup"><span data-stu-id="362af-104">The CommentOut Activity</span></span>  
+ <span data-ttu-id="362af-105">Pour atteindre son objectif, l'activité CommentOut dérive de la classe de base <xref:System.Activities.CodeActivity> et implémente une méthode <xref:System.Activities.CodeActivity.Execute%2A> vide.</span><span class="sxs-lookup"><span data-stu-id="362af-105">To achieve its goal, the CommentOut activity derives from the <xref:System.Activities.CodeActivity> base class and implements an empty <xref:System.Activities.CodeActivity.Execute%2A> method.</span></span>  
   
 ```  
 protected override void Execute(CodeActivityContext context)  
@@ -31,7 +21,7 @@ protected override void Execute(CodeActivityContext context)
 }  
 ```  
   
- <span data-ttu-id="10a67-106">La classe est déclarée comme indiqué dans l'exemple suivant.</span><span class="sxs-lookup"><span data-stu-id="10a67-106">The class is declared as shown in the following example.</span></span>  
+ <span data-ttu-id="362af-106">La classe est déclarée comme indiqué dans l'exemple suivant.</span><span class="sxs-lookup"><span data-stu-id="362af-106">The class is declared as shown in the following example.</span></span>  
   
 ```  
 [Designer(typeof(CommentOutDesigner))]  
@@ -39,7 +29,7 @@ protected override void Execute(CodeActivityContext context)
 public sealed class CommentOut : CodeActivity  
 ```  
   
- <span data-ttu-id="10a67-107">L'attribut `Designer` spécifie la classe qui implémente l'interface graphique de l'activité au moment du design.</span><span class="sxs-lookup"><span data-stu-id="10a67-107">The `Designer` attribute specifies the class that implements the visual interface of the activity at design time.</span></span> <span data-ttu-id="10a67-108">L'attribut `ContentProperty` déclare que la propriété `"Body"` peut être ignorée dans la représentation XAML d'une instance de cette activité.</span><span class="sxs-lookup"><span data-stu-id="10a67-108">The `ContentProperty` attribute declares that the `"Body"` property can be skipped in the XAML representation of an instance of this activity.</span></span>  
+ <span data-ttu-id="362af-107">L'attribut `Designer` spécifie la classe qui implémente l'interface graphique de l'activité au moment du design.</span><span class="sxs-lookup"><span data-stu-id="362af-107">The `Designer` attribute specifies the class that implements the visual interface of the activity at design time.</span></span> <span data-ttu-id="362af-108">L'attribut `ContentProperty` déclare que la propriété `"Body"` peut être ignorée dans la représentation XAML d'une instance de cette activité.</span><span class="sxs-lookup"><span data-stu-id="362af-108">The `ContentProperty` attribute declares that the `"Body"` property can be skipped in the XAML representation of an instance of this activity.</span></span>  
   
 ```  
 <Border x:Uid="Border_1" BorderThickness ="1">  
@@ -51,23 +41,23 @@ public sealed class CommentOut : CodeActivity
 </Border>  
 ```  
   
- <span data-ttu-id="10a67-109">Dans la classe de concepteur, le XAML est utilisé pour créer une représentation visuelle personnalisée de l'activité.</span><span class="sxs-lookup"><span data-stu-id="10a67-109">In the designer class, XAML is used to create a custom visual representation of the activity.</span></span> <span data-ttu-id="10a67-110"><xref:System.Activities.Presentation.WorkflowItemPresenter> est une classe qui fournit l'éditeur visuel.</span><span class="sxs-lookup"><span data-stu-id="10a67-110"><xref:System.Activities.Presentation.WorkflowItemPresenter> is a class that provides the visual editor.</span></span>  
+ <span data-ttu-id="362af-109">Dans la classe de concepteur, le XAML est utilisé pour créer une représentation visuelle personnalisée de l'activité.</span><span class="sxs-lookup"><span data-stu-id="362af-109">In the designer class, XAML is used to create a custom visual representation of the activity.</span></span> <span data-ttu-id="362af-110"><xref:System.Activities.Presentation.WorkflowItemPresenter> est une classe qui fournit l'éditeur visuel.</span><span class="sxs-lookup"><span data-stu-id="362af-110"><xref:System.Activities.Presentation.WorkflowItemPresenter> is a class that provides the visual editor.</span></span>  
   
- <span data-ttu-id="10a67-111">Une seule activité peut être supprimée sur la surface de l'activité `CommentOut`.</span><span class="sxs-lookup"><span data-stu-id="10a67-111">A single activity can be dropped onto the `CommentOut` activity surface.</span></span> <span data-ttu-id="10a67-112">Si vous voulez ajouter plusieurs activités à cette surface, faites-y d'abord glisser une activité de séquence.</span><span class="sxs-lookup"><span data-stu-id="10a67-112">If you want to add multiple activities to this surface, drag a sequence activity here first.</span></span>  
+ <span data-ttu-id="362af-111">Une seule activité peut être supprimée sur la surface de l'activité `CommentOut`.</span><span class="sxs-lookup"><span data-stu-id="362af-111">A single activity can be dropped onto the `CommentOut` activity surface.</span></span> <span data-ttu-id="362af-112">Si vous voulez ajouter plusieurs activités à cette surface, faites-y d'abord glisser une activité de séquence.</span><span class="sxs-lookup"><span data-stu-id="362af-112">If you want to add multiple activities to this surface, drag a sequence activity here first.</span></span>  
   
-#### <a name="to-use-this-sample"></a><span data-ttu-id="10a67-113">Pour utiliser cet exemple</span><span class="sxs-lookup"><span data-stu-id="10a67-113">To use this sample</span></span>  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="362af-113">Pour utiliser cet exemple</span><span class="sxs-lookup"><span data-stu-id="362af-113">To use this sample</span></span>  
   
-1.  <span data-ttu-id="10a67-114">Ouvrez CommentOut.sln dans [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="10a67-114">Open CommentOut.sln in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span></span>  
+1.  <span data-ttu-id="362af-114">Ouvrez CommentOut.sln dans [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="362af-114">Open CommentOut.sln in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span></span>  
   
-2.  <span data-ttu-id="10a67-115">Compilez la solution en appuyant sur CTRL+MAJ+B.</span><span class="sxs-lookup"><span data-stu-id="10a67-115">Compile the solution by pressing CTRL+SHIFT+B.</span></span>  
+2.  <span data-ttu-id="362af-115">Compilez la solution en appuyant sur CTRL+MAJ+B.</span><span class="sxs-lookup"><span data-stu-id="362af-115">Compile the solution by pressing CTRL+SHIFT+B.</span></span>  
   
-3.  <span data-ttu-id="10a67-116">Démarrez l'exemple sans débogage en appuyant sur CTRL+F5.</span><span class="sxs-lookup"><span data-stu-id="10a67-116">Start the sample without debugging by pressing CTRL+F5.</span></span>  
+3.  <span data-ttu-id="362af-116">Démarrez l'exemple sans débogage en appuyant sur CTRL+F5.</span><span class="sxs-lookup"><span data-stu-id="362af-116">Start the sample without debugging by pressing CTRL+F5.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="10a67-117">Les exemples peuvent déjà être installés sur votre ordinateur.</span><span class="sxs-lookup"><span data-stu-id="10a67-117">The samples may already be installed on your machine.</span></span> <span data-ttu-id="10a67-118">Recherchez le répertoire (par défaut) suivant avant de continuer.</span><span class="sxs-lookup"><span data-stu-id="10a67-118">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="362af-117">Les exemples peuvent déjà être installés sur votre ordinateur.</span><span class="sxs-lookup"><span data-stu-id="362af-117">The samples may already be installed on your machine.</span></span> <span data-ttu-id="362af-118">Recherchez le répertoire (par défaut) suivant avant de continuer.</span><span class="sxs-lookup"><span data-stu-id="362af-118">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="10a67-119">Si ce répertoire n’existe pas, accédez à la page [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les exemples [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="10a67-119">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="10a67-120">Cet exemple se trouve dans le répertoire suivant.</span><span class="sxs-lookup"><span data-stu-id="10a67-120">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="362af-119">Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples.</span><span class="sxs-lookup"><span data-stu-id="362af-119">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="362af-120">Cet exemple se trouve dans le répertoire suivant.</span><span class="sxs-lookup"><span data-stu-id="362af-120">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\CommentOut`
