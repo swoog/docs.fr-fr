@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32741904"
 ---
 # <a name="how-to-load-assemblies-into-an-application-domain"></a>Guide pratique pour charger des assemblys dans un domaine d’application
 Il existe plusieurs façons de charger un assembly dans un domaine d’application. La procédure recommandée consiste à utiliser la méthode `static` (`Shared` en Visual Basic) <xref:System.Reflection.Assembly.Load%2A> de la classe <xref:System.Reflection.Assembly?displayProperty=nameWithType>. Vous pouvez aussi adopter les approches suivantes :  

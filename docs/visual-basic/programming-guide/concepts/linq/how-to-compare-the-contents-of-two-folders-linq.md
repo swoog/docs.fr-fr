@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643911"
 ---
 # <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a>Comment : comparer le contenu de deux dossiers (LINQ) (Visual Basic)
 Cet exemple montre trois façons de comparer deux listes de fichiers :  

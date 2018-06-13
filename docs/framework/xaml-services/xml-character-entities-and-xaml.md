@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33564746"
 ---
 # <a name="xml-character-entities-and-xaml"></a>Entités de caractères XML et XAML
 XAML utilise des entités de caractères définies en XML pour les caractères spéciaux. Cette rubrique décrit des entités de caractères spécifiques et les considérations générales pour d'autres concepts XML en XAML.  

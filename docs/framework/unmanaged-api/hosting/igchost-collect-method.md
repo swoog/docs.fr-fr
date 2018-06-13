@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bce005a677dcb74c176a6dddfb2726f6b1fd0e8a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436905"
 ---
 # <a name="igchostcollect-method"></a>IGCHost::Collect, méthode
 Force une collection pour la génération donnée, quel que soit l’état du garbage collection en cours.  

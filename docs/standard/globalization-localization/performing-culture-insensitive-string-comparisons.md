@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573605"
 ---
 # <a name="performing-culture-insensitive-string-comparisons"></a>Exécution de comparaisons de chaînes indépendantes de la culture
 Par défaut, la méthode <xref:System.String.Compare%2A?displayProperty=nameWithType> effectue des comparaisons dépendantes de la culture et qui respectent la casse. Cette méthode inclut également plusieurs surcharges qui fournissent un paramètre `culture` qui vous permet de spécifier la culture à utiliser et un paramètre `comparisonType` qui vous sert à spécifier les règles de comparaison à utiliser. L'appel de ces méthodes au lieu de la surcharge par défaut supprime toute ambiguïté à propos des règles utilisées dans un appel de méthode particulier et indique si une comparaison donnée est dépendante ou indépendante de la culture.  

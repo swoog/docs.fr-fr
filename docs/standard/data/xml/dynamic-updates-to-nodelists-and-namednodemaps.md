@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568964"
 ---
 # <a name="dynamic-updates-to-nodelists-and-namednodemaps"></a>Mises à jour dynamiques de NodeList et NamedNodeMap
 Dans la mesure où **XmlNodeList** et **XmlNamedNodeMap** contiennent une collection de nœuds, mais où le document XML est chargé en mémoire et est modifié, le World Wide Web Consortium (W3C) établit que ces objets contenant des collections de nœuds doivent être dynamiques. Dès lors, si le document sous-jacent change, les données figurant dans ces deux objets doivent changer également. C'est pourquoi, si vous avez un **XmlNodeList** contenant tous les éléments enfants d'un élément particulier (par exemple, l'élément X), vous ajoutez un élément supplémentaire, l'élément Q, au document sous l'élément X. Le **XmlNodeList** doit également avoir le nouvel élément Q ajouté à sa collection. L'inverse est vrai également. Si un nœud est ajouté à **XmlNodeList**, le document sous-jacent est mis à jour en conséquence.  

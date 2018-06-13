@@ -20,9 +20,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 59b4c832a4bbc915749aadf435b204e084828698
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33434344"
 ---
 # <a name="identityattributeblob-structure"></a>IDENTITY_ATTRIBUTE_BLOB, structure
 Contient des informations sur un attribut unique dans un assembly et se compose de trois `DWORD`s. Chaque `DWORD` est un offset dans une mémoire tampon de caractères produit par le `CurrentIntoBuffer` méthode de la [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md) interface  

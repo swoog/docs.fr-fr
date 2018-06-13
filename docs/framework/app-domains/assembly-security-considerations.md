@@ -22,6 +22,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743418"
 ---
 # <a name="assembly-security-considerations"></a>Aspects de la sécurité des assemblys
 <a name="top"></a>Lorsque vous générez un assembly, vous pouvez spécifier un jeu d’autorisations que l’assembly doit exécuter. L'octroi ou non de certaines autorisations à un assembly repose sur la preuve.  

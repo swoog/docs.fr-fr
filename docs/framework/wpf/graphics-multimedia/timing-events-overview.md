@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565485"
 ---
 # <a name="timing-events-overview"></a>Vue d'ensemble des événements de minutage
 Cette rubrique décrit comment utiliser les cinq événements de minutage disponibles sur <xref:System.Windows.Media.Animation.Timeline> et <xref:System.Windows.Media.Animation.Clock> objets.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644779"
 ---
 # <a name="sample-xml-file-typical-purchase-order-in-a-namespace"></a>Exemple de fichier XML : Commande fournisseur typique dans un espace de noms
 Le fichier XML suivant est utilisé dans différents exemples dans la documentation [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Il concerne une commande fournisseur typique. Le code XML se trouve dans un espace de noms.  
