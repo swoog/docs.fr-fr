@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809873"
 ---
 # <a name="configuration-editor-tool-svcconfigeditorexe"></a>Outil Éditeur de configuration (SvcConfigEditor.exe)
 L'Éditeur de configuration de service (SvcConfigEditor.exe) Windows Communication Fondation (WCF) permet aux administrateurs et aux développeurs de créer et de modifier les paramètres de configuration pour les services WCF à l'aide d'une interface utilisateur graphique (GUI). Grâce à cet outil, vous pouvez gérer les paramètres des liaisons, des comportements, des services et des diagnostics WCF sans modifier directement les fichiers de configuration XML.  

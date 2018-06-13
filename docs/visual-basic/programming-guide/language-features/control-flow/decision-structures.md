@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648195"
 ---
 # <a name="decision-structures-visual-basic"></a>Structures de décision (Visual Basic)
 Visual Basic vous permet de tester des conditions et d’effectuer diverses opérations selon les résultats de ce test. Vous pouvez tester une condition vraie ou fausse, plusieurs valeurs d’une expression ou plusieurs exceptions générées lorsque vous exécutez une série d’instructions.  

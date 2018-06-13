@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806206"
 ---
 # <a name="extending-hosting-using-servicehostfactory"></a>Extension de l'hébergement à l'aide de ServiceHostFactory
 La norme <xref:System.ServiceModel.ServiceHost> API d’hébergement des services Windows Communication Foundation (WCF) est un point d’extensibilité de l’architecture WCF. Les utilisateurs peuvent dériver leurs propres classes d'hôte de <xref:System.ServiceModel.ServiceHost>, habituellement pour substituer <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening> et utiliser <xref:System.ServiceModel.Description.ServiceDescription> afin d'ajouter des points de terminaison par défaut de façon impérative ou modifier des comportements, avant d'ouvrir le service.  

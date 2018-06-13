@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645341"
 ---
 # <a name="serializing-xml-trees-visual-basic"></a>Sérialisation d’arborescences XML (Visual Basic)
 Sérialiser une arborescence XML signifie générer du code XML à partir de l'arborescence XML. Vous pouvez sérialiser vers un fichier, vers une implémentation concrète de la classe <xref:System.IO.TextWriter> ou vers une implémentation concrète d'un objet <xref:System.Xml.XmlWriter>.  

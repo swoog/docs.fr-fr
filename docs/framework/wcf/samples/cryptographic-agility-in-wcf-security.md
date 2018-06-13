@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810211"
 ---
 # <a name="cryptographic-agility-in-wcf-security"></a>Agilité de chiffrement dans sécurité WCF
 Cet exemple montre comment spécifier dans un algorithme standard ou personnalisé pour fournir une implémentation de chiffrement agile dans un client de Windows Communication Foundation (WCF) et le service. Cet exemple est composé des projets suivants :  

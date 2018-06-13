@@ -14,6 +14,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806180"
 ---
 # <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>Comment : utiliser des certificats X.509 distincts pour les signatures et le chiffrement
 Cette rubrique montre comment configurer Windows Communication Foundation (WCF) pour utiliser différents certificats pour la signature et le cryptage sur le client et le service.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807523"
 ---
 # <a name="load-balancing"></a>Équilibrage de charge
 Un moyen d’augmenter la capacité des applications Windows Communication Foundation (WCF) est mise à l’échelle les en les déployant dans une batterie de serveurs à charge équilibrée. Les applications WCF peuvent être équilibrée à l’aide de techniques, y compris les équilibreurs de charge logicielle tels Windows Network Load Balancing d’équilibrage de charge standard, ainsi que des appareils d’équilibrage de la charge matérielle.  

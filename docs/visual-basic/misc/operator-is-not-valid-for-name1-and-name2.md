@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637541"
 ---
 # <a name="operator-is-not-valid-for-39ltname1gt39-and-39ltname2gt39"></a>Opérateur n’est pas valide pour &#39; &lt;nom1&gt; &#39; et &#39; &lt;name2&gt;&#39;
 Un opérateur est incorrect pour les types utilisés.  

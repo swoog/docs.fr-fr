@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33802975"
 ---
 # <a name="viewing-message-logs"></a>Consultation des journaux de messages
 Cette rubrique contient des instructions permettant d'afficher les journaux des messages.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804912"
 ---
 # <a name="ws-binding"></a>Liaison WS
 Cette section contient des exemples qui illustrent la liaison de Service Windows dans Windows Communication Foundation (WCF).  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803438"
 ---
 # <a name="client-interoperability"></a>Interopérabilité des clients
 Cette section contient des exemples qui illustrent l’interopérabilité entre Windows Communication Foundation (WCF) et d’autres technologies.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804636"
 ---
 # <a name="channel-model-overview"></a>Vue d'ensemble du modèle de canal
 La pile de canal de Windows Communication Foundation (WCF) est une pile de communication superposée avec un ou plusieurs canaux qui traitent les messages. Le canal de transport, qui figure tout en bas de la pile, est chargé d'adapter la pile de canaux au transport sous-jacent (par exemple, au transport TCP, HTTP, SMTP ainsi qu'à d'autres types de transports). Les canaux fournissent un modèle de programmation de bas niveau pour l'envoi et la réception des messages. Ce modèle de programmation s’appuie sur plusieurs interfaces et d’autres types appelés collectivement le modèle de canal WCF. Cette rubrique aborde les thèmes suivants : formes de canal, construction d'un écouteur de canal de base (côté service) et fabrication de canal (côté client).  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809516"
 ---
 # <a name="soap-and-http-endpoints"></a>Points de terminaison SOAP et HTTP
 Cet exemple montre comment implémenter un service RPC et l’exposer aux formats SOAP et le format « Plain Old XML » (POX) à l’aide du modèle de programmation Web WCF. Consultez le [Service HTTP de base](../../../../docs/framework/wcf/samples/basic-http-service.md) sample pour plus d’informations sur la liaison HTTP pour le service. Cet exemple se concentre sur les détails ayant trait à l’exposition du même service sur SOAP et HTTP au moyen de différentes liaisons.  
