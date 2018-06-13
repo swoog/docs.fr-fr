@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugEditAndContinueSnapshot::SetPEBytes, méthode"
-ms.custom: 
+title: ICorDebugEditAndContinueSnapshot::SetPEBytes, méthode
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugEditAndContinueSnapshot.SetPEBytes
 api_location:
@@ -23,20 +15,17 @@ helpviewer_keywords:
 ms.assetid: 7235c225-cb6e-49e9-a95b-09a646579841
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ad595fa4d6d2ecd3251fd0059d9419c334d867f9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 1408c3aa064cf6db641c2f14b61e4a93bca34b1d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33411504"
 ---
-# <a name="icordebugeditandcontinuesnapshotsetpebytes-method"></a><span data-ttu-id="f9a82-102">ICorDebugEditAndContinueSnapshot::SetPEBytes, méthode</span><span class="sxs-lookup"><span data-stu-id="f9a82-102">ICorDebugEditAndContinueSnapshot::SetPEBytes Method</span></span>
-<span data-ttu-id="f9a82-103">`SetPEBytes` est obsolète.</span><span class="sxs-lookup"><span data-stu-id="f9a82-103">`SetPEBytes` is obsolete.</span></span> <span data-ttu-id="f9a82-104">N’appelez pas cette méthode.</span><span class="sxs-lookup"><span data-stu-id="f9a82-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinuesnapshotsetpebytes-method"></a><span data-ttu-id="186a4-102">ICorDebugEditAndContinueSnapshot::SetPEBytes, méthode</span><span class="sxs-lookup"><span data-stu-id="186a4-102">ICorDebugEditAndContinueSnapshot::SetPEBytes Method</span></span>
+<span data-ttu-id="186a4-103">`SetPEBytes` est obsolète.</span><span class="sxs-lookup"><span data-stu-id="186a4-103">`SetPEBytes` is obsolete.</span></span> <span data-ttu-id="186a4-104">N’appelez pas cette méthode.</span><span class="sxs-lookup"><span data-stu-id="186a4-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f9a82-105">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="f9a82-105">See Also</span></span>  
- [<span data-ttu-id="f9a82-106">Interfaces de débogage</span><span class="sxs-lookup"><span data-stu-id="f9a82-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="186a4-105">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="186a4-105">See Also</span></span>  
+ [<span data-ttu-id="186a4-106">Interfaces de débogage</span><span class="sxs-lookup"><span data-stu-id="186a4-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
