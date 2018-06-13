@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766502"
 ---
 # <a name="string-canonical-functions"></a><span data-ttu-id="9b039-102">Fonctions de chaînes canoniques</span><span class="sxs-lookup"><span data-stu-id="9b039-102">String Canonical Functions</span></span>
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="9b039-103"> inclut des fonctions canoniques de chaîne.</span><span class="sxs-lookup"><span data-stu-id="9b039-103"> includes string canonical functions.</span></span>  

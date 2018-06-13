@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765514"
 ---
 # <a name="variables-entity-sql"></a><span data-ttu-id="d4f8e-102">Variables (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="d4f8e-102">Variables (Entity SQL)</span></span>
 ## <a name="variable"></a><span data-ttu-id="d4f8e-103">Variable</span><span class="sxs-lookup"><span data-stu-id="d4f8e-103">Variable</span></span>  

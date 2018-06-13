@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766226"
 ---
 # <a name="optimistic-concurrency"></a><span data-ttu-id="f96ef-102">Accès concurrentiel optimiste</span><span class="sxs-lookup"><span data-stu-id="f96ef-102">Optimistic Concurrency</span></span>
 <span data-ttu-id="f96ef-103">Dans un environnement multi-utilisateur, il existe deux modèles pour la mise à jour de données dans une base de données : l'accès simultané optimiste et l'accès simultané pessimiste.</span><span class="sxs-lookup"><span data-stu-id="f96ef-103">In a multiuser environment, there are two models for updating data in a database: optimistic concurrency and pessimistic concurrency.</span></span> <span data-ttu-id="f96ef-104">L'objet <xref:System.Data.DataSet> est conçu pour privilégier l'utilisation de l'accès simultané optimiste pour les activités longues, comme lors de la communication à distance de données ou de l'interaction avec ces dernières.</span><span class="sxs-lookup"><span data-stu-id="f96ef-104">The <xref:System.Data.DataSet> object is designed to encourage the use of optimistic concurrency for long-running activities, such as remoting data and interacting with data.</span></span>  

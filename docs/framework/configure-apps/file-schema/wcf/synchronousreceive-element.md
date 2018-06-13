@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753259"
 ---
 # <a name="ltsynchronousreceivegt-element"></a><span data-ttu-id="eb047-102">&lt;synchronousReceive&gt;, élément</span><span class="sxs-lookup"><span data-stu-id="eb047-102">&lt;synchronousReceive&gt; element</span></span>
 <span data-ttu-id="eb047-103">Cet élément de configuration est utilisé en vue de spécifier le comportement de réception des messages au moment de l'exécution dans une application cliente ou de service.</span><span class="sxs-lookup"><span data-stu-id="eb047-103">This configuration element is used to specify run-time behavior for receiving messages in either a service or client application.</span></span> <span data-ttu-id="eb047-104">Il n'a aucun attribut ou élément enfant.</span><span class="sxs-lookup"><span data-stu-id="eb047-104">It does not have any attributes or child elements.</span></span>  

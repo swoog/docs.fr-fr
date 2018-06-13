@@ -2,18 +2,19 @@
 title: '&lt;add&gt; de &lt;allowAccounts&gt;'
 ms.date: 03/30/2017
 ms.assetid: 763c7b1f-e7b0-4d99-a42c-4506fcb8da00
-ms.openlocfilehash: 20e1052a0517bb170cf796dd40d58c298185a958
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 2230b8d22a14c3df5eb3aa10872246febce015e9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349689"
 ---
-# <a name="ltaddgt-of-ltallowaccountsgt"></a><span data-ttu-id="489c7-102">&lt;add&gt; de &lt;allowAccounts&gt;</span><span class="sxs-lookup"><span data-stu-id="489c7-102">&lt;add&gt; of &lt;allowAccounts&gt;</span></span>
-<span data-ttu-id="489c7-103">Indique un compte d'utilisateur correspondant aux processus qui hébergent des services [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] et qui disposent d'un accès de connexion au service de partage.</span><span class="sxs-lookup"><span data-stu-id="489c7-103">Specifies a user account for processes that host [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] services, and are granted connection access to the sharing service.</span></span>  
+# <a name="ltaddgt-of-ltallowaccountsgt"></a><span data-ttu-id="3b0a9-102">&lt;add&gt; de &lt;allowAccounts&gt;</span><span class="sxs-lookup"><span data-stu-id="3b0a9-102">&lt;add&gt; of &lt;allowAccounts&gt;</span></span>
+<span data-ttu-id="3b0a9-103">Spécifie un compte d’utilisateur pour les processus qui hébergent des services WCF et qui disposent d’accès à la connexion au service de partage.</span><span class="sxs-lookup"><span data-stu-id="3b0a9-103">Specifies a user account for processes that host WCF services, and are granted connection access to the sharing service.</span></span>  
   
- <span data-ttu-id="489c7-104">\<system.serviceModel.activation></span><span class="sxs-lookup"><span data-stu-id="489c7-104">\<system.serviceModel.activation></span></span>  
+ <span data-ttu-id="3b0a9-104">\<system.serviceModel.activation></span><span class="sxs-lookup"><span data-stu-id="3b0a9-104">\<system.serviceModel.activation></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="489c7-105">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="489c7-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3b0a9-105">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="3b0a9-105">Syntax</span></span>  
   
 ```xml  
 <allowAccounts>  
@@ -21,26 +22,26 @@ ms.lasthandoff: 05/03/2018
 </allowAccounts>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="489c7-106">Attributs et éléments</span><span class="sxs-lookup"><span data-stu-id="489c7-106">Attributes and Elements</span></span>  
- <span data-ttu-id="489c7-107">Les sections suivantes décrivent des attributs, des éléments enfants et des éléments parents.</span><span class="sxs-lookup"><span data-stu-id="489c7-107">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="3b0a9-106">Attributs et éléments</span><span class="sxs-lookup"><span data-stu-id="3b0a9-106">Attributes and Elements</span></span>  
+ <span data-ttu-id="3b0a9-107">Les sections suivantes décrivent des attributs, des éléments enfants et des éléments parents.</span><span class="sxs-lookup"><span data-stu-id="3b0a9-107">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="489c7-108">Attributs</span><span class="sxs-lookup"><span data-stu-id="489c7-108">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="3b0a9-108">Attributs</span><span class="sxs-lookup"><span data-stu-id="3b0a9-108">Attributes</span></span>  
   
-|<span data-ttu-id="489c7-109">Attribut</span><span class="sxs-lookup"><span data-stu-id="489c7-109">Attribute</span></span>|<span data-ttu-id="489c7-110">Description</span><span class="sxs-lookup"><span data-stu-id="489c7-110">Description</span></span>|  
+|<span data-ttu-id="3b0a9-109">Attribut</span><span class="sxs-lookup"><span data-stu-id="3b0a9-109">Attribute</span></span>|<span data-ttu-id="3b0a9-110">Description</span><span class="sxs-lookup"><span data-stu-id="3b0a9-110">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="489c7-111">securityIdentifier</span><span class="sxs-lookup"><span data-stu-id="489c7-111">securityIdentifier</span></span>|<span data-ttu-id="489c7-112">Chaîne indiquant un identificateur unique utilisée pour identifier un compte d'utilisateur.</span><span class="sxs-lookup"><span data-stu-id="489c7-112">A string that specifies a unique identifier used to identify a user account.</span></span> <span data-ttu-id="489c7-113">Les valeurs par défaut sont LocalSystem, Administrateurs, NS, LS et IIS_USRS.</span><span class="sxs-lookup"><span data-stu-id="489c7-113">The default values are LocalSystem, Administrators, NS, LS, and IIS_USRS.</span></span>|  
+|<span data-ttu-id="3b0a9-111">securityIdentifier</span><span class="sxs-lookup"><span data-stu-id="3b0a9-111">securityIdentifier</span></span>|<span data-ttu-id="3b0a9-112">Chaîne indiquant un identificateur unique utilisée pour identifier un compte d'utilisateur.</span><span class="sxs-lookup"><span data-stu-id="3b0a9-112">A string that specifies a unique identifier used to identify a user account.</span></span> <span data-ttu-id="3b0a9-113">Les valeurs par défaut sont LocalSystem, Administrateurs, NS, LS et IIS_USRS.</span><span class="sxs-lookup"><span data-stu-id="3b0a9-113">The default values are LocalSystem, Administrators, NS, LS, and IIS_USRS.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="489c7-114">Éléments enfants</span><span class="sxs-lookup"><span data-stu-id="489c7-114">Child Elements</span></span>  
- <span data-ttu-id="489c7-115">Aucun.</span><span class="sxs-lookup"><span data-stu-id="489c7-115">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="3b0a9-114">Éléments enfants</span><span class="sxs-lookup"><span data-stu-id="3b0a9-114">Child Elements</span></span>  
+ <span data-ttu-id="3b0a9-115">Aucun.</span><span class="sxs-lookup"><span data-stu-id="3b0a9-115">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="489c7-116">Éléments parents</span><span class="sxs-lookup"><span data-stu-id="489c7-116">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="3b0a9-116">Éléments parents</span><span class="sxs-lookup"><span data-stu-id="3b0a9-116">Parent Elements</span></span>  
   
-|<span data-ttu-id="489c7-117">Élément</span><span class="sxs-lookup"><span data-stu-id="489c7-117">Element</span></span>|<span data-ttu-id="489c7-118">Description</span><span class="sxs-lookup"><span data-stu-id="489c7-118">Description</span></span>|  
+|<span data-ttu-id="3b0a9-117">Élément</span><span class="sxs-lookup"><span data-stu-id="3b0a9-117">Element</span></span>|<span data-ttu-id="3b0a9-118">Description</span><span class="sxs-lookup"><span data-stu-id="3b0a9-118">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="489c7-119">\<allowAccounts></span><span class="sxs-lookup"><span data-stu-id="489c7-119">\<allowAccounts></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/allowaccounts.md)|<span data-ttu-id="489c7-120">Collection d'éléments de configuration qui contiennent un attribut `securityIdentifier` permettant de spécifier les comptes d'utilisateurs correspondant aux processus qui hébergent des services [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] et qui disposent d'un accès de connexion au service de partage.</span><span class="sxs-lookup"><span data-stu-id="489c7-120">A collection of configuration elements that contain a `securityIdentifier` attribute to specify user accounts for processes that host [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] services, and are granted connection access to the sharing service.</span></span>|  
+|[<span data-ttu-id="3b0a9-119">\<allowAccounts></span><span class="sxs-lookup"><span data-stu-id="3b0a9-119">\<allowAccounts></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/allowaccounts.md)|<span data-ttu-id="3b0a9-120">Une collection d’éléments de configuration qui contiennent un `securityIdentifier` attribut pour spécifier les comptes d’utilisateur pour les processus qui hébergent des services WCF et qui disposent d’accès à la connexion au service de partage.</span><span class="sxs-lookup"><span data-stu-id="3b0a9-120">A collection of configuration elements that contain a `securityIdentifier` attribute to specify user accounts for processes that host WCF services, and are granted connection access to the sharing service.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="489c7-121">Exemple</span><span class="sxs-lookup"><span data-stu-id="489c7-121">Example</span></span>  
- <span data-ttu-id="489c7-122">L’exemple de configuration suivant ajoute à cette collection les cinq identificateurs par défaut correspondant aux comptes d’utilisateurs.</span><span class="sxs-lookup"><span data-stu-id="489c7-122">The following configuration example adds the five default identifiers for user accounts to this collection.</span></span>  
+## <a name="example"></a><span data-ttu-id="3b0a9-121">Exemple</span><span class="sxs-lookup"><span data-stu-id="3b0a9-121">Example</span></span>  
+ <span data-ttu-id="3b0a9-122">L’exemple de configuration suivant ajoute à cette collection les cinq identificateurs par défaut correspondant aux comptes d’utilisateurs.</span><span class="sxs-lookup"><span data-stu-id="3b0a9-122">The following configuration example adds the five default identifiers for user accounts to this collection.</span></span>  
   
 ```xml  
 <allowAccounts>  
@@ -57,7 +58,7 @@ ms.lasthandoff: 05/03/2018
 </allowAccounts>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="489c7-123">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="489c7-123">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="3b0a9-123">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="3b0a9-123">See Also</span></span>  
  <xref:System.ServiceModel.Activation.Configuration.NetTcpSection.AllowAccounts%2A>  
  <xref:System.ServiceModel.Activation.Configuration.NetPipeSection.AllowAccounts%2A>  
  <xref:System.ServiceModel.Activation.Configuration.SecurityIdentifierElementCollection>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753142"
 ---
 # <a name="lttransportgt-of-ltnetnamedpipebindinggt"></a><span data-ttu-id="64447-102">&lt;transport&gt; de &lt;netNamedPipeBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="64447-102">&lt;transport&gt; of &lt;netNamedPipeBinding&gt;</span></span>
 <span data-ttu-id="64447-103">Définit les paramètres de sécurité de transport pour un canal nommé.</span><span class="sxs-lookup"><span data-stu-id="64447-103">Defines the transport security settings for a named pipe.</span></span>  

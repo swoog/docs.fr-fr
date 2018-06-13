@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755758"
 ---
 # <a name="ltservicetokenresolvergt"></a><span data-ttu-id="f2719-102">&lt;serviceTokenResolver&gt;</span><span class="sxs-lookup"><span data-stu-id="f2719-102">&lt;serviceTokenResolver&gt;</span></span>
 <span data-ttu-id="f2719-103">Inscrit le résolveur de jeton de service qui est utilisé par les gestionnaires de la collection du Gestionnaire de jetons.</span><span class="sxs-lookup"><span data-stu-id="f2719-103">Registers the service token resolver that is used by handlers in the token handler collection.</span></span> <span data-ttu-id="f2719-104">Le programme de résolution de jeton de service permet de résoudre le jeton de chiffrement sur les jetons et les messages entrant.</span><span class="sxs-lookup"><span data-stu-id="f2719-104">The service token resolver is used to resolve the encryption token on incoming tokens and messages.</span></span>  
