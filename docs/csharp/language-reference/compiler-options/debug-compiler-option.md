@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218843"
 ---
 # <a name="-debug-c-compiler-options"></a><span data-ttu-id="e765a-102">-debug (Options du compilateur C#)</span><span class="sxs-lookup"><span data-stu-id="e765a-102">-debug (C# Compiler Options)</span></span>
 <span data-ttu-id="e765a-103">L’option **-debug** fait en sorte que le compilateur génère des informations de débogage et les place dans les fichiers de sortie.</span><span class="sxs-lookup"><span data-stu-id="e765a-103">The **-debug** option causes the compiler to generate debugging information and place it in the output file or files.</span></span>  

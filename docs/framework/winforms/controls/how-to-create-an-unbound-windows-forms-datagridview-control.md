@@ -1,14 +1,6 @@
 ---
 title: 'Comment : créer un contrôle DataGridView Windows Forms indépendant'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,36 +9,31 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], displaying data without binding to a data source
 - data [Windows Forms], unbound
 ms.assetid: b5d4b47d-9a28-4d88-9dba-0a3c90fba71d
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ee05ab225fe8bb4417fe1581b801106b60896f5b
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 6b297b95ee97262ab3ad2d24c539f88bde066099
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531064"
 ---
-# <a name="how-to-create-an-unbound-windows-forms-datagridview-control"></a><span data-ttu-id="b6a8d-102">Comment : créer un contrôle DataGridView Windows Forms indépendant</span><span class="sxs-lookup"><span data-stu-id="b6a8d-102">How to: Create an Unbound Windows Forms DataGridView Control</span></span>
-<span data-ttu-id="b6a8d-103">L'exemple de code suivant montre comment remplir un contrôle <xref:System.Windows.Forms.DataGridView> par programmation sans le lier à une source de données.</span><span class="sxs-lookup"><span data-stu-id="b6a8d-103">The following code example demonstrates how to populate a <xref:System.Windows.Forms.DataGridView> control programmatically without binding it to a data source.</span></span> <span data-ttu-id="b6a8d-104">Cela est utile quand vous souhaitez afficher une petite quantité de données sous forme de tableau.</span><span class="sxs-lookup"><span data-stu-id="b6a8d-104">This is useful when you have a small amount of data that you want to display in a table format.</span></span>  
+# <a name="how-to-create-an-unbound-windows-forms-datagridview-control"></a><span data-ttu-id="f14b3-102">Comment : créer un contrôle DataGridView Windows Forms indépendant</span><span class="sxs-lookup"><span data-stu-id="f14b3-102">How to: Create an Unbound Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="f14b3-103">L'exemple de code suivant montre comment remplir un contrôle <xref:System.Windows.Forms.DataGridView> par programmation sans le lier à une source de données.</span><span class="sxs-lookup"><span data-stu-id="f14b3-103">The following code example demonstrates how to populate a <xref:System.Windows.Forms.DataGridView> control programmatically without binding it to a data source.</span></span> <span data-ttu-id="f14b3-104">Cela est utile quand vous souhaitez afficher une petite quantité de données sous forme de tableau.</span><span class="sxs-lookup"><span data-stu-id="f14b3-104">This is useful when you have a small amount of data that you want to display in a table format.</span></span>  
   
- <span data-ttu-id="b6a8d-105">Pour obtenir une explication complète de cet exemple de code, consultez [Procédure pas à pas : création d’un contrôle DataGridView Windows Forms non lié](../../../../docs/framework/winforms/controls/walkthrough-creating-an-unbound-windows-forms-datagridview-control.md).</span><span class="sxs-lookup"><span data-stu-id="b6a8d-105">For a complete explanation of this code example, see [Walkthrough: Creating an Unbound Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/walkthrough-creating-an-unbound-windows-forms-datagridview-control.md).</span></span>  
+ <span data-ttu-id="f14b3-105">Pour obtenir une explication complète de cet exemple de code, consultez [Procédure pas à pas : création d’un contrôle DataGridView Windows Forms non lié](../../../../docs/framework/winforms/controls/walkthrough-creating-an-unbound-windows-forms-datagridview-control.md).</span><span class="sxs-lookup"><span data-stu-id="f14b3-105">For a complete explanation of this code example, see [Walkthrough: Creating an Unbound Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/walkthrough-creating-an-unbound-windows-forms-datagridview-control.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="b6a8d-106">Exemple</span><span class="sxs-lookup"><span data-stu-id="b6a8d-106">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="f14b3-106">Exemple</span><span class="sxs-lookup"><span data-stu-id="f14b3-106">Example</span></span>  
  [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#00](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#00)]
  [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#00](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#00)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="b6a8d-107">Compilation du code</span><span class="sxs-lookup"><span data-stu-id="b6a8d-107">Compiling the Code</span></span>  
- <span data-ttu-id="b6a8d-108">Cet exemple nécessite :</span><span class="sxs-lookup"><span data-stu-id="b6a8d-108">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="f14b3-107">Compilation du code</span><span class="sxs-lookup"><span data-stu-id="f14b3-107">Compiling the Code</span></span>  
+ <span data-ttu-id="f14b3-108">Cet exemple nécessite :</span><span class="sxs-lookup"><span data-stu-id="f14b3-108">This example requires:</span></span>  
   
--   <span data-ttu-id="b6a8d-109">Références aux assemblys System, System.Drawing et System.Windows.Forms.</span><span class="sxs-lookup"><span data-stu-id="b6a8d-109">References to the System, System.Drawing, and System.Windows.Forms assemblies.</span></span>  
+-   <span data-ttu-id="f14b3-109">Références aux assemblys System, System.Drawing et System.Windows.Forms.</span><span class="sxs-lookup"><span data-stu-id="f14b3-109">References to the System, System.Drawing, and System.Windows.Forms assemblies.</span></span>  
   
- <span data-ttu-id="b6a8d-110">Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span><span class="sxs-lookup"><span data-stu-id="b6a8d-110">For information about building this example from the command line for visual Basic or Visual C#, see [Building from the Command Line](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="b6a8d-111">Vous pouvez également générer cet exemple dans Visual Studio en collant le code dans un nouveau projet.</span><span class="sxs-lookup"><span data-stu-id="b6a8d-111">You can also build this example in Visual Studio by pasting the code into a new project.</span></span>  <span data-ttu-id="b6a8d-112">Consultez également la page [Comment : compiler et exécuter un exemple complet de code Windows Forms à l’aide de Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="b6a8d-112">Also see [How to: Compile and Run a Complete Windows Forms Code Example Using Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span></span>  
+ <span data-ttu-id="f14b3-110">Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span><span class="sxs-lookup"><span data-stu-id="f14b3-110">For information about building this example from the command line for visual Basic or Visual C#, see [Building from the Command Line](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="f14b3-111">Vous pouvez également générer cet exemple dans Visual Studio en collant le code dans un nouveau projet.</span><span class="sxs-lookup"><span data-stu-id="f14b3-111">You can also build this example in Visual Studio by pasting the code into a new project.</span></span>  <span data-ttu-id="f14b3-112">Consultez également la page [Comment : compiler et exécuter un exemple complet de code Windows Forms à l’aide de Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="f14b3-112">Also see [How to: Compile and Run a Complete Windows Forms Code Example Using Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b6a8d-113">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="b6a8d-113">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="f14b3-113">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="f14b3-113">See Also</span></span>  
  <xref:System.Windows.Forms.DataGridView>  
- [<span data-ttu-id="b6a8d-114">Procédure pas à pas : création d’un contrôle DataGridView Windows Forms non lié</span><span class="sxs-lookup"><span data-stu-id="b6a8d-114">Walkthrough: Creating an Unbound Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)  
- [<span data-ttu-id="b6a8d-115">Affichage des données dans le contrôle DataGridView Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b6a8d-115">Displaying Data in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)  
- [<span data-ttu-id="b6a8d-116">Modes d’affichage des données dans le contrôle DataGridView Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b6a8d-116">Data Display Modes in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/data-display-modes-in-the-windows-forms-datagridview-control.md)
+ [<span data-ttu-id="f14b3-114">Procédure pas à pas : création d’un contrôle DataGridView Windows Forms non lié</span><span class="sxs-lookup"><span data-stu-id="f14b3-114">Walkthrough: Creating an Unbound Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)  
+ [<span data-ttu-id="f14b3-115">Affichage des données dans le contrôle DataGridView Windows Forms</span><span class="sxs-lookup"><span data-stu-id="f14b3-115">Displaying Data in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)  
+ [<span data-ttu-id="f14b3-116">Modes d’affichage des données dans le contrôle DataGridView Windows Forms</span><span class="sxs-lookup"><span data-stu-id="f14b3-116">Data Display Modes in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/data-display-modes-in-the-windows-forms-datagridview-control.md)
