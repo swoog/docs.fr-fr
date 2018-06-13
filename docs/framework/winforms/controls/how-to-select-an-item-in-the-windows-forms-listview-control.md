@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532819"
 ---
 # <a name="how-to-select-an-item-in-the-windows-forms-listview-control"></a>Comment : sélectionner un élément dans le contrôle ListView Windows Forms
 Cet exemple montre comment sélectionner par programme un élément dans un Windows Forms <xref:System.Windows.Forms.ListView> contrôle. Sélection d’un élément par programme ne change pas automatiquement le focus vers le <xref:System.Windows.Forms.ListView> contrôle. Pour cette raison, vous serez généralement également définir l’élément comme ayant le focus lors de la sélection d’un élément.  

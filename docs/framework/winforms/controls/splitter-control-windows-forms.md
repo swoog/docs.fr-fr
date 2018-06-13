@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534636"
 ---
 # <a name="splitter-control-windows-forms"></a>Splitter, contrôle (Windows Forms)
 Windows Forms `Splitter` permettent de redimensionner des contrôles ancrés au moment de l’exécution. Le `Splitter` contrôle est souvent utilisé dans les formulaires dont les contrôles qui ont différentes longueurs de données à présent, comme l’Explorateur Windows, dont les volets de données contiennent des informations de longueur différente à différents moments.  

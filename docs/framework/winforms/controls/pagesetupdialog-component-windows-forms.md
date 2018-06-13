@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536850"
 ---
 # <a name="pagesetupdialog-component-windows-forms"></a>PageSetupDialog, composant (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.PageSetupDialog> composant est une boîte de dialogue préconfigurée utilisée pour définir des informations sur la page pour l’impression dans les applications Windows. Utilisez-la dans votre application Windows comme une solution simple pour les utilisateurs pour définir les préférences de la page que de configurer votre propre boîte de dialogue. Vous pouvez activer les utilisateurs définir la bordure et les marges, en-têtes et pieds de page et orientation portrait ou paysage. En vous appuyant sur des boîtes de dialogue Windows standard, vous pouvez créer des applications dont la fonction de base est immédiatement familière aux utilisateurs.  

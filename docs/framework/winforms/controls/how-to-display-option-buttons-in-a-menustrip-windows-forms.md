@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538026"
 ---
 # <a name="how-to-display-option-buttons-in-a-menustrip-windows-forms"></a>Comment : afficher des cases d'option dans un MenuStrip (Windows Forms)
 Cases d’option, également appelé cases sont similaires aux cases à cocher, sauf que les utilisateurs peuvent sélectionner qu’un seul à la fois. Bien que, par défaut le <xref:System.Windows.Forms.ToolStripMenuItem> classe ne fournit pas de comportement de case d’option, la classe fournit un comportement de case à cocher que vous pouvez personnaliser pour implémenter un comportement de case d’option pour les éléments de menu dans un <xref:System.Windows.Forms.MenuStrip> contrôle.  

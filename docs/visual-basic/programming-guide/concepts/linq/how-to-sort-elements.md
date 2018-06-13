@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642088"
 ---
 # <a name="how-to-sort-elements-visual-basic"></a>Comment : trier des éléments (Visual Basic)
 Cet exemple montre comment écrire une requête qui trie ses résultats.  

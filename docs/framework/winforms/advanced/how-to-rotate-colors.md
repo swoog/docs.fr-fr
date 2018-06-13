@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522393"
 ---
 # <a name="how-to-rotate-colors"></a>Comment : faire pivoter des couleurs
 Rotation dans un espace de couleurs à quatre dimensions est difficile de visualiser. Nous pouvons facilitent la visualisation, choisissez de conserver un des composants de couleur fixe. Supposons que nous acceptons de conserver le composant alpha est fixé à 1 (entièrement opaque). Vous pouvez ensuite visualiser un espace à trois dimensions de couleur des axes de rouges, verts et bleus, comme indiqué dans l’illustration suivante.  

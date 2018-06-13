@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534399"
 ---
 # <a name="picturebox-control-overview-windows-forms"></a>Vue d'ensemble du contrôle PictureBox (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.PictureBox> contrôle est utilisé pour afficher des graphiques au format bitmap, GIF, JPEG, métafichier ou icône.  

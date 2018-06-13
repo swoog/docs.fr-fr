@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761920"
 ---
 # <a name="entity-sql-language-reference"></a>Guide de référence du langage Entity SQL
 Cette section fournit une documentation détaillée sur [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], [!INCLUDE[esql](../../../../../../includes/esql-md.md)] et sur les langages de modélisation et de mappage utilisés par [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)].  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534539"
 ---
 # <a name="toolstripstatuslabel-control-overview"></a>Vue d'ensemble du contrôle ToolStripStatusLabel
 Le <xref:System.Windows.Forms.ToolStripStatusLabel> est une étiquette pour un <xref:System.Windows.Forms.StatusStrip>. Comme le <xref:System.Windows.Forms.Label> ou <xref:System.Windows.Forms.ToolStripLabel>, le <xref:System.Windows.Forms.ToolStripStatusLabel> fournit une zone d’affichage non interactive pour le texte, images ou les deux. Le <xref:System.Windows.Forms.ToolStripStatusLabel> est hébergé par un <xref:System.Windows.Forms.StatusStrip>.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529036"
 ---
 # <a name="datagridview-control-scenarios-windows-forms"></a>Scénarios du contrôle DataGridView (Windows Forms)
 Avec la <xref:System.Windows.Forms.DataGridView> (contrôle), vous pouvez afficher des données tabulaires provenant de diverses sources de données. Pour les utilisations simples, vous pouvez remplir manuellement un <xref:System.Windows.Forms.DataGridView> et manipuler les données directement via le contrôle. En général, toutefois, stockez vos données dans une source de données externe et la lier le contrôle à par le biais d’un <xref:System.Windows.Forms.BindingSource> composant.  

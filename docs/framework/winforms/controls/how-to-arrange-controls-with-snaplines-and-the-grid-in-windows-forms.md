@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528365"
 ---
 # <a name="how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms"></a>Comment : organiser les contrôles à l'aide des lignes d'alignement (SnapLines) et de la grille dans les Windows Forms
 À l’aide des fonctionnalités de disposition de Visual Studio, vous pouvez déterminer précisément où les contrôles sont placés sur un formulaire. Les contrôles ajoutés à un formulaire ou déplacés sur un formulaire peuvent être alignés automatiquement pour les lignes et colonnes de grille du Concepteur Windows Forms, ou vous pouvez aligner des contrôles à l’aide de la fonctionnalité des lignes d’alignement.  

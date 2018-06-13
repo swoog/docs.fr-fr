@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516748"
 ---
 # <a name="non-persisted-workflow-instances"></a>Instances de workflow non persistantes
 Lorsqu'une nouvelle instance de workflow est créée, qui rend son état persistant dans le <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, l'hôte de service crée une entrée pour ce service dans le magasin d'instances. Par la suite, lorsque l'instance de workflow est rendue persistante pour la première fois, le <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> stocke l'état de l'instance actuelle. Si le workflow est hébergé dans le service d'activation des processus Windows, les données de déploiement du service sont aussi écrites dans le magasin d'instances lorsque l'instance est rendue persistante pour la première fois.  

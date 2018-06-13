@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365460"
 ---
 # <a name="object-materialization-wcf-data-services"></a>Matérialisation d'objet (services de données WCF)
 Lorsque vous utilisez la **ajouter une référence de Service** boîte de dialogue pour consommer un [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] de flux dans une application cliente .NET Framework, les classes de données équivalentes sont générées pour chaque type d’entité dans le modèle de données exposé par le flux. Pour plus d’informations, consultez [génération de la bibliothèque de Client de Service de données](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md). Les données d'entité retournées par une requête sont matérialisées dans une instance de l'une de ces classes de service de données client générées. Pour plus d’informations sur les options de fusion et résolution d’identité pour les objets suivis, consultez [gérer le contexte de Service de données](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md).  

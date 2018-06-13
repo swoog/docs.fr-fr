@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317981"
 ---
 # <a name="how-to-determine-if-a-file-is-an-assembly-c"></a>Guide pratique pour déterminer si un fichier est un assembly (C#)
 Un fichier est un assembly si et seulement s’il est managé et s’il contient une entrée d’assembly dans ses métadonnées. Pour plus d’informations sur les assemblys et les métadonnées, consultez la rubrique [Manifeste d’assembly](../../../../../docs/framework/app-domains/assembly-manifest.md).  

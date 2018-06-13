@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 92ae4c2f4a6fb126f5d86cee216e5b2bb6170e66
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436109"
 ---
 # <a name="iclrstrongname-interface"></a>ICLRStrongName, interface
 Fournit des fonctions statiques globales de base pour la signature des assemblys avec des noms forts. Tous les `ICLRStrongName` méthodes retournent des valeurs HRESULT COM standard.  
