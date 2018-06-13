@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395159"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>Exécution côte à côte dans .NET Framework
 L'exécution côte à côte désigne la possibilité d'exécuter plusieurs versions d'une application ou d'un composant sur le même ordinateur. Vous pouvez avoir plusieurs versions du Common Language Runtime et plusieurs versions d'applications et de composants qui utilisent une version du runtime sur le même ordinateur simultanément.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552143"
 ---
 # <a name="how-to-position-the-child-elements-of-a-grid"></a>Comment : positionner les éléments enfants d'une grille
 Cet exemple montre comment utiliser la méthode get et définir des méthodes qui sont définis dans <xref:System.Windows.Controls.Grid> pour positionner des éléments enfants.  

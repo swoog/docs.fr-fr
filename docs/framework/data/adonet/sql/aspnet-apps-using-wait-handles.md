@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356461"
 ---
 # <a name="aspnet-applications-using-wait-handles"></a>Applications ASP.NET utilisant les handles d'attente
 Les modèles de rappel et d'interrogation pour le traitement d'opérations asynchrones sont utiles lorsque votre application ne traite qu'une opération asynchrone à la fois. Les modèles d'attente offrent un traitement plus souple des multiples opérations asynchrones. Il existe deux modèles d'attente nommés pour les méthodes <xref:System.Threading.WaitHandle> utilisées pour leur implémentation : le modèle d'attente (un) et le modèle d'attente (tout).  

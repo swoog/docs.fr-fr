@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539917"
 ---
 # <a name="walkthrough-implementing-virtual-mode-in-the-windows-forms-datagridview-control"></a>Procédure pas à pas : implémentation du mode virtuel dans le contrôle DataGridView Windows Forms
 Lorsque vous souhaitez afficher de très grandes quantités de données tabulaires dans un <xref:System.Windows.Forms.DataGridView> (contrôle), vous pouvez définir le <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> propriété `true` et gérer explicitement l’interaction du contrôle avec son magasin de données. Cela vous permet d’optimiser les performances du contrôle dans cette situation.  

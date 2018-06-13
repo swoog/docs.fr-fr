@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393615"
 ---
 # <a name="invalidcercall-mda"></a>Assistant Débogage managé invalidCERCall
 L’Assistant Débogage managé `invalidCERCall` est activé en cas d’appel, dans le graphique de la région d’exécution limitée, à une méthode qui ne possède aucun contrat de fiabilité ni contrat excessivement faible. Un contrat faible est un contrat qui déclare que la pire altération d’état envisageable dépasse la portée de l’instance passée à l’appel. En d’autres termes, l’<xref:System.AppDomain> ou l’état du processus peut être endommagé ou il ne sera pas toujours possible de calculer son résultat de façon déterministe lors de son appel dans une région d’exécution limitée.  

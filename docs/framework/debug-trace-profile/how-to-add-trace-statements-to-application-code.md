@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391366"
 ---
 # <a name="how-to-add-trace-statements-to-application-code"></a>Comment : ajouter des instructions de traçage dans le code d'une application
 Les méthodes utilisées le plus souvent pour le suivi sont les méthodes permettant d’écrire la sortie dans des écouteurs : **Write**, **WriteIf**, **WriteLine**, **WriteLineIf**, **Assert** et **Fail**. Ces méthodes peuvent être réparties en deux catégories : **Write**, **WriteLine** et **Fail** émettent toutes la sortie de manière inconditionnelle, tandis que **WriteIf**, **WriteLineIf** et **Assert** testent une condition booléenne, et écrivent ou n’écrivent pas en fonction de la valeur de la condition. **WriteIf** et **WriteLineIf** émettent une sortie si la condition est `true` et **Assert** émet une sortie si la condition est `false`.  

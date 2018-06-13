@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fe5e1267b619d5900ed9af55dd6079a8f38d6550
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406898"
 ---
 # <a name="cordebugblockingreason-enumeration"></a>CorDebugBlockingReason, énumération
 Spécifie les raisons pour lesquelles un thread peut être bloqué sur un objet donné.  

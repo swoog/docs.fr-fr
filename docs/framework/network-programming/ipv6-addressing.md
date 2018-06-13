@@ -34,6 +34,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394834"
 ---
 # <a name="ipv6-addressing"></a>Adressage IPv6
 Dans le protocole IPv6, les adresses ont une longueur de 128 bits. Une telle taille d’espace d’adressage permet de subdiviser les adresses disponibles en une hiérarchie de domaines de routage qui reflète la topologie d’Internet. Elle permet également de mapper les adresses des cartes réseau (ou des interfaces) qui connectent les appareils au réseau. IPv6 contient une fonctionnalité inhérente permettant de résoudre les adresses au niveau le plus bas, c’est-à-dire au niveau de l’interface réseau, et contient également des fonctionnalités de configuration automatique.  

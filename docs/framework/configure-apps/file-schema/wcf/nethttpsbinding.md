@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751306"
 ---
 # <a name="ltnethttpsbindinggt"></a>&lt;netHttpsBinding&gt;
 Représente une liaison qu’un service Windows Communication Foundation (WCF) peut utiliser pour configurer et exposer des points de terminaison qui sont en mesure de communiquer via HTTPS. Lorsqu'elle est utilisée avec un contrat duplex, WebSocket est utilisé, sinon HTTPS est utilisé.  

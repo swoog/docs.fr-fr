@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751348"
 ---
 # <a name="ltmsmqtransportgt"></a>&lt;msmqTransport&gt;
 Déclenche le transfert de messages par un canal via le transport MSMQ lorsque celui-ci fait partie d’une liaison personnalisée.  

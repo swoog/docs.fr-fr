@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754273"
 ---
 # <a name="ltremovegt-element-for-ltlistenersgt-for-ltsourcegt"></a>&lt;supprimer&gt; élément &lt;écouteurs&gt; pour &lt;source&gt;
 Supprime un écouteur de la collection `Listeners` pour une source de trace.  

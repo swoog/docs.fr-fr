@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758514"
 ---
 # <a name="adonet-datasets"></a>Datasets ADO.NET
 L'objet <xref:System.Data.DataSet> est l'élément central pour la prise en charge de scénarios impliquant des données distribuées et déconnectées avec [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. Le **DataSet** est une représentation résidente en mémoire de données qui fournit un modèle de programmation relationnel cohérent, quelle que soit la source de données. Il peut être utilisé avec plusieurs sources de données différentes, utilisé avec des données XML ou utilisé pour gérer des données locales de l'application. Le **DataSet** représente un jeu complet de données, y compris les tables associées, des contraintes et des relations entre les tables. L’illustration suivante montre le **DataSet** modèle objet.  
