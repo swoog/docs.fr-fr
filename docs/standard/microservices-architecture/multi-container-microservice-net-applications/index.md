@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571954"
 ---
 # <a name="designing-and-developing-multi-container-and-microservice-based-net-applications"></a><span data-ttu-id="eeec6-103">Conception et développement d’applications .NET à plusieurs conteneurs et basées sur des microservices</span><span class="sxs-lookup"><span data-stu-id="eeec6-103">Designing and Developing Multi-Container and Microservice-Based .NET Applications</span></span>
 
