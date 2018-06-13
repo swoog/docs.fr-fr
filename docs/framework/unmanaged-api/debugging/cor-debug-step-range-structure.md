@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d5809221f2f31bc725c6a62fa5f8f91822f1c157
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33407227"
 ---
 # <a name="cordebugsteprange-structure"></a>COR_DEBUG_STEP_RANGE, structure
 Contient les informations de décalage pour une plage de code.  

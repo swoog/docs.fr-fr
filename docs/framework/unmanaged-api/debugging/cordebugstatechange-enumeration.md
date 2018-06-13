@@ -14,9 +14,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 841108457293e3377ee87f9c7d7c6898340e51b5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33404344"
 ---
 # <a name="cordebugstatechange-enumeration"></a>CorDebugStateChange, énumération
 Représente la quantité de données mises en cache à ignorer sur la base des modifications apportées au processus.  

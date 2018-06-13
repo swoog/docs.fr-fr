@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c6b8fa9304296765fcdb6ebe42db5523e5ff387d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399069"
 ---
 # <a name="icordebugassemblyenum-interface1"></a>ICorDebugAssemblyEnum Interface1
 Implémente les méthodes ICorDebugEnum et énumère des tableaux ICorDebugAssembly.  

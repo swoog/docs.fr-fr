@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408143"
 ---
 # <a name="secure-coding-guidelines-for-unmanaged-code"></a>Instructions de codage sécurisé pour le code non managé
 Du code de bibliothèque doit appeler dans du code non managé (par exemple, des API de code natif comme Win32). Comme cela signifie sortir du périmètre de sécurité pour le code managé, la prudence est de règle. S’il ne dépend pas de la sécurité, votre code, ainsi que tout code qui l’appelle, doit disposer de l’autorisation de code non managé (<xref:System.Security.Permissions.SecurityPermission> avec l’indicateur <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> spécifié).  

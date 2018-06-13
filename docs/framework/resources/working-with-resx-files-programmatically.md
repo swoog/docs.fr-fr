@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398831"
 ---
 # <a name="working-with-resx-files-programmatically"></a>Utilisation des fichiers .resx par programmation
 Étant donné que les fichiers de ressources XML (.resx) doivent être constitués de code XML bien défini, notamment un en-tête qui doit respecter un schéma spécifique, suivi de données dans des paires nom/valeur, la création manuelle de ces fichiers est sujette aux erreurs. Alternativement, vous pouvez créer des fichiers .resx par programmation à l’aide de types et de membres de la bibliothèque de classes .NET Framework. Vous pouvez également utiliser la bibliothèque de classes .NET Framework pour récupérer des ressources stockées dans les fichiers .resx. Cette rubrique explique comment utiliser les types et les membres de l’espace de noms <xref:System.Resources> avec des fichiers .resx.  

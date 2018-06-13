@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399975"
 ---
 # <a name="custom-token-handlers"></a>Gestionnaires de jetons personnalisés
 Cette rubrique traite des gestionnaires de jetons dans WIF et de la façon dont ils sont utilisés pour traiter les jetons. Elle décrit également ce qui est nécessaire pour créer des gestionnaires de jetons personnalisés pour les types de jetons qui ne sont pas pris en charge par défaut dans WIF.  

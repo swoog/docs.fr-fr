@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399767"
 ---
 # <a name="mdbgexe-net-framework-command-line-debugger"></a>MDbg.exe (débogueur de ligne de commande du .NET Framework)
 Le débogueur de ligne de commande du .NET Framework aide les fournisseurs d'outils et les développeurs d'applications à trouver et à corriger les bogues dans les programmes qui ont pour cible le Common Language Runtime du .NET Framework. Cet outil utilise l'API de débogage du runtime pour fournir des services de débogage. Vous pouvez utiliser MDbg.exe pour déboguer uniquement du code managé ; il n'y a pas de prise en charge du débogage du code non managé.  

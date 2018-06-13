@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361771"
 ---
 # <a name="debugging-support"></a>Prise en charge du débogage
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Fournit une prise en charge générale de débogage pour [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] projets.  Consultez également [débogage LINQ](http://msdn.microsoft.com/library/Bb385795\(v=vs.110\)) ou [débogage LINQ](http://msdn.microsoft.com/library/Bb385795\(v=vs.120\)).  

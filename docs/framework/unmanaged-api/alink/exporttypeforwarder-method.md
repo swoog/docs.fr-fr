@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5b28c18d55b91d6315003229295ab0e6781be183
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406303"
 ---
 # <a name="exporttypeforwarder-method"></a>ExportTypeForwarder, méthode
 Ajoute un redirecteur de type à la table de type de l’assembly donné.  

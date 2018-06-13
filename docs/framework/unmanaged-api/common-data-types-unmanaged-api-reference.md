@@ -6,9 +6,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2c359c9b14452e82b7fd2425409b373ead430d3d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33407077"
 ---
 # <a name="common-data-types-unmanaged-api-reference"></a>Types de données communs (Référence des API non managées)
 Cette rubrique répertorie les types de données simples utilisés par les API non managées pour .NET Framework, qui sont définis par des instructions `typedef` en C/C++. Ces types de données sont généralement des alias pour des types de données primitifs C/C++. Les valeurs de ces types de données sont en général opaques, c'est-à-dire qu'elles sont retournées par une fonction ou une méthode particulière pour pouvoir être passées à d'autres fonctions ou méthodes sans modification.  

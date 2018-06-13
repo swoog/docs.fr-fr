@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402026"
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a>Invite de commandes développeur pour Visual Studio
 L’invite de commandes développeur pour Visual Studio définit automatiquement les variables d’environnement qui vous permettent d’utiliser facilement les outils du .NET Framework. L’invite de commandes développeur est installée avec la version complète ou la version Community de Visual Studio. Elle n’est pas installée avec la version Express de Visual Studio.  

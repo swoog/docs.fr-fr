@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9f13fad537a6847ba6e19c939e72df86036e28ff
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402202"
 ---
 # <a name="efngetmanagedobjectname-function"></a>_EFN_GetManagedObjectName, fonction
 Obtient le nom d’un type à l’aide du pointeur d’objet managé fourni.  

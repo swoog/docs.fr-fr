@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7ca3f5a6af6ea19ec81af3f6ac0a028440f80d56
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33407957"
 ---
 # <a name="cordebugmappingresult-enumeration"></a>CorDebugMappingResult, énumération
 Fournit les détails sur la façon dont la valeur du pointeur d'instruction a été obtenue.  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ed7db321b32657087b791758096c692f25f3d7f5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33407834"
 ---
 # <a name="cordebugblockingobject-structure"></a>CorDebugBlockingObject, structure
 Définit un objet qui bloque un thread et la raison spécifique que le thread est bloqué.  

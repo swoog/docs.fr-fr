@@ -10,9 +10,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1eae19d592dcf5243139e11bb6662953436e45a8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408591"
 ---
 # <a name="ialink-interface"></a>IALink, interface
 Aide à construire des assemblys .NET Framework. Entre autres choses, l’interface contient des méthodes qui aident à écrire des manifestes d’assembly pour les assemblys composés de plusieurs modules, de signer des assemblys avec noms forts et de création netmodules.  

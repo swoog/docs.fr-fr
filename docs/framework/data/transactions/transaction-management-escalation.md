@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356857"
 ---
 # <a name="transaction-management-escalation"></a>Remontée de la gestion des transactions
 Windows héberge un ensemble de services et de modules qui constituent ensemble un gestionnaire de transactions. La remontée de la gestion des transactions décrit le processus de migration d'une transaction de l'un des composants du gestionnaire de transactions à un autre.  

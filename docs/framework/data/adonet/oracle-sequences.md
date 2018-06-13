@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358610"
 ---
 # <a name="oracle-sequences"></a>Séquences Oracle
 Le fournisseur de données .NET Framework pour Oracle offre une prise en charge pour l'extraction des valeurs de séquence Oracle clés générées par le serveur, une fois les insertions réalisées par <xref:System.Data.OracleClient.OracleDataAdapter>.  

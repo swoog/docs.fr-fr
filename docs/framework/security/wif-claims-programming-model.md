@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408965"
 ---
 # <a name="wif-claims-programming-model"></a>Modèle de programmation de revendications WIF
 Les développeurs ASP.NET et WCF (Windows Communication Foundation) utilisent généralement les interfaces IIdentity et IPrincipal pour traiter les informations d’identité de l’utilisateur. Dans .NET 4.5, WIF (Windows Identity Foundation) a été intégré pour que les revendications soient maintenant toujours présentes pour tous les principaux, comme illustré dans le diagramme suivant :  

@@ -10,9 +10,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 16c787d865313f77417093555ea0cedb72aeb042
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402130"
 ---
 # <a name="ialink3-interface"></a>IALink3, interface
 Fournit une méthode unique, `SetManifestFile`, ce qui vous permet de spécifier ou de réinitialiser le fichier manifest de l’éditeur de liens utilise lorsqu’il crée un assembly.  

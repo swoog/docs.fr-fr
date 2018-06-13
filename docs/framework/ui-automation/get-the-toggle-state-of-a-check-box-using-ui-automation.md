@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33403199"
 ---
 # <a name="get-the-toggle-state-of-a-check-box-using-ui-automation"></a>Obtenir l'état bascule d'une case à cocher à l'aide d'UI Automation
 > [!NOTE]
