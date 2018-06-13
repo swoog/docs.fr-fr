@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754608"
 ---
 # <a name="ltaddgt-of-ltfiltersgt"></a><span data-ttu-id="9d7dd-102">&lt;add&gt; de &lt;filters&gt;</span><span class="sxs-lookup"><span data-stu-id="9d7dd-102">&lt;add&gt; of &lt;filters&gt;</span></span>
 <span data-ttu-id="9d7dd-103">Filtre XPath qui spécifie le type de message à enregistrer.</span><span class="sxs-lookup"><span data-stu-id="9d7dd-103">A XPath filter that specifies the kind of message to be logged.</span></span>  

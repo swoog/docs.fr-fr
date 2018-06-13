@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761631"
 ---
 # <a name="collection-entity-sql"></a><span data-ttu-id="b60dd-102">COLLECTION (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="b60dd-102">COLLECTION (Entity SQL)</span></span>
 <span data-ttu-id="b60dd-103">Le mot clé COLLECTION est utilisé uniquement dans la définition d'une fonction incluse.</span><span class="sxs-lookup"><span data-stu-id="b60dd-103">The COLLECTION keyword is only used in the definition of an inline function.</span></span> <span data-ttu-id="b60dd-104">Les fonctions de collection sont des fonctions qui fonctionnent sur une collection de valeurs et produisent une sortie scalaire.</span><span class="sxs-lookup"><span data-stu-id="b60dd-104">Collection functions are functions that operate on a collection of values and produce a scalar output.</span></span>  

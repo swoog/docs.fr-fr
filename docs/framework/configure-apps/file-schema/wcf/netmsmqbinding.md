@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751673"
 ---
 # <a name="ltnetmsmqbindinggt"></a><span data-ttu-id="f0072-102">&lt;netMsmqBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="f0072-102">&lt;netMsmqBinding&gt;</span></span>
 <span data-ttu-id="f0072-103">Définit une liaison mise en file d’attente adaptée à la communication entre ordinateurs.</span><span class="sxs-lookup"><span data-stu-id="f0072-103">Defines a queued binding suitable for cross-machine communication.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749788"
 ---
 # <a name="ltcertificategt-element"></a><span data-ttu-id="beac6-102">&lt;certificate&gt;, élément</span><span class="sxs-lookup"><span data-stu-id="beac6-102">&lt;certificate&gt; Element</span></span>
 <span data-ttu-id="beac6-103">Spécifie un certificat X.509 à utiliser pour signer et chiffrer des messages pour les clients de réseau pair à pair.</span><span class="sxs-lookup"><span data-stu-id="beac6-103">Specifies an X.509 certificate to use for signing and encrypting messages for peer-to-peer clients.</span></span>  

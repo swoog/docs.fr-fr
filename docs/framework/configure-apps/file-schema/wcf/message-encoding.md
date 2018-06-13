@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752492"
 ---
 # <a name="message-encoding"></a><span data-ttu-id="2adb6-102">Encodage de message</span><span class="sxs-lookup"><span data-stu-id="2adb6-102">Message Encoding</span></span>
 <span data-ttu-id="2adb6-103">L'encodage est le processus de transformation d'un jeu de caractères Unicode en une séquence d'octets.</span><span class="sxs-lookup"><span data-stu-id="2adb6-103">Encoding is the process of transforming a set of Unicode characters into a sequence of bytes.</span></span> <span data-ttu-id="2adb6-104">Le décodage est le processus inverse.</span><span class="sxs-lookup"><span data-stu-id="2adb6-104">Decoding is the reverse process.</span></span> <span data-ttu-id="2adb6-105">Windows Communication Foundation (WCF) inclut trois types d'encodage des messages SOAP : Texte, Binaire et MTOM (Message Transmission Optimization Mechanism).</span><span class="sxs-lookup"><span data-stu-id="2adb6-105">Windows Communication Foundation (WCF) includes three types of encoding for SOAP messages: Text, Binary and Message Transmission Optimization Mechanism (MTOM).</span></span>  

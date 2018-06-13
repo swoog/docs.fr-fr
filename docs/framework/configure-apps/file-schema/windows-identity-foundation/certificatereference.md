@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756837"
 ---
 # <a name="ltcertificatereferencegt"></a><span data-ttu-id="d5308-102">&lt;certificateReference&gt;</span><span class="sxs-lookup"><span data-stu-id="d5308-102">&lt;certificateReference&gt;</span></span>
 <span data-ttu-id="d5308-103">Spécifie les paramètres qui sont utilisés pour rechercher et valider un certificat X.509 dans un magasin de certificats.</span><span class="sxs-lookup"><span data-stu-id="d5308-103">Specifies settings that are used to find and validate an X.509 certificate in a certificate store.</span></span>  

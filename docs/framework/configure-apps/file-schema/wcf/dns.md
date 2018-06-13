@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746733"
 ---
 # <a name="ltdnsgt"></a><span data-ttu-id="cd6d6-102">&lt;DNS&gt;</span><span class="sxs-lookup"><span data-stu-id="cd6d6-102">&lt;dns&gt;</span></span>
 <span data-ttu-id="cd6d6-103">Spécifie l'identité attendue du serveur.</span><span class="sxs-lookup"><span data-stu-id="cd6d6-103">Specifies the expected identity of the server.</span></span> <span data-ttu-id="cd6d6-104">Cette identité est valide pour le mode d'authentification du certificat X509 si le certificat du serveur contient un DNS avec la même valeur.</span><span class="sxs-lookup"><span data-stu-id="cd6d6-104">This identity is valid for X509 Certificate authentication mode if the server’s certificate contains a DNS with the same value.</span></span> <span data-ttu-id="cd6d6-105">Elle est également valide pour le mode d'authentification Windows si le SPN a la même valeur.</span><span class="sxs-lookup"><span data-stu-id="cd6d6-105">It is also valid for Windows authentication mode if the SPN has the same value.</span></span>  

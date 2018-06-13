@@ -14,6 +14,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752245"
 ---
 # <a name="clear-element-for-configsections"></a><span data-ttu-id="e8c99-102">\<Désactivez >, élément pour \<configSections ></span><span class="sxs-lookup"><span data-stu-id="e8c99-102">\<clear> element for \<configSections></span></span>
 

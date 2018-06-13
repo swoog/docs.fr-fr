@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748059"
 ---
 # <a name="ltendpointgt-of-ltclientgt"></a><span data-ttu-id="865f2-102">&lt;endpoint&gt; de &lt;client&gt;</span><span class="sxs-lookup"><span data-stu-id="865f2-102">&lt;endpoint&gt; of &lt;client&gt;</span></span>
 <span data-ttu-id="865f2-103">Spécifie les propriétés du contrat, de la liaison et de l’adresse du point de terminaison du canal employées par les clients pour se connecter aux points de terminaison de service sur le serveur.</span><span class="sxs-lookup"><span data-stu-id="865f2-103">Specifies contract, binding, and address properties of the channel endpoint, which is used by clients to connect to service endpoints on the server.</span></span>  

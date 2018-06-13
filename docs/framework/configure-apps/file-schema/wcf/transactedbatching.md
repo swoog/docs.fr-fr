@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749710"
 ---
 # <a name="lttransactedbatchinggt"></a><span data-ttu-id="63c65-102">&lt;transactedBatching&gt;</span><span class="sxs-lookup"><span data-stu-id="63c65-102">&lt;transactedBatching&gt;</span></span>
 <span data-ttu-id="63c65-103">Spécifie si le traitement par lots de la transaction est pris en charge pour les opérations de réception.</span><span class="sxs-lookup"><span data-stu-id="63c65-103">Specifies whether transaction batching is supported for receive operations.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746408"
 ---
 # <a name="ltcomcontractsgt"></a><span data-ttu-id="acd09-102">&lt;comContracts&gt;</span><span class="sxs-lookup"><span data-stu-id="acd09-102">&lt;comContracts&gt;</span></span>
 <span data-ttu-id="acd09-103">La section de configuration `comContracts` contient des éléments qui vous permettent de spécifier différentes propriétés d'un contrat de service d'intégration COM+.</span><span class="sxs-lookup"><span data-stu-id="acd09-103">The `comContracts` configuration section contains elements that allow you to specify various properties of a COM+ integration service contract.</span></span>  

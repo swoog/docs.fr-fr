@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766866"
 ---
 # <a name="architecture-and-design"></a><span data-ttu-id="b3ce6-102">Architecture et conception</span><span class="sxs-lookup"><span data-stu-id="b3ce6-102">Architecture and Design</span></span>
 <span data-ttu-id="b3ce6-103">Le module de génération SQL dans le [fournisseur d’exemples](http://go.microsoft.com/fwlink/?LinkId=180616) est implémenté en tant que visiteur de l’arborescence d’expression qui représente l’arborescence de commandes.</span><span class="sxs-lookup"><span data-stu-id="b3ce6-103">The SQL generation module in the [Sample Provider](http://go.microsoft.com/fwlink/?LinkId=180616) is implemented as a visitor on the expression tree that represents the command tree.</span></span> <span data-ttu-id="b3ce6-104">La génération est effectuée par un unique passage sur l’arborescence de l’expression.</span><span class="sxs-lookup"><span data-stu-id="b3ce6-104">The generation is done in a single pass over the expression tree.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751075"
 ---
 # <a name="lttcptransportgt"></a><span data-ttu-id="92157-102">&lt;tcpTransport&gt;</span><span class="sxs-lookup"><span data-stu-id="92157-102">&lt;tcpTransport&gt;</span></span>
 <span data-ttu-id="92157-103">Définit un transport TCP qui peut être utilisé par un canal pour transférer des messages pour une liaison personnalisée.</span><span class="sxs-lookup"><span data-stu-id="92157-103">Defines a TCP transport that can be used by a channel to transfers messages for a custom binding.</span></span>  

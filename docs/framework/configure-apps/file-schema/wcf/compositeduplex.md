@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748345"
 ---
 # <a name="ltcompositeduplexgt"></a><span data-ttu-id="132b9-102">&lt;compositeDuplex&gt;</span><span class="sxs-lookup"><span data-stu-id="132b9-102">&lt;compositeDuplex&gt;</span></span>
 <span data-ttu-id="132b9-103">Définit l’élément de liaison utilisé lorsque le client doit exposer un point de terminaison pour permettre au service de renvoyer des messages au client.</span><span class="sxs-lookup"><span data-stu-id="132b9-103">Defines the binding element that is used when the client must expose an endpoint for the service to send messages back to the client.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749096"
 ---
 # <a name="ltpolicyimportersgt"></a><span data-ttu-id="83d66-102">&lt;policyImporters&gt;</span><span class="sxs-lookup"><span data-stu-id="83d66-102">&lt;policyImporters&gt;</span></span>
 <span data-ttu-id="83d66-103">Cet élément de configuration indique tous les importateurs de stratégie contrôlant l’importation d’assertions de stratégie personnalisées concernant les liaisons.</span><span class="sxs-lookup"><span data-stu-id="83d66-103">This configuration element specifies all the policy importers that control the import of custom policy assertions about bindings.</span></span> <span data-ttu-id="83d66-104">Chaque élément enfant est un <`policyImporter`> utilisé pour rechercher des assertions de stratégie personnalisées concernant les fonctionnalités de liaison et pour joindre un élément de liaison personnalisé qui implémente les fonctionnalités requises par l'assertion.</span><span class="sxs-lookup"><span data-stu-id="83d66-104">Each child element is a <`policyImporter`> that is used to search custom policy assertions about binding features, as well as attach a custom binding element that implements the features the assertion requires.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761767"
 ---
 # <a name="between-entity-sql"></a><span data-ttu-id="77c5e-102">BETWEEN (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="77c5e-102">BETWEEN (Entity SQL)</span></span>
 <span data-ttu-id="77c5e-103">Détermine si une expression a pour résultat une valeur contenue dans une plage spécifiée.</span><span class="sxs-lookup"><span data-stu-id="77c5e-103">Determines whether an expression results in a value in a specified range.</span></span> <span data-ttu-id="77c5e-104">Le [!INCLUDE[esql](../../../../../../includes/esql-md.md)] entre l’expression a les mêmes fonctionnalités que l’expression Transact-SQL BETWEEN.</span><span class="sxs-lookup"><span data-stu-id="77c5e-104">The [!INCLUDE[esql](../../../../../../includes/esql-md.md)] BETWEEN expression has the same functionality as the Transact-SQL BETWEEN expression.</span></span>  

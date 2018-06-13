@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747851"
 ---
 # <a name="ltmetadatagt"></a><span data-ttu-id="21e5e-102">&lt;Métadonnées&gt;</span><span class="sxs-lookup"><span data-stu-id="21e5e-102">&lt;metadata&gt;</span></span>
 <span data-ttu-id="21e5e-103">Indique la façon dont les métadonnées peuvent être traitées.</span><span class="sxs-lookup"><span data-stu-id="21e5e-103">Specifies how service metadata can be processed.</span></span>  

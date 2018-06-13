@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569902"
 ---
 # <a name="character-escapes-in-regular-expressions"></a><span data-ttu-id="44630-102">Caractères d'échappement dans les expressions régulières</span><span class="sxs-lookup"><span data-stu-id="44630-102">Character Escapes in Regular Expressions</span></span>
 <span data-ttu-id="44630-103">La barre oblique inverse (\\) dans une expression régulière indique une des possibilités suivantes :</span><span class="sxs-lookup"><span data-stu-id="44630-103">The backslash (\\) in a regular expression indicates one of the following:</span></span>  
