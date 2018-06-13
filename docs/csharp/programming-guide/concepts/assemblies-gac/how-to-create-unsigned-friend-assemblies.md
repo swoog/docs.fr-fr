@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340201"
 ---
 # <a name="how-to-create-unsigned-friend-assemblies-c"></a><span data-ttu-id="128c4-102">Guide pratique pour créer des assemblys friend non signés (C#)</span><span class="sxs-lookup"><span data-stu-id="128c4-102">How to: Create Unsigned Friend Assemblies (C#)</span></span>
 <span data-ttu-id="128c4-103">Cet exemple montre comment utiliser des assemblys friend avec des assemblys qui ne sont pas signés.</span><span class="sxs-lookup"><span data-stu-id="128c4-103">This example shows how to use friend assemblies with assemblies that are unsigned.</span></span>  

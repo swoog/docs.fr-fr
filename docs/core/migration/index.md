@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33217179"
 ---
 # <a name="migrating-net-core-projects-to-the-csproj-format"></a><span data-ttu-id="0edf1-103">Migration de projets .NET Core au format csproj</span><span class="sxs-lookup"><span data-stu-id="0edf1-103">Migrating .NET Core projects to the .csproj format</span></span>
 

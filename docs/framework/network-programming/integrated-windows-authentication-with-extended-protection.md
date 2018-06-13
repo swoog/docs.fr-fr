@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398129"
 ---
 # <a name="integrated-windows-authentication-with-extended-protection"></a><span data-ttu-id="c680d-102">Authentification Windows intégrée avec protection étendue</span><span class="sxs-lookup"><span data-stu-id="c680d-102">Integrated Windows Authentication with Extended Protection</span></span>
 <span data-ttu-id="c680d-103">Certaines améliorations apportées changent la manière dont l’authentification Windows intégrée est gérée par les classes <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Mail.SmtpClient>, <xref:System.Net.Security.SslStream>, <xref:System.Net.Security.NegotiateStream> et les classes associées dans l’espace de noms <xref:System.Net> et les espaces de noms associés.</span><span class="sxs-lookup"><span data-stu-id="c680d-103">Enhancements were made that affect how integrated Windows authentication is handled by the <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Mail.SmtpClient>, <xref:System.Net.Security.SslStream>, <xref:System.Net.Security.NegotiateStream>, and related classes in the <xref:System.Net> and related namespaces.</span></span> <span data-ttu-id="c680d-104">La prise en charge de la protection étendue a été ajoutée pour renforcer la sécurité.</span><span class="sxs-lookup"><span data-stu-id="c680d-104">Support was added for extended protection to enhance security.</span></span>  
