@@ -17,6 +17,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457798"
 ---
 # <a name="-and--null-conditional-operators-c-and-visual-basic"></a><span data-ttu-id="379d4-102">?.</span><span class="sxs-lookup"><span data-stu-id="379d4-102">?.</span></span> <span data-ttu-id="379d4-103">et ?[] (C# et Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="379d4-103">and ?[] null-conditional Operators (C# and Visual Basic)</span></span>
 <span data-ttu-id="379d4-104">Teste si l’opérande de gauche a une valeur Null avant d’effectuer une opération d’accès au membre (`?.`) ou d’index (`?[]`) ; retourne `null` si l’opérande de gauche s’évalue à `null`.</span><span class="sxs-lookup"><span data-stu-id="379d4-104">Tests the value of the left-hand operand for null before performing a member access (`?.`) or index (`?[]`) operation; returns `null` if the left-hand operand evaluates to `null`.</span></span> 
