@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751660"
 ---
 # <a name="ltmsmqintegrationbindinggt"></a><span data-ttu-id="e6ef3-102">&lt;msmqIntegrationBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="e6ef3-102">&lt;msmqIntegrationBinding&gt;</span></span>
 <span data-ttu-id="e6ef3-103">Définit une liaison qui prend en charge la mise en file d’attente par routage des messages via MSMQ.</span><span class="sxs-lookup"><span data-stu-id="e6ef3-103">Defines a binding that provides queuing support by routing messages through MSMQ.</span></span>  

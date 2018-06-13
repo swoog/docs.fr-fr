@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748862"
 ---
 # <a name="ltscopedcertificatesgt-element"></a><span data-ttu-id="2fe87-102">&lt;scopedCertificates&gt;, élément</span><span class="sxs-lookup"><span data-stu-id="2fe87-102">&lt;scopedCertificates&gt; Element</span></span>
 <span data-ttu-id="2fe87-103">Représente une collection de certificats X.509 fournie par les services spécifiques (étendus) à des fins d’authentification.</span><span class="sxs-lookup"><span data-stu-id="2fe87-103">Represents a collection of X.509 certificates provided by specific services (scoped) for authentication.</span></span> <span data-ttu-id="2fe87-104">Cette collection est utilisée en général pour spécifier les certificats de service pour les services d’émission de jeton de sécurité dans un scénario fédéré.</span><span class="sxs-lookup"><span data-stu-id="2fe87-104">This collection is typically used to specify the service certificates for Security Token Services in a federated scenario.</span></span>  
