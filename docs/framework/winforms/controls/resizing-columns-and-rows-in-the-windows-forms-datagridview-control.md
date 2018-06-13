@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536953"
 ---
 # <a name="resizing-columns-and-rows-in-the-windows-forms-datagridview-control"></a>Redimensionnement des colonnes et des lignes dans le contrôle DataGridView Windows Forms
 Le `DataGridView` contrôle fournit de nombreuses options pour personnaliser le comportement de dimensionnement de ses colonnes et de lignes. En règle générale, `DataGridView` cellules ne se redimensionnent pas en fonction de leur contenu. Au lieu de cela, elles tronquent toute valeur d’affichage qui est supérieure à la cellule. Si le contenu peut être affiché sous forme de chaîne, la cellule affiche dans une info-bulle.  

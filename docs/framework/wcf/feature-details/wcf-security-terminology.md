@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508304"
 ---
 # <a name="wcf-security-terminology"></a>Terminologie relative à la sécurité dans WCF
 La terminologie utilisée pour aborder la sécurité peut vous sembler peu familière. Cette rubrique explique rapidement certains des termes relatifs à la sécurité, mais ne fournit pas d'informations complètes pour chaque élément.  

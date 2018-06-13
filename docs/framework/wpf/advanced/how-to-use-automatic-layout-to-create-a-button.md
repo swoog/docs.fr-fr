@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545212"
 ---
 # <a name="how-to-use-automatic-layout-to-create-a-button"></a>Guide pratique pour utiliser la disposition automatique pour créer un bouton
 Cet exemple décrit comment tirer parti de la disposition automatique pour créer un bouton dans une application localisable.  

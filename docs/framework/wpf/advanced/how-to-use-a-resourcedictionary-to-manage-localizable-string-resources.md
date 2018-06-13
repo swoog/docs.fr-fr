@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544496"
 ---
 # <a name="how-to-use-a-resourcedictionary-to-manage-localizable-string-resources"></a>Guide pratique pour utiliser un ResourceDictionary pour gérer des ressources de type chaîne localisables
 Cet exemple montre comment utiliser un <xref:System.Windows.ResourceDictionary> pour empaqueter des ressources de type chaîne localisables pour les applications Windows Presentation Foundation (WPF).  

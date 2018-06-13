@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543619"
 ---
 # <a name="how-to-obtain-a-writable-copy-of-a-read-only-freezable"></a>Comment : obtenir une copie en écriture d'un Freezable en lecture seule
 Cet exemple montre comment utiliser le <xref:System.Windows.Freezable.Clone%2A> méthode pour créer une copie en lecture seule accessible en écriture <xref:System.Windows.Freezable>.  

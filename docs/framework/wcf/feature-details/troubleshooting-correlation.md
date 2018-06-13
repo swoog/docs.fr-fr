@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508382"
 ---
 # <a name="troubleshooting-correlation"></a>Dépannage de la corrélation
 La corrélation est utilisée pour établir une relation entre des messages de service de workflow et avec l'instance de workflow appropriée, mais si elle n'est pas proprement configurée, les messages ne seront pas reçus et les applications ne fonctionneront pas correctement. Cette rubrique fournit une vue d'ensemble de plusieurs méthodes de résolution des problèmes de corrélation et présente certains problèmes courants qui peuvent se produire lorsque vous utilisez la corrélation.  

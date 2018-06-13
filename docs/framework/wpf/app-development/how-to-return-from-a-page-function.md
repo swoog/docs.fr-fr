@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545506"
 ---
 # <a name="how-to-return-from-a-page-function"></a>Guide pratique pour retourner un résultat à partir d’une fonction de page
 Cet exemple montre comment retourner un résultat à partir d’une fonction de page.  

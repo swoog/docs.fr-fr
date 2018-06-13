@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496752"
 ---
 # <a name="federation"></a>Fédération
 Cette rubrique fournit une brève vue d'ensemble du concept de sécurité fédérée. Elle décrit également la prise en charge de Windows Communication Foundation (WCF) pour déployer des architectures de sécurité fédérée. Pour un exemple d’application qui illustre la fédération, consultez [Federation, exemple](../../../../docs/framework/wcf/samples/federation-sample.md).  

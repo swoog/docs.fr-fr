@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546134"
 ---
 # <a name="preview-events"></a>Aperçu des événements
 Événements d’aperçu, également connus sous le tunneling forcé, les événements sont des événements routés où la direction de l’itinéraire se déplace à partir de la racine de l’application vers l’élément qui a déclenché l’événement et est signalé comme étant la source de données d’événement. Pas tous les scénarios d’événement prend en charge ou exiger des événements d’aperçu. Cette rubrique décrit les situations où les événements d’aperçu existent, comment les applications ou les composants doivent les gérer et les cas où la création d’événements d’aperçu dans des composants personnalisés ou des classes peut être appropriée.  
