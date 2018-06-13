@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugFunction::GetToken, méthode"
-ms.custom: 
+title: ICorDebugFunction::GetToken, méthode
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugFunction.GetToken
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: c6bbf479-062e-48e9-9c70-0f92e293e36a
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7edf1f9dadafd989197170123cb3cb470a5ea908
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: acfb8910df6e20bf55ed33fdbb9b1c30d22f4684
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33412050"
 ---
-# <a name="icordebugfunctiongettoken-method"></a><span data-ttu-id="bc1a1-102">ICorDebugFunction::GetToken, méthode</span><span class="sxs-lookup"><span data-stu-id="bc1a1-102">ICorDebugFunction::GetToken Method</span></span>
-<span data-ttu-id="bc1a1-103">Obtient les métadonnées de jeton pour cette fonction.</span><span class="sxs-lookup"><span data-stu-id="bc1a1-103">Gets the metadata token for this function.</span></span>  
+# <a name="icordebugfunctiongettoken-method"></a><span data-ttu-id="c4263-102">ICorDebugFunction::GetToken, méthode</span><span class="sxs-lookup"><span data-stu-id="c4263-102">ICorDebugFunction::GetToken Method</span></span>
+<span data-ttu-id="c4263-103">Obtient les métadonnées de jeton pour cette fonction.</span><span class="sxs-lookup"><span data-stu-id="c4263-103">Gets the metadata token for this function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bc1a1-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="bc1a1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c4263-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="c4263-104">Syntax</span></span>  
   
 ```  
 HRESULT GetToken (  
@@ -46,15 +35,15 @@ HRESULT GetToken (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="bc1a1-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="bc1a1-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="c4263-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="c4263-105">Parameters</span></span>  
  `pMethodDef`  
- <span data-ttu-id="bc1a1-106">[out] Un pointeur vers un `mdMethodDef` jeton qui référence les métadonnées pour cette fonction.</span><span class="sxs-lookup"><span data-stu-id="bc1a1-106">[out] A pointer to an `mdMethodDef` token that references the metadata for this function.</span></span>  
+ <span data-ttu-id="c4263-106">[out] Un pointeur vers un `mdMethodDef` jeton qui référence les métadonnées pour cette fonction.</span><span class="sxs-lookup"><span data-stu-id="c4263-106">[out] A pointer to an `mdMethodDef` token that references the metadata for this function.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="bc1a1-107">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="bc1a1-107">Requirements</span></span>  
- <span data-ttu-id="bc1a1-108">**Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bc1a1-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c4263-107">Spécifications</span><span class="sxs-lookup"><span data-stu-id="c4263-107">Requirements</span></span>  
+ <span data-ttu-id="c4263-108">**Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c4263-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="bc1a1-109">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="bc1a1-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="c4263-109">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c4263-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="bc1a1-110">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="bc1a1-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c4263-110">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c4263-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="bc1a1-111">**Versions du .NET framework :**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bc1a1-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="c4263-111">**Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c4263-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

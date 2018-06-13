@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33331985"
 ---
 # <a name="shape-of-wordprocessingml-documents-c"></a><span data-ttu-id="71ff6-102">Forme des documents WordprocessingML (C#)</span><span class="sxs-lookup"><span data-stu-id="71ff6-102">Shape of WordprocessingML Documents (C#)</span></span>
 <span data-ttu-id="71ff6-103">Cette rubrique présente la forme XML d'un document WordprocessingML.</span><span class="sxs-lookup"><span data-stu-id="71ff6-103">This topic introduces the XML shape of a WordprocessingML document.</span></span>  

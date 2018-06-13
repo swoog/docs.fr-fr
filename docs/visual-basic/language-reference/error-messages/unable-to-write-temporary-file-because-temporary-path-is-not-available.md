@@ -1,37 +1,29 @@
 ---
 title: Impossible d’écrire dans un fichier temporaire, car le chemin d’accès temporaire n’est pas disponible
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc30698
 - bc30698
 helpviewer_keywords:
 - BC30698
 ms.assetid: 3b77b7e3-8b17-40de-b4e1-05e4b9b325ad
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: b02f4bb120b4072facc913fb9b83dcf498208cbe
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 7e2dfb3151c3ef81beaabe6fae3b026148796eb3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604001"
 ---
-# <a name="unable-to-write-temporary-file-because-temporary-path-is-not-available"></a><span data-ttu-id="587d7-102">Impossible d’écrire dans un fichier temporaire, car le chemin d’accès temporaire n’est pas disponible</span><span class="sxs-lookup"><span data-stu-id="587d7-102">Unable to write temporary file because temporary path is not available</span></span>
-<span data-ttu-id="587d7-103">Visual Basic n’a pas pu déterminer le chemin d’accès où sont stockés les fichiers temporaires.</span><span class="sxs-lookup"><span data-stu-id="587d7-103">Visual Basic could not determine the path where temporary files are stored.</span></span>  
+# <a name="unable-to-write-temporary-file-because-temporary-path-is-not-available"></a><span data-ttu-id="e1b3f-102">Impossible d’écrire dans un fichier temporaire, car le chemin d’accès temporaire n’est pas disponible</span><span class="sxs-lookup"><span data-stu-id="e1b3f-102">Unable to write temporary file because temporary path is not available</span></span>
+<span data-ttu-id="e1b3f-103">Visual Basic n’a pas pu déterminer le chemin d’accès où sont stockés les fichiers temporaires.</span><span class="sxs-lookup"><span data-stu-id="e1b3f-103">Visual Basic could not determine the path where temporary files are stored.</span></span>  
   
- <span data-ttu-id="587d7-104">**ID d’erreur :** BC30698</span><span class="sxs-lookup"><span data-stu-id="587d7-104">**Error ID:** BC30698</span></span>  
+ <span data-ttu-id="e1b3f-104">**ID d’erreur :** BC30698</span><span class="sxs-lookup"><span data-stu-id="e1b3f-104">**Error ID:** BC30698</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="587d7-105">Pour corriger cette erreur</span><span class="sxs-lookup"><span data-stu-id="587d7-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="e1b3f-105">Pour corriger cette erreur</span><span class="sxs-lookup"><span data-stu-id="e1b3f-105">To correct this error</span></span>  
   
-1.  <span data-ttu-id="587d7-106">Redémarrez Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="587d7-106">Restart Visual Studio.</span></span>  
+1.  <span data-ttu-id="e1b3f-106">Redémarrez Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="e1b3f-106">Restart Visual Studio.</span></span>  
   
-2.  <span data-ttu-id="587d7-107">Si le problème persiste, réinstallez Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="587d7-107">If the problem persists, reinstall Visual Studio.</span></span>  
+2.  <span data-ttu-id="e1b3f-107">Si le problème persiste, réinstallez Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="e1b3f-107">If the problem persists, reinstall Visual Studio.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="587d7-108">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="587d7-108">See Also</span></span>  
- [<span data-ttu-id="587d7-109">Nous contacter</span><span class="sxs-lookup"><span data-stu-id="587d7-109">Talk to Us</span></span>](/visualstudio/ide/talk-to-us)
+## <a name="see-also"></a><span data-ttu-id="e1b3f-108">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="e1b3f-108">See Also</span></span>  
+ [<span data-ttu-id="e1b3f-109">Nous contacter</span><span class="sxs-lookup"><span data-stu-id="e1b3f-109">Talk to Us</span></span>](/visualstudio/ide/talk-to-us)
