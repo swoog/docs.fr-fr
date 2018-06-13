@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765693"
 ---
 # <a name="working-with-data-providers"></a><span data-ttu-id="7e015-102">Utilisation des fournisseurs de données</span><span class="sxs-lookup"><span data-stu-id="7e015-102">Working with Data Providers</span></span>
 <span data-ttu-id="7e015-103">Les rubriques de cette section décrivent les services et les fournisseurs de données qui transforment des requêtes sur un modèle conceptuel en requêtes natives sur une source de données qui est prise en charge par Entity Framework.</span><span class="sxs-lookup"><span data-stu-id="7e015-103">The topics in this section describe the services and providers that transform queries against a conceptual model into native queries against a data source that is supported by the Entity Framework.</span></span>  

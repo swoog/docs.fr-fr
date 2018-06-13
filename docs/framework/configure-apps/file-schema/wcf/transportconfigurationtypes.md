@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766944"
 ---
 # <a name="lttransportconfigurationtypesgt"></a><span data-ttu-id="28ea6-102">&lt;transportConfigurationTypes&gt;</span><span class="sxs-lookup"><span data-stu-id="28ea6-102">&lt;transportConfigurationTypes&gt;</span></span>
 <span data-ttu-id="28ea6-103">Représente une collection d’éléments de configuration identifiant le type d’un transport particulier.</span><span class="sxs-lookup"><span data-stu-id="28ea6-103">Represents a collection of configuration elements that identify the type of a particular transport.</span></span> <span data-ttu-id="28ea6-104">Peut être utilisé pour ajouter des protocoles WAS personnalisés.</span><span class="sxs-lookup"><span data-stu-id="28ea6-104">This can be used to add custom WAS protocols.</span></span>  

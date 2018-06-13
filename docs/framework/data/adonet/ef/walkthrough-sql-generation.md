@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766320"
 ---
 # <a name="walkthrough-sql-generation"></a><span data-ttu-id="a0210-102">Procédure pas à pas : génération SQL</span><span class="sxs-lookup"><span data-stu-id="a0210-102">Walkthrough: SQL Generation</span></span>
 <span data-ttu-id="a0210-103">Cette rubrique illustre comment la génération SQL se produit dans le [fournisseur d’exemples](http://go.microsoft.com/fwlink/?LinkId=180616).</span><span class="sxs-lookup"><span data-stu-id="a0210-103">This topic illustrates how SQL generation occurs in the [Sample Provider](http://go.microsoft.com/fwlink/?LinkId=180616).</span></span> <span data-ttu-id="a0210-104">La requête Entity SQL suivante utilise le modèle inclus dans le fournisseur d'exemples :</span><span class="sxs-lookup"><span data-stu-id="a0210-104">The following Entity SQL query uses the model that is included with the sample provider:</span></span>  
