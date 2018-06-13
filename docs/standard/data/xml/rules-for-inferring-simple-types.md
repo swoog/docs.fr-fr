@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576391"
 ---
 # <a name="rules-for-inferring-simple-types"></a><span data-ttu-id="a149c-102">Règles relatives à l'inférence de types simples</span><span class="sxs-lookup"><span data-stu-id="a149c-102">Rules for Inferring Simple Types</span></span>
 <span data-ttu-id="a149c-103">Décrit comment la classe <xref:System.Xml.Schema.XmlSchemaInference> déduit le type de données pour les attributs et les éléments.</span><span class="sxs-lookup"><span data-stu-id="a149c-103">Describes how the <xref:System.Xml.Schema.XmlSchemaInference> class infers the data type for attributes and elements.</span></span>  
