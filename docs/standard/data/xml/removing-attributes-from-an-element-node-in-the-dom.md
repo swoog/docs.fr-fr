@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570544"
 ---
 # <a name="removing-attributes-from-an-element-node-in-the-dom"></a>Suppression d'attributs d'un nœud d'élément dans le DOM
 Il existe plusieurs manières de supprimer des attributs. L’une des techniques consiste à les supprimer de la collection d’attributs. Pour ce faire, procédez comme suit :  

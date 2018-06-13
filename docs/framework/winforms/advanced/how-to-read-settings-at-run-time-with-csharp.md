@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521012"
 ---
 # <a name="how-to-read-settings-at-run-time-with-c"></a>Comment : lire des paramètres au moment de l'exécution avec C# #
 Vous pouvez lire les paramètres de portée application et de portée utilisateur au moment de l'exécution via l'objet Propriétés. L'objet Propriétés expose tous les paramètres par défaut du projet via le membre Properties.Settings.Default.  

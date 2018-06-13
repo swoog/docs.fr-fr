@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397466"
 ---
 # <a name="network-programming-samples"></a>Exemples de programmation réseau
 Cette section contient des descriptions et des liens vers des exemples de programmation réseau téléchargeables qui utilisent des classes dans les espaces de noms <xref:System.Net>, <xref:System.Net.Cache>, <xref:System.Net.Configuration>, <xref:System.Net.Mail>, <xref:System.Net.Mime>, <xref:System.Net.NetworkInformation>, <xref:System.Net.Security> et <xref:System.Net.Sockets>, et dans des espaces de noms associés. 

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552777"
 ---
 # <a name="how-to-use-a-custom-context-menu-with-a-textbox"></a>Comment : utiliser un menu contextuel personnalisé avec un TextBox
 Cet exemple montre comment définir et implémenter un menu contextuel personnalisé simple pour un <xref:System.Windows.Controls.TextBox>.  

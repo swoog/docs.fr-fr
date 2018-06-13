@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517168"
 ---
 # <a name="application-settings-for-windows-forms"></a>Paramètres d'application pour les Windows Forms
 La fonctionnalité Paramètres d’application de Windows Forms simplifie la création, le stockage et la gestion des applications personnalisées et des préférences utilisateur sur le client. Avec les paramètres d'application, vous pouvez stocker non seulement des données d'application telles que des chaînes de connexion de base de données, mais également des données spécifiques à l'utilisateur, telles que les positions des barres d'outils et les listes des derniers éléments utilisés.  

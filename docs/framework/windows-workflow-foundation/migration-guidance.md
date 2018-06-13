@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516680"
 ---
 # <a name="migration-guidance"></a>Conseils de migration
 Dans la [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], Microsoft publie la deuxième version majeure de Windows Workflow Foundation (WF). [!INCLUDE[wf1](../../../includes/wf1-md.md)] a été intégré dans [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] (ce qui comprenait les types dans les espaces de noms System.Workflow.*, à présent désignés sous le nom de WF3) et amélioré dans [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. WF3 est également dans le cadre de la [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], mais il est présent en même temps que la nouvelle technologie de workflow (les types dans System.Activities.\* espaces de noms ; appelée WF4). Lorsque vous pensez au moment opportun d'adopter WF4, il est important de savoir tout d'abord que c'est vous qui décidez.  

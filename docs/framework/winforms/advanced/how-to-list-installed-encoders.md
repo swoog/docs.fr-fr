@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524753"
 ---
 # <a name="how-to-list-installed-encoders"></a>Comment : répertorier les encodeurs installés
 Vous souhaiterez répertorier les encodeurs d’image disponibles sur un ordinateur, pour déterminer si votre application peut enregistrer dans un format de fichier d’image spécifique. Le <xref:System.Drawing.Imaging.ImageCodecInfo> classe fournit le <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageEncoders%2A> méthodes statiques afin que vous puissiez déterminer quelle image encodeurs sont disponibles. <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageEncoders%2A> Retourne un tableau de <xref:System.Drawing.Imaging.ImageCodecInfo> objets.  

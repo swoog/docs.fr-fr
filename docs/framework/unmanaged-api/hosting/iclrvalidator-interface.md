@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0cefd47d3c7298f9cc4b15eb2946f3d95aeae759
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33437997"
 ---
 # <a name="iclrvalidator-interface"></a>ICLRValidator, interface
 Fournit des méthodes pour la validation des images (PE) exécutables portables et de rapports d’erreurs de validation.  

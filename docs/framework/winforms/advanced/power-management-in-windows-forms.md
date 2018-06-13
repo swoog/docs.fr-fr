@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523489"
 ---
 # <a name="power-management-in-windows-forms"></a>Gestion de l'alimentation dans Windows Forms
 Vos applications Windows Forms peuvent tirer parti des fonctionnalités de gestion de l’alimentation dans le système d’exploitation Windows. Vos applications peuvent surveiller l’état d’alimentation d’un ordinateur et effectuer une opération lorsqu’un changement d’état se produit. Par exemple, si votre application s’exécute sur un ordinateur portable, vous souhaiterez désactiver certaines fonctionnalités dans votre application lors de la charge de la batterie de l’ordinateur se trouve sous un certain niveau.  
