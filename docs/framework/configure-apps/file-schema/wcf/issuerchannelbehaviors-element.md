@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747055"
 ---
 # <a name="ltissuerchannelbehaviorsgt-element"></a><span data-ttu-id="b1906-102">&lt;issuerChannelBehaviors&gt;, élément</span><span class="sxs-lookup"><span data-stu-id="b1906-102">&lt;issuerChannelBehaviors&gt; Element</span></span>
 <span data-ttu-id="b1906-103">Contient une collection de comportements de point de terminaison de client Windows Communication Foundation (WCF) (défini dans la configuration) à utiliser lors de la communication avec les Services de jeton de sécurité spécifié.</span><span class="sxs-lookup"><span data-stu-id="b1906-103">Contains a collection of Windows Communication Foundation (WCF) client endpoint behaviors (defined in the configuration) to be used when communicating with the specified Service Token Services.</span></span> <span data-ttu-id="b1906-104">Les comportements définis ne peut pas inclure les caractères [ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) éléments.</span><span class="sxs-lookup"><span data-stu-id="b1906-104">The defined behaviors cannot include any [\<clientCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) elements.</span></span>  

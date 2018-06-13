@@ -14,6 +14,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746213"
 ---
 # <a name="ltenforcefipspolicygt-element"></a><span data-ttu-id="863c6-102">&lt;enforceFIPSPolicy&gt; élément</span><span class="sxs-lookup"><span data-stu-id="863c6-102">&lt;enforceFIPSPolicy&gt; Element</span></span>
 <span data-ttu-id="863c6-103">Indique s’il faut appliquer la condition de configuration d’ordinateur selon laquelle les algorithmes de chiffrement doivent être conformes aux normes FIPS (Federal Information Processing Standard).</span><span class="sxs-lookup"><span data-stu-id="863c6-103">Specifies whether to enforce a computer configuration requirement that cryptographic algorithms must comply with the Federal Information Processing Standards (FIPS).</span></span>  

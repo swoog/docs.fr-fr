@@ -1,27 +1,19 @@
 ---
 title: Minuteurs de thread (C#)
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 52ed71e8-4fd9-43a4-ae40-04cce7cff23f
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 9702360408340b28fcdcc8f197467a002f77ee51
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c2be9fef0b3f6f3db7ae8c9a519ece0cb64b6f49
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323441"
 ---
-# <a name="thread-timers-c"></a><span data-ttu-id="8254e-102">Minuteurs de thread (C#)</span><span class="sxs-lookup"><span data-stu-id="8254e-102">Thread Timers (C#)</span></span>
-<span data-ttu-id="8254e-103">La classe <xref:System.Threading.Timer?displayProperty=nameWithType> est utile pour exécuter périodiquement une tâche sur un thread séparé.</span><span class="sxs-lookup"><span data-stu-id="8254e-103">The <xref:System.Threading.Timer?displayProperty=nameWithType> class is useful for periodically running a task on a separate thread.</span></span> <span data-ttu-id="8254e-104">Par exemple, vous pouvez utiliser un minuteur de thread pour vérifier l’état et l’intégrité d’une base de données ou pour sauvegarder des fichiers essentiels.</span><span class="sxs-lookup"><span data-stu-id="8254e-104">For example, you could use a thread timer to check the status and integrity of a database or to back up critical files.</span></span>  
+# <a name="thread-timers-c"></a><span data-ttu-id="97554-102">Minuteurs de thread (C#)</span><span class="sxs-lookup"><span data-stu-id="97554-102">Thread Timers (C#)</span></span>
+<span data-ttu-id="97554-103">La classe <xref:System.Threading.Timer?displayProperty=nameWithType> est utile pour exécuter périodiquement une tâche sur un thread séparé.</span><span class="sxs-lookup"><span data-stu-id="97554-103">The <xref:System.Threading.Timer?displayProperty=nameWithType> class is useful for periodically running a task on a separate thread.</span></span> <span data-ttu-id="97554-104">Par exemple, vous pouvez utiliser un minuteur de thread pour vérifier l’état et l’intégrité d’une base de données ou pour sauvegarder des fichiers essentiels.</span><span class="sxs-lookup"><span data-stu-id="97554-104">For example, you could use a thread timer to check the status and integrity of a database or to back up critical files.</span></span>  
   
-## <a name="thread-timer-example"></a><span data-ttu-id="8254e-105">Exemple de minuteur de thread</span><span class="sxs-lookup"><span data-stu-id="8254e-105">Thread Timer Example</span></span>  
- <span data-ttu-id="8254e-106">L’exemple suivant démarre une tâche toutes les deux secondes et utilise un indicateur pour lancer la méthode <xref:System.IDisposable.Dispose%2A> qui arrête le minuteur.</span><span class="sxs-lookup"><span data-stu-id="8254e-106">The following example starts a task every two seconds and uses a flag to initiate the <xref:System.IDisposable.Dispose%2A> method that stops the timer.</span></span> <span data-ttu-id="8254e-107">Cet exemple publie l’état dans la fenêtre de sortie.</span><span class="sxs-lookup"><span data-stu-id="8254e-107">This example posts status to the output window.</span></span>  
+## <a name="thread-timer-example"></a><span data-ttu-id="97554-105">Exemple de minuteur de thread</span><span class="sxs-lookup"><span data-stu-id="97554-105">Thread Timer Example</span></span>  
+ <span data-ttu-id="97554-106">L’exemple suivant démarre une tâche toutes les deux secondes et utilise un indicateur pour lancer la méthode <xref:System.IDisposable.Dispose%2A> qui arrête le minuteur.</span><span class="sxs-lookup"><span data-stu-id="97554-106">The following example starts a task every two seconds and uses a flag to initiate the <xref:System.IDisposable.Dispose%2A> method that stops the timer.</span></span> <span data-ttu-id="97554-107">Cet exemple publie l’état dans la fenêtre de sortie.</span><span class="sxs-lookup"><span data-stu-id="97554-107">This example posts status to the output window.</span></span>  
   
 ```csharp  
 private class StateObjClass  
@@ -75,8 +67,8 @@ private void TimerTask(object StateObj)
 }  
 ```  
   
- <span data-ttu-id="8254e-108">Les minuteurs de thread sont particulièrement utiles quand l’objet <xref:System.Windows.Forms.Timer?displayProperty=nameWithType> n’est pas disponible, par exemple quand vous développez des applications console.</span><span class="sxs-lookup"><span data-stu-id="8254e-108">Thread timers are particularly useful when the <xref:System.Windows.Forms.Timer?displayProperty=nameWithType> object is unavailable, such as when you are developing console applications.</span></span>  
+ <span data-ttu-id="97554-108">Les minuteurs de thread sont particulièrement utiles quand l’objet <xref:System.Windows.Forms.Timer?displayProperty=nameWithType> n’est pas disponible, par exemple quand vous développez des applications console.</span><span class="sxs-lookup"><span data-stu-id="97554-108">Thread timers are particularly useful when the <xref:System.Windows.Forms.Timer?displayProperty=nameWithType> object is unavailable, such as when you are developing console applications.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8254e-109">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="8254e-109">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="97554-109">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="97554-109">See Also</span></span>  
  <xref:System.Threading>  
- [<span data-ttu-id="8254e-110">Applications multithread (C#)</span><span class="sxs-lookup"><span data-stu-id="8254e-110">Multithreaded Applications (C#)</span></span>](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)
+ [<span data-ttu-id="97554-110">Applications multithread (C#)</span><span class="sxs-lookup"><span data-stu-id="97554-110">Multithreaded Applications (C#)</span></span>](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)

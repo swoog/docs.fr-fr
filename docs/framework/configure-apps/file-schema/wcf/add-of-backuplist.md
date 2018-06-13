@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745550"
 ---
 # <a name="ltaddgt-of-ltbackuplistgt"></a><span data-ttu-id="a4de0-102">&lt;add&gt; de &lt;backupList&gt;</span><span class="sxs-lookup"><span data-stu-id="a4de0-102">&lt;add&gt; of &lt;backupList&gt;</span></span>
 <span data-ttu-id="a4de0-103">Représente un élément de configuration qui définit un élément de point de terminaison de sauvegarde.</span><span class="sxs-lookup"><span data-stu-id="a4de0-103">Represents a configuration element that defines a backup endpoint element.</span></span>  

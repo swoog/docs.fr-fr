@@ -1,14 +1,6 @@
 ---
-title: "ISymUnmanagedMethod::GetOffset, méthode"
-ms.custom: 
+title: ISymUnmanagedMethod::GetOffset, méthode
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ISymUnmanagedMethod.GetOffset
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: 8bf3cb62-89bf-4159-ad53-de606aba89e8
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1c60d35b63d083ce4e23119e3fcb5e64c518f0ac
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 6d88e9279f70c36fd8a9c626972e33305cded5fb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33424389"
 ---
-# <a name="isymunmanagedmethodgetoffset-method"></a><span data-ttu-id="5d1f4-102">ISymUnmanagedMethod::GetOffset, méthode</span><span class="sxs-lookup"><span data-stu-id="5d1f4-102">ISymUnmanagedMethod::GetOffset Method</span></span>
-<span data-ttu-id="5d1f4-103">Retourne l’offset dans cette méthode qui correspond à une position donnée dans un document.</span><span class="sxs-lookup"><span data-stu-id="5d1f4-103">Returns the offset within this method that corresponds to a given position within a document.</span></span>  
+# <a name="isymunmanagedmethodgetoffset-method"></a><span data-ttu-id="0019b-102">ISymUnmanagedMethod::GetOffset, méthode</span><span class="sxs-lookup"><span data-stu-id="0019b-102">ISymUnmanagedMethod::GetOffset Method</span></span>
+<span data-ttu-id="0019b-103">Retourne l’offset dans cette méthode qui correspond à une position donnée dans un document.</span><span class="sxs-lookup"><span data-stu-id="0019b-103">Returns the offset within this method that corresponds to a given position within a document.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5d1f4-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="5d1f4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0019b-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="0019b-104">Syntax</span></span>  
   
 ```  
 HRESULT GetOffset(  
@@ -48,24 +37,24 @@ HRESULT GetOffset(
     [out, retval] ULONG32*        pRetVal);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="5d1f4-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="5d1f4-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="0019b-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="0019b-105">Parameters</span></span>  
  `document`  
- <span data-ttu-id="5d1f4-106">[in] Pointeur vers le document pour lequel l’offset est demandé.</span><span class="sxs-lookup"><span data-stu-id="5d1f4-106">[in] A pointer to the document for which the offset is requested.</span></span>  
+ <span data-ttu-id="0019b-106">[in] Pointeur vers le document pour lequel l’offset est demandé.</span><span class="sxs-lookup"><span data-stu-id="0019b-106">[in] A pointer to the document for which the offset is requested.</span></span>  
   
  `line`  
- <span data-ttu-id="5d1f4-107">[in] Ligne du document pour lequel l’offset est demandé.</span><span class="sxs-lookup"><span data-stu-id="5d1f4-107">[in] The document line for which the offset is requested.</span></span>  
+ <span data-ttu-id="0019b-107">[in] Ligne du document pour lequel l’offset est demandé.</span><span class="sxs-lookup"><span data-stu-id="0019b-107">[in] The document line for which the offset is requested.</span></span>  
   
  `column`  
- <span data-ttu-id="5d1f4-108">[in] Colonne du document pour lequel l’offset est demandé.</span><span class="sxs-lookup"><span data-stu-id="5d1f4-108">[in] The document column for which the offset is requested.</span></span>  
+ <span data-ttu-id="0019b-108">[in] Colonne du document pour lequel l’offset est demandé.</span><span class="sxs-lookup"><span data-stu-id="0019b-108">[in] The document column for which the offset is requested.</span></span>  
   
  `pRetVal`  
- <span data-ttu-id="5d1f4-109">[out] Un pointeur vers un `ULONG32` qui reçoit les offsets.</span><span class="sxs-lookup"><span data-stu-id="5d1f4-109">[out] A pointer to a `ULONG32` that receives the offsets.</span></span>  
+ <span data-ttu-id="0019b-109">[out] Un pointeur vers un `ULONG32` qui reçoit les offsets.</span><span class="sxs-lookup"><span data-stu-id="0019b-109">[out] A pointer to a `ULONG32` that receives the offsets.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="5d1f4-110">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="5d1f4-110">Return Value</span></span>  
- <span data-ttu-id="5d1f4-111">S_OK si la méthode réussit ; Sinon, E_FAIL ou un autre code d’erreur.</span><span class="sxs-lookup"><span data-stu-id="5d1f4-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="0019b-110">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="0019b-110">Return Value</span></span>  
+ <span data-ttu-id="0019b-111">S_OK si la méthode réussit ; Sinon, E_FAIL ou un autre code d’erreur.</span><span class="sxs-lookup"><span data-stu-id="0019b-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5d1f4-112">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="5d1f4-112">Requirements</span></span>  
- <span data-ttu-id="5d1f4-113">**En-tête :** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="5d1f4-113">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0019b-112">Spécifications</span><span class="sxs-lookup"><span data-stu-id="0019b-112">Requirements</span></span>  
+ <span data-ttu-id="0019b-113">**En-tête :** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="0019b-113">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5d1f4-114">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="5d1f4-114">See Also</span></span>  
- [<span data-ttu-id="5d1f4-115">ISymUnmanagedMethod, interface</span><span class="sxs-lookup"><span data-stu-id="5d1f4-115">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+## <a name="see-also"></a><span data-ttu-id="0019b-114">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="0019b-114">See Also</span></span>  
+ [<span data-ttu-id="0019b-115">ISymUnmanagedMethod, interface</span><span class="sxs-lookup"><span data-stu-id="0019b-115">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

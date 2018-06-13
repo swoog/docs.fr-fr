@@ -1,39 +1,28 @@
 ---
 title: 3405 - EncryptedDataProcessingStart
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: bdb6e4e8-ec85-4629-a43a-7836d445ecab
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3b53f52fdb9d0c639e1dd9f38b0197c6812d083b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 67462fa77bd3d9ca7932e4177ac4a9c0ae513697
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33463740"
 ---
-# <a name="3405---encrypteddataprocessingstart"></a><span data-ttu-id="99258-102">3405 - EncryptedDataProcessingStart</span><span class="sxs-lookup"><span data-stu-id="99258-102">3405 - EncryptedDataProcessingStart</span></span>
-## <a name="properties"></a><span data-ttu-id="99258-103">Propriétés</span><span class="sxs-lookup"><span data-stu-id="99258-103">Properties</span></span>  
+# <a name="3405---encrypteddataprocessingstart"></a><span data-ttu-id="ef843-102">3405 - EncryptedDataProcessingStart</span><span class="sxs-lookup"><span data-stu-id="ef843-102">3405 - EncryptedDataProcessingStart</span></span>
+## <a name="properties"></a><span data-ttu-id="ef843-103">Propriétés</span><span class="sxs-lookup"><span data-stu-id="ef843-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="99258-104">ID</span><span class="sxs-lookup"><span data-stu-id="99258-104">ID</span></span>|<span data-ttu-id="99258-105">3405</span><span class="sxs-lookup"><span data-stu-id="99258-105">3405</span></span>|  
-|<span data-ttu-id="99258-106">Mots clés</span><span class="sxs-lookup"><span data-stu-id="99258-106">Keywords</span></span>|<span data-ttu-id="99258-107">Sécurité</span><span class="sxs-lookup"><span data-stu-id="99258-107">Security</span></span>|  
-|<span data-ttu-id="99258-108">Niveau</span><span class="sxs-lookup"><span data-stu-id="99258-108">Level</span></span>|<span data-ttu-id="99258-109">Verbose</span><span class="sxs-lookup"><span data-stu-id="99258-109">Verbose</span></span>|  
-|<span data-ttu-id="99258-110">Canal</span><span class="sxs-lookup"><span data-stu-id="99258-110">Channel</span></span>|<span data-ttu-id="99258-111">Microsoft-Windows-Application Server-Applications/Débogage</span><span class="sxs-lookup"><span data-stu-id="99258-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="ef843-104">ID</span><span class="sxs-lookup"><span data-stu-id="ef843-104">ID</span></span>|<span data-ttu-id="ef843-105">3405</span><span class="sxs-lookup"><span data-stu-id="ef843-105">3405</span></span>|  
+|<span data-ttu-id="ef843-106">Mots clés</span><span class="sxs-lookup"><span data-stu-id="ef843-106">Keywords</span></span>|<span data-ttu-id="ef843-107">Sécurité</span><span class="sxs-lookup"><span data-stu-id="ef843-107">Security</span></span>|  
+|<span data-ttu-id="ef843-108">Niveau</span><span class="sxs-lookup"><span data-stu-id="ef843-108">Level</span></span>|<span data-ttu-id="ef843-109">Verbose</span><span class="sxs-lookup"><span data-stu-id="ef843-109">Verbose</span></span>|  
+|<span data-ttu-id="ef843-110">Canal</span><span class="sxs-lookup"><span data-stu-id="ef843-110">Channel</span></span>|<span data-ttu-id="ef843-111">Microsoft-Windows-Application Server-Applications/Débogage</span><span class="sxs-lookup"><span data-stu-id="ef843-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="99258-112">Description</span><span class="sxs-lookup"><span data-stu-id="99258-112">Description</span></span>  
- <span data-ttu-id="99258-113">Cet événement est émis lorsque le traitement des données chiffrées a commencé.</span><span class="sxs-lookup"><span data-stu-id="99258-113">This event is emitted when the encrypted data processing has started.</span></span>  
+## <a name="description"></a><span data-ttu-id="ef843-112">Description</span><span class="sxs-lookup"><span data-stu-id="ef843-112">Description</span></span>  
+ <span data-ttu-id="ef843-113">Cet événement est émis lorsque le traitement des données chiffrées a commencé.</span><span class="sxs-lookup"><span data-stu-id="ef843-113">This event is emitted when the encrypted data processing has started.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="99258-114">Message</span><span class="sxs-lookup"><span data-stu-id="99258-114">Message</span></span>  
- <span data-ttu-id="99258-115">Début du traitement des données chiffrées.</span><span class="sxs-lookup"><span data-stu-id="99258-115">Encrypted data processing started.</span></span>  
+## <a name="message"></a><span data-ttu-id="ef843-114">Message</span><span class="sxs-lookup"><span data-stu-id="ef843-114">Message</span></span>  
+ <span data-ttu-id="ef843-115">Début du traitement des données chiffrées.</span><span class="sxs-lookup"><span data-stu-id="ef843-115">Encrypted data processing started.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="99258-116">Détails</span><span class="sxs-lookup"><span data-stu-id="99258-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="ef843-116">Détails</span><span class="sxs-lookup"><span data-stu-id="ef843-116">Details</span></span>

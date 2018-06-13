@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748254"
 ---
 # <a name="ltbookmarkresumptionquerygt-of-wcf"></a><span data-ttu-id="5bb21-102">&lt;bookmarkResumptionQuery&gt; de WCF</span><span class="sxs-lookup"><span data-stu-id="5bb21-102">&lt;bookmarkResumptionQuery&gt; of WCF</span></span>
 <span data-ttu-id="5bb21-103">Représente une requête qui permet d'effectuer le suivi de la reprise d'un signet dans une instance de flux de travail.</span><span class="sxs-lookup"><span data-stu-id="5bb21-103">Represents a query that is used to track resumption of a bookmark within a workflow instance.</span></span> <span data-ttu-id="5bb21-104">La requête est nécessaire pour qu'un participant au suivi puisse s'abonner à des enregistrements de reprise de signet.</span><span class="sxs-lookup"><span data-stu-id="5bb21-104">The query is necessary for a tracking participant to subscribe to bookmark resumption records.</span></span>  

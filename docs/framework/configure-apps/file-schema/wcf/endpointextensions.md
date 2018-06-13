@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752349"
 ---
 # <a name="ltendpointextensionsgt"></a><span data-ttu-id="099a5-102">&lt;endpointExtensions&gt;</span><span class="sxs-lookup"><span data-stu-id="099a5-102">&lt;endpointExtensions&gt;</span></span>
 <span data-ttu-id="099a5-103">Cette section inscrit un nouveau point de terminaison standard dans la section des extensions du fichier de configuration machine ou d’application.</span><span class="sxs-lookup"><span data-stu-id="099a5-103">This section registers a new standard endpoint in the extensions section in a machine or application configuration file.</span></span> <span data-ttu-id="099a5-104">Vous pouvez ajouter un point de terminaison standard à cette collection à l'aide du mot clé `add` et affecter à l'attribut `type` de l'élément le type du point de terminaison et à l'attribut `name` le nom du point de terminaison standard.</span><span class="sxs-lookup"><span data-stu-id="099a5-104">You can add a standard endpoint to this collection by using the `add` keyword, and setting the `type` attribute of the element to the endpoint type, as well as the `name` attribute to the name of the standard endpoint.</span></span>  

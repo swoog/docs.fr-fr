@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744910"
 ---
 # <a name="ltdependentassemblygt-element"></a><span data-ttu-id="f4d84-102">&lt;dependentAssembly&gt; élément</span><span class="sxs-lookup"><span data-stu-id="f4d84-102">&lt;dependentAssembly&gt; Element</span></span>
 <span data-ttu-id="f4d84-103">Encapsule la stratégie de liaisons et l’emplacement de chaque assembly.</span><span class="sxs-lookup"><span data-stu-id="f4d84-103">Encapsulates binding policy and assembly location for each assembly.</span></span> <span data-ttu-id="f4d84-104">Utilisez une `dependentAssembly` élément pour chaque assembly.</span><span class="sxs-lookup"><span data-stu-id="f4d84-104">Use one `dependentAssembly` element for each assembly.</span></span>  

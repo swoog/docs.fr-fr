@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359260"
 ---
 # <a name="securing-wcf-data-services"></a><span data-ttu-id="0e928-102">Sécurisation de WCF Data Services</span><span class="sxs-lookup"><span data-stu-id="0e928-102">Securing WCF Data Services</span></span>
 <span data-ttu-id="0e928-103">Cette rubrique décrit les considérations sur la sécurité qui sont spécifiques au développement, au déploiement et à l'exécution de [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] et des applications qui accèdent aux services prenant en charge l'[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)].</span><span class="sxs-lookup"><span data-stu-id="0e928-103">This topic describes security considerations that are specific to developing, deploying, and running [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] and applications that access services that support the [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)].</span></span> <span data-ttu-id="0e928-104">Vous devez également suivre ces recommandations pour créer des applications [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] sécurisées.</span><span class="sxs-lookup"><span data-stu-id="0e928-104">You should also follow recommendations for creating secure [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] applications.</span></span>  

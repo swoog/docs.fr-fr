@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752544"
 ---
 # <a name="ltauthenticationgt-of-ltservicecertificategt-element"></a><span data-ttu-id="38a77-102">&lt;authentication&gt;, élément de &lt;serviceCertificate&gt;</span><span class="sxs-lookup"><span data-stu-id="38a77-102">&lt;authentication&gt; of &lt;serviceCertificate&gt; Element</span></span>
 <span data-ttu-id="38a77-103">Spécifie les paramètres utilisés par le proxy client pour authentifier les certificats de service obtenus à l'aide de la négociation SSL/TLS.</span><span class="sxs-lookup"><span data-stu-id="38a77-103">Specifies the settings used by the client proxy to authenticate service certificates that are obtained using SSL/TLS negotiation.</span></span>  

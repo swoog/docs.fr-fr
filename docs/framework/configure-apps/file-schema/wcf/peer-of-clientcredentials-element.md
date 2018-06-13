@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746473"
 ---
 # <a name="ltpeergt-of-ltclientcredentialsgt-element"></a><span data-ttu-id="6002a-102">&lt;peer&gt;, élément de &lt;clientCredentials&gt;</span><span class="sxs-lookup"><span data-stu-id="6002a-102">&lt;peer&gt; of &lt;clientCredentials&gt; Element</span></span>
 <span data-ttu-id="6002a-103">Spécifie les informations d'identification utilisées lors de l'authentification de clients de réseau pair à pair.</span><span class="sxs-lookup"><span data-stu-id="6002a-103">Specifies credentials used when authenticating peer-to-peer clients.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752986"
 ---
 # <a name="ltaddgt-of-ltknowncertificatesgt"></a><span data-ttu-id="9b472-102">&lt;add&gt; de &lt;knownCertificates&gt;</span><span class="sxs-lookup"><span data-stu-id="9b472-102">&lt;add&gt; of &lt;knownCertificates&gt;</span></span>
 <span data-ttu-id="9b472-103">Ajoute un certificat X.509 à la collection de certificats connus.</span><span class="sxs-lookup"><span data-stu-id="9b472-103">Adds an X.509 certificate to the collection of known certificates.</span></span>  
