@@ -25,6 +25,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172327"
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a><span data-ttu-id="17ddb-102">Comment : vérifier que des chaînes sont dans un format d'adresse de messagerie valide</span><span class="sxs-lookup"><span data-stu-id="17ddb-102">How to: Verify that Strings Are in Valid Email Format</span></span>
 <span data-ttu-id="17ddb-103">L'exemple suivant utilise une expression régulière pour vérifier qu'une chaîne est dans un format d'adresse de messagerie valide.</span><span class="sxs-lookup"><span data-stu-id="17ddb-103">The following example uses a regular expression to verify that a string is in valid email format.</span></span>  

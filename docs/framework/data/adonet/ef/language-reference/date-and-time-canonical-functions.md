@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766746"
 ---
 # <a name="date-and-time-canonical-functions"></a><span data-ttu-id="78ca3-102">Fonctions de date et d'heure canoniques</span><span class="sxs-lookup"><span data-stu-id="78ca3-102">Date and Time Canonical Functions</span></span>
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="78ca3-103"> comprend des fonctions canoniques de date et d'heure.</span><span class="sxs-lookup"><span data-stu-id="78ca3-103"> includes date and time canonical functions.</span></span>  

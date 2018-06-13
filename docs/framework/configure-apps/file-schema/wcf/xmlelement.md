@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767646"
 ---
 # <a name="ltxmlelementgt"></a><span data-ttu-id="45d85-102">&lt;xmlElement&gt;</span><span class="sxs-lookup"><span data-stu-id="45d85-102">&lt;xmlElement&gt;</span></span>
 <span data-ttu-id="45d85-103">Spécifie un élément XML qui est envoyé dans le corps du message au service d'émission de jeton de sécurité (STS) lors de la demande d'un jeton.</span><span class="sxs-lookup"><span data-stu-id="45d85-103">Specifies an XML element that is sent in the message body to the Security Token Service when requesting a token.</span></span>  

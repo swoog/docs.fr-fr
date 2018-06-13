@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugModule::GetName, méthode"
-ms.custom: 
+title: ICorDebugModule::GetName, méthode
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugModule.GetName
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: db499637-7ba9-421e-b8b1-35856995e80b
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 64be936277b0ebe04248ae2913a882b628ee363f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: bebee019595143d25e950719ad62d9e10b76a3e9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33418904"
 ---
-# <a name="icordebugmodulegetname-method"></a><span data-ttu-id="1e52f-102">ICorDebugModule::GetName, méthode</span><span class="sxs-lookup"><span data-stu-id="1e52f-102">ICorDebugModule::GetName Method</span></span>
-<span data-ttu-id="1e52f-103">Obtient le nom de fichier du module.</span><span class="sxs-lookup"><span data-stu-id="1e52f-103">Gets the file name of the module.</span></span>  
+# <a name="icordebugmodulegetname-method"></a><span data-ttu-id="8a8c2-102">ICorDebugModule::GetName, méthode</span><span class="sxs-lookup"><span data-stu-id="8a8c2-102">ICorDebugModule::GetName Method</span></span>
+<span data-ttu-id="8a8c2-103">Obtient le nom de fichier du module.</span><span class="sxs-lookup"><span data-stu-id="8a8c2-103">Gets the file name of the module.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1e52f-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="1e52f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8a8c2-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="8a8c2-104">Syntax</span></span>  
   
 ```  
 HRESULT GetName(  
@@ -48,28 +37,28 @@ HRESULT GetName(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="1e52f-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="1e52f-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="8a8c2-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="8a8c2-105">Parameters</span></span>  
  `cchname`  
- <span data-ttu-id="1e52f-106">[in] Taille du tableau `szName`.</span><span class="sxs-lookup"><span data-stu-id="1e52f-106">[in] The size of the `szName` array.</span></span>  
+ <span data-ttu-id="8a8c2-106">[in] Taille du tableau `szName`.</span><span class="sxs-lookup"><span data-stu-id="8a8c2-106">[in] The size of the `szName` array.</span></span>  
   
  `pcchName`  
- <span data-ttu-id="1e52f-107">[in] Pointeur vers la longueur du nom retourné.</span><span class="sxs-lookup"><span data-stu-id="1e52f-107">[in] A pointer to the length of the returned name.</span></span>  
+ <span data-ttu-id="8a8c2-107">[in] Pointeur vers la longueur du nom retourné.</span><span class="sxs-lookup"><span data-stu-id="8a8c2-107">[in] A pointer to the length of the returned name.</span></span>  
   
  `szName`  
- <span data-ttu-id="1e52f-108">[out] Tableau qui stocke le nom retourné.</span><span class="sxs-lookup"><span data-stu-id="1e52f-108">[out] An array that stores the returned name.</span></span>  
+ <span data-ttu-id="8a8c2-108">[out] Tableau qui stocke le nom retourné.</span><span class="sxs-lookup"><span data-stu-id="8a8c2-108">[out] An array that stores the returned name.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="1e52f-109">Notes</span><span class="sxs-lookup"><span data-stu-id="1e52f-109">Remarks</span></span>  
- <span data-ttu-id="1e52f-110">Le `GetName` méthode retourne un HRESULT S_OK si le nom de fichier du module correspond au nom sur le disque.</span><span class="sxs-lookup"><span data-stu-id="1e52f-110">The `GetName` method returns an S_OK HRESULT if the module's file name matches the name on disk.</span></span> <span data-ttu-id="1e52f-111">`GetName`Retourne une valeur HRESULT S_FALSE si le nom est créé, comme pour un module dynamique ou en mémoire.</span><span class="sxs-lookup"><span data-stu-id="1e52f-111">`GetName` returns an S_FALSE HRESULT if the name is fabricated, such as for a dynamic or in-memory module.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8a8c2-109">Notes</span><span class="sxs-lookup"><span data-stu-id="8a8c2-109">Remarks</span></span>  
+ <span data-ttu-id="8a8c2-110">Le `GetName` méthode retourne un HRESULT S_OK si le nom de fichier du module correspond au nom sur le disque.</span><span class="sxs-lookup"><span data-stu-id="8a8c2-110">The `GetName` method returns an S_OK HRESULT if the module's file name matches the name on disk.</span></span> <span data-ttu-id="8a8c2-111">`GetName` Retourne une valeur HRESULT S_FALSE si le nom est créé, comme pour un module dynamique ou en mémoire.</span><span class="sxs-lookup"><span data-stu-id="8a8c2-111">`GetName` returns an S_FALSE HRESULT if the name is fabricated, such as for a dynamic or in-memory module.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1e52f-112">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="1e52f-112">Requirements</span></span>  
- <span data-ttu-id="1e52f-113">**Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1e52f-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8a8c2-112">Spécifications</span><span class="sxs-lookup"><span data-stu-id="8a8c2-112">Requirements</span></span>  
+ <span data-ttu-id="8a8c2-113">**Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8a8c2-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1e52f-114">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="1e52f-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="8a8c2-114">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="8a8c2-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="1e52f-115">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1e52f-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="8a8c2-115">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8a8c2-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="1e52f-116">**Versions du .NET framework :**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1e52f-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="8a8c2-116">**Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8a8c2-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1e52f-117">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="1e52f-117">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="8a8c2-117">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="8a8c2-117">See Also</span></span>  
     
  

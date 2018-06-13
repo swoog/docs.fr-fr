@@ -13,6 +13,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172291"
 ---
 # <a name="extern-c-reference"></a><span data-ttu-id="fb982-102">extern (référence C#)</span><span class="sxs-lookup"><span data-stu-id="fb982-102">extern (C# Reference)</span></span>
 <span data-ttu-id="fb982-103">Le modificateur `extern` permet de déclarer une méthode qui est implémentée en externe.</span><span class="sxs-lookup"><span data-stu-id="fb982-103">The `extern` modifier is used to declare a method that is implemented externally.</span></span> <span data-ttu-id="fb982-104">Le modificateur `extern` est souvent utilisé avec l'attribut `DllImport` lors de l'utilisation de services Interop à appeler dans du code non managé.</span><span class="sxs-lookup"><span data-stu-id="fb982-104">A common use of the `extern` modifier is with the `DllImport` attribute when you are using Interop services to call into unmanaged code.</span></span> <span data-ttu-id="fb982-105">Dans ce cas, la méthode doit également être déclarée comme `static`, comme indiqué dans l'exemple suivant :</span><span class="sxs-lookup"><span data-stu-id="fb982-105">In this case, the method must also be declared as `static`, as shown in the following example:</span></span>  

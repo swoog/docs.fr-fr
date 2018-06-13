@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171939"
 ---
 # <a name="typeof-c-reference"></a><span data-ttu-id="653b0-102">typeof (référence C#)</span><span class="sxs-lookup"><span data-stu-id="653b0-102">typeof (C# Reference)</span></span>
 <span data-ttu-id="653b0-103">Permet d’obtenir l’objet `System.Type` pour un type.</span><span class="sxs-lookup"><span data-stu-id="653b0-103">Used to obtain the `System.Type` object for a type.</span></span> <span data-ttu-id="653b0-104">Une expression `typeof` prend la forme suivante :</span><span class="sxs-lookup"><span data-stu-id="653b0-104">A `typeof` expression takes the following form:</span></span>  

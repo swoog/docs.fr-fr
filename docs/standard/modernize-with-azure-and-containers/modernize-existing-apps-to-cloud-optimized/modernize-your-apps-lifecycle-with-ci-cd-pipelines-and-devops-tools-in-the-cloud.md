@@ -9,6 +9,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33957899"
 ---
 # <a name="modernize-your-apps-lifecycle-with-cicd-pipelines-and-devops-tools-in-the-cloud"></a><span data-ttu-id="78861-103">Moderniser du cycle de vie de votre application avec l’élément de configuration/CD pipelines et les outils DevOps dans le cloud</span><span class="sxs-lookup"><span data-stu-id="78861-103">Modernize your app's lifecycle with CI/CD pipelines and DevOps tools in the cloud</span></span>
 

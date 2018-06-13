@@ -9,6 +9,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172407"
 ---
 # <a name="restrictions-on-using-accessibility-levels-c-reference"></a><span data-ttu-id="ede26-102">Limitations sur l'utilisation des niveaux d'accessibilité (référence C#)</span><span class="sxs-lookup"><span data-stu-id="ede26-102">Restrictions on Using Accessibility Levels (C# Reference)</span></span>
 <span data-ttu-id="ede26-103">Lorsque vous spécifiez un type dans une déclaration, vérifiez si le niveau d’accessibilité du type dépend du niveau d’accessibilité d’un membre ou d’un autre type.</span><span class="sxs-lookup"><span data-stu-id="ede26-103">When you specify a type in a declaration, check whether the accessibility level of the type is dependent on the accessibility level of a member or of another type.</span></span> <span data-ttu-id="ede26-104">Par exemple, la classe de base directe doit être au moins aussi accessible que la classe dérivée.</span><span class="sxs-lookup"><span data-stu-id="ede26-104">For example, the direct base class must be at least as accessible as the derived class.</span></span> <span data-ttu-id="ede26-105">Les déclarations suivantes entraînent une erreur du compilateur, car la classe de base `BaseClass` est moins accessible que `MyClass` :</span><span class="sxs-lookup"><span data-stu-id="ede26-105">The following declarations cause a compiler error because the base class `BaseClass` is less accessible than `MyClass`:</span></span>  
