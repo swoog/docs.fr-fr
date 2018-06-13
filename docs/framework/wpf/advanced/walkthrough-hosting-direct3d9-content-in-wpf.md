@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546166"
 ---
 # <a name="walkthrough-hosting-direct3d9-content-in-wpf"></a>Procédure pas à pas : hébergement de contenu Direct3D9 dans WPF
 Cette procédure pas à pas montre comment héberger du contenu Direct3D9 dans une application Windows Presentation Foundation (WPF).  

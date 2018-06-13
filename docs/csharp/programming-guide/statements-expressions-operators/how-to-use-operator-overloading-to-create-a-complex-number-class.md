@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33328862"
 ---
 # <a name="how-to-use-operator-overloading-to-create-a-complex-number-class-c-programming-guide"></a>Comment : utiliser la surcharge d'opérateur pour créer une classe de nombres complexes (Guide de programmation C#)
 Cet exemple montre comment utiliser la surcharge d’opérateur pour créer une classe de nombres complexes `Complex` qui définit une addition complexe. Le programme affiche les parties imaginaire et réelle des nombres et le résultat de l’addition en utilisant un remplacement de la méthode `ToString`.  

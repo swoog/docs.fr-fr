@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546669"
 ---
 # <a name="how-to-navigate-back-through-navigation-history"></a>Comment : naviguer par le biais de l’historique de Navigation
 Cet exemple illustre comment naviguer entrées vers l’arrière de l’historique de navigation.  

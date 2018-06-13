@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359313"
 ---
 # <a name="inserting-an-image-from-a-file"></a>Insertion d'une image à partir d'un fichier
 Vous pouvez écrire des objets binaires volumineux (BLOB) dans une base de données sous forme de données de type binaire ou caractère en fonction du type du champ de votre source de données. BLOB est un terme générique qui fait référence aux types de données `text`, `ntext` et `image` qui contiennent généralement des documents et des images.  

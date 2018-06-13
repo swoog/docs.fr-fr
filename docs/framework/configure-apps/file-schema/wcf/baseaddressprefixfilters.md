@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358539"
 ---
 # <a name="ltbaseaddressprefixfiltersgt"></a>&lt;baseAddressPrefixFilters&gt;
 Représente une collection de configuration qui spécifient passent par des filtres qui fournissent un mécanisme permettant de sélectionner les liaisons de Internet Information Services (IIS) appropriées lors de l’hébergement de l’application de Windows Communication Foundation (WCF) dans IIS.  

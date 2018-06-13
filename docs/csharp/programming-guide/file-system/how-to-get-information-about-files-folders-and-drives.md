@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338537"
 ---
 # <a name="how-to-get-information-about-files-folders-and-drives--c-programming-guide"></a>Guide pratique pour obtenir des informations sur les fichiers, dossiers et lecteurs (Guide de programmation C#)
 Dans le .NET Framework, vous pouvez accéder aux informations sur le système de fichiers en utilisant les classes suivantes :  

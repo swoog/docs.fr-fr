@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330331"
 ---
 # <a name="pointer-expressions-c-programming-guide"></a>Expressions de pointeur (Guide de programmation C#)
 Dans cette section, voici les expressions de pointeur qui sont examinées :  

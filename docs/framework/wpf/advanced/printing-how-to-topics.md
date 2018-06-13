@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546277"
 ---
 # <a name="printing-how-to-topics"></a>Rubriques "Comment" relatives à l'impression
 Les rubriques de cette section montrent comment utiliser l’impression et les fonctionnalités de gestion de système d’impression inclus avec [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] , ainsi que la nouvelle [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] chemin d’impression.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334533"
 ---
 # <a name="generics-in-the-run-time-c-programming-guide"></a>Génériques dans le runtime (Guide de programmation C#)
 Quand une méthode ou un type générique est compilé dans le langage intermédiaire Microsoft (MSIL), il ou elle contient des métadonnées qui l’identifient comme ayant des paramètres de type. La façon dont le langage MSIL d’un type générique est utilisé diffère selon que le paramètre de type fourni est un type valeur ou référence.  

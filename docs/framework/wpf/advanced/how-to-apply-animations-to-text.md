@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545436"
 ---
 # <a name="how-to-apply-animations-to-text"></a>Comment : appliquer des animations à du texte
 Les animations peuvent modifier l’affichage et l’apparence du texte dans votre application. Les exemples suivants utilisent différents types d’animations pour affecter l’affichage du texte dans un <xref:System.Windows.Controls.TextBlock> contrôle.  
