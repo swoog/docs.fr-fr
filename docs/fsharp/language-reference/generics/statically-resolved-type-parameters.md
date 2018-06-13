@@ -7,6 +7,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34233780"
 ---
 # <a name="statically-resolved-type-parameters"></a><span data-ttu-id="e49c8-103">Paramètres de type résolus statiquement</span><span class="sxs-lookup"><span data-stu-id="e49c8-103">Statically Resolved Type Parameters</span></span>
 
