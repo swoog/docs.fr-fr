@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764695"
 ---
 # <a name="input-character-set-entity-sql"></a><span data-ttu-id="f73cb-102">Jeu de caractères en entrée (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="f73cb-102">Input Character Set (Entity SQL)</span></span>
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="f73cb-103"> accepte les caractères UNICODE encodés en UTF-16.</span><span class="sxs-lookup"><span data-stu-id="f73cb-103"> accepts UNICODE characters encoded in UTF-16.</span></span>  

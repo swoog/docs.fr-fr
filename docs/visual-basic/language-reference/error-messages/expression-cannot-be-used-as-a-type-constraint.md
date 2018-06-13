@@ -1,58 +1,50 @@
 ---
-title: "&#39; &lt;expression&gt;&#39; ne peut pas être utilisé comme contrainte de type"
+title: '&#39;&lt;expression&gt; &#39; ne peut pas être utilisé comme contrainte de type'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc32061
 - vbc32061
 helpviewer_keywords:
 - BC32061
 ms.assetid: b17821b7-fa14-4397-a211-6e2a14079f09
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c7271018a93c97ed90dc272f7f5404c0f0a22d42
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 8e9aad2ec65e037b15e19ca2e624fdc8f28bc94e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588172"
 ---
-# <a name="39ltexpressiongt39-cannot-be-used-as-a-type-constraint"></a><span data-ttu-id="2df2a-102">&#39; &lt;expression&gt;&#39; ne peut pas être utilisé comme contrainte de type</span><span class="sxs-lookup"><span data-stu-id="2df2a-102">&#39;&lt;expression&gt;&#39; cannot be used as a type constraint</span></span>
-<span data-ttu-id="2df2a-103">Une liste de contraintes contient une expression qui ne représente pas une contrainte valide sur un paramètre de type.</span><span class="sxs-lookup"><span data-stu-id="2df2a-103">A constraint list includes an expression that does not represent a valid constraint on a type parameter.</span></span>  
+# <a name="39ltexpressiongt39-cannot-be-used-as-a-type-constraint"></a><span data-ttu-id="49c50-102">&#39;&lt;expression&gt; &#39; ne peut pas être utilisé comme contrainte de type</span><span class="sxs-lookup"><span data-stu-id="49c50-102">&#39;&lt;expression&gt;&#39; cannot be used as a type constraint</span></span>
+<span data-ttu-id="49c50-103">Une liste de contraintes contient une expression qui ne représente pas une contrainte valide sur un paramètre de type.</span><span class="sxs-lookup"><span data-stu-id="49c50-103">A constraint list includes an expression that does not represent a valid constraint on a type parameter.</span></span>  
   
- <span data-ttu-id="2df2a-104">Une liste de contraintes impose des exigences sur l’argument de type passé au paramètre de type.</span><span class="sxs-lookup"><span data-stu-id="2df2a-104">A constraint list imposes requirements on the type argument passed to the type parameter.</span></span> <span data-ttu-id="2df2a-105">Vous pouvez spécifier les exigences suivantes dans toute combinaison :</span><span class="sxs-lookup"><span data-stu-id="2df2a-105">You can specify the following requirements in any combination:</span></span>  
+ <span data-ttu-id="49c50-104">Une liste de contraintes impose des exigences sur l’argument de type passé au paramètre de type.</span><span class="sxs-lookup"><span data-stu-id="49c50-104">A constraint list imposes requirements on the type argument passed to the type parameter.</span></span> <span data-ttu-id="49c50-105">Vous pouvez spécifier les exigences suivantes dans toute combinaison :</span><span class="sxs-lookup"><span data-stu-id="49c50-105">You can specify the following requirements in any combination:</span></span>  
   
--   <span data-ttu-id="2df2a-106">L’argument de type doit implémenter une ou plusieurs interfaces</span><span class="sxs-lookup"><span data-stu-id="2df2a-106">The type argument must implement one or more interfaces</span></span>  
+-   <span data-ttu-id="49c50-106">L’argument de type doit implémenter une ou plusieurs interfaces</span><span class="sxs-lookup"><span data-stu-id="49c50-106">The type argument must implement one or more interfaces</span></span>  
   
--   <span data-ttu-id="2df2a-107">L’argument de type doit hériter d’une classe au plus</span><span class="sxs-lookup"><span data-stu-id="2df2a-107">The type argument must inherit from at most one class</span></span>  
+-   <span data-ttu-id="49c50-107">L’argument de type doit hériter d’une classe au plus</span><span class="sxs-lookup"><span data-stu-id="49c50-107">The type argument must inherit from at most one class</span></span>  
   
--   <span data-ttu-id="2df2a-108">L’argument de type doit exposer un constructeur sans paramètre accessible par le code de création (ajoutez la contrainte `New` )</span><span class="sxs-lookup"><span data-stu-id="2df2a-108">The type argument must expose a parameterless constructor that the creating code can access (include the `New` constraint)</span></span>  
+-   <span data-ttu-id="49c50-108">L’argument de type doit exposer un constructeur sans paramètre accessible par le code de création (ajoutez la contrainte `New` )</span><span class="sxs-lookup"><span data-stu-id="49c50-108">The type argument must expose a parameterless constructor that the creating code can access (include the `New` constraint)</span></span>  
   
- <span data-ttu-id="2df2a-109">Si vous n’incluez pas de classe ni d’interface spécifique dans la liste de contraintes, vous pouvez imposer une condition plus générale en spécifiant l’une des obligations suivantes :</span><span class="sxs-lookup"><span data-stu-id="2df2a-109">If you do not include any specific class or interface in the constraint list, you can impose a more general requirement by specifying one of the following:</span></span>  
+ <span data-ttu-id="49c50-109">Si vous n’incluez pas de classe ni d’interface spécifique dans la liste de contraintes, vous pouvez imposer une condition plus générale en spécifiant l’une des obligations suivantes :</span><span class="sxs-lookup"><span data-stu-id="49c50-109">If you do not include any specific class or interface in the constraint list, you can impose a more general requirement by specifying one of the following:</span></span>  
   
--   <span data-ttu-id="2df2a-110">L’argument de type doit être un type valeur (ajoutez la contrainte `Structure` )</span><span class="sxs-lookup"><span data-stu-id="2df2a-110">The type argument must be a value type (include the `Structure` constraint)</span></span>  
+-   <span data-ttu-id="49c50-110">L’argument de type doit être un type valeur (ajoutez la contrainte `Structure` )</span><span class="sxs-lookup"><span data-stu-id="49c50-110">The type argument must be a value type (include the `Structure` constraint)</span></span>  
   
--   <span data-ttu-id="2df2a-111">L’argument de type doit être un type référence (ajoutez la contrainte `Class` )</span><span class="sxs-lookup"><span data-stu-id="2df2a-111">The type argument must be a reference type (include the `Class` constraint)</span></span>  
+-   <span data-ttu-id="49c50-111">L’argument de type doit être un type référence (ajoutez la contrainte `Class` )</span><span class="sxs-lookup"><span data-stu-id="49c50-111">The type argument must be a reference type (include the `Class` constraint)</span></span>  
   
- <span data-ttu-id="2df2a-112">Vous ne pouvez pas spécifier à la fois `Structure` et `Class` pour le même paramètre de type et vous ne pouvez pas spécifier l’une des deux plusieurs fois.</span><span class="sxs-lookup"><span data-stu-id="2df2a-112">You cannot specify both `Structure` and `Class` for the same type parameter, and you cannot specify either one more than once.</span></span>  
+ <span data-ttu-id="49c50-112">Vous ne pouvez pas spécifier à la fois `Structure` et `Class` pour le même paramètre de type et vous ne pouvez pas spécifier l’une des deux plusieurs fois.</span><span class="sxs-lookup"><span data-stu-id="49c50-112">You cannot specify both `Structure` and `Class` for the same type parameter, and you cannot specify either one more than once.</span></span>  
   
- <span data-ttu-id="2df2a-113">**ID d’erreur :** BC32061</span><span class="sxs-lookup"><span data-stu-id="2df2a-113">**Error ID:** BC32061</span></span>  
+ <span data-ttu-id="49c50-113">**ID d’erreur :** BC32061</span><span class="sxs-lookup"><span data-stu-id="49c50-113">**Error ID:** BC32061</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="2df2a-114">Pour corriger cette erreur</span><span class="sxs-lookup"><span data-stu-id="2df2a-114">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="49c50-114">Pour corriger cette erreur</span><span class="sxs-lookup"><span data-stu-id="49c50-114">To correct this error</span></span>  
   
--   <span data-ttu-id="2df2a-115">Vérifiez que l’expression et ses éléments sont correctement orthographiés.</span><span class="sxs-lookup"><span data-stu-id="2df2a-115">Verify that the expression and its elements are spelled correctly.</span></span>  
+-   <span data-ttu-id="49c50-115">Vérifiez que l’expression et ses éléments sont correctement orthographiés.</span><span class="sxs-lookup"><span data-stu-id="49c50-115">Verify that the expression and its elements are spelled correctly.</span></span>  
   
--   <span data-ttu-id="2df2a-116">Si l’expression ne répond pas à la précédente liste d’exigences, supprimez-la de la liste des contraintes.</span><span class="sxs-lookup"><span data-stu-id="2df2a-116">If the expression does not qualify for the preceding list of requirements, remove it from the constraint list.</span></span>  
+-   <span data-ttu-id="49c50-116">Si l’expression ne répond pas à la précédente liste d’exigences, supprimez-la de la liste des contraintes.</span><span class="sxs-lookup"><span data-stu-id="49c50-116">If the expression does not qualify for the preceding list of requirements, remove it from the constraint list.</span></span>  
   
--   <span data-ttu-id="2df2a-117">Si l’expression fait référence à une interface ou une classe, vérifiez que le compilateur a accès à cette interface ou classe.</span><span class="sxs-lookup"><span data-stu-id="2df2a-117">If the expression refers to an interface or class, verify that the compiler has access to that interface or class.</span></span> <span data-ttu-id="2df2a-118">Vous devrez peut-être qualifier son nom et ajouter une référence à votre projet.</span><span class="sxs-lookup"><span data-stu-id="2df2a-118">You might need to qualify its name, and you might need to add a reference to your project.</span></span> <span data-ttu-id="2df2a-119">Pour plus d’informations, consultez « Références aux projets » dans [références aux éléments de déclaré](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).</span><span class="sxs-lookup"><span data-stu-id="2df2a-119">For more information, see "References to Projects" in [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).</span></span>  
+-   <span data-ttu-id="49c50-117">Si l’expression fait référence à une interface ou une classe, vérifiez que le compilateur a accès à cette interface ou classe.</span><span class="sxs-lookup"><span data-stu-id="49c50-117">If the expression refers to an interface or class, verify that the compiler has access to that interface or class.</span></span> <span data-ttu-id="49c50-118">Vous devrez peut-être qualifier son nom et ajouter une référence à votre projet.</span><span class="sxs-lookup"><span data-stu-id="49c50-118">You might need to qualify its name, and you might need to add a reference to your project.</span></span> <span data-ttu-id="49c50-119">Pour plus d’informations, consultez « Références aux projets » dans [références aux éléments de déclaré](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).</span><span class="sxs-lookup"><span data-stu-id="49c50-119">For more information, see "References to Projects" in [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2df2a-120">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="2df2a-120">See Also</span></span>  
- [<span data-ttu-id="2df2a-121">Types génériques en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="2df2a-121">Generic Types in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [<span data-ttu-id="2df2a-122">Types valeur et types référence</span><span class="sxs-lookup"><span data-stu-id="2df2a-122">Value Types and Reference Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
- [<span data-ttu-id="2df2a-123">Références aux éléments déclarés</span><span class="sxs-lookup"><span data-stu-id="2df2a-123">References to Declared Elements</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
+## <a name="see-also"></a><span data-ttu-id="49c50-120">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="49c50-120">See Also</span></span>  
+ [<span data-ttu-id="49c50-121">Types génériques en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="49c50-121">Generic Types in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
+ [<span data-ttu-id="49c50-122">Types valeur et types référence</span><span class="sxs-lookup"><span data-stu-id="49c50-122">Value Types and Reference Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
+ [<span data-ttu-id="49c50-123">Références aux éléments déclarés</span><span class="sxs-lookup"><span data-stu-id="49c50-123">References to Declared Elements</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
  
