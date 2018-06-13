@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753766"
 ---
 # <a name="ltmodulegt-element-network-settings"></a><span data-ttu-id="038c0-102">&lt;module&gt; élément (paramètres réseau)</span><span class="sxs-lookup"><span data-stu-id="038c0-102">&lt;module&gt; Element (Network Settings)</span></span>
 <span data-ttu-id="038c0-103">Ajoute un nouveau module proxy à l'application.</span><span class="sxs-lookup"><span data-stu-id="038c0-103">Adds a new proxy module to the application.</span></span>  

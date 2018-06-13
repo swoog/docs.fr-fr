@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753234"
 ---
 # <a name="ltclientcredentialsgt"></a><span data-ttu-id="a68ee-102">&lt;clientCredentials&gt;</span><span class="sxs-lookup"><span data-stu-id="a68ee-102">&lt;clientCredentials&gt;</span></span>
 <span data-ttu-id="a68ee-103">Indique les informations d'identification utilisées pour authentifier le client auprès d'un service.</span><span class="sxs-lookup"><span data-stu-id="a68ee-103">Specifies the credentials used to authenticate the client to a service.</span></span>  

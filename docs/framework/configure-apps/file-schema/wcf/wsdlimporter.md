@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754900"
 ---
 # <a name="ltwsdlimportergt"></a><span data-ttu-id="1ad74-102">&lt;wsdlImporter&gt;</span><span class="sxs-lookup"><span data-stu-id="1ad74-102">&lt;wsdlImporter&gt;</span></span>
 <span data-ttu-id="1ad74-103">Indique tous les importateurs WSDL qui importent des métadonnées WSDL (Web Services Description Language) 1.1 avec des pièces jointes WS-Policy.</span><span class="sxs-lookup"><span data-stu-id="1ad74-103">Specifies all the WSDL importers that imports Web Services Description Language (WSDL) 1.1 metadata with WS-Policy attachments.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755290"
 ---
 # <a name="ltusemanagedpresentationgt"></a><span data-ttu-id="ae35a-102">&lt;useManagedPresentation&gt;</span><span class="sxs-lookup"><span data-stu-id="ae35a-102">&lt;useManagedPresentation&gt;</span></span>
 <span data-ttu-id="ae35a-103">Élément de liaison utilisé pour communiquer avec un service d’émission de jeton de sécurité CardSpace qui prend en charge le profil CardSpace de WS-Trust.</span><span class="sxs-lookup"><span data-stu-id="ae35a-103">A binding element used to communicate with a CardSpace Security Token Service that supports the CardSpace profile of WS-Trust.</span></span> <span data-ttu-id="ae35a-104">Cet élément n'a aucun attribut et est présent en tant que commutateur vide.</span><span class="sxs-lookup"><span data-stu-id="ae35a-104">This element has no attribute and is present as an empty switch.</span></span>  

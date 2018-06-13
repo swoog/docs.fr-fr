@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755368"
 ---
 # <a name="ltactivityscheduledquerygt"></a><span data-ttu-id="9e3ac-102">&lt;activityScheduledQuery&gt;</span><span class="sxs-lookup"><span data-stu-id="9e3ac-102">&lt;activityScheduledQuery&gt;</span></span>
 <span data-ttu-id="9e3ac-103">Représente une collection de requêtes qui permettent d’effectuer le suivi d’une activité dont l’exécution par une activité parent est planifiée.</span><span class="sxs-lookup"><span data-stu-id="9e3ac-103">Represents a collection of queries that are used to track an activity scheduled for execution by a parent activity.</span></span> <span data-ttu-id="9e3ac-104">La requête est nécessaire pour qu'un participant au suivi puisse s'abonner aux enregistrements d'une activité planifiée.</span><span class="sxs-lookup"><span data-stu-id="9e3ac-104">The query is necessary for a tracking participant to subscribe to activity scheduled records.</span></span>  

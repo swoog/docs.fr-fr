@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751218"
 ---
 # <a name="ltnettcpcontextbindinggt"></a><span data-ttu-id="77517-102">&lt;netTcpContextBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="77517-102">&lt;netTcpContextBinding&gt;</span></span>
 <span data-ttu-id="77517-103">Indique un contexte pour le <xref:System.ServiceModel.NetTcpBinding> qui requiert la signature du niveau de protection.</span><span class="sxs-lookup"><span data-stu-id="77517-103">Specifies a context for the <xref:System.ServiceModel.NetTcpBinding> that requires that the protection level be signed.</span></span> <span data-ttu-id="77517-104">Le contextExchangeMechanism pour NetTcpContextBinding est SOAPHeader.</span><span class="sxs-lookup"><span data-stu-id="77517-104">The contextExchangeMechanism for NetTcpContextBinding is SOAPHeader.</span></span>  

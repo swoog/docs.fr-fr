@@ -14,6 +14,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758267"
 ---
 # <a name="specifying-an-assembly39s-location"></a><span data-ttu-id="39f8b-102">Spécification d’un Assembly&#39;s emplacement</span><span class="sxs-lookup"><span data-stu-id="39f8b-102">Specifying an Assembly&#39;s Location</span></span>
 <span data-ttu-id="39f8b-103">Il existe deux façons de spécifier l’emplacement d’un assembly :</span><span class="sxs-lookup"><span data-stu-id="39f8b-103">There are two ways to specify an assembly's location:</span></span>  

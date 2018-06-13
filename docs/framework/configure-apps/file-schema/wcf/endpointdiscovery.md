@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754247"
 ---
 # <a name="ltendpointdiscoverygt"></a><span data-ttu-id="efaf1-102">&lt;endpointDiscovery&gt;</span><span class="sxs-lookup"><span data-stu-id="efaf1-102">&lt;endpointDiscovery&gt;</span></span>
 <span data-ttu-id="efaf1-103">Spécifie les différents paramètres de découverte d’un point de terminaison, tels que la fonctionnalité de découverte, les portées et toutes les extensions personnalisées de ses métadonnées.</span><span class="sxs-lookup"><span data-stu-id="efaf1-103">Specifies the various discovery settings for an endpoint, such as its discoverability, scopes, and any custom extensions to its metadata.</span></span>  

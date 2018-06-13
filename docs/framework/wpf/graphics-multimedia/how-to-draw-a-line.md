@@ -1,43 +1,32 @@
 ---
-title: "Comment : dessiner une ligne"
-ms.custom: 
+title: 'Comment : dessiner une ligne'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - drawing [WPF], lines
 - graphics [WPF], lines
 - lines [WPF], drawing
 ms.assetid: 0513ee01-6b27-4bb3-85f3-3a3e6710d80e
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 88d667e8654f72226dc609a14aec650effe2d5c8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1093e754912cd3ee3b8474ed7d190913079a9f9e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560623"
 ---
-# <a name="how-to-draw-a-line"></a><span data-ttu-id="68859-102">Comment : dessiner une ligne</span><span class="sxs-lookup"><span data-stu-id="68859-102">How to: Draw a Line</span></span>
-<span data-ttu-id="68859-103">Cet exemple vous montre comment dessiner des lignes à l’aide de la <xref:System.Windows.Shapes.Line> élément.</span><span class="sxs-lookup"><span data-stu-id="68859-103">This example shows you how to draw lines by using the <xref:System.Windows.Shapes.Line> element.</span></span>  
+# <a name="how-to-draw-a-line"></a><span data-ttu-id="82f1e-102">Comment : dessiner une ligne</span><span class="sxs-lookup"><span data-stu-id="82f1e-102">How to: Draw a Line</span></span>
+<span data-ttu-id="82f1e-103">Cet exemple vous montre comment dessiner des lignes à l’aide de la <xref:System.Windows.Shapes.Line> élément.</span><span class="sxs-lookup"><span data-stu-id="82f1e-103">This example shows you how to draw lines by using the <xref:System.Windows.Shapes.Line> element.</span></span>  
   
- <span data-ttu-id="68859-104">Pour dessiner une ligne, créez un <xref:System.Windows.Shapes.Line> élément.</span><span class="sxs-lookup"><span data-stu-id="68859-104">To draw a line, create a <xref:System.Windows.Shapes.Line> element.</span></span> <span data-ttu-id="68859-105">Utiliser sa <xref:System.Windows.Shapes.Line.X1%2A> et <xref:System.Windows.Shapes.Line.Y1%2A> propriétés pour définir son point de départ ; et ses <xref:System.Windows.Shapes.Line.X2%2A> et <xref:System.Windows.Shapes.Line.Y2%2A> propriétés à définir son point de terminaison.</span><span class="sxs-lookup"><span data-stu-id="68859-105">Use its <xref:System.Windows.Shapes.Line.X1%2A> and <xref:System.Windows.Shapes.Line.Y1%2A> properties to set its start point; and use its <xref:System.Windows.Shapes.Line.X2%2A> and <xref:System.Windows.Shapes.Line.Y2%2A> properties to set its end point.</span></span> <span data-ttu-id="68859-106">Enfin, définissez son <xref:System.Windows.Shapes.Shape.Stroke%2A> et <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> , car une ligne sans trait est invisible.</span><span class="sxs-lookup"><span data-stu-id="68859-106">Finally, set its <xref:System.Windows.Shapes.Shape.Stroke%2A> and <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> because a line without a stroke is invisible.</span></span>  
+ <span data-ttu-id="82f1e-104">Pour dessiner une ligne, créez un <xref:System.Windows.Shapes.Line> élément.</span><span class="sxs-lookup"><span data-stu-id="82f1e-104">To draw a line, create a <xref:System.Windows.Shapes.Line> element.</span></span> <span data-ttu-id="82f1e-105">Utiliser sa <xref:System.Windows.Shapes.Line.X1%2A> et <xref:System.Windows.Shapes.Line.Y1%2A> propriétés pour définir son point de départ ; et ses <xref:System.Windows.Shapes.Line.X2%2A> et <xref:System.Windows.Shapes.Line.Y2%2A> propriétés à définir son point de terminaison.</span><span class="sxs-lookup"><span data-stu-id="82f1e-105">Use its <xref:System.Windows.Shapes.Line.X1%2A> and <xref:System.Windows.Shapes.Line.Y1%2A> properties to set its start point; and use its <xref:System.Windows.Shapes.Line.X2%2A> and <xref:System.Windows.Shapes.Line.Y2%2A> properties to set its end point.</span></span> <span data-ttu-id="82f1e-106">Enfin, définissez son <xref:System.Windows.Shapes.Shape.Stroke%2A> et <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> , car une ligne sans trait est invisible.</span><span class="sxs-lookup"><span data-stu-id="82f1e-106">Finally, set its <xref:System.Windows.Shapes.Shape.Stroke%2A> and <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> because a line without a stroke is invisible.</span></span>  
   
- <span data-ttu-id="68859-107">Définition de la <xref:System.Windows.Shapes.Shape.Fill%2A> , élément pour une ligne n’a aucun effet, car une ligne n’a pas d’intérieur.</span><span class="sxs-lookup"><span data-stu-id="68859-107">Setting the <xref:System.Windows.Shapes.Shape.Fill%2A> element for a line has no effect, because a line has no interior.</span></span>  
+ <span data-ttu-id="82f1e-107">Définition de la <xref:System.Windows.Shapes.Shape.Fill%2A> , élément pour une ligne n’a aucun effet, car une ligne n’a pas d’intérieur.</span><span class="sxs-lookup"><span data-stu-id="82f1e-107">Setting the <xref:System.Windows.Shapes.Shape.Fill%2A> element for a line has no effect, because a line has no interior.</span></span>  
   
- <span data-ttu-id="68859-108">L’exemple suivant dessine trois lignes dans un <xref:System.Windows.Controls.Canvas> élément.</span><span class="sxs-lookup"><span data-stu-id="68859-108">The following example draws three lines inside a <xref:System.Windows.Controls.Canvas> element.</span></span>  
+ <span data-ttu-id="82f1e-108">L’exemple suivant dessine trois lignes dans un <xref:System.Windows.Controls.Canvas> élément.</span><span class="sxs-lookup"><span data-stu-id="82f1e-108">The following example draws three lines inside a <xref:System.Windows.Controls.Canvas> element.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="68859-109">Exemple</span><span class="sxs-lookup"><span data-stu-id="68859-109">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="82f1e-109">Exemple</span><span class="sxs-lookup"><span data-stu-id="82f1e-109">Example</span></span>  
  [!code-xaml[drawingwithshapeelements#LineExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/lineexample.xaml#lineexample1)]  
   
- <span data-ttu-id="68859-110">Cet exemple fait partie d’un exemple plus complet ; Pour obtenir un exemple complet, consultez [éléments de forme, exemple](http://go.microsoft.com/fwlink/?LinkID=160037).</span><span class="sxs-lookup"><span data-stu-id="68859-110">This example is part of a larger sample; for the complete sample, see [Shape Elements Sample](http://go.microsoft.com/fwlink/?LinkID=160037).</span></span>  
+ <span data-ttu-id="82f1e-110">Cet exemple fait partie d’un exemple plus complet ; Pour obtenir un exemple complet, consultez [éléments de forme, exemple](http://go.microsoft.com/fwlink/?LinkID=160037).</span><span class="sxs-lookup"><span data-stu-id="82f1e-110">This example is part of a larger sample; for the complete sample, see [Shape Elements Sample](http://go.microsoft.com/fwlink/?LinkID=160037).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="68859-111">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="68859-111">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="82f1e-111">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="82f1e-111">See Also</span></span>  
  <xref:System.Windows.Shapes.Line>  
- [<span data-ttu-id="68859-112">Éléments de forme, exemple</span><span class="sxs-lookup"><span data-stu-id="68859-112">Shape Elements Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=160037)
+ [<span data-ttu-id="82f1e-112">Éléments de forme, exemple</span><span class="sxs-lookup"><span data-stu-id="82f1e-112">Shape Elements Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=160037)
