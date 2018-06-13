@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 92b9d9b5baee856f09dd24a62767aff604728997
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33454080"
 ---
 # <a name="strongnamehashsize-function"></a>StrongNameHashSize, fonction
 Obtient la taille de mémoire tampon requise pour un hachage à l’aide de l’algorithme de hachage spécifié.  

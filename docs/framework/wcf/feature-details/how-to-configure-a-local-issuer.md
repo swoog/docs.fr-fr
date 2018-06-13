@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495091"
 ---
 # <a name="how-to-configure-a-local-issuer"></a>Comment : configurer un émetteur local
 Cette rubrique décrit comment configurer un client afin d'utiliser un émetteur local pour les jetons émis.  

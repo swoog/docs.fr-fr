@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587330"
 ---
 # <a name="39lteventnamegt39-is-an-event-and-cannot-be-called-directly"></a>&#39;&lt;nom_événement&gt; &#39; est un événement et ne peut pas être appelée directement
 ' <`eventname`>' est un événement et ne peut donc pas être appelé directement. Utilisez un `RaiseEvent` instruction pour déclencher un événement.  

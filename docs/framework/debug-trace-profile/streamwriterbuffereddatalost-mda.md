@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389939"
 ---
 # <a name="streamwriterbuffereddatalost-mda"></a>streamWriterBufferedDataLost (MDA)
 L’Assistant Débogage managé `streamWriterBufferedDataLost` est activé lors d’une écriture dans <xref:System.IO.StreamWriter>, mais la méthode <xref:System.IO.StreamWriter.Flush%2A> ou <xref:System.IO.StreamWriter.Close%2A> n’est pas appelée par la suite avant la destruction de l’instance du <xref:System.IO.StreamWriter>. Quand cet Assistant Débogage managé est activé, le runtime détermine s’il existe encore des données mises en mémoire tampon dans <xref:System.IO.StreamWriter>. Si c’est le cas, l’Assistant Débogage managé est activé. L’appel aux méthodes <xref:System.GC.Collect%2A> et <xref:System.GC.WaitForPendingFinalizers%2A> peut forcer des finaliseurs à s’exécuter. Sinon, les finaliseurs s’exécuteront à des moments apparemment arbitraires, voire pas du tout lors de la sortie du processus. L’exécution explicite des finaliseurs avec cet Assistant Débogage managé activé aide à reproduire ce type de problème de façon plus fiable.  

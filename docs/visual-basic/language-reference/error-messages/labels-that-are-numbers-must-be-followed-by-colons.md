@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587356"
 ---
 # <a name="labels-that-are-numbers-must-be-followed-by-colons"></a>Les étiquettes qui sont des nombres doivent être suivies du signe deux-points
 Numéros de ligne suivent les mêmes règles que les autres types d’étiquettes et doivent contenir un signe deux-points.  

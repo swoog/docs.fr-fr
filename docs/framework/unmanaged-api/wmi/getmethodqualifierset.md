@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2b1f73e999738fbb59342aeab391132ac454c8dd
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33459109"
 ---
 # <a name="getmethodqualifierset-function"></a>GetMethodQualifierSet (fonction)
 Récupère le qualificateur défini pour une méthode particulière.

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596848"
 ---
 # <a name="a-delimiter-cannot-be-nothing-or-an-empty-string"></a>Un délimiteur ne peut pas être Nothing ou un String vide
 Le `TextFieldParser` ne peut pas lire le fichier, car la propriété `Delimiters` a la valeur `Nothing` ou est un `String` vide ("").  

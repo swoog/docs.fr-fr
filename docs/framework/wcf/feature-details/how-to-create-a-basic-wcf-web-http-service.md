@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493472"
 ---
 # <a name="how-to-create-a-basic-wcf-web-http-service"></a>Procédure : créer un service Web HTTP WCF de base
 Windows Communication Foundation (WCF) vous permet de créer un service qui expose un point de terminaison Web. Les points de terminaison Web envoient des données par XML ou JSON, il n'y a aucune enveloppe SOAP. Cette rubrique explique comment exposer un tel point de terminaison.  

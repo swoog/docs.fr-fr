@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597443"
 ---
 # <a name="reference-required-to-assembly-39ltassemblyidentitygt39-containing-type-39lttypenamegt39-but-a-suitable-reference-could-not-be-found-due-to-ambiguity-between-projects-39ltprojectname1gt39-and-39ltprojectname2gt39"></a>Référence à l’assembly requise &#39; &lt;assemblyidentity&gt; &#39; contenant le type &#39; &lt;typename&gt;&#39;, mais une référence appropriée est introuvable en raison de l’ambiguïté entre projets &#39; &lt;nom_projet1&gt; &#39; et &#39; &lt;nom_projet2&gt;&#39;
 Une expression utilise un type, comme une classe, une structure, une interface, une énumération ou un délégué, qui est défini en dehors de votre projet. Cependant, des références de projet désignent plusieurs assemblys définissant ce type.  

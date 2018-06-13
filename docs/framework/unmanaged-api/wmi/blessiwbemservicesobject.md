@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d1bc31a4f074891149783dec647a592683564ba0
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33457917"
 ---
 # <a name="blessiwbemservicesobject-function"></a>BlessIWbemServicesObject (fonction)
 Indique si les informations d’identification utilisateur autorisent l’accès à un [IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx) objet.   

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496586"
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Files d'attente dans Windows Communication Foundation
 Les rubriques de cette section traitent de prise en charge de Windows Communication Foundation (WCF) pour les files d’attente. WCF prend en charge queuing par exploitant Microsoft Message Queuing (anciennement appelé MSMQ) comme transport et permet les scénarios suivants :  

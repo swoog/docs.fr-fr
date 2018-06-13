@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493746"
 ---
 # <a name="endpoints-addresses-bindings-and-contracts"></a>Points de terminaison : adresses, liaisons et contrats
 Toutes les communications avec un service Windows Communication Foundation (WCF) s’effectue via le *points de terminaison* du service. Points de terminaison de fournissent aux clients l’accès aux fonctionnalités offertes par un service WCF.  

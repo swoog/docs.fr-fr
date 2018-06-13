@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33458105"
 ---
 # <a name="configuring-client-behaviors"></a>Configuration des comportements clients
 Windows Communication Foundation (WCF) configure les comportements de deux manières : soit en faisant référence à des configurations de comportement, qui sont définies dans la `<behavior>` section d’un fichier de configuration client application – ou par programme dans l’appel application. Cette rubrique décrit ces deux approches.  

@@ -12,9 +12,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b92120cc5948efca696d922448da215601f9e6b3
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33455281"
 ---
 # <a name="icorprofilercallback8-interface"></a>Interface de ICorProfilerCallback8
 [Pris en charge dans le .NET Framework 4.7 et versions ultérieures]  

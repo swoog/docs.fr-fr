@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494457"
 ---
 # <a name="mixing-trust-protocols-in-federated-scenarios"></a>Combinaison de protocoles d'approbation dans les scénarios fédérés
 Il peut exister des scénarios où des clients fédérés communiquent avec un WSDL de service et un service de jeton de sécurité (STS) qui n'ont pas la même version d'approbation. Le WSDL de service peut contenir une assertion `RequestSecurityTokenTemplate` avec les éléments WS-Trust qui sont de versions différentes par rapport à STS. Dans ce cas, un client Windows Communication Foundation (WCF) convertit les éléments de WS-Trust reçus à partir de la `RequestSecurityTokenTemplate` pour correspondre à STS version d’approbation. WCF gère les versions d’approbation ne correspondent pas uniquement pour les liaisons standards. Tous les paramètres d’algorithme standard reconnus par WCF font partie de la liaison standard. Cette rubrique décrit le comportement WCF avec différents paramètres d’approbation entre le service et le STS.  

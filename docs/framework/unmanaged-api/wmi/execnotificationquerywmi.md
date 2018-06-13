@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4b5c26ab9c273b134915eea39078a83f569bcd32
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33462414"
 ---
 # <a name="execnotificationquerywmi-function"></a>ExecNotificationQueryWmi (fonction)
 Exécute une requête pour recevoir les événements. L’appel retourne immédiatement, et l’appelant peut interroger l’énumérateur retourné pour les événements qu’elles arrivent. Libération de l’énumérateur retourné annule la requête.  

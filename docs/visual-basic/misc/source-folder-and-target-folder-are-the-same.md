@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640483"
 ---
 # <a name="source-folder-and-target-folder-are-the-same"></a>Les dossiers source et cible sont identiques
 Une tentative de copie ou de déplacement de fichier a été effectuée, mais les répertoires source et cible spécifiés sont identiques. Cela peut provenir d’une analyse incorrecte d’un chemin de fichier.  

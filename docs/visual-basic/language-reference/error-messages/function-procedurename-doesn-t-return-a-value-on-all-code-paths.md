@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589982"
 ---
 # <a name="function-39ltprocedurenamegt39-doesn39t-return-a-value-on-all-code-paths"></a>Fonction &#39; &lt;nom_procédure&gt; &#39; ne&#39;t retournent une valeur sur tous les chemins de code
 Fonction '\<nom_procédure >' ne retourne pas une valeur pour tous les chemins de code. Une instruction 'Return' est-elle manquante ?  
