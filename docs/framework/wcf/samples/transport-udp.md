@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808414"
 ---
 # <a name="transport-udp"></a>Transport: UDP
 L’exemple UDP Transport montre comment implémenter la monodiffusion UDP et multidiffusion en tant qu’un transport personnalisé de Windows Communication Foundation (WCF). L’exemple décrit la procédure recommandée pour la création d’un transport personnalisé dans WCF, en utilisant l’infrastructure de canal et en suivant les meilleures pratiques de WCF. Les étapes de la création d'un transport personnalisé sont les suivantes :  

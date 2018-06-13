@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585647"
 ---
 # <a name="error-saving-temporary-win32-resource-file-39ltfilenamegt39-lterror-messagegt"></a>Erreur d’enregistrement du fichier de ressources Win32 temporaire &#39; &lt;nom de fichier&gt;&#39;: &lt;message d’erreur&gt;
 Le compilateur Visual Basic appelle l’utilitaire Assembly Linker (Al.exe, également appelé Alink) pour générer un assembly avec un manifeste. L'éditeur de liens a signalé une erreur d'obtention d'un nom de fichier à utiliser dans l'écriture d'une ressource en mémoire.  

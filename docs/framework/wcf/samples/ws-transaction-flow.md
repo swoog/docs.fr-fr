@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807213"
 ---
 # <a name="ws-transaction-flow"></a>WS Transaction Flow
 Cet exemple illustre l’utilisation d’une transaction coordonnée par le client et des options de client et de serveur pour le flux de transaction, à l’aide du protocole WS-Atomic Transaction ou OleTransactions. Cet exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md) qui implémente un service de calculatrice, mais les opérations sont attribuées pour illustrer l’utilisation de la `TransactionFlowAttribute` avec la **TransactionFlowOption** énumération permettant de déterminer à quel degré de transaction flux est activé. Dans l’étendue de la transaction passée, un journal des opérations demandées est écrit dans une base de données et est conservé jusqu’à ce que la transaction coordonnée par le client soit terminée. Si la transaction cliente ne se termine pas, la transaction de service Web garantit que les mises à jour appropriées de la base de données ne sont pas validées.  

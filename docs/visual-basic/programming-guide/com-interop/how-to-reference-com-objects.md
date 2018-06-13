@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643950"
 ---
 # <a name="how-to-reference-com-objects-from-visual-basic"></a>Comment : référencer les objets COM à partir de Visual Basic
 En Visual Basic, l’ajout de références aux objets COM qui possèdent des bibliothèques de types requiert la création d’un assembly d’interopérabilité pour la bibliothèque COM. Les références aux membres de l’objet COM sont routées vers l’assembly PIA et ensuite transmis à l’objet COM réel. Les réponses de l’objet COM sont routées vers l’assembly PIA et transférés vers votre [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] application.  

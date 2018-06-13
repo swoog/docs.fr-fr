@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640402"
 ---
 # <a name="unable-to-ping-because-a-network-connection-is-not-available"></a>Impossible d’exécuter la commande PING, car une connexion réseau n’est pas disponible.
 Impossible d’effectuer l’opération, car aucune connexion réseau n’est disponible.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654420"
 ---
 # <a name="interfaces-visual-basic"></a>Interfaces (Visual Basic)
 Les *interfaces* définissent les propriétés, méthodes et événements qui peuvent être implémentés par les classes. Les interfaces vous permettent de définir des fonctionnalités sous forme de petits groupes de propriétés, méthodes et événements étroitement liés. Les risques d’incompatibilité sont ainsi limités, car vous pouvez développer des implémentations avancées pour vos interfaces sans mettre en danger le code existant. Vous pouvez ajouter de nouvelles fonctionnalités à tout moment en développant des interfaces et implémentations supplémentaires.  

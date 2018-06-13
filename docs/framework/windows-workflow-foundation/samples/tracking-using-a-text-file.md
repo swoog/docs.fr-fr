@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805796"
 ---
 # <a name="tracking-using-a-text-file"></a>Suivi à l'aide d'un fichier texte
 Cet exemple montre comment étendre le suivi dans Windows Workflow Foundation (WF) en créant un participant de suivi personnalisé. Les participants de suivi sont des classes .NET Framework qui reçoivent des enregistrements de suivi du runtime lorsqu'ils sont émis. Vous pouvez créer un participant de suivi pour transporter les événements de suivi vers toute destination qui est requise pour votre scénario. Par exemple, le participant de suivi ETW (Event Tracing for Windows, suivi d'événements pour Windows) est fourni dans le cadre du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Dans cet exemple, le participant de suivi écrit les enregistrements au format XML dans un fichier texte.  

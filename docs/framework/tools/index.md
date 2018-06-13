@@ -14,6 +14,7 @@ ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34312038"
 ---
 # <a name="net-framework-tools"></a>Outils du .NET Framework
 Les outils du .NET Framework facilitent la création, le déploiement et la gestion d'applications et de composants qui ciblent le .NET Framework.  

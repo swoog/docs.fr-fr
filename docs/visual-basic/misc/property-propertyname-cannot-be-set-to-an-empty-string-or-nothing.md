@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639270"
 ---
 # <a name="property-ltpropertynamegt-cannot-be-set-to-an-empty-string-or-nothing"></a>Propriété &lt;propertyname&gt; ne peut pas être définie à une chaîne vide ou Nothing
 La propriété exige une valeur autre qu’une chaîne vide ("") ou `Nothing`. Ce peut être le résultat d’un calcul incorrect de la valeur.  

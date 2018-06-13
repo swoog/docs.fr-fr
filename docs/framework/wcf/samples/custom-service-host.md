@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806794"
 ---
 # <a name="custom-service-host"></a>Custom Service Host
 Cet exemple montre comment utiliser un dérivé personnalisé de la classe <xref:System.ServiceModel.ServiceHost> pour altérer le comportement d'exécution d'un service. Cette approche propose une alternative réutilisable à la configuration d'un grand nombre de services de manière commune. L'exemple montre également comment utiliser la classe <xref:System.ServiceModel.Activation.ServiceHostFactory> pour utiliser un ServiceHost personnalisé dans l'environnement d'hébergement des services IIS (Internet Information Services) ou WAS (Windows Process Activation Service).  

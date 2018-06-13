@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809925"
 ---
 # <a name="designing-service-contracts"></a>Conception de contrats de service
 Cette rubrique explique ce que sont les contrats de service, comment ils sont définis, quelles opérations sont disponibles (et les implications des échanges de messages sous-jacents), quels types de données sont utilisés et d’autres aspects qui vous aident à concevoir des opérations qui répondent aux exigences de votre scénario.  

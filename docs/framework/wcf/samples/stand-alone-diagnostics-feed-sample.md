@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807757"
 ---
 # <a name="stand-alone-diagnostics-feed-sample"></a>Stand-Alone Diagnostics Feed, exemple
 Cet exemple montre comment créer un flux de syndication avec Windows Communication Foundation (WCF) RSS/Atom. Il s’agit d’un programme « Hello World » de base qui montre les principes de base du modèle d’objet et comment configurer un service Windows Communication Foundation (WCF).  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809207"
 ---
 # <a name="how-to-create-a-custom-token"></a>Comment : créer un jeton personnalisé
 Cette rubrique contient des instructions permettant de créer un jeton de sécurité personnalisé à l'aide de la classe <xref:System.IdentityModel.Tokens.SecurityToken> et de l'intégrer à un fournisseur et authentificateur de jetons de sécurité personnalisés. Pour obtenir un exemple de code complet, consultez la [jeton personnalisé](../../../../docs/framework/wcf/samples/custom-token.md) exemple.  

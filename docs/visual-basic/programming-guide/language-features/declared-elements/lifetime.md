@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654227"
 ---
 # <a name="lifetime-in-visual-basic"></a>Durée de vie dans Visual Basic
 Le *durée de vie* d’un élément déclaré est la période pendant laquelle il est disponible pour utilisation. Les variables sont les seuls éléments qui ont la durée de vie. Pour cela, le compilateur traite les paramètres de procédure et retours de fonction comme des cas spéciaux de variables. La durée de vie d’une variable représente la période pendant laquelle elle peut contenir une valeur. Sa valeur peut changer pendant sa durée de vie, mais il conserve toujours une valeur.  

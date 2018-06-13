@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647759"
 ---
 # <a name="efficient-use-of-data-types-visual-basic"></a>Utilisation efficace des types de données (Visual Basic)
 Les variables non déclarées et les variables déclarées sans type de données sont voient attribuer le `Object` type de données. Il est ainsi facile d’écrire rapidement des programmes, mais il peut les rendre à s’exécuter plus lentement.  

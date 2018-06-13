@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804168"
 ---
 # <a name="how-to-inspect-or-modify-messages-on-the-client"></a>Comment : inspecter ou modifier des messages sur le client
 Vous pouvez inspecter ou modifier les messages entrants ou sortants sur un client WCF en implémentant un <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> et leur insertion dans l’exécution du client. Pour plus d’informations, consultez [Clients d’extension](../../../../docs/framework/wcf/extending/extending-clients.md). La fonctionnalité équivalente sur le service est <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>. Pour obtenir un exemple de code complet, consultez la [inspecteurs de Message](../../../../docs/framework/wcf/samples/message-inspectors.md) exemple.  

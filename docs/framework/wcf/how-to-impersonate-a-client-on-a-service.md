@@ -14,6 +14,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810224"
 ---
 # <a name="how-to-impersonate-a-client-on-a-service"></a>Comment : emprunter l'identité d'un client sur un service
 Emprunter l’identité d’un client sur un service Windows Communication Foundation (WCF) permet au service d’exécuter des actions au nom du client. Pour les actions soumises à la vérification de la liste de contrôle d'accès (ACL), telles que l'accès aux répertoires et aux fichiers sur un ordinateur ou l'accès à une base de données SQL Server, la vérification de la liste ACL est effectuée en fonction du compte d'utilisateur client. Cette rubrique décrit les étapes de base requises pour permettre à un client dans un domaine Windows de définir un niveau d'emprunt de l'identité du client. Pour obtenir un exemple fonctionnel, consultez [Impersonating the Client](../../../docs/framework/wcf/samples/impersonating-the-client.md). Pour plus d’informations sur l’emprunt d’identité du client, consultez [délégation et emprunt d’identité](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  

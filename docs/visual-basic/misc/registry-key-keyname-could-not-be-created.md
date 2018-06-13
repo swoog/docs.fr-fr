@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638420"
 ---
 # <a name="registry-key-39ltkeynamegt39-could-not-be-created"></a>Clé de Registre &#39; &lt;keyname&gt; &#39; n’a pas pu être créé.
 La clé de Registre spécifiée n’a pas pu être créée, probablement car les autorisations de sécurité sont insuffisantes.  

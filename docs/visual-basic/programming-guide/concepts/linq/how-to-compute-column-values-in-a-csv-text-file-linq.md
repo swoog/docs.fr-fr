@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643364"
 ---
 # <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a>Comment : calculer des valeurs de colonne dans un fichier de texte CSV (LINQ) (Visual Basic)
 Cet exemple montre comment effectuer des calculs d’agrégation tels que Sum, Average, Min et Max, avec les colonnes d’un fichier .csv. Les exemples de principes montrés ici sont applicables à d’autres types de texte structuré.  

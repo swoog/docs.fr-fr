@@ -17,6 +17,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457798"
 ---
 # <a name="-and--null-conditional-operators-c-and-visual-basic"></a>?. et ?[] (C# et Visual Basic)
 Teste si l’opérande de gauche a une valeur Null avant d’effectuer une opération d’accès au membre (`?.`) ou d’index (`?[]`) ; retourne `null` si l’opérande de gauche s’évalue à `null`. 

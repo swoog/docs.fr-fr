@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806807"
 ---
 # <a name="extending-tracing"></a>Extending Tracing
 Cet exemple montre comment étendre la fonctionnalité de traçage de Windows Communication Foundation (WCF) en écrivant les suivis d’activité définis par l’utilisateur dans le code client et le service. Cela permet à l'utilisateur de créer des activités de suivi et de regrouper les suivis dans des unités de travail logiques. Il est également possible de mettre en corrélation des activités à travers des transferts (au sein du même point de terminaison) et la propagation (sur plusieurs points de terminaison). Dans cet exemple, le suivi est activé à la fois pour le client et pour le service. Pour plus d’informations sur la façon d’activer le suivi dans les fichiers de configuration client et le service, consultez [Tracing and Message Logging](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md).  

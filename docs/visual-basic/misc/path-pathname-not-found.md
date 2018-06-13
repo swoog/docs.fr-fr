@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641355"
 ---
 # <a name="path-39ltpathnamegt39-not-found"></a>Chemin d’accès &#39; &lt;chemin d’accès&gt; &#39; introuvable
 Le système d’exploitation n’a pas trouvé le chemin spécifié pendant une opération d’accès au fichier ou d’accès au disque. Le chemin d’un fichier doit comprendre un lecteur, ainsi que les répertoires et sous-répertoires qui doivent être parcourus pour localiser le fichier. Un chemin peut être relatif ou absolu.  

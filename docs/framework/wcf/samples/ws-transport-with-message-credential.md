@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810146"
 ---
 # <a name="ws-transport-with-message-credential"></a>WS Transport With Message Credential
 Cet exemple montre l'utilisation de la sécurité de transport SSL en association avec les informations d'identification du client contenues dans le message. Cet exemple utilise la liaison `wsHttpBinding`.  

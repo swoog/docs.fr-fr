@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33473371"
 ---
 # <a name="msmq-integration-transport"></a>Transport d'intégration MSMQ
 Cette rubrique répertorie toutes les exceptions générées par le transport d'intégration MSMQ.  

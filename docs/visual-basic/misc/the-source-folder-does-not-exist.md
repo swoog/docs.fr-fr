@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640366"
 ---
 # <a name="the-source-folder-does-not-exist"></a>Le dossier source n’existe pas
 Vous avez tenté une opération qui référence un dossier source qui n’existe pas. Un chemin de fichier incorrect a peut-être été fourni.  

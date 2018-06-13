@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639753"
 ---
 # <a name="specified-dll-function-not-found"></a>Fonction DLL spécifiée introuvable
 La bibliothèque de liens dynamiques (DLL) d’une référence de bibliothèque utilisateur a été trouvée, mais la fonction DLL spécifiée est introuvable dans la DLL.  

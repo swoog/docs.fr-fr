@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647902"
 ---
 # <a name="refactoring-using-an-extension-method-visual-basic"></a>Refactorisation à l’aide d’une méthode d’Extension (Visual Basic)
 Cet exemple s’appuie sur l’exemple précédent, [récupère le texte des paragraphes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), en refactorisant la concaténation de chaînes à l’aide d’une fonction pure est implémentée comme une méthode d’extension.  
