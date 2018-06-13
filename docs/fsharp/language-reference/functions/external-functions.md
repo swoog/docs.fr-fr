@@ -1,34 +1,30 @@
 ---
 title: Fonctions externes (F#)
 description: 'Obtenir des informations sur la prise en charge de langage F # pour appeler des fonctions dans le code natif.'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: 28e74258d91ff2d9742caa7a6c06f515cd987c0a
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 398697c5e0deab7f8d81ec5198ab1918bd865e13
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33564480"
 ---
-# <a name="external-functions"></a><span data-ttu-id="366d4-103">Fonctions externes</span><span class="sxs-lookup"><span data-stu-id="366d4-103">External Functions</span></span>
+# <a name="external-functions"></a><span data-ttu-id="e9809-103">Fonctions externes</span><span class="sxs-lookup"><span data-stu-id="e9809-103">External Functions</span></span>
 
-<span data-ttu-id="366d4-104">Cette rubrique décrit F # prise en charge linguistique pour appeler des fonctions dans le code natif.</span><span class="sxs-lookup"><span data-stu-id="366d4-104">This topic describes F# language support for calling functions in native code.</span></span>
+<span data-ttu-id="e9809-104">Cette rubrique décrit F # prise en charge linguistique pour appeler des fonctions dans le code natif.</span><span class="sxs-lookup"><span data-stu-id="e9809-104">This topic describes F# language support for calling functions in native code.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="366d4-105">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="366d4-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="e9809-105">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="e9809-105">Syntax</span></span>
 
 ```fsharp
 [<DllImport( arguments )>]
 extern declaration
 ```
 
-## <a name="remarks"></a><span data-ttu-id="366d4-106">Notes</span><span class="sxs-lookup"><span data-stu-id="366d4-106">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="e9809-106">Notes</span><span class="sxs-lookup"><span data-stu-id="e9809-106">Remarks</span></span>
 
-<span data-ttu-id="366d4-107">Dans la syntaxe précédente, *arguments* représente les arguments fournis à la `System.Runtime.InteropServices.DllImportAttribute` attribut.</span><span class="sxs-lookup"><span data-stu-id="366d4-107">In the previous syntax, *arguments* represents arguments that are supplied to the `System.Runtime.InteropServices.DllImportAttribute` attribute.</span></span> <span data-ttu-id="366d4-108">Le premier argument est une chaîne qui représente le nom de la DLL qui contient cette fonction, sans l’extension .dll.</span><span class="sxs-lookup"><span data-stu-id="366d4-108">The first argument is a string that represents the name of the DLL that contains this function, without the .dll extension.</span></span> <span data-ttu-id="366d4-109">Arguments supplémentaires peuvent être fournis pour une des propriétés publiques de la `System.Runtime.InteropServices.DllImportAttribute` (classe), telles que la convention d’appel.</span><span class="sxs-lookup"><span data-stu-id="366d4-109">Additional arguments can be supplied for any of the public properties of the `System.Runtime.InteropServices.DllImportAttribute` class, such as the calling convention.</span></span>
+<span data-ttu-id="e9809-107">Dans la syntaxe précédente, *arguments* représente les arguments fournis à la `System.Runtime.InteropServices.DllImportAttribute` attribut.</span><span class="sxs-lookup"><span data-stu-id="e9809-107">In the previous syntax, *arguments* represents arguments that are supplied to the `System.Runtime.InteropServices.DllImportAttribute` attribute.</span></span> <span data-ttu-id="e9809-108">Le premier argument est une chaîne qui représente le nom de la DLL qui contient cette fonction, sans l’extension .dll.</span><span class="sxs-lookup"><span data-stu-id="e9809-108">The first argument is a string that represents the name of the DLL that contains this function, without the .dll extension.</span></span> <span data-ttu-id="e9809-109">Arguments supplémentaires peuvent être fournis pour une des propriétés publiques de la `System.Runtime.InteropServices.DllImportAttribute` (classe), telles que la convention d’appel.</span><span class="sxs-lookup"><span data-stu-id="e9809-109">Additional arguments can be supplied for any of the public properties of the `System.Runtime.InteropServices.DllImportAttribute` class, such as the calling convention.</span></span>
 
-<span data-ttu-id="366d4-110">Vous possédez une DLL C++ qui contient la fonction exportée suivante natif.</span><span class="sxs-lookup"><span data-stu-id="366d4-110">Assume you have a native C++ DLL that contains the following exported function.</span></span>
+<span data-ttu-id="e9809-110">Vous possédez une DLL C++ qui contient la fonction exportée suivante natif.</span><span class="sxs-lookup"><span data-stu-id="e9809-110">Assume you have a native C++ DLL that contains the following exported function.</span></span>
 
 ```cpp
 #include <stdio.h>
@@ -38,7 +34,7 @@ extern "C" void __declspec(dllexport) HelloWorld()
 }
 ```
 
-<span data-ttu-id="366d4-111">Vous pouvez appeler cette fonction à partir de F # en utilisant le code suivant.</span><span class="sxs-lookup"><span data-stu-id="366d4-111">You can call this function from F# by using the following code.</span></span>
+<span data-ttu-id="e9809-111">Vous pouvez appeler cette fonction à partir de F # en utilisant le code suivant.</span><span class="sxs-lookup"><span data-stu-id="e9809-111">You can call this function from F# by using the following code.</span></span>
 
 ```fsharp
 open System.Runtime.InteropServices
@@ -50,9 +46,9 @@ module InteropWithNative =
 InteropWithNative.HelloWorld()
 ```
 
-<span data-ttu-id="366d4-112">Interopérabilité avec du code natif est appelée *non managé* et est une fonctionnalité du CLR.</span><span class="sxs-lookup"><span data-stu-id="366d4-112">Interoperability with native code is referred to as *platform invoke* and is a feature of the CLR.</span></span> <span data-ttu-id="366d4-113">Pour plus d’informations, consultez [Interopération avec du code non managé](../../../../docs/framework/interop/index.md).</span><span class="sxs-lookup"><span data-stu-id="366d4-113">For more information, see [Interoperating with Unmanaged Code](../../../../docs/framework/interop/index.md).</span></span> <span data-ttu-id="366d4-114">Les informations contenues dans cette section sont applique à F #.</span><span class="sxs-lookup"><span data-stu-id="366d4-114">The information in that section is applicable to F#.</span></span>
+<span data-ttu-id="e9809-112">Interopérabilité avec du code natif est appelée *non managé* et est une fonctionnalité du CLR.</span><span class="sxs-lookup"><span data-stu-id="e9809-112">Interoperability with native code is referred to as *platform invoke* and is a feature of the CLR.</span></span> <span data-ttu-id="e9809-113">Pour plus d’informations, consultez [Interopération avec du code non managé](../../../../docs/framework/interop/index.md).</span><span class="sxs-lookup"><span data-stu-id="e9809-113">For more information, see [Interoperating with Unmanaged Code](../../../../docs/framework/interop/index.md).</span></span> <span data-ttu-id="e9809-114">Les informations contenues dans cette section sont applique à F #.</span><span class="sxs-lookup"><span data-stu-id="e9809-114">The information in that section is applicable to F#.</span></span>
 
 
-## <a name="see-also"></a><span data-ttu-id="366d4-115">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="366d4-115">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e9809-115">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="e9809-115">See Also</span></span>
 
-[<span data-ttu-id="366d4-116">Fonctions</span><span class="sxs-lookup"><span data-stu-id="366d4-116">Functions</span></span>](index.md)
+[<span data-ttu-id="e9809-116">Fonctions</span><span class="sxs-lookup"><span data-stu-id="e9809-116">Functions</span></span>](index.md)

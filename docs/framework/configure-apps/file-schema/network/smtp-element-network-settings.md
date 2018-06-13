@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32741891"
 ---
 # <a name="ltsmtpgt-element-network-settings"></a><span data-ttu-id="872b5-102">&lt;SMTP&gt; élément (paramètres réseau)</span><span class="sxs-lookup"><span data-stu-id="872b5-102">&lt;smtp&gt; Element (Network Settings)</span></span>
 <span data-ttu-id="872b5-103">Configure le format de remise, de la méthode de remise et à partir de l’adresse pour l’envoi des messages électroniques.</span><span class="sxs-lookup"><span data-stu-id="872b5-103">Configures the delivery format, delivery method, and from address for sending emails.</span></span>  

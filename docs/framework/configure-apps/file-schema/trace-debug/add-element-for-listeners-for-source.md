@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745654"
 ---
 # <a name="ltaddgt-element-for-ltlistenersgt-for-ltsourcegt"></a><span data-ttu-id="0df46-102">&lt;ajouter&gt; élément &lt;écouteurs&gt; pour &lt;source&gt;</span><span class="sxs-lookup"><span data-stu-id="0df46-102">&lt;add&gt; Element for &lt;listeners&gt; for &lt;source&gt;</span></span>
 <span data-ttu-id="0df46-103">Ajoute un écouteur à la collection `Listeners` pour une source de trace.</span><span class="sxs-lookup"><span data-stu-id="0df46-103">Adds a listener to the `Listeners` collection for a trace source.</span></span>  

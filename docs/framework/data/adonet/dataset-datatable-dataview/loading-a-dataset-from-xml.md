@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759762"
 ---
 # <a name="loading-a-dataset-from-xml"></a><span data-ttu-id="68c2c-102">Chargement d'un DataSet à partir de XML</span><span class="sxs-lookup"><span data-stu-id="68c2c-102">Loading a DataSet from XML</span></span>
 <span data-ttu-id="68c2c-103">Le contenu d'un objet <xref:System.Data.DataSet> ADO.NET peut être recréé à partir d'un flux ou d'un document XML.</span><span class="sxs-lookup"><span data-stu-id="68c2c-103">The contents of an ADO.NET <xref:System.Data.DataSet> can be created from an XML stream or document.</span></span> <span data-ttu-id="68c2c-104">En outre, le .NET Framework vous offre une grande souplesse en ce qui concerne les informations qui seront chargées à partir de XML et le mode de création du schéma ou de la structure relationnelle de l'objet <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="68c2c-104">In addition, with the .NET Framework you have great flexibility over what information is loaded from XML, and how the schema or relational structure of the <xref:System.Data.DataSet> is created.</span></span>  

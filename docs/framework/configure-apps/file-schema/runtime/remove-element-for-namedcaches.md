@@ -13,6 +13,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745212"
 ---
 # <a name="ltremovegt-element-for-ltnamedcachesgt"></a><span data-ttu-id="2ad80-102">&lt;supprimer&gt; , élément pour &lt;namedCaches&gt;</span><span class="sxs-lookup"><span data-stu-id="2ad80-102">&lt;remove&gt; Element for &lt;namedCaches&gt;</span></span>
 <span data-ttu-id="2ad80-103">Supprime une entité de cache nommé de la collection `namedCaches` d’un cache mémoire.</span><span class="sxs-lookup"><span data-stu-id="2ad80-103">Removes a named cache entry from the `namedCaches` collection for a memory cache.</span></span>  
