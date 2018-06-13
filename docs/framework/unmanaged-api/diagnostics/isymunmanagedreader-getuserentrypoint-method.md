@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7b4c334d82320066bf9459907660fe6b7e2acefd
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33425319"
 ---
 # <a name="isymunmanagedreadergetuserentrypoint-method"></a>ISymUnmanagedReader::GetUserEntryPoint, méthode
 Retourne la méthode qui a été spécifiée en tant que point d’entrée utilisateur pour le module, le cas échéant. Par exemple, cette méthode peut être méthode principale de l’utilisateur plutôt que des stubs générés par le compilateur avant la méthode principale.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498168"
 ---
 # <a name="transactions-in-wcf"></a>Transactions dans WCF
 La fonctionnalité des transactions Windows Communication Foundation (WCF) permet à plusieurs composants de participer simultanément à une opération de données. Cette fonctionnalité est décrite en détail dans les rubriques de cette section.  

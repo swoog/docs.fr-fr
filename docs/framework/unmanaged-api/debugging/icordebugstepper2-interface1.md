@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4652bcb00d3437350b5fd3e1071b3c538403cfe3
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33418687"
 ---
 # <a name="icordebugstepper2-interface1"></a>ICorDebugStepper2 Interface1
 Prend en charge le débogage uniquement mon code (JMC).  

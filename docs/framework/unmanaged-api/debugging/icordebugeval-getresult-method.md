@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7e160eddf667b542929c8dd3790de666a8e8bb77
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413057"
 ---
 # <a name="icordebugevalgetresult-method"></a>ICorDebugEval::GetResult, méthode
 Obtient les résultats de cette évaluation.  

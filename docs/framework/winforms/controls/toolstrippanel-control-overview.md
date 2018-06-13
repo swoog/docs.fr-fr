@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538488"
 ---
 # <a name="toolstrippanel-control-overview"></a>Vue d'ensemble du contrôle ToolStripPanel
 A <xref:System.Windows.Forms.ToolStripPanel> fournit une zone de positionnement et le rafting <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, et <xref:System.Windows.Forms.StatusStrip> contrôles. Plusieurs <xref:System.Windows.Forms.ToolStrip> contrôles s’empilent verticalement ou horizontalement en fonction de la <xref:System.Windows.Forms.ToolStripPanelRow.Orientation%2A> de la <xref:System.Windows.Forms.ToolStripPanel>.  

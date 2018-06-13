@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3d1e0f0d57440f0074a7ca179955a7a13e41f5d5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415852"
 ---
 # <a name="icordebugmodulegettoken-method"></a>ICorDebugModule::GetToken, méthode
 Obtient le jeton de l’entrée de table pour ce module.  

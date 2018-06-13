@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488645"
 ---
 # <a name="comparing-transactions-in-com-and-servicemodel"></a>Comparaison des transactions dans COM+ et dans ServiceModel
 Cette rubrique explique comment simuler le comportement d’un service COM + transactionnel à l’aide des attributs de Windows Communication Foundation (WCF) le <xref:System.ServiceModel> fournit de l’espace de noms.  

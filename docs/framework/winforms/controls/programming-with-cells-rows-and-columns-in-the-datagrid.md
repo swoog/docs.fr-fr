@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538539"
 ---
 # <a name="programming-with-cells-rows-and-columns-in-the-windows-forms-datagridview-control"></a>Programmation avec les cellules, lignes et colonnes dans le contrôle DataGridView Windows Forms
 Cette section fournit des rubriques qui montrent comment effectuer des tâches de programmation différents impliquant des cellules, lignes et les objets de colonne.  

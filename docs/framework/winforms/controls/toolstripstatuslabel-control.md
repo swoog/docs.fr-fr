@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537958"
 ---
 # <a name="toolstripstatuslabel-control"></a>ToolStripStatusLabel, contrôle
 Le <xref:System.Windows.Forms.ToolStripStatusLabel> fournit une zone d’affichage dans un <xref:System.Windows.Forms.StatusStrip> du texte, images ou les deux.  

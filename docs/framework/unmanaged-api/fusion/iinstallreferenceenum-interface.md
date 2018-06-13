@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cac9f9db0b7527a80671c825a4435e8ea2d135b8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429658"
 ---
 # <a name="iinstallreferenceenum-interface"></a>IInstallReferenceEnum, interface
 Représente un énumérateur pour les assemblys référencés installés dans le global assembly cache.  

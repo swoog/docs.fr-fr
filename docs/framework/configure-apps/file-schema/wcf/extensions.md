@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746876"
 ---
 # <a name="ltextensionsgt"></a>&lt;Extensions&gt;
 Cet élément de configuration contient une collection d'éléments XML contenant des métadonnées personnalisées à publier avec les métadonnées détectables standard (EPR, ContractTypeName, BindingName, Scope et ListenURI). Voici un exemple d'utilisation de cet élément de configuration.  

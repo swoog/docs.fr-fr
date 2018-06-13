@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2814f6164f383c36bb5b8e20ce8996b30eef0f1f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33421698"
 ---
 # <a name="icordebugstringvalue-interface1"></a>ICorDebugStringValue Interface1
 Une sous-classe de ICorDebugHeapValue qui s’applique aux valeurs de chaîne.  
