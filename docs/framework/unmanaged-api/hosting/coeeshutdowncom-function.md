@@ -21,9 +21,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f0b30cc2c499644ffc97a734e1554e4e352b34af
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431888"
 ---
 # <a name="coeeshutdowncom-function"></a>CoEEShutDownCOM, fonction
 Force le common language runtime (CLR) pour libérer tous les pointeurs d’interface qu’il conserve dans callable wrappers RCW (runtime). Cela a pour effet de libérer tous les caches RCW. Cette fonction globale est déconseillée dans le [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. Au lieu de cela, utilisez le point d’entrée pour une exécution spécifique.  

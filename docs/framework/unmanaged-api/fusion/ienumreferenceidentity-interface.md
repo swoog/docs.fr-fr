@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4ebc9fe36955bac8b93ec95e9a55fc8ac1197d9a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429119"
 ---
 # <a name="ienumreferenceidentity-interface"></a>IEnumReferenceIdentity, interface
 Sert d’énumérateur pour une collection de `IReferenceIdentity` objets.  
