@@ -1,47 +1,34 @@
 ---
 title: "Procédure : activer l'accès au service de données (WCF Data Services)"
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 3d830bcd-32b4-4f26-9287-d58a071452c6
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f481a3a918282bf598277dcd4e1bf29d63edddc1
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: e383fd493326b417002818d8cf32dc5251bd9c6d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364557"
 ---
-# <a name="how-to-enable-access-to-the-data-service-wcf-data-services"></a><span data-ttu-id="6cf86-102">Procédure : activer l'accès au service de données (WCF Data Services)</span><span class="sxs-lookup"><span data-stu-id="6cf86-102">How to: Enable Access to the Data Service (WCF Data Services)</span></span>
-<span data-ttu-id="6cf86-103">Dans [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], vous devez accorder explicitement l'accès aux ressources exposées par un service de données.</span><span class="sxs-lookup"><span data-stu-id="6cf86-103">In [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], you must explicitly grant access to the resources that are exposed by a data service.</span></span> <span data-ttu-id="6cf86-104">Cela signifie qu'après avoir créé un service de données, vous devez encore fournir explicitement l'accès à des ressources individuelles comme les jeux d'entités.</span><span class="sxs-lookup"><span data-stu-id="6cf86-104">This means that after you create a new data service, you must still explicitly provide access to individual resources as entity sets.</span></span> <span data-ttu-id="6cf86-105">Cette rubrique montre comment activer la lecture et écriture aux cinq de l’entité définit dans le service de données Northwind est créé lorsque vous complétez le [quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="6cf86-105">This topic shows how to enable read and write access to five of the entity sets in the Northwind data service that is created when you complete the [quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).</span></span> <span data-ttu-id="6cf86-106">Puisque l'énumération <xref:System.Data.Services.EntitySetRights> est définie à l'aide de l'objet <xref:System.FlagsAttribute>, vous pouvez utiliser un opérateur OR logique pour spécifier plusieurs autorisations pour un jeu d'entités unique.</span><span class="sxs-lookup"><span data-stu-id="6cf86-106">Because the <xref:System.Data.Services.EntitySetRights> enumeration is defined by using the <xref:System.FlagsAttribute>, you can use a logical OR operator to specify multiple permissions for a single entity set.</span></span>  
+# <a name="how-to-enable-access-to-the-data-service-wcf-data-services"></a><span data-ttu-id="f5fea-102">Procédure : activer l'accès au service de données (WCF Data Services)</span><span class="sxs-lookup"><span data-stu-id="f5fea-102">How to: Enable Access to the Data Service (WCF Data Services)</span></span>
+<span data-ttu-id="f5fea-103">Dans [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], vous devez accorder explicitement l'accès aux ressources exposées par un service de données.</span><span class="sxs-lookup"><span data-stu-id="f5fea-103">In [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], you must explicitly grant access to the resources that are exposed by a data service.</span></span> <span data-ttu-id="f5fea-104">Cela signifie qu'après avoir créé un service de données, vous devez encore fournir explicitement l'accès à des ressources individuelles comme les jeux d'entités.</span><span class="sxs-lookup"><span data-stu-id="f5fea-104">This means that after you create a new data service, you must still explicitly provide access to individual resources as entity sets.</span></span> <span data-ttu-id="f5fea-105">Cette rubrique montre comment activer la lecture et écriture aux cinq de l’entité définit dans le service de données Northwind est créé lorsque vous complétez le [quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="f5fea-105">This topic shows how to enable read and write access to five of the entity sets in the Northwind data service that is created when you complete the [quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).</span></span> <span data-ttu-id="f5fea-106">Puisque l'énumération <xref:System.Data.Services.EntitySetRights> est définie à l'aide de l'objet <xref:System.FlagsAttribute>, vous pouvez utiliser un opérateur OR logique pour spécifier plusieurs autorisations pour un jeu d'entités unique.</span><span class="sxs-lookup"><span data-stu-id="f5fea-106">Because the <xref:System.Data.Services.EntitySetRights> enumeration is defined by using the <xref:System.FlagsAttribute>, you can use a logical OR operator to specify multiple permissions for a single entity set.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="6cf86-107">Tout client qui peut accéder à l'application ASP.NET peut également accéder aux ressources exposées par le service de données.</span><span class="sxs-lookup"><span data-stu-id="6cf86-107">Any client that can access the ASP.NET application can also access the resources exposed by the data service.</span></span> <span data-ttu-id="6cf86-108">Dans un service de données de production, pour empêcher l'accès non autorisé aux ressources, vous devez également sécuriser l'application elle-même.</span><span class="sxs-lookup"><span data-stu-id="6cf86-108">In a production data service, to prevent unauthorized access to resources, you should also secure the application itself.</span></span> <span data-ttu-id="6cf86-109">Pour plus d’informations, consultez [NIB : sécurité ASP.NET](http://msdn.microsoft.com/library/04b37532-18d9-40b4-8e5f-ee09a70b311d).</span><span class="sxs-lookup"><span data-stu-id="6cf86-109">For more information, see [NIB: ASP.NET Security](http://msdn.microsoft.com/library/04b37532-18d9-40b4-8e5f-ee09a70b311d).</span></span>  
+>  <span data-ttu-id="f5fea-107">Tout client qui peut accéder à l'application ASP.NET peut également accéder aux ressources exposées par le service de données.</span><span class="sxs-lookup"><span data-stu-id="f5fea-107">Any client that can access the ASP.NET application can also access the resources exposed by the data service.</span></span> <span data-ttu-id="f5fea-108">Dans un service de données de production, pour empêcher l'accès non autorisé aux ressources, vous devez également sécuriser l'application elle-même.</span><span class="sxs-lookup"><span data-stu-id="f5fea-108">In a production data service, to prevent unauthorized access to resources, you should also secure the application itself.</span></span> <span data-ttu-id="f5fea-109">Pour plus d’informations, consultez [NIB : sécurité ASP.NET](http://msdn.microsoft.com/library/04b37532-18d9-40b4-8e5f-ee09a70b311d).</span><span class="sxs-lookup"><span data-stu-id="f5fea-109">For more information, see [NIB: ASP.NET Security](http://msdn.microsoft.com/library/04b37532-18d9-40b4-8e5f-ee09a70b311d).</span></span>  
   
-### <a name="to-enable-access-to-the-data-service"></a><span data-ttu-id="6cf86-110">Pour activer l'accès au service de données</span><span class="sxs-lookup"><span data-stu-id="6cf86-110">To enable access to the data service</span></span>  
+### <a name="to-enable-access-to-the-data-service"></a><span data-ttu-id="f5fea-110">Pour activer l'accès au service de données</span><span class="sxs-lookup"><span data-stu-id="f5fea-110">To enable access to the data service</span></span>  
   
--   <span data-ttu-id="6cf86-111">Dans le code du service de données, remplacez le code d'espace réservé dans la fonction `InitializeService` par le code suivant :</span><span class="sxs-lookup"><span data-stu-id="6cf86-111">In the code for the data service, replace the placeholder code in the `InitializeService` function with the following:</span></span>  
+-   <span data-ttu-id="f5fea-111">Dans le code du service de données, remplacez le code d'espace réservé dans la fonction `InitializeService` par le code suivant :</span><span class="sxs-lookup"><span data-stu-id="f5fea-111">In the code for the data service, replace the placeholder code in the `InitializeService` function with the following:</span></span>  
   
      [!code-csharp[Astoria Quickstart Service#AllReadConfig](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria quickstart service/cs/northwind.svc.cs#allreadconfig)]
      [!code-vb[Astoria Quickstart Service#AllReadConfig](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart service/vb/northwind.svc.vb#allreadconfig)]  
   
-     <span data-ttu-id="6cf86-112">Cela permet aux clients de disposer d'un accès en lecture et en écriture aux jeux d'entités `Orders` et `Order_Details` et d'un accès en lecture seule aux jeux d'entités `Customers`.</span><span class="sxs-lookup"><span data-stu-id="6cf86-112">This enables clients to have read and write access to the `Orders` and `Order_Details` entity sets and read-only access to the `Customers` entity sets.</span></span>  
+     <span data-ttu-id="f5fea-112">Cela permet aux clients de disposer d'un accès en lecture et en écriture aux jeux d'entités `Orders` et `Order_Details` et d'un accès en lecture seule aux jeux d'entités `Customers`.</span><span class="sxs-lookup"><span data-stu-id="f5fea-112">This enables clients to have read and write access to the `Orders` and `Order_Details` entity sets and read-only access to the `Customers` entity sets.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6cf86-113">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="6cf86-113">See Also</span></span>  
- [<span data-ttu-id="6cf86-114">Guide pratique pour développer un service de données WCF qui fonctionne sur IIS</span><span class="sxs-lookup"><span data-stu-id="6cf86-114">How to: Develop a WCF Data Service Running on IIS</span></span>](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md)  
- [<span data-ttu-id="6cf86-115">Configuration du service de données</span><span class="sxs-lookup"><span data-stu-id="6cf86-115">Configuring the Data Service</span></span>](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)
+## <a name="see-also"></a><span data-ttu-id="f5fea-113">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="f5fea-113">See Also</span></span>  
+ [<span data-ttu-id="f5fea-114">Guide pratique pour développer un service de données WCF qui fonctionne sur IIS</span><span class="sxs-lookup"><span data-stu-id="f5fea-114">How to: Develop a WCF Data Service Running on IIS</span></span>](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md)  
+ [<span data-ttu-id="f5fea-115">Configuration du service de données</span><span class="sxs-lookup"><span data-stu-id="f5fea-115">Configuring the Data Service</span></span>](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)
