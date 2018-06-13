@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: eb5145db6f081661996766aab0683dc5d8a97e61
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33460761"
 ---
 # <a name="icorprofilercallback4movedreferences2-method"></a>ICorProfilerCallback4::MovedReferences2, méthode
 Appelée pour signaler la nouvelle disposition d’objets dans le tas suite à un garbage collection de compactage. Cette méthode est appelée si le profileur a implémenté la [ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md) interface. Ce rappel remplace la [ICorProfilerCallback::MovedReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-movedreferences-method.md) (méthode), car il peut indiquer des plages plus larges d’objets dont les longueurs dépassent ce qui peut être exprimé en ULONG.  

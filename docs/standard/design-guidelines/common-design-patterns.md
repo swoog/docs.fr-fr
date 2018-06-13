@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570336"
 ---
 # <a name="common-design-patterns"></a>Modèles de design courants
 Il existe de nombreux ouvrages sur les modèles de logiciels, les langages de modèle et les antipatterns permettant de traiter l’objet très large de modèles. Par conséquent, ce chapitre fournit des instructions et la discussion liée à un ensemble très limité de modèles qui sont fréquemment utilisées dans la conception de l’API .NET Framework.  

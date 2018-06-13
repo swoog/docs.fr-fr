@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573579"
 ---
 # <a name="choosing-between-class-and-struct"></a>Choix entre classe et structure
 Les décisions de conception de base que fait face à chaque concepteur framework consiste à concevoir un type en tant que classe (type référence) ou en tant que struct (un type valeur). Bien comprendre les différences dans le comportement des types référence et les types de valeur est vitale pour rendre ce choix.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472748"
 ---
 # <a name="connection-string-syntax"></a>Syntaxe des chaînes de connexion
 Chaque fournisseur de données .NET Framework a un objet `Connection` qui hérite de <xref:System.Data.Common.DbConnection> et d'une propriété <xref:System.Data.Common.DbConnection.ConnectionString%2A> spécifique au fournisseur. La syntaxe de chaîne de connexion spécifique à chaque fournisseur est documentée dans sa propriété `ConnectionString`. Le tableau suivant répertorie les quatre fournisseurs de données inclus dans le .NET Framework.  

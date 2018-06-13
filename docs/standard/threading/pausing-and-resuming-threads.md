@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589121"
 ---
 # <a name="pausing-and-resuming-threads"></a>Suspension et reprise des threads
 Les méthodes les plus courantes permettant de synchroniser les activités de threads consistent à bloquer et à diffuser des threads, ou à verrouiller des objets ou des régions du code. Pour plus d’informations sur ces mécanismes de verrouillage et de blocage, voir [Vue d’ensemble des primitives de synchronisation](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  

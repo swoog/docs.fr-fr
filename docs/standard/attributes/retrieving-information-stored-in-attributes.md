@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570397"
 ---
 # <a name="retrieving-information-stored-in-attributes"></a>Récupération des informations stockées dans les attributs
 La récupération d’un attribut personnalisé est un processus simple. Tout d’abord, déclarez une instance de l’attribut que vous souhaitez récupérer. Ensuite, utilisez la méthode <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType> pour initialiser le nouvel attribut à la valeur de l’attribut que vous souhaitez récupérer. Une fois le nouvel attribut initialisé, vous utilisez simplement ses propriétés pour obtenir les valeurs.  

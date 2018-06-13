@@ -27,6 +27,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575491"
 ---
 # <a name="calling-synchronous-methods-asynchronously"></a>Appel de méthodes synchrones de façon asynchrone
 Le .NET Framework vous permet d’appeler n’importe quelle méthode de façon asynchrone. Pour ce faire, vous définissez un délégué avec la même signature que la méthode à appeler. Le Common Language Runtime définit automatiquement les méthodes `BeginInvoke` et `EndInvoke` pour ce délégué, avec les signatures appropriées.  

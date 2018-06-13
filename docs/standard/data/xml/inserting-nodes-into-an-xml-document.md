@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568540"
 ---
 # <a name="inserting-nodes-into-an-xml-document"></a>Insertion de nœuds dans un document XML
 Vous pouvez modifier le document en insérant de nouveaux nœuds. Il peut s'agir de nœuds qui viennent d'être créés, qui existent dans le même document ou qui peuvent être importés à partir d'un autre document. Pour plus d'informations sur la création de nouveaux nœuds, consultez [Création de nouveaux nœuds dans le DOM](../../../../docs/standard/data/xml/create-new-nodes-in-the-dom.md). Pour plus d'informations sur la copie de nœuds existants, consultez [Copie de nœuds existants](../../../../docs/standard/data/xml/copy-existing-nodes.md), [Copie de nœuds existants d'un document à un autre](../../../../docs/standard/data/xml/copying-existing-nodes-from-one-document-to-another.md) ou [Copie de fragments de document](../../../../docs/standard/data/xml/copying-document-fragments.md).  

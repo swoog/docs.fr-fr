@@ -12,6 +12,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34234676"
 ---
 # <a name="delegate-statement"></a>Delegate, instruction
 Utilisé pour déclarer un délégué. Un délégué est un type référence qui fait référence à un `Shared` d’un type ou à une méthode d’instance d’un objet de méthode. Toute procédure ayant des types de paramètres et de retour correspondants peut être utilisé pour créer une instance de cette classe déléguée. La procédure peut ensuite être appelée ultérieurement au moyen de l’instance de délégué.  

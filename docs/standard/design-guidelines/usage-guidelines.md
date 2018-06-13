@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571031"
 ---
 # <a name="usage-guidelines"></a>Indications relatives à l'utilisation
 Cette section contient des instructions pour l’utilisation des types courants dans les API accessibles publiquement. Il traite et l’utilisation directe intégrés Framework des types de (par exemple, les attributs de sérialisation) et la surcharge des opérateurs communs.  

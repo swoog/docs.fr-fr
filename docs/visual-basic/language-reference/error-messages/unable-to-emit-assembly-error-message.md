@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595171"
 ---
 # <a name="unable-to-emit-assembly-lterror-messagegt"></a>Impossible de créer l’assembly : &lt;message d’erreur&gt;
 Le compilateur Visual Basic appelle Assembly Linker (Al.exe, également appelé Alink) pour générer un assembly avec un manifeste, avec l’éditeur de liens signale une erreur lors de l’étape d’émission de création de l’assembly.  

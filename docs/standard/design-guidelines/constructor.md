@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575555"
 ---
 # <a name="constructor-design"></a>Conception de constructeurs
 Il existe deux types de constructeurs : constructeurs et les constructeurs d’instance de type.  

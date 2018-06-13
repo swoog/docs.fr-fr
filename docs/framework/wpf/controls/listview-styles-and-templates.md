@@ -14,6 +14,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457480"
 ---
 # <a name="listview-styles-and-templates"></a>Styles et modèles ListView
 Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Controls.ListView> contrôle. Vous pouvez modifier la valeur par défaut <xref:System.Windows.Controls.ControlTemplate> pour donner une apparence unique au contrôle. Pour plus d’informations, consultez [Personnalisation de l’apparence d’un contrôle existant en créant un ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  

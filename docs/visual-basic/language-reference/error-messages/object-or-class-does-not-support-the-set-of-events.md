@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593202"
 ---
 # <a name="object-or-class-does-not-support-the-set-of-events"></a>L'objet ou la classe ne prend pas en charge le jeu d'événements
 Vous avez essayé d’utiliser un `WithEvents` variable avec un composant qui ne peut pas fonctionner en tant que source d’événements pour le jeu d’événements spécifié. Par exemple, vous souhaitez recevoir les événements d’un objet, puis créer un autre objet qui `Implements` le premier objet. Même si vous pensez que vous pouvez recevoir les événements de l’objet implémenté, ce n’est pas toujours le cas. `Implements` implémente uniquement une interface pour les méthodes et propriétés. `WithEvents` n’est pas prise en charge privé `UserControls`, car les informations de type nécessaires pour déclencher le `ObjectEvent` n’est pas disponible au moment de l’exécution.  

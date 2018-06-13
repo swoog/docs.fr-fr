@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595850"
 ---
 # <a name="39set39-accessor-of-property-39ltpropertynamegt39-is-not-accessible"></a>&#39;Définissez&#39; l’accesseur de propriété &#39; &lt;propertyname&gt; &#39; n’est pas accessible
 Une instruction essaie de stocker la valeur d’une propriété qui n’a pas accès à la propriété `Set` procédure.  

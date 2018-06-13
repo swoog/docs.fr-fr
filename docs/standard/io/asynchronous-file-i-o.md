@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575516"
 ---
 # <a name="asynchronous-file-io"></a>E/S sur fichier asynchrones
 Les opérations asynchrones vous permettent d'exécuter des opérations d'E/S consommant beaucoup de ressources sans bloquer le thread principal. Cette considération de performance est particulièrement importante dans une application [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] ou une application [!INCLUDE[desktop_appname](../../../includes/desktop-appname-md.md)] où une longue opération de flux peut bloquer le thread d'interface utilisateur et faire que l'application s'affiche comme si elle ne fonctionnait pas.  

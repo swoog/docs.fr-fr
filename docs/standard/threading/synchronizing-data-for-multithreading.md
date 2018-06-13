@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591529"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>Synchronisation des données pour le multithreading
 Lorsque plusieurs threads peuvent appeler les propriétés et méthodes d’un objet unique, il est essentiel que ces appels soient synchronisés. Sinon, un thread peut interrompre l’action d’un autre thread, et l’objet peut être laissé dans un état non valide. Une classe dont les membres sont protégés de ces interruptions est appelée « thread-safe ».  

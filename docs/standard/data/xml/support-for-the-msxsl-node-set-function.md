@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570530"
 ---
 # <a name="support-for-the-msxslnode-set-function"></a>Prise en charge de la fonction msxsl:node-set()
 La fonction `msxsl:node-set` vous permet de convertir un fragment d'arborescence résultat en une collection de nœuds. La collection de nœuds obtenue contient toujours un seul nœud et représente le nœud racine de l’arborescence.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588994"
 ---
 # <a name="constructor-39ltnamegt39-cannot-call-itself"></a>Constructeur &#39; &lt;nom&gt; &#39; ne peut pas s’appeler lui-même
 A `Sub New` procédure dans une classe ou une structure s’appelle elle-même.  

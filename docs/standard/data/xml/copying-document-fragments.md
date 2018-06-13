@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568015"
 ---
 # <a name="copying-document-fragments"></a>Copie de fragments de document
 Vous pouvez créer un nœud **XmlDocumentFragment**, puis ajouter des nœuds sous celui-ci. Quand le nœud **XmlDocumentFragment** est inséré avec la méthode **InsertNode**, le nœud **XmlDocumentFragment** n'est pas copié, mais ses nœuds enfants sont insérés dans le DOM (Document Object Model) XML.  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0db08ef4938a88ee657e2d65dda70edac09df8ef
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33462158"
 ---
 # <a name="putinstancewmi-function"></a>PutInstanceWmi (fonction)
 Crée ou met à jour une instance d’une classe existante. L’instance est écrit dans le référentiel WMI. 

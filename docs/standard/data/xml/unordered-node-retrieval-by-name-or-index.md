@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572939"
 ---
 # <a name="unordered-node-retrieval-by-name-or-index"></a>Extraction de nœuds non triés par leur nom ou par l'index
 **XmlNamedNodeMap**, appelé NamedNodeMap dans la spécification du World Wide Web Consortium (W3C), est requis pour gérer un ensemble non trié de nœuds tout en permettant de référencer les nœuds par leur nom ou sur base de l’index. Le seul moyen d’accéder à un **XmlNamedNodeMap** est le retour de **XmlNamedNodeMap** par une méthode ou une propriété. Trois méthodes ou propriétés retournent **XmlNamedNodeMap** :  

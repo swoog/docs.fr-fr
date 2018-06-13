@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172644"
 ---
 # <a name="virtual-c-reference"></a>virtual (référence C#)
 Le mot clé `virtual` sert à modifier une méthode, une propriété, un indexeur ou une déclaration event et leur permet d’être substitués dans une classe dérivée. Par exemple, cette méthode peut être substituée par toute classe qui en hérite :  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567627"
 ---
 # <a name="how-to-use-components-that-support-the-event-based-asynchronous-pattern"></a>Comment : utiliser des composants qui prennent en charge le modèle asynchrone basé sur des événements
 De nombreux composants peuvent effectuer leur travail de façon asynchrone. Les composants <xref:System.Media.SoundPlayer> et <xref:System.Windows.Forms.PictureBox>, par exemple, permettent de charger des sons et des images « en arrière-plan » pendant que le thread principal continue de s’exécuter sans interruption.  

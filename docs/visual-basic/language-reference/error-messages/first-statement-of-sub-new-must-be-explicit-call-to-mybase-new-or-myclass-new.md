@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589891"
 ---
 # <a name="first-statement-of-this-39sub-new39-must-be-an-explicit-call-to-39mybasenew39-or-39myclassnew39-because-the-39ltconstructornamegt39-in-the-base-class-39ltbaseclassnamegt39-of-39ltderivedclassnamegt39-is-marked-obsolete-39lterrormessagegt39"></a>La première instruction de ce &#39;Sub New&#39; doit être un appel explicite à &#39;MyBase.New&#39; ou &#39;MyClass.New&#39; , car le &#39; &lt;Nom_Constructeur&gt; &#39; dans la classe de base &#39; &lt;nom_classe_base&gt; &#39; de &#39; &lt;nom_classe_dérivée&gt; &#39; est marqué comme obsolète : &#39; &lt;errormessage&gt;&#39;
 Un constructeur de classe n’appelle pas explicitement un constructeur de classe de base et le constructeur de classe de base implicite est marqué avec l’attribut <xref:System.ObsoleteAttribute> et la directive pour le traiter comme une erreur.  

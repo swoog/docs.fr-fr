@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591857"
 ---
 # <a name="packaging-and-deploying-custom-my-extensions-visual-basic"></a>Empaquetage et déploiement des extensions My (Visual Basic) personnalisé
 Visual Basic fournit un moyen simple pour vous permettre de déployer votre personnalisé `My` extensions de l’espace de noms à l’aide de modèles Visual Studio. Si vous créez un modèle de projet pour lequel votre `My` extensions font partie intégrante du nouveau type de projet, vous pouvez simplement inclure votre personnalisé `My` code d’extension avec le projet lorsque vous exportez le modèle. Pour plus d’informations sur l’exportation de modèles de projet, consultez [Comment : créer des modèles de projet](/visualstudio/ide/how-to-create-project-templates).  

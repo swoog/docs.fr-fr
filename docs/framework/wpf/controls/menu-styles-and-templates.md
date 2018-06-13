@@ -14,6 +14,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457561"
 ---
 # <a name="menu-styles-and-templates"></a>Styles et modèles Menu
 Cette rubrique décrit les styles et modèles pour la <xref:System.Windows.Controls.Menu> contrôle. Vous pouvez modifier la valeur par défaut <xref:System.Windows.Controls.ControlTemplate> pour donner une apparence unique au contrôle. Pour plus d’informations, consultez [Personnalisation de l’apparence d’un contrôle existant en créant un ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  

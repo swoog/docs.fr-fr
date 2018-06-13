@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572094"
 ---
 # <a name="output-options-on-the-xslcompiledtransform-class"></a>Options de sortie de la classe XslCompiledTransform
 Cette rubrique présente les options de sortie XSLT disponibles. Vous pouvez spécifier des options de sortie dans la feuille de style ou dans la méthode <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595002"
 ---
 # <a name="return-type-of-function-39ltprocedurenamegt39-is-not-cls-compliant"></a>Type de retour de fonction &#39; &lt;nom_procédure&gt; &#39; n’est pas conforme CLS
 A `Function` procédure est marquée comme `<CLSCompliant(True)>` , mais retourne un type qui est marqué comme `<CLSCompliant(False)>`, n’est pas marqué ou ne répond pas, car il s’agit d’un type non conforme.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472514"
 ---
 # <a name="c-compiler-options"></a>Options du compilateur C#
 Le compilateur produit des fichiers exécutables (.exe), des bibliothèques de liens dynamiques (.dll) ou des modules de code (.netmodule).  

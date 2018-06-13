@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571115"
 ---
 # <a name="type-conversion-tables-in-net"></a>Table de conversion de type dans .NET
 Une conversion étendue se produit quand une valeur d’un type est convertie en un autre type de taille égale ou supérieure. Une conversion restrictive se produit quand une valeur d’un type est convertie en une valeur d’un autre type de taille inférieure. Les tableaux de cette rubrique illustrent les comportements propres aux deux types de conversion.  

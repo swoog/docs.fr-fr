@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571483"
 ---
 # <a name="xmlschemacollection-schema-compilation"></a>Compilation de schéma XmlSchemaCollection
 La classe **XmlSchemaCollection** est un cache ou une bibliothèque où des schémas XDR (XML-Data Reduced) et des schémas de langage XSD (XML Schema Definition) peuvent être stockés et validés. **XmlSchemaCollection** améliore les performances en mettant les schémas en cache au lieu d'y accéder à partir d'un fichier ou d'une URL.  

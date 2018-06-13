@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8cec2a622a1a30881949ad5a9f2050077e195015
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461397"
 ---
 # <a name="icorprofilerinfo2-interface"></a>ICorProfilerInfo2, interface
 Fournit des méthodes que les profileurs de code utilisent pour communiquer avec le common language runtime (CLR) pour contrôler la surveillance des événements et les informations de demande. Le `ICorProfilerInfo2` interface est une extension de la [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) interface. Autrement dit, il fournit les nouvelles méthodes prises en charge dans le .NET Framework version 2.0 et versions ultérieures.  

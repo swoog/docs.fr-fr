@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33337501"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>Vue d'ensemble de l'interopérabilité (Guide de programmation C#)
 Cette rubrique décrit les méthodes qui permettent une interopérabilité entre le code managé C# et le code non managé.  

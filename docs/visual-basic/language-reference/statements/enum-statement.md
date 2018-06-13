@@ -16,6 +16,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34234014"
 ---
 # <a name="enum-statement-visual-basic"></a>Enum, instruction (Visual Basic)
 Déclare une énumération et définit les valeurs de ses membres.  

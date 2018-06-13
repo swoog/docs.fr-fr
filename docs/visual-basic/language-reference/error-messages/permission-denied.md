@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595993"
 ---
 # <a name="permission-denied-visual-basic"></a>Autorisation refusée (Visual Basic)
 Un utilisateur a tenté d’écrire sur un disque protégé en écriture ou accéder à un fichier verrouillé.  

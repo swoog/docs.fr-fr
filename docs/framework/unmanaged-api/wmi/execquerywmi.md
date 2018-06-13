@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b482f2ca2e2d5c06e69945adb71aa6c0f5d26465
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33462089"
 ---
 # <a name="execquerywmi-function"></a>ExecQueryWmi (fonction)
 Exécute une requête pour récupérer des objets.  

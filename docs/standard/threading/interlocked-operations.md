@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589969"
 ---
 # <a name="interlocked-operations"></a>Opérations verrouillées
 La classe <xref:System.Threading.Interlocked> fournit des méthodes qui synchronisent l’accès à une variable partagée par plusieurs threads. Les threads de processus différents peuvent utiliser ce mécanisme si la variable se trouve dans la mémoire partagée. Les opérations verrouillées sont atomiques, autrement dit, l’opération entière est une unité qui ne peut pas être interrompue par une opération verrouillée sur la même variable. Cela est important dans les systèmes d’exploitation multithreading préemptifs, où un thread peut être suspendu après le chargement d’une valeur à partir d’une adresse de mémoire, mais avant d’avoir la possibilité de la modifier et de la stocker.  

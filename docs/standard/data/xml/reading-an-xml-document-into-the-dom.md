@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569718"
 ---
 # <a name="reading-an-xml-document-into-the-dom"></a>Lecture d'un document XML dans le DOM
 Les informations XML lues en mémoire peuvent être de différents formats : chaîne, flux, URL, lecteur de texte ou classe dérivée de l'objet <xref:System.Xml.XmlReader>.  

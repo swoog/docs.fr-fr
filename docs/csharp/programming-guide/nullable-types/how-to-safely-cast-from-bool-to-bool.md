@@ -10,6 +10,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457481"
 ---
 # <a name="how-to-safely-cast-from-bool-to-bool-c-programming-guide"></a>Comment : effectuer sans risque un cast du type bool? en bool (Guide de programmation C#)
 Le type Nullable `bool?` peut contenir trois valeurs différentes : `true`, `false` et `null`. Par conséquent, le type `bool?` ne peut pas être utilisé dans des instructions conditionnelles comme `if`, `for` ou `while`. Par exemple, le code suivant génère une erreur du compilateur.  

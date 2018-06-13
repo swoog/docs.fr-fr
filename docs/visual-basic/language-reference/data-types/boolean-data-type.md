@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590275"
 ---
 # <a name="boolean-data-type-visual-basic"></a>Booléen, type de données (Visual Basic)
 Contient les valeurs qui peuvent être uniquement `True` ou `False`. Les mots clés `True` et `False` correspondent aux deux États de `Boolean` variables.  

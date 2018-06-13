@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571941"
 ---
 # <a name="how-to-open-and-append-to-a-log-file"></a>Comment : ouvrir un fichier journal et y ajouter des éléments
 <xref:System.IO.StreamWriter> et <xref:System.IO.StreamReader> écrivent des caractères dans et lisent des caractères à partir des flux. L’exemple de code suivant ouvre le fichier `log.txt` pour l’entrée, ou crée le fichier s’il n’existe pas déjà, et ajoute les informations à la fin du fichier. Le contenu du fichier est ensuite écrit vers la sortie standard pour affichage. Comme alternative à cet exemple, les informations peuvent être stockées en tant que chaîne unique ou tableau de chaînes et la méthode <xref:System.IO.File.WriteAllText%2A> ou <xref:System.IO.File.WriteAllLines%2A> peut être utilisée pour obtenir la même fonctionnalité.  

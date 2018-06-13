@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570664"
 ---
 # <a name="selecting-evaluating-and-matching-xml-data-using-xpathnavigator"></a>Sélection, évaluation et mise en correspondance de données XML à l’aide de XPathNavigator
 La classe <xref:System.Xml.XPath.XPathNavigator> fournit des méthodes de sélection de nœuds dans un objet <xref:System.Xml.XPath.XPathDocument> ou <xref:System.Xml.XmlDocument> à l'aide d'une requête XPath, d'évaluation et d'examen des résultats d'une expression XPath et détermine si un nœud d'un objet <xref:System.Xml.XPath.XPathDocument> ou <xref:System.Xml.XmlDocument> correspond à une expression XPath donnée. Ces concepts relatifs, entre autres, à la sélection, l'évaluation et la mise en correspondance de nœuds dans un objet <xref:System.Xml.XPath.XPathDocument> ou <xref:System.Xml.XmlDocument> sont décrits dans les rubriques suivantes.  

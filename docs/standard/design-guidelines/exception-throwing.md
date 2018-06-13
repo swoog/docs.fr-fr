@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573719"
 ---
 # <a name="exception-throwing"></a>Levée d'exceptions
 Levée d’exceptions des indications décrites dans cette section nécessitent une bonne définition de la signification de l’échec d’exécution. Échec d’exécution se produit chaque fois qu’un membre ne peut pas faire, il a été conçu pour faire (ce que le nom de membre implique). Par exemple, si le `OpenFile` méthode ne peut pas retourner un handle de fichier ouvert à l’appelant, il est considéré comme un échec d’exécution.  
