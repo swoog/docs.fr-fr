@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746005"
 ---
 # <a name="ltdiscoveryclientsettingsgt"></a><span data-ttu-id="e92ac-102">&lt;discoveryClientSettings&gt;</span><span class="sxs-lookup"><span data-stu-id="e92ac-102">&lt;discoveryClientSettings&gt;</span></span>
 <span data-ttu-id="e92ac-103">Contient les paramètres requis par une application pour participer au processus de découverte de service en tant que client.</span><span class="sxs-lookup"><span data-stu-id="e92ac-103">Contains the settings needed by an application to participate in the service discovery process as a client.</span></span>  

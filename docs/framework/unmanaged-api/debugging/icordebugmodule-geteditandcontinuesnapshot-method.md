@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugModule::GetEditAndContinueSnapshot, méthode"
-ms.custom: 
+title: ICorDebugModule::GetEditAndContinueSnapshot, méthode
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugModule.GetEditAndContinueSnapshot
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: fad94e1e-78be-440f-aa43-e0c66e0b102e
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9b411f4036e77b27b3e84fec9fd7c54ca61c77ae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 3d3cf2947380a7d48a261faf1bbc24ec5773b970
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33414328"
 ---
-# <a name="icordebugmodulegeteditandcontinuesnapshot-method"></a><span data-ttu-id="229c8-102">ICorDebugModule::GetEditAndContinueSnapshot, méthode</span><span class="sxs-lookup"><span data-stu-id="229c8-102">ICorDebugModule::GetEditAndContinueSnapshot Method</span></span>
-<span data-ttu-id="229c8-103">Obsolète.</span><span class="sxs-lookup"><span data-stu-id="229c8-103">Deprecated.</span></span>  
+# <a name="icordebugmodulegeteditandcontinuesnapshot-method"></a><span data-ttu-id="c55c1-102">ICorDebugModule::GetEditAndContinueSnapshot, méthode</span><span class="sxs-lookup"><span data-stu-id="c55c1-102">ICorDebugModule::GetEditAndContinueSnapshot Method</span></span>
+<span data-ttu-id="c55c1-103">Obsolète.</span><span class="sxs-lookup"><span data-stu-id="c55c1-103">Deprecated.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="229c8-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="229c8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c55c1-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="c55c1-104">Syntax</span></span>  
   
 ```  
 HRESULT GetEditAndContinueSnapshot(  
@@ -46,11 +35,11 @@ HRESULT GetEditAndContinueSnapshot(
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="229c8-105">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="229c8-105">Requirements</span></span>  
- <span data-ttu-id="229c8-106">**Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="229c8-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c55c1-105">Spécifications</span><span class="sxs-lookup"><span data-stu-id="c55c1-105">Requirements</span></span>  
+ <span data-ttu-id="c55c1-106">**Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c55c1-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="229c8-107">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="229c8-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="c55c1-107">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c55c1-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="229c8-108">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="229c8-108">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c55c1-108">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c55c1-108">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="229c8-109">**Versions du .NET framework :**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="229c8-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="c55c1-109">**Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c55c1-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

@@ -1,37 +1,24 @@
 ---
-title: "Comment : configurer des paramètres de service COM+"
-ms.custom: 
+title: 'Comment : configurer des paramètres de service COM+'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - COM+ [WCF], configuring service settings
 ms.assetid: f42a55a8-3af8-4394-9fdd-bf12a93780eb
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1bdbdbae857685ddb447843fd704896de018b1c1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 43964331f6728db0f094eaceb63e2c306d2dd3ac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490102"
 ---
-# <a name="how-to-configure-com-service-settings"></a><span data-ttu-id="ac991-102">Comment : configurer des paramètres de service COM+</span><span class="sxs-lookup"><span data-stu-id="ac991-102">How to: Configure COM+ Service Settings</span></span>
-<span data-ttu-id="ac991-103">Lorsqu'une interface d'application est ajoutée ou supprimée en utilisant l'outil de configuration de service COM+, la configuration de service Web est mise à jour dans le fichier de configuration de l'application.</span><span class="sxs-lookup"><span data-stu-id="ac991-103">When an application interface is added or removed by using the COM+ Service Configuration tool, the Web service configuration is updated within the application's configuration file.</span></span> <span data-ttu-id="ac991-104">Dans le mode d’hébergement COM +, le fichier Application.config est placé dans le répertoire racine de l’Application (%PROGRAMFILES%\ComPlus Applications\\{appid} est la valeur par défaut).</span><span class="sxs-lookup"><span data-stu-id="ac991-104">In the COM+ hosted mode, the Application.config file is placed in the Application Root Directory (%PROGRAMFILES%\ComPlus Applications\\{appid} is the default).</span></span> <span data-ttu-id="ac991-105">Dans l'un ou l'autre des modes hébergés sur le Web, le fichier Web.config est placé dans le répertoire vroot spécifié.</span><span class="sxs-lookup"><span data-stu-id="ac991-105">In either of the Web-hosted modes, the Web.config file is placed in the specified vroot directory.</span></span>  
+# <a name="how-to-configure-com-service-settings"></a><span data-ttu-id="0891b-102">Comment : configurer des paramètres de service COM+</span><span class="sxs-lookup"><span data-stu-id="0891b-102">How to: Configure COM+ Service Settings</span></span>
+<span data-ttu-id="0891b-103">Lorsqu'une interface d'application est ajoutée ou supprimée en utilisant l'outil de configuration de service COM+, la configuration de service Web est mise à jour dans le fichier de configuration de l'application.</span><span class="sxs-lookup"><span data-stu-id="0891b-103">When an application interface is added or removed by using the COM+ Service Configuration tool, the Web service configuration is updated within the application's configuration file.</span></span> <span data-ttu-id="0891b-104">Dans le mode d’hébergement COM +, le fichier Application.config est placé dans le répertoire racine de l’Application (%PROGRAMFILES%\ComPlus Applications\\{appid} est la valeur par défaut).</span><span class="sxs-lookup"><span data-stu-id="0891b-104">In the COM+ hosted mode, the Application.config file is placed in the Application Root Directory (%PROGRAMFILES%\ComPlus Applications\\{appid} is the default).</span></span> <span data-ttu-id="0891b-105">Dans l'un ou l'autre des modes hébergés sur le Web, le fichier Web.config est placé dans le répertoire vroot spécifié.</span><span class="sxs-lookup"><span data-stu-id="0891b-105">In either of the Web-hosted modes, the Web.config file is placed in the specified vroot directory.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="ac991-106">La signature du message doit être utilisée pour éviter la falsification des messages entre un client et un serveur.</span><span class="sxs-lookup"><span data-stu-id="ac991-106">Message signing should be used to protect against tampering of messages between a client and a server.</span></span> <span data-ttu-id="ac991-107">De plus, le chiffrement de la couche transport ou message doit être utilisé pour se protéger contre la divulgation d'informations de messages entre un client et un serveur.</span><span class="sxs-lookup"><span data-stu-id="ac991-107">Also, message or transport layer encryption should be used to protect against information disclosure from messages between a client and a server.</span></span> <span data-ttu-id="ac991-108">Comme avec les services [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], vous devez utiliser la fonctionnalité de limitation pour limiter le nombre d'appels, de connexions, d'instances simultanés et d'opérations en attente.</span><span class="sxs-lookup"><span data-stu-id="ac991-108">As with [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] services, you should use throttling to limit the number of concurrent calls, connections, instances, and pending operations.</span></span> <span data-ttu-id="ac991-109">Elle permet d'empêcher la surconsommation de ressources.</span><span class="sxs-lookup"><span data-stu-id="ac991-109">This helps prevent over-consumption of resources.</span></span> <span data-ttu-id="ac991-110">La fonctionnalité de limitation est spécifiée à l'aide des paramètres de fichier de configuration de service.</span><span class="sxs-lookup"><span data-stu-id="ac991-110">Throttling behavior is specified through service configuration file settings.</span></span>  
+>  <span data-ttu-id="0891b-106">La signature du message doit être utilisée pour éviter la falsification des messages entre un client et un serveur.</span><span class="sxs-lookup"><span data-stu-id="0891b-106">Message signing should be used to protect against tampering of messages between a client and a server.</span></span> <span data-ttu-id="0891b-107">De plus, le chiffrement de la couche transport ou message doit être utilisé pour se protéger contre la divulgation d'informations de messages entre un client et un serveur.</span><span class="sxs-lookup"><span data-stu-id="0891b-107">Also, message or transport layer encryption should be used to protect against information disclosure from messages between a client and a server.</span></span> <span data-ttu-id="0891b-108">Comme avec les services Windows Communication Foundation (WCF), vous devez utiliser la limitation pour limiter le nombre d’appels simultanés, les connexions, les instances et les opérations en attente.</span><span class="sxs-lookup"><span data-stu-id="0891b-108">As with Windows Communication Foundation (WCF) services, you should use throttling to limit the number of concurrent calls, connections, instances, and pending operations.</span></span> <span data-ttu-id="0891b-109">Elle permet d'empêcher la surconsommation de ressources.</span><span class="sxs-lookup"><span data-stu-id="0891b-109">This helps prevent over-consumption of resources.</span></span> <span data-ttu-id="0891b-110">La fonctionnalité de limitation est spécifiée à l'aide des paramètres de fichier de configuration de service.</span><span class="sxs-lookup"><span data-stu-id="0891b-110">Throttling behavior is specified through service configuration file settings.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ac991-111">Exemple</span><span class="sxs-lookup"><span data-stu-id="ac991-111">Example</span></span>  
- <span data-ttu-id="ac991-112">Prenons l'exemple d'un composant qui implémente l'interface suivante :</span><span class="sxs-lookup"><span data-stu-id="ac991-112">Consider a component that implements the following interface:</span></span>  
+## <a name="example"></a><span data-ttu-id="0891b-111">Exemple</span><span class="sxs-lookup"><span data-stu-id="0891b-111">Example</span></span>  
+ <span data-ttu-id="0891b-112">Prenons l'exemple d'un composant qui implémente l'interface suivante :</span><span class="sxs-lookup"><span data-stu-id="0891b-112">Consider a component that implements the following interface:</span></span>  
   
 ```  
 [Guid("C551FBA9-E3AA-4272-8C2A-84BD8D290AC7")]  
@@ -42,7 +29,7 @@ public interface IFinances
 }  
 ```  
   
- <span data-ttu-id="ac991-113">Si le composant est exposé en tant que service Web, le contrat de service correspondant qui est exposé, et auquel les clients doivent se conformer, est le suivant :</span><span class="sxs-lookup"><span data-stu-id="ac991-113">If the component is exposed as a Web service, the corresponding service contract that is exposed, and that clients would need to conform to, is as follows:</span></span>  
+ <span data-ttu-id="0891b-113">Si le composant est exposé en tant que service Web, le contrat de service correspondant qui est exposé, et auquel les clients doivent se conformer, est le suivant :</span><span class="sxs-lookup"><span data-stu-id="0891b-113">If the component is exposed as a Web service, the corresponding service contract that is exposed, and that clients would need to conform to, is as follows:</span></span>  
   
 ```  
 [ServiceContract(Session = true,  
@@ -58,21 +45,21 @@ public interface IFinancesContract : IDisposable
 ```  
   
 > [!NOTE]
->  <span data-ttu-id="ac991-114">IID fait partie intégrante de l'espace de noms initial pour le contrat.</span><span class="sxs-lookup"><span data-stu-id="ac991-114">IID forms part of the initial namespace for the contract.</span></span>  
+>  <span data-ttu-id="0891b-114">IID fait partie intégrante de l'espace de noms initial pour le contrat.</span><span class="sxs-lookup"><span data-stu-id="0891b-114">IID forms part of the initial namespace for the contract.</span></span>  
   
- <span data-ttu-id="ac991-115">Les applications clientes qui utilisent ce service doivent se conformer à ce contrat et utiliser une liaison compatible avec celui spécifié dans la configuration de l'application.</span><span class="sxs-lookup"><span data-stu-id="ac991-115">Client applications that use this service would need to conform to this contract, along with using a binding that is compatible with the one specified in the application configuration.</span></span>  
+ <span data-ttu-id="0891b-115">Les applications clientes qui utilisent ce service doivent se conformer à ce contrat et utiliser une liaison compatible avec celui spécifié dans la configuration de l'application.</span><span class="sxs-lookup"><span data-stu-id="0891b-115">Client applications that use this service would need to conform to this contract, along with using a binding that is compatible with the one specified in the application configuration.</span></span>  
   
- <span data-ttu-id="ac991-116">L'exemple de code suivant affiche un fichier de configuration par défaut.</span><span class="sxs-lookup"><span data-stu-id="ac991-116">The following code example shows a default configuration file.</span></span> <span data-ttu-id="ac991-117">En tant que service Web [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], il se conforme au schéma de configuration du modèle de service standard et peut être modifié de la même façon que d'autres fichiers de configuration des services [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="ac991-117">Being a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Web service, this conforms to the standard service model configuration schema and can be edited in the same way as other [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services configuration files.</span></span>  
+ <span data-ttu-id="0891b-116">L'exemple de code suivant affiche un fichier de configuration par défaut.</span><span class="sxs-lookup"><span data-stu-id="0891b-116">The following code example shows a default configuration file.</span></span> <span data-ttu-id="0891b-117">Est un service Web de Windows Communication Foundation (WCF), cela est conforme au schéma de configuration de modèle de service standard et peut être modifiée dans la même façon que les autres fichiers de configuration de services WCF.</span><span class="sxs-lookup"><span data-stu-id="0891b-117">Being a Windows Communication Foundation (WCF) Web service, this conforms to the standard service model configuration schema and can be edited in the same way as other WCF services configuration files.</span></span>  
   
- <span data-ttu-id="ac991-118">Les changements standard incluent :</span><span class="sxs-lookup"><span data-stu-id="ac991-118">Typical modifications would include:</span></span>  
+ <span data-ttu-id="0891b-118">Les changements standard incluent :</span><span class="sxs-lookup"><span data-stu-id="0891b-118">Typical modifications would include:</span></span>  
   
--   <span data-ttu-id="ac991-119">Remplacer l'adresse de point de terminaison de la forme par défaut ApplicationName/ComponentName/InterfaceName par une forme plus utilisable.</span><span class="sxs-lookup"><span data-stu-id="ac991-119">Changing the endpoint address from the default ApplicationName/ComponentName/InterfaceName form to a more usable form.</span></span>  
+-   <span data-ttu-id="0891b-119">Remplacer l'adresse de point de terminaison de la forme par défaut ApplicationName/ComponentName/InterfaceName par une forme plus utilisable.</span><span class="sxs-lookup"><span data-stu-id="0891b-119">Changing the endpoint address from the default ApplicationName/ComponentName/InterfaceName form to a more usable form.</span></span>  
   
--   <span data-ttu-id="ac991-120">Remplacer l'espace de noms du service de la forme "http://tempuri.org/InterfaceID" par défaut par une forme plus pertinente.</span><span class="sxs-lookup"><span data-stu-id="ac991-120">Modifying the namespace of the service from the default "http://tempuri.org/InterfaceID" form to a more relevant form.</span></span>  
+-   <span data-ttu-id="0891b-120">Modification de l’espace de noms du service à partir de la valeur par défaut «http://tempuri.org/InterfaceID« forme à une forme plus pertinente.</span><span class="sxs-lookup"><span data-stu-id="0891b-120">Modifying the namespace of the service from the default "http://tempuri.org/InterfaceID" form to a more relevant form.</span></span>  
   
--   <span data-ttu-id="ac991-121">Modifier le point de terminaison pour utiliser une liaison de transport différente.</span><span class="sxs-lookup"><span data-stu-id="ac991-121">Changing the endpoint to use a different transport binding.</span></span>  
+-   <span data-ttu-id="0891b-121">Modifier le point de terminaison pour utiliser une liaison de transport différente.</span><span class="sxs-lookup"><span data-stu-id="0891b-121">Changing the endpoint to use a different transport binding.</span></span>  
   
-     <span data-ttu-id="ac991-122">Dans le cas hébergé par COM+, le transport de canaux nommés est utilisé par défaut, mais un transport off-machine, tel que TCP, peut être utilisé à la place.</span><span class="sxs-lookup"><span data-stu-id="ac991-122">In the COM+-hosted case, the named pipes transport is used by default, but an off-machine transport like TCP can be used instead.</span></span>  
+     <span data-ttu-id="0891b-122">Dans le cas hébergé par COM+, le transport de canaux nommés est utilisé par défaut, mais un transport off-machine, tel que TCP, peut être utilisé à la place.</span><span class="sxs-lookup"><span data-stu-id="0891b-122">In the COM+-hosted case, the named pipes transport is used by default, but an off-machine transport like TCP can be used instead.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -109,5 +96,5 @@ public interface IFinancesContract : IDisposable
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="ac991-123">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="ac991-123">See Also</span></span>  
- [<span data-ttu-id="ac991-124">Intégration à des applications COM+</span><span class="sxs-lookup"><span data-stu-id="ac991-124">Integrating with COM+ Applications</span></span>](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
+## <a name="see-also"></a><span data-ttu-id="0891b-123">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="0891b-123">See Also</span></span>  
+ [<span data-ttu-id="0891b-124">Intégration à des applications COM+</span><span class="sxs-lookup"><span data-stu-id="0891b-124">Integrating with COM+ Applications</span></span>](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)

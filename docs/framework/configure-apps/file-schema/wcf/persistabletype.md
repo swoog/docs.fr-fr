@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747071"
 ---
 # <a name="ltpersistabletypegt"></a><span data-ttu-id="e73ae-102">&lt;élément persistableType&gt;</span><span class="sxs-lookup"><span data-stu-id="e73ae-102">&lt;persistableType&gt;</span></span>
 <span data-ttu-id="e73ae-103">Spécifie tous les types persistants.</span><span class="sxs-lookup"><span data-stu-id="e73ae-103">Specifies all the persistable types.</span></span>  

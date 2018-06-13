@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747562"
 ---
 # <a name="ltpersistabletypesgt"></a><span data-ttu-id="2ced3-102">&lt;persistableTypes&gt;</span><span class="sxs-lookup"><span data-stu-id="2ced3-102">&lt;persistableTypes&gt;</span></span>
 <span data-ttu-id="2ced3-103">Cette section contient une collection d'éléments `persistableType`.</span><span class="sxs-lookup"><span data-stu-id="2ced3-103">This section contains a collection of `persistableType` elements.</span></span>  

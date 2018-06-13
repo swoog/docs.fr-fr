@@ -1,14 +1,6 @@
 ---
 title: ISymUnmanagedBinder, interface
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ISymUnmanagedBinder
 api_location:
@@ -22,35 +14,32 @@ helpviewer_keywords:
 ms.assetid: b22fbe19-b30f-4696-8175-e6b91da9edab
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 79d3758f57976d08d4599de500e2e12e4d67cb4b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 7bbdc4b1f15c8dbb154ed7b967bb21c61d11782a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33425550"
 ---
-# <a name="isymunmanagedbinder-interface"></a><span data-ttu-id="e1fc3-102">ISymUnmanagedBinder, interface</span><span class="sxs-lookup"><span data-stu-id="e1fc3-102">ISymUnmanagedBinder Interface</span></span>
-<span data-ttu-id="e1fc3-103">Représente un classeur de symboles pour le code non managé.</span><span class="sxs-lookup"><span data-stu-id="e1fc3-103">Represents a symbol binder for unmanaged code.</span></span>  
+# <a name="isymunmanagedbinder-interface"></a><span data-ttu-id="efd75-102">ISymUnmanagedBinder, interface</span><span class="sxs-lookup"><span data-stu-id="efd75-102">ISymUnmanagedBinder Interface</span></span>
+<span data-ttu-id="efd75-103">Représente un classeur de symboles pour le code non managé.</span><span class="sxs-lookup"><span data-stu-id="efd75-103">Represents a symbol binder for unmanaged code.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="e1fc3-104">Il s’agit d’un risque de sécurité pour ouvrir un fichier du programme (PDB) de la base de données à partir d’une source non fiable.</span><span class="sxs-lookup"><span data-stu-id="e1fc3-104">It is a security risk to open a program database (PDB) file from an untrusted source.</span></span>  
+>  <span data-ttu-id="efd75-104">Il s’agit d’un risque de sécurité pour ouvrir un fichier du programme (PDB) de la base de données à partir d’une source non fiable.</span><span class="sxs-lookup"><span data-stu-id="efd75-104">It is a security risk to open a program database (PDB) file from an untrusted source.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="e1fc3-105">Méthodes</span><span class="sxs-lookup"><span data-stu-id="e1fc3-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="efd75-105">Méthodes</span><span class="sxs-lookup"><span data-stu-id="efd75-105">Methods</span></span>  
   
-|<span data-ttu-id="e1fc3-106">Méthode</span><span class="sxs-lookup"><span data-stu-id="e1fc3-106">Method</span></span>|<span data-ttu-id="e1fc3-107">Description</span><span class="sxs-lookup"><span data-stu-id="e1fc3-107">Description</span></span>|  
+|<span data-ttu-id="efd75-106">Méthode</span><span class="sxs-lookup"><span data-stu-id="efd75-106">Method</span></span>|<span data-ttu-id="efd75-107">Description</span><span class="sxs-lookup"><span data-stu-id="efd75-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="e1fc3-108">GetReaderForFile, méthode</span><span class="sxs-lookup"><span data-stu-id="e1fc3-108">GetReaderForFile Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md)|<span data-ttu-id="e1fc3-109">Une interface de métadonnées et un nom de fichier, retourne le correct [ISymUnmanagedReader](isymunmanagedreader-interface.md) structure qui lit les symboles de débogage associés au module.</span><span class="sxs-lookup"><span data-stu-id="e1fc3-109">Given a metadata interface and a file name, returns the correct [ISymUnmanagedReader](isymunmanagedreader-interface.md) structure that will read the debugging symbols associated with the module.</span></span>|  
-|[<span data-ttu-id="e1fc3-110">GetReaderFromStream, méthode</span><span class="sxs-lookup"><span data-stu-id="e1fc3-110">GetReaderFromStream Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderfromstream-method.md)|<span data-ttu-id="e1fc3-111">Une interface de métadonnées et un flux qui contient le magasin de symboles, retourne le correct [ISymUnmanagedReader](isymunmanagedreader-interface.md) structure qui lira le débogage des symboles à partir du magasin de symboles donné.</span><span class="sxs-lookup"><span data-stu-id="e1fc3-111">Given a metadata interface and a stream that contains the symbol store, returns the correct [ISymUnmanagedReader](isymunmanagedreader-interface.md) structure that will read the debugging symbols from the given symbol store.</span></span>|  
+|[<span data-ttu-id="efd75-108">GetReaderForFile, méthode</span><span class="sxs-lookup"><span data-stu-id="efd75-108">GetReaderForFile Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md)|<span data-ttu-id="efd75-109">Une interface de métadonnées et un nom de fichier, retourne le correct [ISymUnmanagedReader](isymunmanagedreader-interface.md) structure qui lit les symboles de débogage associés au module.</span><span class="sxs-lookup"><span data-stu-id="efd75-109">Given a metadata interface and a file name, returns the correct [ISymUnmanagedReader](isymunmanagedreader-interface.md) structure that will read the debugging symbols associated with the module.</span></span>|  
+|[<span data-ttu-id="efd75-110">GetReaderFromStream, méthode</span><span class="sxs-lookup"><span data-stu-id="efd75-110">GetReaderFromStream Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderfromstream-method.md)|<span data-ttu-id="efd75-111">Une interface de métadonnées et un flux qui contient le magasin de symboles, retourne le correct [ISymUnmanagedReader](isymunmanagedreader-interface.md) structure qui lira le débogage des symboles à partir du magasin de symboles donné.</span><span class="sxs-lookup"><span data-stu-id="efd75-111">Given a metadata interface and a stream that contains the symbol store, returns the correct [ISymUnmanagedReader](isymunmanagedreader-interface.md) structure that will read the debugging symbols from the given symbol store.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="e1fc3-112">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="e1fc3-112">Requirements</span></span>  
- <span data-ttu-id="e1fc3-113">**En-tête :** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="e1fc3-113">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="efd75-112">Spécifications</span><span class="sxs-lookup"><span data-stu-id="efd75-112">Requirements</span></span>  
+ <span data-ttu-id="efd75-113">**En-tête :** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="efd75-113">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e1fc3-114">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="e1fc3-114">See Also</span></span>  
- [<span data-ttu-id="e1fc3-115">Interfaces du magasin de symboles de diagnostics</span><span class="sxs-lookup"><span data-stu-id="e1fc3-115">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  
- [<span data-ttu-id="e1fc3-116">ISymUnmanagedBinder2, interface</span><span class="sxs-lookup"><span data-stu-id="e1fc3-116">ISymUnmanagedBinder2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-interface.md)  
- [<span data-ttu-id="e1fc3-117">ISymUnmanagedBinder3, interface</span><span class="sxs-lookup"><span data-stu-id="e1fc3-117">ISymUnmanagedBinder3 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-interface.md)
+## <a name="see-also"></a><span data-ttu-id="efd75-114">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="efd75-114">See Also</span></span>  
+ [<span data-ttu-id="efd75-115">Interfaces du magasin de symboles de diagnostics</span><span class="sxs-lookup"><span data-stu-id="efd75-115">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  
+ [<span data-ttu-id="efd75-116">ISymUnmanagedBinder2, interface</span><span class="sxs-lookup"><span data-stu-id="efd75-116">ISymUnmanagedBinder2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-interface.md)  
+ [<span data-ttu-id="efd75-117">ISymUnmanagedBinder3, interface</span><span class="sxs-lookup"><span data-stu-id="efd75-117">ISymUnmanagedBinder3 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-interface.md)

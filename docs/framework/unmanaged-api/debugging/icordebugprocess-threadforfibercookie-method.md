@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugProcess::ThreadForFiberCookie, méthode"
-ms.custom: 
+title: ICorDebugProcess::ThreadForFiberCookie, méthode
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugProcess.ThreadForFiberCookie
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: afe4e97f-bffc-47e1-adad-d6e842487f35
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9ea7f852f92f66718feaaa31cc44e622b18ba16f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: c0b9a1618bd37fa29e6db0ad09649ba2eba3a32d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33416977"
 ---
-# <a name="icordebugprocessthreadforfibercookie-method"></a><span data-ttu-id="bb7f0-102">ICorDebugProcess::ThreadForFiberCookie, méthode</span><span class="sxs-lookup"><span data-stu-id="bb7f0-102">ICorDebugProcess::ThreadForFiberCookie Method</span></span>
-<span data-ttu-id="bb7f0-103">Cette méthode n’est pas implémentée.</span><span class="sxs-lookup"><span data-stu-id="bb7f0-103">This method is not implemented.</span></span>  
+# <a name="icordebugprocessthreadforfibercookie-method"></a><span data-ttu-id="34c38-102">ICorDebugProcess::ThreadForFiberCookie, méthode</span><span class="sxs-lookup"><span data-stu-id="34c38-102">ICorDebugProcess::ThreadForFiberCookie Method</span></span>
+<span data-ttu-id="34c38-103">Cette méthode n’est pas implémentée.</span><span class="sxs-lookup"><span data-stu-id="34c38-103">This method is not implemented.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bb7f0-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="bb7f0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="34c38-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="34c38-104">Syntax</span></span>  
   
 ```  
 HRESULT ThreadForFiberCookie (  
@@ -47,11 +36,11 @@ HRESULT ThreadForFiberCookie (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="bb7f0-105">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="bb7f0-105">Requirements</span></span>  
- <span data-ttu-id="bb7f0-106">**Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bb7f0-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="34c38-105">Spécifications</span><span class="sxs-lookup"><span data-stu-id="34c38-105">Requirements</span></span>  
+ <span data-ttu-id="34c38-106">**Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="34c38-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="bb7f0-107">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="bb7f0-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="34c38-107">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="34c38-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="bb7f0-108">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="bb7f0-108">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="34c38-108">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="34c38-108">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="bb7f0-109">**Versions du .NET framework :**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bb7f0-109">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="34c38-109">**Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="34c38-109">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

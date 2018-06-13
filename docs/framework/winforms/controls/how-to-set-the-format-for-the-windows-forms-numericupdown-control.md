@@ -1,13 +1,6 @@
 ---
-title: "Comment : définir le format du contrôle NumericUpDown Windows Forms"
-ms.custom: 
+title: 'Comment : définir le format du contrôle NumericUpDown Windows Forms'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,23 +9,19 @@ helpviewer_keywords:
 - NumericUpDown control [Windows Forms], formatting values
 - up-down controls [Windows Forms], formatting numeric values
 ms.assetid: fa7c5557-6bfb-45b2-975d-8887b23b0ba0
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b4ff6d8e584e65482285012af351ebd1a669b806
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1cb8f8b7d2f86125736c08cd9eadf4eee30063bb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533955"
 ---
-# <a name="how-to-set-the-format-for-the-windows-forms-numericupdown-control"></a><span data-ttu-id="3eef5-102">Comment : définir le format du contrôle NumericUpDown Windows Forms</span><span class="sxs-lookup"><span data-stu-id="3eef5-102">How to: Set the Format for the Windows Forms NumericUpDown Control</span></span>
-<span data-ttu-id="3eef5-103">Vous pouvez configurer la façon dont les valeurs sont affichées dans les Windows Forms <xref:System.Windows.Forms.NumericUpDown> contrôle.</span><span class="sxs-lookup"><span data-stu-id="3eef5-103">You can configure how values are displayed in the Windows Forms <xref:System.Windows.Forms.NumericUpDown> control.</span></span> <span data-ttu-id="3eef5-104">Le <xref:System.Windows.Forms.NumericUpDown.DecimalPlaces%2A> propriété détermine le nombre de chiffres s’affichent après la virgule décimale ; la valeur par défaut est 0.</span><span class="sxs-lookup"><span data-stu-id="3eef5-104">The <xref:System.Windows.Forms.NumericUpDown.DecimalPlaces%2A> property determines how many numbers appear after the decimal point; the default is 0.</span></span> <span data-ttu-id="3eef5-105">Le <xref:System.Windows.Forms.NumericUpDown.ThousandsSeparator%2A> propriété détermine si un séparateur doit être inséré entre tous les trois chiffres décimaux ; la valeur par défaut est `false`.</span><span class="sxs-lookup"><span data-stu-id="3eef5-105">The <xref:System.Windows.Forms.NumericUpDown.ThousandsSeparator%2A> property determines whether a separator will be inserted between every three decimal digits; the default is `false`.</span></span> <span data-ttu-id="3eef5-106">Le contrôle peut afficher des valeurs au format hexadécimal au lieu du format décimal, si le <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A> est définie sur `true`; la valeur par défaut est `false`.</span><span class="sxs-lookup"><span data-stu-id="3eef5-106">The control can display values in hexadecimal instead of decimal format, if the <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A> property is set to `true`; the default is `false`.</span></span>  
+# <a name="how-to-set-the-format-for-the-windows-forms-numericupdown-control"></a><span data-ttu-id="350f5-102">Comment : définir le format du contrôle NumericUpDown Windows Forms</span><span class="sxs-lookup"><span data-stu-id="350f5-102">How to: Set the Format for the Windows Forms NumericUpDown Control</span></span>
+<span data-ttu-id="350f5-103">Vous pouvez configurer la façon dont les valeurs sont affichées dans les Windows Forms <xref:System.Windows.Forms.NumericUpDown> contrôle.</span><span class="sxs-lookup"><span data-stu-id="350f5-103">You can configure how values are displayed in the Windows Forms <xref:System.Windows.Forms.NumericUpDown> control.</span></span> <span data-ttu-id="350f5-104">Le <xref:System.Windows.Forms.NumericUpDown.DecimalPlaces%2A> propriété détermine le nombre de chiffres s’affichent après la virgule décimale ; la valeur par défaut est 0.</span><span class="sxs-lookup"><span data-stu-id="350f5-104">The <xref:System.Windows.Forms.NumericUpDown.DecimalPlaces%2A> property determines how many numbers appear after the decimal point; the default is 0.</span></span> <span data-ttu-id="350f5-105">Le <xref:System.Windows.Forms.NumericUpDown.ThousandsSeparator%2A> propriété détermine si un séparateur doit être inséré entre tous les trois chiffres décimaux ; la valeur par défaut est `false`.</span><span class="sxs-lookup"><span data-stu-id="350f5-105">The <xref:System.Windows.Forms.NumericUpDown.ThousandsSeparator%2A> property determines whether a separator will be inserted between every three decimal digits; the default is `false`.</span></span> <span data-ttu-id="350f5-106">Le contrôle peut afficher des valeurs au format hexadécimal au lieu du format décimal, si le <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A> est définie sur `true`; la valeur par défaut est `false`.</span><span class="sxs-lookup"><span data-stu-id="350f5-106">The control can display values in hexadecimal instead of decimal format, if the <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A> property is set to `true`; the default is `false`.</span></span>  
   
-### <a name="to-format-the-numeric-value"></a><span data-ttu-id="3eef5-107">Pour mettre en forme la valeur numérique</span><span class="sxs-lookup"><span data-stu-id="3eef5-107">To format the numeric value</span></span>  
+### <a name="to-format-the-numeric-value"></a><span data-ttu-id="350f5-107">Pour mettre en forme la valeur numérique</span><span class="sxs-lookup"><span data-stu-id="350f5-107">To format the numeric value</span></span>  
   
--   <span data-ttu-id="3eef5-108">Afficher une valeur décimale en définissant le <xref:System.Windows.Forms.NumericUpDown.DecimalPlaces%2A> propriété à un entier et la <xref:System.Windows.Forms.NumericUpDown.ThousandsSeparator%2A> propriété `true` ou `false`.</span><span class="sxs-lookup"><span data-stu-id="3eef5-108">Display a decimal value by setting the <xref:System.Windows.Forms.NumericUpDown.DecimalPlaces%2A> property to an integer and setting the <xref:System.Windows.Forms.NumericUpDown.ThousandsSeparator%2A> property to `true` or `false`.</span></span>  
+-   <span data-ttu-id="350f5-108">Afficher une valeur décimale en définissant le <xref:System.Windows.Forms.NumericUpDown.DecimalPlaces%2A> propriété à un entier et la <xref:System.Windows.Forms.NumericUpDown.ThousandsSeparator%2A> propriété `true` ou `false`.</span><span class="sxs-lookup"><span data-stu-id="350f5-108">Display a decimal value by setting the <xref:System.Windows.Forms.NumericUpDown.DecimalPlaces%2A> property to an integer and setting the <xref:System.Windows.Forms.NumericUpDown.ThousandsSeparator%2A> property to `true` or `false`.</span></span>  
   
     ```vb  
     NumericUpDown1.DecimalPlaces = 2  
@@ -49,9 +38,9 @@ ms.lasthandoff: 12/22/2017
     numericUpDown1->ThousandsSeparator = true;  
     ```  
   
-     <span data-ttu-id="3eef5-109">- ou -</span><span class="sxs-lookup"><span data-stu-id="3eef5-109">-or-</span></span>  
+     <span data-ttu-id="350f5-109">- ou -</span><span class="sxs-lookup"><span data-stu-id="350f5-109">-or-</span></span>  
   
--   <span data-ttu-id="3eef5-110">Afficher une valeur hexadécimale en définissant le <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A> propriété `true`.</span><span class="sxs-lookup"><span data-stu-id="3eef5-110">Display a hexadecimal value by setting the <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A> property to `true`.</span></span>  
+-   <span data-ttu-id="350f5-110">Afficher une valeur hexadécimale en définissant le <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A> propriété `true`.</span><span class="sxs-lookup"><span data-stu-id="350f5-110">Display a hexadecimal value by setting the <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A> property to `true`.</span></span>  
   
     ```vb  
     NumericUpDown1.Hexadecimal = True  
@@ -66,9 +55,9 @@ ms.lasthandoff: 12/22/2017
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="3eef5-111">Même si la valeur est affichée sur le formulaire au format hexadécimal, les tests sont effectués sur le <xref:System.Windows.Forms.NumericUpDown.Value%2A> propriété Testez sa valeur décimale.</span><span class="sxs-lookup"><span data-stu-id="3eef5-111">Even if the value is displayed on the form as hexadecimal, any tests you perform on the <xref:System.Windows.Forms.NumericUpDown.Value%2A> property will be testing its decimal value.</span></span>  
+    >  <span data-ttu-id="350f5-111">Même si la valeur est affichée sur le formulaire au format hexadécimal, les tests sont effectués sur le <xref:System.Windows.Forms.NumericUpDown.Value%2A> propriété Testez sa valeur décimale.</span><span class="sxs-lookup"><span data-stu-id="350f5-111">Even if the value is displayed on the form as hexadecimal, any tests you perform on the <xref:System.Windows.Forms.NumericUpDown.Value%2A> property will be testing its decimal value.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3eef5-112">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="3eef5-112">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="350f5-112">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="350f5-112">See Also</span></span>  
  <xref:System.Windows.Forms.NumericUpDown>  
- [<span data-ttu-id="3eef5-113">NumericUpDown, contrôle</span><span class="sxs-lookup"><span data-stu-id="3eef5-113">NumericUpDown Control</span></span>](../../../../docs/framework/winforms/controls/numericupdown-control-windows-forms.md)  
- [<span data-ttu-id="3eef5-114">Vue d’ensemble du contrôle NumericUpDown</span><span class="sxs-lookup"><span data-stu-id="3eef5-114">NumericUpDown Control Overview</span></span>](../../../../docs/framework/winforms/controls/numericupdown-control-overview-windows-forms.md)
+ [<span data-ttu-id="350f5-113">NumericUpDown, contrôle</span><span class="sxs-lookup"><span data-stu-id="350f5-113">NumericUpDown Control</span></span>](../../../../docs/framework/winforms/controls/numericupdown-control-windows-forms.md)  
+ [<span data-ttu-id="350f5-114">Vue d’ensemble du contrôle NumericUpDown</span><span class="sxs-lookup"><span data-stu-id="350f5-114">NumericUpDown Control Overview</span></span>](../../../../docs/framework/winforms/controls/numericupdown-control-overview-windows-forms.md)
