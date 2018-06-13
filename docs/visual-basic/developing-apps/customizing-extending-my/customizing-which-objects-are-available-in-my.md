@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592153"
 ---
 # <a name="customizing-which-objects-are-available-in-my-visual-basic"></a>Personnalisation de la disponibilité ou non des objets dans My (Visual Basic)
 Cette rubrique décrit comment vous pouvez contrôler qui `My` les objets sont activés en définissant de votre projet `_MYTYPE` constante de compilation conditionnelle. L’environnement de développement intégré de Visual Studio (IDE) conserve les `_MYTYPE` constante de compilation conditionnelle pour un projet synchronisé avec le type du projet.  

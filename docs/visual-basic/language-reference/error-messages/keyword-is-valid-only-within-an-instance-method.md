@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586358"
 ---
 # <a name="39ltkeywordgt39-is-valid-only-within-an-instance-method"></a>&#39;&lt;mot clé&gt; &#39; est valide uniquement dans une méthode d’instance
 Le `Me`, `MyClass`, et `MyBase` mots clés font référence à des instances de classe spécifique. Vous ne pouvez pas les utiliser à l’intérieur d’un élément partagé `Function` ou `Sub` procédure.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593653"
 ---
 # <a name="procedure-call-or-argument-is-not-valid-visual-basic"></a>Argument ou appel de procédure non valide (Visual Basic)
 Une partie de l’appel ne peut pas être terminée.  

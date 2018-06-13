@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604547"
 ---
 # <a name="shared-visual-basic"></a>Shared (Visual Basic)
 Spécifie qu’un ou plusieurs éléments de programmation déclarés sont associés à une classe ou structure à grande et pas avec une instance spécifique de la classe ou structure.  

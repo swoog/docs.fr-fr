@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595785"
 ---
 # <a name="access-denied-to-39ltnamegt39"></a>Accès refusé à &#39; &lt;nom&gt;&#39;
 Un périphérique, fichier ou disque n’est pas accessible en raison des autorisations de sécurité insuffisantes de votre ordinateur.  

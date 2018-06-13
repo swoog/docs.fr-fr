@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603923"
 ---
 # <a name="argument-39per39-is-not-valid"></a>Argument &#39;par&#39; n’est pas valide
 Un argument fourni pour `Per`, qui doit être un `Double` indiquant la période de paiement dans la plage de 1 à `NPer`, n’est pas valide.  

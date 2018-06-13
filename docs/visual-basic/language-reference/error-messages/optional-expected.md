@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593952"
 ---
 # <a name="39optional39-expected"></a>&#39;Facultatif&#39; attendu
 Un argument facultatif dans une déclaration de procédure est suivi d’un argument obligatoire. Chaque argument d’un argument facultatif doit également être facultatif.  

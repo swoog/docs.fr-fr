@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586423"
 ---
 # <a name="evaluation-of-expression-or-statement-timed-out"></a>Délai d'attente dépassé pour l'évaluation de l'expression ou de l'instruction
 L’évaluation d’une expression n’a pas été terminé en temps voulu.  

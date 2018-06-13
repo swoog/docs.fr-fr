@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595960"
 ---
 # <a name="mycomputerclock-object"></a>My.Computer.Clock, objet
 Fournit des propriétés permettant d’accéder à l’heure locale actuelle et à l’heure UTC (Universal Coordinated Time), équivalent à l’heure GMT (Greenwich Mean Time), à partir de l’horloge système.  

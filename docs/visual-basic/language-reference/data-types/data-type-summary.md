@@ -42,6 +42,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591792"
 ---
 # <a name="data-type-summary-visual-basic"></a>Liste des types de données (Visual Basic)
 Le tableau suivant montre les types de données Visual Basic, leurs types du common language runtime prise en charge, leur allocation de stockage nominal et leur plage de valeurs.  

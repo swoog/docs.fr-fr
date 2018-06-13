@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592507"
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>Procédure pas à pas : manipulation de fichiers et de répertoires en Visual Basic
 Cette procédure pas à pas présente les notions de base d’E/S de fichier dans Visual Basic. Elle décrit comment créer une petite application qui répertorie et examine des fichiers texte dans un répertoire. Pour chaque fichier texte sélectionné, l’application fournit des attributs de fichier et la première ligne de contenu. Elle comprend une option pour écrire des informations dans un fichier journal.  

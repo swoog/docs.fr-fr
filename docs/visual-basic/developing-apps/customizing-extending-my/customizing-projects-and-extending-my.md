@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586836"
 ---
 # <a name="customizing-projects-and-extending-my-with-visual-basic"></a>Personnalisation des projets et extension de My avec Visual Basic
 Vous pouvez personnaliser les modèles de projet pour fournir plus `My` objets. Cela facilite par d’autres développeurs à trouver et utiliser vos objets.  

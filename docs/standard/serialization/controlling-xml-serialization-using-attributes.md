@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592000"
 ---
 # <a name="controlling-xml-serialization-using-attributes"></a>Contrôle de la sérialisation XML à l'aide d'attributs
 Les attributs peuvent être utilisés pour contrôler la sérialisation XML d'un objet ou pour créer un flux de données XML différent à partir du même ensemble de classes. Pour plus d’informations sur la création d’un flux de données XML différent, consultez [Guide pratique pour spécifier un nom d’élément différent pour un flux XML](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md).  

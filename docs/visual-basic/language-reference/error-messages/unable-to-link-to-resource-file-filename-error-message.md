@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604326"
 ---
 # <a name="unable-to-link-to-resource-file-39ltfilenamegt39-lterror-messagegt"></a>Impossible de lier au fichier de ressources &#39; &lt;nom de fichier&gt;&#39;: &lt;message d’erreur&gt;
 Le compilateur Visual Basic appelle l’utilitaire Assembly Linker (Al.exe, également appelé Alink) pour générer un assembly avec un manifeste. L'éditeur de liens a signalé une erreur de liaison à un fichier de ressources COM+ natif à partir de l'assembly.  

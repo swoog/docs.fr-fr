@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585526"
 ---
 # <a name="device-io-error"></a>Erreur d'E/S de périphérique
 Une erreur d’entrée ou de sortie s’est produite pendant que votre programme utilisait un périphérique tel qu’une imprimante ou un lecteur de disque.  

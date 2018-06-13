@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594265"
 ---
 # <a name="subscript-out-of-range-visual-basic"></a>Indice hors limites (Visual Basic)
 Un indice de tableau n’est pas valide car il se situe en dehors de la plage autorisée. La valeur la plus faible indice d’une dimension est toujours 0 et la plus grande valeur d’indice est retournée par la `GetUpperBound` méthode pour cette dimension.  

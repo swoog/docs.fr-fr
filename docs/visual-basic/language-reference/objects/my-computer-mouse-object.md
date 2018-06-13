@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593614"
 ---
 # <a name="mycomputermouse-object"></a>My.Computer.Mouse, objet
 Fournit des propriétés pour obtenir des informations sur le format et la configuration de la souris installée sur l’ordinateur local.  

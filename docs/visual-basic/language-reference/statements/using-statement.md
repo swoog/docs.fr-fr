@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604963"
 ---
 # <a name="using-statement-visual-basic"></a>Using, instruction (Visual Basic)
 Déclare le début d’un `Using` bloquer et acquiert éventuellement les ressources système qui le bloc de contrôle.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585955"
 ---
 # <a name="cannot-create-activex-component"></a>Impossible de créer le composant ActiveX
 Vous avez essayé de placer un contrôle ActiveX sur un formulaire au moment du design ou d'ajouter un formulaire à un projet comportant un contrôle ActiveX, mais les informations associées dans le Registre sont introuvables.  

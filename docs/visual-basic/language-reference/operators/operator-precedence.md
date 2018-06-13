@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33605002"
 ---
 # <a name="operator-precedence-in-visual-basic"></a>Priorité des opérateurs en Visual Basic
 Lorsque plusieurs opérations ont lieu dans une expression, chaque partie est évaluée et résolue dans un ordre prédéterminé *la priorité des opérateurs*.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591740"
 ---
 # <a name="constants-and-enumerations-visual-basic"></a>Constantes et énumérations (Visual Basic)
 Visual Basic fournit plusieurs constantes prédéfinies et des énumérations pour les développeurs. Constantes stockent des valeurs qui restent constants pendant l’exécution d’une application. Les énumérations offrent un moyen pratique de travailler avec des ensembles de constantes connexes et d’associer des valeurs de constantes à des noms.  

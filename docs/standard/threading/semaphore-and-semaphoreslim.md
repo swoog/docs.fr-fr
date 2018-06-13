@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591310"
 ---
 # <a name="semaphore-and-semaphoreslim"></a>Semaphore et SemaphoreSlim
 La classe <xref:System.Threading.Semaphore?displayProperty=nameWithType> représente un sémaphore local ou nommé (visible à l'échelle du système). Il s'agit d'un wrapper mince entourant l'objet sémaphore Win32. Les sémaphores Win32 sont des sémaphores de comptage qui peuvent être utilisés pour contrôler l'accès à un pool de ressources.  

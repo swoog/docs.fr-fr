@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592131"
 ---
 # <a name="how-to-display-item-headers-in-a-datarepeater-control-visual-studio"></a>Comment : afficher des en-têtes d'élément dans un contrôle DataRepeater (Visual Studio)
 L’en-tête de l’élément dans un <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> contrôle fournit un indicateur visuel lorsqu’un <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> est sélectionnée. Lorsque le <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A> est définie sur <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterLayoutStyles.Vertical> (la valeur par défaut), l’en-tête de l’élément est affiché à gauche de chaque élément. Lorsque le <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A> est définie sur <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterLayoutStyles.Horizontal>, l’en-tête de l’élément est affiché en haut de chaque élément.  

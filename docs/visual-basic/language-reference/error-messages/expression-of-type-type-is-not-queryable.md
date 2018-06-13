@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589007"
 ---
 # <a name="expression-of-type-lttypegt-is-not-queryable"></a>Expression de type &lt;type&gt; n’est pas utilisable dans une requête
 Expression de type \<type > ne peut pas être interrogée. Assurez-vous que vous ne manque pas une importation d’espace de noms de référence ou d’assembly pour le fournisseur LINQ.  

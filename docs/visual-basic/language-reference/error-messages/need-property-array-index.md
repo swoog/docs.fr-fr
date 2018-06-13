@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594778"
 ---
 # <a name="need-property-array-index"></a>Index de tableau de propriétés requis
 Cette valeur de propriété se compose d'un tableau plutôt que d'une simple valeur. Vous n'avez pas spécifié l'index de tableau de propriétés auquel vous avez essayé d'accéder.  
