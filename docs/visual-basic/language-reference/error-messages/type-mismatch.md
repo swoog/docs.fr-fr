@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593988"
 ---
 # <a name="type-mismatch-visual-basic"></a>Incompatibilité de type (Visual Basic)
 Vous avez tenté de convertir une valeur en un autre type d’une manière qui n’est pas valide.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593637"
 ---
 # <a name="39ltname1gt39-is-ambiguous-imported-from-the-namespaces-or-types-39ltname2gt39"></a>&#39;&lt;nom1&gt; &#39; est ambigu, importé des espaces de noms ou des types &#39; &lt;name2&gt;&#39;
 Vous avez fourni un nom qui est ambigu et donc en conflit avec un autre nom. Le compilateur Visual Basic ne dispose pas de toutes les règles de résolution de conflit ; Vous devez lever toute ambiguïté des noms vous-même.  

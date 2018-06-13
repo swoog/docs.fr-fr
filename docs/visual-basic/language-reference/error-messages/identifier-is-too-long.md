@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586449"
 ---
 # <a name="identifier-is-too-long"></a>Identificateur trop long
 Le nom ou l’identificateur de chaque élément de programmation est limité à 1023 caractères. En outre, un nom qualifié complet ne peut pas dépasser 1023 caractères. Cela signifie que la chaîne d’identificateur entière (`<namespace>.<...>.<namespace>.<class>.<element>`) ne peut pas être plus de 1023 caractères, y compris l’opérateur d’accès aux membres (`.`) caractères.  
