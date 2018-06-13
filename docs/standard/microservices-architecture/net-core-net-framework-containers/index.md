@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580125"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-docker-containers"></a><span data-ttu-id="05d58-103">Choix entre .NET Core et .NET Framework pour les conteneurs Docker</span><span class="sxs-lookup"><span data-stu-id="05d58-103">Choosing Between .NET Core and .NET Framework for Docker Containers</span></span>
 
