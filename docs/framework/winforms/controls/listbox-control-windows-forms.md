@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534194"
 ---
 # <a name="listbox-control-windows-forms"></a>ListBox, contrôle (Windows Forms)
 Windows Forms `ListBox` contrôle affiche une liste d’éléments à partir de laquelle l’utilisateur peut sélectionner un ou plusieurs.  

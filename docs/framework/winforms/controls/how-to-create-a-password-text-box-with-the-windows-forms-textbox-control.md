@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534298"
 ---
 # <a name="how-to-create-a-password-text-box-with-the-windows-forms-textbox-control"></a>Comment : créer une zone de texte pour mot de passe avec le contrôle TextBox Windows Forms
 Une zone de mot de passe est une zone de texte Windows Forms qui affiche les caractères d’espace réservé lorsqu’un utilisateur tape une chaîne.  

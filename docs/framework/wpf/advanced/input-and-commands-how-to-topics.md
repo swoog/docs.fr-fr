@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544286"
 ---
 # <a name="input-and-commands-how-to-topics"></a>Rubriques "Comment" relatives aux entrées et aux commandes
 Les rubriques de cette section décrivent comment utiliser l’infrastructure d’entrée et de leur exécution dans Windows Presentation Foundation (WPF).  

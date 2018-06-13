@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33487423"
 ---
 # <a name="developing-channels"></a>Développement de canaux
 Pour développer un canal de transport ou protocole qui peut être utilisé avec Windows Communication Foundation (WCF), couche d’application nécessite plusieurs étapes. Cette rubrique liste ces étapes et renvoie à des rubriques spécifiques qui vous permettront d'en savoir plus. Pour comprendre le modèle de canal et les différents types qui sont mentionnés dans cette rubrique, consultez [vue d’ensemble du modèle de canal](../../../../docs/framework/wcf/extending/channel-model-overview.md). Pour voir un exemple de canal de transport terminée, [Transport : UDP](../../../../docs/framework/wcf/samples/transport-udp.md).  

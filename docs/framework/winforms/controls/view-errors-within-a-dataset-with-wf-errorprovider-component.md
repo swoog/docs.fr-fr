@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537084"
 ---
 # <a name="how-to-view-errors-within-a-dataset-with-the-windows-forms-errorprovider-component"></a>Comment : afficher des erreurs d'un groupe de données à l'aide du composant ErrorProvider Windows Forms
 Vous pouvez utiliser Windows Forms <xref:System.Windows.Forms.ErrorProvider> composant pour afficher les erreurs de colonne dans un jeu de données ou une autre source de données. Pour un <xref:System.Windows.Forms.ErrorProvider> composant pour afficher les erreurs de données sur un formulaire, il n’a pas à être directement associée à un contrôle. Une fois qu’il est lié à une source de données, il peut afficher une icône d’erreur en regard de n’importe quel contrôle est lié à la même source de données.  

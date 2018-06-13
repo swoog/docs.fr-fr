@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543717"
 ---
 # <a name="how-to-override-metadata-for-a-dependency-property"></a>Guide pratique pour substituer les métadonnées d'une propriété de dépendance
 Cet exemple montre comment remplacer les métadonnées de propriété de dépendance par défaut héritées d’une classe, en appelant le <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> (méthode) et en fournissant des métadonnées spécifiques au type.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530245"
 ---
 # <a name="how-to-change-the-appearance-of-the-windows-forms-colordialog-component"></a>Comment : modifier l'apparence du composant ColorDialog Windows Forms
 Vous pouvez configurer l’apparence des Windows Forms <xref:System.Windows.Forms.ColorDialog> composant avec un nombre de ses propriétés. La boîte de dialogue comporte deux sections : une qui affiche les couleurs de base et un type qui autorise l’utilisateur à définir des couleurs personnalisées.  

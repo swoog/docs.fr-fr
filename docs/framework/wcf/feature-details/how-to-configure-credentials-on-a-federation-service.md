@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495607"
 ---
 # <a name="how-to-configure-credentials-on-a-federation-service"></a>Comment : configurer des informations d'identification sur un service FS (Federation Service)
 Dans Windows Communication Foundation (WCF), la création d’un service fédéré comprend les principales procédures suivantes :  
