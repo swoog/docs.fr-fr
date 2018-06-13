@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767425"
 ---
 # <a name="ltclaimtypegt"></a><span data-ttu-id="0304d-102">&lt;ClaimType&gt;</span><span class="sxs-lookup"><span data-stu-id="0304d-102">&lt;claimType&gt;</span></span>
 <span data-ttu-id="0304d-103">Spécifie une seule revendication facultative ou obligatoire pour les jetons de sécurité entrants.</span><span class="sxs-lookup"><span data-stu-id="0304d-103">Specifies a single optional or required claim for incoming security tokens.</span></span>  

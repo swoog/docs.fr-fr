@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742716"
 ---
 # <a name="ltdefaultproxygt-element-network-settings"></a><span data-ttu-id="0915d-102">&lt;defaultProxy&gt; élément (paramètres réseau)</span><span class="sxs-lookup"><span data-stu-id="0915d-102">&lt;defaultProxy&gt; Element (Network Settings)</span></span>
 <span data-ttu-id="0915d-103">Configure le serveur proxy HTTP (Hypertext Transfer Protocol).</span><span class="sxs-lookup"><span data-stu-id="0915d-103">Configures the Hypertext Transfer Protocol (HTTP) proxy server.</span></span>  
