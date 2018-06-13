@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526365"
 ---
 # <a name="fontdialog-component-windows-forms"></a>FontDialog, composant (Windows Forms)
 Le composant Windows Forms <xref:System.Windows.Forms.FontDialog>  est une boîte de dialogue préconfigurée. Il s’agit du même **police** boîte de dialogue exposée par le système d’exploitation Windows. Le composant hérite la <xref:System.Windows.Forms.CommonDialog> classe.  

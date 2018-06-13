@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33273313"
 ---
 # <a name="operator-keywords-c-reference"></a>Mots clés des opérateurs (référence C#)
 Permettent d’effectuer diverses actions comme créer des objets, vérifier le type d’un objet au moment de l’exécution, obtenir la taille d’un type, etc. Cette section présente les mots clés suivants :  

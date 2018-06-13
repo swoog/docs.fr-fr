@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33271248"
 ---
 # <a name="-operator-c-reference"></a>^, opérateur (référence C#)
 Les opérateurs `^` binaires sont prédéfinis pour les types intégraux et `bool`. Pour les types intégraux, `^` effectue l’opération de bits OR exclusif sur les opérandes. Pour les opérandes `bool`, `^` effectue l’opération OR exclusif logique sur ses opérandes. En conséquence, le résultat est `true` si et seulement si un seul des opérandes correspond à `true`.  

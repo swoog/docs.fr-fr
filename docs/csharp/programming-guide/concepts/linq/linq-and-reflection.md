@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317292"
 ---
 # <a name="linq-and-reflection-c"></a>LINQ et la réflexion (C#)
 Vous pouvez utiliser les API de réflexion de la bibliothèque de classes .NET Framework pour examiner les métadonnées dans un assembly .NET et pour créer des collections de types, de membres de type, de paramètres, etc., qui se trouvent dans cet assembly. Comme ces collections prennent en charge l’interface générique `IEnumerable`, elles peuvent être interrogées à l’aide de LINQ.  

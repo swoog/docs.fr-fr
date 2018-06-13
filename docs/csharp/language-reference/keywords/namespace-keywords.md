@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266153"
 ---
 # <a name="namespace-keywords-c-reference"></a>Mots clés d’espaces de noms (référence C#)
 Cette section décrit les mots clés et les opérateurs qui sont associés aux espaces de noms :  

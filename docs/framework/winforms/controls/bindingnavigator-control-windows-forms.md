@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526062"
 ---
 # <a name="bindingnavigator-control-windows-forms"></a>BindingNavigator, contrôle (Windows Forms)
 Le contrôle `BindingNavigator` est l'interface utilisateur de navigation et de manipulation pour les contrôles liés aux données. Le contrôle `BindingNavigator` permet aux utilisateurs de parcourir et de manipuler des données sur un Windows Form.  

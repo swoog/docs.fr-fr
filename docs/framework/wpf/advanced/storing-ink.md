@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546095"
 ---
 # <a name="storing-ink"></a>Stockage de l'encre
 Le <xref:System.Windows.Ink.StrokeCollection.Save%2A> méthodes fournissent la prise en charge pour le stockage d’encre comme Ink Serialized Format (ISF). Les constructeurs pour la <xref:System.Windows.Ink.StrokeCollection> classe prennent en charge pour la lecture des données de l’encre.  

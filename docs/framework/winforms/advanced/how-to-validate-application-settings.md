@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526293"
 ---
 # <a name="how-to-validate-application-settings"></a>Comment : valider des paramètres d'application
 Cette rubrique illustre la validation des paramètres d’application avant qu’ils ne soient rendus persistants.  

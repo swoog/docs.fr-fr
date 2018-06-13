@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266540"
 ---
 # <a name="interface-c-reference"></a>interface (référence C#)
 Une interface contient uniquement des signatures de [méthodes](../../../csharp/programming-guide/classes-and-structs/methods.md), de [propriétés](../../../csharp/programming-guide/classes-and-structs/properties.md), d’[événements](../../../csharp/programming-guide/events/index.md) ou d’[indexeurs](../../../csharp/programming-guide/indexers/index.md). Une classe ou un struct qui implémente l’interface doit implémenter les membres de l’interface qui sont spécifiés dans la définition de l’interface. Dans l’exemple suivant, la classe `ImplementationClass` doit implémenter une méthode nommée `SampleMethod` qui n’a aucun paramètre et qui retourne `void`.  

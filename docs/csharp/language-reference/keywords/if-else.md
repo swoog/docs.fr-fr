@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218741"
 ---
 # <a name="if-else-c-reference"></a>if-else (référence C#)
 Une instruction `if` identifie l’instruction à exécuter en fonction de la valeur d’une expression `Boolean` . Dans l’exemple suivant, la variable `Boolean` `result` est définie sur `true` puis archivé dans l’instruction `if` . Le résultat est `The condition is true`.  

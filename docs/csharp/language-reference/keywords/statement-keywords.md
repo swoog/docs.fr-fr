@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269659"
 ---
 # <a name="statement-keywords-c-reference"></a>Mots clés d'instruction (Référence C#)
 Les instructions sont des instructions de programme. Sauf mention contraire dans les rubriques référencées dans le tableau suivant, les instructions sont exécutées en séquence. Le tableau suivant répertorie les mots clés d’instructions C#. Pour plus d’informations sur les instructions exprimées sans mots clés, consultez [Instructions](../../../csharp/programming-guide/statements-expressions-operators/statements.md).  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528340"
 ---
 # <a name="vector-graphics-overview"></a>Vue d'ensemble des graphismes vectoriels
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Dessine des lignes, rectangles et autres formes sur un système de coordonnées. Vous pouvez choisir parmi une variété de systèmes de coordonnées, mais le système de coordonnées par défaut a l’origine dans le coin supérieur gauche avec l’axe des x pointant vers la droite et l’axe des y pointant vers le bas. L’unité de mesure dans le système de coordonnées par défaut est le pixel.  

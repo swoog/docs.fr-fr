@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323350"
 ---
 # <a name="how-to-populate-object-collections-from-multiple-sources-linq-c"></a>Guide pratique pour remplir des collections d’objets issues de plusieurs sources (LINQ) (C#)
 Cet exemple montre comment fusionner des données de différentes sources en une séquence de nouveaux types.  

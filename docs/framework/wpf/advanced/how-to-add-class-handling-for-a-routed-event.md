@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545361"
 ---
 # <a name="how-to-add-class-handling-for-a-routed-event"></a>Comment : ajouter la gestion de classe d'un événement routé
 Les événements routés peuvent être gérés par les gestionnaires de classe ou les gestionnaires d’instance sur un nœud donné de l’itinéraire. Gestionnaires de classe sont appelés tout d’abord et peuvent être utilisés par les implémentations de classe pour supprimer des événements à partir de la gestion de l’instance ou d’introduire d’autres comportements spécifiques des événements sur les événements qui sont détenus par les classes de base. Cet exemple illustre deux techniques étroitement liées pour l’implémentation des gestionnaires de classe.  
