@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362926"
 ---
 # <a name="optimistic-concurrency-overview"></a>Accès concurrentiel optimiste : vue d'ensemble
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] prend en charge le contrôle d'accès concurrentiel optimiste. Le tableau suivant décrit les conditions qui s’appliquent à l’accès concurrentiel optimiste dans [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentation :  

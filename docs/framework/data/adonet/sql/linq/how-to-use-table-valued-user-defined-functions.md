@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362897"
 ---
 # <a name="how-to-use-table-valued-user-defined-functions"></a>Comment : utiliser des fonctions table définies par l'utilisateur
 Une fonction table retourne un jeu de lignes unique (contrairement aux procédures stockées qui peuvent retourner plusieurs formes de résultats). Étant donné que le type de retour d'une fonction table est `Table`, vous pouvez utiliser une fonction table à tout endroit dans SQL où il est possible d'utiliser une table. Vous pouvez également utiliser la fonction table comme une table.  

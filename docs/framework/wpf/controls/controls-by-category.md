@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551997"
 ---
 # <a name="controls-by-category"></a>Contrôles par catégorie
 Contrôles Windows Presentation Foundation (WPF) peuvent être regroupés logiquement dans plusieurs catégories. Ces catégories peuvent vous aider à identifier les contrôles ayant des modèles d’utilisation ou une fonctionnalité similaires pour sélectionner le contrôle adapté à votre scénario.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357804"
 ---
 # <a name="datetimeinvalidlocalformat-mda"></a>dateTimeInvalidLocalFormat (MDA)
 L’Assistant Débogage managé (MDA, Managed Debugging Assistant) `dateTimeInvalidLocalFormat` est activé quand une instance de <xref:System.DateTime> stockée en temps universel (UTC, Universal Coordinated Time) est mise en forme à l’aide d’un format conçu uniquement pour des instances de <xref:System.DateTime> locales. Cet Assistant Débogage managé n’est pas activé pour les instances de <xref:System.DateTime> par défaut ou non spécifiées.  

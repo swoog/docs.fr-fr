@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354318"
 ---
 # <a name="ltservicehostingenvironmentgt"></a>&lt;serviceHostingEnvironment&gt;
 Cet élément définit le type instancié par l'environnement d'hébergement de service correspondant à un transport particulier. Si cet élément est vide, c'est le type par défaut qui est utilisé. Cet élément ne peut être utilisé qu'au niveau des fichiers de configuration de l'application ou de l'ordinateur.  

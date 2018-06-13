@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358315"
 ---
 # <a name="systemtimespan-methods"></a>System.TimeSpan, méthodes
 La prise en charge des membres pour <xref:System.TimeSpan?displayProperty=nameWithType> dépend beaucoup des versions du .NET Framework et de Microsoft SQL Server que vous utilisez.  

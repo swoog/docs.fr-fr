@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360285"
 ---
 # <a name="sequence-operators"></a>Opérateurs de séquence
 En général, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ne prend pas en charge les opérateurs de séquence qui présentent une ou plusieurs des caractéristiques suivantes :  

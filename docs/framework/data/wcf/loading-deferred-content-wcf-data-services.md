@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365200"
 ---
 # <a name="loading-deferred-content-wcf-data-services"></a>Chargement de contenu différé (services de données WCF)
 Par défaut, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] limite la quantité de données retournées par une requête. Toutefois, vous pouvez charger explicitement des données supplémentaires, notamment les entités connexes, les données de réponse paginées et les flux de données binaires, à partir du service de données si nécessaire. Cette rubrique décrit comment charger un contenu différé dans votre application.  

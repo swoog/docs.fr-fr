@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360045"
 ---
 # <a name="remote-vs-local-execution"></a>Comparaison entre et exécution locale
 Vous pouvez décider d'exécuter vos requêtes à distance (autrement dit, le moteur de base de données exécute la requête sur la base de données) ou localement ([!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] exécute la requête sur un cache local).  

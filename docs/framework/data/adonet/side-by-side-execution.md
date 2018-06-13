@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365447"
 ---
 # <a name="side-by-side-execution-in-adonet"></a>Exécution côte à côte dans ADO.NET
 L'exécution côte à côte dans le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] représente la capacité à exécuter une application sur un ordinateur sur lequel plusieurs versions du[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] sont installées, en utilisant exclusivement la version pour laquelle l'application a été compilée. Pour plus d’informations sur la configuration de l’exécution de côte à côte, consultez [côte-à-côte exécution](../../../../docs/framework/deployment/side-by-side-execution.md).  

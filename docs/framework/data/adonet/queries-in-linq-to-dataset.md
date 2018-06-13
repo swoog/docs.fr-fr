@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362349"
 ---
 # <a name="queries-in-linq-to-dataset"></a>Requêtes dans LINQ to DataSet
 Une requête est une expression qui récupère des données d'une source de données. En général, les requêtes sont exprimées dans un langage de requête spécialisé, tel que SQL pour les bases de données relationnelles et Xquery pour XML. Par conséquent, les développeurs ont dû apprendre un nouveau langage de requête pour chaque type de source de données ou format de données qu'ils interrogent. [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] offre un modèle simplifié et cohérent qui permet d'utiliser des données de types de sources et de formats diversifiés. Dans une requête [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)], vous travaillez toujours avec des objets de programmation.  

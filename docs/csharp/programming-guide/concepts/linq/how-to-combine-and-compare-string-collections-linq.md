@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33328011"
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-c"></a>Guide pratique pour combiner et comparer des collections de chaînes (LINQ) (C#)
 Cet exemple montre comment fusionner des fichiers qui contiennent des lignes de texte, puis comment trier les résultats. Il montre plus précisément comment effectuer une concaténation simple, une union et une intersection avec les deux ensembles de lignes de texte.  

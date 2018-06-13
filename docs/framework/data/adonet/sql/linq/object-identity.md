@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358467"
 ---
 # <a name="object-identity"></a>Identité d'un objet
 Les identités des objets du runtime sont uniques. Deux variables qui font référence au même objet font en réalité référence à la même instance de l'objet. Par conséquent, les modifications que vous apportez avec un chemin d'accès via une variable sont immédiatement visibles via l'autre variable.  

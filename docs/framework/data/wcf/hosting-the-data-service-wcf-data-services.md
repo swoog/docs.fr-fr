@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362848"
 ---
 # <a name="hosting-the-data-service-wcf-data-services"></a>Hébergement du service de données (services de données WCF)
 À l’aide de [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], vous pouvez créer un service qui expose des données en tant qu’un [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] de flux. Ce service de données est défini comme une classe qui hérite de <xref:System.Data.Services.DataService%601>. Cette classe fournit la fonctionnalité requise pour traiter les messages de demande, effectuer des mises à jour par rapport à la source de données et générer des messages de réponses, comme requis par [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Toutefois, un service de données ne peut pas lier à et écouter sur un socket de réseau pour les requêtes HTTP entrantes. Pour ces fonctionnalités requises, le service de données s'appuie sur un composant d'hébergement.  

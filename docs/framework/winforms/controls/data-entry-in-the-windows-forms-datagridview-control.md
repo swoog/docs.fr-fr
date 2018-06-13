@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526818"
 ---
 # <a name="data-entry-in-the-windows-forms-datagridview-control"></a>Saisie de données dans le contrôle DataGridView Windows Forms
 Le `DataGridView` contrôle fournit plusieurs fonctionnalités qui permettent de modifier de manière dont les utilisateurs ajoutent ou modifient des données dans le contrôle. Par exemple, entrée de données peut rendre plus efficace en fournissant des valeurs par défaut pour les nouvelles lignes et en avertissant les utilisateurs lorsque des erreurs se produisent.  

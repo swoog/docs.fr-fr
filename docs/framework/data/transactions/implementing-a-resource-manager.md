@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363261"
 ---
 # <a name="implementing-a-resource-manager"></a>Implémentation d'un gestionnaire des ressources
 Les ressources utilisées dans une transaction sont managées par un gestionnaire de ressources, dont les actions sont coordonnées par un gestionnaire de transactions. Les gestionnaires de ressources travaillent en coopération avec le gestionnaire de transactions pour fournir à l'application la garantie de l'atomicité et de l'isolation. Microsoft SQL Server, les files d'attente de messages durables et les tables de hachage en mémoire sont des gestionnaires de ressources.  
