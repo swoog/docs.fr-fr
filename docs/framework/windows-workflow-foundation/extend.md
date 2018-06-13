@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33511889"
 ---
 # <a name="extending-windows-workflow-foundation"></a>Extension de Windows Workflow Foundation
 La section suivante décrit comment étendre Windows Workflow Foundation (WF) avec des activités personnalisées et des concepteurs dans les environnements réhébergés en dehors de [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].  
