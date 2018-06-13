@@ -1,35 +1,24 @@
 ---
 title: SslNoPrivateKey
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 67eef8f6-360d-42f2-a3ac-2bb17329f247
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 51110e3c758d32e771616ae1792eec7b1b2dabe7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f122be93c5f1235a30f90286dce2584d0fa38de5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33470566"
 ---
-# <a name="sslnoprivatekey"></a><span data-ttu-id="01cff-102">SslNoPrivateKey</span><span class="sxs-lookup"><span data-stu-id="01cff-102">SslNoPrivateKey</span></span>
-<span data-ttu-id="01cff-103">ID : 154</span><span class="sxs-lookup"><span data-stu-id="01cff-103">Id: 154</span></span>  
+# <a name="sslnoprivatekey"></a><span data-ttu-id="17008-102">SslNoPrivateKey</span><span class="sxs-lookup"><span data-stu-id="17008-102">SslNoPrivateKey</span></span>
+<span data-ttu-id="17008-103">ID : 154</span><span class="sxs-lookup"><span data-stu-id="17008-103">Id: 154</span></span>  
   
- <span data-ttu-id="01cff-104">Gravité : Erreur</span><span class="sxs-lookup"><span data-stu-id="01cff-104">Severity: Error</span></span>  
+ <span data-ttu-id="17008-104">Gravité : Erreur</span><span class="sxs-lookup"><span data-stu-id="17008-104">Severity: Error</span></span>  
   
- <span data-ttu-id="01cff-105">Catégorie : TransactionBridge</span><span class="sxs-lookup"><span data-stu-id="01cff-105">Category: TransactionBridge</span></span>  
+ <span data-ttu-id="17008-105">Catégorie : TransactionBridge</span><span class="sxs-lookup"><span data-stu-id="17008-105">Category: TransactionBridge</span></span>  
   
-## <a name="description"></a><span data-ttu-id="01cff-106">Description</span><span class="sxs-lookup"><span data-stu-id="01cff-106">Description</span></span>  
- <span data-ttu-id="01cff-107">Cet événement indique qu'un certificat d'identité avec le nom de sujet et l'empreinte numérique spécifiques n'a pas de clé privée.</span><span class="sxs-lookup"><span data-stu-id="01cff-107">This event indicates that an identity certificate with the specific subject name and thumbprint does not have a private key.</span></span> <span data-ttu-id="01cff-108">Cet événement répertorie le nom et l'ID de processus.</span><span class="sxs-lookup"><span data-stu-id="01cff-108">The event lists the process name and process ID.</span></span>  
+## <a name="description"></a><span data-ttu-id="17008-106">Description</span><span class="sxs-lookup"><span data-stu-id="17008-106">Description</span></span>  
+ <span data-ttu-id="17008-107">Cet événement indique qu'un certificat d'identité avec le nom de sujet et l'empreinte numérique spécifiques n'a pas de clé privée.</span><span class="sxs-lookup"><span data-stu-id="17008-107">This event indicates that an identity certificate with the specific subject name and thumbprint does not have a private key.</span></span> <span data-ttu-id="17008-108">Cet événement répertorie le nom et l'ID de processus.</span><span class="sxs-lookup"><span data-stu-id="17008-108">The event lists the process name and process ID.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="01cff-109">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="01cff-109">See Also</span></span>  
- [<span data-ttu-id="01cff-110">Journalisation des événements</span><span class="sxs-lookup"><span data-stu-id="01cff-110">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
- [<span data-ttu-id="01cff-111">Informations de référence générales sur les événements</span><span class="sxs-lookup"><span data-stu-id="01cff-111">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+## <a name="see-also"></a><span data-ttu-id="17008-109">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="17008-109">See Also</span></span>  
+ [<span data-ttu-id="17008-110">Journalisation des événements</span><span class="sxs-lookup"><span data-stu-id="17008-110">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
+ [<span data-ttu-id="17008-111">Informations de référence générales sur les événements</span><span class="sxs-lookup"><span data-stu-id="17008-111">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

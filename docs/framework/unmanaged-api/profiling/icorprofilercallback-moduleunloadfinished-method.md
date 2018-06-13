@@ -1,14 +1,6 @@
 ---
-title: "ICorProfilerCallback::ModuleUnloadFinished, méthode"
-ms.custom: 
+title: ICorProfilerCallback::ModuleUnloadFinished, méthode
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerCallback.ModuleUnloadFinished
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: 185e3327-9f9c-44bc-8a5c-febea9a6bb5b
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6f9f048d60d2d463e3d846fadda91932a9a2a091
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 5a4637ac7466a575c94f8244168576c4a5542689
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33452086"
 ---
-# <a name="icorprofilercallbackmoduleunloadfinished-method"></a><span data-ttu-id="38393-102">ICorProfilerCallback::ModuleUnloadFinished, méthode</span><span class="sxs-lookup"><span data-stu-id="38393-102">ICorProfilerCallback::ModuleUnloadFinished Method</span></span>
-<span data-ttu-id="38393-103">Notifie le profileur qu’un module a été déchargé.</span><span class="sxs-lookup"><span data-stu-id="38393-103">Notifies the profiler that a module has finished unloading.</span></span>  
+# <a name="icorprofilercallbackmoduleunloadfinished-method"></a><span data-ttu-id="1b234-102">ICorProfilerCallback::ModuleUnloadFinished, méthode</span><span class="sxs-lookup"><span data-stu-id="1b234-102">ICorProfilerCallback::ModuleUnloadFinished Method</span></span>
+<span data-ttu-id="1b234-103">Notifie le profileur qu’un module a été déchargé.</span><span class="sxs-lookup"><span data-stu-id="1b234-103">Notifies the profiler that a module has finished unloading.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="38393-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="38393-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1b234-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="1b234-104">Syntax</span></span>  
   
 ```  
 HRESULT ModuleUnloadFinished(  
@@ -46,26 +35,26 @@ HRESULT ModuleUnloadFinished(
     [in] HRESULT  hrStatus);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="38393-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="38393-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="1b234-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="1b234-105">Parameters</span></span>  
  `moduleId`  
- <span data-ttu-id="38393-106">[in] L’ID du module qui a été déchargé.</span><span class="sxs-lookup"><span data-stu-id="38393-106">[in] The ID of the module that was unloaded.</span></span>  
+ <span data-ttu-id="1b234-106">[in] L’ID du module qui a été déchargé.</span><span class="sxs-lookup"><span data-stu-id="1b234-106">[in] The ID of the module that was unloaded.</span></span>  
   
  `hrStatus`  
- <span data-ttu-id="38393-107">[in] HRESULT qui indique si le module a été déchargé.</span><span class="sxs-lookup"><span data-stu-id="38393-107">[in] An HRESULT that indicates whether the module was unloaded successfully.</span></span>  
+ <span data-ttu-id="1b234-107">[in] HRESULT qui indique si le module a été déchargé.</span><span class="sxs-lookup"><span data-stu-id="1b234-107">[in] An HRESULT that indicates whether the module was unloaded successfully.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="38393-108">Notes</span><span class="sxs-lookup"><span data-stu-id="38393-108">Remarks</span></span>  
- <span data-ttu-id="38393-109">La valeur de `moduleId` n’est pas valide pour une demande d’informations après le [ICorProfilerCallback::ModuleUnloadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleunloadstarted-method.md) retourne de la méthode.</span><span class="sxs-lookup"><span data-stu-id="38393-109">The value of `moduleId` is not valid for an information request after the [ICorProfilerCallback::ModuleUnloadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleunloadstarted-method.md) method returns.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1b234-108">Notes</span><span class="sxs-lookup"><span data-stu-id="1b234-108">Remarks</span></span>  
+ <span data-ttu-id="1b234-109">La valeur de `moduleId` n’est pas valide pour une demande d’informations après le [ICorProfilerCallback::ModuleUnloadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleunloadstarted-method.md) retourne de la méthode.</span><span class="sxs-lookup"><span data-stu-id="1b234-109">The value of `moduleId` is not valid for an information request after the [ICorProfilerCallback::ModuleUnloadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleunloadstarted-method.md) method returns.</span></span>  
   
- <span data-ttu-id="38393-110">Certaines parties du déchargement de la classe peuvent continuer après le `ModuleUnloadFinished` rappel.</span><span class="sxs-lookup"><span data-stu-id="38393-110">Some parts of unloading the class might continue after the `ModuleUnloadFinished` callback.</span></span> <span data-ttu-id="38393-111">Un HRESULT d’échec dans `hrStatus` indique un échec.</span><span class="sxs-lookup"><span data-stu-id="38393-111">A failure HRESULT in `hrStatus` indicates a failure.</span></span> <span data-ttu-id="38393-112">Toutefois, un HRESULT de réussite dans `hrStatus` indique uniquement que la première partie du déchargement du module a réussi.</span><span class="sxs-lookup"><span data-stu-id="38393-112">However, a success HRESULT in `hrStatus` indicates only that the first part of unloading the module has succeeded.</span></span>  
+ <span data-ttu-id="1b234-110">Certaines parties du déchargement de la classe peuvent continuer après le `ModuleUnloadFinished` rappel.</span><span class="sxs-lookup"><span data-stu-id="1b234-110">Some parts of unloading the class might continue after the `ModuleUnloadFinished` callback.</span></span> <span data-ttu-id="1b234-111">Un HRESULT d’échec dans `hrStatus` indique un échec.</span><span class="sxs-lookup"><span data-stu-id="1b234-111">A failure HRESULT in `hrStatus` indicates a failure.</span></span> <span data-ttu-id="1b234-112">Toutefois, un HRESULT de réussite dans `hrStatus` indique uniquement que la première partie du déchargement du module a réussi.</span><span class="sxs-lookup"><span data-stu-id="1b234-112">However, a success HRESULT in `hrStatus` indicates only that the first part of unloading the module has succeeded.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="38393-113">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="38393-113">Requirements</span></span>  
- <span data-ttu-id="38393-114">**Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="38393-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1b234-113">Spécifications</span><span class="sxs-lookup"><span data-stu-id="1b234-113">Requirements</span></span>  
+ <span data-ttu-id="1b234-114">**Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1b234-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="38393-115">**En-tête :** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="38393-115">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="1b234-115">**En-tête :** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="1b234-115">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="38393-116">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="38393-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="1b234-116">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1b234-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="38393-117">**Versions du .NET framework :**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="38393-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="1b234-117">**Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1b234-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="38393-118">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="38393-118">See Also</span></span>  
- [<span data-ttu-id="38393-119">ICorProfilerCallback, interface</span><span class="sxs-lookup"><span data-stu-id="38393-119">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="1b234-118">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="1b234-118">See Also</span></span>  
+ [<span data-ttu-id="1b234-119">ICorProfilerCallback, interface</span><span class="sxs-lookup"><span data-stu-id="1b234-119">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
