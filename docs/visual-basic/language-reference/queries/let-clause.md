@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604469"
 ---
 # <a name="let-clause-visual-basic"></a>Let, clause (Visual Basic)
 Calcule une valeur et l’assigne à une variable dans la requête.  

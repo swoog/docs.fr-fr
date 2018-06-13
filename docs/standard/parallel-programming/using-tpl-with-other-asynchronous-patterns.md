@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580924"
 ---
 # <a name="using-tpl-with-other-asynchronous-patterns"></a>Utilisation de la bibliothèque parallèle de tâches (TPL) avec d’autres modèles asynchrones
 La bibliothèque parallèle de tâches peut être utilisée de différentes manières avec des modèles traditionnels .NET Framework de programmation asynchrone.  

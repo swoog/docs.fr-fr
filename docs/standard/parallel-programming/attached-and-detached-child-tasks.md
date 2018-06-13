@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590764"
 ---
 # <a name="attached-and-detached-child-tasks"></a>Tâches enfants attachées et détachées
 Une *tâche enfant* (ou *tâche imbriquée*) est une instance <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> créée dans le délégué utilisateur d’une autre tâche, appelée *tâche parent*. Une tâche enfant peut être détachée ou attachée. Une *tâche enfant détachée* est une tâche qui s’exécute indépendamment de son parent. Une *tâche enfant attachée* est une tâche imbriquée créée avec l’option <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> dont le parent ne l’empêche pas explicitement ou par défaut d’être attachée. Une tâche peut créer autant de tâches enfants attachées et détachées que le permettent les ressources système.  

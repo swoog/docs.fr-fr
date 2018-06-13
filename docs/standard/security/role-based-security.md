@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582530"
 ---
 # <a name="role-based-security"></a>Sécurité basée sur les rôles
 Les rôles sont souvent utilisés dans les applications financières ou d'entreprise pour appliquer la stratégie. Ainsi, une application peut restreindre la taille de la transaction en cours, selon que l'utilisateur qui effectue la demande est membre d'un rôle spécifié. Par exemple, un employé est autorisé à exécuter les transactions se situant en deçà d'un seuil spécifié, tandis que le seuil applicable à un superviseur est plus élevé, et celui d'un vice-président plus élevé encore (ou inexistant). La sécurité basée sur les rôles peut également être utilisée quand l'application nécessite plusieurs approbations pour effectuer une action. C'est par exemple le cas d'un système d'achat dans lequel n'importe quel employé peut générer une demande d'achat, mais où seul un responsable des achats est habilité à convertir cette demande en bon de commande pour le transmettre à un fournisseur.  

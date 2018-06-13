@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603988"
 ---
 # <a name="nothing-visual-basic"></a>Nothing (Visual Basic)
 Représente la valeur par défaut de n’importe quel type de données. Pour les types référence, la valeur par défaut est le `null` référence. Pour les types valeur, la valeur par défaut varie selon que le type de valeur est nullable.  

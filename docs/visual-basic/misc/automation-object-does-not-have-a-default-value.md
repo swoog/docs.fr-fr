@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599234"
 ---
 # <a name="automation-object-does-not-have-a-default-value"></a>L’objet Automation n’a pas de valeur par défaut
 Visual Basic ne peut pas déterminer le membre par défaut pour l’objet spécifié.  

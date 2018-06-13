@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582806"
 ---
 # <a name="scheduling-threads"></a>Planification des threads
 Chaque thread se voit attribuer une priorité. Les threads créés dans le Common Language Runtime se voient initialement attribuer la priorité **ThreadPriority.Normal**. Les threads créés en dehors du runtime conservent la priorité qu’ils avaient avant d’entrer dans l’environnement géré. Vous pouvez obtenir ou définir la priorité de n’importe quel thread avec la propriété **Thread.Priority**.  

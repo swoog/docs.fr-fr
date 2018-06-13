@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594345"
 ---
 # <a name="variable-uses-an-automation-type-not-supported-in-visual-basic"></a>Cette variable utilise un type Automation non pris en charge par Visual Basic
 Vous avez tenté d’utiliser une variable définie dans une bibliothèque de type ou objet qui a un type de données non pris en charge par Visual Basic.  

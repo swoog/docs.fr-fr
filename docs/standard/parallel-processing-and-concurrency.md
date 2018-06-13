@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582634"
 ---
 # <a name="parallel-processing-concurrency-and-async-programming-in-net"></a>Traitement parallèle, accès concurrentiel et programmation asynchrone dans .NET
 .NET offre plusieurs façons d’écrire du code asynchrone permettant de rendre votre application plus réactive pour l’utilisateur, et d’écrire du code parallèle qui utilise plusieurs threads d’exécution afin d’optimiser les performances de l’ordinateur de votre utilisateur.  

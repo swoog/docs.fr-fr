@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592416"
 ---
 # <a name="the-managed-thread-pool"></a>Pool de threads managés
 La classe <xref:System.Threading.ThreadPool> fournit à votre application un pool de threads de travail qui sont gérés par le système, ce qui vous permet de vous concentrer sur les tâches d'application plutôt que sur la gestion des threads. Si vous avez des tâches courtes qui nécessitent un traitement en arrière-plan, le pool de threads managés est un moyen simple de tirer parti de plusieurs threads. Par exemple, avec [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] et versions ultérieures, vous pouvez créer des objets <xref:System.Threading.Tasks.Task> et <xref:System.Threading.Tasks.Task%601> qui effectuent des tâches asynchrones sur des threads du pool.  

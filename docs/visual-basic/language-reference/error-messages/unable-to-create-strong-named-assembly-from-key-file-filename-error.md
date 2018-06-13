@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595044"
 ---
 # <a name="unable-to-create-strong-named-assembly-from-key-file-39ltfilenamegt39-lterrorgt"></a>Impossible de créer un assembly avec nom fort à partir du fichier de clé &#39; &lt;nom de fichier&gt;&#39;: &lt;erreur&gt;
 Un assembly avec nom fort n’a pas pu être créé à partir du fichier de clé spécifié.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585114"
 ---
 # <a name="argument-not-optional-visual-basic"></a>Argument non facultatif (Visual Basic)
 Le nombre et les types d’arguments doivent correspondre à ceux attendus. Il existe un nombre incorrect d’arguments, soit un argument omis n’est pas facultatif. Un argument ne peut être omis d’un appel à une procédure définie par l’utilisateur s’il a été déclaré `Optional` dans la définition de procédure.  

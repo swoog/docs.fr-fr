@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33581851"
 ---
 # <a name="accessing-application-forms-visual-basic"></a>Accès aux formulaires de l’application (Visual Basic)
 L’objet `My.Forms` permet d’accéder facilement à une instance de chaque Windows Form déclaré dans le projet de l’application. Vous pouvez également utiliser les propriétés de l’objet `My.Application` pour accéder à l’écran de démarrage et au formulaire principal de l’application, et obtenir une liste des formulaires ouverts de l’application.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638680"
 ---
 # <a name="some-files-and-folders-caused-exceptions-during-the-operation"></a>Certains fichiers et dossiers ont provoqué des exceptions lors de l’opération
 Il se peut que des répertoires et des fichiers provoquent des exceptions au cours d’une opération, mais l’utilisateur ne dispose pas des autorisations nécessaires.  

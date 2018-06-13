@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582790"
 ---
 # <a name="printing-and-reporting-visual-basic"></a>Impression et création de rapports (Visual Basic)
 Visual Basic propose plusieurs options d’impression et de création de rapports. Les rubriques suivantes fournissent une vue d’ensemble et des liens vers la documentation relative à l’impression et de création de rapports.  

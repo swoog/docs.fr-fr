@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595824"
 ---
 # <a name="xml-entity-references-are-not-supported"></a>Les références d'entité XML ne sont pas prises en charge
 Une référence d’entité (par exemple, `©`) qui n’est pas défini dans le XML 1.0 spécification est incluse en tant que valeur pour un littéral XML. Uniquement `&`, `"`, `<`, `>`, et `'` les références d’entité XML sont pris en charge dans les littéraux XML.  

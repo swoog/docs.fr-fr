@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576345"
 ---
 # <a name="how-to-implement-a-provider"></a>Comment : implémenter un fournisseur
 Le modèle de design observateur requiert une division entre un fournisseur, qui surveille les données et envoie des notifications, et un ou plusieurs observateurs, qui reçoivent des notifications (rappels) du fournisseur. Cette rubrique décrit comment créer un fournisseur. Une rubrique connexe, [Guide pratique pour implémenter une méthode Observer](../../../docs/standard/events/how-to-implement-an-observer.md), explique comment créer un observateur.  

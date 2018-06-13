@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584769"
 ---
 # <a name="39ltfunctionnamegt39-is-not-declared-smart-devicevisual-basic-compiler-error"></a>&#39;&lt;FunctionName&gt; &#39; n’est pas déclaré (Smart Device/Visual Basic Erreur du compilateur)
 <`functionname`> n’est pas déclaré. La fonctionnalité d’E/S de fichier est normalement disponible dans l’espace de noms `Microsoft.VisualBasic` , mais la version ciblée de .NET Compact Framework ne la prend pas en charge.  

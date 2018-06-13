@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635183"
 ---
 # <a name="cannot-delete-a-registry-hive"></a>Impossible de supprimer une ruche du Registre
 L’utilisateur a tenté de supprimer une ruche du Registre. Les ruches sont des clés de Registre de niveau supérieur, telles que `HKEY_CURRENT_USER` et `HKEY_LOCAL_MACHINE`, et ne peuvent pas être supprimées.  

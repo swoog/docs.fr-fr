@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584178"
 ---
 # <a name="using-threads-and-threading"></a>Utilisation des threads et du threading
 Les rubriques de cette section décrivent la création et la gestion de threads managés. Elles expliquent également comment passer des données à des threads managés et obtenir des résultats en retour, et comment détruire des threads et gérer une exception <xref:System.Threading.ThreadAbortException>.  

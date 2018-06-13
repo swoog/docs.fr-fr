@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587431"
 ---
 # <a name="handles-clause-requires-a-withevents-variable-defined-in-the-containing-type-or-one-of-its-base-types"></a>La clause Handles requiert une variable WithEvents définie dans le type conteneur ou l'un de ses types de base
 Vous n’avez pas fourni un `WithEvents` variable dans votre `Handles` clause. Le `Handles` (mot clé) à la fin d’une déclaration de procédure oblige à gérer les événements déclenchés par une variable objet déclarée à l’aide de la `WithEvents` (mot clé).  

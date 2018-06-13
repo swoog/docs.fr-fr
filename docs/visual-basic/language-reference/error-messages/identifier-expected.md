@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586128"
 ---
 # <a name="identifier-expected"></a>Identificateur attendu
 Un élément de programmation qui n’est pas un nom d’élément déclaré reconnaissable se produit lorsque le contexte nécessite un nom d’élément. Il se peut qu’un attribut a été spécifié quelque part autre que le début de l’instruction.  

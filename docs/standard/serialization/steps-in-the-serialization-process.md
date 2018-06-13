@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33581818"
 ---
 # <a name="steps-in-the-serialization-process"></a>Étapes du processus de sérialisation
 Quand la méthode <xref:System.Runtime.Serialization.Formatter.Serialize*> est appelée sur un [formateur](xref:System.Runtime.Serialization.Formatter), la sérialisation de l’objet s’effectue d’après la séquence de règles suivante :
