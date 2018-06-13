@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525263"
 ---
 # <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol-using-the-designer"></a>Comment : ajouter et supprimer des onglets avec le contrôle TabControl Windows Forms à l'aide du concepteur
 Lorsque vous placez un <xref:System.Windows.Forms.TabControl> contrôle sur votre formulaire, il contient deux onglets par défaut. Vous pouvez ajouter ou supprimer des onglets à l’aide du concepteur.  

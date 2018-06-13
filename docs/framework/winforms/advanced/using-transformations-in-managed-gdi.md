@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523794"
 ---
 # <a name="using-transformations-in-managed-gdi"></a>Utilisation des transformations dans GDI+ managé
 Transformations affines incluent la rotation, la mise à l’échelle, la réflexion, l’inclinaison et la translation. Dans [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], la <xref:System.Drawing.Drawing2D.Matrix> classe fournit la base pour effectuer des transformations affines sur des dessins de vecteurs, des images et texte.  

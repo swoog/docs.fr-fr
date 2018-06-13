@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762138"
 ---
 # <a name="isof-entity-sql"></a>ISOF (Entity SQL)
 Détermine si le type d'une expression appartient au type spécifié ou à l'un de ses sous-types.  

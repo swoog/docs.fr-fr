@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520355"
 ---
 # <a name="dynamic-update"></a>Mise à jour dynamique
 La mise à jour dynamique fournit un mécanisme pour permettre aux développeurs d'applications de workflow de mettre à jour la définition de workflow d'une instance de workflow persistante. Il peut s'agir d'une résolution de bogue, de nouvelles spécifications ou de l'adaptation à des modifications inattendues. Cette rubrique fournit une vue d'ensemble de la fonctionnalité de mise à jour dynamique introduite dans [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  

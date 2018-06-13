@@ -10,9 +10,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2095b6e490612cff5af193b1c1dfcbb6757fc23e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449957"
 ---
 # <a name="metadata-structures"></a>Structures de métadonnées
 Cette section décrit les structures non managées utilisées par l'API de métadonnées.  

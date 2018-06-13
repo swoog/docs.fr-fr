@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565848"
 ---
 # <a name="xname-directive"></a>x:Name, directive
 Identifie de façon unique les éléments définis par XAML dans une portée de nom XAML. Portées de nom XAML et de leurs modèles d’unicité peuvent être appliquées aux objets instanciés, lorsque les infrastructures fournissent des API ou implémentent les comportements qui accèdent au graphique d’objet XAML créé au moment de l’exécution.  

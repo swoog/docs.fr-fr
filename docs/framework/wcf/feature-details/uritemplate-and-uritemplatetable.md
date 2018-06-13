@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508817"
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate et UriTemplateTable
 Les développeurs de sites Web ont besoin de pouvoir décrire la forme et la disposition des URI auxquels leurs services répondent. Windows Communication Foundation (WCF) ajouté deux nouvelles classes pour permettre aux développeurs de contrôler leurs URI. <xref:System.UriTemplate> et <xref:System.UriTemplateTable> constituent la base du moteur de répartition reposant sur l’URI de WCF. Ces classes peuvent également être utilisées sur leur propres, ce qui permet aux développeurs de tirer parti de modèles et de l’URI de mécanisme de mappage sans avoir à implémenter un service WCF.  

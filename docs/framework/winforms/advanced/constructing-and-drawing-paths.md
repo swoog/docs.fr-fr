@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520654"
 ---
 # <a name="constructing-and-drawing-paths"></a>Génération et dessin de tracés
 Un chemin d’accès est une séquence de primitives graphiques (lignes, rectangles, courbes, texte, etc.) qui peuvent être manipulées et dessiné comme une unité unique. Un chemin d’accès peut être divisé en *chiffres* qui sont ouverts ou fermés. Un graphique peut contenir plusieurs primitives.  

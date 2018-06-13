@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557184"
 ---
 # <a name="graphics-how-to-topics"></a>Rubriques "Comment" relatives aux graphiques
 Les rubriques suivantes montrent comment utiliser les fonctionnalités graphiques de la [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  

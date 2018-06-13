@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523219"
 ---
 # <a name="how-to-draw-a-line-with-line-caps"></a>Comment : dessiner une ligne avec des embouts de ligne
 Vous pouvez dessiner le début ou la fin d’une ligne dans une des différentes formes appelées des embouts de ligne. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] prend en charge plusieurs embouts de ligne, telles que rond, carré, losange et pointe de flèche.  

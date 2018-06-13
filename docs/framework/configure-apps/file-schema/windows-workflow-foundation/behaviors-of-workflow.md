@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767308"
 ---
 # <a name="ltbehaviorsgt-of-workflow"></a>&lt;behaviors&gt; de workflow
 Cet élément contient le **serviceBehaviors** collection.  Chaque élément dans la collection définit des éléments de comportement consommés par des services de flux de travail. Chaque élément de comportement est identifié par son unique **nom** attribut.  

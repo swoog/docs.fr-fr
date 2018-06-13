@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33505968"
 ---
 # <a name="servicemodel-attributes-and-servicedescription-reference"></a>Attributs ServiceModel et référence ServiceDescription
 Le *arborescence de description* correspond à la hiérarchie de types (commençant par la <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> classe) qui décrivent ensemble chaque aspect d’un service. Windows Communication Foundation (WCF) utilise une arborescence de description pour générer une exécution de service valide, pour publier des assertions de stratégie (métadonnées) concernant le service que les clients peuvent utiliser pour Web Services Description Language (WSDL) et le langage de définition de schéma XML (XSD) se connecter à et utiliser le service et pour générer diverses représentations de fichier code et la configuration des valeurs d’arborescence de description.  

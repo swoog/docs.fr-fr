@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519062"
 ---
 # <a name="task-2-host-the-workflow-designer"></a>Tâche 2 : héberger le Workflow Designer
 Cette rubrique décrit la procédure pour l’hébergement d’une instance de la [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] dans une application Windows Presentation Foundation (WPF).  

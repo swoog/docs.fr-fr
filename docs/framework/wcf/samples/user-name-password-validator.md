@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508317"
 ---
 # <a name="user-name-password-validator"></a>Validateur de nom d'utilisateur et de mot de passe
 Cet exemple montre comment implémenter un validateur UserNamePassword personnalisé. Cela s’avère utile dans les cas où aucun des modes de validation UserNamePassword intégrés ne convient aux spécifications de l’application ; par exemple, lorsque les paires nom d’utilisateur/mot de passe sont stockées dans quelque magasin externe, tel qu’une base de données. Cet exemple illustre un service qui comprend un validateur personnalisé qui vérifie pour deux paires nom d'utilisateur/mot de passe particulières. Le client utilise une paire nom d'utilisateur/mot de passe pour s'authentifier auprès du service.  

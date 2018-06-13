@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521776"
 ---
 # <a name="coordinate-systems-and-transformations"></a>Systèmes de coordonnées et transformations
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Fournit une transformation universelle et une transformation de page afin que vous puissiez transformer (faire pivoter, mettre à l’échelle, traduire et ainsi de suite) les éléments vous dessinez. Les deux transformations permettent également d’utiliser une variété de systèmes de coordonnées.  

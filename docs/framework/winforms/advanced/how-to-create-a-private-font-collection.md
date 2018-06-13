@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523079"
 ---
 # <a name="how-to-create-a-private-font-collection"></a>Comment : créer une collection de polices privées
 Le <xref:System.Drawing.Text.PrivateFontCollection> classe hérite de la <xref:System.Drawing.Text.FontCollection> classe de base abstraite. Vous pouvez utiliser un <xref:System.Drawing.Text.PrivateFontCollection> objet de conserver un jeu de polices spécifiquement pour votre application. Une collection de polices privées peut inclure des polices système installées ainsi que des polices qui n’ont pas été installées sur l’ordinateur. Pour ajouter un fichier de polices à une collection de polices privées, appelez le <xref:System.Drawing.Text.PrivateFontCollection.AddFontFile%2A> méthode d’un <xref:System.Drawing.Text.PrivateFontCollection> objet.  

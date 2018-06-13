@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 79c9a54a44ae1751cb8b1b57379ccfd6485f6e6b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33448189"
 ---
 # <a name="imetadataimportfindmember-method"></a>IMetaDataImport::FindMember, méthode
 Obtient un pointeur vers le MemberDef jeton pour le champ ou la méthode est placée entre la <xref:System.Type> et qui possède la signature de nom et de métadonnées spécifiée.  

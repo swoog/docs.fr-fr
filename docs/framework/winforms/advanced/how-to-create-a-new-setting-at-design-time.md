@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523765"
 ---
 # <a name="how-to-create-a-new-setting-at-design-time"></a>Comment : créer un nouveau paramètre au moment du design
 Vous pouvez créer un nouveau paramètre au moment du design à l’aide du Concepteur de paramètres. Le Concepteur de paramètres est une interface de style de la grille qui vous permet de créer de nouveaux paramètres et de spécifier des propriétés pour ces paramètres. Vous devez spécifier le nom, valeur, Type et la portée de vos nouveaux paramètres. Une fois qu’un paramètre est créé, il est accessible dans le code.  

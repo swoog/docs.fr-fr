@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556872"
 ---
 # <a name="how-to-specify-the-binding-source"></a>Comment : spécifier la source de liaison
 Dans la liaison de données, l’objet de source de liaison fait référence à l’objet à partir duquel vous obtenez vos données. Cette rubrique décrit les différentes façons de spécifier la source de liaison.  

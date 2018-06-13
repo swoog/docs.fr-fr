@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523157"
 ---
 # <a name="global-and-local-transformations"></a>Transformations globales et locales
 Une transformation globale est une transformation qui s’applique à tous les éléments dessinés par une donnée <xref:System.Drawing.Graphics> objet. En revanche, une transformation locale est une transformation qui s’applique à un élément spécifique doit être dessiné.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522331"
 ---
 # <a name="how-to-create-standard-windows-forms-print-jobs"></a>Comment : créer des travaux d'impression Windows Forms standard
 La base de l’impression dans les Windows Forms est la <xref:System.Drawing.Printing.PrintDocument> composant, plus spécifiquement, le <xref:System.Drawing.Printing.PrintDocument.PrintPage> événement. En écrivant du code pour gérer les <xref:System.Drawing.Printing.PrintDocument.PrintPage> événement, vous pouvez spécifier les éléments à imprimer et l’imprimer.  

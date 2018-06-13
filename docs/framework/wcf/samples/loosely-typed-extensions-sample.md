@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33504435"
 ---
 # <a name="loosely-typed-extensions-sample"></a>Loosely-Typed Extensions, exemple
 Le modèle objet de syndication fournit une prise en charge complète pour l'utilisation des données d'extension : informations présentes dans la représentation XML d'un flux de syndication, mais qui ne sont pas exposées explicitement par les classes telles que <xref:System.ServiceModel.Syndication.SyndicationFeed> et <xref:System.ServiceModel.Syndication.SyndicationItem>. Cet exemple présente les techniques de base d’utilisation des données d’extension.  

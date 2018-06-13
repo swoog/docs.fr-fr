@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522445"
 ---
 # <a name="how-to-shear-colors"></a>Comment : altérer des couleurs
 Inclinaison augmente ou diminue d’un composant de couleur d’un montant proportionnel à un autre composant de couleur. Par exemple, considérez la transformation où la composante rouge est augmentée par la moitié de la valeur du composant bleu. Sous une transformation de ce type, la couleur (0,2, 0,5, 1) deviendrait (0,7, 0,5, 1). Le nouveau composant rouge est 0,2 + (1/2)(1) = 0,7.  

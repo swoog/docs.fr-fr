@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518844"
 ---
 # <a name="confirmation"></a>Confirmation
 Cet exemple présente quatre scénarios courants se rapportant à l'utilisation de <xref:System.Activities.Statements.CompensableActivity> et à la confirmation. L'exemple exécute quatre workflows pour illustrer la confirmation. Cet exemple est disponible dans les versions déclarative et impérative.  
