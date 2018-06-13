@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359661"
 ---
 # <a name="sql-clr-custom-type-mappings"></a>Mappages de types personnalisés SQL-CLR
 Le mappage de type entre SQL Server et le langage Common Language Runtime (CLR) est automatiquement spécifié lorsque vous utilisez l'outil de ligne de commande SQLMetal ou le Concepteur Objet/Relationnel (Concepteur O/R).  

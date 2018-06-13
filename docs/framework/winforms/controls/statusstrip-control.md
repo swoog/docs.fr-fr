@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534496"
 ---
 # <a name="statusstrip-control"></a>StatusStrip, contrôle
 Le contrôle `StatusStrip` Windows Forms est utilisé dans les formulaires tels que les zones, qui s'affichent habituellement au bas d'une fenêtre, et dans lesquelles une application peut afficher différents types d'informations d'état. Les contrôles `StatusStrip` possèdent généralement des contrôles `ToolStripStatusLabel` qui affichent du texte ou des icônes pour indiquer l'état, ou un <xref:System.Windows.Forms.ToolStripProgressBar> qui représente graphiquement la progression d'un processus.  

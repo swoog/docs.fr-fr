@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353655"
 ---
 # <a name="communicating-with-the-database"></a>Communication avec la base de données
 Les rubriques de cette section décrivent des principes de base sur la manière d'établir et de maintenir la communication avec la base de données.  

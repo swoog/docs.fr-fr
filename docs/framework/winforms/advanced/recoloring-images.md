@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525952"
 ---
 # <a name="recoloring-images"></a>Recoloriage des images
 Recoloriage est le processus de réglage des couleurs de l’image. Le changement de couleur à une autre, ajuster l’intensité d’une couleur par rapport à une autre couleur, modifier la luminosité ou le contraste de toutes les couleurs et la conversion des couleurs en nuances de gris sont des exemples de recoloriage.  

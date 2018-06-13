@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531295"
 ---
 # <a name="how-to-implement-a-custom-layout-engine"></a>Comment : implémenter un moteur de présentation personnalisé
 L’exemple de code suivant montre comment créer un moteur de disposition personnalisée qui effectue une disposition de flux simple. Il implémente un contrôle de panneau de configuration nommé `DemoFlowPanel`, qui remplace le <xref:System.Windows.Forms.Control.LayoutEngine%2A> propriété afin de fournir une instance de la `DemoFlowLayout` classe.  

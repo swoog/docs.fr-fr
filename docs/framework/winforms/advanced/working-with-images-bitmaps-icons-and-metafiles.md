@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526832"
 ---
 # <a name="working-with-images-bitmaps-icons-and-metafiles"></a>Utilisation des images, bitmaps, icônes et métafichiers
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] fournit la classe `Bitmap` pour utiliser des images raster et la classe `Metafile` pour utiliser des images vectorielles. Les classes `Bitmap` et `Metafile` héritent toutes deux de la classe `Image`.  

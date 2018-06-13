@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531922"
 ---
 # <a name="how-to-group-controls-with-the-windows-forms-groupbox-control"></a>Comment : regrouper des contrôles au moyen du contrôle GroupBox Windows Forms
 Windows Forms <xref:System.Windows.Forms.GroupBox> contrôles sont utilisés pour regrouper d’autres contrôles. Il existe trois raisons aux contrôles de groupe :  
