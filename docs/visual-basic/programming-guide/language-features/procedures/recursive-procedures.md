@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650213"
 ---
 # <a name="recursive-procedures-visual-basic"></a>Procédures récursives (Visual Basic)
 A *récursive* procédure est une tâche qui s’appelle elle-même. En général, cela n’est pas la plus efficace pour écrire du code Visual Basic.  

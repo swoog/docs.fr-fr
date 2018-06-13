@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656030"
 ---
 # <a name="visual-basic-compiler-options-listed-alphabetically"></a>Options du compilateur Visual Basic par ordre alphabétique
 Le compilateur de ligne de commande Visual Basic est fourni comme alternative aux programmes de compilation à partir de l’environnement de développement intégré (IDE) Visual Studio. Voici une liste des options du compilateur de ligne de commande Visual Basic par ordre alphabétique.  

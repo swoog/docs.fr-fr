@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653427"
 ---
 # <a name="overload-resolution-visual-basic"></a>Résolution de surcharge (Visual Basic)
 Lorsque le compilateur Visual Basic rencontre un appel à une procédure qui est défini dans plusieurs versions surchargées, le compilateur doit décider de la surcharge à appeler. Pour cela, procédez comme suit :  

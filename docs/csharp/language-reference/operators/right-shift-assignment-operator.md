@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171416"
 ---
 # <a name="gtgt-operator-c-reference"></a>&gt;&gt;=, opérateur (référence C#)
 Opérateur d’assignation de décalage vers la droite.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655112"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>Procédure pas à pas : gestion des événements (Visual Basic)
 Il s’agit de la deuxième des deux rubriques qui montrent comment utiliser des événements. La première rubrique [procédure pas à pas : déclaration et déclenchement des événements](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md), montre comment déclarer et déclencher des événements. Cette section utilise le formulaire et la classe à partir de cette procédure pas à pas pour montrer comment gérer les événements lorsqu’ils se produisent.  

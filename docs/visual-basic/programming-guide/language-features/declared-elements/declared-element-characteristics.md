@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650892"
 ---
 # <a name="declared-element-characteristics-visual-basic"></a>Caractéristiques d'éléments déclarés (Visual Basic)
 A *caractéristique* d’un élément déclaré est un aspect de cet élément qui détermine comment le code peut interagir avec lui. Chaque élément déclaré a un ou plusieurs des caractéristiques suivantes associées :  

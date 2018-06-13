@@ -14,6 +14,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172501"
 ---
 # <a name="regular-expression-examples"></a>Exemples d'expressions régulières
 Cette section contient des exemples de code qui illustrent l’utilisation des expressions régulières dans des applications courantes.  

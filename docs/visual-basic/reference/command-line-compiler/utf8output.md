@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653583"
 ---
 # <a name="-utf8output-visual-basic"></a>-utf8output (Visual Basic)
 Affiche les résultats de la compilation au format d'encodage UTF-8.  

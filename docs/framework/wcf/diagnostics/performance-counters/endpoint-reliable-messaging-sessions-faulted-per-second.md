@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33472769"
 ---
 # <a name="endpoint-reliable-messaging-sessions-faulted-per-second"></a>Point de terminaison : sessions de messagerie fiable ayant renvoyé une erreur par seconde
 Nom du compteur : Sessions de messagerie fiable ayant renvoyé une erreur par seconde.  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650437"
 ---
 # <a name="composite-data-types-visual-basic"></a>Types de données composites (Visual Basic)
 Outre les blocs de Visual Basic de types de données élémentaires, vous pouvez assembler des éléments de différents types pour créer *types de données composites* tels que des structures, des tableaux et des classes. Vous pouvez générer des types de données composites à partir des types élémentaires et d’autres types composites. Par exemple, vous pouvez définir un tableau d’éléments de structure ou une structure avec des membres de tableau.  

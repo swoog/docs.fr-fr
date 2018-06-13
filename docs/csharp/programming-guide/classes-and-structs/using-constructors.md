@@ -4,11 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - constructors [C#], about constructors
 ms.assetid: 464253b2-fd5d-469a-836d-df0fdf2a43f7
-ms.openlocfilehash: 80400cc1eae697c931833a5444969a231e23c06e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5fe6f10e3842c0c0aac4b2669f8ca367fa8c3be2
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172321"
 ---
 # <a name="using-constructors-c-programming-guide"></a>Utilisation de constructeurs (Guide de programmation C#)
 Quand une [classe](../../../csharp/language-reference/keywords/class.md) ou un [struct](../../../csharp/language-reference/keywords/struct.md) est créé, son constructeur est appelé. Les constructeurs portent le même nom que la classe ou le struct, et ils initialisent généralement les membres de données du nouvel objet.  
@@ -29,7 +30,7 @@ Quand une [classe](../../../csharp/language-reference/keywords/class.md) ou un [
   
  Les constructeurs pour les types [struct](../../../csharp/language-reference/keywords/struct.md) ressemblent aux constructeurs de classe, mais les `structs` ne peuvent pas contenir de constructeur par défaut explicite, car le compilateur en fournit automatiquement un. Ce constructeur initialise chaque champ du `struct` aux valeurs par défaut. Pour plus d’informations, consultez [Tableau des valeurs par défaut](../../../csharp/language-reference/keywords/default-values-table.md). Toutefois, ce constructeur par défaut est appelé uniquement si le `struct` est instancié avec `new`. Par exemple, ce code utilise le constructeur par défaut pour <xref:System.Int32>. Vous êtes par conséquent assuré que l’entier est initialisé :  
   
-```  
+```csharp  
 int i = new int();  
 Console.WriteLine(i);  
 ```  

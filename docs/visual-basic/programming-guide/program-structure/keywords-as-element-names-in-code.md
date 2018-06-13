@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652576"
 ---
 # <a name="keywords-as-element-names-in-code-visual-basic"></a>Utilisation des mots clés comme noms d'éléments dans le code (Visual Basic)
 N’importe quel élément de programme, par exemple une variable, une classe ou un membre — peut avoir le même nom qu’un mot clé restreint. Par exemple, vous pouvez créer une variable nommée `Loop`. Toutefois, pour faire référence à votre version de celui-ci, qui a le même nom que la limitée `Loop` (mot clé), vous devez le faire précéder d’une chaîne de qualification complète ou le placer entre crochets (`[ ]`), comme le montre l’exemple suivant.  

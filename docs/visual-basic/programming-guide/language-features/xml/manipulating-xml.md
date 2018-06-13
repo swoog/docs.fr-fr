@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650411"
 ---
 # <a name="manipulating-xml-in-visual-basic"></a>Manipulation de code XML dans Visual Basic
 Vous pouvez utiliser *littéraux XML* charger XML à partir d’une source externe, telles que les flux, d’un fichier ou d’une chaîne. Vous pouvez ensuite utiliser [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] pour manipuler le document XML et utiliser [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] pour interroger le document XML.  

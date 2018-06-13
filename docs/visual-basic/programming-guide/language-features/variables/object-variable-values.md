@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652114"
 ---
 # <a name="object-variable-values-visual-basic"></a>Valeurs des variables objets (Visual Basic)
 Une variable de la [Type de données d’objet](../../../../visual-basic/language-reference/data-types/object-data-type.md) peuvent faire référence à des données de n’importe quel type. La valeur que vous stockez dans un `Object` variable est conservée quelque part dans la mémoire, alors que la variable contient un pointeur vers les données.  

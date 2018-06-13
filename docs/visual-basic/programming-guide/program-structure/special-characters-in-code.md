@@ -35,6 +35,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654354"
 ---
 # <a name="special-characters-in-code-visual-basic"></a>Caractères spéciaux dans le code (Visual Basic)
 Vous devez parfois utiliser des caractères spéciaux dans votre code, autrement dit, les caractères qui ne sont pas alphabétiques ou numériques. La ponctuation et caractères spéciaux dans le jeu de caractères de Visual Basic ont plusieurs utilisations, de l’organisation du texte de programme à la définition des tâches effectuées par le compilateur ou le programme compilé. Ils ne spécifient pas d'opération à effectuer.  
