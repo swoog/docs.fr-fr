@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549407"
 ---
 # <a name="marking-routed-events-as-handled-and-class-handling"></a>Marquage des événements routés comme étant gérés et gestion de classe
 Les gestionnaires d’un événement routé peuvent marquer l’événement comme étant géré dans les données d’événement. La gestion de l’événement a pour effet de raccourcir efficacement l’itinéraire. La gestion de classe est un concept de programmation pris en charge par les événements routés. Un gestionnaire de classe peut gérer un événement routé particulier au niveau d’une classe à l’aide d’un gestionnaire appelé avant tout gestionnaire d’instance sur une instance de la classe.  

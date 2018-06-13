@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547961"
 ---
 # <a name="serialization-limitations-of-xamlwritersave"></a>Limitations de sérialisation de XamlWriter.Save
 Le [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] <xref:System.Windows.Markup.XamlWriter.Save%2A> peut être utilisé pour sérialiser le contenu d’un [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] application en tant qu’un [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] fichier. Toutefois, il existe quelques limitations importantes dans ce qui peut être sérialisé. Ces restrictions et certaines considérations d’ordre général sont abordées dans cette rubrique.  

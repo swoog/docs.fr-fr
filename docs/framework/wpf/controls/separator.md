@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551042"
 ---
 # <a name="separator"></a>Séparateur
 A <xref:System.Windows.Controls.Separator> contrôle dessine une ligne horizontale ou verticale entre des éléments dans les contrôles, tels que <xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.Menu>, et <xref:System.Windows.Controls.ToolBar>.  

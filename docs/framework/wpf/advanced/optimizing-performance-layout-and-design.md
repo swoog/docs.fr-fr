@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547834"
 ---
 # <a name="optimizing-performance-layout-and-design"></a>Optimisation des performances : disposition et conception
 La conception de votre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application peut influer sur ses performances en créant des charges mémoire inutiles pour calculer la disposition et valider les références d’objet. La construction d’objets, en particulier au moment de l’exécution, peut affecter les caractéristiques de performances de votre application.  

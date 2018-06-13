@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532273"
 ---
 # <a name="how-to-hide-column-headers-in-the-windows-forms-datagridview-control"></a>Comment : masquer les en-têtes de colonnes dans le contrôle DataGridView Windows Forms
 Parfois, vous souhaitez afficher un <xref:System.Windows.Forms.DataGridView> sans en-têtes de colonne. Dans le <xref:System.Windows.Forms.DataGridView> (contrôle), le <xref:System.Windows.Forms.DataGridView.ColumnHeadersVisible%2A> valeur de propriété détermine si les en-têtes de colonne sont affichés.  

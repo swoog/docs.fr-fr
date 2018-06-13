@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546121"
 ---
 # <a name="typography"></a>Typographie
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] prend en charge pour une présentation de contenu de texte enrichie. Le texte dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] est affiché à l’aide de [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)], ce qui améliore sa clarté et sa lisibilité. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] prend également en charge [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] polices, qui offrent des fonctionnalités supplémentaires au-delà de celles définies par le [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] format.  

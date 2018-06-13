@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547877"
 ---
 # <a name="the-ink-threading-model"></a>Modèle de thread de l'encre
 Un des avantages de l’encre sur un Tablet PC est qu’il semble beaucoup l’écriture avec un stylet régulière et un livre.  Pour ce faire, le stylet collecte les données d’entrée à un taux beaucoup plus important que la souris et restitue l’encre lorsque l’utilisateur écrit.  Thread d’interface utilisateur de l’application utilisateur n’est pas suffisant pour collecter les données du stylet et restituer l’encre car il peut se bloquer.  Pour résoudre ce problème, un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application utilise deux threads supplémentaires lorsqu’un utilisateur écrit d’encre.  

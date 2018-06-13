@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545634"
 ---
 # <a name="how-to-open-a-message-box"></a>Comment : ouvrir une boîte de Message
 Cet exemple montre comment ouvrir une boîte de message.  

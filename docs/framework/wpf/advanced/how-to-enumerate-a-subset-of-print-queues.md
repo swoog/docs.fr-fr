@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543587"
 ---
 # <a name="how-to-enumerate-a-subset-of-print-queues"></a>Comment : énumérer un sous-ensemble de files d'attente à l'impression
 Une situation courante rencontrée par les professionnels informatiques (IT) de la gestion d’un ensemble d’échelle de la société d’imprimantes est pour générer une liste des imprimantes présentant certaines caractéristiques. Cette fonctionnalité est fournie par le <xref:System.Printing.PrintServer.GetPrintQueues%2A> méthode d’un <xref:System.Printing.PrintServer> objet et le <xref:System.Printing.EnumeratedPrintQueueTypes> énumération.  

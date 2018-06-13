@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525140"
 ---
 # <a name="groupbox-control-windows-forms"></a>GroupBox, contrôle (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.GroupBox> contrôles sont utilisés pour fournir un groupement identifiable pour d’autres contrôles. En règle générale, vous utilisez les zones de groupe pour diviser un formulaire par fonction. Par exemple, peut avoir un bon de commande qui spécifie les options de distribution telles que le lendemain à utiliser. Regroupement de toutes les options dans une zone de groupe donne à l’utilisateur une aide visuelle logique. Le <xref:System.Windows.Forms.GroupBox> contrôle est semblable à la <xref:System.Windows.Forms.Panel> contrôle ; Toutefois, uniquement les <xref:System.Windows.Forms.GroupBox> contrôle affiche une légende et uniquement le <xref:System.Windows.Forms.Panel> contrôle peut avoir des barres de défilement.  

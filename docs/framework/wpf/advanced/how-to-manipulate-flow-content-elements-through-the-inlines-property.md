@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545569"
 ---
 # <a name="how-to-manipulate-flow-content-elements-through-the-inlines-property"></a>Comment : manipuler des éléments de contenu de flux avec la propriété Inlines
 Ces exemples montrent quelques-unes des opérations plus courantes qui peuvent être effectuées sur les éléments de contenu de flux inline (et conteneurs de tels éléments, tels que <xref:System.Windows.Controls.TextBlock>) via le **incorporations** propriété. Cette propriété est utilisée pour ajouter et supprimer des éléments de <xref:System.Windows.Documents.InlineCollection>. Éléments de contenu flux cette fonctionnalité une **incorporations** propriété incluent :  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550850"
 ---
 # <a name="passwordbox"></a>Zone de mot de passe
 Le <xref:System.Windows.Controls.PasswordBox> contrôle est utilisé pour entrer des informations sensibles ou confidentielles.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549381"
 ---
 # <a name="building-a-wpf-application-wpf"></a>Génération d'une application WPF (WPF)
 Les applications Windows Presentation Foundation (WPF) peuvent être construites comme [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] exécutables (.exe), des bibliothèques (.dll), ou une combinaison des deux types d’assemblys. Cette rubrique présente comment générer des applications [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] et décrit les principales étapes du processus de génération.  

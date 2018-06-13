@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529426"
 ---
 # <a name="displaying-data-in-the-windows-forms-datagridview-control"></a>Affichage des données dans le contrôle DataGridView Windows Forms
 Le `DataGridView` contrôle est utilisé pour afficher des données à partir de diverses sources de données externes. Vous pouvez également ajouter des lignes et des colonnes au contrôle et remplir manuellement avec des données.  

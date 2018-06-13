@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545585"
 ---
 # <a name="how-to-return-a-dialog-box-result"></a>Comment : retourner un résultat de boîte de dialogue
 Cet exemple montre comment récupérer le résultat de la boîte de dialogue pour une fenêtre ouverte en appelant <xref:System.Windows.Window.ShowDialog%2A>.  

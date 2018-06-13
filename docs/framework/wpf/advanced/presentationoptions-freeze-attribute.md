@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546069"
 ---
 # <a name="presentationoptionsfreeze-attribute"></a>PresentationOptions:Freeze, attribut
 Définit le <xref:System.Windows.Freezable.IsFrozen%2A> l’état `true` sur le contenant <xref:System.Windows.Freezable> élément. Comportement par défaut un <xref:System.Windows.Freezable> sans le `PresentationOptions:Freeze` attribut spécifié est que <xref:System.Windows.Freezable.IsFrozen%2A> est `false` au moment du chargement et général en fonction <xref:System.Windows.Freezable> comportement lors de l’exécution.  

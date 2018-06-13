@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530144"
 ---
 # <a name="how-to-create-a-read-only-text-box-windows-forms"></a>Comment : créer une zone de texte en lecture seule (Windows Forms)
 Vous pouvez transformer une zone de texte Windows Forms modifiable dans un contrôle en lecture seule. Par exemple, la zone de texte peut afficher une valeur qui est généralement modifiée mais n’est pas actuellement, en raison de l’état de l’application.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549696"
 ---
 # <a name="walkthrough-hosting-a-wpf-clock-in-win32"></a>Procédure pas à pas : hébergement d'un WPF Clock dans Win32
 Pour placer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] à l’intérieur de [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] applications, utilisez <xref:System.Windows.Interop.HwndSource>, qui fournit le HWND qui contient votre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contenu. Vous commencez par créer la <xref:System.Windows.Interop.HwndSource>, en lui attribuant des paramètres similaires à CreateWindow.  Vous indiquez ensuite le <xref:System.Windows.Interop.HwndSource> sur la [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contenu que vous souhaitez qu’il contient.  Enfin, vous obtenez le HWND de la <xref:System.Windows.Interop.HwndSource>. Cette procédure pas à pas montre comment créer un mixte [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] à l’intérieur de [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] application qui implémente de nouveau le système d’exploitation **propriétés de Date et heure** boîte de dialogue.  

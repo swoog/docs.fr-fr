@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551789"
 ---
 # <a name="how-to-wrap-a-border-around-the-content-of-a-canvas"></a>Comment : encapsuler une bordure autour du contenu d'une zone de dessin
 Cet exemple montre comment exposer une <xref:System.Windows.Controls.Canvas> élément avec un <xref:System.Windows.Controls.Border>.  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546235"
 ---
 # <a name="getting-started-with-ink"></a>Débuter avec l'encre
 Incorporation d’encre numérique dans vos applications est plus facile que jamais. Encre a évolué d’être un corollaire à la méthode COM et Windows Forms de la programmation à la réalisation d’une intégration complète dans le [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Vous n’avez pas besoin installer les kits de développement logiciel distincts ou des bibliothèques runtime.  

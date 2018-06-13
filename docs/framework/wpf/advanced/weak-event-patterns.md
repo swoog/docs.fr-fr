@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549345"
 ---
 # <a name="weak-event-patterns"></a>Modèles d'événement faible
 Dans les applications, il est possible que les gestionnaires qui sont attachés à des sources d’événements ne sont pas détruits en coordination avec l’objet écouteur qui joint le gestionnaire à la source. Cette situation peut conduire à des fuites de mémoire. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] introduit un modèle de conception qui peut être utilisé pour résoudre ce problème, en fournissant une classe de gestionnaire dédiée pour des événements particuliers et en implémentant une interface sur les écouteurs de cet événement. Ce modèle de conception est appelé le *du modèle d’événement faible*.  

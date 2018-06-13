@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547614"
 ---
 # <a name="intercepting-input-from-the-stylus"></a>Interception d'entrée à partir du stylet
 Le <xref:System.Windows.Input.StylusPlugIns> architecture fournit un mécanisme pour l’implémentation du contrôle de bas niveau sur <xref:System.Windows.Input.Stylus> d’entrée et de la création de l’encre numérique <xref:System.Windows.Ink.Stroke> objets. La <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> classe fournit un mécanisme vous permet d’implémenter un comportement personnalisé et l’appliquer au flux de données provenant du périphérique stylet pour des performances optimales.  

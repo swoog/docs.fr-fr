@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544194"
 ---
 # <a name="how-to-clone-a-printer"></a>Comment : cloner une imprimante
 La plupart des entreprises, à un moment donné, d’acheter plusieurs imprimantes du même modèle. En général, celles-ci sont toutes installées avec les paramètres de configuration quasiment identiques. L’installation de chaque imprimante peut prendre du temps et sujet aux erreurs. Le <xref:System.Printing.IndexedProperties?displayProperty=nameWithType> espace de noms et le <xref:System.Printing.PrintServer.InstallPrintQueue%2A> classe qui sont exposés avec Microsoft .NET Framework vous permet d’installer instantanément n’importe quel nombre de files d’attente à l’impression supplémentaires qui sont clonés à partir d’une file d’attente d’impression existant.  

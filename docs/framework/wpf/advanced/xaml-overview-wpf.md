@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549722"
 ---
 # <a name="xaml-overview-wpf"></a>Vue d’ensemble du langage XAML (WPF)
 Cette rubrique décrit les fonctionnalités du langage XAML et montre comment utiliser XAML pour écrire des applications [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Cette rubrique décrit en particulier le langage XAML tel qu’il est implémenté par [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Le XAML lui-même est un concept de langage plus vaste que [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  

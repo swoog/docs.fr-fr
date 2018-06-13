@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547760"
 ---
 # <a name="how-to-open-a-file-that-is-dropped-on-a-richtextbox-control"></a>Comment : ouvrir un fichier qui est déplacé dans un contrôle RichTextBox
 Dans [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], le <xref:System.Windows.Controls.TextBox>, <xref:System.Windows.Controls.RichTextBox>, et <xref:System.Windows.Documents.FlowDocument> tous les contrôles ont des fonctionnalités intégrées de glisser-déplacer. La fonctionnalité intégrée permet de glisser-déplacer du texte au sein et entre les contrôles. Toutefois, elle ne permet pas l’ouverture d’un fichier en supprimant le fichier sur le contrôle. Ces contrôles marquent également les événements de glisser-déplacer comme géré. Par conséquent, par défaut, vous ne pouvez pas ajouter vos propres gestionnaires d’événements pour fournir une fonctionnalité pour ouvrir des fichiers déposés.  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545969"
 ---
 # <a name="how-to-remotely-survey-the-status-of-printers"></a>Comment : observer à distance l'état d'imprimantes
 Dans les moyennes et grandes entreprises, il peut arriver à tout moment que plusieurs imprimantes ne fonctionnent pas en raison d’un bourrage papier, d’un manque de papier ou d’un autre problème. L’ensemble complet de propriétés de l’imprimante exposées dans le [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] de Microsoft .NET Framework fournissent un moyen de mener une enquête rapide de l’état des imprimantes.  

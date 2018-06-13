@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548052"
 ---
 # <a name="merged-resource-dictionaries"></a>Dictionnaires de ressources fusionnés
 Les ressources [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] prennent en charge une fonctionnalité de dictionnaire de ressources fusionné. Cette fonctionnalité offre un moyen de définir la partie ressources d’une application [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] en dehors de l’application [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] compilée. Les ressources peuvent ensuite être partagées entre les applications et sont aussi isolées plus facilement pour la localisation.  

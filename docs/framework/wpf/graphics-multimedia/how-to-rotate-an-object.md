@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561941"
 ---
 # <a name="how-to-rotate-an-object"></a>Comment : faire pivoter un objet
 Cet exemple montre comment faire pivoter un objet. L’exemple crée d’abord un <xref:System.Windows.Media.RotateTransform> puis spécifie son <xref:System.Windows.Media.RotateTransform.Angle%2A> en degrés.  

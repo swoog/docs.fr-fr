@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549099"
 ---
 # <a name="optimizing-performance-2d-graphics-and-imaging"></a>Optimisation des performances : graphiques 2D et acquisition d'images
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fournit une large gamme de fonctionnalités graphiques 2D et d’acquisition d’images qui peuvent être optimisées pour répondre aux spécifications de votre application. Cette rubrique fournit des informations sur l’optimisation des performances dans ces domaines.  

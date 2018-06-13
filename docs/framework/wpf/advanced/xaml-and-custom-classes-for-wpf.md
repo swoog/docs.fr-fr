@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549316"
 ---
 # <a name="xaml-and-custom-classes-for-wpf"></a>XAML et classes personnalisées pour WPF
 XAML, tel qu’il est implémenté dans les frameworks [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)], prend en charge la possibilité de définir une classe ou une structure personnalisée dans n’importe quel langage de [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)], puis d’accéder à cette classe à l’aide du balisage XAML. Vous pouvez utiliser un mélange de types définis de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] et de vos types personnalisés dans le même fichier de balisage, généralement en mappant les types personnalisés à un préfixe d’espace de noms XAML. Cette rubrique décrit les conditions que doit satisfaire une classe personnalisée pour pouvoir être utilisée comme élément XAML.  

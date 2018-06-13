@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526541"
 ---
 # <a name="datetimepicker-control-windows-forms"></a>DateTimePicker, contrôle (Windows Forms)
 Windows Forms `DateTimePicker` contrôle permet à l’utilisateur à sélectionner un seul élément dans une liste de dates ou d’heures. Lorsqu’il est utilisé pour représenter une date, il s’affiche en deux parties : une liste déroulante contenant une date sous forme de texte et une grille qui s’affiche lorsque vous cliquez sur la flèche bas en regard de la liste.  

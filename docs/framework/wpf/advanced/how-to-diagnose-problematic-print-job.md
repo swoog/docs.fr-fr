@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546739"
 ---
 # <a name="how-to-diagnose-problematic-print-job"></a>Comment : diagnostiquer un travail d'impression problématique
 Les administrateurs réseau reçoivent souvent des plaintes d’utilisateurs concernant des travaux d’impression qui échouent ou s’impriment lentement. L’ensemble complet de propriétés du travail d’impression exposées dans le [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] de Microsoft .NET Framework fournissent un moyen pour effectuer un diagnostic rapide et à distance des travaux d’impression.  

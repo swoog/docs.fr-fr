@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543479"
 ---
 # <a name="how-to-list-the-data-formats-in-a-data-object"></a>Comment : répertorier les formats de données dans un objet de données
 Les exemples suivants montrent comment utiliser le <xref:System.Windows.DataObject.GetFormats%2A> surcharges de méthode obtient un tableau de chaînes qui désigne chaque format de données qui est disponible dans un objet de données.  

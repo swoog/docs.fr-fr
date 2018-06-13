@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544509"
 ---
 # <a name="how-to-add-custom-data-to-ink-data"></a>Comment : ajouter des données personnalisées aux données de l'encre
 Vous pouvez ajouter des données personnalisées à encre sera enregistré lors de l’encre est enregistré sous la forme d’encre sérialisée format ISF (Ink).  Vous pouvez enregistrer les données personnalisées pour le <xref:System.Windows.Ink.DrawingAttributes>, le <xref:System.Windows.Ink.StrokeCollection>, ou <xref:System.Windows.Ink.Stroke>.  La possibilité d’enregistrer des données personnalisées sur trois objets vous donne la possibilité de choisir le meilleur emplacement pour enregistrer les données.  Ces trois classes utilisent des méthodes semblables pour stocker et accéder aux données personnalisées.  

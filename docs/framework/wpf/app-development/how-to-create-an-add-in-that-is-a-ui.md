@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549589"
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a>Guide pratique pour créer un complément qui est une interface utilisateur
 Cet exemple montre comment créer un complément qui est un Windows Presentation Foundation (WPF) qui est hébergé par un [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] application autonome.  

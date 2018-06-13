@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550096"
 ---
 # <a name="how-to-persist-and-restore-application-scope-properties-across-application-sessions"></a>Comment : rendre persistantes et restaurer les propriétés de portée application d'une session d'application à l'autre
 Cet exemple montre comment rendre persistantes les propriétés de l’étendue de l’application lorsqu’une application s’arrête et comment restaurer des propriétés de portée application lorsqu’une application est ensuite lancement.  
