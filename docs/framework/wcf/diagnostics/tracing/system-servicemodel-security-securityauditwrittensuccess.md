@@ -1,32 +1,23 @@
 ---
 title: System.ServiceModel.Security.SecurityAuditWrittenSuccess
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1a8bcf46-54ee-460c-ae7f-64bead28ff64
-caps.latest.revision: "4"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: b7a6883f950a35c4ccdcfe229826e2a0974fd6af
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 165d6470e1bceae8f17f4b03a8ae20b6f5531374
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33483910"
 ---
-# <a name="systemservicemodelsecuritysecurityauditwrittensuccess"></a><span data-ttu-id="fa69d-102">System.ServiceModel.Security.SecurityAuditWrittenSuccess</span><span class="sxs-lookup"><span data-stu-id="fa69d-102">System.ServiceModel.Security.SecurityAuditWrittenSuccess</span></span>
-<span data-ttu-id="fa69d-103">System.ServiceModel.Security.SecurityAuditWrittenSuccess</span><span class="sxs-lookup"><span data-stu-id="fa69d-103">System.ServiceModel.Security.SecurityAuditWrittenSuccess</span></span>  
+# <a name="systemservicemodelsecuritysecurityauditwrittensuccess"></a><span data-ttu-id="220a1-102">System.ServiceModel.Security.SecurityAuditWrittenSuccess</span><span class="sxs-lookup"><span data-stu-id="220a1-102">System.ServiceModel.Security.SecurityAuditWrittenSuccess</span></span>
+<span data-ttu-id="220a1-103">System.ServiceModel.Security.SecurityAuditWrittenSuccess</span><span class="sxs-lookup"><span data-stu-id="220a1-103">System.ServiceModel.Security.SecurityAuditWrittenSuccess</span></span>  
   
-## <a name="description"></a><span data-ttu-id="fa69d-104">Description</span><span class="sxs-lookup"><span data-stu-id="fa69d-104">Description</span></span>  
- <span data-ttu-id="fa69d-105">Le journal d'audit de sécurité est correctement écrit.</span><span class="sxs-lookup"><span data-stu-id="fa69d-105">The security audit log is written successfully.</span></span>  
+## <a name="description"></a><span data-ttu-id="220a1-104">Description</span><span class="sxs-lookup"><span data-stu-id="220a1-104">Description</span></span>  
+ <span data-ttu-id="220a1-105">Le journal d'audit de sécurité est correctement écrit.</span><span class="sxs-lookup"><span data-stu-id="220a1-105">The security audit log is written successfully.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fa69d-106">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="fa69d-106">See Also</span></span>  
- [<span data-ttu-id="fa69d-107">Suivi</span><span class="sxs-lookup"><span data-stu-id="fa69d-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="fa69d-108">Utilisation du suivi pour résoudre les problèmes posés par votre application</span><span class="sxs-lookup"><span data-stu-id="fa69d-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="fa69d-109">Administration et diagnostics</span><span class="sxs-lookup"><span data-stu-id="fa69d-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="220a1-106">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="220a1-106">See Also</span></span>  
+ [<span data-ttu-id="220a1-107">Suivi</span><span class="sxs-lookup"><span data-stu-id="220a1-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="220a1-108">Utilisation du suivi pour résoudre les problèmes posés par votre application</span><span class="sxs-lookup"><span data-stu-id="220a1-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="220a1-109">Administration et diagnostics</span><span class="sxs-lookup"><span data-stu-id="220a1-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

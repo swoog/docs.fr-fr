@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742872"
 ---
 # <a name="cryptography-settings-schema"></a><span data-ttu-id="aedc5-102">Schéma des paramètres de chiffrement</span><span class="sxs-lookup"><span data-stu-id="aedc5-102">Cryptography Settings Schema</span></span>
 <span data-ttu-id="aedc5-103">Le schéma des paramètres de chiffrement contient des éléments qui spécifient comment mapper des noms d’algorithmes conviviaux à des classes qui implémentent des algorithmes de chiffrement.</span><span class="sxs-lookup"><span data-stu-id="aedc5-103">The cryptography settings schema contains elements that specify how to map friendly algorithm names to classes that implement cryptography algorithms.</span></span>  
