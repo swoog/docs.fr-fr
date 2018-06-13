@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33600148"
 ---
 # <a name="trycast-operator-visual-basic"></a>Opérateur TryCast (Visual Basic)
 Introduit une opération de conversion de type qui ne lève pas d’exception.  

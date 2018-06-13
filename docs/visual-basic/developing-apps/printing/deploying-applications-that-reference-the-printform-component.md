@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584694"
 ---
 # <a name="deploying-applications-that-reference-the-printform-component-visual-basic"></a>Déploiement d’applications faisant référencent au composant PrintForm (Visual Basic)
 Si vous voulez déployer une application qui fait référence au composant <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> , le composant doit être installé sur l’ordinateur de destination.  

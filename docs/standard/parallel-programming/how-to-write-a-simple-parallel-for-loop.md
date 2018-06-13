@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586141"
 ---
 # <a name="how-to-write-a-simple-parallelfor-loop"></a>Comment : écrire une boucle Parallel.For simple
 Cette rubrique contient deux exemples qui illustrent la méthode <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>. Le premier utilise la surcharge de méthode <xref:System.Threading.Tasks.Parallel.For%28System.Int64%2CSystem.Int64%2CSystem.Action%7BSystem.Int64%7D%29?displayProperty=nameWithType> et le second utilise la surcharge <xref:System.Threading.Tasks.Parallel.For%28System.Int32%2CSystem.Int32%2CSystem.Action%7BSystem.Int32%7D%29?displayProperty=nameWithType>, les deux surcharges les plus simples de la méthode <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>. Vous pouvez utiliser ces deux surcharges de la méthode <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> quand vous n'avez pas besoin d'annuler la boucle, de sortir des itérations de boucle ou de maintenir un état de thread local.  

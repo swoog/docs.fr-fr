@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638781"
 ---
 # <a name="the-input-path-refers-to-a-file-but-ends-with-a-directory-separator-character"></a>Le chemin d’entrée fait référence à un fichier, mais il se termine par un caractère de séparation de répertoire
 Une tentative d’opération nécessitant la spécification d’un nom de fichier a été effectuée, mais le nom spécifié se termine par un caractère de séparation de répertoire (`\`). Cela peut être dû à l’analyse incorrecte d’un chemin de fichier.  

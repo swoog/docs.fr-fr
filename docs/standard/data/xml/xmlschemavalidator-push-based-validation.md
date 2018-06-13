@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579598"
 ---
 # <a name="xmlschemavalidator-push-based-validation"></a>Validation XmlSchemaValidator de type push
 La classe <xref:System.Xml.Schema.XmlSchemaValidator> fournit un mécanisme efficace et performant de validation des données XML par rapport aux schémas XML selon le modèle push. Par exemple, la classe <xref:System.Xml.Schema.XmlSchemaValidator> permet de valider un jeu d'informations XML sur place sans devoir le sérialiser dans un document XML et réanalyser ensuite le document à l'aide d'un lecteur XML de validation.  

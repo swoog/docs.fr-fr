@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597661"
 ---
 # <a name="object-variable-or-with-block-variable-not-set"></a>Variable objet ou variable bloc With non définie
 Une variable objet non valide est référencée.   Cette erreur peut se produire pour plusieurs raisons :  

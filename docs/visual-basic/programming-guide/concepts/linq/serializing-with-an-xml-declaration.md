@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645270"
 ---
 # <a name="serializing-with-an-xml-declaration-visual-basic"></a>Sérialisation avec une déclaration XML (Visual Basic)
 Cette rubrique décrit comment contrôler si la sérialisation génère une déclaration XML.  

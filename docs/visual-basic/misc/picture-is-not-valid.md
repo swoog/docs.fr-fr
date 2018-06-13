@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638094"
 ---
 # <a name="picture-is-not-valid"></a>Image non valide
 Vous avez tenté d’assigner un format graphique autre qu’une bitmap, une icône ou un métafichier Windows à la propriété `Picture` d’un formulaire ou d’un contrôle.  

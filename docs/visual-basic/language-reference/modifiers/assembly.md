@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595288"
 ---
 # <a name="assembly-visual-basic"></a>Assembly (Visual Basic)
 Spécifie qu’un attribut situé au début d’un fichier source s’applique à la totalité de l’assembly.  

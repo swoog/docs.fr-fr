@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596604"
 ---
 # <a name="property-let-procedure-not-defined-and-property-get-procedure-did-not-return-an-object"></a>La procédure Property Let n'est pas définie et la procédure Property Get n'a pas retourné d'objet
 Certaines opérations, méthodes et propriétés peuvent s’appliquent uniquement aux `Collection` objets. Vous avez spécifié une opération ou une propriété exclusive aux collections, mais l’objet n’est pas une collection.  

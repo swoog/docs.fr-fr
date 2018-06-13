@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603429"
 ---
 # <a name="a-log-has-already-been-created-with-this-name-on-this-machine"></a>Un journal a déjà été créé avec ce nom sur cet ordinateur
 L’utilisateur a tenté de créer un journal avec un nom déjà utilisé.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638479"
 ---
 # <a name="the-address-for-uploadfile-needs-to-include-a-filename"></a>L’adresse de UploadFile doit inclure un nom de fichier
 Lors du chargement de fichiers avec la méthode `UploadFile` , vous devez fournir un nom de fichier dans le chemin de destination.  

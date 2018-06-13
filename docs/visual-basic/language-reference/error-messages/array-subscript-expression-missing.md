@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583862"
 ---
 # <a name="array-subscript-expression-missing"></a>Expression d'indice de tableau manquante
 Une initialisation de tableau omet un ou plusieurs des indices qui définissent les limites du tableau. Par exemple, l’instruction peut contenir l’expression `myArray (5,5,,10)`, qui omet le troisième indice.  

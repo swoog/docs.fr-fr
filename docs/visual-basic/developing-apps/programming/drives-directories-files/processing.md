@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586752"
 ---
 # <a name="processing-drives-directories-and-files-visual-basic"></a>Manipulation de lecteurs, de répertoires et de fichiers (Visual Basic)
 Vous pouvez utiliser Visual Basic pour manipuler des lecteurs, des dossiers et des fichiers avec l’objet `My.Computer.FileSystem`. Cet objet offre de meilleures performances et est plus facile à utiliser que les méthodes traditionnelles telles que les fonctions `FileOpen` et `Write` (celles-ci restent toutefois disponibles). Ces méthodes sont détaillées dans les sections suivantes.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592221"
 ---
 # <a name="introducing-xml-serialization"></a>Introduction à la sérialisation XML
 La sérialisation correspond au processus de conversion d'un objet en un formulaire facilement transportable. Par exemple, vous pouvez sérialiser un objet et le transporter par Internet via HTTP entre un client et un serveur. À l'autre extrémité, la désérialisation reconstruit l'objet du flux de données.  

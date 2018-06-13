@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599478"
 ---
 # <a name="argument-39path39-is-nothing-or-empty"></a>Argument &#39;chemin d’accès&#39; a la valeur Nothing ou est vide
 Un nom de chemin n’est pas valide, car il est initialisé avec la valeur `Nothing` ou il est vide. Un chemin doit avoir un type de données spécifique et un nom valide.  

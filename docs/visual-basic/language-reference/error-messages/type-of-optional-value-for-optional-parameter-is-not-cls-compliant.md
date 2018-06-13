@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594342"
 ---
 # <a name="type-of-optional-value-for-optional-parameter-ltparameternamegt-is-not-cls-compliant"></a>Type de valeur facultative pour le paramètre facultatif &lt;nom_paramètre&gt; n’est pas conforme CLS
 Une procédure est marquée comme `<CLSCompliant(True)>` mais déclare un paramètre [facultatif](../../../visual-basic/language-reference/modifiers/optional.md) avec la valeur par défaut d’un type non conforme.  

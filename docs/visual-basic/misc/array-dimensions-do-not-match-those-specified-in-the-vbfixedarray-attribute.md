@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599289"
 ---
 # <a name="array-dimensions-do-not-match-those-specified-in-the-39vbfixedarray39-attribute"></a>Les dimensions du tableau ne correspondent pas à ceux spécifiés dans le &#39;VBFixedArray&#39; attribut
 Les dimensions de votre tableau ne correspondent pas à celles que vous avez spécifiées dans l’attribut `VBFixedArray` .  

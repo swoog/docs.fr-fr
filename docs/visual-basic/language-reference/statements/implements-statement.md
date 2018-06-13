@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604209"
 ---
 # <a name="implements-statement"></a>Implements, instruction
 Spécifie une ou plusieurs interfaces, ou les membres d’interface qui doivent être implémentées dans la classe ou sur définition de la structure dans laquelle elle apparaît.  

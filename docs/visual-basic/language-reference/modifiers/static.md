@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33602052"
 ---
 # <a name="static-visual-basic"></a>Static (Visual Basic)
 Spécifie qu’une ou plusieurs variables locales déclarées doivent continuer d’exister et conservent leurs valeurs les plus récentes après l’arrêt de la procédure dans laquelle elles sont déclarées.  

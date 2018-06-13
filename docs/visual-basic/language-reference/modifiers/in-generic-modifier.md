@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597430"
 ---
 # <a name="in-generic-modifier-visual-basic"></a>In (modificateur générique) (Visual Basic)
 Pour les paramètres de type générique, le mot clé `In` spécifie que le paramètre de type est contravariant.  
