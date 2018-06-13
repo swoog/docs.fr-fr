@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636485"
 ---
 # <a name="file-io-with-type-39lttypenamegt39-is-not-valid"></a>Type de fichier d’e/s &#39; &lt;typename&gt; &#39; n’est pas valide
 Vous tentez d’écrire un type non pris en charge dans un fichier.  

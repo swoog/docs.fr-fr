@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33634896"
 ---
 # <a name="feature-not-yet-implemented"></a>Cette fonctionnalité n’est pas encore implémentée
 Vous avez tenté d’accéder à une fonctionnalité qui n’est pas implémentée actuellement en Visual Basic.  

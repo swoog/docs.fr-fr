@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649261"
 ---
 # <a name="how-to-create-a-procedure-visual-basic"></a>Comment : créer une procédure (Visual Basic)
 Vous insérez une procédure entre une instruction de déclaration initiale (`Sub` ou `Function`) et une instruction de déclaration de fin (`End Sub` ou `End Function`). Code de tous les la procédure se trouve entre ces instructions.  

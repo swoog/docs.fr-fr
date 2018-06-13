@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636651"
 ---
 # <a name="file-already-exists"></a>Le fichier existe déjà
 Cette erreur se produit lorsque le nom d’un fichier existant est affecté à un nouveau fichier ou lorsque la commande **Enregistrer sous** est utilisée pour enregistrer un projet actuellement chargé sous un nom qui existe déjà.  
