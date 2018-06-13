@@ -1,14 +1,6 @@
 ---
-title: "CorValidatorModuleType, énumération"
-ms.custom: 
+title: CorValidatorModuleType, énumération
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CorValidatorModuleType
 api_location:
@@ -22,22 +14,19 @@ helpviewer_keywords:
 ms.assetid: 748f1ab2-fbcb-4f55-89ec-8d23d81ebc80
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3367f6928b5d7378b2686185ee3e03d0279cc11d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 97e9ae5a7c35b4f9b6e2b4ca7e754b5b7480dfa6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444137"
 ---
-# <a name="corvalidatormoduletype-enumeration"></a><span data-ttu-id="af863-102">CorValidatorModuleType, énumération</span><span class="sxs-lookup"><span data-stu-id="af863-102">CorValidatorModuleType Enumeration</span></span>
-<span data-ttu-id="af863-103">Spécifie le type d’un module.</span><span class="sxs-lookup"><span data-stu-id="af863-103">Specifies the type of a module.</span></span>  
+# <a name="corvalidatormoduletype-enumeration"></a><span data-ttu-id="e827f-102">CorValidatorModuleType, énumération</span><span class="sxs-lookup"><span data-stu-id="e827f-102">CorValidatorModuleType Enumeration</span></span>
+<span data-ttu-id="e827f-103">Spécifie le type d’un module.</span><span class="sxs-lookup"><span data-stu-id="e827f-103">Specifies the type of a module.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="af863-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="af863-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e827f-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="e827f-104">Syntax</span></span>  
   
 ```  
 typedef enum  
@@ -52,26 +41,26 @@ typedef enum
 } CorValidatorModuleType;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="af863-105">Membres</span><span class="sxs-lookup"><span data-stu-id="af863-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="e827f-105">Membres</span><span class="sxs-lookup"><span data-stu-id="e827f-105">Members</span></span>  
   
-|<span data-ttu-id="af863-106">Membre</span><span class="sxs-lookup"><span data-stu-id="af863-106">Member</span></span>|<span data-ttu-id="af863-107">Description</span><span class="sxs-lookup"><span data-stu-id="af863-107">Description</span></span>|  
+|<span data-ttu-id="e827f-106">Membre</span><span class="sxs-lookup"><span data-stu-id="e827f-106">Member</span></span>|<span data-ttu-id="e827f-107">Description</span><span class="sxs-lookup"><span data-stu-id="e827f-107">Description</span></span>|  
 |------------|-----------------|  
-|`ValidatorModuleTypeInvalid`|<span data-ttu-id="af863-108">Le module est un type non valide.</span><span class="sxs-lookup"><span data-stu-id="af863-108">The module is an invalid type.</span></span>|  
-|`ValidatorModuleTypeMin`|<span data-ttu-id="af863-109">La valeur minimale de la `CorValidatorModuleType` enum.</span><span class="sxs-lookup"><span data-stu-id="af863-109">The minimum value of the `CorValidatorModuleType` enum.</span></span>|  
-|`ValidatorModuleTypePE`|<span data-ttu-id="af863-110">Le module est un fichier exécutable portable (PE).</span><span class="sxs-lookup"><span data-stu-id="af863-110">The module is a portable executable (PE) file.</span></span>|  
-|`ValidatorModuleTypeObj`|<span data-ttu-id="af863-111">Le module est un fichier .obj.</span><span class="sxs-lookup"><span data-stu-id="af863-111">The module is a .obj file.</span></span>|  
-|`ValidatorModuleTypeEnc`|<span data-ttu-id="af863-112">Le module est une session du débogueur de modifier et continuer.</span><span class="sxs-lookup"><span data-stu-id="af863-112">The module is an edit-and-continue debugger session.</span></span>|  
-|`ValidatorModuleTypeIncr`|<span data-ttu-id="af863-113">Le module est celle qui a été généré de façon incrémentielle.</span><span class="sxs-lookup"><span data-stu-id="af863-113">The module is one that has been incrementally built.</span></span>|  
-|`ValidatorModuleTypeMax`|<span data-ttu-id="af863-114">La valeur maximale de la `CorValidatorModuleType` enum.</span><span class="sxs-lookup"><span data-stu-id="af863-114">The maximum value of the `CorValidatorModuleType` enum.</span></span>|  
+|`ValidatorModuleTypeInvalid`|<span data-ttu-id="e827f-108">Le module est un type non valide.</span><span class="sxs-lookup"><span data-stu-id="e827f-108">The module is an invalid type.</span></span>|  
+|`ValidatorModuleTypeMin`|<span data-ttu-id="e827f-109">La valeur minimale de la `CorValidatorModuleType` enum.</span><span class="sxs-lookup"><span data-stu-id="e827f-109">The minimum value of the `CorValidatorModuleType` enum.</span></span>|  
+|`ValidatorModuleTypePE`|<span data-ttu-id="e827f-110">Le module est un fichier exécutable portable (PE).</span><span class="sxs-lookup"><span data-stu-id="e827f-110">The module is a portable executable (PE) file.</span></span>|  
+|`ValidatorModuleTypeObj`|<span data-ttu-id="e827f-111">Le module est un fichier .obj.</span><span class="sxs-lookup"><span data-stu-id="e827f-111">The module is a .obj file.</span></span>|  
+|`ValidatorModuleTypeEnc`|<span data-ttu-id="e827f-112">Le module est une session du débogueur de modifier et continuer.</span><span class="sxs-lookup"><span data-stu-id="e827f-112">The module is an edit-and-continue debugger session.</span></span>|  
+|`ValidatorModuleTypeIncr`|<span data-ttu-id="e827f-113">Le module est celle qui a été généré de façon incrémentielle.</span><span class="sxs-lookup"><span data-stu-id="e827f-113">The module is one that has been incrementally built.</span></span>|  
+|`ValidatorModuleTypeMax`|<span data-ttu-id="e827f-114">La valeur maximale de la `CorValidatorModuleType` enum.</span><span class="sxs-lookup"><span data-stu-id="e827f-114">The maximum value of the `CorValidatorModuleType` enum.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="af863-115">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="af863-115">Requirements</span></span>  
- <span data-ttu-id="af863-116">**Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="af863-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e827f-115">Spécifications</span><span class="sxs-lookup"><span data-stu-id="e827f-115">Requirements</span></span>  
+ <span data-ttu-id="e827f-116">**Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e827f-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="af863-117">**En-tête :** Cor.h</span><span class="sxs-lookup"><span data-stu-id="af863-117">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="e827f-117">**En-tête :** Cor.h</span><span class="sxs-lookup"><span data-stu-id="e827f-117">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="af863-118">**Bibliothèque :** inclus en tant que ressource dans MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="af863-118">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="e827f-118">**Bibliothèque :** inclus en tant que ressource dans MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="e827f-118">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="af863-119">**Versions du .NET framework :**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="af863-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="e827f-119">**Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e827f-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="af863-120">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="af863-120">See Also</span></span>  
- [<span data-ttu-id="af863-121">Énumérations de métadonnées</span><span class="sxs-lookup"><span data-stu-id="af863-121">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="e827f-120">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="e827f-120">See Also</span></span>  
+ [<span data-ttu-id="e827f-121">Énumérations de métadonnées</span><span class="sxs-lookup"><span data-stu-id="e827f-121">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -1,28 +1,19 @@
 ---
-title: "Comment : créer une Union C-C++ à l’aide d’attributs (Visual Basic)"
-ms.custom: 
+title: 'Comment : créer une Union C-C++ à l’aide d’attributs (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9352a7e4-c0da-4d07-aa14-55ed43736fcb
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 51d04c573e91a351c48edefebdb3d32fce1d306f
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: b07168df3fb7ec8195a3f64ef5b1bef0cc16dda2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644327"
 ---
-# <a name="how-to-create-a-cc-union-by-using-attributes-visual-basic"></a><span data-ttu-id="503a2-102">Comment : créer une Union C/C++ à l’aide d’attributs (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="503a2-102">How to: Create a C/C++ Union by Using Attributes (Visual Basic)</span></span>
-<span data-ttu-id="503a2-103">Vous pouvez personnaliser la disposition des structs en mémoire à l’aide d’attributs.</span><span class="sxs-lookup"><span data-stu-id="503a2-103">By using attributes you can customize how structs are laid out in memory.</span></span> <span data-ttu-id="503a2-104">Par exemple, vous pouvez créer ce qu’on appelle une union en C/C++ à l’aide des attributs `StructLayout(LayoutKind.Explicit)` et `FieldOffset`.</span><span class="sxs-lookup"><span data-stu-id="503a2-104">For example, you can create what is known as a union in C/C++ by using the `StructLayout(LayoutKind.Explicit)` and `FieldOffset` attributes.</span></span>  
+# <a name="how-to-create-a-cc-union-by-using-attributes-visual-basic"></a><span data-ttu-id="6dc26-102">Comment : créer une Union C/C++ à l’aide d’attributs (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6dc26-102">How to: Create a C/C++ Union by Using Attributes (Visual Basic)</span></span>
+<span data-ttu-id="6dc26-103">Vous pouvez personnaliser la disposition des structs en mémoire à l’aide d’attributs.</span><span class="sxs-lookup"><span data-stu-id="6dc26-103">By using attributes you can customize how structs are laid out in memory.</span></span> <span data-ttu-id="6dc26-104">Par exemple, vous pouvez créer ce qu’on appelle une union en C/C++ à l’aide des attributs `StructLayout(LayoutKind.Explicit)` et `FieldOffset`.</span><span class="sxs-lookup"><span data-stu-id="6dc26-104">For example, you can create what is known as a union in C/C++ by using the `StructLayout(LayoutKind.Explicit)` and `FieldOffset` attributes.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="503a2-105">Exemple</span><span class="sxs-lookup"><span data-stu-id="503a2-105">Example</span></span>  
- <span data-ttu-id="503a2-106">Dans ce segment de code, tous les champs de `TestUnion` débutent au même emplacement en mémoire.</span><span class="sxs-lookup"><span data-stu-id="503a2-106">In this code segment, all of the fields of `TestUnion` start at the same location in memory.</span></span>  
+## <a name="example"></a><span data-ttu-id="6dc26-105">Exemple</span><span class="sxs-lookup"><span data-stu-id="6dc26-105">Example</span></span>  
+ <span data-ttu-id="6dc26-106">Dans ce segment de code, tous les champs de `TestUnion` débutent au même emplacement en mémoire.</span><span class="sxs-lookup"><span data-stu-id="6dc26-106">In this code segment, all of the fields of `TestUnion` start at the same location in memory.</span></span>  
   
 ```vb  
 ' Add an Imports statement for System.Runtime.InteropServices.  
@@ -44,8 +35,8 @@ Structure TestUnion
 End Structure  
 ```  
   
-## <a name="example"></a><span data-ttu-id="503a2-107">Exemple</span><span class="sxs-lookup"><span data-stu-id="503a2-107">Example</span></span>  
- <span data-ttu-id="503a2-108">Voici un autre exemple où les champs débutent à différents emplacements définis explicitement.</span><span class="sxs-lookup"><span data-stu-id="503a2-108">The following is another example where fields start at different explicitly set locations.</span></span>  
+## <a name="example"></a><span data-ttu-id="6dc26-107">Exemple</span><span class="sxs-lookup"><span data-stu-id="6dc26-107">Example</span></span>  
+ <span data-ttu-id="6dc26-108">Voici un autre exemple où les champs débutent à différents emplacements définis explicitement.</span><span class="sxs-lookup"><span data-stu-id="6dc26-108">The following is another example where fields start at different explicitly set locations.</span></span>  
   
 ```vb  
 ' Add an Imports statement for System.Runtime.InteropServices.  
@@ -73,14 +64,14 @@ Structure TestExplicit
  End Structure  
 ```  
   
- <span data-ttu-id="503a2-109">Les deux champs entiers, `i1` et `i2`, partagent leurs emplacements de mémoire avec `lg`.</span><span class="sxs-lookup"><span data-stu-id="503a2-109">The two integer fields, `i1` and `i2`, share the same memory locations as `lg`.</span></span> <span data-ttu-id="503a2-110">Ce type de contrôle sur la disposition des structs est utile quand vous utilisez des appels de code non managé.</span><span class="sxs-lookup"><span data-stu-id="503a2-110">This sort of control over struct layout is useful when using platform invocation.</span></span>  
+ <span data-ttu-id="6dc26-109">Les deux champs entiers, `i1` et `i2`, partagent leurs emplacements de mémoire avec `lg`.</span><span class="sxs-lookup"><span data-stu-id="6dc26-109">The two integer fields, `i1` and `i2`, share the same memory locations as `lg`.</span></span> <span data-ttu-id="6dc26-110">Ce type de contrôle sur la disposition des structs est utile quand vous utilisez des appels de code non managé.</span><span class="sxs-lookup"><span data-stu-id="6dc26-110">This sort of control over struct layout is useful when using platform invocation.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="503a2-111">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="503a2-111">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="6dc26-111">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="6dc26-111">See Also</span></span>  
  <xref:System.Reflection>  
  <xref:System.Attribute>  
- [<span data-ttu-id="503a2-112">Guide de programmation Visual Basic</span><span class="sxs-lookup"><span data-stu-id="503a2-112">Visual Basic Programming Guide</span></span>](../../../../visual-basic/programming-guide/index.md)  
- [<span data-ttu-id="503a2-113">Attributs</span><span class="sxs-lookup"><span data-stu-id="503a2-113">Attributes</span></span>](../../../../standard/attributes/index.md)  
- [<span data-ttu-id="503a2-114">Réflexion (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="503a2-114">Reflection (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/reflection.md)  
- [<span data-ttu-id="503a2-115">Attributs (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="503a2-115">Attributes (Visual Basic)</span></span>](../../../../visual-basic/language-reference/attributes.md)  
- [<span data-ttu-id="503a2-116">Créer des attributs personnalisés (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="503a2-116">Creating Custom Attributes (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)  
- [<span data-ttu-id="503a2-117">Accéder à des attributs à l’aide de la réflexion (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="503a2-117">Accessing Attributes by Using Reflection (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+ [<span data-ttu-id="6dc26-112">Guide de programmation Visual Basic</span><span class="sxs-lookup"><span data-stu-id="6dc26-112">Visual Basic Programming Guide</span></span>](../../../../visual-basic/programming-guide/index.md)  
+ [<span data-ttu-id="6dc26-113">Attributs</span><span class="sxs-lookup"><span data-stu-id="6dc26-113">Attributes</span></span>](../../../../standard/attributes/index.md)  
+ [<span data-ttu-id="6dc26-114">Réflexion (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6dc26-114">Reflection (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/reflection.md)  
+ [<span data-ttu-id="6dc26-115">Attributs (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6dc26-115">Attributes (Visual Basic)</span></span>](../../../../visual-basic/language-reference/attributes.md)  
+ [<span data-ttu-id="6dc26-116">Créer des attributs personnalisés (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6dc26-116">Creating Custom Attributes (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)  
+ [<span data-ttu-id="6dc26-117">Accéder à des attributs à l’aide de la réflexion (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6dc26-117">Accessing Attributes by Using Reflection (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)

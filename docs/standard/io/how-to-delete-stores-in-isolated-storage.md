@@ -1,13 +1,7 @@
 ---
 title: Suppression de magasins
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,33 +15,29 @@ helpviewer_keywords:
 - storing data using isolated storage, deleting stores
 - data storage using isolated storage, deleting stores
 ms.assetid: 3947e333-5af6-4601-b2f1-24d4d6129cf3
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 3ae04deeb8d23b496a9111b0d4b5b68e12ac1439
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 776984cf1cc17d5c1becc91d4491fa6dbc9e2c17
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572325"
 ---
-# <a name="how-to-delete-stores-in-isolated-storage"></a><span data-ttu-id="879f5-102">Suppression de magasins</span><span class="sxs-lookup"><span data-stu-id="879f5-102">How to: Delete Stores in Isolated Storage</span></span>
-<span data-ttu-id="879f5-103">La classe <xref:System.IO.IsolatedStorage.IsolatedStorageFile> fournit deux méthodes pour supprimer les fichiers de stockage isolés :</span><span class="sxs-lookup"><span data-stu-id="879f5-103">The <xref:System.IO.IsolatedStorage.IsolatedStorageFile> class supplies two methods for deleting isolated storage files:</span></span>  
+# <a name="how-to-delete-stores-in-isolated-storage"></a><span data-ttu-id="19c70-102">Suppression de magasins</span><span class="sxs-lookup"><span data-stu-id="19c70-102">How to: Delete Stores in Isolated Storage</span></span>
+<span data-ttu-id="19c70-103">La classe <xref:System.IO.IsolatedStorage.IsolatedStorageFile> fournit deux méthodes pour supprimer les fichiers de stockage isolés :</span><span class="sxs-lookup"><span data-stu-id="19c70-103">The <xref:System.IO.IsolatedStorage.IsolatedStorageFile> class supplies two methods for deleting isolated storage files:</span></span>  
   
--   <span data-ttu-id="879f5-104">La méthode d’instance <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove> n’accepte pas d’argument et supprime le magasin qui l’appelle.</span><span class="sxs-lookup"><span data-stu-id="879f5-104">The instance method <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove> does not take any arguments and deletes the store that calls it.</span></span> <span data-ttu-id="879f5-105">Aucune autorisation n’est nécessaire pour cette opération.</span><span class="sxs-lookup"><span data-stu-id="879f5-105">No permissions are required for this operation.</span></span> <span data-ttu-id="879f5-106">Tout code pouvant accéder au magasin peut supprimer tout ou partie des données qu’il contient.</span><span class="sxs-lookup"><span data-stu-id="879f5-106">Any code that can access the store can delete any or all the data inside it.</span></span>  
+-   <span data-ttu-id="19c70-104">La méthode d’instance <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove> n’accepte pas d’argument et supprime le magasin qui l’appelle.</span><span class="sxs-lookup"><span data-stu-id="19c70-104">The instance method <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove> does not take any arguments and deletes the store that calls it.</span></span> <span data-ttu-id="19c70-105">Aucune autorisation n’est nécessaire pour cette opération.</span><span class="sxs-lookup"><span data-stu-id="19c70-105">No permissions are required for this operation.</span></span> <span data-ttu-id="19c70-106">Tout code pouvant accéder au magasin peut supprimer tout ou partie des données qu’il contient.</span><span class="sxs-lookup"><span data-stu-id="19c70-106">Any code that can access the store can delete any or all the data inside it.</span></span>  
   
--   <span data-ttu-id="879f5-107">La méthode statique <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove%28System.IO.IsolatedStorage.IsolatedStorageScope%29> prend la valeur d’énumération <xref:System.IO.IsolatedStorage.IsolatedStorageScope.User> et supprime tous les magasins pour l’utilisateur qui exécute le code.</span><span class="sxs-lookup"><span data-stu-id="879f5-107">The static method <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove%28System.IO.IsolatedStorage.IsolatedStorageScope%29> takes the <xref:System.IO.IsolatedStorage.IsolatedStorageScope.User> enumeration value, and deletes all the stores for the user who is running the code.</span></span> <span data-ttu-id="879f5-108">Cette opération nécessite une autorisation <xref:System.Security.Permissions.IsolatedStorageFilePermission> pour la valeur <xref:System.Security.Permissions.IsolatedStorageContainment.AdministerIsolatedStorageByUser> .</span><span class="sxs-lookup"><span data-stu-id="879f5-108">This operation requires <xref:System.Security.Permissions.IsolatedStorageFilePermission> permission for the <xref:System.Security.Permissions.IsolatedStorageContainment.AdministerIsolatedStorageByUser> value.</span></span>  
+-   <span data-ttu-id="19c70-107">La méthode statique <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove%28System.IO.IsolatedStorage.IsolatedStorageScope%29> prend la valeur d’énumération <xref:System.IO.IsolatedStorage.IsolatedStorageScope.User> et supprime tous les magasins pour l’utilisateur qui exécute le code.</span><span class="sxs-lookup"><span data-stu-id="19c70-107">The static method <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove%28System.IO.IsolatedStorage.IsolatedStorageScope%29> takes the <xref:System.IO.IsolatedStorage.IsolatedStorageScope.User> enumeration value, and deletes all the stores for the user who is running the code.</span></span> <span data-ttu-id="19c70-108">Cette opération nécessite une autorisation <xref:System.Security.Permissions.IsolatedStorageFilePermission> pour la valeur <xref:System.Security.Permissions.IsolatedStorageContainment.AdministerIsolatedStorageByUser> .</span><span class="sxs-lookup"><span data-stu-id="19c70-108">This operation requires <xref:System.Security.Permissions.IsolatedStorageFilePermission> permission for the <xref:System.Security.Permissions.IsolatedStorageContainment.AdministerIsolatedStorageByUser> value.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="879f5-109">Exemple</span><span class="sxs-lookup"><span data-stu-id="879f5-109">Example</span></span>  
- <span data-ttu-id="879f5-110">L’exemple de code suivant illustre l’utilisation des méthodes d’instance et statique <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove%2A> .</span><span class="sxs-lookup"><span data-stu-id="879f5-110">The following code example demonstrates the use of the static and instance <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove%2A> methods.</span></span> <span data-ttu-id="879f5-111">La classe obtient deux magasins. L’un est isolé pour l’utilisateur et l’assembly, et l’autre est isolé pour l’utilisateur, le domaine et l’assembly.</span><span class="sxs-lookup"><span data-stu-id="879f5-111">The class obtains two stores; one is isolated for user and assembly and the other is isolated for user, domain, and assembly.</span></span> <span data-ttu-id="879f5-112">Le magasin de l’utilisateur, du domaine et de l’assembly est ensuite supprimé en appelant la méthode <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove> du fichier de stockage isolé  `isoStore1`.</span><span class="sxs-lookup"><span data-stu-id="879f5-112">The user, domain, and assembly store is then deleted by calling the <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove> method of the isolated storage file  `isoStore1`.</span></span> <span data-ttu-id="879f5-113">Ensuite, tous les magasins restants pour l’utilisateur sont supprimés en appelant la méthode statique <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove%28System.IO.IsolatedStorage.IsolatedStorageScope%29>.</span><span class="sxs-lookup"><span data-stu-id="879f5-113">Then, all remaining stores for the user are deleted by calling the static method <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove%28System.IO.IsolatedStorage.IsolatedStorageScope%29>.</span></span>  
+## <a name="example"></a><span data-ttu-id="19c70-109">Exemple</span><span class="sxs-lookup"><span data-stu-id="19c70-109">Example</span></span>  
+ <span data-ttu-id="19c70-110">L’exemple de code suivant illustre l’utilisation des méthodes d’instance et statique <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove%2A> .</span><span class="sxs-lookup"><span data-stu-id="19c70-110">The following code example demonstrates the use of the static and instance <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove%2A> methods.</span></span> <span data-ttu-id="19c70-111">La classe obtient deux magasins. L’un est isolé pour l’utilisateur et l’assembly, et l’autre est isolé pour l’utilisateur, le domaine et l’assembly.</span><span class="sxs-lookup"><span data-stu-id="19c70-111">The class obtains two stores; one is isolated for user and assembly and the other is isolated for user, domain, and assembly.</span></span> <span data-ttu-id="19c70-112">Le magasin de l’utilisateur, du domaine et de l’assembly est ensuite supprimé en appelant la méthode <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove> du fichier de stockage isolé  `isoStore1`.</span><span class="sxs-lookup"><span data-stu-id="19c70-112">The user, domain, and assembly store is then deleted by calling the <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove> method of the isolated storage file  `isoStore1`.</span></span> <span data-ttu-id="19c70-113">Ensuite, tous les magasins restants pour l’utilisateur sont supprimés en appelant la méthode statique <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove%28System.IO.IsolatedStorage.IsolatedStorageScope%29>.</span><span class="sxs-lookup"><span data-stu-id="19c70-113">Then, all remaining stores for the user are deleted by calling the static method <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove%28System.IO.IsolatedStorage.IsolatedStorageScope%29>.</span></span>  
   
  [!code-cpp[Conceptual.IsolatedStorage#3](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.isolatedstorage/cpp/source3.cpp#3)]
  [!code-csharp[Conceptual.IsolatedStorage#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source3.cs#3)]
  [!code-vb[Conceptual.IsolatedStorage#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source3.vb#3)]  
   
-## <a name="see-also"></a><span data-ttu-id="879f5-114">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="879f5-114">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="19c70-114">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="19c70-114">See Also</span></span>  
  <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
- [<span data-ttu-id="879f5-115">Stockage isolé</span><span class="sxs-lookup"><span data-stu-id="879f5-115">Isolated Storage</span></span>](../../../docs/standard/io/isolated-storage.md)
+ [<span data-ttu-id="19c70-115">Stockage isolé</span><span class="sxs-lookup"><span data-stu-id="19c70-115">Isolated Storage</span></span>](../../../docs/standard/io/isolated-storage.md)

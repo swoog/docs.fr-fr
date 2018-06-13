@@ -1,34 +1,25 @@
 ---
-title: "Comment : rechercher des attributs de frères avec un nom spécifique (XPath-LINQ to XML) (Visual Basic)"
-ms.custom: 
+title: 'Comment : rechercher des attributs de frères avec un nom spécifique (XPath-LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 83b3ddca-830a-4b71-9756-9e4bdf907302
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 751d9559ae3b0bfe62fc866baf52fbef7babb7e3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 467a9a5f529111b45fccda79437ccc6538f1372a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643601"
 ---
-# <a name="how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="2d945-102">Comment : rechercher des attributs de frères avec un nom spécifique (XPath-LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2d945-102">How to: Find Attributes of Siblings with a Specific Name (XPath-LINQ to XML) (Visual Basic)</span></span>
-<span data-ttu-id="2d945-103">Cette rubrique montre comment rechercher tous les attributs des frères du nœud de contexte.</span><span class="sxs-lookup"><span data-stu-id="2d945-103">This topic shows how to find all attributes of the siblings of the context node.</span></span> <span data-ttu-id="2d945-104">Seuls les attributs avec un nom spécifique sont retournés dans la collection.</span><span class="sxs-lookup"><span data-stu-id="2d945-104">Only attributes with a specific name are returned in the collection.</span></span>  
+# <a name="how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="4aba3-102">Comment : rechercher des attributs de frères avec un nom spécifique (XPath-LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4aba3-102">How to: Find Attributes of Siblings with a Specific Name (XPath-LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="4aba3-103">Cette rubrique montre comment rechercher tous les attributs des frères du nœud de contexte.</span><span class="sxs-lookup"><span data-stu-id="4aba3-103">This topic shows how to find all attributes of the siblings of the context node.</span></span> <span data-ttu-id="4aba3-104">Seuls les attributs avec un nom spécifique sont retournés dans la collection.</span><span class="sxs-lookup"><span data-stu-id="4aba3-104">Only attributes with a specific name are returned in the collection.</span></span>  
   
- <span data-ttu-id="2d945-105">L’expression XPath est la suivante :</span><span class="sxs-lookup"><span data-stu-id="2d945-105">The XPath expression is:</span></span>  
+ <span data-ttu-id="4aba3-105">L’expression XPath est la suivante :</span><span class="sxs-lookup"><span data-stu-id="4aba3-105">The XPath expression is:</span></span>  
   
  `../Book/@id`  
   
-## <a name="example"></a><span data-ttu-id="2d945-106">Exemple</span><span class="sxs-lookup"><span data-stu-id="2d945-106">Example</span></span>  
- <span data-ttu-id="2d945-107">Cet exemple recherche d'abord un élément `Book`, puis tous les éléments frères nommés `Book`, puis tous les attributs nommés `id`.</span><span class="sxs-lookup"><span data-stu-id="2d945-107">This example first finds a `Book` element, and then finds all sibling elements named `Book`, and then finds all attributes named `id`.</span></span> <span data-ttu-id="2d945-108">Le résultat est une collection d’attributs.</span><span class="sxs-lookup"><span data-stu-id="2d945-108">The result is a collection of attributes.</span></span>  
+## <a name="example"></a><span data-ttu-id="4aba3-106">Exemple</span><span class="sxs-lookup"><span data-stu-id="4aba3-106">Example</span></span>  
+ <span data-ttu-id="4aba3-107">Cet exemple recherche d'abord un élément `Book`, puis tous les éléments frères nommés `Book`, puis tous les attributs nommés `id`.</span><span class="sxs-lookup"><span data-stu-id="4aba3-107">This example first finds a `Book` element, and then finds all sibling elements named `Book`, and then finds all attributes named `id`.</span></span> <span data-ttu-id="4aba3-108">Le résultat est une collection d’attributs.</span><span class="sxs-lookup"><span data-stu-id="4aba3-108">The result is a collection of attributes.</span></span>  
   
- <span data-ttu-id="2d945-109">Cet exemple utilise le document XML suivant : [Exemple de fichier XML : Livres (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="2d945-109">This example uses the following XML document: [Sample XML File: Books (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="4aba3-109">Cet exemple utilise le document XML suivant : [Exemple de fichier XML : Livres (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="4aba3-109">This example uses the following XML document: [Sample XML File: Books (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span></span>  
   
 ```vb  
 Dim books as XDocument = XDocument.Load("Books.xml")  
@@ -55,7 +46,7 @@ For Each el As XAttribute In list1
 Next  
 ```  
   
- <span data-ttu-id="2d945-110">Cet exemple génère la sortie suivante :</span><span class="sxs-lookup"><span data-stu-id="2d945-110">This example produces the following output:</span></span>  
+ <span data-ttu-id="4aba3-110">Cet exemple génère la sortie suivante :</span><span class="sxs-lookup"><span data-stu-id="4aba3-110">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
@@ -63,5 +54,5 @@ id="bk101"
 id="bk102"  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="2d945-111">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="2d945-111">See Also</span></span>  
- [<span data-ttu-id="2d945-112">LINQ to XML pour les utilisateurs de XPath (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2d945-112">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a><span data-ttu-id="4aba3-111">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="4aba3-111">See Also</span></span>  
+ [<span data-ttu-id="4aba3-112">LINQ to XML pour les utilisateurs de XPath (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4aba3-112">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

@@ -1,13 +1,7 @@
 ---
-title: "Comment : consommer des événements dans une application Web Forms"
-ms.custom: 
+title: 'Comment : consommer des événements dans une application Web Forms'
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,31 +12,27 @@ helpviewer_keywords:
 - events [.NET Framework], consuming
 - Web Forms, event handling
 ms.assetid: 73bf8638-c4ec-4069-b0bb-a1dc79b92e32
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: d0fec2ed34968bfa8c296f08739dec28e6a6eab9
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 4b8af7b3894c010d5a7a4c712efe2458a6bb2a50
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571071"
 ---
-# <a name="how-to-consume-events-in-a-web-forms-application"></a><span data-ttu-id="14d30-102">Comment : consommer des événements dans une application Web Forms</span><span class="sxs-lookup"><span data-stu-id="14d30-102">How to: Consume Events in a Web Forms Application</span></span>
-<span data-ttu-id="14d30-103">Un scénario courant dans les applications ASP.NET Web Forms consiste à remplir une page web avec des contrôles, puis d’effectuer une action spécifique selon le contrôle sur lequel l’utilisateur clique.</span><span class="sxs-lookup"><span data-stu-id="14d30-103">A common scenario in ASP.NET Web Forms applications is to populate a webpage with controls, and then perform a specific action based on which control the user clicks.</span></span> <span data-ttu-id="14d30-104">Par exemple, un contrôle <xref:System.Web.UI.WebControls.Button?displayProperty=nameWithType> déclenche un événement lorsque l’utilisateur clique dessus dans la page web.</span><span class="sxs-lookup"><span data-stu-id="14d30-104">For example, a <xref:System.Web.UI.WebControls.Button?displayProperty=nameWithType> control raises an event when the user clicks it in the webpage.</span></span> <span data-ttu-id="14d30-105">En gérant l’événement, votre application peut exécuter la logique d’application appropriée pour ce clic de bouton.</span><span class="sxs-lookup"><span data-stu-id="14d30-105">By handling the event, your application can perform the appropriate application logic for that button click.</span></span>  
+# <a name="how-to-consume-events-in-a-web-forms-application"></a><span data-ttu-id="1a913-102">Comment : consommer des événements dans une application Web Forms</span><span class="sxs-lookup"><span data-stu-id="1a913-102">How to: Consume Events in a Web Forms Application</span></span>
+<span data-ttu-id="1a913-103">Un scénario courant dans les applications ASP.NET Web Forms consiste à remplir une page web avec des contrôles, puis d’effectuer une action spécifique selon le contrôle sur lequel l’utilisateur clique.</span><span class="sxs-lookup"><span data-stu-id="1a913-103">A common scenario in ASP.NET Web Forms applications is to populate a webpage with controls, and then perform a specific action based on which control the user clicks.</span></span> <span data-ttu-id="1a913-104">Par exemple, un contrôle <xref:System.Web.UI.WebControls.Button?displayProperty=nameWithType> déclenche un événement lorsque l’utilisateur clique dessus dans la page web.</span><span class="sxs-lookup"><span data-stu-id="1a913-104">For example, a <xref:System.Web.UI.WebControls.Button?displayProperty=nameWithType> control raises an event when the user clicks it in the webpage.</span></span> <span data-ttu-id="1a913-105">En gérant l’événement, votre application peut exécuter la logique d’application appropriée pour ce clic de bouton.</span><span class="sxs-lookup"><span data-stu-id="1a913-105">By handling the event, your application can perform the appropriate application logic for that button click.</span></span>  
   
-### <a name="to-handle-a-button-click-event-on-a-webpage"></a><span data-ttu-id="14d30-106">Pour gérer un événement Click du bouton dans une page Web</span><span class="sxs-lookup"><span data-stu-id="14d30-106">To handle a button click event on a webpage</span></span>  
+### <a name="to-handle-a-button-click-event-on-a-webpage"></a><span data-ttu-id="1a913-106">Pour gérer un événement Click du bouton dans une page Web</span><span class="sxs-lookup"><span data-stu-id="1a913-106">To handle a button click event on a webpage</span></span>  
   
-1.  <span data-ttu-id="14d30-107">Créez une page web ASP.NET Web Forms qui a un contrôle <xref:System.Web.UI.WebControls.Button> avec la valeur `OnClick` définie sur le nom de la méthode que vous allez définir dans l’étape suivante.</span><span class="sxs-lookup"><span data-stu-id="14d30-107">Create a ASP.NET Web Forms page (webpage) that has a <xref:System.Web.UI.WebControls.Button> control with the `OnClick` value set to the name of method that you will define in the next step.</span></span>  
+1.  <span data-ttu-id="1a913-107">Créez une page web ASP.NET Web Forms qui a un contrôle <xref:System.Web.UI.WebControls.Button> avec la valeur `OnClick` définie sur le nom de la méthode que vous allez définir dans l’étape suivante.</span><span class="sxs-lookup"><span data-stu-id="1a913-107">Create a ASP.NET Web Forms page (webpage) that has a <xref:System.Web.UI.WebControls.Button> control with the `OnClick` value set to the name of method that you will define in the next step.</span></span>  
   
     ```xml  
     <asp:Button ID="Button1" runat="server" Text="Click Me" OnClick="Button1_Click" />  
     ```  
   
-2.  <span data-ttu-id="14d30-108">Définissez un gestionnaire d’événements qui correspond à la signature du délégué d’événement <xref:System.Web.UI.WebControls.Button.Click> et qui porte le nom que vous avez défini pour la valeur `OnClick`.</span><span class="sxs-lookup"><span data-stu-id="14d30-108">Define an event handler that matches the <xref:System.Web.UI.WebControls.Button.Click> event delegate signature and that has the name you defined for the `OnClick` value.</span></span>  
+2.  <span data-ttu-id="1a913-108">Définissez un gestionnaire d’événements qui correspond à la signature du délégué d’événement <xref:System.Web.UI.WebControls.Button.Click> et qui porte le nom que vous avez défini pour la valeur `OnClick`.</span><span class="sxs-lookup"><span data-stu-id="1a913-108">Define an event handler that matches the <xref:System.Web.UI.WebControls.Button.Click> event delegate signature and that has the name you defined for the `OnClick` value.</span></span>  
   
     ```csharp  
     protected void Button1_Click(object sender, EventArgs e)  
@@ -57,9 +47,9 @@ ms.lasthandoff: 12/23/2017
     End Sub  
     ```  
   
-     <span data-ttu-id="14d30-109">L’événement <xref:System.Web.UI.WebControls.Button.Click> utilise la classe <xref:System.EventHandler> pour le type délégué et la classe <xref:System.EventArgs> pour les données d’événement.</span><span class="sxs-lookup"><span data-stu-id="14d30-109">The <xref:System.Web.UI.WebControls.Button.Click> event uses the <xref:System.EventHandler> class for the delegate type and the <xref:System.EventArgs> class for the event data.</span></span> <span data-ttu-id="14d30-110">L’infrastructure de page ASP.NET génère automatiquement du code qui crée une instance de <xref:System.EventHandler> et ajoute cette instance de délégué à l’événement <xref:System.Web.UI.WebControls.Button.Click> de l’instance <xref:System.Web.UI.WebControls.Button>.</span><span class="sxs-lookup"><span data-stu-id="14d30-110">The ASP.NET page framework automatically generates code that creates an instance of <xref:System.EventHandler> and adds this delegate instance to the <xref:System.Web.UI.WebControls.Button.Click> event of the <xref:System.Web.UI.WebControls.Button> instance.</span></span>  
+     <span data-ttu-id="1a913-109">L’événement <xref:System.Web.UI.WebControls.Button.Click> utilise la classe <xref:System.EventHandler> pour le type délégué et la classe <xref:System.EventArgs> pour les données d’événement.</span><span class="sxs-lookup"><span data-stu-id="1a913-109">The <xref:System.Web.UI.WebControls.Button.Click> event uses the <xref:System.EventHandler> class for the delegate type and the <xref:System.EventArgs> class for the event data.</span></span> <span data-ttu-id="1a913-110">L’infrastructure de page ASP.NET génère automatiquement du code qui crée une instance de <xref:System.EventHandler> et ajoute cette instance de délégué à l’événement <xref:System.Web.UI.WebControls.Button.Click> de l’instance <xref:System.Web.UI.WebControls.Button>.</span><span class="sxs-lookup"><span data-stu-id="1a913-110">The ASP.NET page framework automatically generates code that creates an instance of <xref:System.EventHandler> and adds this delegate instance to the <xref:System.Web.UI.WebControls.Button.Click> event of the <xref:System.Web.UI.WebControls.Button> instance.</span></span>  
   
-3.  <span data-ttu-id="14d30-111">Dans la méthode de gestionnaire d’événements que vous avez définie à l’étape 2, ajoutez du code pour effectuer les actions qui sont requises lorsque l’événement se produit.</span><span class="sxs-lookup"><span data-stu-id="14d30-111">In the event handler method that you defined in step 2, add code to perform any actions that are required when the event occurs.</span></span>  
+3.  <span data-ttu-id="1a913-111">Dans la méthode de gestionnaire d’événements que vous avez définie à l’étape 2, ajoutez du code pour effectuer les actions qui sont requises lorsque l’événement se produit.</span><span class="sxs-lookup"><span data-stu-id="1a913-111">In the event handler method that you defined in step 2, add code to perform any actions that are required when the event occurs.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="14d30-112">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="14d30-112">See Also</span></span>  
- [<span data-ttu-id="14d30-113">Événements</span><span class="sxs-lookup"><span data-stu-id="14d30-113">Events</span></span>](../../../docs/standard/events/index.md)
+## <a name="see-also"></a><span data-ttu-id="1a913-112">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="1a913-112">See Also</span></span>  
+ [<span data-ttu-id="1a913-113">Événements</span><span class="sxs-lookup"><span data-stu-id="1a913-113">Events</span></span>](../../../docs/standard/events/index.md)

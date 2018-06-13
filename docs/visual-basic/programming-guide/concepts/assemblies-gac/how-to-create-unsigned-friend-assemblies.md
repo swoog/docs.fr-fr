@@ -1,30 +1,24 @@
 ---
 title: 'Comment : créer des assemblys Friend non signés (Visual Basic)'
-ms.custom: ''
 ms.date: 03/14/2018
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 5735eb79-9729-4c46-ac1f-537ada3acaa7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8cc71a27f24c634ebadb060325df4c602b1387b0
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 873a5bf235b43b4460a1489a964539c4e4c18de3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643063"
 ---
-# <a name="how-to-create-unsigned-friend-assemblies-visual-basic"></a><span data-ttu-id="38809-102">Comment : créer des assemblys Friend non signés (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="38809-102">How to: Create Unsigned Friend Assemblies (Visual Basic)</span></span>
-<span data-ttu-id="38809-103">Cet exemple montre comment utiliser des assemblys friend avec des assemblys qui ne sont pas signés.</span><span class="sxs-lookup"><span data-stu-id="38809-103">This example shows how to use friend assemblies with assemblies that are unsigned.</span></span>  
+# <a name="how-to-create-unsigned-friend-assemblies-visual-basic"></a><span data-ttu-id="344df-102">Comment : créer des assemblys Friend non signés (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="344df-102">How to: Create Unsigned Friend Assemblies (Visual Basic)</span></span>
+<span data-ttu-id="344df-103">Cet exemple montre comment utiliser des assemblys friend avec des assemblys qui ne sont pas signés.</span><span class="sxs-lookup"><span data-stu-id="344df-103">This example shows how to use friend assemblies with assemblies that are unsigned.</span></span>  
   
-### <a name="to-create-an-assembly-and-a-friend-assembly"></a><span data-ttu-id="38809-104">Pour créer un assembly et un assembly friend</span><span class="sxs-lookup"><span data-stu-id="38809-104">To create an assembly and a friend assembly</span></span>  
+### <a name="to-create-an-assembly-and-a-friend-assembly"></a><span data-ttu-id="344df-104">Pour créer un assembly et un assembly friend</span><span class="sxs-lookup"><span data-stu-id="344df-104">To create an assembly and a friend assembly</span></span>  
   
-1.  <span data-ttu-id="38809-105">Ouvrez une invite de commandes.</span><span class="sxs-lookup"><span data-stu-id="38809-105">Open a command prompt.</span></span>  
+1.  <span data-ttu-id="344df-105">Ouvrez une invite de commandes.</span><span class="sxs-lookup"><span data-stu-id="344df-105">Open a command prompt.</span></span>  
   
-2.  <span data-ttu-id="38809-106">Créez un fichier Visual Basic nommé `friend_signed_A.` qui contient le code suivant.</span><span class="sxs-lookup"><span data-stu-id="38809-106">Create a Visual Basic file named `friend_signed_A.` that contains the following code.</span></span> <span data-ttu-id="38809-107">Le code utilise l’attribut <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> pour déclarer friend_signed_B comme assembly friend.</span><span class="sxs-lookup"><span data-stu-id="38809-107">The code uses the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute to declare friend_signed_B as a friend assembly.</span></span>  
+2.  <span data-ttu-id="344df-106">Créez un fichier Visual Basic nommé `friend_signed_A.` qui contient le code suivant.</span><span class="sxs-lookup"><span data-stu-id="344df-106">Create a Visual Basic file named `friend_signed_A.` that contains the following code.</span></span> <span data-ttu-id="344df-107">Le code utilise l’attribut <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> pour déclarer friend_signed_B comme assembly friend.</span><span class="sxs-lookup"><span data-stu-id="344df-107">The code uses the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute to declare friend_signed_B as a friend assembly.</span></span>  
   
     ```vb  
     ' friend_unsigned_A.vb  
@@ -50,13 +44,13 @@ ms.lasthandoff: 03/22/2018
     End Class  
     ```  
   
-3.  <span data-ttu-id="38809-108">Compilez et signez friend_signed_A à l’aide de la commande suivante.</span><span class="sxs-lookup"><span data-stu-id="38809-108">Compile and sign friend_signed_A by using the following command.</span></span>  
+3.  <span data-ttu-id="344df-108">Compilez et signez friend_signed_A à l’aide de la commande suivante.</span><span class="sxs-lookup"><span data-stu-id="344df-108">Compile and sign friend_signed_A by using the following command.</span></span>  
   
     ```console  
     vbc -target:library friend_unsigned_A.vb  
     ```  
   
-4.  <span data-ttu-id="38809-109">Créez un fichier Visual Basic nommé `friend_unsigned_B` qui contient le code suivant.</span><span class="sxs-lookup"><span data-stu-id="38809-109">Create a Visual Basic file named `friend_unsigned_B` that contains the following code.</span></span> <span data-ttu-id="38809-110">Étant donné que friend_unsigned_A spécifie friend_unsigned_B comme assembly friend, le code de friend_unsigned_B peut accéder aux membres et aux types `Friend` de friend_unsigned_A.</span><span class="sxs-lookup"><span data-stu-id="38809-110">Because friend_unsigned_A specifies friend_unsigned_B as a friend assembly, the code in friend_unsigned_B can access `Friend` types and members from friend_unsigned_A.</span></span>  
+4.  <span data-ttu-id="344df-109">Créez un fichier Visual Basic nommé `friend_unsigned_B` qui contient le code suivant.</span><span class="sxs-lookup"><span data-stu-id="344df-109">Create a Visual Basic file named `friend_unsigned_B` that contains the following code.</span></span> <span data-ttu-id="344df-110">Étant donné que friend_unsigned_A spécifie friend_unsigned_B comme assembly friend, le code de friend_unsigned_B peut accéder aux membres et aux types `Friend` de friend_unsigned_A.</span><span class="sxs-lookup"><span data-stu-id="344df-110">Because friend_unsigned_A specifies friend_unsigned_B as a friend assembly, the code in friend_unsigned_B can access `Friend` types and members from friend_unsigned_A.</span></span>  
   
     ```vb  
     ' friend_unsigned_B.vb  
@@ -77,24 +71,24 @@ ms.lasthandoff: 03/22/2018
     End Module  
     ```  
   
-5.  <span data-ttu-id="38809-111">Compilez friend_signed_B à l’aide de la commande suivante.</span><span class="sxs-lookup"><span data-stu-id="38809-111">Compile friend_signed_B by using the following command.</span></span>  
+5.  <span data-ttu-id="344df-111">Compilez friend_signed_B à l’aide de la commande suivante.</span><span class="sxs-lookup"><span data-stu-id="344df-111">Compile friend_signed_B by using the following command.</span></span>  
   
     ```console
     vbc -r:friend_unsigned_A.dll friend_unsigned_B.vb  
     ```  
   
-     <span data-ttu-id="38809-112">Le nom de l’assembly qui est généré par le compilateur doit correspondre au nom de l’assembly friend qui est passé à l’attribut <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>.</span><span class="sxs-lookup"><span data-stu-id="38809-112">The name of the assembly that is generated by the compiler must match the friend assembly name that is passed to the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute.</span></span> <span data-ttu-id="38809-113">Vous pouvez définir explicitement l’assembly à l’aide de la `/out` option du compilateur.</span><span class="sxs-lookup"><span data-stu-id="38809-113">You can explicitly set the assembly by using the `/out` compiler option.</span></span>  
+     <span data-ttu-id="344df-112">Le nom de l’assembly qui est généré par le compilateur doit correspondre au nom de l’assembly friend qui est passé à l’attribut <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>.</span><span class="sxs-lookup"><span data-stu-id="344df-112">The name of the assembly that is generated by the compiler must match the friend assembly name that is passed to the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute.</span></span> <span data-ttu-id="344df-113">Vous pouvez définir explicitement l’assembly à l’aide de la `/out` option du compilateur.</span><span class="sxs-lookup"><span data-stu-id="344df-113">You can explicitly set the assembly by using the `/out` compiler option.</span></span>  
   
-6.  <span data-ttu-id="38809-114">Exécutez le fichier friend_signed_B.exe.</span><span class="sxs-lookup"><span data-stu-id="38809-114">Run the friend_signed_B.exe file.</span></span>  
+6.  <span data-ttu-id="344df-114">Exécutez le fichier friend_signed_B.exe.</span><span class="sxs-lookup"><span data-stu-id="344df-114">Run the friend_signed_B.exe file.</span></span>  
   
-     <span data-ttu-id="38809-115">Le programme affiche deux chaînes : « Class1.Test » et « Class2.Test ».</span><span class="sxs-lookup"><span data-stu-id="38809-115">The program displays two strings: "Class1.Test" and "Class2.Test".</span></span>  
+     <span data-ttu-id="344df-115">Le programme affiche deux chaînes : « Class1.Test » et « Class2.Test ».</span><span class="sxs-lookup"><span data-stu-id="344df-115">The program displays two strings: "Class1.Test" and "Class2.Test".</span></span>  
   
-## <a name="net-framework-security"></a><span data-ttu-id="38809-116">Sécurité .NET Framework</span><span class="sxs-lookup"><span data-stu-id="38809-116">.NET Framework Security</span></span>  
- <span data-ttu-id="38809-117">Il existe des similitudes entre l’attribut <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> et la classe <xref:System.Security.Permissions.StrongNameIdentityPermission>.</span><span class="sxs-lookup"><span data-stu-id="38809-117">There are similarities between the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute and the <xref:System.Security.Permissions.StrongNameIdentityPermission> class.</span></span> <span data-ttu-id="38809-118">La principale différence est que <xref:System.Security.Permissions.StrongNameIdentityPermission> peut demander des autorisations de sécurité pour exécuter une section de code particulière, tandis que l’attribut <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> contrôle la visibilité des membres et types `Friend`.</span><span class="sxs-lookup"><span data-stu-id="38809-118">The main difference is that <xref:System.Security.Permissions.StrongNameIdentityPermission> can demand security permissions to run a particular section of code, whereas the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute controls the visibility of `Friend` types and members.</span></span>  
+## <a name="net-framework-security"></a><span data-ttu-id="344df-116">Sécurité .NET Framework</span><span class="sxs-lookup"><span data-stu-id="344df-116">.NET Framework Security</span></span>  
+ <span data-ttu-id="344df-117">Il existe des similitudes entre l’attribut <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> et la classe <xref:System.Security.Permissions.StrongNameIdentityPermission>.</span><span class="sxs-lookup"><span data-stu-id="344df-117">There are similarities between the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute and the <xref:System.Security.Permissions.StrongNameIdentityPermission> class.</span></span> <span data-ttu-id="344df-118">La principale différence est que <xref:System.Security.Permissions.StrongNameIdentityPermission> peut demander des autorisations de sécurité pour exécuter une section de code particulière, tandis que l’attribut <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> contrôle la visibilité des membres et types `Friend`.</span><span class="sxs-lookup"><span data-stu-id="344df-118">The main difference is that <xref:System.Security.Permissions.StrongNameIdentityPermission> can demand security permissions to run a particular section of code, whereas the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute controls the visibility of `Friend` types and members.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="38809-119">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="38809-119">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="344df-119">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="344df-119">See Also</span></span>  
  <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
- [<span data-ttu-id="38809-120">Assemblys et le Global Assembly Cache (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="38809-120">Assemblies and the Global Assembly Cache (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
- [<span data-ttu-id="38809-121">Assemblys friend (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="38809-121">Friend Assemblies (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
- [<span data-ttu-id="38809-122">Comment : créer des assemblys Friend signés (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="38809-122">How to: Create Signed Friend Assemblies (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)  
- [<span data-ttu-id="38809-123">Concepts de Guide de programmation</span><span class="sxs-lookup"><span data-stu-id="38809-123">Programming Guide Concepts</span></span>](../../../../visual-basic/programming-guide/concepts/index.md)
+ [<span data-ttu-id="344df-120">Assemblys et le Global Assembly Cache (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="344df-120">Assemblies and the Global Assembly Cache (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
+ [<span data-ttu-id="344df-121">Assemblys friend (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="344df-121">Friend Assemblies (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
+ [<span data-ttu-id="344df-122">Comment : créer des assemblys Friend signés (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="344df-122">How to: Create Signed Friend Assemblies (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)  
+ [<span data-ttu-id="344df-123">Concepts de Guide de programmation</span><span class="sxs-lookup"><span data-stu-id="344df-123">Programming Guide Concepts</span></span>](../../../../visual-basic/programming-guide/concepts/index.md)
