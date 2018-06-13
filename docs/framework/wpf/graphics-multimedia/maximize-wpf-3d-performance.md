@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565436"
 ---
 # <a name="maximize-wpf-3d-performance"></a>Optimiser les performances 3D de WPF
 Lorsque vous utilisez le [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] pour générer des contrôles 3D et inclure des scènes 3D dans vos applications, il est important de considérer l’optimisation des performances. Cette rubrique fournit une liste de classes et propriétés qui ont des implications en matière de performances pour votre application, ainsi que des recommandations pour optimiser les performances lorsque vous les utilisez 3D.  

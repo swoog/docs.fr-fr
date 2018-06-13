@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321611"
 ---
 # <a name="how-to-project-an-object-graph-c"></a>Guide pratique pour projeter un graphique d’objet (C#)
 Cette rubrique montre comment projeter, ou remplir, un graphique d'objet à partir de données XML.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763668"
 ---
 # <a name="merging-dataset-contents"></a>Fusion de contenu de DataSet
 Vous pouvez utiliser la méthode <xref:System.Data.DataSet.Merge%2A> pour fusionner le contenu d'un tableau <xref:System.Data.DataSet>, <xref:System.Data.DataTable> ou <xref:System.Data.DataRow> dans un `DataSet` existant. La façon dont les nouvelles données sont fusionnées dans un `DataSet` existant dépend de plusieurs facteurs et options.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393904"
 ---
 # <a name="how-to-override-a-global-proxy-selection"></a>Comment : remplacer une sélection de proxy global
 Cet exemple envoie une **WebRequest** à www.contoso.com qui substitue la sélection de proxy global avec un serveur proxy nommé `alternateproxy` sur le port 80.  

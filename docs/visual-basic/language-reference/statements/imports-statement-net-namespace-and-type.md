@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604482"
 ---
 # <a name="imports-statement-net-namespace-and-type"></a>Imports, instruction (espace de noms et type .NET)
 Active les noms d’être référencés sans qualification d’espace de noms de type.  

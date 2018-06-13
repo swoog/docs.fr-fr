@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604586"
 ---
 # <a name="visual-basic-runtime-library-members"></a>Membres de la bibliothèque runtime Visual Basic
 Le `Microsoft.VisualBasic` espace de noms contient les classes, les modules, les constantes et les énumérations qui constituent la bibliothèque runtime Visual Basic. Ces membres de bibliothèque fournissent les procédures, les propriétés et les valeurs de constante que vous pouvez utiliser dans votre code. Chaque module et la classe représentent une catégorie particulière de fonctionnalité.  
