@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359674"
 ---
 # <a name="downloading-sample-databases"></a>Téléchargement d'exemples de base de données
 Plusieurs exemples et procédures pas à pas dans la documentation de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] utilisent l'exemple de base de données Northwind et SQL Server Express Edition. Vous pouvez télécharger ces produits gratuitement à partir du site de téléchargement Microsoft.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33313568"
 ---
 # <a name="passing-arrays-using-ref-and-out-c-programming-guide"></a>Passage de tableaux à l'aide de paramètres ref et out (guide de programmation C#)
 Comme tous les paramètres [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md), un paramètre `out` d’un type tableau doit être assigné avant d’être utilisé ; c’est-à-dire qu’il doit être assigné par l’appelé. Exemple :  

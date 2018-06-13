@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354237"
 ---
 # <a name="how-to-handle-composite-keys-in-queries"></a>Comment : gérer les clés composites dans les requêtes
 Certains opérateurs ne peuvent prendre qu’un seul argument. Si votre argument doit inclure plusieurs colonnes de la base de données, vous devez créer un type anonyme pour représenter la combinaison.  

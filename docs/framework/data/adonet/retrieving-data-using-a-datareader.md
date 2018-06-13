@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353258"
 ---
 # <a name="retrieving-data-using-a-datareader"></a>Récupération de données à l'aide d'un DataReader
 La récupération de données à l’aide un **DataReader** implique la création d’une instance de la **commande** objet, puis en créant un **DataReader** en appelant  **Command.ExecuteReader** pour extraire des lignes à partir d’une source de données. L’exemple suivant montre comment utiliser un **DataReader** où `reader` représente un DataReader valide et `command` représente un objet Command valide.  

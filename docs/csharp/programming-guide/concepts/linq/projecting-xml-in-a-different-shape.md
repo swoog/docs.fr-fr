@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340422"
 ---
 # <a name="projecting-xml-in-a-different-shape-c"></a>Projection de code XML en une autre forme (C#)
 Cette rubrique illustre un exemple de projection de code XML dont la forme est différente du code XML source.  

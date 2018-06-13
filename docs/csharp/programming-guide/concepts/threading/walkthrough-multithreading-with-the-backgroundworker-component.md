@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339366"
 ---
 # <a name="walkthrough-multithreading-with-the-backgroundworker-component-c"></a>Procédure pas à pas : multithreading avec le composant BackgroundWorker (C#)
 Cette procédure pas à pas montre comment créer une application Windows Forms multithread qui recherche les occurrences d’un mot dans un fichier texte. Elle présente les points suivants :  

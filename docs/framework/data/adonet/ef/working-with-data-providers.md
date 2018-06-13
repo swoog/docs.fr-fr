@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765693"
 ---
 # <a name="working-with-data-providers"></a>Utilisation des fournisseurs de données
 Les rubriques de cette section décrivent les services et les fournisseurs de données qui transforment des requêtes sur un modèle conceptuel en requêtes natives sur une source de données qui est prise en charge par Entity Framework.  

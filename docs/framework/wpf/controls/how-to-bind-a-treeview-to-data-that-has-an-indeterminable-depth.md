@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554374"
 ---
 # <a name="how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth"></a>Comment : lier un TreeView à des données dont la profondeur ne peut pas être déterminée
 Il peut arriver lorsque vous souhaitez lier un <xref:System.Windows.Controls.TreeView> à une source de données dont la profondeur n’est pas connue.  Cela peut se produire lorsque les données sont récursives par nature, par exemple un système de fichiers où les dossiers peuvent contenir des dossiers, ou la structure d’organisation de l’entreprise, où les utilisateurs disposent collaborateurs directs d’autres employés.  
