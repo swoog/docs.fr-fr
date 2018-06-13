@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558811"
 ---
 # <a name="how-to-animate-in-a-style"></a>Comment : animer dans un style
 Cet exemple montre comment animer des propriétés dans un style. Lors de l’animation dans un style, seul l’élément framework pour laquelle le style est défini peut être directement ciblé. Pour cibler un objet freezable, vous devez « point vers le bas » à partir d’une propriété de l’élément style.  

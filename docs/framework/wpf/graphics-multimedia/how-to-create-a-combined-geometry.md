@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561119"
 ---
 # <a name="how-to-create-a-combined-geometry"></a>Comment : créer une géométrie combinée
 Cet exemple montre comment combiner des géométries. Pour combiner deux géométries, utilisez un <xref:System.Windows.Media.CombinedGeometry> objet. Définir son <xref:System.Windows.Media.CombinedGeometry.Geometry1%2A> et <xref:System.Windows.Media.CombinedGeometry.Geometry2%2A> propriétés avec les deux géométries à combiner et attribuez le <xref:System.Windows.Media.CombinedGeometry.GeometryCombineMode%2A> propriété qui détermine la façon dont les géométries seront combinées ensemble, à `Union`, `Intersect`, `Exclude`, ou `Xor`.  

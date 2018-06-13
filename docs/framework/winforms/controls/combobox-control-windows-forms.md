@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524532"
 ---
 # <a name="combobox-control-windows-forms"></a>ComboBox, contrôle (Windows Forms)
 Windows Forms `ComboBox` contrôle est utilisé pour afficher des données dans une zone de liste déroulante modifiable. Par défaut, le `ComboBox` contrôle s’affiche en deux parties : la partie supérieure est une zone de texte qui permet à l’utilisateur à taper un élément de liste. La deuxième partie est une zone de liste qui affiche une liste d’éléments à partir de laquelle l’utilisateur peut sélectionner un.  

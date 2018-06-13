@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758722"
 ---
 # <a name="oracle-ref-cursors"></a>REF CURSOR Oracle
 Le fournisseur de données .NET Framework pour Oracle prend en charge Oracle **REF CURSOR** type de données. Lorsque vous utilisez le fournisseur de données pour travailler avec des REF CURSOR Oracle, vous devez tenir compte des comportements suivants.  

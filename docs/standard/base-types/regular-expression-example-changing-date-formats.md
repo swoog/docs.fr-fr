@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568067"
 ---
 # <a name="regular-expression-example-changing-date-formats"></a>Exemple d'expression régulière : modification des formats de date
 L’exemple de code suivant utilise la méthode <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> pour remplacer les dates au format *mm*/*jj*/*aa* par des dates au format *jj*-*mm*-*aa*.  

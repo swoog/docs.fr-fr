@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555774"
 ---
 # <a name="data-binding-wpf"></a>Liaison de données (WPF)
 Liaison de données Windows Presentation Foundation (WPF) fournit un moyen simple et cohérent aux applications de présenter et d’interagir avec les données. Éléments peuvent être liés aux données à partir de diverses sources de données sous la forme d’objets common language runtime (CLR) et XML.  

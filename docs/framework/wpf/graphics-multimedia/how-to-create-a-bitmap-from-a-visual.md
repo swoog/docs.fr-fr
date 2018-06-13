@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559764"
 ---
 # <a name="how-to-create-a-bitmap-from-a-visual"></a>Comment : créer une image bitmap à partir d'un Visual
 Cet exemple montre comment vous pouvez créer une bitmap à partir d’un <xref:System.Windows.Media.Visual>. A <xref:System.Windows.Media.DrawingVisual> est rendue avec <xref:System.Windows.Media.FormattedText>. Le <xref:System.Windows.Media.Visual> est ensuite rendu dans le <xref:System.Windows.Media.Imaging.RenderTargetBitmap> création d’une bitmap d’un texte donné.  

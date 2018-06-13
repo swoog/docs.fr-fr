@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552996"
 ---
 # <a name="how-to-create-simple-or-complex-treeviews"></a>Comment : créer des arborescences simples ou complexes
 Cet exemple montre comment créer une simple ou complexe <xref:System.Windows.Controls.TreeView> contrôles.  

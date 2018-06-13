@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558863"
 ---
 # <a name="how-to-chain-bitmapsource-objects-together"></a>Comment : enchaîner des objets BitmapSource
 Cet exemple montre comment vous pouvez appliquer différents effets à une source d’image chaînage de plusieurs <xref:System.Windows.Media.Imaging.BitmapSource> ensemble des objets dérivés.  

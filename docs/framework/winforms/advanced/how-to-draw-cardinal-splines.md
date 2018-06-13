@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525058"
 ---
 # <a name="how-to-draw-cardinal-splines"></a>Comment : dessiner des splines cardinales
 Une spline cardinale est une courbe qui passe progressivement par un ensemble donné de points. Pour dessiner une spline cardinale, créez un <xref:System.Drawing.Graphics> de l’objet et passez l’adresse d’un tableau de points à le <xref:System.Drawing.Graphics.DrawCurve%2A> (méthode).  

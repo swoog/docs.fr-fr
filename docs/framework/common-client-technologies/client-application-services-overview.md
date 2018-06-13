@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744494"
 ---
 # <a name="client-application-services-overview"></a>Vue d'ensemble des services d'application cliente
 Les services d’application cliente fournissent un accès simplifié aux services de connexion, de rôles et de profil [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] à partir des applications Windows Forms et WPF (Windows Presentation Foundation). Les services d'application [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] sont compris dans les extensions AJAX Microsoft ASP.NET 2.0, qui sont incluses avec [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)] et [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]. Ces services permettent à plusieurs applications web et Windows de partager des informations utilisateur et fonctionnalités de gestion des utilisateurs à partir d'un seul serveur.  

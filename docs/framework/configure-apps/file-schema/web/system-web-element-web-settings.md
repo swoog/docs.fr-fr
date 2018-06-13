@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755160"
 ---
 # <a name="ltsystemwebgt-element-web-settings"></a>&lt;System.Web&gt; élément (paramètres Web)
 Contient des informations sur la façon dont la couche d’hébergement ASP.NET gère le comportement au niveau du processus.  

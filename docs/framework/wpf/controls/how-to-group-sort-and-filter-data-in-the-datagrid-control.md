@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557028"
 ---
 # <a name="how-to-group-sort-and-filter-data-in-the-datagrid-control"></a>Comment : grouper, trier et filtrer des données dans le contrôle DataGrid
 Il est souvent utile d’afficher les données dans un <xref:System.Windows.Controls.DataGrid> de différentes façons par regroupement, le tri et filtrage des données. Pour regrouper, trier et filtrer les données d’une <xref:System.Windows.Controls.DataGrid>, liez-le à un <xref:System.Windows.Data.CollectionView> qui prend en charge ces fonctions. Vous pouvez ensuite travailler avec les données dans le <xref:System.Windows.Data.CollectionView> sans affecter les données sources sous-jacentes. Les modifications dans la vue de collection sont répercutées dans le <xref:System.Windows.Controls.DataGrid> l’interface utilisateur (IU).  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527468"
 ---
 # <a name="pens-lines-and-rectangles-in-gdi"></a>Stylets, lignes et rectangles dans GDI+
 Pour dessiner des lignes avec [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] vous devez créer un <xref:System.Drawing.Graphics> objet et un <xref:System.Drawing.Pen> objet. Le <xref:System.Drawing.Graphics> objet fournit les méthodes qui effectuent réellement le dessin, et le <xref:System.Drawing.Pen> objet stocke des attributs, tels que la couleur de ligne, de largeur et de style.  
