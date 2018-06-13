@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762206"
 ---
 # <a name="initialization-expressions"></a>Expressions d'initialisation
 Une expression d'initialisation initialise un nouvel objet. La plupart des expressions d'initialisation sont prises en charge, y compris la plupart des nouvelles expressions d'initialisation C# 3.0 et Visual Basic 9.0. Les types suivants peuvent être initialisés et retournés par une requête LINQ to Entities :  

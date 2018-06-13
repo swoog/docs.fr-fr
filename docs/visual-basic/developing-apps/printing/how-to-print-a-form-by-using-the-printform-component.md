@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590011"
 ---
 # <a name="how-to-print-a-form-by-using-the-printform-component-visual-basic"></a>Comment : imprimer un formulaire à l'aide du composant PrintForm (Visual Basic)
 Le composant <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> vous permet d’imprimer rapidement une image d’un formulaire tel qu’il apparaît à l’écran sans utiliser un composant <xref:System.Drawing.Printing.PrintDocument> . Les procédures suivantes montrent comment imprimer un formulaire sur une imprimante, dans une fenêtre d’aperçu avant impression et dans un fichier PostScript encapsulé.  

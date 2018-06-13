@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575848"
 ---
 # <a name="how-to-enumerate-directories-and-files"></a>Comment : énumérer des répertoires et des fichiers
 Vous pouvez énumérer des répertoires et des fichiers à l’aide de méthodes qui retournent une collection énumérable de chaînes de leurs noms. Vous pouvez également utiliser des méthodes qui retournent une collection énumérable d’objets <xref:System.IO.DirectoryInfo>, <xref:System.IO.FileInfo> ou <xref:System.IO.FileSystemInfo>. Les collections énumérables offrent de meilleures performances que les tableaux lorsque vous travaillez avec collections volumineuses de fichiers et de répertoires.  

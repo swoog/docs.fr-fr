@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499191"
 ---
 # <a name="workflow-services"></a>Services de workflow
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] vous permet de décrire entièrement un service basé sur le workflow de manière déclarative en XAML. Vous pouvez définir un workflow qui l'implémente votre service et décrire les points de terminaison exposés par le service, le tout entièrement en XAML. Les rubriques de cette section décrivent en détail le modèle de programmation qui prend en charge l'écriture de services de manière déclarative.  

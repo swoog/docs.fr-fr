@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498242"
 ---
 # <a name="wcf-syndication-overview"></a>Vue d'ensemble de la syndication WCF
 Windows Communication Foundation (WCF) prend en charge pour l’exposition des flux de syndication à partir d’un service WCF. La syndication est un mécanisme d'intégration d'application par lequel un serveur expose des données d'application dans un format interopérable appelé « flux ». Un flux est une collection de données d’application incluant des métadonnées (titre, auteur, URL et autres métadonnées) au niveau du flux et une série d’éléments de flux. Dans le flux, les éléments de flux sont habituellement ordonnés par ordre chronologique inverse. Un élément de flux se compose d'un jeu standard de métadonnées au niveau de l'élément (titre, URL, date de création, catégorie et autres métadonnées au niveau de l'élément) et une quantité arbitraire de données d'application spécifiques. Les deux types courants de flux de syndication sont Really Simple Syndication (RSS) 2.0 et Atom 1.0, qui sont pris en charge par WCF.  

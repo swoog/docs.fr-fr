@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591619"
 ---
 # <a name="object-data-type"></a>Object Data Type
 Contient les adresses qui font référence aux objets. Vous pouvez affecter à n’importe quel type référence (chaîne, tableau, classe ou interface) à une `Object` variable. Un `Object` variable peut également faire référence à des données de n’importe quel type valeur (numérique, `Boolean`, `Char`, `Date`, structure ou énumération).  

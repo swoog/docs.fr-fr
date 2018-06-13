@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507353"
 ---
 # <a name="servicedescription-and-wsdl-reference"></a>Référence pour ServiceDescription et WSDL
 Cette rubrique explique comment Windows Communication Foundation (WCF) mappe des documents de Web Services Description Language (WSDL) vers et à partir <xref:System.ServiceModel.Description.ServiceDescription> instances.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763213"
 ---
 # <a name="method-based-query-syntax-examples-navigating-relationships"></a>Exemples de syntaxe de requête basée sur une méthode : parcours des relations
 Les propriétés de navigation dans [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] sont des propriétés de raccourci utilisées pour rechercher les entités situées aux terminaisons d'une association. Les propriétés de navigation permettent à un utilisateur de naviguer d'une entité à une autre ou d'une entité à des entités associées par le biais d'un ensemble d'associations. Cette rubrique fournit des exemples de syntaxe de requête fondée sur une méthode relatifs à la façon d'explorer des relations au moyen de propriétés de navigation dans des requêtes [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)].  

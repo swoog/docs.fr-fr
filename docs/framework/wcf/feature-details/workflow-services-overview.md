@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502726"
 ---
 # <a name="workflow-services-overview"></a>Vue d'ensemble des services de workflow
 Services de workflow sont les services WCF qui sont implémentées à l’aide de flux de travail. Services de workflow sont des flux de travail qui utilisent les activités de messagerie pour envoyer et recevoir des messages de Windows Communication Foundation (WCF). .NET Framework 4.5 introduit plusieurs activités de messagerie qui vous permettent d'envoyer et de recevoir des messages à partir d'un workflow. Pour plus d’informations sur les activités de messagerie et comment ils peuvent être utilisés pour implémenter des modèles d’échange de messages différents, consultez [d’activités de messagerie](../../../../docs/framework/wcf/feature-details/messaging-activities.md).  

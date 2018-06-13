@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365928"
 ---
 # <a name="features-provided-by-systemtransactions"></a>Fonctionnalités fournies par System.Transactions
 Cette section explique comment utiliser les fonctions fournies par l'espace de noms <xref:System.Transactions> pour écrire votre propre application transactionnelle et votre gestionnaire de ressources. Plus précisément, cette section explique comment créer et participer à une transaction (locale ou distribuée) avec un ou plusieurs participants.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766099"
 ---
 # <a name="filtering-with-dataview-linq-to-dataset"></a>Filtrage avec DataView (LINQ to DataSet)
 La possibilité de filtrer des données en utilisant des critères spécifiques, puis de les présenter à un client à travers un contrôle d’interface utilisateur, est un important aspect de la liaison de données. <xref:System.Data.DataView> propose plusieurs manières de filtrer les données et de retourner des sous-ensembles de lignes de données correspondant à des critères de filtre spécifiques. Fonctionnalités outre basé sur la chaîne de filtrage <xref:System.Data.DataView> fournit également la possibilité d’utiliser [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] expressions pour les critères de filtrage. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] les expressions permettent des opérations de filtrage bien plus complexes et puissantes que le filtrage basé sur chaîne.  

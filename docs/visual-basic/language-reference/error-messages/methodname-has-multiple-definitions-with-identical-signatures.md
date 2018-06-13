@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593728"
 ---
 # <a name="39ltmethodnamegt39-has-multiple-definitions-with-identical-signatures"></a>&#39;&lt;MethodName&gt; &#39; a plusieurs définitions comportant des signatures identiques
 A `Function` ou `Sub` déclaration de procédure utilise la liste de noms et d’arguments de procédure identiques comme une déclaration précédente. Une des causes possibles sont une tentative de surcharge de la procédure d’origine. Procédures surchargées doivent avoir des listes d’arguments différentes.  

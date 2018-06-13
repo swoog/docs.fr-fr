@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592013"
 ---
 # <a name="overview-of-synchronization-primitives"></a>Vue d’ensemble des primitives de synchronisation
 <a name="top"></a> Le .NET Framework fournit une plage de primitives de synchronisation pour contrôler les interactions de threads et éviter des conditions de concurrence. Celles-ci peuvent être divisées approximativement en trois catégories : le verrouillage, la signalisation et les opérations verrouillées.  

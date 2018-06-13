@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593111"
 ---
 # <a name="textfieldparser-is-unable-to-complete-the-read-operation-because-maximum-buffer-size-has-been-exceeded"></a>TextFieldParser ne peut pas achever l'opération de lecture, car la taille maximale de la mémoire tampon a été dépassée
 L’opération ne peut pas être terminée car la taille maximale de mémoire tampon (10 000 000 octets) a été dépassée.  

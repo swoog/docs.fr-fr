@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496042"
 ---
 # <a name="how-the-wcf-syndication-object-model-maps-to-atom-and-rss"></a>Comment le modèle objet Syndication WCF est mappé à Atom et RSS
 Lors du développement d’un service de syndication de Windows Communication Foundation (WCF), vous créez des flux et des éléments à l’aide des classes suivantes :  

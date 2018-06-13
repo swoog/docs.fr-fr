@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588104"
 ---
 # <a name="how-to-display-unbound-controls-in-a-datarepeater-control-visual-studio"></a>Comment : afficher les contrôles indépendants dans un contrôle DataRepeater (Visual Studio)
 En plus de contrôles dépendants, vous voudrez ajouter d’autres contrôles à un <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>, tel qu’une étiquette statique ou une image qui est répétée sur chaque élément dans le <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> contrôle.  

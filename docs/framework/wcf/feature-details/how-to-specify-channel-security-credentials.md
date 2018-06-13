@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496849"
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>Comment : spécifier des informations d'identification pour la sécurité des canaux
 Le Moniker de Service Windows Communication Foundation (WCF) permet aux applications COM appeler les services WCF. La plupart des services WCF requiert que le client spécifier les informations d’identification pour l’authentification et d’autorisation. Lorsque vous appelez un service WCF à partir d’un client WCF, vous pouvez spécifier ces informations d’identification dans le code managé ou dans un fichier de configuration d’application. Lorsque vous appelez un service WCF à partir d’une application COM, vous pouvez utiliser la <xref:System.ServiceModel.ComIntegration.IChannelCredentials> interface afin de spécifier les informations d’identification. Cette rubrique illustre diverses méthodes pour spécifier des informations d'identification à l'aide de l'interface <xref:System.ServiceModel.ComIntegration.IChannelCredentials>.  
