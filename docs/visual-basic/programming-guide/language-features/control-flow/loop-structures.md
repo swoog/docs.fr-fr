@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647889"
 ---
 # <a name="loop-structures-visual-basic"></a>Structures de boucle (Visual Basic)
 Structures de boucle Visual Basic vous permettent de vous permet d’exécuter une ou plusieurs lignes de code de façon répétée. Vous pouvez répéter les instructions d’une structure de boucle jusqu'à ce qu’une condition est `True`, jusqu'à ce qu’une condition est `False`, un nombre de fois, ou qu’une seule fois pour chaque élément spécifié dans une collection.  

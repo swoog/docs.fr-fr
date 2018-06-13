@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803944"
 ---
 # <a name="automatic-format-selection"></a>Sélection automatique du format
 Cet exemple montre comment activer la sélection automatique du format (XML ou JSON) avec le reste de Windows Communication Foundation (WCF) modèle, ainsi que comment définir explicitement le format dans le code d’opération de programmation.  

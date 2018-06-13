@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649394"
 ---
 # <a name="generic-procedures-in-visual-basic"></a>Procédures génériques dans Visual Basic
 A *procédure générique*, également appelé un *méthode générique*, est une procédure définie au moins un paramètre de type. Cela permet au code appelant d’adapter les types de données à ses besoins chaque fois qu’il appelle la procédure.  

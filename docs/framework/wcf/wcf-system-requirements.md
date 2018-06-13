@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804184"
 ---
 # <a name="wcf-system-requirements"></a>Configuration requise WCF
 Windows Communication Foundation (WCF) est une infrastructure de communication qui permet de créer des applications distribuées. La section suivante répertorie les rubriques qui permettent de WCF à exécuter.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807851"
 ---
 # <a name="hosting-services"></a>Hébergement de services
 Pour devenir actif, un service doit être hébergé dans un environnement d'exécution qui le crée et contrôle son contexte et sa durée de vie. Les services Windows Communication Foundation (WCF) sont conçus pour s’exécuter dans n’importe quel processus Windows qui prend en charge le code managé.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809262"
 ---
 # <a name="analytic-tracing-with-etw"></a>Traçage analytique avec ETW
 Traçage analytique de Windows Communication Foundation (WCF) offre un moyen de capturer des informations de diagnostic pendant l’exécution d’un service WCF. Événements de traçage analytique de WCF sont émis à des points clés dans la pile de WCF pour permettre la résolution des problèmes des services WCF dans un environnement de production. Traçage analytique pour les services WCF a un impact minime sur les performances d’un serveur de produit qui héberge [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] que ces événements sont très efficacement émis à une session de suivi événements pour Windows (ETW) des services WCF.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645627"
 ---
 # <a name="performance-linq-to-xml-visual-basic"></a>Performances (LINQ to XML) (Visual Basic)
 Cette section contient des informations relatives aux performances dans [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], et notamment aux performances des requêtes et de la construction fonctionnelle.  

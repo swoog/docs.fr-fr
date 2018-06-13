@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804623"
 ---
 # <a name="bindings-and-binding-elements"></a>Liaisons et éléments de liaison
 Les liaisons sont des collections d’éléments de configuration spéciale, appelées *éléments de liaison*, qui sont évalué par le runtime du service chaque fois qu’un client ou point de terminaison de service est en cours de construction. Le type et l’ordre des éléments de liaison dans une liaison déterminent la sélection et l’ordre d’empilement des protocoles et des canaux de transport dans la pile de canaux d’un point de terminaison.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805744"
 ---
 # <a name="reliable-secure-profile"></a>Reliable Secure Profile
 Cet exemple montre comment composer WCF et [Reliable Secure Profile](http://go.microsoft.com/fwlink/?LinkId=178140) (RSP). Cet exemple montre l’implémentation d’un [établir une connexion](http://go.microsoft.com/fwlink/?LinkId=178141) canal qui peut être composée avec une messagerie fiable et éventuellement un canal sécurisé pour créer une liaison sécurisée fiable basé sur la spécification de RSP.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648796"
 ---
 # <a name="how-to-declare-and-use-xml-namespace-prefixes-visual-basic"></a>Comment : déclarer et utiliser des préfixes d'espaces de noms XML (Visual Basic)
 Cet exemple montre comment importer le préfixe d’espace de noms XML `ns` et l’utiliser dans un littéral XML et les propriétés d’axe XML.  

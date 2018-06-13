@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636091"
 ---
 # <a name="cast-from-type-39lttypename1gt39-to-type-39lttypename2gt39-is-not-valid"></a>Effectuer un cast du type &#39; &lt;nom_type1&gt; &#39; au type &#39; &lt;nom_type2&gt; &#39; n’est pas valide
 L’utilisateur a tenté de convertir le type d’une variable en un type non valide.  

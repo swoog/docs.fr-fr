@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33802998"
 ---
 # <a name="transfer"></a>Transférer
 Cette rubrique décrit le transfert dans le modèle de suivi d’activité Windows Communication Foundation (WCF).  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803593"
 ---
 # <a name="windows-communication-foundation-bindings"></a>Liaisons Windows Communication Foundation
 Les liaisons spécifient comment un point de terminaison de service Windows Communication Foundation (WCF) communique avec d’autres points de terminaison. Au minimum, une liaison doit spécifier le transport (par exemple HTTP ou TCP) à utiliser. Vous pouvez également définir d’autres caractéristiques, telles que la sécurité et la prise en charge des transactions, par le biais des liaisons.  

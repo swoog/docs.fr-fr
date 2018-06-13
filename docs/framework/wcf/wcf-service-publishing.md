@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806459"
 ---
 # <a name="wcf-service-publishing"></a>Publication du service WCF
 Publication de Service Windows Communication Foundation (WCF) vous aide à la progression de l’environnement de développement anticipée fourni par l’hôte de Service WCF et le Client Test WCF pour déployer l’application dans un environnement de production à des fins de test. Avant de vous engager dans un plan de déploiement final, vous pouvez utiliser Windows Communication Foundation (WCF) Service de publication pour vérifier que votre service WCF fonctionne correctement et est prêt à être publié. Vous pouvez également choisir de déployer vos bibliothèques de service WCF à différents emplacements cibles pour le test.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637006"
 ---
 # <a name="collection-index-must-be-in-the-range-1-to-the-size-of-the-collection"></a>L’index de la collection doit être compris entre 1 et la taille de la collection
 La valeur d’index fournie se situe en dehors de la plage valide (comprise entre 1 et la taille de la collection).  

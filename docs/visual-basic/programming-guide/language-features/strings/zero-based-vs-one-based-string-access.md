@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649098"
 ---
 # <a name="zero-based-vs-one-based-string-access-in-visual-basic"></a>Vs de base zéro. Accès d’une chaîne de base en Visual Basic
 Cette rubrique compare la façon dont Visual Basic et [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] fournissent l’accès aux caractères dans une chaîne. Le [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] fournit toujours un accès de base zéro pour les caractères dans une chaîne, alors que Visual Basic fournit un accès de base zéro et basé sur un, selon la fonction.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637637"
 ---
 # <a name="late-bound-assignment-to-a-field-of-value-type-39lttypenamegt39-is-not-valid-when-39ltnamegt39-is-the-result-of-a-late-bound-expression"></a>Assignation à liaison tardive à un champ de type valeur &#39; &lt;typename&gt; &#39; n’est pas valide lorsque &#39; &lt;nom&gt; &#39; est le résultat d’une expression à liaison tardive
 Vous avez tenté une assignation de liaison tardive qui n’est pas valide.  
