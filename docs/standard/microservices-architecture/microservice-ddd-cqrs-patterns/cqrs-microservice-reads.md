@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579104"
 ---
 # <a name="implementing-readsqueries-in-a-cqrs-microservice"></a><span data-ttu-id="200fc-103">Implémentation de lectures/requêtes dans un microservice CQRS</span><span class="sxs-lookup"><span data-stu-id="200fc-103">Implementing reads/queries in a CQRS microservice</span></span>
 
