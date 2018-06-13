@@ -1,14 +1,6 @@
 ---
-title: "ICorProfilerInfo3::SetEnterLeaveFunctionHooks3WithInfo, méthode"
-ms.custom: 
+title: ICorProfilerInfo3::SetEnterLeaveFunctionHooks3WithInfo, méthode
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerInfo3.SetEnterLeaveFunctionHooks3WithInfo Method
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: ca8ea534-e441-47b8-be85-466410988c0a
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f9d9af004abbee19d6b553c431381af55d210095
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: f11c11b706dd352d6df0356f2daf91c5417603ac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33460189"
 ---
-# <a name="icorprofilerinfo3setenterleavefunctionhooks3withinfo-method"></a><span data-ttu-id="ea580-102">ICorProfilerInfo3::SetEnterLeaveFunctionHooks3WithInfo, méthode</span><span class="sxs-lookup"><span data-stu-id="ea580-102">ICorProfilerInfo3::SetEnterLeaveFunctionHooks3WithInfo Method</span></span>
-<span data-ttu-id="ea580-103">Spécifie les fonctions implémentées par le profileur qui seront appelées sur le [FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md), [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md), et [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md) raccordements de fonctions managées.</span><span class="sxs-lookup"><span data-stu-id="ea580-103">Specifies the profiler-implemented functions that will be called on the [FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md), [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md), and [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md) hooks of managed functions.</span></span>  
+# <a name="icorprofilerinfo3setenterleavefunctionhooks3withinfo-method"></a><span data-ttu-id="fcc8f-102">ICorProfilerInfo3::SetEnterLeaveFunctionHooks3WithInfo, méthode</span><span class="sxs-lookup"><span data-stu-id="fcc8f-102">ICorProfilerInfo3::SetEnterLeaveFunctionHooks3WithInfo Method</span></span>
+<span data-ttu-id="fcc8f-103">Spécifie les fonctions implémentées par le profileur qui seront appelées sur le [FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md), [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md), et [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md) raccordements de fonctions managées.</span><span class="sxs-lookup"><span data-stu-id="fcc8f-103">Specifies the profiler-implemented functions that will be called on the [FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md), [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md), and [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md) hooks of managed functions.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ea580-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="ea580-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fcc8f-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="fcc8f-104">Syntax</span></span>  
   
 ```  
 HRESULT SetEnterLeaveFunctionHooks3WithInfo(  
@@ -47,41 +36,41 @@ HRESULT SetEnterLeaveFunctionHooks3WithInfo(
             [in] FunctionTailcall3WithInfo *pFuncTailcall3);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="ea580-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="ea580-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="fcc8f-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="fcc8f-105">Parameters</span></span>  
  `pFuncEnter3`  
- <span data-ttu-id="ea580-106">[in] Un pointeur vers l’implémentation à utiliser comme le `FunctionEnter3WithInfo` rappel.</span><span class="sxs-lookup"><span data-stu-id="ea580-106">[in] A pointer to the implementation to be used as the `FunctionEnter3WithInfo` callback.</span></span>  
+ <span data-ttu-id="fcc8f-106">[in] Un pointeur vers l’implémentation à utiliser comme le `FunctionEnter3WithInfo` rappel.</span><span class="sxs-lookup"><span data-stu-id="fcc8f-106">[in] A pointer to the implementation to be used as the `FunctionEnter3WithInfo` callback.</span></span>  
   
  `pFuncLeave3`  
- <span data-ttu-id="ea580-107">[in] Un pointeur vers l’implémentation à utiliser comme le `FunctionLeave3WithInfo` rappel.</span><span class="sxs-lookup"><span data-stu-id="ea580-107">[in] A pointer to the implementation to be used as the `FunctionLeave3WithInfo` callback.</span></span>  
+ <span data-ttu-id="fcc8f-107">[in] Un pointeur vers l’implémentation à utiliser comme le `FunctionLeave3WithInfo` rappel.</span><span class="sxs-lookup"><span data-stu-id="fcc8f-107">[in] A pointer to the implementation to be used as the `FunctionLeave3WithInfo` callback.</span></span>  
   
  `pFuncTailcall3`  
- <span data-ttu-id="ea580-108">[in] Un pointeur vers l’implémentation à utiliser comme le `FunctionTailcall3WithInfo` rappel.</span><span class="sxs-lookup"><span data-stu-id="ea580-108">[in] A pointer to the implementation to be used as the `FunctionTailcall3WithInfo` callback.</span></span>  
+ <span data-ttu-id="fcc8f-108">[in] Un pointeur vers l’implémentation à utiliser comme le `FunctionTailcall3WithInfo` rappel.</span><span class="sxs-lookup"><span data-stu-id="fcc8f-108">[in] A pointer to the implementation to be used as the `FunctionTailcall3WithInfo` callback.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="ea580-109">Notes</span><span class="sxs-lookup"><span data-stu-id="ea580-109">Remarks</span></span>  
- <span data-ttu-id="ea580-110">Le [FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md), [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md), et [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md) fournissent inspection de frame et d’arguments de pile.</span><span class="sxs-lookup"><span data-stu-id="ea580-110">The [FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md), [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md), and [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md) hooks provide stack frame and argument inspection.</span></span> <span data-ttu-id="ea580-111">Pour accéder à ces informations, le `COR_PRF_ENABLE_FUNCTION_ARGS`, `COR_PRF_ENABLE_FUNCTION_RETVAL`, et/ou `COR_PRF_ENABLE_FRAME_INFO` indicateurs doivent être définies.</span><span class="sxs-lookup"><span data-stu-id="ea580-111">To access that information, the `COR_PRF_ENABLE_FUNCTION_ARGS`, `COR_PRF_ENABLE_FUNCTION_RETVAL`, and/or `COR_PRF_ENABLE_FRAME_INFO` flags have to be set.</span></span> <span data-ttu-id="ea580-112">Le profileur peut utiliser le [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) méthode pour définir les indicateurs d’événement, puis utiliser le `SetEnterLeaveFunctionHooks3WithInfo` méthode pour enregistrer votre implémentation de cette fonction.</span><span class="sxs-lookup"><span data-stu-id="ea580-112">The profiler can use the [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) method to set the event flags, and then use the `SetEnterLeaveFunctionHooks3WithInfo` method to register your implementation of this function.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="fcc8f-109">Notes</span><span class="sxs-lookup"><span data-stu-id="fcc8f-109">Remarks</span></span>  
+ <span data-ttu-id="fcc8f-110">Le [FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md), [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md), et [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md) fournissent inspection de frame et d’arguments de pile.</span><span class="sxs-lookup"><span data-stu-id="fcc8f-110">The [FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md), [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md), and [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md) hooks provide stack frame and argument inspection.</span></span> <span data-ttu-id="fcc8f-111">Pour accéder à ces informations, le `COR_PRF_ENABLE_FUNCTION_ARGS`, `COR_PRF_ENABLE_FUNCTION_RETVAL`, et/ou `COR_PRF_ENABLE_FRAME_INFO` indicateurs doivent être définies.</span><span class="sxs-lookup"><span data-stu-id="fcc8f-111">To access that information, the `COR_PRF_ENABLE_FUNCTION_ARGS`, `COR_PRF_ENABLE_FUNCTION_RETVAL`, and/or `COR_PRF_ENABLE_FRAME_INFO` flags have to be set.</span></span> <span data-ttu-id="fcc8f-112">Le profileur peut utiliser le [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) méthode pour définir les indicateurs d’événement, puis utiliser le `SetEnterLeaveFunctionHooks3WithInfo` méthode pour enregistrer votre implémentation de cette fonction.</span><span class="sxs-lookup"><span data-stu-id="fcc8f-112">The profiler can use the [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) method to set the event flags, and then use the `SetEnterLeaveFunctionHooks3WithInfo` method to register your implementation of this function.</span></span>  
   
- <span data-ttu-id="ea580-113">Qu’un seul jeu de rappels peut être actif à la fois, et la version la plus récente est prioritaire.</span><span class="sxs-lookup"><span data-stu-id="ea580-113">Only one set of callbacks may be active at a time, and the newest version takes precedence.</span></span> <span data-ttu-id="ea580-114">Par conséquent, si un profileur appelle [SetEnterLeaveFunctionHooks2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md) et `SetEnterLeaveFunctionHooks3WithInfo`, `SetEnterLeaveFunctionHooks3WithInfo` est utilisé.</span><span class="sxs-lookup"><span data-stu-id="ea580-114">Therefore, if a profiler calls both [SetEnterLeaveFunctionHooks2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md) and `SetEnterLeaveFunctionHooks3WithInfo`, `SetEnterLeaveFunctionHooks3WithInfo` is used.</span></span>  
+ <span data-ttu-id="fcc8f-113">Qu’un seul jeu de rappels peut être actif à la fois, et la version la plus récente est prioritaire.</span><span class="sxs-lookup"><span data-stu-id="fcc8f-113">Only one set of callbacks may be active at a time, and the newest version takes precedence.</span></span> <span data-ttu-id="fcc8f-114">Par conséquent, si un profileur appelle [SetEnterLeaveFunctionHooks2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md) et `SetEnterLeaveFunctionHooks3WithInfo`, `SetEnterLeaveFunctionHooks3WithInfo` est utilisé.</span><span class="sxs-lookup"><span data-stu-id="fcc8f-114">Therefore, if a profiler calls both [SetEnterLeaveFunctionHooks2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md) and `SetEnterLeaveFunctionHooks3WithInfo`, `SetEnterLeaveFunctionHooks3WithInfo` is used.</span></span>  
   
- <span data-ttu-id="ea580-115">Le `SetEnterLeaveFunctionHooks3WithInfo` méthode peut être appelée uniquement à partir du profileur [ICorProfilerCallback::Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) rappel.</span><span class="sxs-lookup"><span data-stu-id="ea580-115">The `SetEnterLeaveFunctionHooks3WithInfo` method may be called only from the profiler's [ICorProfilerCallback::Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) callback.</span></span>  
+ <span data-ttu-id="fcc8f-115">Le `SetEnterLeaveFunctionHooks3WithInfo` méthode peut être appelée uniquement à partir du profileur [ICorProfilerCallback::Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) rappel.</span><span class="sxs-lookup"><span data-stu-id="fcc8f-115">The `SetEnterLeaveFunctionHooks3WithInfo` method may be called only from the profiler's [ICorProfilerCallback::Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) callback.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ea580-116">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="ea580-116">Requirements</span></span>  
- <span data-ttu-id="ea580-117">**Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ea580-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fcc8f-116">Spécifications</span><span class="sxs-lookup"><span data-stu-id="fcc8f-116">Requirements</span></span>  
+ <span data-ttu-id="fcc8f-117">**Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fcc8f-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ea580-118">**En-tête :** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="ea580-118">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="fcc8f-118">**En-tête :** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="fcc8f-118">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="ea580-119">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ea580-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="fcc8f-119">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="fcc8f-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ea580-120">**Versions du .NET framework :**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ea580-120">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="fcc8f-120">**Versions du .NET framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fcc8f-120">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ea580-121">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="ea580-121">See Also</span></span>  
- [<span data-ttu-id="ea580-122">SetEnterLeaveFunctionHooks3</span><span class="sxs-lookup"><span data-stu-id="ea580-122">SetEnterLeaveFunctionHooks3</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md)  
- [<span data-ttu-id="ea580-123">FunctionEnter3</span><span class="sxs-lookup"><span data-stu-id="ea580-123">FunctionEnter3</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter3-function.md)  
- [<span data-ttu-id="ea580-124">FunctionLeave3</span><span class="sxs-lookup"><span data-stu-id="ea580-124">FunctionLeave3</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md)  
- [<span data-ttu-id="ea580-125">FunctionTailcall3</span><span class="sxs-lookup"><span data-stu-id="ea580-125">FunctionTailcall3</span></span>](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md)  
- [<span data-ttu-id="ea580-126">FunctionEnter3WithInfo</span><span class="sxs-lookup"><span data-stu-id="ea580-126">FunctionEnter3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md)  
- [<span data-ttu-id="ea580-127">FunctionLeave3WithInfo</span><span class="sxs-lookup"><span data-stu-id="ea580-127">FunctionLeave3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)  
- [<span data-ttu-id="ea580-128">FunctionTailcall3WithInfo</span><span class="sxs-lookup"><span data-stu-id="ea580-128">FunctionTailcall3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md)  
- [<span data-ttu-id="ea580-129">Fonctions statiques globales de profilage</span><span class="sxs-lookup"><span data-stu-id="ea580-129">Profiling Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)  
- [<span data-ttu-id="ea580-130">ICorProfilerInfo3, interface</span><span class="sxs-lookup"><span data-stu-id="ea580-130">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)  
- [<span data-ttu-id="ea580-131">Interfaces de profilage</span><span class="sxs-lookup"><span data-stu-id="ea580-131">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [<span data-ttu-id="ea580-132">Profilage</span><span class="sxs-lookup"><span data-stu-id="ea580-132">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a><span data-ttu-id="fcc8f-121">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="fcc8f-121">See Also</span></span>  
+ [<span data-ttu-id="fcc8f-122">SetEnterLeaveFunctionHooks3</span><span class="sxs-lookup"><span data-stu-id="fcc8f-122">SetEnterLeaveFunctionHooks3</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md)  
+ [<span data-ttu-id="fcc8f-123">FunctionEnter3</span><span class="sxs-lookup"><span data-stu-id="fcc8f-123">FunctionEnter3</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter3-function.md)  
+ [<span data-ttu-id="fcc8f-124">FunctionLeave3</span><span class="sxs-lookup"><span data-stu-id="fcc8f-124">FunctionLeave3</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md)  
+ [<span data-ttu-id="fcc8f-125">FunctionTailcall3</span><span class="sxs-lookup"><span data-stu-id="fcc8f-125">FunctionTailcall3</span></span>](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md)  
+ [<span data-ttu-id="fcc8f-126">FunctionEnter3WithInfo</span><span class="sxs-lookup"><span data-stu-id="fcc8f-126">FunctionEnter3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md)  
+ [<span data-ttu-id="fcc8f-127">FunctionLeave3WithInfo</span><span class="sxs-lookup"><span data-stu-id="fcc8f-127">FunctionLeave3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)  
+ [<span data-ttu-id="fcc8f-128">FunctionTailcall3WithInfo</span><span class="sxs-lookup"><span data-stu-id="fcc8f-128">FunctionTailcall3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md)  
+ [<span data-ttu-id="fcc8f-129">Fonctions statiques globales de profilage</span><span class="sxs-lookup"><span data-stu-id="fcc8f-129">Profiling Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)  
+ [<span data-ttu-id="fcc8f-130">ICorProfilerInfo3, interface</span><span class="sxs-lookup"><span data-stu-id="fcc8f-130">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)  
+ [<span data-ttu-id="fcc8f-131">Interfaces de profilage</span><span class="sxs-lookup"><span data-stu-id="fcc8f-131">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
+ [<span data-ttu-id="fcc8f-132">Profilage</span><span class="sxs-lookup"><span data-stu-id="fcc8f-132">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
