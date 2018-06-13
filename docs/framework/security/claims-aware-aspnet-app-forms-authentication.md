@@ -1,85 +1,76 @@
 ---
-title: "Comment : générer une application ASP.NET prenant en charge les revendications à l’aide de l’authentification basée sur les formulaires"
-ms.custom: 
+title: 'Comment : générer une application ASP.NET prenant en charge les revendications à l’aide de l’authentification basée sur les formulaires'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 98a3e029-1a9b-4e0c-b5d0-29d3f23f5b15
-caps.latest.revision: "6"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: f4977a40d440ca45a3130fb1b06e0b286a2ab2f6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 851a856d291da78265e9eac73e9e06028e24ef2e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408617"
 ---
-# <a name="how-to-build-claims-aware-aspnet-application-using-forms-based-authentication"></a><span data-ttu-id="5860a-102">Comment : générer une application ASP.NET prenant en charge les revendications à l’aide de l’authentification basée sur les formulaires</span><span class="sxs-lookup"><span data-stu-id="5860a-102">How To: Build Claims-Aware ASP.NET Application Using Forms-Based Authentication</span></span>
-## <a name="applies-to"></a><span data-ttu-id="5860a-103">S'applique à</span><span class="sxs-lookup"><span data-stu-id="5860a-103">Applies To</span></span>  
+# <a name="how-to-build-claims-aware-aspnet-application-using-forms-based-authentication"></a><span data-ttu-id="07800-102">Comment : générer une application ASP.NET prenant en charge les revendications à l’aide de l’authentification basée sur les formulaires</span><span class="sxs-lookup"><span data-stu-id="07800-102">How To: Build Claims-Aware ASP.NET Application Using Forms-Based Authentication</span></span>
+## <a name="applies-to"></a><span data-ttu-id="07800-103">S'applique à</span><span class="sxs-lookup"><span data-stu-id="07800-103">Applies To</span></span>  
   
--   <span data-ttu-id="5860a-104">Microsoft® Windows® Identity Foundation (WIF)</span><span class="sxs-lookup"><span data-stu-id="5860a-104">Microsoft® Windows® Identity Foundation (WIF)</span></span>  
+-   <span data-ttu-id="07800-104">Microsoft® Windows® Identity Foundation (WIF)</span><span class="sxs-lookup"><span data-stu-id="07800-104">Microsoft® Windows® Identity Foundation (WIF)</span></span>  
   
--   <span data-ttu-id="5860a-105">Web Forms ASP.NET®</span><span class="sxs-lookup"><span data-stu-id="5860a-105">ASP.NET® Web Forms</span></span>  
+-   <span data-ttu-id="07800-105">Web Forms ASP.NET®</span><span class="sxs-lookup"><span data-stu-id="07800-105">ASP.NET® Web Forms</span></span>  
   
-## <a name="summary"></a><span data-ttu-id="5860a-106">Résumé</span><span class="sxs-lookup"><span data-stu-id="5860a-106">Summary</span></span>  
- <span data-ttu-id="5860a-107">Cette procédure fournit des procédures pas à pas détaillées pour la création d’une simple application Web Forms ASP.NET prenant en charge les revendications et utilisant l’authentification par formulaire.</span><span class="sxs-lookup"><span data-stu-id="5860a-107">This How-To provides detailed step-by-step procedures for creating a simple claims-aware ASP.NET Web Forms application that uses Forms authentication.</span></span> <span data-ttu-id="5860a-108">Elle fournit également des instructions pour tester l’application afin de vérifier que les revendications s’affichent quand un utilisateur se connecte à l’aide de l’authentification par formulaire.</span><span class="sxs-lookup"><span data-stu-id="5860a-108">It also provides instructions for how to test the application to verify that claims are presented when a user signs in with Forms authentication.</span></span>  
+## <a name="summary"></a><span data-ttu-id="07800-106">Résumé</span><span class="sxs-lookup"><span data-stu-id="07800-106">Summary</span></span>  
+ <span data-ttu-id="07800-107">Cette procédure fournit des procédures pas à pas détaillées pour la création d’une simple application Web Forms ASP.NET prenant en charge les revendications et utilisant l’authentification par formulaire.</span><span class="sxs-lookup"><span data-stu-id="07800-107">This How-To provides detailed step-by-step procedures for creating a simple claims-aware ASP.NET Web Forms application that uses Forms authentication.</span></span> <span data-ttu-id="07800-108">Elle fournit également des instructions pour tester l’application afin de vérifier que les revendications s’affichent quand un utilisateur se connecte à l’aide de l’authentification par formulaire.</span><span class="sxs-lookup"><span data-stu-id="07800-108">It also provides instructions for how to test the application to verify that claims are presented when a user signs in with Forms authentication.</span></span>  
   
-## <a name="contents"></a><span data-ttu-id="5860a-109">Sommaire</span><span class="sxs-lookup"><span data-stu-id="5860a-109">Contents</span></span>  
+## <a name="contents"></a><span data-ttu-id="07800-109">Sommaire</span><span class="sxs-lookup"><span data-stu-id="07800-109">Contents</span></span>  
   
--   <span data-ttu-id="5860a-110">Objectifs</span><span class="sxs-lookup"><span data-stu-id="5860a-110">Objectives</span></span>  
+-   <span data-ttu-id="07800-110">Objectifs</span><span class="sxs-lookup"><span data-stu-id="07800-110">Objectives</span></span>  
   
--   <span data-ttu-id="5860a-111">Vue d'ensemble</span><span class="sxs-lookup"><span data-stu-id="5860a-111">Overview</span></span>  
+-   <span data-ttu-id="07800-111">Vue d'ensemble</span><span class="sxs-lookup"><span data-stu-id="07800-111">Overview</span></span>  
   
--   <span data-ttu-id="5860a-112">Résumé des étapes</span><span class="sxs-lookup"><span data-stu-id="5860a-112">Summary of Steps</span></span>  
+-   <span data-ttu-id="07800-112">Résumé des étapes</span><span class="sxs-lookup"><span data-stu-id="07800-112">Summary of Steps</span></span>  
   
--   <span data-ttu-id="5860a-113">Étape 1 : Créer une application Web Forms ASP.NET simple</span><span class="sxs-lookup"><span data-stu-id="5860a-113">Step 1 – Create a Simple ASP.NET Web Forms Application</span></span>  
+-   <span data-ttu-id="07800-113">Étape 1 : Créer une application Web Forms ASP.NET simple</span><span class="sxs-lookup"><span data-stu-id="07800-113">Step 1 – Create a Simple ASP.NET Web Forms Application</span></span>  
   
--   <span data-ttu-id="5860a-114">Étape 2 : Configurer l’application Web Forms ASP.NET pour les revendications à l’aide de l’authentification par formulaire</span><span class="sxs-lookup"><span data-stu-id="5860a-114">Step 2 – Configure ASP.NET Web Forms Application for Claims Using Forms Authentication</span></span>  
+-   <span data-ttu-id="07800-114">Étape 2 : Configurer l’application Web Forms ASP.NET pour les revendications à l’aide de l’authentification par formulaire</span><span class="sxs-lookup"><span data-stu-id="07800-114">Step 2 – Configure ASP.NET Web Forms Application for Claims Using Forms Authentication</span></span>  
   
--   <span data-ttu-id="5860a-115">Étape 3 : tester votre solution</span><span class="sxs-lookup"><span data-stu-id="5860a-115">Step 3 – Test Your Solution</span></span>  
+-   <span data-ttu-id="07800-115">Étape 3 : tester votre solution</span><span class="sxs-lookup"><span data-stu-id="07800-115">Step 3 – Test Your Solution</span></span>  
   
-## <a name="objectives"></a><span data-ttu-id="5860a-116">Objectifs</span><span class="sxs-lookup"><span data-stu-id="5860a-116">Objectives</span></span>  
+## <a name="objectives"></a><span data-ttu-id="07800-116">Objectifs</span><span class="sxs-lookup"><span data-stu-id="07800-116">Objectives</span></span>  
   
--   <span data-ttu-id="5860a-117">Configurer une application Web Forms ASP.NET pour les revendications à l’aide de l’authentification par formulaire</span><span class="sxs-lookup"><span data-stu-id="5860a-117">Configure an ASP.NET Web Forms application for claims using Forms authentication</span></span>  
+-   <span data-ttu-id="07800-117">Configurer une application Web Forms ASP.NET pour les revendications à l’aide de l’authentification par formulaire</span><span class="sxs-lookup"><span data-stu-id="07800-117">Configure an ASP.NET Web Forms application for claims using Forms authentication</span></span>  
   
--   <span data-ttu-id="5860a-118">Tester l’application Web Forms ASP.NET pour vérifier si elle fonctionne correctement</span><span class="sxs-lookup"><span data-stu-id="5860a-118">Test the ASP.NET Web Forms application to see if it is working properly</span></span>  
+-   <span data-ttu-id="07800-118">Tester l’application Web Forms ASP.NET pour vérifier si elle fonctionne correctement</span><span class="sxs-lookup"><span data-stu-id="07800-118">Test the ASP.NET Web Forms application to see if it is working properly</span></span>  
   
-## <a name="overview"></a><span data-ttu-id="5860a-119">Vue d'ensemble</span><span class="sxs-lookup"><span data-stu-id="5860a-119">Overview</span></span>  
- <span data-ttu-id="5860a-120">Dans .NET 4.5, WIF et son autorisation basée sur les revendications ont été ajoutés en tant que partie intégrante du .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="5860a-120">In .NET 4.5, WIF and its claims-based authorization have been included as an integral part of the Framework.</span></span> <span data-ttu-id="5860a-121">Auparavant, si vous vouliez obtenir des revendications d’un utilisateur ASP.NET, vous deviez installer WIF et convertir les interfaces en objets Entité de sécurité tels que `Thread.CurrentPrincipal` ou `HttpContext.Current.User`.</span><span class="sxs-lookup"><span data-stu-id="5860a-121">Previously, if you wanted claims from an ASP.NET user, you were required to install WIF, and then cast interfaces to Principal objects such as `Thread.CurrentPrincipal` or `HttpContext.Current.User`.</span></span> <span data-ttu-id="5860a-122">À présent, les revendications sont prises en charge automatiquement par ces objets Entité de sécurité.</span><span class="sxs-lookup"><span data-stu-id="5860a-122">Now, claims are served automatically by these Principal objects.</span></span>  
+## <a name="overview"></a><span data-ttu-id="07800-119">Vue d'ensemble</span><span class="sxs-lookup"><span data-stu-id="07800-119">Overview</span></span>  
+ <span data-ttu-id="07800-120">Dans .NET 4.5, WIF et son autorisation basée sur les revendications ont été ajoutés en tant que partie intégrante du .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="07800-120">In .NET 4.5, WIF and its claims-based authorization have been included as an integral part of the Framework.</span></span> <span data-ttu-id="07800-121">Auparavant, si vous vouliez obtenir des revendications d’un utilisateur ASP.NET, vous deviez installer WIF et convertir les interfaces en objets Entité de sécurité tels que `Thread.CurrentPrincipal` ou `HttpContext.Current.User`.</span><span class="sxs-lookup"><span data-stu-id="07800-121">Previously, if you wanted claims from an ASP.NET user, you were required to install WIF, and then cast interfaces to Principal objects such as `Thread.CurrentPrincipal` or `HttpContext.Current.User`.</span></span> <span data-ttu-id="07800-122">À présent, les revendications sont prises en charge automatiquement par ces objets Entité de sécurité.</span><span class="sxs-lookup"><span data-stu-id="07800-122">Now, claims are served automatically by these Principal objects.</span></span>  
   
- <span data-ttu-id="5860a-123">L’authentification par formulaire a bénéficié de l’ajout de WIF dans .NET 4.5, car tous les utilisateurs authentifiés par des formulaires sont automatiquement associés à des revendications.</span><span class="sxs-lookup"><span data-stu-id="5860a-123">Forms authentication has benefited from WIF’s inclusion in .NET 4.5 because all users authenticated by Forms automatically have claims associated with them.</span></span> <span data-ttu-id="5860a-124">Vous pouvez commencer à utiliser ces revendications immédiatement dans une application ASP.NET qui utilise l’authentification par formulaire, comme l’illustre cette procédure.</span><span class="sxs-lookup"><span data-stu-id="5860a-124">You can begin using these claims immediately in an ASP.NET application that uses Forms authentication, as this How-To demonstrates.</span></span>  
+ <span data-ttu-id="07800-123">L’authentification par formulaire a bénéficié de l’ajout de WIF dans .NET 4.5, car tous les utilisateurs authentifiés par des formulaires sont automatiquement associés à des revendications.</span><span class="sxs-lookup"><span data-stu-id="07800-123">Forms authentication has benefited from WIF’s inclusion in .NET 4.5 because all users authenticated by Forms automatically have claims associated with them.</span></span> <span data-ttu-id="07800-124">Vous pouvez commencer à utiliser ces revendications immédiatement dans une application ASP.NET qui utilise l’authentification par formulaire, comme l’illustre cette procédure.</span><span class="sxs-lookup"><span data-stu-id="07800-124">You can begin using these claims immediately in an ASP.NET application that uses Forms authentication, as this How-To demonstrates.</span></span>  
   
-## <a name="summary-of-steps"></a><span data-ttu-id="5860a-125">Résumé des étapes</span><span class="sxs-lookup"><span data-stu-id="5860a-125">Summary of Steps</span></span>  
+## <a name="summary-of-steps"></a><span data-ttu-id="07800-125">Résumé des étapes</span><span class="sxs-lookup"><span data-stu-id="07800-125">Summary of Steps</span></span>  
   
--   <span data-ttu-id="5860a-126">Étape 1 : Créer une application Web Forms ASP.NET simple</span><span class="sxs-lookup"><span data-stu-id="5860a-126">Step 1 – Create a Simple ASP.NET Web Forms Application</span></span>  
+-   <span data-ttu-id="07800-126">Étape 1 : Créer une application Web Forms ASP.NET simple</span><span class="sxs-lookup"><span data-stu-id="07800-126">Step 1 – Create a Simple ASP.NET Web Forms Application</span></span>  
   
--   <span data-ttu-id="5860a-127">Étape 2 : Configurer l’application Web Forms ASP.NET pour les revendications à l’aide de l’authentification par formulaire</span><span class="sxs-lookup"><span data-stu-id="5860a-127">Step 2 – Configure ASP.NET Web Forms Application for Claims Using Forms Authentication</span></span>  
+-   <span data-ttu-id="07800-127">Étape 2 : Configurer l’application Web Forms ASP.NET pour les revendications à l’aide de l’authentification par formulaire</span><span class="sxs-lookup"><span data-stu-id="07800-127">Step 2 – Configure ASP.NET Web Forms Application for Claims Using Forms Authentication</span></span>  
   
--   <span data-ttu-id="5860a-128">Étape 3 : tester votre solution</span><span class="sxs-lookup"><span data-stu-id="5860a-128">Step 3 – Test Your Solution</span></span>  
+-   <span data-ttu-id="07800-128">Étape 3 : tester votre solution</span><span class="sxs-lookup"><span data-stu-id="07800-128">Step 3 – Test Your Solution</span></span>  
   
-## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a><span data-ttu-id="5860a-129">Étape 1 : Créer une application Web Forms ASP.NET simple</span><span class="sxs-lookup"><span data-stu-id="5860a-129">Step 1 – Create a Simple ASP.NET Web Forms Application</span></span>  
- <span data-ttu-id="5860a-130">Lors de cette étape, vous allez créer une application Web Forms ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="5860a-130">In this step, you will create a new ASP.NET Web Forms application.</span></span>  
+## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a><span data-ttu-id="07800-129">Étape 1 : Créer une application Web Forms ASP.NET simple</span><span class="sxs-lookup"><span data-stu-id="07800-129">Step 1 – Create a Simple ASP.NET Web Forms Application</span></span>  
+ <span data-ttu-id="07800-130">Lors de cette étape, vous allez créer une application Web Forms ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="07800-130">In this step, you will create a new ASP.NET Web Forms application.</span></span>  
   
-#### <a name="to-create-a-simple-aspnet-application"></a><span data-ttu-id="5860a-131">Pour créer une simple application ASP.NET</span><span class="sxs-lookup"><span data-stu-id="5860a-131">To create a simple ASP.NET application</span></span>  
+#### <a name="to-create-a-simple-aspnet-application"></a><span data-ttu-id="07800-131">Pour créer une simple application ASP.NET</span><span class="sxs-lookup"><span data-stu-id="07800-131">To create a simple ASP.NET application</span></span>  
   
-1.  <span data-ttu-id="5860a-132">Démarrez Visual Studio et cliquez sur **Fichier**, **Nouveau**, puis **Projet**.</span><span class="sxs-lookup"><span data-stu-id="5860a-132">Start Visual Studio and click **File**, **New**, and then **Project**.</span></span>  
+1.  <span data-ttu-id="07800-132">Démarrez Visual Studio et cliquez sur **Fichier**, **Nouveau**, puis **Projet**.</span><span class="sxs-lookup"><span data-stu-id="07800-132">Start Visual Studio and click **File**, **New**, and then **Project**.</span></span>  
   
-2.  <span data-ttu-id="5860a-133">Dans la fenêtre **Nouveau projet**, cliquez sur **Application Web Forms ASP.NET**.</span><span class="sxs-lookup"><span data-stu-id="5860a-133">In the **New Project** window, click **ASP.NET Web Forms Application**.</span></span>  
+2.  <span data-ttu-id="07800-133">Dans la fenêtre **Nouveau projet**, cliquez sur **Application Web Forms ASP.NET**.</span><span class="sxs-lookup"><span data-stu-id="07800-133">In the **New Project** window, click **ASP.NET Web Forms Application**.</span></span>  
   
-3.  <span data-ttu-id="5860a-134">Dans **Nom**, entrez `TestApp` et appuyez sur **OK**.</span><span class="sxs-lookup"><span data-stu-id="5860a-134">In **Name**, enter `TestApp` and press **OK**.</span></span>  
+3.  <span data-ttu-id="07800-134">Dans **Nom**, entrez `TestApp` et appuyez sur **OK**.</span><span class="sxs-lookup"><span data-stu-id="07800-134">In **Name**, enter `TestApp` and press **OK**.</span></span>  
   
-## <a name="step-2--configure-aspnet-web-forms-application-for-claims-using-forms-authentication"></a><span data-ttu-id="5860a-135">Étape 2 : Configurer l’application Web Forms ASP.NET pour les revendications à l’aide de l’authentification par formulaire</span><span class="sxs-lookup"><span data-stu-id="5860a-135">Step 2 – Configure ASP.NET Web Forms Application for Claims Using Forms Authentication</span></span>  
- <span data-ttu-id="5860a-136">Lors de cette étape, vous allez ajouter une entrée de configuration au fichier de configuration *Web.config* et modifier le fichier *Default.aspx* pour afficher les informations sur les revendications d’un compte.</span><span class="sxs-lookup"><span data-stu-id="5860a-136">In this step you will add a configuration entry to the *Web.config* configuration file and edit the *Default.aspx* file to display claims information for an account.</span></span>  
+## <a name="step-2--configure-aspnet-web-forms-application-for-claims-using-forms-authentication"></a><span data-ttu-id="07800-135">Étape 2 : Configurer l’application Web Forms ASP.NET pour les revendications à l’aide de l’authentification par formulaire</span><span class="sxs-lookup"><span data-stu-id="07800-135">Step 2 – Configure ASP.NET Web Forms Application for Claims Using Forms Authentication</span></span>  
+ <span data-ttu-id="07800-136">Lors de cette étape, vous allez ajouter une entrée de configuration au fichier de configuration *Web.config* et modifier le fichier *Default.aspx* pour afficher les informations sur les revendications d’un compte.</span><span class="sxs-lookup"><span data-stu-id="07800-136">In this step you will add a configuration entry to the *Web.config* configuration file and edit the *Default.aspx* file to display claims information for an account.</span></span>  
   
-#### <a name="to-configure-aspnet-application-for-claims-using-forms-authentication"></a><span data-ttu-id="5860a-137">Pour configurer une application ASP.NET pour les revendications à l’aide de l’authentification par formulaire</span><span class="sxs-lookup"><span data-stu-id="5860a-137">To configure ASP.NET application for claims using Forms authentication</span></span>  
+#### <a name="to-configure-aspnet-application-for-claims-using-forms-authentication"></a><span data-ttu-id="07800-137">Pour configurer une application ASP.NET pour les revendications à l’aide de l’authentification par formulaire</span><span class="sxs-lookup"><span data-stu-id="07800-137">To configure ASP.NET application for claims using Forms authentication</span></span>  
   
-1.  <span data-ttu-id="5860a-138">Dans le fichier *Default.aspx*, remplacez le balisage existant par le code suivant :</span><span class="sxs-lookup"><span data-stu-id="5860a-138">In the *Default.aspx* file, replace the existing markup with the following:</span></span>  
+1.  <span data-ttu-id="07800-138">Dans le fichier *Default.aspx*, remplacez le balisage existant par le code suivant :</span><span class="sxs-lookup"><span data-stu-id="07800-138">In the *Default.aspx* file, replace the existing markup with the following:</span></span>  
   
     ```  
     <%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="TestApp._Default" %>  
@@ -98,9 +89,9 @@ ms.lasthandoff: 12/22/2017
     </asp:Content>  
     ```  
   
-     <span data-ttu-id="5860a-139">Cette étape ajoute un contrôle GridView à votre page *Default.aspx* qui sera remplie avec les revendications récupérées à partir de l’authentification par formulaire.</span><span class="sxs-lookup"><span data-stu-id="5860a-139">This step adds a GridView control to your *Default.aspx* page that will be populated with the claims retrieved from Forms authentication.</span></span>  
+     <span data-ttu-id="07800-139">Cette étape ajoute un contrôle GridView à votre page *Default.aspx* qui sera remplie avec les revendications récupérées à partir de l’authentification par formulaire.</span><span class="sxs-lookup"><span data-stu-id="07800-139">This step adds a GridView control to your *Default.aspx* page that will be populated with the claims retrieved from Forms authentication.</span></span>  
   
-2.  <span data-ttu-id="5860a-140">Enregistrez le fichier *Default.aspx*, puis ouvrez son fichier code-behind nommé *Default.aspx.cs*.</span><span class="sxs-lookup"><span data-stu-id="5860a-140">Save the *Default.aspx* file, then open its code-behind file named *Default.aspx.cs*.</span></span> <span data-ttu-id="5860a-141">Remplacez le code existant par le code ci-dessous :</span><span class="sxs-lookup"><span data-stu-id="5860a-141">Replace the existing code with the following:</span></span>  
+2.  <span data-ttu-id="07800-140">Enregistrez le fichier *Default.aspx*, puis ouvrez son fichier code-behind nommé *Default.aspx.cs*.</span><span class="sxs-lookup"><span data-stu-id="07800-140">Save the *Default.aspx* file, then open its code-behind file named *Default.aspx.cs*.</span></span> <span data-ttu-id="07800-141">Remplacez le code existant par le code ci-dessous :</span><span class="sxs-lookup"><span data-stu-id="07800-141">Replace the existing code with the following:</span></span>  
   
     ```csharp  
     using System;  
@@ -125,15 +116,15 @@ ms.lasthandoff: 12/22/2017
     }  
     ```  
   
-     <span data-ttu-id="5860a-142">Le code ci-dessus affiche les revendications relatives à un utilisateur authentifié, y compris les utilisateurs identifiés par l’authentification par formulaire.</span><span class="sxs-lookup"><span data-stu-id="5860a-142">The above code will display claims about an authenticated user, including users identified by Forms authentication.</span></span>  
+     <span data-ttu-id="07800-142">Le code ci-dessus affiche les revendications relatives à un utilisateur authentifié, y compris les utilisateurs identifiés par l’authentification par formulaire.</span><span class="sxs-lookup"><span data-stu-id="07800-142">The above code will display claims about an authenticated user, including users identified by Forms authentication.</span></span>  
   
-## <a name="step-3--test-your-solution"></a><span data-ttu-id="5860a-143">Étape 3 : tester votre solution</span><span class="sxs-lookup"><span data-stu-id="5860a-143">Step 3 – Test Your Solution</span></span>  
- <span data-ttu-id="5860a-144">Dans cette étape, vous allez tester votre application Web Forms ASP.NET et vérifier que les revendications sont présentées à l’utilisateur qui se connecte à l’aide de l’authentification par formulaire.</span><span class="sxs-lookup"><span data-stu-id="5860a-144">In this step you will test your ASP.NET Web Forms application, and verify that claims are presented when a user signs in with Forms authentication.</span></span>  
+## <a name="step-3--test-your-solution"></a><span data-ttu-id="07800-143">Étape 3 : tester votre solution</span><span class="sxs-lookup"><span data-stu-id="07800-143">Step 3 – Test Your Solution</span></span>  
+ <span data-ttu-id="07800-144">Dans cette étape, vous allez tester votre application Web Forms ASP.NET et vérifier que les revendications sont présentées à l’utilisateur qui se connecte à l’aide de l’authentification par formulaire.</span><span class="sxs-lookup"><span data-stu-id="07800-144">In this step you will test your ASP.NET Web Forms application, and verify that claims are presented when a user signs in with Forms authentication.</span></span>  
   
-#### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-forms-authentication"></a><span data-ttu-id="5860a-145">Pour tester votre application Web Forms ASP.NET pour les revendications à l’aide de l’authentification par formulaire</span><span class="sxs-lookup"><span data-stu-id="5860a-145">To test your ASP.NET Web Forms application for claims using Forms authentication</span></span>  
+#### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-forms-authentication"></a><span data-ttu-id="07800-145">Pour tester votre application Web Forms ASP.NET pour les revendications à l’aide de l’authentification par formulaire</span><span class="sxs-lookup"><span data-stu-id="07800-145">To test your ASP.NET Web Forms application for claims using Forms authentication</span></span>  
   
-1.  <span data-ttu-id="5860a-146">Appuyez sur **F5** pour générer et exécuter l’application.</span><span class="sxs-lookup"><span data-stu-id="5860a-146">Press **F5** to build and run the application.</span></span> <span data-ttu-id="5860a-147">La page *Default.aspx* doit s’afficher, avec des liens **Register** et **Log in** en haut à droite.</span><span class="sxs-lookup"><span data-stu-id="5860a-147">You should be presented with *Default.aspx*, which has **Register** and **Log in** links in the top right of the page.</span></span> <span data-ttu-id="5860a-148">Cliquez sur **Register**.</span><span class="sxs-lookup"><span data-stu-id="5860a-148">Click **Register**.</span></span>  
+1.  <span data-ttu-id="07800-146">Appuyez sur **F5** pour générer et exécuter l’application.</span><span class="sxs-lookup"><span data-stu-id="07800-146">Press **F5** to build and run the application.</span></span> <span data-ttu-id="07800-147">La page *Default.aspx* doit s’afficher, avec des liens **Register** et **Log in** en haut à droite.</span><span class="sxs-lookup"><span data-stu-id="07800-147">You should be presented with *Default.aspx*, which has **Register** and **Log in** links in the top right of the page.</span></span> <span data-ttu-id="07800-148">Cliquez sur **Register**.</span><span class="sxs-lookup"><span data-stu-id="07800-148">Click **Register**.</span></span>  
   
-2.  <span data-ttu-id="5860a-149">Dans la page **Register**, créez un compte d’utilisateur, puis cliquez sur **Register**.</span><span class="sxs-lookup"><span data-stu-id="5860a-149">On the **Register** page, create a user account, and then click **Register**.</span></span> <span data-ttu-id="5860a-150">Votre compte sera créé à l’aide de l’authentification par formulaire, et vous serez connecté automatiquement.</span><span class="sxs-lookup"><span data-stu-id="5860a-150">Your account will be created using Forms authentication, and you will be automatically signed in.</span></span>  
+2.  <span data-ttu-id="07800-149">Dans la page **Register**, créez un compte d’utilisateur, puis cliquez sur **Register**.</span><span class="sxs-lookup"><span data-stu-id="07800-149">On the **Register** page, create a user account, and then click **Register**.</span></span> <span data-ttu-id="07800-150">Votre compte sera créé à l’aide de l’authentification par formulaire, et vous serez connecté automatiquement.</span><span class="sxs-lookup"><span data-stu-id="07800-150">Your account will be created using Forms authentication, and you will be automatically signed in.</span></span>  
   
-3.  <span data-ttu-id="5860a-151">Après avoir été redirigé vers la page d’accueil, vous devriez voir sous l’en-tête **Your Claims** une table qui inclut les informations de revendications **Issuer**, **OriginalIssuer**, **Type**, **Value** et **ValueType** relatives à votre compte.</span><span class="sxs-lookup"><span data-stu-id="5860a-151">After you have been redirected to the home page, you should see a table beneath the **Your Claims** heading that includes the **Issuer**, **OriginalIssuer**, **Type**, **Value**, and **ValueType** claims information about your account.</span></span>
+3.  <span data-ttu-id="07800-151">Après avoir été redirigé vers la page d’accueil, vous devriez voir sous l’en-tête **Your Claims** une table qui inclut les informations de revendications **Issuer**, **OriginalIssuer**, **Type**, **Value** et **ValueType** relatives à votre compte.</span><span class="sxs-lookup"><span data-stu-id="07800-151">After you have been redirected to the home page, you should see a table beneath the **Your Claims** heading that includes the **Issuer**, **OriginalIssuer**, **Type**, **Value**, and **ValueType** claims information about your account.</span></span>
