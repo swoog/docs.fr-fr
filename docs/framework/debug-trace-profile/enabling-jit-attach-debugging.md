@@ -1,50 +1,41 @@
 ---
-title: "Activation du débogage JIT-attach"
-ms.custom: 
+title: Activation du débogage JIT-attach
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - JIT-attach debugging
 - debugging [.NET Framework], JIT-attach debugging
 ms.assetid: f91fc5f7-de5a-4f23-b6ac-f450e63c662e
-caps.latest.revision: "17"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 71b2e95076edbda3a67a84c9185d8b689c158e12
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 67db256f4c328b12d6cc30abfbe5d5ccc12e8b0a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397830"
 ---
-# <a name="enabling-jit-attach-debugging"></a><span data-ttu-id="0544d-102">Activation du débogage JIT-attach</span><span class="sxs-lookup"><span data-stu-id="0544d-102">Enabling JIT-Attach Debugging</span></span>
-<span data-ttu-id="0544d-103">Débogage JIT-attach est l’expression utilisée pour décrire l’attachement d’un débogueur à un processus quand vous rencontrez des erreurs. Le débogage JIT-attach peut aussi être déclenché par des méthodes ou des fonctions spécifiques.</span><span class="sxs-lookup"><span data-stu-id="0544d-103">JIT-attach debugging is the phrase used to describe attaching a debugger to a process when you encounter errors, or it can be triggered by specific methods or functions.</span></span>  
+# <a name="enabling-jit-attach-debugging"></a><span data-ttu-id="d13b9-102">Activation du débogage JIT-attach</span><span class="sxs-lookup"><span data-stu-id="d13b9-102">Enabling JIT-Attach Debugging</span></span>
+<span data-ttu-id="d13b9-103">Débogage JIT-attach est l’expression utilisée pour décrire l’attachement d’un débogueur à un processus quand vous rencontrez des erreurs. Le débogage JIT-attach peut aussi être déclenché par des méthodes ou des fonctions spécifiques.</span><span class="sxs-lookup"><span data-stu-id="d13b9-103">JIT-attach debugging is the phrase used to describe attaching a debugger to a process when you encounter errors, or it can be triggered by specific methods or functions.</span></span>  
   
- <span data-ttu-id="0544d-104">Le débogage JIT-attach est utilisé dans les conditions d’erreur suivantes :</span><span class="sxs-lookup"><span data-stu-id="0544d-104">JIT-attach debugging is used under the following fault conditions:</span></span>  
+ <span data-ttu-id="d13b9-104">Le débogage JIT-attach est utilisé dans les conditions d’erreur suivantes :</span><span class="sxs-lookup"><span data-stu-id="d13b9-104">JIT-attach debugging is used under the following fault conditions:</span></span>  
   
--   <span data-ttu-id="0544d-105">Exceptions non gérées (dans le code natif et managé)</span><span class="sxs-lookup"><span data-stu-id="0544d-105">Unhandled exceptions (in both native and managed code).</span></span>  
+-   <span data-ttu-id="d13b9-105">Exceptions non gérées (dans le code natif et managé)</span><span class="sxs-lookup"><span data-stu-id="d13b9-105">Unhandled exceptions (in both native and managed code).</span></span>  
   
--   <span data-ttu-id="0544d-106">Méthode <xref:System.Environment.FailFast%2A?displayProperty=nameWithType> ou fonction [RaiseFailFastException](http://go.microsoft.com/fwlink/?LinkId=182107) (famille Windows 7)</span><span class="sxs-lookup"><span data-stu-id="0544d-106"><xref:System.Environment.FailFast%2A?displayProperty=nameWithType> method or [RaiseFailFastException](http://go.microsoft.com/fwlink/?LinkId=182107) function (Windows 7 family).</span></span>  
+-   <span data-ttu-id="d13b9-106">Méthode <xref:System.Environment.FailFast%2A?displayProperty=nameWithType> ou fonction [RaiseFailFastException](http://go.microsoft.com/fwlink/?LinkId=182107) (famille Windows 7)</span><span class="sxs-lookup"><span data-stu-id="d13b9-106"><xref:System.Environment.FailFast%2A?displayProperty=nameWithType> method or [RaiseFailFastException](http://go.microsoft.com/fwlink/?LinkId=182107) function (Windows 7 family).</span></span>  
   
--   <span data-ttu-id="0544d-107">Erreurs irrécupérables du runtime</span><span class="sxs-lookup"><span data-stu-id="0544d-107">Runtime fatal errors.</span></span>  
+-   <span data-ttu-id="d13b9-107">Erreurs irrécupérables du runtime</span><span class="sxs-lookup"><span data-stu-id="d13b9-107">Runtime fatal errors.</span></span>  
   
- <span data-ttu-id="0544d-108">Le débogage JIT-attach est également déclenché par des appels aux fonctions et méthodes suivantes :</span><span class="sxs-lookup"><span data-stu-id="0544d-108">JIT-attach debugging is also triggered by calls to the following methods and functions:</span></span>  
+ <span data-ttu-id="d13b9-108">Le débogage JIT-attach est également déclenché par des appels aux fonctions et méthodes suivantes :</span><span class="sxs-lookup"><span data-stu-id="d13b9-108">JIT-attach debugging is also triggered by calls to the following methods and functions:</span></span>  
   
--   <span data-ttu-id="0544d-109">Méthode <xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="0544d-109"><xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType> method.</span></span>  
+-   <span data-ttu-id="d13b9-109">Méthode <xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="d13b9-109"><xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType> method.</span></span>  
   
--   <span data-ttu-id="0544d-110">Méthode <xref:System.Diagnostics.Debugger.Break%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="0544d-110"><xref:System.Diagnostics.Debugger.Break%2A?displayProperty=nameWithType> method.</span></span>  
+-   <span data-ttu-id="d13b9-110">Méthode <xref:System.Diagnostics.Debugger.Break%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="d13b9-110"><xref:System.Diagnostics.Debugger.Break%2A?displayProperty=nameWithType> method.</span></span>  
   
--   <span data-ttu-id="0544d-111">Fonction [DebugBreak](http://go.microsoft.com/fwlink/?LinkId=182106) (Win32)</span><span class="sxs-lookup"><span data-stu-id="0544d-111">[DebugBreak](http://go.microsoft.com/fwlink/?LinkId=182106) function (Win32).</span></span>  
+-   <span data-ttu-id="d13b9-111">Fonction [DebugBreak](http://go.microsoft.com/fwlink/?LinkId=182106) (Win32)</span><span class="sxs-lookup"><span data-stu-id="d13b9-111">[DebugBreak](http://go.microsoft.com/fwlink/?LinkId=182106) function (Win32).</span></span>  
   
- <span data-ttu-id="0544d-112">Avant le [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], le .NET Framework fournissait des clés de Registre distinctes pour contrôler le comportement des débogueurs natifs et managés.</span><span class="sxs-lookup"><span data-stu-id="0544d-112">Before the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], the .NET Framework provided separate registry keys to control the behavior of native and managed debuggers.</span></span> <span data-ttu-id="0544d-113">À compter du [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], le contrôle est consolidé sous une clé de Registre unique : HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\Current Version\AeDebug.</span><span class="sxs-lookup"><span data-stu-id="0544d-113">Starting with the [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], control is consolidated under a single registry key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\Current Version\AeDebug.</span></span> <span data-ttu-id="0544d-114">Les valeurs que vous pouvez définir pour cette clé déterminent si un débogueur est appelé et, dans l’affirmative, s’il est appelé avec une boîte de dialogue qui nécessite une interaction utilisateur.</span><span class="sxs-lookup"><span data-stu-id="0544d-114">The values you can set for that key determine whether a debugger is invoked, and, if so, whether it is invoked with a dialog box that requires user interaction.</span></span> <span data-ttu-id="0544d-115">Pour plus d’informations sur la définition de cette clé de Registre, consultez [configuration du débogage automatique](http://go.microsoft.com/fwlink/?LinkId=181767).</span><span class="sxs-lookup"><span data-stu-id="0544d-115">For information about setting this registry key, see [Configuring Automatic Debugging](http://go.microsoft.com/fwlink/?LinkId=181767).</span></span>  
+ <span data-ttu-id="d13b9-112">Avant le [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], le .NET Framework fournissait des clés de Registre distinctes pour contrôler le comportement des débogueurs natifs et managés.</span><span class="sxs-lookup"><span data-stu-id="d13b9-112">Before the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], the .NET Framework provided separate registry keys to control the behavior of native and managed debuggers.</span></span> <span data-ttu-id="d13b9-113">À compter du [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], le contrôle est consolidé sous une clé de Registre unique : HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\Current Version\AeDebug.</span><span class="sxs-lookup"><span data-stu-id="d13b9-113">Starting with the [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], control is consolidated under a single registry key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\Current Version\AeDebug.</span></span> <span data-ttu-id="d13b9-114">Les valeurs que vous pouvez définir pour cette clé déterminent si un débogueur est appelé et, dans l’affirmative, s’il est appelé avec une boîte de dialogue qui nécessite une interaction utilisateur.</span><span class="sxs-lookup"><span data-stu-id="d13b9-114">The values you can set for that key determine whether a debugger is invoked, and, if so, whether it is invoked with a dialog box that requires user interaction.</span></span> <span data-ttu-id="d13b9-115">Pour plus d’informations sur la définition de cette clé de Registre, consultez [configuration du débogage automatique](http://go.microsoft.com/fwlink/?LinkId=181767).</span><span class="sxs-lookup"><span data-stu-id="d13b9-115">For information about setting this registry key, see [Configuring Automatic Debugging](http://go.microsoft.com/fwlink/?LinkId=181767).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0544d-116">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="0544d-116">See Also</span></span>  
- [<span data-ttu-id="0544d-117">Débogage, traçage et profilage</span><span class="sxs-lookup"><span data-stu-id="0544d-117">Debugging, Tracing, and Profiling</span></span>](../../../docs/framework/debug-trace-profile/index.md)  
- [<span data-ttu-id="0544d-118">Simplification du débogage d’une image</span><span class="sxs-lookup"><span data-stu-id="0544d-118">Making an Image Easier to Debug</span></span>](../../../docs/framework/debug-trace-profile/making-an-image-easier-to-debug.md)  
- [<span data-ttu-id="0544d-119">Activation du profilage</span><span class="sxs-lookup"><span data-stu-id="0544d-119">Enabling Profiling</span></span>](http://msdn.microsoft.com/library/3b669676-f0e0-4ebf-8674-68986dd2020d)
+## <a name="see-also"></a><span data-ttu-id="d13b9-116">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="d13b9-116">See Also</span></span>  
+ [<span data-ttu-id="d13b9-117">Débogage, traçage et profilage</span><span class="sxs-lookup"><span data-stu-id="d13b9-117">Debugging, Tracing, and Profiling</span></span>](../../../docs/framework/debug-trace-profile/index.md)  
+ [<span data-ttu-id="d13b9-118">Simplification du débogage d’une image</span><span class="sxs-lookup"><span data-stu-id="d13b9-118">Making an Image Easier to Debug</span></span>](../../../docs/framework/debug-trace-profile/making-an-image-easier-to-debug.md)  
+ [<span data-ttu-id="d13b9-119">Activation du profilage</span><span class="sxs-lookup"><span data-stu-id="d13b9-119">Enabling Profiling</span></span>](http://msdn.microsoft.com/library/3b669676-f0e0-4ebf-8674-68986dd2020d)

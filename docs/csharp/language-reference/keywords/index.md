@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33289150"
 ---
 # <a name="c-keywords"></a><span data-ttu-id="0b45c-102">Mots clés C#</span><span class="sxs-lookup"><span data-stu-id="0b45c-102">C# Keywords</span></span>
 <span data-ttu-id="0b45c-103">Les mots clés sont des identificateurs réservés prédéfinis, qui ont des significations spécifiques pour le compilateur.</span><span class="sxs-lookup"><span data-stu-id="0b45c-103">Keywords are predefined, reserved identifiers that have special meanings to the compiler.</span></span> <span data-ttu-id="0b45c-104">Ils ne peuvent pas être utilisés comme identificateurs dans votre programme, sauf s’ils incluent `@` comme préfixe.</span><span class="sxs-lookup"><span data-stu-id="0b45c-104">They cannot be used as identifiers in your program unless they include `@` as a prefix.</span></span> <span data-ttu-id="0b45c-105">Par exemple, `@if` est un identificateur valide, mais pas `if`, car `if` est un mot clé.</span><span class="sxs-lookup"><span data-stu-id="0b45c-105">For example, `@if` is a valid identifier, but `if` is not because `if` is a keyword.</span></span>  

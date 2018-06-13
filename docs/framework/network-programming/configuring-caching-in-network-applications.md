@@ -1,42 +1,34 @@
 ---
-title: "Configuration de la mise en cache dans les applications réseau"
-ms.custom: 
+title: Configuration de la mise en cache dans les applications réseau
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - cache [.NET Framework], configuring
 ms.assetid: 3f694a1c-de5d-47cf-a6eb-cfc369fb8a9f
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: fe70c8952451f5af8ac46549919ca164816819e5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 2213b5401c7b82771dcf7a1c982f1b3d0f347832
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33395256"
 ---
-# <a name="configuring-caching-in-network-applications"></a><span data-ttu-id="d6818-102">Configuration de la mise en cache dans les applications réseau</span><span class="sxs-lookup"><span data-stu-id="d6818-102">Configuring Caching in Network Applications</span></span>
-<span data-ttu-id="d6818-103">Pour configurer la mise en cache, vous devez spécifier une stratégie de cache au niveau de l’application ou au niveau de <xref:System.Net.WebRequest>.</span><span class="sxs-lookup"><span data-stu-id="d6818-103">To configure caching, you must specify a cache policy at the application or <xref:System.Net.WebRequest> level.</span></span> <span data-ttu-id="d6818-104">Les rubriques suivantes fournissent des exemples de code qui illustrent la configuration des applications et des requêtes afin d’utiliser la mise en cache.</span><span class="sxs-lookup"><span data-stu-id="d6818-104">The following topics provide code examples that demonstrate configuring applications and requests to use caching.</span></span>  
+# <a name="configuring-caching-in-network-applications"></a><span data-ttu-id="6861d-102">Configuration de la mise en cache dans les applications réseau</span><span class="sxs-lookup"><span data-stu-id="6861d-102">Configuring Caching in Network Applications</span></span>
+<span data-ttu-id="6861d-103">Pour configurer la mise en cache, vous devez spécifier une stratégie de cache au niveau de l’application ou au niveau de <xref:System.Net.WebRequest>.</span><span class="sxs-lookup"><span data-stu-id="6861d-103">To configure caching, you must specify a cache policy at the application or <xref:System.Net.WebRequest> level.</span></span> <span data-ttu-id="6861d-104">Les rubriques suivantes fournissent des exemples de code qui illustrent la configuration des applications et des requêtes afin d’utiliser la mise en cache.</span><span class="sxs-lookup"><span data-stu-id="6861d-104">The following topics provide code examples that demonstrate configuring applications and requests to use caching.</span></span>  
   
--   [<span data-ttu-id="d6818-105">Guide pratique pour définir une stratégie de cache basée sur l’emplacement pour une application</span><span class="sxs-lookup"><span data-stu-id="d6818-105">How to: Set a Location-Based Cache Policy for an Application</span></span>](../../../docs/framework/network-programming/how-to-set-a-location-based-cache-policy-for-an-application.md)  
+-   [<span data-ttu-id="6861d-105">Guide pratique pour définir une stratégie de cache basée sur l’emplacement pour une application</span><span class="sxs-lookup"><span data-stu-id="6861d-105">How to: Set a Location-Based Cache Policy for an Application</span></span>](../../../docs/framework/network-programming/how-to-set-a-location-based-cache-policy-for-an-application.md)  
   
--   [<span data-ttu-id="d6818-106">Guide pratique pour définir la stratégie de cache à durée définie par défaut pour une application</span><span class="sxs-lookup"><span data-stu-id="d6818-106">How to: Set the Default Time-Based Cache Policy for an Application</span></span>](../../../docs/framework/network-programming/how-to-set-the-default-time-based-cache-policy-for-an-application.md)  
+-   [<span data-ttu-id="6861d-106">Guide pratique pour définir la stratégie de cache à durée définie par défaut pour une application</span><span class="sxs-lookup"><span data-stu-id="6861d-106">How to: Set the Default Time-Based Cache Policy for an Application</span></span>](../../../docs/framework/network-programming/how-to-set-the-default-time-based-cache-policy-for-an-application.md)  
   
--   [<span data-ttu-id="d6818-107">Guide pratique pour personnaliser une stratégie de cache basée sur la durée</span><span class="sxs-lookup"><span data-stu-id="d6818-107">How to: Customize a Time-Based Cache Policy</span></span>](../../../docs/framework/network-programming/how-to-customize-a-time-based-cache-policy.md)  
+-   [<span data-ttu-id="6861d-107">Guide pratique pour personnaliser une stratégie de cache basée sur la durée</span><span class="sxs-lookup"><span data-stu-id="6861d-107">How to: Customize a Time-Based Cache Policy</span></span>](../../../docs/framework/network-programming/how-to-customize-a-time-based-cache-policy.md)  
   
--   [<span data-ttu-id="d6818-108">Guide pratique pour définir une stratégie de cache pour une requête</span><span class="sxs-lookup"><span data-stu-id="d6818-108">How to: Set Cache Policy for a Request</span></span>](../../../docs/framework/network-programming/how-to-set-cache-policy-for-a-request.md)  
+-   [<span data-ttu-id="6861d-108">Guide pratique pour définir une stratégie de cache pour une requête</span><span class="sxs-lookup"><span data-stu-id="6861d-108">How to: Set Cache Policy for a Request</span></span>](../../../docs/framework/network-programming/how-to-set-cache-policy-for-a-request.md)  
   
- <span data-ttu-id="d6818-109">Vous pouvez également configurer la stratégie de cache à l’aide de fichiers de configuration d’application ou d’ordinateur.</span><span class="sxs-lookup"><span data-stu-id="d6818-109">You can also configure cache policy using application or machine configuration files.</span></span> <span data-ttu-id="d6818-110">Pour plus d’informations, consultez &#124; [\<requestCaching>, élément (paramètres réseau)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md).</span><span class="sxs-lookup"><span data-stu-id="d6818-110">For more information, see &#124; [\<requestCaching> Element (Network Settings)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md).</span></span>  
+ <span data-ttu-id="6861d-109">Vous pouvez également configurer la stratégie de cache à l’aide de fichiers de configuration d’application ou d’ordinateur.</span><span class="sxs-lookup"><span data-stu-id="6861d-109">You can also configure cache policy using application or machine configuration files.</span></span> <span data-ttu-id="6861d-110">Pour plus d’informations, consultez &#124; [\<requestCaching>, élément (paramètres réseau)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md).</span><span class="sxs-lookup"><span data-stu-id="6861d-110">For more information, see &#124; [\<requestCaching> Element (Network Settings)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d6818-111">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="d6818-111">See Also</span></span>  
- [<span data-ttu-id="d6818-112">Gestion du cache pour les applications réseau</span><span class="sxs-lookup"><span data-stu-id="d6818-112">Cache Management for Network Applications</span></span>](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
- [<span data-ttu-id="d6818-113">Stratégie de cache</span><span class="sxs-lookup"><span data-stu-id="d6818-113">Cache Policy</span></span>](../../../docs/framework/network-programming/cache-policy.md)  
- [<span data-ttu-id="d6818-114">Stratégies de cache basées sur l’emplacement</span><span class="sxs-lookup"><span data-stu-id="d6818-114">Location-Based Cache Policies</span></span>](../../../docs/framework/network-programming/location-based-cache-policies.md)  
- [<span data-ttu-id="d6818-115">Stratégies de cache basées sur la durée</span><span class="sxs-lookup"><span data-stu-id="d6818-115">Time-Based Cache Policies</span></span>](../../../docs/framework/network-programming/time-based-cache-policies.md)
+## <a name="see-also"></a><span data-ttu-id="6861d-111">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="6861d-111">See Also</span></span>  
+ [<span data-ttu-id="6861d-112">Gestion du cache pour les applications réseau</span><span class="sxs-lookup"><span data-stu-id="6861d-112">Cache Management for Network Applications</span></span>](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
+ [<span data-ttu-id="6861d-113">Stratégie de cache</span><span class="sxs-lookup"><span data-stu-id="6861d-113">Cache Policy</span></span>](../../../docs/framework/network-programming/cache-policy.md)  
+ [<span data-ttu-id="6861d-114">Stratégies de cache basées sur l’emplacement</span><span class="sxs-lookup"><span data-stu-id="6861d-114">Location-Based Cache Policies</span></span>](../../../docs/framework/network-programming/location-based-cache-policies.md)  
+ [<span data-ttu-id="6861d-115">Stratégies de cache basées sur la durée</span><span class="sxs-lookup"><span data-stu-id="6861d-115">Time-Based Cache Policies</span></span>](../../../docs/framework/network-programming/time-based-cache-policies.md)

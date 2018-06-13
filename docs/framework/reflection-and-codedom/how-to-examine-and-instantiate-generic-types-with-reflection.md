@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397570"
 ---
 # <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a><span data-ttu-id="5bef0-102">Guide pratique pour examiner et instancier des types génériques avec la réflexion</span><span class="sxs-lookup"><span data-stu-id="5bef0-102">How to: Examine and Instantiate Generic Types with Reflection</span></span>
 <span data-ttu-id="5bef0-103">Les informations sur les types génériques s’obtiennent de la même façon que les informations sur les autres types : en examinant un objet <xref:System.Type> qui représente le type générique.</span><span class="sxs-lookup"><span data-stu-id="5bef0-103">Information about generic types is obtained in the same way as information about other types: by examining a <xref:System.Type> object that represents the generic type.</span></span> <span data-ttu-id="5bef0-104">La principale différence est qu’un type générique a une liste d’objets <xref:System.Type> représentant ses paramètres de type générique.</span><span class="sxs-lookup"><span data-stu-id="5bef0-104">The principle difference is that a generic type has a list of <xref:System.Type> objects representing its generic type parameters.</span></span> <span data-ttu-id="5bef0-105">La première procédure de cette section examine les types génériques.</span><span class="sxs-lookup"><span data-stu-id="5bef0-105">The first procedure in this section examines generic types.</span></span>  

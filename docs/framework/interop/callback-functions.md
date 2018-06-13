@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397388"
 ---
 # <a name="callback-functions"></a><span data-ttu-id="ccbce-102">Fonctions de rappel</span><span class="sxs-lookup"><span data-stu-id="ccbce-102">Callback Functions</span></span>
 <span data-ttu-id="ccbce-103">Une fonction de rappel désigne du code figurant dans une application managée qui permet à une fonction DLL non managée d’effectuer une tâche.</span><span class="sxs-lookup"><span data-stu-id="ccbce-103">A callback function is code within a managed application that helps an unmanaged DLL function complete a task.</span></span> <span data-ttu-id="ccbce-104">Les appels à une fonction de rappel sont indirectement passés depuis une application managée via une fonction DLL avant de revenir à l’implémentation managée.</span><span class="sxs-lookup"><span data-stu-id="ccbce-104">Calls to a callback function pass indirectly from a managed application, through a DLL function, and back to the managed implementation.</span></span> <span data-ttu-id="ccbce-105">Certaines des nombreuses fonctions DLL appelées à l’aide de l’appel de code non managé nécessitent une fonction de rappel dans du code managé pour fonctionner correctement.</span><span class="sxs-lookup"><span data-stu-id="ccbce-105">Some of the many DLL functions called with platform invoke require a callback function in managed code to run properly.</span></span>  
