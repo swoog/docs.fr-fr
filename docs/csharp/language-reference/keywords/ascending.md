@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33213495"
 ---
 # <a name="ascending-c-reference"></a>ascending (Référence C#)
 Le mot clé contextuel `ascending` est utilisé dans la [clause orderby](../../../csharp/language-reference/keywords/orderby-clause.md) dans les expressions de requête afin de spécifier que l’ordre de tri est du plus petit au plus grand. `ascending` étant l’ordre de tri par défaut, vous n’avez pas à le spécifier.  

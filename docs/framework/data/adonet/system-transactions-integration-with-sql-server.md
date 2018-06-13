@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365746"
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>Intégration de System.Transactions à SQL Server
 La version 2.0 du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] a introduit une nouvelle infrastructure de transactions à laquelle il est possible d'accéder via l'espace de noms <xref:System.Transactions> . Cette infrastructure expose des transactions de manière totalement intégrée au [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], y compris à [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515396"
 ---
 # <a name="basic-usage-of-sendparameters-and-receiveparameters-activities"></a>Utilisation de base des activités SendParameters et ReceiveParameters
 Cet exemple illustre l'utilisation des activités <xref:System.ServiceModel.Activities.SendParametersContent> et <xref:System.ServiceModel.Activities.ReceiveParametersContent>. Le service expose une opération qui accepte un argument de type chaîne et retourne l'entrée au client. L'exemple montre comment configurer les paramètres pour ces activités de messagerie.  

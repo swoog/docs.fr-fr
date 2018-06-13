@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523886"
 ---
 # <a name="graphics-paths-in-gdi"></a>Tracés graphiques dans GDI+
 Chemins d’accès sont formées en combinant des lignes, des rectangles et des courbes simples. Rappelez la [vue d’ensemble des graphiques vectoriels](../../../../docs/framework/winforms/advanced/vector-graphics-overview.md) que les blocs de construction de base suivantes se sont avérés les plus utiles pour dessiner des images :  

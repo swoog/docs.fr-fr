@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521552"
 ---
 # <a name="cropping-and-scaling-images-in-gdi"></a>Rognage et mise à l'échelle d'images dans GDI+
 Vous pouvez utiliser la <xref:System.Drawing.Graphics.DrawImage%2A> méthode de la <xref:System.Drawing.Graphics> classe pour dessiner et positionner des images vectorielles et des images raster. <xref:System.Drawing.Graphics.DrawImage%2A> est une méthode surchargée, il existe plusieurs façons, vous pouvez lui fournir avec des arguments.  

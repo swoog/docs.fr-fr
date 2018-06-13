@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355296"
 ---
 # <a name="specifying-xml-values-as-parameters"></a>Spécification de valeurs XML comme paramètres
 Si une requête requiert un paramètre dont la valeur est une chaîne XML, les développeurs peuvent fournir cette valeur à l’aide d’une instance de la **SqlXml** type de données. Il n’y a pas d’astuces ; Colonnes XML dans SQL Server acceptent les valeurs de paramètre d’exactement la même façon que d’autres types de données.  

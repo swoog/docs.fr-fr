@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513547"
 ---
 # <a name="binding-a-custom-activity-property-to-a-designer-control"></a>Liaison d’une propriété d’activité personnalisée à un contrôle de concepteur
 La liaison contrôle de concepteur de zone de texte à un argument d’activité est assez simple . Toutefois, la liaison d’un contrôle de concepteur complexe (tel qu’une zone de liste déroulante) à un argument d’activité peut poser des problèmes. Cette rubrique explique comment lier un argument d'activité à un contrôle de zone de liste déroulante sur un concepteur d'activités personnalisées.  

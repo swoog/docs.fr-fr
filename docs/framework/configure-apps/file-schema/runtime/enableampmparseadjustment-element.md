@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752817"
 ---
 # <a name="ltenableampmparseadjustmentgt-element"></a>&lt;EnableAmPmParseAdjustment&gt; élément
 Détermine si date et heure de méthodes d’analyse utilisent un ensemble ajusté de règles pour analyser des chaînes de date qui contiennent un jour, un mois, une heure et un indicateur AM/PM.  

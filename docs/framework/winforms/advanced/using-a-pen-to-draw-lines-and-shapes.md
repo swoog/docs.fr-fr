@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524340"
 ---
 # <a name="using-a-pen-to-draw-lines-and-shapes"></a>Utilisation d'un stylet pour dessiner des lignes et des formes
 Utilisez [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] `Pen` objets pour dessiner des segments de ligne, des courbes et des contours des formes. Dans cette section, *ligne* fait référence à un de ces éléments, sauf si spécifié pour n'indiquer qu’un segment de ligne. Définir les propriétés d’un stylet pour contrôler la couleur, largeur, l’alignement et le style des lignes dessinées avec ce stylet.  

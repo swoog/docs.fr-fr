@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518773"
 ---
 # <a name="instance-stores"></a>Magasins d'instances
 Un magasin d'instances est un conteneur logique d'instances. Il s'agit de l'endroit où les données et les métadonnées d'instance sont stockées. Un magasin d'instances n'implique pas de stockage physique dédié. Il peut contenir des informations durables dans une base de données SQL Server ou des informations d'état non durables dans une mémoire. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] est fourni avec le magasin d'instances de workflow SQL, lequel est une implémentation concrète d'un magasin d'instances qui permet aux workflows de rendre des données et des métadonnées d'instance persistantes dans une base de données SQL Server 2005 ou 2008. En outre, Windows Server AppFabric fournit également une implémentation concrète d'un magasin d'instances. Pour plus d’informations, consultez [magasin d’instances Windows Server App Fabric, les requêtes et les fournisseurs de contrôle](http://go.microsoft.com/fwlink/?LinkID=201201&clcid=0x409).  

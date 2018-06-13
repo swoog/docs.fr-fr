@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515686"
 ---
 # <a name="windows-workflow-foundation-programming"></a>Programmation Windows Workflow Foundation
 Cette section contient un ensemble de rubriques d’initiation à maîtriser pour devenir un programmeur expert de Windows Workflow Foundation (WF).  

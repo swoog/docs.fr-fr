@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516160"
 ---
 # <a name="how-to-query-for-non-persisted-instances"></a>Procédure : rechercher des instances non persistantes
 Lorsqu'une nouvelle instance de service est créée et que le comportement de magasin d'instances de workflow SQL est défini pour le service, l'hôte de service crée une entrée initiale pour cette instance de service dans le magasin d'instances. Par la suite, lorsque l'instance de service persiste pour la première fois, le comportement de magasin d'instances de workflow SQL stocke l'état de l'instance actuelle avec les données supplémentaires qui sont requises pour l'activation, la récupération et le contrôle.  

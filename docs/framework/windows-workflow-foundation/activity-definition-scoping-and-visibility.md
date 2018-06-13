@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518500"
 ---
 # <a name="activity-definition-scoping-and-visibility"></a>Portée et visibilité de la définition de l'activité
 La portée et la visibilité de la définition d'une activité, tout comme la portée et la visibilité d'un objet représentent la capacité d'autres objets d'accéder aux membres de l'activité. La définition de l'activité est assurée par les implémentations suivantes :  

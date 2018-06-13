@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520342"
 ---
 # <a name="how-to-create-a-custom-activity-designer"></a>Procédure : créer un concepteur d'activités personnalisées
 Les concepteurs d’activités personnalisées sont généralement implémentés de telle sorte que les activités qui leur sont associées soient composables avec d’autres activités dont les concepteurs peuvent être déposés dans l’aire de conception avec eux. Cette fonctionnalité requiert qu’un concepteur d’activités personnalisées fournisse une « zone de dépôt » où une activité arbitraire peut être placée, ainsi que les moyens de gérer la collection résultante d’éléments sur l’aire de conception. Cette rubrique décrit comment créer un concepteur d’activités personnalisées qui contient une telle zone de dépôt et comment créer un concepteur d’activités personnalisées qui fournit cette fonctionnalité d’édition requise pour gérer la collection d’éléments de concepteur.  

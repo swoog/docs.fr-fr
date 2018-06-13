@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397817"
 ---
 # <a name="peer-to-peer-collaboration"></a>Collaboration pair à pair
 Les réseaux pair à pair utilisent des ordinateurs relativement puissants (des ordinateurs personnels) situés à la périphérie d’Internet et qui permettent davantage que de simples tâches de calcul basées sur le client. L’ordinateur personnel moderne dispose d’un processeur très rapide, d’une très grande mémoire et d’un disque dur volumineux. Cependant, aucun d’eux n’est entièrement utilisé lors de l’exécution des tâches informatiques courantes, comme l’envoi et la réception d’e-mails ou la navigation web. Les PC modernes peuvent facilement jouer le rôle de client et de serveur (pair) pour de nombreux types d’applications.  

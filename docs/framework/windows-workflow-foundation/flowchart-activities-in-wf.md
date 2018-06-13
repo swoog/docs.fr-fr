@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33511613"
 ---
 # <a name="flowchart-activities-in-wf"></a>Activités d'organigramme dans WF
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] offre plusieurs activités fournies par le système pour le contrôle de l'exécution et la notion de branches dans un organigramme.  

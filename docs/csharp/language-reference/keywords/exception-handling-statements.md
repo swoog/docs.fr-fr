@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33213221"
 ---
 # <a name="exception-handling-statements-c-reference"></a>Instructions de gestion des exceptions (Référence C#)
 C# fournit la prise en charge intégrée de la gestion des situations anormales, appelées exceptions, qui peuvent se produire pendant l’exécution de votre programme. Ces exceptions sont gérées par du code en dehors du flux de contrôle normal.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514522"
 ---
 # <a name="flowchart-workflows"></a>Workflows d'organigramme
 Un organigramme est un paradigme connu pour la conception de programmes. L'activité Organigramme est généralement utilisée pour implémenter des workflows non séquentiels, mais elle peut être utilisée pour les workflows séquentiels en l'absence de nœud `FlowDecision`.  

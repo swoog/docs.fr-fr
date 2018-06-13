@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515566"
 ---
 # <a name="bookmarks"></a>Signets
 Les signets sont le mécanisme qui permet à une activité d'attendre passivement l'entrée sans maintenir sur un thread de workflow. Lorsqu'une activité signale qu'il attend l'impulsion, il peut créer un signet. Cela indique à l'exécution que l'exécution de l'activité ne doit pas être considérée comme terminé même quand les recettes de méthode (lequel a créé le <xref:System.Activities.Bookmark>) actuellement exécutant.  
