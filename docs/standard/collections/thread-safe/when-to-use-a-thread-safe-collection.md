@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574837"
 ---
 # <a name="when-to-use-a-thread-safe-collection"></a>Quand utiliser une collection thread-safe
 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] propose cinq nouveaux types de collection spécialement conçus pour prendre en charge les opérations d’ajout et de suppression multithread. Pour garantir la cohérence de thread, ces nouveaux types utilisent différentes sortes de mécanismes de verrouillage et de synchronisation sans verrou efficaces. La synchronisation ajoute une surcharge à une opération. La quantité de la surcharge dépend du genre de synchronisation utilisé, du genre d’opérations exécutées et d’autres facteurs tels que le nombre de threads qui tentent d’accéder simultanément à la collection.  

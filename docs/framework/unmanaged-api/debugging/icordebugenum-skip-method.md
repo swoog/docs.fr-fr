@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c7d280cd20b8ff76efe977983e3e9f6da32990c8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413957"
 ---
 # <a name="icordebugenumskip-method"></a>ICorDebugEnum::Skip, méthode
 Déplace le curseur vers l’avant dans l’énumération par le nombre spécifié d’éléments.  

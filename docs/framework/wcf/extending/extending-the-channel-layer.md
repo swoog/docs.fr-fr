@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488232"
 ---
 # <a name="extending-the-channel-layer"></a>Extension de la couche du canal
 La couche du canal est responsable de l'échange de messages entre clients et services. Les extensions de canal peuvent implémenter de nouvelles fonctionnalités d’un protocole, telles que la sécurité, ou des fonctionnalités de transport, telles que l’implémentation d’un nouveau transport réseau pour les messages SOAP.  
