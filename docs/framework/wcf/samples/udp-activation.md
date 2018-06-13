@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810029"
 ---
 # <a name="udp-activation"></a><span data-ttu-id="93c7a-102">UDP Activation</span><span class="sxs-lookup"><span data-stu-id="93c7a-102">UDP Activation</span></span>
 <span data-ttu-id="93c7a-103">Cet exemple est basé sur le [Transport : UDP](../../../../docs/framework/wcf/samples/transport-udp.md) exemple.</span><span class="sxs-lookup"><span data-stu-id="93c7a-103">This sample is based on the [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) sample.</span></span> <span data-ttu-id="93c7a-104">Il étend le [Transport : UDP](../../../../docs/framework/wcf/samples/transport-udp.md) exemple pour prendre en charge l’activation de processus à l’aide du Service de l’Activation des processus Windows (WAS).</span><span class="sxs-lookup"><span data-stu-id="93c7a-104">It extends the [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) sample to support process activation using the Windows Process Activation Service (WAS).</span></span>  
