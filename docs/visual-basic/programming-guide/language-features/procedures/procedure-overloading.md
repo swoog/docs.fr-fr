@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653912"
 ---
 # <a name="procedure-overloading-visual-basic"></a>Surcharge de procédure (Visual Basic)
 *La surcharge* une procédure consiste à définir celle-ci en plusieurs versions, en utilisant le même nom mais les listes de paramètres différentes. L’objectif de la surcharge consiste à définir de plusieurs versions étroitement liées d’une procédure sans avoir à les différencier par nom. Pour cela, en faisant varier la liste de paramètres.  

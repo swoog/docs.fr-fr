@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637880"
 ---
 # <a name="cannot-save-file-to-temp"></a>Impossible d’enregistrer le fichier dans TEMP
 Soit un composant ne trouve pas de répertoire nommé TEMP, soit le lecteur ou la partition contenant le répertoire TEMP ne dispose pas de suffisamment d’espace pour enregistrer les informations.  

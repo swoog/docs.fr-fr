@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649030"
 ---
 # <a name="how-to-access-xml-attributes-visual-basic"></a>Comment : accéder à des attributs XML (Visual Basic)
 Cet exemple montre comment utiliser la propriété d’axe d’attribut pour accéder aux attributs XML dans un élément XML par nom. En particulier, il utilise le `type` attribut de propriété d’axe d’accéder à l’attribut nommé `type` dans le `phone` objet.  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654724"
 ---
 # <a name="common-tasks-performed-with-visual-basic-operators"></a>Tâches courantes effectuées avec les opérateurs de Visual Basic
 Opérateurs effectuent de nombreuses tâches courantes impliquant une ou plusieurs expressions appelées *opérandes*.  
