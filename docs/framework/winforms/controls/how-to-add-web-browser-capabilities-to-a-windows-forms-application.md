@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526847"
 ---
 # <a name="how-to-add-web-browser-capabilities-to-a-windows-forms-application"></a>Comment : ajouter des fonctionnalités de navigateur Web à une application Windows Forms
 Avec le contrôle <xref:System.Windows.Forms.WebBrowser>, vous pouvez ajouter des fonctionnalités de navigateur web à votre application. Le contrôle fonctionne comme un navigateur web par défaut. Après avoir chargé une URL initiale en définissant la propriété <xref:System.Windows.Forms.WebBrowser.Url%2A>, vous pouvez naviguer en cliquant sur des liens hypertexte ou en utilisant des raccourcis clavier pour parcourir l'historique de navigation. Par défaut, vous pouvez accéder à d'autres fonctionnalités de navigateur via le menu contextuel. Vous pouvez aussi ouvrir de nouveaux documents en les déposant sur le contrôle. Le contrôle <xref:System.Windows.Forms.WebBrowser> possède également plusieurs propriétés, méthodes et événements que vous pouvez utiliser pour implémenter des fonctionnalités d'interface utilisateur semblables à celles d'Internet Explorer.  

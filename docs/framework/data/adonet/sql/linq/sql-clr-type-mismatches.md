@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365668"
 ---
 # <a name="sql-clr-type-mismatches"></a>Incompatibilité entre types SQL-CLR
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] automatise en grande partie la traduction entre le modèle objet et SQL Server. Certaines situations ne permettent toutefois pas une traduction exacte. Cette incompatibilité majeure entre les types CLR (Common Language Runtime) et les types de base de données SQL Server est résumée dans les sections suivantes. Vous trouverez plus d’informations sur les mappages de type spécifique et de la traduction de fonctions à [le mappage de Type SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md) et [les fonctions et les Types de données](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md).  

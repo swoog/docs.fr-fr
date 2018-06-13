@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33390297"
 ---
 # <a name="asynchronous-client-socket-example"></a>Exemple de socket client asynchrone
 L’exemple de programme suivant crée un client qui se connecte à un serveur. Le client est créé avec un socket asynchrone. L’exécution de l’application cliente n’est donc pas suspendue pendant que le serveur retourne une réponse. L’application envoie une chaîne au serveur, puis affiche la chaîne retournée par le serveur sur la console.  

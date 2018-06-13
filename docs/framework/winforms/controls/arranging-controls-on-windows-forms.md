@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527311"
 ---
 # <a name="arranging-controls-on-windows-forms"></a>Disposition des contrôles dans les Windows Forms
 En plaçant et manipulant des contrôles sur les formulaires de différentes façons, vous pouvez créer des interfaces utilisateur intuitives et fonctionnelles pour les utilisateurs.  

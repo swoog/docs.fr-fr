@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 18733c2d643a75f9bb11159ba4acdbc8ab064c55
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33404102"
 ---
 # <a name="iclrdatatargetsettlsvalue-method"></a>ICLRDataTarget::SetTLSValue, méthode
 Définit une valeur dans le stockage local des threads (TLS) du thread spécifié dans le processus cible. Cette méthode est appelée par les services d’accès données common language runtime (CLR).  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539865"
 ---
 # <a name="textbox-control-overview-windows-forms"></a>Vue d'ensemble du contrôle TextBox (Windows Forms)
 Zones de texte Windows Forms sont utilisées pour obtenir des données à partir de l’utilisateur ou pour afficher le texte. Le <xref:System.Windows.Forms.TextBox> contrôle est généralement utilisé pour le texte modifiable, bien qu’il puisse également être en lecture seule. Zones de texte peuvent afficher plusieurs lignes, renvoi à la taille du contrôle et ajouter une mise en forme. Le <xref:System.Windows.Forms.TextBox> contrôle fournit un style de format unique pour le texte affiché ou entré dans le contrôle. Pour afficher plusieurs types de texte mis en forme, utilisez la <xref:System.Windows.Forms.RichTextBox> contrôle. Pour plus d’informations, consultez [vue d’ensemble du contrôle RichTextBox](../../../../docs/framework/winforms/controls/richtextbox-control-overview-windows-forms.md).  

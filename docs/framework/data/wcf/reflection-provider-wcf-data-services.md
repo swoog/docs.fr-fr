@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33366006"
 ---
 # <a name="reflection-provider-wcf-data-services"></a>Fournisseur de réflexion (services de données WCF)
 En plus d'exposer des données d'un modèle de données via Entity Framework, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] peut exposer des données qui ne sont pas définies strictement dans un modèle basé sur une entité. Le fournisseur de réflexion expose des données dans les classes qui retournent des types implémentant l'interface <xref:System.Linq.IQueryable%601>. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] utilise la réflexion pour déduire un modèle de données pour ces classes et peut traduire des requêtes basées sur une adresse sur des ressources en requêtes LINQ (Language Integrated Query) en fonction des types <xref:System.Linq.IQueryable%601> exposés.  

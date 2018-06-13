@@ -164,6 +164,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33407038"
 ---
 # <a name="winmdexpexe-error-messages"></a>Messages d'erreur Winmdexp.exe
 Le processus de génération appelle [Winmdexp.exe (outil d’exportation de métadonnées Windows Runtime)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md) quand vous utilisez le modèle de composant  **[!INCLUDE[wrt](../../../includes/wrt-md.md)]** dans [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], et les messages d’erreur de Winmdexp.exe apparaissent donc dans la **liste d’erreurs**. Winmdexp.exe fonctionne sur un module compilé avec l’option `/target:winmdobj`. Comme il nécessite un module compilé en entrée, ses messages d’erreur ne s’affichent pas, sauf si la compilation réussit.  

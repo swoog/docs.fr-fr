@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f22d9d86e2b943a8825e1ec271a401b03f73fb6c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33407012"
 ---
 # <a name="icordebugblockingobjectenum-interface"></a>ICorDebugBlockingObjectEnum, interface
 Fournit un énumérateur pour une liste de [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) structures. Cette interface est une sous-classe de l’interface ICorDebugEnum.  

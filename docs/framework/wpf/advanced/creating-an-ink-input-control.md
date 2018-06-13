@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541055"
 ---
 # <a name="creating-an-ink-input-control"></a>Création d'un contrôle d'entrée d'encre
 Vous pouvez créer un contrôle personnalisé qui dynamiquement et restitue l’encre statiquement. Autrement dit, restituer l’encre lorsqu’un utilisateur trace un trait, à l’origine de l’encre semble « flux » du stylet, et afficher l’encre après qu’il est ajouté au contrôle, soit via le stylet, collé à partir du Presse-papiers ou chargé à partir d’un fichier. Pour restituer dynamiquement l’encre, votre contrôle doit utiliser un <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>. Pour restituer l’encre de façon statique, vous devez substituer les méthodes d’événement du stylet (<xref:System.Windows.UIElement.OnStylusDown%2A>, <xref:System.Windows.UIElement.OnStylusMove%2A>, et <xref:System.Windows.UIElement.OnStylusUp%2A>) pour collecter les <xref:System.Windows.Input.StylusPoint> les données, créer des traits et les ajouter à un <xref:System.Windows.Controls.InkPresenter> (qui restitue l’encre sur le contrôle).  

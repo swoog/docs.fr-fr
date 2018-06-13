@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33388197"
 ---
 # <a name="loaderlock-mda"></a>Assistant Débogage managé loaderLock
 L’Assistant Débogage managé `loaderLock` détecte les tentatives d’exécution de code managé sur un thread qui détient le verrou du chargeur du système d’exploitation Microsoft Windows.  Toute exécution de ce type est interdite, car elle peut entraîner des interblocages et l’utilisation de DLL avant leur initialisation par le chargeur du système d’exploitation.  

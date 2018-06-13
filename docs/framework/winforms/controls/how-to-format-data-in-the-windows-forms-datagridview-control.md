@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538859"
 ---
 # <a name="how-to-format-data-in-the-windows-forms-datagridview-control"></a>Comment : mettre en forme des données dans le contrôle DataGridView Windows Forms
 Les procédures suivantes montrent une mise en forme des valeurs de cellule à l’aide de la <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A> propriété d’un <xref:System.Windows.Forms.DataGridView> contrôle et de colonnes spécifiques dans un contrôle. Pour plus d’informations sur la mise en forme de données avancés, consultez [Comment : personnaliser la mise en forme de données dans le contrôle DataGridView Windows Forms](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md).  

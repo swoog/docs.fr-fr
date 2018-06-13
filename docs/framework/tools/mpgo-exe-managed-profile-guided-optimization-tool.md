@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33410018"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe (Outil d'optimisation guidée par profil managé)
 L’outil d’optimisation guidée par profil managé (Mpgo.exe) est un outil en ligne de commande qui utilise des scénarios d’utilisateurs finaux communs afin d’optimiser les assemblys d’images natives créés par le [générateur d’images natives (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md). Cet outil vous permet d’exécuter les scénarios de formation qui génèrent des données de profil. Le [générateur d’images natives (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) utilise ces données pour optimiser ses assemblys d’applications d’images natives générées. Un scénario de formation est une tentative d’exécution d’une utilisation prévue de votre application. Mpgo.exe est disponible dans Visual Studio Ultimate 2012 Ultimate et versions ultérieures. En commençant par [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)], vous pouvez également utiliser Mpgo.exe pour optimiser les applications [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33400001"
 ---
 # <a name="validating-issuer-name-registry-api-reference"></a>Référence des API de validation du registre des noms d'émetteurs
 Cette section contient les informations de référence des API de l’extension WIF pour la validation du registre des noms d’émetteurs.
