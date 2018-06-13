@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579533"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Notions de base du garbage collection
 <a name="top"></a> Dans le Common Language Runtime (CLR), le garbage collector a un rôle de gestionnaire de mémoire automatique. Il fournit les avantages suivants :  

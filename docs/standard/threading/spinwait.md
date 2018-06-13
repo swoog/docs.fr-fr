@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585409"
 ---
 # <a name="spinwait"></a>SpinWait
 <xref:System.Threading.SpinWait?displayProperty=nameWithType> est un type de synchronisation léger que vous pouvez utiliser dans des scénarios de bas niveau pour éviter des changements de contexte onéreux et des transitions de noyau requises pour les événements de noyau. Sur les ordinateurs multicœurs, lorsqu’une ressource n’est pas censée être maintenue pendant de longues périodes, il peut être plus efficace pour un thread en attente de tourner en mode utilisateur pendant quelques douzaines ou centaines de cycles, puis de réessayer d’acquérir la ressource. Si la ressource est disponible après la rotation, vous aurez économisé plusieurs milliers de cycles. Si la ressource n’est toujours pas disponible, vous n’aurez utilisé que quelques cycles et pourrez toujours entrer une attente basée sur le noyau. Cette combinaison de rotation et d’attente est parfois appelée *une opération d’attente en deux phases*.  

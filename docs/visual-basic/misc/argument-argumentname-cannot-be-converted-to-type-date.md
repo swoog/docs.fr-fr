@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33600673"
 ---
 # <a name="argument-39ltargumentnamegt39-cannot-be-converted-to-type-39date39"></a>Argument &#39; &lt;nom_argument&gt; &#39; ne peut pas être converti en type &#39;Date&#39;
 Une conversion a tenté de modifier une variable en type `Date`, mais la valeur n’est pas reconnue comme une date valide.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599773"
 ---
 # <a name="add-failed-duplicate-key-value-supplied"></a>L’ajout a échoué. Une valeur de clé en double a été fournie.
 Une opération `Add` a échoué, car la valeur de clé est identique à celle d’une autre clé. Les valeurs de clé doivent être uniques.  

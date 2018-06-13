@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585513"
 ---
 # <a name="39class39-statement-must-end-with-a-matching-39end-class39"></a>&#39;Classe&#39; instruction doit se terminer par une mise en correspondance &#39;End Class&#39;
 `Class` permet de lancer un `Class` bloquer ; par conséquent, elle ne peut apparaître au début du bloc, avec une mise en correspondance `End Class` instruction termine le bloc. Soit vous avez un redondant `Class` instruction, ou vous n’avez pas terminé votre `Class` bloc avec `End Class`.  

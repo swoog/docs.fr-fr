@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594950"
 ---
 # <a name="mycomputerinfo-object"></a>My.Computer.Info, objet
 Fournit des propriétés permettant d’obtenir des informations sur la mémoire, les assemblys chargés, le nom et le système d’exploitation de l’ordinateur.  

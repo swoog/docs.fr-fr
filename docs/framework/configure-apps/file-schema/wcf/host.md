@@ -7,6 +7,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34233728"
 ---
 # <a name="lthostgt"></a>&lt;Ordinateur hôte&gt;
 Spécifie les paramètres d'un hôte de service.  

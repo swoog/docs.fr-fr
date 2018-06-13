@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597456"
 ---
 # <a name="narrowing-visual-basic"></a>Narrowing (Visual Basic)
 Indique qu’un opérateur de conversion (`CType`) convertit une classe ou structure en un type qui peut ne pas pouvoir contenir certaines des valeurs possibles de la classe ou la structure d’origine.  

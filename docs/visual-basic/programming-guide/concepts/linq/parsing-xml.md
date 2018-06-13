@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645237"
 ---
 # <a name="parsing-xml-visual-basic"></a>L’analyse XML (Visual Basic)
 Les rubriques de cette section décrivent comment analyser des documents XML.  

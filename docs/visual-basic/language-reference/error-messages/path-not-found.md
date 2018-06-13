@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593891"
 ---
 # <a name="path-not-found"></a>Chemin d’accès introuvable
 Pendant une opération d’accès au fichier ou l’accès au disque, le système d’exploitation n’a pas pu trouver le chemin d’accès spécifié. Le chemin d’accès à un fichier inclut la spécification de lecteur ainsi que les répertoires et sous-répertoires qui doivent être parcourus pour localiser le fichier. Un chemin peut être relatif ou absolu.  

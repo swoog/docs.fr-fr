@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579364"
 ---
 # <a name="xml-document-object-model-dom"></a>DOM (Document Object Model) XML
 La classe DOM (Document Object Model) XML fournit une représentation en mémoire d'un document XML. Le DOM vous permet de lire, de manipuler et de modifier un document XML par programme. La classe **XmlReader** lit également le code XML, mais elle garantit seulement un accès en lecture seule, en avant uniquement et non mis en cache. Cela signifie que **XmlReader** n'offre pas la possibilité de modifier les valeurs d'un attribut ou le contenu d'un élément, ni d'insérer ou de supprimer des nœuds. La modification est la fonction principale du DOM. Ce dernier régit la représentation en mémoire commune et structurée des données XML, bien que les données XML véritables soient stockées de façon linéaire lorsqu'elles se trouvent dans un fichier ou qu'elles proviennent d'un autre objet. Voici des données XML :  

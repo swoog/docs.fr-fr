@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593283"
 ---
 # <a name="out-of-stack-space-visual-basic"></a>Espace de pile insuffisant (Visual Basic)
 La pile est une zone de travail de la mémoire augmente et se réduit dynamiquement aux demandes de votre programme en cours d’exécution. Ses limites ont été dépassées.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577559"
 ---
 # <a name="how-to-convert-between-net-framework-streams-and-windows-runtime-streams"></a>Comment : effectuer une conversion entre les flux .NET Framework et les flux Windows Runtime
 Le .Net Framework pour les applications Windows Store est un sous-ensemble du .NET Framework complet. En raison de la sécurité et d'autres spécifications des applications Windows Store, vous ne pouvez pas utiliser l'ensemble d'API .NET Framework pour ouvrir et lire des fichiers. Pour plus d’informations, consultez [Vue d’ensemble de .NET pour les applications du Windows Store](http://msdn.microsoft.com/library/windows/apps/br230302.aspx). Toutefois, vous pouvez utiliser des API .NET Framework pour les autres opérations de manipulation des flux. Pour manipuler ces flux, il peut s’avérer nécessaire d’effectuer une conversion entre un type de flux .NET Framework tel que <xref:System.IO.MemoryStream> ou <xref:System.IO.FileStream>, et un flux Windows Runtime tel que [IInputStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.iinputstream.aspx), [IOutputStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ioutputstream.aspx)ou [IRandomAccessStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.irandomaccessstream.aspx).  

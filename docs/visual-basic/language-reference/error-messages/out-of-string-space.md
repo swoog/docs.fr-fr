@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594444"
 ---
 # <a name="out-of-string-space-visual-basic"></a>Espace de chaîne insuffisant (Visual Basic)
 Avec Visual Basic, vous pouvez utiliser des chaînes de très grande taille. Toutefois, les exigences d’autres programmes et la manière dont vous utilisez vos chaînes peuvent provoquer cette erreur.  

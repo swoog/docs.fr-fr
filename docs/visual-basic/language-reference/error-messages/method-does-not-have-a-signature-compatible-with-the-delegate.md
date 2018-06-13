@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593247"
 ---
 # <a name="method-does-not-have-a-signature-compatible-with-the-delegate"></a>La méthode n'a pas de signature compatible avec le délégué
 Il existe une incompatibilité entre les signatures de la méthode et le délégué que vous essayez d’utiliser. L’instruction `Delegate` définit les types de paramètre et les types de retour d’une classe déléguée. Toute procédure présentant des paramètres de types compatibles et retourner les types peuvent être utilisés pour créer une instance de ce type de délégué.  

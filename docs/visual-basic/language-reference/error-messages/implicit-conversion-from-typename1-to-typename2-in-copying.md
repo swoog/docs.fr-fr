@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589998"
 ---
 # <a name="implicit-conversion-from-39lttypename1gt39-to-39lttypename2gt39-in-copying-the-value-of-39byref39-parameter-39ltparameternamegt39-back-to-the-matching-argument"></a>Conversion implicite de &#39; &lt;nom_type1&gt; &#39; à &#39; &lt;nom_type2&gt; &#39; lors de la copie de la valeur de &#39;ByRef&#39; paramètre &#39; &lt; nom_paramètre&gt; &#39; à l’argument correspondant.
 Une procédure est appelée avec un [ByRef](../../../visual-basic/language-reference/modifiers/byref.md) argument d’un type différent de celui de son paramètre correspondant.  

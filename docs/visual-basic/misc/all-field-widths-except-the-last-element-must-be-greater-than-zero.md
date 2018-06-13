@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598438"
 ---
 # <a name="all-field-widths-except-the-last-element-must-be-greater-than-zero"></a>Toutes les largeurs de champs, à l’exception de celle du dernier élément, doivent être supérieures à zéro
 Toutes les largeurs de champs, à l’exception de celle du dernier élément, doivent être supérieures à zéro. Une largeur de champ inférieure ou égale à zéro dans le dernier élément indique que le dernier champ a une longueur variable.  

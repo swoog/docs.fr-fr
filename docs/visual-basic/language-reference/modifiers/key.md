@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599842"
 ---
 # <a name="key-visual-basic"></a>Key (Visual Basic)
 Le `Key` mot clé permet de spécifier le comportement des propriétés de types anonymes. Seules les propriétés que vous désignez comme propriétés de clé participent aux tests d’égalité entre les instances de type anonyme, ou un calcul de valeurs de code de hachage. Les valeurs des propriétés de clé ne peut pas être modifiés.  

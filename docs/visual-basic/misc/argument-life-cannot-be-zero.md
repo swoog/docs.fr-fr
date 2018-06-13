@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597697"
 ---
 # <a name="argument-39life39-cannot-be-zero"></a>Argument &#39;vie&#39; ne peut pas être égal à zéro
 Un argument pour `Life`, qui doit être un `Double` qui spécifie la durée du cycle de vie de la ressource, n’est pas valide.  
