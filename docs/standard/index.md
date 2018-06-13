@@ -11,6 +11,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457009"
 ---
 # <a name="net-guide"></a><span data-ttu-id="afc2f-103">Guide de .NET</span><span class="sxs-lookup"><span data-stu-id="afc2f-103">.NET Guide</span></span>
 

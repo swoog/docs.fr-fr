@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803392"
 ---
 # <a name="windows-communication-foundation-endpoints"></a><span data-ttu-id="1c2f5-102">Points de terminaison Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="1c2f5-102">Windows Communication Foundation Endpoints</span></span>
 <span data-ttu-id="1c2f5-103">Toutes les communications avec un service Windows Communication Foundation (WCF) s’effectue via le *points de terminaison* du service.</span><span class="sxs-lookup"><span data-stu-id="1c2f5-103">All communication with a Windows Communication Foundation (WCF) service occurs through the *endpoints* of the service.</span></span> <span data-ttu-id="1c2f5-104">Points de terminaison fournissent l’accès aux fonctionnalités qu’un service WCF offre les clients.</span><span class="sxs-lookup"><span data-stu-id="1c2f5-104">Endpoints provide clients access to the functionality that a WCF service offers.</span></span>  

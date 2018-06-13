@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807366"
 ---
 # <a name="configuring-tracing"></a><span data-ttu-id="7ef19-102">Configuration du traçage</span><span class="sxs-lookup"><span data-stu-id="7ef19-102">Configuring Tracing</span></span>
 <span data-ttu-id="7ef19-103">Cette rubrique décrit comment activer le suivi, configurer des sources de suivi pour émettre des suivis et définir des niveaux de suivi, définir le suivi et la propagation d'activité afin de prendre en charge la corrélation de suivi de bout en bout, et définir des écouteurs de suivi pour accéder aux suivis.</span><span class="sxs-lookup"><span data-stu-id="7ef19-103">This topic describes how you can enable tracing, configure trace sources to emit traces and set trace levels, set activity tracing and propagation to support end-to-end trace correlation, and set trace listeners to access traces.</span></span>  

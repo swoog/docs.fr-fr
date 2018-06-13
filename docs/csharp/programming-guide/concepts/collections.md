@@ -7,6 +7,7 @@ ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34549618"
 ---
 # <a name="collections-c"></a><span data-ttu-id="e1692-102">Collections (C#)</span><span class="sxs-lookup"><span data-stu-id="e1692-102">Collections (C#)</span></span>
 <span data-ttu-id="e1692-103">Pour de nombreuses applications, vous voulez créer et gérer des groupes d’objets connexes.</span><span class="sxs-lookup"><span data-stu-id="e1692-103">For many applications, you want to create and manage groups of related objects.</span></span> <span data-ttu-id="e1692-104">Il existe deux manières de grouper des objets : en créant des tableaux d’objets ou des collections d’objets.</span><span class="sxs-lookup"><span data-stu-id="e1692-104">There are two ways to group objects: by creating arrays of objects, and by creating collections of objects.</span></span>  
