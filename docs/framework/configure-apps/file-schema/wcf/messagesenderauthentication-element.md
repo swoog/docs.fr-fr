@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750737"
 ---
 # <a name="ltmessagesenderauthenticationgt-element"></a><span data-ttu-id="c58f2-102">&lt;messageSenderAuthentication&gt;, élément</span><span class="sxs-lookup"><span data-stu-id="c58f2-102">&lt;messageSenderAuthentication&gt; element</span></span>
 <span data-ttu-id="c58f2-103">Spécifie les options d'authentification pour les expéditeurs du message du réseau pair à pair.</span><span class="sxs-lookup"><span data-stu-id="c58f2-103">Specifies authentication options for peer-to-peer message senders.</span></span>  

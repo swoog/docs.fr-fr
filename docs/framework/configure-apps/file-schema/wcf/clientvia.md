@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754130"
 ---
 # <a name="ltclientviagt"></a><span data-ttu-id="7406d-102">&lt;clientVia&gt;</span><span class="sxs-lookup"><span data-stu-id="7406d-102">&lt;clientVia&gt;</span></span>
 <span data-ttu-id="7406d-103">Spécifie l'URI pour lequel le canal de transport doit être créé.</span><span class="sxs-lookup"><span data-stu-id="7406d-103">Specifies the URI for which the transport channel should be created.</span></span> <span data-ttu-id="7406d-104">Pour plus d'informations, consultez <xref:System.ServiceModel.Description.ClientViaBehavior>.</span><span class="sxs-lookup"><span data-stu-id="7406d-104">For more information, see <xref:System.ServiceModel.Description.ClientViaBehavior>.</span></span>  

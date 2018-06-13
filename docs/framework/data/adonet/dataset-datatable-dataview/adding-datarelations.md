@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756941"
 ---
 # <a name="adding-datarelations"></a><span data-ttu-id="2cbb4-102">Ajout de DataRelations</span><span class="sxs-lookup"><span data-stu-id="2cbb4-102">Adding DataRelations</span></span>
 <span data-ttu-id="2cbb4-103">Dans un objet <xref:System.Data.DataSet> contenant plusieurs objets <xref:System.Data.DataTable>, vous pouvez utiliser des objets <xref:System.Data.DataRelation> pour associer une table à une autre, pour vous déplacer dans les tables et pour retourner les lignes enfants ou parentes d'une table associée.</span><span class="sxs-lookup"><span data-stu-id="2cbb4-103">In a <xref:System.Data.DataSet> with multiple <xref:System.Data.DataTable> objects, you can use <xref:System.Data.DataRelation> objects to relate one table to another, to navigate through the tables, and to return child or parent rows from a related table.</span></span>  

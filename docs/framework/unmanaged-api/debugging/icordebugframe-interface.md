@@ -1,14 +1,6 @@
 ---
 title: ICorDebugFrame Interface1
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugFrame
 api_location:
@@ -22,47 +14,44 @@ helpviewer_keywords:
 ms.assetid: 0c48f764-3c64-4602-b2f4-4ffc60eb2c65
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: caa3ef9cd52cc872d4ebc96376c104a7b90fb4f2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: f3d6c1a2bfd66e275b506d4465731c48cd7c6515
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33416629"
 ---
-# <a name="icordebugframe-interface1"></a><span data-ttu-id="1d48e-102">ICorDebugFrame Interface1</span><span class="sxs-lookup"><span data-stu-id="1d48e-102">ICorDebugFrame Interface1</span></span>
-<span data-ttu-id="1d48e-103">Représente un frame sur la pile en cours.</span><span class="sxs-lookup"><span data-stu-id="1d48e-103">Represents a frame on the current stack.</span></span>  
+# <a name="icordebugframe-interface1"></a><span data-ttu-id="7f19b-102">ICorDebugFrame Interface1</span><span class="sxs-lookup"><span data-stu-id="7f19b-102">ICorDebugFrame Interface1</span></span>
+<span data-ttu-id="7f19b-103">Représente un frame sur la pile en cours.</span><span class="sxs-lookup"><span data-stu-id="7f19b-103">Represents a frame on the current stack.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="1d48e-104">Méthodes</span><span class="sxs-lookup"><span data-stu-id="1d48e-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="7f19b-104">Méthodes</span><span class="sxs-lookup"><span data-stu-id="7f19b-104">Methods</span></span>  
   
-|<span data-ttu-id="1d48e-105">Méthode</span><span class="sxs-lookup"><span data-stu-id="1d48e-105">Method</span></span>|<span data-ttu-id="1d48e-106">Description</span><span class="sxs-lookup"><span data-stu-id="1d48e-106">Description</span></span>|  
+|<span data-ttu-id="7f19b-105">Méthode</span><span class="sxs-lookup"><span data-stu-id="7f19b-105">Method</span></span>|<span data-ttu-id="7f19b-106">Description</span><span class="sxs-lookup"><span data-stu-id="7f19b-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="1d48e-107">CreateStepper, méthode</span><span class="sxs-lookup"><span data-stu-id="1d48e-107">CreateStepper Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-createstepper-method.md)|<span data-ttu-id="1d48e-108">Obtient un ICorDebugStepper pour effectuer des opérations pas à pas relatif à cette `ICorDebugFrame`.</span><span class="sxs-lookup"><span data-stu-id="1d48e-108">Gets an ICorDebugStepper to perform stepping operations relative to this `ICorDebugFrame`.</span></span>|  
-|[<span data-ttu-id="1d48e-109">GetCallee, méthode</span><span class="sxs-lookup"><span data-stu-id="1d48e-109">GetCallee Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getcallee-method.md)|<span data-ttu-id="1d48e-110">Obtient un pointeur vers le `ICorDebugFrame` dans la chaîne actuelle que ce frame a appelée ou retourne null s’il est le plus profond frame dans la chaîne.</span><span class="sxs-lookup"><span data-stu-id="1d48e-110">Gets a pointer to the `ICorDebugFrame` in the current chain that this frame called, or returns null if this is the innermost frame in the chain.</span></span>|  
-|[<span data-ttu-id="1d48e-111">GetCaller, méthode</span><span class="sxs-lookup"><span data-stu-id="1d48e-111">GetCaller Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getcaller-method.md)|<span data-ttu-id="1d48e-112">Obtient un pointeur vers le `ICorDebugFrame` dans la chaîne actuelle que ce frame a appelée ou retourne null s’il est le frame le plus extérieur de la chaîne.</span><span class="sxs-lookup"><span data-stu-id="1d48e-112">Gets a pointer to the `ICorDebugFrame` in the current chain that called this frame, or returns null if this is the outermost frame in the chain.</span></span>|  
-|[<span data-ttu-id="1d48e-113">GetChain, méthode</span><span class="sxs-lookup"><span data-stu-id="1d48e-113">GetChain Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getchain-method.md)|<span data-ttu-id="1d48e-114">Obtient un pointeur vers ICorDebugChain ce `ICorDebugFrame` fait partie.</span><span class="sxs-lookup"><span data-stu-id="1d48e-114">Gets a pointer to the ICorDebugChain this `ICorDebugFrame` is a part of.</span></span>|  
-|[<span data-ttu-id="1d48e-115">GetCode, méthode</span><span class="sxs-lookup"><span data-stu-id="1d48e-115">GetCode Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getcode-method.md)|<span data-ttu-id="1d48e-116">Obtient un pointeur vers ICorDebugCode associé à ce frame de pile.</span><span class="sxs-lookup"><span data-stu-id="1d48e-116">Gets a pointer to the ICorDebugCode associated with this stack frame.</span></span>|  
-|[<span data-ttu-id="1d48e-117">GetFunction, méthode</span><span class="sxs-lookup"><span data-stu-id="1d48e-117">GetFunction Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getfunction-method.md)|<span data-ttu-id="1d48e-118">Obtient un pointeur vers ICorDebugFunction qui contient le code associé à ce frame de pile.</span><span class="sxs-lookup"><span data-stu-id="1d48e-118">Gets a pointer to the ICorDebugFunction that contains the code associated with this stack frame.</span></span>|  
-|[<span data-ttu-id="1d48e-119">GetFunctionToken, méthode</span><span class="sxs-lookup"><span data-stu-id="1d48e-119">GetFunctionToken Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getfunctiontoken-method.md)|<span data-ttu-id="1d48e-120">Obtient le jeton de métadonnées pour la fonction qui contient le code associé à ce frame de pile.</span><span class="sxs-lookup"><span data-stu-id="1d48e-120">Gets the metadata token for the function that contains the code associated with this stack frame.</span></span>|  
-|[<span data-ttu-id="1d48e-121">GetStackRange, méthode</span><span class="sxs-lookup"><span data-stu-id="1d48e-121">GetStackRange Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getstackrange-method.md)|<span data-ttu-id="1d48e-122">Obtient la plage d’adresses absolues du frame de pile représenté par ce `ICorDebugFrame`.</span><span class="sxs-lookup"><span data-stu-id="1d48e-122">Gets the absolute address range of the stack frame represented by this `ICorDebugFrame`.</span></span>|  
+|[<span data-ttu-id="7f19b-107">CreateStepper, méthode</span><span class="sxs-lookup"><span data-stu-id="7f19b-107">CreateStepper Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-createstepper-method.md)|<span data-ttu-id="7f19b-108">Obtient un ICorDebugStepper pour effectuer des opérations pas à pas relatif à cette `ICorDebugFrame`.</span><span class="sxs-lookup"><span data-stu-id="7f19b-108">Gets an ICorDebugStepper to perform stepping operations relative to this `ICorDebugFrame`.</span></span>|  
+|[<span data-ttu-id="7f19b-109">GetCallee, méthode</span><span class="sxs-lookup"><span data-stu-id="7f19b-109">GetCallee Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getcallee-method.md)|<span data-ttu-id="7f19b-110">Obtient un pointeur vers le `ICorDebugFrame` dans la chaîne actuelle que ce frame a appelée ou retourne null s’il est le plus profond frame dans la chaîne.</span><span class="sxs-lookup"><span data-stu-id="7f19b-110">Gets a pointer to the `ICorDebugFrame` in the current chain that this frame called, or returns null if this is the innermost frame in the chain.</span></span>|  
+|[<span data-ttu-id="7f19b-111">GetCaller, méthode</span><span class="sxs-lookup"><span data-stu-id="7f19b-111">GetCaller Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getcaller-method.md)|<span data-ttu-id="7f19b-112">Obtient un pointeur vers le `ICorDebugFrame` dans la chaîne actuelle que ce frame a appelée ou retourne null s’il est le frame le plus extérieur de la chaîne.</span><span class="sxs-lookup"><span data-stu-id="7f19b-112">Gets a pointer to the `ICorDebugFrame` in the current chain that called this frame, or returns null if this is the outermost frame in the chain.</span></span>|  
+|[<span data-ttu-id="7f19b-113">GetChain, méthode</span><span class="sxs-lookup"><span data-stu-id="7f19b-113">GetChain Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getchain-method.md)|<span data-ttu-id="7f19b-114">Obtient un pointeur vers ICorDebugChain ce `ICorDebugFrame` fait partie.</span><span class="sxs-lookup"><span data-stu-id="7f19b-114">Gets a pointer to the ICorDebugChain this `ICorDebugFrame` is a part of.</span></span>|  
+|[<span data-ttu-id="7f19b-115">GetCode, méthode</span><span class="sxs-lookup"><span data-stu-id="7f19b-115">GetCode Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getcode-method.md)|<span data-ttu-id="7f19b-116">Obtient un pointeur vers ICorDebugCode associé à ce frame de pile.</span><span class="sxs-lookup"><span data-stu-id="7f19b-116">Gets a pointer to the ICorDebugCode associated with this stack frame.</span></span>|  
+|[<span data-ttu-id="7f19b-117">GetFunction, méthode</span><span class="sxs-lookup"><span data-stu-id="7f19b-117">GetFunction Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getfunction-method.md)|<span data-ttu-id="7f19b-118">Obtient un pointeur vers ICorDebugFunction qui contient le code associé à ce frame de pile.</span><span class="sxs-lookup"><span data-stu-id="7f19b-118">Gets a pointer to the ICorDebugFunction that contains the code associated with this stack frame.</span></span>|  
+|[<span data-ttu-id="7f19b-119">GetFunctionToken, méthode</span><span class="sxs-lookup"><span data-stu-id="7f19b-119">GetFunctionToken Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getfunctiontoken-method.md)|<span data-ttu-id="7f19b-120">Obtient le jeton de métadonnées pour la fonction qui contient le code associé à ce frame de pile.</span><span class="sxs-lookup"><span data-stu-id="7f19b-120">Gets the metadata token for the function that contains the code associated with this stack frame.</span></span>|  
+|[<span data-ttu-id="7f19b-121">GetStackRange, méthode</span><span class="sxs-lookup"><span data-stu-id="7f19b-121">GetStackRange Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getstackrange-method.md)|<span data-ttu-id="7f19b-122">Obtient la plage d’adresses absolues du frame de pile représenté par ce `ICorDebugFrame`.</span><span class="sxs-lookup"><span data-stu-id="7f19b-122">Gets the absolute address range of the stack frame represented by this `ICorDebugFrame`.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="1d48e-123">Notes</span><span class="sxs-lookup"><span data-stu-id="1d48e-123">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7f19b-123">Notes</span><span class="sxs-lookup"><span data-stu-id="7f19b-123">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="1d48e-124">Cette interface ne prend pas en charge l'appel à distance, que ce soit entre ordinateurs ou entre processus.</span><span class="sxs-lookup"><span data-stu-id="1d48e-124">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="7f19b-124">Cette interface ne prend pas en charge l'appel à distance, que ce soit entre ordinateurs ou entre processus.</span><span class="sxs-lookup"><span data-stu-id="7f19b-124">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1d48e-125">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="1d48e-125">Requirements</span></span>  
- <span data-ttu-id="1d48e-126">**Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1d48e-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7f19b-125">Spécifications</span><span class="sxs-lookup"><span data-stu-id="7f19b-125">Requirements</span></span>  
+ <span data-ttu-id="7f19b-126">**Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7f19b-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1d48e-127">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="1d48e-127">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="7f19b-127">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="7f19b-127">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="1d48e-128">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1d48e-128">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="7f19b-128">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7f19b-128">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="1d48e-129">**Versions du .NET framework :**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1d48e-129">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="7f19b-129">**Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7f19b-129">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1d48e-130">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="1d48e-130">See Also</span></span>  
- [<span data-ttu-id="1d48e-131">Interfaces de débogage</span><span class="sxs-lookup"><span data-stu-id="1d48e-131">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="7f19b-130">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="7f19b-130">See Also</span></span>  
+ [<span data-ttu-id="7f19b-131">Interfaces de débogage</span><span class="sxs-lookup"><span data-stu-id="7f19b-131">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752199"
 ---
 # <a name="sisdebuggercheckdisabledfortestpurposes-field"></a><span data-ttu-id="4bc7a-102">s_isDebuggerCheckDisabledForTestPurposes champ</span><span class="sxs-lookup"><span data-stu-id="4bc7a-102">s_isDebuggerCheckDisabledForTestPurposes Field</span></span>
 

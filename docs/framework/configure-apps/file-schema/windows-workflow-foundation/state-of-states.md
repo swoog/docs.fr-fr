@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756850"
 ---
 # <a name="ltstategt-of-ltstatesgt"></a><span data-ttu-id="979b3-102">&lt;state&gt; de &lt;states&gt;</span><span class="sxs-lookup"><span data-stu-id="979b3-102">&lt;state&gt; of &lt;states&gt;</span></span>
 <span data-ttu-id="979b3-103">Élément de configuration qui contient l'état de l'activité faisant l'objet d'un abonnement pour laquelle un enregistrement de suivi doit être émis.</span><span class="sxs-lookup"><span data-stu-id="979b3-103">A configuration element that contains the state of the subscribed activity for which a tracking record should be emitted.</span></span>  

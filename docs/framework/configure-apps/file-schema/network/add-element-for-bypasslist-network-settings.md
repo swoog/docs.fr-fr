@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754517"
 ---
 # <a name="ltaddgt-element-for-bypasslist-network-settings"></a><span data-ttu-id="69444-102">&lt;ajouter&gt; , élément pour bypasslist (paramètres réseau)</span><span class="sxs-lookup"><span data-stu-id="69444-102">&lt;add&gt; Element for bypasslist (Network Settings)</span></span>
 <span data-ttu-id="69444-103">Ajoute une adresse IP ou le nom DNS à la liste de contournement du proxy.</span><span class="sxs-lookup"><span data-stu-id="69444-103">Adds an IP address or DNS name to the proxy bypass list.</span></span>  
