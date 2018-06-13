@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763717"
 ---
 # <a name="querying-a-conceptual-model"></a><span data-ttu-id="72a61-102">Interrogation d'un modèle conceptuel</span><span class="sxs-lookup"><span data-stu-id="72a61-102">Querying a Conceptual Model</span></span>
 <span data-ttu-id="72a61-103">Le [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] vous permet d’interroger un modèle conceptuel.</span><span class="sxs-lookup"><span data-stu-id="72a61-103">The [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] enables you to query a conceptual model.</span></span> <span data-ttu-id="72a61-104">Pour interroger le modèle conceptuel à l’aide de la dernière version d’Entity Framework, consultez [interrogation des données](http://go.microsoft.com/fwlink/?LinkId=235282).</span><span class="sxs-lookup"><span data-stu-id="72a61-104">To query the conceptual model using the latest version of the Entity Framework, see [Querying Data](http://go.microsoft.com/fwlink/?LinkId=235282).</span></span>

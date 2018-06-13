@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761907"
 ---
 # <a name="writing-dataset-contents-as-xml-data"></a><span data-ttu-id="9342b-102">Écriture du contenu d'un DataSet comme données XML</span><span class="sxs-lookup"><span data-stu-id="9342b-102">Writing DataSet Contents as XML Data</span></span>
 <span data-ttu-id="9342b-103">Dans ADO.NET, vous pouvez écrire une représentation XML d'un objet<xref:System.Data.DataSet>, avec ou sans son schéma.</span><span class="sxs-lookup"><span data-stu-id="9342b-103">In ADO.NET you can write an XML representation of a <xref:System.Data.DataSet>, with or without its schema.</span></span> <span data-ttu-id="9342b-104">Si les informations de schéma sont incluses inline avec le XML, elles sont écrites à l'aide du langage XSD (XML Schema Definition).</span><span class="sxs-lookup"><span data-stu-id="9342b-104">If schema information is included inline with the XML, it is written using the XML Schema definition language (XSD).</span></span> <span data-ttu-id="9342b-105">Le schéma contient les définitions des tables de l'objet <xref:System.Data.DataSet>, ainsi que les définitions des relations et des contraintes.</span><span class="sxs-lookup"><span data-stu-id="9342b-105">The schema contains the table definitions of the <xref:System.Data.DataSet> as well as the relation and constraint definitions.</span></span>  

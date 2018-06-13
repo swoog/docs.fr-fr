@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757370"
 ---
 # <a name="ltclaimsauthorizationmanagergt"></a><span data-ttu-id="b2c58-102">&lt;claimsAuthorizationManager&gt;</span><span class="sxs-lookup"><span data-stu-id="b2c58-102">&lt;claimsAuthorizationManager&gt;</span></span>
 <span data-ttu-id="b2c58-103">Inscrit un gestionnaire d’autorisation de revendications pour les revendications entrantes.</span><span class="sxs-lookup"><span data-stu-id="b2c58-103">Registers a claims authorization manager for the incoming claims.</span></span>  

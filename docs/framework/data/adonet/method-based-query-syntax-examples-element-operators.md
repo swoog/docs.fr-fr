@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764149"
 ---
 # <a name="method-based-query-syntax-examples-element-operators-linq-to-dataset"></a><span data-ttu-id="8d51f-102">Exemples de syntaxe de requête fondée sur une méthode : opérateurs d'élément (LINQ to DataSet)</span><span class="sxs-lookup"><span data-stu-id="8d51f-102">Method-Based Query Syntax Examples: Element Operators (LINQ to DataSet)</span></span>
 <span data-ttu-id="8d51f-103">Les exemples de cette rubrique montrent comment utiliser les méthodes <xref:System.Linq.Enumerable.First%2A> et <xref:System.Linq.Enumerable.ElementAt%2A> pour obtenir des éléments <xref:System.Data.DataRow> à partir d'un <xref:System.Data.DataSet> à l'aide de la syntaxe d'expression de requête.</span><span class="sxs-lookup"><span data-stu-id="8d51f-103">The examples in this topic demonstrate how to use the <xref:System.Linq.Enumerable.First%2A> and <xref:System.Linq.Enumerable.ElementAt%2A> methods to get <xref:System.Data.DataRow> elements from a <xref:System.Data.DataSet> using the query expression syntax.</span></span>  

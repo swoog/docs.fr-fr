@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766918"
 ---
 # <a name="ltunrecognizedpolicyassertiongt"></a><span data-ttu-id="76689-102">&lt;unrecognizedPolicyAssertion&gt;</span><span class="sxs-lookup"><span data-stu-id="76689-102">&lt;unrecognizedPolicyAssertion&gt;</span></span>
 <span data-ttu-id="76689-103">Représente un élément de liaison qui spécifie l’assertion de stratégie.</span><span class="sxs-lookup"><span data-stu-id="76689-103">Represents a binding element that specifies policy assertion.</span></span> <span data-ttu-id="76689-104">Cet élément n'a aucun attribut et est présent en tant que commutateur vide.</span><span class="sxs-lookup"><span data-stu-id="76689-104">This element has no attribute and is present as an empty switch.</span></span>  

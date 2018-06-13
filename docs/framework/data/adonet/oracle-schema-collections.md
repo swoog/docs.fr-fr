@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766853"
 ---
 # <a name="oracle-schema-collections"></a><span data-ttu-id="fa956-102">Collections de schémas Oracle</span><span class="sxs-lookup"><span data-stu-id="fa956-102">Oracle Schema Collections</span></span>
 <span data-ttu-id="fa956-103">Le fournisseur de données Microsoft .NET Framework pour Oracle prend en charge les collections de schémas spécifiques suivantes en plus des collections de schémas courantes.</span><span class="sxs-lookup"><span data-stu-id="fa956-103">The Microsoft .NET Framework Data Provider for Oracle supports the following specific schema collections in addition to the common schema collections:</span></span>  

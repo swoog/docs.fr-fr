@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763772"
 ---
 # <a name="model-defined-function"></a><span data-ttu-id="b3017-102">fonction définie par modèle</span><span class="sxs-lookup"><span data-stu-id="b3017-102">model-defined function</span></span>
 <span data-ttu-id="b3017-103">A *fonction définie par modèle* est une fonction qui est définie dans un modèle conceptuel.</span><span class="sxs-lookup"><span data-stu-id="b3017-103">A *model-defined function* is a function that is defined in a conceptual model.</span></span> <span data-ttu-id="b3017-104">Le corps d’une fonction définie par modèle est exprimé en [Entity SQL](../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md), ce qui permet de la fonction d’exprimer indépendamment de règles ou langues prises en charge dans la source de données.</span><span class="sxs-lookup"><span data-stu-id="b3017-104">The body of a model-defined function is expressed in [Entity SQL](../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md), which allows for the function to be expressed independently of rules or languages supported in the data source.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760269"
 ---
 # <a name="summary-of-the-dataset-schema-inference-process"></a><span data-ttu-id="777e9-102">Résumé du processus d'inférence du schéma de données</span><span class="sxs-lookup"><span data-stu-id="777e9-102">Summary of the DataSet Schema Inference Process</span></span>
 <span data-ttu-id="777e9-103">Le processus d'inférence identifie d'abord, à partir du document XML, les éléments qui seront déduits en tant que tables.</span><span class="sxs-lookup"><span data-stu-id="777e9-103">The inference process first determines, from the XML document, which elements will be inferred as tables.</span></span> <span data-ttu-id="777e9-104">À partir du XML restant, le processus d'inférence détermine les colonnes qui feront partie de ces tables.</span><span class="sxs-lookup"><span data-stu-id="777e9-104">From the remaining XML, the inference process determines the columns for those tables.</span></span> <span data-ttu-id="777e9-105">Pour les tables imbriquées, le processus d'inférence génère des objets <xref:System.Data.DataRelation> et <xref:System.Data.ForeignKeyConstraint> imbriqués.</span><span class="sxs-lookup"><span data-stu-id="777e9-105">For nested tables, the inference process generates nested <xref:System.Data.DataRelation> and <xref:System.Data.ForeignKeyConstraint> objects.</span></span>  

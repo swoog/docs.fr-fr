@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748137"
 ---
 # <a name="ltlistenersgt-element-for-lttracegt"></a><span data-ttu-id="8974a-102">&lt;écouteurs&gt; , élément pour &lt;trace&gt;</span><span class="sxs-lookup"><span data-stu-id="8974a-102">&lt;listeners&gt; Element for &lt;trace&gt;</span></span>
 <span data-ttu-id="8974a-103">Spécifie un écouteur qui collecte, stocke et achemine les messages.</span><span class="sxs-lookup"><span data-stu-id="8974a-103">Specifies a listener that collects, stores, and routes messages.</span></span> <span data-ttu-id="8974a-104">Les écouteurs dirigent la sortie de traçage vers une cible appropriée.</span><span class="sxs-lookup"><span data-stu-id="8974a-104">Listeners direct the tracing output to an appropriate target.</span></span>  
