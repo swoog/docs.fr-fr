@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493335"
 ---
 # <a name="peer-meshes"></a>Mailles d'homologues
 A *de maillage* est une collection nommée (un graphique interconnecté) de nœuds homologues qui peuvent communiquer entre eux et qui sont identifiés par un ID de maille unique. Chaque nœud est connecté à plusieurs autres nœuds. Dans un maillage bien connecté, il existe un chemin entre chaque paire de nœuds, avec relativement peu de sauts entre les nœuds aux extrémités les plus éloignées du maillage, et le maillage reste connecté y compris si quelques nœuds ou connexions sont abandonnés. Les nœuds actifs dans la maille publient leurs informations de point de terminaison avec un ID de maille correspondant afin que d'autres homologues puissent les trouver.  

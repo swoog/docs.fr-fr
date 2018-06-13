@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491986"
 ---
 # <a name="how-to-set-up-a-signature-confirmation"></a>Comment : configurer une confirmation de signature
 *Confirmation de signature* est un mécanisme pour un initiateur de message pour vous assurer qu’un message reçu a été généré en réponse au message d’origine de l’expéditeur. La confirmation de signature est définie dans la spécification WS-Security 1.1. Si un point de terminaison prend en charge WS-Security 1.0, vous ne pouvez pas utiliser la confirmation de signature.  

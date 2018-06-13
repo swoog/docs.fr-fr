@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494730"
 ---
 # <a name="saml-tokens-and-claims"></a>Jetons SAML et revendications
 Sécurité Assertions Markup Language (SAML) *jetons* sont des représentations XML de revendications. Par défaut, les jetons SAML Windows Communication Foundation (WCF) utilise dans les scénarios de sécurité fédérée sont *jetons émis*.  

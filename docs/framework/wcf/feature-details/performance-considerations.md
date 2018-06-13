@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490833"
 ---
 # <a name="performance-considerations"></a>Considérations sur les performances
 Les considérations relatives aux performance sont toujours importantes lors de la génération d'applications. Cette section contient des entrées liées aux performances et à la sécurité.  

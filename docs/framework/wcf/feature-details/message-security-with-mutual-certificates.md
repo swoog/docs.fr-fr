@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494174"
 ---
 # <a name="message-security-with-mutual-certificates"></a>Sécurité de message avec certificats mutuels
 Le scénario suivant illustre un service Windows Communication Foundation (WCF) et un client sécurisé à l’aide du mode de sécurité de message. Le client et le service sont authentifiés à l'aide de certificats.  

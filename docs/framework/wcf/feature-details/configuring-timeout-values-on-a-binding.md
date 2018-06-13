@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489607"
 ---
 # <a name="configuring-timeout-values-on-a-binding"></a>configuration de valeurs du délai d’attente sur une liaison
 Il existe plusieurs paramètres de délai d’attente disponibles dans les liaisons WCF. Définir ces paramètres de délai d'attente correctement peut non seulement améliorer les performances de votre service, mais également jouer un rôle dans la facilité d'utilisation et la sécurité de ce dernier. Les délais d'attente suivants sont disponibles sur les liaisons WCF :  

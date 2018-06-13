@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491281"
 ---
 # <a name="correlation"></a>Corrélation
 Lorsque les applications de service de workflow communiquent avec d'autres services, il est important que les messages échangés entre eux soient distribués à l'instance de workflow appropriée. La corrélation en fournit le mécanisme. Les rubriques de cette section donnent une vue d'ensemble de la corrélation et de son utilisation dans différents scénarios de service de workflow.  

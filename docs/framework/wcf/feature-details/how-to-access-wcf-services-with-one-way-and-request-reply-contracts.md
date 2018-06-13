@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494320"
 ---
 # <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a>Comment : accéder aux services WCF avec des contrats unidirectionnels et demande-réponse
 Les procédures suivantes décrivent comment pour accéder à un service Windows Communication Foundation (WCF) qui définit un contrat unidirectionnel et un contrat demande-réponse et qui n’utilise pas le modèle de communication duplex.  
