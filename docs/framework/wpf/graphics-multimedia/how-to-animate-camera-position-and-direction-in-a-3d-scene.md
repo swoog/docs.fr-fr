@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558876"
 ---
 # <a name="how-to-animate-camera-position-and-direction-in-a-3d-scene"></a>Comment : animer la position et la direction d'une caméra dans une scène 3D
 L’exemple suivant montre comment animer la position d’une caméra et animer la direction qu’il pointe dans une scène 3D. Il incombe à l’aide de <xref:System.Windows.Media.Animation.Point3DAnimation> et <xref:System.Windows.Media.Animation.Vector3DAnimation> pour animer la <xref:System.Windows.Media.Media3D.ProjectionCamera.Position%2A> et <xref:System.Windows.Media.Media3D.ProjectionCamera.LookDirection%2A> propriétés respectivement de la <xref:System.Windows.Media.Media3D.PerspectiveCamera>. Vous pouvez utiliser une animation comme suit pour modifier la vue du spectateur d’une scène en réponse à un événement.  

@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 98563c175f12ad1ff25e1f578270fe1099175487
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33453774"
 ---
 # <a name="icorprofilercallbackremotingserversendingreply-method"></a>ICorProfilerCallback::RemotingServerSendingReply, méthode
 Notifie le profileur que le processus a fini de traiter une demande d’appel de méthode distant et qu’il est sur le point de transmettre la réponse via un canal.  

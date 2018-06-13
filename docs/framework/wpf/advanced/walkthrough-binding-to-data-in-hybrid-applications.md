@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549277"
 ---
 # <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>Procédure pas à pas : liaison de données dans des applications hybrides
 Liaison d’une source de données à un contrôle est essentielle pour fournir aux utilisateurs d’accéder aux données sous-jacentes, que vous utilisiez [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ou [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Cette procédure pas à pas montre comment vous pouvez utiliser la liaison de données dans les applications hybrides qui incluent les deux [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] et [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contrôles.  

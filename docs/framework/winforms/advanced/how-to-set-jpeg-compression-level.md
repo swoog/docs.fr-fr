@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525241"
 ---
 # <a name="how-to-set-jpeg-compression-level"></a>Guide pratique pour définir le niveau de compression JPEG
 Vous pouvez modifier les paramètres d’une image quand vous enregistrez l’image sur disque de façon à réduire la taille du fichier ou améliorer sa qualité. Vous pouvez ajuster la qualité d’une image JPEG en changeant son niveau de compression. Pour spécifier le niveau de compression lorsque vous enregistrez une image JPEG, vous devez créer un <xref:System.Drawing.Imaging.EncoderParameters> de l’objet et le passer à la <xref:System.Drawing.Image.Save%2A> méthode de la <xref:System.Drawing.Image> classe. Initialiser le <xref:System.Drawing.Imaging.EncoderParameters> objet afin qu’il possède un tableau qui se compose d’une <xref:System.Drawing.Imaging.EncoderParameter>. Lorsque vous créez le <xref:System.Drawing.Imaging.EncoderParameter>, spécifiez la <xref:System.Drawing.Imaging.Encoder.Quality> encodeur et le niveau de compression souhaité.  

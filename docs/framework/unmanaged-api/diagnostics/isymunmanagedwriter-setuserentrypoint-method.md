@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9ec44d4c2757555c74fe7fc27c26cc5fc87c4517
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426685"
 ---
 # <a name="isymunmanagedwritersetuserentrypoint-method"></a>ISymUnmanagedWriter::SetUserEntryPoint, méthode
 Spécifie la méthode définie par l’utilisateur qui est le point d’entrée pour ce module. Par exemple, ce point d’entrée peut être méthode principale de l’utilisateur au lieu de stubs générés par le compilateur avant principal.  

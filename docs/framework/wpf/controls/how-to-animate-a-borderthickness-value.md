@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551337"
 ---
 # <a name="how-to-animate-a-borderthickness-value"></a>Comment : animer une valeur BorderThickness
 Cet exemple montre comment animer les modifications apportées à l’épaisseur d’une bordure à l’aide de la <xref:System.Windows.Media.Animation.ThicknessAnimation> classe.  

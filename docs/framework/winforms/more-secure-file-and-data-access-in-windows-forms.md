@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541896"
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Accès plus sécurisé aux fichiers et aux données dans les Windows Forms
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] utilise des autorisations pour aider à protéger les ressources et les données. L'emplacement où votre application peut lire ou écrire des données dépend des autorisations qui lui sont accordées. Quand votre application s'exécute dans un environnement de confiance partielle, vous n'avez peut-être pas accès à vos données ou vous devrez peut-être modifier la manière dont vous accédez aux données.  

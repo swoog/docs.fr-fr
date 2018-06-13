@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552686"
 ---
 # <a name="wpf-host-presentationhostexe"></a>Hôte WPF (PresentationHost.exe)
 Windows Presentation Foundation (WPF) hôte (PresentationHost.exe) est une application qui permet de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aux applications d’être hébergées dans des navigateurs compatibles (y compris [!INCLUDE[TLA#tla_ie6](../../../../includes/tlasharptla-ie6-md.md)] et versions ultérieures). Par défaut, les hôtes de Windows Presentation Foundation (WPF) est inscrit en tant que l’interpréteur de commandes et [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] gestionnaire pour hébergées par un navigateur [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] contenu, qui inclut :  

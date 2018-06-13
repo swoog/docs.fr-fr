@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e3478364a415b145bed879cda5cc5c41cf22254c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33458791"
 ---
 # <a name="icorprofilerobjectenum-interface"></a>ICorProfilerObjectEnum, interface
 Fournit des méthodes pour itérer séquentiellement une collection d’objets figés qui sont générés par le [Ngen.exe (Native Image Generator)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md).  

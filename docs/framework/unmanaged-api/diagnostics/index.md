@@ -10,9 +10,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 418c9afdec32b685f67bd457c055476b5501b414
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33425000"
 ---
 # <a name="diagnostics-symbol-store-unmanaged-api-reference"></a>Magasin de symboles de diagnostics (Informations de référence sur les API non managées)
 L’API de magasin de symboles de diagnostics permet à un compilateur de générer des informations de symbole pour une utilisation par un débogueur.  

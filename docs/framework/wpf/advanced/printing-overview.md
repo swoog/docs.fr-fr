@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549576"
 ---
 # <a name="printing-overview"></a>Vue d'ensemble de l'impression
 Avec Microsoft .NET Framework, les développeurs d’applications à l’aide de Windows Presentation Foundation (WPF) ont un nouvel ensemble riche de gestion du système d’impression et impression [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]. Avec [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], certaines de ces améliorations du système d'impression sont aussi accessibles aux développeurs créant des applications [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] et à ceux utilisant du code non managé. Le nouveau format de fichier [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] et le chemin d'impression [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] sont au cœur de cette nouvelle fonctionnalité.  

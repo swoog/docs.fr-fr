@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529007"
 ---
 # <a name="walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time"></a>Procédure pas à pas : création de contenu WPF sur les Windows Forms au moment du design
 Cette rubrique montre comment créer un contrôle Windows Presentation Foundation (WPF) pour une utilisation dans vos applications Windows Forms.  

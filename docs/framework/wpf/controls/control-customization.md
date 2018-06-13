@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551121"
 ---
 # <a name="control-customization"></a>Personnalisation des contrôles
 Cette catégorie couvre les différentes classes de base, interfaces et autres éléments et les concepts utilisés dans la création entièrement fonctionnelle [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] contrôle.  

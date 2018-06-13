@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548264"
 ---
 # <a name="relativesource-markupextension"></a>RelativeSource, extension de balisage
 Spécifie les propriétés d’un <xref:System.Windows.Data.RelativeSource> source de liaison, à utiliser dans un [Extension de balisage de liaison](../../../../docs/framework/wpf/advanced/binding-markup-extension.md), ou lors de la définition la <xref:System.Windows.Data.Binding.RelativeSource%2A> propriété d’un <xref:System.Windows.Data.Binding> élément établie en XAML.  

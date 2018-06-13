@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548628"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>Déploiement d'une application WPF (WPF)
 Une fois que les applications Windows Presentation Foundation (WPF) sont générées, ils doivent être déployés. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] et le .NET Framework inclut plusieurs technologies de déploiement. La technologie de déploiement utilisée pour déployer une application [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] dépend du type d’application. Cette rubrique fournit une vue d’ensemble des différentes technologies de déploiement et explique leur utilisation avec les spécifications de déploiement de chaque type d’application [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  

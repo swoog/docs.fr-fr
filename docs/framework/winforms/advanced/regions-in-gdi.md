@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524581"
 ---
 # <a name="regions-in-gdi"></a>Régions dans GDI+
 Une région est une partie de la zone d’affichage d’un périphérique de sortie. Régions peuvent être simple (un rectangle) ou complexe (combinaison de polygones et de courbes fermées). L’illustration suivante montre deux régions : une construite à partir d’un rectangle et l’autre construite à partir d’un chemin d’accès.  

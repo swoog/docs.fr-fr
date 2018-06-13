@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588945"
 ---
 # <a name="how-to-receive-strings-from-serial-ports-in-visual-basic"></a>Guide pratique pour recevoir des chaînes provenant des ports série en Visual Basic
 Cette rubrique explique comment utiliser `My.Computer.Ports` pour recevoir des chaînes provenant des ports série de l’ordinateur en Visual Basic.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547340"
 ---
 # <a name="safe-constructor-patterns-for-dependencyobjects"></a>Modèles de constructeur sécurisé pour DependencyObjects
 En règle générale, les constructeurs de classe ne doivent pas appeler des rappels tels que les méthodes ou les délégués virtuels, étant donné que les constructeurs peuvent être appelés comme une initialisation de base des constructeurs d’une classe dérivée. L’utilisation de méthodes virtuelles peut se faire à un état d’initialisation incomplet d’un objet donné. Toutefois, le système de propriétés appelle et expose les rappels en interne, dans le cadre du système de propriétés de dépendance. Une opération aussi simple que la définition d’une valeur de propriété de dépendance avec <xref:System.Windows.DependencyObject.SetValue%2A> appel inclut potentiellement un rappel quelque part dans la détermination. Pour cette raison, vous devez être prudent lorsque vous définissez des valeurs de propriété dans le corps d’un constructeur, car cela peut devenir problématique si votre type est utilisé comme classe de base de dépendance. Il existe un modèle spécifique pour l’implémentation de <xref:System.Windows.DependencyObject> constructeurs qui évite les problèmes spécifiques liés aux États de propriété de dépendance et aux rappels inhérents, qui est décrit ici.  

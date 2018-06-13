@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589034"
 ---
 # <a name="how-to-call-a-web-service-asynchronously-visual-basic"></a>Guide pratique pour appeler un service web de manière asynchrone (Visual Basic)
 Cet exemple attache un gestionnaire à l'événement de gestionnaire asynchrone d'un service web pour qu'il puisse récupérer le résultat d'un appel de méthode asynchrone. Cet exemple utilise le service web DemoTemperatureService disponible sur http://www.xmethods.net.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397583"
 ---
 # <a name="peer-names-and-pnrp-ids"></a>Noms d’homologues et ID PNRP
 Un nom de pair représente un point de terminaison pour la communication. Il peut s’agir d’un ordinateur, d’un utilisateur, d’un groupe, d’un service ou de tout autre élément associé à un pair pouvant être résolu en une adresse IPv6. Le protocole PNRP utilise le nom de pair statistiquement unique pour la création d’un ID PNRP, qui est utilisé pour identifier les membres du cloud.  

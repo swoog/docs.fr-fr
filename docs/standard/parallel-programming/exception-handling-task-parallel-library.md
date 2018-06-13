@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591294"
 ---
 # <a name="exception-handling-task-parallel-library"></a>Gestion des exceptions (bibliothèque parallèle de tâches)
 Les exceptions non gérées levées par le code utilisateur s’exécutant à l’intérieur d’une tâche sont propagées vers le thread appelant, sauf dans certains scénarios décrits plus loin dans cette rubrique. Les exceptions sont propagées quand vous utilisez l’une des méthodes statiques ou d’instance <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> ou <!--zz <xref:System.Threading.Tasks.Task%601.Wait%2A?displayProperty=nameWithType>  --> `Wait` et que vous les gérez en incluant l’appel dans une instruction `try`/`catch`. Si une tâche est le parent de tâches enfants attachées ou si vous attendez plusieurs tâches, plusieurs exceptions peuvent être levées.  

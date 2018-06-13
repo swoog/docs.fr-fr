@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dbaba00e029729fff5ad478a50134ff1e1858c0c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443450"
 ---
 # <a name="modulebindinfo-structure"></a>ModuleBindInfo, structure
 Fournit des informations détaillées sur le module référencé et de l’assembly qui le contient.  

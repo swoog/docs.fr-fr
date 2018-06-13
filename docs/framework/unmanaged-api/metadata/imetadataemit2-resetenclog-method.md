@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7c9ecabb53ace7ead95f64ed03244b9af12ed369
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449414"
 ---
 # <a name="imetadataemit2resetenclog-method"></a>IMetaDataEmit2::ResetENCLog, méthode
 Réinitialise le journal modifier et continuer et démarre une nouvelle session.  
