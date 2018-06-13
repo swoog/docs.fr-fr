@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753662"
 ---
 # <a name="coreresponsedatamresponseheaders-field"></a><span data-ttu-id="fb5b8-102">CoreResponseData.m\_ResponseHeaders champ</span><span class="sxs-lookup"><span data-stu-id="fb5b8-102">CoreResponseData.m\_ResponseHeaders Field</span></span>
 

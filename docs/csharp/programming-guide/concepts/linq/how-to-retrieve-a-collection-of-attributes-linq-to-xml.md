@@ -1,27 +1,19 @@
 ---
-title: "Guide pratique pour récupérer une collection d’attributs (LINQ to XML) (C#)"
-ms.custom: 
+title: Guide pratique pour récupérer une collection d’attributs (LINQ to XML) (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: a49ee7a3-b2c2-4d49-9b5c-b7c6c41f4f13
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 165c807735bfc73375d4ddec125786750ad08ad1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 73e548b100893652b63dfcc69669eabce655efa6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317841"
 ---
-# <a name="how-to-retrieve-a-collection-of-attributes-linq-to-xml-c"></a><span data-ttu-id="0ea1a-102">Guide pratique pour récupérer une collection d’attributs (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="0ea1a-102">How to: Retrieve a Collection of Attributes (LINQ to XML) (C#)</span></span>
-<span data-ttu-id="0ea1a-103">Cette rubrique présente la méthode <xref:System.Xml.Linq.XElement.Attributes%2A>.</span><span class="sxs-lookup"><span data-stu-id="0ea1a-103">This topic introduces the <xref:System.Xml.Linq.XElement.Attributes%2A> method.</span></span> <span data-ttu-id="0ea1a-104">Cette méthode récupère les attributs d'un élément.</span><span class="sxs-lookup"><span data-stu-id="0ea1a-104">This method retrieves the attributes of an element.</span></span>  
+# <a name="how-to-retrieve-a-collection-of-attributes-linq-to-xml-c"></a><span data-ttu-id="8f77e-102">Guide pratique pour récupérer une collection d’attributs (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="8f77e-102">How to: Retrieve a Collection of Attributes (LINQ to XML) (C#)</span></span>
+<span data-ttu-id="8f77e-103">Cette rubrique présente la méthode <xref:System.Xml.Linq.XElement.Attributes%2A>.</span><span class="sxs-lookup"><span data-stu-id="8f77e-103">This topic introduces the <xref:System.Xml.Linq.XElement.Attributes%2A> method.</span></span> <span data-ttu-id="8f77e-104">Cette méthode récupère les attributs d'un élément.</span><span class="sxs-lookup"><span data-stu-id="8f77e-104">This method retrieves the attributes of an element.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="0ea1a-105">Exemple</span><span class="sxs-lookup"><span data-stu-id="0ea1a-105">Example</span></span>  
- <span data-ttu-id="0ea1a-106">L’exemple suivant montre comment itérer au sein de la collection d’attributs d’un élément.</span><span class="sxs-lookup"><span data-stu-id="0ea1a-106">The following example shows how to iterate through the collection of attributes of an element.</span></span>  
+## <a name="example"></a><span data-ttu-id="8f77e-105">Exemple</span><span class="sxs-lookup"><span data-stu-id="8f77e-105">Example</span></span>  
+ <span data-ttu-id="8f77e-106">L’exemple suivant montre comment itérer au sein de la collection d’attributs d’un élément.</span><span class="sxs-lookup"><span data-stu-id="8f77e-106">The following example shows how to iterate through the collection of attributes of an element.</span></span>  
   
 ```csharp  
 XElement val = new XElement("Value",  
@@ -36,7 +28,7 @@ foreach (XAttribute a in listOfAttributes)
     Console.WriteLine(a);  
 ```  
   
- <span data-ttu-id="0ea1a-107">Ce code génère la sortie suivante :</span><span class="sxs-lookup"><span data-stu-id="0ea1a-107">This code produces the following output:</span></span>  
+ <span data-ttu-id="8f77e-107">Ce code génère la sortie suivante :</span><span class="sxs-lookup"><span data-stu-id="8f77e-107">This code produces the following output:</span></span>  
   
 ```  
 ID="1243"  
@@ -44,5 +36,5 @@ Type="int"
 ConvertableTo="double"  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="0ea1a-108">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="0ea1a-108">See Also</span></span>  
- [<span data-ttu-id="0ea1a-109">Axes LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="0ea1a-109">LINQ to XML Axes (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)
+## <a name="see-also"></a><span data-ttu-id="8f77e-108">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="8f77e-108">See Also</span></span>  
+ [<span data-ttu-id="8f77e-109">Axes LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="8f77e-109">LINQ to XML Axes (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)

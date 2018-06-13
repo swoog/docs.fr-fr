@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758155"
 ---
 # <a name="modifying-data-with-stored-procedures"></a><span data-ttu-id="27d87-102">Modification des données avec les procédures stockées</span><span class="sxs-lookup"><span data-stu-id="27d87-102">Modifying Data with Stored Procedures</span></span>
 <span data-ttu-id="27d87-103">Les procédures stockées peuvent accepter des données en tant que paramètres d'entrée et retourner des données en tant que paramètres de sortie, jeux de résultats et valeurs de retour.</span><span class="sxs-lookup"><span data-stu-id="27d87-103">Stored procedures can accept data as input parameters and can return data as output parameters, result sets, or return values.</span></span> <span data-ttu-id="27d87-104">L'exemple ci-dessous montre comment ADO.NET envoie et reçoit des paramètres d'entrée, des paramètres de sortie et des valeurs de retour.</span><span class="sxs-lookup"><span data-stu-id="27d87-104">The sample below illustrates how ADO.NET sends and receives input parameters, output parameters, and return values.</span></span> <span data-ttu-id="27d87-105">L'exemple insère un nouvel enregistrement dans une table où la colonne de clé primaire est une colonne d'identité dans une base de données SQL Server.</span><span class="sxs-lookup"><span data-stu-id="27d87-105">The example inserts a new record into a table where the primary key column is an identity column in a SQL Server database.</span></span>  

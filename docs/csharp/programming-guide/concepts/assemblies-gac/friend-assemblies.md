@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33320864"
 ---
 # <a name="friend-assemblies-c"></a><span data-ttu-id="d1ae9-102">Assemblys friend (C#)</span><span class="sxs-lookup"><span data-stu-id="d1ae9-102">Friend Assemblies (C#)</span></span>
 <span data-ttu-id="d1ae9-103">Un *assembly friend* est un assembly qui peut accéder aux types et membres [internes](../../../../csharp/language-reference/keywords/internal.md) d'un autre assembly.</span><span class="sxs-lookup"><span data-stu-id="d1ae9-103">A *friend assembly* is an assembly that can access another assembly's [internal](../../../../csharp/language-reference/keywords/internal.md) types and members.</span></span> <span data-ttu-id="d1ae9-104">Si vous identifiez un assembly comme étant un assembly friend, vous n’avez plus à marquer ses types et ses membres comme publics pour qu’ils soient accessibles aux autres assemblys.</span><span class="sxs-lookup"><span data-stu-id="d1ae9-104">If you identify an assembly as a friend assembly, you no longer have to mark types and members as public in order for them to be accessed by other assemblies.</span></span> <span data-ttu-id="d1ae9-105">Ceci est particulièrement utile dans les scénarios suivants :</span><span class="sxs-lookup"><span data-stu-id="d1ae9-105">This is especially convenient in the following scenarios:</span></span>  

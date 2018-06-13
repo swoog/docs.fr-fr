@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33314325"
 ---
 # <a name="fields-c-programming-guide"></a><span data-ttu-id="cf6d9-102">Champs (Guide de programmation C#)</span><span class="sxs-lookup"><span data-stu-id="cf6d9-102">Fields (C# Programming Guide)</span></span>
 <span data-ttu-id="cf6d9-103">Un *champ* est une variable de tout type qui est déclarée directement dans une [classe](../../../csharp/language-reference/keywords/class.md) ou un [struct](../../../csharp/language-reference/keywords/struct.md).</span><span class="sxs-lookup"><span data-stu-id="cf6d9-103">A *field* is a variable of any type that is declared directly in a [class](../../../csharp/language-reference/keywords/class.md) or [struct](../../../csharp/language-reference/keywords/struct.md).</span></span> <span data-ttu-id="cf6d9-104">Les champs sont *membres* de leur type contenant.</span><span class="sxs-lookup"><span data-stu-id="cf6d9-104">Fields are *members* of their containing type.</span></span>  

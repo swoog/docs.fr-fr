@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33319148"
 ---
 # <a name="applicability-of-functional-transformation-c"></a><span data-ttu-id="3dce9-102">Applicabilité des transformations fonctionnelles (C#)</span><span class="sxs-lookup"><span data-stu-id="3dce9-102">Applicability of Functional Transformation (C#)</span></span>
 <span data-ttu-id="3dce9-103">Les transformations fonctionnelles pures sont applicables dans un large éventail de situations.</span><span class="sxs-lookup"><span data-stu-id="3dce9-103">Pure functional transformations are applicable in a wide variety of situations.</span></span>  

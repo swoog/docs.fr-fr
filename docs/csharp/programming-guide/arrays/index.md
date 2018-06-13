@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33313499"
 ---
 # <a name="arrays-c-programming-guide"></a><span data-ttu-id="c66ca-102">Tableaux (guide de programmation C#)</span><span class="sxs-lookup"><span data-stu-id="c66ca-102">Arrays (C# Programming Guide)</span></span>
 <span data-ttu-id="c66ca-103">Vous pouvez stocker plusieurs variables du même type dans une structure de données de type tableau.</span><span class="sxs-lookup"><span data-stu-id="c66ca-103">You can store multiple variables of the same type in an array data structure.</span></span> <span data-ttu-id="c66ca-104">Vous déclarez un tableau en spécifiant le type de ses éléments.</span><span class="sxs-lookup"><span data-stu-id="c66ca-104">You declare an array by specifying the type of its elements.</span></span>  

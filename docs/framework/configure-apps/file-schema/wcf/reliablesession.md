@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751439"
 ---
 # <a name="ltreliablesessiongt"></a><span data-ttu-id="5f0da-102">&lt;reliableSession&gt;</span><span class="sxs-lookup"><span data-stu-id="5f0da-102">&lt;reliableSession&gt;</span></span>
 <span data-ttu-id="5f0da-103">Définit le paramètre pour la messagerie WS-Reliable.</span><span class="sxs-lookup"><span data-stu-id="5f0da-103">Defines setting for WS-Reliable Messaging.</span></span> <span data-ttu-id="5f0da-104">Lorsque cet élément est ajouté à une liaison personnalisée, le canal résultant peut prendre en charge des assurances de remise EOD (Exactly-Once-Delivery).</span><span class="sxs-lookup"><span data-stu-id="5f0da-104">When this element is added to a custom binding, the resulting channel can support exactly-once delivery assurances.</span></span>  
