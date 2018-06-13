@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365327"
 ---
 # <a name="accessing-data-service-resources-wcf-data-services"></a>Accès aux ressources d'un service de données (services de données WCF)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] prend en charge la [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] pour exposer vos données en tant que flux avec des ressources adressables par URI. Ces ressources sont représentés selon les conventions de relation d’entité de la [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md). Dans ce modèle, les entités représentent des unités opérationnelles de données qui sont des types de données dans un domaine d'application, par exemple les clients, ordres, éléments et produits. Les données d'entité sont accessibles et modifiées au moyen de la sémantique REST (Representational State Transfer), en particulier les verbes HTTP standard GET, PUT, POST et DELETE.  

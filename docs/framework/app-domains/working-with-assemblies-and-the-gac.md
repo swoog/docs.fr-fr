@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744302"
 ---
 # <a name="working-with-assemblies-and-the-global-assembly-cache"></a>Utilisation d'assemblys et du Global Assembly Cache
 Si vous prévoyez de partager un assembly entre plusieurs applications, vous pouvez l’installer dans le Global Assembly Cache. Chaque ordinateur où le common language runtime est installé a ce cache de code à l’échelle de l’ordinateur. Le Global Assembly Cache stocke des assemblys spécialement destinés à être partagés entre plusieurs applications sur l’ordinateur. Un assembly doit avoir un nom fort pour être installé dans le Global Assembly Cache.  

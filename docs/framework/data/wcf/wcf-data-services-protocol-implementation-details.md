@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363719"
 ---
 # <a name="wcf-data-services-protocol-implementation-details"></a>Détails relatifs à l'implémentation du protocole WCF Data Services
 ## <a name="odata-protocol-implementation-details"></a>Détails de l'implémentation du protocole OData  

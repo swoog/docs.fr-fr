@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557236"
 ---
 # <a name="tooltip-overview"></a>Vue d'ensemble de l'info-bulle
 Une info-bulle est une petite fenêtre contextuelle qui apparaît lorsqu’un utilisateur place le pointeur de la souris au-dessus d’un élément, tel qu’un <xref:System.Windows.Controls.Button>. Cette rubrique présente l’info-bulle et explique comment créer et personnaliser son contenu.  

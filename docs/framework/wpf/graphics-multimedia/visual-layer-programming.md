@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561733"
 ---
 # <a name="visual-layer-programming"></a>Programmation de la couche visuelle
 Le <xref:System.Windows.Media.Visual> est un objet [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] objet, dont le rôle principal consiste à fournir la prise en charge du rendu. Contrôles d’interface utilisateur, tel que <xref:System.Windows.Controls.Button> et <xref:System.Windows.Controls.TextBox>, dérivent de la <xref:System.Windows.Media.Visual> classe et utilisez-la pour conserver leurs données de rendu.  

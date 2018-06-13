@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397258"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Meilleures pratiques du protocole TLS (Transport Layer Security) avec .NET Framework
 

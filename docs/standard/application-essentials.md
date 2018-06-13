@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567573"
 ---
 # <a name="net-framework-application-essentials"></a>Application .NET Framework Essentials
 Cette section de la documentation .NET Framework fournit des informations sur des tâches de développement d’application de base dans le .NET Framework.  

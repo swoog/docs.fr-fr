@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33564519"
 ---
 # <a name="-escape-sequence--markup-extension"></a>{} Séquence d’échappement / Extension de balisage
 Fournit la séquence d’échappement XAML pour les valeurs d’attribut. La séquence d’échappement autorise les valeurs suivantes dans l’attribut doit être interprété comme un littéral.  

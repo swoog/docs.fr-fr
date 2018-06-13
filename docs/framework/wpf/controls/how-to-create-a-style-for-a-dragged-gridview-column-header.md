@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554571"
 ---
 # <a name="how-to-create-a-style-for-a-dragged-gridview-column-header"></a>Comment : créer un style pour un en-tête de colonne GridView déplacé
 Cet exemple montre comment modifier l’apparence d’un élément déplacé <xref:System.Windows.Controls.GridViewColumnHeader> lorsque l’utilisateur modifie la position d’une colonne.  

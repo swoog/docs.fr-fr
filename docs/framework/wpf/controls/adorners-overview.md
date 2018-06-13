@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557119"
 ---
 # <a name="adorners-overview"></a>Vue d'ensemble des ornements
 Les ornements sont un type spécial de <xref:System.Windows.FrameworkElement>, utilisés pour fournir des signaux visuels à un utilisateur. Les ornements permettent notamment d’ajouter des descripteurs fonctionnels à des éléments ou de fournir des informations d’état sur un contrôle.  

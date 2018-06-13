@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365954"
 ---
 # <a name="wcf-data-services-45"></a>WCF Data Services 4.5
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] (autrefois appelé « ADO.NET Data Services ») est un composant du .NET Framework qui permet de créer des services qui utilisent le protocole [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] pour exposer et consommer des données sur le web ou l’intranet en utilisant la sémantique de [REST (representational state transfer)](http://go.microsoft.com/fwlink/?LinkId=113919). [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] expose des données comme des ressources adressables par des URI. Les données sont accessibles et modifiables à l'aide des verbes HTTP standard GET, PUT, POST et DELETE. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] utilise les conventions de relation d’entité dans [EDM (Entity Data Model)](../../../../docs/framework/data/adonet/entity-data-model.md) pour exposer des ressources en tant que jeux d’entités liés par des associations.  

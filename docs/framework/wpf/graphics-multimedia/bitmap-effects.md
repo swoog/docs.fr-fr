@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555813"
 ---
 # <a name="bitmap-effects"></a>Effets bitmap
 Les rubriques de cette section décrivent comment appliquer des effets visuels à des images bitmap à l’aide de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  

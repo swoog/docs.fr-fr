@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570590"
 ---
 # <a name="design-guidelines-for-exceptions"></a>Instructions de conception pour les exceptions
 La gestion des exceptions présente de nombreux avantages sur le rapport d’erreurs de basée sur la valeur de retour. Conception bon framework permet le développeur d’applications de tirer parti d’exceptions. Cette section présente les avantages des exceptions et présente des indications pour les utiliser efficacement.  

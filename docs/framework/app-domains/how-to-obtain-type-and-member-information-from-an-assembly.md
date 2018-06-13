@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744065"
 ---
 # <a name="how-to-obtain-type-and-member-information-from-an-assembly"></a>Guide pratique pour obtenir des informations relatives au type et aux membres à partir d'un assembly
 L’espace de noms <xref:System.Reflection> contient de nombreuses méthodes pour obtenir des informations à partir d’un assembly. Cette section illustre l’une de ces méthodes. Pour plus d’informations, consultez [Vue d’ensemble de la réflexion](../../../docs/framework/reflection-and-codedom/reflection.md).  

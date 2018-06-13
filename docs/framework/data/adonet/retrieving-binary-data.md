@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362574"
 ---
 # <a name="retrieving-binary-data"></a>Extraction de données binaires
 Par défaut, le **DataReader** charge les données entrantes comme une ligne dès qu’une ligne de données complète est disponible. Les objets binaires volumineux ou BLOB doivent néanmoins être traités différemment car ils peuvent renfermer plusieurs gigaoctets de données qu'une seule ligne ne suffirait pas à contenir. Le **Command.ExecuteReader** méthode a une surcharge qui prendra un <xref:System.Data.CommandBehavior> argument pour modifier le comportement par défaut de la **DataReader**. Vous pouvez passer <xref:System.Data.CommandBehavior.SequentialAccess> à la **ExecuteReader** méthode permettant de modifier le comportement par défaut de la **DataReader** afin qu’au lieu de charger des lignes de données, il chargera les données séquentiellement qu’elles sont reçues. Cela est idéal pour charger les BLOB ou d'autres grosses structures de données. Notez que ce comportement peut différer selon votre source de données. Par exemple, un BLOB retourné de Microsoft Access est entièrement chargé dans la mémoire, au lieu que les données soient chargées de façon séquentielle à mesure qu'elles arrivent.  

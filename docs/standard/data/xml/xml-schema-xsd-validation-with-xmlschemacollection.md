@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572195"
 ---
 # <a name="xml-schema-xsd-validation-with-xmlschemacollection"></a>Validation de schéma XML (XSD) avec XmlSchemaCollection
 Vous pouvez utiliser la classe <xref:System.Xml.Schema.XmlSchemaCollection> pour valider un document XML par rapport à des schémas de langage XSD (XML Schema Definition). L'objet <xref:System.Xml.Schema.XmlSchemaCollection> améliore les performances en stockant des schémas dans la collection de sorte qu'ils ne soient pas chargés en mémoire lors de chaque validation. Si le schéma existe dans la collection de schémas, l'attribut `schemaLocation` permet de l'y rechercher.  

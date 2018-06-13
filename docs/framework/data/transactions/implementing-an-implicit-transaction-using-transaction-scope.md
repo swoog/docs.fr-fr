@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365304"
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>Implémentation d'une transaction implicite à l'aide de l'étendue de transaction
 La classe <xref:System.Transactions.TransactionScope> offre un moyen simple pour indiquer qu'un bloc de code participe à une transaction, sans avoir à intervenir sur la transaction même. Une étendue de transaction peut sélectionner et gérer automatiquement la transaction ambiante. En raison de sa facilité d'utilisation et de son efficacité, il est recommandé d'utiliser la classe <xref:System.Transactions.TransactionScope> lors du développement d'une application de transaction.  

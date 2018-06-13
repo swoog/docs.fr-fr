@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559417"
 ---
 # <a name="how-to-write-metadata-to-a-bitmap"></a>Comment : écrire des métadonnées dans une image bitmap
 Cet exemple montre comment écrire des métadonnées dans une image bitmap à l’aide du langage de requête de métadonnées.  

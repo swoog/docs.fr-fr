@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33215067"
 ---
 # <a name="-c-compiler-options"></a>@ (Options du compilateur C#)
 L’option @ vous permet de spécifier un fichier qui contient les options du compilateur et les fichiers de code source à compiler.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364069"
 ---
 # <a name="query-notifications-in-sql-server"></a>Notifications de requête dans SQL Server
 Basées sur l'infrastructure Service Broker, les notifications de requête permettent de notifier des applications en cas de modification de données. Cette fonction est particulièrement utile pour les applications qui génèrent un cache d'informations à partir d'une base de données, telles que les applications Web, et qui doivent être informées en cas de modification des données sources.  

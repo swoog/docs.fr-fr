@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515250"
 ---
 # <a name="exposing-data-with-cachemetadata"></a>Exposition de données avec CacheMetadata
 Avant d'exécuter une activité, le runtime du workflow obtient toutes les informations nécessaires sur l'activité afin de gérer son exécution. Le runtime de workflow obtient ces informations pendant l'exécution de la méthode <xref:System.Activities.Activity.CacheMetadata%2A>. L'implémentation par défaut de cette méthode fournit au runtime tous les arguments publics, variables et activités enfants exposés par l'activité lors de son exécution ; si l'activité a besoin de fournir plus d'informations au runtime (telles que les membres privés ou les activités à planifier par l'activité), cette méthode peut être substituée pour les fournir.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567843"
 ---
 # <a name="performing-formatting-operations"></a>Exécution d'opérations de mise en forme
 Les rubriques suivantes fournissent des instructions pas à pas pour effectuer des opérations de mise en forme spécifiques.  

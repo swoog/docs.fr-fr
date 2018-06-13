@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397060"
 ---
 # <a name="clr-etw-keywords-and-levels"></a>Niveaux et mots clés ETW du CLR
 <a name="top"></a> Les événements de suivi d'événements pour Windows (ETW) peuvent être filtrés par catégorie et par niveau. Les [Mots clés ETW du CLR](#keywords) d’événement permettent de filtrer les événements par catégorie. Ils sont utilisés sous forme de combinaisons pour les fournisseurs d’arrêt et de runtime. Les [niveaux d'événement](#levels) sont identifiés par des indicateurs.  

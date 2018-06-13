@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365785"
 ---
 # <a name="writing-a-windows-store-app-that-consumes-an-odata-service"></a>Écriture d'une application du Windows Store qui consomme un service OData
 Windows 8 introduit un nouveau type d’application : l’application du Windows Store. Les applications du Windows Store ont une nouvelle apparence, s'exécutent sur un large éventail de périphériques et sont rendues disponibles dans le Windows Store. Cette rubrique explique comment écrire une application du Windows Store qui utilise un service OData, spécifiquement le service OData du catalogue NetFlix. Pour plus d’informations sur les applications du Windows Store, lisez [mise en route avec les applications du Windows Store](http://msdn.microsoft.com/library/windows/apps/br211386.aspx).  

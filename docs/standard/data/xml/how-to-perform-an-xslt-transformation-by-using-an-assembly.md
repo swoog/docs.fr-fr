@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569501"
 ---
 # <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>Procédure : effectuer une transformation XSLT à l'aide d'un assembly
 Le compilateur XSLT (xsltc.exe) compile des feuilles de style XSLT et génère un assembly. L'assembly peut être passé directement dans la méthode <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType>.  

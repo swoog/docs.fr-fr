@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561697"
 ---
 # <a name="images"></a>Images
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] assure la prise en charge intégrée de plusieurs formats d’image, du rendu d’image haute fidélité et de l’extensibilité des codecs.  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556664"
 ---
 # <a name="drawings-how-to-topics"></a>Rubriques "Comment" relatives aux dessins
 Les rubriques de cette section décrivent comment utiliser <xref:System.Windows.Media.Drawing> objets pour dessiner des formes, des images ou texte.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565573"
 ---
 # <a name="xstatic-markup-extension"></a>x:Static, extension de balisage
 Fait référence à une entité de code en valeur statique qui est définie dans un [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]– moyen conforme. La propriété statique qui est référencée peut être utilisée pour fournir la valeur d’une propriété en XAML.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556833"
 ---
 # <a name="how-to-produce-a-value-based-on-a-list-of-bound-items"></a>Comment : produire une valeur en fonction d'une liste d'éléments liés
 <xref:System.Windows.Data.MultiBinding> vous permet de lier une propriété de cible de liaison à une liste de propriétés de la source, puis appliquer une logique pour produire une valeur avec les entrées données. Cet exemple montre comment utiliser <xref:System.Windows.Data.MultiBinding>.  

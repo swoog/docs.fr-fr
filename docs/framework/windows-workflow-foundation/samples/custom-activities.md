@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513082"
 ---
 # <a name="custom-activities"></a>Activités personnalisées
 Cette section contient des exemples qui montrent comment créer des activités personnalisées dans Windows Workflow Foundation (WF).  

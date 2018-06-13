@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516550"
 ---
 # <a name="workflow-hosting-options"></a>Options d'hébergement de workflow
 La plupart des exemples Windows Workflow Foundation (WF) utilise des flux de travail qui est hébergés dans une application console, mais ce n’est pas un scénario réaliste pour les workflows réels. Les workflows dans les applications d'entreprise réelles sont hébergés dans des processus persistants, un service Windows créé par le développeur ou une application serveur telle que [!INCLUDE[iisver](../../../includes/iisver-md.md)] ou AppFabric. Les différences entre ces approches sont les suivantes.  

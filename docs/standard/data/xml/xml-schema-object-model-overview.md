@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572107"
 ---
 # <a name="xml-schema-object-model-overview"></a>Vue d'ensemble du Modèle Objet du schéma XML
 Le Modèle Objet du schéma (SOM) de Microsoft .NET Framework est une API riche permettant de créer, modifier et valider des schémas à l'aide d'un programme. Le SOM travaille sur des documents de schéma XML de la même manière que le DOM (Document Object Model) travaille sur des documents XML. Les documents de schéma XML sont des fichiers XML valides qui, une fois chargés dans le SOM, communiquent la signification de la structure et de la validité d'autres documents XML conformes au schéma.  

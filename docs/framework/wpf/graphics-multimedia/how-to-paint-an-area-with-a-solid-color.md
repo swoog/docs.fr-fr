@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561329"
 ---
 # <a name="how-to-paint-an-area-with-a-solid-color"></a>Comment : peindre une zone avec une couleur unie
 Pour peindre une zone avec une couleur unie, vous pouvez utiliser un pinceau système prédéfini, tel que <xref:System.Windows.Media.Brushes.Red%2A> ou <xref:System.Windows.Media.Brushes.Blue%2A>, ou vous pouvez créer un nouveau <xref:System.Windows.Media.SolidColorBrush> et décrire son <xref:System.Windows.Media.SolidColorBrush.Color%2A> à l’aide des valeurs alphanumériques, rouges, verts et bleus. En XAML, vous pouvez également peindre une zone avec une couleur unie à l’aide de la notation hexadécimale.  

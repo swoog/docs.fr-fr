@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fe54aed47d240be37ab9dbc5381235c4e962f1f8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440312"
 ---
 # <a name="ihostmemorymanagervirtualalloc-method"></a>IHostMemoryManager::VirtualAlloc, méthode
 Sert de wrapper logique pour la fonction Win32 correspondante. L’implémentation Win32 de `VirtualAlloc` ou réserve ou valide une région de pages dans l’espace d’adressage virtuel du processus appelant.  

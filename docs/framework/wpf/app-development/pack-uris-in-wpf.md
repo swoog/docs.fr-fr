@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558150"
 ---
 # <a name="pack-uris-in-wpf"></a>URI à en-tête pack dans WPF
 Dans Windows Presentation Foundation (WPF), [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] sont utilisées pour identifier et charger des fichiers de nombreuses manières, notamment les suivantes :  

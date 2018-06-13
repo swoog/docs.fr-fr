@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742151"
 ---
 # <a name="manipulations-and-inertia"></a>Manipulations et inertie
 Les classes des processeurs de *manipulations* et d’*inertie* aident votre application à déplacer des éléments d’interface utilisateur sur l’écran de façon naturelle et intuitive. Les manipulations permettent aux utilisateurs de déplacer, de faire pivoter et de redimensionner des composants à l’aide de manipulateurs, tels qu’une souris, un stylet ou leurs doigts (dans le cas d’un écran tactile). L’*inertie* émule un comportement réel pour les éléments d’interface utilisateur qui sont en mouvement en simulant des forces de friction sur les éléments. Cela permet aux éléments de ralentir progressivement leurs déplacements (linéaires et angulaires) avant de s'arrêter.  

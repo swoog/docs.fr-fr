@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569627"
 ---
 # <a name="post-schema-compilation-infoset"></a>Jeu d'informations de post-compilation de schéma
 La [recommandation du World Wide Web Consortium (W3C) sur le schéma XML](https://www.w3.org/XML/Schema) décrit le jeu d'informations qui doit être exposé pour la pré-validation de schéma et la post-compilation de schéma. Le Modèle Objet du schéma (SOM) XML observe cette exposition avant et après l'appel à la méthode <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> de l'objet <xref:System.Xml.Schema.XmlSchemaSet>.  

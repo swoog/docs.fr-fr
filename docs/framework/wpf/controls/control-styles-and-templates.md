@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556911"
 ---
 # <a name="control-styles-and-templates"></a>Styles et modèles Control
 Les contrôles Windows Presentation Foundation (WPF) ont un <xref:System.Windows.Controls.ControlTemplate> qui contient l’arborescence d’éléments visuels de ce contrôle. Vous pouvez modifier la structure et l’apparence d’un contrôle en modifiant le <xref:System.Windows.Controls.ControlTemplate> de ce contrôle. Il n’existe aucun moyen de remplacer uniquement une partie de l’arborescence d’éléments visuels d’un contrôle. Pour modifier l’arborescence visuelle d’un contrôle, vous devez définir le <xref:System.Windows.Controls.Control.Template%2A> propriété du contrôle à son nouveau et le complète <xref:System.Windows.Controls.ControlTemplate>.  

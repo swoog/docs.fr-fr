@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744224"
 ---
 # <a name="ltsystemcodedomgt-element"></a>&lt;System.CodeDom&gt; élément
 Spécifie les paramètres de configuration du compilateur pour les fournisseurs de langages disponibles.  

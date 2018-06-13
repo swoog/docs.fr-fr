@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558354"
 ---
 # <a name="animation-tips-and-tricks"></a>Conseils et astuces sur les animations
 Lorsque vous utilisez des animations dans [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], il existe de nombreux conseils et astuces qui peuvent rendre vos animations plus performantes et vous permettre d’économiser frustration.  

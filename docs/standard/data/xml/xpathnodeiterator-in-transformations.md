@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571322"
 ---
 # <a name="xpathnodeiterator-in-transformations"></a>XPathNodeIterator dans les transformations
 L'objet <xref:System.Xml.XPath.XPathNodeIterator> fournit des méthodes pour itérer sur une collection de nœuds créée à la suite d'une requête XPath ou d'un fragment d'arborescence résultat converti en une collection de nœuds à l'aide de la méthode node-set. L'objet <xref:System.Xml.XPath.XPathNodeIterator> vous permet d'itérer sur les nœuds à l'intérieur de cette collection de nœuds. Dès qu'une collection de nœuds est extraite, la classe <xref:System.Xml.XPath.XPathNodeIterator> fournit un curseur avant uniquement en lecture seule à la collection de nœuds sélectionnée. La collection de nœuds étant créée dans l'ordre du document, l'appel de cette méthode permet un déplacement vers le prochain nœud dans l'ordre du document. <xref:System.Xml.XPath.XPathNodeIterator> ne construit pas une arborescence de nœuds de tous les nœuds de l'ensemble. Elle fournit à la place une seule fenêtre de nœuds dans les données, exposant le nœud sous-jacent vers lequel elle pointe lors du déplacement dans l'arborescence. Les méthodes et propriétés disponibles à partir de la classe <xref:System.Xml.XPath.XPathNodeIterator> vous permettent d'obtenir des informations à partir du nœud actuel. Pour obtenir la liste des méthodes et propriétés disponibles, voir <xref:System.Windows.Forms.ToolBar>.  

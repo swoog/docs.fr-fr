@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365353"
 ---
 # <a name="creating-the-net-framework-client-application-wcf-data-services-quickstart"></a>Création de l'application cliente .NET Framework (démarrage rapide des services de données WCF)
 C’est la dernière tâche de la [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] démarrage rapide. Dans cette tâche, vous sera ajouter une application console à la solution, ajoutez une référence à la [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] dans cette nouvelle application cliente et l’accès de flux le [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] flux à partir de l’application cliente en utilisant les classes de service de données client générées et le client bibliothèques.  

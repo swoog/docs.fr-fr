@@ -13,6 +13,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745212"
 ---
 # <a name="ltremovegt-element-for-ltnamedcachesgt"></a>&lt;supprimer&gt; , élément pour &lt;namedCaches&gt;
 Supprime une entité de cache nommé de la collection `namedCaches` d’un cache mémoire.  

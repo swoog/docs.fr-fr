@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557197"
 ---
 # <a name="how-to-animate-a-3-d-rotation-using-rotation3danimation"></a>Comment : animer une rotation 3D à l'aide de Rotation3DAnimation
 L’exemple suivant montre comment faire pivoter un objet 3D pendant qu’il « tremblement » à l’aide de <xref:System.Windows.Media.Animation.Rotation3DAnimation> pour animer la <xref:System.Windows.Media.Media3D.RotateTransform3D.Rotation%2A> propriété de la <xref:System.Windows.Media.Media3D.RotateTransform3D> objet appliqué à l’objet 3D.  

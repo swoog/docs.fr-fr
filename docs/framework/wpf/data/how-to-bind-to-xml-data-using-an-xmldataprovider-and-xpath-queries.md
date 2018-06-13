@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557444"
 ---
 # <a name="how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries"></a>Comment : effectuer une liaison à des données XML à l'aide d'un XMLDataProvider et de requêtes XPath
 Cet exemple montre comment lier à [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] à l’aide de données un <xref:System.Windows.Data.XmlDataProvider>.  

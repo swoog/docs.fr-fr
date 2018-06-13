@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557132"
 ---
 # <a name="data"></a>Données
 La liaison de données [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] offre un moyen simple et cohérent pour les applications de présenter les données et d’interagir avec elles. Les éléments peuvent être liés à des données émanant de diverses sources de données sous la forme d’objets [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] et XML. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fournit également un mécanisme de transfert de données via des opérations de glisser-déplacer.  

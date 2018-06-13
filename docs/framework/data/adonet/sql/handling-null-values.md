@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364269"
 ---
 # <a name="handling-null-values"></a>Gestion des valeurs null
 Une valeur null dans une base de données relationnelle est utilisée lorsque la valeur d'une colonne est inconnue ou manquante. Une valeur null n'est ni une chaîne vide (pour les types de données caractère ou datetime) ni une valeur zéro (pour les types de données numériques). La spécification ANSI SQL-92 stipule qu'une valeur null doit être la même pour tous les types de données afin que toutes les valeurs null soient traitées de manière cohérente. L'espace de noms <xref:System.Data.SqlTypes> fournit des sémantiques de valeurs null en implémentant l'interface <xref:System.Data.SqlTypes.INullable>. Chacun des types de données de l'espace de noms <xref:System.Data.SqlTypes> possède sa propre propriété `IsNull` et une valeur `Null` qui peut être assignée à une instance de ce type de données.  

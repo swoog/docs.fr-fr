@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575438"
 ---
 # <a name="xslt-compiler-xsltcexe"></a>XSLT Compiler (xsltc.exe)
 Le compilateur XSLT (xsltc.exe) compile des feuilles de style XSLT et génère un assembly. La feuille de style compilée peut être passée directement dans la méthode <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType>. Vous ne pouvez pas générer d'assemblys signés avec xsltc.exe.  

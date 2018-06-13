@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742677"
 ---
 # <a name="ltschemesettingsgt-element-uri-settings"></a>&lt;schemeSettings&gt; élément (paramètres d’Uri)
 Spécifie la façon dont un <xref:System.Uri> est analysé pour les schémas spécifiques.  

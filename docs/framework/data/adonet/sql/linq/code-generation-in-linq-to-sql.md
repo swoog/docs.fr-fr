@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363378"
 ---
 # <a name="code-generation-in-linq-to-sql"></a>Génération de code dans LINQ to SQL
 Vous pouvez générer de code pour représenter une base de données à l'aide de [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] ou de l'outil de ligne de commande SQLMetal. Dans l'un et l'autre cas, la génération du code de bout en bout s'effectue en trois étapes :  

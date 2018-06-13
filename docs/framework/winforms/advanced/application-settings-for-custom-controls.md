@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518562"
 ---
 # <a name="application-settings-for-custom-controls"></a>Paramètres d'application pour les contrôles personnalisés
 Vous devez effectuer certaines tâches pour permettre à vos contrôles personnalisés pour conserver les paramètres de l’application lorsque les contrôles sont hébergés dans des applications tierces.  

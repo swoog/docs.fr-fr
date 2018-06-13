@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513095"
 ---
 # <a name="windows-workflow-architecture"></a>Architecture Windows Workflow
 Windows Workflow Foundation (WF) déclenche le niveau d’abstraction pour le développement d’applications interactives de longs. Les unités de travail sont encapsulées comme activités. Les activités s'exécutent dans un environnement qui fournit les fonctions suivantes : contrôle de flux, gestion des exceptions, propagation d'erreur, persistance des données d'état, chargement et déchargement de flux de travail en cours depuis la mémoire, suivi et flux de transaction.  

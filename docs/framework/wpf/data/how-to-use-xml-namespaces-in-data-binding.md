@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556898"
 ---
 # <a name="how-to-use-xml-namespaces-in-data-binding"></a>Comment : utiliser des espaces de noms XML dans la liaison de données
 ## <a name="example"></a>Exemple  

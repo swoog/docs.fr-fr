@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560775"
 ---
 # <a name="how-to-paint-an-area-with-a-video"></a>Comment : peindre une zone avec une vidéo
 Cet exemple montre comment peindre une zone avec le média. Une façon de peindre une zone avec un support consiste à utiliser un <xref:System.Windows.Controls.MediaElement> avec un <xref:System.Windows.Media.VisualBrush>. Utilisez le <xref:System.Windows.Controls.MediaElement> pour charger et lire le média, puis utilisez-la pour définir le <xref:System.Windows.Media.VisualBrush.Visual%2A> propriété de la <xref:System.Windows.Media.VisualBrush>. Vous pouvez ensuite utiliser le <xref:System.Windows.Media.VisualBrush> pour peindre une zone avec le média chargé.  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557678"
 ---
 # <a name="gridview-overview"></a>Vue d'ensemble de GridView
 <xref:System.Windows.Controls.GridView> mode d’affichage est un des modes d’affichage pour un <xref:System.Windows.Controls.ListView> contrôle. La <xref:System.Windows.Controls.GridView> classe et ses classes de prise en charge permettent aux administrateurs et les utilisateurs afficher des collections d’éléments dans une table qui utilise généralement des boutons comme en-têtes de colonnes interactifs. Cette rubrique présente la <xref:System.Windows.Controls.GridView> classe et décrit son utilisation.  
