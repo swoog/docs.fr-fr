@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33476035"
 ---
 # <a name="microsofttransactionstransactionbridgevolatileparticipantindoubt"></a>Microsoft.Transactions.TransactionBridge.VolatileParticipantInDoubt
 Le service du protocole WS-AT a reçu un message Prepared ou Replay d'un participant volatil non reconnu. Une faute a été renvoyée au participant, qui déclarera que le résultat de la transaction est douteux.  

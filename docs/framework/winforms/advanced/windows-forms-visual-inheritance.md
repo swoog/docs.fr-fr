@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524411"
 ---
 # <a name="windows-forms-visual-inheritance"></a>Héritage visuel des Windows Forms
 Parfois, vous pouvez choisir qu’un projet appelle un formulaire semblable à celui que vous avez créé dans un projet précédent. Ou bien vous souhaitez créer un formulaire de base avec des paramètres tels qu’un filigrane ou une disposition particulière des contrôles, que vous réutiliserez au sein d’un projet, et faire que chaque nouvelle itération contienne les modifications apportées au modèle de formulaire d’origine. L’héritage de formulaire vous permet de créer un formulaire de base, puis d’en hériter et d’apporter des modifications tout en conservant les paramètres d’origine.  

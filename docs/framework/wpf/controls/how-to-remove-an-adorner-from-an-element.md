@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551841"
 ---
 # <a name="how-to-remove-an-adorner-from-an-element"></a>Comment : supprimer un ornement d'un élément
 Cet exemple montre comment supprimer par programme un ornement spécifique d’un <xref:System.Windows.UIElement>.  

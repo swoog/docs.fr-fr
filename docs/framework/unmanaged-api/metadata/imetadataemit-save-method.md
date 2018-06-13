@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a6d97d3e4a93985f9b2de3ed9785eff5f7f46c36
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444677"
 ---
 # <a name="imetadataemitsave-method"></a>IMetaDataEmit::Save, méthode
 Enregistre toutes les métadonnées dans la portée actuelle dans le fichier à l’adresse spécifiée.  

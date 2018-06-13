@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566494"
 ---
 # <a name="defining-custom-types-for-use-with-net-framework-xaml-services"></a>Définition de types personnalisés pour une utilisation avec les services XAML .NET Framework
 Lorsque vous définissez des types personnalisés qui sont des objets métier ou sont des types qui n’ont pas d’une dépendance sur des infrastructures spécifiques, il existe certaines meilleures pratiques pour XAML, vous pouvez suivre. Si vous suivez ces pratiques, les Services XAML .NET Framework et ses lecteurs XAML et les writers XAML peuvent découvrir les caractéristiques XAML de votre type et lui donner une représentation appropriée dans un flux de nœud XAML à l’aide du système de type XAML. Cette rubrique décrit les meilleures pratiques pour les définitions de type, définitions de membre et aux attributs CLR des types ou membres.  
