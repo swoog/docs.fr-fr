@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361053"
 ---
 # <a name="sql-server-schema-collections"></a>Collections de schémas SQL Server
 Le fournisseur de données Microsoft .NET Framework pour SQL Server prend en charge d’autres collections de schémas en plus des collections de schémas courantes. Les collections de schémas varient légèrement selon la version de SQL Server que vous utilisez. Pour déterminer la liste des collections de schémas prises en charge, appelez le **GetSchema** méthode sans argument ou avec le nom de collection de schémas « MetaDataCollections ». Cette opération retourne un <xref:System.Data.DataTable> avec une liste des collections de schémas prises en charge, le nombre de restrictions qu'elles prennent en charge et le nombre d'éléments d'identification qu'elles utilisent.  

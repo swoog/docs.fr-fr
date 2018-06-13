@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540880"
 ---
 # <a name="richtextbox-control-windows-forms"></a>RichTextBox, contrôle (Windows Forms)
 Windows Forms `RichTextBox` contrôle est utilisé pour l’affichage, la saisie et la manipulation de texte avec mise en forme. Le `RichTextBox` contrôle effectue tout le <xref:System.Windows.Forms.TextBox> effectue, mais il peut également afficher des polices, couleurs et des liens ; charger du texte et des images incorporées à partir d’un fichier ; l’annulation et la restauration par progression de la modification des opérations ; et rechercher les caractères spécifiés. Le `RichTextBox` contrôle est généralement utilisé pour fournir la manipulation du texte et afficher les fonctionnalités similaires aux applications de traitement de texte tel que Microsoft Word. Comme le <xref:System.Windows.Forms.TextBox> (contrôle), le `RichTextBox` contrôle peut afficher les barres de défilement ; mais contrairement à la <xref:System.Windows.Forms.TextBox> contrôle, il affiche des barres de défilement horizontal et vertical par défaut et comporte des paramètres de barre de défilement supplémentaires.  

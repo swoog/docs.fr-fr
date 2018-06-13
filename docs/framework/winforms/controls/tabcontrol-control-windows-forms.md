@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536759"
 ---
 # <a name="tabcontrol-control-windows-forms"></a>TabControl, contrôle (Windows Forms)
 Le `TabControl` Windows Forms affiche plusieurs onglets comparables aux intercalaires d'un agenda ou aux étiquettes d'un ensemble de dossiers dans un classeur. Les onglets peuvent contenir des images et d'autres contrôles. Utilisez le `TabControl` pour créer des pages de propriétés.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360759"
 ---
 # <a name="systemdatetime-methods"></a>System.DateTime, méthodes
 Les méthodes, propriétés et opérateurs pris en charge par LINQ to SQL suivants peuvent être utilisés dans les requêtes LINQ to SQL. Lorsqu'une méthode, une propriété ou un opérateur n'est pas pris en charge, LINQ to SQL ne peut pas traduire le membre à des fins d'exécution sur SQL Server. Vous pouvez utiliser ces membres dans votre code, ceux-ci devant toutefois être évalués avant la traduction de la requête en données Transact-SQL ou après l'extraction des résultats de la base de données.  

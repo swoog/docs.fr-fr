@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536980"
 ---
 # <a name="performance-tuning-in-the-windows-forms-datagridview-control"></a>Réglage des performances dans le contrôle DataGridView Windows Forms
 Lorsque vous travaillez avec grandes quantités de données, le `DataGridView` contrôle peut consommer une grande quantité de mémoire, sauf si vous l’utilisez avec précaution. Sur les clients avec une mémoire limitée, vous pouvez éviter certains cette surcharge en évitant les fonctionnalités qui ont un coût de mémoire élevée. Vous pouvez également gérer tout ou partie de la maintenance des données et les tâches de récupération à l’aide du mode virtuel afin de personnaliser l’utilisation de la mémoire pour votre scénario.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33388054"
 ---
 # <a name="pinvokestackimbalance-mda"></a>Assistant Débogage managé pInvokeStackImbalance
 L'Assistant Débogage managé (MDA) `pInvokeStackImbalance` est activé quand le CLR détecte que la profondeur de la pile après un appel de code non managé ne correspond pas à la profondeur de la pile attendue par rapport à la convention d'appel spécifiée dans l'attribut <xref:System.Runtime.InteropServices.DllImportAttribute> et à la déclaration des paramètres dans la signature managée.  

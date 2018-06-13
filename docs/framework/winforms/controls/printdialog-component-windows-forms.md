@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535465"
 ---
 # <a name="printdialog-component-windows-forms"></a>PrintDialog, composant (Windows Forms)
 Le composant `PrintDialog` Windows Forms est une boîte de dialogue préconfigurée qui sert à sélectionner une imprimante, à choisir les pages à imprimer et à déterminer d'autres paramètres liés à l'impression dans les applications Windows. Utilisez-le comme un moyen simple de sélectionner une imprimante ou des paramètres d'impression au lieu de configurer votre propre boîte de dialogue. Vous pouvez permettre aux utilisateurs d'imprimer de nombreuses parties de leurs documents : imprimer tout, imprimer une plage de pages spécifiée ou imprimer une sélection. En vous appuyant sur des boîtes de dialogue Windows standard, vous pouvez créer des applications dont la fonction de base est immédiatement familière aux utilisateurs.  

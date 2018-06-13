@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541175"
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Sources de données prises en charge par les Windows Forms
 En règle générale, la liaison de données a été utilisée dans des applications pour tirer parti des données stockées dans les bases de données. Avec la liaison de données Windows Forms, vous pourrez accéder aux données à partir de bases de données, ainsi que les données d’autres structures, tels que les tableaux et collections, tant que certaines exigences minimales ont été remplies.  

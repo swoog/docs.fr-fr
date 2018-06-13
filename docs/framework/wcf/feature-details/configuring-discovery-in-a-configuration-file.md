@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492285"
 ---
 # <a name="configuring-discovery-in-a-configuration-file"></a>Configuration de la découverte dans un fichier de configuration
 Il existe quatre principaux groupes de paramètres de configuration utilisés dans la découverte. Cette rubrique décrit brièvement chaque groupe et montre des exemples de configuration. À la suite de chaque section, un lien vous permettra d'accéder à des informations détaillées sur chaque zone.  

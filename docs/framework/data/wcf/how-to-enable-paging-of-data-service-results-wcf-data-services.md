@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360610"
 ---
 # <a name="how-to-enable-paging-of-data-service-results-wcf-data-services"></a>Comment : activer la pagination des résultats de services de données (services de données WCF)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] vous permet de limiter le nombre d'entités retourné par une requête de service des données. Les limites de page sont définies dans la méthode appelée lorsque le service est initialisé et peuvent être définies séparément pour chaque jeu d'entités.  

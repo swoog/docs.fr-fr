@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493889"
 ---
 # <a name="message-security-in-wcf"></a>Sécurité des messages dans WCF
 Windows Communication Foundation (WCF) a deux principaux modes de sécurité (`Transport` et `Message`) et un troisième mode (`TransportWithMessageCredential`) qui combine les deux. Cette rubrique présente la sécurité des messages et les raisons de l'employer.  

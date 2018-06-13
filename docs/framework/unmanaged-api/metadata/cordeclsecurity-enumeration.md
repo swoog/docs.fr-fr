@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7512795e678f66c97185a499e602e99f51188117
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443022"
 ---
 # <a name="cordeclsecurity-enumeration"></a>CorDeclSecurity, énumération
 Spécifie les actions de sécurité qui peuvent être effectuées à l’aide de la sécurité déclarative.  

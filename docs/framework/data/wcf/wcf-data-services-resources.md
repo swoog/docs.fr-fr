@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364444"
 ---
 # <a name="wcf-data-services-resources"></a>Ressources de services de données WCF
 Les rubriques d'introduction [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] se trouvent aux emplacements indiqués ci-après. Un grand nombre de ces rubriques contiennent également des liens vers des rubriques connexes qui contiennent des informations plus détaillées.  

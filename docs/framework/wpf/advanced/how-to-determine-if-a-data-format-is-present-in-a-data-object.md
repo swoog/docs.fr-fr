@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543417"
 ---
 # <a name="how-to-determine-if-a-data-format-is-present-in-a-data-object"></a>Comment : déterminer si un format de données est présent dans un objet de données
 Les exemples suivants montrent comment utiliser les différentes <xref:System.Windows.DataObject.GetDataPresent%2A> surcharges de méthode pour la requête si un format de données particulier est présent dans un objet de données.  

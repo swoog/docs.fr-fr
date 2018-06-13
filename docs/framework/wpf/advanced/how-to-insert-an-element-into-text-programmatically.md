@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543284"
 ---
 # <a name="how-to-insert-an-element-into-text-programmatically"></a>Guide pratique pour insérer un élément dans du texte par programmation
 L’exemple suivant montre comment utiliser deux <xref:System.Windows.Documents.TextPointer> objets pour spécifier une plage de texte pour appliquer un <xref:System.Windows.Documents.Span> élément.  

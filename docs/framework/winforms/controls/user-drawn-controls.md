@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542195"
 ---
 # <a name="user-drawn-controls"></a>Contrôles dessinés par l'utilisateur
 Le .NET Framework vous offre la possibilité de développer facilement vos propres contrôles. Vous pouvez créer un contrôle utilisateur, qui est un ensemble de contrôles standard liés ensemble par du code, ou vous pouvez concevoir votre propre contrôle entièrement les. Vous pouvez même utiliser l’héritage pour créer un contrôle qui hérite d’un contrôle existant et ajouter ses fonctionnalités inhérentes. Quelle que soit la méthode choisie, le .NET Framework fournit les fonctionnalités permettant de dessiner une interface graphique personnalisée pour tout contrôle que vous créez.  

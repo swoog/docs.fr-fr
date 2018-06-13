@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539823"
 ---
 # <a name="using-the-designer-with-the-windows-forms-datagridview-control"></a>Utilisation du concepteur avec le contrôle DataGridView Windows Forms
 Visual Studio fournit la prise en charge du concepteur pour le `DataGridView` contrôle qui vous permet d’effectuer de nombreuses tâches d’installation sans écrire de code. Ces tâches comprennent la liaison utilisé par le contrôle à une source de données, modification des colonnes pour afficher des données et ajuster l’apparence et le comportement de base du contrôle.  

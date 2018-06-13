@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540915"
 ---
 # <a name="implementing-virtual-mode-with-just-in-time-data-loading-in-the-windows-forms-datagridview-control"></a>Implémentation du mode virtuel avec le chargement de données juste-à-temps dans le contrôle DataGridView Windows Forms
 L’une des raisons pour implémenter le mode virtuel dans le <xref:System.Windows.Forms.DataGridView> contrôle consiste à récupérer des données uniquement qu’il est nécessaire. Il s’agit *lors du chargement de données juste-à-temps*.  

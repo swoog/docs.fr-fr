@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543064"
 ---
 # <a name="glyphs"></a>Glyphes
 Glyphes sont une représentation de bas niveau d’un caractère doit être dessiné à l’écran. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fournit un accès direct aux glyphes pour les clients qui souhaitent intercepter et rendre le texte persistant après la mise en forme.  

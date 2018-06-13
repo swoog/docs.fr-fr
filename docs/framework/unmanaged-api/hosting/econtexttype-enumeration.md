@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7a261d9164e8714531eab1fe9fc8148304e6d5bb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33432880"
 ---
 # <a name="econtexttype-enumeration"></a>EContextType, énumération
 Décrit le contexte de sécurité du thread en cours d’exécution.  

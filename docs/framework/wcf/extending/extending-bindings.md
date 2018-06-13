@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33485784"
 ---
 # <a name="extending-bindings"></a>Extension de liaisons
 Les liaisons spécifient le transport, l’encodage et le protocole requis pour se connecter à un point de terminaison. Les extensions de liaisons et les liaisons personnalisées implémentent les fonctionnalités de communication personnalisées requises pour prendre en charge des fonctionnalités de l’application.  
