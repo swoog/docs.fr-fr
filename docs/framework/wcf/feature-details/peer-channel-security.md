@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494502"
 ---
 # <a name="peer-channel-security"></a>Sécurité de canal homologue
 Le canal homologue active divers types d'applications distribuées qui dépendent de la messagerie entre plusieurs parties. Certains exemples incluent la distribution de contenu Internet, où une source fiable distribue du contenu (tel que des supports ou mises à jour logicielles), un groupe d’amis échange de la musique et des photos, ou une équipe de collègues modifie de manière collaborative un document. Chacun de ces scénarios requiert un modèle de sécurité unique. Le modèle de sécurité du canal homologue est conçu pour gérer ces scénarios et fournit un modèle de sécurité complet adapté aux besoins spécifiques des divers modèles d'identité, d'authentification et d'autorisation.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33297366"
 ---
 # <a name="jagged-arrays-c-programming-guide"></a>Tableaux en escalier (Guide de programmation C#)
 Un tableau en escalier est un tableau dont les éléments sont des tableaux. Les éléments d’un tableau en escalier peuvent être de dimensions et de tailles différentes. Un tableau en escalier est parfois appelé « tableau de tableaux ». Les exemples suivants montrent comment déclarer, initialiser et accéder aux tableaux en escalier.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491799"
 ---
 # <a name="how-to-service-data-partitioning"></a>Procédure : partitionnement des données du service
 Cette rubrique présente les étapes de base requises pour partitionner des messages entre plusieurs instances du même service de destination. Le partitionnement des données du service est en général utilisé pour faire évoluer un service vers une meilleure qualité ou pour gérer les demandes de différents clients de manière spécifique. Par exemple, les messages à partir de valeur élevée ou les clients « Gold » devront peut-être être traités une priorité plus élevée que les messages à partir d’un client standard.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494460"
 ---
 # <a name="discoveryclient-and-dynamicendpoint"></a>DiscoveryClient et DynamicEndpoint
 <xref:System.ServiceModel.Discovery.DiscoveryClient> et <xref:System.ServiceModel.Discovery.DynamicEndpoint> sont deux classes utilisées sur le côté client pour rechercher des services. <xref:System.ServiceModel.Discovery.DiscoveryClient> fournit une liste de services correspondant à un jeu de critères spécifiques et permet de se connecter à ces services. <xref:System.ServiceModel.Discovery.DynamicEndpoint> effectue la même opération et, de plus, se connecte automatiquement à l'un des services trouvé dans la liste. N'importe quel point de terminaison peut être transformé en <xref:System.ServiceModel.Discovery.DynamicEndpoint>, les critères de recherche peuvent également être ajoutés par configuration, en conséquence <xref:System.ServiceModel.Discovery.DynamicEndpoint> est utile lorsque vous avez besoin de la découverte dans votre solution, mais que vous ne souhaitez pas modifier la logique cliente ; il vous suffit de modifier les points de terminaison. <xref:System.ServiceModel.Discovery.DiscoveryClient> en revanche peut être utilisé pour obtenir un contrôle plus précis de la recherche. Les utilisations et les avantages de chacun sont détaillés ci-dessous.  

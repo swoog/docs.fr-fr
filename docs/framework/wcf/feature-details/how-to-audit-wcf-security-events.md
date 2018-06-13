@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493260"
 ---
 # <a name="how-to-audit-windows-communication-foundation-security-events"></a>Comment : auditer les événements de sécurité relatifs à Windows Communication Foundation
 Windows Communication Foundation (WCF) vous permet de consigner les événements de sécurité pour le journal des événements Windows, qui peut être affiché à l’aide de l’Observateur d’événements Windows. Cette rubrique explique comment installer une application afin qu'elle enregistre des événements de sécurité. Pour plus d’informations sur l’audit de WCF, consultez [audit](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  

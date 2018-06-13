@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517976"
 ---
 # <a name="dynamic-arguments"></a>Arguments dynamiques
 Cet exemple montre comment implémenter une activité pour laquelle les arguments sont définis par le consommateur de l’activité plutôt que par l’auteur de l’activité. Pour ce faire, il substitue la façon dont le runtime construit les métadonnées de l'activité.  

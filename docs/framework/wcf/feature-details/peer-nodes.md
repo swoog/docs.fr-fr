@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491529"
 ---
 # <a name="peer-nodes"></a>Nœuds homologues
 Un nœud homologue est un point de terminaison unique dans une maille de canal homologue. Une application peut disposer de plusieurs nœuds homologues participant à différentes mailles. Par exemple, une application de conversation en réseau pair à pair peut participer à deux mailles distincts : le premier réservé aux discussions avec des camarades de classe et le second réservé aux discussions avec les collègues de travail.  

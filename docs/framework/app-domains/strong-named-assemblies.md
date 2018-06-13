@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32741943"
 ---
 # <a name="strong-named-assemblies"></a>Assemblys avec nom fort
 Attribuer un nom fort à un assembly permet de lui créer une identité unique pour prévenir d'éventuels conflits entre les assemblys.  

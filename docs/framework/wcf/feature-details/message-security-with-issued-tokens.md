@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491184"
 ---
 # <a name="message-security-with-issued-tokens"></a>Sécurité de message avec jetons émis
 Le client de jeton émis permet le scénario de sécurité fédérée dans Windows Communication Foundation (WCF).  

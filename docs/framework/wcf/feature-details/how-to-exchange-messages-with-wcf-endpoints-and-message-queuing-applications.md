@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491077"
 ---
 # <a name="how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications"></a>Comment : échanger des messages avec des points de terminaison WCF et des applications Message Queuing
 Vous pouvez intégrer des applications Message Queuing (MSMQ) existantes avec les applications Windows Communication Foundation (WCF) pour convertir des messages MSMQ en messages WCF à l’aide de la liaison d’intégration MSMQ. Cela vous permet de vous appeler dans les applications réceptrices MSMQ depuis des clients WCF ainsi que d’appeler dans les services WCF à partir d’applications expéditrices MSMQ.  

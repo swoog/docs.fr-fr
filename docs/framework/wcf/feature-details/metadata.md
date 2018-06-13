@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492298"
 ---
 # <a name="metadata"></a>Métadonnées
 Windows Communication Foundation (WCF) fournit une infrastructure pour l’exportation, de publication, la récupération et l’importation de métadonnées de service. Les services WCF utilisent des métadonnées pour décrire l’interaction avec les points de terminaison du service afin que les outils tels que Svcutil.exe puissent générer automatiquement du code client pour l’accès au service.  

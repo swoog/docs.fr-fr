@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494372"
 ---
 # <a name="one-way-services"></a>Services monodirectionnels
 Le comportement par défaut d’une opération de service est le modèle demande-réponse. Dans un modèle demande-réponse, le client attend le message de réponse, même si l'opération de service est représentée dans le code en tant que méthode `void`. Avec une opération monodirectionnelle, un seul message est transmis. Le récepteur n'envoie pas de message de réponse, l'expéditeur n'en attend pas.  

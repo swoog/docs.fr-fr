@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493423"
 ---
 # <a name="how-to-expose-a-feed-as-both-atom-and-rss"></a>Procédure : exposer un flux en tant que flux Atom et flux RSS
 Windows Communication Foundation (WCF) vous permet de créer un service qui expose un flux de syndication. Cette rubrique explique comment créer un service de syndication qui expose un flux de syndication à l'aide d'Atom 1.0 et de RSS 2.0. Ce service expose un point de terminaison qui peut retourner l'un ou l'autre format de syndication. Pour simplifier, le service utilisé dans cet exemple est auto-hébergé. Dans un environnement de production, un service de ce type est hébergé sous IIS ou WAS. Pour plus d’informations sur WCF différentes options d’hébergement, consultez [hébergement](../../../../docs/framework/wcf/feature-details/hosting.md).  

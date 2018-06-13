@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492666"
 ---
 # <a name="how-to-host-a-wcf-service-in-was"></a>Comment : héberger un service WCF dans WAS
 Cette rubrique décrit les étapes de base requises pour créer un ordinateur Windows Process Activation Services (également appelé WAS) hébergé service Windows Communication Foundation (WCF). WAS est le nouveau service d’activation de processus généralisant les fonctionnalités des services IIS (Internet Information Services) qui fonctionnent avec des protocoles de transport non-HTTP. WCF utilise cette interface pour communiquer les demandes d’activation qui sont reçues sur les protocoles non HTTP pris en charge par WCF, tel que TCP, canaux nommés et Message Queuing.  

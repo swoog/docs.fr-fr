@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494814"
 ---
 # <a name="how-to-retrieve-metadata-and-implement-a-compliant-service"></a>Comment : récupérer des métadonnées et implémenter un service conforme
 Souvent, la personne qui conçoit et implémente des services n'est pas la même. Dans les environnements où l'interaction d'applications est importante, les contrats peuvent être conçus ou décrits en WSDL (Web Services Description Language) et un développeur doit implémenter un service qui se conforme au contrat fourni. Vous pouvez souhaiter également migrer un service existant pour Windows Communication Foundation (WCF), mais conserver le format de câble. De plus, les contrats duplex requièrent que les appelants implémentent également un contrat de rappel.  

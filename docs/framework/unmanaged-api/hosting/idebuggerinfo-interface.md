@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9e5a7d0555b026340ec53363a7cd054532d1491c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33438738"
 ---
 # <a name="idebuggerinfo-interface"></a>IDebuggerInfo, interface
 Fournit des méthodes pour obtenir des informations sur l’état des services de débogage.  

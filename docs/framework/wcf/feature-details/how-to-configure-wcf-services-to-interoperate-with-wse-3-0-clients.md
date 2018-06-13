@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495107"
 ---
 # <a name="how-to-configure-wcf-services-to-interoperate-with-wse-30-clients"></a>Comment : configurer les services WCF pour interagir avec les clients WSE 3.0
 Les services Windows Communication Foundation (WCF) sont compatible au niveau câble avec Web Services Enhancements 3.0 pour les clients de Microsoft .NET (WSE) lorsque les services WCF sont configurés pour utiliser la version d’août 2004 de la spécification WS-Addressing.  

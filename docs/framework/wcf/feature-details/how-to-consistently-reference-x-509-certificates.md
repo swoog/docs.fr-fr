@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489383"
 ---
 # <a name="how-to-consistently-reference-x509-certificates"></a>Comment : référencer des certificats X.509 de manière cohérente
 Vous pouvez identifier un certificat de plusieurs manières : par le hachage du certificat, par l'émetteur et le numéro de série ou par l'identificateur de la clé du sujet. L'identificateur de la clé du sujet fournit une identification unique de la clé publique du sujet du certificat et sert souvent dans le cadre des signatures numériques XML. La valeur de cet identificateur fait habituellement partie du certificat X.509 sous une *extension de certificat X.509*. Windows Communication Foundation (WCF) a une valeur par défaut *style de référencement* qui utilise l’émetteur et le numéro de série si l’extension SKI est manquante sur le certificat. Si le certificat contient l’extension de l’identificateur, le style de référencement utilise par défaut l’identificateur pour pointer vers le certificat. Si à mi-chemin via le développement d’une application, vous passez de certificats qui n’utilisent pas l’extension SKI pour les certificats qui utilisent l’extension SKI, le style de référencement utilisé dans les messages générés par WCF change également.  

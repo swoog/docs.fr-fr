@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495581"
 ---
 # <a name="best-practices-for-queued-communication"></a>Meilleures pratiques pour les communications mises en file d'attente
 Cette rubrique fournit des méthodes recommandées pour la communication en file d’attente dans Windows Communication Foundation (WCF). Les sections suivantes traitent des méthodes recommandées à partir d'un scénario.  

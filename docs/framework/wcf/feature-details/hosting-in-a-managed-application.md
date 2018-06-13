@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489740"
 ---
 # <a name="hosting-in-a-managed-application"></a>Hébergement dans une application managée
 Les services Windows Communication Foundation (WCF) peuvent être hébergés dans toute [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] application. Les services auto-hébergés constituent l'option d'hébergement la plus flexible parce qu'ils requièrent le déploiement de moins d'infrastructure. Toutefois, il est également l’option d’hébergement la moins fiable, parce que les applications gérées ne fournissent pas les avancées d’hébergement et les fonctionnalités de gestion d’autres options d’hébergement dans WCF, telles que les services Internet Information Services (IIS) et Windows.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490374"
 ---
 # <a name="how-to-configure-wcf-service-to-interoperate-with-aspnet-web-service-clients"></a>Comment : configurer le service WCF pour interagir avec des clients du service Web ASP.NET
 Pour configurer un point de terminaison de service Windows Communication Foundation (WCF) pour qu’il puisse interagir avec [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] les clients du service Web, utilisez le <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> type que le type de liaison pour votre point de terminaison de service.  

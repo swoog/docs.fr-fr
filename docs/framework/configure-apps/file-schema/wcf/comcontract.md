@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749060"
 ---
 # <a name="ltcomcontractgt"></a>&lt;comContract&gt;
 Spécifie un contrat de service d'intégration COM+.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495533"
 ---
 # <a name="choosing-a-transport"></a>Choix d'un transport
 Cette rubrique traite des critères permettant de choisir parmi les trois principaux transports qui sont inclus dans Windows Communication Foundation (WCF) : HTTP, TCP et canaux nommés. WCF inclut également un message queuing (également appelé MSMQ) de transport, mais ce document ne couvre pas de message queuing.  

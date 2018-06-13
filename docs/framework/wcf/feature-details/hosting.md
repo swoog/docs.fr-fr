@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489396"
 ---
 # <a name="hosting"></a>Hébergement
 Les rubriques de cette section décrivent l'hébergement de service. Un service peut être hébergé par Internet Information Services (IIS), Service d’Activation des processus Windows (WAS), Windows Server AppFabric, un service Windows, ou par une application managée, cette option est souvent appelée *hébergement personnel*.  

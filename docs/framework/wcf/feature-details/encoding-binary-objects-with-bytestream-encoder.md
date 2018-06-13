@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489480"
 ---
 # <a name="encoding-binary-objects-with-bytestream-encoder"></a>Encodage d'objets binaires avec l'encodeur ByteStream
 Envoyer et recevoir des données binaires brutes avec Windows Communication Foundation (WCF) sont configuré à l’aide de <xref:System.ServiceModel.Channels.ByteStreamMessageEncodingBindingElement>.  

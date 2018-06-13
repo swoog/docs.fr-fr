@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494148"
 ---
 # <a name="how-to-expose-a-contract-to-soap-and-web-clients"></a>Comment : exposer un contrat à des clients SOAP et Web
 Par défaut, Windows Communication Foundation (WCF), points de terminaison disponibles uniquement pour les clients SOAP. Dans [Comment : créer un Service WCF Web HTTP de base](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md), un point de terminaison est mis à disposition des clients non-SOAP. Dans certains cas, vous pouvez souhaiter rendre le même contrat disponible pour les deux, comme point de terminaison Web et comme point de terminaison SOAP. Cette rubrique explique comment procéder.  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489204"
 ---
 # <a name="data-transfer-and-serialization"></a>Transfert de données et sérialisation
 Dans un système connecté, les services et les clients se reposent sur l’échange de données pour accomplir une tâche. En tant que développeur d’un service ou d’un client, doit également comprendre comment Windows Communication Foundation (WCF) gère les données et la sérialisation des données afin de créer des applications qui sont efficaces et faciles à gérer.  
