@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 63f6ea4a348b3035a1f0b1d3e00f61f689915fa2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450097"
 ---
 # <a name="corprfgcreason-enumeration"></a>COR_PRF_GC_REASON, énumération
 Indique la raison pour laquelle une récupération de mémoire se produit.  

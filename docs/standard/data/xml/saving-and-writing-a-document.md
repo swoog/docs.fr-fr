@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573592"
 ---
 # <a name="saving-and-writing-a-document"></a>Enregistrement et écriture d'un document
 Lorsque vous chargez et enregistrez un objet <xref:System.Xml.XmlDocument>, le document sauvegardé peut varier de l'original dans les points suivants :  

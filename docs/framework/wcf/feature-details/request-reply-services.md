@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490943"
 ---
 # <a name="request-reply-services"></a>Services demande-réponse
 Services demande-réponse sont le type de contrat d’opération dans Windows Communication Foundation (WCF). Les clients effectuent des appels aux opérations de service et attendent une réponse du service. Vous pouvez effectuer des appels à une opération de service de façon synchrone (le client se bloque jusqu’à ce qu’il reçoive une réponse du service ou que l’appel expire) ou de façon asynchrone (le client effectue un appel à l’opération de service, continue à fonctionner et reçoit la réponse du service sur un autre thread).  

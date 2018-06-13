@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33491151"
 ---
 # <a name="how-to-import-custom-policy-assertions"></a>Comment : importer des assertions de stratégie personnalisées
 Les assertions de stratégie décrivent les fonctions et les exigences d’un point de terminaison de service.  Les applications clientes peuvent utiliser des assertions de stratégie dans les métadonnées de service pour configurer la liaison cliente ou personnaliser le contrat de service d'un point de terminaison de service.  

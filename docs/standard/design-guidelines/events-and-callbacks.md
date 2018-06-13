@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573631"
 ---
 # <a name="events-and-callbacks"></a>Événements et rappels
 Les rappels sont des points d’extensibilité qui autorisent une infrastructure rappeler dans le code de l’utilisateur via un délégué. Ces délégués sont généralement transmis à l’infrastructure via un paramètre d’une méthode.  

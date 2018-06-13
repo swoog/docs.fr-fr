@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565361"
 ---
 # <a name="xxdata-intrinsic-xaml-type"></a>x:XData, type XAML intrinsèque
 Active le positionnement des îlots de données XML dans une production XAML. Éléments XML `x:XData` ne doivent pas être traités par les processeurs XAML comme s’ils faisaient partie de l’espace de noms XAML par défaut d’agissant ou tout autre espace de noms XAML. `x:XData` peut contenir arbitraire XML bien formé.  

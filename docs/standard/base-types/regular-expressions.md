@@ -27,6 +27,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577140"
 ---
 # <a name="net-regular-expressions"></a>Expressions régulières .NET
 Les expressions régulières permettent de traiter un texte de façon puissante, souple et efficace. Grâce à la syntaxe complète des expressions régulières pour la recherche de correspondance avec un modèle, vous pouvez rapidement analyser des volumes importants de texte pour rechercher des modèles de caractères spécifiques, valider le texte pour vous assurer qu'il correspond à un modèle prédéfini (tel qu'une adresse e-mail), extraire, modifier, remplacer ou supprimer des sous-chaînes de texte et ajouter les chaînes extraites à une collection afin de générer un rapport. Pour de nombreuses applications qui traitent des chaînes ou qui analysent de grands blocs de texte, les expressions régulières constituent un outil indispensable.  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577092"
 ---
 # <a name="property-design"></a>Conception des propriétés
 Bien que les propriétés sont techniquement très semblables aux méthodes, ils sont très différents en termes de leurs scénarios d’utilisation. Ils doivent être considérés comme des champs intelligents. Ils ont la syntaxe d’appel de champs et la flexibilité des méthodes.  

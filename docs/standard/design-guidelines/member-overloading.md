@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573553"
 ---
 # <a name="member-overloading"></a>Surcharge de membre
 Surcharge de membre équivaut à la création de deux membres ou plus sur le même type qui diffèrent uniquement par le nombre ou le type de paramètres, mais ont le même nom. Par exemple, dans la commande suivante, la `WriteLine` méthode est surchargée :  

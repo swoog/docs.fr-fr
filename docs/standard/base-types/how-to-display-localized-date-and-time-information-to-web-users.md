@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578155"
 ---
 # <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>Comment : afficher des informations de date et d'heure localisées pour les utilisateurs du Web
 Une page Web pouvant être affichée n’importe où dans le monde, les opérations qui analysent et mettent en forme les valeurs de date et d’heure ne doivent pas s’appuyer sur un format par défaut (généralement le format de la culture locale du serveur Web) lors de l’interaction avec l’utilisateur. Au lieu de cela, les formulaires Web qui gèrent les chaînes de date et d’heure saisies par l’utilisateur doivent analyser les chaînes en utilisant la culture préférée de l’utilisateur. De même, les données de date et d’heure doivent être affichées à l’utilisateur dans un format conforme à sa culture. Cette rubrique montre comment procéder.  
