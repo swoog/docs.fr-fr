@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520719"
 ---
 # <a name="help-systems-in-windows-forms-applications"></a>Systèmes d’aide dans les applications Windows Forms
 Un de le fournissiez plus importantes, comme un développeur d’applications, peut fournir à vos utilisateurs avec est un système d’aide. Il s’agit où ils activera lorsqu’ils deviennent confondus ou désorientés. En fournissant un système d’aide dans une application basée sur Windows est effectuée facilement à l’aide de la [HelpProvider, composant](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md).  

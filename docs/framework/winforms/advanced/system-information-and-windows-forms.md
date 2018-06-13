@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524113"
 ---
 # <a name="system-information-and-windows-forms"></a>Informations système et Windows Forms
 Il est parfois nécessaire de rassembler des informations sur l’ordinateur de votre application est exécuté afin de prendre des décisions dans votre code. Par exemple, vous pouvez avoir une fonction qui est uniquement applicable lorsqu’il est connecté à un domaine de réseau particulier ; Dans ce cas, vous devez un moyen de déterminer le domaine et de désactiver la fonction si le domaine n’est pas présent.  

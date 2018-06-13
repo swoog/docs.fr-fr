@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b0a5abe8877c8414443fadc00e223df240721132
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33410440"
 ---
 # <a name="iclrdatatarget-interface"></a>ICLRDataTarget, interface
 Fournit des méthodes pour l’interaction avec un élément cible du common language runtime (CLR).  

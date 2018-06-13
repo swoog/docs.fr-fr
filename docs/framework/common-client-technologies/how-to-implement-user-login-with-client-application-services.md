@@ -14,6 +14,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743808"
 ---
 # <a name="how-to-implement-user-login-with-client-application-services"></a>Comment : implémenter la connexion utilisateur avec les services d'application cliente
 Vous pouvez utiliser les services d’application cliente pour valider des utilisateurs via un service de profil [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] existant. Pour plus d’informations sur la façon de configurer le service de profil [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)], consultez [Utilisation de l’authentification par formulaire avec ASP.NET AJAX](http://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e).  

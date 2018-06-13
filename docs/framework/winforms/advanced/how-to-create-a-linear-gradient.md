@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522458"
 ---
 # <a name="how-to-create-a-linear-gradient"></a>Comment : créer un dégradé linéaire
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Fournit des dégradés linéaires horizontales, verticales et diagonales. Par défaut, la couleur d’un dégradé linéaire varie de façon régulière. Toutefois, vous pouvez personnaliser un dégradé linéaire afin que la couleur change de façon non uniforme.  

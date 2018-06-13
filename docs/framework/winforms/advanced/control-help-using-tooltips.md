@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520563"
 ---
 # <a name="control-help-using-tooltips"></a>Affichage sous forme d'info-bulles de l'aide relative aux contrôles
 Vous pouvez utiliser le <xref:System.Windows.Forms.ToolTip> composant pour afficher une brève, spécialisé message d’aide pour des contrôles individuels dans les Windows Forms. Le <xref:System.Windows.Forms.ToolTip> composant fournit une propriété qui spécifie le texte affiché pour chaque contrôle sur le formulaire. Pour plus d’informations sur l’utilisation de la <xref:System.Windows.Forms.ToolTip> composant de cette manière, consultez [Comment : définir des info-bulles pour les contrôles sur un Windows Form au moment du Design](../../../../docs/framework/winforms/controls/how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md). En outre, vous pouvez configurer le <xref:System.Windows.Forms.ToolTip> composant afin qu’il existe un délai avant d’être affiché. Pour plus d’informations, consultez [Comment : modifier la durée avant affichage du composant ToolTip Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-delay-of-the-windows-forms-tooltip-component.md).  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33409904"
 ---
 # <a name="sosdll-sos-debugging-extension"></a>SOS.dll (Extension de débogage SOS)
 L’extension de débogage SOS (SOS.dll) vous aide à déboguer des programmes managés dans le débogueur Windows (WinDbg.exe) et dans Visual Studio en vous fournissant des informations sur l’environnement interne du CLR (Common Language Runtime). Cet outil requiert l'activation du débogage non managé pour votre projet. SOS.dll est installé automatiquement avec .NET Framework. Pour utiliser SOS.dll dans Visual Studio, installez le [Kit WDK (Windows Driver Kit)](http://msdn.microsoft.com/windows/hardware/hh852362).  

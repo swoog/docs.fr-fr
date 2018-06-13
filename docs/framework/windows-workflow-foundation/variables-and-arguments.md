@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520105"
 ---
 # <a name="variables-and-arguments"></a>Variables et arguments
 Dans Windows Workflow Foundation (WF), les variables représentent le stockage des données et les arguments représentent le flux de données dans et hors d’une activité. Une activité a un ensemble d’arguments et ils composent la signature de l’activité. En outre, une activité peut gérer une liste de variables dans laquelle un développeur peut ajouter ou supprimer des variables pendant la conception d'un workflow. Un argument est lié à l'aide d'une expression qui retourne une valeur.  

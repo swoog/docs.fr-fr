@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519845"
 ---
 # <a name="using-and-creating-activities"></a>Création et utilisation d'activités
 Les rubriques de cette section décrivent les activités fournies par le système disponibles dans Windows Workflow Foundation (WF).  

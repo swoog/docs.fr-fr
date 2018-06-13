@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33472829"
 ---
 # <a name="microsofttransactionstransactionbridgeparticipantrecovered"></a>Microsoft.Transactions.TransactionBridge.ParticipantRecovered
 Une inscription de participant a été récupérée à partir du journal du gestionnaire de transactions.  

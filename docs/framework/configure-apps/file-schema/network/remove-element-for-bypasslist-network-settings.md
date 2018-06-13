@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742947"
 ---
 # <a name="ltremovegt-element-for-bypasslist-network-settings"></a>&lt;Supprimez&gt; , élément pour bypasslist (paramètres réseau)
 Supprime une adresse IP ou le nom DNS de la liste de contournement du proxy.  

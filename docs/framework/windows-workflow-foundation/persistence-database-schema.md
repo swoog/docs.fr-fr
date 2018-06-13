@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519446"
 ---
 # <a name="persistence-database-schema"></a>Schéma de la base de données de persistance
 Cette rubrique décrit les vues publiques prises en charge par le magasin d'instances de workflow SQL.  
