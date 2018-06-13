@@ -11,6 +11,7 @@ ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472410"
 ---
 # <a name="c-compiler-options-listed-by-category"></a><span data-ttu-id="a5061-102">Options du compilateur C# par catégorie</span><span class="sxs-lookup"><span data-stu-id="a5061-102">C# Compiler Options Listed by Category</span></span>
 

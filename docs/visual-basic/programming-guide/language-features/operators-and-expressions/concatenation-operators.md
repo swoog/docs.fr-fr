@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650616"
 ---
 # <a name="concatenation-operators-in-visual-basic"></a><span data-ttu-id="c1843-102">Opérateurs de concaténation (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c1843-102">Concatenation Operators in Visual Basic</span></span>
 <span data-ttu-id="c1843-103">Les opérateurs de concaténation joignent plusieurs chaînes en une seule.</span><span class="sxs-lookup"><span data-stu-id="c1843-103">Concatenation operators join multiple strings into a single string.</span></span> <span data-ttu-id="c1843-104">Il existe deux opérateurs de concaténation, `+` et `&`.</span><span class="sxs-lookup"><span data-stu-id="c1843-104">There are two concatenation operators, `+` and `&`.</span></span> <span data-ttu-id="c1843-105">Les deux effectuent l'opération de concaténation de base, comme le montre l'exemple suivant.</span><span class="sxs-lookup"><span data-stu-id="c1843-105">Both carry out the basic concatenation operation, as the following example shows.</span></span>  

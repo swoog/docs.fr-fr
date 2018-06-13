@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804588"
 ---
 # <a name="instancing-extensibility"></a><span data-ttu-id="9955d-102">Extensibilité de l'instanciation</span><span class="sxs-lookup"><span data-stu-id="9955d-102">Instancing Extensibility</span></span>
 <span data-ttu-id="9955d-103">Cette section contient des exemples qui illustrent l'instanciation personnalisée.</span><span class="sxs-lookup"><span data-stu-id="9955d-103">This section contains samples that demonstrate custom instancing.</span></span>  

@@ -1,28 +1,22 @@
 ---
-title: "L’index de la collection doit être compris entre 1 et la taille de la collection"
+title: L’index de la collection doit être compris entre 1 et la taille de la collection
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrArgument_CollectionIndex
 ms.assetid: feee4d55-0754-40fe-9ce9-288ef543f569
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 27fb5461d9346be462acc04935db0761d8417013
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 97b0453e3c402bfc09352a61c17abcf00d71f409
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637006"
 ---
-# <a name="collection-index-must-be-in-the-range-1-to-the-size-of-the-collection"></a><span data-ttu-id="e989d-102">L’index de la collection doit être compris entre 1 et la taille de la collection</span><span class="sxs-lookup"><span data-stu-id="e989d-102">Collection index must be in the range 1 to the size of the collection</span></span>
-<span data-ttu-id="e989d-103">La valeur d’index fournie se situe en dehors de la plage valide (comprise entre 1 et la taille de la collection).</span><span class="sxs-lookup"><span data-stu-id="e989d-103">The supplied index value falls outside the valid range, which is 1 to the size of the collection.</span></span>  
+# <a name="collection-index-must-be-in-the-range-1-to-the-size-of-the-collection"></a><span data-ttu-id="10b3d-102">L’index de la collection doit être compris entre 1 et la taille de la collection</span><span class="sxs-lookup"><span data-stu-id="10b3d-102">Collection index must be in the range 1 to the size of the collection</span></span>
+<span data-ttu-id="10b3d-103">La valeur d’index fournie se situe en dehors de la plage valide (comprise entre 1 et la taille de la collection).</span><span class="sxs-lookup"><span data-stu-id="10b3d-103">The supplied index value falls outside the valid range, which is 1 to the size of the collection.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="e989d-104">Pour corriger cette erreur</span><span class="sxs-lookup"><span data-stu-id="e989d-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="10b3d-104">Pour corriger cette erreur</span><span class="sxs-lookup"><span data-stu-id="10b3d-104">To correct this error</span></span>  
   
-1.  <span data-ttu-id="e989d-105">Remplacez la valeur fournie par une valeur valide.</span><span class="sxs-lookup"><span data-stu-id="e989d-105">Change the supplied value to a valid one.</span></span>  
+1.  <span data-ttu-id="10b3d-105">Remplacez la valeur fournie par une valeur valide.</span><span class="sxs-lookup"><span data-stu-id="10b3d-105">Change the supplied value to a valid one.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e989d-106">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="e989d-106">See Also</span></span>  
- [<span data-ttu-id="e989d-107">Modifications de Collection de contrôles dans Visual Basic .NET</span><span class="sxs-lookup"><span data-stu-id="e989d-107">Controls Collection Changes in Visual Basic .NET</span></span>](http://msdn.microsoft.com/library/8eb5b458-8b39-4d79-9c97-2b29c527afa5)
+## <a name="see-also"></a><span data-ttu-id="10b3d-106">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="10b3d-106">See Also</span></span>  
+ [<span data-ttu-id="10b3d-107">Modifications de Collection de contrôles dans Visual Basic .NET</span><span class="sxs-lookup"><span data-stu-id="10b3d-107">Controls Collection Changes in Visual Basic .NET</span></span>](http://msdn.microsoft.com/library/8eb5b458-8b39-4d79-9c97-2b29c527afa5)

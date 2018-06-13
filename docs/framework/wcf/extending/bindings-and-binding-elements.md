@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804623"
 ---
 # <a name="bindings-and-binding-elements"></a><span data-ttu-id="8a6a0-102">Liaisons et éléments de liaison</span><span class="sxs-lookup"><span data-stu-id="8a6a0-102">Bindings and Binding Elements</span></span>
 <span data-ttu-id="8a6a0-103">Les liaisons sont des collections d’éléments de configuration spéciale, appelées *éléments de liaison*, qui sont évalué par le runtime du service chaque fois qu’un client ou point de terminaison de service est en cours de construction.</span><span class="sxs-lookup"><span data-stu-id="8a6a0-103">Bindings are collections of special configuration elements, called *binding elements*, which are evaluated by the service runtime whenever a client or service endpoint is being constructed.</span></span> <span data-ttu-id="8a6a0-104">Le type et l’ordre des éléments de liaison dans une liaison déterminent la sélection et l’ordre d’empilement des protocoles et des canaux de transport dans la pile de canaux d’un point de terminaison.</span><span class="sxs-lookup"><span data-stu-id="8a6a0-104">The type and order of the binding elements within a binding determines the selection and stacking order of the protocol and transport channels in an endpoint's channel stack.</span></span>  
