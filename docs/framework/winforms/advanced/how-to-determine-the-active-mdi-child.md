@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521716"
 ---
 # <a name="how-to-determine-the-active-mdi-child"></a>Comment : déterminer l'enfant MDI actif
 Parfois, vous devez fournir une commande qui fonctionne sur le contrôle qui a le focus sur le formulaire enfant actif. Par exemple, supposons que vous souhaitez copier le texte sélectionné dans le Presse-papiers à partir de la zone de texte du formulaire enfant. Vous devez créer une procédure qui copie le texte sélectionné vers le Presse-papiers à l’aide de la <xref:System.Windows.Forms.Control.Click> l’événement de l’élément de menu de copie dans le menu Edition standard.  

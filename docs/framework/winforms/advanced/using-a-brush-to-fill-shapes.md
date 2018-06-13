@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523729"
 ---
 # <a name="using-a-brush-to-fill-shapes"></a>Utilisation d'un pinceau pour remplir des formes
 A [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Brush> objet est utilisé pour remplir l’intérieur d’une forme fermée. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] définit plusieurs styles de remplissage : couleur unie, motif hachuré, texture d’image et dégradé de couleur.  

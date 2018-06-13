@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524064"
 ---
 # <a name="double-buffered-graphics"></a>Graphiques mis deux fois en mémoire tampon
 Le scintillement est un problème courant lors de la programmation de graphiques. Les opérations graphiques qui nécessitent plusieurs opérations de dessin complexes peuvent provoquer le scintillement du rendu des images ou une apparence qui n’est pas acceptable. Pour résoudre ces problèmes, le .NET Framework fournit un accès à la double mise en mémoire tampon.  

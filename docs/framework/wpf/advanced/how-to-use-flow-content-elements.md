@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544129"
 ---
 # <a name="how-to-use-flow-content-elements"></a>Guide pratique pour utiliser les éléments de contenu de flux
 L’exemple suivant illustre l’utilisation déclarative de différents éléments de contenu de flux et les attributs associés.  Parmi les éléments et attributs illustrés figurent :  

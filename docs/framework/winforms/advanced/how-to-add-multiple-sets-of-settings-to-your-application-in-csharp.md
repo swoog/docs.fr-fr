@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520807"
 ---
 # <a name="how-to-add-multiple-sets-of-settings-to-your-application-in-c"></a>Comment : ajouter plusieurs jeux de paramètres à votre application en C# #
 Dans certains cas, vous souhaiterez ont plusieurs ensembles de paramètres dans une application. Par exemple, si vous développez une application où un groupe particulier de paramètres est supposé changer fréquemment, il peut être judicieux de les placer dans un fichier unique afin que le fichier peut être remplacé en gros, sans affecter les autres paramètres. Visual Studio vous permet de vous permet d’ajouter plusieurs jeux de paramètres à votre projet. Jeux de paramètres supplémentaires sont accessibles via l’objet Properties.Settings.  

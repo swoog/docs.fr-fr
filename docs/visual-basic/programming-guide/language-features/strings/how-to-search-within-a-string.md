@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647681"
 ---
 # <a name="how-to-search-within-a-string-visual-basic"></a>Comment : effectuer une recherche dans une chaîne (Visual Basic)
 Cet exemple appelle la <xref:System.String.IndexOf%2A> méthode sur un <xref:System.String> objet à l’index de la première occurrence d’une sous-chaîne de rapports.  

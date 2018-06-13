@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489129"
 ---
 # <a name="adopting-windows-communication-foundation"></a>Adoption de Windows Communication Foundation
 Vous pouvez choisir d’utiliser Windows Communication Foundation (WCF) pour tout nouveau développement, tandis que continuant à gérer les applications existantes développées à l’aide d’ASP.NET. Étant donné que WCF est destinée à être le choix le plus adapté pour faciliter la communication avec les applications générées avec le .NET Framework dans n’importe quel scénario, il peut constituer un outil standard pour la résolution d’un large éventail de problèmes de communication du logiciel de façon qu’ASP.NET ne peut pas.  

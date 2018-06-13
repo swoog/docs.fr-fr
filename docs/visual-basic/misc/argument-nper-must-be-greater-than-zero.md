@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33601190"
 ---
 # <a name="argument-39nper39-must-be-greater-than-zero"></a>Argument &#39;npm&#39; doit être supérieure à zéro
 La fonction `NPer` , qui retourne un `Double` spécifiant le nombre de périodes pour une annuité sur la base de versements fixes périodiques et d’un taux d’intérêt fixe, nécessite un argument supérieur à zéro.  

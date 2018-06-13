@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639231"
 ---
 # <a name="this-system-does-not-contain-support-for-the-simplifiedchinese-locale"></a>Ce système n’offre pas de prise en charge des paramètres régionaux pour le chinois simplifié
 Vous essayez d’utiliser le membre d’énumération `VbStrConv.SimplifiedChinese` , mais votre système ne prend pas en charge les paramètres régionaux Chinois simplifié.  

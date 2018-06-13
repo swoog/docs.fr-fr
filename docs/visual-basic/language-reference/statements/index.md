@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33602786"
 ---
 # <a name="statements-visual-basic"></a>Instructions (Visual Basic)
 Les rubriques de cette section contiennent des tableaux des instructions déclaratives et exécutables de Visual Basic, ainsi que des listes importantes qui s’appliquent à beaucoup d’instructions.  

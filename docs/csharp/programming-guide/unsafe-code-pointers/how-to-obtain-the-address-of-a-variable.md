@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340123"
 ---
 # <a name="how-to-obtain-the-address-of-a-variable-c-programming-guide"></a>Comment : obtenir l'adresse d'une variable (Guide de programmation C#)
 Pour obtenir l’adresse d’une expression unaire, qui est évaluée en tant que variable fixe, utilisez l’opérateur address-of `&` :  

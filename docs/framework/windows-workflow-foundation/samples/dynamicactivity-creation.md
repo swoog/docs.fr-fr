@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518100"
 ---
 # <a name="dynamicactivity-creation"></a>Création avec DynamicActivity
 Cet exemple montre deux façons différentes de créer une activité au moment de l'exécution à l'aide de l'activité <xref:System.Activities.DynamicActivity>.  

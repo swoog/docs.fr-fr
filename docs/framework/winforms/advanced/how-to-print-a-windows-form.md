@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522267"
 ---
 # <a name="how-to-print-a-windows-form"></a>Comment : imprimer un Windows Form
 Dans le cadre du processus de développement, vous généralement souhaiterez imprimer une copie de votre Windows Form. L’exemple de code suivant montre comment imprimer une copie de l’écran actuel à l’aide de la <xref:System.Drawing.Graphics.CopyFromScreen%2A> (méthode).  

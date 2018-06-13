@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544920"
 ---
 # <a name="how-to-apply-transforms-to-text"></a>Comment : appliquer des transformations à du texte
 Les transformations peuvent modifier l’affichage de texte dans votre application. Les exemples suivants utilisent différents types de transformations de rendu pour affecter l’affichage du texte dans un <xref:System.Windows.Controls.TextBlock> contrôle.  

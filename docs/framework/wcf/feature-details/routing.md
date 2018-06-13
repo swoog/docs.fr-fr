@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494936"
 ---
 # <a name="routing"></a>Routage
 Les rubriques de cette section traitent du service de routage. Le service de routage est un intermédiaire SOAP configurable générique qui vous permet de configurer le routage en fonction du contenu, de configurer un pontage de protocoles, de gérer les erreurs de communication et de mettre à jour la logique de routage de manière dynamique, au moment de l'exécution.  
