@@ -22,6 +22,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743223"
 ---
 # <a name="client-application-services"></a>Services d'application cliente
 Les services d’application cliente facilitent la création d’applications Windows qui utilisent les services d’application de connexion, de rôles et de profil [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] inclus dans les extensions AJAX Microsoft ASP.NET 2.0. Ces services permettent à plusieurs applications web et Windows de partager des informations utilisateur et fonctionnalités de gestion des utilisateurs à partir d'un seul serveur. Par exemple, vous pouvez utiliser ces services pour effectuer les tâches suivantes :  

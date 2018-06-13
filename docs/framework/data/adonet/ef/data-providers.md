@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760386"
 ---
 # <a name="entity-framework-data-providers"></a>Fournisseurs de données Entity Framework
 Cette section fournit des informations sur les fournisseurs de données qui prennent en charge [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  

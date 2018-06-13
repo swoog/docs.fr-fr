@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554766"
 ---
 # <a name="printdialog"></a>PrintDialog
 Le <xref:System.Windows.Controls.PrintDialog> contrôle est utilisé pour instancier une boîte de dialogue d’impression standard qui configure automatiquement un <xref:System.Printing.PrintTicket> et <xref:System.Printing.PrintQueue> en fonction de l’entrée d’utilisateur.  

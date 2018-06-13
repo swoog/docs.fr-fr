@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33265685"
 ---
 # <a name="-operator-c-reference"></a>|, opérateur (référence C#)
 Les opérateurs `|` binaires sont prédéfinis pour les types intégraux et `bool`. Pour les types intégraux, `|` calcule l’opération OR au niveau du bit de ses opérandes. Pour les opérandes `bool`, `|` calcule l’opération OR logique de ses opérandes ; autrement dit, le résultat est `false` si et seulement si ses deux opérandes ont la valeur `false`.  

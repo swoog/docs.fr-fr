@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557639"
 ---
 # <a name="animation-and-timing-how-to-topics"></a>Rubriques "Comment" relatives à l'animation et au minutage
 Les rubriques suivantes montrent comment utiliser le [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] animation et système de minuterie dans vos applications.  

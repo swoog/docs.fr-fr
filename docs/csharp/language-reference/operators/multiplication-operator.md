@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33275839"
 ---
 # <a name="-operator-c-reference"></a>*, opérateur (référence C#)
 L’opérateur de multiplication (`*`) calcule le produit de ses opérandes. Tous les types numériques ont des opérateurs de multiplication prédéfinis.  

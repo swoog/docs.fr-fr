@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33273921"
 ---
 # <a name="-operator-c-reference"></a>! , opérateur (Informations de référence sur C#)
 L’opérateur de négation logique (`!`) est un opérateur unaire qui nie son opérande. Il est défini pour `bool` et retourne `true` si et seulement si son opérande a la valeur `false`.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332037"
 ---
 # <a name="how-to-access-an-array-element-with-a-pointer-c-programming-guide"></a>Comment : accéder à un élément de tableau à l'aide d'un pointeur (Guide de programmation C#)
 Dans un contexte unsafe, vous pouvez accéder à un élément en mémoire en utilisant l’accès à un élément de pointeur, comme illustré dans l’exemple suivant :  

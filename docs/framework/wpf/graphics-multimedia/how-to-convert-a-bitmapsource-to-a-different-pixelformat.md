@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558798"
 ---
 # <a name="how-to-convert-a-bitmapsource-to-a-different-pixelformat"></a>Comment : convertir un BitmapSource en PixelFormat différent
 Cet exemple montre comment convertir un <xref:System.Windows.Media.Imaging.BitmapSource> objet (<xref:System.Windows.Media.Imaging.BitmapImage>) vers un autre <xref:System.Windows.Media.PixelFormat> à l’aide un <xref:System.Windows.Media.Imaging.FormatConvertedBitmap>.  

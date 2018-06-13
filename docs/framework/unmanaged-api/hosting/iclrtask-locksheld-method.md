@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b49590fba64fc0372d671c009ad587b441e85343
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33434227"
 ---
 # <a name="iclrtasklocksheld-method"></a>ICLRTask::LocksHeld, méthode
 Obtient le nombre de verrous actuellement maintenus sur la tâche.  
