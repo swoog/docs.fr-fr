@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugObjectEnum::Next, méthode"
-ms.custom: 
+title: ICorDebugObjectEnum::Next, méthode
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugObjectEnum.Next
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: 10093e3d-26b6-4ad7-8ef3-bbf66243fc02
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c8edc9273710a843b4e99568097646825fc52a09
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 59b37c30df6467439d04e367e13b0fc4ffff0ec6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33422944"
 ---
-# <a name="icordebugobjectenumnext-method"></a><span data-ttu-id="909f2-102">ICorDebugObjectEnum::Next, méthode</span><span class="sxs-lookup"><span data-stu-id="909f2-102">ICorDebugObjectEnum::Next Method</span></span>
-<span data-ttu-id="909f2-103">Obtient les adresses virtuelles relatives (RVA) du nombre spécifié d’objets à partir de l’énumération, en commençant à la position actuelle.</span><span class="sxs-lookup"><span data-stu-id="909f2-103">Gets the relative virtual addresses (RVAs) of the specified number of objects from the enumeration, starting at the current position.</span></span>  
+# <a name="icordebugobjectenumnext-method"></a><span data-ttu-id="e94b8-102">ICorDebugObjectEnum::Next, méthode</span><span class="sxs-lookup"><span data-stu-id="e94b8-102">ICorDebugObjectEnum::Next Method</span></span>
+<span data-ttu-id="e94b8-103">Obtient les adresses virtuelles relatives (RVA) du nombre spécifié d’objets à partir de l’énumération, en commençant à la position actuelle.</span><span class="sxs-lookup"><span data-stu-id="e94b8-103">Gets the relative virtual addresses (RVAs) of the specified number of objects from the enumeration, starting at the current position.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="909f2-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="909f2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e94b8-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="e94b8-104">Syntax</span></span>  
   
 ```  
 HRESULT Next (  
@@ -49,24 +38,24 @@ HRESULT Next (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="909f2-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="909f2-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="e94b8-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="e94b8-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="909f2-106">[in] Nombre d'objets à récupérer.</span><span class="sxs-lookup"><span data-stu-id="909f2-106">[in] The number of objects to be retrieved.</span></span>  
+ <span data-ttu-id="e94b8-106">[in] Nombre d'objets à récupérer.</span><span class="sxs-lookup"><span data-stu-id="e94b8-106">[in] The number of objects to be retrieved.</span></span>  
   
  `objects`  
- <span data-ttu-id="909f2-107">[out] Tableau de pointeurs, chacun pointant vers un objet CORDB_ADDRESS.</span><span class="sxs-lookup"><span data-stu-id="909f2-107">[out] An array of pointers, each of which points to a CORDB_ADDRESS object.</span></span>  
+ <span data-ttu-id="e94b8-107">[out] Tableau de pointeurs, chacun pointant vers un objet CORDB_ADDRESS.</span><span class="sxs-lookup"><span data-stu-id="e94b8-107">[out] An array of pointers, each of which points to a CORDB_ADDRESS object.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="909f2-108">[out] Pointeur vers le nombre d’objets retournés.</span><span class="sxs-lookup"><span data-stu-id="909f2-108">[out] Pointer to the number of objects actually returned.</span></span> <span data-ttu-id="909f2-109">Cette valeur peut être null si `celt` fait partie.</span><span class="sxs-lookup"><span data-stu-id="909f2-109">This value may be null if `celt` is one.</span></span>  
+ <span data-ttu-id="e94b8-108">[out] Pointeur vers le nombre d’objets retournés.</span><span class="sxs-lookup"><span data-stu-id="e94b8-108">[out] Pointer to the number of objects actually returned.</span></span> <span data-ttu-id="e94b8-109">Cette valeur peut être null si `celt` fait partie.</span><span class="sxs-lookup"><span data-stu-id="e94b8-109">This value may be null if `celt` is one.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="909f2-110">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="909f2-110">Requirements</span></span>  
- <span data-ttu-id="909f2-111">**Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="909f2-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e94b8-110">Spécifications</span><span class="sxs-lookup"><span data-stu-id="e94b8-110">Requirements</span></span>  
+ <span data-ttu-id="e94b8-111">**Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e94b8-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="909f2-112">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="909f2-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="e94b8-112">**En-tête :** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e94b8-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="909f2-113">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="909f2-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e94b8-113">**Bibliothèque :** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e94b8-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="909f2-114">**Versions du .NET framework :**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="909f2-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="e94b8-114">**Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e94b8-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="909f2-115">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="909f2-115">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="e94b8-115">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="e94b8-115">See Also</span></span>  
  
