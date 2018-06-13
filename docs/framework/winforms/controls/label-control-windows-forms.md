@@ -1,49 +1,38 @@
 ---
-title: "Label, contrôle (Windows Forms)"
-ms.custom: 
+title: Label, contrôle (Windows Forms)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Label control [Windows Forms]
 - labels
 - LinkLabel control [Windows Forms]
 ms.assetid: 2028bbe3-ffe2-43e8-8ae3-dec759d2ecec
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 76c02e3ae30bc3699b6fcddc07709d4b419d2a7e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5a4dd320b4242b1e557b5fc5edfca1a1baf7c954
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536144"
 ---
-# <a name="label-control-windows-forms"></a><span data-ttu-id="84708-102">Label, contrôle (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="84708-102">Label Control (Windows Forms)</span></span>
+# <a name="label-control-windows-forms"></a><span data-ttu-id="ffeb2-102">Label, contrôle (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="ffeb2-102">Label Control (Windows Forms)</span></span>
 > [!IMPORTANT]
->  <span data-ttu-id="84708-103">Le <xref:System.Windows.Forms.ToolStripLabel> contrôle remplace et ajoute des fonctionnalités à la <xref:System.Windows.Forms.Label> contrôle.</span><span class="sxs-lookup"><span data-stu-id="84708-103">The <xref:System.Windows.Forms.ToolStripLabel> control replaces and adds functionality to the <xref:System.Windows.Forms.Label> control.</span></span> <span data-ttu-id="84708-104">Vous pouvez utiliser la <xref:System.Windows.Forms.ToolStripLabel> avec d’autres nouveaux contrôles, tels que le <xref:System.Windows.Forms.ToolStripDropDown>.</span><span class="sxs-lookup"><span data-stu-id="84708-104">You can use the <xref:System.Windows.Forms.ToolStripLabel> with other new controls such as the <xref:System.Windows.Forms.ToolStripDropDown>.</span></span> <span data-ttu-id="84708-105">Toutefois, le <xref:System.Windows.Forms.Label> contrôle est conservé pour la compatibilité descendante et une utilisation ultérieure, si vous choisissez.</span><span class="sxs-lookup"><span data-stu-id="84708-105">However, the <xref:System.Windows.Forms.Label> control is retained for both backward compatibility and future use, if you choose.</span></span>  
+>  <span data-ttu-id="ffeb2-103">Le <xref:System.Windows.Forms.ToolStripLabel> contrôle remplace et ajoute des fonctionnalités à la <xref:System.Windows.Forms.Label> contrôle.</span><span class="sxs-lookup"><span data-stu-id="ffeb2-103">The <xref:System.Windows.Forms.ToolStripLabel> control replaces and adds functionality to the <xref:System.Windows.Forms.Label> control.</span></span> <span data-ttu-id="ffeb2-104">Vous pouvez utiliser la <xref:System.Windows.Forms.ToolStripLabel> avec d’autres nouveaux contrôles, tels que le <xref:System.Windows.Forms.ToolStripDropDown>.</span><span class="sxs-lookup"><span data-stu-id="ffeb2-104">You can use the <xref:System.Windows.Forms.ToolStripLabel> with other new controls such as the <xref:System.Windows.Forms.ToolStripDropDown>.</span></span> <span data-ttu-id="ffeb2-105">Toutefois, le <xref:System.Windows.Forms.Label> contrôle est conservé pour la compatibilité descendante et une utilisation ultérieure, si vous choisissez.</span><span class="sxs-lookup"><span data-stu-id="ffeb2-105">However, the <xref:System.Windows.Forms.Label> control is retained for both backward compatibility and future use, if you choose.</span></span>  
   
- <span data-ttu-id="84708-106">Windows Forms <xref:System.Windows.Forms.Label> contrôles sont utilisés pour afficher du texte ou des images qui ne sont pas modifiables par l’utilisateur.</span><span class="sxs-lookup"><span data-stu-id="84708-106">Windows Forms <xref:System.Windows.Forms.Label> controls are used to display text or images that cannot be edited by the user.</span></span> <span data-ttu-id="84708-107">Ils sont utilisés pour identifier des objets sur un formulaire — pour décrire ce que fait un contrôle lorsque vous cliquez dessus, par exemple, ou pour afficher des informations en réponse à un événement d’exécution ou dans votre application.</span><span class="sxs-lookup"><span data-stu-id="84708-107">They are used to identify objects on a form—to provide a description of what a certain control will do if clicked, for example, or to display information in response to a run-time event or process in your application.</span></span> <span data-ttu-id="84708-108">Étant donné que le <xref:System.Windows.Forms.Label> contrôle ne peut pas recevoir le focus, il peut également être utilisé pour créer des touches d’accès rapide pour d’autres contrôles.</span><span class="sxs-lookup"><span data-stu-id="84708-108">Because the <xref:System.Windows.Forms.Label> control cannot receive focus, it can also be used to create access keys for other controls.</span></span>  
+ <span data-ttu-id="ffeb2-106">Windows Forms <xref:System.Windows.Forms.Label> contrôles sont utilisés pour afficher du texte ou des images qui ne sont pas modifiables par l’utilisateur.</span><span class="sxs-lookup"><span data-stu-id="ffeb2-106">Windows Forms <xref:System.Windows.Forms.Label> controls are used to display text or images that cannot be edited by the user.</span></span> <span data-ttu-id="ffeb2-107">Ils sont utilisés pour identifier des objets sur un formulaire — pour décrire ce que fait un contrôle lorsque vous cliquez dessus, par exemple, ou pour afficher des informations en réponse à un événement d’exécution ou dans votre application.</span><span class="sxs-lookup"><span data-stu-id="ffeb2-107">They are used to identify objects on a form—to provide a description of what a certain control will do if clicked, for example, or to display information in response to a run-time event or process in your application.</span></span> <span data-ttu-id="ffeb2-108">Étant donné que le <xref:System.Windows.Forms.Label> contrôle ne peut pas recevoir le focus, il peut également être utilisé pour créer des touches d’accès rapide pour d’autres contrôles.</span><span class="sxs-lookup"><span data-stu-id="ffeb2-108">Because the <xref:System.Windows.Forms.Label> control cannot receive focus, it can also be used to create access keys for other controls.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="84708-109">Dans cette section</span><span class="sxs-lookup"><span data-stu-id="84708-109">In This Section</span></span>  
- [<span data-ttu-id="84708-110">Vue d'ensemble du contrôle Label</span><span class="sxs-lookup"><span data-stu-id="84708-110">Label Control Overview</span></span>](../../../../docs/framework/winforms/controls/label-control-overview-windows-forms.md)  
- <span data-ttu-id="84708-111">Décrit ce contrôle et ses principales fonctionnalités et propriétés.</span><span class="sxs-lookup"><span data-stu-id="84708-111">Explains what this control is and its key features and properties.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="ffeb2-109">Dans cette section</span><span class="sxs-lookup"><span data-stu-id="ffeb2-109">In This Section</span></span>  
+ [<span data-ttu-id="ffeb2-110">Vue d'ensemble du contrôle Label</span><span class="sxs-lookup"><span data-stu-id="ffeb2-110">Label Control Overview</span></span>](../../../../docs/framework/winforms/controls/label-control-overview-windows-forms.md)  
+ <span data-ttu-id="ffeb2-111">Décrit ce contrôle et ses principales fonctionnalités et propriétés.</span><span class="sxs-lookup"><span data-stu-id="ffeb2-111">Explains what this control is and its key features and properties.</span></span>  
   
- [<span data-ttu-id="84708-112">Guide pratique pour créer des touches d'accès rapide à l'aide des contrôles Label Windows Forms</span><span class="sxs-lookup"><span data-stu-id="84708-112">How to: Create Access Keys with Windows Forms Label Controls</span></span>](../../../../docs/framework/winforms/controls/how-to-create-access-keys-with-windows-forms-label-controls.md)  
- <span data-ttu-id="84708-113">Décrit comment utiliser une étiquette pour définir une touche d’accès pour un autre contrôle.</span><span class="sxs-lookup"><span data-stu-id="84708-113">Describes how to use a label to define an access key for another control.</span></span>  
+ [<span data-ttu-id="ffeb2-112">Guide pratique pour créer des touches d'accès rapide à l'aide des contrôles Label Windows Forms</span><span class="sxs-lookup"><span data-stu-id="ffeb2-112">How to: Create Access Keys with Windows Forms Label Controls</span></span>](../../../../docs/framework/winforms/controls/how-to-create-access-keys-with-windows-forms-label-controls.md)  
+ <span data-ttu-id="ffeb2-113">Décrit comment utiliser une étiquette pour définir une touche d’accès pour un autre contrôle.</span><span class="sxs-lookup"><span data-stu-id="ffeb2-113">Describes how to use a label to define an access key for another control.</span></span>  
   
- [<span data-ttu-id="84708-114">Guide pratique pour dimensionner un contrôle Label Windows Forms en fonction de son contenu</span><span class="sxs-lookup"><span data-stu-id="84708-114">How to: Size a Windows Forms Label Control to Fit Its Contents</span></span>](../../../../docs/framework/winforms/controls/how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)  
- <span data-ttu-id="84708-115">Explique l’ajustement de la taille d’un contrôle label pour sa légende.</span><span class="sxs-lookup"><span data-stu-id="84708-115">Explains adjusting the size of a label control for its caption.</span></span>  
+ [<span data-ttu-id="ffeb2-114">Guide pratique pour dimensionner un contrôle Label Windows Forms en fonction de son contenu</span><span class="sxs-lookup"><span data-stu-id="ffeb2-114">How to: Size a Windows Forms Label Control to Fit Its Contents</span></span>](../../../../docs/framework/winforms/controls/how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)  
+ <span data-ttu-id="ffeb2-115">Explique l’ajustement de la taille d’un contrôle label pour sa légende.</span><span class="sxs-lookup"><span data-stu-id="ffeb2-115">Explains adjusting the size of a label control for its caption.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="84708-116">Référence</span><span class="sxs-lookup"><span data-stu-id="84708-116">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="ffeb2-116">Référence</span><span class="sxs-lookup"><span data-stu-id="ffeb2-116">Reference</span></span>  
  <xref:System.Windows.Forms.Label>  
- <span data-ttu-id="84708-117">Décrit cette classe et fournit des liens vers tous ses membres.</span><span class="sxs-lookup"><span data-stu-id="84708-117">Describes this class and has links to all its members.</span></span>  
+ <span data-ttu-id="ffeb2-117">Décrit cette classe et fournit des liens vers tous ses membres.</span><span class="sxs-lookup"><span data-stu-id="ffeb2-117">Describes this class and has links to all its members.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="84708-118">Rubriques connexes</span><span class="sxs-lookup"><span data-stu-id="84708-118">Related Sections</span></span>  
- [<span data-ttu-id="84708-119">Contrôles à utiliser dans les Windows Forms</span><span class="sxs-lookup"><span data-stu-id="84708-119">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- <span data-ttu-id="84708-120">Fournit une liste complète de contrôles Windows Forms, avec des liens vers des informations sur leur utilisation.</span><span class="sxs-lookup"><span data-stu-id="84708-120">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>
+## <a name="related-sections"></a><span data-ttu-id="ffeb2-118">Rubriques connexes</span><span class="sxs-lookup"><span data-stu-id="ffeb2-118">Related Sections</span></span>  
+ [<span data-ttu-id="ffeb2-119">Contrôles à utiliser dans les Windows Forms</span><span class="sxs-lookup"><span data-stu-id="ffeb2-119">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ <span data-ttu-id="ffeb2-120">Fournit une liste complète de contrôles Windows Forms, avec des liens vers des informations sur leur utilisation.</span><span class="sxs-lookup"><span data-stu-id="ffeb2-120">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>
