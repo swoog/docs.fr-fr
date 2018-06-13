@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757292"
 ---
 # <a name="copying-dataset-contents"></a><span data-ttu-id="836ee-102">Copie de contenu de DataSet</span><span class="sxs-lookup"><span data-stu-id="836ee-102">Copying DataSet Contents</span></span>
 <span data-ttu-id="836ee-103">Vous pouvez créer une copie d’un <xref:System.Data.DataSet> afin que vous pouvez utiliser des données sans affecter les données d’origine ou travailler avec un sous-ensemble des données à partir d’un **DataSet**.</span><span class="sxs-lookup"><span data-stu-id="836ee-103">You can create a copy of a <xref:System.Data.DataSet> so that you can work with data without affecting the original data, or work with a subset of the data from a **DataSet**.</span></span> <span data-ttu-id="836ee-104">Lorsque vous copiez un **DataSet**, vous pouvez :</span><span class="sxs-lookup"><span data-stu-id="836ee-104">When copying a **DataSet**, you can:</span></span>  

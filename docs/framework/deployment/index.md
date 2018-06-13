@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396527"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a><span data-ttu-id="4611c-102">Déploiement d'applications et du .NET Framework</span><span class="sxs-lookup"><span data-stu-id="4611c-102">Deploying the .NET Framework and Applications</span></span>
 <span data-ttu-id="4611c-103">Cet article est conçu pour vous aider à prendre en main le processus de déploiement du .NET Framework avec votre application.</span><span class="sxs-lookup"><span data-stu-id="4611c-103">This article helps you get started deploying the .NET Framework with your application.</span></span> <span data-ttu-id="4611c-104">Les informations fournies sont principalement destinées aux développeurs, aux OEM et aux administrateurs d'entreprise.</span><span class="sxs-lookup"><span data-stu-id="4611c-104">Most of the information is intended for developers, OEMs, and enterprise administrators.</span></span> <span data-ttu-id="4611c-105">Les utilisateurs qui souhaitent installer le .NET Framework sur leurs ordinateurs sont invités à lire la page [Installer le .NET Framework](~/docs/framework/install/index.md).</span><span class="sxs-lookup"><span data-stu-id="4611c-105">Users who want to install the .NET Framework on their computers should read [Installing the .NET Framework](~/docs/framework/install/index.md).</span></span>  

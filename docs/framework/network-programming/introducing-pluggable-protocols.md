@@ -30,6 +30,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33396388"
 ---
 # <a name="introducing-pluggable-protocols"></a><span data-ttu-id="192b8-102">Introduction aux protocoles enfichables</span><span class="sxs-lookup"><span data-stu-id="192b8-102">Introducing Pluggable Protocols</span></span>
 <span data-ttu-id="192b8-103">Microsoft .NET Framework fournit une implémentation en couche, extensible et managée de services Internet que vous pouvez intégrer rapidement et facilement à vos applications.</span><span class="sxs-lookup"><span data-stu-id="192b8-103">The Microsoft .NET Framework provides a layered, extensible, and managed implementation of Internet services that can be integrated quickly and easily into your applications.</span></span> <span data-ttu-id="192b8-104">Les classes d’accès à Internet disponibles dans les espaces de noms <xref:System.Net> et <xref:System.Net.Sockets> permettent d’implémenter des applications Internet et web.</span><span class="sxs-lookup"><span data-stu-id="192b8-104">The Internet access classes in the <xref:System.Net> and <xref:System.Net.Sockets> namespaces can be used to implement both Web-based and Internet-based applications.</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391675"
 ---
 # <a name="cache-management-for-network-applications"></a><span data-ttu-id="c88f7-102">Gestion du cache pour les applications réseau</span><span class="sxs-lookup"><span data-stu-id="c88f7-102">Cache Management for Network Applications</span></span>
 <span data-ttu-id="c88f7-103">Cette rubrique et ses sous-rubriques associées décrivent la mise en cache pour les ressources obtenues à l’aide des classes <xref:System.Net.WebClient>, <xref:System.Net.WebRequest>, <xref:System.Net.HttpWebRequest> et <xref:System.Net.FtpWebRequest>.</span><span class="sxs-lookup"><span data-stu-id="c88f7-103">This topic and its related subtopics describe caching for resources obtained using the <xref:System.Net.WebClient>, <xref:System.Net.WebRequest>, <xref:System.Net.HttpWebRequest>, and <xref:System.Net.FtpWebRequest> classes.</span></span>  

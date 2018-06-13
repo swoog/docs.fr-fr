@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757123"
 ---
 # <a name="dbconnection-dbcommand-and-dbexception"></a><span data-ttu-id="ea5a0-102">DbConnection, DbCommand et DbException</span><span class="sxs-lookup"><span data-stu-id="ea5a0-102">DbConnection, DbCommand and DbException</span></span>
 <span data-ttu-id="ea5a0-103">Une fois que vous avez créé un <xref:System.Data.Common.DbProviderFactory> et un <xref:System.Data.Common.DbConnection>, vous pouvez utiliser des commandes et des lecteurs de données pour extraire des données de la source de données.</span><span class="sxs-lookup"><span data-stu-id="ea5a0-103">Once you have created a <xref:System.Data.Common.DbProviderFactory> and a <xref:System.Data.Common.DbConnection>, you can then work with commands and data readers to retrieve data from the data source.</span></span>  

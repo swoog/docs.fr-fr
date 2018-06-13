@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393183"
 ---
 # <a name="managed-extensibility-framework-mef"></a><span data-ttu-id="290f8-102">Managed Extensibility Framework (MEF)</span><span class="sxs-lookup"><span data-stu-id="290f8-102">Managed Extensibility Framework (MEF)</span></span>
 <span data-ttu-id="290f8-103">Cette rubrique fournit une vue d'ensemble de Managed Extensibility Framework, qui a été introduit dans le .NET Framework 4.</span><span class="sxs-lookup"><span data-stu-id="290f8-103">This topic provides an overview of the Managed Extensibility Framework introduced in the .NET Framework 4.</span></span>  

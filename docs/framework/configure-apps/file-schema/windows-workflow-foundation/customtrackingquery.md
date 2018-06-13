@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758709"
 ---
 # <a name="ltcustomtrackingquerygt"></a><span data-ttu-id="1de87-102">&lt;customTrackingQuery&gt;</span><span class="sxs-lookup"><span data-stu-id="1de87-102">&lt;customTrackingQuery&gt;</span></span>
 <span data-ttu-id="1de87-103">Représente une collection de requêtes permettant d’effectuer le suivi des événements que vous définissez dans vos activités de code.</span><span class="sxs-lookup"><span data-stu-id="1de87-103">Represents a collection of queries that are used to track events that you define in your code activities.</span></span> <span data-ttu-id="1de87-104">La requête est nécessaire pour qu'un participant au suivi puisse s'abonner à des enregistrements de suivi personnalisés.</span><span class="sxs-lookup"><span data-stu-id="1de87-104">The query is necessary for a tracking participant to subscribe to custom tracking records.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742521"
 ---
 # <a name="ltcleargt-element-for-schemesettings-uri-settings"></a><span data-ttu-id="2e6ea-102">&lt;Désactivez&gt; , élément de schemeSettings (paramètres d’Uri)</span><span class="sxs-lookup"><span data-stu-id="2e6ea-102">&lt;clear&gt; Element for schemeSettings (Uri Settings)</span></span>
 <span data-ttu-id="2e6ea-103">Efface tous les paramètres de modèle existant.</span><span class="sxs-lookup"><span data-stu-id="2e6ea-103">Clears all existing scheme settings.</span></span>  

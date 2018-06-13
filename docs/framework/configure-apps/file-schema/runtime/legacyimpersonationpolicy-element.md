@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745186"
 ---
 # <a name="ltlegacyimpersonationpolicygt-element"></a><span data-ttu-id="c56d7-102">&lt;legacyImpersonationPolicy&gt; élément</span><span class="sxs-lookup"><span data-stu-id="c56d7-102">&lt;legacyImpersonationPolicy&gt; Element</span></span>
 <span data-ttu-id="c56d7-103">Spécifie que l’identité Windows n’est pas transmise entre des points asynchrones, indépendamment des paramètres de flux du contexte d’exécution sur le thread actif.</span><span class="sxs-lookup"><span data-stu-id="c56d7-103">Specifies that the Windows identity does not flow across asynchronous points, regardless of the flow settings for the execution context on the current thread.</span></span>  

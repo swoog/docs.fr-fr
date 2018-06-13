@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392562"
 ---
 # <a name="applying-interop-attributes"></a><span data-ttu-id="84554-102">Application d'attributs d'interopérabilité</span><span class="sxs-lookup"><span data-stu-id="84554-102">Applying Interop Attributes</span></span>
 <span data-ttu-id="84554-103">L’espace de noms <xref:System.Runtime.InteropServices> propose trois catégories d’attributs spécifiques à l’interopérabilité : ceux que vous appliquez au moment du design, ceux que les interfaces API et les outils de COM Interop appliquent au cours du processus de conversion et ceux que vous appliquez ou que COM Interop applique.</span><span class="sxs-lookup"><span data-stu-id="84554-103">The <xref:System.Runtime.InteropServices> namespace provides three categories of interop-specific attributes: those applied by you at design time, those applied by COM interop tools and APIs during the conversion process, and those applied either by you or COM interop.</span></span>  
