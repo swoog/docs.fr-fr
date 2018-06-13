@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655321"
 ---
 # <a name="local-type-inference-visual-basic"></a>Inférence de type local (Visual Basic)
 Le compilateur Visual Basic utilise *l’inférence de type* pour déterminer les types de données des variables locales déclarées sans un `As` clause. Le compilateur déduit le type de la variable du type de l’expression d’initialisation. Cela vous permet de déclarer des variables sans déclarer explicitement un type, comme illustré dans l’exemple suivant. À la suite les déclarations, les deux `num1` et `num2` sont fortement typées en tant qu’entiers.  

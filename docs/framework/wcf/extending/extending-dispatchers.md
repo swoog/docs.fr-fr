@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808236"
 ---
 # <a name="extending-dispatchers"></a>Extension des répartiteurs
 Les répartiteurs sont chargés de tirer des messages entrants des canaux sous-jacents, de les traduire dans des appels de méthode dans le code d’application et de renvoyer les résultats à l’appelant. Les extensions de répartiteurs vous permettent de modifier ce traitement.  Vous pouvez implémenter des inspecteurs de messages ou de paramètres qui inspectent ou modifient le contenu des messages ou des paramètres.  Vous pouvez modifier la manière dont les messages sont acheminés vers les opérations ou fournir d'autres fonctionnalités.  

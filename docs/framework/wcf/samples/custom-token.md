@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809847"
 ---
 # <a name="custom-token"></a>Custom Token
 Cet exemple montre comment ajouter une implémentation personnalisée de jeton dans une application Windows Communication Foundation (WCF). Cet exemple utilise un `CreditCardToken` pour transmettre de manière sécurisée les informations de carte de crédit du client au service. Le jeton est transmis dans l'en-tête de message WS-Security. Il est signé et chiffré à l'aide de l'élément de liaison de sécurité symétrique en même temps que le corps du message et que les autres en-têtes de message. Cette particularité est utile lorsque les jetons intégrés ne sont pas suffisants. Cet exemple illustre comment fournir un jeton de sécurité personnalisé à un service au lieu d'utiliser l'un des jetons intégrés. Le service implémente un contrat qui définit un modèle de communication demande-réponse.  

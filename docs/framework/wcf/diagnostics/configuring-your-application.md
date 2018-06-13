@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803648"
 ---
 # <a name="configuring-your-application"></a>Configuration de votre application
 Windows Communication Foundation (WCF) utilise le système de configuration .NET et vous permet de configurer les services dans l’étendue des ordinateurs et de l’application.  

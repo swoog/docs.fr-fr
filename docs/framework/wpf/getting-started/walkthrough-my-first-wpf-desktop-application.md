@@ -15,6 +15,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809714"
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>Procédure pas à pas : ma première application de bureau WPF
 

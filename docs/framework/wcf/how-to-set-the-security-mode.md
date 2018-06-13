@@ -16,6 +16,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807239"
 ---
 # <a name="how-to-set-the-security-mode"></a>Comment : définir le mode de sécurité
 Sécurité de Windows Communication Foundation (WCF) a trois modes de sécurité courants qui sont trouvent sur des liaisons plus prédéfinies : transport, message et « transport avec informations d’identification de message. » Il existe également deux modes supplémentaires propres à deux liaisons particulières. Il s'agit du mode « informations d'identification de transport uniquement » disponible sur la liaison <xref:System.ServiceModel.BasicHttpBinding> et du mode « les deux » disponible sur la liaison <xref:System.ServiceModel.NetMsmqBinding>. Cette rubrique traite essentiellement des trois principaux modes de sécurité : <xref:System.ServiceModel.SecurityMode.Transport>, <xref:System.ServiceModel.SecurityMode.Message> et <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>.  

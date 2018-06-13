@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804042"
 ---
 # <a name="exporting-custom-metadata-for-a-wcf-extension"></a>Exportation de métadonnées personnalisées pour une extension WCF
 Dans Windows Communication Foundation (WCF), exportation de métadonnées est le processus de décrire des points de terminaison de service et à les projeter dans une représentation parallèle standardisée qui les clients peuvent utiliser pour apprendre à utiliser le service. Les métadonnées personnalisées sont composées d'éléments XML que les exportateurs de métadonnées fournis par le système ne peuvent pas exporter. En général, cela inclut les éléments WSDL personnalisés des comportements définis par l'utilisateur ainsi que les éléments de liaison et les assertions de stratégie relatives aux fonctions et spécifications des liaisons et contrats.  
