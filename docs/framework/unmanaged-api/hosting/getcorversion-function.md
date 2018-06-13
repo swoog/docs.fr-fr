@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d0e922273a7d4e5b98c1321992e5e89e01adb437
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431491"
 ---
 # <a name="getcorversion-function"></a>GetCORVersion, fonction
 Retourne le numéro de version du common language runtime (CLR) qui s’exécute dans le processus en cours.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556846"
 ---
 # <a name="graphics"></a>Graphiques
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] intègre la prise en charge de multimédia, les graphiques vectoriels, les animations et composition de contenu, ce qui facilite aux développeurs de créer des interfaces utilisateur et contenu.  

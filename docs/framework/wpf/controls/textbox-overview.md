@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557769"
 ---
 # <a name="textbox-overview"></a>Vue d'ensemble de TextBox
 La <xref:System.Windows.Controls.TextBox> classe vous permet d’afficher ou modifier le texte non formaté. Une utilisation courante d’un <xref:System.Windows.Controls.TextBox> est la modification sans mise en forme de texte dans un formulaire. Par exemple, un formulaire qui demande le nom de l’utilisateur, le numéro de téléphone, etc. utiliserait <xref:System.Windows.Controls.TextBox> contrôles pour l’entrée de texte. Cette rubrique présente la <xref:System.Windows.Controls.TextBox> classe et fournit des exemples de son utilisation dans les deux [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] et c#.  

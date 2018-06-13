@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362424"
 ---
 # <a name="how-to-specify-which-members-are-tested-for-concurrency-conflicts"></a>Comment : spécifier les membres dont les conflits d'accès concurrentiel doivent être vérifiés
 Appliquez une des trois enums à la [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A> propriété sur un <xref:System.Data.Linq.Mapping.ColumnAttribute> vérifie d’attribut pour spécifier quels membres sont inclus dans la mise à jour pour la détection de conflits d’accès concurrentiel optimiste.  

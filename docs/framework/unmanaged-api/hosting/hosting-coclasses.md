@@ -10,9 +10,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8dbe16c1bd9293cd109e9ce7f1211d6651551bc5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430513"
 ---
 # <a name="hosting-coclasses"></a>Hébergement des coclasses
 Cette section décrit les coclasses non managées API par l’API d’hébergement.  

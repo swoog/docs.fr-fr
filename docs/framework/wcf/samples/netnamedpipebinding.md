@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33503195"
 ---
 # <a name="netnamedpipebinding"></a>NetNamedPipeBinding
 Cet exemple illustre l'utilisation de la liaison `netNamedPipeBinding`, laquelle permet la communication interprocessus sur le même ordinateur. Les canaux nommés ne fonctionnent pas sur plusieurs ordinateurs. Cet exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md) service de calculatrice.  

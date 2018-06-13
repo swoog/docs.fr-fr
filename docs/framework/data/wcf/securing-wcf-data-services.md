@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359260"
 ---
 # <a name="securing-wcf-data-services"></a>Sécurisation de WCF Data Services
 Cette rubrique décrit les considérations sur la sécurité qui sont spécifiques au développement, au déploiement et à l'exécution de [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] et des applications qui accèdent aux services prenant en charge l'[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]. Vous devez également suivre ces recommandations pour créer des applications [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] sécurisées.  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c3fd130759ab11b54b597d5c099c33dab93070ae
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429248"
 ---
 # <a name="isframeworkassembly-function"></a>IsFrameworkAssembly, fonction
 Obtient une valeur qui indique si l’assembly spécifié est géré.  

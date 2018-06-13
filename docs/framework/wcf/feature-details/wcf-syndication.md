@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499165"
 ---
 # <a name="wcf-syndication"></a>Syndication WCF
 Windows Communication Foundation (WCF) fournit la prise en charge pour utiliser facilement les flux de syndication dans Atom, RSS ou d’autres formats personnalisés, ce qui vous permet de lire et de les créer ainsi que les exposer sur un point de terminaison de service. Les rubriques de cette section décrivent en détail ce modèle de programmation pour la syndication.  

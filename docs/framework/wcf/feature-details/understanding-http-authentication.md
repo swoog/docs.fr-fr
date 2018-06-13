@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500140"
 ---
 # <a name="understanding-http-authentication"></a>Fonctionnement de l'authentification HTTP
 L'authentification est le processus visant à identifier si un client est susceptible d'accéder à une ressource. Le protocole HTTP prend en charge des authentifications dans le but de négocier l'accès à une ressource sécurisée.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752349"
 ---
 # <a name="ltendpointextensionsgt"></a>&lt;endpointExtensions&gt;
 Cette section inscrit un nouveau point de terminaison standard dans la section des extensions du fichier de configuration machine ou d’application. Vous pouvez ajouter un point de terminaison standard à cette collection à l'aide du mot clé `add` et affecter à l'attribut `type` de l'élément le type du point de terminaison et à l'attribut `name` le nom du point de terminaison standard.  

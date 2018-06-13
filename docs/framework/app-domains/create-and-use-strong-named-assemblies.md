@@ -19,6 +19,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744640"
 ---
 # <a name="creating-and-using-strong-named-assemblies"></a>Création et utilisation d'assemblys avec nom fort
 <a name="top"></a>Un nom fort est constitué de l’identité de l’assembly (son simple nom textuel, son numéro de version et des informations de culture, le cas échéant) ainsi que d’une clé publique et d’une signature numérique. Il est généré à partir d'un fichier d'assembly à l'aide de la clé privée correspondante. (Le fichier d'assembly contient le manifeste d'assembly, qui contient les noms et les hachages de tous les fichiers composant l'assembly.)  

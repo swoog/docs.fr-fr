@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497089"
 ---
 # <a name="enabling-transaction-flow"></a>Activation du flux de transaction
 Windows Communication Foundation (WCF) fournit des options très flexibles pour contrôler le flux de transaction. Les paramètres de flux de transaction d’un service peuvent être exprimés à l’aide d’une combinaison d’attributs et de configuration.  

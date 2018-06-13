@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338609"
 ---
 # <a name="thread-synchronization-c"></a>Synchronisation des threads (C#)
 Les sections suivantes décrivent les fonctionnalités et les classes qui peuvent être utilisées pour synchroniser l’accès aux ressources dans les applications multithread.  

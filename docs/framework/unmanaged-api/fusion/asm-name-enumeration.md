@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b9902b96a6f9ca56435430b6120a34dfb6cfadd7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431215"
 ---
 # <a name="asmname-enumeration"></a>ASM_NAME, énumération
 Indique la version, version, culture, signature, etc., de l’assembly dont les propriétés seront récupérées ou définies par [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) méthodes.  

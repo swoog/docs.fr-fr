@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554870"
 ---
 # <a name="how-to-override-the-panel-onrender-method"></a>Comment : substituer la méthode OnRender de Panel
 Cet exemple montre comment remplacer la <xref:System.Windows.Controls.Panel.OnRender%2A> méthode <xref:System.Windows.Controls.Panel> afin d’ajouter des effets de graphiques personnalisées à un élément de disposition.  

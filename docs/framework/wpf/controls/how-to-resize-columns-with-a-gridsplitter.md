@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556148"
 ---
 # <a name="how-to-resize-columns-with-a-gridsplitter"></a>Comment : redimensionner des colonnes avec un GridSplitter
 Cet exemple montre comment créer un vertical <xref:System.Windows.Controls.GridSplitter> afin de redistribuer l’espace entre deux colonnes dans un <xref:System.Windows.Controls.Grid> sans modifier les dimensions de la <xref:System.Windows.Controls.Grid>.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336919"
 ---
 # <a name="using-nullable-types-c-programming-guide"></a>Utilisation de types Nullable (Guide de programmation C#)
 Les types Nullable peuvent représenter toutes les valeurs d’un type sous-jacent ainsi qu’une autre valeur [null](../../../csharp/language-reference/keywords/null.md). Les types Nullable sont déclarés de l’une des deux façons suivantes :  

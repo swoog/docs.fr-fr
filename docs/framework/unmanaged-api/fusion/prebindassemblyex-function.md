@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3d3e2535851d39be642de56a86b78c328ecaf446
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431999"
 ---
 # <a name="prebindassemblyex-function"></a>Fonction PreBindAssemblyEx
 Obtient le nom complet de post-stratégie pour un assembly.  

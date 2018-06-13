@@ -14,6 +14,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752063"
 ---
 # <a name="creating-assemblies"></a>Création d'assemblys
 Vous pouvez créer des assemblys monofichiers ou multifichiers à l’aide d’un IDE, comme [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)], ou des compilateurs et des outils fournis par le [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]. L’assembly le plus simple est un fichier unique qui a un nom simple et qui est chargé dans un seul domaine d’application. Cet assembly ne peut pas être référencé par d’autres assemblys en dehors du répertoire de l’application et n’est pas soumis à la vérification de la version. Pour désinstaller l’application constituée de l’assembly, vous supprimez simplement le répertoire où il se trouve. Pour de nombreux développeurs, un assembly avec ces fonctionnalités est tout ce qui est nécessaire pour déployer une application.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33324991"
 ---
 # <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-c"></a>Guide pratique pour rechercher les descendants d’un élément enfant (XPath-LINQ to XML) (C#)
 Cette rubrique montre comment obtenir les éléments descendants d'un élément enfant avec un nom particulier.  

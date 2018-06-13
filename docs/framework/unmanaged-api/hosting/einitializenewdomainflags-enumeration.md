@@ -16,9 +16,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0175ab1d06a8166a5bbfd0c42018085a801740f8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431447"
 ---
 # <a name="einitializenewdomainflags-enumeration"></a>EInitializeNewDomainFlags, énumération
 Permet à l’hôte de fournir le runtime avec des informations sur l’initialisation d’un domaine d’application.  

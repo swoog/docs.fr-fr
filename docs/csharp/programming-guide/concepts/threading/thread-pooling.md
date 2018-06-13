@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334195"
 ---
 # <a name="thread-pooling-c"></a>Regroupement des threads (C#)
 Un *pool de threads* est une collection de threads qui peut être utilisée pour effectuer plusieurs tâches en arrière-plan. (Voir [Threads (C#)](../../../../csharp/programming-guide/concepts/threading/index.md) pour obtenir des informations générales.) Cela laisse le thread principal libre d’effectuer d’autres tâches de façon asynchrone.  

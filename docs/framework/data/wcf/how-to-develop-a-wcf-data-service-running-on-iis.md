@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362512"
 ---
 # <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>Procédure : développer un WCF Data Service qui fonctionne sur IIS
 Cette rubrique montre comment utiliser [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] pour créer un service de données qui est basé sur la base de données Northwind hébergé par une application Web ASP.NET qui s’exécute sur Internet Information Services (IIS). Pour obtenir un exemple montrant comment créer le même service de données Northwind en tant qu’une application Web ASP.NET qui s’exécute sur le serveur de développement ASP.NET, consultez le [démarrage rapide WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  

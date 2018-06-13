@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ffa06fd42b5cfa09817bae9f0b3a3810e30f99c4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430965"
 ---
 # <a name="iapartmentcallback-interface"></a>IApartmentCallback, interface
 Fournit des méthodes pour effectuer des rappels dans un thread cloisonné. Un *cloisonnement* est un conteneur logique dans un processus pour les objets qui partagent les mêmes exigences d’accès de thread.  

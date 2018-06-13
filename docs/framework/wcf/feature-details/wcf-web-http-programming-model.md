@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498008"
 ---
 # <a name="wcf-web-http-programming-model"></a>Modèle de programmation HTTP Web WCF
 Le modèle de programmation HTTP de Windows Communication Foundation (WCF) Web permet aux développeurs d’exposer des opérations de service WCF pour les points de terminaison non-SOAP. Cette fonctionnalité est décrite en détail dans les rubriques de cette section.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498255"
 ---
 # <a name="using-ws-atomictransaction"></a>Utilisation de WS-AtomicTransaction
 WS-AtomicTransaction (WS-AT) est un protocole de transaction interopérable. Ce protocole vous permet de transférer des transactions distribuées à l’aide de messages de service Web et d’assurer la coordination d’infrastructures de transaction hétérogènes de manière interopérable. WS-AT utilise un protocole de validation en deux phases pour un résultat atomique entre les applications distribuées, les gestionnaires de transactions et les gestionnaires de ressources.  

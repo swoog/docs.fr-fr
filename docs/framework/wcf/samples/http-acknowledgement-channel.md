@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502830"
 ---
 # <a name="http-acknowledgement-channel"></a>HTTP Acknowledgement Channel
 HTTP Acknowledgement Channel est un exemple d’un canal superposé qui modifie le modèle de messagerie unidirectionnel pour permettre à un service d’accepter ou de refuser des messages entrants plutôt que d’envoyer automatiquement un accusé de réception. HTTP Acknowledgement Channel permet également au service de différer l'accusé de réception jusqu'à ce qu'il puisse garantir au niveau de l'entreprise que le message sera traité.  

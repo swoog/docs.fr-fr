@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497189"
 ---
 # <a name="how-to-create-a-workflow-service-that-calls-another-workflow-service"></a>Procédure : créer un service de workflow qui appelle un autre service de workflow
 Il est parfois nécessaire pour un service de workflow d'obtenir des informations d'un autre service de workflow.  Cette rubrique montre comment appeler un service de workflow à partir d'un autre service. Dans cette rubrique, vous créerez deux services de workflow ; un qui a une méthode qui inverse la chaîne d'entrée et un autre qui convertit la chaîne d'entrée en majuscules après avoir inversé la chaîne qui utilise le premier service.  

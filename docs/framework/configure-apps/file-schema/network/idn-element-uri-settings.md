@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742570"
 ---
 # <a name="ltidngt-element-uri-settings"></a>&lt;IDN&gt; élément (paramètres d’Uri)
 Spécifie si l’analyse de nom de domaine internationaux (IDN) est appliqué à un nom de domaine.  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496933"
 ---
 # <a name="message-filters"></a>Filtres de message
 Pour implémenter le routage basé sur le contenu, le service de routage utilise des implémentations <xref:System.ServiceModel.Dispatcher.MessageFilter> qui inspectent des sections particulières d'un message, telles que l'adresse, le nom du point de terminaison ou une instruction XPath spécifique. Si aucun des filtres de message fournis avec [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] ne répond à vos besoins, vous pouvez créer un filtre personnalisé en créant une nouvelle implémentation de la classe <xref:System.ServiceModel.Dispatcher.MessageFilter> de base.  
