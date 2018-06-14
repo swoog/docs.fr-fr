@@ -21,13 +21,13 @@ ms.lasthandoff: 05/04/2018
 Les lignes directrices de ce chapitre présentent une méthode simple d'utilisation des cas qui, lorsqu'ils sont appliqués de façon uniforme, rendent les identificateurs pour les types, les membres et les paramètres faciles à lire.
   
 ## <a name="capitalization-rules-for-identifiers"></a>Règles de casse des identificateurs  
-Afin de distinguer des mots dans un identifiant, il faut mettre en majuscule la première lettre de chaque mot dans l’identifiant. N’utilisez pas de traits de soulignement pour différencier des mots, ainsi que n’importe où dans les identifiant. Il existe deux façons appropriés pour tirer profit des identificateurs, en fonction de l’utilisation de l’identificateur :  
+Afin de distinguer les mots dans un identificateur, il faut y mettre en majuscule la première lettre de chaque mot. N’utilisez pas de traits de soulignement pour différencier des mots, ni ailleurs à cette fin dans les identificateurs. Il existe deux façons appropriées d’utiliser des majuscules pour les identificateurs, en fonction de son utilisation : 
   
 -   Casse Pascal  
 
--   Casse Camel
+-   casseCamel
   
- La convention de casse Pascal, utilisée pour tous les identificatiantss à l’exception des noms de paramètres, met en majuscule le premier caractère de chaque mot (y compris les acronymes sur les deux lettres longueur), comme indiqué dans les exemples suivants :  
+ La convention CassePascal, utilisée pour tous les identificateurs à l’exception des noms de paramètres, met en majuscule le premier caractère de chaque mot (y compris les acronymes d’une longueur de deux lettres), comme indiqué dans les exemples suivants : 
   
  `PropertyDescriptor`  
  `HtmlTag`
@@ -36,18 +36,18 @@ Afin de distinguer des mots dans un identifiant, il faut mettre en majuscule la 
   
  `IOStream`  
   
- La convention de casse Camel, utilisée uniquement pour les noms de paramètres, met en majuscule le premier caractère de chaque mot, sauf le premier mot, comme indiqué dans les exemples suivants.
+ La convention casseCamel, utilisée uniquement pour les noms de paramètres, met en majuscule le premier caractère de chaque mot, sauf le premier mot, comme indiqué dans les exemples suivants.
   
  `propertyDescriptor`  
  `ioStream`  
  
- Comme dans l’exemple également, les acronymes de deux lettres qui commencent un identifiant à casse mixte sont en minuscules.  
+ Comme le montre également l’exemple, les acronymes de deux lettres qui sont au début d’un identificateur à casse mixte sont tout en minuscules.   
  
  `htmlTag`  
   
- **✓ FAIRE** utiliser la Pascal Case pour tous les noms de membre, le type et espace de noms publics constitué de plusieurs mots.  
+ **✓ UTILISEZ** la convention CassePascal pour tous les noms de membres, de types et d’espaces de noms publics constitué de plusieurs mots.  
   
- **✓ FAIRE** utiliser la casse Camel pour les noms de paramètre.  
+ **✓ UTILISEZ** la convention casseCamel pour les noms de paramètre. 
   
  Le tableau suivant décrit les règles de mise en majuscules pour différents types d’identificateurs.  
   
@@ -66,11 +66,11 @@ Afin de distinguer des mots dans un identifiant, il faut mettre en majuscule la 
 ## <a name="capitalizing-compound-words-and-common-terms"></a>Mise en majuscule de mots composés et les termes courants  
  La plupart des termes composés sont traités comme des mots isolés pour les besoins de mise en majuscules.  
   
- **X NE PAS FAIRE**  mettre une majuscule à chaque mot dans les mots composés dits fermés.
+ **X N’UTILISEZ PAS DE MAJUSCULE** au début de chaque mot dans les mots composés dits fermés.
   
  Il s’agit de mots composés écrits comme un mot unique, comme point de terminaison. Les instructions de la casse, à des fins de traiter un mot composé fermé comme un mot unique. Utiliser un dictionnaire actuel pour déterminer si un mot composé est écrit dans une forme fermée.  
   
-|Pascal|Camel|Pas|  
+|Pascal|Camel|Ne convient pas|  
 |------------|-----------|---------|  
 |`BitFlag`|`bitFlag`|`Bitflag`|  
 |`Callback`|`callback`|`CallBack`|  
@@ -91,7 +91,7 @@ Afin de distinguer des mots dans un identifiant, il faut mettre en majuscule la 
 |`Namespace`|`namespace`|`NameSpace`|  
 |`Ok`|`ok`|`OK`|  
 |`Pi`|`pi`|`PI`|  
-|`Placeholder`|`placeHolder`|`Placeholder`|  
+|`Placeholder`|`placeholder`|`PlaceHolder`|
 |`SignIn`|`signIn`|`SignOn`|  
 |`SignOut`|`signOut`|`SignOff`|  
 |`UserName`|`userName`|`Username`|  
@@ -99,9 +99,9 @@ Afin de distinguer des mots dans un identifiant, il faut mettre en majuscule la 
 |`Writable`|`writable`|`Writeable`|  
   
 ## <a name="case-sensitivity"></a>Respect de la casse  
- Les langues qui peuvent s’exécuter sur le CLR ne sont pas requis pour prendre en charge le respect de la casse, bien que certains le fassent. Même si votre langue le supporte, d'autres langues qui pourraient accéder à votre framework ne le font pas. Les API qui sont accessibles de l'extérieur ne peuvent donc pas se fier uniquement à la casse pour distinguer deux noms dans le même contexte.
+ Les langages qui peuvent s’exécuter sur le CLR n’ont pas l’obligation de prendre en charge le respect de la casse, bien que certains le fassent. Même si votre langage le prend en charge, d'autres langages qui pourraient accéder à votre framework ne le font pas. Les API qui sont accessibles de l'extérieur ne peuvent donc pas se fier uniquement à la casse pour distinguer deux noms dans le même contexte.
   
- **X NE PAS FAIRE** supposer que tous les langages de programmation sont sensibles à la casse. Ils ne le sont pas. Les noms ne peuvent pas différer d'un cas à l'autre.  
+ **X NE SUPPOSEZ PAS** que tous les langages de programmation respectent la casse. Ce n’est pas le cas. Les noms ne peuvent pas différer seulement par la casse. 
   
  *Portions © 2005, 2009 Microsoft Corporation. Tous droits réservés.*  
   
