@@ -3044,25 +3044,26 @@ f1_keywords:
 - bc30233
 - bc30829
 ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
-ms.openlocfilehash: 44bc5647fe740a4900b99794fe7af907e6328665
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 413765a6feebab3be8196552d11ade30bce28496
+ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35231461"
 ---
 # <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a>Désolé, nous n&#39;t pas de détails sur cette erreur Visual Basic
 Nous sommes désolés, mais nous n'avons pas d'informations spécifiques sur cette erreur. Pour plus d'informations, vous pouvez rechercher le numéro d'erreur et le texte du message sur le web. Ou bien, vous pouvez interroger d'autres développeurs au travers des forums suivants :  
   
- [Langage Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145963)  
+ [Langage Visual Basic](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vblanguage)  
  Propose un forum de questions et de discussions générales de la syntaxe du langage Visual Basic et du compilateur.  
   
- [Interopérabilité et mise à niveau Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145966)  
+ [Interopérabilité et mise à niveau Visual Basic](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vbinterop)  
  Propose un forum de questions et de problèmes avec la mise à niveau vers Visual Basic et l’utilisation des fonctionnalités d’interopérabilité.  
   
- [IDE Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145971)  
+ [IDE Visual Basic](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vbide)  
  Propose un forum de questions sur la façon de travailler dans l’environnement Visual Studio.  
   
- [Généralités Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145973)  
+ [Généralités Visual Basic](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=vbgeneral)  
  Propose un forum de questions et de problèmes avec Visual Basic qui ne sont pas abordés dans d’autres forums.  
   
  [Dépassement de capacité](http://stackoverflow.com/questions/tagged/vb.net)  

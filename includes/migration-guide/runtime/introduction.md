@@ -9,4 +9,4 @@ Dans les rubriques qui décrivent les changements du runtime, nous avons classé
 
 **Cas particulier** Il s’agit d’un changement qui affecte des applications dans des scénarios très spécifiques qui ne sont pas courants.
 
-**Transparent** Il s’agit d’un changement qui n’a pas d’effet visible pour le développeur ou l’utilisateur de l’application. L’application n’a pas besoin d’être modifiée en raison de ce changement.
+**Transparent** Il s’agit d’un changement qui n’a pas d’effet visible pour le développeur ou l’utilisateur de l’application. L'application n'a pas besoin d'être modifiée en raison de cette modification.
