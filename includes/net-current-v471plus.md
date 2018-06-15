@@ -1,1 +1,1 @@
-<span data-ttu-id="cddf0-101">Disponible depuis la version 4.7.1</span><span class="sxs-lookup"><span data-stu-id="cddf0-101">Available since 4.7.1</span></span>
+<span data-ttu-id="fd417-101">Disponible depuis la version 4.7.1</span><span class="sxs-lookup"><span data-stu-id="fd417-101">Available since 4.7.1</span></span>
