@@ -5,5 +5,5 @@
 ### [Publication de votre application Hello World avec Visual Studio 2017](../../core/tutorials/publishing-with-visual-studio.md)
 ## [Génération d’une bibliothèque de classes avec C# et .NET Core dans Visual Studio 2017](../../core/tutorials/library-with-visual-studio.md)
 ### [Test d’une bibliothèque de classes avec .NET Core dans Visual Studio 2017](../../core/tutorials/testing-library-with-visual-studio.md)
-### [Utilisation d’une bibliothèque de classes avec .NET Core dans Visual Studio 2017](../../core/tutorials/consuming-library-with-visual-studio.md)
+### [Utilisation d’une bibliothèque .NET Standard dans Visual Studio 2017](../../core/tutorials/consuming-library-with-visual-studio.md)
 ## [Prise en main de C# et Visual Studio Code](../../core/tutorials/with-visual-studio-code.md)
