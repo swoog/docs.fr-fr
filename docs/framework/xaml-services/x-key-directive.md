@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Key attribute in XAML [XAML Services]
 - XAML [XAML Services], x:Key attribute
 ms.assetid: 1985cd45-f197-42d5-b75e-886add64b248
-ms.openlocfilehash: 511721c3ffffb3b80b339c4671ad99e16bafda93
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 53e89b664b3885bea7d2da8633505488438a1af5
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33565897"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207545"
 ---
 # <a name="xkey-directive"></a>x:Key, directive
 Identifie de façon unique les éléments qui sont créés et référencés dans un dictionnaire définies en XAML. Ajout d’un `x:Key` valeur à un élément d’objet XAML est la méthode la plus courante pour identifier une ressource dans un dictionnaire de ressources, par exemple dans un WPF <xref:System.Windows.ResourceDictionary>.  
@@ -73,7 +73,7 @@ Identifie de façon unique les éléments qui sont créés et référencés dans
   
  Clés et les noms utilisent des directives et des différents éléments de langage (`x:Key` et `x:Name`) dans la définition XAML de base. Clés et les noms sont également utilisés dans des situations différentes par la définition de WPF et l’application de ces concepts. Pour plus d’informations, consultez [portées de nom XAML WPF](../../../docs/framework/wpf/advanced/wpf-xaml-namescopes.md).  
   
- Comme indiqué précédemment, la valeur d’une clé peut être fournie par une extension de balisage et peut être différente d’une valeur de chaîne. Un exemple de scénario WPF est que la valeur de `x:Key` peut être un[ComponentResourceKey](../../../docs/framework/wpf/advanced/componentresourcekey-markup-extension.md). Certains contrôles exposent une clé de style de ce type d’une ressource de style personnalisée qui influence une partie de l’apparence et comportement de ce contrôle sans remplacer le style totalement. Est un exemple d’une telle clé <xref:System.Windows.Controls.ToolBar.ButtonStyleKey%2A>.  
+ Comme indiqué précédemment, la valeur d’une clé peut être fournie par une extension de balisage et peut être différente d’une valeur de chaîne. Un exemple de scénario WPF est que la valeur de `x:Key` peut être un [ComponentResourceKey](../../../docs/framework/wpf/advanced/componentresourcekey-markup-extension.md). Certains contrôles exposent une clé de style de ce type d’une ressource de style personnalisée qui influence une partie de l’apparence et comportement de ce contrôle sans remplacer le style totalement. Est un exemple d’une telle clé <xref:System.Windows.Controls.ToolBar.ButtonStyleKey%2A>.  
   
  La fonctionnalité de dictionnaire fusionné WPF ajoute des considérations supplémentaires pour l’unicité de la clé et le comportement de recherche de clé. Pour plus d’informations, consultez [Dictionnaires de ressources fusionnés](../../../docs/framework/wpf/advanced/merged-resource-dictionaries.md).  
   

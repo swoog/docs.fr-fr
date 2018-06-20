@@ -4,16 +4,16 @@ description: Découvrez comment détecter et atténuer les vulnérabilités de m
 ms.date: 06/12/2018
 author: blowdart
 ms.author: mairaw
-ms.openlocfilehash: a07acbb943c430f6e26bec44f55a5c84306da513
-ms.sourcegitcommit: 73a662360bbe2f43c19aca1fbcc2565025c60cd8
-ms.translationtype: HT
+ms.openlocfilehash: 26f4d19f591ac02d792bebbd648e90b07d84de56
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35327452"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208685"
 ---
 # <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>Vulnérabilités de temporisation avec le déchiffrement symétrique en mode CBC à l’aide du remplissage
 
-Microsoft, en fonction de recherche de services de chiffrement connu, pense que, à l’exception des circonstances très spécifiques, il n’est plus sécurisé déchiffrer les données chiffrées avec le mode de chiffrement symétrique Cipher Block Chaining (CBC) lors de la marge intérieure vérifiable a été appliquées sans premier assurant l’intégrité du texte chiffré.
+Microsoft estime qu’il n’est plus sûr déchiffrer les données chiffrées avec le mode Cipher Block Chaining (CBC) de chiffrement symétrique lorsque vérifiable remplissage a été appliqué sans première vérification de l’intégrité du texte chiffré, à l’exception de très spécifique les circonstances. Cette décision est basée sur les recherches connus sur le chiffrement. 
 
 ## <a name="introduction"></a>Introduction
 

@@ -2,12 +2,12 @@
 title: Configuration client
 ms.date: 03/30/2017
 ms.assetid: 5da5bd3b-65d9-43b7-91b9-cc9e989b1350
-ms.openlocfilehash: 0fd3d1a15164447275ef488ac91b9a8bd240032d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 26557b6cbbe33626152878eccab62de11d22660d
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493128"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207415"
 ---
 # <a name="client-configuration"></a>Configuration client
 Vous pouvez utiliser la configuration du client Windows Communication Foundation (WCF) pour spécifier l’adresse, liaison, comportement et contrat, les propriétés « ABC » du point de terminaison client, les clients utilisent pour se connecter aux points de terminaison de service. Le [ \<client >](../../../../docs/framework/configure-apps/file-schema/wcf/client.md) élément a un [ \<point de terminaison >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) élément dont les attributs sont utilisés pour configurer le point de terminaison ABC. Ces attributs sont traités dans la section « Configuration des points de terminaison » de cette rubrique.  
@@ -91,7 +91,7 @@ Vous pouvez utiliser la configuration du client Windows Communication Foundation
  L'attribut `contract` spécifie quel contrat le point de terminaison expose. Cette valeur correspond au <xref:System.ServiceModel.ServiceContractAttribute.ConfigurationName%2A> de <xref:System.ServiceModel.ServiceContractAttribute>. La valeur par défaut est le nom de type complet de la classe qui implémente le service.  
   
 ### <a name="configuring-metadata"></a>Configuration des métadonnées  
- Le [ \<métadonnées >](../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md) élément est utilisé pour spécifier les paramètres utilisés pour enregistrer les métadonnées des extensions d’importation. Pour plus d’informations sur l’extension du système de métadonnées, consultez[extension du système de métadonnées](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md).  
+ Le [ \<métadonnées >](../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md) élément est utilisé pour spécifier les paramètres utilisés pour enregistrer les métadonnées des extensions d’importation. Pour plus d’informations sur l’extension du système de métadonnées, consultez [extension du système de métadonnées](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Points de terminaison : adresses, liaisons et contrats](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  

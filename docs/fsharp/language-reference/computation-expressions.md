@@ -2,12 +2,12 @@
 title: Expressions de calcul (F#)
 description: 'Découvrez comment créer la syntaxe pour l’écriture de calculs en F # qui peuvent être séquencés et combinés à l’aide de liaisons et constructions de flux de contrôle.'
 ms.date: 05/16/2016
-ms.openlocfilehash: a4ddb3fde284452bc901c5270551611e43742c1f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4995efc757d99a575ee9fad3abf0465a32398c44
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566611"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207431"
 ---
 # <a name="computation-expressions"></a>Expressions de calcul
 
@@ -15,6 +15,7 @@ En F #, les expressions de calcul fournissent une syntaxe pratique pour l’écr
 
 
 ## <a name="built-in-workflows"></a>Flux de travail intégrés
+
 Expressions de séquence sont un exemple d’expression de calcul, comme les flux de travail asynchrones et les expressions de requête. Pour plus d’informations, consultez [séquences](sequences.md), [Workflows asynchrones](asynchronous-workflows.md), et [les Expressions de requête](query-expressions.md).
 
 Certaines fonctionnalités communes aux expressions de séquence et flux de travail asynchrones et illustrent la syntaxe de base pour une expression de calcul :

@@ -2,12 +2,12 @@
 title: Chaînes (F#)
 description: "Découvrez comment le type 'string') (F # représente le texte immuable en tant que séquence de caractères Unicode."
 ms.date: 05/16/2016
-ms.openlocfilehash: bdd1d1a542e70bcd95fce51e75d0c1ddffceb008
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 80c08f5b768dd826745e07b8c5726093050ab730
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33564857"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207103"
 ---
 # <a name="strings"></a>Chaînes
 
@@ -17,7 +17,7 @@ Les liens des informations de référence sur les API qui figurent dans cet arti
 Le `string` type représente le texte immuable en tant que séquence de caractères Unicode. `string` est un alias pour `System.String` dans le .NET Framework.
 
 ## <a name="remarks"></a>Notes
-Littéraux de chaîne sont délimités par le caractère guillemet ("). Le caractère barre oblique inverse (\) est utilisé pour encoder certains caractères spéciaux. La barre oblique inverse et le caractère suivant forment sont appelés un *séquence d’échappement*. Prise en charge dans les littéraux sont affichés dans le tableau suivant de chaîne F # de séquences d’échappement.
+Littéraux de chaîne sont délimités par le caractère guillemet ("). Le caractère barre oblique inverse ( \\ ) est utilisé pour encoder certains caractères spéciaux. La barre oblique inverse et le caractère suivant forment sont appelés un *séquence d’échappement*. Prise en charge dans les littéraux sont affichés dans le tableau suivant de chaîne F # de séquences d’échappement.
 
 |Caractère|Séquence d'échappement|
 |---------|---------------|

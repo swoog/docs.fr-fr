@@ -9,11 +9,12 @@ helpviewer_keywords:
 - Windows Forms, bi-directional support
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe1a15477e858a77ee7829f1d4a9d052457cd30f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dbe14e6c05fd6ef155b564e499157e00c5d809e5
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208575"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Prise en charge bidirectionnelle pour les applications Windows Forms
 Vous pouvez utiliser Visual Studio pour créer des applications basées sur Windows qui prennent en charge les (de droite à gauche) langues bidirectionnelles (arabe ou hébraïque). Cela comprend les formulaires standard, les boîtes de dialogue, les formulaires MDI et tous les contrôles que vous pouvez utiliser dans ces formulaires, c'est-à-dire tous les objets de l'espace de noms <xref:System.Windows.Forms.Control>.  
@@ -116,6 +117,7 @@ Vous pouvez utiliser Visual Studio pour créer des applications basées sur Wind
   
  Certains contrôles sont scellés, ce qui signifie que vous ne pouvez pas dériver un nouveau contrôle à partir d'eux. Il s'agit entre autres des contrôles <xref:System.Windows.Forms.ImageList> et <xref:System.Windows.Forms.ProgressBar>.  
   
-## <a name="see-also"></a>Voir aussi  
- [Prise en charge bidirectionnelle pour les applications web ASP.NET](http://msdn.microsoft.com/library/5576f9b1-9b86-41ef-8354-092d366bcd03)  
- [Globalisation des Windows Forms](../../../../docs/framework/winforms/advanced/globalizing-windows-forms.md)
+## <a name="see-also"></a>Voir aussi
+
+[Prise en charge bidirectionnelle pour les applications web ASP.NET](http://msdn.microsoft.com/library/5576f9b1-9b86-41ef-8354-092d366bcd03)  
+[Globalisation des applications Windows Forms](globalizing-windows-forms.md)

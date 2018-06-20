@@ -2,12 +2,12 @@
 title: Mise à jour dynamique
 ms.date: 03/30/2017
 ms.assetid: 8b6ef19b-9691-4b4b-824c-3c651a9db96e
-ms.openlocfilehash: cfd10e4b93351c607ef270487a12bec19ded4ca8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f50c8e8ed7ebaab71421ff1615051d9b828d9e4b
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520355"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207519"
 ---
 # <a name="dynamic-update"></a>Mise à jour dynamique
 La mise à jour dynamique fournit un mécanisme pour permettre aux développeurs d'applications de workflow de mettre à jour la définition de workflow d'une instance de workflow persistante. Il peut s'agir d'une résolution de bogue, de nouvelles spécifications ou de l'adaptation à des modifications inattendues. Cette rubrique fournit une vue d'ensemble de la fonctionnalité de mise à jour dynamique introduite dans [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  
@@ -164,7 +164,7 @@ foreach (Guid id in ids)
  Une fois la mise à jour dynamique appliquée, l'instance de workflow peut reprendre. Notez que la nouvelle définition mise à jour et <xref:System.Activities.WorkflowIdentity> doivent être utilisés.  
   
 > [!NOTE]
->  Pour plus d’informations sur l’utilisation de <xref:System.Activities.WorkflowApplication> et <xref:System.Activities.WorkflowIdentity>, consultez[à l’aide de WorkflowIdentity et du Versioning](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md).  
+>  Pour plus d’informations sur l’utilisation de <xref:System.Activities.WorkflowApplication> et <xref:System.Activities.WorkflowIdentity>, consultez [à l’aide de WorkflowIdentity et du Versioning](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md).  
   
  Dans l'exemple suivant, le workflow `MortgageWorkflow_v1.1.xaml` de l'exemple précédent a été compilé, et est chargé et repris à l'aide de la définition mise à jour de workflow.  
   

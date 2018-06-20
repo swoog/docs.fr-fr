@@ -1,6 +1,7 @@
 ---
-title: Globalisation des Windows Forms
-ms.date: 03/30/2017
+title: Globalisation des applications Windows Forms
+description: Cette rubrique présente la liste des rubriques relatives à la globalisation des applications Windows Forms.
+ms.date: 06/08/2018
 helpviewer_keywords:
 - Windows Forms, globalization
 - localization [Windows Forms]
@@ -8,55 +9,47 @@ helpviewer_keywords:
 - world-ready applications
 - global applications [Windows Forms], creating Windows Forms
 ms.assetid: 72f6cd92-83be-45ec-aa37-9cb8e3ebc3c5
-ms.openlocfilehash: 936042d54e23a87a4901d7e5d22226d85f0e528b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 72bab76245b7b613ed97acec4cc616732c54de0f
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208589"
 ---
-# <a name="globalizing-windows-forms"></a>Globalisation des Windows Forms
-*Globalisation* est le processus de conception et développement d’un produit logiciel qui fonctionne pour plusieurs cultures.  
-  
-## <a name="in-this-section"></a>Dans cette section  
- [Encodage et globalisation des applications Windows Forms](../../../../docs/framework/winforms/advanced/encoding-and-windows-forms-globalization.md)  
- Décrit la prise en charge Unicode complète et ses implications.  
-  
- [Polices internationales pour les applications Windows Forms et les contrôles](../../../../docs/framework/winforms/advanced/international-fonts-in-windows-forms-and-controls.md)  
- Explique quand et comment sélectionner des polices pour l'affichage de caractères internationaux dans les Windows Forms.  
-  
- [Affichage des caractères asiatiques avec la propriété ImeMode](../../../../docs/framework/winforms/advanced/display-of-asian-characters-with-the-imemode-property.md)  
- Présente la propriété `ImeMode`, qui sert à contrôler le type d'entrée accepté par un Windows Form ou un contrôle.  
-  
--   [Procédure pas à pas : téléchargement d’assemblys satellites à la demande avec l’API de déploiement ClickOnce à l’aide du concepteur](http://msdn.microsoft.com/library/ms366788\(v=vs.110\))  
-  
--   [Localisation des applications ClickOnce](http://msdn.microsoft.com/library/ms404266\(v=vs.110\))  
-  
--   [Procédure pas à pas : téléchargement d’assemblys satellites à la demande avec l’API de déploiement ClickOnce](http://msdn.microsoft.com/library/ms404269\(v=vs.110\))  
-  
--   [Comment : définir la Culture et la Culture d’interface utilisateur pour la globalisation des Windows Forms](http://msdn.microsoft.com/library/b28bx3bh\(v=vs.110\))  
-  
--   [Comment : créer des mises en miroir Windows Forms et les contrôles](http://msdn.microsoft.com/library/xwbz5ws0\(v=vs.110\))  
-  
--   [Comment : prendre en charge la localisation dans les Windows Forms à l’aide du redimensionnement automatique et du contrôle TableLayoutPanel](http://msdn.microsoft.com/library/1zkt8b33\(v=vs.110\))  
-  
--   [Procédure pas à pas : Localisation de Windows Forms](http://msdn.microsoft.com/library/y99d1cd3\(v=vs.110\))  
-  
--   [Procédure pas à pas : Création d’une présentation qui ajuste la Proportion pour la localisation](http://msdn.microsoft.com/library/7k9fa71y\(v=vs.110\))  
-  
--   [Comment : créer des boîtes de Message pour bidirectionnelle Windows Forms](http://msdn.microsoft.com/library/k1689bxh\(v=vs.110\))  
-  
--   [Procédure pas à pas : téléchargement d’assemblys satellites à la demande avec l’API de déploiement ClickOnce à l’aide du concepteur](http://msdn.microsoft.com/library/ms366788\(v=vs.120\))  
-  
--   [Localisation des applications ClickOnce](http://msdn.microsoft.com/library/ms404266\(v=vs.120\))  
-  
--   [Procédure pas à pas : téléchargement d’assemblys satellites à la demande avec l’API de déploiement ClickOnce](http://msdn.microsoft.com/library/ms404269\(v=vs.120\))  
-  
-## <a name="related-sections"></a>Rubriques connexes  
-  
-1.  [Globalisation et localisation d’applications](http://msdn.microsoft.com/library/1021kkz0\(v=vs.110\))  
-  
-2.  [Globalisation d’applications](http://msdn.microsoft.com/library/eaa7b9c0\(v=vs.110\))  
-  
-3.  [Globalisation et localisation d’applications](http://msdn.microsoft.com/library/1021kkz0\(v=vs.120\))  
-  
-4.  [Globalisation d’applications](http://msdn.microsoft.com/library/eaa7b9c0\(v=vs.120\))
+# <a name="globalizing-windows-forms-applications"></a>Globalisation des applications Windows Forms
+
+*Globalisation* est le processus de conception et développement d’un produit logiciel qui fonctionne pour plusieurs cultures.
+
+## <a name="in-this-section"></a>Dans cette section
+
+[Encodage et globalisation des applications Windows Forms](encoding-and-windows-forms-globalization.md)  
+Décrit la prise en charge Unicode complète et ses implications.
+
+[Polices internationales pour les applications Windows Forms et les contrôles](international-fonts-in-windows-forms-and-controls.md)  
+Explique quand et comment sélectionner des polices pour l'affichage de caractères internationaux dans les Windows Forms.
+
+[Prise en charge bidirectionnelle pour les applications Windows Forms](bi-directional-support-for-windows-forms-applications.md)  
+Explique comment créer des applications Windows qui prennent en charge des langues de bidirectionnelles (de droite à gauche).
+
+[Affichage des caractères asiatiques avec la propriété ImeMode](display-of-asian-characters-with-the-imemode-property.md)  
+Présente la propriété `ImeMode`, qui sert à contrôler le type d'entrée accepté par un Windows Form ou un contrôle.
+
+## <a name="related-sections"></a>Rubriques connexes
+
+- [Globalisation et localisation d’applications .NET](../../../standard/globalization-localization/index.md)
+
+- [Procédure pas à pas : téléchargement d’assemblys satellites à la demande avec l’API de déploiement ClickOnce à l’aide du concepteur](/visualstudio/deployment/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer)
+
+- [Localisation des applications ClickOnce](/visualstudio/deployment/localizing-clickonce-applications)
+
+- [Procédure pas à pas : téléchargement d’assemblys satellites à la demande avec l’API de déploiement ClickOnce](/visualstudio/deployment/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api)
+
+- [Comment : définir la Culture et la Culture d’interface utilisateur pour la globalisation des Windows Forms](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/b28bx3bh(v=vs.100))
+
+- [Comment : créer des mises en miroir Windows Forms et les contrôles](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/xwbz5ws0(v=vs.100))
+
+- [Comment : prendre en charge la localisation dans les Windows Forms à l’aide du redimensionnement automatique et du contrôle TableLayoutPanel](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1zkt8b33(v=vs.100))
+
+- [Procédure pas à pas : Localisation de Windows Forms](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/y99d1cd3(v=vs.100))
+
+- [Procédure pas à pas : Création d’une présentation qui ajuste la Proportion pour la localisation](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7k9fa71y(v=vs.100))
