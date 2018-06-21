@@ -13,12 +13,12 @@ helpviewer_keywords:
 - flicker
 - bit-block transfer
 ms.assetid: 33b76910-13a3-4521-be98-5c097341ae3b
-ms.openlocfilehash: 65428132c885191b62c3b4a76c8937bf8f3f6732
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dc5f05ff4ea9f3c2b828cbe37860e1bd241fc604
+ms.sourcegitcommit: 3d42e1d73e21c35c540dd4adbea23efcbe1b8b0a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33522042"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36270433"
 ---
 # <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a>Comment : copier des pixels pour réduire le scintillement dans les Windows Forms
 Lorsque vous animez un graphique simple, les utilisateurs peuvent parfois être scintillement ou autres effets visuels indésirables. Un pour limiter ce problème consiste à utiliser un processus « bitblt » sur le graphique. BitBlt représente le « bloc de bits transfert » des données de couleur à partir d’un rectangle d’origine de pixels à un rectangle de destination de pixels.  
@@ -28,7 +28,7 @@ Lorsque vous animez un graphique simple, les utilisateurs peuvent parfois être 
  Dans l’exemple ci-dessous, une forme est dessinée sur le formulaire dans son <xref:System.Windows.Forms.Control.Paint> Gestionnaire d’événements. Ensuite, la <xref:System.Drawing.Graphics.CopyFromScreen%2A> méthode est utilisée pour dupliquer la forme.  
   
 > [!NOTE]
->  Définition du formulaire <xref:System.Windows.Forms.Control.DoubleBuffered%2A> propriété `true` permettront à code de graphiques dans le <xref:System.Windows.Forms.Control.Paint> événement est de double tampon. Alors que cela ne disposent pas des gains de performance notable lorsque vous utilisez le code ci-dessous, le problème est à prendre en compte lorsque vous travaillez avec le code de manipulation de graphiques plus complexe.  
+>  Définition du formulaire <xref:System.Windows.Forms.Control.DoubleBuffered%2A> propriété `true` permettront à code de graphiques dans le <xref:System.Windows.Forms.Control.Paint> événement est de double tampon. Alors que cela ne disposent pas des gains de performances visible lorsque vous utilisez le code ci-dessous, le problème est à prendre en compte lorsque vous travaillez avec le code de manipulation de graphiques plus complexe.  
   
 ## <a name="example"></a>Exemple  
   
