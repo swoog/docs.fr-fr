@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: c31e1663-c164-4e65-b66d-d3aa8750a154
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c9a679a69b5a4cc7076fd2f31a0870d48ef47dd8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6625103da5b9e235b214a41d990d7accb2646e57
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579663"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314937"
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>Développement interplateforme avec la bibliothèque de classes portable
 Le type de projet de bibliothèque de classes portables .NET Framework dans Visual Studio vous permet de créer rapidement et facilement des applications interplateformes et des bibliothèques pour les plateformes Microsoft.  
@@ -51,8 +51,8 @@ Le type de projet de bibliothèque de classes portables .NET Framework dans Visu
 |Versions Visual Studio Express 2010|Non.|  
 |Visual Studio 2012 Professional, Premium ou Ultimate|Oui. Pour la prise en charge de Windows Phone 8.0, installez le [Windows Phone SDK 8.0](https://www.microsoft.com/download/details.aspx?id=35471).|  
 |Versions Visual Studio Express 2012|Non.|  
-|Visual Studio 2013 Professional, Premium ou Ultimate|Oui. Pour la prise en charge de Windows Phone 8.1, installez le [version la plus récente de Visual Studio 2013](https://www.visualstudio.com/vs/older-downloads/).|  
-|Communauté Visual Studio 2013 pour Windows|Oui, quand vous installez le [version la plus récente de Visual Studio Community 2013](https://www.visualstudio.com/vs/older-downloads/), qui inclut la mise à jour 2.|  
+|Visual Studio 2013 Professional, Premium ou Ultimate|Oui. Pour la prise en charge de Windows Phone 8.1, installez le [version la plus récente de Visual Studio 2013](https://visualstudio.microsoft.com/vs/older-downloads/).|  
+|Communauté Visual Studio 2013 pour Windows|Oui, quand vous installez le [version la plus récente de Visual Studio Community 2013](https://visualstudio.microsoft.com/vs/older-downloads/), qui inclut la mise à jour 2.|  
   
 <a name="create_pcl"></a>   
 ## <a name="creating-a-portable-class-library-project"></a>Création d'un projet de bibliothèque de classes portables  

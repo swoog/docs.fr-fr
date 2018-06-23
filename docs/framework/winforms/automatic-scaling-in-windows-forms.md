@@ -5,12 +5,12 @@ helpviewer_keywords:
 - scalability [Windows Forms], automatic in Windows Forms
 - Windows Forms, automatic scaling
 ms.assetid: 68fad25b-afbc-44bd-8e1b-966fc43507a4
-ms.openlocfilehash: e27c56d9a6d745c7d1ff83986e7996aa1bebc879
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0018b9f8644ec7d222a416bb5f71a7c61671009e
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529881"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314761"
 ---
 # <a name="automatic-scaling-in-windows-forms"></a>Automatique de mise à l’échelle dans les Windows Forms
 La mise à l’échelle automatique permet d’afficher correctement un formulaire et ses contrôles conçus sur un ordinateur avec une certaine police système et une certaine résolution d’affichage sur un autre ordinateur avec une police système ou une résolution d’affichage différente. Elle garantit que le formulaire et ses contrôles seront redimensionnés intelligemment et de manière cohérente avec les fenêtres natives et d'autres applications sur les ordinateurs des utilisateurs et d'autres développeurs. La prise en charge dans [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] de la mise à l'échelle automatique et des styles visuels permet aux applications [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] de conserver une apparence cohérente avec les applications Windows natives sur l'ordinateur de chaque utilisateur.
@@ -41,15 +41,7 @@ Même si ce mécanisme était suffisant dans la plupart des cas, il souffrait de
 
 - La mise à l'échelle automatique était implémentée uniquement dans la classe <xref:System.Windows.Forms.Form>, et non dans la classe <xref:System.Windows.Forms.ContainerControl>. Ainsi, les contrôles utilisateur étaient mis à l'échelle correctement uniquement quand le contrôle utilisateur était conçu à la même résolution que le formulaire et quand il était placé dans le formulaire au moment du design.
 
-- Les formulaires et leurs contrôles enfants pouvaient uniquement être conçus simultanément par plusieurs développeurs si la résolution de leurs ordinateurs était identique. De même, cela rendait l’héritage d’un formulaire dépendant de la résolution associée au formulaire parent.
-
-> [!NOTE]
-> Avec les différences extrêmes dans l’affichage dpi, en particulier dans les périphériques modernes 2-1, cela peut encore se produire avec les versions plus récentes de .NET Framework et Visual Studio. Pour résoudre ce problème dans une équipe à l’aide de différents affichages PPP, assurez-vous que Visual Studio toujours démarre en mode non compatible PPP, donc le Concepteur Windows Forms base toujours le calcul de la disposition de 96 PPP. À cette fin, il vous suffit de définir la clé de Registre suivante pour désactiver la reconnaissance des HighDPI de Visual Studio :
->
-> ```
-> [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\devenv.exe]
-> "dpiAwareness"=dword:00000000
-> ```
+- Les formulaires et leurs contrôles enfants pouvaient uniquement être conçus simultanément par plusieurs développeurs si la résolution de leurs ordinateurs était identique. De même, cela rendait l'héritage d'un formulaire dépendant de la résolution associée au formulaire parent.
 
 - Cela n'est pas compatible avec les gestionnaires de présentation plus récents introduits dans [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] version 2.0, tels que <xref:System.Windows.Forms.FlowLayoutPanel> et <xref:System.Windows.Forms.TableLayoutPanel>.
 
