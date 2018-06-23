@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d3a77ea1-75d2-4969-a8c3-3e1e3e1aaedc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bc54b8bdc96a5038dc75111d9833e70e7ffd2e9e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 207227b3e5c52b7c6e0f704543379874f3708c03
+ms.sourcegitcommit: ceca5a1c027627abcca2767567703c3879f33325
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578038"
+ms.lasthandoff: 06/23/2018
+ms.locfileid: "36338102"
 ---
 # <a name="general-naming-conventions"></a>Conventions générales d'affectation de noms
 Cette section décrit d’affectation de noms conventions générales relatives au choix des mots, des recommandations sur l’utilisation des abréviations et les acronymes et les recommandations sur la façon d’éviter l’utilisation de noms spécifiques au langage.  
@@ -85,7 +85,7 @@ Cette section décrit d’affectation de noms conventions générales relatives 
   
  **✓ FAIRE** préférez l’ajout d’un suffixe au lieu d’un préfixe pour indiquer une nouvelle version d’une API existante.  
   
- Cela est utile pour la détection lorsque vous parcourez la documentation, ou à l’aide d’Intellisense. L’ancienne version de l’API est organisée proches les nouvelles API, car la plupart des navigateurs et Intellisense affichent les identificateurs dans l’ordre alphabétique.  
+ Cela est utile pour la détection lorsque vous parcourez la documentation, ou à l’aide d’IntelliSense. L’ancienne version de l’API est organisée proches les nouvelles API, car la plupart des navigateurs et IntelliSense affichent les identificateurs dans l’ordre alphabétique.  
   
  **✓ Envisagez** à l’aide d’un identificateur de tout nouveau, mais significatif, au lieu d’ajouter un préfixe ou un suffixe.  
   
