@@ -1,1 +1,1 @@
-<span data-ttu-id="331f0-101">LINQ to ADO.NET</span><span class="sxs-lookup"><span data-stu-id="331f0-101">LINQ to ADO.NET</span></span>
+<span data-ttu-id="c33e3-101">LINQ to ADO.NET</span><span class="sxs-lookup"><span data-stu-id="c33e3-101">LINQ to ADO.NET</span></span>
