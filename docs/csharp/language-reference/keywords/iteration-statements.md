@@ -5,15 +5,16 @@ helpviewer_keywords:
 - iteration statements [C#]
 - loop structures [C#]
 ms.assetid: 7d494566-bf75-4ee8-979f-0f964209437e
-ms.openlocfilehash: f57aab3bab2bc0bff32893b1fafb13dc2d0ee960
-ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
+ms.openlocfilehash: 12452f5e3fcc78835a7aed9f6e4044463fb0b755
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/25/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207912"
 ---
 # <a name="iteration-statements-c-reference"></a>Instructions d'itération (référence C#)
 
-Vous pouvez créer des boucles avec les instructions d’itération. Les instructions d’itération entraînent une exécution des instructions incorporées un certain nombre de fois, selon les critères de terminaison des boucles. Ces instructions sont exécutées dans l’ordre, sauf quand une [instruction de saut](../../../csharp/language-reference/keywords/jump-statements.md) est rencontrée.
+Vous pouvez créer des boucles avec les instructions d’itération. Les instructions d’itération entraînent une exécution des instructions incorporées un certain nombre de fois, selon les critères de terminaison des boucles. Ces instructions sont exécutées dans l’ordre, sauf quand une [instruction de saut](jump-statements.md) est rencontrée.
 
 Les mots clés suivants sont utilisés dans des instructions d’itération :
 
@@ -26,6 +27,7 @@ Les mots clés suivants sont utilisés dans des instructions d’itération :
 - [while](while.md)
 
 ## <a name="see-also"></a>Voir aussi
+
  [Référence C#](../index.md)  
  [Guide de programmation C#](../../programming-guide/index.md)  
  [Mots clés C#](index.md)  

@@ -3,12 +3,12 @@ title: Bien démarrer avec l’analyse sémantique
 description: Ce tutoriel fournit une vue d’ensemble de l’utilisation de l’analyse sémantique avec le SDK du compilateur .NET.
 ms.date: 02/06/2018
 ms.custom: mvc
-ms.openlocfilehash: 360d31b86a677adfe51ebd6752fca8475814fd89
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4b021ed2a27da754e2ac5af01716868e41e72738
+ms.sourcegitcommit: 3d42e1d73e21c35c540dd4adbea23efcbe1b8b0a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358750"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36270459"
 ---
 # <a name="get-started-with-semantic-analysis"></a>Bien démarrer avec l’analyse sémantique
 
@@ -131,7 +131,7 @@ Sélectionnez seulement la propriété name et seulement les noms distincts en s
 
 Vous pouvez aussi créer toute la requête avec la syntaxe de requête LINQ, puis afficher tous les noms de méthode dans la console :
 
-[!code-csharp[build and display the results of this query.](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#12 "Build and display the results of the query.")]
+[!code-csharp[build and display the results of this query.](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#13 "Build and display the results of the query.")]
 
 Générez et exécutez le programme. Vous devez voir la sortie suivante :
 

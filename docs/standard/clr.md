@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 059a624e-f7db-4134-ba9f-08b676050482
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7887c1142b721249526a318257149e419affd967
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 89989b4b7730f4e252dc846377b385cb359dbee1
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572289"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36315119"
 ---
 # <a name="common-language-runtime-clr-overview"></a>Vue d’ensemble du Common Language Runtime (CLR)
 
@@ -32,7 +32,7 @@ Le .NET Framework fournit un environnement d'exécution, appelé le Common Lang
 Les compilateurs et les outils exposent le fonctionnement du Common Language Runtime et vous permettent d'écrire du code qui bénéficie de cet environnement d'exécution managée. Le code que vous développez à l'aide d'un compilateur de langage ciblant le runtime est appelé code managé ; il tire parti de fonctionnalités telles que l'intégration interlangage, la gestion interlangage des exceptions, la sécurité améliorée, la prise en charge du versioning et du déploiement, un modèle simplifié de l'interaction des composants, ainsi que des services de débogage et de gestion de profils.
 
 > [!NOTE]
-> Les compilateurs et les outils peuvent générer une sortie que le Common Language Runtime peut consommer parce que le système de type, le format des métadonnées et l'environnement d'exécution (système d'exécution virtuel) sont tous définis par une norme publique, la spécification CLI (Common Language Infrastructure) ECMA. Pour plus d’informations, consultez [ECMA C# and Common Language Infrastructure Specifications](https://www.visualstudio.com/license-terms/ecma-c-common-language-infrastructure-standards/) (Spécifications CLI et ECMA C#).
+> Les compilateurs et les outils peuvent générer une sortie que le Common Language Runtime peut consommer parce que le système de type, le format des métadonnées et l'environnement d'exécution (système d'exécution virtuel) sont tous définis par une norme publique, la spécification CLI (Common Language Infrastructure) ECMA. Pour plus d’informations, consultez [ECMA C# and Common Language Infrastructure Specifications](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/) (Spécifications CLI et ECMA C#).
 
 Pour permettre au runtime de fournir des services au code managé, les compilateurs de langage doivent générer des métadonnées qui décrivent les types, les membres et les références de votre code. Les métadonnées sont stockées avec le code ; chaque fichier exécutable portable (PE) chargeable du Common Language Runtime contient des métadonnées. Le runtime utilise les métadonnées pour rechercher et charger des classes, placer des instances en mémoire, résoudre des appels de méthode, générer un code natif, appliquer la sécurité et définir les limites du contexte d'exécution.
 
@@ -76,7 +76,7 @@ Le numéro de version du .NET Framework ne correspond pas nécessairement au num
 |4|4|
 |4.5 (y compris 4.5.1 et 4.5.2)|4|
 |4.6 (y compris 4.6.1 et 4.6.2)|4|
-|4.7 (y compris 4.7.1 et 4.7.2)|4|
+|4.7 (y compris 4.7.1 et 4.7.2)|4|
 
 ## <a name="related-topics"></a>Rubriques connexes
 

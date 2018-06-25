@@ -14,15 +14,18 @@ helpviewer_keywords:
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 94659919d4e902f8562e669fbb0f98d6ebc679ab
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 7d0ff21ee4846b2f5586317e70ac96f37517621f
+ms.sourcegitcommit: 3d42e1d73e21c35c540dd4adbea23efcbe1b8b0a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744640"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36270498"
 ---
 # <a name="creating-and-using-strong-named-assemblies"></a>Création et utilisation d'assemblys avec nom fort
 <a name="top"></a>Un nom fort est constitué de l’identité de l’assembly (son simple nom textuel, son numéro de version et des informations de culture, le cas échéant) ainsi que d’une clé publique et d’une signature numérique. Il est généré à partir d'un fichier d'assembly à l'aide de la clé privée correspondante. (Le fichier d'assembly contient le manifeste d'assembly, qui contient les noms et les hachages de tous les fichiers composant l'assembly.)  
+
+> [!WARNING]
+> Ne comptez pas sur les noms forts pour la sécurité. Ils fournissent seulement une identité unique.
   
  Un assembly avec nom fort peut uniquement utiliser les types d'autres assemblys avec nom fort. Si ce n'était pas le cas, l’intégrité de l’assembly avec nom fort serait compromise.  
   

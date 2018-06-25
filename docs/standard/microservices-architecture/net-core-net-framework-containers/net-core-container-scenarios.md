@@ -4,12 +4,12 @@ description: Architecture de microservices .NET pour les applications .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: 4e2585d7fdeb89e7267f2615113f819d71236dc7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 45917a9dbfbd6610c3cca9ab7dcf9f924c329c10
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580170"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314924"
 ---
 # <a name="when-to-choose-net-core-for-docker-containers"></a>Quand choisir .NET Core pour les conteneurs Docker
 
@@ -25,9 +25,9 @@ Il va de soi que si votre objectif est de disposer d’une application (applicat
 
 .NET Core prend aussi en charge macOS comme plateforme de développement. Cependant, quand vous déployez des conteneurs sur un hôte Docker, celui-ci doit (à ce moment-là) être basé sur Windows ou Linux. Par exemple, dans un environnement de développement, vous pouvez utiliser une machine virtuelle Linux s’exécutant sur un Mac.
 
-[Visual Studio](https://www.visualstudio.com/) propose un environnement de développement intégré (IDE) pour Windows et prend en charge le développement Docker. 
+[Visual Studio](https://visualstudio.microsoft.com/) propose un environnement de développement intégré (IDE) pour Windows et prend en charge le développement Docker. 
 
-[Visual Studio pour Mac](https://www.visualstudio.com/vs/visual-studio-mac/) est un IDE (évolution de Xamarin Studio) qui s’exécute dans macOS et qui prend en charge Docker depuis la mi-année 2017.
+[Visual Studio pour Mac](https://visualstudio.microsoft.com/vs/visual-studio-mac/) est un IDE (évolution de Xamarin Studio) qui s’exécute dans macOS et qui prend en charge Docker depuis la mi-année 2017.
 
 Vous pouvez aussi utiliser [Visual Studio Code](https://code.visualstudio.com/) (VS Code) sur macOS, Linux et Windows. VS Code prend entièrement en charge .NET Core, notamment IntelliSense et le débogage. VS Code étant un éditeur léger, vous pouvez l’utiliser pour développer des applications en conteneur sur Mac en association avec l’interface CLI Docker et les [outils de d’interface de ligne de commande (CLI) .NET Core](../../../core/tools/index.md). Vous pouvez aussi cibler .NET Core avec la plupart des éditeurs tiers comme Sublime, Text, Emacs, vi et le projet open source OmniSharp, qui assure une prise en charge d’IntelliSense pour les langages .NET. En plus des IDE et des éditeurs, vous pouvez utiliser l’interface CLI .NET Core pour toutes les plateformes prises en charge.
 

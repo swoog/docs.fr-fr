@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: b1925397fb7cad5e55f992feaa5be2e2d837aac8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: de5ff06e660d3c4e976c10043a7ebc72d102cff5
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592260"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314641"
 ---
 # <a name="tour-of-net"></a>Présentation de .NET
 
@@ -25,7 +25,7 @@ Pour savoir comment configurer un environnement de développement pour exécuter
 
 ## <a name="programming-languages"></a>Langages de programmation
 
-.NET prend en charge plusieurs langages de programmation. Les implémentations de .NET implémentent le [Common Language Infrastructure (CLI)](https://www.visualstudio.com/license-terms/ecma-c-common-language-infrastructure-standards/), qui, entre autres, spécifie un runtime indépendant du langage et une interopérabilité des langages. Cela signifie que vous choisissez n’importe quel langage .NET pour générer des applications et services sur .NET.
+.NET prend en charge plusieurs langages de programmation. Les implémentations de .NET implémentent le [Common Language Infrastructure (CLI)](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/), qui, entre autres, spécifie un runtime indépendant du langage et une interopérabilité des langages. Cela signifie que vous choisissez n’importe quel langage .NET pour générer des applications et services sur .NET.
 
 Microsoft développe et prend en charge activement trois langages .NET : C#, F# et Visual Basic (VB). 
 
