@@ -1,14 +1,14 @@
 ---
 ms.custom: updateeachrelease
 ms.openlocfilehash: f8be002c1d2e34889204ae2c1c50aa87ccdd080e
-ms.sourcegitcommit: 1e17d85fdd86608b5bde8ffc517b162146a129fd
+ms.sourcegitcommit: ceca5a1c027627abcca2767567703c3879f33325
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/13/2018
-ms.locfileid: "35422626"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36749176"
 ---
-| <span data-ttu-id="ca072-101">Versions cibles de .NET Framework</span><span class="sxs-lookup"><span data-stu-id="ca072-101">Target Frameworks</span></span> | <span data-ttu-id="ca072-102">Symboles</span><span class="sxs-lookup"><span data-stu-id="ca072-102">Symbols</span></span> |
+| <span data-ttu-id="a4a7a-101">Versions cibles de .NET Framework</span><span class="sxs-lookup"><span data-stu-id="a4a7a-101">Target Frameworks</span></span> | <span data-ttu-id="a4a7a-102">Symboles</span><span class="sxs-lookup"><span data-stu-id="a4a7a-102">Symbols</span></span> |
 | ------------------| ------- |
-| <span data-ttu-id="ca072-103">.NET Framework</span><span class="sxs-lookup"><span data-stu-id="ca072-103">.NET Framework</span></span>    | <span data-ttu-id="ca072-104">`NET20`, `NET35`, `NET40`, `NET45`, `NET451`, `NET452`, `NET46`, `NET461`, `NET462`, `NET47`, `NET471`, `NET472`</span><span class="sxs-lookup"><span data-stu-id="ca072-104">`NET20`, `NET35`, `NET40`, `NET45`, `NET451`, `NET452`, `NET46`, `NET461`, `NET462`, `NET47`, `NET471`, `NET472`</span></span> |
-| <span data-ttu-id="ca072-105">.NET Standard</span><span class="sxs-lookup"><span data-stu-id="ca072-105">.NET Standard</span></span>     | <span data-ttu-id="ca072-106">`NETSTANDARD1_0`, `NETSTANDARD1_1`, `NETSTANDARD1_2`, `NETSTANDARD1_3`, `NETSTANDARD1_4`, `NETSTANDARD1_5`, `NETSTANDARD1_6`, `NETSTANDARD2_0`</span><span class="sxs-lookup"><span data-stu-id="ca072-106">`NETSTANDARD1_0`, `NETSTANDARD1_1`, `NETSTANDARD1_2`, `NETSTANDARD1_3`, `NETSTANDARD1_4`, `NETSTANDARD1_5`, `NETSTANDARD1_6`, `NETSTANDARD2_0`</span></span> |
-| <span data-ttu-id="ca072-107">.NET Core</span><span class="sxs-lookup"><span data-stu-id="ca072-107">.NET Core</span></span>         | <span data-ttu-id="ca072-108">`NETCOREAPP1_0`, `NETCOREAPP1_1`, `NETCOREAPP2_0`, `NETCOREAPP2_1`</span><span class="sxs-lookup"><span data-stu-id="ca072-108">`NETCOREAPP1_0`, `NETCOREAPP1_1`, `NETCOREAPP2_0`, `NETCOREAPP2_1`</span></span> |
+| <span data-ttu-id="a4a7a-103">.NET Framework</span><span class="sxs-lookup"><span data-stu-id="a4a7a-103">.NET Framework</span></span>    | <span data-ttu-id="a4a7a-104">`NET20`, `NET35`, `NET40`, `NET45`, `NET451`, `NET452`, `NET46`, `NET461`, `NET462`, `NET47`, `NET471`, `NET472`</span><span class="sxs-lookup"><span data-stu-id="a4a7a-104">`NET20`, `NET35`, `NET40`, `NET45`, `NET451`, `NET452`, `NET46`, `NET461`, `NET462`, `NET47`, `NET471`, `NET472`</span></span> |
+| <span data-ttu-id="a4a7a-105">.NET Standard</span><span class="sxs-lookup"><span data-stu-id="a4a7a-105">.NET Standard</span></span>     | <span data-ttu-id="a4a7a-106">`NETSTANDARD1_0`, `NETSTANDARD1_1`, `NETSTANDARD1_2`, `NETSTANDARD1_3`, `NETSTANDARD1_4`, `NETSTANDARD1_5`, `NETSTANDARD1_6`, `NETSTANDARD2_0`</span><span class="sxs-lookup"><span data-stu-id="a4a7a-106">`NETSTANDARD1_0`, `NETSTANDARD1_1`, `NETSTANDARD1_2`, `NETSTANDARD1_3`, `NETSTANDARD1_4`, `NETSTANDARD1_5`, `NETSTANDARD1_6`, `NETSTANDARD2_0`</span></span> |
+| <span data-ttu-id="a4a7a-107">.NET Core</span><span class="sxs-lookup"><span data-stu-id="a4a7a-107">.NET Core</span></span>         | <span data-ttu-id="a4a7a-108">`NETCOREAPP1_0`, `NETCOREAPP1_1`, `NETCOREAPP2_0`, `NETCOREAPP2_1`</span><span class="sxs-lookup"><span data-stu-id="a4a7a-108">`NETCOREAPP1_0`, `NETCOREAPP1_1`, `NETCOREAPP2_0`, `NETCOREAPP2_1`</span></span> |
