@@ -47,7 +47,7 @@ ms.locfileid: "33577070"
 |`xsl:number` est une valeur NaN, infinie ou inférieure à 0,5.|Récupération|Errata e24|  
 |La collection de nœuds du second argument de la fonction de document est vide et la référence URI est relative.|Récupération|Errata e14|  
   
- Des sections de l'errata se trouvent dans le document du World Wide Web Consortium (W3C) sur les erreurs de spécifications XSLT (XSL Transformations) Version 1.0, à l'adresse http://www.w3.org/1999/11/REC-xslt-19991116-errata.  
+ Des sections de l'errata se trouvent dans le document du World Wide Web Consortium (W3C) sur les erreurs de spécifications XSLT (XSL Transformations) Version 1.0, à l'adresse www.w3.org/1999/11/REC-xslt-19991116-errata.  
   
 ## <a name="custom-defined-implementation-behaviors"></a>Comportements d'implémentation personnalisés  
  Certains comportements sont spécifiques à l'implémentation de la classe <xref:System.Xml.Xsl.XslTransform>. Cette section présente l'implémentation propre au fournisseur de `xsl:sort` et les fonctionnalités facultatives prises en charge par la classe <xref:System.Xml.Xsl.XslTransform>.  

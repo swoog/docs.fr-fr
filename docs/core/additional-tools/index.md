@@ -5,12 +5,12 @@ author: mlacouture
 ms.author: johalex
 ms.date: 01/19/2018
 ms.custom: mvc
-ms.openlocfilehash: a842224a76962a9d6db820149a75f1255204e9b7
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 5f744fd63116ac453a2a7db8eb94f12738c95f21
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728561"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36315197"
 ---
 # <a name="net-core-additional-tools"></a>Outils .NET Core supplémentaires
 
@@ -18,7 +18,7 @@ Cette section dresse une liste des outils qui prennent en charge et étendent le
 
 ## <a name="wcf-web-service-reference-toolwcf-web-service-reference-guidemd"></a>[Outil WCF Web Service Reference](wcf-web-service-reference-guide.md)
 
-WCF (Windows Communication Foundation) Web Service Reference est un fournisseur de services connectés Visual Studio qui a fait son apparition dans [Visual Studio 2017 version 15.5](https://www.visualstudio.com/news/releasenotes/vs2017-relnotes#WCFTools). Cet outil récupère les métadonnées d’un service web dans la solution actuelle sur un emplacement réseau ou dans un fichier WSDL, puis génère un fichier source compatible avec .NET Core, en définissant une classe proxy WCF avec des méthodes que vous pouvez utiliser pour accéder aux opérations du service web.
+WCF (Windows Communication Foundation) Web Service Reference est un fournisseur de services connectés Visual Studio qui a fait son apparition dans [Visual Studio 2017 version 15.5](https://visualstudio.microsoft.com/news/releasenotes/vs2017-relnotes#WCFTools). Cet outil récupère les métadonnées d’un service web dans la solution actuelle sur un emplacement réseau ou dans un fichier WSDL, puis génère un fichier source compatible avec .NET Core, en définissant une classe proxy WCF avec des méthodes que vous pouvez utiliser pour accéder aux opérations du service web.
 
 ## <a name="wcf-dotnet-svcutil-tooldotnet-svcutil-guidemd"></a>[Outil dotnet-svcutil WCF](dotnet-svcutil-guide.md)
 
