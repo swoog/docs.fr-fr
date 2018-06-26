@@ -3,12 +3,13 @@ title: Commande dotnet build - Interface CLI .NET Core
 description: La commande dotnet build permet de générer un projet et l’ensemble de ses dépendances.
 author: mairaw
 ms.author: mairaw
-ms.date: 03/10/2018
-ms.openlocfilehash: 4fc93e013c271fdf856f5c73affffd3880d0dbea
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/25/2018
+ms.openlocfilehash: 6b0b7bc11b560d8632b38f1dfa4e7eb3ce6c54d2
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34697129"
 ---
 # <a name="dotnet-build"></a>dotnet-build
 
@@ -40,13 +41,13 @@ La commande `dotnet build` génère le projet et ses dépendances dans un ensemb
 
 Si le projet a des dépendances tierces, comme des bibliothèques NuGet, elles sont résolues à partir du cache NuGet et ne sont pas disponibles avec la sortie générée du projet. Par conséquent, le produit de `dotnet build` ne peut pas être transféré en l’état vers un autre ordinateur pour exécution. Ce comportement contraste avec celui du .NET Framework dans lequel la génération d’un projet exécutable (une application) produit une sortie exécutable sur n’importe quel ordinateur où le .NET Framework est installé. Pour obtenir un résultat similaire dans .NET Core, vous devez utiliser la commande [dotnet publish](dotnet-publish.md). Pour plus d’informations, consultez [Déploiement d’applications .NET Core](../deploying/index.md).
 
-La génération requiert le fichier *project.assets.json* qui répertorie les dépendances de votre application. Le fichier est créé quand la commande [`dotnet restore`](dotnet-restore.md) est exécutée. Si le fichier de ressources est absent, les outils ne peuvent pas résoudre les assemblys de référence, ce qui entraîne des erreurs. Avec le SDK .NET Core 1.x, vous deviez explicitement exécuter `dotnet restore` avant d’exécuter `dotnet build`. À compter du SDK .NET Core 2.0, `dotnet restore` s’exécute implicitement quand vous exécutez `dotnet build`. Si vous souhaitez désactiver la restauration implicite au moment d’exécuter la commande de génération, vous pouvez passer l’option `--no-restore`.
+La génération requiert le fichier *project.assets.json* qui répertorie les dépendances de votre application. Le fichier est créé quand la commande [`dotnet restore`](dotnet-restore.md) est exécutée. Si le fichier de ressources est absent, les outils ne peuvent pas résoudre les assemblys de référence, ce qui entraîne des erreurs. Avec le SDK .NET Core 1.x, vous deviez explicitement exécuter `dotnet restore` avant d’exécuter `dotnet build`. À compter du SDK .NET Core 2.0, `dotnet restore` s’exécute implicitement quand vous exécutez `dotnet build`. Si vous souhaitez désactiver la restauration implicite au moment d’exécuter la commande de génération, vous pouvez passer l’option `--no-restore`.
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
-La commande `dotnet build` utilise MSBuild pour générer le projet. Elle prend donc en charge les builds parallèles et les builds incrémentielles. Pour plus d’informations, consultez [Builds incrémentielles](/visualstudio/msbuild/incremental-builds).
+La commande `dotnet build` utilise MSBuild pour générer le projet. Elle prend donc en charge les builds parallèles et les builds incrémentielles. Pour plus d’informations, consultez l’article [Incremental Builds (Générations incrémentielles)](/visualstudio/msbuild/incremental-builds) .
 
-En plus de ses options, la commande `dotnet build` accepte des options MSBuild, comme `/p` pour définir des propriétés ou `/l` pour définir un enregistreur d’événements. En savoir plus sur ces options dans les [Informations de référence sur la ligne de commande MSBuild](/visualstudio/msbuild/msbuild-command-line-reference). 
+En plus de ses options, la commande `dotnet build` accepte des options MSBuild, comme `/p` pour définir des propriétés ou `/l` pour définir un enregistreur d’événements. Pour plus d’informations sur ces options, consultez [Informations de référence sur la ligne de commande MSBuild](/visualstudio/msbuild/msbuild-command-line-reference).
 
 La possibilité d’exécuter le projet ou non est déterminée par la propriété `<OutputType>` dans le fichier projet. L’exemple suivant illustre un projet qui génère du code exécutable :
 
@@ -56,7 +57,7 @@ La possibilité d’exécuter le projet ou non est déterminée par la propriét
 </PropertyGroup>
 ```
 
-Pour générer une bibliothèque, omettez la propriété `<OutputType>`. La principale différence dans la sortie générée est que la DLL de langage intermédiaire pour une bibliothèque ne contient pas de points d’entrée et ne peut pas être exécutée. 
+Pour générer une bibliothèque, omettez la propriété `<OutputType>`. La principale différence dans la sortie générée est que la DLL de langage intermédiaire pour une bibliothèque ne contient pas de points d’entrée et ne peut pas être exécutée.
 
 ## <a name="arguments"></a>Arguments
 
@@ -78,7 +79,7 @@ Compile pour un [framework](../../standard/frameworks.md) spécifique. Le framew
 
 `--force`
 
- Force la résolution de toutes les dépendances même si la dernière restauration a réussi. Cette opération équivaut à supprimer le fichier *project.assets.json*.
+Force la résolution de toutes les dépendances même si la dernière restauration a réussi. Définir cet indicateur revient à supprimer le fichier *project.assets.json*.
 
 `-h|--help`
 
@@ -86,15 +87,15 @@ Affiche une aide brève pour la commande.
 
 `--no-dependencies`
 
-Ignore les références entre projets (P2P) et génère uniquement le projet racine spécifié pour la génération.
+Ignore les références entre projets (P2P) et génère uniquement le projet racine spécifié.
 
 `--no-incremental`
 
-Marque la build comme unsafe pour la génération incrémentielle. Cela désactive la compilation incrémentielle et force une régénération du graphique de dépendance du projet.
+Marque la build comme unsafe pour la génération incrémentielle. Cet indicateur désactive la compilation incrémentielle et force une regénération du graphique de dépendance du projet.
 
 `--no-restore`
 
-Ne pas effectuer de restauration implicite pendant la génération.
+N’exécute pas de restauration implicite pendant la génération.
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
@@ -128,11 +129,11 @@ Affiche une aide brève pour la commande.
 
 `--no-dependencies`
 
-Ignore les références entre projets (P2P) et génère uniquement le projet racine spécifié pour la génération.
+Ignore les références entre projets (P2P) et génère uniquement le projet racine spécifié.
 
 `--no-incremental`
 
-Marque la build comme unsafe pour la génération incrémentielle. Cela désactive la compilation incrémentielle et force une régénération du graphique de dépendance du projet.
+Marque la build comme unsafe pour la génération incrémentielle. Cet indicateur désactive la compilation incrémentielle et force une regénération du graphique de dépendance du projet.
 
 `-o|--output <OUTPUT_DIRECTORY>`
 

@@ -3,12 +3,13 @@ title: Commande dotnet store
 description: La commande « dotnet store » stocke les assemblys spécifiés dans le magasin de packages de runtime.
 author: bleroy
 ms.author: mairaw
-ms.date: 08/14/2017
-ms.openlocfilehash: f819444c92afde0e1a5349a58918f993868a0143
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/29/2018
+ms.openlocfilehash: 54654522207157f7d49bb86223b7986acccf51ee
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696323"
 ---
 # <a name="dotnet-store"></a>dotnet store
 
@@ -34,7 +35,7 @@ Spécifie le [framework cible](../../standard/frameworks.md).
 
 `-m|--manifest <PATH_TO_MANIFEST_FILE>`
 
-Le *fichier manifeste du magasin de packages* est un fichier XML qui contient la liste des packages à stocker. Le format du fichier manifeste est compatible avec le format *csproj*. Ainsi, vous pouvez utiliser un fichier projet *csproj* qui référence les packages souhaités avec l’option `-m|--manifest` pour stocker des assemblys dans le magasin de packages de runtime. Pour spécifier plusieurs fichiers manifeste, répétez l’option et le chemin pour chaque fichier : `--manifest packages1.csproj --manifest packages2.csproj`.
+Le *fichier manifeste du magasin de packages* est un fichier XML qui contient la liste des packages à stocker. Le format du fichier manifeste est compatible avec celui du projet de style SDK. Ainsi, vous pouvez utiliser un fichier projet qui référence les packages souhaités avec l’option `-m|--manifest` pour stocker des assemblys dans le magasin de packages de runtime. Pour spécifier plusieurs fichiers manifeste, répétez l’option et le chemin pour chaque fichier. Par exemple : `--manifest packages1.csproj --manifest packages2.csproj`.
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
@@ -82,4 +83,4 @@ Stocker les packages spécifiés dans le fichier projet *packages.csproj* sans o
 
 ## <a name="see-also"></a>Voir aussi
 
-[Magasin de packages de runtime](../deploying/runtime-store.md)   
+[Magasin de packages de runtime](../deploying/runtime-store.md)

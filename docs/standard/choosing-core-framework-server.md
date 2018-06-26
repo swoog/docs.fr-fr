@@ -4,11 +4,12 @@ description: Guide sur l’implémentation de .NET à envisager pour générer u
 author: cartermp
 ms.author: mairaw
 ms.date: 03/15/2018
-ms.openlocfilehash: 5626c6c1687fe0b8d558df8772fc69c32981787c
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: 39d07417a3e901c68dbbd8e9e217fb716edec881
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34728717"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Choix entre .NET Core et .NET Framework pour les applications serveur
 
@@ -65,7 +66,7 @@ Pour installer des applications avec des dépendances sur différentes versions 
 
 ## <a name="when-to-choose-net-framework"></a>Quand choisir .NET Framework
 
-.NET Core offre des avantages significatifs pour les nouvelles applications et les nouveaux modèles d’application. Toutefois, le .NET Framework continue d’être le choix naturel pour de nombreux scénarios existants et en tant que tel. Le .NET Framework n’est pas remplacé par .NET Core pour toutes les applications serveur.
+.NET Core offre des avantages significatifs pour les nouvelles applications et les nouveaux modèles d’application. Toutefois, le .NET Framework est toujours le choix naturel pour de nombreux scénarios existants, et par conséquent il n’est pas remplacé par .NET Core pour toutes les applications serveur.
 
 ### <a name="current-net-framework-applications"></a>Applications .NET Framework actuelles
 

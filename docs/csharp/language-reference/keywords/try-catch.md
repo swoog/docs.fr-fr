@@ -10,11 +10,12 @@ helpviewer_keywords:
 - catch keyword [C#]
 - try-catch statement [C#]
 ms.assetid: cb5503c7-bfa1-4610-8fc2-ddcd2e84c438
-ms.openlocfilehash: f917d662366dc8ff540cdee6222199fe8f5606c9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d6dfdf14b518582388e655ec5616904928dfd8b5
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696437"
 ---
 # <a name="try-catch-c-reference"></a>try-catch (référence C#)
 L'instruction try-catch consiste en un bloc `try` suivi d'une ou plusieurs clauses `catch` qui spécifient des gestionnaires pour différentes exceptions.  
@@ -42,7 +43,7 @@ catch (InvalidCastException e)
   
  Il est possible d'utiliser plusieurs clauses `catch` spécifiques dans la même instruction try-catch. Dans ce cas, l'ordre des clauses `catch` est important car les clauses `catch` sont examinées dans l'ordre. Interceptez les exceptions plus spécifiques avant les moins spécifiques. Le compilateur produit une erreur si vous organisez vos blocs catch de sorte qu'un bloc ultérieur ne puisse jamais être atteint.  
   
- L'utilisation d'arguments `catch` constitue un moyen de filtrer les exceptions à gérer.  Vous pouvez également utiliser une expression de prédicat qui examine l'exception de plus près pour déterminer si elle doit être gérée.  Si l'expression de prédicat retourne la valeur false, alors la recherche d'un gestionnaire se poursuit.  
+ L'utilisation d'arguments `catch` constitue un moyen de filtrer les exceptions à gérer.  Vous pouvez également utiliser un filtre d’exception qui examine l’exception pour déterminer si elle doit être prise en charge.  Si le filtre d’exception retourne la valeur false, la recherche d’un gestionnaire se poursuit.  
   
 ```csharp  
 catch (ArgumentException e) when (e.ParamName == "…")  
@@ -50,7 +51,7 @@ catch (ArgumentException e) when (e.ParamName == "…")
 }  
 ```  
   
- L'utilisation de filtres d'exceptions est préférable à une interception et une nouvelle levée (voir explication ci-dessous), car les filtres laissent la pile intact.  Si un gestionnaire ultérieur vide la pile, vous pouvez déterminer d'où l'exception provient à l'origine, au lieu de déterminer simplement le dernier emplacement auquel elle a été levée.  Une utilisation courante des expressions de filtre d'exception est liée à la journalisation.  Vous pouvez créer une fonction de prédicat qui retourne toujours false et dont la sortie est journalisée ; vous pouvez journaliser des exceptions au fur et à mesure sans avoir à les gérer ni à les lever de nouveau.  
+ L'utilisation de filtres d'exceptions est préférable à une interception et une nouvelle levée (voir explication ci-dessous), car les filtres laissent la pile intact.  Si un gestionnaire ultérieur vide la pile, vous pouvez déterminer d'où l'exception provient à l'origine, au lieu de déterminer simplement le dernier emplacement auquel elle a été levée.  Une utilisation courante des expressions de filtre d'exception est liée à la journalisation.  Vous pouvez créer un filtre qui retourne toujours false et dont la sortie est journalisée. Vous pouvez journaliser les exceptions au fur et à mesure sans avoir à les prendre en charge et à les lever de nouveau.  
   
  Une instruction [throw](../../../csharp/language-reference/keywords/throw.md) peut être utilisée dans un bloc `catch` pour lever une nouvelle fois l’exception interceptée par l’instruction `catch`. L'exemple suivant extrait des informations sources d'une exception <xref:System.IO.IOException>, puis lève l'exception à la méthode parente.  
   
@@ -92,9 +93,19 @@ catch (InvalidCastException e)
     {  
         // Take some action.  
     }  
- }  
+}  
 ```  
-  
+
+> [!NOTE]
+> Il est également possible d’utiliser un filtre d’exception pour obtenir un résultat similaire d’une manière souvent plus claire (sans modifier la pile, comme expliqué précédemment dans ce document). L’exemple suivant a un comportement similaire à l’exemple précédent pour les appelants. La fonction lève et retourne `InvalidCastException` à l’appelant quand `e.Data` a une valeur `null`.
+> 
+> ```csharp
+> catch (InvalidCastException e) when (e.Data != null)   
+> {  
+>     // Take some action.  
+> }
+> ```   
+
  Dans un bloc `try`, initialisez uniquement les variables qui y sont déclarées. Sinon, une exception peut se produire avant la fin de l'exécution du bloc. Par exemple, dans l'exemple de code suivant, la variable `n` est initialisée à l'intérieur du bloc `try`. Une tentative d'utilisation de cette variable en dehors du bloc `try` dans l'instruction `Write(n)` génère une erreur du compilateur.  
   
 ```csharp  

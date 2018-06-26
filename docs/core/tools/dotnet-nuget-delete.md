@@ -3,12 +3,13 @@ title: Commande dotnet nuget delete - Interface CLI .NET Core
 description: La commande nuget-dotnet-delete supprime ou retire un package du serveur.
 author: karann-msft
 ms.author: mairaw
-ms.date: 08/14/2017
-ms.openlocfilehash: 639ade54bfed5eb2de89bdb3b7f451393b4be187
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 06/01/2018
+ms.openlocfilehash: 1b58136d0bc04947f0a5baba320e5e6b3e45e2f1
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34728412"
 ---
 # <a name="dotnet-nuget-delete"></a>dotnet nuget delete
 
@@ -20,7 +21,25 @@ ms.lasthandoff: 05/04/2018
 
 ## <a name="synopsis"></a>Résumé
 
-`dotnet nuget delete [<PACKAGE_NAME> <PACKAGE_VERSION>] [-s|--source] [--non-interactive] [-k|--api-key] [--force-english-output] [-h|--help]`
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+```
+dotnet nuget delete [<PACKAGE_NAME> <PACKAGE_VERSION>] [--force-english-output] [-k|--api-key] [--no-service-endpoint]
+    [--non-interactive] [-s|--source]
+dotnet nuget delete [-h|--help]
+```
+# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+```
+dotnet nuget delete [<PACKAGE_NAME> <PACKAGE_VERSION>] [--force-english-output] [-k|--api-key] [--non-interactive]
+    [-s|--source]
+dotnet nuget delete [-h|--help]
+```
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+```
+dotnet nuget delete [<PACKAGE_NAME> <PACKAGE_VERSION>] [--force-english-output] [-k|--api-key] [--non-interactive]
+    [-s|--source]
+dotnet nuget delete [-h|--help]
+```
+---
 
 ## <a name="description"></a>Description
 
@@ -30,7 +49,7 @@ La commande `dotnet nuget delete` supprime ou retire un package du serveur. Pour
 
 `PACKAGE_NAME`
 
-Package à supprimer.
+Nom/ID du package à supprimer.
 
 `PACKAGE_VERSION`
 
@@ -38,31 +57,81 @@ Version du package à supprimer.
 
 ## <a name="options"></a>Options
 
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+
+`--force-english-output`
+
+ Force l’application à s’exécuter avec les paramètres régionaux Anglais (culture indifférente).
+
 `-h|--help`
 
 Affiche une aide brève pour la commande.
-
-`-s|--source <SOURCE>`
-
-Spécifie l’URL du serveur. Les URL prises en charge pour nuget.org incluent `http://www.nuget.org`, `http://www.nuget.org/api/v3` et `http://www.nuget.org/api/v2/package`. Pour les flux privés, remplacez le nom d’hôte (par exemple, `%hostname%/api/v3`).
-
-`--non-interactive`
-
-Ne demande pas de saisie ou de confirmation de la part de l’utilisateur.
 
 `-k|--api-key <API_KEY>`
 
 Clé d’API pour le serveur.
 
+`--no-service-endpoint` N’ajoute pas « api/v2/package » à l’URL source.
+
+`--non-interactive`
+
+Ne demande pas de saisie ou de confirmation de la part de l’utilisateur.
+
+`-s|--source <SOURCE>`
+
+Spécifie l’URL du serveur. Les URL prises en charge pour nuget.org incluent `http://www.nuget.org`, `http://www.nuget.org/api/v3` et `http://www.nuget.org/api/v2/package`. Pour les flux privés, remplacez le nom d’hôte (par exemple, `%hostname%/api/v3`).
+
+# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+
 `--force-english-output`
 
-Oblige la sortie de la ligne de commande à être en anglais.
+ Force l’application à s’exécuter avec les paramètres régionaux Anglais (culture indifférente).
+
+`-h|--help`
+
+Affiche une aide brève pour la commande.
+
+`-k|--api-key <API_KEY>`
+
+Clé d’API pour le serveur.
+
+`--non-interactive`
+
+Ne demande pas de saisie ou de confirmation de la part de l’utilisateur.
+
+`-s|--source <SOURCE>`
+
+Spécifie l’URL du serveur. Les URL prises en charge pour nuget.org incluent `http://www.nuget.org`, `http://www.nuget.org/api/v3` et `http://www.nuget.org/api/v2/package`. Pour les flux privés, remplacez le nom d’hôte (par exemple, `%hostname%/api/v3`).
+
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
+`--force-english-output`
+
+ Force l’application à s’exécuter avec les paramètres régionaux Anglais (culture indifférente).
+
+`-h|--help`
+
+Affiche une aide brève pour la commande.
+
+`-k|--api-key <API_KEY>`
+
+Clé d’API pour le serveur.
+
+`--non-interactive`
+
+Ne demande pas de saisie ou de confirmation de la part de l’utilisateur.
+
+`-s|--source <SOURCE>`
+
+Spécifie l’URL du serveur. Les URL prises en charge pour nuget.org incluent `http://www.nuget.org`, `http://www.nuget.org/api/v3` et `http://www.nuget.org/api/v2/package`. Pour les flux privés, remplacez le nom d’hôte (par exemple, `%hostname%/api/v3`).
+
+---
 
 ## <a name="examples"></a>Exemples
 
 Supprime la version 1.0 du package `Microsoft.AspNetCore.Mvc` :
 
-`dotnet nuget delete Microsoft.AspNetCore.Mvc 1.0` 
+`dotnet nuget delete Microsoft.AspNetCore.Mvc 1.0`
 
 Supprime la version 1.0 du package `Microsoft.AspNetCore.Mvc` sans inviter l’utilisateur à fournir ses informations d’identification ou d’autres données :
 

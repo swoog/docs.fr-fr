@@ -4,11 +4,12 @@ description: 'Architecture des microservices .NET pour les applications .NET en 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 424408ca095eadeda33690277dcf38bac923e29f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e6af18b1154759677c7749632eace30bad752591
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34697194"
 ---
 # <a name="domain-events-design-and-implementation"></a>Événements de domaine : conception et implémentation
 
@@ -151,7 +152,7 @@ public abstract class Entity
 
 Lorsque vous souhaitez déclencher un événement,il vous suffit de l’ajouter à la collection d’événements à partir du code, au niveau de n’importe quelle méthode de l’entité d’agrégat racine.
 
-Le code suivant, qui fait partie de la [commande agregate-root d’eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Order.cs), montre un exemple :
+Le code suivant, qui fait partie de la [Commande d’agrégat racine d’eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Order.cs), montre un exemple :
 
 ```csharp
 var orderStartedDomainEvent = new OrderStartedDomainEvent(this, //Order object
@@ -339,7 +340,7 @@ Comme nous l’avons vu, les événements de domaine permettent d’implémenter
 -   **Jimmy Bogard. A better domain events pattern**
     [*https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/*](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/)
 
--   **Vaughn Vernon. Effective Aggregate Design Part II: Making Aggregates Work Together**
+-   **Vaughn Vernon. Effective Aggregate Design - Part II: Making Aggregates Work Together**
     [*http://dddcommunity.org/wp-content/uploads/files/pdf\_articles/Vernon\_2011\_2.pdf*](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
 
 -   **Jimmy Bogard. Strengthening your domain: Domain Events**

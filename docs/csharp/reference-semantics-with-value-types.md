@@ -3,26 +3,19 @@ title: Sémantique de référence avec les types valeur
 description: Comprendre les fonctionnalités de langage conçues pour minimiser les structures de copie en toute sécurité
 ms.date: 11/10/2017
 ms.custom: mvc
-ms.openlocfilehash: 3c53a426a6adb37f5091e4ad61835fef6c9f7729
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0646a7fbc01ed76883fb6b16ce04006049ef054a
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34566278"
 ---
 # <a name="reference-semantics-with-value-types"></a>Sémantique de référence avec les types valeur
 
 L’avantage des types valeur est qu’ils permettent souvent d’éviter les allocations de tas.
 Mais l’inconvénient, c’est qu’ils sont copiés par valeur. Ce compromis complique l’optimisation des algorithmes qui opèrent sur de grandes quantités de données. Les nouvelles fonctionnalités de langage dans C# 7.2 fournissent des mécanismes qui permettent la sémantique de passage par référence avec des types valeur. Utilisez ces fonctionnalités judicieusement pour minimiser à la fois les allocations et les opérations de copie. Cet article explore ces nouvelles fonctionnalités.
 
-Une grande partie de l’exemple de code de cet article illustre les fonctionnalités ajoutées dans C# 7.2. Pour pouvoir utiliser ces fonctionnalités, vous devez configurer votre projet de telle sorte qu’il utilise C# 7.2 ou ultérieur. Vous pouvez utiliser Visual Studio pour le sélectionner. Pour chaque projet, sélectionnez **Projet** dans le menu, puis **Propriétés**. Sélectionnez l’onglet **Build**, puis cliquez sur **Avancé**. À partir de là, configurez la version du langage. Choisissez « 7.2 », ou « dernière ».  Sinon, vous pouvez modifier le fichier *csproj* et ajouter le nœud suivant :
-
-```XML
-  <PropertyGroup>
-    <LangVersion>7.2</LangVersion>
-  </PropertyGroup>
-```
-
-Vous pouvez utiliser « 7.2 » ou « dernière » comme valeur.
+Une grande partie de l’exemple de code de cet article illustre les fonctionnalités ajoutées dans C# 7.2. Pour pouvoir utiliser ces fonctionnalités, vous devez configurer votre projet de telle sorte qu’il utilise C# 7.2 ou ultérieur. Pour plus d’informations sur la définition de la version du langage, consultez [Configurer la version du langage](language-reference/configure-language-version.md).
 
 ## <a name="passing-arguments-by-readonly-reference"></a>Passage d’arguments par référence en lecture seule
 

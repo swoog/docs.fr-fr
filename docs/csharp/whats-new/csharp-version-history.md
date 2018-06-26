@@ -3,11 +3,12 @@ title: Histoire du langage C# | Guide C#
 description: À quoi ressemblait le langage dans ses versions antérieures et comment a-t-il évolué depuis ?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 1c7b91a3a5c77059ca8d7acef95252b4a3557b28
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e659f2438e9785a02f7016e49b78015ad46b9133
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696973"
 ---
 # <a name="the-history-of-c"></a>Histoire du langage C# #
 
@@ -98,7 +99,7 @@ Avec les versions 3.0 et 5.0, C# avait ajouté d’impressionnantes fonctionnal
 - [Propagateur Null](https://davefancher.com/2014/08/14/c-6-0-null-propagation-operator/)
 - [Interpolation de chaîne](../language-reference/tokens/interpolated.md)
 - [Opérateur nameof](https://stackoverflow.com/questions/31695900/what-is-the-purpose-of-nameof)
-- [Initialiseur de dictionnaire](../programming-guide/classes-and-structs/how-to-initialize-a-dictionary-with-a-collection-initializer.md)
+- [Initialiseurs d’index](csharp-6.md#index-initializers)
 
 Chacune de ces fonctionnalités est intéressante individuellement. Mais si vous les examinez dans leur ensemble, un modèle intéressant se dégage. Dans cette version, C# a éliminé le texte réutilisable du langage pour rendre le code plus laconique et plus lisible. Ainsi, pour les amateurs de code propre et simple, cette version du langage était une énorme victoire.
 

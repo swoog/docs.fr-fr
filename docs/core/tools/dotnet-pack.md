@@ -3,12 +3,13 @@ title: Commande dotnet pack - Interface CLI .NET Core
 description: La commande dotnet pack crée des packages NuGet pour votre projet .NET Core.
 author: mairaw
 ms.author: mairaw
-ms.date: 03/10/2018
-ms.openlocfilehash: 6e6136e22c4bac201cfa0e4af321329432c04936
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/29/2018
+ms.openlocfilehash: 8c2569ec7598b21fe9b673176143d0e54b9eb065
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696817"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -21,16 +22,15 @@ ms.lasthandoff: 05/04/2018
 ## <a name="synopsis"></a>Résumé
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
-
 ```
 dotnet pack [<PROJECT>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--no-build] [--no-dependencies]
     [--no-restore] [-o|--output] [--runtime] [-s|--serviceable] [-v|--verbosity] [--version-suffix]
 dotnet pack [-h|--help]
 ```
-
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 ```
-dotnet pack [<PROJECT>] [-c|--configuration] [--include-source] [--include-symbols] [--no-build] [-o|--output] [-s|--serviceable] [-v|--verbosity] [--version-suffix]
+dotnet pack [<PROJECT>] [-c|--configuration] [--include-source] [--include-symbols] [--no-build] [-o|--output]
+    [-s|--serviceable] [-v|--verbosity] [--version-suffix]
 dotnet pack [-h|--help]
 ```
 ---
@@ -41,7 +41,7 @@ La commande `dotnet pack` génère le projet et crée les packages NuGet. Le ré
 
 Les dépendances NuGet du projet empaqueté sont ajoutées dans le fichier  *.nuspec*, pour pouvoir être correctement résolues lors de l’installation du package. Les références entre projets ne sont pas empaquetées à l’intérieur du projet. Actuellement, vous devez disposer d’un package par projet si vous avez des dépendances entre projets.
 
-Par défaut, `dotnet pack` génère d’abord le projet. Pour éviter ce comportement, passez l’option `--no-build`. Elle est souvent utile dans les scénarios de build d’intégration continue, pour lesquels vous savez que le code a déjà été créé.
+Par défaut, `dotnet pack` génère d’abord le projet. Pour éviter ce comportement, passez l’option `--no-build`. Cette option s’avère souvent utile dans les scénarios de build d’intégration continue (CI), pour lesquels vous savez que le code a déjà été créé.
 
 Vous pouvez fournir des propriétés MSBuild à la commande `dotnet pack` pour le processus de compression. Pour plus d’informations, consultez [Propriétés des métadonnées NuGet](csproj.md#nuget-metadata-properties) et [Informations de référence sur la ligne de commande MSBuild](/visualstudio/msbuild/msbuild-command-line-reference). La section [Exemples](#examples) montre comment utiliser le commutateur MSBuild /p pour deux scénarios différents.
 
@@ -61,7 +61,9 @@ Projet à empaqueter. Il s’agit du chemin d’accès d’un [fichier csproj](c
 
 Définit la configuration de build. La valeur par défaut est `Debug`.
 
-`--force` : force la résolution de toutes les dépendances même si la dernière restauration a réussi. Cette opération équivaut à supprimer le fichier *project.assets.json*.
+`--force`
+
+Force la résolution de toutes les dépendances même si la dernière restauration a réussi. Définir cet indicateur revient à supprimer le fichier *project.assets.json*.
 
 `-h|--help`
 
@@ -77,7 +79,7 @@ Génère les symboles `nupkg`.
 
 `--no-build`
 
-Ne génère pas le projet avant de créer le package.
+Ne génère pas le projet avant de créer le package. L’indicateur `--no-restore` est également défini implicitement.
 
 `--no-dependencies`
 
@@ -91,7 +93,7 @@ N’effectue pas de restauration implicite à l’exécution de la commande.
 
 Place les packages générés dans le répertoire spécifié.
 
-`-r|--runtime <RUNTIME_IDENTIFIER>`
+`--runtime <RUNTIME_IDENTIFIER>`
 
 Spécifie le runtime cible pour lequel restaurer les packages. Pour connaître les identificateurs de runtime, consultez le [catalogue des identificateurs de runtime](../rid-catalog.md).
 
