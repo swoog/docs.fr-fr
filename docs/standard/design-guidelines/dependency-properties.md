@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 212cfb1e-cec4-4047-94a6-47209b387f6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 039015f895a491d8709815d6aff52eb6139d779f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7398202cc265fbd55b9bf0b5a53367dedcab57b0
+ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576114"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36948483"
 ---
 # <a name="dependency-properties"></a>Propriétés de dépendance
 Une propriété de dépendance (DP) est une propriété normale qui stocke sa valeur dans une banque de propriétés au lieu de stocker dans une variable de type (champ), par exemple.  
@@ -43,7 +43,7 @@ Une propriété de dépendance (DP) est une propriété normale qui stocke sa va
   
  Un exemple classique d’une propriété jointe est le <xref:System.Windows.Controls.Grid.Column%2A?displayProperty=nameWithType> propriété. La propriété représente la position de colonne pas de (la grille) du bouton, mais elle s’applique uniquement si le bouton est contenu dans une grille, et par conséquent, il est « attaché » aux boutons de grilles.  
   
-```  
+```xaml
 <Grid>  
     <Grid.ColumnDefinitions>  
         <ColumnDefinition />  
@@ -57,7 +57,7 @@ Une propriété de dépendance (DP) est une propriété normale qui stocke sa va
   
  La définition d’une propriété jointe ressemble principalement similaire à celle d’une propriété de dépendance standard, à ceci près que les accesseurs sont représentées par les méthodes Get et Set statiques :  
   
-```  
+```csharp
 public class Grid {  
   
     public static int GetColumn(DependencyObject obj) {  
