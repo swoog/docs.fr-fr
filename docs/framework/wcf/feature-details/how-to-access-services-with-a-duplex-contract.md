@@ -1,5 +1,5 @@
 ---
-title: 'Comment : accéder aux services ayant un contrat duplex'
+title: 'Comment : accéder aux services avec un contrat duplex'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,90 +7,90 @@ dev_langs:
 helpviewer_keywords:
 - duplex contracts [WCF]
 ms.assetid: 746a9d64-f21c-426c-b85d-972e916ec6c5
-ms.openlocfilehash: c0022e6ce3a63c1f497eeee82ca959cec1046cec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6675da079b343b1b80477c65260ee8a1f44df72a
+ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490150"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37027900"
 ---
-# <a name="how-to-access-services-with-a-duplex-contract"></a>Comment : accéder aux services ayant un contrat duplex
-Une fonctionnalité de Windows Communication Foundation (WCF) est la possibilité de créer un service qui utilise un modèle de messagerie duplex. Ce modèle permet à un service de communiquer avec un client via un rappel. Cette rubrique décrit les étapes pour créer un client WCF dans une classe de client qui implémente l’interface de rappel.  
-  
- Une liaison double expose l’adresse IP du client au service. Ce client doit utiliser un mode de sécurité afin de garantir sa connexion à un service fiable.  
-  
- Pour obtenir un didacticiel sur la création d’un service WCF de base et un client, consultez [Getting Started Tutorial](../../../../docs/framework/wcf/getting-started-tutorial.md).  
-  
-### <a name="to-access-a-duplex-service"></a>Pour accéder à un service duplex  
-  
-1.  Créez un service qui contient deux interfaces. La première interface est pour le service, la deuxième est pour le rappel. Pour plus d’informations sur la création d’un service en duplex, consultez [Comment : créer un contrat Duplex](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md).  
-  
-2.  Exécutez le service.  
-  
-3.  Utilisez le [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) pour générer des contrats (interfaces) pour le client. Pour plus d’informations sur la procédure à suivre, consultez [Comment : créer un Client](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
-  
-4.  Implémentez l'interface de rappel dans la classe client, comme illustré dans l'exemple suivant.  
-  
-    ```csharp  
-    public class CallbackHandler : ICalculatorDuplexCallback  
-    {  
-        public void Result(double result)  
-        {  
-            Console.WriteLine("Result ({0})", result);  
-        }  
-        public void Equation(string equation)  
-        {  
-            Console.WriteLine("Equation({0})", equation);  
-        }  
-    }  
-    ```  
-  
-    ```vb  
-    Public Class CallbackHandler   
-    Implements ICalculatorDuplexCallback  
-       Public Sub Result (ByVal result As Double)  
-          Console.WriteLine("Result ({0})", result)  
-       End Sub  
-        Public Sub Equation(ByVal equation As String)  
-            Console.Writeline("Equation({0})", equation)  
-        End Sub  
-    End Class  
-    ```  
-  
-5.  Créez une instance de la classe <xref:System.ServiceModel.InstanceContext>. Le constructeur a besoin d'une instance de la classe client.  
-  
-    ```csharp  
-    InstanceContext site = new InstanceContext(new CallbackHandler());  
-    ```  
-  
-    ```vb  
-    Dim site As InstanceContext = New InstanceContext(new CallbackHandler())  
-    ```  
-  
-6.  Créez une instance du client WCF à l’aide du constructeur qui nécessite une <xref:System.ServiceModel.InstanceContext> objet. Le second paramètre du constructeur correspond au nom du point de terminaison trouvé dans le fichier de configuration.  
-  
-    ```csharp  
-    CalculatorDuplexClient wcfClient =   
-    new CalculatorDuplexClient(site, "default")  
-    ```  
-  
-    ```vb  
-    Dim wcfClient As New CalculatorDuplexClient(site, "default")  
-    ```  
-  
-7.  Appelez les méthodes du client WCF en fonction des besoins.  
-  
-## <a name="example"></a>Exemple  
- L'exemple de code suivant illustre comment créer une classe client qui accède à un contrat duplex.  
-  
- [!code-csharp[S_DuplexClients#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_duplexclients/cs/client.cs#1)]
- [!code-vb[S_DuplexClients#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_duplexclients/vb/client.vb#1)]  
-  
-## <a name="net-framework-security"></a>Sécurité .NET Framework  
-  
-## <a name="see-also"></a>Voir aussi  
- [Didacticiel Bien démarrer](../../../../docs/framework/wcf/getting-started-tutorial.md)  
- [Guide pratique pour créer un contrat duplex](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)  
- [Outil ServiceModel Metadata Utility (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
- [Guide pratique pour créer un client](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
- [Guide pratique pour utiliser la classe ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
+# <a name="how-to-access-services-with-a-duplex-contract"></a>Comment : accéder aux services avec un contrat duplex
+
+Une fonctionnalité de Windows Communication Foundation (WCF) est la possibilité de créer un service qui utilise un modèle de messagerie duplex. Ce modèle permet à un service de communiquer avec un client via un rappel. Cette rubrique décrit les étapes pour créer un client WCF dans une classe de client qui implémente l’interface de rappel.
+
+Une liaison double expose l’adresse IP du client au service. Ce client doit utiliser un mode de sécurité afin de garantir sa connexion à un service fiable.
+
+Pour obtenir un didacticiel sur la création d’un service WCF de base et un client, consultez [Getting Started Tutorial](../../../../docs/framework/wcf/getting-started-tutorial.md).
+
+## <a name="to-access-a-duplex-service"></a>Pour accéder à un service duplex
+
+1. Créez un service qui contient deux interfaces. La première interface est pour le service, la deuxième est pour le rappel. Pour plus d’informations sur la création d’un service en duplex, consultez [Comment : créer un contrat Duplex](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md).
+
+2. Exécutez le service.
+
+3. Utilisez le [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) pour générer des contrats (interfaces) pour le client. Pour plus d’informations sur la procédure à suivre, consultez [Comment : créer un Client](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).
+
+4. Implémentez l'interface de rappel dans la classe client, comme illustré dans l'exemple suivant.
+
+    ```csharp
+    public class CallbackHandler : ICalculatorDuplexCallback
+    {
+        public void Result(double result)
+        {
+            Console.WriteLine("Result ({0})", result);
+        }
+        public void Equation(string equation)
+        {
+            Console.WriteLine("Equation({0})", equation);
+        }
+    }
+    ```
+
+    ```vb
+    Public Class CallbackHandler
+    Implements ICalculatorDuplexCallback
+       Public Sub Result (ByVal result As Double)
+          Console.WriteLine("Result ({0})", result)
+       End Sub
+        Public Sub Equation(ByVal equation As String)
+            Console.Writeline("Equation({0})", equation)
+        End Sub
+    End Class
+    ```
+
+5. Créez une instance de la classe <xref:System.ServiceModel.InstanceContext>. Le constructeur a besoin d'une instance de la classe client.
+
+    ```csharp
+    InstanceContext site = new InstanceContext(new CallbackHandler());
+    ```
+
+    ```vb
+    Dim site As InstanceContext = New InstanceContext(new CallbackHandler())
+    ```
+
+6. Créez une instance du client WCF à l’aide du constructeur qui nécessite une <xref:System.ServiceModel.InstanceContext> objet. Le second paramètre du constructeur correspond au nom du point de terminaison trouvé dans le fichier de configuration.
+
+    ```csharp
+    CalculatorDuplexClient wcfClient = new CalculatorDuplexClient(site, "default");
+    ```
+
+    ```vb
+    Dim wcfClient As New CalculatorDuplexClient(site, "default")
+    ```
+
+7. Appelez les méthodes du client WCF en fonction des besoins.
+
+## <a name="example"></a>Exemple
+
+L'exemple de code suivant illustre comment créer une classe client qui accède à un contrat duplex.
+
+[!code-csharp[S_DuplexClients#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_duplexclients/cs/client.cs#1)]
+[!code-vb[S_DuplexClients#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_duplexclients/vb/client.vb#1)]
+
+## <a name="see-also"></a>Voir aussi
+
+[Didacticiel Bien démarrer](../../../../docs/framework/wcf/getting-started-tutorial.md)  
+[Guide pratique pour créer un contrat duplex](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)  
+[Outil ServiceModel Metadata Utility (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
+[Guide pratique pour créer un client](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
+[Guide pratique pour utiliser la classe ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)

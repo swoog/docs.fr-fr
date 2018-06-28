@@ -2,12 +2,12 @@
 title: Génération d'un client WCF à partir de métadonnées de service
 ms.date: 03/30/2017
 ms.assetid: 27f8f545-cc44-412a-b104-617e0781b803
-ms.openlocfilehash: bd349099213a7818555a910aac1949999a57a58f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 55034868b465b63dca3ca28238d81b348d9d6893
+ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494014"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37027926"
 ---
 # <a name="generating-a-wcf-client-from-service-metadata"></a>Génération d'un client WCF à partir de métadonnées de service
 Cette rubrique décrit comment utiliser plusieurs commutateurs dans Svcutil.exe pour générer des clients à partir de documents de métadonnées.  
@@ -20,7 +20,7 @@ Cette rubrique décrit comment utiliser plusieurs commutateurs dans Svcutil.exe 
   
 -   Requête DISCO (à l’aide de la [DiscoveryClientProtocol](http://go.microsoft.com/fwlink/?LinkId=94777) de services Web ASP.NET) à l’adresse fournie.  
   
- Svcutil.exe génère le client basé sur WSDL (Web Services Description Language) ou le fichier de stratégie reçu du service. Le nom d'utilisateur principal (UPN) est généré en concaténant le nom d'utilisateur avec "\@" et en ajoutant ensuite un nom de domaine qualifié complet (FQDN). Toutefois, pour les utilisateurs qui sont enregistrés sur Active Directory, ce format n’est pas valid et que l’UPN de l’outil génère provoque un échec de l’authentification Kerberos avec le message d’erreur suivant : **Échec de la tentative d’ouverture de session.** Pour résoudre ce problème, résolvez manuellement le fichier client que l'outil a généré.  
+ Svcutil.exe génère le client basé sur WSDL (Web Services Description Language) ou le fichier de stratégie reçu du service. Le nom d’utilisateur principal (UPN) est généré en concaténant le nom d’utilisateur avec «\@», puis en ajoutant un nom de domaine complet (FQDN). Toutefois, pour les utilisateurs qui sont enregistrés sur Active Directory, ce format n’est pas valid et que l’UPN de l’outil génère provoque un échec de l’authentification Kerberos avec le message d’erreur suivant : **Échec de la tentative d’ouverture de session.** Pour résoudre ce problème, résolvez manuellement le fichier client que l'outil a généré.  
   
 ```  
 svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>  
