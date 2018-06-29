@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Svcutil.exe
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
-ms.openlocfilehash: 011f37cbbfa3eacab92705cd8e4363b36a746cf1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1ca518e1d98e26755167ec6cf2f67ba9f7295679
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33509149"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071329"
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>Outil Service Model Metadata Tool (Svcutil.exe)
 L'outil Service Model Metadata Tool est utilisé pour générer un code de modèle de service à partir de documents de métadonnées, ainsi que des documents de métadonnées à partir d'un code de modèle de service.  
@@ -66,7 +66,7 @@ L'outil Service Model Metadata Tool est utilisé pour générer un code de modè
  Pour un service avec un point de terminaison BasicHttpContextbinding, Svcutil.exe génère un BasicHttpBinding avec l'attribut `allowCookies` affecté à la place de la valeur `true`. Les cookies sont utilisés pour le contexte sur le serveur. Pour gérer le contexte sur le client lorsque le service utiliser des cookies, vous pouvez modifier manuellement la configuration pour utiliser une liaison de contexte.  
   
 > [!CAUTION]
->  Svcutil.exe génère le client sur la base du WSDL ou du fichier de stratégie reçu du service. Le nom d'utilisateur principal (UPN) est généré en concaténant le nom d'utilisateur, « @ » et un nom de domaine complet. Toutefois, ce format n'est pas valide pour les utilisateurs Active Directory, et l'UPN généré par l'outil provoque une défaillance dans l'authentification Kerberos et l'affichage du message d'erreur suivant : La tentative d'ouverture de session a échoué. Pour remédier à cela, vous devez corriger manuellement le fichier client généré par cet outil.  
+>  Svcutil.exe génère le client sur la base du WSDL ou du fichier de stratégie reçu du service. Le nom d’utilisateur principal (UPN) est généré en concaténant le nom d’utilisateur, «\@» et un nom de domaine complet (FQDN). Toutefois, ce format n'est pas valide pour les utilisateurs Active Directory, et l'UPN généré par l'outil provoque une défaillance dans l'authentification Kerberos et l'affichage du message d'erreur suivant : La tentative d'ouverture de session a échoué. Pour remédier à cela, vous devez corriger manuellement le fichier client généré par cet outil.  
   
  `svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>`  
   

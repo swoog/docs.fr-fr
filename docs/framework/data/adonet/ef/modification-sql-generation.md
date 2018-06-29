@@ -2,12 +2,12 @@
 title: Génération SQL de modification
 ms.date: 03/30/2017
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
-ms.openlocfilehash: b7bb390fd4e221c70d5ed8da5873c557fcde3c98
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1d24775a7a50da1008a5097e1a2caf4e72c946e2
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766658"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071950"
 ---
 # <a name="modification-sql-generation"></a>Génération SQL de modification
 Cette section décrit la manière de développer un module de génération SQL de modification pour votre fournisseur (base de données conforme SQL:1999). Ce module doit traduire une arborescence de commandes de modification en instructions SQL INSERT, UPDATE ou DELETE appropriées.  
@@ -104,7 +104,7 @@ The elements of the list are specified as type DbModificationClause, which speci
 ## <a name="generating-an-insert-sql-command"></a>Génération d'une commande SQL d'insertion  
  Pour un DbInsertCommandTree donné dans le fournisseur d'exemples, la commande d'insertion générée suit l'un des deux modèles d'insertion ci-dessous.  
   
- Le premier modèle possède une commande pour effectuer l'insertion selon les valeurs de la liste de SetClauses et une instruction SELECT pour retourner les propriétés spécifiées dans la propriété Returning pour la ligne insérée, si la propriété Returning n'a pas la valeur null. L’élément de prédicat « @@ROWCOUNT > 0 » a la valeur true si une ligne a été insérée. L’élément de prédicat « keyMemberI = keyValueI &#124; scope_identity() » prend la forme « keyMemberI = scope_identity() » uniquement si Keymemberi est une clé générée par le magasin, parce que scope_identity() retourne la dernière valeur identity insérée dans une (identité) colonne générée par le magasin).  
+ Le premier modèle possède une commande pour effectuer l'insertion selon les valeurs de la liste de SetClauses et une instruction SELECT pour retourner les propriétés spécifiées dans la propriété Returning pour la ligne insérée, si la propriété Returning n'a pas la valeur null. L’élément de prédicat «\@ @ROWCOUNT > 0 » a la valeur true si une ligne a été insérée. L’élément de prédicat « keyMemberI = keyValueI &#124; scope_identity() » prend la forme « keyMemberI = scope_identity() » uniquement si Keymemberi est une clé générée par le magasin, parce que scope_identity() retourne la dernière valeur identity insérée dans une (identité) colonne générée par le magasin).  
   
 ```  
 -- first insert Template  

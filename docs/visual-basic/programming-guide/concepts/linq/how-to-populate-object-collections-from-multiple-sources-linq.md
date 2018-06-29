@@ -2,12 +2,12 @@
 title: 'Comment : remplir des Collections d’objets à partir de plusieurs Sources (LINQ) (Visual Basic)'
 ms.date: 06/22/2018
 ms.assetid: 63062a22-e6a9-42c0-b357-c7c965f58f33
-ms.openlocfilehash: 097a41614b4e7fb48c3ef3903faec8ed9ee3d5b6
-ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
+ms.openlocfilehash: 6560f853874f9b9a9aeb53bd0678540004fdfcc1
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948447"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37070861"
 ---
 # <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a>Comment : remplir des Collections d’objets à partir de plusieurs Sources (LINQ) (Visual Basic)
 
@@ -25,7 +25,6 @@ Cet exemple montre comment fusionner des données de différentes sources en une
 L’exemple suivant montre comment utiliser un type nommé `Student` pour stocker des données fusionnées de deux collections en mémoire de chaînes qui simulent des données de feuille de calcul au format .csv. La première collection de chaînes représente les noms et les ID des étudiants, et la deuxième collection représente l’ID d’étudiant (dans la première colonne) et quatre notes d’examen. L’ID est utilisé comme clé étrangère.
 
 ```vb
-Imports System
 Imports System.Collections.Generic
 Imports System.Linq
 
@@ -133,7 +132,8 @@ Next
 
 Créer et compiler un projet qui cible une des options suivantes :
 
-- .NET framework version 3.5 ou ultérieure avec une référence à System.Core.dll.
+- .NET framework version 3.5 avec une référence à System.Core.dll.
+- .NET framework version 4.0 ou ultérieure.
 - Version de .NET core 1.0 ou une version ultérieure.
 
 ## <a name="see-also"></a>Voir aussi

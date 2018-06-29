@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a826121a7f22d1db7287171c5add28e5fcd690cc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 88092c22e763e427203350065ff62b7c5e040b97
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398025"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37073214"
 ---
 # <a name="lazy-initialization"></a>Initialisation tardive
 *L’initialisation tardive* d’un objet signifie que sa création est différée jusqu’à sa première utilisation. (Pour cette rubrique, les termes *initialisation tardive* et *instanciation tardive* sont synonymes.) L’initialisation tardive est principalement utilisée pour améliorer les performances, éviter les calculs inutiles et réduire les besoins en mémoire programme. Voici les scénarios les plus courants :  
@@ -140,7 +140,7 @@ ms.locfileid: "33398025"
  [!code-vb[Lazy#9](../../../samples/snippets/visualbasic/VS_Snippets_Misc/lazy/vb/lazy_vb.vb#9)]  
   
 ## <a name="thread-local-variables-in-parallelfor-and-foreach"></a>Variables de thread local dans Parallel.For et ForEach  
- Lorsque vous utilisez la méthode <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> ou <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> pour parcourir des sources de données en parallèle, vous pouvez utiliser les surcharges qui ont une prise en charge intégrée pour les données de thread local. Dans ces méthodes, pour obtenir des données de thread local, vous devez utiliser des délégués locaux pour créer ces données, y accéder et les nettoyer. Pour plus d’informations, consultez [How to: Write a Parallel.For Loop with Thread-Local Variables](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md) (Écriture d’une boucle Parallel.For Loop avec des variables locales des threads) et [How to: Write a Parallel.ForEach Loop with Thread-Local Variables](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-thread-local-variables.md) (Écriture d’une boucle Parallel.ForEach Loop avec des variables locales des threads).  
+ Lorsque vous utilisez la méthode <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> ou <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> pour parcourir des sources de données en parallèle, vous pouvez utiliser les surcharges qui ont une prise en charge intégrée pour les données de thread local. Dans ces méthodes, pour obtenir des données de thread local, vous devez utiliser des délégués locaux pour créer ces données, y accéder et les nettoyer. Pour plus d’informations, consultez [Comment : écrire une boucle Parallel.For avec des Variables locales de Thread](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md) et [Comment : écrire une boucle Parallel.ForEach avec des Variables locales de la Partition](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md).  
   
 ## <a name="using-lazy-initialization-for-low-overhead-scenarios"></a>Utilisation de l’initialisation tardive pour les scénarios de faible charge  
  Dans les scénarios où vous devez initialiser tardivement un grand nombre d’objets, vous pouvez décider que l’encapsulation de chaque objet dans un <xref:System.Lazy%601> nécessite trop de mémoire ou trop de ressources informatiques. Vous pouvez aussi avoir des exigences strictes sur la façon dont l’initialisation tardive est exposée. Dans ce cas, vous pouvez utiliser les méthodes `static` (`Shared` en Visual Basic) de la classe <xref:System.Threading.LazyInitializer?displayProperty=nameWithType> pour initialiser tardivement chaque objet sans l’encapsuler dans une instance de <xref:System.Lazy%601>.  

@@ -7,11 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - Windows Forms, font scheme changes
 ms.assetid: 4db27702-22e7-43bf-a07d-9a004549853c
-ms.openlocfilehash: 455609ea602f450803718f5be34618b087560d21
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2451885c673515eb6690b0784fd5bd22de629209
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071144"
 ---
 # <a name="how-to-respond-to-font-scheme-changes-in-a-windows-forms-application"></a>Comment : répondre aux modifications de jeu de polices dans une application Windows Forms
 Dans les systèmes d’exploitation Windows, un utilisateur peut modifier les paramètres de police de l’échelle du système pour que la police par défaut s’affiche plus ou moins volumineux. La modification de ces paramètres de police est critique pour les utilisateurs malvoyants et requièrent un type plus grand lire le texte à l’écran. Vous pouvez ajuster votre application Windows Forms pour réagir à ces modifications en augmentant ou en réduisant la taille du formulaire et tous ses chaque fois que le jeu de polices change. Si vous souhaitez que votre formulaire pour prendre en compte les modifications dans les tailles de police dynamiquement, vous pouvez ajouter le code à votre formulaire.  
@@ -39,13 +40,13 @@ Dans les systèmes d’exploitation Windows, un utilisateur peut modifier les pa
   
 5.  Enfin, implémentez un gestionnaire pour le <xref:System.Windows.Forms.Form.FormClosing> événement détache le <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> Gestionnaire d’événements.  
   
-> [!IMPORTANT]
->  Échec d’inclure ce code met à votre application une fuite de mémoire.  
+     > [!IMPORTANT]
+     > Échec d’inclure ce code met à votre application une fuite de mémoire.  
   
- [!code-csharp[WinFormsAutoScaling#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#5)]
- [!code-vb[WinFormsAutoScaling#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#5)]  
+     [!code-csharp[WinFormsAutoScaling#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#5)]
+     [!code-vb[WinFormsAutoScaling#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#5)]  
   
-1.  Compilez, puis exécutez le code.  
+6.  Compilez, puis exécutez le code.  
   
 ### <a name="to-manually-change-the-font-scheme-in-windows-xp"></a>Pour modifier manuellement le jeu de polices dans Windows XP  
   
@@ -55,7 +56,7 @@ Dans les systèmes d’exploitation Windows, un utilisateur peut modifier les pa
   
 3.  À partir de la **la taille de police** liste déroulante, sélectionnez une nouvelle taille de police.  
   
-     Vous remarquerez que le formulaire réagit maintenant pour exécuter ces modifications dans le jeu de polices de bureau. Lorsque l’utilisateur change entre **Normal**, **polices de grande taille**, et **très grands caractères**, le formulaire modifie la police et met à l’échelle correctement.  
+     Vous remarquerez que le formulaire est maintenant réagit aux modifications d’exécution dans le jeu de polices de bureau. Lorsque l’utilisateur change entre **Normal**, **polices de grande taille**, et **très grands caractères**, le formulaire modifie la police et met à l’échelle correctement.  
   
 ## <a name="example"></a>Exemple  
  [!code-csharp[WinFormsAutoScaling#1](../../../samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#1)]

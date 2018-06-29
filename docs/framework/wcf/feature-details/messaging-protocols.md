@@ -2,12 +2,12 @@
 title: Protocoles de messagerie
 ms.date: 03/30/2017
 ms.assetid: 5b20bca7-87b3-4c8f-811b-f215b5987104
-ms.openlocfilehash: c900c8fde8b13b4766fb245de2bab46b5601f135
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d188c79d3879ef383d24f56c81d66973266636bc
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496635"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37072720"
 ---
 # <a name="messaging-protocols"></a>Protocoles de messagerie
 La pile de canal de Windows Communication Foundation (WCF) utilise les canaux de codage et de transport pour transformer la représentation du message interne en son format de transmission et l’envoyer à l’aide d’un transport particulier. Le transport le plus couramment utilisé pour l'interopérabilité des services Web est le HTTP, et les encodages les plus couramment utilisés par les services Web sont SOAP 1.1 basé sur XML, SOAP 1.2 et MTOM (Message Transmission Optimization Mechanism).  
@@ -452,7 +452,7 @@ Content-Length: 0
   
 -   R4132 : un en-tête Content-Type HTTP doit avoir un paramètre de type avec la valeur `application/xop+xml` comprise entre des guillemets doubles.  
   
- Alors que la nécessité d’utiliser des guillemets doubles n’est pas explicite dans RFC 2387, le texte observe que du type média multipart/related contiennent des paramètres plus probables pour les caractères réservés comme «@" or "/ » de sorte que vous avez besoin des guillemets doubles.  
+ Alors que la nécessité d’utiliser des guillemets doubles n’est pas explicite dans RFC 2387, le texte observe que tous les paramètres de type média multipart/related contiennent très probablement des caractères réservés comme «\@» ou « / » et par conséquent ont besoin de guillemets doubles marque.  
   
 -   R4133 : un en-tête HTTP Content-Type doit avoir un paramètre de début avec la valeur de l'en-tête Content-ID de la partie MIME qui contient l'enveloppe SOAP 1.x, entourée de guillemets doubles. Si le paramètre de début est omis, la première partie MIME doit contenir l'enveloppe SOAP 1.x.  
   
