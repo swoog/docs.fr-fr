@@ -4,12 +4,12 @@ description: Cycle de vie des applications Docker en conteneur avec la plateform
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017
-ms.openlocfilehash: 7a8ec2233b7927c1e3f85f5a3536a889a6a55e22
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0b13f28f4314ef72fbcaffe894bf823486665d3f
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574026"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106095"
 ---
 # <a name="docker-terminology"></a>Terminologie Docker
 
@@ -47,4 +47,5 @@ Cette section répertorie les termes et définitions avec lequel vous devez vous
 
 
 >[!div class="step-by-step"]
-[Précédente] (scénario-est-docker.md) [suivant] (docker-conteneurs-images-et-registries.md)
+[Précédent](what-is-docker.md)
+[Suivant](docker-containers-images-and-registries.md)

@@ -4,12 +4,12 @@ description: Cycle de vie des applications Docker en conteneur avec la plateform
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: cda9aa77ca033dced8b6b30538f19f28a5fa63a2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9e578599c61053704202946772c43bdb5ef895c2
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579208"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105587"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Flux de travail de développement de la boucle interne pour les applications de Docker
 
@@ -122,7 +122,7 @@ Il existe des autres lignes de configuration que vous pouvez ajouter dans le fic
 
 **Plus d’informations** pour plus d’informations sur la création d’images Docker pour les applications .NET Core, accédez à <https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images>.
 
-Pour en savoir plus sur la création de vos propres images, accédez à [ https://docs.docker.com/engine/\didacticiels/dockerimages/](https://docs.docker.com/engine/tutorials/dockerimages/).
+Pour en savoir plus sur la création de vos propres images, accédez à [ https://docs.docker.com/engine/\ didacticiels/dockerimages/](https://docs.docker.com/engine/tutorials/dockerimages/).
 
 **Référentiels d’images multiplateforme**
 
@@ -259,4 +259,5 @@ Vous également pourrez déboguer les conteneurs .NET Core dans Docker lors de l
 
 
 >[!div class="step-by-step"]
-[Précédente] (docker-applications-développement-environment.md) [suivant] (visual-studio-outils-de-docker.md)
+[Précédent](docker-apps-development-environment.md)
+[Suivant](visual-studio-tools-for-docker.md)

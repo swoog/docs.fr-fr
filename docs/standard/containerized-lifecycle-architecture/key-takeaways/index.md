@@ -4,12 +4,12 @@ description: Cycle de vie des applications Docker en conteneur avec la plateform
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 84ba63c1685fcc3a49c6333a5e88c363bdad8ed4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bf5648b1aa21ffd783c76aaa11c8e81371f45d18
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568977"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104636"
 ---
 # <a name="key-takeaways"></a>Points importants à retenir
 
@@ -26,4 +26,4 @@ ms.locfileid: "33568977"
 Visual Studio Team Services simplifie considérablement votre environnement DevOps désigné aux environnements Docker à partir de vos pipelines de déploiement continu, notamment les environnements Docker simples ou d’autres orchestrateurs de microservices et de conteneurs plus avancés basés sur Azure.
 
 >[!div class="step-by-step"]
-[Précédent] (../run-manage-monitor-docker-environments/monitor-containerized-application-services.md)
+[Précédent](../run-manage-monitor-docker-environments/monitor-containerized-application-services.md)

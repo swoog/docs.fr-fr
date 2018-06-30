@@ -4,12 +4,12 @@ description: Architecture des microservices .NET pour les applications .NET en c
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: f429bc0c6e76c2be2e4f491768a15ab36ecb0d34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 662e1af8595c074ee1aeba5ad4d83660b667c1cd
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591092"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105525"
 ---
 # <a name="deploying-single-container-based-net-core-web-applications-on-linux-or-windows-nano-server-hosts"></a>Déploiement d’applications web .NET Core basées sur un seul conteneur sur des hôtes Linux ou Windows Nano Server
 
@@ -142,4 +142,5 @@ Vous pouvez être amené à arrêter les processus en cours d’exécution quand
 L’Assistant qui ajoute la prise en charge de Docker communique avec le processus Docker en cours d’exécution. L’Assistant ne fonctionne pas correctement si Docker n’est pas en cours d’exécution au moment où vous démarrez l’Assistant. Par ailleurs, l’Assistant examine votre choix de conteneur actuel pour ajouter la prise en charge appropriée de Docker. Si vous voulez ajouter la prise en charge des conteneurs Windows, vous devez exécuter l’Assistant pendant que Docker s’exécute avec les conteneurs Windows configurés. Si vous voulez ajouter la prise en charge des conteneurs Linux, exécutez l’Assistant pendant que Docker s’exécute avec les conteneurs Linux configurés.
 
 >[!div class="step-by-step"]
-[Précédent] (../docker-application-development-process/docker-app-development-workflow.md) [Suivant] (../containerize-net-framework-applications/index.md)
+[Précédent](../docker-application-development-process/docker-app-development-workflow.md)
+[Suivant](../containerize-net-framework-applications/index.md)

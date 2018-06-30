@@ -4,12 +4,12 @@ description: Cycle de vie des applications Docker en conteneur avec la plateform
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/19/2017
-ms.openlocfilehash: 48af11117ec8eb0034d9557a332b89d3418d4b31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d68378a12a16dd4072b381f00241e781b40c3e16
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567856"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105548"
 ---
 # <a name="using-windows-powershell-commands-in-a-dockerfile-to-set-up-windows-containers-docker-standard-based"></a>À l’aide des commandes Windows PowerShell dans un fichier DockerFile pour configurer les conteneurs Windows (Docker standard en fonction)
 
@@ -33,4 +33,5 @@ RUN powershell add-windowsfeature web-asp-net45
 ```
 
 >[!div class="step-by-step"]
-[Précédente] (visual-studio-outils-de-docker.md) [suivant] (.. /docker-DevOps-workflow/index.MD)
+[Précédent](visual-studio-tools-for-docker.md)
+[Suivant](../docker-devops-workflow/index.md)

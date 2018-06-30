@@ -4,12 +4,12 @@ description: Cycle de vie des applications Docker en conteneur avec la plateform
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 3877767117d8292644782fc07df6667931688be2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 368d99e92f80cf37965139cb67fc5f22b44f40cd
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575542"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106126"
 ---
 # <a name="monitor-containerized-application-services"></a>Surveiller les services d’application en conteneur
 
@@ -97,4 +97,5 @@ L’enregistrement des requêtes est également une fonctionnalité standard dan
 **Plus d’informations** pour trouver des solutions de conteneur dans plus d’informations sur l’installation et la configuration du Docker [Operations Management Suite](http://microsoft.com/oms), accédez à <https://docs.microsoft.com/azure/log-analytics/log-analytics-containers>.
 
 >[!div class="step-by-step"]
-[Précédente] (gérer-production-docker-environments.md) [suivant] (.. /Key-takeaways/index.MD)
+[Précédent](manage-production-docker-environments.md)
+[Suivant](../key-takeaways/index.md)

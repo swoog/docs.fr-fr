@@ -4,12 +4,12 @@ description: Cycle de vie des applications Docker en conteneur avec la plateform
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/19/2017
-ms.openlocfilehash: 3a505e10b2a37032a7ccfefdf4a6f4bb64d65486
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5c7016fa8b731170a63f5d0f9d9bed3b72090be4
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579546"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106377"
 ---
 # <a name="orchestrating-microservices-and-multicontainer-applications-for-high-scalability-and-availability"></a>Orchestration microservices et applications multicontainer pour une haute évolutivité et la disponibilité
 
@@ -181,4 +181,5 @@ Notez que les conteneurs Docker sont eux-mêmes sans état. Si vous voulez impl�
 
 
 >[!div class="step-by-step"]
-[Précédente] (soa-applications.md) [suivant] (docker-applications-développement-environment.md)
+[Précédent](soa-applications.md)
+[Suivant](docker-apps-development-environment.md)

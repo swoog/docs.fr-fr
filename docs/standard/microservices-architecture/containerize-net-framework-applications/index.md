@@ -4,12 +4,12 @@ description: Architecture des microservices .NET pour les applications .NET en c
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: a12012f115629a79734c18c3bc75733ae2fc8195
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 01b84d29a559bde02ebd30535488c272d5208167
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578831"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106513"
 ---
 # <a name="migrating-legacy-monolithic-net-framework-applications-to-windows-containers"></a>Migration d’applications .NET Framework monolithiques héritées vers des conteneurs Windows
 
@@ -186,4 +186,5 @@ Il existe quelques différences entre la configuration de développement et une 
 Dans l’environnement de développement, vous devez exécuter tous les conteneurs dans le même système d’exploitation. Docker CE pour Windows ne prend pas en charge l’exécution de conteneurs Windows et Linux en même temps. En production, vous pouvez décider si vous souhaitez exécuter le microservice du catalogue dans un conteneur Windows dans un seul hôte (ou cluster) Docker, ou si vous voulez que l’application Web Forms communique avec une instance du microservice du catalogue en cours d’exécution dans un conteneur Linux dans un autre hôte Docker. Cette décision dépend de la façon dont vous voulez optimiser la latence du réseau. Dans la plupart des cas, il est souhaitable que les microservices dont dépendent vos applications s’exécutent dans le même hôte (ou essaim) Docker pour faciliter le déploiement et réduire la latence de communication. Dans ces configurations, les seules communications coûteuses ont lieu entre les instances de microservice et les serveurs à haute disponibilité pour le stockage des données persistantes.
 
 >[!div class="step-by-step"]
-[Précédent] (../net-core-single-containers-linux-windows-server-hosts/index.md) [Next] (../multi-container-microservice-net-applications/index.md)
+[Précédent](../net-core-single-containers-linux-windows-server-hosts/index.md)
+[Suivant](../multi-container-microservice-net-applications/index.md)

@@ -4,12 +4,12 @@ description: Cycle de vie des applications Docker en conteneur avec la plateform
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 62da6a3ff595422e42450cb1341976424acc5a52
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: facc295399a7471edfd3e59eb1cc0e90f01ef11b
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314709"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104890"
 ---
 # <a name="using-visual-studio-tools-for-docker-visual-studio-on-windows"></a>À l’aide de Visual Studio Tools pour Docker (Visual Studio sous Windows)
 
@@ -71,4 +71,5 @@ Déployer un conteneur ASP.NET sur un hôte Docker distant : [https://docs.micr
 
 
 >[!div class="step-by-step"]
-[Précédente] (docker-applications-interne-boucle-workflow.md) [suivant] (set-up-windows-containers-with-powershell.md)
+[Précédent](docker-apps-inner-loop-workflow.md)
+[Suivant](set-up-windows-containers-with-powershell.md)

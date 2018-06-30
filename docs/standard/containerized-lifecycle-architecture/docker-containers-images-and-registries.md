@@ -4,12 +4,12 @@ description: Cycle de vie des applications Docker en conteneur avec la plateform
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 43b76f738fa4b7c89423a5b9fac7ef91f40880c5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ff5a1f3e4b09ac9f7ea600d3f127523b96fcce55
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568730"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106361"
 ---
 # <a name="docker-containers-images-and-registries"></a>Conteneurs, images et registres Docker
 
@@ -34,4 +34,5 @@ Les registres de l’image privée, hébergé localement ou dans le cloud, sont 
 -   Vous souhaitez limiter la latence du réseau entre vos images et l’environnement de déploiement choisi. Par exemple, si votre environnement de production est Azure, vous souhaiterez probablement stocker vos images dans le Registre de conteneur Azure afin que la latence du réseau sera minime. De la même manière, si votre environnement de production est local, vous souhaiterez peut-être disposer d’un service Docker Trusted Registry local dans le même réseau local.
 
 >[!div class="step-by-step"]
-[Précédente] (docker-terminology.md) [suivant] (Docker-application-du cycle de vie/index.md)
+[Précédent](docker-terminology.md)
+[Suivant](Docker-application-lifecycle/index.md)

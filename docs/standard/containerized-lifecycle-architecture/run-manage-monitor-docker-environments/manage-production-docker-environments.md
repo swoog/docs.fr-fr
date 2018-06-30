@@ -4,12 +4,12 @@ description: Cycle de vie des applications Docker en conteneur avec la plateform
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 5ecf1fbc164ff4170951894abc071908f45178d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 169ffa7ba61fa5dff09229410adb534f8e34a35c
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573879"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104583"
 ---
 # <a name="manage-production-docker-environments"></a>Gérer les environnements de production Docker
 
@@ -46,4 +46,5 @@ Voici les outils de gestion de l’infrastructure de Service :
 
 
 >[!div class="step-by-step"]
-[Précédente] (run-microservices-based-applications-in-production.md) [suivant] (analyse-placées dans des conteneurs-application-services.md)
+[Précédent](run-microservices-based-applications-in-production.md)
+[Suivant](monitor-containerized-application-services.md)

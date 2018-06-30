@@ -4,12 +4,12 @@ description: Cycle de vie des applications Docker en conteneur avec la plateform
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 47685bfd8dca50c5e93be7574ea6ef30a49cbede
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b4192ff1d67a3f70bb5eeb9a36245cfd35bafb53
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568795"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105629"
 ---
 # <a name="run-composed-and-microservices-based-applications-in-production-environments"></a>Exécuter les applications composées et microservices dans les environnements de production
 
@@ -35,4 +35,5 @@ Les capacités offertes par orchestrators et des planificateurs sont très compl
 
 
 >[!div class="step-by-step"]
-[Précédente] (index.md) [suivant] (gérer-production-docker-environments.md)
+[Précédent](index.md)
+[Suivant](manage-production-docker-environments.md)

@@ -4,12 +4,12 @@ description: Cycle de vie des applications Docker en conteneur avec la plateform
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 198313c260b36d3f3025606e73e220c361a7ebb8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b88eb5637bf266ab2e0a6d255f2e83f6aadc8af2
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579000"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106160"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Étapes de workflow DevOps boucle externe pour une application de Docker
 
@@ -234,4 +234,5 @@ Cette rubrique également est décrite dans le chapitre suivant dans le cadre de
 Uniquement lors de la surveillance et diagnostic est à 100 % dans le domaine du DevOps sont analytique effectuée par l’équipe de développement par rapport aux environnements de test ou de la version bêta et processus d’analyse. Pour cela, effectuez le test de charge ou simplement en version bêta ou les environnements de questions et réponses, où les testeurs bêta essayez les nouvelles versions d’analyse.
 
 >[!div class="step-by-step"]
-[Précédente] (index.md) [suivant] (.. /Run-Manage-Monitor-docker-Environments/index.MD)
+[Précédent](index.md)
+[Suivant](../run-manage-monitor-docker-environments/index.md)
