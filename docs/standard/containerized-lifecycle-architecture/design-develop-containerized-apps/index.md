@@ -4,19 +4,21 @@ description: Cycle de vie des applications Docker en conteneur avec la plateform
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017
-ms.openlocfilehash: 4a9452f660cf80505848b2ec3491274cdc7c3f6c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b8f2924b658b7e2eeb295adc3c89a1ed576bba60
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568041"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104688"
 ---
-# <a name="designing-and-developing-containerized-apps-using-docker-and-microsoft-azure"></a><span data-ttu-id="bd8c1-103">Conception et développement d’applications en conteneur à l’aide de Docker et de Microsoft Azure</span><span class="sxs-lookup"><span data-stu-id="bd8c1-103">Designing and developing containerized apps using Docker and Microsoft Azure</span></span>
+# <a name="designing-and-developing-containerized-apps-using-docker-and-microsoft-azure"></a><span data-ttu-id="1953e-103">Conception et développement d’applications en conteneur à l’aide de Docker et de Microsoft Azure</span><span class="sxs-lookup"><span data-stu-id="1953e-103">Designing and developing containerized apps using Docker and Microsoft Azure</span></span>
 
-<span data-ttu-id="bd8c1-104">Vision : Concevoir et développer des solutions scalables avec Docker à l’esprit.</span><span class="sxs-lookup"><span data-stu-id="bd8c1-104">Vision: Design and develop scalable solutions with Docker in mind.</span></span>
+<span data-ttu-id="1953e-104">Vision : Concevoir et développer des solutions scalables avec Docker à l’esprit.</span><span class="sxs-lookup"><span data-stu-id="1953e-104">Vision: Design and develop scalable solutions with Docker in mind.</span></span>
 
-<span data-ttu-id="bd8c1-105">Les conteneurs ne se limitent pas aux architectures orientées microservices. Ils conviennent à de nombreux scénarios d’utilisation, notamment quand vous devez exécuter des applications web ou des services normaux et que vous souhaitez réduire les frictions entre le déploiement de l’environnement de développement et celui de l’environnement de production.</span><span class="sxs-lookup"><span data-stu-id="bd8c1-105">There are many great-fit use cases for containers, not just for microservices-oriented architectures, but also when you simply have regular services or web applications to run and you want to reduce frictions between development and production environment deployments.</span></span>
+<span data-ttu-id="1953e-105">Les conteneurs ne se limitent pas aux architectures orientées microservices. Ils conviennent à de nombreux scénarios d’utilisation, notamment quand vous devez exécuter des applications web ou des services normaux et que vous souhaitez réduire les frictions entre le déploiement de l’environnement de développement et celui de l’environnement de production.</span><span class="sxs-lookup"><span data-stu-id="1953e-105">There are many great-fit use cases for containers, not just for microservices-oriented architectures, but also when you simply have regular services or web applications to run and you want to reduce frictions between development and production environment deployments.</span></span>
 
 
 >[!div class="step-by-step"]
-<span data-ttu-id="bd8c1-106">[Précédent] (../Microsoft-platform-tools-containerized-apps/index.md) [Suivant] (design-docker-applications.md)</span><span class="sxs-lookup"><span data-stu-id="bd8c1-106">[Prev] (../Microsoft-platform-tools-containerized-apps/index.md) [Next] (design-docker-applications.md)</span></span>
+<span data-ttu-id="1953e-106">[Prev](../Microsoft-platform-tools-containerized-apps/index.md)
+[suivant](design-docker-applications.md)</span><span class="sxs-lookup"><span data-stu-id="1953e-106">[Prev](../Microsoft-platform-tools-containerized-apps/index.md)
+[Next](design-docker-applications.md)</span></span>
