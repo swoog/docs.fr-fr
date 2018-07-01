@@ -2,12 +2,12 @@
 title: Prise en charge de la configuration et des métadonnées
 ms.date: 03/30/2017
 ms.assetid: 27c240cb-8cab-472c-87f8-c864f4978758
-ms.openlocfilehash: 4dfeeba6db220e03ad981b13e2bb093bedcd43c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d316e373177d86b7ba2b715f29fe3dace9082e8b
+ms.sourcegitcommit: 736ec4d3e2c74895b47a0d36126657b95da383c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33486722"
+ms.lasthandoff: 06/30/2018
+ms.locfileid: "37140149"
 ---
 # <a name="configuration-and-metadata-support"></a>Prise en charge de la configuration et des métadonnées
 Cette rubrique décrit comment activer la prise en charge de la configuration et des métadonnées pour les liaisons et éléments de liaison.  
@@ -182,7 +182,7 @@ if (transportBindingElement is UdpTransportBindingElement)
  L’élément de liaison personnalisé peut exporter des assertions de stratégie dans la liaison WSDL d’un point de terminaison de service pour exprimer les fonctionnalités de cet élément de liaison. L’exemple de code suivant provient de la [Transport : UDP](../../../../docs/framework/wcf/samples/transport-udp.md) exemple.  
   
 #### <a name="policy-export"></a>Exportation de stratégie  
- Le `UdpTransportBindingElement` type implémente ''<xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> pour ajouter la prise en charge pour l’exportation de stratégie. En conséquence, <xref:System.ServiceModel.Description.MetadataExporter?displayProperty=nameWithType> inclut `UdpTransportBindingElement` dans la génération de stratégie des liaisons qui l'incluent.  
+ Le `UdpTransportBindingElement` type implémente <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> pour ajouter la prise en charge pour l’exportation de stratégie. En conséquence, <xref:System.ServiceModel.Description.MetadataExporter?displayProperty=nameWithType> inclut `UdpTransportBindingElement` dans la génération de stratégie des liaisons qui l'incluent.  
   
  Dans <xref:System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy%2A?displayProperty=nameWithType>, ajoutez une assertion pour UDP et une autre si le canal est en mode multicast. Cela est dû au fait que le mode multicast affecte la manière dont la pile est construite, et doit donc être coordonné entre les deux côtés.  
   
